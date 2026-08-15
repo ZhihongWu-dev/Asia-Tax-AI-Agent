@@ -20,9 +20,9 @@
 
 ## 正式文档
 
-- [产品需求文档](../../PRD.md)
-- [技术路线图](../../TECHNICAL_ROADMAP.md)
-- [2026 项目计划](../../PROJECT_PLAN_2026.md)
+- [产品需求文档](../../product/PRD.md)
+- [技术路线图](../../architecture/TECHNICAL_ROADMAP.md)
+- [2026 项目计划](../../project/PROJECT_PLAN_2026.md)
 
 ## 研究参考
 
