@@ -1,0 +1,33 @@
+{
+  "dataset_version": "0.1.0",
+  "dataset_status": "synthetic_candidate_only",
+  "cases": [
+    {
+      "case_id": "SYN-FSIE-001",
+      "synthetic": true,
+      "description": "A fictional Hong Kong group entity receives a foreign dividend; evidence is intentionally incomplete.",
+      "facts": {"entity_hk_business_status":"candidate_yes","mne_group_status":"unknown","income_type":"dividend","receipt_location":"unknown","holding_percentage":15,"continuous_holding_period_months":18},
+      "expected_state": "research_only_output",
+      "expected_blockers": ["mne_group_status","receipt_location","foreign_tax_on_dividend_or_underlying_profit","economic_substance_facts"],
+      "notes": "Not a tax gold label. Requires expert review before any rule result is treated as valid."
+    },
+    {
+      "case_id": "SYN-FSIE-002",
+      "synthetic": true,
+      "description": "A fictional case contains conflicting receipt-location statements.",
+      "facts": {"entity_hk_business_status":"candidate_yes","mne_group_status":"candidate_yes","income_type":"dividend","receipt_location":"conflict","receipt_account":"HK_account_and_offshore_cash_pool"},
+      "expected_state": "stop_and_escalate",
+      "expected_blockers": ["receipt_location_conflict"],
+      "notes": "Tests that conflict is not silently converted into a negative answer."
+    },
+    {
+      "case_id": "SYN-FSIE-003",
+      "synthetic": true,
+      "description": "A fictional case has a candidate participation pathway but no evidence of the foreign tax condition.",
+      "facts": {"entity_hk_business_status":"candidate_yes","mne_group_status":"candidate_yes","income_type":"dividend","receipt_location":"candidate_yes","holding_percentage":15,"continuous_holding_period_months":18,"foreign_tax_on_dividend_or_underlying_profit":"unknown"},
+      "expected_state": "human_review_required",
+      "expected_blockers": ["foreign_tax_on_dividend_or_underlying_profit","anti_abuse_facts"],
+      "notes": "Thresholds and application are deliberately not encoded as a final legal conclusion."
+    }
+  ]
+}

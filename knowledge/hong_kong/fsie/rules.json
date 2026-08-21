@@ -1,0 +1,86 @@
+{
+  "rule_package_version": "0.1.0",
+  "jurisdiction": "HK",
+  "package": "fsie",
+  "status": "unverified",
+  "rules": [
+    {
+      "rule_id": "FSIE-SCOPE-001",
+      "node": "scope",
+      "title": "Covered taxpayer and income scope",
+      "purpose": "Determine whether the entity and income event are in the FSIE package scope.",
+      "required_facts": ["entity_hk_business_status", "mne_group_status", "income_type", "accrual_date", "receipt_date"],
+      "required_evidence": ["entity_registration", "group_structure", "income_contract_or_statement"],
+      "source_ids": ["hk_ird_fsie_landing", "hk_ird_2022_fsie_ordinance"],
+      "thresholds_to_verify": [],
+      "outputs": ["in_scope", "out_of_scope", "unknown"],
+      "human_review_required": true,
+      "status": "unverified"
+    },
+    {
+      "rule_id": "FSIE-INCOME-001",
+      "node": "income_characterisation",
+      "title": "Foreign-sourced dividend characterisation",
+      "purpose": "Establish whether the income event is a specified foreign-sourced dividend for this analysis.",
+      "required_facts": ["income_legal_character", "payer_entity", "underlying_profit_or_distribution_basis", "source_analysis"],
+      "required_evidence": ["payment_advice", "board_or_shareholder_resolution", "financial_statement_extract"],
+      "source_ids": ["hk_ird_fsie_landing", "hk_ird_fsie_faq"],
+      "thresholds_to_verify": [],
+      "outputs": ["candidate_dividend", "not_dividend", "unknown"],
+      "human_review_required": true,
+      "status": "unverified"
+    },
+    {
+      "rule_id": "FSIE-RECEIPT-001",
+      "node": "receipt",
+      "title": "Receipt in Hong Kong",
+      "purpose": "Identify whether the income event meets the package's Hong Kong receipt analysis boundary.",
+      "required_facts": ["receipt_location", "bank_or_account_path", "set_off_or_clearing_arrangement", "receipt_date"],
+      "required_evidence": ["bank_statement", "cash_pool_records", "accounting_ledger"],
+      "source_ids": ["hk_ird_fsie_landing", "hk_ird_fsie_faq", "hk_ird_fsie_examples"],
+      "thresholds_to_verify": [],
+      "outputs": ["receipt_candidate", "no_receipt_candidate", "unknown"],
+      "human_review_required": true,
+      "status": "unverified"
+    },
+    {
+      "rule_id": "FSIE-ES-001",
+      "node": "economic_substance",
+      "title": "Economic substance pathway",
+      "purpose": "Collect and assess the facts relevant to an economic-substance pathway without deciding sufficiency automatically.",
+      "required_facts": ["entity_activity_profile", "employees", "premises", "operating_expenditure", "strategic_decision_making", "outsourcing_and_supervision"],
+      "required_evidence": ["payroll_or_employment_records", "lease_or_premises_records", "expense_ledger", "board_minutes", "outsourcing_agreements"],
+      "source_ids": ["hk_ird_fsie_landing", "hk_ird_fsie_faq", "hk_ird_fsie_esr_advance_ruling"],
+      "thresholds_to_verify": ["adequacy_standard", "pure_equity_holding_classification", "outsourcing_control_standard"],
+      "outputs": ["candidate_path", "insufficient_evidence", "human_review_required"],
+      "human_review_required": true,
+      "status": "unverified"
+    },
+    {
+      "rule_id": "FSIE-PART-001",
+      "node": "participation",
+      "title": "Participation pathway",
+      "purpose": "Collect and assess the facts relevant to a participation pathway; threshold and anti-abuse conclusions remain expert-controlled.",
+      "required_facts": ["direct_or_indirect_holding", "holding_percentage", "continuous_holding_period", "investee_entity", "foreign_tax_on_dividend_or_underlying_profit", "anti_abuse_facts"],
+      "required_evidence": ["share_register", "acquisition_and_transfer_records", "tax_payment_certificate", "group_structure", "commercial_purpose_memo"],
+      "source_ids": ["hk_ird_fsie_landing", "hk_ird_fsie_faq", "hk_ird_fsie_examples"],
+      "thresholds_to_verify": ["minimum_holding_percentage", "minimum_holding_period", "subject_to_tax_condition", "anti_abuse_condition"],
+      "outputs": ["candidate_path", "condition_not_demonstrated", "human_review_required"],
+      "human_review_required": true,
+      "status": "unverified"
+    },
+    {
+      "rule_id": "FSIE-GATE-001",
+      "node": "human_review",
+      "title": "Mandatory human review gate",
+      "purpose": "Prevent a deterministic tax conclusion when a required fact, source, rule validation, or subjective test is unresolved.",
+      "required_facts": ["all_required_facts_status", "source_validation_status", "rule_validation_status", "expert_decision_status"],
+      "required_evidence": ["fact_confirmation_log", "source_manifest_record", "expert_review_record"],
+      "source_ids": ["hk_ird_fsie_landing", "hk_ird_fsie_faq"],
+      "thresholds_to_verify": [],
+      "outputs": ["stop_and_escalate", "research_only_output"],
+      "human_review_required": true,
+      "status": "unverified"
+    }
+  ]
+}

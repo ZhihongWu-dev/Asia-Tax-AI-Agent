@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.1.0",
+  "jurisdiction": "HK",
+  "package": "fsie",
+  "status": "candidate",
+  "requirements": [
+    {"evidence_id":"EV-ENTITY-001","fact":"entity_hk_business_status","examples":["business_registration","company_profile","tax_registration"],"mandatory_for":["FSIE-SCOPE-001"]},
+    {"evidence_id":"EV-GROUP-001","fact":"mne_group_status","examples":["group_structure_chart","consolidated_accounts","group_reporting_records"],"mandatory_for":["FSIE-SCOPE-001"]},
+    {"evidence_id":"EV-INCOME-001","fact":"income_legal_character","examples":["payment_advice","resolution","accounting_ledger"],"mandatory_for":["FSIE-INCOME-001"]},
+    {"evidence_id":"EV-RECEIPT-001","fact":"receipt_location","examples":["bank_statement","cash_pool_records","set_off_records"],"mandatory_for":["FSIE-RECEIPT-001"]},
+    {"evidence_id":"EV-HOLDING-001","fact":"holding_percentage_and_period","examples":["share_register","acquisition_records","transfer_records"],"mandatory_for":["FSIE-PART-001"]},
+    {"evidence_id":"EV-TAX-001","fact":"foreign_tax_on_dividend_or_underlying_profit","examples":["foreign_tax_certificate","assessment","payment_receipt"],"mandatory_for":["FSIE-PART-001"]},
+    {"evidence_id":"EV-SUBSTANCE-001","fact":"economic_substance_facts","examples":["payroll","lease","expense_ledger","board_minutes","outsourcing_agreement"],"mandatory_for":["FSIE-ES-001"]},
+    {"evidence_id":"EV-REVIEW-001","fact":"expert_decision_status","examples":["signed_review_record","review_commentary","approved_rule_version"],"mandatory_for":["FSIE-GATE-001"]}
+  ]
+}
