@@ -37,13 +37,26 @@ def main() -> int:
     source_ids = {item.get("source_id") for item in source_items}
     if sources.get("professional_status") != "unverified":
         fail(errors, "source manifest must remain professionally unverified")
+    # Official Hong Kong source domains; extend via manifest top-level
+    # allowed_source_domains instead of hard-coding a single host.
+    allowed_bases = {"ird.gov.hk", "elegislation.gov.hk", "data.one.gov.hk"}
+    allowed_bases |= set(sources.get("allowed_source_domains", []))
+
+    def is_official_https(value):
+        parsed = urlparse(value or "")
+        host = parsed.netloc
+        host_ok = host in allowed_bases or any(host.endswith("." + b) for b in allowed_bases)
+        return parsed.scheme == "https" and host_ok
+
     for item in source_items:
         source_id = item.get("source_id")
         if not source_id or not item.get("title") or not item.get("url"):
             fail(errors, f"source {source_id!r} is missing identity fields")
-        parsed = urlparse(item.get("url", ""))
-        if parsed.scheme != "https" or not parsed.netloc.endswith("ird.gov.hk"):
-            fail(errors, f"source {source_id!r} is not an HTTPS IRD source")
+        if not is_official_https(item.get("url", "")):
+            fail(errors, f"source {source_id!r} url is not an HTTPS official-source URL")
+        structured_url = item.get("structured_data_url")
+        if structured_url and not is_official_https(structured_url):
+            fail(errors, f"source {source_id!r} structured_data_url is not an HTTPS official-source URL")
         if item.get("professional_validation_status") != "unverified":
             fail(errors, f"source {source_id!r} must remain unverified")
 
