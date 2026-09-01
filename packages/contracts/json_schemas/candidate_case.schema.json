@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asia-tax-agent.local/contracts/json_schemas/candidate_case.schema.json",
+  "title": "CandidateCase — synthetic L0 evaluation case (never a tax gold label)",
+  "type": "object",
+  "required": [
+    "case_id",
+    "synthetic",
+    "description",
+    "facts",
+    "expected_state",
+    "expected_blockers"
+  ],
+  "properties": {
+    "case_id": {"type": "string", "pattern": "^SYN-FSIE-[0-9]{3}$"},
+    "synthetic": {"const": true},
+    "description": {"type": "string", "minLength": 1},
+    "applicable_date": {"type": ["string", "null"], "description": "Case date used to select the effective rule version."},
+    "scenario_tag": {"type": ["string", "null"]},
+    "facts": {
+      "type": "object",
+      "description": "Inline fixture map. Each key must be a dictionary field_name; values are business values or an InlineFactSentinel.",
+      "additionalProperties": {
+        "anyOf": [
+          {"type": "string"},
+          {"type": "number"},
+          {"type": "boolean"}
+        ]
+      }
+    },
+    "expected_state": {"$ref": "definitions.schema.json#/$defs/CaseTerminalState"},
+    "expected_blockers": {"type": "array", "items": {"type": "string"}, "description": "field_name values expected to block; no free-text blocker names."},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}

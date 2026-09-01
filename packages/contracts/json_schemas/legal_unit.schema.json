@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asia-tax-agent.local/contracts/json_schemas/legal_unit.schema.json",
+  "title": "LegalUnit — smallest locatable unit of legal text (data plan s.3.3)",
+  "type": "object",
+  "required": [
+    "unit_id",
+    "source_id",
+    "locator",
+    "text",
+    "language",
+    "unit_type",
+    "text_sha256",
+    "lifecycle_status",
+    "professional_validation_status"
+  ],
+  "properties": {
+    "unit_id": {"type": "string", "pattern": "^[a-z0-9_.:-]+$"},
+    "source_id": {"type": "string"},
+    "source_version_hash": {"type": ["string", "null"]},
+    "locator": {"$ref": "definitions.schema.json#/$defs/Locator"},
+    "text": {"type": "string", "minLength": 1},
+    "language": {"type": "string"},
+    "unit_type": {
+      "type": "string",
+      "enum": [
+        "heading",
+        "section",
+        "subsection",
+        "paragraph",
+        "subparagraph",
+        "definition",
+        "exception",
+        "table",
+        "footnote",
+        "amendment_note"
+      ]
+    },
+    "hierarchy_level": {"type": "integer", "minimum": 0},
+    "parent_unit_id": {"type": ["string", "null"]},
+    "cross_refs": {"type": "array", "items": {"type": "string"}},
+    "context_before": {"type": ["string", "null"]},
+    "context_after": {"type": ["string", "null"]},
+    "text_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "parse_method": {"type": "string"},
+    "is_editorial_note": {"type": "boolean", "description": "Editorial sourceNote content that must be excluded from operative rule extraction."},
+    "lifecycle_status": {"$ref": "definitions.schema.json#/$defs/LifecycleStatus"},
+    "professional_validation_status": {"$ref": "definitions.schema.json#/$defs/ProfessionalValidationStatus"}
+  },
+  "additionalProperties": false
+}

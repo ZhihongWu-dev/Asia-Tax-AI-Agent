@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asia-tax-agent.local/contracts/json_schemas/evidence_requirement.schema.json",
+  "title": "EvidenceRequirement — which evidence types support which fact(s) and are mandatory for which rules",
+  "type": "object",
+  "required": ["evidence_id", "facts", "evidence_types", "mandatory_for"],
+  "properties": {
+    "evidence_id": {"type": "string", "pattern": "^EV-[A-Z]+-[0-9]{3}$"},
+    "facts": {"type": "array", "items": {"type": "string"}, "minItems": 1, "description": "field_name entries from the fact dictionary (replaces legacy singular 'fact')."},
+    "evidence_types": {"type": "array", "items": {"type": "string"}, "minItems": 1, "description": "Controlled evidence/document-type vocabulary."},
+    "mandatory_for": {"type": "array", "items": {"type": "string"}, "minItems": 1, "description": "rule_id values."}
+  },
+  "additionalProperties": false
+}

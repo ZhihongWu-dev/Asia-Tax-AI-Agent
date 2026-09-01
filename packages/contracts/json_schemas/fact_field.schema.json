@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asia-tax-agent.local/contracts/json_schemas/fact_field.schema.json",
+  "title": "FactField — one entry of the controlled fact-field dictionary (DS-03)",
+  "type": "object",
+  "required": [
+    "field_name",
+    "domain",
+    "data_type",
+    "blocking_level",
+    "related_nodes",
+    "required_evidence_types",
+    "l0_first_slice",
+    "description_zh"
+  ],
+  "properties": {
+    "field_name": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+    "domain": {"$ref": "definitions.schema.json#/$defs/FactDomain"},
+    "data_type": {"$ref": "definitions.schema.json#/$defs/FactDataType"},
+    "unit": {"type": ["string", "null"], "description": "e.g. percent, months, HKD; mandatory for decimal/integer quantities."},
+    "enum_values": {"type": "array", "items": {"type": "string"}},
+    "blocking_level": {"$ref": "definitions.schema.json#/$defs/BlockingLevel"},
+    "related_nodes": {"type": "array", "items": {"$ref": "definitions.schema.json#/$defs/JudgementNodeKey"}, "minItems": 1},
+    "required_evidence_types": {"type": "array", "items": {"type": "string"}},
+    "l0_first_slice": {"type": "boolean", "description": "Needed to walk the single dividend vertical slice in the L0 walking skeleton."},
+    "statute_locator": {"type": ["string", "null"], "description": "Optional IRO citation backing the need for this field, e.g. s.15M(2)."},
+    "description_zh": {"type": "string", "minLength": 1},
+    "description_en": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

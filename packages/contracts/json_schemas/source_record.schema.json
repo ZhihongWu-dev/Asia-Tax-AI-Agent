@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asia-tax-agent.local/contracts/json_schemas/source_record.schema.json",
+  "title": "SourceRecord — one entry of a jurisdiction source manifest",
+  "type": "object",
+  "required": [
+    "source_id",
+    "title",
+    "publisher",
+    "source_type",
+    "url",
+    "jurisdiction",
+    "language",
+    "retrieved_at",
+    "authority_level",
+    "rule_nodes",
+    "parse_status",
+    "professional_validation_status"
+  ],
+  "properties": {
+    "source_id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+    "title": {"type": "string", "minLength": 1},
+    "publisher": {"type": "string"},
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "official_web_page",
+        "official_faq",
+        "official_examples",
+        "ordinance_material",
+        "official_advance_ruling_guidance",
+        "structured_legislation_xml"
+      ]
+    },
+    "url": {"type": "string", "format": "uri"},
+    "structured_data_url": {"type": ["string", "null"], "format": "uri"},
+    "structured_file": {"type": ["string", "null"]},
+    "current_version_date": {"type": ["string", "null"]},
+    "jurisdiction": {"type": "string", "minLength": 2},
+    "language": {"type": "string"},
+    "publication_date": {"type": ["string", "null"]},
+    "effective_from": {"type": ["string", "null"]},
+    "effective_to": {"type": ["string", "null"]},
+    "retrieved_at": {"type": "string"},
+    "content_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$|^$"},
+    "content_bytes": {"type": ["integer", "null"], "minimum": 0},
+    "content_type": {"type": ["string", "null"]},
+    "http_status": {"type": ["integer", "null"]},
+    "source_last_modified": {"type": ["string", "null"]},
+    "authority_level": {"$ref": "definitions.schema.json#/$defs/AuthorityLevel"},
+    "rule_nodes": {"type": "array", "items": {"type": "string"}},
+    "parse_status": {"$ref": "definitions.schema.json#/$defs/LifecycleStatus"},
+    "professional_validation_status": {"$ref": "definitions.schema.json#/$defs/ProfessionalValidationStatus"},
+    "l0_in_scope": {"type": "boolean"},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}

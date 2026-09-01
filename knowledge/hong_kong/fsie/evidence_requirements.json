@@ -1,16 +1,16 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "jurisdiction": "HK",
   "package": "fsie",
   "status": "candidate",
   "requirements": [
-    {"evidence_id":"EV-ENTITY-001","fact":"entity_hk_business_status","examples":["business_registration","company_profile","tax_registration"],"mandatory_for":["FSIE-SCOPE-001"]},
-    {"evidence_id":"EV-GROUP-001","fact":"mne_group_status","examples":["group_structure_chart","consolidated_accounts","group_reporting_records"],"mandatory_for":["FSIE-SCOPE-001"]},
-    {"evidence_id":"EV-INCOME-001","fact":"income_legal_character","examples":["payment_advice","resolution","accounting_ledger"],"mandatory_for":["FSIE-INCOME-001"]},
-    {"evidence_id":"EV-RECEIPT-001","fact":"receipt_location","examples":["bank_statement","cash_pool_records","set_off_records"],"mandatory_for":["FSIE-RECEIPT-001"]},
-    {"evidence_id":"EV-HOLDING-001","fact":"holding_percentage_and_period","examples":["share_register","acquisition_records","transfer_records"],"mandatory_for":["FSIE-PART-001"]},
-    {"evidence_id":"EV-TAX-001","fact":"foreign_tax_on_dividend_or_underlying_profit","examples":["foreign_tax_certificate","assessment","payment_receipt"],"mandatory_for":["FSIE-PART-001"]},
-    {"evidence_id":"EV-SUBSTANCE-001","fact":"economic_substance_facts","examples":["payroll","lease","expense_ledger","board_minutes","outsourcing_agreement"],"mandatory_for":["FSIE-ES-001"]},
-    {"evidence_id":"EV-REVIEW-001","fact":"expert_decision_status","examples":["signed_review_record","review_commentary","approved_rule_version"],"mandatory_for":["FSIE-GATE-001"]}
+    {"evidence_id": "EV-ENTITY-001", "facts": ["entity_hk_business_status"], "evidence_types": ["business_registration_certificate", "company_registry_profile", "tax_registration_record"], "mandatory_for": ["FSIE-SCOPE-001"]},
+    {"evidence_id": "EV-GROUP-001", "facts": ["mne_group_status"], "evidence_types": ["group_structure_chart", "consolidated_financial_statements"], "mandatory_for": ["FSIE-SCOPE-001"]},
+    {"evidence_id": "EV-INCOME-001", "facts": ["income_legal_character"], "evidence_types": ["dividend_payment_advice", "board_or_shareholder_resolution", "financial_statement_extract"], "mandatory_for": ["FSIE-INCOME-001"]},
+    {"evidence_id": "EV-RECEIPT-001", "facts": ["receipt_location", "bank_or_account_path"], "evidence_types": ["bank_statement", "cash_pool_records", "set_off_or_clearing_records"], "mandatory_for": ["FSIE-RECEIPT-001"]},
+    {"evidence_id": "EV-HOLDING-001", "facts": ["holding_percentage_pct", "continuous_holding_period_months"], "evidence_types": ["share_register", "share_acquisition_transfer_records"], "mandatory_for": ["FSIE-PART-001"]},
+    {"evidence_id": "EV-TAX-001", "facts": ["foreign_tax_on_dividend_or_underlying_profit"], "evidence_types": ["foreign_tax_payment_certificate", "foreign_tax_assessment"], "mandatory_for": ["FSIE-PART-001"]},
+    {"evidence_id": "EV-SUBSTANCE-001", "facts": ["entity_activity_profile", "hk_adequate_employees", "hk_adequate_premises"], "evidence_types": ["payroll_or_employment_records", "lease_or_premises_records", "operating_expense_ledger", "board_minutes", "outsourcing_agreement"], "mandatory_for": ["FSIE-ES-001"]},
+    {"evidence_id": "EV-REVIEW-001", "facts": ["expert_decision_status"], "evidence_types": ["expert_review_record", "fact_confirmation_log", "source_manifest_record"], "mandatory_for": ["FSIE-GATE-001"]}
   ]
 }
