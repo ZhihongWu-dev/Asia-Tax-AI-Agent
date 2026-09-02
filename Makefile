@@ -1,4 +1,4 @@
-.PHONY: help venv install db-up db-down db-wipe migrate downgrade reset check load test test-integration run-api
+.PHONY: help venv install db-up db-down db-wipe migrate downgrade reset check load test test-integration run-eval run-api
 
 help:
 	@echo "make venv            create .venv"
@@ -13,6 +13,7 @@ help:
 	@echo "make load            load rules/cases into the database"
 	@echo "make test            run offline unit tests"
 	@echo "make test-integration run live-DB integration tests (needs db-up+migrate)"
+	@echo "make run-eval        run the 3 synthetic evaluation cases against the DB"
 	@echo "make run-api         start the FastAPI shell (uvicorn)"
 
 venv:
@@ -58,6 +59,9 @@ test:
 
 test-integration:
 	FSIE_RUN_INTEGRATION=1 .venv/bin/python -m pytest -m integration
+
+run-eval:
+	.venv/bin/python -m packages.rule_engine.cli
 
 run-api:
 	.venv/bin/uvicorn apps.api.main:app --reload
