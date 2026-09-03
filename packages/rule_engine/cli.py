@@ -197,6 +197,7 @@ def persist_run(
         terminal_state=outcome.terminal_state,
         passed=passed,
         summary={
+            "execution_batch": execution_batch,
             "blockers": list(outcome.blockers),
             "expected_state": eval_case.expected_state,
             "expected_blockers": list(eval_case.expected_blockers or []),

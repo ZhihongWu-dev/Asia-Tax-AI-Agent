@@ -26,6 +26,7 @@ build/
 coverage/
 
 # Logs and temporary files
+reports/
 *.log
 *.tmp
 *.temp
