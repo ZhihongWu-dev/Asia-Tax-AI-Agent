@@ -1,0 +1,5 @@
+{
+  "NL-SYN-001": {"maps_to": "SYN-FSIE-001", "expected_state": "research_only_output"},
+  "NL-SYN-002": {"maps_to": "SYN-FSIE-002", "expected_state": "stop_and_escalate"},
+  "NL-SYN-003": {"maps_to": "SYN-FSIE-003", "expected_state": "human_review_required"}
+}

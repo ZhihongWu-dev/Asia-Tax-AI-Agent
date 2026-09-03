@@ -1,4 +1,4 @@
-.PHONY: help venv install db-up db-down db-wipe migrate downgrade reset check load test test-integration run-eval report run-api
+.PHONY: help venv install db-up db-down db-wipe migrate downgrade reset check load test test-integration run-eval report intake-demo run-api
 
 help:
 	@echo "make venv            create .venv"
@@ -15,6 +15,7 @@ help:
 	@echo "make test-integration run live-DB integration tests (needs db-up+migrate)"
 	@echo "make run-eval        run the 3 synthetic evaluation cases against the DB"
 	@echo "make report          rebuild Markdown research reports from the DB"
+	@echo "make intake-demo     run the 3 NL fixtures end-to-end (needs model adapter)"
 	@echo "make run-api         start the FastAPI shell (uvicorn)"
 
 venv:
@@ -66,6 +67,12 @@ run-eval:
 
 report:
 	.venv/bin/python -m packages.reporting.cli
+
+intake-demo:
+	@for f in tests/fsie/natural_language_cases/NL-*.txt; do \
+	  echo "=== $$f ==="; \
+	  .venv/bin/python -m packages.intake.cli "$$f" || exit 1; \
+	done
 
 run-api:
 	.venv/bin/uvicorn apps.api.main:app --reload

@@ -15,6 +15,7 @@ from packages.contracts.enums import (
     ProfessionalValidationStatus,
     values,
 )
+from packages.persistence import models  # noqa: F401  (registers tables on Base)
 from packages.persistence.base import Base
 
 EXPECTED_TABLES = {

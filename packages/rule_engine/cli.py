@@ -177,6 +177,51 @@ def upsert_facts(session: Session, org: Organization, case_file: CaseFile, facts
     return count
 
 
+def persist_execution_records(
+    session: Session,
+    org: Organization,
+    case_file: CaseFile,
+    rule_set: RuleSet,
+    rule_nodes: dict[str, RuleNode],
+    outcome: RunOutcome,
+    execution_batch: str,
+    actor: str,
+    facts_snapshot: dict,
+) -> None:
+    """Per-node rule_executions + case status + audit entry. Shared by the
+    evaluation harness and the natural-language intake flow."""
+    for node_outcome in outcome.node_outcomes:
+        rule_node = rule_nodes.get(node_outcome.node)
+        session.add(
+            RuleExecution(
+                organization_id=org.id,
+                case_id=case_file.id,
+                rule_set_id=rule_set.id,
+                rule_node_id=rule_node.id if rule_node else None,
+                execution_batch=execution_batch,
+                node=node_outcome.node,
+                ordinal=node_outcome.ordinal,
+                output=node_outcome.output,
+                inputs_snapshot={"facts": dict(facts_snapshot)},
+                blockers=list(node_outcome.blockers),
+            )
+        )
+    case_file.case_status = TERMINAL_TO_CASE_STATUS[outcome.terminal_state]
+    session.add(
+        AuditEvent(
+            organization_id=org.id,
+            actor=actor,
+            action="run_chain",
+            entity_type="case",
+            entity_id=str(case_file.id),
+            payload={
+                "execution_batch": execution_batch,
+                "terminal_state": outcome.terminal_state,
+            },
+        )
+    )
+
+
 def persist_run(
     session: Session,
     org: Organization,
@@ -188,6 +233,10 @@ def persist_run(
     passed: bool | None,
     execution_batch: str,
 ) -> EvaluationRun:
+    persist_execution_records(
+        session, org, case_file, rule_set, rule_nodes, outcome,
+        execution_batch, actor="rule_engine", facts_snapshot=dict(eval_case.facts or {}),
+    )
     run = EvaluationRun(
         organization_id=org.id,
         rule_set_id=rule_set.id,
@@ -208,21 +257,6 @@ def persist_run(
     session.flush()
 
     for node_outcome in outcome.node_outcomes:
-        rule_node = rule_nodes.get(node_outcome.node)
-        session.add(
-            RuleExecution(
-                organization_id=org.id,
-                case_id=case_file.id,
-                rule_set_id=rule_set.id,
-                rule_node_id=rule_node.id if rule_node else None,
-                execution_batch=execution_batch,
-                node=node_outcome.node,
-                ordinal=node_outcome.ordinal,
-                output=node_outcome.output,
-                inputs_snapshot={"facts": dict(eval_case.facts or {})},
-                blockers=list(node_outcome.blockers),
-            )
-        )
         session.add(
             EvaluationResult(
                 organization_id=org.id,
@@ -239,22 +273,6 @@ def persist_run(
             )
         )
 
-    case_file.case_status = TERMINAL_TO_CASE_STATUS[outcome.terminal_state]
-    session.add(
-        AuditEvent(
-            organization_id=org.id,
-            actor="rule_engine",
-            action="run_evaluation",
-            entity_type="evaluation_run",
-            entity_id=str(run.id),
-            payload={
-                "case_id": eval_case.case_id,
-                "execution_batch": execution_batch,
-                "terminal_state": outcome.terminal_state,
-                "passed": passed,
-            },
-        )
-    )
     return run
 
 
