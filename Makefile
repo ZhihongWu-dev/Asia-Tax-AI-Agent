@@ -1,4 +1,4 @@
-.PHONY: help venv install db-up db-down db-wipe migrate downgrade reset check load test test-integration run-eval report intake-demo run-api
+.PHONY: help venv install db-up db-down db-wipe migrate downgrade reset check load test test-integration run-eval report knowledge-build intake-demo run-api
 
 help:
 	@echo "make venv            create .venv"
@@ -16,6 +16,7 @@ help:
 	@echo "make run-eval        run the 3 synthetic evaluation cases against the DB"
 	@echo "make report          rebuild Markdown research reports from the DB"
 	@echo "make intake-demo     run the 3 NL fixtures end-to-end (needs model adapter)"
+	@echo "make knowledge-build fetch+snapshot+segment official sources into legal units"
 	@echo "make run-api         start the FastAPI shell (uvicorn)"
 
 venv:
@@ -67,6 +68,9 @@ run-eval:
 
 report:
 	.venv/bin/python -m packages.reporting.cli
+
+knowledge-build:
+	.venv/bin/python -m packages.knowledge_pipeline.cli
 
 intake-demo:
 	@for f in tests/fsie/natural_language_cases/NL-*.txt; do \

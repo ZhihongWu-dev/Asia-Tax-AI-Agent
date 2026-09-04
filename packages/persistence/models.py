@@ -334,3 +334,80 @@ class AuditEvent(Base):
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), nullable=False
     )
+
+
+# ---------------------------------------------------------------------------
+# Knowledge pipeline layer (S5): official sources and their legal units
+# ---------------------------------------------------------------------------
+
+PARSE_STATUSES = ("registered", "snapshotted", "parsed", "failed", "out_of_scope")
+UNIT_TYPES = (
+    "subsection",
+    "section",
+    "guidance_block",
+    "faq_item",
+    "example",
+    "ruling_block",
+    "pdf_page",
+)
+
+
+class Source(Base, TimestampMixin):
+    """A row of the versioned source manifest, mirrored into the DB with
+    pipeline state (snapshot location, parse status, drift detection)."""
+
+    __tablename__ = "sources"
+    __table_args__ = (
+        CheckConstraint(_in_list("parse_status", PARSE_STATUSES), name="ck_source_parse_status"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    source_id: Mapped[str] = mapped_column(String(64), nullable=False, unique=True)
+    title: Mapped[str] = mapped_column(String(512), nullable=False)
+    publisher: Mapped[str | None] = mapped_column(String(128), nullable=True)
+    source_type: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    url: Mapped[str] = mapped_column(String(1024), nullable=False)
+    structured_data_url: Mapped[str | None] = mapped_column(String(1024), nullable=True)
+    jurisdiction: Mapped[str] = mapped_column(String(8), nullable=False, server_default="HK")
+    language: Mapped[str] = mapped_column(String(8), nullable=False, server_default="en")
+    manifest_sha256: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    actual_sha256: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    content_bytes: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    content_type: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    snapshot_path: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    retrieved_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    http_status: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    l0_in_scope: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default="true")
+    parse_status: Mapped[str] = mapped_column(String(32), nullable=False, server_default="registered")
+    units_count: Mapped[int] = mapped_column(Integer, nullable=False, server_default="0")
+    professional_validation_status: Mapped[str] = mapped_column(
+        String(32), nullable=False, server_default="unverified"
+    )
+
+
+class LegalUnit(Base):
+    """The smallest citable slice of an official source (a subsection, a FAQ
+    item, a guidance block). Reports must be able to jump from a citation to
+    the unit and back to the source snapshot."""
+
+    __tablename__ = "legal_units"
+    __table_args__ = (
+        UniqueConstraint("source_db_id", "unit_ref", name="uq_legal_unit_ref"),
+        CheckConstraint(_in_list("unit_type", UNIT_TYPES), name="ck_legal_unit_type"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    source_db_id: Mapped[int] = mapped_column(
+        ForeignKey("sources.id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    unit_ref: Mapped[str] = mapped_column(String(128), nullable=False)
+    statute_locator: Mapped[str | None] = mapped_column(String(32), nullable=True, index=True)
+    unit_type: Mapped[str] = mapped_column(String(32), nullable=False)
+    ordinal: Mapped[int] = mapped_column(Integer, nullable=False)
+    heading: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    text: Mapped[str] = mapped_column(String, nullable=False)
+    text_sha256: Mapped[str] = mapped_column(String(64), nullable=False)
+    language: Mapped[str] = mapped_column(String(8), nullable=False, server_default="en")
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )

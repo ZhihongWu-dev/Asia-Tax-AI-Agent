@@ -30,6 +30,8 @@ EXPECTED_TABLES = {
     "evaluation_runs",
     "evaluation_results",
     "audit_events",
+    "sources",
+    "legal_units",
 }
 
 # Knowledge definitions are global; everything else that runs a case is tenant-scoped.
@@ -47,6 +49,8 @@ GLOBAL_TABLES_WITHOUT_ORG = {
     "rule_nodes",
     "evaluation_cases",
     "audit_events",  # organization_id intentionally nullable
+    "sources",  # knowledge layer is global
+    "legal_units",
 }
 
 EXPECTED_CHECK_VALUES = {

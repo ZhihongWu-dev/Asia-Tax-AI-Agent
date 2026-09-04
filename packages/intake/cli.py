@@ -104,6 +104,21 @@ def run_intake(description_path: Path, case_id: str | None = None) -> dict:
             execution_batch, actor="intake_llm", facts_snapshot=facts,
         )
 
+        from packages.persistence.models import LegalUnit
+        locators = {
+            thr.get("statute_locator")
+            for n in rule_node_rows
+            for thr in (n.thresholds or [])
+            if thr.get("statute_locator")
+        }
+        statute_units = {}
+        if locators:
+            statute_units = {
+                u.statute_locator: u.text
+                for u in session.execute(
+                    select(LegalUnit).where(LegalUnit.statute_locator.in_(locators))
+                ).scalars()
+            }
         report_input = report_input_from_outcome(
             outcome,
             case_description=text[:255],
@@ -112,8 +127,18 @@ def run_intake(description_path: Path, case_id: str | None = None) -> dict:
             rule_set_version=rule_set.version,
             git_commit=rule_set.git_commit,
             rule_nodes_meta={
-                n.node: (n.rule_id, tuple(n.source_ids or ())) for n in rule_node_rows
+                n.node: (
+                    n.rule_id,
+                    tuple(n.source_ids or ()),
+                    tuple(
+                        thr.get("statute_locator")
+                        for thr in (n.thresholds or [])
+                        if thr.get("statute_locator")
+                    ),
+                )
+                for n in rule_node_rows
             },
+            statute_units=statute_units,
         )
 
     report_dir = REPORTS_DIR / case_id

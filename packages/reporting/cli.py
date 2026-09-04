@@ -24,6 +24,7 @@ from packages.persistence.models import (
     EvaluationCase,
     EvaluationResult,
     EvaluationRun,
+    LegalUnit,
     Organization,
     RuleNode,
     RuleSet,
@@ -80,9 +81,16 @@ def collect_report_inputs(
         ).scalars().all()
 
         node_rows = []
+        statute_locators_used: set[str] = set()
         for result in results:
             rule_node = rule_nodes.get(result.node)
             detail = dict(result.detail or {})
+            locators = tuple(
+                thr.get("statute_locator")
+                for thr in (rule_node.thresholds or [])
+                if rule_node and thr.get("statute_locator")
+            )
+            statute_locators_used.update(locators)
             node_rows.append(
                 NodeRow(
                     node=result.node,
@@ -93,8 +101,16 @@ def collect_report_inputs(
                     escalation_blockers=tuple(detail.pop("escalation_blockers", []) or []),
                     note=detail.get("note"),
                     source_ids=tuple(rule_node.source_ids) if rule_node else (),
+                    statute_locators=locators,
                 )
             )
+
+        statute_units = {}
+        if statute_locators_used:
+            units = session.execute(
+                select(LegalUnit).where(LegalUnit.statute_locator.in_(statute_locators_used))
+            ).scalars().all()
+            statute_units = {u.statute_locator: u.text for u in units}
 
         summary = dict(run.summary or {})
         reports.append(
@@ -112,6 +128,7 @@ def collect_report_inputs(
                 conflict_fields=tuple(summary.get("conflict_fields", [])),
                 node_rows=tuple(node_rows),
                 source_catalog=catalog,
+                statute_units=statute_units,
             )
         )
     return reports

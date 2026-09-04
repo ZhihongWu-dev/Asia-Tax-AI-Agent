@@ -73,6 +73,7 @@ class NodeRow:
     escalation_blockers: tuple[str, ...] = ()
     note: str | None = None
     source_ids: tuple[str, ...] = ()
+    statute_locators: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -90,6 +91,7 @@ class ReportInput:
     conflict_fields: tuple[str, ...] = ()
     node_rows: tuple[NodeRow, ...] = ()
     source_catalog: Mapping[str, Mapping[str, str]] = field(default_factory=dict)
+    statute_units: Mapping[str, str] = field(default_factory=dict)
 
 
 def _zh_node(node: str) -> str:
@@ -158,9 +160,25 @@ def render_markdown(report: ReportInput) -> str:
         lines.append(f"| {row.ordinal} | {node_cell} | {rule_cell} | {output_cell} | {'；'.join(remarks) or '—'} |")
     lines.append("")
 
+    cited: list[tuple[str, str]] = []
+    seen_locators: set[str] = set()
+    for row in sorted(report.node_rows, key=lambda r: (r.ordinal, r.node)):
+        for locator in row.statute_locators:
+            if locator not in seen_locators and locator in report.statute_units:
+                seen_locators.add(locator)
+                cited.append((locator, report.statute_units[locator]))
+    if cited:
+        lines.append("## 4. 法条级依据（已切分法律单元，供核对原文）")
+        lines.append("")
+        lines.append("| 条文 | 法律单元节选（Cap. 112 现行版本） |")
+        lines.append("|---|---|")
+        for locator, snippet in cited:
+            lines.append(f"| `{locator}` | {snippet[:160]}{'…' if len(snippet) > 160 else ''} |")
+        lines.append("")
+
     used_source_ids = sorted({sid for row in report.node_rows for sid in row.source_ids})
     if used_source_ids:
-        lines.append("## 4. 依据来源（候选规则映射，未经专家确认完整性）")
+        lines.append("## 5. 依据来源（候选规则映射，未经专家确认完整性）")
         lines.append("")
         lines.append("| 来源 | 标题 | 链接 |")
         lines.append("|---|---|---|")
@@ -173,7 +191,7 @@ def render_markdown(report: ReportInput) -> str:
                 lines.append(f"| `{sid}` | {meta.get('title', '—')} | {url} |")
         lines.append("")
 
-    lines.append("## 5. 下一步")
+    lines.append("## 6. 下一步")
     lines.append("")
     lines.append(f"- {_NEXT_STEPS_ZH.get(report.terminal_state, '按项目规程处理。')}")
     gate_rows = [r for r in report.node_rows if r.node == "human_gate"]
@@ -186,7 +204,7 @@ def render_markdown(report: ReportInput) -> str:
     lines.append("- 本报告可按运行批次从数据库完整重建（同一数据库状态重渲染结果逐字节一致）。")
     lines.append("")
 
-    lines.append("## 6. 责任与限制声明")
+    lines.append("## 7. 责任与限制声明")
     lines.append("")
     lines.append("- 本报告基于候选规则（状态 `unverified`）生成，规则解释与阈值未经香港税务专家确认；")
     lines.append("- 报告不判断免税或应税，不替代专业意见，不得对外交付；")

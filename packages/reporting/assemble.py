@@ -21,19 +21,22 @@ def report_input_from_outcome(
     organization_name: str,
     rule_set_version: str,
     git_commit: str | None,
-    rule_nodes_meta: dict[str, tuple[str, tuple[str, ...]]],
+    rule_nodes_meta: dict[str, tuple[str, tuple[str, ...], tuple[str, ...]]],
+    statute_units: dict[str, str] | None = None,
     generated_at: datetime | None = None,
 ) -> ReportInput:
+    empty = (None, (), ())
     node_rows = tuple(
         NodeRow(
             node=o.node,
             ordinal=o.ordinal,
-            rule_id=rule_nodes_meta.get(o.node, (None, ()))[0],
+            rule_id=rule_nodes_meta.get(o.node, empty)[0],
             output=o.output,
             blockers=o.blockers,
             escalation_blockers=o.escalation_blockers,
             note=o.detail.get("note") if isinstance(o.detail, dict) else None,
-            source_ids=rule_nodes_meta.get(o.node, (None, ()))[1],
+            source_ids=rule_nodes_meta.get(o.node, empty)[1],
+            statute_locators=rule_nodes_meta.get(o.node, empty)[2],
         )
         for o in outcome.node_outcomes
     )
@@ -51,4 +54,5 @@ def report_input_from_outcome(
         conflict_fields=outcome.conflict_fields,
         node_rows=node_rows,
         source_catalog=source_catalog(),
+        statute_units=statute_units or {},
     )
