@@ -30,7 +30,7 @@ def test_cases_payload_is_synthetic_and_uses_dictionary_fields():
     field_names = {f["field_name"] for f in dictionary["fields"]}
 
     cases = parser.load_cases_payload()
-    assert len(cases["cases"]) == 3
+    assert len(cases["cases"]) == 10
     for case in cases["cases"]:
         assert case["synthetic"] is True
         assert case["case_id"].startswith("SYN-FSIE-")

@@ -57,22 +57,22 @@ def test_evaluation_cases_run_end_to_end_and_pass_their_golden_expectations(clea
         persist_knowledge(session, run_validation=False)
         reports = run_all(session)
 
-    assert len(reports) == 3
+    assert len(reports) == 10
     assert all(r.passed is True for r in reports), [
         (r.case_id, r.terminal_state, r.blockers) for r in reports if not r.passed
     ]
-    assert {r.case_id for r in reports} == {"SYN-FSIE-001", "SYN-FSIE-002", "SYN-FSIE-003"}
+    assert len({r.case_id for r in reports}) == 10
 
     with session_scope() as session:
         runs = session.scalar(select(func.count()).select_from(EvaluationRun))
         executions = session.scalar(select(func.count()).select_from(RuleExecution))
         results = session.scalar(select(func.count()).select_from(EvaluationResult))
         facts = session.scalar(select(func.count()).select_from(Fact))
-    # 3 cases x 6 nodes, fact cards of 6 + 5 + 7 facts.
-    assert runs == 3
-    assert executions == 18
-    assert results == 18
-    assert facts == 18
+    # 10 cases x 6 nodes; fact cards total 51 facts.
+    assert runs == 10
+    assert executions == 60
+    assert results == 60
+    assert facts == 51
 
 
 def test_rerun_appends_new_batches_without_duplicating_facts(clean_runtime):
@@ -88,6 +88,6 @@ def test_rerun_appends_new_batches_without_duplicating_facts(clean_runtime):
         runs = session.scalar(select(func.count()).select_from(EvaluationRun))
         facts = session.scalar(select(func.count()).select_from(Fact))
         versions = session.scalar(select(func.count()).select_from(FactVersion))
-    assert runs == 6
-    assert facts == 18  # upserted, never duplicated
-    assert versions == 18  # unchanged values create no new versions
+    assert runs == 20
+    assert facts == 51  # upserted, never duplicated
+    assert versions == 51  # unchanged values create no new versions

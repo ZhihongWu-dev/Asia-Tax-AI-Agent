@@ -33,9 +33,9 @@ def _counts(session):
 def test_load_is_idempotent():
     with session_scope() as session:
         first = persist_knowledge(session, run_validation=False)
-        assert (first.rules_loaded, first.cases_loaded) == (6, 3)
+        assert (first.rules_loaded, first.cases_loaded) == (6, 10)
     # Second run must converge, not duplicate.
     with session_scope() as session:
         second = persist_knowledge(session, run_validation=False)
-        assert (second.rules_loaded, second.cases_loaded) == (6, 3)
-        assert _counts(session) == (6, 3)
+        assert (second.rules_loaded, second.cases_loaded) == (6, 10)
+        assert _counts(session) == (6, 10)

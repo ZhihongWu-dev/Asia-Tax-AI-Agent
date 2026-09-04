@@ -60,7 +60,7 @@ def test_reports_rebuild_from_the_db_for_every_case(clean_runtime, tmp_path):
     with session_scope() as session:
         inputs = collect_report_inputs(session)
 
-    assert {i.case_id for i in inputs} == {"SYN-FSIE-001", "SYN-FSIE-002", "SYN-FSIE-003"}
+    assert len({i.case_id for i in inputs}) == 10
     for report in inputs:
         assert report.rule_set_version == "0.2.0"
         assert report.terminal_state in {
@@ -69,7 +69,7 @@ def test_reports_rebuild_from_the_db_for_every_case(clean_runtime, tmp_path):
         assert len(report.node_rows) == 6
 
     paths = write_reports(inputs, base_dir=tmp_path)
-    assert len(paths) == 3
+    assert len(paths) == 10
     for path in paths:
         text = path.read_text(encoding="utf-8")
         assert RESEARCH_WATERMARK in text

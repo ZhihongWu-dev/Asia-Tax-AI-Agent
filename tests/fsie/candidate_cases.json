@@ -1,34 +1,199 @@
 {
-  "dataset_version": "0.2.0",
-  "dataset_status": "synthetic_candidate_only",
-  "value_note": "Inline facts use plain business values plus sentinels (unknown/conflict/assumed/not_applicable). Confirmation state is attached when these are loaded into fact cards, not encoded in the value.",
-  "cases": [
-    {
-      "case_id": "SYN-FSIE-001",
-      "synthetic": true,
-      "description": "A fictional Hong Kong group entity receives a foreign dividend; evidence is intentionally incomplete.",
-      "facts": {"entity_hk_business_status": "yes", "mne_group_status": "unknown", "income_type": "dividend", "receipt_location": "unknown", "holding_percentage_pct": 15, "continuous_holding_period_months": 18},
-      "expected_state": "research_only_output",
-      "expected_blockers": ["mne_group_status", "receipt_location", "foreign_tax_on_dividend_or_underlying_profit", "hk_adequate_employees"],
-      "notes": "Not a tax gold label. Requires expert review before any rule result is treated as valid."
-    },
-    {
-      "case_id": "SYN-FSIE-002",
-      "synthetic": true,
-      "description": "A fictional case contains conflicting receipt-location statements.",
-      "facts": {"entity_hk_business_status": "yes", "mne_group_status": "yes", "income_type": "dividend", "receipt_location": "conflict", "bank_or_account_path": "HK_account_and_offshore_cash_pool"},
-      "expected_state": "stop_and_escalate",
-      "expected_blockers": ["receipt_location"],
-      "notes": "Tests that conflict is not silently converted into a negative answer; the conflict itself is the blocker."
-    },
-    {
-      "case_id": "SYN-FSIE-003",
-      "synthetic": true,
-      "description": "A fictional case has a candidate participation pathway but no evidence of the foreign tax condition.",
-      "facts": {"entity_hk_business_status": "yes", "mne_group_status": "yes", "income_type": "dividend", "receipt_location": "received_in_hk", "holding_percentage_pct": 15, "continuous_holding_period_months": 18, "foreign_tax_on_dividend_or_underlying_profit": "unknown"},
-      "expected_state": "human_review_required",
-      "expected_blockers": ["foreign_tax_on_dividend_or_underlying_profit", "main_purpose_tax_benefit_flag"],
-      "notes": "Thresholds and application are deliberately not encoded as a final legal conclusion."
-    }
-  ]
+ "dataset_version": "0.2.0",
+ "dataset_status": "synthetic_candidate_only",
+ "value_note": "Inline facts use plain business values plus sentinels (unknown/conflict/assumed/not_applicable). Confirmation state is attached when these are loaded into fact cards, not encoded in the value.",
+ "cases": [
+  {
+   "case_id": "SYN-FSIE-001",
+   "synthetic": true,
+   "description": "A fictional Hong Kong group entity receives a foreign dividend; evidence is intentionally incomplete.",
+   "facts": {
+    "entity_hk_business_status": "yes",
+    "mne_group_status": "unknown",
+    "income_type": "dividend",
+    "receipt_location": "unknown",
+    "holding_percentage_pct": 15,
+    "continuous_holding_period_months": 18
+   },
+   "expected_state": "research_only_output",
+   "expected_blockers": [
+    "mne_group_status",
+    "receipt_location",
+    "foreign_tax_on_dividend_or_underlying_profit",
+    "hk_adequate_employees"
+   ],
+   "notes": "Not a tax gold label. Requires expert review before any rule result is treated as valid."
+  },
+  {
+   "case_id": "SYN-FSIE-002",
+   "synthetic": true,
+   "description": "A fictional case contains conflicting receipt-location statements.",
+   "facts": {
+    "entity_hk_business_status": "yes",
+    "mne_group_status": "yes",
+    "income_type": "dividend",
+    "receipt_location": "conflict",
+    "bank_or_account_path": "HK_account_and_offshore_cash_pool"
+   },
+   "expected_state": "stop_and_escalate",
+   "expected_blockers": [
+    "receipt_location"
+   ],
+   "notes": "Tests that conflict is not silently converted into a negative answer; the conflict itself is the blocker."
+  },
+  {
+   "case_id": "SYN-FSIE-003",
+   "synthetic": true,
+   "description": "A fictional case has a candidate participation pathway but no evidence of the foreign tax condition.",
+   "facts": {
+    "entity_hk_business_status": "yes",
+    "mne_group_status": "yes",
+    "income_type": "dividend",
+    "receipt_location": "received_in_hk",
+    "holding_percentage_pct": 15,
+    "continuous_holding_period_months": 18,
+    "foreign_tax_on_dividend_or_underlying_profit": "unknown"
+   },
+   "expected_state": "human_review_required",
+   "expected_blockers": [
+    "foreign_tax_on_dividend_or_underlying_profit",
+    "main_purpose_tax_benefit_flag"
+   ],
+   "notes": "Thresholds and application are deliberately not encoded as a final legal conclusion."
+  },
+  {
+   "case_id": "SYN-FSIE-004",
+   "synthetic": true,
+   "description": "A fictional entity carries on business in Hong Kong but is NOT an MNE entity; FSIE scope fails deterministically.",
+   "scenario_tag": "scope_not_mne",
+   "facts": {
+    "entity_hk_business_status": "yes",
+    "mne_group_status": "no",
+    "income_type": "dividend",
+    "receipt_location": "received_in_hk"
+   },
+   "expected_state": "research_only_output",
+   "expected_blockers": [
+    "hk_adequate_employees",
+    "holding_percentage_pct",
+    "continuous_holding_period_months"
+   ],
+   "notes": "Not a tax gold label. Exercises the scope not_satisfied branch; downstream nodes must not escalate while scope is unsettled."
+  },
+  {
+   "case_id": "SYN-FSIE-005",
+   "synthetic": true,
+   "description": "A fictional MNE entity earns foreign INTEREST, which is outside the L0 dividend slice.",
+   "scenario_tag": "out_of_slice_income_type",
+   "facts": {
+    "entity_hk_business_status": "yes",
+    "mne_group_status": "yes",
+    "income_type": "interest",
+    "receipt_location": "received_in_hk"
+   },
+   "expected_state": "research_only_output",
+   "expected_blockers": [
+    "hk_adequate_employees",
+    "holding_percentage_pct",
+    "continuous_holding_period_months"
+   ],
+   "notes": "Not a tax gold label. Exercises the income-type out-of-slice branch."
+  },
+  {
+   "case_id": "SYN-FSIE-006",
+   "synthetic": true,
+   "description": "A fictional case where the dividend was received OUTSIDE Hong Kong.",
+   "scenario_tag": "receipt_outside_hk",
+   "facts": {
+    "entity_hk_business_status": "yes",
+    "mne_group_status": "yes",
+    "income_type": "dividend",
+    "receipt_location": "received_outside_hk"
+   },
+   "expected_state": "research_only_output",
+   "expected_blockers": [
+    "hk_adequate_employees",
+    "holding_percentage_pct",
+    "continuous_holding_period_months"
+   ],
+   "notes": "Not a tax gold label. Exercises the receipt not_satisfied branch and chain degradation."
+  },
+  {
+   "case_id": "SYN-FSIE-007",
+   "synthetic": true,
+   "description": "A fictional case with an established chain but a 4% holding, below the s.15M(2) percentage threshold.",
+   "scenario_tag": "participation_below_percentage_threshold",
+   "facts": {
+    "entity_hk_business_status": "yes",
+    "mne_group_status": "yes",
+    "income_type": "dividend",
+    "receipt_location": "received_in_hk",
+    "holding_percentage_pct": 4,
+    "continuous_holding_period_months": 24
+   },
+   "expected_state": "research_only_output",
+   "expected_blockers": [
+    "hk_adequate_employees"
+   ],
+   "notes": "Not a tax gold label. Deterministic threshold failure must be condition_not_demonstrated, never a human escalation."
+  },
+  {
+   "case_id": "SYN-FSIE-008",
+   "synthetic": true,
+   "description": "A fictional case with a 20% holding kept for only 6 months, below the s.15M(2) period threshold.",
+   "scenario_tag": "participation_below_period_threshold",
+   "facts": {
+    "entity_hk_business_status": "yes",
+    "mne_group_status": "yes",
+    "income_type": "dividend",
+    "receipt_location": "received_in_hk",
+    "holding_percentage_pct": 20,
+    "continuous_holding_period_months": 6
+   },
+   "expected_state": "research_only_output",
+   "expected_blockers": [
+    "hk_adequate_employees"
+   ],
+   "notes": "Not a tax gold label. Exercises the period dimension of the s.15M(2) threshold."
+  },
+  {
+   "case_id": "SYN-FSIE-009",
+   "synthetic": true,
+   "description": "A fictional case with conflicting statements about whether the entity belongs to an MNE group.",
+   "scenario_tag": "conflict_mne_status",
+   "facts": {
+    "entity_hk_business_status": "yes",
+    "mne_group_status": "conflict",
+    "income_type": "dividend"
+   },
+   "expected_state": "stop_and_escalate",
+   "expected_blockers": [
+    "mne_group_status"
+   ],
+   "notes": "Not a tax gold label. Conflicts on scope facts must escalate exactly like receipt conflicts."
+  },
+  {
+   "case_id": "SYN-FSIE-010",
+   "synthetic": true,
+   "description": "A fictional case with an established chain and partial economic-substance facts; sufficiency is a Commissioner judgement.",
+   "scenario_tag": "substance_escalation",
+   "facts": {
+    "entity_hk_business_status": "yes",
+    "mne_group_status": "yes",
+    "income_type": "dividend",
+    "receipt_location": "received_in_hk",
+    "hk_adequate_employees": "adequate",
+    "hk_adequate_premises": "adequate"
+   },
+   "expected_state": "human_review_required",
+   "expected_blockers": [
+    "entity_activity_profile",
+    "hk_operating_expenditure_amount",
+    "outsourcing_and_supervision",
+    "pure_equity_holding_entity_status",
+    "strategic_decision_making_location"
+   ],
+   "notes": "Not a tax gold label. Substance sufficiency under s.15K can never be mechanically proven; escalation is the only honest output."
+  }
+ ]
 }
