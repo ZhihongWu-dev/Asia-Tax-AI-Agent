@@ -19,9 +19,11 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class ModelSettings(BaseSettings):
+    # Field names avoid the pydantic "model_" protected namespace so the env
+    # mapping is exactly FSIE_MODEL_BASE_URL / FSIE_MODEL_API_KEY / FSIE_MODEL_NAME.
     base_url: str = ""   # e.g. https://api.provider.com/v1
     api_key: str = ""
-    model_name: str = ""  # e.g. gpt-4o-mini / qwen-plus
+    name: str = ""       # e.g. qwen3-coder-plus / gpt-4o-mini
     timeout_seconds: float = 60.0
     max_retries: int = 2
 
@@ -34,7 +36,7 @@ def get_model_config() -> "ModelConfig":
     return ModelConfig(
         base_url=s.base_url.rstrip("/"),
         api_key=s.api_key,
-        model_name=s.model_name,
+        model_name=s.name,
         timeout_seconds=s.timeout_seconds,
         max_retries=s.max_retries,
     )
