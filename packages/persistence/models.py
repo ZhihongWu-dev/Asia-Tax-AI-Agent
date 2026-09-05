@@ -411,3 +411,17 @@ class LegalUnit(Base):
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), nullable=False
     )
+
+
+class SystemSetting(Base):
+    """DS-06: platform master data for the L0 envelope (release level,
+    coverage cutoff, watermark policy). No secrets are ever stored here."""
+
+    __tablename__ = "system_settings"
+
+    key: Mapped[str] = mapped_column(String(64), primary_key=True)
+    value: Mapped[dict | list | str | int | float | bool] = mapped_column(JSONB, nullable=False)
+    description: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )

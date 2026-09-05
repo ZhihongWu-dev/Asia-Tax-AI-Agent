@@ -22,6 +22,7 @@ from packages.persistence.models import (
     RuleNode,
     RuleSet,
 )
+from packages.persistence.settings import seed_system_settings
 
 
 def validate_package_or_raise() -> None:
@@ -57,6 +58,8 @@ class LoadResult:
 def persist_knowledge(session: Session, *, run_validation: bool = True) -> LoadResult:
     if run_validation:
         validate_package_or_raise()
+
+    seed_system_settings(session)
 
     rules_payload = parser.load_rules_payload()
     cases_payload = parser.load_cases_payload()
