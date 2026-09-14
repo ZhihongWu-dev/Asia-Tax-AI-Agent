@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asia-tax-agent.local/contracts/json_schemas/fact_record.schema.json",
+  "title": "FactRecord — runtime fact-card entry; value is separated from its confirmation status (data plan s.3.5, PRD FR-03)",
+  "type": "object",
+  "required": [
+    "fact_id",
+    "case_id",
+    "field_name",
+    "value",
+    "confirmation_status",
+    "updated_by",
+    "updated_at"
+  ],
+  "properties": {
+    "fact_id": {"type": "string"},
+    "case_id": {"type": "string"},
+    "income_event_id": {"type": ["string", "null"]},
+    "field_name": {"type": "string", "description": "Must match a field_name in the fact dictionary."},
+    "value": {"description": "Pure business value. Confirmation state lives in confirmation_status, never encoded into the value."},
+    "unit": {"type": ["string", "null"]},
+    "confirmation_status": {"$ref": "definitions.schema.json#/$defs/FactConfirmationStatus"},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "source_quote": {"type": ["string", "null"]},
+    "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "affected_nodes": {"type": "array", "items": {"$ref": "definitions.schema.json#/$defs/JudgementNodeKey"}},
+    "updated_by": {"type": "string"},
+    "updated_at": {"type": "string"}
+  },
+  "additionalProperties": false
+}

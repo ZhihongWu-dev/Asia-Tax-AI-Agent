@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asia-tax-agent.local/contracts/json_schemas/definitions.schema.json",
+  "title": "Shared enums and common structures for the FSIE knowledge contract",
+  "description": "Single source of truth for status machines, node keys and shared value domains. Asset schemas reference these via $ref. The Python module packages/contracts/enums.py must stay in sync; validate_fsie_package.py fails on drift.",
+  "type": "object",
+  "$defs": {
+    "ReleaseLevel": {
+      "type": "string",
+      "description": "Product release level. L0 is the only 2026 default commitment.",
+      "enum": ["L0", "L1", "L2"]
+    },
+    "LifecycleStatus": {
+      "type": "string",
+      "description": "Knowledge-asset lifecycle (FSIE data plan s.2). Forward flow discovered->captured->parsed->candidate->machine_checked->human_review->verified->active; any stage may move to rejected/stale/blocked.",
+      "enum": [
+        "discovered",
+        "captured",
+        "parsed",
+        "candidate",
+        "machine_checked",
+        "human_review",
+        "verified",
+        "active",
+        "rejected",
+        "stale",
+        "potentially_stale",
+        "blocked"
+      ]
+    },
+    "ProfessionalValidationStatus": {
+      "type": "string",
+      "description": "Professional sign-off. Only a Hong Kong tax expert may move an asset to verified.",
+      "enum": ["unverified", "verified", "rejected"]
+    },
+    "FactConfirmationStatus": {
+      "type": "string",
+      "description": "Lifecycle of a single case fact (data plan s.3.5). The LLM may only write ai_candidate; advisor_confirmed is required before a fact feeds rule execution.",
+      "enum": [
+        "client_statement",
+        "ai_candidate",
+        "advisor_confirmed",
+        "externally_evidenced",
+        "assumed",
+        "unknown",
+        "conflict"
+      ]
+    },
+    "InlineFactSentinel": {
+      "type": "string",
+      "description": "Reserved values allowed inside a candidate case's inline facts map when the business value is not asserted. Unknown must never be converted into a negative.",
+      "enum": ["unknown", "conflict", "assumed", "not_applicable"]
+    },
+    "NodeOutputStatus": {
+      "type": "string",
+      "description": "Per-node rule output. Missing facts map to unknown/condition_not_demonstrated, never to not_satisfied.",
+      "enum": [
+        "satisfied",
+        "not_satisfied",
+        "unknown",
+        "conflict",
+        "condition_not_demonstrated",
+        "human_review_required"
+      ]
+    },
+    "CaseTerminalState": {
+      "type": "string",
+      "description": "Safe terminal states for an L0 synthetic case run.",
+      "enum": ["research_only_output", "stop_and_escalate", "human_review_required"]
+    },
+    "EvidenceStatus": {
+      "type": "string",
+      "enum": ["provided", "missing", "conflict", "not_applicable"]
+    },
+    "BlockingLevel": {
+      "type": "string",
+      "description": "How a fact gates the judgement chain: blocks scope, blocks a conclusion, or merely supports.",
+      "enum": ["scope_blocking", "conclusion_blocking", "supporting"]
+    },
+    "CaseStatus": {
+      "type": "string",
+      "description": "Case workflow states (PRD s.9).",
+      "enum": [
+        "draft",
+        "interviewing",
+        "waiting_client_evidence",
+        "waiting_fact_confirmation",
+        "analyzing",
+        "needs_human_judgment",
+        "pending_review",
+        "approved",
+        "invalidated",
+        "archived"
+      ]
+    },
+    "FactDomain": {
+      "type": "string",
+      "description": "The eight fact domains of PRD FR-03.",
+      "enum": [
+        "entity_and_group",
+        "dividend_identity",
+        "receipt_path",
+        "participation_holding",
+        "foreign_taxation",
+        "hk_economic_substance",
+        "commercial_purpose_anti_abuse",
+        "evidence_documents"
+      ]
+    },
+    "JudgementNodeKey": {
+      "type": "string",
+      "description": "Canonical keys for the ten-step FSIE judgement chain (PRD s.5.2) plus the cross-cutting human gate. ordinal 0 denotes the non-sequential gate.",
+      "enum": [
+        "scope",
+        "income_characterisation",
+        "receipt",
+        "financial_entity_exclusion",
+        "economic_substance",
+        "participation_basic",
+        "foreign_tax_switchover",
+        "anti_hybrid",
+        "main_purpose",
+        "compliance_filing",
+        "human_gate"
+      ]
+    },
+    "FactDataType": {
+      "type": "string",
+      "enum": ["enum", "string", "decimal", "integer", "date", "boolean", "entity_ref", "currency_code", "list"]
+    },
+    "YesNoUnknown": {
+      "type": "string",
+      "enum": ["yes", "no", "unknown", "conflict", "not_applicable"]
+    },
+    "AuthorityLevel": {
+      "type": "string",
+      "enum": [
+        "primary_legislation",
+        "primary_legislative_material",
+        "primary_tax_authority_guidance",
+        "official_faq",
+        "official_examples",
+        "official_advance_ruling"
+      ]
+    },
+    "Locator": {
+      "type": "object",
+      "description": "Precise location of a legal unit inside its source.",
+      "properties": {
+        "part": {"type": ["string", "null"]},
+        "division": {"type": ["string", "null"]},
+        "section": {"type": ["string", "null"]},
+        "subsection": {"type": ["string", "null"]},
+        "paragraph": {"type": ["string", "null"]},
+        "page": {"type": ["integer", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "Threshold": {
+      "type": "object",
+      "description": "A candidate numeric/boolean threshold. Always unverified at L0 and bound to a legal unit once ingested.",
+      "required": ["name", "status"],
+      "properties": {
+        "name": {"type": "string"},
+        "value": {},
+        "unit": {"type": ["string", "null"]},
+        "source_unit_id": {"type": ["string", "null"]},
+        "statute_locator": {"type": ["string", "null"], "description": "Human citation such as s.15M(2), filled from the verified clause map."},
+        "status": {"$ref": "#/$defs/ProfessionalValidationStatus"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

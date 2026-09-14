@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asia-tax-agent.local/contracts/json_schemas/rule_node.schema.json",
+  "title": "RuleNode / RuleCandidate — one node of the versioned FSIE judgement chain (data plan s.3.4)",
+  "type": "object",
+  "required": [
+    "rule_id",
+    "node",
+    "ordinal",
+    "title",
+    "required_facts",
+    "required_evidence",
+    "source_ids",
+    "outputs",
+    "human_review_required",
+    "status"
+  ],
+  "properties": {
+    "rule_id": {"type": "string", "pattern": "^FSIE-[A-Z]+-[0-9]{3}$"},
+    "node": {"$ref": "definitions.schema.json#/$defs/JudgementNodeKey"},
+    "ordinal": {"type": "integer", "minimum": 0, "maximum": 10},
+    "title": {"type": "string", "minLength": 1},
+    "purpose": {"type": "string"},
+    "required_facts": {"type": "array", "items": {"type": "string"}, "description": "Must match field_name entries in the fact dictionary."},
+    "required_evidence": {"type": "array", "items": {"type": "string"}, "description": "Must match the controlled evidence-type vocabulary."},
+    "depends_on_nodes": {"type": "array", "items": {"$ref": "definitions.schema.json#/$defs/JudgementNodeKey"}},
+    "source_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "source_unit_ids": {"type": "array", "items": {"type": "string"}},
+    "thresholds_to_verify": {"type": "array", "items": {"type": "string"}, "description": "Legacy alias; prefer thresholds."},
+    "thresholds": {"type": "array", "items": {"$ref": "definitions.schema.json#/$defs/Threshold"}},
+    "outputs": {"type": "array", "items": {"$ref": "definitions.schema.json#/$defs/NodeOutputStatus"}, "minItems": 1},
+    "human_review_required": {"type": "boolean"},
+    "effective_from": {"type": ["string", "null"]},
+    "effective_to": {"type": ["string", "null"]},
+    "status": {"$ref": "definitions.schema.json#/$defs/ProfessionalValidationStatus"}
+  },
+  "additionalProperties": false
+}
