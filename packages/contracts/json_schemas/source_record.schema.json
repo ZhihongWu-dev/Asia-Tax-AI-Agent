@@ -29,6 +29,7 @@
         "official_examples",
         "ordinance_material",
         "official_advance_ruling_guidance",
+        "official_advance_ruling",
         "structured_legislation_xml"
       ]
     },
@@ -39,6 +40,8 @@
     "jurisdiction": {"type": "string", "minLength": 2},
     "language": {"type": "string"},
     "publication_date": {"type": ["string", "null"]},
+    "ruling_issued_on": {"type": "string", "format": "date"},
+    "ruling_applicable_years": {"type": "string", "minLength": 1},
     "effective_from": {"type": ["string", "null"]},
     "effective_to": {"type": ["string", "null"]},
     "retrieved_at": {"type": "string"},
