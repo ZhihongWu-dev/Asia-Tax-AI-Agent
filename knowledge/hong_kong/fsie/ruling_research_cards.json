@@ -1,0 +1,171 @@
+{
+  "version": "0.1.0",
+  "purpose": "Source-grounded research cards and literal parser probes, not a tax gold set or model evaluation.",
+  "source_policy_url": "https://www.ird.gov.hk/eng/ppr/arc.htm",
+  "cards": [
+    {
+      "case_number": 68,
+      "source_id": "hk_ird_advance_68",
+      "fact_summary": "Hong Kong company combines hospitality-package sales with investment holding, owns 75% of Company-F, and expressly is not a pure equity-holding entity. Hong Kong personnel and an unrelated local provider perform activities; staffing and spending are described without actual amounts.",
+      "fact_locators": [
+        "2(a)-(c)",
+        "3(a)-(c)"
+      ],
+      "published_outcome_summary": "IRD accepted the proposed economic-substance arrangements for this applicant.",
+      "outcome_locator": "4",
+      "probes": [
+        [
+          "holding_percentage",
+          "75%",
+          "2(a)"
+        ],
+        [
+          "non_pure_entity",
+          "not a pure equity-holding entity",
+          "2(b)"
+        ],
+        [
+          "issued_on",
+          "1 March 2023",
+          "7"
+        ],
+        [
+          "period",
+          "2023/24 to 2027/28",
+          "5"
+        ]
+      ],
+      "review_questions": [
+        "Can the extractor retain the non-pure classification rather than infer it from investment holding?",
+        "Does it leave undisclosed employee and expenditure amounts unknown?"
+      ],
+      "current_engine_limit": "Adequacy remains a human judgement; published acceptance is not a numeric adequacy threshold.",
+      "synthetic": false,
+      "annotation_status": "unverified",
+      "model_input_authorized": false
+    },
+    {
+      "case_number": 72,
+      "source_id": "hk_ird_advance_72",
+      "fact_summary": "Applicant owns two foreign subsidiaries. F1 operates a substantive factory and benefits from a temporary tax concession. Cash dividends travel through the applicant's foreign account into F2 as new share capital; the arrangement excludes settling Hong Kong business debts.",
+      "fact_locators": [
+        "2(a)-(d)",
+        "3(a)-(b)"
+      ],
+      "published_outcome_summary": "IRD found no Hong Kong receipt on these facts, and separately accepted participation and qualifying-tax conditions in the stated alternative.",
+      "outcome_locator": "4(a)-(c)",
+      "probes": [
+        [
+          "foreign_account",
+          "Jurisdiction X",
+          "3(b)"
+        ],
+        [
+          "capital_subscription",
+          "subscription of new shares",
+          "3(b)"
+        ],
+        [
+          "issued_on",
+          "12 September 2023",
+          "7"
+        ],
+        [
+          "period",
+          "2023/24 and subsequent years",
+          "5"
+        ]
+      ],
+      "review_questions": [
+        "Can the extractor preserve the whole bank-account and capital-subscription path?",
+        "Can it distinguish a conditional alternative ruling from the actual receipt finding?"
+      ],
+      "current_engine_limit": "The existing fact dictionary does not by itself encode the full transaction graph or tax-concession history.",
+      "synthetic": false,
+      "annotation_status": "unverified",
+      "model_input_authorized": false
+    },
+    {
+      "case_number": 74,
+      "source_id": "hk_ird_advance_74",
+      "fact_summary": "Hong Kong investment-holding applicant has foreign parent entities. It has held 60% of a foreign manufacturer's shares since 1992. Foreign enterprise income tax is 25%, while dividend withholding is 10%; the proposed dividends come from profits after enterprise tax.",
+      "fact_locators": [
+        "2(a)-(c)",
+        "3(a)-(b)"
+      ],
+      "published_outcome_summary": "IRD recognised MNE and Hong Kong resident status and accepted participation and qualifying-tax treatment for the stated dividend arrangement.",
+      "outcome_locator": "4(a)-(c)",
+      "probes": [
+        [
+          "holding_percentage",
+          "60%",
+          "2(b)"
+        ],
+        [
+          "enterprise_tax_rate",
+          "25%",
+          "2(c)"
+        ],
+        [
+          "withholding_rate",
+          "10%",
+          "2(c)"
+        ],
+        [
+          "issued_on",
+          "7 November 2023",
+          "7"
+        ],
+        [
+          "period",
+          "2023/24 to 2027/28",
+          "5"
+        ]
+      ],
+      "review_questions": [
+        "Can the extractor keep enterprise tax and withholding tax in separate fields?",
+        "Does it refrain from treating 10% withholding alone as failure of the qualifying-tax condition?"
+      ],
+      "current_engine_limit": "The current engine lacks a complete subject-to-tax analysis; this card is not an automatically executable tax verdict.",
+      "synthetic": false,
+      "annotation_status": "unverified",
+      "model_input_authorized": false
+    },
+    {
+      "case_number": 75,
+      "source_id": "hk_ird_advance_75",
+      "fact_summary": "A Hong Kong group member receives shares of a foreign company as a dividend in kind and distributes the shares to its Hong Kong parent the same day. The foreign company has no Hong Kong establishment, operations or assets.",
+      "fact_locators": [
+        "2(a)-(d)",
+        "3(a)-(b)"
+      ],
+      "published_outcome_summary": "IRD did not regard this in-kind dividend as received in Hong Kong under the specified arrangement.",
+      "outcome_locator": "4",
+      "probes": [
+        [
+          "dividend_kind",
+          "in-kind dividend",
+          "3(a)"
+        ],
+        [
+          "issued_on",
+          "30 September 2024",
+          "7"
+        ],
+        [
+          "period",
+          "2024/25",
+          "5"
+        ]
+      ],
+      "review_questions": [
+        "Can the extractor represent a share distribution without inventing a cash remittance?",
+        "Can it distinguish entity location from the statutory receipt analysis?"
+      ],
+      "current_engine_limit": "Receipt cannot be inferred solely from Hong Kong incorporation; the in-kind transaction needs explicit modelling.",
+      "synthetic": false,
+      "annotation_status": "unverified",
+      "model_input_authorized": false
+    }
+  ]
+}
