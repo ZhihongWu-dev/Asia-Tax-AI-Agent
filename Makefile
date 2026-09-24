@@ -1,4 +1,4 @@
-.PHONY: help venv install db-up db-down db-wipe migrate downgrade reset check load test test-integration run-eval report knowledge-build intake-demo run-api
+.PHONY: help venv install db-up db-down db-wipe migrate downgrade reset check load test test-integration run-eval report knowledge-build intake-demo run-api web-install web
 
 help:
 	@echo "make venv            create .venv"
@@ -17,7 +17,9 @@ help:
 	@echo "make report          rebuild Markdown research reports from the DB"
 	@echo "make intake-demo     run the 3 NL fixtures end-to-end (needs model adapter)"
 	@echo "make knowledge-build fetch+snapshot+segment official sources into legal units"
-	@echo "make run-api         start the FastAPI shell (uvicorn)"
+	@echo "make run-api         start the FastAPI service (uvicorn, :8000)"
+	@echo "make web-install     install the web demo (apps/web; Node >= 20.9, pnpm)"
+	@echo "make web             start the web demo (Next.js dev server, :3000)"
 
 venv:
 	python3 -m venv .venv
@@ -80,3 +82,9 @@ intake-demo:
 
 run-api:
 	.venv/bin/uvicorn apps.api.main:app --reload
+
+web-install:
+	cd apps/web && pnpm install
+
+web:
+	cd apps/web && pnpm dev

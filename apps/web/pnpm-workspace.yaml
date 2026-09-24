@@ -1,0 +1,4 @@
+# sharp only serves next/image optimisation, which is disabled
+# (images.unoptimized in next.config.mjs), so its install script is not run.
+allowBuilds:
+  sharp: false
