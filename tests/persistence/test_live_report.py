@@ -62,7 +62,7 @@ def test_reports_rebuild_from_the_db_for_every_case(clean_runtime, tmp_path):
 
     assert len({i.case_id for i in inputs}) == 10
     for report in inputs:
-        assert report.rule_set_version == "0.2.0"
+        assert report.rule_set_version == "0.2.1"
         assert report.terminal_state in {
             "research_only_output", "human_review_required", "stop_and_escalate"
         }

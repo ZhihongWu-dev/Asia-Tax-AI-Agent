@@ -171,10 +171,26 @@ def evaluate_receipt(facts: FactView, ordinal: int) -> NodeOutcome:
     location = facts.known("receipt_location")
     if location is None:
         return NodeOutcome("receipt", ordinal, "unknown", blockers=("receipt_location",))
-    # s.15I charges specified foreign-sourced income that is received, or
-    # deemed received, in Hong Kong; both establish the receipt node.
+    # s.15I charges specified foreign-sourced income received in Hong Kong;
+    # s.15H(5) deems a sum received there in some cases (remitted, used to
+    # settle a Hong Kong trade debt, or used to buy movables brought in).
+    # Actual and deemed receipt both establish the receipt node.
     if location in RECEIVED_IN_HK_VALUES:
         return NodeOutcome("receipt", ordinal, "satisfied", detail={"receipt_location": location})
+    # Paid offshore but settled through a set-off or clearing arrangement:
+    # it may be deemed received under s.15H(5)(b), which depends on what the
+    # debt was for. A person decides; the node never says "not received".
+    if facts.known("set_off_or_clearing_arrangement") == "yes":
+        return NodeOutcome(
+            "receipt", ordinal, "human_review_required",
+            escalation_blockers=("receipt_location", "set_off_or_clearing_arrangement"),
+            detail={
+                "receipt_location": location,
+                "note": "paid outside Hong Kong but settled through a set-off or clearing "
+                "arrangement; whether it is deemed received in Hong Kong (s.15H(5)) "
+                "needs human review",
+            },
+        )
     return NodeOutcome(
         "receipt", ordinal, "not_satisfied",
         detail={"receipt_location": location, "note": "income not received in Hong Kong"},

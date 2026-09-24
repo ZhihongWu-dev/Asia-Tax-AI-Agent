@@ -10,7 +10,7 @@ from packages.knowledge_loader import parser
 
 def test_rules_payload_is_contract_shaped():
     rules = parser.load_rules_payload()
-    assert rules["rule_package_version"] == "0.2.0"
+    assert rules["rule_package_version"] == "0.2.1"
     assert len(rules["rules"]) == 6
     for rule in rules["rules"]:
         assert rule["node"] in JUDGEMENT_CHAIN

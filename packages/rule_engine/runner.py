@@ -38,6 +38,12 @@ ESCALATE = "stop_and_escalate"
 CHAIN_GATE_NODES = ("scope", "income_characterisation", "receipt")
 # The professional validation gate is recorded, never dominant.
 GATE_NODE = "human_gate"
+# Nodes with an evaluator in this engine; any other rule node yields
+# "unknown" with a "no evaluator" note and must not count as implemented.
+EVALUATED_NODES = frozenset({
+    GATE_NODE, "scope", "income_characterisation", "receipt",
+    "economic_substance", "participation_basic",
+})
 
 
 @dataclass(frozen=True)

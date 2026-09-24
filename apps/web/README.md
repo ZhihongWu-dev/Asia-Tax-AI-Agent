@@ -42,8 +42,8 @@ for example `/demo?preset=deemed-receipt&run=1`. Preset ids are in
 - Layout and animations are adapted from the v0 community template "Optimus" (kerroudj).
   All of its content was replaced, including invented customers, certifications, pricing and
   uptime claims. The template page states no licence; check its terms before any public use.
-- Numbers on the landing page (719 legal units, 5 of 10 chain steps, 86 offline and 20 live
-  tests, 10/10 golden cases, 9/9 English presets) were measured on the local build when this
+- Numbers on the landing page (719 legal units, 5 of 10 chain steps, 92 offline and 22 live
+  tests, 10/10 golden cases, 8/8 English presets plus the injection preset) were measured on the local build when this
   page was written. Rebuilding the knowledge base can change the unit count.
 - Unused template dependencies were dropped: expo, react-native, three.js and Vercel
   Analytics, which would report to Vercel.

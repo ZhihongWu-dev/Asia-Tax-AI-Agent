@@ -7,6 +7,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    // The default proxy timeout is 30 s; a slow or retried model call can take
+    // minutes (60 s x 3 attempts, plus one repair call), so outwait the backend.
+    proxyTimeout: 420_000,
+  },
   async rewrites() {
     return [{ source: "/api/:path*", destination: `${API_URL}/api/:path*` }]
   },

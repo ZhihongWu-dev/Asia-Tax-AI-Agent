@@ -9,20 +9,21 @@ const steps = [
     description:
       "Write a fictional case in plain English: who received what, from whom, where the money landed and what is still unknown.",
     file: "case.txt",
-    code: `A Hong Kong company, member of an MNE
-group, received a dividend from a
-foreign investee it has held 15% of
-for 18 months, into its HK bank
-account. Whether the profits were
-taxed overseas is not yet known.`,
+    code: `A company that carries on business in
+Hong Kong, member of an MNE group, got
+a dividend from a foreign investee it
+has held 15% of for 18 months, into its
+HK bank account. Whether the profits
+were taxed overseas is not yet known.`,
   },
   {
     number: "II",
     title: "Extract candidate facts",
     description:
-      "DeepSeek V4.1 Flash proposes facts. The dictionary contract checks every name, enum and type; the model gets one repair round, then the case is rejected.",
+      "DeepSeek V4.1 Flash proposes facts. The dictionary contract checks every field name, enum value and number; the model gets one repair round, then the case is rejected.",
     file: "facts.json",
     code: `{
+  "entity_hk_business_status": "yes",
   "mne_group_status": "yes",
   "income_type": "dividend",
   "receipt_location": "received_in_hk",

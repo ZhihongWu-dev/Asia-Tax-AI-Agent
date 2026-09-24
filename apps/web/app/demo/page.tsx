@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function DemoPage() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden noise-overlay">
+    <main className="relative min-h-screen overflow-x-clip noise-overlay">
       <Navigation />
       <DemoWorkbench />
     </main>

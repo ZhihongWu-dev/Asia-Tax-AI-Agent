@@ -49,7 +49,7 @@
       "tag": "Human review",
       "maps_to": "NL-SYN-010",
       "expected_state": "human_review_required",
-      "text": "Fictional case for research only (not a real client).\n\nA company carries on business in Hong Kong and is a member of a multinational group. It received a dividend from a foreign investee company, paid into its Hong Kong bank account.\n\nOn economic substance: the company has an adequate number of qualified employees in Hong Kong and adequate office premises in Hong Kong. No other information is available yet."
+      "text": "Fictional case for research only (not a real client).\n\nA company carries on business in Hong Kong and is a member of a multinational group. It received a dividend from a foreign investee company, paid into its Hong Kong bank account.\n\nOn economic substance: the company's staffing in Hong Kong is adequate, and its office premises in Hong Kong are adequate. No other information is available yet."
     },
     {
       "id": "deemed-receipt",
@@ -57,7 +57,7 @@
       "tag": "Deemed receipt",
       "maps_to": null,
       "expected_state": "human_review_required",
-      "text": "Fictional case for research only (not a real client).\n\nA company carries on business in Hong Kong and is a member of a multinational group. It has directly held 30% of the shares of a foreign investee company for 36 continuous months.\n\nThe investee paid a dividend into the company's bank account outside Hong Kong. The same funds were then used to settle a debt the company had incurred in its Hong Kong trading business, so the dividend is treated as received in Hong Kong.\n\nWhether the dividend or its underlying profits were taxed overseas is not yet known."
+      "text": "Fictional case for research only (not a real client).\n\nA company carries on business in Hong Kong and is a member of a multinational group. It has directly held 30% of the shares of a foreign investee company for 36 continuous months.\n\nThe investee paid a dividend into the company's bank account outside Hong Kong. The same funds were then used to settle a debt the company had incurred in carrying on its trading business in Hong Kong.\n\nWhether the dividend or its underlying profits were taxed overseas is not yet known."
     },
     {
       "id": "kept-offshore",

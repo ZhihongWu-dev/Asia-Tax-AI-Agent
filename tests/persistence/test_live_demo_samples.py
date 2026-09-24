@@ -16,7 +16,7 @@ from apps.api.main import SAMPLES_PATH
 from packages.contracts.enums import CaseTerminalState, values
 from packages.intake.prompting import field_catalog
 from packages.intake.service import analyze_case
-from packages.model_adapter.client import get_model_config
+from packages.model_adapter.client import ModelError, get_model_config
 
 pytestmark = [
     pytest.mark.integration,
@@ -33,8 +33,13 @@ CASES = json.loads(SAMPLES_PATH.read_text(encoding="utf-8"))["cases"]
 @pytest.mark.parametrize("case", [c for c in CASES if c["expected_state"]], ids=lambda c: c["id"])
 def test_demo_preset_reaches_its_expected_terminal_state(case):
     result = None
-    for _attempt in range(2):
-        result = analyze_case(case["text"], f"WEB-{case['id']}")
+    for attempt in range(2):
+        try:
+            result = analyze_case(case["text"], f"WEB-{case['id']}")
+        except ModelError:
+            if attempt == 1:
+                raise
+            continue
         if result["terminal_state"] == case["expected_state"]:
             break
     assert result["terminal_state"] == case["expected_state"], (

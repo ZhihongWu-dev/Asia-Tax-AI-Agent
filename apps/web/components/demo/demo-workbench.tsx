@@ -13,38 +13,60 @@ const PIPELINE_STEPS = [
   "Attach statutory text and sources",
 ];
 
+// The API's own error details are passed through, except the extraction
+// rejection, whose detail comes from the (Chinese) contract validator.
 async function readError(response: Response): Promise<string> {
+  let detail: unknown = null;
   try {
-    const body = await response.json();
-    if (typeof body.detail === "string") return body.detail;
-    if (Array.isArray(body.detail)) return body.detail.map((d: { msg?: string }) => d.msg).join("; ");
+    detail = (await response.json()).detail;
   } catch {
-    // fall through
+    // Not JSON: the Next.js proxy could not get an answer from the API.
+    return `No usable answer from the API (HTTP ${response.status}). If it is running, check its terminal for errors; otherwise start it with make run-api.`;
   }
-  return `The API answered ${response.status}. Is it running? Start it with: make run-api`;
+  if (response.status === 422 && typeof detail === "string" && detail.startsWith("extraction rejected")) {
+    return "The model's candidate facts still broke the fact dictionary after one repair round, so the case was rejected. Try rephrasing the case.";
+  }
+  if (typeof detail === "string") return detail;
+  if (Array.isArray(detail)) {
+    return detail.map((d: { msg?: string }) => d.msg).filter(Boolean).join("; ") || `Request rejected (HTTP ${response.status}).`;
+  }
+  return `The API answered HTTP ${response.status}.`;
 }
 
 function MetaStrip({ meta, error }: { meta: Meta | null; error: string | null }) {
-  if (error) {
-    return <p className="text-sm font-mono text-destructive">API offline: start it with make run-api</p>;
-  }
+  if (error) return <p className="text-sm font-mono text-destructive">{error}</p>;
   if (!meta) return <p className="text-sm font-mono text-muted-foreground">Connecting to the local API…</p>;
   const items = [
     `model ${meta.model ?? "not configured"}`,
-    `rules v${meta.rule_set_version ?? "?"} (${meta.rule_set_status})`,
+    `rules v${meta.rule_set_version ?? "?"} (${meta.rule_set_status ?? "?"})`,
     `${meta.chain_nodes_implemented} / ${meta.chain_nodes_total} chain steps`,
     `${meta.legal_units} legal units from ${meta.sources_parsed} sources`,
     `coverage cutoff ${meta.legal_coverage_cutoff ?? "?"}`,
   ];
   return (
-    <p className="flex flex-wrap gap-x-4 gap-y-1 text-xs font-mono text-muted-foreground">
-      {items.map((item) => (
-        <span key={item} className="flex items-center gap-4">
-          <span>{item}</span>
-          <span className="text-foreground/20 last:hidden">/</span>
+    <p className="flex flex-wrap gap-y-1 text-xs font-mono text-muted-foreground">
+      {items.map((item, index) => (
+        <span key={item} className="whitespace-nowrap">
+          {index > 0 && <span className="mx-3 text-foreground/20">/</span>}
+          {item}
         </span>
       ))}
     </p>
+  );
+}
+
+function StepList({ muted }: { muted?: boolean }) {
+  return (
+    <ol className="grid gap-4">
+      {PIPELINE_STEPS.map((step, index) => (
+        <li key={step} className={`flex items-center gap-4 text-sm ${muted ? "text-muted-foreground" : ""}`}>
+          <span className="w-8 h-8 flex items-center justify-center border border-foreground/20 font-mono text-xs">
+            {index + 1}
+          </span>
+          {step}
+        </li>
+      ))}
+    </ol>
   );
 }
 
@@ -56,46 +78,35 @@ function EmptyState() {
         Choose a preset on the left or write a fictional case, then press Analyze. The result shows the
         candidate facts, every step of the rule chain, what a human still has to decide, and the statutory text.
       </p>
-      <ol className="grid gap-4">
-        {PIPELINE_STEPS.map((step, index) => (
-          <li key={step} className="flex items-center gap-4 text-sm">
-            <span className="w-8 h-8 flex items-center justify-center border border-foreground/20 font-mono text-xs">
-              {index + 1}
-            </span>
-            {step}
-          </li>
-        ))}
-      </ol>
+      <StepList />
     </div>
   );
 }
 
 function RunningState({ seconds }: { seconds: number }) {
   return (
-    <div className="border border-foreground/20 p-10 lg:p-14">
+    <div className="border border-foreground/20 p-10 lg:p-14" aria-live="polite">
       <div className="flex items-center gap-3 text-sm font-mono text-muted-foreground mb-8">
         <Loader2 className="w-4 h-4 animate-spin" />
         Running · {seconds}s
       </div>
-      <ol className="grid gap-4">
-        {PIPELINE_STEPS.map((step, index) => (
-          <li key={step} className="flex items-center gap-4 text-sm text-muted-foreground">
-            <span className="w-8 h-8 flex items-center justify-center border border-foreground/20 font-mono text-xs">
-              {index + 1}
-            </span>
-            {step}
-          </li>
-        ))}
-      </ol>
+      <StepList muted />
       <p className="mt-8 text-xs font-mono text-muted-foreground">
-        Only step 1 calls a model; it usually takes 5 to 10 seconds.
+        Only step 1 calls a model (at most twice, if its first answer needs repair); it usually takes 5 to 10 seconds.
       </p>
     </div>
   );
 }
 
+interface Analysis {
+  result: AnalysisResult;
+  text: string;
+  sample: SampleCase | null;
+}
+
 export function DemoWorkbench() {
   const [samples, setSamples] = useState<SampleCase[]>([]);
+  const [samplesState, setSamplesState] = useState<"loading" | "ready" | "failed">("loading");
   const [meta, setMeta] = useState<Meta | null>(null);
   const [metaError, setMetaError] = useState<string | null>(null);
   const [selected, setSelected] = useState<SampleCase | null>(null);
@@ -104,19 +115,24 @@ export function DemoWorkbench() {
   const [running, setRunning] = useState(false);
   const [seconds, setSeconds] = useState(0);
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<AnalysisResult | null>(null);
-  const [resultExpected, setResultExpected] = useState<SampleCase["expected_state"]>(null);
+  const [analysis, setAnalysis] = useState<Analysis | null>(null);
   const resultRef = useRef<HTMLDivElement>(null);
+  const inFlight = useRef(false);
 
   useEffect(() => {
     fetch("/api/samples")
       .then((r) => (r.ok ? r.json() : Promise.reject(r)))
-      .then((data) => setSamples(data.cases ?? []))
-      .catch(() => setSamples([]));
+      .then((data) => {
+        setSamples(data.cases ?? []);
+        setSamplesState("ready");
+      })
+      .catch(() => setSamplesState("failed"));
     fetch("/api/meta")
       .then(async (r) => (r.ok ? r.json() : Promise.reject(await readError(r))))
       .then(setMeta)
-      .catch((reason) => setMetaError(String(reason)));
+      .catch((reason) =>
+        setMetaError(typeof reason === "string" ? reason : "API offline: start it with make run-api"),
+      );
   }, []);
 
   useEffect(() => {
@@ -135,22 +151,25 @@ export function DemoWorkbench() {
   };
 
   const run = async (caseText: string, isConfirmed: boolean, sample: SampleCase | null) => {
+    if (inFlight.current) return;
+    inFlight.current = true;
     setRunning(true);
     setError(null);
+    setAnalysis(null);
+    const matchedSample = sample && sample.text === caseText ? sample : null;
     try {
-      const sampleId = sample && sample.text === caseText ? sample.id : null;
       const response = await fetch("/api/analyze", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ text: caseText, confirm_synthetic: isConfirmed, sample_id: sampleId }),
+        body: JSON.stringify({ text: caseText, confirm_synthetic: isConfirmed, sample_id: matchedSample?.id ?? null }),
       });
       if (!response.ok) throw new Error(await readError(response));
-      setResult(await response.json());
-      setResultExpected(sampleId && sample ? sample.expected_state : null);
+      setAnalysis({ result: await response.json(), text: caseText, sample: matchedSample });
       requestAnimationFrame(() => resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
     } finally {
+      inFlight.current = false;
       setRunning(false);
     }
   };
@@ -171,6 +190,7 @@ export function DemoWorkbench() {
   }, [samples]);
 
   const tooShort = text.trim().length < 20;
+  const stale = analysis !== null && analysis.text !== text;
 
   return (
     <div className="max-w-[1400px] mx-auto px-6 lg:px-12 pt-32 pb-24">
@@ -192,26 +212,29 @@ export function DemoWorkbench() {
 
       <div className="grid lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] gap-12 lg:gap-16 items-start">
         {/* Case panel */}
-        <div className="lg:sticky lg:top-28 grid gap-8">
+        <div className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:pr-2 grid gap-8">
           <div>
             <div className="text-sm font-medium mb-3">Presets</div>
-            <div className="border border-foreground/10 divide-y divide-foreground/10 max-h-[340px] overflow-y-auto">
-              {samples.length === 0 && (
-                <p className="px-4 py-3 text-sm text-muted-foreground">No presets loaded (is the API running?).</p>
+            <div className="border border-foreground/10 divide-y divide-foreground/10 max-h-[300px] overflow-y-auto">
+              {samplesState === "loading" && <p className="px-4 py-3 text-sm text-muted-foreground">Loading presets…</p>}
+              {samplesState === "failed" && (
+                <p className="px-4 py-3 text-sm text-muted-foreground">Presets unavailable: is the API running?</p>
               )}
               {samples.map((sample) => (
                 <button
                   key={sample.id}
                   type="button"
+                  disabled={running}
                   onClick={() => choose(sample)}
-                  className={`w-full text-left px-4 py-3 transition-colors ${
+                  aria-pressed={selected?.id === sample.id}
+                  className={`w-full text-left px-4 py-3 transition-colors disabled:cursor-not-allowed ${
                     selected?.id === sample.id ? "bg-foreground text-background" : "hover:bg-foreground/[0.03]"
                   }`}
                 >
                   <div className="text-sm font-medium">{sample.title}</div>
                   <div
                     className={`text-xs font-mono mt-0.5 ${
-                      selected?.id === sample.id ? "text-background/60" : "text-muted-foreground"
+                      selected?.id === sample.id ? "text-background/70" : "text-muted-foreground"
                     }`}
                   >
                     {sample.tag}
@@ -228,14 +251,15 @@ export function DemoWorkbench() {
             <textarea
               id="case-text"
               value={text}
+              disabled={running}
               onChange={(e) => {
                 setText(e.target.value);
                 if (selected && e.target.value !== selected.text) setConfirmed(false);
               }}
-              rows={11}
+              rows={9}
               maxLength={4000}
-              placeholder="Fictional case for research only. A Hong Kong company, member of a multinational group, received a dividend from a foreign company it holds 20% of…"
-              className="w-full resize-y border border-foreground/15 bg-background px-4 py-3 text-sm leading-relaxed focus:outline-none focus:border-foreground"
+              placeholder="Fictional case for research only. A company that carries on business in Hong Kong, member of a multinational group, received a dividend from a foreign company it holds 20% of…"
+              className="w-full resize-y border border-foreground/15 bg-background px-4 py-3 text-sm leading-relaxed focus:outline-none focus:border-foreground disabled:opacity-60"
             />
             <div className="mt-1 text-right text-xs font-mono text-muted-foreground">{text.length} / 4000</div>
           </div>
@@ -244,6 +268,7 @@ export function DemoWorkbench() {
             <input
               type="checkbox"
               checked={confirmed}
+              disabled={running}
               onChange={(e) => setConfirmed(e.target.checked)}
               className="mt-1 accent-foreground"
             />
@@ -285,8 +310,16 @@ export function DemoWorkbench() {
         <div ref={resultRef} className="scroll-mt-28 min-w-0">
           {running ? (
             <RunningState seconds={seconds} />
-          ) : result ? (
-            <ResultView result={result} expected={resultExpected} />
+          ) : analysis ? (
+            <div className={stale ? "opacity-50" : ""}>
+              {stale && (
+                <p className="mb-6 border border-foreground/20 px-4 py-3 text-sm font-mono">
+                  This result is for {analysis.sample ? `the preset "${analysis.sample.title}"` : "an earlier version of the case"};
+                  the case text has changed since. Press Analyze to run the current text.
+                </p>
+              )}
+              <ResultView result={analysis.result} expected={analysis.sample?.expected_state ?? null} />
+            </div>
           ) : (
             <EmptyState />
           )}

@@ -24,7 +24,8 @@ const codeExamples = [
   "chain": [{ "node": "receipt",
               "output": "satisfied", ... }],
   "model": "deepseek-flash",
-  "rule_set_version": "0.2.0",
+  "rule_set_version": "0.2.1",
+  "engine_commit": "…",
   "execution_batch": "NL-5e809a5c72:986c..."
 }`,
   },
@@ -41,8 +42,8 @@ pnpm install && pnpm dev   # :3000`,
 const features = [
   { title: "Structured facts", description: "Every candidate fact with its status and statute." },
   { title: "Every chain step", description: "Including the ones not implemented yet." },
-  { title: "Statutory text", description: "The subsections behind the thresholds used." },
-  { title: "Replayable", description: "Model, prompt, rule set and batch on every run." },
+  { title: "Statutory text", description: "The subsections behind the participation thresholds." },
+  { title: "Traceable", description: "Model, prompt, rule package and engine commit on every run." },
 ];
 
 const codeAnimationStyles = `
@@ -88,8 +89,8 @@ export function ApiSection() {
             </h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
               The web demo is a thin client over a FastAPI service. The CLI and the API run
-              the same analysis, and every response says which model, prompt and rule set
-              produced it.
+              the same analysis, and every response says which model, prompt, rule package
+              and engine commit produced it.
             </p>
 
             <div className="grid grid-cols-2 gap-6">

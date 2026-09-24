@@ -1,5 +1,5 @@
 {
-  "rule_package_version": "0.2.0",
+  "rule_package_version": "0.2.1",
   "jurisdiction": "HK",
   "package": "fsie",
   "status": "unverified",
@@ -46,7 +46,7 @@
       "depends_on_nodes": ["income_characterisation"],
       "source_ids": ["hk_ird_fsie_landing", "hk_ird_fsie_faq", "hk_ird_fsie_examples", "hk_hkel_iro_cap112"],
       "thresholds_to_verify": [],
-      "outputs": ["satisfied", "not_satisfied", "unknown", "conflict"],
+      "outputs": ["satisfied", "not_satisfied", "unknown", "conflict", "human_review_required"],
       "human_review_required": true,
       "status": "unverified"
     },

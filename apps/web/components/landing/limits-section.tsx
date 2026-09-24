@@ -7,7 +7,7 @@ const limits = [
     number: "01",
     title: "Five of ten chain steps",
     description:
-      "The regulated-financial-entity exclusion, the s.15N subject-to-tax and switch-over test, anti-hybrid, main purpose and filing duties are not implemented. Where they would matter, the case is escalated to a person.",
+      "The regulated-financial-entity exclusion, the s.15N subject-to-tax and switch-over test, anti-hybrid, main purpose and filing duties are not implemented. When the participation thresholds are met, the foreign-tax (s.15N(2)) and main-purpose (s.15N(4)) questions go to a person; the financial-entity exclusion and filing duties are not checked at all.",
   },
   {
     number: "02",

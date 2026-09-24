@@ -3,7 +3,7 @@
 import { useInView } from "@/lib/use-in-view";
 
 const components = [
-  { name: "DeepSeek V4.1 Flash", role: "Candidate-fact extraction" },
+  { name: "DeepSeek V4.1 Flash", role: "id deepseek-flash · fact extraction" },
   { name: "Fact dictionary", role: "43 fields · 26 evidence types" },
   { name: "Rule engine", role: "Pure Python evaluators" },
   { name: "PostgreSQL", role: "Facts, runs, audit events" },
@@ -39,8 +39,8 @@ export function StackSection() {
             you can read.
           </h2>
           <p className="text-xl text-muted-foreground">
-            No agent framework and no hidden orchestration: one model call, a rule engine
-            and a database, wired together in code you can inspect.
+            No agent framework and no hidden orchestration: one model step (at most one
+            repair call), a rule engine and a database, wired together in code you can inspect.
           </p>
         </div>
       </div>

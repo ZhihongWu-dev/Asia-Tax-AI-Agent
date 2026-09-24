@@ -41,9 +41,9 @@ function AnimatedCounter({ end, suffix = "" }: { end: number; suffix?: string })
 // Measured on the local build (make run-eval, make test, pytest -m integration).
 const metrics = [
   { value: 10, suffix: " / 10", label: "Synthetic golden cases reproduce exactly" },
-  { value: 9, suffix: " / 9", label: "English demo presets pass on the live model" },
-  { value: 86, suffix: "", label: "Offline tests: contracts, rules, API, guardrails" },
-  { value: 20, suffix: "", label: "Live tests: database, migrations, model, injection" },
+  { value: 8, suffix: " / 8", label: "English presets reach their expected state on the live model (best of two); injection preset absorbed" },
+  { value: 92, suffix: "", label: "Offline tests: contracts, rules, API, guardrails" },
+  { value: 22, suffix: " / 22", label: "Live tests passing: database, migrations, model, injection" },
 ];
 
 export function EvaluationSection() {

@@ -66,13 +66,30 @@ def test_receipt_satisfied_when_received_in_hk():
 
 
 def test_receipt_satisfied_when_deemed_received_in_hk():
-    # s.15I: deemed receipt engages the charge exactly like actual receipt.
+    # s.15I read with s.15H(5): deemed receipt engages the charge like actual receipt.
     outcome = evaluate_receipt(FactView({"receipt_location": "deemed_received_in_hk"}), 3)
     assert outcome.output == "satisfied"
 
 
 def test_receipt_not_satisfied_when_received_outside_hk():
     outcome = evaluate_receipt(FactView({"receipt_location": "received_outside_hk"}), 3)
+    assert outcome.output == "not_satisfied"
+
+
+def test_offshore_receipt_settled_by_set_off_goes_to_a_person():
+    # s.15H(5)(b): a sum used to settle a Hong Kong trade debt is deemed
+    # received in Hong Kong; a set-off alone cannot decide it.
+    outcome = evaluate_receipt(
+        FactView({"receipt_location": "received_outside_hk", "set_off_or_clearing_arrangement": "yes"}), 3
+    )
+    assert outcome.output == "human_review_required"
+    assert set(outcome.escalation_blockers) == {"receipt_location", "set_off_or_clearing_arrangement"}
+
+
+def test_offshore_receipt_without_set_off_is_not_received():
+    outcome = evaluate_receipt(
+        FactView({"receipt_location": "received_outside_hk", "set_off_or_clearing_arrangement": "no"}), 3
+    )
     assert outcome.output == "not_satisfied"
 
 

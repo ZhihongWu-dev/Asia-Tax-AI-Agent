@@ -18,6 +18,12 @@ from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
+# Completion budget per call. Reasoning models (e.g. DeepSeek V4.1 Flash)
+# count their hidden reasoning against it: extraction typically uses about
+# 900 reasoning + 200 answer tokens, so 2000 occasionally ran out.
+DEFAULT_MAX_TOKENS = 8000
+
+
 class ModelSettings(BaseSettings):
     # Field names avoid the pydantic "model_" protected namespace so the env
     # mapping is exactly FSIE_MODEL_BASE_URL / FSIE_MODEL_API_KEY / FSIE_MODEL_NAME.
@@ -73,7 +79,9 @@ class OpenAICompatibleClient:
     def __init__(self, config: ModelConfig | None = None):
         self.config = (config or get_model_config()).require()
 
-    def chat(self, system: str, user: str, *, temperature: float = 0.0, max_tokens: int = 2000) -> str:
+    def chat(
+        self, system: str, user: str, *, temperature: float = 0.0, max_tokens: int = DEFAULT_MAX_TOKENS
+    ) -> str:
         payload = {
             "model": self.config.model_name,
             "temperature": temperature,
@@ -85,11 +93,20 @@ class OpenAICompatibleClient:
         }
         body = self._post("/chat/completions", payload)
         try:
-            return body["choices"][0]["message"]["content"] or ""
+            choice = body["choices"][0]
+            content = choice["message"]["content"] or ""
         except (KeyError, IndexError, TypeError) as exc:
             raise ModelError(f"unexpected chat response shape: {str(body)[:300]}") from exc
+        if not content.strip() and choice.get("finish_reason") == "length":
+            raise ModelError(
+                f"model used its whole budget of {max_tokens} tokens before answering "
+                "(reasoning models spend completion tokens on thinking)"
+            )
+        return content
 
-    def chat_json(self, system: str, user: str, *, temperature: float = 0.0, max_tokens: int = 2000) -> dict:
+    def chat_json(
+        self, system: str, user: str, *, temperature: float = 0.0, max_tokens: int = DEFAULT_MAX_TOKENS
+    ) -> dict:
         raw = self.chat(system, user, temperature=temperature, max_tokens=max_tokens)
         return parse_json_loose(raw)
 

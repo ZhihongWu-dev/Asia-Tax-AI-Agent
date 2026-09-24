@@ -1,5 +1,6 @@
 "use client";
 
+import { Component, type ReactNode } from "react";
 import { ArrowUpRight, ShieldCheck } from "lucide-react";
 import {
   type AnalysisResult,
@@ -9,9 +10,12 @@ import {
   type TerminalState,
   NODE_INFO,
   OUTPUT_LABELS,
+  REFERENCED_NOT_EVALUATED,
+  STOPPED_AT,
   TERMINAL_COPY,
   fieldLabel,
   formatValue,
+  stoppingStep,
 } from "@/lib/fsie";
 
 function SectionHeader({ eyebrow, title, note }: { eyebrow: string; title: string; note?: string }) {
@@ -36,49 +40,64 @@ const OUTPUT_STYLE: Record<NodeOutput, string> = {
   human_review_required: "bg-foreground/10 border-foreground/30 text-foreground",
 };
 
-function OutputPill({ output }: { output: NodeOutput | null }) {
-  if (!output) {
+function OutputPill({ row }: { row: ChainRow }) {
+  if (!row.implemented || !row.output) {
     return (
-      <span className="px-2.5 py-1 text-xs font-mono border border-foreground/10 text-muted-foreground/70">
+      <span className="px-2.5 py-1 text-xs font-mono border border-dashed border-foreground/25 text-muted-foreground">
         Not implemented in L0
       </span>
     );
   }
   return (
-    <span className={`px-2.5 py-1 text-xs font-mono border whitespace-nowrap ${OUTPUT_STYLE[output]}`}>
-      {OUTPUT_LABELS[output]}
+    <span className={`px-2.5 py-1 text-xs font-mono border whitespace-nowrap ${OUTPUT_STYLE[row.output]}`}>
+      {OUTPUT_LABELS[row.output]}
     </span>
   );
 }
 
-function OutcomeCard({
-  result,
-  expected,
-}: {
-  result: AnalysisResult;
-  expected: TerminalState | null;
-}) {
+function FieldList({ fields }: { fields: string[] }) {
+  return (
+    <ul className="grid gap-2">
+      {fields.map((field) => (
+        <li key={field} className="flex items-baseline gap-3 text-sm">
+          <span className="w-1.5 h-1.5 shrink-0 translate-y-[-2px] bg-foreground" />
+          <span>{fieldLabel(field)}</span>
+          <span className="font-mono text-xs text-muted-foreground break-all">{field}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function OutcomeCard({ result, expected }: { result: AnalysisResult; expected: TerminalState | null }) {
   const copy = TERMINAL_COPY[result.terminal_state];
+  const stopped = result.terminal_state === "research_only_output" ? stoppingStep(result.chain) : undefined;
+  const stoppedCopy = stopped ? STOPPED_AT[stopped.node] : undefined;
   const items = result.terminal_state === "stop_and_escalate" ? result.conflict_fields : result.blockers;
   const accent = result.terminal_state === "stop_and_escalate" ? "border-destructive" : "border-foreground";
   return (
     <div className={`relative border ${accent} p-8 lg:p-10`}>
       <span className="text-xs font-mono text-muted-foreground">Outcome · {result.terminal_state}</span>
       <h2 className="mt-3 text-5xl lg:text-6xl font-display tracking-tight leading-[0.95]">{copy.title}</h2>
-      <p className="mt-5 text-lg text-muted-foreground leading-relaxed max-w-2xl">{copy.summary}</p>
+
+      {stopped && stoppedCopy ? (
+        <div className="mt-6">
+          <div className="text-sm font-mono text-muted-foreground">
+            Stopped at step {stopped.ordinal} · {NODE_INFO[stopped.node]?.label} ·{" "}
+            {stopped.output ? OUTPUT_LABELS[stopped.output] : ""}
+          </div>
+          <p className="mt-3 text-lg text-muted-foreground leading-relaxed max-w-2xl">
+            {stoppedCopy.reason} No tax conclusion is issued.
+          </p>
+        </div>
+      ) : (
+        <p className="mt-5 text-lg text-muted-foreground leading-relaxed max-w-2xl">{copy.summary}</p>
+      )}
 
       {items.length > 0 && (
         <div className="mt-8">
-          <div className="text-sm font-medium mb-3">{copy.listTitle}</div>
-          <ul className="grid gap-2">
-            {items.map((field) => (
-              <li key={field} className="flex items-baseline gap-3 text-sm">
-                <span className="w-1.5 h-1.5 shrink-0 translate-y-[-2px] bg-foreground" />
-                <span>{fieldLabel(field)}</span>
-                <span className="font-mono text-xs text-muted-foreground">{field}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="text-sm font-medium mb-3">{stoppedCopy ? stoppedCopy.listTitle : copy.listTitle}</div>
+          <FieldList fields={items} />
         </div>
       )}
 
@@ -107,16 +126,16 @@ function FactsTable({ facts, model }: { facts: FactRow[]; model: string }) {
         <div className="border border-foreground/10 divide-y divide-foreground/10">
           {facts.map((fact) => (
             <div key={fact.field} className="grid grid-cols-[1fr_auto] sm:grid-cols-[1.3fr_1fr_auto] gap-x-6 gap-y-1 px-5 py-4">
-              <div>
+              <div className="min-w-0">
                 <div className="text-sm font-medium">{fieldLabel(fact.field)}</div>
-                <div className="text-xs font-mono text-muted-foreground">
+                <div className="text-xs font-mono text-muted-foreground break-all">
                   {fact.field}
                   {fact.statute_locator ? ` · ${fact.statute_locator}` : ""}
                 </div>
               </div>
-              <div className="text-sm sm:self-center order-3 sm:order-none col-span-2 sm:col-span-1">
+              <div className="text-sm sm:self-center order-3 sm:order-none col-span-2 sm:col-span-1 break-words min-w-0">
                 {fact.status === "ai_candidate" ? (
-                  formatValue(fact.value)
+                  formatValue(fact.value, fact.field)
                 ) : (
                   <span className={fact.status === "conflict" ? "text-destructive" : "text-muted-foreground italic"}>
                     {fact.status === "conflict" ? "Contradictory statements" : "Stated as unknown"}
@@ -148,11 +167,15 @@ function ChainStep({ row, last }: { row: ChainRow; last: boolean }) {
   const info = NODE_INFO[row.node] ?? { label: row.node, statute: "" };
   const isGate = row.node === "human_gate";
   return (
-    <div className={`relative grid grid-cols-[2.5rem_1fr] gap-4 ${row.implemented ? "" : "opacity-45"}`}>
+    <div className="relative grid grid-cols-[2.5rem_1fr] gap-4">
       <div className="flex flex-col items-center">
         <span
           className={`w-10 h-10 flex items-center justify-center border font-mono text-sm ${
-            row.output === "satisfied" ? "bg-foreground text-background border-foreground" : "border-foreground/20"
+            !row.implemented
+              ? "border-dashed border-foreground/25 text-muted-foreground"
+              : row.output === "satisfied"
+                ? "bg-foreground text-background border-foreground"
+                : "border-foreground/20"
           }`}
         >
           {isGate ? <ShieldCheck className="w-4 h-4" aria-label="Validation gate" /> : row.ordinal}
@@ -162,13 +185,13 @@ function ChainStep({ row, last }: { row: ChainRow; last: boolean }) {
       <div className="pb-6">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <div className="font-medium">{info.label}</div>
+            <div className={row.implemented ? "font-medium" : "text-muted-foreground"}>{info.label}</div>
             <div className="text-xs font-mono text-muted-foreground">
               {info.statute}
               {row.rule_id ? ` · ${row.rule_id}` : ""}
             </div>
           </div>
-          <OutputPill output={row.output} />
+          <OutputPill row={row} />
         </div>
         {row.blockers.length > 0 && (
           <p className="mt-2 text-sm text-muted-foreground">
@@ -194,15 +217,15 @@ function ChainStep({ row, last }: { row: ChainRow; last: boolean }) {
   );
 }
 
-function ChainTimeline({ chain, ruleSet }: { chain: ChainRow[]; ruleSet: string }) {
-  const implemented = chain.filter((r) => r.implemented && r.node !== "human_gate").length;
-  const total = chain.filter((r) => r.node !== "human_gate").length;
+function ChainTimeline({ chain, ruleSet, status }: { chain: ChainRow[]; ruleSet: string; status: string }) {
+  const steps = chain.filter((r) => r.node !== "human_gate");
+  const implemented = steps.filter((r) => r.implemented).length;
   return (
     <div>
       <SectionHeader
         eyebrow="Judgement chain"
         title="Every step, in order"
-        note={`Deterministic code, rule set v${ruleSet} (unverified). ${implemented} of ${total} steps implemented; the rest are shown so the gaps stay visible.`}
+        note={`Deterministic code, rule set v${ruleSet} (${status}). ${implemented} of ${steps.length} steps implemented; the rest are shown so the gaps stay visible.`}
       />
       <div>
         {chain.map((row, index) => (
@@ -219,13 +242,18 @@ function LawSection({ result }: { result: AnalysisResult }) {
       <SectionHeader
         eyebrow="Statutory basis"
         title="The law behind the thresholds"
-        note="Quoted from the local snapshot of Cap. 112. Sources are the candidate mapping of the rules, not yet confirmed as complete by an expert."
+        note="Quoted from the local snapshot of Cap. 112: the subsections the rule package's numeric thresholds point to. Sources are the candidate mapping of the rules, not yet confirmed as complete by an expert."
       />
       <div className="grid gap-4">
         {result.statute_units.map((unit) => (
           <blockquote key={unit.locator} className="border-l-2 border-foreground pl-5 py-1">
-            <div className="text-xs font-mono text-muted-foreground mb-2">Inland Revenue Ordinance (Cap. 112) {unit.locator}</div>
+            <div className="text-xs font-mono text-muted-foreground mb-2">
+              Inland Revenue Ordinance (Cap. 112) {unit.locator}
+            </div>
             <p className="font-display text-xl leading-snug">{unit.text}</p>
+            {REFERENCED_NOT_EVALUATED[unit.locator] && (
+              <p className="mt-2 text-xs font-mono text-muted-foreground">{REFERENCED_NOT_EVALUATED[unit.locator]}</p>
+            )}
           </blockquote>
         ))}
       </div>
@@ -256,13 +284,17 @@ function RunDetails({ result }: { result: AnalysisResult }) {
     ["Execution batch", result.execution_batch],
     ["Model", result.model],
     ["Prompt version", `${result.prompt_version} · ${result.repair_rounds} repair round(s)`],
-    ["Rule set", `v${result.rule_set_version} · ${result.rule_set_status}`],
-    ["Rule package commit", result.git_commit ? result.git_commit.slice(0, 12) : "unknown"],
+    ["Rule package", `v${result.rule_set_version} · ${result.rule_set_status}`],
+    ["Engine commit", result.engine_commit ? result.engine_commit.slice(0, 12) : "unknown"],
     ["Time", `${(result.timing_ms.total / 1000).toFixed(1)} s total · ${(result.timing_ms.extraction / 1000).toFixed(1)} s in the model`],
   ];
   return (
     <div>
-      <SectionHeader eyebrow="Provenance" title="Run details" note="Stored in the local database; the run can be replayed and audited." />
+      <SectionHeader
+        eyebrow="Provenance"
+        title="Run details"
+        note="Node outputs, the fact snapshot, the model, prompt version and engine commit are stored in the local database for audit."
+      />
       <dl className="border border-foreground/10 divide-y divide-foreground/10 text-sm">
         {rows.map(([label, value]) => (
           <div key={label} className="grid grid-cols-[10rem_1fr] gap-4 px-5 py-3">
@@ -275,14 +307,40 @@ function RunDetails({ result }: { result: AnalysisResult }) {
   );
 }
 
+// One malformed value must not blank the whole page.
+class ResultBoundary extends Component<{ children: ReactNode; resetKey: string }, { failed: boolean }> {
+  state = { failed: false };
+
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+
+  componentDidUpdate(prev: { resetKey: string }) {
+    if (prev.resetKey !== this.props.resetKey && this.state.failed) this.setState({ failed: false });
+  }
+
+  render() {
+    if (this.state.failed) {
+      return (
+        <p role="alert" className="border border-destructive px-5 py-4 text-sm text-destructive">
+          The result could not be displayed. The run itself is stored; see the API terminal for details.
+        </p>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 export function ResultView({ result, expected }: { result: AnalysisResult; expected: TerminalState | null }) {
   return (
-    <div className="grid gap-16">
-      <OutcomeCard result={result} expected={expected} />
-      <FactsTable facts={result.facts} model={result.model} />
-      <ChainTimeline chain={result.chain} ruleSet={result.rule_set_version} />
-      <LawSection result={result} />
-      <RunDetails result={result} />
-    </div>
+    <ResultBoundary resetKey={result.execution_batch}>
+      <div className="grid gap-16">
+        <OutcomeCard result={result} expected={expected} />
+        <FactsTable facts={result.facts} model={result.model} />
+        <ChainTimeline chain={result.chain} ruleSet={result.rule_set_version} status={result.rule_set_status} />
+        <LawSection result={result} />
+        <RunDetails result={result} />
+      </div>
+    </ResultBoundary>
   );
 }

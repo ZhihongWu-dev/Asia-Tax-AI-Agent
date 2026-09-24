@@ -5,11 +5,11 @@ import { useInView } from "@/lib/use-in-view";
 
 // Unit counts from the local knowledge build (make knowledge-build).
 const sources = [
-  { name: "Cap. 112, Part 4, Division 3A", origin: "HK e-Legislation · XML", units: "45 subsections" },
+  { name: "Cap. 112, Part 4, Division 3A", origin: "HK e-Legislation · XML", units: "45 provisions" },
   { name: "2022 FSIE amendment ordinance", origin: "IRD · PDF", units: "62 pages" },
   { name: "IRD FSIE guidance page", origin: "IRD · HTML", units: "280 blocks" },
-  { name: "IRD FSIE FAQ", origin: "IRD · HTML", units: "101 items" },
-  { name: "IRD FSIE examples", origin: "IRD · HTML", units: "136 examples" },
+  { name: "IRD FSIE FAQ", origin: "IRD · HTML", units: "101 blocks" },
+  { name: "IRD FSIE examples", origin: "IRD · HTML", units: "136 blocks" },
   { name: "Economic-substance advance ruling guide", origin: "IRD · HTML", units: "45 blocks" },
   { name: "Advance rulings 68, 72, 74, 75", origin: "IRD · HTML", units: "50 blocks" },
 ];
@@ -41,12 +41,13 @@ export function KnowledgeSection() {
             <h2 className="text-4xl lg:text-6xl font-display tracking-tight mb-8">
               Official sources,
               <br />
-              pinned by hash.
+              fingerprinted.
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed mb-12">
               Every source comes from an official Hong Kong domain, is snapshotted once
               and fingerprinted with SHA-256. Text is split into citable legal units,
-              so a result can point at the exact subsection it relies on.
+              so a result can point at the exact subsection it relies on. When an IRD page
+              changes, the new version is stored with its own hash and the drift is logged.
             </p>
 
             <div className="grid grid-cols-3 gap-8">

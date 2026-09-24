@@ -14,7 +14,7 @@ const features = [
     number: "02",
     title: "Deterministic by construction",
     description:
-      "Scope, income, receipt, economic substance and the s.15M(2) participation thresholds run as plain, versioned code. The same facts and rule version always produce the same result.",
+      "Scope, income, receipt, economic substance and the s.15M(2) participation thresholds run as plain, versioned code. The same facts, rule package version and engine commit always produce the same result, and every run records all three.",
     visual: "deploy",
   },
   {
