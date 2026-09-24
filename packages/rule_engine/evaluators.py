@@ -29,6 +29,7 @@ UNRESOLVED_VALUES = {"unknown", "conflict"}
 
 SCOPE_CORE_FACTS = ("entity_hk_business_status", "mne_group_status", "income_type")
 RECEIPT_FACTS = ("receipt_location", "bank_or_account_path", "set_off_or_clearing_arrangement")
+RECEIVED_IN_HK_VALUES = ("received_in_hk", "deemed_received_in_hk")
 SUBSTANCE_FACTS = (
     "pure_equity_holding_entity_status",
     "entity_activity_profile",
@@ -170,8 +171,10 @@ def evaluate_receipt(facts: FactView, ordinal: int) -> NodeOutcome:
     location = facts.known("receipt_location")
     if location is None:
         return NodeOutcome("receipt", ordinal, "unknown", blockers=("receipt_location",))
-    if location == "received_in_hk":
-        return NodeOutcome("receipt", ordinal, "satisfied")
+    # s.15I charges specified foreign-sourced income that is received, or
+    # deemed received, in Hong Kong; both establish the receipt node.
+    if location in RECEIVED_IN_HK_VALUES:
+        return NodeOutcome("receipt", ordinal, "satisfied", detail={"receipt_location": location})
     return NodeOutcome(
         "receipt", ordinal, "not_satisfied",
         detail={"receipt_location": location, "note": "income not received in Hong Kong"},

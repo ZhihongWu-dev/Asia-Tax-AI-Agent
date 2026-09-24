@@ -26,6 +26,7 @@ from sqlalchemy import (
     ForeignKey,
     Integer,
     String,
+    Text,
     UniqueConstraint,
     func,
 )
@@ -405,7 +406,7 @@ class LegalUnit(Base):
     unit_type: Mapped[str] = mapped_column(String(32), nullable=False)
     ordinal: Mapped[int] = mapped_column(Integer, nullable=False)
     heading: Mapped[str | None] = mapped_column(String(512), nullable=True)
-    text: Mapped[str] = mapped_column(String, nullable=False)
+    text: Mapped[str] = mapped_column(Text, nullable=False)
     text_sha256: Mapped[str] = mapped_column(String(64), nullable=False)
     language: Mapped[str] = mapped_column(String(8), nullable=False, server_default="en")
     created_at: Mapped[datetime] = mapped_column(

@@ -65,6 +65,38 @@ def test_receipt_satisfied_when_received_in_hk():
     assert evaluate_receipt(FactView({"receipt_location": "received_in_hk"}), 3).output == "satisfied"
 
 
+def test_receipt_satisfied_when_deemed_received_in_hk():
+    # s.15I: deemed receipt engages the charge exactly like actual receipt.
+    outcome = evaluate_receipt(FactView({"receipt_location": "deemed_received_in_hk"}), 3)
+    assert outcome.output == "satisfied"
+
+
+def test_receipt_not_satisfied_when_received_outside_hk():
+    outcome = evaluate_receipt(FactView({"receipt_location": "received_outside_hk"}), 3)
+    assert outcome.output == "not_satisfied"
+
+
+def test_receipt_covers_every_dictionary_value():
+    # Every non-sentinel enum value must map to a definite node output, so a
+    # new dictionary value cannot silently fall into the wrong branch.
+    import json
+
+    dictionary = json.loads(
+        (parser.REPO_ROOT / "packages/contracts/fact_dictionary/hk_fsie_fact_fields.v0.json").read_text(encoding="utf-8")
+    )
+    spec = next(f for f in dictionary["fields"] if f["field_name"] == "receipt_location")
+    expected = {
+        "received_in_hk": "satisfied",
+        "deemed_received_in_hk": "satisfied",
+        "received_outside_hk": "not_satisfied",
+        "unknown": "unknown",
+        "conflict": "conflict",
+    }
+    assert set(spec["enum_values"]) == set(expected)
+    for value, output in expected.items():
+        assert evaluate_receipt(FactView({"receipt_location": value}), 3).output == output, value
+
+
 def test_receipt_conflict_reports_the_conflicting_fact():
     outcome = evaluate_receipt(FactView({"receipt_location": "conflict"}), 3)
     assert outcome.output == "conflict"
