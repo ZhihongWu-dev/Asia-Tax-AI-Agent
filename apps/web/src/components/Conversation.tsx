@@ -7,6 +7,7 @@ import {
   type Analysis,
 } from "../workspace";
 import { useLocale } from "../locale";
+import Passages from "./Passages";
 
 function Result({ result, fields }: { result: Analysis; fields: FieldSpec[] }) {
   const { t, locale } = useLocale();
@@ -60,6 +61,32 @@ function Result({ result, fields }: { result: Analysis; fields: FieldSpec[] }) {
           {t("知识覆盖截止")} {result.coverage_cutoff}
         </p>
       </details>
+      {!!result.review_tasks?.length && (
+        <details>
+          <summary>{t("进一步复核清单")}</summary>
+          <p>{t("以下事项尚未自动判断，请结合事实和证据逐项复核。")}</p>
+          {result.review_tasks.map((task) => (
+            <div key={task.node}>
+              <strong>{t(`node:${task.node}`)}</strong>
+              <ul>
+                {task.fact_keys.map((key) => (
+                  <li key={key}>
+                    {label(key)}
+                    {task.missing_facts.includes(key)
+                      ? ` · ${t("待补充")}`
+                      : ` · ${t("已记录，待核实")}`}
+                  </li>
+                ))}
+              </ul>
+              <Passages
+                passages={result.passages.filter((p) =>
+                  task.passage_ids?.includes(p.unit_id),
+                )}
+              />
+            </div>
+          ))}
+        </details>
+      )}
       <details>
         <summary>{t("本次分析的来源")}</summary>
         <p>
@@ -79,13 +106,48 @@ function Result({ result, fields }: { result: Analysis; fields: FieldSpec[] }) {
             {source.title}
           </a>
         ))}
-        {result.passages.map((p) => (
-          <blockquote key={`${p.source_id}-${p.unit_id}`}>
-            <strong>{p.locator}</strong>
-            <p>{p.text}</p>
-          </blockquote>
-        ))}
+        {!!result.missing_locators?.length && (
+          <p>
+            {t("部分条文未检索到")}：{result.missing_locators.join(", ")}
+          </p>
+        )}
+        {result.nodes.some((node) => node.passage_ids?.length) ? (
+          result.nodes
+            .filter((node) => node.passage_ids?.length)
+            .map((node) => (
+              <details key={node.node}>
+                <summary>{t(`node:${node.node}`)}</summary>
+                <Passages
+                  passages={result.passages.filter((p) =>
+                    node.passage_ids?.includes(p.unit_id),
+                  )}
+                />
+              </details>
+            ))
+        ) : (
+          <Passages passages={result.passages} />
+        )}
       </details>
+      {result.related_rulings &&
+        result.related_rulings.status !== "not_applicable" && (
+          <details>
+            <summary>{t("相关官方案例")}</summary>
+            <p>
+              {t(
+                "按关键词匹配的参考案例，不能直接套用其裁定结论。请同时核对背景、适用期间及假设。",
+              )}
+            </p>
+            {result.related_rulings.status === "unavailable" && (
+              <p>{t("error:knowledge_unavailable")}</p>
+            )}
+            {result.related_rulings.status === "no_matching_units" && (
+              <p>
+                {t("未找到匹配资料，请换用具体条文、案例编号或税务关键词。")}
+              </p>
+            )}
+            <Passages passages={result.related_rulings.passages} />
+          </details>
+        )}
     </article>
   );
 }
@@ -122,6 +184,17 @@ export default function Conversation({
         >
           {message.role === "user" ? (
             <p>{message.text}</p>
+          ) : message.kind === "research" && message.research ? (
+            <div className="research-response">
+              <p>
+                {t(
+                  message.research.passages.length
+                    ? "以下为官方原文片段，适用性待核对。"
+                    : "未找到匹配资料，请换用具体条文、案例编号或税务关键词。",
+                )}
+              </p>
+              <Passages passages={message.research.passages} />
+            </div>
           ) : message.kind === "analysis" ? (
             (() => {
               const result = current.analyses.find(

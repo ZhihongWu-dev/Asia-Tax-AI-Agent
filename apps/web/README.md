@@ -27,7 +27,7 @@ python scripts/run_chat.py
 4. 查看现有规则的研究结果、阻断项、缺失节点、事实/规则版本及来源。
 5. 后续修改使旧分析过期；需重新确认和分析。案件与结果可以刷新恢复。
 
-会话默认保存到后端 `data/chat.sqlite3`，浏览器随机 HttpOnly cookie 用于隔离工作空间；localStorage 只保存语言偏好，未发送的草稿只在本页内存。清除 cookie 会失去原工作空间入口，当前不是完整账号系统。
+会话默认保存到 `FSIE_DATABASE_URL` 指向的云端 PostgreSQL，可用 `FSIE_WEB_DATABASE_URL` 指定另一数据库。浏览器随机 HttpOnly cookie 用于隔离工作空间；localStorage 只保存语言偏好，未发送的草稿只在本页内存。清除 cookie 会失去原工作空间入口，当前不是完整账号系统。旧 SQLite 会话不会自动迁移。
 
 实际模型、知识数据库和完整专业闭环仍须分别验证。当前只有 5 个业务规则节点；资料库不可用时只展示明确标注的官方索引链接。无完整混合检索、专业审批、报告导出或跨地区能力。详见 [实现与验证记录](../../docs/project/LIVE_CHAT_SLICE.md)。
 

@@ -35,7 +35,7 @@
 
 主分支已包含 L0 后端研究原型。Web 演示及其分析 API 仍在 `demo/hk-web` 分支，尚未整体合并。开发命令见 `Makefile`；其中虚拟环境路径及 Shell 命令按 Linux / WSL 编写。
 
-本开发分支新增 [税务聊天工作台](apps/web/README.md)，未合并旧 demo。简洁中英文界面现已连接案件、消息、事实确认和规则分析 API，支持刷新恢复。本机已通过两轮合成案例的真实 DeepSeek 调用、事实确认和规则结果保存验证；法规原文库仍未连接。其他环境需要自行配置模型密钥。实现范围与缺口见 [网页研究链路记录](docs/project/LIVE_CHAT_SLICE.md)。
+本开发分支新增 [税务聊天工作台](apps/web/README.md)，未合并旧 demo。简洁中英文界面连接云端 PostgreSQL，支持案件访谈、事实确认、规则分析和刷新恢复；官方法条及四个裁定案例支持编号和中英文关键词检索。引用保留原文、哈希、抓取日期和内容变化提示。其他开发环境需要配置数据库连接和模型密钥。实现范围与缺口见 [网页研究链路记录](docs/project/LIVE_CHAT_SLICE.md)及[云端研究链路验收](docs/project/CLOUD_KNOWLEDGE_SLICE.md)。
 
 ```sh
 cd apps/web
@@ -46,7 +46,7 @@ cd ../..
 python scripts/run_chat.py
 ```
 
-打开 <http://127.0.0.1:8000>。需要 Python 3.11+ 和 Node.js 20.19+ 或 22.12+。本地会话默认保存到 `data/chat.sqlite3`；模型提取需要 `.env` 配置，法规原文检索仍需现有 PostgreSQL 知识库。
+打开 <http://127.0.0.1:8000>。需要 Python 3.11+ 和 Node.js 20.19+ 或 22.12+。在根目录 `.env` 配置云端 `FSIE_DATABASE_URL` 和模型密钥；会话默认使用同一云端数据库，无 SQLite 回退。数据库初始化执行 `python -m alembic upgrade head`。前后端目前在开发机器运行，数据库在云端；公网网站部署和账号登录仍待实施。
 
 ## 知识与数据安全
 

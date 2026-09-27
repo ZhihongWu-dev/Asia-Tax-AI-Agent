@@ -6,10 +6,11 @@ from hashlib import sha256
 from pathlib import Path
 import secrets
 from typing import Any
+from typing import Literal
 from urllib.parse import urlsplit
 from uuid import UUID
 
-from fastapi import APIRouter, Depends, HTTPException, Request, Response
+from fastapi import APIRouter, Depends, HTTPException, Request, Response, Query
 from pydantic import BaseModel, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from sqlalchemy.exc import SQLAlchemyError
@@ -17,6 +18,8 @@ from sqlalchemy.exc import SQLAlchemyError
 from packages.chat.facts import catalog
 from packages.chat.service import ChatService, WorkflowError, public, current_model_config
 from packages.chat.store import CaseNotFound, ChatStore, RevisionConflict
+from packages.persistence.config import get_settings
+from packages.chat.knowledge import search
 
 ROOT = Path(__file__).resolve().parents[2]
 COOKIE = "asiatax_workspace"
@@ -24,14 +27,14 @@ router = APIRouter(prefix="/api")
 
 
 class WebSettings(BaseSettings):
-    database_url: str = f"sqlite:///{(ROOT / 'data/chat.sqlite3').as_posix()}"
+    database_url: str = ""
     secure_cookie: bool = False
     model_config = SettingsConfigDict(env_file=ROOT / ".env", env_prefix="FSIE_WEB_", extra="ignore")
 
 
 @lru_cache
 def get_service() -> ChatService:
-    return ChatService(ChatStore(WebSettings().database_url))
+    return ChatService(ChatStore(WebSettings().database_url or get_settings().database_url))
 
 
 def same_origin(request: Request) -> None:
@@ -74,7 +77,7 @@ def call(action, *args):
     except RevisionConflict:
         raise HTTPException(409, "revision_conflict") from None
     except WorkflowError as exc:
-        raise HTTPException(503 if exc.code.startswith("model_") else 422, exc.code) from None
+        raise HTTPException(503 if exc.code.startswith("model_") or exc.code == 'knowledge_unavailable' else 422, exc.code) from None
     except (ValueError, TypeError):
         raise HTTPException(422, "invalid_facts") from None
     except SQLAlchemyError:
@@ -89,6 +92,16 @@ def session(request: Request, response: Response):
         response.set_cookie(COOKIE, secrets.token_hex(32), httponly=True, samesite="strict",
                             secure=WebSettings().secure_cookie, max_age=60 * 60 * 24 * 180)
     return {"model_configured": current_model_config().is_configured, "fields": catalog()}
+
+
+@router.get('/knowledge/search')
+def knowledge_search(q: str = Query(min_length=2, max_length=500),
+                     kind: Literal['all', 'law', 'ruling', 'guidance'] = 'all',
+                     workspace: str = Depends(owner)):
+    result = search(q.strip(), kind, 7)
+    if result['status'] == 'unavailable':
+        raise HTTPException(503, 'knowledge_unavailable')
+    return result
 
 
 @router.get("/cases")

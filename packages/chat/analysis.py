@@ -6,33 +6,63 @@ from hashlib import sha256
 import json
 from uuid import uuid4
 
-from sqlalchemy import create_engine, select
-
 from packages.contracts.enums import JUDGEMENT_CHAIN
 from packages.knowledge_loader.parser import FSIE_DIR, load_rules_payload
-from packages.persistence.config import get_settings
-from packages.persistence.models import LegalUnit, Source
+from packages.chat.knowledge import read_documents, rank_documents
 from packages.rule_engine.runner import ChainRule, run_chain
 from packages.chat.store import now
 
 
 def retrieve_units(locators: list[str]) -> tuple[list[dict], str]:
-    engine = None
     try:
-        engine = create_engine(get_settings().database_url, connect_args={"connect_timeout": 3})
-        with engine.connect() as connection:
-            rows = connection.execute(select(
-                LegalUnit.unit_ref, LegalUnit.statute_locator, LegalUnit.text,
-                Source.source_id, Source.actual_sha256,
-            ).join(Source, LegalUnit.source_db_id == Source.id).where(LegalUnit.statute_locator.in_(locators))).all()
-        return [{"unit_id": r.unit_ref, "locator": r.statute_locator, "text": r.text,
-                 "source_id": r.source_id, "snapshot_sha256": r.actual_sha256} for r in rows], "available" if rows else "no_matching_units"
+        docs = read_documents(locators=locators)
+        units = [d for d in docs if d['locator'] in locators]
+        return units, "available" if units else "no_matching_units"
     except Exception:
         # No database details or credentials cross the API boundary.
         return [], "unavailable"
-    finally:
-        if engine is not None:
-            engine.dispose()
+
+
+# These are review tasks, not additional tax rules or inferred conclusions.
+REVIEW_FIELDS = {
+    'financial_entity_exclusion': ['regulated_financial_entity_status', 'entity_activity_profile'],
+    'foreign_tax_switchover': ['foreign_tax_on_dividend_or_underlying_profit', 'foreign_nominal_tax_rate_pct', 'foreign_tax_jurisdiction'],
+    'anti_hybrid': ['hybrid_mismatch_arrangement', 'underlying_tax_deductible_status'],
+    'main_purpose': ['main_purpose_tax_benefit_flag', 'commercial_rationale', 'restructuring_near_income_date'],
+    'compliance_filing': ['receipt_date', 'foreign_tax_credit_available', 'evidence_inventory'],
+}
+
+# Navigation references checked against the ingested ordinance text; not new rules.
+NODE_LOCATORS = {
+    'scope': ['s.15H(1)', 's.15I(3)'],
+    'income_characterisation': ['s.15H(1)', 's.15I(1)'],
+    'receipt': ['s.15H(5)', 's.15H(6)', 's.15H(7)'],
+    'economic_substance': ['s.15K(1)', 's.15K(2)', 's.15K(3)'],
+    'participation_basic': ['s.15M(1)', 's.15M(2)', 's.15M(3)'],
+    'financial_entity_exclusion': ['s.15H(1)'],
+    'foreign_tax_switchover': ['s.15N(2)', 's.15N(3)', 's.15N(6)', 's.15N(7)'],
+    'anti_hybrid': ['s.15N(2)'],
+    'main_purpose': ['s.15N(4)'],
+    'compliance_filing': ['s.15J', 's.15S(1)', 's.15S(2)', 's.15S(3)'],
+}
+
+
+def related_rulings(facts: dict) -> dict:
+    try:
+        documents = read_documents(kind='ruling')
+        query = 'dividend'
+        if facts.get('pure_equity_holding_entity_status') == 'yes':
+            query += ' pure equity holding economic substance'
+        if facts.get('foreign_tax_on_dividend_or_underlying_profit') == 'yes':
+            query += ' qualifying similar tax'
+        ranked = rank_documents(documents, query, 'ruling', 4)
+        ids = list(dict.fromkeys(d['source_id'] for d in ranked))[:2]
+        # Include the entire seven-section context, especially scope and dates.
+        passages = [d for d in documents if d['source_id'] in ids]
+        return {'status': 'available' if passages else 'no_matching_units', 'passages': passages,
+                'method': 'keyword_reference_only'}
+    except Exception:
+        return {'status': 'unavailable', 'passages': [], 'method': 'keyword_reference_only'}
 
 
 def analyze(case_id: str, facts: dict, confirmed_revision: int) -> dict:
@@ -44,13 +74,19 @@ def analyze(case_id: str, facts: dict, confirmed_revision: int) -> dict:
     source_ids = {s for rule in rules for s in rule.get("source_ids", [])}
     sources = [s for s in manifest["sources"] if s["source_id"] in source_ids]
     locators = sorted({t["statute_locator"] for r in rules for t in r.get("thresholds", []) if t.get("statute_locator")})
+    locators = sorted(set(locators).union(*(set(refs) for refs in NODE_LOCATORS.values())))
     units, retrieval_status = retrieve_units(locators)
     units = [u for u in units if u["source_id"] in source_ids]
     if retrieval_status == "available" and not units:
         retrieval_status = "no_matching_units"
     by_node = {r["node"]: r for r in rules}
     nodes = [{**asdict(n), "rule_id": by_node[n.node]["rule_id"],
-              "source_ids": by_node[n.node].get("source_ids", [])} for n in outcome.node_outcomes]
+              "source_ids": by_node[n.node].get("source_ids", []),
+              "required_evidence": by_node[n.node].get("required_evidence", []),
+              "fact_keys": by_node[n.node].get("required_facts", []),
+              "passage_ids": [u['unit_id'] for u in units if u.get('locator') in NODE_LOCATORS.get(n.node, []) or any(
+                  t.get('statute_locator') == u.get('locator') for t in by_node[n.node].get('thresholds', []))],
+              } for n in outcome.node_outcomes]
     missing = [node for node, ordinal in JUDGEMENT_CHAIN.items() if ordinal > 0 and node not in by_node]
     return {
         "id": str(uuid4()), "created_at": now(), "confirmed_revision": confirmed_revision,
@@ -60,5 +96,15 @@ def analyze(case_id: str, facts: dict, confirmed_revision: int) -> dict:
         "coverage_cutoff": manifest["legal_coverage_cutoff"], "professional_validation_status": "unverified",
         "terminal_state": outcome.terminal_state, "blockers": list(outcome.blockers), "nodes": nodes,
         "missing_nodes": missing, "sources": sources, "passages": units, "retrieval_status": retrieval_status,
+        "related_rulings": related_rulings(facts) if facts.get('income_type') == 'dividend' else
+            {'status': 'not_applicable', 'passages': [], 'method': 'keyword_reference_only'},
+        "review_tasks": [{"node": node, "status": "human_review_required", "fact_keys": REVIEW_FIELDS[node],
+                          "passage_ids": [u['unit_id'] for u in units if u.get('locator') in NODE_LOCATORS.get(node, [])],
+                          "missing_facts": [key for key in REVIEW_FIELDS[node] if key not in facts or
+                                            facts[key] in ('unknown', 'conflict', None)]} for node in missing],
+        "citation_status": "review_required" if any(u.get('drift') for u in units) else
+            ("retrieved_unverified" if units else "missing"),
+        "missing_locators": sorted(set(locators) - {u['locator'] for u in units}),
+        "citation_map_version": '2026-09-27',
         "stale": False,
     }

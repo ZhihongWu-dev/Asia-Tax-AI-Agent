@@ -23,6 +23,27 @@ export type Message = {
   question_fields?: string[];
   state?: string;
   analysis_id?: string;
+  research?: KnowledgeResult;
+};
+export type Passage = {
+  unit_id: string;
+  source_id: string;
+  locator: string | null;
+  text: string;
+  heading?: string;
+  title?: string;
+  url?: string;
+  snapshot_sha256?: string;
+  text_sha256?: string;
+  retrieved_at?: string;
+  drift?: boolean;
+  coverage_cutoff?: string;
+};
+export type KnowledgeResult = {
+  status: string;
+  passages: Passage[];
+  method: string;
+  query?: string;
 };
 export type Analysis = {
   id: string;
@@ -35,6 +56,15 @@ export type Analysis = {
   missing_nodes: string[];
   coverage_cutoff: string;
   retrieval_status: string;
+  missing_locators?: string[];
+  related_rulings?: KnowledgeResult;
+  review_tasks?: {
+    node: string;
+    status: string;
+    fact_keys: string[];
+    missing_facts: string[];
+    passage_ids?: string[];
+  }[];
   nodes: {
     node: string;
     rule_id: string;
@@ -42,14 +72,10 @@ export type Analysis = {
     blockers: string[];
     escalation_blockers: string[];
     source_ids: string[];
+    passage_ids?: string[];
   }[];
   sources: { source_id: string; title: string; url: string }[];
-  passages: {
-    unit_id: string;
-    source_id: string;
-    locator: string;
-    text: string;
-  }[];
+  passages: Passage[];
 };
 export type Case = {
   id: string;

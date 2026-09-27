@@ -22,6 +22,7 @@ def setup(tmp_path, monkeypatch):
             raise WorkflowError("model_failed")
         return {"income_type": "dividend", "entity_hk_business_status": "yes"}
     monkeypatch.setattr(analysis, "retrieve_units", lambda _: ([], "unavailable"))
+    monkeypatch.setattr(analysis, "related_rulings", lambda _: {'status': 'unavailable', 'passages': []})
     service = ChatService(store, extractor=extract)
     app.dependency_overrides[get_service] = lambda: service
     with TestClient(app) as client:

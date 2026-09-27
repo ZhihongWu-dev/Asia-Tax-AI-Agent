@@ -1,4 +1,4 @@
-import type { Case, FieldSpec, FactValue } from "./workspace";
+import type { Case, FieldSpec, FactValue, KnowledgeResult } from "./workspace";
 
 export class ApiError extends Error {
   constructor(public code: string) {
@@ -12,6 +12,7 @@ export function isRetryable(code: string) {
     "model_not_configured",
     "service_unavailable",
     "storage_unavailable",
+    "knowledge_unavailable",
   ].includes(code);
 }
 export async function request<T>(
@@ -43,6 +44,10 @@ export async function request<T>(
   }
 }
 export const api = {
+  search: (query: string) =>
+    request<KnowledgeResult>(
+      `/knowledge/search?q=${encodeURIComponent(query)}`,
+    ),
   session: () =>
     request<{ fields: FieldSpec[]; model_configured: boolean }>("/session"),
   list: () => request<Case[]>("/cases"),

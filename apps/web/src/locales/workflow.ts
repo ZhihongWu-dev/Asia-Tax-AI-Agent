@@ -1,4 +1,46 @@
 export const workflow: Record<string, [string, string]> = {
+  部分条文未检索到: [
+    "部分条文未检索到",
+    "Some legal references could not be retrieved",
+  ],
+  "error:knowledge_unavailable": [
+    "暂时无法读取云端资料，请稍后重试。",
+    "Cloud sources are temporarily unavailable. Please retry.",
+  ],
+  "来源内容已变化，待核对。": [
+    "来源内容已变化，待核对。",
+    "Source content has changed and needs review.",
+  ],
+  原文抓取时间: ["原文抓取时间", "Source retrieved at"],
+  片段编号: ["片段编号", "Passage ID"],
+  片段哈希: ["片段哈希", "Passage hash"],
+  检索法条与案例: ["检索法条与案例", "Search laws and rulings"],
+  "关键词、条文编号或案例编号": [
+    "关键词、条文编号或案例编号",
+    "Keyword, section or ruling number",
+  ],
+  检索: ["检索", "Search"],
+  "以下为官方原文片段，适用性待核对。": [
+    "以下为官方原文片段，适用性待核对。",
+    "Official source excerpts. Check their applicability.",
+  ],
+  "未找到匹配资料，请换用具体条文、案例编号或税务关键词。": [
+    "未找到匹配资料，请换用具体条文、案例编号或税务关键词。",
+    "No matching sources. Try a section, ruling number or specific tax keyword.",
+  ],
+  进一步复核清单: ["进一步复核清单", "Further review checklist"],
+  "以下事项尚未自动判断，请结合事实和证据逐项复核。": [
+    "以下事项尚未自动判断，请结合事实和证据逐项复核。",
+    "These items require review against facts and evidence; no automatic decision has been made.",
+  ],
+  待补充: ["待补充", "Missing"],
+  "已记录，待核实": ["已记录，待核实", "Recorded; verify evidence"],
+  相关官方案例: ["相关官方案例", "Related official rulings"],
+  "按关键词匹配的参考案例，不能直接套用其裁定结论。请同时核对背景、适用期间及假设。":
+    [
+      "按关键词匹配的参考案例，不能直接套用其裁定结论。请同时核对背景、适用期间及假设。",
+      "Keyword-matched references, not decisions for this case. Check background, applicable periods and assumptions.",
+    ],
   "value:yes": ["是", "Yes"],
   "value:no": ["否", "No"],
   "value:unknown": ["未知", "Unknown"],

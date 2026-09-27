@@ -2,6 +2,8 @@
 
 日期：2026-09-27。范围是用户批准的第一轮接线：提问、追问、事实确认、现有规则分析和案件恢复；并非完整 PRD 或 L1 验收。
 
+后续云端和检索进展见 [CLOUD_KNOWLEDGE_SLICE.md](CLOUD_KNOWLEDGE_SLICE.md)。下方验证数字保留第一轮记录，当前连接状态以该新记录为准。
+
 ## 已实现
 
 - FastAPI 案件、消息、事实修改、确认、分析接口；前端真实调用这些接口。
@@ -34,7 +36,7 @@ cd ../..
 
 ## 存储及部署边界
 
-本机 PostgreSQL 未连接，因此新增会话表默认存入 gitignored 的 `data/chat.sqlite3`，复用 SQLAlchemy；不静默替换 `FSIE_DATABASE_URL` 指向的知识库。`FSIE_WEB_DATABASE_URL` 可指定独立 PostgreSQL 会话存储。切换配置不会自动搬迁既有会话；与原有 CaseFile / Fact / FactVersion 表的统一迁移仍需后续工作。
+会话与知识库现使用云端 PostgreSQL，默认共享 `FSIE_DATABASE_URL`。`FSIE_WEB_DATABASE_URL` 可指定独立 PostgreSQL 会话存储。旧版 SQLite 记录保留且不自动搬迁；与原有 CaseFile / Fact / FactVersion 表的统一迁移仍需后续工作。
 
 随机 HttpOnly、SameSite=Strict cookie 将浏览器工作空间隔离；写入需要同源和自定义头，Host 只允许回环域名。仅绑定 `127.0.0.1`；本轮没有账号登录、组织角色或公开部署授权。删除浏览器 cookie 后原案件仍在数据库，但不能从新工作空间访问；完整账号恢复与数据保留策略尚未实现。`/health` 已移除原始数据库连接字符串。
 

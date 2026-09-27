@@ -1,4 +1,5 @@
 import FactEditor from "./FactEditor";
+import KnowledgeSearch from "./KnowledgeSearch";
 import type { FactPatch } from "../api";
 import { isRetryable } from "../api";
 import { BookOpen, CircleHelp, ExternalLink, FileText, X } from "lucide-react";
@@ -87,6 +88,7 @@ export default function DetailsPanel({
         )}
         {panel === "sources" && (
           <>
+            <KnowledgeSearch />
             <p className="panel-description">
               {t("官方资料索引。请核对适用期间及最新版本。")}
             </p>

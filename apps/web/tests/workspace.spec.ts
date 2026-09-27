@@ -1,5 +1,48 @@
 import { test, expect, type Page } from "@playwright/test";
 
+test("source search, provenance and persisted research replies", async ({
+  page,
+}) => {
+  await english(page);
+  await send(page, "Case 68");
+  await expect(page.locator(".research-response")).toContainText(
+    "Official source excerpts",
+  );
+  await page.locator(".research-response .knowledge-passage > summary").click();
+  await expect(page.locator(".research-response")).toContainText(
+    "Synthetic browser fixture: date retained.",
+  );
+  await expect(page.locator(".research-response")).toContainText(
+    "Source content has changed",
+  );
+  await page.reload();
+  await expect(page.locator(".research-response")).toContainText(
+    "Date of ruling issued",
+  );
+  await page.getByRole("button", { name: "切换为中文" }).click();
+  await expect(page.locator(".research-response")).toContainText(
+    "以下为官方原文片段",
+  );
+  await page.getByRole("button", { name: "法规资料", exact: true }).click();
+  await page.getByRole("textbox", { name: "检索法条与案例" }).fill("案例 68");
+  await page.getByRole("button", { name: "检索", exact: true }).click();
+  await expect(
+    page.locator(".knowledge-search .knowledge-passage"),
+  ).toHaveCount(1);
+  await page.screenshot({
+    path: "test-results/knowledge-search.png",
+    fullPage: true,
+  });
+  await page.getByRole("textbox", { name: "检索法条与案例" }).fill("case 999");
+  await page.getByRole("button", { name: "检索", exact: true }).click();
+  await expect(page.locator(".knowledge-search")).toContainText(
+    "未找到匹配资料",
+  );
+  await expect(
+    page.locator(".knowledge-search .knowledge-passage"),
+  ).toHaveCount(0);
+});
+
 async function english(page: Page) {
   await page.goto("/");
   await page.getByRole("button", { name: "Switch to English" }).click();

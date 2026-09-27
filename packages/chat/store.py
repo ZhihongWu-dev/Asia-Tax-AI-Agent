@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from uuid import uuid4
 
-from sqlalchemy import JSON, Column, Integer, MetaData, String, Table, create_engine, select, update
+from sqlalchemy import JSON, Column, Integer, MetaData, String, Table, create_engine, select, update, text
 
 metadata = MetaData()
 conversations = Table(
@@ -31,12 +31,17 @@ def now() -> str:
 
 class ChatStore:
     def __init__(self, url: str):
+        if url.startswith('postgresql://'):
+            url = url.replace('postgresql://', 'postgresql+psycopg://', 1)
         if url.startswith("sqlite:///"):
             path = url.removeprefix("sqlite:///")
             if path != ":memory:":
                 Path(path).parent.mkdir(parents=True, exist_ok=True)
-        self.engine = create_engine(url, connect_args={"check_same_thread": False} if url.startswith("sqlite") else {})
-        metadata.create_all(self.engine)
+        self.engine = create_engine(url, pool_pre_ping=True, connect_args={"check_same_thread": False} if url.startswith("sqlite") else {'connect_timeout': 5})
+        with self.engine.begin() as connection:
+            metadata.create_all(connection)
+            if connection.dialect.name == 'postgresql':
+                connection.execute(text('ALTER TABLE chat_cases ENABLE ROW LEVEL SECURITY'))
 
     def create(self, owner: str) -> dict:
         doc = {"id": str(uuid4()), "title": "", "revision": 0, "state": "collecting",

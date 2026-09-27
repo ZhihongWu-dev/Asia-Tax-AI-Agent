@@ -8,6 +8,7 @@ from uuid import uuid4
 from packages.chat.analysis import analyze
 from packages.chat.facts import questions, raw_facts, state_for, validate_patch
 from packages.chat.store import ChatStore, RevisionConflict, now
+from packages.chat.knowledge import search
 from packages.intake.prompting import build_system_prompt, build_user_prompt
 from packages.knowledge_loader.parser import REPO_ROOT
 from packages.model_adapter.client import ModelError, OpenAICompatibleClient, ModelConfig, ModelSettings
@@ -78,8 +79,8 @@ def public(doc: dict) -> dict:
 
 
 class ChatService:
-    def __init__(self, store: ChatStore, extractor=extract_update, analyzer=analyze):
-        self.store, self.extractor, self.analyzer = store, extractor, analyzer
+    def __init__(self, store: ChatStore, extractor=extract_update, analyzer=analyze, researcher=search):
+        self.store, self.extractor, self.analyzer, self.researcher = store, extractor, analyzer, researcher
 
     def load(self, owner: str, case_id: str, revision: int, request_id: str) -> tuple[dict, bool]:
         doc = self.store.get(owner, case_id)
@@ -106,15 +107,21 @@ class ChatService:
             raise WorkflowError("case_limit")
         patch = self.extractor(doc, text)
         patch = validate_patch(patch)
-        invalidate(doc)
+        research = self.researcher(text) if not patch else None
+        if research and research['status'] == 'unavailable':
+            raise WorkflowError('knowledge_unavailable')
+        if patch:
+            invalidate(doc)
         message_id = str(uuid4())
         doc["messages"].append({"id": message_id, "role": "user", "text": text, "created_at": now()})
         apply_facts(doc, patch, "model", message_id)
         doc["data_approved"] = True
         doc["title"] = doc["title"] or text[:50]
-        doc["state"] = state_for(doc)
+        if patch:
+            doc["state"] = state_for(doc)
         doc["messages"].append({"id": str(uuid4()), "role": "assistant", "kind": "intake",
-                                "question_fields": questions(doc), "state": doc["state"], "created_at": now()})
+                                "question_fields": questions(doc), "state": doc["state"], "created_at": now(),
+                                **({'kind': 'research', 'research': research} if research is not None else {})})
         return self.finish(owner, doc, revision, request_id)
 
     def edit(self, owner: str, case_id: str, revision: int, request_id: str, patch: dict) -> dict:
