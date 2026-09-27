@@ -184,8 +184,11 @@ export default function Conversation({
         >
           {message.role === "user" ? (
             <p>{message.text}</p>
+          ) : message.kind === "chat" ? (
+            <p className="chat-reply">{message.text}</p>
           ) : message.kind === "research" && message.research ? (
             <div className="research-response">
+              {message.text && <p className="chat-reply">{message.text}</p>}
               <p>
                 {t(
                   message.research.passages.length
@@ -206,6 +209,7 @@ export default function Conversation({
             <div className="intake-response">
               <Scale size={20} />
               <div>
+                {message.text && <p className="chat-reply">{message.text}</p>}
                 <p>
                   {t(
                     message.state === "needs_resolution"
@@ -232,21 +236,23 @@ export default function Conversation({
           )}
         </div>
       ))}
-      <div className="conversation-actions">
-        <button className="text-button" onClick={onFacts}>
-          <FileText size={15} />
-          {t("核对案例事实")}
-        </button>
-        {current.state === "confirmed" && (
-          <button
-            disabled={busy}
-            className="primary-button"
-            onClick={onAnalyze}
-          >
-            {t("开始分析")}
+      {Object.keys(current.facts).length > 0 && (
+        <div className="conversation-actions">
+          <button className="text-button" onClick={onFacts}>
+            <FileText size={15} />
+            {t("核对案例事实")}
           </button>
-        )}
-      </div>
+          {current.state === "confirmed" && (
+            <button
+              disabled={busy}
+              className="primary-button"
+              onClick={onAnalyze}
+            >
+              {t("开始分析")}
+            </button>
+          )}
+        </div>
+      )}
       {busy && (
         <p className="working-status" role="status">
           {t("正在处理，请稍候…")}

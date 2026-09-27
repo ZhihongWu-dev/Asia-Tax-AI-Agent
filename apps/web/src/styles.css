@@ -953,6 +953,10 @@ button:disabled {
   opacity: 0.5;
 }
 /* Source text is progressively disclosed to keep the chat compact. */
+.chat-reply {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 .knowledge-search {
   margin-bottom: 24px;
 }

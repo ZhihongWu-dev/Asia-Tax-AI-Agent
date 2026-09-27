@@ -1,5 +1,29 @@
 import { test, expect, type Page } from "@playwright/test";
 
+test("natural conversation is rendered and restored without a research error", async ({
+  page,
+}) => {
+  await english(page);
+  await send(page, "你好");
+  await expect(page.locator(".chat-reply")).toHaveText(
+    "你好！今天想聊些什么？",
+  );
+  await expect(page.locator(".research-response")).toHaveCount(0);
+  await expect(
+    page.getByRole("button", { name: "Review case facts" }),
+  ).toHaveCount(0);
+  await send(page, "用英文再说一遍");
+  await expect(page.locator(".chat-reply").last()).toHaveText(
+    "Hello! What would you like to talk about today?",
+  );
+  await page.reload();
+  await expect(page.locator(".chat-reply")).toHaveCount(2);
+  await page.screenshot({
+    path: "test-results/natural-chat.png",
+    fullPage: true,
+  });
+});
+
 test("source search, provenance and persisted research replies", async ({
   page,
 }) => {

@@ -46,7 +46,14 @@ if __name__ == '__main__':
             'drift': True, 'snapshot_sha256': 'a' * 64, 'text_sha256': 'b' * 64,
             'retrieved_at': '2026-09-27T00:00:00+00:00', 'coverage_cutoff': '2026-08-15',
         }]
-        app.dependency_overrides[get_service] = lambda: ChatService(store, extractor=extract)
+        def turn(doc, text):
+            if text == '你好':
+                return {'intent': 'chat', 'reply': '你好！今天想聊些什么？', 'facts': {}, 'query': ''}
+            if text == '用英文再说一遍':
+                return {'intent': 'chat', 'reply': 'Hello! What would you like to talk about today?', 'facts': {}, 'query': ''}
+            patch = extract(doc, text)
+            return {'intent': 'intake' if patch else 'research', 'reply': '', 'facts': patch, 'query': text}
+        app.dependency_overrides[get_service] = lambda: ChatService(store, turner=turn)
         try:
             uvicorn.run(app, host='127.0.0.1', port=8001, log_level='warning')
         finally:

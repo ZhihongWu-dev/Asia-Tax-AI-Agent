@@ -45,9 +45,21 @@ def main():
             def mutate(action, **payload):
                 nonlocal doc
                 method = client.patch if action == 'facts' else client.post
-                doc = checked(method(f'/api/cases/{case_id}/{action}', json={
-                    'revision': doc['revision'], 'request_id': str(uuid4()), **payload}))
+                body = {'revision': doc['revision'], 'request_id': str(uuid4()), **payload}
+                response = method(f'/api/cases/{case_id}/{action}', json=body)
+                if response.status_code == 503 and response.json().get('detail') == 'model_failed':
+                    report['model_retries'] = report.get('model_retries', 0) + 1
+                    print('retrying_model_with_same_request_id=True', flush=True)
+                    response = method(f'/api/cases/{case_id}/{action}', json=body)
+                doc = checked(response)
 
+            for prompt in ['你好', '你能帮我做些什么？', '请把你刚才的介绍用英文再说一遍']:
+                mutate('messages', text=prompt, data_approved=True)
+                reply = doc['messages'][-1]
+                assert reply['kind'] == 'chat' and reply['text'].strip()
+                assert doc['facts'] == {} and doc['confirmed_revision'] is None
+                print('normal_chat_verified=', reply['kind'], flush=True)
+            report['live_normal_chat_turns'] = 3
             mutate('messages', text='Please show the official source for Case 68.', data_approved=True)
             assert doc['messages'][-1]['kind'] == 'research'
             assert len(doc['messages'][-1]['research']['passages']) == 7
@@ -84,6 +96,8 @@ def main():
         print('verification_complete=True', flush=True)
     except Exception as exc:
         print('verification_failed_type=' + type(exc).__name__, flush=True)
+        if isinstance(exc, httpx.HTTPStatusError):
+            print('http_status=', exc.response.status_code, flush=True)
         return 1
     finally:
         if case_id and owner:
