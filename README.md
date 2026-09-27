@@ -35,15 +35,18 @@
 
 主分支已包含 L0 后端研究原型。Web 演示及其分析 API 仍在 `demo/hk-web` 分支，尚未整体合并。开发命令见 `Makefile`；其中虚拟环境路径及 Shell 命令按 Linux / WSL 编写。
 
-本开发分支新增独立的 [税务聊天工作台](apps/web/README.md)，未合并旧 demo。界面采用简洁的中英文聊天布局，案例信息和官方来源按需展开；尚未接入 AI 分析服务，不生成固定答案。当前实现与 PRD 的差距见 [闭环核查](docs/reviews/2026-09-27-agent-closure-audit.md)。
+本开发分支新增 [税务聊天工作台](apps/web/README.md)，未合并旧 demo。简洁中英文界面现已连接案件、消息、事实确认和规则分析 API，支持刷新恢复。模型需要配置密钥；当前本机尚未完成真实 DeepSeek 调用验证。实现范围与缺口见 [网页研究链路记录](docs/project/LIVE_CHAT_SLICE.md)。
 
 ```sh
 cd apps/web
 npm ci
-npm run dev
+npm run build
+cd ../..
+# 先安装 Python 依赖：python -m pip install -e ".[dev]"
+python scripts/run_chat.py
 ```
 
-打开 <http://127.0.0.1:5173>。需要 Node.js 20.19+ 或 22.12+；无需数据库和模型密钥。
+打开 <http://127.0.0.1:8000>。需要 Python 3.11+ 和 Node.js 20.19+ 或 22.12+。本地会话默认保存到 `data/chat.sqlite3`；模型提取需要 `.env` 配置，法规原文检索仍需现有 PostgreSQL 知识库。
 
 ## 知识与数据安全
 

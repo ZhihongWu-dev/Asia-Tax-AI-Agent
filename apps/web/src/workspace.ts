@@ -1,37 +1,72 @@
 import manifest from "../../../knowledge/hong_kong/fsie/source_manifest.json";
 
-export type Facts = {
-  entity: string;
-  income: string;
-  amount: string;
-  currency: string;
-  period: string;
-  receipt: string;
+export type FactValue = string | number | string[];
+export type FactRecord = {
+  value: FactValue;
+  origin: string;
+  status: string;
+  message_id: string | null;
+  revision: number;
 };
-export type Message = { id: string; text: string };
+export type FieldSpec = {
+  field_name: string;
+  description_zh: string;
+  label_en: string;
+  data_type: string;
+  enum_values?: string[];
+};
+export type Message = {
+  id: string;
+  role: "user" | "assistant";
+  text?: string;
+  kind?: string;
+  question_fields?: string[];
+  state?: string;
+  analysis_id?: string;
+};
+export type Analysis = {
+  id: string;
+  created_at: string;
+  stale: boolean;
+  rule_version: string;
+  confirmed_revision: number;
+  terminal_state: string;
+  blockers: string[];
+  missing_nodes: string[];
+  coverage_cutoff: string;
+  retrieval_status: string;
+  nodes: {
+    node: string;
+    rule_id: string;
+    output: string;
+    blockers: string[];
+    escalation_blockers: string[];
+    source_ids: string[];
+  }[];
+  sources: { source_id: string; title: string; url: string }[];
+  passages: {
+    unit_id: string;
+    source_id: string;
+    locator: string;
+    text: string;
+  }[];
+};
 export type Case = {
   id: string;
   title: string;
+  revision: number;
+  state: string;
   messages: Message[];
-  facts: Facts;
+  facts: Record<string, FactRecord>;
+  questions: string[];
+  analyses: Analysis[];
+  confirmed_revision: number | null;
+  data_approved: boolean;
 };
 export type Panel = "facts" | "sources" | "about" | null;
-export const factLabels: Record<keyof Facts, string> = {
-  entity: "纳税主体",
-  income: "收入类型",
-  amount: "金额",
-  currency: "币种",
-  period: "所属期间",
-  receipt: "收取情况",
-};
-export const emptyFacts: Facts = {
-  entity: "",
-  income: "",
-  amount: "",
-  currency: "",
-  period: "",
-  receipt: "",
-};
+export function fieldLabel(field: FieldSpec, locale: string) {
+  return locale === "en" ? field.label_en : field.description_zh;
+}
 export const suggestions = [
   {
     id: "dividends",
@@ -49,31 +84,9 @@ export const suggestions = [
     text: "研究境外股息的 FSIE 处理，应当查阅哪些官方资料？",
   },
 ];
-export function makeCase(): Case {
-  return {
-    id: crypto.randomUUID(),
-    title: "",
-    messages: [],
-    facts: { ...emptyFacts },
-  };
-}
 export function caseTitle(current: Case, t: (text: string) => string): string {
   return current.title || t("新对话");
 }
-export function submitText(current: Case, text: string): Case {
-  // No chat endpoint exists yet. Keep the message locally, without fabricating a response.
-  return {
-    ...current,
-    title: current.title || text.slice(0, 28),
-    messages: [...current.messages, { id: crypto.randomUUID(), text }],
-  };
-}
-export const receiptOptions = [
-  "已汇入香港",
-  "尚未汇入香港",
-  "用于抵销或清偿债务",
-  "不确定",
-];
 export const sourceInfo = [
   {
     id: "hk_ird_fsie_landing",

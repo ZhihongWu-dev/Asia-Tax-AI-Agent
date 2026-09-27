@@ -33,6 +33,12 @@ jobs:
           cache-dependency-path: apps/web/package-lock.json
       - name: Install locked dependencies
         run: npm ci
+      - name: Set up Python for API browser tests
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.11'
+      - name: Install test API
+        run: python -m pip install -e '../../.[dev]'
       - name: Type-check and build
         run: npm run build
       - name: Install test browser

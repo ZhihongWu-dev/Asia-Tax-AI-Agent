@@ -1,19 +1,12 @@
-import { useState } from "react";
-import {
-  BookOpen,
-  Check,
-  CircleHelp,
-  ExternalLink,
-  FileText,
-  X,
-} from "lucide-react";
+import FactEditor from "./FactEditor";
+import type { FactPatch } from "../api";
+import { isRetryable } from "../api";
+import { BookOpen, CircleHelp, ExternalLink, FileText, X } from "lucide-react";
 import {
   coverageCutoff,
-  factLabels,
-  receiptOptions,
   sourceInfo,
   type Case,
-  type Facts,
+  type FieldSpec,
   type Panel,
 } from "../workspace";
 import { useLocale } from "../locale";
@@ -25,16 +18,25 @@ export default function DetailsPanel({
   onClose,
   onSave,
   onSelectSource,
+  fields,
+  busy,
+  onConfirm,
+  error,
+  onRetry,
 }: {
   panel: Exclude<Panel, null>;
   current: Case;
   selectedSource: string;
   onClose: () => void;
-  onSave: (facts: Facts) => void;
+  onSave: (facts: FactPatch) => void;
+  fields: FieldSpec[];
+  busy: boolean;
+  onConfirm: () => void;
+  error: string;
+  onRetry: () => void;
   onSelectSource: (id: string) => void;
 }) {
   const { t } = useLocale();
-  const [draft, setDraft] = useState({ ...current.facts });
   const title =
     panel === "facts"
       ? t("案例信息")
@@ -65,60 +67,23 @@ export default function DetailsPanel({
         </button>
       </header>
       <div className="panel-body">
+        {error && (
+          <div className="request-error" role="alert">
+            {t(`error:${error}`)}{" "}
+            {isRetryable(error) && (
+              <button onClick={onRetry}>{t("重试")}</button>
+            )}
+          </div>
+        )}
         {panel === "facts" && (
-          <>
-            <p className="panel-description">
-              {t("记录已知事实，未知项可以留空。")}
-            </p>
-            <form
-              className="facts-form"
-              onSubmit={(e) => {
-                e.preventDefault();
-                onSave(
-                  Object.fromEntries(
-                    Object.entries(draft).map(([k, v]) => [k, v.trim()]),
-                  ) as Facts,
-                );
-              }}
-            >
-              {(Object.keys(factLabels) as (keyof Facts)[]).map((key) => (
-                <label key={key}>
-                  {t(factLabels[key])}
-                  {key === "receipt" ? (
-                    <select
-                      value={draft[key]}
-                      onChange={(e) =>
-                        setDraft({ ...draft, [key]: e.target.value })
-                      }
-                    >
-                      <option value="">{t("待补充")}</option>
-                      {receiptOptions.map((o) => (
-                        <option key={o} value={o}>
-                          {t(o)}
-                        </option>
-                      ))}
-                    </select>
-                  ) : (
-                    <input
-                      value={draft[key]}
-                      maxLength={120}
-                      placeholder={t("待补充")}
-                      onChange={(e) =>
-                        setDraft({ ...draft, [key]: e.target.value })
-                      }
-                    />
-                  )}
-                </label>
-              ))}
-              <p className="panel-note">
-                {t("仅保存在当前页面，刷新后清空。")}
-              </p>
-              <button className="primary-button save-facts" type="submit">
-                <Check size={15} />
-                {t("保存事实")}
-              </button>
-            </form>
-          </>
+          <FactEditor
+            key={`${current.id}-${current.revision}`}
+            current={current}
+            fields={fields}
+            busy={busy}
+            onSave={onSave}
+            onConfirm={onConfirm}
+          />
         )}
         {panel === "sources" && (
           <>
@@ -180,13 +145,17 @@ export default function DetailsPanel({
             <p>{t("税务研究与专业复核的工作空间。")}</p>
             <details open>
               <summary>{t("当前服务状态")}</summary>
-              <p>{t("网页尚未接入分析服务，不会生成税务结论。")}</p>
+              <p>
+                {t(
+                  "确认事实后运行研究规则。模型连接失败时可重试，不生成替代答案。",
+                )}
+              </p>
             </details>
             <details>
               <summary>{t("数据与使用范围")}</summary>
               <p>
                 {t(
-                  "对话和事实仅在页面内存中保存，刷新后清空。当前仅用于内部研究，请勿输入真实客户或个人资料。",
+                  "对话和事实保存在后端，可刷新恢复。当前仅用于内部研究，请勿输入真实客户或个人资料。",
                 )}
               </p>
             </details>

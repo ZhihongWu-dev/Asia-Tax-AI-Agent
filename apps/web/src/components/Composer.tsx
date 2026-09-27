@@ -6,17 +6,18 @@ export default function Composer({
   text,
   onChange,
   onSend,
+  busy = false,
 }: {
   text: string;
   onChange: (text: string) => void;
   onSend: (text: string) => void;
+  busy?: boolean;
 }) {
   const { t } = useLocale();
   const composing = useRef(false);
   function send() {
-    if (!text.trim() || text.length > 4000) return;
+    if (busy || !text.trim() || text.length > 4000) return;
     onSend(text.trim());
-    onChange("");
   }
   return (
     <form
@@ -60,7 +61,7 @@ export default function Composer({
           type="submit"
           className="send-button"
           aria-label={t("发送消息")}
-          disabled={!text.trim()}
+          disabled={busy || !text.trim()}
         >
           <ArrowUp size={19} />
         </button>

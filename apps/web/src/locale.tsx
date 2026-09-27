@@ -6,11 +6,13 @@ import {
   type ReactNode,
 } from "react";
 import { en } from "./locales/en";
+import { workflow, liveEn } from "./locales/workflow";
 
 export type Locale = "zh" | "en";
 export const languagePreferenceKey = "asiatax.language";
 export function translate(text: string, locale: Locale): string {
-  return locale === "en" ? (en[text] ?? text) : text;
+  if (workflow[text]) return workflow[text][locale === "en" ? 1 : 0];
+  return locale === "en" ? (liveEn[text] ?? en[text] ?? text) : text;
 }
 const LocaleContext = createContext({
   locale: "zh" as Locale,

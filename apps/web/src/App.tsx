@@ -6,15 +6,9 @@ import {
   PanelRightClose,
   PanelRightOpen,
 } from "lucide-react";
-import {
-  makeCase,
-  caseTitle,
-  sourceInfo,
-  submitText,
-  type Case,
-  type Facts,
-  type Panel,
-} from "./workspace";
+import { caseTitle, sourceInfo, type Panel } from "./workspace";
+import { useWorkspace } from "./hooks/useWorkspace";
+import { isRetryable } from "./api";
 import { useLocale } from "./locale";
 import { useOverlayFocus } from "./hooks/useOverlayFocus";
 import Composer from "./components/Composer";
@@ -25,10 +19,24 @@ import Welcome, { SuggestedQuestions } from "./components/Welcome";
 
 export default function App() {
   const { t, locale, setLocale } = useLocale();
-  const [cases, setCases] = useState<Case[]>(() => [makeCase()]);
-  const [activeId, setActiveId] = useState("");
-  const current = cases.find((c) => c.id === activeId) || cases[0];
-  const [drafts, setDrafts] = useState<Record<string, string>>({});
+  const {
+    cases,
+    current,
+    fields,
+    busy,
+    error,
+    setActiveId,
+    drafts,
+    changeDraft,
+    send,
+    save,
+    confirmAndAnalyze,
+    analyze,
+    newCase: createCase,
+    retry,
+  } = useWorkspace();
+  const [showConsent, setShowConsent] = useState(false);
+  const [consent, setConsent] = useState(false);
   const [panel, setPanel] = useState<Panel>(null);
   const [source, setSource] = useState(sourceInfo[0].id);
   const [mobileNav, setMobileNav] = useState(false);
@@ -37,7 +45,7 @@ export default function App() {
   );
   const panelRef = useRef<HTMLDivElement>(null),
     navRef = useRef<HTMLDivElement>(null);
-  const empty = current.messages.length === 0;
+  const empty = !current || current.messages.length === 0;
   useEffect(() => {
     const media = window.matchMedia("(max-width: 1100px)");
     const update = () => {
@@ -49,28 +57,36 @@ export default function App() {
   }, []);
   useOverlayFocus(panelRef, Boolean(panel), narrow, () => setPanel(null));
   useOverlayFocus(navRef, mobileNav, true, () => setMobileNav(false));
-  function updateCase(updater: (c: Case) => Case) {
-    setCases((all) => all.map((c) => (c.id === current.id ? updater(c) : c)));
-  }
   function openPanel(next: Panel) {
     setMobileNav(false);
     setPanel(next);
   }
   function newCase() {
-    const next = makeCase();
-    setCases((all) => [next, ...all]);
-    setActiveId(next.id);
     setPanel(null);
     setMobileNav(false);
+    void createCase();
   }
-  function saveFacts(facts: Facts) {
-    updateCase((c) => ({ ...c, facts }));
-    setPanel(null);
-  }
-  function changeDraft(text: string) {
-    setDrafts((all) => ({ ...all, [current.id]: text }));
+  function sendMessage(text: string) {
+    if (!current.data_approved && !consent) {
+      setShowConsent(true);
+      return;
+    }
+    setShowConsent(false);
+    void send(text, consent);
   }
   const modalOpen = mobileNav || (narrow && Boolean(panel));
+  if (!current)
+    return (
+      <main className="startup">
+        <strong>AsiaTax</strong>
+        <p role="status">{t(error ? `error:${error}` : "正在载入工作空间…")}</p>
+        {error && (
+          <button className="primary-button" onClick={retry}>
+            {t("重试")}
+          </button>
+        )}
+      </main>
+    );
   return (
     <div className={`app-shell ${panel && !narrow ? "with-panel" : ""}`}>
       <div
@@ -151,16 +167,42 @@ export default function App() {
             ) : (
               <Conversation
                 current={current}
+                fields={fields}
+                busy={busy}
+                onAnalyze={analyze}
                 onFacts={() => openPanel("facts")}
               />
             )}
           </div>
           <div className="composer-area">
+            {error && !panel && (
+              <div className="request-error" role="alert">
+                {t(`error:${error}`)}{" "}
+                {isRetryable(error) && (
+                  <button onClick={retry}>{t("重试")}</button>
+                )}
+              </div>
+            )}
+            {showConsent && (
+              <div className="data-consent">
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={consent}
+                    onChange={(e) => setConsent(e.target.checked)}
+                  />
+                  {t("本次仅提交合成研究资料，不含真实客户或个人信息。")}
+                </label>
+                <p>{t("输入将发送至配置的模型服务。确认后请再次发送。")}</p>
+              </div>
+            )}
+
             <Composer
               key={current.id}
               text={drafts[current.id] || ""}
               onChange={changeDraft}
-              onSend={(text) => updateCase((c) => submitText(c, text))}
+              busy={busy}
+              onSend={sendMessage}
             />
             {empty && (
               <SuggestedQuestions
@@ -202,7 +244,14 @@ export default function App() {
             current={current}
             selectedSource={source}
             onClose={() => setPanel(null)}
-            onSave={saveFacts}
+            fields={fields}
+            busy={busy}
+            onConfirm={async () => {
+              if (await confirmAndAnalyze()) setPanel(null);
+            }}
+            error={error}
+            onRetry={retry}
+            onSave={save}
             onSelectSource={setSource}
           />
         </div>
