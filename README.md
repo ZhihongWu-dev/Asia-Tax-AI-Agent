@@ -35,7 +35,7 @@
 
 主分支已包含 L0 后端研究原型。Web 演示及其分析 API 仍在 `demo/hk-web` 分支，尚未整体合并。开发命令见 `Makefile`；其中虚拟环境路径及 Shell 命令按 Linux / WSL 编写。
 
-本开发分支新增 [税务聊天工作台](apps/web/README.md)，未合并旧 demo。简洁中英文界面现已连接案件、消息、事实确认和规则分析 API，支持刷新恢复。模型需要配置密钥；当前本机尚未完成真实 DeepSeek 调用验证。实现范围与缺口见 [网页研究链路记录](docs/project/LIVE_CHAT_SLICE.md)。
+本开发分支新增 [税务聊天工作台](apps/web/README.md)，未合并旧 demo。简洁中英文界面现已连接案件、消息、事实确认和规则分析 API，支持刷新恢复。本机已通过两轮合成案例的真实 DeepSeek 调用、事实确认和规则结果保存验证；法规原文库仍未连接。其他环境需要自行配置模型密钥。实现范围与缺口见 [网页研究链路记录](docs/project/LIVE_CHAT_SLICE.md)。
 
 ```sh
 cd apps/web
