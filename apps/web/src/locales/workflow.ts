@@ -1,4 +1,6 @@
 export const workflow: Record<string, [string, string]> = {
+  "正在思考…": ["正在思考…", "Thinking…"],
+  "发送未完成，可重试": ["发送未完成，可重试", "Not completed. You can retry."],
   部分条文未检索到: [
     "部分条文未检索到",
     "Some legal references could not be retrieved",

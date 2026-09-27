@@ -1,5 +1,93 @@
 import { test, expect, type Page } from "@playwright/test";
 
+test("a failed pending send preserves the next draft and retries without duplication", async ({
+  page,
+}) => {
+  await english(page);
+  let release!: () => void;
+  const gate = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  let first = true;
+  await page.route("**/api/cases/*/messages", async (route) => {
+    if (!first) return route.continue();
+    first = false;
+    await gate;
+    await route.fulfill({
+      status: 503,
+      contentType: "application/json",
+      body: JSON.stringify({ detail: "model_failed" }),
+    });
+  });
+  try {
+    await send(page, "Original submitted question");
+    const input = page.getByRole("textbox", {
+      name: "Enter your tax question",
+    });
+    await expect(input).toHaveValue("");
+    await input.fill("A different next draft");
+    release();
+    await expect(page.getByRole("alert")).toBeVisible();
+    await expect(page.locator(".delivery-failed")).toBeVisible();
+    await expect(page.locator(".message.user")).toContainText(
+      "Original submitted question",
+    );
+    await expect(page.locator(".assistant-pending")).toHaveCount(0);
+    await expect(input).toHaveValue("A different next draft");
+    await page.getByRole("button", { name: "Retry", exact: true }).click();
+    await expect(page.locator(".message.assistant")).toHaveCount(1);
+    await expect(page.locator(".message.user")).toHaveCount(1);
+    await expect(page.locator(".delivery-failed")).toHaveCount(0);
+    await expect(input).toHaveValue("A different next draft");
+  } finally {
+    release();
+  }
+});
+
+test("send immediately shows the question and thinking dots, preserving a new draft", async ({
+  page,
+}) => {
+  await english(page);
+  let release!: () => void;
+  const gate = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  await page.route("**/api/cases/*/messages", async (route) => {
+    await gate;
+    await route.continue();
+  });
+  try {
+    await send(page, "Waiting for a synthetic reply");
+    await expect(page.locator(".message.user")).toHaveText(
+      "Waiting for a synthetic reply",
+    );
+    const input = page.getByRole("textbox", {
+      name: "Enter your tax question",
+    });
+    await expect(input).toHaveValue("");
+    await expect(page.getByRole("status", { name: "Thinking…" })).toBeVisible();
+    await expect(page.locator(".thinking-dots i")).toHaveCount(3);
+    await expect(page.locator(".thinking-dots i").first()).toHaveCSS(
+      "animation-name",
+      "thinking-pulse",
+    );
+    await page.screenshot({
+      path: "test-results/pending-reply.png",
+      fullPage: true,
+    });
+    await input.fill("My next draft");
+    release();
+    await expect(page.locator(".assistant-pending")).toHaveCount(0);
+    await expect(page.locator(".message.assistant")).toHaveCount(1);
+    await expect(page.locator(".message.user")).toHaveCount(1);
+    await expect(input).toHaveValue("My next draft");
+    await page.reload();
+    await expect(page.locator(".message.user")).toHaveCount(1);
+  } finally {
+    release();
+  }
+});
+
 test("natural conversation is rendered and restored without a research error", async ({
   page,
 }) => {
@@ -187,6 +275,7 @@ test("failed model keeps input and retry creates one exchange", async ({
     page.getByRole("textbox", { name: "Enter your tax question" }),
   ).toHaveValue("RETRY_TEST");
   await page.getByRole("button", { name: "Retry", exact: true }).click();
+  await expect(page.locator(".message.assistant")).toHaveCount(1);
   await expect(page.locator(".message.user")).toHaveCount(1);
   await expect(page.getByRole("alert")).toHaveCount(0);
   await expect(
@@ -222,7 +311,7 @@ test("case and draft isolation, language changes preserve original text", async 
 }) => {
   await english(page);
   await send(page, "Alpha");
-  await expect(page.locator(".message.user")).toHaveCount(1);
+  await expect(page.locator(".message.assistant")).toHaveCount(1);
   await page
     .getByRole("textbox", { name: "Enter your tax question" })
     .fill("原始草稿");

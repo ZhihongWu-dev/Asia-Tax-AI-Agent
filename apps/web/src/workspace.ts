@@ -16,6 +16,7 @@ export type FieldSpec = {
   enum_values?: string[];
 };
 export type Message = {
+  delivery?: "sending" | "failed";
   id: string;
   role: "user" | "assistant";
   text?: string;

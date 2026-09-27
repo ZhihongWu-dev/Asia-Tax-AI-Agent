@@ -183,7 +183,14 @@ export default function Conversation({
           className={`message ${message.role}`}
         >
           {message.role === "user" ? (
-            <p>{message.text}</p>
+            <div className="user-message-content">
+              <p>{message.text}</p>
+              {message.delivery === "failed" && (
+                <small className="delivery-failed">
+                  {t("发送未完成，可重试")}
+                </small>
+              )}
+            </div>
           ) : message.kind === "chat" ? (
             <p className="chat-reply">{message.text}</p>
           ) : message.kind === "research" && message.research ? (
@@ -236,6 +243,21 @@ export default function Conversation({
           )}
         </div>
       ))}
+      {busy && (
+        <div
+          className="assistant-pending"
+          role="status"
+          aria-live="polite"
+          aria-label={t("正在思考…")}
+        >
+          <span className="thinking-dots" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+          </span>
+          <span>{t("正在思考…")}</span>
+        </div>
+      )}
       {Object.keys(current.facts).length > 0 && (
         <div className="conversation-actions">
           <button className="text-button" onClick={onFacts}>
@@ -252,11 +274,6 @@ export default function Conversation({
             </button>
           )}
         </div>
-      )}
-      {busy && (
-        <p className="working-status" role="status">
-          {t("正在处理，请稍候…")}
-        </p>
       )}
       <div ref={bottom} />
     </section>

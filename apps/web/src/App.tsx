@@ -24,6 +24,7 @@ export default function App() {
     current,
     fields,
     busy,
+    currentBusy,
     error,
     setActiveId,
     drafts,
@@ -168,7 +169,7 @@ export default function App() {
               <Conversation
                 current={current}
                 fields={fields}
-                busy={busy}
+                busy={currentBusy}
                 onAnalyze={analyze}
                 onFacts={() => openPanel("facts")}
               />
