@@ -1,4 +1,5 @@
 import manifest from "../../../knowledge/hong_kong/fsie/source_manifest.json";
+import { translate } from "./locale";
 
 export type Facts = {
   entity: string;
@@ -17,6 +18,8 @@ export type Case = {
   facts: Facts;
   stage: "empty" | "facts" | "receipt" | "review";
   confirmed: boolean;
+  presetType?: string;
+  presetFacts?: Facts;
 };
 export type Panel = "facts" | "sources" | "about" | null;
 
@@ -95,7 +98,9 @@ export function message(role: Message["role"], text: string): Message {
   return { id: crypto.randomUUID(), role, text };
 }
 export function submitText(current: Case, text: string): Case {
-  const preset = presets.find((p) => p.text === text);
+  const preset = presets.find(
+    (p) => p.text === text || translate(p.text, "en") === text,
+  );
   const first = current.stage === "empty";
   const reply = first
     ? preset
@@ -110,6 +115,8 @@ export function submitText(current: Case, text: string): Case {
         : text.slice(0, 22)
       : current.title,
     facts: preset && first ? { ...preset.facts } : current.facts,
+    presetType: first ? preset?.type : current.presetType,
+    presetFacts: first ? preset?.facts : current.presetFacts,
     messages: [
       ...current.messages,
       message("user", text),
@@ -155,3 +162,27 @@ export const sourceInfo = [
 });
 
 export const coverageCutoff = manifest.legal_coverage_cutoff;
+
+export function caseTitle(current: Case, t: (text: string) => string): string {
+  const preset = presets.find((p) => p.type === current.presetType);
+  if (preset) return t(preset.title) + t(" · 香港");
+  return current.title === "新案例" && !current.messages.length
+    ? t("新案例")
+    : current.title;
+}
+
+export function factValue(
+  current: Case,
+  key: keyof Facts,
+  t: (text: string) => string,
+): string {
+  const value = current.facts[key];
+  // Only UI-controlled or unchanged fixture values are translated.
+  if (
+    key === "jurisdiction" ||
+    key === "receipt" ||
+    current.presetFacts?.[key] === value
+  )
+    return t(value);
+  return value;
+}

@@ -170,3 +170,107 @@ test("mobile navigation and source dialog trap focus without horizontal overflow
     fullPage: true,
   });
 });
+
+test("English flow includes facts, source panels and saved language preference", async ({
+  page,
+}) => {
+  await page.getByRole("button", { name: "Switch to English" }).click();
+  await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "Start with a conversation.",
+  );
+  await page
+    .getByRole("button", {
+      name: "Foreign dividends Clarify the nature of the income",
+    })
+    .click();
+  await page.getByRole("button", { name: "Send message", exact: true }).click();
+  await expect(
+    page.getByText("Hong Kong company (fictional)", { exact: true }),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Confirm and continue" }).click();
+  await page.getByRole("button", { name: "Not sure", exact: true }).click();
+  await expect(
+    page.getByRole("heading", { name: "Your research starting point" }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "2 Inland Revenue Ordinance, Cap. 112" })
+    .click();
+  await expect(
+    page.getByRole("link", { name: "Read on the official website" }),
+  ).toBeVisible();
+  // The language switch intentionally keeps the destination label “中文”.
+  expect((await page.locator("body").innerText()).replace('中文', '')).not.toMatch(/[\u3400-\u9fff]/);
+  await page.screenshot({
+    path: "test-results/conversation-english.png",
+    fullPage: true,
+  });
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  expect(await page.evaluate(() => Object.keys(localStorage))).toEqual([
+    "asiatax.language",
+  ]);
+});
+
+test("switching language preserves user messages, drafts, case state and edited facts", async ({
+  page,
+}) => {
+  const original = "虚构公司的自由描述 original text";
+  await page
+    .getByRole("textbox", { name: "描述你的虚构税务案例" })
+    .fill(original);
+  await page.getByRole("button", { name: "Switch to English" }).click();
+  await expect(
+    page.getByRole("textbox", { name: "Describe your fictional tax case" }),
+  ).toHaveValue(original);
+  await page.getByRole("button", { name: "Send message", exact: true }).click();
+  await expect(page.locator(".message.user")).toHaveText(original);
+  await page.getByRole("button", { name: "Edit facts", exact: true }).click();
+  await page.getByLabel("Taxpayer").fill("虚构公司 Custom Ltd");
+  await page.getByLabel("Income type").fill("Custom income");
+  await page.getByRole("button", { name: "切换为中文" }).click();
+  await expect(page.getByLabel("纳税主体")).toHaveValue("虚构公司 Custom Ltd");
+  await page.getByRole("button", { name: "保存事实" }).click();
+  await page.getByRole("button", { name: "确认并继续" }).click();
+  await page.getByRole("button", { name: "已汇入香港", exact: true }).click();
+  await page.getByRole("button", { name: "Switch to English" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Your research starting point" }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("虚构公司 Custom Ltd", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("You selected “Remitted to Hong Kong”.", { exact: false }),
+  ).toBeVisible();
+});
+
+test("English mobile layout and source navigation fit the viewport", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.getByRole("button", { name: "Switch to English" }).click();
+  await expect(page.getByRole("button", { name: "切换为中文" })).toBeVisible();
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page.screenshot({
+    path: "test-results/welcome-english-mobile.png",
+    fullPage: true,
+  });
+  await page.getByRole("button", { name: "Sources", exact: true }).click();
+  await expect(
+    page.getByRole("dialog", { name: "Research details" }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "Close details", exact: true })
+    .click();
+  await page.getByRole("button", { name: "Open case navigation" }).click();
+  await page.getByRole("button", { name: "How to use" }).click();
+  await expect(
+    page.getByRole("heading", { name: "About this workspace" }),
+  ).toBeVisible();
+});

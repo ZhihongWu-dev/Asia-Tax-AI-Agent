@@ -1,3 +1,4 @@
+import { useLocale } from "../locale";
 import { useRef, useState } from "react";
 import { ArrowUp, CornerDownLeft, ShieldCheck } from "lucide-react";
 
@@ -10,6 +11,7 @@ export default function Composer({
   starter: string;
   onClearStarter: () => void;
 }) {
+  const { t } = useLocale();
   const [value, setValue] = useState("");
   const composing = useRef(false);
   const text = starter || value;
@@ -29,8 +31,8 @@ export default function Composer({
         }}
       >
         <textarea
-          aria-label="描述你的虚构税务案例"
-          placeholder="描述你的虚构税务案例，我们一起梳理…"
+          aria-label={t("描述你的虚构税务案例")}
+          placeholder={t("描述你的虚构税务案例，我们一起梳理…")}
           value={text}
           rows={2}
           maxLength={4000}
@@ -60,16 +62,17 @@ export default function Composer({
         <div className="composer-bottom">
           <span className="composer-mode">
             <ShieldCheck size={15} />
-            仅限虚构案例
+            {t("仅限虚构案例")}
           </span>
           <div className="send-actions">
             <span className="key-hint">
-              Enter 发送 <CornerDownLeft size={12} />
+              {t("Enter 发送")}
+              <CornerDownLeft size={12} />
             </span>
             <button
               type="submit"
               className="send-button"
-              aria-label="发送消息"
+              aria-label={t("发送消息")}
               disabled={!text.trim()}
             >
               <ArrowUp size={19} />
@@ -78,7 +81,7 @@ export default function Composer({
         </div>
       </form>
       <div className="composer-footnote">
-        交互预览 · 未连接 AI 分析服务 · 对话仅保留至刷新页面
+        {t("交互预览 · 未连接 AI 分析服务 · 对话仅保留至刷新页面")}
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import { useLocale } from "./locale";
 import { useEffect, useRef, useState, type RefObject } from "react";
 import {
   BookOpen,
@@ -11,6 +12,8 @@ import {
 } from "lucide-react";
 import {
   makeCase,
+  caseTitle,
+  factValue,
   message,
   sourceInfo,
   submitText,
@@ -69,6 +72,7 @@ function useOverlayFocus(
 }
 
 export default function App() {
+  const { t, locale, setLocale } = useLocale();
   const [cases, setCases] = useState<Case[]>(() => [makeCase()]);
   const [activeId, setActiveId] = useState("");
   const current = cases.find((c) => c.id === activeId) || cases[0];
@@ -131,7 +135,10 @@ export default function App() {
       ...c,
       facts: { ...c.facts, receipt: value },
       stage: "review",
-      messages: [...c.messages, message("user", `收取情况：${value}`)],
+      messages: [
+        ...c.messages,
+        message("user", `${t("收取情况")}: ${t(value)}`),
+      ],
     }));
   }
   const modalOpen = mobileNav || (narrow && Boolean(panel));
@@ -142,7 +149,7 @@ export default function App() {
         className={`sidebar-slot ${mobileNav ? "is-open" : ""}`}
         role={mobileNav ? "dialog" : undefined}
         aria-modal={mobileNav || undefined}
-        aria-label={mobileNav ? "案例导航" : undefined}
+        aria-label={mobileNav ? t("案例导航") : undefined}
         inert={narrow && !mobileNav ? true : undefined}
       >
         <Sidebar
@@ -164,7 +171,7 @@ export default function App() {
           <div className="breadcrumb">
             <button
               className="icon-button mobile-menu"
-              aria-label="打开案例导航"
+              aria-label={t("打开案例导航")}
               onClick={() => {
                 setPanel(null);
                 setMobileNav(true);
@@ -172,18 +179,26 @@ export default function App() {
             >
               <Menu size={20} />
             </button>
-            <span className="breadcrumb-root">研究空间</span>
+            <span className="breadcrumb-root">{t("研究空间")}</span>
             <ChevronRight size={13} />
-            <strong>{current.title}</strong>
+            <strong>{caseTitle(current, t)}</strong>
           </div>
           <div className="topbar-actions">
+            <button
+              className="language-toggle"
+              aria-label={locale === "zh" ? "Switch to English" : "切换为中文"}
+              onClick={() => setLocale(locale === "zh" ? "en" : "zh")}
+            >
+              <Globe2 size={14} />
+              <span>{locale === "zh" ? "EN" : "中文"}</span>
+            </button>
             <span className="preview-badge">
               <span />
-              交互预览
+              {t("交互预览")}
             </span>
             <button
               className="icon-button"
-              aria-label={panel ? "收起案例信息" : "打开案例信息"}
+              aria-label={panel ? t("收起案例信息") : t("打开案例信息")}
               aria-expanded={panel === "facts"}
               onClick={() => setPanel(panel ? null : "facts")}
             >
@@ -199,14 +214,14 @@ export default function App() {
           <div>
             <span className="context-region">
               <Globe2 size={14} />
-              中国香港
+              {t("中国香港")}
             </span>
             <span className="context-divider" />
-            <span>FSIE 境外收入研究</span>
+            <span>{t("FSIE 境外收入研究")}</span>
           </div>
           <button onClick={() => openPanel("sources")}>
             <BookOpen size={14} />
-            <span>法规资料</span>
+            <span>{t("法规资料")}</span>
             <ChevronRight size={12} />
           </button>
         </div>
@@ -240,10 +255,10 @@ export default function App() {
             <div className="case-context">
               <span>
                 <FileText size={13} />
-                {current.facts.income || "收入类型待确认"}
+                {factValue(current, "income", t) || t("收入类型待确认")}
               </span>
               <button onClick={() => openPanel("facts")}>
-                查看案例信息
+                {t("查看案例信息")}
                 <ChevronRight size={12} />
               </button>
             </div>
@@ -258,7 +273,7 @@ export default function App() {
         <footer className="workspace-footer">
           <span>
             <ShieldCheck size={12} />
-            研究辅助，不构成正式税务意见
+            {t("研究辅助，不构成正式税务意见")}
           </span>
           <span>ASIATAX / L0</span>
         </footer>
@@ -279,7 +294,7 @@ export default function App() {
           ref={panelRef}
           role={narrow ? "dialog" : undefined}
           aria-modal={narrow || undefined}
-          aria-label={narrow ? "研究详情" : undefined}
+          aria-label={narrow ? t("研究详情") : undefined}
         >
           <DetailsPanel
             key={`${current.id}-${panel}`}

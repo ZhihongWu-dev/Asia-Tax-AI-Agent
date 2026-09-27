@@ -350,6 +350,39 @@ button svg {
   gap: 17px;
   flex-shrink: 0;
 }
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 30px;
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: white;
+  color: #4d6c60;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.language-toggle:hover {
+  background: #edf4ee;
+  border-color: #a4bfae;
+}
+html[lang="en"] .welcome h1 span {
+  display: block;
+}
+html[lang="en"] .starter-card > span:last-child {
+  line-height: 1.6;
+}
+html[lang="en"] .fact-actions {
+  flex-wrap: wrap;
+}
+html[lang="en"] .source-selector button > div {
+  min-width: 0;
+}
+html[lang="en"] .source-chips button {
+  text-align: left;
+  line-height: 1.6;
+}
 .preview-badge {
   display: flex;
   align-items: center;

@@ -1,3 +1,4 @@
+import { useLocale } from "../locale";
 import { useState } from "react";
 import {
   BookOpen,
@@ -14,6 +15,7 @@ import {
 import {
   coverageCutoff,
   factLabels,
+  factValue,
   receiptOptions,
   sourceInfo,
   type Case,
@@ -36,13 +38,15 @@ export default function DetailsPanel({
   onSave: (facts: Facts) => void;
   onSelectSource: (id: string) => void;
 }) {
+  const { t } = useLocale();
   const [draft, setDraft] = useState({ ...current.facts });
+  const [edited, setEdited] = useState<Set<keyof Facts>>(() => new Set());
   const title =
     panel === "facts"
-      ? "案例信息"
+      ? t("案例信息")
       : panel === "sources"
-        ? "法规与来源"
-        : "关于这个研究空间";
+        ? t("法规与来源")
+        : t("关于这个研究空间");
   const selected =
     sourceInfo.find((s) => s.id === selectedSource) || sourceInfo[0];
   return (
@@ -58,7 +62,11 @@ export default function DetailsPanel({
           )}
           <h2 id="panel-title">{title}</h2>
         </div>
-        <button className="icon-button" aria-label="关闭详情" onClick={onClose}>
+        <button
+          className="icon-button"
+          aria-label={t("关闭详情")}
+          onClick={onClose}
+        >
           <X size={18} />
         </button>
       </header>
@@ -66,9 +74,9 @@ export default function DetailsPanel({
         {panel === "facts" && (
           <>
             <div className="panel-overline">CASE DETAILS</div>
-            <h3>每一个判断，从事实开始。</h3>
+            <h3>{t("每一个判断，从事实开始。")}</h3>
             <p className="panel-description">
-              核对并修改这个虚构案例的信息。未确定的字段可以留空。
+              {t("核对并修改这个虚构案例的信息。未确定的字段可以留空。")}
             </p>
             <form
               className="facts-form"
@@ -83,14 +91,14 @@ export default function DetailsPanel({
             >
               {(Object.keys(factLabels) as (keyof Facts)[]).map((key) => (
                 <label key={key}>
-                  {factLabels[key]}
+                  {t(factLabels[key])}
                   {(key === "entity" || key === "income") && (
                     <span className="required"> *</span>
                   )}
                   {key === "jurisdiction" ? (
                     <>
-                      <input value="中国香港" readOnly />
-                      <small>当前研究范围为香港 FSIE</small>
+                      <input value={t("中国香港")} readOnly />
+                      <small>{t("当前研究范围为香港 FSIE")}</small>
                     </>
                   ) : key === "receipt" ? (
                     <select
@@ -99,31 +107,38 @@ export default function DetailsPanel({
                         setDraft({ ...draft, [key]: e.target.value })
                       }
                     >
-                      <option value="">待补充</option>
+                      <option value="">{t("待补充")}</option>
                       {receiptOptions.map((o) => (
-                        <option key={o}>{o}</option>
+                        <option key={o} value={o}>
+                          {t(o)}
+                        </option>
                       ))}
                     </select>
                   ) : (
                     <input
-                      value={draft[key]}
+                      value={
+                        edited.has(key)
+                          ? draft[key]
+                          : factValue({ ...current, facts: draft }, key, t)
+                      }
                       maxLength={120}
                       required={key === "entity" || key === "income"}
-                      placeholder="待补充"
-                      onChange={(e) =>
-                        setDraft({ ...draft, [key]: e.target.value })
-                      }
+                      placeholder={t("待补充")}
+                      onChange={(e) => {
+                        setEdited((fields) => new Set([...fields, key]));
+                        setDraft({ ...draft, [key]: e.target.value });
+                      }}
                     />
                   )}
                 </label>
               ))}
               <div className="panel-notice">
                 <Info size={16} />
-                <span>保存后需要重新确认事实，并重新生成研究清单。</span>
+                <span>{t("保存后需要重新确认事实，并重新生成研究清单。")}</span>
               </div>
               <button className="primary-button save-facts" type="submit">
                 <Check size={16} />
-                保存事实
+                {t("保存事实")}
               </button>
             </form>
           </>
@@ -131,9 +146,11 @@ export default function DetailsPanel({
         {panel === "sources" && (
           <>
             <div className="panel-overline">OFFICIAL SOURCES</div>
-            <h3>回到依据，读懂上下文。</h3>
+            <h3>{t("回到依据，读懂上下文。")}</h3>
             <p className="panel-description">
-              来自项目资料清单的官方来源入口。此预览未执行实时检索，也未核验当前法例版本。
+              {t(
+                "来自项目资料清单的官方来源入口。此预览未执行实时检索，也未核验当前法例版本。",
+              )}
             </p>
             <div className="source-selector">
               {sourceInfo.map((s, i) => (
@@ -145,30 +162,30 @@ export default function DetailsPanel({
                 >
                   <span>{String(i + 1).padStart(2, "0")}</span>
                   <div>
-                    <strong>{s.label}</strong>
-                    <small>{s.tag}</small>
+                    <strong>{t(s.label)}</strong>
+                    <small>{t(s.tag)}</small>
                   </div>
                 </button>
               ))}
             </div>
             <article className="source-detail">
               <Landmark size={23} />
-              <span className="source-type">官方资料</span>
-              <h4>{selected.label}</h4>
+              <span className="source-type">{t("官方资料")}</span>
+              <h4>{t(selected.label)}</h4>
               <p className="source-english">{selected.title}</p>
-              <p>{selected.description}</p>
+              <p>{t(selected.description)}</p>
               <dl>
                 <div>
-                  <dt>资料清单记录日</dt>
-                  <dd>{selected.captured}</dd>
+                  <dt>{t("资料清单记录日")}</dt>
+                  <dd>{t(selected.captured)}</dd>
                 </div>
                 <div>
-                  <dt>知识覆盖截止</dt>
+                  <dt>{t("知识覆盖截止")}</dt>
                   <dd>{coverageCutoff}</dd>
                 </div>
                 <div>
-                  <dt>专业验证状态</dt>
-                  <dd className="amber-text">尚未验证</dd>
+                  <dt>{t("专业验证状态")}</dt>
+                  <dd className="amber-text">{t("尚未验证")}</dd>
                 </div>
               </dl>
               <a
@@ -177,12 +194,14 @@ export default function DetailsPanel({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                在官方网站阅读
+                {t("在官方网站阅读")}
                 <ExternalLink size={14} />
               </a>
             </article>
             <p className="source-footnote">
-              日期来自仓库资料清单，不代表法例的生效日。请按案例所属期间核对适用版本。
+              {t(
+                "日期来自仓库资料清单，不代表法例的生效日。请按案例所属期间核对适用版本。",
+              )}
             </p>
           </>
         )}
@@ -192,47 +211,56 @@ export default function DetailsPanel({
               <ShieldCheck size={32} strokeWidth={1.4} />
             </div>
             <div className="panel-overline">RESEARCH, WITH CONTEXT</div>
-            <h3>专业研究，从清晰开始。</h3>
+            <h3>{t("专业研究，从清晰开始。")}</h3>
             <p className="panel-description">
-              AsiaTax 面向税务研究与顾问复核，当前聚焦中国香港 FSIE。
+              {t("AsiaTax 面向税务研究与顾问复核，当前聚焦中国香港 FSIE。")}
             </p>
             <div className="about-item">
               <Pencil size={18} />
               <div>
-                <strong>这是交互预览</strong>
+                <strong>{t("这是交互预览")}</strong>
                 <p>
-                  回答与清单来自固定示例，尚未接入模型、规则引擎或实时法规检索。
+                  {t(
+                    "回答与清单来自固定示例，尚未接入模型、规则引擎或实时法规检索。",
+                  )}
                 </p>
               </div>
             </div>
             <div className="about-item">
               <ShieldCheck size={18} />
               <div>
-                <strong>只使用虚构案例</strong>
+                <strong>{t("只使用虚构案例")}</strong>
                 <p>
-                  不要输入真实客户或个人资料。对话只在当前页面内存中保存，刷新后清空。
+                  {t(
+                    "不要输入真实客户或个人资料。对话只在当前页面内存中保存，刷新后清空。",
+                  )}
                 </p>
               </div>
             </div>
             <div className="about-item">
               <BookOpen size={18} />
               <div>
-                <strong>保留专业复核</strong>
+                <strong>{t("保留专业复核")}</strong>
                 <p>
-                  页面不提供正式税务意见。所有事实、适用规则和结论均须专业人员核验。
+                  {t(
+                    "页面不提供正式税务意见。所有事实、适用规则和结论均须专业人员核验。",
+                  )}
                 </p>
               </div>
             </div>
             <div className="keyboard-help">
-              <strong>键盘操作</strong>
+              <strong>{t("键盘操作")}</strong>
               <span>
-                发送消息<kbd>Enter</kbd>
+                {t("发送消息")}
+                <kbd>Enter</kbd>
               </span>
               <span>
-                输入换行<kbd>Shift + Enter</kbd>
+                {t("输入换行")}
+                <kbd>Shift + Enter</kbd>
               </span>
               <span>
-                关闭面板<kbd>Esc</kbd>
+                {t("关闭面板")}
+                <kbd>Esc</kbd>
               </span>
             </div>
           </>
