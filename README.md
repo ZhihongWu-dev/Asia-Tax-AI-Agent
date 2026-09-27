@@ -35,7 +35,7 @@
 
 主分支已包含 L0 后端研究原型。Web 演示及其分析 API 仍在 `demo/hk-web` 分支，尚未整体合并。开发命令见 `Makefile`；其中虚拟环境路径及 Shell 命令按 Linux / WSL 编写。
 
-本开发分支新增独立的 [税务聊天工作台](apps/web/README.md)，未合并旧 demo。它提供可操作的前端交互预览（固定示例，尚未接入 AI 分析服务）：
+本开发分支新增独立的 [税务聊天工作台](apps/web/README.md)，未合并旧 demo。界面采用简洁的中英文聊天布局，案例信息和官方来源按需展开；尚未接入 AI 分析服务，不生成固定答案。当前实现与 PRD 的差距见 [闭环核查](docs/reviews/2026-09-27-agent-closure-audit.md)。
 
 ```sh
 cd apps/web

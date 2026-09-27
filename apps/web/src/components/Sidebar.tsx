@@ -1,18 +1,15 @@
-import { useLocale } from "../locale";
 import {
   BookOpen,
-  ChevronRight,
   CircleHelp,
   MessageSquare,
   Plus,
   Scale,
   Search,
-  ShieldCheck,
   X,
 } from "lucide-react";
 import { useState } from "react";
-import type { Case, Panel } from "../demo";
-import { caseTitle } from "../demo";
+import { caseTitle, type Case, type Panel } from "../workspace";
+import { useLocale } from "../locale";
 
 export default function Sidebar({
   cases,
@@ -31,20 +28,16 @@ export default function Sidebar({
 }) {
   const { t } = useLocale();
   const [query, setQuery] = useState("");
-  const visible = cases.filter(
-    (c) =>
-      caseTitle(c, t).toLowerCase().includes(query.toLowerCase()) ||
-      c.title.toLowerCase().includes(query.toLowerCase()),
+  const visible = cases.filter((c) =>
+    caseTitle(c, t).toLowerCase().includes(query.toLowerCase()),
   );
   return (
     <aside className="sidebar" aria-label={t("案例导航")}>
       <div className="brand">
         <span className="brand-mark">
-          <Scale size={24} strokeWidth={1.5} />
+          <Scale size={23} strokeWidth={1.5} />
         </span>
-        <div>
-          AsiaTax<span className="brand-sub">RESEARCH WORKSPACE</span>
-        </div>
+        <span>AsiaTax</span>
         <button
           className="icon-button mobile-close"
           onClick={onClose}
@@ -60,23 +53,19 @@ export default function Sidebar({
           onNew();
         }}
       >
-        <Plus size={18} />
-        {t("新建研究案例")}
-        <span>＋</span>
+        <Plus size={17} />
+        {t("新对话")}
       </button>
       <label className="case-search">
         <Search size={15} />
         <input
-          aria-label={t("搜索案例")}
-          placeholder={t("搜索案例")}
+          aria-label={t("搜索对话")}
+          placeholder={t("搜索对话")}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
       </label>
-      <div className="nav-heading">
-        {t("工作空间")}
-        <span>{cases.length.toString().padStart(2, "0")}</span>
-      </div>
+      <div className="nav-heading">{t("最近对话")}</div>
       <nav className="case-list" aria-label={t("研究案例")}>
         {visible.map((c) => (
           <button
@@ -85,21 +74,11 @@ export default function Sidebar({
             onClick={() => onSelect(c.id)}
             aria-current={activeId === c.id ? "page" : undefined}
           >
-            <MessageSquare size={16} />
-            <span>
-              {caseTitle(c, t)}
-              <small>
-                {c.stage === "empty"
-                  ? t("等待开始")
-                  : c.stage === "review"
-                    ? t("研究清单 · 示例")
-                    : t("待补充事实")}
-              </small>
-            </span>
-            {activeId === c.id && <span className="active-dot" />}
+            <MessageSquare size={15} />
+            <span>{caseTitle(c, t)}</span>
           </button>
         ))}
-        {visible.length === 0 && (
+        {!visible.length && (
           <p className="no-results">{t("没有找到匹配的案例")}</p>
         )}
       </nav>
@@ -107,28 +86,11 @@ export default function Sidebar({
         <button className="side-link" onClick={() => onPanel("sources")}>
           <BookOpen size={17} />
           {t("法规资料库")}
-          <ChevronRight size={14} />
         </button>
         <button className="side-link" onClick={() => onPanel("about")}>
           <CircleHelp size={17} />
-          {t("使用说明")}
-          <ChevronRight size={14} />
+          {t("关于 AsiaTax")}
         </button>
-        <div className="research-note">
-          <ShieldCheck size={17} />
-          <div>
-            {t("让每一步研究，有据可循")}
-            <p>{t("L0 内部研究 · 香港 FSIE")}</p>
-          </div>
-        </div>
-        <div className="workspace-user">
-          <span className="user-avatar">{t("研")}</span>
-          <div>
-            {t("个人研究空间")}
-            <small>{t("本次会话 · 内存保存")}</small>
-          </div>
-          <span className="workspace-badge">L0</span>
-        </div>
       </div>
     </aside>
   );

@@ -1,174 +1,96 @@
 // Chinese source strings are stable keys; user-authored text is never translated.
 export const en: Record<string, string> = {
-  新案例: "New case",
-  案例导航: "Case navigation",
-  关闭案例导航: "Close case navigation",
-  打开案例导航: "Open case navigation",
-  新建研究案例: "New research case",
-  搜索案例: "Search cases",
-  工作空间: "WORKSPACE",
+  新对话: "New chat",
+  案例导航: "Chat navigation",
+  关闭案例导航: "Close chat navigation",
+  打开案例导航: "Open chat navigation",
+  搜索对话: "Search chats",
+  最近对话: "Recent chats",
   研究案例: "Research cases",
-  等待开始: "Ready to start",
-  "研究清单 · 示例": "Research checklist · Demo",
-  待补充事实: "More facts needed",
-  没有找到匹配的案例: "No matching cases",
+  没有找到匹配的案例: "No matching chats",
   法规资料库: "Source library",
-  使用说明: "How to use",
-  "让每一步研究，有据可循": "Research grounded in sources",
-  "L0 内部研究 · 香港 FSIE": "L0 research · Hong Kong FSIE",
-  研: "R",
-  个人研究空间: "Personal workspace",
-  "本次会话 · 内存保存": "This session · In memory",
-  研究空间: "Workspace",
-  交互预览: "Interactive preview",
+  "关于 AsiaTax": "About AsiaTax",
+  税务助手: "Tax assistant",
   收起案例信息: "Close case details",
   打开案例信息: "Open case details",
-  中国香港: "Hong Kong SAR",
-  "FSIE 境外收入研究": "FSIE income research",
   法规资料: "Sources",
-  收入类型待确认: "Income type unconfirmed",
-  查看案例信息: "View case details",
-  "研究辅助，不构成正式税务意见": "Research support, not formal tax advice",
+  案例信息: "Case details",
   研究详情: "Research details",
-  "复杂税务，": "Complex tax questions.",
-  "从一次对话开始。": "Start with a conversation.",
-  "一起梳理案例事实，找到法规依据，明确下一步。":
-    "Clarify the facts, explore official sources, and find your next step.",
-  "让你的每一个税务问题，都有清晰的研究起点。":
-    "A clear starting point for every tax research question.",
-  结构化事实: "Structured facts",
-  官方资料索引: "Official sources",
-  人工复核提示: "Human review",
-  从一个虚构案例开始: "Start with a fictional case",
-  "香港 FSIE": "HONG KONG FSIE",
+  "专业判断，请由税务顾问复核。":
+    "Professional judgments require adviser review.",
+  "让税务问题，更清晰。": "Clarity for your tax questions.",
+  "梳理事实，查阅依据，从一次对话开始。":
+    "Explore the facts and sources. Start a conversation.",
+  快捷问题: "Quick questions",
   境外股息: "Foreign dividends",
-  从收入性质开始梳理: "Clarify the nature of the income",
-  境外利息: "Foreign interest",
-  整理资金与收取情况: "Explore the flow of funds",
-  处置收益: "Disposal gains",
-  境外处置收益: "Foreign disposal gains",
-  明确交易与资料缺口: "Identify transactions and gaps",
-  "香港公司（虚构）": "Hong Kong company (fictional)",
-  "选择一个示例，或在下方描述你的虚构案例":
-    "Choose an example, or describe your fictional case below",
-  描述你的虚构税务案例: "Describe your fictional tax case",
-  "描述你的虚构税务案例，我们一起梳理…":
-    "Describe a fictional tax case. Let’s work through it…",
-  仅限虚构案例: "Fictional cases only",
+  梳理事实: "Organize facts",
+  查阅依据: "Explore sources",
+  "分析境外股息的 FSIE 处理，需要先确认哪些事实？":
+    "Which facts should we confirm before analyzing foreign dividends under FSIE?",
+  "帮我整理境外股息分析所需的案例事实和证据清单。":
+    "Help me organize the facts and evidence needed to analyze foreign dividends.",
+  "研究境外股息的 FSIE 处理，应当查阅哪些官方资料？":
+    "Which official sources should we consult when researching foreign dividends under FSIE?",
+  输入你的税务问题: "Enter your tax question",
+  "有什么税务问题？": "What is your tax question?",
   "Enter 发送": "Enter to send",
+  换行: "New line",
   发送消息: "Send message",
-  "交互预览 · 未连接 AI 分析服务 · 对话仅保留至刷新页面":
-    "Interactive preview · AI not connected · Conversations reset on reload",
   案例对话: "Case conversation",
-  本次研究会话: "Current research session",
-  虚构案例预览: "Fictional case preview",
-  "研究助手 · 示例": "Research assistant · Demo",
-  案例事实卡: "Case facts",
-  先把事实对齐: "Let’s align on the facts",
-  已确认: "Confirmed",
-  待你确认: "Awaiting confirmation",
+  分析服务尚未连接: "Analysis service is not connected",
+  "消息尚未发送，也未生成分析。你可以先整理案例信息。":
+    "Your message has not been sent and no analysis was generated. You can organize the case details first.",
+  整理案例信息: "Organize case details",
+  法规与来源: "Legislation & sources",
+  关闭详情: "Close details",
+  "记录已知事实，未知项可以留空。":
+    "Record known facts. Leave unknown fields blank.",
   待补充: "Not yet provided",
-  编辑事实: "Edit facts",
-  确认并继续: "Confirm and continue",
-  已核对基础信息: "Basic facts confirmed",
-  "请先填写纳税主体与收入类型，其余未知信息可保留为空。":
-    "Add the taxpayer and income type first. Other unknown fields can remain blank.",
-  补充一个关键信息: "One more key detail",
-  "这笔收入目前是如何收取的？": "How was this income received?",
-  "选择最接近的情况。无法确定也没关系，我们会将它记为待确认事项。":
-    "Choose the closest scenario. If you are unsure, we will mark it for follow-up.",
-  已汇入香港: "Remitted to Hong Kong",
-  尚未汇入香港: "Not remitted to Hong Kong",
-  用于抵销或清偿债务: "Used to offset or settle a debt",
-  不确定: "Not sure",
-  研究起点已整理好: "Your research starting point",
-  "以下是固定的研究流程示例，尚未运行规则引擎，也不代表豁免资格或应纳税额的判断。":
-    "This is a fixed research workflow example. No rules engine has run, and no exemption eligibility or tax liability has been assessed.",
-  核实适用范围: "Check the scope",
-  "主体的集团关系、收入来源及所属期间仍需结合证据确认。":
-    "Group relationships, the source of income, and the relevant period still need supporting evidence.",
-  核对收取情况: "Review receipt of income",
-  "你选择了「": "You selected “",
-  "」。资金路径及相关安排应由研究人员进一步核实。":
-    "”. A researcher should verify the flow of funds and related arrangements.",
-  整理适用条件与证据: "Identify conditions and evidence",
-  "根据收入类型查阅官方资料，再由合资格人员确认适用条件与所需文件。":
-    "Consult official sources for the income type, then have a qualified professional confirm the relevant conditions and documentation.",
-  待人工复核: "Professional review required",
-  "事实缺口和适用法例尚未核验。金额或税率不会在此预览中计算。":
-    "Missing facts and applicable legislation are unverified. This preview does not calculate tax amounts or rates.",
-  继续查阅官方资料: "Explore official sources",
-  "资料索引，非本次检索结果": "Source index, not live search results",
   纳税主体: "Taxpayer",
-  地区: "Jurisdiction",
   收入类型: "Income type",
   金额: "Amount",
   币种: "Currency",
   所属期间: "Relevant period",
   收取情况: "Receipt of income",
-  案例信息: "Case details",
-  法规与来源: "Legislation & sources",
-  关于这个研究空间: "About this workspace",
-  关闭详情: "Close details",
-  "每一个判断，从事实开始。": "Every assessment starts with facts.",
-  "核对并修改这个虚构案例的信息。未确定的字段可以留空。":
-    "Review and edit the facts of this fictional case. Leave unknown fields blank.",
-  "当前研究范围为香港 FSIE": "Current research scope: Hong Kong FSIE",
-  "保存后需要重新确认事实，并重新生成研究清单。":
-    "Saving requires you to reconfirm the facts and regenerate the research checklist.",
+  已汇入香港: "Remitted to Hong Kong",
+  尚未汇入香港: "Not remitted to Hong Kong",
+  用于抵销或清偿债务: "Used to offset or settle a debt",
+  不确定: "Not sure",
+  "仅保存在当前页面，刷新后清空。":
+    "Saved in this page only. Cleared on reload.",
   保存事实: "Save facts",
-  "回到依据，读懂上下文。": "Read the source. See the context.",
-  "来自项目资料清单的官方来源入口。此预览未执行实时检索，也未核验当前法例版本。":
-    "Official links from the project source manifest. This preview has not run a live search or verified the current legislative version.",
-  官方资料: "Official source",
+  "官方资料索引。请核对适用期间及最新版本。":
+    "Official source index. Check the applicable period and latest version.",
+  在官方网站阅读: "Read on the official website",
+  来源与版本: "Source & version",
   资料清单记录日: "Manifest capture date",
   知识覆盖截止: "Knowledge cutoff",
   专业验证状态: "Professional validation",
   尚未验证: "Unverified",
-  在官方网站阅读: "Read on the official website",
-  "日期来自仓库资料清单，不代表法例的生效日。请按案例所属期间核对适用版本。":
-    "Dates are from the source manifest, not legislative effective dates. Check the version applicable to the case period.",
-  "专业研究，从清晰开始。": "Better research starts with clarity.",
-  "AsiaTax 面向税务研究与顾问复核，当前聚焦中国香港 FSIE。":
-    "AsiaTax supports tax research and adviser review, currently focused on Hong Kong FSIE.",
-  这是交互预览: "This is an interactive preview",
-  "回答与清单来自固定示例，尚未接入模型、规则引擎或实时法规检索。":
-    "Responses and checklists are fixed examples. No model, rules engine, or live legal search is connected.",
-  只使用虚构案例: "Use fictional cases only",
-  "不要输入真实客户或个人资料。对话只在当前页面内存中保存，刷新后清空。":
-    "Do not enter real client or personal information. Conversations are kept in page memory and cleared on reload.",
-  保留专业复核: "Keep professional review in the loop",
-  "页面不提供正式税务意见。所有事实、适用规则和结论均须专业人员核验。":
-    "This page does not provide formal tax advice. Facts, applicable rules, and conclusions require professional verification.",
+  "税务研究与专业复核的工作空间。":
+    "A workspace for tax research and professional review.",
+  当前服务状态: "Service status",
+  "网页尚未接入分析服务，不会生成税务结论。":
+    "The analysis service is not connected. This page does not generate tax conclusions.",
+  数据与使用范围: "Data & scope",
+  "对话和事实仅在页面内存中保存，刷新后清空。当前仅用于内部研究，请勿输入真实客户或个人资料。":
+    "Chats and facts are stored in page memory and cleared on reload. For internal research only; do not enter real client or personal information.",
+  专业复核: "Professional review",
+  "规则尚待香港税务专家验证，研究资料不构成正式税务意见。":
+    "Rules await validation by Hong Kong tax experts. Research materials are not formal tax advice.",
   键盘操作: "Keyboard shortcuts",
-  输入换行: "New line",
   关闭面板: "Close panel",
   "FSIE 制度概览": "FSIE overview",
   "税务局 · 制度指引": "IRD · Guidance",
-  "查看香港税务局发布的制度介绍及相关官方资料入口。":
-    "Explore the Hong Kong Inland Revenue Department’s overview and related official resources.",
+  "香港税务局发布的制度介绍与相关资料。":
+    "An overview and related resources from the Hong Kong Inland Revenue Department.",
   "《税务条例》第 112 章": "Inland Revenue Ordinance, Cap. 112",
   "香港电子法例 · 法例": "Hong Kong e-Legislation · Statute",
-  "前往官方法例核对条文和版本。本面板不提供未经核对的原文摘录。":
-    "Check the provisions and version in the official legislation. This panel does not provide unverified excerpts.",
+  "在官方法例中核对条文及适用版本。":
+    "Check the provisions and applicable version in the official legislation.",
   "FSIE 常见问题": "FSIE frequently asked questions",
   "税务局 · 常见问题": "IRD · FAQ",
-  "作为研究问题的辅助导航；需结合具体事实及适用期间阅读。":
-    "Use as a research aid, together with the case facts and the relevant period.",
+  "结合案例事实和所属期间阅读相关解答。":
+    "Read the answers alongside the case facts and relevant period.",
   未记录: "Not recorded",
-  "我们先把这个虚构案例的基础信息整理清楚。下方是预设事实，请核对后确认；之后我们会继续补充收取情况。":
-    "Let’s clarify the basic facts of this fictional case. Review and confirm the preset facts below, then we will explore how the income was received.",
-  "已记下你的描述。当前是交互预览，不会自动解析自由文本或执行税务判断。请在「编辑事实」中填写这个虚构案例的信息，再继续体验研究流程。":
-    "Your description has been noted. This interactive preview does not parse free text or make tax assessments. Use “Edit facts” to enter the fictional case details and continue the workflow.",
-  "已记录这条补充。交互预览不会自动将文字更新为事实，请通过「编辑事实」修改对应字段；修改后需要重新确认。":
-    "Your follow-up has been noted. This preview does not automatically convert text into facts. Update the relevant fields using “Edit facts”, then reconfirm them.",
-  "案例事实已更新。之前的研究清单已撤回，请核对最新信息后重新确认。":
-    "Case facts updated. The previous checklist has been withdrawn. Review the latest information and confirm it again.",
-  "虚构案例：一家香港公司在 2025/26 年度收到境外子公司的股息，金额为 100 万港元。我想了解需要确认哪些 FSIE 条件。":
-    "Fictional case: A Hong Kong company received HKD 1,000,000 in dividends from an overseas subsidiary in 2025/26. Which FSIE conditions should we investigate?",
-  "虚构案例：一家香港公司在 2025/26 年度取得 5 万美元境外利息。请帮我整理后续研究需要的信息。":
-    "Fictional case: A Hong Kong company earned USD 50,000 in foreign interest in 2025/26. Help me identify the information needed for further research.",
-  "虚构案例：一家香港公司在 2025/26 年度出售境外资产，产生处置收益，但金额和资金流向尚待确认。请帮我列出研究事项。":
-    "Fictional case: A Hong Kong company disposed of overseas assets in 2025/26. The gain and flow of funds are not yet confirmed. Help me outline the research questions.",
-  " · 香港": " · Hong Kong",
 };

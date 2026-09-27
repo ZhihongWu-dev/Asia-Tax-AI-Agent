@@ -1,12 +1,12 @@
-# AsiaTax · 税务研究聊天工作台
+# AsiaTax · 税务聊天工作台
 
-以聊天为中心的原创中文前端：案例导航、虚构示例、事实确认卡、收取情况选项、研究清单和法规来源侧栏。浅色界面配合深蓝导航，使用 Lucide 的天平、机构、硬币、账簿和核验图标。适配桌面与手机。
+简洁的中英文聊天前端：深蓝导航、中央输入框、三个快捷问题，以及按需展开的案例信息与官方来源。使用 Lucide 税务相关图标，适配桌面和手机，无地区选择。
 
-**当前是交互预览，不是已连接 AI 的税务系统。** 回答和研究清单来自固定演示逻辑；自由文本不会被自动提取为事实。仅允许虚构案例，对话保存在页面内存中，刷新即清空，不向外部服务发送。主分支 FastAPI 目前只有健康检查，未接入本前端；旧的 `demo/hk-web` 未被合并。
+**当前尚未连接分析服务，不能生成税务回答。** 提交消息时显示未发送状态，不使用固定答案模拟分析。消息、草稿和手工事实仅存在页面内存，刷新清空；语言偏好单独保存在 `asiatax.language`。后端闭环差距见 [核查记录](../../docs/reviews/2026-09-27-agent-closure-audit.md)。旧 `demo/hk-web` 未合并。
 
 ## 本地运行
 
-需要 Node.js 20.19+ 或 22.12+（建议 Node 22）。从仓库根目录执行，PowerShell、macOS 和 Linux 均可：
+需要 Node.js 20.19+ 或 22.12+，建议 Node 22。从仓库根目录执行：
 
 ```sh
 cd apps/web
@@ -14,12 +14,9 @@ npm ci
 npm run dev
 ```
 
-打开 <http://127.0.0.1:5173>。无需数据库或模型密钥。端口占用时会明确报错，避免打开错误的应用。
+打开 <http://127.0.0.1:5173>。运行当前界面无需数据库或模型密钥。端口占用会明确报错。
 
-选择「境外股息」示例 → 发送 → 核对事实 → 确认并继续 → 选择收取情况 → 打开法规来源。
-点击「编辑事实」修改金额等字段会撤回旧研究清单，重新确认后才能继续。新案例与历史案例互相独立。
-
-右上角 `EN / 中文` 切换界面语言，包括示例、助手提示、事实标签、来源面板和无障碍标签。语言偏好单独保存在浏览器 `asiatax.language`；不会保存对话。切换保留当前案例与草稿，用户自由输入的文字及自定义事实保持原样。官方资料标题保留原始语言。语言切换不需要模型或 API key。
+快捷问题只填入输入框，用户可修改再提交。右上角分别提供语言切换、来源和案例信息。案例字段允许留空；保存不触发分析，不代表后端顾问确认。语言切换保留用户原文及各会话草稿。来源为官方资料索引，不是实时检索或本次问题的分析引证。
 
 ## 验证
 
@@ -27,33 +24,32 @@ npm run dev
 npm run build
 npx playwright install chromium
 npm test
-npm audit
 ```
 
-如果 Windows 已安装 Chrome，可跳过浏览器下载并使用：
+Windows 已安装 Chrome 时可跳过浏览器下载：
 
 ```powershell
 $env:PLAYWRIGHT_CHANNEL = 'chrome'
 npm test
 ```
 
-10 项浏览器测试覆盖：桌面首屏与无外部请求、事实到来源的完整流程、修改后失效与重新确认、案例隔离与搜索、自由文本未知事实、中文输入法和换行、手机导航与焦点约束，以及英文全流程、偏好记忆、语言切换时的数据保留和英文手机布局。截图保存在未跟踪的 `test-results/`。CI 使用 Playwright Chromium 运行相同检查。
+8 项浏览器测试覆盖简洁首屏及无外部请求、提交后的真实未连接状态、案例与草稿隔离、手工事实保存、来源链接与折叠元数据、中英文切换及偏好、中文输入法、手机布局与键盘焦点。截图保存到未跟踪的 `test-results/`。CI 使用 Playwright Chromium。
 
 ## 结构与接入边界
 
-- `src/App.tsx`：案例状态、页面布局与面板切换。
-- `src/demo.ts`：显式的演示状态与虚构预设；后续真实接入应替换此边界。
-- `src/locale.tsx` / `src/locales/en.ts`：轻量语言上下文与集中英文文案词典；中文源文案作为键，无额外运行时依赖。
-- `src/components/`：聊天、输入框、事实编辑、官方来源和导航。
-- `src/styles.css`：配色、金融图标构图和响应式样式。
-- 来源元数据引用仓库 `knowledge/hong_kong/fsie/source_manifest.json`；面板是资料索引，未展示伪造原文、实时检索结果或税务结论。
+- `src/App.tsx`：案例、草稿、布局与面板状态。
+- `src/workspace.ts`：会话数据、空事实、快捷问题和来源元数据，无预设答案。
+- `src/locale.tsx` / `src/locales/en.ts`：语言上下文和英文词典。
+- `src/components/`：聊天、输入框、手工事实编辑、来源和导航。
+- `src/hooks/useOverlayFocus.ts`：弹层键盘与焦点管理。
+- `src/styles.css`：布局、配色和响应式样式。
 
-后续接入需要新增后端案例/事实确认接口及真实分析生命周期，明确错误、等待和版本变化处理。不得把示例清单替换为模型文字后直接当作专业结论。当前不含上传、税额计算、持久化、身份认证或导出。
+来源元数据引用 `knowledge/hong_kong/fsie/source_manifest.json`。后续须新增后端案件/访谈/确认/分析接口和真实生命周期，并处理持久化、错误、重试与版本变化。模型密钥只能由后端读取，不得使用 `VITE_` 前缀暴露给浏览器。当前没有上传、税额计算、认证或报告导出。
 
 ## 参考与授权
 
-- 对话组织参考 [Vercel Chatbot](https://github.com/vercel/chatbot)（Apache-2.0），未复制其实现。
-- 页面为原创实现；v0 模板只用于讨论交互方向，未复制模板代码、图形或样式。
-- [Lucide](https://github.com/lucide-icons/lucide) 图标按包内 ISC/MIT 授权使用，React 采用 MIT。
-- 完整运行时依赖授权见 [THIRD_PARTY_NOTICES.txt](public/THIRD_PARTY_NOTICES.txt)，构建时随静态产物发布。
-- [Vite](https://github.com/vitejs/vite) 采用 MIT；开发依赖的授权保留在各安装包内。
+- 对话组织参考 [Vercel Chatbot](https://github.com/vercel/chatbot)（Apache-2.0），未复制实现。
+- 原创页面；v0 模板仅用于讨论交互方向，未复制代码、图形或样式。
+- [Lucide](https://github.com/lucide-icons/lucide) 按包内 ISC/MIT 授权使用；React 为 MIT。
+- 完整运行时授权见 [THIRD_PARTY_NOTICES.txt](public/THIRD_PARTY_NOTICES.txt)，随构建产物发布。
+- [Vite](https://github.com/vitejs/vite) 为 MIT；开发依赖授权保留在各安装包内。

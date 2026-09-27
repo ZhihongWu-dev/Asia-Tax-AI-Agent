@@ -1,90 +1,43 @@
-import { useLocale } from "./locale";
-import { useEffect, useRef, useState, type RefObject } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   BookOpen,
-  ChevronRight,
-  FileText,
   Globe2,
   Menu,
   PanelRightClose,
   PanelRightOpen,
-  ShieldCheck,
 } from "lucide-react";
 import {
   makeCase,
   caseTitle,
-  factValue,
-  message,
   sourceInfo,
   submitText,
   type Case,
   type Facts,
   type Panel,
-} from "./demo";
+} from "./workspace";
+import { useLocale } from "./locale";
+import { useOverlayFocus } from "./hooks/useOverlayFocus";
 import Composer from "./components/Composer";
 import Conversation from "./components/Conversation";
 import DetailsPanel from "./components/DetailsPanel";
 import Sidebar from "./components/Sidebar";
-import Welcome from "./components/Welcome";
-
-function useOverlayFocus(
-  ref: RefObject<HTMLDivElement | null>,
-  open: boolean,
-  modal: boolean,
-  close: () => void,
-) {
-  const closeRef = useRef(close);
-  closeRef.current = close;
-  useEffect(() => {
-    if (!open) return;
-    const previous = document.activeElement as HTMLElement | null;
-    const root = ref.current;
-    const focusable = () => [
-      ...(root?.querySelectorAll<HTMLElement>(
-        'button:not(:disabled), a[href], input, textarea, select, [tabindex="0"]',
-      ) ?? []),
-    ];
-    focusable()[0]?.focus();
-    function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") {
-        e.preventDefault();
-        closeRef.current();
-      }
-      if (modal && e.key === "Tab") {
-        const elements = focusable(),
-          first = elements[0],
-          last = elements.at(-1);
-        if (e.shiftKey && document.activeElement === first) {
-          e.preventDefault();
-          last?.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-          e.preventDefault();
-          first?.focus();
-        }
-      }
-    }
-    document.addEventListener("keydown", onKey);
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      previous?.focus();
-    };
-  }, [open, modal, ref]);
-}
+import Welcome, { SuggestedQuestions } from "./components/Welcome";
 
 export default function App() {
   const { t, locale, setLocale } = useLocale();
   const [cases, setCases] = useState<Case[]>(() => [makeCase()]);
   const [activeId, setActiveId] = useState("");
   const current = cases.find((c) => c.id === activeId) || cases[0];
+  const [drafts, setDrafts] = useState<Record<string, string>>({});
   const [panel, setPanel] = useState<Panel>(null);
   const [source, setSource] = useState(sourceInfo[0].id);
-  const [starter, setStarter] = useState("");
   const [mobileNav, setMobileNav] = useState(false);
   const [narrow, setNarrow] = useState(
     () => window.matchMedia("(max-width: 1100px)").matches,
   );
   const panelRef = useRef<HTMLDivElement>(null),
     navRef = useRef<HTMLDivElement>(null);
+  const empty = current.messages.length === 0;
   useEffect(() => {
     const media = window.matchMedia("(max-width: 1100px)");
     const update = () => {
@@ -107,39 +60,15 @@ export default function App() {
     const next = makeCase();
     setCases((all) => [next, ...all]);
     setActiveId(next.id);
-    setStarter("");
     setPanel(null);
     setMobileNav(false);
   }
   function saveFacts(facts: Facts) {
-    updateCase((c) => ({
-      ...c,
-      facts,
-      confirmed: false,
-      stage: "facts",
-      messages: [
-        ...c.messages,
-        message(
-          "assistant",
-          "案例事实已更新。之前的研究清单已撤回，请核对最新信息后重新确认。",
-        ),
-      ],
-    }));
+    updateCase((c) => ({ ...c, facts }));
     setPanel(null);
   }
-  function confirmFacts() {
-    updateCase((c) => ({ ...c, confirmed: true, stage: "receipt" }));
-  }
-  function chooseReceipt(value: string) {
-    updateCase((c) => ({
-      ...c,
-      facts: { ...c.facts, receipt: value },
-      stage: "review",
-      messages: [
-        ...c.messages,
-        message("user", `${t("收取情况")}: ${t(value)}`),
-      ],
-    }));
+  function changeDraft(text: string) {
+    setDrafts((all) => ({ ...all, [current.id]: text }));
   }
   const modalOpen = mobileNav || (narrow && Boolean(panel));
   return (
@@ -160,15 +89,17 @@ export default function App() {
           onPanel={openPanel}
           onSelect={(id) => {
             setActiveId(id);
-            setStarter("");
             setPanel(null);
             setMobileNav(false);
           }}
         />
       </div>
-      <main className="main-workspace" inert={modalOpen ? true : undefined}>
+      <main
+        className={`main-workspace ${empty ? "is-empty" : ""}`}
+        inert={modalOpen ? true : undefined}
+      >
         <header className="topbar">
-          <div className="breadcrumb">
+          <div className="page-title">
             <button
               className="icon-button mobile-menu"
               aria-label={t("打开案例导航")}
@@ -179,9 +110,7 @@ export default function App() {
             >
               <Menu size={20} />
             </button>
-            <span className="breadcrumb-root">{t("研究空间")}</span>
-            <ChevronRight size={13} />
-            <strong>{caseTitle(current, t)}</strong>
+            <span>{empty ? t("税务助手") : caseTitle(current, t)}</span>
           </div>
           <div className="topbar-actions">
             <button
@@ -192,13 +121,18 @@ export default function App() {
               <Globe2 size={14} />
               <span>{locale === "zh" ? "EN" : "中文"}</span>
             </button>
-            <span className="preview-badge">
-              <span />
-              {t("交互预览")}
-            </span>
+            <button
+              className="icon-button"
+              aria-label={t("法规资料")}
+              title={t("法规资料")}
+              onClick={() => openPanel("sources")}
+            >
+              <BookOpen size={18} />
+            </button>
             <button
               className="icon-button"
               aria-label={panel ? t("收起案例信息") : t("打开案例信息")}
+              title={t("案例信息")}
               aria-expanded={panel === "facts"}
               onClick={() => setPanel(panel ? null : "facts")}
             >
@@ -210,72 +144,38 @@ export default function App() {
             </button>
           </div>
         </header>
-        <div className="contextbar">
-          <div>
-            <span className="context-region">
-              <Globe2 size={14} />
-              {t("中国香港")}
-            </span>
-            <span className="context-divider" />
-            <span>{t("FSIE 境外收入研究")}</span>
+        <div className="chat-body">
+          <div className="workspace-scroll">
+            {empty ? (
+              <Welcome />
+            ) : (
+              <Conversation
+                current={current}
+                onFacts={() => openPanel("facts")}
+              />
+            )}
           </div>
-          <button onClick={() => openPanel("sources")}>
-            <BookOpen size={14} />
-            <span>{t("法规资料")}</span>
-            <ChevronRight size={12} />
-          </button>
-        </div>
-        <div className="workspace-scroll">
-          {current.stage === "empty" ? (
-            <Welcome
-              onStarter={(text) => {
-                setStarter(text);
-                document
-                  .querySelector<HTMLTextAreaElement>("textarea")
-                  ?.focus();
-              }}
+          <div className="composer-area">
+            <Composer
+              key={current.id}
+              text={drafts[current.id] || ""}
+              onChange={changeDraft}
+              onSend={(text) => updateCase((c) => submitText(c, text))}
             />
-          ) : (
-            <Conversation
-              current={current}
-              onPanel={openPanel}
-              onConfirm={confirmFacts}
-              onReceipt={chooseReceipt}
-              onSource={(id) => {
-                setSource(id);
-                openPanel("sources");
-              }}
-            />
-          )}
-        </div>
-        <div
-          className={`composer-area ${current.stage === "empty" ? "welcome-composer" : ""}`}
-        >
-          {current.stage !== "empty" && (
-            <div className="case-context">
-              <span>
-                <FileText size={13} />
-                {factValue(current, "income", t) || t("收入类型待确认")}
-              </span>
-              <button onClick={() => openPanel("facts")}>
-                {t("查看案例信息")}
-                <ChevronRight size={12} />
-              </button>
-            </div>
-          )}
-          <Composer
-            key={current.id}
-            starter={starter}
-            onClearStarter={() => setStarter("")}
-            onSend={(text) => updateCase((c) => submitText(c, text))}
-          />
+            {empty && (
+              <SuggestedQuestions
+                onSelect={(text) => {
+                  changeDraft(text);
+                  document
+                    .querySelector<HTMLTextAreaElement>("textarea")
+                    ?.focus();
+                }}
+              />
+            )}
+          </div>
         </div>
         <footer className="workspace-footer">
-          <span>
-            <ShieldCheck size={12} />
-            {t("研究辅助，不构成正式税务意见")}
-          </span>
-          <span>ASIATAX / L0</span>
+          {t("专业判断，请由税务顾问复核。")}
         </footer>
       </main>
       {modalOpen && (
