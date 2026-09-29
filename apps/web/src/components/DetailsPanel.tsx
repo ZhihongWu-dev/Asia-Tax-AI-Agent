@@ -1,3 +1,4 @@
+import HintButton from "./HintButton";
 import FactEditor from "./FactEditor";
 import KnowledgeSearch from "./KnowledgeSearch";
 import type { FactPatch } from "../api";
@@ -43,7 +44,7 @@ export default function DetailsPanel({
       ? t("案例信息")
       : panel === "sources"
         ? t("法规与来源")
-        : t("关于 AsiaTax");
+        : t("关于 Taxora");
   const selected =
     sourceInfo.find((s) => s.id === selectedSource) || sourceInfo[0];
   return (
@@ -59,20 +60,20 @@ export default function DetailsPanel({
           )}
           <h2 id="panel-title">{title}</h2>
         </div>
-        <button
+        <HintButton
           className="icon-button"
           aria-label={t("关闭详情")}
           onClick={onClose}
         >
           <X size={18} />
-        </button>
+        </HintButton>
       </header>
       <div className="panel-body">
         {error && (
           <div className="request-error" role="alert">
             {t(`error:${error}`)}{" "}
             {isRetryable(error) && (
-              <button onClick={onRetry}>{t("重试")}</button>
+              <HintButton onClick={onRetry}>{t("重试")}</HintButton>
             )}
           </div>
         )}
@@ -94,7 +95,7 @@ export default function DetailsPanel({
             </p>
             <div className="source-selector">
               {sourceInfo.map((s, i) => (
-                <button
+                <HintButton
                   key={s.id}
                   aria-pressed={selected.id === s.id}
                   className={selected.id === s.id ? "selected" : ""}
@@ -105,7 +106,7 @@ export default function DetailsPanel({
                     <strong>{t(s.label)}</strong>
                     <small>{t(s.tag)}</small>
                   </div>
-                </button>
+                </HintButton>
               ))}
             </div>
             <article className="source-detail">
@@ -143,7 +144,7 @@ export default function DetailsPanel({
         )}
         {panel === "about" && (
           <div className="about-content">
-            <h3>AsiaTax</h3>
+            <h3>Taxora</h3>
             <p>{t("税务研究与专业复核的工作空间。")}</p>
             <details open>
               <summary>{t("当前服务状态")}</summary>

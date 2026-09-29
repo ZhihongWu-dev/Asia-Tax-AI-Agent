@@ -79,6 +79,9 @@ export type Analysis = {
   passages: Passage[];
 };
 export type Case = {
+  archived?: boolean;
+  created_at?: string;
+  updated_at?: string;
   id: string;
   title: string;
   revision: number;

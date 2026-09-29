@@ -1,12 +1,12 @@
 """Non-destructive smoke check of the running chat API with synthetic input only.
 
-Creates an isolated cookie workspace and deletes only its own empty/synthetic case.
+Uses a verified test account and deletes only its own empty/synthetic case.
 Prints counts and statuses, never credentials, case content or raw exceptions.
 """
 from __future__ import annotations
 
 import json
-from hashlib import sha256
+import os
 from pathlib import Path
 import sys
 from uuid import uuid4
@@ -30,8 +30,13 @@ def main():
                 response.raise_for_status()
                 return response.json()
 
+            email = os.environ.get('TAXORA_SMOKE_EMAIL')
+            password = os.environ.get('TAXORA_SMOKE_PASSWORD')
+            if not email or not password:
+                raise RuntimeError('Verified smoke-test account credentials required')
+            login = checked(client.post('/api/auth/login', json={'email': email, 'password': password}))
+            owner = 'user:' + login['user']['id']
             checked(client.get('/api/session'))
-            owner = sha256(client.cookies.get('asiatax_workspace').encode()).hexdigest()
             for query in ['Case 68', 'Case 72', 'Case 74', 'Case 75', 's.15M(2)', '经济实质', 'weather forecast']:
                 result = checked(client.get('/api/knowledge/search', params={'q': query}))
                 count = len(result['passages'])

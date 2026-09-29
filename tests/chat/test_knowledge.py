@@ -87,7 +87,10 @@ def test_research_preserves_confirmation_and_freezes_citations(tmp_path, documen
     store.engine.dispose()
 
 
-def test_search_api_validates_and_requires_workspace(documents):
+def test_search_api_validates_and_requires_workspace(documents, monkeypatch):
+    from apps.api.auth import optional_user
+    from tests.chat.auth_support import fixture_user
+    monkeypatch.setitem(app.dependency_overrides, optional_user, fixture_user)
     with TestClient(app) as client:
         assert client.get('/api/knowledge/search?q=Case%2068').status_code == 401
         client.get('/api/session')

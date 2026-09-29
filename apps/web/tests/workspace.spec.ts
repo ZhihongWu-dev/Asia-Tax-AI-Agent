@@ -44,7 +44,7 @@ test("a failed pending send preserves the next draft and retries without duplica
   }
 });
 
-test("send immediately shows the question and thinking dots, preserving a new draft", async ({
+test("send immediately shows the question and animated brand, preserving a new draft", async ({
   page,
 }) => {
   await english(page);
@@ -66,14 +66,14 @@ test("send immediately shows the question and thinking dots, preserving a new dr
     });
     await expect(input).toHaveValue("");
     await expect(page.getByRole("status", { name: "Thinking…" })).toBeVisible();
-    await expect(page.locator(".thinking-dots i")).toHaveCount(3);
-    await expect(page.locator(".thinking-dots i").first()).toHaveCSS(
+    await expect(page.locator(".assistant-pending .brand-loader-emblem rect")).toHaveCount(4);
+    await expect(page.locator(".assistant-pending .brand-loader-emblem rect").first()).toHaveCSS(
       "animation-name",
-      "thinking-pulse",
+      "taxora-assemble",
     );
     await page.screenshot({
       path: "test-results/pending-reply.png",
-      fullPage: true,
+      fullPage: true, animations: "disabled",
     });
     await input.fill("My next draft");
     release();
@@ -108,7 +108,7 @@ test("natural conversation is rendered and restored without a research error", a
   await expect(page.locator(".chat-reply")).toHaveCount(2);
   await page.screenshot({
     path: "test-results/natural-chat.png",
-    fullPage: true,
+    fullPage: true, animations: "disabled",
   });
 });
 
@@ -143,7 +143,7 @@ test("source search, provenance and persisted research replies", async ({
   ).toHaveCount(1);
   await page.screenshot({
     path: "test-results/knowledge-search.png",
-    fullPage: true,
+    fullPage: true, animations: "disabled",
   });
   await page.getByRole("textbox", { name: "检索法条与案例" }).fill("case 999");
   await page.getByRole("button", { name: "检索", exact: true }).click();
@@ -189,7 +189,7 @@ test("minimal bilingual home preserves design with a real backend", async ({
   await expect(page.getByRole("combobox")).toHaveCount(0);
   await page.screenshot({
     path: "test-results/live-desktop.png",
-    fullPage: true,
+    fullPage: true, animations: "disabled",
   });
   await page.getByRole("button", { name: "Switch to English" }).click();
   await expect(
@@ -240,7 +240,7 @@ test("intake, follow-up, explicit confirmation, real rules and refresh recovery"
   );
   await page.screenshot({
     path: "test-results/live-analysis.png",
-    fullPage: true,
+    fullPage: true, animations: "disabled",
   });
   const url = page.url();
   await page.reload();
@@ -348,7 +348,7 @@ test("IME does not submit and phone dialogs trap focus without overflow", async 
   await input.fill("");
   await page.screenshot({
     path: "test-results/live-mobile.png",
-    fullPage: true,
+    fullPage: true, animations: "disabled",
   });
   const sources = page.getByRole("button", { name: "法规资料", exact: true });
   await sources.click();

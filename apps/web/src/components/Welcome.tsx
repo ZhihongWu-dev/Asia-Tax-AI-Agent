@@ -1,4 +1,5 @@
-import { BookOpen, Landmark, ListChecks, Scale } from "lucide-react";
+import { BookOpen, Landmark, ListChecks } from "lucide-react";
+import { BrandMark } from "./Brand";
 import { suggestions } from "../workspace";
 import { useLocale } from "../locale";
 
@@ -7,7 +8,7 @@ export default function Welcome() {
   return (
     <section className="welcome" aria-labelledby="welcome-title">
       <div className="welcome-mark" aria-hidden="true">
-        <Scale size={31} strokeWidth={1.3} />
+        <BrandMark size={38} />
       </div>
       <h1 id="welcome-title">{t("让税务问题，更清晰。")}</h1>
       <p>{t("梳理事实，查阅依据，从一次对话开始。")}</p>

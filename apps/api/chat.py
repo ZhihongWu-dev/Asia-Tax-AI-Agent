@@ -1,20 +1,21 @@
-"""Local research API. Browser workspaces are isolated by opaque cookies."""
+"""Research API with account-scoped cloud cases."""
 from __future__ import annotations
 
 from functools import lru_cache
-from hashlib import sha256
 from pathlib import Path
-import secrets
 from typing import Any
 from typing import Literal
-from urllib.parse import urlsplit
 from uuid import UUID
 
-from fastapi import APIRouter, Depends, HTTPException, Request, Response, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
+from fastapi.responses import StreamingResponse
+import asyncio
+import json
 from pydantic import BaseModel, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from sqlalchemy.exc import SQLAlchemyError
 
+from apps.api.auth import required_user
 from packages.chat.facts import catalog
 from packages.chat.service import ChatService, WorkflowError, public, current_model_config
 from packages.chat.store import CaseNotFound, ChatStore, RevisionConflict
@@ -22,7 +23,6 @@ from packages.persistence.config import get_settings
 from packages.chat.knowledge import search
 
 ROOT = Path(__file__).resolve().parents[2]
-COOKIE = "asiatax_workspace"
 router = APIRouter(prefix="/api")
 
 
@@ -37,22 +37,8 @@ def get_service() -> ChatService:
     return ChatService(ChatStore(WebSettings().database_url or get_settings().database_url))
 
 
-def same_origin(request: Request) -> None:
-    origin = request.headers.get("origin")
-    if request.headers.get("sec-fetch-site") == "cross-site":
-        raise HTTPException(403, "origin_rejected")
-    if origin and urlsplit(origin).netloc != request.headers.get("host"):
-        raise HTTPException(403, "origin_rejected")
-    if request.method not in ("GET", "HEAD") and request.headers.get("x-asiatax-request") != "1":
-        raise HTTPException(403, "request_header_required")
-
-
-def owner(request: Request) -> str:
-    same_origin(request)
-    token = request.cookies.get(COOKIE, "")
-    if len(token) != 64 or any(c not in "0123456789abcdef" for c in token):
-        raise HTTPException(401, "workspace_required")
-    return sha256(token.encode()).hexdigest()
+def owner(user=Depends(required_user)) -> str:
+    return "user:" + user["id"]
 
 
 class Mutation(BaseModel):
@@ -67,6 +53,11 @@ class Message(Mutation):
 
 class FactEdit(Mutation):
     facts: dict[str, Any] = Field(max_length=42)
+
+
+class Organization(Mutation):
+    title: str | None = Field(default=None, min_length=1, max_length=100)
+    archived: bool | None = None
 
 
 def call(action, *args):
@@ -85,12 +76,7 @@ def call(action, *args):
 
 
 @router.get("/session")
-def session(request: Request, response: Response):
-    same_origin(request)
-    token = request.cookies.get(COOKIE, "")
-    if len(token) != 64 or any(c not in "0123456789abcdef" for c in token):
-        response.set_cookie(COOKIE, secrets.token_hex(32), httponly=True, samesite="strict",
-                            secure=WebSettings().secure_cookie, max_age=60 * 60 * 24 * 180)
+def session(user=Depends(required_user)):
     return {"model_configured": current_model_config().is_configured, "fields": catalog()}
 
 
@@ -120,16 +106,56 @@ def get(case_id: UUID, workspace: str = Depends(owner), service: ChatService = D
 
 
 @router.post("/cases/{case_id}/messages")
-def message(case_id: UUID, body: Message, workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
+async def message(case_id: UUID, body: Message, request: Request, response: Response, workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
     text = body.text.strip()
     if not text:
         raise HTTPException(422, "empty_message")
-    return call(service.message, workspace, str(case_id), body.revision, str(body.request_id), text, body.data_approved)
+    if 'text/event-stream' not in request.headers.get('accept', ''):
+        return await asyncio.to_thread(call, service.message, workspace, str(case_id), body.revision, str(body.request_id), text, body.data_approved)
+    doc, duplicate = await asyncio.to_thread(call, service.load, workspace, str(case_id), body.revision, str(body.request_id))
+    if not duplicate:
+        if not (doc['data_approved'] or body.data_approved):
+            raise HTTPException(422, 'data_confirmation_required')
+        if len(doc['messages']) >= 200:
+            raise HTTPException(422, 'case_limit')
+    async def generate():
+        from contextlib import aclosing
+        from packages.chat.streaming import events
+        def encode(event):
+            return 'data: ' + json.dumps(event, ensure_ascii=False) + '\n\n'
+        yield ': connected\n\n'
+        try:
+            if duplicate:
+                yield encode({'type': 'done', 'case': public(doc)})
+                return
+            async with asyncio.timeout(90), aclosing(events(service, doc, workspace, body.revision, str(body.request_id), text, request.is_disconnected)) as stream:
+                async for event in stream:
+                    yield encode(event)
+        except RevisionConflict:
+            yield encode({'type': 'error', 'code': 'revision_conflict'})
+        except WorkflowError as exc:
+            yield encode({'type': 'error', 'code': exc.code})
+        except SQLAlchemyError:
+            yield encode({'type': 'error', 'code': 'storage_unavailable'})
+        except (ValueError, TypeError):
+            yield encode({'type': 'error', 'code': 'model_failed'})
+        except TimeoutError:
+            yield encode({'type': 'error', 'code': 'model_failed'})
+    result = StreamingResponse(generate(), media_type='text/event-stream',
+                             headers={'Cache-Control': 'no-cache', 'X-Accel-Buffering': 'no'})
+    result.raw_headers.extend((key, value) for key, value in response.raw_headers if key.lower() == b'set-cookie')
+    return result
 
 
 @router.patch("/cases/{case_id}/facts")
 def facts(case_id: UUID, body: FactEdit, workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
     return call(service.edit, workspace, str(case_id), body.revision, str(body.request_id), body.facts)
+
+
+@router.patch('/cases/{case_id}/organization')
+def organize(case_id: UUID, body: Organization, workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
+    changes = body.model_dump(exclude_none=True, exclude={'revision', 'request_id'})
+    return call(service.organize, workspace, str(case_id), body.revision, str(body.request_id), changes)
 
 
 @router.post("/cases/{case_id}/confirm")

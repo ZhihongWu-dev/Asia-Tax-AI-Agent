@@ -10,6 +10,9 @@ export function useWorkspace() {
     [error, setError] = useState("");
   const [errorCaseId, setErrorCaseId] = useState("");
   const locked = useRef(false);
+  const controller = useRef<AbortController | null>(null);
+  const [partial, setPartial] = useState<{ caseId: string; text: string } | null>(null);
+  useEffect(() => () => controller.current?.abort(), []);
   const retryRef = useRef<{
     operation: () => Promise<void>;
     caseId: string;
@@ -90,7 +93,7 @@ export function useWorkspace() {
   }
   async function mutate(
     doc: Case,
-    action: "messages" | "facts" | "confirm" | "analyze",
+    action: "messages" | "facts" | "confirm" | "analyze" | "organization",
     payload: Record<string, unknown>,
     requestId: string,
   ) {
@@ -129,14 +132,22 @@ export function useWorkspace() {
         all[doc.id]?.trim() === text ? { ...all, [doc.id]: "" } : all,
       );
       try {
-        await mutate(
-          doc,
-          "messages",
-          { text, data_approved: approved },
-          requestId,
-        );
+        const abort = new AbortController();
+        controller.current = abort;
+        setPartial({ caseId: doc.id, text: "" });
+        const next = await api.stream(doc, text, approved, requestId, abort.signal, chunk =>
+          setPartial(previous => previous?.caseId === doc.id ? { ...previous, text: previous.text + chunk } : previous));
+        update(next);
         setOutbox((all) => all.filter((item) => item.message.id !== localId));
       } catch (e) {
+        if (e instanceof ApiError && e.code === "revision_conflict") update(await api.get(doc.id));
+        if (controller.current?.signal.aborted) {
+          setOutbox(all => all.filter(item => item.message.id !== localId));
+          setDrafts(all => all[doc.id] ? all : { ...all, [doc.id]: text });
+          // A turn already committed before cancellation remains authoritative.
+          update(await api.get(doc.id));
+          return;
+        }
         setOutbox((all) =>
           all.map((item) =>
             item.message.id === localId
@@ -147,6 +158,9 @@ export function useWorkspace() {
         // Preserve a new draft typed during the request; the failed bubble retains the old text.
         setDrafts((all) => (all[doc.id] ? all : { ...all, [doc.id]: text }));
         throw e;
+      } finally {
+        controller.current = null;
+        setPartial(null);
       }
     });
   }
@@ -185,6 +199,12 @@ export function useWorkspace() {
   function changeDraft(text: string) {
     setDrafts((all) => ({ ...all, [current.id]: text }));
   }
+  function organize(id: string, changes: { title?: string; archived?: boolean }) {
+    const doc = cases.find(c => c.id === id);
+    if (!doc) return Promise.resolve(false);
+    const requestId = crypto.randomUUID();
+    return perform(async () => { await mutate(doc, "organization", changes, requestId); }, id);
+  }
   function retry() {
     if (!current) {
       boot.current = null;
@@ -196,6 +216,10 @@ export function useWorkspace() {
   }
   return {
     cases,
+    partial: partial && partial.caseId === current?.id ? partial.text : "",
+    canStop: Boolean(partial) && partial?.caseId === current?.id,
+    stop: () => controller.current?.abort(),
+    organize,
     current,
     fields,
     busy,

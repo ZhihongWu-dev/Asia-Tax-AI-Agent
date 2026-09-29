@@ -1,5 +1,8 @@
+import HintButton from "./HintButton";
 import { useEffect, useRef } from "react";
-import { FileText, Scale } from "lucide-react";
+import { FileText, Scale, ArrowDown } from "lucide-react";
+import { useState } from "react";
+import AnswerText from "./AnswerText";
 import {
   fieldLabel,
   type Case,
@@ -8,6 +11,7 @@ import {
 } from "../workspace";
 import { useLocale } from "../locale";
 import Passages from "./Passages";
+import BrandLoader from "./BrandLoader";
 
 function Result({ result, fields }: { result: Analysis; fields: FieldSpec[] }) {
   const { t, locale } = useLocale();
@@ -158,22 +162,37 @@ export default function Conversation({
   busy,
   onFacts,
   onAnalyze,
+  partial = "",
 }: {
   current: Case;
   fields: FieldSpec[];
   busy: boolean;
   onFacts: () => void;
   onAnalyze: () => void;
+  partial?: string;
 }) {
   const { t, locale } = useLocale();
   const bottom = useRef<HTMLDivElement>(null);
   const latest = useRef<HTMLDivElement>(null);
+  const following = useRef(true);
+  const [away, setAway] = useState(false);
   useEffect(() => {
-    (busy ? bottom.current : latest.current)?.scrollIntoView({
-      block: busy ? "end" : "start",
-      behavior: "instant",
-    });
-  }, [current.id, current.messages.length, busy]);
+    const area = bottom.current?.closest(".workspace-scroll");
+    if (!area) return;
+    following.current = true;
+    area.scrollTop = area.scrollHeight;
+    const track = () => {
+      const isAway = area.scrollHeight - area.scrollTop - area.clientHeight > 100;
+      following.current = !isAway; setAway(isAway);
+    };
+    area.addEventListener("scroll", track, { passive: true });
+    track();
+    return () => area.removeEventListener("scroll", track);
+  }, [current.id]);
+  useEffect(() => {
+    const area = bottom.current?.closest(".workspace-scroll");
+    if (area && following.current) area.scrollTop = area.scrollHeight;
+  }, [current.id, current.messages.length, busy, partial]);
   return (
     <section className="conversation" aria-label={t("案例对话")}>
       {current.messages.map((message, index) => (
@@ -192,10 +211,10 @@ export default function Conversation({
               )}
             </div>
           ) : message.kind === "chat" ? (
-            <p className="chat-reply">{message.text}</p>
+            <AnswerText text={message.text || ""} />
           ) : message.kind === "research" && message.research ? (
             <div className="research-response">
-              {message.text && <p className="chat-reply">{message.text}</p>}
+              {message.text && <AnswerText text={message.text} />}
               <p>
                 {t(
                   message.research.passages.length
@@ -216,7 +235,7 @@ export default function Conversation({
             <div className="intake-response">
               <Scale size={20} />
               <div>
-                {message.text && <p className="chat-reply">{message.text}</p>}
+                {message.text && <AnswerText text={message.text} />}
                 <p>
                   {t(
                     message.state === "needs_resolution"
@@ -244,34 +263,31 @@ export default function Conversation({
         </div>
       ))}
       {busy && (
-        <div
-          className="assistant-pending"
-          role="status"
-          aria-live="polite"
-          aria-label={t("正在思考…")}
-        >
-          <span className="thinking-dots" aria-hidden="true">
-            <i />
-            <i />
-            <i />
-          </span>
-          <span>{t("正在思考…")}</span>
+        <div className="assistant-pending">
+          <BrandLoader label={t("正在思考…")} />
         </div>
       )}
+      {partial && <div className="message assistant streaming-answer"><AnswerText text={partial} streaming /></div>}
+      {away && <HintButton className="jump-bottom" aria-label={t("回到底部")} onClick={() => {
+        const area = bottom.current?.closest(".workspace-scroll");
+        following.current = true;
+        if (area) area.scrollTop = area.scrollHeight;
+        setAway(false);
+      }}><ArrowDown size={16} /></HintButton>}
       {Object.keys(current.facts).length > 0 && (
         <div className="conversation-actions">
-          <button className="text-button" onClick={onFacts}>
+          <HintButton className="text-button" onClick={onFacts}>
             <FileText size={15} />
             {t("核对案例事实")}
-          </button>
+          </HintButton>
           {current.state === "confirmed" && (
-            <button
+            <HintButton
               disabled={busy}
               className="primary-button"
               onClick={onAnalyze}
             >
               {t("开始分析")}
-            </button>
+            </HintButton>
           )}
         </div>
       )}

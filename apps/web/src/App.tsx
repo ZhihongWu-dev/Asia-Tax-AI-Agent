@@ -1,3 +1,4 @@
+import HintButton from "./components/HintButton";
 import { useEffect, useRef, useState } from "react";
 import {
   BookOpen,
@@ -16,6 +17,8 @@ import Conversation from "./components/Conversation";
 import DetailsPanel from "./components/DetailsPanel";
 import Sidebar from "./components/Sidebar";
 import Welcome, { SuggestedQuestions } from "./components/Welcome";
+import Brand from "./components/Brand";
+import BrandLoader from "./components/BrandLoader";
 
 export default function App() {
   const { t, locale, setLocale } = useLocale();
@@ -35,6 +38,7 @@ export default function App() {
     analyze,
     newCase: createCase,
     retry,
+    organize, partial, canStop, stop,
   } = useWorkspace();
   const [showConsent, setShowConsent] = useState(false);
   const [consent, setConsent] = useState(false);
@@ -79,12 +83,12 @@ export default function App() {
   if (!current)
     return (
       <main className="startup">
-        <strong>AsiaTax</strong>
-        <p role="status">{t(error ? `error:${error}` : "正在载入工作空间…")}</p>
+        {error ? <><Brand /><p role="alert">{t(`error:${error}`)}</p></> :
+          <BrandLoader fullPage label={t("正在载入工作空间…")} />}
         {error && (
-          <button className="primary-button" onClick={retry}>
+          <HintButton className="primary-button" onClick={retry}>
             {t("重试")}
-          </button>
+          </HintButton>
         )}
       </main>
     );
@@ -100,6 +104,8 @@ export default function App() {
       >
         <Sidebar
           cases={cases}
+          busy={busy}
+          onOrganize={organize}
           activeId={current.id}
           onNew={newCase}
           onClose={() => setMobileNav(false)}
@@ -117,7 +123,7 @@ export default function App() {
       >
         <header className="topbar">
           <div className="page-title">
-            <button
+            <HintButton
               className="icon-button mobile-menu"
               aria-label={t("打开案例导航")}
               onClick={() => {
@@ -126,27 +132,27 @@ export default function App() {
               }}
             >
               <Menu size={20} />
-            </button>
+            </HintButton>
             <span>{empty ? t("税务助手") : caseTitle(current, t)}</span>
           </div>
           <div className="topbar-actions">
-            <button
+            <HintButton
               className="language-toggle"
               aria-label={locale === "zh" ? "Switch to English" : "切换为中文"}
               onClick={() => setLocale(locale === "zh" ? "en" : "zh")}
             >
               <Globe2 size={14} />
               <span>{locale === "zh" ? "EN" : "中文"}</span>
-            </button>
-            <button
+            </HintButton>
+            <HintButton
               className="icon-button"
               aria-label={t("法规资料")}
               title={t("法规资料")}
               onClick={() => openPanel("sources")}
             >
               <BookOpen size={18} />
-            </button>
-            <button
+            </HintButton>
+            <HintButton
               className="icon-button"
               aria-label={panel ? t("收起案例信息") : t("打开案例信息")}
               title={t("案例信息")}
@@ -158,7 +164,7 @@ export default function App() {
               ) : (
                 <PanelRightOpen size={19} />
               )}
-            </button>
+            </HintButton>
           </div>
         </header>
         <div className="chat-body">
@@ -170,6 +176,7 @@ export default function App() {
                 current={current}
                 fields={fields}
                 busy={currentBusy}
+                partial={partial}
                 onAnalyze={analyze}
                 onFacts={() => openPanel("facts")}
               />
@@ -180,7 +187,7 @@ export default function App() {
               <div className="request-error" role="alert">
                 {t(`error:${error}`)}{" "}
                 {isRetryable(error) && (
-                  <button onClick={retry}>{t("重试")}</button>
+                  <HintButton onClick={retry}>{t("重试")}</HintButton>
                 )}
               </div>
             )}
@@ -203,6 +210,7 @@ export default function App() {
               text={drafts[current.id] || ""}
               onChange={changeDraft}
               busy={busy}
+              onStop={canStop ? stop : undefined}
               onSend={sendMessage}
             />
             {empty && (

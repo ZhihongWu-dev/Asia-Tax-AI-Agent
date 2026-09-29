@@ -1,5 +1,9 @@
 // Chinese source strings are stable keys; user-authored text is never translated.
 export const en: Record<string, string> = {
+  "停止生成": "Stop generating",
+  "回到底部": "Back to bottom",
+  "退出登录": "Sign out",
+  "退出失败，请重试。": "Could not sign out. Please retry.",
   新对话: "New chat",
   案例导航: "Chat navigation",
   关闭案例导航: "Close chat navigation",
@@ -9,7 +13,7 @@ export const en: Record<string, string> = {
   研究案例: "Research cases",
   没有找到匹配的案例: "No matching chats",
   法规资料库: "Source library",
-  "关于 AsiaTax": "About AsiaTax",
+  "关于 Taxora": "About Taxora",
   税务助手: "Tax assistant",
   收起案例信息: "Close case details",
   打开案例信息: "Open case details",

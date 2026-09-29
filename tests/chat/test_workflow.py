@@ -6,6 +6,8 @@ import pytest
 
 from apps.api.chat import get_service
 from apps.api.main import app
+from apps.api.auth import optional_user
+from tests.chat.auth_support import fixture_user
 from packages.chat import analysis
 from packages.chat.facts import validate_patch
 from packages.chat.service import ChatService, WorkflowError
@@ -16,6 +18,7 @@ HEADERS = {"x-asiatax-request": "1"}
 
 @pytest.fixture
 def setup(tmp_path, monkeypatch):
+    app.dependency_overrides[optional_user] = fixture_user
     store = ChatStore(f"sqlite:///{(tmp_path / 'cases.sqlite').as_posix()}")
     def extract(doc, text):
         if text == "failure":
@@ -133,7 +136,7 @@ def test_stale_confirmation_and_concurrent_writes_are_rejected(setup):
     assert post(client, original, 'confirm').status_code == 409
     token = client.cookies.get('asiatax_workspace')
     from hashlib import sha256
-    owner = sha256(token.encode()).hexdigest()
+    owner = "user:" + sha256(token.encode()).hexdigest()[:36]
     copy1 = service.store.get(owner, current['id'])
     copy2 = deepcopy(copy1)
     service.store.save(owner, copy1, 1)

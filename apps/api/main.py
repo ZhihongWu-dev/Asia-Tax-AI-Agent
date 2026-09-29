@@ -12,6 +12,8 @@ from fastapi import Request
 from fastapi.responses import JSONResponse
 
 app = FastAPI(title="Asia Tax AI Agent — HK FSIE L0", version="0.1.0")
+from apps.api.auth import router as auth_router
+app.include_router(auth_router)
 app.include_router(router)
 app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost", "testserver"])
 

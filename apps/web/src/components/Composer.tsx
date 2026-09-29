@@ -1,5 +1,6 @@
+import HintButton from "./HintButton";
 import { useRef } from "react";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Square } from "lucide-react";
 import { useLocale } from "../locale";
 
 export default function Composer({
@@ -7,11 +8,13 @@ export default function Composer({
   onChange,
   onSend,
   busy = false,
+  onStop,
 }: {
   text: string;
   onChange: (text: string) => void;
   onSend: (text: string) => void;
   busy?: boolean;
+  onStop?: () => void;
 }) {
   const { t } = useLocale();
   const composing = useRef(false);
@@ -57,14 +60,14 @@ export default function Composer({
         <span className="key-hint">
           {t("Enter 发送")} · Shift + Enter {t("换行")}
         </span>
-        <button
+        {onStop ? <HintButton type="button" className="send-button" aria-label={t("停止生成")} onClick={onStop}><Square size={16} fill="currentColor" /></HintButton> : <HintButton
           type="submit"
           className="send-button"
           aria-label={t("发送消息")}
           disabled={busy || !text.trim()}
         >
           <ArrowUp size={19} />
-        </button>
+        </HintButton>}
       </div>
     </form>
   );
