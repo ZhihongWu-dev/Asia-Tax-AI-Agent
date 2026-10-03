@@ -1,0 +1,101 @@
+// Chinese source strings are stable keys; user-authored text is never translated.
+export const en: Record<string, string> = {
+  "上下文原文": "Surrounding source text",
+  "停止生成": "Stop generating",
+  "回到底部": "Back to bottom",
+  "退出登录": "Sign out",
+  "退出失败，请重试。": "Could not sign out. Please retry.",
+  新对话: "New chat",
+  案例导航: "Chat navigation",
+  关闭案例导航: "Close chat navigation",
+  打开案例导航: "Open chat navigation",
+  搜索对话: "Search chats",
+  最近对话: "Recent chats",
+  研究案例: "Research cases",
+  没有找到匹配的案例: "No matching chats",
+  法规资料库: "Source library",
+  "关于 Taxora": "About Taxora",
+  税务助手: "Tax assistant",
+  收起案例信息: "Close case details",
+  打开案例信息: "Open case details",
+  法规资料: "Sources",
+  案例信息: "Case details",
+  研究详情: "Research details",
+  "专业判断，请由税务顾问复核。":
+    "Professional judgments require adviser review.",
+  "让税务问题，更清晰。": "Clarity for your tax questions.",
+  "梳理事实，查阅依据，从一次对话开始。":
+    "Explore the facts and sources. Start a conversation.",
+  快捷问题: "Quick questions",
+  境外股息: "Foreign dividends",
+  梳理事实: "Organize facts",
+  查阅依据: "Explore sources",
+  "分析境外股息的 FSIE 处理，需要先确认哪些事实？":
+    "Which facts should we confirm before analyzing foreign dividends under FSIE?",
+  "帮我整理境外股息分析所需的案例事实和证据清单。":
+    "Help me organize the facts and evidence needed to analyze foreign dividends.",
+  "研究境外股息的 FSIE 处理，应当查阅哪些官方资料？":
+    "Which official sources should we consult when researching foreign dividends under FSIE?",
+  输入你的税务问题: "Enter your tax question",
+  "有什么税务问题？": "What is your tax question?",
+  "Enter 发送": "Enter to send",
+  换行: "New line",
+  发送消息: "Send message",
+  案例对话: "Case conversation",
+  分析服务尚未连接: "Analysis service is not connected",
+  "消息尚未发送，也未生成分析。你可以先整理案例信息。":
+    "Your message has not been sent and no analysis was generated. You can organize the case details first.",
+  整理案例信息: "Organize case details",
+  法规与来源: "Legislation & sources",
+  关闭详情: "Close details",
+  "记录已知事实，未知项可以留空。":
+    "Record known facts. Leave unknown fields blank.",
+  待补充: "Not yet provided",
+  纳税主体: "Taxpayer",
+  收入类型: "Income type",
+  金额: "Amount",
+  币种: "Currency",
+  所属期间: "Relevant period",
+  收取情况: "Receipt of income",
+  已汇入香港: "Remitted to Hong Kong",
+  尚未汇入香港: "Not remitted to Hong Kong",
+  用于抵销或清偿债务: "Used to offset or settle a debt",
+  不确定: "Not sure",
+  "仅保存在当前页面，刷新后清空。":
+    "Saved in this page only. Cleared on reload.",
+  保存事实: "Save facts",
+  "官方资料索引。请核对适用期间及最新版本。":
+    "Official source index. Check the applicable period and latest version.",
+  在官方网站阅读: "Read on the official website",
+  来源与版本: "Source & version",
+  资料清单记录日: "Manifest capture date",
+  知识覆盖截止: "Knowledge cutoff",
+  专业验证状态: "Professional validation",
+  尚未验证: "Unverified",
+  "税务研究与专业复核的工作空间。":
+    "A workspace for tax research and professional review.",
+  当前服务状态: "Service status",
+  "网页尚未接入分析服务，不会生成税务结论。":
+    "The analysis service is not connected. This page does not generate tax conclusions.",
+  数据与使用范围: "Data & scope",
+  "对话和事实仅在页面内存中保存，刷新后清空。当前仅用于内部研究，请勿输入真实客户或个人资料。":
+    "Chats and facts are stored in page memory and cleared on reload. For internal research only; do not enter real client or personal information.",
+  专业复核: "Professional review",
+  "规则尚待香港税务专家验证，研究资料不构成正式税务意见。":
+    "Rules await validation by Hong Kong tax experts. Research materials are not formal tax advice.",
+  键盘操作: "Keyboard shortcuts",
+  关闭面板: "Close panel",
+  "FSIE 制度概览": "FSIE overview",
+  "税务局 · 制度指引": "IRD · Guidance",
+  "香港税务局发布的制度介绍与相关资料。":
+    "An overview and related resources from the Hong Kong Inland Revenue Department.",
+  "《税务条例》第 112 章": "Inland Revenue Ordinance, Cap. 112",
+  "香港电子法例 · 法例": "Hong Kong e-Legislation · Statute",
+  "在官方法例中核对条文及适用版本。":
+    "Check the provisions and applicable version in the official legislation.",
+  "FSIE 常见问题": "FSIE frequently asked questions",
+  "税务局 · 常见问题": "IRD · FAQ",
+  "结合案例事实和所属期间阅读相关解答。":
+    "Read the answers alongside the case facts and relevant period.",
+  未记录: "Not recorded",
+};

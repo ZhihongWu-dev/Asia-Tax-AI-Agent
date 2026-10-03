@@ -1,0 +1,34 @@
+.brand-loader { --loader-size:48px; display:flex; align-items:center; gap:12px; color:#173f35; }
+.brand-loader-emblem { position:relative; width:var(--loader-size); height:var(--loader-size); display:grid; place-items:center; flex-shrink:0; isolation:isolate; }
+.brand-loader-halo { position:absolute; inset:0; z-index:-1; border-radius:38%; background:radial-gradient(circle,#d8e8da 0%,#eaf0e5 48%,transparent 72%); opacity:.7; animation:taxora-breathe 3.2s ease-in-out infinite; }
+.brand-loader-orbit { position:absolute; inset:3px; border:1px solid #90ad982e; border-radius:38%; transform:rotate(-12deg); animation:taxora-frame 6.4s ease-in-out infinite; }
+.brand-loader-emblem svg { position:relative; overflow:visible; }
+.brand-loader-emblem rect { transform-box:fill-box; transform-origin:center; animation:taxora-assemble 3.2s cubic-bezier(.45,0,.2,1) infinite; }
+.brand-loader-emblem rect:nth-child(1) { --tx:0px; --ty:-4px; }
+.brand-loader-emblem rect:nth-child(2) { --tx:0px; --ty:4px; animation-delay:-2.96s; }
+.brand-loader-emblem rect:nth-child(3) { --tx:-4px; --ty:0px; animation-delay:-2.72s; }
+.brand-loader-emblem rect:nth-child(4) { --tx:4px; --ty:0px; animation-delay:-2.48s; }
+.brand-loader-copy { display:flex; flex-direction:column; gap:10px; }
+.brand-loader-label { color:#657b6c; font-size:13px; line-height:1.6; }
+.brand-loader-page { --loader-size:120px; flex-direction:column; gap:24px; text-align:center; padding:32px; }
+.brand-loader-page .brand-loader-copy { gap:12px; }
+.brand-loader-wordmark { font-size:32px; line-height:1.2; letter-spacing:-1.4px; font-weight:400; }
+.brand-loader-wordmark strong { font-weight:700; }
+.brand-loader-page .brand-loader-orbit { inset:9px; border-radius:32%; }
+.brand-loader-page .brand-loader-label { letter-spacing:.04em; }
+@keyframes taxora-assemble {
+  0%,12%,82%,100% { transform:translate(0,0); opacity:1; }
+  38% { transform:translate(var(--tx),var(--ty)); opacity:.45; }
+  65% { transform:translate(0,0); opacity:1; }
+}
+@keyframes taxora-breathe {
+  0%,100% { transform:scale(.9); opacity:.5; }
+  50% { transform:scale(1.12); opacity:.95; }
+}
+@keyframes taxora-frame {
+  0%,100% { transform:rotate(-12deg) scale(.96); opacity:.55; }
+  50% { transform:rotate(12deg) scale(1.03); opacity:1; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .brand-loader *, .brand-loader-emblem rect { animation:none!important; }
+}

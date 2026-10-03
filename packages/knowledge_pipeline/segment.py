@@ -112,6 +112,9 @@ def segment_html(html_bytes: bytes, source_id: str) -> list[UnitDraft]:
     for chrome in root.select("div.content-title-div, .breadcrumb, #pagination"):
         chrome.decompose()
 
+    if source_id.startswith('hk_ird_advance_'):
+        return _segment_ruling(root, source_id)
+
     seen: set[str] = set()
     blocks: list[str] = []
     for el in root.find_all(["p", "li", "td", "h2", "h3", "h4"]):
@@ -145,6 +148,52 @@ def segment_html(html_bytes: bytes, source_id: str) -> list[UnitDraft]:
                 heading=heading,
             )
         )
+    return drafts
+
+
+def _segment_ruling(root, source_id: str) -> list[UnitDraft]:
+    """Keep the numbered IRD sections, including short dates and applicability.
+
+    Whole table text is collected once; nested rows are not duplicated. The
+    published ruling is separate from facts so retrieval can label its role.
+    """
+    headings = [p for p in root.find_all('p') if re.match(r'^\d+\.\s+\S', _clean(p.get_text(' ')))]
+    drafts = []
+    if not headings:
+        for cell in root.find_all('td'):
+            label = _clean(cell.get_text(' '))
+            if not re.fullmatch(r'\d+\.', label):
+                continue
+            row = cell.find_parent('tr')
+            table = cell.find_parent('table')
+            if row is None or table is None:
+                continue
+            title = _clean(row.get_text(' '))
+            parts = [_clean(r.get_text(' ')) for r in row.next_siblings
+                     if getattr(r, 'name', None) == 'tr']
+            body = '\n'.join(p for p in parts if p)
+            if body:
+                number = int(label[:-1])
+                drafts.append(UnitDraft(unit_ref=f'{source_id}:section{number}',
+                                        unit_type='ruling_block', ordinal=number,
+                                        heading=title, text=body))
+    for heading in headings:
+        title = _clean(heading.get_text(' '))
+        number = re.match(r'^(\d+)\.', title).group(1)
+        parts = []
+        for sibling in heading.next_siblings:
+            if getattr(sibling, 'name', None) is None:
+                continue
+            if sibling.name == 'p' and re.match(r'^\d+\.\s+\S', _clean(sibling.get_text(' '))):
+                break
+            text = _clean(sibling.get_text(' '))
+            if text and not any(marker in text.lower() for marker in _BOILERPLATE_MARKERS):
+                parts.append(text)
+        if parts:
+            drafts.append(UnitDraft(unit_ref=f'{source_id}:section{number}', unit_type='ruling_block',
+                                    ordinal=int(number), heading=title, text='\n'.join(parts)))
+    if not drafts:
+        raise ValueError('Expected numbered IRD ruling sections were not found')
     return drafts
 
 

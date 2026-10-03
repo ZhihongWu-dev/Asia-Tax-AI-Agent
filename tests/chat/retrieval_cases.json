@@ -1,0 +1,25 @@
+{
+  "description": "Explicit-reference and natural-language retrieval checks. Targets identify source locations, not expert-approved tax applicability. No model calls required.",
+  "cases": [
+    {"id":"R01","query":"请查第15K条和第15M条", "expected_locators":["s.15K(1)","s.15M(1)"]},
+    {"id":"R02","query":"纯股权实体和外包：s.15K(2)(a) 与 s.15K(3)", "expected_locators":["s.15K(2)","s.15K(3)"]},
+    {"id":"R03","query":"Compare sections 15H(5) and 15H(6) and 15H(7)", "expected_locators":["s.15H(5)","s.15H(6)","s.15H(7)"]},
+    {"id":"R04","query":"第15M（1）条及第15M（2）条", "expected_locators":["s.15M(1)","s.15M(2)"]},
+    {"id":"R05","query":"section 15K", "expected_locators":["s.15K(1)","s.15K(2)","s.15K(3)"]},
+    {"id":"R06","query":"Case 68", "expected_units":["hk_ird_advance_68:section7"]},
+    {"id":"R07","query":"Case 68 与 s.15K(3)", "expected_sources":["hk_ird_advance_68"],"expected_locators":["s.15K(3)"]},
+    {"id":"R08","query":"第15Z(9)条", "expect_empty":true},
+    {"id":"R09","query":"Case 999999", "expect_empty":true},
+    {"id":"R10","query":"s.15K(2) 和 s.15K(2) 以及 s.15K(3)", "expected_locators":["s.15K(2)","s.15K(3)"]},
+    {"id":"N01","query":"纯股权持有实体经济实质要求和外包条件", "expected_locators":["s.15K(2)","s.15K(3)"]},
+    {"id":"N02","query":"participation exemption holding period", "expected_locators":["s.15M(1)","s.15M(2)"]},
+    {"id":"N03","query":"股息留在境外银行账户没有汇回香港", "expected_locators":["s.15H(5)","s.15H(6)","s.15H(7)"]},
+    {"id":"N04","query":"economic substance outsourcing", "expected_locators":["s.15K(2)","s.15K(3)"]},
+    {"id":"N05","query":"内地个人所得税股息税率", "expect_empty":true},
+    {"id":"N06","query":"新加坡公司境外股息免税", "expect_empty":true},
+    {"id":"N07","query":"weather forecast tomorrow", "expect_empty":true},
+    {"id":"N08","query":"香港FSIE范围是什么", "expected_locators":["s.15H(1)","s.15I(1)","s.15I(3)"]},
+    {"id":"N09","query":"香港股息境外税收抵免", "expected_locators":["s.15N(5)"]},
+    {"id":"N10","query":"香港FSIE主要目的反滥用", "expected_locators":["s.15N(4)"]}
+  ]
+}

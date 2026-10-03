@@ -64,3 +64,20 @@ def test_domain_allowlist_blocks_foreign_hosts():
     _check_domain("https://www.ird.gov.hk/eng/tax/bus_fsie.htm", allowed)
     with pytest.raises(FetchError):
         _check_domain("https://evil.example.com/x", allowed)
+
+
+@pytest.mark.parametrize('layout', ['paragraph', 'table'])
+def test_ruling_keeps_short_dates_periods_and_nested_rows_once(layout):
+    body = '<table><tr><td>Unique nested fact.</td></tr></table>'
+    if layout == 'paragraph':
+        html = '<div id="content"><p>2. Background</p>' + body + '<p>5. Period</p><p>2023/24</p><p>7. Date</p><p>12 September 2023</p></div>'
+    else:
+        html = '<div id="content">' + ''.join(
+            f'<table><tbody><tr><td>{n}.</td><td>{title}</td></tr><tr><td></td><td>{text}</td></tr></tbody></table>'
+            for n, title, text in [(2, 'Background', body), (5, 'Period', '2023/24'), (7, 'Date', '12 September 2023')]
+        ) + '</div>'
+    units = segment_html(html.encode(), 'hk_ird_advance_72')
+    assert [u.ordinal for u in units] == [2, 5, 7]
+    assert units[0].text.count('Unique nested fact.') == 1
+    assert units[1].text == '2023/24'
+    assert units[2].text == '12 September 2023'
