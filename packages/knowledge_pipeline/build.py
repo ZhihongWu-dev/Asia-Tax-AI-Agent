@@ -54,6 +54,7 @@ def _upsert_source(session: Session, entry: dict) -> Source:
     source.source_type = entry.get("source_type")
     source.url = entry["url"]
     source.structured_data_url = entry.get("structured_data_url")
+    source.jurisdiction = entry.get("jurisdiction", "HK")
     source.language = entry.get("language", "en")
     source.manifest_sha256 = entry.get("content_sha256")
     source.content_bytes = entry.get("content_bytes")
