@@ -1,8 +1,8 @@
 """Thin OpenAI-compatible chat client (stdlib only) with strict-JSON support.
 
-L0 governance (PRD s.3.3 / decision gate 2026-08-31): only synthetic data
-may be sent to any model; keys live in .env (git-ignored), never in code,
-logs, or committed files.
+L0 case data remains synthetic. On 2026-10-03 the user authorized public HK
+official manifest excerpts for DeepSeek summaries, excluding real customer
+data. Keys live in .env (git-ignored), never in code, logs, or committed files.
 """
 
 from __future__ import annotations
@@ -67,6 +67,11 @@ class ModelError(RuntimeError):
     pass
 
 
+def structured_options(config: ModelConfig) -> dict:
+    """Bounded extraction/summarization uses DeepSeek's documented non-thinking mode."""
+    return {'thinking': {'type': 'disabled'}} if config.model_name.startswith('deepseek-') else {}
+
+
 class OpenAICompatibleClient:
     """Minimal chat-completions client. JSON-mode helper strips code fences."""
 
@@ -83,6 +88,7 @@ class OpenAICompatibleClient:
                 {"role": "user", "content": user},
             ],
         }
+        payload.update(structured_options(self.config))
         body = self._post("/chat/completions", payload)
         try:
             return body["choices"][0]["message"]["content"] or ""

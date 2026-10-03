@@ -27,6 +27,7 @@ export type Message = {
   research?: KnowledgeResult;
 };
 export type Passage = {
+  context?: Passage[];
   unit_id: string;
   source_id: string;
   locator: string | null;

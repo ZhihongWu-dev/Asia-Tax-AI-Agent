@@ -16,6 +16,7 @@ export default function Passages({ passages }: { passages: Passage[] }) {
             <p className="passage-warning">{t("来源内容已变化，待核对。")}</p>
           )}
           <blockquote>{p.text}</blockquote>
+          {!!p.context?.length && <details><summary>{t("上下文原文")}</summary><Passages passages={p.context} /></details>}
           {p.url && (
             <a href={p.url} target="_blank" rel="noopener noreferrer">
               {t("在官方网站阅读")}

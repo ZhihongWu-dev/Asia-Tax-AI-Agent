@@ -1,5 +1,6 @@
 // Chinese source strings are stable keys; user-authored text is never translated.
 export const en: Record<string, string> = {
+  "上下文原文": "Surrounding source text",
   "停止生成": "Stop generating",
   "回到底部": "Back to bottom",
   "退出登录": "Sign out",
