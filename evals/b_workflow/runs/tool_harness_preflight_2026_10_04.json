@@ -1,0 +1,35 @@
+{
+  "started_at": "2026-10-04T07:16:07.992869+00:00",
+  "dataset_version": "b-tool-harness-0.1",
+  "dataset_sha256": "e214103adbc7b8acd0543a724cb620b5a56c2e9234041fe910e411efe4971b35",
+  "layer": "M-model/D-knowledge/API",
+  "provider": "openrouter",
+  "harness_mode": "tools",
+  "status": "blocked",
+  "results": [
+    {
+      "id": "BWF-TOOLS-001",
+      "name": "工具循环 search_law 与 search_cases",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-TOOLS-002",
+      "name": "工具循环 search_law 与 search_guidance",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    }
+  ],
+  "model_calls": [],
+  "sources": [
+    {
+      "path": "docs/implementation/B_TOOL_HARNESS_DESIGN.md",
+      "kind": "local_engineering_spec"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 0,
+    "blocked": 2
+  }
+}

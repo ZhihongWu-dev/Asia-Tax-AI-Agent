@@ -82,6 +82,26 @@ def test_evaluation_replays_actual_api_without_another_model_request(tmp_path):
     assert result['status']=='failed' and 'dividend_amount' in result['steps'][0]['checks_failed'][0]
 
 
+def test_production_tool_prompt_and_loop_through_evaluation_api(tmp_path):
+    spec = evaluation.load_dataset(evaluation.ROOT / 'evals/b_workflow/v0.1/tool_harness.json')['cases'][0]
+    config = evaluation.ModelConfig('https://openrouter.ai/api/v1', 'fixture', 'qwen/fixture:free', max_retries=0)
+    meter = evaluation.Meter(config, max_calls=4, interval=0)
+    # Only replace the HTTP model response, retaining prompts, parser, graph,
+    # tool guards, API and persistent reload. This is an engineering test.
+    responses = iter([
+        parsed('research', query='香港境外股息FSIE', uses_case=False),
+        {'tool': 'search_law', 'query': '香港境外股息FSIE'},
+        {'tool': 'search_cases', 'query': '香港境外股息FSIE'},
+        {'tool': 'finish', 'query': ''},
+    ])
+    meter.original = lambda *_: {'choices': [{'finish_reason': 'stop', 'message': {'content': json.dumps(next(responses))}}]}
+    with patch('packages.chat.service.current_model_config', return_value=config), patch.object(
+        evaluation.OpenAICompatibleClient, '_post', lambda c,p,b: meter.call(c,p,b)):
+        result = evaluation.run_case(spec, config, meter, str(tmp_path), harness_mode='tools')
+    assert result['status'] == 'passed'
+    assert [c['stage'] for c in meter.calls] == ['plan_turn', 'plan_tool', 'plan_tool', 'plan_tool']
+
+
 @pytest.mark.parametrize('quote,value,accepted', [
     ('金额刚才说错了，应为200万港币',2000000,True),
     ('金额刚才说错了，应为200万港币',200,False),

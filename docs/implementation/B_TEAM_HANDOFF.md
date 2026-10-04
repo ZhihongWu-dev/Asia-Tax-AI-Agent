@@ -119,13 +119,13 @@ flowchart TD
 
 必需字段为 intent/reply/facts/query；可选 action、corrections、uses_case、task_kind、tasks。香港任务地区代码为 HK；topic 只在明确时写 dividend/fsie，资料类型 ruling/case 不充当主题。Prompt 要明确：仅提取本轮真实陈述；未知不等于否定；日期不猜；描述不推出资格；禁止 expert_decision_status 等控制字段；事实更正与查询混合时先处理变化。
 
-**检索后调度 Prompt**：`packages/agent/harness.py::plan_next`。当前主要用于第一次 no_match 后的一次范围内改写；输入只有任务、query、允许动作、结果元数据和剩余预算，输出：
+**检索后调度 Prompt**：`packages/agent/harness.py::plan_next`。默认 rewrite 模式用于第一次 no_match 后的一次范围内改写；输入只有任务、query、允许动作、结果元数据和剩余预算，输出：
 
 ```json
 {"action":"lookup_reference","query":"香港 FSIE 股息 Case 68 裁定"}
 ```
 
-动作白名单为 finish/lookup_reference/prepare_analysis，仍由程序检查；当前图中的动态执行主要落在查询改写，不等于通用全自主 Agent。原地区、年份、编号、事实和访问身份必须保留。原文不得进入调度观察。
+动作白名单为 finish/lookup_reference/prepare_analysis，仍由程序检查；rewrite 模式主要用于查询改写；新增 tools 模式由 plan_tool 选择业务工具，具体见下方补充。两种模式均不等于无边界全自主 Agent。原地区、年份、编号、事实和访问身份必须保留。原文不得进入调度观察。
 
 **历史案件提取**：`packages/intake/extraction.py` 支持结构化候选字段和有限格式修复，属于已有 CLI 提取路径，不是文件上传接口。研究答复的 compose 当前是可核验摘录模板，不存在“模型生成法律综合结论”的已验收节点。
 
@@ -298,3 +298,13 @@ FSIE_TEST_API_PORT=8011 FSIE_TEST_WEB_PORT=5184 FSIE_TEST_PYTHON=../../.venv/bin
 ### 本次上游兼容记录
 
 B 分支合入 A 的 `a2ccacc`（Zhihong-Wu）：保留内地股息资料目录、资料定位/上下文检索、引用展示和回答生成器单元测试。内地目录存在不代表 B 已支持内地股息案件分析。消息接口继续采用 B 的统一准备/提交流程，校验完成才发送 SSE done；中途取消不保存消息。无事实的 intake 可以进入必要澄清，不能一律降为普通聊天。A 的回答生成器保留为后续接入能力，当前主链没有绕过 B 的资料许可检查调用它。
+
+## 自由对话工具循环补充
+
+详见 [开源方案选择与实现](B_TOOL_HARNESS_DESIGN.md)。新增 `tools.py` 能力目录、`ToolDecision` 参数契约与 `tool_harness.py` 的 LangGraph plan/execute 循环。自由业务对话支持 read_case_facts、check_fact_gaps、search_law、search_guidance、search_cases、prepare_analysis；结束为 finish。检索实际通过同一 KnowledgeProvider，仅类型参数不同。
+
+三个开关须同时设置为 hybrid、dynamic_planner=true、harness_mode=tools。默认保留 rewrite。普通聊天、固定快捷入口、已有追问、明确部分许可等按原流程；意图识别已经形成的明确多任务队列直接执行一次，避免第二个规划器重复处理。新循环不是任意 SQL、联网浏览、文件读取或自动审批 Agent。
+
+规划器只看任务、字段名、调用记录和结果元数据，不接收证据原文；实际执行前校验允许动作、查询范围与签名去重，调用后继续观察或停止。JSON/SSE 共用原准备/提交路径。tools 模式可回滚，无新增框架依赖或 MCP 协议。
+
+新增 31 项工具循环工程检查和一项生产 Prompt/解析器/API 评测程序的模拟传输检查。覆盖多工具、只读、重复、越权、编号/期间、权限、分析准入、共享预算及故障后保留结果。在线新增两条工具选择脚本；2026-10-04 预检为 2 blocked、0 次模型调用，原因是当前私有环境没有 OpenRouter 密钥。不能作为在线通过证据。

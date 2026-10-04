@@ -6,6 +6,7 @@ export const workflow: Record<string, [string, string]> = {
   "error:question_changed": ["待答问题已变化，请刷新后继续。", "The pending question changed. Reload to continue."],
   "error:task_focus_required": ["已有暂停任务，请先恢复或完成当前任务。", "A task is already suspended. Resume it or finish the current task first."],
   "error:execution_budget_exhausted": ["本轮执行预算已用尽，请稍后继续。", "This run reached its execution budget. Continue later."],
+  "error:tool_failed": ["本次操作未完成，请稍后重试。", "The operation could not be completed. Please retry."],
   "当前任务的信息缺口": ["当前任务的信息缺口", "Information gaps for this task"],
   "已按现有信息生成部分研究稿，以下缺口仍未解决。": [
     "已按现有信息生成部分研究稿，以下缺口仍未解决。",

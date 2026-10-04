@@ -28,6 +28,9 @@ export type WorkflowInfo = {
   task_results?: { kind: string; status: string; reason_code: string; query?: string }[];
   error_code?: string;
   retryable?: boolean;
+  harness_version?: string;
+  harness_stop?: string;
+  tool_calls?: { tool: string; status: string; reason_code: string | null; query?: string; duration_ms?: number }[];
 };
 export type EntryHint = "auto" | "dividend_consultation" | "fact_intake" | "reference_lookup";
 export type BusinessTask = { id: string; kind: "consultation" | "fact_intake" | "reference_lookup";

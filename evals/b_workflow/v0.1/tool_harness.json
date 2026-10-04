@@ -1,0 +1,87 @@
+{
+  "version": "b-tool-harness-0.1",
+  "status": "engineering_expectations_pending_live",
+  "notice": "仅用于工具选择验收，Mock 原文不是税务依据。真实模型尚未运行。",
+  "sources": [
+    {
+      "path": "docs/implementation/B_TOOL_HARNESS_DESIGN.md",
+      "kind": "local_engineering_spec"
+    }
+  ],
+  "cases": [
+    {
+      "id": "BWF-TOOLS-001",
+      "name": "工具循环 search_law 与 search_cases",
+      "synthetic": true,
+      "smoke": true,
+      "seed_facts": {},
+      "mock": "MOCK-01",
+      "steps": [
+        {
+          "op": "message",
+          "text": "请为香港境外股息FSIE研究分别检索法律条文和参考裁定，列出对应来源。只做这项资料查询，不分析我的案件。",
+          "expect": {
+            "facts_empty": true,
+            "no_analysis": true,
+            "tools": [
+              "search_law",
+              "search_cases"
+            ],
+            "harness_stop": "finished",
+            "search_min": 2,
+            "search_max": 2,
+            "independent_search": true
+          }
+        },
+        {
+          "op": "reload",
+          "expect": {
+            "no_new_calls": true,
+            "tools": [
+              "search_law",
+              "search_cases"
+            ],
+            "harness_stop": "finished"
+          }
+        }
+      ]
+    },
+    {
+      "id": "BWF-TOOLS-002",
+      "name": "工具循环 search_law 与 search_guidance",
+      "synthetic": true,
+      "smoke": true,
+      "seed_facts": {},
+      "mock": "MOCK-01",
+      "steps": [
+        {
+          "op": "message",
+          "text": "请为香港境外股息FSIE研究分别检索法律条文和官方指引，列出对应来源。只做这项资料查询，不分析我的案件。",
+          "expect": {
+            "facts_empty": true,
+            "no_analysis": true,
+            "tools": [
+              "search_law",
+              "search_guidance"
+            ],
+            "harness_stop": "finished",
+            "search_min": 2,
+            "search_max": 2,
+            "independent_search": true
+          }
+        },
+        {
+          "op": "reload",
+          "expect": {
+            "no_new_calls": true,
+            "tools": [
+              "search_law",
+              "search_guidance"
+            ],
+            "harness_stop": "finished"
+          }
+        }
+      ]
+    }
+  ]
+}

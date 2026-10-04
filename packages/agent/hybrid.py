@@ -42,9 +42,11 @@ def requested_analysis(text):
 
 
 class HybridWorkflow(TurnWorkflow):
-    def __init__(self, provider, turner, analyzer, dynamic=False, planner=None):
+    def __init__(self, provider, turner, analyzer, dynamic=False, planner=None,
+                 harness_mode='rewrite', tool_planner=None):
         self.original_provider, self.original_turner = provider, turner
         self.analyzer, self.dynamic = analyzer, dynamic
+        self.harness_mode, self.tool_planner = harness_mode, tool_planner
         from packages.agent.harness import plan_next
         self.planner = planner or plan_next
         self.graph = self.build_graph()
@@ -72,25 +74,44 @@ class HybridWorkflow(TurnWorkflow):
             child.add_edge('execute', END)
             parent.add_node(kind, child.compile())
         parent.add_node('observe', self.timed('observe', self.observe))
+        parent.add_node('tool_harness', self.timed('tool_harness', self.run_tools))
         parent.add_node('validate', self.timed('validate', self.validate))
         parent.add_edge(START, 'route')
         parent.add_edge('route', 'facts')
         parent.add_conditional_edges('facts', self.path)
         for kind in ('consultation', 'fact_intake', 'reference_lookup'):
             parent.add_edge(kind, 'observe')
+        parent.add_edge('tool_harness', 'observe')
         parent.add_conditional_edges('observe', lambda s: s['next_action'])
         parent.add_edge('validate', END)
         return parent.compile()
 
-    @staticmethod
-    def path(state):
+    def path(self, state):
         if state['turn'].get('action') == 'summary':
             return 'validate'
         if state['turn']['intent'] in ('chat', 'clarify', 'unsupported') or state['turn'].get('action') in ('pause', 'new_case'):
             return 'validate'
         if state.get('question') and state['turn']['intent'] != 'research':
             return 'validate'
+        if (self.dynamic and self.harness_mode == 'tools' and state['entry_hint'] == 'auto'
+                and state['turn'].get('action', 'continue') in ('continue', 'resume', 'retry_research')):
+            return 'tool_harness'
         return state['job']['kind']
+
+    def run_tools(self, state):
+        from packages.agent.tool_harness import ToolHarness
+        from packages.agent.analysis_policy import analysis_eligibility
+        # The router may already have decomposed an explicit multi-task request.
+        # Execute that queue once; do not let another planner duplicate its jobs.
+        if state['orchestration'].get('queued_tasks'):
+            return self.execute(state)
+        # Missing scope and analysis preconditions use the same established
+        # clarification/status messages, rather than asking a planner to override.
+        if requested_analysis(state['text']) and (state['patch'] or analysis_eligibility(self.projected(state))):
+            return self.execute(state)
+        if state['job'].get('query') and self.scope(state, state['job']) != 'HK':
+            return self.execute(state)
+        return ToolHarness(self, self.tool_planner).invoke(state)
 
     def invoke(self, doc, text, owner, request_id, turn=None, entry_hint='auto'):
         self.budget = RunBudget()
@@ -256,6 +277,7 @@ class HybridWorkflow(TurnWorkflow):
                 jurisdiction='HK', topic='dividend', applicable_date=when, date_status=date_status,
                 intent='case_analysis' if uses_case else 'reference_lookup', income_type=facts.get('income_type'),
                 entity_type=facts.get('recipient_type') if facts.get('recipient_type') in ('company', 'individual', 'unknown') else 'not_needed',
+                kind=job.get('tool_kind', 'all'),
                 fact_filters=[{'field_name': k, 'value': facts[k]} for k in
                     ('income_type', 'source_analysis', 'entity_hk_business_status', 'receipt_location', 'recipient_type')
                     if isinstance(facts.get(k), str) and facts[k] not in ('unknown', 'conflict')])
@@ -315,6 +337,8 @@ class HybridWorkflow(TurnWorkflow):
                 'failed' if meta['status'] == 'partial_failure' else 'blocked_gap' if meta['status'] in ('paused_gap', 'unsupported') else 'completed'
         if q or state.get('analysis_result') or meta.get('error_code'):
             return {'next_action': 'validate', 'orchestration': control}
+        if meta.get('harness_stop') not in (None, 'finished', 'waiting_user', 'analysis_ready'):
+            return {'next_action': 'validate', 'orchestration': control}
         if queued and self.budget.remaining() > 0 and self.budget.counts.get('action', 0) < self.budget.action_limit:
             job = queued.pop(0)
             control['active_task'] = task_state.new_task(job['kind'], job['uses_case'])
@@ -322,7 +346,7 @@ class HybridWorkflow(TurnWorkflow):
                 return {'next_action': 'validate', 'orchestration': {**control, 'queued_tasks': [job] + queued}}
             return {'job': job, 'orchestration': control, 'next_action': job['kind']}
         reason = state.get('research', {}).get('reason_code') if state.get('research') else None
-        if not self.dynamic or reason != 'no_match' or state['rewrite_count'] or meta['status'] == 'unsupported':
+        if meta.get('harness_version') or not self.dynamic or reason != 'no_match' or state['rewrite_count'] or meta['status'] == 'unsupported':
             return {'next_action': 'validate', 'orchestration': control}
         observation = {'latest_user_message': state['text'], 'query': state['turn']['query'],
             'allowed_actions': ['finish', 'lookup_reference'], 'result': {'reason_code': reason, 'evidence_count': 0},
@@ -361,10 +385,12 @@ class HybridWorkflow(TurnWorkflow):
             # A rewrite supersedes its earlier no-match result; unrelated tasks retain theirs.
             latest = {}
             for item, answer in zip(state['task_results'], state['answers']):
-                latest[item['task_id']] = answer
+                latest[item.get('tool_call_id', item['task_id'])] = answer
             turn['reply'] = '\n\n'.join(latest.values())
         if meta.get('reason_code') == 'planner_failed':
             turn['reply'] += '\n后续调度失败，以上为已校验的结果；可重试未完成查询。'
+        elif meta.get('harness_stop') not in (None, 'finished', 'waiting_user', 'analysis_ready'):
+            turn['reply'] += '\n本轮工具调度已停止，以上为已校验的结果；未完成事项需继续处理。'
         if meta.get('pending_tasks'):
             turn['reply'] += '\n还有未完成的后续任务，已保留进度；补充当前信息或明确继续后再推进。'
         control = deepcopy(state['orchestration'])

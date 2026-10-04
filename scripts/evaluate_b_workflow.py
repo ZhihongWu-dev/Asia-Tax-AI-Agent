@@ -42,7 +42,7 @@ OPS = {'message','reload','provider','edit','confirm','analyze','review','replay
 EXPECT_KEYS = {'error','kind','task','facts_empty','facts','facts_absent','question_present',
     'question_field','question_kind','no_analysis','analysis_count','review_pending','reason',
     'status','search_min','search_max','query_contains','independent_search','no_passages',
-    'messages_count','no_new_calls','forbidden','answer_contains','answer_contains_any'}
+    'messages_count','no_new_calls','forbidden','answer_contains','answer_contains_any','tools','harness_stop'}
 
 
 def load_dataset(path=DATASET):
@@ -112,7 +112,7 @@ class Meter:
         if delay > 0:
             time.sleep(delay)
         self.last_started = time.monotonic()
-        stage = next((f.function for f in inspect.stack() if f.function in ('plan_turn', 'plan_next', 'extract_facts')), 'other')
+        stage = next((f.function for f in inspect.stack() if f.function in ('plan_turn', 'plan_next', 'plan_tool', 'extract_facts')), 'other')
         record = {'index': len(self.calls)+1, 'status': 'started', 'stage': stage}
         self.calls.append(record)
         try:
@@ -144,6 +144,11 @@ def check(expect, doc, outcome, new_searches, call_delta):
     msg = doc.get('messages', [])[-1] if doc.get('messages') else {}
     question = msg.get('question') or {}
     workflow = doc.get('workflow', {})
+    if 'tools' in expect:
+        actual_tools = [c['tool'] for c in workflow.get('tool_calls', []) if c['status'] not in ('rejected', 'failed')]
+        require(actual_tools == expect['tools'], f'Tool sequence expected={expect["tools"]} actual={actual_tools}')
+    if 'harness_stop' in expect:
+        require(workflow.get('harness_stop') == expect['harness_stop'], 'Harness stop differs')
     for key, value in expect.get('facts', {}).items():
         require(facts.get(key) == value, f'fact {key} expected={value!r} actual={facts.get(key)!r}')
     for key in expect.get('facts_absent', []):
@@ -204,10 +209,10 @@ def request(client, path, body=None, method='post', sse=False):
     return {}, response.json()
 
 
-def run_case(spec, config, meter, directory):
+def run_case(spec, config, meter, directory, harness_mode='rewrite'):
     store = ChatStore(f'sqlite:///{directory}/{spec["id"]}.sqlite')
     provider = RecordingProvider(spec['mock'])
-    service = ChatService(store, provider=provider, orchestration='hybrid', dynamic_planner=True)
+    service = ChatService(store, provider=provider, orchestration='hybrid', dynamic_planner=True, harness_mode=harness_mode)
     # These are the only substitutes: synthetic authentication and unfinished C retrieval.
     # Model turner and planner remain production implementations.
     saved = dict(app.dependency_overrides)
@@ -298,6 +303,7 @@ def main(argv=None):
     parser.add_argument('--suite',choices=['smoke','full'],default='smoke')
     parser.add_argument('--select',help='Comma-separated script IDs')
     parser.add_argument('--dataset',type=Path,default=DATASET)
+    parser.add_argument('--harness-mode',choices=['rewrite','tools'],default='rewrite')
     parser.add_argument('--validate-only',action='store_true')
     parser.add_argument('--provider',choices=['openrouter','existing-plan'],default='openrouter')
     parser.add_argument('--env-file',type=Path,default=ROOT/'.env')
@@ -317,7 +323,7 @@ def main(argv=None):
         if len(selected)!=len(ids): parser.error('Unknown script ID')
     report=dict(started_at=datetime.now(timezone.utc).isoformat(), dataset_version=data['version'],
         dataset_sha256=hashlib.sha256(args.dataset.read_bytes()).hexdigest(), layer='M-model/D-knowledge/API',
-        provider=args.provider, status='blocked', results=[], model_calls=[], sources=data['sources'])
+        provider=args.provider, harness_mode=args.harness_mode, status='blocked', results=[], model_calls=[], sources=data['sources'])
     if args.validate_only:
         print(json.dumps({'dataset_valid':True, 'scripts':len(data['cases']), 'selected':len(selected),
                           'steps':sum(len(c['steps']) for c in data['cases']), 'live_calls':0}))
@@ -371,7 +377,7 @@ def main(argv=None):
                 result=dict(id=spec['id'],name=spec['name'],status='blocked',reason='request_cap')
             else:
                 try:
-                    result=run_case(spec,config,meter,directory)
+                    result=run_case(spec,config,meter,directory,args.harness_mode)
                 except Exception as exc:
                     result=dict(id=spec['id'],name=spec['name'],status='failed',reason=type(exc).__name__)
             report['results'].append(result)

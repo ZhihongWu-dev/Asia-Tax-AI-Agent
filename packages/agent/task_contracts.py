@@ -40,6 +40,7 @@ class NextAction(BaseModel):
 class OrchestrationSettings(BaseSettings):
     orchestration: Literal['legacy', 'hybrid'] = 'legacy'
     dynamic_planner: bool = False
+    harness_mode: Literal['rewrite', 'tools'] = 'rewrite'
     model_config = SettingsConfigDict(env_prefix='FSIE_AGENT_', env_file=ROOT / '.env', extra='ignore')
 
 

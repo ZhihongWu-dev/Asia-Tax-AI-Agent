@@ -228,7 +228,7 @@ def public(doc: dict) -> dict:
 
 class ChatService:
     def __init__(self, store: ChatStore, extractor=None, analyzer=analyze, researcher=None, turner=plan_turn, provider=None,
-                 orchestration=None, dynamic_planner=None, planner=None):
+                 orchestration=None, dynamic_planner=None, planner=None, harness_mode=None, tool_planner=None):
         self.store, self.extractor, self.analyzer, self.researcher = store, extractor, analyzer, researcher
         self.turner = turner
         from packages.agent.task_contracts import OrchestrationSettings
@@ -236,6 +236,10 @@ class ChatService:
         self.orchestration = orchestration or settings.orchestration
         self.dynamic_planner = settings.dynamic_planner if dynamic_planner is None else dynamic_planner
         self.planner = planner
+        self.harness_mode = harness_mode or settings.harness_mode
+        if self.harness_mode not in ('rewrite', 'tools'):
+            raise ValueError('Invalid harness mode')
+        self.tool_planner = tool_planner
         from packages.agent.providers import configured_provider, LegacyKnowledgeProvider
         self.provider = provider if provider is not None else (LegacyKnowledgeProvider(researcher) if researcher else configured_provider())
 
@@ -299,7 +303,8 @@ class ChatService:
         if self.orchestration == 'hybrid':
             from packages.agent.hybrid import HybridWorkflow
             return HybridWorkflow(self.provider, self.turner if self.extractor is None else route,
-                                  self.analyzer, self.dynamic_planner, self.planner).invoke(
+                                  self.analyzer, self.dynamic_planner, self.planner,
+                                  self.harness_mode, self.tool_planner).invoke(
                                       doc, text, owner, request_id, turn, entry_hint)
         from packages.agent.task_state import legacy_projection
         legacy_doc, paused = legacy_projection(doc)

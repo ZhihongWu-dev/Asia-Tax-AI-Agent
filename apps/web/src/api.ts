@@ -13,6 +13,7 @@ export function isRetryable(code: string) {
     "service_unavailable",
     "storage_unavailable",
     "knowledge_unavailable",
+    "tool_failed",
   ].includes(code);
 }
 export async function request<T>(
