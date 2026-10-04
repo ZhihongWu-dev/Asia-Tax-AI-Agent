@@ -46,7 +46,7 @@ export async function request<T>(
   }
 }
 export const api = {
-  stream: async (doc: Case, text: string, approved: boolean, requestId: string, signal: AbortSignal, delta: (text: string) => void,
+  stream: async (doc: Case, text: string, approved: boolean, requestId: string, signal: AbortSignal, delta: (text: string, reset?: boolean) => void,
                  entryHint: EntryHint = "auto", replyToQuestionId: string | null = null): Promise<Case> => {
     const response = await fetch(`/api/cases/${doc.id}/messages`, {
       method: "POST", credentials: "same-origin", signal: AbortSignal.any([signal, AbortSignal.timeout(100000)]),
@@ -74,6 +74,7 @@ export const api = {
             if (!line.startsWith("data: ")) continue;
             const event = JSON.parse(line.slice(6));
             if (event.type === "delta") delta(event.text);
+            if (event.type === "reset") delta("", true);
             if (event.type === "error") throw new ApiError(event.code);
             if (event.type === "done") return event.case as Case;
           }

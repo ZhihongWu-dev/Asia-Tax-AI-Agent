@@ -88,3 +88,55 @@ def test_disconnection_during_retrieval_never_commits(tmp_path):
         assert store.get('a', doc['id'])['messages'] == []
     finally:
         store.engine.dispose()
+
+
+def test_retry_resets_partial_answer_before_second_attempt(monkeypatch):
+    attempts = []
+    async def one(*_):
+        attempts.append(1)
+        if len(attempts) == 1:
+            yield {'type': 'delta', 'text': 'incomplete'}
+            raise WorkflowError('model_failed')
+        yield {'type': 'turn', 'turn': {'intent': 'chat', 'reply': 'Complete', 'facts': {}, 'query': ''}}
+    monkeypatch.setattr(streaming, '_model_turn_once', one)
+    async def run():
+        return [e async for e in streaming.model_turn({}, 'hello')]
+    events = asyncio.run(run())
+    assert [e['type'] for e in events] == ['delta', 'reset', 'turn']
+    assert len(attempts) == 2
+
+
+def test_cancel_during_workflow_does_not_commit(tmp_path, monkeypatch):
+    # B buffers the validated workflow before emitting done. Cancellation during
+    # preparation must not persist the user message, even if the worker finishes.
+    import threading
+    async def run():
+        started, release, finished = threading.Event(), threading.Event(), threading.Event()
+        def prepare(*args, **kwargs):
+            started.set()
+            try:
+                release.wait(3)
+                return {}
+            finally:
+                finished.set()
+        store = ChatStore(f"sqlite:///{tmp_path / 'summary.sqlite'}")
+        service = ChatService(store)
+        monkeypatch.setattr(service, 'prepare_turn', prepare)
+        doc = store.create('a')
+        async def connected(): return False
+        stream = streaming.events(service, doc, 'a', 0, str(uuid4()), 'FSIE', connected)
+        task = asyncio.create_task(anext(stream))
+        try:
+            assert await asyncio.to_thread(started.wait, 3)
+            task.cancel()
+            with pytest.raises(asyncio.CancelledError):
+                await task
+            release.set()
+            assert await asyncio.to_thread(finished.wait, 3)
+            assert store.get('a', doc['id'])['messages'] == []
+            assert store.get('a', doc['id'])['revision'] == 0
+        finally:
+            release.set()
+            await stream.aclose()
+            store.engine.dispose()
+    asyncio.run(run())

@@ -37,8 +37,8 @@ def test_build_snapshots_and_segments_all_l0_sources():
     assert not any(s.parse_status == "failed" for s in summary.sources)
 
     with session_scope() as session:
-        sources = session.scalar(select(func.count()).select_from(Source))
-        units = session.scalar(select(func.count()).select_from(LegalUnit))
+        sources = session.scalar(select(func.count()).select_from(Source).where(Source.jurisdiction == "HK"))
+        units = session.scalar(select(func.count()).select_from(LegalUnit).join(Source).where(Source.jurisdiction == "HK"))
         participation = session.execute(
             select(LegalUnit).where(LegalUnit.statute_locator == "s.15M(2)")
         ).scalars().all()

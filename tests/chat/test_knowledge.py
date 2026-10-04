@@ -1,5 +1,7 @@
 from copy import deepcopy
 from uuid import uuid4
+import json
+from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient
@@ -8,6 +10,73 @@ from apps.api.main import app
 from packages.chat import knowledge, analysis
 from packages.chat.service import ChatService, WorkflowError
 from packages.chat.store import ChatStore
+
+
+def test_multiple_references_use_cloud_query_and_ranking(monkeypatch):
+    """Exercise actual SQL selection too, rather than mocking read_documents."""
+    from sqlalchemy import create_engine, text
+    engine = create_engine('sqlite://')
+    with engine.begin() as conn:
+        conn.execute(text('CREATE TABLE sources (id INTEGER PRIMARY KEY, source_id TEXT, l0_in_scope BOOLEAN, parse_status TEXT, actual_sha256 TEXT, manifest_sha256 TEXT, retrieved_at DATETIME)'))
+        conn.execute(text('CREATE TABLE legal_units (source_db_id INTEGER, unit_ref TEXT, statute_locator TEXT, heading TEXT, text TEXT, text_sha256 TEXT, unit_type TEXT, ordinal INTEGER)'))
+        for number, sid in [(1, 'law'), (2, 'hk_ird_advance_68')]:
+            conn.execute(text("INSERT INTO sources VALUES (:id,:sid,1,'parsed',NULL,NULL,NULL)"), {'id': number, 'sid': sid})
+        for index, ref in enumerate(['s.15K(1)', 's.15K(2)', 's.15K(3)', 's.15M(1)', 's.15M(2)', 's.15H(5)', 's.15H(6)', 's.15H(7)', 's.15H(1)', 's.15I(1)', 's.15I(3)', 's.15N(2)', 's.15N(5)', 's.15N(4)'], 1):
+            conn.execute(text("INSERT INTO legal_units VALUES (1,:ref,:ref,'Heading','Synthetic text','hash','subsection',:n)"), {'ref': ref, 'n': index})
+        for n in range(1, 8):
+            conn.execute(text("INSERT INTO legal_units VALUES (2,:ref,NULL,'Heading','Synthetic ruling','hash','ruling_block',:n)"), {'ref': f'hk_ird_advance_68:section{n}', 'n': n})
+    monkeypatch.setattr(knowledge, 'knowledge_engine', lambda: engine)
+    monkeypatch.setattr(knowledge, 'catalog', lambda: {'allowed_source_domains': ['www.ird.gov.hk'], 'legal_coverage_cutoff': '2026-08-15', 'sources': [
+        {'source_id': sid, 'url': 'https://www.ird.gov.hk/', 'title': 'Fixture'} for sid in ['law', 'hk_ird_advance_68']]})
+    dataset = json.loads(Path(__file__).with_name('retrieval_cases.json').read_text(encoding='utf-8'))
+    try:
+        for case in dataset['cases']:
+            result = knowledge.search(case['query'])
+            assert result['status'] != 'unavailable', case['id']
+            docs = result['passages']
+            for key, field in [('expected_locators', 'locator'), ('expected_units', 'unit_id'), ('expected_sources', 'source_id')]:
+                assert set(case.get(key, [])) <= {d[field] for d in docs}, case['id']
+            if case.get('expect_empty'):
+                assert result['status'] == 'no_matching_units' and not docs
+            assert len(docs) == len({d['unit_id'] for d in docs})
+        assert {d['locator'] for d in knowledge.search('s.15K and s.15M', limit=2)['passages']} == {'s.15K(1)', 's.15M(1)'}
+        assert all(d['locator'] for d in knowledge.search('Case 68 s.15K', kind='law')['passages'])
+        assert all(d['source_id'] == 'hk_ird_advance_68' for d in knowledge.search('Case 68 s.15K', kind='ruling')['passages'])
+    finally:
+        engine.dispose()
+
+
+def test_reference_boundaries_and_parent_subsections():
+    assert knowledge.references('s.15OA(1) 第15K（2）（a） 15K(2)') == (['s.15OA(1)', 's.15K(2)'], [])
+    assert knowledge.references('x15K 115K 15K999') == ([], [])
+    assert knowledge.references('Case 68 Case 69 Case 68')[1] == ['hk_ird_advance_68', 'hk_ird_advance_69']
+    assert not knowledge.locator_matches('s.15KA(1)', 's.15K')
+    assert not knowledge.locator_matches('s.15K(20)', 's.15K(2)')
+    docs = [document('law', n, 'Fixture', f's.15K({n})') for n in range(1, 4)]
+    assert knowledge.rank_documents(docs, 's.15K s.15K(2)', limit=0) == []
+    result = knowledge.rank_documents(docs, 's.15K s.15K(2)', limit=7)
+    assert len(result) == 3 and len({d['unit_id'] for d in result}) == 3
+
+
+def test_short_context_is_batched_and_cannot_cross_source_or_snapshot(monkeypatch):
+    short = {**document('faq', 4, 'outsourcing guidance'), 'unit_type': 'paragraph'}
+    neighbors = [document('faq', 3, 'previous'), document('faq', 5, 'next'),
+                 document('other', 5, 'wrong source'),
+                 {**document('faq', 6, 'old snapshot'), 'snapshot_sha256': 'old'}]
+    calls = []
+    def read(**kwargs):
+        calls.append(kwargs)
+        return neighbors if 'context_ranges' in kwargs else [deepcopy(short)]
+    monkeypatch.setattr(knowledge, 'read_documents', read)
+    result = knowledge.search('outsourcing')
+    assert len(calls) == 2 and calls[1]['context_ranges'] == [('faq', 3, 6)]
+    assert [p['unit_id'] for p in result['passages'][0]['context']] == ['faq:section3', 'faq:section5']
+    assert result['passages'][0]['text_sha256'] == short['text_sha256']
+
+
+def test_weak_keyword_overlap_does_not_produce_unrelated_answer():
+    docs = [document('other', 1, 'Dividend is the only overlapping word in this unrelated document.')]
+    assert knowledge.rank_documents(docs, 'dividend weather temperature forecast') == []
 
 
 def document(sid, number, text, locator=None):

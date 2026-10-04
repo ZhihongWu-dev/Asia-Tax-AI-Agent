@@ -64,6 +64,7 @@ export type Message = {
 export type Passage = {
   is_synthetic?: boolean;
   model_use?: string;
+  context?: Passage[];
   unit_id: string;
   source_id: string;
   locator: string | null;

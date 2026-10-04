@@ -41,7 +41,7 @@ NODE_LOCATORS = {
     'participation_basic': ['s.15M(1)', 's.15M(2)', 's.15M(3)'],
     'financial_entity_exclusion': ['s.15H(1)'],
     'foreign_tax_switchover': ['s.15N(2)', 's.15N(3)', 's.15N(6)', 's.15N(7)'],
-    'anti_hybrid': ['s.15N(2)'],
+    'anti_hybrid': ['s.15N(3)'],
     'main_purpose': ['s.15N(4)'],
     'compliance_filing': ['s.15J', 's.15S(1)', 's.15S(2)', 's.15S(3)'],
 }

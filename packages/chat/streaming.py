@@ -1,11 +1,14 @@
 """Real provider deltas; incomplete turns never mutate facts or stored messages."""
 import asyncio
 import json
+import logging
+import re
 from contextlib import aclosing
 
 import httpx
+from packages.model_adapter.client import structured_options
 
-from packages.chat.service import current_model_config, turn_prompt, validate_turn, WorkflowError
+from packages.chat.service import current_model_config, turn_prompt, validate_turn, research_query, WorkflowError
 
 
 def reply_prefix(raw: str) -> str:
@@ -49,15 +52,16 @@ def reply_prefix(raw: str) -> str:
     return ''
 
 
-async def model_turn(doc, text):
+async def _model_turn_once(doc, text):
     cfg = current_model_config()
     if not cfg.is_configured:
         raise WorkflowError('model_not_configured')
     system, user = turn_prompt(doc, text)
     payload = {'model': cfg.model_name, 'messages': [
         {'role': 'system', 'content': system}, {'role': 'user', 'content': user}],
-        'temperature': 0, 'max_tokens': 2500, 'stream': True,
+        'temperature': 0, 'max_tokens': 3500, 'stream': True,
         'response_format': {'type': 'json_object'}}
+    payload.update(structured_options(cfg))
     raw, shown = '', ''
     complete = False
     try:
@@ -82,14 +86,29 @@ async def model_turn(doc, text):
                     if len(raw) > 40000:
                         raise ValueError('Excessive turn')
                     prefix = reply_prefix(raw)
-                    if prefix.startswith(shown) and len(prefix) > len(shown):
+                    visible = re.search(r'"intent"\s*:\s*"(chat|intake)"', raw)
+                    if visible and prefix.startswith(shown) and len(prefix) > len(shown):
                         yield {'type': 'delta', 'text': prefix[len(shown):]}
                         shown = prefix
         if not complete:
             raise ValueError('Incomplete turn')
-        yield {'type': 'turn', 'turn': validate_turn(json.loads(raw))}
-    except (httpx.HTTPError, ValueError, TypeError, KeyError, IndexError):
+        yield {'type': 'turn', 'turn': validate_turn(json.loads(raw), text)}
+    except (httpx.HTTPError, ValueError, TypeError, KeyError, IndexError) as exc:
+        logging.getLogger(__name__).warning('stream_failure stage=%s', type(exc).__name__)
         raise WorkflowError('model_failed') from None
+
+
+async def model_turn(doc, text):
+    for attempt in range(2):
+        try:
+            async with aclosing(_model_turn_once(doc, text)) as stream:
+                async for event in stream:
+                    yield event
+            return
+        except WorkflowError as exc:
+            if exc.code != 'model_failed' or attempt:
+                raise
+            yield {'type': 'reset'}
 
 
 async def events(service, doc, owner, revision, request_id, text, disconnected,

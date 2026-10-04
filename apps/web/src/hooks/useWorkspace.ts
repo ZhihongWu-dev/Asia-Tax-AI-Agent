@@ -142,8 +142,8 @@ export function useWorkspace() {
         const abort = new AbortController();
         controller.current = abort;
         setPartial({ caseId: doc.id, text: "" });
-        const next = await api.stream(doc, text, approved, requestId, abort.signal, chunk =>
-          setPartial(previous => previous?.caseId === doc.id ? { ...previous, text: previous.text + chunk } : previous),
+        const next = await api.stream(doc, text, approved, requestId, abort.signal, (chunk, reset) =>
+          setPartial(previous => previous?.caseId === doc.id ? { ...previous, text: reset ? "" : previous.text + chunk } : previous),
           entryHint, pending?.id || null);
         update(next);
         setEntrySelections(all => { const copy = { ...all }; delete copy[doc.id]; return copy; });
