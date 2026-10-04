@@ -1,0 +1,642 @@
+{
+  "schema_version": "0.1.0",
+  "status": "design_fixtures_not_a_provider_implementation",
+  "notice": "所有内容为虚构测试资料，不含真实税务依据。display_store 不属于 search_response，不得整体发送给模型。",
+  "fixtures": [
+    {
+      "scenario_id": "MOCK-01",
+      "request": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-01",
+        "trace_id": "trace-MOCK-01",
+        "query": "查询模拟资料中关于测试事项的说明（非真实税务问题）",
+        "intent": "concept",
+        "jurisdiction": "HK",
+        "topic": "dividend",
+        "income_type": "dividend",
+        "entity_type": "not_needed",
+        "applicable_date": null,
+        "date_status": "not_needed",
+        "reference_number": null,
+        "fact_filters": [],
+        "language": "zh",
+        "limit": 5,
+        "deadline_ms": 3000
+      },
+      "search_response": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-01",
+        "trace_id": "trace-MOCK-01",
+        "retrieval_id": "retrieval-MOCK-01",
+        "provider": "mock",
+        "is_synthetic": true,
+        "corpus_version": "mock-corpus-0.1.0",
+        "status": "ok",
+        "evidence": [
+          {
+            "evidence_id": "mock-evidence-1",
+            "source_version_id": "mock-source-1-v1",
+            "unit_id": "mock-unit-1",
+            "source_id": "mock-source-1",
+            "content_hash": "779cb5f683d42687c952a2d1b1104d7308d440e2b8bb80f7b74b59851b6674dc",
+            "is_synthetic": true,
+            "title": "模拟资料 MOCK-01（非真实税务依据）",
+            "publisher": "模拟测试提供方",
+            "source_type": "synthetic_test",
+            "language": "zh",
+            "url": null,
+            "locator": "模拟段落 1",
+            "jurisdiction": "HK",
+            "topic": "dividend",
+            "publication_date": null,
+            "effective_from": null,
+            "effective_to": null,
+            "verification_status": "unverified",
+            "model_use": "allowed",
+            "display_use": "allowed",
+            "policy_version": "mock-policy-v1",
+            "restriction_reason": null,
+            "model_text": "模拟资料 MOCK-01：仅用于验证查询、条件说明和引用定位。此文本不含真实税法，不支持税务结论。",
+            "display_ref": {
+              "evidence_id": "mock-evidence-1",
+              "source_version_id": "mock-source-1-v1",
+              "unit_id": "mock-unit-1"
+            }
+          }
+        ],
+        "coverage": {
+          "status": "unchecked",
+          "scope": "仅测试咨询路由，不包含税务规则",
+          "missing_requirements": [],
+          "truncated": false
+        },
+        "error": null,
+        "timings_ms": {
+          "db": null,
+          "retrieval": null,
+          "rerank": null,
+          "total": null
+        }
+      },
+      "display_store": [
+        {
+          "reference": {
+            "evidence_id": "mock-evidence-1",
+            "source_version_id": "mock-source-1-v1",
+            "unit_id": "mock-unit-1"
+          },
+          "text": "模拟资料 MOCK-01：仅用于验证查询、条件说明和引用定位。此文本不含真实税法，不支持税务结论。",
+          "content_hash": "779cb5f683d42687c952a2d1b1104d7308d440e2b8bb80f7b74b59851b6674dc"
+        }
+      ],
+      "expected_behavior": {
+        "action": "compose_and_validate_synthetic_reply",
+        "reason_code": "OK",
+        "model_evidence_ids": [
+          "mock-evidence-1"
+        ],
+        "reference_only_ids": []
+      }
+    },
+    {
+      "scenario_id": "MOCK-02",
+      "request": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-02",
+        "trace_id": "trace-MOCK-02",
+        "query": "查询模拟资料中关于测试事项的说明（非真实税务问题）",
+        "intent": "concept",
+        "jurisdiction": "HK",
+        "topic": "dividend",
+        "income_type": "dividend",
+        "entity_type": "not_needed",
+        "applicable_date": null,
+        "date_status": "not_needed",
+        "reference_number": null,
+        "fact_filters": [],
+        "language": "zh",
+        "limit": 5,
+        "deadline_ms": 3000
+      },
+      "search_response": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-02",
+        "trace_id": "trace-MOCK-02",
+        "retrieval_id": "retrieval-MOCK-02",
+        "provider": "mock",
+        "is_synthetic": true,
+        "corpus_version": "mock-corpus-0.1.0",
+        "status": "no_match",
+        "evidence": [],
+        "coverage": {
+          "status": "not_assessed",
+          "scope": "本次模拟查询",
+          "missing_requirements": [
+            "没有匹配证据"
+          ],
+          "truncated": false
+        },
+        "error": null,
+        "timings_ms": {
+          "db": null,
+          "retrieval": null,
+          "rerank": null,
+          "total": null
+        }
+      },
+      "display_store": [],
+      "expected_behavior": {
+        "action": "explain_no_match",
+        "reason_code": "NO_MATCH",
+        "model_evidence_ids": [],
+        "reference_only_ids": []
+      }
+    },
+    {
+      "scenario_id": "MOCK-03",
+      "request": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-03",
+        "trace_id": "trace-MOCK-03",
+        "query": "查询模拟资料中关于测试事项的说明（非真实税务问题）",
+        "intent": "concept",
+        "jurisdiction": "HK",
+        "topic": "dividend",
+        "income_type": "dividend",
+        "entity_type": "not_needed",
+        "applicable_date": null,
+        "date_status": "not_needed",
+        "reference_number": null,
+        "fact_filters": [],
+        "language": "zh",
+        "limit": 5,
+        "deadline_ms": 3000
+      },
+      "search_response": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-03",
+        "trace_id": "trace-MOCK-03",
+        "retrieval_id": "retrieval-MOCK-03",
+        "provider": "mock",
+        "is_synthetic": true,
+        "corpus_version": "mock-corpus-0.1.0",
+        "status": "ok",
+        "evidence": [
+          {
+            "evidence_id": "mock-evidence-3",
+            "source_version_id": "mock-source-3-v1",
+            "unit_id": "mock-unit-3",
+            "source_id": "mock-source-3",
+            "content_hash": "92476409e56f6961359ced5173248eb908277e34a5b4cb25842f6a64cc3e60cd",
+            "is_synthetic": true,
+            "title": "模拟资料 MOCK-03（非真实税务依据）",
+            "publisher": "模拟测试提供方",
+            "source_type": "synthetic_test",
+            "language": "zh",
+            "url": null,
+            "locator": "模拟段落 1",
+            "jurisdiction": "HK",
+            "topic": "dividend",
+            "publication_date": null,
+            "effective_from": null,
+            "effective_to": null,
+            "verification_status": "unverified",
+            "model_use": "denied",
+            "display_use": "allowed",
+            "policy_version": "mock-policy-v1",
+            "restriction_reason": "仅允许原文展示",
+            "model_text": null,
+            "display_ref": {
+              "evidence_id": "mock-evidence-3",
+              "source_version_id": "mock-source-3-v1",
+              "unit_id": "mock-unit-3"
+            }
+          }
+        ],
+        "coverage": {
+          "status": "unchecked",
+          "scope": "仅测试咨询路由，不包含税务规则",
+          "missing_requirements": [],
+          "truncated": false
+        },
+        "error": null,
+        "timings_ms": {
+          "db": null,
+          "retrieval": null,
+          "rerank": null,
+          "total": null
+        }
+      },
+      "display_store": [
+        {
+          "reference": {
+            "evidence_id": "mock-evidence-3",
+            "source_version_id": "mock-source-3-v1",
+            "unit_id": "mock-unit-3"
+          },
+          "text": "模拟资料 MOCK-03：仅用于验证查询、条件说明和引用定位。此文本不含真实税法，不支持税务结论。",
+          "content_hash": "92476409e56f6961359ced5173248eb908277e34a5b4cb25842f6a64cc3e60cd"
+        }
+      ],
+      "expected_behavior": {
+        "action": "return_display_only_references",
+        "reason_code": "EVIDENCE_RESTRICTED",
+        "model_evidence_ids": [],
+        "reference_only_ids": [
+          "mock-evidence-3"
+        ]
+      }
+    },
+    {
+      "scenario_id": "MOCK-04",
+      "request": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-04",
+        "trace_id": "trace-MOCK-04",
+        "query": "查询模拟资料中关于测试事项的说明（非真实税务问题）",
+        "intent": "concept",
+        "jurisdiction": "HK",
+        "topic": "dividend",
+        "income_type": "dividend",
+        "entity_type": "not_needed",
+        "applicable_date": null,
+        "date_status": "not_needed",
+        "reference_number": null,
+        "fact_filters": [],
+        "language": "zh",
+        "limit": 5,
+        "deadline_ms": 3000
+      },
+      "search_response": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-04",
+        "trace_id": "trace-MOCK-04",
+        "retrieval_id": "retrieval-MOCK-04",
+        "provider": "mock",
+        "is_synthetic": true,
+        "corpus_version": "mock-corpus-0.1.0",
+        "status": "error",
+        "evidence": [],
+        "coverage": {
+          "status": "not_assessed",
+          "scope": "本次模拟查询",
+          "missing_requirements": [],
+          "truncated": false
+        },
+        "error": {
+          "code": "TIMEOUT",
+          "message": "模拟超时",
+          "retryable": true
+        },
+        "timings_ms": {
+          "db": null,
+          "retrieval": null,
+          "rerank": null,
+          "total": null
+        }
+      },
+      "display_store": [],
+      "expected_behavior": {
+        "action": "bounded_retry_then_retrieval_error",
+        "reason_code": "RETRIEVAL_FAILED",
+        "model_evidence_ids": [],
+        "reference_only_ids": []
+      }
+    },
+    {
+      "scenario_id": "MOCK-05",
+      "request": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-05",
+        "trace_id": "trace-MOCK-05",
+        "query": "查询模拟资料中关于测试事项的说明（非真实税务问题）",
+        "intent": "concept",
+        "jurisdiction": "HK",
+        "topic": "dividend",
+        "income_type": "dividend",
+        "entity_type": "not_needed",
+        "applicable_date": null,
+        "date_status": "not_needed",
+        "reference_number": null,
+        "fact_filters": [],
+        "language": "zh",
+        "limit": 5,
+        "deadline_ms": 3000
+      },
+      "search_response": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-05",
+        "trace_id": "trace-MOCK-05",
+        "retrieval_id": "retrieval-MOCK-05",
+        "provider": "mock",
+        "is_synthetic": true,
+        "corpus_version": "mock-corpus-0.1.0",
+        "status": "partial",
+        "evidence": [
+          {
+            "evidence_id": "mock-evidence-5",
+            "source_version_id": "mock-source-5-v1",
+            "unit_id": "mock-unit-5",
+            "source_id": "mock-source-5",
+            "content_hash": "1f7f231b4a1dc205023eb9ebd421181cfcbb8d6e58168c3ac383b11872fa89a8",
+            "is_synthetic": true,
+            "title": "模拟资料 MOCK-05（非真实税务依据）",
+            "publisher": "模拟测试提供方",
+            "source_type": "synthetic_test",
+            "language": "zh",
+            "url": null,
+            "locator": "模拟段落 1",
+            "jurisdiction": "HK",
+            "topic": "dividend",
+            "publication_date": null,
+            "effective_from": null,
+            "effective_to": null,
+            "verification_status": "unverified",
+            "model_use": "allowed",
+            "display_use": "allowed",
+            "policy_version": "mock-policy-v1",
+            "restriction_reason": null,
+            "model_text": "模拟资料 MOCK-05：仅用于验证查询、条件说明和引用定位。此文本不含真实税法，不支持税务结论。",
+            "display_ref": {
+              "evidence_id": "mock-evidence-5",
+              "source_version_id": "mock-source-5-v1",
+              "unit_id": "mock-unit-5"
+            }
+          }
+        ],
+        "coverage": {
+          "status": "partial",
+          "scope": "只返回一个模拟条件说明",
+          "missing_requirements": [
+            "缺少测试任务要求的第二份条件资料"
+          ],
+          "truncated": false
+        },
+        "error": null,
+        "timings_ms": {
+          "db": null,
+          "retrieval": null,
+          "rerank": null,
+          "total": null
+        }
+      },
+      "display_store": [
+        {
+          "reference": {
+            "evidence_id": "mock-evidence-5",
+            "source_version_id": "mock-source-5-v1",
+            "unit_id": "mock-unit-5"
+          },
+          "text": "模拟资料 MOCK-05：仅用于验证查询、条件说明和引用定位。此文本不含真实税法，不支持税务结论。",
+          "content_hash": "1f7f231b4a1dc205023eb9ebd421181cfcbb8d6e58168c3ac383b11872fa89a8"
+        }
+      ],
+      "expected_behavior": {
+        "action": "explain_supported_part_and_gap",
+        "reason_code": "EVIDENCE_INSUFFICIENT",
+        "model_evidence_ids": [
+          "mock-evidence-5"
+        ],
+        "reference_only_ids": []
+      }
+    },
+    {
+      "scenario_id": "MOCK-06",
+      "request": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-06",
+        "trace_id": "trace-MOCK-06",
+        "query": "查询模拟资料中关于测试事项的说明（非真实税务问题）",
+        "intent": "concept",
+        "jurisdiction": "HK",
+        "topic": "dividend",
+        "income_type": "dividend",
+        "entity_type": "not_needed",
+        "applicable_date": null,
+        "date_status": "not_needed",
+        "reference_number": null,
+        "fact_filters": [],
+        "language": "zh",
+        "limit": 5,
+        "deadline_ms": 3000
+      },
+      "search_response": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-06",
+        "trace_id": "trace-MOCK-06",
+        "retrieval_id": "retrieval-MOCK-06",
+        "provider": "mock",
+        "is_synthetic": true,
+        "corpus_version": "mock-corpus-0.1.0",
+        "status": "ok",
+        "evidence": [
+          {
+            "evidence_id": "mock-evidence-6",
+            "source_version_id": "mock-source-6-v1",
+            "unit_id": "mock-unit-6",
+            "source_id": "mock-source-6",
+            "content_hash": "76e45b37c92be233fddfb54383598c5110ac719cb5d2e6d1f1492adf88a9f589",
+            "is_synthetic": true,
+            "title": "模拟资料 MOCK-06（非真实税务依据）",
+            "publisher": "模拟测试提供方",
+            "source_type": "synthetic_test",
+            "language": "zh",
+            "url": null,
+            "locator": "模拟段落 1",
+            "jurisdiction": "HK",
+            "topic": "dividend",
+            "publication_date": null,
+            "effective_from": null,
+            "effective_to": null,
+            "verification_status": "unverified",
+            "model_use": "unknown",
+            "display_use": "unknown",
+            "policy_version": "mock-policy-v1",
+            "restriction_reason": "使用权限尚未确认",
+            "model_text": null,
+            "display_ref": null
+          }
+        ],
+        "coverage": {
+          "status": "unchecked",
+          "scope": "仅测试咨询路由，不包含税务规则",
+          "missing_requirements": [],
+          "truncated": false
+        },
+        "error": null,
+        "timings_ms": {
+          "db": null,
+          "retrieval": null,
+          "rerank": null,
+          "total": null
+        }
+      },
+      "display_store": [
+        {
+          "reference": {
+            "evidence_id": "mock-evidence-6",
+            "source_version_id": "mock-source-6-v1",
+            "unit_id": "mock-unit-6"
+          },
+          "text": "模拟资料 MOCK-06：仅用于验证查询、条件说明和引用定位。此文本不含真实税法，不支持税务结论。",
+          "content_hash": "76e45b37c92be233fddfb54383598c5110ac719cb5d2e6d1f1492adf88a9f589"
+        }
+      ],
+      "expected_behavior": {
+        "action": "record_unknown_permission",
+        "reason_code": "EVIDENCE_RESTRICTED",
+        "model_evidence_ids": [],
+        "reference_only_ids": []
+      }
+    },
+    {
+      "scenario_id": "MOCK-07",
+      "request": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-07",
+        "trace_id": "trace-MOCK-07",
+        "query": "查询模拟资料中关于测试事项的说明（非真实税务问题）",
+        "intent": "case_analysis",
+        "jurisdiction": "HK",
+        "topic": "dividend",
+        "income_type": "dividend",
+        "entity_type": "company",
+        "applicable_date": "2026-10-02",
+        "date_status": "actual",
+        "reference_number": null,
+        "fact_filters": [],
+        "language": "zh",
+        "limit": 5,
+        "deadline_ms": 3000
+      },
+      "search_response": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-07",
+        "trace_id": "trace-MOCK-07",
+        "retrieval_id": "retrieval-MOCK-07",
+        "provider": "mock",
+        "is_synthetic": true,
+        "corpus_version": "mock-corpus-0.1.0",
+        "status": "ok",
+        "evidence": [
+          {
+            "evidence_id": "mock-evidence-7",
+            "source_version_id": "mock-source-7-v1",
+            "unit_id": "mock-unit-7",
+            "source_id": "mock-source-7",
+            "content_hash": "9514333d6f243d831a28f9fb94f8017562e43b4116c474eff5cc29ad46a3c33f",
+            "is_synthetic": true,
+            "title": "模拟资料 MOCK-07（非真实税务依据）",
+            "publisher": "模拟测试提供方",
+            "source_type": "synthetic_test",
+            "language": "zh",
+            "url": null,
+            "locator": "模拟段落 1",
+            "jurisdiction": "HK",
+            "topic": "dividend",
+            "publication_date": null,
+            "effective_from": "2025-01-01",
+            "effective_to": "2025-12-31",
+            "verification_status": "unverified",
+            "model_use": "allowed",
+            "display_use": "allowed",
+            "policy_version": "mock-policy-v1",
+            "restriction_reason": null,
+            "model_text": "模拟资料 MOCK-07：仅用于验证查询、条件说明和引用定位。此文本不含真实税法，不支持税务结论。",
+            "display_ref": {
+              "evidence_id": "mock-evidence-7",
+              "source_version_id": "mock-source-7-v1",
+              "unit_id": "mock-unit-7"
+            }
+          }
+        ],
+        "coverage": {
+          "status": "unchecked",
+          "scope": "仅测试咨询路由，不包含税务规则",
+          "missing_requirements": [],
+          "truncated": false
+        },
+        "error": null,
+        "timings_ms": {
+          "db": null,
+          "retrieval": null,
+          "rerank": null,
+          "total": null
+        }
+      },
+      "display_store": [
+        {
+          "reference": {
+            "evidence_id": "mock-evidence-7",
+            "source_version_id": "mock-source-7-v1",
+            "unit_id": "mock-unit-7"
+          },
+          "text": "模拟资料 MOCK-07：仅用于验证查询、条件说明和引用定位。此文本不含真实税法，不支持税务结论。",
+          "content_hash": "9514333d6f243d831a28f9fb94f8017562e43b4116c474eff5cc29ad46a3c33f"
+        }
+      ],
+      "expected_behavior": {
+        "action": "pause_date_dependent_claim",
+        "reason_code": "EVIDENCE_INSUFFICIENT",
+        "model_evidence_ids": [],
+        "reference_only_ids": []
+      }
+    },
+    {
+      "scenario_id": "MOCK-08",
+      "request": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-08",
+        "trace_id": "trace-MOCK-08",
+        "query": "查询模拟资料中关于测试事项的说明（非真实税务问题）",
+        "intent": "concept",
+        "jurisdiction": "HK",
+        "topic": "dividend",
+        "income_type": "dividend",
+        "entity_type": "not_needed",
+        "applicable_date": null,
+        "date_status": "not_needed",
+        "reference_number": null,
+        "fact_filters": [],
+        "language": "zh",
+        "limit": 5,
+        "deadline_ms": 3000
+      },
+      "search_response": {
+        "schema_version": "0.1.0",
+        "request_id": "req-MOCK-08",
+        "trace_id": "trace-MOCK-08",
+        "retrieval_id": "retrieval-MOCK-08",
+        "provider": "mock",
+        "is_synthetic": true,
+        "corpus_version": "mock-corpus-0.1.0",
+        "status": "error",
+        "evidence": [],
+        "coverage": {
+          "status": "not_assessed",
+          "scope": "本次模拟查询",
+          "missing_requirements": [],
+          "truncated": false
+        },
+        "error": {
+          "code": "ACCESS_DENIED",
+          "message": "模拟访问拒绝",
+          "retryable": false
+        },
+        "timings_ms": {
+          "db": null,
+          "retrieval": null,
+          "rerank": null,
+          "total": null
+        }
+      },
+      "display_store": [],
+      "expected_behavior": {
+        "action": "stop_without_retry",
+        "reason_code": "RETRIEVAL_FAILED",
+        "model_evidence_ids": [],
+        "reference_only_ids": []
+      }
+    }
+  ]
+}

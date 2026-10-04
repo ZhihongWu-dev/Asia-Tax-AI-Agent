@@ -25,10 +25,28 @@ function Result({ result, fields }: { result: Analysis; fields: FieldSpec[] }) {
         {t(
           result.stale
             ? "此分析已过期，请重新确认事实。"
-            : "研究结果 · 待专业复核",
+            : result.review?.status === "changes_requested"
+              ? "内部稿已退回修改"
+              : result.review?.status === "unable_to_conclude"
+                ? "最终复核：暂不能形成结论"
+                : result.review?.status === "approved"
+                  ? "内部稿已完成最终复核"
+                  : "研究结果 · 待专业复核",
         )}
       </strong>
+      {result.is_synthetic && <p role="status">{t("模拟联调资料，不是真实税务依据。")}</p>}
       <p>{t("以下为现有规则的研究结果，不是免税或应税结论。")}</p>
+      {!!result.intake_gaps?.length && (
+        <details open>
+          <summary>{t("当前任务的信息缺口")}</summary>
+          <p>{t("已按现有信息生成部分研究稿，以下缺口仍未解决。")}</p>
+          <ul>
+            {result.intake_gaps.map((gap) => (
+              <li key={gap.field}>{label(gap.field)}：{gap.impact}</li>
+            ))}
+          </ul>
+        </details>
+      )}
       <div className="result-nodes">
         {result.nodes
           .filter((n) => n.node !== "human_gate")
@@ -217,12 +235,18 @@ export default function Conversation({
               {message.text && <AnswerText text={message.text} />}
               <p>
                 {t(
-                  message.research.passages.length
-                    ? "以下为官方原文片段，适用性待核对。"
-                    : "未找到匹配资料，请换用具体条文、案例编号或税务关键词。",
+                  message.research.is_synthetic
+                    ? "模拟联调资料，不是真实税务依据。"
+                    : message.research.reason_code === "evidence_restricted"
+                      ? "仅展示已获许可的参考原文；未用于模型分析。"
+                      : message.research.passages.length
+                        ? "以下为来源原文片段，适用性待核对。"
+                        : "未取得可展示的匹配资料。",
                 )}
               </p>
-              <Passages passages={message.research.passages} />
+              {(message.research_results || [message.research]).map((result, i) => (
+                <Passages key={`${result.query}-${i}`} passages={result.passages} />
+              ))}
             </div>
           ) : message.kind === "analysis" ? (
             (() => {
@@ -236,7 +260,7 @@ export default function Conversation({
               <Scale size={20} />
               <div>
                 {message.text && <AnswerText text={message.text} />}
-                <p>
+                {!message.guided && <p>
                   {t(
                     message.state === "needs_resolution"
                       ? "这些事实存在冲突，请在案例信息中修订。"
@@ -244,8 +268,8 @@ export default function Conversation({
                         ? "为了继续梳理，请补充以下信息；不清楚的可以说明。"
                         : "已整理本次信息。请核对事实后开始分析。",
                   )}
-                </p>
-                {!!message.question_fields?.length && (
+                </p>}
+                {!message.guided && !!message.question_fields?.length && (
                   <ul>
                     {message.question_fields.map((key) => {
                       const field = fields.find((f) => f.field_name === key);
@@ -259,6 +283,9 @@ export default function Conversation({
                 )}
               </div>
             </div>
+          )}
+          {message.role === "assistant" && message.workflow?.error_code && (
+            <p role="alert">{t(`error:${message.workflow.error_code}`)}</p>
           )}
         </div>
       ))}

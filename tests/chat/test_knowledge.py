@@ -78,6 +78,7 @@ def test_research_preserves_confirmation_and_freezes_citations(tmp_path, documen
     saved_text = doc['messages'][-1]['research']['passages'][0]['text']
     documents[0]['text'] = 'Changed later'
     assert store.get('owner', doc['id'])['messages'][-1]['research']['passages'][0]['text'] == saved_text
+    doc = service.message('owner', doc['id'], doc['revision'], str(uuid4()), '先看部分整理', True)
     doc = service.run('owner', doc['id'], doc['revision'], str(uuid4()))
     result = doc['analyses'][-1]
     assert len(result['review_tasks']) == 5

@@ -1,0 +1,1901 @@
+{
+  "config_id": "tax_agent_business_rules",
+  "version": "0.1.0",
+  "date": "2026-10-01",
+  "status": "design_only_not_loaded_by_runtime",
+  "scope": "Workflow routing rules; no tax rates, tax eligibility thresholds or legal conclusions.",
+  "authority": "Conditions are supplied by authenticated services. Models may propose facts and actions but cannot grant permissions, approve reports or override gates.",
+  "evaluation": {
+    "strategy": "first_match_in_phase",
+    "priority": "ascending",
+    "supported_predicates": [
+      "eq",
+      "in"
+    ],
+    "supported_groups": [
+      "all",
+      "any"
+    ],
+    "empty_all": true,
+    "missing_invalid_context": "configuration_error; do not execute tools",
+    "no_match": "configuration_error; do not execute tools",
+    "unknown_phase": "configuration_error; do not execute tools"
+  },
+  "phases": {
+    "admission": {
+      "required_fields": [
+        "access_allowed",
+        "data_allowed",
+        "input_valid"
+      ],
+      "rule_ids": [
+        "BR-01",
+        "BR-02",
+        "BR-03"
+      ]
+    },
+    "scope": {
+      "required_fields": [
+        "capability"
+      ],
+      "rule_ids": [
+        "BR-04",
+        "BR-05",
+        "BR-06",
+        "BR-07"
+      ]
+    },
+    "node": {
+      "required_fields": [
+        "dependency_state",
+        "question_pending",
+        "fact_gate"
+      ],
+      "rule_ids": [
+        "BR-08",
+        "BR-09",
+        "BR-10",
+        "BR-11",
+        "BR-12",
+        "BR-13",
+        "BR-14",
+        "BR-15"
+      ]
+    },
+    "evidence": {
+      "required_fields": [
+        "coverage"
+      ],
+      "rule_ids": [
+        "BR-16",
+        "BR-17",
+        "BR-18"
+      ]
+    },
+    "result": {
+      "required_fields": [
+        "node_result"
+      ],
+      "rule_ids": [
+        "BR-19",
+        "BR-20",
+        "BR-21"
+      ]
+    },
+    "aggregate": {
+      "required_fields": [
+        "runnable_nodes",
+        "waiting_questions",
+        "partial_scope_covers_waits",
+        "all_nodes_accounted"
+      ],
+      "rule_ids": [
+        "BR-22",
+        "BR-23",
+        "BR-24",
+        "BR-25"
+      ]
+    },
+    "user_event": {
+      "required_fields": [
+        "user_event"
+      ],
+      "rule_ids": [
+        "BR-26",
+        "BR-27",
+        "BR-28",
+        "BR-29"
+      ]
+    },
+    "tool_error": {
+      "required_fields": [
+        "retryable",
+        "budget_remaining",
+        "safe_to_retry"
+      ],
+      "rule_ids": [
+        "BR-30",
+        "BR-31"
+      ]
+    },
+    "report": {
+      "required_fields": [
+        "snapshot_current",
+        "report_validation",
+        "repair_available",
+        "simplified_attempted"
+      ],
+      "rule_ids": [
+        "BR-32",
+        "BR-33",
+        "BR-34",
+        "BR-35",
+        "BR-36",
+        "BR-37"
+      ]
+    },
+    "review": {
+      "required_fields": [
+        "snapshot_current",
+        "review_action",
+        "release_allowed"
+      ],
+      "rule_ids": [
+        "BR-38",
+        "BR-39",
+        "BR-40",
+        "BR-41",
+        "BR-42",
+        "BR-43",
+        "BR-44",
+        "BR-45"
+      ]
+    },
+    "change": {
+      "required_fields": [
+        "affected_results"
+      ],
+      "rule_ids": [
+        "BR-46",
+        "BR-47"
+      ]
+    }
+  },
+  "field_catalog": {
+    "access_allowed": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "服务端按当前身份、组织、案件及具体动作判定权限；模型传入的角色不参与授权。"
+    },
+    "data_allowed": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "部署策略是否允许本次数据进入当前处理环境、模型及工具；当前 L0 仅允许合成案件。"
+    },
+    "input_valid": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "输入格式、文件解析及安全检查是否满足部署策略；附件指令不改变系统规则。"
+    },
+    "capability": {
+      "type": "string",
+      "enum": [
+        "need_scope",
+        "unsupported",
+        "partial",
+        "supported"
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "按法域、主题、交易期间、输出类型、发布环境和功能开关逐争点匹配；禁用优化视为对应请求不支持；目录存在不代表本案法源完整。"
+    },
+    "dependency_state": {
+      "type": "string",
+      "enum": [
+        "invalid",
+        "blocked",
+        "ready"
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "规则图是否有效，以及当前节点的显式前置表达式是否满足；不能把所有上游均通过作为通用条件。"
+    },
+    "question_pending": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "当前节点选中阻断事实的相同值/版本是否已有有效待答问题；其他无关问题不计。"
+    },
+    "fact_gate": {
+      "type": "string",
+      "enum": [
+        "conflict",
+        "missing",
+        "needs_ack",
+        "unusable",
+        "ready"
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "仅检查当前节点必需事实；按阻断等级、节点顺序、字段名选首个未决项，同一字段冲突优先于缺失，缺失优先于核对；全部通过后仍须校验运行策略。"
+    },
+    "coverage": {
+      "type": "string",
+      "enum": [
+        "not_checked",
+        "covered",
+        "gap",
+        "stale",
+        "conflict"
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "检索和覆盖工具返回的本次输入版本状态；covered 要求必需依据、例外、适用日期、法域和验证等级满足环境策略。"
+    },
+    "node_result": {
+      "type": "string",
+      "enum": [
+        "judgment",
+        "invalid",
+        "valid"
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "规则及节点校验结果：judgment 只形成待判事项，不确认主观条件；invalid 含结果/数值/引用校验失败。"
+    },
+    "runnable_nodes": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "调度器是否存在有进展的可执行节点或可登记的新问题；已登记等待节点不可反复选中。"
+    },
+    "waiting_questions": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "本轮范围内是否仍有用户待答事项，包括稍后提供。"
+    },
+    "partial_scope_covers_waits": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "用户明确选择部分稿的记录，是否覆盖当前全部待答阻断事项及其版本；不能由超时推定。"
+    },
+    "all_nodes_accounted": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "本轮节点均有有效完成结果、不适用理由或明确暂停/依赖阻塞原因，无漏项及无原因悬空节点。"
+    },
+    "user_event": {
+      "type": "string",
+      "enum": [
+        "no_reply",
+        "later",
+        "unknown",
+        "partial",
+        "answer"
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "用户事件经输入检查后的分类；不确定含义时按普通 answer 处理并澄清，不能推定 partial。"
+    },
+    "retryable": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "错误码属临时超时或限流等可恢复故障；参数错误、权限拒绝、无依据、专业待判不属于此类。"
+    },
+    "budget_remaining": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "服务端共享重试计数尚未耗尽且截止时间未到；模型适配器和编排器合计。"
+    },
+    "safe_to_retry": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "只读操作或已证明幂等的写操作；写入超时须先按幂等键查询结果，不能未知状态直接重发。"
+    },
+    "snapshot_current": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "事实、规则、法源、案件范围和报告版本未失效；校验通过还须绑定实际报告内容哈希。"
+    },
+    "report_validation": {
+      "type": "string",
+      "enum": [
+        "not_checked",
+        "passed",
+        "failed"
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "校验服务对实际报告正文和快照的结论；生成模型自评不能直接写 passed。"
+    },
+    "repair_available": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "当前冻结输入快照的报告生成周期内仍有修订预算；新建文本版本不会重置预算。"
+    },
+    "simplified_attempted": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "该报告生成周期是否已尝试过只保留范围与缺口的简化稿；防止无限简化循环。"
+    },
+    "review_action": {
+      "type": "string",
+      "enum": [
+        "waiting",
+        "approve",
+        "amend_facts",
+        "amend_text",
+        "request_data",
+        "decline"
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "最终复核阶段的事件；除 waiting 外须来自通过权限检查的复核者。"
+    },
+    "release_allowed": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "拟交付对象/用途满足当前发布等级和输出规则；最终批准不能改变发布等级或规则验证状态。"
+    },
+    "affected_results": {
+      "type": "boolean",
+      "enum": [
+        false,
+        true
+      ],
+      "derived_by": "trusted_service",
+      "meaning": "变更影响分析输入、依赖或依据有效性；重复文件且无新增冲突时为 false。"
+    }
+  },
+  "rules": [
+    {
+      "id": "BR-01",
+      "phase": "admission",
+      "priority": 1,
+      "title": "越权请求阻断",
+      "when": {
+        "all": [
+          {
+            "field": "access_allowed",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "then": {
+        "action": "block_request",
+        "scope": "request",
+        "outcome": "blocked",
+        "tools": []
+      },
+      "business_contract": "保留原案件；不向调用者暴露无权限的案情。"
+    },
+    {
+      "id": "BR-02",
+      "phase": "admission",
+      "priority": 2,
+      "title": "环境或输入不合格",
+      "when": {
+        "any": [
+          {
+            "field": "data_allowed",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "input_valid",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "then": {
+        "action": "block_invalid_input",
+        "scope": "request",
+        "outcome": "blocked",
+        "tools": []
+      },
+      "business_contract": "阻断本次处理并记录受限诊断；不把原始敏感数据复制到审计日志。"
+    },
+    {
+      "id": "BR-03",
+      "phase": "admission",
+      "priority": 3,
+      "title": "允许进入业务流程",
+      "when": {
+        "all": []
+      },
+      "then": {
+        "action": "accept_input",
+        "scope": "request",
+        "outcome": "accepted",
+        "tools": []
+      },
+      "business_contract": "读取可信案件上下文；仅将获准内容传给后续模型或工具。"
+    },
+    {
+      "id": "BR-04",
+      "phase": "scope",
+      "priority": 1,
+      "title": "范围不明确",
+      "when": {
+        "all": [
+          {
+            "field": "capability",
+            "op": "eq",
+            "value": "need_scope"
+          }
+        ]
+      },
+      "then": {
+        "action": "ask_scope",
+        "scope": "case",
+        "outcome": "waiting_user",
+        "tools": [
+          "next_question"
+        ]
+      },
+      "business_contract": "只问足以选择规则包的范围信息；同版本待答问题复用。"
+    },
+    {
+      "id": "BR-05",
+      "phase": "scope",
+      "priority": 2,
+      "title": "请求全部不支持",
+      "when": {
+        "all": [
+          {
+            "field": "capability",
+            "op": "eq",
+            "value": "unsupported"
+          }
+        ]
+      },
+      "then": {
+        "action": "record_unsupported_scope",
+        "scope": "case",
+        "outcome": "scope_only",
+        "tools": []
+      },
+      "business_contract": "登记全部未覆盖项；通过汇总与报告校验后形成范围说明，不输出税务结论。"
+    },
+    {
+      "id": "BR-06",
+      "phase": "scope",
+      "priority": 3,
+      "title": "请求部分支持",
+      "when": {
+        "all": [
+          {
+            "field": "capability",
+            "op": "eq",
+            "value": "partial"
+          }
+        ]
+      },
+      "then": {
+        "action": "split_supported_issues",
+        "scope": "case",
+        "outcome": "partial_scope",
+        "tools": []
+      },
+      "business_contract": "支持争点继续，其他争点标 unsupported；禁止把局部结论描述成跨国完整结论。"
+    },
+    {
+      "id": "BR-07",
+      "phase": "scope",
+      "priority": 4,
+      "title": "请求在已启用范围内",
+      "when": {
+        "all": []
+      },
+      "then": {
+        "action": "build_issue_nodes",
+        "scope": "case",
+        "outcome": "scheduled",
+        "tools": []
+      },
+      "business_contract": "依据能力包创建节点和依赖；交易计划与已发生事实分开建模。"
+    },
+    {
+      "id": "BR-08",
+      "phase": "node",
+      "priority": 1,
+      "title": "依赖图错误",
+      "when": {
+        "all": [
+          {
+            "field": "dependency_state",
+            "op": "eq",
+            "value": "invalid"
+          }
+        ]
+      },
+      "then": {
+        "action": "stop_invalid_graph",
+        "scope": "case",
+        "outcome": "technical_error",
+        "tools": []
+      },
+      "business_contract": "记录循环或不存在的节点引用；修复前不能生成实质分析稿。"
+    },
+    {
+      "id": "BR-09",
+      "phase": "node",
+      "priority": 2,
+      "title": "当前节点依赖未满足",
+      "when": {
+        "all": [
+          {
+            "field": "dependency_state",
+            "op": "eq",
+            "value": "blocked"
+          }
+        ]
+      },
+      "then": {
+        "action": "record_dependency_block",
+        "scope": "node",
+        "outcome": "blocked_dependency",
+        "tools": []
+      },
+      "business_contract": "记录具体上游和条件，回调度器处理独立节点。"
+    },
+    {
+      "id": "BR-10",
+      "phase": "node",
+      "priority": 3,
+      "title": "同版本问题已在等待",
+      "when": {
+        "all": [
+          {
+            "field": "question_pending",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "then": {
+        "action": "reuse_pending_question",
+        "scope": "node",
+        "outcome": "waiting_user",
+        "tools": []
+      },
+      "business_contract": "不重新提问；新输入出现时先核销或替换过期问题，再评价当前节点。"
+    },
+    {
+      "id": "BR-11",
+      "phase": "node",
+      "priority": 4,
+      "title": "关键事实冲突",
+      "when": {
+        "all": [
+          {
+            "field": "fact_gate",
+            "op": "eq",
+            "value": "conflict"
+          }
+        ]
+      },
+      "then": {
+        "action": "ask_conflict",
+        "scope": "node",
+        "outcome": "waiting_user",
+        "tools": [
+          "next_question"
+        ]
+      },
+      "business_contract": "展示互相矛盾的值及出处，请用户澄清；不以最新文档或模型置信度自动选边。"
+    },
+    {
+      "id": "BR-12",
+      "phase": "node",
+      "priority": 5,
+      "title": "缺少必需事实",
+      "when": {
+        "all": [
+          {
+            "field": "fact_gate",
+            "op": "eq",
+            "value": "missing"
+          }
+        ]
+      },
+      "then": {
+        "action": "ask_required_fact",
+        "scope": "node",
+        "outcome": "waiting_user",
+        "tools": [
+          "next_question"
+        ]
+      },
+      "business_contract": "只补当前节点决定性信息；金额、日期、主体等未知不得默认零、今天或否。"
+    },
+    {
+      "id": "BR-13",
+      "phase": "node",
+      "priority": 6,
+      "title": "候选提取值需要核对",
+      "when": {
+        "all": [
+          {
+            "field": "fact_gate",
+            "op": "eq",
+            "value": "needs_ack"
+          }
+        ]
+      },
+      "then": {
+        "action": "ask_fact_ack",
+        "scope": "node",
+        "outcome": "waiting_user",
+        "tools": [
+          "next_question"
+        ]
+      },
+      "business_contract": "提供原文和事实卡；用户核对绑定事实版本，不生成 advisor_confirmed。"
+    },
+    {
+      "id": "BR-14",
+      "phase": "node",
+      "priority": 7,
+      "title": "事实不满足运行策略",
+      "when": {
+        "all": [
+          {
+            "field": "fact_gate",
+            "op": "eq",
+            "value": "unusable"
+          }
+        ]
+      },
+      "then": {
+        "action": "record_fact_policy_gap",
+        "scope": "node",
+        "outcome": "paused_gap",
+        "tools": []
+      },
+      "business_contract": "有值或用户已核对仍不代表可运算；不能通过提升事实状态绕过运行策略。"
+    },
+    {
+      "id": "BR-15",
+      "phase": "node",
+      "priority": 8,
+      "title": "足以开展当前节点预分析",
+      "when": {
+        "all": []
+      },
+      "then": {
+        "action": "prepare_analysis_snapshot",
+        "scope": "node",
+        "outcome": "ready_for_sources",
+        "tools": []
+      },
+      "business_contract": "冻结允许使用的事实及出处；L0 显式研究假设另存快照并保留原候选状态。"
+    },
+    {
+      "id": "BR-16",
+      "phase": "evidence",
+      "priority": 1,
+      "title": "尚未检索或覆盖核验",
+      "when": {
+        "all": [
+          {
+            "field": "coverage",
+            "op": "eq",
+            "value": "not_checked"
+          }
+        ]
+      },
+      "then": {
+        "action": "retrieve_and_check",
+        "scope": "node",
+        "outcome": "coverage_pending",
+        "tools": [
+          "retrieve_legal_sources",
+          "check_coverage"
+        ]
+      },
+      "business_contract": "按争点、主体、法域、税种、交易期间和规则版本检索，并检查例外及相反材料。"
+    },
+    {
+      "id": "BR-17",
+      "phase": "evidence",
+      "priority": 2,
+      "title": "依据存在缺口或冲突",
+      "when": {
+        "all": [
+          {
+            "field": "coverage",
+            "op": "in",
+            "value": [
+              "gap",
+              "stale",
+              "conflict"
+            ]
+          }
+        ]
+      },
+      "then": {
+        "action": "record_source_gap",
+        "scope": "node",
+        "outcome": "paused_gap",
+        "tools": []
+      },
+      "business_contract": "保留具体缺失或冲突；历史交易可用其适用的历史版本，旧发布日期本身不等于过期。"
+    },
+    {
+      "id": "BR-18",
+      "phase": "evidence",
+      "priority": 3,
+      "title": "依据满足当前运行策略",
+      "when": {
+        "all": []
+      },
+      "then": {
+        "action": "execute_rules",
+        "scope": "node",
+        "outcome": "execution_pending",
+        "tools": [
+          "run_tax_rules",
+          "verify_node_result"
+        ]
+      },
+      "business_contract": "使用版本化规则和确定性计算；模型不能自填税率或阈值。"
+    },
+    {
+      "id": "BR-19",
+      "phase": "result",
+      "priority": 1,
+      "title": "涉及专业判断",
+      "when": {
+        "all": [
+          {
+            "field": "node_result",
+            "op": "eq",
+            "value": "judgment"
+          }
+        ]
+      },
+      "then": {
+        "action": "collect_final_judgment",
+        "scope": "node",
+        "outcome": "pending_final_judgment",
+        "tools": []
+      },
+      "business_contract": "整理支持/反对材料及待判问题；不在中途派顾问，不把该条件当已通过。"
+    },
+    {
+      "id": "BR-20",
+      "phase": "result",
+      "priority": 2,
+      "title": "节点输出校验失败",
+      "when": {
+        "all": [
+          {
+            "field": "node_result",
+            "op": "eq",
+            "value": "invalid"
+          }
+        ]
+      },
+      "then": {
+        "action": "record_invalid_result",
+        "scope": "node",
+        "outcome": "paused_gap",
+        "tools": []
+      },
+      "business_contract": "保存诊断并撤下该结论；独立节点继续，修复事件到达后重算。"
+    },
+    {
+      "id": "BR-21",
+      "phase": "result",
+      "priority": 3,
+      "title": "当前节点分析完成",
+      "when": {
+        "all": []
+      },
+      "then": {
+        "action": "save_node_result",
+        "scope": "node",
+        "outcome": "completed",
+        "tools": []
+      },
+      "business_contract": "保存结论、计算、引用与版本；返回调度器，不能直接生成全案报告。"
+    },
+    {
+      "id": "BR-22",
+      "phase": "aggregate",
+      "priority": 1,
+      "title": "仍有可推进节点",
+      "when": {
+        "all": [
+          {
+            "field": "runnable_nodes",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "then": {
+        "action": "schedule_next",
+        "scope": "case",
+        "outcome": "analyzing",
+        "tools": [
+          "decide_next_action"
+        ]
+      },
+      "business_contract": "按范围阻断、结论阻断、支持项，再按节点顺序和字段名调度；已等待节点不可空转。"
+    },
+    {
+      "id": "BR-23",
+      "phase": "aggregate",
+      "priority": 2,
+      "title": "等待用户且未授权部分稿",
+      "when": {
+        "all": [
+          {
+            "field": "waiting_questions",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "partial_scope_covers_waits",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "then": {
+        "action": "save_and_wait",
+        "scope": "case",
+        "outcome": "waiting_user_response",
+        "tools": []
+      },
+      "business_contract": "用户离开或超时不自动出稿；保留进度和当前主要问题。"
+    },
+    {
+      "id": "BR-24",
+      "phase": "aggregate",
+      "priority": 3,
+      "title": "存在无明确去向的节点",
+      "when": {
+        "all": [
+          {
+            "field": "all_nodes_accounted",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "then": {
+        "action": "stop_unaccounted_nodes",
+        "scope": "case",
+        "outcome": "technical_error",
+        "tools": []
+      },
+      "business_contract": "修复调度或补齐节点处置，不能在报告中漏掉这些争点。"
+    },
+    {
+      "id": "BR-25",
+      "phase": "aggregate",
+      "priority": 4,
+      "title": "可以形成完整稿或部分稿",
+      "when": {
+        "all": []
+      },
+      "then": {
+        "action": "freeze_and_draft",
+        "scope": "report",
+        "outcome": "draft",
+        "tools": [
+          "draft_review_report"
+        ]
+      },
+      "business_contract": "冻结全部结果、未知、冲突、缺口及未支持范围；生成正文后进入 report 阶段。"
+    },
+    {
+      "id": "BR-26",
+      "phase": "user_event",
+      "priority": 1,
+      "title": "未回复或稍后提供",
+      "when": {
+        "all": [
+          {
+            "field": "user_event",
+            "op": "in",
+            "value": [
+              "no_reply",
+              "later"
+            ]
+          }
+        ]
+      },
+      "then": {
+        "action": "preserve_wait",
+        "scope": "case",
+        "outcome": "waiting_user_response",
+        "tools": []
+      },
+      "business_contract": "不改事实，不推定同意；调度器可以推进其他独立节点。"
+    },
+    {
+      "id": "BR-27",
+      "phase": "user_event",
+      "priority": 2,
+      "title": "用户不知道",
+      "when": {
+        "all": [
+          {
+            "field": "user_event",
+            "op": "eq",
+            "value": "unknown"
+          }
+        ]
+      },
+      "then": {
+        "action": "record_unknown_offer_partial",
+        "scope": "node",
+        "outcome": "waiting_user",
+        "tools": []
+      },
+      "business_contract": "保存 unknown，再询问继续等待还是先出部分稿；不默认为条件不满足。"
+    },
+    {
+      "id": "BR-28",
+      "phase": "user_event",
+      "priority": 3,
+      "title": "明确选择部分稿",
+      "when": {
+        "all": [
+          {
+            "field": "user_event",
+            "op": "eq",
+            "value": "partial"
+          }
+        ]
+      },
+      "then": {
+        "action": "record_partial_scope",
+        "scope": "case",
+        "outcome": "reschedule",
+        "tools": []
+      },
+      "business_contract": "记录用户、时间、问题/事实版本及允许保留的缺口范围；相关节点暂停后重新调度。"
+    },
+    {
+      "id": "BR-29",
+      "phase": "user_event",
+      "priority": 4,
+      "title": "补充、核对或纠正",
+      "when": {
+        "all": []
+      },
+      "then": {
+        "action": "merge_versioned_answer",
+        "scope": "case",
+        "outcome": "reschedule",
+        "tools": [
+          "extract_candidate_facts",
+          "record_user_fact_check"
+        ]
+      },
+      "business_contract": "输入检查后，按请求幂等键及预期版本写入；如语义含糊则澄清；影响判断时走 change 阶段。"
+    },
+    {
+      "id": "BR-30",
+      "phase": "tool_error",
+      "priority": 1,
+      "title": "故障可安全重试",
+      "when": {
+        "all": [
+          {
+            "field": "retryable",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "budget_remaining",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "safe_to_retry",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "then": {
+        "action": "bounded_retry",
+        "scope": "tool_call",
+        "outcome": "retry_scheduled",
+        "tools": []
+      },
+      "business_contract": "统一预算计数并退避；写入结果不确定时先查执行记录。"
+    },
+    {
+      "id": "BR-31",
+      "phase": "tool_error",
+      "priority": 2,
+      "title": "故障不能继续重试",
+      "when": {
+        "all": []
+      },
+      "then": {
+        "action": "record_tool_failure",
+        "scope": "node",
+        "outcome": "technical_error",
+        "tools": []
+      },
+      "business_contract": "保留工具错误和恢复条件；超时不解释成无适用法规，权限拒绝不更换身份重试。"
+    },
+    {
+      "id": "BR-32",
+      "phase": "report",
+      "priority": 1,
+      "title": "草稿输入版本失效",
+      "when": {
+        "all": [
+          {
+            "field": "snapshot_current",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "then": {
+        "action": "invalidate_and_reschedule",
+        "scope": "report",
+        "outcome": "invalidated",
+        "tools": []
+      },
+      "business_contract": "返回影响分析，重算需要更新的节点；不把旧文本送最终复核。"
+    },
+    {
+      "id": "BR-33",
+      "phase": "report",
+      "priority": 2,
+      "title": "生成或改文后尚未校验",
+      "when": {
+        "all": [
+          {
+            "field": "report_validation",
+            "op": "eq",
+            "value": "not_checked"
+          }
+        ]
+      },
+      "then": {
+        "action": "validate_report",
+        "scope": "report",
+        "outcome": "validation_pending",
+        "tools": [
+          "verify_report"
+        ]
+      },
+      "business_contract": "检查实际正文、数字、引用支持、未知/假设、范围、版本、敏感数据和研究标识。"
+    },
+    {
+      "id": "BR-34",
+      "phase": "report",
+      "priority": 3,
+      "title": "实际报告校验通过",
+      "when": {
+        "all": [
+          {
+            "field": "report_validation",
+            "op": "eq",
+            "value": "passed"
+          }
+        ]
+      },
+      "then": {
+        "action": "submit_final_review",
+        "scope": "report",
+        "outcome": "pending_review",
+        "tools": []
+      },
+      "business_contract": "绑定正文哈希和输入版本包；此处才进入唯一顾问复核环节。"
+    },
+    {
+      "id": "BR-35",
+      "phase": "report",
+      "priority": 4,
+      "title": "校验失败且可修订",
+      "when": {
+        "all": [
+          {
+            "field": "repair_available",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "then": {
+        "action": "repair_and_revalidate",
+        "scope": "report",
+        "outcome": "revision_pending",
+        "tools": [
+          "verify_report"
+        ]
+      },
+      "business_contract": "同一输入快照默认最多两轮自动修订；每次新正文必须重新校验，版本递增不重置预算。"
+    },
+    {
+      "id": "BR-36",
+      "phase": "report",
+      "priority": 5,
+      "title": "修订耗尽尚可尝试简化稿",
+      "when": {
+        "all": [
+          {
+            "field": "simplified_attempted",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "then": {
+        "action": "simplify_and_revalidate",
+        "scope": "report",
+        "outcome": "simplified_pending",
+        "tools": [
+          "draft_review_report",
+          "verify_report"
+        ]
+      },
+      "business_contract": "仅保留可支持的范围说明/缺口；简化稿同样校验，每个生成周期最多一次。"
+    },
+    {
+      "id": "BR-37",
+      "phase": "report",
+      "priority": 6,
+      "title": "简化稿仍校验失败",
+      "when": {
+        "all": []
+      },
+      "then": {
+        "action": "stop_report_submission",
+        "scope": "report",
+        "outcome": "report_validation_failed",
+        "tools": []
+      },
+      "business_contract": "保存诊断，禁止把失败稿提交顾问绕过校验。"
+    },
+    {
+      "id": "BR-38",
+      "phase": "review",
+      "priority": 1,
+      "title": "复核所据版本已变化",
+      "when": {
+        "all": [
+          {
+            "field": "snapshot_current",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "then": {
+        "action": "reject_stale_review",
+        "scope": "report",
+        "outcome": "invalidated",
+        "tools": []
+      },
+      "business_contract": "拒绝旧版本批准；保留复核意见但不能自动套用到新事实。"
+    },
+    {
+      "id": "BR-39",
+      "phase": "review",
+      "priority": 2,
+      "title": "尚无顾问决定",
+      "when": {
+        "all": [
+          {
+            "field": "review_action",
+            "op": "eq",
+            "value": "waiting"
+          }
+        ]
+      },
+      "then": {
+        "action": "wait_final_review",
+        "scope": "report",
+        "outcome": "pending_review",
+        "tools": []
+      },
+      "business_contract": "没有顾问时继续待审；不因时间已到自动批准。"
+    },
+    {
+      "id": "BR-40",
+      "phase": "review",
+      "priority": 3,
+      "title": "批准且交付范围允许",
+      "when": {
+        "all": [
+          {
+            "field": "review_action",
+            "op": "eq",
+            "value": "approve"
+          },
+          {
+            "field": "release_allowed",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "then": {
+        "action": "approve_exact_version",
+        "scope": "report",
+        "outcome": "approved",
+        "tools": []
+      },
+      "business_contract": "事务内重查版本/校验哈希和权限，保存批准；L0 仍仅限内部研究。"
+    },
+    {
+      "id": "BR-41",
+      "phase": "review",
+      "priority": 4,
+      "title": "批准但交付条件不满足",
+      "when": {
+        "all": [
+          {
+            "field": "review_action",
+            "op": "eq",
+            "value": "approve"
+          }
+        ]
+      },
+      "then": {
+        "action": "record_release_block",
+        "scope": "report",
+        "outcome": "pending_review",
+        "tools": []
+      },
+      "business_contract": "记录决定尝试和阻断原因；不能通过顾问点击批准提高发布等级。"
+    },
+    {
+      "id": "BR-42",
+      "phase": "review",
+      "priority": 5,
+      "title": "顾问修改事实或判断",
+      "when": {
+        "all": [
+          {
+            "field": "review_action",
+            "op": "eq",
+            "value": "amend_facts"
+          }
+        ]
+      },
+      "then": {
+        "action": "apply_review_and_recompute",
+        "scope": "case",
+        "outcome": "reschedule",
+        "tools": []
+      },
+      "business_contract": "保存专业决定的范围、理由与来源；重算受影响节点，重生成和校验，回到同一最终复核环节。"
+    },
+    {
+      "id": "BR-43",
+      "phase": "review",
+      "priority": 6,
+      "title": "顾问修改报告文字",
+      "when": {
+        "all": [
+          {
+            "field": "review_action",
+            "op": "eq",
+            "value": "amend_text"
+          }
+        ]
+      },
+      "then": {
+        "action": "revise_text_and_validate",
+        "scope": "report",
+        "outcome": "validation_pending",
+        "tools": []
+      },
+      "business_contract": "创建新正文版本并清除旧批准与校验；如实际改变事实/结论，必须改走重算分支。"
+    },
+    {
+      "id": "BR-44",
+      "phase": "review",
+      "priority": 7,
+      "title": "顾问要求补资料",
+      "when": {
+        "all": [
+          {
+            "field": "review_action",
+            "op": "eq",
+            "value": "request_data"
+          }
+        ]
+      },
+      "then": {
+        "action": "ask_review_question",
+        "scope": "case",
+        "outcome": "waiting_user_response",
+        "tools": []
+      },
+      "business_contract": "建立具体用户问题并保留复核意见；补充后再生成和校验。"
+    },
+    {
+      "id": "BR-45",
+      "phase": "review",
+      "priority": 8,
+      "title": "顾问无法形成意见",
+      "when": {
+        "all": []
+      },
+      "then": {
+        "action": "close_unapproved_review",
+        "scope": "report",
+        "outcome": "unapproved",
+        "tools": []
+      },
+      "business_contract": "保留原因和未决事项，结束本轮复核；有新材料可重新开启。"
+    },
+    {
+      "id": "BR-46",
+      "phase": "change",
+      "priority": 1,
+      "title": "变更影响既有分析",
+      "when": {
+        "all": [
+          {
+            "field": "affected_results",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "then": {
+        "action": "invalidate_affected_results",
+        "scope": "case",
+        "outcome": "reschedule",
+        "tools": []
+      },
+      "business_contract": "沿事实/规则/来源到结论的依赖使受影响结果、报告和批准失效；原记录保留。"
+    },
+    {
+      "id": "BR-47",
+      "phase": "change",
+      "priority": 2,
+      "title": "重复材料或不影响结论的变更",
+      "when": {
+        "all": []
+      },
+      "then": {
+        "action": "reuse_valid_results",
+        "scope": "case",
+        "outcome": "resume",
+        "tools": []
+      },
+      "business_contract": "核对内容哈希和新增证据后复用有效结果；不重复核对相同事实版本。"
+    }
+  ],
+  "examples": [
+    {
+      "name": "无案件权限优先阻断",
+      "phase": "admission",
+      "context": {
+        "access_allowed": false,
+        "data_allowed": false,
+        "input_valid": true
+      },
+      "expected_rule_id": "BR-01"
+    },
+    {
+      "name": "L0 真实案件数据不进入模型",
+      "phase": "admission",
+      "context": {
+        "access_allowed": true,
+        "data_allowed": false,
+        "input_valid": true
+      },
+      "expected_rule_id": "BR-02"
+    },
+    {
+      "name": "合成输入获准",
+      "phase": "admission",
+      "context": {
+        "access_allowed": true,
+        "data_allowed": true,
+        "input_valid": true
+      },
+      "expected_rule_id": "BR-03"
+    },
+    {
+      "name": "只知道跨境付款不足以确定分析范围",
+      "phase": "scope",
+      "context": {
+        "capability": "need_scope"
+      },
+      "expected_rule_id": "BR-04"
+    },
+    {
+      "name": "香港分析可用而多国最优排名未启用",
+      "phase": "scope",
+      "context": {
+        "capability": "partial"
+      },
+      "expected_rule_id": "BR-06"
+    },
+    {
+      "name": "只有不支持的关税问题",
+      "phase": "scope",
+      "context": {
+        "capability": "unsupported"
+      },
+      "expected_rule_id": "BR-05"
+    },
+    {
+      "name": "已支持的香港股息争点",
+      "phase": "scope",
+      "context": {
+        "capability": "supported"
+      },
+      "expected_rule_id": "BR-07"
+    },
+    {
+      "name": "规则依赖循环",
+      "phase": "node",
+      "context": {
+        "dependency_state": "invalid",
+        "question_pending": false,
+        "fact_gate": "ready"
+      },
+      "expected_rule_id": "BR-08"
+    },
+    {
+      "name": "专业判断未决只阻塞依赖项",
+      "phase": "node",
+      "context": {
+        "dependency_state": "blocked",
+        "question_pending": false,
+        "fact_gate": "ready"
+      },
+      "expected_rule_id": "BR-09"
+    },
+    {
+      "name": "同一金额问题未答不再次提问",
+      "phase": "node",
+      "context": {
+        "dependency_state": "ready",
+        "question_pending": true,
+        "fact_gate": "conflict"
+      },
+      "expected_rule_id": "BR-10"
+    },
+    {
+      "name": "合同和付款记录的金额矛盾",
+      "phase": "node",
+      "context": {
+        "dependency_state": "ready",
+        "question_pending": false,
+        "fact_gate": "conflict"
+      },
+      "expected_rule_id": "BR-11"
+    },
+    {
+      "name": "适用期间缺失",
+      "phase": "node",
+      "context": {
+        "dependency_state": "ready",
+        "question_pending": false,
+        "fact_gate": "missing"
+      },
+      "expected_rule_id": "BR-12"
+    },
+    {
+      "name": "首次提取事实请用户核对",
+      "phase": "node",
+      "context": {
+        "dependency_state": "ready",
+        "question_pending": false,
+        "fact_gate": "needs_ack"
+      },
+      "expected_rule_id": "BR-13"
+    },
+    {
+      "name": "用户核对但运行策略仍不允许",
+      "phase": "node",
+      "context": {
+        "dependency_state": "ready",
+        "question_pending": false,
+        "fact_gate": "unusable"
+      },
+      "expected_rule_id": "BR-14"
+    },
+    {
+      "name": "允许的合成研究快照",
+      "phase": "node",
+      "context": {
+        "dependency_state": "ready",
+        "question_pending": false,
+        "fact_gate": "ready"
+      },
+      "expected_rule_id": "BR-15"
+    },
+    {
+      "name": "能力目录命中仍必须实际检索",
+      "phase": "evidence",
+      "context": {
+        "coverage": "not_checked"
+      },
+      "expected_rule_id": "BR-16"
+    },
+    {
+      "name": "有来源但缺少必要例外条款",
+      "phase": "evidence",
+      "context": {
+        "coverage": "gap"
+      },
+      "expected_rule_id": "BR-17"
+    },
+    {
+      "name": "覆盖核验通过才运行",
+      "phase": "evidence",
+      "context": {
+        "coverage": "covered"
+      },
+      "expected_rule_id": "BR-18"
+    },
+    {
+      "name": "经济实质判断放入最终待判清单",
+      "phase": "result",
+      "context": {
+        "node_result": "judgment"
+      },
+      "expected_rule_id": "BR-19"
+    },
+    {
+      "name": "数值校验失败",
+      "phase": "result",
+      "context": {
+        "node_result": "invalid"
+      },
+      "expected_rule_id": "BR-20"
+    },
+    {
+      "name": "规则结果有效",
+      "phase": "result",
+      "context": {
+        "node_result": "valid"
+      },
+      "expected_rule_id": "BR-21"
+    },
+    {
+      "name": "缺资料不阻碍另一独立节点",
+      "phase": "aggregate",
+      "context": {
+        "runnable_nodes": true,
+        "waiting_questions": true,
+        "partial_scope_covers_waits": false,
+        "all_nodes_accounted": true
+      },
+      "expected_rule_id": "BR-22"
+    },
+    {
+      "name": "用户未回复禁止自动生成部分稿",
+      "phase": "aggregate",
+      "context": {
+        "runnable_nodes": false,
+        "waiting_questions": true,
+        "partial_scope_covers_waits": false,
+        "all_nodes_accounted": true
+      },
+      "expected_rule_id": "BR-23"
+    },
+    {
+      "name": "旧的部分稿选择不覆盖新问题",
+      "phase": "aggregate",
+      "context": {
+        "runnable_nodes": false,
+        "waiting_questions": true,
+        "partial_scope_covers_waits": false,
+        "all_nodes_accounted": true
+      },
+      "expected_rule_id": "BR-23"
+    },
+    {
+      "name": "全部等待项已获部分稿选择",
+      "phase": "aggregate",
+      "context": {
+        "runnable_nodes": false,
+        "waiting_questions": true,
+        "partial_scope_covers_waits": true,
+        "all_nodes_accounted": true
+      },
+      "expected_rule_id": "BR-25"
+    },
+    {
+      "name": "存在遗漏节点不能出稿",
+      "phase": "aggregate",
+      "context": {
+        "runnable_nodes": false,
+        "waiting_questions": false,
+        "partial_scope_covers_waits": false,
+        "all_nodes_accounted": false
+      },
+      "expected_rule_id": "BR-24"
+    },
+    {
+      "name": "稍后提供继续保留等待",
+      "phase": "user_event",
+      "context": {
+        "user_event": "later"
+      },
+      "expected_rule_id": "BR-26"
+    },
+    {
+      "name": "不知道不等于否",
+      "phase": "user_event",
+      "context": {
+        "user_event": "unknown"
+      },
+      "expected_rule_id": "BR-27"
+    },
+    {
+      "name": "明确选择先分析现有资料",
+      "phase": "user_event",
+      "context": {
+        "user_event": "partial"
+      },
+      "expected_rule_id": "BR-28"
+    },
+    {
+      "name": "用户纠正事实",
+      "phase": "user_event",
+      "context": {
+        "user_event": "answer"
+      },
+      "expected_rule_id": "BR-29"
+    },
+    {
+      "name": "检索临时超时可重试",
+      "phase": "tool_error",
+      "context": {
+        "retryable": true,
+        "budget_remaining": true,
+        "safe_to_retry": true
+      },
+      "expected_rule_id": "BR-30"
+    },
+    {
+      "name": "写操作完成情况未知不能盲目重试",
+      "phase": "tool_error",
+      "context": {
+        "retryable": true,
+        "budget_remaining": true,
+        "safe_to_retry": false
+      },
+      "expected_rule_id": "BR-31"
+    },
+    {
+      "name": "重试预算耗尽",
+      "phase": "tool_error",
+      "context": {
+        "retryable": true,
+        "budget_remaining": false,
+        "safe_to_retry": true
+      },
+      "expected_rule_id": "BR-31"
+    },
+    {
+      "name": "正文已通过但事实快照过期",
+      "phase": "report",
+      "context": {
+        "snapshot_current": false,
+        "report_validation": "passed",
+        "repair_available": true,
+        "simplified_attempted": false
+      },
+      "expected_rule_id": "BR-32"
+    },
+    {
+      "name": "报告刚生成必须检查实际正文",
+      "phase": "report",
+      "context": {
+        "snapshot_current": true,
+        "report_validation": "not_checked",
+        "repair_available": true,
+        "simplified_attempted": false
+      },
+      "expected_rule_id": "BR-33"
+    },
+    {
+      "name": "通过后提交最终顾问复核",
+      "phase": "report",
+      "context": {
+        "snapshot_current": true,
+        "report_validation": "passed",
+        "repair_available": true,
+        "simplified_attempted": false
+      },
+      "expected_rule_id": "BR-34"
+    },
+    {
+      "name": "报告夸大结论须修订",
+      "phase": "report",
+      "context": {
+        "snapshot_current": true,
+        "report_validation": "failed",
+        "repair_available": true,
+        "simplified_attempted": false
+      },
+      "expected_rule_id": "BR-35"
+    },
+    {
+      "name": "修订耗尽生成一次简化稿",
+      "phase": "report",
+      "context": {
+        "snapshot_current": true,
+        "report_validation": "failed",
+        "repair_available": false,
+        "simplified_attempted": false
+      },
+      "expected_rule_id": "BR-36"
+    },
+    {
+      "name": "简化稿失败停止提交",
+      "phase": "report",
+      "context": {
+        "snapshot_current": true,
+        "report_validation": "failed",
+        "repair_available": false,
+        "simplified_attempted": true
+      },
+      "expected_rule_id": "BR-37"
+    },
+    {
+      "name": "顾问点击批准时版本已更新",
+      "phase": "review",
+      "context": {
+        "snapshot_current": false,
+        "review_action": "approve",
+        "release_allowed": true
+      },
+      "expected_rule_id": "BR-38"
+    },
+    {
+      "name": "没有顾问决定保持待审",
+      "phase": "review",
+      "context": {
+        "snapshot_current": true,
+        "review_action": "waiting",
+        "release_allowed": true
+      },
+      "expected_rule_id": "BR-39"
+    },
+    {
+      "name": "批准当前已校验内部研究稿",
+      "phase": "review",
+      "context": {
+        "snapshot_current": true,
+        "review_action": "approve",
+        "release_allowed": true
+      },
+      "expected_rule_id": "BR-40"
+    },
+    {
+      "name": "L0 不能批准为客户正式意见",
+      "phase": "review",
+      "context": {
+        "snapshot_current": true,
+        "review_action": "approve",
+        "release_allowed": false
+      },
+      "expected_rule_id": "BR-41"
+    },
+    {
+      "name": "顾问改金额必须重算",
+      "phase": "review",
+      "context": {
+        "snapshot_current": true,
+        "review_action": "amend_facts",
+        "release_allowed": true
+      },
+      "expected_rule_id": "BR-42"
+    },
+    {
+      "name": "仅改文字仍须重验",
+      "phase": "review",
+      "context": {
+        "snapshot_current": true,
+        "review_action": "amend_text",
+        "release_allowed": true
+      },
+      "expected_rule_id": "BR-43"
+    },
+    {
+      "name": "最终顾问要求补充资料",
+      "phase": "review",
+      "context": {
+        "snapshot_current": true,
+        "review_action": "request_data",
+        "release_allowed": true
+      },
+      "expected_rule_id": "BR-44"
+    },
+    {
+      "name": "最终顾问无法形成意见",
+      "phase": "review",
+      "context": {
+        "snapshot_current": true,
+        "review_action": "decline",
+        "release_allowed": true
+      },
+      "expected_rule_id": "BR-45"
+    },
+    {
+      "name": "交易日期改变导致失效",
+      "phase": "change",
+      "context": {
+        "affected_results": true
+      },
+      "expected_rule_id": "BR-46"
+    },
+    {
+      "name": "重复上传同一文件不重复核对",
+      "phase": "change",
+      "context": {
+        "affected_results": false
+      },
+      "expected_rule_id": "BR-47"
+    }
+  ]
+}

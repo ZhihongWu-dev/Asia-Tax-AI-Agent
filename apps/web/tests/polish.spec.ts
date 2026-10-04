@@ -50,9 +50,10 @@ test("markdown and copy are safe and history can be renamed archived and restore
   await page.screenshot({ path: "test-results/polished-answer.png", fullPage: true });
 });
 
-test("real response stream displays early and stop cancels without committing a partial turn", async ({ page }) => {
+test("unvalidated response stays hidden and stop cancels without committing a partial turn", async ({ page }) => {
   await start(page); await send(page, "STREAM_TEST");
-  await expect(page.locator(".streaming-answer")).toContainText("First live chunk");
+  await expect(page.locator(".assistant-pending")).toBeVisible();
+  await expect(page.locator(".streaming-answer")).toHaveCount(0);
   await expect(page.locator(".message.assistant:not(.streaming-answer)")).toHaveCount(0);
   await page.getByRole("button", { name: "Stop generating" }).click();
   await expect(page.locator(".assistant-pending")).toHaveCount(0);
@@ -60,7 +61,8 @@ test("real response stream displays early and stop cancels without committing a 
   await page.reload();
   await expect(page.locator(".message.assistant")).toHaveCount(0);
   await send(page, "STREAM_TEST");
-  await expect(page.locator(".streaming-answer")).toContainText("First live chunk");
+  await expect(page.locator(".assistant-pending")).toBeVisible();
+  await expect(page.locator(".streaming-answer")).toHaveCount(0);
   await expect(page.locator(".message.assistant:not(.streaming-answer)")).toContainText("First live chunk and final chunk");
   await page.reload();
   await expect(page.locator(".message.assistant")).toHaveCount(1);
@@ -73,7 +75,7 @@ test("reading older messages is not interrupted by a new reply", async ({ page }
     await expect(page.locator(".message.assistant")).toHaveCount(n + 1);
   }
   await send(page, "STREAM_TEST");
-  await expect(page.locator(".streaming-answer")).toBeVisible();
+  await expect(page.locator(".assistant-pending")).toBeVisible();
   await page.locator(".workspace-scroll").evaluate(el => { el.scrollTop = 0; el.dispatchEvent(new Event("scroll")); });
   await expect(page.getByRole("button", { name: "Back to bottom" })).toBeVisible();
   await expect(page.locator(".message.assistant:not(.streaming-answer)")).toHaveCount(5);

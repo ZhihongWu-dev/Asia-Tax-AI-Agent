@@ -1,6 +1,6 @@
 import { BookOpen, Landmark, ListChecks } from "lucide-react";
 import { BrandMark } from "./Brand";
-import { suggestions } from "../workspace";
+import { suggestions, type EntryHint } from "../workspace";
 import { useLocale } from "../locale";
 
 export default function Welcome() {
@@ -18,7 +18,7 @@ export default function Welcome() {
 export function SuggestedQuestions({
   onSelect,
 }: {
-  onSelect: (text: string) => void;
+  onSelect: (text: string, hint: EntryHint) => void;
 }) {
   const { t } = useLocale();
   const icons = [Landmark, ListChecks, BookOpen];
@@ -29,7 +29,7 @@ export function SuggestedQuestions({
         return (
           <button
             key={suggestion.id}
-            onClick={() => onSelect(t(suggestion.text))}
+            onClick={() => onSelect(t(suggestion.text), suggestion.entryHint)}
           >
             <Icon size={15} strokeWidth={1.5} />
             {t(suggestion.title)}

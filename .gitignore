@@ -47,3 +47,7 @@ Thumbs.db
 # Restricted or local source data
 data/
 knowledge/**/raw/
+
+# Private account quota snapshots are not team evaluation evidence.
+evals/b_workflow/runs/free_quota_*.json
+evals/b_workflow/runs/model_e2e_quota_*.json

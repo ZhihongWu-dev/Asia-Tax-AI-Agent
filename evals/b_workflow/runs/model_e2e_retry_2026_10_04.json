@@ -1,0 +1,1287 @@
+{
+  "started_at": "2026-10-04T05:07:27.750788+00:00",
+  "dataset_version": "b-model-e2e-0.1",
+  "dataset_sha256": "06e018e9ff57be1f3df8f0505c8f02c3a80b5aa06c5835d8f220443c51dddb05",
+  "layer": "M-model/D-knowledge/API",
+  "provider": "openrouter",
+  "status": "incomplete",
+  "results": [
+    {
+      "id": "BWF-E2E-001",
+      "name": "真实模型从空白案件到待复核稿",
+      "status": "failed",
+      "steps": [
+        {
+          "step": 1,
+          "operation": "message",
+          "input": "虚构测试：我有一笔境外股息，想分析香港FSIE适用范围，先帮我整理案情。",
+          "outcome": {},
+          "expected": {
+            "no_analysis": true,
+            "question_field": "recipient_type"
+          },
+          "checks_failed": [],
+          "duration_ms": 13574.87,
+          "model_calls": 1,
+          "searches": [],
+          "actual": {
+            "workflow": {
+              "version": "0.3.0",
+              "policy_version": "hybrid-0.1",
+              "trace_id": "de9a9939-2fa6-456b-8f55-01ed1135bbb7",
+              "status": "waiting_user",
+              "reason_code": "fact_collection",
+              "entry_hint": "auto",
+              "effective_task": "fact_intake",
+              "dynamic_planner": true,
+              "trace": [
+                "route",
+                "facts",
+                "validate"
+              ],
+              "timings_ms": {
+                "route": 13074.97,
+                "facts": 0.32,
+                "validate": 0.62
+              },
+              "identification": {
+                "status": "collecting",
+                "scenario": null,
+                "missing_fields": [
+                  "recipient_type"
+                ],
+                "professional_validation": "pending_final_review"
+              },
+              "task_results": [],
+              "budget": {
+                "model": 1,
+                "elapsed_ms": 13088.83
+              },
+              "rule_decisions": [
+                {
+                  "rule_id": "HY-01",
+                  "decision": "entry_is_hint"
+                },
+                {
+                  "rule_id": "HY-05",
+                  "decision": "shared_budget"
+                },
+                {
+                  "rule_id": "HY-07",
+                  "decision": "proposal_before_commit"
+                },
+                {
+                  "rule_id": "BR-12",
+                  "decision": "fact_collection"
+                }
+              ]
+            },
+            "facts": {
+              "income_type": "dividend",
+              "analysis_jurisdiction": "HK",
+              "consultation_goal": "scope"
+            },
+            "last_message": {
+              "id": "05f9529a-894f-4c42-b926-b7d173c9fd5e",
+              "role": "assistant",
+              "kind": "intake",
+              "text": "已记录本次信息。\n\n这笔收入由个人还是公司收取？\n\n先确定适用的主体场景。\n例如：公司收取；也可以回答不清楚。",
+              "question_fields": [
+                "recipient_type"
+              ],
+              "state": "collecting",
+              "created_at": "2026-10-04T05:07:42.972381+00:00",
+              "workflow": {
+                "version": "0.3.0",
+                "policy_version": "hybrid-0.1",
+                "trace_id": "de9a9939-2fa6-456b-8f55-01ed1135bbb7",
+                "status": "waiting_user",
+                "reason_code": "fact_collection",
+                "entry_hint": "auto",
+                "effective_task": "fact_intake",
+                "dynamic_planner": true,
+                "trace": [
+                  "route",
+                  "facts",
+                  "validate"
+                ],
+                "timings_ms": {
+                  "route": 13074.97,
+                  "facts": 0.32,
+                  "validate": 0.62
+                },
+                "identification": {
+                  "status": "collecting",
+                  "scenario": null,
+                  "missing_fields": [
+                    "recipient_type"
+                  ],
+                  "professional_validation": "pending_final_review"
+                },
+                "task_results": [],
+                "budget": {
+                  "model": 1,
+                  "elapsed_ms": 13088.83
+                },
+                "rule_decisions": [
+                  {
+                    "rule_id": "HY-01",
+                    "decision": "entry_is_hint"
+                  },
+                  {
+                    "rule_id": "HY-05",
+                    "decision": "shared_budget"
+                  },
+                  {
+                    "rule_id": "HY-07",
+                    "decision": "proposal_before_commit"
+                  },
+                  {
+                    "rule_id": "BR-12",
+                    "decision": "fact_collection"
+                  }
+                ]
+              },
+              "question": {
+                "id": "guided-intake-0.2:recipient_type:1:1",
+                "kind": "fact",
+                "field": "recipient_type",
+                "text": "这笔收入由个人还是公司收取？",
+                "why": "先确定适用的主体场景。",
+                "example": "公司收取；也可以回答不清楚。",
+                "attempt": 1,
+                "based_on_revision": 1,
+                "task_id": "06134156-72b8-4b63-9a6b-e9d172c9d6c8"
+              },
+              "guided": true
+            }
+          }
+        },
+        {
+          "step": 2,
+          "operation": "message",
+          "input": "收款方是一家在香港经营业务的公司，付款方在新加坡。这是我们实际发生的股息交易，我要研究香港适用范围。",
+          "outcome": {},
+          "expected": {
+            "facts": {
+              "recipient_type": "company",
+              "income_type": "dividend",
+              "analysis_jurisdiction": "HK"
+            },
+            "no_analysis": true
+          },
+          "checks_failed": [],
+          "duration_ms": 14338.4,
+          "model_calls": 1,
+          "searches": [],
+          "actual": {
+            "workflow": {
+              "version": "0.3.0",
+              "policy_version": "hybrid-0.1",
+              "trace_id": "a1c3ce7e-d248-4a24-97b8-daa99e51f70e",
+              "status": "waiting_user",
+              "reason_code": "fact_collection",
+              "entry_hint": "auto",
+              "effective_task": "fact_intake",
+              "dynamic_planner": true,
+              "trace": [
+                "route",
+                "facts",
+                "validate"
+              ],
+              "timings_ms": {
+                "route": 14304.97,
+                "facts": 0.39,
+                "validate": 0.32
+              },
+              "identification": {
+                "status": "candidate_identified",
+                "scenario": "hk_fsie_dividend",
+                "missing_fields": [],
+                "professional_validation": "pending_final_review"
+              },
+              "task_results": [],
+              "budget": {
+                "model": 1,
+                "elapsed_ms": 14309.45
+              },
+              "rule_decisions": [
+                {
+                  "rule_id": "HY-01",
+                  "decision": "entry_is_hint"
+                },
+                {
+                  "rule_id": "HY-05",
+                  "decision": "shared_budget"
+                },
+                {
+                  "rule_id": "HY-07",
+                  "decision": "proposal_before_commit"
+                },
+                {
+                  "rule_id": "BR-12",
+                  "decision": "fact_collection"
+                }
+              ]
+            },
+            "facts": {
+              "income_type": "dividend",
+              "analysis_jurisdiction": "HK",
+              "consultation_goal": "scope",
+              "recipient_type": "company",
+              "entity_hk_business_status": "yes",
+              "payer_jurisdiction": "Singapore",
+              "income_event_status": "occurred"
+            },
+            "last_message": {
+              "id": "f31bd233-0a53-4ca8-b6f1-eff4b8477793",
+              "role": "assistant",
+              "kind": "intake",
+              "text": "已记录本次信息。\n\n请简要描述收款公司所属集团的结构。\n\n收集判断集团范围的事实，不要求您先判断 MNE 法律资格。\n例如：独立公司，或母子公司分别在哪些地区经营。",
+              "question_fields": [
+                "group_structure_description"
+              ],
+              "state": "collecting",
+              "created_at": "2026-10-04T05:07:57.309821+00:00",
+              "workflow": {
+                "version": "0.3.0",
+                "policy_version": "hybrid-0.1",
+                "trace_id": "a1c3ce7e-d248-4a24-97b8-daa99e51f70e",
+                "status": "waiting_user",
+                "reason_code": "fact_collection",
+                "entry_hint": "auto",
+                "effective_task": "fact_intake",
+                "dynamic_planner": true,
+                "trace": [
+                  "route",
+                  "facts",
+                  "validate"
+                ],
+                "timings_ms": {
+                  "route": 14304.97,
+                  "facts": 0.39,
+                  "validate": 0.32
+                },
+                "identification": {
+                  "status": "candidate_identified",
+                  "scenario": "hk_fsie_dividend",
+                  "missing_fields": [],
+                  "professional_validation": "pending_final_review"
+                },
+                "task_results": [],
+                "budget": {
+                  "model": 1,
+                  "elapsed_ms": 14309.45
+                },
+                "rule_decisions": [
+                  {
+                    "rule_id": "HY-01",
+                    "decision": "entry_is_hint"
+                  },
+                  {
+                    "rule_id": "HY-05",
+                    "decision": "shared_budget"
+                  },
+                  {
+                    "rule_id": "HY-07",
+                    "decision": "proposal_before_commit"
+                  },
+                  {
+                    "rule_id": "BR-12",
+                    "decision": "fact_collection"
+                  }
+                ]
+              },
+              "question": {
+                "id": "guided-intake-0.2:group_structure_description:2:1",
+                "kind": "fact",
+                "field": "group_structure_description",
+                "text": "请简要描述收款公司所属集团的结构。",
+                "why": "收集判断集团范围的事实，不要求您先判断 MNE 法律资格。",
+                "example": "独立公司，或母子公司分别在哪些地区经营。",
+                "attempt": 1,
+                "based_on_revision": 2,
+                "task_id": "06134156-72b8-4b63-9a6b-e9d172c9d6c8"
+              },
+              "guided": true
+            }
+          }
+        },
+        {
+          "step": 3,
+          "operation": "message",
+          "input": "请查阅香港境外股息FSIE的官方法律依据，不作最终税务结论。",
+          "outcome": {
+            "error": "model_failed",
+            "http_status": 503
+          },
+          "expected": {
+            "search_min": 1,
+            "no_analysis": true
+          },
+          "checks_failed": [
+            "error expected=None actual=model_failed"
+          ],
+          "duration_ms": 1797.79,
+          "model_calls": 1,
+          "searches": [],
+          "actual": {
+            "workflow": {
+              "version": "0.3.0",
+              "policy_version": "hybrid-0.1",
+              "trace_id": "a1c3ce7e-d248-4a24-97b8-daa99e51f70e",
+              "status": "waiting_user",
+              "reason_code": "fact_collection",
+              "entry_hint": "auto",
+              "effective_task": "fact_intake",
+              "dynamic_planner": true,
+              "trace": [
+                "route",
+                "facts",
+                "validate"
+              ],
+              "timings_ms": {
+                "route": 14304.97,
+                "facts": 0.39,
+                "validate": 0.32
+              },
+              "identification": {
+                "status": "candidate_identified",
+                "scenario": "hk_fsie_dividend",
+                "missing_fields": [],
+                "professional_validation": "pending_final_review"
+              },
+              "task_results": [],
+              "budget": {
+                "model": 1,
+                "elapsed_ms": 14309.45
+              },
+              "rule_decisions": [
+                {
+                  "rule_id": "HY-01",
+                  "decision": "entry_is_hint"
+                },
+                {
+                  "rule_id": "HY-05",
+                  "decision": "shared_budget"
+                },
+                {
+                  "rule_id": "HY-07",
+                  "decision": "proposal_before_commit"
+                },
+                {
+                  "rule_id": "BR-12",
+                  "decision": "fact_collection"
+                }
+              ]
+            },
+            "facts": {
+              "income_type": "dividend",
+              "analysis_jurisdiction": "HK",
+              "consultation_goal": "scope",
+              "recipient_type": "company",
+              "entity_hk_business_status": "yes",
+              "payer_jurisdiction": "Singapore",
+              "income_event_status": "occurred"
+            },
+            "last_message": {
+              "id": "f31bd233-0a53-4ca8-b6f1-eff4b8477793",
+              "role": "assistant",
+              "kind": "intake",
+              "text": "已记录本次信息。\n\n请简要描述收款公司所属集团的结构。\n\n收集判断集团范围的事实，不要求您先判断 MNE 法律资格。\n例如：独立公司，或母子公司分别在哪些地区经营。",
+              "question_fields": [
+                "group_structure_description"
+              ],
+              "state": "collecting",
+              "created_at": "2026-10-04T05:07:57.309821+00:00",
+              "workflow": {
+                "version": "0.3.0",
+                "policy_version": "hybrid-0.1",
+                "trace_id": "a1c3ce7e-d248-4a24-97b8-daa99e51f70e",
+                "status": "waiting_user",
+                "reason_code": "fact_collection",
+                "entry_hint": "auto",
+                "effective_task": "fact_intake",
+                "dynamic_planner": true,
+                "trace": [
+                  "route",
+                  "facts",
+                  "validate"
+                ],
+                "timings_ms": {
+                  "route": 14304.97,
+                  "facts": 0.39,
+                  "validate": 0.32
+                },
+                "identification": {
+                  "status": "candidate_identified",
+                  "scenario": "hk_fsie_dividend",
+                  "missing_fields": [],
+                  "professional_validation": "pending_final_review"
+                },
+                "task_results": [],
+                "budget": {
+                  "model": 1,
+                  "elapsed_ms": 14309.45
+                },
+                "rule_decisions": [
+                  {
+                    "rule_id": "HY-01",
+                    "decision": "entry_is_hint"
+                  },
+                  {
+                    "rule_id": "HY-05",
+                    "decision": "shared_budget"
+                  },
+                  {
+                    "rule_id": "HY-07",
+                    "decision": "proposal_before_commit"
+                  },
+                  {
+                    "rule_id": "BR-12",
+                    "decision": "fact_collection"
+                  }
+                ]
+              },
+              "question": {
+                "id": "guided-intake-0.2:group_structure_description:2:1",
+                "kind": "fact",
+                "field": "group_structure_description",
+                "text": "请简要描述收款公司所属集团的结构。",
+                "why": "收集判断集团范围的事实，不要求您先判断 MNE 法律资格。",
+                "example": "独立公司，或母子公司分别在哪些地区经营。",
+                "attempt": 1,
+                "based_on_revision": 2,
+                "task_id": "06134156-72b8-4b63-9a6b-e9d172c9d6c8"
+              },
+              "guided": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "BWF-021",
+      "name": "无匹配不说法规不存在",
+      "status": "failed",
+      "steps": [
+        {
+          "step": 1,
+          "operation": "message",
+          "input": "找香港税务局Case 999999裁定",
+          "outcome": {},
+          "expected": {
+            "reason": "no_match",
+            "search_min": 1,
+            "search_max": 2,
+            "forbidden": [
+              "法规不存在",
+              "一定免税"
+            ]
+          },
+          "checks_failed": [
+            "reason expected=no_match actual=planner_failed"
+          ],
+          "duration_ms": 21488.59,
+          "model_calls": 2,
+          "searches": [
+            {
+              "query": "香港税务局 Case 999999 裁定",
+              "date": null,
+              "filters": [],
+              "case_id": null
+            }
+          ],
+          "actual": {
+            "workflow": {
+              "version": "0.3.0",
+              "policy_version": "hybrid-0.1",
+              "trace_id": "8b719934-ba7d-425b-beb1-c8fb13343979",
+              "status": "partial_failure",
+              "reason_code": "planner_failed",
+              "entry_hint": "auto",
+              "effective_task": "reference_lookup",
+              "dynamic_planner": true,
+              "trace": [
+                "route",
+                "facts",
+                "reference_lookup",
+                "observe",
+                "validate"
+              ],
+              "timings_ms": {
+                "route": 4980.49,
+                "facts": 0.21,
+                "reference_lookup": 0.98,
+                "observe": 16470.16,
+                "validate": 0.39
+              },
+              "identification": {
+                "status": "collecting",
+                "scenario": null,
+                "missing_fields": [
+                  "recipient_type",
+                  "income_type",
+                  "analysis_jurisdiction",
+                  "consultation_goal"
+                ],
+                "professional_validation": "pending_final_review"
+              },
+              "retrieval_calls": 1,
+              "error_code": "model_failed",
+              "retryable": true,
+              "task_results": [
+                {
+                  "kind": "reference_lookup",
+                  "task_id": "34c2ec75-2196-40ca-a040-b3eb35d71c6f",
+                  "status": "paused_gap",
+                  "reason_code": "no_match",
+                  "query": "香港税务局 Case 999999 裁定"
+                }
+              ],
+              "budget": {
+                "model": 2,
+                "action": 1,
+                "search": 1,
+                "elapsed_ms": 21465.99
+              },
+              "rule_decisions": [
+                {
+                  "rule_id": "HY-01",
+                  "decision": "entry_is_hint"
+                },
+                {
+                  "rule_id": "HY-05",
+                  "decision": "shared_budget"
+                },
+                {
+                  "rule_id": "HY-07",
+                  "decision": "proposal_before_commit"
+                },
+                {
+                  "rule_id": "HY-03",
+                  "decision": "reference_without_case"
+                }
+              ]
+            },
+            "facts": {},
+            "last_message": {
+              "id": "34cb09ee-2df6-4241-afc7-d1487230035b",
+              "role": "assistant",
+              "kind": "research",
+              "text": "【模拟联调资料，不是真实税务依据】本次查询未找到匹配依据，不能据此认定相关规定不存在，也不能形成税务结论。\n\n适用条件：仅适用于本次查询范围；日期、主体及具体事实仍须核对。\n\n缺口：没有匹配证据；未匹配的查询：香港税务局 Case 999999 裁定；可补充条文/案例编号或调整检索关键词；已知事实无需重新填写。；模拟资料仅验证流程，不能用于实际税务结论。\n后续调度失败，以上为已校验的结果；可重试未完成查询。",
+              "question_fields": [],
+              "state": "collecting",
+              "created_at": "2026-10-04T05:08:20.618637+00:00",
+              "workflow": {
+                "version": "0.3.0",
+                "policy_version": "hybrid-0.1",
+                "trace_id": "8b719934-ba7d-425b-beb1-c8fb13343979",
+                "status": "partial_failure",
+                "reason_code": "planner_failed",
+                "entry_hint": "auto",
+                "effective_task": "reference_lookup",
+                "dynamic_planner": true,
+                "trace": [
+                  "route",
+                  "facts",
+                  "reference_lookup",
+                  "observe",
+                  "validate"
+                ],
+                "timings_ms": {
+                  "route": 4980.49,
+                  "facts": 0.21,
+                  "reference_lookup": 0.98,
+                  "observe": 16470.16,
+                  "validate": 0.39
+                },
+                "identification": {
+                  "status": "collecting",
+                  "scenario": null,
+                  "missing_fields": [
+                    "recipient_type",
+                    "income_type",
+                    "analysis_jurisdiction",
+                    "consultation_goal"
+                  ],
+                  "professional_validation": "pending_final_review"
+                },
+                "retrieval_calls": 1,
+                "error_code": "model_failed",
+                "retryable": true,
+                "task_results": [
+                  {
+                    "kind": "reference_lookup",
+                    "task_id": "34c2ec75-2196-40ca-a040-b3eb35d71c6f",
+                    "status": "paused_gap",
+                    "reason_code": "no_match",
+                    "query": "香港税务局 Case 999999 裁定"
+                  }
+                ],
+                "budget": {
+                  "model": 2,
+                  "action": 1,
+                  "search": 1,
+                  "elapsed_ms": 21465.99
+                },
+                "rule_decisions": [
+                  {
+                    "rule_id": "HY-01",
+                    "decision": "entry_is_hint"
+                  },
+                  {
+                    "rule_id": "HY-05",
+                    "decision": "shared_budget"
+                  },
+                  {
+                    "rule_id": "HY-07",
+                    "decision": "proposal_before_commit"
+                  },
+                  {
+                    "rule_id": "HY-03",
+                    "decision": "reference_without_case"
+                  }
+                ]
+              },
+              "question": null,
+              "guided": false,
+              "research": {
+                "status": "no_matching_units",
+                "method": "knowledge_provider_v0.1",
+                "query": "香港税务局 Case 999999 裁定",
+                "provider": "mock",
+                "is_synthetic": true,
+                "corpus_version": "mock-corpus-0.1.0",
+                "retrieval_id": "retrieval-MOCK-02",
+                "reason_code": "no_match",
+                "passages": [],
+                "error": null,
+                "coverage": {
+                  "status": "not_assessed",
+                  "scope": "本次模拟查询",
+                  "missing_requirements": [
+                    "没有匹配证据"
+                  ],
+                  "truncated": false
+                },
+                "gaps": [
+                  "没有匹配证据"
+                ],
+                "verified_evidence_ids": [],
+                "retrieval_calls": 1,
+                "timings_ms": {
+                  "db": null,
+                  "retrieval": null,
+                  "rerank": null,
+                  "total": 0.55
+                },
+                "query_context": {
+                  "uses_case": false,
+                  "applicable_date": null,
+                  "date_status": "not_needed",
+                  "jurisdiction": "HK"
+                }
+              },
+              "answer": {
+                "summary": "【模拟联调资料，不是真实税务依据】本次查询未找到匹配依据，不能据此认定相关规定不存在，也不能形成税务结论。",
+                "conditions": [
+                  "仅适用于本次查询范围；日期、主体及具体事实仍须核对。"
+                ],
+                "claims": [],
+                "limitations": [
+                  "没有匹配证据",
+                  "未匹配的查询：香港税务局 Case 999999 裁定",
+                  "可补充条文/案例编号或调整检索关键词；已知事实无需重新填写。",
+                  "模拟资料仅验证流程，不能用于实际税务结论。"
+                ],
+                "review_status": "pending_final_review",
+                "text": "【模拟联调资料，不是真实税务依据】本次查询未找到匹配依据，不能据此认定相关规定不存在，也不能形成税务结论。\n\n适用条件：仅适用于本次查询范围；日期、主体及具体事实仍须核对。\n\n缺口：没有匹配证据；未匹配的查询：香港税务局 Case 999999 裁定；可补充条文/案例编号或调整检索关键词；已知事实无需重新填写。；模拟资料仅验证流程，不能用于实际税务结论。"
+              },
+              "research_results": [
+                {
+                  "status": "no_matching_units",
+                  "method": "knowledge_provider_v0.1",
+                  "query": "香港税务局 Case 999999 裁定",
+                  "provider": "mock",
+                  "is_synthetic": true,
+                  "corpus_version": "mock-corpus-0.1.0",
+                  "retrieval_id": "retrieval-MOCK-02",
+                  "reason_code": "no_match",
+                  "passages": [],
+                  "error": null,
+                  "coverage": {
+                    "status": "not_assessed",
+                    "scope": "本次模拟查询",
+                    "missing_requirements": [
+                      "没有匹配证据"
+                    ],
+                    "truncated": false
+                  },
+                  "gaps": [
+                    "没有匹配证据"
+                  ],
+                  "verified_evidence_ids": [],
+                  "retrieval_calls": 1,
+                  "timings_ms": {
+                    "db": null,
+                    "retrieval": null,
+                    "rerank": null,
+                    "total": 0.55
+                  },
+                  "query_context": {
+                    "uses_case": false,
+                    "applicable_date": null,
+                    "date_status": "not_needed",
+                    "jurisdiction": "HK"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "BWF-035",
+      "name": "混合更正加独立检索",
+      "status": "failed",
+      "steps": [
+        {
+          "step": 1,
+          "operation": "message",
+          "input": "刚才金额说错了，应为200万港币。另外查香港FSIE官方资料",
+          "outcome": {},
+          "expected": {
+            "facts": {
+              "dividend_amount": 2000000
+            },
+            "search_min": 1
+          },
+          "checks_failed": [
+            "fact dividend_amount expected=2000000 actual='conflict'"
+          ],
+          "duration_ms": 18016.82,
+          "model_calls": 1,
+          "searches": [
+            {
+              "query": "香港 FSIE 官方资料 境外股息",
+              "date": null,
+              "filters": [],
+              "case_id": null
+            }
+          ],
+          "actual": {
+            "workflow": {
+              "version": "0.3.0",
+              "policy_version": "hybrid-0.1",
+              "trace_id": "73572449-e220-4e0c-be25-1546f7ff361a",
+              "status": "waiting_user",
+              "reason_code": "fact_collection",
+              "entry_hint": "auto",
+              "effective_task": "reference_lookup",
+              "dynamic_planner": true,
+              "trace": [
+                "route",
+                "facts",
+                "reference_lookup",
+                "observe",
+                "validate"
+              ],
+              "timings_ms": {
+                "route": 17976.72,
+                "facts": 2.63,
+                "reference_lookup": 2.54,
+                "observe": 0.05,
+                "validate": 0.26
+              },
+              "identification": {
+                "status": "candidate_identified",
+                "scenario": "hk_fsie_dividend",
+                "missing_fields": [],
+                "professional_validation": "pending_final_review"
+              },
+              "retrieval_calls": 1,
+              "retrieval_reason_code": "evidence_available",
+              "task_results": [
+                {
+                  "kind": "reference_lookup",
+                  "task_id": "b378ebf9-f006-49a6-bad7-7ab64dda3bab",
+                  "status": "completed",
+                  "reason_code": "evidence_available",
+                  "query": "香港 FSIE 官方资料 境外股息"
+                }
+              ],
+              "budget": {
+                "model": 1,
+                "action": 1,
+                "search": 1,
+                "evidence": 1,
+                "elapsed_ms": 17997.87
+              },
+              "rule_decisions": [
+                {
+                  "rule_id": "HY-01",
+                  "decision": "entry_is_hint"
+                },
+                {
+                  "rule_id": "HY-05",
+                  "decision": "shared_budget"
+                },
+                {
+                  "rule_id": "HY-07",
+                  "decision": "proposal_before_commit"
+                },
+                {
+                  "rule_id": "BR-12",
+                  "decision": "fact_collection"
+                },
+                {
+                  "rule_id": "HY-03",
+                  "decision": "reference_without_case"
+                }
+              ]
+            },
+            "facts": {
+              "recipient_type": "company",
+              "income_type": "dividend",
+              "analysis_jurisdiction": "HK",
+              "consultation_goal": "scope",
+              "payer_jurisdiction": "新加坡",
+              "dividend_amount": "conflict",
+              "dividend_currency": "HKD"
+            },
+            "last_message": {
+              "id": "1655d4e8-2fba-4c6f-a2c6-142dfc9db082",
+              "role": "assistant",
+              "kind": "research",
+              "text": "本次事实修订将在本轮提交时保存，旧分析需重新确认。\n\n【模拟联调资料，不是真实税务依据】已找到可用资料。以下为依据摘录及适用条件提示，具体案件仍需最终复核。\n\n适用条件：仅适用于本次查询范围；日期、主体及具体事实仍须核对。\n\n依据摘录 [mock-evidence-1]：\n模拟资料 MOCK-01：仅用于验证查询、条件说明和引用定位。此文本不含真实税法，不支持税务结论。\n\n缺口：模拟资料仅验证流程，不能用于实际税务结论。\n\n换一种说明方式：关于“股息金额（数值，币种见配对字段）”，之前记录为 1000000，本次为 2000000，本次应采用哪个值？ 可以参考后面的示例，暂时不能提供也可以说明。\n\n保留双方陈述，未澄清前不选择其一。\n例如：请给出本次正确值；无法确认也可以说明。",
+              "question_fields": [],
+              "state": "needs_resolution",
+              "created_at": "2026-10-04T05:08:38.657620+00:00",
+              "workflow": {
+                "version": "0.3.0",
+                "policy_version": "hybrid-0.1",
+                "trace_id": "73572449-e220-4e0c-be25-1546f7ff361a",
+                "status": "waiting_user",
+                "reason_code": "fact_collection",
+                "entry_hint": "auto",
+                "effective_task": "reference_lookup",
+                "dynamic_planner": true,
+                "trace": [
+                  "route",
+                  "facts",
+                  "reference_lookup",
+                  "observe",
+                  "validate"
+                ],
+                "timings_ms": {
+                  "route": 17976.72,
+                  "facts": 2.63,
+                  "reference_lookup": 2.54,
+                  "observe": 0.05,
+                  "validate": 0.26
+                },
+                "identification": {
+                  "status": "candidate_identified",
+                  "scenario": "hk_fsie_dividend",
+                  "missing_fields": [],
+                  "professional_validation": "pending_final_review"
+                },
+                "retrieval_calls": 1,
+                "retrieval_reason_code": "evidence_available",
+                "task_results": [
+                  {
+                    "kind": "reference_lookup",
+                    "task_id": "b378ebf9-f006-49a6-bad7-7ab64dda3bab",
+                    "status": "completed",
+                    "reason_code": "evidence_available",
+                    "query": "香港 FSIE 官方资料 境外股息"
+                  }
+                ],
+                "budget": {
+                  "model": 1,
+                  "action": 1,
+                  "search": 1,
+                  "evidence": 1,
+                  "elapsed_ms": 17997.87
+                },
+                "rule_decisions": [
+                  {
+                    "rule_id": "HY-01",
+                    "decision": "entry_is_hint"
+                  },
+                  {
+                    "rule_id": "HY-05",
+                    "decision": "shared_budget"
+                  },
+                  {
+                    "rule_id": "HY-07",
+                    "decision": "proposal_before_commit"
+                  },
+                  {
+                    "rule_id": "BR-12",
+                    "decision": "fact_collection"
+                  },
+                  {
+                    "rule_id": "HY-03",
+                    "decision": "reference_without_case"
+                  }
+                ]
+              },
+              "question": {
+                "id": "guided-intake-0.2:dividend_amount:2:2",
+                "kind": "fact",
+                "field": "dividend_amount",
+                "text": "换一种说明方式：关于“股息金额（数值，币种见配对字段）”，之前记录为 1000000，本次为 2000000，本次应采用哪个值？ 可以参考后面的示例，暂时不能提供也可以说明。",
+                "why": "保留双方陈述，未澄清前不选择其一。",
+                "example": "请给出本次正确值；无法确认也可以说明。",
+                "attempt": 2,
+                "based_on_revision": 2,
+                "task_id": "b378ebf9-f006-49a6-bad7-7ab64dda3bab"
+              },
+              "guided": true,
+              "research": {
+                "status": "available",
+                "method": "knowledge_provider_v0.1",
+                "query": "香港 FSIE 官方资料 境外股息",
+                "provider": "mock",
+                "is_synthetic": true,
+                "corpus_version": "mock-corpus-0.1.0",
+                "retrieval_id": "retrieval-MOCK-01",
+                "reason_code": "evidence_available",
+                "passages": [
+                  {
+                    "unit_id": "mock-unit-1",
+                    "source_id": "mock-source-1",
+                    "evidence_id": "mock-evidence-1",
+                    "source_version_id": "mock-source-1-v1",
+                    "locator": "模拟段落 1",
+                    "text": "模拟资料 MOCK-01：仅用于验证查询、条件说明和引用定位。此文本不含真实税法，不支持税务结论。",
+                    "title": "模拟资料 MOCK-01（非真实税务依据）",
+                    "url": null,
+                    "text_sha256": "779cb5f683d42687c952a2d1b1104d7308d440e2b8bb80f7b74b59851b6674dc",
+                    "is_synthetic": true,
+                    "model_use": "allowed",
+                    "policy_version": "mock-policy-v1",
+                    "drift": false,
+                    "heading": null,
+                    "retrieved_at": null,
+                    "snapshot_sha256": null,
+                    "coverage_cutoff": null
+                  }
+                ],
+                "error": null,
+                "coverage": {
+                  "status": "unchecked",
+                  "scope": "仅测试咨询路由，不包含税务规则",
+                  "missing_requirements": [],
+                  "truncated": false
+                },
+                "gaps": [],
+                "verified_evidence_ids": [],
+                "retrieval_calls": 1,
+                "timings_ms": {
+                  "db": null,
+                  "retrieval": null,
+                  "rerank": null,
+                  "total": 1.74
+                },
+                "query_context": {
+                  "uses_case": false,
+                  "applicable_date": null,
+                  "date_status": "not_needed",
+                  "jurisdiction": "HK"
+                }
+              },
+              "answer": {
+                "summary": "【模拟联调资料，不是真实税务依据】已找到可用资料。以下为依据摘录及适用条件提示，具体案件仍需最终复核。",
+                "conditions": [
+                  "仅适用于本次查询范围；日期、主体及具体事实仍须核对。"
+                ],
+                "claims": [
+                  {
+                    "text": "模拟资料 MOCK-01：仅用于验证查询、条件说明和引用定位。此文本不含真实税法，不支持税务结论。",
+                    "evidence_ids": [
+                      "mock-evidence-1"
+                    ],
+                    "kind": "excerpt"
+                  }
+                ],
+                "limitations": [
+                  "模拟资料仅验证流程，不能用于实际税务结论。"
+                ],
+                "review_status": "pending_final_review",
+                "text": "【模拟联调资料，不是真实税务依据】已找到可用资料。以下为依据摘录及适用条件提示，具体案件仍需最终复核。\n\n适用条件：仅适用于本次查询范围；日期、主体及具体事实仍须核对。\n\n依据摘录 [mock-evidence-1]：\n模拟资料 MOCK-01：仅用于验证查询、条件说明和引用定位。此文本不含真实税法，不支持税务结论。\n\n缺口：模拟资料仅验证流程，不能用于实际税务结论。"
+              },
+              "research_results": [
+                {
+                  "status": "available",
+                  "method": "knowledge_provider_v0.1",
+                  "query": "香港 FSIE 官方资料 境外股息",
+                  "provider": "mock",
+                  "is_synthetic": true,
+                  "corpus_version": "mock-corpus-0.1.0",
+                  "retrieval_id": "retrieval-MOCK-01",
+                  "reason_code": "evidence_available",
+                  "passages": [
+                    {
+                      "unit_id": "mock-unit-1",
+                      "source_id": "mock-source-1",
+                      "evidence_id": "mock-evidence-1",
+                      "source_version_id": "mock-source-1-v1",
+                      "locator": "模拟段落 1",
+                      "text": "模拟资料 MOCK-01：仅用于验证查询、条件说明和引用定位。此文本不含真实税法，不支持税务结论。",
+                      "title": "模拟资料 MOCK-01（非真实税务依据）",
+                      "url": null,
+                      "text_sha256": "779cb5f683d42687c952a2d1b1104d7308d440e2b8bb80f7b74b59851b6674dc",
+                      "is_synthetic": true,
+                      "model_use": "allowed",
+                      "policy_version": "mock-policy-v1",
+                      "drift": false,
+                      "heading": null,
+                      "retrieved_at": null,
+                      "snapshot_sha256": null,
+                      "coverage_cutoff": null
+                    }
+                  ],
+                  "error": null,
+                  "coverage": {
+                    "status": "unchecked",
+                    "scope": "仅测试咨询路由，不包含税务规则",
+                    "missing_requirements": [],
+                    "truncated": false
+                  },
+                  "gaps": [],
+                  "verified_evidence_ids": [],
+                  "retrieval_calls": 1,
+                  "timings_ms": {
+                    "db": null,
+                    "retrieval": null,
+                    "rerank": null,
+                    "total": 1.74
+                  },
+                  "query_context": {
+                    "uses_case": false,
+                    "applicable_date": null,
+                    "date_status": "not_needed",
+                    "jurisdiction": "HK"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "model_calls": [
+    {
+      "index": 1,
+      "status": "ok",
+      "stage": "plan_turn",
+      "usage": {
+        "prompt_tokens": 7058,
+        "completion_tokens": 1170,
+        "total_tokens": 8228,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1002,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "duration_ms": 13058.12
+    },
+    {
+      "index": 2,
+      "status": "ok",
+      "stage": "plan_turn",
+      "usage": {
+        "prompt_tokens": 7485,
+        "completion_tokens": 1836,
+        "total_tokens": 9321,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6912,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1647,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "duration_ms": 14302.89
+    },
+    {
+      "index": 3,
+      "status": "error",
+      "stage": "plan_turn",
+      "exception": "ModelError",
+      "category": "rate_limit",
+      "duration_ms": 1776.79
+    },
+    {
+      "index": 4,
+      "status": "ok",
+      "stage": "plan_turn",
+      "usage": {
+        "prompt_tokens": 7049,
+        "completion_tokens": 347,
+        "total_tokens": 7396,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 216,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "duration_ms": 3789.06
+    },
+    {
+      "index": 5,
+      "status": "error",
+      "stage": "plan_next",
+      "exception": "ModelError",
+      "category": "timeout",
+      "duration_ms": 16469.26
+    },
+    {
+      "index": 6,
+      "status": "ok",
+      "stage": "plan_turn",
+      "usage": {
+        "prompt_tokens": 7115,
+        "completion_tokens": 1569,
+        "total_tokens": 8684,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6912,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1349,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "duration_ms": 17973.76
+    }
+  ],
+  "sources": [
+    {
+      "path": "tests/fsie/candidate_cases.json",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "9ebffd406f8ff4512fdfa6778682d1a22f236e55f22379f85973050a0744685a",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/candidate_cases.json"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/expectations.json",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "c9b19cac2f37b34da9042af44726ee80ae67b77fedccad6b53c021580e7e5e48",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/expectations.json"
+    },
+    {
+      "path": "docs/project/evaluations/Taxora_测试记录.xlsx",
+      "commit": "7054c45323abf7d63d9725f03f81dab892c98110",
+      "sha256": "ef95f24734535d4034e36645f1dbac01b564a52c0ef29611669149698b050209",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/7054c45323abf7d63d9725f03f81dab892c98110/docs/project/evaluations/Taxora_测试记录.xlsx"
+    },
+    {
+      "path": "docs/project/evaluations/README.md",
+      "commit": "7054c45323abf7d63d9725f03f81dab892c98110",
+      "sha256": "b837cdfcf767f9753fa1515916cc4031bf69c36e8f3e7e03c9733ea0f118a0ba",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/7054c45323abf7d63d9725f03f81dab892c98110/docs/project/evaluations/README.md"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-001.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "a37e5db050d3c3c06e56cf608537cd600bb32752f59034591caa2f73607d973a",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-001.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-002.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "af6b8a430348aac2492adfff1a5cb9ae31c7dee7242391e57d0589a6e1d44fc5",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-002.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-003.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "91fa928b20bf00a4dfd7516edd6df8bb453ae173b66ac744e34038ab27e0f0dc",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-003.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-004.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "2acd1fc656e1c0a8c4f35898cecec319de8ba9424249ac534b7799b5904eccb1",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-004.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-007.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "698e9c8c78a4fc881d6d3995b4323c78b9a239322df4997f914d86f1122001c0",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-007.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-010.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "d9e7a5b1fc911db38a6ac31f335283ce2ae443f99013a66b90f3f9e586d91317",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-010.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SEC-001.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "2b656d6e45440f7105c86f02811351cc4a07235ee314880656221019b950ec4f",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SEC-001.txt"
+    }
+  ],
+  "free_daily_remaining_before": 42,
+  "model": "qwen/qwen3.8-27b:free",
+  "summary": {
+    "passed": 0,
+    "failed": 3,
+    "blocked": 0
+  }
+}

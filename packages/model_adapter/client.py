@@ -49,6 +49,7 @@ class ModelConfig:
     model_name: str
     timeout_seconds: float = 60.0
     max_retries: int = 2
+    total_timeout_seconds: float | None = None
 
     @property
     def is_configured(self) -> bool:
@@ -98,6 +99,7 @@ class OpenAICompatibleClient:
         data = json.dumps(payload).encode("utf-8")
         last_error: Exception | None = None
         for attempt in range(self.config.max_retries + 1):
+            started = time.monotonic()
             request = urllib.request.Request(
                 url,
                 data=data,
@@ -108,7 +110,22 @@ class OpenAICompatibleClient:
             )
             try:
                 with urllib.request.urlopen(request, timeout=self.config.timeout_seconds) as resp:
-                    return json.loads(resp.read().decode("utf-8"))
+                    if self.config.total_timeout_seconds is None:
+                        return json.loads(resp.read().decode("utf-8"))
+                    chunks, size = [], 0
+                    while True:
+                        if time.monotonic() - started >= self.config.total_timeout_seconds:
+                            raise TimeoutError('Model total deadline exceeded')
+                        chunk = resp.read1(65536)
+                        if not chunk:
+                            break
+                        chunks.append(chunk)
+                        size += len(chunk)
+                        if size > 2_000_000:
+                            raise ModelError('Excessive model response')
+                    if time.monotonic() - started >= self.config.total_timeout_seconds:
+                        raise TimeoutError('Model total deadline exceeded')
+                    return json.loads(b''.join(chunks).decode('utf-8'))
             except urllib.error.HTTPError as exc:
                 detail = exc.read().decode("utf-8", errors="replace")[:400]
                 # 4xx (except 429) will not succeed on retry.

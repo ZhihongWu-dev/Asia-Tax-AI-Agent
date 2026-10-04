@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-03",
+  "inference_test_success": false,
+  "private_case_data_sent": false,
+  "credentials_used": false,
+  "checks": [
+    {"endpoint":"https://text.pollinations.ai/models","method":"GET","status":200,"purpose":"model_catalog_only"},
+    {"endpoint":"https://gen.pollinations.ai/text/models","method":"GET","status":200,"purpose":"model_catalog_only"},
+    {"endpoint":"https://openrouter.ai/api/v1/models","method":"GET","status":200,"purpose":"verify_free_non_openai_catalog","candidate":"qwen/qwen3.8-27b:free"},
+    {"endpoint":"https://text.pollinations.ai/openai","method":"POST","status":404,"purpose":"anonymous_json_hello_probe"},
+    {"endpoint":"https://gen.pollinations.ai/v1/chat/completions","method":"POST","status":401,"purpose":"anonymous_json_hello_probe"}
+  ],
+  "next_requirement":"Own OpenRouter API key, or explicit authorization and available quota for the existing Qwen Token Plan"
+}

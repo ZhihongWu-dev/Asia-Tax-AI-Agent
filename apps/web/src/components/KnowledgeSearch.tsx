@@ -61,8 +61,10 @@ export default function KnowledgeSearch() {
         <div aria-live="polite">
           <p>
             {t(
-              result.passages.length
-                ? "以下为官方原文片段，适用性待核对。"
+              result.is_synthetic
+                ? "模拟联调资料，不是真实税务依据。"
+                : result.passages.length
+                ? "以下为来源原文片段，适用性待核对。"
                 : "未找到匹配资料，请换用具体条文、案例编号或税务关键词。",
             )}
           </p>

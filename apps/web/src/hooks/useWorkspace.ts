@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { api, ApiError, type FactPatch } from "../api";
-import type { Case, FieldSpec, Message } from "../workspace";
+import type { Case, FieldSpec, Message, EntryHint } from "../workspace";
 
 export function useWorkspace() {
   const [cases, setCases] = useState<Case[]>([]),
@@ -36,6 +36,11 @@ export function useWorkspace() {
         }
       : storedCurrent;
   const [drafts, setDrafts] = useState<Record<string, string>>({});
+  const [entrySelections, setEntrySelections] = useState<Record<string, { text: string; hint: EntryHint }>>({});
+  function chooseSuggestion(text: string, hint: EntryHint) {
+    setDrafts(all => ({ ...all, [current.id]: text }));
+    setEntrySelections(all => ({ ...all, [current.id]: { text, hint } }));
+  }
   async function initialize() {
     const session = await api.session();
     const list = await api.list();
@@ -111,6 +116,8 @@ export function useWorkspace() {
   function send(text: string, approved: boolean) {
     const doc = storedCurrent,
       requestId = crypto.randomUUID();
+    const entryHint = entrySelections[doc.id]?.text.trim() === text ? entrySelections[doc.id].hint : "auto";
+    const pending = doc.dialogue?.status === "active" ? doc.dialogue.pending : null;
     return perform(async () => {
       const localId = `pending-${requestId}`;
       setOutbox((all) => [
@@ -136,8 +143,10 @@ export function useWorkspace() {
         controller.current = abort;
         setPartial({ caseId: doc.id, text: "" });
         const next = await api.stream(doc, text, approved, requestId, abort.signal, chunk =>
-          setPartial(previous => previous?.caseId === doc.id ? { ...previous, text: previous.text + chunk } : previous));
+          setPartial(previous => previous?.caseId === doc.id ? { ...previous, text: previous.text + chunk } : previous),
+          entryHint, pending?.id || null);
         update(next);
+        setEntrySelections(all => { const copy = { ...all }; delete copy[doc.id]; return copy; });
         setOutbox((all) => all.filter((item) => item.message.id !== localId));
       } catch (e) {
         if (e instanceof ApiError && e.code === "revision_conflict") update(await api.get(doc.id));
@@ -198,6 +207,7 @@ export function useWorkspace() {
   }
   function changeDraft(text: string) {
     setDrafts((all) => ({ ...all, [current.id]: text }));
+    setEntrySelections(all => { const copy = { ...all }; delete copy[current.id]; return copy; });
   }
   function organize(id: string, changes: { title?: string; archived?: boolean }) {
     const doc = cases.find(c => c.id === id);
@@ -228,6 +238,7 @@ export function useWorkspace() {
     setActiveId,
     drafts,
     changeDraft,
+    chooseSuggestion,
     send,
     save,
     confirmAndAnalyze,

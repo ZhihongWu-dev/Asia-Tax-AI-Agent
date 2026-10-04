@@ -47,6 +47,13 @@ NODE_LOCATORS = {
 }
 
 
+def provider_related_rulings(provider, context):
+    from packages.agent.contracts import SearchRequest
+    from packages.agent.knowledge import retrieve, display_result
+    return display_result(retrieve(provider, SearchRequest(request_id=str(uuid4()), trace_id=str(uuid4()),
+        query='dividend', kind='ruling'), context))
+
+
 def related_rulings(facts: dict) -> dict:
     try:
         documents = read_documents(kind='ruling')
@@ -65,7 +72,7 @@ def related_rulings(facts: dict) -> dict:
         return {'status': 'unavailable', 'passages': [], 'method': 'keyword_reference_only'}
 
 
-def analyze(case_id: str, facts: dict, confirmed_revision: int) -> dict:
+def analyze(case_id: str, facts: dict, confirmed_revision: int, *, provider=None, context=None) -> dict:
     package = load_rules_payload()
     rules = package["rules"]
     chain = [ChainRule.from_payload(r) for r in rules]
@@ -75,7 +82,22 @@ def analyze(case_id: str, facts: dict, confirmed_revision: int) -> dict:
     sources = [s for s in manifest["sources"] if s["source_id"] in source_ids]
     locators = sorted({t["statute_locator"] for r in rules for t in r.get("thresholds", []) if t.get("statute_locator")})
     locators = sorted(set(locators).union(*(set(refs) for refs in NODE_LOCATORS.values())))
-    units, retrieval_status = retrieve_units(locators)
+    bundle = None
+    if provider is not None:
+        from packages.agent.contracts import SearchRequest
+        from packages.agent.knowledge import retrieve
+        from packages.agent.dialogue import query_date
+        when, date_status = query_date(facts)
+        bundle = retrieve(provider, SearchRequest(request_id=str(uuid4()), trace_id=str(uuid4()),
+            query='香港境外股息 FSIE 适用规则', intent='case_analysis', locators=locators,
+            applicable_date=when, date_status=date_status,
+            entity_type=facts.get('recipient_type') if facts.get('recipient_type') in ('company', 'individual', 'unknown') else 'unknown',
+            fact_filters=[{'field_name': key, 'value': facts[key]} for key in
+                          ('income_type', 'source_analysis', 'entity_hk_business_status', 'receipt_location', 'recipient_type')
+                          if isinstance(facts.get(key), str) and facts[key] not in ('unknown', 'conflict')]), context)
+        units, retrieval_status = bundle['passages'], bundle['status']
+    else:
+        units, retrieval_status = retrieve_units(locators)
     units = [u for u in units if u["source_id"] in source_ids]
     if retrieval_status == "available" and not units:
         retrieval_status = "no_matching_units"
@@ -88,7 +110,22 @@ def analyze(case_id: str, facts: dict, confirmed_revision: int) -> dict:
                   t.get('statute_locator') == u.get('locator') for t in by_node[n.node].get('thresholds', []))],
               } for n in outcome.node_outcomes]
     missing = [node for node, ordinal in JUDGEMENT_CHAIN.items() if ordinal > 0 and node not in by_node]
-    return {
+    # Research rule outputs remain inspectable, but unsupported nodes cannot appear resolved.
+    if bundle is not None:
+        for node in nodes:
+            node['candidate_output'] = node['output']
+            required = set(NODE_LOCATORS.get(node['node'], []))
+            found = {u['locator'] for u in units if u['unit_id'] in node['passage_ids'] and u.get('evidence_id') in bundle['verified_evidence_ids']}
+            if node['node'] == 'human_gate' or node['output'] == 'human_review_required':
+                node['workflow_status'] = 'pending_final_judgment'
+            elif not required.issubset(found) or bundle['is_synthetic']:
+                node['workflow_status'] = 'paused_gap'
+                node['output'] = 'unknown'
+            elif node['output'] == 'unknown':
+                node['workflow_status'] = 'waiting_user'
+            else:
+                node['workflow_status'] = 'pending_final_review'
+    result = {
         "id": str(uuid4()), "created_at": now(), "confirmed_revision": confirmed_revision,
         "facts_snapshot": facts, "rule_version": package["rule_package_version"],
         "rules_sha256": sha256(json.dumps(package, sort_keys=True).encode()).hexdigest(),
@@ -96,9 +133,9 @@ def analyze(case_id: str, facts: dict, confirmed_revision: int) -> dict:
         "coverage_cutoff": manifest["legal_coverage_cutoff"], "professional_validation_status": "unverified",
         "terminal_state": outcome.terminal_state, "blockers": list(outcome.blockers), "nodes": nodes,
         "missing_nodes": missing, "sources": sources, "passages": units, "retrieval_status": retrieval_status,
-        "related_rulings": related_rulings(facts) if facts.get('income_type') == 'dividend' else
+        "related_rulings": (provider_related_rulings(provider, context) if provider is not None else related_rulings(facts)) if facts.get('income_type') == 'dividend' else
             {'status': 'not_applicable', 'passages': [], 'method': 'keyword_reference_only'},
-        "review_tasks": [{"node": node, "status": "human_review_required", "fact_keys": REVIEW_FIELDS[node],
+        "review_tasks": [{"node": node, "status": "pending_final_judgment", "fact_keys": REVIEW_FIELDS[node],
                           "passage_ids": [u['unit_id'] for u in units if u.get('locator') in NODE_LOCATORS.get(node, [])],
                           "missing_facts": [key for key in REVIEW_FIELDS[node] if key not in facts or
                                             facts[key] in ('unknown', 'conflict', None)]} for node in missing],
@@ -108,3 +145,16 @@ def analyze(case_id: str, facts: dict, confirmed_revision: int) -> dict:
         "citation_map_version": '2026-09-27',
         "stale": False,
     }
+
+    if bundle is not None:
+        result.update(provider=bundle['provider'], is_synthetic=bundle['is_synthetic'],
+                      corpus_version=bundle['corpus_version'], retrieval_id=bundle['retrieval_id'],
+                      evidence_gate=bundle['coverage']['status'], evidence_gaps=bundle['gaps'],
+                      workflow_status='pending_final_review')
+        # The UI must never label fixture passages as authoritative tax sources.
+        if bundle['is_synthetic']:
+            result['sources'] = []
+            result['coverage_cutoff'] = 'synthetic_test_only'
+        if bundle['reason_code'] != 'evidence_available' or result['missing_locators'] or any(n.get('workflow_status') == 'paused_gap' for n in nodes):
+            result['evidence_gate'] = 'insufficient'
+    return result

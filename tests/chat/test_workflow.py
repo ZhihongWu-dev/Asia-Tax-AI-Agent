@@ -58,10 +58,11 @@ def test_full_flow_confirmation_snapshot_and_invalidation(setup):
     result = post(client, doc, 'messages', text='dividend case', data_approved=True)
     assert result.status_code == 200
     doc = result.json()
-    assert 'mne_group_status' in doc['questions']
+    assert doc['questions'] == ['recipient_type']  # HK business alone does not establish company recipient
     assert 'income_type' not in doc['questions']
     assert doc['facts']['income_type']['origin'] == 'model'
     assert post(client, doc, 'analyze').json()['detail'] == 'confirmation_required'
+    doc = post(client, doc, 'messages', text='先看部分整理', data_approved=True).json()
     doc = post(client, doc, 'confirm').json()
     confirmed_revision = doc['confirmed_revision']
     doc = post(client, doc, 'analyze').json()

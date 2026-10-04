@@ -1,0 +1,76 @@
+{
+  "$defs": {
+    "Reference": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "source_version_id": {
+          "title": "Source Version Id",
+          "type": "string"
+        },
+        "unit_id": {
+          "title": "Unit Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "source_version_id",
+        "unit_id"
+      ],
+      "title": "Reference",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "status": {
+      "enum": [
+        "ok",
+        "not_found",
+        "restricted",
+        "version_unavailable",
+        "error"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "reference": {
+      "$ref": "#/$defs/Reference"
+    },
+    "text": {
+      "anyOf": [
+        {
+          "maxLength": 30000,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Text"
+    },
+    "content_hash": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Content Hash"
+    }
+  },
+  "required": [
+    "status",
+    "reference"
+  ],
+  "title": "EvidenceResult",
+  "type": "object"
+}

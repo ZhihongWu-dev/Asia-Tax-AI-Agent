@@ -1,0 +1,199 @@
+{
+  "$defs": {
+    "FactFilter": {
+      "additionalProperties": false,
+      "properties": {
+        "field_name": {
+          "enum": [
+            "income_type",
+            "source_analysis",
+            "entity_hk_business_status",
+            "receipt_location",
+            "recipient_type"
+          ],
+          "title": "Field Name",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "field_name",
+        "value"
+      ],
+      "title": "FactFilter",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0",
+      "default": "0.1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "request_id": {
+      "title": "Request Id",
+      "type": "string"
+    },
+    "trace_id": {
+      "title": "Trace Id",
+      "type": "string"
+    },
+    "query": {
+      "maxLength": 500,
+      "minLength": 2,
+      "title": "Query",
+      "type": "string"
+    },
+    "intent": {
+      "default": "reference_lookup",
+      "enum": [
+        "concept",
+        "reference_lookup",
+        "case_analysis"
+      ],
+      "title": "Intent",
+      "type": "string"
+    },
+    "jurisdiction": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "HK",
+      "title": "Jurisdiction"
+    },
+    "topic": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "dividend",
+      "title": "Topic"
+    },
+    "income_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Income Type"
+    },
+    "entity_type": {
+      "default": "not_needed",
+      "enum": [
+        "company",
+        "individual",
+        "unknown",
+        "not_needed"
+      ],
+      "title": "Entity Type",
+      "type": "string"
+    },
+    "applicable_date": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Applicable Date"
+    },
+    "date_status": {
+      "default": "not_needed",
+      "enum": [
+        "actual",
+        "planned",
+        "unknown",
+        "not_needed"
+      ],
+      "title": "Date Status",
+      "type": "string"
+    },
+    "reference_number": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reference Number"
+    },
+    "fact_filters": {
+      "items": {
+        "$ref": "#/$defs/FactFilter"
+      },
+      "maxItems": 20,
+      "title": "Fact Filters",
+      "type": "array"
+    },
+    "language": {
+      "default": "zh",
+      "title": "Language",
+      "type": "string"
+    },
+    "limit": {
+      "default": 7,
+      "maximum": 7,
+      "minimum": 1,
+      "title": "Limit",
+      "type": "integer"
+    },
+    "deadline_ms": {
+      "default": 3000,
+      "maximum": 10000,
+      "minimum": 1,
+      "title": "Deadline Ms",
+      "type": "integer"
+    },
+    "kind": {
+      "default": "all",
+      "enum": [
+        "all",
+        "law",
+        "ruling",
+        "guidance"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "locators": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "title": "Locators",
+      "type": "array"
+    }
+  },
+  "required": [
+    "request_id",
+    "trace_id",
+    "query"
+  ],
+  "title": "SearchRequest",
+  "type": "object"
+}

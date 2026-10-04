@@ -1,0 +1,727 @@
+{
+  "started_at": "2026-10-04T05:05:07.180985+00:00",
+  "dataset_version": "b-model-e2e-0.1",
+  "dataset_sha256": "06e018e9ff57be1f3df8f0505c8f02c3a80b5aa06c5835d8f220443c51dddb05",
+  "layer": "M-model/D-knowledge/API",
+  "provider": "openrouter",
+  "status": "incomplete",
+  "results": [
+    {
+      "id": "BWF-E2E-001",
+      "name": "真实模型从空白案件到待复核稿",
+      "status": "failed",
+      "steps": [
+        {
+          "step": 1,
+          "operation": "message",
+          "input": "虚构测试：我有一笔境外股息，想分析香港FSIE适用范围，先帮我整理案情。",
+          "outcome": {
+            "error": "model_failed",
+            "http_status": 503
+          },
+          "expected": {
+            "no_analysis": true,
+            "question_field": "recipient_type"
+          },
+          "checks_failed": [
+            "error expected=None actual=model_failed"
+          ],
+          "duration_ms": 17460.12,
+          "model_calls": 1,
+          "searches": [],
+          "actual": {
+            "workflow": {},
+            "facts": {},
+            "last_message": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "BWF-004",
+      "name": "问候后切换英语",
+      "status": "passed",
+      "steps": [
+        {
+          "step": 1,
+          "operation": "message",
+          "input": "你好",
+          "outcome": {},
+          "expected": {
+            "kind": "chat",
+            "facts_empty": true,
+            "search_max": 0
+          },
+          "checks_failed": [],
+          "duration_ms": 1860.72,
+          "model_calls": 1,
+          "searches": [],
+          "actual": {
+            "workflow": {
+              "version": "0.3.0",
+              "policy_version": "hybrid-0.1",
+              "trace_id": "658c0af2-cc36-495c-8765-b5dd50b58940",
+              "status": "completed",
+              "reason_code": "ordinary_chat",
+              "entry_hint": "auto",
+              "effective_task": "consultation",
+              "dynamic_planner": true,
+              "trace": [
+                "route",
+                "facts",
+                "validate"
+              ],
+              "timings_ms": {
+                "route": 1840.03,
+                "facts": 0.84,
+                "validate": 0.1
+              },
+              "identification": {
+                "status": "collecting",
+                "scenario": null,
+                "missing_fields": [
+                  "recipient_type",
+                  "income_type",
+                  "analysis_jurisdiction",
+                  "consultation_goal"
+                ],
+                "professional_validation": "pending_final_review"
+              },
+              "task_results": [],
+              "budget": {
+                "model": 1,
+                "elapsed_ms": 1846.53
+              },
+              "rule_decisions": [
+                {
+                  "rule_id": "HY-01",
+                  "decision": "entry_is_hint"
+                },
+                {
+                  "rule_id": "HY-05",
+                  "decision": "shared_budget"
+                },
+                {
+                  "rule_id": "HY-07",
+                  "decision": "proposal_before_commit"
+                },
+                {
+                  "rule_id": "HY-02",
+                  "decision": "ordinary_chat"
+                }
+              ]
+            },
+            "facts": {},
+            "last_message": {
+              "id": "e8982e1c-293c-4e6f-98f2-0c633431d62a",
+              "role": "assistant",
+              "kind": "chat",
+              "text": "你好！有什么可以帮你？",
+              "question_fields": [],
+              "state": "collecting",
+              "created_at": "2026-10-04T05:05:28.473591+00:00",
+              "workflow": {
+                "version": "0.3.0",
+                "policy_version": "hybrid-0.1",
+                "trace_id": "658c0af2-cc36-495c-8765-b5dd50b58940",
+                "status": "completed",
+                "reason_code": "ordinary_chat",
+                "entry_hint": "auto",
+                "effective_task": "consultation",
+                "dynamic_planner": true,
+                "trace": [
+                  "route",
+                  "facts",
+                  "validate"
+                ],
+                "timings_ms": {
+                  "route": 1840.03,
+                  "facts": 0.84,
+                  "validate": 0.1
+                },
+                "identification": {
+                  "status": "collecting",
+                  "scenario": null,
+                  "missing_fields": [
+                    "recipient_type",
+                    "income_type",
+                    "analysis_jurisdiction",
+                    "consultation_goal"
+                  ],
+                  "professional_validation": "pending_final_review"
+                },
+                "task_results": [],
+                "budget": {
+                  "model": 1,
+                  "elapsed_ms": 1846.53
+                },
+                "rule_decisions": [
+                  {
+                    "rule_id": "HY-01",
+                    "decision": "entry_is_hint"
+                  },
+                  {
+                    "rule_id": "HY-05",
+                    "decision": "shared_budget"
+                  },
+                  {
+                    "rule_id": "HY-07",
+                    "decision": "proposal_before_commit"
+                  },
+                  {
+                    "rule_id": "HY-02",
+                    "decision": "ordinary_chat"
+                  }
+                ]
+              },
+              "question": null,
+              "guided": false
+            }
+          }
+        },
+        {
+          "step": 2,
+          "operation": "message",
+          "input": "Please introduce what you can help me with in English.",
+          "outcome": {},
+          "expected": {
+            "kind": "chat",
+            "facts_empty": true,
+            "search_max": 0
+          },
+          "checks_failed": [],
+          "duration_ms": 8351.34,
+          "model_calls": 1,
+          "searches": [],
+          "actual": {
+            "workflow": {
+              "version": "0.3.0",
+              "policy_version": "hybrid-0.1",
+              "trace_id": "db172013-db6f-41db-803c-e66659097fd5",
+              "status": "completed",
+              "reason_code": "ordinary_chat",
+              "entry_hint": "auto",
+              "effective_task": "consultation",
+              "dynamic_planner": true,
+              "trace": [
+                "route",
+                "facts",
+                "validate"
+              ],
+              "timings_ms": {
+                "route": 8330.16,
+                "facts": 0.34,
+                "validate": 0.1
+              },
+              "identification": {
+                "status": "collecting",
+                "scenario": null,
+                "missing_fields": [
+                  "recipient_type",
+                  "income_type",
+                  "analysis_jurisdiction",
+                  "consultation_goal"
+                ],
+                "professional_validation": "pending_final_review"
+              },
+              "task_results": [],
+              "budget": {
+                "model": 1,
+                "elapsed_ms": 8335.58
+              },
+              "rule_decisions": [
+                {
+                  "rule_id": "HY-01",
+                  "decision": "entry_is_hint"
+                },
+                {
+                  "rule_id": "HY-05",
+                  "decision": "shared_budget"
+                },
+                {
+                  "rule_id": "HY-07",
+                  "decision": "proposal_before_commit"
+                },
+                {
+                  "rule_id": "HY-02",
+                  "decision": "ordinary_chat"
+                }
+              ]
+            },
+            "facts": {},
+            "last_message": {
+              "id": "2ad99ac7-65a8-4304-ba9b-9eada6e453b2",
+              "role": "assistant",
+              "kind": "chat",
+              "text": "I can help with tax research and case intake, especially Hong Kong foreign-sourced dividend / FSIE issues. I can explain general concepts, look up relevant statutes or cases, help organize your facts, and ask targeted follow-up questions. I can’t give final tax advice or confirm a tax position without the relevant facts and professional review.",
+              "question_fields": [],
+              "state": "collecting",
+              "created_at": "2026-10-04T05:05:36.821275+00:00",
+              "workflow": {
+                "version": "0.3.0",
+                "policy_version": "hybrid-0.1",
+                "trace_id": "db172013-db6f-41db-803c-e66659097fd5",
+                "status": "completed",
+                "reason_code": "ordinary_chat",
+                "entry_hint": "auto",
+                "effective_task": "consultation",
+                "dynamic_planner": true,
+                "trace": [
+                  "route",
+                  "facts",
+                  "validate"
+                ],
+                "timings_ms": {
+                  "route": 8330.16,
+                  "facts": 0.34,
+                  "validate": 0.1
+                },
+                "identification": {
+                  "status": "collecting",
+                  "scenario": null,
+                  "missing_fields": [
+                    "recipient_type",
+                    "income_type",
+                    "analysis_jurisdiction",
+                    "consultation_goal"
+                  ],
+                  "professional_validation": "pending_final_review"
+                },
+                "task_results": [],
+                "budget": {
+                  "model": 1,
+                  "elapsed_ms": 8335.58
+                },
+                "rule_decisions": [
+                  {
+                    "rule_id": "HY-01",
+                    "decision": "entry_is_hint"
+                  },
+                  {
+                    "rule_id": "HY-05",
+                    "decision": "shared_budget"
+                  },
+                  {
+                    "rule_id": "HY-07",
+                    "decision": "proposal_before_commit"
+                  },
+                  {
+                    "rule_id": "HY-02",
+                    "decision": "ordinary_chat"
+                  }
+                ]
+              },
+              "question": null,
+              "guided": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "BWF-021",
+      "name": "无匹配不说法规不存在",
+      "status": "failed",
+      "steps": [
+        {
+          "step": 1,
+          "operation": "message",
+          "input": "找香港税务局Case 999999裁定",
+          "outcome": {},
+          "expected": {
+            "reason": "no_match",
+            "search_min": 1,
+            "search_max": 2,
+            "forbidden": [
+              "法规不存在",
+              "一定免税"
+            ]
+          },
+          "checks_failed": [
+            "reason expected=no_match actual=out_of_scope",
+            "Expected retrieval did not run"
+          ],
+          "duration_ms": 3851.77,
+          "model_calls": 1,
+          "searches": [],
+          "actual": {
+            "workflow": {
+              "version": "0.3.0",
+              "policy_version": "hybrid-0.1",
+              "trace_id": "c4ad0f21-8f05-4ab0-a96b-74893c3550ed",
+              "status": "unsupported",
+              "reason_code": "out_of_scope",
+              "entry_hint": "auto",
+              "effective_task": "reference_lookup",
+              "dynamic_planner": true,
+              "trace": [
+                "route",
+                "facts",
+                "reference_lookup",
+                "observe",
+                "validate"
+              ],
+              "timings_ms": {
+                "route": 3826.56,
+                "facts": 0.27,
+                "reference_lookup": 0.13,
+                "observe": 0.08,
+                "validate": 0.24
+              },
+              "identification": {
+                "status": "collecting",
+                "scenario": null,
+                "missing_fields": [
+                  "recipient_type",
+                  "income_type",
+                  "analysis_jurisdiction",
+                  "consultation_goal"
+                ],
+                "professional_validation": "pending_final_review"
+              },
+              "task_results": [
+                {
+                  "kind": "reference_lookup",
+                  "task_id": "07e869b6-2b4c-49d6-b6c6-23a58bbc2080",
+                  "status": "unsupported",
+                  "reason_code": "out_of_scope",
+                  "query": "香港税务局 Case 999999 裁定"
+                }
+              ],
+              "budget": {
+                "model": 1,
+                "action": 1,
+                "elapsed_ms": 3833.02
+              },
+              "rule_decisions": [
+                {
+                  "rule_id": "HY-01",
+                  "decision": "entry_is_hint"
+                },
+                {
+                  "rule_id": "HY-05",
+                  "decision": "shared_budget"
+                },
+                {
+                  "rule_id": "HY-07",
+                  "decision": "proposal_before_commit"
+                },
+                {
+                  "rule_id": "BR-05",
+                  "decision": "out_of_scope"
+                },
+                {
+                  "rule_id": "HY-03",
+                  "decision": "reference_without_case"
+                }
+              ]
+            },
+            "facts": {},
+            "last_message": {
+              "id": "bcefb51c-d238-4902-a262-8b3225f7e3af",
+              "role": "assistant",
+              "kind": "chat",
+              "text": "当前检索接入覆盖香港境外股息 FSIE；本次请求地区或主题未覆盖，不能套用香港资料回答。",
+              "question_fields": [],
+              "state": "collecting",
+              "created_at": "2026-10-04T05:05:40.698027+00:00",
+              "workflow": {
+                "version": "0.3.0",
+                "policy_version": "hybrid-0.1",
+                "trace_id": "c4ad0f21-8f05-4ab0-a96b-74893c3550ed",
+                "status": "unsupported",
+                "reason_code": "out_of_scope",
+                "entry_hint": "auto",
+                "effective_task": "reference_lookup",
+                "dynamic_planner": true,
+                "trace": [
+                  "route",
+                  "facts",
+                  "reference_lookup",
+                  "observe",
+                  "validate"
+                ],
+                "timings_ms": {
+                  "route": 3826.56,
+                  "facts": 0.27,
+                  "reference_lookup": 0.13,
+                  "observe": 0.08,
+                  "validate": 0.24
+                },
+                "identification": {
+                  "status": "collecting",
+                  "scenario": null,
+                  "missing_fields": [
+                    "recipient_type",
+                    "income_type",
+                    "analysis_jurisdiction",
+                    "consultation_goal"
+                  ],
+                  "professional_validation": "pending_final_review"
+                },
+                "task_results": [
+                  {
+                    "kind": "reference_lookup",
+                    "task_id": "07e869b6-2b4c-49d6-b6c6-23a58bbc2080",
+                    "status": "unsupported",
+                    "reason_code": "out_of_scope",
+                    "query": "香港税务局 Case 999999 裁定"
+                  }
+                ],
+                "budget": {
+                  "model": 1,
+                  "action": 1,
+                  "elapsed_ms": 3833.02
+                },
+                "rule_decisions": [
+                  {
+                    "rule_id": "HY-01",
+                    "decision": "entry_is_hint"
+                  },
+                  {
+                    "rule_id": "HY-05",
+                    "decision": "shared_budget"
+                  },
+                  {
+                    "rule_id": "HY-07",
+                    "decision": "proposal_before_commit"
+                  },
+                  {
+                    "rule_id": "BR-05",
+                    "decision": "out_of_scope"
+                  },
+                  {
+                    "rule_id": "HY-03",
+                    "decision": "reference_without_case"
+                  }
+                ]
+              },
+              "question": null,
+              "guided": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "BWF-035",
+      "name": "混合更正加独立检索",
+      "status": "failed",
+      "steps": [
+        {
+          "step": 1,
+          "operation": "message",
+          "input": "刚才金额说错了，应为200万港币。另外查香港FSIE官方资料",
+          "outcome": {
+            "error": "model_failed",
+            "http_status": 503
+          },
+          "expected": {
+            "facts": {
+              "dividend_amount": 2000000
+            },
+            "search_min": 1
+          },
+          "checks_failed": [
+            "error expected=None actual=model_failed"
+          ],
+          "duration_ms": 16915.57,
+          "model_calls": 1,
+          "searches": [],
+          "actual": {
+            "workflow": {},
+            "facts": {
+              "recipient_type": "company",
+              "income_type": "dividend",
+              "analysis_jurisdiction": "HK",
+              "consultation_goal": "scope",
+              "payer_jurisdiction": "新加坡",
+              "dividend_amount": 1000000
+            },
+            "last_message": null
+          }
+        }
+      ]
+    }
+  ],
+  "model_calls": [
+    {
+      "index": 1,
+      "status": "error",
+      "stage": "plan_turn",
+      "exception": "ModelError",
+      "category": "timeout",
+      "duration_ms": 16990.16
+    },
+    {
+      "index": 2,
+      "status": "ok",
+      "stage": "plan_turn",
+      "usage": {
+        "prompt_tokens": 6991,
+        "completion_tokens": 68,
+        "total_tokens": 7059,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6912,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 46,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "duration_ms": 1837.02
+    },
+    {
+      "index": 3,
+      "status": "ok",
+      "stage": "plan_turn",
+      "usage": {
+        "prompt_tokens": 7065,
+        "completion_tokens": 339,
+        "total_tokens": 7404,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6912,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 242,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "duration_ms": 7179.8
+    },
+    {
+      "index": 4,
+      "status": "ok",
+      "stage": "plan_turn",
+      "usage": {
+        "prompt_tokens": 7002,
+        "completion_tokens": 302,
+        "total_tokens": 7304,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6912,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 158,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "duration_ms": 3821.05
+    },
+    {
+      "index": 5,
+      "status": "error",
+      "stage": "plan_turn",
+      "exception": "ModelError",
+      "category": "timeout",
+      "duration_ms": 16881.17
+    }
+  ],
+  "sources": [
+    {
+      "path": "tests/fsie/candidate_cases.json",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "9ebffd406f8ff4512fdfa6778682d1a22f236e55f22379f85973050a0744685a",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/candidate_cases.json"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/expectations.json",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "c9b19cac2f37b34da9042af44726ee80ae67b77fedccad6b53c021580e7e5e48",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/expectations.json"
+    },
+    {
+      "path": "docs/project/evaluations/Taxora_测试记录.xlsx",
+      "commit": "7054c45323abf7d63d9725f03f81dab892c98110",
+      "sha256": "ef95f24734535d4034e36645f1dbac01b564a52c0ef29611669149698b050209",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/7054c45323abf7d63d9725f03f81dab892c98110/docs/project/evaluations/Taxora_测试记录.xlsx"
+    },
+    {
+      "path": "docs/project/evaluations/README.md",
+      "commit": "7054c45323abf7d63d9725f03f81dab892c98110",
+      "sha256": "b837cdfcf767f9753fa1515916cc4031bf69c36e8f3e7e03c9733ea0f118a0ba",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/7054c45323abf7d63d9725f03f81dab892c98110/docs/project/evaluations/README.md"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-001.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "a37e5db050d3c3c06e56cf608537cd600bb32752f59034591caa2f73607d973a",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-001.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-002.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "af6b8a430348aac2492adfff1a5cb9ae31c7dee7242391e57d0589a6e1d44fc5",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-002.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-003.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "91fa928b20bf00a4dfd7516edd6df8bb453ae173b66ac744e34038ab27e0f0dc",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-003.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-004.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "2acd1fc656e1c0a8c4f35898cecec319de8ba9424249ac534b7799b5904eccb1",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-004.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-007.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "698e9c8c78a4fc881d6d3995b4323c78b9a239322df4997f914d86f1122001c0",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-007.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-010.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "d9e7a5b1fc911db38a6ac31f335283ce2ae443f99013a66b90f3f9e586d91317",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-010.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SEC-001.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "2b656d6e45440f7105c86f02811351cc4a07235ee314880656221019b950ec4f",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SEC-001.txt"
+    }
+  ],
+  "free_daily_remaining_before": 47,
+  "model": "qwen/qwen3.8-27b:free",
+  "summary": {
+    "passed": 1,
+    "failed": 3,
+    "blocked": 0
+  }
+}

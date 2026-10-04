@@ -3,6 +3,7 @@
 Never imported by the application or normal startup scripts.
 """
 import sys
+import os
 import asyncio
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -40,7 +41,9 @@ if __name__ == '__main__':
     app.dependency_overrides[auth.optional_user] = fixture_user
     auth.settings = lambda: auth.AuthSettings(supabase_url='https://fixture.supabase.co', publishable_key='fixture')
     with TemporaryDirectory(prefix='asiatax-browser-') as directory:
-        store = ChatStore(f"sqlite:///{Path(directory).as_posix()}/cases.sqlite")
+        # Optional persistent storage for manual local walkthroughs; automated tests stay isolated.
+        database_path = Path(os.environ.get('FSIE_TEST_DATABASE_PATH', str(Path(directory) / 'cases.sqlite'))).resolve()
+        store = ChatStore(f"sqlite:///{database_path.as_posix()}")
         analysis.retrieve_units = lambda _: ([], 'unavailable')
         analysis.related_rulings = lambda _: {'status': 'unavailable', 'passages': []}
         knowledge.read_documents = lambda **_: [{
@@ -52,6 +55,10 @@ if __name__ == '__main__':
             'retrieved_at': '2026-09-27T00:00:00+00:00', 'coverage_cutoff': '2026-08-15',
         }]
         def turn(doc, text):
+            if text == 'STREAM_TEST':
+                import time
+                time.sleep(3)
+                return {'intent': 'chat', 'reply': 'First live chunk and final chunk', 'facts': {}, 'query': ''}
             if text == 'MARKDOWN_TEST':
                 return {'intent': 'chat', 'reply': '## Summary\n\n- First item\n- Second item\n\n| Item | Value |\n| --- | --- |\n| Test | 100 |\n\n<script>alert(1)</script>\n\n[Unsafe](javascript:alert(1))', 'facts': {}, 'query': ''}
             if text == '你好':
@@ -69,11 +76,13 @@ if __name__ == '__main__':
             else:
                 yield {'type': 'turn', 'turn': turn(doc, text)}
         def browser_service():
-            service = ChatService(store, turner=turn)
+            service = ChatService(store, turner=turn,
+                                  orchestration=os.environ.get('FSIE_TEST_ORCHESTRATION', 'hybrid'),
+                                  dynamic_planner=False)
             service.streamer = stream_turn
             return service
         app.dependency_overrides[get_service] = browser_service
         try:
-            uvicorn.run(app, host='127.0.0.1', port=8001, log_level='warning')
+            uvicorn.run(app, host='127.0.0.1', port=int(os.environ.get('FSIE_TEST_API_PORT', '8001')), log_level='warning')
         finally:
             store.engine.dispose()

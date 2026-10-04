@@ -41,7 +41,10 @@ EN_LABELS = {
 
 
 def catalog() -> list[dict]:
-    return [{**f, "label_en": EN_LABELS[f["field_name"]]} for f in field_catalog() if f["field_name"] != "expert_decision_status"]
+    from packages.agent.dialogue import extra_catalog, JUDGMENT_FIELDS
+    return [{**f, "label_en": EN_LABELS[f["field_name"]],
+             "requires_final_judgment": f["field_name"] in JUDGMENT_FIELDS}
+            for f in field_catalog() if f["field_name"] != "expert_decision_status"] + extra_catalog()
 
 
 def validate_patch(patch: dict[str, Any]) -> dict:
@@ -87,16 +90,19 @@ def raw_facts(doc: dict) -> dict:
 
 
 def questions(doc: dict) -> list[str]:
-    facts = raw_facts(doc)
-    conflicts = [k for k, v in facts.items() if v == "conflict"]
-    if conflicts:
-        return conflicts[:1]
-    core = ["income_type", "entity_hk_business_status", "mne_group_status", "source_analysis", "accrual_date", "receipt_location"]
-    if facts.get("income_type") not in (None, "dividend", "unknown") or facts.get("entity_hk_business_status") == "no" or facts.get("mne_group_status") == "no":
+    from packages.agent.dialogue import next_field
+    dialogue = doc.get('dialogue', {})
+    if dialogue.get('status') in ('paused', 'suspended', 'partial', 'unsupported'):
         return []
-    if facts.get("receipt_location") in ("received_in_hk", "deemed_received_in_hk"):
-        core += ["holding_percentage_pct", "continuous_holding_period_months", "hk_adequate_employees"]
-    return [k for k in core if k not in facts][:1]
+    pending = dialogue.get('pending')
+    if pending:
+        field = pending.get('field')
+        if pending['kind'] != 'fact':
+            return []
+        if field and (field not in raw_facts(doc) or raw_facts(doc)[field] == 'conflict'):
+            return [field]
+    field = next_field(doc)
+    return [field] if field else []
 
 
 def state_for(doc: dict) -> str:

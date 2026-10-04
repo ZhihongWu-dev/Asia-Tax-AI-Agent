@@ -11,6 +11,7 @@ export default function Passages({ passages }: { passages: Passage[] }) {
           key={`${p.source_id}-${p.unit_id}`}
         >
           <summary>{p.locator || p.heading || p.unit_id}</summary>
+          {p.is_synthetic && <p role="status">{t("模拟联调资料，不是真实税务依据。")}</p>}
           {p.title && <p className="passage-source">{p.title}</p>}
           {p.drift && (
             <p className="passage-warning">{t("来源内容已变化，待核对。")}</p>

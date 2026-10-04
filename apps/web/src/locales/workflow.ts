@@ -1,4 +1,16 @@
 export const workflow: Record<string, [string, string]> = {
+  "task:consultation": ["股息咨询", "Dividend consultation"],
+  "task:fact_intake": ["梳理事实", "Organize facts"],
+  "task:reference_lookup": ["查阅依据", "Reference lookup"],
+  "error:request_payload_conflict": ["重复请求的内容不同，请重新发送。", "The request ID was reused with different content. Send again."],
+  "error:question_changed": ["待答问题已变化，请刷新后继续。", "The pending question changed. Reload to continue."],
+  "error:task_focus_required": ["已有暂停任务，请先恢复或完成当前任务。", "A task is already suspended. Resume it or finish the current task first."],
+  "error:execution_budget_exhausted": ["本轮执行预算已用尽，请稍后继续。", "This run reached its execution budget. Continue later."],
+  "当前任务的信息缺口": ["当前任务的信息缺口", "Information gaps for this task"],
+  "已按现有信息生成部分研究稿，以下缺口仍未解决。": [
+    "已按现有信息生成部分研究稿，以下缺口仍未解决。",
+    "This partial research draft uses the available information. The following gaps remain unresolved.",
+  ],
   "正在思考…": ["正在思考…", "Thinking…"],
   "发送未完成，可重试": ["发送未完成，可重试", "Not completed. You can retry."],
   部分条文未检索到: [
@@ -73,6 +85,8 @@ export const workflow: Record<string, [string, string]> = {
     "视为在香港收取",
     "Deemed received in Hong Kong",
   ],
+  "value:company": ["公司", "Company"],
+  "value:individual": ["个人", "Individual"],
   "value:not_applicable": ["不适用", "Not applicable"],
   "value:direct": ["直接持有", "Direct"],
   "value:indirect": ["间接持有", "Indirect"],
@@ -119,7 +133,7 @@ export const workflow: Record<string, [string, string]> = {
     "Condition not demonstrated",
   ],
   "output:conflict": ["信息冲突", "Conflicting information"],
-  "output:human_review_required": ["需要人工判断", "Human judgment required"],
+  "output:human_review_required": ["待最终顾问判断", "Judgment at final review"],
   "error:model_not_configured": [
     "模型尚未配置，请在后端填写模型连接信息。",
     "Model configuration is incomplete. Configure the backend connection.",
@@ -153,6 +167,20 @@ export const workflow: Record<string, [string, string]> = {
     "请先修订冲突事实。",
     "Resolve conflicting facts first.",
   ],
+  "error:partial_confirmation_required": [
+    "信息仍有缺口。请先在对话中选择“先看部分整理”，再核对事实并分析。",
+    'Information is incomplete. Send "partial summary" in the conversation, then review facts and analyze.',
+  ],
+  "error:out_of_scope": ["当前案件超出已实现的分析范围。", "This case is outside the supported scope."],
+  "value:scope": ["适用范围", "Scope"],
+  "value:receipt": ["收款路径", "Receipt"],
+  "value:participation": ["参股条件", "Participation"],
+  "value:substance": ["经济实质", "Economic substance"],
+  "value:full_analysis": ["整体梳理", "Full analysis"],
+  "value:cash": ["现金", "Cash"],
+  "value:in_kind": ["非现金资产", "In kind"],
+  "value:occurred": ["已发生", "Occurred"],
+  "value:planned": ["计划发生", "Planned"],
   "error:confirmation_required": [
     "请先确认当前事实版本。",
     "Confirm the current fact version first.",
@@ -176,6 +204,17 @@ export const workflow: Record<string, [string, string]> = {
 };
 
 export const liveEn: Record<string, string> = {
+  当前任务: "Current task",
+  恢复任务: "Resume task",
+  恢复之前的任务: "Resume previous task",
+  "内部稿已退回修改": "Internal draft returned for revision",
+  "最终复核：暂不能形成结论": "Final review: unable to conclude",
+  "内部稿已完成最终复核": "Internal draft reviewed",
+
+  "模拟联调资料，不是真实税务依据。": "Synthetic integration data. Not real tax evidence.",
+  "仅展示已获许可的参考原文；未用于模型分析。": "Reference excerpts are displayed with permission; not used for model analysis.",
+  "以下为来源原文片段，适用性待核对。": "Source excerpts; applicability requires verification.",
+  "未取得可展示的匹配资料。": "No matching sources available for display.",
   "正在载入工作空间…": "Loading your workspace…",
   重试: "Retry",
   "本次仅提交合成研究资料，不含真实客户或个人信息。":
