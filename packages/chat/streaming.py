@@ -111,38 +111,24 @@ async def model_turn(doc, text):
             yield {'type': 'reset'}
 
 
-async def events(service, doc, owner, revision, request_id, text, disconnected):
+async def events(service, doc, owner, revision, request_id, text, disconnected,
+                 entry_hint='auto', reply_to_question_id=None, data_approved=True):
+    # Ordinary HTTP and SSE use the same graph. Never expose unvalidated route text.
     turn = None
-    # Test-only injected turners retain the ordinary workflow contract.
-    from packages.chat.service import plan_turn
-    if (service.turner is not plan_turn or service.extractor is not None) and not getattr(service, 'streamer', None):
-        if service.extractor is not None:
-            patch = await asyncio.to_thread(service.extractor, doc, text)
-            turn = {'intent': 'intake' if patch else 'research', 'facts': patch, 'reply': '', 'query': text}
-        else:
-            turn = await asyncio.to_thread(service.turner, doc, text)
-    else:
-        async with aclosing((getattr(service, 'streamer', None) or model_turn)(doc, text)) as stream:
+    if getattr(service, 'streamer', None) and service.orchestration != 'hybrid':
+        async with aclosing(service.streamer(doc, text)) as stream:
             async for event in stream:
                 if await disconnected():
                     return
                 if event['type'] == 'turn':
                     turn = event['turn']
-                else:
-                    yield event
-    if turn is None or await disconnected():
-        return
-    research = None
-    if turn['intent'] == 'research':
-        research = await asyncio.to_thread(service.researcher, research_query(doc, text, turn['query']))
-        if service.turner is plan_turn and service.extractor is None and not getattr(service, 'streamer', None):
-            if await disconnected():
-                return
-            from packages.chat.answers import compose_async
-            answer = await compose_async(text + '\n' + turn['query'], research)
-            research.update(answer)
-            turn['reply'] = answer['text']
     if await disconnected():
         return
-    result = await asyncio.to_thread(service.commit_turn, owner, doc, revision, request_id, text, turn, research)
+    prepared = await asyncio.to_thread(service.prepare_turn, owner, doc, request_id, text, turn,
+                                       entry_hint=entry_hint, reply_to_question_id=reply_to_question_id)
+    prepared['payload_hash'] = service.message_hash(text, data_approved, entry_hint, reply_to_question_id)
+    if await disconnected():
+        return
+    result = await asyncio.to_thread(service.commit_prepared, owner, doc, revision, request_id, text, prepared)
+    # The complete validated answer is now authoritative; A accepts done-only SSE.
     yield {'type': 'done', 'case': result}

@@ -59,7 +59,7 @@ def catalog() -> dict:
 @lru_cache(maxsize=1)
 def knowledge_engine():
     return create_engine(get_settings().database_url, connect_args={
-        'connect_timeout': 5, 'options': '-c statement_timeout=10000',
+        'connect_timeout': 2, 'options': '-c statement_timeout=1000',
     }, pool_pre_ping=True, pool_size=3, max_overflow=2)
 
 
@@ -81,7 +81,7 @@ def locator_matches(locator: str | None, ref: str) -> bool:
 
 
 def read_documents(query: str = '', kind: str = 'all', locators: list[str] | None = None,
-                   context_ranges: list[tuple[str, int, int]] | None = None) -> list[dict]:
+                   context_ranges: list[tuple[str, int, int]] | None = None, unit_id: str | None = None) -> list[dict]:
     manifest = catalog()
     entries = {s['source_id']: s for s in manifest['sources'] if s.get('l0_in_scope', True)
                and urlsplit(s['url']).hostname in manifest['allowed_source_domains']}
@@ -93,6 +93,8 @@ def read_documents(query: str = '', kind: str = 'all', locators: list[str] | Non
         conditions.append(LegalUnit.statute_locator.is_not(None))
     elif kind == 'guidance':
         conditions.extend([LegalUnit.statute_locator.is_(None), LegalUnit.unit_type != 'ruling_block'])
+    if unit_id is not None:
+        conditions.append(LegalUnit.unit_ref == unit_id)
     if locators is not None:
         conditions.append(LegalUnit.statute_locator.in_(locators))
     if context_ranges is not None:

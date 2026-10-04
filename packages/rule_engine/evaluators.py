@@ -71,7 +71,7 @@ class FactView:
     def known(self, field_name: str) -> Any:
         """The value when it exists and is resolved; otherwise None."""
         value = self.raw_facts.get(field_name)
-        if value is None or value in UNRESOLVED_VALUES:
+        if value is None or (isinstance(value, str) and value in UNRESOLVED_VALUES):
             return None
         return value
 

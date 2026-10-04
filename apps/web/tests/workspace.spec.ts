@@ -118,7 +118,7 @@ test("source search, provenance and persisted research replies", async ({
   await english(page);
   await send(page, "Case 68");
   await expect(page.locator(".research-response")).toContainText(
-    "Official source excerpts",
+    "Reference excerpts are displayed with permission",
   );
   await page.locator(".research-response .knowledge-passage > summary").click();
   await expect(page.locator(".research-response")).toContainText(
@@ -133,7 +133,7 @@ test("source search, provenance and persisted research replies", async ({
   );
   await page.getByRole("button", { name: "切换为中文" }).click();
   await expect(page.locator(".research-response")).toContainText(
-    "以下为官方原文片段",
+    "仅展示已获许可的参考原文",
   );
   await page.getByRole("button", { name: "法规资料", exact: true }).click();
   await page.getByRole("textbox", { name: "检索法条与案例" }).fill("案例 68");
@@ -176,7 +176,7 @@ test("minimal bilingual home preserves design with a real backend", async ({
 }) => {
   const external: string[] = [];
   page.on("request", (request) => {
-    if (!request.url().startsWith("http://127.0.0.1:5174"))
+    if (!request.url().startsWith(`http://127.0.0.1:${process.env.FSIE_TEST_WEB_PORT || "5174"}/`))
       external.push(request.url());
   });
   await page.goto("/");
@@ -206,13 +206,13 @@ test("intake, follow-up, explicit confirmation, real rules and refresh recovery"
   await english(page);
   await send(page, "Synthetic foreign dividend case");
   await expect(
-    page.getByText("Please provide the following details to continue.", {
-      exact: false,
-    }),
+    page.getByText("这笔收入由个人还是公司收取？", { exact: false }),
   ).toBeVisible();
   await expect(page.locator(".analysis-result")).toHaveCount(0);
   await send(page, "FOLLOW_UP");
   await expect(page.locator(".message.user")).toHaveCount(2);
+  await send(page, "partial summary");
+  await expect(page.locator(".message.assistant").last()).toContainText("不是完整分析");
   await page.getByRole("button", { name: "Review case facts" }).click();
   await expect(
     page.getByLabel(
@@ -289,7 +289,7 @@ test("conflicts require explicit editing before confirmation", async ({
   await english(page);
   await send(page, "CONFLICT_TEST");
   await expect(
-    page.getByText("These facts conflict.", { exact: false }),
+    page.getByText("本次应采用哪个值？", { exact: false }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Review case facts" }).click();
   await expect(
@@ -363,4 +363,28 @@ test("IME does not submit and phone dialogs trap focus without overflow", async 
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
   ).toBe(true);
+});
+
+test("guided interview asks once, records unknown, and resumes after refresh", async ({ page }) => {
+  await english(page);
+  await send(page, "Synthetic foreign dividend case");
+  const last = page.locator(".message.assistant").last();
+  await expect(last).toContainText("这笔收入由个人还是公司收取？");
+  await expect(last.locator("ul")).toHaveCount(0);
+  await send(page, "公司");
+  await expect(last).toContainText("分析哪个地区");
+  await send(page, "不知道");
+  await expect(last).toContainText("继续补充其他信息、先看部分整理，还是暂停");
+  const id = new URL(page.url()).hash.slice(1);
+  let doc = await (await page.request.get(`/api/cases/${id}`)).json();
+  expect(doc.facts.recipient_type.value).toBe("company");
+  expect(doc.facts.analysis_jurisdiction.value).toBe("unknown");
+  expect(doc.dialogue.partial_consent).toBeUndefined();
+  await send(page, "暂停");
+  await page.reload();
+  await expect(last).toContainText("已暂停并保存");
+  await send(page, "继续补充");
+  await expect(last).toContainText("最想解决股息的哪个问题");
+  doc = await (await page.request.get(`/api/cases/${id}`)).json();
+  expect(doc.messages.at(-1).question.field).toBe("consultation_goal");
 });

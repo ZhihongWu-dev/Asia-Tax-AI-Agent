@@ -1,0 +1,162 @@
+{
+  "started_at": "2026-10-04T04:56:15.405545+00:00",
+  "dataset_version": "b-workflow-0.1",
+  "dataset_sha256": "c38449a732e8f80db1e8b9e5ba06d274d5490c404f6d46af577ce26f8cae0944",
+  "layer": "M-model/D-knowledge/API",
+  "provider": "openrouter",
+  "status": "incomplete",
+  "results": [
+    {
+      "id": "BWF-004",
+      "name": "问候后切换英语",
+      "status": "failed",
+      "steps": [
+        {
+          "step": 1,
+          "operation": "message",
+          "input": "你好",
+          "outcome": {
+            "error": "model_failed",
+            "http_status": 503
+          },
+          "expected": {
+            "kind": "chat",
+            "facts_empty": true,
+            "search_max": 0
+          },
+          "checks_failed": [
+            "error expected=None actual=model_failed"
+          ],
+          "duration_ms": 1225.15,
+          "model_calls": 1,
+          "searches": [],
+          "actual": {
+            "workflow": {},
+            "facts": {},
+            "last_message": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "BWF-007",
+      "name": "概念解释需查资料",
+      "status": "failed",
+      "steps": [
+        {
+          "step": 1,
+          "operation": "message",
+          "input": "我是税务小白，用大白话解释香港FSIE是什么。",
+          "outcome": {
+            "error": "model_failed",
+            "http_status": 503
+          },
+          "expected": {
+            "search_min": 1,
+            "facts_empty": true
+          },
+          "checks_failed": [
+            "error expected=None actual=model_failed"
+          ],
+          "duration_ms": 3703.72,
+          "model_calls": 1,
+          "searches": [],
+          "actual": {
+            "workflow": {},
+            "facts": {},
+            "last_message": null
+          }
+        }
+      ]
+    }
+  ],
+  "model_calls": [
+    {
+      "index": 1,
+      "status": "error",
+      "exception": "ModelError",
+      "duration_ms": 747.79
+    },
+    {
+      "index": 2,
+      "status": "error",
+      "exception": "ModelError",
+      "duration_ms": 449.4
+    }
+  ],
+  "sources": [
+    {
+      "path": "tests/fsie/candidate_cases.json",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "9ebffd406f8ff4512fdfa6778682d1a22f236e55f22379f85973050a0744685a",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/candidate_cases.json"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/expectations.json",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "c9b19cac2f37b34da9042af44726ee80ae67b77fedccad6b53c021580e7e5e48",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/expectations.json"
+    },
+    {
+      "path": "docs/project/evaluations/Taxora_测试记录.xlsx",
+      "commit": "7054c45323abf7d63d9725f03f81dab892c98110",
+      "sha256": "ef95f24734535d4034e36645f1dbac01b564a52c0ef29611669149698b050209",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/7054c45323abf7d63d9725f03f81dab892c98110/docs/project/evaluations/Taxora_测试记录.xlsx"
+    },
+    {
+      "path": "docs/project/evaluations/README.md",
+      "commit": "7054c45323abf7d63d9725f03f81dab892c98110",
+      "sha256": "b837cdfcf767f9753fa1515916cc4031bf69c36e8f3e7e03c9733ea0f118a0ba",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/7054c45323abf7d63d9725f03f81dab892c98110/docs/project/evaluations/README.md"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-001.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "a37e5db050d3c3c06e56cf608537cd600bb32752f59034591caa2f73607d973a",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-001.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-002.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "af6b8a430348aac2492adfff1a5cb9ae31c7dee7242391e57d0589a6e1d44fc5",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-002.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-003.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "91fa928b20bf00a4dfd7516edd6df8bb453ae173b66ac744e34038ab27e0f0dc",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-003.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-004.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "2acd1fc656e1c0a8c4f35898cecec319de8ba9424249ac534b7799b5904eccb1",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-004.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-007.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "698e9c8c78a4fc881d6d3995b4323c78b9a239322df4997f914d86f1122001c0",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-007.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SYN-010.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "d9e7a5b1fc911db38a6ac31f335283ce2ae443f99013a66b90f3f9e586d91317",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SYN-010.txt"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/NL-SEC-001.txt",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "2b656d6e45440f7105c86f02811351cc4a07235ee314880656221019b950ec4f",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/NL-SEC-001.txt"
+    }
+  ],
+  "free_daily_remaining_before": 50,
+  "model": "qwen/qwen3.8-27b:free",
+  "summary": {
+    "passed": 0,
+    "failed": 2,
+    "blocked": 0
+  }
+}

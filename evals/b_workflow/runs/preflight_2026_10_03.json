@@ -1,0 +1,132 @@
+{
+  "started_at": "2026-10-03T01:16:11.779645+00:00",
+  "dataset_version": "b-workflow-0.1",
+  "dataset_sha256": "e9f8a7a52b0615773bd6b17b1a68365a51ae35a840e408cb228c213f5be345a6",
+  "layer": "M-model/D-knowledge/API",
+  "provider": "openrouter",
+  "status": "blocked",
+  "results": [
+    {
+      "id": "BWF-001",
+      "name": "dividend_consultation",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-002",
+      "name": "fact_intake",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-003",
+      "name": "reference_lookup",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-004",
+      "name": "问候后切换英语",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-007",
+      "name": "概念解释需查资料",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-009",
+      "name": "问题方向不明先澄清",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-012",
+      "name": "缺主体一次只问主体",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-013",
+      "name": "未知不能当否定",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-017",
+      "name": "明确数值更正保留其他事实",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-021",
+      "name": "无匹配不说法规不存在",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-022",
+      "name": "独立检索服务失败不保存伪答案",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-023",
+      "name": "仅展示资料不入模型历史",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-035",
+      "name": "混合更正加独立检索",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-044",
+      "name": "部分稿授权确认分析最终复核",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    },
+    {
+      "id": "BWF-046",
+      "name": "重复提交不重复调用",
+      "status": "blocked",
+      "reason": "missing_openrouter_key"
+    }
+  ],
+  "model_calls": [],
+  "sources": [
+    {
+      "path": "tests/fsie/candidate_cases.json",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "9ebffd406f8ff4512fdfa6778682d1a22f236e55f22379f85973050a0744685a",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/candidate_cases.json"
+    },
+    {
+      "path": "tests/fsie/natural_language_cases/expectations.json",
+      "commit": "8974ee78332749eda5c444823399ceca7f184fa9",
+      "sha256": "c9b19cac2f37b34da9042af44726ee80ae67b77fedccad6b53c021580e7e5e48",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/8974ee78332749eda5c444823399ceca7f184fa9/tests/fsie/natural_language_cases/expectations.json"
+    },
+    {
+      "path": "docs/project/evaluations/Taxora_测试记录.xlsx",
+      "commit": "7054c45323abf7d63d9725f03f81dab892c98110",
+      "sha256": "ef95f24734535d4034e36645f1dbac01b564a52c0ef29611669149698b050209",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/7054c45323abf7d63d9725f03f81dab892c98110/docs/project/evaluations/Taxora_测试记录.xlsx"
+    },
+    {
+      "path": "docs/project/evaluations/README.md",
+      "commit": "7054c45323abf7d63d9725f03f81dab892c98110",
+      "sha256": "b837cdfcf767f9753fa1515916cc4031bf69c36e8f3e7e03c9733ea0f118a0ba",
+      "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/blob/7054c45323abf7d63d9725f03f81dab892c98110/docs/project/evaluations/README.md"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 0,
+    "blocked": 15
+  }
+}

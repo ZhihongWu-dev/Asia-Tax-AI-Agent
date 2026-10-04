@@ -106,35 +106,37 @@ def test_retry_resets_partial_answer_before_second_attempt(monkeypatch):
     assert len(attempts) == 2
 
 
-def test_cancel_during_summary_does_not_commit(tmp_path, monkeypatch):
-    from packages.chat import answers
+def test_cancel_during_workflow_does_not_commit(tmp_path, monkeypatch):
+    # B buffers the validated workflow before emitting done. Cancellation during
+    # preparation must not persist the user message, even if the worker finishes.
+    import threading
     async def run():
-        started, closed = asyncio.Event(), asyncio.Event()
-        async def turn(*_):
-            yield {'type': 'turn', 'turn': {'intent': 'research', 'reply': 'Check', 'facts': {}, 'query': 'FSIE'}}
-        async def summary(*_):
+        started, release, finished = threading.Event(), threading.Event(), threading.Event()
+        def prepare(*args, **kwargs):
             started.set()
             try:
-                await asyncio.Event().wait()
+                release.wait(3)
+                return {}
             finally:
-                closed.set()
-        monkeypatch.setattr(streaming, 'model_turn', turn)
-        monkeypatch.setattr(answers, 'compose_async', summary)
-        store = ChatStore(f"sqlite:///{(tmp_path / 'summary.sqlite').as_posix()}")
-        service = ChatService(store, researcher=lambda _: {'status': 'available', 'passages': []})
+                finished.set()
+        store = ChatStore(f"sqlite:///{tmp_path / 'summary.sqlite'}")
+        service = ChatService(store)
+        monkeypatch.setattr(service, 'prepare_turn', prepare)
         doc = store.create('a')
         async def connected(): return False
         stream = streaming.events(service, doc, 'a', 0, str(uuid4()), 'FSIE', connected)
+        task = asyncio.create_task(anext(stream))
         try:
-            task = asyncio.create_task(anext(stream))
-            await asyncio.wait_for(started.wait(), 3)
+            assert await asyncio.to_thread(started.wait, 3)
             task.cancel()
             with pytest.raises(asyncio.CancelledError):
                 await task
-            assert closed.is_set()
+            release.set()
+            assert await asyncio.to_thread(finished.wait, 3)
             assert store.get('a', doc['id'])['messages'] == []
             assert store.get('a', doc['id'])['revision'] == 0
         finally:
+            release.set()
             await stream.aclose()
             store.engine.dispose()
     asyncio.run(run())

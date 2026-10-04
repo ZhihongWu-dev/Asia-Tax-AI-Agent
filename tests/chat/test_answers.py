@@ -6,9 +6,10 @@ from packages.chat import answers
 from packages.chat.service import validate_turn, research_query
 
 
-def test_empty_intake_is_read_only_but_invalid_facts_are_not_dropped():
+def test_empty_intake_can_start_clarification_but_invalid_facts_are_not_dropped():
     result = validate_turn({'intent': 'intake', 'reply': 'Summary', 'facts': {}, 'query': ''})
-    assert result['intent'] == 'chat' and result['facts'] == {}
+    # B supports an intake request before the user has supplied any facts.
+    assert result['intent'] == 'intake' and result['facts'] == {}
     with pytest.raises(ValueError):
         validate_turn({'intent': 'intake', 'reply': 'Approved', 'facts': {'expert_decision_status': 'approved'}, 'query': ''})
 

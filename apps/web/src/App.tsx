@@ -32,6 +32,7 @@ export default function App() {
     setActiveId,
     drafts,
     changeDraft,
+    chooseSuggestion,
     send,
     save,
     confirmAndAnalyze,
@@ -183,6 +184,15 @@ export default function App() {
             )}
           </div>
           <div className="composer-area">
+            {current.orchestration?.active_task && (
+              <div className="key-hint" role="status">
+                {t("当前任务")}：{t(`task:${current.orchestration.active_task.kind}`)}
+                {current.orchestration.active_task.status === "paused" && <HintButton
+                  className="text-button" onClick={() => changeDraft("继续案件")}>{t("恢复任务")}</HintButton>}
+                {current.orchestration.suspended_task && <HintButton className="text-button"
+                  onClick={() => changeDraft("继续案件")}>{t("恢复之前的任务")}</HintButton>}
+              </div>
+            )}
             {error && !panel && (
               <div className="request-error" role="alert">
                 {t(`error:${error}`)}{" "}
@@ -215,8 +225,8 @@ export default function App() {
             />
             {empty && (
               <SuggestedQuestions
-                onSelect={(text) => {
-                  changeDraft(text);
+                onSelect={(text, hint) => {
+                  chooseSuggestion(text, hint);
                   document
                     .querySelector<HTMLTextAreaElement>("textarea")
                     ?.focus();
