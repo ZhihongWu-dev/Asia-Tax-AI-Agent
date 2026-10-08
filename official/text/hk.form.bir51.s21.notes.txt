@@ -1,0 +1,292 @@
+NOTES AND INSTRUCTIONS – SUPPLEMENTARY FORM (S21)
+1.
+An eligible investor entity (Note 3) is required to complete this supplementary form for submission together with 
+its Profits Tax Return if it elects for the Tax Certainty Enhancement Scheme (“the Scheme”) (Note 2) provided in 
+Schedule 17K to the Inland Revenue Ordinance (Cap. 112) (“IRO”) in respect of its onshore gains derived from 
+the disposal of eligible equity interests (Note 5) in an eligible investee equity (Note 7) that accrued to it during the 
+year of assessment.
+2.
+The Scheme applies to a gain or profit derived from a disposal of equity interests if the disposal occurs on or after 
+1 January 2024; and the gain or profit accrues in the basis period for a year of assessment beginning on or after 
+1 April 2023. The Scheme provides that, subject to certain specified exclusions, any gain or profit (disposal gain), 
+arising in or derived from Hong Kong, that an entity (investor entity) derives from a disposal (subject disposal) of 
+equity interests (subject interests) in another entity (investee entity) is to be regarded as capital in nature and not 
+chargeable to profits tax if the following eligibility criteria are met:
+(a)
+the investor entity must be an eligible investor entity (Note 3);
+(b)
+the subject matter disposed of must be an eligible equity interest (Note 5) in an eligible investee entity 
+(Note 7); and
+(c)
+the equity holding conditions (Note 20) are met for the subject disposal of the subject interests or the 
+exception conditions for long-held left-overs (i.e. disposal in tranches) (Note 26) are satisfied.
+The Scheme only applies to disposal gains arising in or derived from Hong Kong (i.e. onshore disposal gains). 
+The Scheme does not cover any specified foreign-sourced income as defined by section 15H(1) of the IRO, even 
+if the specified foreign-sourced income is regarded under section 15I(1) of the IRO as a receipt arising in or 
+derived from Hong Kong.
+3.
+To be eligible for the Scheme, the investor entity must be a legal person (other than a natural person) or an 
+arrangement that prepares separate financial accounts, such as a partnership, a trust and a fund. Nevertheless, 
+the Scheme does not apply to an investor entity which is an insurer (Note 4).
+4.
+An investor entity is an insurer if its assessable profits for the year of assessment are ascertained under 
+Subdivision 1 of Division 11 of Part 4 of the IRO.
+5.
+For the purposes of the Scheme, an equity interest in an investee entity means an interest that carries rights to 
+the profits, capital or reserves of the investee entity and is accounted for as equity in the books of the investee 
+entity under applicable accounting principles (Note 6). Nevertheless, the Scheme does not apply to the following 
+equity interests:
+(a)
+equity interests that are regarded as trading stock for tax purposes (Note 30); or
+(b)
+non-listed equity interests in an excluded entity.  An investee entity is an excluded entity if it engages in 
+property trading (Note 11), property development (Note 14) or property holding (Note 17) (collectively as 
+“property-related businesses”) and does not satisfy the exception conditions (Notes 15 and 18).
+6.
+Applicable accounting principles in general refer to the accounting standards required to be adopted by an entity 
+in the preparation of its financial accounts. In determining whether a financial instrument, from the perspective of 
+an investee entity, should be classified as an equity instrument or a financial liability, Hong Kong Accounting 
+Standard 32 (HKAS 32) and International Accounting Standard 32 (IAS 32) have provided detailed guidance on 
+this aspect. In case the investee entity is not required to comply with any specified accounting standards for 
+preparing its financial accounts, the applicable accounting principles should be the International Financial 
+Reporting Standards.
+7.
+To be eligible for the Scheme, the investee entity must be a legal person (other than a natural person) or an 
+arrangement that prepares separate financial accounts, such as a partnership, a trust and a fund. Nevertheless, 
+the Scheme is not applicable to non-listed equity interests in excluded entities (Note 5(b)).
+8.
+The basis period must be the same as that stated in the relevant Profits Tax Return.
+9.
+“Onshore disposal gain” means any gain or profit, arising in or derived from Hong Kong, that an entity derives 
+from a disposal of equity interests in another entity. In section 2.1, you should state the total amount of onshore 
+disposal gains in respect of which you elect for the Scheme. Details of each disposal should be provided in 
+section 2.2. Details of up to 25 disposals can be provided in this form.  In case there are more than 25 disposals, 
+please provide details of the remaining disposals in the same format on a separate sheet.  In the separate sheet, 
+please add your file number, year of assessment concerned and a remark “Additional” and sign at the bottom of 
+the sheet.
+10.
+If the investee entity engaged in more than one business activity in the basis period, please select the industry 
+sector with reference to its principal business activity. 
+BIRS21 (4/2025) XML version 2025
+
+11.
+Section 1(4) of Schedule 17K to the IRO provides that an entity carries on a business of property trading if it 
+carries on a business of acquisition and sale of immovable properties (Note 12), situated in Hong Kong or 
+elsewhere, unless the acquisition and sale of immovable properties is incidental to the undertaking of any 
+property development (Note 14) (i.e. construction of buildings) by the entity.  For the purposes of the Scheme, an 
+investee entity that engages in a regular business other than property trading but has carried out a one-off 
+property trading transaction which is an adventure in the nature of trade would not be regarded as an excluded 
+entity.  
+12.
+“Immovable property”, as defined in section 1(1) of Schedule 17K to the IRO, means the following but does not 
+include infrastructure:
+(a)
+land (whether covered by water or not);
+(b)
+any estate, right, interest or easement in or over any land; and
+(c)
+things attached to land or permanently fastened to anything attached to land.
+The term “infrastructure” means any publicly or privately owned facility providing or distributing services for the 
+benefit of the public, and includes any water, sewage, energy, fuel, transportation or communication facility.
+13.
+“Investee entity’s relevant basis period”, in relation to a disposal of equity interests in an investee entity, means 
+the basis period of the investee entity for the year of assessment in which the disposal occurs (as defined in 
+section 1(1) of Schedule 17K to the IRO).
+14.
+“Property development”, as defined in section 1(1) of Schedule 17K to the IRO, means construction (Note 16) or 
+causing the construction of any building or part of a building, and includes acquisition of any land or building or 
+part of a building for such construction and sale of any building or part of a building after such construction. 
+15.
+For an investee entity which undertakes or has undertaken property development, it does not become an 
+excluded entity under the Scheme if it has not undertaken property development for at least a continuous period 
+of 60 months before the relevant disposal; and in the investee entity’s relevant basis period (Note 13), the 
+immovable properties held by it are used by it to carry on its trade or business (including used for its letting 
+business) and none of the immovable properties held by it is for sale. 
+16.
+“Construction”, as defined in section 1(1) of Schedule 17K to the IRO, means the following:
+(a)
+any building operation, or demolition and rebuilding operation, in, on, over or under any land for the 
+purpose of erecting a building or part of a building; or
+(b)
+any alteration or addition to, or partial demolition and rebuilding of, a building or part of a building,
+that requires the consent of the Building Authority under section 14(1) of the Buildings Ordinance (Cap. 123) or, 
+if carried out in a territory outside Hong Kong, of a similar supervisory authority of that territory; but construction 
+does not include works for the renovation or refurbishment, of a building or part of a building, with a view to 
+maintaining the commercial value of the building or part.
+17.
+“Property holding” covers an activity of holding immovable properties other than those which fall within the scope 
+of property trading and property development. 
+18.
+An investee entity, not being engaged in the business of property trading and property development, is an 
+excluded entity if its immovable property holding exceeds 50%. Section 11(1) of Schedule 17K to the IRO 
+provides that an investee entity’s immovable property holding is calculated in accordance with the following 
+formula:
+A 
+X 100%
+B
+where:
+A
+means the aggregate of the followingġ—
+Ɣ
+the value of any specified immovable property of the investee entity;
+Ɣ
+the value of any direct or indirect beneficial interest, or any direct or indirect voting rights, of 
+the investee entity in another entity to the extent to which the value is attributable to any 
+specified immovable property of the other entity (Note 19);
+B
+PHDQVWKHWRWDOYDOXHRIWKHLQYHVWHHHQWLW\¶VDVVHWV
+“Specified immovable property”, in relation to an entity, means any immovable property, in Hong Kong 
+or elsewhere, that is directly held by the entity, other than any immovable property used by the entity to 
+carry on its trade or business (as defined in section 11(6) of Schedule 17K to the IRO).
+BIRS21 (4/2025) XML version 2025
+
+,QDSSO\LQJWKHDERYHIRUPXODVHFWLRQRI6FKHGXOH.WRWKH,52SURYLGHVWKDWHDFKRIWKHIROORZLQJLWHPV
+HDFKD³VSHFLILHGLWHP¶VYDOXH´²
+(a)
+WKHYDOXHRIDQ\VSHFLILHGLPPRYDEOHSURSHUW\RIWKHLQYHVWHHHQWLW\RUDQRWKHUHQWLW\
+(b)
+WKHYDOXHRIDQ\GLUHFWRULQGLUHFWEHQHILFLDOLQWHUHVWRUDQ\GLUHFWRULQGLUHFWYRWLQJULJKWVRIWKHLQYHVWHHHQWLW\
+(c)
+WKHWRWDOYDOXHRIWKHLQYHVWHHHQWLW\¶VDVVHWV
+LVWREHFDOFXODWHGLQDFFRUGDQFHZLWKWKHIROORZLQJIRUPXOD
+&'
+
+ZKHUH
+C
+PHDQVWKHVSHFLILHGLWHP¶VYDOXHDVDWWKHEHJLQQLQJRIWKHLQYHVWHHHQWLW\¶VUHOHYDQWEDVLVSHULRG
+1RWH
+D
+PHDQVWKHVSHFLILHGLWHP¶VYDOXHDVDW²
+Ɣ
+WKHHQGRIWKHLQYHVWHHHQWLW\¶VUHOHYDQWEDVLVSHULRGRU
+Ɣ
+WKHWLPHRIWKHVSHFLILHGGLVSRVDO
+19.
+7KH YDOXH RI D GLUHFW RU LQGLUHFW EHQHILFLDO LQWHUHVW RU GLUHFW RU LQGLUHFW YRWLQJ ULJKWV RI WKH LQYHVWHH HQWLW\ LQ
+DQRWKHUHQWLW\WKDWLVDWWULEXWDEOHWRDQ\VSHFLILHGLPPRYDEOHSURSHUW\RIWKHRWKHUHQWLW\LVWKHYDOXHDUULYHGDWE\
+PXOWLSO\LQJ²
+(a)
+WKHSHUFHQWDJHUHSUHVHQWLQJWKHH[WHQWRIWKHGLUHFWRULQGLUHFWEHQHILFLDOLQWHUHVWRUGLUHFWRULQGLUHFWYRWLQJ
+ULJKWVRIWKHLQYHVWHHHQWLW\LQWKHRWKHUHQWLW\E\
+(b)
+WKHYDOXHRIWKHVSHFLILHGLPPRYDEOHSURSHUW\
+20.
+,QUHODWLRQWRDQRQVKRUHGLVSRVDOJDLQWKDWDQLQYHVWRUHQWLW\GHULYHVIURPDGLVSRVDOVXEMHFWGLVSRVDORIHTXLW\
+LQWHUHVWVVXEMHFWLQWHUHVWVLQDQLQYHVWHHHQWLW\WKHHTXLW\KROGLQJFRQGLWLRQVDUHPHWIRUWKHVXEMHFWGLVSRVDORI
+WKHVXEMHFWLQWHUHVWVLI
+(a)
+WKHLQYHVWRUHQWLW\KDVKHOGWKHVXEMHFWLQWHUHVWVWKURXJKRXWWKHUHIHUHQFHSHULRG1RWHDQG
+(b)
+WKHVXEMHFWLQWHUHVWVE\WKHPVHOYHVRUWRJHWKHUZLWKFHUWDLQRWKHUHTXLW\LQWHUHVWVLQWKHLQYHVWHHHQWLW\
+DOVRKDYLQJEHHQKHOGE\WKHLQYHVWRUHQWLW\DQGRULWVFORVHO\UHODWHGHQWLW\HQWLWLHV1RWHWKURXJKRXW
+WKHUHIHUHQFHSHULRGFRQVWLWXWHTXDOLI\LQJLQWHUHVWV1RWHLQWKHLQYHVWHHHQWLW\
+21.
+³5HIHUHQFH SHULRG´ LQ UHODWLRQ WR D GLVSRVDO RI HTXLW\ LQWHUHVWV PHDQV WKH FRQWLQXRXV SHULRG RI  PRQWKV
+LPPHGLDWHO\EHIRUHWKHGDWHRIWKHGLVSRVDODVGHILQHGLQVHFWLRQRI6FKHGXOH.WRWKH,52
+22.
+6HFWLRQRI6FKHGXOH.WRWKH,52SURYLGHVWKDWHTXLW\LQWHUHVWVLQDQLQYHVWHHHQWLW\FRQVWLWXWHTXDOLI\LQJ
+LQWHUHVWVLQWKHLQYHVWHHHQWLW\LIWKHLQWHUHVWVLQDJJUHJDWHHQWLWOHWKHKROGHURIWKHLQWHUHVWVWRDWOHDVWD
+VKDUHLQWKHSURILWVFDSLWDORUUHVHUYHVRIWKHLQYHVWHHHQWLW\
+23.
+6HFWLRQRI6FKHGXOH.WRWKH,52SURYLGHVWKDWDQHQWLW\LVDFORVHO\UHODWHGHQWLW\RIDQRWKHUHQWLW\LIRQH
+RIWKHPKDVFRQWURO1RWHRYHUWKHRWKHURUERWKRIWKHPDUHXQGHUWKHFRQWURORIWKHVDPHHQWLW\
+24.
+6HFWLRQRI6FKHGXOH.WRWKH,52SURYLGHVWKDWDQHQWLW\HQWLW\$KDVFRQWURORYHUDQRWKHUHQWLW\HQWLW\
+%LI
+(a)
+HQWLW\$KDVPRUHWKDQRIGLUHFWRULQGLUHFWEHQHILFLDOLQWHUHVWLQRULQUHODWLRQWRHQWLW\%RU
+(b)
+HQWLW\$LVGLUHFWO\RULQGLUHFWO\HQWLWOHGWRH[HUFLVHRUFRQWUROWKHH[HUFLVHRIPRUHWKDQRIYRWLQJ
+ULJKWVLQRULQUHODWLRQWRHQWLW\%
+
+,I \RXU FORVHO\ UHODWHG HQWLWLHV KDYH KHOG FHUWDLQ RWKHU HTXLW\ LQWHUHVWV LQ WKH LQYHVWHH HQWLW\ WKURXJKRXW WKH
+UHIHUHQFHSHULRGZKLFKFRQVWLWXWHGDSDUWRIWKHTXDOLI\LQJLQWHUHVWVLQWKHLQYHVWHHHQWLW\LQUHODWLRQWRWKHVXEMHFW
+GLVSRVDO\RXVKRXOGSURYLGHGHWDLOVRIHDFKFORVHO\UHODWHGHQWLW\LQUHODWLRQWRWKHVXEMHFWGLVSRVDOLQ7DEOH$
+3OHDVHDOVRVSHFLI\WKHGLVSRVDOQXPEHUHJ'LVSRVDORU'LVSRVDORIWKHVXEMHFWGLVSRVDOLQ7DEOH$IRU
+LGHQWLILFDWLRQ'HWDLOVRIXSWRFORVHO\UHODWHGHQWLWLHVFDQEHSURYLGHGLQWKLVIRUP,QFDVHWKHUHDUHPRUHWKDQ
+FORVHO\UHODWHGHQWLWLHVSOHDVHSURYLGHGHWDLOVRIWKHUHPDLQLQJFORVHO\UHODWHGHQWLWLHVLQWKHVDPHIRUPDWRQD
+VHSDUDWHVKHHW,QWKHVHSDUDWHVKHHWSOHDVHDGG\RXUILOHQXPEHU\HDURIDVVHVVPHQWFRQFHUQHGDQGDUHPDUN
+³$GGLWLRQDO´DQGVLJQDWWKHERWWRPRIWKHVKHHW
+
+$QLQYHVWRUHQWLW\PD\GLVSRVHRILWVORQJKHOGHTXLW\LQWHUHVWVLQWUDQFKHV$IWHUGLVSRVDORIHDFKWUDQFKHWKH
+LQYHVWRUHQWLW\¶VHTXLW\KROGLQJLQDQLQYHVWHHHQWLW\PD\IDOOEHORZWKHWKUHVKROGVXFKWKDWWKHHTXLW\KROGLQJ
+FRQGLWLRQVIRUWKHVXEVHTXHQWGLVSRVDOVRIWKHUHPDLQGHURIWKHORQJKHOGLQWHUHVWVORQJKHOGOHIWRYHUVFDQQRW
+EHPHW6HFWLRQRI6FKHGXOH.WRWKH,52SURYLGHVIRUDQH[FHSWLRQWRWKHHTXLW\KROGLQJFRQGLWLRQVXQGHU
+ZKLFKRQVKRUHGLVSRVDOJDLQVDULVLQJIURPDGLVSRVDORIORQJKHOGOHIWRYHUVIURPDVHFWLRQGLVSRVDO1RWHV
+DQGDUHUHJDUGHGDVFDSLWDOLQQDWXUHDQGQRWFKDUJHDEOHWRSURILWVWD[LIWKHGLVSRVDORIWKHORQJKHOGOHIW
+RYHUVRFFXUVZLWKLQPRQWKVDIWHUWKHVHFWLRQGLVSRVDO1RWH
+BIRS21 (4/2025) XML version 2025
+
+
+6HFWLRQ  RI 6FKHGXOH . WR WKH ,52 SURYLGHV WKDW D GLVSRVDO RI HTXLW\ LQWHUHVWV VXEMHFW LQWHUHVWV LQ DQ
+LQYHVWHHHQWLW\E\DQLQYHVWRUHQWLW\LVDGLVSRVDORIORQJKHOGOHIWRYHUVIURPDVHFWLRQGLVSRVDOLI
+(a)
+EHIRUHGLVSRVDORIWKHVXEMHFWLQWHUHVWVRWKHUHTXLW\LQWHUHVWVLQWKHLQYHVWHHHQWLW\ZHUHGLVSRVHGRIE\WKH
+LQYHVWRUHQWLW\HDUOLHUGLVSRVDO
+(b)
+WKHHDUOLHUGLVSRVDOZDVDVHFWLRQGLVSRVDO1RWHDQG
+(c)
+WKHHTXLW\KROGLQJFRQGLWLRQV1RWHZHUHPHWIRUWKHHDUOLHUGLVSRVDORQWKHEDVLVDPRQJRWKHUWKLQJV
+WKDWWKHVXEMHFWLQWHUHVWVKDGEHHQKHOGE\WKHLQYHVWRUHQWLW\WKURXJKRXWWKHUHIHUHQFHSHULRG1RWHLQ
+UHODWLRQWRWKHHDUOLHUGLVSRVDODQGFRQVWLWXWHGDSDUWRIWKHTXDOLI\LQJLQWHUHVWV1RWHLQWKHLQYHVWHH
+HQWLW\LQUHODWLRQWRWKHHDUOLHUGLVSRVDO
+
+³6HFWLRQ  GLVSRVDO´ DV GHILQHG LQ VHFWLRQ  RI 6FKHGXOH . WR WKH ,52 PHDQV D GLVSRVDO RI HTXLW\
+LQWHUHVWVWRZKLFKVHFWLRQRI6FKHGXOH.DSSOLHVRQWKHEDVLVWKDWWKHHTXLW\KROGLQJFRQGLWLRQV1RWH
+DUHPHWIRUWKDWGLVSRVDORIWKRVHLQWHUHVWVZLWKLQWKHPHDQLQJRIVHFWLRQRI6FKHGXOH.
+
+:KHUH WKHUH DUH PRUH WKDQ RQH HDUOLHU GLVSRVDO LQ WUDQFKHV WKH ODWHVW HDUOLHU GLVSRVDO WKDW LV D VHFWLRQ 
+GLVSRVDOZRXOGEHFRXQWHGIRUWKHSXUSRVHRIFRQVLGHULQJWKHPRQWKWLPHOLPLWDVPHQWLRQHGLQ1RWH
+30.
+(TXLW\LQWHUHVWVVSHFLILHGHTXLW\LQWHUHVWVKHOGE\DQLQYHVWRUHQWLW\RULWVFORVHO\UHODWHGHQWLW\FROOHFWLYHO\DV
+³KROGLQJHQWLW\´DUHUHJDUGHGDVWUDGLQJVWRFNIURPWKHILUVWGD\RIWKHEDVLVSHULRGIRUD\HDURIDVVHVVPHQWLI
+DQ\SURILWJDLQRUORVVHJXQUHDOLVHGIDLUYDOXHJDLQRUORVVRUSURYLVLRQIRUGLPLQXWLRQLQYDOXHLQUHVSHFWRIWKH
+VSHFLILHGHTXLW\LQWHUHVWVKDVEHHQEURXJKWLQWRDFFRXQWIRUWD[SXUSRVHV1RWHIRUWKH\HDURIDVVHVVPHQW
+:KHUHWKHVSHFLILHGHTXLW\LQWHUHVWVZHUHDFTXLUHGE\WKHKROGLQJHQWLW\WRJHWKHUZLWKRWKHUHTXLW\LQWHUHVWVRQ
+WKHVDPHRFFDVLRQWKHVSHFLILHGHTXLW\LQWHUHVWVDUHUHJDUGHGDVWUDGLQJVWRFN²
+(a)
+IURPWKHILUVWGD\RIWKHEDVLVSHULRGIRUD\HDURIDVVHVVPHQWLIDQ\SURILWJDLQRUORVVQRWDULVLQJIURPD
+GLVSRVDOHJXQUHDOL]HGIDLUYDOXHJDLQRUORVVRUSURYLVLRQIRUGLPLQXWLRQLQYDOXHLQUHVSHFWRIDQ\RI
+WKRVHRWKHUHTXLW\LQWHUHVWVKDVEHHQEURXJKWLQWRDFFRXQWIRUWD[SXUSRVHVIRUWKH\HDURIDVVHVVPHQWRU
+(b)
+IURPWKHGDWHRIGLVSRVDOLIDQ\SURILWJDLQRUORVVDULVLQJIURPDGLVSRVDORIDQ\RIWKRVHRWKHUHTXLW\
+LQWHUHVWVRQWKDWGD\KDVEHHQEURXJKWLQWRDFFRXQWIRUWD[SXUSRVHVIRUD\HDURIDVVHVVPHQW
+)RUWKHSXUSRVHVRIWKH6FKHPHHTXLW\LQWHUHVWVDUHWREHGLVUHJDUGHGGXULQJWKHSHULRGWKDWWKH\DUHUHJDUGHG
+DV WUDGLQJ VWRFN GLVUHJDUGHG SHULRG LH QRW WR FRQVWLWXWH DQ\ SDUW RI WKH UHOHYDQW SHULRG RU WKH TXDOLI\LQJ
+LQWHUHVWVIRUPHHWLQJWKHHTXLW\KROGLQJFRQGLWLRQV3OHDVHVHH1RWHRQDSSURSULDWLRQRIWUDGLQJVWRFNIRUD
+QRQWUDGHSXUSRVH
+31.
+$VXPKDVEHHQEURXJKWLQWRDFFRXQWIRUWD[SXUSRVHVIRUD\HDURIDVVHVVPHQWLIWKHVXPKDVEHHQEURXJKWLQWR
+DFFRXQWIRUFRPSXWLQJWKHKROGLQJHQWLW\¶VDVVHVVDEOHSURILWVRUORVVHVIRUWKH\HDURIDVVHVVPHQWXQGHU²
+(a)
+DQDVVHVVPHQWPDGHRQWKHKROGLQJHQWLW\WKDWKDVEHFRPHILQDODQGFRQFOXVLYHXQGHUVHFWLRQRIWKH
+,52RU
+(b)
+DFRPSXWDWLRQRIORVVHVLVVXHGWRWKHKROGLQJHQWLW\
+32.
+)RUDQ\HTXLW\LQWHUHVWVZKLFKDUHUHJDUGHGDVWUDGLQJVWRFNDVPHQWLRQHGLQ1RWHWKHHTXLW\LQWHUHVWVZLOO
+FHDVHWREHUHJDUGHGDVWUDGLQJVWRFNRQWKHGDWHRIWKHDSSURSULDWLRQLI
+(a)
+WKHHTXLW\LQWHUHVWVDUHDSSURSULDWHGIRUDQRQWUDGHSXUSRVHDQG
+(b)
+WKHKROGLQJHQWLW\KDVWKHDPRXQWWKDWWKHDSSURSULDWHGHTXLW\LQWHUHVWVZRXOGKDYHUHDOL]HGLIVROGLQWKH
+RSHQPDUNHWRQWKHGDWHRIWKHDSSURSULDWLRQEURXJKWLQWRDFFRXQWDVDUHFHLSWLQDFFRUGDQFHZLWKVHFWLRQ
+%$RIWKH,52
+33.
+,IDQ\HTXLW\LQWHUHVWVKHOGE\\RXRU\RXUFORVHO\UHODWHGHQWLW\HQWLWLHVZKLFKLQDJJUHJDWHFRQVWLWXWHGTXDOLI\LQJ
+LQWHUHVWVLQWKHLQYHVWHHHQWLW\LQUHODWLRQWRWKHVXEMHFWGLVSRVDOZHUHKDGEHHQUHJDUGHGDVWUDGLQJVWRFNLH
+VSHFLILHGHTXLW\LQWHUHVWV\RXVKRXOGSURYLGHGHWDLOVRIHDFKKROGLQJHQWLW\DQGWKHLUUHVSHFWLYHVSHFLILHGHTXLW\
+LQWHUHVWV KHOG LQ UHODWLRQ WR WKH VXEMHFW GLVSRVDO LQ 7DEOH % 3OHDVH DOVR VSHFLI\ WKH GLVSRVDO QXPEHU HJ
+'LVSRVDORU'LVSRVDORIWKHVXEMHFWGLVSRVDOLQ7DEOH%IRULGHQWLILFDWLRQ'HWDLOVRIXSWRVSHFLILHGHTXLW\
+LQWHUHVWVFDQEHSURYLGHGLQWKLVIRUP,QFDVHWKHUHDUHPRUHWKDQVSHFLILHGHTXLW\LQWHUHVWVSOHDVHSURYLGH
+GHWDLOVRIWKHUHPDLQLQJVSHFLILHGHTXLW\LQWHUHVWVLQWKHVDPHIRUPDWRQDVHSDUDWHVKHHW,QWKHVHSDUDWHVKHHW
+SOHDVHDGG\RXUILOHQXPEHU\HDURIDVVHVVPHQWFRQFHUQHGDQGDUHPDUN³$GGLWLRQDO´DQGVLJQDWWKHERWWRPRI
+WKHVKHHW
+34.
+<RXPXVWH[SRUWWKHILOOHGIRUPWR;0/ILOHDQGXSORDGWKH;0/ILOHYLDWKHHOHFWURQLFILOLQJRI3URILWV7D[5HWXUQ
+VHUYLFHVXQGHU*RY+.IRUVXEPLVVLRQ,I\RXGRQRWFKRRVHWRVXEPLW3URILWV7D[5HWXUQWKURXJKHOHFWURQLFILOLQJ
+RU VHPLHOHFWURQLF ILOLQJ \RX KDYH WR SULQW DQG VLJQ D SDSHU &RQWURO /LVW FRQWDLQLQJ GHWDLOV RI WKH ;0/ ILOH
+XSORDGHGDQG45FRGHJHQHUDWHGE\WKHHOHFWURQLFILOLQJRI3URILWV7D[5HWXUQVHUYLFHVIRUVXEPLVVLRQWRJHWKHU
+ZLWKWKH3URILWV7D[5HWXUQLQRUGHUWRFRPSOHWHWKHVXEPLVVLRQSURFHVV7KH&RQWURO/LVWRIWKLVVXSSOHPHQWDU\
+IRUPPXVWEHVLJQHGE\WKHVDPHSHUVRQVLJQLQJWKHWD[UHWXUQ
+BIRS21 (4/2025) XML version 2025

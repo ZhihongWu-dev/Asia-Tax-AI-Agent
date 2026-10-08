@@ -1,0 +1,575 @@
+PART 8
+ASCERTAINMENT OF STATUTORY INCOME
+Basis for computing statutory income
+35.
+—(1) Except as provided in this section, the income of any person for each year of assessment (called in this Act the statutory income) is the full amount of the person’s income for the year preceding the year of assessment from each source of income after the deduction provided under subsection (2).
+(2) There is to be deducted any allowance falling to be made under section 16, 17, 18A (repealed), 18B, 18C, 19, 19A, 19B, 19C, 19D or 20 that is not fully deducted and which would otherwise be added to, and deemed to form part of, the corresponding allowance for the next succeeding year of assessment under section 23(1).
+(2A) A deduction under subsection (2) is to be made in the following order:
+(
+a
+)
+firstly, against income from any trade, business, profession or vocation; and
+(
+b
+)
+secondly, against income from any other source.
+(3) For the purposes of subsection (2), the balance of allowance for the earliest year of assessment is deemed to have been deducted first, followed by the balance of allowance for the next earliest year of assessment, and so on.
+(4) Where the Comptroller is satisfied that any person usually makes up the person’s accounts to a day other than 31 December, the Comptroller may direct that —
+(
+a
+)
+where the person is not an individual, the statutory income of that person from all sources be computed on the amount of gains or profits of the year ending on that day in the year preceding the year of assessment;
+(
+b
+)
+where the accounts relate to a partnership, the income of the partnership be computed under section 36 on the amount of gains or profits of the year ending on that day in the year preceding the year of assessment; or
+(
+c
+)
+where the person is an individual, the statutory income of that person from any trade, business, profession or vocation to which the accounts relate be computed on the amount of gains or profits of the year ending on that day in the year preceding the year of assessment.
+(5) [
+Deleted by Act 19 of 2013
+]
+(6) Where the statutory income of any person has been computed by reference to an account made up to a certain day, and such person fails for any reason whatsoever to make up an account to the corresponding day in the year following, the statutory income both of the year of assessment in which such failure occurs and of the 2 years of assessment following is to be computed on such basis as the Comptroller in his or her discretion thinks fit.
+(7) Where it is necessary in order to arrive at the income of any year of assessment or other period, to divide and apportion to specific periods the income of any period for which accounts have been made up, or to aggregate such income or any apportioned parts thereof, it is lawful to make such a division, and apportionment or aggregation, and any apportionment under this section is to be made in proportion to the number of days in the respective periods, unless the Comptroller, having regard to any special circumstances, otherwise directs.
+(8) The statutory income of an executor of a deceased person for any year of assessment is the income of the estate administered by such executor computed in accordance with subsections (1) to (7).
+(9) In the case of an estate administered in Singapore, a deduction is allowed in respect of any income included in the computation of the statutory income if such income is received by, distributed to or applied to the benefit of any beneficiary of the estate within the calendar year in which the income is derived, or such longer period that the Comptroller may permit in any particular case or class of cases.
+[Act 30 of 2023 wef 30/10/2023]
+(10) The statutory income of any beneficiary of such estate is the amount so received by, or distributed to the beneficiary, or applied to the beneficiary’s benefit during the year preceding the year of assessment.
+(11) The statutory income of a trustee (not being the trustee of an incapacitated person) for any year of assessment is to be computed in accordance with subsections (1) to (7).
+(12) The trustee of a designated unit trust for a year of assessment may elect to apply this subsection to the trustee’s income referred to in section 10(20)(
+a
+), (
+b
+) and (
+c
+) and (20A)(
+a
+) to (
+i
+) derived in the basis period or any part of the basis period for that year of assessment, and thereupon that income does not form part of the trustee’s statutory income for that year of assessment.
+[37/2014]
+(12A) Subsection (12) only applies to income derived on or after 1 September 2014.
+[37/2014]
+(12B) An election under subsection (12) must be made by submitting such form as the Comptroller may specify, together with the trustee’s return of income for the year of assessment in question, before the expiry of the time the return of income is to be delivered or within such extended time as the Comptroller may allow.
+[37/2014]
+(12C) An election under subsection (12) is irrevocable.
+[37/2014]
+(12D) To avoid doubt, subsection (12) does not affect the operation of section 43(2) (read with section 43(2A)(
+ba
+)) in relation to a designated unit trust that is also an approved REIT exchange‑traded fund within the meaning of section 43(10).
+[45/2018]
+(13) No deduction under section 14 is allowed for any year of assessment in respect of any outgoings and expenses (including any expenses arising from the management of investments) incurred by the trustee of a designated unit trust for that year of assessment in respect of the unit trust, against any income derived by the trustee in respect of the unit trust from —
+(
+a
+)
+dividends paid by any company resident in Singapore; or
+(
+b
+)
+interest for which tax has been deducted under section 45.
+[37/2014]
+(13A) No deduction under section 14 is allowed for any year of assessment in respect of any outgoings and expenses (including any expenses arising from the management of investments) incurred by the trustee of a designated unit trust for that year of assessment in respect of the unit trust, against any income derived by the trustee in respect of the unit trust from discount, fees and compensatory payments for which tax has been deducted under section 45A.
+[37/2014]
+(14) In subsections (12), (13), (13A), (14A), (14B), (14C) and (14D) —
+“compensatory payment” has the meaning given by section 10H(12);
+“designated unit trust”, in relation to a year of assessment, means a trust that is —
+(
+a
+)
+a unit trust scheme or an exchange traded fund interest scheme, in which any moneys standing to the credit of a member of the Central Provident Fund in the Fund have been or may be invested, and which remains prescribed by the Minister for the purposes of this definition throughout the basis period for that year of assessment; or
+(
+b
+)
+a unit trust which satisfies all of the following conditions throughout the basis period for that year of assessment:
+(i)
+it is one of the following:
+(A)
+a collective investment scheme which is authorised under section 286 of the Securities and Futures Act 2001 and the units of which are offered to the public for subscription;
+(B)
+a collective investment scheme which was a former designated unit trust, is a restricted Singapore scheme within the meaning of section 13(16), and satisfies the conditions in subsection (14B);
+(C)
+a collective investment scheme which was a former designated unit trust, is a collective investment scheme the units of which are offered only to institutional investors, and satisfies the conditions set out in subsection (14B);
+(ii)
+it is neither a real estate investment trust within the meaning of section 43(10), nor a property trust that invests directly in immovable properties in Singapore;
+(iii)
+the trustee of the unit trust is resident in Singapore;
+(iv)
+the unit trust is managed in Singapore by a fund manager;
+“exchange traded fund interest scheme” means any scheme or arrangement which is made for the purpose, or having the effect, of providing facilities for the participation by persons as beneficiaries under a trust, in profits or income arising from the acquisition, holding, management or disposal of a portfolio of predetermined proportions, which constituent assets comprise securities listed for quotation on any stock exchange;
+“former designated unit trust” means a unit trust that, immediately before 21 February 2014, was a designated unit trust under this section in force immediately before that date;
+“securities” has the meaning given by section 10(23);
+“unit” and “unit trust” have the meanings given by section 10A.
+[37/2014; 32/2019]
+(14A) For the purposes of paragraph (
+a
+) of the definition of “designated unit trust” in subsection (14), the Minister may prescribe, as designated unit trusts, descriptions of unit trust schemes and exchange traded fund interest schemes set out on a specified website of the Central Provident Fund Board, as amended from time to time.
+[37/2014]
+(14B) The conditions referred to in paragraph (
+b
+)(i)(B) and (C) of the definition of “designated unit trust” in subsection (14) are as follows:
+(
+a
+)
+no more than 50% of the units in the unit trust is beneficially held by related parties of the fund manager;
+[Act 33 of 2022 wef 04/11/2022]
+(
+b
+)
+the unit holders have no control over the management of the property of the unit trust and have no right to be consulted or to give directions in respect of such management;
+(
+c
+)
+the unit holders have no control over any matter relating to distributions to be made out of the income of the unit trust;
+(
+d
+)
+no property was transferred (other than by way of a sale in accordance with market terms and conditions), directly or indirectly, to the trustee of the unit trust to be held as its property, by a company which has derived income from that property that is chargeable to tax under this Act; and
+(
+e
+)
+the investment strategy of the unit trust as of 20 February 2014 remains unchanged.
+[37/2014]
+(14C) Despite the definition of “designated unit trust” in subsection (14), a collective investment scheme (being a former designated unit trust) —
+(
+a
+)
+which is a restricted Singapore scheme within the meaning of section 13(16); or
+(
+b
+)
+the units of which are offered only to institutional investors,
+which fails to satisfy the conditions set out in subsection (14B) in any part of the basis period for a year of assessment is not treated as a designated unit trust for the year of assessment to which that basis period relates, or for any subsequent year of assessment even if all of the requirements in the definition of that term have been satisfied for that subsequent year of assessment.
+[37/2014]
+(14D) For the purposes of paragraphs (
+a
+) and (
+b
+) of the definition of “designated unit trust” in subsection (14), a reference to a condition being satisfied throughout the basis period for a year of assessment is, where the unit trust is dissolved at any time in the basis period, a reference to the condition being satisfied from the beginning of the basis period up to the date of the dissolution.
+[37/2014]
+(14E) Subsections (12), (13) and (13A) do not apply to a trust that is constituted on or after 1 April 2019.
+[37/2014]
+(14F) In the case of a trust that is constituted before 1 April 2019 —
+(
+a
+)
+that is not a designated unit trust (as defined in subsection (14)) for a year of assessment in respect of any basis period beginning on or after 1 April 2019; or
+(
+b
+)
+whose trustee did not make an election for subsection (12) to apply to the trustee’s income for any basis period beginning on or after that date,
+subsections (12), (13) and (13A) do not apply to that trust for the year of assessment to which that basis period relates and for every subsequent year of assessment.
+[37/2014]
+(14G) Subsection (14F) applies to the trust for a subsequent year of assessment even if all of the requirements in the definition of “designated unit trust” in subsection (14) have been satisfied for that year of assessment.
+[37/2014]
+(14H) In the case of a trust that is constituted before 1 April 2019 whose trustee did not make an election for subsection (12) to apply to the trustee’s income for the basis period immediately preceding the basis period in which 1 April 2019 falls, subsections (12), (13) and (13A) do not apply to that trust for the year of assessment to which the second‑mentioned basis period relates and for every subsequent year of assessment.
+[37/2014]
+(14I) Subsection (14H) applies to the trust for the year of assessment to which the second‑mentioned basis period in that subsection relates or a subsequent year of assessment, even if all of the requirements in the definition of “designated unit trust” in subsection (14) have been satisfied for that year of assessment or that subsequent year of assessment.
+[37/2014]
+(15) The statutory income for any year of assessment of any beneficiary under a trust is that share of the statutory income of the trustee for that year of assessment which corresponds to the share of the trust income to which the beneficiary is entitled for the year preceding the year of assessment.
+(15A) Despite subsection (15), the statutory income for any year of assessment of a beneficiary of a trust (called in this subsection the first trust), where the beneficiary is itself a trustee of an approved REIT exchange‑traded fund, is that share of the statutory income of the trustee of the first trust that corresponds to the share of the income of the first trust to which the beneficiary is entitled for the year preceding the year of assessment.
+[45/2018]
+(15B) To avoid doubt, section 43(2) (read with section 43(2A)(
+ba
+)) applies to the statutory income under subsection (15A) of the beneficiary.
+[45/2018]
+(15C) Where a unitholder of a real estate investment trust is entitled to an amount, being a return of capital, from a trustee of the real estate investment trust, the cost of the units to the unitholder is reduced by the amount entitled.
+[45/2018]
+(16) In subsection (15), “statutory income of the trustee” does not include —
+(
+a
+)
+in relation to a trustee of a real estate investment trust within the meaning of section 43(10), any income from any trade or business carried on by the trustee other than the income of the kinds referred to in section 43(2A)(
+a
+)(i), (ii), (iii), (iv) and (v);
+(
+b
+)
+in relation to a trustee of an approved sub‑trust of a real estate investment trust within the meaning of section 43(10), any income from any trade or business carried on by the trustee other than income of the kinds referred to in section 43(2A)(
+b
+)(i), (ii) and (iii);
+(
+ba
+)
+in relation to a trustee of an approved REIT exchange‑traded fund within the meaning of section 43(10), any income from a trade or business carried on by the trustee, other than a distribution received from a real estate investment trust that is in turn made out of income of the kinds mentioned in section 43(2A)(
+a
+)(i), (ii), (iii), (iv) and (v); or
+(
+c
+)
+in relation to a trustee of any other trust, any income from any trade or business carried on by the trustee.
+[34/2016; 45/2018]
+Cessation of source of income commenced before 1 January 1969
+35A.
+—(1) This section only applies to any trade, business, profession, vocation or employment (except subsidiary employment which had not been treated as a new source on commencement) which commenced before 1 January 1969.
+(2) Subject to subsection (3), where a person permanently ceases to carry on or exercise any trade, business, profession, vocation or employment to which this section applies, the person’s statutory income therefrom is —
+(
+a
+)
+as regards the year of assessment in which the cessation occurs — the amount of the income of that year; and
+(
+b
+)
+as regards the year of assessment preceding that in which the cessation occurs — the amount of income as computed in accordance with section 35, or the amount of income of that year, whichever is the greater.
+(3) Subsection (2) does not apply to a company which ceases to carry on any trade or business on or after 15 October 1969 where such trade or business or part thereof is transferred to or carried on by any person as that person’s trade or business, whether with or without any alteration.
+(4) For the purposes of this section, where a change occurs in a partnership of persons carrying on any trade, business or profession by reason of retirement or death, or the dissolution of the partnership as to one or more of the partners, or the admission of a new partner, every such person who is not a company is deemed to cease to carry on that trade, business or profession as from the date the change occurs.
+Partnership
+36.
+—(1) Where a trade, business, profession or vocation is carried on by 2 or more persons jointly —
+(
+a
+)
+the income of any partner from the partnership for any period is deemed to be the share to which the partner was entitled during that period in the income of the partnership, such income being ascertained in accordance with the provisions of this Act, and must be included in the return of income to be made by such partner under the provisions of this Act; and
+(
+b
+)
+the statutory income of any partner from the partnership is computed in accordance with section 35 by treating the partner’s share of the divisible income of the partnership as though it were income of a trade, business, profession or vocation carried on or exercised by the partner.
+(1A) Sections 13G, 13P, 43N and 43P apply in relation to the income of a partner from a partnership as they apply in relation to the income of a company, with such modifications and exceptions as may be prescribed by the Minister by regulations.
+(1B) Despite anything in sections 14E, 19B and 19C, those sections apply for the purpose of making a deduction or an allowance to the partners of a partnership for expenditure incurred by the partnership to which those sections apply, subject to such modifications and exceptions as may be prescribed by the Minister.
+(1C) Regulations under subsections (1A) and (1B) may make provision ––
+(
+a
+)
+for the manner in which a concessionary rate of tax under sections 43N and 43P may be accorded to a partner of a partnership being an individual;
+(
+b
+)
+in a case where any deduction, writing‑down allowance, exemption or concessionary rate of tax ought not to have been allowed to a partner of a partnership due to non‑compliance with any condition imposed on the partnership, for the recovery from the partner —
+(i)
+if the partner is a company, of the amount of tax which would otherwise have been payable; or
+(ii)
+if the partner is an individual, of an amount to be computed in the prescribed manner;
+(
+c
+)
+for the recovery of the amount referred to in paragraph (
+b
+) by deeming a specified amount as the income of the partner for the year of assessment in which the Comptroller discovers the non‑compliance referred to in that paragraph; and
+(
+d
+)
+generally to give effect to or for carrying out the purposes of those sections as they apply to a partnership.
+[34/2016]
+Limited liability partnership
+36A.
+—(1) For the purposes of this Act, where a limited liability partnership carries on a trade, business, profession or vocation —
+(
+a
+)
+all the activities of the partnership are treated as carried on in partnership by its partners (and not by the partnership as such);
+(
+b
+)
+anything done by, to or in relation to the partnership for the purposes of, or in connection with, any of its activities is treated as done by, to or in relation to the partners; and
+(
+c
+)
+the property of the partnership is treated as held by the partners as partnership property.
+(2) For the purposes, except as otherwise provided, of this Act —
+(
+a
+)
+references to a partnership include a limited liability partnership in relation to which subsection (1) applies;
+(
+b
+)
+references to partners of a partnership include partners of such a limited liability partnership;
+(
+c
+)
+references to a company do not include such a limited liability partnership; and
+(
+d
+)
+references to shareholders of a company do not include partners of such a limited liability partnership.
+(3) In ascertaining the income of a limited liability partnership for the purpose of section 36(1)(
+a
+), section 10D applies to income from any business of the making of investments as if the limited liability partnership is a company.
+(4) For any year of assessment, the amount of relevant deductions that may be allowed to or transferred by a partner of a limited liability partnership must not exceed —
+(
+a
+)
+in the case of a relevant deduction allowed to the partner under section 35(2), an amount equal to the amount ascertained in accordance with the formula
+(
+b
+)
+in the case of a relevant deduction allowed to the partner under section 37(3)(
+a
+), an amount equal to the amount ascertained in accordance with the formula
+(
+c
+)
+in the case of a transferred deduction transferred by the partner, an amount equal to the amount ascertained in accordance with the formula
+(
+d
+)
+in the case of a carry‑back deduction allowed to or transferred by the partner, an amount equal to the amount ascertained in accordance with the formula
+where A
+is the partner’s contributed capital in that year of assessment;
+B
+is the past relevant deductions already allowed to the partner;
+C
+is the relevant deduction allowed to the partner in that year of assessment under section 35(2);
+D
+is the relevant deduction allowed to the partner in that year of assessment under section 37(3)(
+a
+); and
+E
+is the transferred deduction transferred by the partner in that year of assessment.
+(5) If, as a result of any reduction in the contributed capital of a partner of a limited liability partnership in any year of assessment, the past relevant deductions already allowed to the partner exceeds the partner’s contributed capital, the excess is deemed to be income of the partner chargeable with tax under section 10(1)(
+g
+) for that year of assessment, and an amount equal to the excess is deemed to be a loss incurred by the partner in the trade, business, profession or vocation of the limited liability partnership.
+(6) Subsections (4) and (5) do not apply in the year of assessment relating to the basis period in which the partner ceases to be a partner of a limited liability partnership or in any subsequent year of assessment.
+(7) For the purposes of any allowances made under section 16, 17, 18B, 18C, 19, 19A, 19B, 19C, 19D, 20 or 23, where —
+(
+a
+)
+any person is admitted to or withdraws from a limited liability partnership as a partner thereof; and
+(
+b
+)
+one or more persons remain as partners of the limited liability partnership after the admission or withdrawal of that person,
+the interest of that person in any property of the limited liability partnership is deemed to be —
+(
+c
+)
+where that person is admitted to the limited liability partnership as a partner, sold to that person by all the remaining partners; or
+(
+d
+)
+where that person withdraws from the limited liability partnership as a partner, sold by that person to all the remaining partners.
+(8) The precedent partner of a limited liability partnership must make and deliver, together with a return of the income of the limited liability partnership under section 71 or when required by the Comptroller by written notice, a return of the contributed capital of each partner of the limited liability partnership for any year of assessment.
+(9) For the purposes of this section, the Minister may make regulations to provide generally for giving full effect to or for carrying out the purposes of this section.
+(10) In this section —
+“activities of the limited liability partnership” means anything done by the limited liability partnership, whether or not in the course of carrying on a trade, business, profession or vocation;
+“carry‑back deductions”, in relation to a partner of a limited liability partnership in any year of assessment, means —
+(
+a
+)
+any deduction allowed to the partner of any allowance arising from any trade, business or profession, or any loss incurred in any trade, business, profession or vocation carried on by the limited liability partnership that is made against the partner’s assessable income from any other source for the immediate preceding year of assessment under section 37D(1) or any of the 3 immediate preceding years of assessment under section 37D(1A); or
+(
+b
+)
+any allowance arising from any trade, business or profession, or any loss incurred in any trade, business, profession or vocation carried on by the limited liability partnership that is transferred by the partner to a spouse under section 37E;
+“contributed capital”, in relation to a partner of a limited liability partnership for any year of assessment, means the aggregate of —
+(
+a
+)
+the amount, as at the end of the basis period for the year of assessment to be determined by the Comptroller, which the partner has contributed (in cash or in kind but not including any loan by the partner to the limited liability partnership) to the limited liability partnership as capital, and has not, directly or indirectly, drawn out or received back (whether as a distribution or a loan from the limited liability partnership or otherwise); and
+(
+b
+)
+the amount, as at the end of the basis period for the year of assessment to be determined by the Comptroller, of any profits or gains of the trade, business, profession or vocation from any past year of assessment to which the partner is entitled as a partner of the limited liability partnership but which the partner has not, directly or indirectly, received (whether as a distribution or a loan from the limited liability partnership or otherwise);
+“past relevant deductions”, in relation to a partner of a limited liability partnership in any year of assessment, means the aggregate of any relevant deductions allowed to the partner less any amount deemed under subsection (5) to be income chargeable with tax in any year of assessment before that year of assessment;
+“precedent partner” has the meaning given by section 71;
+“relevant deductions”, in relation to a partner of a limited liability partnership, means —
+(
+a
+)
+any deduction allowed to the partner under section 35(2) of any allowance arising from any trade, business or profession carried on by the limited liability partnership;
+(
+b
+)
+any deduction allowed to the partner under section 37(3)(
+a
+) of any loss incurred in any trade, business, profession or vocation carried on by the limited liability partnership that is made against the partner’s statutory income from any other source;
+(
+c
+)
+any transferred deduction transferred by the partner; or
+(
+d
+)
+any carry‑back deduction allowed to or transferred by the partner,
+as the case may be;
+“transferred deduction”, in relation to a partner of a limited liability partnership, means any allowance arising from any trade, business or profession, or any loss incurred in any trade, business, profession or vocation carried on by the limited liability partnership that is transferred by the partner to a claimant company under section 37B or to a spouse under section 37C.
+[39/2017; 41/2020]
+Registered business trusts
+36B.
+—(1) For the purposes of this Act, except as otherwise provided, references to a company include a reference to a registered business trust or, as the context requires, to the trustee‑manager of a registered business trust subject to the following modifications:
+(
+a
+)
+sections 23 and 37 apply to a registered business trust except that —
+(i)
+any reference to the shareholders of a company is a reference to the unitholders of a registered business trust;
+(ii)
+the unitholders of a registered business trust at any date are not deemed to be substantially the same as the unitholders at any other date unless, on both those dates —
+(A)
+the same unitholders are entitled to not less than 50% of any residual profits of the registered business trust available for distribution; and
+(B)
+the same unitholders are entitled to not less than 50% of any residual assets of the registered business trust available for distribution on winding up;
+(iii)
+units in a registered business trust held by or on behalf of a company are deemed to be held by the shareholders of the company; and
+(iv)
+units held by or on behalf of the trustee of the estate of a deceased unitholder or by or on behalf of the person entitled to those units as beneficiaries under the will or any intestacy of a deceased unitholder are deemed to be held by that deceased unitholder;
+(
+b
+)
+for the purpose of section 24(1) —
+(i)
+a body of persons is deemed to have control over a registered business trust if —
+(A)
+the body of persons is a company and it holds more than 50% of the units in the registered business trust; or
+(B)
+the body of persons is another registered business trust and they hold on trust for their unitholders more than 50% of the units in the firstmentioned registered business trust;
+(ii)
+a registered business trust is deemed to have control over a company if —
+(A)
+the trustee‑manager of the registered business trust holds on trust for its unitholders more than 50% of the total number of issued shares of the company; or
+(B)
+the unitholders of the registered business trust hold more than 50% of the total number of issued shares of the company;
+(
+c
+)
+for the purpose of section 37B —
+(i)
+a registered business trust is deemed to be a Singapore company if —
+(A)
+the registered business trust is established in Singapore; and
+(B)
+the trust deed of the registered business trust is executed in Singapore and is governed by Singapore law;
+(ii)
+any reference to ordinary share or ordinary share capital in a company is a reference to the units in a registered business trust; and
+(iii)
+any reference to residual assets or residual profits in a company is a reference to the residual assets and residual profits of a registered business trust;
+[Act 35 of 2024 wef 01/01/2024]
+(
+d
+)
+for the purposes of section 13W(1) and (1A), any reference in those provisions to ordinary shares or preference shares in investee companies B and B1 (each called an investee company) which are legally and beneficially owned by divesting companies A and A1 (each called a divesting company) respectively, is, in a case where the divesting company is a registered business trust, a reference to ordinary shares or preference shares in the investee company which are trust property of the registered business trust;
+[Act 25 of 2025 wef 08/12/2025]
+(
+da
+)
+section 13W(1B) does not apply to a registered business trust;
+[Act 25 of 2025 wef 08/12/2025]
+(
+e
+)
+for the purposes of sections 92J and 92L, the definitions of “employee” and “local employee” in sections 92J(7) and 92L(7) are replaced by the following definition:
+“local employee”, in relation to a registered business trust, means an individual —
+(
+a
+)
+who is a Singapore citizen or a Singapore permanent resident;
+(
+b
+)
+who is an employee of the trustee‑manager of the business trust for any period in the calendar year 2023 (for the purposes of section 92J) or 2024 (for the purposes of section 92L) and is on the payroll of the trustee‑manager for that period; and
+(
+c
+)
+whose sole duty is assisting in managing or operating the business trust,
+but excludes an individual who is also a unitholder of the business trust;
+[Act 25 of 2025 wef 01/02/2025]
+[Act 25 of 2025 wef 08/12/2025]
+(
+f
+)
+for the purposes of section 92K —
+(i)
+any reference to the ordinary shares of a company is a reference to the units in a registered business trust; and
+(ii)
+any reference to a subsidiary wholly-owned (directly or indirectly) by a company is to a company all the shares of which are held (directly or indirectly) for a registered business trust by its trustee-manager.
+[37/2014]
+[Act 35 of 2024 wef 16/02/2024]
+[Act 25 of 2025 wef 01/02/2025]
+(2) The statutory income of a registered business trust is to be computed in accordance with section 35(11).
+(3) Sections 35(15) and 43(2) do not apply to any registered business trust or unitholders of any registered business trust.
+(4) In this section, “business trust”, “registered business trust”, “trustee‑manager”, “unit” and “unitholder” have the meanings given by the Business Trusts Act 2004.
+Limited partnership
+36C.
+—(1) For the purposes of this Act, except as otherwise provided —
+(
+a
+)
+references to a partnership include references to a limited partnership; and
+(
+b
+)
+references to partners of a partnership include references to partners of a limited partnership.
+(2) In ascertaining the income of a limited partnership for the purpose of section 36(1)(
+a
+), section 10D applies to income from any business of the making of investments as if the limited partnership were a company.
+(3) For any year of assessment, the amount of relevant deductions that may be allowed to or transferred by a limited partner of a limited partnership must not exceed —
+(
+a
+)
+in the case of a relevant deduction allowed to the limited partner under section 35(2), an amount equal to the amount ascertained in accordance with the formula
+(
+b
+)
+in the case of a relevant deduction allowed to the limited partner under section 37(3)(
+a
+), an amount equal to the amount ascertained in accordance with the formula
+(
+c
+)
+in the case of a transferred deduction transferred by the limited partner, an amount equal to the amount ascertained in accordance with the formula
+(
+d
+)
+in the case of a carry‑back deduction allowed to or transferred by the limited partner, an amount equal to the amount ascertained in accordance with the formula
+where A
+is the limited partner’s contributed capital in that year of assessment;
+B
+is the past relevant deductions already allowed to the limited partner;
+C
+is the relevant deduction allowed to the limited partner in that year of assessment under section 35(2);
+D
+is the relevant deduction allowed to the limited partner in that year of assessment under section 37(3)(
+a
+); and
+E
+is the transferred deduction transferred by the limited partner in that year of assessment.
+(4) If, as a result of any reduction in the contributed capital of a limited partner of a limited partnership in any year of assessment, the past relevant deductions already allowed to the limited partner exceeds the limited partner’s contributed capital, the excess is deemed to be income of the limited partner chargeable with tax under section 10(1)(
+g
+) for that year of assessment, and an amount equal to the excess is deemed to be a loss incurred by the limited partner in the trade, business, profession or vocation of the limited partnership.
+(5) Subsections (3) and (4) do not apply in the year of assessment relating to the basis period in which the limited partner ceases to be a limited partner of a limited partnership or in any subsequent year of assessment.
+(6) The precedent partner of a limited partnership must make and deliver, together with a return of the income of the limited partnership under section 71 or when required by the Comptroller by written notice, a return of the contributed capital of each partner of the limited partnership for any year of assessment.
+(7) For the purposes of this section, the Minister may make regulations to give full effect to or to carry out the purposes of this section.
+(8) In this section —
+“carry‑back deductions”, in relation to a limited partner of a limited partnership in any year of assessment, means —
+(
+a
+)
+any deduction allowed to the limited partner of any allowance arising from any trade, business or profession, or any loss incurred in any trade, business, profession or vocation carried on by the limited partner in the limited partnership that is made against the limited partner’s assessable income from any other source for the immediate preceding year of assessment under section 37D(1) or any of the 3 immediate preceding years of assessment under section 37D(1A); or
+(
+b
+)
+any allowance arising from any trade, business or profession, or any loss incurred in any trade, business, profession or vocation carried on by the limited partner in the limited partnership that is transferred by the limited partner to a spouse under section 37E;
+“contributed capital”, in relation to a limited partner of a limited partnership in any year of assessment, means the aggregate of —
+(
+a
+)
+the amount, as at the end of the basis period for the year of assessment to be determined by the Comptroller, which the limited partner has contributed (in cash or in kind but not including any loan by the limited partner to the limited partnership) to the limited partnership as capital, and has not, directly or indirectly, drawn out or received back (whether as a distribution or a loan from the limited partnership or otherwise); and
+(
+b
+)
+the amount, as at the end of the basis period for the year of assessment to be determined by the Comptroller, of any profits or gains of the trade, business, profession or vocation from any past year of assessment to which the limited partner is entitled as a limited partner of the limited partnership but which the limited partner has not, directly or indirectly, received (whether as a distribution or a loan from the limited partnership or otherwise);
+“limited partner” has the meaning given by the Limited Partnerships Act 2008;
+“past relevant deductions”, in relation to a limited partner of a limited partnership in any year of assessment, means the aggregate of any relevant deductions allowed to the partner less any amount deemed under subsection (4) to be income chargeable with tax in any year of assessment before that year of assessment;
+“precedent partner” has the meaning given by section 71;
+“relevant deductions”, in relation to a limited partner of a limited partnership, means —
+(
+a
+)
+any deduction allowed to the limited partner under section 35(2) of any allowance arising from any trade, business or profession carried on by the limited partner in the limited partnership;
+(
+b
+)
+any deduction allowed to the limited partner under section 37(3)(
+a
+) of any loss incurred in any trade, business, profession or vocation carried on by the limited partner in the limited partnership that is made against the limited partner’s statutory income from any other source;
+(
+c
+)
+any transferred deduction transferred by the partner; or
+(
+d
+)
+any carry‑back deduction allowed to or transferred by the partner,
+as the case may be;
+“transferred deduction”, in relation to a limited partner of a limited partnership, means any allowance arising from any trade, business or profession, or any loss incurred in any trade, business, profession or vocation carried on by the limited partner in the limited partnership that is transferred by the limited partner to a claimant company under section 37B or to a spouse under section 37C.
+[39/2017; 41/2020]

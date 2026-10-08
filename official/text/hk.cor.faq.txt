@@ -1,0 +1,208 @@
+Show All
+General
+1.
+Q:
+What is a CoR?
+A:
+A CoR is a document issued by the competent authority of the Hong Kong Special Administrative Region (Hong Kong) to a Hong Kong resident who requires proof of resident status for the purposes of claiming tax benefits under a Comprehensive Double Taxation Agreement / Arrangement (DTA).
+back to top
+2.
+Q:
+Who can apply for a CoR?
+A:
+In general, the following persons can apply for a CoR:
+Individual who ordinarily resides in Hong Kong;
+Individual who stays in Hong Kong for more than 180 days during a year of assessment or for more than 300 days in two consecutive years of assessment one of which is the relevant year of assessment;
+Company / partnership / trust / body of persons incorporated or constituted in Hong Kong;
+Company / partnership / trust / body of persons incorporated or constituted outside Hong Kong but managed or controlled in Hong Kong;
+Re-domiciled company.
+back to top
+3.
+Q:
+When can a re-domiciled company make an application for a CoR?
+A:
+A re-domiciled company can make such application after it has completed the re-domiciliation procedure (including the fulfilment of the deregistration requirements from its place of incorporation as defined by the Companies Ordinance (Cap. 622)) as required by the Companies Registry of Hong Kong. The company is required to submit together with the application form a copy of the certificate of re-domiciliation and a copy of the document evidencing the deregistration from its place of incorporation.
+back to top
+4.
+Q:
+How to apply for a CoR?
+A:
+You can submit an application for CoR online, by post or in person.
+Online application
+The applicant or the applicant´s appointed service agent (i.e. company secretary or tax representative) can complete and submit application for CoR via the Individual Tax Portal (ITP), Business Tax Portal (BTP) and Tax Representative Portal (TRP) under eTAX services provided at the GovHK website.
+By post / In person
+The applicant can send the completed application to:
+Assessor (Tax Treaty)
+Tax Treaty Section
+Inland Revenue Department
+17/F, Inland Revenue Centre
+5 Concorde Road, Kai Tak, Kowloon, Hong Kong
+back to top
+5.
+Q:
+If there is no DTA between Hong Kong and the relevant jurisdiction, will the competent authority of Hong Kong issue a CoR?
+A:
+No. A CoR is a document issued by the competent authority of Hong Kong to a Hong Kong resident who requires proof of resident status for the purposes of claiming tax benefits under a DTA. The competent authority of Hong Kong will only issue a CoR after the DTA between Hong Kong and the relevant jurisdiction has become effective. A list of the jurisdictions which have concluded DTAs with Hong Kong are available at our website at
+https://www.ird.gov.hk/eng/tax/dta_inc.htm
+.
+back to top
+6.
+Q:
+I do not need to claim tax benefits under DTAs, but would like to apply for a CoR for other purposes. Will the competent authority of Hong Kong issue a CoR to me?
+A:
+No. A CoR is a document issued by the competent authority of Hong Kong to a Hong Kong resident who requires proof of resident status for the purposes of claiming tax benefits under a DTA.
+back to top
+7.
+Q:
+Do I need to pay a fee for CoR?
+A:
+No.
+back to top
+Processing time
+8.
+Q:
+Generally, how long does it take to process a CoR application?
+A:
+The target of the Department is to issue, within 21 working days after receipt of a properly completed application, a certificate of resident status, or notification of decision by the assessing officer either seeking further information or informing the applicant that the application cannot be accepted.
+back to top
+Online services
+9.
+Q:
+What kinds of online services relating to CoR are available via the three tax portals under eTAX (namely Individual Tax Portal (ITP), Business Tax Portal (BTP) and Tax Representative Portal (TRP))?
+A:
+The following online services relating to CoR are available via the three tax portals under eTAX:
+Submission of CoR application
+Submission of supplementary information relating to a CoR application
+Viewing of application and supplementary information submitted via the tax portals within the last 3 years
+Making enquiries / Giving replies to the Department’s enquiries
+back to top
+10.
+Q:
+Who can access online services relating to CoR under ITP / BTP / TRP?
+A:
+The following users are allowed to access online services relating to CoR:
+ITP (including sole proprietorship business)
+Registered users
+BTP (other than sole proprietorship business)
+Administrators
+Authorized Users with CoR as the appointed service
+TRP
+Team Leads with CoR as the appointed service
+Team Members with CoR as the appointed service
+back to top
+11.
+Q:
+How can I engage a service agent to handle CoR matters?
+A:
+ITP
+A registered user can appoint a tax representative to handle CoR matters by using the “Manage Service Agent” function on the “Online Services” menu.
+BTP
+An administrator can appoint either a tax representative or a company secretary to handle CoR matters by clicking the “Manage BTP Business Account” tab on the “Online Services” menu and then use the “Manage Service Agent” function.
+back to top
+12.
+Q:
+I would like to apply for a CoR in the name of my sole proprietorship business. Should I open an ITP Account or a BTP Business Account?
+A:
+You should open an ITP Account to submit CoR application in respect of your sole proprietorship business.
+back to top
+13.
+Q:
+I would like to apply for CoRs in respect of the same jurisdiction for more than one calendar year. Do I need to submit separate CoR applications?
+A:
+You can submit one CoR application covering, at most, three calendar years of claim.
+back to top
+14.
+Q:
+I have just submitted a CoR application and would like to amend the information therein. How should I make correction?
+A:
+You should submit information that needs to be revised by using the “Submission of Supplementary Information” function on the “Certificate of Resident Status” menu.
+back to top
+15.
+Q:
+Can I view my CoR application and supplementary information submitted online?
+A:
+Yes. You can view all CoR applications and supplementary information submitted by you or your service agent(s) within the last 3 years by using the “Viewing of Application for Certificate of Resident Status” function on the “Certificate of Resident Status” menu. You may also print and save the submitted information and documents, if necessary.
+back to top
+16.
+Q:
+If my service agent submitted a CoR application and supplementary information through TRP on my behalf, can I view those submitted information and documents?
+A:
+Yes. You can view all CoR applications and supplementary information submitted by your service agent(s) within the last 3 years by using the “Viewing of Application for Certificate of Resident Status” function on the “Certificate of Resident Status” menu. You may also print and save the submitted information and documents, if necessary.
+back to top
+17.
+Q:
+I have appointed a tax representative to handle CoR matters but would like to submit CoR application on my own. Will my tax representative view my application under TRP?
+A:
+Your tax representative can view your submitted application under TRP only if you tick the checkbox to request sending a copy of the CoR application to the TRP Account of your tax representative. If you would like to notify your tax representative of your submission of CoR application or supplementary information, you can tick the checkbox to request sending a copy of the information to the TRP Account of your tax representative each time you submit information under your ITP or BTP Account.
+back to top
+18.
+Q:
+I would like to submit a CoR application on my own. Can I notify my tax representative?
+A:
+You must have already appointed your tax representative to handle CoR matters using the “Manage Service Agent” function on the “Online Services” menu. Before clicking the “Confirm” button to submit your CoR application, please tick the checkbox to request sending a copy of the CoR application to the TRP Account of your tax representative. After your submission, your tax representative will be able to view your submitted application by using the “Viewing of Application for Certificate of Resident Status” function on the “Certificate of Resident Status” menu. This also applies to submission of supplementary information.
+back to top
+19.
+Q:
+I received an enquiry letter from the Department about my / my client’s CoR application. How can I reply through my ITP / BTP / TRP User Account?
+A:
+You can give a reply to the Department’s enquiry letter by using the “Submission of Supplementary Information” function on the “Certificate of Resident Status” menu. You may upload a maximum of 10 files for 20MB each with file formats JPG, JPEG, PNG or PDF. After submission, you will be able to view the information and documents submitted by using the “Viewing of Application for Certificate of Resident Status” function.
+back to top
+20.
+Q:
+I have submitted a CoR application in paper form and would like to provide additional information. Can I submit additional information online?
+A:
+Yes. You can provide additional information by using the “Submission of Supplementary Information” function on the “Certificate of Resident Status” menu. You may upload a maximum of 10 files for 20MB each with file formats JPG, JPEG, PNG or PDF. After submission, you will be able to view the information and documents submitted by using the “Viewing of Application for Certificate of Resident Status” function.
+back to top
+21.
+Q:
+How can I raise an enquiry relating to CoR through my ITP / BTP / TRP User Account?
+A:
+You can use the “Make a Request / Reply” function on the “Certificate of Resident Status” menu. After clicking the “Make a Request / Reply” tab, you can select the appropriate option:
+Enquire about Application for Certificate of Resident Status (Chinese Mainland)
+Enquire about Application for Certificate of Resident Status (Other Jurisdictions)
+Others
+After submission, you can view your submitted enquiry in the Outbox of your Message Box.
+Digital CoR (e-CoR)
+22.
+Q:
+How to receive an e-CoR?
+A:
+Generally, the applicant will receive the e-CoR (a PDF file) through the message inbox of the Individual Tax Portal (ITP) Account / Business Tax Portal (BTP) Account. If the non-individual applicant does not have a business registration number, the applicant can download the e-CoR through the BTP. The steps are as follows:
+Click the “View All Services” tab on the login page of the BTP
+Click the “Certificate of Resident Status” tab on the “Online Services” menu
+Click the “Download Certificate of Resident Status with Access Code” tab on the “Certificate of Resident Status” menu
+Input the applicant's file number and access code
+Click the “View / Download Certificate” button
+back to top
+23.
+Q:
+Can the e-CoR be sent to my personal email account?
+A:
+No. The e-CoR will only be sent to your ITP Account / BTP Account.
+back to top
+24.
+Q:
+I have to download the e-CoR with an access code. Does the access code have an expiration date?
+A:
+Yes. The validity period of the access code is 90 days. You have to download the e-CoR within 90 days from the date of issue of the access code.
+back to top
+25.
+Q:
+How can I view the digital signature of the e-CoR?
+A:
+You can view the e-CoR (a PDF file) with
+Adobe Acrobat Reader
+which is available at the
+Adobe Systems Incorporated
+. Since built-in PDF viewer of some browsers (e.g. Google Chrome) may not be able to view the digital signature of the e-CoR, please download the PDF file to local drive and open the file using
+Adobe Acrobat Reader
+.
+back to top
+26.
+Q:
+How can a DTA partner verify the authenticity of an e-CoR?
+A:
+The relevant DTA partner can upload the e-CoR to the “e-Proof” website at
+<
+https://www.eproof.gov.hk/en/verification
+> to verify its authenticity.

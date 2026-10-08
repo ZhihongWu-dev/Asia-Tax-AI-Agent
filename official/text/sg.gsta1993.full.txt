@@ -1,0 +1,181 @@
+Goods and Services Tax Act 1993
+Table of Contents
+Long Title
+Part 1 PRELIMINARY
+1 Short title
+2 Interpretation
+2A Digital payment tokens
+3 Meaning of "business", etc.
+3A Meaning of partnership and partner
+Part 2 ADMINISTRATION
+4 Comptroller and other officers
+5 Responsibility of Comptroller and delegation of powers
+6 Official secrecy
+Part 3 IMPOSITION AND EXTENT OF TAX
+7 Goods and services tax
+8 Scope of tax
+9 Registration
+10 Meaning of "supply"
+10A Making of supply: bare trustees
+11 Time of supply: general provisions
+11A Time of supply: exceptions to section 11(2) and (3)
+11B Time of supply: exceptions to section 11(2)
+11C Time of supply: reverse charge supplies
+12 Time of supply: directions and regulations
+12A Time of supply: transitional provision
+13 Place of supply
+14 Reverse charge on supplies received from abroad
+15 Place where supplier or recipient of services or supplier of Seventh Schedule supplies belongs
+16 Rate of tax
+17 Value of supply of goods or services
+18 Value of imported goods
+18A Entry value of items of goods
+Part 4 CREDIT FOR INPUT TAX AGAINST OUTPUT TAX
+19 Credit for input tax against output tax
+20 Input tax allowable under section 19
+Part 5 RELIEFS
+21 Zero-rating for exports and international services
+21A Zero-rating of supply of certain tools, machinery and prototypes
+21B Zero-rating of sale or letting on hire of goods to approved taxable person in shipping or marine industry
+21C Zero-rating of grant or assignment of lease, tenancy or licence to occupy land
+22 Exempt supply and exempt import
+23 Relief on supply of certain goods under Margin Scheme
+24 Relief from tax on importation and supply of goods
+25 Refund or remission of tax in certain cases
+26 Application of Customs legislation
+27 Importation and supply of goods by taxable persons
+27A Deferment of payment of tax on importation of goods
+Part 6 SPECIAL CASES
+28 Application to public agencies
+28A Application to persons registered by virtue of Seventh Schedule supplies
+29 Input tax deemed incurred in relation to insurance cash payments
+30 Persons treated as a group
+31 Partnerships
+32 Business carried on in divisions or by unincorporated bodies, personal representatives, etc.
+33 Agents
+33AA Umbrella VCCs
+33A Repayment of tax to persons in business overseas
+33B Claiming of input tax on import of processed goods
+34 Transfers of going concerns
+34A Transfers of going concerns: input tax deemed deducted
+35 Betting, sweepstakes, lotteries and gaming
+35A Vouchers
+36 Commodity, futures or securities markets and exchanges
+37 Goods under customs control
+37A Process applied to or carried out on goods of a person belonging in a country other than Singapore
+37B Refining of goods into investment precious metals
+38 Customers to account for tax on certain supplies
+38A Customers to account for tax on relevant supplies of goods or services
+Part 6A CHANGES IN TAX CHARGED
+Division 1  Supplies spanning change in tax rate, etc.
+39 Interpretation of this Division
+39A Application to supplies spanning one or more specified changes
+39B Supplies spanning specified change: election for tax chargeable at old and new rates
+39C Supplies spanning specified change: tax chargeable at new rate and old rate without election
+39D Effect of specified change on invoice, etc.
+39E Accounting of tax at new rate
+39F Effect of specified change on tax chargeable at old rates
+Division 2  Adjustment of contracts on changes in tax
+40 Adjustment of contracts on changes in tax
+Part 7 ACCOUNTING AND ASSESSMENTS
+41 Accounting for and payment of tax, etc.
+42 Use of electronic service
+43 Production of tax invoices by computer
+44 Giving of receipts
+45 Power of Comptroller to assess tax due
+45A Surcharge on supplies forming part of arrangements causing loss of public revenue
+46 Duty to keep records
+47 Comptroller to disregard certain transactions and dispositions
+47A Surcharge on adjustments under section 47
+48 Assessment of penal tax
+Part 8 BOARD OF REVIEW
+49 Application for review and revision
+50 Constitution of Board of Review
+51 Right of appeal
+52 Hearing and disposal of appeals
+53 Hearing of appeal by committee where member becomes unavailable
+53A Hearing of appeal by single member where member becomes unavailable
+54 Appeals to General Division of High Court
+55 Cases stated for General Division of High Court
+56 Proceedings before Board
+57 Decision to be final and conclusive
+Part 9 OFFENCES AND PENALTIES
+58 General penalties
+59 Penalty for incorrect return
+60 Penalty for failure to pay or make returns within prescribed period
+61 Penalty for failure to register
+62 Penalty provisions relating to fraud, etc.
+62A Penalty for misrepresenting status of person
+62B Penalty for wilfully misrepresenting status of person
+62C Penalty relating to arrangements to cause loss of public revenue
+63 Improperly obtaining refund
+64 Offences in relation to goods and services
+64A Offences in relation to unauthorised collections of tax or amounts attributable to tax
+65 Penalties for offences by persons administering Act, etc.
+66 Penalty for obstructing Comptroller in carrying out duties
+67 Tax to be payable despite any proceedings for penalties and penalties not part of tax
+Part 10 PROCEEDINGS
+68 Comptroller, etc., may direct prosecution
+69 Consent of Public Prosecutor
+70 Saving for criminal proceedings
+71 Provisions as to evidence in legal proceedings
+72 Evidence by certificate, etc.
+73 Service of summons
+73A Notice to attend court
+74 Offences by bodies of persons and by agents and employees
+75 Composition of offences
+76 Jurisdiction of court
+77 Proceedings for offences and penalties under Customs Act 1960
+Part 11 COLLECTION AND ENFORCEMENT
+78 Recovery of tax and penalty
+79 Power to appoint agent, etc., for recovery of tax
+80 Indemnification of agent
+81 Power to require security and production of evidence
+82 Recovery of tax from persons leaving Singapore
+83 Power to take samples
+83A Seizure of goods
+83B Goods liable to seizure liable to forfeiture
+83C (Repealed)
+83D No costs or damages arising from seizure to be recoverable unless seizure without reasonable or probable cause
+83E Arrest of persons
+83F No unnecessary restraint
+83G Arresting officer to be armed
+83H Search of place entered by person sought to be arrested
+83I Arrested person may be orally examined
+83J Disposal of item furnished or seized
+84 Power of Comptroller to obtain information and furnishing of information
+84A Protection of informers
+Part 12 GENERAL PROVISIONS
+85 Receipts and notices may be given by authorised officer
+86 Orders and regulations
+87 Service of notices, etc.
+88 Free postage
+89 Remission of tax or penalty
+90 Return of tax or penalty overpaid or erroneously paid
+90A Advance rulings
+91 Temporary arrangements for Seventh Schedule supplies and reverse charge supplies: registration
+92 Temporary arrangements for Seventh Schedule supplies
+92A Temporary arrangements for Seventh Schedule supplies: distantly taxable goods and new services
+93 Temporary arrangements for reverse charge supplies
+94 Temporary arrangements for reverse charge supplies: distantly taxable goods
+FIRST SCHEDULE
+Registration
+SECOND SCHEDULE
+Matters to be treated as supply of goods or services
+THIRD SCHEDULE
+Valuation — special cases
+FOURTH SCHEDULE
+FIFTH SCHEDULE
+Advance rulings
+SIXTH SCHEDULE
+SEVENTH SCHEDULE
+Supplies for the purposes of section 8(1A)
+EIGHTH SCHEDULE
+Distantly taxable goods and services excluded for purposes of section 14
+NINTH SCHEDULE
+Illustrations of arrangements for purposes of section 20(2A)
+TENTH SCHEDULE
+Prescribed information
+Legislative History
+Abbreviations
+Comparative Table

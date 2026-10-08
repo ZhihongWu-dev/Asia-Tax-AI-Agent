@@ -1,0 +1,619 @@
+form1/LandingPage | textEdit txt_landing | Lang Chosen
+form1/LandingPage | choiceList drop_landing | Lang List | options: Chinese; English
+form1/LandingPage | button btn_landing | Confirm
+form1/LandingPage | textEdit formNo | 
+form1/LandingPage | textEdit IRD_FID | 
+form1/LandingPage | textEdit BIR_version | 
+form1/LandingPage | textEdit version | 
+form1/LandingPage | textEdit langControl | Text Field
+form1/Page1/Title | text | S2
+form1/Page1/Title | text | 利得税報税表補充表格
+form1/Page1/Title | text | - 轉讓定價及國際税務責任
+form1/Page1/Title | text | （適用於 2018/19 及以後的課税年度）
+form1/Page1/Title | textEdit forInternalUse | 
+form1/Page1/Title/FileNo | text | 檔案號碼
+form1/Page1/Title/FileNo | numericEdit txt_tradeCat | 輸入你的「檔案號碼」頭兩位數字。
+form1/Page1/Title/FileNo | text | /
+form1/Page1/Title/FileNo | numericEdit txt_brn | 輸入你的商業登記號碼。
+form1/Page1/Title/FileNo | text | 課税年度
+form1/Page1/Title/FileNo | choiceList drop_yearAss | 選擇「課稅年度」。 | options: 2018/19; 2019/20; 2020/21; 2021/22; 2022/23; 2023/24; 2024/25; 2025/26; 2026/27; 2019; 2020; 2021; 2022; 2023; 2024; 2025; 2026; 2027
+form1/Page1/Title/FileNo | text | 納税人名稱
+form1/Page1/Title/FileNo | textEdit txt_nameTaxpayer | 輸入「納稅人名稱」。
+form1/Page1/Title | text | 本補充表格是利得税報税表的一部分。你須以電子方式填寫本表格（附註 1 ）。你須將已填妥的表格匯出為 XML 檔案，經香港政府一站通的利得税報税表電子報税服務上傳該 XML 檔案，並作電子提交 （附註 23 ） 。
+form1/Page1/Section1 | text | 第 1 部分
+form1/Page1/Section1 | text | 與非居住於香港的相聯人士／非香港居民人士的其他部分進行交易（附註 2 至 5 ） （ 如本部分不適用，請留空 ）
+form1/Page1/Section1 | text | 1.1
+form1/Page1/Section1 | text | 相聯人士／非香港居民人士的其他部分是否下列地方的居民（在適當空格內加上「  」號）：
+form1/Page1/Section1 | checkButton chk_1_assoPersonsVarious | 如相聯人士或非香港居民人士的其他部分是下列地方的居民 - 百慕達、英屬處女群島、開曼群島、科克群島、根西島或澤西島，請剔選這格。 | options: 1; 0
+form1/Page1/Section1 | text | 百慕達／英屬處女群島／開曼群島／科克群島／根西島／澤西島
+form1/Page1/Section1 | checkButton chk_1_assoPersonsMacao | 如相聯人士或非香港居民人士的其他部分是澳門特別行政區的居民，請剔選這格。 | options: 1; 0
+form1/Page1/Section1 | text | 澳門特別行政區
+form1/Page1/Section1 | checkButton chk_1_assoPersonsOthers | 如相聯人士或非香港居民人士的其他部分是其他地方的居民，請剔選這格。 | options: 1; 0
+form1/Page1/Section1 | text | 其他（請敘明）
+form1/Page1/Section1 | textEdit txt_1_assoPersonsOther | 輸入其他地方的詳情。
+form1/Page1/Section1 | text | 1.2
+form1/Page1/Section1 | text | 你是否須按《税務條例》（第 112 章）第 9A 部擬備總體檔案及分部檔案？
+form1/Page1/Section1 | text | 是
+form1/Page1/Section1 | checkButton rad_1_9aIroY | 如你須按《税務條例》（第112章）第9A部擬備總體檔案及分部檔案，請剔選這格。
+form1/Page1/Section1 | text | 否
+form1/Page1/Section1 | checkButton rad_1_9aIroN | 如你不須按《税務條例》（第112章）第9A部擬備總體檔案及分部檔案，請剔選這格。
+form1/Page1/Section2 | text | 第 2 部分
+form1/Page1/Section2 | text | 預先定價安排（附註 6 及 7 ） （ 如本部分不適用，請留空 ）
+form1/Page1/Section2 | text | 2.1
+form1/Page1/Section2 | text | 該安排的檔案號碼
+form1/Page1/Section2 | textEdit txt_2_refNoArra | 輸入預先定價安排的檔案號碼。
+form1/Page1/Section2 | text | 2.2
+form1/Page1/Section2 | text | 你是否依據該安排擬備利得税報税表？
+form1/Page1/Section2 | text | 是
+form1/Page1/Section2 | checkButton rad_2_arraPrepProfTaxReturnY | 如你依據該安排擬備利得税報税表，請剔選這格。
+form1/Page1/Section2 | text | 否
+form1/Page1/Section2 | checkButton rad_2_arraPrepProfTaxReturnN | 如你沒有依據該安排擬備利得税報税表，請剔選這格。
+form1/Page1/Section2 | text | 2.3
+form1/Page1/Section2 | text | 該安排上指明的事實及情況是否有任何重大變化？
+form1/Page1/Section2 | checkButton rad_2_matChangeArraY | 如該安排上指明的事實及情況有任何重大變化，請剔選這格。
+form1/Page1/Section2 | checkButton rad_2_matChangeArraN | 如該安排上指明的事實及情況沒有任何重大變化，請剔選這格。
+form1/Page1/Section2 | text | 2.4
+form1/Page1/Section2 | text | 應用該安排的交易的總交易款額
+form1/Page1/Section2 | text | 港元
+form1/Page1/Section2 | numericEdit txt_2_totalAmtTran | 輸入應用該安排的交易的總交易款額（港元）。
+form1/Page1/Section3 | text | 第 3 部分
+form1/Page1/Section3 | text | 國別報告申報責任（附註 8 至 16 ） （ 如本部分不適用，請留空 ）
+form1/Page1/Section3 | text | 3.1
+form1/Page1/Section3 | text | 你有否按《税務條例》第 58H 條就跨國企業集團提交通知？
+form1/Page1/Section3 | text | 是
+form1/Page1/Section3 | checkButton rad_3_underS58HIroY | 如你按《税務條例》第58H條就跨國企業集團提交通知，請剔選這格。
+form1/Page1/Section3 | text | 否
+form1/Page1/Section3 | checkButton rad_3_underS58HIroN | 如你沒有按《税務條例》第58H條就跨國企業集團提交通知，請剔選這格。
+form1/Page1/Section3 | text | 3.2
+form1/Page1/Section3 | text | 該集團的其他香港實體有否提交該項通知？
+form1/Page1/Section3 | checkButton rad_3_otherHKEntityY | 如該集團的其他香港實體有提交該項通知，請剔選這格。
+form1/Page1/Section3 | checkButton rad_3_otherHKEntityN | 如該集團的其他香港實體沒有提交該項通知，請剔選這格。
+form1/Page1/Section3 | text | 如是的話，請提供該香港實體的下列資料：
+form1/Page1/Section3 | text | 3.2.1
+form1/Page1/Section3 | text | 名稱
+form1/Page1/Section3 | textEdit txt_3_nameOtherHK | 輸入該香港實體的名稱。
+form1/Page1/Section3 | text | 3.2.2
+form1/Page1/Section3 | text | 商業登記號碼
+form1/Page1/Section3 | numericEdit txt_3_brn | 輸入該香港實體的商業登記號碼。
+form1/Page1/Section3 | text | 3.3
+form1/Page1/Section3 | text | 如你就第 3.1 及 3.2 部分的答案為「否」，請填報第 3.3.1 及 3.3.2 部分：
+form1/Page1/Section3 | text | 3.3.1
+form1/Page1/Section3 | text | 集團的最終母實體的詳情
+form1/Page1/Section3 | text | 3.3.1.1
+form1/Page1/Section3 | textEdit txt_3_nameUltiParent | 如你就之前兩條問題的答案為「否」，請輸入集團的最終母實體的名稱。
+form1/Page1/Section3 | text | 3.3.1.2
+form1/Page1/Section3 | text | 税務居留地管轄區
+form1/Page1/Section3 | text | 3.3.1.3
+form1/Page1/Section3 | text | 商業登記號碼／税務識別號碼
+form1/Page1/Section3 | choiceList drop_3_juriTaxResidenceUltiParent | 選擇集團的最終母實體的税務居留地管轄區。 | options: (國家); 阿富汗; 奧蘭; 阿爾巴尼亞; 阿爾及利亞; 美屬薩摩亞; 安道爾; 安哥拉; 安圭拉; 南極洲; 安提瓜和巴布達; 阿根廷; 亞美尼亞; 阿魯巴; 澳大利亞; 奧地利; 阿塞拜疆; 巴哈馬; 巴林; 孟加拉國; 巴巴多斯; 白俄羅斯; 比利時; 伯利茲; 貝寧; 百慕達; 不丹; 玻利維亞; 荷蘭加勒比區; 波斯尼亞和黑塞哥維那; 博茨瓦納; 布韋島; 巴西; 英屬印度洋領地; 汶萊; 保加利亞; 布基納法索; 布隆迪; 佛得角; 柬埔寨; 喀麥隆; 加拿大; 開曼群島; 中非; 乍得; 智利; 中國; 聖誕島; 科科斯（基林）群島; 哥倫比亞; 科摩羅; 剛果; 民主剛果; 庫克群島; 哥斯達黎加; 科特迪瓦; 克羅地亞; 古巴; 庫拉索; 塞浦路斯; 捷克; 丹麥; 吉布提; 多米尼克; 多明尼加; 厄瓜多爾; 埃及; 薩爾瓦多; 赤道幾內亞; 厄立特里亞; 愛沙尼亞; 斯威士蘭; 埃塞俄比亞; 福克蘭群島; 法羅群島; 斐濟; 芬蘭; 法國; 法屬圭亞那; 法屬波利尼西亞; 法屬南方和南極洲領地; 加蓬; 岡比亞; 格魯吉亞; 德國; 加納; 直布羅陀; 希臘; 格陵蘭; 格林納達; 瓜德羅普; 關島; 危地馬拉; 根西; 幾內亞; 幾內亞比紹; 圭亞那; 海地; 赫德島和麥克唐納群島; 梵蒂岡; 洪都拉斯; 香港; 匈牙利; 冰島; 印度; 印尼; 伊朗; 伊拉克; 愛爾蘭; 萌島; 以色列; 意大利; 牙買加; 日本; 澤西; 約旦; 哈薩克; 肯雅; 基里巴斯; 北韓; 南韓; 科索沃; 科威特; 吉爾吉斯; 老撾; 拉脫維亞; 黎巴嫩; 萊索托; 利比里亞; 利比亞; 列支敦士登; 立陶宛; 盧森堡; 澳門; 馬達加斯加; 馬拉維; 馬來西亞; 馬爾代夫; 馬里; 馬爾他; 馬紹爾群島; 馬提尼克; 毛里塔尼亞; 毛里裘斯; 馬約特; 墨西哥; 密克羅尼西亞聯邦; 摩爾多瓦; 摩納哥; 蒙古國; 黑山; 蒙特塞拉特; 摩洛哥; 莫桑比克; 緬甸; 納米比亞; 瑙魯; 尼泊爾; 荷蘭; 新喀里多尼亞; 新西蘭; 尼加拉瓜; 尼日爾; 尼日利亞; 紐埃; 諾福克島; 北馬其頓; 北馬里亞納群島; 挪威; 阿曼; 巴基斯坦; 帕勞; 巴勒斯坦; 巴拿馬; 巴布亞新幾內亞; 巴拉圭; 秘魯; 菲律賓; 皮特肯群島; 波蘭; 葡萄牙; 波多黎各; 卡塔爾; 留尼汪; 羅馬尼亞; 俄羅斯; 盧旺達; 聖巴泰勒米; 聖赫勒拿、阿森松和特里斯坦-達庫尼亞; 聖吉斯納域斯; 聖盧西亞; 法屬聖馬丁; 聖皮埃爾和密克隆; 聖文森特和格林納丁斯; 薩摩亞; 聖馬力諾; 聖多美和普林西比; 沙特阿拉伯; 塞內加爾; 塞爾維亞; 塞舌爾; 塞拉利昂; 新加坡; 聖馬丁; 斯洛伐克; 斯洛文尼亞; 所羅門群島; 索馬里; 南非; 南喬治亞和南桑威奇群島; 南蘇丹; 西班牙; 斯里蘭卡; 無國籍; 蘇丹; 蘇里南; 斯瓦爾巴和揚馬延; 瑞典; 瑞士; 敘利亞; 中國台灣省; 塔吉克; 坦桑尼亞; 泰國; 東帝汶; 多哥; 托克勞; 湯加; 特立尼達和多巴哥; 突尼西亞; 土耳其; 土庫曼; 特克斯與凱科斯群島; 圖瓦盧; 烏干達; 烏克蘭; 阿聯酋; 英國; 美國; 美國本土外小島嶼; 烏拉圭; 烏茲別克; 瓦努阿圖; 委內瑞拉; 越南; 英屬維爾京群島; 美屬維爾京群島; 瓦利斯和富圖納; 西撒哈拉; 也門; 贊比亞; 津巴布韋
+form1/Page1/Section3 | textEdit txt_juriTaxResidenceUltiParent | 
+form1/Page1/Section3 | textEdit txt_3_brnTaxId | 輸入集團的最終母實體的商業登記號碼或税務識別號碼。
+form1/Page1/Section3 | text | 3.3.2
+form1/Page1/Section3 | text | 集團的代母實體的詳情（如有的話）
+form1/Page1/Section3 | text | 3.3.2.1
+form1/Page1/Section3 | textEdit txt_3_nameSurrParent | 如你就之前兩條問題的答案為「否」，請輸入集團的代母實體的名稱（如有的話）。
+form1/Page1/Section3 | text | 3.3.2.2
+form1/Page1/Section3 | choiceList drop_3_juriTaxResidentSurrParent | 選擇集團的代母實體的税務居留地管轄區。 | options: (國家); 阿富汗; 奧蘭; 阿爾巴尼亞; 阿爾及利亞; 美屬薩摩亞; 安道爾; 安哥拉; 安圭拉; 南極洲; 安提瓜和巴布達; 阿根廷; 亞美尼亞; 阿魯巴; 澳大利亞; 奧地利; 阿塞拜疆; 巴哈馬; 巴林; 孟加拉國; 巴巴多斯; 白俄羅斯; 比利時; 伯利茲; 貝寧; 百慕達; 不丹; 玻利維亞; 荷蘭加勒比區; 波斯尼亞和黑塞哥維那; 博茨瓦納; 布韋島; 巴西; 英屬印度洋領地; 汶萊; 保加利亞; 布基納法索; 布隆迪; 佛得角; 柬埔寨; 喀麥隆; 加拿大; 開曼群島; 中非; 乍得; 智利; 中國; 聖誕島; 科科斯（基林）群島; 哥倫比亞; 科摩羅; 剛果; 民主剛果; 庫克群島; 哥斯達黎加; 科特迪瓦; 克羅地亞; 古巴; 庫拉索; 塞浦路斯; 捷克; 丹麥; 吉布提; 多米尼克; 多明尼加; 厄瓜多爾; 埃及; 薩爾瓦多; 赤道幾內亞; 厄立特里亞; 愛沙尼亞; 斯威士蘭; 埃塞俄比亞; 福克蘭群島; 法羅群島; 斐濟; 芬蘭; 法國; 法屬圭亞那; 法屬波利尼西亞; 法屬南方和南極洲領地; 加蓬; 岡比亞; 格魯吉亞; 德國; 加納; 直布羅陀; 希臘; 格陵蘭; 格林納達; 瓜德羅普; 關島; 危地馬拉; 根西; 幾內亞; 幾內亞比紹; 圭亞那; 海地; 赫德島和麥克唐納群島; 梵蒂岡; 洪都拉斯; 香港; 匈牙利; 冰島; 印度; 印尼; 伊朗; 伊拉克; 愛爾蘭; 萌島; 以色列; 意大利; 牙買加; 日本; 澤西; 約旦; 哈薩克; 肯雅; 基里巴斯; 北韓; 南韓; 科索沃; 科威特; 吉爾吉斯; 老撾; 拉脫維亞; 黎巴嫩; 萊索托; 利比里亞; 利比亞; 列支敦士登; 立陶宛; 盧森堡; 澳門; 馬達加斯加; 馬拉維; 馬來西亞; 馬爾代夫; 馬里; 馬爾他; 馬紹爾群島; 馬提尼克; 毛里塔尼亞; 毛里裘斯; 馬約特; 墨西哥; 密克羅尼西亞聯邦; 摩爾多瓦; 摩納哥; 蒙古國; 黑山; 蒙特塞拉特; 摩洛哥; 莫桑比克; 緬甸; 納米比亞; 瑙魯; 尼泊爾; 荷蘭; 新喀里多尼亞; 新西蘭; 尼加拉瓜; 尼日爾; 尼日利亞; 紐埃; 諾福克島; 北馬其頓; 北馬里亞納群島; 挪威; 阿曼; 巴基斯坦; 帕勞; 巴勒斯坦; 巴拿馬; 巴布亞新幾內亞; 巴拉圭; 秘魯; 菲律賓; 皮特肯群島; 波蘭; 葡萄牙; 波多黎各; 卡塔爾; 留尼汪; 羅馬尼亞; 俄羅斯; 盧旺達; 聖巴泰勒米; 聖赫勒拿、阿森松和特里斯坦-達庫尼亞; 聖吉斯納域斯; 聖盧西亞; 法屬聖馬丁; 聖皮埃爾和密克隆; 聖文森特和格林納丁斯; 薩摩亞; 聖馬力諾; 聖多美和普林西比; 沙特阿拉伯; 塞內加爾; 塞爾維亞; 塞舌爾; 塞拉利昂; 新加坡; 聖馬丁; 斯洛伐克; 斯洛文尼亞; 所羅門群島; 索馬里; 南非; 南喬治亞和南桑威奇群島; 南蘇丹; 西班牙; 斯里蘭卡; 無國籍; 蘇丹; 蘇里南; 斯瓦爾巴和揚馬延; 瑞典; 瑞士; 敘利亞; 中國台灣省; 塔吉克; 坦桑尼亞; 泰國; 東帝汶; 多哥; 托克勞; 湯加; 特立尼達和多巴哥; 突尼西亞; 土耳其; 土庫曼; 特克斯與凱科斯群島; 圖瓦盧; 烏干達; 烏克蘭; 阿聯酋; 英國; 美國; 美國本土外小島嶼; 烏拉圭; 烏茲別克; 瓦努阿圖; 委內瑞拉; 越南; 英屬維爾京群島; 美屬維爾京群島; 瓦利斯和富圖納; 西撒哈拉; 也門; 贊比亞; 津巴布韋
+form1/Page1/Section3 | textEdit txt_juriTaxResidenceSurrParent | 
+form1/Page1/Section3 | text | 3.3.2.3
+form1/Page1/Section3 | textEdit txt_3_brnTaxIdSurrParent | 輸入集團的代母實體的商業登記號碼或税務識別號碼。
+form1/Page1 | button Button1 | 儲存
+form1/Page1 | button Button2 | 列印
+form1/Page1 | button Button3 | 重設
+form1/Page1 | button Button4 | 匯出為XML
+form1/Page1 | text | 頁 /
+form1/Page1 | numericEdit PageCount | Text Field
+form1/Page1 | numericEdit CurrentPage | Text Field
+form1/Page1 | text | BIRS2 (4/2025)
+form1/Page1 | dateTimeEdit PrintTime | 
+form1/Page1 | textEdit XMLversion | 
+form1/Page2 | text | 檔案號碼 :
+form1/Page2 | textEdit fileNo_display | 
+form1/Page2 | text | 課税年度 :
+form1/Page2 | textEdit year_display | 
+form1/Page2/Section4 | text | 第 4 部分
+form1/Page2/Section4 | text | 跨國企業集團的全球最低税和香港最低補足税交表責任（附註 17 至 22 ）（如本部分不適用，請留空 ）
+form1/Page2/Section4 | choiceList drop_statusInScopeMNE | 選擇集團的最終母實體的税務居留地管轄區。 | options: 香港成員實體; 香港獨立合資企業; 合資企業集團的香港成員; 第 4AA 部無國籍成員實體
+form1/Page2/Section4 | textEdit txt_statusInScopeMNE | 
+form1/Page2/Section4 | checkButton chk_groupFiledY | 如該集團的其他香港實體有提交該項通知，請剔選這格。
+form1/Page2/Section4 | checkButton chk_groupFiledN | 如該集團的其他香港實體沒有提交該項通知，請剔選這格。
+form1/Page2/Section4 | checkButton chk_sameStatusY | 如該集團的其他香港實體有提交該項通知，請剔選這格。
+form1/Page2/Section4 | checkButton chk_sameStatusN | 如該集團的其他香港實體沒有提交該項通知，請剔選這格。
+form1/Page2/Section4 | textEdit txt_nameOtherPart4AAEntity | 輸入集團的最終母實體的商業登記號碼或税務識別號碼。
+form1/Page2/Section4 | numericEdit txt_otherPart4AAEntityBrn | Enter the Business Registration Number.
+form1/Page2/Section4 | textEdit txt_gpUpeName | 如你就之前兩條問題的答案為「否」，請輸入集團的最終母實體的名稱。
+form1/Page2/Section4 | choiceList drop_gpUpeJuri | 選擇集團的最終母實體的税務居留地管轄區。 | options: (國家); 阿富汗; 奧蘭; 阿爾巴尼亞; 阿爾及利亞; 美屬薩摩亞; 安道爾; 安哥拉; 安圭拉; 南極洲; 安提瓜和巴布達; 阿根廷; 亞美尼亞; 阿魯巴; 澳大利亞; 奧地利; 阿塞拜疆; 巴哈馬; 巴林; 孟加拉國; 巴巴多斯; 白俄羅斯; 比利時; 伯利茲; 貝寧; 百慕達; 不丹; 玻利維亞; 荷蘭加勒比區; 波斯尼亞和黑塞哥維那; 博茨瓦納; 布韋島; 巴西; 英屬印度洋領地; 汶萊; 保加利亞; 布基納法索; 布隆迪; 佛得角; 柬埔寨; 喀麥隆; 加拿大; 開曼群島; 中非; 乍得; 智利; 中國; 聖誕島; 科科斯（基林）群島; 哥倫比亞; 科摩羅; 剛果; 民主剛果; 庫克群島; 哥斯達黎加; 科特迪瓦; 克羅地亞; 古巴; 庫拉索; 塞浦路斯; 捷克; 丹麥; 吉布提; 多米尼克; 多明尼加; 厄瓜多爾; 埃及; 薩爾瓦多; 赤道幾內亞; 厄立特里亞; 愛沙尼亞; 斯威士蘭; 埃塞俄比亞; 福克蘭群島; 法羅群島; 斐濟; 芬蘭; 法國; 法屬圭亞那; 法屬波利尼西亞; 法屬南方和南極洲領地; 加蓬; 岡比亞; 格魯吉亞; 德國; 加納; 直布羅陀; 希臘; 格陵蘭; 格林納達; 瓜德羅普; 關島; 危地馬拉; 根西; 幾內亞; 幾內亞比紹; 圭亞那; 海地; 赫德島和麥克唐納群島; 梵蒂岡; 洪都拉斯; 香港; 匈牙利; 冰島; 印度; 印尼; 伊朗; 伊拉克; 愛爾蘭; 萌島; 以色列; 意大利; 牙買加; 日本; 澤西; 約旦; 哈薩克; 肯雅; 基里巴斯; 北韓; 南韓; 科索沃; 科威特; 吉爾吉斯; 老撾; 拉脫維亞; 黎巴嫩; 萊索托; 利比里亞; 利比亞; 列支敦士登; 立陶宛; 盧森堡; 澳門; 馬達加斯加; 馬拉維; 馬來西亞; 馬爾代夫; 馬里; 馬爾他; 馬紹爾群島; 馬提尼克; 毛里塔尼亞; 毛里裘斯; 馬約特; 墨西哥; 密克羅尼西亞聯邦; 摩爾多瓦; 摩納哥; 蒙古國; 黑山; 蒙特塞拉特; 摩洛哥; 莫桑比克; 緬甸; 納米比亞; 瑙魯; 尼泊爾; 荷蘭; 新喀里多尼亞; 新西蘭; 尼加拉瓜; 尼日爾; 尼日利亞; 紐埃; 諾福克島; 北馬其頓; 北馬里亞納群島; 挪威; 阿曼; 巴基斯坦; 帕勞; 巴勒斯坦; 巴拿馬; 巴布亞新幾內亞; 巴拉圭; 秘魯; 菲律賓; 皮特肯群島; 波蘭; 葡萄牙; 波多黎各; 卡塔爾; 留尼汪; 羅馬尼亞; 俄羅斯; 盧旺達; 聖巴泰勒米; 聖赫勒拿、阿森松和特里斯坦-達庫尼亞; 聖吉斯納域斯; 聖盧西亞; 法屬聖馬丁; 聖皮埃爾和密克隆; 聖文森特和格林納丁斯; 薩摩亞; 聖馬力諾; 聖多美和普林西比; 沙特阿拉伯; 塞內加爾; 塞爾維亞; 塞舌爾; 塞拉利昂; 新加坡; 聖馬丁; 斯洛伐克; 斯洛文尼亞; 所羅門群島; 索馬里; 南非; 南喬治亞和南桑威奇群島; 南蘇丹; 西班牙; 斯里蘭卡; 無國籍; 蘇丹; 蘇里南; 斯瓦爾巴和揚馬延; 瑞典; 瑞士; 敘利亞; 中國台灣省; 塔吉克; 坦桑尼亞; 泰國; 東帝汶; 多哥; 托克勞; 湯加; 特立尼達和多巴哥; 突尼西亞; 土耳其; 土庫曼; 特克斯與凱科斯群島; 圖瓦盧; 烏干達; 烏克蘭; 阿聯酋; 英國; 美國; 美國本土外小島嶼; 烏拉圭; 烏茲別克; 瓦努阿圖; 委內瑞拉; 越南; 英屬維爾京群島; 美屬維爾京群島; 瓦利斯和富圖納; 西撒哈拉; 也門; 贊比亞; 津巴布韋
+form1/Page2/Section4 | textEdit txt_gpUpeJuri | 
+form1/Page2/Section4 | textEdit txt_gpUpeBrnTaxId | 輸入集團的最終母實體的商業登記號碼或税務識別號碼。
+form1/Page2/Section4 | text | 4.1
+form1/Page2/Section4 | text | 如是的話，請提供該第 4AA 部實體的下列資料﹕
+form1/Page2/Section4 | text | 4.3.1
+form1/Page2/Section4 | text | 名稱
+form1/Page2/Section4 | text | 4.3.2
+form1/Page2/Section4 | text | 商業登記號碼
+form1/Page2/Section4 | text | 如你就第 4.2 及 4.3 部分的答案為「否」，請填報第 4.4.1 至 4.4.3 部分：
+form1/Page2/Section4 | text | 4.4.1.1
+form1/Page2/Section4 | text | 4.4.1.2
+form1/Page2/Section4 | text | 最終母實體所位處的司法管轄區
+form1/Page2/Section4 | text | 4.4.1.3
+form1/Page2/Section4 | text | 商業登記號碼／税務識別號碼
+form1/Page2/Section4 | text | 4.2
+form1/Page2/Section4 | text | 4.3
+form1/Page2/Section4 | text | 你有否按《税務條例》附表 63 第 5 條就該集團提交通知？
+form1/Page2/Section4 | text | 是
+form1/Page2/Section4 | text | 否
+form1/Page2/Section4 | text | 就全球最低税和香港最低補足税而言，你於受涵蓋跨國企業集團的身份
+form1/Page2/Section4 | text | 該集團與你有着相同身份（於第 4.1 部分所述）的其他第 4AA 部實體有否提交該項通知？
+form1/Page2/Section4 | text | 4.4
+form1/Page2/Section4 | text | 集團的最終母實體的詳情
+form1/Page2/Section4 | text | 4.4.1
+form1/Page2/Section4 | textEdit txt_gpDesignatedFilingEntity | 如你就之前兩條問題的答案為「否」，請輸入集團的最終母實體的名稱。
+form1/Page2/Section4 | choiceList drop_gpDesignatedFilingEntityjur | 選擇集團的最終母實體的税務居留地管轄區。 | options: (國家); 阿富汗; 奧蘭; 阿爾巴尼亞; 阿爾及利亞; 美屬薩摩亞; 安道爾; 安哥拉; 安圭拉; 南極洲; 安提瓜和巴布達; 阿根廷; 亞美尼亞; 阿魯巴; 澳大利亞; 奧地利; 阿塞拜疆; 巴哈馬; 巴林; 孟加拉國; 巴巴多斯; 白俄羅斯; 比利時; 伯利茲; 貝寧; 百慕達; 不丹; 玻利維亞; 荷蘭加勒比區; 波斯尼亞和黑塞哥維那; 博茨瓦納; 布韋島; 巴西; 英屬印度洋領地; 汶萊; 保加利亞; 布基納法索; 布隆迪; 佛得角; 柬埔寨; 喀麥隆; 加拿大; 開曼群島; 中非; 乍得; 智利; 中國; 聖誕島; 科科斯（基林）群島; 哥倫比亞; 科摩羅; 剛果; 民主剛果; 庫克群島; 哥斯達黎加; 科特迪瓦; 克羅地亞; 古巴; 庫拉索; 塞浦路斯; 捷克; 丹麥; 吉布提; 多米尼克; 多明尼加; 厄瓜多爾; 埃及; 薩爾瓦多; 赤道幾內亞; 厄立特里亞; 愛沙尼亞; 斯威士蘭; 埃塞俄比亞; 福克蘭群島; 法羅群島; 斐濟; 芬蘭; 法國; 法屬圭亞那; 法屬波利尼西亞; 法屬南方和南極洲領地; 加蓬; 岡比亞; 格魯吉亞; 德國; 加納; 直布羅陀; 希臘; 格陵蘭; 格林納達; 瓜德羅普; 關島; 危地馬拉; 根西; 幾內亞; 幾內亞比紹; 圭亞那; 海地; 赫德島和麥克唐納群島; 梵蒂岡; 洪都拉斯; 香港; 匈牙利; 冰島; 印度; 印尼; 伊朗; 伊拉克; 愛爾蘭; 萌島; 以色列; 意大利; 牙買加; 日本; 澤西; 約旦; 哈薩克; 肯雅; 基里巴斯; 北韓; 南韓; 科索沃; 科威特; 吉爾吉斯; 老撾; 拉脫維亞; 黎巴嫩; 萊索托; 利比里亞; 利比亞; 列支敦士登; 立陶宛; 盧森堡; 澳門; 馬達加斯加; 馬拉維; 馬來西亞; 馬爾代夫; 馬里; 馬爾他; 馬紹爾群島; 馬提尼克; 毛里塔尼亞; 毛里裘斯; 馬約特; 墨西哥; 密克羅尼西亞聯邦; 摩爾多瓦; 摩納哥; 蒙古國; 黑山; 蒙特塞拉特; 摩洛哥; 莫桑比克; 緬甸; 納米比亞; 瑙魯; 尼泊爾; 荷蘭; 新喀里多尼亞; 新西蘭; 尼加拉瓜; 尼日爾; 尼日利亞; 紐埃; 諾福克島; 北馬其頓; 北馬里亞納群島; 挪威; 阿曼; 巴基斯坦; 帕勞; 巴勒斯坦; 巴拿馬; 巴布亞新幾內亞; 巴拉圭; 秘魯; 菲律賓; 皮特肯群島; 波蘭; 葡萄牙; 波多黎各; 卡塔爾; 留尼汪; 羅馬尼亞; 俄羅斯; 盧旺達; 聖巴泰勒米; 聖赫勒拿、阿森松和特里斯坦-達庫尼亞; 聖吉斯納域斯; 聖盧西亞; 法屬聖馬丁; 聖皮埃爾和密克隆; 聖文森特和格林納丁斯; 薩摩亞; 聖馬力諾; 聖多美和普林西比; 沙特阿拉伯; 塞內加爾; 塞爾維亞; 塞舌爾; 塞拉利昂; 新加坡; 聖馬丁; 斯洛伐克; 斯洛文尼亞; 所羅門群島; 索馬里; 南非; 南喬治亞和南桑威奇群島; 南蘇丹; 西班牙; 斯里蘭卡; 無國籍; 蘇丹; 蘇里南; 斯瓦爾巴和揚馬延; 瑞典; 瑞士; 敘利亞; 中國台灣省; 塔吉克; 坦桑尼亞; 泰國; 東帝汶; 多哥; 托克勞; 湯加; 特立尼達和多巴哥; 突尼西亞; 土耳其; 土庫曼; 特克斯與凱科斯群島; 圖瓦盧; 烏干達; 烏克蘭; 阿聯酋; 英國; 美國; 美國本土外小島嶼; 烏拉圭; 烏茲別克; 瓦努阿圖; 委內瑞拉; 越南; 英屬維爾京群島; 美屬維爾京群島; 瓦利斯和富圖納; 西撒哈拉; 也門; 贊比亞; 津巴布韋
+form1/Page2/Section4 | textEdit txt_gpDesignatedFilingEntityjur | 
+form1/Page2/Section4 | textEdit txt_brnTaxIdDesignatedFilingEntity | 輸入集團的最終母實體的商業登記號碼或税務識別號碼。
+form1/Page2/Section4 | text | 4.4.2.1
+form1/Page2/Section4 | text | 4.4.2.2
+form1/Page2/Section4 | text | 指定交表實體所位處的司法管轄區
+form1/Page2/Section4 | text | 4.4.2.3
+form1/Page2/Section4 | text | 集團的指定交表實體的詳情（如有的話）
+form1/Page2/Section4 | text | 4.4.2
+form1/Page2/Section4 | text | 集團的指定本地實體的詳情（如有的話）
+form1/Page2/Section4 | text | 4.4.3
+form1/Page2/Section4 | textEdit txt_gpDesignatedLocalEntity | 輸入集團的最終母實體的商業登記號碼或税務識別號碼。
+form1/Page2/Section4 | numericEdit txt_brnGpDesignatedLocalEntity | Enter the Business Registration Number.
+form1/Page2/Section4 | text | 4.4.3.1
+form1/Page2/Section4 | text | 4.4.3.2
+form1/Page2 | textEdit hashValue | 校驗和
+form1/Page2 | button Button1 | 儲存
+form1/Page2 | button Button2 | 列印
+form1/Page2 | button Button3 | 重設
+form1/Page2 | button Button4 | 匯出為XML
+form1/Page2 | text | 頁 /
+form1/Page2 | numericEdit CurrentPage | Text Field
+form1/Page2 | numericEdit PageCount | Text Field
+form1/Page2 | text | BIRS2 (4/2025)
+form1/Page2 | dateTimeEdit PrintTime | 
+form1/Page2 | textEdit TextField1 | Text Field
+form1/Page2 | textEdit XMLversion | 
+form1/Page3 | text | 附註及說明 — 補充表格（ S2 ）
+form1/Page3 | text | 1.
+form1/Page3 | text | 你只須填寫適用的部分。
+form1/Page3 | text | 2.
+form1/Page3 | text | 3.
+form1/Page3 | text | 廣義集團 （附註 4 ） 的香港實體（包括常設機構）須就始於 2018 年 4 月 1 日或之後的會計期，擬備該實體的分部檔案及該集團的總體檔案；除非– (a) 符合以下任何兩項條件：
+form1/Page3 | text | (i)
+form1/Page3 | text | 該實體在有關會計期的收入總額，不超過 4 億港元；
+form1/Page3 | text | (ii)
+form1/Page3 | text | 該實體在有關會計期結束時的資產總值不超過 3 億港元；
+form1/Page3 | text | (iii)
+form1/Page3 | text | 在有關會計期內，該實體的平均僱員人數不超過 100 名；
+form1/Page3 | text | 或
+form1/Page3 | text | (b)
+form1/Page3 | text | 該實體就有關會計期，進行以下類別的受管交易（撇除指明本地交易）的總額不超過指明的款額：
+form1/Page3 | text | (i) 2.2 轉讓財產（撇除財務資產及無形物）的總額不超過 億港元； (ii) 1.1 關於財務資產的交易的總額不超過 億港元； (iii) 1.1 轉讓無形物的總額不超過 億港元； (iv) 4,400 其他交易的總額不超過 萬港元。
+form1/Page3 | text | 4.
+form1/Page3 | text | 「廣義集團」指–
+form1/Page3 | text | (a)
+form1/Page3 | text | 常義集團，即透過擁有權或控制權而有關聯的一組企業，而該項關聯具以下效果–
+form1/Page3 | text | 根據適用的會計原則，該組企業須為財務匯報的目的，擬備綜合財務報表；或
+form1/Page3 | text | 假使該組企業中任何企業的實益權益，在公開證券交易所交易，該組企業便須如上述般擬備綜合財務報表；或
+form1/Page3 | text | 單一企業屬某管轄區的税務居民，並透過設於另一管轄區的常設機構經營業務，且須就該業務在該另一管轄區課税。
+form1/Page3 | text | 5.
+form1/Page3 | text | 在第 1.2 部分，你只需敘明你是否須就受管交易擬備總體檔案及分部檔案。根據《税務條例》（第 112 章）第 58C(2)(a) 條，擬備有關檔案的期限為有關會計期結束後的 9 個月內。
+form1/Page3 | text | 6.
+form1/Page3 | text | 如你與税務局局長達成預先定價安排協議，則第 2 部分必須填寫。
+form1/Page3 | text | 7.
+form1/Page3 | text | 如該安排上指明的事實及情況有任何重大變化，你須在利得税計算表內説明有關變化的詳情。
+form1/Page3 | text | 8.
+form1/Page3 | text | 《税務條例》第 58H 條規定，如跨國企業集團（附註 10 ）屬須申報集團（附註 9 ），每個香港實體均須於會計期結束後的 3 個月內透過國別報告網站向税務局局長提交書面通知，識別須提交國別報告的最終母實體（附註 11 ）或成員實體，除非： (a) 該實體不是該集團的最終母實體、代母實體（附註 14 ）或提交國別申報表的香港實體；及 (b) 另一香港實體已提交有關通知。
+form1/Page3 | text | 9.
+form1/Page3 | text | 如跨國企業集團在對上會計期（附註 13 ）的綜合集團收入總款額（附註 12 ）不少於以下門檻款額，該集團在有關會計期屬須申報集團－ (a) 68 集團的最終母實體為香港税務居民－ 億港元；或
+form1/Page3 | text | 集團的最終母實體為香港境外某管轄區的税務居民－該集團的相應門檻為該某管轄區就國別報告的法律或規例指明的款額，或指 於 2015 年 1 月相等於 7.5 億歐羅的終區貨幣款額。
+form1/Page3 | text | 10.
+form1/Page3 | text | 「跨國企業集團」指包括以下企業的常義集團（附註 4(a) ）：－ (a) 兩家或多於兩家以不同管轄區為税務居留地的企業；或
+form1/Page3 | text | 企業屬某管轄區的税務居民，但透過設於另一管轄區的常設機構經營業務，且須就該業務在該另一管轄區課繳税項。
+form1/Page3 | text | 11.
+form1/Page3 | text | 12.
+form1/Page3 | text | 「最終母實體」指常義集團內符合以下條件的成員實體：
+form1/Page3 | text | 有關成員實體對該集團的 1 個或多於 1 個其他成員實體，（直接或間接）擁有具有任何一項以下效果的充分權益︰第一，根據一般應用於有關成員實體的税務居留地管轄區的會計原則，有關成員實體須擬備綜合財務報表；第二，假使有關成員實體的實益權益，在它的税務居留地管轄區的公開證券交易所交易，有關成員實體須擬備綜合財務報表；及
+form1/Page3 | text | 該集團的其他成員實體，均無（直接或間接）對有關成員實體擁有 (a) 段描述的權益。
+form1/Page3 | text | 13.
+form1/Page3 | text | 「綜合集團收入總款額」指在集團的綜合財務報表顯示的綜合收入總額。
+form1/Page3 | text | 如某人與另一人符合參與條件，須視作彼此相聯（各為當事人）。如在進行交易期間，其中一名當事人，參與另一當事人的管理、控制或資本，或同一人或同一組人，參與每名當事人的管理、控制或資本，兩人之間的參與條件則屬獲符合。如你是非香港居民人士設於香港的常設機構，而你與該人士的其他部分進行交易，即構成與非香港居民人士的其他部分進行交易，例如總公司與分支機構之間的交易。
+form1/Page3 | dateTimeEdit PrintTime | 
+form1/Page3 | text | BIRS2 (4/2025)
+form1/Page3 | textEdit XMLversion | 
+form1/Page3 | text | 「對上會計期」指在緊接有關會計期的開始日期之前完結的會計期。
+form1/Page3 | text | 14.
+form1/Page3 | text | 「代母實體」指凡某須申報集團的某成員實體，獲該集團委任為最終母實體的唯一替代者，以代表該集團提交國別申報表或國別報告。
+form1/Page3 | text | 填妥第 3.3.1 及 3.3.2 部分不可視為按照《税務條例》第 58H 條向本局提交所須通知。
+form1/Page3 | text | 15.
+form1/Page4 | text | 16.
+form1/Page4 | text | 17.
+form1/Page4 | dateTimeEdit PrintTime | 
+form1/Page4 | text | BIRS2 (4/2025)
+form1/Page4 | text | 如你是在緊接有關財政年度之前的四個財政年度（附註 17(d) ）中至少有兩個年度的年度綜合收入達 7.5 億歐元或以上的跨國企業集團（附註 17(b) ）（「受涵蓋跨國企業集團」）的第 4AA 部實體（附註 17(e) ），則第 4 部分必須填寫。
+form1/Page4 | text | 就第 4 部分而言，
+form1/Page4 | text | (a)
+form1/Page4 | text | 透過擁有權或控制權而有關聯的一組實體，該等實體的資產、負債、收入、支出和現金流量：
+form1/Page4 | text | 均納入有關最終母實體（附註 17(c) ）的綜合財務報表；或
+form1/Page4 | text | 位於某司法管轄區的實體，在其他司法管轄區設有一個或多於一個常設機構，前提是該實體不屬於上述分段 (i) 所描述的集團的一部分；
+form1/Page4 | text | 「跨國企業集團」指一集團（附註 17(a) ），內有至少一個實體或常設機構並非位於有關最終母實體所屬的司法管轄區；
+form1/Page4 | text | (i)
+form1/Page4 | text | (ii)
+form1/Page4 | text | 「集團」指 –
+form1/Page4 | text | (b)
+form1/Page4 | textEdit XMLversion | 
+form1/Page4 | text | 「最終母實體」指﹕
+form1/Page4 | text | 一實體，它﹕
+form1/Page4 | text | 直接或間接擁有任何其他實體的控制權益；及
+form1/Page4 | text | 並非由另一實體直接或間接（以控制權益）擁有；或
+form1/Page4 | text | 屬附註 17(a)(ii) 所描述的集團的主實體；
+form1/Page4 | text | 「財政年度」指跨國企業集團的最終母實體擬備綜合財務報表的會計期。如有關最終母實體沒有擬備綜合財務報表，會假定它已擬備綜合財務報表。在此情況下，財政年度指公曆年。
+form1/Page4 | text | 「第 4AA 部實體」就某跨國企業集團而言指 (i) 該跨國企業集團的香港成員實體（附註 17(f) ）； (ii) 該跨國企業集團的香港獨立合資企業（附註 17(g) ）； (iii) 該跨國企業集團的合資企業集團（附註 17(k) ）的香港成員（附註 17(j) ）；或 (iv) 該跨國企業集團的第 4AA 部無國籍成員實體（附註 17(l) ）；
+form1/Page4 | text | 「香港成員實體」就某跨國企業集團而言指該跨國企業集團位於香港的成員實體；
+form1/Page4 | text | 「香港獨立合資企業」指符合以下描述的獨立合資企業（附註 17(h) ） -
+form1/Page4 | text | 位處香港者；或
+form1/Page4 | text | 假若該獨立合資企業屬成員實體的話，便會是第 4AA 部無國籍成員實體；
+form1/Page4 | text | 「獨立合資企業」指沒有合資企業附屬公司（附註 17(i) ）的合資企業；
+form1/Page4 | text | 「合資企業附屬公司」指一實體，其資產、負債、收入、開支及現金流量，由某合資企業根據某個可接受的財務會計準則綜合匯報（或假若該合資企業被要求按照某個可接受的財務會計準則將該等項目綜合匯報，便會綜合匯報）。如某常設機構的主實體是合資企業或合資企業附屬公司，則該機構須視為獨立的合資企業附屬公司。
+form1/Page4 | text | 「香港成員」就某跨國企業集團的合資企業集團而言，指該合資企業集團的符合以下描述的合資企業或另一成員 -
+form1/Page4 | text | 假若該合資企業或另一成員屬成員實體的話，便會是第 4AA 部無國籍成員實體；
+form1/Page4 | text | 「合資企業集團」指合資企業及其合資企業附屬公司；
+form1/Page4 | text | 「第 4AA 部無國籍成員實體」就某跨國企業集團而言，指該跨國企業集團的符合以下描述的無國籍成員實體 -
+form1/Page4 | text | 該無國籍成員實體在香港設立；或
+form1/Page4 | text | 該無國籍成員實體屬在香港的營業地點，並按照《全球反侵蝕税基規則》第 10.1.1 條中「常設機構」的定義 (d) 段屬常設機構；
+form1/Page4 | text | 「指定交表實體」指某跨國企業集團符合以下描述的成員實體（最終母實體除外） -
+form1/Page4 | text | (c)
+form1/Page4 | text | (I)
+form1/Page4 | text | (II)
+form1/Page4 | text | (e)
+form1/Page4 | text | (f)
+form1/Page4 | text | (d)
+form1/Page4 | text | (g)
+form1/Page4 | text | (h)
+form1/Page4 | text | (j)
+form1/Page4 | text | (k)
+form1/Page4 | text | (l)
+form1/Page4 | text | (m)
+form1/Page4 | text | 該成員實體位處香港且獲該集團委任，代表該集團就某財政年度提交補足税報税表；或
+form1/Page4 | text | 該成員實體位處香港以外的某全球反侵蝕税基轄區且獲該集團委任，代表該集團就某財政年度提交全球反侵蝕税基資料報表；
+form1/Page4 | text | 「全球反侵蝕税基轄區」指 (i) 香港；或 (ii) 採納合資格收入納入規則、合資格低税利潤規則或合資格當地最低補足税的另一司法管轄區；
+form1/Page4 | text | 「指定本地實體」指某跨國企業集團的符合以下描述的成員實體 -
+form1/Page4 | text | (n)
+form1/Page4 | text | (o)
+form1/Page4 | text | 該成員實體獲該集團所有香港成員實體委任，代表該等成員實體就某財政年度 -
+form1/Page4 | text | 該成員實體位處香港；及
+form1/Page4 | text | 向税務局局長提交《税務條例》附表 63 第 5 條所指的通知（「補足税通知」）；及
+form1/Page4 | text | 按照《税務條例》附表 63 第 3 條向税務局局長提交補足税報税表。
+form1/Page4 | text | 僅因為規模或重要性，或僅因為有關實體是為出售而持有的，而撇除於該最終母實體的綜合財務報表之外；或
+form1/Page5 | dateTimeEdit PrintTime | 
+form1/Page5 | text | BIRS2 (4/2025)
+form1/Page5 | textEdit XMLversion | 
+form1/Page5 | text | 20.
+form1/Page5 | text | 你須將已填妥的表格匯出為 XML 檔案，經香港政府一站通的利得税報税表電子報税服務上傳該 XML 檔案，並作電子提交。如你不選擇以電子方式或半電子方式提交利得税報税表，你須列印及簽妥由利得税報税表電子報税服務匯出的文本核對表（包含上傳的 XML 檔案詳情及二維碼），並將它連同利得税報税表一併提交，才完成整個提交程序。本補充表格的核對表必須由簽署報税表的同一人士簽署。
+form1/Page5 | text | 19.
+form1/Page5 | text | 18.
+form1/Page5 | text | 根據《税務條例》附表 63 第 5 條，受涵蓋跨國企業集團的每個香港成員實體（「標的實體」），均須在該財政年度最後一日之後的 6 個月內（「通知期限」），向税務局局長提交補足税通知，藉通知指明由哪一個實體和司法管轄區向香港提交全球反侵蝕税基資料報表，以及任何其他與斷定香港成員實體提交補足税報税表的責任有關的資料。如作為該集團的最終母實體（附註 17(c) ）、指定交表實體（附註 17(m) ）或指定本地實體（附註 17(o) ）的另一個香港成員實體已在通知期限前提交通知，說明其將代表標的實體及該集團所有其他香港成員實體，向税務局局長提交補足税報税表，標的實體則可獲免除該項責任。提交補足税通知的責任適用於受涵蓋跨國企業集團的香港獨立合資企業、合資企業集團的香港成員和第 4AA 部無國籍成員實體，一如其適用於香港成員實體。
+form1/Page5 | text | 如你是跨國企業集團的香港成員實體或合資企業集團的香港成員且第 4.2 項的答案為「否」，則第 4.3 部分適用。
+form1/Page5 | text | 如你是某受涵蓋跨國企業集團（集團 A ）的香港獨立合資企業或合資企業集團的香港成員，並符合下列其中一項情況：
+form1/Page5 | text | (b)
+form1/Page5 | text | (a)
+form1/Page5 | text | 你亦是另一受涵蓋跨國企業集團（集團 B ）的香港獨立合資企業或合資企業集團的香港成員；
+form1/Page5 | text | 你亦是另一受涵蓋跨國企業集團（集團 B ）的香港成員實體。
+form1/Page5 | text | 請在第 4 部分提供集團 A 相關的資料，並在你的利得税計算表內，以同一格式提交與集團 B 相關的資料。
+form1/Page5 | text | 填妥第 4.4.1 至 4.4.3 部分不可視為按照《税務條例》附表 63 第 5 條向本局提交所須通知。
+form1/Page5 | text | 21.
+form1/Page5 | text | 22.
+form1/Page5 | text | 若你沒有集團的指定交表實體及 / 或指定本地實體的詳情，你可留空第 4.4.2 及 / 或 4.4.3 部分。
+form1/Page5 | text | 23.
+form1/Page1_E/Title | text | S2
+form1/Page1_E/Title | text | SUPPLEMENTARY FORM TO PROFITS TAX RETURN
+form1/Page1_E/Title | text | - TRANSFER PRICING AND INTERNATIONAL TAX OBLIGATIONS
+form1/Page1_E/Title | text | (applicable for year of assessment 2018/19 and subsequent years)
+form1/Page1_E/Title | textEdit forInternalUse_E | 
+form1/Page1_E/Title/FileNo | text | File No.
+form1/Page1_E/Title/FileNo | numericEdit txt_tradeCat_E | Enter the first two digits of your file number.
+form1/Page1_E/Title/FileNo | text | /
+form1/Page1_E/Title/FileNo | numericEdit txt_brn_E | Enter the Business Registration Number.
+form1/Page1_E/Title/FileNo | text | Year of Assessment
+form1/Page1_E/Title/FileNo | choiceList drop_yearAss_E | Select the Year of Assessment. | options: 2018/19; 2019/20; 2020/21; 2021/22; 2022/23; 2023/24; 2024/25; 2025/26; 2026/27; 2019; 2020; 2021; 2022; 2023; 2024; 2025; 2026; 2027
+form1/Page1_E/Title/FileNo | text | Name of Taxpayer
+form1/Page1_E/Title/FileNo | textEdit txt_nameTaxpayer_E | Enter the Name of Taxpayer.
+form1/Page1_E/Title | text | This supplementary form is part of the Profits Tax Return. You have to fill in the form electronically (Note 1). You must export the filled form to XML file and upload the XML file via the electronic filing of Profits Tax Return services under GovHK for submission (Note 23).
+form1/Page1_E/Title | text | BIRS2 (4/2025)
+form1/Page1_E/Title | dateTimeEdit PrintTime | 
+form1/Page1_E/Title | textEdit XMLversion | 
+form1/Page1_E/Section1 | text | SECTION 1
+form1/Page1_E/Section1 | text | TRANSACTIONS WITH NON-RESIDENT ASSOCIATED PERSONS / OTHER PARTS OF THE NON-HONG KONG RESIDENT PERSON (Notes 2 to 5) (Leave this section blank if not applicable)
+form1/Page1_E/Section1 | text | 1.1
+form1/Page1_E/Section1 | text | Are the associated persons / other parts of the non-Hong Kong resident person resident in: ( tick the appropriate boxes )
+form1/Page1_E/Section1 | checkButton chk_1_assoPersonsVarious_E | Tick this box if the associated persons or other parts of the non-Hong Kong resident person were resident in Bermuda, British Virgin Islands, Cayman Islands, Cook Islands, Guernsey or Jersey. | options: 1; 0
+form1/Page1_E/Section1 | text | Bermuda / British Virgin Islands / Cayman Islands / Cook Islands / Guernsey / Jersey
+form1/Page1_E/Section1 | checkButton chk_1_assoPersonsMacao_E | Tick this box if the associated persons or other parts of the non-Hong Kong resident person were resident in Macao SAR. | options: 1; 0
+form1/Page1_E/Section1 | text | Macao SAR
+form1/Page1_E/Section1 | checkButton chk_1_assoPersonsOthers_E | Tick this box if the associated persons or other parts of the non-Hong Kong resident person were resident in other places. | options: 1; 0
+form1/Page1_E/Section1 | text | Others (please specify)
+form1/Page1_E/Section1 | textEdit txt_1_assoPersonsOther_E | Enter the details of the other places.
+form1/Page1_E/Section1 | text | 1.2
+form1/Page1_E/Section1 | text | Are you required to prepare a master file and a local file under Part 9A of Inland Revenue Ordinance (Cap. 112) (“IRO”)?
+form1/Page1_E/Section1 | text | Yes
+form1/Page1_E/Section1 | checkButton rad_1_9aIroY_E | Tick this box if you are required to prepare a master file and a local file under Part 9A of the IRO.
+form1/Page1_E/Section1 | text | No
+form1/Page1_E/Section1 | checkButton rad_1_9aIroN_E | Tick this box if you are not required to prepare a master file and a local file under Part 9A of the IRO.
+form1/Page1_E/Section2 | text | SECTION 2
+form1/Page1_E/Section2 | text | ADVANCE PRICING ARRANGEMENT (Notes 6 and 7) (Leave this section blank if not applicable)
+form1/Page1_E/Section2 | text | 2.1
+form1/Page1_E/Section2 | text | Reference number of the arrangement
+form1/Page1_E/Section2 | textEdit txt_2_refNoArra_E | Enter the reference number of the advance pricing arrangement.
+form1/Page1_E/Section2 | text | 2.2
+form1/Page1_E/Section2 | text | Have you relied on the arrangement in preparing the Profits Tax Return?
+form1/Page1_E/Section2 | text | Yes
+form1/Page1_E/Section2 | checkButton rad_2_arraPrepProfTaxReturnY_E | Tick this box if you have relied on the arrangement in preparing the Profits Tax Return.
+form1/Page1_E/Section2 | text | No
+form1/Page1_E/Section2 | checkButton rad_2_arraPrepProfTaxReturnN_E | Tick this box if you have not relied on the arrangement in preparing the Profits Tax Return.
+form1/Page1_E/Section2 | text | 2.3
+form1/Page1_E/Section2 | text | Has there been any material change to the facts and circumstances identified in the arrangement?
+form1/Page1_E/Section2 | checkButton rad_2_matChangeArraY_E | Tick this box if there has been any material change to the facts and circumstances identified in the arrangement.
+form1/Page1_E/Section2 | checkButton rad_2_matChangeArraN_E | Tick this box if there has no material change to the facts and circumstances identified in the arrangement.
+form1/Page1_E/Section2 | text | 2.4
+form1/Page1_E/Section2 | text | Total amount of the transactions to which the arrangement is to apply
+form1/Page1_E/Section2 | text | HK$
+form1/Page1_E/Section2 | numericEdit txt_2_totalAmtTran_E | Enter the total amount of the transactions to which the arrangement is to apply (in HK$).
+form1/Page1_E/Section3 | text | SECTION 3
+form1/Page1_E/Section3 | text | COUNTRY-BY-COUNTRY REPORTING OBLIGATION (Notes 8 to 16) (Leave this section blank if not applicable)
+form1/Page1_E/Section3 | text | 3.1
+form1/Page1_E/Section3 | text | Have you filed a notice in respect of the multinational enterprise group under section 58H of the IRO?
+form1/Page1_E/Section3 | text | Yes
+form1/Page1_E/Section3 | checkButton rad_3_underS58HIroY_E | Tick this box if you have filed a notice in respect of the multinational enterprise group under section 58H of the IRO.
+form1/Page1_E/Section3 | text | No
+form1/Page1_E/Section3 | checkButton rad_3_underS58HIroN_E | Tick this box if you have not filed a notice in respect of the multinational enterprise group under section 58H of the IRO.
+form1/Page1_E/Section3 | text | 3.2
+form1/Page1_E/Section3 | text | Has any other Hong Kong entity of the group filed such a notice?
+form1/Page1_E/Section3 | checkButton rad_3_otherHKEntityY_E | Tick this box if other Hong Kong entity of the group has filed such a notice.
+form1/Page1_E/Section3 | checkButton rad_3_otherHKEntityN_E | Tick this box if no other Hong Kong entity of the group has filed such a notice.
+form1/Page1_E/Section3 | text | If yes, please provide the following information of that other Hong Kong entity:
+form1/Page1_E/Section3 | text | 3.2.1
+form1/Page1_E/Section3 | text | Name
+form1/Page1_E/Section3 | textEdit txt_3_nameOtherHK_E | Enter the name of that other Hong Kong entity.
+form1/Page1_E/Section3 | text | 3.2.2
+form1/Page1_E/Section3 | text | Business registration number
+form1/Page1_E/Section3 | numericEdit txt_3_brn_E | Enter the business registration number of that Hong Kong entity.
+form1/Page1_E/Section3 | text | 3.3
+form1/Page1_E/Section3 | text | If your answers to both sections 3.1 and 3.2 are “No”, please complete sections 3.3.1 and 3.3.2:
+form1/Page1_E/Section3 | text | 3.3.1
+form1/Page1_E/Section3 | text | Details of the group’s ultimate parent entity
+form1/Page1_E/Section3 | text | 3.3.1.1
+form1/Page1_E/Section3 | textEdit txt_3_nameUltiParent_E | Enter the name of the group’s ultimate parent entity if your answers of the two previous questions are “no”.
+form1/Page1_E/Section3 | text | 3.3.1.2
+form1/Page1_E/Section3 | text | Jurisdiction of tax residence
+form1/Page1_E/Section3 | choiceList drop_3_juriTaxResidenceUltiParent_E | Select the jurisdiction of tax residence for the group’s ultimate parent entity. | options: (Country); AFGHANISTAN; ALAND ISLANDS; ALBANIA; ALGERIA; AMERICAN SAMOA; ANDORRA; ANGOLA; ANGUILLA; ANTARCTICA; ANTIGUA AND BARBUDA; ARGENTINA; ARMENIA; ARUBA; AUSTRALIA; AUSTRIA; AZERBAIJAN; BAHAMAS; BAHRAIN; BANGLADESH; BARBADOS; BELARUS; BELGIUM; BELIZE; BENIN; BERMUDA; BHUTAN; BOLIVIA, PLURINATIONAL STATE OF; BONAIRE, SINT EUSTATIUS AND SABA; BOSNIA AND HERZEGOVINA; BOTSWANA; BOUVET ISLAND; BRAZIL; BRITISH INDIAN OCEAN TERRITORY; BRUNEI DARUSSALAM; BULGARIA; BURKINA FASO; BURUNDI; CABO VERDE; CAMBODIA; CAMEROON; CANADA; CAYMAN ISLANDS; CENTRAL AFRICAN REPUBLIC; CHAD; CHILE; CHINA; CHRISTMAS ISLAND; COCOS (KEELING) ISLANDS; COLOMBIA; COMOROS; CONGO; CONGO, THE DEMOCRATIC REPUBLIC OF THE; COOK ISLANDS; COSTA RICA; COTE D'IVOIRE; CROATIA; CUBA; CURACAO; CYPRUS; CZECHIA; DENMARK; DJIBOUTI; DOMINICA; DOMINICAN REPUBLIC; ECUADOR; EGYPT; EL SALVADOR; EQUATORIAL GUINEA; ERITREA; ESTONIA; ESWATINI; ETHIOPIA; FALKLAND ISLANDS (MALVINAS); FAROE ISLANDS; FIJI; FINLAND; FRANCE; FRENCH GUIANA; FRENCH POLYNESIA; FRENCH SOUTHERN TERRITORIES; GABON; GAMBIA; GEORGIA; GERMANY; GHANA; GIBRALTAR; GREECE; GREENLAND; GRENADA; GUADELOUPE; GUAM; GUATEMALA; GUERNSEY; GUINEA; GUINEA-BISSAU; GUYANA; HAITI; HEARD ISLAND AND MCDONALD ISLANDS; HOLY SEE (VATICAN CITY STATE); HONDURAS; HONG KONG; HUNGARY; ICELAND; INDIA; INDONESIA; IRAN, ISLAMIC REPUBLIC OF; IRAQ; IRELAND; ISLE OF MAN; ISRAEL; ITALY; JAMAICA; JAPAN; JERSEY; JORDAN; KAZAKHSTAN; KENYA; KIRIBATI; KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF; KOREA, REPUBLIC OF; KOSOVO; KUWAIT; KYRGYZSTAN; LAO PEOPLE'S DEMOCRATIC REPUBLIC; LATVIA; LEBANON; LESOTHO; LIBERIA; LIBYA; LIECHTENSTEIN; LITHUANIA; LUXEMBOURG; MACAO; MADAGASCAR; MALAWI; MALAYSIA; MALDIVES; MALI; MALTA; MARSHALL ISLANDS; MARTINIQUE; MAURITANIA; MAURITIUS; MAYOTTE; MEXICO; MICRONESIA, FEDERATED STATES OF; MOLDOVA, REPUBLIC OF; MONACO; MONGOLIA; MONTENEGRO; MONTSERRAT; MOROCCO; MOZAMBIQUE; MYANMAR; NAMIBIA; NAURU; NEPAL; NETHERLANDS; NEW CALEDONIA; NEW ZEALAND; NICARAGUA; NIGER; NIGERIA; NIUE; NORFOLK ISLAND; NORTH MACEDONIA; NORTHERN MARIANA ISLANDS; NORWAY; OMAN; PAKISTAN; PALAU; PALESTINE, STATE OF; PANAMA; PAPUA NEW GUINEA; PARAGUAY; PERU; PHILIPPINES; PITCAIRN; POLAND; PORTUGAL; PUERTO RICO; QATAR; REUNION; ROMANIA; RUSSIAN FEDERATION; RWANDA; SAINT BARTHELEMY; SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA; SAINT KITTS AND NEVIS; SAINT LUCIA; SAINT MARTIN (FRENCH PART); SAINT PIERRE AND MIQUELON; SAINT VINCENT AND THE GRENADINES; SAMOA; SAN MARINO; SAO TOME AND PRINCIPE; SAUDI ARABIA; SENEGAL; SERBIA; SEYCHELLES; SIERRA LEONE; SINGAPORE; SINT MAARTEN (DUTCH PART); SLOVAKIA; SLOVENIA; SOLOMON ISLANDS; SOMALIA; SOUTH AFRICA; SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS; SOUTH SUDAN; SPAIN; SRI LANKA; STATELESS; SUDAN; SURINAME; SVALBARD AND JAN MAYEN; SWEDEN; SWITZERLAND; SYRIAN ARAB REPUBLIC; TAIWAN, PROVINCE OF CHINA; TAJIKISTAN; TANZANIA, UNITED REPUBLIC OF; THAILAND; TIMOR-LESTE; TOGO; TOKELAU; TONGA; TRINIDAD AND TOBAGO; TUNISIA; TURKEY; TURKMENISTAN; TURKS AND CAICOS ISLANDS; TUVALU; UGANDA; UKRAINE; UNITED ARAB EMIRATES; UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND; UNITED STATES; UNITED STATES MINOR OUTLYING ISLANDS; URUGUAY; UZBEKISTAN; VANUATU; VENEZUELA, BOLIVARIAN REPUBLIC OF; VIET NAM; VIRGIN ISLANDS, BRITISH; VIRGIN ISLANDS, U.S.; WALLIS AND FUTUNA; WESTERN SAHARA; YEMEN; ZAMBIA; ZIMBABWE
+form1/Page1_E/Section3 | textEdit txt_juriTaxResidenceUltiParent_E | 
+form1/Page1_E/Section3 | text | 3.3.1.3
+form1/Page1_E/Section3 | text | Business registration number / Tax identification number
+form1/Page1_E/Section3 | textEdit txt_3_brnTaxId_E | Enter the business registration number or tax identification number for the group’s ultimate parent entity.
+form1/Page1_E/Section3 | text | 3.3.2
+form1/Page1_E/Section3 | text | Details of the group’s surrogate parent entity (if any)
+form1/Page1_E/Section3 | text | 3.3.2.1
+form1/Page1_E/Section3 | textEdit txt_3_nameSurrParent_E | Enter the name of the group’s surrogate parent entity (if any) if your answers of the two previous questions are “no”.
+form1/Page1_E/Section3 | text | 3.3.2.2
+form1/Page1_E/Section3 | choiceList drop_3_juriTaxResidentSurrParent_E | Select the jurisdiction of tax residence for the group’s surrogate parent entity. | options: (Country); AFGHANISTAN; ALAND ISLANDS; ALBANIA; ALGERIA; AMERICAN SAMOA; ANDORRA; ANGOLA; ANGUILLA; ANTARCTICA; ANTIGUA AND BARBUDA; ARGENTINA; ARMENIA; ARUBA; AUSTRALIA; AUSTRIA; AZERBAIJAN; BAHAMAS; BAHRAIN; BANGLADESH; BARBADOS; BELARUS; BELGIUM; BELIZE; BENIN; BERMUDA; BHUTAN; BOLIVIA, PLURINATIONAL STATE OF; BONAIRE, SINT EUSTATIUS AND SABA; BOSNIA AND HERZEGOVINA; BOTSWANA; BOUVET ISLAND; BRAZIL; BRITISH INDIAN OCEAN TERRITORY; BRUNEI DARUSSALAM; BULGARIA; BURKINA FASO; BURUNDI; CABO VERDE; CAMBODIA; CAMEROON; CANADA; CAYMAN ISLANDS; CENTRAL AFRICAN REPUBLIC; CHAD; CHILE; CHINA; CHRISTMAS ISLAND; COCOS (KEELING) ISLANDS; COLOMBIA; COMOROS; CONGO; CONGO, THE DEMOCRATIC REPUBLIC OF THE; COOK ISLANDS; COSTA RICA; COTE D'IVOIRE; CROATIA; CUBA; CURACAO; CYPRUS; CZECHIA; DENMARK; DJIBOUTI; DOMINICA; DOMINICAN REPUBLIC; ECUADOR; EGYPT; EL SALVADOR; EQUATORIAL GUINEA; ERITREA; ESTONIA; ESWATINI; ETHIOPIA; FALKLAND ISLANDS (MALVINAS); FAROE ISLANDS; FIJI; FINLAND; FRANCE; FRENCH GUIANA; FRENCH POLYNESIA; FRENCH SOUTHERN TERRITORIES; GABON; GAMBIA; GEORGIA; GERMANY; GHANA; GIBRALTAR; GREECE; GREENLAND; GRENADA; GUADELOUPE; GUAM; GUATEMALA; GUERNSEY; GUINEA; GUINEA-BISSAU; GUYANA; HAITI; HEARD ISLAND AND MCDONALD ISLANDS; HOLY SEE (VATICAN CITY STATE); HONDURAS; HONG KONG; HUNGARY; ICELAND; INDIA; INDONESIA; IRAN, ISLAMIC REPUBLIC OF; IRAQ; IRELAND; ISLE OF MAN; ISRAEL; ITALY; JAMAICA; JAPAN; JERSEY; JORDAN; KAZAKHSTAN; KENYA; KIRIBATI; KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF; KOREA, REPUBLIC OF; KOSOVO; KUWAIT; KYRGYZSTAN; LAO PEOPLE'S DEMOCRATIC REPUBLIC; LATVIA; LEBANON; LESOTHO; LIBERIA; LIBYA; LIECHTENSTEIN; LITHUANIA; LUXEMBOURG; MACAO; MADAGASCAR; MALAWI; MALAYSIA; MALDIVES; MALI; MALTA; MARSHALL ISLANDS; MARTINIQUE; MAURITANIA; MAURITIUS; MAYOTTE; MEXICO; MICRONESIA, FEDERATED STATES OF; MOLDOVA, REPUBLIC OF; MONACO; MONGOLIA; MONTENEGRO; MONTSERRAT; MOROCCO; MOZAMBIQUE; MYANMAR; NAMIBIA; NAURU; NEPAL; NETHERLANDS; NEW CALEDONIA; NEW ZEALAND; NICARAGUA; NIGER; NIGERIA; NIUE; NORFOLK ISLAND; NORTH MACEDONIA; NORTHERN MARIANA ISLANDS; NORWAY; OMAN; PAKISTAN; PALAU; PALESTINE, STATE OF; PANAMA; PAPUA NEW GUINEA; PARAGUAY; PERU; PHILIPPINES; PITCAIRN; POLAND; PORTUGAL; PUERTO RICO; QATAR; REUNION; ROMANIA; RUSSIAN FEDERATION; RWANDA; SAINT BARTHELEMY; SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA; SAINT KITTS AND NEVIS; SAINT LUCIA; SAINT MARTIN (FRENCH PART); SAINT PIERRE AND MIQUELON; SAINT VINCENT AND THE GRENADINES; SAMOA; SAN MARINO; SAO TOME AND PRINCIPE; SAUDI ARABIA; SENEGAL; SERBIA; SEYCHELLES; SIERRA LEONE; SINGAPORE; SINT MAARTEN (DUTCH PART); SLOVAKIA; SLOVENIA; SOLOMON ISLANDS; SOMALIA; SOUTH AFRICA; SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS; SOUTH SUDAN; SPAIN; SRI LANKA; STATELESS; SUDAN; SURINAME; SVALBARD AND JAN MAYEN; SWEDEN; SWITZERLAND; SYRIAN ARAB REPUBLIC; TAIWAN, PROVINCE OF CHINA; TAJIKISTAN; TANZANIA, UNITED REPUBLIC OF; THAILAND; TIMOR-LESTE; TOGO; TOKELAU; TONGA; TRINIDAD AND TOBAGO; TUNISIA; TURKEY; TURKMENISTAN; TURKS AND CAICOS ISLANDS; TUVALU; UGANDA; UKRAINE; UNITED ARAB EMIRATES; UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND; UNITED STATES; UNITED STATES MINOR OUTLYING ISLANDS; URUGUAY; UZBEKISTAN; VANUATU; VENEZUELA, BOLIVARIAN REPUBLIC OF; VIET NAM; VIRGIN ISLANDS, BRITISH; VIRGIN ISLANDS, U.S.; WALLIS AND FUTUNA; WESTERN SAHARA; YEMEN; ZAMBIA; ZIMBABWE
+form1/Page1_E/Section3 | textEdit txt_juriTaxResidenceSurrParent_E | 
+form1/Page1_E/Section3 | text | 3.3.2.3
+form1/Page1_E/Section3 | textEdit txt_3_brnTaxIdSurrParent_E | Enter the business registration number or tax identification number for the group’s surrogate parent entity.
+form1/Page1_E | button Button1 | Save
+form1/Page1_E | button Button2 | Print
+form1/Page1_E | button Button3 | Reset
+form1/Page1_E | button Button4 | Export to XML
+form1/Page1_E | text | Page of
+form1/Page1_E | numericEdit CurrentPage | Text Field
+form1/Page1_E | numericEdit PageCount | Text Field
+form1/Page2_E | text | File No. :
+form1/Page2_E | textEdit fileNo_display_E | 
+form1/Page2_E | text | Year of Assessment :
+form1/Page2_E | textEdit year_display_E | 
+form1/Page2_E | button Button1 | Save
+form1/Page2_E | button Button2 | Print
+form1/Page2_E | button Button3 | Reset
+form1/Page2_E | button Button4 | Export to XML
+form1/Page2_E | text | Page of
+form1/Page2_E | numericEdit CurrentPage | Text Field
+form1/Page2_E | numericEdit PageCount | Text Field
+form1/Page2_E | text | BIRS2 (4/2025)
+form1/Page2_E | dateTimeEdit PrintTime | 
+form1/Page2_E/Section4 | choiceList drop_statusInScopeMNE_E | Select the jurisdiction of tax residence for the group’s surrogate parent entity. | options: HK constituent entity; HK standalone JV; HK member of a JV group; Part 4AA stateless constituent entity
+form1/Page2_E/Section4 | textEdit txt_statusInScopeMNE_E | 
+form1/Page2_E/Section4 | text | SECTION 4
+form1/Page2_E/Section4 | text | MULTINATIONAL ENTERPRISE GROUPS' FILING OBLIGATION FOR GLOBAL MINIMUM TAX AND HONG KONG MINIMUM TOP-UP TAX (Notes 17 to 22) (Leave this section blank if not applicable)
+form1/Page2_E/Section4 | text | 4.1
+form1/Page2_E/Section4 | text | Your status in an in-scope MNE group for the purposes of global minimum tax and Hong Kong minimum top-up tax
+form1/Page2_E/Section4 | text | 4.3.1
+form1/Page2_E/Section4 | text | Name
+form1/Page2_E/Section4 | checkButton chk_groupFiledY_E | Tick this box if other Hong Kong entity of the group has filed such a notice.
+form1/Page2_E/Section4 | checkButton chk_groupFiledN_E | Tick this box if no other Hong Kong entity of the group has filed such a notice.
+form1/Page2_E/Section4 | checkButton chk_sameStatusY_E | Tick this box if no other Hong Kong entity of the group has filed such a notice.
+form1/Page2_E/Section4 | checkButton chk_sameStatusN_E | Tick this box if no other Hong Kong entity of the group has filed such a notice.
+form1/Page2_E/Section4 | textEdit txt_nameOtherPart4AAEntity_E | Enter the name of that other Hong Kong entity.
+form1/Page2_E/Section4 | numericEdit txt_otherPart4AAEntityBrn_E | Enter the Business Registration Number.
+form1/Page2_E/Section4 | textEdit txt_gpUpeName_E | Enter the name of the group’s ultimate parent entity if your answers of the two previous questions are “no”.
+form1/Page2_E/Section4 | choiceList drop_gpUpeJuri_E | Select the jurisdiction of tax residence for the group’s ultimate parent entity. | options: (Country); AFGHANISTAN; ALAND ISLANDS; ALBANIA; ALGERIA; AMERICAN SAMOA; ANDORRA; ANGOLA; ANGUILLA; ANTARCTICA; ANTIGUA AND BARBUDA; ARGENTINA; ARMENIA; ARUBA; AUSTRALIA; AUSTRIA; AZERBAIJAN; BAHAMAS; BAHRAIN; BANGLADESH; BARBADOS; BELARUS; BELGIUM; BELIZE; BENIN; BERMUDA; BHUTAN; BOLIVIA, PLURINATIONAL STATE OF; BONAIRE, SINT EUSTATIUS AND SABA; BOSNIA AND HERZEGOVINA; BOTSWANA; BOUVET ISLAND; BRAZIL; BRITISH INDIAN OCEAN TERRITORY; BRUNEI DARUSSALAM; BULGARIA; BURKINA FASO; BURUNDI; CABO VERDE; CAMBODIA; CAMEROON; CANADA; CAYMAN ISLANDS; CENTRAL AFRICAN REPUBLIC; CHAD; CHILE; CHINA; CHRISTMAS ISLAND; COCOS (KEELING) ISLANDS; COLOMBIA; COMOROS; CONGO; CONGO, THE DEMOCRATIC REPUBLIC OF THE; COOK ISLANDS; COSTA RICA; COTE D'IVOIRE; CROATIA; CUBA; CURACAO; CYPRUS; CZECHIA; DENMARK; DJIBOUTI; DOMINICA; DOMINICAN REPUBLIC; ECUADOR; EGYPT; EL SALVADOR; EQUATORIAL GUINEA; ERITREA; ESTONIA; ESWATINI; ETHIOPIA; FALKLAND ISLANDS (MALVINAS); FAROE ISLANDS; FIJI; FINLAND; FRANCE; FRENCH GUIANA; FRENCH POLYNESIA; FRENCH SOUTHERN TERRITORIES; GABON; GAMBIA; GEORGIA; GERMANY; GHANA; GIBRALTAR; GREECE; GREENLAND; GRENADA; GUADELOUPE; GUAM; GUATEMALA; GUERNSEY; GUINEA; GUINEA-BISSAU; GUYANA; HAITI; HEARD ISLAND AND MCDONALD ISLANDS; HOLY SEE (VATICAN CITY STATE); HONDURAS; HONG KONG; HUNGARY; ICELAND; INDIA; INDONESIA; IRAN, ISLAMIC REPUBLIC OF; IRAQ; IRELAND; ISLE OF MAN; ISRAEL; ITALY; JAMAICA; JAPAN; JERSEY; JORDAN; KAZAKHSTAN; KENYA; KIRIBATI; KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF; KOREA, REPUBLIC OF; KOSOVO; KUWAIT; KYRGYZSTAN; LAO PEOPLE'S DEMOCRATIC REPUBLIC; LATVIA; LEBANON; LESOTHO; LIBERIA; LIBYA; LIECHTENSTEIN; LITHUANIA; LUXEMBOURG; MACAO; MADAGASCAR; MALAWI; MALAYSIA; MALDIVES; MALI; MALTA; MARSHALL ISLANDS; MARTINIQUE; MAURITANIA; MAURITIUS; MAYOTTE; MEXICO; MICRONESIA, FEDERATED STATES OF; MOLDOVA, REPUBLIC OF; MONACO; MONGOLIA; MONTENEGRO; MONTSERRAT; MOROCCO; MOZAMBIQUE; MYANMAR; NAMIBIA; NAURU; NEPAL; NETHERLANDS; NEW CALEDONIA; NEW ZEALAND; NICARAGUA; NIGER; NIGERIA; NIUE; NORFOLK ISLAND; NORTH MACEDONIA; NORTHERN MARIANA ISLANDS; NORWAY; OMAN; PAKISTAN; PALAU; PALESTINE, STATE OF; PANAMA; PAPUA NEW GUINEA; PARAGUAY; PERU; PHILIPPINES; PITCAIRN; POLAND; PORTUGAL; PUERTO RICO; QATAR; REUNION; ROMANIA; RUSSIAN FEDERATION; RWANDA; SAINT BARTHELEMY; SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA; SAINT KITTS AND NEVIS; SAINT LUCIA; SAINT MARTIN (FRENCH PART); SAINT PIERRE AND MIQUELON; SAINT VINCENT AND THE GRENADINES; SAMOA; SAN MARINO; SAO TOME AND PRINCIPE; SAUDI ARABIA; SENEGAL; SERBIA; SEYCHELLES; SIERRA LEONE; SINGAPORE; SINT MAARTEN (DUTCH PART); SLOVAKIA; SLOVENIA; SOLOMON ISLANDS; SOMALIA; SOUTH AFRICA; SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS; SOUTH SUDAN; SPAIN; SRI LANKA; STATELESS; SUDAN; SURINAME; SVALBARD AND JAN MAYEN; SWEDEN; SWITZERLAND; SYRIAN ARAB REPUBLIC; TAIWAN, PROVINCE OF CHINA; TAJIKISTAN; TANZANIA, UNITED REPUBLIC OF; THAILAND; TIMOR-LESTE; TOGO; TOKELAU; TONGA; TRINIDAD AND TOBAGO; TUNISIA; TURKEY; TURKMENISTAN; TURKS AND CAICOS ISLANDS; TUVALU; UGANDA; UKRAINE; UNITED ARAB EMIRATES; UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND; UNITED STATES; UNITED STATES MINOR OUTLYING ISLANDS; URUGUAY; UZBEKISTAN; VANUATU; VENEZUELA, BOLIVARIAN REPUBLIC OF; VIET NAM; VIRGIN ISLANDS, BRITISH; VIRGIN ISLANDS, U.S.; WALLIS AND FUTUNA; WESTERN SAHARA; YEMEN; ZAMBIA; ZIMBABWE
+form1/Page2_E/Section4 | textEdit txt_gpUpeJuri_E | 
+form1/Page2_E/Section4 | textEdit txt_gpUpeBrnTaxId_E | Enter the business registration number or tax identification number for the group’s ultimate parent entity.
+form1/Page2_E/Section4 | text | 4.3.2
+form1/Page2_E/Section4 | text | Business registration number
+form1/Page2_E/Section4 | text | 4.2
+form1/Page2_E/Section4 | text | If your answers to both sections 4.2 and 4.3 are “No”, please complete sections 4.4.1 to 4.4.3:
+form1/Page2_E/Section4 | text | 4.4.1.1
+form1/Page2_E/Section4 | text | 4.4.1.2
+form1/Page2_E/Section4 | text | Jurisdiction in which the ultimate parent entity is located
+form1/Page2_E/Section4 | text | 4.4.1.3
+form1/Page2_E/Section4 | text | Business registration number / Tax identification number
+form1/Page2_E/Section4 | text | 4.3
+form1/Page2_E/Section4 | text | Yes
+form1/Page2_E/Section4 | text | No
+form1/Page2_E/Section4 | text | Have you filed a notice in respect of the group under section 5 of Schedule 63 to the IRO?
+form1/Page2_E/Section4 | text | Has any other Part 4AA entity of the group with the same status as you (as indicated in section 4.1) filed such a notice?
+form1/Page2_E/Section4 | text | 4.4
+form1/Page2_E/Section4 | text | If yes, please provide the following information of that other Part 4AA entity:
+form1/Page2_E/Section4 | textEdit txt_gpDesignatedFilingEntity_E | Enter the name of the group’s ultimate parent entity if your answers of the two previous questions are “no”.
+form1/Page2_E/Section4 | text | 4.4.1
+form1/Page2_E/Section4 | choiceList drop_gpDesignatedFilingEntityjur_E | Select the jurisdiction of tax residence for the group’s ultimate parent entity. | options: (Country); AFGHANISTAN; ALAND ISLANDS; ALBANIA; ALGERIA; AMERICAN SAMOA; ANDORRA; ANGOLA; ANGUILLA; ANTARCTICA; ANTIGUA AND BARBUDA; ARGENTINA; ARMENIA; ARUBA; AUSTRALIA; AUSTRIA; AZERBAIJAN; BAHAMAS; BAHRAIN; BANGLADESH; BARBADOS; BELARUS; BELGIUM; BELIZE; BENIN; BERMUDA; BHUTAN; BOLIVIA, PLURINATIONAL STATE OF; BONAIRE, SINT EUSTATIUS AND SABA; BOSNIA AND HERZEGOVINA; BOTSWANA; BOUVET ISLAND; BRAZIL; BRITISH INDIAN OCEAN TERRITORY; BRUNEI DARUSSALAM; BULGARIA; BURKINA FASO; BURUNDI; CABO VERDE; CAMBODIA; CAMEROON; CANADA; CAYMAN ISLANDS; CENTRAL AFRICAN REPUBLIC; CHAD; CHILE; CHINA; CHRISTMAS ISLAND; COCOS (KEELING) ISLANDS; COLOMBIA; COMOROS; CONGO; CONGO, THE DEMOCRATIC REPUBLIC OF THE; COOK ISLANDS; COSTA RICA; COTE D'IVOIRE; CROATIA; CUBA; CURACAO; CYPRUS; CZECHIA; DENMARK; DJIBOUTI; DOMINICA; DOMINICAN REPUBLIC; ECUADOR; EGYPT; EL SALVADOR; EQUATORIAL GUINEA; ERITREA; ESTONIA; ESWATINI; ETHIOPIA; FALKLAND ISLANDS (MALVINAS); FAROE ISLANDS; FIJI; FINLAND; FRANCE; FRENCH GUIANA; FRENCH POLYNESIA; FRENCH SOUTHERN TERRITORIES; GABON; GAMBIA; GEORGIA; GERMANY; GHANA; GIBRALTAR; GREECE; GREENLAND; GRENADA; GUADELOUPE; GUAM; GUATEMALA; GUERNSEY; GUINEA; GUINEA-BISSAU; GUYANA; HAITI; HEARD ISLAND AND MCDONALD ISLANDS; HOLY SEE (VATICAN CITY STATE); HONDURAS; HONG KONG; HUNGARY; ICELAND; INDIA; INDONESIA; IRAN, ISLAMIC REPUBLIC OF; IRAQ; IRELAND; ISLE OF MAN; ISRAEL; ITALY; JAMAICA; JAPAN; JERSEY; JORDAN; KAZAKHSTAN; KENYA; KIRIBATI; KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF; KOREA, REPUBLIC OF; KOSOVO; KUWAIT; KYRGYZSTAN; LAO PEOPLE'S DEMOCRATIC REPUBLIC; LATVIA; LEBANON; LESOTHO; LIBERIA; LIBYA; LIECHTENSTEIN; LITHUANIA; LUXEMBOURG; MACAO; MADAGASCAR; MALAWI; MALAYSIA; MALDIVES; MALI; MALTA; MARSHALL ISLANDS; MARTINIQUE; MAURITANIA; MAURITIUS; MAYOTTE; MEXICO; MICRONESIA, FEDERATED STATES OF; MOLDOVA, REPUBLIC OF; MONACO; MONGOLIA; MONTENEGRO; MONTSERRAT; MOROCCO; MOZAMBIQUE; MYANMAR; NAMIBIA; NAURU; NEPAL; NETHERLANDS; NEW CALEDONIA; NEW ZEALAND; NICARAGUA; NIGER; NIGERIA; NIUE; NORFOLK ISLAND; NORTH MACEDONIA; NORTHERN MARIANA ISLANDS; NORWAY; OMAN; PAKISTAN; PALAU; PALESTINE, STATE OF; PANAMA; PAPUA NEW GUINEA; PARAGUAY; PERU; PHILIPPINES; PITCAIRN; POLAND; PORTUGAL; PUERTO RICO; QATAR; REUNION; ROMANIA; RUSSIAN FEDERATION; RWANDA; SAINT BARTHELEMY; SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA; SAINT KITTS AND NEVIS; SAINT LUCIA; SAINT MARTIN (FRENCH PART); SAINT PIERRE AND MIQUELON; SAINT VINCENT AND THE GRENADINES; SAMOA; SAN MARINO; SAO TOME AND PRINCIPE; SAUDI ARABIA; SENEGAL; SERBIA; SEYCHELLES; SIERRA LEONE; SINGAPORE; SINT MAARTEN (DUTCH PART); SLOVAKIA; SLOVENIA; SOLOMON ISLANDS; SOMALIA; SOUTH AFRICA; SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS; SOUTH SUDAN; SPAIN; SRI LANKA; STATELESS; SUDAN; SURINAME; SVALBARD AND JAN MAYEN; SWEDEN; SWITZERLAND; SYRIAN ARAB REPUBLIC; TAIWAN, PROVINCE OF CHINA; TAJIKISTAN; TANZANIA, UNITED REPUBLIC OF; THAILAND; TIMOR-LESTE; TOGO; TOKELAU; TONGA; TRINIDAD AND TOBAGO; TUNISIA; TURKEY; TURKMENISTAN; TURKS AND CAICOS ISLANDS; TUVALU; UGANDA; UKRAINE; UNITED ARAB EMIRATES; UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND; UNITED STATES; UNITED STATES MINOR OUTLYING ISLANDS; URUGUAY; UZBEKISTAN; VANUATU; VENEZUELA, BOLIVARIAN REPUBLIC OF; VIET NAM; VIRGIN ISLANDS, BRITISH; VIRGIN ISLANDS, U.S.; WALLIS AND FUTUNA; WESTERN SAHARA; YEMEN; ZAMBIA; ZIMBABWE
+form1/Page2_E/Section4 | textEdit txt_gpDesignatedFilingEntityjur_E | 
+form1/Page2_E/Section4 | textEdit txt_brnTaxIdDesignatedFilingEntity_E | Enter the business registration number or tax identification number for the group’s ultimate parent entity.
+form1/Page2_E/Section4 | text | 4.4.2.1
+form1/Page2_E/Section4 | text | 4.4.2.2
+form1/Page2_E/Section4 | text | Jurisdiction in which the designated filing entity is located
+form1/Page2_E/Section4 | text | 4.4.2.3
+form1/Page2_E/Section4 | text | 4.4.2
+form1/Page2_E/Section4 | text | 4.4.3.1
+form1/Page2_E/Section4 | text | 4.4.3.2
+form1/Page2_E/Section4 | text | 4.4.3
+form1/Page2_E/Section4 | textEdit txt_gpDesignatedLocalEntity_E | Enter the name of the group’s ultimate parent entity if your answers of the two previous questions are “no”.
+form1/Page2_E/Section4 | numericEdit txt_brnGpDesignatedLocalEntity_E | Enter the Business Registration Number.
+form1/Page2_E/Section4 | text | Details of the group's designated local entity (if any)
+form1/Page2_E/Section4 | text | Details of the group's ultimate parent entity
+form1/Page2_E/Section4 | text | Details of the group's designated filing entity (if any)
+form1/Page2_E | textEdit TextField1 | Text Field
+form1/Page2_E | textEdit hashValue_E | Check Sum
+form1/Page2_E | textEdit XMLversion | 
+form1/Page3_E | text | NOTES AND INSTRUCTIONS – SUPPLEMENTARY FORM (S2)
+form1/Page3_E | text | 1.
+form1/Page3_E | text | You are only required to complete the section(s) as applicable.
+form1/Page3_E | text | 2.
+form1/Page3_E | text | A person is associated with another person (each an affected person) if, as between them, the participation condition is met. The participation condition is met as between two persons if, at the time of carrying out the transaction, one of the affected persons was participating in the management, control or capital of the other affected person, or the same person or persons was or were participating in the management, control or capital of each of the affected persons. You have transactions with other parts of the non-Hong Kong resident person if you are a Hong Kong permanent establishment of a non-Hong Kong resident person and have transactions with the other parts of that non-Hong Kong resident person, e.g. transactions between the head office and its branch.
+form1/Page3_E | text | 3.
+form1/Page3_E | text | A Hong Kong entity, including a permanent establishment in Hong Kong, of a group (in extended sense) (Note 4) is required to prepare and retain the entity’s local file and a master file of its group in respect of an accounting period beginning on or after 1 April 2018 , except where – (a) any 2 of the following conditions are satisfied –
+form1/Page3_E | text | (i)
+form1/Page3_E | text | the total amount of the entity’s revenue for the accounting period does not exceed HK$400 million;
+form1/Page3_E | text | (ii)
+form1/Page3_E | text | the total value of the entity’s assets at the end of the accounting period does not exceed HK$300 million;
+form1/Page3_E | text | (iii)
+form1/Page3_E | text | the average number of the entity’s employees during the accounting period does not exceed 100;
+form1/Page3_E | text | OR
+form1/Page3_E | text | (b)
+form1/Page3_E | text | the total amounts of all the following types of controlled transactions (excluding specified domestic transactions) undertaken by the entity in respect of the accounting period do not exceed the specified amount:
+form1/Page3_E | text | the total amount of transfers of properties (excluding financial assets and intangibles) does not exceed HK$220 million;
+form1/Page3_E | text | (ii) the total amount of transactions in respect of financial assets does not exceed HK$110 million; (iii) the total amount of transfers of intangibles does not exceed HK$110 million; (iv) the total amount of other transactions does not exceed HK$44 million.
+form1/Page3_E | text | 4.
+form1/Page3_E | text | “Group in the extended sense” means –
+form1/Page3_E | text | (a)
+form1/Page3_E | text | a group in the usual sense, which means a collection of enterprises related through ownership or control such that –
+form1/Page3_E | text | it is required to prepare consolidated financial statements for financial reporting purposes under applicable accounting principles; or
+form1/Page3_E | text | it would be so required if equity interests in any of the enterprises were traded on a public securities exchange; or
+form1/Page3_E | text | a single enterprise if it is resident for tax purposes in one jurisdiction and is subject to tax in another jurisdiction with respect to the business carried out through a permanent establishment in that other jurisdiction.
+form1/Page3_E | text | 5.
+form1/Page3_E | text | In section 1.2, you only need to state whether you are required to prepare master file and local file in respect of the controlled transactions. Under section 58C(2)(a) of the Inland Revenue Ordinance (Cap. 112) (“IRO”), the period for preparing the relevant files is 9 months after the end of the accounting period concerned.
+form1/Page3_E | text | 6.
+form1/Page3_E | text | Section 2 must be completed if you have entered into an advance pricing arrangement with the Commissioner.
+form1/Page3_E | text | 7.
+form1/Page3_E | text | If there was any material change in the facts and circumstances specified in the arrangement, you must provide the details of the changes in your profits tax computation.
+form1/Page3_E | text | 8.
+form1/Page3_E | text | Under section 58H of the IRO, a Hong Kong entity of a multinational enterprise group (Note 10) that is a reportable group (Note 9) must, within 3 months after the end of the accounting period, file a written notice with the Commissioner to identify the ultimate parent entity (Note 11) of the group or the constituent entity responsible for filing the country-by-country (“CbC”) report through the CbC Reporting Portal unless (a) it is not the ultimate parent entity of the group, the surrogate parent entity (Note 14) of the group nor the entity that is to file a CbC return for the group; and (b) another Hong Kong entity has filed such a notice.
+form1/Page3_E | text | 9.
+form1/Page3_E | text | A multinational enterprise group is a reportable group for an accounting period if it had a total consolidated group revenue (Note 12) of at least the following threshold amount for immediate preceding accounting period (Note 13): (a) for a group with its ultimate parent entity resident in Hong Kong - HK$6.8 billion; or
+form1/Page3_E | text | for a group with its ultimate parent entity resident in a jurisdiction other than Hong Kong - the threshold amount for CbC reporting specified under the laws or regulations of that jurisdiction or an amount equivalent to EUR750 million as at January 2015.
+form1/Page3_E | text | 10.
+form1/Page3_E | text | “Multinational enterprise group” means a group in the usual sense (Note 4(a)) that includes: (a) two or more enterprises of which the tax residence is in different jurisdictions; or
+form1/Page3_E | text | an enterprise that is resident for tax purposes in one jurisdiction and is subject to tax in another jurisdiction with respect to the business carried out through a permanent establishment in that other jurisdiction.
+form1/Page3_E | dateTimeEdit PrintTime | 
+form1/Page3_E | text | BIRS2 (4/2025)
+form1/Page3_E | textEdit XMLversion | 
+form1/Page4_E | text | 12.
+form1/Page4_E | text | “Ultimate parent entity” means a constituent entity of a group in the usual sense that meets the following conditions:
+form1/Page4_E | text | (a)
+form1/Page4_E | text | it owns directly or indirectly a sufficient interest in one or more other constituent entities of the group such that it is required to prepare consolidated financial statements under accounting principles generally applied in its jurisdiction of tax residence, or would be so required if its equity interests were traded on a public securities exchange in its jurisdiction of tax residence; and
+form1/Page4_E | text | (b)
+form1/Page4_E | text | there is no other constituent entity of the group that owns directly or indirectly an interest described in paragraph (a) in the constituent entity.
+form1/Page4_E | text | 13.
+form1/Page4_E | text | “Total consolidated group revenue” means the group’s total consolidated revenue as reflected in the group’s consolidated financial statements.
+form1/Page4_E | text | 14.
+form1/Page4_E | text | “Immediate preceding accounting period” means the accounting period that ends immediately before the commencement of the accounting period concerned.
+form1/Page4_E | text | 15.
+form1/Page4_E | text | “Surrogate parent entity” means a constituent entity of a reportable group appointed as the sole substitute for the ultimate parent entity to file a CbC return or report on behalf of the group.
+form1/Page4_E | text | 16.
+form1/Page4_E | text | Completion of sections 3.3.1 and 3.3.2 will NOT constitute the submission of a notice under section 58H of the IRO.
+form1/Page4_E | text | 17.
+form1/Page4_E | text | BIRS2 (4/2025)
+form1/Page4_E | dateTimeEdit PrintTime | 
+form1/Page4_E | text | Section 4 must be completed if you are a Part 4AA entity (Note 17(e)) of an MNE group (Note 17(b)) with annual consolidated revenue of EUR 750 million or more in at least two of the four fiscal years (Note 17(d)) immediately preceding the fiscal year concerned (“in-scope MNE group”).
+form1/Page4_E | text | For the purposes of Section 4,
+form1/Page4_E | text | “Group” means –
+form1/Page4_E | text | are excluded from the consolidated financial statements of the ultimate parent entity solely on size or materiality grounds, or on the grounds that the entity is held for sale; or
+form1/Page4_E | text | a collection of entities that are related through ownership or control such that the assets, liabilities, income, expenses and cash flows of those entities:
+form1/Page4_E | text | (i)
+form1/Page4_E | text | (I)
+form1/Page4_E | text | (II)
+form1/Page4_E | text | “MNE group” means a group (Note 17(a)) that includes at least one entity or permanent establishment that is not located in the jurisdiction of the ultimate parent entity;
+form1/Page4_E | text | an entity that is located in one jurisdiction and has one or more permanent establishments located in other jurisdictions provided that the entity is not a part of the another group described in sub-paragraph (i) above;
+form1/Page4_E | text | are included in the consolidated financial statements of the ultimate parent entity (Note 17(c)); or
+form1/Page4_E | text | (ii)
+form1/Page4_E | textEdit XMLversion | 
+form1/Page4_E | text | 11.
+form1/Page4_E | text | “Ultimate parent entity” means either:
+form1/Page4_E | text | an entity that:
+form1/Page4_E | text | owns directly or indirectly a controlling interest in any other entity; and
+form1/Page4_E | text | is not owned, with a controlling interest, directly or indirectly by another entity; or
+form1/Page4_E | text | the main entity of a group that is described in Note 17(a)(ii);
+form1/Page4_E | text | “Fiscal year” means an accounting period with respect to which the ultimate parent entity of the MNE group prepares its consolidated financial statements. In the situation where the ultimate parent entity does not prepare consolidated financial statements, the ultimate parent entity will be assumed to have prepared consolidated financial statements. In such case, the fiscal year means the calendar year.
+form1/Page4_E | text | “Part 4AA entity”, in relation to an MNE group, means (i) a HK constituent entity (Note 17(f)) of the MNE group; (ii) a HK standalone JV (Note 17(g)) of the MNE group; (iii) a HK member (Note 17(j)) of a JV group (Note 17(k)) of the MNE group; or (iv) a Part 4AA stateless constituent entity (Note 17(l)) of the MNE group;
+form1/Page4_E | text | “HK constituent entity”, in relation to an MNE group, means a constituent entity of the MNE group that is located in Hong Kong;
+form1/Page4_E | text | “HK standalone JV” means a standalone JV (Note 17(h)) that –
+form1/Page4_E | text | is located in Hong Kong; or
+form1/Page4_E | text | would have been a Part 4AA stateless constituent entity, had it been a constituent entity;
+form1/Page4_E | text | “Standalone JV” means a joint venture that has no JV subsidiary (Note 17(i));
+form1/Page4_E | text | “JV subsidiary” means an entity whose assets, liabilities, income, expenses and cash flows are consolidated by a joint venture under an acceptable financial accounting standard (or would have been consolidated had it been required to consolidate such items in accordance with an acceptable financial accounting standard). A permanent establishment whose main entity is the joint venture or a JV subsidiary shall be treated as a separate JV subsidiary.
+form1/Page4_E | text | (c)
+form1/Page4_E | text | (e)
+form1/Page4_E | text | (d)
+form1/Page4_E | text | (f)
+form1/Page4_E | text | (g)
+form1/Page4_E | text | (h)
+form1/Page5_E | text | You must export the filled form to XML file and upload the XML file via the electronic filing of Profits Tax Return services under GovHK for submission. If you do not choose to submit Profits Tax Return through electronic filing or semi-electronic filing, you have to print and sign a paper Control List (containing details of the XML file uploaded and QR code) generated by the electronic filing of Profits Tax Return services for submission together with the Profits Tax Return in order to complete the submission process. The Control List of this supplementary form must be signed by the same person signing the tax return.
+form1/Page5_E | text | BIRS2 (4/2025)
+form1/Page5_E | dateTimeEdit PrintTime | 
+form1/Page5_E | textEdit XMLversion | 
+form1/Page5_E | text | (j)
+form1/Page5_E | text | (i)
+form1/Page5_E | text | (ii)
+form1/Page5_E | text | (k)
+form1/Page5_E | text | (l)
+form1/Page5_E | text | (m)
+form1/Page5_E | text | (n)
+form1/Page5_E | text | (o)
+form1/Page5_E | text | (I)
+form1/Page5_E | text | (II)
+form1/Page5_E | text | “HK member”, in relation to a JV group of an MNE group, means the joint venture or another member of the JV group that –
+form1/Page5_E | text | is located in Hong Kong; or
+form1/Page5_E | text | would have been a Part 4AA stateless constituent entity, had it been a constituent entity;
+form1/Page5_E | text | “JV group” means a joint venture and its JV subsidiaries;
+form1/Page5_E | text | “Part 4AA stateless constituent entity”, in relation to an MNE group, means a stateless constituent entity of the MNE group –
+form1/Page5_E | text | that is created in Hong Kong; or
+form1/Page5_E | text | that is a place of business in Hong Kong, and is a permanent establishment in accordance with paragraph (d) of the definition of “permanent establishment” in Article 10.1.1 of the GloBE rules;
+form1/Page5_E | text | “Designated filing entity” means a constituent entity of an MNE group (other than the ultimate parent entity) that:
+form1/Page5_E | text | is located in Hong Kong and is appointed by the group to file, on behalf of the group, the top-up tax return for a fiscal year; or
+form1/Page5_E | text | is located in a GloBE jurisdiction other than Hong Kong and is appointed by the group to file the GloBE information return on behalf of the group for a fiscal year;
+form1/Page5_E | text | “GloBE jurisdiction” means (i) Hong Kong; or (ii) another jurisdiction with a qualified IIR, qualified UTPR or qualified domestic minimum top-up tax; and
+form1/Page5_E | text | “Designated local entity” means a constituent entity of an MNE group that:
+form1/Page5_E | text | is located in Hong Kong; and
+form1/Page5_E | text | is appointed by all the HK constituent entities of the group –
+form1/Page5_E | text | to file a notice for the purposes of section 5 of Schedule 63 to the IRO (“top-up tax notification”); and
+form1/Page5_E | text | to file a top-up tax return in accordance with section 3 of Schedule 63 to the IRO,
+form1/Page5_E | text | with the Commissioner on behalf of those constituent entities for a fiscal year.
+form1/Page5_E | text | 20.
+form1/Page5_E | text | 19.
+form1/Page5_E | text | 18.
+form1/Page5_E | text | 21.
+form1/Page5_E | text | 22.
+form1/Page5_E | text | According to section 5 of Schedule 63 to the IRO, each HK constituent entity of an in-scope MNE group (“subject entity”) must, within 6 months after the end of the fiscal year (“notification deadline”), file a top-up tax notification with the Commissioner to identify the entity and jurisdiction from which Hong Kong will receive the GloBE information return and any other information relevant for determining a HK constituent entity’s obligation to file a top-up tax return. This obligation can be relieved if another HK constituent entity being the ultimate parent entity (Note 17(c)), designated filing entity (Note 17(m)) or designated local entity (Note 17(o)) of the group has filed, by the notification deadline, such a notification stating that it is to file the top-up tax return, with the Commissioner, on behalf of the subject entity and all other HK constituent entities of the group. The obligation of filing top-up tax notifications also applies to HK standalone JVs, HK members of JV groups and Part 4AA stateless constituent entities of in-scope MNE groups in the same way as it applies to HK constituent entities.
+form1/Page5_E | text | Section 4.3 is applicable if you are a HK constituent entity or a HK member of a JV group, of the MNE group and your answer to section 4.2 is “No”.
+form1/Page5_E | text | In case you are a HK standalone JV or a HK member of a JV group of an in-scope MNE group (Group A) and any of the following circumstances is met:
+form1/Page5_E | text | you are also a HK standalone JV or a HK member of a JV group of another in-scope MNE group (Group B);
+form1/Page5_E | text | you are also a HK constituent entity of another in-scope MNE group (Group B),
+form1/Page5_E | text | please complete Section 4 with information in relation to Group A and furnish the information in relation to Group B, in your profits tax computation, in the same format.
+form1/Page5_E | text | Completion of sections 4.4.1 to 4.4.3 will NOT constitute the submission of a top-up tax notification under section 5 of Schedule 63 to the IRO.
+form1/Page5_E | text | (b)
+form1/Page5_E | text | (a)
+form1/Page5_E | text | You may leave sections 4.4.2 and/or 4.4.3 blank if you do not have the details of the group’s designated filing entity and/or designated local entity.
+form1/Page5_E | text | 23.
+form1/NotePage | text | 為確保可輸入資料的PDF表格的功能可正常運作，請先下載有關的PDF檔案至本機硬碟，然後以最新的 Adobe Acrobat Reader（11或以上的版本）開啟並輸入資料。你可經由 https://acrobat.adobe.com/hk/zh-Hant/acrobat/pdf-reader.html下載有關軟件。
+form1/NotePage | text | 為確保可輸入資料的PDF表格的功能可正常運作，請先下載有關的PDF檔案至本機硬碟，然後以最新的 Adobe Acrobat Reader開啟並輸入資料。你可經由 https://acrobat.adobe.com/hk/zh-Hant/acrobat/pdf-reader.html下載有關軟件。 To ensure the functions embedded in the fillable PDF form can be performed properly, please download the fillable PDF form to local drive, open and complete the form by using the latest version of Adobe Acrobat Reader which can be downloaded from https://acrobat.adobe.com/hk/en/acrobat/pdf-reader.html.

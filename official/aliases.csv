@@ -1,0 +1,37 @@
+alias,work_id,lang,note
+企业所得税法,cn.law.eit,zh,short title
+企业所得税法实施条例,cn.reg.eit,zh,short title
+税收征收管理法,cn.law.tca,zh,short title
+税收征管法,cn.law.tca,zh,common short form
+征管法,cn.law.tca,zh,common short form
+税收征收管理法实施细则,cn.reg.tca,zh,short title
+印花税法,cn.law.stamp,zh,short title
+行政复议法,cn.law.ar,zh,short title
+税务条例,hk.cap112,zh,simplified form of 稅務條例 used in Mainland guides
+稅務條例,hk.cap112,zh-hk,Chinese short title of Cap. 112
+印花稅條例,hk.cap117,zh-hk,Chinese short title of Cap. 117
+印花税条例,hk.cap117,zh,simplified form
+InlandRevenueOrdinance,hk.cap112,en,short title
+IRO,hk.cap112,en,abbreviation used in IRD guidance
+StampDutyOrdinance,hk.cap117,en,short title
+IncomeTaxAct,sg.ita1947,en,short title without year
+IncomeTaxAct1947,sg.ita1947,en,short title
+ITA,sg.ita1947,en,abbreviation used in IRAS guidance
+GoodsandServicesTaxAct,sg.gsta1993,en,short title without year
+GoodsandServicesTaxAct1993,sg.gsta1993,en,short title
+StampDutiesAct,sg.sda1929,en,short title without year
+StampDutiesAct1929,sg.sda1929,en,short title
+InterpretationAct,sg.ia1965,en,short title without year
+InterpretationAct1965,sg.ia1965,en,short title
+HolidaysAct,sg.ha1998,en,short title without year
+HolidaysAct1998,sg.ha1998,en,short title
+MultinationalEnterprise(MinimumTax)Act2024,sg.memta2024,en,short title
+MultinationalEnterprise(MinimumTax)Act,sg.memta2024,en,short title without year
+征管法实施细则,cn.reg.tca,zh,common short form
+税收征管法实施细则,cn.reg.tca,zh,common short form
+所得税法,cn.law.eit,zh,short form used in STA notices (bare; a 《所得税法》 in a guide to another jurisdiction is not this)
+所得税法实施条例,cn.reg.eit,zh,short form used in STA notices
+中新税收协定,treaty.cn-sg.2007,zh,common short name
+中新协定,treaty.cn-sg.2007,zh,common short name
+内地和香港税收安排,treaty.cn-hk.2006,zh,common short name
+内地与香港税收安排,treaty.cn-hk.2006,zh,common short name

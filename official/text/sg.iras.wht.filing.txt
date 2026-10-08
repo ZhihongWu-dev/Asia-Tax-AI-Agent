@@ -1,0 +1,228 @@
+File Withholding Tax (WHT) via
+mytax.iras.gov.sg
+using
+Singpass
+.
+Foreign individuals without a Singapore Government-issued ID may use a
+Singpass Foreign user Account (SFA)
+.
+On this page:
+Non-Individual Payers
+If you are filing WHT for your company, partnership or client, you must be authorised by your company or client in Corppass to access the digital services at
+mytax.iras.gov.sg
+. For assistance on Corppass setup, please refer to the relevant
+Step-by-Step Guides
+.
+If you are filing for the first time or there is a change of authorised filer, complete Step 1: Authorise Users for WHT filing before filing.
+If you are a liquidator filing WHT for a liquidated company,
+view instructions
+(PDF, 2.11.MB) on how to authorise users for WHT filing.
+Individual Payers
+If you are filing WHT as an individual payer (i.e. not on behalf of a company, partnership or client) for the first time, submit the required information through
+FormSG
+to activate your S45 Withholding Tax account.
+Once your account has been activated, proceed to Step 2: File your WHT on
+mytax.iras.gov.sg
+.
+Step 1: Authorise Users for WHT filing
+Staff/ third party filing for your company/ partnership or client for the first time
+The following steps must be performed in Corppass by the Corppass Administrator (CPA)/ Sub-Admin of the company or partnership before the staff/ third party can file WHT:
+Create Corppass user accounts for the persons transacting with IRAS.
+Assign the S45 Withholding Tax (Filing) digital service to the Corppass user account and select user’s role as either a Preparer or an Approver.
+Preparer
+Approver
+Authorised to complete the WHT filing and save it as a draft or submit to Approver.
+An acknowledgement page of the successful submission to Approver will be shown.
+Authorised to complete the WHT filing and save it as a draft or review the WHT filing completed by a Preparer.
+Not authorised to submit
+the WHT filing to IRAS.
+Preparer should inform the Approver that the draft or submission is ready for review and approval before submission to IRAS. The Approver must review and grant approval within 60 days, otherwise the above draft/submission will be deleted.
+Authorised to submit the WHT filing to IRAS
+.
+Users who are authorised with “access to all e-Services” during the Corppass set-up will be assigned the role as an Approver.
+Assign the for Non-UEN only digital service to the Corppass accounts filing for a non-UEN entity (e.g. REIT).
+Step 2: File your WHT on mytax.iras.gov.sg
+If you are authorised to file WHT for Non-Individual Payers, use Singpass or SFA to log in to
+mytax.iras.gov.sg
+and select “Company/ Business Tax” or "Tax Agent > Business Client",
+whichever is applicable.
+If you are filing WHT as an Individual Payer, use Singpass or SFA to log in to
+mytax.iras.gov.sg
+and select "Personal Tax".
+There are 2 ways to file WHT:
+If you are filing a small number of records, you can file online via the "File S45 Form" digital service. View
+S45 online filing guide
+(PDF, 1.12MB)
+If you are filing multiple records, it is more efficient to submit your records in an Excel file (
+S45 ODE Import Template
+(XLS, 652KB)) via
+S45 Offline Data-Entry (ODE) application
+.
+View
+S45 ODE application guide
+. (PDF, 1.30MB)
+Note:
+Please follow the steps to delete and re-install the ODE application shown in
+Filing Withholding Tax (WHT)
+,
+if you are not able to upload the ODE file due to an outdated version being used for submission to IRAS.
+Filing details
+Fields in WHT form
+Description
+Nature of payment
+Select the nature of payment from the drop down.
+Learn more about
+Types of payment and applicable Withholding Tax (WHT) rates
+.
+Payee Identity No.
+This is an optional field.
+Please enter only when payee has a Singapore Tax Reference Number, e.g. FIN number, ASGD number.
+If left blank, please ensure that the drop down list for types of identity no. remains at ‘Please select’ before proceeding further.
+Date of payment
+For the date of payment to the non-resident, state the
+earliest
+of the following dates:
+The date that the payment was due and payable based on the agreement or contract, or the date of invoice.
+The date that the payment was credited to the account of the non-resident or any other account designated by the non-resident.
+The date of actual payment.
+The relevant dates depending on whether the director fees were approved in arrears or approved in advance
+Learn more about
+Date of payment definition
+Period of payment
+This refers to the period that the payment is made for. If the period of payment covers more than 1 calendar year, please file for each calendar year separately.
+Period of engagement
+This refers to the period in which the non-resident professional or non-resident public entertainer is engaged to render their services. If the period of engagement covers more than 1 calendar year, please file for each calendar year separately.
+Taxable income
+Please state the gross amount, rounded down to the nearest dollar, which is subject to WHT in Singapore dollars.
+If your payment to the non-resident is in foreign currency, convert the amount into Singapore dollars using either of the following rates as at the
+date of payment
+to the non-resident:
+Your bank's foreign currency daily selling rate.
+The
+daily exchange rate
+provided on the MAS' website.
+Relief/Incentive (if applicable)
+If you are applying for Double Taxation Relief (DTR) or Approved Royalties Incentive (ARI) to withhold tax at a lower rate, please check the applicable box while filing.
+Late payment penalties may be imposed if the wrong relief or incentive is declared.
+Before claiming
+DTR
+, please ensure that:
+The non-resident is a tax resident of Singapore’s Double Taxation Agreement (DTA) partner and the income is not effectively connected to any permanent establishment in Singapore. Learn more about permanent establishments in the
+relevant DTA.
+The
+original Certificate of Residence (COR) is obtained
+from the non-resident for each of the year that DTR is claimed. Learn more about
+Claim of relief under the Avoidance of Double Taxation Agreement (DTA)
+.
+Before claiming
+ARI
+, please ensure that:
+You have a Letter of Acceptance (LOA) from Economic Development Board showing the reduced or nil WHT rate on the royalty payment made to the non resident. IRAS will request for a signed copy the LOA if required.
+Step 3: View the acknowledgement page and make payment
+You will receive an acknowledgment page upon successful filing.
+Please follow the instructions on the acknowledgment page to make payment (if applicable) to IRAS by the
+due date
+.
+Learn more about the various
+WHT payment modes
+and
+payment due dates
+.
+Step 4: View and download S45 Notices and Letters
+You can view and download the electronic copies of the following Notices/ Letters from the current year and past 3 years via
+mytax.iras.gov.sg
+:
+Confirmation of Payment
+Revised Confirmation of Payment
+Filing Acknowledgement Page
+Amendment Acknowledgement Page
+Late Payment Penalty Notice
+Imposition of Additional Penalty Letter
+Imposition of Additional Penalty Interval Letter
+Withdrawal of Late Payment Penalty (DTR) Notice
+Appointment Notice (Taxpayer's Copy)
+Reassessment Letter
+Compatible browsers include Microsoft Edge, Google Chrome and Safari. Please disable the ‘Pop-up’ blocker before viewing and downloading the Notices/Letters.
+Learn more about viewing
+S45 Notices and Letters
+(PDF, 532KB).
+Other WHT digital services
+Besides filing WHT, you can also view the
+S45 GIRO plan
+(PDF, 461KB) and
+S45 COR status
+(PDF, 297KB) on
+mytax.iras.gov.sg
+. Learn more about
+WHT digital services
+.
+FAQs
+Can I file WHT via a paper form?
+With effect from 1 Jul 2016, payers are required to file WHT to IRAS via
+mytax.iras.gov.sg
+. Failure to do so is an offence under S94(2) of the
+Income Tax Act.
+What are the different filing modes available?
+You may file online via
+mytax.iras.gov.sg
+or the
+S45 Offline Data Entry (ODE)
+application.
+Are there any filing guides available?
+You may view our
+latest filing guides
+.
+Is there a charge for using S45 digital services?
+There is no charge for using S45 digital services.
+What is the due date for filing of WHT?
+WHT must be filed by the 15th of the second month from the
+date of payment
+to a non-resident.
+What should I do if I realise that there is an error in the WHT form after successful submission to IRAS?
+For WHT record submitted within 2 backs years from current date
+Please amend the WHT record via
+mytax.iras.gov.sg
+> S45 > View/Amend S45 Form.
+For WHT record submitted more than 2 back years from current date
+If there is additional gross taxable income (i.e. gross amount) to be declared:
+Example
+WHT was wrongly reported in foreign currency instead of in Singapore dollars during filing.
+What you need to do
+Please file the additional amount via
+mytax.iras.gov.sg
+and make payment arrangements.
+For all other amendments:
+Examples
+- Claim DTR after previously withholding at domestic rate
+- Correct an error in the non-resident's name, nature of payment or date of payment
+What you need to do
+Please
+submit the filing amendments online as a
+business payer
+or a
+tax agent/ individual payer
+with the relevant
+supporting documents
+(PDF,
+78KB) uploaded:
+IRAS will respond to your request within 15 working days.
+This is my first time paying WHT late. Can I appeal for a waiver of the late payment penalty imposed?
+Generally, penalties will not be waived unless there are exceptional circumstances.
+IRAS may consider your
+appeal for a waiver of the late payment penalty
+if you satisfy all the following conditions:
+This is your first appeal or you have filed and paid on time in the last 2 years;
+You have paid the overdue tax in full; and
+You demonstrate initiative to pay your tax by the due date in future such as signing up for GIRO payment.
+IRAS will process your request within 15 working days.
+What happens if I fail to file and pay the tax withheld from payment to non-resident to IRAS?
+It is an offence under S45(5) of the Income Tax Act if any person after deducting tax withheld from payment to non-resident fails to file and pay the tax withheld to IRAS by the stipulated due date. The person shall be guilty of an offence and shall on
+conviction pay a penalty equal to 3 times the amount of tax so deducted and shall also be liable to a fine not exceeding $10,000 or to imprisonment for a term not exceeding 3 years or to both.
+Pages
+How to Pay
+Pages
+Late payment or non-payment of Withholding Tax (WHT)
+Documents
+Basic Withholding Tax Applicability Calculator for Non-Resident Individual (ZIP, 266KB)
+Documents
+Basic Withholding Tax Applicability Calculator for Non-Resident Company (ZIP, 382KB)

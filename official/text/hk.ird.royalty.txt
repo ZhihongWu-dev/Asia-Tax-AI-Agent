@@ -1,0 +1,194 @@
+- 1 - 
+ 
+Frequently Asked Questions: 
+Non-resident Persons (Other Than Individuals)  
+ 
+Q.1   Is an offshore company, i.e. one incorporated outside Hong Kong, liable to pay 
+Hong Kong profits tax? 
+ 
+A.1     The Inland Revenue Ordinance (“IRO”) contains no exemption from profits tax for 
+offshore companies. Whether an offshore company is liable to profits tax depends 
+on the nature and extent of its activities in Hong Kong. 
+ 
+Q.2 
+Under what circumstances is an offshore company liable to profits tax? 
+ 
+A.2     Generally speaking, a company is liable to profits tax if it carries on a  trade, profession 
+or business in Hong Kong and has profits arising in or derived from Hong Kong from 
+such trade, profession or business. This applies equally to Hong Kong companies and 
+those incorporated overseas. 
+ 
+Q.3   How does the IRD decide whether a company is carrying on a business in Hong 
+Kong? 
+ 
+A.3    This is a question of fact and has to be decided by reference to the circumstances of 
+each case. It should, however, be noted that a company need not have extensive 
+activities in Hong Kong before it is considered to be carrying on a business here. 
+Furthermore, the activities of a company’s agents in Hong Kong may also be relevant. 
+ 
+Q.4   How does the IRD decide whether a company’s profits arise in or are derived 
+from Hong Kong? 
+ 
+A.4     Again this is a question of fact.    The general guideline is to ascertain the operations 
+of the company that give rise to the profits and the places where such operations are 
+carried out. Further details of the IRD’s views on the determination of the territorial 
+source of profits are contained in Departmental Interpretation and Practice Note 
+(“DIPN”) No. 21: Locality of Profits, which can be downloaded from the IRD’s 
+website at https://www.ird.gov.hk/eng/pdf/dipn21.pdf. 
+
+- 2 - 
+ 
+Q.5   What are the reporting requirements for an offshore company carrying on a 
+business in Hong Kong? 
+ 
+A.5     An offshore company carrying on a business in Hong Kong is subject to the same 
+reporting requirements as a Hong Kong company. The basic requirements are that 
+the company has to register its business with the Business Registration Office of the 
+IRD and to furnish profits tax returns issued to it. 
+ 
+If the company has profits chargeable to tax for any year of assessment but has not 
+received any return from the IRD, it has to inform the IRD in writing of its liability 
+within 4 months after the end of the basis period for that year of assessment. 
+ 
+Furthermore, the company is required to keep sufficient records (in English or Chinese) 
+to enable its assessable profits to be readily ascertained and the records must be retained 
+for at least seven years after the completion of the relevant transactions. 
+ 
+Q.6    Is it necessary for an offshore company to submit audited accounts when it files 
+its profits tax return? 
+ 
+A.6     Where the company is incorporated in a jurisdiction whose laws  do not  require 
+accounts to be audited and no audit has been performed on the company’s accounts, 
+the IRD would accept unaudited accounts filed in support of the return.  However, if 
+an audit has actually been carried out notwithstanding that there is no such 
+requirement under the laws of the relevant jurisdiction, the audited accounts should be 
+submitted with the return. 
+ 
+Where an offshore company’s head office is outside Hong Kong but it has a branch in 
+Hong Kong, the IRD is generally prepared to accept unaudited branch accounts without 
+the cover of audited world-wide accounts. However, the assessor may request a copy 
+of the audited world-wide accounts if circumstances warrant. 
+ 
+Q.7  My company has made some royalties/assignment fees/rental payments to an 
+offshore company which as far as I know does not carry on any business in 
+Hong Kong.  Are the royalties/assignment fees/rental income received by the 
+offshore company chargeable to profits tax? 
+ 
+A.7 
+Even if the offshore company does not carry on any business in Hong Kong, the 
+royalties/assignment fees/rentals it received are nevertheless chargeable to profits tax if 
+they are: 
+
+- 3 - 
+ 
+(a) 
+payments received from the exhibition or use in Hong Kong of cinematograph or 
+television film or tape, any sound recording, or any advertising material 
+connected with such film, tape, or recording; 
+(b) 
+payments received for the use, or the right to the use, in Hong Kong of any patent, 
+design, trade mark, copyright material, *layout-design (topography) of an 
+integrated circuit, *performer’s right, *plant variety right, secret process or 
+formula; 
+(c) 
+payments received for the use, or the right to the use, outside Hong Kong of any 
+patent, design, trade mark, copyright material, *layout-design (topography) of 
+an integrated circuit, *performer’s right, *plant variety right, secret process or 
+formula, which are deductible in ascertaining the assessable profits of a 
+person under Profits Tax; 
+(d) 
+payments received for an assignment of, or an agreement to assign, a performer’s 
+right in relation to a performance given by a performer in Hong Kong on or after 
+29 June 2018 and they were paid or accrued to the performer or an organizer; or  
+(e) 
+payments received by way of hire, rental or similar charges for the use or the right 
+to use movable property in Hong Kong. 
+ 
+(*not applicable for payments received or accrued before 29 June 2018) 
+ 
+For the payments specified in paragraphs (a) to (c) above, the assessable profits are taken 
+to be 30% of the payments (or 10%, if the payments were received by or accrued to 
+the offshore company before 1 April 2003) but may be taken to be 100% of the 
+payments if the offshore company is your company’s associate.  The tax payable is 
+then computed by applying the appropriate tax rate to the assessable profits so arrived 
+at. Furthermore, except for the payments specified in paragraph (e) above, the 
+offshore company is chargeable in your company’s name and your company is required 
+under the IRO to withhold from the payments made to the offshore company 
+sufficient money for the payment of the tax. 
+ 
+Q.8 
+Are there any tax rules that are specifically relevant to offshore companies? 
+ 
+A.8 
+Basically, offshore companies and Hong Kong companies are treated in the same way. 
+However, if a company is a non-resident, the following should be noted: 
+ 
+(a) 
+A non-resident is chargeable to tax either directly or in the name of his agent 
+in respect of his Hong Kong sourced profits from a trade, profession or business 
+carried on in Hong Kong. The tax may be recovered out of the assets of 
+the non-resident or from the agent and the agent is required to retain from the 
+non-resident’s assets sufficient money to pay the tax. 
+
+- 4 - 
+ 
+ 
+(b) 
+A non-resident receiving royalty income/assignment fees as described in the 
+answer to Q.7 is subject to profits tax in the way explained therein. 
+ 
+(c) 
+A local person (including a company) who sells goods in Hong Kong on 
+behalf of a non-resident shall furnish quarterly returns to the IRD showing the 
+gross proceeds from the sales and at the same time pay to the IRD a sum equal 
+to 1% of the sale proceeds, or such lesser sum as may have been agreed by 
+the IRD. 
+ 
+(d) 
+Where a non-resident receives sums directly or indirectly from the performance 
+in Hong Kong by a non-resident entertainer or sportsman, special procedures of 
+assessment and collection of tax would apply.  For more details, see pamphlet: 
+“Taxation of non-resident entertainers and sportsmen in Hong Kong”, which 
+can 
+be 
+downloaded 
+from 
+the 
+IRD’s 
+website 
+at 
+https://www.ird.gov.hk/eng/pdf/pam48e.pdf. 
+ 
+It should however be noted that whether a company is a non-resident is largely a 
+question of fact and that not every offshore company is regarded as a non-resident. 
+ 
+Q.9 
+My company has made some payments to an offshore partnership rendering 
+services related to arbitration proceedings in Hong Kong.  Is the service income of 
+the offshore partnership chargeable to profits tax? 
+ 
+A.9 
+If the offshore partnership carries on a trade, profession or business in Hong Kong, it is 
+liable to pay profits tax in Hong Kong.  The answers to Q.1 to Q.5 above are also 
+applicable to offshore partnerships.  The assessable profits will be charged at standard 
+rate or two-tiered rates in computing the profits tax liability.  For more details on the tax 
+rates, please visit the IRD’s website at https://www.ird.gov.hk/eng/tax/ind_tra.htm. 
+ 
+Q10.  How can an offshore company be more certain about whether its activities will 
+give rise to profits tax liability? 
+ 
+A10.   The company may consider applying, on payment of an appropriate  fee,  for  an 
+advance ruling under section 88A of the IRO in respect of a contemplated transaction 
+or arrangement. Details of the application procedures are set out in DIPN No. 31: 
+Advance Rulings, which can be downloaded from the IRD’s website at  
+https://www.ird.gov.hk/eng/pdf/dipn31.pdf. 
+ 
+ 
+ 
+
+- 5 - 
+ 
+ 
+October 2020 
+ 
+(This leaflet is issued for general information only) 

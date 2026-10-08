@@ -1,0 +1,739 @@
+form1 | dateTimeEdit PrintTime | 
+form1 | text | BIRS19 (4/2025)
+form1 | text | Page of
+form1 | numericEdit CurrentPage | Text Field
+form1 | numericEdit PageCount | Text Field
+form1 | button Button3 | Reset
+form1 | button Button2 | Print
+form1 | button Button1 | Save
+form1 | text | File No. :
+form1 | text | Year of Assessment :
+form1 | textEdit fileNo_display | 
+form1 | textEdit year_display | 
+form1 | button Button4 | Export to XML
+form1 | textEdit XMLversion | 
+form1/SubForm_Header | button Button2 | Print
+form1/SubForm_Header | button Button1 | Save
+form1/SubForm_Header | button Button3 | Reset
+form1/SubForm_Header | button Button4 | Export to XML
+form1/SubForm_Header | textEdit FileNo_field | 
+form1/SubForm_Header | textEdit YA_field | 
+form1/SubForm_Header | textEdit T69 | 
+form1/SubForm_Header | textEdit T68 | 
+form1/SubForm_Footer | text | BIRS19 (4/2025)
+form1/SubForm_Footer | dateTimeEdit PrintTime | 
+form1/SubForm_Footer | text | Page of
+form1/SubForm_Footer | numericEdit CurrentPage | Text Field
+form1/SubForm_Footer | numericEdit PageCount | Text Field
+form1/SubForm_Footer | textEdit XMLversion | 
+form1/LandingPage | textEdit txt_landing | Lang Chosen
+form1/LandingPage | choiceList drop_landing | Lang List | options: English
+form1/LandingPage | button btn_landing | Confirm
+form1/LandingPage | textEdit formNo | 
+form1/LandingPage | textEdit IRD_FID | 
+form1/LandingPage | textEdit BIR_version | 
+form1/LandingPage | textEdit version | 
+form1/LandingPage | textEdit langControl | Text Field
+form1/Page1_E | text | SUPPLEMENTARY FORM TO PROFITS TAX RETURN
+form1/Page1_E | text | - TAXATION ON SPECIFIED FOREIGN-SOURCED INCOME
+form1/Page1_E | text | (applicable for year of assessment 2022/23 and subsequent years)
+form1/Page1_E | text | This supplementary form is part of the Profits Tax Return. You have to fill in the form electronically if the Taxpayer is an MNE entity (Note 1), and specified foreign-sourced income (Note 3) accrued to and/or was received in Hong Kong (Note 7) by the Taxpayer during the year of assessment. You must export the filled form to XML file and upload the XML file via the electronic filing of Profits Tax Return services under GovHK for submission (Note 48).
+form1/Page1_E | text | File No.
+form1/Page1_E | textEdit forInternalUse_E | 
+form1/Page1_E | numericEdit txt_tradeCat_E | Enter the first two digits of your file number.
+form1/Page1_E | text | /
+form1/Page1_E | numericEdit txt_brn_E | Enter the Business Registration Number.
+form1/Page1_E | text | Year of Assessment
+form1/Page1_E | choiceList drop_yearAss_E | Select the Year of Assessment. | options: 2022/23; 2023/24; 2024/25; 2025/26; 2026/27; 2023; 2024; 2025; 2026; 2027
+form1/Page1_E | text | Name of Taxpayer
+form1/Page1_E | textEdit txt_nameTaxpayer_E | Enter the Name of Corporation.
+form1/Page1_E | text | SECTION 1
+form1/Page1_E | dateTimeEdit txt_basisPeriodFrom_E | Enter the start date of Basis Period in “DD/MM/YYYY” format.
+form1/Page1_E | dateTimeEdit txt_basisPeriodTo_E | Enter the end date of Basis Period in “DD/MM/YYYY” format.
+form1/Page1_E | text | BASIS PERIOD (Note 8)
+form1/Page1_E | text | SECTION 2
+form1/Page1_E | text | DETAILS OF TAXPAYER AND SPECIFIED FOREIGN-SOURCED INCOME ACCRUED (Note 9)
+form1/Page1_E | text | 2.1
+form1/Page1_E | text | For the year of assessment, the Taxpayer was (tick the appropriate box) :
+form1/Page1_E | checkButton chk_hkResidentY_E | Tick this box if engineering officer was the full-time employee in Hong Kong who carried out the relevant activities and had the necessary qualifications.
+form1/Page1_E | text | a Hong Kong resident person (Note 10)
+form1/Page1_E | checkButton chk_hkResidentN_E | Tick this box if engineering officer was the full-time employee in Hong Kong who carried out the relevant activities and had the necessary qualifications.
+form1/Page1_E | text | a non-Hong Kong resident person that had a permanent establishment in Hong Kong (Note 11)
+form1/Page1_E | text | 2.2
+form1/Page1_E | text | Amount of each type of specified foreign-sourced income accrued in the basis period
+form1/Page1_E | text | 2.2.1
+form1/Page1_E | text | Interest (Note 12)
+form1/Page1_E | text | HK$
+form1/Page1_E | numericEdit txt_interest_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E | text | 2.2.2
+form1/Page1_E | text | Intellectual property income (“IP Income”) (Note 13) derived from:
+form1/Page1_E | text | (a)
+form1/Page1_E | text | qualifying intellectual property
+form1/Page1_E | numericEdit txt_incomeQualifyingIP_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E | text | (b)
+form1/Page1_E | text | non-qualifying intellectual property
+form1/Page1_E | numericEdit txt_incomeNonQualifyingIP_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E | text | 2.2.3
+form1/Page1_E | text | Dividends
+form1/Page1_E | numericEdit txt_dividends_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E | numericEdit txt_disposalEquityInt_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E | numericEdit txt_disposalQualifyingIP_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E | numericEdit txt_disposalNonqualifyingIP_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E | numericEdit txt_disposalOther_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E | text | 2.2.4
+form1/Page1_E | text | Disposal gains (Note 14) derived from the sale of:
+form1/Page1_E | text | SECTION 3
+form1/Page1_E | text | ECONOMIC SUBSTANCE REQUIREMENT (for foreign-sourced interest, dividend or non-IP disposal gain (Note 16))
+form1/Page1_E | checkButton chk_claimEconSubY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E | checkButton chk_claimEconSubN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E | text | 3.1
+form1/Page1_E | text | Has the Taxpayer obtained an advance ruling or a Commissioner’s opinion on compliance with the economic substance requirement (Note 17)?
+form1/Page1_E | text | Yes
+form1/Page1_E | checkButton chk_advanceRulingY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E | text | No
+form1/Page1_E | checkButton chk_advanceRulingN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E | text | 3.2
+form1/Page1_E | text | Details of the advance ruling and/or Commissioner's opinion obtained (Skip section 3.3 if your answer to section 3.2 is “No”)
+form1/Page1_E | text | Reference number of the ruling and/or opinion
+form1/Page1_E | textEdit txt_relNoOfRuling_E | Enter the name of the person signing this form.
+form1/Page1_E | text | For each of sections 3.3(b) and 3.3(c), tick “Yes” if the statement is correct, otherwise tick “No”.
+form1/Page1_E | text | The Taxpayer has relied on the ruling or opinion in preparing and providing the return.
+form1/Page1_E | checkButton chk_relyAdvanceRulingY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E | checkButton chk_relyAdvanceRulingN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E | text | (c)
+form1/Page1_E | text | The circumstances and arrangements specified in the ruling or opinion remained valid during the basis period of the year of assessment. (Note 17)
+form1/Page1_E | checkButton chk_materialChangesAdvRulingY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E | checkButton chk_materialChangesAdvRulingN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E | text | From
+form1/Page1_E | text | To
+form1/Page1_E | text | (day / month / year)
+form1/Page1_E | text | 3.3
+form1/Page1_E | text | (d)
+form1/Page1_E | text | equity interest
+form1/Page1_E | text | property (Note 5) other than equity interest and intellectual property
+form1/Page1_E | text | Does the Taxpayer rely on the economic substance requirement prescribed in section 15K of the Inland Revenue Ordinance (Cap. 112) (“IRO”) to claim tax exemption in respect of any income stated in sections 2.2.1, 2.2.3, 2.2.4(a) and 2.2.4(d) when such income is received in Hong Kong? (Skip the remaining part of section 3 if your answer to section 3.1 is “No”)
+form1/Page1_E | text | S19
+form1/Page2_E | text | 3.4
+form1/Page2_E | text | Adequacy of economic substance requirement (Skip section 3.4 if your answers to sections 3.2, 3.3(b) and 3.3(c) are “Yes”)
+form1/Page2_E | text | (a)
+form1/Page2_E | text | Was the Taxpayer a pure equity-holding entity (Note 18) for the year of assessment?
+form1/Page2_E | text | Yes
+form1/Page2_E | checkButton chk_pureEquityHoldingCompanyY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | text | No
+form1/Page2_E | checkButton chk_pureEquityHoldingCompanyN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | text | (b)
+form1/Page2_E | text | In case your answer to section 3.4(a) is “Yes”, did the Taxpayer comply with every applicable registration and filing requirement (Note 18)?
+form1/Page2_E | checkButton chk_complyY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_complyN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | text | (c)
+form1/Page2_E | text | Were the specified economic activities (Note 19) carried out in Hong Kong ?
+form1/Page2_E | checkButton chk_activitiesHKY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_activitiesHKN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | text | (d)
+form1/Page2_E | text | The specified economic activities were carried out by (tick the appropriate box(es)) :
+form1/Page2_E | checkButton chk_byTP_E | Tick this box if engineering officer was the full-time employee in Hong Kong who carried out the relevant activities and had the necessary qualifications. | options: 1
+form1/Page2_E | text | the Taxpayer through its employees (Notes 20 and 22);
+form1/Page2_E | checkButton chk_byOE_E | Tick this box if engineering officer was the full-time employee in Hong Kong who carried out the relevant activities and had the necessary qualifications. | options: 1
+form1/Page2_E | text | an outsourced entity (Notes 21 and 22)
+form1/Page2_E | text | (e)
+form1/Page2_E | text | Total number of employees in Hong Kong who carried out the specified economic activities and had the necessary qualifications (tick the appropriate box(es)):
+form1/Page2_E | text | Taxpayer
+form1/Page2_E | text | Outsourced entity
+form1/Page2_E | checkButton chk_under1TP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_under11TP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_under51TP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_under101TP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_over101TP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | text | None
+form1/Page2_E | text | 1 to 10
+form1/Page2_E | text | 11 to 50
+form1/Page2_E | text | 51 to 100
+form1/Page2_E | text | Over 100
+form1/Page2_E | checkButton chk_under1OE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_under11OE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_under201OE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_under501OE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_over500OE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | text | 11 to 200
+form1/Page2_E | text | 201 to 500
+form1/Page2_E | text | Over 500
+form1/Page2_E | text | (f)
+form1/Page2_E | text | Post titles of the employees covered in section 3.4(e) include (tick the appropriate box(es)):
+form1/Page2_E | text | - Director/Executive Director
+form1/Page2_E | text | - Finance Director
+form1/Page2_E | text | - Finance/Treasury Manager
+form1/Page2_E | text | - Investment Manager/Analyst
+form1/Page2_E | text | - Company Secretary
+form1/Page2_E | text | - Others:
+form1/Page2_E | checkButton chk_directorTP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page2_E | checkButton chk_financeDirectorTP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page2_E | checkButton chk_financeTP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page2_E | checkButton chk_investmentManagerTP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page2_E | checkButton chk_companySecretaryTP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page2_E | checkButton chk_postOthersTP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page2_E | checkButton chk_directorOE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page2_E | checkButton chk_financeDirectorOE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page2_E | checkButton chk_financeOE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page2_E | checkButton chk_investmentManagerOE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page2_E | checkButton chk_companySecretaryOE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page2_E | checkButton chk_postOthersOE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page2_E | textEdit txt_othersPostTitles_E | Enter the name of the person signing this form.
+form1/Page2_E | text | (g)
+form1/Page2_E | text | Amount of operating expenditure incurred in Hong Kong for the specified economic activities (tick the appropriate box(es)):
+form1/Page2_E | checkButton chk_under1MTP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_upTo2MTP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_upTo5MTP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_upTo10MTP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_over10MTP_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | text | Less than HK$1,000,000
+form1/Page2_E | text | HK$1,000,000 to HK$2,000,000
+form1/Page2_E | text | HK$2,000,001 to HK$5,000,000
+form1/Page2_E | text | HK$5,000,001 to HK$10,000,000
+form1/Page2_E | text | Over HK$10,000,000
+form1/Page2_E | checkButton chk_under1MOE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_upTo5MOE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_upTo10MOE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_upTo20MOE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_over20MOE_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | text | HK$1,000,000 to HK$5,000,000
+form1/Page2_E | text | HK$10,000,001 to HK$20,000,000
+form1/Page2_E | text | Over HK$20,000,000
+form1/Page2_E | text | (h)
+form1/Page2_E | text | For outsourced activities, details of the outsourced entity:
+form1/Page2_E | text | (i)
+form1/Page2_E | text | Name of the entity
+form1/Page2_E | textEdit txt_entityNameOE_E | Enter the name of the person signing this form.
+form1/Page2_E | text | (ii)
+form1/Page2_E | text | Business Registration Number
+form1/Page2_E | numericEdit txt_brnOE_E | Enter the Business Registration Number.
+form1/Page2_E | text | (iii)
+form1/Page2_E | text | Number of entities for which the outsourced entity carried out the specified economic activities (Note 23)
+form1/Page2_E | numericEdit txt_noOfEntitiesOE_E | Enter the Business Registration Number.
+form1/Page2_E | text | (iv)
+form1/Page2_E | text | Was the outsourced entity a related person?
+form1/Page2_E | checkButton chk_associatedY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_associatedN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | text | (v)
+form1/Page2_E | text | Did the Taxpayer exercise adequate monitoring over the carrying out of the specified economic activities by the outsourced entity to ensure that such activities were carried out in Hong Kong?
+form1/Page2_E | checkButton chk_exciseAdequateY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E | checkButton chk_exciseAdequateN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page3_E/sub1 | text | SECTION 4
+form1/Page3_E/sub1 | text | NEXUS REQUIREMENT (for foreign-sourced qualifying IP income (Note 25))
+form1/Page3_E/sub1 | text | 4.1
+form1/Page3_E/sub1 | text | Number of qualifying intellectual properties (Note 28) from which the qualifying IP income stated in section 2.2.2(a) or 2.2.4(b) was derived
+form1/Page3_E/sub1 | text | Does the Taxpayer rely on the nexus requirement prescribed in section 15L of the IRO to claim tax exemption in respect of an excepted portion (Note 24) of any qualifying IP income stated in section 2.2.2(a) or 2.2.4(b) when such income is received in Hong Kong? (Skip sections 4.3 to 4.6 if your answer to section 4.1 is “No”)
+form1/Page3_E/sub1 | text | Yes
+form1/Page3_E/sub1 | checkButton chk_claimNexusY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page3_E/sub1 | text | No
+form1/Page3_E/sub1 | checkButton chk_claimNexusN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page3_E/sub1 | numericEdit txt_noOfQualifyingIPDerived_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page3_E/sub1 | numericEdit txt_noOfQualifyingIP_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page3_E/sub1 | text | 4.2
+form1/Page3_E/sub1 | text | Number of qualifying intellectual properties in section 4.2 with an excepted portion of qualifying IP income claimed for tax exemption when such income is received in Hong Kong (Note 28)
+form1/Page3_E/sub1 | text | 4.3
+form1/Page3_E/SubF1/SubF11 | text | (a)
+form1/Page3_E/SubF1/SubF11 | text | Name of qualifying intellectual property
+form1/Page3_E/SubF1/SubF11 | textEdit num_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page3_E/SubF1/SubF11 | numericEdit No_E | 
+form1/Page3_E/SubF1/SubF11 | textEdit txt_nameOfQualifyingIP_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page3_E/SubF1/SubF11 | text | Registration status of the qualifying intellectual property
+form1/Page3_E/SubF1/SubF11 | text | Date of registration or application (Note 29)
+form1/Page3_E/SubF1/SubF11 | choiceList drop_registrationStatus_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations. | options: registered; application in progress; not applicable
+form1/Page3_E/SubF1/SubF11 | dateTimeEdit txt_registrationDate_E | Enter the end date of Basis Period in “DD/MM/YYYY” format.
+form1/Page3_E/SubF1/SubF11 | text | Business Registration Number
+form1/Page3_E/SubF1/SubF11 | text | (day / month / year)
+form1/Page3_E/SubF1/SubF11 | text | In case your answer to section 4.4(d) is “Yes”, provide the following details in respect of the selling entity:
+form1/Page3_E/SubF1/SubF11 | button Button3 | ＋
+form1/Page3_E/SubF1/SubF11 | text | (b)
+form1/Page3_E/SubF1/SubF11 | text | (c)
+form1/Page3_E/SubF1/SubF11 | text | (e)
+form1/Page3_E/SubF1/SubF11 | button Button4 | X
+form1/Page3_E/SubF1/SubF11 | checkButton chk_applicableY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page3_E/SubF1/SubF11 | checkButton chk_applicableN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page3_E/SubF1/SubF11 | button Button2 | Reset Sections 4.4 and 4.5
+form1/Page3_E/SubF1/SubF11 | text | Was the qualifying intellectual property acquired by the Taxpayer from an associated MNE entity (“selling entity”), and the intra-group transfer relief (Note 45) prescribed in section 15OA(3) of the IRO has been applied to the selling entity’s disposal gain derived from the qualifying intellectual property?
+form1/Page3_E/SubF1/SubF11 | text | (d)
+form1/Page3_E/SubF1/SubF11 | text | No
+form1/Page3_E/SubF1/SubF11 | text | Yes
+form1/Page3_E/SubF1/SubF11 | text | (i)
+form1/Page3_E/SubF1/SubF11 | text | Name of the entity
+form1/Page3_E/SubF1/SubF11 | text | (ii)
+form1/Page3_E/SubF1/SubF11 | textEdit txt_nameSellingEntity_E | Enter the name of the person signing this form.
+form1/Page3_E/SubF1/SubF11 | numericEdit txt_brnSellingEntity_E | Enter the Business Registration Number.
+form1/Page3_E/SubF1/SubF11 | text | Types of qualifying IP income derived from the qualifying intellectual property (tick the appropriate box(es)) :
+form1/Page3_E/SubF1/SubF11 | text | (f)
+form1/Page3_E/SubF1/SubF11 | text | Qualifying IP disposal gain (Note 27)
+form1/Page3_E/SubF1/SubF11 | text | Qualifying general IP income (Note 26)
+form1/Page3_E/SubF1/SubF11 | checkButton chk_qualifyingIPInc_E | Tick this box if engineering officer was the full-time employee in Hong Kong who carried out the relevant activities and had the necessary qualifications. | options: 1
+form1/Page3_E/SubF1/SubF11 | checkButton chk_qualifyingIPDisposalGain_E | Tick this box if engineering officer was the full-time employee in Hong Kong who carried out the relevant activities and had the necessary qualifications. | options: 1
+form1/Page3_E/SubF1/SubF11 | text | Was the transitional arrangement provided in section 10 of Schedule 17FC to the IRO adopted for ascertaining the R&D fraction (Notes 30 and 31)?
+form1/Page3_E/SubF1/SubF11 | text | (g)
+form1/Page3_E/SubF1/SubF11 | checkButton chk_transitionalArrangeY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page3_E/SubF1/SubF11 | checkButton chk_transitionalArrangeN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page3_E/SubF1/SubF11 | text | 4.4
+form1/Page3_E/SubF1/SubF11 | text | 4.5
+form1/Page3_E/SubF1/SubF11 | text | Provide details of qualifying research and development (“R&D”) expenditure (Note 32) and non-qualifying expenditure (Note 33) for computing the R&D fraction in respect of the qualifying intellectual property:
+form1/Page3_E/SubF1/SubF11 | text | Relevant expenditure incurred by the Taxpayer in respect of the qualifying intellectual property
+form1/Page3_E/SubF1/SubF11 | text | HK$
+form1/Page3_E/SubF1/SubF11 | numericEdit txt_qualifyingRnD_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page3_E/SubF1/SubF11 | text | In case your answer to section 4.4(d) is “Yes” and the income concerned is a qualifying IP disposal gain, relevant expenditure incurred by the selling entity in respect of the qualifying intellectual property
+form1/Page3_E/SubF1/SubF11 | text | R&D fraction (Note 34)
+form1/Page3_E/SubF1/SubF11 | numericEdit txt_nonQualifyingExp_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page3_E/SubF1/SubF11 | numericEdit txt_qualifyingRnDSellingEnt_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page3_E/SubF1/SubF11 | text | Qualifying R&D expenditure
+form1/Page3_E/SubF1/SubF11 | text | Non-qualifying expenditure
+form1/Page3_E/SubF1/SubF11 | numericEdit txt_nonQualifyingExpSellingEnt_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page3_E/SubF1/SubF11 | numericEdit txt_rNdFractionQualifyingIPInc_E | 輸入「有關連實體」的名稱。
+form1/Page3_E/SubF1/SubF11 | text | Qualifying general IP income
+form1/Page3_E/SubF1/SubF11 | text | Qualifying IP disposal gain
+form1/Page3_E/SubF1/SubF11 | numericEdit txt_rNdFractionQualifyingIPDisposalGain_E | 輸入「有關連實體」的名稱。
+form1/Page3_E/SubF1/SubF11 | text | %
+form1/Page3_E/sub3 | text | In case your answer to section 4.4(g) in respect of any qualifying intellectual property is “Yes”, relevant expenditure incurred for intellectual properties during a period of 3 years ending on the last day of the basis period for computing the R&D fraction based on the transitional arrangement (Notes 30 and 31)
+form1/Page3_E/sub3 | text | R&D fraction under the transitional arrangement (Note 34)
+form1/Page3_E/sub3 | text | (a)
+form1/Page3_E/sub3 | text | (b)
+form1/Page3_E/sub3 | text | 4.6
+form1/Page3_E/sub3 | text | Qualifying R&D expenditure
+form1/Page3_E/sub3 | text | HK$
+form1/Page3_E/sub3 | numericEdit txt_qualifyingRnD3Yr_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page3_E/sub3 | numericEdit txt_nonqualifyingExp3Yr_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page3_E/sub3 | text | Non-qualifying expenditure
+form1/Page3_E/sub3 | numericEdit txt_rNdFraction3Yr_E | 輸入「有關連實體」的名稱。
+form1/Page3_E/sub3 | text | %
+form1/Page4_E | checkButton chk_claimParticipationY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page4_E | checkButton chk_claimParticipationN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page4_E | numericEdit txt_noOfInvesteeCoDividend_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page4_E | numericEdit txt_noOfInvesteeCoDisposalGains_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page4_E | checkButton chk_heldNotLessThan5Y_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page4_E | checkButton chk_heldNotLessThan5N_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page4_E | checkButton chk_appliedToSellingEntityY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page4_E | checkButton chk_appliedToSellingEntityN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page4_E | text | No
+form1/Page4_E | checkButton chk_takeIntoAccountY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page4_E | checkButton chk_takeIntoAccountN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1
+form1/Page4_E | text | Yes
+form1/Page4_E | checkButton chk_taxOutsideHKDivY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page4_E | checkButton chk_taxOutsideHKDivN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page4_E | text | For the investee entities covered in sections 5.2 and 5.3, had the Taxpayer continuously held not less than 5% of equity interests in EACH of the investee entities for a period of not less than 12 months immediately before the dividend or equity interest disposal gain accrued to the Taxpayer?
+form1/Page4_E | text | 5.3
+form1/Page4_E | text | For equity interest disposal gains in respect of which participation exemption is applicable, number of investee entities from which the gains were derived
+form1/Page4_E | text | 5.2
+form1/Page4_E | text | For dividends in respect of which participation exemption is applicable, number of investee entities from which the dividends were derived
+form1/Page4_E | text | 5.1
+form1/Page4_E | text | PARTICIPATION EXEMPTION (for foreign-sourced dividend and equity interest disposal gain) (Note 39)
+form1/Page4_E | text | SECTION 5
+form1/Page4_E | text | Does the Taxpayer rely on the participation requirement prescribed in section 15M of the IRO to claim tax exemption in respect of any income stated in sections 2.2.3 and 2.2.4(a) when such income is received in Hong Kong? (Skip the remaining part of section 5 if your answer to section 5.1 is “No”)
+form1/Page4_E | text | 5.4
+form1/Page4_E | text | 5.5
+form1/Page4_E | text | Do equity interests in any investee entities covered in sections 5.2 and 5.3 include those acquired from an associated entity (selling entity) where the intra-group transfer relief (Note 45) has been applied to the selling entity? (Skip section 5.5(b) if your answer to section 5.5(a) is “No”)
+form1/Page4_E | text | For EACH of the investee entities covered in section 5.2, whether the dividend is subject to a qualifying similar tax in a territory outside Hong Kong (Note 40)?
+form1/Page4_E | text | 5.6
+form1/Page4_E | text | 5.7
+form1/Page4_E | text | If your answer to section 5.6 is “No”, for EACH of the dividends that is not subject to a qualifying similar tax in a territory outside Hong Kong, whether either of the following conditions is satisfied:
+form1/Page4_E | checkButton chk_conditionsSatisfiedY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page4_E | checkButton chk_conditionsSatisfiedN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page4_E | text | (a)
+form1/Page4_E | text | The underlying profits (Note 41) of the dividend are subject to a qualifying similar tax in a territory outside Hong Kong and the amount of the underlying profits is equal to or larger than that of the dividend.
+form1/Page4_E | text | (b)
+form1/Page4_E | text | Where the underlying profits of the dividend (the subject dividend) consist wholly or partly of dividends, one or more items of the related downstream income (Note 42) of the profits are subject to a qualifying similar tax in a territory outside Hong Kong and the aggregate amount of all such items of income is equal to or larger than the amount of the subject dividend.
+form1/Page4_E | text | 5.8
+form1/Page4_E | text | For the direct or indirect investee entities covered in sections 5.6 and 5.7, state three main jurisdictions where they were resident and the headline tax rates (Note 44) of these jurisdictions (in terms of the amount of the dividend, underlying profits and/or related downstream income involved):
+form1/Page4_E | text | Jurisdiction
+form1/Page4_E | text | Headline tax rate (%)
+form1/Page4_E | textEdit txt_jurisdictionsDividend1_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page4_E | textEdit txt_jurisdictionsDividend2_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page4_E | textEdit txt_jurisdictionsDividend3_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page4_E | numericEdit txt_taxRateDividend1_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page4_E | numericEdit txt_taxRateDividend2_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page4_E | numericEdit txt_taxRateDividend3_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page4_E | text | 5.9
+form1/Page4_E | text | Was the dividend deductible for corporate income tax purposes in the jurisdiction where EACH of the investee entities covered in section 5.2 was resident?
+form1/Page4_E | checkButton chk_dividendDeductibleY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page4_E | checkButton chk_dividendDeductibleN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page4_E | text | If your answer to section 5.5(a) is “Yes”, has the Taxpayer taken into account the period during which such equity interests were held by the selling entity in ascertaining the percentage and holding period of the equity interests in respect of EACH of the relevant investee entities for the purposes of section 5.4?
+form1/Page5_E | text | Yes
+form1/Page5_E | checkButton chk_taxOutsideHKDisposalY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | checkButton chk_taxOutsideHKDisposalN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | textEdit txt_jurisdictionsDisposal1_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page5_E | textEdit txt_jurisdictionsDisposal2_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page5_E | textEdit txt_jurisdictionsDisposal3_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page5_E | numericEdit txt_taxRateDisposal1_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page5_E | numericEdit txt_taxRateDisposal2_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page5_E | numericEdit txt_taxRateDisposal3_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page5_E | checkButton chk_claimIntragroupReliefY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | text | No
+form1/Page5_E | checkButton chk_claimIntragroupReliefN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | checkButton chk_disposalAssociatedY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | checkButton chk_disposalAssociatedN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | text | In respect of EACH disposal gain for which intra-group transfer relief is claimed, were the Taxpayer and the acquiring entity associated with each other (Note 37) at the time of the sale?
+form1/Page5_E | text | Does the Taxpayer rely on the intra-group transfer relief prescribed in section 15OA(3) (Note 45) of the IRO to claim tax relief in respect of any disposal gain stated in section 2.2.4 when such income is received in Hong Kong? (Skip sections 6.2 and 6.3 if your answer to section 6.1 is “No”)
+form1/Page5_E | text | 6.3
+form1/Page5_E | text | 6.2
+form1/Page5_E | text | 6.1
+form1/Page5_E | text | INTRA-GROUP TRANSFER RELIEF (for foreign-sourced disposal gain) (Note 35)
+form1/Page5_E | text | SECTION 6
+form1/Page5_E | text | Amount of disposal gains under section 2.2.4 to which the intra-group transfer relief applies:
+form1/Page5_E | text | equity interest
+form1/Page5_E | text | HK$
+form1/Page5_E | numericEdit txt_intragroupEquityInt_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page5_E | numericEdit txt_intragroupQualifyingIP_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page5_E | numericEdit txt_intragroupNonQualifyingIP_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page5_E | numericEdit txt_intragroupOthers_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page5_E | text | (b)
+form1/Page5_E | checkButton chk_appliedToDisposalGainSellingEntityY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | checkButton chk_appliedToDisposalGainSellingEntityN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | text | (a)
+form1/Page5_E | text | (d)
+form1/Page5_E | text | (c)
+form1/Page5_E | text | qualifying intellectual property
+form1/Page5_E | text | non-qualifying intellectual property
+form1/Page5_E | text | property other than equity interest and intellectual property
+form1/Page5_E | text | SECTION 7
+form1/Page5_E | text | SPECIFIED FOREIGN-SOURCED INCOME CHARGEABLE TO TAX IN THE BASIS PERIOD (Note 46)
+form1/Page5_E | text | 7.1
+form1/Page5_E | text | During the basis period, did the Taxpayer receive any foreign-sourced interest, dividend or non-IP disposal gain in Hong Kong (Note 7) in respect of which no applicable advance ruling or Commissioner's opinion on compliance with the economic substance requirement had been obtained (Note 17)?
+form1/Page5_E | checkButton chk_nonIPNotComplianceY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | checkButton chk_nonIPNotComplianceN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | checkButton chk_foreignsourcedIPIncomeY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | checkButton chk_foreignsourcedIPIncomeN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | checkButton chk_patientAppOutHKY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | checkButton chk_patientAppOutHKN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | text | During the basis period, did the Taxpayer receive any foreign-sourced IP income or IP disposal gain in Hong Kong (Note 7)?
+form1/Page5_E | text | Did the Taxpayer receive in Hong Kong any qualifying IP income (Note 25) from a patent application made under the Patents Ordinance (Cap. 514) or the law of any place outside Hong Kong of which the excepted portion (Note 24) had been exempted from profits tax in previous years of assessment, but the application was withdrawn, abandoned or refused during the basis period?
+form1/Page5_E | text | 7.2
+form1/Page5_E | text | 7.3
+form1/Page5_E | text | Did the Taxpayer, as a selling entity, have any disposal gain, to which the intra-group transfer relief (Note 45) prescribed in section 15OA(3) of the IRO had been granted in previous years of assessment, but the relief was no longer applicable due to the occurrence of one of the events mentioned in Note 47(d) during the basis period?
+form1/Page5_E | text | 7.4
+form1/Page5_E | checkButton chk_grantedPrevYrY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | checkButton chk_grantedPrevYrN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | text | Indicate whether Table A has been completed. (If your answer to any of sections 7.1 to 7.4 is “Yes”, Table A must be completed.) (Note 47)
+form1/Page5_E | text | 7.5
+form1/Page5_E | checkButton chk_completeTableAY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | checkButton chk_completeTableAN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page5_E | text | 5.10
+form1/Page5_E | text | For EACH of the investee entities covered in section 5.3,
+form1/Page5_E | text | whether the equity interest disposal gain is subject to a qualifying similar tax in a territory outside Hong Kong?
+form1/Page5_E | text | state three main jurisdictions where the investee entities were resident and the headline tax rates of these jurisdictions (in terms of the amount of the equity interest disposal gain involved):
+form1/Page5_E | text | Jurisdiction
+form1/Page5_E | text | Headline tax rate (%)
+form1/Page5_E | text | 6.4
+form1/Page5_E | text | In relation to the disposal gains stated in section 2.2.4, is there any sold movable or immovable property that had been acquired by the Taxpayer from an associated entity (“selling entity”) under an intra-group transfer arrangement and the intra-group transfer relief (Note 45) has been applied to the disposal gain of the selling entity?
+form1/Page6_E/P | text | (Note 56)
+form1/Page6_E/P | text | (HK$)
+form1/Page6_E/P | text | Tax credit claimed in accordance with DTAs concerned
+form1/Page6_E/P | text | TABLE A TAXABLE AMOUNT OF SPECIFIED FOREIGN-SOURCED INCOME AND TAXATION RELIEF (Notes 46 and 47)
+form1/Page6_E/P | text | (Note 49)
+form1/Page6_E/P | text | (Note 50)
+form1/Page6_E/P | text | (Note 51)
+form1/Page6_E/P | text | (Note 52)
+form1/Page6_E/P | text | (Note 53)
+form1/Page6_E/P | text | (Note 55)
+form1/Page6_E/P | text | (Note 58)
+form1/Page6_E/P | text | (Note 59)
+form1/Page6_E/P | text | Claim for double taxation relief or deduction (Notes 54 and 60 )
+form1/Page6_E/P | text | Tax credit claimed
+form1/Page6_E/P | text | Foreign tax deduction
+form1/Page6_E/P | text | Foreign tax paid attributable to the taxable amount
+form1/Page6_E/P | text | Loss attributable to taxable amount
+form1/Page6_E/P | text | Profits attributable to taxable amount
+form1/Page6_E/P | text | Taxable amount
+form1/Page6_E/P | text | Non-taxable amount
+form1/Page6_E/P | text | Type of specified foreign-sourced income
+form1/Page6_E/P | text | Year of accrual
+form1/Page6_E/P | text | Foreign tax paid in DTA territories
+form1/Page6_E/P | text | Foreign tax paid in non-DTA territories
+form1/Page6_E/P | text | Amount received
+form1/Page6_E/P | text | (Note 57)
+form1/Page6_E/P | text | Tax credit claimed other than those provided in DTAs concerned
+form1/Page6_E/P | text | (K)
+form1/Page6_E/P | text | (J)
+form1/Page6_E/P | text | (I)
+form1/Page6_E/P | text | (H)
+form1/Page6_E/P | text | (G)
+form1/Page6_E/P | text | (F)
+form1/Page6_E/P | text | (E)
+form1/Page6_E/P | text | (D)=(A)–(C)
+form1/Page6_E/P | text | (C)
+form1/Page6_E/P | text | (B)
+form1/Page6_E/P | text | (A)
+form1/Page6_E/SubF2/SubF21 | button Remove | X
+form1/Page6_E/SubF2/SubF21 | numericEdit txt_noOfIncome_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page6_E/SubF2/SubF21 | choiceList drop_incomeType_E | 
+form1/Page6_E/SubF2/SubF21 | textEdit txt_caption_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page6_E/SubF2/SubF21 | textEdit txt_nameOfSpecifiedInc_E | Enter the name of the person signing this form.
+form1/Page6_E/SubF2/SubF21 | dateTimeEdit txt_dateOfSpecifiedInc_E | Enter the end date of Basis Period in “DD/MM/YYYY” format.
+form1/Page6_E/SubF2/SubF21 | numericEdit txt_amtReceivedTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubF2/SubF21 | choiceList drop_yearAssAppPeriod_E | 
+form1/Page6_E/SubF2/SubF21 | numericEdit txt_nontaxableAmtTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubF2/SubF21 | numericEdit txt_taxableAmtTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubF2/SubF21 | numericEdit txt_profitsAttributableTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubF2/SubF21 | numericEdit txt_lossAttributableTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubF2/SubF21 | numericEdit txt_foreignTaxPaidTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubF2/SubF21 | numericEdit txt_taxCreditWithDTATblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubF2/SubF21 | numericEdit txt_taxCreditInDTATblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubF2/SubF21 | numericEdit txt_taxCreditPaidInNonDTATblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubF2/SubF21 | numericEdit txt_foreignTaxDeductionTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubF2/SubF21 | button Add | +
+form1/Page6_E/SubF2/SubF21 | text | (b) date of registration or application (Note 61)
+form1/Page6_E/SubF2/SubF21 | text | (day / month / year)
+form1/Page6_E/SubForm_B | numericEdit txt_ttlAmtReceivedTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubForm_B | numericEdit txt_ttlNontaxableAmtTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubForm_B | numericEdit txt_ttlTaxableAmtTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubForm_B | numericEdit txt_ttlProfitsAttributaleTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubForm_B | numericEdit txt_ttlLossAttributableTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubForm_B | numericEdit txt_ttlForeignTaxPaidTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubForm_B | numericEdit txt_ttlTaxPaidDTATblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubForm_B | numericEdit txt_ttlTaxCreditInDTATblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubForm_B | numericEdit txt_ttlTaxPaidNonDTATblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubForm_B | numericEdit txt_ttlForeignTaxDeductionTblA_E | 輸入「有關連實體」的名稱。
+form1/Page6_E/SubForm_B | text | TOTAL
+form1/Page6_E/SubF3 | checkButton chk_additionalTableA_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page6_E/SubF3 | text | Tick this box if additional lines of entry are provided in a separate sheet. (Note 47)
+form1/Page6_E | textEdit hashValue_E | Check Sum
+form1/Page6_E | textEdit TextField1 | Text Field
+form1/Page7_E | text | 1.
+form1/Page7_E | text | An MNE entity (Note 2) is required to complete this supplementary form for submission together with its Profits Tax Return if in the basis period:
+form1/Page7_E | text | a specified foreign-sourced income was received in Hong Kong by the entity (Note 7); or
+form1/Page7_E | text | (a)
+form1/Page7_E | text | (b)
+form1/Page7_E | text | a specified foreign-sourced income (Note 3) accrued to the entity;
+form1/Page7_E | text | “MNE group” means a group that includes at least one entity or permanent establishment that is not located or established in the jurisdiction of the ultimate parent entity of the group. “MNE entity” means a person that is, or acts for, an MNE group or an entity included in an MNE group.
+form1/Page7_E | text | 2.
+form1/Page7_E | text | “Specified foreign-sourced income” means any interest, dividend, disposal gain (Note 14) or IP income (Note 13) arising in or derived from a territory outside Hong Kong, but does not include:
+form1/Page7_E | text | 3.
+form1/Page7_E | text | any interest, dividend or non-IP disposal gain that accrues to an entity the assessable profits of which are chargeable to tax at the rate specified in a concession provision (as defined by section 19CA) other than section 14A(1) of the Inland Revenue Ordinance (Cap. 112) (“IRO”);
+form1/Page7_E | text | any interest, dividend or non-IP disposal gain that accrues to a regulated financial entity (Note 4);
+form1/Page7_E | text | any interest, dividend or non-IP disposal gain that accrues to an entity that is exempt from tax chargeable in respect of its assessable profits under section 20AC, 20ACA, 20AN or 20AO of the IRO;
+form1/Page7_E | text | (c)
+form1/Page7_E | text | any interest, dividend or non-IP disposal gain that accrues to an entity that is a ship-owner and has any exempt sums excluded under section 23B(4AA) of the IRO from the amount of relevant sums earned by or accrued to the entity; or
+form1/Page7_E | text | (d)
+form1/Page7_E | text | the circumstances referred to in Note 47(c) or (d) occurred in respect of the foreign-sourced income concerned.
+form1/Page7_E | text | NOTES AND INSTRUCTIONS – SUPPLEMENTARY FORM (S19)
+form1/Page7_E | text | A specified foreign-sourced income is regarded as a receipt arising in or derived from Hong Kong for the basis period of the year of assessment during which the income is received in Hong Kong (Note 7) and not arising from the sale of capital assets if:
+form1/Page7_E | text | an authorized institution as defined by section 2(1) of the Banking Ordinance (Cap. 155); or
+form1/Page7_E | text | an insurer (as defined by section 2(1) of the Insurance Ordinance (Cap. 41)) authorized under that Ordinance, Lloyd’s or an approved association of underwriters;
+form1/Page7_E | text | “Regulated financial entity” means:
+form1/Page7_E | text | 4.
+form1/Page7_E | text | an entity licensed under Part V of the Securities and Futures Ordinance (Cap. 571) to carry on a business in any regulated activity as defined by Part 1 of Schedule 5 to that Ordinance.
+form1/Page7_E | text | 6.
+form1/Page7_E | text | and is derived from, or is incidental to:
+form1/Page7_E | text | for an entity in (a) above – the entity’s business as a regulated financial entity;
+form1/Page7_E | text | (i)
+form1/Page7_E | text | for an entity in (b) and (c) above – the activity that produces the assessable profits to which the tax concession or exemption applies;
+form1/Page7_E | text | (ii)
+form1/Page7_E | text | for an entity in (d) above – the activity that produces the exempt sums;
+form1/Page7_E | text | (iii)
+form1/Page7_E | text | A specified foreign-sourced income is regarded as “received in Hong Kong” if:
+form1/Page7_E | text | 7.
+form1/Page7_E | text | section 15, 15D or 15F of the IRO does not apply to the income; and
+form1/Page7_E | text | the income is so received by an MNE entity carrying on a trade, profession or business in Hong Kong;
+form1/Page7_E | text | the income is used to buy movable property (such as equipment, raw materials, etc.), and the property is brought into Hong Kong.
+form1/Page7_E | text | the income is used to satisfy any debt incurred in respect of a trade, profession or business carried on in Hong Kong; or
+form1/Page7_E | text | the income is remitted to, or is transmitted or brought into, Hong Kong;
+form1/Page7_E | text | the MNE entity does not fall within the applicable exceptions prescribed in sections 15K, 15L, 15M and 15OA of the IRO, namely the economic substance requirement (for interest, dividend or non-IP disposal gain (Note 16)), the nexus requirement (for qualifying general IP income or qualifying IP disposal gain), the participation requirement (for dividend or equity interest disposal gain (Note 16)) and the intra-group transfer relief (for disposal gain).
+form1/Page7_E | text | for an entity in (e) above – the entity’s business as a trader.
+form1/Page7_E | text | (iv)
+form1/Page7_E | text | any non-IP disposal gain that accrues to an entity that is a trader (Note 5);
+form1/Page7_E | text | (e)
+form1/Page7_E | text | “Trader” means an entity that sells, or offers to sell, property in the entity’s ordinary course of business. “Property” means any movable or immovable property.
+form1/Page7_E | text | 5.
+form1/Page7_E | text | In addition to the information requested in this form, the Taxpayer may provide, in its profits tax computation, any information to substantiate its claims under the Foreign-sourced Income Exemption regime.
+form1/Page8_E | text | Specified foreign-sourced income is considered as accrued to an MNE entity when it is recognised in the accounts of the entity in accordance with applicable accounting principles.
+form1/Page8_E | text | 9.
+form1/Page8_E | text | “Hong Kong resident person” means a person who is resident for tax purposes in Hong Kong within the meaning of section 50AAC(1) of the IRO.
+form1/Page8_E | text | 10.
+form1/Page8_E | text | 11.
+form1/Page8_E | text | Interest income includes interest from bank deposits, lending of money or holding of debt securities.
+form1/Page8_E | text | 12.
+form1/Page8_E | text | Whether a non-Hong Kong resident person has a permanent establishment in Hong Kong is determined as follows:
+form1/Page8_E | text | for a non-DTA territory resident person ─ in accordance with Part 3 of Schedule 17G to the IRO.
+form1/Page8_E | text | (b)
+form1/Page8_E | text | for a tax resident of a jurisdiction that has a comprehensive avoidance of double taxation arrangement (“DTA”) in effect with Hong Kong (“DTA territory”) ─ in accordance with the relevant provisions under the DTA concerned; or
+form1/Page8_E | text | (a)
+form1/Page8_E | text | “Intellectual property income” or “IP income” means income derived from an intellectual property as defined in section 15H(1) of the IRO in respect of the exhibition or use of, or a right to exhibit or use, (whether in or outside Hong Kong) the property; or the imparting of, or undertaking to impart, knowledge directly or indirectly connected with the use (whether in or outside Hong Kong) of the property. “Qualifying intellectual property” means (a) a patent granted under the Patents Ordinance (Cap. 514) or under the law of any place outside Hong Kong; (b) a patent application made under Cap. 514 or under the law of any place outside Hong Kong; or (c) a copyright subsisting in software under the Copyright Ordinance (Cap. 528) or under the law of any place outside Hong Kong. Generally, qualifying intellectual properties only cover patents and other IP assets which are functionally equivalent to patents if those IP assets are both legally protected and subject to similar approval and registration processes (e.g. copyrighted software). Intellectual properties that are not qualifying intellectual properties (e.g. marketing-related intellectual properties such as trademark and copyright) are non-qualifying intellectual properties. Gross amount of IP income should be stated for each of the two types of IP incomes.
+form1/Page8_E | text | 13.
+form1/Page8_E | text | “Disposal gain” means any IP disposal gain (Note 15) or non-IP disposal gain (Note 16). The amount of disposal gain stated in section 2.2.4 should be the gain or profit derived from the sale of property before the application of the intra-group transfer relief (Note 45) prescribed in section 15OA(3) of the IRO. It should be the total amount of disposal gains accrued to the Taxpayer without netting off any loss sustained from sale of property. For a disposal loss, a claim for utilising the loss to set off against assessable profits may be made in the Taxpayer’s profits tax computation, if applicable.
+form1/Page8_E | text | 14.
+form1/Page8_E | text | “IP Disposal gain” means any gain or profit derived from the sale of intellectual property on or after 1 January 2024.
+form1/Page8_E | text | 15.
+form1/Page8_E | text | 16.
+form1/Page8_E | text | “Non-IP disposal gain” means any gain or profit derived from the sale of property, but does not include IP disposal gains. Only the non-IP disposal gains derived on or after the following date would fall within the scope of specified foreign-sourced income:
+form1/Page8_E | text | Other non-IP disposal gains ─ 1 January 2024
+form1/Page8_E | text | Equity interest disposal gains (i.e. gains or profits derived from the sale of equity interests (other than partnership interests) in an entity) ─ 1 January 2023
+form1/Page8_E | text | An advance ruling referred to in this form is a ruling made by the Commissioner under section 88A of the IRO under which the Taxpayer is accepted as having complied with the economic substance requirement in respect of its foreign-sourced interest, dividend or non-IP disposal gain for a specified period under the specified circumstances and arrangements. A Commissioner's opinion on compliance with the economic substance requirement is a transitional arrangement in place before the coming into operation of the relevant amendment ordinance. The basis period should fall within the specified period to which the ruling or opinion is applicable.
+form1/Page8_E | text | 17.
+form1/Page8_E | text | “Pure equity-holding entity” means an entity that (a) only holds equity interests in other entities; and (b) only earns dividends, equity interest disposal gains and income incidental to the acquisition, holding or sale of such equity interests. A pure equity-holding entity must comply with every applicable registration and filing requirement under the following Ordinances:
+form1/Page8_E | text | 18.
+form1/Page8_E | text | the Companies (Winding Up and Miscellaneous Provisions) Ordinance (Cap. 32);
+form1/Page8_E | text | the Limited Partnerships Ordinance (Cap. 37);
+form1/Page8_E | text | the Business Registration Ordinance (Cap. 310);
+form1/Page8_E | text | (c)
+form1/Page8_E | text | the Companies Ordinance (Cap. 622).
+form1/Page8_E | text | (d)
+form1/Page8_E | text | In case the Taxpayer would like to rely on the economic substance requirement to claim tax exemption in respect of a new type of specified foreign-sourced income not yet covered by the ruling or opinion obtained for the year of assessment, the circumstances specified in that ruling or opinion should be regarded as no longer valid. As such, “No” should be ticked for section 3.3(c) and section 3.4 should be completed to provide information concerning the economic substance requirement in respect of all foreign-sourced interest, dividend or non-IP disposal gains.
+form1/Page8_E | text | 8.
+form1/Page8_E | text | The basis period must be the same as that stated in the relevant Profits Tax Return.
+form1/Page9_E | text | If the specified economic activities were carried out in Hong Kong by the Taxpayer’s employees, appropriate boxes for section 3.4(e) to (g) under the heading “Taxpayer” should be ticked to provide details of the employees employed and the total amount of operating expenditure incurred by the Taxpayer for carrying out the specified economic activities. The amount of operating expenditure should include remunerations of the relevant employees in connection with the specified economic activities.
+form1/Page9_E | text | 20.
+form1/Page9_E | text | If the specified economic activities were arranged to be carried out in Hong Kong through outsourcing to an outsourced entity, appropriate boxes for section 3.4 (e) to (g) under the heading “Outsourced entity” should be ticked to provide:
+form1/Page9_E | text | 21.
+form1/Page9_E | text | for an outsourcing arrangement covering specified economic activities carried out by the outsourced entity for the Taxpayer only ─ details of the employees employed by the outsourced entity and the service fee paid to that outsourced entity (or the operating expenditure incurred by the outsourced entity) for carrying out the specified economic activities for the Taxpayer in Hong Kong;
+form1/Page9_E | text | (a)
+form1/Page9_E | text | (b)
+form1/Page9_E | text | for an outsourcing arrangement covering specified economic activities carried out by the outsourced entity for the Taxpayer and other MNE entities that are within the same MNE group as the Taxpayer ─ details of the employees employed by the outsourced entity and the total amount of service fees paid to that outsourced entity (or the total operating expenditure incurred by the outsourced entity) for carrying out the specified economic activities for the Taxpayer and those other MNE entities in Hong Kong. Please also refer to Note 23.
+form1/Page9_E | text | If the specified economic activities were carried out partly by the Taxpayer itself and partly by an outsourced entity, appropriate boxes for section 3.4(e) to (g) under both the headings “Taxpayer” and “Outsourced entity” should be ticked. The amount of operating expenditure should include remunerations of the relevant employees and the service fee paid to the outsourced entity (or the operating expenditure incurred by the outsourced entity) in connection with the specified economic activities. There must be no double-counting for the numbers of employees and the amounts of operating expenditure provided under the headings “Taxpayer” and “Outsourced entity”. For the purposes of section 3.4(h), in case the Taxpayer engaged more than one outsourced entity, details of the main outsourced entity (in terms of number of employees in Hong Kong for carrying out the specified economic activities and/or amount of operating expenditure incurred in Hong Kong) should be provided. Details of other outsourced entities should be provided in the Taxpayer's profits tax computation.
+form1/Page9_E | text | 22.
+form1/Page9_E | text | Number of MNE entities for which the outsourced entity carried out the specified economic activities with the total number of employees stated in section 3.4(e) and the amount of operating expenditure stated in section 3.4(g) under the heading “Outsourced entity”. For outsourcing arrangements referred to in Note 21(a), the number inputted should be “1” (i.e. the Taxpayer). For outsourcing arrangements referred to in Note 21(b), the Taxpayer and those other MNE entities should be included.
+form1/Page9_E | text | 23.
+form1/Page9_E | text | 24.
+form1/Page9_E | text | 25.
+form1/Page9_E | text | 26.
+form1/Page9_E | text | 27.
+form1/Page9_E | text | “Excepted portion of qualifying IP income” is the amount of qualifying IP income (Note 25) to which section 15I of the IRO does not operate to bring it into charge under profits tax. It is ascertained in accordance with the following formula: Excepted portion = Qualifying IP income x R&D fraction applicable to the qualifying IP income.
+form1/Page9_E | text | “Qualifying IP income” means:
+form1/Page9_E | text | any qualifying general IP income (Note 26); or
+form1/Page9_E | text | any qualifying IP disposal gain (Note 27).
+form1/Page9_E | text | “Qualifying general IP income” means any income derived from qualifying intellectual property (Note 13) in respect of:
+form1/Page9_E | text | the exhibition or use of, or a right to exhibit or use, (whether in or outside Hong Kong) the property; or
+form1/Page9_E | text | the imparting of, or undertaking to impart, knowledge directly or indirectly connected with the use (whether in or outside Hong Kong) of the property.
+form1/Page9_E | text | “Qualifying IP disposal gain” means any gain or profit derived from the sale of qualifying intellectual property (Note 13).
+form1/Page9_E | text | “Specified economic activities” means:
+form1/Page9_E | text | 19.
+form1/Page9_E | text | in relation to an MNE entity that is not a pure equity-holding entity – making necessary strategic decisions in respect of any assets the entity acquires, holds or disposes of; and managing and bearing principal risks in respect of such assets.
+form1/Page9_E | text | in relation to an MNE entity that is a pure equity-holding entity (Note 18) – holding and managing its equity participations in other entities; or
+form1/Page10_E | text | “Non-qualifying expenditure” (“NE”) includes the following expenditures:
+form1/Page10_E | text | 33.
+form1/Page10_E | text | 34.
+form1/Page10_E | text | QE × 130% QE + NE
+form1/Page10_E | text | The “R&D fraction” in respect of a qualifying intellectual property is computed in accordance with the following formula and capped at 100%:
+form1/Page10_E | text | any expenditure incurred by the Taxpayer for an R&D activity (Note 32) that is connected to the subject intellectual property and is carried out:
+form1/Page10_E | text | (b)
+form1/Page10_E | text | acquisition cost of the subject intellectual property;
+form1/Page10_E | text | (a)
+form1/Page10_E | text | (ii)
+form1/Page10_E | text | on behalf of the Taxpayer by its associated person that is a non-Hong Kong resident person; or
+form1/Page10_E | text | (i)
+form1/Page10_E | text | NE does not include interest payments and payments for any land or building, or for any alteration, addition or extension to any building. For details, please refer to section 6 of Schedule 17FC to the IRO.
+form1/Page10_E | text | outside Hong Kong on behalf of the Taxpayer by its associated person that is a Hong Kong resident person.
+form1/Page10_E | text | Where a qualifying general IP income accrues to an MNE entity during the period from 1 January 2023 to the last day of its basis period for the year of assessment 2024/25 and that MNE entity has insufficient records to track and trace the R&D expenditure in respect of the qualifying intellectual property involved, the transitional arrangement provided in section 10 of Schedule 17FC to the IRO may be adopted for ascertaining the R&D fraction (Note 34). That is, the amounts of qualifying R&D expenditure (Note 32) and non-qualifying expenditure (Note 33) in the formula for calculating the R&D fraction would be the respective amounts for any intellectual property of the MNE entity during a period of 3 years ending on the last day of its basis period for the year of assessment during which the qualifying general IP income accrues.
+form1/Page10_E | text | 30.
+form1/Page10_E | text | 31.
+form1/Page10_E | text | The transitional arrangement as mentioned in Note 30 may also apply to a qualifying IP disposal gain accrued to an MNE entity during the period from 1 January 2024 to the last day of its basis period for the year of assessment 2025/26.
+form1/Page10_E | text | “Qualifying R&D expenditure” (“QE”) means expenditure incurred by the Taxpayer for an R&D activity that is connected to the subject intellectual property and is carried out:
+form1/Page10_E | text | 32.
+form1/Page10_E | text | by the Taxpayer;
+form1/Page10_E | text | on behalf of the Taxpayer by a non-associated person; or
+form1/Page10_E | text | in Hong Kong on behalf of the Taxpayer by its associated person that is a Hong Kong resident person.
+form1/Page10_E | text | (c)
+form1/Page10_E | text | QE does not include interest payments; payments for any land or building, or for any alteration, addition or extension to any building; and acquisition cost of the subject intellectual property. For details, please refer to section 5 of Schedule 17FC to the IRO.
+form1/Page10_E | text | For a qualifying intellectual property that is a registered patent, the date should be the date of registration of that patent. For a qualifying intellectual property that is a patent application, the date should be the one on which the Taxpayer filed the patent application to the Intellectual Property Department in Hong Kong or an equivalent authority outside Hong Kong. For a qualifying intellectual property that is a copyright subsisting in software, please input “99/99/9999” for section 4.4(c).
+form1/Page10_E | text | 29.
+form1/Page10_E | text | An R&D activity is–
+form1/Page10_E | text | an activity in the fields of natural or applied science to extend knowledge;
+form1/Page10_E | text | a systematic, investigative or experimental activity carried on for the purposes of any feasibility study or in relation to any market, business or management research;
+form1/Page10_E | text | an original and planned investigation carried on with the prospect of gaining new scientific or technical knowledge and understanding; or
+form1/Page10_E | text | the application of research findings or other knowledge to a plan or design for producing or introducing new or substantially improved materials, devices, products, processes, systems or services before they are commercially produced or used.
+form1/Page10_E | text | (d)
+form1/Page10_E | text | 28.
+form1/Page10_E | text | The definition of “qualifying intellectual property” is provided in Note 13. The number of qualifying intellectual properties can be counted in terms of the number of groups or collections of patents covering the same invention or similar technical content. The Taxpayer is required to provide details in sections 4.4 and 4.5 in respect of each qualifying intellectual property covered in section 4.3. Details of up to 20 qualifying intellectual properties can be provided in this form. In case there are more than 20 qualifying intellectual properties, please provide details of the remaining qualifying intellectual properties in the same format on a separate sheet. In the separate sheet, please add your file number, year of assessment concerned and a remark “Additional” and sign at the bottom of the sheet.
+form1/Page11_E | text | the Taxpayer is a Hong Kong resident person (in relation to a company, it means a company incorporated in Hong Kong or, if incorporated outside Hong Kong, normally managed or controlled in Hong Kong) or a non-Hong Kong resident person that has a permanent establishment in Hong Kong; and
+form1/Page11_E | text | (a)
+form1/Page11_E | text | Participation exemption for foreign-sourced dividends and equity interest disposal gains will apply (i.e. the income concerned will be tax-exempt) if:
+form1/Page11_E | text | 39.
+form1/Page11_E | text | The participation exemption is subject to the anti-abuse rules, namely the switch-over rule, anti-hybrid mismatch rule and main purpose rule, prescribed in section 15N of the IRO.
+form1/Page11_E | text | the Taxpayer has continuously held not less than 5% of equity interests in the investee entity for a period of not less than 12 months immediately before the specified foreign-sourced income accrues.
+form1/Page11_E | text | (b)
+form1/Page11_E | text | “Underlying profits”, in relation to a dividend distributed by a subject investee entity (Note 43), means the profits of the entity out of which the dividend is paid.
+form1/Page11_E | text | 41.
+form1/Page11_E | text | A sum is subject to a qualifying similar tax in a territory outside Hong Kong if it is subject to a tax that is of substantially the same nature as profits tax under the IRO in that territory and the applicable rate or the highest applicable rate of that tax is equal to or higher than 15%.
+form1/Page11_E | text | 40.
+form1/Page11_E | text | Underlying dividends or downstream profits in respect of a maximum of 4 tiers of direct or indirect investee entities of the subject investee entity can be included in the related downstream income.
+form1/Page11_E | text | if the downstream profits consist wholly or partly of dividends – those dividends.
+form1/Page11_E | text | (c)
+form1/Page11_E | text | are derived from the profits of an indirect investee entity of the subject investee entity through another investee entity of the subject investee entity,
+form1/Page11_E | text | (ii)
+form1/Page11_E | text | are paid out of the profits of a direct investee entity of the subject investee entity; or
+form1/Page11_E | text | (i)
+form1/Page11_E | text | if the underlying dividends-
+form1/Page11_E | text | the underlying dividends;
+form1/Page11_E | text | “Related downstream income”, in relation to a subject investee entity’s underlying profits that consist wholly or partly of dividends (underlying dividends), means:
+form1/Page11_E | text | 42.
+form1/Page11_E | text | “Subject investee entity”, in relation to an MNE entity that receives a dividend, means the entity that distributes the dividend.
+form1/Page11_E | text | 43.
+form1/Page11_E | text | Headline tax rate refers to the highest tax rate of the relevant jurisdiction for the year of assessment in which the income or profits of the investee entity giving rise to the foreign-sourced dividend were taxable. However, if the income or profits are taxable under the special tax legislation at a lower rate than in the main legislation, and the lower rate is not a tax incentive for carrying out substantive activities, the headline tax rate should be the highest stipulated tax rate in the special legislation.
+form1/Page11_E | text | 44.
+form1/Page11_E | text | If intra-group transfer relief applies, section 15OA(3) of the IRO provides that the selling entity is to be regarded as having sold the subject property for a consideration of such amount as would secure that neither a gain nor a loss would accrue to the selling entity. For the conditions under which the intra-group transfer relief applies, refer to Note 35.
+form1/Page11_E | text | 45.
+form1/Page11_E | text | those profits (downstream profits); or
+form1/Page11_E | text | The subject sale is an intra-group transfer if the selling entity and the acquiring entity are, at the time of the sale, associated with each other. (Note 37)
+form1/Page11_E | text | 36.
+form1/Page11_E | text | one of them has an associating interest (Note 38) in the other; or
+form1/Page11_E | text | Two entities are associated with each other if:
+form1/Page11_E | text | 37.
+form1/Page11_E | text | a third entity has an associating interest in both of them.
+form1/Page11_E | text | entity A has at least 75% of direct or indirect beneficial interest in, or in relation to, entity B; or
+form1/Page11_E | text | An entity (entity A) has an associating interest in another entity (entity B) if:
+form1/Page11_E | text | 38.
+form1/Page11_E | text | entity A is, directly or indirectly, entitled to exercise, or control the exercise of, at least 75% of the voting rights in, or in relation to, entity B.
+form1/Page11_E | text | The intra-group transfer relief for disposal gain applies if:
+form1/Page11_E | text | 35.
+form1/Page11_E | text | an MNE entity (selling entity) receives in Hong Kong any specified foreign-sourced income which is a disposal gain;
+form1/Page11_E | text | the sale from which the gain is derived (subject sale) is an intra-group transfer (Note 36);
+form1/Page11_E | text | the property to which the subject sale relates (subject property) is acquired by an entity (acquiring entity); and
+form1/Page11_E | text | both the selling entity and the acquiring entity are, at the time of the subject sale, chargeable to profits tax.
+form1/Page11_E | text | (d)
+form1/Page12_E | text | You must export the filled form to XML file and upload the XML file via the electronic filing of Profits Tax Return services under GovHK for submission. If you do not choose to submit Profits Tax Return through electronic filing or semi-electronic filing, you have to print and sign a paper Control List (containing details of the XML file uploaded and QR code) generated by the electronic filing of Profits Tax Return services for submission together with the Profits Tax Return in order to complete the submission process. The Control List of this supplementary form must be signed by the same person signing the tax return.
+form1/Page12_E | text | 48.
+form1/Page12_E | text | A disposal gain received by the Taxpayer from the sale of property (subject sale) to an associated entity (acquiring entity) was not chargeable to profits tax by virtue of the intra-group transfer relief provided under section 15OA(3) of the IRO in previous years of assessment, but one of the following events occurred in relation to the disposal gain during the basis period:
+form1/Page12_E | text | (d)
+form1/Page12_E | text | within 2 years after the subject sale, the Taxpayer and the acquiring entity ceased to be associated with each other.
+form1/Page12_E | text | within 2 years after the subject sale, the Taxpayer or the acquiring entity ceased to be chargeable to profits tax under the IRO; or
+form1/Page12_E | text | (i)
+form1/Page12_E | text | (ii)
+form1/Page12_E | text | Only information on specified foreign-sourced income falling within items (a) to (d) above is required to be completed in Table A. Foreign-sourced IP income and IP disposal gains derived from different intellectual properties should be reported by separate lines of entries. Information of up to 20 lines of entries can be provided in this form. In case you have to provide more than 20 lines of entries of information, please furnish the remaining information in the same format on a separate sheet. In the separate sheet, please add your file number, year of assessment concerned and a remark “Additional” and sign at the bottom of the sheet.
+form1/Page12_E | text | 49.
+form1/Page12_E | text | The definition of “received in Hong Kong” is provided in Note 7. For disposal gains, the amount of the gross realised gain or profit derived from the sale of property received in Hong Kong should be provided. For other specified foreign-sourced income, the amount of gross income received in Hong Kong should be provided. In case of the circumstances mentioned in Note 47(c), the amount of excepted portion of qualifying IP income previously exempted from profits tax in respect of the relevant patent application should be provided.
+form1/Page12_E | text | 50.
+form1/Page12_E | text | In respect of each type of specified foreign-sourced income, you should report the details of the income on the basis of the year of assessment in which the income accrued to the Taxpayer. For example, if a taxpayer received, in the basis period, foreign-sourced interest in Hong Kong, which accrued to it in two previous years of assessment, and that interest was chargeable to profits tax in the year of receipt, the taxpayer should provide the required information for each of the previous two years of assessment in which the interest accrued by two separate lines of entries.
+form1/Page12_E | text | 51.
+form1/Page12_E | text | The amount to be input in column (C) should be specified foreign-sourced income received in Hong Kong that is not subject to profits tax for the reason that the conditions of the economic substance requirement (for interest, dividends and non-IP disposal gains), nexus requirement (for qualifying IP income), participation exemption (for dividends and equity interest disposal gains) and/or intra-group transfer relief (for disposal gains) are satisfied. For foreign-sourced IP income or IP disposal gains derived from a qualifying intellectual property with a R&D fraction of less than 100%, the non-taxable amount should be the amount of relevant income received in Hong Kong multiplied by the R&D fraction.
+form1/Page12_E | text | 52.
+form1/Page12_E | text | If there is no taxable amount for a particular type of specified foreign-sourced income, no information is required to be provided in columns (E) to (K) for such income (i.e. profits or loss attributable to taxable amount and double taxation relief or deduction).
+form1/Page12_E | text | Foreign-sourced IP income or IP disposal gain derived from an intellectual property (qualifying or non-qualifying) was received in Hong Kong during the basis period;
+form1/Page12_E | text | (b)
+form1/Page12_E | text | Foreign-sourced interest, dividend or non-IP disposal gain was received in Hong Kong during the basis period but no advance ruling or Commissioner’s opinion had been obtained on compliance with the economic substance requirement or the advance ruling or Commissioner’s opinion obtained was not applicable to the year of accrual in respect of the income received;
+form1/Page12_E | text | (a)
+form1/Page12_E | text | Table A should be completed in case the Taxpayer had the following circumstances:
+form1/Page12_E | text | 47.
+form1/Page12_E | text | The excepted portion of qualifying IP income derived from a patent application was exempted from profits tax by virtue of the exception provided under section 15L of the IRO in previous years of assessment but that patent application was withdrawn, abandoned or refused in the basis period; or
+form1/Page12_E | text | (c)
+form1/Page12_E | text | the circumstances referred to in Note 47(c) occurred in respect of a foreign-sourced IP income; or
+form1/Page12_E | text | the conditions in Note 6 are met;
+form1/Page12_E | text | Specified foreign-sourced income is chargeable to profits tax for the year of assessment if:
+form1/Page12_E | text | 46.
+form1/Page12_E | text | the circumstances referred to in Note 47(d) occurred in respect of a disposal gain.
+form1/Page13_E | text | If the Taxpayer is a Hong Kong resident person and intends to claim bilateral tax credit in respect of any foreign tax in column (G) (which was paid in a DTA territory) pursuant to the DTA concerned, it should report the amount of such tax credit in column (H).
+form1/Page13_E | text | 56.
+form1/Page13_E | text | This part is to be completed if:
+form1/Page13_E | text | 54.
+form1/Page13_E | text | If the Taxpayer is a Hong Kong resident person and intends to claim unilateral tax credit in respect of any foreign tax in column (G) (which was paid in a non-DTA territory), it should report the amount of such tax credit in column (J).
+form1/Page13_E | text | 58.
+form1/Page13_E | text | If the Taxpayer is a Hong Kong resident person and intends to claim unilateral tax credit in respect of any foreign tax in column (G) (which was paid on underlying profits or income in a DTA territory) because the DTA concerned does not allow any tax credit in respect of the relevant profits or income, it should report the amount of such tax credit in column (I).
+form1/Page13_E | text | 57.
+form1/Page13_E | text | The amount of foreign tax paid attributable to the taxable amount of specified foreign-sourced income should be input in column (G). Where the income concerned is a dividend received by the Taxpayer, the amount reported in column (G) should be the total of the foreign tax paid on the dividend and the foreign tax paid on the underlying profits or income attributable to the dividend in respect of a chain of a maximum of 5 tiers of entities held by the Taxpayer provided that the Taxpayer has held at least 10% of direct or indirect beneficial interest in, or in relation to, the investee entity or is directly or indirectly entitled to exercise, or control the exercise of at least 10% of the voting rights in, or in relation to, the investee entity when the dividend is distributed.
+form1/Page13_E | text | 55.
+form1/Page13_E | text | If the Taxpayer is a non-Hong Kong resident person and intends to claim deduction of any foreign tax in column (G) in respect of which no tax credit is to be allowed, it should report the amount of such deduction in column (K).
+form1/Page13_E | text | 59.
+form1/Page13_E | text | The total amount of columns (H), (I), (J) and (K) should not exceed that in column (G).
+form1/Page13_E | text | 60.
+form1/Page13_E | text | 61.
+form1/Page13_E | text | The name of the qualifying intellectual property and the date of registration or application must be the same as those reported in IR1478 and/or Supplementary Form S19 for the year of assessment in which the IP income or IP disposal gain accrued to the Taxpayer.
+form1/Page13_E | text | in relation to a disposal gain derived from the sale of property which was acquired by the Taxpayer from an associated entity (selling entity) under an intra-group transfer arrangement to which section 15OA of the IRO applies, the selling entity has paid tax outside Hong Kong in respect of its disposal gain and the tax paid would be allowable as a credit against tax payable for the disposal gain by the selling entity in Hong Kong but for the operation of section 15OA(3).
+form1/Page13_E | text | the Taxpayer has profits attributable to the taxable amount of specified foreign-sourced income and foreign tax has been paid in relation to the income; or
+form1/Page13_E | text | (b)
+form1/Page13_E | text | (a)
+form1/Page13_E | text | 53.
+form1/Page13_E | text | The profits or loss attributable to taxable amount is the net profit or loss of specified foreign-sourced income after deducting outgoings and expenses that are incurred in, and taking into account the balancing charge or allowance relating to, the production of the relevant income. In completing columns (E) and (F), the loss of one type of specified foreign-sourced income should not be set off against the profit of another type of specified foreign-sourced income.
+form1/Page13_E | text | If the relevant income is a disposal gain (subject disposal gain) derived from the sale of property which was acquired by the Taxpayer from an associated entity (selling entity) under an intra-group transfer arrangement and the intra-group transfer relief (Note 45) prescribed in section 15OA (3) of the IRO has been applied to the disposal gain of the selling entity (intra-group disposal gain):
+form1/Page13_E | text | any balancing charge directed to be made on, or any balancing allowance made to the selling entity in respect of the intra-group disposal gain that would be taken into account when calculating the amount of the selling entity’s assessable profits or loss but for the operation of section 15OA(3) is to be regarded as having been directed to be made on, or having been made to, the Taxpayer and as relating to the subject disposal gain.
+form1/Page13_E | text | an outgoing or expense incurred by the selling entity in the production of the intra-group disposal gain that would be deductible under profits tax but for the operation of section 15OA(3) is to be regarded as having been incurred by the Taxpayer in the production of the subject disposal gain;

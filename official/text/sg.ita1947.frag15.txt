@@ -1,0 +1,881 @@
+PART 16
+RETURNS
+Notice of chargeability and returns
+62.
+—(1) The Comptroller may, by notice in the
+Gazette
+, require every person to furnish to the Comptroller in such form and manner as the Comptroller may determine, within a reasonable time specified in the notice or such extended time as the Comptroller may allow, a return of income for the year of assessment specified in the notice and such particulars as may be required for the purpose of ascertaining the income (if any) for which —
+(
+a
+)
+the person is chargeable under this Act; and
+(
+b
+)
+in the case of a precedent partner or such other person referred to in section 71, each partner in the partnership is chargeable.
+(2) The Comptroller may, in any notice made under subsection (1), exempt from liability to furnish returns such classes of persons as the Comptroller thinks fit, and any person so exempted need not furnish a return under that subsection unless the person is required by the Comptroller to do so under subsection (3).
+(3) Despite subsection (1), the Comptroller may, by written notice, require any person to furnish to the Comptroller in such form and manner and within such reasonable time as the Comptroller may determine, with a return of income and such particulars as may be required for the purpose of ascertaining the income (if any) for which such person is chargeable under this Act.
+(4) Every person chargeable with tax for any year of assessment who has not been required within 3 months after the commencement of such year of assessment to make a return of the person’s income for that year as provided in subsection (1) or (3) must, within 14 days after the end of that period, give notice to the Comptroller that the person is so chargeable.
+(5) Any individual who arrives in Singapore during any year of assessment must give such notice within one month of the date of the individual’s arrival.
+(6) A company licensed under the Insurance Act 1966 to carry on insurance business in Singapore that is required under subsection (1) to furnish a tax computation with its return of income, must furnish to the Comptroller a tax computation that is prepared in accordance with its MAS return along with such additional information as the Comptroller may reasonably require for making an assessment.
+[Act 33 of 2022 wef 04/11/2022]
+(7) Subsection (6) has effect for any year of assessment for a basis period beginning on or after 1 January 2023, or such earlier basis period as may be approved by the Comptroller in a particular case.
+[Act 33 of 2022 wef 04/11/2022]
+(8) The Minister may make regulations to provide for any transitional, supplementary and consequential matters relating to subsections (6) and (7).
+[Act 33 of 2022 wef 04/11/2022]
+(9) In this section, “MAS return” has the meaning given by section 34AAA(14).
+[Act 33 of 2022 wef 04/11/2022]
+The basic rule: Singapore dollar to be used
+62A.
+Subject to section 62B, where a person carrying on a trade, business, profession or vocation is required to furnish tax computations and particulars of income with a return of income made under section 62 or 71, the tax computations and particulars of income must be denominated in Singapore dollar.
+Currency other than Singapore dollar to be used in certain circumstances
+62B.
+—(1) Where a person maintains the person’s financial accounts in respect of any trade, business, profession or vocation carried on by the person in a functional currency other than Singapore dollar in accordance with financial reporting standards in Singapore, the person who is required to furnish tax computations and particulars of income with a return of income made under section 62 or 71 must furnish such computations and particulars of income denominated in that functional currency in the manner prescribed under this section.
+(2) The amount of chargeable income (after deducting the amount not charged to tax under section 43(6) or (6C)) of any company for any year of assessment must be converted to an equivalent amount in Singapore dollar, and the amount of tax which has been deducted or is deductible from any interest under section 45 derived by the company must remain denominated in Singapore dollar.
+[45/2018]
+(3) The amount of statutory income from any trade, business, profession or vocation carried on by any individual for any basis period and the amount of donation made by the individual during any year must be converted to an equivalent amount in Singapore dollar, and any amount of allowances, losses or donations which remains unabsorbed at the end of any basis period or at the end of any year (as the case may be) must be carried forward to the next basis period or next year denominated in Singapore dollar.
+(4) In respect of any partnership, the income of a partner from the partnership and the partner’s share of donation made by the partnership for any year of assessment must be converted to an equivalent amount in Singapore dollar, and any amount of allowances, losses or donations which remains unabsorbed at the end of any basis period or at the end of any year (as the case may be) must be carried forward to the next basis period or next year denominated in Singapore dollar in the tax computation of each partner.
+(5) Despite anything in this section, a person who is required to furnish tax computations and particulars of income with a return of income made under section 62 or 71 to whom this section applies must declare any information required in any return of income in Singapore dollar.
+(6) Subject to subsection (7), the rate of exchange applicable for the purposes of converting any amount in Singapore dollar to an equivalent amount in a non‑Singapore dollar functional currency, or any amount in a non‑Singapore dollar functional currency to an equivalent amount in Singapore dollar (as the case may be) is —
+(
+a
+)
+the average rate of exchange, as made available by the Monetary Authority of Singapore, calculated on the basis of the rate of exchange at the end of each month for the accounting period that constitutes the basis period for the year of assessment; or
+(
+b
+)
+where no such average rate of exchange is made available by the Monetary Authority of Singapore, such rate of exchange as the Comptroller may determine.
+(7) Despite subsection (6), for the purposes of an election under section 24 or 25, where the buyer and seller or the transferee and transferor (as the case may be) of any property each uses a different functional currency, the rate of exchange applicable is the rate of exchange prevailing as at the date of sale or transfer (as the case may be) of the property.
+[27/2021]
+(8) Despite subsection (6), where a person has furnished a tax computation and particulars of income with a return of income in Singapore dollar, and is required under subsection (9) or has obtained the Comptroller’s approval under subsection (10) (as the case may be) to furnish a tax computation and particulars of income with a return of income in a non‑Singapore dollar functional currency for any year of assessment, such person must convert the amounts denominated in Singapore dollar into the equivalent amount in the functional currency in accordance with the regulations made under subsection (11).
+(9) This section has effect for accounting periods beginning on or after 1 January 2003.
+(10) This section also has effect for accounting periods beginning before 1 January 2003 of a person which had been approved by the Comptroller to furnish tax computations and particulars of income with a return of income made under section 62 or 71 denominated in a functional currency other than Singapore dollar for those accounting periods.
+(10A) This section does not apply to any company licensed under the Insurance Act 1966 to carry on insurance business in Singapore, in respect of an accounting period beginning on or after 1 January 2023, or such earlier accounting period as may be approved by the Comptroller in a particular case.
+[Act 33 of 2022 wef 04/11/2022]
+(11) For the purposes of this section, the Minister may make regulations to provide for —
+(
+a
+)
+such transitional, supplementary and consequential matters as the Minister may consider necessary or expedient; and
+(
+b
+)
+generally giving effect to or for carrying out the purposes of this section.
+Furnishing of estimate of chargeable income if no return is made under section 62
+63.
+—(1) Subject to subsection (1AAA), and unless exempted by rules mentioned in subsection (3), every person, not being an individual, who has not made a return under section 62 for any year of assessment must, within 3 months after the end of the accounting period relating to that year of assessment, or such extended time as the Comptroller may allow, furnish to the Comptroller an estimate of the person’s chargeable income.
+[34/2016]
+[Act 33 of 2022 wef 04/11/2022]
+(1AAA) Unless exempted by rules mentioned in subsection (3), every insurer (other than a captive insurer or a marine mutual insurer) who has not made a return under section 62 for the year of assessment for an accounting period beginning on or after 1 January 2023 must, within 3 months after the end of the calendar year preceding the year of assessment or such extended time as the Comptroller may allow, furnish to the Comptroller an estimate of the insurer’s chargeable income.
+[Act 33 of 2022 wef 04/11/2022]
+(1AA) A person mentioned in subsection (1) or (1AAA) must furnish the estimate of the person’s chargeable income for a year of assessment using the electronic service if rules mentioned in subsection (3) require a class of persons to furnish their estimates for that year of assessment using the electronic service, and the person belongs to that class.
+[34/2016]
+[Act 33 of 2022 wef 04/11/2022]
+(1A) Unless exempted by rules mentioned in subsection (3), every individual carrying on or exercising any trade, business, profession or vocation who has not made a return under section 62 for any year of assessment must, within 3 months after the end of the accounting period relating to that year of assessment, or such extended time as the Comptroller may allow, furnish to the Comptroller an estimate of the individual’s chargeable income.
+[34/2016]
+[Act 33 of 2022 wef 04/11/2022]
+(1B) Subsection (1A) does not apply for a year of assessment between the years of assessment 2026 and 2030 (both years inclusive).
+[Act 35 of 2024 wef 27/11/2024]
+(2) Any person who fails or neglects without reasonable excuse to furnish the estimate of the person’s chargeable income as required under subsection (1), (1AAA), (1AA) or (1A) shall be guilty of an offence.
+[34/2016]
+[Act 33 of 2022 wef 04/11/2022]
+(3) The Minister may, by rules made under section 7, do any of the following:
+(
+a
+)
+require a specified class of persons subject to subsection (1) or (1AAA) to furnish the estimate of their chargeable income for any year of assessment under that subsection using the electronic service;
+[Act 33 of 2022 wef 04/11/2022]
+(
+b
+)
+exempt any person or class of persons from subsection (1), (1AAA) or (1A) in respect of one or more years of assessment, subject to such conditions as may be specified in the rules.
+[34/2016]
+[Act 33 of 2022 wef 04/11/2022]
+(4) In this section —
+“captive insurer” and “marine mutual insurer” have the meanings given by section 2 of the Insurance Act 1966;
+“insurer” means any company licensed under the Insurance Act 1966 to carry on insurance business in Singapore.
+[Act 33 of 2022 wef 04/11/2022]
+Comptroller may call for further returns
+64.
+The Comptroller may give written notice to any person when and as often as the Comptroller thinks necessary requiring the person to furnish within a reasonable time limited by such notice fuller or further returns respecting any matter as to which a return is required by or under this Act.
+Power to call for returns
+65.
+—(1) For the purpose of obtaining full information in respect of a person’s income, the Comptroller may give notice to the person requiring the person to complete and return to the Comptroller, within the time specified in the notice, a return specified in the notice.
+[34/2016]
+(2) The time specified in the notice must not be less than 30 days after the date of service of the notice on the person.
+[34/2016]
+Statement of bank accounts, assets, etc.
+65A.
+The Comptroller may give written notice to any person requiring the person to furnish within the time limited by such notice, not being less than 30 days from the date of service of such notice, a statement containing particulars of —
+(
+a
+)
+all banking accounts, whether current or deposit, business or private, in the person’s own name or in the name or names of the person’s wife or wives, or in any other name, in which the person is or has been interested, or on which the person has or has had power to operate, jointly or solely, and which are in existence or which have existed at any time during the period stated in the notice;
+(
+b
+)
+all savings and loan accounts, deposits, building society and co‑operative society accounts, in regard to which the person has, or has had, any interest or power to operate jointly or solely during the periods aforesaid;
+(
+c
+)
+all assets, other than those referred to in paragraph (
+a
+) or (
+b
+) which the person and the person’s wife or wives possess, or have possessed, during the period aforesaid;
+(
+d
+)
+all sources of income not referred to in paragraph (
+a
+), (
+b
+) or (
+c
+) and the income derived therefrom; and
+(
+e
+)
+all facts bearing upon the person’s liability to income tax to which the person is, or has been, liable.
+Power of Comptroller to obtain information
+65B.
+—(1) The Comptroller or any officer authorised by the Comptroller in that behalf —
+(
+a
+)
+must at all times have full and free access to all buildings, places, documents, computers, computer programs and computer software (whether installed in a computer or otherwise) for any of the purposes of this Act;
+(
+b
+)
+must have access to any information, code or technology which has the capability of retransforming or unscrambling encrypted data contained or available to such computers into readable and comprehensive format or text for any of the purposes of this Act;
+(
+c
+)
+is entitled —
+(i)
+without fee or reward, to inspect, copy or make extracts from any such document, computer, computer program, computer software or computer output; and
+(ii)
+at any reasonable time to inspect and check the operation of any computer, device, apparatus or material which is or has been in use in connection with anything to which this section applies;
+(
+d
+)
+may take possession of any such document, computer, device, apparatus, material, computer program or computer software where in his or her opinion —
+(i)
+the inspection, checking, copying thereof or extraction therefrom cannot reasonably be performed without taking possession;
+(ii)
+any such items may be interfered with or destroyed unless possession is taken; or
+(iii)
+any such items may be required as evidence in proceedings for an offence under this Act or in proceedings for the recovery of tax or penalty, or in proceedings by way of an appeal against an assessment;
+(
+e
+)
+is entitled to require —
+(i)
+the person by whom or on whose behalf the computer is or has been used, or any person having charge of, or otherwise concerned with the operation of the computer, device, apparatus or material to provide the Comptroller or officer with such reasonable assistance as the Comptroller or officer may require for the purposes of this section; and
+(ii)
+any person in possession of decryption information to grant the Comptroller or officer access to such decryption information necessary to decrypt data required for the purpose of this section; and
+(
+f
+)
+is entitled to require a person in or at the building or place, and who appears to the Comptroller or officer to be acquainted with —
+(i)
+any facts or circumstances concerning the person’s or another person’s income, assets or liabilities; or
+(ii)
+any facts or circumstances that are relevant to an investigation of, or the prosecution of a person for, an offence under this Act,
+to do either or both of the following:
+(iii)
+answer any question to the best of that person’s knowledge, information and belief;
+(iv)
+take reasonable steps to produce a document for inspection.
+[34/2016; 45/2018]
+(1A) The Comptroller or a specially authorised officer may, for the purpose of investigating an offence under section 37M(3) or (4), 37S(3) or (4), 96 or 96A, break open any outer or inner door or window, or use any other reasonable means, to gain entry to a building or place.
+[45/2018]
+[Act 30 of 2023 wef 30/10/2023]
+(1B) The Comptroller or a specially authorised officer may only exercise the power under subsection (1A) if —
+(
+a
+)
+he or she has reason to believe that there is in that building or place any document or thing that may be, or that contains information that may be —
+(i)
+relevant to the investigation; or
+(ii)
+required as evidence in proceedings for the offence being investigated;
+(
+b
+)
+he or she has reason to believe that the document or thing is likely to be concealed, removed or destroyed, or the information is likely to be deleted, by any person; and
+(
+c
+)
+he or she is unable to gain entry to that building or place after stating his or her authority and purpose and demanding such entry.
+[45/2018]
+(1C) To avoid doubt, the Comptroller or a specially authorised officer who has gained entry to a building or place by exercising his or her power under subsection (1A), may exercise any of his or her powers under subsection (1) after such entry.
+[45/2018]
+(1D) The Comptroller or a specially authorised officer may, after gaining entry into a building or place under subsection (1) or (1A) for the purpose of investigating an offence under this Act, search or cause to be searched a person found in the building or place for any document or thing which may be relevant for the investigation, or is required as evidence in proceedings for that offence.
+[45/2018]
+(1E) A reference in subsection (1D) to an offence under this Act excludes an offence under section 65C as applied by section 105F or by section 105N, or an offence under section 105M.
+[45/2018]
+(1F) A woman must not be searched except by a woman.
+[45/2018]
+(2) A person is not obliged under this section to disclose (including through the production of a document) —
+(
+a
+)
+any information which the person is under any statutory obligation (other than sections 128, 128A, 129 and 131 of the Evidence Act 1893) to observe secrecy; or
+(
+b
+)
+any information subject to legal privilege.
+[34/2016]
+(3) The Comptroller may by notice require any person to give orally, in writing, or through the electronic service —
+(
+a
+)
+any information concerning the person’s or any other person’s income, assets or liabilities that is relevant for the purposes of this Act; or
+(
+b
+)
+any information that is relevant for an investigation of, or the prosecution of a person for, an offence under this Act.
+[45/2018]
+(3A) The time for compliance with a notice under subsection (3) is 21 days from the date of service of the notice or such other period as the Comptroller considers appropriate.
+(3B) The Comptroller may by notice require any person to attend personally before the Comptroller or an officer authorised by the Comptroller, at the place and time specified in the notice, to do one or both of the following:
+(
+a
+)
+provide, to the best of that person’s knowledge, information and belief —
+(i)
+any information concerning the person’s or any other person’s income, assets or liabilities that is relevant for the purposes of this Act; or
+(ii)
+any information that is relevant for an investigation of, or the prosecution of a person for, an offence under this Act;
+(
+b
+)
+take reasonable steps to produce for inspection any document concerning such income, assets or liabilities, or that contains such information.
+[34/2016; 45/2018]
+(3C) The power to require a person to provide information or produce a document under subsection (1)(
+f
+) or (3), or when in attendance before the Comptroller or an authorised officer pursuant to a notice under subsection (3B), includes the power —
+(
+a
+)
+to require that person, or any person who is or was an officer or employee of that person, to provide an explanation of the information or document;
+(
+b
+)
+if the information is not provided or the document is not produced, to require that person to state, to the best of the person’s knowledge and belief, where it is;
+(
+c
+)
+if the information is recorded otherwise than in legible form, to require the information to be made available to the Comptroller or authorised officer (as the case may be) in legible form; and
+(
+d
+)
+in the case of a document, to inspect, copy or make extracts from the document without fee or reward, and to take possession of the document if in the Comptroller’s or authorised officer’s opinion —
+(i)
+the inspection, copying or extraction cannot reasonably be performed without taking possession of the document;
+(ii)
+the document may be interfered with or destroyed unless possession of the document is taken; or
+(iii)
+the document may be required as evidence in proceedings for an offence under this Act or in proceedings for the recovery of tax or penalty, or in proceedings by way of an appeal against an assessment.
+[34/2016]
+(3D) A statement made by any person asked under subsection (1)(
+f
+), or when in attendance before the Comptroller or an authorised officer pursuant to a notice under subsection (3B), must —
+(
+a
+)
+be reduced to writing;
+(
+b
+)
+be read over to the person;
+(
+c
+)
+if the person does not understand English, be interpreted for the person in a language that the person understands; and
+(
+d
+)
+be signed by the person.
+[34/2016]
+(3E) In this section —
+“document” includes, in addition to a document in writing —
+(
+a
+)
+any map, plan, graph or drawing;
+(
+b
+)
+any photograph;
+(
+c
+)
+any label, marking or other writing which identifies or describes anything of which it forms a part, or to which it is attached by any means;
+(
+d
+)
+any disc, tape, soundtrack or other device in which sounds or other data (not being visual images) are embodied so as to be capable (with or without the aid of some other equipment) of being reproduced from it;
+(
+e
+)
+any film (including microfilm), negative, tape, disc or other device in which one or more visual images are embodied so as to be capable (with or without the aid of some other equipment) of being reproduced from it; and
+(
+f
+)
+any paper or other material on which there are marks, impressions, figures, letters, symbols or perforations having a meaning for persons qualified to interpret them;
+“writing” includes any mode of representing or reproducing words, figures, drawings or symbols in a visible form.
+[34/2016]
+(4) In this section, “computer” and “computer output” have the meanings given by the Computer Misuse Act 1993.
+[9/2018]
+Failure to comply with section 64, 65, 65A or 65B
+65C.
+—(1) Any person who, without reasonable excuse —
+(
+a
+)
+fails, neglects or refuses to comply with any notice or requirement of the Comptroller or an officer authorised by the Comptroller under section 64, 65, 65A or 65B, or a demand for information; or
+(
+b
+)
+hinders or obstructs the Comptroller, or any officer authorised by the Comptroller, in the performance or execution of his or her duties or of anything which he or she is empowered or required to do under section 65B,
+shall be guilty of an offence.
+[34/2016]
+(2) Any person guilty of an offence under subsection (1) shall be liable on conviction to a fine not exceeding $10,000 or to imprisonment for a term not exceeding 12 months or to both and, in the case of a continuing offence, to a further fine not exceeding $100 for every day or part of a day during which the offence continues after conviction.
+[34/2016]
+(3) The Comptroller may compound any offence under subsection (1).
+(4) The generality of the term “reasonable excuse” in subsection (1) is not affected by section 65B(2).
+(5) Except as provided under section 65B(2), it is not a defence to a charge under subsection (1) for a failure to provide any information or produce any document sought by a notice mentioned in section 65B, that the person is under a duty of secrecy in respect of that information or the contents of that document (called in this section a displaced duty of secrecy).
+[34/2016]
+(6) A person who in good faith complies with a notice referred to in section 65B is not treated as being in breach of a displaced duty of secrecy.
+(7) No civil or criminal action for a breach of a displaced duty of secrecy, other than a criminal action for an offence under subsection (8), shall lie against the person referred to in subsection (6) —
+(
+a
+)
+for producing any document or providing any information if the person had done so in good faith in compliance with the notice under section 65B; or
+(
+b
+)
+for doing or omitting to do any act if the person had done or omitted to do the act in good faith and as a result of complying with such a notice.
+(7A) In subsections (5), (6) and (7) —
+(
+a
+)
+a reference to a notice under section 65B to provide information includes a reference to a requirement to provide information under section 65B(1)(
+f
+) and a demand for information; and
+(
+b
+)
+a reference to a notice under section 65B to produce a document includes a reference to a requirement to produce a document under section 65B(1)(
+f
+).
+[34/2016]
+(8) Any person who, in purported compliance with a notice or requirement of the Comptroller or an officer authorised by the Comptroller under section 64, 65, 65A or 65B, or with a demand for information, produces any document which contains any information, or provides any information, known to the person to be false or misleading in a material particular —
+(
+a
+)
+without indicating to the Comptroller or the officer that the information is false or misleading and the part that is false or misleading; and
+(
+b
+)
+without providing correct information to the Comptroller or the officer if the person is in possession of, or can reasonably acquire, the correct information,
+shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $10,000 or to imprisonment for a term not exceeding 2 years or to both.
+[34/2016]
+(9) A person shall not be convicted of an offence under this section for failing or neglecting to comply with a notice issued by the Comptroller under section 64, 65, 65A or 65B unless the notice was served on the person personally or by registered post.
+[19/2013]
+(10) In this section, “demand for information” means a demand by the Comptroller or an officer authorised by the Comptroller to answer a question when in attendance before the Comptroller or the officer pursuant to a notice under section 65B(3B).
+[34/2016]
+Section 65B notice applies despite duty of secrecy under Banking Act 1970 or Trust Companies Act 2005
+65D.
+—(1) This section applies where —
+(
+a
+)
+the Comptroller requires any information for the administration of this Act, other than for an investigation or a prosecution for an offence alleged or suspected to have been committed under this Act;
+(
+b
+)
+the information is protected from unauthorised disclosure under either of the following laws (called in this section the relevant laws):
+(i)
+section 47 of the Banking Act 1970 including that section as applied by section 55ZI(1) of that Act;
+(ii)
+section 49 of the Trust Companies Act 2005; and
+(
+c
+)
+a person is given a notice, or is required, under section 65B to provide the information or to produce a document containing the information.
+[34/2016; 1/2020]
+(2) Despite anything in section 65B(2)(
+a
+), a person issued with a notice or requirement mentioned in subsection (1)(
+c
+) is not excused from providing the information or document by reason only that the person is under a statutory obligation to observe secrecy under a relevant law, and that notice has effect despite the relevant law.
+[34/2016]
+(3) A person who in good faith complies with a notice or requirement mentioned in subsection (1)(
+c
+) is not treated as being in breach of the relevant law.
+[34/2016]
+(4) No action for a breach of the relevant law shall lie against the person mentioned in subsection (3) —
+(
+a
+)
+for producing any document or providing any information if the person had done so in good faith in compliance with a notice or requirement mentioned in subsection (1)(
+c
+); or
+(
+b
+)
+for doing or omitting to do any act if the person had done or omitted to do the act in good faith and as a result of complying with such a notice or requirement.
+[34/2016]
+(5) In this section, a notice under section 65B to provide information includes a demand for information as defined in section 65C(10).
+[34/2016]
+Section 65B notice may be subject to confidentiality duty
+65E.
+—(1) Where the Comptroller issues a notice to any person under section 65B and states that the notice must be kept confidential, the person (including an officer, employee or agent of the person) must not disclose any information relating to the notice to any other person.
+(2) Subsection (1) does not apply to the disclosure of any information relating to the notice to an advocate and solicitor for the purpose of seeking legal advice on the notice, if (and only if) the person who discloses the information informs the advocate and solicitor of the Comptroller’s requirement that the notice be kept confidential.
+(3) The advocate and solicitor to whom information is disclosed in accordance with subsection (2) is subject to subsection (1) as if he or she is the person given the notice under subsection (1).
+(4) Any person who contravenes subsection (1) shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $1,000 and in default of payment to imprisonment for a term not exceeding 6 months.
+(5) The Comptroller may compound any offence under subsection (4).
+(6) A person who in good faith complies with subsection (1) is not treated as being in breach of any duty to disclose the information to any person, whether imposed by written law, rule of law, any contract or any rule of professional conduct; and no criminal or civil action for a breach of such duty shall lie against the firstmentioned person.
+Arrest of person
+65F.
+—(1) The Comptroller or a specially authorised officer (called in this section and sections 65G, 65H and 65I an arresting officer) may arrest without warrant any person whom the arresting officer reasonably believes —
+(
+a
+)
+has committed an offence under section 37M(3) or (4), 37S(3) or (4), 96 or 96A; or
+[Act 30 of 2023 wef 30/10/2023]
+(
+b
+)
+is doing any of the following:
+(i)
+destroying or attempting to destroy any document or thing with a view to hindering or obstructing the Comptroller, or an officer authorised under section 4(1) to investigate offences under this Act, in the exercise of his or her powers;
+(ii)
+deleting or attempting to delete any information contained in any thing with a view to hindering or obstructing the Comptroller or an officer mentioned in sub‑paragraph (i), in the exercise of his or her powers;
+(iii)
+resisting or attempting to resist, without reasonable excuse, the taking of any document or thing by the Comptroller or an officer mentioned in sub‑paragraph (i),
+being any document, thing or information that may be relevant to an investigation of an offence under this Act, or that may be required as evidence in proceedings for an offence under this Act.
+[45/2018]
+(2) A reference in subsection (1)(
+b
+) to an offence under this Act excludes an offence under section 65C as applied by section 105F or by section 105N, and an offence under section 105M.
+[45/2018]
+(3) An arresting officer may search or cause to be searched an arrested person.
+[45/2018]
+(4) A woman must not be searched except by a woman.
+[45/2018]
+(5) An arresting officer making an arrest must, without unnecessary delay and subject to subsection (8) and the rules mentioned in subsection (10), take or send an arrested person before a Magistrate’s Court.
+[45/2018]
+(6) An arresting officer must not detain in custody an arrested person for a longer period than under the circumstances of the case is reasonable.
+[45/2018]
+(7) Such period must not exceed 48 hours, excluding the time necessary for the journey from the place of arrest to the Magistrate’s Court.
+[45/2018]
+(8) An arrested person must not be released except —
+(
+a
+)
+on the person’s own bond;
+(
+b
+)
+on bail by a Magistrate or an arresting officer; or
+(
+c
+)
+under the special order in writing by a Magistrate or an arresting officer.
+[45/2018]
+(9) If any arrested person escapes, he or she may, at any time afterwards, be arrested in accordance with this section and section 65G.
+[45/2018]
+(10) The Minister may make rules under section 7 to provide for —
+(
+a
+)
+any matter relating to the release of any person on any bond, bail or special order under subsection (8); and
+(
+b
+)
+the arrest of any person with or without warrant by an arresting officer for a breach of the conditions of a bond, bail or special order or other specified circumstances.
+[45/2018]
+No unnecessary restraint
+65G.
+—(1) In making an arrest, an arresting officer must touch or confine the body of a person to be arrested unless the person submits to arrest by word or action.
+[45/2018]
+(2) If the person forcibly resists, or tries to evade arrest, the arresting officer may use all reasonable means necessary to make the arrest.
+[45/2018]
+(3) An arrested person must not be subject to more restraint than is necessary to prevent the person’s escape.
+[45/2018]
+(4) An arresting officer may use handcuffs or any similar means of restraint on an arrested person to prevent the person from —
+(
+a
+)
+inflicting any bodily injury to himself or herself, or others;
+(
+b
+)
+damaging any property;
+(
+c
+)
+creating any disturbance; or
+(
+d
+)
+escaping from custody.
+[45/2018]
+(5) The handcuffs or means of restraint must not be used for the purpose of punishment.
+[45/2018]
+Arresting officer to be armed
+65H.
+An arresting officer may be provided with such batons and accoutrements as may be necessary for the effective discharge of his or her duties under sections 65F and 65G.
+[45/2018]
+Search of place entered by person sought to be arrested
+65I.
+—(1) If an arresting officer has reason to believe that a person to be arrested under section 65F(1) is inside any building or place and demands entry to that building or place, any person who resides in or is in charge of the building or place must allow the arresting officer free entry and provide all reasonable facilities for a search in it.
+[45/2018]
+(2) If entry to that building or place cannot be gained under subsection (1), it is lawful for the arresting officer to enter and search the building or place.
+[45/2018]
+(3) After stating his or her authority and purpose and demanding entry to a building or place, the arresting officer who is unable to obtain entry may, for the purposes of subsection (2), break open any outer or inner door or window or use any other reasonable means to gain such entry.
+[45/2018]
+Arrested person may be orally examined
+65J.
+—(1) The Comptroller or an officer authorised under section 4(1) to investigate offences under this Act (called in this section an investigation officer), may examine orally a person arrested under section 65F(1).
+[45/2018]
+(2) A person examined by an investigation officer need not state anything which —
+(
+a
+)
+the person is under any statutory obligation (other than sections 128, 128A, 129 and 131 of the Evidence Act 1893) to observe secrecy; or
+(
+b
+)
+is subject to legal privilege.
+[45/2018]
+(3) A statement made by an arrested person must —
+(
+a
+)
+be reduced to writing;
+(
+b
+)
+be read over to the person;
+(
+c
+)
+if the person does not understand English, be interpreted for the person in a language that the person understands; and
+(
+d
+)
+be signed by the person.
+[45/2018]
+(4) Any person who, without reasonable excuse, fails or refuses to answer any question when examined under subsection (1) shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $10,000 or to imprisonment for a term not exceeding 12 months or to both.
+[45/2018]
+(5) The Comptroller may compound any offence under subsection (4).
+[45/2018]
+(6) The generality of the term “reasonable excuse” in subsection (4) is not affected by subsection (2).
+[45/2018]
+(7) Except as provided under subsection (2), it is not a defence to a charge under subsection (4) for a failure to provide any information demanded by an investigation officer that the person is under a duty of secrecy in respect of that information (called in this section a displaced duty of secrecy).
+[45/2018]
+(8) A person who in good faith provides information demanded by an investigation officer under subsection (1) is not treated as being in breach of a displaced duty of secrecy.
+[45/2018]
+(9) No civil or criminal action for a breach of a displaced duty of secrecy, other than a criminal action for an offence under subsection (10), lies against the person mentioned in subsection (8) for providing any information if the person had done so in good faith in compliance with a demand of an investigation officer under subsection (1).
+[45/2018]
+(10) Any person who, in purported compliance with a demand of an investigation officer under subsection (1), provides any information known to the person to be false or misleading in a material particular —
+(
+a
+)
+without indicating to the investigation officer that the information is false or misleading and the part that is false or misleading; and
+(
+b
+)
+without providing correct information to the investigation officer if the person is in possession of, or can reasonably acquire, the correct information,
+shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $10,000 or to imprisonment for a term not exceeding 2 years or to both.
+[45/2018]
+Disposal of item furnished or seized
+65K.
+—(1) Any item furnished to or seized by the Comptroller or an officer authorised by the Comptroller under section 65A or 65B must —
+(
+a
+)
+where the item is produced in any criminal proceedings, be dealt with in accordance with section 364 of the Criminal Procedure Code 2010; or
+(
+b
+)
+in any other case, be dealt with in accordance with subsections (2), (3) and (4).
+[45/2018]
+(2) The Comptroller or an officer authorised by the Comptroller must serve a notice on the owner of the item instructing the owner to take custody of it within the period specified in the notice, which must be at least 5 days after the date of service of the notice.
+[45/2018]
+(3) If the owner fails to take custody of the item within the period specified in the notice, or where the owner is unknown or cannot be found, then —
+(
+a
+)
+if the item is a document (other than one specified in paragraph (
+d
+) or (
+e
+) of the definition of “document” in section 65B(3E)), the item may be disposed of in such manner as the Comptroller directs; or
+(
+b
+)
+if the item is anything not specified in paragraph (
+a
+), the Comptroller must make a report of this to a Magistrate.
+[45/2018]
+(4) The Magistrate to whom a report is made under subsection (3)(
+b
+) may order the item to be forfeited or disposed of in such manner as the Magistrate thinks fit.
+[45/2018]
+(5) This section does not affect any right to retain or dispose of any item which may exist in law apart from this section.
+[45/2018]
+Returns to be deemed to be furnished by due authority
+66.
+—(1) A return, statement or form purporting to be furnished under this Act by or on behalf of any person is for all purposes deemed to have been furnished by that person or by that person’s authority (as the case may be) unless the contrary is proved.
+(2) Any person signing any such return, statement or form is deemed to be cognizant of all matters therein.
+Keeping of books of account and giving of receipts
+67.
+—(1) Subject to subsection (3), every person carrying on or exercising any trade, business, profession or vocation —
+(
+a
+)
+must keep and retain in safe custody sufficient records for a period of 5 years from the year of assessment to which any income relates to enable the person’s income and allowable deductions under this Act to be readily ascertained by the Comptroller or any officer authorised in that behalf by the Comptroller; and
+(
+b
+)
+must, if the gross receipts from such trade, business, profession or vocation in the preceding calendar year exceeded $18,000 from the sale of goods, or $12,000 from the performance of services, issue a printed receipt serially numbered for every sum received in respect of goods sold or services performed in the course of or in connection with such trade, business, profession or vocation, and must retain a duplicate of every such receipt.
+(2) Where a machine is used for recording sales, a receipt may be dispensed with if the Comptroller is satisfied that —
+(
+a
+)
+such machine automatically records all sales made; and
+(
+b
+)
+the total of all sales made in each day is transferred at the end of the day to a record of sales.
+(3) The Comptroller may by written notice to any person carrying on or exercising any trade, business, profession or vocation, or by a notice in the
+Gazette
+in respect of any class or description of any such person, prescribe —
+(
+a
+)
+the form of the records to be kept under subsection (1)(
+a
+), and the manner in which such records must be kept and retained; and
+(
+b
+)
+the form of the receipts to be issued and the duplicates to be retained under subsection (1)(
+b
+), and the manner in which such receipts must be issued and such duplicates must be retained,
+and every such person is bound to comply with such notice.
+(4) The Comptroller may waive all or any of the provisions of subsection (1) in respect of any person or records or any class or description of persons or records.
+(5) In this section, “records” includes —
+(
+a
+)
+books of account recording receipts or payments or income or expenditure;
+(
+b
+)
+invoices, vouchers, receipts, and such other documents as in the Comptroller’s opinion are necessary to verify the entries in any books of account; and
+(
+c
+)
+any records relating to any trade, business, profession or vocation.
+Official information and secrecy, and returns by employer
+68.
+—(1) The Comptroller may require any officer in the employment of the Government or of any public authority or body corporate constituted by statute to supply such particulars as may be required for the purposes of this Act and which may be in the possession of the officer.
+(1A) No such officer is by virtue of this section obliged to disclose any particulars as to which he or she is under any statutory obligation to observe secrecy.
+(2) The Comptroller may, by notice in the
+Gazette
+, require every employer to prepare and deliver to the Comptroller or any person specified in the notice, for any year specified in the notice and within the time limited thereby, a return in such form as the Comptroller may determine containing —
+(
+a
+)
+the names and places of residence of such classes of persons employed by the employer as may be specified in the notice; and
+(
+b
+)
+the full amount of remuneration, whether in cash or otherwise, paid or payable to those persons in respect of such employment,
+and every employer is bound to comply with any such notice within the time for compliance limited thereby, or such extended time as the Comptroller may allow.
+[Act 33 of 2022 wef 04/11/2022]
+(2A) It is not necessary to deliver nil returns under subsection (2).
+(2B) Where an employer has granted an individual, other than a director to whom subsection (2C) applies, any right or benefit to acquire shares in any company incorporated in Singapore, the employer must submit a return in the form and manner specified in subsection (2) including any gain or profit derived by the individual as computed under section 10(6), even if the individual has ceased to be employed by the employer at the time the gain or profit is derived.
+(2C) Where an employer, being a company, has granted a director of the company who is not resident in Singapore any right or benefit to acquire shares in any company incorporated in Singapore, the employer must submit a return, in such form as the Comptroller may determine, of any gain or profit derived by the non‑resident director when the right or benefit is exercised, assigned, released or acquired as computed under section 10(6) within 30 days of such exercise, assignment, release or acquisition (as the case may be), even if the non‑resident director may have ceased to be employed by the company at the time the gain or profit is derived.
+(3) Where the employer is a company or a body of persons, the manager or principal officer is deemed to be the employer for the purposes of this section, and any director of a company, or person engaged in the management of a company, is deemed to be a person employed.
+(4) Where an employer commences to employ in Singapore an individual who is or is likely to be chargeable to tax under section 10(1)(
+b
+), the employer must give written notice thereof to the Comptroller not later than 3 months after the date of commencement of such employment, stating the full name and address of the individual, the date of commencement and the terms of employment.
+(5) Where an employer ceases or is about to cease to employ in Singapore an individual who is not a citizen of Singapore and who is or is likely to be chargeable to tax under section 10(1)(
+b
+), the employer must give written notice thereof to the Comptroller not later than one month before such individual ceases to be employed in Singapore, stating the name and address of the individual and the expected date of cessation.
+(6) The employer of any individual who is chargeable to tax under section 10(1)(
+b
+) and who is to the knowledge of such employer about to leave or intending to leave Singapore for any period exceeding 3 months, must give written notice to the Comptroller of the expected date of departure of such individual. Such notice must be given not later than one month before the expected date of departure.
+(6A) Subsection (6) does not apply in the case of an individual who is required in the course of his or her employment to leave Singapore at frequent intervals or who is a citizen of Singapore.
+(7) Where an employer has in the employer’s possession any moneys whatsoever which are or may be payable to or for the benefit of an employee who has ceased or is about to cease to be employed by the employer in Singapore, the employer must not, without the Comptroller’s permission, pay any part of such moneys to or for the benefit of such employee until the expiry of 30 days after the receipt by the Comptroller of such notice as is required to be given under subsection (5).
+(8) Where any person ceases or is about to cease being a partner, and such person is likely to be chargeable to tax in Singapore, the partners present in Singapore must, unless it is impracticable to do so, give one month’s notice in writing to the Comptroller before such person ceases to be a partner, stating the name and address of such person and the expected date of such person ceasing to be a partner.
+(9) Where any partner is leaving or intending to leave Singapore for any period exceeding 3 months and is likely to be chargeable to tax in Singapore, the partners present in Singapore must, unless it is impracticable to do so, give one month’s notice in writing to the Comptroller of the expected date of departure of such partner.
+(10) Subsection (9) does not apply in the case of a partner who is required in the course of the partner’s business to leave Singapore at frequent intervals.
+(11) Where any person who has ceased or is about to cease being a partner in Singapore has moneys due or payable to that person from the partnership, the partners present in Singapore must not, without the Comptroller’s written permission, pay such moneys or any part thereof to that person.
+(12) The Comptroller may under subsection (5), (6), (8) or (9), in any particular case or class of cases —
+(
+a
+)
+accept such shorter period of notice as the Comptroller may consider reasonable;
+(
+b
+)
+accept the notice mentioned in that subsection within such time after the occurrence of the event mentioned in that subsection as the Comptroller may consider reasonable; or
+(
+c
+)
+waive the requirement for a notice under that subsection subject to conditions.
+[34/2016]
+(13) Subsection (5), (6), (8) or (9) (as the case may be) applies to a case to which subsection (12)(
+a
+) applies as if the reference to the period of one month is a reference to the shorter period.
+[34/2016]
+(14) In a case where subsection (12)(
+b
+) applies, the employer or partners (as the case may be) need not comply with subsection (5), (6), (8) or (9) (as the case may be) but must, within the time mentioned in subsection (12)(
+b
+), give notice to the Comptroller of —
+(
+a
+)
+in the case of subsection (5), the name and address of the individual and the actual date of cessation of the individual’s employment;
+(
+b
+)
+in the case of subsection (6), the actual date of departure of the individual;
+(
+c
+)
+in the case of subsection (8), the name and address of the person and the actual date of the person’s cessation as a partner; or
+(
+d
+)
+in the case of subsection (9), the actual date of departure of the partner.
+[34/2016]
+Duty to collect and retain information of certain persons, etc.
+68A.
+—(1) The Minister may make rules under section 7 to prescribe a class of persons to whom this section applies.
+(2) The Comptroller may —
+(
+a
+)
+by written notice require any person (
+X
+) that falls within a prescribed class of persons to collect, keep and retain in safe custody for a specified period not exceeding 5 years, specified identification information and income information of any person or each person within a class (
+Y
+) (including information of any outgoings and expenses incurred by
+Y
+) that entered into an agreement or arrangement of a specified description with
+X
+for
+Y
+to carry on any trade, business, profession or vocation for which
+Y
+derives income chargeable to tax under this Act; and
+(
+b
+)
+by written notice to
+X
+, require
+X
+to provide the Comptroller or any person specified in the written notice, any information retained under paragraph (
+a
+) in the form and manner and within the time specified in the notice, or any extension of such time by the Comptroller in any particular case.
+(3) Any person who, without reasonable excuse, fails to comply with any requirement under subsection (2)(
+a
+) or (
+b
+) shall be guilty of an offence.
+(4) In this section, “person” includes a partnership, and the reference in subsection (2)(
+a
+) to income of
+Y
+that is chargeable to tax is, in a case where
+Y
+is a partnership, to the income of the partners of
+Y
+.
+[Act 30 of 2023 wef 30/10/2023]
+Lists to be prepared by representative or agent
+69.
+Every person (
+X
+) who, in whatever capacity, is in receipt of any money or value being income arising from any of the sources mentioned in this Act of or belonging to any other person (
+Y
+) who is chargeable in respect thereof, or who would be so chargeable if
+Y
+were resident in Singapore and not an incapacitated person, must whenever required to do so by any notice from the Comptroller, prepare and deliver within the period mentioned in the notice a return signed by
+X
+, containing —
+(
+a
+)
+a true and correct statement of all such income; and
+(
+b
+)
+the name and address of every person to whom the income belongs.
+Occupiers to furnish return of rent payable
+70.
+The Comptroller may give written notice to any person (
+X
+) who is the occupier of any land or premises requiring
+X
+to furnish within the time limited by such notice, not being less than 30 days from the date of service of such notice, a return containing —
+(
+a
+)
+the name and address of the owner of such land or premises or the name and address of the person to whom
+X
+pays rent therefor; and
+(
+b
+)
+a true and correct statement of the rent payable and any other consideration passing in respect of such occupation.
+Return to be made by partnership
+71.
+—(1) Where a trade, business, profession or vocation is carried on by 2 or more persons jointly, the precedent partner, that is to say, the partner who, of the partners personally present in Singapore —
+(
+a
+)
+is first named in the agreement of partnership;
+(
+b
+)
+if there is no agreement, is specified by name or initial singly or with precedence to the other partners in the usual name of the firm; or
+(
+c
+)
+is the precedent acting partner if the partner named with precedence is not an acting partner,
+must, when required by the Comptroller by written notice or by notice in the
+Gazette
+under section 62(1), make and deliver a return of the income of the partnership for any year, such income being ascertained in accordance with the provisions of this Act, and declare therein the names and addresses of the other partners in the firm together with the amount of the share of the income to which each partner was entitled for that year.
+(2) Where —
+(
+a
+)
+in the case of a limited partnership, no general partner is personally present in Singapore; or
+(
+b
+)
+in the case of all other types of partnerships, no partner is personally present in Singapore,
+the return must be made and delivered by the attorney, agent, manager or factor of the firm in Singapore.
+(3) If a return in relation to the partnership for any year of assessment has not been made, the person required to make the return under subsection (1) or (2) (as the case may be) must, within 3 months after the end of the accounting period relating to that year of assessment, or such extended time as the Comptroller may allow, furnish to the Comptroller an estimate of the income from all sources of the partnership, and the names and identification numbers of all the partners together with the amount of the share of the income to which each partner was entitled for that year.
+[Act 33 of 2022 wef 04/11/2022]
+(3A) The Minister may, by rules made under section 7, exempt any person or class of persons from subsection (3), subject to such conditions as may be specified in the rules.
+[34/2016]
+(3B) Subsection (3) does not apply for a year of assessment between the years of assessment 2026 and 2030 (both years inclusive).
+[Act 35 of 2024 wef 27/11/2024]
+(4) In this section, “general partner” has the meaning given by the Limited Partnerships Act 2008.
+71A.
+[
+Repealed by Act 49 of 2004
+]

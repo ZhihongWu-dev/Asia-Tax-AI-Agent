@@ -1,0 +1,1638 @@
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+IRAS e-Tax Guide 
+ 
+Certainty of Non-taxation of Companies’ Gains 
+on Disposal of Equity Investments 
+(Fourth Edition)   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Published by 
+Inland Revenue Authority of Singapore 
+ 
+ 
+ 
+ 
+Published on 30 Sep 2025 
+ 
+First edition on 30 May 2012 
+Second edition on 15 Jul 2016 
+Third edition on 10 Dec 2020 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Disclaimers: IRAS shall not be responsible or held accountable in any way for any damage, loss or expense 
+whatsoever, arising directly or indirectly from any inaccuracy or incompleteness in the Contents of this e-Tax 
+Guide, or errors or omissions in the transmission of the Contents. IRAS shall not be responsible or held 
+accountable in any way for any decision made or action taken by you or any third party in reliance upon the 
+Contents in this e-Tax Guide. Except where specific contents carry legal force, this information aims to 
+provide a better general understanding of taxpayers’ tax obligations and is not intended to comprehensively 
+address all possible tax issues that may arise. While every effort has been made to ensure that this 
+information is consistent with existing law and practice, should there be any changes, IRAS reserves the right 
+to vary its position accordingly. 
+ 
+ 
+© Inland Revenue Authority of Singapore 
+ 
+All rights reserved. No part of this publication may be reproduced or transmitted in any form or by any 
+means, including photocopying and recording without the written permission of the copyright holder, 
+application for which should be addressed to the publisher. Such written permission must also be obtained 
+before any part of this publication is stored in a retrieval system of any nature. 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+ 
+ 
+ 
+ 
+Table of Contents 
+ 
+Page 
+ 
+1 
+Aim ........................................................................................................... 2 
+2 
+At a glance ............................................................................................... 2 
+3 
+Background ............................................................................................. 3 
+4 
+Current Tax Treatment ............................................................................ 3 
+5 
+Certainty of non-taxation scheme .......................................................... 4 
+6 
+Exclusions from the scheme .................................................................. 7 
+7 
+Situations where normal tax rules continue to apply in determining 
+nature of gains or losses from disposal of equity investments ..... 9 
+8 
+Administrative Procedure ....................................................................... 9 
+9 
+Frequently Asked Questions ................................................................ 10 
+10 Contact Information .............................................................................. 11 
+11 Updates and Amendments ................................................................... 12 
+Annex A1 –  Example on application of condition to be met by a divesting 
+company (for disposals of ordinary shares before 1 January 
+2026)......................................................................................... 13 
+Annex A2 –  Examples on application of conditions to be met (for 
+disposals of shares on or after 1 January 2026) .................. 14 
+Annex B1 –  Flowchart illustrating the application of the certainty of non-
+taxation scheme to a divesting company (for disposal of 
+shares before 1 January 2026) .............................................. 22 
+Annex B2 –  Flowchart illustrating the application of the certainty of non-
+taxation scheme to a divesting company (for disposal of 
+shares on or after 1 January 2026) ........................................ 23 
+Annex C   –  Examples on the application of the certainty of non-taxation 
+scheme to an investee company that has undertaken 
+property development activities (for disposals of shares on 
+or after 1 June 2022) ............................................................... 24 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+2 
+ 
+1 
+Aim  
+ 
+ 
+This e-Tax Guide provides details on the tax measure to give upfront 
+certainty of non-taxation to companies which derive gains from disposal of 
+equity investments. 
+ 
+ 
+It is relevant to a company (“divesting company”) that disposes of 
+investments in:  
+ 
+(a) 
+ordinary shares of another company (“investee company”) on or after 1 
+June 2012; and  
+ 
+(b) 
+preference shares of an investee company on or after 1 January 2026. 
+Preference shares refer to those that are accounted for as equity by the 
+investee company under the applicable accounting principles adopted 
+by the investee company1 (“qualifying preference shares”).  
+ 
+ 
+2 
+At a glance 
+ 
+ 
+A scheme to provide upfront certainty of non-taxation to divesting companies 
+(“the scheme”) was introduced in Budget 2012. Under the scheme, the gains 
+derived by a divesting company from its disposal of ordinary shares in an 
+investee company are not taxable, subject to conditions. The scheme is 
+applicable to share disposals made during the period of 1 June 2012 to 31 
+December 2027. 
+ 
+ 
+As announced in Budget 2025, the sunset date of 31 December 2027 will be 
+removed and the scheme enhanced to expand the scope of eligible gains to 
+include gains from the disposal of qualifying preference shares. For disposals 
+on or after 1 January 2026, the gains derived by a divesting company from 
+its disposal of ordinary shares and/or qualifying preference shares are not 
+taxable, subject to conditions. 
+ 
+ 
+Prior to Budget 2025, to qualify for the tax treatment, the divesting company 
+must have held at least 20% of the ordinary shares in the investee company 
+for a continuous period of at least 24 months immediately prior to the date of 
+share disposal. With effect from 1 January 2026, the divesting company must 
+still hold at least 20% of the ordinary shares and/or qualifying preference 
+shares in the investee company for a continuous period of at least 24 months 
+immediately prior to the date of share disposal but the assessment of the 20% 
+shareholding can be applied on a group basis. 
+ 
+ 
+1 If the investee company is not required to comply with any accounting principles in preparing its 
+financial statements, the applicable accounting principles refer to the International Financial 
+Reporting Standards.  
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+3 
+ 
+ 
+Exclusions apply if the divesting company is subject to certain tax rules or if 
+the investee company engages in certain types of activity. 
+ 
+ 
+Where the scheme is not applicable or availed of, the determination of 
+whether gains or losses from a disposal of equity investments are income or 
+capital in nature will continue to be based on the badges of trade and the 
+facts and circumstances of each case. Normal tax rules apply to such gains 
+or losses. 
+ 
+ 
+3 
+Background 
+ 
+ 
+In Budget 2012, Deputy Prime Minister and Minister for Finance announced 
+that certainty of non-taxation will be given on gains derived by a company 
+from disposal of equity investments that meet the specified conditions.  
+ 
+ 
+The certainty of non-taxation scheme is intended to facilitate companies’ 
+restructuring for growth and consolidation
+2 , enhance Singapore’s 
+attractiveness as a business location and minimise compliance costs for 
+taxpayers. 
+ 
+ 
+To provide greater certainty to companies, the sunset date under the scheme 
+will be removed as announced in Budget 2025. The scheme will also be 
+enhanced to: 
+ 
+(a) 
+Expand the scope of eligible gains to include gains from the disposal of 
+qualifying preference shares; and 
+ 
+(b) 
+Allow the assessment of the 20% shareholding threshold to be done on 
+a group basis. 
+ 
+The enhancements apply to disposal gains derived on or after 1 January 
+2026. 
+ 
+ 
+4 
+Current Tax Treatment 
+ 
+ 
+Singapore does not tax capital gains. Therefore, only gains or losses of an 
+income nature derived by a company from disposal of equity investments in 
+another company are taxable or deductible for tax purposes. 
+ 
+ 
+The determination of whether a gain or loss from disposal of equity 
+investments in a company is income or capital in nature is based on a 
+consideration of the facts and circumstances of each case. The factors 
+ 
+2 The restructuring of companies often involves the acquisition and disposal of equity investments in 
+their associates and subsidiaries. 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+4 
+ 
+considered are drawn from established case law principles3. They include 
+motive of the seller when it acquired the shares, length of period of ownership 
+of the shares disposed, frequency of similar transactions, reasons for the 
+disposal and means of financing the acquisition of the shares 
+ 
+ 
+5 
+Certainty of non-taxation scheme 
+ 
+ 
+The scheme is provided in section 13W of the Income Tax Act 1947 (“ITA”). 
+It is applicable to disposals of – 
+ 
+(a) 
+ordinary shares in an investee company made during the period 1 June 
+2012 to 31 December 2025 (both dates inclusive).   
+ 
+(b) 
+ordinary shares and/or qualifying preference shares made on or after 1 
+January 2026. 
+ 
+It is applicable regardless of whether the investee company is –  
+ 
+(a) 
+incorporated in Singapore or elsewhere; 
+ 
+(b) 
+listed4 or non-listed. 
+ 
+ 
+Conditions for the scheme 
+ 
+5.2.1 In line with the policy objectives stated in paragraph 3.2, the scheme is only 
+applicable to a divesting company that owns a sizeable level of equity 
+investments, whether ordinary shares5 and/or qualifying preference shares, 
+of an investee company for a reasonable length of time.  
+ 
+Disposals of shares before 1 January 2026 
+ 
+5.2.2 Before 1 January 2026, gains6 derived by a divesting company from its 
+disposal of ordinary shares in an investee company are not taxable if 
+immediately prior to the date of share disposal –  
+ 
+3 The factors considered are commonly referred to as the badges of trade. 
+ 
+4 Listed on the Singapore Exchange (SGX) or an exchange elsewhere 
+ 
+5 Ordinary shares typically carry voting rights and entitle their holders to variable rates of dividends 
+unlike preference shares. 
+ 
+6 On the other hand, the determination of income or capital nature of any losses incurred by a 
+divesting company from disposal of ordinary shares under similar circumstances (i.e. as set out in 
+paragraph 5.2.2) will continue to be made based on consideration of the facts and circumstances 
+surrounding the disposal of shares. Please refer to paragraph 7.1(a) for more details. 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+5 
+ 
+the divesting company had held at least 20%7 of the ordinary shares in 
+the investee company for a continuous period of at least 24 months8.   
+ 
+5.2.3 The example in Annex A1 illustrates the application of the condition. 
+ 
+Disposals of shares on or after 1 January 2026 
+ 
+5.2.4 From 1 January 2026, gains derived by a divesting company from its disposal 
+of ordinary shares and/or qualifying preference shares in an investee 
+company are not taxable if immediately prior to the date of share disposal –  
+ 
+the divesting company had held at least 20% of the ordinary shares 
+and/or the qualifying preference shares in the investee company for a 
+continuous period of at least 24 months (“20% shareholding threshold 
+condition”). 
+ 
+5.2.5 The 20% shareholding threshold condition refers to 20% of the total amount 
+of paid-up share capital of ordinary shares and qualifying preference shares 
+in an investee company. If the condition cannot be met by the divesting 
+company on a divesting entity or standalone basis, the condition can be 
+assessed on a group basis9. This means that the shareholding of both the 
+divesting company and its related companies within the same group will be 
+considered when determining if the threshold is met.  
+ 
+5.2.6 The following approach should be adopted when applying the group basis of 
+assessment for the 20% shareholding threshold condition: 
+ 
+(a) 
+Step 1: Identify the date of disposal of the shares by the divesting 
+company.  
+ 
+(b) 
+Step 2: Establish the relevant 24-month holding period from the date 
+of disposal. 
+ 
+(c) 
+Step 3: For the divesting company and its related companies that held 
+shares in the investee company, determine whether they are within 
+the same group for the purpose of the group basis of assessment. The 
+ 
+7 A shareholding of at least 20% is considered a reasonably sizeable ownership and may be a proxy 
+indicator that the investment is not a portfolio investment.  In addition, a similar 20% threshold is also 
+used as an indication of significant influence for “associate companies” under the Singapore 
+Financial Reporting Standards and associate companies are usually acquired for long-term strategic 
+purposes. 
+ 
+8 Under the scheme, this means that for every day of the 24 months, the divesting company must 
+maintain a minimum ordinary shareholding level of at least 20% in the investee company whose 
+ordinary shares are being disposed of. 
+  
+9 The group basis of assessment for the 20% shareholding threshold condition does not apply when 
+the divesting company is either a registered business trust or variable capital company.   
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+6 
+ 
+divesting company and other companies are considered in the same 
+group if: 
+ 
+(i) 
+more than 50% of the total number of issued ordinary shares in 
+one company are beneficially held, directly or indirectly, by the 
+other company, where one of the companies is the divesting 
+company; or 
+ 
+(ii) 
+more than 50% of the total number of issued ordinary shares in 
+each of those companies including the divesting company are 
+beneficially held, directly or indirectly, by a common company. 
+ 
+Annex A2-1 illustrates the application of this determination. 
+ 
+(d) 
+Step 4: Determine whether the group of companies has maintained at 
+least 20% shareholding in the investee company continuously 
+throughout the relevant 24-month holding period. Only shares that 
+have been held continuously throughout the relevant 24-month 
+holding period by the divesting company and its related companies will 
+be aggregated for the group basis of assessment. 
+ 
+(e) 
+Step 5: After meeting the 20% shareholding threshold condition on a 
+group basis in Step 4, only gains derived from the disposal of shares 
+that have been held continuously throughout the relevant 24-month 
+holding period will qualify for the scheme. 
+ 
+Shares in the investee company are treated as having been disposed 
+of by the divesting company or its related company on a first-in-first-
+out (“FIFO”) basis for the purposes of Step 4 and Step 5. 
+ 
+Annex A2-2 illustrates the application of Steps 1 to 5. 
+ 
+5.2.7 The following table summarises the conditions of the scheme before and on 
+or after 1 January 2026: 
+ 
+Conditions 
+Disposals before 
+1 January 2026 
+Disposals on or after 
+1 January 2026 
+Eligible shares  
+Only ordinary shares 
+Ordinary 
+shares 
+and 
+qualifying preference shares  
+20% shareholding 
+threshold 
+condition 
+Assessment on a 
+divesting entity basis 
+ 
+Assessment on a divesting 
+entity or group basis (for 
+companies) 
+ 
+Assessment on a divesting 
+entity basis (for registered 
+business trusts and variable 
+capital companies) 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+7 
+ 
+6 
+Exclusions from the scheme 
+ 
+ 
+Besides the conditions mentioned in paragraphs 5.2.2 and 5.2.4, the 
+divesting company needs to ensure that it is not an ‘excluded divesting 
+company’ (paragraph 6.3) and the shares disposed are not those in an 
+‘excluded investee company’ (paragraph 6.4).  
+ 
+ 
+The flowcharts in Annexes B1 and B2 illustrate the application of the 
+scheme to a divesting company.  
+ 
+ 
+Excluded divesting company 
+ 
+6.3.1 The scheme does not apply to a divesting company whose gains or profits 
+from the disposal of shares are included as part of its income based on 
+section 26 of the ITA. 
+ 
+ 
+Excluded investee company 
+ 
+Disposals of shares before 1 June 2022 
+ 
+6.4.1 The scheme does not apply to disposals of non-listed shares, before 1 June 
+2022, in an investee company if – 
+ 
+(a) 
+the investee company is in the business of trading Singapore 
+immovable properties; or  
+ 
+(b) 
+the investee company’s principal activity is that of holding Singapore 
+immovable properties, whereby passive or no income is derived.  
+ 
+6.4.2 However, an investee company that is in the business of property 
+development is not excluded from the scheme. The scheme also remains 
+applicable in respect of an investee company that is in the business of letting 
+immovable properties and thus subject to the provisions of section 10D of 
+the ITA.  
+ 
+Disposals of shares on or after 1 June 2022 
+ 
+6.4.3 As announced in Budget 2020, a refinement in the scope of exclusion was 
+made to ensure consistency in the tax treatment for property-related 
+businesses. For disposals of shares on or after 1 June 2022, the scheme 
+does not apply to disposals of non-listed shares in an investee company if – 
+ 
+(a) 
+the investee company is in the business of trading immovable 
+properties (situated in Singapore or elsewhere);  
+ 
+(b) 
+the investee company’s principal activity is that of holding immovable 
+properties (situated in Singapore or elsewhere), whereby passive or no 
+income is derived; or  
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+8 
+ 
+(c) 
+the investee company has undertaken property development activities 
+(in Singapore or elsewhere). An exception to this exclusion is where 
+both of the following conditions are satisfied:- 
+(i) 
+the immovable property developed is used by the investee 
+company to carry on its own business10 to derive trade income11. 
+Such a business includes the business of letting immovable 
+properties; and 
+(ii) 
+the investee company did not undertake any property 
+development activity in the past 60 months before the disposal of 
+shares. 
+ 
+For example, an investee company that uses a self-developed immovable 
+property entirely to derive passive rental income (not assessed as a trade 
+income) is excluded from the scheme.  
+ 
+On the other hand, the scheme remains applicable to an investee company 
+that uses a self-developed immovable property as a factory to carry on its 
+manufacturing business. This is provided that, on the date of share disposal, 
+the investee company did not undertake any property development activity 
+in the past 60 months.  
+ 
+6.4.4 Annex C provides more examples to illustrate the application of the scheme 
+to an investee company that has undertaken property development activities. 
+ 
+6.4.5 Property development activities in paragraph 6.4.3(c) refer to the 
+construction or causing the construction of any building (or part of a building), 
+including the acquisition of land or building for such construction 12 . 
+Particularly for additions and alternations, only structural changes made to a 
+building are considered as construction of a building. Therefore, so long as 
+the building works do not require an approval from the Commissioner of 
+Building Control under the Building Control Act, the building works would not 
+constitute property development activities for the purpose of this scheme. 
+Where building works are done overseas, whether the building works 
+constitute “construction” would be determined based on whether the building 
+works would have required an approval from the Commissioner of Building 
+Control if such building works were done in Singapore. 
+ 
+6.4.6 An investee company is considered to have completed its property 
+development activities upon the issuance of a Certificate of Statutory 
+Completion (“CSC”) by the Commissioner of Building Control in respect of 
+ 
+10 To avoid doubt, immovable properties that constitute the trading stock of an investee company are 
+not used by the investee company to carry on its own business.   
+ 
+11 Trade income refers to an income that is chargeable to tax under section 10(1)(a) of the ITA. 
+ 
+12 Property development activities are not confined to those undertaken by property developers who 
+develop immovable properties for sale. 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+9 
+ 
+the property development activities. This means that shares in an investee 
+company disposed more than 60 months after the investee company is 
+issued with a CSC (in respect of all property development activities it has 
+undertaken) would satisfy the condition at paragraph 6.4.3(c)(ii), i.e. the 
+investee company did not undertake any property development activity in the 
+past 60 months before the disposal of shares. 
+ 
+ 
+7 
+Situations where normal tax rules continue to apply in determining 
+nature of gains or losses from disposal of equity investments 
+ 
+ 
+The tax treatment of gains or losses from disposal of equity investments will 
+continue to be determined based on normal tax rules 13 in the following 
+situations – 
+ 
+(a) 
+where a divesting company that meets the conditions under paragraphs 
+5.2.2 and 5.2.4 incurs losses from the disposal of shares in the 
+investee company. In such a case, the losses are not automatically 
+disregarded;  
+ 
+(b) 
+where a divesting company derives gains from the disposal of 
+shares in an investee company and the disposal does not meet the 
+conditions in paragraphs 5.2.2 and 5.2.4 or fall within the exclusions 
+in paragraph 6. In such a case, the gains are not automatically 
+subject to tax; 
+ 
+(c) 
+for disposals of shares before 1 January 2026, where a divesting 
+company makes gains or losses from the disposal of non-ordinary 
+shares in an investee company. In such a case, the gains are not 
+automatically subject to tax and the losses are not automatically 
+disregarded. 
+ 
+ 
+In other words, whether the gains or losses from the disposal of equity 
+investments in the above situations are income or capital in nature will 
+continue to be determined based on the facts and circumstances of each 
+case. 
+ 
+ 
+8 
+Administrative Procedure 
+ 
+ 
+ 
+To avail itself of the scheme, a company must provide the requisite 
+information in its income tax return for the Year of Assessment (“YA”) relating 
+to the basis period in which the disposal of ordinary shares and/or qualifying 
+preference shares is made. The company must keep sufficient documents to 
+ 
+13 For a divesting company that has been awarded any tax incentive that covers gains or losses from 
+disposal of investments, the relevant governing rules under the tax incentive will apply where 
+applicable. 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+10 
+ 
+support that the specified conditions in paragraphs 5.2.2 and 5.2.4 are met 
+and the share disposal does not fall within the exclusions in paragraph 6.  
+The company need not submit the documents with its income tax return but 
+must do so upon IRAS’ request. 
+ 
+ 
+Where a company does not provide the requisite information in its income 
+tax return, IRAS will continue to apply normal tax rules to establish the nature 
+of gains or profits from the disposal of ordinary shares and/or qualifying 
+preference shares. 
+ 
+ 
+9 
+Frequently Asked Questions 
+ 
+ 
+Do companies have the choice to avail themselves or not to avail 
+themselves of the scheme? 
+ 
+Yes, companies have the choice. Companies that wish to avail 
+themselves of the scheme can do so by providing the requisite 
+information in their income tax returns for the relevant YA relating to the 
+basis period in which the disposal of ordinary shares and/or qualifying 
+preference shares is made. 
+ 
+ 
+Can my company avail itself of the scheme if it currently enjoys a tax 
+incentive which provides for tax exemption or concessionary rate 
+on gains or losses from the disposal of equity investments? 
+ 
+A company enjoying tax incentives is not precluded from availing itself of 
+the scheme in respect of gains it derives from the disposal of ordinary 
+shares and/or qualifying preference shares, subject to the conditions in 
+paragraphs 5.2.2 and 5.2.4, and the exclusions in paragraph 6. However, 
+the relevant governing rules under the tax incentive awarded to the 
+company continue to apply, where applicable, to:- 
+ 
+(i) 
+losses from disposals of equity investments; and 
+ 
+(ii) 
+gains from disposals of equity investments that do not meet the 
+conditions under the scheme. 
+ 
+ 
+Is the scheme applicable to a registered business trust that 
+disposes of ordinary shares and/or qualifying preference shares in 
+an investee company? 
+ 
+Yes. This is because a registered business trust is taxed like a company 
+for income tax purposes. However, the group basis of assessment for the 
+20% shareholding threshold condition will not be extended to a registered 
+business trust. 
+ 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+11 
+ 
+ 
+Does the scheme apply only to tax resident companies? 
+ 
+No. The scheme applies to all divesting companies regardless of tax 
+residency (provided it is not an ‘excluded divesting company’ referred to 
+in paragraph 6.3). 
+ 
+ 
+How does the scheme apply in a situation where ordinary shares are 
+disposed of after they have been converted from hybrid instruments 
+e.g. convertible bonds? Does the 24-month period include the period of 
+holding of convertible bonds up to their conversion into ordinary 
+shares? 
+ 
+In determining whether the conditions in paragraphs 5.2.2 and 5.2.4 are 
+met, the holding period of ordinary shares starts on the date on which the 
+bonds are converted into ordinary shares (i.e. the conversion date). The 
+period of holding of convertible bonds up to their conversion into ordinary 
+shares should not be taken into account in determining whether the 24-
+month period is met. 
+ 
+ 
+How does the scheme apply to an amalgamated company that has 
+elected to come under the corporate amalgamation framework 
+under section 34C of the ITA? 
+ 
+Under the section 34C corporate amalgamation tax framework, the 
+amalgamated company is treated to have stepped into the shoes of the 
+amalgamating companies. As such, ordinary shares and/or qualifying 
+preference shares that were originally acquired by an amalgamating 
+company are treated as held by an amalgamated company since the date 
+of acquisition by the amalgamating company. 
+ 
+ 
+My company made two disposals of ordinary shares in the same 
+investee company in the same financial year. The first disposal 
+results in a gain of $500,000 and the second disposal results in a 
+loss of $200,000. The net gain in the financial statements is $300,000. 
+How do I apply the scheme to the disposals if my company satisfies 
+the conditions in paragraphs 5.2.2 and 5.2.4? 
+ 
+The gain of $500,000 made on the first disposal of ordinary shares is 
+treated as not taxable as the conditions in paragraphs 5.2.2 and 5.2.4 are 
+met. Normal tax rules will however continue to apply to determine the tax 
+treatment of the loss made on the second disposal of ordinary shares. 
+ 
+ 
+10 
+Contact Information 
+ 
+ For any general enquiries or clarification on this e-Tax Guide, please call 
+1800 356 8622 (Corporate Income Tax). 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+12 
+ 
+11 
+Updates and Amendments 
+ 
+ 
+Date of 
+amendment 
+Amendments made 
+1 
+10 Dec 2020 
+• Inserted paragraph 2 to provide the tax treatment 
+at a glance  
+• Amended paragraph 5.1 and footnote 3 to reflect 
+the extension of the scheme announced in Budget 
+2020 
+• Inserted paragraph 6 and Annex C to reflect 
+refinements in the scope of exclusion and provide 
+details of the tax change announced in Budget 
+2020 
+• Renumbered the Annexes 
+• Made conforming edits to other paragraphs and 
+Annex B, such as to update the references to new 
+and renumbered paragraphs 
+ 
+2 
+30 Sep 2025 
+• Amended paragraphs 1.2, 2.2, 2.3, 3.3, 5.1 and 
+5.2 to reflect the enhancements to the scheme 
+announced in Budget 2025   
+• Inserted Annex A2 to provide examples on 
+application of conditions to be met (for disposals 
+of shares on or after 1 January 2026) 
+• Inserted Annex B2 to provide flowchart illustrating 
+the application of the scheme (for disposals of 
+shares on or after 1 January 2026) 
+• Inserted new footnotes 1, 9, 14 to 18 and updated 
+the numbering of footnotes 
+• Renumbered the Annexes 
+• Made editorial changes to other paragraphs 
+arising from the enhancements announced in 
+Budget 2025 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+13 
+ 
+Annex A1 – Example on application of condition to be met by a divesting 
+company (for disposals of ordinary shares before 1 January 2026) 
+ 
+ 
+ 
+A company acquired 40% of the ordinary shares in Company X on 1 March 2010.  
+On 1 September 2012, it disposes of 30% of the ordinary shares in Company X and 
+on 1 August 2013 it disposes of the remaining 10% of ordinary shares in Company 
+X.  Gains are derived by the divesting company from both disposals. 
+ 
+Note 1 
+ 
+The gains from the 1st disposal on 1 September 2012 of 30% of the ordinary shares 
+of Company X qualifies for certainty of non-taxation as immediately before the date 
+of disposal, the divesting company has a minimum level of 20% of ordinary shares 
+in Company X for a continuous period of at least 24 months.  In this case, the 
+divesting company has held a minimum level of 20% ordinary shares in Company 
+X from 1 March 2010 to 31 August 2012 (i.e. 30 months).   
+ 
+Note 2 
+ 
+The gains from the 2nd disposal on 1 August 2013 of 10% of the ordinary shares of 
+Company X does not qualify for certainty of non-taxation.  This is because in the 24 
+months immediately before the date of disposal (i.e. period from 1 August 2011 to 
+31 July 2013), the divesting company held less than 20% of ordinary shares in 
+Company X.  The taxability of the gain from the 2nd disposal will be determined based 
+on facts and circumstances of the case. 
+ 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+14 
+ 
+Annex A2 – Examples on application of conditions to be met (for disposals of 
+shares on or after 1 January 2026) 
+ 
+A2-1 Determination of whether the divesting company and its related 
+companies are in the same group for purpose of group basis of assessment  
+ 
+Examples 
+Whether companies are in the same 
+group?  
+Example 1 
+ 
+ 
+ 
+ 
+SG Co. A is the divesting company 
+ 
+SG Co. A and SG Co. B are in the same 
+group since more than 50% of the total 
+number of issued ordinary shares in SG 
+Co. B are held directly by SG Co. A.  
+ 
+ 
+Example 2 
+ 
+ 
+ 
+ 
+SG Co. A is the divesting company 
+ 
+SG Co. A and SG Co. C are in the same 
+group since more than 50% (i.e. 80% x 
+70% = 56%) of the total number of 
+issued ordinary shares in SG Co. C are 
+held indirectly by SG Co. A.  
+ 
+ 
+Example 3 
+ 
+ 
+SG Co. A is the divesting company 
+ 
+SG Co. A and SG Co. C are not in the 
+same group as the intermediate entity, 
+B LLP, is not a company. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+15 
+ 
+Examples 
+Whether companies are in the same 
+group?  
+Example 4 
+ 
+ 
+ 
+ 
+SG Co. B is the divesting company 
+ 
+SG Co. B, Foreign Co. C and SG. Co. 
+D are in the same group as more than 
+50% of the total number of issued 
+ordinary shares in each of them are 
+held directly by a common company, 
+SG Co. A.  
+ 
+ 
+Example 5 
+ 
+ 
+ 
+SG Co. D is the divesting company. 
+ 
+SG Co. D and Foreign Co. E are not in 
+the same group as less than 50% (i.e. 
+80% x 60% = 48%) of the total number 
+of issued ordinary shares in Foreign Co. 
+E are held indirectly by a common 
+company, SG Co. A. 
+ 
+ 
+Example 6 
+ 
+ 
+ 
+SG Co. D is the divesting company 
+ 
+SG Co. D and Foreign Co. E are not in 
+the same group as the intermediate 
+holding entity for Foreign Co. E (B LLP) 
+is not a company. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+16 
+ 
+A2-2 Determination of whether the divesting company and its related 
+companies meet the 20% shareholding threshold condition on a group basis 
+of assessment 
+(Assume disposal of ordinary shares and/or qualifying preference shares) 
+ 
+Example 1: Where SG Co. B is the divesting company and the share disposal occurs 
+on 1 Jan 2027 
+ 
+Shareholding as at 
+B% 
+C% 
+Total 
+Before 1 Jan 2025 
+0% 
+10% 
+10% 
+1 Jan 2025 
+10% (+10%) 
+10% 
+20% (+10%) 
+31 Dec 2025 
+15% (+5%) 
+10% 
+25% (+5%) 
+1 Jan 2026 
+15% 
+10% 
+25% 
+31 Dec 2026 
+15% 
+10% 
+25% 
+1 Jan 2027 
+0% (-15%) 
+10% 
+10% (-15%) 
+% in ( ) refers to changes in the shareholding 
+ 
+SG Co. B’s disposal of 15% shareholding on 1 Jan 2027 
+ 
+Step 1 
+The date of SG Co. B's disposal of 15% shareholding in Investee Co 
+is 1 Jan 2027. 
+ 
+Step 2 
+The relevant 24-month holding period from the date of disposal is 1 
+Jan 2025 to 31 Dec 2026. 
+ 
+Step 3 
+SG Co. B and SG Co. C are in the same group as more than 50% 
+of the total number of issued ordinary shares in each of them are 
+owned directly by a common company, SG Co. A. 
+ 
+Step 4 
+SG Co. B and SG Co. C each held 10% shareholding14 in Investee 
+Co continuously throughout the relevant 24-month holding period 
+(i.e. 1 Jan 2025 to 31 Dec 2026) that can be aggregated for the 
+ 
+14 All 10% shareholding each held by SG Co. B and SG Co. C on 1 Jan 2025 was continuously held 
+by each of them throughout the relevant 24-month holding period (i.e. 1 Jan 2025 to 31 Dec 2026). 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+17 
+ 
+group basis of assessment. Therefore, the group met the 20% 
+shareholding threshold condition on a group basis. 
+ 
+Step 5 
+Applying the FIFO basis, the 15% shareholding disposed of on 1 Jan 
+2027 comprises 10% shareholding acquired on 1 Jan 2025 and 5% 
+shareholding acquired on 31 Dec 2025.  
+ 
+SG Co. B has held the 10% shareholding acquired on 1 Jan 2025 
+continuously throughout the relevant 24-month holding period.  
+Therefore, gains derived from SG Co. B’s disposal of the 10% 
+shareholding acquired on 1 Jan 2025 will qualify for the scheme.  
+ 
+SG Co. B has not held the 5% shareholding acquired on 31 Dec 
+2025 continuously throughout the relevant 24-month holding period. 
+Therefore, gains derived from SG Co. B’s disposal of the remaining 
+5% shareholding acquired on 31 Dec 2025 will not qualify for the 
+scheme. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+18 
+ 
+Example 2: Where both SG Co. B and SG Co. C are the divesting companies and 
+there are multiple disposals 
+ 
+Shareholding as at 
+B% 
+C% 
+Total 
+Before 1 Jan 2025 
+0% 
+0% 
+0% 
+1 Jan 2025 
+15% (+15%) 
+10% (+10%) 
+25% (+25%) 
+31 Dec 2025 
+20% (+5%) 
+10% 
+30% (+5%) 
+1 Jan 2026 
+20% 
+5% (-5%) 
+25% (-5%) 
+31 Dec 2026 
+25% (+5%) 
+5% 
+30% (+5%) 
+1 Jan 2027 
+25% 
+10% (+5%) 
+35% (+5%) 
+31 Dec 2027 
+0% (-25%) 
+5% (-5%) 
+5% (-30%) 
+% in ( ) refers to changes in the shareholding 
+ 
+SG Co. B’s disposal of 25% shareholding on 31 Dec 2027 
+Since SG Co. B has held 25% shareholding in Investee Co prior to the disposal, it 
+should first assess whether it can meet the 20% shareholding threshold condition 
+on a divesting entity or standalone basis. 
+ 
+The date of SG Co. B's disposal of 25% shareholding in Investee Co is 31 Dec 2027. 
+Hence, the relevant 24-month holding period from the date of disposal is 31 Dec 
+2025 to 30 Dec 2027. 
+ 
+As SG Co. B has held at least 20% shareholding continuously throughout the 
+relevant 24-month holding period (i.e. 31 Dec 2025 to 30 Dec 2027) on its own (i.e. 
+not depending on the group basis of assessment), gains derived from its disposal 
+of the entire 25% shareholding in Investee Co on 31 Dec 2027 will qualify for the 
+scheme on a divesting entity or standalone basis. This is notwithstanding that there 
+was an additional 5% share acquisition on 31 Dec 2026. 
+ 
+SG Co. C’s disposal of 5% shareholding on 1 Jan 2026 
+ 
+Step 1 
+The date of SG Co. C's disposal of 5% shareholding in Investee Co 
+is 1 Jan 2026. 
+ 
+Step 2 
+The relevant 24-month holding period from the date of disposal is 1 
+Jan 2024 to 31 Dec 2025. 
+ 
+Step 3 
+SG Co. B and SG Co. C are in the same group as more than 50% 
+of the total number of issued ordinary shares in each of them are 
+owned directly by a common company, SG Co. A. 
+ 
+Step 4 
+SG Co. B and SG Co. C did not hold any shareholding in Investee 
+Co continuously throughout the relevant 24-month holding period 
+(i.e. 1 Jan 2024 to 31 Dec 2025) that can be aggregated for the 
+group basis of assessment. Therefore, the group did not meet the 
+20% shareholding threshold condition on a group basis.  
+ 
+Accordingly, gains derived from SG Co. C's disposal of the 5% 
+shareholding on 1 Jan 2026 will not qualify for the scheme. 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+19 
+ 
+SG Co. C’s disposal of 5% shareholding on 31 Dec 2027 
+ 
+Step 1 
+The date of SG Co. C's disposal of 5% shareholding in Investee Co 
+is 31 Dec 2027. 
+ 
+Step 2 
+The relevant 24-month holding period from the date of disposal is 31 
+Dec 2025 to 30 Dec 2027.  
+ 
+Step 3 
+SG Co. B and SG Co. C are in the same group as more than 50% 
+of the total number of issued ordinary shares in each of them are 
+owned directly by a common company, SG Co. A. 
+ 
+Step 4 
+SG Co. B and SG Co. C held 20% 15  and 5% 16  shareholding 
+respectively in Investee Co continuously throughout the relevant 24-
+month holding period (i.e. 31 Dec 2025 to 30 Dec 2027) that can be 
+aggregated for the group basis of assessment. Therefore, the group 
+met the 20% shareholding threshold condition on a group basis. 
+ 
+Step 5 
+Applying the FIFO basis, the 5% shareholding disposed of on 31 
+Dec 2027 comprises 5% shareholding acquired on 1 Jan 2025. SG 
+Co. C has held the 5% shareholding continuously throughout the 
+relevant 24-month holding period. Therefore, gains derived from SG 
+Co. C’s disposal of the 5% shareholding on 31 Dec 2027 will qualify 
+for the scheme.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+15 All 20% shareholding held by SG Co. B on 31 Dec 2025 was continuously held by it throughout 
+the relevant 24-month holding period (i.e. 31 Dec 2025 to 30 Dec 2027). 
+ 
+16 Applying the FIFO basis, 5% out of the 10% shareholding held by SG Co. C on 31 Dec 2025 was 
+disposed of on 1 Jan 2026. Hence, SG Co. C only held 5% shareholding continuously throughout 
+the relevant 24-month holding period (i.e. 31 Dec 2025 to 30 Dec 2027).  
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+20 
+ 
+Example 3: Where both SG Co. B and SG Co. C are the divesting companies and 
+there are multiple disposals 
+ 
+Shareholding as at 
+B% 
+C% 
+Total 
+Before 1 Jan 2025 
+0% 
+0% 
+0% 
+1 Jan 2025 
+10% (+10%) 
+10% (+10%) 
+20% (+20%) 
+31 Dec 2025 
+0% (-10%) 
+20% (+10%) 
+20% 
+1 Jan 2026 
+5% (+5%) 
+15% (-5%) 
+20% 
+31 Dec 2026 
+5%  
+15%  
+20% 
+1 Jan 2027 
+0% (-5%) 
+10% (-5%) 
+10% (-10%) 
+% in ( ) refers to changes in the shareholding    
+ 
+SG Co. B’s disposal of 10% shareholding on 31 Dec 2025 
+ 
+Step 1 
+The date of SG Co. B's disposal of 10% shareholding in Investee Co 
+is 31 Dec 2025. 
+ 
+Step 2 
+The relevant 24-month holding period from the date of disposal is 31 
+Dec 2023 to 30 Dec 2025. 
+ 
+Step 3 
+SG Co. B and SG Co. C are in the same group as more than 50% 
+of the total number of issued ordinary shares in each of them are 
+owned directly by a common company, SG Co. A. 
+ 
+Step 4 
+SG Co. B and SG Co. C did not hold any shareholding in Investee 
+Co continuously throughout the relevant 24-month holding period 
+(i.e. 31 Dec 2023 to 30 Dec 2025) that can be aggregated for the 
+group basis of assessment. Therefore, the group did not meet the 
+20% shareholding threshold condition on a group basis.  
+ 
+Accordingly, gains derived from SG Co. B's disposal of the 10% 
+shareholding on 31 Dec 2025 will not qualify for the scheme.   
+ 
+ 
+SG Co. B’s disposal of 5% shareholding on 1 Jan 2027 
+ 
+Step 1 
+The date of SG Co. B's disposal of 5% shareholding in Investee Co 
+is 1 Jan 2027.  
+ 
+Step 2 
+The relevant 24-month holding period from the date of disposal is 1 
+Jan 2025 to 31 Dec 2026.  
+ 
+Step 3 
+SG Co. B and SG Co. C are in the same group as more than 50% 
+of the total number of issued ordinary shares in each of them are 
+owned directly by a common company, SG Co. A. 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+21 
+ 
+Step 4 
+SG Co. B and SG Co. C held 0% 17  and 5% 18  shareholding 
+respectively in Investee Co continuously throughout the relevant 24-
+month holding period (i.e. 1 Jan 2025 to 31 Dec 2026) that can be 
+aggregated for the group basis of assessment. Therefore, the group 
+did not meet the 20% shareholding threshold condition on a group 
+basis.  
+ 
+Accordingly, gains derived from SG Co. B's disposal of the 5% 
+shareholding on 1 Jan 2027 will not qualify for the scheme. 
+ 
+ 
+SG Co. C’s disposal of 5% shareholding on 1 Jan 2026 
+ 
+Step 1 
+The date of SG Co. C's disposal of 5% shareholding in Investee Co 
+is 1 Jan 2026.  
+ 
+Step 2 
+The relevant 24-month holding period from the date of disposal is 1 
+Jan 2024 to 31 Dec 2025.  
+ 
+Step 3 
+SG Co. B and SG Co. C are in the same group as more than 50% 
+of the total number of issued ordinary shares in each of them are 
+owned directly by a common company, SG Co. A. 
+ 
+Step 4 
+SG Co. B and SG Co. C did not hold any shareholding in Investee 
+Co continuously throughout the relevant 24-month holding period 
+(i.e. 1 Jan 2024 to 31 Dec 2025) that can be aggregated for the 
+group basis of assessment. Therefore, the group did not meet the 
+20% shareholding threshold condition on a group basis.  
+ 
+Accordingly, gains derived from SG Co. C's disposal of the 5% 
+shareholding on 1 Jan 2026 will not qualify for the scheme.   
+ 
+ 
+SG Co. C’s disposal of 5% shareholding on 1 Jan 2027 
+Please refer to similar analysis for SG Co. B’s disposal of 5% shareholding on 1 Jan 
+2027. As the group did not meet the 20% shareholding threshold condition on a 
+group basis, gains derived from SG Co. C's disposal of the 5% shareholding on 1 
+Jan 2027 will not qualify for the scheme. 
+ 
+ 
+17 Applying the FIFO basis, all 10% shareholding held by SG Co. B on 1 Jan 2025 was disposed on 
+31 Dec 2025. Hence, SG Co. B did not hold any shareholding continuously throughout the relevant 
+24-month holding period (i.e. 1 Jan 2025 to 31 Dec 2026) that can be aggregated for group 
+assessment. 
+ 
+18 Applying the FIFO basis, 5% out of the 10% shareholding held by SG Co. C on 1 Jan 2025 was 
+disposed on 1 Jan 2026. Hence, SG Co. C only held 5% shareholding continuously throughout the 
+relevant 24-month holding period (i.e. 1 Jan 2025 to 31 Dec 2026) that can be aggregated for group 
+assessment. 
+ 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+22 
+ 
+Annex B1 – Flowchart illustrating the application of the certainty of non-
+taxation scheme to a divesting company (for disposal of shares before 1 
+January 2026)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Divesting company is not an ‘excluded 
+divesting company’ referred to in paragraph 
+6.3 of this e-Tax Guide. 
+Does the disposal involve non-
+listed shares held in an investee 
+company that is an ‘excluded 
+investee company’ referred to in 
+paragraph 6.4 of this e-Tax 
+Guide? 
+Are shares disposed 
+ordinary shares? 
+Has the divesting company held 
+at least 20% of the ordinary 
+shares in the investee company 
+for a continuous period of at least 
+24 months immediately prior to 
+the date of share disposal? 
+Does the divesting 
+company derive gains 
+from the disposal of 
+ordinary shares?  
+Divesting company can avail itself of the 
+certainty of non-taxation scheme on gains 
+from disposal of ordinary shares. 
+Apply normal19 tax rules 
+to determine tax 
+treatment of gains or 
+losses from disposals of 
+equity investments. 
+No 
+No 
+Yes 
+No 
+Yes 
+Yes 
+Yes 
+No 
+19 If the divesting company has been awarded any tax incentive that covers gains or losses from 
+disposal of investments, the relevant governing rules under the tax incentive will apply where 
+applicable. 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+23 
+ 
+Annex B2 – Flowchart illustrating the application of the certainty of non-
+taxation scheme to a divesting company (for disposal of shares on or after 1 
+January 2026)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Divesting company is not an ‘excluded 
+divesting company’ referred to in paragraph 
+6.3 of this e-Tax Guide. 
+Does the disposal involve non-listed 
+shares held in an investee company 
+that is an ‘excluded investee 
+company’ referred to in paragraph 
+6.4 of this e-Tax Guide? 
+Are shares disposed 
+ordinary shares and/or 
+qualifying preference 
+shares? 
+Has the divesting company held 
+at least 20% of the ordinary 
+shares and/or qualifying 
+preference shares in the investee 
+company for a continuous period 
+of at least 24 months 
+immediately prior to the date of 
+share disposal on a divesting 
+entity or standalone basis? 
+Does the divesting 
+company derive gains from 
+the disposal of ordinary 
+shares and/or qualifying 
+preference shares?  
+Divesting company can avail itself of the certainty 
+of non-taxation scheme on gains from disposal of 
+ordinary shares and/or qualifying preference 
+shares. 
+Apply normal19 tax rules to 
+determine tax treatment of 
+gains or losses from 
+disposals of equity 
+investments. 
+No 
+No 
+Yes 
+No 
+Yes 
+Yes 
+Yes 
+Has the divesting company 
+and its related companies 
+held at least 20% of the 
+ordinary shares and/or 
+qualifying preference shares 
+in the investee company for a 
+continuous period of at least 
+24 months immediately prior 
+to the date of share disposal 
+on a group basis? 
+No 
+No 
+Yes 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+24 
+ 
+Annex C – Examples on the application of the certainty of non-taxation 
+scheme to an investee company that has undertaken property development 
+activities (for disposals of shares on or after 1 June 2022) 
+ 
+Company A holds 100% of the ordinary shares in Company X since the 
+incorporation of Company X. On 1 January 2023, Company A (the divesting 
+company) disposes ordinary shares in Company X (the investee company) and 
+derives gains from the disposal.  
+ 
+Company X has undertaken property development activities20 to develop an 
+immovable property. The property development activities were completed with a 
+Certificate of Statutory Completion issued on 1 January 2017. Company X did not 
+undertake any other property development activities thereafter. Since the property 
+development activities were completed more than 60 months before the disposal of 
+shares by Company A, the condition at paragraph 6.4.3(c)(ii) is satisfied.  
+ 
+Examples 
+ 
+ 
+How 
+Company 
+X 
+uses 
+the 
+immovable property developed 
+Does the scheme apply to the 
+gains derived by Company A from 
+its disposal of shares in Company 
+X? 
+1 
+Company 
+X 
+carries 
+on 
+a 
+manufacturing business from which it 
+derives trade income. Company X 
+uses 
+the 
+immovable 
+property 
+developed as its premises (factory 
+and 
+office) 
+to 
+carry 
+on 
+the 
+manufacturing business. 
+Yes. 
+The 
+immovable 
+property 
+developed is used by Company X to 
+carry on its manufacturing business to 
+derive trade income. 
+2 
+Company 
+X 
+carries 
+on 
+a 
+manufacturing business from which it 
+derives trade income. Company X 
+developed an industrial building. It 
+rents out two floors of the building to 
+another 
+company 
+and 
+derives 
+passive rental income. Other parts of 
+the industrial building are used by 
+Company X as its premises (factory 
+and 
+office) 
+to 
+carry 
+on 
+its 
+manufacturing business. 
+Yes. 
+The 
+immovable 
+property 
+developed is used by Company X to 
+carry on its manufacturing business to 
+derive trade income.   
+3 
+The immovable property is developed 
+into a hotel. Company X carries on a 
+business of operating the hotel. Trade 
+income is derived from operating the 
+hotel.  
+Yes. 
+The 
+immovable 
+property 
+developed is used by Company X to 
+carry on its hotel operation business 
+to derive trade income. 
+
+Certainty of Non-taxation of Companies’ Gains on Disposal of Equity Investments 
+ 
+25 
+ 
+ 
+How 
+Company 
+X 
+uses 
+the 
+immovable property developed 
+Does the scheme apply to the 
+gains derived by Company A from 
+its disposal of shares in Company 
+X? 
+4 
+The immovable property is developed 
+into a commercial building. Company 
+X carries on a business of letting out 
+units of that commercial building. 
+Income derived from the business is 
+trade income that is subject to the 
+provisions of section 10D of the ITA.  
+Yes. 
+The 
+immovable 
+property 
+developed is used by Company X to 
+carry on its business of letting out 
+immovable properties to derive trade 
+income.  
+5 
+Company 
+X 
+developed 
+the 
+immovable property into residential 
+units for sale. Trade income is derived 
+from the selling the residential units. 
+No. Company X is in the business of 
+trading immovable properties, thus an 
+‘excluded investee company’ referred 
+to 
+in 
+paragraph 
+6.4.3(a). 
+The 
+immovable property developed is the 
+trading stock of Company X. 
+ 
+ 
+If the property development activities undertaken by Company X is still ongoing on 
+the date of share disposal or have occurred during the past 60 months before the 
+date of share disposal, the scheme does not apply to the gains derived by Company 
+A from its disposal of shares in Company X. This is regardless of how the immovable 
+property developed is used or will be used. In this instance, IRAS will examine the 
+facts and circumstances to determine whether the disposal gains are capital or 
+revenue in nature and apply normal tax rules. 
+20 Property development activities refer to the construction or causing the construction of any building 
+(or part of a building), including the acquisition of land or building for such construction. For the purpose 
+of the scheme, only building works that require an approval from the Commissioner of Building Control 
+under the Building Control Act (or would have required such approval if the building works are done in 
+Singapore) are considered as construction of a building.  

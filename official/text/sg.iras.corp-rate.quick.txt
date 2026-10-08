@@ -1,0 +1,364 @@
+On this page:
+Corporate Income Tax (CIT) Rate
+Your company is taxed at a flat rate of
+17%
+of its chargeable income. This applies to both local and foreign companies.
+CIT Rebate for the Year of Assessment ("YA") 2026 and CIT Rebate Cash Grant
+As announced in Budget 2026, to provide support for companies to manage cost pressures, a CIT Rebate of 40% of the corporate tax payable will be granted to all taxpaying companies, whether tax resident or not, for YA 2026. Active companies that employed at least one local employee in 2025 (referred to as the “local employee condition”) will receive a minimum benefit of $1,500 in the form of a CIT Rebate Cash Grant. The total maximum benefits of the CIT Rebate and CIT Rebate Cash Grant that a company may receive is $30,000.
+[UPDATED!]
+To provide further support for companies to manage their cashflow needs as they navigate the impact of the energy crisis, the CIT Rebate and CIT Rebate Cash Grant will be enhanced for YA 2026, as follows:
+the enhanced CIT Rebate will be 50% of the corporate tax payable; and
+the enhanced CIT Rebate Cash Grant will be $2,000.
+The total maximum benefits of the enhanced CIT Rebate and CIT Rebate Cash Grant that a company may receive for YA 2026 is $40,000. All other parameters will remain unchanged.
+Depending on the company's eligibility for CIT Rebate Cash Grant, the amount of CIT Rebate that may be granted is as follows:
+Company is eligible for CIT Rebate Cash Grant
+Company is not eligible for CIT Rebate Cash Grant
+If CIT Rebate ≤ $2,000, no CIT Rebate to be given.
+If CIT Rebate > $2,000, CIT Rebate (capped at $40,000) less $2,000 to be given.
+If CIT Rebate > $0, CIT Rebate (capped at $40,000) to be given.
+CIT Rebate Cash Grant
+To be eligible for the CIT Rebate Cash Grant, a company must be an active company
+and
+must have met the local employee condition.
+Active company
+An active company refers to one that is carrying on a trade or business (including the activity of holding any investments) at the point of disbursement of the CIT Rebate Cash Grant. On the other hand, a company is regarded as inactive at the point of disbursement if it:
+is not carrying on any trade or business (including the activity of holding any investments);
+is in liquidation;
+is under receivership in respect of all of its properties; or
+has ceased to exist.
+Local employee condition
+A company is considered to have met the local employee condition if it has made CPF contributions to at least one local (Singapore citizen or permanent resident) employee, excluding shareholders who are also directors of the company, in the calendar year 2025.
+Active companies, whether tax resident or not, that have met the local employee condition will automatically receive the CIT Rebate Cash Grant by the second quarter of 2026. The CIT Rebate Cash Grant is also extended to active registered business trusts and variable capital companies, whether resident or not, that meet the local employee condition. The CIT Rebate Cash Grant will not be taxable.
+For the purpose of determining whether an active company meets the local employee condition for CIT Rebate Cash Grant, a local employee may include an individual who is deployed to the company under a centralised hiring arrangement or secondment arrangement, subject to the following conditions:
+The company is able to produce supporting documents on the work arrangement with and the recharging of employment costs for any period in the calendar year 2025 by a related party, in respect of the individual working solely in the company for that period.
+The corporate structure and centralised hiring practices are adopted for bona fide commercial reasons.
+The individual whose costs have been recharged to the company does not contribute to the requisite headcount of the related party (which had borne the upfront manpower costs) for that period.
+Some examples of centralised hiring arrangements and secondment arrangements include:
+Deployments where the human resources function of a group of companies is centralised in a single entity, with the staff costs (including CPF contributions in respect of employees) allocated to the respective entities.
+Secondments, where employees are seconded to work in the company, by a related party. Once seconded, the staff costs are fully recharged to the company.
+If your company is an active company and has met the local employee condition but did not receive the CIT Rebate Cash Grant by the second quarter of 2026 (e.g. your company meets the local employee condition under a centralised hiring arrangement or secondment arrangement), you may email us via
+myTaxMail
+by
+30 November 2026
+with the subject header ‘Appeal for CIT Rebate Cash Grant’.
+I
+n your email, please enclose the relevant supporting documents for our review (e.g. agreement relating to the centralised hiring or secondment arrangement, records reflecting the recharge of employment costs arising from such arrangements).
+CIT Rebate
+The CIT Rebate will apply to income taxed at a concessionary tax rate but will not apply to income that is subject to a final
+withholding tax
+. The CIT Rebate is also extended to registered business trusts and variable capital companies.
+The chargeable income declared during the filing of your company’s estimated chargeable income (“ECI”) and in the company’s Corporate Income Tax Returns (Form C/ Form C-S/ Form C-S (Lite))
+should not include
+the CIT Rebate. IRAS will compute and allow the CIT Rebate automatically in the company’s YA 2026 tax assessment based on the ECI/ Form C/ Form C-S/ Form C-S (Lite) filed by the company, based on the timeline shown below, and depending on the company’s scenario.
+Scenario
+Timeline for processing CIT Rebate
+(a) If the company has filed:
+(i) YA 2026 ECI but not Form C/ Form C-S/ Form C-S (Lite)
+IRAS will automatically reassess and allow the CIT Rebate (if any) in the company’s YA 2026 ECI tax assessment by June 2026.
+(ii) YA 2026 ECI and Form C/ Form C-S/ Form C-S (Lite), where the Form C/ Form C-S/ Form C-S (Lite) tax assessment has not been finalised
+IRAS will automatically assess to allow the CIT Rebate (if any) in the YA 2026 Form C/ Form C-S/ Form C-S (Lite) tax assessment by August 2026.
+(b) Where the YA 2026 tax assessment has been finalised (e.g. advance assessment where a notice of assessment has been issued)
+IRAS will issue the amended notice of assessment by August 2026.
+Rebate Percentages & Caps
+YA
+CIT Rebate
+Capped at
+[UPDATED!]
+2026
+50%
+$40,000 less CIT Rebate Cash Grant of $2,000 where applicable.
+2025
+50%
+$40,000 less CIT Rebate Cash Grant of $2,000 where applicable.
+2024
+50%
+$40,000 less CIT Rebate Cash Grant of $2,000 where applicable.
+2020
+25%
+$15,000
+2019
+20%
+$10,000
+2018
+40%
+$15,000
+2017
+50%
+$25,000
+2016
+50%
+$20,000
+2013 to 2015
+30%
+$30,000
+How the Rebates Are Computed
+The rebates are computed on the tax payable after deducting tax set-offs (e.g.
+foreign tax credit
+),
+but before tax deducted at source.
+Example 1: Company with no chargeable income in YA 2026
+Tax Computation
+$
+Chargeable Income
+Nil
+Tax Payable
+Nil
+The CIT Rebate does not apply as there is no tax to be paid. An active company that has met the local employee condition would receive a CIT Rebate Cash Grant of $2,000.
+Example 2: Company with income taxable at 17% in YA 2026
+Assumption: Company is not eligible for the CIT Rebate Cash Grant of $2,000.
+Tax Computation
+$
+Chargeable Income at 17% (After Exempt Amount)
+75,000
+Gross Tax Payable
+($75,000 x 17%)
+12,750
+Less: Tax Set-Off
+(750)
+Tax Payable before CIT Rebate
+12,000
+Less: CIT Rebate
+$12,000 x 50% = $6,000 (capped at $40,000)
+(6,000)
+Net Tax Payable
+6,000
+Example 3: Company with income taxable at 17% in YA 2026 and the computed CIT Rebate is less than the CIT Rebate Cash Grant of $2,000
+Assumption: Company is eligible for the CIT Rebate Cash Grant of $2,000.
+Tax Computation
+$
+Chargeable Income at 17% (After Exempt Amount)
+17,500
+Gross Tax Payable
+($17,500 x 17%)
+2,975
+Less: CIT Rebate
+As 50% of $2,975 ($2,975 x 50% = $1,487.50) is less than CIT Rebate Cash Grant of $2,000, no CIT Rebate is given.
+NIL
+Net Tax Payable
+2,975
+Example 4: Company with income taxable at 17% in YA 2026 and the computed CIT Rebate is more than the CIT Rebate Cash Grant of $2,000
+Assumption: Company is eligible for the CIT Rebate Cash Grant of $2,000.
+Tax Computation
+$
+Chargeable Income at 17% (After Exempt Amount)
+297,500
+Gross Tax Payable
+($297,500 x 17%)
+50,575
+Less: Tax Set-Off
+(175)
+Tax Payable before CIT Rebate
+50,400
+Less: CIT Rebate
+$50,400 x 50% = $25,200 (capped at $40,000) less $2,000 CIT Rebate Cash Grant
+(23,200)
+Net Tax Payable
+27,200
+Example 5: Company with income taxable at 17% and at a concessionary rate of 10% in YA 2026
+Assumption: Company is eligible for the CIT Rebate Cash Grant of $2,000.
+Tax Computation
+$
+Chargeable Income at 10%
+400,000
+Chargeable Income at 17% (After Exempt Amount)
+497,500
+Gross Tax Payable
+($400,000 x 10% + $497,500 x 17%)
+124,575
+Less: CIT Rebate
+$124,575 x 50% = $62,287.50 (capped at $40,000) less $2,000 CIT Rebate Cash Grant
+(38,000)
+Net Tax Payable
+86,575
+Tax Exemption Schemes
+The tax exemption scheme for new start-up companies and partial tax exemption scheme for companies are tax reliefs available to reduce companies’ tax bills. Learn more through our e-Learning video on the Common Tax Reliefs That Help Reduce
+Tax Bills.
+Tax Exemption Scheme for New Start-Up Companies
+The tax exemption scheme for new start-up companies was introduced in the Year of Assessment (YA) 2005 to support entrepreneurship and to grow our local enterprises.
+It was announced in Budget 2018 that the tax exemption under the scheme would be revised with effect from YA 2020, as other support for companies to build their capabilities have been strengthened.
+The tax exemptions for qualifying companies for their first 3 consecutive YAs are as follows:
+YA 2020 onwards
+YA 2019 and before
+75% exemption on the first $100,000 of normal chargeable income*; and
+A further 50% exemption on the next $100,000 of normal chargeable income*.
+Full exemption on the first $100,000 of normal chargeable income*; and
+A further 50% exemption on the next $200,000 of normal chargeable income*.
+* Normal chargeable income refers to income to be taxed at the prevailing Corporate Income Tax rate of 17%.
+This exemption scheme applies to qualifying companies only for their first 3 consecutive YAs. From the fourth YA onwards, companies can enjoy the
+partial tax exemption
+. Learn
+how to determine the first 3 YAs of your company
+.
+The tables below summarise the amount of tax exemption.
+Table 1: Tax Exemption on First $200,000 of Chargeable Income (where any of the first 3 YAs falls in or after YA 2020)
+Chargeable Income
+% Exempted From Tax
+Amount Exempted From Tax
+First $100,000
+75%
+$75,000
+Next $100,000
+50%
+$50,000
+The maximum exemption for each YA is $125,000 ($75,000 + $50,000).
+Table 2: Tax Exemption on First $300,000 of Chargeable Income (where any of the first 3 YAs falls in YA 2019 and before)
+Chargeable Income
+% Exempted From Tax
+Amount Exempted From Tax
+First $100,000
+100%
+$100,000
+Next $200,000
+50%
+$100,000
+The maximum exemption for each YA is $200,000 ($100,000 + $100,000).
+Example
+My company qualifies for the tax exemption scheme for new start-up companies and its first 3 YAs are YA 2019, YA 2020 and YA 2021. What is the maximum exemption I can claim under the scheme?
+The maximum exemption on normal chargeable income for each YA is as follows:
+YA
+Normal Chargeable Income
+% Exempted From Tax
+Amount Exempted From Tax
+Maximum Exemption
+2019
+First $100,000
+Next $200,000
+@ 100%
+@ 50%
+$100,000
+$100,000
+$200,000
+2020
+First $100,000
+Next $100,000
+@ 75%
+@ 50%
+$75,000
+$50,000
+$125,000
+2021
+First $100,000
+Next $100,000
+@ 75%
+@ 50%
+$75,000
+$50,000
+$125,000
+Note:
+The changes to the tax exemption scheme for new start-up companies as announced in Budget 2018 apply only with effect from YA 2020.
+View
+examples
+(PDF, 57KB) on how to compute the amount of tax exemption under the tax exemption scheme for new start-up companies.
+Qualifying Conditions for Tax Exemption Scheme for New Start-Up Companies
+All new start-up companies are eligible for the tax exemption scheme,
+except
+:
+Companies whose principal activity are that of investment holding
+Companies that undertake property development for sale, investment, or both
+The new start-up company must also:
+Be incorporated in Singapore
+Be a
+tax resident of Singapore
+for that YA
+Have its total share capital beneficially held directly by no more than 20 shareholders throughout the basis period for that YA where:
+All the shareholders are individuals; or
+At least 1 shareholder is an individual holding at least 10% of the issued ordinary shares of the company
+How to Claim Tax Exemption
+To claim the tax exemption, complete the relevant sections of the
+Estimated Chargeable Income (ECI) filing
+and
+Form C-S/ Form C-S (Lite)/ Form C
+.
+Abuse of the Tax Exemption Scheme
+IRAS takes a serious view of companies that are set up to abuse this scheme and are not incorporated for entrepreneurship and genuine commercial reasons.
+IRAS will not hesitate to take action when such abuse is uncovered.
+Abuse of the tax exemption scheme includes:
+Allocating the income of an existing profitable going concern to a few shell companies so that the chargeable income of each shell company is within the threshold for tax exemption
+Charging fees/ expenses to an existing profitable going concern by shell companies without any bona fide commercial reasons
+The shell companies claim tax exemption on the income they receive from the profitable going concern, while the latter claims tax deduction on the fees/ expenses paid to the shell companies.
+These shell companies do not carry out any activities or significant activities and have no or few employees. Their accounts usually show few transactions and low capitalisation (usually at $2).
+These forms of arrangement result in an overall net reduction of tax for the profitable going concern and the shell companies.
+As at 31 Jan 2021, more than 300 companies have been audited for possible abuse of the tax exemption scheme for new start-up companies. This has resulted in total tax recovery and penalties of more than $25 million.
+Tax evasion/ fraud is a criminal offence punishable under the law and the Court imposes severe penalties for such offences. Businesses or individuals who engage in abusive tax arrangements such as setting up of shell companies to take advantage of the
+tax exemption scheme for new start-up companies or individuals who assist others with abusive tax arrangements should disclose such abuse immediately. IRAS will treat such disclosure as a mitigating factor when considering the penal charges.
+Partial Tax Exemption Scheme for Companies
+All companies, including companies limited by guarantee, are eligible for partial tax exemption (PTE), unless they are claiming the tax exemption for new start-up companies.
+It was announced in Budget 2018 that the tax exemption under the partial tax exemption scheme would be revised with effect from the Year of Assessment (YA) 2020 as other support for companies to build their capabilities have been strengthened.
+The tax exemptions for qualifying companies are as follows:
+YA 2020 onwards
+YA 2019 and before
+75% exemption on the first $10,000 of normal chargeable income*; and
+A further 50% exemption on the next $190,000 of normal chargeable income*.
+75% exemption on the first $10,000 of normal chargeable income*; and
+A further 50% exemption on the next $290,000 of normal chargeable income*.
+* Normal chargeable income refers to income to be taxed at the prevailing Corporate Income Tax rate of 17%.
+The tables below summarise the amount of tax exemption.
+Table 1: Partial Tax Exemption on First $200,000 of Chargeable Income (YA 2020 onwards)
+Chargeable Income
+% Exempted From Tax
+Amount Exempted From Tax
+First $10,000
+75%
+$7,500
+Next $190,000
+50%
+$95,000
+The maximum exemption for each YA is $102,500 ($7,500 + $95,000).
+Table 2: Partial Tax Exemption on First $300,000 of Chargeable Income (YA 2019 and before)
+Chargeable Income
+% Exempted From Tax
+Amount Exempted From Tax
+First $10,000
+75%
+$7,500
+Next $290,000
+50%
+$145,000
+The maximum exemption for each YA is $152,500 ($7,500 + $145,000).
+View
+examples
+(PDF,
+57KB) on how to compute the amount of tax exemption under the partial tax exemption scheme.
+FAQs
+Why are investment holding companies and companies who undertake property development not eligible for the tax exemption scheme for new start-up companies?
+Investment holding companies derive only passive incomes such as dividend and interest income, while the real estate industry typically incorporates a new company for each new property development.
+The purpose of the start-up tax exemption is to encourage entrepreneurship, and hence not intended for such companies. However, these companies are eligible for the partial tax exemption.
+How do companies limited by guarantee meet the condition on share capital for the tax exemption scheme for new start-up companies?
+For companies limited by guarantee, the mentioned condition will apply to their membership instead. Such companies must have members who meet either of the following conditions:
+All of whom are individuals throughout the basis period for that Year of Assessment (YA)
+At least one of whom is an individual throughout the basis period for that YA, and the contribution of that individual under the memorandum of association of the company to the assets of the company in the event of it being wound up amounts
+to at least 10% of the total contributions of the members of the company throughout the basis period for that YA
+If my company does not claim the tax exemption for new start-up companies in any of the first 3 YAs, can I continue to claim the tax exemption in subsequent YAs?
+No. The tax exemption is available only for the first 3 consecutive YAs. If your company incurs losses or has no income (e.g. business has not commenced) during any of the first 3 YAs, the tax exemption scheme for new start-up companies is not
+applicable to your company for that particular YA as your chargeable income and tax payable are nil. However, that particular YA is still included in determining the first 3 consecutive YAs that your company is eligible for the tax exemption
+for new start-up companies.
+Example:
+Your company's first 3 YAs are YA 2021, YA 2022 and YA 2023. It has no income in YAs 2021 and 2022. It started its operations in 2022 and has taxable income in YA 2023.
+Your company can claim the tax exemption for new start-up companies in YA 2023 if it meets all the qualifying conditions. However, YA 2023 is your company’s third YA, although this is its first claim for the tax exemption for new start-up
+companies.
+Your company cannot claim the tax exemption for new start-up companies in YA 2024 as it is the fourth YA. From YA 2024, your company is eligible for the partial tax exemption.
+Can my company defer the claim for unutilised tax losses brought forward to maximise the benefit given under the tax exemption scheme for new start-up companies?
+No. The company must first set-off the unutilised tax losses brought forward against the current year adjusted profit, unless it does not meet the qualifying conditions for set-off*.
+* If it does not meet the
+qualifying conditions for set-off
+, the unutilised losses will be disregarded and will not be available for set-off against current or future profits.
+Example:
+Your company has tax losses of $150,000 in YA 2022 and has an adjusted profit of $100,000 in YA 2023. It qualifies for the tax exemption scheme for new start-up companies in YA 2023.
+The company must first set-off the unutilised tax losses of $150,000 brought forward from YA 2022 against the adjusted profit of $100,000 in YA 2023, assuming it meets the qualifying conditions for set-off.
+This results in unutilised losses of $50,000 ($150,000 - $100,000) to be carried forward to set-off against profits of subsequent YAs, subject to meeting the qualifying conditions. The tax exemption scheme for new start-up companies is therefore
+not applicable to the company for YA 2023 since the company's chargeable income and tax payable for YA 2023 are nil.
+Can my company defer the claim for capital allowance to maximise the benefit given under the tax exemption scheme for new start-up companies?
+Yes. Your company can defer the claim for capital allowance. Learn more about
+deferring capital allowance claims
+.
+My company's chargeable income for YA 2023 is less than $200,000. As such, my company is unable to enjoy the maximum amount of tax exemption for new start-up companies. Can the 'unutilised' exempt amount for YA 2023 be carried forward to subsequent YAs?
+No. The tax exemption is allowed on a per YA basis. You cannot carry forward any 'unutilised' amount to YA 2024 or any other subsequent YAs.
+I have converted my sole-proprietor or partnership business into a company. Is my company eligible for the tax exemption scheme for new start-up companies?
+Yes. Your company is eligible for the tax exemption scheme for new companies for its first 3 consecutive YAs if it meets all the
+qualifying conditions
+.
+Can a foreign company or its Singapore branch claim the tax exemption for new start-up companies?
+No. A foreign company or its Singapore branch cannot claim the tax exemption for new start-up companies as they are not incorporated in Singapore.
+However, a foreign company or its Singapore branch is eligible for the partial tax exemption on its normal chargeable income.
+Pages
+Basic Guide to Corporate Income Tax for Companies

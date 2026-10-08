@@ -1,0 +1,372 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Inland Revenue Department 
+The Government of the Hong Kong Special Administrative Region
+of the People's Republic of China  
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES 
+ 
+NO. 17 (REVISED) 
+ 
+ 
+THE TAXATION OF PERSONS CHARGEABLE TO 
+PROFITS TAX ON BEHALF OF NON-RESIDENTS 
+ 
+ 
+ 
+ 
+ 
+ 
+These notes are issued for the information and guidance of taxpayers 
+and their authorised representatives.  They have no binding force and do not 
+affect a person’s right of objection and appeal to the Commissioner, the Board of 
+Review or the Courts. 
+ 
+ 
+  
+These notes replace those issued on 15 March 1989. 
+ 
+ 
+ 
+ 
+ 
+LAU MAK Yee-ming, Alice 
+Commissioner of Inland Revenue 
+January 2005 
+Our web site : www.ird.gov.hk 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES  
+ 
+No. 17 (REVISED)  
+ 
+CONTENT  
+Paragraph 
+ 
+Introduction 
+1 
+The position in general 
+2  
+The assessment and collection provisions – section 20A 
+3  
+Interpretation of “agent” 
+4  
+The assessment and collection provisions – section 20B 
+6  
+Definition of certain terms 
+9  
+Assessment in name of Hong Kong person – section 20B 
+10  
+Deduction of tax by Hong Kong person 
+12  
+The amount of tax to be withheld 
+13  
+Repayment of tax involving non-residents 
+15  
+
+INTRODUCTION  
+ 
+ 
+These practice notes lay down broad statements on the practice to be 
+adopted by the Department in relation to the taxation responsibilities of persons 
+in Hong Kong who may be chargeable to Profits Tax on behalf of 
+non-residents. 
+ 
+ 
+THE POSITION IN GENERAL 
+ 
+2.  
+A non-resident who carries on a trade, profession or business in 
+Hong Kong is chargeable to Profits Tax under section 14 in respect of profits 
+arising in or derived from Hong Kong from such trade, profession or business. 
+Thus, for example, a non-resident entertainer or sportsman who performs in 
+Hong Kong is chargeable to Profits Tax in respect of the payment he derives 
+from his performance here. In addition, a non-resident person who does not 
+carry on business in Hong Kong and who may have no physical presence here 
+is still liable to Profits Tax if, for example, he receives sums in the form of 
+royalties or licence fees for the use of or right to use in Hong Kong certain 
+industrial or intellectual property. Such receipts are deemed by section 15(1) to 
+arise in or be derived from Hong Kong from a trade, profession or business 
+carried on in Hong Kong. These receipts comprise sums received or accrued 
+from the exhibition or use in Hong Kong of cinema or television film or tape, 
+any sound recording, or any advertising material connected with such items 
+[section 15(1)(a)] and sums received or accrued for the use of or right to use in 
+Hong Kong any patent, design, trademark, copyright material, secret process or 
+formula or similar property, or for imparting or undertaking to impart 
+knowledge connected with such items [section 15(1)(b)].  Following the 
+enactment of the Inland Revenue (Amendment) Ordinance 2004, the scope of 
+taxable receipts is extended to cover sums received or accrued for the use of or 
+right to use outside Hong Kong the intellectual properties enumerated in 
+section 15(1)(b), which are deductible in ascertaining assessable profits of a 
+person for the purpose of Profits Tax [section 15(1)(ba)].  This new section 
+does not apply to sums received or accrued before 25 June 2004. 
+ 
+ 
+
+ 
+THE ASSESSMENT AND COLLECTION PROVISIONS – SECTION 20A  
+ 
+3.  
+For many y
+ ears the Department has relied on section 20A to enable 
+the tax due by a non-resident to be assessed and collected even where the 
+non-resident has no physical presence in Hong Kong. The terms of section 20A 
+provide that a non-resident person may be assessed directly or in the name of 
+his agent in respect of his profits arising in or derived from Hong Kong from 
+any trade, profession or business carried on in Hong Kong. The section further 
+provides that the tax so charged shall be recoverable from the asse
+ 
+ts of the non- 
+resident or his agent. The term “agent” in relation to a non-resident is defined 
+in section 2 to include :- 
+ 
+ 
+(a)   
+the agent, attorney, factor, receiver or manager in Hong Kong 
+of such person, and 
+ 
+ 
+ 
+(b)  
+any person in Hong Kong through whom such person i
+ 
+s in 
+receipt of any profits or income arising in or derived from 
+Hong Kong. 
+ 
+Until a High Court decision in 1987 (referred to in paragraph 4 below) the 
+Department took the view that any person in Hong Kong who paid to a 
+non-resident sums in respect of which the non-resident was assessable to tax in 
+Hong Kong was an agent in terms of the above definition. Consequently, that 
+person in Hong Kong could be charged to Profits Tax under section 20A as 
+agent of the non-resident. In the light of that court decision the Department’s 
+view is no longer tenable. 
+ 
+ 
+INTERPRETATION OF “AGENT” 
+ 
+4.  
+The meaning of “agent” was brought before the High Court in CIR v. 
+Asia Television Limited [1987] 2 HKTC 198. 
+The case concerned the 
+payment of licence fees by Asia Television Limited (ATV) to a non-resident 
+film distribution company under a licence agreement to broadcast in Hong 
+Kong films supplied by the non-resident.  The licence fees were paid directly 
+by ATV to the non-resident outside Hong Kong.  Such fees are chargeable to 
+Profits Tax under section 15(1)(a).  Assessments were raised on ATV as agent 
+for non-resident. On appeal the High Court held that in the circumstances of the 
+2 
+
+ 
+case the non-resident was in receipt of income not through but rather from 
+ATV. Consequently ATV was not an “agent” as defined and could not be 
+charged under section 20A in respect of the licence fees paid to the 
+non-resident. It followed, of course, that the non-resident could only be charged 
+by direct assessment. 
+ 
+5.  
+As a result of the ATV decision, the Department is unable to use 
+section 20A to assess non-residents where the Hong Kong person and the 
+non-resident deal with each other on a principal to principal basis, as was the 
+situation in the ATV case. Because it is not uncommon for non-residents in 
+receipt of royalties and licence fees from Hong Kong 
+ 
+and for non-resident 
+entertainers and sportsmen who perform in 
+ 
+Hong Kong to derive income not 
+through a Hong Kong agent but from a Hong Kong principal, it has been 
+necessary to amend the law to restore the position, as far as possible, to that 
+which was thought to have existed prior to the ATV decision. 
+ 
+ 
+THE ASSESSMENT AND COLLECTION PROVISIONS – SECTION 20B 
+ 
+6.  
+Against this background the Inland Revenue (Amendment) 
+Ordinance 1989 introduced a new section 20B which applied from 1 April 
+ 
+ 
+1989. It should be noted, however, that section 20A has remained unchanged 
+and continues to apply in situations where the Hong Kong payer is truly an 
+agent of the non-resident.  Section 20B only applies to situations where 
+persons in Hong Kong who are not agents deal with a specified class of 
+non-residents. In essence this class comprises non-residents in receipt of 
+royalties and licence fees from Hong Kong and non-resident entertainers and 
+sportsmen who perform in Hong Kong. 
+ 
+7.  
+Following the enactment of the Inland Revenue (Amendment) 
+Ordinance 2004, the coverage of section 20B is expanded.  The section now 
+applies in respect of a non-resident who is chargeable to Profits Tax in respect 
+of :-  
+ 
+ 
+ 
+(a)   
+sums deemed under section 15(1)(a), (b) or (ba) to be receipts 
+derived from Hong Kong from a trade, profession or business 
+carried on in Hong Kong, in other words, royalties and licence 
+fees;or 
+3 
+
+ 
+ 
+(b)   
+sums received in respect of the performance in Hong Kong by 
+a non-resident entertainer or sportsman of an activity as an 
+entertainer or sportsman on or in connection with a 
+commercial occasion or event, including appearance in any 
+promotional activity or participation in any sound recording, 
+films, videos, radio, television etc. 
+ 
+8.  
+The Ordinance contains no definition of “non-resident person” but 
+the Department, as a matter of administrative practice, has long accepted in 
+relation to section 20A that the term refers to a person who has no permanent 
+business presence in Hong Kong. No difficulties or disputes have arisen on this 
+point in the past and it is therefore not likely that the term will cause problems 
+in relation to section 20B. 
+In case there are disputes, the term will be 
+interpreted in accordance with the principles established by the courts. 
+ 
+ 
+DEFINITION OF CERTAIN TERMS 
+ 
+9.  
+The phrases “entertainer or sportsman” and “commercial occasion or 
+event” are defined in section 20B(4). The definitions are largely 
+self-explanatory and require little comment :-  
+ 
+ 
+“Entertainer or sportsman” means a person, other than a corporation, 
+who gives performances in any kind of entertainment or sport, 
+including any physical activity which the public is permitted to see 
+or hear. In terms of the definition it matters not whether the activity 
+is in a live or recorded form or whether the public is required to 
+make payment to see or hear. 
+ 
+“Commercial occasion or event” includes any occasion or event for 
+which an entertainer might receive cash or other form of property for 
+his performance, or any occasion or event designed to promote 
+commercial sales or activity. As presently defined, it is considered 
+that the phrase will cover all those occasions or events, whether 
+commercial or charitable, in respect of which an entertainer or 
+sportsman might receive profits assessable to tax. 
+ 
+ 
+4  
+
+ 
+ 
+ASSESSMENT IN NAME OF HONG KONG PERSON – SECTION 20B  
+ 
+10.  
+Where section 20B applies, a non-resident person is chargeable to 
+tax in the name of the Hong Kong person who paid or credited sums (see 
+paragraph 7) to him or any other non-resident. In addition, section 20B(2) 
+provides that the tax so charged is recoverable by all means provided in the 
+Ordinance from the Hong Kong person. Thus, where a Hong Kong person pays 
+to a non-resident royalties or licence fees in the circumstances prescribed by 
+section 15(1)(a), (b) or (ba), he will be chargeable to tax on behalf of the 
+non-resident in respect of the payment. Similarly, a Hong Kong promoter or 
+sponsor will be chargeable in respect of any payment made by him to a 
+non-resident entertainer or sportsman for performing in Hong Kong. 
+ 
+11.  
+It should be noted that in terms of section 20B(2) the Hong Kong 
+person would remain chargeable to tax on behalf of the non-resident even if the 
+payment or credit was made to a non-resident other than the non-resident who 
+is chargeable by virtue of section 20B(1), for example, where the payment is 
+made to the manager of a non-resident entertainer who is himself a 
+non-resident. Section 20B would also be applicable where sums falling within 
+subsection (1) were paid by a Hong Kong person to another Hong Kong person 
+for the account of a non-resident. In this situation the other Hong Kong person 
+would be chargeable on behalf of the non-resident. 
+ 
+ 
+DEDUCTION OF TAX BY HO
+ 
+NG KONG PERSON 
+ 
+12.  
+Section 20B(3), like section 20A(2), requires the Hong Kong person 
+from whom tax is recoverable, in other words, the person who is chargeable on 
+behalf of the non-resident, to deduct at the time he pays or credits the 
+non-resident a sum sufficient to meet the tax due. At this particular time no 
+assessment may have been raised and in such case the Hong Kong payer should 
+retain the sum deducted until a demand note calling for payment is received 
+from the Department. Section 20B(3) also contains an indemnity to the Hong 
+Kong person in respect of the sum deducted to meet the tax liability. 
+ 
+ 
+ 
+5 
+
+ 
+THE AMOUNT OF TAX TO BE WITHHELD 
+ 
+13.  
+In determining the amount of tax to be withheld by the Hong Kong 
+person, in the case of royalties and licence fees falling within section 15(1)(a), 
+(b) or (ba), the provisions of section 21A should be followed.  The operation 
+of section 21A is explained in the Departmental Interpretation and Practice 
+Notes No. 22.  
+ 
+14.  
+With regard to non-resident entertainers and sportsmen, the 
+Department has for many y
+ ears advised Hong Kong promoters to withhold tax 
+on the basis that assessable profits represent two-thirds of the gross receipts 
+payable to the entertainer or sportsman. In other words, a deduction for expense 
+equal to one-third of the gross proceeds is automatically allowed by the 
+Department in computing the assessable profits of a non-resident entertainer or 
+sportsman. This arrangement is, from a strictly legal point of view, properly 
+authorised by section 21 which enables the assessable profits of a non-resident 
+to be computed on a percentage of turnover. The Department will continue to 
+apply this arrangement in the future. Non-residents are, of course, at liberty to 
+make claims for deduction which are greater than the automatic allowance to 
+which I have referred above. However, in such cases the Department will 
+require that full particulars of the expenses be produced and that such expenses 
+be properly deductible in terms of the Ordinance. 
+ 
+ 
+REPAYMENT OF TAX INVOLVING NON-RESIDENTS 
+ 
+15.  
+Finally, it should be noted that the Inland Revenue (Amendment) 
+Ordinance 1989 also amends section 79(3) to provide that where a non-resident 
+person has been assessed in the name of another person under section 20A or 
+20B and the tax so assessed has been paid by the other person, either the other 
+person or the non-resident, but not both, may claim repayment of any tax 
+overpaid. In this regard, the Department takes the view that the term “another 
+person” in section 79(3), as amended, covers both an “agent” referred to in 
+section 20A and “any person in Hong Kong” in section 20B. 
+ 
+6 

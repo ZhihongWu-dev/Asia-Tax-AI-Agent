@@ -1,0 +1,233 @@
+Tax Treatment of Gain on Disposal of Equity Interests
+Tax Certainty Enhancement Scheme (the Scheme)
+Eligibility Criteria for the Scheme
+Basic provisions
+Eligible investor entity
+Eligible equity interest
+Eligible investee entity
+Equity holding conditions
+Exception to equity holding conditions – long-held left-overs
+Exclusions
+Excluded investor entity
+Excluded equity interests – trading stock
+Excluded equity interests – non-listed equity interests in property-related entities
+Property trading
+Property development
+Property holding
+Other Features of the Scheme
+Election procedure
+No adverse impact of non-election
+Duration of the Scheme
+More Information on the Scheme
+FAQ
+Illustrative Examples
+back to top
+Tax Treatment of Gain on Disposal of Equity Interests
+Hong Kong has a simple and competitive tax system which does not tax capital gains. Therefore, gains or profits, arising in or derived from Hong Kong, on disposal of equity interests (Onshore Disposal Gains) that are of capital nature are not subject to profits tax in Hong Kong. Under the existing tax rule, the nature of Onshore Disposal Gains is essentially determined based on a “badges of trade” analysis, where considerations are given to the relevant facts and circumstances of the case, such as the frequency of similar trades, the holding period, the holding percentage, reasons for purchase or sale of the equity interests, etc. If the Onshore Disposal Gains are determined to be capital in nature after the “badges of trade” analysis, they are not subject to profits tax. If they are determined to be revenue in nature, they are subject to profits tax. Similarly, onshore losses on disposal of equity interests of capital nature are not tax deductible but onshore disposal losses of revenue nature are deductible.
+back to top
+Tax Certainty Enhancement Scheme (the Scheme)
+Acquisition and disposal of equity interests are common during the process of business expansion and restructuring. The Financial Secretary announced in the 2023-24 Budget Speech that the Government will put forward an enhancement proposal to provide greater upfront certainty of non-taxation of Onshore Disposal Gains that are of capital nature. The Inland Revenue (Amendment) (Disposal Gain by Holder of Qualifying Equity Interests) Ordinance 2023 (the Amendment Ordinance) was enacted on 15 December 2023 to provide for a tax certainty enhancement scheme for Onshore Disposal Gains. Under the Scheme, any Onshore Disposal Gain derived by an eligible investor entity meeting specified conditions is to be regarded as capital in nature and not chargeable to profits tax, and there is no need to conduct the “badges of trade” analysis.
+The Scheme applies to Onshore Disposal Gains in relation to any disposal which occurs on or after 1 January 2024 and accrues in the basis period for a year of assessment beginning on or after 1 April 2023.
+The application of the Scheme is not compulsory and taxpayers can choose whether to apply or not. In the case where the Scheme does not apply to an Onshore Disposal Gain for the reason that the investor entity does not elect for the Scheme or that the Onshore Disposal Gain is excluded from the Scheme, the status quo will apply, i.e. whether the Onshore Disposal Gain is capital or revenue in nature will continue to be determined based on the “badges of trade” analysis.
+In respect of onshore losses on disposal of equity interests, the Scheme will not affect the existing tax rule under which its nature is determined based on the “badges of trade” analysis.
+back to top
+Eligibility Criteria for the Scheme
+Basic provisions
+Subject to exclusions under the Scheme, if a disposal of equity interests in an investee entity occurs on or after 1 January 2024, any gains or profits,
+arising in or derived from Hong Kong
+, that accrued to an investor entity in the basis period for a year of assessment beginning on or after 1 April 2023, would be regarded as capital in nature and not chargeable to profits tax if the following eligibility criteria are met:
+The investor entity must be an
+eligible investor entity
+;
+The subject matter disposed of must be an
+eligible equity interest
+in an
+eligible investee entity
+; and
+The
+equity holding conditions
+are met for the subject disposal of the subject equity interests or the exception conditions for long-held left-overs (i.e. disposal in tranches) are satisfied.
+The Scheme only applies to disposal gains arising in or derived from Hong Kong (i.e. Onshore Disposal Gains). It does not cover any specified foreign-sourced income as defined by section 15H(1) of the Inland Revenue Ordinance (IRO), even if the specified foreign-sourced income is regarded under section 15I(1) of the IRO as a receipt arising in or derived from Hong Kong. In other words, foreign-sourced disposal gains derived from the sale of equity interests that are deemed to be sourced from Hong Kong under the Foreign-sourced Income Exemption regime are not eligible for the Scheme.
+back to top
+Eligible investor entity
+An investor entity must be a legal person (not including a natural person) or an arrangement that prepares separate financial accounts, such as a partnership, a trust and a fund.
+Nevertheless, the Scheme does not apply to an investor entity which is an insurer. Please refer to
+Excluded investor entity
+under
+Exclusions
+for more details.
+There is no resident or listing requirement on the investor entity. As such, other than the excluded investor entities specified above, the Scheme applies to all investor entities irrespective of whether they are Hong Kong resident or non-Hong Kong resident, whether they are incorporated or established in Hong Kong or outside Hong Kong, or whether they are listed or non-listed entities.
+back to top
+Eligible equity interest
+An equity interest in an investee entity means an interest that carries rights to the profits, capital or reserves of the investee entity and is accounted for as equity in the books of the investee entity under applicable accounting principles. Hence, the Scheme applies to Onshore Disposal Gains arising from disposal of different forms of equity interests, such as ordinary shares, preference shares and partnership interests, provided that the equity interest carries rights to the profits, capital or reserves of the investee entity and is regarded as equity from the perspective of the investee entity under applicable accounting principles.
+Applicable accounting principles in general refer to the accounting standards required to be adopted by an entity in the preparation of its financial accounts. In determining whether a financial instrument, from the perspective of an investee entity, should be classified as an equity instrument or a financial liability, Hong Kong Accounting Standard 32 and International Accounting Standard 32 have provided detailed guidance on this aspect. In case the investee entity is not required to comply with any specified accounting standard for preparing its financial accounts, the applicable accounting principles should be the International Financial Reporting Standards.
+Nevertheless, the Scheme does not apply to the following equity interests:
+equity interests that are regarded as trading stock for tax purposes; or
+non-listed equity interests that are in an investee entity which engages in property trading, property development or property holding and does not satisfy the exception conditions (excluded entity).
+Please refer to
+Excluded equity interests – trading stock
+and
+Excluded equity interests – non-listed equity interests in property-related entities
+for more details.
+back to top
+Eligible investee entity
+Similar to an investor entity, an investee entity must be a legal person (not including a natural person) or an arrangement that prepares separate financial accounts, such as a partnership, a trust and a fund.
+As mentioned, the Scheme is not applicable to non-listed equity interests in investee entities engaging in property-related businesses which do not satisfy the exception conditions (i.e. excluded entities). Other than that, the Scheme applies to all investee entities irrespective of whether they are Hong Kong resident or non-Hong Kong resident, whether they are incorporated or established in Hong Kong or outside Hong Kong, or whether they are listed or non-listed entities.
+back to top
+Equity holding conditions
+Subject to certain exclusions, the Scheme applies to an Onshore Disposal Gain if the equity holding conditions, which relate to the holding period and holding percentage of the equity interests in an investee entity, are met. The threshold for the holding period is 24 months and that for the holding percentage is 15%. In relation to an Onshore Disposal Gain that an investor entity derives from a disposal (subject disposal) of equity interests (subject interests) in an investee entity, equity holding conditions are met for the subject disposal of the subject interests if:
+the investor entity has held the subject interests throughout the continuous period of 24 months immediately before the date of disposal of the subject interests (reference period) under the subject disposal; and
+the subject interests by themselves, or together with certain other equity interests in the investee entity also having been held by the investor entity throughout the reference period, constitute at least 15% of equity interests (qualifying interests) in the investee entity.
+Measuring qualifying interests on a group basis
+The Scheme provides flexibility in equity holding conditions by allowing qualifying interests to be measured on a group basis. In case the equity interests having been held by the investor entity throughout the reference period do not constitute qualifying interests in the investee entity (i.e. the investor entity alone has held less than 15% of equity interests in the investee entity), the equity holding conditions can still be met if the equity interests having been held by the investor entity and its closely related entity/entities throughout the reference period in aggregate constitute qualifying interests in the investee entity.
+In determining whether the 15% holding threshold is met under the measurement on a group basis, the direct equity interests which have been held by the closely related entity/entities in the investee entity throughout the reference period would be taken into account in the aggregation.
+Meaning of “closely related entity”
+An entity is a closely related entity of another entity if:
+one of them has control over the other; or
+both of them are under the control of the same entity.
+An entity (entity A) has control over another entity (entity B) if:
+entity A has more than 50% of direct or indirect beneficial interest in, or in relation to, entity B; or
+entity A is directly or indirectly entitled to exercise, or control the exercise of, more than 50% of voting rights in, or in relation to, entity B.
+Direct beneficial interest
+The extent of direct beneficial interest of entity A in entity B is determined as follows:
+If entity B is a corporation that is not a trustee of a trust estate – the percentage of the issued share capital (however described) of the corporation held by entity A;
+If entity B is a partnership that is not a trustee of a trust estate – the percentage of the income of the partnership to which entity A is entitled;
+If entity B is a trustee of a trust estate – the percentage in value of the trust estate in which entity A is interested; or
+If entity B is an entity that is not a corporation, a partnership or a trustee of a trust estate, the percentage of entity A’s ownership interest in the entity.
+Indirect beneficial interest
+If entity A has an indirect beneficial interest in, or is indirectly entitled to exercise or control the exercise of voting rights in, entity B through another entity (interposed entity), the extent of the indirect beneficial interest or voting rights of entity A in entity B is determined as follows:
+If there is one interposed entity – the percentage arrived at by multiplying the percentage of the beneficial interest or voting rights of entity A in the interposed entity by the percentage of the beneficial interest or voting rights of the interposed entity in entity B; or
+If there is a series of two or more interposed entities – the percentage arrived at by multiplying the percentage of the beneficial interest or voting rights of entity A in the first interposed entity in the series by the percentage of the beneficial interest of each interposed entity (other than the last interposed entity) in the series in the next interposed entity in the series and the percentage of the beneficial interest of the last interposed entity in the series in entity B.
+For example, if entity A holds 80% of the issued share capital of an interposed entity which owns 70% of the issued share capital of entity B, entity A would be regarded as holding 56% of indirect beneficial interest in entity B (i.e. 80% x 70% = 56%). In the circumstances, entity B is a closely related entity of entity A.
+In case there is more than one interposed entity in between entity A and entity B, for example, entity A holds 80% of the issued share capital of an interposed entity C which owns 70% of the issued share capital of an interposed entity D and interposed entity D owns 85% of the issued share capital of entity B. Entity A would be regarded as holding 47.6% of indirect beneficial interest in entity B (i.e. 80% x 70% x 85% = 47.6%). In the circumstances, entity B is not a closely related entity of entity A.
+Disposals on a first-in-first-out basis
+In case where an investor entity or a closely related entity of an investor entity has acquired equity interests in the same investee entity on different occasions, the equity interests are taken to be disposed of in the order in which they are acquired (that is, on a first-in first-out basis) when determining whether the equity holding conditions are met for a specified disposal.
+Equity interests under a stock borrowing and lending agreement
+If an investor entity or its closely related entity is the lender in a stock borrowing and lending agreement (within the meaning given by section 19(16) of the Stamp Duty Ordinance (Cap. 117)) under which its legal interest in the equity interests in an investee entity has been transferred to another entity, the investor entity or its closely related entity is treated as the holder of the equity interests in the investee entity during the borrowing period.
+back to top
+Exception to equity holding conditions: long-held left-overs (Disposal of equity interests in tranches)
+An investor entity may dispose of its long-held equity interests in tranches. After disposal of each tranche, the investor entity’s equity holding in an investee entity may fall below the 15% threshold such that the equity holding conditions for the subsequent disposals of the remainder of the long-held interests (long-held left-overs) cannot be met. To cater for such long-held left-overs, the Scheme provides for an exception to the equity holding conditions under which Onshore Disposal Gains arising from such long-held left-overs are regarded as capital in nature and not chargeable to profits tax if:
+before disposal of the subject interests (i.e. long-held left-overs) in an investee entity, the investor entity has certain equity interests in the investee entity of which, partly were disposed of by the investor entity (earlier disposal);
+the Scheme applies to the Onshore Disposal Gains derived from the earlier disposal on the basis that the equity holding conditions are met for the earlier disposal and that the subject interests constituted a part of the qualifying interests (in other words, if the subject interests had been disposed of altogether in the earlier disposal, the subject interests would have been qualified for the Scheme on the basis that the equity holding conditions had been met); and
+the disposal of the subject interests occurs within 24 months after the earlier disposal (24-month time limit).
+Where there is more than one earlier disposal in tranches, the latest earlier disposal would be counted for the purpose of considering the 24-month time limit. In other words, Onshore Disposal Gains arising from a disposal of left-over interests are eligible for the Scheme if the disposal is made within 24 months from the latest earlier disposal for which the investor entity has last met the equity holding conditions.
+back to top
+Exclusions
+Excluded investor entity
+Given that making investments for returns forms part of the core business activities of an insurer, the gains on disposal of equity interests by an entity carrying on business as an insurer are normally considered as revenue in nature and are subject to tax irrespective of the holding period and the holding percentage of the equity interests. In this regard, the Scheme does not apply to any equity interests disposed of by an investor entity which is an insurer.
+An investor entity is an insurer if its assessable profits for the year of assessment are ascertained under Subdivision 1 of Division 11 of Part 4 of the IRO. Entities (e.g. subsidiaries of the insurers) that are not chargeable to profits tax in accordance with the relevant provisions would not be excluded from the Scheme.
+back to top
+Excluded equity interests – trading stock
+Trading stocks are not capital assets. As a matter of principle, the Scheme will not affect the existing taxation principle that trading gains are taxable. Hence, the Scheme will not apply to equity interests that are regarded as trading stock. Also, equity interests held by an investor entity or its closely related entity (collectively as holding entity) that are regarded as trading stock will be disregarded for the purpose of determining whether the equity holding conditions are met.
+Equity interests (specified equity interests) held by a holding entity are “regarded as trading stock” if any unrealised fair value gain or loss arising from, or provision for diminution in value of, the specified equity interests has been brought into account for tax purposes. Where the specified equity interests were acquired by the investor entity together with other equity interests on the same occasion, the specified equity interests are regarded as trading stock if any unrealized fair value gain or loss arising from, or provision for diminution in value of, or disposal gain or loss in relation to the same lot of equity interests as that of the specified subject interests, has been brought into account for tax purposes.
+Following on from the paragraph above, a sum has been brought into account for tax purposes if the sum has been brought into account for computing the holding entity’s assessable profits or losses under:
+an assessment made on the holding entity that has become final and conclusive under section 70 of the IRO; or
+a computation of losses issued to the holding entity.
+An assessment has become final and conclusive under section 70 of the IRO under the following situations:
+no valid objection or appeal has been lodged under Part 11 of the IRO (i.e. the assessment has taken into account the relevant fair value gain or loss or disposal gain or loss, but no valid objection or appeal had been lodged);
+an appeal against the assessment has been withdrawn under section 68(1A)(a) of the IRO or dismissed under section 68(2B) of the IRO;
+the amount of assessable profits has been agreed to under section 64(3) of the IRO (i.e. the Assessor and the taxpayer have agreed on the assessable profits upon an objection lodged by the taxpayer); or
+the amount of such assessable profits has been determined on objection or appeal.
+Change of intention
+Where there is a change of intention in respect of the specified equity interests from trading stock to capital assets (i.e. the specified equity interests have been appropriated for a non-trade purpose), the specified equity interests will cease to be regarded as trading stock provided that the amount that the equity interests appropriated would have realized, if sold in the open market on the date of appropriation, has been brought into account as a receipt in accordance with section 15BA(2) of the IRO. The Scheme is applicable to the subsequent disposal of the specified equity interests if the equity holding requirements are met after the date of appropriation.
+Determination of “disregarded period”
+For the purposes of the Scheme, equity interests are to be disregarded during the period that they are regarded as trading stock (disregarded period), i.e. not to constitute any part of the relevant period or the qualifying interests for meeting the equity holding conditions.
+For specified equity interests in respect of which any adjustment for fair value changes or diminution in value has been brought into account for tax purposes for a year of assessment, the disregarded period begins from the first day of the basis period for that year of assessment. For specified equity interests that were acquired together with other equity interests on the same occasion and any adjustment for fair value changes or diminution in value or disposal gain or loss in respect of any of those other equity interests has been brought into account for tax purposes for a year of assessment, the disregarded period begins from the first day of the basis period for that year of assessment, or in the case of actual disposal of the other equity interests, the date of that disposal.
+In both cases, the disregarded period ceases on the date of appropriation of the relevant equity interests for non-trade purpose, if applicable.
+back to top
+Excluded equity interests – non-listed equity interests in property-related entities
+The Scheme does not apply to non-listed equity interests in an investee entity which engages in property trading, property development or property holding. This is to avoid potential abuses by businesses holding immovable properties as trading stock to claim their trading gains as non-taxable under the Scheme by pre-arranging their immovable properties to be acquired or held through an intermediate or another entity and then disposing of the equity interests in that entity.
+Definition of “immovable property”
+“Immovable property” means the following but does not include infrastructure:
+land (whether covered by water or not);
+any estate, right, interest or easement in or over any land; and
+things attached to land or permanently fastened to anything attached to land.
+The term “infrastructure” means any publicly or privately owned facility providing or distributing services for the benefit of the public, and includes any water, sewage, energy, fuel, transportation or communication facility.
+Disposal of listed equity interests in property-related entities
+Only disposals of non-listed equity interests in investee entities engaging in property-related businesses are excluded from the Scheme. Disposals of listed equity interests in investee entities engaging in property-related businesses are not excluded from the Scheme because it is very unlikely for a potential tax abuse arrangement to be conducted through a listed entity.
+back to top
+Property trading
+An investee entity is an excluded entity if it carries on a business of property trading in the relevant basis period (i.e. in the basis period of the investee entity for the year of assessment in which the disposal occurs). An entity carries on a business of property trading if it carries on a business of acquisition and sale of immovable properties, situated in Hong Kong or elsewhere, unless the acquisition and sale of immovable properties is incidental to the undertaking of any property development (i.e. construction of buildings) by the entity. This exclusion is to avoid overlapping with the meaning of property development.
+For the purposes of the Scheme, an investee entity that engages in a regular business other than property trading but has carried out a one-off property trading transaction which is an adventure in the nature of trade would not be regarded as an excluded entity.
+Furthermore, an investee entity may undertake certain renovation or refurbishment of the acquired properties before selling them, but these activities do not fall within the definitions of “construction” and “property development” (see the section on “
+Property development
+”). Its holding of the acquired properties pending for sale is regarded as part of the activities of property trading, not the activities of property holding.
+Whether or not an investee entity carries on a property trading business depends on the facts and circumstances of the case. Despite that an investee entity does not undertake any trading transactions in the relevant basis period, if the circumstances suggest that the entity’s property trading business still continues (e.g. maintaining certain immovable properties as trading stock), the entity will still be considered as carrying on a property trading business in that period.
+Excluding non-listed equity interests in property trading companies from the Scheme does not mean that any Onshore Disposal Gains in relation to such interests must be chargeable to profits tax. The chargeability of Onshore Disposal Gains will remain to be determined based on the “badges of trade” analysis.
+back to top
+Property development
+An investee entity is an excluded entity if it undertakes or has undertaken property development, in Hong Kong or elsewhere, in or before the relevant basis period. Property development means construction or causing the construction of any building or part of a building, and includes acquisition of any land or building or part of a building for such construction and sale of any building or part of a building after such construction.
+Definition of “construction”
+“Construction” means the following:
+any building operation, or demolition and rebuilding operation, in, on, over or under any land for the purpose of erecting a building or part of a building; or
+any alteration or addition to, or partial demolition and rebuilding of, a building or part of a building,
+that requires the consent of the Building Authority under section 14(1) of the Buildings Ordinance (Cap. 123) or, if carried out in a territory outside Hong Kong, of a similar supervisory authority of that territory; but construction does not include works for the renovation or refurbishment, of a building or part of a building, with a view to maintaining the commercial value of the building or part.
+A property developer may need to acquire immovable properties (e.g. a piece of land or old buildings) before commencing the construction work, and may sell the developed properties after the completion of the development. However, such activities do not constitute “property trading” as it does not involve the acquiring and selling of the same immovable properties. A property developer’s holding of:
+acquired properties pending development, and
+developed properties after the completion of the development,
+forms part of the activities of property development, not the activities of property holding.
+“Business-use” exception
+An investee entity is not an excluded entity if it has not undertaken property development for at least a continuous period of 60 months before the relevant disposal and the immovable properties held by it are used by it to carry on its trade or business (including used for its letting business) and none of the immovable properties held by it is for sale.
+Whether an investee entity has undertaken property development is a question of fact and circumstances. For example, if an investee entity has taken steps causing construction of properties on a land (e.g. having lodged a building plan to the Buildings Department for commencement of building work on the land), the entity will be regarded as having undertaken property development even though no actual construction work was carried out. Conversely, if an investee entity has obtained an Occupation Permit issued by the Building Authority in respect of the properties developed and has not participated in any development project thereafter, the entity will generally be considered as having ceased undertaking property development since the date of issue of the Occupation Permit.
+Properties under development
+An investee entity holding properties under development is considered to be undertaking property development and is excluded from the Scheme.
+Mixed-use development
+The exclusion for property development applies on an entity basis. Hence, if an investee entity has held developed properties for both sale and non-sale purposes (e.g. residential flats for sale whilst shopping mall and car parking spaces for letting), the “business-use” exception will not be available even if the entity has not undertaken property development for a continuous period of 60 months.
+back to top
+Property holding
+Property holding covers an activity of holding immovable properties other than those which fall within the scope of property trading and property development.
+An investee entity is an excluded entity if it holds any immovable properties situated in Hong Kong or elsewhere, directly or indirectly, in the relevant basis period and the percentage of value of such immovable properties out of the entity’s total assets in that basis period exceeds 50% (hereafter referred to as “the 50% property holding threshold”). However, if certain immovable properties are used by the entity that directly holds the immovable properties for carrying on its own trade or business (including its business of letting immovable properties) but are not for sale, the value of such immovable properties is to be carved out from the numerator in determining the relevant percentage.
+Valuation of immovable properties
+Value of immovable properties held by the investee entity means the aggregate value of the following:
+immovable properties directly held by the investee entity; and
+any direct or indirect beneficial interest, or any direct or indirect voting rights, of the investee entity in another entity to the extent to which the value is attributable to immovable properties held by the other entity.
+For determination of the extent of direct or indirect beneficial interest or voting rights to calculate the value of immovable properties, reference can be made to the manner described in the section on “
+Meaning of closely related entity
+”.
+The value shown in the investee entity’s financial statements or valuation report will be a reference for determining whether the investee entity’s immoveable property holding exceeds the 50% property holding threshold. However, it is not mandatory for the investor entity to conduct valuation of the immovable properties concerned for the purposes of electing for the Scheme. The investor entity is allowed to choose either the end day of the basis period or the date of disposal of the relevant equity interests provided that the value of immovable properties at the chosen date is supported by evidence.
+Calculation of immovable property holding
+An investee entity’s immovable property holding is calculated in accordance with the following formula—
+A
+x 100%
+B
+where:
+A
+means the aggregate of the following—
+the value of any specified immovable property of the investee entity;
+the value of any direct or indirect beneficial interest, or any direct or indirect voting rights, of the investee entity in another entity to the extent to which the value is attributable to any specified immovable property of the other entity;
+B
+means the total value of the investee entity’s assets;
+Specified immovable property, in relation to an entity, means any immovable property, in Hong Kong or elsewhere, that is directly held by the entity, other than any immovable property used by the entity to carry on its trade or business.
+The value of a direct or indirect beneficial interest, or direct or indirect voting rights, of the investee entity in another entity that is attributable to any specified immovable property of the other entity is the value arrived at by multiplying—
+the percentage representing the extent of the direct or indirect beneficial interest, or direct or indirect voting rights, of the investee entity in the other entity; by
+the value of the specified immovable property.
+In applying the above formula for calculating the investee entity’s immovable property holding, each of the following items (each a “specified item’s value”)
+the value of any specified immovable property of the investee entity;
+the value of any direct or indirect beneficial interest, or any direct or indirect voting rights, of the investee entity;
+the total value of the investee entity’s assets,
+is to be calculated in accordance with the following formula—
+C+D
+2
+where:
+C
+means the specified item’s value as at the beginning of the investee entity’s relevant basis period;
+D
+means the specified item’s value as at—
+the end of the investee entity’s relevant basis period; or
+the time of the specified disposal.
+Business of letting immovable properties
+“Letting” is intended to refer generally to the granting of right to use a property for consideration, regardless of whether the right is granted in the form of lease or licence. Under section 2(1) of the IRO, “business” includes “the letting and sub-letting by any corporation to any person of any premises or portion thereof, and the sub-letting by any other person of any premises or portion of any premises held by him under a lease or tenancy other than from the Government”.
+An entity should be considered as using a property for letting business if the property is let to a connected person at an arm’s length rent.
+back to top
+Other Features of the Scheme
+Election procedure
+The Scheme applies to an investor entity if it elects in writing by providing the requisite information in its profits tax return for the year of assessment in the basis period of which the disposal occurs.
+back to top
+No adverse impact of non-election
+The Scheme is not intended to form a new set of comprehensive rules for determining the nature of a particular gain or loss. In other words, the Scheme only provides an alternative option for taxpayers, and the status quo will apply to the Onshore Disposal Gains not eligible for the Scheme, i.e. whether the Onshore Disposal Gains are capital or revenue in nature will continue to be determined based on the “badges of trade” analysis.
+back to top
+Duration of the Scheme
+There is no expiry date for the Scheme.
+back to top
+More Information on the Scheme
+The Amendment Ordinance

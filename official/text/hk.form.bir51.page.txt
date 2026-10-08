@@ -1,0 +1,255 @@
+Please take note of the following Profits Tax Return filing requirements:
+(1)
+ALL supporting documents (including financial statements and tax computations) must be submitted together with the Profits Tax Returns if corporations and partnership businesses have gross income during the basis period
+(2)
+ALL required supplementary forms, if appropriate, must be filed electronically
+Profits Tax Returns
+Notices to File Profits Tax Returns
+Supplementary Forms to Profits Tax Return
+Advice on Completion of Profits Tax Returns and Supplementary Forms to Profits Tax Return
+Frequently Asked Questions & Answers on Completion of Profits Tax Returns and Supplementary Forms to Profits Tax Return
+Note:
+Blank tax return forms are not available for download from the Web site for completion. If you want to obtain a duplicate Tax Return, please
+click here
+. The specimen return forms, Notes and Instructions and Pro forma computation that can be downloaded from this web page are saved in PDF format and can be viewed and printed by using the Adobe (R) Acrobat (R) Reader software.
+We are committed to ensuring that our website conforms to the World Wide Web Consortium (W3C) Web Content Accessibility Guidelines (WCAG) 2.0 Level AA requirements to the maximum extent possible. This page may, however, contain PDF documents in which not all Level AA accessibility features have been incorporated.
+Profits Tax Returns
+There are three series of Profits Tax Return forms. The specimen return forms available for download hereunder are for reference only. No attempt should be made to use a printed copy of the specimen form for filing purpose.
+Profits Tax Return - Corporations (BIR51)
+Profits Tax Return - Persons Other Than Corporations (BIR52)
+Profits Tax Return - In Respect Of Non-Resident Persons (BIR54)
+back to top
+Notices to File Profits Tax Returns
+The first phase of mandatory electronic filing of Profits Tax return has come into effect. Please refer to
+"Mandatory Electronic Filing of Profits Tax Returns"
+and paragraph 8 of
+"Block Extension Letter"
+for details.
+The specimen of the Paper Notices to File Profits Tax Returns that will be used from 1 April 2026 onwards are available for download hereunder for reference only.
+Notice to file Profits Tax Return - Corporations (IRC1952)
+Notice to file Profits Tax Return - Persons Other Than Corporations (IRC1953)
+back to top
+Supplementary Forms to Profits Tax Return
+A supplementary form is part of the Profits Tax Return. You must fill in the supplementary forms, if applicable, to report information on preferential regimes and tax incentives. You are required to download the supplementary forms, as the case may be, and fill in the forms electronically.
+All supplementary forms must be submitted electronically through the electronic filing of Profits Tax Return services under the Business Tax Portal (BTP) or Tax Representative Portal (TRP), irrespective of the filing mode of Profits Tax Return for any year of assessment from 2020/21 to 2026/27 (both inclusive). Taxpayers must export the electronically completed form to XML file and upload the XML file via the electronic filing of Profits Tax Return services under the BTP or TRP for submission. Please refer to
+“Uploading of Data Files for Supplementary Forms and Supporting Documents to Profits Tax Return”
+for further details.
+Since built-in PDF viewers of some browsers (e.g. Google Chrome) may not be able to perform the validation check embedded in the fillable PDF form properly, please download the fillable PDF form to local drive, open and complete the form using
+Adobe Acrobat Reader
+.
+Below are the supplementary forms to Profits Tax Returns for download:
+For year of assessment 2018/19 onwards
+1.
+Supplementary Form S1 - Person electing for two-tiered profits tax rates
+2.
+Supplementary Form S2 - Transfer pricing and international tax obligations
+3.
+Supplementary Form S3 - Expenditure on research & development
+4.
+Supplementary Form S4 - Expenditure on energy efficient building installation
+5.
+Supplementary Form S5 - Ship-owner
+6.
+Supplementary Form S6 - Professional reinsurer
+7.
+Supplementary Form S7 - Authorized captive insurer
+8.
+Supplementary Form S8 - Qualifying corporate treasury centre
+9.
+Supplementary Form S9 - Qualifying aircraft lessor
+10.
+Supplementary Form S10 - Qualifying aircraft leasing manager
+For year of assessment 2020/21 onwards
+11.
+Supplementary Form S11 - Qualifying ship lessor
+12.
+Supplementary Form S12 - Qualifying ship leasing manager
+13.
+Supplementary Form S13 - Specified insurer
+14.
+Supplementary Form S14 - Licensed insurance broker company
+15.
+Supplementary Form S15 - Persons deriving eligible carried interest
+For year of assessment 2022/23 onwards
+16.
+Supplementary Form S16 - Qualifying ship agent
+17.
+Supplementary Form S17 - Qualifying ship manager
+18.
+Supplementary Form S18 - Qualifying ship broker
+19.
+Supplementary Form S19 - Taxation on specified foreign-sourced income
+(Formerly named as IR1478)
+20.
+Supplementary Form S20 - Tax concessions for family-owned investment holding vehicle
+(Formerly named as IR1479)
+For year of assessment 2023/24 onwards
+21.
+Supplementary Form S21 - Tax certainty enhancement scheme for onshore gain on disposal of equity interests
+(Formerly named as IR1481)
+22.
+Supplementary Form S22 - Tax concessions for intellectual property income
+(Formerly named as IR1482)
+back to top
+Advice on Completion of Profits Tax Returns and Supplementary Forms to Profits Tax Return
+(1)
+Notes and Instructions:
+The relevant Notes and Instructions are provided as follows to assist taxpayers in completing the return and supplementary forms:-
+(a)
+Form BIR51
+(b)
+Form BIR52
+(c)
+Form BIR54
+(d)
+Supplementary Form S1 - Person electing for two-tiered profits tax rates
+(e)
+Supplementary Form S2 - Transfer pricing and international tax obligations
+(f)
+Supplementary Form S3 - Expenditure on research & development
+(g)
+Supplementary Form S4 - Expenditure on energy efficient building installation
+(h)
+Supplementary Form S5 - Ship-owner
+(i)
+Supplementary Form S6 - Professional reinsurer
+(j)
+Supplementary Form S7 - Authorized captive insurer
+(k)
+Supplementary Form S8 - Qualifying corporate treasury centre
+(l)
+Supplementary Form S9 - Qualifying aircraft lessor
+(m)
+Supplementary Form S10 - Qualifying aircraft leasing manager
+(n)
+Supplementary Form S11 - Qualifying ship lessor
+(o)
+Supplementary Form S12 - Qualifying ship leasing manager
+(p)
+Supplementary Form S13 - Specified insurer
+(q)
+Supplementary Form S14 - Licensed insurance broker company
+(r)
+Supplementary Form S15 - Persons deriving eligible carried interest
+(s)
+Supplementary Form S16 - Qualifying ship agent
+(t)
+Supplementary Form S17 - Qualifying ship manager
+(u)
+Supplementary Form S18 - Qualifying ship broker
+(v)
+Supplementary Form S19 - Taxation on specified foreign-sourced income
+(Formerly named as IR1478)
+(w)
+Supplementary Form S20 - Tax concessions for family-owned investment holding vehicle
+(Formerly named as IR1479)
+(x)
+Supplementary Form S21 - Tax certainty enhancement scheme for onshore gain on disposal of equity interests
+(Formerly named as IR1481)
+(y)
+Supplementary Form S22 - Tax concessions for intellectual property income
+(Formerly named as IR1482)
+Details of the documents and information that should be submitted together with the return and supplementary forms are specified therein.
+(2)
+All items in the Profits Tax Return must be completed fully and properly. Return should be filed on time, together with the following documents [collectively called "Supporting Documents" (You may refer to
+Format Specifications for Supporting Documents
+.)]:
+(a)
+For corporations, they are
+(i)
+a certified copy of Statement of Financial Position/Balance Sheet, Auditor's Report where required by Hong Kong or foreign Law or has otherwise been prepared and Statement of Comprehensive Income/Profit and Loss Account in respect of the basis period;
+(ii)
+a tax computation with supporting schedules showing how the amount of Assessable Profits (or Adjusted Loss) has been arrived at; and
+(iii)
+other documents and information as specified in the Notes and Instructions.
+(b)
+For partnership businesses, they are
+(i)
+a certified copy of Statement of Financial Position/Balance Sheet and Statement of Comprehensive Income/Profit and Loss Account in respect of the basis period;
+(ii)
+a tax computation with supporting schedules showing how the amount of Assessable Profits (or Adjusted Loss) has been arrived at; and
+(iii)
+other documents and information as specified in the Notes and Instructions.
+(3)
+If corporations and partnership businesses have any gross income during the basis period, they are required to furnish their returns together with
+all the supporting documents
+except in those cases mentioned in paragraph (4) below.
+(4)
+For corporations, audited financial statements should be submitted with the returns in all cases except:-
+(a)
+dormant companies (within the terms of the Companies Ordinance (Cap. 622));
+(b)
+companies incorporated in a jurisdiction whose laws do not require financial statements to be audited and an auditor’s report has not been prepared; or
+(c)
+Hong Kong branch of a foreign company provided that the following information is supplied together with the return:-
+(i)
+the place of incorporation of the foreign company,
+(ii)
+whether the laws of that country require a statutory audit of the world-wide financial statements of the company,
+(iii)
+whether that audit has been conducted, and
+(iv)
+a brief summary of the financial and accounting records maintained by the Hong Kong branch.
+(5)
+Pro forma Profits Tax Computation
+A
+"Pro forma Profits Tax Computation" (IR957)
+, which is intended to assist the owner of partnership businesses who has not appointed a tax representative to submit a tax computation showing how the amount of Assessable Profits/(Loss) has been arrived at can be obtained through the Fax-A-Form service (Telephone No. 2598 6001) or from the
+Central Enquiry Counter
+.
+(6)
+Election for Personal Assessment
+If any partner of a partnership decides that his/her share of profits/(loss) be dealt with under
+Personal Assessment
+, he/she may state his/her intention in the Profits Tax Return. However, election must be made in his/her own Tax Return - Individuals (BIR60).
+(7)
+Hiring of a Practising Accountant to Complete the Return Form
+The Inland Revenue Department
+does not
+require a person to engage a practising accountant in completing the Return Form. If a person has any difficulty in completing it, he/she should first prepare the financial statements and tax computations, and should be able to explain how they have been constructed. He/she should also complete the return to the best of his/her ability. Taxpayers may also call upon the officers at the
+Central Enquiry Counter
+on G/F of Inland Revenue Centre who will explain what is required, or direct him/her to see the Assessor handling his/her file. No charges are made for any services rendered by officers of the Department.
+(8)
+Engagement of Service Providers to Furnish Returns
+With effect from 1 April 2022, a taxpayer may engage a service provider to furnish Profits Tax Return for or on behalf of the taxpayer, irrespective of the mode in which a return is furnished (that is, paper or electronic mode).
+In furnishing a tax return, the service provider must obtain a written confirmation,
+“Confirmation for Engagement of Service Provider to Furnish Return” (IR1476)
+, from the taxpayer stating that the information contained in the return is correct and complete to the best of the taxpayer’s knowledge and belief. The duly signed Form IR1476 must be furnished together with the paper return. For return filed through electronic or semi-electronic mode, uploading of Form IR1476 is not required and you must keep the duly signed Form IR1476 for submission upon request.
+Despite the engagement of a service provider, a taxpayer is not relieved from his/her obligation of furnishing the tax return. There are provisions for penalties against service providers in relation to furnishing of returns.
+Frequently Asked Questions & Answers on Furnishing of Profits Tax Returns by Service Providers
+(9)
+Different modes of return filing and the corresponding data formats of supplementary forms and supporting documents are summarized in the table below:
+Filing Mode
+Profits Tax Return
+(BIR51 or BIR52)
+Supplementary Forms
+Supporting Documents
+Paper
+4-page Paper
+XML
+1
+Paper
+Electronic
+Electronic
+XML
+2
+iXBRL
+Semi-electronic
+1-page Paper
+3
+XML
+2
+iXBRL
+1
+A paper Control List for the supplementary forms e-filed (IR1477) generated by the electronic filing of Profits Tax Return services under the BTP or TRP is required to be printed for signature and submission together with the Profits Tax Return in paper form. Please refer to
+“Uploading of Data Files for Supplementary Forms and Supporting Documents to Profits Tax Return”
+for further details.
+2
+It is not required to print the Control List under the semi-electronic or electronic filing mode as these modes do not involve submitting paper documents except the paper simplified return to be furnished under the semi-electronic filing mode.
+3
+A simplified Profits Tax Return (BIR51(ie)(ic) / BIR52(ie)(ic)) generated by the electronic filing of Profits Tax Return services under the BTP or TRP is required to be printed for signature and submission in paper form. Please refer to
+“Submission of Profits Tax Return”
+for further details.
+Electronic Filing of Profits Tax Return
+iXBRL Filing
+Frequently Asked Questions & Answers on Completion of Profits Tax Returns and Supplementary Forms

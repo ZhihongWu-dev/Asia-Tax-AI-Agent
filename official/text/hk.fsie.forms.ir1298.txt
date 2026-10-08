@@ -1,0 +1,230 @@
+Application for Advance Ruling Information Sheet
+Application for advance ruling 
+Advance ruling system is available to taxpayers who want a ruling which is legally binding on the Commissioner. 
+The Commissioner has issued a Departmental Interpretation and Practice Notes No. 31 for information and guidance 
+of taxpayers.  This note can be downloaded from the website of the Inland Revenue Department (“the IRD”) 
+(https://www.ird.gov.hk) (“the IRD Website”). 
+The IRD will continue to give advice on more general matters through our enquiry areas, Departmental Interpretation 
+& Practice Notes, etc. Rulings are binding only in respect of the taxpayer(s) identified in them and cannot be taken as 
+a precedent for other taxpayers. 
+Who can apply for a ruling? 
+A person can apply for a ruling on the way in which a provision of the Inland Revenue Ordinance (Cap. 112) (“IRO”) 
+applies to that person in relation to a particular arrangement.  Schedule 10 to the IRO provides that the Commissioner 
+may make a ruling on a provision thereof. 
+However, the Commissioner cannot make a ruling on any of these matters: 
+—
+the Commissioner’s right or obligation to exercise penal or investigative powers, or prosecute or recover debt 
+from any person; and 
+—
+the law concerned with the administration of the tax system. 
+An “arrangement” means any contract, agreement, plan or understanding (whether enforceable or unenforceable), 
+including all steps and transactions by which it is carried into effect. 
+Note: 
+The Commissioner may make a ruling on how a provision of the IRO applies to the arrangement described in 
+an application whether or not reference was made to that provision in the application. 
+What is this information sheet for? 
+This information sheet will help you complete your application for a ruling. If you want to obtain a ruling, you must 
+fill out the form and send it to: 
+Deputy Commissioner of Inland Revenue (Technical) 
+15/F, Inland Revenue Centre, 5 Concorde Road 
+Kai Tak, Kowloon, Hong Kong 
+Introduction 
+Your ability to complete all aspects of the form will depend upon your familiarity with the relevant law and the 
+complexity of the issues involved. If you are unable to: 
+(a)
+state the provision of the IRO in respect of which the ruling is sought;
+(b)
+state the propositions of law (if any) in respect of which the ruling is sought; and
+(c)
+provide a draft ruling to the Commissioner,
+you can apply to the Commissioner to waive any or all of these requirements.
+Statements or reasons and draft answers to the issues and questions identified are useful because they ensure that the 
+Commissioner fully understands what ruling you are seeking and why you are seeking it.  A full understanding of the 
+requirements of and the reasons for the application can avoid unnecessary delays. 
+The form is divided into 6 parts 
+
+Details of the applicant and representative
+
+Commissioner’s power to rule
+
+Disclosure requirements
+
+General questions
+
+Spontaneous exchange of information on tax rulings
+
+Consultation, application fee, declarations and checklist
+Applicant and representative details 
+The front page of the form requests the applicant and representative (where the application is made on behalf of an 
+applicant(s)) to provide certain details. 
+Representative details 
+Where a representative is making an application on behalf of an applicant(s), the representative must supply his details 
+and those of the applicant(s).  The ruling will be sent to the representative. 
+Commissioner’s power to rule 
+The questions in this part are designed to determine whether the Commissioner has the power to rule on the arrangement 
+in question. 
+1.
+The Commissioner may not rule on an arrangement which is subject to an objection or appeal either by the person
+who applied for the ruling or any other person.
+2.
+The Commissioner may not rule on a tax that is due and payable at the date of application for a ruling.
+3.
+The Commissioner may not rule if a ruling already exists on how a provision of the IRO applies to the applicant(s)
+and the arrangement specified in the application.
+4.
+The Commissioner may not rule if the relevant return has been or is due to be lodged.
+5.
+The Commissioner may not rule if the Commissioner is undertaking an audit on how a provision of the IRO
+applies to the applicant(s) or an arrangement similar to the arrangement specified in the application.
+IR1298 (12/2023)
+
+ 
+Disclosure requirements 
+The items in this part deal with the disclosure requirements.  The law requires this information before the 
+Commissioner will issue a ruling. Provide the information on separate sheets which should be attached to the form 
+together with any relevant documents. 
+1. 
+You need to state clearly what question(s) you want the Commissioner to answer.  
+2. 
+You need to identify the issue(s) which you need to resolve. 
+3. 
+You must set out a full description of the facts and the arrangement in question. Where appropriate, you must 
+provide the additional information referred to in the part “Information and documents to be provided with a 
+ruling request” in the Departmental Interpretation and Practice Notes No. 31.  You must disclose all relevant 
+facts and documents relating to the arrangement for which the ruling is sought, for example, the fact that a party 
+to the arrangement is an associated person may be a relevant fact.  Accordingly, appropriate disclosure should 
+be made. 
+4. 
+You must state the provision(s) of the IRO in respect of which the ruling is sought. 
+5. 
+You are required to state the propositions of law (including case law) which are relevant to the issues raised in 
+your application. 
+ 
+To the extent that it is relevant and material to your application, you must set out any legal reasons and arguments 
+supporting your preferred interpretation.  You should also indicate any legal arguments you are aware of that 
+may be contrary to your interpretation. 
+ 
+Where relevant to do so, you should refer to the wording of the relevant taxation law and provide reasonable 
+authoritative support.  If you have obtained written advice from a lawyer or an accountant, you should attach 
+copies of that advice or correspondence to the application. 
+6. 
+You must provide a draft ruling. 
+7. 
+If you cannot provide all the information required above, you can ask the Commissioner to waive all or any of 
+these requirements.  You need to explain why you cannot provide the information requested. 
+Notes: (a) The Commissioner may at any time request further relevant information. 
+ 
+(b) If the application only relates to the economic substance requirement of the Foreign-sourced Income 
+Exemption Regime specified in section 15K of the IRO, you are not required to provide the information 
+requested in items 1 to 6.  If your application covers more than 50 entities, it must be furnished together 
+with a duly completed “Annex to Data Form (Group Application)”, which can be downloaded from the IRD 
+Website. 
+ 
+General questions 
+This part deals with general questions which will enable the Commissioner to quickly determine whether the 
+application satisfies the requirements of the legislation. 
+1. 
+What is the year(s) of assessment and other period(s) to which the application relates? 
+2. 
+Has an application been lodged in respect of the arrangement for other year(s) of assessment and other period(s)? 
+3. 
+If the application concerns more than one taxpayer, have you obtained the written consent of all the taxpayers? 
+ 
+Spontaneous exchange of information on tax rulings  
+Under the transparency framework of OECD’s Action 5 2015 Final Report, rulings including those relating to 
+preferential regimes, permanent establishment and conduit arrangement are required to be spontaneously exchanged 
+with the relevant jurisdictions.  Generally, exchange of information on the relevant rulings needs to take place with:  
+(a) 
+the jurisdictions of residence of all related parties with which the applicant enters into a transaction for which 
+a ruling is granted or which gives rise to income from related parties benefiting from a preferential treatment 
+(this rule also applies in a permanent establishment context); and 
+(b) 
+the residence jurisdiction of the ultimate parent company and the immediate parent company. 
+ 
+The related parties threshold has been set at 25%.  Two parties would be considered related if the first person has a 
+25% or greater investment in the second person or there is a third person that holds a 25% or greater investment in 
+both. 
+ 
+Rulings covered 
+ 
+With which jurisdiction does information need to be exchanged 
+1. 
+Preferential regime 
+(a) 
+The jurisdictions of residence of all related parties (the 25% threshold would 
+apply), with which the taxpayer enters into a transaction for which a preferential 
+treatment is granted or which gives rise to income from related parties 
+benefiting from a preferential treatment (this rule also applies in a permanent 
+establishment context); and 
+ 
+ 
+(b) 
+The residence jurisdiction of (i) the ultimate parent company and (ii) the 
+immediate parent company 
+2. 
+Permanent 
+establishment 
+(a) 
+The residence jurisdiction of the head office, or the jurisdiction of the 
+permanent establishment, as the case may be; and 
+ 
+ 
+(b) 
+The residence jurisdiction of (i) the ultimate parent company and (ii) the 
+immediate parent company 
+3. 
+Related party 
+conduit 
+(a) 
+The jurisdiction of residence of any related party making payments to the 
+conduit (directly or indirectly); 
+ 
+ 
+(b) 
+The jurisdiction of residence of the ultimate beneficial owner (which in most 
+cases will be the ultimate parent company) of the payments made to the conduit; 
+and 
+ 
+ 
+(c) 
+To the extent not already covered by (b), the residence jurisdiction of (i) the 
+ultimate parent company and (ii) the immediate parent company 
+
+ 
+Consultation 
+Before the Commissioner makes a ruling, the Commissioner may give the applicant(s) a reasonable opportunity to 
+consult if the content of his proposed ruling differs from that requested by the applicant(s). 
+ 
+Application fee 
+Have you included a payment of the application fee with your application?  Rulings are charged on a full cost recovery 
+basis. 
+ 
+Declarations and checklist 
+Have you signed and dated the application declaring the truth and accuracy of the information provided? 
+The checklist is to help you ensure the ruling application is correctly completed in a form approved by the 
+Commissioner.  It is also particularly useful for checking whether all attachments that should accompany the ruling 
+application are attached. 
+ 
+Conclusion 
+You may withdraw your application for a ruling at any time before a ruling is made.  This may be done by giving 
+notice in writing to the Commissioner.  Withdrawal of an application will not affect your liability for any fees incurred 
+in processing the application up to the date of withdrawal. 
+ 
+If you require further assistance in the preparation of your ruling application, please contact: 
+ 
+Deputy Commissioner of Inland Revenue (Technical) 
+ 
+15/F, Inland Revenue Centre, 5 Concorde Road 
+ 
+Kai Tak, Kowloon, Hong Kong 
+ 
+Personal Information Collection Statement 
+The provision of personal data required by this form and during the processing of your application is voluntary.  
+However, if you do not provide sufficient information, the Department may not be able to process your application.  
+The Department will use the information provided by you for the purposes of the Ordinances administered by it 
+and may disclose/transfer any or all of such information to any other parties provided that the disclosure/transfer 
+is authorized or permitted by law.  Except where there is an exemption provided under the Personal Data (Privacy) 
+Ordinance, you have the right to request access to and correction of your personal data.  You should send such 
+request in writing to the Assessor at GPO Box 132, Hong Kong and quote your file number in this Department. 
+ 
+ 

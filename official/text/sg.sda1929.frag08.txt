@@ -1,0 +1,189 @@
+PART 8A
+APPLICATION OF ACT TO ELECTRONIC INSTRUMENTS
+Interpretation of this Part
+59.
+—(1) In this Part —
+“electronic” and “electronic record” have the meanings given by section 2(1) of the Electronic Transactions Act 2010;
+Example
+Anything sent by e‑mail, SMS or any Internet‑based messaging service is an electronic record.
+“electronic instrument” means —
+(
+a
+)
+an electronic record, or a combination of an electronic record and a physical document, mentioned in section 60A(1)(
+a
+) or (
+b
+); or
+(
+b
+)
+an electronic record mentioned in section 60A(2);
+“electronic signature” means any electronic method used to identify a person and to indicate the person’s intention in respect of the information contained in an electronic record.
+[37/2018]
+(2) In this Part, a stamp certificate or certificate of adjudication is duly issued for an electronic instrument if it is issued by the Commissioner for the electronic instrument —
+(
+a
+)
+using the E‑Stamping system in accordance with the provisions of this Act; or
+(
+b
+)
+in such other manner as the Commissioner may determine.
+[37/2018]
+Application
+60.
+This Part applies to electronic instruments that are executed, in accordance with section 60C, on or after 4 October 2018.
+[37/2018]
+Electronic instruments treated as instruments
+60A.
+—(1) For the purposes of this Act, a reference to an instrument or a description of instrument that effects a transaction includes —
+(
+a
+)
+an electronic record that effects, or an electronic record and a physical document that together effect, the same transaction, whether directly or indirectly; and
+(
+b
+)
+if the same transaction is effected whether directly or indirectly by a verbal communication and an electronic record, the electronic record, but only if the transaction is concluded by means of the electronic record.
+[37/2018]
+(2) For the purposes of this Act, a reference to an instrument or a description of instrument that is evidence of, or that signifies any matter includes, in a case where the transaction concerned is effected by electronic means and there is no physical document that evidences or signifies such matter, any electronic record that evidences or signifies the same matter.
+[37/2018]
+(3) To avoid doubt —
+(
+a
+)
+an instrument mentioned in subsection (1) includes an instrument between sub‑funds mentioned in section 60I(1) and an instrument with a sub‑fund mentioned in section 60J(1); and
+(
+b
+)
+an instrument mentioned in subsection (2) includes an instrument between sub‑funds mentioned in section 60I(2) and an instrument with a sub‑fund mentioned in section 60J(2).
+[28/2019]
+Application of Act to electronic instruments
+60B.
+This Act applies in relation to an electronic instrument subject to the modifications set out in sections 60C to 60F and such other modifications as may be prescribed by rules under section 60H(2).
+[37/2018]
+Execution of electronic instruments
+60C.
+—(1) An electronic instrument that is an electronic record is treated as executed or signed when an electronic signature is applied to it.
+[37/2018]
+(2) An electronic instrument that comprises an electronic record and a physical document is treated as executed or signed —
+(
+a
+)
+if the transaction is concluded by means of an electronic record, when an electronic signature is applied to the electronic record; or
+(
+b
+)
+if the transaction is concluded by means of a physical document, when the physical document is signed.
+[37/2018]
+(3) In a case in subsection (1) or (2)(
+a
+), the time when and the place where the signing party does an act that results in the application of the electronic signature to the electronic record are treated respectively as the time and place of the execution or signing of the electronic instrument.
+Examples
+1.
+A
+sends an e‑mail from a place in Malaysia offering to sell property to
+B
+.
+B
+sends an e‑mail from a place in Singapore accepting
+A
+’s offer. If a contract is concluded by means of the second e‑mail, the electronic instrument comprising the 2 e‑mails is treated as executed in Singapore, and at the time
+B
+sends the second e‑mail.
+2.
+A
+makes an offer to sell property on an Internet website.
+B
+, using a computer in a place in Singapore, transmits to the computer hosting the website
+B
+’s acceptance of
+A
+’s offer. If a contract is thereby concluded, the electronic instrument comprising the electronic records of the offer and acceptance is treated as executed in Singapore and at the time
+B
+transmits
+B
+’s acceptance.
+[37/2018]
+(4) In a case in subsection (2)(
+b
+), the time when and the place where the signing party signs the physical document are treated respectively as the time and place of the execution or signing of the electronic instrument.
+[37/2018]
+(5) The reference in subsection (3) to the signing party includes a person authorised by the signing party to apply the electronic signature on the signing party’s behalf, but excludes a person that merely provides any facility for the application of the electronic signature, such as an online intermediary.
+[37/2018]
+Meaning of “duly stamped” and denoting of duties for electronic instruments
+60D.
+—(1) An electronic instrument is duly stamped if a stamp certificate is duly issued for it.
+[37/2018]
+(2) All duties chargeable on an electronic instrument are paid and denoted by the due issue of a stamp certificate for it.
+[37/2018]
+No double duty
+60E.
+If there is more than one copy of an electronic instrument and any one of them has been duly stamped, then the other copy or copies is or are exempt from duty.
+[37/2018]
+Other modifications of Act for electronic instruments
+60F.
+—(1) A reference in this Act to the attachment or impression of a stamp certificate or certificate of adjudication to or on an instrument is, in the case of an electronic instrument, a reference to the due issue of such a certificate for the instrument.
+[37/2018]
+(2) A reference in this Act to a stamp certificate or certificate of adjudication that is attached to an instrument is, in the case of an electronic instrument, a reference to such a certificate that is duly issued for the instrument.
+[37/2018]
+(3) In this Act, an electronic instrument that is executed outside Singapore is received in Singapore if —
+(
+a
+)
+it is retrieved or accessed by a person in Singapore;
+(
+b
+)
+an electronic copy of it is stored on a device (including a computer) and brought into Singapore; or
+(
+c
+)
+an electronic copy of it is stored on a computer in Singapore.
+Examples
+1.
+A
+and
+B
+effect outside Singapore a transaction by means of electronic records. The electronic records are saved on a server in a country outside Singapore.
+B
+downloads a copy of the electronic record in Singapore. The electronic instrument comprising those electronic records, having been retrieved by a person in Singapore, is received in Singapore.
+2.
+A
+and
+B
+effect outside Singapore a transaction by means of electronic records. The electronic records are stored on a server in a country outside Singapore.
+B
+uses an electronic device to view a copy of those electronic records in Singapore. The electronic instrument comprising those electronic records, having been accessed by a person in Singapore, is received in Singapore.
+3.
+A
+and
+B
+effect outside Singapore a transaction by means of electronic records. The electronic records are stored on a server in Singapore. The electronic instrument comprising those electronic records, having been stored on a computer in Singapore, is received in Singapore.
+[37/2018]
+(4) A reference in section 25(2) and (3) to the time a lease is presented for stamping is, if the lease is an electronic instrument, a reference to the time it is sent to the Commissioner for adjudication in accordance with section 37.
+[37/2018]
+(5) A reference in section 38(1) and (4) to the attachment of a certificate of adjudication to an instrument is to be disregarded in the case of an electronic instrument that is an electronic record.
+[37/2018]
+(6) Sections 51, 52(3) and 53 do not apply to an electronic instrument.
+[37/2018]
+Exempt electronic records and transactions
+60G.
+Sections 60B to 60F do not apply to any electronic record, or to any transaction effected (whether wholly or partly) by electronic means, that is prescribed by rules made under section 60H(1) as an exempt record or exempt transaction.
+[37/2018]
+Rules
+60H.
+—(1) The Minister may make rules —
+(
+a
+)
+to prescribe anything that is authorised to be prescribed under this Part; and
+(
+b
+)
+to provide that any electronic record of a particular description is an electronic record that is evidence of or that signifies a particular transaction or matter for the purposes of section 60A(2).
+[37/2018]
+(2) [
+Omitted as spent
+]

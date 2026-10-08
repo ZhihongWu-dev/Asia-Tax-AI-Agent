@@ -1,0 +1,115 @@
+PART 5
+ADJUDICATION, OBJECTION AND APPEAL
+[41/2020]
+Mode of adjudication as to proper stamp duty
+37.
+—(1) Where —
+(
+a
+)
+any instrument (whether executed or not and whether previously stamped or not) is brought to the Commissioner; or
+(
+b
+)
+a copy of any instrument (whether executed or not and whether previously stamped or not) is sent to the Commissioner using the E‑Stamping system or other means approved by the Commissioner,
+and the person bringing or sending it applies to the Commissioner for adjudication on whether the instrument is chargeable with duty and (if so) the amount chargeable, the Commissioner must adjudicate and assess the duty with which, in the Commissioner’s judgment, the instrument is chargeable.
+[37/2018]
+(2) Where the person seeks the Commissioner’s opinion under subsection (1) as to the amount of duty chargeable, the person must in making the application for adjudication set out the value upon which in the person’s opinion duty is chargeable.
+(3) The person seeking the Commissioner’s opinion under subsection (1) as to the amount of duty chargeable must pay the relevant adjudication fee prescribed in the Fourth Schedule at such time as the Commissioner may determine, and such fee remains payable even if the person subsequently withdraws the application for adjudication.
+(4) For the purpose of the adjudication under subsection (1), the Commissioner may require any of the following:
+(
+a
+)
+an abstract of the instrument;
+(
+b
+)
+an affidavit setting out all the facts and circumstances affecting the liability of the instrument to duty or the amount of such duty;
+(
+c
+)
+any other evidence which the Commissioner considers necessary for the adjudication or determination of duty.
+(5) The Commissioner may refuse to proceed upon any application under subsection (1) until such abstract and evidence mentioned in subsection (4) have been furnished accordingly.
+(6) Despite any other provisions of this section, the Commissioner may himself or herself require in the case of a conveyance, lease, assignment or transfer of immovable property a certificate of the value of such property from the Chief Valuer.
+(7) The request for a certificate from the Chief Valuer must be made to the Chief Valuer directly by the Commissioner but the Commissioner is entitled (in addition to the fee payable under subsection (1)) to charge the person seeking the adjudication of such property or regarding whose property the Commissioner requires a certificate, a fee as specified in the Fifth Schedule.
+(8) Evidence furnished under this section must not be used against any person in any civil proceedings, except in an inquiry as to the duty with which the instrument to which it relates is chargeable.
+Certificate of adjudication by Commissioner
+38.
+—(1) When an instrument brought to, or a copy of which sent to, the Commissioner under section 37 is in the Commissioner’s opinion one of a description chargeable with duty, and —
+(
+a
+)
+the Commissioner determines that the instrument is already fully stamped; or
+(
+b
+)
+the duty assessed by the Commissioner under section 37, or such a sum as, with the duty already paid in respect of the instrument, is equal to the duty so assessed, has been paid,
+the Commissioner must certify by issuing and attaching to the instrument a certificate of adjudication, stating that the full duty, with which it is chargeable, has been paid.
+[37/2018]
+(2) Subject to subsection (3), when the instrument is in the Commissioner’s opinion not chargeable with duty or with full duty, the Commissioner must certify in the manner mentioned in subsection (1) that the instrument is not so chargeable.
+[28/2010]
+(3) Where the instrument is one mentioned in section 15A(1), the Commissioner may base his or her opinion on a statutory declaration in such form as he or she may direct, made by or on behalf of the target company, the acquiring company or the acquiring subsidiary, or all of them, mentioned in that provision, and such further evidence as the Commissioner considers necessary.
+[28/2010]
+(4) Any instrument in respect of and to which a certificate of adjudication has been issued and attached under this section is deemed to be duly stamped or not chargeable with duty (as the case may be); and, if chargeable with duty, is receivable in evidence or otherwise and may be acted upon and registered as if that instrument had been originally duly stamped.
+(5) Nothing in this section is deemed to require the Commissioner to certify that the full duty with which an instrument is chargeable has been paid —
+(
+a
+)
+unless any penalty chargeable in respect of the instrument under this Act has been paid; or
+(
+b
+)
+if the instrument cannot by law be stamped.
+Exception to sections 37 and 38
+39.
+Nothing in sections 37 and 38 extends to any instrument chargeable with ad valorem duty and made as a security for money or stock without limit.
+Notice of objection
+39A.
+—(1) Any person who is dissatisfied with an assessment of the Commissioner under any provision of this Act may, by written notice (called in this Act a notice of objection), object to the assessment and apply to the Commissioner to review the assessment.
+(2) Every notice of objection must state the grounds of objection to the Commissioner’s assessment and must be made within 30 days after the date of the assessment or such further period as the Commissioner may allow in any particular case.
+(3) The person giving a notice of objection must furnish further particulars and information in relation to the grounds of the objection if required to do so by the Commissioner in writing.
+(4) The Commissioner must, on receipt of a notice of objection and such further particulars and information as the Commissioner may require under subsection (3), review the assessment.
+(5) As soon as practicable after the objection is determined, the Commissioner must inform the person concerned in writing of the Commissioner’s decision on the objection and the reasons for his or her decision.
+(6) Where, on review, it appears to the Commissioner that the amount of duty originally assessed is excessive, the Commissioner may cancel the original assessment and make such other assessment in substitution of the original assessment as he or she considers proper.
+(7) The Commissioner must serve a notice of amended assessment on the person concerned of the assessment substituted in accordance with subsection (6).
+(8) The making of an objection does not relieve the person of liability to pay the duty or surcharge on the duty (if applicable) as required by this Act.
+[41/2020]
+(9) Any reference in this Act to an assessment includes a substituted assessment under subsection (6) and an adjustment under section 33A.
+[41/2020]
+Appeal to General Division of High Court
+40.
+—(1) Any person who is dissatisfied with the Commissioner’s decision under section 39A(5) on a notice of objection may —
+(
+a
+)
+within 30 days after the person is informed of that decision and upon payment of duty, and surcharge (if applicable), in conformity with that decision, appeal against the decision to the General Division of the High Court; and
+(
+b
+)
+for that purpose, require the Commissioner to state and sign a case, setting out the question upon which the Commissioner’s opinion was required, and the decision made by the Commissioner.
+[1/2013; 40/2019;41/2020]
+(2) Any appeal under subsection (1) is not effective unless written notice of the appeal is served on the Commissioner within 30 days of the person being informed of the Commissioner’s decision under section 39A(5) on the notice of objection.
+[1/2013]
+(3) The Commissioner must thereupon state and sign a case and deliver it to the person by whom it is required, and the case may, within 7 days thereafter, be set down by that person for hearing.
+(4) Upon hearing the case, the General Division of the High Court is to determine the question submitted and —
+(
+a
+)
+in the case of a decision on a notice of objection to an adjustment under section 33A — if the General Division of the High Court is of the opinion that the purpose or effect of the arrangement in question is that specified in section 33A(1), and section 33A(5) does not apply, the General Division of the High Court is to either confirm or vary the adjustment; and
+(
+b
+)
+in any other case — if the General Division of the High Court is of the opinion that the instrument in question is chargeable with duty, the General Division of the High Court is to assess the duty with which it is chargeable.
+[40/2019; 41/2020]
+(5) If it is decided by the General Division of the High Court that the Commissioner’s decision is erroneous, any excess of duty which may have been paid in conformity with the erroneous decision, together with any interest, surcharge, fine or penalty which may have been paid in consequence of the erroneous decision, is to be ordered by the General Division of the High Court to be repaid to the appellant, with or without costs as the General Division of the High Court may determine.
+[40/2019; 41/2020]
+(6) If the Commissioner’s decision is confirmed, the General Division of the High Court may make an order for payment to the Commissioner of the costs incurred by the Commissioner in relation to the appeal.
+[40/2019]
+(7) In this section —
+“arrangement” has the meaning given by section 33A(3);
+“surcharge” means a surcharge imposed under section 33B.
+[41/2020]
+Stamping after adjudication
+41.
+When the Commissioner’s opinion with respect to the amount of duty with which an instrument is chargeable has been obtained, the instrument must be stamped in accordance with the assessment of the Commissioner within 14 days after notice of the assessment, and in the case of an application to the General Division of the High Court under section 40 within 14 days after the issue of the order of the General Division of the High Court, or within such further period, in either case, as the Commissioner when giving notice of assessment or the General Division of the High Court when making the order, may specify.
+[40/2019]

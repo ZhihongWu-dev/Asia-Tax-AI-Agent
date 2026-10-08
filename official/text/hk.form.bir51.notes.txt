@@ -1,0 +1,873 @@
+本附註及說明的中文版樣本可經表格傳真服務（電話號碼 2598 6001）索取或在稅務局網頁（網址www.ird.gov.hk）下載。
+A specimen of the Chinese version of this Notes and Instructions may be obtained through the Fax-A-Form service (Telephone No. 2598 6001) or 
+	
+downloaded from the Department's web site (www.ird.gov.hk).
+NOTES AND INSTRUCTIONS —— FORM BIR51
+A.	
+PERSONAL INFORMATION COLLECTION STATEMENT
+It is obligatory for you to supply the personal data as required by the return and any required supplementary forms. Breach of the statutory 
+requirement may render you liable to penalty or other actions as provided under the Ordinances administered by the Department.  Moreover, 
+if you fail to supply the required information, your application/request/notification will not be accepted for processing.  The Department will 
+use the information provided by you for the purposes of the Ordinances administered by it and may disclose/transfer any or all of such 
+information to any other parties provided that the disclosure/transfer is authorized or permitted by law.  Except where there is an exemption 
+provided under the Personal Data (Privacy) Ordinance, you have the right to request access to and correction of your personal data.  You 
+should send such request in writing to the Assessor at GPO Box 132, Hong Kong and quote your file number in this Department.
+B.	
+INTRODUCTION
+(1)	
+If after reading these notes you still have difficulty in completing the return, or if you require further information, please:-
+ 
+l	 visit the Department’s web site (www.ird.gov.hk); or	
+ 
+l	 write to or telephone the Assessor, Profits Tax, quoting your File Number. 
+(2)	
+The term “relevant year” refers to the particular year of assessment printed on page 1 of the return for final assessment.
+(3)	
+If your financial statements are prepared in accordance with the International Financial Reporting Standards or accounting standards as 
+defined by section 357(1) of the Companies Ordinance (Cap. 622) (i.e. the accounting standards issued by the Hong Kong Institute of 
+Certified Public Accountants including the Hong Kong Financial Reporting Standards, the Hong Kong Financial Reporting Standard for 
+Private Entities and the Small and Medium-sized Entity Financial Reporting Standard), you must use such financial statements for 
+determining your Profits Tax liability.
+(4)	
+The Assessable Profits shown in Part 1 of the return will be used to determine the amount of your Profits Tax liability for the relevant 
+year and the amount of the Provisional Profits Tax payable for the year of assessment following the relevant year. Any Provisional 
+Profits Tax charged for the relevant year will be allowed against the Profits Tax liability for that year.
+(5)	
+All amounts must be shown in HK dollars (excluding cents).  If your financial statements are prepared in a foreign currency, you should 
+convert the amounts into HK dollars before filling in the items.  In the tax computation, you should state the conversion rate used.
+C.	
+NOTICE FOR COMPLETION OF RETURN UNDER SECTION 51(1) OF THE INLAND REVENUE ORDINANCE
+NOTE C1	
+ASSESSABLE PROFITS (OR ADJUSTED LOSS)
+The Assessable Profits (or Adjusted Loss) are the net profits (or loss) [other than profits (or loss) arising from the sale of capital assets] for the 
+basis period, arising in or derived from Hong Kong, calculated in accordance with the provisions of the Inland Revenue Ordinance (Cap. 112) (“the 
+IRO“), from any trade, profession or business carried on in Hong Kong.  Any claim that profits are offshore (non-taxable) must be accompanied by a 
+statement setting out the reasons for the claim.  These reasons should be capable of being substantiated by evidence, if requested.
+NOTE C2	
+BASIS PERIOD
+The basis period is either:-
+(1)	
+the year ended 31 March during the relevant year; or
+(2)	
+where the annual accounts are made up to any day other than 31 March, the year ended on that day in the relevant year; or
+(3)	
+where the accounts are made up for each lunar year, the lunar year ended in the relevant year; or
+(4)	
+where a corporation commenced or ceased to carry on a business or changed its accounting date, the special period prescribed by 
+section 18C, 18D or 18E of the IRO:-
+(a)	
+for commencement cases, if accounts for this period have not been prepared, the profits (or loss) to be returned may be 
+calculated by apportioning the profits (or loss) shown by the accounts which cover the period; or
+(b)	
+for cessation / transfer of business cases, special rules apply:-
+(i)	
+where the business does not cease but, in whole or in part, is transferred to or carried on by another person; or
+(ii)	
+to a business which commenced before 1 April 1974.
+NOTE C3	
+ELECTRONIC FILING OF SUPPLEMENTARY FORMS TO PROFITS TAX RETURN (S1 to S22)
+Starting from 1 April 2023, all required supplementary forms must be submitted electronically.  If you are required to file any aforesaid form, 
+you must download the relevant form and fill in the form electronically.  After completion, you must export the filled form to XML file and 
+upload the XML file via the electronic filing of Profits Tax Return services under GovHK for submission.  If your Profits Tax Return is to be 
+submitted in paper form, you MUST print and sign a paper Control List (containing details of XML files uploaded and QR code) generated by 
+the electronic filing of Profits Tax Return services for submission together with the paper Profits Tax Return.
+NOTE C4	
+SUBMISSION OF PROFITS TAX RETURN THROUGH ELECTRONIC FILING OR SEMI-ELECTRONIC FILING
+You can submit Profits Tax Return - Corporations (BIR51) and the required Supporting Documents prescribed in the notice to file Profits Tax 
+Return and supplementary forms (S1 to S22) in the form of electronic records via electronic filing of Profits Tax Return services under GovHK if 
+the following criteria are met:-
+(1)	
+The return is for any year of assessment from 2022/23 to 2025/26;
+(2)	
+The Supporting Documents and supplementary form(s) (if applicable) have been prepared in specified electronic format; and
+(3)	
+The return is submitted by your secretary / manager / director / investment manager or by a service provider engaged by you to furnish 
+the return.
+The authorized signatory having a specified mode of signing can sign and submit the return online under the electronic filing mode.  Or he 
+can print the simplified return generated by the electronic filing of Profits Tax Return services under the semi-electronic filing mode for 
+signature and submission. For details of electronic filing and semi-electronic filing, please visit GovHK (www.gov.hk/business).
+Starting from 1 April 2026, the first phase of mandatory electronic filing of Profits Tax Return has come into operation.  If you are a specified 
+person under section 51AAB of and Schedule 65 to the IRO, you are mandated to submit Profits Tax Return - Corporations (BIR51) in the form 
+of electronic records.  Semi-electronic filing is not acceptable.  See Items 3.9 & 3.9.1 in Part 3 of Section G for further details.
+D.	
+KEEPING BUSINESS RECORDS
+The IRO requires each person carrying on a trade, profession, or business in Hong Kong to keep sufficient records of his income and expenditure 
+and assets and liabilities in relation to that trade, profession or business to enable his assessable profits to be readily ascertained.  Such records 
+should be retained for at least 7 years after the date of the transactions to which they relate, or until the corporation is dissolved, if this is sooner. 
+Failure to keep sufficient records may result in a fine of up to $100,000.
+E.	
+OFFENCES AND PENALTIES
+The IRO provides heavy penalties for any person who:-
+(1)	
+fails to comply with the requirements of a notice to make a return without reasonable excuse;
+(2)	
+makes an incorrect return without reasonable excuse;
+(3)	
+makes a false return wilfully with intent to evade tax;
+(4)	
+fails to keep sufficient business records of income and expenditure and assets and liabilities without reasonable excuse;
+(5)	
+fails to give notice of the cessation of a trade, profession or business without reasonable excuse;
+(6)	
+fails to notify a change of address without reasonable excuse; or 
+(7)	
+fails to notify a change of ownership of property in respect of which exemption from Property Tax has been granted.
+EVASION OF TAX IS A CRIMINAL OFFENCE.  MAXIMUM PENALTY is a fine of $50,000 PLUS a further fine of 3 times the undercharged amount 
+and imprisonment for 3 years.
+A service provider engaged by a taxpayer to furnish a tax return for or on behalf of the taxpayer may commit an offence if the service 
+provider, without reasonable excuse:-
+(1)	
+fails to furnish the return;
+(2)	
+fails to obtain and retain a confirmation from the taxpayer stating that the information contained in the return is correct and complete 
+to the best of the taxpayer's knowledge and belief; or
+(3)	
+furnishes the return not in accordance with the information provided, or instructions given, by the taxpayer to the service provider and 
+the return so furnished is incorrect in a material particular.
+The above offence is subject to a fine of $10,000; and the court may order the service provider convicted to do within a specified time the act 
+which the service provider has failed to do.
+(4/2025)	
+P.T.O.
+
+Page 2
+F.	
+REMUNERATION PAID TO EMPLOYEES OR PERSONS OTHER THAN EMPLOYEES
+If there are salaries, wages, commission and subcontracting fees charged to the accounts, these payments should also be reported under 
+your Employer’s Return file reference with this Department. If you do not have a file reference, dial 187 8022 for assistance.
+G.	
+HOW TO COMPLETE THE RETURN
+PART 1	
+STATEMENT OF ASSESSABLE PROFITS OR ADJUSTED LOSS 
+(1)	
+The Assessable Profits or Adjusted Loss to be shown are before any loss brought forward from prior year.
+(2)	
+ADJUSTMENTS TO BE MADE:-
+The profits or loss shown by the financial statements must be converted to the Assessable Profits or Adjusted Loss computed in 
+accordance with Part 4 of the IRO. The adjustments include, but not limited to, the following items:-
+To be added to the net profits or deducted from the loss:-
+(a)	
+expenses or outgoings to the extent to which they are not incurred in the production of profits in respect of which you are 
+chargeable to Profits Tax, e.g. gifts, fines, penalties, gratuitous payments, interest on monies not specifically employed in the 
+production of such profits, except that donations of not less than $100 in aggregate to charitable bodies which are exempt from 
+tax under section 88 of the IRO or to the Government for charitable purposes, may be deducted, provided the deduction does not 
+exceed 35% of the Assessable Profits before set off of losses;
+(b)	
+any expenditure of a capital nature e.g. the cost of plant, machinery, buildings, furniture, office equipment, etc. and 
+improvements or extraordinary repairs;
+(c)	
+any depreciation written off;
+(d)	
+any loss or expense recoverable under an insurance or a contract of indemnity;
+(e)	
+taxes charged on you under the IRO;
+(f)	
+appropriations of profits or transfers to reserve;
+(g)	
+an ordinary / regular contribution to a fund established under a recognized retirement scheme to the extent that it exceeds 15% of 
+the total emoluments of each employee concerned for the period in respect of which the payment is made;
+(h)	
+any part of the losses of a trade, profession or business carried on by another person who is chargeable to Hong Kong Profits Tax 
+which is included in your financial statements;
+(i)	
+any loss arising in or derived from a trade, profession or business NOT carried on in Hong Kong;
+(j)	
+any balancing charge assessable under Part 6 of the IRO;
+(k)	
+any loss of a capital nature or any loss NOT arising in or derived from Hong Kong;
+(l)	
+any deemed assessable profits under section 20AE, 20AF, 20AX and/or 20AY of the IRO or section 22 and/or 23 of Schedule 16E to 
+the IRO;  
+(m)	
+any loss from qualifying debt instruments as defined in section 14A(4) of the IRO and issued on or after 1 April 2018;
+To be deducted from the net profits or added to the loss:-
+(n)	
+any part of the profits of a trade, profession or business carried on by another person who is chargeable to Hong Kong Profits Tax 
+which is included in your financial statements;
+(o)	
+a profit arising in or derived from a trade, profession or business NOT carried on in Hong Kong;
+(p)	
+dividends received from a corporation;
+(q)	
+profits of a capital nature, gains or profits from disposal of qualifying equity interests or profits NOT arising in or derived from 
+Hong Kong (except the specified foreign-sourced income which cannot be exempted from Profits Tax under the foreign-sourced 
+income exemption regime);
+(r)	
+interest on Tax Reserve Certificates;
+(s)	
+the depreciation allowances permitted under Part 6 of the IRO;
+(t)	
+net interest income derived from deposits placed in Hong Kong with an authorized institution which is exempted from payment 
+of Profits Tax under the Exemption from Profits Tax (Interest Income) Order;
+(u)	
+interest, profits or gains from qualifying debt instruments as defined in section 14A(4) of the IRO and issued on or after 1 April 2018.
+(3)	
+DOCUMENTS AND INFORMATION TO BE PREPARED AND SUBMITTED
+(a)	
+detailed Statement of Financial Position /Balance Sheet, Statement of Comprehensive Income/Profit and Loss Account, if the 
+certified copy of the audited financial statements is an abridged version and does not provide sufficient details to enable the 
+Assessable Profits to be readily ascertained;
+(b)	
+details of capital expenditure incurred, capital assets sold, depreciation charged to the financial statements and assets not in use 
+at the end of the basis period (where capital assets have been acquired by hire purchase, details of the terms of the agreement for 
+each asset must be submitted);
+(c)	
+details of expenditure incurred on, and proceeds from the disposal of any rights in or arising out of, research and development;
+(d)	
+details of expenditure incurred on refurbishment of a building (other than a domestic building), the location and how the building 
+has been used during the year;
+(e)	
+details of expenditure incurred on, and proceeds from the sale of, environmental protection machinery, environment-friendly 
+vehicles, and environmental protection installation, including any part of expenditure on environmental protection installation 
+that remains to be deducted (and is to be fully deducted) in the year of assessment 2018/19;
+(f)	
+details of reserve and provision accounts, showing transfers to and from these accounts;
+(g)	
+details of any service / management fee received including full name and address of each payer, and where available, the Hong 
+Kong Identity Card Number or Business Registration Number of each payer;
+(h)	
+details of interest paid or payable, including the name and address of the lender, his relationship with you, the purpose for which 
+the loan was obtained, any security given to the lender and the specific condition under section 16(2) of the IRO which you rely on 
+for the claim for deduction;
+(i)	
+details of profits / income / interest received and claimed to have an offshore source and the related direct and indirect expenses;
+(j)	
+details showing the name, address and Hong Kong Identity Card Number / Business Registration Number of each recipient, 
+amount paid to each recipient and nature of service in respect of the following items:-
+(i)	
+contractors and subcontractors fees;
+(ii)	
+management fees;
+(iii)	
+commission;
+(iv)	
+legal and other professional fees;
+(v)	
+hire, rental or similar charges for the use or right to use movable property in Hong Kong;
+(k)	
+details of and reasons for bad debt provisions and write-offs, showing name and address of each debtor, and the respective amounts;
+(l)	
+details of any change in the method of valuation of opening or closing inventories or work-in-progress from that previously used 
+(not applicable to the commencement of a trade, profession or business);
+(m)	
+(i)       details of rental payments in respect of each premises rented including full name and address of the landlord or recipient of
+	
+rent, the exact location and the rating assessment number (if available), the total rent paid and the period covered.  In case 
+	
+lease expenditures (i.e. interest on lease liability and depreciation on right-of-use asset charged in the profit and loss 
+account), instead of contractual rental payments, are claimed for deduction, see also Item (ii) below;
+P.T.O.
+
+Page 3
+(ii)	
+details of lease expenditures (i.e. interest on lease liability and depreciation on right-of-use asset charged in the profit and 
+loss account) in respect of each item / each class of leased assets and computation of impairment and / or revaluation 
+adjustments (if any).  For profits tax treatment and assessing practice relating to lease expenditures, please refer to the 
+	
+related information on the Department's web site;
+(n)	
+other reconciliation statements and particulars of any unusual transactions which might affect the tax position;
+(o)	
+the following information relating to the cessation of business, if applicable:-
+(i)	
+for letting or sale of the business or any of its assets, the name and address of any transferee together with particulars of 
+the terms of transfer;
+(ii)	
+full details of sums received or paid after cessation;
+(iii)	
+the names of the persons now occupying your former business premises and, if they are carrying on business, the nature of 
+that business and the name under which it is carried on, if known;
+(p)	
+a computation of the deemed assessable profits together with the name and address of each non-resident person, special 
+purpose vehicle, fund, special purpose entity, family-owned investment holding vehicle and family-owned special purpose entity, 
+where applicable (See Notes Item 3.2 in Part 3);
+(q)	
+details of share-based payment in respect of stock option or share award obligations fulfilled by:-
+(i)	
+issuing new shares;
+(ii)	
+acquiring shares from the market;	
+(iii)	
+recharge arrangements between group companies.
+	
+For each category, state the amount involved and basis of computation. For (ii) & (iii), also state the amount in respect of option 
+exercised / award vested during the basis period; and the amount of deduction previously allowed in respect of option / award 
+subsequently forfeited or cancelled during the basis period (if any);
+(r)	
+details of deduction claimed for approved charitable donations, showing full name of each charitable institution or trust of a 
+public character which is exempt from tax under section 88 of the IRO and the respective amount;
+(s)	
+for an open-ended fund company with sub-funds structure, a computation of the Assessable Profits or Adjusted Loss of each sub-fund;
+(t)	
+for the purposes of section 50AAK, a PE of a non-Hong Kong resident person should provide: 
+(i)	
+for each fund provided by the non-Hong Kong resident person to the PE, the amount of fund, nature, interest rate 
+            and interest expense for the year of assessment; 
+(ii)	
+amount of free capital attributed to the PE and its computation; 	
+(iii)	
+amount of capital attribution tax adjustment and its computation. 
+PART 2	
+TAX LIABILITY OR REPAYMENT
+Item 2.1 &	
+TAX PAYABLE/TAX REPAYABLE
+Item 2.2
+State the amount of tax payable or repayable in Item 2.1 or 2.2 respectively. Your computation should take into account the amount of 
+Provisional Profits Tax payable for the year of assessment following the relevant year and deduct any Provisional Profits Tax charged for the 
+relevant year. If you have any loss brought forward, you can use it to set-off the Assessable Profits as stated in Part 1 of the return (if 
+applicable) when computing the amount of tax payable or repayable.
+Item 2.3	
+CLAIM FOR PROFITS CHARGEABLE AT TWO-TIERED RATES
+State whether you are chargeable at two-tiered rates in Item 2.3 (applicable to year of assessment 2018/19 and subsequent years). If you have 
+no connected entity or no other connected entity elects to be so chargeable for the subject year, you are chargeable at two-tiered rates. For 
+connected entities, the two-tiered rates will only be applicable to one of them. The entity electing for the two-tiered rates must complete Item 
+9.1 and provide a complete list of connected entities carrying on a trade, profession or business in Hong Kong in supplementary form (S1) 
+unless the entity is a member of a group of companies, one of which is listed on the Stock Exchange of Hong Kong. For details of the two-
+tiered profits tax rates regime, please refer to the Department’s web site.
+PART 3	
+SPECIFIED TRANSACTIONS AND MATTERS
+Item 3.1 	
+PAYMENTS TO NON-RESIDENTS FOR THE USE/ASSIGNMENT OF INTELLECTUAL PROPERTY
+You must submit, for each recipient, the name, identity (i.e. individual, partnership or corporation), amount, type of intellectual property and 
+the IRD file number with which you submit the Profits Tax Return (BIR54) for the recipient in respect of sums paid or accrued to a non-resident person:-
+(1)	
+for the exhibition or use in Hong Kong of cinematograph or television film or tape, sound recording or their connected advertising material;
+(2)	
+for the use, or the right to the use, in  Hong Kong or outside Hong Kong when such sums are deductible in ascertaining your 
+assessable profits, of any patent, design, trade mark, copyright material, *layout-design (topography) of an integrated circuit, 
+*performer’s right, *plant variety right, secret process or formula;
+*(3)	
+for an assignment of, or agreement to assign, a performer’s right in relation to a performance given by the performer in Hong Kong on 
+or after 29 June 2018 and the sums were paid or accrued to the performer or an organizer.
+(*information is only required for sums paid or accrued on or after 29 June 2018.)
+Item 3.2	
+DEEMED ASSESSABLE PROFITS UNDER SECTION 20AE, 20AF, 20AX AND/OR 20AY OF THE INLAND REVENUE ORDINANCE  	
+	
+OR SECTION 22 AND/OR 23 OF SCHEDULE 16E TO THE INLAND REVENUE ORDINANCE
+You must include the deemed assessable profits under section 20AE and/or 20AF or 20AX and/or 20AY of the IRO or section 22 and/or 23 of 
+Schedule 16E to the IRO in your Assessable Profits or Adjusted Loss, as stated in Part 1, if:-
+(a)	
+a non-resident person's assessable profits are exempt from tax under section 20AC of the IRO, and during any part of the year the non-
+resident person is your associate or you (alone or jointly with any of your associates) hold a beneficial interest of 30% or more in the 
+non-resident person;
+(b) 	
+for year of assessment 2015/16 and subsequent years, the assessable profits of a special purpose vehicle, in which a non-resident 
+person satisfying (a) above has a beneficial interest, are exempt from tax under section 20ACA of the IRO;
+(c) 	
+for year of assessment 2019/20 and subsequent years, the assessable profits of a fund falling within the meaning given by section 
+20AM of the IRO are exempt from tax under section 20AN of the IRO, and during any part of the year the fund is your associate or you 
+(alone or jointly with any of your associates) hold a beneficial interest of 30% or more in the fund;
+(d) 	
+for year of assessment 2019/20 and subsequent years, the assessable profits of a special purpose entity, in which a fund satisfying (c) 
+above has a beneficial interest, are exempt from tax under section 20AO of the IRO;
+(e)	
+for year of assessment 2022/23 and subsequent years, the assessable profits of a family-owned investment holding vehicle are 
+chargeable at concessionary tax rate under section 9 of Schedule 16E to the IRO, and during any period of time in the year the family-
+owned investment holding vehicle is your associate or you (alone or jointly with any of your associates) hold a beneficial interest of 
+30% or more in the family-owned investment holding vehicle; or
+(f) 	
+for year of assessment 2022/23 and subsequent years, the assessable profits of a family-owned special purpose entity, in which a 
+family-owned investment holding vehicle satisfying (e) above has a beneficial interest, are chargeable at concessionary tax rate under 
+section 16 of Schedule 16E to the IRO.
+In addition, you are required to provide the following information:-
+(1)	
+name and address of each such non-resident person, special purpose vehicle, fund, special purpose entity, family-owned investment 	
+	
+holding vehicle and family-owned special purpose entity, where applicable; and
+(2)	
+a computation of the deemed assessable profits.
+In calculating the deemed assessable profits, please refer to Schedule 15, 15A, 15C, 15D, 16J and/or 16K to the IRO and to the related 
+information on the Department's web site.
+P.T.O.
+
+Page 4
+Item 3.3	
+SHORT TERM DEBT INSTRUMENTS AND MEDIUM TERM DEBT INSTRUMENTS (ISSUED BEFORE 1 APRIL 2018)
+Profits/loss from short/medium term debt instruments (issued before 1 April 2018) are assessable under section 14A of the IRO at 
+concessionary tax rate equivalent to one-half of the profits tax rate and they must be included in the Assessable Profits or Adjusted Loss as 
+stated in Part 1:-
+(1)	
+“Short term debt instrument” and “medium term debt instrument” are defined in section 14A(4) of the IRO.
+(2)	
+You are required to provide separate lists of “short term debt instrument“ and  “medium term debt instrument“ held by you showing in 
+respect of each debt instrument the issue number, date of issue, date of maturity, your relationship with the issuer, the amount of 
+interest, profits / loss arising therefrom and the credit ratings from the credit rating agencies recognized by the Hong Kong Monetary 
+Authority as at the end of the basis period.
+Item 3.4	
+CLAIM FOR RELIEF FROM DOUBLE TAXATION
+(1)	
+Double taxation relief is available only for territories with which the Hong Kong Special Administrative Region has arrangements for 
+avoidance of double taxation. The Commissioner may verify your claim with the tax authority of the territory concerned.
+(2)	
+If a tax credit is claimed, give the foreign tax computation showing the nature and amount of the income taxed.  The amount of tax 
+credit claimed must be the final amount of tax charged and paid by you.  You must notify the Commissioner in writing of any changes in 
+the amount claimed.
+(3)	
+If any income or profits are claimed to be tax exempted pursuant to an arrangement for avoidance of double taxation, provide details of 
+the income or profits so claimed and show the computation.
+Item 3.5	
+ADVANCE RULING
+If you have obtained an Advance Ruling under section 88A of the IRO, and in preparing the return you are required to take into account the 
+way in which a provision of the IRO applies to the arrangement(s) identified in the Ruling, you must submit the following information:-
+(1)	
+the reference number of the Ruling;
+(2)	
+whether or not you have relied on the Ruling in preparing and providing the return; and
+(3)	
+details of any material changes to the arrangement(s) identified in the Ruling.
+If you have obtained the Commissioner's opinion / Advance Ruling on the compliance with the economic substance requirements in relation 
+to specified foreign-sourced income, you only need to provide the requested information on the Commissioner's opinion / Advance Ruling in 
+supplementary form (S19) when required to complete such form (See Notes Item 9.19 in Part  9).
+Item 3.8	
+PERMANENT ESTABLISHMENT IN HONG KONG
+(1)	
+A Hong Kong resident person means a person who is resident for tax purposes in Hong Kong. A non-Hong Kong resident person means 
+a person who is not a Hong Kong resident person.
+(2)	
+A non-Hong Kong resident person who has a PE in Hong Kong is regarded as carrying on a trade, profession or business in Hong Kong 
+for the purpose of charging profits tax.
+(3)	
+If you are a DTA territory resident person, the meaning of a PE is to be determined in accordance with the relevant provisions under the 
+double taxation arrangements concerned.
+(4)	
+If you are a non-DTA territory resident person, PE includes a fixed place of business as defined in Section 4 in Part 3 of Schedule 17G to 
+the IRO and agent's activities as defined in Section 7 in Part 3 of Schedule 17G to the IRO. 
+(5)	
+The income or loss of the person attributable to the PE is to be assessed in accordance with section 50AAK of the IRO.
+Item 3.9 &	
+MANDATORY ELECTRONIC FILING OF PROFITS TAX RETURN
+Item 3.9.1
+Section 51AAB of the IRO mandates a specified person to file a specified return in the form of an electronic record for a specified year of 
+assessment while Schedule 65 to the IRO specifies the requirement for mandatory electronic filing of a specified return.  Under the first phase 
+of implementation of mandatory electronic filing as specified in Schedule 65, an entity being a Part 4AA entity of an in-scope multinational 
+enterprise (“MNE”) group is mandated to file its Profits Tax Return in the form of an electronic record for a year of assessment beginning on or 
+after 1 April 2025 (i.e. the year of assessment 2025/26 and subsequent years).  The applicable entity may be exempted from mandatory 
+electronic filing and allowed to furnish its Profits Tax Return in paper form if any of the circumstances or conditions specified by the 
+Commissioner pursuant to section 51AAC(3) occurs or is satisfied.  In-scope MNE group means an MNE group with annual consolidated 
+revenue of EUR 750 million or above in at least two of the four fiscal years immediately preceding the current fiscal year (a fiscal year that is 
+beginning on or after 1 January 2025).  Part 4AA entity refers to a Hong Kong constituent entity, a Hong Kong standalone joint venture, a Hong 
+Kong member of a joint venture group or a Part 4AA stateless constituent entity.  The mandatory electronic filing requirement adopts the 
+“once-in, always-in” approach.  For details of the mandatory electronic filing requirement and exemption, please refer to the Department’s 
+web site.
+PART 4	
+DETAILS OF THE CORPORATION
+(1)	
+The IRO requires that the Commissioner be informed of a change of address WITHIN 1 MONTH.
+(2)	
+The Business Registration Ordinance (Cap. 310) requires changes of specified particulars of a business to be notified WITHIN 1 MONTH. 
+Information in Item 4.3 will be accepted as a notification under section 8 of the Business Registration Ordinance. Any notification of 
+change of business address should be given to the Business Registration Office separately.
+(3)	
+If you cease to carry on any trade, profession or business, the Commissioner must be informed WITHIN 1 MONTH.
+(4)	
+You must state your 6-digit industry code of the latest version of Hong Kong Standard Industrial Classification maintained by the 
+Census and Statistics Department (“C&SD”). For the index of industry codes, please refer to C&SD’s web site (www.censtatd.gov.hk). If 
+you engaged in more than one business activity in the basis period, please state the industry code with reference to your principal 
+business activity. If you did not have any business activity during the basis period, please state “000000” as the industry code.
+PART 6	
+AUTHORIZED REPRESENTATIVE
+You must complete this Part if you have appointed a representative. The authorized representative’s reference number must be any 
+combination of a maximum of 10 alpha-numeric characters. Symbols and punctuation marks such as commas, hyphens, colons and the like 
+cannot be used. The authorized representative should quote this reference number in all correspondence with the Department.  
+PART 7	
+GENERAL MATTERS
+Item 7.1.1	
+“Hong Kong practice unit” means –
+	
+(i)	
+a certified public accountant (practising) who practises accountancy on the accountant’s own account under the 
+	
+accountant’s own name as registered under section 22(2) of the Professional Accountants Ordinance (Cap. 50) (“PAO”);
+	
+(ii)	 a certified public accountant (practising) who practises accountancy on the accountant’s own account under a firm name 
+	
+registered under Division 2 of Part 2A of the Accounting and Financial Reporting Council Ordinance (Cap. 588) (“AFRCO”);
+	
+(iii)	 a firm of certified public accountants (practising) that practises accountancy in partnership and registered under Division 2 
+	
+ of Part 2A of the AFRCO; or
+	
+(iv)	 a company registered as a corporate practice under Division 3 of Part 2A of the AFRCO.
+Item 7.1.2	
+“Certified public accountant (practising)” means a person registered as a certified public accountant under section 22 of the 
+PAO and holding a practising certificate issued under section 20AAD or 20AAI of the AFRCO. The practising certificate number of 
+the certified public accountant (practising) who signed the Auditor’s Report of which the certified copy is filed along the Profits 
+Tax return may be retrieved from the Auditor’s Report in question.  If the Auditor’s Report does not contain such information, 
+you should request the information from the certified public accountant (practising) concerned.  Reference may also be made to 
+the register of certified public accountants (practising) accessible via the official website of the Accounting and Financial 
+Reporting Council.
+Item 7.2	
+If there is a change in accounting date, state the reason(s) for the change.
+Item 7.4.1	
+Information in Item 7.4.1 will be accepted as a notification under section 8 of the Business Registration Ordinance. The Business 
+Registration Ordinance requires changes of specified particulars of a business to be notified WITHIN 1 MONTH.
+Item 7.4.3	
+“Associated person” means a person controlled by you, a person who controls you, or a person who is under the control of the 
+same person as you are.
+Item 7.5	
+You can elect to align the tax treatment of financial instruments with their accounting treatment under section 18H(2) of the IRO 
+and have the related profits assessed in accordance with sections 18I to 18L of the IRO. Sections 18G to 18L of the IRO apply in 
+relation to a year of assessment for which the basis period begins on or after 1 January 2018. For revocation, state the 
+reason(s).
+Item 7.10.1	
+“Amount of one-off adjustment”
+	
+(a)	 in relation to life insurance business—means the amount arrived at by: deducting the net asset value of the life insurance 
+	
+fund immediately before the date of implementation of the risk-based capital (“RBC”) regime from the net asset value 
+	
+	
+of the life insurance fund as at the date of implementation of the RBC regime;
+	
+(b)	 in relation to non-life long term insurance business—means the amount arrived at by: deducting the net asset value of the 
+	
+non-life long term insurance fund immediately before the date of implementation of the RBC regime from the net asset 
+	
+value of the non-life long term insurance fund as at the date of implementation of the RBC regime;
+	
+(c)	 in relation to general insurance business—means the amount arrived at by: deducting the premium liabilities attributable 
+	
+to general insurance business in Hong Kong as at the date of implementation of the RBC regime from the reserve for 
+	
+unexpired risks immediately before that date;
+	
+(d)	 in relation to qualifying insurance business—means the amount arrived at by: deducting the premium liabilities attributable 
+	
+to qualifying insurance business as at the date of implementation of the RBC regime from the reserve for unexpired risks 
+	
+immediately before that date.
+	
+If the amount is a positive figure, the amount is treated as taxable income.  If the amount is a negative figure, the amount is 
+treated as deductible loss.
+P.T.O.
+
+Page 5
+Item 7.11	
+A family-owned special purpose entity whose beneficial interest is held, whether directly or indirectly, by an eligible family-
+owned investment holding vehicle can enjoy profits tax concession. If you wish to claim profits tax concession, you are 
+required to complete Item 10.9.
+Item 7.12	
+If you are an eligible single family office managing one or more than one eligible family-owned investment holding vehicle 
+(“FIHV”) which benefits from the profits tax concession as provided in Schedule 16E to the IRO during the basis period for the 
+year of assessment, you must submit the following information:-
+	
+(1)	 total number of FIHVs managed by you.  A cap is imposed such that not more than 50 FIHVs managed in Hong Kong by 
+	
+	
+you may benefit from the profits tax concession.  In case the number of FIHVs exceeds the cap, you can choose which 50 
+	
+	
+FIHVs to apply for the tax concession; 
+	
+(2)	 name, address and business registration number (if any) of each FIHV managed in Hong Kong by you; and
+	
+(3)	 whether you have complied with the specified net asset value rule under section 11 of Schedule 16E to the IRO.
+PART 8	
+TRANSACTIONS FOR / WITH NON-RESIDENTS
+Item 8.1.1 &	
+Where goods are sold on behalf of a non-resident person a separate quarterly return must be submitted on Form BIR52B. This 
+Item 8.1.2	
+will be issued on application. Where you have, as agent, received on behalf of a non-resident person any other trade or 
+business income arising in or derived from Hong Kong, you will be asked to give further details of the agency. In this context, 
+“agent” has the meaning given by section 2 of the IRO to include the agent, attorney, factor, receiver or manager in Hong Kong 
+of the non-resident person, or any person in Hong Kong through whom such person is in receipt of any profits or income 
+arising in or derived from Hong Kong.
+Item 8.1.3	
+Value creation contributions include performing the functions of, or providing assets in and assuming risks relating to the 
+development, enhancement, maintenance, protection or exploitation of the intellectual property.
+Item 8.2	
+For hire, rental or similar charges paid or accrued to non-resident persons for the use of or the right to use movable property in 
+Hong Kong.
+Item 8.3	
+For fees, including management, consultancy or service fee, paid or accrued to non-resident persons in respect of professional 
+services rendered in Hong Kong.  Include the full amount of fees paid to non-resident persons in respect of services rendered 
+partly outside Hong Kong.
+PART 9	
+DETAILS OF SUPPLEMENTARY FORM(S) UPLOADED
+Item 9.1	
+If you have connected entities and elect to be chargeable at the two-tiered rates for the subject year, a complete list of the 
+connected entities carrying on a trade, profession or business in Hong Kong should be provided.  Please download 
+supplementary form (S1) from the Department’s web site (www.ird.gov.hk/e_pfr) for electronic completion and submission. If 
+you had no connected entity or you were a member of a group of companies, one of which was listed on the Stock Exchange of 
+Hong Kong for the subject year, you are not required to submit supplementary form (S1).
+Item 9.2	
+Please download supplementary form (S2) from the Department’s web site (www.ird.gov.hk/e_pfr) for electronic completion and 
+submission if one or more of the following apply:-
+	
+(1)	 You are required to complete section 1 of S2 if you had transactions with non-resident associated persons / other parts of 
+	
+the non-Hong Kong resident person during the basis period.
+	
+	
+A person is associated with another person (each an affected person) if, as between them, the participation condition is 
+	
+met. The participation condition is met as between two persons if, at the time of carrying out the transaction, one of the 
+	
+affected persons was participating in the management, control or capital of the other affected person, or the same person 
+	
+or persons was or were participating in the management, control or capital of each of the affected persons. You have 
+	
+transactions with other parts of the non-Hong Kong resident person if you are a Hong Kong PE of a non-Hong Kong 
+	
+resident person and have transactions with the other parts of that non-Hong Kong resident person, e.g. transactions 
+	
+between the head office and its branch.
+	
+(2)	 You are required to complete section 2 of S2 if an advance pricing arrangement has been made for the basis period under 
+	
+section 50AAP of the IRO.
+	
+(3)	 You are required to complete section 3 of S2 if you belonged to an MNE group in the basis period and the group is obliged 
+	
+to file a country-by-country report for the accounting period in which the basis period begins.
+	
+	
+Part 9A of the IRO provides that a country-by-country return must be filed in respect of an MNE group of which its 
+	
+consolidated group revenue is not less than the threshold amount prescribed under section 58D of the IRO 
+	
+pursuant to the requirements of the Organisation for Economic Co-operation and Development (“OECD“) (applicable to 
+	
+accounting period beginning on or after 1 January 2018).
+	
+	
+“Multinational enterprise group” means a group that includes:
+	
+	
+(a) two or more enterprises of which the tax residence is in different jurisdictions; or
+	
+	
+(b) an enterprise that is resident for tax purposes in one jurisdiction and is subject to tax in another jurisdiction with respect 
+	
+      to the business carried out through a PE in that other jurisdiction.
+	
+(4)	 You are required to complete section 4 of S2 if you are a Part 4AA entity of an in-scope MNE group, for the purposes of the 
+	
+global minimum tax and Hong Kong minimum top-up tax, for the fiscal year in which the basis period begins.  For the 
+	
+meaning of an in-scope MNE group, please refer to Items 3.9 & 3.9.1 in Part 3 of Section G above.
+Item 9.3	
+If you wish to claim deduction for R&D expenditure under section 16B of the IRO and/or you had trading receipts or sale 
+proceeds from intellectual property rights generated from R&D activities during the basis period, please download 
+supplementary form (S3) from the Department’s web site (www.ird.gov.hk/e_pfr) for electronic completion and submission.
+Item 9.4	
+If you wish to claim deduction for expenditure incurred on energy efficient building installation under the Hong Kong Energy 
+Efficiency Registration Scheme for Buildings administered by the Electrical and Mechanical Services Department under section 
+16I of the IRO, please download supplementary form (S4) from the Department’s web site (www.ird.gov.hk/e_pfr) for electronic 
+completion and submission.
+Item 9.5	
+If you were carrying on the business as a ship-owner, please download supplementary form (S5) from the Department’s web 
+site (www.ird.gov.hk/e_pfr) for electronic completion and submission.
+Item 9.6 to	
+“Professional reinsurer“, “authorized captive insurer“, “specified insurer” and “licensed insurance broker company” are defined
+Item 9.7 &	
+in section 14AB of the IRO.  If you were carrying on the business as a professional reinsurer, an authorized captive insurer,
+Item 9.13 to 	 a specified insurer, or a licensed insurance broker company, you are required to provide a computation of the assessable profits
+Item 9.14	
+chargeable at concessionary rate, and download the relevant supplementary form (S6/S7/S13/S14) from the Department’s web 
+site (www.ird.gov.hk/e_pfr) for electronic completion and submission.
+Item 9.8	
+A corporation is a qualifying corporate treasury centre if any of the conditions in section 14D(2) of the IRO is satisfied.  If you 
+were carrying on the business as a qualifying corporate treasury centre, you are required to provide details of interest income 
+and interest expenses in relation to your intra-group financing business, a computation of the assessable profits chargeable at 
+concessionary rate, and download supplementary form (S8) from the Department's web site (www.ird.gov.hk/e_pfr) for 
+electronic completion and submission.
+P.T.O.
+
+Page 6
+Item 9.9 &	
+A corporation is a qualifying aircraft lessor or a qualifying aircraft leasing manager if the conditions in section 14H(2)/14J(2) of
+Item 9.10	
+the IRO are satisfied.  If you were carrying on the business as a qualifying aircraft lessor or a qualifying aircraft leasing manager, 
+you are required to provide a computation of the assessable profits derived from qualifying aircraft leasing activity or qualifying 
+aircraft leasing management activity, and download supplementary form (S9/S10) from the Department's web site 
+(www.ird.gov.hk/e_pfr) for electronic completion and submission.
+Item 9.11 & 	
+A corporation is a qualifying ship lessor or a qualifying ship leasing manager if the conditions in section 14P(2)/14T(2) of the IRO
+Item 9.12	
+are satisfied.  If you were carrying on the business as a qualifying ship lessor or a qualifying ship leasing manager, you are 
+required to provide a computation of the assessable profits derived from qualifying ship leasing activity or qualifying ship 
+leasing management activity, and download supplementary form (S11/S12) from the Department’s web site (www.ird.gov.hk/e_
+pfr) for electronic completion and submission.
+Item 9.15	
+If you wish to claim tax concession in respect of eligible carried interest as provided in Schedule 16D to the IRO, please 
+download supplementary form (S15) from the Department’s web site (www.ird.gov.hk/e_pfr) for electronic completion and 
+submission.
+Item 9.16 to 	 A corporation is a qualifying ship agent, a qualifying ship manager or a qualifying ship broker if the conditions in section 
+Item 9.18	
+14ZD(4)/14ZM(4)/14ZV(4) of the IRO are satisfied.  If you were carrying on the business as a qualifying ship agent, a qualifying 
+ship manager, or a qualifying ship broker, you are required to provide a computation of the assessable profits derived from 
+qualifying ship agency activity, qualifying ship management activity or qualifying ship broking activity, and download 
+supplementary form (S16/S17/S18) from the Department’s web site (www.ird.gov.hk/e_pfr) for electronic completion and 
+submission. 
+Item 9.19	
+If you are a constituent entity of an MNE group, and during the basis period, any of the following specified foreign-sourced 
+income: (i) accrued to you; or (ii) was received or deemed to have been received by you in Hong Kong, on or after the date 
+specified below:
+	
+(a)	 1 January 2023 – interest, dividends, disposal gains in relation to sale of an equity interest in an entity (“equity interest 	
+	
+disposal gain”), or income from an intellectual property; or
+	
+(b)	 1 January 2024 – disposal gains in relation to intellectual property or non-intellectual property, other than equity interest 	
+	
+disposal gain; 
+	
+please download supplementary form (S19) from the Department’s web site (www.ird.gov.hk/e_pfr) for electronic completion 
+and submission.  In case you only sustained a disposal loss from sale outside Hong Kong of any property in the year of 
+assessment, you are not required to complete supplementary form (S19).  You may claim for utilising the loss to set off against 
+your assessable profits (if applicable) in your tax computation.
+Item 9.20	
+If you are an eligible family-owned investment holding vehicle managed by an eligible single family office in Hong Kong, please 
+download supplementary form (S20) from the Department’s web site (www.ird.gov.hk/e_pfr) for electronic completion and 
+submission. “Family-owned investment holding vehicle” and “eligible single family office” are defined in Schedule 16E to the 
+IRO.
+Item 9.21	
+If you have derived onshore gains on disposal of equity interests and wish to elect for the Tax Certainty Enhancement Scheme 
+provided in Schedule 17K to the IRO, please download supplementary form (S21) from the Department’s web site (www.ird.
+gov.hk/e_pfr) for electronic completion and submission.
+Item 9.22	
+If you wish to claim profits tax concessions for profits sourced in Hong Kong from eligible intellectual property income, please 
+download supplementary form (S22) from the Department’s web site (www.ird.gov.hk/e_pfr) for electronic completion and 
+submission.
+PART 10	
+TAX DATA  
+Item 10.1	
+The amount of net offshore profits should be stated.  If the amount is nil or a negative figure, “0“ should be inserted.
+Item 10.3	
+If a loss is incurred, “0“ should be inserted in this item.
+Item 10.4	
+If a loss is incurred, “0“ should be inserted in this item.
+Item 10.5	
+For net interest income derived from deposits placed in Hong Kong with an authorized institution (e.g. a bank or a 
+deposit-taking company) exempted from payment of Profits Tax under the Exemption from Profits Tax (Interest Income) Order.
+Item 10.6	
+For any interest, profits or gains from qualifying debt instruments as defined in section 14A(4) of the IRO, issued on or after 
+1 April 2018 and you are not an associate of the respective issuer. If a loss is incurred, “0” should be inserted in this item.
+You are required to provide separate lists of qualifying debt instruments held by you showing in respect of each debt 
+instrument the issue number, date of issue, date of maturity, your relationship with the issuer, the amount of interest, profits or 
+gains arising therefrom, the stock code in Stock Exchange of Hong Kong (if applicable) and the credit ratings from the credit 
+rating agencies recognized by the Hong Kong Monetary Authority as at the end of the basis period.
+Item 10.7	
+For the amount of exempted profits from transactions in assets of a class specified in Schedule 16C to the IRO and incidental 
+transactions derived by a fund falling within the meaning given by section 20AM of the IRO and satisfying the exemption 
+conditions in section 20AN of the IRO.  If a loss is incurred, “0” should be inserted in this item. In case of an open-ended fund 
+company with sub-funds, the aggregate amount of exempted profits of each sub-fund should be stated in this item and you are 
+required to provide a computation of such amount.
+Item 10.8	
+For the amount of exempted profits from transactions in securities in section 20AO(2)(a) to (e) of the IRO derived by a special 
+purpose entity owned by a fund that is exempt under section 20AN of the IRO.  If a loss is incurred, “0” should be inserted in 
+this item. 
+Item 10.9	
+For the amount of exempted profits from transactions specified in section 16(3) of Schedule 16E to the IRO derived by a family-
+owned special purpose entity whose beneficial interest is held, whether directly or indirectly, by a family-owned investment 
+holding vehicle that is chargeable at concessionary tax rate.  If a loss is incurred, “0” should be inserted in this item.
+Item 10.11	
+For expenditure on building refurbishment claimed for deduction under section 16F of the IRO, not the total amount of 
+expenditure charged to the financial statements.
+Item 10.12 &	 In ascertaining the chargeable profits there shall be deducted specified 	capital expenditure on the provision of any prescribed
+Item 10.13	
+fixed assets as specified in section 16G(6) of the IRO. For convenience, they are classified as “computer hardware and 
+software” and “prescribed manufacturing machinery or plant”.
+Item 10.14	
+For specified capital expenditure on the provision of any environmental protection machinery claimed for deduction under 
+section 16I(2) of the IRO.
+Item 10.15	
+For specified capital expenditure on the construction of any environmental protection installation claimed for deduction under 
+section 16I(3) (applicable for any year of assessment prior to 2018/19 and the next succeeding 4 years), 16I(3A) (applicable for 
+the year of assessment 2018/19 only); or 16I(3B) (applicable for the year of assessment 2018/19 and subsequent years) of the IRO.
+Item 10.16	
+For specified capital expenditure on the provision of any environment-friendly vehicles claimed for deduction under section 
+16I(2) of the IRO.
+Item 10.17	
+For capital expenditure on the purchase of patent rights or rights to know-how claimed for deduction under sections 16E and 
+16EC of the IRO. The expenditure includes legal expenses and valuation fees incurred for the purchase.
+Item 10.18	
+For specified capital expenditure on the purchase of specified intellectual property rights (including performer’s economic right, 
+protected layout-design (topography) right and protected plant variety right for the year of assessment 2018/19 and subsequent 
+years) claimed for deduction under sections 16EA and 16EC of the IRO.
+Item 10.21	
+For deduction claimed for interest on money borrowed from non-Hong Kong associated corporations, which satisfy the 
+conditions specified in section 16(2)(g) of the IRO (applicable to year of assessment 2016/17 and subsequent years).
+Item 10.22	
+For deduction claimed for costs of reinstating any premises under a lease to their original condition at the end of the term of the 
+lease or on an early termination of the lease (including any amount paid or payable by a lessee of the lease to the lessor of the 
+lease in order to discharge the lessee's obligation for reinstatement) if certain conditions are met.
+P.T.O.
+
+Page 7
+PART 12	
+FINANCIAL DATA   
+Please extract from your detailed Statement of Financial Position /Balance Sheet, Statement of Comprehensive Income/ Profit and Loss 
+Account the financial data to fill in this Part. Financial data of an identical or a similar nature in the financial statements should be added up 
+and grouped under the appropriate item.
+Item 12.1	
+Gross income means ALL TYPES OF INCOME including but not limited to sales and other ordinary business income, proceeds 
+from the sale of capital assets and other non-taxable income, whether or not derived from the principal business activity.
+Item 12.2	
+Turnover refers to the revenue arising from your principal business activities. Items of revenue and gains that arise incidentally 
+or are exceptional in nature should be excluded.
+Item 12.3	
+Opening inventories refer to the TOTAL of all kinds of opening inventories, including raw materials, work-in-progress and 
+finished goods.
+Item 12.4	
+Purchases refer to the TOTAL of purchases of all kinds of inventories, irrespective of whether direct costs, direct expenses or 
+overheads have been included.
+Item 12.5	
+Closing inventories refer to the TOTAL of all kinds of closing inventories, including raw materials, work-in-progress and 
+finished goods.
+Item 12.6 &	
+Gross profit / Gross loss generally refers to the difference between turnover and cost of sales. If you are not engaged in the 
+Item 12.7	
+trading of goods or commodities and no such figure exists in the financial statements, insert “0” in both items.
+Item 12.8	
+Dividend income refers to the total amount of dividend received / receivable from shares held by you and reported in the 
+financial statements.
+Item 12.9	
+Interest income includes bank interest, inter-company interest income, loan interest income, and any item of a similar nature.
+Item 12.10	
+Interest expense includes bank interest, hire-purchase interest, inter-company interest, mortgage loan interest, trust receipt 
+interest, and any item of a similar nature.
+Item 12.11	
+Employee and director remuneration include salaries, wages, bonuses, cash allowance, commission, etc. paid to employees, 
+directors’ fees and any item of a similar nature. Remuneration of staff working overseas or in the Mainland should also be included.
+Item 12.12	
+Share-based payments refer to the amount of share-based payments charged to the Statement of Comprehensive Income/
+Profit and Loss Account in accordance with the Hong Kong Financial Reporting Standard 2 issued by the Hong Kong Institute of 
+Certified Public Accountants.
+Item 12.13	
+Commission payments refer to payments to agents, sales representatives, etc. for their services, whether paid or accrued.
+Item 12.14	
+Intellectual property payments refer to:-
+(a)	 royalty payments to the owner (whether a non-resident person or not) for the use of intellectual property (such as 
+cinematograph or television film or tape, sound recording, patent, design, trade mark, copyright material, *layout-design 
+(topography) of an integrated circuit, *performer’s right, *plant variety right, secret process or formula, and computer 
+software), whether paid or accrued; and
+(b)	 *payments to a performer or an organizer for the assignment of, or agreement to assign, a performer’s right in relation to a 
+performance given by the performer in Hong Kong on or after 29 June 2018, whether paid or accrued. 
+	
+(*only applicable for sums paid or accrued on or after 29 June 2018)
+Item 12.15	
+Management and consultancy fee payments refer to payments for management / administrative or professional services, 
+whether paid or accrued. Building management fees should not be included.
+Item 12.16	
+Contractor and subcontractor charges refer to charges paid / payable to third parties in respect of works / services contracted out.
+Item 12.17	
+Bad debts include any provision for bad debts, whether specific or general.
+Item 12.18 & 	 Net profit / Net loss per account refers to net profits / net loss BEFORE tax shown in the Statement of Comprehensive 
+Item 12.19	
+Income/ Profit and Loss Account.
+Item 12.20 &	 Accounts receivable (trade) / Accounts payable (trade) refers to trade debts.
+Item 12.21
+Item 12.22	
+Issued share capital means all share capital issued, whether fully paid or partly paid. If you are a branch of a foreign company 
+and do not have such an item in your financial statements, you should insert “0” in the item.
+Item 12.23	
+Total value of assets refers to the total value of your assets shown in the Statement of Financial Position / Balance Sheet.
+PART 13	
+DECLARATION
+The return must be signed by either the taxpayer or the engaged service provider.  If it is signed by the service provider, the service provider 
+must obtain a confirmation from the taxpayer stating that the information contained in the tax return, any required supplementary forms and 
+the Supporting Documents is correct and complete to the best of the taxpayer's knowledge and belief.  Please download a “Confirmation for 
+Engagement of Service Provider to Furnish Return” (IR1476) from the Department’s web site for completion and submission together with the 
+tax return.
+P.T.O.

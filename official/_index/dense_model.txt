@@ -1,0 +1,1 @@
+BAAI/bge-m3

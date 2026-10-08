@@ -1,0 +1,72 @@
+Payment is made to a 
+non-resident company 
+Withhold tax according to the 
+domestic tax law 3 
+Withhold tax at 
+prevailing 
+corporate tax 
+rate 3 
+Not necessary to withhold tax 3 
+Withhold tax according to 
+rates in DTA 3 
+Is the payment made to a 
+resident of a DTA partner 
+country/ territory? 
+Yes 
+Does the income 
+No 
+fall under a specific 
+Article in the 
+    DTA? 
+Yes 
+Yes 
+Does the income 
+fall under the 
+Business Profits 
+Article in the 
+No 
+DTA? 1 
+Yes 
+Is the income 
+effectively 
+connected with a 
+PE 2 in 
+Singapore? 
+Yes 
+Does the relevant 
+Article make reference 
+to the Business Profits 
+Article? 
+Did the recipient carry on 
+No 
+business through a PE 2 in 
+Singapore? 
+No 
+Yes 
+No 
+Is the taxing right 
+given solely to the 
+DTA partner under 
+the DTA? 
+Yes 
+No 
+GENERAL OVERVIEW OF WITHHOLDING TAX ON INCOME DEEMED TO BE SOURCED IN 
+SINGAPORE UNDER SECTIONS 12(6) AND 12(7) OF THE INCOME TAX ACT 
+No 
+
+1 Examples of Business Profits Article can be found in Article 5 of Australia DTA and Article 7 of China DTA. Where specific payments (i.e. payments for 
+labour or personal services) are excluded from the Business Profits Article of the DTA (Australia*, Pakistan, Republic of Korea#, Sweden and Taiwan), the 
+income will be subject to tax at the prevailing corporate tax rate regardless whether the services were provided through a PE in Singapore. 
+*With effect from 1 May 2018, the income derived by a non-individual (e.g. company) tax resident in Australia from the provision of services in Singapore 
+through employees or other personnel engaged by the non-individual would be considered as profits of an enterprise and Articles 4 and 5 would be the 
+applicable articles. Consequently, the service income will only be subject to tax in Singapore if the provision of services constitutes a PE in Singapore under 
+the provisions of Article 4 of the Singapore-Australia DTA. This means that no withholding tax is applicable on the service income if there is no PE in 
+Singapore. For more information, please refer to footnote 1 of Article 2 of the DTA (PDF, 278KB) which documents the mutual agreement reached by the 
+competent authorities of Singapore and Australia. 
+#This refers to the DTA with Republic of Korea (“ROK”) signed 6 November 1979. There is a revised DTA (PDF, 661KB) with ROK signed on 13 May 
+2019 and effective from 1 January 2020. Under the revised DTA, profits derived by an enterprise from the performance of professional services and other 
+activities of an independent character fall under the Business Profits Article. This means that the service income will only be subject to tax in Singapore if 
+the services are performed through a PE in Singapore. 
+2 Permanent Establishment (PE) is defined for in DTAs e.g. in Article 4 of Australia DTA and Article 5 of China DTA. 
+3 Please refer to “File Withholding Tax” in our IRAS website on how to report S45 withholding tax, claim for relief from Singapore income tax under the 
+DTA and the documents to submit. 

@@ -1,0 +1,150 @@
+PART 2
+PROVISIONS APPLICABLE TO
+INSTRUMENTS GENERALLY
+Liability of instruments to duty
+Instruments chargeable with duty
+4.
+—(1) Subject to the provisions of this Act and any other written law, every instrument mentioned in the First Schedule, being an instrument —
+(
+a
+)
+which, not having been previously executed by any person, is executed in Singapore; or
+(
+b
+)
+which is executed outside Singapore, and relates to any property situated, or to any matter or thing done or to be done, in Singapore, and is received in Singapore,
+is chargeable with duty of the amount specified in that Schedule as the proper duty for that instrument.
+(2) All instruments chargeable with duty must be duly stamped.
+Payment of duty
+All facts and circumstances to be set out
+5.
+—(1) All the facts and circumstances affecting the liability of any instrument to duty or the amount of the duty with which any instrument is chargeable are to be fully and truly set out in the instrument.
+(2) Where the liability of an instrument to duty or any amount of duty, is determined by facts or circumstances that are not set out in the instrument, those facts or circumstances must be provided to the Commissioner in such form and manner as the Commissioner may specify.
+[13/2017]
+(3) The Commissioner may require to be furnished with such evidence as the Commissioner may consider necessary to prove that all such facts and circumstances are truly set out in the instrument or provided under subsection (2).
+[13/2017]
+Instrument relating to distinct matters
+6.
+Except where express provision to the contrary is made by this Act or any other Act —
+(
+a
+)
+an instrument containing or relating to several distinct matters is to be separately and distinctly charged, as if it were a separate instrument, with duty in respect of each of the matters; and
+(
+b
+)
+an instrument made for any consideration in respect of which it is chargeable with ad valorem duty, and also for any further or other valuable consideration or considerations, is to be separately and distinctly charged, as if it were a separate instrument, with duty in respect of each of the considerations.
+How duties are denoted
+6A.
+Except where express provision is made to the contrary in this Act, all duties chargeable on any instrument are to be paid and denoted by attaching to the instrument a stamp certificate relating to the instrument.
+E‑Stamping system
+6B.
+—(1) The computer service known as the E‑Stamping system and established under section 6B as in force immediately before 4 October 2018, may be used for the purposes mentioned in subsection (2).
+[37/2018]
+(2) The purposes are to enable any person, in accordance with the arrangements made under this section —
+(
+a
+)
+to do the following without the need to present the instrument concerned to the Commissioner or a proper officer in charge of the stamp office:
+(i)
+obtain an assessment of stamp duty (and any penalty) on an instrument;
+(ii)
+pay stamp duty (and any penalty) on the instrument by electronic funds transfer in accordance with the assessment;
+(iii)
+stamp the instrument by attaching a stamp certificate to it or (in the case of an electronic instrument within the meaning of section 59) obtaining a stamp certificate for it, which bears an authorisation number issued for the instrument and such other particulars as are determined by the Commissioner; and
+(
+b
+)
+to apply to the Commissioner for the adjudication of an instrument under section 37 and to obtain a certificate of adjudication from the Commissioner under section 38.
+[37/2018]
+(3) The Commissioner may —
+(
+a
+)
+determine the information and particulars that may be electronically transmitted under the E‑Stamping system, including the form and manner they are to be transmitted;
+(
+b
+)
+determine the procedure for use of the E‑Stamping system, including the procedure in circumstances where there is a breakdown or an interruption in the computer service; and
+(
+c
+)
+generally do such other things for the better provision of the computer service.
+[37/2018]
+Electronic assessment and stamping of instruments
+6C.
+—(1) For the purposes of this Act, the issue, using the E‑Stamping system, of a stamp certificate for an instrument must comprise an assessment of the duty (and any penalty) in relation to the instrument.
+(2) A person must, on receipt of a stamp certificate issued for the instrument by the Commissioner, immediately attach the stamp certificate to the instrument.
+[37/2018]
+Electronic funds transfer of duty
+6D.
+—(1) A person using the E‑Stamping system may maintain an electronic banking facility with a bank to enable the transfer of funds from the person’s designated account with the bank to an account specified by the Commissioner.
+[37/2018]
+(2) The Commissioner must, on issuing to a person a stamp certificate in respect of any instrument that is chargeable with duty, immediately deduct through electronic funds transfer the full amount of duty chargeable from the designated account of the person.
+[37/2018]
+(3) Nothing in subsection (2) requires the Commissioner to deduct any money from the designated account of the person if the funds in that designated account are less than the full amount of duty chargeable on the instrument.
+[37/2018]
+7.
+[
+Repealed by Act 33 of 1999
+]
+8.
+[
+Repealed by Act 33 of 1999
+]
+Composition of duty
+9.
+—(1) Where the Commissioner is of the opinion that it is impracticable or inexpedient to require that the duty payable under this Act should be charged and paid on each separate instrument, the Commissioner may by order authorise any person to compound the payment of duty on such instruments as may be specified in the order on the following conditions:
+(
+a
+)
+that the person delivers to the Commissioner accounts in respect of the instruments at a date to be specified by the Commissioner in such form and containing such particulars as the Commissioner may direct;
+(
+b
+)
+that, on delivery of the accounts required under paragraph (
+a
+), the person pays to the Commissioner the amount of duty due on all the instruments; and
+(
+c
+)
+that the person complies with such other requirements as the Commissioner may impose.
+[37/2018]
+(2) The Commissioner may, if the Commissioner thinks fit, waive any of the conditions in subsection (1).
+(3) Instruments in respect of which payment of duty by way of composition has been made under this section are, despite any other provision of this Act, deemed to be duly stamped.
+(4) The Commissioner may, by notice and for any reason the Commissioner deems fit, cancel any authorisation granted under subsection (1) and must, in such notice, specify the date from which the authorisation is cancelled.
+(5) Where a person fails or neglects to pay the whole of the amount of duty within the time required by subsection (1), the person shall be liable to pay, in addition to the unpaid amount of duty, a penalty under section 46.
+10.
+[
+Repealed by Act 33 of 1999
+]
+Where duty chargeable depends on duty paid on another instrument
+11.
+Where the duty with which an instrument is chargeable, or its exemption from duty, depends in any manner upon the duty actually paid in respect of another instrument, the payment of such last mentioned duty may, if application is made to the Commissioner for that purpose, and on production of both the instruments, be denoted upon such firstmentioned instrument in such manner as the Minister may by rules prescribe.
+Counterparts
+12.
+—(1) The duplicate or counterpart of an instrument chargeable with duty (except the counterpart of an instrument chargeable as a lease, such counterpart not being executed by or on behalf of any lessor or grantor) is not to be deemed duly stamped unless it is stamped as an original instrument.
+[23/2011]
+(2) Without affecting subsection (1), the duplicate or counterpart of an instrument executed before 19 February 2011 and chargeable with duty is deemed duly stamped if it appears from the stamp certificate for the instrument that the instrument is a duplicate or counterpart.
+[23/2011]
+Instrument exempt from duty if its original is stamped, etc.
+12A.
+An instrument (whether it is the original or a duplicate or counterpart of an instrument) executed on or after 19 February 2011 is exempt from duty if the original or a duplicate or counterpart (as the case may be) of that instrument has been duly stamped.
+[23/2011]
+Valuation for duty
+Currency and securities
+13.
+—(1) Where an instrument is chargeable with ad valorem duty in respect of —
+(
+a
+)
+any money expressed in any currency other than that of Singapore; or
+(
+b
+)
+any stock or marketable or other security,
+the duty is to be calculated on the value, on the day of the date of the instrument, of the money in the currency of Singapore according to the current rate of exchange, or of the stock or security according to the average price of the stock or security or, if there is no price, according to the value of the stock or security.
+(2) Where an instrument contains a statement of current rate of exchange or average price (as the case may require) and is stamped in accordance with that statement, the instrument, so far as regards the subject matter of the statement, is presumed, until the contrary is proved, to be duly stamped.
+Instruments reserving interest
+14.
+When interest or goods and services tax is expressly made payable by the terms of an instrument, the instrument is not chargeable with duty higher than that with which the instrument would have been chargeable if no mention of interest or goods and services tax had been made in the instrument.

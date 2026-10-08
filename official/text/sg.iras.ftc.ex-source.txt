@@ -1,0 +1,81 @@
+Computation of FTC for a company that receives foreign income 
+(Source-by-Source and Country-by-Country) 
+Company ABC Pte Ltd derived and received the following income during financial year 2020 [i.e. 
+Year of Assessment (YA) 2021]: 
+ 
+Amount 
+Foreign 
+tax paid 
+Expenses 
+applicable to 
+foreign income 
+Service Income – Local 
+$300,000 
+Service Income – From Country X 
+$50,000 
+$10,000 
+Deductible expenses & capital allowances for 
+service income 
+$15,000 
+Foreign income – interest (From Country Y) 
+$20,000 
+$1,000 
+$100 
+ 
+Company ABC Pte Ltd is entitled to claim foreign tax credit on the service income of $50,000 from 
+Country X and interest income of $20,000 from Country Y. 
+ 
+Tax Computation for YA 2021 
+$ 
+Service income - Local 
+300,000 
+Service income - Foreign Country X 
+50,000  (A) 
+Total service income 
+350,000 (B) 
+Less: Deductible expenses and capital allowances 
+(15,000) 
+335,000 (C) 
+Interest (Country Y) [20,000 - 100] 
+19,900  (D) 
+Total statutory income 
+354,900 (E) 
+Less: Approved donations (assumed) 
+ (1,000)  
+Chargeable income (before exempt amount) 
+353,900 
+Less: Partial tax exemption 
+(102,500)  
+Chargeable income (after exempt amount) 
+251,400  
+Tax payable @ 17% 
+42,738.00 (F) 
+Less: Foreign tax credit 
+(6,763.08)  # 
+Net tax payable 
+35,974.92 
+ 
+
+#Calculation of Foreign Tax Credit 
+$ 
+Singapore tax payable on service income from Foreign Country X 
+  
+5,763.08  
+[A/B x C/E x F] 
+Foreign tax paid in Foreign Country X 
+  
+10,000.00  
+Foreign tax credit = lower of Singapore tax payable or foreign tax paid 
+  
+5,763.08  
+Singapore tax payable on interest income from Foreign Country Y 
+  
+2,396.41  
+[D/E x F] 
+Foreign tax paid in Foreign Country Y 
+  
+1,000.00  
+Foreign tax credit = lower of Singapore tax payable or foreign tax paid 
+  
+1,000.00  
+ 

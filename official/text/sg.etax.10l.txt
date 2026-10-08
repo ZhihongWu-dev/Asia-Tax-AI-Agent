@@ -1,0 +1,1977 @@
+ 
+ 
+ 
+0 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+IRAS e-Tax Guide 
+ 
+Income Tax: Tax Treatment of Gains or Losses 
+from the Sale of Foreign Assets 
+(Third Edition) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Published by 
+Inland Revenue Authority of Singapore 
+ 
+ 
+ 
+ 
+Published on 6 June 2025 
+ 
+First edition on 8 December 2023 
+Second edition on 9 December 2024 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Disclaimers: IRAS shall not be responsible or held accountable in any way for any damage, loss or 
+expense whatsoever, arising directly or indirectly from any inaccuracy or incompleteness in the 
+Contents of this e-Tax Guide, or errors or omissions in the transmission of the Contents. IRAS shall not 
+be responsible or held accountable in any way for any decision made or action taken by you or any 
+third party in reliance upon the Contents in this e-Tax Guide. Except where specific contents carry legal 
+force, this information aims to provide a better general understanding of taxpayers’ tax obligations 
+and is not intended to comprehensively address all possible tax issues that may arise. While every effort 
+has been made to ensure that this information is consistent with existing law and practice, should there 
+be any changes, IRAS reserves the right to vary its position accordingly. 
+ 
+ 
+© Inland Revenue Authority of Singapore 
+ 
+All rights reserved. No part of this publication may be reproduced or transmitted in any form or by any 
+means, including photocopying and recording without the written permission of the copyright holder, 
+application for which should be addressed to the publisher. Such written permission must also be 
+obtained before any part of this publication is stored in a retrieval system of any nature. 
+
+Tax Treatment of Gains or Losses from Sale of Foreign Assets 
+ 
+ 
+Table of Contents 
+1. 
+Aim .......................................................................................................... 1 
+2. 
+At a Glance .............................................................................................. 1 
+3. 
+Tax Treatment of Disposal Gains Prior to 1 January 2024 ...................... 2 
+4. 
+Tax Treatment of Disposal Gains From 1 January 2024 ......................... 2 
+5. 
+Covered Entities ...................................................................................... 3 
+6. 
+Covered Income ...................................................................................... 5 
+7. 
+Scenarios where the Sale or Disposal of Foreign Assets 
+(Excluding IPRs) are Not Subject to Tax ................................................. 5 
+8. 
+Meeting of Economic Substance Requirement in Singapore ................... 7 
+9. 
+Tax Treatment of Gains from the Sale or Disposal of Foreign IPRs
+ .............................................................................................................. 13 
+10. Ascertainment of Gains Chargeable to Tax ........................................... 16 
+11. Adjustment to Open-Market Price .......................................................... 18 
+12. Foreign Tax Credit ................................................................................. 19 
+13. Exemption from Tax for Individuals Who Receive Gains from the 
+Sale of Foreign Assets by an Entity ....................................................... 19 
+14. Administrative Requirements for covered entities with covered 
+income ................................................................................................... 20 
+15. Advance Ruling on Adequacy of Economic Substance ......................... 21 
+16. Contact Information ............................................................................... 21 
+17. Frequently Asked Questions ................................................................. 22 
+18. Updates and Amendments .................................................................... 27 
+Annex A – List of Assets which are Determined to be Situated Outside 
+Singapore .............................................................................................. 28 
+Annex B – Guidance on the Core Income Generating Activities in 
+relation to the Economic Substance Requirement for Each Sector
+ .............................................................................................................. 29 
+Annex C – Example of a Transitional Measure for Tracking and Tracing 
+of Expenditures of IP Assets ................................................................. 31 
+Annex D – Computation of Foreign-sourced Disposal Gains ......................... 33 
+Annex E – Illustration of the Utilisation of Losses .......................................... 34 
+ 
+ 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+1 
+ 
+1. 
+Aim 
+ 
+1.1 
+ This e-Tax Guide explains the income tax treatment of gains or losses from 
+the sale or disposal of any movable or immovable property situated outside 
+Singapore (referred to as “foreign asset”). 
+ 
+1.2 
+ This e-Tax Guide is relevant to entities1 that derive gains or losses from the 
+sale of foreign assets.   
+ 
+ 
+2. 
+At a Glance 
+ 
+2.1 
+Currently, gains from the sale of foreign assets that are capital in nature are 
+not taxable.    
+ 
+2.2 
+To address international tax avoidance risks relating to non-taxation of 
+disposal gains in the absence of real economic activities, Singapore has 
+amended its foreign-sourced income regime to subject foreign-sourced 
+disposal gains to tax under specific circumstances. The amendment is in line 
+with Singapore’s focus on anchoring substantive economic activities in 
+Singapore and our longstanding policy to align key areas of our tax regime 
+with international norms.  
+ 
+2.3 
+Singapore will treat gains from the sale or disposal of foreign assets as 
+income chargeable to tax under section 10(1)(g) of the Income Tax Act 1947 
+(“ITA”) if:  
+ 
+a) the gains are not otherwise chargeable to tax under section 10(1) of the 
+ITA; or 
+ 
+b) the gains are otherwise exempt from tax under the ITA. 
+ 
+Such gains are referred to in this guide as “foreign-sourced disposal gains”. 
+ 
+2.4 
+Foreign-sourced disposal gains will be chargeable to tax under section 
+10(1)(g) of the ITA when the gains are received in Singapore from outside 
+Singapore by a covered entity and: 
+ 
+a) the covered entity that derived the gains does not have adequate 
+economic substance in Singapore; or 
+ 
+b) the covered entity derived the gains from a disposal of foreign Intellectual 
+Property Rights (“IPRs”)2. 
+ 
+ 
+1 More details on the covered entities can be found in paragraph 5 of this guide. 
+2 More details on the tax treatment of gains from disposal of foreign IPRs can be found in paragraph 
+9 of this guide. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+2 
+ 
+2.5 
+The changes will apply to the sale or disposal of a foreign asset that occurs 
+on or after 1 January 2024.  
+ 
+ 
+3. 
+Tax Treatment of Disposal Gains Prior to 1 January 2024 
+ 
+3.1 
+Singapore taxes gains from the sale or disposal of assets as income when 
+the gains are revenue in nature, regardless of whether the income is 
+Singapore-sourced or foreign-sourced (taxed when received in Singapore). 
+Whether a gain from the sale or disposal of an asset is treated as capital or 
+revenue in nature is determined with regard to the facts or circumstances of 
+each case and with reference to the principles established in case law. The 
+factors considered are drawn from established case law principles 
+(commonly referred to as the “badges of trade”).   
+ 
+3.2 
+Apart from the above, Singapore does not tax gains from the sale or disposal 
+of assets that are capital in nature, whether they are foreign-sourced or 
+Singapore-sourced.   
+ 
+ 
+4. 
+Tax Treatment of Disposal Gains From 1 January 2024 
+ 
+4.1 
+Under the new foreign-sourced disposal gains tax regime (legislated in 
+“section 10L of the ITA”), foreign-sourced disposal gains (subject to 
+paragraph 2.3 above) received in Singapore by an entity of a relevant group 
+(see paragraph 5 below) from the sale or disposal of a foreign asset, will be 
+treated as income chargeable to tax under section 10(1)(g) of the ITA under 
+certain circumstances.  
+ 
+4.2 
+The foreign-sourced disposal gains will be subject to tax if the entity does not 
+have adequate economic substance in Singapore or the gains are from the 
+disposal of a foreign IPR, and the sale or disposal of the foreign asset occurs 
+on or after 1 January 2024.  
+ 
+4.3 
+For example, if an entity (with a financial year ending 31 December) disposes 
+a foreign asset on 1 June 2023, and the disposal gains are received in 
+Singapore on 1 June 2024, such gains will not be subject to tax in Singapore. 
+If the disposal of the foreign asset instead occurs on 1 June 2024, and the 
+disposal gains are received in Singapore on 1 June 2025, the disposal gains 
+will be subject to tax in Singapore in the year of assessment ("YA") 2026, 
+unless the gains from the disposal of the asset (not being a foreign IPR) are 
+derived from or incidental to the business activities or operations of an entity 
+mentioned in paragraph 7 or by an entity that is able to meet the economic 
+substance requirement in paragraph 8.  
+ 
+ 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+3 
+ 
+4.4 
+The foreign-sourced disposal gains are regarded as received in Singapore 
+and chargeable to tax if such gains meet the conditions set out in section 
+10L(9) of the ITA, i.e., they are: 
+ 
+a) remitted to, or transmitted or brought into, Singapore; 
+ 
+b) applied in or towards satisfaction of any debt incurred in respect of a trade 
+or business carried on in Singapore; 
+ 
+c) applied to the purchase of any movable property which is brought into 
+Singapore. 
+ 
+4.5 
+Generally, the foreign-sourced disposal gains are deemed to be received in 
+Singapore only if such gains belong to an entity that is located in Singapore. 
+Thus, foreign entities (i.e., not incorporated, registered or established in 
+Singapore) that are not operating in or from Singapore will not be within the 
+scope of section 10L of the ITA. For example, a foreign entity that only makes 
+use of the banking facilities in Singapore and has no operations in Singapore 
+is not within the scope of section 10L of the ITA. 
+ 
+ 
+5. 
+Covered Entities 
+ 
+5.1 
+Only entities3 of relevant groups (“covered entities”) will be within the scope 
+of section 10L of the ITA.  
+ 
+5.2 
+An entity is a member of a group of entities if its assets, liabilities, income, 
+expenses and cash flows are: 
+ 
+a) included in the consolidated financial statements4 of the parent entity of 
+the group; or 
+ 
+b) excluded from the consolidated financial statements of the parent entity 
+of the group solely on size or materiality grounds or on the grounds that 
+the entity is held for sale. 
+ 
+ 
+ 
+ 
+ 
+3 An “entity” means — 
+a) any legal person (including a company, limited liability partnership) but not an individual; 
+b) a general partnership or limited partnership; or 
+c) a trust. 
+4  “Consolidated financial statements” means financial statements prepared by an entity in 
+accordance with generally accepted accounting standards, in which the assets, liabilities, income, 
+expenses and cash flows of an entity, and the entities in which it has a controlling interest, are 
+presented as those of a single economic unit. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+4 
+ 
+5.3 
+A group is a relevant group if: 
+ 
+a) the entities of the group are not all incorporated, registered or established 
+in Singapore; or 
+ 
+b) any entity of the group has a place of business outside Singapore. 
+ 
+5.4 
+The definition of a relevant group in paragraph 5.3 means that a group with 
+only Singapore entities and operates only in Singapore will not fall within the 
+scope of section 10L of the ITA. However, if one of the entities of the group 
+has a place of business (e.g., a branch or a permanent establishment) in a 
+foreign jurisdiction, the group is considered a relevant group for the purpose 
+of section 10L of the ITA.  
+ 
+Examples – Whether an entity falls within the scope of section 10L of 
+the ITA 
+ 
+5.5 
+Example 1: A Singapore company is not a member of a group (i.e., it is a 
+single entity) and it has an overseas branch. The foreign-sourced disposal 
+gains received by the company will not fall within the scope of section 10L of 
+the ITA as the company and its overseas branch are considered one legal 
+entity. 
+ 
+5.6 
+Example 2: A Singapore company and its Singapore subsidiary are members 
+of a group (i.e., the group comprises two Singapore entities) where the 
+Singapore company has a place of business in a foreign jurisdiction by virtue 
+of its foreign branch. The foreign-sourced disposal gains received by the 
+Singapore company will fall within the scope of section 10L of the ITA as 
+there is more than one legal entity in the group (i.e., the Singapore company 
+and its subsidiary are members of a group). 
+ 
+5.7 
+Example 3: Fund A is an investment fund established in Singapore. It has an 
+office in Singapore, and carries out in Singapore various transactions in 
+shares of companies in Jurisdiction B. It receives gains from the sale of foreign 
+shares from Jurisdiction B which are capital in nature. Following the generally 
+accepted accounting standards of Singapore, Fund A is not required to 
+consolidate with its investee companies when preparing its financial 
+statements. Since Fund A is not included in any consolidated financial 
+statements and the reason is not due to size, materiality grounds, or on the 
+grounds that the entity is held for sale, it will not fall within the scope of section 
+10L of the ITA. 
+ 
+ 
+ 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+5 
+ 
+6. 
+Covered Income   
+ 
+6.1 
+The gains from the sale or disposal of any movable or immovable property 
+situated outside Singapore (“covered income”) of a covered entity will be 
+subject to tax under section 10L of the ITA. Common examples where assets 
+are determined to be situated outside Singapore are as follows: 
+ 
+a) immovable property is situated outside Singapore; 
+ 
+b) equity securities and debt securities are registered in a foreign exchange;  
+ 
+c) unlisted shares are issued by a company incorporated outside Singapore; 
+ 
+d) loans where the creditor is a resident in a jurisdiction outside Singapore; 
+ 
+e) IPRs where the owner is a resident in a jurisdiction outside Singapore. 
+ 
+Please refer to Annex A for more examples of assets that are determined to 
+be situated outside Singapore. 
+ 
+ 
+7. 
+Scenarios where the Sale or Disposal of Foreign Assets (Excluding 
+IPRs) are Not Subject to Tax  
+ 
+7.1 
+Section 10L of the ITA will not apply to gains from the sale or disposal of a 
+foreign asset (not being a foreign IPR) when it is: 
+ 
+a) carried out as part of, or incidental to, the business activities of   
+ 
+i) a bank licensed under the Banking Act 1970; 
+ii) a merchant bank licensed under the Banking Act 1970; 
+iii) a finance company licensed under the Finance Companies Act 1967; 
+iv) an insurer licensed or regulated under the Insurance Act 1966; or 
+v) a holder of a capital markets services licence under the Securities and 
+Futures Act 2001; 
+ 
+b) carried out as part of, or incidental to, the business activities or operations 
+of an entity which are incentivised under the following tax incentives in 
+Singapore in the basis period in which the sale or disposal occurred: 
+ 
+i) Aircraft Leasing Scheme5; 
+ii) Development and Expansion Incentive6; 
+iii) Finance and Treasury Centre Incentive7; 
+ 
+5 Refer to section 43N of the ITA. 
+6 Refer to Part 4 of the Economic Expansion Incentives (Relief from Income Tax) Act 1967 (“EEIA”). 
+7 Refer to section 43E of the ITA. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+6 
+ 
+iv) Financial Sector Incentive8; 
+v) Global Trader Programme9; 
+vi) Insurance Business Development Incentive10; 
+vii) Maritime Sector Incentive11; 
+viii)Pioneer Certificate Incentive12; 
+ 
+c) carried out by an entity that is able to meet the economic substance 
+requirement in Singapore (see paragraph 8 below) in the basis period in 
+which the sale or disposal occurred. 
+ 
+Example – Exclusion relating to business activities of an entity with tax 
+incentive in Singapore 
+ 
+7.2 
+Entity A has been granted a tax incentive (listed in paragraph 7.1b) up to the 
+period of 31 July 2025. Entity A disposes three foreign capital assets (not 
+being IPRs) during the financial year ended 31 December 2025 as follows: 
+ 
+a) Entity A disposes Foreign Asset X on 1 July 2025. The disposal of the 
+Foreign Asset X is determined to be carried out as “part of or incidental to 
+the incentivised business”. In this regard, the gain from the disposal of 
+Foreign Asset X will not be subject to tax.  
+ 
+b) Entity A disposes Foreign Asset Y on 15 July 2025. The disposal of the 
+Foreign Asset Y is determined not to be carried out as “part of or incidental 
+to the incentivised business” (e.g., disposal of foreign immovable property 
+which was used to derive rental income and not in the course of carrying 
+out its incentivised activity). In this regard, the gain from disposal of 
+Foreign Asset Y will be subject to tax upon remittance unless Entity A is 
+able to meet the economic substance requirement in Singapore under 
+paragraph 8 below. 
+ 
+c) Entity A disposes the Foreign Asset Z on 1 September 2025. As the 
+disposal occurs after the incentive period, the disposal of Foreign Asset 
+Z is not carried out as “part of or incidental to the incentivised business”. 
+In this regard, the gain from disposal of Foreign Asset Z will be subject to 
+tax upon remittance unless Entity A is able to meet the economic 
+substance requirement in Singapore under paragraph 8 below. 
+ 
+ 
+ 
+ 
+8 Refer to section 43J of the ITA. 
+9 Refer to section 43I of the ITA. 
+10 Refer to sections 43C and 43R of the ITA. 
+11 Refer to sections 13A, 13E, 13P, 43L, 43P, 43Q and 43U of the ITA. 
+12 Refer to Parts 2 and 3 of the EEIA. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+7 
+ 
+8. 
+Meeting of Economic Substance Requirement in Singapore 
+ 
+8.1 
+Foreign-sourced disposal gains from the sale or disposal of a foreign asset 
+(not being an IPR) will not be brought to tax if the entity has adequate 
+economic substance in the basis period in which the sale or disposal occurs. 
+The economic substance requirement will not be applied at a jurisdictional 
+level for a group. It will be assessed at the entity level, except for the scenario 
+mentioned in paragraphs 8.12 and 8.13. 
+ 
+(A) Pure equity-holding entity 
+ 
+8.2 
+A pure equity-holding entity is an entity: 
+ 
+a) whose function is to hold shares or equity interests in any other entity; and 
+ 
+b) has no income other than — 
+i) dividends or similar payments from the shares or equity interests13;  
+ii) gains on the sale or disposal of the shares or equity interests; or 
+iii) income incidental to its activities of holding shares or equity interests. 
+ 
+8.3 
+To meet the economic substance requirement, the entity is required to satisfy 
+all the following conditions in the basis period in which the sale or disposal 
+occurs: 
+ 
+a) the entity submits to a public authority any return, statement or account 
+required under the written law under which it is incorporated or registered, 
+being a return, statement or account which it is required by that law to 
+submit to that authority on a regular basis;  
+ 
+b) the operations of the entity are managed and performed in Singapore 
+(whether by its employees or outsourced to third parties or group entities); 
+and 
+ 
+c) the entity has adequate human resources and premises14 in Singapore to 
+carry out the operations of the entity. 
+ 
+13 “Equity interest”, in relation to an entity, means an interest that carries rights to the profits, capital 
+or reserves of the entity and is accounted for as equity under generally accepted accounting 
+principles. 
+14 A pure equity-holding entity will be considered as meeting the “adequate premises” criterion if:  
+a) it has an office in Singapore for the use of its employee(s) (including rented premises or co-
+working office spaces); 
+b) it shares a premise with an associated entity for the use of its employee(s); or  
+c) the outsourced service provider performing the pure equity-holding entity’s core income 
+generating activity has an office in Singapore. 
+A pure registered address (e.g., address of the corporate secretary) that is not used by the pure 
+equity-holding entity’s employees or outsourced service provider to perform the pure equity-holding 
+entity’s core income generating activity will not meet the “adequate premises” criterion. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+8 
+ 
+Examples – Pure equity-holding entity 
+ 
+8.4 
+Example 1: Company A, a pure equity-holding entity, holds shares issued by 
+Company B, a foreign-incorporated company. During the financial year 2024, 
+Company A disposes some Company B shares.  
+ 
+Company A has an employee15 in Singapore, and it shares an office with an 
+associated company in Singapore. During the financial year 2024, the 
+employee manages the investments (e.g., the employee monitors/ reviews 
+the performance of the investments or makes buy/ sell decisions on the 
+investments) and ensures that Company A complies with its filing 
+requirements with Accounting and Corporate Regulatory Authority and Inland 
+Revenue Authority of Singapore. In this regard, Company A will be regarded 
+as having met the economic substance requirement for the financial year 
+2024. 
+ 
+8.5 
+Example 2: Limited Partnership C, a pure equity-holding entity, disposes 
+some shares of Company D, a foreign-incorporated company, during the 
+financial year 2024. Limited Partnership C is managed by General Partner E 
+which is incorporated and is a tax resident in Singapore. General Partner E 
+has an executive director based in Singapore which manages Limited 
+Partnership C's investments. General Partner E has an office for the 
+executive director to perform his duties of managing Limited Partnership C’s 
+investments. 
+ 
+In the financial year 2024, the executive director of General Partner E 
+ensures that Limited Partnership C complies with filing requirements, and 
+engages and monitors the activities carried out by outsourced service 
+providers on behalf of Limited Partnership C. As such, Limited Partnership C 
+will be regarded as having met the economic substance requirement for the 
+financial year 2024.   
+ 
+8.6 
+Example 3: Company F is a pure equity-holding entity incorporated in 
+Singapore. It holds shares in an investee entity outside Singapore. While 
+Company F engages a service provider in Singapore to handle its filing 
+matters, it only has one nominee director in Singapore. The management of 
+its equity investments, including decisions to buy or sell, are undertaken by 
+the company’s directors outside Singapore. Since Company F does not carry 
+out its core economic activities in Singapore, it is not able to meet the 
+economic substance requirement. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+15 Includes a director of the company (excluding nominee director). 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+9 
+ 
+(B) Non-pure equity-holding entity 
+ 
+8.7 
+A non-pure equity-holding entity is an entity that is not a pure equity-holding 
+entity.  
+ 
+8.8 
+The economic substance requirement will be determined based on an 
+analysis of the entity’s core income generating activities in Singapore (see 
+Annex B for guidance on the core income generating activities in relation to 
+the economic substance requirement for each sector). 
+ 
+8.9 
+To meet the economic substance requirement, the entity is required to satisfy 
+all the following conditions in the basis period in which the sale or disposal 
+occurs: 
+ 
+a) the operations of the entity are managed and performed in Singapore 
+(whether by its employees or outsourced to third parties or group entities); 
+and 
+ 
+b) the entity has adequate economic substance in Singapore, taking into 
+account the following considerations: 
+ 
+i) the number of full-time employees16 of the entity (or other persons 
+managing or performing the entity's operations) in Singapore; 
+ii) the qualifications and experience of such employees or other persons; 
+iii) the amount of business expenditure incurred by the entity in respect 
+of its operations in Singapore; 
+iv) whether the key business decisions of the entity are made by persons 
+in Singapore. 
+ 
+Examples – Non-pure equity-holding entity 
+ 
+8.10 Example 1: Company G is an investment holding entity in Singapore that 
+mainly invests in equities and provides loans to its related parties. As 
+Company G provides loans in addition to investing in equities, it is a non-pure 
+equity-holding entity. Company G disposes some shares in a foreign 
+company in 2024. 
+ 
+Company G has two full-time employees with relevant qualifications to 
+manage the investments in Singapore and they make decisions in relation to 
+the company’s investments and financing arrangements. It also incurs 
+ 
+16 The number of full-time employees includes:  
+(a) employees working at least 35 hours a week;  
+(b) executive directors; or 
+(c) full time equivalent of part-time employees. For example, two part-time employees with daily 
+working hours of 4 hours each will be considered one full-time employee. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+10 
+ 
+$100,000 of local business expenditure17 in 2024. It will be considered to 
+have met the economic substance requirement in 2024. 
+  
+8.11 Example 2: Company H is a small entity with an annual turnover of less than 
+$5 million. It is not a pure equity-holding entity or an investment holding entity. 
+It disposes some foreign assets in 2024. It employs one full-time employee 
+in Singapore to carry out its core income generating activity and make key 
+business decisions. It also incurs $50,000 of local business expenditure in 
+2024. It will be considered to have met the economic substance requirement 
+in 2024. 
+ 
+Economic substance test can be applied at the holding entity level on 
+behalf of its special purpose vehicles (“SPVs”)  
+ 
+8.12 A SPV is typically formed to ring-fence the risks of investments and does not 
+have headcount or significant expenditure residing within the SPV. If the 
+immediate holding entity: 
+ 
+a) has effective control18 over the SPV;  
+b) derives economic benefits from the activities carried out by the SPV; and 
+c) defines the core investment strategies that the SPV implements, 
+ 
+the immediate holding entity will not be considered a service provider of the 
+SPV but will be the entity to be subject to the economic substance 
+requirement.  
+ 
+8.13 If the immediate holding entity is also an SPV and another intermediate 
+holding entity/ ultimate holding entity19: 
+ 
+a) has effective control over the SPV (including the immediate holding entity 
+of the SPV if any); 
+b) derives economic benefits from the activities carried out by the SPV; and 
+c) defines the core investment strategies that the SPV implements, 
+ 
+the relevant intermediate holding entity/ ultimate holding entity would be 
+subject to the economic substance requirement.  
+ 
+ 
+ 
+ 
+ 
+17 Examples of business expenditure include rental expense, staff-related expenses like salaries, 
+and statutory expenses. 
+18 Financial Reporting Standard (“FRS”) 110 (Consolidated Financial Statements) establishes control 
+as the basis for determining who has to present and which entities are consolidated. For the purposes 
+of determining control for the purposes of section 10L, we will generally rely on FRS 110. 
+19 The economic substance requirement can be tested on the ultimate holding entity only if the 
+intermediate holding entity below the ultimate holding entity is also a SPV. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+11 
+ 
+Outsourcing of economic activities  
+ 
+8.14 The economic substance requirement takes into account outsourcing 
+arrangements where an entity outsources some or all of its economic 
+activities to third parties or group entities. 
+ 
+8.15 For an outsourcing arrangement to satisfy the economic substance 
+requirement, the following conditions must be satisfied: 
+ 
+a) the economic activities are to be carried out by the outsourced entity in 
+Singapore; 
+ 
+b) the outsourcing entity has a direct and effective control over the 
+outsourced activities carried out by the outsourced entity on its behalf (i.e., 
+the outsourcing entity has exercised adequate monitoring20 and control of 
+the economic activities carried out by the outsourced entity); and  
+ 
+c) the outsourced entity providing the outsourced services must set aside 
+dedicated resources (e.g., manhours) to provide the outsourced services.  
+ 
+8.16 When determining whether the outsourcing entity is able to satisfy the 
+economic substance requirement in respect of its economic activities, the 
+resources21 of the outsourced entity in Singapore will be considered. It is 
+generally expected to charge the outsourcing entity an arm’s-length fee for 
+the activities performed, subject to transfer pricing rules where applicable. 
+The outsourced entity can provide support to more than one entity, provided 
+that its resources are commensurate with the complexity and level of services 
+it provides to other entities. 
+ 
+Examples - Outsourcing of economic activities 
+ 
+8.17 Example 1: Singapore-listed Real Estate Investment Trust (“S-REIT”)  
+ 
+An S-REIT has an overseas related entity to hold its overseas real properties.  
+It engages a REIT Manager in Singapore. 
+  
+The role of the REIT Manager is to manage the S-REIT’s assets for the 
+benefit of unitholders, and it charges an arm’s length fee for its services. The 
+investment business activities, including the acquisition, disposal, and 
+management of the S-REIT’s investments, are conducted by the REIT 
+Manager in Singapore on behalf of the S-REIT.   
+ 
+ 
+20 The monitoring mechanism should be documented in an outsourcing agreement or internal 
+policies of the outsourcing entity. The documents could include relevant email correspondences. 
+21 It is possible for one employee of the outsourced entity to provide support to more than one entity. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+12 
+ 
+The REIT disposes some equity interest in the overseas related entity in 
+2024. The S-REIT will meet the economic substance requirement and 
+outsourcing rules in 2024 if: 
+ 
+a) the core income generating activity is carried out by its REIT Manager in 
+Singapore;  
+ 
+b) the trust deed sets out the following: 
+ 
+i) 
+the functions and responsibilities of the REIT Manager; 
+ii) provision for the termination of the services of the REIT Manager; 
+ 
+c) the REIT Manager has set aside dedicated resources to perform its 
+functions and responsibilities as per the trust deed; and 
+ 
+d) the REIT Manager charges an arm’s length fee for its services.  
+ 
+ 
+ 
+8.18 Example 2: Private Trust - A trust will meet the economic substance 
+requirement and outsourcing rules if: 
+ 
+a) the core income generating activity is carried out by its Trustee in 
+Singapore;  
+ 
+b) the trust deed sets out the following: 
+ 
+i) the functions and responsibilities of the Trustee; 
+ii) provision for the termination of the services of the Trustee; 
+ 
+c) the Trustee has set aside dedicated resources to perform its functions and 
+responsibilities as per the trust deed; and 
+ 
+d) the Trustee charges an arm’s length fee for its services.  
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+13 
+ 
+8.19 Example 3: Registered Business Trust - A registered business trust will meet 
+the economic substance requirement and outsourcing rules if: 
+ 
+a) the core income generating activity is carried out by its Trustee-manager 
+in Singapore;  
+ 
+b) trust deed sets out the following: 
+ 
+i) 
+the functions and responsibilities of the Trustee-manager; 
+ii) provision for the termination of the services of the Trustee-manager; 
+ 
+c) the Trustee-manager has set aside dedicated resources to perform its 
+functions and responsibilities as per the trust deed; and 
+ 
+d) the Trustee-manager charges an arm’s length fee for its services.  
+ 
+ 
+9. 
+Tax Treatment of Gains from the Sale or Disposal of Foreign IPRs 
+ 
+9.1 
+The tax treatment of gains from the sale or disposal of foreign IPRs is different 
+from that of other foreign assets. The non-taxation of foreign-sourced 
+disposal gains for entities in paragraphs 7 and 8 is not applicable to gains 
+from disposal of foreign IPRs.  
+ 
+Qualifying foreign IPRs 
+ 
+9.2 
+For gains from the sale or disposal of qualifying foreign IPRs as defined in 
+section 43X22 of the ITA, a modified nexus approach is used to determine the 
+extent of such gains that will not be taxable when received in Singapore.  
+ 
+9.3 
+The modified nexus approach is an international standard set by the   
+Organisation for Economic Co-operation and Development (“OECD”), which 
+permits jurisdictions to provide tax benefits to the income arising out of a 
+qualifying IPR, so long as there is a direct nexus between the income 
+receiving benefits and expenditures contributing to that income.   
+ 
+9.4 
+Qualifying IPR means: 
+ 
+a) any patent under the Patents Act 1994 or the equivalent law of any 
+country or territory; 
+ 
+b) an application for a patent under the Patents Act 1994 or the equivalent 
+law of any country or territory; 
+ 
+c) any copyright subsisting in software by virtue of the Copyright Act 2021 
+or the equivalent law of any country or territory, 
+ 
+22 Refer to the concessionary rate of tax for intellectual property income. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+14 
+ 
+and includes a family of qualifying IPRs. 
+ 
+9.5 
+The definition of the “modified nexus ratio” is calculated in accordance with 
+the following formula and is capped at 100%:  
+ 
+Modified Nexus Ratio23 = 
+QE x 130% 
+QE + NE 
+ 
+Where  
+QE  
+means the qualifying Research and Development24 (“R&D”) 
+expenditure incurred in respect of the qualifying IPR to 
+which the qualifying IP income disposal gains relate. 
+ 
+Qualifying R&D expenditure25 
+a) Direct R&D expenditure incurred by the entity (except 
+under a cost-sharing agreement (“CSA”)) on the 
+qualifying IPR; 
+b) Expenditure incurred for R&D carried out on behalf of the 
+entity (except under a CSA) by (i) an unrelated party, or 
+(ii) a Singapore-resident related party in Singapore; and 
+c) Payments made by the entity under a CSA (except 
+excluded CSAs26) to carry out R&D. 
+NE  
+ 
+means the non-qualifying expenditure incurred in respect of 
+the qualifying IPR. 
+ 
+Non-qualifying expenditure 
+a) Expenditure (including licensing fees) incurred (except 
+under a CSA) to obtain a qualifying IPR on which the 
+entity has carried out R&D; 
+b) Expenditure incurred for R&D carried out on behalf of the 
+entity (except under a CSA) by a related party, where the 
+related party is a non-resident or the R&D is carried out 
+outside Singapore;  
+c) Payments under excluded CSAs to carry out R&D; and 
+d) Buy-in payments to become a party to a CSA to obtain a 
+qualifying IPR. 
+ 
+ 
+ 
+23 Please refer to Part 1 of the Schedule of the Income Tax (Concessionary rate of tax for intellectual 
+property income) Regulations 2021. 
+24 Section 2 of the ITA provides a definition of R&D. 
+25 Refer to the full definition in paragraph 1 of Part 1 of The Schedule of the Regulations. It excludes 
+interest payment or any payment for land or building, or any alteration, addition, or extension to any 
+building. 
+26 Excluded CSAs are CSAs where none of the R&D under the CSA is carried out by (i) the entity; 
+(ii) an unrelated party; or (iii) a Singapore-resident related party where the R&D is carried out in 
+Singapore.  
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+15 
+ 
+9.6 
+The modified nexus ratio is applied to calculate the portion of disposal gains 
+that will not be subject to tax when received in Singapore by the entity, which 
+is ascertained in accordance with the following formula: 
+ 
+Gains not subject to tax = Disposal gains of qualifying IPR x Modified Nexus 
+Ratio 
+ 
+Consequently, the gains subject to tax under section 10L is ascertained in 
+accordance with the following formula:  
+ 
+Gains subject to tax = Total gains – Gains not subject to tax 
+ 
+Non-qualifying foreign IPRs 
+ 
+9.7 
+For non-qualifying foreign IPRs, the full amount of the gains from the sale or 
+disposal of the IPRs will be subject to tax when such gains are received in 
+Singapore. This is regardless of whether the entity has adequate economic 
+substance in Singapore. 
+ 
+Example – Modified nexus approach 
+ 
+9.8 
+Entity A disposes two foreign IPRs: 
+ 
+a) Example 1: A patent is disposed with a disposal gain of $300,000 in 2024. 
+The total qualifying expenditure incurred for the connected R&D carried 
+out by Entity A was $100,000, and the non-qualifying expenditure incurred 
+by Entity A to obtain the right was $200,000.  
+ 
+Where the gain of $300,000 is received in Singapore in 2025, the amount 
+of the gain that is not subject to tax is calculated as follows:  
+ 
+Modified nexus ratio = ($100,000 x 130%) / ($100,000+$200,000)  
+ 
+$300,000 x [($100,000 x 130%) / ($100,000+$200,000)] = $130,000 
+ 
+Amount of gain that is subject to tax when it is received in Singapore: 
+  
+$300,000 - $130,000 = $170,000 
+ 
+b) Example 2: A marketing-related IP asset is disposed in 2024 with a 
+disposal gain of $100,000. The IP asset is not a qualifying IPR as defined 
+in paragraph 9.4. As such, the full amount of the gain of $100,000 will be 
+subject to tax when it is received in Singapore in 2025.  
+ 
+Transitional arrangement 
+ 
+9.9 
+As a transitional measure, an entity is allowed to apply a transitional nexus 
+ratio. For the transitional nexus ratio, the expenditures (i.e., the QE and NE) 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+16 
+ 
+are calculated based on three-year rolling average or expenditure incurred 
+during the R&D period (if this is less than the three-year rolling average), 
+instead of cumulative expenditure from the date the entity first incurs R&D 
+expenditure in connection with the qualifying IPR. 
+ 
+9.10 The purpose of the transitional nexus ratio is to allow sufficient time for 
+taxpayers to adapt to the tracking and tracing requirements while still 
+complying with the general principles of the nexus approach. After the 
+transitional period of three years, the entity would transition from using the 
+three-year average to the modified nexus ratio.  
+ 
+9.11 Please refer to an example of a transitional measure for tracking and tracing 
+of expenditures in Annex C. 
+ 
+ 
+10. 
+Ascertainment of Gains Chargeable to Tax 
+ 
+10.1 The following deductions may be allowed to ascertain the amount of gains 
+from the sale or disposal of foreign assets chargeable to tax in Singapore: 
+ 
+a) Any expenditure (except those mentioned in paragraph 10.2) incurred by 
+the entity: 
+i) to acquire, create or improve the foreign asset;  
+ii) to protect or preserve the value of the foreign asset; or  
+iii) to sell or dispose the foreign asset.  
+ 
+The expenditure will include expenses incurred to finance the acquisition, 
+creation, and improvement of the foreign asset.  
+ 
+b) Any loss (subject to paragraph 10.6) incurred by the entity from the sale 
+or disposal of any other foreign asset. 
+ 
+10.2 The following expenditures are not deductible: 
+ 
+a) Any expenditure that has been allowed a deduction against any other 
+income, whether or not such income is chargeable or exempt from tax; or 
+ 
+b) Capital expenditure computed by the following formula: 
+ 
+ 
+  
+ 
+ 
+D-E 
+ 
+where: 
+D is the amount of capital expenditure of the foreign asset for which any 
+capital allowance (including any balancing allowance) is made against any 
+other income; and 
+ 
+E is the amount of any balancing charge (or similar charge) made on the sale 
+or disposal of the foreign asset. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+17 
+ 
+ 
+Examples - To illustrate paragraph 10.2(b) 
+ 
+10.3 Example 1: Entity A purchases an equipment at $300,000 during the financial 
+year 2023. On 31 December 2024, Entity A disposes the equipment at 
+$350,000. Entity A has claimed capital allowances on the equipment of 
+$200,000 in YA 2024 and YA 2025. In addition, a balancing charge, capped 
+at $200,000 is made in YA 2025. 
+ 
+The following expenditure will not be deductible: 
+= D – E  
+= $200,000 (capital allowances claimed) - $200,000 (balancing charge) 
+= $0 
+ 
+The amount of gains that will be subject to tax under section 10L: 
+= Sales proceeds – historical cost + capital expenditure that is not deductible 
+based on the formula of D-E  
+= $350,000 - $300,000 + $0 
+= $50,000 
+ 
+10.4 Example 2: Entity B purchases an equipment at $600,000 during the financial 
+year 2023. On 31 December 2024, Entity B disposes the equipment at 
+$250,000. Entity B has claimed capital allowances on the equipment of 
+$400,000 in YA 2024 and YA 2025. In addition, a balancing charge of 
+$50,000 is made in YA 2025. 
+ 
+The following expenditure will not be deductible: 
+= D – E  
+= $400,000 (capital allowances claimed) - $50,000 (balancing charge) 
+= $350,000 
+ 
+The amount of gains that will be subject to tax under section 10L: 
+= Sales proceeds – historical cost + capital expenditure that is not deductible 
+based on the formula of D-E  
+= $250,000 - $600,000 + $350,000 
+= $0 
+ 
+10.5 Where not all the gains from the sale or disposal of a foreign asset are 
+received in Singapore in the same basis period, a portion of the amount 
+deductible under paragraph 10.1(a) above as the Comptroller of Income Tax 
+(“Comptroller”) considers reasonable is deductible for each basis period in 
+which any such gains are received in Singapore. Please refer to Annex D 
+which illustrates the computation of the foreign-sourced disposal gains.  
+ 
+10.6 The loss mentioned in paragraph 10.1(b) above may be deducted subject to 
+the following: 
+ 
+a) Had the sale or disposal of the foreign asset resulted in a gain, the gain 
+would have been subject to tax under section 10L of the ITA;  
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+18 
+ 
+b) The loss can only be used to set off against foreign-sourced disposal 
+gains that have been chargeable to tax; and 
+ 
+c) The balance of loss not so set off will be carried forward to set off against 
+the foreign-sourced disposal gains that are chargeable to tax in Singapore 
+in a future YA.  
+ 
+10.7 Please refer to Annex E which illustrates the utilisation of losses. 
+ 
+ 
+11. 
+Adjustment to Open-Market Price 
+ 
+11.1 Where the sale or disposal of a foreign asset by the entity was at a price less 
+than the open-market price for the foreign asset, the Comptroller may treat 
+the following amount as the amount of the gains received in Singapore: 
+ 
+ 
+ 
+ 
+A + B - C 
+  
+where: 
+A is the amount of the gains actually received in Singapore; 
+B is the open-market price for the foreign asset; and 
+C is the actual price for the sale or disposal of the foreign asset. 
+ 
+11.2 The open-market price for a foreign asset is either: 
+ 
+a) the price which the foreign asset could have been sold for in the open 
+market on the date of its sale or disposal; or 
+ 
+b) where the Comptroller is satisfied by reason of the special nature of the 
+foreign asset that it is not practicable to determine the price mentioned in 
+paragraph (a), such other value as appears to the Comptroller to be 
+reasonable in the circumstances. 
+ 
+11.3 If no amount of the gain is received in Singapore, the Comptroller will not tax 
+the difference between the open market price and the actual price of the 
+foreign asset. The Comptroller will tax the difference between the open 
+market price and the actual price of the foreign asset in the year when there 
+is an amount of gain received in Singapore.   
+ 
+ 
+ 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+19 
+ 
+Example - Adjustment to Open-Market Price 
+ 
+11.4 Entity A sells a foreign asset to its related party, Entity B for $250,000 in 2024 
+and makes a gain of $30,000. Entity A remits $10,000 of the gain to 
+Singapore in the same year. The open market price for the foreign asset is 
+$600,000 on the date of its disposal. The Comptroller may treat the amount 
+of $360,000 ($10,000 + $600,000 – $250,000) as the gain received in 
+Singapore in 2024.   
+ 
+ 
+12. 
+Foreign Tax Credit 
+ 
+12.1 The foreign-sourced disposal gains received in Singapore may have been 
+taxed in the foreign jurisdiction before the gains are received in Singapore. A 
+Singapore tax resident entity may claim double taxation relief27,  unilateral 
+tax credit28, or elect for the foreign tax credit pooling system29 when claiming 
+the foreign tax credit to alleviate the foreign tax suffered on the foreign-
+sourced disposal gains. The foreign tax credit may be claimed within four 
+years after the year of remittance. 
+ 
+ 
+13. 
+Exemption from Tax for Individuals Who Receive Gains from the Sale 
+of Foreign Assets by an Entity 
+ 
+13.1 Tax exemption under section 13(1)(zu) of the ITA will be given on the capital 
+gains derived from the sale or disposal of a foreign asset where the gains are 
+assessable as the income of an individual. For example, where the covered 
+entity is a partnership and tax transparency treatment applies, the share of 
+capital gains from the sale or disposal of a foreign asset will be exempt from 
+tax in the hands of an individual partner of the partnership. 
+ 
+13.2 Tax exemption will not be given if the gains are business revenue gains. For 
+example, an individual Mr A is a partner of a partnership that buys/ sells 
+properties in both Singapore and Jurisdiction B. As tax transparency 
+ 
+27 A double taxation relief may be granted if the foreign tax is paid in accordance with the Avoidance 
+of Double Taxation Agreement provisions and is capped at the lower of the foreign tax paid and the 
+Singapore tax that would be payable on the same income.  
+28 Section 50A(1)(ha) of the ITA provides that unilateral tax credits can be allowed for any foreign tax 
+paid in respect of a gain that is treated as income under section 10L. 
+29 The foreign-sourced disposal gains received by the resident entity must satisfy all of the following 
+conditions: 
+i) 
+foreign income tax has been paid on the disposal gains in the foreign jurisdiction from which 
+the gains are derived; 
+ii) the headline tax rate of the foreign jurisdiction from which the disposal gains are derived is 
+at least 15% at the time the disposal gains are received in Singapore; and 
+iii) the foreign-sourced disposal gains are subject to tax in Singapore and entity is entitled to 
+claim for foreign tax credits under the ITA.  
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+20 
+ 
+treatment applies, the share of revenue gains from the sale or disposal of the 
+properties in Jurisdiction B will be taxable in the hands of Mr A. 
+ 
+ 
+14. 
+Administrative Requirements for covered entities with covered income 
+ 
+14.1 To ensure that entities keep track of the gains/ losses from disposal of foreign 
+assets and accurately report their taxes when such gains are received or 
+losses are utilised in Singapore, they are required to provide the following 
+information with respect to such gains/ losses in their tax computations when 
+submitting their annual income tax returns: 
+ 
+• Unremitted gains/ unutilised losses brought forward from prior YAs; 
+• Gains/ losses in the current financial year; 
+• Gains received/ losses utilised in Singapore during the financial year; 
+• Gains used30 during the year and not received in Singapore; 
+• Unremitted gains/ unutilised losses carried forward; 
+• Tracking of allowable expenses (foreign and local expenses) attributable 
+to the foreign-sourced gains/ losses; 
+• Information on economic substance in Singapore (for example, number 
+of employees, amount of operating expenditure, information on 
+outsourcing arrangements if business activities are outsourced); 
+• Gains/ losses of foreign IPRs not subject to tax under the Modified Nexus 
+Approach. 
+ 
+14.2 Entities are required to retain all records reasonably required for the 
+Comptroller to ascertain the amount of net gains from disposal of foreign 
+assets chargeable to tax. These supporting documents need not be 
+submitted with their annual Income Tax Returns, but they should be 
+submitted to the Comptroller for verification when requested. Such records 
+with respect to the gains/ losses from disposal of foreign assets may include, 
+but are not limited to, the following: 
+ 
+• Audited financial statements/ certified management accounts31 for the 
+financial year the gains/ losses were accrued; 
+• Supporting documents stating the principal activity of the entity for the 
+financial year the gains/ losses accrued (if there are no audited financial 
+statements); 
+• Payroll documents reflecting the number of full-time employees based 
+in Singapore for the financial year the gains/ losses were accrued; 
+ 
+30 This refers to the gains that are used in a manner that are not considered as received in Singapore, 
+such that the gains become permanently unavailable for subsequent remittance. One example of 
+such use is when the gains are kept offshore and used for payment of Singapore one-tier tax exempt 
+dividends directly to the shareholder’s bank account.  
+31 Certified management accounts can be submitted if the entity is exempt from audit requirements. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+21 
+ 
+• Supporting documents on the sales proceeds, historical costs and any 
+other expenditure incurred to derive the gains/ losses; 
+• Supporting documents reflecting the foreign tax paid by the entity in 
+relation to the gain (e.g., notice of assessment or tax receipt issued by 
+the foreign tax administration); 
+• Supporting documents to demonstrate monitoring and control of the 
+services provided by the outsourced entity; 
+• Supporting documents providing details of the IP assets; 
+• Supporting documents to calculate the Modified Nexus Ratio and amount 
+not subject to tax for qualifying IP assets. 
+ 
+ 
+15. 
+Advance Ruling on Adequacy of Economic Substance 
+ 
+15.1 You may make an application for advance ruling to seek certainty on the 
+adequacy of economic substance (“ESR AR applications”) when a 
+proposed sale or disposal of foreign assets is expected to occur. This is 
+provided that the proposed sale or disposal of foreign assets is envisaged to 
+take place within one year from the date of the application. 
+ 
+15.2 The advance ruling on the adequacy of economic substance, if issued32, may 
+be valid for up to five YAs, including the YA relating to the basis period in 
+which the proposed sale or disposal of foreign assets is envisaged to take 
+place. This means that the ruling may be applicable to the foreign-sourced 
+disposal gains from any subsequent sale or disposal of foreign assets within 
+the advance ruling validity period. This is provided that the relevant facts and 
+representations made for the purpose of the ruling application remain 
+unchanged and there is no change in the tax laws or our interpretation of the 
+tax laws. 
+ 
+15.3 Please refer to the IRAS website > Home > Taxes > Corporate Income Tax 
+> Specific Topics > Advance Ruling System for Income Tax > for more 
+information on the advance ruling system.  
+ 
+ 
+16. 
+Contact Information  
+ 
+16.1 For general enquiries or clarifications on this e-Tax guide, please call 
+1800 356 8622. 
+ 
+ 
+ 
+ 
+32 The Comptroller may decline to make a ruling under the circumstances specified in the Part 1 of 
+the Seventh Schedule of the ITA. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+22 
+ 
+17. 
+Frequently Asked Questions 
+ 
+Covered entity 
+ 
+1 My entity is a member of a group of Singapore companies, and one of the 
+members has a permanent establishment overseas. Will my entity be 
+considered an entity that falls within the scope of section 10L of the ITA? 
+ 
+Yes, the entity will fall within the scope of section 10L of the ITA. 
+ 
+2 A Singapore entity (Company A) holds a group of Singapore companies 
+with no place of business outside Singapore and an overseas associate 
+company (Company B). Company A accounts for the investment in 
+Company B using the equity method and the assets, liabilities, income, 
+expenses and cash flows of Company B are not included in the 
+consolidated financial statements of Company A. Will Company B be 
+considered a member of the group under section 10L? 
+ 
+No, Company B will not be considered a member of the group under section 10L 
+as its assets, liabilities, income, expenses and cash flows are not included in the 
+consolidated financial statements of its parent entity on a line-by-line basis in 
+accordance with generally accepted accounting standards. 
+ 
+3 Will section 10L apply if an entity did not comply with “FRS 110 – 
+Consolidated Financial Statements” even though it is required to do so? 
+ 
+Yes, section 10L will apply if the entity is required to comply with FRS 110 but 
+chooses not to do so, provided it satisfies other conditions of a covered entity in 
+paragraphs 5.2 and 5.3. 
+ 
+Economic substance requirement 
+ 
+4 How will the economic substance requirement be applied to the various 
+sectors, for example, the shipping industry or the wholesalers? What is 
+considered “adequate”, and will there be any clear thresholds to help us 
+determine what is “adequate”? 
+ 
+Economic substance requirement will be determined based on an analysis of the 
+entity’s core income generating activities in Singapore. (See Annex B for 
+guidance on the core income generating activities in relation to the economic 
+substance requirement for each sector.) 
+ 
+Adequate economic substance should commensurate with the business model 
+and scale of operations. As the business models and scale of operations for 
+entities may be very varied within the same sector, there are no prescribed 
+minimum thresholds to determine the adequacy of economic substance at this 
+juncture. 
+ 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+23 
+ 
+5 Is the economic substance requirement to be met in the year of disposal 
+of the asset or in the year the gains are received in Singapore? 
+ 
+The economic substance requirement must be met in the year of disposal of the 
+asset. 
+ 
+6 My entity is an investment holding entity that invests in shares. My entity 
+does not have any business premise in Singapore and the registered 
+address of my entity is that of a corporate service provider. Our employees 
+work remotely outside Singapore and there are no employees working in 
+Singapore. We do not outsource our business activities to any service 
+provider. Will my entity be considered to have adequate economic 
+substance in Singapore? 
+ 
+As your entity does not have a premise and employees in Singapore and does 
+not outsource the business operations to a service provider in Singapore, it will 
+not be considered to have adequate economic substance in Singapore.  
+ 
+7 Does interest income derived from shareholders’ loans qualify as “income 
+incidental to its activities of holding shares or equity interests in other 
+entities” under the definition of a pure equity-holding entity? 
+ 
+Interest income derived from shareholders’ loans will not be considered as 
+“income incidental to its activities of holding shares or equity interests in other 
+entities” of a pure equity-holding company. 
+ 
+Examples of “income incidental to its activities of holding shares or equity 
+interests in other entities” of a pure equity-holding company are: 
+• bank interest income; 
+• foreign exchange gains arising from dividends or similar payments, sale 
+or disposal of shares, and bank interest income. 
+ 
+8 Will the provision of an interest-free loan by my entity to its shareholders 
+affect its status of a pure equity-holding entity? 
+ 
+Yes, the entity will not be considered a pure equity-holding entity. A pure equity-
+holding entity is an entity that only holds shares or equity interests in other 
+entities and only earns dividends or similar payments from the shares or equity 
+interests, disposal gains of the shares or equity interests and income incidental 
+to the activities of holding such shares or equity interests.  
+ 
+Covered income  
+ 
+9 Where the amount received in Singapore is less than the historical cost of 
+the asset, would the proceeds received in Singapore be accepted as capital 
+funds received in Singapore and not disposal gains received in 
+Singapore?  
+   
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+24 
+ 
+The proceeds received in Singapore can be treated as capital funds and not 
+gains from the disposal of foreign assets if the entity can provide an account of 
+the funds from foreign-sourced capital sources before the date of repatriation. 
+This account should show that after the repatriation, the funds remaining outside 
+Singapore is no less than the amount of gain from disposal of the foreign asset 
+that has yet to be received in Singapore. 
+ 
+10 Can my company rely on the exemptions under section 13 of the ITA to 
+exempt the gains from disposal of foreign assets from Singapore tax? 
+ 
+No, if the disposal gains are subject to tax under section 10L of the ITA, the 
+exemptions under section 13 will not be applicable. 
+ 
+11 If the disposal gain has been subject to tax as trade income under section 
+10(1)(a) of the ITA, would such gain be subject to tax again under section 
+10L of the ITA? 
+ 
+No. As the gain has been taxed as trade income, the gain would not be brought 
+to tax again under section 10L of the ITA. 
+ 
+12 Will proceeds from the sale of a foreign business that is capital in nature 
+fall within the scope of section 10L of the ITA? 
+ 
+Yes. Where a covered entity sells its business via sale of assets, it must apply 
+the rules under Annex A for each asset to determine if the asset is a foreign 
+asset situated outside Singapore. Gains from the sale of foreign assets will fall 
+within the scope of section 10L of the ITA. 
+ 
+13 In a scenario where: 
+ 
+a. a Singapore resident is the owner of the economic benefits of an IPR; 
+b. the legal owner of the IPR is a non-Singapore resident; and  
+c. the Singapore resident sells its economic ownership of the IPR,  
+ 
+will this be considered a sale of a foreign asset by the Singapore resident? 
+ 
+No. If the owner of a contractual right in respect of the benefits of an IPR is a tax 
+resident in Singapore, the gains from the sale or disposal of its contractual right 
+are considered as sourced in Singapore. 
+ 
+14 Is the remittance of a foreign-sourced dividend that originates from gains 
+from disposal of foreign assets subject to tax under section 10L of the ITA? 
+ 
+No, the remittance of a foreign-sourced dividend that originates from gains from 
+disposal of foreign assets is not subject to tax under section 10L of the ITA. The 
+foreign-sourced dividend will be subject to tax under section 10(1) when received 
+in Singapore unless it can qualify for tax exemption under section 13(8) or 13(12) 
+of the ITA. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+25 
+ 
+ 
+15 My entity disposed an IPR that falls within the definition in paragraph 9.4. 
+However, my entity does not enjoy the concession under section 43X of 
+the ITA. Will the IPR still be considered a qualifying IPR for the purpose of 
+section 10L of the ITA? 
+ 
+Where the IPR falls within the definition in paragraph 9.4, it will be regarded as 
+a qualifying IPR for the purpose of section 10L of the ITA. This is regardless of 
+whether the entity is enjoying the concession under section 43X of the ITA in 
+respect of income from the IPR. 
+ 
+16 Why is Singapore not introducing similar exemptions/ reliefs such as a 
+participation exemption scheme or intra-group transfer relief like some 
+other jurisdictions? 
+ 
+We are mindful that such exemptions/ reliefs will further complicate the tax 
+regime as there will be a need to introduce specific anti-avoidance rules. 
+Singapore will review our tax measures periodically and may consider these 
+exemptions/ reliefs in future if appropriate. 
+ 
+17 My entity is undergoing liquidation and distributes its foreign assets to its 
+shareholder as part of liquidation proceeds without receiving any 
+consideration. Will this transaction fall within the scope of section 10L? 
+ 
+While there is a disposal of foreign assets by the entity, there are no gains to be 
+received in Singapore as there is no consideration received for the disposal. As 
+such, the transaction does not fall within the scope of section 10L. 
+ 
+18 Will my entity distributing its foreign assets to its shareholder as payment 
+of dividends (i.e. dividends in kind) fall within the scope of section 10L? 
+ 
+While there is a disposal of foreign assets by the entity, there are no gains to be 
+received in Singapore as there is no consideration received for the disposal. As 
+such, the transaction does not fall within the scope of section 10L. 
+ 
+19 Will section 10L apply to the following situations: 
+ 
+a. a reduction of share capital; 
+b. a share buyback to cancel the shares (i.e. not for the purpose of holding 
+repurchased shares as treasury shares); or 
+c. a share redemption? 
+ 
+The general principle is that there would be a sale or disposal of shares by the 
+shareholders where there is a sale or transfer of shares (or any rights or interest 
+thereof) in the course of a share capital reduction, buyback or redemption.  
+ 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+26 
+ 
+There is no sale or disposal for the purposes of section 10L if a share capital 
+reduction or redemption involves only the extinguishment or cancellation of 
+shares without any transfer of the shares from the shareholders to the company. 
+ 
+20 What will the tax treatment under section 10L be if an entity in Singapore 
+with foreign assets is undergoing corporate amalgamation with another 
+entity in Singapore? 
+ 
+The transfer of foreign assets under a merger is a sale or disposal under section 
+10L, unless the amalgamated company had made an election for the qualifying 
+corporate amalgamation under section 34C and section 34CA of the ITA. 
+ 
+For non-qualifying corporate amalgamations, there is a need to apply the source 
+rules under section 10L(15) for each foreign asset disposed. 
+ 
+21 My entity’s foreign sourced disposal gains are kept outside Singapore. Will 
+the foreign sourced disposal gains be considered as received in Singapore 
+from outside Singapore if it is used to pay Singapore one-tier exempt 
+dividends to shareholders? 
+ 
+No, the foreign sourced disposal gains will not be considered as received in 
+Singapore if such gains are kept outside Singapore and are used to pay 
+Singapore one-tier dividends. This is subject to the condition that the Singapore 
+one-tier dividends are paid directly into the shareholders’ bank account and does 
+not involve any physical remittance, transmission or bringing of funds into 
+Singapore by the entity for the dividend payment. 
+ 
+ 
+ 
+ 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+27 
+ 
+18. 
+Updates and Amendments 
+ 
+ 
+Date of 
+amendment 
+Amendments made 
+1 
+9 
+December 
+2024 
+• Editorial changes made to various paragraphs; 
+• Paragraphs 8.7 and 8.8 are revised to paragraphs 
+8.12 and 8.13. 
+• Updated footnote 16 on full-time employees; and 
+• Included additional FAQs 2, 3, 8, 15, 17 to 22. 
+ 
+2 
+6 June 2025 
+• FAQ 22 (A Singapore company sells a foreign 
+asset and receives a promissory note as 
+consideration. The note document is brought into 
+Singapore. Is this considered as remittance of the 
+gain from disposal of the foreign asset?) has been 
+removed pending further review. 
+ 
+ 
+ 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+28 
+ 
+Annex A – List of Assets which are Determined to be Situated Outside 
+Singapore 
+ 
+The situation of property, and any right or interest therein, is determined to be 
+situated outside Singapore as follows: 
+(a) any immovable property, or any right or interest in immovable property, is 
+physically located outside Singapore; 
+(b) any tangible movable property, or any right or interest in such property, that is 
+not the subject of any paragraph below, is physically located outside Singapore; 
+(c) ship or aircraft, or any right or interest in a ship or aircraft, is situated outside 
+Singapore if the owner, or the person entitled to the right or interest, is resident 
+in a jurisdiction outside Singapore; 
+(d) a secured or unsecured debt (other than a judgment debt or securities), or any 
+right or interest in such secured or unsecured debt, is situated outside Singapore 
+if the creditor is resident in a jurisdiction outside Singapore; 
+(e) a judgment debt, or any right or interest in a judgment debt, is situated outside 
+Singapore if the judgment is recorded outside Singapore; 
+(f) any shares, equity interests or securities issued by any municipal or 
+governmental authority, or by any body created by such authority, or any right or 
+interest in such shares, equity interests or securities, are situated outside 
+Singapore if the authority is established outside Singapore; 
+(g) subject to paragraph (f), any shares in or securities issued by a company, or any 
+right or interest in such shares or securities, are situated outside Singapore if the 
+company is incorporated outside Singapore; 
+(h) subject to paragraph (f), any equity interests in any entity which is not a 
+company, or any right or interest in such equity interests, are situated outside 
+Singapore if the operations of the entity are principally carried on outside 
+Singapore; 
+(i) subject to paragraph (f) (and despite paragraphs (g) and (h)), any registered 
+shares, equity interests or securities, and any right or interest in any registered 
+shares, equity interests or securities, are situated outside Singapore if they are 
+registered outside Singapore or, if registered in more than one register, if the 
+principal register is situated outside Singapore; 
+(j) goodwill relating to a trade, business or profession is situated outside Singapore 
+if the trade, business or profession is principally carried on outside Singapore; 
+(k) any IPR, or any licence or other right in respect of any IPR, is situated outside 
+Singapore if the owner of the IPR, licence or right is resident in a jurisdiction 
+outside Singapore; 
+(l) any intangible movable property, or any right or interest in any intangible 
+movable property, that is not the subject of any paragraph above, is situated 
+outside Singapore if the ownership rights in respect of the property, right or 
+interest is primarily enforceable in a jurisdiction outside Singapore. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+29 
+ 
+Annex B – Guidance33 on the Core Income Generating Activities in relation to 
+the Economic Substance Requirement for Each Sector  
+ 
+The table below covers examples of core income generating activities of some 
+industries in relation to the economic substance requirement. 
+ 
+S/N 
+Industry 
+Core income generating activities 
+1. 
+Holding company regimes 
+To the extent that holding company 
+regimes provide benefits only to equity 
+holding companies, the substantial activity 
+requirement requires, at a minimum, that 
+the companies receiving benefits from such 
+regimes: 
+• Meet all applicable corporate law filing 
+requirements for the relevant YA   
+• Have the substance necessary to 
+engage in holding and managing equity 
+participations (for example, by showing 
+that they have both the people and the 
+premises necessary for these activities) 
+ 
+2. 
+Headquarters regimes 
+• Making relevant management decisions 
+• Incurring expenditures on behalf of 
+entities in the same group  
+• Co-ordinating group activities 
+ 
+3. 
+Distribution and service 
+centre regimes 
+• Transporting and storing goods  
+• Managing the stocks and taking orders  
+• Providing 
+consulting 
+or 
+other 
+administrative services 
+ 
+4. 
+Financing or leasing regimes • Negotiating and concluding funding 
+terms  
+• Identifying and acquiring assets to be 
+leased (in the case of leasing)  
+• Setting the terms and duration of any 
+financing or leasing 
+• Monitoring 
+and 
+revising 
+any 
+agreements 
+• Managing any risks 
+5. 
+Fund management regimes 
+• Taking decisions on the holding and 
+selling of investments 
+• Calculating risks and reserves 
+ 
+33 This guidance is extracted from Annex D of the Harmful Tax Practices- 2017 Progress Report on 
+Preferential Regimes. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+30 
+ 
+• Taking decisions on currency or interest 
+fluctuations and hedging positions 
+• Preparing relevant regulatory or other 
+reports for government authorities and 
+investors 
+ 
+6. 
+Banking and insurance 
+regimes 
+Banking: 
+• Raising funds 
+• Managing risk including credit, currency 
+and interest risk 
+• Taking hedging positions 
+• Providing loans, credit or other financial 
+services to customers 
+• Managing regulatory capital 
+• Preparing 
+regulatory 
+reports 
+and 
+returns 
+ 
+Insurance: 
+• Predicting and calculating risk 
+• Insuring or re-insuring against risk  
+• Providing client services 
+ 
+7. 
+Shipping regimes 
+• Managing the crew (including hiring, 
+paying, and overseeing crew members) 
+• Hauling and maintaining ships 
+• Overseeing and tracking deliveries  
+• Determining what goods to order and 
+when to deliver them 
+• Organising and overseeing voyages 
+ 
+ 
+ 
+ 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+31 
+ 
+Annex C – Example of a Transitional Measure for Tracking and Tracing of 
+Expenditures of IP Assets34 
+ 
+Company A is a technology company that sells products which use multiple IP 
+assets that it has developed. Prior to 2024, Company A did not track and trace either 
+expenditures or income to individual IP assets or products, but it does have 
+information on the overall R&D expenditures that it incurred, as well as its overall 
+expenditures for related party outsourcing and its overall acquisition costs for 2022 
+and 2023. Company A can track and trace to product families starting in 2024. 
+Company A’s expenditures are listed below. 
+ 
+Basis Period 
+Expenditures 
+2022 
+Total qualifying expenditures: $5m 
+ 
+Total expenditures: $10m 
+ 
+2023 
+Total qualifying expenditures: $3m 
+ 
+Total expenditures: $3m 
+ 
+2024 
+Total qualifying expenditures: $2m 
+Qualifying expenditures for product family A: $0.4m 
+Qualifying expenditures for product family B: $1.6m 
+ 
+Total expenditures: $5m 
+Total expenditures for product family A: $2.4m 
+Total expenditures for product family B: $2.6m 
+ 
+2025 
+Total qualifying expenditures: $2m 
+Qualifying expenditures for product family A: $1.3m 
+Qualifying expenditures for product family B: $0.7m 
+ 
+Total expenditures: $3m 
+Total expenditures for product family A: $2m 
+Total expenditures for product family B: $1m 
+ 
+2026 
+Total qualifying expenditures: $1m 
+Qualifying expenditures for product family A: $0.8m 
+Qualifying expenditures for product family B: $0.2m 
+ 
+Total expenditures: $1.6m 
+Total expenditures for product family A: $0.8m 
+Total expenditures for product family B: $0.8m 
+ 
+Company A uses the three-year “average” as a transitional measure. The nexus 
+ratio would be calculated as follows: 
+ 
+34 This example is modified from the example provided in Annex A of the BEPS Action 5 Report. 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+32 
+ 
+In 2024, Company A calculates the nexus ratio using the average of all of its R&D 
+expenditures over three years. Total R&D expenditure for 2022 to 2024 is $18m.  
+ 
+The nexus ratio for 2024 would be $10m x 130% / $18m = 0.72. For purposes of 
+calculating the three-year average, this ratio does not include any expenditures 
+incurred before 2022, even if the R&D to create IP asset began before that time. 
+ 
+In 2025, Company A again calculates the nexus ratio using the average of all of its 
+R&D expenditures because it did not yet have three years of expenditures tracked 
+to product families. Total R&D expenditures for 2023 to 2025 is $11m. The ratio for 
+2025 would be $7m x 130% / $11m = 0.83.  
+ 
+In 2026 and all subsequent years, Company A would transition to a cumulative 
+approach using expenditures for product family. Total R&D expenditure on Product 
+Family A for 2024 to 2026 is $5.2m. The nexus ratio for Product Family A in 2026 
+would therefore be $2.5m x 130% / $5.2m = 0.63. All subsequent qualifying and 
+overall expenditures for Product Family A will be added to that ratio in future years.  
+ 
+Total R&D expenditure on Product Family B for 2024 to 2026 is $4.4m. The nexus 
+ratio for Product Family B in 2026 would be $2.5m x 130% / $4.4m = 0.74. All 
+subsequent qualifying and overall expenditures for Product Family B will be added 
+to that ratio in future years. 
+ 
+ 
+ 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+33 
+ 
+Annex D – Computation of Foreign-sourced Disposal Gains 
+ 
+Entity A (with a 31 December financial year-end) acquired shares in Company B, a 
+foreign company, on 1 January 2015 for $200,000. To acquire the shares, Entity A 
+obtained a loan of $100,000, with 1% interest payable per annum. 
+ 
+On 1 January 2024, the value of the shares is $180,000. 
+ 
+On 31 December 2030, Entity A disposes its shares in Company B for $300,000. To 
+dispose the shares, Entity A incurs legal fees of $5,000 and realised foreign 
+exchange loss of $1,000 while making the payment of legal fees. Entity A does not 
+meet the economic substance requirement for the year 2030.  
+ 
+On 1 January 2031, Entity A remits a gain of $20,000 into Singapore. 
+ 
+The amount subject to tax is calculated as follows: 
+ 
+Gain subjects to tax 
+Sales proceeds – Historical cost = $300,000 - $200,000 = $100,000 
+ 
+Total allowable expenditure 
+ 
+S/N Description 
+Remarks 
+Amount ($) 
+1 
+Revaluation loss of $20,000 
+Not 
+deductible 
+as 
+it 
+is 
+an 
+unrealised loss 
+- 
+2 
+Interest expense of $16,000 
+(Financial Year 2015 to 2030, 
+16 years) 
+Deductible, 
+if 
+deduction 
+had 
+not been claimed 
+in prior years 
+$16,000 
+3 
+Legal fees of $5,000 
+Deductible 
+$5,000 
+4 
+Foreign exchange loss re: 
+payment of legal fees of 
+$1,000 
+Deductible 
+$1,000 
+ 
+ 
+Total $22,000 
+ 
+Amount subjects to tax in YA 2032 
+Gain received in Singapore = $20,000 
+Apportionment of total allowable expenditure = $20,000 / $100,000 x $22,000 
+ 
+ 
+ 
+ 
+ 
+ 
+       = $4,400 
+Amount subject to tax in YA 2032 = $20,000 - $4,400 = $15,600 
+ 
+ 
+
+Tax Treatment of Gains or Losses from the Sale of Foreign Assets 
+ 
+ 
+34 
+ 
+Annex E – Illustration of the Utilisation of Losses 
+ 
+Entity A has the following acquisition and disposal of four foreign fixed assets: 
+ 
+• Acquired Foreign Asset A at $200,000 during the financial year 2020 and 
+disposes it at $100,000 during the financial year 2023;   
+ 
+• Acquired Foreign Asset B at $300,000 during the financial year 2021 and 
+disposes it at $150,000 during the financial year 2024; 
+ 
+• Acquired Foreign Asset C at $500,000 during the financial year 2023 and 
+disposes it at $800,000 during the financial year 2026; and. 
+ 
+• Acquired Foreign Asset D at $600,000 during the financial year 2023 and 
+disposes it at $400,000 during the financial year 2027. 
+ 
+a) 
+Assuming Entity A does not meet the economic substance requirement for 
+all the financial years (i.e., 2023, 2024, 2026 and 2027): 
+ 
+- 
+The loss of $100,000 from the disposal of Foreign Asset A is not available for 
+set off as section 10L comes into effect from 1 January 2024; 
+- 
+The loss of $150,000 from the disposal of Foreign Asset B is only available for 
+set off against the disposal gain from Foreign Asset C in the financial year 2026; 
+- 
+The gain of $300,000 from the disposal of Foreign Asset C, if received in 
+Singapore, is subject to tax and can be set off by the loss on Foreign Asset B or 
+trade loss in the year of remittance; and 
+- 
+The loss of $200,000 from the disposal of Foreign Asset D is available to set off 
+remittance of gains in future years (i.e., YA 2028 onwards). For example, if the 
+disposal gain of $300,000 from Foreign Asset C is received in Singapore in the 
+financial year 2026 (YA 2027), the loss of $200,000 on Foreign Asset D cannot 
+be set-off against the gain of $300,000. However, if the disposal gain of $300,000 
+from Foreign Asset C is received in Singapore in the financial year 2029 (YA 
+2030), the loss of $200,000 on Foreign Asset D can be set-off against the gain 
+such that only $100,000 will be subject to tax under section 10L.  
+ 
+b) 
+Assuming Entity A meets the economic substance requirement for the 
+financial years 2023 and 2024 but not for the financial years 2026 and 2027: 
+ 
+- 
+The tax treatment will be the same as described in (a) above, except that the 
+loss of $150,000 from the disposal of Foreign Asset B will not be available for 
+set off against any gain that is subject to tax under section 10L, because the loss 
+of $150,000 would not have been taxable under section 10L had it been a gain. 
+ 

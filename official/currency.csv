@@ -1,0 +1,35 @@
+﻿id,currency,note
+cn.law.tca,current,现行有效；修订已列入 2026 年立法计划，尚未通过，需跟踪
+cn.law.eit,current,2018-12-29 修正文本，现行有效
+cn.reg.eit,current,含 2024-12-06 第二次修订，2025-01-20 施行
+cn.cs.2009-125,current_in_part,第十条一处核准要求自 2015-10-10 废止，已从条款层剔除；另受财税〔2017〕84号修改。页面无状态标注
+cn.cs.2017-84,current_unlabelled,官方页面无状态标注；仅有地方税务局转发页显示全文有效
+cn.sta.2010-01,current_in_part,三处部分废止，见附件操作指南；已从条款层剔除可定位的部分
+cn.sta.2010-01.a01,current_in_part,第22项、第30项的部分内容已废止并剔除；简易征收与饶让抵免的核准已取消，原文无对应可剔除的语句
+cn.sta.2015-07,current_in_part,第八条第二款、第十三条已废止并剔除
+cn.sta.2013-56,current_in_part,第十二条已删除并剔除
+cn.gsf.2010-75,current_in_part,第八条、第十七条、第十三条第五款第四段已废止并剔除
+cn.sta.2017-37,current,2018 年仅做机构名称表述修改
+cn.gsf.2007-116,current_unlabelled,工作通知类，页面无状态标注
+cn.gsf.2009-158,current_unlabelled,工作通知类，页面无状态标注
+hk.dipn.44,current_but_dated,税务局目录未标注取代；2008 年 8 月版，早于第三至第五议定书，涉及已被替换条款的段落不可依赖
+hk.dipn.45,current_limited,2009 年 4 月版；只适用于 2018 年转让定价条文不适用的交易，相互协商程序以 2023 年指引为准
+hk.dipn.13,current,2004 年 12 月修订版，目录无备注
+hk.dipn.17,current,2005 年 1 月修订版，目录无备注
+hk.dipn.21,current,2012 年 7 月修订版，目录无备注
+hk.dipn.22,current,2020 年 8 月修订版
+hk.dipn.28,current,2019 年 7 月修订版
+hk.cap112.en,current,电子版香港法例版本日期 2026-05-22
+hk.cap112.zh,current,电子版香港法例版本日期 2026-05-22
+treaty.cn-hk.2006.consolidated.en,current,税务局合并文本，2023 年 4 月版，含第二至第五议定书；非法律文本
+treaty.cn-hk.2006.consolidated.zh-hk,current,税务局合并文本，2023 年 4 月版，含第二至第五议定书；非法律文本
+treaty.cn-hk.2006.zh,current_in_part,2006 年原文；被议定书替换的条款已从条款层剔除
+treaty.cn-hk.2006.zh-hk,current_in_part,2006 年原文；被议定书替换的条款已从条款层剔除
+treaty.cn-hk.2006.en,current_in_part,2006 年原文；被议定书替换的条款已从条款层剔除
+treaty.cn-sg.2007.zh,current_in_part,2007 年原文；被议定书与多边公约替换或删除的条款已从条款层剔除
+treaty.cn-sg.2007.sso.full,current_in_part,2007 年原文；被议定书与多边公约替换或删除的条款已从条款层剔除
+treaty.cn-sg.2007.en,current_in_part,新加坡税务局合并文本；附录 D 是已终止的 1986 年协定，不进文本层和条款层
+sg.ita1947.full,current,新加坡法规在线：2026-10-04 现行版本
+sg.ita1947.pdf,current,非正式合并版，自 2026-09-11 生效的版本
+intl.oecd.mli.sg,current,交存时立场；另有合并立场文件
+cn.sta.2008-112,dated_snapshot,2008-01-29 的协定股息税率一览表；未废止，但此后多份协定及议定书改了税率，整表不进条款层，只有香港、新加坡两行用于 params 的 cross_check

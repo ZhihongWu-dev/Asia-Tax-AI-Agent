@@ -1,0 +1,945 @@
+ 
+ 
+Our website : www.ird.gov.hk 
+ 
+ 
+ 
+ 
+ 
+ 
+ Inland Revenue Department  
+The Government of the Hong Kong Special Administrative Region 
+of the People's Republic of China 
+ 
+ 
+ 
+ 
+ 
+ 
+GUIDANCE ON MUTUAL AGREEMENT PROCEDURE 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+January 2023 
+ 
+ 
+ 
+ 
+
+ 
+GUIDANCE ON MUTUAL AGREEMENT PROCEDURE 
+ 
+ 
+CONTENT 
+ 
+ 
+Paragraph 
+Mutual Agreement Procedure as Dispute Resolution Mechanism 
+ 
+Overview 
+1 
+DTA jurisdiction residents can apply for MAP 
+3 
+Time limit for making MAP request 
+4 
+ 
+ 
+Access to MAP 
+ 
+Transfer pricing 
+7 
+Tax audit settlement  
+8 
+Bona-fide taxpayer-initiated foreign self-assessment 
+9 
+MAP and anti-abuse provisions 
+10 
+ 
+ 
+MAP Process 
+ 
+Two-stage process 
+11 
+Stage One 
+ 
+- Submission of a MAP request 
+14 
+- Information required for MAP request 
+15 
+- Determining whether the MAP request is justified 
+19 
+- Unilateral solution 
+23 
+Stage Two 
+ 
+- Duty to negotiate and endeavour for resolution 
+24 
+- Competent authority communications 
+27 
+- Competent authority agreement reached and accepted 
+31 
+- No competent authority agreement reached or accepted 
+33 
+- Arbitration 
+34 
+ 
+ 
+Timeframe for Resolution 
+ 
+Target time for resolving a MAP case 
+36 
+No time limit for implementing MAP solution 
+37 
+ 
+ 
+
+ 
+ii 
+ 
+Paragraph 
+MAP and Domestic Remedial Process 
+ 
+Interaction between MAP and objection process under the IRO 
+ 
+- Concurrent avenues to MAP and objection 
+39 
+- Objection undetermined when competent authority 
+41 
+agreement reached 
+- Objection determined before competent authority 
+43 
+agreement reached 
+Interaction between MAP and domestic remedial process in the 
+46 
+other DTA jurisdiction 
+ 
+ 
+Miscellaneous Matters 
+ 
+Multilateral and multi-year application 
+50 
+Payment of tax during MAP process 
+52 
+Penalties 
+53 
+Advance pricing arrangement 
+54 
+MAP profile 
+55 
+Contact information 
+56 
+
+ 
+ 
+1 
+ 
+MUTUAL AGREEMENT PROCEDURE AS DISPUTE RESOLUTION 
+MECHANISM 
+ 
+Overview 
+ 
+1. 
+The Mutual Agreement Procedure (MAP) Article in the double 
+taxation agreements or arrangements (DTAs) enables a taxpayer to initiate the 
+procedure where it is considered that the actions of the competent authority of 
+one or both of the jurisdictions concerned result or will result in taxation not in 
+accordance with the provisions of a DTA.   
+ 
+2. 
+MAP is a process which enables the competent authorities to interact 
+with the intention to resolve disputes regarding the application of the DTA.  
+The competent authorities are obliged to use their best endeavours to reach an 
+agreement with a view to avoiding taxation which is not in accordance with the 
+DTA.  In the Hong Kong Special Administrative Region (Hong Kong), the 
+competent authority is the Commissioner of Inland Revenue (the Commissioner) 
+or the Commissioner’s authorised representative.  The competent authority of 
+Hong Kong has the autonomy to enter into MAP agreements in accordance with 
+the terms of the DTA without being dependent on the approval or the direction 
+of the officers of the Inland Revenue Department (IRD) directly involved with 
+the adjustment at issue and without being influenced by policy considerations.  
+ 
+DTA jurisdiction residents can apply for MAP 
+ 
+3. 
+A MAP request can be made when a taxpayer considers that the actions 
+of the tax administrations of one or both jurisdictions result or will result in 
+taxation not in accordance with the DTA.  For Hong Kong, the earlier DTAs 
+require a taxpayer to make the request to the competent authority of the 
+taxpayer’s jurisdiction of residence.  Some recent DTAs contain a provision 
+which allows a taxpayer to request MAP assistance from the competent authority 
+of either jurisdiction.  The IRD does not impose any fee for MAP request.         
+ 
+ 
+
+ 
+ 
+2 
+ 
+Time limit for making MAP request 
+ 
+4. 
+A MAP request should be made within the time limit from the first 
+notification of the actions giving rise to taxation not in accordance with the 
+provisions of the DTA.  Such taxation must have occurred or is almost certain 
+to occur.  It should not be just a possibility. 
+ 
+5. 
+The time limit is specified in the MAP Article of the DTA and in most 
+cases is three years of the first notification of the action which results or is likely 
+to result in double taxation.  Failure to observe the time limit will result in the 
+rejection of the MAP request. 
+ 
+6. 
+The competent authority of Hong Kong will interpret the time limit in 
+a way so as not to disadvantage the taxpayer.  In general, the time limit will 
+usually commence from the date on which the relevant notice of assessment or 
+computation of loss is issued by the IRD or the equivalent notification is issued 
+by the tax authority of the other DTA jurisdiction.   
+ 
+ 
+ACCESS TO MAP 
+ 
+Transfer pricing 
+ 
+7. 
+Hong Kong provides access to MAP in cases involving transfer pricing 
+between associated enterprises and attribution of profits to permanent 
+establishment since each Hong Kong’s DTA contains the Associated Enterprises 
+Article and the Business Profits Article which provide for transfer pricing and 
+profit reallocation adjustments.  Sections 50AAN and 50AAO of the Inland 
+Revenue Ordinance (Cap. 112) (IRO) also provide that where a person makes a 
+MAP request under a DTA in relation to the arm’s length profits of the person 
+or the person’s permanent establishment in Hong Kong, and a MAP solution (i.e. 
+a unilateral solution, a MAP agreement or an arbitration decision) is arrived at, 
+the person’s profits should be assessed to Hong Kong tax in a way that is 
+consistent with the MAP solution. 
+
+ 
+ 
+3 
+ 
+Tax audit settlement 
+ 
+8. 
+Hong Kong will not preclude access to MAP in cases where the issues 
+in dispute have already been resolved through an audit settlement between the 
+taxpayer and the IRD.  However, it would be difficult for the competent 
+authorities of Hong Kong and the other DTA jurisdiction to negotiate and come 
+to an agreement on a position that deviates from the audit settlement which has 
+already been accepted by the taxpayer or its associated enterprise. 
+ 
+Bona fide taxpayer-initiated foreign self-assessment 
+ 
+9. 
+Under the domestic laws of some DTA jurisdictions, a taxpayer may be 
+permitted under appropriate circumstances to amend a previously filed tax return 
+by adjusting the price for a controlled transaction between associated enterprises 
+or the profits attributable to a permanent establishment, in order to reflect a result 
+in accordance with the arm’s length principle.  Hong Kong will consider 
+providing access to MAP with respect to such an adjustment provided that it is 
+bona fide made by the taxpayer.  In this regard, a taxpayer-initiated foreign 
+adjustment would be considered bona fide where the taxpayer has spent good 
+efforts to compute and report correctly the taxable income from a controlled 
+transaction or the profits attributable to a permanent establishment and where the 
+taxpayer has otherwise timely and properly fulfilled all of its obligations related 
+to such taxable income or profits under the tax laws of Hong Kong and the other 
+DTA jurisdiction. 
+ 
+MAP and anti-abuse provisions 
+ 
+10. 
+There is no general rule denying MAP access in cases of perceived 
+abuse.  Following the incorporation of general anti-abuse rule into some recent 
+Hong Kong’s DTAs, the interpretation and application of such rule would fall 
+within the scope of the MAP.  Hong Kong will therefore admit cases into MAP 
+where the issue for discussion is the application of the anti-abuse provisions in 
+the DTA or whether the application of the domestic anti-avoidance provisions 
+may conflict with the provisions of the DTA. 
+
+ 
+ 
+4 
+ 
+ 
+ 
+MAP PROCESS 
+ 
+Two-stage process 
+ 
+11. 
+There are two stages to the MAP.  The first stage involves the 
+taxpayer and the competent authority of the DTA jurisdiction to which the MAP 
+request is made.  The second stage involves the endeavours of the competent 
+authorities of both DTA jurisdictions to resolve the case.  
+ 
+12. 
+The first stage has three steps:  
+ 
+(a)  
+the presentation of a case by the taxpayer to the competent 
+authority of either DTA jurisdiction;  
+ 
+(b)  
+consideration by the competent authority whether the case 
+presented is justified; and 
+ 
+(c)  
+consideration by the competent authority whether it is able to 
+arrive at a satisfactory solution itself.  
+ 
+13. 
+If the case cannot be resolved at the first stage, the competent authority 
+has an obligation to endeavour to resolve the case by mutual agreement with the 
+competent authority of the other DTA jurisdiction.  
+ 
+Stage One  
+ 
+Submission of a MAP request 
+ 
+14. 
+In Hong Kong, a taxpayer should make a MAP request by completing 
+Form IR1454 and sending it to:  
+ 
+ 
+
+ 
+ 
+5 
+ 
+ 
+The Hong Kong Competent Authority  
+Tax Treaty Section 
+Inland Revenue Department 
+GPO Box 10851, Hong Kong 
+(Attn: Chief Assessor (Tax Treaty)) 
+ 
+Information required for MAP request 
+ 
+15. 
+The taxpayer should include the following information in support of a 
+MAP request:  
+ 
+(a) 
+The identity of the taxpayer covered in the MAP request, 
+including the name, address, taxpayer identification number or 
+birth date, contact details and if more than one taxpayer is 
+covered by the MAP request, the relationship between the 
+taxpayers; 
+ 
+(b) 
+The basis for the request, including the DTA and the specific 
+provision(s) thereof which are considered not correctly applied 
+by either Hong Kong or the other DTA jurisdiction (and to 
+indicate which jurisdiction and the contact details of the 
+relevant person(s) in that jurisdiction (if it is not Hong Kong));  
+ 
+(c) 
+The facts of the case, including any documentation to support 
+these facts, the taxation years or period involved and the 
+amounts involved (in both the local currency and foreign 
+currency);  
+ 
+(d) 
+An analysis of the issue requested to be resolved via MAP, 
+including the taxpayer’s interpretation of the application of the 
+specific DTA provision(s) which supports its claim that the 
+provision of the specific DTA is not correctly applied by either 
+Hong Kong or the other DTA jurisdiction and the proposed 
+
+ 
+ 
+6 
+ 
+basis of resolving the issues.  Relevant documentation (e.g. 
+documentation required under transfer pricing legislative or 
+published guidance, copy of tax assessment or other 
+notification of action giving rise to the issues for MAP, etc.) 
+should also be provided;  
+ 
+(e) 
+Whether the MAP request was also submitted to the competent 
+authority of the other DTA jurisdiction.  If yes, please state so 
+in the MAP request and provide the date of such submission, 
+the name and the designation of the person or the office to 
+which the MAP request was submitted.  A copy of that 
+submission (including all documentations filed with that 
+submission) should also be provided unless the content of both 
+MAP submissions are exactly the same; 
+ 
+(f) 
+Whether the MAP request was also submitted to another 
+authority under another Instrument that provides for a 
+mechanism to resolve treaty-related disputes.  If yes, please 
+state so in the MAP request and provide the date of such 
+submission, the name and the designation of the person or the 
+office to which the MAP request was submitted.  A copy of 
+that submission (including all documentations filed with that 
+submission) should also be provided unless the content of both 
+MAP submissions are exactly the same; 
+ 
+(g) 
+Whether the issue involved was previously dealt with in an 
+advance ruling, advance pricing arrangement, settlement 
+agreement or by any tax tribunal or court.  If yes, a copy of 
+these rulings, agreements or decisions should be provided;  
+ 
+(h) 
+Whether any relief has been sought by the taxpayer under the 
+laws of Hong Kong or the other DTA jurisdiction in respect of 
+the issue.  If such a relief is sought under the domestic laws of 
+the other DTA jurisdiction, please provide a schedule of any 
+
+ 
+ 
+7 
+ 
+time limits in respect of the years / periods for which the relief 
+is sought; 
+ 
+(i) 
+If applicable, the details of the taxpayer’s authorized 
+representative with a copy of the authorization letter; 
+ 
+(j) 
+A statement confirming that all information and documentation 
+provided in the MAP request is accurate and that the taxpayer 
+will assist the competent authority in its resolution of the issues 
+presented in the MAP request by furnishing any other 
+information or documentation required by the competent 
+authority in a timely manner; 
+ 
+(k) 
+A statement agreeing that all the information and documents 
+submitted may be provided to the competent authority of the 
+other DTA jurisdiction for processing the MAP request. 
+ 
+16. 
+If the relevant information is not in English or Chinese, the taxpayer is 
+required to provide the English translation.  Under section 50AAB(2) of the 
+IRO, the competent authority of Hong Kong may ask the taxpayer to provide 
+further information in support of its MAP request if necessary.  In any event, 
+the taxpayer will not be denied access to MAP in Hong Kong on the grounds that 
+insufficient information is provided.  However, if the taxpayer fails to provide 
+the required information despite repeated requests, the competent authority of 
+Hong Kong may consider the objection raised in the request as not justified, after 
+consulting the competent authority of the other DTA jurisdiction.  
+ 
+17. 
+Where a taxpayer makes a MAP request to the competent authority of 
+a DTA jurisdiction in anticipation of Hong Kong providing relief, a copy of the 
+request should be provided at the same time to the competent authority of Hong 
+Kong.  The provision of a copy at this time may:  
+ 
+(a) 
+assist in the resolution of the case in the quickest possible time 
+by enabling the competent authority of Hong Kong to 
+
+ 
+ 
+8 
+ 
+undertake a preliminary review of the case;  
+ 
+(b) 
+ensure that the competent authorities of Hong Kong and the 
+other DTA jurisdiction are satisfied that the request has been 
+made within the time limit specified in the DTA; and  
+ 
+(c) 
+ensure that the requirements for making the request to the 
+competent authority of the other DTA jurisdiction have been 
+satisfied.  
+ 
+18. 
+Upon receipt of a MAP request, the competent authority of Hong Kong 
+will notify the competent authority of the other DTA jurisdiction and exchange 
+information relevant to the request. 
+ 
+Determining whether the MAP request is justified  
+ 
+19. 
+The competent authority to whom MAP request is made must consider 
+whether the case is justified (e.g. whether the taxpayer has reasonable grounds 
+upon which to seek the competent authority’s consideration).  The action 
+complained of must be directed specifically at the taxpayer. 
+ 
+20. 
+The competent authority of Hong Kong could be expected to consider 
+a case as being justified where the taxpayer has received written notification 
+from either the IRD or the tax authority of the other DTA jurisdiction of the 
+actual or proposed taxation.  This notification should include the details of 
+adjustment, the amount involved and the basis of calculation.  
+ 
+21. 
+Actions that the competent authority of Hong Kong is unlikely to 
+consider sufficient to justify a case include:  
+ 
+(a)  
+the mere existence of an audit or an examination of the affairs 
+of the taxpayer or its associated non-resident enterprise;  
+ 
+(b)  
+requests from the competent authority of Hong Kong or the 
+
+ 
+ 
+9 
+ 
+other DTA jurisdiction for an exchange of information about 
+the dealings between the taxpayer and the associated non-
+resident enterprise;  
+ 
+(c)  
+discussions between the taxpayer and the tax authority of the 
+other DTA jurisdiction about the amount and source of profits 
+considered attributable to the permanent establishment under 
+the Business Profits Article;  
+ 
+(d)  
+discussions between the associated non-resident enterprise and 
+the tax authority of the other DTA jurisdiction concerning non-
+arm’s length dealings between the taxpayer and the associated 
+non-resident enterprise; or  
+ 
+(e)  
+interpretation of tax laws, public advice or guidance issued by 
+the IRD or the tax authority of the other DTA jurisdiction which 
+is of a general nature, even if the taxpayer believes that such 
+interpretation, advice or guidance will apply to it and if applied, 
+may result in taxation not in accordance with the DTA.  
+ 
+22. 
+In cases where the competent authority of Hong Kong considers that 
+the taxpayer’s MAP request is not justified, the competent authority of Hong 
+Kong will write to the competent authority of the other DTA jurisdiction setting 
+out the reasons why the competent authority of Hong Kong believes that the 
+request is not justified and invites the competent authority of the other DTA 
+jurisdiction to provide its views before making a decision on whether to accept 
+or reject the request.  The taxpayer will be informed if its request is eventually 
+rejected.  
+ 
+Unilateral solution 
+ 
+23. 
+If the MAP request is considered justified and the issue involved can 
+be resolved on a unilateral basis, the competent authority of Hong Kong may 
+grant relief, under the provisions of the DTA, without the need to enter into 
+
+ 
+ 
+10 
+ 
+bilateral discussion with the competent authority of the other DTA jurisdiction.  
+However, if the case cannot be resolved unilaterally at the first stage, such as 
+when the taxation not in accordance with the DTA is due wholly or partly to an 
+action in the other DTA jurisdiction, the competent authority of Hong Kong will 
+try to resolve the case by mutual agreement with the competent authority of the 
+other DTA jurisdiction under stage two. 
+ 
+Stage Two  
+ 
+Duty to negotiate and endeavour for resolution 
+ 
+24. 
+Stage two commences with the competent authority that has been 
+presented with the case approaching the other competent authority.  In this 
+stage, both competent authorities have the duty to negotiate and to use their best 
+endeavours to resolve the case.  However, this does not mean that the 
+competent authorities will resolve every case or necessarily relieve all taxation 
+not in line with the DTA. 
+ 
+25. 
+In all instances and as part of the negotiations, the competent 
+authorities will seek to establish a mutual understanding of the relevant 
+principles embodied in the DTA, the facts of the case and how those principles 
+are to be applied so as to relieve any taxation not in accordance with the DTA.  
+ 
+26. 
+For example, if Hong Kong makes the primary transfer pricing or profit 
+reallocation adjustment, the competent authority of Hong Kong will try to 
+demonstrate that the adjustment results in taxation in accordance with the DTA 
+and the other DTA jurisdiction should relieve any resultant double taxation.  
+The competent authority of Hong Kong will also seek to comprehend fully the 
+position of the competent authority of the other DTA jurisdiction and explore 
+opportunities to reach an agreement. 
+ 
+Competent authority communications  
+ 
+27. 
+Communications between the competent authorities will usually be 
+
+ 
+ 
+11 
+ 
+through an exchange of position papers.  Information provided by the taxpayer 
+to the competent authority of Hong Kong will be taken into account in the 
+preparation of the Hong Kong’s position papers.  
+ 
+28. 
+Where a case involves significant issues upon which agreement cannot 
+be reached through the exchange of position papers, the competent authorities 
+may meet for negotiations. The taxpayer does not have a right to be present at 
+such negotiations.  However, where both competent authorities agree, the 
+taxpayer may personally present its case to the competent authorities jointly or 
+be called upon to make any clarification.  Where the competent authority of the 
+other DTA jurisdiction does not agree to a joint presentation, the taxpayer will 
+still be given an opportunity to provide input to the competent authority of Hong 
+Kong for consideration.  
+ 
+29. 
+The competent authority of Hong Kong will endeavour to ensure that 
+communications are undertaken on a timely basis to facilitate resolution of the 
+case as quickly as possible.  The taxpayer will be kept informed of the progress 
+by the competent authority.  
+ 
+30. 
+Exchange of information between competent authorities is undertaken 
+under the Exchange of Information Article of the relevant DTA and will be 
+subject to the secrecy provisions of that Article.  
+ 
+Competent authority agreement reached and accepted 
+ 
+31. 
+An agreement reached by both competent authorities may result in the 
+IRD:  
+ 
+(a) 
+restoring the taxpayer’s original tax position by withdrawing 
+the adjustment which led to the MAP request;  
+ 
+(b) 
+making a correlative adjustment or providing a tax credit to 
+relieve any double taxation; or 
+ 
+
+ 
+ 
+12 
+ 
+(c) 
+amending the taxpayer’s assessment or tax payable as per the 
+agreement.  
+ 
+32. 
+Where a competent authority agreement is reached, the competent 
+authority of Hong Kong will write to notify the taxpayer and advise the taxpayer 
+on the next course of action within one month.   The agreement will not be 
+implemented unless the taxpayer accepts the agreement as the final resolution by 
+giving a written notice to the competent authority of Hong Kong.  If the 
+taxpayer accepts the agreement, the competent authority of Hong Kong will 
+proceed to conclude the case, implement the agreement and provide the relief as 
+appropriate.  In most cases, where the implementation of the competent 
+authority agreement only requires the deduction of taxable income or the 
+increase of losses carried-forward, no further action by the taxpayer is necessary 
+for the agreement to be implemented.     
+ 
+No competent authority agreement reached or accepted 
+ 
+33. 
+If the competent authorities are unable to reach an agreement or the 
+taxpayer does not accept such an agreement, subject to any referral of the issue 
+for arbitration under the DTA, the competent authority of Hong Kong will close 
+the case without implementing any agreement.  The taxpayer may continue to 
+seek remedy under the IRO or the domestic laws of the other DTA jurisdiction 
+if still applicable.   
+ 
+Arbitration 
+ 
+34. 
+Some Hong Kong’s DTAs provide access to arbitration for an issue 
+unresolved via MAP.  Where the competent authorities are unable to reach an 
+agreement to resolve the issue via MAP within the time limit prescribed under 
+the MAP Article and no decision on the issue has been rendered by a court or 
+administrative tribunal of Hong Kong or the other DTA jurisdiction, the taxpayer 
+may request the competent authority to refer the unresolved issues for arbitration 
+if it is provided under the relevant DTA.   
+ 
+
+ 
+ 
+13 
+ 
+35. 
+Subject to the acceptance by the taxpayer, the mutual agreement that 
+implements the arbitration decision shall be binding on Hong Kong and the other 
+DTA jurisdiction.  If the taxpayer rejects the outcome of the arbitration, it may 
+continue to seek remedy under the IRO or the domestic laws of the other DTA 
+jurisdiction if still applicable.  In such a case, Hong Kong would consider that 
+the efforts of the competent authorities to resolve the case via MAP have been 
+exhausted. 
+ 
+ 
+TIMEFRAME FOR RESOLUTION 
+ 
+Target time for resolving a MAP case 
+ 
+36. 
+The competent authority of Hong Kong aims to resolve a MAP case 
+(including the implementation of any MAP solution) within 24 months from 
+receiving the complete request.  While the competent authority of Hong Kong 
+works to achieve timely resolution of the MAP case, the complexity of issues 
+involved in each case will determine the actual time needed to resolve the case.  
+In any event, the competent authority of Hong Kong will try to resolve any MAP 
+case as quickly as possible.   
+ 
+No time limit for implementing MAP solution  
+ 
+37. 
+Specific provisions in a DTA dealing with time limits for 
+implementation of competent authority agreement or arbitration decision take 
+precedence over the normal domestic law time limits that would otherwise apply 
+to the provision of relief from double taxation.  For Hong Kong, most of its 
+DTAs include provisions in the MAP Article which state that any agreement 
+reached via MAP or implementation of an arbitration decision shall be 
+implemented notwithstanding any time limits in the domestic laws of Hong 
+Kong and the other DTA jurisdiction.  Section 50AAB(6) of the IRO also 
+provides that a MAP solution shall be implemented notwithstanding any time 
+limits under the IRO, whether by way of discharge or repayment of tax, 
+allowance of tax credit or making of an assessment.  A taxpayer can rest assured 
+
+ 
+ 
+14 
+ 
+that, by presenting a case to the competent authority or referring any issue for 
+arbitration under a DTA, the mere expiration of domestic time limits does not 
+preclude the granting of relief. 
+ 
+38. 
+Where the MAP solution leads to additional tax to be paid by the 
+taxpayer, the IRD’s normal practice is to require tax payment to be made within 
+about 6 weeks after the date of issue of the assessment.  However, if the MAP 
+solution results in a refund of the tax due or paid by the taxpayer, it is the IRD’s 
+pledge to issue the refund within 10 working days after the date of issue of the 
+revised assessment. 
+ 
+ 
+MAP AND DOMESTIC REMEDIAL PROCESS 
+ 
+Interaction between MAP and objection process under the IRO  
+ 
+Concurrent avenues to MAP and objection  
+ 
+39. 
+The MAP Articles in Hong Kong’s DTAs provide taxpayers with an 
+avenue for review in addition to the rights:  
+ 
+(a)  
+to object to an assessment under section 64(1) of the IRO; and  
+ 
+(b)  
+to dispute the amount of a tax credit under section 50(9A) of 
+the IRO.  
+ 
+40. 
+A taxpayer can request MAP regardless of the remedies provided under 
+the IRO.  The Commissioner will consider concurrently a case presented to him 
+or her under the MAP Article and an objection lodged by the taxpayer under the 
+IRO.   
+ 
+Objection undetermined when competent authority agreement reached 
+ 
+41. 
+Where the taxpayer accepts the competent authority agreement reached 
+
+ 
+ 
+15 
+ 
+for an issue covered by his MAP request and his objection lodged for the issue 
+remains undetermined, the taxpayer’s acceptance of the competent authority 
+agreement will be regarded as a settlement agreement between the taxpayer and 
+the Commissioner under section 64(3) of the IRO.  However, if the assessment 
+objected by the taxpayer involves a number of issues, the settlement agreement 
+will be limited to those issues resolved mutually by the competent authorities.  
+The taxpayer may still seek remedy under the IRO in relation to the issues 
+unresolved through the MAP. 
+ 
+42. 
+If the taxpayer does not accept the competent authority agreement, the 
+competent authority of Hong Kong will close the case without implementing any 
+agreement.  The Commissioner will proceed to determine the taxpayer’s 
+objection under section 64(4) of the IRO. 
+ 
+Objection determined before competent authority agreement reached  
+ 
+43. 
+Where the Commissioner determines to wholly allow the taxpayer’s 
+objection, competent authority’s consideration via the MAP will cease since 
+there will no longer be taxation that is not in accordance with the DTA. 
+ 
+44. 
+If the competent authorities have not agreed on an appropriate solution 
+by the time the Commissioner determines the objection, the taxpayer has a right 
+to appeal to Board of Review under section 66 of the IRO if dissatisfied with the 
+determination.   
+ 
+45. 
+Once a decision of the Board of Review or an order of the courts has 
+been made, the Commissioner will abide by that decision or order.  The 
+subsequent endeavours of the competent authority of Hong Kong under a DTA 
+will be limited to demonstrating to the competent authority of the other DTA 
+jurisdiction that the taxation, consistent with the Board’s decision or the court’s 
+order, is in line with the DTA and that relief should be provided by the other 
+DTA jurisdiction. 
+ 
+ 
+
+ 
+ 
+16 
+ 
+Interaction between MAP and domestic remedial process in the other DTA 
+jurisdiction 
+ 
+46. 
+Whether a MAP request can progress while a taxpayer’s objection, 
+review and appeal rights are ongoing in the other DTA jurisdiction depends on 
+whether the competent authority of that jurisdiction agrees to proceed with MAP 
+negotiations concurrently.  
+ 
+47. 
+The successful exercise of objection, review and appeal rights in the 
+other DTA jurisdiction may give rise to the result that there is no longer any 
+taxation which is contrary to the DTA.  Under these circumstances, it would be 
+inappropriate for the taxpayer to obtain any correlative relief in Hong Kong.  
+ 
+48. 
+Depending on the circumstances of each case, the Commissioner may 
+consider providing correlative adjustment on the condition that:  
+ 
+(a) 
+the taxpayer and any non-resident associated enterprise have 
+exhausted or rescinded objection, review and appeal rights in 
+the other DTA jurisdiction; or 
+ 
+(b) 
+the taxpayer and any non-resident associated enterprise agree 
+to advise the Commissioner should their objection, review and 
+appeal rights be exercised in the other DTA jurisdiction.  
+ 
+49. 
+In relation to the situation outlined under paragraph 48(b), the issue of 
+any revised assessment or the provision of a credit for foreign taxes paid will be 
+deferred until such time as the objection, review and appeal rights in the other 
+DTA jurisdiction have lapsed or are subsequently rescinded or exhausted. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+17 
+ 
+MISCELLANEOUS MATTERS 
+ 
+Multilateral and multi-year application 
+ 
+50. 
+The competent authority of Hong Kong seeks to handle MAP cases in 
+the most effective manner.  While the MAP Articles of Hong Kong’s DTAs 
+require the competent authorities to consult with each other bilaterally, the 
+competent authorities of each jurisdiction can be part of what are, in practice, 
+multilateral MAP negotiations where: 
+ 
+(a) 
+every jurisdiction involved has a DTA providing for MAP with 
+each other; 
+ 
+(b) 
+the taxpayer has presented separate and concurrent MAP 
+requests under each relevant DTA; and 
+ 
+(c) 
+each jurisdiction has accepted the MAP request. 
+ 
+In such cases, the competent authority of Hong Kong will seek to process the 
+bilateral cases in a co-ordinated manner and make use of exchange of 
+information powers where this will help resolve the cases efficiently. 
+  
+51. 
+To avoid duplicative MAP requests and permit a more efficient use of 
+competent authority resources, the competent authority of Hong Kong will allow 
+a taxpayer to request a multiyear resolution via MAP with respect to a recurring 
+issue, provided that for each of the relevant years, the facts and circumstances of 
+the issue are the same and the MAP request is presented within the time limit 
+specified in the MAP Article of the DTA.  Where more than one MAP request 
+for the same issue over a number of years are received, the competent authority 
+of Hong Kong will also seek to deal with all the requests in a co-ordinated 
+manner. 
+ 
+ 
+ 
+ 
+
+ 
+ 
+18 
+ 
+Payment of tax during MAP process  
+ 
+52. 
+Hong Kong does not require tax to be paid as a condition for access to 
+MAP.  A taxpayer who has presented a MAP request may apply to hold over 
+the Hong Kong tax payable under section 71 of the IRO if a valid objection has 
+been lodged under section 64 of the IRO.  Each request to hold over the 
+payment of tax will be decided on its merits.  For details, please refer to 
+Departmental Interpretation and Practice Notes No. 6.  
+ 
+Penalties 
+ 
+53. 
+If the Commissioner considers it appropriate to do so having regard to 
+a MAP solution, he or she may adjust any additional tax imposed under Part 14 
+(which is in the nature of administrative penalty directly connected to tax liability) 
+unless the Board of Review or the court has delivered a decision, opinion, 
+determination or direction in respect of the assessment of the additional tax.  
+Such adjustment does not apply to criminal penalties or other non-tax based 
+administrative penalties. 
+ 
+Advance pricing arrangement 
+ 
+54. 
+To minimise the need for MAP and reduce the risk of being subject to 
+double taxation as a result of transfer pricing or profit reallocation adjustments, 
+Hong Kong has implemented an advance pricing arrangement (APA) 
+programme which allows to determine in advance an appropriate set of criteria 
+for the determination of the transfer pricing for the controlled transactions on a 
+bilateral or multilateral basis.  APAs concluded bilaterally or multilaterally 
+with DTA jurisdictions provide an increased level of certainty in both 
+jurisdictions, lessen the likelihood of double taxation and may proactively 
+prevent transfer pricing disputes.  The IRD may consider roll-back of an APA 
+to prior years subject to the time limits for amending tax assessment under the 
+IRO or the relevant DTA, where the facts and circumstances in the prior years 
+are the same as those for the APA.  The statutory provisions governing the 
+making of APA are provided under Division 4 of Part 8AA of and Schedule 17H 
+
+ 
+ 
+19 
+ 
+to the IRO.  The administrative guidance on the APA program can be found in 
+Departmental Interpretation and Practice Notes No. 48. 
+ 
+MAP Profile 
+ 
+55. 
+More information about the application of MAP in Hong Kong can be 
+found in the Hong Kong’s MAP Profile published on the OECD’s website. 
+ 
+Contact information 
+ 
+56. 
+For any enquiries relating to this guidance, please contact the IRD at 
+(852) 2594 5402 or taxtt@ird.gov.hk. 

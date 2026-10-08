@@ -1,0 +1,69 @@
+Step 1: Check for non-resident’s eligibility for Double Taxation Relief (DTR)
+Use the
+S45 Double Taxation Relief Tax Rate Calculator
+to check if the non-resident company is eligible for DTR and the applicable tax rate under the DTA.
+View
+DTA
+for full details of the
+DTR available.
+If DTA does not apply
+, withhold tax at the prevailing tax rate, file and make payment to IRAS by the due date.
+If DTA applies
+, check the
+"Double Taxation Relief"
+box and indicate the applicable tax rate when filing.
+Use the
+DTA Calculator for Non-resident Professional
+to
+check if the non-resident professional is eligible for DTR.
+View
+DTA
+for full details of the DTR available.
+If DTA does not apply
+, withhold tax at the prevailing tax rate, file and make payment to IRAS by the due date.
+If DTA applies
+, check the
+"Claim for relief under Avoidance of Double Taxation Agreement (DTA)"
+and indicate the applicable tax rate when filing.
+Step 2: Obtain supporting document from the non-resident
+Certificate of Residence (COR)
+Obtain the COR from the non-resident for each year the DTR is claimed.
+The COR must:
+Be certified by the foreign tax authority of the non-resident
+Be in English. If the COR is not in English, please obtain an English translated copy
+Clearly state that
+the non-resident company is a resident of the foreign country/region for DTA purposes and
+the year(s) that the COR is applicable for
+One COR may be accepted for multiple years if the relevant years are clearly stated in the COR.
+The
+specimen format of COR from non-resident
+(DOCX, 23KB) serves as a guide to the payer on the information required from the foreign tax authority. Foreign tax authorities do not need to follow the specimen
+COR format but must provide the requisite information.
+Signed Form IR586
+Obtain Form IR586 signed by the non-resident professional if the tax treaty exemption applies.
+Step 3: Submit the document to IRAS by the due date
+Upload the scanned COR
+and translated copy (if applicable) to IRAS as a PDF file, with file
+size not more than 3MB, by the due date.
+The due date is
+31 Mar of the following year if the claim is for a period in the current calendar year
+Example:
+You submit a Withholding Tax (WHT) filing in the year 2025, with period of payment between 1 Jan 2025 and 31 Dec 2025.
+To claim DTR, you must submit the COR for 2025 to IRAS by
+31 Mar 2026
+.
+Within 3 months from the date of WHT submission if the claim is for preceding calendar years.
+Example:
+You submit a WHT filing on 30 Jun 2025, with period of payment between 1 Jan 2023 and 31 Dec 2024.
+To claim DTR, you must submit CORs for 2023 and 2024 to IRAS by
+30 Sep 2025
+.
+DTR may be withdrawn and
+late payment penalties
+imposed if the COR is not submitted by the due date.
+You do not need to submit the original COR unless requested by IRAS. All documents and records are to be retained for 5 years.
+You do not need to submit the signed Form IR586 unless requested by IRAS. All documents and records are to be retained for 5 years.
+Request for extension of time to submit COR
+You may request for an extension of up to 2 months to submit COR by completing the
+online form
+. This is subject to IRAS' approval.

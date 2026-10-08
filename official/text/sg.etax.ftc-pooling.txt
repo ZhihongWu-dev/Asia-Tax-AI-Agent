@@ -1,0 +1,933 @@
+Income Tax: Foreign Tax Credit Pooling 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+IRAS e-Tax Guide 
+Income Tax: Foreign Tax Credit Pooling  
+(Third Edition) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Income Tax: Foreign Tax Credit Pooling 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Published by 
+Inland Revenue Authority of Singapore 
+ 
+ 
+ 
+ 
+Published on 30 Jan 2026 
+ 
+First edition on 27 Dec 2013 
+    Second edition on 21 Jul 2023 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Disclaimers: IRAS shall not be responsible or held accountable in any way for any damage, loss or 
+expense whatsoever, arising directly or indirectly from any inaccuracy or incompleteness in the 
+Contents of this e-Tax Guide, or errors or omissions in the transmission of the Contents. IRAS shall not 
+be responsible or held accountable in any way for any decision made or action taken by you or any 
+third party in reliance upon the Contents in this e-Tax Guide. Except where specific contents carry legal 
+force, this information aims to provide a better general understanding of taxpayers’ tax obligations and 
+is not intended to comprehensively address all possible tax issues that may arise. While every effort 
+has been made to ensure that this information is consistent with existing law and practice, should there 
+be any changes, IRAS reserves the right to vary its position accordingly. 
+ 
+ 
+© Inland Revenue Authority of Singapore 
+All rights reserved. No part of this publication may be reproduced or transmitted in any form or by any 
+means, including photocopying and recording without the written permission of the copyright holder, 
+application for which should be addressed to the publisher. Such written permission must also be 
+obtained before any part of this publication is stored in a retrieval system of any nature. 
+
+Income Tax: Foreign Tax Credit Pooling 
+ 
+ 
+ 
+Table of Contents 
+Page 
+ 
+1. Aim  
+ 
+1 
+2. At a glance  
+ 
+1 
+3. Glossary  
+ 
+2 
+4. Background  
+ 
+3 
+5. Current foreign tax credit system  
+ 
+3 
+6. New FTC pooling system  
+ 
+4 
+7. Administrative Procedure  
+ 
+5 
+8. Frequently Asked Questions  
+ 
+5 
+9. Contact Information  
+ 
+7 
+10.Updates and amendments  
+ 
+8 
+Annex A – Computation of FTC for a company that receives 
+foreign income 
+ 
+Annex B – Computation of FTC for a company whose foreign 
+income qualify for DTR & UTC 
+ 
+Annex C – Computation of FTC for a company whose income is 
+subject to tax at different tax rates 
+ 
+Annex D – Computation of FTC for an individual who receives 
+foreign income 
+ 
+9 
+10 
+11 
+12 
+
+Income Tax: Foreign Tax Credit Pooling 
+1 
+ 
+ 
+ 
+ 
+ 
+1 
+Aim 
+ 
+1.1 
+This e-Tax Guide provides details on the foreign tax credit pooling (FTC 
+pooling) system1. The e-Tax Guide is relevant to you if you are a Singapore 
+resident receiving foreign income in Singapore. The FTC pooling system is 
+effective from the Year of Assessment (“YA”) 2012. 
+ 
+2 
+At a glance 
+ 
+2.1 
+Under the FTC pooling system, you may elect to aggregate the foreign taxes 
+paid (including any underlying tax, where applicable) on any items of your 
+foreign income. This applies to foreign income which you receive in 
+Singapore during the basis period for the YA 2012 and for subsequent YAs, 
+and is available if all the following conditions are met: 
+ 
+(a) 
+income tax must have been paid on the income in the foreign tax 
+jurisdiction from which you derived the income; 
+(b) 
+the headline tax rate of that foreign tax jurisdiction2 is at least 15% at 
+the time you receive the foreign income in Singapore; 
+ 
+(c) 
+there must be Singapore tax payable on your foreign income; and 
+ 
+(d) 
+you are entitled to claim FTC under section 50, 50A or 50B of the 
+Income Tax Act 1947 (“ITA”) on your foreign income. 
+ 
+2.2 
+If FTC pooling applies, the amount of FTC granted to you will be based on 
+the lower of the total Singapore tax payable on those foreign income and the 
+total foreign taxes paid on those income. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1 This e-Tax guide replaces the IRAS’s e-Tax Guide on “Income Tax: Foreign Tax Credit Pooling” 
+published on 22 Jun 2011. 
+2 The headline tax rate of the foreign tax jurisdiction refers to the highest corporate tax rate of that 
+foreign tax jurisdiction. 
+
+Income Tax: Foreign Tax Credit Pooling 
+2 
+ 
+ 
+ 
+3 
+Glossary 
+ 
+3.1 
+Foreign tax credit (“FTC”) 
+ 
+This refers to the tax credit given for the foreign tax paid on the foreign 
+income that is allowed as an offset against the Singapore tax payable on the 
+same income. The tax credit to be granted is the lower of the foreign tax paid 
+and Singapore tax payable. 
+ 
+3.2 
+Double taxation relief (“DTR”) 
+ 
+This refers to the tax credit given for the foreign tax paid on the foreign 
+income from a tax jurisdiction with which Singapore has an Avoidance of 
+Double Taxation Agreement (“tax treaty”) in force. The allowance of DTR is 
+governed by the terms of the tax treaty. 
+ 
+3.3 
+Unilateral tax credit (“UTC”) 
+ 
+This refers to the tax credit given for the foreign tax paid on the foreign income 
+from a tax jurisdiction with which Singapore does not have a tax treaty. It is 
+also given where that foreign income is not covered in a limited tax treaty 
+concluded between the foreign tax jurisdiction and Singapore. 
+
+Income Tax: Foreign Tax Credit Pooling 
+3 
+ 
+ 
+ 
+4 
+Background 
+ 
+4.1 
+To further facilitate the remittance of foreign income to Singapore by resident 
+taxpayers, the FTC system was enhanced in Budget 2011. With the 
+enhancement, resident taxpayers are allowed to pool the FTC on foreign 
+income received (“FTC pooling”). This will reduce the Singapore tax payable 
+on the remitted foreign income. 
+ 
+5 
+Current foreign tax credit system 
+ 
+5.1 
+Resident taxpayers are subject to tax on foreign income received in 
+Singapore unless the foreign income qualifies for tax exemption under the 
+ITA3. Where that income is also subject to tax in the foreign tax jurisdiction in 
+which it is derived, FTC may be claimed against the Singapore tax payable 
+on the same income. This mitigates double taxation on the same income. 
+ 
+5.2 
+FTC can be in the form of DTR or UTC allowable under section 50, 50A or 
+50B of the ITA. Regardless of the type of FTC claimed, the amount of FTC 
+to be granted is the lower of the foreign tax paid and Singapore tax payable 
+on the income. This is computed on a “source-by-source and country-by- 
+country” basis. 
+ 
+5.3 
+Under the “source-by-source and country-by-country” basis of FTC 
+computation: 
+ 
+(a) any excess of foreign tax paid over the Singapore tax payable on one 
+type of foreign income from a country cannot be used to offset against 
+the Singapore tax payable on another type of foreign income from the 
+same country. For example, any excess of foreign tax paid over the 
+Singapore tax payable on dividend from China cannot be used to 
+reduce the Singapore tax payable on interest from China. 
+ 
+(b) any excess of foreign tax paid over the Singapore tax payable on one 
+type of foreign income from a foreign country cannot be used to offset 
+against the Singapore tax payable on the same type of income from 
+another foreign country. For example, any excess of foreign tax paid 
+over the Singapore tax payable on dividend from China cannot be used 
+to reduce the Singapore tax payable on dividend from Thailand. 
+(c) 
+any excess of foreign tax paid over the Singapore tax payable on one 
+type of foreign income from a foreign country cannot be used to offset 
+against the Singapore tax payable on a different type of foreign income 
+from a different foreign country. For example, any excess of foreign tax 
+paid over the Singapore tax payable on dividend from China cannot be 
+used to reduce the Singapore tax payable on interest from Thailand. 
+ 
+ 
+3 Tax exemption is currently granted, subject to certain conditions, under the Foreign-Sourced 
+Income Exemption (FSIE) regime pursuant to sections 13(7A) and 13(8) of the ITA. 
+
+Income Tax: Foreign Tax Credit Pooling 
+4 
+ 
+ 
+ 
+6 
+New FTC pooling system 
+ 
+6.1 
+Under the FTC pooling system, you may elect to aggregate the foreign taxes 
+paid (including any underlying tax, where applicable) on any items of your 
+foreign income. This applies to foreign income which you receive in 
+Singapore during the basis period for the YA 2012 and for subsequent YAs, 
+and is provided that all the following conditions are met: 
+ 
+(a) 
+income tax must have been paid on the income in the foreign tax 
+jurisdiction from which you derived the income; 
+ 
+(b) 
+the headline tax rate of that foreign tax jurisdiction is at least 15% at 
+the time you receive the foreign income in Singapore; 
+ 
+(c) 
+there must be Singapore tax payable on your foreign income; and 
+ 
+(d) 
+you are entitled to claim FTC under section 50, 50A or 50B of the ITA 
+on your foreign income. 
+ 
+6.2 
+If FTC pooling applies, the amount of FTC granted to you will be the lower of 
+the total Singapore tax payable on those foreign income and the pooled 
+foreign taxes paid on those income. 
+ 
+6.3 
+All other existing conditions applicable to FTC claims under section 50, 50A 
+or 50B of the ITA remain unchanged. The existing method of computing the 
+amount of Singapore tax payable on your foreign income continues to apply 
+under the FTC pooling system. 
+ 
+6.4 
+If your foreign income does not qualify for FTC pooling or you do not elect for 
+the pooling of FTC, the “source-by-source and country-by-country” basis of 
+FTC computation continues to apply. 
+ 
+6.5 
+Your election for claiming FTC under the FTC pooling system on any item of 
+your foreign income is to be made for each YA. In other words, your pool of 
+foreign income under FTC pooling in one YA need not be the same as that 
+in another YA. 
+6.6 
+Annexes A to D illustrate the computation of FTC under the FTC pooling 
+system: 
+(a) 
+Annex A – 
+Computation of FTC for a company that receives 
+foreign income 
+ 
+(b) 
+Annex B – 
+Computation of FTC for a company whose foreign 
+income qualify for DTR and UTC 
+ 
+(c) 
+Annex C – 
+Computation of FTC for a company whose income is 
+subject to different tax rates 
+
+Income Tax: Foreign Tax Credit Pooling 
+5 
+ 
+ 
+ 
+(d) 
+Annex D – 
+Computation of FTC for an individual who receives 
+foreign income 
+ 
+7 
+Administrative Procedure 
+ 
+7.1 
+If you wish to elect for FTC pooling to apply for a YA, you must do so4 in the 
+tax computation submitted to IRAS together with your annual income tax 
+return for that YA. You should also show clearly the details5 of the foreign 
+income on which you are claiming FTC under FTC pooling and your 
+computation of the FTC. 
+ 
+7.2 
+In the absence of an election and your computation of the FTC under FTC 
+pooling, IRAS will compute the FTC on your foreign income using the 
+“source-by-source and country-by-country” basis of computation. 
+ 
+7.3 
+You are required to maintain relevant supporting documents (for example, 
+withholding tax receipts) to substantiate that foreign income tax had been 
+paid on your foreign income. You need not submit these documents to IRAS 
+unless we ask you to do so. 
+ 
+8 
+Frequently Asked Questions 
+ 
+8.1 
+Is there any restriction on the types of foreign income or country (from 
+which the foreign income is derived) which can qualify for FTC pooling? 
+ 
+There is no restriction on the types of foreign income or the foreign tax 
+jurisdictions from which the income is derived under the FTC pooling system. 
+However, the foreign income must meet the conditions stated in paragraph 
+6.1. 
+ 
+8.2 
+Can I change the pool of foreign income after I have made the selection 
+in my income tax return? 
+ 
+You can submit a revised tax computation showing your revised selection of 
+the pool of foreign income. However, if the revised selection is submitted 
+after a Notice of Assessment is issued, any change in the pool of foreign 
+income under FTC pooling is subject to the normal objection period and 
+procedures. 
+8.3 
+What if my foreign income qualifies for both the FTC pooling system 
+and Foreign-Sourced Income Exemption (FSIE) scheme? 
+ 
+ 
+ 
+ 
+ 
+4 For partners receiving foreign income through partnerships, the partners have to make the election 
+in their respective tax computations. 
+5 The details include nature of income, gross income, country in which foreign income is derived, 
+headline tax rate of that country, amount of foreign tax paid and foreign tax rate applicable to the 
+foreign income and net income received. 
+
+Income Tax: Foreign Tax Credit Pooling 
+6 
+ 
+ 
+ 
+If your foreign income meets the conditions for both FTC pooling and the tax 
+exemption under the FSIE scheme6 [under sections 13(7A) or 13(8) of the 
+ITA], you may choose, for that YA, any of the following to apply to your foreign 
+income: 
+ 
+(a) 
+Tax exemption under the FSIE regime; or 
+ 
+(b) 
+FTC under the FTC pooling system; or 
+ 
+(c) 
+FTC under the “source-by-source and country-by-country” basis of 
+computation. 
+ 
+8.4 
+I received dividend from a foreign company which had paid income tax 
+on the income out of which the dividend is declared (i.e. the underlying 
+tax). Is such income tax included as “foreign tax paid” on that dividend? 
+ 
+For FTC pooling purposes, the “foreign tax paid” includes the proportionate 
+amount of the underlying tax paid by the foreign company on the dividend. 
+This is provided that the conditions under the relevant tax treaty or section 
+50A(3) for claiming FTC on the underlying tax are met. 
+ 
+8.5 
+I have foreign income that qualifies for tax sparing credit under a tax 
+treaty. Can this foreign income be pooled with my other items of foreign 
+income under FTC pooling? 
+ 
+No. Tax sparing credit is generally granted under a tax treaty on foreign 
+income which has not been subject to tax in the foreign tax jurisdiction. 
+Hence, the foreign income does not meet the condition in paragraph 6.1. Tax 
+sparing credit on foreign income continues to be computed using the “source- 
+by-source and country-by-country” basis. 
+ 
+8.6 
+How does FTC pooling apply to a company whose income is subject to 
+tax at more than one tax rate? 
+ 
+Where a company derives foreign income subject to tax at different tax rates 
+(i.e. concessionary and normal tax rates), FTC pooling applies as follows: 
+(a) 
+the Singapore tax payable on the foreign income (for which the 
+company elects for FTC pooling) under the concessionary and normal 
+tax categories is aggregated; and 
+ 
+(b) 
+the amount of FTC to be given is based on the lower of the total 
+Singapore tax payable and the total foreign taxes paid on the same 
+pool of foreign income. 
+ 
+Annex C illustrates the application of FTC pooling under this scenario. 
+ 
+ 
+6 Please refer to the IRAS e-Tax Guide on “Tax exemption for foreign-sourced income” published on 
+23 Jan 2019. 
+
+Income Tax: Foreign Tax Credit Pooling 
+7 
+ 
+ 
+ 
+8.7 
+Can I elect for FTC pooling if I suffer a loss on the foreign income 
+received? 
+ 
+Where a business suffers a loss (under a tax rate category), the foreign tax 
+paid on the foreign income falling under that tax category is not allowed to 
+be pooled. This is because there is no Singapore tax payable on that foreign 
+income. 
+ 
+8.8 
+Can FTC pooling apply to my foreign income that is exempt from tax in 
+Singapore? 
+ 
+FTC pooling does not apply to foreign income which is specifically exempt 
+from tax in Singapore (e.g. exemption given under section 13G of ITA), as 
+there is no Singapore tax payable on the foreign income. 
+ 
+An exception is where the foreign income only qualifies for tax exemption 
+under the FSIE regime. In this case, you may still elect to claim FTC on the 
+foreign income under FTC pooling. Upon election, the tax exemption under 
+the FSIE regime will not apply. Instead, the said foreign income will be 
+brought to tax, with FTC granted under FTC pooling. 
+ 
+8.9 
+Can FTC pooling apply to my foreign income that is subject to the 
+quarantine rules under the ITA? 
+ 
+Where your foreign income is subject to quarantine rules specified under the 
+ITA (e.g. section 10C, 10D, 10F, 26, 43F, 43N, 43P etc.), you may still elect 
+for FTC pooling to apply. This is provided that the conditions for FTC pooling 
+are satisfied. However, if you suffer a loss under a particular tax category, 
+the foreign income under that tax category will not qualify for FTC pooling. 
+ 
+9 
+Contact Information 
+ 
+9.1 
+If you have any enquiries or need clarification on this Guide, please call: 
+(a) 
+1800-3568622 (Corporate) 
+(b) 
+1800-3568300 (Individual). 
+
+Income Tax: Foreign Tax Credit Pooling 
+8 
+ 
+ 
+ 
+10 
+Updates and Amendments 
+ 
+Date of 
+amendment 
+Amendments made 
+1 
+21 Jul 2023 
+The following changes are made to the previous e- 
+Tax Guide published on 27 Dec 2013: 
+• Editorial changes to various paragraphs; 
+• Renumbered the provisions in the Income Tax Act 
+1947; and 
+• Updated the illustrations in the Annexes to more 
+recent YAs. 
+
+Income Tax: Foreign Tax Credit Pooling 
+9 
+ 
+ 
+ 
+Annex A – Computation of FTC for a company that receives foreign income 
+ 
+Headline 
+tax rate 
+of country 
+Amount 
+Foreign 
+tax 
+paid 
+Deductible 
+expenses  
+Trade income (net of deductible exp. & CA) 
+2,190,000 
+Foreign income - dividend (Country X) 
+20% 
+80,000 
+16,000 
+1,000 
+Foreign income - dividend (Country Y) 
+10% 
+100,000 
+10,000 
+1,000 
+Foreign income - interest (Country Z) 
+15% 
+200,000 
+20,000 
+20,000 
+Company A derives and receives the above income during the basis period for YA 
+20X1. It elects for FTC pooling on dividend from Country X and interest from Country 
+Z (both income qualifying for DTR). Dividend from Country Y does not qualify for FTC 
+pooling as the headline tax rate condition is not met. 
+Tax computation for YA 20X1: 
+Trade income (net of deductible expenses and capital allowances) 
+2,190,000 
+Dividend (Country X) (net of deductible expenses of $1,000) 
+79,000 
+(A) 
+Dividend (Country Y) (net of deductible expenses of $1,000) 
+99,000 
+(B) 
+Interest (Country Z) (net of deductible expenses of $20,000) 
+ 
+180,000 (C) 
+Total statutory income 
+2,548,000 
+(D) 
+Less: deductible donations (assumed) 
+ 
+-8,000
+2,540,000 
+Less: investment allowance (assumed) 
+ 
+-140,000
+2,400,000 
+Less: group relief transferred in under section 37B (assumed) 
+ 
+-200,000
+2,200,000 
+Less: partial tax exemption amount 
+ 
+-152,500
+Chargeable income after exempt amount 
+  2,047,500
+Tax @ 17% 
+348,075.00 
+(E) 
+Less: FTC under pooling system 
+-35,381.25 
+FTC not under pooling system 
+ -10,000.00
+302,693.75 
+Less: corporate tax rebate (assumed) 
+ -10,000.00
+Net tax payable 
+ 292,693.75
+Computation of FTC under FTC pooling system 
+Singapore tax payable on foreign income 
+-- dividend (Country X) (A/D x E) 
+10,791.96 
+-- interest (Country Z) (C/D x E) 
+  24,589.29
+Total Singapore tax payable on income qualifying for FTC pooling 
+35,381.25 
+Total foreign tax paid 
+36,000.00 
+FTC = lower of total Singapore tax payable and total foreign tax paid 
+35,381.25 
+Computation of FTC on dividend from Country Y 
+Singapore tax payable on dividend (B/D x E) 
+13,524.11 
+Foreign tax paid 
+10,000.00 
+FTC = lower of total Singapore tax payable and foreign tax paid 
+10,000.00 
+
+Income Tax: Foreign Tax Credit Pooling 
+10 
+ 
+ 
+ 
+Annex B – Computation of FTC for a company whose foreign income qualify 
+for DTR & UTC 
+ 
+Headline 
+tax rate 
+of 
+  country 
+Amount 
+Foreign 
+tax paid 
+Expenses 
+applicable 
+to foreign 
+income   
+Service income – local 
+3,000,000 
+Service income - from Country X 
+20% 
+500,000 
+100,000 
+Deductible expenses & CA for service income 
+2,000,000 
+Foreign income - interest (Country Y) 
+30% 
+200,000   20,000 
+1,000 
+Total foreign tax paid 
+ 120,000 
+Company B is engaged in the business of providing consultancy services in Singapore 
+and derives the above income during YA 20X1. It elects for the FTC pooling on service 
+income from Country X (qualifying for UTC) and interest income from Country Y 
+(qualifying for DTR). 
+Tax computation for YA 20X1: 
+Service income - local 
+3,000,000 
+Service income - Country X 
+ 
+500,000 
+(A) 
+Total service income 
+3,500,000 
+(B) 
+Less: deductible expenses & capital allowances 
+ -2,000,000 
+1,500,000 
+(C) 
+Interest (Country Y) 
+200,000 
+Less: expenses 
+ 
+-1,000 
+199,000 
+(D) 
+1,699,000 
+(E) 
+Less: deductible donations (assumed) 
+-100,000 
+Less: partial tax exemption amount 
+ 
+-152,500 
+Chargeable income after exempt amount 
+  1,446,500 
+Tax @ 17% 
+245,905.00 
+(F) 
+Less: FTC under pooling system 
+ -59,816.96 
+186,088.04 
+Less: corporate tax rebate (assumed) 
+ -10,000.00 
+Net tax payable 
+ 176,088.04 
+Computation of FTC under FTC pooling system 
+Singapore tax payable on: 
+-- service income (A/B x C/E x F) 
+31,014.67 
+-- interest (D/E x F) 
+  28,802.29 
+Total Singapore tax payable on income qualifying for FTC 
+59,816.96 
+Total foreign tax paid 
+120,000.00 
+FTC = lower of total Singapore tax payable and total foreign tax paid 
+59,816.96 
+
+Income Tax: Foreign Tax Credit Pooling 
+11 
+ 
+ 
+ 
+Annex C – Computation of FTC for a company whose income is subject to tax 
+at different tax rates 
+ 
+Concessionary 
+tax rate 
+10% 
+Normal tax 
+rate 
+17% 
+Total 
+foreign 
+tax paid 
+Trade income (net of deductible expenses 
+and capital allowances) 
+800,000 
+1,200,000 
+Royalty (Country X) (net of expenses) 
+300,000 
+200,000 
+Foreign tax paid on royalty 
+45,000 
+10,000 
+55,000 
+Company C enjoys the concessionary tax rate of 10% on its qualifying trade income and 
+royalty income from foreign countries. It elects for FTC pooling on all its royalty income 
+received in Singapore (which qualifies for DTR). 
+(Assume headline tax rate condition met.) 
+Tax computation for YA 20X1: 
+10% 
+17% 
+Total 
+Trade income (net of deductible exp. & CA) 
+800,000 
+1,200,000 
+2,000,000 
+Foreign income – royalty 
+300,000 (A) 
+200,000 (D) 
+500,000 
+1,100,000 (B) 
+1,400,000 (E) 
+2,500,000 
+Less: partial tax exemption amount 
+- 
+-152,500 
+-152,500 
+Chargeable income after exempt amount 
+1,100,000 
+1,247,500 
+2,347,500 
+Tax @ 10% / 17% 
+110,000.00 (C) 
+212,075.00 (F) 
+322,075.00 
+Less: FTC under pooling system 
+ -55,000.00 
+267,075.00 
+Less: corporate tax rebate (assumed) 
+ -10,000.00 
+Net tax payable 
+ 257,075.00 
+Computation of FTC under FTC pooling system 
+Singapore tax payable on: 
+-- royalty under 10% concessionary tax rate (A/B x C) 
+30,000.00 
+-- royalty under 17% normal tax rate (D/E x F) 
+  30,296.43 
+Total Singapore tax payable on income qualifying for FTC 
+60,296.43 
+Total foreign tax paid 
+55,000.00 
+FTC = lower of total Singapore tax payable and total foreign tax paid 
+55,000.00 
+
+Income Tax: Foreign Tax Credit Pooling 
+12 
+ 
+ 
+ 
+Annex D – Computation of FTC for an individual who receives foreign income 
+Mr. David is a partner in ABC partnership. He is 40 years old. For YA 2023, his share of partnership 
+income is $500,000. ABC partnership also receives foreign income in the form of service income 
+(from services rendered overseas), interest and dividend from countries X, Y and Z respectively. Mr. 
+David’s share of the foreign income and the headline tax rates are summarized in the table below. 
+ 
+Headline 
+tax rate 
+Share of 
+income1 
+Share of 
+foreign tax 
+paid 
+Share of partnership income 
+500,000 
+Foreign income – Service income (Country X) 
+15% 
+60,000 
+6,000 
+Foreign income – Interest (Country Y) 
+20% 
+50,000 
+10,000 
+Foreign income – Dividend (Country Z) 
+20% 
+100,000 
+20,000 
+ 
+Mr. David elects for FTC pooling on his service income (not qualifying for tax exemption under 
+section 13(8) but qualifying for UTC) and interest income (qualifying for DTR). His dividend 
+income from country Z qualifies for tax exemption under section 13(8) of the ITA. 
+ 
+Tax computation for YA 2023: 
+Share of partnership income 
+500,000 
+Share of service income (Country X) 
+60,000 
+(A) 
+Share of interest income (Country Y) 
+ 
+50,000 (B) 
+610,000 
+(C) 
+Less: Personal reliefs (assumed) 
+ 
+-50,000 
+Chargeable income 
+ 
+560,000 
+Tax payable on: first $320,000 
+44,550.00 
+next $240,000 @ 22% 
+  52,800.00 
+Gross tax payable 
+97,350.00 
+(D) 
+Less: FTC under pooling system (see computation 
+below) 
+ -16,000.00 
+81,350.00 
+Less: Personal tax rebate 
+ 
+nil 
+81,350.00 
+Less: Parenthood tax rebate (assume 4th child) 
+ -20,000.00 
+Net tax payable 
+  61,350.00 
+ 
+ 
+Computation of FTC under FTC pooling system 
+Singapore tax payable on foreign income 
+-- Service income (Country X) (A/C x D) 
+9,575.41 
+-- Interest income (Country Y) (B/C x D) 
+  7,979.51
+Total Singapore tax payable on income elected for FTC pooling 
+ 17,554.92
+Total foreign tax paid (6,000 + 10,000) 
+16,000.00 
+FTC = lower of total Singapore tax payable and total foreign tax paid 
+16,000.00 
+1 Income shown is net of all relevant deductible expenses. 

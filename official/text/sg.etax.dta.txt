@@ -1,0 +1,1831 @@
+Avoidance of Double Taxation Agreements (“DTAs”) 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+IRAS e-Tax Guide 
+ 
+Avoidance of Double Taxation Agreements (“DTAs”) 
+ 
+(Fourth Edition) 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Published by 
+Inland Revenue Authority of Singapore 
+ 
+ 
+ 
+ 
+Published on 30 Jan 2026 
+ 
+First edition on 11 Oct 2017 
+Second edition on 15 Jun 2018 
+Third edition on 23 Oct 2021 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Disclaimers: IRAS shall not be responsible or held accountable in any way for any damage, loss or expense whatsoever, arising directly 
+or indirectly from any inaccuracy or incompleteness in the Contents of this e-Tax Guide, or errors or omissions in the transmission of 
+the Contents. IRAS shall not be responsible or held accountable in any way for any decision made or action taken by you or any third 
+party in reliance upon the Contents in this e-Tax Guide. Except where specific contents carry legal force, this information aims to 
+provide a better general understanding of taxpayers’ tax obligations and is not intended to comprehensively address all possible tax 
+issues that may arise. While every effort has been made to ensure that this information is consistent with existing law and practice, 
+should there be any changes, IRAS reserves the right to vary its position accordingly. 
+ 
+ 
+© Inland Revenue Authority of Singapore 
+ 
+All rights reserved. No part of this publication may be reproduced or transmitted in any form or by any means, including photocopying 
+and recording without the written permission of the copyright holder, application for which should be addressed to the publisher. 
+Such written permission must also be obtained before any part of this publication is stored in a retrieval system of any nature. 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+ 
+ 
+ 
+Table of Contents 
+ 
+                  Page 
+ 
+1 
+Aim ................................................................................................................... 1 
+2 
+At a glance ...................................................................................................... 1 
+3 
+Introduction ..................................................................................................... 2 
+4 
+Singapore’s DTA Policy ................................................................................. 4 
+5 
+Multilateral Convention to Implement the Tax Treaty Related Measures to 
+Prevent Base Erosion and Profit Shifting..................................................... 5 
+6 
+Common DTA Provisions .............................................................................. 6 
+7 
+Mutual Agreement Procedure ...................................................................... 17 
+8 
+Arbitration ..................................................................................................... 26 
+9 
+Notes on Specific DTAs ............................................................................... 29 
+10 Contact Information ..................................................................................... 29 
+11 Updates and amendments ........................................................................... 29 
+Annex A: Minimum information required when filing a MAP application ...... 30 
+Annex B: Sample of letter of authorisation ....................................................... 31 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+ 
+1 
+ 
+1 
+Aim  
+ 
+1.1 
+This e-Tax Guide provides information on  
+ 
+• 
+The interpretation and application of Singapore’s DTAs; and 
+• 
+The mutual agreement procedure (“MAP”) under Singapore’s DTAs. 
+ 
+1.2 
+This e-Tax Guide is relevant to you if you have cross-border transactions with 
+or investments in a jurisdiction that has a DTA with Singapore. 
+ 
+ 
+2 
+At a glance 
+ 
+2.1 
+Singapore’s recent DTAs are largely based on the Organisation of Economic 
+Co-operation and Development Model Tax Convention on Income and on 
+Capital (“OECD MTC”), with some modifications. Reference may generally be 
+made to the OECD’s commentary on the OECD MTC (“OECD Commentary”) 
+(which may be updated or revised by the OECD from time to time) for 
+information on the interpretation of the provisions of Singapore’s DTAs. 
+However, it should be noted that there are some differences between 
+Singapore’s DTAs and the OECD MTC. Singapore has reflected the main areas 
+of differences in the “Non-OECD economies’ positions on the OECD Model Tax 
+Convention” of the OECD MTC. 
+ 
+2.2 
+For various reasons, Singapore’s DTA partners may not always share the same 
+interpretation of the DTA provisions as Singapore. Notwithstanding this, this e-
+Tax Guide provides information on IRAS’ interpretation and application of key 
+provisions of Singapore’s DTAs. 
+ 
+2.3 
+Taxpayers relying on the provisions of a DTA will generally need to prove that 
+they are tax resident in Singapore or the other DTA jurisdiction by producing a 
+certificate of residence.  
+ 
+2.4 
+If taxpayers encounter double taxation or believe that provisions in a DTA have 
+not been applied correctly by a tax authority, they may apply for assistance from 
+their tax authorities or IRAS, as the case may be, under the MAP article in the 
+DTA to resolve the issue.  
+ 
+ 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+2 
+ 
+3 
+Introduction  
+ 
+3.1 
+Tax rules differ from jurisdiction to jurisdiction. While some aspects of taxation 
+may be universal or largely similar across different tax systems, there will 
+inevitably also be significant differences. 
+ 
+3.2 
+For example, differences may be found in the following: 
+ 
+• 
+Definitions of what is income; 
+• 
+Definitions of tax base and the scope of taxation of non-residents; 
+• 
+Definitions of tax residency; 
+• 
+Computation rules for determining the amount of income; 
+• 
+Special rules for re-characterising or deeming facts or events; 
+• 
+Timing rules for the recognition of income or expenses; 
+• 
+Tax rates; 
+• 
+Tax incentives for economic development; 
+• 
+Special rules relating to evidence or documentation; and 
+• 
+Rules relating to appeals and dispute resolution. 
+ 
+3.3 
+Juridical double taxation results when the same income is being taxed twice – 
+once in the jurisdiction where the income arises and another time in the 
+jurisdiction where the income is received. Economic double taxation can arise 
+when two jurisdictions tax the same economic transaction differently because 
+of conflicting rules relating to the inclusion of income and deduction of expenses. 
+ 
+3.4 
+Since there will usually be differences in the tax rules of two jurisdictions, a 
+taxpayer in jurisdiction A who invests in or trades with persons in jurisdiction B 
+may be subject to taxation in both jurisdictions that may not be based on 
+consistent principles. This may lead to double taxation that may not necessarily 
+be relieved under the domestic laws of jurisdiction A. There is therefore a 
+potential disincentive for the taxpayer in jurisdiction A to invest in or trade with 
+persons in jurisdiction B. 
+ 
+3.5 
+Even if jurisdiction A may provide adequate relief from double taxation under 
+its domestic laws, the absence of a DTA based on accepted international 
+standards may create uncertainty for taxpayers in jurisdiction A and have the 
+effect of discouraging inbound trade and investment into jurisdiction B from 
+jurisdiction A. 
+ 
+3.6 
+From that perspective, for each contracting jurisdiction to a DTA, a DTA serves 
+to:  
+ 
+• 
+Harmonise and rationalise international tax outcomes according to 
+accepted international standards; and 
+• 
+Signal adherence to accepted international standards of taxation for the 
+purpose of inbound trade and investment. 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+3 
+ 
+3.7 
+DTAs (and other forms of tax treaties for the exchange of information) are also 
+vital in facilitating co-operation between tax authorities in the form of exchange 
+of information and resolution of disputes in accordance with accepted 
+international standards.  
+ 
+3.8 
+Singapore has concluded two types of DTAs: (1) comprehensive DTAs which 
+cover all types of income; and (2) limited DTAs which cover only income from 
+shipping and/ or air transport activities. The full texts of Singapore’s DTAs are 
+available on IRAS’ website (www.iras.gov.sg). 
+ 
+3.9 
+This e-Tax Guide provides information on the purpose of DTAs, as well as on 
+the interpretation and application of provisions that are commonly found in 
+Singapore’s DTAs. It also provides information on DTA benefits, as well as on 
+how to avoid or resolve DTA-related disputes. 
+ 
+ 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+4 
+ 
+4 
+Singapore’s DTA Policy  
+ 
+4.1 
+Singapore believes that trade and investment are important for the growth of 
+the global economy. DTAs are important for promoting international trade and 
+investment by improving transparency of information and certainty of tax 
+positions. They are also essential for the elimination of double taxation that can 
+arise from cross-border transactions, thereby reducing business costs.  
+ 
+4.2 
+DTAs serve the following important functions: 
+ 
+• 
+Harmonising international tax outcomes; 
+• 
+Encouraging foreign investments by providing certainty of tax treatment 
+of cross border transactions; and 
+• 
+Creating a platform for dialogue and co-operation between tax 
+authorities. 
+ 
+4.3 
+By entering into a DTA, we believe that both parties to the DTA have made a 
+binding commitment in good faith to depart appropriately from domestic laws 
+for the purpose of building stronger economic relations.  
+ 
+We believe that benefits from DTAs go beyond taxation and the purpose of 
+DTAs must also be considered in that light. At the same time, DTAs must not 
+be abused in ways that were never intended by the contracting parties – DTAs 
+are never intended to be used or applied to give benefit to artificial 
+arrangements or structures with no commercial purpose. With the new 
+preamble to be added to DTAs by the Multilateral Convention to Implement the 
+Tax Treaty Related Measures to Prevent Base Erosion and Profit Shifting (see 
+next Section), it is further emphasised that contracting parties to a DTA do not 
+intend for the DTA to create opportunities for non-taxation or reduced taxation 
+through tax evasion or avoidance. 
+ 
+ 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+5 
+ 
+5 
+Multilateral Convention to Implement the Tax Treaty Related Measures to 
+Prevent Base Erosion and Profit Shifting  
+ 
+5.1 
+On 7 June 2017, Singapore signed the Multilateral Convention to Implement 
+the Tax Treaty Related Measures to Prevent Base Erosion and Profit Shifting, 
+commonly referred to as the Multilateral Instrument (“MLI”). The MLI is a 
+multilateral agreement intended to swiftly implement various treaty related 
+proposals arising out of the OECD/G20 Base Erosion and Profit Shifting Project. 
+As a multilateral agreement concluded between a large number of jurisdictions, 
+the MLI has a mix of mandatory provisions and optional provisions (that 
+signatory jurisdictions can make reservations against). Signatory jurisdictions 
+may also choose which of their DTAs they wish to be modified by the MLI. A 
+DTA is only modified by the MLI if both parties to the DTA choose for the DTA 
+to be modified by the MLI. Likewise, the DTA is only modified under the MLI to 
+the extent that it is agreed by both parties (i.e. to the extent that both parties do 
+not make reservations on the optional provisions in the MLI). The modifications 
+to a DTA by the MLI take effect only after both parties to the DTA ratify the MLI 
+according to their respective domestic procedures. 
+  
+5.2 
+For various reasons, including the fact that not all of Singapore’s DTA partners 
+participated in the negotiation of the MLI, not all of Singapore’s DTAs will be 
+amended by the MLI. Please refer to IRAS’ website (www.iras.gov.sg) for the 
+DTAs that are amended by the MLI. 
+ 
+5.3 
+For the DTAs that will be amended by the MLI, the main changes made by the 
+MLI are: 
+ 
+(a) 
+the inclusion of a new preamble which states that the purpose of the 
+DTA is to eliminate double taxation without creating opportunities for 
+non-taxation or reduced taxation through tax evasion or avoidance; 
+ 
+(b) 
+the inclusion of a “principal purpose test” provision which is an anti-
+abuse rule to deny DTA benefits in abusive cases; and 
+ 
+(c) 
+the inclusion in some DTAs of provisions which allow taxpayers to 
+request for mutual agreement procedure cases to be resolved through 
+an arbitration process if the competent authorities are unable to reach 
+an agreement within a specified time period.  
+ 
+These changes only take effect after the MLI has been ratified by both 
+Singapore and the DTA jurisdiction. The specific textual changes that will be 
+made to the DTA will be provided through subsidiary legislation made under 
+the Income Tax Act 1947 and will also be published on IRAS’ website 
+(www.iras.gov.sg). 
+ 
+ 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+6 
+ 
+6 
+Common DTA Provisions  
+ 
+6.1 
+A key function of DTAs is to allocate taxation rights between the two contracting 
+jurisdictions. Under a DTA, the taxation rights over income derived by a resident 
+of one jurisdiction (“Residence State”) from the other jurisdiction (“Source 
+State”) can be allocated in any of the following ways: 
+ 
+• 
+Taxation rights are allocated to only one jurisdiction and the other 
+jurisdiction foregoes the right to tax the income. Typically, the DTA will 
+state that the income shall be taxable only in one jurisdiction; 
+• 
+Taxation rights are allocated to both jurisdictions but with limitation of 
+taxation in the Source State to no more than a specified level. Typically, 
+the DTA will state that the income may be taxed in one jurisdiction, and 
+may also be taxed in the other jurisdiction but the tax shall not exceed a 
+specified rate. The Residence State provides tax relief for the tax paid in 
+the Source State (as specified in the DTA) to eliminate double taxation; 
+and 
+• 
+Taxation rights are allocated to both jurisdictions without limitation. 
+Typically, the DTA will state that the income may be taxed in one 
+jurisdiction, and may also be taxed in the other jurisdiction. The 
+Residence State provides tax relief for the tax paid in the Source State 
+to eliminate double taxation. 
+ 
+6.2 
+While a jurisdiction is entitled to subject income arising from its territory to full 
+taxation under its domestic laws, the presence of a DTA could limit the taxation 
+of the income. There are non-fiscal reasons why a jurisdiction may agree to do 
+so (e.g. to attract foreign investment).  
+ 
+6.3 
+In contrast, a jurisdiction generally does not limit the taxation of its residents 
+under a DTA. However, the jurisdiction would be obliged under a DTA to 
+eliminate any double taxation arising under the DTA by providing some form of 
+tax relief to its residents for the foreign tax that had been paid in accordance 
+with the DTA. 
+ 
+6.4 
+The provisions of a DTA are organised under various articles. As the specific 
+provisions in each DTA may be different, this document only highlights 
+briefly the general principles of the key articles of a typical DTA. Please always 
+refer to the specific provisions of the relevant DTA in interpreting and 
+applying the DTA. The following are the typical articles in a DTA. 
+ 
+Persons Covered 
+ 
+6.5 
+The scope of Singapore’s DTAs is always limited to residents of Singapore and 
+that of the DTA partner. Non-residents of both jurisdictions do not qualify for the 
+treatment provided under the DTA. 
+ 
+6.6 
+In Singapore’s context, a Singapore Limited Liability Partnership (“LLP”) or 
+Singapore Limited Partnership (“LP”) is not regarded as a resident of Singapore 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+7 
+ 
+since they are treated as transparent for tax purposes. Instead, the partners of 
+the LLP or LP will qualify as a tax resident of Singapore if they meet the tax 
+residency criteria under Singapore tax laws. Similarly, a trust in Singapore will 
+not have a residency status in Singapore. Instead, the trustee of the trust, which 
+is the person liable to tax for the income of the trust, will qualify as a tax resident 
+of Singapore if it meets the tax residency criteria under Singapore tax laws. 
+ 
+Taxes Covered 
+ 
+6.7 
+This article states that the provisions of the DTA shall apply to taxes on income 
+and capital. In Singapore’s context, it is the income tax. Other taxes like GST, 
+customs and excise duties are outside the scope of Singapore’s DTAs. 
+ 
+6.8 
+This article also provides that any identical or substantially similar taxes that 
+are imposed by either contracting jurisdiction after the signature of the DTA 
+may also be covered by the DTA. If you encounter any foreign tax that is 
+identical or similar to the taxes covered by the DTA but is not stated in the DTA, 
+you may write to IRAS for clarification. 
+ 
+General Definitions 
+ 
+6.9 
+Various terms commonly used in the DTA are defined in this article. If a term is 
+not defined in the DTA, it would normally assume, unless the context otherwise 
+requires, the meaning that it has at that time under the domestic tax laws of the 
+jurisdiction for the purposes of the taxes covered by the DTA. 
+ 
+Resident 
+ 
+6.10 This article defines the residents of each contracting jurisdiction who will be 
+entitled to the DTA benefits. A person is a resident of a jurisdiction if he is liable 
+to tax under the domestic tax law by reason of his domicile, residence, place of 
+management or any other criterion of a similar nature. In Singapore’s context, 
+a resident of Singapore is defined in Section 2 of the Income Tax Act. Please 
+refer to the IRAS website (www.iras.gov.sg) for the eligibility criteria for tax 
+residency in Singapore and the procedures for requesting a certificate of 
+residence.  
+ 
+6.11 When a person is a resident of both contracting jurisdictions based on the 
+respective domestic rules, the DTA provides the “tie-breaker” rules for 
+determining the tax residency of the person for the purpose of the DTA. 
+ 
+6.12 In the case of individuals, the rules to be applied, in order of priority, are: 
+ 
+a) 
+In which jurisdiction does the individual have a permanent home 
+available to him; 
+b) 
+To which jurisdiction are the individual’s personal and economic 
+relations closer; 
+c) 
+In which jurisdiction does the individual have a habitual abode; and 
+d) 
+Of which jurisdiction is the individual a national. 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+8 
+ 
+If the above rules fail to determine the tax residency of the individual, the DTA 
+will generally provide that the competent authorities1 will settle the question by 
+mutual agreement.  
+ 
+6.13 In the case of non-individuals, the person is deemed to be a resident only of 
+the jurisdiction in which its place of effective management is situated. For an 
+entity, the place of effective management is the place where the key 
+management and commercial decisions that are necessary for the conduct of 
+the entity’s business as a whole are in substance made. Generally, this would 
+be similar to the test for residence for companies under the Income Tax Act 
+1947, which is based on central management and control. In some of 
+Singapore’s DTAs, an additional sentence has been included to allow the 
+competent authorities to discuss the issue of tax residency if the place of 
+effective management of the person cannot be determined.  
+ 
+Permanent Establishment 
+ 
+6.14 A permanent establishment means a fixed place of business through which the 
+business of an enterprise is wholly or partly carried on, and normally includes 
+a place of management, a branch, an office, a factory, a workshop and a place 
+of extraction of natural resources, etc.  
+ 
+6.15 The terms of the DTA may also provide that the existence of a permanent 
+establishment will be determined by the existence or extent of certain specified 
+activities in the State where the activities are carried out. Such activities include: 
+ 
+• 
+A building site or a construction, assembly or installation project that 
+lasts more than a specified period; 
+• 
+Supervisory activities connected with a building site or a construction, 
+assembly or installation project that lasts more than a specified period; 
+• 
+Services (including consultancy services) furnished by an enterprise 
+through its employees that continue for more than a specified period; 
+• 
+The presence of a dependent agent (i.e. not an agent of independent 
+status) who has, and habitually exercises, a general authority to 
+negotiate and conclude contracts on behalf of an enterprise. 
+• 
+Work performed from a home or other informal location, where the 
+enterprise used that location on a continuous basis for carrying on its 
+business and the location had effectively been placed at the disposal of 
+the enterprise. 
+ 
+6.16 Some activities by themselves are not regarded as creating a permanent 
+establishment, for example the use of facilities solely for the purpose of storage, 
+display or delivery of goods. These specific exclusions from the concept of a 
+permanent establishment are listed in the Permanent Establishment article of 
+a DTA. In particular, a fixed place of business for the purpose of carrying on an 
+ 
+1  
+A competent authority is a person who has been appointed to perform a designated function for the 
+purpose of the DTA. 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+9 
+ 
+activity (or a combination of activities) of a preparatory or auxiliary character (in 
+relation to the business of the enterprise) is deemed not to be a permanent 
+establishment. 
+ 
+6.17 The concept of a permanent establishment is used mainly to determine whether 
+there exists in a State a sufficient presence or nexus so as to provide the basis 
+for the taxation, of the business profits of a non-resident enterprise, who is a 
+resident of the Residence State in the State where the activities are carried out. 
+If the non-resident enterprise has a permanent establishment in that State, 
+business profits of the enterprise that are attributable to the permanent 
+establishment would be taxable in that State. The remaining business profits of 
+the enterprise that are not attributable to the permanent establishment would 
+be taxable only in the Residence State. 
+ 
+Income from Immovable Property 
+ 
+6.18 Income from immovable property, such as rental income from real estate, is 
+usually taxed in both the State where the property is situated and the Residence 
+State of the recipient. In such circumstance, the Residence State will provide 
+relief for the tax paid in the State where the property is situated. The term 
+“immovable property” is defined in this article and it generally refers to the 
+domestic law meaning for immovable property. 
+ 
+Business Profits 
+ 
+6.19 If an enterprise of a Residence State carries on business in a Source State, the 
+profits derived from the business will not be subject to tax in the Source State 
+unless the business is carried on through a permanent establishment in the 
+Source State. If the business is carried on through a permanent establishment 
+situated in the Source State, the Source State has the right to tax all profits 
+attributable to the permanent establishment as if it were an independent 
+enterprise (i.e. profits are to be calculated on an arm’s length basis). In arriving 
+at the taxable profit, the enterprise is allowed to deduct expenses which are 
+reasonably attributable to the permanent establishment, subject to the relevant 
+deduction rules in the Source State.  
+ 
+6.20 In some of Singapore’s older DTAs, the term “profits of an enterprise” is defined 
+to exclude income from management activities and/ or personal services. This 
+would mean that the Business Profits article will not apply to such income as 
+the Business Profits article in these DTAs applies to “profits of an enterprise”. 
+Such income will therefore have to be considered under the other provisions in 
+the DTA2. For example, in the case of the Singapore-Pakistan DTA, the taxation 
+ 
+2  
+Such language can be found in Singapore’s DTAs with Australia, Pakistan, and Sweden. In the 
+case of the Singapore-Australia DTA, the competent authorities of Singapore and Australia have 
+reached a mutual agreement on 1 May 2018 to apply the relevant DTA provisions in the following 
+manner from that date:  
+(i) The exclusion from “profits of a Singapore enterprise” or “profits of an Australian enterprise” 
+under Article 2(1)(k)(iii) only applies to income covered by Article 11; 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+10 
+ 
+of income from such services would be considered under Article 13 (Fees for 
+technical services), Article 15 (Personal services) or Article 22 (Other income) 
+of the DTA.  
+ 
+Shipping and Air Transport 
+ 
+6.21 This article generally provides for either full or partial exemption of tax in the 
+State where the airline or shipping profits are derived by an enterprise of the 
+Residence State. Such exemption or reduced taxation is applicable to profits 
+derived from the operation of aircraft or ships in international traffic (which 
+would include income from activities which are directly connected or ancillary 
+to the operation of aircraft or ships in international transport). Hence, this article 
+generally applies to operators of international transport that are residents of 
+either contracting jurisdiction. 
+ 
+Associated Enterprises 
+ 
+6.22 Enterprises of the two jurisdictions that are related parties are required to deal 
+with each other on an arm’s length basis. Please refer to IRAS’ e-Tax Guide 
+entitled “Transfer Pricing Guidelines” for more details. 
+ 
+6.23 In the event that one jurisdiction makes a transfer pricing adjustment3 in relation 
+to a transaction or arrangement involving an enterprise of the other jurisdiction, 
+the other jurisdiction is obliged to give a corresponding adjustment for the same 
+transaction or arrangement in relation to its enterprise if it agrees that the 
+transfer pricing adjustment is justified on an arm’s length basis. The competent 
+authorities of both jurisdictions may consult together with a view to resolving 
+the economic double taxation which may arise as a result of the transfer pricing 
+adjustment. 
+ 
+6.24 Notwithstanding the absence of the provision for making corresponding 
+adjustments4 in some of Singapore’s DTAs, IRAS will accept a request for 
+competent authority assistance under the MAP article in the DTA (please refer 
+ 
+(ii) In the case of an individual deriving income from providing personal (including professional) 
+services, whether those services are performed by that individual or his employees, Article 
+11(1) would be the applicable article and consequently, a Contracting State would have the 
+right to tax the income if the services are performed in that State;  
+(iii) In the case of a non-individual (e.g. companies) deriving income from the provision of services 
+through employees or other personnel engaged by the non-individual, the service income would 
+be considered as profits of an enterprise and Articles 4 and 5 would be the applicable articles. 
+Consequently, a Contracting State would have the right to tax the service income only if the 
+provision of services constitutes a permanent establishment in that State under the provisions 
+of Article 4; and 
+(iv) Article 12(1) would apply to remuneration derived by an employee.  
+3  
+When related parties do not transact with each other at arm’s length prices, tax authorities may, for 
+tax purposes, substitute the price of the transaction with one that would have been charged if the 
+parties were unrelated. The adjustment to arrive at that price is known as a transfer pricing 
+adjustment. 
+4  
+The provision which is equivalent to paragraph 2 of Article 9 of the OECD MTC. 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+11 
+ 
+to Section 7 below for more information on MAP). However, such a request will 
+be subject to acceptance by the relevant foreign competent authority. 
+ 
+Dividends 
+ 
+6.25 Generally, from a DTA perspective, the source of dividends is in the jurisdiction 
+where the company paying the dividends is resident. Typically, the Source 
+State would agree under the DTA to limit the taxation of dividends arising from 
+its jurisdiction, where the beneficial owner of the dividends is a resident of the 
+other Contracting State. Any taxation by the Source State is typically levied 
+through a withholding tax. 
+ 
+6.26 In some DTAs, dividends may be exempt from tax in the Source State if they 
+are paid to specified parties or paid under certain specified arrangements. 
+Please refer to the specific DTAs for details.  
+ 
+Interest 
+ 
+6.27 Generally, from a DTA perspective, the source of interest is in the jurisdiction 
+where the person paying the interest is resident (or where a permanent 
+establishment or fixed base bearing such interest exists). Typically, the Source 
+State would agree under the DTA to limit taxation of interest arising from its 
+jurisdiction, where the beneficial owner of the interest is a resident of the other 
+Contracting State. Any taxation by the Source State is typically levied through 
+a withholding tax. 
+ 
+6.28 The kind of payments that are regarded as interest for the purpose of this article 
+would be defined in the DTA. In particular, payments under derivative contracts 
+are not generally regarded as interest. Such payments could be considered 
+under the “Business Profits” or “Other Income” articles, depending on the facts 
+and circumstances of the case.  
+ 
+6.29 In some DTAs, interest may be exempt from tax in the Source State if it is paid 
+to a bank or a financial institution of the Residence State or other specified 
+parties, or if it is paid under certain specified arrangements. Please refer to the 
+specific DTAs for details. 
+ 
+Royalties 
+ 
+6.30 Generally, from a DTA perspective, the source of royalties is in the jurisdiction 
+where the person paying the royalties is resident (or where a permanent 
+establishment or fixed base bearing such royalties exists). Typically, the Source 
+State would agree under the DTA to limit taxation of royalties arising from its 
+jurisdiction, where the beneficial owner of the royalties is a resident of the other 
+Contracting State. Any taxation by the Source State is typically levied through 
+a withholding tax. 
+ 
+6.31 The kind of payments that are regarded as royalties for the purpose of this 
+article would be defined in the DTA. In particular, in some DTAs, payments for 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+12 
+ 
+the use of, or the right to use, industrial, commercial or scientific equipment 
+(generally referred to as equipment leasing income) would be regarded as 
+royalties for the purpose of the DTA. 
+ 
+6.32 In some DTAs, royalties may be exempt from tax in the Source State if they are 
+paid to specified parties, or if they are paid under certain specified 
+arrangements. Please refer to the specific DTAs for details. 
+ 
+Fees for Technical Services  
+ 
+6.33 Some of Singapore’s DTAs include a provision allowing source taxation of fees 
+earned from providing technical services. Such taxation would typically be in 
+the form of a withholding tax. This provision would typically limit the withholding 
+tax rate in the Source State to a specified tax rate. Typically, the withholding 
+tax is not applicable if the technical services are provided through a permanent 
+establishment in the Source State. Technical services covered by this provision 
+and the scope of taxation would be defined in the DTA. Please refer to the 
+specific DTAs for details.  
+ 
+6.34 In general, Singapore would not propose to have such provisions in our DTAs 
+since a withholding tax on the gross amount of fees paid does not take into 
+account the costs in providing the services and is likely to lead to excessive 
+taxation. Nonetheless, where a DTA provides for such withholding tax, 
+businesses should consider the cost of such taxes when doing business in the 
+relevant jurisdiction. 
+ 
+Capital Gains 
+ 
+6.35 This article deals with gains from the disposal or sale of capital assets such as 
+immovable properties and shares. The right to tax gains arising from the sale 
+of immovable property and gains from sale of shares are defined in this article. 
+Generally, capital gains arising from immovable property and business property 
+may be taxed in the State where the property is situated, whereas capital gains 
+arising from shares shall be taxed only in the Residence State (this may be 
+subject to certain exceptions). 
+ 
+Independent Personal Services 
+ 
+6.36 Generally, income of an individual from the provision of professional services 
+or activities of an independent character may be taxed in the Source State if 
+the services are provided through a fixed base in the Source State (the concept 
+of a fixed base is similar to that of a permanent establishment) or are provided 
+in the Source State for more than a specified period (this period is typically 
+aligned to the corresponding period in the Permanent Establishment article for 
+services rendered by enterprises). Examples of individuals rendering 
+professional services include physicians, lawyers, engineers, architects, 
+dentists and accountants. 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+13 
+ 
+Dependent Personal Services 
+ 
+6.37 Generally, income of an individual from employment (other than pensions, 
+director’s fees and remuneration for government services) may be taxed in the 
+Source State if the employment is exercised in the Source State. However, 
+where the employment is exercised in the Source State for less than a specified 
+period (typically 183 days in any 12-month period), the employer is not a 
+resident of the Source State, and the income is not paid or borne by a 
+permanent establishment or fixed base of the employer in the Source State, 
+then the income shall only be taxable in the Residence State of the individual.  
+ 
+Pensions 
+ 
+6.38 In respect of pensions and other similar remuneration, this article usually 
+provides for either: 
+ 
+a) 
+The Residence State to have sole taxing right; or  
+b) 
+Both the Residence State and the Source State to have the right to tax 
+the income. 
+ 
+6.39 Some of Singapore’s DTAs provide that pensions and other similar 
+remuneration paid under the social security system of a contracting jurisdiction 
+shall be taxable only in the jurisdiction in which the pensions arose. 
+ 
+Government Service 
+ 
+6.40 This article provides that government employees who are working in a foreign 
+jurisdiction would enjoy tax exemption in that jurisdiction on their remuneration 
+paid by their government, subject to them meeting specified conditions. If the 
+employee is a resident of the foreign jurisdiction and (i) is a national of that 
+foreign jurisdiction; or (ii) did not become a resident of that foreign jurisdiction 
+solely for the purpose of rendering the government duties, then his 
+remuneration shall be taxable only in the foreign jurisdiction. The tax exemption 
+in the foreign jurisdiction under the Government Service article is not applicable 
+if the employer, while being government-owned, is carrying on a business. In 
+such a case, the provisions of the Dependent Personal Services article would 
+apply accordingly. 
+ 
+Specific Articles for Certain Types of Income 
+ 
+6.41 Normally, there are also separate articles in a DTA specifying the allocation of 
+taxation rights for director’s fees, income derived by entertainers and 
+sportspersons and income derived by students and business apprentices. 
+  
+Other Income/ Income not Expressly Mentioned 
+ 
+6.42 This article covers items or sources of income not dealt with in the other articles 
+of a DTA. The provisions of this article in Singapore’s DTAs may provide for 
+Source State taxation, or Residence State taxation with certain exceptions 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+14 
+ 
+(please refer to the specific DTAs for details). Examples of such exceptions 
+include trust distributions from Real Estate Investment Trusts (“REIT”) and 
+withdrawals from Supplementary Retirement Scheme (“SRS”) accounts (unless 
+they have been specifically covered under another article in the DTA5). 
+ 
+Limitation of Relief (“LOR”) 
+ 
+6.43 Some of Singapore’s DTAs (mostly older DTAs or renegotiated DTAs based on 
+an older DTA) contain an LOR provision which limits the benefits of the DTA for 
+a Singapore resident to foreign-sourced income that is received in Singapore. 
+As Singapore’s tax policies have long changed, we consider such provisions to 
+be obsolete and counter-productive for cross-border investment. The effect of 
+such provisions is to require Singapore investors to repatriate profits and 
+returns from their foreign investments, regardless of the economic logic in doing 
+so. We consider these effects to be undesirable for both Singapore and the 
+DTA partner (being the investment destination) and will continue to ask for the 
+removal of such provisions whenever possible. 
+ 
+6.44 In DTAs where an LOR provision exists, it should be noted that the provision 
+only applies to income that is regarded as foreign-sourced under Singapore law. 
+Under the Income Tax Act 1947, income derived from a business carried on in 
+Singapore is regarded as Singapore-sourced, even if the income may be paid 
+by a person outside Singapore or is paid in respect of work done outside 
+Singapore. The taxation of such business income in Singapore is not 
+dependent on the receipt of the income in Singapore and the LOR provision 
+does not apply to such income. 
+ 
+Elimination of Double Taxation 
+ 
+6.45 Within the framework of co-operation under a DTA, the Residence State would 
+be obliged to relieve any double taxation on its residents resulting from taxation 
+imposed by the Source State in accordance with the DTA. Usually, a Residence 
+State would do so under its domestic law and may either give tax credits to its 
+residents for the foreign tax paid, or exempt the foreign-sourced income from 
+tax.  
+ 
+6.46 Under Singapore’s DTAs, Singapore is typically obliged to relieve double 
+taxation by providing tax credits (including underlying tax credits6 in the case of 
+foreign-sourced dividends) for foreign tax paid by taxpayers in the other DTA 
+jurisdiction in accordance with the provisions of the relevant DTA. Tax credits 
+ 
+5  
+For example, REIT distributions are specifically covered under the dividends article in the 
+Singapore-Spain DTA, Singapore-UK DTA and Singapore-Russia DTA (Protocol signed on 17 Nov 
+2015) while the dividends article in the Singapore-Germany DTA covers distributions from an 
+investment trust, which would cover a REIT. 
+6  
+Underlying tax credit is given in respect of the tax paid by the company paying out the dividend on 
+its profits out of which the dividend is paid to its shareholders. 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+15 
+ 
+to relieve double taxation will be provided to Singapore tax residents 7 
+regardless of whether the income taxed in Singapore is treated as Singapore-
+sourced or foreign-sourced income under the Income Tax Act, as long as the 
+foreign tax is paid in accordance with the provisions of the DTA. As an 
+alternative under the Income Tax Act 1947, taxpayers may also claim foreign-
+sourced income exemption (and avoid the need to claim any tax credits in 
+respect of the foreign-sourced income), subject to meeting the conditions for 
+exemption under the Income Tax Act 1947. 
+ 
+Mutual Agreement Procedure 
+ 
+6.47 This is described in greater detail in Section 7 below.  
+ 
+6.48 Mandatory binding arbitration provisions are included in some of Singapore’s 
+DTAs8, following bilateral discussions with our DTA partners or where the DTA 
+is modified by the MLI to include the mandatory binding arbitration provisions 
+in Part VI of the MLI. Please refer to Section 5 above for more information on 
+the MLI. 
+ 
+Exchange of Information 
+ 
+6.49 This article allows treaty partners to exchange information for tax purposes and 
+the exchange is generally not limited to the taxes or persons covered by the 
+DTA. Please refer to IRAS’ website (www.iras.gov.sg) for more details on this 
+matter. 
+ 
+Entitlement to Treaty Benefits 
+ 
+6.50 This provision includes a Principal Purpose Test (“PPT”) which seeks to deny 
+benefits provided under the DTA in abusive cases where it is reasonable to 
+conclude that the principal purpose or one of the principal purposes of the 
+arrangement or transaction in question is to obtain the benefits under the DTA 
+in a manner that would not be in accordance with the object and purpose of the 
+relevant DTA provisions.  
+ 
+6.51 The principal purpose of an arrangement or transaction is a question of fact and 
+needs to be determined by carrying out an objective analysis of the aims and 
+objects of all persons involved in the arrangement or transaction, taking into 
+account all facts and circumstances surrounding the arrangement or 
+transaction. Based on such objective analysis, it must be reasonable to 
+conclude that one of the principal purposes was to obtain the benefits of the 
+DTA in an improper and abusive manner before the PPT may be invoked to 
+deny the DTA benefits. The principal purposes of an arrangement or 
+ 
+7  
+Non-residents with permanent establishments (e.g. branches) in Singapore are not entitled to tax 
+credits since they are not residents of Singapore. The taxpayer may be able to claim tax credits in 
+the jurisdiction of which it is a tax resident. 
+8  Details of Singapore’s DTAs and mandatory binding arbitration provisions are available at 
+www.iras.gov.sg. 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+16 
+ 
+transaction would not be determined just by reviewing the effects of the 
+arrangement or transaction but should also consider all relevant facts and 
+circumstances concerning the arrangement or transaction. Where the 
+arrangement is connected with a core commercial activity and its form is not 
+contrived, it would not be reasonable to conclude that one of the principal 
+purposes of the arrangement was to obtain a DTA benefit. 
+ 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+17 
+ 
+7 
+Mutual Agreement Procedure 
+ 
+7.1 
+Where two or more tax authorities take different positions in applying the 
+provisions of a DTA, it could result in taxation not in accordance with the 
+provisions of the DTA for the taxpayer.  
+ 
+7.2 
+When a Singapore tax resident taxpayer considers that the actions of the tax 
+authority(ies) may result in taxation not in accordance with the provisions of the 
+relevant DTA, it can choose to resolve the issue through: 
+ 
+• 
+Seeking legal remedies in the jurisdiction in which tax was imposed in a 
+manner that the taxpayer assesses is not in accordance with the 
+applicable DTA; and/ or 
+• 
+Requesting IRAS to resolve the issue through the Mutual Agreement 
+Procedure (“MAP”). 
+ 
+What is MAP?  
+ 
+7.3 
+MAP is a dispute resolution facility provided under the MAP article in 
+Singapore’s DTAs9. It is a facility through which IRAS and the relevant foreign 
+competent authority resolve disputes regarding the application of the DTA. 
+Usually, a MAP is entered into between two competent authorities but it is 
+possible for IRAS to enter into a multilateral MAP involving three or more 
+competent authorities. MAP provides an amicable way for IRAS and the 
+relevant foreign competent authority to agree on the application of the DTA with 
+a view to resolve taxation that is not in accordance with the provisions of the 
+DTA. Where the agreed outcome between IRAS and the relevant foreign 
+competent authority is accepted by the relevant taxpayer(s), it is binding on the 
+relevant parties. 
+ 
+7.4 
+The following paragraphs set out the process, expectations and compliance 
+rules relating to the application for IRAS’ assistance under the MAP article in 
+respect of non-transfer pricing issues. For issues relating to transfer pricing, 
+please refer to the IRAS e-Tax Guide entitled “Transfer Pricing Guidelines”. 
+ 
+Who can apply for MAP? 
+ 
+7.5 
+MAP is available to: 
+ 
+• 
+Taxpayers that are Singapore tax residents; and 
+• 
+Taxpayers who are not Singapore tax residents but have a branch in 
+Singapore. However, such applications are to be made by the taxpayers 
+in the jurisdiction in which they are tax residents and with which 
+Singapore has a DTA.  
+ 
+ 
+ 
+9  Details of Singapore’s DTAs and MAP provisions are available at www.iras.gov.sg. 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+18 
+ 
+Example 
+ 
+A foreign company can apply to the competent authority of the jurisdiction 
+in which it is a tax resident for a MAP for its branch operating in Singapore. 
+The branch has to alert IRAS of the application. 
+ 
+In the case of an overseas branch of a Singapore tax resident company, 
+that Singapore company can apply to IRAS for a MAP concerning its 
+overseas branch’s tax affairs in a DTA jurisdiction. 
+ 
+ 
+When to apply for MAP? 
+ 
+7.6 
+Taxpayers should only initiate a MAP application when taxation not in 
+accordance with the provisions of the DTA has occurred or is certain or highly 
+probable. Double taxation should not be just a possibility, such as the mere 
+occurrence of audit or examinations. Taxpayers may seek resolution on issues 
+that recur over multiple tax years, subject to the time limits provided in the 
+relevant DTA.  
+ 
+7.7 
+MAP should be initiated within the time limit specified (e.g. three years) in the 
+MAP article of the relevant DTA. Failure to do so will result in the competent 
+authorities rejecting the MAP request. Depending on the relevant provision in 
+the MAP article and the manner in which the tax is levied, the time limit is 
+determined, for example, with reference to the date of the notice of assessment 
+issued to the taxpayer or the date of the tax authority’s official request for 
+withholding tax payment (in the absence of a notice of assessment). 
+ 
+7.8 
+Taxpayers must understand that the MAP process is time-consuming and 
+resource intensive for themselves as well as IRAS. Therefore, taxpayers should 
+evaluate their own situations and apply for MAP only if: 
+ 
+• 
+The incidence of double taxation is certain or highly probable for the 
+financial years covered by the MAP application; 
+• 
+They have a robust basis and sufficient documentation to justify their 
+claim that the provision of the DTA has been incorrectly applied;  
+• 
+They have the necessary resources to support the MAP process; and  
+• 
+They have evaluated the suitability of a MAP route by conducting an in-
+depth cost-benefit analysis for their tax situations.  
+ 
+7.9 
+Taxpayers would be able to access MAP even if they have accepted/decided 
+to accept a tax settlement with IRAS or a foreign tax authority. That said, 
+taxpayers must also recognise that it could be challenging for IRAS and the 
+foreign competent authority to negotiate and come to an agreement on a 
+position that deviates from the tax settlement outcome that was already 
+accepted by the taxpayer(s) involved. 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+19 
+ 
+What happens after a MAP application is submitted? 
+ 
+7.10 IRAS may reject a MAP application in certain circumstances, such as the 
+application is not made within the time limit specified in the MAP Article of the 
+relevant DTA. If the MAP application is rejected, IRAS may explain the reasons 
+to the taxpayer and the taxpayer may seek alternative remedies under the 
+relevant domestic tax law. 
+ 
+What are the obligations of taxpayers during the MAP process? 
+ 
+7.11 The MAP negotiation is between the competent authorities and so, taxpayers 
+do not participate in or attend as observers at the negotiations unless they are 
+called upon to make any clarification. 
+ 
+7.12 The success of the MAP process requires co-operation and commitment from 
+taxpayers. Taxpayers should therefore: 
+ 
+• 
+Act in good faith throughout the process; 
+• 
+Comply with all the requirements pertaining to the MAP application 
+process;  
+• 
+Provide access to all relevant documentation; 
+• 
+Be forthcoming in providing complete and reliable information and good 
+quality analysis relating to the MAP applications; 
+• 
+Adhere to all the stipulated timelines when providing any clarification, 
+information and analysis that may be requested by IRAS and the 
+relevant foreign competent authorities;  
+• 
+Update IRAS on all information that they have provided to or received 
+from the relevant foreign competent authorities on a timely basis; and 
+• 
+Provide the same set of information to IRAS and the relevant foreign 
+competent authorities. 
+ 
+7.13 The lack of taxpayers’ cooperation may result in: 
+ 
+• 
+Their applications being rejected; 
+• 
+The MAP process being discontinued; or  
+• 
+No consensus being reached between IRAS and the relevant foreign 
+competent authorities.  
+ 
+In such instances, taxpayers will have to rely on other remedies to eliminate 
+double taxation under the relevant domestic tax law. 
+ 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+20 
+ 
+7.14 The success of the MAP process also depends on the agreement between 
+IRAS and the relevant foreign competent authorities. Taxpayers should not 
+assume that IRAS would always be able to reach agreement for all MAP cases. 
+There may be valid constraints such as: 
+ 
+• 
+The lack of co-operation from taxpayers, as mentioned above;  
+• 
+The tax adjustment cannot be varied due to domestic tax law or the 
+adjustment has already been finalised through the domestic tax appeal 
+process or litigation. 
+ 
+7.15 MAP does not deprive taxpayers of other remedies available under their 
+respective domestic tax law. Taxpayers should inform IRAS and the relevant 
+foreign competent authority if the matter is adjudicated through any legal or 
+judicial proceedings while the MAP process is still ongoing. The competent 
+authorities will discuss and decide if the MAP process should continue, cease 
+or be suspended. Where the matter has been subjected to litigation and 
+determination by the Singapore tribunals and courts, IRAS is unlikely to depart 
+from the determination of the Singapore tribunals and courts. 
+ 
+7.16 The MAP mechanism allows IRAS and the other competent authority to resolve 
+disputes regarding the application of the DTA and is independent from the legal 
+remedies available under the domestic law of both jurisdictions. However, to 
+avoid duplication of efforts, IRAS will discuss with the other competent authority 
+whether the MAP process should be suspended while the case is undergoing 
+domestic legal remedies (see paragraph 7.15). 
+ 
+As you will be expected to commit resources to support the MAP process, you 
+are advised to evaluate your situation and consider whether to apply for a MAP, 
+pursue domestic legal remedies or both. 
+ 
+If you decide to apply for a MAP, you can choose between these two options: 
+ 
+• 
+If you are initiating or have initiated domestic legal remedies concurrently, 
+you can submit a MAP application within the time limit specified in the 
+MAP Article of the DTA and concurrently inform IRAS to defer 
+examination of the MAP application until further notification from you. 
+This is known as a protective MAP application (see paragraph 7.34); or  
+ 
+• 
+If you are still considering whether to pursue domestic legal remedies, 
+you can submit a MAP application within the time limit specified in the 
+MAP Article of the DTA to commence the MAP process described in 
+paragraph 7.23. During the MAP process, should you decide to proceed 
+with domestic legal remedies, you are to inform IRAS and the two 
+competent authorities will decide if the MAP process should be 
+suspended. 
+ 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+21 
+ 
+7.17 Taxpayers are not obliged to accept the outcome agreed between the 
+competent authorities. They may withdraw the application, terminate the 
+process or reject the agreed outcome. However, as the MAP process may 
+demand substantial investment in time and resources from the taxpayers and 
+competent authorities, taxpayers should not terminate the process unless there 
+are valid reasons for doing so. 
+ 
+When may the MAP process be discontinued? 
+ 
+7.18 The lack of co-operation during any part of the MAP process may result in IRAS 
+discontinuing the MAP process. 
+  
+7.19 The table below lists some examples where IRAS may discontinue the MAP: 
+ 
+No. Examples 
+When IRAS may 
+discontinue the MAP 
+process 
+1 
+Insufficient support during MAP process 
+IRAS and the taxpayer agreed on the 
+specified timeline by which the taxpayer is 
+to submit the information required by 
+IRAS.  
+ 
+If the taxpayer fails to provide the 
+information by the timeline and it remains 
+outstanding for an extended period, IRAS 
+will consider that the taxpayer has 
+withdrawn from the MAP process. 
+ 
+When taxpayer fails to 
+provide the information 
+within 3 months after the 
+agreed timeline. 
+2 
+Failure to provide complete information 
+The taxpayer should provide any relevant 
+and material information that may affect 
+the outcome of the MAP to IRAS on a 
+timely basis. 
+ 
+If the taxpayer fails to provide any material 
+information that could have affected the 
+outcome of the MAP, IRAS will consider 
+discontinuing the MAP process. 
+ 
+When it is found that the 
+taxpayer has not 
+provided such material 
+information. 
+ 
+ 
+7.20 Where a MAP process has been discontinued under any of the above situations 
+or has been withdrawn by the taxpayer, and the taxpayer subsequently wishes 
+to resume the MAP process, IRAS will consider the request afresh and assess 
+the merits of the request, including whether the time limit stipulated in the DTA 
+is met on the day the taxpayer submits all relevant information and details to 
+resume the MAP process.  
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+22 
+ 
+7.21 IRAS may revoke or cancel a MAP agreement, even retroactively, in the case 
+of fraud or misrepresentation of information during a MAP process, or when a 
+taxpayer fails to comply with the terms and conditions of the MAP agreement.  
+ 
+7.22 Before IRAS discontinues a MAP process or cancels or revokes a MAP 
+agreement, it will notify the relevant foreign competent authorities of its intention 
+and the reasons for such action. 
+ 
+How to apply for MAP? 
+ 
+7.23 If taxpayers intend to apply for MAP, they should observe the following four-
+step MAP process: 
+ 
+Four-step MAP process: 
+ 
+ 
+ 
+ 
+Step 4 
+ 
+ 
+Step 3 
+ 
+Implementation 
+ 
+ 
+ 
+Review & 
+negotiation 
+ 
+Step 2 
+Step 1 
+ 
+Evaluation 
+ 
+MAP application 
+Taxpayer submits 
+MAP application 
+to IRAS within the 
+time limit 
+specified in the 
+MAP article of the 
+DTA.  
+ 
+IRAS evaluates 
+taxpayer’s MAP 
+application and may 
+contact taxpayer for 
+more information. 
+Where the 
+application is 
+accepted, an 
+acceptance letter 
+will be issued within 
+one month from the 
+date of receipt of all 
+the required 
+information. 
+IRAS informs 
+taxpayer of the 
+MAP outcome 
+within one month 
+from reaching 
+agreement by the 
+competent 
+authorities. 
+Taxpayer and 
+IRAS implement 
+the MAP 
+outcome. 
+ 
+Step 1 – MAP application 
+ 
+7.24 Once the MAP route is decided on, the taxpayer should proceed to submit its 
+MAP application to IRAS within the time limit specified in the MAP article of the 
+relevant DTA. There is no prescribed application form to be completed. Any 
+MAP application should be made in a letter in soft copy only and include all the 
+details and documentation based on the suggested list provided in Annex A.  
+ 
+ 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+23 
+ 
+7.25 The MAP application letter should be addressed to: 
+  
+The Competent Authority  
+International Tax and Relations Division 
+Inland Revenue Authority of Singapore 
+55 Newton Road 
+Revenue House 
+Singapore 307987 
+ 
+The MAP application can be submitted electronically to the email addresses 
+provided in the list of Singapore’s competent authorities available on IRAS’ 
+website (www.iras.gov.sg). 
+ 
+7.26 IRAS does not impose a fee for MAP application. 
+ 
+Step 2 – Evaluation 
+ 
+7.27 IRAS will review and evaluate the taxpayer’s MAP application. IRAS may seek 
+clarification or further information from the taxpayer, hold discussions with the 
+taxpayer or conduct site visits to the taxpayer’s premises which include 
+interviewing the taxpayer’s key personnel. 
+ 
+7.28 IRAS will notify the relevant foreign competent authority of the MAP application 
+following the MAP process under the MAP Statistics Reporting Framework 10 
+and where applicable, the arbitration provisions in the relevant DTA. If IRAS 
+accepts the application, it will issue letters of acceptance to the taxpayer and 
+the relevant foreign competent authority within one month from the date of 
+receipt of all required information. If IRAS rejects the application, it will notify 
+the taxpayer and the relevant foreign competent authority in writing with 
+reasons. 
+ 
+Step 3 – Review and negotiation 
+ 
+7.29 Upon acceptance of the MAP application, IRAS will proceed to discuss the MAP 
+case with the foreign competent authority with a view to resolve any taxation 
+which is not in accordance with the provisions of the DTA.  
+ 
+7.30 IRAS will update the taxpayer on the progress and the outcome of the 
+competent authorities’ negotiations. In general, IRAS aims to resolve a MAP 
+case within 24 months from receiving the taxpayer’s complete application. 
+ 
+Step 4 – Implementation 
+ 
+7.31 When an outcome is reached between IRAS and the relevant foreign 
+competent authority, IRAS will write to inform the taxpayer within one month of 
+ 
+10  The framework is provided under the Inclusive Framework on the OECD/G20 Base Erosion and 
+Profit Shifting (“BEPS”) - Action 14 (Making Dispute Resolution Mechanisms More Effective). 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+24 
+ 
+reaching agreement and advise the taxpayer on the next course of action. The 
+taxpayer will have to decide whether the agreed outcome is acceptable.  
+ 
+7.32 IRAS will not implement the agreed outcome until the taxpayer has accepted it 
+and after the exchange of confirmation and closing letters between IRAS and 
+the relevant foreign competent authority. After the taxpayer accepts the agreed 
+outcome, IRAS and the relevant foreign competent authority can implement the 
+agreement in a timely manner in accordance with domestic procedures. 
+ 
+7.33 If any interest or penalties have been imposed in a jurisdiction in connection 
+with the taxation imposed that is the subject of the MAP, the MAP agreement 
+may address whether any refund of such interest or penalties should 
+appropriately be made. 
+ 
+Protective MAP application 
+ 
+7.34 A protective MAP application is a MAP application submitted by a taxpayer in 
+order to ensure that the application is made within the time limit specified in the 
+MAP article of the relevant DTA but the taxpayer indicates to IRAS or agreed 
+with IRAS that the application should not be examined until further notification 
+is received from the taxpayer to do so. A protective MAP application protects 
+the taxpayer against missing the time limit as it pursues other courses of action, 
+such as domestic legal remedies. 
+ 
+7.35 To apply for a protective MAP application, the taxpayer must: 
+ 
+(a) 
+Submit the application within the time limit specified in the MAP article 
+of the relevant DTA; 
+ 
+(b) 
+Provide the details listed in Annex A; and 
+ 
+(c) 
+Indicate clearly that IRAS should defer examination of the MAP 
+application until further notification from the taxpayer; and 
+ 
+(d) 
+Provide the reasons for making the protective MAP application. 
+ 
+7.36 Upon accepting the protective MAP application, IRAS will notify the relevant 
+foreign competent authority accordingly. At this point, IRAS will defer 
+examination of the protective MAP application, including whether or not the 
+MAP application is justified until further notification from the taxpayer. 
+ 
+7.37 When the taxpayer notifies IRAS that the protective MAP application should 
+now be examined (e.g. when the domestic legal remedies have been 
+completed or withdrawn), the taxpayer must provide an update on the outcome 
+of the courses of action(s) that it has taken since the submission of the 
+protective MAP application. This will allow IRAS to consider the MAP 
+application and to commence the MAP process described in paragraph 7.23. 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+25 
+ 
+7.38 Should the taxpayer decide to withdraw the protective MAP application (e.g. 
+the taxpayer has accepted the resolution of the issues through the domestic 
+legal remedies), it must notify IRAS immediately. IRAS will notify the relevant 
+foreign competent authority accordingly. 
+ 
+Other compliance matters 
+ 
+7.39 Taxpayers who have appointed tax agents or other representatives to act on 
+their behalf on matters relating to their MAP application are required to provide 
+IRAS with a letter of authorisation (“LOA”). The LOA is to enable IRAS to 
+correspond and discuss with the appointed tax agents and representatives on 
+the matters relating to the application. A sample of an LOA is in Annex B. 
+ 
+7.40 IRAS does not accept tax agents’ requests to initiate MAP discussion for clients 
+who wish to preserve anonymity. Taxpayers should therefore engage IRAS 
+without masking their identity if they are serious about applying for MAP. 
+ 
+7.41 All information obtained during the MAP process is protected by the 
+confidentiality provisions in the Income Tax Act 1947 and the relevant DTA. 
+ 
+7.42 IRAS is not precluded from conducting an audit on the taxpayer if there is non-
+compliance with Singapore tax law. 
+ 
+ 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+26 
+ 
+8 
+Arbitration 
+ 
+8.1 
+Arbitration offers a recourse to resolve issues that have reached stalemate in 
+MAP discussion.11 
+ 
+8.2 
+Under the arbitration provisions in the relevant DTA, where IRAS and the 
+relevant foreign competent authority are unable to resolve the dispute under a 
+MAP within a stipulated period (generally two or three years from the “start date” 
+of a MAP case) or a period agreed between the competent authorities which is 
+communicated to the taxpayer, the taxpayer may request in writing for any 
+unresolved issues to be submitted to an arbitration panel. 
+ 
+8.3 
+The arbitration panel is required to render a decision within a specified time 
+period. Typically, Singapore’s arbitration clauses provide for the panel’s 
+decision to be final and binding on the competent authorities, unless the 
+taxpayer chooses to disagree with the decision, or the taxpayer chooses to 
+pursue other domestic recourse in Singapore or in the foreign jurisdiction to 
+resolve the dispute. In addition, in some of our DTAs, there is a clause which 
+provides that the arbitration panel’s decision is not binding on the competent 
+authorities and shall not be implemented if the competent authorities agree on 
+a different resolution of all unresolved issues within three calendar months after 
+the arbitration panel’s decision has been delivered to them. Arbitration thus 
+provides certainty to taxpayers and helps to resolve cross-border disputes in a 
+more timely manner. 
+ 
+8.4 
+The following paragraphs outline the application process and rules relating to 
+arbitration. 
+ 
+Who can apply for Arbitration? 
+ 
+8.5 
+Taxpayers may submit their request in writing for a MAP case to be submitted 
+for arbitration if all the following criteria are met: 
+ 
+• 
+The mandatory binding arbitration provisions have taken effect with 
+respect to the MAP case12. 
+• 
+The competent authorities are unable to reach an agreement to resolve 
+all the issues with respect to the MAP case within the time specified in 
+ 
+11  Singapore opted for the arbitration provisions to be included in the Singapore DTAs when she signed 
+the Multilateral Convention to Implement Tax Treaty Related Measures to Prevent Base Erosion and 
+Profit Shifting (“MLI”). The arbitration provisions will apply if our DTA partners similarly adopt the 
+same arbitration provisions. Arbitration provisions may also be included in the Singapore DTAs 
+through bilateral discussion with our DTA partners. Details are available at www.iras.gov.sg. 
+ 
+12 The mandatory binding arbitration provisions shall have effect with respect to the MAP case 
+presented to the competent authority on or after the latest date on which the MLI enters into force 
+for Singapore and its DTA partner. With respect to the MAP case presented to the competent 
+authority prior to the latest date on which the MLI enters into force for Singapore and its DTA partner, 
+Singapore has reserved the right for the case to be eligible for arbitration only to the extent that the 
+two competent authorities agree that the case can be submitted for arbitration. 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+27 
+ 
+the DTA and there was no prior agreement between the competent 
+authorities to extend the period for the specific MAP case. Where the 
+competent authorities have reached an agreement on a different period, 
+the taxpayer will be informed accordingly13. 
+• 
+The unresolved issues are not excluded from the arbitration provisions, 
+by virtue of the reservations made by Singapore or the DTA partner 
+under Article 28(2)(a) of the MLI14, or the reservations specified in the 
+DTA. 
+• 
+A decision on the unresolved issues arising from the MAP case has not 
+already been rendered by a court or administrative tribunal of Singapore 
+or the DTA partner15. 
+ 
+How to apply for Arbitration? 
+ 
+8.6 
+Taxpayers must submit their request in writing to the competent authority of the 
+contracting jurisdiction of residence. The request must contain sufficient 
+information to identify the MAP case. Please refer to the relevant Competent 
+Authority Agreement (“CAA”) on Arbitration for more information. 
+ 
+8.7 
+Any request for arbitration to the competent authority of Singapore should be 
+addressed to: 
+  
+The Competent Authority  
+International Tax and Relations Division 
+Inland Revenue Authority of Singapore 
+55 Newton Road 
+Revenue House 
+Singapore 307987 
+ 
+13  The time period may also be extended under Articles 19(2) and (3) of the MLI. 
+ 
+14  Singapore has made the following reservations under Article 28(2)(a) of the MLI to exclude the 
+following cases from the scope of arbitration: 
+ 
+a) any case involving the application of Singapore’s general anti-avoidance rules contained in 
+Section 33 of the Income Tax Act 1947, case law or juridical doctrines, and any subsequent 
+provisions that replace, amend or update these anti-avoidance rules; and 
+ 
+b) where Singapore’s DTA partner has made a reservation with reference to its domestic law 
+provisions, any case that involves the application of Singapore’s domestic law, or any 
+subsequent provisions which replace, amend or update those provisions, which are analogous 
+to those domestic law provisions of the DTA partner. The competent authority of Singapore will 
+consult with the competent authority of its DTA partner in order to specify any such analogous 
+provisions in Singapore’s domestic law in the agreement concluded between the two competent 
+authorities (see Competent Authority Agreement on Arbitration). 
+ 
+The reservations made by Singapore or its DTA partner under Article 28(2)(a) of the MLI, or the 
+reservations specified in the DTA, will also be detailed in the relevant Competent Authority 
+Agreement on Arbitration. 
+ 
+15  If such a decision is subsequently rendered before the arbitration panel delivers its decision, the 
+arbitration process will be terminated. 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+28 
+ 
+ 
+The request for arbitration can be submitted electronically to the email 
+addresses provided in the list of Singapore’s competent authorities available on 
+IRAS’ website (www.iras.gov.sg). 
+ 
+Arbitration Process 
+ 
+8.8 
+The CAA will contain information on the arbitration process. There are two types 
+of arbitration processes, namely “final offer” and “independent opinion”. 
+ 
+8.9 
+Singapore has adopted the “final offer” arbitration process under the MLI, which 
+is the default arbitration process. Hence, DTAs which contain arbitration 
+provisions would generally follow the “final offer” arbitration process. 
+ 
+8.10 The two types of arbitration processes are briefly explained below: 
+ 
+• 
+Final offer – The competent authorities of Singapore and its DTA partner 
+will each submit to the arbitration panel a proposed resolution. The 
+arbitration panel will select one of the proposed resolutions as its final 
+decision. 
+ 
+• 
+Independent opinion – The arbitration panel will consider the information 
+submitted by the competent authorities and the relevant sources of law, 
+to arrive at its final decision. 
+ 
+CAA on Arbitration 
+ 
+8.11 The competent authorities of Singapore and its DTA partner are required to 
+conclude a CAA to settle the mode of application of the mandatory binding 
+arbitration provisions. Broadly, the CAA will contain the following information: 
+ 
+• 
+how the request for submission of a case to arbitration is to be made; 
+• 
+minimum information necessary to undertake substantive consideration 
+of the case; 
+• 
+appointment of arbitrators; 
+• 
+arbitration process; 
+• 
+communication of information and confidentiality; 
+• 
+operating procedures; 
+• 
+costs; 
+• 
+failure to communicate the decision within the required period; 
+• 
+final decision; 
+• 
+implementing the arbitration decision; 
+• 
+entry into effect of the mandatory binding arbitration provisions; and 
+• 
+cases that are excluded from the scope of arbitration. 
+ 
+8.12 The concluded CAAs will be published as an Annex to the DTAs on IRAS’ 
+website (www.iras.gov.sg). 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+29 
+ 
+9 
+Notes on Specific DTAs  
+ 
+9.1 
+In the course of MAP discussions, IRAS may agree on particular interpretations 
+or applications of DTA provisions with foreign competent authorities. In order to 
+provide greater transparency and clarity to taxpayers, IRAS will assess whether 
+it is appropriate to provide guidance arising from such discussions. 
+ 
+ 
+10 
+Contact Information  
+ 
+10.1 If you have any enquiries or need clarification on this document, please call 
+IRAS at 1800 356 8622 (for companies) or 1800 356 8300 (for individuals). 
+ 
+ 
+11 
+Updates and amendments  
+ 
+ 
+Date of amendment Amendments made 
+1 
+15 June 2018 
+Updated Section 6 on common DTA provisions to 
+include a footnote 3 on the mutual agreement 
+reached on 1 May 2018 between the competent 
+authorities of Singapore and Australia on the 
+interpretation of Articles 2(1)(k)(iii), 4, 5, 11 and 
+12 of the Singapore-Australia DTA and other 
+minor 
+editorial 
+changes 
+throughout 
+the 
+document. 
+2 
+23 October 2021 
+Updated Section 7 to provide details on 
+arbitration provisions found in Singapore’s DTAs. 
+Updated footnote 2 to remove the reference to the 
+DTA with South Korea and editorial changes 
+made throughout the document for greater clarity.  
+3 
+30 January 2026 
+Updated Sections 4 and 6 to reflect updates in the 
+2025 OECD MTC and Commentary.  
+Updated and re-organised Section 7 to provide 
+information on the MAP process, and re-
+organised for “Arbitration” to be a separate 
+section. 
+Other minor editorial changes throughout the 
+document. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+30 
+ 
+Annex A: Minimum information required when filing a MAP application 
+ 
+1. 
+Taxpayer’s name, address, tax identification number, contact details and main 
+business activities; 
+ 
+2. 
+Letter of authorisation (see Annex B) stating the engagement of tax agents or 
+other representatives to act for the taxpayer (where applicable); 
+ 
+3. 
+The specific DTA including the provision(s) of the specific article(s) which the 
+taxpayer considers is not being correctly applied; 
+ 
+4. 
+The relevant facts of the case including any documentation to support these 
+facts, the taxation years or period involved and the amounts involved; 
+ 
+5. 
+Analysis of the issue(s) involved, including taxpayer’s interpretation of the 
+application of the specific DTA provision(s), to support the claim that the 
+provision of the specific DTA is not correctly applied, together with relevant 
+documentation (e.g. copies of tax assessments, audits conducted by the tax 
+authorities leading to the incorrect application of the DTA provision); 
+ 
+6. 
+Whether the taxpayer has pursued domestic remedies such as tax tribunals or 
+courts in the foreign jurisdiction. If yes, a copy of the decision is to be provided; 
+ 
+7. 
+Whether similar issue(s) has been previously dealt with or is currently being 
+considered in an advance ruling, advance pricing arrangement, settlement 
+arrangement or similar proceedings or by any tax tribunal or court. If yes, a copy 
+of these rulings or decisions should be provided where relevant and available; 
+ 
+8. 
+How the taxpayer has reflected the issue(s) in its Singapore income tax return 
+(e.g. income not brought to tax, foreign tax credit claimed); and  
+ 
+9. 
+A statement confirming that all information and documentation provided in the 
+MAP request is accurate and that the taxpayer will assist the competent 
+authority in its resolution of the issue(s) presented in the MAP request by 
+furnishing any other information or documentation required by the CA in a timely 
+manner. 
+ 
+ 
+ 
+
+Avoidance of Double Taxation Agreements (“DTAs”) 
+31 
+ 
+Annex B: Sample of letter of authorisation  
+ 
+Note: The letter is to be printed on the taxpayer’s letterhead  
+ 
+ 
+[Date]  
+ 
+International Tax and Relations Division 
+Inland Revenue Authority of Singapore  
+55 Newton Road  
+Singapore 307987  
+Attention: [IRAS Case Officer, where available]  
+ 
+ 
+ 
+Dear Sir/ Madam, 
+ 
+ 
+LETTER OF AUTHORITY – APPLICATION FOR MUTUAL AGREEMENT 
+PROCEDURE BY [NAME OF TAXPAYER]  
+ 
+ 
+This is to advise that we have appointed *[Tax agent/ representative (Name and 
+contact information)] to represent us on all matters relating to the above application. 
+We authorise IRAS to communicate with them via letters, phone calls, electronic 
+means (e.g. emails), etc. on all matters relating to the above application.  
+ 
+ 
+ 
+Yours faithfully,  
+ 
+ 
+ 
+ 
+[Name of signatory]  
+[Designation of signatory]  
+[Name of taxpayer]  
+ 
+ 
+ 
+*  Please delete accordingly.  
+ 
+ 
+ 
+ 

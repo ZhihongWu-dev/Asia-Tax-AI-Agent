@@ -1,0 +1,907 @@
+Tax Exemption for Foreign-Sourced Income (Third Edition) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+IRAS e-Tax Guide 
+Tax Exemption for Foreign-Sourced Income  
+(Fifth Edition) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Published by 
+Inland Revenue Authority of Singapore 
+ 
+ 
+ 
+ 
+Published on 30 Jan 2026 
+ 
+Fourth edition on 16 Aug 2023 
+ 
+Third edition on 23 Jan 2019 
+ 
+Second edition on 31 May 2013 
+ 
+First edition on 6 Sep 2011 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Disclaimers: IRAS shall not be responsible or held accountable in any way for any damage, loss or 
+expense whatsoever, arising directly or indirectly from any inaccuracy or incompleteness in the 
+Contents of this e-Tax Guide, or errors or omissions in the transmission of the Contents. IRAS shall not 
+be responsible or held accountable in any way for any decision made or action taken by you or any 
+third party in reliance upon the Contents in this e-Tax Guide. Except where specific contents carry legal 
+force, this information aims to provide a better general understanding of taxpayers’ tax obligations and 
+is not intended to comprehensively address all possible tax issues that may arise. While every effort has 
+been made to ensure that this information is consistent with existing law and practice, should there be 
+any changes, IRAS reserves the right to vary its position accordingly. 
+ 
+© Inland Revenue Authority of Singapore 
+All rights reserved. No part of this publication may be reproduced or transmitted in any form or by any 
+means, including photocopying and recording without the written permission of the copyright holder, 
+application for which should be addressed to the publisher. Such written permission must also be 
+obtained before any part of this publication is stored in a retrieval system of any nature. 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+ 
+Table of Contents 
+Page 
+1. Aim…………………………………………………………………...… 
+1 
+2. At a glance……………………………………………………………. 
+1 
+3. Glossary………………………………………………………………. 
+2 
+4. Background…………………………………………………………… 
+3 
+5. FSIE scheme…………………………………………………………. 
+4 
+6. Scope of specified foreign income………………………………. 
+4 
+7. Foreign-sourced income received in Singapore………………. 
+5 
+8. Qualifying conditions………………………………………………. 
+6 
+9. Administrative procedures………………………………………… 
+10 
+10. Contact information…………………………………………………. 
+11 
+Annex A – Examples of a fixed place of operation………………… 
+12 
+Annex B – Illustration on whether tax is paid or payable in a 
+foreign country…………………………………………………………… 
+13 
+ 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+1 
+ 
+ 
+ 
+1 
+Aim 
+1.1 
+This e-Tax Guide provides details on the tax exemption for certain foreign- 
+sourced income from 1 Jun 2003 under the foreign-sourced income 
+exemption (FSIE) scheme. This e-Tax guide consolidates the three e-Tax 
+guides issued previously1 on the FSIE scheme. 
+1.2 
+It applies to all Singapore tax resident persons receiving foreign-sourced 
+income in Singapore. 
+ 
+ 
+2 
+At a glance 
+ 
+2.1 
+Under the FSIE scheme, foreign-sourced dividends, foreign branch profits 
+and foreign-sourced service income received by specified resident taxpayers 
+from 1 Jun 2003 are exempt from tax if the following qualifying conditions are 
+met: 
+a. “Subject to tax” condition; 
+b. “Foreign headline tax rate of at least 15%” condition; and 
+c. “Beneficial tax exemption” condition. 
+ 
+2.2 
+From 1 Jan 2004, all foreign-sourced income received in Singapore by 
+resident individuals, except those received through a Singapore partnership, 
+will be exempt from tax where the Comptroller is satisfied that the exemption 
+will be beneficial to them. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1 IRAS circulars on tax exemption for foreign-sourced dividends, foreign branch profits and foreign- 
+sourced service income: 
+• Main circular published on 21 May 2003 
+• Two supplementary circulars published on 30 Jul 2004 and 31 May 2006 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+2 
+ 
+ 
+ 
+2.3 
+The FSIE scheme is summarised in the following table: 
+ 
+ 
+Resident 
+individuals (income 
+not received 
+through a 
+partnership in 
+Singapore) 
+Specified foreign income remitted into Singapore 
+from 1 Jun 2003 to 31 Dec 2003 (both dates 
+inclusive) are exempt from tax under S13(8)* subject 
+to qualifying conditions. 
+All foreign-sourced income remitted into Singapore 
+from 1 Jan 2004 are exempt from tax under 
+S13(7A)(b)* subject to the “beneficial tax exemption” 
+condition. 
+Resident 
+Specified foreign income remitted into Singapore 
+from 1 Jun 2003 are exempt from tax under S13(8)* 
+subject to qualifying conditions**. 
+individuals (income 
+received through a 
+partnership in 
+Singapore) 
+Resident persons 
+other than 
+individuals 
+* Sections of the Income Tax Act 1947 (ITA). 
+** All qualifying conditions were temporarily lifted for foreign income accrued 
+before 22 Jan 2009 and remitted into Singapore from 22 Jan 2009 to 21 
+Jan 2010, except for the “beneficial tax exemption” condition. 
+ 
+ 
+3 
+Glossary 
+3.1 
+Foreign-sourced Income 
+ 
+Foreign income that does not arise from a trade or business carried on in 
+Singapore. 
+ 
+3.2 
+Person 
+ 
+Under section 2 of the ITA, a person includes a company, body of persons 
+and a Hindu Joint Family. 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+3 
+ 
+ 
+ 
+3.3 
+Specified foreign income 
+The specified foreign income are: 
+a. Foreign-sourced dividend; 
+b. Foreign branch profits; and 
+c. Foreign-sourced service income. 
+3.4 
+Specified resident taxpayers 
+ 
+The specified resident taxpayers are: 
+ 
+Period 
+Specified Resident Taxpayers 
+1 Jun 2003 to 31 Dec 2003 
+All persons resident in Singapore 
+From 1 Jan 2004 
+a. Resident persons other than individuals; 
+and 
+b. Resident 
+individuals 
+receiving 
+the 
+specified 
+foreign 
+income 
+through 
+a 
+partnership in Singapore2. 
+ 
+ 
+4 
+Background 
+4.1 
+Prior to 1 Jun 2003, resident taxpayers would be taxed on all foreign-sourced 
+income received in Singapore, unless they are tax-exempt3. 
+ 
+4.2 
+They may also be taxed on the same foreign-sourced income in the foreign 
+countries. To relieve themselves from double taxation, they may claim the 
+following tax credits: 
+a. Unilateral tax credit under Section 50A of the ITA for income remitted 
+from countries with which Singapore does not have a Double Taxation 
+Agreement (DTA); 
+ 
+b. Double Taxation Relief under Section 50 of the ITA for income remitted 
+from countries with which Singapore has a DTA; or 
+ 
+ 
+ 
+ 
+2 From 1 Jan 2004, all foreign-sourced income received by resident individuals not through a 
+partnership in Singapore are exempt from tax under S13(7A)(b) subject to the “beneficial tax 
+exemption” condition. 
+3 Tax exempt under an approval granted by the Minister for Finance or under a tax incentive granted 
+under ITA / Economic Expansion Incentives (Reliefs from Income Tax) Act 1967. 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+4 
+ 
+ 
+ 
+c. Commonwealth Tax Relief under Section 48 of the ITA for income 
+remitted from the Commonwealth countries. This section was repealed 
+with effect from Year of Assessment 2010. 
+4.3 
+To enhance Singapore’s attractiveness as a business hub and to boost our 
+services export, it was announced in Budget 2003 and 2004 that tax 
+exemption may be given to certain foreign-sourced income. 
+ 
+5 
+FSIE scheme 
+ 
+5.1 
+The FSIE scheme is provided under Sections 13 (7A) to 13 (11) of the ITA. 
+ 
+5.2 
+Specified foreign income received in Singapore on or after 1 Jun 2003 by 
+specified resident taxpayers will be exempt from tax where the qualifying 
+conditions are met. The conditions are elaborated in paragraph 8. 
+5.3 
+The tax treatment as described under paragraph 4.2 will continue to apply 
+where the qualifying conditions are not met. 
+ 
+5.4 
+The tax exemption applies to specified foreign income that does not arise 
+from a trade or business carried on in Singapore. Where the foreign income 
+arises from a trade or business carried on in Singapore, it remains taxable in 
+Singapore upon accrual regardless of whether it is received in Singapore. 
+ 
+6 
+Scope of specified foreign income 
+ 
+6.1 
+Foreign-sourced dividend 
+For the purposes of the tax exemption, a dividend is a foreign-sourced 
+dividend if it is paid by a non-Singapore tax resident company. This treatment 
+also applies to foreign dividend, which may be the income of a trade or 
+business carried on in Singapore by a specified resident taxpayer (e.g. 
+dividends received by a bank tax resident in Singapore). In addition, there is 
+no shareholding requirement to enjoy the tax exemption. 
+ 
+6.2 
+Foreign branch profit 
+A foreign branch is a business operation of a Singapore company registered 
+as a branch in a foreign country. Foreign branch profits are profits from a 
+trade or business carried on outside Singapore by the foreign branch. It 
+excludes non-trade or non-business income of the foreign branch. 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+5 
+ 
+ 
+ 
+6.3 
+Foreign-sourced service income 
+Service income refers to income from professional, technical, consultancy or 
+other services provided by a specified resident taxpayer in the course of its 
+trade, profession or business. Such service income is considered foreign- 
+sourced if the services are provided through a fixed place of operation in a 
+foreign country. If the services are not provided through a fixed place of 
+operation in a foreign country, the service income will be considered 
+Singapore-sourced even though: 
+a. The income is derived from services rendered outside Singapore; and 
+ 
+b. Tax is payable in that foreign country in accordance with the provisions 
+of a DTA with the foreign country. 
+6.4 
+A fixed place of operation refers to a place of management, an office or some 
+floor space where the specified resident taxpayer or its employees provide 
+the services. A place of operation is considered a fixed place of operation if: 
+ 
+a. It has features of permanence. This is a question of fact. 
+ 
+b. It is at the disposal of the specified resident taxpayer on an on-going 
+basis. The mere presence of the specified resident taxpayer in a 
+particular location does not necessarily mean that the place is at its 
+disposal. For example, a taxpayer visits a major customer’s premises 
+regularly to render audit services. This does not mean the premises are 
+at the taxpayer’s disposal for the purpose of its trade, profession or 
+business. Thus, they do not constitute a fixed place of operation. 
+c. The specified resident taxpayer uses it regularly to carry on its trade, 
+business or profession of providing services. 
+d. The specified resident taxpayer does not use it to perform only auxiliary 
+or preparatory activities. 
+ 
+Please refer to Annex A for some examples on whether a place of operation 
+is considered a fixed place of operation. 
+ 
+7 
+Foreign-sourced income received in Singapore 
+ 
+7.1 
+A foreign-sourced income is considered to be received in Singapore when 
+the income is: 
+a. remitted to, transmitted or brought into Singapore; or 
+ 
+b. applied in or towards satisfaction of any debt incurred in respect of a trade 
+or business carried on in Singapore; or 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+6 
+ 
+ 
+ 
+c. applied to purchase any movable property, which is brought into 
+Singapore. 
+7.2 
+The foreign-sourced income need not be earned on or after 1 Jun 2003. 
+However, it has to be received on or after 1 Jun 2003 to qualify for tax 
+exemption under the FSIE Scheme. 
+ 
+8 
+Qualifying conditions 
+ 
+8.1 
+Tax exemption is given to specified resident taxpayers when the following 
+conditions are met: 
+ 
+a. “Subject to tax” condition; 
+b. “Foreign headline tax rate of at least 15%” condition; and 
+ 
+c. “Beneficial tax exemption” condition. 
+ 
+8.2 
+“Subject to tax” condition 
+ 
+To meet this condition, the specified foreign income must have been subject 
+to tax in the foreign country from which the income is received. This is 
+illustrated in the following table: 
+ 
+Scenario 
+Is the “subject to tax” condition 
+met? 
+• The specified foreign income is 
+taxed in country A. 
+• The income is remitted back to 
+Singapore from Country A. 
+Condition is met 
+• The specified foreign income is 
+exempt from tax in Country A. 
+• The income is remitted back to 
+Singapore from Country A. 
+Condition is not met because no tax 
+is suffered in country A. However, if 
+the tax exemption is given due to 
+substantive 
+business 
+activities 
+carried out in Country A, the 
+condition will be regarded as met. 
+[See paragraph 8.2(a)] 
+• The specified foreign income is 
+taxed in country A. 
+• The income is moved or reinvested 
+in country B. 
+• Country B does not levy any income 
+tax on the income. 
+• The income is remitted back to 
+Singapore from country B. 
+Condition is not met because no tax 
+is suffered in country B. 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+7 
+ 
+ 
+ 
+a. “Subject to tax” condition for substantive business activities  
+ 
+Some countries give tax exemption on the income of investors who carry 
+out substantive business activities4 in their country as tax incentive. 
+These investors would be liable to tax if not for the tax exemption. From 
+30 Jul 2004, specified foreign income given such tax exemption will be 
+regarded as having met the “subject to tax” condition. 
+ 
+b. Foreign-sourced dividend  
+ 
+The Comptroller of Income Tax (CIT) will regard the “subject to tax” 
+condition as met although the foreign-sourced dividend may be 
+temporarily deposited into a foreign custodian account before its 
+remittance into Singapore. Temporarily deposited into a foreign 
+custodian account means: 
+ 
+i. 
+the dividend is remitted to Singapore within one year from the date 
+it was deposited into the foreign custodian account, and 
+ii. 
+the deposit in the foreign custodian account generates no income 
+other than the incidental interest on the standing balance. 
+ 
+Any interest from the foreign custodian account must be segregated and 
+not form part of specified foreign income under the FSIE scheme. 
+For the purpose of this “subject to tax” condition, tax paid or payable on 
+foreign-sourced dividend received in Singapore includes: 
+i. 
+the dividend tax, which is income tax levied on the dividend by the 
+foreign country of source; and 
+ii. 
+the underlying tax5 , which is income tax paid or payable to the 
+foreign countries on the income out of which the dividend is paid. 
+ 
+Annex B provides examples on how to determine if tax has been paid or 
+is payable in the foreign countries. 
+ 
+ 
+ 
+ 
+4 Generally, substantive business activities refer to business activities that: 
+(a) are carried out through staff with certain expertise (e.g. managing directors, chief financial 
+officers, researchers in R&D, factory managers, etc); and 
+(b) incurred actual expenditure to carry out the activities. 
+The specified foreign income from such activities should have been subject to tax in the foreign 
+country if not for the tax exemption incentive given by the country. 
+5 If the payer company paid the dividend out of dividend it received from another company, say D, 
+which is in the same country, the underlying tax paid by D on the dividend is not to be considered 
+as tax paid or payable by the payer company for the purpose of this condition. 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+8 
+ 
+ 
+ 
+c. Administrative methods to substantiate that underlying tax has been 
+paid on the foreign-sourced dividend 
+ 
+Specified resident taxpayers may choose any of the following two 
+methods to prove to the CIT that their foreign-sourced dividend has 
+suffered underlying tax. Apart from these two methods, they could also 
+choose any other method to prove to the CIT’s satisfaction that the 
+“subject to tax” condition is met6. Once they have chosen a method, they 
+have to apply it consistently. However, where exceptional situations 
+warrant a change in the method, the taxpayer may do so only after 
+seeking the CIT’s approval. 
+Method 1: Comparison of total dividends paid with total taxed profits 
+This method is suitable for local holding companies with newly 
+incorporated foreign subsidiary companies. They would be in a position 
+to track the taxed income of each foreign subsidiary and the dividends 
+that each subsidiary has paid out. 
+ 
+The recipient of the foreign-sourced dividend has to track: 
+ 
+i. 
+The total dividends paid by the foreign payer company including the 
+foreign-sourced dividend; and 
+ii. 
+The total taxed income of the foreign payer company including 
+income subject to tax as capital gains. 
+The CIT will consider the “subject to tax” condition met if (ii) is equal or 
+greater than (i). 
+Method 2: Use of audited accounts of foreign payer company 
+This method is suitable for portfolio investors (i.e. having less than 100% 
+ownership in the foreign payer company). 
+To meet the “subject to tax” condition, the audited accounts of the foreign 
+payer company for the financial period ending in the year prior to the year 
+when the dividend is received in Singapore must show a positive current 
+year tax, excluding deferred tax expense. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+6 CIT may update other acceptable methods to prove that the “subject to tax” condition is met on the 
+IRAS website from time to time. 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+9 
+ 
+ 
+ 
+8.3 
+“Foreign headline tax rate of at least 15%” condition 
+a. The foreign headline tax rate refers to the highest corporate tax rate of 
+the foreign country of source in the year the specified foreign income is 
+received in Singapore. It must be at least 15%. 
+b. The headline tax rate need not be the actual tax rate imposed on the 
+specified foreign income in that country. For example, 
+ 
+Date 
+Event 
+ 
+2000 
+A tax resident in country A paid dividend to Company X, a 
+tax resident in Singapore: 
+ 
+Gross dividend 
+$10,000 
+Less: Tax on dividend (10%) 
+ $(1,000) 
+Net dividend 
+ $9,000 
+Company X deposited the $9,000 into its bank account in 
+country A 
+ 
+1 Jul 2003 
+Company X remitted the $9,000 to Singapore 
+Headline tax rate of country A is at least 15% 
+Company X satisfied the “foreign headline tax rate” condition as the 
+headline tax rate of country A is at least 15% in the year of remittance 
+(i.e. 2003). This is notwithstanding the dividend was taxed at only 10 % 
+in country A. 
+ 
+c. Foreign special tax legislation 
+Effective from 31 May 2006, the headline tax rate is the highest stipulated 
+tax rate in the special legislation instead of the highest tax rate in the 
+main tax legislation. This applies when: 
+ 
+i. 
+the specified foreign income received in Singapore is chargeable to 
+tax under a special tax legislation of the foreign country instead of 
+its main legislation; 
+ 
+ii. 
+the special tax legislation imposes tax at a rate lower than the 
+highest tax rate under the main legislation for other companies; and 
+iii. 
+this lower tax rate under the special tax legislation is not a tax 
+incentive for carrying out substantive activities in that foreign 
+country (e.g. special tax incentive for income derived from carrying 
+out manufacturing activities in Special Economic Zones). 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+10 
+ 
+ 
+ 
+8.4 
+“Beneficial tax exemption” condition 
+The CIT must be satisfied that the tax exemption would be beneficial to the 
+specified resident taxpayers. Where the CIT considers that the tax exemption 
+is not beneficial to them, they can claim reliefs for foreign tax paid (paragraph 
+4.2). 
+ 
+9 
+Administrative procedures 
+ 
+9.1 
+To claim tax exemption 
+ 
+Specified resident taxpayers need not submit documents (such as dividend 
+vouchers, notices of assessment issued by foreign country etc) with their 
+income tax returns to show that their specified foreign income qualifies for 
+the exemption. However, they should retain these supporting documents 
+should the CIT request for these documents for verification. 
+They only need to declare that their specified foreign income qualifies for the 
+tax exemption in their income tax returns and provide the following 
+particulars: 
+a. Nature and amount of the specified foreign income; 
+ 
+b. Country from which the income is received; 
+ 
+c. Headline tax rate of that country; and 
+ 
+d. Amount of foreign tax paid/payable in that country. 
+9.2 
+To meet “Subject to tax” condition for substantive business activities 
+Specified resident taxpayers need not submit any supporting documents 
+together with their income tax returns. However, they should still maintain the 
+following documents as the CIT may request for them when reviewing the tax 
+returns: 
+ 
+a. A declaration7 that the foreign country has exempted the specified foreign 
+income from tax because of substantive business activities carried on by 
+the company in that country; and 
+b. A copy of the tax incentive certificate/approval letter issued by the foreign 
+country. In lieu of this, a foreign dividend voucher stating that the dividend 
+is exempt from tax for carrying out substantive business activities in that 
+foreign country will suffice. 
+ 
+7 The CIT may, if he thinks fit, request for the submission of other documentary evidence or records 
+for the verification of the accuracy of this declaration. 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+11 
+ 
+ 
+ 
+10 
+Contact information 
+10.1 
+If you have any enquiries or need clarification on this e-Tax Guide, please 
+call: 
+a. 
+1800-3568 622 (Corporate) 
+b. 
+1800-3568 300 (Individual). 
+ 
+ 
+11 
+Updates and Amendments 
+ 
+Date of 
+amendment 
+Amendments made 
+1 
+31 May 2013 
+• Revision to Paragraph 9.2. 
+2 
+23 Jan 2019 
+• Revision to Paragraph 2.3 due to deletion of 
+S13(8A) to S13(8D) of ITA. 
+• Insertion of footnote 2 to Paragraph 3.4. 
+• Insertion of footnote 6 to Paragraph 8.2(c). 
+• Editorial changes to Paragraphs 2.1, 3.2, 3.3, 
+3.4, 4.2, 8.1, 8.2, 8.3, 8.4, 9.1 and 9.2. 
+3 
+16 Aug 2023 
+• Updated the citation of Acts. 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+12 
+ 
+ 
+ 
+Annex A – Examples of a fixed place of operation 
+ 
+ 
+Scenario 
+Is it a fixed place of operation? 
+1 
+A Singapore engineering firm rents 
+an office in country A merely for the 
+purpose of supplying information 
+regarding the firm’s expertise. 
+No fixed place of operation in country 
+A because the services rendered 
+through the rented office in country A 
+are services that are preparatory or 
+auxiliary in character. 
+2 
+A Singapore law firm rents an office 
+on a temporary basis in country B for 
+the purpose of carrying out detailed 
+research and study relating to the 
+only case the firm is appearing 
+before a court in country B. 
+No fixed place of operation in country 
+B because the rented office is of a 
+temporary nature. 
+3 
+A Singapore architect firm has a 
+rented office in country C. The office 
+is used by a team of architects and 
+employees employed from country C 
+to undertake one project after another 
+on an on-going basis. 
+Yes. There is a fixed place of 
+operation in country C because the 
+office is at the disposal of the firm 
+and has features of permanence (i.e. 
+a team of employees undertaking 
+projects on a long term basis). 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+13 
+ 
+ 
+ 
+Annex B – Illustration on whether tax is paid or payable in a foreign country 
+ 
+The following examples illustrate whether there is tax paid or payable in a 
+foreign country from which a foreign sourced dividend is received for the 
+purposes of the tax exemption 
+ 
+ 
+Example 1 
+Example 2 
+ 
+ 
+ 
+ 
+ 
+Example 3 
+Example 4 
+ 
+ 
+Singapore 
+Foreign 
+country 
+Co. B 
+Co. B 
+No tax paid by Co. B 
+on its operating profit 
+out of which dividend 
+is paid to Co. C 
+No tax paid by Co. B 
+on its operating profit 
+out of which dividend 
+is paid to Co. C 
+Co. C 
+Co. C 
+Dividend withholding 
+tax suffered by Co. C 
+in the foreign country 
+No dividend 
+withholding tax 
+suffered by Co. C in 
+the foreign country 
+Tax paid / payable in the foreign country? 
+NO 
+Tax paid / payable in the foreign country? 
+Yes 
+Singapore 
+Foreign 
+country 
+Co. B 
+Co. B 
+Tax paid by Co. B on 
+its operating profit 
+out of which dividend 
+is paid to Co. C 
+Tax paid by Co. B on 
+its operating profit 
+out of which dividend 
+is paid to Co. C 
+Co. C 
+Co. C 
+Dividend withholding 
+tax suffered by Co. C 
+in the foreign country 
+No dividend 
+withholding tax 
+suffered by Co. C in 
+the foreign country 
+Tax paid / payable in the foreign country? 
+YES 
+Tax paid / payable in the foreign country? 
+Yes 
+
+Tax Exemption for Foreign-Sourced Income (Fifth Edition) 
+14 
+ 
+ 
+ 
+Annex B - continued 
+ 
+ 
+Example 5 
+Example 6 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Singapore 
+Both 
+companies 
+in the 
+same 
+foreign 
+country 
+Co. A 
+Co. A 
+No tax paid by Co. A 
+on its corporate profit 
+out of which dividend 
+was paid to Co. B 
+Tax paid by Co. A on 
+its corporate profit 
+out of which dividend 
+was paid to Co. B 
+Co. B 
+Co. B 
+Tax paid by Co. B on 
+dividend received 
+from Co. A 
+No tax paid by Co. B 
+on dividend received 
+from Co. A 
+Co. C 
+Co. C 
+No dividend 
+withholding tax 
+suffered by Co. C in 
+the foreign country 
+No dividend 
+withholding tax 
+suffered by Co. C in 
+the foreign country 
+Tax paid / payable in the foreign country? 
+NO 
+Tax paid / payable in the foreign country? 
+YES 

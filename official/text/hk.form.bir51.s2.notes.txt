@@ -1,0 +1,200 @@
+NOTES AND INSTRUCTIONS – SUPPLEMENTARY FORM (S2) 
+1.
+You are only required to complete the section(s) as applicable.
+2.
+A person is associated with another person (each an affected person) if, as between them, the participation
+condition is met. The participation condition is met as between two persons if, at the time of carrying out the
+transaction, one of the affected persons was participating in the management, control or capital of the other
+affected person, or the same person or persons was or were participating in the management, control or capital
+of each of the affected persons. You have transactions with other parts of the non-Hong Kong resident person if
+you are a Hong Kong permanent establishment of a non-Hong Kong resident person and have transactions with
+the other parts of that non-Hong Kong resident person, e.g. transactions between the head office and its branch.
+3.
+A Hong Kong entity, including a permanent establishment in Hong Kong, of a group (in extended sense) (Note 4)
+is required to prepare and retain the entity’s local file and a master file of its group in respect of an accounting
+period beginning on or after 1 April 2018, except where –
+(a) any 2 of the following conditions are satisfied –
+(i)
+the total amount of the entity’s revenue for the accounting period does not exceed HK$400 million;
+(ii)
+the total value of the entity’s assets at the end of the accounting period does not exceed HK$300 million;
+(iii) the average number of the entity’s employees during the accounting period does not exceed 100;
+OR 
+(b) the total amounts of all the following types of controlled transactions (excluding specified domestic
+transactions) undertaken by the entity in respect of the accounting period do not exceed the specified amount:
+(i)
+the total amount of transfers of properties (excluding financial assets and intangibles) does not exceed
+HK$220 million;
+(ii)
+the total amount of transactions in respect of financial assets does not exceed HK$110 million;
+(iii) the total amount of transfers of intangibles does not exceed HK$110 million;
+(iv) the total amount of other transactions does not exceed HK$44 million.
+4.
+“Group in the extended sense” means –
+(a) a group in the usual sense, which means a collection of enterprises related through ownership or control
+such that –
+(i)
+it is required to prepare consolidated financial statements for financial reporting purposes under
+applicable accounting principles; or
+(ii)
+it would be so required if equity interests in any of the enterprises were traded on a public securities
+exchange; or
+(b) a single enterprise if it is resident for tax purposes in one jurisdiction and is subject to tax in another jurisdiction
+with respect to the business carried out through a permanent establishment in that other jurisdiction.
+5.
+In section 1.2, you only need to state whether you are required to prepare master file and local file in respect of the
+controlled transactions. Under section 58C(2)(a) of the Inland Revenue Ordinance (Cap. 112) (“IRO”), the period
+for preparing the relevant files is 9 months after the end of the accounting period concerned.
+6.
+Section 2 must be completed if you have entered into an advance pricing arrangement with the Commissioner.
+7.
+If there was any material change in the facts and circumstances specified in the arrangement, you must provide
+the details of the changes in your profits tax computation.
+8.
+Under section 58H of the IRO, a Hong Kong entity of a multinational enterprise group (Note 10) that is a
+reportable group (Note 9) must, within 3 months after the end of the accounting period, file a written notice with
+the Commissioner to identify the ultimate parent entity (Note 11) of the group or the constituent entity responsible
+for filing the country-by-country (“CbC”) report through the CbC Reporting Portal unless (a) it is not the ultimate
+parent entity of the group, the surrogate parent entity (Note 14) of the group nor the entity that is to file a CbC
+return for the group; and (b) another Hong Kong entity has filed such a notice.
+9.
+A multinational enterprise group is a reportable group for an accounting period if it had a total consolidated group
+revenue (Note 12) of at least the following threshold amount for immediate preceding accounting period (Note 13):
+(a) for a group with its ultimate parent entity resident in Hong Kong - HK$6.8 billion; or
+(b) for a group with its ultimate parent entity resident in a jurisdiction other than Hong Kong - the threshold
+amount for CbC reporting specified under the laws or regulations of that jurisdiction or an amount equivalent to
+EUR750 million as at January 2015.
+10.
+“Multinational enterprise group” means a group in the usual sense (Note 4(a)) that includes:
+(a) two or more enterprises of which the tax residence is in different jurisdictions; or
+(b) an enterprise that is resident for tax purposes in one jurisdiction and is subject to tax in another jurisdiction
+with respect to the business carried out through a permanent establishment in that other jurisdiction.
+BIRS2 (4/2025) XML version 2025 
+
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+“Ultimate parent entity” means a constituent entity of a group in the usual sense that meets the following conditions: 
+(a) it owns directly or indirectly a sufficient interest in one or more other constituent entities of the group such that 
+it is required to prepare consolidated financial statements under accounting principles generally applied in its 
+jurisdiction of tax residence, or would be so required if its equity interests were traded on a public securities 
+exchange in its jurisdiction of tax residence; and
+(b) there is no other constituent entity of the group that owns directly or indirectly an interest described in 
+paragraph (a) in the constituent entity. 
+“Total consolidated group revenue” means the group’s total consolidated revenue as reflected in the group’s 
+consolidated financial statements. 
+“Immediate preceding accounting period” means the accounting period that ends immediately before the 
+commencement of the accounting period concerned. 
+“Surrogate parent entity” means a constituent entity of a reportable group appointed as the sole substitute for the 
+ultimate parent entity to file a CbC return or report on behalf of the group. 
+Completion of sections 3.3.1 and 3.3.2 will NOT constitute the submission of a notice under section 58H of the IRO. 
+Section 4 must be completed if you are a Part 4AA entity (Note 17(e)) of an MNE group (Note 17(b)) with annual 
+consolidated revenue of EUR 750 million or more in at least two of the four fiscal years (Note 17(d)) immediately 
+preceding the fiscal year concerned (“in-scope MNE group”). 
+For the purposes of Section 4, 
+(a) “Group” means – 
+(i) 
+a collection of entities that are related through ownership or control such that the assets, liabilities, income, 
+expenses and cash flows of those entities: 
+(I) 
+are included in the consolidated financial statements of the ultimate parent entity (Note 17(c)); or 
+(II) are excluded from the consolidated financial statements of the ultimate parent entity solely on size 
+or materiality grounds, or on the grounds that the entity is held for sale; or 
+(ii) an entity that is located in one jurisdiction and has one or more permanent establishments located in 
+other jurisdictions provided that the entity is not a part of the another group described in sub-paragraph 
+(i) above; 
+(b) “MNE group” means a group (Note 17(a)) that includes at least one entity or permanent establishment that is 
+not located in the jurisdiction of the ultimate parent entity; 
+(c)ġ “Ultimate parent entity” means either: 
+(i) 
+an entity that: 
+(I) owns directly or indirectly a controlling interest in any other entity; and 
+(II) is not owned, with a controlling interest, directly or indirectly by another entity; or 
+(ii) the main entity of a group that is described in Note 17(a)(ii); 
+(d)ġ “Fiscal year” means an accounting period with respect to which the ultimate parent entity of the MNE group 
+prepares its consolidated financial statements. In the situation where the ultimate parent entity does not 
+prepare consolidated financial statements, the ultimate parent entity will be assumed to have prepared 
+consolidated financial statements. In such case, the fiscal year means the calendar year. 
+(e)ġ “Part 4AA entity”, in relation to an MNE group, means (i) a HK constituent entity (Note 17(f)) of the MNE 
+group; (ii) a HK standalone JV (Note 17(g)) of the MNE group; (iii) a HK member (Note 17(j)) of a JV group 
+(Note 17(k)) of the MNE group; or (iv) a Part 4AA stateless constituent entity (Note 17(l)) of the MNE group; 
+(f)ġ “HK constituent entity”, in relation to an MNE group, means a constituent entity of the MNE group that is 
+located in Hong Kong; 
+(g)ġ “HK standalone JV” means a standalone JV (Note 17(h)) that – 
+(i) is located in Hong Kong; or 
+(ii) would have been a Part 4AA stateless constituent entity, had it been a constituent entity; 
+(h)ġ “Standalone JV” means a joint venture that has no JV subsidiary (Note 17(i)); 
+(i)ġ “JV subsidiary” means an entity whose assets, liabilities, income, expenses and cash flows are consolidated 
+by a joint venture under an acceptable financial accounting standard (or would have been consolidated had it 
+been required to consolidate such items in accordance with an acceptable financial accounting standard). A 
+permanent establishment whose main entity is the joint venture or a JV subsidiary shall be treated as a 
+separate JV subsidiary. 
+BIRS2 (4/2025) XML version 2025 
+
+(j) “HK member”, in relation to a JV group of an MNE group, means the joint venture or another member of the 
+18. 
+19. 
+20. 
+21. 
+22. 
+23. 
+JV group that – 
+(i) 
+is located in Hong Kong; or 
+(ii) would have been a Part 4AA stateless constituent entity, had it been a constituent entity; 
+(k) “JV group” means a joint venture and its JV subsidiaries; 
+(l) “Part 4AA stateless constituent entity”, in relation to an MNE group, means a stateless constituent entity of 
+the MNE group – 
+(i) 
+that is created in Hong Kong; or 
+(ii) that is a place of business in Hong Kong, and is a permanent establishment in accordance with 
+paragraph (d) of the definition of “permanent establishment” in Article 10.1.1 of the GloBE rules; 
+(m) “Designated filing entity” means a constituent entity of an MNE group (other than the ultimate parent entity) that: 
+(i) 
+is located in Hong Kong and is appointed by the group to file, on behalf of the group, the top-up tax 
+return for a fiscal year; or 
+(ii) is located in a GloBE jurisdiction other than Hong Kong and is appointed by the group to file the GloBE 
+information return on behalf of the group for a fiscal year; 
+(n) “GloBE jurisdiction” means (i) Hong Kong; or (ii) another jurisdiction with a qualified IIR, qualified UTPR or 
+qualified domestic minimum top-up tax; and 
+(o) “Designated local entity” means a constituent entity of an MNE group that: 
+(i) is located in Hong Kong; and 
+(ii) is appointed by all the HK constituent entities of the group – 
+(I) 
+to file a notice for the purposes of section 5 of Schedule 63 to the IRO (“top-up tax notification”); and 
+(II) 
+to file a top-up tax return in accordance with section 3 of Schedule 63 to the IRO, 
+with the Commissioner on behalf of those constituent entities for a fiscal year. 
+According to section 5 of Schedule 63 to the IRO, each HK constituent entity of an in-scope MNE group (“subject 
+entity”) must, within 6 months after the end of the fiscal year (“notification deadline”), file a top-up tax notification 
+with the Commissioner to identify the entity and jurisdiction from which Hong Kong will receive the GloBE 
+information return and any other information relevant for determining a HK constituent entity’s obligation to file a 
+top-up tax return. This obligation can be relieved if another HK constituent entity being the ultimate parent entity 
+(Note 17(c)), designated filing entity (Note 17(m)) or designated local entity (Note 17(o)) of the group has filed, 
+by the notification deadline, such a notification stating that it is to file the top-up tax return, with the 
+Commissioner, on behalf of the subject entity and all other HK constituent entities of the group. The obligation of 
+filing top-up tax notifications also applies to HK standalone JVs, HK members of JV groups and Part 4AA 
+stateless constituent entities of in-scope MNE groups in the same way as it applies to HK constituent entities. 
+Section 4.3 is applicable if you are a HK constituent entity or a HK member of a JV group, of the MNE group and 
+your answer to section 4.2 is “No”. 
+In case you are a HK standalone JV or a HK member of a JV group of an in-scope MNE group (Group A) and 
+any of the following circumstances is met: 
+(a) you are also a HK standalone JV or a HK member of a JV group of another in-scope MNE group (Group B); 
+(b) you are also a HK constituent entity of another in-scope MNE group (Group B), 
+please complete Section 4 with information in relation to Group A and furnish the information in relation to Group 
+B, in your profits tax computation, in the same format. 
+You may leave sections 4.4.2 and/or 4.4.3 blank if you do not have the details of the group’s designated filing 
+entity and/or designated local entity. 
+Completion of sections 4.4.1 to 4.4.3 will NOT constitute the submission of a top-up tax notification under section 
+5 of Schedule 63 to the IRO. 
+You must export the filled form to XML file and upload the XML file via the electronic filing of Profits Tax Return 
+services under GovHK for submission. If you do not choose to submit Profits Tax Return through electronic filing 
+or semi-electronic filing, you have to print and sign a paper Control List (containing details of the XML file 
+uploaded and QR code) generated by the electronic filing of Profits Tax Return services for submission together 
+with the Profits Tax Return in order to complete the submission process. The Control List of this supplementary 
+form must be signed by the same person signing the tax return. 
+BIRS2 (4/2025) XML version 2025 

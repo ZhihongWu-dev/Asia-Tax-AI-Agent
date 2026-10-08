@@ -1,0 +1,550 @@
+Specified Foreign-sourced Income
+Covered Income
+Exclusion Relating to Regulated Financial Entities
+Exclusion Relating to Traders
+Covered Taxpayers
+Treatment of Specified Foreign-sourced Income
+Income Received in Hong Kong
+Exceptions from the Deeming Provision
+Exception 1: Economic Substance Requirement
+Exception 2: Nexus Requirement
+Exception 3: Participation Requirement
+Exception 4: Intra-group Transfer Relief for Disposal Gain
+Loss Sustained from Sale of Certain Property
+Calculation of Assessable Profits Derived from Specified Foreign-sourced Income
+Double Taxation Relief
+Taxpayer’s Obligations
+Advance Ruling on Compliance with Economic Substance Requirement
+More Information on Specified Foreign-sourced Income
+Enquiries
+FAQ
+back to top
+Specified Foreign-sourced Income
+The latest international tax standards require a taxpayer benefitting from a preferential tax treatment in a jurisdiction to have substantial economic presence in the jurisdiction, and to establish an explicit link between the relevant income and real activities in the jurisdiction. With a view to supporting international efforts in combating cross-border tax evasion and preventing double non-taxation, Hong Kong committed to amending its Foreign Source Income Exemption (FSIE) regime for passive income in accordance with the Guidance on FSIE regimes promulgated by the European Union (EU).
+The Inland Revenue (Amendment) (Taxation on Specified Foreign-sourced Income) Ordinance 2022 (the 2022 Amendment Ordinance) was enacted on 23 December 2022 to put in place a new FSIE regime for foreign-sourced dividend, interest, income derived from the use of intellectual property (IP income) and gain or profit derived from the sale of equity interests (other than partnership interests) in an entity (equity interest disposal gain) accrued to and received in Hong Kong by a member of an MNE group (MNE entity) with effect from 1 January 2023.
+In December 2022, the EU promulgated an updated guidance on FSIE regimes (Updated FSIE Guidance), which explicitly sets out disposal gains as one of the categories of passive income covered by an FSIE regime. Jurisdictions with ongoing FSIE reforms, including Hong Kong, are requested by the EU to further amend their tax treatments of foreign-sourced disposal gains in compliance with the Updated FSIE Guidance by the end of 2023 for implementation with effect from January 2024.
+To bring the FSIE regime in line with the Updated FSIE Guidance, the Inland Revenue (Amendment) (Taxation on Foreign-sourced Disposal Gains) Ordinance 2023 (the 2023 Amendment Ordinance) was enacted on 8 December 2023 to refine the FSIE regime. Under the 2023 Amendment Ordinance, the scope of assets in relation to foreign-sourced disposal gains is expanded to cover all types of property. The exception requirements provided under the 2022 Amendment Ordinance, i.e. economic substance requirement, participation requirement and nexus requirement, remain unchanged and are equally applicable to different types of disposal gains. A new intra-group transfer relief is introduced to defer charging of tax if the property concerned is transferred between associated entities, subject to specific anti-abuse rules. The 2023 Amendment Ordinance becomes effective from 1 January 2024.
+back to top
+Covered Income
+Specified foreign-sourced income means any of the following income arising in or derived from a territory outside Hong Kong on or after the following dates:
+1 January 2023 – interest, dividend, IP income, and equity interest disposal gain
+1 January 2024 – disposal gain other than equity interest disposal gain
+Disposal gain means:
+IP disposal gain: any gain or profit derived from the sale of intellectual property; or
+Non-IP disposal gain: any gain or profit derived from the sale of property, but does not include IP disposal gains. In other words, non-IP disposal gain includes equity interest disposal gain.
+Property means any movable property or immovable property. Section 3 of the Interpretation and General Clauses Ordinance (Cap. 1) defines “immovable property” and “movable property” as follows:
+Immovable property means (a) land, whether covered by water or not; (b) any estate, right, interest or easement in or over any land; and (c) things attached to land or permanently fastened to anything attached to land.
+Movable property means property of every description except immovable property.
+However, specified foreign-sourced income does not include :
+(a)
+any interest, dividend or non-IP disposal gain that accrues to a regulated financial entity;
+(b)
+any interest, dividend or non-IP disposal gain that accrues to an entity the assessable profits of which are chargeable to tax at the rate specified in a concession provision (as defined by section 19CA of the Inland Revenue Ordinance (Cap.112) (IRO)) other than section 14A(1);
+(c)
+any interest, dividend or non-IP disposal gain that accrues to an entity that is exempt from tax chargeable in respect of its assessable profits under section 20AC, 20ACA, 20AN or 20AO of the IRO;
+(d)
+any interest, dividend or non-IP disposal gain that accrues to an entity that is a ship-owner and has any exempt sums excluded under section 23B(4AA) of the IRO from the amount of relevant sums earned by or accrued to the entity; or
+(e)
+any non-IP disposal gain that accrues to an entity that is a trader;
+and
+is derived from, or is incidental to:
+(i)
+for an entity in (a) above – the entity’s business as a regulated financial entity;
+(ii)
+for an entity in (b) and (c) above – the activity that produces the assessable profits to which the tax concession or exemption applies;
+(iii)
+for an entity in (d) above – the activity that produces the exempt sums;
+(iv)
+for an entity in (e) above – the entity’s business as a trader.
+Regulated financial entity means:
+an insurer authorized under the Insurance Ordinance (Cap. 41), Lloyd’s or an approved association of underwriters;
+an authorized institution as defined by section 2(1) of the Banking Ordinance (Cap. 155) (BO); or
+an entity licensed under Part V of the Securities and Futures Ordinance (Cap. 571) (SFO) to carry on a business in any regulated activity as defined by Part 1 of Schedule 5 to that Ordinance.
+back to top
+Exclusion Relating to Regulated Financial Entities
+Specified foreign-sourced income does not include any interest, dividend or non-IP disposal gain that accrues to a regulated financial entity and is derived by or is incidental to the entity’s business as a regulated financial entity. In this regard, foreign-sourced interest, dividend and non-IP disposal gain that are “incidental to” the entity’s business refer to the income that accrues as a result of, or consequent upon, the relevant business.
+Example 1
+A licensed securities dealer acquired a portfolio of shares and debentures issued by foreign companies for trading purposes. The dealer received dividend and interest in respect of the portfolio. The dividend and interest were received as a result of, or consequent upon, the securities trading business carried on by the dealer in Hong Kong. The income was incidental to the dealer’s regulated business and would thus be excluded from the scope of specified foreign-sourced income.
+Example 2
+An authorized insurer was directed by its parent company to provide a loan to an associated company outside Hong Kong and received interest in respect of the loan. The loan interest was not received as a result of, or consequent upon, the insurance business carried on by the insurer in Hong Kong. Since the income was not incidental to the insurer’s regulated business, it would not be excluded from the scope of specified foreign-sourced income.
+The exclusion only applies to the foreign-sourced interest, dividend or non-IP disposal gain derived from or incidental to the following activities carried out by a regulated financial entity in Hong Kong:
+Regulated financial entity
+Activities of the regulated business
+Insurer, Lloyd’s or an approved association of underwriters
+Insurance business activities which generally include:
+(a)
+predicting and calculating risk
+(b)
+insuring or re-insuring against risk
+(c)
+providing client service in relation to insurance
+(d)
+taking hedging position
+(e)
+managing regulatory capital
+(f)
+preparing regulatory reports and returns
+(g)
+investing income generated from (a) and (b) above to match assets and liabilities and honor future claims payment
+Authorized institution within the meaning of the BO (i.e. bank, restricted licence bank or deposit-taking company)
+(a)
+Banking business or deposit-taking business which includes:
+(i)
+receiving from the general public money on current, deposit, savings or other similar account repayable on demand or within less than the period specified in item 1 of the First Schedule to the BO (i.e. 3 months) or with a period of call or notice of less than that period, other than any float or SVF deposit as defined by section 2 of the Payment Systems and Stored Value Facilities Ordinance (Cap. 584)
+(ii)
+paying or collecting cheques, drawn by or paid in by customers
+(b)
+Raising funds, managing risk including credit, currency and interest risk
+(c)
+Taking hedging position
+(d)
+Providing loans, credit or other financial services to customers;
+(e)
+Managing regulatory capital
+Entity licensed under Part V of the SFO to carry on a business in any regulated activity as defined in Part 1 of Schedule 5 to the SFO
+Any type of regulated activities specified in Schedule 5 to the SFO which currently include:
+Type 1 - Dealing in securities
+Making or offering to make an agreement with another person, or inducing or attempting to induce another person to enter into or to offer to enter into an agreement:
+(a)
+for or with a view to acquiring, disposing of, subscribing for or underwriting securities; or
+(b)
+the purpose of which is to secure a profit to any of the parties from the yield of securities or by reference to fluctuations in the value of securities
+Type 2 - Dealing in futures contracts
+(a)
+Making or offering to make an agreement with another person to enter into, or to acquire or dispose of, a futures contract
+(b)
+Inducing or attempting to induce another person to enter into, or to offer to enter into, a futures contract
+(c)
+Inducing or attempting to induce another person to acquire or dispose of a futures contract
+Type 3 -
+Leveraged foreign exchange trading
+(a)
+Entering into or offering to enter into, or inducing or attempting to induce a person to enter into or to offer to enter into, a leveraged foreign exchange contract
+(b)
+Providing any financial accommodation to facilitate foreign exchange trading or to facilitate an act referred to in (a) above
+(c)
+Entering into or offering to enter into, or inducing or attempting to induce a person to enter into, an arrangement with another person, on a discretionary basis or otherwise, to enter into a contract to facilitate an act referred to in (a) or (b) above
+Type 4 -
+Advising on securities
+(a)
+Giving advice on whether, which, the time at which or the terms or conditions on which securities should be acquired or disposed of
+(b)
+Issuing analyses or reports to facilitate the recipients of the analyses or reports to make decisions on whether, which, the time at which, or the terms or conditions on which securities are to be acquired or disposed of
+Type 5 -
+Advising on futures contracts
+(a)
+Giving advice on whether, which, the time at which or the terms or conditions on which futures contracts should be entered into
+(b)
+Issuing analyses or reports to facilitate the recipients of the analyses or reports to make decisions on whether, which, the time at which, or the terms or conditions on which futures contracts are to be entered into
+Type 6 -
+Advising on corporate finance
+(a)
+Giving advice concerning compliance with or in respect of rules made under section 23 or 36 of the SFO,
+(b)
+Giving advice concerning any offer to dispose of securities to the public, any offer to acquire securities from the public, or acceptance of any offer aforesaid
+(c)
+Giving advice to a listed corporation or public company or a subsidiary of the corporation or company, or to its officers or shareholders, concerning corporate restructuring in respect of securities
+Type
+7 - Providing automated trading services
+Providing automated trading services by means of electronic facilities, not being facilitates provided by a recognized exchange company or a recognized clearing house, whereby:
+(a)
+offers to sell or purchase securities or futures contracts are regularly made or accepted in a way that forms or results in a binding transaction in accordance with established methods, including any method commonly used by a stock market or futures market;
+(b)
+offers to enter into OTC derivative transactions are regularly made or accepted in a way that forms or results in a binding transaction in accordance with established methods;
+(c)
+persons are regularly introduced, or identified to other persons in order that they may negotiate or conclude, or with the reasonable expectation that they will negotiate or conclude sales or purchases of securities or futures contracts in a way that forms or results in a binding transaction in accordance with established methods, including any method commonly used by a stock market or futures market;
+(d)
+persons are regularly introduced, or identified to other persons:
+(i)
+in order that they may negotiate or conclude OTC derivative transactions in a way that forms or results in a binding transaction in accordance with established methods; or
+(ii)
+with the reasonable expectation that they will negotiate or conclude OTC derivative transactions in such a way;
+(e)
+transactions:
+(i)
+referred to in (a) above;
+(ii)
+resulting from the activities referred to in (c) above; or
+(iii)
+effected on, or subject to the rules of, a stock market or futures market,
+may be novated, cleared, settled or guaranteed; or
+(f)
+transactions:
+(i)
+referred to in (b) above; or
+(ii)
+resulting from the activities referred to in (d) above,
+may be novated, cleared, settled or guaranteed
+Type 8 -
+Securities margin financing
+Providing a financial accommodation in order to facilitate:
+(a)
+the acquisition of securities listed on any stock market, whether a recognized stock market or any other stock market outside Hong Kong; and
+(b)
+(where applicable) the continued holding of those securities,
+whether or not those or other securities are pledged as security for the accommodation
+Type 9 -
+Asset management
+(a)
+Real estate investment scheme management which means providing a service of operating a collective investment scheme for another person by the person, where:
+(i)
+the property that is being managed under the scheme consists primarily of immovable property; and
+(ii)
+the scheme is authorized under section 104 of the SFO
+(b)
+Securities or futures contracts management which means providing a service of managing a portfolio of securities or futures contracts for another person by the person
+Type 10 - Providing credit rating services
+Preparing opinions, expressed using a defined ranking system, primarily regarding the creditworthiness of:
+(a)
+a person other than an individual;
+(b)
+debt securities;
+(c)
+preferred securities; or
+(d)
+an agreement to provide credit,
+for dissemination to the public or distribution by subscription (whether in Hong Kong or elsewhere), or with a reasonable expectation that they will be so disseminated or distributed
+Type 11 -
+Dealing in OTC derivative products or advising on OTC derivative products
+(a)
+Dealing in OTC derivative products which means:
+(i)
+entering into or offering to enter into an OTC derivative transaction; or
+(ii)
+inducing or attempting to induce another person to enter into or to offer to enter into an OTC derivative transaction
+(b)
+Advising on OTC derivative products which means:
+(i)
+giving advice on whether an OTC derivative transaction should be entered into, which transaction should be entered into, the time at which or the terms and conditions on which a transaction should be entered into; or
+(ii)
+issuing analyses or reports, for the purpose of facilitating the recipients to make decisions on whether an OTC derivative transaction should be entered into, which transaction should be entered into, the time at which or the terms and conditions on which a transaction should be entered into
+Type 12 -
+Providing client clearing services for OTC derivative transactions
+Providing services to another person for the clearing and settlement of OTC derivative transactions through a central counterparty (whether located in Hong Kong or elsewhere), whether or not as a member of the central counterparty
+back to top
+Exclusion Relating to Traders
+Specified foreign-sourced income does not include any non-IP disposal gain that accrues to an entity that is a trader and is derived from or is incidental to its business as a trader. Trader means any entity that sells, or offers to sell, property in the entity’s ordinary course of business.
+Under the territorial principle of taxation, a person who carries on a trade or business in Hong Kong may derive foreign-sourced disposal gains. Whether a disposal gain is foreign-sourced will be determined by applying the IRO and the broad guiding principle to the transactions from which the gain is derived.
+Example
+An MNE entity carried on a securities trading business in Hong Kong. It maintained an office in Hong Kong and employed certain staff to manage a portfolio of securities in Hong Kong. It acquired and disposed of foreign shares through a foreign stock exchange at a gain. Such foreign-sourced disposal gain was derived from the MNE entity’s business as a securities trader and would be excluded from the scope of specified foreign-sourced income.
+back to top
+Covered Taxpayers
+Given the greater incentive of MNE groups to adopt aggressive tax planning strategies and hence their higher base erosion and profit shifting risks, only members of MNE groups (MNE entity) will be subject to the FSIE regime. Section 15H(1) of the IRO provides the following definitions:
+Term
+Meaning
+MNE entity
+A person that is, or acts for, an MNE group or an entity included in an MNE group
+Entity
+A legal person (other than a natural person); or an arrangement that prepares separate financial accounts, such as a partnership and a trust
+MNE group
+A group that includes at least one entity or permanent establishment that is not located or established in the jurisdiction of the ultimate parent entity of the group
+Group
+A collection of entities that are related through ownership or control such that the assets, liabilities, income, expenses and cash flows of those entities are required under applicable accounting principles to be included in the consolidated financial statements of the ultimate parent entity of the collection; or are excluded from the consolidated financial statements of the ultimate parent entity solely on size or materiality grounds or on the grounds that the entities are held for sale; or
+An entity that is located in one jurisdiction and has one or more permanent establishments in other jurisdictions
+back to top
+Treatment of Specified Foreign-sourced Income
+Deeming provision
+Under the FSIE regime, specified foreign-sourced income will be deemed to be sourced from Hong Kong and chargeable to profits tax if:
+(a)
+the income is received in Hong Kong by an MNE entity carrying on a trade, profession or business in Hong Kong irrespective of its revenue or asset size; and
+(b)
+the recipient entity does not fall within the applicable exceptions prescribed in sections 15K, 15L, 15M and 15OA of the IRO, namely the economic substance requirement (for interest, dividend or non-IP disposal gain), the nexus requirement (for qualifying general IP income and qualifying IP disposal gain), the participation requirement (for dividend or equity interest disposal gain) and the intra-group transfer relief (for disposal gain).
+Year of accrual versus year of receipt
+Specified foreign-sourced income will be exempt from profits tax if the economic substance requirement, participation requirement or nexus requirement (as the case may be) is satisfied in the year of assessment in which the income accrues to the MNE entity (i.e. year of accrual). If the MNE entity fails all these exceptions, specified foreign-sourced income will be subject to profits tax in the year of assessment in which such income is received by the MNE entity in Hong Kong (i.e. year of receipt), unless the specified foreign-sourced income is a disposal gain derived from an intra-group transfer where the intra-group transfer relief applies.
+Interaction with the territorial source principle of taxation
+The determination of source of profits is not affected by the introduction of the economic substance requirement. The source of profits and the economic substance requirement will be considered in separate contexts, with the former continuing to be determined based on the prevailing requirements of the IRO and the broad guiding principle as established by judicial precedents.
+Interaction with other deeming provisions in the IRO
+If any specified foreign-sourced income is assessable to tax under section 15 or 15F of the IRO, the income will not fall within the scope of the FSIE regime.
+back to top
+Income Received in Hong Kong
+A specified foreign-sourced income is regarded as received in Hong Kong when:
+the income is remitted to, or is transmitted or brought into, Hong Kong;
+the income is used to satisfy any debt incurred in respect of a trade, profession or business carried on in Hong Kong; or
+the income is used to buy movable property, and the property is brought into Hong Kong. The income is regarded as being received at the time when the moveable property is brought into Hong Kong.
+back to top
+Exceptions from the Deeming Provision
+Specified foreign-sourced income received in Hong Kong will not be brought into charge if the MNE entity meets the exception requirements specifically for the particular types of incomes. The exception requirements are as follows:
+Exceptions
+Specified foreign-sourced income
+Interest
+Dividend
+Disposal gain
+General IP income (e.g. royalty)
+Non-IP assets
+IP assets
+Equity interest
+Others
+Economic substance requirement
+✓
+✓
+✓
+✓
+Nexus requirement
+✓
+✓
+Participation requirement
+✓
+✓
+By the 2023 Amendment Ordinance, an intra-group transfer relief has been introduced to defer charging of tax on foreign-sourced disposal gain derived from the transfer of property between associated entities, subject to specified anti-abuse rules.
+back to top
+Exception 1: Economic Substance Requirement
+Foreign-sourced interest, dividend or non-IP disposal gain received in Hong Kong by an MNE entity will continue to be exempt from profits tax if the economic substance requirement is met for the year of assessment in which the income accrues.
+(A) Pure equity-holding entity
+Meaning
+An MNE entity which only:
+holds equity interests in other entities; and
+earns dividends, equity interest disposal gains; and income incidental to the acquisition, holding or sale of such equity interests
+Economic substance requirement
+The MNE entity is required to:
+satisfy every applicable registration and filing requirement under the Companies (Winding Up and Miscellaneous Provisions) Ordinance (Cap. 32), the Limited Partnerships Ordinance (Cap. 37), the Business Registration Ordinance (Cap. 310); and the Companies Ordinance (Cap. 622); and
+have adequate human resources and premises for carrying out the specified economic activities in Hong Kong
+Specified economic activities
+Holding and managing its equity participations in other entities
+(B) Non-pure equity-holding entity
+Meaning
+An MNE entity that is not a pure equity-holding entity
+Economic substance requirement
+The MNE entity is required to:
+employ adequate number of employees with necessary qualifications to carry out the specified economic activities in Hong Kong; and
+incur adequate amount of operating expenditure for carrying out the specified economic activities in Hong Kong
+Specified economic activities
+Making necessary strategic decisions in respect of any assets the entity acquires, holds or disposes of; and managing and bearing principal risks in respect of such assets
+Adequacy tests
+As the mode of operation of MNE entities varies from industry to industry, it is neither feasible nor appropriate to specify any minimum thresholds for determining whether the adequacy tests are satisfied for the purposes of economic substance requirement. Each case will be considered on its own facts and circumstances. Factors that will be taken into account include:
+the average number of employees having regard to the nature and level of the specified economic activities;
+whether the employees are employed on a full-time or part-time basis;
+whether the qualifications of the employees are related to the nature of the specified economic activities;
+the quantitative and qualitative aspects of the management and the administration of the MNE entity; and
+whether office premises have been used for undertaking the specified economic activities and whether the premises are adequate for such activities.
+Outsourcing of specified economic activities
+The economic substance requirement allows an MNE entity to outsource some or all of its specified economic activities. Outsourcing, in this context, includes outsourcing, contracting or delegating to third parties or group entities. Outsourcing of specified economic activities should in no circumstances be used to circumvent the economic substance requirement.
+Outsourcing requirements
+For the purpose of satisfying the economic substance requirement, outsourcing of specified economic activities by an MNE entity to an outsourced entity is permitted if the following requirements are satisfied:
+the specified economic activities are carried out by the outsourced entity in Hong Kong;
+the MNE entity has exercised adequate monitoring and control on the carrying out of the specified economic activities by the outsourced entity;
+the outsourced entity is generally expected to charge the MNE entity a fee for the specified economic activities performed subject to the application of transfer pricing rules;
+the number of qualified employees employed and the amount of operating expenditure incurred by the outsourced entity in Hong Kong are commensurate with the level of specified economic activities carried out by the outsourced entity; and
+there must be no double counting if the outsourced entity provides services to more than one MNE entity.
+Where the specified economic activities are outsourced, the resources of the outsourced entity in Hong Kong will be taken into consideration when determining whether the MNE entity can satisfy the adequacy tests in relation to premises and human resources (for pure equity-holding entities), or qualified employees and operating expenditures (for non-pure equity-holding entities).
+The MNE entity remains responsible for ensuring accurate information is reported on its return, including precise details of the resources employed by the outsourced entity.
+Monitoring on outsourcing
+In monitoring the outsourcing of specified economic activities, an MNE entity must ensure that the outsourced entity has the capacity to perform the activities concerned in Hong Kong. Factors that will be taken into account include:
+the nature and level of specified economic activities performed by the outsourced entity for an MNE entity;
+whether the outsourced entity has employed an adequate number of employees to perform the outsourced activities in Hong Kong;
+whether the outsourced entity has incurred an adequate amount of operating expenditure to perform the outsourced activities in Hong Kong;
+whether the outsourced entity has premises for carrying out the outsourced activities in Hong Kong;
+the number of MNE entities to which the outsourced entity provides services.
+back to top
+Exception 2: Nexus Requirement
+As regards foreign-sourced qualifying IP income, a nexus requirement is in place to determine the extent of such income to be exempt from profits tax. In brief, certain portion of the income derived from qualifying intellectual property (qualifying IP income) can be exempt from profits tax, and that portion is referred to as “excepted portion”.
+What is the nexus requirement
+The nexus requirement means the nexus approach adopted by The Organisation for Economic Co-operation and Development (OECD) as a minimum standard under Action 5 of the package of actions to tackle base erosion and profit shifting (BEPS) promulgated in 2015 (the BEPS Action 5 Report). It has been applied by the OECD Forum on Harmful Tax Practices to evaluate the harmfulness of preferential tax regimes for IP income put in place by tax jurisdictions. All member jurisdictions of the Inclusive Framework on BEPS with IP regimes have either adopted the nexus approach or abolished their non-compliant regimes.
+Under the nexus approach, only income from a qualifying IP asset can qualify for preferential tax treatment based on a nexus ratio which is defined as the qualifying expenditures as a proportion of the overall expenditures that have been incurred by a taxpayer to develop an IP asset. The proportion of research and development (R&D) expenditures is a proxy for substantial economic activities. This seeks to ensure that there is a direct nexus between the income receiving benefits and the expenditures contributing to that income.
+Under the FSIE regime, the provisions relating to the nexus requirement should be read in the way that best secures consistency with the requirements and guidance in Chapter 4 of the BEPS Action 5 Report.
+What is qualifying IP income
+“Qualifying IP income” means (a) any qualifying general IP income; or (b) any qualifying IP disposal gain.
+"Qualifying general IP income" means any income derived from qualifying intellectual property in respect of:
+(a)
+the exhibition or use of, or a right to exhibit or use (whether in or outside Hong Kong) the property; or
+(b)
+the imparting of, or undertaking to impart, knowledge directly or indirectly connected with the use (whether in or outside Hong Kong) of the property.
+“Qualifying IP disposal gain” means any gain or profit derived from the sale of qualifying intellectual property.
+What is qualifying intellectual property
+“Qualifying intellectual property” means:
+a patent granted under the Patents Ordinance (Cap. 514);
+a patent application made under Cap. 514;
+a copyright subsisting in software under the Copyright Ordinance (Cap. 528); or
+any of the above intellectual property granted, made or subsisted under the law of any place outside Hong Kong.
+What is the R&D fraction
+The definition of “R&D fraction” in the 2022 Amendment Ordinance is modelled on the nexus ratio referred to in the BEPS Action 5 Report. The R&D fraction is calculated in accordance with the following formula and capped at 100%–
+F =
+QE × 130%
+QE + NE
+where
+F
+means the R&D fraction;
+QE
+means the qualifying R&D expenditure incurred in respect of the qualifying intellectual property to which the qualifying IP income relates; and
+NE
+means the non-qualifying expenditure incurred in respect of the same qualifying intellectual property.
+The R&D fraction is used to calculate the excepted portion of qualifying IP income received by an MNE entity, which is ascertained in accordance with the following formula:
+P = I × F
+where
+P
+means the excepted portion;
+I
+means the qualifying IP income; and
+F
+means the R&D fraction applicable to the qualifying IP income.
+What is R&D expenditure for the purpose of ascertaining the R&D fraction
+For the purpose of ascertaining the R&D fraction in respect of qualifying intellectual property to which the income relates, R&D expenditures (including capital expenditure) are classified as follows:
+R&D expenditures
+QE*
+NE*
+For an R&D activity carried out
+by the MNE entity
+✓
+by a non-associated person
+✓
+by an associated person that is a Hong Kong resident person
+- in Hong Kong
+✓
+- outside Hong Kong
+✓
+by an associated person that is a non-Hong Kong resident person
+✓
+*
+QE does not include interest payments, payments for any land or buildings, or for any alteration, addition or extension to any building and acquisition of intellectual property. NE does not include interest payments and payments for any land or buildings, or for any alteration, addition or extension to any building.
+Transitional arrangement
+As a transitional measure, an MNE entity is allowed to apply a ratio where qualifying expenditures and overall expenditures are calculated based on a 3-year rolling average. The purpose is to allow sufficient time for taxpayers to adapt to the tracking and tracing requirements while still complying with the general principles of the nexus approach. After the transitional period of 3 years, the MNE entity would need transition from using the 3-year average to the R&D fraction.
+The transitional periods are:
+for qualifying general IP income – from 1 January 2023 to the last day of the basis period for the year of assessment 2024/25;
+for qualifying IP disposal gain – from 1 January 2024 to the last day of the basis period for the year of assessment 2025/26.
+Where an MNE entity has insufficient records to track and trace the R&D expenditures to calculate the R&D fraction, it may make use of the transitional measure. Readers may refer to the example of a transitional measure for tracking and tracing provided in Annex A of the BEPS Action 5 Report.
+Loss sustained in respect of foreign-sourced qualifying IP income
+Two types of losses may arise in relation to qualifying intellectual property:
+General loss: where an MNE entity receives a qualifying general IP income chargeable to profits tax in a year of assessment and sustains a loss in respect of the qualifying intellectual property to which the income relates, the qualifying portion of the general loss (i.e. the portion of the general loss that is not attributable to the excepted portion of the qualifying general IP income) may be set off against the assessable profits of the MNE entity for that year of assessment.
+Sale loss: the qualifying portion of a loss sustained by an MNE entity from a sale in a territory outside Hong Kong of qualifying intellectual property may be set off against its assessable profits for the year of assessment in which the proceeds of the sale are received in Hong Kong. However, this rule is subject to the condition that had a gain been derived from the sale and received in Hong Kong, the gain, or part of the gain, would have been chargeable to profits tax under the FSIE regime. The qualifying portion of the sale loss may only be set off to the extent that the assessable profits concerned are derived from specified foreign-sourced income that is chargeable to profits tax under the FSIE regime.
+Any amount of the qualifying portion of the general loss or sale loss not so set off may be carried forward and set off, in accordance with section 19C of the IRO, against the assessable profits of the MNE entity in subsequent years of assessment. The non-qualifying portion of the loss cannot be set off against any assessable profits of the MNE entity.
+Effect of withdrawal, abandonment and refusal of patent application
+Where the excepted portion of a qualifying IP income derived from a patent application made under Cap. 514 or under the law of any place outside Hong Kong is not chargeable to profits tax in a year of assessment due to the operation of the nexus requirement and the patent application is withdrawn, abandoned or refused in a subsequent year of assessment, the excepted portion of the income would be regarded as specified foreign-sourced income received in Hong Kong in that subsequent year of assessment and be chargeable to profits tax.
+back to top
+Exception 3: Participation Requirement
+The participation requirement provides an alternative to the economic substance requirement to facilitate an MNE entity which receives foreign-sourced dividend or equity interest disposal gain in Hong Kong to claim tax exemption.
+Conditions for the participation requirement
+the MNE entity is a Hong Kong resident person, or where it is a non-Hong Kong resident person, it has a permanent establishment in Hong Kong to which the foreign-sourced dividend or equity interest disposal gain is attributable; and
+the MNE entity has continuously held not less than 5% of equity interests in the investee entity concerned for a period of not less than 12 months immediately before the foreign-sourced dividend or equity interest disposal gain accrues.
+Certain anti-abuse rules are in place to disallow the participation exemption. These rules are as follows:
+Switch-over rule (Subject to tax condition)
+If the specified foreign-sourced income is an equity interest disposal gain, the participation exemption only applies if the equity interest disposal gain is subject to a qualifying similar tax in a territory outside Hong Kong (foreign jurisdiction).
+If the specified foreign-sourced income is dividend, the participation exemption only applies if any of the following sums is subject to a qualifying similar tax in a foreign jurisdiction:
+the dividend; or
+the underlying profits out of which the dividend is paid
+A sum is subject to a qualifying similar tax in a foreign jurisdiction if:
+the sum is subject to a tax that is of substantially the same nature as profits tax in the foreign jurisdiction
+(foreign tax)
+; and
+the tax rate applicable to the sum
+(applicable rate)
+is at least 15%.
+The applicable rate refers to the corporate tax rate of the foreign jurisdiction at which the foreign tax applies to the sum as business income. If the foreign tax is chargeable at the time the sum accrues, the applicable rate will be the corporate tax rate of the foreign jurisdiction applicable at that time. If the foreign tax is chargeable for the taxable period in which the sum accrues, the applicable rate will be the corporate tax rate of the foreign jurisdiction applicable for that taxable period.
+Generally, the applicable rate refers to the headline rate (i.e. the highest corporate tax rate) of the jurisdiction in which the specified foreign-sourced income, underlying profits or related downstream income is taxed. This headline rate need not be the actual tax rate imposed on the income or profits concerned. If an income or profits are taxable under a special tax legislation at a lower rate than in the main legislation of the jurisdiction, and the lower rate is not a tax incentive for carrying out substantive activities, the headline tax rate should be the highest stipulated tax rate in the special legislation. If an income or profits are subject to the foreign tax at more than one rate (e.g. progressive corporate tax rates), the applicable rate will be the highest corporate tax rate applied to that income.
+The following examples illustrate how the subject to tax condition applies:
+Situation
+Is the income subject to a qualifying similar tax in Jurisdiction A?
+A foreign-sourced dividend is charged to corporate income tax in Jurisdiction A at the headline rate of 20%.
+Yes, because the income is actually charged to a tax similar to profits tax in Jurisdiction A and the applicable rate is above 15%.
+A foreign-sourced dividend is exempt from tax in Jurisdiction A. The headline corporate tax rate of Jurisdiction A is 20%.
+No, because no tax is charged on the income in Jurisdiction A.
+A foreign-sourced dividend is charged to withholding tax in Jurisdiction A at 10%. The headline corporate tax rate of Jurisdiction A is 20%.
+Yes, because the headline rate of corporate income tax in Jurisdiction A is above 15%. This is notwithstanding the dividend was taxed at only 10 % in Jurisdiction A.
+A foreign-sourced equity interest disposal gain is charged to corporate income tax in Jurisdiction A at 10% under a preferential tax regime of Jurisdiction A. The regime is a special tax incentive for income derived from carrying out substantive activities in a special economic zone of Jurisdiction A. The headline rate of corporate income tax in Jurisdiction A is 20%.
+Yes, because the preferential tax regime is a tax incentive for carrying out substantive activities in Jurisdiction A and the applicable tax rate (i.e. the headline rate of corporate income tax) in Jurisdiction A is above 15%.
+A foreign-sourced equity interest disposal gain of HK$5 million is charged to corporate income tax in Jurisdiction A under a progressive rates regime. Under the regime, income of the first HK$2 million is taxed at 10% whilst the remainder is taxed at 20%.
+Yes, because the highest corporate income tax rate applicable to the income is above 15%.
+If an MNE entity satisfies the participation requirement but fails on the subject to tax condition in respect of a foreign-sourced dividend or equity interest disposal gain received in Hong Kong, the tax relief available in relation to the income concerned will be switched over from full exemption to tax credit. In other words, the MNE entity will remain subject to profits tax in respect of the income concerned but with a deduction from the profits tax of foreign tax paid on the income concerned and underlying profits / income.
+Anti-hybrid mismatch rule
+Where the specified foreign-sourced income is a dividend, and tax is charged on the underlying profits of the dividend in a territory outside Hong Kong, the participation exemption will not apply to the extent that the dividend is allowable for deduction when computing the amount of tax of the investee entity.
+Main purpose rule
+If the Commissioner is of the opinion that the main purpose, or one of the main purposes, of entering into an arrangement is to obtain a tax benefit in relation to a liability to pay profits tax, the participation exemption will not apply.
+An arrangement or a series of arrangements will be regarded as non-genuine to the extent that they are not put into place for valid commercial reasons which reflect the economic reality.
+The reference to “one of the main purposes” means that obtaining a tax benefit does not need to be the sole or dominant purpose of a particular arrangement. An arrangement may have more than one main purpose and it is sufficient that at least one of which was to obtain a tax benefit, even if that was not the dominant purpose. All relevant facts and circumstances have to be considered, including:
+the manner in which the arrangement was structured;
+the terms of the arrangement;
+the ways of implementing the arrangement;
+the result which the arrangement intended to achieve or had achieved;
+the non-tax purposes of the arrangement and any alternative way that the non-tax purposes could be achieved;
+the form (i.e. contractual rights and obligations created) and substance (i.e. practical or commercial end result) of the arrangement;
+the functions, assets and risks of each entity in the arrangement; and
+the contractual rights and obligations normally created, and the commercial and financial relationships normally entered into, between independent persons under an arrangement of the kind in question.
+back to top
+Exception 4: Intra-group Transfer Relief for Disposal Gain
+An intra-group transfer relief is introduced by the 2023 Amendment Ordinance to the IRO to defer charging of tax if the property concerned is transferred between associated entities, subject to specific anti-abuse rules. This exception becomes effective from 1 January 2024.
+An intra-group transfer relief is provided for disposal gains if the following conditions are met:
+(a)
+the selling entity receives in Hong Kong any specified foreign-sourced income (subject income) which is a disposal gain;
+(b)
+the sale from which the gain is derived (subject sale) is an intra-group transfer;
+(c)
+the property to which the subject sale relates (subject property) is acquired by an entity (acquiring entity); and
+(d)
+both the selling entity and the acquiring entity are, at the time of the subject sale, chargeable to profits tax.
+Effects of the relief:
+The selling entity is treated as having sold the subject property at a consideration of such an amount that neither a gain nor a loss accrues to it.
+The acquiring entity is treated as having acquired the subject property at the same cost and on the same date as the selling entity.
+The acquiring entity is taken as stepping in the shoes of the selling entity for the purposes of deduction of expenses and capital allowances, claim for tax credit and compliance with the participation requirement or nexus requirement.
+Meaning of “intra-group transfer”
+The subject sale is an intra-group transfer if the selling entity and the acquiring entity are, at the time of the sale, associated with each other.
+Meaning of “associated”
+Two entities are associated with each other if–
+(a)
+one of them has an associating interest in the other; or
+(b)
+a third entity has an associating interest in both of them.
+An entity (entity A) has an associating interest in another entity (entity B) if–
+(a)
+entity A has at least 75% of direct or indirect beneficial interest in, or in relation to, entity B; or
+(b)
+entity A is, directly or indirectly, entitled to exercise, or control the exercise of, at least 75% of the voting rights in, or in relation to, entity B.
+The associating interest accommodates not only issued share capital, but also partnership, trust and other ownership interest.
+Anti-abuse rules
+To prevent abuse of the relief, appropriate safeguards and anti-avoidance rules are put in place. The intra-group transfer relief ceases to apply if, within 2 years after the subject sale in relation to the subject income-
+(a)
+the selling entity or the acquiring entity ceases to be chargeable to profits tax under the IRO; or
+(b)
+the selling entity and the acquiring entity cease to be associated with each other.
+A person carrying on any trade, profession or business in Hong Kong is chargeable to tax on profits arising in or derived from Hong Kong from such trade, profession or business. The person will cease to be chargeable to profits tax under the IRO if the person ceases to carry on a trade, profession or business in Hong Kong.
+Example 1
+Company-HK was a wholly owned subsidiary of Company-F which was a resident of Jurisdiction F. Both Company-HK and Company-F carried on business in Hong Kong. Company-F ceased to carry on its business in Hong Kong on 1 January 2025 on which Company-F ceased to be chargeable to profits tax under the IRO.
+Example 2
+Company-HK1 held 100% ownership interest in Company-HK2. On 1 February 2025, Company-HK1 sold its ownership interest in Company-HK2 to Individual-A. Company-HK1 and Company-HK2 ceased to be associated with each other on 1 February 2025.
+back to top
+Loss Sustained from Sale of Certain Property
+A loss sustained by an MNE entity from a sale in a territory outside Hong Kong of any property (other than qualifying intellectual property) may be set off against its assessable profits for the year of assessment in which the proceeds of the sale are received in Hong Kong. However, this rule is subject to the condition that had a gain been derived from the sale and received in Hong Kong, the gain would have been chargeable to profits tax under the FSIE regime.
+Any amount of the loss not so set off may be carried forward and set off, in accordance with section 19C of the IRO, against the assessable profits of the MNE entity in subsequent years of assessment.
+The loss may only be set off to the extent that the assessable profits concerned are derived from specified foreign-sourced income that is chargeable to profits tax under the FSIE regime.
+back to top
+Calculation of Assessable Profits Derived from Specified Foreign-sourced Income
+If a specified foreign-sourced income is chargeable to tax in the year of assessment in which the income is received in Hong Kong, outgoings or expenses incurred in the production of the income, to the extent that they have not been deducted for any year of assessment, may be deducted as if they were incurred in the year of receipt.
+Any allowance or balancing charge relating to the production of a specified foreign-sourced income under Part 6 of the IRO will also be taken into account when calculating the assessable profits of an MNE entity for the year of assessment in which the income is received in Hong Kong.
+back to top
+Double Taxation Relief
+If an MNE entity has specified foreign-sourced income chargeable to profits tax and has paid tax in a territory outside Hong Kong which is of substantially the same nature as profits tax (similar tax), double taxation relief will be available regardless of whether that territory has entered into a comprehensive avoidance of double taxation arrangement (CDTA) with Hong Kong or not. The amount of tax credit is capped at the lower of foreign tax paid and the profits tax that would have been payable on the same income.
+Tax credit under CDTAs
+For any similar tax payable on specified foreign-sourced income in a territory outside Hong Kong with which CDTA has been made (CDTA territory), bilateral tax credit pursuant to the relevant CDTA will be granted to the MNE entity if it is a Hong Kong resident person.
+To align the treatment on foreign tax paid in a CDTA territory and a non-CDTA territory, similar tax payable in respect of the underlying profits out of which a foreign-sourced dividend was paid in a CDTA territory but not allowable as bilateral tax credit under the CDTA may be allowed as a unilateral tax credit against profits tax charged on the foreign-sourced dividend.
+Unilateral tax credit
+For any similar tax payable on specified foreign-sourced income in a non-CDTA territory, unilateral tax credit will be provided to the MNE entity if it is a Hong Kong resident person. Any tax credit allowed will be set off against the profits tax payable in respect of the specified foreign-sourced income concerned. In other words, unilateral tax credit will be provided when the income is received in Hong Kong. Also, no tax credit will be available if the specified foreign-sourced income is exempt from profits tax under the FSIE regime or if the tax paid in a non-CDTA territory relates to income other than specified foreign-sourced income.
+Where the specified foreign-sourced income is a dividend, tax credits will be allowed in respect of not only the foreign tax paid on the dividend, but also the foreign tax paid on the investee entity’s underlying profits out of which the dividend is paid, provided that the MNE entity has held at least 10% equity interests in the investee entity when the dividend is distributed.
+Deduction as expenses
+Where the MNE entity is not a Hong Kong resident person, the foreign tax paid on the specified foreign-sourced income which is chargeable to profits tax in Hong Kong may be allowed as deduction under section 16(1)(ca) of the IRO.
+back to top
+Taxpayers’ Obligations
+An MNE entity should:
+report its specified foreign-sourced income in the profits tax return and designated form for the year of assessment in which the income accrues;
+report the amount of chargeable specified foreign-sourced income in the profits tax return and designated form for the year of assessment in which the income is received in Hong Kong;
+notify the Commissioner in writing that it is chargeable to profits tax within 4 months after the end of the basis period of the year of assessment during which the income is received in Hong Kong in case no profits tax return has been issued to it for the year of assessment concerned;
+notify the Commissioner in writing of the withdrawal, abandonment or refusal of a patent application made under Cap. 514 or under the law of any place outside Hong Kong, for which an excepted portion of qualifying IP income was regarded as not chargeable to profits tax in a previous year of assessment, within 4 months after the end of the basis period of the year of assessment in which the withdrawal, abandonment or refusal takes place; and
+retain records of transactions, acts, or operations relating to the specified foreign-sourced income at least until the later of the expiry of 7 years after the completion of those transactions, acts or operations; or the expiry of 7 years after the income is received, or to be regarded as received, in Hong Kong.
+back to top
+Advance Ruling on Compliance with the Economic Substance Requirement
+To obtain tax certainty and reduce compliance burden, MNE entities are encouraged to apply to the Commissioner for advance rulings on their compliance with the economic substance requirement in relation to foreign-sourced interest, dividend and/or non-IP disposal gain.
+For more details on advance ruling, please click
+here
+.
+back to top
+More Information on Specified Foreign-sourced Income
+Inland Revenue Ordinance
+The 2022 Amendment Ordinance
+The 2023 Amendment Ordinance
+OECD materials
+Countering Harmful Tax Practices More Effectively, Taking into Account Transparency and Substance – Action 5: 2015 Final Report
+EU materials
+Updated Guidance on foreign source income exemption regimes
+Guidance on foreign source income exemption regimes
+Guidance on the Interpretation of the Third Criterion of the Code of Conduct for Business Taxation
+back to top
+Enquiries
+If you have any question regarding the FSIE regime, you may contact us at (852) 2594 1500 or
+taxpf@ird.gov.hk
+.

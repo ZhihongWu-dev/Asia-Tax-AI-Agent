@@ -1,0 +1,362 @@
+PART 10
+MISCELLANEOUS
+Books, etc., in custody of public officers may be inspected without fee
+69.
+Every public officer having in his or her custody any register, book, record, paper, document or proceeding the inspection of which may tend to secure any duty, or to prove or lead to the discovery of any fraud or omission in relation to any duty, must at all reasonable times permit any person authorised in writing by the Commissioner —
+(
+a
+)
+to inspect for such purpose the register, book, record, paper, document or proceeding; and
+(
+b
+)
+to take such notes and extracts as he or she may consider necessary without fee or charge.
+Power to declare agent, etc., for recovery of duty
+70.
+—(1) The Commissioner may, by written notice, declare any person to be the agent of any other person for the purposes of this Act, and may require the agent so declared to pay any duty due under this Act from any moneys (including sale proceeds, rents, bank balances, pensions, salary, wages or any other remuneration) which, at the date of receipt of the notice or at any time during a period of 90 days after that date, may be held by the agent for or due by the agent to the other person.
+[36/2008]
+(2) In default of payment by an agent declared under subsection (1), the duty may be sued for by way of a specially endorsed originating claim in the name of the Commissioner who is entitled to all costs allowed by law against the person liable thereto.
+[Act 25 of 2021 wef 01/04/2022]
+(3) For the purposes of this section, the Commissioner may require any person to give the Commissioner information as to any moneys, funds or other assets which may be held by the person for, or of any moneys due by the person to, any other person.
+(4) Where any person declared by the Commissioner to be the agent of any other person under subsection (1) is aggrieved by such declaration, the agent so declared may, by written notice to the Commissioner within 14 days after the date of the declaration, or within such further time as the Commissioner may allow, object to the declaration.
+(5) The Commissioner must examine the objection and may cancel, vary or reconfirm the declaration.
+(6) For the purposes of payment of any duty due from any moneys mentioned in subsection (1) in a joint account in any bank or from the proceeds of sale of any immovable property owned by 2 or more persons as joint owners, the following provisions apply:
+(
+a
+)
+the person (
+X
+) declared by the Commissioner under subsection (1) to be the agent of any person who is an owner of such moneys must —
+(i)
+within 14 days of the receipt of the notice under subsection (1), send a notice by registered post addressed to every owner of such moneys at the address last known to
+X
+informing the owner of such declaration; and
+(ii)
+retain such amount of the moneys as is presumed under paragraph (
+b
+) to be owned by the person from whom the duty is due and, subject to paragraph (
+e
+), within 42 days of the receipt of the notice under subsection (1) pay over the duty due from such amount to the Commissioner;
+(
+b
+)
+it is presumed, until the contrary is proved, that —
+(i)
+the holders of a joint account at any bank have equal share of the moneys in the account as at the date of receipt of the notice under subsection (1); and
+(ii)
+the owners of any immovable property share the proceeds of sale of the property equally;
+(
+c
+)
+any owner of such moneys who objects to the share presumed under paragraph (
+b
+) must give written notice of the owner’s objection to
+X
+within 28 days of the receipt of the notice sent by
+X
+under paragraph (
+a
+)(i), or within such further period as the Commissioner may allow, and furnish proof as to the owner’s share of the moneys;
+(
+d
+)
+where an objection under paragraph (
+c
+) has been received,
+X
+must —
+(i)
+retain the amount of such moneys mentioned in paragraph (
+a
+)(ii) until such time as the Commissioner by notice under paragraph (
+e
+) informs
+X
+of the Commissioner’s decision on the objection; and
+(ii)
+inform the Commissioner of the objection within 7 days of the receipt of the objection; and
+(
+e
+)
+the Commissioner must consider the objection and by written notice inform
+X
+of his or her decision and
+X
+must pay over any duty due from the share of the moneys decided by the Commissioner as the amount, not exceeding the amount presumed under paragraph (
+b
+) to be the share of the person by whom the duty is payable, held by
+X
+for or due by
+X
+to the person.
+(7) Where an agent makes any payment of moneys to the Commissioner under this section —
+(
+a
+)
+the agent is deemed to have been acting under the authority of the person by whom the duty is payable (called in this section the person in default);
+(
+b
+)
+the agent is indemnified in respect of the payment to the Commissioner;
+(
+c
+)
+the amount of the duty due from the person in default is reduced by the amount paid by the agent to the Commissioner; and
+(
+d
+)
+the amount of the reduction is, to the extent of that amount, deemed to have been paid to the person in default in accordance with any law, contract or scheme governing the payment of moneys held by the agent for or due from the agent to the person in default.
+[36/2008]
+(8) Where —
+(
+a
+)
+an amount of duty is due from any person under this Act otherwise than as an agent under this section;
+(
+b
+)
+except for this subsection, an amount is or would, at any time during the period of 90 days after the date of the receipt of the notice in paragraph (
+c
+), be payable by the Government to the person in default by or under any written law, contract or scheme; and
+(
+c
+)
+before payment of the amount mentioned in paragraph (
+b
+) is made to the person in default, the Commissioner serves notice on any public officer (including an employee appointed under section 9(3) of the Inland Revenue Authority of Singapore Act 1992) by whom the payment is to be made that the duty is due from the person in default,
+then the public officer is, despite any other written law, contract or scheme, entitled to reduce the amount mentioned in paragraph (
+b
+) by the amount of the whole or any part of the duty mentioned in paragraph (
+a
+).
+(9) If the public officer makes the reduction mentioned in subsection (8) —
+(
+a
+)
+the amount of the duty mentioned in subsection (8)(
+a
+) is reduced by the amount of the reduction; and
+(
+b
+)
+the amount of the reduction is, to the extent of such amount, deemed to have been paid to the person in default in accordance with any law, contract or scheme governing the payment of moneys mentioned in subsection (8)(
+b
+) to the person in default.
+[36/2008; 21/2013]
+(10) In this section —
+“duty” includes any penalty or any other money which a person is liable to pay to the Commissioner under this Act;
+“joint account” means any account in the names of 2 or more persons but excludes any partnership account, trust account and any account where a minor is one of the account holders.
+Recovery of duty from deceased individual
+70A.
+—(1) Where, at the time of a person’s death, any duty or penalty is due from the person under this Act and has not been paid, the Commissioner has the same powers and remedies for recovering the duty or penalty so payable from the person’s estate as the Commissioner would have in relation to the person if the person were alive.
+(2) Any such duty or penalty or both are payable by the executor or administrator in respect of the deceased person’s estate to the same extent as it would be payable by the person if he or she were alive.
+(3) This section does not apply if the duty is assessed after the end of the third year following the year in which the person died.
+Recovery of duty, etc., from persons leaving Singapore
+70AA.
+—(1) Where the Commissioner is of the opinion that any person is about or likely to leave Singapore without paying all the duty or penalty recoverable from the person under any provisions of this Act, the Commissioner may issue a certificate containing particulars of the duty or penalty and a direction to the Commissioner of Police or the Controller of Immigration, or both, that such person be prevented from leaving Singapore without paying the duty or penalty or furnishing security to the Commissioner’s satisfaction for payment of the duty or penalty.
+[28/2010]
+(2) Subject to the provisions of any order issued or made under any law for the time being in force relating to banishment or immigration, the Commissioner of Police or the Controller of Immigration, or both (as the case may be) must thereupon take, or cause to be taken by any police officer or immigration officer, such measures as may be necessary to prevent the person named in the direction from leaving Singapore until payment of the duty or penalty has been made or secured as aforesaid, including the use of such force as may be necessary and, if appropriate, the detention of any Singapore passport, certificate of identity or travel document and any exit permit or other document authorising such person to leave Singapore.
+[28/2010]
+(3) At the time of issue of the certificate, the Commissioner must issue to such person a notification thereof by personal service or registered post; but the non‑receipt of the notification does not invalidate any proceedings under this section.
+[28/2010]
+(4) Payment of the duty or penalty to an officer in charge of a police station or to an immigration officer or production of a statement signed by the Commissioner stating that the duty or penalty has been paid or secured as aforesaid is sufficient authority for allowing such person to leave Singapore.
+[28/2010]
+(5) Any person who, knowing that a direction has been issued under this section for the prevention of his or her departure from Singapore, voluntarily leaves or attempts to leave Singapore without —
+(
+a
+)
+paying the duty or penalty payable by him or her; or
+(
+b
+)
+furnishing security to the Commissioner’s satisfaction for payment of the duty or penalty,
+shall be guilty of an offence and may be arrested, without warrant, by any police officer or immigration officer.
+[28/2010]
+(6) No civil or criminal proceedings shall be instituted or maintained against the Commissioner of Police, the Controller of Immigration or any other police officer or immigration officer, in respect of anything lawfully done under the authority of this section.
+[28/2010]
+Company wound‑up
+70B.
+Where a company is being wound up, the liquidator of the company must not distribute any of the assets of the company to the shareholders of the company unless the liquidator has made provision for the payment in full of any duty or penalty which may be found payable by the company.
+Power to call for any instrument, book, document, account or other record, or to obtain information
+70C.
+—(1) For the purposes of this Act, the Commissioner may by notice require any person to attend personally before the Commissioner or an authorised officer, at a place and time specified in the notice, to do one or both of the following:
+(
+a
+)
+provide, to the best of that person’s knowledge, information and belief, any information concerning the liability of any instrument to duty;
+(
+b
+)
+produce for examination any instrument, book, document, account or other record (each called in this section a record) concerning such liability.
+[34/2016]
+(2) Where records are maintained by computer, the person required to make them available for examination must provide all facilities necessary for obtaining the computer records.
+(3) The Commissioner has at all times full and free access to all buildings, places and records for any of the purposes of this Act, and may, without fee or reward, inspect, copy or make extracts from any such records.
+[34/2016]
+(4) In addition to the powers under subsection (3), the Commissioner may also require a person in or at the building or place and who appears to the Commissioner to be acquainted with any facts or circumstances concerning the liability of any instrument to duty —
+(
+a
+)
+to answer any question to the best of that person’s knowledge, information and belief; or
+(
+b
+)
+to take reasonable steps to produce any record for examination.
+[34/2016]
+(5) The Commissioner or the authorised officer may take possession of any record produced in purported compliance with a requirement under subsection (1) or (4), or which the Commissioner finds in the building or place under subsection (3), where in his or her opinion —
+(
+a
+)
+the inspection or copying of or extraction from the record cannot reasonably be performed without taking possession;
+(
+b
+)
+the record may be interfered with or destroyed unless possession is taken; or
+(
+c
+)
+the record may be required as evidence in proceedings for an offence under this Act or in proceedings for the recovery of duty or penalty, or in proceedings by way of an appeal against the assessment.
+[34/2016]
+(6) A statement made by any person asked when in attendance before the Commissioner or an authorised officer under subsection (1), or under subsection (4), must —
+(
+a
+)
+be reduced to writing;
+(
+b
+)
+be read over to the person;
+(
+c
+)
+if the person does not understand English, be interpreted for the person in a language that the person understands; and
+(
+d
+)
+be signed by the person.
+[34/2016]
+(7) The Commissioner may by notice require any person to give orally or in writing, as may be required, all such information, facts and circumstances affecting the liability of any instrument to duty.
+[34/2016]
+(8) The power to require a person to provide information or produce a record under subsection (4) or (7), or when in attendance before the Commissioner or an authorised officer pursuant to a notice under subsection (1), includes the power —
+(
+a
+)
+to require that person, or any person who is or was an officer or employee of that person, to provide an explanation of the information or record;
+(
+b
+)
+if the information is not provided or the record is not produced, to require that person to state, to the best of the person’s knowledge and belief, where it is; and
+(
+c
+)
+if the information is recorded otherwise than in legible form, to require the information to be made available to the Commissioner or authorised officer (as the case may be) in legible form.
+[34/2016]
+(9) Any person who, without reasonable excuse, fails, neglects or refuses to comply with —
+(
+a
+)
+a notice or requirement of the Commissioner under this section; or
+(
+b
+)
+a demand by the Commissioner or an authorised officer to answer a question when in attendance before the Commissioner or officer pursuant to a notice under subsection (1),
+shall be guilty of an offence, and shall be liable on conviction to a fine not exceeding $10,000 or to imprisonment for a term not exceeding 12 months or to both and, in the case of a continuing offence, to a further fine not exceeding $100 for every day or part of a day during which the offence continues after conviction.
+[34/2016]
+(10) In this section, “authorised officer” means any Deputy Commissioner of Stamp Duties and any officer of the Inland Revenue Authority of Singapore assisting the Commissioner in the administration of this Act.
+[34/2016]
+(11) Any person who, for the purpose of evading any duty under this Act, falsifies or destroys any document, book, account, record or other instrument shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $10,000 or to imprisonment for a term not exceeding 3 years or to both.
+Commissioner may require declaration, etc.
+71.
+—(1) The Commissioner may require any person to produce evidence by way of statutory declaration or otherwise for any purpose connected with the administration of this Act.
+[13/2017]
+(2) The Commissioner may by notice require any person to provide to the Commissioner by a specified time an appropriate valuation of any property that is the subject of an instrument (including any underlying property of a PHE within the meaning of section 23) for the purposes of determining the liability or the extent of the liability of the instrument to duty.
+[13/2017]
+(3) A person who, without reasonable excuse, fails to comply with the notice in subsection (2) shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $10,000 and, in the case of a continuing offence, to a further fine not exceeding $100 for every day or part of a day during which the offence continues after conviction.
+[13/2017]
+(4) In subsection (2), an appropriate valuation is a valuation by a valuer who is independent of any party to the instrument, and has qualifications and experience that are relevant to the valuation sought by the Commissioner.
+[13/2017]
+Commissioner may impound instrument
+72.
+The Commissioner may impound any instrument presented to the Commissioner for stamping where the Commissioner is of the opinion that it has not been duly stamped or it has been insufficiently stamped, and detain such instrument until the proper amount of stamp duty on the instrument has been paid.
+Responsibility for loss or damage
+73.
+—(1) Neither the Government nor the Commissioner is responsible for the loss of or for damage to any instrument tendered for stamping while in the Commissioner’s custody.
+(2) No officer of the stamp office is responsible for any loss or damage mentioned in subsection (1), unless the officer has caused it wilfully, fraudulently or by gross negligence.
+Power to reduce or remit duties
+74.
+—(1) The Minister may, in his or her discretion and subject to such conditions as he or she may impose, reduce or remit, prospectively or retrospectively, in the whole or any part of Singapore, the duties with which any instrument or any particular class of instruments, or any of the instruments belonging to such class, or any instrument when executed by or in favour of any particular class of persons, or by or in favour of any members of such class, are chargeable.
+[28/2010]
+(2) The Minister may impose a condition under subsection (1) that a person who fails to comply with any condition imposed under that subsection, must pay interest on any amount recoverable under subsection (6) for the following period:
+(
+a
+)
+in a case where duty was paid on the instrument and then refunded, the period starting on the date on which the refund was made and ending on the expiry of the one month period mentioned in subsection (8) or earlier;
+(
+b
+)
+in any other case, the period starting on —
+(i)
+the date of execution of the instrument, if it is executed in Singapore; or
+(ii)
+the date the instrument is first received in Singapore, if it is executed outside Singapore,
+and ending on the expiry of the one month period mentioned in subsection (8) or earlier.
+[37/2018]
+(3) A reduction or remission of duty in relation to a class of instruments, or any instrument belonging to such class, or any instrument when executed by or in favour of a class of persons, or by or in favour of members of such class, must be made by rules, and the conditions (if any) must be specified in the rules.
+[28/2010; 23/2011]
+(4) Orders made under subsection (3) in force immediately before 1 January 2012 are deemed to be rules made under subsection (3).
+[1/2013]
+(5) The Minister may, in any particular case, in his or her discretion and at any time, waive in whole or in part any condition imposed under subsection (1).
+[23/2011; 1/2013]
+(6) Where the Minister is satisfied that a person to whom a remission or reduction of duty is granted fails to comply with any condition imposed under subsection (1) (whether a condition precedent or a condition subsequent), an amount equal to the amount of duty so remitted or reduced, together with any interest that the person is to pay under a condition mentioned in subsection (2), is recoverable as a debt due to the Government.
+[28/2010; 37/2018]
+(7) Subsection (6) does not apply to any condition which has been, or to the extent that it has been, waived in the person’s case under subsection (5).
+[23/2011; 1/2013]
+(8) The amount recoverable under subsection (6) is payable at the place stated in a notice served by the Commissioner on the person, within one month after the service of the notice by the Commissioner on that person.
+[28/2010]
+(9) The Commissioner may, subject to such terms and conditions (including the imposition of interest) as the Commissioner may impose, extend the time delimited by subsection (8) within which payment is to be made.
+[28/2010]
+(10) If any amount recoverable from a person under subsection (6) and any interest imposed under subsection (9) is not paid within the period specified in subsection (8) or extended under subsection (9), the following penalties shall be imposed on the person:
+(
+a
+)
+where the outstanding amount is paid to the Commissioner within 3 months from the end of such period, a penalty of $10 or the outstanding amount, whichever is the greater; and
+(
+b
+)
+where the outstanding amount is not paid to the Commissioner within 3 months from the end of such period, a penalty of $25 or 4 times the outstanding amount, whichever is the greater.
+[28/2010]
+(11) The Commissioner may reduce or remit any penalty imposed under this section.
+[28/2010]
+(12) Sections 50 and 70AA apply to the collection and recovery by the Commissioner of the amount recoverable under subsection (6), any interest imposed under subsection (9) and any penalty imposed under subsection (10) as they apply to the collection and recovery of duty and penalty required to be paid under this Act.
+[28/2010]
+Refund and repayment of duty
+75.
+—(1) The Commissioner may certify any amount of money to be refunded and cause the refund to be made immediately under any of the following circumstances:
+(
+a
+)
+a claim that the amount of money has been overpaid as duty under this Act is lodged with the Commissioner within 6 months after the date of the overpayment or within such longer period as the Commissioner may allow, and the Commissioner is satisfied that the money has been overpaid as duty under this Act;
+(
+b
+)
+the Commissioner has reasonable cause to believe in any particular case that the amount of money has been overpaid as duty under this Act.
+[30/2014]
+(2) Without prejudice to any other remedy provided for under the provisions of this Act for the recovery of any duty, where, for any reason, the whole or any part of any duty (after having been paid) has been erroneously refunded, the person to whom such refund was erroneously made must repay the amount refunded to the person in excess, within 15 days of receiving a demand from the Commissioner for the amount.
+Moneys to be paid into Consolidated Fund
+76.
+All moneys collected under the provisions of this Act must be paid into the Consolidated Fund.
+Rules
+77.
+The Minister may make rules to carry out generally the purposes of this Act, and may by such rules prescribe the fines, which shall in no case exceed $1,000, to be incurred on breach of those rules.
+Power to amend Schedules
+78.
+—(1) The Minister may by notification in the
+Gazette
+add to, vary or revoke the whole or any part of the First, Third, Fourth or Fifth Schedule.
+[1/2013]
+(2) Where a notification adds to, varies or revokes any part of the First or Third Schedule, that notification or any subsequent notification may also make provisions to modify the application of one or more of the following provisions in relation to such addition, variation or revocation:
+Sections 16, 18, 21, 22, 24, 31, 32A(4) to (7), 32C and 33.
+[1/2013]
+(3) All notifications making provisions as described in subsection (2) must be presented to Parliament as soon as possible after publication in the
+Gazette
+.
+[1/2013]

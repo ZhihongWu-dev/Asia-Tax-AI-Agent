@@ -1,0 +1,188 @@
+PART 17
+ASSESSMENTS AND OBJECTIONS
+Comptroller to make assessments
+72.
+—(1) The Comptroller must proceed to assess every person chargeable with tax as soon as may be after the expiry of the time allowed to such person for the delivery of the return provided for in section 62 or, if the person is exempted from the liability to deliver a return under section 62(2), after the expiry of the time that would have been allowed to the person for the delivery of the return if the person had not been so exempted.
+(2) Where a person has delivered a return, the Comptroller may —
+(
+a
+)
+accept the return and make an assessment accordingly; or
+(
+b
+)
+refuse to accept the return and, to the best of the Comptroller’s judgment, determine the amount of the chargeable income of the person and make an assessment accordingly.
+(3) Where a person has not delivered a return and the Comptroller is of the opinion that such person is liable to pay tax, the Comptroller may, according to the best of the Comptroller’s judgment, determine the amount of the chargeable income of such person and make an assessment accordingly, but such assessment does not affect any liability otherwise incurred by such person by reason of the person’s failure or neglect to deliver a return.
+Advance assessments
+73.
+—(1) Despite section 72, where —
+(
+a
+)
+in any year of assessment a person ceases to carry on a trade, business, profession, vocation or employment; or
+(
+b
+)
+the Comptroller is of the opinion that any person possessing a source of income is about to leave Singapore and is likely to cease to possess that source in the year of assessment in which the person leaves Singapore or in the following 2 years,
+the Comptroller may make such assessment or additional assessments as may be necessary to bring to charge the full amount of the income from all sources derived or to be derived by such person up to the year in which the source of income ceases or is likely to cease.
+(2) Where the income of a person is ascertained under section 27, the Comptroller may make an assessment in respect of any income of such person within the year in which the income is deemed to accrue.
+(2A) Despite any other provisions of this Act, the Comptroller may make an assessment on an individual to whom section 10(7B) or (7C) applies within the year in which the income accrues or is deemed to accrue to the individual, as the case may be.
+(2B) Despite any other provisions of this Act, where income accrues under section 10(6) to a director of a company who is not resident in Singapore, the Comptroller may make an assessment in respect of that income within the year in which the income accrues to the director.
+(3) The Comptroller may, if he or she thinks fit, at any time during any year make an assessment in respect of the income derived by any person carrying on or exercising any trade, business, profession or vocation up to that year.
+(3A) In making an assessment under subsection (3), the Comptroller may have regard to the estimate of chargeable income furnished under section 63 or he or she may make an assessment according to the best of his or her judgment where such estimate of chargeable income has not been furnished or has been rejected by him or her.
+(4) Where the Comptroller has exercised his or her powers to make an advance assessment under this section, such assessment must be made on the assumption that —
+(
+a
+)
+the provisions of this Act in force during the year of assessment in which such assessment is made will continue in force for the year of assessment for which such assessment is made; and
+(
+b
+)
+if such person so assessed is an individual, the personal circumstances of that person will be the same in the year of assessment as they were when such assessment is in fact made.
+(5) If it appears to the Comptroller that by reason of such assumption an advance assessment so made has become less favourable to that person than it would have been if made under section 35(1), the Comptroller must amend such assessment as to the Comptroller seems reasonable.
+(6) This section does not affect the Comptroller’s right to make any additional assessment due to any change of circumstances and without prejudice to the generality of section 74.
+Additional assessments
+74.
+—(1) Where it appears to the Comptroller that any person liable to tax has not been assessed or has been assessed at a less amount than that which ought to have been charged, the Comptroller may, within the year of assessment or within 6 years (if the year of assessment is 2007 or a preceding year of assessment) or 4 years (if the year of assessment is 2008 or a subsequent year of assessment) after the expiry of that year of assessment, assess that person at such amount or additional amount as according to the Comptroller’s judgment ought to have been charged.
+(2) Despite subsection (1), where, in the Comptroller’s opinion, any form of fraud or wilful default has been committed by or on behalf of any person in connection with or in relation to tax, the Comptroller may, for the purpose of making good any loss of tax attributable to fraud or wilful default, assess that person at any time.
+(2A) Despite subsection (1), an assessment under that subsection may be made at any time if it is carried out pursuant to an agreement with an authority of a country outside Singapore, that is made in accordance with the procedure under an avoidance of double taxation arrangement with the government of that country, for resolving difficulties or doubts arising out of the interpretation or application of that arrangement (commonly called a mutual agreement procedure).
+[39/2017; 27/2021]
+(2B) Subsection (2A) applies to —
+(
+a
+)
+an agreement (other than one mentioned in paragraph (
+b
+)) entered into on or after 26 October 2017; and
+(
+b
+)
+an agreement on the appropriate criteria to be used to ascertain the transfer pricing of a person’s transactions with the person’s related parties over a specified period (commonly called an advance pricing arrangement), entered into on or after 16 November 2021.
+[27/2021]
+(3) The provisions of this Act as to notice of assessment, appeal and other proceedings under this Act apply to any assessment or additional assessment made under subsection (1) or (2) and to tax charged thereunder.
+(4) This section also applies, with the necessary modifications, to any assessment made under subsection (1) or (2) which results in any unabsorbed allowances or losses.
+(5) To avoid doubt, the Comptroller may also make an assessment under this section on a person in a case where —
+(
+a
+)
+the Comptroller made an advance assessment on the person for a year of assessment; and
+(
+b
+)
+because of a subsequent amendment to any written law that applies retroactively to that year of assessment, the person becomes liable to a higher amount of tax.
+[39/2017]
+(6) In this section, “avoidance of double taxation agreement” means an arrangement having effect under section 49.
+[39/2017]
+[Act 33 of 2022 wef 04/11/2022]
+Revised assessments as relief for late GST registration
+74A.
+Where —
+(
+a
+)
+any person liable to tax, being required to be registered under the Goods and Services Tax Act 1993, has failed to do so, and has been so registered on or after 1 December 2005; and
+(
+b
+)
+the person’s income chargeable to tax for any year of assessment relating to a basis period for which the person ought to have been so registered includes an amount in respect of output tax paid or payable under the Goods and Services Tax Act 1993,
+the Comptroller must according to the best of the Comptroller’s judgment give, by way of revision of any assessment made on the person for that year of assessment, relief in respect of the amount so paid or payable.
+Waiver of small assessments
+75.
+Where it appears to the Comptroller that the amount of any tax or additional tax to which any person is liable does not exceed $15 or such other amount as the Minister may by order prescribe, the Comptroller may waive the assessment of such tax.
+Service of notices of assessment and revision of assessment
+76.
+—(1) The Comptroller must cause each person assessed to tax to be served, in accordance with section 8(1), with —
+(
+a
+)
+where tax is payable, a notice stating the amount of the person’s chargeable income together with the amount of tax payable and the place at which such payment should be made; or
+(
+b
+)
+where no tax is payable, a notice to that effect,
+and in either case the Comptroller must inform the person assessed to tax of the person’s rights under subsections (2) and (3) and (if applicable) the person’s duty under subsection (8).
+(2) If any person disputes the assessment, the person may apply to the Comptroller, by written notice of objection, to review and to revise the assessment made upon the person.
+(2A) If the objection is made to any assessment, being one which —
+(
+a
+)
+is made on or after 20 December 2011; and
+(
+b
+)
+amends a previous assessment in any particular,
+then a person’s right to object to the assessment is limited to a right to object against the amendment in respect of, or matters relating to, that particular.
+(2B) In subsection (2A), the reference to an assessment which amends a previous assessment in any particular includes one which amends the amount of unabsorbed losses, allowances or donations in that previous assessment that may be carried forward but the tax payable remains nil.
+(3) Such application must state precisely the grounds of the person’s objections to the assessment and must be made within —
+(
+a
+)
+if the person is a company and the notice of assessment is served on the person on or after 1 January 2014, 2 months; or
+(
+b
+)
+in any other case, 30 days,
+from the date of the service of the notice of assessment.
+[34/2016]
+(4) The Comptroller upon being satisfied that, owing to absence, sickness or other reasonable cause, the person disputing the assessment was prevented from making the application within the period referred to in subsection (3), must extend the period as may be reasonable in the circumstances.
+(5) On receipt of the notice of objection mentioned in subsection (2), the Comptroller may —
+(
+a
+)
+require the person giving the notice of objection to furnish such particulars as the Comptroller may consider necessary with respect to the person’s income assessed and to produce all books or other documents in the person’s custody or under the person’s control relating to such income; and
+(
+b
+)
+summon any person who the Comptroller thinks is able to give evidence respecting the assessment to attend before the Comptroller and may examine that person on oath or otherwise.
+(6) In the event of any person who has objected to an assessment made upon that person —
+(
+a
+)
+agreeing with the Comptroller as to the amount at which that person is liable to be assessed, the assessment must be amended accordingly, and notice of the revised assessment must be served upon that person; or
+(
+b
+)
+failing to agree with the Comptroller as to the amount at which that person is liable to be assessed, the Comptroller must give that person notice of refusal to amend the assessment and may revise the assessment to such amount as the Comptroller may determine, according to the best of the Comptroller’s judgment, and the Comptroller must give that person notice of the revised assessment and of the tax payable, or the amount of refund of tax (as a result of the operation of section 46) or unabsorbed allowances, losses or donations, together with notice of refusal to amend the revised assessment.
+(7) Wherever requisite, any reference in this Act to an assessment or an additional assessment includes a reference to an assessment or additional assessment as revised under subsection (6)(
+b
+).
+(8) If any incorrect information appears in a notice of assessment for any year of assessment served on a person who is exempted from the liability to furnish a return under section 62(2), the person must, within 30 days from the date of service of the notice or such extended time as the Comptroller may allow, inform the Comptroller by written notice —
+(
+a
+)
+if the incorrect information relates to any understatement or omission of income, of the correct amount of income from every source for that year of assessment; or
+(
+b
+)
+if the incorrect information relates to any deduction or relief which is excessive or which is wrongly granted, of the correct amount of deduction or relief for that year of assessment or the fact that the deduction or relief is wrongly granted, as the case may be.
+(9) The Minister may, by rules made under section 7, substitute a longer period for a period in subsection (3) or (8) for all persons or cases, any class of persons or cases, or any person or case, and subsection (3) or (8) (as the case may be) applies accordingly to all persons or cases, the class of persons or cases, or the person or case.
+[34/2016]
+(10) The rules mentioned in subsection (9) may —
+(
+a
+)
+provide that the substitute period applies only if such conditions as may be specified in the rules are satisfied; and
+(
+b
+)
+prescribe different substitute periods for different persons or cases and classes of persons or cases.
+[34/2016]
+Errors and defects in assessment and notice
+77.
+—(1) No assessment, warrant or other proceeding purporting to be made in accordance with the provisions of this Act is to be quashed, or is deemed to be void or voidable, for want of form, or is affected by reason of a mistake, defect or omission therein, if it is in substance and effect in conformity with or according to the intent and meaning of this Act, and if the person assessed or intended to be assessed or affected thereby is designated therein according to common intent and understanding.
+(2) An assessment must not be impeached, and is not affected —
+(
+a
+)
+by reason of a mistake therein as to —
+(i)
+the name or surname of a person liable;
+(ii)
+the description of any income; or
+(iii)
+the amount of tax charged; and
+(
+b
+)
+by reason of any variance between the assessment and the notice thereof.
+(3) In cases of assessment, the notice thereof must be duly served on the person intended to be charged and such notice must contain in substance and effect the particulars on which the assessment is made.

@@ -1,0 +1,82 @@
+The provisions in relation to the FSIE regime under the Inland Revenue Ordinance (Cap. 112) (IRO) had first been introduced by the Inland Revenue (Amendment) (Taxation on Specified Foreign-sourced Income) Ordinance 2022, and were subsequently amended by the Inland Revenue (Amendment) (Taxation on Foreign-sourced Disposal Gains) Ordinance 2023. Under the FSIE regime, specified foreign-sourced income (i.e. interest, dividend, disposal gain and intellectual property (IP) income) accrued to a member of an MNE group (MNE entity) carrying on a trade, profession or business in Hong Kong is to be regarded as arising in or derived from Hong Kong and chargeable to profits tax if it is received in Hong Kong. However, certain types of specified foreign-sourced income (i.e. interest, dividend and non-IP disposal gain) accrued on or after the following dates will continue to be exempt from profits tax if the recipient entity meets the ESR specified in section 15K of the IRO:
+(a)
+1 January 2023 ─ specified foreign-sourced income that is interest, dividend or equity interest disposal gain;
+(b)
+1 January 2024 ─ specified foreign-sourced income that is non-IP disposal gain (other than equity interest disposal gain).
+To obtain tax certainty and reduce compliance burden, MNE entities may apply to the Commissioner for advance rulings on their compliance with the ESR.
+MNE entities that have already obtained favourable advance rulings in relation to their compliance with the ESR in respect of foreign-sourced interest, dividend and/or equity interest disposal gain may apply for expanding the scope of the ruling obtained to cover non-IP disposal gain (other than equity interest disposal gain) accrued on or after 1 January 2024 through simplified procedures. Letters will be sent to MNE entities with favourable rulings granted to advise the details of such procedures. If applicable, the entity may make an application for expanding the scope of the ruling in accordance with the procedures as explained in the letter.
+Information and procedures for the application of advance ruling on compliance with the ESR are as follows:
+Who can Apply
+You can apply for a ruling on compliance with the ESR if the following two conditions are met─
+you are an MNE entity carrying on a trade, profession or business in Hong Kong; and
+specified foreign-sourced interest, dividend or equity interest disposal gain accrues to you on or after 1 January 2023 or specified foreign-sourced non-IP disposal gain (other than equity interest disposal gain) accrues to you on or after 1 January 2024.
+An application can be made─
+on an individual application basis by an MNE entity (the Applicant) for itself; or
+on a group application basis by an MNE entity (i.e. the Applicant) for itself and other entities of the same MNE group in Hong Kong (the Other MNE Entities) provided that all conditions for the group application are met.
+Conditions for group application are as follows─
+the specified economic activities of the Applicant and the Other MNE Entities are outsourced to one outsourced entity under a single service agreement (the Service Agreement);
+the Applicant or its representative must have the written consents of the Other MNE Entities for the group application;
+a copy of the Service Agreement should be submitted together with the application; and
+the written consents must be supplied to the Commissioner on request.
+When to Apply
+You can make an application at any time. The application may cover a maximum of five years of assessment commencing from the year of assessment 2022/23 or any subsequent years.
+How to Apply
+You need to complete the following forms─
+Application for Advance Ruling
+(IR1297)
+Data Form – Economic Substance Requirement of the Foreign-sourced Income Exemption Regime which is embedded in IR1297
+Annex to Data Form (Group Application) (if applicable)
+Tips for completing forms and submitting documents for application for a ruling
+SOLELY
+on ESR─
+In relation to IR1297,
+tick “
+No
+” for the question “Is this a joint application?” in Part A even you intend to file an application on a group basis as described above or submit the application with those of other MNE entities in one bundle;
+tick
+Box 6
+“Economic Substance Requirement of the Foreign-sourced Income Exemption (FSIE) Regime” in Part C; and
+a
+draft ruling
+is
+not required
+.
+In relation to Data Form, additional information required includes─
+whether the specified economic activities are carried out in Hong Kong;
+whether the specified economic activities are outsourced to other entities in Hong Kong;
+if the specified economic activities are outsourced, whether the outsourced activities are carried out in Hong Kong and monitored by the MNE entity;
+total number of qualified employees who carry out the specified economic activities in Hong Kong;
+qualification of the employees who carry out the specified economic activities in Hong Kong; and
+amount of operating expenditures incurred for carrying out the specified economic activities in Hong Kong.
+In relation to Annex to Data Form (Group Application),
+for an application covering not more than 50 MNE Entities (including the Applicant) ─ tick the first box of Item 4.3 of the Data Form. Annex to Data Form (Group Application) will be automatically opened for completion; and
+for an application covering more than 50 MNE Entities (including the Applicant) ─ tick the second box of Item 4.3 of the Data Form, download and complete the Annex to Data Form (Group Application) in Microsoft Excel format by clicking
+here
+. After completion, save the file and print a copy of the Annex for submission together with the completed IR1297. The Microsoft Excel file of the Annex must be provided to the Commissioner on request.
+Documents to be included in an application─
+Documents
+Individual application
+Group application
+Application form (IR1297) and Data Form – Economic Substance Requirement of the FSIE regime
+✓
+✓
+Annex to Data Form (Group Application)
+N/A
+✓
+Copy of service agreement in respect of outsourced activities
+✓
+(for outsourcing case only)
+✓
+An MNE group may submit applications in respect of all Applicants of the same MNE group in one bundle. The submission should be enclosed with a covering letter containing the following information:
+the name and Inland Revenue Department file number of each of the Applicants covered in the bundle; and
+the name of the MNE entity being designated as the lead applicant together with details of the contact person who will serve as the primary point of contact on behalf of all the Applicants.
+You should send the completed application form, together with the required documents, to:
+Deputy Commissioner of Inland Revenue (Technical)
+15/F, Inland Revenue Centre
+5 Concorde Road, Kai Tak, Kowloon, Hong Kong
+Processing time
+It normally takes one month to process an application. Where the information available is not sufficient to issue a ruling, you will be requested to supply further particulars.
+Further information
+For further information on advance ruling, please refer to Departmental Interpretation and Practice Notes
+No. 31 – Advance Rulings
+.

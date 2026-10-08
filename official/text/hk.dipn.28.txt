@@ -1,0 +1,188 @@
+Inland Revenue Department 
+The Government of the Hong Kong Special Administrative Region
+of the People's Republic of China 
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES 
+NO. 28 (REVISED) 
+PROFITS TAX: 
+DEDUCTION OF FOREIGN TAXES 
+These notes are issued for the information of taxpayers and their tax 
+representatives.  They contain the Department’s interpretation and practices in 
+relation to the law as it stood at the date of publication.  Taxpayers are 
+reminded that their right of objection against the assessment and their right of 
+appeal to the Commissioner, the Board of Review or the Court are not affected 
+by the application of these notes. 
+These notes replace those issued in July 1997. 
+WONG Kuen-fai 
+Commissioner of Inland Revenue 
+July 2019 
+Our website : www.ird.gov.hk 
+
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES 
+ 
+No. 28 (REVISED) 
+ 
+CONTENT 
+ 
+ 
+Paragraph 
+The Rules 
+ 
+ 
+Tax on profits or income 
+1 
+ 
+Other taxes and duties 
+4 
+ 
+ 
+Specified Interest and Gains 
+ 
+ 
+Deduction of foreign taxes on specified interest and gains 
+6 
+ 
+Unilateral relief restricted to non-DTA territory 
+7 
+ 
+Reasons for enacting section 16(2J) 
+8 
+ 
+ 
+ 
+ 
+ 
+
+THE RULES 
+ 
+Tax on profits or income 
+ 
+ 
+For profits tax purposes, all outgoings and expenses not capital in 
+nature, to the extent to which they are incurred in the production of chargeable 
+profits, are allowable for deduction under section 16(1).  Since a tax on profits 
+or income is an application of the profits and not an outgoing or expense 
+incurred in producing chargeable profits, the tax is not deductible.  The 
+assessable profits of a trade, profession or business are the profits before, and 
+not after, deduction of profits tax.    
+ 
+2. 
+Specifically, section 17(1)(g) provides that no deduction shall be 
+allowed in respect of any tax paid or payable under the Inland Revenue 
+Ordinance (IRO) other than salaries tax paid in respect of employees’ 
+remuneration.  Equally, foreign taxes on profits or income (e.g. withholding tax 
+on royalties, licensing fees, service fees and management fees), subject to the 
+provisions in section 16(1)(c), are not deductible. 
+ 
+3. 
+In Attorney General v Ashton Gas Company [1906] AC 10, it was 
+held that profits ought to be calculated as inclusive, and not exclusive, of the 
+amount payable in respect of income tax.   In Inland Revenue Commissioners v 
+Dowdall O’Mahoney & Co, Ltd [1952] AC 401, it was held that the tax paid in 
+the Irish Republic was a tax on profits and none of which was expended for the 
+purposes of a trade in the United Kingdom, so that none of it was deductible. 
+ 
+Other taxes and duties 
+ 
+4. 
+While capital gains tax is disallowed as being attributable to capital 
+and not to profits or income, taxes and duties which are not calculated by 
+reference to profits or income will be considered for deduction.    These may 
+include: 
+ 
+(a) 
+rates levied on properties; 
+ 
+(b) 
+vehicle licence fee; 
+ 
+(c) 
+duties on commodities; or 
+
+(d) 
+foreign taxes and duties not levied by reference to profits or 
+income, as in Harrods (Buenos Aires) Ltd v Taylor-Gooby 
+[1964] 41 TC 450, which concerned an Argentine tax levied 
+on companies at a flat rate of 1 per cent of capital per annum, 
+irrespective of profits or income. 
+ 
+5. 
+Since goods and services tax and value added tax paid in foreign 
+jurisdictions are not in the nature of profits tax or income tax, such taxes will 
+be deductible under section 16(1) if they are incurred in the production of 
+chargeable profits.   
+ 
+ 
+SPECIFIED INTEREST AND GAINS 
+ 
+Deduction of foreign taxes on specified interest and gains 
+ 
+6. 
+Section 16(1)(c) allows deduction of tax of substantially the same 
+nature as tax imposed under the IRO, proved to the satisfaction of the 
+Commissioner to have been paid elsewhere other than in a territory outside 
+Hong Kong with which double taxation arrangements (DTA) have been made 
+(DTA territory), whether by deduction or otherwise, by a person who carries on 
+a trade, profession or business in Hong Kong, during the basis period for the 
+year of assessment in respect of profits chargeable to tax by virtue of section 
+15(1)(f), (g), (i), (ia), (j), (k), (l) or (la).  
+ 
+Unilateral relief restricted to non-DTA territory 
+ 
+7. 
+Section 16(2J) restricts the application of section 16(1)(c).  With 
+effect from the year of assessment 2018/19, the unilateral relief from double 
+taxation would not apply in relation to any tax paid in a territory by a person in 
+respect of the profits referred to in section 16(1)(c) if:  
+ 
+(a) 
+the territory is a DTA territory; and 
+ 
+(b)  
+under section 50, tax payable in the territory by a Hong 
+Kong resident person in respect of the profits is to be 
+allowed as a credit against tax payable in Hong Kong by the 
+Hong Kong resident person in respect of the profits. 
+2 
+ 
+
+Hence, section 16(1)(c) would not be applicable if the foreign tax is paid in a 
+DTA territory and under the DTA with that territory, relief from double 
+taxation is provided by way of credit under section 50. 
+ 
+Example 1 
+ 
+For the year of assessment 2018/19, Bank-HK paid an income tax in 
+Jurisdiction-F in respect of the interest income received.  The interest 
+income was chargeable to profits tax under section 15(1)(i).   No 
+DTA has been entered into between Hong Kong and Jurisdiction-F. 
+ 
+Income tax paid in Jurisdiction-F would be deductible under section 
+16(1)(c) since Jurisdiction-F was not a DTA territory. 
+ 
+Reasons for enacting section 16(2J) 
+ 
+8. 
+The reason for denying a deduction under section 16(1)(c) is that a 
+DTA is intended to provide a comprehensive solution to all tax matters which 
+are within its scope.  The international practice is that where a DTA is in place, 
+relief from double taxation should be allowed under the DTA only to the extent 
+contemplated by it.  The tax credit approach is adopted by Hong Kong in all 
+existing DTAs.  Section 16(2J) seeks to ensure that the DTAs will prevail in 
+case of any conflicts between the provisions in the IRO and those in the DTAs.  
+Therefore, if the foreign tax is paid in a DTA territory and the relevant DTA 
+provides relief from double taxation by way of tax credit, a Hong Kong 
+resident person can only apply for a tax credit under section 50.  For a non-
+Hong Kong resident person who is not covered by the relevant DTA, it may 
+seek unilateral relief from its residence of jurisdiction or bilateral relief under 
+the DTA between its residence jurisdiction and the DTA territory (if any). 
+ 
+Example 2 
+ 
+Same facts as in Example 1 but Hong Kong has entered into a DTA 
+with Jurisdiction-F. 
+ 
+Income tax paid in Jurisdiction-F would not be deductible under 
+section 16(1)(c) by virtue of section 16(2J).  If Bank-HK is a Hong 
+Kong resident person, it may claim a tax credit under section 50. 
+3 
+ 

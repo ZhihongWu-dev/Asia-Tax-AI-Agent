@@ -1,0 +1,771 @@
+PART 12
+DEDUCTION OF TAX AT SOURCE
+44.
+[
+Repealed by Act 19 of 2013
+]
+44A.
+[
+Repealed by Act 19 of 2013
+]
+Withholding of tax in respect of interest paid to non‑resident persons
+45.
+—(1) Where a person is liable to pay to another person not known to the firstmentioned person to be resident in Singapore any interest which is chargeable to tax under this Act, the firstmentioned person must —
+(
+a
+)
+deduct therefrom tax —
+(i)
+where the person to be paid is an individual or a Hindu joint family, at the rate of 24%;
+[Act 33 of 2022 wef 01/01/2023]
+(ii)
+where the person to be paid is any other person, at the rate of 17%; or
+(iii)
+where section 43(3) or (3A) is applicable to the person to be paid, at the rate specified in that provision,
+on every dollar of the interest; and
+(
+b
+)
+immediately give notice of the deduction of tax and pay to the Comptroller the amount so deducted,
+and every such amount deducted is a debt due from the firstmentioned person to the Government and is recoverable in the manner provided by section 89.
+[2/2016]
+(1A) Despite subsection (1), tax must be deducted at the rate of 18% on every payment (other than payment subject to tax at the rate specified in section 43(3) or (3A)) made on or after 1 January 2009 which would be assessable on the person receiving the payment for the year of assessment 2009.
+(1B) The notice under subsection (1)(
+b
+) must be given using the electronic service, except that the Comptroller may in any particular case or class of cases permit the notice to be given in any other manner.
+[2/2016]
+(1C) The Minister may, by rules made under section 7, substitute the rate in subsection (1)(
+a
+)(i), (ii) or (iii) with a higher or lower rate (including 0%) for any person or class of persons that is or are subject to that subsection, and subsection (1) applies to that person or class of persons accordingly.
+[34/2016]
+(1D) The rules mentioned in subsection (1C) may —
+(
+a
+)
+provide that the substitute rate applies only if such conditions as may be specified in the rules are satisfied; and
+(
+b
+)
+prescribe different substitute rates for different persons or classes of persons.
+[34/2016]
+(2) The Comptroller may —
+(
+a
+)
+if he or she thinks fit, allow any person or class of persons to give notice of the deduction of tax and make payment of the amount so deducted within such other period and subject to such conditions as the Comptroller may determine; and
+(
+b
+)
+by written notice require any person who pays such interest to deduct and account for tax at a higher or lower rate than the rate in subsection (1)(
+a
+)(i), (ii) or (iii), or the rate prescribed by rules mentioned in subsection (1C) in substitution for that rate (as the case may be) on every dollar of such interest or permit such interest to be paid without deduction of tax.
+[2/2016; 34/2016]
+(3) Where a person fails to make a deduction of tax which the person is required to make under subsection (1), any amount which the person fails to deduct is a debt due from the person to the Government and is recoverable as such.
+(4) If the amount of tax which is required to be deducted under subsection (1) is not paid to the Comptroller —
+(
+a
+)
+by the 15th day of the second month following the month in which the interest from which the tax is to be deducted is paid, or such other date as may be allowed under subsection (2)(
+a
+), a sum equal to 5% of such amount of tax is payable; and
+(
+b
+)
+within 30 days after the time specified in paragraph (
+a
+), an additional penalty of 1% of such amount of tax is payable for each completed month that the tax remains unpaid, but the total additional penalty under this paragraph must not exceed 15% of the amount of tax outstanding.
+[34/2016]
+(5) Without affecting any other provision of this Act, if any person after deducting any tax under subsection (1) fails to give notice of such deduction to the Comptroller in the manner referred to in subsection (1B) and by the time specified in subsection (4)(
+a
+), the person shall be guilty of an offence and shall on conviction pay a penalty equal to 3 times the amount of tax so deducted and shall also be liable to a fine not exceeding $10,000 or to imprisonment for a term not exceeding 3 years or to both.
+[2/2016; 39/2017]
+(6) Where an individual has been convicted for 3 or more offences under this section, the imprisonment the individual shall be liable to shall be not less than 6 months.
+(7) The Comptroller may —
+(
+a
+)
+compound an offence under subsection (5) and may before judgment stay or compound any proceedings thereunder; and
+(
+b
+)
+for any good cause remit the whole or any part of the penalty payable under subsection (4).
+(8) For the purposes of this section —
+(
+a
+)
+the manager or principal officer of a company is answerable for doing all such acts, matters and things as are required to be done by the company under this section; and
+(
+b
+)
+interest is deemed to have been paid by a person to another person although it is not actually paid over to the other person but is reinvested, accumulated, capitalised, carried to any reserve or credited to any account however designated, or otherwise dealt with on behalf of the other person.
+(9) This section does not apply to —
+(
+a
+)
+any interest derived from any qualifying debt securities issued during the period from 27 February 1999 to 31 December 2028 (both dates inclusive), subject to such conditions as the Minister may impose;
+[Act 30 of 2023 wef 30/10/2023]
+(
+b
+)
+any interest derived from any qualifying project debt securities issued during the period from 1 November 2006 to 31 December 2025 (both dates inclusive), subject to such conditions as the Minister may impose;
+[Act 33 of 2022 wef 04/11/2022]
+(
+c
+)
+any interest liable to be paid on or after 21 February 2014 by a person to a branch in Singapore of a company incorporated outside Singapore and not known to the person to be resident in Singapore.
+[37/2014; 45/2018]
+(10) In this section, “qualifying debt securities” and “qualifying project debt securities” have the meanings given by section 13(16).
+(11) To avoid doubt, in this section, “interest” includes the part of any payment liable to be made by a lessee to a lessor under a finance lease of any machinery or plant treated as sold by the lessor to the lessee pursuant to regulations made under section 10C(1), that is income of the lessor under section 10C(2A).
+[45/2018]
+Application of section 45 to royalties, management fees, etc.
+45A.
+—(1) Section 45(1) to (8) applies in relation to the payment of any income referred to in section 12(6) or (7) by any person to another person not known to the firstmentioned person to be resident in Singapore as those provisions apply to any interest paid by a person (
+X
+) to another person (
+Y
+) not known to
+X
+to be resident in Singapore and, for the purpose of such application, any reference in those provisions to interest is a reference to the income referred to in section 12(6) or (7).
+(2) Subject to such conditions as the Minister may impose, subsection (1) does not apply to any discount from any qualifying debt securities issued during the period from 17 February 2006 to 31 December 2028 (both dates inclusive).
+[37/2014; 45/2018; 41/2020]
+[Act 30 of 2023 wef 30/10/2023]
+(2A) Subsection (1) does not apply to any amount payable from any Islamic debt securities which are qualifying debt securities, and issued during the period from 1 January 2005 to 31 December 2028 (both dates inclusive), subject to such conditions as the Minister may impose.
+[37/2014; 45/2018]
+[Act 30 of 2023 wef 30/10/2023]
+(2AA) Regulations made to impose conditions under subsection (2A) for the disapplication of subsection (1) to any amount payable from Islamic debt securities issued between 1 January 2024 and 31 December 2028 (both dates inclusive), that are made in connection with the amendments made to subsection (2A) by section 41(
+a
+) of the Income Tax (Amendment) Act 2023, may be made to take effect from (and including) 1 January 2024.
+[Act 25 of 2025 wef 08/12/2025]
+(2B) Subject to such conditions as the Minister may impose, subsection (1) does not apply to —
+(
+a
+)
+any early redemption fee or redemption premium from any qualifying debt securities issued during the period from 15 February 2007 to 31 December 2028 (both dates inclusive); or
+[Act 30 of 2023 wef 15/02/2023]
+[Act 30 of 2023 wef 30/10/2023]
+(
+b
+)
+any discount, early redemption fee or redemption premium from any qualifying project debt securities issued during the period from 15 February 2007 to 31 December 2025 (both dates inclusive).
+[37/2014; 45/2018]
+[Act 33 of 2022 wef 04/11/2022]
+[Act 30 of 2023 wef 15/02/2023]
+(2BA) Regulations made to amend any regulations made for the purposes of subsection (2B) to replace the terms “break cost” and “prepayment fee” with the term “early redemption fee”, that are made in connection with section 41(
+b
+) and (
+c
+) of the Income Tax (Amendment) Act 2023, may be made to take effect from (and including) 15 February 2023.
+[Act 25 of 2025 wef 08/12/2025]
+(2C) Subject to such conditions as the Minister may impose, subsection (1) does not apply to —
+(
+a
+)
+such other income directly attributable to any qualifying debt securities issued on or after a prescribed date, as may be prescribed by regulations; or
+(
+b
+)
+such other income directly attributable to any qualifying project debt securities issued on or after a prescribed date, as may be prescribed by regulations.
+(2D) Subsection (1) does not apply to any payment liable to be made on or after 17 February 2012 under any agreement or arrangement for the charter of any ship.
+(2DA) To avoid doubt, the reference to a charter of a ship in subsection (2D) excludes a finance lease of the ship.
+[41/2020]
+(2E) Subsection (1) does not apply to any payment liable to be made on or after 21 February 2014 by a person to a branch in Singapore of a company incorporated outside Singapore and not known to the person to be resident in Singapore.
+[37/2014]
+(3) In this section —
+[
+Deleted by Act 30 of 2023 wef 15/02/2023
+]
+“early redemption fee”, “qualifying debt securities”, “qualifying project debt securities” and “redemption premium” have the meanings given by section 13(16);
+[Act 30 of 2023 wef 15/02/2023]
+“finance lease”, in relation to a ship, means a lease of the ship (including any arrangement or agreement made in connection with the lease) that has the effect of transferring substantially the obsolescence, risks or rewards incidental to ownership of the ship to the lessee;
+“Islamic debt securities” has the meaning given by section 43H(4);
+“ship” has the meaning given by section 2(1) of the Merchant Shipping Act 1995.
+[2/2016; 41/2020]
+Tax deemed withheld and recoverable from person in breach of condition imposed under section 13(4)
+45AA.
+—(1) Subsection (1A) applies where a notification has been made under section 13(4) to exempt from tax (wholly or in part) payments made by a person to a non‑resident person under section 45 or 45A, and —
+(
+a
+)
+the exemption is on the basis that the firstmentioned person or a particular matter is approved by the Minister, an authorised body or a person appointed by the Minister under a section specified in the Fourth Schedule, and the approval is revoked under section 105R after any such payment has been made; or
+[Act 41 of 2020 wef 06/12/2022]
+(
+b
+)
+the firstmentioned person contravenes any condition imposed by the Minister under the notification (whether a condition precedent or a condition subsequent) after any such payment has been made.
+[32/2019]
+(1A) The amount of tax which, but for —
+(
+a
+)
+in the case of subsection (1)(
+a
+) — the approval of the firstmentioned person or the matter; or
+(
+b
+)
+in the case of subsection (1)(
+b
+) — the notification,
+would have been deductible by the firstmentioned person from that payment —
+(
+c
+)
+is deemed to have been deducted from that payment;
+(
+d
+)
+is a debt due from the firstmentioned person to the Government; and
+(
+e
+)
+is recoverable in the manner provided in section 89.
+[32/2019]
+(2) The amount recoverable under subsection (1A) is payable at the place stated in a notice served by the Comptroller on the person within one month after the service of the notice.
+[32/2019]
+(3) The Comptroller may, in his or her discretion and subject to such conditions (including the imposition of interest) as the Comptroller may impose, extend the time limit within which payment under subsection (2) is to be made.
+(4) If the amount recoverable under subsection (1A) is not paid to the Comptroller —
+(
+a
+)
+within the period referred to in subsection (2) or such further period as may be allowed under subsection (3), a sum equal to 5% of such amount is payable; and
+(
+b
+)
+within 30 days after the time specified in paragraph (
+a
+), an additional penalty of 1% of such amount is payable for each completed month that such amount remains unpaid, but the total additional penalty under this paragraph must not exceed 15% of such amount.
+[32/2019]
+(5) The penalty is recoverable in the manner provided in section 89.
+(6) The Comptroller may for any good cause remit the whole or any part of the penalty payable under subsection (4).
+(7) The Minister may, subject to such conditions as the Minister may determine, remit the whole or any part of the amount recoverable under subsection (1A).
+[32/2019]
+(8) If any condition mentioned in subsection (7) is breached, then the amount remitted is a debt due from the person granted the remission to the Government and is recoverable in the manner provided by section 89; and subsections (2) to (6) apply accordingly.
+Application of section 45 to non‑resident director’s remuneration
+45B.
+—(1) Section 45 applies in relation to the payment of any remuneration by a company to any director of the company who is not resident in Singapore as that section applies to any interest paid by a person (
+X
+) to another person (
+Y
+) not known to
+X
+to be resident in Singapore and, for the purpose of such application, any reference in that section to interest is a reference to such remuneration.
+(2) For the purposes of this section, the references to interest therein are references to interest which is subject to deduction of tax at the rate of 24% on every dollar of the interest.
+[2/2016]
+[Act 33 of 2022 wef 01/01/2023]
+Application of section 45 to distribution by unit trust
+45C.
+—(1) Section 45 applies in relation to any distribution made by a unit trust which is deemed to be income under section 10(19), (20) and (21) as that section applies to any interest paid by a person (
+X
+) to another person (
+Y
+) not known to
+X
+to be resident in Singapore and, for the purpose of such application, any reference in that section to interest is a reference to such distribution.
+(2) Subsection (1) does not apply to any distribution which is made on or after 28 February 1998 by a designated unit trust referred to in section 35(12).
+[37/2014]
+(3) Subsection (1) does not apply to any distribution made on or after 1 January 2015 by a unit trust to a branch in Singapore of a company incorporated outside Singapore and not known to the trustee of the unit trust to be resident in Singapore.
+[37/2014]
+Application of section 45 to gains from real property transaction
+45D.
+—(1) Where any person whose income arising from the disposal of any real property is chargeable to tax under section 10(1)(
+a
+) is a non‑resident person, any designated person must, before paying to the non‑resident person any money which is the whole or part of the consideration for the disposal of the real property, despite any other written law, immediately deduct therefrom tax at the rate of 15% on every dollar of such payment.
+(2) Any designated person who has deducted any money under subsection (1) must immediately give notice of the deduction of tax to the Comptroller and must, despite any other written law, pay the amount so deducted to the Comptroller by the 15th day of the second month following the month in which the deduction was made and every such amount is a debt due from the designated person to the Government and is recoverable in the manner provided by section 89.
+[2/2016]
+(2A) The notice under subsection (2) must be given using the electronic service, except that the Comptroller may in any particular case or class of cases permit the notice to be given in any other manner.
+[2/2016]
+(3) Section 45(2) to (8) applies, with the necessary modifications, to any designated person as those provisions apply to any person referred to therein.
+(4) For the purpose of payment of any tax due from any income which is chargeable to tax under section 10(1)(
+a
+) in respect of any disposal of any real property which is owned by 2 or more persons as joint owners, the designated person deducting the tax must retain such amount as is presumed under subsection (5) to be owned by any non‑resident person and pay over the tax due from such amount to the Comptroller.
+(5) It is presumed, until the contrary is proved, that the persons who own any real property as joint owners share the proceeds of disposal of the real property in equal shares.
+(5A) This section does not apply to any payment made on or after 1 January 2015 by a designated person to a branch in Singapore of a company incorporated outside Singapore and is a non‑resident person.
+[37/2014]
+(6) In this section —
+“designated person”, in relation to any disposal of any real property —
+(
+a
+)
+in the case where an advocate and solicitor acts for the buyer of the real property in such disposal, means that advocate and solicitor; and
+(
+b
+)
+in any other case, means the buyer of the real property;
+“land” includes land of any tenure wherever situated in Singapore, whether or not held apart from the surface, and buildings or parts thereof (whether completed or otherwise and whether divided horizontally, vertically or in any other manner) and tenements and hereditaments, corporeal and incorporeal, and any estate or interest therein;
+“non‑resident person” means a person who is not known to be resident in Singapore to the designated person;
+“real property”, in relation to a disposal of which the income is chargeable to tax under section 10(1)(
+a
+), means any land and any interest, option or other right in or over any land.
+Application of section 45 to withdrawals by non‑citizen SRS members, etc.
+45E.
+—(1) Subject to subsections (2) and (2A), section 45 applies in relation to —
+(
+a
+)
+any withdrawal made —
+(i)
+under section 10G or after the balance (excluding any life annuity) remaining in the SRS account is deemed withdrawn under section 10G(6) or (7) by an SRS member who is not a citizen of Singapore from his or her SRS account; or
+(ii)
+after the sum standing in the SRS account is deemed withdrawn under section 10G(9) by the legal personal representative of a deceased SRS member who is not a citizen of Singapore from the SRS account,
+as that section applies to any interest paid by a person (
+X
+) to another person (
+Y
+) not known to
+X
+to be resident in Singapore and, for the purpose of such application, any reference in that section to interest is a reference to such withdrawal from the SRS account; and
+(
+b
+)
+any payment of any penalty under section 10G(2) which is imposed on any SRS member and paid by an SRS operator to the Comptroller as that section applies to any interest paid by a person (
+X
+) to another person (
+Y
+) not known to
+X
+to be resident in Singapore and, for the purposes of such application, any reference in that section to interest payable is a reference to the penalty so payable by the SRS operator to the Comptroller.
+[2/2016]
+(2) For the purpose of subsection (1)(
+a
+), where a withdrawal is made —
+(
+a
+)
+under section 10G(3) or (8) or after the balance (excluding any life annuity) remaining in the SRS account is deemed withdrawn under section 10G(6) or (7) by an SRS member; or
+(
+b
+)
+after the sum standing in the SRS account is deemed withdrawn under section 10G(9),
+section 45 applies only in relation to 50% of the amount withdrawn from the SRS account.
+(2A) For the purposes of subsection (1)(
+a
+), where a withdrawal of all the funds standing in the SRS account of an SRS member is made on the ground in section 10G(3G), section 45 applies only in relation to an amount determined in the following manner:
+where A
+is the amount of funds withdrawn from the SRS account on that ground;
+B
+is the total value of the investment that is deducted from the balance in the SRS account (if any) on that ground; and
+C
+is the amount of the SRS member’s income chargeable to tax under section 10(1)(
+g
+) as determined under section 10G(3G).
+[2/2016]
+(2B) In subsection (2A) —
+(
+a
+)
+the reference to a deduction of an investment from the balance in an SRS account is to be construed in accordance with section 10G(3F); and
+(
+b
+)
+the value of such investment is determined in accordance with the regulations made under section 10G(11).
+[2/2016]
+(3) For the purposes of this section, the amount to be deducted under section 45 in respect of withdrawals from the SRS account of an SRS member —
+(
+a
+)
+under subsection (1)(
+a
+), is the amount computed based on the rate of 24%; and
+[Act 33 of 2022 wef 01/01/2023]
+(
+b
+)
+under subsection (1)(
+b
+), is the total penalty deducted by the SRS operator from the amount so withdrawn from the SRS account.
+[2/2016]
+(4) Subject to subsection (5), this section does not apply to any withdrawal by an SRS member who is not a citizen of Singapore if the amount of withdrawal from the member’s SRS account in any year does not exceed the amount of contribution to the member’s SRS account in that year.
+(5) Where a deduction for SRS contributions has been allowed in any year to an SRS member who is not a citizen of Singapore under an assessment made under section 73(1)(
+b
+) and within that year the SRS member applies to withdraw an amount up to the amount the SRS member has contributed in that year, the SRS operator must release the amount applied to the SRS member after deducting tax at the rate of 24% on every dollar withdrawn.
+[2/2016]
+[Act 33 of 2022 wef 01/01/2023]
+(6) To avoid doubt, a reference to a withdrawal from an SRS account in this section is a reference to an actual withdrawal of funds, and excludes a deemed withdrawal of funds under section 10G(3E).
+[2/2016]
+Approval of deduction of investment from SRS account of non‑citizen
+45EA.
+—(1) This section applies to an investment made using funds from an SRS account of an SRS member who is not a citizen of Singapore.
+[37/2014]
+(2) Before approving the deduction of the investment from the balance in the SRS account, an SRS operator must comply with subsection (3), unless the Comptroller has waived such compliance by written notice to the SRS operator.
+[37/2014]
+(3) Subject to subsection (3A), the SRS operator must collect from the SRS member or (if the SRS member is deceased) the SRS member’s legal personal representative tax at the rate of 24% on an amount that is equal to 50% of the total value of the investment to be deducted from the balance in the SRS account.
+[37/2014; 2/2016]
+[Act 33 of 2022 wef 01/01/2023]
+(3A) If the deduction of the investment from the balance in the SRS account is to be made on the ground in section 10G(3G), the amount on which tax is to be collected under subsection (3) is determined in the following manner:
+where A
+is the amount of funds to be actually withdrawn from the SRS account on that ground, if any;
+B
+is the total value of the investment that is to be deducted from the balance in the SRS account; and
+C
+is the amount of the SRS member’s income chargeable to tax under section 10(1)(
+g
+) as determined under section 10G(3G).
+[2/2016]
+(3B) The Minister may, by rules made under section 7, substitute the rate in subsection (3) with a higher or lower rate (including 0%) for any SRS member or class of SRS members that is or are subject to that subsection, and subsection (3) applies to that SRS member or class of SRS members accordingly.
+[34/2016]
+(3C) The rules mentioned in subsection (3B) may —
+(
+a
+)
+provide that the substitute rate applies only if such conditions as may be specified in the rules are satisfied; and
+(
+b
+)
+prescribe different substitute rates for different SRS members or classes of SRS members.
+[34/2016]
+(4) In subsections (3) and (3A), the value of an investment is reckoned in accordance with the regulations made under section 10G(11).
+[37/2014; 2/2016]
+(5) If the Comptroller has given a written notice to the SRS operator requiring the SRS operator to collect tax at a higher or lower rate than 24% or the rate prescribed by the rules mentioned in subsection (3B) in substitution for it, then the reference to the rate of 24% or the substitute rate is a reference to the higher or lower rate.
+[2/2016; 34/2016]
+[Act 33 of 2022 wef 01/01/2023]
+(6) The amount of tax collected under subsection (3) is a debt due from the SRS operator to the Government and is recoverable in the manner provided in section 89.
+[37/2014]
+(7) Where an SRS operator fails to collect the tax under subsection (3), the amount not collected is a debt due from the SRS operator to the Government and is recoverable in the manner provided in section 89.
+[37/2014]
+(8) If the amount of tax which is required to be collected under subsection (3) is not paid to the Comptroller —
+(
+a
+)
+by the 15th day of the second month following the month in which the date the SRS operator approves the deduction falls or by such later date as the Comptroller may allow, a sum equal to 5% of such amount of tax is payable; and
+(
+b
+)
+within 30 days after the time specified in paragraph (
+a
+), an additional penalty of 1% of such amount of tax is payable for each completed month that the tax remains unpaid, but the total additional penalty under this paragraph must not exceed 15% of the amount of tax outstanding.
+[37/2014]
+(9) An SRS operator must, after collecting the tax under subsection (3), give written notice of such collection to the Comptroller by the time specified in subsection (8)(
+a
+) and in the manner mentioned in subsection (9A), and if the SRS operator fails to do so, the SRS operator shall be guilty of an offence and shall on conviction pay a penalty equal to 3 times the amount of tax so collected and shall also be liable to a fine not exceeding $10,000.
+[37/2014; 34/2016]
+(9A) The notice under subsection (9) must be given using the electronic service, except that the Comptroller may in any particular case or class of cases permit the notice to be given in any other manner.
+[34/2016]
+(10) The Comptroller may —
+(
+a
+)
+compound an offence under subsection (9); and
+(
+b
+)
+for any good cause remit the whole or any part of the penalty payable under subsection (8).
+[37/2014]
+(11) In this section —
+(
+a
+)
+a reference to an SRS operator approving the deduction of an investment from the balance in an SRS account is a reference to the SRS operator approving the deduction of the sums representing the investment from the balance in the SRS account in accordance with the regulations made under section 10G(11); and
+(
+b
+)
+a reference to the date of approval by an SRS operator of a deduction of an investment from the balance in an SRS account is a reference to the date the SRS operator approves a deduction of the sums representing the investment from the balance in the SRS account in accordance with those regulations.
+[37/2014]
+Application of section 45 to income from profession or vocation carried on by non‑resident individual, etc.
+45F.
+—(1) Subject to subsections (1A), (2) and (2A), section 45 applies in relation to the payment of any income accruing in or derived from Singapore on or after 3 May 2002 from —
+(
+a
+)
+any profession or vocation (other than that derived by any public entertainer as defined in section 40A) by any person to any individual referred to in section 43(4)(
+a
+) not known to the person to be resident in Singapore; or
+(
+b
+)
+any profession or vocation by any person to any foreign firm referred to in section 43(4)(
+b
+),
+as section 45 applies to any interest paid by a person (
+X
+) to another person (
+Y
+) not known to
+X
+to be resident in Singapore and, for the purpose of such application, any reference in that section to interest is a reference to such payment.
+[Act 33 of 2022 wef 04/11/2022]
+[Act 30 of 2023 wef 30/10/2023]
+(1A) Subject to subsections (2) and (2A), section 45 applies in relation to the payment of any income derived from Singapore during the period from 1 April 2023 to 31 December 2027 (both dates inclusive) by any person —
+(
+a
+)
+to an individual not known to the person to be resident in Singapore, for acting as an arbitrator;
+(
+b
+)
+to a qualifying mediator not known to the person to be resident in Singapore, for providing services of a mediator for a mediation —
+(i)
+that takes place in Singapore; or
+(ii)
+that would have taken place in Singapore but for the settlement of the dispute or withdrawal of the claim in question; or
+(
+c
+)
+to an individual not known to the person to be resident in Singapore, for providing the services of a mediator for a qualifying mediation —
+(i)
+that takes place in Singapore; or
+(ii)
+that would have taken place in Singapore but for the settlement of the dispute or withdrawal of the claim in question,
+as section 45 applies to any interest paid by a person (
+X
+) to another person (
+Y
+) not known to
+X
+to be resident in Singapore and, for the purpose of such application, any reference in that section to interest is a reference to such payment.
+[Act 33 of 2022 wef 04/11/2022]
+[Act 30 of 2023 wef 30/10/2023]
+(2) The deduction of tax under section 45 is at the rate of —
+(
+a
+)
+15% for the purpose of subsection (1); and
+(
+b
+)
+10% for the purpose of subsection (1A).
+[Act 33 of 2022 wef 04/11/2022]
+(2A) Where an individual or a foreign firm to which section 43(4) or (4A) applies makes an irrevocable option under section 43(5) to be taxed under section 43(1)(
+b
+) on any payment of income accruing in or derived from Singapore by the individual or foreign firm, the application of section 45 by subsections (1), (1A) and (2) is further modified as follows:
+(
+a
+)
+the reference to the payment of income to the individual or foreign firm is to such payment after deducting any expenditure that the person making the payment reasonably believes is wholly and exclusively incurred by the individual or foreign firm in the production of that income;
+(
+b
+)
+the deduction of tax under section 45 for such payment is at the rate specified in section 43(1)(
+b
+).
+[Act 30 of 2023 wef 30/10/2023]
+(3) In this section, “arbitrator”, “qualifying mediation” and “qualifying mediator” have the meanings given by section 43(10).
+[Act 33 of 2022 wef 04/11/2022]
+Application of section 45 to distribution from any real estate investment trust
+45G.
+—(1) Subject to subsections (2) and (3) and such conditions as the Comptroller may impose, section 45 applies in relation to any distribution by a trustee of any real estate investment trust or by a trustee of any approved REIT exchange‑traded fund —
+(
+a
+)
+to any person (other than an individual) not known to the trustee to be resident in Singapore to whom section 43(3B), (3C), (3D) or (3E) applies; or
+(
+b
+)
+to any other person not known to the trustee to be —
+(i)
+an individual;
+(ii)
+a company incorporated and resident in Singapore;
+(iii)
+a branch in Singapore of a company incorporated outside Singapore that has obtained the Comptroller’s approval for distributions to be made by the trust to it without deduction of tax; or
+(iv)
+a body of persons incorporated or registered in Singapore, including a charity registered under the Charities Act 1994 or established by any written law, a town council, a statutory board, a co‑operative society registered under the Co‑operative Societies Act 1979, a platform work association registered under Part 3 of the Platform Workers Act 2024 or a trade union registered under the Trade Unions Act 1940,
+as that section applies to any interest paid by a person (
+X
+) to another person (
+Y
+) not known to
+X
+to be resident in Singapore and, for the purpose of such application, any reference in that section to interest is a reference to such distribution.
+[45/2018; 32/2019]
+[Act 30 of 2024 wef 01/11/2024]
+(2) For the purpose of subsection (1)(
+a
+), the deduction of tax under section 45 is at the rate of 10% on —
+(
+a
+)
+every dollar of a distribution by the trustee of the real estate investment trust made during the period from 18 February 2005 to 31 December 2030 (both dates inclusive); and
+[Act 25 of 2025 wef 08/12/2025]
+(
+b
+)
+every dollar of a distribution made by the trustee of the approved REIT exchange‑traded fund made during the period from 1 July 2018 to 31 December 2030 (both dates inclusive).
+[45/2018; 32/2019]
+[Act 25 of 2025 wef 08/12/2025]
+(3) For the purpose of subsection (1)(
+b
+), the deduction of tax under section 45 is at the applicable rate specified under section 43(1) on every dollar of such distribution.
+(4) Subsection (1) does not apply to any distribution made by the trustee of the real estate investment trust or the trustee of the approved REIT exchange‑traded fund, where tax has been paid by the trustee on the income from which the distribution is made.
+[45/2018]
+(4A) Subsection (1) does not apply to any distribution made on or after 1 January 2015 by a trustee of a real estate investment trust or a trustee of an approved REIT exchange‑traded fund to a branch in Singapore of a company incorporated outside Singapore and not known to the trustee to be resident in Singapore.
+[37/2014; 45/2018]
+(4B) Subsection (1) does not apply to any distribution made to an organisation that is declared by an order under section 2(1) of the International Organisations (Immunities and Privileges) Act 1948 as an organisation of which the Government and the government or governments of one or more foreign sovereign Powers are members, if that distribution is exempt from tax by reason of that order.
+[34/2016]
+(5) Subsection (1) does not apply to any distribution made during the period from 1 July 2018 to 31 December 2030 (both dates inclusive) by a trustee of a real estate investment trust to a trustee of an approved REIT exchange‑traded fund.
+[45/2018; 32/2019]
+[Act 25 of 2025 wef 08/12/2025]
+(6) In this section, “approved REIT exchange‑traded fund” and “real estate investment trust” have the meanings given by section 43(10).
+[45/2018]
+Application of section 45 to income derived as public entertainer
+45GA.
+—(1) Subject to subsections (2), (2A) and (2B), section 45 applies in relation to the payment by any person to any public entertainer or the public entertainer’s representative, not known to the person to be resident in Singapore, of any income derived from Singapore as a public entertainer on or after 1 January 2008 as that section applies to any interest paid by a person (
+X
+) to another person (
+Y
+) not known to
+X
+to be resident in Singapore and, for the purpose of such application, any reference in that section to interest is a reference to such payment.
+[Act 30 of 2023 wef 30/10/2023]
+(2) For the purpose of this section and subject to subsection (2A), the deduction of tax under section 45 is at the rate of 15%.
+(2A) For the purpose of this section, the deduction of tax under section 45 is at the rate of 10% of such income derived during the period from 22 February 2010 to 31 March 2022 (both dates inclusive).
+[37/2014; 41/2020]
+(2B) The reference in subsection (1) to income is to the amount of the income after deducting any expenditure which the person making the payment reasonably believes is wholly and exclusively incurred by the public entertainer in the production of that income.
+[Act 30 of 2023 wef 30/10/2023]
+(3) In this section, “public entertainer” has the meaning given by section 40A.
+Application of section 45 to commission or other payment of licensed international market agent
+45H.
+—(1) Subject to subsection (2), section 45 applies in relation to the payment of any commission or other payment by any person to a licensed international market agent not known to the person to be resident in Singapore for organising or conducting a casino marketing arrangement with a casino operator in Singapore as section 45 applies to any interest paid by a person (
+X
+) to another person (
+Y
+) not known to
+X
+to be resident in Singapore and, for the purpose of such application, any reference in that section to interest is a reference to such commission or payment.
+(2) For the purpose of this section, the deduction of tax under section 45 is at the rate of 3%.
+(2A) Subsection (1) does not apply to any payment liable to be made on or after 1 January 2015 by any person to a branch in Singapore of a licensed international market agent, being a company incorporated outside Singapore and not known to the person to be resident in Singapore.
+[37/2014]
+(3) In this section, “casino marketing arrangement”, “casino operator” and “international market agent” have the meanings given by the Casino Control Act 2006.
+Sections 45 and 45A not applicable to certain payments
+45I.
+—(1) Sections 45(1) to (8) and 45A(1) do not apply to any income referred to in section 12(6) which is liable to be paid by a person mentioned in subsection (2), if the payment is liable to be made —
+(
+a
+)
+at any time during the period from 17 February 2012 to 31 December 2026 (both dates inclusive) (called in this section the relevant period) under —
+(i)
+a contract which took effect before 17 February 2012;
+(ii)
+a contract which was extended or renewed, where the extension or renewal took effect before 17 February 2012; or
+(iii)
+a debt security which was issued before 17 February 2012;
+(
+b
+)
+under a contract which took effect on a date which falls within the relevant period;
+(
+c
+)
+under a contract which was extended or renewed where —
+(i)
+the extension or renewal took effect on a date which falls within the relevant period; and
+(ii)
+the payment is made on or after the date on which such extension or renewal took effect;
+[Act 33 of 2022 wef 04/11/2022]
+(
+ca
+)
+under a contract which was varied where —
+(i)
+the variation takes effect on a date which falls within the period from the date on which the Income Tax (Amendment) Act 2022 is published in the
+Gazette
+, to 31 December 2026 (both dates inclusive); and
+(ii)
+the payment is made on or after the date the variation takes effect; or
+[Act 33 of 2022 wef 04/11/2022]
+(
+d
+)
+under a debt security which was issued on a date which falls within the relevant period.
+[27/2021]
+(2) Subsection (1) applies to the following persons:
+(
+a
+)
+a bank or merchant bank licensed under the Banking Act 1970;
+(
+b
+)
+a finance company licensed under the Finance Companies Act 1967;
+(
+c
+)
+a person who —
+(i)
+holds a capital markets services licence under the Securities and Futures Act 2001 for dealing in capital markets products and advising on corporate finance;
+(ii)
+is involved or will be involved in the underwriting of debt or equity issuances; and
+(iii)
+has been approved before 17 February 2012 for the purposes of the Income Tax (Exemption of Interest and Other Payments for Economic and Technological Development) Notification 2012.
+[4/2017; 1/2020]
+(3) Sections 45(1) to (8) and 45A(1) do not apply to any income mentioned in section 12(6) which is liable to be paid by a person who —
+(
+a
+)
+holds a capital markets services licence under the Securities and Futures Act 2001 for dealing in capital markets products and advising on corporate finance;
+(
+b
+)
+is involved or will be involved in the underwriting of debt or equity issuances; and
+(
+c
+)
+is approved for the purposes of this section, where the approval was given on a date (called in this subsection the approval date) within the relevant period by the Minister or an authorised body,
+if the payment is liable to be made —
+(
+d
+)
+at any time during the period from the approval date to 31 December 2026 (both dates inclusive) under —
+(i)
+a contract which took effect before the approval date;
+(ii)
+a contract which was extended or renewed, where the extension or renewal took effect before the approval date; or
+(iii)
+a debt security which was issued before the approval date;
+(
+da
+)
+at any time during the period from the date on which the Income Tax (Amendment) Act 2022 is published in the
+Gazette
+to 31 December 2026 (both dates inclusive) under a contract which was varied, where the variation takes effect on or after the date on which the Income Tax (Amendment) Act 2022 is published in the
+Gazette
+and before the approval date;
+[Act 33 of 2022 wef 04/11/2022]
+(
+e
+)
+under a contract which took effect on a date which falls within the period from the approval date to 31 December 2026 (both dates inclusive);
+(
+f
+)
+under a contract which was extended or renewed where —
+(i)
+the extension or renewal took effect on a date which falls within the period from the approval date to 31 December 2026 (both dates inclusive); and
+(ii)
+the payment is made on or after the date on which such extension or renewal takes effect;
+[Act 33 of 2022 wef 04/11/2022]
+(
+fa
+)
+under a contract which was varied where —
+(i)
+the variation takes effect on a date which falls within the period from the date on which the Income Tax (Amendment) Act 2022 is published in the
+Gazette
+or the approval date (whichever is later) to 31 December 2026 (both dates inclusive); and
+(ii)
+the payment is made on or after the date the variation takes effect; or
+[Act 33 of 2022 wef 04/11/2022]
+(
+g
+)
+under a debt security which is issued on a date which falls within the period from the approval date to 31 December 2026 (both dates inclusive).
+[4/2017; 27/2021]
+[Act 41 of 2020 wef 06/12/2022]
+(4) The approval by the Minister or authorised body under subsection (3)(
+c
+) is subject to such conditions as the Minister or authorised body may impose.
+[Act 41 of 2020 wef 06/12/2022]
+(5) This section does not apply to any payment of income referred to in section 12(6) which the Comptroller is satisfied is made in connection with an arrangement the purpose or effect of which is one referred to in section 33(1).
+Application of section 45, etc., to Government
+45J.
+—(1) Subject to the modifications in subsection (2), sections 45, 45A, 45F and 45GA apply to the payment of any income described in those sections that is liable to be made by the Government to a person not known to the Government to be resident in Singapore, as they apply to the payment of such income liable to be made by a person to another person not known to the firstmentioned person to be resident in Singapore.
+[32/2019]
+(2) The modifications are —
+(
+a
+)
+any amount deducted by the Government under section 45, 45A, 45F or 45GA does not constitute a debt due to the Government and is not recoverable in the manner provided by section 89; and
+(
+b
+)
+section 45(3), (4), (5), (6) and (7) (including those provisions as applied by sections 45A, 45F and 45GA) does not apply.
+[32/2019]

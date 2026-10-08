@@ -1,0 +1,1069 @@
+PART 6
+SPECIAL CASES
+Application to public agencies
+28.
+—(1) Without affecting the application of section 8, this Act applies in relation to taxable supplies made by a public agency as it applies in relation to taxable supplies made by a taxable person in the course or furtherance of a business.
+[Act 14 of 2024 wef 30/04/2024]
+(2) For the purposes of this Act, every taxable supply made by a public agency is treated as being made in the course or furtherance of a business.
+[Act 14 of 2024 wef 30/04/2024]
+(2A) However, this Act does not apply to such taxable supplies made by a public agency as the Minister may, by order in the
+Gazette
+, prescribe.
+[Act 14 of 2024 wef 30/04/2024]
+(3) Section 38A applies to relevant supplies of goods and services made by, and made to, the Government in the course or furtherance of a business, as if the Government were a taxable person registered under this Act at the time the supplies are made.
+[52/2018]
+(4) In this section, “public agency” means —
+(
+a
+)
+any ministry, department or Organ of State of the Government, or a public officer of any ministry, department or Organ of State of the Government; or
+(
+b
+)
+a body corporate established by a public Act for the purposes of a public function, excluding a Town Council established by section 4 of the Town Councils Act 1988.
+[Act 14 of 2024 wef 30/04/2024]
+Application to persons registered by virtue of Seventh Schedule supplies
+28A.
+—(1) Subject to subsections (2) and (5), the following do not apply to a registered (Seventh Schedule — pay only) person:
+(
+a
+)
+Part 4;
+(
+b
+)
+section 32(1);
+(
+c
+)
+section 44 in relation to the Seventh Schedule supplies of the person;
+(
+d
+)
+any regulations relating to invoices and receipts, and the display of prices, for the Seventh Schedule supplies of the person.
+[52/2018; 33/2019]
+(2) The person may apply to the Comptroller for all provisions mentioned in subsection (1) to apply to the person.
+[52/2018]
+(3) The application must be in such form and manner, and be made within such time, as the Comptroller may require.
+[52/2018]
+(4) The Comptroller may approve the application subject to such conditions as the Comptroller may impose.
+[52/2018]
+(5) Upon approval of the application, the provisions mentioned in subsection (1) apply to the person subject to such modifications as may be prescribed by regulations made under section 86.
+[52/2018]
+Input tax deemed incurred in relation to insurance cash payments
+29.
+—(1) The Minister may by regulations provide —
+(
+a
+)
+that where the premium payable to an insurer under any contract of insurance is subject to tax at a rate specified under section 16, the insurer is deemed to have incurred input tax on any cash payment made by the insurer upon the occurrence of an insured event and which is obligatory under that contract of insurance (called in this section deemed input tax), except in such situation as the Minister may decide otherwise for the protection of revenue;
+(
+b
+)
+that any regulations made under paragraph (
+a
+) apply only where the contract of insurance is taken out by such person as may be prescribed;
+(
+c
+)
+for the determination of the amount of deemed input tax referred to in paragraph (
+a
+) and the period in which the deemed input tax is deemed to have been incurred;
+(
+d
+)
+for the adjustment of the amount of deemed input tax referred to in paragraph (
+a
+) where, after any cash payment referred to in that paragraph has been made, the insurer recovers such payment or any part thereof from any person (other than the insurer’s re‑insurer under a re‑insurance contract);
+(
+e
+)
+for the determination of the amount of the adjustment referred to in paragraph (
+d
+), and the period in which such adjustment is to be made; and
+(
+f
+)
+for such incidental and supplementary matters as appear to the Minister necessary or expedient.
+[28/2007]
+(2) Where input tax is deemed to have been incurred under any regulations made under subsection (1), such deemed input tax is, for the purposes of this Act, treated as input tax within the meaning of section 19.
+[28/2007]
+Persons treated as a group
+30.
+—(1) Subject to subsection (1A), where, under the provisions of any regulations made under subsection (3), any 2 or more persons are treated as members of a group and registered in the name of a representative member —
+(
+a
+)
+any supply of goods or services by a member of the group to another member of the group is disregarded;
+(
+b
+)
+any business carried on by a member of the group is treated as carried on by the representative member;
+(
+c
+)
+any other supply of goods or services by or to a member of the group is treated as a supply by or to the representative member; and
+(
+d
+)
+any tax paid or payable by a member of the group on the importation of any goods is treated as paid or payable by the representative member and the goods to be treated for the purposes of sections 26 and 45(6) and (6A) as imported by the representative member.
+[52/2018]
+(1A) Where a supply made by one member of the group to another member of the group is a supply of distantly taxable goods or services that would, but for subsection (1)(
+a
+), give rise to a reverse charge supply under section 14(2), the supply —
+(
+a
+)
+is not disregarded; and
+(
+b
+)
+is treated as made to the representative member as the recipient mentioned in section 14.
+[52/2018]
+[Act 34 of 2021 wef 01/01/2022]
+(2) All members of the group shall be liable jointly and severally for any tax due from the representative member.
+(3) Where the Comptroller, in accordance with regulations made by the Minister, approves an application for 2 or more persons to be treated as members of a group, then, with effect from the beginning of a prescribed accounting period they are so treated, and one of them shall be the representative member.
+[42/2020]
+(4) Despite subsection (1), any regulations made under subsection (3) may provide —
+(
+a
+)
+for the circumstances in which 2 or more persons are eligible to make an application to be treated as members of a group;
+(
+b
+)
+for the manner and time within which any application to be treated as members of a group is to be made;
+(
+c
+)
+for the Comptroller, if he or she thinks it necessary for the protection of the revenue, to refuse an application to be treated as members of a group;
+(
+d
+)
+for the Comptroller to impose such conditions as he or she may think fit including, where all members of the group are taxable persons registered under paragraph 1B of the First Schedule, a condition that no claim may be made for any credit for any input tax of the representative member (including any amount treated as such under this section);
+(
+e
+)
+for the Comptroller, if he or she thinks it necessary for the protection of the revenue, to reduce or disallow credit for any amount of input tax where that amount of input tax would otherwise have been attributable to exempt supplies if the application under subsection (3) had not been approved;
+(
+f
+)
+for the circumstances in which the Comptroller may terminate the registration of a group; and
+(
+g
+)
+for the application of the provisions of this section, with such exceptions, modifications and adaptations as may be prescribed, where a business, or part of a business, carried on by a taxable person is transferred to another taxable person who is treated as a member of a group under this section.
+[33/2019]
+Partnerships
+31.
+—(1) The registration under this Act —
+(
+a
+)
+of persons carrying on a business in partnership must be in the name of the firm; and
+(
+b
+)
+of the same persons carrying on separate businesses in partnership may, if the Comptroller thinks fit, be in the separate names of the respective firms.
+(2) No account is to be taken, in determining for any purpose of this Act whether goods or services are supplied to or by such persons, of any change in the partnership.
+(3) Without affecting section 36 of the Partnership Act 1890 (rights of persons dealing with firm against apparent members of firm) as it applies to any form of partnership, until the date on which a change in the partnership is notified to the Comptroller in writing, a person who has ceased to be a member of a partnership is regarded as continuing to be a partner for the purposes of this Act and, in particular, for the purpose of any liability for tax on the supply of goods or services by the partnership.
+[37/2008]
+(4) Where a person ceases to be a member of a partnership during a prescribed accounting period (or is treated as so doing by virtue of subsection (3)) any notice, whether of assessment or otherwise, which is served on the partnership and relates to, or to any matter arising in, that period or any earlier period during the whole or part of which the person was a member of the partnership is treated as served also on the person.
+(5) Without affecting section 16 of the Partnership Act 1890 (notice to acting partner to be notice to the firm) as it applies to any form of partnership, any notice, whether of assessment or otherwise, which is addressed to a partnership by the name in which it is registered by virtue of subsection (1) and is served in accordance with this Act is treated for the purposes of this Act as served on the partnership and, accordingly, where subsection (4) applies, as served also on the former partner.
+[37/2008]
+(6) Subsections (1) and (4) do not affect the extent to which, under section 9 of the Partnership Act 1890 as it applies to any form of partnership, a partner is liable for tax owed by the firm.
+[37/2008]
+(7) Where a person is a partner in a firm during part only of a prescribed accounting period, the person’s liability for tax on the supply by the firm of goods or services during that accounting period is such proportion of the firm’s liability as may be just.
+(8) Where any notice is required to be given under this Act by a partnership, it is the joint and several liability of all partners to give such notice, except that if a notice is given by one partner this is sufficient compliance with any such requirement.
+Business carried on in divisions or by unincorporated bodies, personal representatives, etc.
+32.
+—(1) The Minister may by regulations provide for the registration under this Act of a taxable person carrying on more than one business or a business in several divisions, if the taxable person so requests and the Comptroller sees fit, to be in the names of those businesses or divisions.
+(2) The Minister may by regulations make provisions for determining the persons responsible for carrying out the requirements of this Act, imposed on a person carrying on a business where the business is carried on in partnership or by a club, association, society or organisation the affairs of which are managed by its members or a committee or committees of its members.
+(3) The registration under this Act of any such club, association, society or organisation may be in the name of the club, association, society or organisation; and in determining whether goods or services are supplied to or by such a club, association, society or organisation, no account is to be taken of any change in its members.
+(3A) The registration under this Act of any person who, as trustee, is carrying on the business of a trust created by express written declaration must be in the name of the trust.
+[19/2009]
+(3B) The registration under this Act of an umbrella VCC making taxable supplies for the purpose of one of its sub-funds must be in the name of that umbrella VCC in respect of that sub-fund, or in the name of that sub-fund.
+[28/2019]
+(4) Where a taxable person dies, or goes into liquidation or receivership, or becomes bankrupt or incapacitated, the Comptroller may, for the period —
+(
+a
+)
+beginning on the date of the death, liquidation, receivership, bankruptcy or incapacity; and
+(
+b
+)
+ending on the date immediately before —
+(i)
+the date another person is registered in respect of the taxable supplies made or intended to be made by that taxable person in the course or furtherance of that taxable person’s business; or
+(ii)
+in the case of incapacity, the date the incapacity ceases,
+deem any person carrying on that business to be a taxable person.
+[42/2020]
+(5) Any requirement to pay tax imposed under subsection (4) on any person carrying on the business only applies to that person to the extent of the assets of the deceased or incapacitated person over which that person has control.
+(6) Any person carrying on the business referred to in subsection (4) must, within 21 days after commencing to do so, inform the Comptroller in writing of that fact and of the date of the death or of the liquidation, receivership or bankruptcy, or of the nature of the incapacity and the date on which it began.
+[42/2020]
+Agents
+33.
+—(1) Where a person does not have his or her usual place of residence in Singapore and the person is accountable for any tax, or has duties imposed on the person by or under this Act, then the person (called in this section the overseas registrant) —
+(
+a
+)
+must, if the person is not a registered (Seventh Schedule — pay only) person; and
+(
+b
+)
+may, if the person is a registered (Seventh Schedule — pay only) person,
+appoint and maintain a section 33(1) agent in matters by reference to which that overseas registrant is so accountable or on whom the duties are so imposed.
+[33/2019]
+(1A) The section 33(1) agent —
+(
+a
+)
+is substituted for the overseas registrant as the person accountable for the tax; or
+(
+b
+)
+is under an obligation to discharge any duties imposed on the overseas registrant by or under this Act,
+(as the case may be) in accordance with the appointment of the section 33(1) agent.
+[33/2019]
+(1B) The overseas registrant must —
+(
+a
+)
+if not a registered (Seventh Schedule — pay only) person — provide the Comptroller with details of the overseas registrant’s section 33(1) agent when applying to be registered under this Act;
+(
+b
+)
+if a registered (Seventh Schedule — pay only) person — notify the Comptroller in writing of the section 33(1) agent appointed by the overseas registrant not more than 30 days after the date of the appointment; and
+(
+c
+)
+where there is —
+(i)
+a change in any detail of the section 33(1) agent provided under paragraph (
+a
+); or
+(ii)
+a change of the section 33(1) agent appointed by the overseas registrant,
+notify the Comptroller in writing of the change not less than 30 days before the date of the change, or any other period allowed by the Comptroller in a particular case.
+[33/2019]
+(1C) The Comptroller may, in any particular case, waive the requirement under subsection (1) in respect of an overseas registrant that is not a registered (Seventh Schedule — pay only) person, subject to any condition that the Comptroller may impose, including a condition to provide security in the form and manner required by the Comptroller.
+[33/2019]
+(1D) The Comptroller may at any time direct any overseas registrant to replace a section 33(1) agent of the overseas registrant with another section 33(1) agent.
+[33/2019]
+(2) For the purposes of this Act, where goods are imported by a taxable person and supplied by the taxable person as agent for a person that —
+(
+a
+)
+is not a taxable person; or
+(
+b
+)
+is a taxable (Seventh Schedule) person other than a registered (Seventh Schedule — full) person,
+then the goods are treated as imported and supplied by the taxable person as principal.
+[52/2018]
+(2A) For the purposes of subsection (2), goods imported by a taxable person and supplied by the taxable person as agent for a person that —
+(
+a
+)
+is not a taxable person; or
+(
+b
+)
+is a taxable (Seventh Schedule) person other than a registered (Seventh Schedule — full) person,
+are deemed to include goods which, following their import, undergo a treatment or process for the purposes of the supply.
+[52/2018]
+(2B) For the purposes of this Act, where goods are —
+(
+a
+)
+imported by an agent (
+A
+) that is a taxable person, for a person (
+P
+) that —
+(i)
+is not a taxable person; or
+(ii)
+is a taxable (Seventh Schedule) person other than a registered (Seventh Schedule — full) person; and
+(
+b
+)
+supplied for
+P
+by another agent (called in this section a substituted agent) that is a taxable person, appointed by
+P
+to take custody of the goods imported by
+A
+,
+then the goods are treated as imported by
+A
+as principal and supplied by the substituted agent as principal.
+[52/2018]
+(2BA) A person is not a substituted agent for the purposes of subsection (2B) unless the Comptroller has been informed, in such form and manner as the Comptroller may require, of the person’s appointment as such.
+[52/2018]
+(2C) For the purposes of subsection (2B), unless the Comptroller otherwise allows, goods supplied by the substituted agent for
+P
+(as described in that subsection) do not include goods which, following their import, undergo a treatment or process.
+[52/2018]
+(2D) For the purposes of subsections (2) and (2B), where the taxable person or the substituted agent (as the case may be) ceases to be a taxable person before making a supply of the goods, and any credit for input tax has been allowed to the taxable person on the importation of the goods —
+(
+a
+)
+in the case of subsection (2), the taxable person must pay to the Comptroller the amount of the credit; and
+(
+b
+)
+in the case of subsection (2B), the substituted agent must pay to the Comptroller the amount of the credit.
+[21/2013]
+(3) For the purposes of subsections (2)(
+a
+) and (2B)(
+a
+)(i), a person who does not belong in Singapore may be treated as not being a taxable person if as a result the person will not be required to be registered by virtue of paragraph 1 of the First Schedule.
+[52/2018]
+(3A) For the purpose of subsection (3), a person is treated as belonging in Singapore if the person —
+(
+a
+)
+has in Singapore a business establishment or some other fixed establishment and no such establishment elsewhere;
+(
+b
+)
+has no such establishment in any country but the person’s usual place of residence is in Singapore; or
+(
+c
+)
+has such establishments both in Singapore and elsewhere and the person’s establishment which is most directly concerned with the supply is in Singapore.
+(4) Where goods or services are supplied through an agent who acts in the agent’s own name, the Comptroller may, if the Comptroller thinks fit, treat the supply both as a supply to the agent and as a supply by the agent.
+(5) For the purposes of this section —
+(
+a
+)
+a person carrying on a business through a branch or an agency in any country is treated as having a business establishment there;
+(
+b
+)
+“usual place of residence”, in relation to a body corporate, means the place where it is incorporated or otherwise legally constituted; and
+(
+c
+)
+“section 33(1) agent”, in relation to an overseas registrant, means an agent, a manager or a factor —
+(i)
+whose usual place of residence is in Singapore; and
+(ii)
+who is appointed by the overseas registrant for either or both of the following purposes:
+(A)
+to be substituted for the overseas registrant as the person accountable for the tax;
+(B)
+to discharge any duties imposed on the overseas registrant by or under this Act.
+[21/2013; 52/2018; 33/2019]
+Umbrella VCCs
+33AA.
+—(1) For the purposes of this Act, an umbrella VCC making or receiving a supply for the purpose of one of its sub‑funds is taken to be a separate person from the same VCC making or receiving a supply for the purpose of another of its sub‑funds.
+[28/2019]
+(2) Accordingly —
+(
+a
+)
+a supply that is made by an umbrella VCC for the purpose of one of its sub-funds, and received by the same VCC for the purpose of another of its sub‑funds, is taken to be a supply made by one person to another person;
+(
+b
+)
+supplies made or received by an umbrella VCC for the purpose of different sub-funds are taken to have been made or received by different persons; and
+(
+c
+)
+an umbrella VCC making taxable supplies for the purpose of one of its sub‑funds is to be registered as a person separately from the same umbrella VCC making taxable supplies for the purpose of another of its sub‑funds and each is taken to be a separate taxable or registered person.
+[28/2019]
+(3) For the purposes of this Act, a reference to a business carried on by a taxable person is, where the taxable person is an umbrella VCC in relation to any of its sub‑funds, a reference to its business in relation to that sub‑fund.
+[28/2019]
+(4) Where —
+(
+a
+)
+the person who receives, is supplied or is the customer of the goods or services mentioned in section 14(1)(
+a
+)(i) or (
+b
+)(i), 38(1) or (2) or 38A(2) is an umbrella VCC; and
+[Act 34 of 2021 wef 01/01/2022]
+(
+b
+)
+the goods or services are supplied for the purpose of or in connection with the VCC’s business in relation to any of its sub-funds,
+then, for the purpose of section 14(2), 38(1) or (2) or 38A(2) (as the case may be), the recipient, person supplied or customer of those goods or services is taken to be the umbrella VCC for the purpose of that sub‑fund.
+[28/2019]
+(5) Any liability of an umbrella VCC for tax in relation to a supply made by it for the purpose of a sub-fund, together with any penalty or other amounts payable to the Comptroller in relation to the supply, is considered (for the purposes of section 29 of the VCC Act) liability incurred by the umbrella VCC for the purpose of the sub‑fund.
+[28/2019]
+(6) Any fine or penalty imposed on, or composition sum that may be paid by, an umbrella VCC for an offence under this Act that is committed in connection with any of its sub-funds, including but not limited to —
+(
+a
+)
+a supply received or made by it for the purpose of the sub‑fund; and
+(
+b
+)
+any return, document, information or other matter concerning the sub-fund,
+is considered (for the purpose of section 29 of the VCC Act) liability incurred by the umbrella VCC for the purpose of the sub‑fund.
+[28/2019]
+Repayment of tax to persons in business overseas
+33A.
+—(1) The Minister may by regulations provide for the repayment, to persons carrying on business in countries other than Singapore, not being any registered (Seventh Schedule — full) person, of tax on the importation of goods by them which would be their input tax if they had been taxable persons in Singapore.
+[52/2018]
+(2) Repayment must be made in such cases only, and subject to such conditions as the regulations may prescribe or as the Comptroller may impose (either generally or in particular cases).
+(3) Regulations made under this section may provide —
+(
+a
+)
+for claims and repayments to be made only through agents in Singapore;
+(
+b
+)
+either generally or for specified purposes —
+(i)
+for the agents to be treated under this Act as if they were taxable persons; and
+(ii)
+for treating claims as if they were returns under this Act and repayments as if they were repayments of input tax; and
+(
+c
+)
+for generally regulating the methods by which the amount of any repayment is to be determined and the repayment is to be made.
+Claiming of input tax on import of processed goods
+33B.
+—(1) The Minister may by regulations make provision for a taxable person other than a registered (Seventh Schedule — pay only) person to claim any tax paid or payable by such taxable person on the importation of goods as input tax under section 19 (as if the whole of the input tax were allowable under section 20), where the importation occurs in the following circumstances:
+(
+a
+)
+such taxable person makes a supply to the taxable person’s customer who is —
+(i)
+a person who belongs in Singapore; or
+(ii)
+a taxable person who does not belong in Singapore other than a registered (Seventh Schedule — pay only) person;
+(
+b
+)
+the supply comprises the application of any process to, or the carrying out of any process on, goods which such taxable person’s customer consigns to the taxable person in Singapore;
+(
+c
+)
+in connection with the supply, such taxable person removes the goods to a country outside Singapore for a process to be applied to or carried out on the goods; and
+(
+d
+)
+such taxable person then imports the goods back into Singapore after the process in paragraph (
+c
+) has been applied to or carried out on the goods.
+[31/2014; 52/2018]
+(2) Regulations made under subsection (1) may —
+(
+a
+)
+prescribe the conditions (including conditions subsequent) to which a claim for the deduction of an amount of tax pursuant to that subsection is subject; and
+(
+b
+)
+require the taxable person to repay to the Comptroller, if any such condition is not satisfied, the amount of tax allowed to the taxable person in such form and manner, and in such time, as may be prescribed.
+[31/2014]
+(3) The Comptroller may, for the protection of revenue, impose conditions or restrictions in relation to any claim referred to in subsection (1).
+[31/2014]
+(4) In this section, “process”, in relation to goods, includes (but is not limited to) any treatment.
+[31/2014]
+(5) For the purposes of this section, the customer is treated as belonging in Singapore if the customer —
+(
+a
+)
+has in Singapore a business establishment or some other fixed establishment and no such establishment elsewhere;
+(
+b
+)
+has no such establishment in any country but the customer’s usual place of residence is in Singapore; or
+(
+c
+)
+has such establishments both in Singapore and elsewhere and among which the establishment of the customer that is most directly concerned with the supply referred to in subsection (1) being made to the customer, is in Singapore.
+[31/2014]
+(6) For the purposes of subsection (5) —
+(
+a
+)
+a customer carrying on a business through a branch or an agency in any country is treated as having a business establishment there; and
+(
+b
+)
+“usual place of residence”, in relation to a body corporate, means the place where it is incorporated or otherwise legally constituted.
+[31/2014]
+Transfers of going concerns
+34.
+Where a business carried on by a taxable person is transferred to another person as a going concern, then —
+(
+a
+)
+for the purpose of determining whether the transferee is liable to be registered under this Act, the transferee is treated as having carried on the business before as well as after the transfer, and supplies by the transferor are treated accordingly; and
+(
+b
+)
+any records relating to the business which under section 46 are required to be preserved for any period after the transfer must be preserved by the transferee instead of by the transferor, unless the Comptroller, at the request of the transferor, otherwise directs.
+Transfers of going concerns: input tax deemed deducted
+34A.
+—(1) Where —
+(
+a
+)
+a business or part thereof carried on by a taxable person is transferred as a going concern to a transferee who is also a taxable person together with the assets of such business; and
+(
+b
+)
+by virtue of any order made under section 10(3)(
+c
+), the supply of such assets to the taxable person is treated as neither a supply of goods nor a supply of services,
+the transferee is deemed to have incurred input tax on the value of the supply of such assets, and to have deducted such input tax from any output tax due from the transferee on the day of the supply.
+(2) For the purposes of this section, the value of the supply of any assets as referred to in subsection (1) is calculated in accordance with section 17 without the addition of tax.
+(3) The Minister may make regulations to provide for any provision of this Act which relates to a person who deducts input tax under section 19 to apply to a transferee referred to in subsection (1).
+(4) Regulations made under subsection (3) may provide —
+(
+a
+)
+for the modification of any such provision of this Act in order that it may properly apply to a transferee referred to in subsection (1); and
+(
+b
+)
+for such incidental and supplementary matters as appear to the Minister necessary or expedient.
+Betting, sweepstakes, lotteries and gaming
+35.
+—(1) The Minister may by regulations make provisions for modifying the provisions of this Act in their application to transactions involving betting, sweepstakes, lotteries, gaming machines or gaming and persons ordinarily engaged in such transactions as may be specified in the regulations, subject to such conditions as may be so specified.
+[Act 1 of 2022 wef 29/07/2022]
+(2) Any regulations made under this section may make different provisions with respect to different transactions or different circumstances.
+(3) In this section, “lotteries” and “gaming machines” have the meanings given by the Gambling Duties Act 2022.
+[7/2011]
+[Act 1 of 2022 wef 29/07/2022]
+Vouchers
+35A.
+—(1) The Minister may, by regulations, modify the application of the provisions of this Act to transactions involving vouchers granted for consideration.
+[19/2009]
+(2) Any regulations made under this section —
+(
+a
+)
+may provide that any transaction involving a voucher or any part of such transaction is treated as —
+(i)
+a supply of goods or a supply of services; or
+(ii)
+neither a supply of goods nor a supply of services; and
+(
+b
+)
+may make different provisions with respect to different transactions or parts thereof, different vouchers or different circumstances.
+[19/2009]
+(3) In this section —
+“issuer”, in relation to a voucher, means the person who issued the voucher (whether in the person’s own capacity or through an agent);
+“value”, in relation to a voucher, means —
+(
+a
+)
+where the value stated on or recorded in or in respect of the voucher is in monetary terms, that monetary value; and
+(
+b
+)
+where the value stated on or recorded in or in respect of the voucher is in non-monetary terms, the monetary value assigned to the voucher by the issuer insofar as it relates to the right to receive goods or services upon redemption of the voucher;
+“voucher” means any of the following:
+(
+a
+)
+any physical or electronic form of —
+(i)
+a voucher;
+(ii)
+a token;
+(iii)
+a stamp (not being a postage stamp within the meaning of the Postal Services Act 1999);
+(iv)
+a coupon;
+(v)
+a card; or
+(vi)
+any other similar item,
+the redemption of which in accordance with its terms entitles the holder to receive goods or services up to the value stated on or recorded in or in respect of the voucher, whether such value is in terms that are monetary or non-monetary;
+(
+b
+)
+any prepaid phone card or similar item the redemption of which in accordance with its terms entitles the holder to receive telephone or like services up to the value stated on or recorded in or in respect of the voucher, whether such value is in terms that are monetary or non-monetary.
+[19/2009]
+(4) For the purpose of paragraph (
+a
+) of the definition of “voucher” in subsection (3) —
+(
+a
+)
+where the monetary value stated on or recorded in or in respect of it a voucher is the value ascribed to the goods or services specified on the voucher as being the goods or services that may be supplied upon redemption of the voucher, that voucher is not treated as having stated on or recorded in or in respect of it a value in monetary terms; and
+(
+b
+)
+where the non-monetary value stated on or recorded in or in respect of it a voucher is in terms of any goods or services that may be supplied upon redemption of the voucher, that voucher is not treated as having stated on or recorded in or in respect of it a value in non-monetary terms.
+[19/2009]
+(5) For the purpose of the definition of “voucher” in subsection (3) —
+(
+a
+)
+where the right to top-up the value of —
+(i)
+any card referred to in paragraph (
+a
+)(v) of that definition; or
+(ii)
+any prepaid phone card referred to in paragraph (
+b
+) of that definition,
+is conferred by any means (including any electronic means) other than by way of another card or prepaid phone card; or
+(
+b
+)
+where the right to receive telephone services via the Internet is acquired through the Internet,
+the supply of that right is treated as if it were a supply of a card or prepaid phone card as referred to in paragraph (
+a
+)(v) or (
+b
+) of that definition, as the case may be.
+[19/2009]
+Commodity, futures or securities markets and exchanges
+36.
+—(1) The Minister may by regulations make provisions for modifying the provisions of this Act in their application to dealings on commodity, futures or securities markets or exchanges and such persons ordinarily engaged in such dealings as may be specified in the regulations, subject to such conditions as may be so specified.
+(2) Without limiting subsection (1), any regulations made under this section may include provisions —
+(
+a
+)
+for the registration under this Act of any body of persons representing persons ordinarily engaged in dealing on a commodity, futures or securities market or exchange and for disregarding such dealings by persons so represented in determining liability to be registered under this Act, and for disregarding such dealings between persons so represented for all the purposes of this Act; and
+(
+b
+)
+for refunding or crediting, to such persons as may be specified in the regulations, input tax attributable to such dealings on a commodity, futures or securities market or exchange as may be so specified,
+and may contain such incidental and supplementary provisions as appear to the Minister to be necessary or expedient.
+(3) Any regulations made under this section may make different provisions with respect to different markets or exchanges and with respect to different commodities, futures or securities.
+Goods under customs control
+37.
+—(1) Subject to subsection (4), where goods from outside Singapore enter Singapore under customs control and one or more supplies of those goods involve —
+(
+a
+)
+the goods being removed from a place under such customs control; or
+(
+b
+)
+the goods being made available while under such customs control,
+then (except for the purposes of section 18(1)(
+b
+)) all such supplies of the goods are disregarded for the purposes of this Act.
+[20/2010]
+(2) Subject to subsection (4), where —
+(
+a
+)
+goods are produced or manufactured while under customs control in the customs territory in a place specified in a licence granted under section 63(1) of the Customs Act 1960 or such produced or manufactured goods are mixed, while under customs control in the customs territory, with imported goods; and
+(
+b
+)
+one or more supplies of the produced or manufactured goods, or those produced or manufactured goods mixed with imported goods, involve —
+(i)
+the goods being removed from a place under such customs control; or
+(ii)
+the goods being made available while under such customs control,
+then —
+(
+c
+)
+all such supplies other than the last supply are, except where the contrary intention appears, disregarded for the purposes of this Act; and
+(
+d
+)
+the following apply in relation to the last supply:
+(i)
+the supply is treated for the purposes of this Act as taking place at the time the goods are removed from such customs control;
+(ii)
+the value of the supply is treated as including any customs duty or excise duty to which the goods are subject;
+(iii)
+the tax on the supply is payable at the duty point —
+(A)
+if the goods are subject to customs duty or excise duty, by the person required to pay any such duty, unless otherwise prescribed; and
+(B)
+if the goods are not subject to customs duty or excise duty, by the person by whom the goods are removed.
+[20/2010]
+(3) Subject to subsection (4), where —
+(
+a
+)
+imported goods that are under customs control (called in this section the firstmentioned goods) are used to produce or manufacture other goods in the customs territory in a place specified in a licence granted under section 63(1) of the Customs Act 1960; and
+(
+b
+)
+no supplies of the other goods involve —
+(i)
+the other goods being removed from a place under such customs control; or
+(ii)
+the other goods being made available while under such customs control,
+then, when the other goods are removed from customs control —
+(
+c
+)
+the firstmentioned goods are treated as having been removed from customs control at the time the other goods are produced or manufactured; and
+(
+d
+)
+the tax payable on the importation of the firstmentioned goods is payable at the duty point pertaining to the other goods —
+(i)
+if the other goods are subject to customs duty or excise duty, by the person who is required to pay the duty; and
+(ii)
+if the other goods are not subject to customs duty or excise duty, by the person by whom the other goods are removed,
+unless otherwise prescribed.
+[20/2010]
+(4) Despite subsections (1), (2) and (3), where —
+(
+a
+)
+the goods referred to in subsections (1), (2)(
+a
+) and (3)(
+a
+) are brought under customs control into the customs territory and are thereafter —
+(i)
+brought to any place from which they may not be removed except with the permission of the proper officer of customs (and by virtue of which the goods continue to remain under customs control); and
+(ii)
+brought to that place for the purpose of the repair of, maintenance of or performance of any other similar service on the goods, or for the purpose of an auction, an exhibition or any other similar event involving the display of goods;
+(
+b
+)
+one or more supplies of the goods are made while they are in that place; and
+(
+c
+)
+the goods supplied are then removed directly from that place so as to be removed from customs control,
+those supplies are not disregarded for the purpose of this Act and are chargeable to tax in accordance with the provisions of this Act (other than this section).
+[20/2010; 19/2012]
+(5) The Minister may by regulations —
+(
+a
+)
+provide that the goods referred to in subsection (1), (2)(
+a
+) or (3)(
+a
+) —
+(i)
+may be removed from customs control without payment of the tax in such circumstances as may be prescribed; and
+(ii)
+for such tax to be accounted for together with the tax chargeable on the supply of goods or services;
+(
+b
+)
+provide for the licensing of warehouses or other places for the purposes of this section and such regulations may provide for the imposition of conditions thereon and the payment of any prescribed fee; and
+(
+c
+)
+prescribe anything which may be prescribed under this section.
+[20/2010]
+(6) In the application of the Customs Act 1960, by virtue of section 26, to any goods which are not subject to either customs duty or excise duty, such goods are construed as being under “customs control” within the meaning of section 3(2) of the Customs Act 1960 —
+(
+a
+)
+as if they are dutiable goods; and
+(
+b
+)
+as if the reference to a licensed warehouse in section 3(2) of the Customs Act 1960 includes a warehouse or other place licensed under this section.
+[20/2010]
+(7) In this section —
+“customs territory” and “proper officer of customs” have the meanings given by section 3(1) of the Customs Act 1960;
+“duty point”, in relation to any goods, means —
+(
+a
+)
+in the case of goods which are subject to customs duty or excise duty or both customs duty and excise duty, the time when the customs duty or excise duty takes effect, whichever is the earlier; or
+(
+b
+)
+in the case of goods which are not subject to either customs duty or excise duty, the time when the goods are removed from customs control.
+[20/2010]
+Process applied to or carried out on goods of a person belonging in a country other than Singapore
+37A.
+—(1) The Minister may by regulations make provisions for a supply, made by a taxable person approved by the Comptroller, which involves any process (including but not limited to any treatment) being applied to or carried out on goods —
+(
+a
+)
+under a contract with a person who —
+(i)
+belongs in a country outside Singapore and is not a registered person; or
+(ii)
+is a registered (Seventh Schedule — pay only) person,
+(called in this section an overseas person); and
+(
+b
+)
+which directly benefits a person who —
+(i)
+belongs in a country outside Singapore and is not a registered person; or
+(ii)
+is a registered (Seventh Schedule — pay only) person,
+(called in this section an overseas person),
+to be disregarded for the purposes of this Act (other than for the purposes of section 27(2)(
+a
+)) subject to such conditions or restrictions as may be prescribed or as the Comptroller may impose for the protection of the revenue.
+[20/2010; 24/2011; 52/2018]
+(2) Regulations made under subsection (1) may provide for the following in relation to goods to or on which a process has been applied or carried out:
+(
+a
+)
+for the goods —
+(i)
+to be delivered to the satisfaction of the Comptroller only to —
+(A)
+any taxable person approved by the Comptroller; or
+(B)
+the customer of an overseas person to whom the overseas person supplies the goods;
+(ii)
+to be exported to the satisfaction of the Comptroller; or
+(iii)
+if the goods are of such type or description as may be prescribed, to be destroyed or disposed of to the satisfaction of the Comptroller by the taxable person or any other person,
+and, where any taxable person (including a taxable person referred to in subsection (1)) fails to do so, for the taxable person to pay to the Comptroller an amount equal to the tax that would have been payable if the taxable person had himself, herself or itself made a supply of the goods in the course or furtherance of the taxable person’s business;
+(
+b
+)
+for a taxable person approved by the Comptroller who receives the goods from another approved person to declare, in such form and manner as the Comptroller may require, the taxable person’s receipt of those goods;
+(
+c
+)
+where a taxable person approved by the Comptroller, to the satisfaction of the Comptroller —
+(i)
+delivers the goods to the customer of the overseas person referred to in paragraph (
+a
+)(i)(B); or
+(ii)
+in relation to such of those goods which are of such type or description as may be prescribed, destroys or disposes of the goods or delivers them to another person for the destruction or disposal, in circumstances where consideration for the goods is received by the taxable person or the overseas person upon the destruction or disposal,
+for the taxable person to account for and pay tax in substitution for the overseas person, as if the taxable person had himself, herself or itself supplied the goods in the course or furtherance of the taxable person’s business.
+[20/2010; 24/2011; 19/2012]
+(2A) Regulations made under subsection (1) may provide that, upon such conditions as may be prescribed being satisfied, where the goods are —
+(
+a
+)
+supplied to the overseas person in Singapore; and
+(
+b
+)
+delivered to the taxable person approved by the Comptroller for the purposes of any process being applied to or carried out on the goods under a contract with and directly benefitting the overseas person,
+the goods are treated as having been supplied to the taxable person in the course or furtherance of the taxable person’s business for the purpose of the taxable person claiming input tax on the supply of the goods under section 19 as if the whole of the input tax were allowable under section 20.
+[24/2011]
+(2B) A person who belongs in a country outside Singapore referred to in subsection (1)(
+a
+) or (
+b
+) may, for the purposes of determining the person’s liability to be registered under this Act, disregard any supply of goods made by the person if —
+(
+a
+)
+the tax on such supply is to be accounted for by the taxable person approved by the Comptroller pursuant to subsection (2)(
+c
+); or
+(
+b
+)
+in a case where a taxable person has applied to be but is not yet approved by the Comptroller, the tax on such supply would be accounted for by the taxable person pursuant to subsection (2)(
+c
+) if the taxable person were to be so approved,
+as the case may be.
+[24/2011]
+Refining of goods into investment precious metals
+37B.
+—(1) The Minister may by regulations make provision in relation to the following:
+(
+a
+)
+for the approval by the Comptroller of any person as an approved refiner or an approved consolidator;
+(
+b
+)
+where —
+(i)
+goods are consigned by a person who —
+(A)
+belongs in a country outside Singapore and is not a registered person; or
+(B)
+is a registered (Seventh Schedule — pay only) person,
+(called in this section an overseas person) to an approved person for refining into any investment precious metal by an approved refiner (including where the approved person is also the approved refiner); and
+(ii)
+the approved person delivers the investment precious metal obtained through the refining to another person pursuant to a supply of the investment precious metal by the overseas person to the other person,
+for the approved person to account for the supply of the investment precious metal as if it were the approved person’s supply made in the course or furtherance of the approved person’s business, in such form and manner as the Comptroller may determine;
+(
+c
+)
+where —
+(i)
+goods are consigned by an overseas person to an approved person for refining by an approved refiner (including where the approved person is also the approved refiner);
+(ii)
+goods other than investment precious metals arise as a result of or remain after the process of refining the goods (including precious metals, by products, and any residue or scrap); and
+(iii)
+the approved person delivers such other goods to another person pursuant to instructions of the overseas person, whether or not consideration is received by the approved person or the overseas person in connection with the delivery,
+for the approved person to account for tax in substitution for the overseas person as if the approved person had himself, herself or itself supplied such other goods in the course or furtherance of the approved person’s business, and, where no consideration is received, as if there had been a supply of such other goods, in such form and manner as the Comptroller may determine.
+[19/2012; 52/2018]
+(2) In this section —
+“approved person” means an approved refiner or an approved consolidator;
+“consolidator” means a person who supplies or delivers goods to a refiner for the purpose of refining the goods;
+“investment precious metal” means any investment precious metal specified in Part 2 of the Fourth Schedule;
+“precious metal” means gold, silver or platinum that does not qualify as an investment precious metal;
+“refine”, in relation to goods (including goods that are investment precious metals or precious metals) —
+(
+a
+)
+means to process or convert the goods into, or extract from the goods, any investment precious metal, or precious metal; and
+(
+b
+)
+includes the minting of any coin that is an investment precious metal, or precious metal,
+and “refiner” is construed accordingly.
+[19/2012; 21/2013]
+Customers to account for tax on certain supplies
+38.
+—(1) Where any person makes any prescribed supply of goods or services to another person and that supply is a taxable supply but not a zero-rated supply, the prescribed supply is treated for the purposes of the First Schedule —
+(
+a
+)
+as a taxable supply of that other person (as well as a taxable supply of the person who makes it); and
+(
+b
+)
+insofar as that other person is supplied in connection with the carrying on by that other person of any business, as a supply made by that other person in the course or furtherance of that business.
+(1A) Nothing in subsection (1)(
+b
+) requires any supply to be disregarded for the purposes of the First Schedule on the grounds that it is a supply of capital assets of that other person’s business.
+(2) Where a taxable person makes any prescribed supply of goods or services to a person who —
+(
+a
+)
+is himself, herself or itself a taxable person at the time when the prescribed supply is made; and
+(
+b
+)
+is supplied in connection with the carrying on by the person of any business,
+then, it is for the person supplied to account for and pay tax on the prescribed supply as if the person supplied were the supplier; and the supplier must not require payment from the person supplied, of the tax on the prescribed supply or an amount as being attributable to the tax.
+[37/2017]
+(2A) Nothing in subsection (2) prevents section 78(2) from applying to the person making the prescribed supply of goods or services if, despite that subsection, the person issues an invoice for the prescribed supply of goods or services showing it as taking place with tax chargeable on it.
+[37/2017]
+(3) So much of this Act and of any written law as has effect for the purposes of, or in connection with, the enforcement of any obligation to account for and pay goods and services tax applies for the purposes of this section in relation to any person who is required under subsection (2) to account for and pay any tax as if that tax were tax on a supply made by the person.
+(4) Despite sections 11, 11A, 11B and 12, for the purposes of this section, a prescribed supply of goods or services is treated as taking place —
+(
+a
+)
+in the case of a prescribed supply that is a supply of goods —
+(i)
+if the goods are to be removed, at the time of the removal; or
+(ii)
+if the goods are not to be removed, at the time when they are made available to the person to whom they are supplied; or
+(
+b
+)
+in the case of a prescribed supply that is a supply of services, at the time when the services are performed.
+[20/2010]
+(4A) Section 12(1) does not apply for determining the time when any prescribed supply of goods or services is treated as taking place.
+[20/2010]
+(5) In this section, “prescribed supply”, in relation to goods or services, means such supply of —
+(
+a
+)
+goods consisting in or containing any precious or semi‑precious metal or stones;
+(
+b
+)
+services relating to, or to anything containing, any precious or semi‑precious metal or stones;
+(
+c
+)
+goods or services comprising in or relating to land or any interest in or right over land; or
+(
+d
+)
+goods consisting in furniture, furnishings, fittings, appliances or effects that are supplied together with any goods or services mentioned in paragraph (
+c
+),
+as may be specified or described in regulations made by the Minister.
+[37/2017]
+Customers to account for tax on relevant supplies of goods or services
+38A.
+—(1) This section applies in circumstances where a taxable person (called in this section the supplier) makes a relevant supply of goods or services to a person (called in this section the customer) who is registered under this Act at the time when the relevant supply is made.
+[37/2017]
+(2) Where the relevant supply of goods or services is made by the supplier in connection with the carrying on by the customer of any business, then, it is for the customer to account for and pay tax on the relevant supply as if the customer were the supplier; and the supplier must not require payment from the customer, of the tax on the relevant supply or an amount as being attributable to the tax.
+[37/2017]
+(3) Nothing in subsection (2) prevents section 78(2) from applying to the supplier if, despite that subsection, the supplier issues an invoice for the relevant supply of goods or services showing it as taking place with tax chargeable on it.
+[37/2017]
+(4) So much of this Act and of any written law as has effect for the purposes of, or in connection with, the enforcement of any obligation to account for and pay goods and services tax apply for the purposes of this section in relation to the customer, as if the tax were tax on a supply made by the customer.
+[37/2017]
+(5) If the relevant supply of goods or services is not made by the supplier to the customer in connection with the carrying on by the customer of any business, the customer must notify the supplier of that fact; and if the customer fails to do so, the customer must, unless otherwise allowed by the Comptroller —
+(
+a
+)
+pay to the Comptroller without demand the amount of tax chargeable on the relevant supply to which the failure relates; and
+(
+b
+)
+include the amount of tax mentioned in paragraph (
+a
+) as output tax in the customer’s return.
+[37/2017]
+(6) The Minister may make regulations under this section for any of the following:
+(
+a
+)
+to prescribe a supply of goods or services for the purposes of the definition of “relevant supply of goods or services” in subsection (10), by reference to one or both of the following:
+(i)
+any use which is made of the goods or services;
+(ii)
+any other matter whether or not related to a description or characteristic of the goods or services;
+(
+b
+)
+to provide for the application (with such modification as may be prescribed) of this section to a case where —
+(i)
+the value of a relevant supply of goods or services is increased by an amount (
+I
+) after the supply is made; or
+(ii)
+the value of a supply of goods or services is increased by an amount (
+I
+) after the supply is made, such that it becomes a relevant supply of goods or services,
+including by treating a separate supply of goods or services as having taken place with a value equal to
+I
+;
+(
+c
+)
+to require, in a case where —
+(i)
+the value of a relevant supply of goods or services is adjusted after the supply is made; or
+(ii)
+the value of a supply of goods or services is increased after the supply is made, such that it becomes a relevant supply of goods or services,
+the supplier or customer, or both, to make corresponding adjustments to the tax accounted for or paid, or to be accounted for or paid, in the form and manner required by the Comptroller;
+(
+d
+)
+generally for the purpose of carrying out the provisions of this section.
+[37/2017]
+(7) The regulations made under subsection (6) may make different provisions for different circumstances (including the circumstances under which paragraph (
+c
+) of the definition of “relevant supply of goods or services” in subsection (10) does not apply).
+[37/2017]
+(8) This section does not apply to any supply of goods or services prescribed as a prescribed supply under section 38.
+[37/2017]
+(9) To avoid doubt, relevant supplies of goods or services are not taxable supplies of the customer for the purposes of the First Schedule.
+[37/2017]
+(10) In this section —
+“excepted supply” means any supply of goods or services that is prescribed as an excepted supply;
+“relevant supply of goods or services” means any taxable supply of goods or services that is prescribed for the purpose of this definition, but not if —
+(
+a
+)
+the supply is a zero‑rated supply;
+(
+b
+)
+the supply is an excepted supply; or
+(
+c
+)
+the value of the supply does not exceed the threshold that is prescribed for the purpose of this definition for that supply (where applicable).
+[37/2017]

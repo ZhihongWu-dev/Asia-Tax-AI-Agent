@@ -1,0 +1,1541 @@
+Inland Revenue Department 
+The Government of the Hong Kong Special Administrative Region
+of the People's Republic of China 
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES 
+NO. 21 (REVISED) 
+LOCALITY OF PROFITS  
+These notes are issued for the information of taxpayers and their tax 
+representatives.  They contain the Department’s interpretation and practices in 
+relation to the law as it stood at the date of publication.  Taxpayers are 
+reminded that their right of objection against the assessment and their right of 
+appeal to the Commissioner, the Board of Review or the Court are not affected 
+by the application of these notes. 
+These notes replace those issued in December 2009. 
+CHU Yam-yuen
+Commissioner of Inland Revenue 
+July 2012 
+Our web site : www.ird.gov.hk 
+
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES 
+ 
+No. 21 (REVISED) 
+ 
+CONTENT 
+ 
+ 
+ 
+Paragraph
+ 
+Introduction 
+1
+ 
+Basic tests for liability to Profits Tax 
+3
+ 
+Source concept 
+4
+ 
+The broad guiding principle 
+6
+ 
+Antecedent or incidental activities 
+14
+ 
+Principles on which locality of profits is determined 
+17
+ 
+Trading profits 
+18
+ 
+Re-invoicing centre 
+27
+ 
+Buying office 
+29
+ 
+Manufacturing profits 
+30
+ 
+Contract processing 
+33
+ 
+Import processing 
+39
+ 
+Other profits 
+45
+ 
+Apportionment of profits 
+46
+ 
+Sale or purchase commission 
+48
+
+ 
+ii
+ 
+Group service companies 
+51
+ 
+Financial institutions 
+53
+ 
+Processing of offshore claims 
+55
+ 
+Agency 
+58
+ 
+Booked profits 
+60
+ 
+Advance Rulings 
+61
+ 
+Conclusion 
+62
+ 
+
+INTRODUCTION 
+ 
+ 
+The territorial concept has always been fundamental to the taxation 
+of profits in Hong Kong.  Only those profits which arise in or are derived from 
+Hong Kong are liable to tax here.  However, where the territorial concept is 
+clear, its application in particular cases at times remains a contentious issue 
+between the Department and practitioners with numerous disputes being 
+referred to the Board of Review and the Courts.  The decisions of the Privy 
+Council in CIR v. Hang Seng Bank Limited [1991] 1 AC 306, HK-TVB 
+International Limited v. CIR [1992] 2 AC 397 and CIR v. Orion Caribbean 
+Limited [1997] HKLRD 924 and of the Court of Final Appeal in Kwong Mile 
+Services Limited v. CIR [2004] 3 HKLRD 168, Kim Eng Securities (Hong 
+Kong) Limited v. CIR [2007] 2 HKLRD 117 and ING Baring Securities (Hong 
+Kong) Limited v. CIR [2008] 1 HKLRD 412, established guidelines to assist in 
+locating the source of profits.  The broad guiding principle is that “one looks to 
+see what the taxpayer has done to earn the profits in question and where he has 
+done it”. 
+ 
+2. 
+ 
+The Hang Seng Bank, HK-TVBI, Orion Caribbean, Kwong Mile, 
+Kim Eng and ING Baring decisions do not set out rules to cover all cases where 
+the locality of profits in issue, rather they clarify the general principles to be 
+followed in determining the locality of profits.  The purpose of this note is to 
+state what the Department considers are the general principles laid down by the 
+Privy Council and the Court of Final Appeal and then give specific examples 
+applying those principles.  At the same time, it must be emphasised that each 
+case will be determined on its own facts.  As commented on in Orion 
+Caribbean, Hang Seng Bank did not, when speaking of “profits earned ‘by the 
+exploitation of property assets by letting property, lending money or dealing in 
+commodities or securities’ lay down a rule of law.  Rather, the case affirmed 
+that “no simple legal test can be employed”. 
+ 
+ 
+BASIC TESTS FOR LIABILITY TO PROFITS TAX 
+ 
+3. 
+Section 14 of the Inland Revenue Ordinance (“the Ordinance”) 
+makes it clear that only profits arising in or derived from Hong Kong are 
+chargeable to profits tax.  The residence of a taxpayer is not relevant.  In Hang 
+
+Seng Bank, Lord Bridge explained the three conditions that must be satisfied 
+before a profits tax liability arises: 
+ 
+(a) 
+The person must carry on a trade, profession or business in 
+Hong Kong; 
+ 
+(b) 
+The profits to be charged must be from such trade, profession 
+or business carried on by the person in Hong Kong; and 
+ 
+(c) 
+The profits must be profits arising in or derived from Hong 
+Kong. 
+ 
+This Practice Note will focus on the third condition, i.e. the locality of profits.  
+The terms “source” and “locality” are used interchangeably in this Practice 
+Note. 
+ 
+ 
+SOURCE CONCEPT 
+ 
+4. 
+Though the word “source” is not used in section 14, it has always 
+been accepted by the courts that the words “arising in or derived from” raised 
+the concept of source.  Cases from other common law jurisdictions with 
+legislation using the specific word “source” are therefore relevant and have 
+been used in assisting the interpretation of the words used in section 14.  In 
+CIR v. Philips Gloeilampenfabrieken [1955] NZLR 868, Barrowclough CJ at 
+874 said that the concept of derivation seems necessarily to imply the concept 
+of a source. 
+ 
+5. 
+“Source” is not a legal concept.  In Nathan v. FCT [1918] 25 CLR 
+183 at 189-190, Isaacs J explained: 
+ 
+ 
+ 
+“The Legislature in using the word ‘source’ meant, not a legal 
+concept, but something which a practical man would regard as a 
+real source of income.  Legal concepts must, of course, enter into the 
+question when we have to consider to whom a given source belongs.  
+But the ascertainment of the actual source of a given income is a 
+practical, hard matter of fact.” 
+ 
+ 
+2
+
+THE BROAD GUIDING PRINCIPLE 
+ 
+6. 
+Lord Bridge in Hang Seng Bank has the following to say at 319A 
+about the distinction of profits arising in or derived from Hong Kong and those 
+that are not: 
+ 
+ 
+ 
+“… a distinction must fall to be made between profits arising in or 
+derived from Hong Kong (“Hong Kong profits”) and profits arising 
+in or derived from a place outside Hong Kong (“offshore profits”) 
+according to the nature of the different transactions by which the 
+profits are generated.” 
+ 
+7. 
+Lord Bridge explained the “broad guiding principle” in Hang Seng 
+Bank at 322H to 323A in the following terms: 
+ 
+ 
+“But the question whether the gross profit resulting from a 
+particular transaction arose in or derived from one place or another 
+is always in the last analysis a question of fact depending on the 
+nature of the transaction. It is impossible to lay down precise rules 
+of law by which the answer to that question is to be determined. The 
+broad guiding principle, attested by many authorities, is that one 
+looks to see what the taxpayer has done to earn the profit in 
+question.”   
+ 
+8. 
+The “operations test” was further elaborated by Lord Jauncey in HK-
+TVBI at 407C-D: 
+ 
+“F. L. Smidth & Co. v. Greenwood [1921] 3 K.B. 583 was cited in 
+Hang Seng Bank case and their Lordships do not doubt that Lord 
+Bridge has in mind the judgment of Atkin L. J. in that case and in 
+particular the passage when he said, at p. 593: “I think that the 
+question is, where do the operations take place from which the 
+profits in substance arise?” 
+ 
+Thus Lord Bridge’s guiding principle could properly be expanded to 
+read “one looks to see what the taxpayer has done to earn the profit 
+in question and where he has done it.” 
+ 
+ 
+3
+
+ 
+4
+9. 
+Lord Bridge exemplified his dicta in paragraph 7 above at 323A-B 
+as follows: 
+ 
+“If he has rendered a service or engaged in an activity such as the 
+manufacture of goods, the profit will have arisen or derived from the 
+place where the service was rendered or the profit making activity 
+carried on.  But if the profit was earned by the exploitation of 
+property assets as by letting property, lending money or dealing in 
+commodities or securities by buying and selling at a profit, the profit 
+will have arisen in or derived from the place where the property was 
+let, the money was lent or the contracts of purchase and sale were 
+effected.” 
+ 
+10. 
+The examples cited by Lord Bridge in Hang Seng Bank are not 
+meant to be exhaustive and a careful analysis of the relevant facts need to be 
+carried out in deciding whether a particular case falls within the examples.  
+Lord Jauncey in HK-TVBI has warned against such an approach in the 
+following terms at 409D-E: 
+ 
+“Their Lordships consider that it is a mistake to try and find an 
+analogy between the facts in this appeal and the example given by 
+Lord Bridge in the Hang Seng Bank case.  The circumstances in that 
+case involving, as they did, buying and selling in well defined 
+foreign markets were very different from those in the present and the 
+examples were never intended to be exhaustive of all situations in 
+which section 14 of the Ordinance might have to be considered.  The 
+proper approach is to ascertain what were the operations which 
+produced the relevant profits and where those operations took 
+place.” 
+ 
+11. 
+The broad guiding principle has been followed in subsequent cases 
+before the Court of Final Appeal.  In Kwong Mile, Bokhary PJ summarised the 
+broad guiding principle at 174I to175E: 
+ 
+“The ascertainment of the source of a profit is not hindered by 
+technical rules, but is helped by the broad guiding principle that one 
+looks to see what the taxpayer has done to earn the profit and where 
+he has done it. …….  In CIR v. Orion Caribbean Ltd [1997] HKLRD 
+
+924, Lord Nolan emphasised (at p.931F) that “[n]o simple, single, 
+legal test can be employed” when ascertaining the source of a 
+profit. …...  The situations in which the source of a profit has to be 
+ascertained are too many and varied for a universal judge-made 
+test.   Apart from the words of the statute themselves, the only 
+constant is the need to grasp the reality of each case, focusing on 
+effective causes without being distracted by antecedent or incidental 
+matters.” 
+ 
+12. 
+While the question of source of profits is a practical, hard matter of 
+fact, the broad guiding principle formulated in the judicial precedents has 
+enabled the proper and consistent application of the source concept to various 
+factual situations.  The broad guiding principle is not a set of rules.  A rule 
+attaches a definite, detailed consequence to a detailed set of facts.  It either 
+applies to a given situation, or it does not so apply; there is no latitude in its 
+application.  A principle, relative to a rule, is broad, general and unspecific.  
+The broad guiding principle is an authoritative starting point for assessing and 
+reassessing, inclining towards a particular decision but not necessarily 
+compelling it. 
+  
+13. 
+The broad guiding principle is not exhausted by any catalogue of 
+factual circumstances.  It does not expire when no judicial decision clearly 
+covers the present case because the value of the principle relies on the relevant 
+operations which produce the profits.  It improves certainty even if a taxpayer 
+finds that some of the details of his specific case are different.  He would know 
+how to apply the profits tax charging provisions as he would understand the 
+underlying principle.  By elucidating the broad guiding principle underlying 
+the taxation of profits, conceptual clarity and a more coherent regime can be 
+achieved. 
+ 
+ 
+ANTECEDENT OR INCIDENTAL ACTIVITIES 
+ 
+14. 
+In ING Baring at 428, Ribeiro PJ when discussing the legal principle 
+also emphasised the need to grasp the reality of each case, focusing on effective 
+causes without being distracted by antecedent or incidental matters.  The focus 
+is on establishing the geographical location of the taxpayer’s profit-producing 
+ 
+5
+
+transactions as distinct from activities antecedent or incidental to those 
+transactions. 
+ 
+15. 
+Whether an act is an antecedent or incidental activity is a question of 
+fact and would depend on the nature of the transaction.  In CIR v. The Hong 
+Kong & Whampoa Dock Co Ltd [1960] 1 HKTC 85, the initial business contact 
+in Hong Kong which set in motion a chain of operations that ultimately led to 
+the salvaging of the vessel was rejected as the relevant operation. 
+ 
+16. 
+Comments in a similar vein can be found in Hang Seng Bank at 
+320F-G: 
+ 
+“The activities of the bank from which the income arose was the 
+buying and selling of this property in overseas market places and 
+not the decision making process in Hong Kong or any other 
+activities in Hong Kong.  Likewise the income arose from the 
+trading in property situate outside of Hong Kong and not the 
+moneys of customers situate in Hong Kong.” 
+ 
+ 
+PRINCIPLES ON WHICH LOCALITY OF PROFITS IS DETERMINED 
+ 
+17. 
+Assuming the first two conditions stated in paragraph 3 above are 
+satisfied, liability to profits tax will only arise if a person’s profits arise in or 
+are derived from Hong Kong.  The Department’s view is that the basic 
+principles for determining the locality of profits enunciated in the decisions of 
+Hang Seng Bank, HK-TVBI, Orion Caribbean, Kwong Mile, Kim Eng and ING 
+Baring can be summarised as follows: 
+ 
+(a) 
+The question of locality of profits is a hard, practical 
+matter of fact.  No universal judge-made test will cover 
+every case.  Whether profits arise in or are derived from 
+Hong Kong depends on the nature of the profits and the 
+transactions giving rise to them. 
+ 
+(b) 
+The ascertainment of the source of profits though a 
+practical, hard matter of fact requires an accurate legal 
+analysis of the transaction. 
+ 
+6
+
+(c) 
+The transactions must be looked at separately and the 
+profits of each transaction considered on their own. 
+ 
+(d) 
+The broad guiding principle is that one looks to see what 
+the taxpayer has done to earn the profits in question and 
+where he has done it.  In other words, the proper approach 
+is to ascertain what were the operations which produced 
+the relevant profits and where those operations took place. 
+ 
+(e) 
+The operations in question must be the operations of the 
+taxpayer. 
+ 
+(f) 
+The relevant operations do not comprise the whole of the 
+taxpayer’s activities carried out in the course of his 
+business but only those which produce the profit in 
+question.  It is necessary to appreciate the reality of each 
+case, focusing on effective causes for earning the profits 
+without being distracted by antecedent or incidental 
+matters. 
+ 
+(g) 
+The distinction between Hong Kong profits and offshore 
+profits is made by reference to gross profits arising from 
+individual transactions. 
+ 
+(h) 
+In certain situations, where gross profits from an 
+individual transaction arise in different places, they can be 
+apportioned as arising partly in and partly outside Hong 
+Kong. 
+ 
+(i) 
+The place where day to day investment decisions are taken 
+does not generally determine the locality of profits. 
+ 
+(j) 
+It is necessary to examine the operations of the taxpayer 
+irrespective of the fact that the taxpayer may be a 
+company within a group.  The source of profits must be 
+attributed to the operations of the taxpayer which produce 
+them and not to the operations of other members of the 
+group.  The operations of the group should not be looked 
+ 
+7
+
+at on the question of source.  However, in appropriate 
+cases, if a related company is in fact acting on behalf of 
+the taxpayer, then the activities of the related company 
+will be considered to see if appropriate weight should be 
+accorded thereto. 
+ 
+(k) 
+If an arrangement or scheme is implemented in Hong 
+Kong to free transactions from overseas regulations or 
+overcome trade barriers, this in itself does not mean that 
+the profits will be sourced outside Hong Kong. 
+ 
+(l) 
+Identifying an agent’s acts with those of its principal, 
+whilst imposing some unity on the law applicable to 
+situations where one party represents or acts for another, 
+should not be taken to an inappropriate degree or taken too 
+literally since this is not conducive to arriving at the 
+accurate legal analysis. 
+ 
+(m) 
+In brokerage business, it is not necessary that the 
+transaction which produced the profit was carried out by 
+the taxpayer or his agent in the full legal sense (i.e. one 
+who enters into a contract on his principal’s behalf 
+creating a contractual relationship between his principal 
+and a third party).  It is sufficient that the transaction was 
+carried out on the taxpayer’s behalf and for his account by 
+a person acting on his instructions. 
+ 
+(n) 
+The absence of an overseas permanent establishment of a 
+Hong Kong business does not, of itself, mean that all of 
+the profits of that business arise in or are derived from 
+Hong Kong. 
+ 
+(o) 
+The place where the taxpayer’s profits arise is not 
+necessarily the place where he carries on business.  
+However, in HK-TVBI Lord Jauncey said, “it can only be 
+in rare cases that a taxpayer with a principal place of 
+business in Hong Kong can earn profits which are not 
+chargeable to profits tax.” 
+ 
+8
+
+The above summary only serves to outline the important principles and does 
+not mean to be exhaustive.  It goes without saying that the peculiar facts of a 
+case may call for special consideration. 
+ 
+The following paragraphs set out the Department’s views on how the source 
+of profits is to be determined with respect to various forms of business 
+activities. 
+ 
+ 
+TRADING PROFITS 
+ 
+18. 
+In CIR v. Magna Industrial Co Ltd [1997] HKLRD 171 at 178, 
+Litton VP recognised that in case of a trading profit the purchase and the sale 
+were the important factors.  He further included in his deliberation all of the 
+relevant operations and not just the purchase and sale of the products.   When 
+applying the operations test, Litton VP said at 176G: 
+ 
+“In other words, one looks to see what the taxpayer has done to 
+earn the profits and where he has done it.  Obviously the question 
+where the goods were bought and sold is important.  But there are 
+other questions: For example: How were the goods procured and 
+stored?  How were the sales solicited?  How were the orders 
+processed?  How were the goods shipped?  How was the financing 
+arranged?  How was payment effected?” 
+ 
+19. 
+The obtaining of the buyer’s order in Hong Kong and the placing of 
+the order with the seller from Hong Kong are the foundations of a trading 
+transaction since the differential between the selling price and the buying price 
+(i.e. the mark-up) generates the profit.  In Exxon Chemical International Supply 
+SA v. CIR 3 HKTC 57, having decided that the obtaining of the order from the 
+buyer and the placing of the order with the seller, took place respectively in and 
+from Hong Kong, Godfrey J concluded that the profit arose in or was derived 
+from Hong Kong. 
+ 
+20. 
+In CIR v. Euro Tech (Far East) Limited 4 HKTC 30, Barnett J 
+doubted that there should be some particular level or threshold of activity on 
+the part of the taxpayer in Hong Kong, such as by bringing the products into 
+Hong Kong and re-exporting them.  He observed that in many trading 
+ 
+9
+
+companies the taxpayer was doing no more than bringing together the 
+complementary needs of sellers and buyers.  He said if the bringing together 
+was done in Hong Kong the trading profit was sourced in Hong Kong.    
+  
+21. 
+When Lord Bridge said in Hang Seng Bank that profits from buying 
+and reselling of commodities were derived from the place where “the contracts 
+of purchase and sale were effected”, he could not merely mean legally executed 
+(as this would depend on formal legal rules of offer and acceptance).  The 
+Department agrees with the approach in Magna and will contemplate all the 
+relevant operations carried out to earn the profits, including the solicitation of 
+orders, negotiation, conclusion, trade financing, shipment and performance of 
+the contracts. 
+ 
+22. 
+The Department does not merely look at the place of contract to 
+determine the geographical source of profits.  Where the contract is made by 
+exchange of letters, by fax, or by e-mail, the application of contract law and of 
+private international law as to where the contract is made may result in 
+conclusions that are entirely fortuitous.   In Firestone Tyre and Rubber Co Ltd 
+v. Lewellin [1957] 1 WLR 464 (HL) at 471, Lord Radcliffe said such an 
+approach under the conditions of international business and modern facilities of 
+communication was capable of proving a somewhat ingenuous one.  Hunter J 
+shared the same view in Sinolink Overseas Ltd v. CIR 2 HKTC 126 at 131. 
+ 
+23. 
+On the basis of the various court judgments discussed in paragraphs 
+18 to 22 above, the Department’s views which are reflected in its assessing 
+practice on the locality of profits derived from trading in commodities or goods 
+by a business carried on in Hong Kong can be summarised as follows: 
+ 
+(a) 
+Where both the contract of purchase and contract of sale are 
+effected in Hong Kong, the profits are fully taxable. 
+ 
+(b) 
+Where both the contract of purchase and contract of sale are 
+effected outside Hong Kong, no part of the profits are taxable. 
+ 
+ (c)   Where either the contract of purchase or contract of sale is    
+effected in Hong Kong, the initial presumption will be that 
+the profits are fully taxable.  Matters, such as those 
+ 
+10
+
+mentioned in paragraph 18 above, will be examined to 
+determine the issue. 
+ 
+(d) 
+Where the sale is made to a Hong Kong customer (including 
+the Hong Kong buying office of an overseas customer), the 
+sale contract will usually be taken as having been effected in 
+Hong Kong. 
+ 
+(e) 
+Where the commodities or goods are purchased from either a 
+Hong Kong supplier or manufacturer, the purchase contract 
+will usually be taken as having been effected in Hong Kong. 
+ 
+(f) 
+Where the effecting of the purchase and sale contracts does 
+not require travel outside Hong Kong but is carried out in 
+Hong Kong by telephone, fax, etc., the contracts will be 
+considered as having been effected in Hong Kong. 
+ 
+(g) 
+The purchase and sale contracts are important factors but all 
+the relevant operations that produce the trading profits must 
+be looked at to determine the locality of the profits. 
+ 
+Persons who are merely trading with Hong Kong by either selling goods to 
+customers in Hong Kong or buying goods from suppliers in Hong Kong will 
+not fall within the ambit of this paragraph.  Nor will this paragraph applies to a 
+buying office referred to in paragraph 29 below. 
+ 
+24. 
+Having regard to the points expressed above, it will be apparent that, 
+in the Department’s view, the question of apportionment does not arise in 
+relation to trading profits.  Trading profits will be either wholly taxable or 
+wholly non-taxable.  There is no room to substitute a mixed source for a Hong 
+Kong source even though there might be some overseas activities. 
+ 
+25. 
+Cases may arise where it is claimed that contracts of purchase and of 
+sale have been effected wholly outside Hong Kong by employees of the Hong 
+Kong business travelling abroad or by overseas agents.  In this context, no 
+                           
+operations are carried out in Hong Kong to give effect to the trading
+transaction; and the employee or overseas agent habitually exercises a general 
+authority to negotiate and conclude contracts on behalf of his principal. 
+ 
+11
+
+   
+26. 
+Normally the activities of an agent and an employee are accorded the 
+same weight if it can be shown that the employee has full authority to conclude 
+contracts without reference to the business in Hong Kong.  In considering 
+claims that contracts have been wholly effected outside Hong Kong by 
+employees, Assessors will, in addition to facts in paragraph 18 above, require 
+details of travelling, hotel and subsistence expenses in respect of each 
+individual transaction.  Where it is claimed that contracts are effected by 
+overseas agents, it will be necessary to provide agency agreements or other 
+evidence to support the claim. 
+ 
+ 
+RE-INVOICING CENTRE 
+ 
+27. 
+The Department’s view is that if a profit is derived from services 
+rendered in Hong Kong, the profit is clearly taxable.  Commission income or 
+profit that accrues to a “re-invoicing centre” for services rendered is chargeable 
+to profits tax.  Profits derived from the buying and selling of goods are not 
+service income.  The transaction involves the taking of commercial risks (e.g. 
+product risks, inventory risks, credit risks, exchange risks, capital risks, etc.) 
+different from those attached to a service.  Confirmation of sales and issue of 
+purchase orders are indications that it is a trading transaction.  The source of 
+trading profits depends on the locality of the trading operations.  Paragraphs 18 
+to 26 are relevant. 
+ 
+28. 
+It is not possible to categorise the circumstances under which income 
+or profit derived by a “re-invoicing centre” would be regarded as a service 
+income and not as a trading profit.  In each case, the Department would 
+examine the nature of the operations and the type of risks in question to 
+determine whether they constitute the provision of services or trading.  The 
+label “re-invoicing centre” clearly does not in itself provide the answer as it can 
+mean different business structures. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+12
+
+Example 1 
+ 
+Company A, incorporated in Hong Kong, is a re-invoicing centre of 
+a group of companies with a holding company incorporated in the 
+United States, as more particularly described below.  It manages in 
+Hong Kong all foreign currency exposures from intra-company 
+trade, guarantees the exchange rates for future orders and manages 
+intra-affiliate cash flows, including lead and lags of payments.   
+Manufacturing affiliates in Mainland China sell goods to Company 
+A, which in turns resells to the distribution affiliates in North 
+America and Europe. Company A resells at cost plus a mark-up for 
+its services.   The mark-up covers the cost of the re-invoicing centre 
+and a reasonable return on the services provided. 
+ 
+The profits accrue to Company A are service income derived from 
+Hong Kong.  The mark-up earned by Company A, which acts as a 
+re-invoicing centre, is chargeable to profits tax. 
+ 
+ 
+BUYING OFFICE 
+ 
+29. 
+A trading company, carrying on business outside Hong Kong, may 
+set up a branch in Hong Kong to act as a buying office for the purpose of 
+purchasing goods or merchandise or of collecting information.  The activities 
+of the branch are confined to the purchase of goods or merchandise or of 
+collecting information in Hong Kong and it is not involved in their sale, either 
+in Hong Kong or elsewhere.  In such a situation, a liability to Hong Kong 
+profits tax would not arise.  The functions of a buying office may also be 
+carried out by a subsidiary company or by an agent (either related or 
+unrelated).  However, as for a branch, the subsidiary company or agent must 
+not be involved in the sale of the goods.  On the other hand, any commission or 
+other remuneration earned by the subsidiary company or agent for performing 
+its services in Hong Kong will be fully taxable. 
+ 
+ 
+ 
+ 
+ 
+ 
+13
+
+MANUFACTURING PROFITS 
+ 
+30. 
+Lord Jauncey in HK-TVBI at 410F has commented on the source of 
+manufacturing profits.  He explained: 
+ 
+“If a manufacturer in Hong Kong sells his goods to a merchant in 
+Manila the payment which he receives is no doubt sourced in Manila 
+but his profit on the transaction arises in and is derived from his 
+manufacturing operation in Hong Kong.” 
+ 
+Where goods are manufactured in Hong Kong, the profits arising from the sale 
+of such goods will be fully taxable because the profit making activities are 
+considered to be the manufacturing operations carried out in Hong Kong, 
+which should include the procurement of raw materials, the employment of 
+labour, the design of products and the use of machinery and plant, etc.   
+ 
+31. 
+The following examples illustrate the Department’s views on this 
+subject: 
+ 
+Example 2 
+ 
+Company B manufactures goods in Hong Kong and sells them to 
+overseas customers.  The fact that Company B has sales staff based 
+overseas does not give a part of the profits an overseas source.  
+ 
+This is not a case for apportionment.  The whole of the profits are 
+liable to profits tax. 
+ 
+Example 3 
+ 
+Company C manufactures in Mainland China and sells the finished 
+goods through a retailing branch in Hong Kong.  The retailing 
+branch has sales staff and a fixed place of business, and has 
+registered for business in Hong Kong. 
+ 
+Company C is both a manufacturer and a retailer.  Profits are derived 
+from the manufacturing operations in Mainland China and the 
+retailing operations in Hong Kong.  It is necessary to apportion the 
+ 
+14
+
+profits derived by Company C.  Profits attributable to the Hong 
+Kong retailing branch are chargeable to profits tax. 
+ 
+32. 
+In Mainland China, two types of processing trade normally involve 
+Hong Kong companies: contract processing and import processing.  They are 
+two different forms of transaction and require an accurate legal analysis.  
+ 
+ 
+CONTRACT PROCESSING 
+ 
+33. 
+In contract processing, the document that governs the contractual 
+relationship among the parties is the processing agreement.  It sets out the 
+rights and responsibilities of the Hong Kong company and the Mainland 
+processing enterprise.  The Hong Kong company is responsible for the supply 
+of raw materials and machinery without consideration and to provide technical 
+and managerial know-how while the Mainland processing enterprise is 
+responsible for the provision of factory premises, utilities and labour force. 
+ 
+34. 
+In return for the processing service, the Hong Kong company pays a 
+subcontracting charge to the Mainland enterprise.  The legal title to the raw 
+materials and finished goods remains with the Hong Kong company.  In the 
+Department’s view, the Hong Kong company’s operations in Mainland China 
+complement its operations in Hong Kong.  Recognising the operations of the 
+Hong Kong company in the Mainland, an apportionment of profits on a 50:50 
+basis is usually accepted. 
+ 
+35. 
+In D132/99 15 IRBRD 25, the taxpayer contended that all of its 
+profits were offshore in nature.  The Board of Review held that its operations 
+in Mainland China were not dominant operations that overshadowed the 
+activities in Hong Kong and the operations in Hong Kong could not be 
+disregarded.    
+ 
+36. 
+In D145/99 15 IRBRD 91, the Board found that the taxpayer was not 
+privy to the processing agreements, which had been entered into by its fellow 
+subsidiaries and the taxpayer should be assessed for profits tax on 100% of its 
+profits for the years of assessment after the processing agreement lapsed.  The 
+Board found that the taxpayer’s business was the procurement of toys to satisfy 
+sale and purchase contracts and that important operations took place inside 
+ 
+15
+
+Hong Kong: the reaching of purchase agreements; the determination of price; 
+the issue of invoices; the procurement of raw materials and the shipment of 
+finished products. 
+ 
+37. 
+If the Hong Kong company has restricted involvement in the 
+processing arrangement with the Mainland enterprise, the apportionment of 
+profits could not be appropriate.  For example, a Hong Kong company has 
+contracted out the assembly work to various contractors in Hong Kong and the 
+Mainland.  The jobs are numerous, small in value and of short duration and the 
+Hong Kong company has minimal involvement in the assembly work.  Given 
+that the Hong Kong company does not carry out any manufacturing operations 
+outside Hong Kong, its profits should be fully chargeable to profits tax without 
+any apportionment. 
+ 
+38. 
+The apportionment contemplated in paragraph 34 above will also 
+apply to cases where manufacturing activities are undertaken under a similar 
+arrangement in other places. 
+ 
+ 
+IMPORT PROCESSING 
+ 
+39. 
+In import processing, the manufacturing operations are carried out by 
+a foreign investment enterprise (FIE) related to the Hong Kong company.  An 
+FIE is often a separate legal entity incorporated in the Mainland.  The Hong 
+Kong company sells raw materials to the FIE and buys back the finished goods 
+from the FIE.  The Hong Kong company engages in the trading of raw 
+materials and finished goods whilst the FIE manufactures the finished goods.  
+The legal title to the raw materials and the finished goods passes to/from the 
+FIE. 
+ 
+40. 
+In import processing, the gross profits arise from trading transactions 
+whereby the Hong Kong company purchases finished goods from an FIE and 
+sells them for a profit.  The manufacturing operations of the FIE in the 
+Mainland are not performed on behalf of, or for the account of, the Hong Kong 
+company even though the Hong Kong company and the Mainland enterprise 
+might be within the same group of companies.    
+ 
+ 
+16
+
+41. 
+In ING Baring, Lord Millet NPJ said that the source of profits had to 
+be attributed to the operations of the taxpayer which produced them and not to 
+the operations of other members of the group.   In D36/06 21 IRBRD 694 
+which was a typical import processing case, the Board held that the taxpayer’s 
+profits were fully chargeable to profits tax.   It was ruled that the FIE was not 
+part of the taxpayer and was not an agent of the taxpayer.  Hence the FIE’s 
+operations were not relevant in determining the source of profits of the 
+taxpayer.  The Board of Review rejected the contention of “substance over 
+form” and disagreed with the suggestion that a leasing agreement of production 
+facilities was similar to a contract processing agreement. 
+ 
+42. 
+The Department holds the view that profits which accrued to the 
+Hong Kong company from “trading transactions” carried out in Hong Kong 
+cannot be attributed to the manufacturing operations of the FIE carrying on 
+business in Mainland China.  The source of the trading profits must be 
+attributed to the operations of the Hong Kong company which produced them.  
+In Consco Trading Co. Ltd v. CIR [2004] 2 HKLRD 818, To Deputy J said that 
+it was correct to consider factors such as the finance arrangements, the payment 
+of raw materials and processing fees, the arrangement for receipt of payment 
+from purchasers for the finished product and pre-contract negotiations and the 
+Board was entitled to conclude that, on the evidence, the preponderance of the 
+activities which earned the profits were performed in Hong Kong.  The Court 
+of First Instance said the Board correctly excluded the processing activity of 
+the Mainland Chinese entity as not being relevant to the determining of the 
+taxpayer’s source of profits which were derived through the sale of processed 
+goods. 
+ 
+43. 
+In CIR v. Datatronic Limited [2009] 4 HKLRD 675, where the 
+arrangement between Datatronic and the FIE was an import processing 
+arrangement, the Court of Appeal held that the profit-producing transactions 
+were the purchase of goods from the FIE by Datatronic and subsequent sale 
+and that these activities took place in Hong Kong.  Thus, the profits were 
+derived from Hong Kong.  The Court of Appeal further held that the fact that 
+the FIE, although a wholly-owned subsidiary of Datatronic, is a separate legal 
+entity and that its dealings with Datatronic were not at arm’s length would not 
+detract from the reality of the legal effect of the transactions.  It is also worth to 
+note the Court of Appeal’s concurrence with the Board’s findings that the 
+manufacturing was done by the FIE in the Mainland is substance and not form 
+and that Datatronic’s activities (i.e. assisting the FIE in preparing the goods and 
+ 
+17
+
+supplying them to Datatronic) in the Mainland were merely antecedent or 
+incidental to the profit-generating activities. 
+  
+44. 
+The Department has noticed that a Hong Kong company is 
+sometimes interposed between an overseas company and a Mainland 
+manufacturing enterprise in order to comply with or circumvent the trade 
+barriers imposed by the overseas jurisdiction.  In D7/08 23 IRBRD 102, the 
+Board of Review recognised that making the Hong Kong company a customer 
+of the overseas company and of the Mainland enterprise freed the overseas 
+company from the trade barriers.  Applying what the Court of Final Appeal 
+held in the Kim Eng case on the effective cause of the production of the profits 
+in question, it was held that the Hong Kong company’s relevant activity in 
+Hong Kong however limited was what was done to earn the profits in question 
+and the Hong Kong company did it in Hong Kong. 
+ 
+ 
+OTHER PROFITS 
+ 
+45. 
+Subject to specific provisions, the Department regards the locality of 
+the following types of profits to be as follows: 
+ 
+Income or Profits 
+Locality 
+ 
+(a) Rental 
+income 
+from 
+real 
+Location of the property. 
+property. 
+ 
+ 
+(b) Profits derived by an owner 
+Location of the property. 
+from the sale of real estate. 
+ 
+ 
+(c) Profits from the purchase and 
+Location 
+of 
+the 
+stock 
+sale of listed shares and other 
+exchange where the shares or 
+listed securities. 
+securities 
+in 
+question 
+are 
+traded. 
+ 
+Where the purchase and sale 
+took place over-the-counter, 
+the place where the contracts 
+of purchase and sale are 
+effected. 
+ 
+ 
+18
+
+(d) Profits from the purchase and 
+Place where the contracts of 
+sale of unlisted shares and 
+purchase and sale are effected, 
+other unlisted securities. 
+except financial institutions in 
+instances 
+where 
+section 
+15(1)(l) applies. 
+ 
+(e) Service fee income. 
+Place where the services are 
+performed which give rise to 
+the fees. 
+ 
+It should be noted that in the 
+case of an investment adviser 
+whose 
+organisation 
+and 
+operations are located only in 
+Hong Kong, profits derived 
+in respect of the management 
+of the clients’ funds are 
+considered to have a Hong 
+Kong source.  Included in 
+chargeable sums are not only 
+management 
+fees 
+and 
+performance fees but also 
+rebates, 
+commissions 
+and 
+discounts received by the 
+adviser from brokers located 
+in Hong Kong or elsewhere 
+in 
+respect 
+of 
+securities 
+transactions 
+executed 
+on 
+behalf of clients. 
+ 
+(f) 
+Interest earned by persons 
+Determined on the basis set 
+other 
+than 
+financial 
+out in DIPN No. 13 (“Profits 
+institutions. 
+tax - Taxation of Interest 
+ 
+Received”). 
+ 
+(g) Royalties other than those  
+Place 
+of 
+acquisition 
+and 
+deemed 
+chargeable 
+under 
+granting of the licence or 
+section   15 (1) (a), (b) or (ba). 
+right of use.  Please refer to 
+Departmental Interpretation & 
+Practice Notes No. 49, Part B. 
+ 
+ 
+19
+
+ 
+20
+(h) Cross-border land  
+Normally the place of uplift of 
+transportation income. 
+the 
+passengers 
+or 
+goods.  
+However, where the contract 
+of 
+carriage 
+does 
+not 
+distinguish between outward 
+and 
+inward 
+transportation, 
+apportionment will not be 
+permitted. 
+ 
+Article 
+8 
+of 
+the 
+Comprehensive 
+Double 
+Taxation Arrangement with 
+the Mainland is relevant.  See 
+relevant paragraphs in DIPN 
+No. 
+44 
+(“Arrangement 
+between 
+the 
+Mainland 
+of 
+China and the Hong Kong 
+Special Administrative Region 
+for the Avoidance of Double 
+Taxation and the Prevention 
+of Fiscal Evasion with respect 
+to Taxes on Income”). 
+ 
+ 
+APPORTIONMENT OF PROFITS 
+ 
+46. 
+The Department accepts that, notwithstanding the absence of a 
+specific provision for apportionment of profits in the Inland Revenue 
+Ordinance, there are certain situations in which an apportionment of the 
+chargeable profits is appropriate.  The example of manufacturing profits has 
+already been explained above.  A further example is service fee income where 
+the services are performed partly in Hong Kong and partly outside.  On the 
+other hand, as has been mentioned in paragraph 24 above, the Department does 
+not find an apportionment of trading profits is required.  
+ 
+47. 
+In contract processing cases, a 50:50 basis of apportionment is 
+applied as the norm, in view of the contractual conditions imposed on the 
+parties to the arrangement.  For other cases where apportionment is 
+
+appropriate, the basis applied will depend on the facts of the case; the 
+Department will consider any rational basis put forward by the taxpayer 
+concerned.  In calculating the portion of the profits derived from Hong Kong, it 
+will be necessary to scale down claims for general expenses of the business 
+which contribute indirectly to earning both the Hong Kong and offshore profits 
+from the transactions in question.  General expenses in this context refer to all 
+indirect expenses.  In the tax computation, the taxpayer should explain clearly 
+the basis upon which such expenses have been scaled down.  In most cases, it 
+will be appropriate to apportion by reference to gross profits rather than to 
+assets.  Requests to re-open previous years assessments to permit 
+apportionment will not be entertained (section 70A - prevailing practice).  
+Below examples explain why there should not be an apportionment of profits.  
+ 
+Example 4 
+ 
+Company D purchases goods from suppliers in Hong Kong.  It pays 
+a marketing company in Hong Kong to arrange the placement of 
+advertisements in newspapers and magazines, which are circulated 
+in London and Paris.  On receiving orders, Company D ships the 
+goods to the overseas customers and collects payment though credit 
+card companies. 
+ 
+Although the goods are advertised overseas, this does not alter the 
+fact that everything that Company D itself does is done in Hong 
+Kong.  The profits derived by Company D should be fully 
+chargeable and no apportionment is required. 
+ 
+Example 5 
+ 
+Company E is a manufacturer in Hong Kong.  It manufactures goods 
+in Hong Kong and sells them to the overseas customers.  Every year, 
+Company E and the customers sign master sale agreements outside 
+Hong Kong.  
+ 
+The master sale agreements are not determinant for the purpose of 
+determining the source of trading profits.  They might be important 
+for business purpose for they settle many particulars of the terms of 
+trade, yet they do not constitute the manufacturing or selling 
+ 
+21
+
+operations of Company E.  The taking of orders by Company E, the 
+manufacture of the goods and the appropriation of the stock in 
+response to the orders, and the shipment of the goods are the relevant 
+operations that generate the profits of Company E.  The profits 
+accrued to Company E should not be apportioned. 
+ 
+ 
+SALE OR PURCHASE COMMISSION 
+ 
+48. 
+This refers to situations where commission income is earned both by 
+securing buyers for a manufacturer’s products and by securing manufacturers 
+to make products required by customers.  Typically the commission income is 
+a percentage of the invoiced value of the goods.   In such cases the Department 
+considers that the activity which gives rise to the commission income is the 
+arrangement of the business to be transacted between principals.   The source 
+of the income is the place where the activities of the commission agent are 
+performed.   
+ 
+49. 
+The place where the principals are located, how they are identified 
+by the commission agent and the place where incidental activities are 
+performed prior to or subsequent to the earning of the commission are not 
+generally relevant.   However, if substantial business activities are performed in 
+Hong Kong for and on behalf of a principal incorporated overseas, in particular 
+in a no or low tax jurisdiction, the Department will examine the case more 
+thoroughly to determine whether the principal has any profits tax liability under 
+section 14. 
+ 
+50. 
+Commission income may also arise where a business is carried on in 
+Hong Kong but the activities which give rise to the commission are not in 
+Hong Kong.   In such cases, the commission is not taxable.  Typical of these 
+situations are the following examples - 
+ 
+Example 6 - Sales or purchase agencies 
+ 
+Company F holds the “Far East Area” sales or purchase 
+responsibility for a product or group of products sold into the area 
+or sourced in the area by principals who are associated concerns.  
+Company F and the associates are members of a group under the 
+ 
+22
+
+control of a common parent organisation.  Company F is appointed 
+agent for the area, either by formally executed agreements or by a 
+directive from the parent organisation and is remunerated by a 
+“commission” on all sales and/or purchases in its area.  Company F 
+may either - 
+ 
+(a) 
+actively solicit orders ex-Hong Kong, on behalf of its 
+principals by sending employee representatives overseas for 
+the purpose or by employing sub-agents overseas; or 
+ 
+(b) 
+factually do nothing whatsoever, either itself or through sub-
+agents. 
+ 
+Example 7 - Passive commission 
+ 
+A similar organisational set-up to the agencies in Example 6 above, 
+but in this case Company G is given sales or purchase responsibility 
+for group products in the “Far East Area” as a principal.  
+Factually, Company G is unable to handle all or any of the group 
+range of products and sales into or purchases from the area are 
+therefore entirely made by associated concerns.  It is never intended 
+that Company G will perform any purchasing or sales function.  
+Company G receives an “infringement commission” for which it 
+does nothing (except possibly the rendering of some “sales service” 
+ex-Hong Kong). 
+ 
+Alternatively, it may be the case that Company G sells or buys group 
+products in Hong Kong (profits thereon may, in accordance with the 
+principles stated under the heading of Trading Profits, subject to 
+Hong Kong profits tax) and in addition receives “commissions” on 
+sales or purchases by associated concerns in the “Far East Area”.  
+These commissions are paid in pursuance of a parent organisation 
+directive.  Company G has no formal function or contractual 
+position in relation to the associates’ transactions in the “Far East 
+Area”, i.e. it has no “area responsibility” either as principal, agent 
+or sales representative and renders no service in respect of the 
+commission it receives. 
+ 
+ 
+23
+
+ 
+24
+GROUP SERVICE COMPANIES 
+ 
+51. 
+This refers to cases where a Hong Kong company, usually a member 
+of a multinational group, renders support services, such as marketing and 
+training, to group members located throughout the Asia-Pacific region.  The 
+services are rendered substantially in Hong Kong.  Inter-group charges are 
+made at an agreed mark-up of cost (typically 5% to 10%) and represent an 
+arm’s length reward for the services provided plus a recoupment of 100% of 
+the costs incurred by the Hong Kong company. 
+ 
+52. 
+The profits, being the mark-up, derived by the Hong Kong company 
+for its services are regarded by the Department as wholly assessable.  However, 
+in some cases the inter-group charges have been grossed up to reflect the 
+imposition of a withholding tax on the service charges by the country in which 
+the group entity receiving the services is resident.  In these cases the 
+Department will allow the Hong Kong company to deduct, from the service fee 
+charged, the foreign withholding tax paid.  The effect is to assess the Hong 
+Kong company on the net (of withholding tax) service fee received.  This 
+reflects the principle set out in DIPN No. 28 (“Profits Tax - Deductibility of 
+Foreign Taxes”) concerning the deductibility of foreign taxes that are charged 
+on earnings, regardless of whether or not a profit is made. 
+ 
+ 
+FINANCIAL INSTITUTIONS 
+ 
+53. 
+In 1986 the Department reached agreement with practitioners and 
+their financial institution clients on the taxation treatment of certain interest and 
+related fee income.  This recognised the practical difficulties associated with 
+determining the assessable profits of such institutions and provided them with 
+added certainty in their taxation affairs.  The agreement reduced the large 
+number of disputes which had arisen following the 1978 amendment to section 
+15(1)(i) of the Inland Revenue Ordinance. 
+ 
+54. 
+Following the decisions in the Hang Seng Bank and Orion 
+Caribbean, questions arose about certain aspects of this practice.  However, in 
+the interest of maintaining certainty the Department is prepared to continue 
+with this agreed treatment, details of which are set out below. 
+ 
+
+Types of Income 
+Tax Treatment 
+ 
+1. Interest from loans 
+ 
+ 
+ 
+(a) Offshore loans initiated, negotiated, 100% Non taxable
+approved 
+and 
+documented 
+by 
+an 
+associated party outside Hong Kong and 
+funded outside Hong Kong, i.e. funds 
+raised and loaned direct to the borrower 
+by a non-resident, e.g. head office, 
+branch, or subsidiary, etc. albeit through 
+or in the name of the Hong Kong 
+institution. 
+ 
+ 
+ 
+ 
+(b) Offshore loans initiated, etc. by the 
+100% Taxable 
+Hong Kong institution and funded by it 
+in/from Hong Kong. 
+ 
+ 
+ 
+ 
+(c) Offshore loans initiated, etc. by an  
+50% Taxable 
+associated party outside Hong Kong but 
+funded by the Hong Kong institution. 
+ 
+ 
+(d) Offshore loans initiated, etc. by a Hong  
+50% Taxable 
+Kong institution but funded by offshore 
+associates.  It is considered that this 
+category 
+only 
+applies 
+to 
+start-up 
+positions 
+where 
+the 
+Hong 
+Kong 
+institution has yet to establish a market 
+presence. 
+ 
+ 
+Note on ‘Funding’ 
+ 
+ 
+For claims concerning loans funded by 
+offshore 
+associates, 
+two 
+essential 
+requirements will have to be satisfied, 
+namely - 
+ 
+ 
+ 
+25
+
+ 
+ 
+(i) 
+that the Hong Kong institution does  
+not have the authority to seek its own 
+source of funds in respect of the loans; 
+and 
+ 
+ 
+(ii) 
+there must be documentary evidence to  
+show that funds have been directly 
+provided by an offshore associate even 
+though such funds may have been 
+routed through another vehicle in 
+Hong Kong.  In other words, arbitrary 
+funding by another group vehicle in 
+Hong Kong will not satisfy this 
+requirement. 
+ 
+ 
+Note on ‘Initiation’ 
+ 
+ 
+‘Initiation’ refers to the efforts exerted in 
+obtaining the particular business including 
+solicitation, negotiation and structuring of 
+the loans.  The financial institution must be 
+able to substantiate that the mandate or 
+invitation to participate was secured as a 
+direct result of the activities of an associated 
+party outside Hong Kong for an offshore 
+claim to succeed. 
+ 
+2. Interest on Certificates of Deposit (CDs) 
+ 
+ 
+ 
+Acquisition of CDs will be treated in a  
+100% Taxable
+similar fashion to deposit placements.  This 
+treatment is predicated on the fact that the 
+Hong Kong institution operates within 
+previously approved parameters as to credit 
+limits and prime banks with whom it may 
+operate.  In other words, there is an obvious 
+distinction to be drawn between CDs and 
+loans. 
+ 
+  
+26
+
+3. Interest from securities other than CDs 
+ 
+ 
+ 
+A similar approach to be adopted as for  See (1) above 
+interest from loans.  If there is to be any 
+attribution 
+of 
+interest 
+to 
+offshore 
+intervention, the role of the Hong Kong 
+institution 
+must 
+be 
+that 
+of 
+a 
+mere 
+intermediary in the purchase and sale of 
+securities with no discretion in the matter.  It 
+is unlikely that any claim for exemption will 
+be entertained in instances where the Hong 
+Kong institution possesses its own security 
+dealing capability and is active in this 
+capacity. 
+ 
+4. Participation, Commitment, etc. fees 
+ 
+ 
+ 
+To follow the tax treatment accorded to  See (1) above 
+related loans. 
+ 
+5. Active fee 
+ 
+ 
+ 
+To be determined by reference to the  Depends on the 
+‘Activity Test’, i.e. services performed to 
+particular 
+facts 
+earn the fee. 
+of the case 
+ 
+6. Guarantee/underwriting fees 
+ 
+ 
+ 
+A principal consideration of source is related  Depends on the 
+to whether or not the risk under the 
+particular 
+facts 
+guarantee or underwriting commitment is 
+of the case 
+evaluated and is to be borne by the Hong 
+Kong institution.  In instances where the 
+Hong Kong institution has no discretion on 
+the acceptance or rejection of offshore 
+instructions, and undertakes no risk, such 
+fees will be accepted as merely ‘booked’ and 
+not assessable. 
+ 
+ 
+27
+
+PROCESSING OF OFFSHORE CLAIMS 
+ 
+55. 
+Not all the operations of a taxpayer are relevant in determining the 
+source of a profit.  The process of identification of the source of profits may 
+differ depending on the nature of transaction in question and the context in 
+which the transaction takes place.  In Kim Eng Securities (Hong Kong) Ltd v. 
+CIR [2007] 2 HKLRD 117 at 143C, Bokhary PJ said : 
+ 
+“I am unable to accept the Taxpayer’s argument that the Taxpayer’s 
+presence and activities in Hong Kong go only to the existence and 
+operation of a Hong Kong business.  If the Taxpayer disputed the 
+existence and operation of a Hong Kong business - which it does not 
+- then its presence and activities in Hong Kong would probably be 
+conclusive against it on such an issue.  Of course the Taxpayer’s 
+presence and activities in Hong Kong are far from conclusive 
+against it on the question of source.  But that does not render such 
+presence and activities wholly irrelevant to that question.” 
+ 
+56. 
+Taxpayers should be ready to prove in their returns, with supporting 
+documentary evidence, that a profit from a transaction was derived outside 
+Hong Kong.  The Assessor has a statutory obligation to raise assessment and to 
+make enquiry.  In this process, the Assessor has been given power under 
+section 51(4) to seek for full information in regard to any matter which may 
+affect any liability, responsibility or obligation of any person.  A request for 
+detailed information about the “operations” of a transaction in an enquiry 
+would constitute a reasonable demand as the public interests so require.  It has 
+to be emphasised that the information seeking power entrusted to the Assessor 
+under section 51(4) has not been restricted or reduced in any way after ING 
+Baring.   In most cases, the reasons why the Assessor asks for a piece of 
+information should be apparent.   
+ 
+57. 
+The Department holds the view that the final step of the profit 
+generating process should not necessarily be considered as determinative of the 
+locality of the source of profits.  In the High Court of Australia, in COT v. 
+Hillsdon Watts Ltd 57 CLR 36, Latham CJ said that income received by a 
+person might be the result of a whole series of operations conducted in 
+different countries.  In COT v. Kirk [1900] AC 588, when delivering the 
+judgment of the Privy Council, Lord Davey said that the fallacy of the lower 
+ 
+28
+
+courts was to leave out of sight the initial stages and fastening their attention 
+exclusively on the final stage in the production of the income. 
+ 
+ 
+AGENCY 
+ 
+58. 
+In ING Baring, when discussing the business of stockbrokers, Lord 
+Millet NPJ said that it was not necessary to establish that the transaction which 
+produced the profit was carried out by the taxpayer or his agent in the full legal 
+sense.  It was sufficient if it was carried out on his behalf and for his account by 
+a person acting on his instructions.   
+ 
+59. 
+The Department is of the view that the act of any person carried out 
+overseas should not be readily attributed to a taxpayer in Hong Kong.  In ING 
+Baring, Lord Millet NPJ referred to the provision of service and the earning of 
+a commission by completing share transactions in an overseas market.  Indeed, 
+Lord Millet NPJ agreed with Barma J and firmly rejected the proposition that 
+“commercial reality” dictated that the source of the profits of one member of a 
+group of companies could be ascribed to the activities of another. 
+ 
+ 
+BOOKED PROFITS 
+ 
+60. 
+As previously indicated, the existence of a business carried on in 
+Hong Kong in not decisive of a source of profits subject to profits tax.  
+However, it will “only be in rare cases that a taxpayer with a principal place of 
+business in Hong Kong can earn profits which are not chargeable to profits tax 
+under s. 14” (see HK-TVBI).  The performance in Hong Kong of activities 
+which do not of themselves give rise to the profits, such as the rental of office 
+premises, recruitment of general staff, etc., also do not, in themselves, 
+determine the locality of profits.  Where, however, commissions, fees, profits 
+on sales, etc., relate to sales to, or services rendered to, Hong Kong customers, 
+the resultant profits will generally continue to be liable to profits tax.  The 
+Department takes a serious view of schemes and devices which seek to “book” 
+Hong Kong profits offshore.  It will not hesitate to apply the general anti-
+avoidance provisions in such instances and, where appropriate, impose 
+penalties in blatant cases involving the non-disclosure of relevant facts.  The 
+opportunity is taken to remind taxpayers and their authorised representatives of 
+ 
+29
+
+the need to accurately complete the return concerning transactions for or with 
+non-residents. 
+ 
+ 
+ADVANCE RULINGS 
+ 
+61. 
+To provide certainty in this area, the Department has been providing 
+advance rulings on the locality of profits to businesses.  This service is subject 
+to the payment of a fee.  Further details are contained in DIPN No. 31 
+(“Advance Rulings”). 
+ 
+ 
+CONCLUSION 
+ 
+62. 
+It is considered that an update of the DIPN, particularly as regards 
+trading profits, might be helpful.  It is hoped that this revised DIPN will further 
+reduce the possibility of and the areas of dispute between taxpayers and the 
+Department.  It should be reiterated that the examples outlined in this DIPN 
+represent simple, and straightforward situations and should be viewed 
+accordingly.  As stated at the outset, each case needs to be considered in the 
+light of its own particular circumstances and facts.  There is no simple legal test 
+that can be employed in all cases. 
+ 
+ 
+30

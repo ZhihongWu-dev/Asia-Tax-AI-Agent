@@ -1,0 +1,222 @@
+Guide on how to avoid common errors made by payers
+Filing Withholding Tax (WHT)
+Common errors
+What you need to know/ do
+Common errors when filing WHT
+Wrongly declaring the date of payment to non-resident (for all nature of payment except director’s fees)
+The date of payment is defined as the
+earliest
+of the following dates:
+When the payment is
+due and payable
+based on the agreement or contract, or the date of the invoice in the absence of any agreement or contract (credit terms should not be taken into consideration);
+When payment is credited to the account of the non-resident or any other account(s) designated by the non-resident, not necessary a bank account;
+The date of actual payment.
+You are required to take into consideration
+all the above-mentioned dates
+and declare the
+earliest date
+as the date of payment in the WHT form.
+Wrongly declaring the date of payment for director’s fees
+The date of payment is defined as the
+earliest
+of the following dates:
+When the payment is
+due and payable
+under the following scenarios:
+Director's fees approved in
+arrears
+For director's fees approved in arrears, the director has already rendered the requisite services for the accounting
+year concerned. However, the director's fees must be disclosed to and approved by members of the company before they can be paid to him. Hence, the earliest date on which the director is entitled to the director's fees,
+is the date the fees are voted and approved at the company's AGM.
+Director's fees approved in
+advance
+For director's fees approved in advance, the director may not have rendered the requisite services for the accounting year concerned when the fees are approved at the company's AGM. Hence, the earliest date on
+which the director can be entitled to the director's fees, is as and when he renders his services.
+When payment is credited to the account of the non-resident or any other account(s) designated by the non-resident, which need not necessarily be a bank account
+The date of actual payment.
+You are required to take into consideration
+all the above-mentioned dates
+and declare the
+earliest date
+as the date of payment in the WHT form.
+Declaring
+Yes
+under
+Tax Borne by Paye
+r
+when tax was withheld from the amounts payable/ paid to the non-resident
+You should only indicate
+Yes
+under
+Tax Borne by Payer
+in the WHT form when you are
+contractually liable
+to bear the WHT on the payment to a non-resident.
+Paying the tax withheld from payment to a non-resident to IRAS is not considered ‘tax borne by payer’ as the payment is made on behalf of the non-resident who bears the tax.
+Failing to follow correct steps when submitting multiple WHT forms under one submission
+To submit multiple forms under
+one
+submission, please follow these steps:
+Select
+File more forms /Approve more forms
+after preparing or approving the last form instead of clicking
+Submit
+.
+Under the S45 tab, click on
+Submit S45 Forms
+and perform a wild search without keying in any search criteria. The search results will show all the forms you have filed/ approved.
+Check all the forms that you wish to submit to IRAS.
+Complete the Declaration and proceed to submit.
+Declaring the name of non-resident based on its trading name/ inter-company abbreviation
+You should declare the name of the non-resident based on its legal name/ registered name. The non-resident’s name should be stated in full without abbreviations (i.e. short form), prefix or suffix unless it is part of the legal/
+registered name. Avoid adding spacing or punctuation marks such as full stop, comma.
+If you are claiming Double Taxation Relief, then you must make sure that the name of the non-resident stated in the Certificate of Residence is the same as the name declared in your WHT filing.
+Failing to upload the ODE file into
+mytax.iras.gov.sg
+and prompted with the message:
+'A previous version of the Offline Data Entry Application has been detected. Please update your application by re-launching it'.
+Please delete the ODE application, and then re-install the latest version of the ODE application from the
+IRAS website
+.
+To delete the existing ODE application, please follow the steps below:
+Launch
+Configure Java
+in your computer's Start Menu
+In
+Java Control Panel
+, under the tab
+General
+, click on
+View...
+button
+Java Cache Viewer
+will be launched:
+Choose
+Show: Applications
+Select
+S45 Offline Data Entry Application
+Click
+to delete the ODE application
+After deleting, click
+Close
+in the
+Java Cache Viewer
+Click
+OK
+in
+Java Control Panel
+Claiming Double Taxation Relief (DTR)
+Common errors
+What you need to know/ do
+Common errors when filing DTR
+Failing to file WHT when claiming tax exemption under DTR
+You are required to file WHT even if you are claiming tax exemption (i.e. 0% tax rate) under the Avoidance of Double Taxation Agreement (DTA) or Approved Royalties Incentive (ARI).
+To claim tax relief under the DTA, please select the
+Double Taxation Relief
+option under the
+Relief/ Incentive
+section in the WHT form and ensure that the Certificate of Residence (COR) is submitted by
+the due date.
+Filing and paying WHT only after receiving the COR
+Due date to file and pay WHT
+As a payer, you are required to file and pay WHT to IRAS by the 15th of the second month from the date of payment to the non-resident.
+Due date to submit COR
+31 Mar of the following year if the claim is for the current year.
+Within 3 months from the date of WHT submission if the claim is for preceding calendar years.
+Therefore, you may file and pay WHT based on the reduced rate available in the relevant DTA and submit the relevant COR subsequently.
+However, if you are uncertain whether the non-resident will provide you with the COR or whether the non-resident is a tax resident of the DTA treaty country/region, please withhold and pay WHT at the prevailing domestic rate to avoid late
+payment penalties for underpayment of WHT. If you manage to obtain the COR from the non-resident subsequently, you may submit an online
+filing amendment form
+with the COR uploaded to request for a refund.
+Submitting non-resident’s COR
+Common errors
+What you need to know/ do
+Common errors made when submitting non-resident's COR
+Submitting the COR of the non-resident based on the WHT filing date
+The COR should cover the
+period of payment
+declared in the WHT form. Examples are provided in the table below.
+Period of payment
+Year of COR to be submitted
+12 Aug 2024 to 14 Aug 2024
+2024
+12 Dec 2025 to 31 Dec 2025
+2025
+01 Jan 2026 to 31 Mar 2026
+2026
+Submitting another document (i.e. Certificate of Incorporation, Certificate of Business Registration, Trade License, Letter from non-resident) as a substitute for COR
+No other documents will be accepted as a substitute for COR. The COR must meet the following requirements to be accepted:
+Certified by the foreign tax authority of the non-resident
+Be in English
+Clearly state that
+the non-resident company is a resident of the foreign country/region for DTA purposes and
+the year(s) that the COR is applicable for.
+One COR may be accepted for multiple years if the relevant years are clearly stated in the COR.
+The COR will not be accepted if the name of the non-resident stated in the COR is different from the name declared in the WHT filing.
+Making payment for WHT
+Common errors
+What you need to know/ do
+Common errors made when making payment for WHT
+Remitting withheld amount to IRAS without/ before filing the WHT form
+You should file the WHT form
+before
+making any payment. If you are not under GIRO for payment of WHT, you should quote the 14-digit payment slip number found on the filing
+acknowledgement page when making payment.
+If you receive an outstanding payment letter even though you have already made payment, you may write to us at
+enfs45@iras.gov.sg
+with a copy of the payment advice and/ or bank statement and the related acknowledgement
+page of the filed WHT form.
+Quoting multiple payment slip numbers in one single electronic payment to IRAS
+For every 14-digit payment slip number that you get after filing, you should make a separate electronic payment. Only one payment slip number should be quoted in each electronic
+payment to IRAS.
+To avoid having multiple payment slip numbers when you submit multiple WHT forms, please follow the steps below so that only one payment slip number will be generated for multiple WHT forms submission:
+Click
+File more forms/Approve more forms
+after validating the details at the consolidated page.
+Continue with the remaining records.
+Select
+File more forms/Approve more forms
+after preparing or approving the last form instead of clicking
+Submit
+.
+Under the S45 tab, click on
+Submit S45 Forms
+and perform a wild search without keying in any search criteria. The search results will show all the forms you have filed/ approved.
+Check all the forms you wish to submit to IRAS.
+Complete the Declaration and proceed to submit.
+A single payment slip number will be generated for all the records that were submitted together.
+FAQs
+What is the date of payment to the non-resident to be declared?
+Below are some scenarios to help payers determine the date of payment to the non-resident
+Scenarios
+Date of payment to the non-resident
+Filing and payment due date
+Technical assistance fees
+A non-resident company issued an invoice dated 26 Mar 2025 to a payer for technical assistance fees in respect of services rendered. The invoice
+stated that the amount must be paid within 30 days. The payer received the invoice on 30 Apr 2025 and paid the non-resident on 19 May 2025.
+26 Mar 2025 (based on invoice date)
+15 May 2025
+For GIRO payer, deduction takes place on 26 May 2025.
+Royalty payment
+The agreement stated that royalties at 5% of sales shall accrue to the non-resident person at the
+end of each quarter
+.
+In this instance, the royalty period from Apr to Jun 2025 was accrued on 30 Jun 2025 (end of quarter), and the royalty payment was made to the non-resident on 15 Jul 2025.
+30 Jun 2025 (based on date of accrual)
+15 Aug 2025
+For GIRO payer, deduction takes place on 25 Aug 2025.
+Director’s fee
+The director’s fee of $50,000 for the period from 01 Jan 2024 to 31 Dec 2024, was voted and approved in the company's Annual General
+Meeting (AGM) on 2 Jul 2025. However, the fee was only paid to the director on 29 Sep 2025.
+2 Jul 2025 (based on AGM date)
+15 Sep 2025
+For GIRO payer, deduction takes place on 25 Sep 2025.
+Pages
+Voluntary disclosure of errors for reduced penalties
+Useful Links
+Filing Amendment Form (For Business Payer)
+Useful Links
+Filing Amendment Form (For Tax Agent/ Individual Payer)
+Useful Links
+Submit COR

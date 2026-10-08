@@ -1,0 +1,819 @@
+Rights-Based Approach for Characterising Software Payments and Payments for the Use 
+of or the Right to Use Information and Digitised Goods 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+IRAS e-Tax Guide 
+ 
+Rights-Based Approach for Characterising Software 
+Payments and Payments for the Use of or the Right 
+to Use Information and Digitised Goods 
+(Third Edition)  
+
+Rights-Based Approach for Characterising Software Payments and Payments for the Use 
+of or the Right to Use Information and Digitised Goods 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Published by 
+Inland Revenue Authority of Singapore 
+ 
+ 
+ 
+ 
+Published on 30 Jan 2026 
+ 
+First edition on 8 Feb 2013 
+Second edition on 15 Jul 2022 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Disclaimers: IRAS shall not be responsible or held accountable in any way for any damage, loss or 
+expense whatsoever, arising directly or indirectly from any inaccuracy or incompleteness in the 
+Contents of this e-Tax Guide, or errors or omissions in the transmission of the Contents. IRAS shall 
+not be responsible or held accountable in any way for any decision made or action taken by you or 
+any third party in reliance upon the Contents in this e-Tax Guide. Except where specific contents 
+carry legal force, this information aims to provide a better general understanding of taxpayers’ tax 
+obligations and is not intended to comprehensively address all possible tax issues that may arise. 
+While every effort has been made to ensure that this information is consistent with existing law and 
+practice, should there be any changes, IRAS reserves the right to vary our position accordingly. 
+ 
+ 
+© Inland Revenue Authority of Singapore 
+ 
+All rights reserved. No part of this publication may be reproduced or transmitted in any form or by 
+any means, including photocopying and recording without the written permission of the copyright 
+holder, application for which should be addressed to the publisher. Such written permission must 
+also be obtained before any part of this publication is stored in a retrieval system of any nature. 
+ 
+ 
+
+Rights-Based Approach for Characterising Software Payments and Payments for the Use 
+of or the Right to Use Information and Digitised Goods 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table of Contents 
+ 
+   1 
+Aim………………………………………………………………………....…1 
+2 
+At a glance ........................................................................................... 1 
+3 
+Glossary ............................................................................................... 1 
+4 
+Background ......................................................................................... 2 
+5 
+Tax treatment before adoption of the rights-based approach ......... 3 
+6 
+Rights-based approach for characterising specified payments ..... 4 
+7 
+Examples of payments for copyright rights & copyrighted articles 6 
+8 
+Administrative procedure ................................................................... 7 
+9 
+Contact information ............................................................................ 7 
+10 Updates and amendments .................................................................. 8 
+Annex – Comparison of withholding tax implications ............................ 9 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Rights-Based Approach for Characterising Software Payments and Payments for the Use of or 
+the Right to Use Information and Digitised Goods 
+ 
+ 
+1 
+ 
+1 
+Aim 
+ 
+1.1 
+This e-Tax Guide explains the rights-based approach for characterising 
+payments for software and payments for the use of or the right to use 
+information and digitised goods (herein referred to as “specified 
+payments”). 
+ 
+ 
+2 
+At a glance 
+ 
+2.1 
+Payments that do not involve the transfer of the “copyright rights” 
+embedded in the goods will be considered as payments for “copyrighted 
+articles” instead of “copyrights”. Payments for copyrighted articles are 
+characterised as business income and not royalties. Such payments to 
+non-resident persons will not fall within the ambit of section 12(7) of the 
+Income Tax Act 1947 (“ITA”). 
+ 
+2.2 
+The rights-based approach has been adopted with effect from 28 Feb 
+2013. Prior to the rights-based approach, withholding tax exemptions 
+were granted for software payments and payments for the use of or the 
+right to use information and digitised goods. 
+ 
+ 
+3 
+Glossary 
+ 
+3.1 
+Complete alienation 
+ 
+A sale where consideration is paid for the perpetual transfer of: 
+ 
+• the full legal and economic ownership; or 
+ 
+• the full economic ownership in respect of a specific geographical 
+location, 
+ 
+of the exclusive rights in the copyright that constitutes a distinct and 
+specific property. 
+ 
+3.2 
+Digitised goods 
+ 
+Text, images or sounds that are transferred through a handphone, fixed-
+line phone, cable network, satellite, the internet, or other forms of 
+electronic transmission but does not include software. Examples of 
+digitised goods include online or downloadable songs, music videos, 
+films, books, games, ring tones, logos, and other similar goods. 
+ 
+ 
+ 
+
+Rights-Based Approach for Characterising Software Payments and Payments for the Use of or 
+the Right to Use Information and Digitised Goods 
+ 
+ 
+ 
+ 
+2  
+ 
+3.3 
+Information 
+ 
+• Any information in any newspaper or magazine article or report, 
+including financial and business data (such as foreign exchange, 
+stock and property data), and other proprietary data 
+ 
+• Any information obtained solely for research purposes 
+ 
+Payments for information include subscriptions to Bloomberg, Reuters, 
+LexisNexis and other similar subscriptions. For purpose of applying the 
+rights-based approach, payments for information exclude payments for 
+the use of or the right to use patents, trademarks, registered design, 
+geographical indications, layout design of integrated circuit, plant variety 
+and trade secret. 
+ 
+3.4 
+Software 
+ 
+A programme, or series of programmes, containing statements or 
+instructions to be used directly or indirectly in a computer to accomplish a 
+certain desired result. A software may comprise any media, user manuals, 
+documentation, database or similar item if these are incidental to the 
+operation of the software. Payments for software include payments for 
+downloadable software, software bundled with hardware, software 
+licence (site, enterprise or network), limited duration licensed software 
+and software product with online elements. 
+ 
+3.5 
+Specified payments 
+ 
+Payments for software and payments for the use of or the right to use 
+information and digitised goods. 
+ 
+ 
+4 
+Background 
+ 
+4.1 
+The delivery models and licensing arrangements for software, information 
+and digitised goods such as music and movies have evolved and grown 
+over time. There is increased recognition that the payments by end-users 
+of software and digitised goods do not involve the transfer of rights to 
+exploit the copyrights embedded in the software or goods. Such payments 
+are for the copyrighted articles rather than the embedded copyrights. 
+ 
+4.2 
+In line with international practices, the adoption of the rights-based 
+approach in characterising specified payments will provide more certainty 
+for payers. 
+ 
+ 
+ 
+ 
+
+Rights-Based Approach for Characterising Software Payments and Payments for the Use of or 
+the Right to Use Information and Digitised Goods 
+ 
+ 
+ 
+ 
+3  
+ 
+5 
+Tax treatment before adoption of the rights-based approach 
+ 
+5.1 
+Software payments 
+ 
+5.1.1 
+Previously, all payments for the use of software are classified as royalty 
+payments for tax purposes. Royalty payments made to non-resident 
+persons are deemed to be sourced in Singapore under section 12(7)(a) of 
+the ITA. Accordingly, a payer has to withhold tax under section 45A of the 
+ITA on such payments made to a non-resident person at the rate of 10%1, 
+or such reduced rate as provided under a tax treaty. 
+ 
+5.1.2 
+Withholding tax exemption is granted for 4 categories of software 
+payments, covering the following transactions for end-users of: 
+ 
+a. Shrink-wrap software; 
+b. Site-license; 
+c. Downloadable software; and  
+d. Software bundled with computer hardware. 
+ 
+5.1.3 
+To qualify for the exemption, the payer must not have obtained any right to 
+exploit the copyright of the software, including any right to duplicate, 
+modify, reverse engineer or decompile the software. 
+ 
+5.2.1 Payments for the use of or the right to use information and digitised goods 
+ 
+5.2.2 Payments for information are treated as payments for the use or right to 
+use “scientific, technical, industrial or commercial knowledge”.  Under 
+section 12(7)(b) of the ITA, such payments to a non-resident person are 
+deemed to be sourced in Singapore and subject to withholding tax under 
+section 45A of the ITA. 
+ 
+5.2.3 Payments for the use or right to use digitised goods like downloadable 
+music, movies and books may also be treated as royalty payments under 
+section 12(7)(a) or payments for information under section 12(7)(b) of the 
+ITA, depending on the specific nature of the digitised goods. 
+ 
+5.2.4 Withholding tax exemption is granted for payments to non-resident persons 
+by end-users for information and digitised goods3.  An end-user must not 
+acquire the right to exploit the copyright of the information or digitised 
+goods. Instead, the end-user is only given the right to use the information 
+or digitised goods for personal consumption or for use within his business 
+operations. 
+ 
+ 
+1 Section 43(3A) of the ITA 
+3  The withholding tax exemption expired on 28 Feb 2013. 
+
+Rights-Based Approach for Characterising Software Payments and Payments for the Use of or 
+the Right to Use Information and Digitised Goods 
+ 
+ 
+ 
+ 
+4  
+6 
+Rights-based approach for characterising specified payments 
+ 
+6.1 
+Scope 
+ 
+6.1.1 
+The rights-based approach sets out the framework for characterising 
+specified payments. 
+ 
+6.2 
+Principles of the rights-based approach 
+ 
+6.2.1 
+The rights-based approach characterises a payment based on the nature 
+of the rights transferred in consideration for the payment. It draws a 
+distinction between the transfer of a “copyright right” and the transfer of a 
+“copyrighted article” from the owner to the payer. 
+ 
+Copyright right 
+ 
+6.2.2 
+A transaction involves a copyright right if the payer is allowed to 
+commercially exploit the copyright. The term “commercially exploit” means 
+to be able to: 
+ 
+a. 
+reproduce, modify or adapt and distribute the software, 
+information or digitised goods; or 
+ 
+b. 
+prepare a derivative work based on the software, information or 
+digitised goods for distribution. 
+ 
+6.2.3 
+Generally, the payer is granted the use of the software, information or 
+digitised good in a manner (i.e. to exploit the rights that would otherwise 
+be the sole privilege of the copyright holder) that will, without such granting 
+of use, constitute an infringement of the copyright. 
+ 
+  Copyrighted article 
+ 
+6.2.4 
+Generally, A copyrighted article is transferred if the rights are limited to 
+those necessary to enable the payer to operate the software or to use the 
+information or digitised goods, for personal consumption or for use within 
+his business operations. In many instances, the user is provided with a 
+copy of the product which is downloaded to a device for use. Any right 
+obtained to enable the end-user to copy the digital signal onto a media is 
+incidental to the process in which the content is captured and stored and 
+does not constitute a transfer of the copyright right. 
+ 
+6.2.5 
+In some cases, a payer may obtain multiple rights in one payment. In 
+determining whether a payment is for the right to use a copyrighted article 
+or a copyright right, the primary purpose of the payment will be examined. 
+For example, where a customer downloads a book for personal 
+enjoyment, the payment is primarily for the acquisition of a copyrighted 
+article (i.e. a copy of a book). To the extent the act of copying the digital 
+signal onto the customer’s device involves a right to copy the content, 
+
+Rights-Based Approach for Characterising Software Payments and Payments for the Use of or 
+the Right to Use Information and Digitised Goods 
+ 
+ 
+ 
+ 
+5  
+such a right is ancillary and incidental. It corresponds to what the payment 
+is essentially in consideration for (i.e. payment for a copyrighted article). 
+ 
+6.3 
+Tax treatment of copyright right versus tax treatment of copyrighted article 
+ 
+ 
+  Copyright right 
+ 
+6.3.1 
+Where a payment is made to a copyright owner for the transfer of partial 
+rights in the copyright as in the case of licensing of the copyright to be 
+exploited by the payer, the payment is a royalty. When such a payment is 
+made to a non-resident person, it is subject to withholding tax. 
+ 
+6.3.2 
+Adopting the rights-based approach to characterise specified payments 
+will not result in any change in the tax treatment adopted previously. 
+Royalty payments arising from a partial transfer of the copyright right will 
+continue to be treated as royalties or payments for the use of or right to 
+use movable properties or information under section 12(7) of the ITA. 
+Withholding tax under section 45A remains applicable if the payments are 
+made to a non-resident person. 
+ 
+6.3.3 
+As for payments made to the copyright owner for a complete alienation of 
+his copyright in the software, information or digitised goods, the 
+transaction is a sale of the copyright. In the hands of the copyright owner, 
+any gains derived by him from such a transaction constitutes either his 
+business income (if the copyright right constitutes his stock in trade) or 
+capital gains. When the sale consideration is paid to a non-resident 
+person, the payment is not subject to withholding tax. This treatment 
+remains under the rights-based approach. 
+ 
+Copyrighted article 
+ 
+6.3.4 
+As explained in paragraph 6.2.4, a payment for a copyrighted article is not 
+royalty payment. Such payments made to a non-resident person will thus 
+not fall within the ambit of section 12(7) of the ITA. The non-resident 
+person will not be taxable on such payments unless the payments 
+constitute income derived from a trade or business carried on by him in 
+Singapore or income effectively connected with any permanent 
+establishment of that person in Singapore. Accordingly, the payer will not 
+be required to withhold tax under section 45A when he makes such 
+payments to the non-resident person4. 
+ 
+ 
+ 
+4 However, where the payments constitute income derived from a trade, business, profession 
+or vocation carried on or exercised by the non-resident in Singapore, or which is effectively 
+connected with any permanent establishment of that person in Singapore, the non-resident 
+person is required to file an income tax return to declare the income which is subject to tax in 
+Singapore. 
+ 
+
+Rights-Based Approach for Characterising Software Payments and Payments for the Use of or 
+the Right to Use Information and Digitised Goods 
+ 
+ 
+ 
+ 
+6  
+6.3.5 
+Please refer to the Annex for a comparison of the withholding tax 
+implications for payments made to a non-resident owner under the 
+previous treatment (prior to 28 Feb 2013) and the rights-based approach. 
+ 
+7 
+Examples of payments for copyright rights & copyrighted articles 
+ 
+7.1 
+Payments for Software 
+ 
+By a distributor (without the right to reproduce copies of software) 
+ 
+7.1.1 
+The distributor is granted the right to distribute software by the software 
+or copyright owner but does not have the right to reproduce copies of the 
+software. Typically, the software is maintained in a server that is operated 
+by the software or copyright owner. When the distributor makes a sale, 
+he provides the customer with a ‘key’ for the customer to access and 
+download the software directly from the software owner’s server. The 
+distributor is not considered to be commercially exploiting the copyright 
+rights in the software. Accordingly, payments made by the distributor to 
+the software or copyright owner are treated as business income in the 
+latter’s hands. 
+ 
+By a distributor (with the right to reproduce copies of software) 
+ 
+7.1.2 
+The software or copyright owner may arrange for the master files of the 
+software to be hosted on the distributor’s server. Upon making a purchase, 
+the customer downloads a copy of the software from the distributor’s 
+server. In this case, the distributor is arguably given the right to make 
+copies of the software for distribution. The payments or part of the 
+payments made by the distributor to the software or copyright owner may 
+constitute royalties. Nonetheless, IRAS recognises that the specific 
+arrangements and rights conferred in each case vary and the fact that 
+customers may download the software directly from the distributor’s server 
+is not conclusive that the payments are for copyrights. IRAS is therefore 
+prepared to examine the facts of such a case in determining the character 
+of payments made to the software or copyright owner. 
+ 
+By an end-user 
+ 
+7.1.3 
+The end user purchases a software. The payment for which includes an 
+amount for maintenance and support services incidental to the purchase of 
+the software. The full amount, including that amount for maintenance and 
+support, is characterised as payments for a copyrighted article. 
+ 
+7.1.4 
+The end user may make payments for additional services such as 
+subsequent software maintenance and support services, user training, 
+customisation and development of add-on applications by building onto the 
+existing basic software. These are not within the scope of application of 
+the rights-based approach. Such payments for services may fall within the 
+scope of section 12(7)(b) of the ITA and be deemed sourced in Singapore. 
+
+Rights-Based Approach for Characterising Software Payments and Payments for the Use of or 
+the Right to Use Information and Digitised Goods 
+ 
+ 
+ 
+ 
+7  
+Withholding tax on payments to non-resident persons may then apply. 
+ 
+7.2 
+Payments for movie or film 
+ 
+7.2.1 
+Payment made to acquire a copy of a movie or film, say through a 
+download or on some magnetic media, is treated as payment for a 
+copyrighted article if the payer is not given the right to commercially exploit 
+the movie or film. Generally, the payer acquires a copy of the movie for his 
+private viewing and enjoyment. He is not allowed to screen the movie 
+publicly, or to re-distribute the movie. 
+ 
+7.2.2 
+On the other hand, if the payer is a cinema operator or an airline entity that 
+acquires the movie for the purpose of screening to its customers, the 
+payment to the non-resident is a royalty for the use of the copyright right in 
+the movie and is subject to withholding tax. 
+ 
+ 
+7.3 
+Payments for information (i.e. subscription payments to information 
+providers such as Bloomberg or Lexis-Nexis) 
+ 
+7.3.1 
+Banks and research houses may pay information providers for information 
+to service their customers. Generally, such payments allow the analysts to 
+make use of information to support their work or generate reports for 
+customers. The use of information is generally not considered to be 
+commercial exploitation of the information if its use is to support the work 
+done by the analyst and not a mere reproduction and onward distribution 
+of the information. This means that the usage of information is limited both 
+qualitatively and quantitatively . Such payments are considered as 
+payments for copyrighted articles. 
+  
+8 
+Administrative procedure 
+ 
+8.1 
+No approval is required for the application of the rights-based approach. 
+To determine the correct tax treatment to be applied, taxpayers only need 
+to ascertain the nature of payments using the rights-based approach. 
+Proper supporting documents such as licence agreements, intercompany 
+agreements and invoices are to be maintained and be provided to IRAS 
+upon request. For taxpayers who wish to obtain upfront certainty on the 
+character of any specified payments, such cases may be referred to IRAS 
+under the Advance Ruling process. 
+ 
+9 
+Contact information 
+ 
+9.1 
+If you have any enquiries or need clarification on this e-Tax Guide, please 
+call 1800-356 8300 (Individual) or 1800-356 8622 (Corporate). 
+ 
+ 
+ 
+ 
+
+Rights-Based Approach for Characterising Software Payments and Payments for the Use of or 
+the Right to Use Information and Digitised Goods 
+ 
+ 
+ 
+ 
+8  
+ 
+10 
+Contact information 
+ 
+ 
+ Date of amendments 
+Amendments made 
+1 
+15 Jul 2022 
+Removed footnote for the 2 e-Tax 
+guides 
+on 
+withholding 
+tax 
+exemptions that are no longer 
+applicable/available on the website. 
+2 
+30 Jan 2026 
+Editorial changes made to general 
+disclaimer 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Rights-Based Approach for Characterising Software Payments and Payments for the Use of or 
+the Right to Use Information and Digitised Goods 
+ 
+ 
+ 
+ 
+9  
+ 
+Annex – Comparison of withholding tax implications 
+ 
+Type 
+of 
+Payment 
+Purpose 
+Treatment (Prior to 28 
+Feb 2013) 
+Current Treatment - 
+Rights-Based Approach 
+Software 
+payment 
+For 
+the 
+complete 
+alienation of 
+copyright 
+rights 
+in 
+software 
+Owner 
+derives 
+business 
+income or capital gains. 
+Withholding 
+tax 
+is 
+not 
+applicable. 
+No change in tax treatment. 
+For the use 
+of software 
+Owner derives royalty income 
+deemed sourced in Singapore 
+under section 12(7)(a) of the 
+ITA. 
+Withholding 
+tax 
+applies, 
+except for the 4 specific 
+categories 
+of 
+software 
+payments made by end-users 
+(see paragraph 5.1.2). 
+Owner derives royalty income 
+if there is a partial transfer of 
+rights permitting the payer to 
+commercially 
+exploit 
+the 
+rights. Withholding tax applies 
+to royalty. 
+Where no such rights are 
+transferred or licensed, the 
+owner 
+derives 
+business 
+income from the transfer or 
+license 
+of 
+a 
+copyrighted 
+article. Withholding tax is not 
+applicable. 
+Information 
+and digitised 
+goods 
+For 
+the 
+complete 
+alienation of 
+copyright 
+rights 
+in 
+information 
+or 
+digitised 
+goods 
+Owner 
+derives 
+business 
+income or capital gains. 
+Withholding 
+tax 
+is 
+not 
+applicable. 
+No change in tax treatment. 
+For the use 
+of 
+information 
+or 
+digitised 
+goods 
+Owner derives income from 
+payments made for the use of 
+or right to use movable 
+properties 
+or 
+information. 
+Such 
+income 
+is 
+deemed 
+sourced in Singapore under 
+section 12(7)(a) or (b) of the 
+ITA. 
+Withholding 
+tax 
+applies, 
+except where payments are 
+made by end-users and fall 
+within 
+the 
+scope 
+of 
+the 
+withholding 
+tax 
+exemption 
+granted 
+(see 
+paragraph 
+5.2.3). 
+Owner derives royalty income 
+or income from payments 
+made for the use of or right to 
+use movable properties or 
+information 
+if 
+the 
+partial 
+transfer of the rights allows the 
+payer to commercially exploit 
+the rights. Withholding tax 
+applies to such payments. 
+Where no such rights are 
+transferred or licensed, the 
+owner 
+derives 
+business 
+income from the transfer or 
+license 
+of 
+a 
+copyrighted 
+article. Withholding tax is not 
+applicable. 
+ 

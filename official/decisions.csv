@@ -1,0 +1,28 @@
+﻿id,seq,statement,cite_id,quote,used_in
+D01,1,可抵免的外国税只是应当缴纳且已实际缴纳的部分：已缴超过应缴的部分不抵（走来源地退税），未缴的不抵；抵免池与逐项抵免都取 min（实缴，应缴）,cn.cs.2009-125#i4,应当缴纳并已实际缴纳的企业所得税性质的税款,tax_graph/rules/eval.py:apply(CREDIT); tax_graph/engine.py:pooled_credit
+D01,2,,cn.cs.2009-125#i4,按照税收协定规定不应征收的境外所得税税款,
+D01,3,,sg.ita1947.full#s50C,the aggregate of the taxes paid on all the elected income,
+D02,1,新加坡的补足税（DTT、MTT）不受 Part 14 双重征税减免（第 50、50A、50C 条）的抵免：抵免池不收补足税伪流；内地模型中无补足税,sg.ita1947.full#s2A,Parts 3 to 15 (except section 57),tax_graph/engine.py:pooled_credit; tax_graph/engine.py:carryforward_credit
+D02,2,,sg.ita1947.full#s47,PART 14 RELIEF AGAINST DOUBLE TAXATION,
+D03,1,已结税项（时钟全过或案例声明）：实缴额不再变；其法域的规则只改变应缴额，从而改变别处的抵免额（抵免以应缴为限，D01），所以对它有利的一端反转为使应缴额更高的一端,cn.cs.2009-125#i4,按照税收协定规定不应征收的境外所得税税款,tax_graph/rules/eval.py:inverted
+D04,1,间接抵免中本层企业的税额是其实际缴纳的税额，即本层自己享受直接与间接抵免之后的数；引擎因此对实流、实体级抵免、伪流反复求值到不动点,cn.cs.2009-125#i5,本层企业就利润和投资收益所实际缴纳的税额,tax_graph/engine.py:engine(fixpoint); tax_graph/engine.py:own_tax
+D04,2,,cn.sta.2010-01.a01#16,假设其当年享受直接和间接抵免后实际缴纳所在国所得税额为1140万元,
+D05,1,间接抵免逐层计算，最多五层：第一层由居民企业直接持股 20% 以上；以下各层由单一上一层直接持股 20% 以上，且居民企业直接或经合格各层间接合计持股 20% 以上；不合格的一层，其税额不向上传,cn.cs.2009-125#i5,从最低一层外国企业起逐层计算的属于由上一层企业负担的税额,tax_graph/engine.py:cn_tiers; tax_graph/engine.py:tier_tax
+D05,2,,cn.cs.2017-84#i2,单一上一层外国企业直接持有20%以上股份，且由该企业直接持有或通过一个或多个符合财税〔2009〕125号文件第六条规定持股方式的外国企业间接持有总和达到20%以上股份的外国企业,
+D05,3,,cn.sta.2010-01.a01#16,D公司被C4公司持有的15%股份不符合A公司享受间接抵免的持股比例条件,
+D06,1,本层税额包括它收到股息时被源泉扣缴的税与它间接负担的下层税额；本层税后利润扣除其直接缴纳与被扣缴的税,cn.sta.2010-01.a01#16,（1140+120+325）*（1870÷3740）=792.5万元,tax_graph/engine.py:own_tax; tax_graph/engine.py:designed_profit
+D06,2,,cn.sta.2010-01.a01#16,则其税后利润为3740万元（5000万-1140万-120万）,
+D06,3,,cn.sta.2010-01.a01#16,其按10%直接缴纳D公司所在国的预提所得税额15万元（150万*10%）属于可计算A公司间接抵免的税额,
+D07,1,股息间接负担的是其所分配利润所属年度的税（可以是以前年度的未分配利润）：公式取同一年度的税额与税后利润；方案新设公司的分配年度由其利润分配决议写明，是方案的动作,cn.sta.2010-01.a01#16,不论该利润分配是否包括以前年度未分配利润,tax_graph/engine.py:underlying
+D07,2,,cn.sta.2010-01.a01#16,该股息间接负担的由境外子公司就其2008年、2009年度利润缴纳的境外所得税,
+D08,1,间接抵免只对居民企业从外国企业分得的境外来源股息：居民企业之间的股息归国内规则，不享受外国税抵免,cn.law.eit#24,居民企业从其直接或者间接控制的外国企业分得的来源于中国境外的股息、红利等权益性投资收益,tax_graph/rules/spec_cn.py:cn.ftc.dividend_indirect; tax_graph/engine.py:underlying
+D09,1,按实际管理机构判定为内地居民的境外注册企业，同样就其境外所得享受直接与间接抵免,cn.sta.2010-01.a01#16,居民企业（包括按境外法律设立但实际管理机构在中国，被判定为中国税收居民的企业）可以就其取得的境外所得直接缴纳和间接负担的境外企业所得税性质的税额进行抵免,tax_graph/engine.py:residence_graph
+D10,1,受控外国企业的低税测试按实际税负低于 25% 的一半；年度利润总额低于 500 万元可免；本层在模型各笔流之外的税额是数据，未知时实际税负只取下限，测试可能成立则待定,cn.reg.eit#118,是指低于企业所得税法第四条第一款规定税率的50%,tax_graph/engine.py:cfc_facts
+D10,2,,cn.gsf.2009-02#84,年度利润总额低于500万元人民币,
+D11,1,新加坡抵免池只收在所得来源地已缴外国税的境外所得：新加坡来源的所得不进池,sg.ita1947.full#s50C,tax under the law of the territory from which the income is derived that is of a similar character to income tax,tax_graph/engine.py:pooled_credit
+D12,1,支柱二收入门槛按最终母公司合并报表的集团收入判断：一个集团一个数，成员陈述不一致即为待问的冲突,hk.ord.2025-21#p42,annual revenue of EUR 750 million or more in the consolidated financial statements of the ultimate parent entity,tax_graph/engine.py:group_fact; tax_graph/engine.py:p2_flows
+D12,2,,sg.memta2024.s8#s8,consolidated group revenue,
+D13,1,新加坡国内补足税（DTT）按 MMT 法第 30 条套用第 16–21 条：补足税比例 = 最低税率 − 有效税率（第 16(5) 条），有效税率 = 调整后涵盖税额 ÷ GloBE 所得（第 17 条），超额利润 = GloBE 所得 − 基于实质的排除（第 18 条与附表二）；DTT 中 K（其他法域的合格国内补足税）为零；DTT 为位于新加坡的成员的补足额之和（第 29 条）。第 17 条按法域合计计算，引擎目前按单个成员计算（同一法域多个成员时有偏差，待办）,sg.memta2024.s16#s16,"is determined by the formula L – M, where — ( a ) L is the minimum rate; and ( b ) M is the effective tax rate",tax_graph/rules/procedure_sg.py:REGISTRY sg.p2.base; tax_graph/engine.py:sbie_amount
+D13,2,,sg.memta2024.s17#s17,A is the sum of the adjusted covered taxes (including any negative amount of adjusted covered taxes) for that financial year of those constituent entities; and ( b ) B is the sum of the GloBE income or loss,
+D13,3,,sg.memta2024.s30#s30,"in section 16(4), K is nil",
+D13,4,,sg.memta2024.s29#s29,the top‑up amount of every constituent entity (not being a special entity) of the MNE group located in Singapore,

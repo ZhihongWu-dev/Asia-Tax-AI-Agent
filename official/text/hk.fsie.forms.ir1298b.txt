@@ -1,0 +1,244 @@
+1 
+ 
+IR1298B (12/2023) 
+申請事先裁定 − 外地收入豁免徵税機制的經濟實質要求 
+Application for Advance Ruling - Economic Substance Requirement of the  
+Foreign-sourced Income Exemption Regime 
+ 
+附註及說明 − 資料表格 
+Notes and Instructions - Data Form 
+ 
+1. 
+《税務條例》（第112 章）有關外地收入豁免徵税機制的條文初時是由《2022 年税務（修訂）（指明外地收入徵税）條例》
+引入的，其後經《2023 年税務（修訂）（外地處置收益徵税）條例》修訂。在外地收入豁免徵税機制下，在香港經營行業、
+專業或業務的跨國企業集團成員（「跨國企業實體」）（附註2）賺取的指明外地收入（即利息、股息、處置收益及知識產權
+收入），如在香港收取，會被視作在香港產生或得自香港的收入，須被徵收利得税。不過，自下列日期起累算的若干類別指
+明外地收入（即利息、股息及非知識產權處置收益），倘若收取收入的實體符合《税務條例》第15K 條所訂明的經濟實質
+要求，該等收入可繼續獲豁免利得税： 
+(a) 
+2023 年1 月1 日 ─ 屬利息、股息或股權權益處置收益（附註9）的指明外地收入； 
+(b) 
+2024 年1 月1 日 ─ 屬非知識產權處置收益的指明外地收入（股權權益處置收益除外）（附註9）。 
+若申請事先裁定的事項只關乎《税務條例》第15K 條所訂明的經濟實質要求，申請人無需提供草擬裁定。 
+The provisions in relation to the Foreign-sourced Income Exemption (“FSIE”) regime under the Inland Revenue Ordinance 
+(Cap. 112) (“IRO”) had first been introduced by the Inland Revenue (Amendment) (Taxation on Specified Foreign-sourced 
+Income) Ordinance 2022, and were subsequently amended by the Inland Revenue (Amendment) (Taxation on Foreign-sourced 
+Disposal Gains) Ordinance 2023.  Under the FSIE regime, specified foreign-sourced income (i.e. interest, dividend, disposal 
+gain and intellectual property (“IP”) income) accrued to a member of an MNE group (“MNE entity”) (Note 2) carrying on 
+a trade, profession or business in Hong Kong is to be regarded as arising in or derived from Hong Kong and chargeable to 
+profits tax if it is received in Hong Kong.  However, certain types of specified foreign-sourced income (i.e. interest, dividend 
+and non-IP disposal gain) accrued on or after the following dates will continue to be exempt from profits tax if the recipient 
+entity meets the economic substance requirement specified in section 15K of the IRO: 
+(a) 
+1 January 2023 ─ specified foreign-sourced income that is interest, dividend or equity interest disposal gain (Note 9) ; 
+(b) 
+1 January 2024 ─ specified foreign-sourced income that is non-IP disposal gain (other than equity interest disposal gain) 
+(Note 9). 
+If the subject matter of the ruling sought only relates to the economic substance requirement specified in section 15K of the 
+IRO, the applicant is not required to provide a draft ruling. 
+ 
+2. 
+「跨國企業集團」指任何包括至少一個並非位於或設於最終母實體所屬管轄區的實體或常設機構的集團。「跨國企業實體」
+是某跨國企業集團或其中的實體，或代表某跨國企業集團或其中的實體行事的人。 
+“MNE group” means a group that includes at least one entity or permanent establishment that is not located or established in 
+the jurisdiction of the ultimate parent entity of the group.  “MNE entity” means a person that is, or acts for, an MNE group or 
+an entity included in an MNE group. 
+ 
+3. 
+「指明外地收入」指在香港以外地區產生或得自香港以外地區的任何利息、股息、處置收益（附註9）或知識產權收入，
+但不包括： 
+(a) 
+累算歸於受規管財務實體（附註4）的任何利息、股息或非知識產權處置收益（附註9）； 
+(b) 
+累算歸於其應評税利潤是按除《税務條例》第14A(1)條以外的寬減條文（第19CA 條所界定者）指明的税率而予以徵
+税的實體的任何利息、股息或非知識產權處置收益（附註9）； 
+(c) 
+累算歸於其應評税利潤是根據《税務條例》第20AC、20ACA、20AN 或20AO 條獲豁免徵税的實體的任何利息、股
+息或非知識產權處置收益（附註9）； 
+(d) 
+累算歸於其豁免款項是根據《税務條例》第23B(4AA)條可從賺取或應累算的有關款項中撇除的船舶擁有人的任何利
+息、股息或非知識產權處置收益（附註9）；或 
+(e) 
+累算歸於買賣商（附註5）的任何非知識產權處置收益（附註9）， 
+而又是得自或附帶於： 
+(i) 
+就上述 (a) 項的實體而言 — 該實體作為受規管財務實體的業務； 
+(ii) 
+就上述 (b) 及 (c) 項的實體而言 — 產生該等獲寬減或豁免的應評税利潤的活動； 
+(iii) 就上述 (d) 項的實體而言 — 產生該等豁免款項的活動； 
+(iv) 
+就上述 (e) 項的實體而言 — 該實體作為買賣商的業務。 
+
+2 
+ 
+“Specified foreign-sourced income” means any interest, dividend, disposal gain (Note 9) or income from intellectual properties 
+arising in or derived from a territory outside Hong Kong, but does not include: 
+(a) 
+any interest, dividend or non-IP disposal gain (Note 9) that accrues to a regulated financial entity (Note 4); 
+(b) 
+any interest, dividend or non-IP disposal gain (Note 9) that accrues to an entity the assessable profits of which are 
+chargeable to tax at the rate specified in a concession provision (as defined by section 19CA) other than section 14A(1) 
+of the IRO; 
+(c) 
+any interest, dividend or non-IP disposal gain (Note 9) that accrues to an entity that is exempt from tax chargeable in 
+respect of its assessable profits under section 20AC, 20ACA, 20AN or 20AO of the IRO; 
+(d) 
+any interest, dividend or non-IP disposal gain (Note 9) that accrues to an entity that is a ship-owner and has any exempt 
+sums excluded under section 23B(4AA) of the IRO from the amount of relevant sums earned by or accrued to the entity; 
+or 
+(e) 
+any non-IP disposal gain (Note 9) that accrues to a trader (Note 5), 
+and is derived from, or is incidental to: 
+(i) 
+for an entity in (a) above – the entity’s business as a regulated financial entity; 
+(ii) 
+for an entity in (b) and (c) above – the activity that produces the assessable profits to which the tax concession or 
+exemption applies; 
+(iii) for an entity in (d) above – the activity that produces the exempt sums; 
+(iv) for an entity in (e) above – the entity’s business as a trader. 
+ 
+4. 
+「受規管財務實體」指： 
+(a) 
+根據《保險業條例》（第41 章）獲授權的保險人（該條例第2(1)條所界定者）、勞合社或獲認可的承保人組織； 
+(b) 
+《銀行業條例》（第155 章）第2(1)條所界定的認可機構；或 
+(c) 
+根據《證券及期貨條例》（第571 章）第V 部獲發牌經營該條例附表5 第1 部所界定的任何受規管活動的實體。 
+“Regulated financial entity” means: 
+(a) 
+an insurer (as defined by section 2(1) of the Insurance Ordinance (Cap. 41)) authorized under that Ordinance, Lloyd’s or 
+an approved association of underwriters; 
+(b) 
+an authorized institution as defined by section 2(1) of the Banking Ordinance (Cap. 155); or 
+(c) 
+an entity licensed under Part V of the Securities and Futures Ordinance (Cap. 571) to carry on a business in any regulated 
+activity as defined by Part 1 of Schedule 5 to that Ordinance. 
+ 
+5. 
+「買賣商」指任何在其通常業務運作時出售或要約出售財產的實體。 
+“Trader” means an entity that sells, or offers to sell, property in the entity’s ordinary course of business. 
+ 
+6. 
+當指明外地收入按照適用的會計原則計入該跨國企業實體的賬目時，該指明外地收入即被視為累算歸於該實體。 
+Specified foreign-sourced income is considered as accrued to an MNE entity when it is recognised in the accounts of the entity 
+in accordance with the applicable accounting principles. 
+ 
+7. 
+如申請人的個別申請由代表作出，有關代表必須取得申請人的書面同意。如申請人為自身及其所屬跨國企業集團位於香港
+的其他成員實體（統稱「相關實體」）所作的組別申請由代表作出，則有關代表必須取得全部相關實體的書面同意。 
+For an individual application made on behalf of an applicant, the representative must have the written consent of the applicant.  
+For a group application made on behalf of an applicant for itself and other entities of the MNE group it belongs to in Hong 
+Kong (collectively referred to as “Relevant Entities”), the representative must have the written consents of all the Relevant 
+Entities. 
+ 
+8. 
+作出組別申請的條件如下： 
+(a) 
+申請人及其他相關實體根據同一份服務協議書，外判指明經濟活動（附註14）予同一外判實體； 
+(b) 
+申請人或代表已經取得其他相關實體的書面同意，代表其作出組別申請； 
+(c) 
+在提交本補充表格時需一併提交該服務協議書副本；及 
+(d) 
+在接獲要求時將同意書提交予局長。 
+Conditions for group application are as follows: 
+(a) 
+the specified economic activities (Note 14) of the applicant and other Relevant Entities are outsourced to one outsourced 
+entity under a single service agreement (“the Service Agreement”); 
+(b) 
+the applicant or the representative must have the written consents of the other Relevant Entities for the group application; 
+(c) 
+a copy of the Service Agreement should be submitted together with this supplementary form; and 
+(d) 
+the written consents must be supplied to the Commissioner on request. 
+
+3 
+ 
+9. 
+「處置收益」指知識產權處置收益或非知識產權處置收益。「知識產權處置收益」指得自知識產權的出售的收益或利潤。「非
+知識產權處置收益」指得自財産的出售的收益或利潤，但不包括知識產權處置收益。「股權權益處置收益」指得自某實體的
+股權權益（合夥權益除外）的出售的收益或利潤。「財産」指動產或不動產。 
+“Disposal gain” means any IP disposal gain or non-IP disposal gain.  “IP disposal gain” means any gain or profit derived from 
+the sale of intellectual property.  “Non-IP disposal gain” means any gain or profit derived from the sale of property, but does 
+not include IP disposal gains.  “Equity interest disposal gain” means any gain or profit derived from the sale of equity interests 
+(other than partnership interests) in an entity.  “Property” means any movable property or immovable property. 
+ 
+10. 
+請選擇指明外地收入的估計每年總款額的範圍。如總款額超過港元40,000,000，亦請註明有關的款額。 
+Please select the range of estimated total annual amount of specified foreign-sourced income.  If the estimated total annual 
+amount is over $40,000,000, please also state the relevant amount. 
+ 
+11. 
+就跨國企業實體的業務性質敘明按政府統計處編訂「香港標準行業分類2.0 版」的六位數字行業編碼。有關行業編碼索引，
+請參閱政府統計處網頁（www.censtatd.gov.hk）。如該實體從事多於一項業務，請就其主要業務填寫行業編碼。如該實體屬
+純股權持有實體（附註12），請在行業編碼填寫「642000」。 
+A 6-digit industry code of the Hong Kong Standard Industrial Classification (version 2.0) maintained by the Census and 
+Statistics Department (“C&SD”) should be stated.  For the index of industry codes, please refer to C&SD’s website 
+(www.censtatd.gov.hk).  If the entity engaged in more than one business activity, please state the industry code with reference 
+to the principal business activity of the MNE entity.  If the entity is a pure equity-holding entity (Note 12), please state “642000” 
+as the industry code. 
+ 
+12. 
+「純股權持有實體」指符合以下說明的實體： 
+(a) 
+該實體僅持有其他實體中的股權權益；及 
+(b) 
+該實體僅賺取股息、股權權益處置收益，及取得、持有或出售上述股權權益所附帶的收入。 
+“Pure equity-holding entity” means an entity that: 
+(a) 
+only holds equity interests in other entities; and 
+(b) 
+only earns dividends, equity interest disposal gains and income incidental to the acquisition, holding or sale of such 
+equity interests. 
+ 
+13. 
+屬純股權持有實體須遵從以下條例之下每項適用的註冊及存檔規定： 
+(a) 
+《公司（清盤及雜項條文）條例》（第32 章）； 
+(b) 
+《有限責任合夥條例》（第37 章）； 
+(c) 
+《商業登記條例》（第310 章）； 
+(d) 
+《公司條例》（第622 章）。 
+A pure equity-holding entity must comply with every applicable registration and filing requirement under the following 
+Ordinances: 
+(a) 
+the Companies (Winding Up and Miscellaneous Provisions) Ordinance (Cap. 32); 
+(b) 
+the Limited Partnerships Ordinance (Cap. 37); 
+(c) 
+the Business Registration Ordinance (Cap. 310); 
+(d) 
+the Companies Ordinance (Cap. 622). 
+ 
+14. 
+「指明經濟活動」指： 
+(a) 
+就屬純股權持有實體（附註12）的跨國企業實體而言，持有和管理該實體在其他實體中的股權參與； 
+(b) 
+就不屬純股權持有實體的跨國企業實體而言，就該實體取得、持有或處置的任何資產而作出所需的策略決定；及就上
+述資產管理及承擔主要風險。 
+“Specified economic activities” means: 
+(a) 
+in relation to an MNE entity that is a pure equity-holding entity (Note 12) – holding and managing its equity participations 
+in other entities; 
+(b) 
+in relation to an MNE entity that is not a pure equity-holding entity – making necessary strategic decisions in respect of 
+any assets the entity acquires, holds or disposes of; and managing and bearing principal risks in respect of such assets. 
+ 
+ 
+
+4 
+ 
+15. 
+如果有關指明經濟活動部分是由該申請人自身進行，部分由外判實體進行，需在第3 部分第3.3.6 項的兩個空格內都加上
+「」號。 
+If the specified economic activities are carried out partly by the applicant itself and partly by an outsourced entity, put “” in 
+both boxes in Item 3.3.6 of Part 3. 
+ 
+16. 
+屬純股權持有實體及不屬純股權持有實體的總數應與資料表格附表（組別申請）中的相關實體總數相同。 
+The aggregate number of pure equity-holding entities and non-pure equity-holding entities should be the same as the total 
+number of Relevant Entities listed in Annex to Data Form (Group Application). 

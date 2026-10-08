@@ -1,0 +1,739 @@
+1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Public Notice on Matters Regarding Refining the Filing of Related Party 
+Transactions and Administration of Contemporaneous Transfer Pricing 
+Documentation 
+Public Notice of the State Administration of Taxation [2016] 42 
+To refine the filing of related party transactions and the administration of 
+contemporaneous transfer pricing documentation (hereinafter referred to as the 
+“contemporaneous documentation”), the Public Notice is hereby issued  in 
+accordance with the relevant provisions of “Enterprise Income Tax Law of the 
+People’s Republic of China” (hereinafter referred to as the “Enterprise Income Tax 
+Law”) and its implementation regulations, and “The Tax Collection and Administration 
+Law of the People’s Republic of China” (hereinafter referred to as the “Tax Collection 
+and Administration Law”) and its implementation regulations. 
+1. 
+A tax resident enterprise that pays Enterprise Income Tax according to its 
+financial records and a non-tax resident enterprise that has an establishment or a 
+place of business in China and settles Corporate Income Tax based on its actual 
+accounts  shall, at the time of submitting its annual Enterprise Income Tax return, 
+report related party transactions based on its dealings with related parties, and 
+file the “People’s Republic of China Enterprise Annual Reporting Forms for 
+Related-Party Transactions (2016 version)”. 
+ 
+2. 
+Any of the following relationships of an enterprise (one party) with other 
+enterprises, organisations or individuals (the other party) shall constitute a 
+“related party relationship” as stipulated in this Public Notice :  
+ 
+(i) One party directly or indirectly owns 25% or more shares of the other party; 
+or a common third party directly or indirectly owns 25% or more of shares of 
+both parties.  
+ 
+Where one party indirectly holds the other party’s shares through an 
+intermediate party, so long as it owns 25% or more shares of the 
+intermediate party, the percentage of the other party’s shares held by it is 
+equal to the percentage of the other party’s shares held by the intermediate 
+party.  
+This is an unofficial English translation of Public Notice on Matters 
+Regarding Refining the Filing of Related Party Transactions and 
+Administration of Contemporaneous Transfer Pricing Documentation 
+(Public Notice of the State Administration of Taxation [2016] 42). In the case 
+the unofficial English translation conflicts with the content in the original 
+Public Notice in Chinese, the Public Notice in Chinese shall prevail.  
+ 
+
+2 
+ 
+ 
+Where two or more natural persons, who are spouses, related by lineal 
+consanguinity, siblings, or in other custodianship/family maintenance 
+relationships, hold the shares of a same enterprise, the percentage of shares 
+held by them shall be aggregated in the calculation to determine related party 
+relationship.  
+ 
+(ii) One party owns shares of the other party, or a common third party owns 
+shares of both parties, even though the percentage of shares held in either 
+situation is less than the percentage as specified in item (i), the total debt 
+between both parties accounts for 50% or more of either party’s total paid-in 
+capital, or 10% or more of one party’s total debt is guaranteed by the other 
+party (except for loans or guarantees from or between independent financial 
+institutions). 
+ 
+Ratio of total debt to paid-in capital = annual weighted average debt / annual 
+weighted average paid-in capital, where:   
+Annual weighted average debt = 1
+i
+n
+ (book value of debt (i) x 
+corresponding number of days outstanding / 365;   
+Annual weighted average paid-in capital = 1
+i
+n
+ (book value of paid-in 
+capital (i) x corresponding number of days invested) / 365. 
+(iii) One party owns shares of the other party, or a common third party owns 
+shares of both parties, even though the percentage of shares held in either 
+situation is less than the percentage as specified in item (i), the business 
+operations of one party depend on the proprietary rights, such as patents, 
+non-patented technological know-how, trademarks, copyrights, etc., provided 
+by the other party. 
+ 
+(iv) One party owns shares of the other party, or a common third party owns 
+shares of both parties, even though the percentage of shares held in either 
+situation is less than the percentage as specified in item (i), the business 
+activities, such as purchases, sales, receipt of services, provision of services, 
+etc., of one party are controlled by the other party. 
+ 
+The aforementioned “controlled” refers to the case where one party has the 
+right to make decisions on the other party’s financial and operational policies 
+and can therefore derive benefits from the other party’s operations. 
+ 
+(v) More than half of the directors or senior management (including secretaries 
+of the board of directors of listed companies, managers, deputy managers, 
+financial controllers and other personnel specified in the company’s articles 
+of association) of one party are appointed or assigned by the other party, or 
+simultaneously serve  as directors or senior management of the other party; 
+or more than half of the directors or senior management of both parties are 
+appointed or assigned by a common third party.  
+ 
+
+3 
+ 
+(vi) Two natural persons who are spouses, related by lineal consanguinity, 
+siblings, or in other custodianship/family maintenance relationships have one 
+of the relationships as specified in items (i) to (v) with one party and the other 
+party respectively. 
+ 
+(vii) Two parties substantially have common interests in other ways. 
+ 
+Except for item (ii) in this Article, the aforementioned related party relationship 
+should be recognized for the period during which it exists, in the event it changes 
+during the filing year.  
+ 
+3. 
+Any shareholding by the State or association through assignment of directors or 
+senior management by the state-owned assets management authorities, and 
+therefore qualified as the relationship as specified in Items (i) to (v) of Article 2, 
+will not be deemed to constitute a “related party relationship” as specified in this 
+Public Notice. 
+ 
+4. 
+Related party transactions mainly include: 
+ 
+(i) Transfer of the right to use or ownership of tangible assets.  Tangible assets 
+include merchandise, products, buildings, transportation vehicles, machinery 
+and equipment, tools, apparatus, etc. 
+ 
+(ii) Transfer of financial assets.  Financial assets include accounts receivables, 
+notes receivables, other receivables, equity investments, debt investments, 
+derivative financial instruments, etc.  
+ 
+(iii) Transfer of the right to use or ownership of intangibles.  Intangibles include 
+patents, non-patented technological know-how, trade secrets, trademarks, 
+brand names, customer lists, sales channels, franchise rights, government 
+licenses, copyrights, etc.   
+ 
+(iv) Financing.  Financing includes all types of long-term and short-term loans 
+(including group’s cash pool), guarantees, all types of interest-bearing 
+advance payments and deferred receivables or payables, etc.  
+ 
+(v) Services.  Services include market survey, marketing planning, agency, 
+design, consulting, administrative services, technical services, contract 
+research and development, maintenance services, legal services, financial 
+services, audit, recruitment, training, centralised procurement, etc. 
+ 
+5. 
+Tax resident enterprises that fall into any of the following categories shall file the 
+Country-by-Country Report at the time of submitting their “Annual Related Party 
+Transactions Reporting Forms”: 
+ 
+(i) 
+The resident enterprise is the ultimate holding company of a multinational 
+enterprise’s (hereafter referred to as the “MNE”) group  having total 
+consolidated group revenue of more than 5.5 billion RMB during the fiscal 
+year immediately preceding the reporting fiscal year as reflected in its 
+consolidated financial statements for such preceding fiscal year.  
+
+4 
+ 
+Ultimate holding company is the enterprise that can consolidate the financial 
+statements of all constituent entities that belong to its MNE group and cannot 
+be included in the consolidated financial statements of another enterprise. 
+Constituent entities shall include: 
+ 
+a. Any entity that is included in the consolidated financial statements of the 
+MNE group. 
+ 
+b. Any entity that would be included in the consolidated financial statements 
+of the MNE group if equity interest in such entity were traded on a public 
+securities exchange.  
+ 
+c. Any entity that is excluded from the consolidated financial statements of 
+the MNE group solely on size or materiality grounds. 
+ 
+d. Any permanent establishment that prepares a separate financial 
+statement. 
+ 
+(ii) 
+The resident enterprise that has been appointed by the MNE group to file the 
+Country-by-Country Report.  
+The Country-by-Country Report is to disclose information relating to the global 
+income, taxes and business activities of all constituent entities of the MNE group 
+to which the ultimate holding company belongs on a country-by-country basis.   
+ 
+6. 
+For a MNE group whose ultimate holding company is a resident enterprise in 
+PRC, if its information is related to national security, it can be exempted from 
+filing the Country-by-Country Report in whole or in part in accordance with the 
+applicable laws and regulations.  
+ 
+7. 
+Tax administrations may exchange the Country-by-Country Report in accordance 
+with tax treaties, agreements or arrangements that PRC has entered into. 
+ 
+8. 
+For an enterprise that is not required to file the Country-by-Country Report under 
+the provisions of Article 5 of this Public Notice, tax administrations can request 
+the enterprise to provide the Country-by-Country Report during a special tax 
+investigation if the MNE to which the enterprise belongs is required to prepare the 
+Country-by-Country Report in accordance with the relevant regulations of another 
+country and one of the following conditions is met: 
+ 
+(i) 
+The MNE has not filed the Country-by-Country Report to any other countries.  
+(ii) 
+Although the MNE has filed the Country-by-Country Report to another 
+country, there is no mechanism in place to exchange Country-by-Country 
+Report between China and that country.  
+(iii) Although the MNE has filed the Country-by-Country Report to another 
+country, and there is a mechanism in place to exchange the 
+Country-by-Country Report between China and that country, the 
+Country-by-Country Report has not been successfully exchanged to China. 
+ 
+
+5 
+ 
+9. 
+Enterprises that encounter actual difficulties in filing the “Annual Reporting Forms 
+for Related Party Transactions” on time as required may apply for an extension of 
+time in accordance with relevant provisions of the Tax Collection and 
+Administration Law and its implementation regulations. 
+ 
+10. Enterprises shall, in accordance with Article 114 of the implementation 
+regulations of the Enterprise Income Tax Law, prepare contemporaneous 
+documentation with respect to their related party transactions for each tax year 
+and submit the documentation upon the tax administration’s request. 
+ 
+Contemporaneous documentation may include master file, local file and special 
+issue file. 
+ 
+11. Any enterprise that meets one of the following criteria shall prepare a master file : 
+ 
+(i) The enterprise that has conducted cross-border related party transactions 
+during the tax year concerned, and the MNE group to which the ultimate 
+holding company that consolidates the enterprise belongs, has prepared a 
+master file.   
+ 
+(ii) The annual total amount of the enterprise’s related party transactions exceeds 
+1 billion RMB. 
+ 
+12. The master file is to provide an overview of the global business operations of the 
+MNE group to which the ultimate holding company belongs, and shall include the 
+following information: 
+ 
+(i) 
+Organisational structure 
+ 
+Chart illustrating the global organisational structure and ownership structure 
+of the MNE group, and the geographical locations of all constituent entities.  
+A constituent entity refers to any operating entity of the MNE group, including 
+corporations, partnerships and permanent establishments, etc.  
+ 
+(ii) 
+Description of MNE’s business(es)  
+ 
+a. A description of the MNE’s business, including important value drivers of 
+business profit. 
+ 
+b. A description of the supply chain and main geographic markets for the 
+group’s five largest products or service offerings by turnover plus any 
+other products or services amounting to more than 5 percent of group 
+turnover. The required description could take the form of a chart or a 
+diagram. 
+ 
+c. A list and brief description of important service arrangements between 
+constituent entities of the group, other than research and development 
+services, including a description of the capabilities of the principal 
+locations providing important services and transfer pricing policies for 
+allocating service costs and determining prices to be paid for intra-group 
+services.  
+ 
+
+6 
+ 
+d. A functional analysis describing the principal contributions to value 
+creation by individual constituent entities within the group, i.e. key 
+functions performed, important risks assumed, and important assets 
+used. 
+ 
+e. A description of business restructurings, industrial restructurings, 
+transfers of functions, risks or assets occurring within the group during 
+the fiscal year.    
+ 
+f. A description of reorganizations occurring during the fiscal year within the 
+group, i.e. Changes of legal form, debt restructuring, equity acquisition, 
+asset acquisitions, merger and divestitures. 
+ 
+ 
+(iii) Intangibles 
+ 
+a. A general description of the MNE’s overall strategy for the development, 
+ownership and exploitation of intangibles, including location of principal 
+research and development facilities, location of research and 
+development management,  and their functions, risks, assets and 
+personnel.   
+ 
+b. A list of intangibles or groups of intangibles of the MNE group that are 
+important for transfer pricing purposes and which entities own them. 
+ 
+c. A list of important agreements entered between constituent entities and 
+their related parties related to intangibles, including cost sharing 
+agreements, principal research services agreements and licence 
+agreements. 
+ 
+d. A description of the groups’ transfer pricing policies related to research 
+and development and intangibles.   
+ 
+e. A description of any important transfers of interests in intangibles among 
+related parties during the fiscal year concerned, including the entities, 
+countries, and compensations involved.   
+ 
+(iv) Financial activities 
+ 
+a. A description of financing arrangements between related entities within 
+the group and important financing arrangements with unrelated parties.  
+ 
+b. The identification of any constituent entities of the MNE group that 
+provides a central financing function for the group, including the country 
+under whose laws the entity is organised and the place of effective 
+management of such entities.  
+ 
+c. A description of the MNE’s general transfer pricing policies related to 
+financing arrangements between related entities.  
+ 
+(v) Financial and tax positions 
+ 
+a. The MNE’s annual consolidated financial statements for the fiscal year 
+concerned. 
+
+7 
+ 
+ 
+b. A list of the MNE group’s existing unilateral advance pricing agreements, 
+bilateral advance pricing agreements and other tax rulings relating to the 
+allocation of income among countries.  
+ 
+c. Name 
+and 
+location 
+of 
+the 
+constituent 
+entity 
+that 
+files 
+the 
+Country-by-Country Report for the MNE group.  
+ 
+13. Any enterprise that meets one of the following criteria during the fiscal year shall 
+prepare a local file: 
+ 
+(i) 
+The annual related party transfer of ownership of tangible assets exceeds 
+200 million RMB (for toll manufacturing transaction, the amount is calculated 
+using the import/export customs declaration prices).  
+ 
+(ii) 
+The annual related party transfer of financial assets exceeds100 million 
+RMB. 
+ 
+(iii) The annual related party transfer of ownership of intangibles exceeds 100 
+million RMB. 
+ 
+(iv) The annual total amount of other related party transactions exceeds 40 
+million RMB.  
+ 
+14. Local file is to disclose detailed information on the enterprise’s related party 
+transactions, including the following: 
+ 
+(i) 
+Overview of the enterprise 
+ 
+a. 
+Organisational structure, including the setup, scope of responsibility and 
+number of employees of each functional department of the enterprise. 
+ 
+b. 
+Management structure, including the parties to which each level of the 
+management reports, and the locations in which such parties maintain 
+their principal offices, etc. 
+ 
+c. 
+Industry description, including an overview of the industry in which the 
+enterprise operates and its development, other major economic and 
+legal factors affecting the industry, such as industry policies, trade 
+restrictions, as well as key competitors. 
+ 
+d. 
+Business strategies, including the workflow, operational model and 
+factors that contribute to value creation, etc., of each department and 
+each operational stage of the enterprise. 
+ 
+e. 
+Financial data, including turnover, costs, expenses and profits for the 
+different types of business and product offerings of the enterprise. 
+ 
+f. 
+A description of business restructurings or intangibles transfers in which 
+the enterprise has been involved in or affected by and an explanation of 
+those aspects of such transactions affect the enterprise. 
+ 
+(ii) 
+Related party relationship 
+
+8 
+ 
+ 
+a. Information on related parties including the name, legal representatives, 
+composition of senior management, address of actual operation of any 
+related party (enterprise) that directly or indirectly own shares of the 
+enterprise and with which the enterprise has entered into transactions, as 
+well as the name, nationality and country of residence of any related 
+party (individual). 
+ 
+b. Information on taxes of income tax nature to which the enterprise is 
+subject, with details including types of the taxes, tax rates and applicable 
+preferential tax treatments.   
+ 
+c. Information on changes in related party relationship of the enterprise 
+during the fiscal year concerned. 
+ 
+(iii) Related party transactions 
+ 
+a. Overview of related party transactions 
+ 
+(1) A description of related party transactions with details, including 
+copies of contracts or agreements relating to the related party 
+transactions and their execution, characteristics of the underlying 
+targets, and categories, parties involved, timing, transaction value, 
+settlement currency, contractual terms and conditions, trading 
+models of the related party transactions as well as an explanation of 
+how they are similar to or different from that of unrelated party 
+transactions. 
+ 
+(2) Transactional flow of the related party transactions, including the 
+flows of information, goods and materials, and capitals, as well as an 
+explanation of how they are similar to or different from that of 
+unrelated party transactions. 
+ 
+(3) A description of functions and risks, including the functions performed, 
+risks assumed and assets used by the enterprise and its related 
+parties for each category of related party transactions. 
+ 
+(4) Key factors affecting the pricing of related party transactions, 
+including intangibles involved in the transactions and their impact on 
+pricing, as well as location specific factors such as cost savings and 
+market premium etc.  Analysis on location specific factors shall 
+focus on aspects such as labour costs, environmental costs, market 
+size, degree of market competition, consumer purchasing power, 
+substitutability of goods or services, and regulatory controls, etc.  
+ 
+(5) Financial information on related party transactions, including the 
+amount involved for each related party and each category of related 
+party transactions; segmented data on turnover, costs, expenses and 
+profits of related party transactions and unrelated party transactions; 
+for items that could not be directly segmented and therefore have 
+been allocated using appropriate allocation keys, information on how 
+they are allocated and an explanation of how the allocation keys have 
+been selected. 
+ 
+
+9 
+ 
+ 
+b. Value chain analysis 
+ 
+(1) Flows of business, goods and materials, and capitals within the group, 
+including design, development, manufacturing, marketing, sales, 
+delivery, billing and payment, consumption, after-sale service, 
+recycling, other processes related to goods, services or other 
+relevant underlying targets of the related party transactions and all 
+the parties involved.  
+ 
+(2) Annual financial statements of each of the aforementioned parties for 
+the immediately preceding fiscal year.  
+ 
+(3) Measurement and attribution of value creation contributed by location 
+specific factors. 
+ 
+(4) Allocation policies and actual allocation results of the group’s profits 
+in the global value chain. 
+ 
+c. Outbound investment 
+ 
+(1) Information on outbound investment, including the locations, 
+amounts, main businesses and strategic plans of the investment 
+projects.  
+ 
+(2) An overview of outbound investment projects, including shareholding 
+structure and organisational structure of the investment projects, 
+employment of senior management involved in the investment 
+projects, decision making process and the parties with final decision 
+making authority about the investment projects.   
+ 
+(3) Data of outbound investment projects, including operational data. 
+ 
+d. Related party equity transfer 
+ 
+(1) An overview of related party equity transfer, including background, 
+parties involved, timing, pricing, payment method of the transfer, as 
+well as other factors affecting the transfer.  
+ 
+(2) Information on the equity transferred, including information like the 
+equity’s geographic location, timing of the transfer, methodology of 
+the transfer, cost of the transfer, income generated from the transfer, 
+etc.  
+ 
+(3) Due diligence report or asset valuation report or any other information 
+pertaining to the equity transfer. 
+ 
+e. Related party services  
+ 
+(1) An overview of related party services, including service providers and 
+recipients, nature of services, characteristics, method of service 
+delivery, pricing policies and methods, form of payments, and 
+benefits received by each party in relation to the services provided, 
+etc. 
+ 
+
+10 
+ 
+(2) Methodology for determining the service costs, service items, service 
+amount, allocation keys, calculation process and results.  
+ 
+(3) Where the enterprise and its group are involved in transactions of the 
+same or similar nature with an unrelated party, the enterprise shall 
+describe in detail how the transactions are similar to or different from 
+related party transactions in pricing policies and results. 
+ 
+f. 
+Existing advance pricing agreements and other tax rulings to which the 
+PRC is not a party and which are related to the enterprise’s related party 
+transactions.  
+ 
+(iv) Comparability analysis 
+ 
+a. Factors 
+considered 
+in 
+the 
+comparability 
+analysis, 
+including 
+characteristics of the goods or services involved in the transactions, 
+functions performed, risks assumed and assets used by each party 
+involved, contractual terms, economic environment, business strategies, 
+etc. 
+ 
+b. Information related to the functions performed, risks assumed, and 
+assets used by the comparable companies. 
+ 
+c. Search process for comparables, data source, selection criteria and 
+rationale for setting the criteria. 
+ 
+d. Information of selected internal or external comparable uncontrolled 
+transactions and financial information of comparable companies.  
+ 
+e. Comparability adjustments and rationale for the adjustments. 
+ 
+(v) Selection and application of transfer pricing method 
+ 
+a. Selection of tested party and rationale for the selection. 
+ 
+b. Selection of transfer pricing method and rationale for the selection.  
+Regardless of the transfer pricing method selected, description of the 
+contribution of the enterprise to the group’s overall profit or residual profit 
+is required.  
+ 
+c. Assumptions and judgment made in the process of determining arm’s 
+length prices or profits. 
+ 
+d. Application of reasonable transfer pricing method and result from 
+comparability analysis to determine the arm’s length prices or profits.  
+ 
+e. Other information supporting the selection of transfer pricing method. 
+ 
+f. 
+Analysis and conclusion of whether the transfer pricing for the related 
+party transactions complis with the arm’s length principle. 
+ 
+15. Special issue files include special issue file on cost sharing agreements and 
+special issue file on thin capitalisation.  
+ 
+
+11 
+ 
+An enterprise that enters into or implements a cost sharing agreement (hereafter 
+referred to as “CSA”) shall prepare a special issue file for the CSA. 
+ 
+An enterprise with a related party debt-to-equity ratio exceeding the threshold 
+shall prepare a special issue file on thin capitalisation to demonstrate its 
+conformity with the arm’s length principle.  
+ 
+16. Special issue file on CSAs shall include the following information: 
+ 
+(i) A copy of the CSA. 
+ 
+(ii) Other agreements reached by the CSA participants to facilitate the 
+implementation of the CSA. 
+ 
+(iii) Use of outcomes of the CSA by non-participants, amount paid and form of 
+payment, as well as the allocation method for sharing the payment among 
+the participants. 
+ 
+(iv) Information on any participants entering in or withdrawing from the CSA 
+during the fiscal year concerned, including the names of the participants, 
+their countries of residence and related party relationships, and the amount 
+and form of payment for the buy-in or buy-out compensations. 
+ 
+(v) Description of amendments to or termination of the CSA, including the 
+reasons for the amendments or termination, and the treatment or allocation 
+of the existing CSA outcomes. 
+ 
+(vi) Total cost from the CSA and its breakdown during the fiscal year concerned. 
+ 
+(vii) Cost sharing among the CSA participants during the fiscal year concerned, 
+including the amount, form of payment and which parities the allocated costs 
+are paid to; and the amount, form of payment, and which parties the 
+balancing payments are paid to or received from. 
+ 
+(viii) A comparison of expected benefits and actual benefits from the CSA, and the 
+balancing adjustments made. 
+ 
+(ix) Calculation of expected benefits, including the selection of parameters, 
+calculation method and reasons for any changes to them. 
+ 
+17. Special issue file on thin capitalisation shall include the following information: 
+ 
+(i) Analysis of the enterprise’s solvency and borrowing ability.  
+ 
+(ii) Analysis of the borrowing ability and financing structure of the group to which 
+the enterprise belong.  
+ 
+(iii) A description of changes in equity investment of the enterprise, such as 
+changes in registered capital, etc. 
+ 
+(iv) Nature and purposes of the related party debt investment, and the market 
+conditions at the time the debt investment was obtained.  
+
+12 
+ 
+ 
+(v) Currency, amount, interest rate, term and financing terms of the related party 
+debt investment.  
+ 
+(vi) Whether an unrelated party is capable and willing to accept the 
+aforementioned financing terms, amount and interest rate.    
+ 
+(vii) Collaterals provided by the enterprise in order to obtain the debt investment 
+and the relevant terms.  
+ 
+(viii) Details of the guarantor and the terms of guarantee.  
+ 
+(ix) Interest rates and financing terms of similar loans occurring during the same 
+period of time.  
+ 
+(x) Terms of conversion of convertible bonds.  
+ 
+(xi) Other information that can demonstrate the enterprise’s conformity with the 
+arm’s length principle. 
+ 
+18. Enterprises with effective advance pricing agreements in place may choose not 
+to prepare local file and special issue file with respect to the related party 
+transactions covered by such advance pricing agreements, and the amount of 
+these related party transactions is excluded from the calculation of the thresholds 
+stipulated in Articles 13 of this Public Notice. 
+ 
+Enterprises with only domestic related party transactions may choose not to 
+prepare master file, local file and special issue file. 
+ 
+19. A master file shall be completed within 12 months of the fiscal year end of the 
+ultimate holding company of the enterprise group; local file and special issue file 
+shall be completed by 30 June of the year following the year during which the 
+related party transactions occur. Contemporaneous documentation shall be 
+submitted within 30 days after receiving a request from the tax administrations. 
+ 
+20. Enterprises that fail to submit contemporaneous documentation due to an event 
+of force majeure shall submit the contemporaneous documentation within 30 
+days after the event of force majeure ceases to prevent the submission. 
+ 
+21. Contemporaneous documentation shall be prepared in Chinese. The source of 
+information used should be specified. 
+ 
+22. Contemporaneous documentation shall be sealed with the enterprise’sl company 
+chop, and signed and sealed by the legal representative or the representative 
+authorised by the legal representative of the enterprise.   
+ 
+23. In the event of a merger or divestiture, the relevant contemporaneous 
+documentation shall be kept by the surviving enterprise after the merger or 
+divestiture. 
+
+13 
+ 
+ 
+24. Contemporaneous documentation shall be kept for 10 years from the completion 
+date of the preparation as required by the tax administrations. 
+ 
+25. For enterprises that file related party transactions, submit contemporaneous 
+documentation and other relevant information in accordance with relevant 
+provisions, when additional tax is imposed by the tax administrations during the 
+special tax investigation, an interest can be levied based on the People’s Bank of 
+China central base lending rates for the same period to which the tax payment is 
+related, in accordance with the provisions under Article 122 of the implementation 
+regulations of the Enterprise Income Tax Law.  
+ 
+26. This Public Notice also applies to transactions with related parties in Hong Kong, 
+Macau and Taiwan. 
+ 
+27. This Public Notice shall become effective from 2016 and onwards.  Chapter 2, 
+Chapter 3, Article 74 and Article 89 of the “Implementation Measures of Special 
+Tax Adjustments (Trial Version)” (Guo Shui Fa [2009] No.2), the “People’s 
+Republic of China Enterprise Annual Reporting Forms for Related-Party 
+Transactions” (released with Guo Shui Fa [2008] No.114) shall be annulled as of 
+the same date.   
+ 
+Appendix:  
+(1) People’s Republic of China Enterprise Annual Reporting Forms for Related-Party 
+Transactions (2016 version) 
+(2) Filing Instructions to “People’s Republic of China Enterprise Annual Reporting 
+Forms for Related-Party Transactions (2016 version)” 
+ 
+ 
+State Administration of Taxation 
+29 June 2016 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

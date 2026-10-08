@@ -1,0 +1,3 @@
+﻿label_id,doc_id,date_of_payment,tax,paid_on,page_due_date,page_penalty_total,quote,note
+sg_iras_ex.01,sg.iras.wht.late-payment,2025-04-07,1000,2025-06-28,2025-06-15,50,"A 5% penalty of $50 (5% x $1,000) is imposed when tax is not paid by 15 Jun 2025.",页面写的是法条上的 15 日；2025-06-15 是周日
+sg_iras_ex.02,sg.iras.wht.late-payment,2025-05-26,7000,2025-10-25,2025-07-15,490,"The total penalty imposed would be $490 [ (5% penalty x $7,000) + (1% additional penalty x $7,000 x 2 months)].",到期日后 30 天起算，满两个整月

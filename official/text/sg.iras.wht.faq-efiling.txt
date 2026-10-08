@@ -1,0 +1,236 @@
+Frequently Asked Questions on online filing of Section 45 Withholding Tax  
+Q1. 
+Who can file for Withholding Tax? 
+ 
+Q2.  
+Is there a limit to the number of records my organisation can file? 
+ 
+Q3. 
+Are there other payment modes for Withholding Tax besides GIRO? 
+ 
+Q4. 
+I do not have the full address of the payee, but the field is mandatory. What should I 
+do? 
+ 
+Q5 
+I do not have the Payee’s ID. What should I do? 
+ 
+Q6. 
+How to file if Period of Payment overlaps 2 or more calendar years? 
+ 
+Q7. 
+Can I save the form without having to submit it to IRAS? 
+ 
+Q8. 
+How to retrieve the draft that I have just saved? 
+ 
+Q9. 
+Who can retrieve/ view the saved draft? 
+ 
+Q10. 
+Is ‘Submit to Approver’ considered a submission to IRAS? 
+ 
+Q11. 
+What is the time frame for my approver to approve my submission? 
+ 
+Q12. 
+How do I know if my submission was successful? 
+ 
+Q13. 
+After filing, do I need to save or print the Consolidated Statement/ Acknowledgement 
+Page? 
+ 
+Q14. 
+How do I amend a record which I have submitted? 
+ 
+Q15. 
+If I am under GIRO and IRAS have processed an amendment which results in change in 
+tax payable, how soon will I be able to see the updated GIRO Plan details? 
+ 
+Q16. 
+When will I get the Confirmation of Payment letter? 
+ 
+Q17. 
+What should I do when I encounter error when filing for Withholding Tax? 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+Q1. Who can file for Withholding Tax? 
+ 
+A1. You can authorise the following personnel to file Withholding Tax via our e-Services. 
+a. 
+Staff/ Tax agents  
+b. 
+The sole proprietor (NRIC holder) of the business 
+ 
+Only a staff or tax agent who has been authorised as an Approver via Corppass, can submit 
+S45 filings to IRAS.  
+ 
+Back to top 
+ 
+Q2. Is there a limit to the number of the records my organisation can file? 
+ 
+A2.  There is no limit to the number of records an organisation can file but do not submit the same 
+record twice as duplicate payment will then be required from you.  
+ 
+Back to top 
+ 
+Q3. Are there other payment modes for Withholding Tax besides GIRO? 
+A3.  Yes, you may pay refer to IRAS Payments website for the other payment modes available for 
+Withholding Tax. 
+ 
+GIRO is, however, the preferred mode of payment. 
+ 
+Back to top 
+ 
+Q4. I do not have the full address of the payee, but the field is mandatory. What should I do? 
+A4.  You may indicate the country/region of residence of the payee under the address field if you do 
+not have the payee’s full address.  
+Back to top 
+ 
+Q5. I do not have the payee’s ID. What should I do? 
+A5.  If you do not have the payee’s ID, you may leave the field blank as it is an optional field. Please 
+ensure that the dropdown list for types of identity no. remains at ‘Please select’ before 
+proceeding further. 
+Back to top 
+ 
+Q6. How to file if the Period of Payment overlaps 2 or more calendar years? 
+A6.  If the period of payment is more than 1 year, please apportion the taxable income and file a 
+separate submission for each calendar year.  
+ 
+Example:  
+ 
+Period of Payment is from 01 Dec 2024 to 31 Jan 2025 
+
+ Withholding Tax submission (1) -> Indicate the Period of Payment as 01 Dec 2024 to 31 Dec 
+2024 
+ 
+Withholding Tax submission (2) -> Indicate the Period of Payment as 01 Jan 2025 to 31 Jan 
+2025 
+Back to top 
+ 
+Q7. Can I save the form without having to submit it to IRAS? 
+ 
+A7. You may select ‘Save Draft and Exit’ at the bottom of the form to save the information prepared 
+without submission to IRAS.  
+ 
+ 
+The saved draft will be available for 60 days from the last saved date. Thereafter, the form will be 
+auto-deleted if it is not submitted to IRAS. 
+ 
+Back to top 
+ 
+Q8. How to retrieve the draft that I have just saved? 
+ 
+A8. To retrieve the saved draft, login to mytax.iras.gov.sg > S45 > Retrieve S45 Form (Draft) and 
+enter the search parameters. 
+ 
+ 
+Back to top 
+ 
+ 
+Q9. Who can retrieve/view the saved draft? 
+ 
+A9. Both the Preparer and Approver can retrieve the saved draft for editing. 
+ 
+Back to top 
+ 
+Q10. Is ‘Submit to Approver’ considered a submission to IRAS? 
+ 
+A10. It is a submission to the Approver to approve and not a submission to IRAS. 
+ 
+Back to top 
+ 
+Q11. What is the time frame for my approver to approve my submission? 
+ 
+A11.  Approver is required to approve the Withholding Tax submission within 60 days from the date 
+the preparer submits for approval. Thereafter, the submission will be auto-deleted if it is not 
+approved by the Approver.  
+ 
+Back to top 
+ 
+Q12. How do I know if my submission was successful? 
+ 
+A12. An Acknowledgement page with an acknowledgment number will be generated upon successful 
+submission to IRAS. You may also log in to mytax.iras.gov.sg > S45 > View/Amend S45 Form 
+to confirm and view the status of the record filed.  
+ 
+Back to top 
+ 
+
+Q13. After filing, do I need to save or print the Consolidated Statement/ Acknowledgement 
+ 
+Page? 
+ 
+A13. It is important for you to save or print a copy of the Consolidated Statement for retention as only 
+the Acknowledgement Page is available for retrieval in myTax Portal. 
+ 
+To save a copy of the Consolidated Statement, go to ‘File’ > ‘Save’ 
+ 
+To print a copy of the Consolidated Statement, go to ‘File’ > ‘Print’. For soft copy, you may print 
+the copy as a PDF document. 
+ 
+To retrieve a copy of the Acknowledgement Page, please login to mytax.iras.gov.sg > Notices/ 
+Letters > S45 > Category: Acknowledgement   
+ 
+Back to top 
+ 
+Q14. How do I amend a record which I have submitted?  
+ 
+A14. You may amend the records online once they have been processed.   
+ 
+What you need to do 
+ 
+1. Log in to mytax.iras.gov.sg 
+2. Select S45 > View/Amend S45 Form 
+3. Follow instructions shown on the screen to edit the Withholding Tax (WHT) records. 
+ 
+Your new submission will override the previous submission once the amendment to the 
+WHT record has been processed.   
+ 
+Please note that online amendment is only applicable for WHT records submitted within 2 back 
+years from the current date. For information on how to amend WHT records submitted more 
+than 2 back years, please refer to www.iras.gov.sg > Taxes > Withholding Tax > Withholding 
+Tax Filing > Making amendment after filing/ claiming refund. 
+  
+For tax borne by the Payer, approved refunds of $15 or more will be processed and refunded 
+via GIRO or PayNow within 30 days.  
+For tax borne by the non-resident, the refund will be made to them via Telegraphic Transfer. A 
+separate letter requesting for the non-resident’s refund details will be issued to the Payer once 
+the WHT amendment has been processed. For further details, please refer to FAQ on 
+electronic refunds for WHT.  
+Back to top 
+ 
+Q15. If I am under GIRO and IRAS have processed an amendment which results in change in 
+tax payable, how soon will I be able to see the updated GIRO Plan details? 
+ 
+A15. The GIRO Plan details will be updated within 3 working days upon notification from IRAS that 
+amendments have been processed. 
+ 
+Back to top 
+ 
+
+Q16. When will I get the Confirmation of Payment letter? 
+ 
+A16. After the withholding tax payment has been received by IRAS, a digital Confirmation of Payment 
+(CP) showing the amount withheld from the non-resident will be available for viewing or 
+downloading in myTax Portal within 5 working days upon successful GIRO deduction or 6 
+working days upon the receipt of payment for other modes of payment.  
+ 
+No hardcopy CP will be sent. 
+ 
+Back to top 
+ 
+Q17. What should I do when I encounter error when filing for Withholding Tax? 
+A17. Please email us at enfs45@iras.gov.sg with the screenshots of the errors encountered. 
+Back to top 
+ 

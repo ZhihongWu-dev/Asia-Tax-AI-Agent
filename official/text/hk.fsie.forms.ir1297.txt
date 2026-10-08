@@ -1,0 +1,790 @@
+application | numericEdit CurrentPage | Text Field
+application | text | To ensure the functions embedded in the fillable PDF form can be performed properly, please download the fillable PDF form to local drive, open and complete the form by using the latest version of Adobe® Acrobat® Reader (version 11 or above) which can be downloaded from https://acrobat.adobe.com/hk/en/acrobat/pdf-reader.html. 為確保可輸入資料的PDF表格的功能可正常運作，請先下載有關的PDF檔案至本機硬碟，然後以最新的Adobe® Acrobat® Reader（11或以上的版本）開啟並輸入資料。你可經由https://acrobat.adobe.com/hk/zh-Hant/acrobat/pdf-reader.html下載有關軟件。
+application | numericEdit PageCount | Text Field
+application | text | - Page of
+application | numericEdit CurrentMasterPage | Text Field
+application | text | Applicant[ ]
+application | text | Data Form
+application | text | Annex to Data Form
+application/main/heading | text | 事先裁定申請表 Application for Advance Ruling 本表格供所有納税人親自或經由代表填寫，用以申請就特定的安排作出裁定。 This form is for use by all taxpayers, either personally or by their representative, applying for a ruling concerning a particular arrangement. 局長只可就與《税務條例》(第 112 章) 附表 10 所列載事項有關的問題作出裁定。 The Commissioner may only issue a ruling for question(s) concerning the matters listed in Schedule 10 to the Inland Revenue Ordinance (Cap. 112) (“IRO”). 在填寫表格前，請閱讀「申請事先裁定資料單張」 (IR1298) 。 Read “Application for Advance Ruling Information Sheet” (IR1298) before you complete this form.
+application/main/heading | text | iVBORw0KGgoAAAANSUhEUgAAASwAAAEWAQMAAADmUjj9AAAAA3NCSVQICAjb4U/gAAAABlBMVEX/ //8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADkklEQVRoge3YTZakIAwAYPu5qKVH8Cgc DY7GUTgCSxYMTFv+QEiiaWVezaLZ1Kv4qUiUv2H4LU/KK2eBGnPO6ZpN3yxb/vD2qxcWrthyz3xS u429VmYu2Lwyd8H0ytjKrexrVXyTTHXV+MpNddXWyu1/LGJqZ75iCTG9s9Beumb7E6xXOFhu2Jjr I4VZyF6FmZp5yKZcX6CwBFk5sFR7BidVTJUDHrAAmAYHKpYAK/EcATuSN4Fme59fM1exqtmWhquZ 55gBLFZs4lnmmIXMFgbirv0rYqEwVcc9ZLEwDU8HLMlYLgyEY8PMzr5OmaNZapjfGcjVd2UgCzKW GGYgyzt7dWGGZrZhbmOTjM3nzNPMNf+DjMWNqeYmDUsyloXMrEzvFV1flXDG/NGXIGZlzMmY/xHL kMWWBRmLXVmSsdyXma7MdmVOxvwnWOjKYleWPsEyxQLD9CUzH2MKMtQNLq+vnM2QtT35EjpY6VRP WRV7xi6GtnfFrwfKZ6wdnXd2PnPoz8L15Idh7VTqYOcTM4a107zC9BWLl1PQjS0FxN1TdjbZ5phh GXhF0Nt8sDqpiWcni5SaDTgCb7EFdYmUZTFmqkTKsk8hVtXGHWxGDC4VBxTcGFx4DigY0VMdqg7u j4/bA7TmHj1aJJyy46ncKTueyp4yajOBYNTWBMGojQ6KzegJanacTWzCUGxEVSNZNXDBMze27yPN TauB1Be2XC4ODPOFje1m00QyVGYZUzKWRWzELF8U9x8z25WZTzC8j/TvWfoEi11Z6Mp8V+a6Mitj pisberLUlcWuLMiYlzHXlVkZM13ZIGJJxqKMBRnzMuZkzJLsT8sMyWLLBpppqBLDFGRRxgLDZsg8 w5pVrWNYu1yVMcOwdoEpYpFjcIEZONauHEWMvSlcYPJM1X8Ty+YbjG23ZquCy4KUwaRyqW92DbgX qdkOEDLu7UXbARzTNxj3ATa7BkLGffXtGptl0x1mOPaSMZhUyzEiqQ8YTCrd4SNGDx8L023gEVN1 gB4BFzaDyrEMJ1XADMfwl0oynFQBcxzDSSUZTuojpusIOX/DjJwNvpmqI+QU9M1mGUNJfcTQl0qz 8Q6zHENJlbDvbL1IhpI60kzXoSBjS7dCM3WD7dtLmE03WGYZ0f1SDCVVwizHqKH3PiN6aZLpGyyw TF1UBO8Ui1liGZV7gsGkCpnhGJVUgn3dYY5jg5BpzH5LVf4C8+siELDETWAAAAAASUVORK5CYII=
+application/main/heading | text | 税務局 INLAND REVENUE DEPARTMENT
+application/main/heading | text | 編號： Serial No.：
+application/main/heading | text | 將填妥的表格寄交﹕
+application/main/heading | text | Post the completed form to:
+application/main/heading | text | 香港九龍 啟 德協調道 5 號税務中心 15 樓 税務局副局長（技術事宜）
+application/main/heading | text | A. 申請人資料 Applicant(s) details 填寫這項裁定所關乎的當事人的資料。 Complete the details of the person to whom the ruling will apply.
+application/main/heading | barcode qrCode0 | 
+application/main/heading | text | Deputy Commissioner of Inland Revenue (Technical) 15/F, Inland Revenue Centre, 5 Concorde Road, Kai Tak, Kowloon, Hong Kong
+application/main/mainApplicant | textEdit txtAppName | 申請人全名 Full name(s) of Applicant(s)
+application/main/mainApplicant | textEdit txtFileNo | 税務局檔案號碼 Inland Revenue Department File No.
+application/main/mainApplicant/applicantinfo/appAddress | textEdit txtFlt | 單位編號 Flat / Room
+application/main/mainApplicant/applicantinfo/appAddress | textEdit txtSt | 街道名稱及號數 No. & Name of Street
+application/main/mainApplicant/applicantinfo/appAddress | textEdit txtDistr | 地區 District
+application/main/mainApplicant/applicantinfo/appAddress | textEdit txtBlk | 座號 Block
+application/main/mainApplicant/applicantinfo/appAddress | textEdit txtFl | 樓數 Floor
+application/main/mainApplicant/applicantinfo/appAddress | textEdit txtBldg | 樓宇 / 大廈名稱 Name of Building
+application/main/mainApplicant/applicantinfo/appAddress | text | 地域 Area
+application/main/mainApplicant/applicantinfo/appAddress | checkButton hk | 香港 HK
+application/main/mainApplicant/applicantinfo/appAddress | checkButton kln | 九龍 KLN
+application/main/mainApplicant/applicantinfo/appAddress | checkButton nt | 新界 NT
+application/main/mainApplicant/applicantinfo/appAddress | text | If your address is an overseas address, please provide the following additional details
+application/main/mainApplicant/applicantinfo/appAddress | text | 郵政信箱 PO Box
+application/main/mainApplicant/applicantinfo/appAddress | textEdit txtPob | 郵政信箱 PO Box
+application/main/mainApplicant/applicantinfo/appAddress | text | 郵政編號 Post Code
+application/main/mainApplicant/applicantinfo/appAddress | textEdit txtPc | 郵政編號 Post Code
+application/main/mainApplicant/applicantinfo/appAddress | text | 城市 City
+application/main/mainApplicant/applicantinfo/appAddress | textEdit txtCity | 城市 City
+application/main/mainApplicant/applicantinfo/appAddress | text | 國家/地區 Country/Region
+application/main/mainApplicant/applicantinfo/appAddress | choiceList ddCountry | The drop-down list is based on the ISO 3166-1 country list which is currently used by banks and other financial institutions, and hence by tax administrations. The use of this list does not imply the expression of any opinion whatsoever concerning the legal status of the territories listed. Its content is without prejudice to the status of or sovereignty over any territory, to the delimitation of international frontiers and boundaries and to the name of any territory, city or area.
+application/main/mainApplicant/applicantinfo/appContact | textEdit txtCt | 聯絡人姓名 Contact person
+application/main/mainApplicant/applicantinfo/appContact | textEdit txtTel | 電話號碼 Telephone number
+application/main/mainApplicant/applicantinfo/appContact | textEdit txtFax | 傳真號碼 Fax number
+application/main/mainApplicant/applicantinfo | text | 地址 Address
+application/main/mainApplicant | text | 是否聯名申請﹖ Is this a joint application? ﹝ 請在適當格內加上 「 √ 」號 ﹞ ﹝Please put “√” in the appropriate box ﹞
+application/main/mainApplicant | exclGroup cbJointApp |  | options: 0; 1
+application/main/mainApplicant | checkButton valNo | 否 No | options: 0
+application/main/mainApplicant | checkButton valYes | 是 Yes | options: 1
+application/main/mainApplicant | text | 否 No
+application/main/mainApplicant | text | 是 Yes
+application/main/mainApplicant | button btnForJointApp | 請於本表格後段部分就每名其他申請人提供上述資料。 Please provide the above details for each of the other applicant(s) in the later part of this form.
+application/main/mainApplicant | text | 附註﹕ 外地收入豁免徵税機制下經濟實質要求的「組别申請」並非上述聯名申請。 Note: “Group application” on Economic Substance Requirement under Foreign Source Income Exemption regime is not a joint application for the present purpose.
+application/main/repApplicant | text | B . 代表的資料 Representative details
+application/main/repApplicant | textEdit txtAppName | 代表的全名 Representative’s full name
+application/main/repApplicant | text | 地址 Address
+application/main/repApplicant/applicantinfo/appAddress | textEdit txtFlt | 單位編號 Flat / Room
+application/main/repApplicant/applicantinfo/appAddress | textEdit txtFl | 樓數 Floor
+application/main/repApplicant/applicantinfo/appAddress | textEdit txtBlk | 座號 Block
+application/main/repApplicant/applicantinfo/appAddress | textEdit txtBldg | 樓宇 / 大廈名稱 Name of Building
+application/main/repApplicant/applicantinfo/appAddress | textEdit txtDistr | 地區 District
+application/main/repApplicant/applicantinfo/appAddress | text | 地域 Area
+application/main/repApplicant/applicantinfo/appAddress | checkButton hk | 香港 HK
+application/main/repApplicant/applicantinfo/appAddress | checkButton kln | 九龍 KLN
+application/main/repApplicant/applicantinfo/appAddress | checkButton nt | 新界 NT
+application/main/repApplicant/applicantinfo/appAddress | textEdit txtSt | 街道名稱及號數 No. & Name of Street
+application/main/repApplicant/applicantinfo/appContact | textEdit txtCt | 如有查詢，可聯絡下列人士 Contact person for enquiries
+application/main/repApplicant/applicantinfo/appContact | textEdit txtTel | 電話號碼 Telephone number
+application/main/repApplicant/applicantinfo/appContact | textEdit txtFax | 傳真號碼 Fax number
+application/main | text | IR 1297(12/2023)
+application/main/rulingissought | text | C . 申請裁定的事項 Matter for which ruling is sought
+application/main/rulingissought | checkButton cbRlSc | 服務公司 Service Companies
+application/main/rulingissought | checkButton cbRlTsp | 地域來源的徵税原則 Territorial Source Principle
+application/main/rulingissought | checkButton cbRlPr | 税務優惠措施 Preferential Regime
+application/main/rulingissought | checkButton cbRlPe | 常設機構 Permanent Establishment
+application/main/rulingissought | checkButton cbRlRpc | 關聯方導管公司 Related Party Conduit
+application/main/rulingissought | checkButton cbRlOther | 其他（請加以說明）﹕ Others (please specify):
+application/main/rulingissought | textEdit txtRl | 其他（請加以說明）﹕ Others (please specify):
+application/main/rulingissought | text | ﹝ 請在適當格內加上「 Ö 」號 ﹞ ﹝Please put “ Ö ” in the appropriate box﹞
+application/main/rulingissought | text | 1.
+application/main/rulingissought | text | 3.
+application/main/rulingissought | text | 5.
+application/main/rulingissought | text | 2.
+application/main/rulingissought | text | 4.
+application/main/rulingissought | text | 7.
+application/main/rulingissought | text | 6.
+application/main/rulingissought | checkButton cbRlEsr | 外地收入豁免徵税機制的經濟實質要求 Economic Substance Requirement of the Foreign-sourced Income Exemption (FSIE) Regime
+application/main/rulingissought | text | 附註﹕ 如申請裁定的事項為外地收入豁免徵税機制下的經濟實質要求，則須另外提交一份填妥的「補充表格 - 經濟實質 要求」及其他有關文件，以代替一份草擬裁定。 Note: If the ruling being sought is on Economic Substance Requirement under Foreign Source Income Exemption regime, you should further submit a duly completed “Supplementary Form - Economic Substance Requirement” and other relevant documents in lieu of a draft ruling.
+application/main/powertoruling | text | D . 局長的裁定權 Commissioner’s power to rule 局長在某些情況下可拒絕作出裁定。請 在適當格內加上「 Ö 」號 以回答下列問題： The Commissioner may not issue a ruling in certain circumstances. Please answer the following questions by putting “ Ö ” in the appropriate box:
+application/main/powertoruling | text | 2.
+application/main/powertoruling | text | 有關安排是否一宗反對或上訴個案所須考慮的事項﹖ Is the arrangement in question subject to an objection or appeal?
+application/main/powertoruling | exclGroup rbRulingObjection |  | options: 0; 1
+application/main/powertoruling | checkButton cbRulingObjection | 否 No | options: 0
+application/main/powertoruling | checkButton cbRulingObjection | 是 Yes | options: 1
+application/main/powertoruling | text | 1.
+application/main/powertoruling | exclGroup rbRulingOverdue |  | options: 0; 1
+application/main/powertoruling | checkButton cbRulingOverdue | 否 No | options: 0
+application/main/powertoruling | checkButton cbRulingOverdue | 是 Yes | options: 1
+application/main/powertoruling | text | 申請裁定的問題是否涉及在申請裁定時已到期須繳付的税款﹖ Does the question to which the application relates concern a tax that is due and payable as at the date of this application?
+application/main/powertoruling | exclGroup rbRulingArrangment |  | options: 0; 1
+application/main/powertoruling | checkButton cbRulingArrangment | 否 No | options: 0
+application/main/powertoruling | checkButton cbRulingArrangment | 是 Yes | options: 1
+application/main/powertoruling | text | 3.
+application/main/powertoruling | text | 5.
+application/main/powertoruling | exclGroup rbRulingReturn |  | options: 0; 1
+application/main/powertoruling | checkButton cbRulingReturn | 否 No | options: 0
+application/main/powertoruling | checkButton cbRulingReturn | 是 Yes | options: 1
+application/main/powertoruling | text | 4.
+application/main/powertoruling | text | 申請人曾否就有關安排取得裁定﹖ Has the applicant previously obtained a ruling about the arrangement?
+application/main/powertoruling | text | 申請人是否已提交或已到期提交有關報税表﹖ Has the relevant return been lodged or is it due to be lodged?
+application/main/powertoruling | text | 申請人目前是否税務局進行税務審計的對象，或申請人是否已獲税務局通知擬就有關安排作出税務審計﹖ Is the applicant currently the subject of an audit by the Inland Revenue Department or has the applicant been notified of a proposed tax audit about the arrangement?
+application/main/powertoruling | exclGroup rbRulingAudit |  | options: 0; 1
+application/main/powertoruling | checkButton cbRulingAudit | 否 No | options: 0
+application/main/powertoruling | checkButton cbRulingAudit | 是 Yes | options: 1
+application/main/powertoruling | text | 否 No
+application/main/powertoruling | text | 是 Yes
+application/main/disclourserequirement | text | E. 披露資料的規定 Disclosure requirements 你或你授權的代表可就《税務條例》的任何條文如何適用於你或任何特定安排申請事先裁定。你須提供下列資料﹕ You, or your authorized representative, may apply for a ruling on the way in which any provision of the IRO applies to you or to any particular arrangement. You will need to provide the following information: 局長須 答覆 的問題 ─ 你須指明申請裁定的問題。 Question(s) to be answered by the Commissioner ─ You should identify the question(s) in respect of which the ruling is requested. 局長須 考慮 的事宜 ─ 你須指明須予考慮的法律及其他事宜。 Issue(s) to be considered by the Commissioner ─ You should identify the legal and other issue(s) to be considered. 各項事實的詳盡說明 ─ 你須披露該安排的所有有關事實及文件。[請參閱税務條例釋義及執行指引第 31 號內關於「要求作出裁定所須提供的資料和文件」的部分。] A full description of the facts ─ You must disclose all relevant facts and documents relating to the arrangement for which the ruling is sought. [See the part entitled “Information and documents to be provided with a ruling request” in the Departmental Interpretation and Practice Notes No. 31. ] 在要求就《税務條例》的條文作出裁定的情況下，敘明該條文。 State the provision of the IRO in respect of which the ruling is sought. 敘明與申請提出的爭論點有關的法律觀點（如有的話）﹕ State the propositions of law (if any) which are relevant to the issue(s) raised in this application: (i) 與申請有關的《税務條例》條文。 Sections of the IRO that are relevant to the application. (ii) 就草擬裁定中所採用條文的詮釋提供法律理據。 Legal reasons and authoritative support for the interpretation of the section(s) adopted in the draft ruling. (iii) 可能與草擬裁定中所採用的詮釋相反的論點及其法律理據。 Possible arguments that are contrary to the interpretation adopted in the draft ruling and legal reasons and authoritative support. (iv) 局長須知悉的其他有關資料或資料來源，以確保本局取得所有有關事實和法例資料。 Other material or relevant matters or sources of information the Commissioner should be made aware of to ensure access to all the pertinent facts and law. 提供一份草擬裁定。 Provide a draft ruling. 如你或你授權的代表提出的事先裁定申請 只 關乎《税務條例》第 15K 條下外地收入豁免徵税機制的經濟實質要求，便無需提交本表格第 E.1. 至 E.6. 段所要求的資料。如你的申請涵蓋多於 50 個實體，申請必須連同已填妥的「資料表格附表 ( 組別申請 ) 」一併提交。「資料表格附表 ( 組別申請 ) 」可從税務局網頁下載。 If the application only relates to the economic substance requirement of the FSIE regime specified in section 15K of the IRO, you, or your authorized representative, are/is not required to provide the information requested in paragraph E.1. to E.6. If your application covers more than 50 entities, it must be furnished together with a duly completed “Annex to Data Form (Group Application)”, which can be downloaded from the IRD Website.
+application/main/disclourserequirement | text | 1.
+application/main/disclourserequirement | text | 2.
+application/main/disclourserequirement | text | 3.
+application/main/disclourserequirement | text | 4.
+application/main/disclourserequirement | text | 5.
+application/main/disclourserequirement | text | 6.
+application/main/disclourserequirement | text | 7.
+application/main/generalquestion | text | F. 一般問題 General questions 申請事涉的課税年度及期間﹖ To which year(s) of assessment and period(s) does this application relate? 申請人（或與申請人相聯繫的人）或其代表曾否就其他課税年度或其他期間作出這項申請（或同類申請）﹖ Has this application (or a similar application) been lodged by, or on behalf of, the applicant(s) (or associated person of the applicant(s)) for any other year(s) of assessment or other period(s)? 請於下列空格列出有關通訊日期、課税年度或期間及回信（如你曾接獲的話）上所載的編號。 Please state below the date(s) of the relevant correspondence, and the appropriate year(s) of assessment or other period(s), together with the reference quoted on the response (if you have received one). 如申請由代表作出，有關代表必須取得申請人的書面同意，並在接獲要求時將該同意書提交予局長。 附註 ﹕ 所作裁定會寄交申請人。但如有關申請是由代表作出，則裁定會寄交代表。 Note: applicant(s), the ruling will be sent to the representative.
+application/main/generalquestion/assessmentperiod | choiceList dtAsFrom | 課税年度由 Year of assessment from
+application/main/generalquestion/assessmentperiod | choiceList dtAsTo | 課税年度至 Year of assessment to
+application/main/generalquestion/assessmentperiod | dateTimeEdit dtPeriodFrom | 期間由 Period from
+application/main/generalquestion/assessmentperiod | dateTimeEdit dtPeriodTo | 期間至 Period to
+application/main/generalquestion/assessmentperiod | text | 課税年度由 Year of assessment from
+application/main/generalquestion/assessmentperiod | text | 期間由 Period from
+application/main/generalquestion/assessmentperiod | text | 至 to
+application/main/generalquestion/assessmentperiod | text | 附註﹕ 如申請裁定的事項關乎外地收入豁免徵税機制下的經濟實質要求，該項裁定最多可涵蓋 由 2022/23 課税 年度或其後年度起計的 五個課税年度。 Note: If the subject matter of the ruling sought relates to the economic substance requirement under the FSIE regime, the ruling may cover a maximum of 5 years of assessment commencing from the year of assessment 2022/23 and any subsequent year.
+application/main/generalquestion | text | ﹝ 請在適當格內加上「 Ö 」號 ﹞ ﹝Please put “ Ö ” in the appropriate box﹞
+application/main/generalquestion | exclGroup rdRepApp |  | options: 0; 1
+application/main/generalquestion | checkButton valNo | 否 No | options: 0
+application/main/generalquestion | checkButton valYes | 是 Yes | options: 1
+application/main/generalquestion | textEdit txtAppRef | 列出有關通訊日期、課税年度或期間及回信（如你曾接獲的話）上所載的編號。 State the date(s) of the relevant correspondence, and the appropriate year(s) of assessment or other period(s), together with the reference quoted on the response (if you have received one).
+application/main/generalquestion | text | 代表是否持有每名申請人的書面同意﹖ Is written consent of each applicant held? ﹝ 請在適當格內加上「 Ö 」號 ﹞ ﹝Please put “ Ö ” in the appropriate box﹞
+application/main/generalquestion | exclGroup rdAppConsent |  | options: 0; 1
+application/main/generalquestion | checkButton valNo | 不適用 Not applicable | options: 0
+application/main/generalquestion | text | 1.
+application/main/generalquestion | text | 2.
+application/main/generalquestion | text | 3.
+application/main/generalquestion | text | Where this application is made on behalf of an applicant(s), the representative must have the written consent of the
+application/main/generalquestion | text | applicant(s). The written consent(s) must be supplied on request to the Commissioner.
+application/main/generalquestion | text | The ruling will be sent to the applicant(s). Where the application is made by a representative on behalf of an
+application/main/taxruling | button sectionlabel | G. 自發交換税務裁定資料 Spontaneous exchange of information on tax rulings 二十國集團及經濟合作與發展組織於 2015 年推出一套應對侵蝕税基及轉移利潤的行動方案。根據該方案的第五項行動計劃，税務局須就涉及税務優惠措施、常設機構及關聯方導管公司等的事先裁定，與申請人的關聯實體所屬的税務居留地管轄區自發交換資料。有關裁定的申請人須 填寫載於附錄的範本 。 In 2015, the Group of Twenty and the Organisation for Economic Co-operation and Development launched a package of actions to tackle base erosion and profit shifting. Under Action 5 of the Package, the Department is required to spontaneously exchange information about advance rulings on preferential regimes, permanent establishments and related party conduits etc. with the jurisdictions of tax residence of the applicants’ related entities. An applicant for such a ruling is required to complete the template at Appendix .
+application/main/consultation | text | H. 諮詢 Consultation 如所擬作出裁定的內容與申請人所要求的不同，局長在作出裁定前，可給予申請人一個合理的諮詢機會。 Before the Commissioner makes a ruling, the Commissioner may give the applicant a reasonable opportunity to consult if the content of his proposed ruling differs from that requested by the applicant.
+application/main/applicationfee | text | I. 申請費用 Application fee 申請人必須繳交申請費用。在本局收取申請費後，局長才會處理你的申請。所要求作出裁定的總費用視乎本局考慮此申請所使用的時間[請參閱税務條例釋義及執行指引第 31 號內關於「申請作出裁定的費用」的部分。] The applicant has to pay an application fee. The Commissioner will not begin to process your application until the fee is received. The total fee required for the ruling will depend on the time spent by the Department in considering this application [See the part entitled “Fee for ruling applications” in the Departmental Interpretation and Practice Notes No. 31.]
+application/main/applicationfee | text | 附上申請費用 Application Fee enclosed: ﹝ 請在適當格內加上「 Ö 」號 ﹞ ﹝Please put “ Ö ” in the appropriate box﹞
+application/main/applicationfee | checkButton cbChgTsp | $45,000
+application/main/applicationfee | checkButton cbChgOther | $15,000
+application/main/applicationfee | text | 就其他事項作出裁定 for rulings on other matters
+application/main/applicationfee | textEdit txtChq | 支票號碼： Cheque no.：
+application/main/applicationfee | textEdit txtBAc | 銀行： Bank：
+application/main/applicationfee | text | 就地域來源的徵税原則作出裁定 for rulings on Territorial Source Principle
+application/main/declarations | text | J. 聲明 Declarations 請在簽署前確保你已回答所有問題，包括下文的所需程序清單中所載的問題。 Before signing, please make sure you have answered all the questions, including those contained in the checklist below.
+application/main/declarations | text | 申請表內所載資料為正確無誤 The details contained in this application are true and correct
+application/main/declarations | text | 申請人簽署 Applicant(s)’ signature
+application/main/declarations | dateTimeEdit dtAppSign | 日期 Date
+application/main/declarations | text | 代表聲明 ﹝如申請由代表所作出﹞ Declaration by representative where application is made on behalf of an applicant(s)
+application/main/declarations | dateTimeEdit dtRepSign | 日期 Date
+application/main/declarations | text | 代表簽署 Representative’s signature
+application/main/checklist | text | K. 所需程序清單 Checklist 本清單有助你提供一份完整的裁定申請書。請 在適當格內加上「 Ö 」號 以回答下列問題： This checklist is a prompt to help you provide a complete application for a ruling. Please answer the following questions by putting “ Ö ” in the appropriate box:
+application/main/checklist | text | 否 No
+application/main/checklist | text | 是 Yes
+application/main/checklist | text | 不適用 N/A
+application/main/checklist | text | 1.
+application/main/checklist | text | 你是否已提供局長須答覆的問題﹖[請參閱本表格第 E.1. 及 E.7. 段。] Have you provided the questions to be answered by the Commissioner? [See paragraphs E.1. and E.7. above.]
+application/main/checklist | exclGroup cbAnsCom |  | options: 0; 1; 2
+application/main/checklist | checkButton cbAnsCom | 否 No | options: 0
+application/main/checklist | checkButton cbAnsCom | 是 Yes | options: 1
+application/main/checklist | checkButton cbAnsCom | 不適用 N/A | options: 2
+application/main/checklist | text | 2.
+application/main/checklist | text | 你是否已詳盡解釋有關爭論點﹖[請參閱本表格第 E.2. 、 E.5. 及 E.7. 段。] Have you fully explained the issue(s) in question? [ See paragraphs E.2., E.5. and E.7. above.]
+application/main/checklist | exclGroup cbExplain |  | options: 0; 1; 2
+application/main/checklist | checkButton cbExplain | 否 No | options: 0
+application/main/checklist | checkButton cbExplain | 是 Yes | options: 1
+application/main/checklist | checkButton cbExplain | 不適用 N/A | options: 2
+application/main/checklist | text | 3.
+application/main/checklist | text | 你是否已詳盡說明與所提出問題有關的事實？[請參閱本表格第 E.3. 及 E.7. 段。] Have you provided a full description of the facts that relate to the question(s) raised? [See paragraphs E.3. and E.7 above.]
+application/main/checklist | exclGroup cbFullDesc |  | options: 0; 1; 2
+application/main/checklist | checkButton cbFullDesc | 否 No | options: 0
+application/main/checklist | checkButton cbFullDesc | 是 Yes | options: 1
+application/main/checklist | checkButton cbFullDesc | 不適用 N/A | options: 2
+application/main/checklist | text | 4.
+application/main/checklist | text | 你是否已附上與所提出問題有關的一切文件？[請參閱本表格第 E.3. 及 E.7. 段。] Have you included all relevant documents that relate to the question(s) raised? [See paragraphs E.3. and E.7. above.]
+application/main/checklist | exclGroup cbRelDocLodged |  | options: 0; 1; 2
+application/main/checklist | checkButton cbRelDocLodged | 否 No | options: 0
+application/main/checklist | checkButton cbRelDocLodged | 是 Yes | options: 1
+application/main/checklist | checkButton cbRelDocLodged | 不適用 N/A | options: 2
+application/main/checklist | text | 5.
+application/main/checklist | text | 你是否已提供有關安排涉及的所有其他人士的姓名﹖ Have you provided the names of all other parties to the arrangement?
+application/main/checklist | exclGroup cbOtherParty |  | options: 0; 1; 2
+application/main/checklist | checkButton cbOtherParty | 否 No | options: 0
+application/main/checklist | checkButton cbOtherParty | 是 Yes | options: 1
+application/main/checklist | checkButton cbOtherParty | 不適用 N/A | options: 2
+application/main/checklist | text | 6.
+application/main/checklist | text | 7.
+application/main/checklist | text | 你是否已附上你就所提出問題已取得的法律或其他意見﹖ Have you included any legal or other opinions that you have obtained on the question(s) raised?
+application/main/checklist | exclGroup cbOpinions |  | options: 0; 1; 2
+application/main/checklist | checkButton cbOpinions | 否 No | options: 0
+application/main/checklist | checkButton cbOpinions | 是 Yes | options: 1
+application/main/checklist | checkButton cbOpinions | 不適用 N/A | options: 2
+application/main/checklist | text | 8.
+application/main/checklist | text | 你是否已附上一份草擬裁定﹖ [請參閱本表格第 E.7. 段。] Have you included a draft ruling? [ See paragraph E.7. above.]
+application/main/checklist | exclGroup cbDraftRule |  | options: 0; 1; 2
+application/main/checklist | checkButton cbDraftRule | 否 No | options: 0
+application/main/checklist | checkButton cbDraftRule | 是 Yes | options: 1
+application/main/checklist | checkButton cbDraftRule | 不適用 N/A | options: 2
+application/main/checklist | text | 9.
+application/main/checklist | text | 如申請裁定的事項關乎外地收入豁免徵税機制下的經濟實質要求 ，而本申請涵蓋多於 50 個實體， 你是否已 填妥及 附上 「 資料表格附表 ( 組別申請 ) 」 ? If the subject matter of the ruling sought relates to the economic substance requirement under the FSIE regime and the application covers more than 50 entities, have you included a duly completed “Annex to Data Form (Group Application)”?
+application/main/checklist | exclGroup cbEcoSubReq |  | options: 0; 1; 2
+application/main/checklist | checkButton cbEcoSubReq | 否 No | options: 0
+application/main/checklist | checkButton cbEcoSubReq | 是 Yes | options: 1
+application/main/checklist | checkButton cbEcoSubReq | 不適用 N/A | options: 2
+application/main/checklist | text | 你是否已附上申請費用﹖ Have you included the application fee?
+application/main/checklist | exclGroup cbFee |  | options: 0; 1; 2
+application/main/checklist | checkButton cbFee | 否 No | options: 0
+application/main/checklist | checkButton cbFee | 是 Yes | options: 1
+application/main/checklist | checkButton cbFee | 不適用 N/A | options: 2
+application/main/checklist | text | 附註﹕ 如有需要，局長可要求你提供進一步的資料。 Note: The Commissioner may request further information if appropriate. 資料不足會延長本局處理你的申請的時間，令申請人須支付額外費用，或使局長無法作出裁定。 The absence of sufficient information may lengthen the processing time of your application and result in additional fee to the applicant(s), or result in the Commissioner being unable to rule.
+application/main/checklist | barcode qrCode1 | 
+application/main/checklist | barcode qrCode2 | 
+application/main/statement | text | 收集個人資料聲明 就本表格的要求及於本局處理你的申請的過程中提供個人資料屬自願性質。然而，如你未能提供充分資料，本局可能無法處理你的申請。本局會把你提供的資料，用於施行本局專責執行的法例。本局並可在法律授權或准許的情況下，向任何其他人士或機構披露／轉移該等資料的任何或全部內容。你有權要求查閱及改正你的個人資料，但屬《個人資料（私隱）條例》豁免披露的情況除外。如欲查閱或改正個人資料，請致函評税主任(地址為香港郵政總局郵箱 132 號)，同時請註明你於本局的檔案號碼。 Personal Information Collection Statement The provision of personal data required by this form and during the processing of your application is voluntary. However, if you do not provide sufficient information, the Department may not be able to process your application. The Department will use the information provided by you for the purposes of the Ordinances administered by it and may disclose/transfer any or all of such information to any other parties provided that the disclosure/transfer is authorized or permitted by law. Except where there is an exemption provided under the Personal Data (Privacy) Ordinance, you have the right to request access to and correction of your personal data. You should send such request in writing to the Assessor at GPO Box 132, Hong Kong and quote your file number in this Department.
+application/joint/jointApplicant/container | button btnAdd | Add
+application/joint/jointApplicant/container | button btnRemove | Remove
+application/joint/jointApplicant/container | text | 申請人資料 Applicant(s) details 填寫這項裁定所關乎的當事人的資料。 Complete the details of the person to whom the ruling will apply.
+application/joint/jointApplicant/container | textEdit txtAppName | 申請人全名 Full name(s) of Applicant(s)
+application/joint/jointApplicant/container | textEdit txtFileNo | 税務局檔案號碼 Inland Revenue Department File No.
+application/joint/jointApplicant/container/applicantinfo | text | 地址 Address
+application/joint/jointApplicant/container/applicantinfo/appAddress | textEdit txtFlt | 單位編號 Flat / Room
+application/joint/jointApplicant/container/applicantinfo/appAddress | textEdit txtSt | 街道名稱及號數 No. & Name of Street
+application/joint/jointApplicant/container/applicantinfo/appAddress | textEdit txtDistr | 地區 District
+application/joint/jointApplicant/container/applicantinfo/appAddress | textEdit txtBlk | 座號 Block
+application/joint/jointApplicant/container/applicantinfo/appAddress | textEdit txtFl | 樓數 Floor
+application/joint/jointApplicant/container/applicantinfo/appAddress | textEdit txtBldg | 樓宇 / 大廈名稱 Name of Building
+application/joint/jointApplicant/container/applicantinfo/appAddress | text | 地域 Area
+application/joint/jointApplicant/container/applicantinfo/appAddress | checkButton hk | 香港 HK
+application/joint/jointApplicant/container/applicantinfo/appAddress | checkButton kln | 九龍 KLN
+application/joint/jointApplicant/container/applicantinfo/appAddress | checkButton nt | 新界 NT
+application/joint/jointApplicant/container/applicantinfo/appAddress | text | If your address is an overseas address, please provide the following additional details
+application/joint/jointApplicant/container/applicantinfo/appAddress | textEdit txtPob | 郵政信箱 PO Box
+application/joint/jointApplicant/container/applicantinfo/appAddress | textEdit txtPc | 郵政編號 Post Code
+application/joint/jointApplicant/container/applicantinfo/appAddress | textEdit txtCity | 城市 City
+application/joint/jointApplicant/container/applicantinfo/appAddress | choiceList ddCountry | The drop-down list is based on the ISO 3166-1 country list which is currently used by banks and other financial institutions, and hence by tax administrations. The use of this list does not imply the expression of any opinion whatsoever concerning the legal status of the territories listed. Its content is without prejudice to the status of or sovereignty over any territory, to the delimitation of international frontiers and boundaries and to the name of any territory, city or area.
+application/joint/jointApplicant/container/applicantinfo/appAddress | text | 郵政信箱 PO Box
+application/joint/jointApplicant/container/applicantinfo/appAddress | text | 郵政編號 Post Code
+application/joint/jointApplicant/container/applicantinfo/appAddress | text | 城市 City
+application/joint/jointApplicant/container/applicantinfo/appAddress | text | 國家/地區 Country/Region
+application/joint/jointApplicant/container/applicantinfo/appContact | textEdit txtCt | 聯絡人姓名 Contact person
+application/joint/jointApplicant/container/applicantinfo/appContact | textEdit txtTel | 電話號碼 Telephone number
+application/joint/jointApplicant/container/applicantinfo/appContact | textEdit txtFax | 傳真號碼 Fax number
+application/joint/jointApplicant/container | button btnBack | Back
+application/joint/jointApplicant/container | barcode qrCode0 | 
+application/joint/jointApplicant/container | barcode qrCode1 | 
+application/joint/jointApplicant/container | button Button1 | Button
+application/appendix/appendixSummary | text | Appendix Summary
+application/appendix/appendixSummary | text | Ruling
+application/appendix/appendixSummary | text | Applicant
+application/appendix/appendixSummary | text | Appendix
+application/appendix/appendixSummary | textEdit ruling0 | 
+application/appendix/appendixSummary | textEdit ruling1 | 
+application/appendix/appendixSummary | textEdit ruling2 | 
+application/appendix/appendixSummary | textEdit ruling3 | 
+application/appendix/appendixSummary | textEdit ruling4 | 
+application/appendix/appendixSummary | textEdit ruling5 | 
+application/appendix/appendixSummary | textEdit ruling6 | 
+application/appendix/appendixSummary | textEdit ruling7 | 
+application/appendix/appendixSummary | textEdit ruling8 | 
+application/appendix/appendixSummary | textEdit ruling9 | 
+application/appendix/appendixSummary | textEdit ruling10 | 
+application/appendix/appendixSummary | textEdit ruling11 | 
+application/appendix/appendixSummary | textEdit ruling12 | 
+application/appendix/appendixSummary | textEdit ruling13 | 
+application/appendix/appendixSummary | textEdit ruling14 | 
+application/appendix/appendixSummary | textEdit applicant0 | 
+application/appendix/appendixSummary | textEdit applicant1 | 
+application/appendix/appendixSummary | textEdit applicant2 | 
+application/appendix/appendixSummary | textEdit applicant3 | 
+application/appendix/appendixSummary | textEdit applicant4 | 
+application/appendix/appendixSummary | textEdit applicant5 | 
+application/appendix/appendixSummary | textEdit applicant6 | 
+application/appendix/appendixSummary | textEdit applicant7 | 
+application/appendix/appendixSummary | textEdit applicant8 | 
+application/appendix/appendixSummary | textEdit applicant9 | 
+application/appendix/appendixSummary | textEdit applicant10 | 
+application/appendix/appendixSummary | textEdit applicant11 | 
+application/appendix/appendixSummary | textEdit applicant12 | 
+application/appendix/appendixSummary | textEdit applicant13 | 
+application/appendix/appendixSummary | textEdit applicant14 | 
+application/appendix/appendixSummary | button appendix0 | Appendix 1
+application/appendix/appendixSummary | button appendix1 | Appendix 2
+application/appendix/appendixSummary | button appendix2 | Appendix 3
+application/appendix/appendixSummary | button appendix3 | Appendix 4
+application/appendix/appendixSummary | button appendix4 | Appendix 5
+application/appendix/appendixSummary | button appendix5 | Appendix 6
+application/appendix/appendixSummary | button appendix6 | Appendix 7
+application/appendix/appendixSummary | button appendix7 | Appendix 8
+application/appendix/appendixSummary | button appendix8 | Appendix 9
+application/appendix/appendixSummary | button appendix9 | Appendix 10
+application/appendix/appendixSummary | button appendix10 | Appendix 11
+application/appendix/appendixSummary | button appendix11 | Appendix 12
+application/appendix/appendixSummary | button appendix12 | Appendix 13
+application/appendix/appendixSummary | button appendix13 | Appendix 14
+application/appendix/appendixSummary | button appendix14 | Appendix 15
+application/appendix/appendixWrapper/general | text | Appendix Template for Spontaneous Exchange of Information on Rulings All fields are mandatory unless otherwise indicated. For joint application, please provide the details of each applicant on a separate template. 1. Identification of the applicant
+application/appendix/appendixWrapper/general | textEdit txtTin | Taxpayer identification number (TIN) (Business registration number for Hong Kong tax resident)
+application/appendix/appendixWrapper/general | choiceList ddTinIssuer | Jurisdiction that issued the TIN
+application/appendix/appendixWrapper/general | textEdit txtResidence | Jurisdiction of residence
+application/appendix/appendixWrapper/general | textEdit txtLegalName | Legal name
+application/appendix/appendixWrapper/general | choiceList ddMainBiz | Main business activity (optional)
+application/appendix/appendixWrapper/general | textEdit txtMainBiz | Main business activity (please specify)
+application/appendix/appendixWrapper/general | textEdit txtMneName | Name of multinational enterprise (MNE) group to which the applicant belongs
+application/appendix/appendixWrapper/general | text | 2. Accounting period(s)/ tax year(s) covered by the ruling
+application/appendix/appendixWrapper/general | textEdit txtAssessPeriod | Accounting period(s)/ years of assessment(s) for which a ruling is requested
+application/appendix/appendixWrapper/general | button Button2 | Accounting period(s)/ years of assessment(s) for which a ruling is requested
+application/appendix/appendixWrapper/general | text | 3. Type of ruling requested (Please check the appropriate box)
+application/appendix/appendixWrapper/general | text | 4. Additional information regarding the ruling and the applicant (optional)
+application/appendix/appendixWrapper/general | text | Ruling relating to preferential regime
+application/appendix/appendixWrapper/general | text | Permanent establishment ruling
+application/appendix/appendixWrapper/general | text | Related party conduit ruling
+application/appendix/appendixWrapper/general | text | Transaction amount covered by the ruling
+application/appendix/appendixWrapper/general | text | Applicant’s turnover for last preceding tax year
+application/appendix/appendixWrapper/general | checkButton cbRlPr | 
+application/appendix/appendixWrapper/general | checkButton cbRlPe | 
+application/appendix/appendixWrapper/general | checkButton cbRlRpc | 
+application/appendix/appendixWrapper/general | choiceList ddTxnCy | Transaction amount covered by the ruling (Currency)
+application/appendix/appendixWrapper/general | button Button3 | 
+application/appendix/appendixWrapper/general | textEdit txtTxnAmt | Transaction amount covered by the ruling (Amount)
+application/appendix/appendixWrapper/general | button Button4 | 
+application/appendix/appendixWrapper/general | choiceList ddNpCy | Applicant’s net profits for last preceding tax year (Currency)
+application/appendix/appendixWrapper/general | text | Applicant’s net profits for last preceding tax year
+application/appendix/appendixWrapper/general | choiceList ddToCy | Applicant’s turnover for last preceding tax year (Currency)
+application/appendix/appendixWrapper/general | textEdit txtToAmt | Applicant’s turnover for last preceding tax year (Amount)
+application/appendix/appendixWrapper/general | textEdit txtNpAmt | Applicant’s net profits for last preceding tax year (Amount)
+application/appendix/appendixWrapper/general | textEdit txtJoinAppLink | 
+application/appendix/appendixWrapper/general | textEdit lblAppendixTip | 
+application/appendix/appendixWrapper | text | 5. Related entities
+application/appendix/appendixWrapper/relatedentity0 | text | (a) Ultimate parent company (for all types of ruling)
+application/appendix/appendixWrapper/relatedentity0 | textEdit txtBlg | Building
+application/appendix/appendixWrapper/relatedentity0 | textEdit txtSuite | Suite
+application/appendix/appendixWrapper/relatedentity0 | textEdit txtFl | Floor
+application/appendix/appendixWrapper/relatedentity0 | textEdit txtDistr | District Name
+application/appendix/appendixWrapper/relatedentity0 | textEdit txtPob | Post Office Box
+application/appendix/appendixWrapper/relatedentity0 | textEdit txtPc | Post Code
+application/appendix/appendixWrapper/relatedentity0 | textEdit txtCity | City
+application/appendix/appendixWrapper/relatedentity0 | textEdit txtTin | TIN or other tax reference number, where available
+application/appendix/appendixWrapper/relatedentity0 | choiceList ddTinIssuer | Jurisdiction that issued the TIN
+application/appendix/appendixWrapper/relatedentity0 | textEdit txtResidence | Jurisdiction of residence
+application/appendix/appendixWrapper/relatedentity0 | textEdit txtLegalName | Legal name
+application/appendix/appendixWrapper/relatedentity0 | choiceList ddCountry | Country / Region
+application/appendix/appendixWrapper/relatedentity0 | text | Address in jurisdiction of residence
+application/appendix/appendixWrapper/relatedentity0 | textEdit txtProvince | State/Province/Canton
+application/appendix/appendixWrapper/relatedentity0 | textEdit txtSt | Street
+application/appendix/appendixWrapper/relatedentity0 | barcode qrCode0 | 
+application/appendix/appendixWrapper/relatedentity0 | barcode qrCode1 | 
+application/appendix/appendixWrapper/relatedentity1 | text | (b) Immediate parent company (for all types of ruling)
+application/appendix/appendixWrapper/relatedentity1 | textEdit txtBlg | Building
+application/appendix/appendixWrapper/relatedentity1 | textEdit txtSuite | Suite
+application/appendix/appendixWrapper/relatedentity1 | textEdit txtFl | Floor
+application/appendix/appendixWrapper/relatedentity1 | textEdit txtDistr | District Name
+application/appendix/appendixWrapper/relatedentity1 | textEdit txtPob | Post Office Box
+application/appendix/appendixWrapper/relatedentity1 | textEdit txtPc | Post Code
+application/appendix/appendixWrapper/relatedentity1 | textEdit txtCity | City
+application/appendix/appendixWrapper/relatedentity1 | textEdit txtTin | TIN or other tax reference number, where available
+application/appendix/appendixWrapper/relatedentity1 | choiceList ddTinIssuer | Jurisdiction that issued the TIN
+application/appendix/appendixWrapper/relatedentity1 | textEdit txtResidence | Jurisdiction of residence
+application/appendix/appendixWrapper/relatedentity1 | textEdit txtLegalName | Legal name
+application/appendix/appendixWrapper/relatedentity1 | choiceList ddCountry | Country / Region
+application/appendix/appendixWrapper/relatedentity1 | text | Address in jurisdiction of residence
+application/appendix/appendixWrapper/relatedentity1 | textEdit txtProvince | State/Province/Canton
+application/appendix/appendixWrapper/relatedentity1 | textEdit txtSt | Street
+application/appendix/appendixWrapper/relatedentity1 | barcode qrCode2 | 
+application/appendix/appendixWrapper/relatedentity1 | barcode qrCode3 | 
+application/appendix/appendixWrapper/relatedentity2 | text | (c) Related party with which the applicant enters into a transaction benefiting from a preferential treatment (for ruling relating to preferential regime)
+application/appendix/appendixWrapper/relatedentity2 | textEdit txtBlg | Building
+application/appendix/appendixWrapper/relatedentity2 | textEdit txtSuite | Suite
+application/appendix/appendixWrapper/relatedentity2 | textEdit txtFl | Floor
+application/appendix/appendixWrapper/relatedentity2 | textEdit txtDistr | District Name
+application/appendix/appendixWrapper/relatedentity2 | textEdit txtPob | Post Office Box
+application/appendix/appendixWrapper/relatedentity2 | textEdit txtPc | Post Code
+application/appendix/appendixWrapper/relatedentity2 | textEdit txtCity | City
+application/appendix/appendixWrapper/relatedentity2 | textEdit txtTin | TIN or other tax reference number, where available
+application/appendix/appendixWrapper/relatedentity2 | choiceList ddTinIssuer | Jurisdiction that issued the TIN
+application/appendix/appendixWrapper/relatedentity2 | textEdit txtResidence | Jurisdiction of residence
+application/appendix/appendixWrapper/relatedentity2 | textEdit txtLegalName | Legal name
+application/appendix/appendixWrapper/relatedentity2 | choiceList ddCountry | Country / Region
+application/appendix/appendixWrapper/relatedentity2 | text | Address in jurisdiction of residence
+application/appendix/appendixWrapper/relatedentity2 | textEdit txtProvince | State/Province/Canton
+application/appendix/appendixWrapper/relatedentity2 | textEdit txtSt | Street
+application/appendix/appendixWrapper/relatedentity2 | barcode qrCode4 | 
+application/appendix/appendixWrapper/relatedentity2 | barcode qrCode5 | 
+application/appendix/appendixWrapper/relatedentity3 | text | (d) Head office of the applicant (for permanent establishment ruling)
+application/appendix/appendixWrapper/relatedentity3 | textEdit txtBlg | Building
+application/appendix/appendixWrapper/relatedentity3 | textEdit txtSuite | Suite
+application/appendix/appendixWrapper/relatedentity3 | textEdit txtFl | Floor
+application/appendix/appendixWrapper/relatedentity3 | textEdit txtDistr | District Name
+application/appendix/appendixWrapper/relatedentity3 | textEdit txtPob | Post Office Box
+application/appendix/appendixWrapper/relatedentity3 | textEdit txtPc | Post Code
+application/appendix/appendixWrapper/relatedentity3 | textEdit txtCity | City
+application/appendix/appendixWrapper/relatedentity3 | textEdit txtTin | TIN or other tax reference number, where available
+application/appendix/appendixWrapper/relatedentity3 | choiceList ddTinIssuer | Jurisdiction that issued the TIN
+application/appendix/appendixWrapper/relatedentity3 | textEdit txtResidence | Jurisdiction of residence
+application/appendix/appendixWrapper/relatedentity3 | textEdit txtLegalName | Legal name
+application/appendix/appendixWrapper/relatedentity3 | choiceList ddCountry | Country / Region
+application/appendix/appendixWrapper/relatedentity3 | text | Address in jurisdiction of residence
+application/appendix/appendixWrapper/relatedentity3 | textEdit txtProvince | State/Province/Canton
+application/appendix/appendixWrapper/relatedentity3 | textEdit txtSt | Street
+application/appendix/appendixWrapper/relatedentity3 | barcode qrCode6 | 
+application/appendix/appendixWrapper/relatedentity3 | barcode qrCode7 | 
+application/appendix/appendixWrapper/relatedentity4 | text | (e) Related party directly or indirectly making payments to a conduit (for related party conduit ruling)
+application/appendix/appendixWrapper/relatedentity4 | textEdit txtBlg | Building
+application/appendix/appendixWrapper/relatedentity4 | textEdit txtSuite | Suite
+application/appendix/appendixWrapper/relatedentity4 | textEdit txtFl | Floor
+application/appendix/appendixWrapper/relatedentity4 | textEdit txtDistr | District Name
+application/appendix/appendixWrapper/relatedentity4 | textEdit txtPob | Post Office Box
+application/appendix/appendixWrapper/relatedentity4 | textEdit txtPc | Post Code
+application/appendix/appendixWrapper/relatedentity4 | textEdit txtCity | City
+application/appendix/appendixWrapper/relatedentity4 | textEdit txtTin | TIN or other tax reference number, where available
+application/appendix/appendixWrapper/relatedentity4 | choiceList ddTinIssuer | Jurisdiction that issued the TIN
+application/appendix/appendixWrapper/relatedentity4 | textEdit txtResidence | Jurisdiction of residence
+application/appendix/appendixWrapper/relatedentity4 | textEdit txtLegalName | Legal name
+application/appendix/appendixWrapper/relatedentity4 | choiceList ddCountry | Country/ Region
+application/appendix/appendixWrapper/relatedentity4 | text | Address in jurisdiction of residence
+application/appendix/appendixWrapper/relatedentity4 | textEdit txtProvince | State/Province/Canton
+application/appendix/appendixWrapper/relatedentity4 | textEdit txtSt | Street
+application/appendix/appendixWrapper/relatedentity4 | barcode qrCode8 | 
+application/appendix/appendixWrapper/relatedentity4 | barcode qrCode9 | 
+application/appendix/appendixWrapper/relatedentity5 | text | (f) Ultimate beneficial owner of payments made to the conduit (for related party conduit ruling)
+application/appendix/appendixWrapper/relatedentity5 | textEdit txtBlg | Building
+application/appendix/appendixWrapper/relatedentity5 | textEdit txtSuite | Suite
+application/appendix/appendixWrapper/relatedentity5 | textEdit txtFl | Floor
+application/appendix/appendixWrapper/relatedentity5 | textEdit txtDistr | District Name
+application/appendix/appendixWrapper/relatedentity5 | textEdit txtPob | Post Office Box
+application/appendix/appendixWrapper/relatedentity5 | textEdit txtPc | Post Code
+application/appendix/appendixWrapper/relatedentity5 | textEdit txtCity | City
+application/appendix/appendixWrapper/relatedentity5 | textEdit txtTin | TIN or other tax reference number, where available
+application/appendix/appendixWrapper/relatedentity5 | choiceList ddTinIssuer | Jurisdiction that issued the TIN
+application/appendix/appendixWrapper/relatedentity5 | textEdit txtResidence | Jurisdiction of residence
+application/appendix/appendixWrapper/relatedentity5 | textEdit txtLegalName | Legal name
+application/appendix/appendixWrapper/relatedentity5 | choiceList ddCountry | Country/Region
+application/appendix/appendixWrapper/relatedentity5 | text | Address in jurisdiction of residence
+application/appendix/appendixWrapper/relatedentity5 | textEdit txtProvince | State/Province/Canton
+application/appendix/appendixWrapper/relatedentity5 | textEdit txtSt | Street
+application/appendix/appendixWrapper/relatedentity5 | barcode qrCode10 | 
+application/appendix/appendixWrapper/relatedentity5 | barcode qrCode11 | 
+application/appendix/appendixWrapper/declarations | text | 6. Declaration and signature I hereby declare that the information provided above is true, correct and complete.
+application/appendix/appendixWrapper/declarations | textEdit txtSigner | Name
+application/appendix/appendixWrapper/declarations | textEdit txtSignerPos | Designation
+application/appendix/appendixWrapper/declarations | dateTimeEdit txtSignerDate | Date
+application/appendix/appendixWrapper/declarations | text | Signature
+application/appendix/appendixWrapper/declarations | text | (Person signing the template)
+application/appendix/appendixWrapper/declarations | text | (Position held)
+application/appendix/appendixWrapper/declarations | button btnBack | Back
+application/esr/ir1297b/Page1_Area | text | 編號： Serial No.：
+application/esr/ir1297b/Page1_Area | text | 資料表格 – 外地收入豁免徵税機制的經濟實質要求 Data Form - Economic Substance Requirement of Foreign-sourced Income Exemption Regime
+application/esr/ir1297b/Page1_Area | text | 在填寫本資料表格前，請閱讀「附註及說明 – 資料表格」（ IR1298B ）。 Please read “Notes and Instructions – Data Form” (IR1298B) before you complete this data form.
+application/esr/ir1297b/Page1_Area | text | 本 表格是「事先裁定申請表」（ IR1297 ）的資料表格，以供跨國企業集團成員實 體 （附註 2 ）的納税人親自或經由代表填寫，用以就於 2023 年 1 月 1 日 或 以後累算歸於它（及其集團成員實體）的若干類別指明外地收入（附註 1 及 3 至 6 ）的經濟實質要 求提供特定資料作事先裁定申請。 This data form is supplementary to the form “Application for Advance Ruling” (IR1297) and for use by a member of an MNE group (Note 2), either personally or by its representative, to provide specific information for an application for advance ruling concerning the economic substance requirement in respect of certain types of specified foreign-sourced income accrued to it (and its group entities) on or after 1 January 2023 (Notes 1 and 3 to 6) .
+application/esr/ir1297b/Page1_Area | barcode QRCode_1 | 
+application/esr/ir1297b/Page1_Area | text | 1.
+application/esr/ir1297b/Page1_Area | text | 申請資料 Application Details
+application/esr/ir1297b/Page1_Area | text | 填寫這項裁定所關乎的資料。 Complete the details to which the ruling will apply.
+application/esr/ir1297b/Page1_Area | textEdit txt_1_AppName | 申請人全名 Full name of the applicant
+application/esr/ir1297b/Page1_Area | text | 税務局檔案號碼 Inland Revenue Department file number
+application/esr/ir1297b/Page1_Area | numericEdit txt_1_TC | 税務局檔案號碼 Inland Revenue Department file number
+application/esr/ir1297b/Page1_Area | text | /
+application/esr/ir1297b/Page1_Area | textEdit txt_1_BRN | 税務局檔案號碼 Inland Revenue Department file number
+application/esr/ir1297b/Page1_Area | textEdit txt_1_RepName | 代表的全名 Representative’s full name
+application/esr/ir1297b/Page1_Area | text | 申請事涉的課税年度？ To which year(s) of assessment does this application relate?
+application/esr/ir1297b/Page1_Area | text | 課税年度由 Year of assessment from
+application/esr/ir1297b/Page1_Area | choiceList dl_1_From_Yr | 課税年度由 Year of assessment from
+application/esr/ir1297b/Page1_Area | text | 至 to
+application/esr/ir1297b/Page1_Area | choiceList dl_1_To_Yr | 課税年度至 Year of assessment to
+application/esr/ir1297b/Page1_Area | text | 2.
+application/esr/ir1297b/Page1_Area | text | 個別或組別申請 Individual or Group Application
+application/esr/ir1297b/Page1_Area | text | 申請類別：（請在適當空格內加上「 √ 」號） Type of application: (Please put “ √ ” in the appropriate box)
+application/esr/ir1297b/Page1_Area | checkButton chk_2_Single | 個別申請（附註 7 ）：申請人為自身作出申請（請填妥第 3 部分） Individual application (Note 7): application made by the applicant for itself (Please complete Part 3)
+application/esr/ir1297b/Page1_Area | checkButton chk_2_Other | 組別申請（附註 7 及 8 ）： 申請人為自身及所屬跨國企業集團位於香港的其他成員實體（統稱「相關實體」）作出申請 （請填妥第 4 部分） Group application (Notes 7 and 8): application made by the applicant for itself and other entities of the MNE group it belongs to in Hong Kong (collectively referred to as “Relevant Entities”) (Please complete Part 4)
+application/esr/ir1297b/Page2_Area | text | 3.
+application/esr/ir1297b/Page2_Area | text | 個別申請的詳情 Details of Individual Application
+application/esr/ir1297b/Page2_Area | text | 局長在某些情況下可拒絕作出裁定。請在適當空格內加上「 √ 」號以回答下列問題： The Commissioner may not issue a ruling in certain circumstances. Please answer the following questions by putting “ √ ” in the appropriate box:
+application/esr/ir1297b/Page2_Area | text | 3.1
+application/esr/ir1297b/Page2_Area | text | 是 Yes
+application/esr/ir1297b/Page2_Area | text | 否 No
+application/esr/ir1297b/Page2_Area | text | 3.1.1
+application/esr/ir1297b/Page2_Area | text | 有關收入（倘若該收入在附註 1 指明的相關日期或以後應累算 歸於 申請人，該收入會被當作指明外地收入）是否一宗反對或上訴個案所須考慮的事項？ Is the income concerned, which would have been a specified foreign-sourced income if it had accrued on or after the relevant date specified in Note 1, subject to an objection or appeal?
+application/esr/ir1297b/Page2_Area | checkButton chk_3_1_1_Y | 是 Yes
+application/esr/ir1297b/Page2_Area | checkButton chk_3_1_1_N | 否 No
+application/esr/ir1297b/Page2_Area | text | 3.1.2
+application/esr/ir1297b/Page2_Area | text | 申請人目前是否税務局進行税務審計的對象，或申請人是否已獲税務局通知擬對其作出税務審計？ Is the applicant currently the subject of an audit by the Inland Revenue Department or has the applicant been notified of a proposed tax audit?
+application/esr/ir1297b/Page2_Area | checkButton chk_3_1_2_Y | 是 Yes
+application/esr/ir1297b/Page2_Area | checkButton chk_3_1_2_N | 否 No
+application/esr/ir1297b/Page2_Area | text | 3.2
+application/esr/ir1297b/Page2_Area | text | 指明外地收入的詳情 Details of specified foreign-sourced income
+application/esr/ir1297b/Page2_Area | text | 收入類別（請在適當空格內（可多於一個）加上「 √ 」號） Type of income (Please put “ √ ” in the appropriate box(es))
+application/esr/ir1297b/Page2_Area | text | 3.2.1
+application/esr/ir1297b/Page2_Area | checkButton chk_3_2_1_Interest | 利息 Interest
+application/esr/ir1297b/Page2_Area | checkButton chk_3_2_1_Dividends | 股息 Dividend
+application/esr/ir1297b/Page2_Area | checkButton chk_3_2_1_Disposal | 非知識產權處置收益（附註 9 ） Non-IP disposal gain (Note 9)
+application/esr/ir1297b/Page2_Area | text | 第 3.2.1 項涵蓋的相關處置資產是 ─（請在適當空格內（可多於一個）加上「 √ 」號） The relevant disposed assets covered in Item 3.2.1 are ─ (Please put “ √ ” in the appropriate box(es))
+application/esr/ir1297b/Page2_Area | text | 3.2.2
+application/esr/ir1297b/Page2_Area | checkButton chk_3_2_2_1 | 其他實體的股權權益 equity interests in other entities
+application/esr/ir1297b/Page2_Area | checkButton chk_3_2_2_2 | 借貸或債務證券 loans or debt securities
+application/esr/ir1297b/Page2_Area | checkButton chk_3_2_2_3 | 外幣 foreign currencies
+application/esr/ir1297b/Page2_Area | checkButton chk_3_2_2_4 | 其他動產: other movable properties:
+application/esr/ir1297b/Page2_Area | textEdit txt_3_2_2_4 | 其他 others
+application/esr/ir1297b/Page2_Area | checkButton chk_3_2_2_5 | 不動產 immovable properties
+application/esr/ir1297b/Page2_Area | text | 3.2.3
+application/esr/ir1297b/Page2_Area | text | 估計每年就第 3.2.1 項涵蓋的指明外地收入的總款額（附註 10 ）（請在適當空格內加上「 √ 」號） Estimated total annual amount of the specified foreign-sourced incomes covered in Item 3.2.1 (Note 10) (Please put “ √ ” in the appropriate box)
+application/esr/ir1297b/Page2_Area | checkButton chk_3_2_3_1 | 少於 Less than $2,000,000
+application/esr/ir1297b/Page2_Area | checkButton chk_3_2_3_2 | $2,000,000 至 to $10,000,000
+application/esr/ir1297b/Page2_Area | checkButton chk_3_2_3_3 | $10,000,001 至 to $20,000,000
+application/esr/ir1297b/Page2_Area | checkButton chk_3_2_3_4 | $20,000,001 至 to $40,000,000
+application/esr/ir1297b/Page2_Area | checkButton chk_3_2_3_5 | 超過 Over $40,000,000
+application/esr/ir1297b/Page2_Area | text | （註明款額 State the amount : ）
+application/esr/ir1297b/Page2_Area | numericEdit txt_Total | $
+application/esr/ir1297b/Page2_Area | text | 3.3
+application/esr/ir1297b/Page2_Area | text | 足夠經濟實質要求 Adequacy of economic substance requirement
+application/esr/ir1297b/Page2_Area | text | 3.3.1
+application/esr/ir1297b/Page2_Area | text | 香港標準行業分類的行業編碼（附註 11 ） Hong Kong Standard Industrial Classification Code (Note 11)
+application/esr/ir1297b/Page2_Area | numericEdit txt_3_3_1 | 香港標準行業分類的行業編碼（附註 11） Hong Kong Standard Industrial Classification Code (Note 11)
+application/esr/ir1297b/Page2_Area | text | 3.3.2
+application/esr/ir1297b/Page2_Area | text | 申請人是否屬純股權持有實體（附註 12 ）？ （如是，請略過第 3.3.4(b) 項；如否，請略過第 3.3.3 及 3.3.4(a) 項） Is the applicant a pure equity-holding entity (Note 12)? (If yes, please skip Item 3.3.4(b); if no, please skip Items 3.3.3 and 3.3.4(a))
+application/esr/ir1297b/Page2_Area | checkButton chk_3_3_2_Y | 是 Yes
+application/esr/ir1297b/Page2_Area | checkButton chk_3_3_2_N | 否 No
+application/esr/ir1297b/Page2_Area | text | 3.3.3
+application/esr/ir1297b/Page2_Area | text | 申請人是否會遵從每項適用的註冊及存檔規定（附註 13 ）？ Will the applicant comply with every applicable registration and filing requirement (Note 13)?
+application/esr/ir1297b/Page2_Area | checkButton chk_3_3_3_Y | 是 Yes
+application/esr/ir1297b/Page2_Area | checkButton chk_3_3_3_N | 否 No
+application/esr/ir1297b/Page2_Area | text | 3.3.4
+application/esr/ir1297b/Page2_Area | text | 指明經濟活動的概況 Details of specified economic activities
+application/esr/ir1297b/Page2_Area | text | (a)
+application/esr/ir1297b/Page2_Area | text | 如申請人屬純股權持有實體， If the applicant is a pure equity-holding entity,
+application/esr/ir1297b/Page2_Area | text | 持有和管理在其他實體中的股權參與 Holding and managing its equity participations in other entities
+application/esr/ir1297b/Page2_Area | checkButton chk_3_3_4_A_Y | 是 Yes
+application/esr/ir1297b/Page2_Area | checkButton chk_3_3_4_A_N | 否 No
+application/esr/ir1297b/Page3_Area | text | 否 No
+application/esr/ir1297b/Page3_Area | text | 是 Yes
+application/esr/ir1297b/Page3_Area | text | (b)
+application/esr/ir1297b/Page3_Area | text | 如申請人不屬純股權持有實體， If the applicant is not a pure equity-holding entity,
+application/esr/ir1297b/Page3_Area | text | (i)
+application/esr/ir1297b/Page3_Area | text | 就取得、持有或處置資產而作出所需的策略決定 Making necessary strategic decisions on acquiring, holding and disposing of the assets
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_4_B_i_Y | 是 Yes
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_4_B_i_N | 否 No
+application/esr/ir1297b/Page3_Area | text | 相關資產是 ─ The relevant assets are ─
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_4_B_E | 其他實體的股權權益 equity interests in other entities
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_4_B_C | 借貸或債務證券 loans or debt securities
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_4_B_F | 外幣 foreign currencies
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_4_B_O | 其他動產： other movable properties:
+application/esr/ir1297b/Page3_Area | textEdit txt_3_3_4_B_O | 其他 others
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_4_B_I | 不動產 immovable properties
+application/esr/ir1297b/Page3_Area | text | (ii)
+application/esr/ir1297b/Page3_Area | text | 就相關資產管理及承擔主要風險 Managing and bearing principal risks in respect of the assets
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_4_B_ii_Y | 是 Yes
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_4_B_ii_N | 否 No
+application/esr/ir1297b/Page3_Area | text | 3.3.5
+application/esr/ir1297b/Page3_Area | text | 申請人的有關指明經濟活動（附註 14 ）是否 在香港 進行？ Will the applicant’s specified economic activities (Note 14) be carried out in Hong Kong ?
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_5_Y | 
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_5_N | 
+application/esr/ir1297b/Page3_Area | text | 3.3.6
+application/esr/ir1297b/Page3_Area | text | 進行有關指明經濟活動的是（請在適當空格內（可多於一個）加上「 √ 」號）（附註 15） ： The specified economic activities will be carried out by (Please put “ √ ” in the appropriate box(es)) (Note 15):
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_6_Out | 申請人透過自身員工 the applicant through its employees
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_6_App | 外判給外判實體（ 請填妥第 3.3.7 項，並把有關服務協議書副本連同本表格一併提交 ） outsourcing to an outsourced entity (Please complete Item 3.3.7 below and submit a copy of the relevant service agreement together with this form)
+application/esr/ir1297b/Page3_Area | text | 3.3.7
+application/esr/ir1297b/Page3_Area | text | 外判實體的詳情 ： Details of the outsourced entity:
+application/esr/ir1297b/Page3_Area | text | (a)
+application/esr/ir1297b/Page3_Area | text | 外判實體的名稱 Name of the outsourced entity
+application/esr/ir1297b/Page3_Area | textEdit txt_3_3_7_a_Name | 外判實體的名稱 Name of the outsourced entity
+application/esr/ir1297b/Page3_Area | text | 商業登記號碼 Business Registration Number
+application/esr/ir1297b/Page3_Area | numericEdit txt_3_3_7_b_BRN | 商業登記號碼 Business Registration Number
+application/esr/ir1297b/Page3_Area | text | (c)
+application/esr/ir1297b/Page3_Area | text | 申請人與外判實體的關係 Relationship between the applicant and the outsourced entity
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_7_c_Ass | 有關連人士 Related person
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_7_c_No_Ass | 沒有關連人士 Unrelated person
+application/esr/ir1297b/Page3_Area | text | (d)
+application/esr/ir1297b/Page3_Area | text | 申請人是否有對外判的活動作出監管？ Will the applicant monitor the carrying out of the outsourced activities?
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_7_d_Y | 是 Yes
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_7_d_N | 否 No
+application/esr/ir1297b/Page3_Area | text | 3.3.8
+application/esr/ir1297b/Page3_Area | text | 估計每年為進行有關指明經濟活動、並具有所需資格的香港員工的總人數，包括： i) 由申請人聘請；及 ii) 由外判實體聘請（如適用） 的員工 Estimated total number of employees in Hong Kong who carry out the specified economic activities each year and have the necessary qualifications that are employed by: i) the applicant; and ii) the outsourced entity (if applicable)
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_8_N | 沒有 None
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_8_1 | 1 至 to 10
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_8_11 | 11 至 to 50
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_8_51 | 51 至 to 100
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_8_101 | 超過 Over 100
+application/esr/ir1297b/Page3_Area | text | 3.3.9
+application/esr/ir1297b/Page3_Area | text | 第 3.3.8 項涵蓋的員工的職位（可多於一個）： Post titles of the employees covered in Item 3.3.8 include (tick the appropriate box(es)):
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_9_Director | 董事/執行董事 Director/Executive Director
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_9_Finance | 財務總監 Finance Director
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_9_Treasury | 財務/融資經理 Finance/Treasury Manager
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_9_Investment | 投資經理/分析員 Investment Manager/Analyst
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_9_Secretary | 公司秘書 Company Secretary
+application/esr/ir1297b/Page3_Area | checkButton chk_3_3_9_Other | 其他 Others:
+application/esr/ir1297b/Page3_Area | textEdit txt_3_3_9_Other | 其他 Others
+application/esr/ir1297b/Page4_Area | text | 3.3.10
+application/esr/ir1297b/Page4_Area | text | 估計每年為進行有關指明經濟活動而需在香港招致的營運開支款額，包括: i) 申請人的開支；及 ii) 外判實體的開支款額，或申請人支付予外判實體的服務費用（如適用） Estimated annual amount of operating expenditure to be incurred in Hong Kong for the specified economic activities, including: i) expenses to be incurred by the applicant; and ii) expenses to be incurred by the outsourced entity, or remuneration to be paid by the applicant to the outsourced entity (if applicable)
+application/esr/ir1297b/Page4_Area | checkButton chk_3_3_10_1 | 少於 Less than $1,000,000
+application/esr/ir1297b/Page4_Area | checkButton chk_3_3_10_2 | $1,000,000 至 to $2,000,000
+application/esr/ir1297b/Page4_Area | checkButton chk_3_3_10_3 | $2,000,001 至 to $5,000,000
+application/esr/ir1297b/Page4_Area | checkButton chk_3_3_10_4 | $5,000,001 至 to $10,000,000
+application/esr/ir1297b/Page4_Area | checkButton chk_3_3_10_5 | 超過 Over $10,000,000
+application/esr/ir1297b/Page4_Area | text | 4.
+application/esr/ir1297b/Page4_Area | text | 組別申請的詳情 Details of Group Application
+application/esr/ir1297b/Page4_Area | text | 局長在某些情況下可拒絕作出裁定。請在適當空格內加上「 √ 」號以回答下列問題： The Commissioner may not issue a ruling in certain circumstances. Please answer the following questions by putting “ √ ” in the appropriate box:
+application/esr/ir1297b/Page4_Area | text | 4.1
+application/esr/ir1297b/Page4_Area | text | 是 Yes
+application/esr/ir1297b/Page4_Area | text | 否 No
+application/esr/ir1297b/Page4_Area | text | 4.1.1
+application/esr/ir1297b/Page4_Area | text | 是否有任何一個相關實體的有關收入（倘若該收入在附註 1 指明的相關日期或以後應累算 歸於 相關實體，該收入會被當作指明外地收入）為一宗反對或上訴個案所須考慮的事項？ Is the income concerned of any Relevant Entity, which would have been a specified foreign-sourced income if it had accrued on or after the relevant date specified in Note 1, subject to an objection or appeal?
+application/esr/ir1297b/Page4_Area | checkButton chk_4_1_1_Y | 是 Yes
+application/esr/ir1297b/Page4_Area | checkButton chk_4_1_1_N | 否 No
+application/esr/ir1297b/Page4_Area | text | 4.1.2
+application/esr/ir1297b/Page4_Area | text | 是否有任何一 個 相關實體目前為税務局進行税務審計的對象，或已獲税務局通知擬對其作出税務 審計？ Is any Relevant Entity currently the subject of an audit by the Inland Revenue Department or has any Relevant Entity been notified of a proposed tax audit?
+application/esr/ir1297b/Page4_Area | checkButton chk_4_1_2_Y | 是 Yes
+application/esr/ir1297b/Page4_Area | checkButton chk_4_1_2_N | 否 No
+application/esr/ir1297b/Page4_Area | text | 4.2
+application/esr/ir1297b/Page4_Area | text | 相關實體需要符合附註 8 列明的所有條件，才可以作出組別申請。請確認已符合所有條件。 Group application can be made only if the conditions specified in Note 8 are met. Please confirm if ALL the conditions are met.
+application/esr/ir1297b/Page4_Area | checkButton chk_4_2 | 已符合列明的所有條件，並繼續進行組別申請。 ALL conditions specified are met and proceed to the group application.
+application/esr/ir1297b/Page4_Area | text | 4.3
+application/esr/ir1297b/Page4_Area | exclGroup chk_4_3 |  | options: 0; 1
+application/esr/ir1297b/Page4_Area | checkButton within_50 | 本申請涵蓋不多於 50 個相關實體。 The application covers not more than 50 Relevant Entities. | options: 0
+application/esr/ir1297b/Page4_Area | checkButton over_50 | 本申請涵蓋多於 50 個相關實體。 This application covers more than 50 Relevant Entities. | options: 1
+application/esr/ir1297b/Page4_Area | text | 本申請須連同有關服務協議書副本 ( 附註 8(c)) 一併提交。 Please submit this application together with the relevant service agreement (Note 8(c)).
+application/esr/ir1297b/Page4_Area | text | 請於税務局網頁下載 Microsoft Excel 格式的 「 資料表格附表（組別申請）」，以填寫每一個相關實體的資料及應累算指明外地收入的詳情。在提交本申請時，請把已填妥的「資料表格附表（組別申請）」連同有關服務協議書副本 ( 附註 8(c)) 一併提交。在接獲要求時，請將該 Microsoft Excel 電子檔提交予局長。 Please download “Annex to Data Form (Group Application)” in Microsoft Excel format from the Inland Revenue Department website and provide, for each of the Relevant Entities, its particulars and details of specified foreign-sourced income accrued in the Annex. Please submit a duly completed “Annex to Data Form (Group Application)” and the relevant service agreement (Note 8(c)) together with this application. Please supply the Microsoft Excel file of the completed Annex to the Commissioner on request.
+application/esr/ir1297b/Page4_Area | text | 4.4
+application/esr/ir1297b/Page4_Area | text | 足夠經濟實質要求 Adequacy of economic substance requirement
+application/esr/ir1297b/Page4_Area | text | 4.4.1
+application/esr/ir1297b/Page4_Area | text | 在相關實體中， 屬 純股權持有實體的數目 Number of Relevant Entities that are pure equity-holding entities
+application/esr/ir1297b/Page4_Area | numericEdit txt_4_4_1 | 在相關實體中，屬純股權持有實體的數目 Number of Relevant Entities that are pure equity-holding entities
+application/esr/ir1297b/Page4_Area | text | 4.4.2
+application/esr/ir1297b/Page4_Area | text | 在相關實體中， 不屬 純股權持有實體的數目 Number of Relevant Entities that are not pure equity-holding entities
+application/esr/ir1297b/Page4_Area | numericEdit txt_4_4_2 | 在相關實體中，不屬純股權持有實體的數目 Number of Relevant Entities that are not pure equity-holding entities
+application/esr/ir1297b/Page4_Area | text | （ 附註 Note 16 ）
+application/esr/ir1297b/Page4_Area | text | 4.4.3
+application/esr/ir1297b/Page4_Area | text | 相關實體的有關指明經濟活動（附註 14 ）是否 在香港 進行？ Will the specified economic activities (Note 14) of the Relevant Entities be carried out in Hong Kong ?
+application/esr/ir1297b/Page4_Area | checkButton chk_4_4_3_Y | 是 Yes
+application/esr/ir1297b/Page4_Area | checkButton chk_4_4_3_N | 否 No
+application/esr/ir1297b/Page4_Area | text | 4.4.4
+application/esr/ir1297b/Page4_Area | text | 外判實體的詳情 ： Details of the outsourced entity:
+application/esr/ir1297b/Page4_Area | text | (a)
+application/esr/ir1297b/Page4_Area | text | 外判實體的名稱 Name of the outsourced entity
+application/esr/ir1297b/Page4_Area | textEdit txt_4_4_4_Name | 外判實體的名稱 Name of the outsourced entity
+application/esr/ir1297b/Page4_Area | text | (b)
+application/esr/ir1297b/Page4_Area | text | 商業登記號碼 Business Registration Number
+application/esr/ir1297b/Page4_Area | numericEdit txt_4_4_4_BRN | 商業登記號碼 Business Registration Number
+application/esr/ir1297b/Page4_Area | text | (c)
+application/esr/ir1297b/Page4_Area | text | 相關實體與外判實體的關係 Relationship between the Relevant Entities and the outsourced entity
+application/esr/ir1297b/Page4_Area | checkButton chk_4_4_4_C_A | 有關連人士 Related person
+application/esr/ir1297b/Page4_Area | checkButton chk_4_4_4_C_N | 沒有關連人士 Unrelated person
+application/esr/ir1297b/Page4_Area | text | (d)
+application/esr/ir1297b/Page4_Area | text | 所有相關實體是否有對外判的活動作出監管？ Will all the Relevant Entities monitor the carrying out of the outsourced activities?
+application/esr/ir1297b/Page4_Area | checkButton chk_4_4_4_Y | 是 Yes
+application/esr/ir1297b/Page4_Area | checkButton chk_4_4_4_N | 否 No
+application/esr/ir1297b/Page5_Area | text | (e)
+application/esr/ir1297b/Page5_Area | text | 估計每年為進行有關指明經濟活動、並具有所需資格的香港員工的總人數： Estimated total number of employees in Hong Kong who carry out the specified economic activities each year and have the necessary qualifications:
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_E_N | 沒有 None
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_E_1 | 1 至 to 10
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_E_11 | 11 至 to 200
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_E_201 | 201 至 to 500
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_E_501 | 超過 Over 500
+application/esr/ir1297b/Page5_Area | text | (f)
+application/esr/ir1297b/Page5_Area | text | 第 4.4.4 (e) 項涵蓋的員工的職位（可多於一個）： Post titles of the employees covered in Item 4.4.4 (e) include (tick the appropriate box(es)):
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_F_Director | 董事/執行董事 Director/Executive Director
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_F_Finance | 財務總監 Finance Director
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_F_Treasury | 財務/融資經理 Finance/Treasury Manager
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_F_Investment | 投資經理/分析員 Investment Manager/Analyst
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_F_Secretary | 公司秘書 Company Secretary
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_F_Other | 其他 Others:
+application/esr/ir1297b/Page5_Area | textEdit txt_4_4_4_F_Other | 其他 Others
+application/esr/ir1297b/Page5_Area | text | (g)
+application/esr/ir1297b/Page5_Area | text | 估計每年為進行有關指明經濟活動而需在香港招致的營運開支款額: i) 外判實體的開支款額；或 ii) 相關實體支付予外判實體的酬金總款額 Estimated annual amount of operating expenditure to be incurred in Hong Kong for the specified economic activities: i) expenses to be incurred by the outsourced entity; or ii) total amount of remunerations to be paid by the Relevant Entities to the outsourced entity
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_G_1 | 少於 Less than $1,000,000
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_G_2 | $1,000,000 至 to $5,000,000
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_G_3 | $5,000,001 至 to $10,000,000
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_G_4 | $10,000,001 至 to $20,000,000
+application/esr/ir1297b/Page5_Area | checkButton chk_4_4_4_G_5 | 超過 Over $20,000,000
+application/esr/ir1297b/Page5_Area | text | - End -
+application/esr/ir1297b/Page5_Area | barcode QRCode_2 | 
+application/esr/groupAnnex/title | text | 資料表格附表 ( 組別申請 ) - 外地收入豁免徵税機制的經濟實質要求 Annex to Data Form (Group Application) - Economic Substance Requirement of Foreign-sourced Income Exemption Regime
+application/esr/groupAnnex/header | text | 編號 No.
+application/esr/groupAnnex/header | text | 跨國企業實體的詳情 Details of the MNE entities
+application/esr/groupAnnex/header | text | 跨國企業實體名稱 Name of MNE entity
+application/esr/groupAnnex/header | text | 税務局檔案號碼 Inland Revenue Department file number
+application/esr/groupAnnex/header | text | 香港標準行業分類的行業 編碼 Hong Kong Standard Industrial Classification Code ( 附註 Note 11)
+application/esr/groupAnnex/header | text | 指明外地收入的詳情 Details of specified foreign-sourced income
+application/esr/groupAnnex/header | text | 利息 Interest "Y" = 是 Yes "N" = 不適用 Not applicable
+application/esr/groupAnnex/header | text | 股息 Dividend "Y" = 是 Yes "N" = 不適用 Not applicable
+application/esr/groupAnnex/header | text | 非知識產權處置收益 Non-IP disposal gain (附註 Note 9 )
+application/esr/groupAnnex/header | text | "Y" = 是 Yes "N" = 不適用 Not applicable
+application/esr/groupAnnex/header | text | 相關處置的資產是─ The relevant disposed assets are─
+application/esr/groupAnnex/header | text | 其他實體的股權權益 Equity interests in other entities "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain
+application/esr/groupAnnex/header | text | 借貸或債務證券 Loans or debt securities "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain
+application/esr/groupAnnex/header | text | 外幣 Foreign currencies "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain
+application/esr/groupAnnex/header | text | 其他動產，請註明 Other movable properties, please state "N" = 不適用 Not applicable
+application/esr/groupAnnex/header | text | 不動產 Immovable properties "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain
+application/esr/groupAnnex/header | text | 估計每年的指明外地收入總款額範圍 ( 港元 ) Range of estimated total annual amount (HK$) "1"= 少於 Less than 2,000,000 "2"= 2,000,000 至 to 10,000,000 "3"= 10,000,001 至 to 20,000,000 "4"= 20,000,001 至 to 40,000,000 "5"= 超過 Over 40,000,000 註明款額 State the amount : ( 附註 Note 10)
+application/esr/groupAnnex/header | text | 註明款額 State the amount 如選項為 1 至 4， 請註明 "N" If your option is 1 to 4, please state "N"
+application/esr/groupAnnex/header | text | 純股權持 有實體 ? Pure equity- holding entity? "Y" = 是 Yes "N" = 否 No ( 附註 Note 12)
+application/esr/groupAnnex/header | text | 足夠經濟實質要求 Adequacy of economic substance requirement
+application/esr/groupAnnex/header | text | 屬純股權持有實體 For pure equity-holding entities
+application/esr/groupAnnex/header | text | 是否會遵從 每項適用的 註冊及存檔 規定 ? Comply with every applicable registration and filing requirement? "Y" = 是 Yes "N" = 否 No "X" = 不屬純股權持有實體 Not a pure equity-holding entity ( 附註 Note 13)
+application/esr/groupAnnex/header | text | 指明經濟活動的概況 Details of specified economic activities ( 附註 Note 14)
+application/esr/groupAnnex/header | text | 持有和管理在其他實體中的股權參與 Holding and managing its equity participations in other entities "Y" = 是 Yes "N" = 否 No "X" = 不屬純股權持有實體 Not a pure equity-holding entity
+application/esr/groupAnnex/header | text | 不屬 純股權持有實體 For entities that are not pure equity-holding entities
+application/esr/groupAnnex/header | text | 就取得、持有或處置資產而作出所需的策略決定 Making necessary strategic decisions on acquiring, holding and disposing of assets
+application/esr/groupAnnex/header | text | 其他實體的股權權益 Equity interests in other entities "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity
+application/esr/groupAnnex/header | text | 借貸或債務證券 Loans or debt securities "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity
+application/esr/groupAnnex/header | text | 外幣 Foreign currencies "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity
+application/esr/groupAnnex/header | text | 不動產 Immovable properties "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity
+application/esr/groupAnnex/header | text | 就相關資產管理及承擔主要風險 Managing and bearing principal risks in respect of the assets "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity
+application/esr/groupAnnex/example1 | text | Example 1
+application/esr/groupAnnex/example1 | textEdit entityName | 跨國企業實體名稱 Name of MNE entity
+application/esr/groupAnnex/example1 | numericEdit tc | 税務局檔案號碼 Inland Revenue Department file number
+application/esr/groupAnnex/example1 | text | /
+application/esr/groupAnnex/example1 | numericEdit brn | 税務局檔案號碼 Inland Revenue Department file number
+application/esr/groupAnnex/example1 | numericEdit code | 香港標準行業分類的行業編碼 Hong Kong Standard Industrial Classification Code (附註 Note 11)
+application/esr/groupAnnex/example1 | choiceList interest | 利息Interest "Y" = 是 Yes "N" = 不適用 Not applicable | options: Y; N
+application/esr/groupAnnex/example1 | choiceList dividend | 股息 Dividend "Y" = 是 Yes "N" = 不適用 Not applicable | options: Y; N
+application/esr/groupAnnex/example1 | choiceList disposal | 非知識產權處置收益 Non-IP disposal gain (附註 Note 9) "Y" = 是 Yes "N" = 不適用 Not applicable | options: Y; N
+application/esr/groupAnnex/example1 | choiceList disposal_1 | 其他實體的股權權益 equity interests in other entities "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N; X
+application/esr/groupAnnex/example1 | choiceList disposal_2 | 借貸或債務證券 loans or debt securities "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N; X
+application/esr/groupAnnex/example1 | choiceList disposal_3 | 動產 movable properties "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N; X
+application/esr/groupAnnex/example1 | textEdit disposal_4 | 其他，請註明 others, please state "N" = 不適用 Not applicable
+application/esr/groupAnnex/example1 | choiceList disposal_5 | 不動產 immovable properties "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N; X
+application/esr/groupAnnex/example1 | choiceList range | 估計每年的指明外地收入總款額範圍(港元) Range of estimated total annual amount (HK$) "1"= 少於 Less than 2,000,000 "2"= 2,000,000 至 to 10,000,000 "3"=10,000,001 至 to 20,000,000 "4"= 20,000,001 至 to 40,000,000 "5"= 超過 Over 40,000,000 (附註 Note 10) | options: 1; 2; 3; 4; 5
+application/esr/groupAnnex/example1 | numericEdit amount | 註明款額 State the amount 如選項為1至4，請註明 "N" If your option is 1 to 4, please state "N" (附註 Note 9)
+application/esr/groupAnnex/example1 | choiceList pureEquity | 純股權持有實體? Pure equity-holding entity? "Y" = 是 Yes "N" = 否 No (附註 Note 12) | options: Y; N
+application/esr/groupAnnex/example1 | choiceList comply | 是否會遵從每項適用的註冊及存檔規定? Comply with every applicable registration and filing requirement? "Y" = 是 Yes "N" = 否 No "X" = 不屬純股權持有實體 Not a pure equity-holding entity (附註 Note 13) | options: Y; N
+application/esr/groupAnnex/example1 | choiceList details | 持有和管理在其他實體中的股權參與 Holding and managing its equity participations in other entities "Y" = 是 Yes "N" = 否 No "X" = 不屬純股權持有實體 Not a pure equity-holding entity | options: Y; N
+application/esr/groupAnnex/example1 | choiceList equityInterest | 其他實體的股權權益 equity interests in other entities "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity | options: Y; N; X
+application/esr/groupAnnex/example1 | choiceList loans | 借貸或債務證券 loans or debt securities "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity | options: Y; N; X
+application/esr/groupAnnex/example1 | choiceList currencies | 動產 movable properties "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N; X
+application/esr/groupAnnex/example1 | textEdit others | 其他，請註明 others, please state "N" = 不適用 Not applicable
+application/esr/groupAnnex/example1 | choiceList immoveable | 動產 movable properties "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N; X
+application/esr/groupAnnex/example1 | choiceList risks | 就相關資產管理及承擔主要風險 Managing and bearing principal risks in respect of the assets "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity | options: Y; N; X
+application/esr/groupAnnex/example2 | text | Example 2
+application/esr/groupAnnex/example2 | textEdit entityName | 跨國企業實體名稱 Name of MNE entity
+application/esr/groupAnnex/example2 | numericEdit tc | 税務局檔案號碼 Inland Revenue Department file number
+application/esr/groupAnnex/example2 | text | /
+application/esr/groupAnnex/example2 | numericEdit brn | 税務局檔案號碼 Inland Revenue Department file number
+application/esr/groupAnnex/example2 | numericEdit code | 香港標準行業分類的行業編碼 Hong Kong Standard Industrial Classification Code (附註 Note 11)
+application/esr/groupAnnex/example2 | choiceList interest | 利息Interest "Y" = 是 Yes "N" = 不適用 Not applicable | options: Y; N
+application/esr/groupAnnex/example2 | choiceList dividend | 股息 Dividend "Y" = 是 Yes "N" = 不適用 Not applicable | options: Y; N
+application/esr/groupAnnex/example2 | choiceList disposal | 非知識產權處置收益 Non-IP disposal gain (附註 Note 9) "Y" = 是 Yes "N" = 不適用 Not applicable | options: Y; N
+application/esr/groupAnnex/example2 | choiceList disposal_1 | 其他實體的股權權益 equity interests in other entities "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N; X
+application/esr/groupAnnex/example2 | choiceList disposal_2 | 借貸或債務證券 loans or debt securities "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N; X
+application/esr/groupAnnex/example2 | choiceList disposal_3 | 動產 movable properties "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N; X
+application/esr/groupAnnex/example2 | textEdit disposal_4 | 其他，請註明 others, please state "N" = 不適用 Not applicable
+application/esr/groupAnnex/example2 | choiceList disposal_5 | 不動產 immovable properties "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N; X
+application/esr/groupAnnex/example2 | choiceList range | 估計每年的指明外地收入總款額範圍(港元) Range of estimated total annual amount (HK$) "1"= 少於 Less than 2,000,000 "2"= 2,000,000 至 to 10,000,000 "3"=10,000,001 至 to 20,000,000 "4"= 20,000,001 至 to 40,000,000 "5"= 超過 Over 40,000,000 (附註 Note 10) | options: 1; 2; 3; 4; 5
+application/esr/groupAnnex/example2 | textEdit noAmount | 
+application/esr/groupAnnex/example2 | choiceList pureEquity | 純股權持有實體? Pure equity-holding entity? "Y" = 是 Yes "N" = 否 No (附註 Note 12) | options: Y; N
+application/esr/groupAnnex/example2 | choiceList comply | 是否會遵從每項適用的註冊及存檔規定? Comply with every applicable registration and filing requirement? "Y" = 是 Yes "N" = 否 No "X" = 不屬純股權持有實體 Not a pure equity-holding entity (附註 Note 13) | options: Y; N; X
+application/esr/groupAnnex/example2 | choiceList details | 持有和管理在其他實體中的股權參與 Holding and managing its equity participations in other entities "Y" = 是 Yes "N" = 否 No "X" = 不屬純股權持有實體 Not a pure equity-holding entity | options: Y; N; X
+application/esr/groupAnnex/example2 | choiceList equityInterest | 其他實體的股權權益 equity interests in other entities "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity | options: Y; N; X
+application/esr/groupAnnex/example2 | choiceList loans | 借貸或債務證券 loans or debt securities "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity | options: Y; N; X
+application/esr/groupAnnex/example2 | choiceList currencies | 動產 movable properties "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N; X
+application/esr/groupAnnex/example2 | textEdit others | 其他，請註明 others, please state "N" = 不適用 Not applicable
+application/esr/groupAnnex/example2 | choiceList immoveable | 動產 movable properties "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N; X
+application/esr/groupAnnex/example2 | choiceList risks | 就相關資產管理及承擔主要風險 Managing and bearing principal risks in respect of the assets "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity | options: Y; N; X
+application/esr/groupAnnex/content | textEdit seqNo | 編號 No.
+application/esr/groupAnnex/content | button btnAdd | +
+application/esr/groupAnnex/content | textEdit entityName | 跨國企業實體名稱 Name of MNE entity
+application/esr/groupAnnex/content | numericEdit tc | 税務局檔案號碼 Inland Revenue Department file number
+application/esr/groupAnnex/content | text | /
+application/esr/groupAnnex/content | numericEdit brn | 税務局檔案號碼 Inland Revenue Department file number
+application/esr/groupAnnex/content | numericEdit code | 香港標準行業分類的行業編碼 Hong Kong Standard Industrial Classification Code (附註 Note 11)
+application/esr/groupAnnex/content | choiceList interest | 利息Interest "Y" = 是 Yes "N" = 不適用 Not applicable | options: Y; N
+application/esr/groupAnnex/content | choiceList dividend | 股息 Dividend "Y" = 是 Yes "N" = 不適用 Not applicable | options: Y; N
+application/esr/groupAnnex/content | choiceList disposal | 非知識產權處置收益 Non-IP disposal gain (附註 Note 9) "Y" = 是 Yes "N" = 不適用 Not applicable | options: Y; N
+application/esr/groupAnnex/content | choiceList disposal_1 | 其他實體的股權權益 Equity interests in other entities "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N
+application/esr/groupAnnex/content | choiceList disposal_2 | 借貸或債務證券 Loans or debt securities "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N
+application/esr/groupAnnex/content | choiceList disposal_3 | 外幣 Foreign currencies "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N
+application/esr/groupAnnex/content | textEdit disposal_4 | 其他動產，請註明 Other movable properties, please state "N" = 不適用 Not applicable
+application/esr/groupAnnex/content | choiceList disposal_5 | 不動產 Immovable properties "Y" = 是 Yes "N" = 否 No "X" = 沒有處置收益 No disposal gain | options: Y; N
+application/esr/groupAnnex/content | choiceList range | 估計每年的指明外地收入總款額範圍(港元) Range of estimated total annual amount (HK$) "1"= 少於 Less than 2,000,000 "2"= 2,000,000 至 to 10,000,000 "3"=10,000,001 至 to 20,000,000 "4"= 20,000,001 至 to 40,000,000 "5"= 超過 Over 40,000,000 (附註 Note 10) | options: 1; 2; 3; 4; 5
+application/esr/groupAnnex/content | numericEdit amount | 註明款額 State the amount 如選項為1至4，請註明 "N" If your option is 1 to 4, please state "N" (附註 Note 9)
+application/esr/groupAnnex/content | textEdit noAmount | 
+application/esr/groupAnnex/content | choiceList pureEquity | 純股權持有實體? Pure equity-holding entity? "Y" = 是 Yes "N" = 否 No (附註 Note 12) | options: Y; N
+application/esr/groupAnnex/content | choiceList comply | 是否會遵從每項適用的註冊及存檔規定? Comply with every applicable registration and filing requirement? "Y" = 是 Yes "N" = 否 No "X" = 不屬純股權持有實體 Not a pure equity-holding entity (附註 Note 13) | options: Y; N
+application/esr/groupAnnex/content | choiceList details | 持有和管理在其他實體中的股權參與 Holding and managing its equity participations in other entities "Y" = 是 Yes "N" = 否 No "X" = 不屬純股權持有實體 Not a pure equity-holding entity | options: Y; N
+application/esr/groupAnnex/content | choiceList equityInterest | 其他實體的股權權益 Equity interests in other entities "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity | options: Y; N
+application/esr/groupAnnex/content | choiceList loans | 借貸或債務證券 Loans or debt securities "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity | options: Y; N
+application/esr/groupAnnex/content | choiceList currencies | 外幣 Foreign currencies "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity | options: Y; N
+application/esr/groupAnnex/content | textEdit others | 其他動產，請註明 Other movable properties, please state "N" = 不適用 Not applicable
+application/esr/groupAnnex/content | choiceList immoveable | 不動產 immovable properties "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity | options: Y; N
+application/esr/groupAnnex/content | choiceList risks | 就相關資產管理及承擔主要風險 Managing and bearing principal risks in respect of the assets "Y" = 是 Yes "N" = 否 No "X" = 屬純股權持有實體 A pure equity-holding entity | options: Y; N
+application/esr/groupAnnex/content | button BtnRemove | x
+application/esr/groupAnnex/qrCode | barcode mneQrCode | 
+application/esr/groupAnnex/qrCode | barcode mneQrCode2 | 

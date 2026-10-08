@@ -1,0 +1,81 @@
+Applying for eGIRO
+You can pay withholding tax (WHT) via GIRO as a One-Time deduction. As a payer, you must e-file your return via S45 e-Services and pay the WHT to IRAS by the 15th of the second month from the date of payment to the non-resident.
+Deductions will be made on the 25th of the month. If e-Filed late, it will be deducted on the 25th of the following month.
+If the deduction date falls on a weekend or public holiday, deduction will be made the next working day.
+eGIRO transforms the traditional GIRO application process by moving it online, drastically reducing setup times. Hard copy GIRO applications require up to 21 working days to process. The exact timeline is subject to the processing of the respective banks.
+Applying for eGIRO
+Applying for eGIRO with DBS/POSB, OCBC, UOB, Bank of China, Maybank, MariBank, ICBC and CIMB
+Once the applicant has applied for eGIRO at myTax Portal and at the Corporate Internet Banking Portal, the approver can instantly approve the GIRO arrangement at the Corporate Internet Banking Portal.
+myTax Portal
+(Instant setup upon approval by approver at the Corporate Internet Banking Portal)
+DBS/POSB, OCBC, UOB, Bank of China, Maybank, MariBank, ICBC and CIMB customers
+Please note that GIRO must be applied using an SGD savings or current account with a GIRO participating bank in Singapore.
+Step-by-step guide to apply for eGIRO at myTax Portal
+The approver needs to approve the application within 48 hours, as the application will lapse after 48 hours. Please note that approvals cannot be processed during IRAS system's weekly maintenance hours (2 a.m. - 6 a.m. on Wednesdays, and 2 a.m. - 8.30 a.m. on Sundays).
+After IRAS receives the approval from the bank, you can view your GIRO plan for the outstanding tax balance (if any) via the
+'View S45 GIRO Plan'
+digital service at
+myTax Portal
+.
+Applying for GIRO with other Banks
+Please complete and mail the
+S45 Withholding GIRO Application Form
+to IRAS
+as eGIRO is not available for the other banks
+. The GIRO arrangement will be set up within 21 working days. The exact timeline is subject to the processing time of the respective banks.
+Please use
+your own bank account
+when signing up for GIRO. Your GIRO arrangement will be set up for tax payments and IRAS will automatically refund tax credits to your bank account.
+IRAS will send you a notification
+to view the notice of your GIRO application status via your preferred notification mode. The GIRO approval notices and Instalment Plan will also be stored in myTax Portal. You may view your GIRO plan details via the
+'View S45 GIRO Plan'
+digital service at
+myTax Portal
+.
+Managing your GIRO arrangement
+For a successful GIRO deduction, please make sure that your bank has enough funds on the deduction date and that you have set a suitable payment limit. Do note that some banks may impose bank charges for unsuccessful GIRO deductions.
+Apply for GIRO to pay via a One-Time deduction
+E-File your return via S45 e-Services.
+Withholding tax must be paid by 15
+th
+of the second month from date of payment to the non-resident.
+Deductions are made on the 25
+th
+of the month. If e-Filed
+late, it will be deducted on the 25
+th
+of the following month.
+If GIRO deduction is unsuccessful
+GIRO arrangement will be cancelled.
+You will need to set up your GIRO arrangement again or to make immediate payment to avoid penalties.
+Make changes to GIRO arrangement
+Changing bank account
+You can log in to
+myTax Portal
+to make the changes.
+Cancel your GIRO Plan (Select "Account" > "View GIRO Plan" > Cancel GIRO Plan). If the
+bank account that you would like to change to is under DBS/POSB, OCBC, UOB, Bank of China, Maybank, MariBank, ICBC or CIMB, you can apply for eGIRO via the
+'Apply/ Manage GIRO Plan'
+digital
+service, then click 'New GIRO arrangement', otherwise you will have to submit a new GIRO form application (Refer to
+Applying for eGIRO
+). If you've previously used your bank account for GIRO with IRAS, you can re-activate
+your GIRO via the
+'Apply/ Manage GIRO Plan'
+digital service, then click 'Reactivate GIRO arrangement'.
+Once edited, your existing GIRO arrangement will be replaced with the updated plan. You can view your updated GIRO plan details via the
+'View S45 GIRO Plan'
+digital
+service at
+myTax Portal
+.
+Terminate my GIRO Arrangement
+If you wish to
+terminate
+your GIRO arrangement with IRAS, please get in touch with your bank directly. Once GIRO arrangement has been terminated, you will have to apply for a new GIRO arrangement for future tax payments (refer to
+Applying
+for eGIRO
+).
+Do remember to
+settle any outstanding tax immediately
+after the cancellation/termination of GIRO arrangement to avoid late payment penalty.

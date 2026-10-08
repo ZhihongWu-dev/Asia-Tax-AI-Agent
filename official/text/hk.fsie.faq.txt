@@ -1,0 +1,273 @@
+Show All
+Territorial Source Principle of Taxation
+1.
+Q:
+Will the "economic substance requirement" under the FSIE regime override the territorial source principle of taxation?
+A:
+Hong Kong will continue to adhere to the territorial source principle of taxation, and determination on the source of profits will not be affected by the introduction of the "economic substance requirement" under the FSIE regime. In other words, in-scope taxpayers can still make offshore claims and be tax-exempt so long as they meet the economic substance requirement, with the source of profits and compliance with the economic substance requirement being considered in distinct and separate contexts.
+back to top
+2.
+Q:
+What is the conceptual difference between the tests for source of income and the tests for economic substance under the FSIE regime?
+A:
+Determination on the source of profits will continue to be based on the existing provisions of the Inland Revenue Ordinance (Cap. 112) ("IRO") and common law principles.
+As regards the "economic substance requirement", a taxpayer that is a non-pure equity-holding entity is required to satisfy the adequacy test in terms of the number of qualified employees employed and the amount of operating expenditures incurred for carrying out the "specified economic activities" in Hong Kong. For a pure equity-holding entity, the specified economic activities are holding and managing its equity participations, and complying with the corporate law filing requirements in Hong Kong ("reduced economic substance requirement"). For a taxpayer that is not a pure equity-holding entity, the specified economic activities are making necessary strategic decisions and managing and bearing principal risks in respect of any assets it acquires, holds or disposes of. Such specified economic activities are not necessarily directly related to the source of the relevant offshore income received.
+back to top
+Covered Income
+3.
+Q:
+What is the tax treatment for losses sustained from the sale of equity interests outside Hong Kong?
+A:
+In the case where a covered taxpayer sustains a loss from the sale of equity interests outside Hong Kong ("equity interest disposal loss"), the "equity interest disposal loss" can be used to set off against the taxpayer’s assessable profits derived from specified foreign-sourced income that is chargeable to profits tax under the FSIE regime in the year of assessment during the basis period of which the sale proceeds are received in Hong Kong if the taxpayer fails to meet the economic substance requirement and the conditions for participation exemption. Any amount of loss not so set off can be carried forward and set off against the taxpayer’s assessable profits derived from specified foreign-sourced income in subsequent years of assessment.
+back to top
+4.
+Q:
+What does the term "dividend" mean for the purposes of the FSIE regime?
+A:
+The term "dividend" is not defined in the IRO, and the ordinary meaning and common law interpretation of the term has been relied upon in construing the term in the context of the IRO.
+In deciding whether an income is in substance a dividend, it is necessary to examine all the facts and circumstances relating to the transaction rather than the mere label of the income. Generally, dividend refers to a payment of part of the profits for a period in respect of a share in a company. It does not include distributions from a partnership, unit trust or other non-corporate entities and profit distributions from a branch.
+back to top
+5.
+Q:
+According to Hong Kong Accounting Standard (HKAS) 28, an investment in an associate shall be accounted for using the equity method. Under the method, the investment in an associate is initially recognised at cost and the carrying amount is increased or decreased to recognise the investor’s share of the profit or loss of the investee after the date of acquisition.
+Is a share of profit from overseas associate recognised in a taxpayer’s income statement regarded as dividend income for the purposes of the FSIE regime?
+A:
+Under the equity method of accounting, an adjustment to the carrying amount of an associate arising from the share of profit or loss represents a change in value of the investor’s proportionate interest in the associate. As the adjustment merely increases or decreases the carrying value of the investor’s investment in the associate, it is not a distribution of profits from the associate to the investor and thus would not be regarded as a dividend. Instead, at the time when the associate distributes part of its profits to its investors, the amount of profits so distributed would be regarded as dividend for the purposes of the FSIE regime.
+back to top
+6.
+Q:
+What does the term “interest” mean for the purposes of the FSIE regime?
+A:
+At present, the term "interest" is not defined in the IRO, and the ordinary meaning and common law interpretation of the term has been relied upon in construing the term in the context of the IRO.
+In deciding whether an income is in substance interest, it is necessary to examine all the facts and circumstances relating to the transaction rather than the mere label of the income. Generally, interest is payable for the use of money and is in the nature of compensation for the deprivation of such use.
+back to top
+7.
+Q:
+Will a foreign-sourced disposal gain that is of capital nature fall within the scope of the FSIE regime?
+A:
+All disposal gains would fall within the scope of the FSIE regime whether or not they are capital or revenue in nature.
+back to top
+8.
+Q:
+Under section 15H of the IRO, a "disposal gain" means any gain or profit derived from the sale of property. If the disposal gain is sourced outside Hong Kong and falls within the FSIE regime, it will be regarded as not arising from the sale of capital assets by virtue of section 15I(1)(b) of the IRO. In this regards, will expenses in relation to the disposal of the property be deductible, notwithstanding that they are of capital nature?
+A:
+Section 15Q of the IRO provides that an outgoing or expense incurred in the production of specified foreign-sourced income that is chargeable to profits tax under section 15I(1) may be deducted in accordance with Division 4 of Part 4 (Profits Tax) of the IRO. In case the disposal gain is chargeable to profits tax under the FSIE regime, outgoings and expenses incurred in the production of the disposal gain will be deductible pursuant to section 15Q of the IRO. Generally, the amount of disposal gain on the property is the disposal proceeds in excess of the acquisition cost of the property and direct expenses in relation to the purchase and sale of the property (e.g. legal cost, stamp duty). Outgoings and expenses that are of capital nature (e.g. capital expenditure on the provision of machinery or plant) will not be deductible under section 17(1)(c).
+back to top
+9.
+Q:
+Under section 15H(1) of the IRO, a "disposal gain" means any gain or profit derived from the sale of property, whereas "sale", in relation to any property, means a transfer of the property (other than a transfer effected by extinguishing the property) for valuable consideration. Will (i) redemption of bonds; and (ii) conversion of convertible bonds into equity interest be regarded as "sale"?
+A:
+Redemption of bonds is a process by which a bond issuer repays the principal amount of money borrowed to the bond holder upon maturity. It does not constitute a sale as defined under section 15H(1) of IRO. Thus, a gain or profit, if any, derived from the redemption of bonds will not be regarded as a disposal gain under the FSIE regime. However, in case of a zero rated bond, which was issued to the bond holder at a discount, the difference between the discounted price of the acquisition of the bond and the face value received by the bond holder upon redemption could be regarded as interest being a reward to the bond holder for the use of money borrowed. The interest derived therefrom would fall within the scope of the FSIE regime.
+Conversion of convertible bonds into equity interest will not be regarded as a sale provided that no transfer of asset by the taxpayer is involved. If the equity interest is subsequently sold, the purchase cost of the original asset (i.e. the bond) will be taken into account in ascertaining the disposal gain on the equity interest.
+back to top
+10.
+Q:
+Will foreign-sourced income derived by a trader from selling of goods in the ordinary course of carrying on its business fall within the scope of “specified foreign-sourced income” under the FSIE regime?
+A:
+Under the FSIE regime, specified foreign-sourced income does not include any non-IP disposal gain that accrues to a trader and is derived from, or is incidental to, its business as a trader. Such exclusion resembles that applies to foreign-sourced interest, dividend and non-IP disposal gains derived by regulated financial entities.
+back to top
+11.
+Q:
+Can a trader carrying on a business in Hong Kong and having its specified economic activities carried out in Hong Kong claim that its non-IP disposal gains are derived outside Hong Kong?
+A:
+Yes. Under the territorial principle of taxation, it is always possible that a person carries on a business in Hong Kong but derives foreign-sourced profits. A trader carrying on its business in Hong Kong and undertaking its specified economic activities in Hong Kong would not be prevented from claiming that its non-IP disposal gains were sourced outside Hong Kong.
+back to top
+12.
+Q:
+An unremitted specified foreign-sourced income has been applied to acquire immovable or movable property located outside Hong Kong and the property is subsequently sold. Assuming the conditions for tax exemption are not satisfied, will the sales proceeds still be regarded as the original specified foreign-sourced income and, therefore, need to be tracked and then subject to tax in Hong Kong when the proceeds are ultimately remitted back to Hong Kong, regardless of how many times such proceeds have been reinvested to acquire other immovable or movable property? If yes, how the gains or losses on the disposal of any such property are to be treated in determining the amount of the original specified foreign-sourced income that will be subject to the FSIE regime in Hong Kong?
+A:
+The sales proceeds from the subsequent disposal of immovable or movable property will still be regarded as the original specified foreign-sourced income and thus have to be tracked. When the sales proceeds are remitted to Hong Kong, the original specified foreign-sourced income will be regarded as received in Hong Kong and chargeable to profits tax in Hong Kong in case the conditions for tax exemption are not satisfied.
+The amount of the original specified foreign-sourced income should not be altered by the subsequent acquisition and disposal of assets no matter whether gains or losses are generated from such reinvestment activities. Whether the gains or losses from the subsequent disposal of assets are chargeable to profits tax under the FSIE regime will be considered separately, having regard to the facts and circumstances relating to the disposal.
+back to top
+13.
+Q:
+A taxpayer has its parent company in Hong Kong ("the Parent Company") and a wholly owned subsidiary outside Hong Kong ("the Subsidiary"). The Subsidiary transferred its shares in an investee entity ("the Investee Entity"), which was incorporated outside Hong Kong, to the taxpayer as in-kind dividend and the taxpayer in turn distributes the in-kind dividend (i.e. shares in the Investee Entity) to the Parent Company. The Investee Entity does not have any business operation, establishment or staff in Hong Kong, and its central management and control is exercised outside Hong Kong. Will the in-kind dividend distributed by the Subsidiary to the taxpayer be regarded as received in Hong Kong?
+A:
+The Investee Entity is an oversea company as it was incorporated outside Hong Kong, it has no business operation, establishment or staff in Hong Kong. Also, its central management and control is exercised outside Hong Kong. Under such circumstances, the Investee Entity’s shares distributed by the Subsidiary to the taxpayer, in general, would not be regarded as kept in Hong Kong. Thus, such offshore dividends received by the taxpayer would not be regarded as received in Hong Kong under the FSIE regime. The dividend would not be treated as used to satisfy a debt incurred in respect of a trade or business carried on in Hong Kong.
+back to top
+Covered Taxpayers
+14.
+Q:
+Are entities that do not consolidate their financial results in the ultimate parent entity’s consolidated financial statements on a line-by-line basis covered by the FSIE regime?
+A:
+The definitions of "MNE group" and other related terms adopted for the purposes of the FSIE regime are modelled on those in the Global Anti-base Erosion Rules ("GloBE Rules") published by the Organisation for Economic Co-operation and Development under the Two-Pillar Solution to address the tax challenges arising from the digitalisation of the economy. Under the GloBE Rules, the governing principle to determine whether an entity is a part of an MNE group is to follow the accounting consolidation rules. If the accounting rules do not require the financial results of an entity to be included in the consolidated financial statements of its ultimate parent entity on a line-by-line basis (except that its exclusion is solely on size or materiality grounds or on the grounds that it is held for sale), the entity will not form part of a group and the FSIE regime will not be applicable to it.
+back to top
+15.
+Q:
+Is a small and medium-sized entity (“SME”) in Hong Kong which only holds an overseas subsidiary but is exempt from preparing consolidated financial statements under the SME Financial Reporting Standard an MNE entity?
+A:
+No. Since the reason for the Hong Kong SME not preparing consolidated financial statements to include the overseas subsidiary’s assets, liabilities, income, expenses and cash flows on a line-by-line basis is not solely on materiality grounds, nor on the grounds that the overseas subsidiary is held for sale, the Hong Kong SME is not regarded as a group and hence not an MNE entity.
+back to top
+16.
+Q:
+Will an investment entity be regarded as an MNE entity?
+A:
+An investment entity that is an ultimate parent or intermediate parent entity is generally exempted from preparing consolidated financial statements and measures its subsidiaries at fair value in accordance with the International Financial Reporting Standards (IFRS) issued by the International Accounting Standards Board and the Hong Kong Financial Reporting Standards (HKFRS) issued by the Hong Kong Institute of Certified Public Accountants. The term "investment entity" as defined under the IFRS and the HKFRS includes an investment fund. Under such circumstances, an investment entity that is not required under applicable accounting principles (including the IFRS and the HKFRS) to be included in the consolidated financial statements of the ultimate parent entity of the collection will not be regarded as part of a group and hence not an MNE entity. The FSIE regime will not be applicable to it.
+However, an investment entity may be required to consolidate the assets, liabilities, income and expenses of its subsidiaries on a line-by-line basis if the subsidiaries themselves are not investment entities and the subsidiaries’ main purposes are to provide services and carry out activities that are related to the investment activities of the investment entity parent. In such case, a collection of the investment entity and its subsidiaries will be regarded as a group. If the group includes at least one entity or permanent establishment that is not located or established in the jurisdiction of the ultimate parent entity of the group, the investment entity will be regarded as an MNE entity.
+back to top
+17.
+Q:
+Fund A is a collective investment scheme authorized under section 104 of the Securities and Futures Ordinance (Cap. 571) (SFO) and is listed on the Stock Exchange of Hong Kong. Fund A is required to prepare consolidated financial statements to report its and all its subsidiaries’ financial results. Fund A will receive certain foreign-sourced dividends from its investments overseas. Will Fund A fall within the scope of the FSIE regime?
+A:
+As Fund A is authorized as a collective investment scheme under section 104 of Cap. 571, it qualifies for tax exemption under section 26A(1A)(a)(i) of the IRO. Even though Fund A falls within the definition of "MNE entity" under the FSIE regime, its foreign-sourced dividends from its investment activities can still be exempt from profits tax under section 26A(1A).
+back to top
+18.
+Q:
+Company B is a charitable institution exempt from profits tax under section 88 of the IRO. Company B will receive in Hong Kong certain foreign-sourced interests from its overseas bank deposits. Will Company B fall within the scope of the FSIE regime?
+A:
+No. Company B can continue to enjoy its exemption status under section 88 of the IRO. Its foreign-sourced interest income will be exempt from profits tax, provided that the conditions under the proviso to section 88 are fulfilled if such interest income is derived from a trade or business carried on by Company B.
+back to top
+19.
+Q:
+An individual, Mr. C, holds a controlling interest in Company X, located in Jurisdiction X, and Company Y, located in Jurisdiction Y. Mr. C will receive dividends from Company X and Company Y in Hong Kong. Will Mr. C fall within the scope of the FSIE regime?
+A:
+No. Since Mr. C is a natural person, which is excluded from the definition of entity, he will not fall within the scope of the FSIE regime. His dividends received in Hong Kong from Company X and Company Y would not be brought into charge by the operation of the FSIE regime.
+back to top
+20.
+Q:
+What is the purpose of including a person that acts for an MNE group in the definition of "MNE entity"? Will an independent agent or a non-MNE entity acting for an MNE group or entity (e.g. service provider) be brought within the scope of the FSIE regime?
+A:
+The definition of "MNE entity" is formulated to ensure that a person (e.g. a trustee) who acts for an arrangement (e.g. a trust) that is an entity included in an MNE group or an MNE group can be chargeable to profits tax under the FSIE regime. Such an arrangement may take many forms and is not limited to trust and arrangements similar to trust (e.g. unlimited liability joint venture).
+According to the ordinary meaning of the term "act for", it means "to serve as an authorized or official representative". Hence, if service providers merely provide services to MNE groups, this alone does not count as "act for". An independent service provider who only serves an MNE group or an entity included in an MNE group in the course of providing services to the group or entity will generally not be brought within the scope of the FSIE regime.
+back to top
+Economic Substance Requirement
+21.
+Q:
+If a company has already received a certificate of resident status (“COR”), can the COR serve as a proof that there is sufficient economic substance?
+A:
+A COR is a document issued by the Hong Kong competent authority to a Hong Kong resident person who requires proof of resident status for the purpose of claiming tax benefits under a Comprehensive Double Taxation Agreement ("CDTA"). Therefore, it only serves as a proof that the entity is a Hong Kong tax resident for the purposes of the CDTA. Since an entity’s tax resident status and its compliance with the "economic substance requirement" under the FSIE regime are considered in different contexts, COR cannot be used to demonstrate sufficient economic substance for the purposes of the FSIE regime.
+back to top
+22.
+Q:
+What are the “specified economic activities” in relation to interest income from loans?
+A:
+For interest income from loans, the relevant economic activities are making necessary strategic decisions, managing and bearing principal risks in respect of such loans. Such activities can be carried out through the holding of board meetings, strategic planning made by the finance department, etc.
+back to top
+23.
+Q:
+If a taxpayer arranges the specified economic activities to be carried out by an outsourced entity, does the taxpayer need to monitor those activities? Is minimal monitoring sufficient and is any circumstantial evidence required?
+A:
+In order to comply with the economic substance requirement through outsourcing, the taxpayer has to demonstrate adequate monitoring of the specified economic activities carried out by the outsourced entity. It is expected that such a monitoring mechanism would be documented in an appropriate manner, say in the outsourcing agreement or any internal policies of the MNE group.
+back to top
+24.
+Q:
+Will interest income incidental to an equity holding business affect a taxpayer’s status as a “pure equity-holding entity”?
+A:
+A receipt of incidental interest income (e.g. interest on deposit of dividends received) would not affect a taxpayer’s status as a pure equity-holding entity.
+back to top
+25.
+Q:
+Will provision of a shareholder’s loan made by a taxpayer to its investee entity affect the taxpayer’s status as a "pure equity-holding entity"? Would the situation be different if the shareholder’s loan is interest-free?
+A:
+"Pure equity-holding entity" means an entity that only holds equity interests in other entities and only earns dividends, equity interest disposal gains and income incidental to the acquisition, holding or sale of such equity interests. This definition is modelled on the
+Guidance on the interpretation of the third criterion of the Code of Conduct (Business Taxation)
+promulgated by the European Union.
+Given the restriction on assets held in the above definition, the existence of the shareholder’s loan, whether interest-free or not, will taint the taxpayer’s status as a "pure equity-holding entity". This practice is consistent with that adopted by no or only nominal tax jurisdictions in the application of their economic substance laws.
+back to top
+26.
+Q:
+If a taxpayer obtains borrowings for financing the acquisition of equity interests, will the earning of an income (e.g. exchange gains) arising from the borrowings disqualify the taxpayer from being a pure equity-holding entity?
+A:
+No. Borrowing money for financing its equity investment and earning incidental income (e.g. exchange gains) from such borrowing does not disqualify the taxpayer from being a pure equity-holding entity.
+back to top
+27.
+Q:
+What documents are required for meeting the economic substance requirement under a group outsourcing arrangement? What level of human resources is regarded as adequate for a group service company which provides centralised support services to multiple pure equity-holding entities within the same group?
+A:
+To prove that the outsourcing and a taxpayer’s monitoring have taken place, it would be sufficient for a taxpayer to have an internal master service agreement or other proper documentation provided that the relevant details of the outsourcing arrangement (e.g. identities of the outsourcing entity and outsourced entity, nature of specified economic activities outsourced, fees charged, monitoring mechanism, etc.) are set out in the document.
+It is not practicable to specify the exact level of human resources that is considered adequate for a pure equity-holding entity to meet the reduced economic substance requirement as such level would depend on the extent and complexity of activities that the outsourced entity needs to undertake for holding and managing the pure equity-holding entity’s equity participations in other entities, the number of pure equity-holding entities to which the outsourced entity provides services, etc.
+back to top
+28.
+Q:
+What activities undertaken by a pure equity-holding entity or its service provider will be regarded as “holding and managing equity participations” for satisfying the reduced economic substance requirement?
+A:
+In assessing whether a pure equity-holding entity has satisfied the reduced economic substance requirement, IRD will take into account the commercial reality of the taxpayer, having regard to its entire operation. In general, activities for holding and managing equity participations include taking decisions on the holding and selling of equity interests, calculating risks, and reviewing or revising financing arrangement for acquiring the equity interests.
+back to top
+29.
+Q:
+Company A disposed of certain equity interests and accrued a disposal gain in 2022. According to the disposal agreement, it would receive an additional sum subject to the business performance of the disposed entity. In 2023, Company A accrued and received the "contingent" disposal gain as the target performance was achieved. Does the contingent disposal gain accrued and received after 1 January 2023 fall within the scope of the FSIE regime notwithstanding that the disposal took place in 2022? If yes, what is the timing for considering the economic substance requirement? If Company A no longer maintained economic substance in Hong Kong subsequent to the disposal in 2022, would IRD take into account Company A’s economic substance in 2022, given that the disposal took place in 2022?
+A:
+The contingent disposal gain which accrued to Company A on or after 1 January 2023 falls within the scope of specified foreign-sourced income under the FSIE regime. The wording of section 15K(2) of the IRO is clear. The reference period for considering whether the economic substance requirement is met is the basis period of the year of assessment in which the specified foreign-sourced income accrues to an MNE entity. If Company A did not have any economic substance in Hong Kong during the year of assessment in which the contingent disposal gain accrued to it, the economic substance requirement would not be regarded as satisfied.
+back to top
+30.
+Q:
+Company A closed its accounts on 31 December and held certain debts and equity interests. It disposed of all the debts on 1 June 2023 and only held equity interests afterwards. It derived offshore dividends at various times during the year 2023. Can it be regarded as a pure equity-holding entity and rely on the reduced economic substance requirement for all the dividends accrued during the year of assessment 2023/24?
+A:
+Section 15K(2) of the IRO provides different sets of conditions for pure equity-holding entities and non-pure equity-holding entities respectively in determining whether an entity satisfies the economic substance requirement during the basis period of the year of assessment in which the income accrues to the entity. For a pure equity-holding entity, the reduced economic substance requirement is applicable. Since Company A had held certain debts during the basis period of the year of assessment 2023/24 in which the dividends accrued to it, Company A could not be regarded as a pure equity-holding entity during the year even though all the debts were disposed of on 1 June 2023. Thus, the reduced economic substance requirement would not be applicable to it.
+back to top
+Participation Requirement
+31.
+Q:
+If an investee entity sustains a loss for a taxable year in respect of which a dividend (subject dividend) is distributed, but the underlying profits of the subject dividend (i.e. the investee entity’s retained profits) for all past years have been taxed in a territory outside Hong Kong at a rate of at least 15%, can the “subject to tax” condition be met?
+A:
+Generally, in determining whether the "subject to tax" condition is met in relation to underlying profits, IRD will consider the tax position of the underlying profits for the taxable period in which or immediately prior to that in which the subject dividend is declared ("relevant period"). If the investee entity sustains a loss and has no profits chargeable to tax for the relevant period, the "subject to tax" condition cannot be met.
+Having said that, IRD may consider otherwise if there is sufficient evidence showing that the underlying profits out of which the subject dividend is distributed have been taxed for a taxable period or periods prior to the relevant period at a rate of at least 15%. In this regard, the taxpayer should put in place a mechanism (with documentary records) to track: (a) the total dividends paid by investee entities; and (b) the total profits of the entities that are taxed at a rate of at least 15%, for each taxable period. Such a tracking mechanism has to be applied consistently. In such cases, the "subject to tax" condition can generally be met if the amount of (b) is equal or greater than that of (a).
+back to top
+32.
+Q:
+Company HK’s disposal of equity interests in Company X located in Jurisdiction X results in an indirect transfer of Subsidiary Y, a foreign subsidiary indirectly held by Company HK in Jurisdiction Y. Company HK is subject to indirect transfer tax (which is a corporate income tax imposed on a withholding basis) at the tax rate of 10% on the disposal gain in Jurisdiction Y. If the statutory corporate income tax rate in Jurisdiction Y is 25%, can the “subject to tax” condition be regarded as satisfied?
+(Updated)
+A:
+If the specified foreign-sourced income is a gain derived from disposal of equity interests in an investee entity, the participation exemption only applies if the disposal gain is subject to a qualifying similar tax in a territory outside Hong Kong (foreign jurisdiction). The foreign jurisdiction may not necessarily be the jurisdiction in which the investee entity is located.
+If the gain from disposal of the equity interests in Company X is subject to corporate income tax in Jurisdiction Y on the indirect transfer of Subsidiary Y, such tax would be taken into account in determining whether the “subject to tax” condition is satisfied in respect of the equity interest disposal gain. As the headline tax rate in Jurisdiction Y is higher than the reference rate of 15%, the “subject to tax” condition would be regarded as satisfied.
+back to top
+33.
+Q:
+Company HK derived gains from disposal of its subsidiaries in Jurisdiction F. The gains were exempt from tax in Jurisdiction F pursuant to a participation exemption regime there. Will the “subject to tax” condition be regarded as satisfied in respect of the equity interest disposal gains?
+A:
+If no tax is charged on the gains derived by Company HK from the disposal of its subsidiaries, such disposal gains will not be regarded as subject to a qualifying similar tax in Jurisdiction F.
+back to top
+34.
+Q:
+Company HK received a dividend of $100 from its wholly-owned subsidiary, Company X, which is located in Jurisdiction X. The dividend was not subject to any withholding tax in Jurisdiction X. The underlying profits out of which the dividend was distributed by Company X to Company HK consisted of:
+(a)
+dividends received by Company X from its subsidiaries in the amount of $80, in respect of which the underlying profits had been subject to corporate income tax at a rate of not less than 15% in territories outside Hong Kong; and
+(b)
+interest income of $20 which was tax-exempt in Jurisdiction X.
+Would IRD accept an apportionment approach when ascertaining whether the dividend received by Company HK meets the "subject to tax" condition – i.e. the portion of dividend that was paid out from item (a) above (i.e. $80) would be regarded as fulfilling the "subject to tax" condition whereas the remaining portion that was paid out from item (b) (i.e. $20) would not?
+A:
+For dividend income, the "subject to tax" condition will only be met if one of the following conditions is satisfied:
+(i)
+The dividend is subject to a qualifying similar tax in a foreign jurisdiction;
+(ii)
+The underlying profits of the dividend are subject to a qualifying similar tax in a foreign jurisdiction, and the amount of the profits is equal to or larger than that of the dividend; or
+(iii)
+If the underlying profits consist wholly or partly of dividends, one or more items of the related downstream income of the profits are subject to a qualifying similar tax in a foreign jurisdiction and the aggregate amount of all such items of income is equal to or larger than the amount of the dividend.
+In the given scenario, (i) the subject dividend was not subject to tax in Jurisdiction X; (ii) the amount of the underlying profits (i.e. the profits of Company X) of the subject dividend which had been subject to a qualifying similar tax (i.e. $80) is smaller than that of the subject dividend; and (iii) there is no information showing that any related downstream income of the underlying profits had been subject to tax. In such circumstance, the "subject to tax" condition in respect of the subject dividend would not be regarded as met since none of the conditions provided in section 15N(2) of the IRO is satisfied.
+Section 15N(2) of the IRO clearly provides that where the "subject to tax" condition is to be met in relation to a dividend for the reason that the underlying profits or related downstream income of the profits is subject to a qualifying similar tax, the amount or aggregate amount of such profits or income must be equal to or larger than the amount of the dividend. There is no room for the adoption of the apportionment approach when ascertaining whether the "subject to tax" condition is met.
+back to top
+35.
+Q:
+Company HK, a Hong Kong tax resident, holds 100% equity interest in Company X, located in Jurisdiction X. Company HK received a dividend of $76 from Company X. The dividend was not subject to any withholding tax in Jurisdiction X.
+The underlying profits of the dividend distributed by Company X consisted wholly of dividends received from its subsidiary, Company Y which is located in Jurisdiction Y. The dividend distributed by Company Y to Company X was $80 and was subject to a 5% withholding tax in Jurisdiction Y. The corporate tax rate of Jurisdiction Y is 20%. Can the "subject to tax" condition be regarded as satisfied?
+(New)
+A:
+As the underlying profits (i.e. the dividend of $80 distributed by Company Y to Company X) of the dividend income was subject to a qualifying similar tax in Jurisdiction Y and the amount of the underlying profits is equal to or larger than that of the dividend income of Company HK, Company HK can be regarded as satisfied the "subject to tax" condition under the participation requirement.
+back to top
+Compliance Requirement
+36.
+Q:
+Is a covered taxpayer required to notify the Inland Revenue Department of its receipt of specified foreign-sourced income?
+A:
+A covered taxpayer who receives in Hong Kong any specified foreign-sourced income to which no tax exemption is applicable will have to inform its chargeability to tax within 4 months after the end of the basis period of the year of assessment during which the income is received in Hong Kong ("year of receipt"). In the case where a Profits Tax Return for the year of receipt has been issued, the taxpayer is required to provide details of the income received in the tax return and no separate written notification is required.
+back to top
+37.
+Q:
+Can a taxpayer apply for an advance ruling to obtain certainty on whether its specified foreign-sourced income is exempt from tax under the FSIE regime?
+A:
+A taxpayer can apply for an advance ruling under section 88A of the IRO on whether its covered income is exempt from tax under the FSIE regime.
+To obtain tax certainty and reduce compliance burden, taxpayers are encouraged to apply to the Commissioner for advance rulings on their compliance with the economic substance requirement of the FSIE regime specified in section 15K of the IRO. The application may cover a maximum of 5 years of assessment. For more information on advance ruling, please click
+here
+.
+back to top
+38.
+Q:
+Should the economic substance requirement be satisfied in the year of receipt in Hong Kong or the year of accrual of the income? If the latter, are taxpayers required to put in place a mechanism to keep track of the supporting documents for economic substance in prior years?
+A:
+The economic substance requirement, if relied upon, needs to be complied with during the basis period of the year of assessment in which the relevant income accrues to the taxpayer.
+To minimise the compliance burden, a taxpayer may consider applying for the Commissioner’s opinion or an advance ruling, as the case may be, on its compliance with the economic substance requirement which, if granted, can be applicable for up to 5 years of assessment. With the Commissioner’s opinion or an advance ruling, the taxpayer will be relieved from tracking the receipt of the offshore non-IP covered income accrued in the relevant years of assessment.
+back to top
+Illustrative Examples
+Click
+here
+to read the illustrative examples for specified foreign-sourced income.

@@ -1,0 +1,131 @@
+## sheet: 工作表1 (2)
+資料表格附表(組別申請) - 外地收入豁免徵税機制的經濟實質要求
+Annex to Data Form (Group Application) - Economic Substance Requirement of Foreign-sourced Income Exemption Regime
+跨國企業實體的詳情
+Details of the MNE entities | 指明外地收入的詳情
+Details of specified foreign-sourced income | 足夠經濟實質要求
+Adequacy of economic substance requirement
+屬純股權持有實體
+For pure equity-holding entities | 不屬純股權持有實體
+For entities that are not pure equity-holding entities
+編號
+No. | 跨國企業實體名稱
+Name of MNE entity | 税務局檔案號碼
+Inland Revenue Department file number | 香港標準行業分類的行業編碼 
+Hong Kong Standard Industrial Classification Code | 純股權持有實體?
+Pure equity-holding entity? | 利息
+Interest | 股息
+Dividend | 非知識產權處置收益
+Non-IP disposal gain
+(附註 Note 9) | 估計每年的指明外地收入總款額範圍(港元)
+Range of estimated total annual amount (HK$) | 註明款額
+State the amount | 是否會遵從每項適用的註冊及存檔規定?
+Comply with every applicable registration and filing requirement? | 指明經濟活動的概況
+Details of specified economic activities
+(附註 Note 14) | 指明經濟活動的概況
+Details of specified economic activities
+ (附註 Note 14)
+相關處置的資產是─
+The relevant disposed assets are─ | 持有和管理在其他實體中的股權參與
+Holding and managing its equity participations in other entities
+
+"Y" = 是 Yes
+"N" = 否 No
+"X" = 不屬純股權持有實體
+Not a pure equity-holding entity | 就取得、持有或處置相關資產而作出所需的策略決定
+Making necessary strategic decisions on acquiring, holding and disposing of the assets | 就相關資產管理及承擔主要風險
+Managing and bearing principal risks in respect of the assets
+
+
+
+"Y" = 是 Yes
+"N" = 否 No
+"X" = 屬純股權持有實體
+A pure equity-holding entity
+"Y" = 是 Yes
+"N" = 否 No | "Y" = 是 Yes 
+"N" = 不適用
+Not applicable | "Y" = 是 Yes 
+"N" = 不適用
+Not applicable | "Y" = 是 Yes
+"N" = 不適用
+Not applicable | 其他實體的股權權益
+Equity interests in other entities
+"Y" = 是 Yes
+"N" = 否 No
+"X" = 沒有處置收益
+No disposal gain | 借貸或債務證券
+Loans or debt securities
+"Y" = 是 Yes
+"N" = 否 No
+"X" = 沒有處置收益
+No disposal gain | 外幣
+Foreign currencies
+"Y" = 是 Yes
+"N" = 否 No
+"X" = 沒有處置收益
+No disposal gain | 其他動產，請註明
+Other movable properties, please state
+
+"N" = 不適用
+Not applicable | 不動產
+Immovable properties
+"Y" = 是 Yes
+"N" = 否 No
+"X" = 沒有處置收益
+No disposal gain | "1" = 少於 Less than 2,000,000
+"2" = 2,000,000 至 to 10,000,000
+"3" = 10,000,001 至 to 20,000,000
+"4" = 20,000,001 至 to 40,000,000
+"5" = 超過 Over 40,000,000 註明款額 State the amount : | 如選項為1至4，
+請註明 "N"
+If your option is 1 to 4, please state "N" | "Y" = 是 Yes
+"N" = 否 No
+"X" = 不屬純股權持有實體
+Not a pure equity-holding entity | 其他實體的股權權益
+Equity interests in other entities
+"Y" = 是 Yes
+"N" = 否 No
+"X" = 屬純股權持有實體
+A pure equity-holding entity | 借貸或債務證券
+Loans or debt securities
+"Y" = 是 Yes
+"N" = 否 No
+"X" = 屬純股權持有實體
+A pure equity-holding entity | 外幣
+Foreign currencies
+"Y" = 是 Yes
+"N" = 否 No
+"X" = 屬純股權持有實體
+A pure equity-holding entity | 其他動產，請註明
+Other movable properties, please state
+
+"N" = 不適用 Not applicable | 不動產
+Immovable properties
+"Y" = 是 Yes
+"N" = 否 No
+"X" = 屬純股權持有實體
+A pure equity-holding entity
+(附註 Note 11) | (附註 Note 12) | (附註 Note 10) | (附註 Note 13)
+Example 1 | ABC Limited | 05 | / | 12345678 | 642000 | Y | N | Y | Y | Y | N | N | N | N | 5 | 45000000 | Y | Y | X | X | X | N | X | X
+Example 2 | XYZ Limited | 06 | / | 87654321 | 651200 | N | Y | N | N | X | X | X | N | X | 2 | N | X | X | N | Y | N | N | N | Y
+1 | /
+2 | /
+3 | /
+4 | /
+5 | /
+6 | /
+7 | /
+8 | /
+9 | /
+10 | /
+11 | /
+12 | /
+13 | /
+14 | /
+15 | /
+16 | /
+17 | /
+18 | /
+19 | /
+20 | /

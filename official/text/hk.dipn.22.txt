@@ -1,0 +1,903 @@
+Inland Revenue Department 
+The Government of the Hong Kong Special Administrative Region
+of the People's Republic of China 
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES 
+NO. 22 (REVISED) 
+TAXATION OF ROYALTIES AND OTHER INCOME FROM 
+INTELLECTUAL PROPERTIES 
+These notes are issued for the information of taxpayers and their tax 
+representatives.  They contain the Department’s interpretation and practices in 
+relation to the law as it stood at the date of publication.  Taxpayers are reminded 
+that their right of objection against the assessment and their right of appeal to the 
+Commissioner, the Board of Review or the Court are not affected by the application 
+of these notes. 
+These notes replace those issued in January 2005. 
+WONG Kuen-fai 
+Commissioner of Inland Revenue 
+August 2020 
+Our website : www.ird.gov.hk
+
+ 
+ 
+ 
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES 
+ 
+No. 22 (REVISED) 
+ 
+CONTENT 
+ 
+ 
+ 
+Paragraph 
+Legislative provisions  
+ 
+ 
+Basic charge 
+1 
+ 
+Deeming provisions 
+2 
+ 
+ 
+ 
+Source of royalty income  
+ 
+ 
+The broad guiding principle  
+4 
+ 
+Application of the broad guiding principle  
+ 
+ 
+- 
+Totality of facts 
+7 
+ 
+- 
+Licensing of intellectual properties created or 
+8 
+developed by licensor 
+ 
+- 
+Licensing of intellectual properties purchased by 
+9 
+licensor 
+ 
+- 
+Sublicensing of intellectual properties 
+10 
+ 
+Application of the deeming provisions  
+ 
+ 
+- 
+Exhibition or use of cinematograph films, etc. in 
+11 
+Hong Kong 
+ 
+- 
+Use or right to the use of patents, trade mark, etc. in 
+12 
+Hong Kong 
+ 
+- 
+Use or right to the use of patents, trade mark, etc. 
+14 
+outside Hong Kong 
+ 
+- 
+Use or right to the use of intellectual properties 
+17 
+generated 
+from 
+research 
+and 
+development 
+activities in Hong Kong 
+ 
+- 
+Use or right to the use of intellectual properties with 
+19 
+value creation contributions in Hong Kong 
+ 
+- 
+Meaning of “use” and “right to the use” 
+22 
+ 
+- 
+Assignment of performer’s right 
+24 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ii 
+ 
+Computation of assessable profits under section 21A 
+ 
+Application of the 30% rate 
+27 
+ 
+Application of the 100% rate 
+28 
+ 
+Meaning of “owned” 
+30 
+ 
+Meaning of “associate” 
+32 
+ 
+Recipient carrying on business in Hong Kong 
+34 
+ 
+ 
+ 
+DTA territory resident person 
+ 
+ 
+Royalties Article of DTA 
+35 
+ 
+Rate in DTA not applied  
+37 
+ 
+ 
+ 
+Advance rulings 
+ 
+ 
+Application for advance ruling 
+39 
+ 
+
+ 
+ 
+LEGISLATIVE PROVISIONS 
+ 
+Basic charge 
+ 
+ 
+ 
+Section 14 of the Inland Revenue Ordinance (the Ordinance) contains 
+the main charging provision for profits tax.  In short, profits tax is charged on a 
+person in respect of the person’s assessable profits arising in or derived from 
+Hong Kong from a trade, profession or business carried on by the person in Hong 
+Kong.  Profits arising in or derived from Hong Kong include profits from 
+business transacted in Hong Kong.  Thus, royalty income derived by a person 
+carrying on business in Hong Kong from intellectual properties through licensing 
+operations undertaken in Hong Kong is chargeable to profits tax. 
+ 
+Deeming provisions 
+ 
+2. 
+Section 15(1) of the Ordinance deems certain sums derived from 
+intellectual properties, not otherwise chargeable to tax, as trading receipts arising 
+in or derived from Hong Kong from a trade, profession or business carried on in 
+Hong Kong.   Section 15(1) does not exclude any person from chargeability to 
+profits tax under section 14.   It simply enlarges the scope of section 14.  The 
+relevant provisions are summarised as follows: 
+ 
+(a) 
+Section 15(1)(a) and (b) was introduced in 1971 to deem sums 
+received by or accrued to a person for the use, or the right to 
+the use, in Hong Kong of certain intellectual properties as 
+trading receipts chargeable to profits tax.   
+ 
+(b) 
+Section 15(1)(ba) was added in 2004 to bring into charge sums 
+received by or accrued to a person for the use, or the right to 
+the use, outside Hong Kong of certain intellectual properties if 
+the sums are deductible in ascertaining the assessable profits of 
+a person under profits tax. 
+ 
+(c) 
+Section 15(1)(bb) was added in 2018 to deem sums received by 
+or accrued to a performer or an organizer for the assignment of, 
+or the agreement to assign, a performer’s right in relation to a 
+performance in Hong Kong as trading receipts chargeable to 
+profits tax. 
+
+ 
+ 
+ 
+2 
+ 
+(d) 
+Section 15(1)(bc) was added in 2018 to deem as trading receipts 
+chargeable to profits tax sums received by or accrued to a 
+person for: 
+ 
+(i) 
+the use, or the right to the use, outside Hong Kong of 
+certain intellectual properties generated from any research 
+and development (R&D) activity in respect of which a 
+deduction is allowable under section 16B; or 
+ 
+(ii) imparting or undertaking to impart knowledge connected 
+with the use outside Hong Kong of such intellectual 
+properties. 
+ 
+3. 
+Section 15F of the Ordinance was added in 2018.  The effect is that a 
+person who has contributed in Hong Kong to the development, enhancement, 
+maintenance, protection or exploitation (DEMPE) of any intellectual property is 
+to be taxed on such part of the sum accruing in respect of its exhibition or use or 
+related rights as is attributable to the value creation contributions in Hong Kong 
+even if the sum accrues to the person’s associate who is a non-Hong Kong 
+resident person. 
+ 
+ 
+SOURCE OF ROYALTY INCOME 
+ 
+The broad guiding principle 
+ 
+4. 
+In determining the source of profits, the broad guiding principle is that 
+one looks to see what the person has done to earn the profits in question and 
+where the person has done it.  In other words, the proper approach is to identify 
+the operations which produced the relevant profits and ascertain where those 
+operations took place.  The source of profits must be attributed to the operations 
+of the person which produce them and not to the operations of other members of 
+the person’s group.  
+ 
+5. 
+The operations do not comprise the whole of the person’s activities. 
+The focus is on establishing the geographical location of the person’s profit-
+producing transactions as distinct from activities antecedent or incidental to 
+
+ 
+ 
+ 
+3 
+ 
+those transactions.  The Department’s views on the locality of profits are set out 
+in detail in the Departmental Interpretation and Practice Notes (DIPN) No. 21 
+Locality of Profits.  
+ 
+6. 
+Whether royalty income derived from licensing activities is 
+chargeable to tax in Hong Kong depends on the facts of each case.  No single 
+legal test is decisive.   
+ 
+Application of the broad guiding principle  
+ 
+Totality of facts 
+ 
+7. 
+Whether royalty income derived from the licensing of intellectual 
+properties by persons carrying on business in Hong Kong is sourced in Hong 
+Kong and thus subject to tax under section 14 is a question of fact to be 
+determined by the totality of the facts and circumstances in each case.  
+Paragraphs 8 to 10 below merely illustrate how the Commissioner would apply 
+the broad guiding principle in certain situations.    
+ 
+Licensing of intellectual properties created or developed by licensor 
+ 
+8. 
+If an intellectual property is created or developed by a person carrying on 
+business in Hong Kong and is licensed by the person to another person, the royalty 
+income so derived will generally be regarded as Hong Kong sourced income and 
+hence will be subject to profits tax.  The place where the licensee uses the intellectual 
+property is not a relevant factor to determine the source of the royalty income.  
+Accordingly, even if the intellectual property is used outside Hong Kong, the income 
+derived from the licensing of such property will still be considered as having a source 
+in Hong Kong.  This is because the royalty income is primarily generated by the 
+person using the person’s wits and labour to create or develop the intellectual 
+property in Hong Kong.   
+ 
+Licensing of intellectual properties purchased by licensor 
+ 
+9. 
+If a person has purchased the proprietary interest of an intellectual 
+property outside Hong Kong and licenses it to another person outside Hong Kong 
+for use outside Hong Kong, the royalty income so derived will generally be 
+
+ 
+ 
+ 
+4 
+ 
+regarded as non-Hong Kong sourced income and hence will not be subject to 
+profits tax.  Accordingly, if the intellectual property is a patent right, right to 
+know-how or specified intellectual property right (SIPR), no deduction will be 
+allowed for the capital expenditure incurred on acquiring the patent right, right 
+to know-how or SIPR in accordance with section 16EC(4)(b).  Section 16EA(11) 
+defines SIPR to mean a copyright, performer’s economic right, protected layout-
+design (topography) right, protected plant variety right, registered design or 
+registered trade mark. 
+ 
+Sublicensing of intellectual properties  
+ 
+10. 
+If a person only obtains a licence to use an intellectual property from 
+its owner (i.e. the person has not obtained the proprietary interest of the 
+intellectual property) and then sub-licenses the intellectual property to another 
+person for use outside Hong Kong, the Commissioner will, in ascertaining 
+whether the royalty income so derived is sourced in Hong Kong, take the place 
+of acquiring and granting the licence as the location of income.  As such, if the 
+person acquires in Hong Kong the licence for use of the intellectual property and 
+grants a sub-licence in Hong Kong, the royalty income derived from sub-
+licensing the intellectual property will be regarded as having been derived from 
+Hong Kong.  As the person has not acquired the proprietary interest of the 
+intellectual property, including a patent right, right to know-how or SIPR, the 
+person is not eligible to obtain the deduction for the capital expenditure incurred 
+on the intellectual property.  The licence fee incurred by the person will be 
+deductible if it satisfies the conditions provided under the general deduction 
+provisions of section 16(1).   
+ 
+Application of the deeming provisions 
+ 
+Exhibition or use of cinematograph films, etc. in Hong Kong 
+ 
+11. 
+Section 15(1)(a) brings into chargeable income the sums, not 
+otherwise taxable, received by or accrued to a person from the exhibition or use 
+in Hong Kong of cinematograph or television film or tape, any sound recording, 
+or any advertising material connected with such items.  In Turner Entertainment 
+Networks Asia Inc v CIR [2015] 3 HKLRD 295, the Court of Appeal interpreted 
+the phrase “exhibition or use” as meaning “exhibition or other use”.  Thus, 
+
+ 
+ 
+ 
+5 
+ 
+exhibition is simply a form of use of intellectual property for the purpose of 
+interpreting section 15(1)(a).   
+ 
+Use or right to the use of patents, trade mark, etc. in Hong Kong 
+ 
+12. 
+Section 15(1)(b) deems as trading receipts sums received by or 
+accrued to a person for the use, or the right to the use, in Hong Kong of any 
+patent, design, trade mark, copyright material, layout-design (topography) of an 
+integrated circuit, performer’s right, plant variety right, secret process or 
+formula, or other property or right of a similar nature, and sums for imparting or 
+undertaking to impart knowledge directly or indirectly connected with the use in 
+Hong Kong of such property or right.   
+ 
+13. 
+In the case of layout-design (topography) of an integrated circuit, 
+performer’s right and plant variety right, section 15(1)(b) does not apply to sums 
+received or accrued before 29 June 2018. 
+ 
+Use or right to the use of patents, trade mark, etc. outside Hong Kong 
+ 
+14. 
+For the purposes of section 15(1)(b), an intellectual property will not 
+be regarded as “used in Hong Kong” if a person carrying on a business in Hong 
+Kong pays royalty fees for the use, or right to the use, of the intellectual property 
+outside Hong Kong, even though profits derived by the person from goods 
+manufactured or sold outside Hong Kong are chargeable to profits tax.  The 
+Court of Final Appeal in CIR v Emerson Radio Corporation (1999) 2 HKCFAR 
+501 held that: 
+ 
+(a) 
+The rights conferred by registration of trade marks are 
+territorial.  Section 15(1)(b) had no application on royalty 
+receipts paid for the use of trade marks registered outside Hong 
+Kong in respect of sales outside Hong Kong. 
+ 
+(b) 
+The application of a trade mark to goods by a manufacturer 
+constitutes “use” of that mark.  Only royalty income relating to 
+goods manufactured in Hong Kong could be chargeable to tax 
+under section 15(1)(b) and royalty income paid in respect of 
+goods manufactured outside Hong Kong was not chargeable.    
+
+ 
+ 
+ 
+6 
+ 
+15. 
+In view of the court decision, section 15(1)(ba) was added in 2004 to 
+bring into charge sums, not otherwise taxable, received by or accrued to a person 
+for the use, or the right to the use, outside Hong Kong of any intellectual property 
+enumerated in section 15(1)(b), which are deductible in ascertaining the 
+assessable profits of a person for the purposes of profits tax.  Section 15(1)(ba) 
+was enacted to maintain a tax symmetry to avoid possible loss of revenue.  The 
+effect is that section 15(1)(b) applies to cases where the use, or the right to the 
+use, of an intellectual property is in Hong Kong whereas section 15(1)(ba) 
+applies when the use, or the right to the use, of an intellectual property is outside 
+Hong Kong.    
+ 
+16. 
+Section 15(1)(ba) does not apply to sums received or accrued before 
+29 June 2018 for the use, or the right to the use, of any layout-design 
+(topography) of an integrated circuit, performer’s right and plant variety right.   
+ 
+Example 1 
+ 
+Company-F1 was the owner of a trade mark registered in Hong Kong, 
+Jurisdiction-F1, Jurisdiction-F2 and several other jurisdictions.  
+During the year of assessment 2018/19, Company-HK, which was 
+carrying on a manufacturing business in Hong Kong, paid royalty fee 
+of $500,000 to Company-F1 for the use of the trade mark on goods 
+manufactured in Jurisdiction-F2 under a processing arrangement.  
+The manufactured goods were directly shipped to overseas markets 
+without passing through Hong Kong.  Company-HK was allowed full 
+deduction of the royalty fee paid. 
+ 
+Section 15(1)(b) had no application on the royalty fee received by 
+Company-F1 because the royalty fee was not paid for the use of the 
+trade mark in Hong Kong.  However, section 15(1)(ba) would apply 
+to deem the whole of the royalty fee, which was deductible in 
+ascertaining Company-HK’s assessable profits, as trading receipts 
+arising in or derived from Hong Kong by Company-F1 
+notwithstanding that the trade mark was used outside Hong Kong. 
+ 
+ 
+ 
+
+ 
+ 
+ 
+7 
+ 
+Example 2 
+ 
+Facts are the same as Example 1 except that the goods manufactured 
+in Jurisdiction-F2 were shipped back to Hong Kong for domestic sales 
+and for re-export. 
+ 
+Since the trade mark was attached to the goods, the import of the goods 
+into Hong Kong, the sale of the goods in Hong Kong and the re-export 
+of the goods from Hong Kong would constitute the use of the trade 
+mark in Hong Kong within the meaning of section 15(1)(b).  The 
+royalty fee for the use of the trade mark in Hong Kong received by 
+Company-F1 would be chargeable under section 15(1)(b).   
+ 
+If the royalty fee paid by Company-HK was partly attributable to the 
+use of the trade mark in Jurisidction-F2, that part of the royalty fee 
+received by Company-F1 would be chargeable under section 15(1)(ba). 
+ 
+Use or right to the use of intellectual properties generated from research and 
+development activities in Hong Kong 
+ 
+17. 
+Section 15(1)(bc) was added in 2018 to deem as trading receipts sums, 
+not otherwise taxable, received by or accrued to a person for the use, or the right 
+to the use, outside Hong Kong of any intellectual property or know-how 
+generated from any R&D activity in respect of which a deduction is allowable 
+under section 16B in ascertaining profits of the person, or for imparting or 
+undertaking to impart knowledge directly or indirectly connected with the use 
+outside Hong Kong of any such property or know-how. 
+ 
+18. 
+For the purposes of section 15(1)(bc), the term “intellectual property” 
+includes copyright material, design, layout-design (topography) of an integrated 
+circuit, patent, plant variety right, secret process or formula, and any other 
+property or right of a similar nature.  The term “know-how” is defined to mean 
+any industrial information or techniques likely to assist in the manufacture or 
+processing of goods or materials.  Section 15(1)(bc) does not apply to sums received 
+or accrued before 2 November 2018.  Detailed reference can be found in paragraphs 
+113 to 115 of DIPN No. 55 Deduction for Research and Development Expenditure. 
+
+ 
+ 
+ 
+8 
+ 
+Use or right to the use of intellectual properties with value creation contributions 
+in Hong Kong 
+ 
+19. 
+Section 15F was added in 2018 to give effect to the guidance in 
+Chapter VI of the OECD Transfer Pricing Guidelines for Multinational 
+Enterprises and Tax Administrations in relation to intangibles.  The guidance 
+aims to address base erosion and profit shifting (BEPS) issues resulting from the 
+transfer of intangibles among members of a multinational enterprise (MNE) 
+group.  In gist, profits associated with the transfer and use of intangibles should 
+be appropriately allocated among MNE group members on the basis of their 
+contributions to value creation. 
+ 
+20. 
+Section 15F aligns taxation of income from intellectual properties with 
+value creation contributions in Hong Kong.  It provides that: 
+ 
+Where— 
+ 
+(a) 
+a person has contributed to the value creation of an intellectual 
+property in Hong Kong through  
+ 
+(i) 
+performing the functions of and assuming risks relating to 
+the DEMPE of the intellectual property; or 
+ 
+(ii) providing assets in and assuming risks relating to the 
+DEMPE of the intellectual property; and 
+ 
+(b) 
+a sum is derived by the person’s non-Hong Kong resident 
+associate for the exhibition or use of, or a right to exhibit or use, 
+the intellectual property; or for the imparting or undertaking to 
+impart knowledge connected with the use of such intellectual 
+property, 
+ 
+the part of the sum that is attributable to the value creation 
+contributions in Hong Kong will be regarded as a Hong Kong sourced 
+trading receipt and the person will be taxed accordingly in respect of 
+the attributable sum. 
+
+ 
+ 
+ 
+9 
+ 
+21. 
+The rationale is that a person who performs any part of the DEMPE 
+functions in Hong Kong in relation to an intellectual property can be regarded as 
+the economic owner (in part or in whole) of the intellectual property so created, 
+rather than purely looking at the matter from the legal ownership perspective.  
+Section 15F applies in relation to a year of assessment beginning on or after 
+1 April 2019.  Detailed reference can be found in paragraphs 17 to 22 of 
+Appendix 5 to DIPN No. 59 Transfer Pricing between Associated Persons. 
+ 
+Meaning of “use” and “right to the use”  
+ 
+22. 
+Section 15(1)(a) imposes charge of profits tax on sums received from 
+the exhibition or use in Hong Kong of copyright materials.  Sections 15(1)(b), 
+(ba) and (bc) and 15F impose charge on sums received for the “use” or the “right 
+to the use” of intellectual properties.   
+ 
+23. 
+The meanings of the words “use” and “right to the use” have been 
+deliberated in Turner.  Barma JA, who delivered the main judgment in the Court 
+of Appeal, expressed the view that section 15(1)(a) requires an actual exhibition 
+or use of copyright materials whereas there is no such requirement in section 
+15(1)(b) or (ba).  It was held that the word “use” in section 15(1)(b) and (ba) 
+should generally be given an ordinary and non-technical meaning and should 
+include “exhibition”.  Even if there was no actual exhibition of the “media works” 
+or use of the intellectual property as required under section 15(1)(a), the fees paid 
+for the “right” to exhibit or use them are assessable under section 15(1)(b) or 
+(ba).  The Commissioner considers that the same interpretation should equally 
+apply to sections 15(1)(bc) and 15F. 
+ 
+Assignment of performer’s right 
+ 
+24. 
+Sums, not otherwise taxable, received by or accrued to a performer or 
+an organizer for an assignment of, or an agreement to assign, a performer’s right 
+in relation to a performance given by the performer in Hong Kong are deemed 
+under section 15(1)(bb) to be trading receipts arising in or derived from Hong 
+Kong from a trade, profession or business carried on in Hong Kong.  
+ 
+25. 
+For the purposes of section 15(1)(bb), “performance”, “performer” 
+and “organizer” have the following meanings:   
+
+ 
+ 
+ 
+10 
+ 
+(a) 
+“performance” has the meaning given by section 200(2) of the 
+Copyright Ordinance (Cap. 528) – a dramatic performance, a 
+musical performance, a reading or recitation of a literary work, 
+a performance of an artistic work, an expression of folklore or 
+a performance of a variety act or any similar presentation which 
+is, or so far as it is, an unfixed performance given by one or 
+more individuals; 
+ 
+(b) 
+“performer” has the meaning given by section 200(2) of the 
+Copyright Ordinance – an actor, singer, musician, dancer or any 
+other person who acts, sings, delivers, declaims, plays in, 
+interprets, or otherwise performs a performance; 
+ 
+(c) 
+“organizer” means a person who obtains a performer’s right in 
+a performance in Hong Kong through arranging the 
+participation of the performer in the performance or managing 
+the performance. 
+ 
+26. 
+Section 15(1)(bb) seeks to ensure that receipts which arise from or are 
+in connection with a performance given in Hong Kong by a performer are 
+chargeable to tax here.  Sums received for an assignment of, or an agreement to 
+assign, a performer’s right are trading receipts of a performer.  Such sums are no 
+different from the performance fees received by the performer since they are 
+derived directly or indirectly from giving the performances.  Where the 
+performances are given in Hong Kong, section 15(1)(bb) makes it clear that such 
+sums are trading receipts chargeable to profits tax in Hong Kong.   
+ 
+ 
+COMPUTATION OF ASSESSABLE PROFITS UNDER SECTION 21A 
+ 
+Application of the 30% rate 
+ 
+27. 
+Under section 21A, the assessable profits in respect of a sum specified 
+in section 15(1)(a), (b) or (ba) are deemed to be 30% of the sum received or 
+accrued except where the intellectual property was previously “owned” by a 
+person carrying on a trade, profession or business in Hong Kong and the sum is 
+
+ 
+ 
+ 
+11 
+ 
+paid or accrues to an “associate”.  In the latter case, 100% of the sum paid or 
+accrued is taken as the assessable profits.     
+ 
+Application of the 100% rate  
+ 
+28. 
+The purpose of deeming 100% of the sum as assessable profits is to 
+counter attempts made to abuse section 21A by entering into arrangements with 
+overseas associates.  Typically, a section 21A “scheme” involved a Hong Kong 
+company making use of an intellectual property it had developed “in-house”.  
+Whilst the Hong Kong company retained ownership of the intellectual property, 
+it did not incur any deductible expense in respect of its use.  The scheme was for 
+the Hong Kong company to enter into a “sale and license back” arrangement 
+with a subsidiary operating outside Hong Kong.  The Hong Kong company 
+transferred ownership of the intellectual property of a kind referred to in section 
+15(1)(a), (b) or (ba) to the subsidiary operating outside Hong Kong which then 
+granted back to the Hong Kong company, for a substantial royalty, the right to 
+continue to use the intellectual property in Hong Kong.  The tax purpose was for 
+the Hong Kong company to obtain a deduction under section 16(1) of the 
+Ordinance, for the full amount of the royalty, with the subsidiary operating 
+outside Hong Kong being taxed under section 21A on only 30% of the royalty it 
+received.  In other words, funds remained within the group but a 70% deduction 
+was created in respect of the royalty involved. 
+ 
+29. 
+However, straightforward application of the 100% rate would be 
+restrictive, in the sense that if the 100% rate were to apply to all payments to 
+associates, it could have an adverse bearing on the importation of technologies 
+into Hong Kong by MNEs.  In the absence of any indication that section 21A 
+had been exploited by MNEs in respect of technologies developed overseas, a 
+provision was added to exclude the relevant payments from the application of 
+the 100% rate under a certain circumstance.  Proviso to section 21A(1)(a) 
+provides that the 100% rate would not apply in respect of any sum derived from 
+an associate “where the Commissioner is satisfied that no person carrying on a 
+trade, profession or business in Hong Kong has at any time wholly or partly 
+owned the property in respect of which the sum is paid”.  In such cases, and also 
+where a relevant sum is derived from a person who is not an associate, the 100% 
+rate would not apply. 
+ 
+
+ 
+ 
+ 
+12 
+ 
+Meaning of “owned” 
+ 
+30. 
+For the purposes of section 21A, the Commissioner accepts that 
+“owned” refers to direct ownership.  For example, although a shareholder is a 
+proportionate owner of a company, the shareholder does not own the assets of 
+the company – they are owned by the company itself as a separate and 
+independent legal entity. 
+ 
+31. 
+If a sum is to be paid to an associate and either the person responsible 
+for making the payment or the recipient considers that the ownership history of 
+the relevant intellectual property is such that the Commissioner would be 
+satisfied in terms of the proviso referred to above, confirmation may be obtained 
+by way of an advance ruling from the Commissioner as to whether the lower rate 
+of 30% is applicable.  It should, however, be noted that rulings will not be 
+provided in respect of hypothetical situations. 
+  
+Meaning of “associate” 
+ 
+32. 
+Generally, in considering whether the assessable profits in respect of 
+a relevant sum should be taken to be 30% or 100%, the first question to be 
+determined is whether the sum was derived from an associate. The term 
+“associate” is defined widely in section 21A(3) in order to prevent circumvention 
+of the provisions by the interposition of third parties.  For the purpose of 
+ascertaining whether a sum was derived from an associate, regard must also be 
+had to section 21A(2), which covers the situation where a sum was derived from 
+or by a trustee of a trust estate or a corporation controlled by such a trustee.  In 
+such cases, the sum is deemed to have been derived from or by, as the case may 
+be, each of the trustee, the corporation and the beneficiary under the trust. 
+ 
+33. 
+The provisions concerning “associate”, and the related definitions in 
+section 21A(3) of “associated corporation”, “beneficiary under the trust”, 
+“control”, “principal officer” and “relative”, are along similar lines to those 
+contained in sections 16EC and 39E of the Ordinance. 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+13 
+ 
+Recipient carrying on business in Hong Kong 
+ 
+34. 
+If the sums for the use of an intellectual property are received by or 
+accrue to a person carrying on a business in Hong Kong, the assessable profits 
+on the recipient’s income are subject to profits tax under section 14, and section 
+21A does not apply: see Lam Soon Trademark Limited v CIR (2006) 9 HKCFAR 
+391.  The primary function of section 15(1) is “to bring in something which 
+would otherwise be excluded”.  Section 15 does not exclude any person from 
+chargeability to profits tax under section 14.  If a person is chargeable to profits 
+tax under section 14, there is simply no need to resort to section 15(1).  Where 
+an assessment was originally made on the basis of sections 15 and 21A, an 
+additional assessment under section 60 can be made if it was subsequently found 
+that the proper charging section should be section 14. 
+ 
+ 
+DTA TERRITORY RESIDENT PERSON 
+ 
+Royalties Article of DTA 
+ 
+35. 
+Royalties arising in Hong Kong and beneficially owned by a DTA 
+territory resident person will be taxed at the rate specified in the DTA.  The rate 
+specified in the DTA will not apply if the person is not the beneficial owner of 
+the royalty income.  A person will be regarded as the beneficial owner of the 
+income if the person enjoys the full privilege to directly benefit from that income.   
+In Indofood International Finance Ltd v JP Morgan Chase Bank CA [2006] STC 
+1195, it was confirmed that, in line with the OECD Commentary, beneficial 
+ownership should be understood in its context and in light of the object and 
+purposes of the DTA, including avoiding double taxation and the prevention of 
+fiscal evasion and avoidance. 
+ 
+36. 
+If the rate specified in the DTA is higher than that provided in the 
+Ordinance, the DTA territory resident person is liable to tax on the deemed 
+trading receipts under section 15(1) at the lower rate.  However, the business 
+profits article, and not the royalties article, will apply if the DTA territory 
+resident person carries on business in Hong Kong in which the royalties arise 
+through a permanent establishment situated in Hong Kong and the right or 
+property in respect of which the royalties are paid is effectively connected with 
+
+ 
+ 
+ 
+14 
+ 
+such permanent establishment.  In such case, the royalty income will form part 
+of the business income of the permanent establishment and be chargeable to 
+profits tax under section 14. 
+ 
+Example 3 
+ 
+In the year of assessment 2018/19, Company-HK paid royalties of $1 
+million to Company-F, a company incorporated in Jurisdiction-F.  
+The royalty payment was accepted as a deductible expenditure.  The 
+DTA entered into between Hong Kong and Jurisdiction-F provided 
+that the tax charged on royalties should not exceed 3%.  Company-F 
+did not carry on business in Hong Kong and a connected entity of 
+Company-F was nominated to be chargeable at the two-tiered rates.   
+ 
+If the Commissioner was satisfied that the 100% tax rate under section 
+21A(1)(a) should not be applied, the tax payable would be the lower 
+of:  
+  
+(a) 
+Tax payable under section 14(3) as modified by section 
+14AAC(3)(b) of the Ordinance: 
+  
+$1,000,000 × 30% × 16.5% ﹣$20,000 (tax reduction) 
+  
+ = $29,500 
+ 
+(b) 
+Tax payable per DTA: 
+ 
+$1,000,000 × 3% = $30,000  
+ 
+The lesser of (a) and (b) would be $29,500. 
+ 
+Example 4 
+ 
+Facts are the same as Example 3 except that the royalty payment made 
+by Company-HK was $2 million.  
+  
+If the Commissioner was satisfied that the 100% tax rate under section 
+21A(1)(a) should not be applied, the tax payable would be the lower 
+of: 
+ 
+
+ 
+ 
+ 
+15 
+ 
+(a) 
+Tax payable under section 14(3) as modified by section 
+14AAC(3)(b) of the Ordinance:  
+  
+$2,000,000 × 30% × 16.5% ﹣$20,000 (tax reduction) 
+  
+= $79,000 
+ 
+(b) 
+Tax payable per DTA: 
+  
+$2,000,000 × 3% = $60,000 
+ 
+The lesser of (a) and (b) would be $60,000. 
+ 
+Rate in DTA not applied 
+ 
+37. 
+Where general anti-avoidance provisions are invoked or the royalty 
+income derived from an associate is assessed under the specific anti-avoidance 
+provisions in section 21A(1)(a), the DTA territory resident person cannot take 
+the benefit of paying tax at the lower rate specified in the DTA.   
+ 
+38. 
+The principal purpose of a DTA is clear: elimination of double 
+taxation with respect to taxes on income and on capital without creating 
+opportunities for non-taxation or reduced taxation through tax evasion or 
+avoidance.  Hence, a proper construction of a DTA would allow the 
+Commissioner to disregard abusive transactions entered into with a view to 
+obtaining unintended benefits under the provisions of the DTA.   
+ 
+ 
+Example 5 
+ 
+Facts are the same as Example 3 except that the Commissioner 
+considered that section 21A(1)(a) should be invoked to take 100% of 
+the royalty income as assessable profits.  
+ 
+ 
+ 
+Tax payable under section 14(3) as modified by section 14AAC(3)(b) 
+of the Ordinance:  
+ 
+$1,000,000 × 16.5% ﹣$20,000 (tax reduction) 
+ 
+= $145,000 
+ 
+Since section 21A(1)(a) was invoked by the Commissioner, the rate specified in 
+the DTA would not apply.  In this case, the tax payable would be $145,000. 
+
+ 
+ 
+ 
+16 
+ 
+ADVANCE RULINGS 
+ 
+Application for advance ruling 
+ 
+39. 
+Section 88A of the Ordinance provides that the Commissioner may, 
+on an application made by a person, make a ruling on any of the matters specified 
+in Schedule 10.  A person may apply to the Commissioner for an advance ruling 
+concerning the application of section 21A.  When seeking for a ruling, the 
+applicant must disclose all relevant information known to him and provide the 
+information specified by the Commissioner.  DIPN No. 31 Advance Rulings sets 
+out in detail the procedures of applying for a tax ruling and the documents 
+required.   
+ 
+40.  
+Given the nature of the intellectual property involved, cases with a 
+complicated history of ownership should be the exception rather than the rule.  
+The current owner of the intellectual property should know the details of the 
+person, if any, from whom the intellectual property had been purchased.  In many 
+cases, the relevant intellectual property would have been developed by the 
+current owner and, as such, there would not be a previous owner. 
+ 
+41. 
+Generally, where the information referred to above is provided, it 
+should be sufficient to allow a ruling to be made by the Commissioner or an 
+authorised officer.  In some cases, however, it may be necessary for the 
+Commissioner to seek further information from the applicant or a third party 
+before a ruling can be given. 
+ 
+42. 
+A case by case approach will be adopted by the Commissioner in 
+relation to the issue of rulings.  Accordingly, a ruling given in one case should 
+not be regarded as requiring the Commissioner to issue a like ruling in a 
+subsequent similar case. 
+ 

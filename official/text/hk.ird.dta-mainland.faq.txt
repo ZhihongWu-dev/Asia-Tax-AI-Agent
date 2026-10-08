@@ -1,0 +1,140 @@
+Show All
+Foreword – The Comprehensive Arrangement has become effective
+The “Arrangement between the Mainland of China and the Hong Kong Special Administrative Region for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income” (“the Comprehensive Arrangement”) was signed on 21 August 2006 and entered into force on 8 December 2006. The Comprehensive Arrangement applies in the Hong Kong Special Administrative Region (Hong Kong) to income derived in any year of assessment commencing on or after 1 April 2007, and in Chinese Mainland (Mainland) to income derived in any taxable year commencing on or after 1 January 2007.
+General
+1.
+Q:
+According to the Comprehensive Arrangement, under what circumstances will a Hong Kong resident working in the Mainland be exempted from paying the Mainland tax or be allowed a tax credit against the tax paid?
+A:
+Under the Comprehensive Arrangement, the remuneration that a Hong Kong resident working in the Mainland received may be exempted from taxation in the Mainland if he satisfies all of the following 3 conditions. These 3 conditions are:
+He is present in the Mainland for a period or periods not exceeding in the aggregate 183 days in any 12-month period commencing or ending in the taxable year concerned;
+The remuneration is paid by, or on behalf of, an employer who is not a Mainland resident;
+The remuneration is not borne by a permanent establishment which the employer has in the Mainland.
+If any one of the above conditions is not satisfied, the remuneration will be subject to taxation in the Mainland. If the remuneration is also subject to taxation in Hong Kong, a tax credit will be allowed for the tax paid in the Mainland under the Comprehensive Arrangement.
+But please note that the directors’ fees and other similar sums derived by a Hong Kong resident in his capacity as a member of the board of directors of a Mainland company are subject to taxation in the Mainland. Such directors’ fees, etc. are not subject to taxation in Hong Kong.
+back to top
+2.
+Q:
+How is the number of days of “presence” in the Mainland or Hong Kong counted? Is the counting method for days of “residence” adopted in the Mainland with effect from 1 January 2019 applicable?
+A:
+The days of “presence” under the Comprehensive Arrangement is counted using the “days of physical presence” method. According to international practice, the day when one is in one side, and the day of arrival or departure, irrespective of the time and the purpose of the stay, will be counted as one day.
+The above counting method for days of “presence” is different from the following counting method for days of “residence” adopted in the Mainland with effect from 1 January 2019: a stay in the Mainland for 24 hours within a day is counted as a day of residence in the Mainland; a stay in the Mainland for less than 24 hours within a day is not counted as a day of residence in the Mainland. Such counting method for days of “residence” only applies for the purposes of the laws and regulations on Individual Income Tax in the Mainland.
+back to top
+3.
+Q:
+Given the different counting methods for days of “presence” under the Comprehensive Arrangement and days of “residence” under Individual Income Tax in the Mainland, will a Hong Kong resident working in the Mainland be bound by the provisions of the Comprehensive Arrangement such that he will not be entitled to the preferential policy on Individual Income Tax in the Mainland?
+A:
+According to the laws and regulations on Individual Income Tax in the Mainland, a Hong Kong resident may enjoy the tax benefits under the Comprehensive Arrangement in accordance with the Comprehensive Arrangement and the tax laws and regulations in the Mainland, or may choose not to enjoy the tax benefits under the Comprehensive Arrangement. Therefore, for a Hong Kong resident working in the Mainland, if the Individual Income Tax liability in the Mainland ascertained on the basis of the days of “residence” is different from that ascertained by applying the Comprehensive Arrangement on the basis of the days of “presence”, that Hong Kong resident can still choose the one which is more favourable to him in terms of the amount of tax payable in the Mainland.
+back to top
+4.
+Q:
+What is meant by a Hong Kong resident individual under the Comprehensive Arrangement?
+A:
+Article 4(1)(2) of the Comprehensive Arrangement states that a Hong Kong resident individual means an individual who ordinarily resides in Hong Kong, or an individual who stays in Hong Kong for more than 180 days during a year of assessment or for more than 300 days in two consecutive years of assessment (one of which is the relevant year of assessment).
+back to top
+5.
+Q:
+Is the holder of a Hong Kong Permanent Identity Card necessarily a Hong Kong resident?
+A:
+Not necessarily. One has to consider whether the individual “ordinarily resides in Hong Kong”.
+back to top
+6.
+Q:
+What is meant by “ordinarily resides in Hong Kong”?
+A:
+Generally, an individual “ordinarily resides” in Hong Kong if he has a permanent home in Hong Kong where he or his family lives. Other factors taken into consideration include: the number of days he stays in Hong Kong, whether he has a permanent residence in Hong Kong, whether he has property overseas for residence and whether he resides mainly in Hong Kong or overseas.
+back to top
+7.
+Q:
+On the definition of Hong Kong resident individual, how is the number of days in the condition “stays for more than 180/300 days” calculated, i.e. continuous or in the aggregate?
+A:
+Calculations based on the continuous or the aggregate are valid. A person who stays in Hong Kong for a period or periods amounting to more than 180 days during the relevant year of assessment, or for a period or periods amounting to more than 300 days in two consecutive years of assessment (one of which is the year of claim), will be regarded as a Hong Kong resident.
+back to top
+8.
+Q:
+If an individual is at the same time both a resident of Hong Kong and of the Mainland under the definition set out in the Comprehensive Arrangement, how will the issue of dual residence status be resolved?
+A:
+In order to resolve the issue of an individual being a resident of both sides at the same time, the Comprehensive Arrangement has adopted the criteria set out in the model text of Organisation for Economic Co-operation and Development (OECD). The person will be ascribed as a resident of one side in accordance with, in order of priority, the following criteria (the tie-breaker rules): which side he has a permanent home; which side he has a closer personal and economic relationship; which side he has an habitual abode; and by mutual agreement of the competent authorities of the two sides. Detailed interpretation on the tie-breaker rules can be referenced to the Circular of the Interpretation of the Provisions of the Agreement between the Government of the People’s Republic of China and the Government of the Republic of Singapore for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and the Protocol Thereof (Guoshuifa 2010 No. 75). The interpretation on the tie-breaker rules under the Circular applies to the Comprehensive Arrangement. Please click
+here
+to access Guoshuifa 2010 No. 75 (available in Chinese only) at the website of the State Taxation Administration.
+back to top
+9.
+Q:
+Which 12 months does the phrase “any 12-month period commencing or ending in the taxable period concerned” refer to?
+A:
+The phrase “any 12-month period commencing or ending in the taxable period concerned” connotes two concepts, namely, that the number of days of presence may straddle over 2 years and that a floating calculation may be adopted. In fact, the 12 months in question may commence or end on any day in the taxable year concerned.
+Take Hong Kong as an example: the year of assessment 2021/22 refers to the period from 1 April 2021 to 31 March 2022. Any 12-month period commencing or ending in the year of assessment 2021/22 means any period lasting for 12 months provided that the commencement or ending day of such period falls within the period between 1 April 2021 and 31 March 2022. In other words, such period may start as early as 2 April 2020 (the ending day will be 1 April 2021) or it may start on 31 March 2022 at the latest (the ending day will be 30 March 2023).
+back to top
+10.
+Q:
+Please illustrate with an example the phrase “present in the other side for a period or periods not exceeding in the aggregate 183 days in any 12-month period commencing or ending in the taxable period concerned”.
+A:
+Take the case of the year of assessment 2021/22 in Hong Kong as an example: the period that counts is from 2 April 2020 to 30 March 2023. Only if the Mainland resident concerned is present in Hong Kong for not more than 183 days in any 12 months within this period of time will he satisfy the condition of “present not exceeding 183 days” for tax exemption.
+Take the case of the taxable year of 2021 in the Mainland as an example: the period that counts is from 2 January 2020 to 30 December 2022. Only if the Hong Kong resident concerned is present in the Mainland for not more than 183 days in any 12 months within this period of time will he satisfy the condition of “present not exceeding 183 days” for tax exemption.
+back to top
+11.
+Q:
+In calculating tax liabilities, how will the number of days a Hong Kong resident was present in the Mainland be counted?
+A:
+For the purpose of tax computation, the number of days of presence for each period will be counted under the rule of the “days of presence minus one”. For example, if the date of arrival is 2 January and the date of departure is 5 January, the number of days to be counted should be three instead of four, which is the number of days of presence. Then the number for each period will be added up to arrive at the total number of days of presence for the relevant year of assessment. Since a lot of people work across the border, the State Taxation Administration and the Hong Kong Inland Revenue Department have reached a consensus that if a taxpayer provides services in both sides on the same day, it will be counted as present in the Mainland for half a day. If he travels between the Mainland and Hong Kong on a particular day and only provides services in the Mainland, it will be counted as present in the Mainland for one day.
+back to top
+12.
+Q:
+If a Mainland resident derives income from employment in Hong Kong, but he does not satisfy the exemption conditions under Article 14 of the Comprehensive Arrangement (e.g. his remuneration is paid by a Hong Kong employer) and he visits Hong Kong for not more than 60 days during the year of assessment, would he be exempted from Hong Kong Salaries Tax?
+A:
+Hong Kong adopts the principle of “preferential treatment”. That is where the Comprehensive Arrangement and the Inland Revenue Ordinance contain different provisions relating to the same matter, preference will be given to those provisions which are most beneficial to the taxpayers. In the above situation, although the Mainland resident does not satisfy the exemption conditions under the Comprehensive Arrangement, he will still be exempted from tax under the Inland Revenue Ordinance for visiting Hong Kong for not more than 60 days during the year of assessment.
+back to top
+13.
+Q:
+Are director fees treated in the same way as income from employment?
+A:
+Directors’ fees and income from employment are not treated the same. Article 15 of the Comprehensive Arrangement provides that directors’ fees and other similar payments derived by a resident of One Side in his capacity as a member of the board of directors of a company which is a resident of the Other Side may be taxed in that Other Side. In other words, directors’ fees received by a resident of either Side in his capacity as a director of a company may be taxed in the Side of which the company is a resident, irrespective of the period of his stay in either Side or the place where the services are actually rendered. Therefore, directors’ fees derived by a Hong Kong resident in his capacity as a director of a Mainland company will all be subject to the Individual Income Tax in the Mainland. Likewise, directors’ fees derived by a Mainland resident in his capacity as a director of a Hong Kong company will all be subject to Salaries Tax in Hong Kong.
+back to top
+14.
+Q:
+How does a Hong Kong resident claim tax benefits under the Comprehensive Arrangement in the Mainland?
+A:
+Tax benefits under the Comprehensive Arrangement should be claimed directly in the Mainland. With effect from 1 November 2015, in the application for a Certificate of Resident Status for the purpose of claiming tax benefits under the Comprehensive Arrangement, an applicant is not required to attach a referral letter entitled 《關於請香港特別行政區税務主管當局出具居民証明的函》.
+back to top
+15.
+Q:
+For a partnership, how can it be regarded as “constituted under the laws of Hong Kong”?
+A:
+If the partnership agreement is signed in Hong Kong or the verbal agreement is concluded in Hong Kong, the partnership can be regarded as “constituted under the laws of Hong Kong”.
+back to top
+16.
+Q:
+If a taxpayer still has any questions on the Comprehensive Arrangement, any means for enquires?
+A:
+The taxpayer can always refer to the full text of the Comprehensive Arrangement and the Departmental Interpretation and Practice Note on the Comprehensive Arrangement already uploaded to our homepage. If he still has any questions, he may call our hotline 187 8088.
+back to top
+Determination of Residence Status under the Comprehensive Arrangement in Certain Circumstances
+17.
+Q:
+Mr A holds a domiciliary registration in the Mainland. He successfully applied to work in Hong Kong through a talent admission scheme and is employed by a Hong Kong company. He owns or rents property in Hong Kong. His spouse and children have come to Hong Kong to live with him, and his children are studying in Hong Kong. Mr A spends most of his time living in Hong Kong and occasionally returns to the Mainland to visit his relatives or travel. Mr A stays in Hong Kong for more than 180 days during a year of assessment. Mr A is at the same time both a resident of Hong Kong and of the Mainland under the definition set out in the Comprehensive Arrangement. How should Mr A’s residence status be determined?
+A:
+Mr A’s residence status shall be determined by the tie-breaker rules provided under the Comprehensive Arrangement. When applying the tie-breaker rules to resolve the issue of Mr A’s dual residence status, consideration has to be given to whether Mr A’s residence in Hong Kong is of permanent nature and whether he has a permanent home in the Mainland. Generally speaking, if Mr A’s residence in Hong Kong is of permanent nature and he does not have a permanent home in the Mainland, he will be ascribed as a Hong Kong resident under the Comprehensive Arrangement. Alternatively, if Mr A has a permanent home in the Mainland and his residence in Hong Kong is not of permanent nature, he will be ascribed as a Mainland resident under the Comprehensive Arrangement.
+back to top
+18.
+Q:
+Further to Question 17, if Mr A has permanent homes in both Hong Kong and the Mainland, how should his residence status be determined?
+A:
+If Mr A has permanent homes in both Hong Kong and the Mainland, one has to comprehensively consider his personal and economic relationship with both sides and compare which side he has closer relationship with. If Mr A has closer personal and economic relationship with Hong Kong, he will be ascribed as a Hong Kong resident under the Comprehensive Arrangement. Alternatively, if Mr A has closer personal and economic relationship with the Mainland, he will be ascribed as a Mainland resident under the Comprehensive Arrangement.
+back to top
+19.
+Q:
+Mr B holds a domiciliary registration in the Mainland. His situation is similar to that of Mr A as mentioned in Question 17, but due to his Hong Kong employer having business in the Mainland, Mr B is required to frequently work in the Mainland. Mr B stays in Hong Kong for more than 180 days during a year of assessment and spends most weekends in Hong Kong. In this situation, will there be any differences in applying the tie-breaker rules to resolve the issue of dual residence status?
+A:
+Mr B is at the same time both a resident of Hong Kong and of the Mainland. In the context of applying the tie-breaker rules, Mr B’s frequent stay in the Mainland due to work or other reasons increases the likelihood that he has a permanent home in the Mainland. Mr B is more likely to have closer personal and economic relationship with the Mainland than with Hong Kong. Therefore, it is more probable that Mr B will be ascribed as a Mainland resident under the Comprehensive Arrangement.
+back to top
+20.
+Q:
+Mr C holds a domiciliary registration in the Mainland. He successfully applied to work in Hong Kong through a talent admission scheme and is employed by a Hong Kong company. He owns or rents property in Hong Kong. Mr C works in Hong Kong from Monday to Friday and returns to the Mainland on weekends. His spouse and children still live in the Mainland, and his children attend school in the Mainland. Mr C stays in Hong Kong for more than 180 days during a year of assessment. Mr C is at the same time both a resident of Hong Kong and of the Mainland under the definition set out in the Comprehensive Arrangement. How should Mr C’s residence status be determined?
+A:
+When applying the tie-breaker rules to resolve the issue of Mr C’s dual residence status, having considered that Mr C previously worked and lived in the Mainland, and his spouse and children remain in the Mainland after he is employed by a Hong Kong company, Mr C likely has a permanent home in the Mainland. However, whether Mr C’s residence in Hong Kong is of permanent nature needs further assessment based on his actual facts and circumstances. If Mr C’s residence in Hong Kong is not of permanent nature, he will be ascribed as a Mainland resident under the Comprehensive Arrangement.
+back to top
+21.
+Q:
+Further to Question 20, if Mr C has permanent homes in both Hong Kong and the Mainland, how should Mr C’s residence status be determined?
+A:
+If Mr C has permanent homes in both Hong Kong and the Mainland, one has to comprehensively consider his personal and economic relationship with both sides and compare which side he has closer relationship with. Please refer to Question 18 above for details.

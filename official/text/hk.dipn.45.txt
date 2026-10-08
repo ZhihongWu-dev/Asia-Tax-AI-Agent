@@ -1,0 +1,1669 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+Inland Revenue Department 
+The Government of the Hong Kong Special Administrative Region
+of the People's Republic of China  
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES 
+NO. 45 
+RELIEF FROM DOUBLE TAXATION DUE TO TRANSFER 
+PRICING OR PROFIT REALLOCATION ADJUSTMENTS  
+These notes are issued for the information of taxpayers and their tax 
+representatives. They contain the Department’s interpretation and practices in 
+relation to the law as it stood at the date of publication. Taxpayers are reminded 
+that their right of objection against the assessment and their right of appeal to 
+the Commissioner, the Board of Review or the Court are not affected by the 
+application of these notes. 
+LAU MAK Yee-ming, Alice 
+Commissioner of Inland Revenue 
+April 2009 
+Our web site : www.ird.gov.hk 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES  
+No. 45 
+CONTENT 
+Paragraph 
+Introduction 
+Types of international double taxation 
+2 
+Where no double tax agreement exists 
+8 
+Transfer pricing adjustment by a non-DTA state 
+9 
+ 
+Economic double taxation 
+ 
+Transfer pricing adjustment by a DTA state 
+14 
+Appropriate adjustment of tax charged 
+20 
+Retrospective adjustment  
+23 
+Deemed dividend  
+26 
+Transfer pricing adjustment by the Commissioner 
+29 
+Losses 
+31
+Exchange of information 
+32 
+Withholding taxes 
+33 
+ 
+Juridical double taxation 
+ 
+Profit reallocation by a DTA state 
+36 
+Adjustment by foreign tax administration  
+41 
+Adjustment by the Commissioner  
+48 
+ 
+Taxation not in accordance with the DTA 
+ 
+The Mutual Agreement Procedure 
+52 
+Stage 1 - Presentation of case 
+57 
+Stage 2 - Joint resolution  
+66 
+Year of adjustment  
+69 
+Competent authority communications  
+72 
+Time for resolution of cases 
+76 
+Interaction between mutual agreement procedure and objection 
+77 
+rights under the IRO 
+ 
+
+ 
+ 
+Paragraph 
+ 
+Where competent authority agreement is reached 
+80  
+Where taxpayer does not agree with competent authority agreement  
+83  
+Where competent authority agreement has not been reached  
+84  
+Interaction between mutual agreement procedure and review rights  
+in the other DTA state  
+87  
+Payment of tax during mutual agreement procedure  
+91  
+ 
+ 
+ii 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+INTRODUCTION 
+Hong Kong has entered into a number of Double Taxation 
+Agreements (DTAs) with other tax jurisdictions. One of the main purposes of 
+such agreements is the avoidance of double taxation.  This Departmental 
+Interpretation and Practice Note sets out the Department’s views and practices 
+on granting relief from double taxation due to a transfer pricing or profit 
+reallocation adjustment under a DTA. 
+Types of international double taxation 
+2. 
+Generally, two types of international double taxation are recognised 
+in the context of DTAs: 
+(a) 
+economic double taxation; and 
+(b) 
+juridical double taxation. 
+3. 
+Economic double taxation arises where two enterprises resident in 
+different states are assessed to tax on the same profit or income, without relief 
+provided by either state for tax imposed by the other.  This double taxation 
+may arise as a consequence of non-arm’s length transactions. The profits of 
+one enterprise are adjusted upwards increasing the tax charged on that 
+enterprise in one state (i.e. a primary transfer pricing adjustment), without a 
+corresponding downward adjustment to the tax payable of the associated 
+enterprise in the other state. 
+4. 
+Juridical double taxation occurs where an enterprise is charged to tax 
+on the same profit or income in two different states (e.g. a single legal entity 
+having a head office in its state of residence has set up a permanent 
+establishment in another state), without either state providing relief for tax 
+imposed by the other. This double taxation may arise where the profits that 
+are taken to have arisen from the enterprise’s operations in a state are adjusted 
+upwards to increase the tax payable in that state (i.e. a primary profit 
+reallocation adjustment) without a corresponding downward adjustment to the 
+enterprise’s profits from its operations in the other state. 
+
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5. 
+In each of the DTAs of the Hong Kong SAR, the Associated 
+Enterprises Article, which is modeled on Article 9 of the OECD Model Tax 
+Convention on Income and on Capital (the OECD Model), provides for 
+primary transfer pricing adjustments by a DTA state.  The Associated 
+Enterprises Article also provides a mechanism for relief from the resultant 
+economic double taxation to be given by the other DTA state. 
+6. 
+The Business Profits Article and the Methods for Elimination of 
+Double Taxation Article, which are modeled on Article 7 and Article 23 
+respectively of the OECD Model, in each of the DTAs of the Hong Kong SAR 
+provide for both primary profit reallocation adjustments and relief from the 
+resultant juridical double taxation. 
+7. 
+Each of the DTAs of the Hong Kong SAR contains a Mutual 
+Agreement Procedure Article, which is modeled on Article 25 of the OECD 
+Model, that provides, inter alia, for the resolution of cases where a taxpayer is 
+faced with international double taxation. In that article, double taxation is 
+usually regarded as “taxation not in accordance” with the DTA.  The Mutual 
+Agreement Procedure Article enables the competent authorities, which in the 
+case of the Hong Kong SAR is the Commissioner of Inland Revenue (the 
+Commissioner), to consult with each other with a view to resolving double 
+taxation though it does not compel agreement.  Paragraph 37 of the 
+Commentary on Article 25 of the OECD Model, which is relevant to 
+interpreting the Mutual Agreement Procedure Article, states: 
+“Paragraph 2 (of Article 25) no doubt entails a duty to negotiate; but 
+as far as reaching mutual agreement through the procedure is 
+concerned, the competent authorities are under a duty merely to use 
+their best endeavours and not to achieve a result ...” 
+Where no double tax agreement exists 
+8. 
+Where either the Commissioner or the tax administration of another 
+state makes a transfer pricing or profit reallocation adjustment and no relevant 
+DTA exists, no bilateral procedures are in place. Accordingly, the question of 
+any relief from the resultant double taxation does not arise. 
+2  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Transfer pricing adjustment by a non-DTA state 
+9. 
+Where economic double taxation arises from a transfer pricing 
+adjustment made by the tax administration of a non-DTA state to increase the 
+taxable income of an associated enterprise, there are no provisions under the 
+Inland Revenue Ordinance (the IRO) permitting: 
+(a)  the profit which has been derived by the Hong Kong 
+enterprise1  to be treated as not derived; or 
+(b)  
+a deduction to be allowed to the Hong Kong enterprise where 
+no expenditure has been incurred. 
+10. 
+In these circumstances, the foreign tax paid is a liability of the 
+associated enterprise in the other state. The adjustment does not affect the 
+profits of the Hong Kong enterprise, and therefore no adjustment can be made 
+to the profits of the Hong Kong enterprise. 
+11. 
+Where juridical double taxation arises for a Hong Kong enterprise 
+that is subject to a profit reallocation adjustment made by a non-DTA state, the 
+profit which has been subject to double taxation will not be excluded from 
+taxation in Hong Kong because the profit has been properly assessed to profits 
+tax as Hong Kong sourced profits. Neither can relief by way of a tax credit be 
+provided under section 50 of the IRO in the absence of a DTA. 
+12. 
+The permanent establishment of a non-resident enterprise is subject 
+to profits tax in Hong Kong on profits sourced in Hong Kong and expenses are 
+not deductible if they are attributable to profits that are sourced outside Hong 
+Kong. Any relief from double taxation can only be provided by the non-DTA 
+state. 
+13. 
+Where the Assessor finds a Hong Kong enterprise or the permanent 
+establishment of a non-resident enterprise has been assessed at less than the 
+proper amount because transfer prices are not structured at arm’s length, he can 
+raise an additional assessment under section 60 of the IRO. The basis on 
+In a DTA entered into by the Hong Kong SAR, a “Hong Kong enterprise” typically means an 
+enterprise carried on by a resident of Hong Kong.  The term “Hong Kong resident” is also 
+categorically defined in the relevant DTA, depending on whether it is an individual, a corporation or 
+other legally constituted person. 
+3  
+1 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+which transfer pricing adjustments are to be made is explained in another 
+Departmental Interpretation and Practice Note. 
+ECONOMIC DOUBLE TAXATION 
+Transfer pricing adjustment by a DTA state 
+14. 
+Where the Commissioner agrees with a DTA state that the transfer 
+pricing adjustment by it is correct both in principle and amount, the relevant 
+assessment of the Hong Kong enterprise will be revised in accordance with the 
+relief provision in the Associated Enterprises Article of the DTA and section 79 
+of the IRO to refund the excess tax paid or to reduce the tax that would 
+otherwise be payable on the assessable profits of the Hong Kong enterprise. 
+15. 
+Regarding a transfer pricing adjustment to an associated enterprise 
+made by the tax administration of a DTA state, the claim for an “appropriate 
+adjustment to the amount of tax charged” must be made by the Hong Kong 
+enterprise under section 79 of the IRO within 6 years of the end of the relevant 
+year of assessment. 
+16. 
+The Commissioner is only obligated to provide relief from economic 
+double taxation if the primary transfer pricing adjustment is made in 
+accordance with the relevant DTA (i.e. by the application of the arm’s length 
+principle). Paragraph 6 of the Commentary on Article 9 of the OECD Model 
+makes it clear that this is the result intended. Paragraph 4.35 of the OECD 
+Transfer Pricing Guidelines for Multinational Enterprises and Tax 
+Administrations states: 
+“Corresponding adjustments are not mandatory, mirroring the rule 
+that tax administrations are not required to reach agreement under 
+the mutual agreement procedure. Under paragraph 2 of Article 9, a 
+tax administration should make a corresponding adjustment only 
+insofar as it considers the primary adjustment to be justified both in 
+principle and in amount.” 
+4  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+Example 1 
+Company F is resident in Country F, a DTA state, and provided 
+goods for no consideration to its wholly owned subsidiary, Company 
+HK, a company resident in Hong Kong.  Country F subjected 
+Company F to tax audit and increased the profits of Company F by 
+$100,000 on the basis that if Company F and Company HK had 
+transacted with each other on an arm’s length basis, Company HK 
+would have paid Company F $100,000 for the goods. 
+The resultant economic double taxation may be relieved by: 
+(a)  
+the Commissioner agreeing that $100,000 reflects an arm’s 
+length price and reduces the tax payable by Company HK 
+accordingly (i.e. reduce $16,500 of tax if the profits tax rate is 
+16.5 per cent); or  
+(b)  
+the tax administration of Country F being convinced that its 
+adjustment is incorrect and accordingly reduces the additional 
+tax payable by Company F (e.g. through domestic review, 
+objection or appeal processes in Country F); or 
+(c)  
+the reaching of agreement between both competent authorities 
+under the Mutual Agreement Procedure Article of the 
+relevant DTA. 
+17. 
+Relief for economic double taxation arising from a transfer pricing 
+adjustment can only be provided under the combined effect of the DTA and 
+section 79 of the IRO. Section 50 of the IRO deals with profits derived by 
+Hong Kong enterprises and addresses juridical double taxation by providing tax 
+credits for tax imposed by the other DTA state (see paragraphs 36 to 51 below). 
+18. 
+The following examples illustrate how appropriate adjustments are 
+made: 
+5  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+Example 2 
+Company HK resident in Hong Kong purchased goods from 
+Company F resident in a DTA state and paid $200,000 for goods 
+that had an arm’s length price of $300,000.  After the tax 
+administration in Country F had made an upward transfer pricing 
+adjustment, Company F paid an extra $50,000 income tax in 
+Country F where the tax rate was 50 per cent. 
+Company HK’s assessable profits would have been $100,000 less if 
+it had paid the arm’s length price.  The appropriate adjustment 
+would be a $16,500 reduction in the profits tax payable of Company 
+HK if the profits tax rate is 16.5 per cent. 
+Example 3 
+Company HK resident in Hong Kong supplied goods to Company F 
+resident in Country F, a DTA state, for $400,000.  The tax 
+administration of Country F determined that the arm’s length price 
+should be $200,000.  The taxable profits of Company F were 
+increased by $200,000 because Company F would not have been 
+entitled to deduct this amount if it had transacted on an arm’s length 
+basis with Company HK. Company F paid an extra $100,000 tax 
+in Country F where the tax rate was 50 per cent. 
+The assessable profits of Company HK would have been $200,000 
+less if it had supplied the goods for arm’s length price.  The 
+appropriate adjustment would be a $33,000 reduction in the profits 
+tax payable of Company HK if the Hong Kong profits tax rate is 
+16.5 per cent.  
+Example 4 
+Company F resident in the Mainland, a DTA jurisdiction, provided a 
+licence over a patent to Company HK resident in Hong Kong at an 
+annual royalty rate of $50,000. The patent has not been owned at 
+any time by any person carrying on a trade, profession or business 
+in Hong Kong (i.e. section 21A(a) of the IRO does not apply). The 
+6  
+
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Mainland tax authorities made a primary transfer pricing 
+adjustment to increase the royalty by $100,000 because the arm’s 
+length amount would equal $150,000.  The Commissioner agrees to 
+such an upward adjustment as being correct in principle and 
+amount.  
+The Commissioner would make an appropriate downward 
+adjustment of $100,000 under Article 9(2) to reduce Company HK’s 
+profits, and increase the royalty received by Company F by 
+$100,000. Under Article 12 of the DTA with the Mainland and the 
+IRO, any royalty arising from Hong Kong is subject to a withholding 
+tax rate of 7 or 4.95 per cent (i.e. 16.5 per cent of 30 per cent under 
+section 21A of the IRO, assuming the profits tax rate to be 16.5 per 
+cent), whichever is the lower. The lower rate of 4.95 per cent is 
+therefore applicable to the royalty received by Company F. 
+Company F’s liability to withholding tax under section 20B and 
+Article 12 would have been $7,425 (i.e. 4.95 per cent of $150,000) if 
+the transaction had been structured on an arm’s length basis. 
+Company F’s additional tax liability would be $4,950 (i.e. $7,425 
+less $2,475 paid earlier on $50,000). Company HK is required to 
+deduct and forward that additional amount to the Commissioner 
+under section 20B. 
+19. 
+If a DTA does not contain a provision specifically directed at the 
+relief of economic double taxation, the Commissioner does not consider that 
+there is an obligation to provide relief from economic double taxation. 
+Appropriate adjustment of tax charged 
+20. 
+The DTAs of the Hong Kong SAR are to avoid double taxation and 
+prevent fiscal evasion. The language of the DTAs permits a relief from actual 
+double taxation in respect of “tax charged” or “tax paid” in a DTA state. 
+21. 
+The Associated Enterprises Article requires that tax has been 
+charged on the same profits by the two DTA states before an appropriate 
+adjustment can be considered. 
+The expressions “taxes accordingly” and 
+“charged to tax” used in the context of the article clearly envisage liabilities to 
+tax to be actually in existence or arising in both tax jurisdictions in respect of 
+the adjusted profit. 
+7  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+22. 
+This means actual double taxation does not arise while one of the 
+associated enterprises is, or both are, in a loss position. Double taxation will 
+arise at a later stage when the enterprise concerned returns to profit and relief 
+may be provided at that time. The provision of relief will depend on the facts 
+of each case. 
+Example 5 
+Company F is resident in Country F, a DTA state, and it transferred 
+goods for no consideration to Company HK, a wholly owned 
+subsidiary company resident in Hong Kong. Country F subjected 
+Company F to tax audit and increased its profits by $100,000 on the 
+basis that if Company F and Company HK had transacted with each 
+other on an arm’s length basis, Company HK would have paid 
+$100,000 for the goods. Company F had a loss of $300,000 prior 
+to the transfer pricing adjustment. Company F returned a profit of 
+$300,000 for the next year, offset by loss of $200,000 brought 
+forward and paid income tax on $100,000. 
+The transfer pricing adjustment resulted in a reduction of the loss 
+carried forward by Company F from $300,000 to $200,000.  No 
+relief could be made to Company HK in the first year. A relief of 
+$16,500 could be provided to Company HK in the second year, 
+being tax on $100,000 if the tax rate is 16.5 per cent, by making an 
+appropriate adjustment.  Equally, if the Hong Kong enterprise had 
+been in a loss position, an appropriate adjustment could not have 
+been made until it returns to a profit position in a later year. In 
+such a case, the claim under section 79 for an appropriate adjustment 
+should be made within 6 years of the end of the year of assessment 
+in which it returns to a profit position. 
+Retrospective adjustment 
+23. 
+Hong Kong enterprises should not seek to relieve economic double 
+taxation by claiming deductions under section 16 for subsequent payments 
+purporting to represent a retrospective adjustment to transactions previously 
+undertaken with an associated enterprise in another state. 
+8  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+24. 
+The payments did not represent outgoings and expenses incurred 
+under section 16 in the production of profits chargeable to profits tax and are 
+therefore not tax deductible. Nor can the retrospective adjustment be accepted 
+as error or omission in terms of section 70A. 
+25. 
+Relief from or resolution of economic double taxation must be 
+sought by presentation of the case to the Commissioner under section 79 and/or 
+under the Mutual Agreement Procedure Article of the relevant DTA. 
+Deemed dividend 
+26. 
+The Commissioner will not accept a sum as a non-taxable dividend 
+even if the tax administration of a DTA state treats the profits shifted to a Hong 
+Kong enterprise to be a “deemed dividend”. These circumstances arise where 
+that tax administration considers that profits have been transferred to an 
+associated enterprise resident in Hong Kong and deems for its tax purposes the 
+increased consideration to be a “dividend” paid by the foreign enterprise to the 
+Hong Kong enterprise. 
+27. 
+The exemption under section 26(a) of the IRO only applies to 
+dividends for the purposes of the domestic law.  This means that an exemption 
+cannot be claimed for profits received by a Hong Kong enterprise which is a 
+“deemed dividend” under the law of another state but not under the laws of the 
+Hong Kong SAR. 
+28. 
+The nature of the sum accrued to the Hong Kong enterprise would 
+remain unchanged. A trading receipt will continue to be assessed as a trading 
+receipt under the IRO though it is deemed by the tax administration of a DTA 
+state as dividend paid to the Hong Kong enterprise. 
+Transfer pricing adjustment by the Commissioner 
+29. 
+If the Commissioner makes a transfer pricing upward adjustment 
+under the Associated Enterprises Article and/or the provisions of the IRO, it is 
+up to the associated enterprise of the DTA state to seek relief from the tax 
+administration of that state in respect of the adjustment made on the Hong 
+Kong enterprise. The Commissioner will be ready to demonstrate on request 
+to the competent authority of the DTA state that the adjustment made is in 
+accordance with the DTA. 
+9  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+30. 
+The mechanism to be used in a DTA state to relieve economic 
+double taxation is a matter for the tax administration of that state. 
+Losses 
+31. 
+The Commissioner’s view on relief from economic double taxation 
+where one of the associated enterprises is, or both are, in a loss position is set 
+out in paragraphs 20 to 22 above. A DTA state may arrive at a different 
+interpretation of a relevant DTA or may have provisions in their domestic laws 
+that enable a different approach to be taken (e.g. restoring income and 
+deductions to what they would have been had the transactions been undertaken 
+on an arm’s length basis in the first place). 
+Exchange of information 
+32. 
+To enable a DTA state to give effect to its relevant DTA obligations 
+and general domestic law provisions, the Commissioner will, on request, 
+exchange information about any transfer pricing adjustment with the competent 
+authority of a DTA state. This exchange will be made under the Exchange of 
+Information Article of the relevant DTA. 
+Withholding taxes 
+33. 
+The basis upon which the tax administration of a DTA state will 
+calculate the appropriate amount of tax relief from withholding taxes and the 
+mechanisms for the provision of relief from economic double taxation in 
+equivalent circumstances are matters for determination by that administration. 
+34. 
+Where withholding taxes have been paid (e.g. where royalty is paid 
+to a Hong Kong enterprise giving rise to a liability and payment of withholding 
+tax by the Hong Kong enterprise in the source state), a tax credit would be 
+available under section 50 for the foreign withholding tax paid if the same 
+profit is subject to profits tax in the Hong Kong SAR. 
+35. 
+If the Commissioner makes an adjustment pursuant to the IRO and/ 
+or the relevant DTA to increase the quantum of the royalty or income deemed 
+to have been received by the Hong Kong enterprise, the basis upon which the 
+tax administration of a DTA state will compute the appropriate amount of tax 
+10  
+
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+relief and the mechanisms for the provision of relief from economic double 
+taxation are matters for determination by that tax administration and subject to 
+the provisions of the relevant DTA. 
+JURIDICAL DOUBLE TAXATION 
+Profit reallocation by a DTA state 
+36. 
+Profits of a Hong Kong enterprise properly assessed under section 
+14 as profits arising in or derived from Hong Kong might be regarded by 
+another DTA state as profits sourced within its jurisdiction under the DTA. 
+Juridical double taxation suffered by a Hong Kong enterprise arising from the 
+application of the domestic tax law of the source DTA state can be relieved by 
+way of a tax credit under section 50 of the IRO for the foreign tax paid. Any 
+claim for allowance by way of tax credit must be made not later than 2 years 
+after the end of the relevant year of assessment. 
+37. 
+The DTAs of the Hong Kong SAR permit the DTA state in which a 
+Hong Kong enterprise carries on business through a permanent establishment 
+to tax the profits “attributable to the permanent establishment”.  These profits 
+are often deemed to be profits from sources in that state under foreign domestic 
+law. 
+38. 
+Where a DTA state exercises the right to tax the profits of the Hong 
+Kong enterprise in accordance with the Business Profits Article, the 
+Commissioner will provide relief from the resultant double taxation if the same 
+profits have been subject to profits tax in the Hong Kong SAR.  The 
+obligation to provide relief is contained in the Methods for Elimination of 
+Double Taxation Article. 
+39. 
+The Business Profits Article also requires a DTA state to apply the 
+same principle in attributing profits to a permanent establishment (i.e. “there 
+shall in each Contracting State be attributed to that permanent establishment 
+the profits which it might be expected to make if it were a distinct and separate 
+enterprise ...”).  The mutual application of this principle ensures: 
+11  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(a)  
+the appropriate exercise of the source state’s taxing rights; 
+and 
+(b)  
+the provision of appropriate relief by the residence state. 
+40. 
+The Mutual Agreement Procedure Article in the DTAs of the Hong 
+Kong SAR can be used to facilitate agreement where DTA states differ on 
+profit allocations under the Business Profits Article (i.e. where a Hong Kong 
+enterprise considers that it has been taxed not in accordance with a relevant 
+DTA), though the Mutual Agreement Procedure Article does not compel 
+agreement. 
+Adjustment by foreign tax administration 
+41. 
+The tax administration of a DTA state may make a profit reallocation 
+adjustment to: 
+(a)  a Hong Kong enterprise carrying on business through a 
+permanent establishment in the DTA state; or 
+(b)  
+an enterprise resident in the DTA state carrying on business 
+through a permanent establishment in Hong Kong. 
+42. 
+The DTA state may in relation to a Hong Kong enterprise: 
+(a)  
+make a profit reallocation adjustment upon a factual finding 
+that a permanent establishment of the enterprise existed or did 
+not exist in that state, where the enterprise previously 
+maintained a different opinion; or 
+(b)  
+adjust the amount of profits considered to be attributable to a 
+permanent establishment of the enterprise in that state. 
+The Commissioner will provide relief from juridical double taxation only to the 
+extent that the Commissioner agrees both in principle and in amount with the 
+profit reallocation adjustment made by the DTA state. 
+12  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Example 6 
+Company HK is a Hong Kong enterprise subject to profits tax in 
+Hong Kong. It carries on business in Country F, a DTA state, 
+through a permanent establishment.  Company HK lodged tax 
+returns in both Hong Kong and Country F, returning a profit for tax 
+purposes of $10 million in Hong Kong, of which $3 million was 
+attributable to the permanent establishment in Country F and $7 
+million was profit sourced in Hong Kong under Hong Kong tax laws. 
+The tax administration of Country F subsequently audited the tax 
+return of the permanent establishment, and determined that 
+non-arm’s length transactions between the Hong Kong head office 
+and the permanent establishment had resulted in an understatement 
+of the profits attributable to the permanent establishment. Country 
+F’s tax administration concluded that the profits of the permanent 
+establishment should have been $4 million and deemed those profits 
+to have been derived in Country F.  Country F accordingly 
+reallocated an additional $1 million of Company HK’s profits to the 
+permanent establishment, making a total of $4 million attributable to 
+it and imposed additional tax on Company HK. 
+The resultant juridical double taxation may be relieved by: 
+(a)  
+the Commissioner agreeing that the profit attributable to the 
+permanent establishment in Country F should have been $4 
+million and allowing a tax credit for the additional foreign 
+taxes paid; or 
+(b)  
+the tax administration of Country F being convinced that its 
+adjustment is incorrect and accordingly reduces the additional 
+tax payable (e.g. through domestic review, objection or appeal 
+processes in Country F); or 
+(c)  
+the reaching of agreement between both competent authorities 
+(e.g. under the Mutual Agreement Procedure Article of the 
+relevant DTA). 
+13  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+43. 
+The provisions that give effect to the obligation to provide relief 
+from juridical double taxation under the Methods for Elimination of Double 
+Taxation Article in DTAs are contained in section 50 of the IRO. 
+44. 
+Under section 50, an entitlement to a tax credit for foreign tax arises 
+where: 
+(a)  
+the assessable profits of a Hong Kong enterprise includes 
+profits subject to income taxation in a DTA state; and 
+(b)  
+the Hong Kong enterprise has foreign tax paid or payable in 
+respect of the same profits, being tax for which it was liable. 
+45. 
+Where a DTA state has imposed tax in contravention of the DTA, 
+the Commissioner is not under any obligation to provide a tax credit for the 
+additional foreign tax paid under section 50. 
+46. 
+Juridical double taxation may occur where a non-resident enterprise 
+that carries on a business through a permanent establishment in Hong Kong is 
+subject to an adjustment by a foreign tax administration. 
+Example 7 
+Company F is resident in Country F, a DTA state, and lodged tax 
+returns in both Hong Kong and Country F and declared profits for 
+tax purposes of $10 million of which $2 million was attributable to 
+the permanent establishment in Hong Kong.  The tax administration 
+of Country F subjected Company F to audit and determined that 
+non-arm’s length dealings between the head office in Country F and 
+the permanent establishment in Hong Kong had resulted in an 
+overstatement of the profits attributable to the permanent 
+establishment. The profits of the permanent establishment in Hong 
+Kong were accordingly reduced to $1 million. Assuming Country F 
+has a tax credit system it would then disallow credits for Hong Kong 
+profits tax paid on $1 million, or if it had an exemption system, 
+Country F would reduce the amount of Company F’s exempt income 
+to $1 million. 
+14  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The resultant juridical double taxation may be relieved by: 
+(a)  
+the Commissioner agreeing that the profits of the permanent 
+establishment should have been $1 million and reducing the 
+tax payable of the permanent establishment by $165,000 if the 
+profits tax rate is 16.5 per cent; or 
+(b)  
+the tax administration of Country F being convinced that its 
+adjustment is incorrect and accordingly reduces the additional 
+tax payable by Company F (e.g. through domestic review, 
+objection or appeal processes in Country F); or 
+(c)  
+an agreement is reached between both competent authorities 
+(e.g. under the Mutual Agreement Procedure Article of the 
+relevant DTA). 
+47. 
+An adjustment will be made to relieve juridical double taxation only 
+if the Commissioner regards the reallocated profits as properly not attributable 
+to the permanent establishment in Hong Kong. A refund will be made to the 
+non-resident enterprise by revising the relevant assessment made under the 
+Business Profits Article and section 79. A claim under section 79 of the IRO 
+must be made within 6 years of the end of the relevant year of assessment. 
+Adjustment by the Commissioner 
+48. 
+The Commissioner may make a profit reallocation adjustment 
+pursuant to the IRO and/or the relevant DTA to either: 
+(a)  
+a Hong Kong enterprise with a permanent establishment in a 
+DTA state; or 
+(b)  
+a non-resident enterprise with a permanent establishment in 
+Hong Kong. 
+49. 
+Where the profit reallocation adjustment is made by the 
+Commissioner, the Commissioner will on request demonstrate to the competent 
+authority of the DTA state that the adjustment is in accordance with the DTA 
+15  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+so that relief from any resultant double taxation will be provided by the DTA 
+state. 
+50. 
+Juridical double taxation may arise where the Commissioner reduces 
+the amount of profits of a Hong Kong enterprise attributable to its carrying on 
+of business through a permanent establishment in the DTA state. 
+Example 8 
+Company HK is resident in Hong Kong and carries on business 
+through a permanent establishment in Country F, a DTA state. 
+Company HK lodged tax returns in both Hong Kong and Country F, 
+declaring profits for Hong Kong profits tax purposes of $10 million, 
+of which $3 million was considered attributable to the permanent 
+establishment in Country F. Country F assessed to income tax 
+Company HK on the $3 million. The Commissioner audited the tax 
+return of Company HK and determined that the profits attributable 
+to the permanent establishment were overstated because of 
+non-arm’s length transactions between the Hong Kong head office 
+and the permanent establishment.  The Commissioner concluded 
+that the profits attributable to the permanent establishment should be 
+$2 million instead of $3 million. The Commissioner accordingly 
+made a profit reallocation adjustment reducing Company HK’s 
+offshore profits derived from Country F from $3 million to $2 million. 
+This resulted in an additional assessment with an assessable profit of 
+$1 million. 
+The resultant juridical double taxation may be relieved by: 
+(a)  the tax administration of Country F agreeing with the 
+Commissioner’s 
+reallocation 
+and 
+reducing 
+its 
+taxes 
+accordingly; or 
+(b)  
+domestic objection or appeal processes in Hong Kong finding 
+the Commissioner’s adjustment to be incorrect; or 
+16  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(c)  the reaching of an agreement between both competent 
+authorities (e.g. under the Mutual Agreement Procedure 
+Article of the relevant DTA). 
+51. 
+Juridical double taxation may arise where the Commissioner 
+increases the amount of profits considered as being attributable to the business 
+carried on by a non-resident enterprise through a permanent establishment in 
+Hong Kong. 
+Example 9 
+Company F is a company resident in Country F which is a DTA state. 
+It carries on business through a permanent establishment in Hong 
+Kong. Company F declared profits of $12 million, of which $2 
+million were considered as being attributable to the permanent 
+establishment in Hong Kong. Company F returned an assessable 
+profit of $2 million for Hong Kong profits tax purposes. The laws 
+of Country F might either provide for an exemption of the profits 
+attributable to the permanent establishment in Hong Kong or tax the 
+worldwide profits of Company F with a credit given for the Hong 
+Kong profits tax paid. The Commissioner audited the tax return of 
+Company F and determined that the profits attributable to the 
+permanent establishment in Hong Kong were understated because of 
+non-arm’s length transactions between the head office and the Hong 
+Kong permanent establishment. The Commissioner concluded that 
+the profits attributable to the permanent establishment in Hong Kong 
+should be $5 million instead of $2 million.  The Commissioner 
+accordingly made a profit reallocation adjustment, increasing 
+Company F’s Hong Kong assessable profits from $2 million to $5 
+million. 
+This resulted in an additional assessment with an 
+assessable profit of $3 million. 
+The resultant juridical double taxation may be relieved by: 
+(a)  the tax administration of Country F agreeing with the 
+Commissioner’s 
+reallocation 
+and 
+reducing 
+its 
+taxes 
+accordingly (e.g. by way of a credit for Hong Kong profits tax 
+paid or an exemption for profits attributable to the permanent 
+establishment in Hong Kong); or 
+17  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(b)  
+domestic objection or appeal processes in Hong Kong finding 
+the Commissioner’s adjustment to be incorrect; or 
+(c)  the reaching of an agreement between both competent 
+authorities (e.g. under the Mutual Agreement Procedure 
+Article of the relevant DTA). 
+TAXATION NOT IN ACCORDANCE WITH THE DTA 
+The Mutual Agreement Procedure 
+52. 
+The Mutual Agreement Procedure Article in the DTAs of the Hong 
+Kong SAR enables a taxpayer to initiate the procedure where it is considered 
+that the actions of the competent authority of one or both of the states 
+concerned result or will result in taxation not in accordance with the provisions 
+of a DTA. 
+53. 
+Taxation not in accordance with a DTA can arise in various 
+situations, including transfer pricing and profit reallocation adjustments. This 
+Departmental Interpretation and Practice Note only addresses the operation of 
+the Mutual Agreement Procedure Article in the context of transfer pricing or 
+profit reallocation adjustments. 
+54. 
+There are two stages to the Mutual Agreement Procedure.  The first 
+stage involves the taxpayer and the competent authority of its residence state. 
+The second stage involves the endeavours of the competent authorities of both 
+states to resolve the case. 
+55. 
+The first stage has three elements: 
+(a)  
+the presentation of a case by the taxpayer to the competent 
+authority of its residence state; 
+(b)  
+consideration by the competent authority whether the case 
+presented is justified; and 
+18  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(c)  
+consideration by the competent authority whether it is able to 
+arrive at a satisfactory solution itself. 
+56. 
+If the case cannot be resolved at the first stage, the competent 
+authority has an obligation to endeavour to resolve the case by mutual 
+agreement with the competent authority of the other DTA state. 
+Stage 1 - Presentation of case 
+57. 
+The Mutual Agreement Procedure Article of the DTAs of the Hong 
+Kong SAR provides for the taxpayer to present its case to the competent 
+authority of the DTA state of which it is a resident. The address of the Hong 
+Kong SAR competent authority for presenting a case is: 
+The Commissioner of Inland Revenue 
+Inland Revenue Department 
+Revenue Tower, 
+5 Gloucester Road, Wan Chai, Hong Kong, China 
+58. 
+When presenting a case to the Commissioner, the taxpayer should 
+include the following information: 
+(a)  
+the basis upon which the opinion is formed that the actions of 
+the Commissioner and/or the DTA state result or will result 
+for that taxpayer in taxation not in accordance with the 
+relevant DTA; 
+(b)  
+full details of the relevant transactions and the parties to the 
+transactions as well as the actions relied upon; including the 
+identification of the DTA state involved, how the actions 
+affect the tax liability of the taxpayer and the associated 
+foreign enterprise where relevant, and particulars of the 
+taxation that does not accord with the relevant DTA; and 
+(c)  
+how the taxpayer would like the problem resolved, including 
+provisions of the domestic tax law and the DTA applicable to 
+the resolution of the case. 
+19  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+59. 
+Where a non-resident taxpayer presents a case to the competent 
+authority of its resident DTA state in anticipation of the Hong Kong SAR 
+providing relief from double taxation, a copy of the case presented should be 
+provided at the same time to the Commissioner. The provision of a copy at 
+this time may: 
+(a)  
+assist in the resolution of the case in the quickest possible 
+time by enabling the Commissioner to undertake a 
+preliminary review of the case; 
+(b)  
+ensure that the Commissioner and the competent authority of 
+the other DTA state are satisfied that the case has been 
+presented within the time limits specified in the relevant DTA; 
+and 
+(c)  
+ensure that the requirements for presentation of a case to the 
+competent authority have been satisfied. 
+60. 
+The Mutual Agreement Procedure Article in the DTAs of the Hong 
+Kong SAR permits a taxpayer to present a case to the relevant competent 
+authority within three years from the first notification to the taxpayer of the 
+actions giving rise to taxation not in accordance with the DTA. 
+61. 
+For the purpose of applying this time limit, the first notification of 
+actions giving rise to taxation not in accordance with the DTA is usually the 
+relevant notice of assessment or loss computation issued by the Commissioner 
+or the equivalent notification from a DTA state.  This view accords with 
+paragraph 21 of the Commentary on the Mutual Agreement Procedure Article 
+of the OECD Model, which considers that the first notification should be 
+interpreted in the way most favourable to the taxpayer. 
+62. 
+The competent authority on being presented with a case by a 
+taxpayer, must consider whether the case is justified (e.g. whether the taxpayer 
+has reasonable grounds upon which to seek competent authority consideration). 
+The action complained of must be directed specifically at the taxpayer. 
+20  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+63. 
+The Commissioner could be expected to consider a case as being 
+justified where the taxpayer has received notification in writing (e.g. a position 
+paper or a notice of assessment or equivalent notice) from either the 
+Commissioner or the tax administration of a DTA state of a proposed transfer 
+pricing or profit reallocation adjustment. This notification would need to reflect 
+that an examination or audit of the taxpayer’s affairs was significantly 
+advanced in this regard (i.e. not just a mere possibility), and include details of 
+adjustments, the amount involved and the basis of calculation. 
+64. 
+Actions that the Commissioner is unlikely to consider sufficient to 
+justify a case include: 
+(a)  
+the mere existence of an audit or an examination of the affairs 
+of the taxpayer or associated non-resident enterprise; or 
+(b)  requests from the Commissioner or a DTA state for an 
+exchange of information about the dealings between the Hong 
+Kong enterprise and an associated non-resident enterprise; or 
+(c)  
+discussions between the taxpayer and a DTA state about the 
+amount and source of profits considered attributable to the 
+permanent establishment under the Business Profits Article; 
+or 
+(d)  
+discussions between an associated non-resident enterprise and 
+a DTA state concerning non-arm’s length dealings between 
+the taxpayer and the associated non-resident enterprise; or 
+(e)  
+an interpretation of the tax laws by the Commissioner or of a 
+DTA state ruling or of policy of a general nature that the 
+taxpayer believes could be applied to it and, if so, may result 
+in taxation not in accordance with the DTA. 
+65. 
+The issues raised by a ruling or policy of a DTA state will usually be 
+of general application and will not be related to any particular taxpayer.  A 
+taxpayer should not base on any such ruling or policy to initiate the procedure. 
+However, such ruling or policy may be useful to resolving any difficulties or 
+doubts about the interpretation or application of the DTA with the other 
+21  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+competent authority under the appropriate provision of the Mutual Agreement 
+Procedure Article. Therefore taxpayers may bring to the attention of the 
+Commissioner such ruling or policy. 
+Stage 2 - Joint resolution 
+66. 
+The second stage commences with the competent authority that has 
+been presented with the case approaching the other competent authority. 
+Paragraph 37 of the Commentary on Article 25 of the OECD Model recognises 
+that this stage imposes on the competent authorities a duty to negotiate and to 
+use their best endeavours to resolve a case. 
+67. 
+Where the primary transfer pricing or profit reallocation adjustment 
+is made by a DTA state, it can be expected that the Commissioner will seek to 
+resolve the case by reaching a mutual understanding as to: 
+(a)  
+the principles embodied in the DTA; 
+(b)  
+the facts of the particular case; and 
+(c)  
+how those principles should be applied to the facts of the case 
+in a way which does not result in unrelieved double taxation. 
+68. 
+Where the primary adjustment is made by the Commissioner, the 
+Commissioner will demonstrate to the other competent authority that the 
+transfer pricing or profit reallocation adjustment by the Commissioner is in 
+accordance with the DTA and therefore, it is appropriate that relief from any 
+resultant double tax should be provided by the other DTA state. 
+Year of adjustment 
+69. 
+Where the Commissioner provides relief from double taxation, it will, 
+as a matter of practice, adjust the tax payable for the year of assessment whose 
+basis period corresponds to the period for which the profits have been adjusted 
+or reallocated by the other DTA state. 
+22  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Example 10 
+A DTA state made an adjustment to increase the profits of the 
+associated enterprise resident there in relation to a particular 
+non-arm’s length transaction with the Hong Kong enterprise that 
+took place in April 2005, which fell within its accounting period 
+ended 31 March 2006. 
+Appropriate relief will be provided for the Hong Kong enterprise 
+against profits tax payable for the year of assessment 2005/06. 
+Example 11 
+A DTA state increased the profits of the associated enterprise 
+resident there by way of a primary adjustment relating to 
+transactions with the Hong Kong enterprise during the year ended 
+31 December 2005. 
+Relief will be provided for the Hong Kong enterprise against tax 
+payable for the year of assessment 2005/06 if the basis period for the 
+Hong Kong enterprise was the year ended 31 December 2005. 
+70. 
+Where either of the residents is, or both are, in a tax loss position in 
+the year to which the primary adjustment relates, a correlative adjustment may 
+be made to the profits/income tax payable in a subsequent year.  The 
+Commissioner’s practice in relation to the year for which relief is provided will 
+depend on the facts of each case, as well as the nature and timing of the 
+relevant adjustments. 
+71. 
+Where a DTA state provides relief from double taxation in response 
+to a primary adjustment made by the Commissioner, the method of the 
+adjustment and the year to which it relates are matters to be determined by the 
+tax administration of that DTA state. 
+23  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Competent authority communications 
+72. 
+Communications between the competent authorities will usually be 
+through an exchange of position papers.  Information provided by the resident 
+taxpayer will be taken into account in the preparation of the Hong Kong SAR’s 
+position papers. 
+73. 
+Where a case involves significant issues upon which agreement 
+cannot be reached through the exchange of position papers, the competent 
+authorities may meet for negotiations. The taxpayer does not have a right to 
+be present at such negotiations. However, where both competent authorities 
+agree, the taxpayer may personally present its case to the competent authorities 
+jointly. Where the competent authority of a DTA state does not agree to a 
+joint presentation, the taxpayer will nevertheless be given an opportunity to 
+present its case to the Commissioner. 
+74. 
+The Commissioner will endeavour to ensure that communications 
+are undertaken on a timely basis to facilitate resolution of cases as quickly as 
+possible. 
+Taxpayers will be kept informed of the progress by the 
+Commissioner. 
+75. 
+Exchanges of information between competent authorities are 
+undertaken under the Exchange of Information Article of the relevant DTA and 
+will be subject to the secrecy provisions of that Article. 
+Time for resolution of cases 
+76. 
+Specific provisions in a DTA dealing with time limits for 
+implementation of competent authority agreement under the Mutual Agreement 
+Procedure Article take precedence over the normal domestic law time limits 
+that would otherwise apply to the provision of relief from double taxation. 
+The DTAs of the Hong Kong SAR invariably include a provision in the Mutual 
+Agreement Procedure Article which states that any agreement reached shall be 
+implemented notwithstanding any time limits in the domestic laws of the 
+contracting parties. This means that the taxpayer can rest assured that, by 
+presenting a case to the competent authority under the Mutual Agreement 
+Procedure Article, the mere expiration of domestic time limits does not 
+preclude the granting of relief. 
+24  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Interaction between mutual agreement procedure and objection rights under 
+the IRO 
+77. 
+The Mutual Agreement Procedure Article in the DTAs of the Hong 
+Kong SAR provides taxpayers with an avenue for review in addition to the 
+rights: 
+(a)  
+to object to an assessment or a reassessment under section 
+64(1) of the IRO; and 
+(b)  
+to dispute the amount of a tax credit under section 50(9) of the 
+IRO. 
+78. 
+The Commissioner will consider concurrently a case presented to her 
+under the Mutual Agreement Procedure Article and an objection lodged by the 
+taxpayer under the provisions of the IRO. 
+79. 
+Competent authority consideration will cease under a Mutual 
+Agreement Procedure Article where a decision to wholly allow an objection 
+has been made, since there will no longer be taxation that is not in accordance 
+with the DTA. 
+Where competent authority agreement is reached 
+80. 
+An appropriate solution arrived at by both competent authorities may 
+result in the Commissioner either: 
+(a)  
+restoring the taxpayer’s original tax position by withdrawing 
+the primary adjustment; or 
+(b)  
+reducing the primary adjustment with the agreement of the 
+taxpayer. 
+81. 
+Where the primary adjustment is reduced with the agreement of the 
+taxpayer, the terms of the agreement will be recorded in writing and the 
+necessary adjustments will be made in accordance with section 64(3) if a valid 
+objection has been lodged in the first instance.  Where the Commissioner fails 
+25  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+to agree with the taxpayer as to the amount of the primary adjustment, the 
+Commissioner will make a determination under section 64(4). 
+82. 
+Where an assessment or additional assessment challenged by the 
+taxpayer involves a number of issues (e.g. a transfer pricing adjustment in 
+relation to an interest free loan and a profit reallocation adjustment between the 
+head office and its foreign branch), a settlement agreement entered into by the 
+taxpayer with the Commissioner may be limited to those issues resolved 
+mutually by the competent authorities. This means that the taxpayer may still 
+proceed with domestic objection and appeal rights in relation to the issues 
+unresolved through the Mutual Agreement Procedure. 
+Where taxpayer does not agree with competent authority agreement 
+83. 
+Where competent authorities have reached agreement but the 
+taxpayer does not agree with the implementation of the agreement, the taxpayer 
+can continue to seek relief using its domestic objection and appeal rights, if still 
+applicable. The competent authorities generally will not communicate further 
+on the matter. 
+Where competent authority agreement has not been reached 
+84. 
+Where competent authorities have not agreed on an appropriate 
+solution to the case by the time the Commissioner determines an objection 
+under section 64(4), the taxpayer has a right to appeal to Board of Review 
+under section 66 if dissatisfied with the determination.  The continuation or 
+otherwise of endeavours by the competent authorities under the Mutual 
+Agreement Procedure Article during the objection and appeal stages will be 
+considered on a case by case basis. 
+85. 
+Taxpayers should take into account the possibility that endeavours 
+by the competent authorities may cease at the objection and appeal stages. 
+Sufficient time must be made available to the competent authorities to reach 
+agreement to resolve the case, otherwise a taxpayer may have to rely only on 
+the applicable domestic objection and appeal rights (or any rights available 
+under the laws of the other DTA state). 
+26  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+86. 
+The Commissioner would take action to give effect to a decision of 
+the Board of Review or an order of the courts which is either wholly or 
+partially in the taxpayer’s favour. Once a decision of the Board of Review or 
+an order of the courts has been made, the Commissioner will abide by that 
+decision or order. The subsequent endeavours of the Commissioner as the 
+competent authority under a DTA will be limited to demonstrating to the 
+competent authority of the other DTA state that the transfer pricing or profit 
+reallocation adjustment by the Commissioner is in accordance with the DTA in 
+terms of principle and amount, and that relief should be provided by that DTA 
+state. 
+Interaction between mutual agreement procedure and review rights in the 
+other DTA state 
+87. 
+The Mutual Agreement Procedure Article provides a process to 
+resolve problems in addition to any objection, review and appeal rights that 
+may be available to a resident taxpayer or its non-resident associated enterprise 
+under the respective laws of both DTA states. 
+88. 
+The successful exercise of objection, review and appeal rights in the 
+other DTA state may give rise to the result that there is no longer any taxation 
+which is contrary to the DTA. 
+Under these circumstances, it would be 
+inappropriate for the taxpayer to obtain any correlative relief in the Hong Kong 
+SAR. 
+89. 
+Depending upon the circumstances of each case, the provision of any 
+correlative adjustment by the Commissioner will be conditional upon either: 
+(a)  the resident taxpayer and any non-resident associated 
+enterprise having exhausted or rescinded objection, review 
+and appeal rights in the other DTA state; or 
+(b)  
+the resident taxpayer in a transfer pricing adjustment case 
+agreeing to advise the Commissioner should objection, review 
+and appeal rights be exercised by the non-resident associated 
+enterprise in the other DTA state; or 
+27  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(c)  
+the resident taxpayer in a profit reallocation case agreeing to 
+advise the Commissioner should objection, review and appeal 
+rights be exercised in the other DTA state. 
+90. 
+In relation to the situations outlined under (b) or (c) in paragraph 89 
+above, the issue of any revised assessment or the provision of a credit for 
+foreign taxes paid will be deferred until such time as the objection, review and 
+appeal rights in the other DTA state have lapsed or are subsequently rescinded 
+or exhausted. 
+Payment of tax during mutual agreement procedure 
+91. 
+In respect of a case which has been presented to the Commissioner, a 
+taxpayer may apply to hold over under section 71 the profits tax payable if a 
+valid objection under section 64 has been lodged. Each request to hold over 
+the payment of tax under objection will be decided on its merits in accordance 
+with Departmental Interpretation and Practice Notes No. 6. 
+28  

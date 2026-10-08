@@ -1,0 +1,296 @@
+PART 14
+RELIEF AGAINST DOUBLE TAXATION
+48.
+[
+Repealed by Act 27 of 2009
+]
+Avoidance of double taxation arrangements
+49.
+—(1) If the Minister by order declares that arrangements specified in the order have been made with the government of any country outside Singapore with a view to affording relief from double taxation in relation to tax under this Act (including DTT but excluding MTT) and any tax of a similar character imposed by the laws of that country, and that it is expedient that those arrangements should have effect, the arrangements have effect despite anything in any written law.
+[Act 36 of 2024 wef 20/03/2025]
+(2) Any arrangements made with the government of another country —
+(
+a
+)
+may provide for liability to tax by one country and for exemption from tax by the other country;
+(
+b
+)
+may provide for exemption, wholly or partly and with or without conditions, from tax in either or both countries and for any income so exempted to be taken into account in determining the effective rate of tax to be applicable to other income;
+(
+c
+)
+may deem the source of income to be wholly or partly in either or both of such countries; and
+(
+d
+)
+may provide for the charge to tax by the country in which the source is deemed to be situated, of any income derived from such source.
+(2A) In subsection (2)(
+b
+), “effective rate of tax” means the rate of tax as ascertained in accordance with the formula
+where A
+is the tax payable before allowance of credit under any arrangements having effect under this section on B + C computed in accordance with the provisions of this Act;
+B
+is the exempt income; and
+C
+is the other income.
+(3) [
+Deleted by Act 27 of 2009
+]
+(4) Any order made under this section may be revoked by a subsequent order.
+(5) Where any arrangements have effect by virtue of this section, the obligation as to secrecy imposed by section 6 does not prevent the disclosure to any authorised officer of the government with which the arrangements are made of such information as is required to be disclosed under the arrangements.
+(6) The Minister may make rules for carrying out the provisions of any arrangements having effect under this section.
+(7) The Minister may by order amend the provisions of any arrangements that have effect under subsection (1), in order to give effect to Singapore’s obligations under the Multilateral Convention to Implement Tax Treaty Related Measures to Prevent Base Erosion and Profit Shifting done at Paris on 24 November 2016 (as amended from time to time).
+[39/2017]
+(8) Where the provisions of any arrangements that have effect under subsection (1) are amended by an order under subsection (7), then those provisions have effect under subsection (1) as amended by that order.
+[39/2017]
+Tax credits
+50.
+—(1) This section has effect where, under arrangements having effect under section 49, tax payable in respect of any income in the territory with the government of which the arrangements are made is to be allowed as a credit against tax payable in respect of that income in Singapore.
+(1A) To avoid doubt, this section —
+(
+a
+)
+does not apply where the tax payable in respect of income in that territory is an excluded top-up tax; and
+(
+b
+)
+applies where the tax payable in respect of income in that territory is a qualified domestic minimum top-up tax that is payable —
+(i)
+in respect of the income of a permanent establishment in a territory; or
+(ii)
+in the cases in subsections (5)(
+c
+) and (7)(
+a
+), by a company in respect of the profits out of which it pays the dividend.
+[Act 36 of 2024 wef 20/03/2025]
+(2) The amount of the income tax chargeable in respect of the income is reduced by the amount of the credit; except that credit is not allowed against income tax for any year of assessment unless the person entitled to the income is resident in Singapore during that year.
+(3) The credit must not exceed the amount which would be produced by computing the amount of the income in accordance with the provisions of this Act and then charging it to income tax at a rate ascertained by dividing the income tax chargeable (before allowance of credit under any arrangements having effect under section 49) on the assessable income of the person entitled to the income by the amount of the person’s assessable income.
+(4) Without limiting subsection (3), the total credit to be allowed to a person for any year of assessment for foreign tax under all arrangements having effect under section 49 must not exceed the total income tax payable by the person for that year of assessment, excluding any tax payable by the person under section 45.
+(5) In computing the amount of the income —
+(
+a
+)
+no deduction is allowed in respect of foreign tax (whether in respect of the same or any other income);
+(
+b
+)
+where the income tax chargeable depends on the amount received in Singapore, that amount is to be increased by the appropriate amount of the foreign tax in respect of the income; and
+(
+c
+)
+where the income includes a dividend and under the arrangements foreign tax not chargeable directly or by deduction in respect of the dividend is to be taken into account in considering whether any (and if so what) credit is to be given against income tax in respect of the dividend, the amount of the income is to be increased by the amount of the foreign tax not so chargeable that falls to be taken into account in computing the amount of the credit.
+(6) Subsection (5)(
+a
+) and (
+b
+) applies to the computation of assessable income for the purposes of determining the rate mentioned in subsection (3), and applies to such computation in relation to all income in the case of which credit falls to be given for foreign tax under arrangements for the time being in force under section 49.
+(7) Where —
+(
+a
+)
+the arrangements provide, in relation to dividends of some classes, but not in relation to dividends of other classes, that foreign tax not chargeable directly or by deduction in respect of dividends is to be taken into account in considering whether any (and if so what) credit is to be given against income tax in respect of the dividends; and
+(
+b
+)
+a dividend is paid that is not of a class in relation to which the arrangements so provide,
+then, if the dividend is paid to a company which controls, directly or indirectly, not less than one‑half of the voting power in the company paying the dividend, credit is to be allowed as if the dividend were a dividend of a class in relation to which the arrangements so provide.
+(8) Credit is not allowed under the arrangements against income tax chargeable in respect of the income of any person for any year of assessment if the person elects that credit is not to be allowed in the case of the person’s income for that year.
+(9) Any claim for an allowance by way of credit must be made not later than 2 years after the end of the year of assessment to which the claim relates (if the year of assessment is the year of assessment 2021 or a previous year of assessment), or 4 years after the end of the year of assessment to which the claim relates (if the year of assessment is any other year of assessment), and in the event of any dispute as to the amount allowable the claim is subject to objection and appeal in like manner as an assessment.
+[27/2021]
+(10) Where the amount of any credit given under the arrangements is rendered excessive or insufficient by reason of any adjustment of the amount of any tax payable either in Singapore or elsewhere, nothing in this Act limiting the time for the making of assessments or claims for relief applies to any assessment or claim to which the adjustment gives rise, being an assessment or claim made not later than 3 years from the time when all such assessments, adjustments and other determinations have been made, whether in Singapore or elsewhere, as are material in determining whether any (and if so what) credit falls to be given.
+[27/2021]
+(11) If the amount of any credit given under the arrangements to a person is rendered excessive by reason of any adjustment of the amount of any tax payable in any territory outside Singapore, the person must give the Comptroller a written notice of the particulars of the adjustment, in the manner specified by the Comptroller, within one year after the adjustment is made.
+[27/2021]
+(11A) Any person who, without reasonable excuse, fails to comply with subsection (11) shall be guilty of an offence and shall be liable on conviction to a penalty not exceeding the amount of the excess credit under subsection (11).
+[27/2021]
+(11B) The Comptroller may compound any offence under subsection (11A).
+[27/2021]
+(12) In this section —
+“foreign tax” means any tax payable in that territory which under the arrangements is to be so allowed;
+“income tax” means tax chargeable under this Act.
+Unilateral tax credits
+50A.
+—(1) Even if there are no arrangements in force under section 49 with the government of any territory outside Singapore, tax credit under section 50 must, subject to this section, be given to any person resident in Singapore for tax payable under the law of that territory in respect of —
+(
+a
+)
+any income derived from any professional, consultancy and other services rendered in that territory;
+(
+b
+)
+any royalty derived from that territory, where the payment is not —
+(i)
+borne, directly or indirectly, by a person resident in Singapore or a permanent establishment in Singapore (except in respect of any business carried on outside Singapore through a permanent establishment outside Singapore); or
+(ii)
+deductible against any income accruing in or derived from Singapore;
+(
+c
+)
+any dividend derived from that territory;
+(
+d
+)
+any income from employment in that territory;
+(
+e
+)
+any profit derived from outside Singapore by a branch in that territory of a company resident in Singapore;
+(
+f
+)
+any income derived from any trade or business carried on in that territory through a permanent establishment in that territory;
+(
+g
+)
+any discount or premium from debt securities or interest derived from that territory where the payment is not —
+(i)
+borne, directly or indirectly, by a person resident in Singapore or a permanent establishment in Singapore (except in respect of any business carried on outside Singapore through a permanent establishment outside Singapore); or
+(ii)
+deductible against any income accruing in or derived from Singapore;
+(
+h
+)
+any rent or other income ancillary to the holding of immovable properties located in that territory but not including gains from the disposal of such immovable properties derived from a trade or business carried on in Singapore;
+[Act 30 of 2023 wef 01/01/2024]
+(
+ha
+)
+any gains treated as income under section 10L; and
+[Act 30 of 2023 wef 01/01/2024]
+(
+i
+)
+any gains or profits of an income nature not falling within any of the preceding paragraphs that is derived from that territory.
+(1A) To avoid doubt, this section —
+(
+a
+)
+does not apply where the tax payable in respect of income in that territory is excluded top-up tax; and
+(
+b
+)
+applies where the tax payable in respect of income in that territory is a qualified domestic minimum top-up tax that is payable —
+(i)
+in respect of the income of a permanent establishment in a territory; or
+(ii)
+in the cases in subsections (2) and (3), by a company in respect of the profits out of which it pays the dividend.
+[Act 36 of 2024 wef 20/03/2025]
+(2) Where any dividend in respect of which tax credit is given under subsection (1)(
+c
+) is paid by a company which is resident outside Singapore to a person resident in Singapore who owns not less than 25% of the total number of issued shares of the company paying the dividend, the tax credit must take into account any tax paid by that company in the country in which it is resident in respect of its income out of which the dividend is paid.
+(3) Where under arrangements for the time being in force under section 49 with the government of any territory outside Singapore no provision is made for tax credit in respect of income out of which any dividend is paid by a company resident in that territory, tax credit under section 50 in respect of such income must be given to any person resident in Singapore who owns not less than 25% of the total number of issued shares of the company paying the dividend.
+(4) Section 50 applies, with the necessary modifications, for the purposes of this section as if any territory to which this section and the regulations have effect were a territory with which arrangements have been made under section 49.
+(5) Any person granted any tax credit under subsection (1) on any income must not be given any tax credit under section 50 in respect of that income.
+(6) The Minister may, in any particular case, waive the requirement of 25% share ownership mentioned in subsections (2) and (3).
+(7) In this section, “debt securities” has the meaning given by section 43H(4).
+Tax credits for trust income to which beneficiary is entitled
+50B.
+—(1) Where —
+(
+a
+)
+a trustee of a trust receives income in Singapore from outside Singapore (called in this section the income) for which a tax credit is allowable under this Part against the tax payable in respect of the income; and
+(
+b
+)
+any beneficiary of the trust who is resident in Singapore is entitled to a share of the income,
+the tax credit in respect of that share must be given to the beneficiary instead of the trustee.
+(2) The tax credit to be given to a beneficiary under subsection (1) is computed in accordance with section 50 or 50A (as the case may be) as if the income had been received directly by the beneficiary rather than the trustee.
+(3) This section does not apply to —
+(
+a
+)
+any income of a real estate investment trust within the meaning of section 43(10);
+(
+b
+)
+any income of a designated unit trust within the meaning of section 35(14);
+(
+c
+)
+[
+Deleted by Act 37 of 2014
+]
+(
+d
+)
+any income of a trust fund prescribed under section 13C;
+(
+e
+)
+any income of a foreign trust specified under section 13F;
+(
+f
+)
+any income of a locally‑administered trust prescribed under section 13N;
+(
+g
+)
+any income of a trust the trustee of which is a prescribed person under section 13D; or
+(
+h
+)
+any income of an approved trust fund referred to in the definition of “approved person” under section 13U(5), or of a trust fund that is a feeder fund or master fund approved under section 13U.
+[37/2014]
+Tax credits for estate income received by beneficiary, etc.
+50BA.
+—(1) Where an executor of an estate administered in Singapore receives income in Singapore from outside Singapore (called in this section the income) for which a tax credit is allowable under this Part against the tax payable in respect of the income, and any share of the income is —
+(
+a
+)
+received by or distributed to a beneficiary who is resident in Singapore; or
+(
+b
+)
+applied to the benefit of such beneficiary,
+the tax credit in respect of that share must be given to the beneficiary instead of the executor.
+(2) The tax credit to be given to a beneficiary under subsection (1) is computed in accordance with section 50 or 50A (as the case may be) as if the share of the income had been received in Singapore directly by the beneficiary rather than the executor of the estate.
+[Act 30 of 2023 wef 30/10/2023]
+Pooling of credits
+50C.
+—(1) Where, for the year of assessment 2012 or a subsequent year of assessment, a person is entitled to 2 or more tax credits under any other provision of this Part, the person may elect to be given a pooled credit for that year of assessment in lieu of any 2 or more of those credits (called in this section the replaced credits).
+(2) Subsection (1) only applies if the income that is the subject of each replaced credit (called in this section the elected income) satisfies all of the following conditions:
+(
+a
+)
+tax under the law of the territory from which the income is derived that is of a similar character to income tax (by whatever name called) or qualified domestic minimum top‑up tax (but disregarding any excluded top‑up tax), has been paid on the income;
+[Act 36 of 2024 wef 20/03/2025]
+(
+b
+)
+at the time the income is received in Singapore by the person, the highest rate of tax of a similar character to income tax (by whatever name called) (but disregarding any excluded top‑up tax or qualified domestic minimum top‑up tax), levied under the law of that territory on any gains or profits from any trade or business carried on by a company in that territory at that time, is not less than 15%;
+[Act 36 of 2024 wef 20/03/2025]
+(
+c
+)
+the income tax payable under this Act on the income for the year of assessment (before allowance of any credit under this Part) is not nil.
+(3) The total amount of the income tax chargeable to the person in respect of all the elected income is reduced by the amount of the pooled credit.
+(4) The amount of the pooled credit is the lower of —
+(
+a
+)
+the aggregate of the income tax chargeable for the year of assessment on all the elected income; and
+(
+b
+)
+the aggregate of the taxes paid on all the elected income in the territory or territories outside Singapore from which the elected income is derived.
+(5) In subsection (4)(
+a
+), the aggregate of the income tax chargeable for the year of assessment on all the elected income is ascertained by —
+(
+a
+)
+computing the amount of the income that is the subject of each replaced credit in accordance with the provisions of this Act, and then charging it to income tax at a rate ascertained by dividing the income tax chargeable (before allowance of any credit under this Part) on the assessable income of the person by the amount of the person’s assessable income; and
+(
+b
+)
+aggregating the amounts computed in accordance with paragraph (
+a
+) of all the replaced credits.
+(6) Sections 50(5), (6), (9), (10), (11), (11A), (11B) and (12), 50A(2), 50B(2) and 50BA(2) apply, with the necessary modifications, for the purposes of this section.
+[32/2019; 27/2021]
+[Act 30 of 2023 wef 30/10/2023]
+(7) To avoid doubt, sections 50, 50A, 50B and 50BA (as applicable) continue to apply to any income that is the subject of a credit allowed under any other provision of this Part for which no election under this section is made.
+[Act 30 of 2023 wef 30/10/2023]

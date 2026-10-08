@@ -1,0 +1,424 @@
+PART 21
+MISCELLANEOUS
+Revocation of approval
+105R.
+—(1) This section applies where —
+(
+a
+)
+either —
+(i)
+a person is approved by the Minister, an authorised body or a person appointed by the Minister (called in this subsection the approving authority) under a prescribed section for a tax incentive to be applied to the person’s income under that provision or regulations made under that provision; or
+[Act 41 of 2020 wef 06/12/2022]
+(ii)
+a matter is approved by an approving authority under a prescribed section for a tax incentive to be applied to a person’s income under that provision or regulations made under that provision; and
+(
+b
+)
+the person fails to comply with a condition of the approval.
+[32/2019]
+(2) The approving authority may, by written notice, require the person to show cause, within 30 days after the date the notice is served on the person or such longer period as the approving authority may permit in a particular case, why the approval should not be revoked.
+[32/2019]
+(3) If the approving authority is satisfied, having regard to the person’s representation and all the relevant circumstances of the case, that it is just and reasonable to do so, the approving authority may revoke the approval, and the revocation is effective from a date specified by the approving authority to the person.
+[32/2019]
+(4) The approving authority may specify any date for the revocation to take effect, including (if it is just and reasonable to do so) —
+(
+a
+)
+a date before the date of the non‑compliance with the condition; or
+(
+b
+)
+if the condition is to be complied with over a period of time, before the date of commencement of that period.
+[32/2019]
+(5) The revocation of an approval under this section does not affect the operation of any provision of this Act providing for other consequences for a breach of a condition of the approval.
+[32/2019]
+(6) To avoid doubt, where —
+(
+a
+)
+a tax incentive has been applied to any income of the person under a prescribed section, or an order under section 13(12);
+(
+b
+)
+the tax incentive would not have been applied to the person’s income if the person or matter were not an approved person or matter under the prescribed section on the date the relevant income accrued to or was derived or received by the person, or the relevant expenditure was incurred by the person, as the case may be; and
+(
+c
+)
+the approval is revoked under this section with effect from or before that date,
+the Comptroller may make an assessment or additional assessment under section 74 on the person.
+[32/2019]
+(7) This section applies to an approval given under a prescribed section whether before, on or after 2 December 2019.
+[32/2019]
+(8) In this section —
+(
+a
+)
+a prescribed section is a section of the Act specified in the Fourth Schedule;
+(
+b
+)
+a tax incentive is any of the following:
+(i)
+an exemption from tax;
+(ii)
+a concessionary rate of tax;
+(iii)
+a deduction or an allowance;
+(iv)
+a reduction of the statutory income of a person;
+(
+c
+)
+a tax incentive that is an exemption from tax is applied to a person’s income if any income of the person becomes exempt from tax;
+(
+d
+)
+a tax incentive that is a concessionary rate of tax is applied to a person’s income if tax is levied on any income of the person at that rate;
+(
+e
+)
+a tax incentive that is a deduction or an allowance is applied to a person’s income if it is allowed or made for any expenditure in ascertaining the person’s chargeable income; and
+(
+f
+)
+a tax incentive that is a reduction of the statutory income of a person is applied to a person’s income if such reduction is made to the person’s statutory income.
+[32/2019]
+Conditions for application of tax incentive treated as conditions of approval
+105S.
+—(1) This section applies to each of the following approvals made before 2 December 2019:
+(
+a
+)
+an approval of a Finance and Treasury Centre of a company under section 43E for tax at a concessionary rate to be levied on the company’s income under regulations made under that section;
+(
+b
+)
+an approval of a person under section 43I, 43J, 43K, 43L, 43N, 43O, 43Q, 43R or 43S, for tax at a concessionary rate to be levied on the person’s income under that section or regulations made under that section, as the case may be.
+[32/2019]
+(2) For the purposes of section 105R, every condition imposed or specified before the date mentioned in subsection (1) under section 43G(2), 43P(2), 43Q(2), 43R(2), 43W(3), 43Y(2), 43Z(3), 43ZB(3), 43ZC(3) or 43ZD(3) of this Act as in force immediately before that date, in relation to a Finance and Treasury Centre or person, is treated as a condition imposed on the approval of the Finance and Treasury Centre or person (as the case may be) under the corresponding section mentioned in subsection (1).
+[32/2019]
+(3) In this section, “Finance and Treasury Centre” has the meaning given by section 43E.
+[32/2019]
+Powers to amend Schedules
+106.
+—(1) Parliament may, by resolution, add to, vary or revoke the whole or any part of any Schedule.
+(2) Parliament may, by resolution, exempt any person or class of persons from all or any of the provisions of this Act.
+(3) The Minister may, by order in the
+Gazette
+, amend, add to or revoke the whole or any part of the First, Fourth, Sixth, Seventh, Eighth, Ninth, Tenth, Eleventh and Twelfth Schedules.
+[45/2018; 32/2019; 41/2020]
+[Act 33 of 2022 wef 04/11/2022]
+[Act 35 of 2024 wef 27/11/2024]
+Variable capital companies or VCCs
+107.
+—(1) For the purposes of this Act, and subject to the modifications in this section and the rules under subsection (30), a reference to a company in this Act and the subsidiary legislation made under it includes a VCC.
+[28/2019]
+(2) Accordingly, a reference to a body of persons (by reason of it being defined in section 2(1) as excluding a company) excludes a VCC.
+[28/2019]
+Chargeable or exempt income of umbrella VCC
+(3) Subject to the modifications in this section and the rules under subsection (30), a reference in this Act and the subsidiary legislation made under it to the chargeable income or exempt income of a person that is an umbrella VCC is to the total of the chargeable income or exempt income (as the case may be) of each of its sub‑funds.
+[28/2019]
+(4) For the purpose of determining the chargeable income or exempt income of a sub‑fund under subsection (3), the provisions of this Act and the subsidiary legislation made under it (as modified by subsection (1)) apply as if each sub‑fund were a VCC, with the following modifications:
+(
+a
+)
+a reference to a trade or business carried on by a VCC is to a trade or business carried on by the umbrella VCC in relation to the sub‑fund;
+(
+b
+)
+a reference to income derived or received by a VCC is to income derived or received by the umbrella VCC in relation to the sub‑fund (called in this section income of a sub‑fund);
+(
+c
+)
+a reference to any outgoing or expense incurred by a VCC in producing income is to either or both of the following (called in this section an expense of a sub‑fund):
+(i)
+any outgoing or expense incurred in producing income of the sub‑fund;
+(ii)
+the amount of any outgoing or expense allocated to the sub‑fund by the umbrella VCC in accordance with section 29(3) of the VCC Act;
+(
+d
+)
+a reference to any capital expenditure incurred by a VCC for the purpose of a trade or business is to either or both of the following (called in this section a capital expenditure of a sub‑fund):
+(i)
+any capital expenditure incurred for the purpose of a trade or business carried on by the umbrella VCC in relation to the sub‑fund;
+(ii)
+the amount of any capital expenditure allocated to the sub‑fund by the umbrella VCC in accordance with section 29(3) of the VCC Act;
+(
+e
+)
+a reference to any loss incurred by a VCC in carrying on a trade or business is to any loss incurred by the umbrella VCC in carrying on a trade or business in relation to the sub‑fund (called in this section a loss of a sub‑fund);
+(
+f
+)
+a reference to a donation made by a VCC is to a donation made by the umbrella VCC for the purpose of the sub‑fund (called in this section a donation of a sub‑fund);
+(
+g
+)
+a reference to a payment or distribution made to a VCC is to a payment or distribution made to the umbrella VCC for the sub‑fund;
+(
+h
+)
+a reference in sections 23, 37 and 37D to shareholders of a VCC is to holders of shares of the umbrella VCC in respect of the sub‑fund;
+(
+i
+)
+a sub‑fund is resident in Singapore if its umbrella VCC is resident in Singapore, and a sub‑fund is resident outside Singapore if its umbrella VCC is resident outside Singapore.
+[28/2019]
+(5) Subsection (4) does not apply to any provision of this Act that is replaced with another provision under this section for the purpose of subsection (3).
+[28/2019]
+(6) To avoid doubt —
+(
+a
+)
+the umbrella VCC is not entitled to any further deduction for any expense, capital expenditure, loss or donation of a sub‑fund taken into account in determining the chargeable income or exempt income of the sub‑fund; and
+(
+b
+)
+any expense, capital expenditure, loss or donation of a sub‑fund is not available for deduction against the income of another sub‑fund or any other income of the umbrella VCC.
+[28/2019]
+(7) Each part of the chargeable income of an umbrella VCC that is chargeable income of a sub‑fund is subject to tax at the rate to which that part would have been subject had the sub‑fund been a VCC.
+[28/2019]
+Segregated liabilities of sub‑funds
+(8) The amount of any tax attributable to any part of the chargeable income of an umbrella VCC that is chargeable income of a sub‑fund, together with any interest or penalty imposed under section 85(2) or 87 in respect of such amount, is considered (for the purpose of section 29 of the VCC Act) liability incurred by the umbrella VCC for the purpose of the sub‑fund.
+[28/2019]
+(9) Any fine or penalty imposed on, or composition sum that may be paid by, an umbrella VCC for an offence under this Act that is committed in respect of any information or other matter concerning a sub‑fund, is considered (for the purpose of section 29 of the VCC Act) liability incurred by the umbrella VCC for the purpose of the sub‑fund.
+[28/2019]
+(10) Any fine or penalty imposed on, or composition sum that may be paid by, an umbrella VCC for an offence under this Act and to which subsection (9) does not apply, is considered (for the purpose of section 29 of the VCC Act) liability incurred by the umbrella VCC for the purpose of all of its sub‑funds.
+[28/2019]
+Deductions not allowed
+(11) A VCC may not be allowed any deduction under sections 14A, 14B, 14C, 14D, 14E, 14EA, 14EB, 14F, 14G, 14H, 14I, 14J, 14K, 14L, 14M, 14MA, 14N, 14S, 14U, 14Z, 14ZG and 37O (including the subsidiary legislation made under them, where applicable) and accordingly may not be approved (where applicable) under them.
+[28/2019; 41/2020]
+[Act 30 of 2023 wef 30/10/2023]
+[Act 25 of 2025 wef 19/02/2025]
+[Act 25 of 2025 wef 08/12/2025]
+(12) Despite subsection (1), no transfer of any deduction may be made under section 37B —
+(
+a
+)
+by a VCC to any claimant company or VCC of the same group; or
+(
+b
+)
+by a transferor company to any VCC of the same group.
+[28/2019]
+Application of section 13G
+(12A) Section 13G and the regulations made under it apply for the purpose of determining the exempt income of a sub‑fund under subsection (3) as if it were an approved venture company under that section if the umbrella VCC of the sub‑fund is approved for the purpose of that section.
+[41/2020]
+Application of sections 13O and 13U
+(13) Section 13O and the regulations made under it apply for the purpose of determining the exempt income of a sub‑fund under subsection (3) as if it were an approved company under that section if the umbrella VCC of the sub‑fund is approved for the purpose of that section.
+[28/2019]
+(14) Where the relevant owner mentioned in section 13O(3) is an umbrella VCC, the amount of any financial penalty under that provision that it is liable for is considered (for the purpose of section 29 of the VCC Act) liability incurred by it for the purpose of its sub‑funds, and the amount of such liability in relation to each sub‑fund is computed in accordance with the formula
+where —
+(
+a
+)
+A is the total value of issued securities held by the umbrella VCC for the sub‑fund on the relevant day as defined in section 13O(8);
+(
+b
+)
+B is the total value of all the issued securities held by the umbrella VCC for all its sub‑funds on the relevant day as defined in section 13O(8); and
+(
+c
+)
+C is the amount of the penalty.
+[28/2019]
+(15) Section 13U and the regulations made under it apply for the purpose of determining the exempt income of a sub‑fund under subsection (3) as if it were —
+(
+a
+)
+an approved person under that section;
+(
+b
+)
+the approved master fund of an approved master fund‑SPV structure, master‑feeder fund‑SPV structure or master‑feeder fund structure under that section; or
+(
+c
+)
+an approved feeder fund of an approved master‑feeder fund‑SPV structure or master‑feeder fund structure under that section,
+if its umbrella VCC is approved by the Minister or an authorised body for the purpose of that section.
+[28/2019]
+[Act 41 of 2020 wef 06/12/2022]
+(16) The amount of any tax recoverable from the umbrella VCC under the regulations made under section 13U that is attributable to any income of a sub‑fund, is considered (for the purpose of section 29 of the VCC Act) liability incurred by the umbrella VCC for the purpose of the sub‑fund.
+[28/2019]
+Application of section 13W
+(17) Section 13W in Part 1 of the Third Schedule applies in place of section 13W for the purpose of determining the exempt income of a sub‑fund under subsection (3) from the disposal of —
+(
+a
+)
+ordinary shares or preference shares (or both) in a company (other than a VCC); or
+[Act 25 of 2025 wef 08/12/2025]
+(
+b
+)
+ordinary shares in a VCC (called in this subsection and subsection (18) VCC
+X
+).
+[28/2019]
+(18) Where VCC
+X
+is an umbrella VCC, section 13W in Part 1 of the Third Schedule applies for the purpose of determining the exempt income of a sub‑fund under subsection (3) with the following further modifications:
+(
+a
+)
+the section is to be applied in relation to the disposal of ordinary shares of VCC
+X
+in respect of each sub‑fund as if VCC
+X
+only has that one sub‑fund;
+(
+b
+)
+accordingly, a reference in the section to the legal and beneficial ownership of any ordinary shares in a VCC is to the legal and beneficial ownership of ordinary shares in VCC
+X
+in respect of that sub‑fund.
+[28/2019]
+(18A) Section 13W(1A) applies for the purpose of determining the exempt income of a company (including a non‑umbrella VCC but excluding an umbrella VCC) from the disposal of shares in a VCC (whether or not an umbrella VCC) (called
+X
+) with the following modifications:
+(
+a
+)
+all references to preference shares in
+X
+are omitted;
+(
+b
+)
+the reference in section 13W(1A)(
+b
+)(ii) to the paid‑up share capital of ordinary shares and preference shares in
+X
+is to the paid‑up share capital of ordinary shares in
+X
+.
+[Act 25 of 2025 wef 08/12/2025]
+(19) Section 13W applies for the purpose of determining the exempt income of a company (including a non‑umbrella VCC but excluding an umbrella VCC) from the disposal of ordinary shares in an umbrella VCC with the following modifications:
+(
+a
+)
+the section is to be applied in relation to the disposal of ordinary shares of the umbrella VCC in respect of each sub‑fund as if the umbrella VCC only has that one sub‑fund;
+(
+b
+)
+accordingly, a reference in that section to the legal and beneficial ownership of any ordinary shares in a VCC is to the legal and beneficial ownership of ordinary shares in the umbrella VCC in respect of that sub‑fund.
+[28/2019]
+(20) In subsections (17), (18) and (19), “ordinary share”, in relation to a VCC, means any share other than a share that carries only a right to any dividend which is —
+(
+a
+)
+of a fixed amount or at a fixed rate per cent of the value of the share; or
+(
+b
+)
+either —
+(i)
+where the VCC is a non‑umbrella VCC, of a fixed rate per cent of the profits of the non‑umbrella VCC; or
+(ii)
+where the VCC is an umbrella VCC, of a fixed rate per cent of the profits of the umbrella VCC in relation to the sub‑fund in respect of which the share was issued.
+[28/2019]
+(20A) For the purposes of subsection (17A) —
+“applicable accounting principles”, in relation to a company, means —
+(
+a
+)
+the accounting principles adopted by the company; or
+(
+b
+)
+if the company is not required to comply with any accounting principles in preparing its financial statements — the International Financial Reporting Standards;
+“preference shares”, in relation to a company, means only preference shares that are accounted for as equity by the company under the applicable accounting principles.
+[Act 25 of 2025 wef 08/12/2025]
+Application of sections 34D, 34E and 34F
+(21) Section 34D applies for the purpose of determining the chargeable income or exempt income of a sub‑fund under subsection (3), and section 34E applies for the recovery of any surcharge resulting from any adjustment by the Comptroller under section 34D as applied by this subsection, subject to the following modifications:
+(
+a
+)
+a sub‑fund is treated as a person;
+(
+b
+)
+a person is related to a sub‑fund if it is related to the sub‑fund in such manner as may be prescribed by rules made under section 7.
+[28/2019]
+(22) Any surcharge under section 34E as applied by subsection (21) is recoverable from the umbrella VCC and constitutes a liability incurred by the umbrella VCC for the purpose of the sub‑fund concerned for the purpose of section 29 of the VCC Act.
+[28/2019]
+(23) Section 34F applies to an umbrella VCC —
+(
+a
+)
+as if a reference to the gross revenue of a company is to the gross revenue of any of its sub‑funds; and
+(
+b
+)
+as if a reference to a transaction undertaken by a company with a related party is to a transaction undertaken by the umbrella VCC for the purpose of any of its sub‑funds with any person that is related to the sub‑fund in such manner as may be prescribed by rules made under section 7.
+[28/2019]
+Application of sections 34G and 34H
+(24) Sections 34G and 34H apply to a body corporate incorporated outside Singapore that is a non‑umbrella VCC registered as a VCC under Part 12 of the VCC Act, as they apply to a redomiciled company as defined in section 34G, subject to the following modifications:
+(
+a
+)
+a reference to the registration date of a redomiciled company or an approved redomiciled company is to the date of registration of the VCC specified in the notice of transfer of registration issued to it under section 135(3) of the VCC Act;
+(
+b
+)
+a reference to the place of incorporation of an approved redomiciled company is to the jurisdiction where the VCC was domiciled at the time it applied for registration under Part 12 of the VCC Act;
+(
+c
+)
+section 34G(9) does not apply except in respect of section 14R;
+(
+d
+)
+section 34G(20A), (20B) and (20C) does not apply.
+[28/2019]
+(25) Section 34G in Part 2 of the Third Schedule applies in place of section 34G for the purpose of determining under subsection (3) the chargeable income or exempt income of a sub‑fund of a body corporate incorporated outside Singapore that is registered as a VCC under Part 12 of the VCC Act and that is an umbrella VCC (called in this section a redomiciled umbrella VCC).
+[28/2019]
+(26) Section 34H in Part 2 of the Third Schedule applies in place of section 34H for the purpose of determining the tax credits for a redomiciled umbrella VCC.
+[28/2019]
+Application of sections 45, 45A, 45AA, 45B, 45D and 45F
+(27) Where —
+(
+a
+)
+section 45, 45A, 45AA, 45D or 45F applies to any payment by an umbrella VCC for the purpose of a sub‑fund; or
+(
+b
+)
+section 45B applies to any remuneration payable by an umbrella VCC to a director of the VCC that is allocated by the VCC to a sub‑fund,
+any resulting debt mentioned in that section (including, where applicable, section 45 as applied by that section), together with any penalty or fine imposed on the VCC, or composition sum that may be paid by the VCC, for an offence under that section (including, where applicable, section 45 as applied by that section), that is committed in relation to such income is considered (for the purpose of section 29 of the VCC Act) liability incurred by the VCC for the purpose of the sub‑fund.
+[28/2019]
+Application of sections 50, 50A, 50C, 92J and 92L
+(28) Sections 50, 50A and 50C in Part 3 of the Third Schedule apply in place of sections 50, 50A and 50C respectively, in a case where the income in question is that of an umbrella VCC.
+[28/2019]
+[Act 35 of 2024 wef 16/02/2024]
+[Act 25 of 2025 wef 08/12/2025]
+(28A) Section 92J or 92L applies as if the definitions of “employee” and “local employee” in section 92J(7) or 92L(7) (as the case may be) were replaced by the following definition:
+“local employee”, in relation to a VCC, means an individual —
+(
+a
+)
+who is a Singapore citizen or a Singapore permanent resident; and
+(
+b
+)
+who is an employee of the VCC for any period in the calendar year 2023 (for the purposes of section 92J) or 2024 (for the purposes of section 92L) and is on the payroll of the VCC for that period,
+[Act 25 of 2025 wef 08/12/2025]
+but excludes an individual who is also a director of the VCC and a holder of shares of the VCC or (if the VCC is an umbrella VCC) any of the sub-funds of the VCC.
+[Act 35 of 2024 wef 16/02/2024]
+[Act 25 of 2025 wef 08/12/2025]
+Miscellaneous
+(29) Rules made for the purposes mentioned in subsections (21)(
+b
+) and (23)(
+b
+) may make different provisions for different circumstances.
+[28/2019]
+(30) The Minister may, for a period of 2 years starting on the date of commencement of the Variable Capital Companies (Miscellaneous Amendments) Act 2019, make rules to prescribe further modifications to any provision of this Act in its application to a VCC, an umbrella VCC or a sub‑fund of an umbrella VCC.
+[28/2019]
+Advance rulings
+108.
+—(1) The Comptroller may, on an application made by a person in accordance with Part 1 of the Seventh Schedule, make a ruling on any of the matters specified in that Part in accordance with that Part.
+(2) Part 1 of the Seventh Schedule applies to and in connection with an application under subsection (1) and any ruling made by the Comptroller under that subsection.
+(3) The fees specified in Part 2 of the Seventh Schedule are payable to and retained by the Authority in respect of any application under subsection (1).
+(4) The Authority may, in exceptional circumstances in its discretion, waive in whole or in part any fee payable by an applicant under subsection (3).
+(5) In this section, “Authority” means the Inland Revenue Authority of Singapore established under section 3 of the Inland Revenue Authority of Singapore Act 1992.

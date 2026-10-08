@@ -1,0 +1,105 @@
+Companies may claim foreign tax credit for tax paid in a foreign jurisdiction against the Singapore tax payable on the same income.
+On this page:
+What is Foreign Tax Credit
+Foreign income earned by your Singapore company may be subject to taxation twice - once in the foreign jurisdiction, and a second time when the foreign income is remitted into Singapore. There are 2 types of foreign tax credit (FTC) that your Singapore company
+may enjoy to alleviate the double taxation suffered.
+Double Tax Relief (DTR)
+A DTR is the relief provided for under an
+Avoidance of Double Taxation Agreement (DTA)
+to reduce double taxation, in the form of a tax credit. It allows the
+Singapore tax resident
+to claim a credit for the amount of tax paid in the foreign jurisdiction against the Singapore tax that is payable on the same income.
+A DTR will be granted only if the foreign tax is paid in accordance
+with the DTA provisions. The DTR is capped at the lower of the foreign tax paid and the Singapore tax that would have been payable on the same income.
+If the foreign tax paid is not in accordance with the DTA provisions, your company should not make a claim for DTR but to seek a refund of the foreign tax paid from the relevant foreign tax authority. Any claim for DTR where the foreign tax paid is not in accordance with the DTA provisions will be denied.
+If your company considers that the DTA provisions were not applied correctly, your company may consider seeking resolution via domestic remedies and/or initiating a
+Mutual Agreement Procedure (MAP)
+within the timeframe stipulated in the applicable DTA, to seek resolution on the disputed issues.
+Unilateral Tax Credit (UTC)
+A UTC will be granted on all foreign-sourced income received in Singapore by Singapore tax residents from jurisdictions that do not have DTAs with Singapore.
+Qualifying Conditions
+Your company must satisfy all of the following conditions in order to claim foreign tax credit:
+Your company is a
+tax resident of Singapore
+for the relevant basis year;
+Tax has been paid or is payable on the same income in the foreign jurisdiction; and
+The income is subject to taxation in Singapore.
+Companies in Loss Position
+No foreign tax credit will be given to a company in a loss position.
+Companies with Permanent Establishments Overseas
+When a company has a permanent establishment (PE) overseas and the income is derived through that PE, the income is generally taxed overseas. A foreign tax credit will be granted only if the income is also taxed in Singapore.
+Companies Deriving Passive Income
+Passive income (e.g. interest, dividend) derived from outside Singapore is generally taxed overseas in the year of receipt. Such income is taxed in Singapore in the year of remittance. A foreign tax credit will be given when the income is taxed in Singapore.
+How to Calculate Foreign Tax Credit
+Foreign tax credit is the lower of:
+The actual amount of foreign tax paid; or
+The amount of Singapore tax attributable to the foreign income (net of expenses).
+If your company is claiming DTR, the amount of foreign tax credit to be claimed is also subject to the specific terms and conditions as specified in the DTA with the relevant DTA partner.
+Computing the Singapore Tax Attributable to the Foreign Income
+The amount of foreign tax credit granted should be computed on a 'source-by-source and country-by-country' basis. Please also note that the computation method differs depending on whether the income is trade income or passive income. You may refer to our
+worked example on computing foreign tax credit on a 'source-by-source and country-by-country' basis
+(PDF, 92KB).
+Alternatively, your company may elect for the
+foreign tax credit pooling system
+whereby foreign tax credit on various foreign income may be pooled together and need not be computed on the above basis.
+How to Claim Foreign Tax Credit
+The claim for foreign tax credit should be made when your company files its Corporate Income Tax Return (Form C). Companies claiming foreign tax credit cannot use Form C-S or Form C-S (Lite).
+Your company does not need to file any supporting documents with the Form C. It must, however, keep the
+supporting documents
+such as copies of the foreign withholding tax receipts, service/ licence agreements or copies of PE's returns and submit these to IRAS upon request.
+[NEW!]
+Learn more about
+making a FTC claim
+(PDF, 64KB).
+Foreign Tax Credit Pooling System
+The foreign tax credit pooling system gives businesses greater flexibility in foreign tax credit claims, reduces their Singapore taxes payable on remitted foreign income and simplifies tax compliance.
+Singapore tax residents may elect for the foreign tax credit pooling system when claiming foreign tax credit on income for which they have paid foreign tax.
+Under the pooling system, foreign tax credit is the lower of:
+The actual amount of pooled foreign tax paid on the foreign income under pooling; or
+The total amount of Singapore tax attributable to the same pool of foreign income (net of expenses).
+You may refer to our
+worked example on computing foreign tax credit under the pooling system
+(PDF, 135KB).
+Qualifying Conditions
+Your company must satisfy all of the following conditions to qualify for the foreign tax credit pooling system:
+Foreign income tax has been paid on the income in the foreign jurisdiction from which the income is derived;
+The highest Corporate Income Tax rate (headline tax rate) of the foreign jurisdiction from which the income is derived is at least 15% at the time the foreign income is received in Singapore;
+There is Singapore tax payable on the income; and
+The company is entitled to claim foreign tax credit under the Income Tax Act 1947.
+Where the above conditions are not met, or where the company chooses not to elect for the foreign tax credit pooling system, the 'source-by-source and country-by-country' basis for computing foreign tax credit applies.
+Learn more about
+foreign tax credit pooling
+(PDF, 302KB).
+Time limit for claiming Foreign Tax Credit
+[NEW!]
+The time limit for submitting a FTC claim depends on the relevant Year of Assessment (YA) in which the income is assessable to tax in Singapore.
+For YA 2021 and Before
+FTC claim must be submitted within 2 years after the end of the relevant YA. For example, if your company wishes to claim FTC for a foreign income that was brought to tax in YA 2021, the deadline to submit the claim is 31 Dec 2023.
+For YA 2022 and After
+The time limit for submitting FTC claim has been extended to 4 years after the end of the relevant YA. For example, if your company wishes to claim FTC for a foreign income that was brought to tax in YA 2024, the deadline to submit the claim is 31 Dec 2028.
+Written Notice of Downward Adjustment of Foreign Tax
+With effect from 16 Nov 2021, companies are required to give a written notice when the amount of FTC becomes excessive as a result of a downward adjustment of foreign tax paid in a foreign jurisdiction.
+The notice is to be given to IRAS
+within 1 year
+after the adjustment is made by the foreign tax authority using the
+Written Notice of Downward Adjustment of Foreign Tax
+(PDF, 62KB).
+Please submit this form via:
+Revise/ Object to Assessment
+digital service at
+mytax.iras.gov.sg
+; or
+myTax Mail
+.
+FAQs
+My company received dividends from an Indian tax resident company which was net of India’s dividend distribution tax (DDT). Does the DDT qualify for foreign tax credit?
+Yes. The DDT qualifies for foreign tax credit in the form of a UTC under Section 50A(3) of the Income Tax Act 1947. This is provided that the Singapore tax resident company owns not less than 25% of the total number of issued shares of the Indian company paying
+the dividends.
+A Singapore tax resident company received service fee income from a Malaysian customer on technical services rendered to the Malaysian customer. The Singapore company does not have a permanent establishment in Malaysia. Can the Singapore company claim foreign tax credit in the form of a DTR for the tax paid in Malaysia in respect of the service fee income?
+According to Article 13 of the Singapore-Malaysia DTA, technical service fees derived from Malaysia may be taxed in Malaysia at the maximum rate of 5% if the services are performed in Malaysia. So long as the Singapore company satisfies all the conditions
+for claiming foreign tax credit, a DTR will be accorded based on the lower of the foreign tax paid in Malaysia (i.e. 5% of the technical service fees) and the Singapore tax payable on the service fees. The claim for DTR should be made when the Singapore
+company files the Corporate Income Tax Return (Form C).
+However, where the technical services are not performed in Malaysia, in accordance with Article 13 of the Singapore-Malaysia DTA, the fees payable to the Singapore company are not taxable in Malaysia. A DTR will not be available to the Singapore company
+for any taxes paid in Malaysia which are not in accordance with the DTA provisions.
+[NEW!] My company acquired foreign financial instruments in YA 2023 for trading purposes. The unrealised gains of these financial instruments are brought to tax in YA 2023 when it is recognised in the profit and loss account while the foreign taxes will only be paid when my company disposed of the foreign financial instruments in YA 2025. Can my company claim foreign tax credit when filing the YA 2023 income tax return?
+No, FTC is not claimable in YA 2023 as there is no foreign tax paid or payable on the unrealised gains on foreign financial instruments. When foreign tax is paid upon the disposal of such foreign financial instruments in YA 2025, your company can submit the FTC claims for the relevant YA(s) in which the income is assessed to tax. Please ensure that the claim for FTC is made within 4 years from the end of the relevant YA. For example, for the portion of gains brought to tax in YA 2023, please submit the FTC claims by 31 Dec 2027.

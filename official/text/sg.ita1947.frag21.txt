@@ -1,0 +1,517 @@
+PART 20B
+INTERNATIONAL AGREEMENTS TO
+IMPROVE TAX COMPLIANCE
+Interpretation of this Part
+105I.
+In this Part —
+“Action 13 Report” means the Transfer Pricing Documentation and Country‑by‑Country Reporting, Action 13 — 2015 Final Report published by the Organisation for Economic Co‑operation and Development on 5 October 2015;
+“CbCR exchange agreement” means a bilateral or multilateral agreement that is based on a model agreement in the Action 13 Report, and that requires the exchange of country‑by‑country reports;
+“competent authority agreement” means a bilateral or multilateral agreement to improve international tax compliance based on the standard for automatic exchange of financial account information in tax matters developed by the Organisation for Economic Co‑operation and Development;
+“country‑by‑country report” means a report by that name mentioned in the Action 13 Report, to be made in the format set out in the Report;
+“crypto‑asset reporting framework agreement” or “CARF agreement” means a bilateral or multilateral agreement that is based on the International Standards for Automatic Exchange of Information in Tax Matters pursuant to the Crypto‑Asset Reporting Framework developed by the Organisation for Economic Co‑operation and Development;
+[Act 25 of 2025 wef 08/12/2025]
+“international tax compliance agreement” means an agreement or arrangement that is declared by the Minister, by an order under section 105K, as an international tax compliance agreement;
+“person” has the meaning given by section 2(1) and includes a partnership.
+[15/2016; 34/2016]
+Purpose of this Part
+105J.
+The purpose of this Part is to implement Singapore’s obligations under an international tax compliance agreement, and to enable country‑by‑country reports to be filed with the Comptroller in accordance with the Action 13 Report.
+[34/2016]
+International tax compliance agreements
+105K.
+—(1) The Minister may by order declare any of the following as an international tax compliance agreement for the purposes of this Part:
+(
+a
+)
+the agreement reached between the Government and the Government of the United States of America to facilitate compliance by financial institutions and other persons in Singapore with the Foreign Account Tax Compliance Act of the United States of America (FATCA);
+(
+aa
+)
+a competent authority agreement between —
+(i)
+the Government and —
+(A)
+the government of another country; or
+(B)
+the governments of 2 or more countries; or
+(ii)
+the Minister or the Minister’s authorised representative and —
+(A)
+the authority of another country that exercises a power or carries out a duty corresponding to a power or duty of the Minister or representative; or
+(B)
+the authorities of 2 or more countries that exercise powers or carry out duties corresponding to a power or duty of the Minister or representative;
+(
+ab
+)
+a CbCR exchange agreement between —
+(i)
+the Government and —
+(A)
+the government of another country; or
+(B)
+the governments of 2 or more countries; or
+(ii)
+the Minister or the Minister’s authorised representative and —
+(A)
+the authority of another country that exercises a power or carries out a duty corresponding to a power or duty of the Minister or representative; or
+(B)
+the authorities of 2 or more countries that exercise powers or carry out duties corresponding to a power or duty of the Minister or representative;
+(
+ac
+)
+a CARF agreement between —
+(i)
+the Government and —
+(A)
+the government of another country; or
+(B)
+the governments of 2 or more countries; or
+(ii)
+the Minister or the Minister’s authorised representative and —
+(A)
+the authority of another country that exercises a power or carries out a duty corresponding to a power or duty of the Minister or representative; or
+(B)
+the authorities of 2 or more countries that exercise powers or carry out duties corresponding to a power or duty of the Minister or representative;
+[Act 25 of 2025 wef 08/12/2025]
+(
+b
+)
+any agreement modifying or supplementing an agreement in paragraph (
+a
+), (
+aa
+), (
+ab
+) or (
+ac
+);
+[Act 25 of 2025 wef 08/12/2025]
+(
+c
+)
+any other agreement or arrangement that makes provision corresponding, or substantially similar, to that made by an agreement in paragraph (
+a
+), (
+aa
+), (
+ab
+), (
+ac
+) or (
+b
+), between —
+(i)
+the Government and —
+(A)
+the government of another country; or
+(B)
+the governments of 2 or more countries; or
+(ii)
+the Minister or the Minister’s authorised representative and —
+(A)
+the authority of another country that exercises a power or carries out a duty corresponding to a power or duty of the Minister or representative; or
+(B)
+the authorities of 2 or more countries that exercise powers or carry out duties corresponding to a power or duty of the Minister or representative.
+[15/2016; 34/2016; 39/2017]
+[Act 25 of 2025 wef 08/12/2025]
+(2) An order under subsection (1) may only take effect on or after the date on which the agreement or arrangement enters into force for Singapore or, where there is more than one agreement or arrangement under the order, may only take effect in relation to each agreement or arrangement on or after the date on which that agreement or arrangement enters into force for Singapore.
+[39/2017]
+Provision of information to Comptroller
+105L.
+—(1) Subject to subsection (5), a person falling within any description of persons prescribed by regulations (called in this section a prescribed person) must provide the Comptroller (or such other person as may be authorised by the Comptroller) with information of a description prescribed by those regulations.
+[15/2016]
+(1A) The information under subsection (1) must be provided —
+(
+a
+)
+at such times and frequency as may be prescribed by the regulations or as the Comptroller may in any particular case allow;
+(
+b
+)
+in such form and manner as may be prescribed by the regulations or as the Comptroller may in any particular case allow; and
+(
+c
+)
+using the electronic service, except that the Comptroller may in any particular case or class of cases permit the information to be given in any other manner.
+[15/2016]
+(1B) In subsection (1), the reference to a person falling within any description of persons prescribed by regulations —
+(
+a
+)
+excludes one given a written notice by the Comptroller pursuant to a regulation made under section 105P(2)(
+ba
+)(i); and
+(
+b
+)
+includes one given a written notice by the Comptroller pursuant to a regulation made under section 105P(2)(
+ba
+)(ii).
+[34/2016]
+(2) A prescribed person is not excused from providing the information by reason only that the person is under a duty not to collect, use or disclose that information, whether imposed by written law, rule of law, any contract or any rule of professional conduct, in respect of that information.
+[2/2016]
+(3) A prescribed person who in good faith and with reasonable care does any act for the purpose of complying with subsection (1) is not to be treated as being in breach of any duty mentioned in subsection (2).
+[2/2016]
+(4) No civil or criminal action for a breach of any such duty, other than a criminal action for an offence under section 105M(3), shall lie against the prescribed person —
+(
+a
+)
+for producing any document or providing any information if the person had done so in good faith and with reasonable care in compliance with subsection (1); or
+(
+b
+)
+for doing or omitting to do any act if the person had done or omitted to do the act in good faith and with reasonable care and for the purpose of, or as a result of complying with subsection (1).
+[2/2016]
+(5) Despite subsection (2), subsection (1) does not apply to any information subject to legal privilege.
+Offences
+105M.
+—(1) Any person who, without reasonable excuse, fails or neglects to comply with —
+(
+a
+)
+section 105L(1); or
+(
+b
+)
+any regulation made under section 105P that requires the person to apply to the Comptroller for registration or report any information to the Comptroller,
+shall be guilty of an offence.
+[27/2021]
+(1A) Any person who is convicted of an offence under subsection (1) shall be liable —
+(
+a
+)
+to a fine not exceeding $5,000 and in default of payment to imprisonment not exceeding 6 months; and
+(
+b
+)
+in the case of a continuing offence, to a further fine not exceeding $100 for every day or part of a day during which the offence continues after conviction.
+[27/2021]
+(1B) Any person who, without reasonable excuse, fails or neglects to comply with any requirement imposed by regulations made under section 105P, other than a requirement mentioned in subsection (1)(
+b
+), shall be guilty of an offence and shall be liable on conviction —
+(
+a
+)
+to a fine not exceeding $1,000 and in default of payment to imprisonment not exceeding 6 months; and
+(
+b
+)
+in the case of a continuing offence, to a further fine not exceeding $50 for every day or part of a day during which the offence continues after conviction.
+[27/2021]
+(2) The Comptroller may compound any offence under subsections (1) and (1B).
+[Act 33 of 2022 wef 04/11/2022]
+(3) Any person who, in purported compliance with section 105L(1), produces to the Comptroller any document which contains any information, or provides to the Comptroller any information, known to the person to be false or misleading in a material particular —
+(
+a
+)
+without indicating to the Comptroller that the information is false or misleading and the part that is false or misleading; and
+(
+b
+)
+without providing correct information to the Comptroller if the person is in possession of, or can reasonably acquire, the correct information,
+shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $10,000 or to imprisonment for a term not exceeding 2 years or to both.
+(3A) Where —
+(
+a
+)
+a person (
+X
+), in order to comply with a regulation mentioned in section 105P(2)(
+c
+), requests another person (
+Y
+) to provide any information contemplated by an agreement mentioned in section 105P(1) to establish
+Y
+’s residence for a tax purpose contemplated by that agreement; and
+(
+b
+)
+Y
+, in purported compliance with that request, provides any such information to
+X
+which
+Y
+knows is false or misleading in any material particular,
+Y
+shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $10,000 or to imprisonment for a term not exceeding 2 years or to both.
+[15/2016]
+(3B) Where —
+(
+a
+)
+X
+, in order to comply with a regulation mentioned in section 105P(2)(
+c
+), requests
+Y
+to provide any information contemplated by an agreement mentioned in section 105P(1) to establish another person’s (
+Z
+) residence for a tax purpose contemplated by that agreement; and
+(
+b
+)
+Z
+provides any such information, whether directly or indirectly, to
+X
+or
+Y
+which
+Z
+knows is false or misleading in any material particular,
+Z
+shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $10,000 or to imprisonment for a term not exceeding 2 years or to both.
+[15/2016]
+(4) In subsection (3), references to the Comptroller include any other person authorised by the Comptroller.
+[37/2014]
+Anti‑avoidance
+105MA.
+—(1) If —
+(
+a
+)
+a person enters into any arrangements or takes any action; and
+(
+b
+)
+in the Comptroller’s view, the main purpose, or one of the main purposes of the person in entering into the arrangements or in taking the action is to avoid any obligation under, or to circumvent the application of section 105L or any regulation made under section 105P,
+then the Comptroller may in writing direct a relevant person that section 105L or the regulation has effect in relation to the relevant person as if the arrangements had not been entered into or the action had not been taken, and section 105L or the regulation then applies accordingly.
+[37/2014]
+(2) In subsection (1), “relevant person” means a person who is subject to section 105L or the regulation, and whom the Comptroller considers should receive the direction.
+[37/2014]
+Power of Comptroller to obtain information
+105N.
+—(1) Sections 65 to 65D (except section 65B(1D)) have effect for the purpose of enabling the Comptroller to obtain any information for the purpose of —
+(
+a
+)
+complying with any provision of an international tax compliance agreement;
+(
+b
+)
+enabling Singapore to carry out its obligations under any provision of such agreement; or
+(
+c
+)
+determining whether a person has complied with any regulation made under section 105P.
+[15/2016; 45/2018]
+(2) For the purpose of subsection (1) —
+(
+a
+)
+the reference in section 65 to the purpose of obtaining full information in respect of any person’s income is a reference to the purpose mentioned in subsection (1);
+(
+b
+)
+a reference in section 65B to the purposes of this Act is a reference to the purpose mentioned in subsection (1);
+(
+c
+)
+references in section 65B to proceedings for an offence under this Act, proceedings for the recovery of tax or penalty and proceedings by way of an appeal against an assessment are each a reference to proceedings for an offence under this Part;
+(
+d
+)
+the Comptroller may authorise —
+(i)
+an officer of the Monetary Authority of Singapore; or
+(ii)
+an accountant,
+under section 4(1) to perform or assist in the performance of a duty of the Comptroller under section 65, 65A or 65B; and
+(
+e
+)
+section 65E has effect in relation to a notice issued under section 65B for a purpose mentioned in subsection (1).
+[2/2016; 15/2016; 34/2016]
+Information may be used for administration of Act
+105O.
+To avoid doubt, any information provided or obtained under section 105L or 105N may be used for any purpose connected with the administration of this Act, including the investigation or a prosecution for an offence alleged or suspected to have been committed under this Act.
+Regulations to implement international tax compliance agreements, etc.
+105P.
+—(1) The Minister may make regulations for, or in connection with, giving effect to or enabling effect to be given to —
+(
+a
+)
+an international tax compliance agreement; or
+(
+b
+)
+any future competent authority agreement which may be declared as an international tax compliance agreement under section 105K(1).
+[15/2016]
+(1A) The Minister may also make regulations to enable the Comptroller to obtain a country‑by‑country report or its equivalent from a prescribed person who is resident in Singapore or has a permanent establishment in Singapore in prescribed circumstances.
+[45/2018]
+(2) Without limiting subsection (1), regulations under subsection (1) may —
+(
+a
+)
+prescribe anything which may be prescribed under this Part;
+(
+b
+)
+for the purpose of section 105L, prescribe different descriptions of information, forms and manners of provision of the information, and times and frequencies for the provision of the information, in relation to different international tax compliance agreements, different persons or under different circumstances;
+(
+ba
+)
+where the international tax compliance agreement in question is a CbCR exchange agreement, or the regulation is for the purpose in subsection (1A), enable the Comptroller —
+(i)
+after taking into account prescribed factors, to give written notice to a prescribed person that the person need not comply with section 105L or any other obligation of a prescribed person under the regulations; and
+(ii)
+if the Comptroller considers appropriate after taking into account those factors, to give written notice to one or more other persons to discharge those obligations in place of the prescribed person mentioned in sub‑paragraph (i);
+(
+c
+)
+impose on a person —
+(i)
+audit requirements for the purpose of determining the extent of compliance by the person with the regulations made under this section (including requiring the person’s internal auditor or appointing another person to carry out an audit, and report the results of the audit to the Comptroller);
+(ii)
+due diligence requirements;
+(iii)
+registration and other requirements; and
+(iv)
+a requirement that the person inform the Comptroller if the person wishes to authorise another person to perform any requirement under section 105L(1) or sub‑paragraphs (i), (ii) and (iii) on the person’s behalf,
+being requirements that —
+(v)
+are required or permitted to be imposed under an international tax compliance agreement on any person to whom the agreement applies; or
+(vi)
+may facilitate the implementation of any future competent authority agreement which may be declared as an international tax compliance agreement under section 105K(1);
+(
+ca
+)
+provide that a contravention of any specified provision is an offence;
+(
+cb
+)
+enable the Comptroller to appoint another person to carry out an audit for the purpose of determining the extent of compliance by a person with the regulations made under this section; and
+(
+d
+)
+contain incidental, transitional or saving provisions.
+[37/2014; 15/2016; 34/2016]
+(3) Regulations under subsection (1) may give force of law to any provision of an international tax compliance agreement, whether with or without any modification.
+Duty to provide information under regulations prevails over duty of secrecy, etc.
+105PA.
+—(1) This section applies where a regulation made under section 105P imposes a duty on a person (
+A
+) to —
+(
+a
+)
+provide any information to another person;
+(
+b
+)
+require
+A
+’s internal auditor or appoint another person to carry out an audit for the purpose of determining the extent of compliance by
+A
+with the regulation;
+(
+c
+)
+carry out any due diligence requirements; or
+(
+d
+)
+provide any information to —
+(i)
+A
+’s internal auditor or the appointed person mentioned in paragraph (
+b
+); or
+(ii)
+a person appointed by the Comptroller to carry out an audit.
+[15/2016]
+(2)
+A
+is not excused from complying with a duty mentioned in subsection (1) by reason only that
+A
+is under a duty not to collect, use or disclose any information, whether imposed by written law, rule of law, any contract or any rule of professional conduct.
+[15/2016]
+(3)
+A
+who in good faith and with reasonable care does any act for the purpose of complying with the regulation mentioned in subsection (1) is not to be treated as being in breach of any duty mentioned in subsection (2).
+[2/2016]
+(4) No civil or criminal action for a breach of any such duty, other than criminal action for an offence under section 105M (if applicable), lies against
+A
+—
+(
+a
+)
+for producing any document or providing any information if
+A
+does so in good faith and with reasonable care in compliance with the regulation mentioned in subsection (1); or
+(
+b
+)
+for doing or omitting to do any act if
+A
+does or omits to do the act in good faith and with reasonable care and for the purpose of or as a result of complying with the regulation mentioned in subsection (1).
+[2/2016]
+(5) Despite subsection (2), subsection (1) does not apply to any information subject to legal privilege.
+[2/2016]
+Confidentiality requirements for judicial review proceedings
+105Q.
+—(1) This section applies to a judicial review instituted by any person in respect of —
+(
+a
+)
+any action taken by the Comptroller to obtain information for the purpose of complying with any provision of an international tax compliance agreement or to enable Singapore to carry out its obligations under any provision of such agreement;
+(
+b
+)
+any disclosure or intended disclosure of information pursuant to an international tax compliance agreement; or
+(
+c
+)
+any action taken by the Comptroller under this Part or a failure to take such action,
+as well as any proceedings in court (however instituted) for a liquidated sum, damages, equitable relief or restitution if a Mandatory Order, Prohibiting Order, Quashing Order or declaration is made pursuant to the judicial review.
+[37/2014]
+(2) In any proceedings to which this section applies, no person may inspect or take a copy of any of the following documents without the permission of court:
+(
+a
+)
+a request for information made under any provision of the international tax compliance agreement;
+(
+b
+)
+any document relating to the request which is given by or to the Comptroller, to or by the authority making the request or a person acting on behalf of the authority.
+[37/2014]
+[Act 25 of 2021 wef 01/04/2022]
+(3) Permission is not to be given under subsection (2) in relation to any document if the court is satisfied that the authority mentioned in that subsection has requested the Comptroller not to disclose that document to any person.
+[37/2014]
+[Act 25 of 2021 wef 01/04/2022]
+(4) A court may, in any proceedings to which this section applies, on the application of the Comptroller, make such order as it may consider necessary to ensure the confidentiality of anything relating to those proceedings.
+[37/2014]
+(5) Every application, affidavit or other document filed with the court for the purpose of any proceedings to which this section applies is to be sealed upon the request of the applicant or the Comptroller.
+[37/2014]
+(6) All proceedings to which this section applies are to be heard in private.
+[37/2014]
+[Act 25 of 2021 wef 01/04/2022]
+(7) No information relating to any proceedings to which this section applies may be published without the permission of court; and permission is not to be given unless the court is satisfied that the information, if published in accordance with such directions as it may give, would not reveal any matter that —
+(
+a
+)
+the Comptroller;
+(
+b
+)
+the person from whom the Comptroller obtains the information; or
+(
+c
+)
+the person in relation to whom information is sought,
+reasonably wishes to remain confidential.
+[37/2014]
+[Act 25 of 2021 wef 01/04/2022]
+(8) In this section, “judicial review” includes proceedings instituted by way of —
+(
+a
+)
+an application for a Mandatory Order, a Prohibiting Order or a Quashing Order; or
+(
+b
+)
+an application for a declaration or an injunction, or any other suit or action, relating to or arising out of any matter referred to in subsection (1)(
+a
+) to (
+c
+).
+[37/2014]

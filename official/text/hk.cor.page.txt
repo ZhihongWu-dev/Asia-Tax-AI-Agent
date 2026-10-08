@@ -1,0 +1,68 @@
+A Certificate of Resident Status is a document issued by the competent authority of the Hong Kong Special Administrative Region (Hong Kong) to a Hong Kong resident who requires proof of resident status for the purposes of claiming tax benefits under a Comprehensive Double Taxation Agreement / Arrangement (DTA).
+The Certificate of Resident Status should constitute a sufficient proof of the resident status of a Hong Kong resident. Generally, forms related to DTAs which are not issued by the Inland Revenue Department would not be signed / stamped except forms of Austria, Belgium and Luxembourg.
+The competent authority of Hong Kong will issue a Certificate of Resident Status after the DTA between Hong Kong and the relevant jurisdiction has become effective. Generally, only one Certificate of Resident Status will be issued to you in respect of each DTA for each year. Please click
+here
+for the jurisdictions which have signed DTAs with Hong Kong.
+Applicants should be aware that issue of a Certificate of Resident Status will not guarantee that they will be successful in their claim to benefits under the relevant DTA. The decision as to whether relief from foreign taxes can be granted is, ultimately, one to be made by the treaty partner. It will be up to the treaty partner to determine whether all the relevant conditions are fulfilled and whether benefits can be granted. In any case where Hong Kong residents believe a treaty partner has denied them benefits which they should be entitled to, the competent authority of Hong Kong will consider engaging with the treaty partner under the Mutual Agreement Procedure for the relevant DTA.
+To help the competent authority of Hong Kong decide whether a Certificate of Resident Status can be issued, any person who would like to obtain a Certificate of Resident Status will be required to provide a certain amount of information when making the application.
+Who can Apply
+In general, the following persons can apply for a Certificate of Resident Status:
+Individual who ordinarily resides in Hong Kong;
+Individual who stays in Hong Kong for more than 180 days during a year of assessment or for more than 300 days in two consecutive years of assessment one of which is the relevant year of assessment;
+Company / partnership / trust / body of persons incorporated or constituted in Hong Kong;
+Company / partnership / trust / body of persons incorporated or constituted outside Hong Kong but managed or controlled in Hong Kong;
+Re-domiciled company.
+You should refer to the relevant article and protocol of the relevant DTA to check whether you qualify as a Hong Kong resident for the purpose of that DTA.
+Application Forms
+You need to complete the appropriate form:
+DTA Partner
+Form
+Company / Partnership / Trust /
+Body of Persons
+Individual
+Chinese Mainland (Mainland)
+IR1313A (07/2025)
+IR1314A (07/2025)
+Other Jurisdictions
+IR1313B (07/2025)
+IR1314B (07/2025)
+For application made in respect of the DTA between the Mainland and Hong Kong:
+According to the administrative arrangement agreed in the notes exchanged between the Mainland and Hong Kong on 16 March 2016 and 15 April 2016, a Certificate of Resident Status issued to an applicant for a particular calendar year generally serves as a proof of the Hong Kong resident status of the applicant for that calendar year and the two succeeding calendar years. It would not be necessary for the applicant to apply for Certificate of Resident Status for the latter two calendar years. In case there are / were changes in the applicant’s circumstances such that the applicant will cease / ceased to meet the conditions for enjoying tax benefits under the Arrangement, the Certificate of Resident Status issued would not serve as a proof of the applicant’s Hong Kong resident status after the changes. Please click
+here
+for details of the administrative arrangement.
+If the claim in the application relates to tax benefits on dividends falling within the provisions of Article 3 or 4 of the Circular of the State Taxation Administration on Matters Concerning “Beneficial Owners” in Tax Treaties (STA Circular 2018 No. 9), Part 2 of the Appendix to the form IR1313A must be completed and the guidelines in Note 3 of the form have to be followed. Please click
+here
+to access the STA Circular 2018 No. 9 (available in Chinese only) at the website of the State Taxation Administration. For any questions on the content of the Circular, please consult the relevant Mainland tax authorities.
+How to Apply
+Online application:
+You or your appointed service agent (i.e. company secretary or tax representative) can complete and submit application via the Individual Tax Portal (ITP), Business Tax Portal (BTP) and Tax Representative Portal under eTAX services provided at the GovHK website.
+Submission of application by post or in person:
+You can send the completed application to:
+Assessor (Tax Treaty)
+Tax Treaty Section
+Inland Revenue Department
+17/F, Inland Revenue Centre
+5 Concorde Road, Kai Tak, Kowloon, Hong Kong
+Processing Time
+The target of the Department is to issue, within 21 working days after receipt of a properly completed application, a certificate of resident status, or notification of decision by the assessing officer either seeking further information or informing the applicant that the application cannot be accepted.
+Issue of Certificate of Resident Status
+Digital Certificate of Resident Status
+The competent authority of Hong Kong will issue a digital Certificate of Resident Status instead of paper Certificate to successful applicants for claiming tax benefits under the following DTA:
+DTA Partner
+Effective Date
+Mainland
+10.11.2025
+Generally, the digital Certificate of Resident Status (a PDF file) will be sent to the message inbox of the successful applicant’s ITP / BTP Account.
+For a non-individual successful applicant who does not have a business registration number, the applicant is required to download the digital Certificate of Resident Status via the BTP by the following 5 steps:
+Click the “View All Services” tab on the login page of the BTP
+Click the “Certificate of Resident Status” tab on the “Online Services” menu
+Click the “Download Certificate of Resident Status with Access Code” tab on the “Certificate of Resident Status” menu
+Input the applicant’s file number and access code
+Click the “View / Download Certificate” button
+Paper Certificate of Resident Status
+For applications relating to jurisdictions other than Mainland, the competent authority of Hong Kong will issue paper Certificate of Resident Status to the successful applicants by post. If you wish to collect it in person, you are required to make a written request when submitting the relevant application form and the required documents.
+Verification of Digital Certificate of Resident Status
+The relevant DTA partner can upload the digital Certificate of Resident Status to the “e-Proof” website at <
+https://www.eproof.gov.hk/en/verification
+> to verify its authenticity.
+Frequently Asked Questions

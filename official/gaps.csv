@@ -1,0 +1,66 @@
+﻿new_id,verdict,cite_id,quote,finding,dictionary_change
+accrual_and_receipt_dates,law,hk.cap112.en#s15I,is to be regarded as a receipt arising in or derived from Hong Kong for the basis period of the year of assessment during which the income is received in Hong Kong,外地收入按“收到于香港”的年度课税（s15I(1)(a)），而参与豁免的 12 个月持股期以“收入应计之日”为界（s15M(2)），附表 55 要求 2023-01-01 后既应计又收到；一个 on 日期不够,FLOW 增加 accrued_on（应计日）与 received_in_hk_on（收到日）；on 保留为支付日
+received_in_hk_kind,law,hk.cap112.en#s15H,"the sum is remitted to, or is transmitted or brought into, Hong Kong; (b) the sum is used to satisfy any debt incurred in respect of a trade, profession or business carried on in Hong Kong; or (c) the sum is used to buy movable property",“收到于香港”有三种法定情形：汇入、抵偿香港业务债务、购买带入香港的动产；received_locally 只是布尔值,"received_locally 改为枚举 {REMITTED, DEBT_SETTLED, MOVABLE_PROPERTY, NONE}"
+outsourced_substance,law,hk.cap112.en#s15K,carried out in Hong Kong by the entity; or (B) arranged by the entity to be carried out in Hong Kong,经济实质活动可由实体自行开展，也可安排他人在香港开展；substance 组没有外包项,substance 增加 outsourced_in_hk（外包方及其是否在香港）
+registration_filing_compliance,law,hk.cap112.en#s15K,the entity complies with every applicable registration and filing requirement under the following Ordinances,纯股权持有实体的减量实质测试：遵守公司、有限合伙、商业登记等条例的登记与申报要求，再加足够人员和场所,substance 增加 registration_filing_compliant（仅 pure_equity_holding 时激活）
+business_nature,law,hk.cap112.en#s15K,pure equity-holding entity (純股權持有實體) means an entity that— (a) only holds equity interests in other entities; and (b) only earns— (i) dividends; (ii) equity interest disposal gains,“纯股权持有实体”是法定分类，决定适用哪一套实质测试；字典没有实体业务性质。内地受益所有人判定也看“实质性经营活动包括具有实质性的制造、经销、管理等活动”（cn.sta.2018-09#i2）,ENTITY 增加 pure_equity_holding: bool；business_nature 作为其证据而非字段
+underlying_profits_taxed,law,hk.cap112.en#s15N,"the underlying profits of the income are subject to a qualifying similar tax in a territory outside Hong Kong, and the amount of the profits is equal to or larger than that of the income",应税条件可由股息本身、其底层利润或多层下游收入满足（s15N(2)(a)(ii)、(b)）；字典只有 foreign_taxed、foreign_headline_rate 针对收入本身,foreign_income_exemption 增加 underlying_profits_taxed、underlying_profits_amount；下游多层按 HOLD 子图取
+dividend_deductible_at_payer,law,hk.cap112.en#s15N,"section 15M does not apply if, and to the extent that, the income is allowable for deduction when computing the amount of the tax",反混合错配：股息在付款方可扣除的部分不得参与豁免（s15N(3)）,dividend_relief / foreign_income_exemption 增加 deductible_at_payer_ratio
+rd_expenditure,law,hk.cap112.en#sch17FC,F = QE × 130% QE + NE,知识产权收入的例外部分按关联比例 F 计算，需合资格研发支出 QE 与不合资格支出 NE（附表 17FC 第 3 条）；s15L 把计算全部交给附表 17FC,royalty 组增加 qualifying_rd_expenditure、non_qualifying_expenditure（payee 在香港且收入为外地 IP 收入时激活）
+ip_asset,law,hk.cap112.en#sch17FC,"the application is withdrawn, abandoned or refused in a subsequent year of assessment",合资格知识产权以专利等的申请为准；申请在之后年度被撤回、放弃或拒绝的，须在 4 个月内书面通知并追回豁免（附表 17FC 第 8 条）,royalty 组增加 ip_registration_status（applied / granted / withdrawn_abandoned_refused）
+calc_rd_fraction,derived,hk.cap112.en#sch17FC,F = QE × 130% QE + NE,由 QE、NE 计算，上限 100%,
+non_equity_disposal_gain,law_scope,hk.cap112.en#s15H,disposal gain (處置收益) means any IP disposal gain or non-IP disposal gain,2024 年起外地处置收益不限于股权，含知识产权与其他财产；v1 的收入类型只有 SHARE_TRANSFER,v1 不收；扩充收入类型时再加
+calc_disposal_gain,derived,hk.cap112.en#s15H,disposal gain (處置收益) means any IP disposal gain or non-IP disposal gain,gain = consideration - cost_basis，字典已有两项,
+intragroup_relief_clawback,law_scope,hk.cap112.en#s15OB,"within 2 years after the subject sale in relation to the subject income mentioned in section 15OA(3), any of the following events occurs— (a) the selling entity or the acquiring entity ceases to be chargeable to profits tax under this Part; (b) the selling entity and the acquiring entity cease to be associated with each other",集团内转让宽免（s15OA）在两年内任一方不再须课利得税或不再相联时失效；v1 的 SHARE_TRANSFER 若在香港集团内发生即适用,share_transfer 增加 intragroup_transfer: bool；EX_POST 增加两年内的 ceased_associated_on / ceased_chargeable_on
+foreign_tax_deduction,law,hk.cap112.en#s16,"tax of substantially the same nature as tax imposed under this Ordinance, proved to the satisfaction of the Commissioner to have been paid in a territory outside Hong Kong",外地税可按 s16(1)(c) 作扣除，但 s16(2J) 规定凡 s50 可抵免的不得扣除；抵免（s50，无协定时 s50AAA）与扣除二选一，取决于付款方所在地有无安排及收款方是否香港居民人士,"foreign_tax_credit 增加 relief_mode {CREDIT, DEDUCTION}，由规则按 hk-sg.no_comprehensive_dta 与居民身份推导，不由人填"
+calc_credit_amount,derived,hk.cap112.en#s50,The credit shall not exceed the amount which would be produced by computing the amount of the income in accordance with the provisions of this Ordinance and then charging it to tax,抵免限额由规则计算,
+trading_stock,law,hk.cap112.en#sch17K,"Any equity interests (firstly mentioned interests) held by an entity that are regarded as trading stock for any period are to be disregarded for the purposes of sections 5 and 6 of this Schedule, to the extent of that period",被视为营业存货的期间不计入持股期与 15% 测试（附表 17K 第 9 条）,share_transfer 增加 trading_stock_periods（区间列表，可空）
+prior_tranche_disposal,law,hk.cap112.en#sch17K,the subject disposal of the subject interests is a disposal of long-held left-overs from a section 5(2) disposal,分批出售：此前 24 个月内有一次满足条件的处置，其余量在条件不再满足时仍可适用（附表 17K 第 6 条）,share_transfer 增加 prior_qualifying_disposal_on（可空）
+gain_source_onshore,law,hk.cap112.en#sch17K,"any gain or profit (disposal gain), arising in or derived from Hong Kong, that an entity (investor entity) derives from a disposal",确定性机制只适用于源自香港的处置收益（附表 17K 第 5(1) 条）；离岸收益走 FSIE。来源判定不是填报项，是规则对 payer/payee/资产所在地的推导,不新增字段；由规则输出 source_in_hk
+election_in_writing,law,hk.cap112.en#sch17K,unless it elects in writing that the subsection applies to it,附表 17K 第 5 条须书面选择才适用,EX_POST ENTITY 增加 sch17k_elected: bool
+apa_or_ruling,law,hk.cap112.en#sch10,"the matter on which the ruling is sought is subject to an objection or appeal, whether in relation to the applicant or any other person",s88A 事先裁定：已在反对或上诉中的事项不予裁定（附表 10 第 2(c) 条）；已有裁定的，报税时须披露裁定的存在与是否依赖（第 15 条）,ENTITY 增加 ruling_id（可空）
+ruling_material_change,law,hk.cap112.en#sch10,the arrangement is materially different from the arrangement identified in the ruling,安排与裁定所述有重大不同、申请有重大遗漏或虚假、假设不成立时裁定不适用（附表 10 第 7 条）,有 ruling_id 时增加 arrangement_as_ruled: bool
+bo_entity,law,cn.sta.2018-09#i3,直接或间接持有申请人100%股份的人符合“受益所有人”条件,申请人不符合受益所有人条件时，可借 100% 直接或间接持有人的身份（同一居民国，或中间层均合格）；还须提供该人的居民身份证明（#i8）；字典只测 payee,beneficial_owner 组按 HOLD 子图取 100% 链上各层的 loc 与 residence_cert，不新增手填字段
+residence_jurisdiction,derived,treaty.cn-sg.2007.en#4.3,it shall be deemed to be a resident only of the State in which its place of effective management is situated,居民身份由各法域法律推导：内地“依法在中国境内成立，或者……实际管理机构在中国境内”（cn.law.eit#2）、新加坡“control and management of whose business is exercised in Singapore”（sg.ita1947.full#s2）、香港“成立为法团……或通常在香港进行管理或控制”（treaty.cn-hk.2006.consolidated.en#4）；双重居民：中新按实际管理机构，内地香港按主管当局协商（treaty.cn-hk.2006.p5.zh#2），协商不成不得享受,不新增；loc 由 incorporated_in、managed_from 推导，双重居民且无协商结果时标 DISCRETION
+cert_material_change,law,cn.sta.2016-35#all,如有关香港居民的情况发生变化，不再符合享受《安排》待遇条件，则原适用于该公历年度的居民身份证明书不能用作证明其在情况发生变化后的香港居民身份,香港居民身份证明书可证明该公历年度及其后连续两个公历年度；情况变化后失效。字典的 cert_year 只记一年,residence_cert 组：cert_year 改为 cert_years（香港证明为 3 个公历年度）；增加 circumstances_changed_on（可空）
+due_date,law,cn.law.eit#37,税款由扣缴义务人在每次支付或者到期应支付时，从支付或者到期应支付的款项中扣缴,扣缴义务在支付或到期应支付时发生；“到期应支付”指按权责发生制应计入成本费用的应付款（cn.reg.eit#105）；7 日内申报（cn.sta.2017-37#i7）；股息以实际支付日为准,FLOW 增加 payable_on（到期应支付日，可空）；股息无需
+contract_term,form_only,cn.reg.eit#105,是指支付人按照权责发生制原则应当计入相关成本、费用的应付款项,合同起止只是推导应付款日的证据，条文的要件是应付款项本身,
+fx_rate,law,cn.sta.2017-37#i4,应当按照扣缴义务发生之日人民币汇率中间价折合成人民币,折算汇率由法律指定为扣缴义务发生之日的人民币汇率中间价，是参照数据，不是案例输入；库里尚无汇率来源,不新增字段；官方库待补人民币汇率中间价来源（中国外汇交易中心）
+deemed_profit_rate,law_scope,cn.sta.2019-16.a08#all,核定利润率,核定征收针对承包工程、劳务等所得，不在 v1 的四类收入内,
+domestic_relief,law_scope,cn.sta.2019-16.a08#all,享受国内税收优惠,表单的国内优惠项指境外投资者以分配利润直接投资暂不征收预提所得税等政策（财税〔2018〕102号及后续公告），库里没有；与 v1 的 CN→HK/SG 股息直接相关,待定：是否把再投资递延纳入 v1；纳入则官方库补该文件，FLOW 增加 reinvested_in_cn
+branch,form_only,cn.sta.2025-04.a02#p1,境内分支机构名称,居民身份证明申请表的识别项；分支机构不是独立纳税人，v1 不建模,
+calc_applicable_treaty,derived,cn.sta.2019-35.a01#all,享受协定名称,由 payer、payee 的法域对推导,
+calc_claim_basis,derived,cn.sta.2013-56.a01#all,争议焦点,"由 diff(actual, should) 的偏差项生成",
+calc_relief_amount,derived,cn.sta.2019-35.a01#all,享受协定待遇减免税额,规则输出,
+calc_taxable_income,derived,cn.sta.2019-16.a08#all,应纳税所得额,规则输出,
+calc_tax_before_relief,derived,cn.sta.2019-16.a08#all,应缴纳的企业所得税额,规则输出,
+calc_statutory_rate,derived,cn.sta.2019-16.a08#all,适用税率,参数层的值,
+calc_refund_amount,derived,cn.form.refund.a01#p1,申请退税金额,ex_post 输出,
+calc_refund_type,derived,cn.form.refund.a01#p1,申请退税类型,由偏差种类推导,
+calc_attributable_profit,derived,hk.fsie.forms.birs19#Page6_E,Profits attributable to taxable amount,规则输出,
+calc_exempt_amount,derived,hk.fsie.forms.birs19#Page6_E,Non-taxable amount,规则输出,
+first_notice_date,law,treaty.cn-sg.2007.en#24,The case must be presented within 3 years from the first notification of the action resulting in taxation not in accordance with the provisions of the Agreement,相互协商申请以第一次通知之日起三年为限（中新第 24 条；内地香港第 23 条“第一次通知之日起，三年内”）；国内程序以此审查受理（cn.sta.2013-56#13）,若 ex_post 纳入争议分支：EX_POST 增加 first_notification_on
+authority_action,law,cn.sta.2013-56#7,缔约对方所采取的措施，已经或将会导致不符合税收协定所规定的征税行为,申请以对方“措施”为对象；EX_POST 只记己方申报与扣缴,"争议分支：authority_action {ASSESSMENT, DENIAL, ADJUSTMENT}"
+authority_position,form_only,cn.sta.2013-56.a01#all,缔约对方对争议焦点的观点以及依据,申请表的陈述项，条文无要件,
+prior_map_request,law,cn.sta.2013-56#19,申请人撤回申请或者拒绝接受缔约双方主管当局达成一致的相互协商结果的，税务机关不再受理基于同一事实和理由的申请,此前就同一事实撤回或拒绝结果的，不再受理,争议分支：prior_map_outcome（可空）
+settlement_reached,form_only,hk.form.ir1454#p1,settlement or agreement,表单陈述项；条文要件是对方措施与期限,
+remedy_filed,law,hk.cap112.en#sch10,the matter on which the ruling is sought is subject to an objection or appeal,已反对或上诉的事项不予事先裁定；相互协商可不考虑国内救济（treaty.cn-sg.2007.en#24 “irrespective of the remedies provided by the domestic law”）,争议分支：objection_or_appeal_pending: bool
+incorporated_on,form_only,treaty.cn-hk.2006.consolidated.en#4,"a company incorporated in the Hong Kong Special Administrative Region, or if incorporated outside the Hong Kong Special",居民定义看成立地或通常管理控制地，不看成立日期,
+business_start_date,form_only,treaty.cn-hk.2006.consolidated.en#4,being normally managed or controlled in the Hong Kong Special Administrative Region,“通常管理或控制”的证据项，条文无日期要件,
+local_bank_accounts,form_only,treaty.cn-hk.2006.consolidated.en#4,being normally managed or controlled in the Hong Kong Special Administrative Region,同上，证据项,
+asset_value,form_only,treaty.cn-hk.2006.consolidated.en#4,being normally managed or controlled in the Hong Kong Special Administrative Region,同上，证据项,
+turnover,form_only,hk.cap112.en#sch10,disclose all relevant facts,事先裁定申请的事实披露项,
+underlying_origin,admin,sg.iras.fsie#h8,the ‘headline tax rate condition’ will be considered not met if the jurisdiction in which the dividend paying company is incorporated has a headline tax rate of less than 15%,法条以“the territory from which the income is received”为准（sg.ita1947.full#s13 (9)(b)）；税务局网页把股息的来源地定为付款公司成立地，除非事实另有显示。s13(12) 的追溯只见于申请表与指南,foreign_income_exemption 的 foreign_headline_rate 明确取付款方法域；不加追溯字段
+source_traceable,admin,sg.iras.forms.s13-12#p5,trace the source of the,只见于 s13(12) 申请表；法条 s13(12) 只授权部长以命令豁免,v1 不收
+sg_s13_12_scenario,admin,sg.ita1947.full#s13,"The Minister may by order — ( a ) exempt from tax wholly or in part; or ( b ) provide that tax at such concessionary rate of tax be levied and paid on, the income received by a person resident in Singapore from such source in any country outside Singapore as may be specified in the order",具体情景由命令与税务局指南定义，库里只有申请表,v1 不收
+infra_conditions,law_scope,sg.ita1947.full#s13,The Minister may by order,离岸基建项目的 s13(12) 豁免，v1 不建模,
+reit_conditions,law_scope,sg.ita1947.full#s13,real estate investment trust,REIT 不在 v1 的 COMPANY 内,
+days_present,v2,cn.sta.2025-04.a02#p1,申请人,个人项，v2,
+domicile,v2,cn.sta.2025-04.a02#p1,申请人,个人项，v2,
+nationality,v2,cn.sta.2025-04.a02#p1,申请人,个人项，v2,
+indiv_business_vehicle,v2,cn.sta.2025-04.a02#p1,申请人,个人项，v2,
+partnership_interest,v2,cn.sta.2025-04.a02#p1,申请人,个人项，v2,
+vat_credit_refund,out,cn.form.refund.a01#p1,退税,增值税留抵退税，项目范围外,
+sg_stamp_share_transfer,law,sg.sda1929.sch1#sch1,if executed on or after 22 February 2014 0.2% of the amount of the consideration,新加坡股权转让印花税 0.2%（First Schedule Art 3(c)(ii)），买方缴纳（Third Schedule Art 2(a)）；法案正文经单条款视图（ProvIds）以 curl 取得后入库；规则 sg.stamp.buyer,
+sg_gst_reverse_charge,law,sg.gsta1993.s14#s14,the recipient is not entitled to credit for the full amount of the recipient’s input tax under sections 19 and 20,GST s14 反向征收、s16 税率 9%：单条款视图取得；规则 sg.gst.reverse_charge（不能全额抵扣进项税的新加坡付款方按 9% 计）,
+sg_pillar_two,law,sg.memta2024.s8#s8,A is EUR 750 million or its equivalent in other currency,MEMTA 2024 s7（15%）、s8（7.5 亿欧元）、s27–28（DTT）单条款视图取得；规则 sg.p2.topup / sg.p2.base，P2_JURISDICTIONS 含 SG；2026-10-08 补取 s2（释义）、s5（所在地）、s9（币种）、s15–s17（补足税额、有效税率）、s19（微利豁免）、s20（安全港）、s21（追加当期补足额）、s29–s30（DTT 的补足额与套用第 16–21 条）、附表一（涵盖税额等定义）、附表二（基于实质排除的过渡比例）；新加坡成员的基于实质排除改用 sg.p2.sbie_*（附表二），补足税比例依第 16(5)、17、30 条（口径 D13）,

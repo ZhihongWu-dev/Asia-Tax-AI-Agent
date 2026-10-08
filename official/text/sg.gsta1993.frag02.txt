@@ -1,0 +1,971 @@
+PART 3
+IMPOSITION AND EXTENT OF TAX
+Goods and services tax
+7.
+A tax to be known as Goods and Services Tax is charged in accordance with the provisions of this Act on the supply of goods and services (including anything treated as such a supply) and on the importation of goods.
+[52/2018]
+Scope of tax
+8.
+—(1) Tax is charged on any supply of goods or services made in Singapore where it is a taxable supply made by a taxable person in the course or furtherance of any business carried on by the taxable person.
+(1A) Without affecting subsection (1), tax is charged on any Seventh Schedule supply where it is a taxable supply made by a taxable person in the course or furtherance of any business carried on by the taxable person.
+[52/2018]
+(2) A person is a taxable person for the purposes of this Act while the person is or is required to be registered under this Act.
+(2A) A taxable supply is —
+(
+a
+)
+for subsection (1), a supply of goods or services made in Singapore other than an exempt supply; and
+(
+b
+)
+for subsection (1A), a Seventh Schedule supply.
+[52/2018]
+[Act 34 of 2021 wef 01/01/2022]
+(3) Tax on any supply of goods or services is a liability of the person making the supply and (subject to provisions on accounting and payment) becomes due at the time of supply.
+(4) Tax is charged, levied and payable on any importation of goods (other than an exempt import) as if it were customs duty or excise duty and as if all goods imported into Singapore are dutiable and liable to customs duty or excise duty.
+[19/2012]
+Registration
+9.
+—(1) The First Schedule has effect in relation to the registration of taxable persons.
+(2) The Minister may by order amend the First Schedule.
+Meaning of “supply”
+10.
+—(1) The Second Schedule applies for determining what is, or is treated as, a supply of goods or a supply of services.
+(2) Subject to any provision made by the Second Schedule and to orders made under subsection (3) —
+(
+a
+)
+“supply” in this Act includes all forms of supply and reverse charge supplies, but not anything done otherwise than for a consideration;
+(
+b
+)
+anything which is not a supply of goods but is done for a consideration (including, if so done, the granting, assignment or surrender of any right) is a supply of services.
+[52/2018]
+(3) The Minister may by order amend the Second Schedule and may also provide by order with respect to any description of transaction —
+(
+a
+)
+that it is treated as a supply of goods and not as a supply of services;
+(
+b
+)
+that it is treated as a supply of services and not as a supply of goods; or
+(
+c
+)
+that it is treated as neither a supply of goods nor a supply of services.
+(4) Without affecting subsection (3), an order made under that subsection may provide that paragraph 5(3) of the Second Schedule is not to apply, in relation to goods of any prescribed description used or made available for use in prescribed circumstances, so as to make that a supply of services under that paragraph.
+(5) For the purposes of this section, where goods are manufactured or produced from any other goods, those other goods are treated as incorporated in the firstmentioned goods.
+Making of supply: bare trustees
+10A.
+For the purposes of this Act, any supply made by a bare trustee relating to any goods, intellectual property rights or licence to use any intellectual property rights held by the bare trustee, is treated as a supply made by the persons or person for whose business the bare trustee holds the goods, rights or licence.
+[31/2014]
+Time of supply: general provisions
+11.
+—(1) This section and sections 11A, 11B, 11C, 12 and 12A apply for determining the time when a supply of goods or services is treated as taking place for the purposes of this Act.
+[20/2010; 52/2018]
+(2) A supply of goods or services (other than a reverse charge supply) is treated for the purposes of this Act as taking place at the time when —
+(
+a
+)
+the person making the supply issues an invoice or receives any consideration in respect of it; or
+(
+b
+)
+where both events occur, the first of the 2 events occurs,
+to the extent that the supply is covered by the invoice or consideration.
+[20/2010; 52/2018]
+(3) Despite subsection (2), where a supply is —
+(
+a
+)
+a supply of goods consisting of the grant, assignment or surrender of any interest in or right over land (other than the grant of a tenancy or lease where the whole or part of the consideration for that grant is payable periodically and attributed to separate periods of the term of the tenancy or lease);
+(
+b
+)
+a supply of goods or services made by a person who applies to the Comptroller for this subsection to apply in determining when the person’s supplies of goods or services take place, and the Comptroller allows the person’s application; or
+(
+c
+)
+a supply of goods made by an agent that is treated under section 33(2) as a supply by the agent as principal,
+then, unless subsection (4) applies, the supply is treated for the purposes of this Act as taking place as follows:
+(
+d
+)
+in the case of a supply of goods —
+(i)
+if the goods are to be removed, at the time of the removal; and
+(ii)
+if the goods are not to be removed, at the time when they are made available to the person to whom they are supplied; and
+(
+e
+)
+in the case of a supply of services, at the time when the services are performed,
+to the extent that the supply is covered by the goods that are removed or made available, or the services that are performed, as the case may be.
+[20/2010; 24/2011]
+(4) If, before the time under subsection (3), the person making a supply referred to in that subsection issues an invoice or receives any consideration in respect of it, the supply is treated as taking place at the time when —
+(
+a
+)
+the invoice is issued or the consideration is received; or
+(
+b
+)
+where both events occur, the first of the 2 events occurs,
+to the extent that the supply is covered by the invoice or consideration.
+[20/2010; 24/2011]
+(5) For the purpose of determining the time when a supply of goods or services (other than a reverse charge supply) is treated as taking place for the purposes of this Act, where a person provides a document to himself, herself or itself which purports to be an invoice in respect of a supply of goods or services to him, her or it by another person, the Comptroller may treat that invoice as an invoice issued by the other person as the supplier.
+[20/2010; 52/2018]
+Time of supply: exceptions to section 11(2) and (3)
+11A.
+—(1) Section 11(2) and (3) does not apply where any subsection herein applies, except to the extent specified in that subsection.
+[20/2010]
+(2) For the purposes of paragraphs 1(1) and (2), 1A(1) and (2) and 2 (in relation to sub‑paragraph (2)(
+a
+)(i) of that paragraph) of the First Schedule, the supply is treated as taking place at the time when —
+(
+a
+)
+the person making the supply issues an invoice or receives any consideration in respect of it; or
+(
+b
+)
+where both events occur, the first of the 2 events occurs,
+to the extent that the supply is covered by the invoice or consideration.
+[20/2010; 52/2018]
+(3) For the purposes of regulations made under section 19(13)(
+b
+) and (
+c
+) in respect of tax on a supply of goods or services made to a taxable person that the taxable person may count as the taxable person’s input tax, the supply is treated as taking place at the time when —
+(
+a
+)
+the taxable person making the supply issues an invoice or receives any consideration in respect of it; or
+(
+b
+)
+where both events occur, the first of the 2 events occurs,
+to the extent that the supply is covered by the invoice or consideration.
+[20/2010]
+(4) Where there is a supply of goods by virtue only of a transfer or disposal of assets under paragraph 5(1) of the Second Schedule, the supply is treated as taking place —
+(
+a
+)
+where the goods are transferred or disposed of as specified in that paragraph for no consideration, when the goods are transferred or disposed of as specified in that paragraph; and
+(
+b
+)
+where the goods are transferred or disposed of as specified in that paragraph for a consideration, in accordance with section 11(2) or (3), as the case may be.
+[20/2010]
+(5) Where there is a supply of services by virtue only of paragraph 5(3) of the Second Schedule, the supply is treated as taking place —
+(
+a
+)
+where the goods are appropriated to the use mentioned in that paragraph for no consideration, on the last day of the supplier’s prescribed accounting period, or of each such accounting period, in which the goods are used or made available for the use; and
+(
+b
+)
+where the goods are appropriated to the use mentioned in that paragraph for a consideration, in accordance with section 11(2) or (3), as the case may be.
+[20/2010]
+(6) If goods (being sent or taken on approval or sale or return or similar terms) are removed before it is known whether a supply will take place, a supply of the goods is treated as taking place 12 months after the removal; except that where the person from whom the goods are removed issues an invoice or receives any consideration in respect of those goods before the expiry of the 12‑month period, a supply of the goods is treated as taking place at the time when —
+(
+a
+)
+the invoice is issued or the consideration is received; or
+(
+b
+)
+where both events occur, the first of the 2 events occurs.
+[20/2010]
+Time of supply: exceptions to section 11(2)
+11B.
+—(1) Section 11(2) does not apply to the extent any subsection herein applies.
+[20/2010]
+(2) Subject to subsection (7), where a person who is, or is required to be, registered under this Act makes a supply of goods or services to another person who is not entitled under sections 19 and 20 to credit for the whole or any part of the tax on the supply, and —
+(
+a
+)
+but for this subsection, the supply would under section 11(2) be treated as taking place after the date on which the person is, or is required to be, registered under this Act; and
+(
+b
+)
+prior to that date —
+(i)
+in the case of a supply of goods —
+(A)
+if the goods are to be removed, they had been removed; or
+(B)
+if the goods are not to be removed, they had been made available to the other person; or
+(ii)
+in the case of a supply of services, the services had been performed,
+then the person making the supply must, if the other person so requests, treat the supply as taking place when the goods were removed or made available, or the services were performed (as the case may be), and the supply is so treated for the purposes of this Act.
+[20/2010]
+(3) Subject to subsection (7) and section 11C(4), where a person who makes a supply of goods or services is connected within the meaning of paragraph 3 of the Third Schedule with the person to whom the supply is made, and —
+(
+a
+)
+in the case of a supply of goods —
+(i)
+if the goods are to be removed, they are removed; or
+(ii)
+if the goods are not to be removed, they are made available to the person to whom they are supplied; or
+(
+b
+)
+in the case of a supply of services, the services are performed,
+then the supply is treated as taking place at the end of 12 months after the goods have been removed or made available, or the services have been performed (as the case may be), to the extent that it is not covered by any invoice already issued or consideration already received.
+[20/2010; 52/2018]
+(4) The Minister may by regulations prescribe supplies of goods or services which are excluded from subsection (3).
+[20/2010]
+(5) Subject to subsections (3) and (7), where —
+(
+a
+)
+a person making a supply of goods or services also makes a supply of financial services referred to in paragraph 1 of Part 1 of the Fourth Schedule to the recipient of the goods or services in respect of the supply of the goods or services; and
+(
+b
+)
+the financial services provide for payment by instalments,
+then the supply of the goods or services is treated as wholly taking place at the time when —
+(
+c
+)
+the invoice in respect of the first instalment is issued or the first instalment is paid; or
+(
+d
+)
+where both events occur, the first of the 2 events occurs.
+[20/2010; 19/2012]
+(6) Subject to subsection (7), where, pursuant to a supply of goods or services —
+(
+a
+)
+a taxable person —
+(i)
+in the case of a supply of goods —
+(A)
+if the goods are to be removed, allows their removal; or
+(B)
+if the goods are not to be removed, makes them available to the person to whom they are supplied; or
+(ii)
+in the case of a supply of services, performs the services,
+as the case may be, whether on a single occasion or on different occasions;
+(
+b
+)
+the taxable person then ceases to be a taxable person; and
+(
+c
+)
+no invoice or consideration covering the whole of the supply has been issued or received (as the case may be) by the taxable person prior to the date when the person ceases to be a taxable person,
+the supply of goods or services is treated as taking place on the day immediately before the day the person ceases to be a taxable person, to the extent that it is not covered by any invoice already issued or consideration already received.
+[20/2010]
+(7) Subsections (2), (3), (5) and (6) do not apply in relation to —
+(
+a
+)
+any supply of goods referred to in section 11(3)(
+a
+) or (
+c
+); or
+(
+b
+)
+any supply of goods or services made by a person whose application has been allowed by the Comptroller under section 11(3)(
+b
+).
+[20/2010]
+Time of supply: reverse charge supplies
+11C.
+—(1) This section applies to determine when a reverse charge supply of a recipient mentioned in section 14 takes place for the purposes of this Act (including for the purposes of paragraph 1B of the First Schedule).
+[52/2018]
+(2) Subject to subsections (2A), (3), (3A), (4), (6) and (7), the reverse charge supply takes place when —
+(
+a
+)
+the person or branch that in fact supplies the distantly taxable goods or services to the recipient issues an invoice, or the recipient pays any consideration for those distantly taxable goods or services; or
+(
+b
+)
+where both events occur, the first of the 2 events occurs,
+to the extent that the supply of distantly taxable goods or services is covered by the invoice or consideration.
+[Act 34 of 2021 wef 01/01/2022]
+(2A) Subject to subsection (3A), where —
+(
+a
+)
+a supply of distantly taxable goods or services that is made to a recipient gives rise to a reverse charge supply;
+(
+b
+)
+the recipient pays an amount to the supplier (whether directly or indirectly) as tax on the supply of goods or services in fact made to the recipient purportedly under section 8(1A) (whether or not the supply was in fact chargeable to tax under section 8(1A)); and
+(
+c
+)
+the supplier reimburses the recipient (whether directly or indirectly) for that amount,
+then the recipient may treat the reverse charge supply as taking place at the earlier of —
+(
+d
+)
+the date on which a revised invoice in respect of the supply in fact made is issued by the supplier; and
+(
+e
+)
+the date on which the recipient receives the reimbursement of that amount,
+to the extent that the supply is covered by the revised invoice, or by consideration paid for that supply, as reduced by the reimbursement.
+[Act 35 of 2022 wef 01/01/2023]
+(3) Subject to subsection (3A), where the recipient is registered under this Act, the recipient may, for any period during which the recipient receives distantly taxable goods or services that are the subject of the recipient’s reverse charge supplies, treat each of those reverse charge supplies as taking place at the earlier of —
+(
+a
+)
+the date on which the supply in fact made to the recipient and giving rise to that reverse charge supply is entered into the books of account or other records of the recipient; and
+(
+b
+)
+the date on which the recipient pays any consideration for that supply,
+to the extent that the supply of distantly taxable goods or services is covered by the entry or consideration.
+[52/2018]
+[Act 34 of 2021 wef 01/01/2022]
+(3A) If the recipient applies subsection (3) to its reverse charge supplies, the recipient may, for a reverse charge supply in the circumstances described in subsection (2A)(
+a
+), (
+b
+) and (
+c
+), treat the reverse charge supply instead as taking place at the earlier of —
+(
+a
+)
+the date on which the supply for which reimbursement of the amount was received is entered into the books of account or other records of the recipient; and
+(
+b
+)
+the date on which the recipient received reimbursement of the amount,
+to the extent that the supply is covered by the entry or consideration paid for that supply as reduced by the reimbursement.
+[Act 34 of 2021 wef 01/01/2023]
+(4) Where the reverse charge supply arises from —
+(
+a
+)
+a supply of distantly taxable goods mentioned in section 14(1)(
+a
+)(i), or a supply of services mentioned in section 14(1)(
+b
+)(i), that is between connected persons within the meaning of paragraph 3 of the Third Schedule;
+(
+b
+)
+a supply of distantly taxable goods mentioned in section 14(1)(
+a
+)(ii) or a supply of services mentioned in section 14(1)(
+b
+)(ii); or
+(
+c
+)
+a supply of distantly taxable goods or a supply of services mentioned in section 30(1A),
+then the reverse charge supply takes place at the end of 12 months after the distantly taxable goods are delivered or the services are performed (as the case may be), to the extent that it is not covered by any invoice already issued or consideration already paid.
+[Act 34 of 2021 wef 01/01/2022]
+[Act 35 of 2022 wef 01/01/2022]
+(5) The Minister may by regulations prescribe distantly taxable goods or services that are excluded from subsection (4).
+[52/2018]
+[Act 34 of 2021 wef 01/01/2022]
+(6) Where —
+(
+a
+)
+the recipient is a taxable person receiving distantly taxable goods or services mentioned in section 14(1);
+(
+b
+)
+but for this subsection, the reverse charge supply would be treated under this section as taking place after the date on which the recipient becomes a taxable person; and
+(
+c
+)
+the Comptroller is satisfied that the distantly taxable goods have been delivered or that the services have been performed (as the case may be), prior to that date,
+then the recipient may treat the reverse charge supply as taking place when the distantly taxable goods were delivered (to the extent of the delivery) or the services were performed (to the extent of the performance).
+[Act 34 of 2021 wef 01/01/2022]
+[Act 35 of 2022 wef 01/01/2022]
+(7) Where —
+(
+a
+)
+distantly taxable goods are delivered, or services are in fact performed by the person or branch mentioned in section 14(1)(
+b
+), whether on a single occasion or on different occasions;
+[Act 34 of 2021 wef 01/01/2022]
+[Act 35 of 2022 wef 01/01/2022]
+(
+b
+)
+the recipient then ceases to be a taxable person; and
+(
+c
+)
+no invoice or consideration covering the whole of the supply has been issued or paid (as the case may be) before the recipient ceases to be a taxable person,
+the reverse charge supply is treated as taking place on the day immediately before the day the recipient ceases to be a taxable person, to the extent that it is not covered by any invoice already issued or consideration already paid.
+[52/2018]
+(8) Despite subsections (2), (2A), (3), (3A), (4), (6) and (7), where —
+(
+a
+)
+a longer period (mentioned in section 20(4) for the purposes of the adjustment of input tax claims of the recipient) is applicable under this Act to a recipient; and
+(
+b
+)
+the recipient satisfies such other criteria as the Comptroller may specify,
+then —
+(
+c
+)
+the recipient may elect to treat its reverse charge supplies that would (but for this subsection) take place in the longer period, as taking place on the day immediately after the last day of the longer period; and
+(
+d
+)
+if the recipient makes such an election and ceases on any day in a longer period to be a taxable person (called in this paragraph the day of cessation), the reverse charge supplies of the recipient that would (but for this subsection) take place in the longer period but before the day of cessation, are treated as taking place on the day immediately before the day of cessation.
+[52/2018]
+[Act 34 of 2021 wef 01/01/2022]
+(9) An election under subsection (8)(
+c
+) must be made in the form and manner, and within the time, required by the Comptroller.
+[52/2018]
+(10) Where an employee pays the consideration for a reverse charge supply at an earlier date and is reimbursed by the employer as the recipient at a later date, the date on which the recipient is regarded as having paid the consideration for the purposes of this section is the later date.
+[Act 34 of 2021 wef 01/01/2022]
+Time of supply: directions and regulations
+12.
+—(1) Despite sections 11, 11A, 11B and 11C, the Comptroller may, at the request of a taxable person, by direction in writing alter the time at which supplies made or received by the taxable person (or such supplies made or received by the taxable person as may be specified in the direction) are treated as taking place, either —
+(
+a
+)
+by directing that those supplies be treated as taking place —
+(i)
+at times or on dates determined by or by reference to the occurrence of some event described in the direction; or
+(ii)
+at times or on dates determined by or by reference to the time when some event so described would in the ordinary course of events occur,
+the resulting times or dates being in every case earlier than would otherwise apply; or
+(
+b
+)
+by directing that those supplies (to the extent that they are not treated as taking place at the time any invoice is issued or any consideration is received or paid in respect thereof) be treated as taking place —
+(i)
+at the beginning of the relevant working period (as defined in the taxable person’s case in and for the purposes of the direction); or
+(ii)
+at the end of the relevant working period (as so defined).
+[20/2010; 52/2018]
+(1A) Despite sections 11, 11A and 11B, the Comptroller may, at the request of a registered (Seventh Schedule — pay only) person, by direction in writing alter the time at which any specified supply made by the person (whether or not a Seventh Schedule supply) is to be treated as taking place, by directing that that supply be treated as taking place at the time or on the date determined by or by reference to the occurrence of some event described in the direction, whether the resulting time or date is earlier or later than the time or date that would otherwise apply.
+[Act 34 of 2021 wef 01/01/2022]
+(1B) No event may be specified in the direction which results in a time or date —
+(
+a
+)
+that is later than the time or date that would otherwise apply; and
+(
+b
+)
+where the period between —
+(i)
+the time or date that would otherwise apply; and
+(ii)
+the resulting time or date,
+is more than that of a single prescribed accounting period applicable to the registered (Seventh Schedule — pay only) person.
+[Act 34 of 2021 wef 01/01/2022]
+(2) Despite sections 11, 11A, 11B and 11C, the Minister may by regulations —
+(
+a
+)
+make provision with respect to the time at which (despite sections 11, 11A, 11B, 11C and 38(4)) a supply is treated as taking place in cases where —
+(i)
+it is a supply of goods or services for a consideration the whole or part of which is determined or payable periodically, or from time to time, or at the end of any period;
+(ii)
+it is a supply of goods for consideration the whole or part of which is determined at the time when the goods are appropriated for any purpose; or
+(iii)
+there is a supply to which sections 27, 37A, 38 and 38A apply; and
+(
+b
+)
+prescribe when consideration for a supply of goods or services of a specified type, or provided in a specified manner, is to be regarded as having been received or paid.
+[20/2010; 37/2017; 52/2018]
+(3) Regulations made under subsection (2)(
+a
+) may provide for goods or services to be treated as separately and successively supplied at prescribed times or intervals.
+[20/2010]
+Time of supply: transitional provision
+12A.
+Despite anything in section 11, 11A, 11B or 12, the repealed sections 11 and 12 in force immediately before 1 January 2011 apply to any supply that is —
+(
+a
+)
+a supply of goods pursuant to which the goods are removed or made available before 1 January 2011; or
+(
+b
+)
+a supply of services pursuant to which the services are performed before 1 January 2011,
+other than any supply to which regulations made under subsection (8) of that repealed section 12 apply.
+[20/2010]
+Place of supply
+13.
+—(1) This section applies for determining, for the purposes of the charge to tax, whether goods or services are supplied in Singapore.
+(2) If the supply of any goods does not involve their removal from or to Singapore, they are treated as supplied in Singapore if they are in Singapore and otherwise are treated as supplied outside Singapore.
+(3) If the supply of any goods involves their removal from Singapore, they are treated as supplied in Singapore and if it involves their removal to Singapore, they are treated as supplied outside Singapore.
+(4) A supply of services is treated as made —
+(
+a
+)
+in Singapore if the supplier belongs in Singapore; and
+(
+b
+)
+in another country (and not in Singapore), if the supplier belongs in that other country.
+(5) The Minister may by regulations provide, in relation to services generally or to particular services specified in the regulations, for varying the rules for determining where a supply of services is made.
+Reverse charge on supplies received from abroad
+14.
+—(1) This section applies where —
+(
+a
+)
+a supply of distantly taxable goods is —
+(i)
+made to a person (called in this section the recipient) who —
+(A)
+belongs in Singapore;
+(B)
+is a registered person, or is not a registered person but is liable to be registered under paragraph 1 or 1B of the First Schedule; and
+(C)
+is not receiving the goods as an individual in the private or personal capacity of the individual; or
+(ii)
+made by a branch of a person in a country other than Singapore through which the person carries on any business, and made to a branch of the person in Singapore through which the person (also called in this section the recipient) carries on any business; or
+(
+b
+)
+a supply of services is —
+(i)
+made by a person who belongs in a country other than Singapore, and made to a person (also called in this section the recipient) who —
+(A)
+belongs in Singapore;
+(B)
+is a registered person, or is not a registered person but is liable to be registered under paragraph 1 or 1B of the First Schedule; and
+(C)
+is not receiving the services as an individual in the private or personal capacity of the individual; or
+(ii)
+made by a branch of a person in a country other than Singapore through which the person carries on any business, and made to a branch of the person in Singapore through which the person (also called in this section the recipient) carries on any business,
+and the recipient is not entitled to credit for the full amount of the recipient’s input tax under sections 19 and 20 for the prescribed accounting period, or longer period mentioned in section 20(4)(
+b
+), in which the distantly taxable goods or services are received.
+[Act 34 of 2021 wef 01/01/2022]
+(1AA) In addition, where one or more persons (each
+Y
+) other than the recipient (
+X
+) mentioned in subsection (1) to whom the supply is made, directly benefit from the distantly taxable goods or services, and any
+Y
+—
+(
+a
+)
+satisfies the criteria of the recipient in subsection (1)(
+a
+)(i) or (
+b
+)(i), as the case may be; and
+(
+b
+)
+is not entitled to credit for the full amount of the input tax under sections 19 and 20 for the prescribed accounting period, or longer period mentioned in section 20(4)(
+b
+), in which the distantly taxable goods or services are received,
+then —
+(
+c
+)
+that
+Y
+is treated as a recipient to whom the supply of distantly taxable goods or services is made for the purpose of this section, to the extent of the consideration paid to the supplier (whether directly or indirectly) by that
+Y
+for the supply; and
+(
+d
+)
+X
+is the recipient only to the extent of the consideration not paid by any
+Y
+.
+[Act 34 of 2021 wef 01/01/2022]
+(1A) The condition in subsections (1) and (1AA) that the recipient is not entitled to credit for the full amount of the recipient’s input tax does not apply in relation to any input tax excluded by regulations made under section 19(14) from any credit under section 19.
+[33/2019]
+[Act 34 of 2021 wef 01/01/2022]
+(1B) For the purposes of this section, in determining whether goods are distantly taxable goods, if the recipient is unable to verify the location of the goods at the point of sale of the goods, or the manner or mode of transport by which the goods will be delivered to a place in the customs territory, the recipient may rely on the best available information to do so.
+[Act 34 of 2021 wef 01/01/2022]
+(2) Subject to subsections (3), (3A) and (4), all the same consequences follow under this Act (and particularly so much as charges tax on a supply and entitles a taxable person to credit for input tax) as if the recipient had himself, herself or itself supplied the goods or services in Singapore in the course or furtherance of a business for that supply, and that supply were a taxable supply.
+[52/2018; 33/2019]
+[Act 34 of 2021 wef 01/01/2022]
+(3) Subsection (2) applies —
+(
+a
+)
+in the case of distantly taxable goods — only to the extent that the goods are not excluded under the Eighth Schedule (for the purposes of subsection (1)(
+a
+)(i) and (ii), or (1)(
+a
+)(i), or (1)(
+a
+)(ii), as the case may be); and
+(
+b
+)
+in the case of services — only to the extent that the services are not excluded under the Eighth Schedule (for the purposes of subsection (1)(
+b
+)(i) and (ii), or (1)(
+b
+)(i), or (1)(
+b
+)(ii), as the case may be).
+[Act 34 of 2021 wef 01/01/2022]
+(3A) Subsection (2) does not apply to the extent that the recipient pays an amount as tax or as reimbursement for tax —
+(
+a
+)
+on the supply of the goods or services in fact made to the recipient purportedly under section 8(1A) (whether or not the supply was in fact chargeable to tax under section 8(1A)); or
+(
+b
+)
+on the importation of the goods pursuant to section 8(4),
+as the case may be.
+[Act 35 of 2022 wef 01/01/2023]
+(3B) Despite subsection (3A), for the purposes of paragraph 1B of the First Schedule, the total value of all supplies of goods and services received by the recipient in Singapore must include the value of the supplies received by the recipient in Singapore that are supplies mentioned in paragraph (
+a
+) of that subsection, and importations mentioned in paragraph (
+b
+) of that subsection on which tax was imposed as if the goods imported were not distantly taxable goods.
+[Act 35 of 2022 wef 01/01/2023]
+(4) Reverse charge supplies are not to be taken into account as supplies made by the recipient when determining the allowance of input tax in the recipient’s case under section 20(1).
+[52/2018]
+(5) Despite a recipient being entitled to credit for the full amount of the recipient’s input tax under sections 19 and 20 for the prescribed accounting period, or longer period mentioned in section 20(4)(
+b
+), in which distantly taxable goods or services are received, the recipient may elect for all supplies made to the recipient in the circumstances under subsection (1)(
+a
+) or (
+b
+) in that period to be treated as supplies of distantly taxable goods or services to which subsection (2) applies.
+[Act 34 of 2021 wef 01/01/2022]
+(6) Where a recipient who is a registered person receives any supply of distantly taxable goods or services mentioned in subsection (1)(
+a
+) or (
+b
+) (as the case may be) that is excluded or to any extent excluded under the Eighth Schedule, the recipient may elect for all such supplies of distantly taxable goods or services to be made to the recipient to be treated as supplies of distantly taxable goods or services to which subsection (2) applies (and not supplies of distantly taxable goods or services to which subsection (2) does not apply by reason of subsection (3)).
+[Act 34 of 2021 wef 01/01/2022]
+(7) An election under subsection (5) or (6) must be made in the form and manner, and within the time, required by the Comptroller.
+[52/2018]
+(8) For the purposes of this section, a head office of a taxable person is treated as a branch of that taxable person.
+[52/2018]
+(9) The Minister may make regulations to provide for the circumstances in which subsection (2) does not apply to any supply made in the circumstances in subsection (1)(
+a
+)(ii) or (
+b
+)(ii) (as the case may be) where the recipient is not entitled to credit for the full amount of the recipient’s input tax as mentioned in subsection (1).
+[52/2018]
+[Act 34 of 2021 wef 01/01/2022]
+(10) The Minister may by order amend the Eighth Schedule.
+[52/2018]
+Place where supplier or recipient of services or supplier of Seventh Schedule supplies belongs
+15.
+—(1) Subsection (3) applies for determining, in relation to any supply of services or any Seventh Schedule supply, whether the supplier belongs in one country or another.
+[Act 34 of 2021 wef 01/01/2022]
+(2) Subsections (4) and (5) apply for determining, in relation to any supply of services, whether the recipient (including a recipient mentioned in section 14(1) or a recipient who has elected to have section 14(2) applied to the recipient) belongs in one country or another.
+[52/2018]
+(3) The supplier is treated as belonging in a country if —
+(
+a
+)
+the supplier has in that country a business establishment or some other fixed establishment and no such establishment elsewhere;
+(
+b
+)
+the supplier has no such establishment in any country but the supplier’s usual place of residence is in that country; or
+(
+c
+)
+the supplier has such establishments both in that country and elsewhere and the supplier’s establishment which is most directly concerned with the supply is in that country.
+[Act 34 of 2021 wef 01/01/2022]
+(4) If the supply of services is made to an individual and received by him or her otherwise than for the purposes of any business carried on by him or her, he or she is treated as belonging in whatever country he or she has his or her usual place of residence.
+(5) Where subsection (4) does not apply, the person to whom the supply is made is treated as belonging in a country if —
+(
+a
+)
+either of the conditions mentioned in subsection (3)(
+a
+) or (
+b
+) is satisfied; or
+(
+b
+)
+the person has such establishments as are mentioned in subsection (3) both in that country and elsewhere and the person’s establishment at which, or for the purposes of which, the services are most directly used or to be used is in that country.
+(6) For the purposes of this section (but not for any other purpose) —
+(
+a
+)
+a person carrying on a business through a branch or agency in any country is treated as having a business establishment there; and
+(
+b
+)
+“usual place of residence”, in relation to a body corporate, means the place where it is incorporated or otherwise legally constituted.
+(7) The Minister may make regulations to provide for the matters by which a supplier may determine whether a customer receiving a Seventh Schedule supply belongs in Singapore.
+[52/2018; 33/2019]
+[Act 34 of 2021 wef 01/01/2022]
+Rate of tax
+16.
+Tax is charged at the rate of —
+(
+a
+)
+4% for the period from 1 January 2003 to 31 December 2003 (both dates inclusive);
+(
+b
+)
+5% for the period from 1 January 2004 to 30 June 2007 (both dates inclusive);
+[Act 35 of 2022 wef 05/12/2022]
+(
+c
+)
+7% for the period from 1 July 2007 to 31 December 2022 (both dates inclusive);
+[Act 35 of 2022 wef 05/12/2022]
+(
+ca
+)
+8% for the period from 1 January 2023 to 31 December 2023 (both dates inclusive); and
+[Act 35 of 2022 wef 05/12/2022]
+(
+cb
+)
+9% from and including 1 January 2024,
+and is charged on —
+(
+d
+)
+the supply of goods or services (including a reverse charge supply), by reference to the value of the supply as determined under this Act; and
+[Act 35 of 2022 wef 05/12/2022]
+(
+e
+)
+the importation of goods, by reference to the value of the goods as determined under this Act.
+[28/2007]
+[Act 35 of 2022 wef 05/12/2022]
+Value of supply of goods or services
+17.
+—(1) For the purposes of this Act and subject to the Third Schedule, the value of any supply of goods or services is determined in accordance with this section.
+(2) If the supply is for a consideration in money, its value is taken to be such amount as, with the addition of the tax chargeable, is equal to the consideration.
+[52/2018]
+[Act 34 of 2021 wef 01/01/2022]
+(2A) Subsection (2) does not apply to the following:
+(
+a
+)
+a supply from which a reverse charge supply arises;
+(
+b
+)
+a supply which a redeliverer is treated as making under the Seventh Schedule.
+[Act 34 of 2021 wef 01/01/2022]
+(3) If the supply (including a supply mentioned in subsection (2A)(
+a
+) or (
+b
+)) is not for a consideration or is for a consideration not consisting or not wholly consisting of money, the value of the supply is taken to be its open market value.
+[52/2018]
+[Act 34 of 2021 wef 01/01/2022]
+(3A) A reverse charge supply has a value that is of an amount equal to the consideration for the distantly taxable goods or services in fact supplied that gave rise to the reverse charge supply.
+[52/2018; 33/2019]
+[Act 34 of 2021 wef 01/01/2022]
+(3AA) Where a reverse charge supply arises from a supply of distantly taxable goods or services mentioned in section 14(1)(
+a
+) or (
+b
+) or such supply made by a member of the group mentioned in section 30(1A), then, for the purpose of determining the value of the reverse charge supply, any amount required to be withheld as tax under the Income Tax Act 1947 must not, if included in the consideration for the supply in fact made, be deducted.
+[33/2019]
+[Act 34 of 2021 wef 01/01/2022]
+(3B) Where the reverse charge supply of a recipient arises from —
+(
+a
+)
+a supply of services mentioned in section 14(1)(
+b
+)(ii); or
+[Act 34 of 2021 wef 01/01/2022]
+(
+b
+)
+a supply of services mentioned in section 30(1A),
+then, for the purpose of determining the value of the reverse charge supply, any of the following that is included as part of the consideration for the services in fact supplied may be deducted:
+(
+c
+)
+any salary or wages relating to the employees of (as the case may be) the branch or member of the group outside Singapore making the supply of services;
+(
+d
+)
+interest;
+(
+e
+)
+any proportionate amount of mark-up in respect of such salary or wages and interest in paragraphs (
+c
+) and (
+d
+), respectively.
+[52/2018; 33/2019]
+(3C) For the purposes of the application of the Third Schedule, where the reverse charge supply arises from a supply of distantly taxable goods mentioned in section 14(1)(
+a
+)(ii) or a supply of services mentioned in section 14(1)(
+b
+)(ii), the branches mentioned in section 14(1)(
+a
+)(ii) or (
+b
+)(ii) (as the case may be) are treated as persons connected with each other.
+[52/2018]
+[Act 34 of 2021 wef 01/01/2022]
+(3D) A Seventh Schedule supply of goods treated as made by a redeliverer has a value that is equal to the consideration paid for the goods by the customer.
+[Act 34 of 2021 wef 01/01/2022]
+(4) Where a supply of any goods or services (including a supply mentioned in subsection (2A)(
+a
+) or (
+b
+)) is not the only matter to which a consideration in money relates, the supply is deemed to be for such part of the consideration as is properly attributable to it.
+[52/2018]
+[Act 34 of 2021 wef 01/01/2022]
+(4A) Where a person makes a supply of related services to a customer of a Seventh Schedule supply of goods in relation to that supply of goods, the consideration for the related services is to be included as part of the consideration for the Seventh Schedule supply of goods if —
+(
+a
+)
+the consideration for the supply of the related services is determined by reference to those goods;
+(
+b
+)
+the supply of the related services is made, arranged or assisted by the supplier or underlying supplier of those goods;
+(
+c
+)
+the supply of the related services is directly in connection with those goods;
+(
+d
+)
+the supply of the related services would be zero-rated under section 21 in the absence of this subsection; and
+(
+e
+)
+the supply of the related services and those goods do not form a single supply.
+[Act 34 of 2021 wef 01/01/2022]
+[Act 35 of 2022 wef 01/01/2022]
+(4B) Subsection (4A) does not apply to a redeliverer that is treated as making a supply of goods under the Seventh Schedule.
+[Act 34 of 2021 wef 01/01/2022]
+(4C) Where a reverse charge supply arises from a supply of distantly taxable goods mentioned in section 14(1)(
+a
+) and the recipient also receives a supply of related services, the consideration for the related services is to be included as part of the consideration for the supply of the distantly taxable goods if —
+(
+a
+)
+the consideration for the supply of the related services is determined by reference to those goods;
+(
+b
+)
+the supply of the related services is made, arranged or assisted by the supplier of those goods;
+(
+c
+)
+the supply of the related services is directly in connection with those goods;
+(
+d
+)
+the supply of the related services would, if the supply of the services were made by a taxable person in Singapore, be a supply of international services which is zero-rated under section 21 in the absence of this subsection; and
+(
+e
+)
+the supply of the related services and those goods do not form a single supply.
+[Act 34 of 2021 wef 01/01/2022]
+(5) For the purposes of this Act, the open market value of a supply of goods or services is taken to be the amount that would fall to be taken as its value under subsection (2) if the supply were for such consideration in money as would be payable by a person who has no relationship with any person which would affect that consideration.
+(6) The Minister may by order amend the Third Schedule and provide for the determination of the value of a supply of goods or services otherwise than in accordance with this section.
+(7) In this section —
+“redeliverer” and “underlying supplier” have the meanings given by paragraph 1(1) of the Seventh Schedule;
+“related services”, in relation to a Seventh Schedule supply of goods or a supply of distantly taxable goods that gives rise to a reverse charge supply, means the services supplied by any person (whether or not the supplier or underlying supplier of the goods) for the purposes of —
+(
+a
+)
+processing and preparing the goods for transportation and delivery; and
+(
+b
+)
+delivering the goods, or arranging or assisting in the delivery of the goods, including insurance and transportation.
+[Act 34 of 2021 wef 01/01/2022]
+[Act 35 of 2022 wef 01/01/2022]
+Value of imported goods
+18.
+—(1) For the purposes of this Act, the value of imported goods is determined as follows:
+(
+a
+)
+subject to paragraph (
+b
+), the value of the goods is the aggregate of the following:
+(i)
+the value of the goods determined in accordance with such method of valuation as may be prescribed pursuant to section 22 of the Customs Act 1960; and
+(ii)
+so far as not already included in the value referred to in sub‑paragraph (i), all taxes, duties and other charges levied either outside or, by reason of importation, within Singapore (except goods and services tax);
+(
+b
+)
+subject to the Third Schedule, where goods from outside Singapore enter Singapore under customs control and one or more supplies of those goods involve —
+(i)
+the goods being removed from a place under such customs control; or
+(ii)
+the goods being made available while under such customs control,
+the value of the goods is the aggregate of the following:
+(iii)
+the value of the last of such supplies; and
+(iv)
+so far as not already included in the value referred to in sub-paragraph (iii) —
+(A)
+all taxes, duties and other charges levied either outside or, by reason of importation, within Singapore (except goods and services tax); and
+(B)
+all costs by way of commission, packing, transport and insurance and all other costs, charges and expenses incidental to the sale and the delivery of the goods up to the port or place of importation.
+[20/2010]
+(2) In the application of the Customs Act 1960, by virtue of section 26, to any goods which are not subject to either customs duty or excise duty, such goods are construed as being under “customs control” within the meaning of section 3(2) of the Customs Act 1960 —
+(
+a
+)
+as if they are dutiable goods; and
+(
+b
+)
+as if the reference to a licensed warehouse in section 3(2) of the Customs Act 1960 includes a warehouse or other place licensed under section 37(5)(
+b
+).
+[20/2010]
+Entry value of items of goods
+18A.
+—(1) This section applies for the purpose of determining the entry value of any item of goods.
+(2) Except for the purposes of determining whether the supply of any item of goods gives rise to a reverse charge supply under section 14, the entry value of the item is the consideration for the supply of the item, less all of the following amounts that are included in that consideration:
+(
+a
+)
+transport and insurance charges for the item for the period beginning when the item leaves the country or territory from which it is supplied and ending when it is delivered to a place in the customs territory;
+(
+b
+)
+any tax chargeable on the supply of the item under section 8;
+(
+c
+)
+any customs duty or excise duty.
+(3) For the purposes of subsection (2), the supplier of the goods may use a reasonable estimate of any of the amounts mentioned in subsection (2)(
+a
+), (
+b
+) and (
+c
+), based on the information available to the supplier at the point of sale of the goods.
+(4) Instead of applying subsections (2) and (3), the supplier may elect for the entry value of any item of goods to be the value determined in accordance with section 18 for the item.
+(5) An election made under subsection (4) must be made by notifying the Comptroller in such form and manner and within such time as the Comptroller may require.
+(6) For the purposes of determining whether the supply of any item of goods gives rise to a reverse charge supply under section 14, the entry value of the item is the value determined in accordance with section 18 for the item.
+[Act 34 of 2021 wef 01/01/2022]

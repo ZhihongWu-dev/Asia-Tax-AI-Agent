@@ -1,0 +1,94 @@
+ 
+1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Flowchart on making Foreign Tax Credit (FTC) claim 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Are all the following conditions met? 
+• Your company is a Singapore tax 
+resident; and 
+• The income is subject to tax in 
+Singapore 
+YES 
+NO 
+FTC to be granted, subject 
+to time limit for claiming 
+FTC 
+NO 
+YES 
+To consider claiming 
+Unilateral Tax Credit 
+No FTC to be granted 
+Has foreign tax been suffered 
+on the income? 
+YES 
+NO 
+To consider seeking resolution 
+via domestic remedies and/or 
+the Mutual Agreement Process 
+available under the relevant DTA 
+Does the foreign tax jurisdiction 
+have a Double Tax Agreement 
+(DTA) with Singapore? 
+YES 
+NO 
+NO 
+Foreign tax refunded by the 
+foreign tax authority. No FTC 
+claim should be made. 
+Has your company successfully 
+applied for tax refund from the 
+foreign tax authority? 
+Does the income fall within 
+the scope of the relevant 
+provisions of the DTA? 
+YES 

@@ -1,0 +1,284 @@
+Frequently Asked Questions (FAQs) - 
+Applying for Certificate of Residence (COR) 
+(Updated on 15 Dec 2021) 
+ 
+ 
+ 
+ 
+Contents 
+1. What is a COR? ............................................................................................................................................. 2 
+2. Who can apply for COR? .............................................................................................................................. 2 
+3. How to apply for COR? ................................................................................................................................. 2 
+4. Do I need to be authorised before I can make an online application for the COR? .................................... 2 
+5. Will the Approver be alerted after the Preparer has submitted the COR application to the Approver for 
+approval? ...................................................................................................................................................... 3 
+6. I am a Preparer and need to make some amendments to the COR application after my submission to 
+the Approver. What should I do? .................................................................................................................. 3 
+7. How long does it take to obtain the COR? ................................................................................................... 3 
+8. The application form requires me to state the “Calendar Year” in which the COR is required. How 
+should I complete this field? ...................................................................................................................... 4 
+9. I cannot find the calendar year which I would like to apply the COR for in the dropdown list. Why is this 
+so? .............................................................................................................................................................. 5 
+10. I cannot find the calendar year which I would like to apply the COR for in the dropdown list for VCC’s 
+sub-fund. Why is this so? ............................................................................................................................ 5 
+11. I cannot find the exact nature of income of my transaction under “Nature of Income from foreign 
+jurisdiction”. How should I complete this field? ......................................................................................... 5 
+12. When do I select “Freight” under “Nature of Income from foreign jurisdiction”? ................................... 5 
+13. I have applied for the COR previously and my application was approved by IRAS. I have another foreign 
+customer requesting for the COR but the nature of income is different (e.g. royalty instead of service 
+fees). Does that mean that I need to apply for the COR again? ................................................................. 6 
+14. My company is a sole-proprietor of a sole-proprietorship business/ partner of a partnership business. 
+How do I apply for the COR for my sole-proprietorship/ partnership business? ........................................ 6 
+15. My company is a Variable Capital Company (VCC)/ sub-fund of an umbrella VCC. How do I apply for the 
+COR for my VCC/ sub-fund? ........................................................................................................................ 6 
+16. What should I do if I encounter an error while requesting for the COR via myTax Portal? ....................... 7 
+
+1. What is a COR? 
+ 
+A COR is a letter certifying that the company is a tax resident of Singapore for the purpose of 
+claiming benefit under an Avoidance of Double Taxation Agreement (DTA). 
+ 
+2. Who can apply for COR? 
+ 
+A company which is a tax resident of Singapore can apply for the certificate. However, this is not 
+applicable to: 
+ 
+• A nominee company as it is not the beneficial owner of the income derived from the foreign 
+jurisdiction. A nominee company is a company that acts as custodian of shares on behalf of the 
+beneficial owners. 
+ 
+• A Singapore branch of a foreign company as the control and management of its business is 
+vested with its overseas parent company. 
+ 
+3. How to apply for COR? 
+ 
+With effect from Jun 2017, all COR applications have to be filed via myTax Portal. Except for 
+specific situations, paper applications will not be accepted. Please refer to our user guides if you 
+need help on online application for COR. 
+ 
+The online application for COR may be made for the current calendar year and up to four back 
+calendar years. For example, in the calendar year 2021, the company may apply COR for the 
+calendar years 2017 to 2021. The company may start to apply for a COR for one advance calendar 
+year from October to December of the current calendar year. 
+ 
+4. Do I need to be authorised before I can make an online application for the COR? 
+ 
+Yes. The company’s employee or a third party (e.g. company’s appointed tax agent firm) has to be 
+authorised in Corppass to be able to apply for COR electronically. Please refer to our user guides if 
+you need assistance on Corppass setup. 
+ 
+If the employee/ third party is authorised as a Preparer for “Corporate Tax (Filing and 
+Applications)” in Corppass, he can complete the COR application for submission to the Approver. 
+He will not be able to submit the application directly to IRAS. 
+ 
+Only an employee/ third party authorised as an Approver for “Corporate Tax (Filing and 
+Applications)” in Corppass can complete, approve and submit the COR application to IRAS. 
+ 
+Upon successful transmission of your COR application to IRAS, you may view a copy of the filing 
+acknowledgement page at myTax Portal by selecting Notices > Corporate Tax (see screenshot below). 
+
+ 
+ 
+ 
+5. Will the Approver be alerted after the Preparer has submitted the COR application to the 
+Approver for approval? 
+ 
+No, there will be no alert sent and the Preparer will need to inform the Approver. 
+ 
+6. I am a Preparer and need to make some amendments to the COR application after my 
+submission to the Approver. What should I do? 
+ 
+The Approver can retrieve the “Pending Approval” application in myTax Portal and edit the 
+information before submission to IRAS. 
+ 
+Alternatively, the Approver can delete the “Pending Approval” application and the preparer will 
+need to resubmit a new application for approval. 
+ 
+The Approver can also prepare and submit a COR application directly to IRAS. 
+ 
+7. How long does it take to obtain the COR? 
+ 
+Online Application 
+ 
+IRAS will process your application within 7 working days of receiving the electronic application. 
+ 
+Once your electronic application is processed (within 7 working days), a digital copy of the 
+approved COR will be made available in myTax Portal. You will also have the option to print or 
+download the approved COR. To find out how to view the COR via myTax Portal, please refer to 
+our user guide. 
+ 
+If your company’s notice preference in the Update Notice Preferences digital service is email 
+notifications, please allow up to 1-3 working days to receive the email notification that the digital 
+COR is available on myTax Portal. No paper notice will be sent if your company is on email 
+notifications. Please refer to the IRAS website on Digital Notices for more information. 
+ 
+If your company’s notice preference in the Update Notice Preferences digital service is paper 
+notices, please allow up to 4 working days to receive the paper COR in your mail. 
+
+Application in writing (only applies to specific circumstances) 
+ 
+IRAS will process a COR application made in writing within 14 working days from the day we receive 
+the complete information. The processing time may take longer if the case is complex. 
+ 
+Once your application is processed, a digital copy of the approved COR will be made available in 
+myTax Portal. You will also have the option to print or download the approved COR. To find out 
+how to view the COR via myTax Portal, please refer to our user guide. 
+ 
+If your company’s notice preference in the Update Notice Preferences digital service is email 
+notifications, please allow up to 1-3 working days to receive the email notification that the digital 
+COR is available on myTax Portal. No paper notice will be sent if your company is on email 
+notifications. Please refer to the IRAS website on Digital Notices for more information. 
+ 
+If your company’s notice preference in the Update Notice Preferences digital service is 
+paper notices, please allow up to 4 working days to receive the paper COR in your mail. 
+ 
+Note: 
+1. In myTax Portal, approved COR are listed according to the relevant Year of Assessment. The 
+Year of Assessment relates to the calendar year preceding it. 
+E.g. A COR applied for the calendar year 2020 will be listed as relating to “Year of Assessment 
+2021” in myTax Portal. 
+ 
+2. In myTax Portal, the Confirmation and Acknowledgement pages for COR applied by an umbrella 
+Variable Capital Company (‘VCC’) and its sub­fund are listed according to the latest Year of 
+Assessment. The approved COR are listed according to the relevant Year of Assessment. The 
+Year of Assessment relates to the calendar year preceding it. 
+E.g. COR was applied by an umbrella VCC and its sub-fund for calendar years 2020 and 2021 
+respectively. 
+ 
+Both the Confirmation and Acknowledgement pages of the application will be listed under the 
+VCC’s tax reference as relating to “Year of Assessment 2022” in myTax Portal. 
+ 
+COR for VCC and its sub-fund made for calendar years 2020 and 2021 will be listed under the 
+VCC’s tax reference as relating to “Year of Assessment 2021” and “Year of Assessment 2022” 
+separately in myTax Portal. 
+ 
+8. The application form requires me to state the “Calendar Year” in which the COR is required. How 
+should I complete this field? 
+ 
+The calendar year in the application form should correspond to the calendar year (and not the year 
+of assessment) in which the company received the income from other jurisdictions. For example, if 
+the income is received in the calendar year 2020, you should indicate the calendar year as 2020. 
+ 
+The COR for a specific calendar year will be issued if the control and management of the company’s 
+business has been or will be exercised in Singapore for the whole calendar year. The financial year end 
+of your company does not affect the calendar year in which the COR is required. 
+ 
+If the COR is granted for the calendar year 2020, it means that the company is a tax resident of 
+Singapore throughout the calendar year 2020. 
+
+ 
+9. I cannot find the calendar year which I would like to apply the COR for in the dropdown 
+list. Why is this so? 
+ 
+The list of calendar years available is dependent on the company’s date of incorporation and the 
+effective date of the relevant DTA. 
+ 
+For example, the DTA between Singapore and Cambodia is effective on 1/1/2019. Hence, the 
+company can only select calendar years 2019, 2020 and 2021 in the dropdown list and will not 
+see year calendar years 2017 and 2018 in the dropdown list. If the company is incorporated in 
+2020, the dropdown list will be further restricted to only 2020 and 2021. 
+ 
+10. I cannot find the calendar year which I would like to apply the COR for in the dropdown list for 
+VCC’s sub­fund. Why is this so? 
+ 
+The list of calendar years available is dependent on the effective date of the sub­fund’s 
+relationship with the VCC and the effective date of the relevant DTA. 
+ 
+For example, a sub­fund’s relationship with its VCC is effective on 1/1/2020. The applicable DTA is 
+effective on 1/1/2021. The VCC will be able to select calendar year 2021 in its sub­fund’s dropdown list 
+and will not see year calendar years 2017, 2018, 2019 and 2020. 
+ 
+11. I cannot find the exact nature of income of my transaction under “Nature of Income from foreign 
+jurisdiction”. How should I complete this field? 
+ 
+Businesses may select the nature of income that fits closest to its transaction. For example, if the 
+company is expecting to receive maintenance or support fees, you may select “Service Fees”. 
+ 
+The available selection for nature of income is: 
+1. Consultancy Fees 
+2. Dividend 
+3. Freight 
+4. Interest 
+5. Management Fees 
+6. Professional Fees 
+7. Royalty 
+8. Service Fees 
+9. Technical Fees 
+10. Commission and fee income 
+11. Insurance Premium 
+12. Sale of Goods 
+13. Software License Fees 
+14. Other Income (please specify) 
+ 
+12. When do I select “Freight” under “Nature of Income from foreign jurisdiction”? 
+ 
+“Freight” includes income from shipping and air transport operations, including uplift of 
+passengers. 
+
+ 
+13. I have applied for the COR previously and my application was approved by IRAS. I have another 
+foreign customer requesting for the COR but the nature of income is different (e.g. royalty 
+instead of service fees). Does that mean that I need to apply for the COR again? 
+ 
+No. Companies do not need to submit another online application for the COR of the same foreign 
+jurisdiction and calendar year. Companies can obtain a copy by downloading or printing it out 
+from myTax Portal. To find out how to view the COR via myTax Portal, please refer to the user 
+guide. 
+ 
+Note: 
+In myTax Portal, approved CORs are listed according to the relevant Years of Assessment. The Year 
+of Assessment relates to the calendar year preceding it. 
+ 
+E.g. A COR applied for the calendar year 2020 will be listed as relating to “Year of Assessment 
+2021” in myTax Portal. 
+ 
+14. My company is a sole-proprietor of a sole-proprietorship business/ partner of a partnership 
+business. How do I apply for the COR for my sole-proprietorship/ partnership business? 
+ 
+The company is required to write to IRAS with the following details if it needs to apply COR for its 
+sole-proprietorship and partnership business: 
+ 
+• 
+Name and Unique Entity Number (UEN) of the company and its sole-proprietorship/ 
+partnership business 
+• 
+Reason(s) for requesting the COR 
+• 
+Calendar year for which the COR is required 
+• 
+Name of foreign jurisdiction 
+• 
+Nature and amount of income to be derived from foreign jurisdiction 
+• 
+Name of the foreign company/ person paying the income 
+• 
+Date of remittance of income 
+• 
+Confirmation that the control and management of your company for the whole calendar 
+year is/ will be exercised in Singapore 
+ 
+15. My company is a Variable Capital Company (VCC)/ sub-fund of an umbrella VCC. How do I 
+apply for the COR for my VCC/ sub-fund? 
+ 
+The umbrella VCC has to apply for the COR for itself and its sub-funds. It can apply for its COR and the 
+COR of up to 5 sub-funds in a single application. To apply for COR for more than 5 sub-funds, the VCC 
+has to access the Apply for Certificate of Residence (COR) digital service for each batch of 5 sub-
+funds. 
+ 
+To apply for COR for its sub-funds, the VCC needs to enter the Tax Reference Number of the sub-fund 
+it is applying for (e.g. A1234567X). 
+
+ 
+16. What should I do if I encounter an error while requesting for the COR via myTax Portal? 
+ 
+We encourage you to clear the cache and close active applications before you file. For 
+instructions on clearing ‘cache', please refer to Question 2 of the Technical FAQ. 
+ 
+If you still encounter an error, please send us an email via myTax Mail with the following details: 
+a) Date and time that you encountered the error 
+b) Tax Reference Number of the company and the login person 
+c) Description of the error (e.g. after clicking “Submit” at Confirmation Statement) 
+d) The operating system you are using (e.g. Windows XP, Vista) 
+e) The browser type and version number (e.g. Firefox 2.0, IE 6) 
+f) The error message(s) or the screenshot of the error(s)  
+Alternatively, please call 1800-3568622 for assistance. 

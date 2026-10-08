@@ -1,0 +1,378 @@
+form1 | dateTimeEdit PrintTime | 
+form1 | text | BIRS21 (4/2025)
+form1 | text | Page of
+form1 | numericEdit CurrentPage | Text Field
+form1 | numericEdit PageCount | Text Field
+form1 | button Button3 | Reset
+form1 | button Button2 | Print
+form1 | button Button1 | Save
+form1 | text | File No. :
+form1 | text | Year of Assessment :
+form1 | textEdit fileNo_display | 
+form1 | textEdit year_display | 
+form1 | button Button4 | Export to XML
+form1 | textEdit XMLversion | 
+form1/SubForm_Header | button Button2 | Print
+form1/SubForm_Header | button Button1 | Save
+form1/SubForm_Header | button Button3 | Reset
+form1/SubForm_Header | button Button4 | Export to XML
+form1/SubForm_Header | textEdit FileNo_field | 
+form1/SubForm_Header | textEdit YA_field | 
+form1/SubForm_Header | textEdit T69 | 
+form1/SubForm_Header | textEdit T68 | 
+form1/LandingPage | textEdit txt_landing | Lang Chosen
+form1/LandingPage | choiceList drop_landing | Lang List | options: English
+form1/LandingPage | button btn_landing | Confirm
+form1/LandingPage | textEdit formNo | 
+form1/LandingPage | textEdit IRD_FID | 
+form1/LandingPage | textEdit BIR_version | 
+form1/LandingPage | textEdit version | 
+form1/LandingPage | textEdit langControl | Text Field
+form1/Page1_E/Sub1 | text | SUPPLEMENTARY FORM TO PROFITS TAX RETURN
+form1/Page1_E/Sub1 | text | – TAX CERTAINTY ENHANCEMENT SCHEME FOR ONSHORE GAIN ON DISPOSAL OF EQUITY INTERESTS
+form1/Page1_E/Sub1 | text | (applicable for year of assessment 2023/24 and subsequent years)
+form1/Page1_E/Sub1 | text | This supplementary form is part of the Profits Tax Return (Note 1). If you have derived onshore gains on disposal of equity interests and wish to elect for the Tax Certainty Enhancement Scheme (“the Scheme”) (Note 2) provided in Schedule 17K to the Inland Revenue Ordinance (Cap. 112) (“IRO”), you have to fill in the form electronically. You must export the filled form to XML file and upload the XML file via the electronic filing of Profits Tax Return services under GovHK for submission (Note 34).
+form1/Page1_E/Sub1 | text | File No.
+form1/Page1_E/Sub1 | textEdit forInternalUse_E | 
+form1/Page1_E/Sub1 | numericEdit txt_tradeCat_E | Enter the first two digits of your file number.
+form1/Page1_E/Sub1 | text | /
+form1/Page1_E/Sub1 | numericEdit txt_brn_E | Enter the Business Registration Number.
+form1/Page1_E/Sub1 | text | Year of Assessment
+form1/Page1_E/Sub1 | choiceList drop_yearAss_E | Select the Year of Assessment. | options: 2023/24; 2024/25; 2025/26; 2026/27; 2024; 2025; 2026; 2027
+form1/Page1_E/Sub1 | text | Name of Taxpayer
+form1/Page1_E/Sub1 | textEdit txt_nameTaxpayer_E | Enter the Name of Corporation.
+form1/Page1_E/Sub1 | text | SECTION 1
+form1/Page1_E/Sub1 | text | BASIS PERIOD (Note 8)
+form1/Page1_E/Sub1 | text | From
+form1/Page1_E/Sub1 | dateTimeEdit txt_basisPeriodFrom_E | Enter the start date of Basis Period in “DD/MM/YYYY” format.
+form1/Page1_E/Sub1 | text | To
+form1/Page1_E/Sub1 | dateTimeEdit txt_basisPeriodTo_E | Enter the end date of Basis Period in “DD/MM/YYYY” format.
+form1/Page1_E/Sub1 | text | (day / month / year)
+form1/Page1_E/Sub1/sub21 | text | SECTION 2
+form1/Page1_E/Sub1/sub21 | text | DETAILS OF ONSHORE DISPOSAL GAINS (Note 9)
+form1/Page1_E/Sub1/sub21 | text | 2.1
+form1/Page1_E/Sub1/sub21 | text | Total amount of onshore disposal gains to which the Scheme applies (Notes 2 and 9)
+form1/Page1_E/Sub1/sub21 | text | 2.2
+form1/Page1_E/Sub1/sub21 | text | Number of disposals from which the onshore disposal gains stated in section 2.1 were derived
+form1/Page1_E/Sub1/sub21 | text | HK$
+form1/Page1_E/Sub1/sub21 | numericEdit txt_ttlAmtOnshoreDisposalGains_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E/Sub1/sub21 | numericEdit txt_noOfDisposals_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E/Sub1 | text | S21
+form1/Page1_E/Sub2 | button Button3 | Add 1 disposal
+form1/Page1_E/Sub2 | button Button3 | Add 10 disposal(s)
+form1/Page1_E/Sub2 | button Button3 | Add 5 disposal(s)
+form1/Page1_E/Sub2 | button ButtonDelete | Delete disposal(s) from
+form1/Page1_E/Sub2 | textEdit TextFieldDeleteFrom | Delete Row Record start from.
+form1/Page1_E/Sub2 | text | to
+form1/Page1_E/Sub2 | textEdit TextFieldDeletTo | Delete Row Record end to.
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Particulars of the equity interests being disposed of under the subject disposal (“subject interests”)
+form1/Page1_E/SubF1/SubF11/SubF111 | text | (a)
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Quantity and nature of the subject interests
+form1/Page1_E/SubF1/SubF11/SubF111 | text | (b)
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Do the subject interests carry rights to the profits, capital or reserves of the investee entity where the interests are accounted for as equity in the books of the investee entity under applicable accounting principles? (Notes 5 and 6)
+form1/Page1_E/SubF1/SubF11/SubF111 | numericEdit disposalNo_E | 
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Yes
+form1/Page1_E/SubF1/SubF11/SubF111 | text | No
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Disposal
+form1/Page1_E/SubF1/SubF11/SubF111 | text | 2.2.1
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Date of the subject disposal
+form1/Page1_E/SubF1/SubF11/SubF111 | dateTimeEdit txt_1_dateDisposal_E | Enter the end date of Basis Period in “DD/MM/YYYY” format.
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Amount of onshore disposal gains derived from the subject disposal
+form1/Page1_E/SubF1/SubF11/SubF111 | text | 2.2.2
+form1/Page1_E/SubF1/SubF11/SubF111 | text | HK$
+form1/Page1_E/SubF1/SubF11/SubF111 | numericEdit txt_1_AmtOnshoreDisposal_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E/SubF1/SubF11/SubF111 | choiceList drop_1_reasonDisposal_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations. | options: For business expansion; For group restructuring; For other investment reasons
+form1/Page1_E/SubF1/SubF11/SubF111 | numericEdit txt_1_quantity_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E/SubF1/SubF11/SubF111 | choiceList drop_1_nature_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations. | options: Ordinary shares; Preference shares; Partnership interests; Fund units; Others
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Reason for the subject disposal
+form1/Page1_E/SubF1/SubF11/SubF111 | text | 2.2.3
+form1/Page1_E/SubF1/SubF11/SubF111 | text | 2.2.4
+form1/Page1_E/SubF1/SubF11/SubF111 | checkButton chk_1_carryRightsY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF111 | text | (c)
+form1/Page1_E/SubF1/SubF11/SubF111 | checkButton chk_1_carryRightsN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Were the subject interests listed or traded on a stock exchange in Hong Kong or elsewhere at the time of the subject disposal?
+form1/Page1_E/SubF1/SubF11/SubF111 | checkButton chk_1_listedY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF111 | checkButton chk_1_listedN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Details of the investee entity
+form1/Page1_E/SubF1/SubF11/SubF111 | text | 2.2.5
+form1/Page1_E/SubF1/SubF11/SubF111 | textEdit txt_1_nameInvesteeEntity_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Name of the investee entity:
+form1/Page1_E/SubF1/SubF11/SubF111 | choiceList drop_1_placeInvesteeEntity_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations. | options: Hong Kong; Outside Hong Kong
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Place of establishment/incorporation
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Business Registration Number (if applicable)
+form1/Page1_E/SubF1/SubF11/SubF111 | numericEdit txt_1_brnInvesteeEntity_E | Enter the Business Registration Number.
+form1/Page1_E/SubF1/SubF11/SubF111 | text | (e)
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Industry sector (Note 10)
+form1/Page1_E/SubF1/SubF11/SubF111 | text | (d)
+form1/Page1_E/SubF1/SubF11/SubF111 | text | Principal business activity:
+form1/Page1_E/SubF1/SubF11/SubF111 | textEdit txt_1_principalActInvesteeEntity_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page1_E/SubF1/SubF11/SubF111 | text | (day / month / year)
+form1/Page1_E/SubF1/SubF11/SubF111 | choiceList drop_1_industryInvesteeEntity_E | Select the jurisdiction of tax residence for the group’s ultimate parent entity.
+form1/Page1_E/SubF1/SubF11/SubF111 | button del1 | X
+form1/Page1_E/SubF1/SubF11/SubF112 | text | 2.2.6
+form1/Page1_E/SubF1/SubF11/SubF112 | text | Business activities of the investee entity (Complete this section only if your answer to section 2.2.4(c) is “No”)
+form1/Page1_E/SubF1/SubF11/SubF112 | text | Yes
+form1/Page1_E/SubF1/SubF11/SubF112 | text | Did the investee entity carry on a business of property trading (Note 11) in the investee entity's relevant basis period (Note 13)?
+form1/Page1_E/SubF1/SubF11/SubF112 | text | (a)
+form1/Page1_E/SubF1/SubF11/SubF112 | text | (b)
+form1/Page1_E/SubF1/SubF11/SubF112 | text | If your answer to section 2.2.6(a) is “No”, did/had the investee entity undertake/undertaken property development (Note 14), in Hong Kong or elsewhere, in or before the investee entity's relevant basis period?
+form1/Page1_E/SubF1/SubF11/SubF112 | text | In case your answer to section 2.2.6(b) is “Yes”, for each of sections 2.2.6(b)(i) and 2.2.6(b)(ii), tick “Yes” if the statement is correct, otherwise tick “No” (Note 15).
+form1/Page1_E/SubF1/SubF11/SubF112 | text | (ii)
+form1/Page1_E/SubF1/SubF11/SubF112 | text | (i)
+form1/Page1_E/SubF1/SubF11/SubF112 | text | The investee entity had not undertaken property development, whether in Hong Kong or elsewhere, for at least a continuous period of 60 months before the subject disposal.
+form1/Page1_E/SubF1/SubF11/SubF112 | text | In the investee entity’s relevant basis period, the immovable properties held by the investee entity were used by it to carry on its trade or business and none of the immovable properties held by it was for sale.
+form1/Page1_E/SubF1/SubF11/SubF112 | text | (c)
+form1/Page1_E/SubF1/SubF11/SubF112 | text | If your answers to sections 2.2.6(a) and 2.2.6(b) are “No”, did the investee entity hold any immovable properties (Notes 12 and 17), in Hong Kong or elsewhere, in the investee entity’s relevant basis period?
+form1/Page1_E/SubF1/SubF11/SubF112 | text | (d)
+form1/Page1_E/SubF1/SubF11/SubF112 | text | If your answer to section 2.2.6(c) is “Yes”, did the investee entity’s immovable property holding (Notes 18 and 19) in the investee’s relevant basis period exceed 50%?
+form1/Page1_E/SubF1/SubF11/SubF112 | text | Equity holding conditions (Note 20)
+form1/Page1_E/SubF1/SubF11/SubF112 | text | 2.2.7
+form1/Page1_E/SubF1/SubF11/SubF112 | text | Had you held the subject interests throughout the reference period (Note 21)?
+form1/Page1_E/SubF1/SubF11/SubF112 | text | Did the subject interests by themselves, or together with certain other equity interests in the investee entity also having been held by you throughout the reference period, constitute qualifying interests (Note 22) in the investee entity? (Skip sections 2.2.7(c), 2.2.7(d), 2.2.7(e) and 2.2.8 if your answer to section 2.2.7(b) is “Yes”)
+form1/Page1_E/SubF1/SubF11/SubF112 | text | No
+form1/Page1_E/SubF1/SubF11/SubF112 | text | Did the subject interests, together with certain other equity interests in the investee entity also having been held by you and/or your closely related entity/entities (Note 23) throughout the reference period, in aggregate, constitute qualifying interests (Note 22) in the investee entity? (If your answer to section 2.2.7(c) is “Yes”, complete sections 2.2.7(d) and 2.2.7(e) and Table A (Note 25) and skip section 2.2.8 If your answer to section 2.2.7(c) is “No”, skip sections 2.2.7(d) and 2.2.7(e) and complete section 2.2.8)
+form1/Page1_E/SubF1/SubF11/SubF112 | text | Number of closely related entities covered in section 2.2.7(c)
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_ptyTradingInvesteeEntityY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_ptyTradingInvesteeEntityN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_ptyMgtInvesteeEntityY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_ptyMgtInvesteeEntityN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_notPtyDevInvesteeEntityY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_notPtyDevInvesteeEntityN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_immovablePtyInvesteeEntityY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_immovablePtyInvesteeEntityN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_holdImmovableInvesteeEntityY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_holdImmovableInvesteeEntityN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_exceed50Y_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_exceed50N_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_intHoldingY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_intHoldingN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_heldByY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_heldByN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_heldCloselyRelatedEityY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_1_heldCloselyRelatedEityN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | numericEdit txt_noOfClosedRelatedEntities_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E/SubF1/SubF11/SubF112 | text | Have you completed the details of each closely related entity in relation to the subject disposal in Table A (Note 25)?
+form1/Page1_E/SubF1/SubF11/SubF112 | text | (e)
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_tableAY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF112 | checkButton chk_tableAN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF113 | text | 2.2.8
+form1/Page1_E/SubF1/SubF11/SubF113 | text | Exception to equity holding conditions: long-held left-overs from section 5(2) disposal (Note 26) (Complete this section only if your answers to sections 2.2.7(b) and 2.2.7(c) are “No” and you rely on section 6 of Schedule 17K to the IRO to apply for tax certainty)
+form1/Page1_E/SubF1/SubF11/SubF113 | text | Yes
+form1/Page1_E/SubF1/SubF11/SubF113 | checkButton chk_1_longheldY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF113 | text | No
+form1/Page1_E/SubF1/SubF11/SubF113 | checkButton chk_1_longheldN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF113 | text | Was the subject disposal of the subject interests a disposal of long-held left-overs from a section 5(2) disposal (Notes 27 and 28) and the subject disposal occurred within 24 months after the section 5(2) disposal?
+form1/Page1_E/SubF1/SubF11/SubF113 | text | (a)
+form1/Page1_E/SubF1/SubF11/SubF113 | text | (b)
+form1/Page1_E/SubF1/SubF11/SubF113 | text | If your answer to section 2.2.8(a) is “Yes”, provide the following information:
+form1/Page1_E/SubF1/SubF11/SubF113 | dateTimeEdit txt_1_dateSectionDisposal_E | Enter the end date of Basis Period in “DD/MM/YYYY” format.
+form1/Page1_E/SubF1/SubF11/SubF113 | text | (day / month / year)
+form1/Page1_E/SubF1/SubF11/SubF113 | text | (i)
+form1/Page1_E/SubF1/SubF11/SubF113 | text | (ii)
+form1/Page1_E/SubF1/SubF11/SubF113 | text | Were the subject interests regarded as trading stock (Note 30) after the section 5(2) disposal?
+form1/Page1_E/SubF1/SubF11/SubF113 | text | State the date when the section 5(2) disposal occurred (Note 29)
+form1/Page1_E/SubF1/SubF11/SubF113 | checkButton chk_tradingStockY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF113 | checkButton chk_tradingStockN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF114 | text | Number of holding entities by which the specified equity interests were held
+form1/Page1_E/SubF1/SubF11/SubF114 | text | 2.2.9
+form1/Page1_E/SubF1/SubF11/SubF114 | text | Equity interests regarded as trading stock (Complete this section if your answer to section 2.2.7(b) or 2.2.7(c) is “Yes”)
+form1/Page1_E/SubF1/SubF11/SubF114 | text | Yes
+form1/Page1_E/SubF1/SubF11/SubF114 | checkButton chk_1_tradingStockY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF114 | text | No
+form1/Page1_E/SubF1/SubF11/SubF114 | checkButton chk_1_tradingStockN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF114 | text | Tick “Yes” if the following statement is correct, otherwise tick “No”. Of the equity interests held by you or your closely related entity/entities (collectively as “holding entities”) which, in aggregate, constituted qualifying interests in the investee entity as covered in section 2.2.7(b) or section 2.2.7(c), none of them were/had been regarded as trading stock (Note 30)?
+form1/Page1_E/SubF1/SubF11/SubF114 | text | (a)
+form1/Page1_E/SubF1/SubF11/SubF114 | text | (b)
+form1/Page1_E/SubF1/SubF11/SubF114 | text | If your answer to section 2.2.9(a) is “No”, complete Table B (Note 33) and provide the following information in respect of those equity interests that were/had been regarded as trading stock (“specified equity interests”):
+form1/Page1_E/SubF1/SubF11/SubF114 | numericEdit txt_noOfHoldingEntities_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page1_E/SubF1/SubF11/SubF114 | text | (ii)
+form1/Page1_E/SubF1/SubF11/SubF114 | checkButton chk_tableBY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF114 | checkButton chk_tableBN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page1_E/SubF1/SubF11/SubF114 | text | (i)
+form1/Page1_E/SubF1/SubF11/SubF114 | text | Have you completed the details of the specified equity interests in relation to the subject disposal in Table B (Note 33)?
+form1/Page2_E/subTableTitle | text | TABLE A DETAILS OF CLOSELY RELATED ENTITIES (NOTE 25)
+form1/Page2_E/subTitle | text | Row No.
+form1/Page2_E/subTitle | text | Disposal No.
+form1/Page2_E/subTitle | text | Name of the closely related entity
+form1/Page2_E/subTitle | text | Place of establishment/ incorporation
+form1/Page2_E/subTitle | text | Business Registration Number (if applicable)
+form1/Page2_E/subTitle | text | Had the entity been a closely related entity of you throughout the reference period?
+form1/Page2_E/SubF2/SubF21 | numericEdit NoTblA_E | 
+form1/Page2_E/SubF2/SubF21 | numericEdit txt_disposalNoCloselyRelatedTblA_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page2_E/SubF2/SubF21 | textEdit txt_nameCloselyRelatedEntityTblA_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page2_E/SubF2/SubF21 | choiceList drop_placeCloselyEntityTblA_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations. | options: Hong Kong; Outside Hong Kong
+form1/Page2_E/SubF2/SubF21 | numericEdit txt_brnCloselyEntitytblA_E | Enter the Business Registration Number.
+form1/Page2_E/SubF2/SubF21 | button del1 | X
+form1/Page2_E/SubF2/SubF21 | text | Yes
+form1/Page2_E/SubF2/SubF21 | text | No
+form1/Page2_E/SubF2/SubF21 | checkButton chk_closelyTblAY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E/SubF2/SubF21 | checkButton chk_closelyTblAN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page2_E/Sub4 | button Add5 | Add 5 records
+form1/Page2_E/Sub4 | button Add1 | Add 1 record
+form1/Page2_E/Sub4 | button Add10 | Add 10 records
+form1/Page3_E/subTableTitle2 | text | TABLE B DETAILS OF SPECIFIED EQUITY INTERESTS HELD BY THE HOLDING ENTITIES (NOTE 33)
+form1/Page3_E/subTitle2 | text | Row No.
+form1/Page3_E/subTitle2 | text | Disposal No.
+form1/Page3_E/subTitle2 | text | Name of the holding entity
+form1/Page3_E/subTitle2 | text | Have any of the specified equity interests been appropriated for a non-trade purpose (Note 32)?
+form1/Page3_E/subTitle2 | text | Has the holding entity brought into account the amount that the appropriated equity interests would have realized, if sold in the open market on the date of the appropriation, as a receipt in accordance with section 15BA(2) of the IRO? (if applicable)
+form1/Page3_E/subTitle2 | text | Date of the appropriation (if applicable)
+form1/Page3_E/subTitle2 | text | If the profit, gain or loss arose from a disposal, state the date of that disposal
+form1/Page3_E/subTitle2 | text | If the profit, gain or loss arose from an adjustment for fair value changes or diminution in value, state the first date of the basis period for that year of assessment
+form1/Page3_E/subTitle2 | text | Nature of profit, gain or loss in respect of the specified equity interests, or other equity interests being acquired by the holding entity on the same occasion, which has been brought into account for tax purposes for a year of assessment (Notes 30 and 31)
+form1/Page3_E/SubF3/SubF31 | numericEdit NoTblB_E | 
+form1/Page3_E/SubF3/SubF31 | numericEdit txt_disposalNoHoldingEntityTblB_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations.
+form1/Page3_E/SubF3/SubF31 | textEdit txt_nameHoldingEntityTblB_E | Enter the amount of operating expenditure incurred in Hong Kong for the relevant activities.
+form1/Page3_E/SubF3/SubF31 | choiceList drop_natureHoldingEntityTblB_E | Enter the amount of interest income (in HK$) from non-Hong Kong associated corporations. | options: Fair value changes or diminution in value; Disposal gains or losses; All of the above
+form1/Page3_E/SubF3/SubF31 | button del1 | X
+form1/Page3_E/SubF3/SubF31 | dateTimeEdit txt_firstDateTblB_E | Enter the end date of Basis Period in “DD/MM/YYYY” format.
+form1/Page3_E/SubF3/SubF31 | dateTimeEdit txt_dateOfDisposalTblB_E | Enter the end date of Basis Period in “DD/MM/YYYY” format.
+form1/Page3_E/SubF3/SubF31 | text | Yes
+form1/Page3_E/SubF3/SubF31 | text | No
+form1/Page3_E/SubF3/SubF31 | checkButton chk_appropriationNonTradeTblBY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page3_E/SubF3/SubF31 | checkButton chk_appropriationNonTradeTblBN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page3_E/SubF3/SubF31 | dateTimeEdit txt_dateOfAppropriationTblB_E | Enter the end date of Basis Period in “DD/MM/YYYY” format.
+form1/Page3_E/SubF3/SubF31 | text | (day / month / year)
+form1/Page3_E/SubF3/SubF31 | checkButton chk_accordanceIROTblBY_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page3_E/SubF3/SubF31 | checkButton chk_accordanceIROTblBN_E | 在評税基期內，如與該法團進行交易的相聯法團的税務居留地管轄區是香港，請剔選這格。 | options: 1; 0
+form1/Page3_E/Sub5 | button Add5 | Add 5 records
+form1/Page3_E/Sub5 | button Add1 | Add 1 record
+form1/Page3_E/Sub5 | button Add10 | Add 10 records
+form1/Page3_E | textEdit hashValue_E | Check Sum
+form1/Page3_E | textEdit TextField1 | Text Field
+form1/Page4_E | text | NOTES AND INSTRUCTIONS – SUPPLEMENTARY FORM (S21)
+form1/Page4_E | text | An eligible investor entity (Note 3) is required to complete this supplementary form for submission together with its Profits Tax Return if it elects for the Tax Certainty Enhancement Scheme (“the Scheme”) (Note 2) provided in Schedule 17K to the Inland Revenue Ordinance (Cap. 112) (“IRO”) in respect of its onshore gains derived from the disposal of eligible equity interests (Note 5) in an eligible investee equity (Note 7) that accrued to it during the year of assessment.
+form1/Page4_E | text | 1.
+form1/Page4_E | text | (a)
+form1/Page4_E | text | the investor entity must be an eligible investor entity (Note 3);
+form1/Page4_E | text | the subject matter disposed of must be an eligible equity interest (Note 5) in an eligible investee entity (Note 7); and
+form1/Page4_E | text | (b)
+form1/Page4_E | text | The Scheme only applies to disposal gains arising in or derived from Hong Kong (i.e. onshore disposal gains). The Scheme does not cover any specified foreign-sourced income as defined by section 15H(1) of the IRO, even if the specified foreign-sourced income is regarded under section 15I(1) of the IRO as a receipt arising in or derived from Hong Kong.
+form1/Page4_E | text | 2.
+form1/Page4_E | text | An investor entity is an insurer if its assessable profits for the year of assessment are ascertained under Subdivision 1 of Division 11 of Part 4 of the IRO.
+form1/Page4_E | text | 4.
+form1/Page4_E | text | non-listed equity interests in an excluded entity. An investee entity is an excluded entity if it engages in property trading (Note 11), property development (Note 14) or property holding (Note 17) (collectively as “property-related businesses”) and does not satisfy the exception conditions (Notes 15 and 18).
+form1/Page4_E | text | equity interests that are regarded as trading stock for tax purposes (Note 30); or
+form1/Page4_E | text | For the purposes of the Scheme, an equity interest in an investee entity means an interest that carries rights to the profits, capital or reserves of the investee entity and is accounted for as equity in the books of the investee entity under applicable accounting principles (Note 6). Nevertheless, the Scheme does not apply to the following equity interests:
+form1/Page4_E | text | 5.
+form1/Page4_E | text | Applicable accounting principles in general refer to the accounting standards required to be adopted by an entity in the preparation of its financial accounts. In determining whether a financial instrument, from the perspective of an investee entity, should be classified as an equity instrument or a financial liability, Hong Kong Accounting Standard 32 (HKAS 32) and International Accounting Standard 32 (IAS 32) have provided detailed guidance on this aspect. In case the investee entity is not required to comply with any specified accounting standards for preparing its financial accounts, the applicable accounting principles should be the International Financial Reporting Standards.
+form1/Page4_E | text | 6.
+form1/Page4_E | text | The basis period must be the same as that stated in the relevant Profits Tax Return.
+form1/Page4_E | text | 8.
+form1/Page4_E | text | To be eligible for the Scheme, the investor entity must be a legal person (other than a natural person) or an arrangement that prepares separate financial accounts, such as a partnership, a trust and a fund. Nevertheless, the Scheme does not apply to an investor entity which is an insurer (Note 4).
+form1/Page4_E | text | 3.
+form1/Page4_E | text | The Scheme applies to a gain or profit derived from a disposal of equity interests if the disposal occurs on or after 1 January 2024; and the gain or profit accrues in the basis period for a year of assessment beginning on or after 1 April 2023. The Scheme provides that, subject to certain specified exclusions, any gain or profit (disposal gain), arising in or derived from Hong Kong, that an entity (investor entity) derives from a disposal (subject disposal) of equity interests (subject interests) in another entity (investee entity) is to be regarded as capital in nature and not chargeable to profits tax if the following eligibility criteria are met:
+form1/Page4_E | text | (c)
+form1/Page4_E | text | the equity holding conditions (Note 20) are met for the subject disposal of the subject interests or the exception conditions for long-held left-overs (i.e. disposal in tranches) (Note 26) are satisfied.
+form1/Page4_E | text | To be eligible for the Scheme, the investee entity must be a legal person (other than a natural person) or an arrangement that prepares separate financial accounts, such as a partnership, a trust and a fund. Nevertheless, the Scheme is not applicable to non-listed equity interests in excluded entities (Note 5(b)).
+form1/Page4_E | text | 7.
+form1/Page4_E | text | “Onshore disposal gain” means any gain or profit, arising in or derived from Hong Kong, that an entity derives from a disposal of equity interests in another entity. In section 2.1, you should state the total amount of onshore disposal gains in respect of which you elect for the Scheme. Details of each disposal should be provided in section 2.2. Details of up to 25 disposals can be provided in this form. In case there are more than 25 disposals, please provide details of the remaining disposals in the same format on a separate sheet. In the separate sheet, please add your file number, year of assessment concerned and a remark “Additional” and sign at the bottom of the sheet.
+form1/Page4_E | text | 9.
+form1/Page4_E | text | If the investee entity engaged in more than one business activity in the basis period, please select the industry sector with reference to its principal business activity.
+form1/Page4_E | text | 10.
+form1/Page5_E | text | 12.
+form1/Page5_E | text | “Immovable property”, as defined in section 1(1) of Schedule 17K to the IRO, means the following but does not include infrastructure:
+form1/Page5_E | text | Section 1(4) of Schedule 17K to the IRO provides that an entity carries on a business of property trading if it carries on a business of acquisition and sale of immovable properties (Note 12), situated in Hong Kong or elsewhere, unless the acquisition and sale of immovable properties is incidental to the undertaking of any property development (Note 14) (i.e. construction of buildings) by the entity. For the purposes of the Scheme, an investee entity that engages in a regular business other than property trading but has carried out a one-off property trading transaction which is an adventure in the nature of trade would not be regarded as an excluded entity.
+form1/Page5_E | text | 11.
+form1/Page5_E | text | “ Investee entity’s relevant basis period”, in relation to a disposal of equity interests in an investee entity, means the basis period of the investee entity for the year of assessment in which the disposal occurs (as defined in section 1(1) of Schedule 17K to the IRO).
+form1/Page5_E | text | 13.
+form1/Page5_E | text | “Construction”, as defined in section 1(1) of Schedule 17K to the IRO, means the following:
+form1/Page5_E | text | 16.
+form1/Page5_E | text | any alteration or addition to, or partial demolition and rebuilding of, a building or part of a building,
+form1/Page5_E | text | (b)
+form1/Page5_E | text | any building operation, or demolition and rebuilding operation, in, on, over or under any land for the purpose of erecting a building or part of a building; or
+form1/Page5_E | text | (a)
+form1/Page5_E | text | “Property development”, as defined in section 1(1) of Schedule 17K to the IRO, means construction (Note 16) or causing the construction of any building or part of a building, and includes acquisition of any land or building or part of a building for such construction and sale of any building or part of a building after such construction.
+form1/Page5_E | text | 14.
+form1/Page5_E | text | that requires the consent of the Building Authority under section 14(1) of the Buildings Ordinance (Cap. 123) or, if carried out in a territory outside Hong Kong, of a similar supervisory authority of that territory; but construction does not include works for the renovation or refurbishment, of a building or part of a building, with a view to maintaining the commercial value of the building or part.
+form1/Page5_E | text | where:
+form1/Page5_E | text | 17.
+form1/Page5_E | text | land (whether covered by water or not);
+form1/Page5_E | text | any estate, right, interest or easement in or over any land; and
+form1/Page5_E | text | The term “infrastructure” means any publicly or privately owned facility providing or distributing services for the benefit of the public, and includes any water, sewage, energy, fuel, transportation or communication facility.
+form1/Page5_E | text | An investee entity, not being engaged in the business of property trading and property development, is an excluded entity if its immovable property holding exceeds 50%. Section 11(1) of Schedule 17K to the IRO provides that an investee entity’s immovable property holding is calculated in accordance with the following formula:
+form1/Page5_E | text | “Specified immovable property”, in relation to an entity, means any immovable property, in Hong Kong or elsewhere, that is directly held by the entity, other than any immovable property used by the entity to carry on its trade or business (as defined in section 11(6) of Schedule 17K to the IRO).
+form1/Page5_E | text | 18.
+form1/Page5_E | text | things attached to land or permanently fastened to anything attached to land.
+form1/Page5_E | text | (c)
+form1/Page5_E | text | 15.
+form1/Page5_E | text | For an investee entity which undertakes or has undertaken property development, it does not become an excluded entity under the Scheme if it has not undertaken property development for at least a continuous period of 60 months before the relevant disposal; and in the investee entity’s relevant basis period (Note 13), the immovable properties held by it are used by it to carry on its trade or business (including used for its letting business) and none of the immovable properties held by it is for sale.
+form1/Page5_E | text | “Property holding” covers an activity of holding immovable properties other than those which fall within the scope of property trading and property development.
+form1/Page5_E | text | A B
+form1/Page5_E | text | X 100%
+form1/Page5_E | text | A
+form1/Page5_E | text | means the aggregate of the following —
+form1/Page5_E | text | the value of any specified immovable property of the investee entity;
+form1/Page5_E | text | the value of any direct or indirect beneficial interest, or any direct or indirect voting rights, of the investee entity in another entity to the extent to which the value is attributable to any specified immovable property of the other entity (Note 19);
+form1/Page5_E | text | ●
+form1/Page5_E | text | B
+form1/Page5_E | text | means the total value of the investee entity’s assets.
+form1/Page6_E | text | In applying the above formula, section 11(3) of Schedule 17K to the IRO provides that each of the following items (each a “specified item’s value”)—
+form1/Page6_E | text | 19.
+form1/Page6_E | text | In relation to an onshore disposal gain that an investor entity derives from a disposal (subject disposal) of equity interests (subject interests) in an investee entity, the equity holding conditions are met for the subject disposal of the subject interests if:
+form1/Page6_E | text | 20.
+form1/Page6_E | text | the subject interests by themselves, or together with certain other equity interests in the investee entity also having been held by the investor entity and/or its closely related entity/entities (Note 23) throughout the reference period, constitute qualifying interests (Note 22) in the investee entity.
+form1/Page6_E | text | (b)
+form1/Page6_E | text | the investor entity has held the subject interests throughout the reference period (Note 21); and
+form1/Page6_E | text | (a)
+form1/Page6_E | text | 21.
+form1/Page6_E | text | 24.
+form1/Page6_E | text | The value of a direct or indirect beneficial interest, or direct or indirect voting rights, of the investee entity in another entity that is attributable to any specified immovable property of the other entity is the value arrived at by multiplying—
+form1/Page6_E | text | the value of any specified immovable property of the investee entity or another entity;
+form1/Page6_E | text | the value of any direct or indirect beneficial interest, or any direct or indirect voting rights, of the investee entity;
+form1/Page6_E | text | the total value of the investee entity’s assets,
+form1/Page6_E | text | (c)
+form1/Page6_E | text | is to be calculated in accordance with the following formula:
+form1/Page6_E | text | “Reference period”, in relation to a disposal of equity interests, means the continuous period of 24 months immediately before the date of the disposal (as defined in section 1(1) of Schedule 17K to the IRO).
+form1/Page6_E | text | An investor entity may dispose of its long-held equity interests in tranches. After disposal of each tranche, the investor entity’s equity holding in an investee entity may fall below the 15% threshold such that the equity holding conditions for the subsequent disposals of the remainder of the long-held interests (long-held left-overs) cannot be met. Section 6 of Schedule 17K to the IRO provides for an exception to the equity holding conditions under which onshore disposal gains arising from a disposal of long-held left-overs from a section 5(2) disposal (Notes 27 and 28) are regarded as capital in nature and not chargeable to profits tax if the disposal of the long-held left-overs occurs within 24 months after the section 5(2) disposal (Note 29).
+form1/Page6_E | text | 25.
+form1/Page6_E | text | C + D 2
+form1/Page6_E | text | means the specified item’s value as at —
+form1/Page6_E | text | D
+form1/Page6_E | text | the time of the specified disposal.
+form1/Page6_E | text | the end of the investee entity’s relevant basis period; or
+form1/Page6_E | text | ●
+form1/Page6_E | text | means the specified item’s value as at the beginning of the investee entity’s relevant basis period (Note 13);
+form1/Page6_E | text | C
+form1/Page6_E | text | where:
+form1/Page6_E | text | the value of the specified immovable property.
+form1/Page6_E | text | the percentage representing the extent of the direct or indirect beneficial interest, or direct or indirect voting rights, of the investee entity in the other entity; by
+form1/Page6_E | text | Section 1(3) of Schedule 17K to the IRO provides that equity interests in an investee entity constitute qualifying interests in the investee entity if the interests, in aggregate, entitle the holder of the interests to at least a 15% share in the profits, capital or reserves of the investee entity.
+form1/Page6_E | text | 22.
+form1/Page6_E | text | Section 2(1) of Schedule 17K to the IRO provides that an entity is a closely related entity of another entity if one of them has control (Note 24) over the other or both of them are under the control of the same entity.
+form1/Page6_E | text | 23.
+form1/Page6_E | text | Section 2(2) of Schedule 17K to the IRO provides that an entity (entity A) has control over another entity (entity B) if:
+form1/Page6_E | text | entity A has more than 50% of direct or indirect beneficial interest in, or in relation to, entity B; or
+form1/Page6_E | text | entity A is directly or indirectly entitled to exercise, or control the exercise of, more than 50% of voting rights in, or in relation to, entity B.
+form1/Page6_E | text | If your closely related entities have held certain other equity interests in the investee entity throughout the reference period which constituted a part of the qualifying interests in the investee entity in relation to the subject disposal, you should provide details of each closely related entity in relation to the subject disposal in Table A. Please also specify the disposal number (e.g. Disposal 1 or Disposal 2) of the subject disposal in Table A for identification. Details of up to 25 closely related entities can be provided in this form. In case there are more than 25 closely related entities, please provide details of the remaining closely related entities in the same format on a separate sheet. In the separate sheet, please add your file number, year of assessment concerned and a remark “Additional” and sign at the bottom of the sheet.
+form1/Page6_E | text | 26.
+form1/Page7_E | text | “Section 5(2) disposal”, as defined in section 6(2) of Schedule 17K to the IRO, means a disposal of equity interests to which section 5(1) of Schedule 17K applies on the basis that the equity holding conditions (Note 20) are met for that disposal of those interests within the meaning of section 5(2) of Schedule 17K.
+form1/Page7_E | text | Where there are more than one earlier disposal in tranches, the latest earlier disposal that is a section 5(2) disposal would be counted for the purpose of considering the 24-month time limit as mentioned in Note 26.
+form1/Page7_E | text | 28.
+form1/Page7_E | text | Equity interests (specified equity interests) held by an investor entity or its closely related entity (collectively as “holding entity”) are regarded as trading stock from the first day of the basis period for a year of assessment if any profit, gain or loss (e.g. unrealised fair value gain or loss, or provision for diminution in value) in respect of the specified equity interests has been brought into account for tax purposes (Note 31) for the year of assessment.
+form1/Page7_E | text | 29.
+form1/Page7_E | text | from the date of disposal if any profit, gain or loss arising from a disposal of any of those other equity interests on that day has been brought into account for tax purposes for a year of assessment.
+form1/Page7_E | text | (b)
+form1/Page7_E | text | from the first day of the basis period for a year of assessment if any profit, gain or loss (not arising from a disposal) (e.g. unrealized fair value gain or loss, or provision for diminution in value) in respect of any of those other equity interests has been brought into account for tax purposes for the year of assessment; or
+form1/Page7_E | text | (a)
+form1/Page7_E | text | 30.
+form1/Page7_E | text | Where the specified equity interests were acquired by the holding entity together with other equity interests on the same occasion, the specified equity interests are regarded as trading stock—
+form1/Page7_E | text | If any equity interests held by you or your closely related entity/entities which, in aggregate, constituted qualifying interests in the investee entity in relation to the subject disposal were/had been regarded as trading stock (i.e. specified equity interests), you should provide details of each holding entity and their respective specified equity interests held in relation to the subject disposal in Table B. Please also specify the disposal number (e.g. Disposal 1 or Disposal 2) of the subject disposal in Table B for identification. Details of up to 15 specified equity interests can be provided in this form. In case there are more than 15 specified equity interests, please provide details of the remaining specified equity interests in the same format on a separate sheet. In the separate sheet, please add your file number, year of assessment concerned and a remark “Additional” and sign at the bottom of the sheet.
+form1/Page7_E | text | 32.
+form1/Page7_E | text | A sum has been brought into account for tax purposes for a year of assessment if the sum has been brought into account for computing the holding entity’s assessable profits or losses for the year of assessment under—
+form1/Page7_E | text | a computation of losses issued to the holding entity.
+form1/Page7_E | text | an assessment made on the holding entity that has become final and conclusive under section 70 of the IRO; or
+form1/Page7_E | text | the holding entity has the amount that the appropriated equity interests would have realized, if sold in the open market on the date of the appropriation, brought into account as a receipt in accordance with section 15BA(2) of the IRO.
+form1/Page7_E | text | the equity interests are appropriated for a non-trade purpose; and
+form1/Page7_E | text | 31.
+form1/Page7_E | text | For any equity interests which are regarded as trading stock as mentioned in Note 30, the equity interests will cease to be regarded as trading stock on the date of the appropriation if:
+form1/Page7_E | text | Section 6(1) of Schedule 17K to the IRO provides that a disposal of equity interests (subject interests) in an investee entity by an investor entity is a disposal of long-held left-overs from a section 5(2) disposal if:
+form1/Page7_E | text | before disposal of the subject interests, other equity interests in the investee entity were disposed of by the investor entity (earlier disposal);
+form1/Page7_E | text | the earlier disposal was a section 5(2) disposal (Note 28); and
+form1/Page7_E | text | the equity holding conditions (Note 20) were met for the earlier disposal on the basis (among other things) that the subject interests had been held by the investor entity throughout the reference period (Note 21) in relation to the earlier disposal and constituted a part of the qualifying interests (Note 22) in the investee entity in relation to the earlier disposal.
+form1/Page7_E | text | (c)
+form1/Page7_E | text | 27.
+form1/Page7_E | text | For the purposes of the Scheme, equity interests are to be disregarded during the period that they are regarded as trading stock (disregarded period), i.e. not to constitute any part of the relevant period or the qualifying interests for meeting the equity holding conditions. Please see Note 32 on appropriation of trading stock for a non-trade purpose.
+form1/Page7_E | text | You must export the filled form to XML file and upload the XML file via the electronic filing of Profits Tax Return services under GovHK for submission. If you do not choose to submit Profits Tax Return through electronic filing or semi-electronic filing, you have to print and sign a paper Control List (containing details of the XML file uploaded and QR code) generated by the electronic filing of Profits Tax Return services for submission together with the Profits Tax Return in order to complete the submission process. The Control List of this supplementary form must be signed by the same person signing the tax return.
+form1/Page7_E | text | 33.
+form1/Page7_E | text | 34.

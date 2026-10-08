@@ -1,0 +1,370 @@
+ 
+Tax Treatment of Donations with Benefits 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+IRAS e-Tax Guide 
+ 
+Determining the Date of Payment or Deemed 
+Payment for the Purpose of Complying with 
+Withholding Tax Obligations 
+(Third Edition) 
+ 
+ 
+ 
+ 
+ 
+
+Determining the Date of Payment or Deemed Payment for the Purpose of 
+Complying with Withholding Tax Obligations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Published by 
+Inland Revenue Authority of Singapore 
+ 
+ 
+ 
+ 
+Published on 30 Jan 2026 
+ 
+First edition on 8 Nov 2021 
+Second edition on 18 Aug 2022 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Disclaimers: IRAS shall not be responsible or held accountable in any way for any damage, loss or 
+expense whatsoever, arising directly or indirectly from any inaccuracy or incompleteness in the 
+Contents of this e-Tax Guide, or errors or omissions in the transmission of the Contents. IRAS shall 
+not be responsible or held accountable in any way for any decision made or action taken by you or 
+any third party in reliance upon the Contents in this e-Tax Guide. Except where specific contents 
+carry legal force, this information aims to provide a better general understanding of taxpayers’ tax 
+obligations and is not intended to comprehensively address all possible tax issues that may arise. 
+While every effort has been made to ensure that this information is consistent with existing law and 
+practice, should there be any changes, IRAS reserves the right to vary its position accordingly. 
+ 
+ 
+© Inland Revenue Authority of Singapore 
+ 
+All rights reserved. No part of this publication may be reproduced or transmitted in any form or by 
+any means, including photocopying and recording without the written permission of the copyright 
+holder, application for which should be addressed to the publisher. Such written permission must 
+also be obtained before any part of this publication is stored in a retrieval system of any nature. 
+
+Determining the Date of Payment or Deemed Payment for the Purpose of 
+Complying with Withholding Tax Obligations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table of Contents 
+ 
+Page 
+ 
+1 
+Aim ...................................................................................................................... 1 
+2 
+Background ........................................................................................................ 1 
+3 
+How to determine date of payment for the purpose of complying with 
+withholding tax obligations ............................................................................... 2 
+4 
+Due date to file and pay withholding tax and applicable penalties .................. 4 
+5 
+Contact information ............................................................................................ 4 
+6 
+Updates and amendments ................................................................................. 4 
+ 
+
+Determining the Date of Payment or Deemed Payment for the Purpose of 
+Complying with Withholding Tax Obligations 
+ 
+ 
+ 
+1 
+ 
+ 
+ 
+ 
+1 
+Aim 
+1.1 
+This e-Tax Guide1: 
+ 
+(i) 
+clarifies what constitutes date of payment of income for the purpose 
+of complying with the requirement to withhold or deduct tax under 
+section 45 of the Income Tax Act 1947 (ITA), as well as under any 
+other provisions with similar requirement, where the payment of 
+income (other than director’s fees2) is made or deemed to be made 
+to a non-resident person; and 
+(ii) 
+provides details on withholding tax filing and payment due date as 
+well as the applicable late payment penalties. 
+ 
+ 
+2 
+Background 
+ 
+2.1 
+Section 45 of the ITA provides that where a person is liable to pay to 
+another person not known to him to be resident in Singapore (hereinafter 
+referred to as “non-resident person”) any interest which is chargeable to 
+tax under the ITA, the person making the payment (hereinafter referred to 
+as “payer”) shall deduct therefrom tax at the appropriate rate on every 
+dollar of the interest and shall immediately give notice of the deduction of 
+tax in writing and pay to the Comptroller of Income Tax (CIT) the amount 
+so deducted. 
+ 
+2.2 
+In a case where the interest liable to be paid is not actually paid over to 
+the non-resident person but is “reinvested, accumulated, capitalised, 
+carried to any reserve or credited to any account however designated or 
+otherwise dealt 
+with 
+on 
+behalf of 
+the 
+(non-resident) 
+person”, 
+section 45(8)(b) of the ITA deems the interest as having been paid to the 
+non- resident person on the date any of the above event occurs. 
+ 
+2.3 
+The withholding tax requirement is also applicable to the payment of 
+royalties, management fees, director’s remuneration, professional and 
+other service fees etc. to a non-resident person, as provided under 
+sections 45A, 45B, 45C, 45D, 45E, 45F, 45G, 45GA and 45H of the ITA. 
+ 
+ 
+1 This e-Tax Guide replaces IRAS’ e-Tax Guide on “Clarification on Date of Payment of Income for 
+the Purposes of Withholding Tax under Section 45 of the Singapore Income Tax Act and Changes 
+to the Withholding Tax Regime Which Takes Effect From 1 April 2003” published on 31 Mar 2003. 
+2 For director’s fees, generally such fees accrue to director on the date the director’s fees are voted 
+and approved at the company’s Annual General Meeting. For further details, please refer to e-Tax 
+Guide “Tax Treatment of Director’s Fees and Bonuses from Employment” published on 30 Jan 
+2026 The date used to determine when an individual becomes entitled to director’s fees is also one 
+of the considerations for the date of payment of fees to non-resident directors for the purpose of 
+complying with withholding tax requirement under section 45B of the ITA. 
+
+Determining the Date of Payment or Deemed Payment for the Purpose of 
+Complying with Withholding Tax Obligations 
+ 
+ 
+ 
+2 
+ 
+ 
+ 
+2.4 
+Pursuant to section 45(8)(b) of the ITA, withholding tax must be 
+accounted for at the earliest of the following dates: 
+ 
+a) when the liability to pay the income arises (i.e. the income is due and 
+payable) in accordance with the terms of the agreement or contract. In 
+the absence of an agreement or a contract, the date of invoice (further 
+explained in paragraph 3.2 below) is regarded as the deemed date of 
+payment; 
+ 
+b) when the income is credited to the account of the non-resident person 
+(or reinvested, accumulated, capitalised or carried to any reserve or 
+any other account however designated, or otherwise dealt with on the 
+non-resident’s behalf); and 
+ 
+c) when actual payment of the income is made. 
+ 
+ 
+3 
+How to determine date of payment for the purpose of complying with 
+withholding tax obligations 
+ 
+3.1 
+Date of payment of income where there is a contract or agreement 
+ 
+3.1.1 Where the date on which income is payable to a non-resident person is 
+stipulated under any written contract or agreement, the date of payment of 
+the income shall be the due and payable date as stipulated therein. For 
+example, if the terms of the agreement provide that royalties at 5% of 
+sales shall be payable to the non-resident person at the end of each 
+quarter, the date of payment of the royalties for the purposes of 
+section 45A of the ITA is deemed to be the last day of each quarter. 
+ 
+3.1.2 However, if there is an additional condition in the agreement that royalty is 
+only payable by the Singapore payer upon demand by the non-resident 
+person or voluntarily by the Singapore payer, then the date of payment 
+will not be the last day of each quarter. The date of payment will now be 
+the date printed on the demand note from the non-resident person or the 
+date voluntary payment is made by the Singapore payer. Similarly, 
+allowable deduction under section 14(1)3 of the ITA will also be given 
+based on the date of demand note or voluntary payment date by the 
+Singapore payer. 
+3.2 
+Date of payment of income where demand for payment is in the form of 
+invoice 
+ 
+3.2.1 Where the date of payment of the income is not spelt out in any written 
+contract or agreement, but instead the demand for payment of the 
+income is by way of an invoice from the non-resident person, the date of 
+payment is deemed to be the date as printed on the invoice. 
+ 
+3 Section 14(1)(a) may be applicable if the payment is interest or in lieu of interest. 
+
+Determining the Date of Payment or Deemed Payment for the Purpose of 
+Complying with Withholding Tax Obligations 
+ 
+ 
+ 
+3 
+ 
+ 
+ 
+3.2.2 Where the Singapore payer is given an extension of time by the non- 
+resident person to make the payment, the deemed date of payment shall 
+remain as the date printed on the invoice. This is because the payer’s 
+liability to pay arises on the date of the invoice and any credit terms 
+extended to the payer are merely an arrangement made between the 
+payer and payee to defer actual payment. 
+ 
+3.2.3 To illustrate, suppose a non-resident person issues an invoice dated 
+1 Mar to a Singapore payer for management fees in respect of services 
+rendered by the former, and the Singapore payer receives the invoice on 
+5 Mar. Although a 30-day credit term is given to the payer and the 
+Singapore payer makes actual payment on 15 Mar, the date as printed on 
+the invoice (i.e. 1 Mar) shall be taken as the deemed date of payment of 
+the fees. 
+ 
+3.3 
+Date of payment of income where there is an accrual in the payer’s 
+account 
+3.3.1 If the accrual is a mere accounting entry and the liability to pay the income 
+has not arisen, withholding tax obligation will not arise solely due to the 
+accrual. 
+ 
+3.3.2 To illustrate, assume that the Singapore payer’s financial year end is 
+31 Oct and the interest payment is due on 31 Mar, 30 Jun, 30 Sep and 
+31 Dec respectively. For accounting purposes, the Singapore payer 
+accrued the interest in the month of October for the financial year end 
+31 Oct 2021. 
+ 
+3.3.3 The interest for the month of October is not due until 31 Dec 2021, so the 
+withholding tax obligation will not arise on the date of accrual. 
+ 
+3.4 
+Date of payment of income where there is no physical pay over of cash 
+ 
+3.4.1 Using the example in paragraph 3.3.2, assume that the non-resident 
+person (Payee B) instructed the Singapore payer (Payer A) not to pay 
+over the interest on 30 Sep 2021, but to credit it to a designated account. 
+The withholding tax obligation arises on 30 Sep 2021 as interest is 
+deemed paid. 
+ 
+3.4.2 Using the example in paragraph 3.3.2, assume that Payee B decided to 
+ask Payer A not to pay over the interest on 30 Sep 2021, but to pay 
+Payee B’s subsidiary, Company C, to settle Payee B’s outstanding liability 
+with Company C. The withholding tax obligation arises on 30 Sep 2021 as 
+interest is deemed paid. 
+ 
+3.4.3 Using the example in paragraph 3.3.2, assume that on 30 Sep 2021, 
+Payee B obtained agreement from Payer A that the interest payable will be 
+added to the principal loan amount. The withholding tax obligation arises 
+on 30 Sep 2021 as interest is deemed paid. 
+
+Determining the Date of Payment or Deemed Payment for the Purpose of 
+Complying with Withholding Tax Obligations 
+ 
+ 
+ 
+4 
+ 
+ 
+ 
+ 
+4 
+Due date to file and pay withholding tax and applicable penalties 
+ 
+4.1 
+Payer is required to file4 and pay the tax withheld to CIT by the 15th of the 
+second month from the date of payment of the income to a non-resident 
+person. 
+4.2 
+A late payment penalty of 5% will be imposed5 if the withholding tax is not 
+received by CIT by the due date. If the tax remains unpaid 30 days after 
+the due date, an additional penalty of 1% may be imposed6 for each 
+completed month that the tax remains unpaid, up to a maximum of 15% of 
+the unpaid tax. 
+ 
+ 
+5 
+Contact information 
+5.1 
+For any general enquiries or clarification on this e-Tax Guide, please call 
+IRAS 1800-356 8622 (Corporate) or 1800-356 8300 (Individual). For any 
+enquiries on payment and filing procedures relating to withholding tax, 
+please call 6356 7012. 
+ 
+ 
+6 
+Updates and amendments 
+ 
+Date of 
+amendment 
+Amendments made 
+1 
+18 Aug 2022 
+The phrases “and no deduction is allowed 
+under 
+section 14(1) 
+or 
+14(1)(a)” 
+and 
+“corresponding accrual will not be allowed as a 
+deduction 
+for 
+the 
+financial 
+year 
+end 
+31 Oct 2021 and” have been deleted from 
+paragraphs 3.3.1 and 3.3.2 respectively. 
+ 
+2 
+30 Jan 2026 
+Editorial changes made to General Disclaimer, 
+Aim, Background, paragraph 1.1, 2.4, 3.1.2, 
+3.2.3, 3.4.2, 5.1. 
+ 
+ 
+ 
+4 With effect from 1 Jul 2016, it is compulsory to file withholding tax electronically. 
+5 Under section 45(4)(a) of the ITA 
+6 Under section 45(4)(b) of the ITA 

@@ -1,0 +1,341 @@
+Covered Taxpayers
+Covered Income
+Economic Substance Requirement
+Nexus Requirement
+Participation Requirement
+Intra-group Transfer Relief
+Covered Taxpayers
+Example 1 – Whether an entity is an MNE entity
+Company-HK, a company incorporated in Hong Kong, carried on a business in Hong Kong. It was a member of Group-HK which has operations in various jurisdictions in Asia and Europe. It held 100% of the ownership interest in Subsidiary-F, which is a resident of Jurisdiction F. It received dividends from Subsidiary-F in Hong Kong.
+As Company-HK was an entity included in an MNE group, it was an MNE entity. The dividends from Subsidiary-F were specified foreign-sourced income received in Hong Kong. Under the foreign-sourced income exemption (“FSIE”) regime, such dividends could be exempt from profits tax provided that the economic substance requirement was met or the participation exemption applied.
+Example 2 – Whether an entity is an MNE entity
+Fund F was an investment fund established in Jurisdiction F. It had an office in Hong Kong and carried out in Hong Kong various transactions in shares of companies in Jurisdiction G. It received in Hong Kong dividends and disposal gains from Jurisdiction G. Following the accounting standards of Jurisdiction F, Fund F did not consolidate with its investee companies in preparing its financial statements.
+Since Fund F and its investee companies were not included in any consolidated financial statements, they did not form part of a group or an MNE group. Thus, Fund F was not an MNE entity and its foreign-sourced dividends and disposal gains received in Hong Kong would continue to be exempt from profits tax under the FSIE regime.
+Example 3 – Whether an entity is an MNE entity
+Investment Fund-HK, which was operated in the form of a trust, held 100% equity interests in several subsidiaries, all operating in Jurisdiction F. Trustee-HK acted as the trustee for Investment Fund-HK which prepared consolidated financial statements in respect of its subsidiaries.
+Investment Fund-HK, which was operated in the form of a trust, was an arrangement and was regarded as an “entity”, but not a “person” defined under section 2(1) of the Inland Revenue Ordinance (Cap. 112) (“IRO”). Trustee-HK was a person who acted for Investment Fund-HK and hence was regarded as an MNE entity.
+If Investment Fund-HK merely engaged an independent service provider (e.g. accounting firm) for provision of services, the service provider would not be regarded as “acting for” Investment Fund-HK and thus an MNE entity chargeable to tax in respect of the fund under the FSIE regime.
+Covered Income
+Example 4 – Whether a dividend from a non-Hong Kong company is taxable under the FSIE regime
+Company-HK was an MNE entity carrying on a business in Hong Kong. It held 100% equity interest in Company B, which in turn held 100% equity interest in Company C. Company B was registered under the Companies Ordinance (Cap. 622) (“CO”) as a non-Hong Kong company. It carried on a business in Hong Kong and the business was registered under the Business Registration Ordinance (Cap. 310) (“BRO”). Company C carried on its business outside Hong Kong. Company B received Dividend C from Company C, and then distributed Dividend B to Company-HK.
+Company B was an MNE entity carrying on a business in Hong Kong. If Company B received Dividend C in Hong Kong, Dividend C would be chargeable to tax unless it met the economic substance requirement or participation requirement.
+As Company B was an entity chargeable to Hong Kong profits tax, Dividend B distributed by it to Company-HK would not be chargeable to profits tax under section 26(a) of the IRO.
+Example 5 – Accrual and receipt of specified foreign-sourced income
+Company-HK was an MNE entity carrying on a business in Hong Kong. Its wholly-owned subsidiary in Jurisdiction F, Subsidiary-F, declared dividends of F$1 million for each of the years ended 30 June 2022 and 30 June 2023 in November 2022 and December 2023 respectively. The 2022 and 2023 dividends were received in Hong Kong in February 2023 and March 2024 respectively.
+For foreign-sourced dividends, the FSIE regime only applies in relation to those accrued and received as from 1 January 2023. Thus, the regime would not affect the 2022 dividend which accrued before 1 January 2023. It would only apply to the 2023 dividend which accrued and was received after 1 January 2023.
+Example 6 – Accrual and receipt of disposal gain from the sale of property other than equity interest
+Company-HK was an MNE entity carrying on a business in Hong Kong. It derived disposal gains of F$1 million and F$2 million from the sale of Immovable Property-A and Immovable Property-B situated in Jurisdiction F in the years ended 31 December 2023 and 31 December 2024 respectively. The 2023 and 2024 disposal gains were received in Hong Kong in February 2024 and March 2025 respectively.
+For foreign-sourced disposal gains from the sale of property other than equity interest, the FSIE regime only applies in relation to those accrued and received on or after 1 January 2024. The regime would not affect the 2023 disposal gain which accrued before 1 January 2024. It would only apply to the 2024 disposal gain which accrued and was received after 1 January 2024.
+Example 7 – Whether a specified foreign-sourced income is received in Hong Kong
+Company-HK was an MNE entity carrying on a business in Hong Kong. Its wholly-owned subsidiary in Jurisdiction F, Subsidiary-F, declared dividends of F$2 million. It maintained a bank account in Jurisdiction F to receive the dividends. The funds in the bank account were not remitted to Hong Kong. They were wholly used to acquire immoveable property in Jurisdiction F.
+Whether the foreign-sourced dividends, which were used to acquire immovable property in Jurisdiction F, would be regarded as received in Hong Kong depends on whether the immovable property was related to a trade, profession or business carried on in Hong Kong. If so, the use of dividends to pay the purchase cost of the immovable property would amount to satisfying a debt incurred in respect of a trade, profession or business carried on in Hong Kong. For example, if the immovable property was acquired for the use of Company-HK as a showroom or warehouse in Jurisdiction F, the application of the dividends to settle the purchase cost of the immovable property or any part thereof would be considered as satisfying a debt of Company-HK and thus the dividends would be regarded as received in Hong Kong for the purposes of the FSIE regime. In case the immovable property acquired was not related to any trade, profession or business carried on in Hong Kong, the dividends would not be regarded as received in Hong Kong and thus not be chargeable to profits tax under the FSIE regime.
+Example 8 – Whether a specified foreign-sourced income is received in Hong Kong
+Company-HK was an MNE entity carrying on a business in Hong Kong. Its wholly-owned subsidiary in Jurisdiction F, Subsidiary-F, declared dividends of F$2 million. It received the dividends through a bank account in Hong Kong.
+Since the dividends were received in Hong Kong, the FSIE regime would apply to the dividends.
+Example 9 – Whether a specified foreign-sourced income is received in Hong Kong
+Company-HK was an MNE entity carrying on a business in Hong Kong. It kept its foreign-sourced dividend in its offshore bank account and later used the income for payment of dividend directly into an offshore bank account of its shareholder.
+Since the foreign-sourced dividend was kept outside Hong Kong and used to pay dividend into the shareholder’s offshore bank account without being remitted to Hong Kong, the dividend would not be regarded as received in Hong Kong under the FSIE regime. The dividend would not be treated as used to satisfy a debt incurred in respect of a trade or business carried on in Hong Kong.
+Example 10 – Whether a specified foreign-sourced income is received in Hong Kong
+Company-HK was an MNE entity carrying on a business in Hong Kong. It kept its foreign-sourced dividend income in its offshore bank account and later used the income for payment of dividend directly into its shareholder’s bank account in Hong Kong.
+The foreign-sourced dividend income was kept outside Hong Kong and never remitted to Company-HK in Hong Kong. Instead, the income was used by Company-HK to pay its onshore dividend to the shareholder in Hong Kong. In such circumstances, the income would not be regarded as received in Hong Kong by Company-HK under the FSIE regime. It would also not be treated as used to satisfy a debt incurred in respect of a trade or business carried on in Hong Kong.
+Example 11 – Whether a specified foreign-sourced income is received in Hong Kong
+Company-HK was an MNE entity carrying on a business in Hong Kong. It purchased raw materials from an overseas supplier for its business carried on in Hong Kong. Company-HK used its foreign-sourced interest income kept outside Hong Kong to settle the amount payable to the supplier through an overseas bank account of the supplier.
+Since the foreign-sourced interest income was used to satisfy a trade debt incurred in respect of Company-HK’s business carried on in Hong Kong, the income should be regarded as received in Hong Kong under the FSIE regime, notwithstanding that the supplier was located outside Hong Kong and the debt was settled outside Hong Kong.
+Example 12 – Whether a specified foreign-sourced income is received in Hong Kong
+Company-HK was an MNE entity carrying on a business in Hong Kong. It acquired movable property at HK$5 million in Jurisdiction A. Company-HK used its foreign-sourced dividend kept in Jurisdiction A for settlement of the acquisition cost of the movable property. One year later, Company-HK brought the movable property into Hong Kong. At that time, the value of the movable property was HK$7 million.
+The foreign-sourced dividend was regarded as received in Hong Kong when the movable property was bought into Hong Kong. The taxable amount of the dividend was that applied to acquire the movable property (i.e. HK$5 million), not the value at the time when the property was brought into Hong Kong (i.e. HK$7 million).
+Example 13 – Preferential tax regime
+Aircraft Lessor-D was an MNE entity carrying on an aircraft leasing business in Hong Kong. It carried out qualifying aircraft leasing activities in Hong Kong and its profits derived from its leasing of an aircraft were chargeable to profits tax at a concessionary rate by virtue of section 14H(1). Aircraft Lessor-D had raised a substantial amount of fund from its group companies in Hong Kong for acquiring another aircraft from an aircraft manufacturer in Jurisdiction E and leasing of the aircraft to an aircraft operator in that jurisdiction. Under the aircraft purchase agreement, Aircraft Lessor-D was required to settle the acquisition cost, which was denominated in Currency E, of the aircraft upon its delivery. Pending delivery of the aircraft, Aircraft Lessor-D placed the fund as a time deposit in Currency E with an overseas bank to hedge against currency risk. Aircraft Lessor-D received interest from the time deposit.
+Since the assessable profits of Aircraft Lessor-D were chargeable to profits tax at the concessionary rate, and the interest was incidental to its acquisition and leasing of the aircraft that produced assessable profits, the interest on the time deposit would fall outside the scope of the specified foreign-sourced income.
+Example 14 – Trader
+Company-HK was an MNE entity licensed to carry on a security dealing business in Hong Kong. It acquired shares in Company-F in Jurisdiction F for trading purposes. Company-F declared dividends of F$1 million for the year ended 30 June 2023 in December 2023. In June 2024, Company-HK sold the shares in Company-F and derived equity interest disposal gain of F$2 million.
+Company-HK was a regulated financial entity. The dividend was incidental to its regulated business and would thus be excluded from the scope of specified foreign-sourced income. The equity interest disposal gain was derived from Company-HK’s ordinary course of trade as a securities trader and can thus be excluded by virtue of the trader relief.
+Example 15 – Trader
+Company-HK was an MNE entity carrying on a business in Hong Kong. It was established as a special vehicle for acquiring immovable property in Jurisdiction F with the intention of reselling the property. Other than the immovable property, Company-HK did not have any other assets. In its audited financial statements, Company-HK declared that it was engaged in property trading business and classified the immovable property as trading stock. Company-HK undertook active steps to solicit buyers and the immovable property was subsequently sold at a profit.
+Given Company-HK’s established intention of acquiring the immovable property for resale and proactive steps taken to sell the property, the disposal gain from the immovable property in Jurisdiction F would be regarded as derived from its ordinary course of business as a property trader. Thus, the disposal gain would be excluded from the scope of specified foreign-sourced income under the FSIE regime.
+Example 16 – Trader
+Company-HK was an MNE entity carrying on an apparel trading business in Hong Kong. Apart from its trading profits, Company-HK derived a gain from the sale of listed shares executed through the stock exchange in Jurisdiction F.
+Company-HK was engaged in trading of apparel. The foreign-sourced disposal gain from the listed shares in Jurisdiction F was not derived from, or incidental to, Company-HK’s business as a trader of apparel. Thus, the disposal gain would not qualify for the trader relief and would fall within the scope of the specified foreign-sourced income under the FSIE regime.
+Economic Substance Requirement
+Example 17 – Interaction between the territorial source principle and economic substance requirement
+Company-HK carried on an investment business, other than money lending and intra-group financing, in Hong Kong. The company occasionally lent its idle funds to some non-resident associates and received interest from the associates. The terms of the loans were negotiated and agreed outside Hong Kong. The loans were also made available to the associates outside Hong Kong. In addition, Company-HK also placed a deposit with a foreign bank outside Hong Kong and received interest on the deposit.
+Company-HK made strategic decisions in relation to its investments in Hong Kong. It established a physical office in Hong Kong, which had a significant staff establishment and incurred a significant amount of operating expenditures in Hong Kong.
+Company-HK could meet the economic substance requirement and would continue to be exempt from profits tax in respect of its foreign-sourced interest from the non-resident associates and overseas deposit although the income generating activities with regard to the income were undertaken outside Hong Kong.
+Example 18 – Whether the economic substance requirement should be met in the year of accrual or the year of receipt
+Company-HK held Investee Company-F operating in Jurisdiction F. Investee Company-F distributed dividend of $10 in Year 1. Company-HK satisfied the economic substance requirement in Year 1 but not in Year 2. Company-HK remitted the dividend distributed in Year 1 to Hong Kong in Year 2.
+Since Company-HK satisfied the economic substance requirement in Year 1, the dividend distributed in Year 1 would be exempted from profits tax despite that it was remitted to Hong Kong in Year 2 in which Company-HK failed to meet the economic substance requirement.
+Example 19 – Outsourcing of specified economic activities
+Company A was an MNE entity carrying on a business in Hong Kong. It participated in a group cash pool operated by Group Company F outside Hong Kong. Group Company F allocated excess funds of all cash pool participants. Hence, Company A derived foreign-sourced interest income from the cash pooling arrangement, on the basis that the credit was provided outside Hong Kong.
+Company A outsourced the specified economic activities, including deciding the cash flow budget, the level of cash maintained for the business carried on in Hong Kong, setting the overall direction of its use of cash on annual basis, etc., to an MNE entity, Company B, in Hong Kong. The manager of Company B regularly reported his work to the directors of Company A who were based outside Hong Kong.
+Since Company A outsourced its specified economic activities to Company B which undertook such activities in Hong Kong, and Company A adequately monitored the outsourced activities, Company A could meet the economic substance requirement with respect to the foreign-sourced interest income.
+Example 20 – Whether an entity is a pure equity-holding entity
+Company-HK was an MNE entity carrying on a business in Hong Kong. It held 100% of the shares in two other companies in Jurisdiction F and received dividends, which were paid into a bank account in that jurisdiction. The bank account was used for the purpose of receiving the dividends and to pay the company’s expenses. Holding equity investments was the only business activity of Company-HK.
+Company-HK was a pure equity-holding entity. The receipt of incidental interest income from the bank account would not affect the company’s status as a pure equity-holding entity.
+Example 21 – Whether an entity is a pure equity-holding entity
+Company-HK was an MNE entity carrying on a shipping business in Hong Kong. It also acquired all the shares in another company in Jurisdiction F.
+Company-HK was not a pure equity-holding entity as it carried on a shipping business, which was clearly not an activity that was incidental to the holding of equity participations.
+Example 22 – Whether an entity is a pure equity-holding entity
+Company-HK only held equity interests in a foreign subsidiary, Investee Company F, and earned dividends and equity interest disposal gains. Company-HK did not maintain any bank account in Hong Kong. The dividends and proceeds from disposal of equity interests were received by Group Company A in Hong Kong on behalf of Company-HK. As a result, Company-HK had maintained an inter-company receivable balance with Group Company A.
+Since Company-HK only held equity interests in other entities and only earned dividends and equity interest disposal gains, it was regarded as a pure equity-holding entity. The inter-company receivable balance was incidental to the acquisition, holding or sale of Company-HK’s equity investment, and would not taint its status as a pure equity-holding entity.
+Example 23 – Pure equity-holding entity
+Company-HK was a pure equity-holding entity incorporated in Hong Kong and held equity interests in one investee entity outside Hong Kong. It engaged a service provider to handle the registration and filing matters under the BRO and the CO and shared an office with an associated company in Hong Kong. It had 2 resident directors for holding and managing its equity investments. It maintained a bank account in Hong Kong for receiving dividends from investee entities and paying business expenses.
+Since Company-HK complied with its statutory registration and filing obligations and had adequate human resources and premises for carrying out the specified economic activities in Hong Kong, it could satisfy the economic substance requirement.
+Example 24 – Pure equity-holding entity
+Company-HK was a pure equity-holding entity incorporated in Hong Kong and held equity interests in one investee entity outside Hong Kong. While Company-HK engaged a service provider to handle the registration and filing matters under the BRO and the CO, it only had one nominee director and a bank account for receiving dividends in Hong Kong. The holding and management of equity investments were undertaken by the company’s shareholders and directors outside Hong Kong.
+Since Company-HK did not carry out the specified economic activities in Hong Kong, it could not meet the economic substance requirement.
+Example 25 – Pure equity-holding entity
+Company-HK was a pure equity-holding entity incorporated in Hong Kong and held equity interests in one investee entity outside Hong Kong. Company-HK only had one nominee director and a bank account for receiving dividends in Hong Kong. It engaged a service provider to handle the registration and filing matters under the BRO and the CO, and to hold and manage, in Hong Kong, its equity participations in its overseas investee entity. Company-HK adequately monitored the outsourced activities in Hong Kong.
+Since Company-HK’s specified economic activities were outsourced to the service provider who carried out such activities in Hong Kong and the outsourced activities were adequately monitored, it could meet the economic substance requirement.
+Example 26 – Non-pure equity-holding entity
+Company-HK1 was incorporated in Hong Kong. Apart from holding shares or equity interests in companies and deriving dividend and equity interest disposal gains, Company-HK1 provided funding to its subsidiaries and fellow subsidiaries located in both Hong Kong and overseas. Company-HK1 had no directors resident in Hong Kong. Company-HK2, which was a subsidiary of Company-HK1 incorporated in Hong Kong, was engaged in the provision of management services to group companies. Company-HK2 had 1 director and 3 employees, including a manager, an accountant and an administrative officer, based in Hong Kong. Company-HK2’s director and manager made strategic decisions in relation to Company-HK1’s equity investments and financing arrangements with its subsidiaries and fellow subsidiaries.
+Company-HK1 could satisfy the economic substance requirement by outsourcing its specified economic activities to Company-HK2, provided that the outsourcing arrangement, including the activities performed by Company-HK2 for Company-HK1, was documented and that the outsourced activities were adequately monitored.
+Example 27 – Listed company
+Listed Company-A was a company incorporated in Jurisdiction A and listed on the Hong Kong Stock Exchange. It was registered as a non-Hong Kong company under the CO, and it registered its business under the BRO. Listed Company-A’s sole function was to hold shares or equity interests in subsidiaries which were incorporated and carrying on trading and manufacturing businesses in Jurisdiction A. Listed Company A employed a company secretary who was a qualified individual and two authorized representatives in Hong Kong to comply with the listing rules and corporate filing requirements under the CO and the BRO. It also maintained a registered office in Hong Kong, where its authorized representatives managed its equity participations in the subsidiaries.
+Listed Company-A was a pure equity-holding entity. In view that Listed Company-A complied with the listing rules and filing requirements under the CO and the BRO; and that it had adequate human resources and premises for carrying out the specified economic activities in Hong Kong, Listed Company-A could satisfy the economic substance requirement.
+Example 28 – Listed company
+Listed Company-A was a company incorporated in Jurisdiction A and listed on the Hong Kong Stock Exchange. It was registered as a non-Hong Kong company under the CO, and it registered its business under the BRO. Listed Company-A’s sole function was to hold shares in a number of Hong Kong and overseas subsidiaries, including a wholly-owned subsidiary, Subsidiary-HK, which was incorporated in Hong Kong and employed a significant number of employees in its office in Hong Kong for the provision of management services to group companies. Listed Company-A neither leased any office nor employed any employees in Hong Kong. Instead, it outsourced the administrative activities to Subsidiary-HK to handle all matters relating to the compliance with Hong Kong listing rules and filing requirements under the CO and the BRO as well as the management of its equity participations in overseas subsidiaries. Subsidiary-HK carried out all such activities in Hong Kong.
+Listed Company-A could satisfy the economic substance requirement by outsourcing its specified economic activities to Subsidiary-HK, provided that the outsourcing arrangement, including the activities performed by Subsidiary-HK for Listed Company-A, was documented and that the outsourced activities were adequately monitored.
+Example 29 – Insurance business
+A regulated insurance MNE group, Insurance Group-K, was headquartered in Jurisdiction K. Insurance Group-K had significant substance in Hong Kong and had Hong Kong based customers. Insurance Group-K operated a locally incorporated insurance company, Insurance Company-HK, that was authorized by the Insurance Authority under the Insurance Ordinance (Cap. 41) to carry on an insurance business in Hong Kong. Insurance Company-HK employed 100 qualified insurance professionals and 100 administrative staff in Hong Kong and had more than HK$1 billion in assets.
+In addition to Insurance Company-HK, Insurance Group-K invested in a number of other entities incorporated or established in Hong Kong (collectively “Insurance Entities-HK”) that conducted a range of different business activities and received specified foreign-sourced income. Insurance Entities-HK were generally supported by the employees and infrastructure of Insurance Company-HK in Hong Kong which incurred significant operating expenditures annually. All Insurance Entities-HK signed service level agreements (“SLAs”) with Insurance Company-HK for undertaking the specified economic activities in Hong Kong at an arm’s length fee. Insurance Company-HK was adequately monitored in respect of its undertaking of the outsourced activities in Hong Kong.
+Insurance Company-HK was a regulated financial entity. The foreign-sourced interest, dividend and non-IP disposal gain derived from its regulated insurance business in Hong Kong would not fall within the definition of “specified foreign-sourced income”. As for Insurance Entities-HK, given the adequate number of employees and adequate amount of operating expenditures incurred by Insurance Company-HK in carrying out the outsourced activities for Insurance Entities-HK, as well as the adequate monitoring of such activities, Insurance Entitles-HK could meet the economic substance requirement.
+Example 30 – Banking business
+A regulated banking MNE group, Banking Group-R, was headquartered in Jurisdiction R. Banking Group-R had a branch in Hong Kong which was regulated by the Monetary Authority in Hong Kong (“HK-Branch”). HK-Branch employed 100 full time employees in Hong Kong, leased dedicated office premises in Hong Kong for use by the Hong Kong employees and incurred expenditures in Hong Kong of around HK$50 million annually. It was the primary employing entity in Hong Kong. In addition to HK-Branch in Hong Kong, Banking Group-R had a number of other entities incorporated or established in Hong Kong that conducted a range of business activities, including some entities licensed by or registered with the Securities and Futures Commission (“SFC”) to carry out regulated activities. Banking Group-R also maintained entities that generated specified foreign-sourced income only (“HK-Entities”). HK-Entities in Hong Kong were supported by the employees and infrastructure of HK-Branch. HK-Entities had SLAs with HK-Branch for undertaking the specified economic activities in Hong Kong at an arm’s length fee. HK Branch was adequately monitored in respect of its undertaking of the outsourced activities in Hong Kong.
+HK-Branch and those entities licensed by or registered with the SFC were regulated financial entities. The foreign-sourced interest, dividend and non-IP disposal gain derived from their regulated banking business or regulated activities in Hong Kong would not fall within the definition of “specified foreign-sourced income”.
+As for other HK-Entities, given the adequate number of employees and adequate amount of operating expenditures incurred by HK-Branch in carrying out the outsourced activities for HK Entities, as well as the adequate monitoring of such activities, HK Entities could meet the economic substance requirement.
+Example 31 – Investment fund
+Fund F was an investment fund which was required to prepare consolidated financial statements and is regarded as an “MNE entity”. Company G, a fund management company resident in Hong Kong, was appointed as the fund manager of Fund F with full discretionary power to buy or sell. The investment management services provided by Company G in Hong Kong to Fund F included: monitoring the performance of the investee private companies overseas; making of investment decisions; offering advice on growth of the portfolio; contracting to buy and sell the investee private companies overseas. Fund F would receive in Hong Kong certain foreign-sourced dividends from its investee private companies overseas.
+Since the investment business activities, including the acquisition, disposal and management of Fund F’s investments, were conducted by the fund manager in Hong Kong (i.e. Company G), Fund F would be regarded as having met the economic substance requirement. Foreign-sourced dividends received by Fund F in Hong Kong from its investee companies would not be brought into charge by the operation of the FSIE regime.
+Nexus Requirement
+Example 32 – Computation of nexus fraction
+Company-HK was an MNE entity carrying on a business in Hong Kong. It derived foreign-sourced qualifying general IP income and incurred certain R&D expenditure in respect of the qualifying intellectual property during Years 1, 2 and 3.
+The excepted portion (i.e. tax-exempted portion) of the qualifying general IP income was to be computed based on the nexus fraction as shown in the table below:
+Year 1
+Year 2
+Year 3
+Qualifying R&D expenditures
+In-house R&D expenditure
+400
+100
+700
+Outsourcing to unrelated party
+100
+Nil
+Nil
+Outsourcing to resident related party who carried out R&D activities in HK
+Nil
+Nil
+100
+Total: (A)
+500
+100
+800
+Non-qualifying expenditures
+Acquisition cost
+Nil
+Nil
+100
+Outsourcing to related party who carried out R&D activities outside HK
+Nil
+300
+Nil
+Total: (B)
+Nil
+300
+100
+Overall expenditures
+Total: (A) + (B)
+500
+400
+900
+Calculation of R&D fraction
+Cumulative R&D fraction
+500*1.3
+= 1.3
+(500+100)*1.3
+= 0.87
+(500+100+800)*1.3
+= 1.011
+500
+(500+400)
+500+400+900
+R&D fraction (capped at 1)
+1
+0.87
+1
+Example 33 – Computation of nexus fraction
+In 2024, Company S self-developed a qualifying intellectual property and incurred qualifying R&D expenditure (“QE”) of $100. On 1 January 2025, Company S sold the qualifying intellectual property to an associated group entity, Company A, for $150 making a disposal gain of $50 (i.e. $150 - $100). Company S relied on the intra-group transfer relief prescribed in section 15OA(3) of the IRO to claim tax relief in respect of the disposal gain.
+During 2025, Company A incurred the following expenditure in relation to the qualifying intellectual property:
+2025
+$
+QE
+60
+Non-qualifying expenditure (“NE”)
+100*
+Total QE and NE incurred by Company A
+160
+* The amount represents the deemed acquisition consideration of $100 paid by Company A to Company S for the intra-group transfer of the qualifying intellectual property. Despite the actual consideration paid being $150, pursuant to section 15OA(5) of the IRO, Company A would be regarded as having acquired the qualifying intellectual property at $100 (i.e. the qualifying R&D expenditures incurred by Company S).
+On 1 January 2026, Company A sold the qualifying intellectual property at $230 to an unrelated entity, making a disposal gain of $70 (i.e. $230 - $160).
+Assume (i) all the qualifying IP disposal gains were sourced outside Hong Kong and received in Hong Kong on the date of disposal; and (ii) Company S and Company A remained associated with each other and chargeable to profits tax throughout the holding period.
+The intra-group transfer relief under section 15OA of the IRO is introduced to defer the charging of tax on a foreign-sourced disposal gain derived from a sale of property (subject property) by an MNE entity (selling entity) to an entity associated with it (acquiring entity). Once the intra-group transfer relief is applied, the disposal gain derived from the sale of the subject property will be brought into charge when it is further sold by the acquiring entity to an entity not associated with it. The acquiring entity is taken as stepping into the shoes of the selling entity in various aspects. In case where the subject property is qualifying intellectual property, the qualifying expenditure (“QE”) and non-qualifying expenditure (“NE”) incurred by both the selling entity and the acquiring entity would be consolidated as if they were incurred by one single entity for the purpose of ascertaining the R&D fraction in respect of the qualifying intellectual property by virtue of section 15OA(9) of the IRO. In the example, the QE incurred by Company S to develop the qualifying intellectual property would be counted as the QE incurred by Company A. The deemed acquisition consideration of $100 paid by Company A to Company S for the intra-group transfer under section 15OA(5) of the IRO would be disregarded to avoid double-counting of the expenditures incurred by the group for the qualifying intellectual property.
+The R&D fraction applicable to the qualifying IP disposal gain received by Company A would be:
+(100 + 60) x 130%
+= 130% (capped at 100%)
+100 + 60
+Accordingly, the portion of the disposal gain of $70 in 2026 that would be exempt from tax under the FSIE regime would be $70 (i.e. $70 x 100%).
+Participation Requirement
+Example 34 – Whether the subject to tax condition is met
+Holding Company-HK was a company incorporated in Hong Kong and closed its accounts on 31 December. Company-F, a private company resident in Jurisdiction-F, was wholly-owned by Holding Company-HK. Company-F operated as a regional investment platform through which an investment return was generated for Holding Company-HK from investee private companies located in the Asia-Pacific region other than Hong Kong.
+Company-F held:
+100% of the share capital in Investee Private Company1-A in Jurisdiction A;
+70% of the share capital in Investee Private Company2-B in Jurisdiction B; and
+50% of the share capital in Investee Private Company3-C in Jurisdiction C.
+Investee Private Company1-A, Investee Private Company2-B and Investee Private Company3-C were investee private companies carrying on retailing business in Jurisdiction A, Jurisdiction B and Jurisdiction C respectively.
+During the year ended 31 December 2023, Investee Private Company1-A, Investee Private Company2-B and Investee Private Company3-C paid dividends of $100 million, $70 million and $50 million to Company-F which in turn paid dividends of $200 million (“the subject income”) to Holding Company-HK. Holding Company-HK deposited the subject income into its bank account in Hong Kong. The headline tax rates of Jurisdiction A, Jurisdiction B and Jurisdiction C for the year of 2023 were as follows:
+Jurisdiction
+Headline Tax Rate
+Company-F
+Jurisdiction F
+0%
+Investee Private Company1-A
+Jurisdiction A
+17%
+Investee Private Company2-B
+Jurisdiction B
+20%
+Investee Private Company3-C
+Jurisdiction C
+15%
+The underlying profits of the subject income consisted wholly of dividends. As such, the headline tax rates in Jurisdiction A, Jurisdiction B and Jurisdiction C at which the related downstream income of such underlying profits was chargeable would be relevant when considering the “subject to tax” condition. Since the aggregate amount of the related downstream income ($100M + $70M + $50M = $220M) was greater than that of the subject income (i.e. $200M) and the headline tax rates in Jurisdiction A, Jurisdiction B and Jurisdiction C were equal to or higher than 15%, Holding Company-HK satisfied the “subject to tax” condition even though the subject income was subject to zero tax rate in Jurisdiction F.
+Example 35 – Whether the subject to tax condition is met
+The facts are the same as those in Example 34, except that the headline tax rates of Jurisdiction A, Jurisdiction B and Jurisdiction C for the year of 2023 were as follows:
+Jurisdiction
+Headline Tax Rate
+Company-F
+Jurisdiction F
+0%
+Investee Private Company1-A
+Jurisdiction A
+17%
+Investee Private Company2-B
+Jurisdiction B
+20%
+Investee Private Company3-C
+Jurisdiction C
+5%
+Holding Company-HK failed to satisfy the “subject to tax” condition as the aggregate amount of the related downstream income which was subject to tax in Jurisdiction A and Jurisdiction B at headline tax rates equal to or higher than 15% ($100M + $70M = $170M) was smaller than that of the subject income.
+Example 36 – Whether the subject to tax condition is met
+Company-HK, a Hong Kong tax resident, had held 100% equity interests in Investee Company F (which operated in Jurisdiction F) since 1 January 2022. The corporate tax rate of Jurisdiction F was 20%. Under a comprehensive avoidance of double taxation arrangement between Hong Kong and Jurisdiction F (CDTA), the withholding tax rate on dividend for Hong Kong tax residents was 10%.
+Investee Company F paid dividend to Company-HK as follows:
+Gross dividend
+$100
+Less
+: tax on dividend (10%)
+$10
+Net dividend
+$90
+Company-HK remitted dividend of $90 into its bank account maintained in Hong Kong.
+Company-HK could meet the subject to tax condition under the participation requirement as the corporate tax rate of Jurisdiction F was higher than the reference rate of 15%. This was notwithstanding that the dividend was actually taxed at 10% in Jurisdiction F pursuant to the CDTA.
+Example 37 – Whether the subject to tax condition is met
+Company-HK, a Hong Kong tax resident, derived disposal gains from sale of equity interests in Investee Company F which operated in Jurisdiction F. In Jurisdiction F, the corporate tax rate for resident persons was 20% while that for non-resident persons was 10%. As Company-HK was a non-resident person in Jurisdiction F, the disposal gains were taxed at 10% there.
+Company-HK could meet the subject to tax condition under the participation requirement as the corporate tax rate of Jurisdiction F was higher than the reference rate of 15%. This was notwithstanding that the equity interest disposal gains were actually taxed at 10% in Jurisdiction F.
+Example 38 – Whether the subject to tax condition is met
+Company S disposed of its equity interests in Subsidiary F in Jurisdiction F, which had been acquired at a cost of $100, to Company A at $110. Company S suffered a withholding tax of 20% in Jurisdiction F in respect of its foreign-sourced equity interest disposal gain of $10 (i.e. $110 - $100). Company S and Company A were associated with each other and Company S claimed intra-group transfer relief in respect of the disposal gain of $10.
+Subsequently, Company A sold its equity interests in Subsidiary F to an unrelated company at $108. Since Company A incurred an accounting loss of $2 (i.e. $108 - $110) on the disposal of Subsidiary F, Company A did not pay any tax in Jurisdiction F for the disposal.
+As the intra-group transfer relief has been applied to the disposal gain of Company S, Company A is regarded as having acquired the equity interests in Subsidiary F at $100 and thus derived a gain of $8 from the disposal of Subsidiary F for the purposes of the FSIE regime.
+Regarding the “subject to tax” condition in respect of an equity interest disposal gain, section 15N(2)(c) of the IRO provides that the participation exemption under section 15M of the IRO should apply if the Commissioner is satisfied that the disposal gain is subject to a qualifying similar tax in a territory outside Hong Kong.
+In the given scenario, applying section 15OA(5) of the IRO, the equity interest disposal gain derived by Company A is $8 which can be interpreted as being comprised of two components – a gain of $10 derived by Company S and a loss of $2 sustained by Company A. The “subject to tax” condition in respect of the resultant gain of $8 would be accepted as having been met since Company S had paid withholding tax on its disposal gain of $10 at the tax rate of 20% in Jurisdiction F.
+Intra-group Transfer Relief
+Example 39 – Whether two entities are associated with each other
+Company A held all the issued share capital of Company B which was a corporation and not a trustee of a trust estate.
+As Company A held over 75% of direct beneficial interest in Company B, it had an associating interest in Company B. Company A and Company B were associated with each other.
+Example 40 – Whether two entities are associated with each other
+Company A was a partner in Entity B, which was a partnership and not a trustee of a trust estate, and was entitled to 80% of the income of Entity B.
+With reference to its percentage of profit entitlement, Company A was regarded as holding over 75% of direct beneficial interest in Entity B and thus had an associating interest in Entity B. Company A and Entity B were associated with each other.
+Example 41 – Whether two entities are associated with each other
+Company A had 80% direct beneficial interest in Company B which in turn held 75% direct beneficial interest in Company C.
+Given Company A held over 75% of beneficial interest in Company B, it had an associating interest in Company B. Company A and Company B were associated with each other.
+Given Company B held 75% of beneficial interest in Company C, it had an associating interest in Company C. Company B and Company C were associated with each other.
+As Company A only had 60% (80% × 75%) of indirect beneficial interest in Company C, it did not have an associating interest in Company C. Company A and Company C were not associated with each other.
+Example 42 – Determining the date on which the acquiring entity acquired the property
+Company S and Company A were associated. Company S acquired 10% interest in Company F, a company incorporated and carrying on business in Jurisdiction F, on 1 April 2023. On 1 January 2024, Company S sold all its equity interests in Company F to Company A.
+Company S would be treated as having disposed of the equity interests in Company F at neither a gain nor a loss. Company A would be regarded as having acquired the 10% equity interests in Company F on 1 April 2023 for all purposes of the FSIE regime.
+Example 43 – Disposal gains accrued to both the selling entity and the acquiring entity
+Company S and Company A were associated MNE entities carrying on business in Hong Kong. Company S acquired immovable property in Jurisdiction F for $1,000,000. Company S sold the property to Company A for $1,500,000 and incurred expenses of $100,000 in relation to the disposal. Company A sold the property for $2,000,000 to Company X, an unassociated entity, at a gain, and the sale proceeds concerned were received in Hong Kong. Company S claimed intra-group transfer relief in respect of its foreign-sourced disposal gain.
+Profit and loss accounts of Company S and Company A were as follows:
+Company S
+Company A
+$
+$
+Sales
+1,500,000
+2,000,000
+Less
+:
+Purchase cost
+(1,000,000)
+(1,500,000)
+Expenses
+(100,000)
+-
+Gain
+400,000
+500,000
+The intra-group transfer relief applied to Company S. Company S would be treated as having sold the property to Company A at neither a gain nor a loss. The disposal gain actually derived by Company S from such sale would be disregarded for the purposes of the FSIE regime under section 15OA(3) of the IRO.
+On the other hand, Company A would be regarded as having acquired the property for the consideration giving rise to neither a gain nor a loss to Company S. If Company A was chargeable to profits tax in respect of its foreign-sourced gain from the sale of the property to Company X, the assessable profits derived from such gain would be computed as $900,000 (i.e. $2,000,000 – ($1,000,000 + $100,000)) under section 15OA(5) and (6) of the IRO.
+Example 44 – Disposal gain accrued to the selling entity but disposal loss sustained by the acquiring entity
+The facts are the same as those in Example 43, except that Company A sold the property for $1,200,000 to Company X.
+Profit and loss accounts of Company S and Company A were as follows:
+Company S
+Company A
+$
+$
+Sales
+1,500,000
+1,200,000
+Less
+:
+Purchase cost
+(1,000,000)
+(1,500,000)
+Expenses
+(100,000)
+-
+Gain/(Loss)
+400,000
+(300,000)
+The intra-group transfer relief applied to Company S. Company S would be treated as having sold the property to Company A at neither a gain nor a loss. The disposal gain actually derived by Company S from such sale would be disregarded for the purposes of the FSIE regime under section 15OA(3).
+On the other hand, Company A would be regarded as having acquired the property for the consideration giving rise to neither a gain nor a loss to Company S. Therefore, despite that Company A actually sustained a loss of $300,000 from the sale of the property to Company X, a disposal gain would be taken to accrue to Company A. If Company A was chargeable to profits tax in respect of such foreign-sourced disposal gain, the assessable profits derived from the gain would be computed as $100,000 (i.e. $1,200,000 – ($1,000,000 + $100,000)) under section 15OA(5) and (6).
+Example 45 – Actual loss sustained by the selling entity
+The facts are the same as those in Example 44, except that Company S sold the property for $800,000 to Company A.
+Profit and loss accounts of Company S and Company A were as follows:
+Company S
+Company A
+$
+$
+Sales
+800,000
+1,200,000
+Less
+:
+Purchase cost
+(1,000,000)
+(800,000)
+Expenses
+(100,000)
+-
+Gain/(Loss)
+(300,000)
+400,000
+Scenario 1
+: Company S claimed intra-group transfer relief
+Scenario 2
+: Company S did not claim intra-group transfer relief
+Scenario 1
+:
+The intra-group transfer relief applied to Company S. Company S would be treated as having sold the property to Company A at neither a gain nor a loss. The disposal loss actually sustained by Company S from such sale would be disregarded for the purposes of the FSIE regime under section 15OA(3).
+On the other hand, Company A would be regarded as having acquired the property for the consideration giving rise to neither a gain nor a loss to Company S. If Company A was chargeable to profits tax in respect of its foreign-sourced disposal gain from the sale of the property to Company X, the assessable profits derived from such gain would be computed as $100,000 (i.e. $1,200,000 – ($1,000,000 + $100,000)) under section 15OA(5) and (6).
+Scenario 2
+:
+The intra-group transfer relief did not apply to Company S. Section 15OA(3) would not operate to disregard the disposal loss of $300,000 actually sustained by Company S. Such loss could be set off against its assessable profits from specified foreign-sourced income provided that the conditions specified in section 15P were satisfied.
+For Company A, section 15OA(5) and (6) would not apply to compute the assessable profits derived from its gain from the sale of the property. If Company A was chargeable to profits tax in respect of such foreign-sourced disposal gain, the assessable profits derived from the gain would be $400,000.

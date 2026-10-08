@@ -1,0 +1,93 @@
+ 
+ 
+Computation of FTC for a company that receives foreign income (Foreign Tax 
+Credit Pooling) 
+Company ABC Pte Ltd derived and received the following income during financial year 2020 [i.e. Year of 
+Assessment (YA) 2021]: 
+Headline 
+tax rate 
+of 
+country* 
+Amount 
+Foreign 
+tax paid 
+Expenses 
+applicable 
+to foreign 
+income 
+Service Income – Local 
+$300,000 
+Service Income – From Country X 
+20% 
+$50,000 
+$10,000 
+Deductible expenses & capital allowances for 
+service income 
+$15,000 
+Foreign income – interest (Country Y) 
+30% 
+$20,000 
+$1,000 
+$100 
+* Headline tax rate refers to the highest corporate tax rate of the foreign jurisdiction from which the income is derived 
+ 
+Company ABC Pte Ltd elects for FTC pooling on the service income from Country X and the interest 
+income Country Y (both income qualify for double tax relief). The company’s tax computation and 
+calculation of foreign tax credit for YA 2021 are shown below: 
+ 
+ 
+Tax Computation for YA 2021 
+$ 
+Service income - Local 
+300,000 
+Service income - Foreign Country X 
+50,000  (A) 
+Total service income 
+350,000 (B) 
+Less: Deductible expenses and capital allowances 
+(15,000)  
+335,000 (C) 
+Interest (Country Y) [20,000 - 100] 
+19,900  (D) 
+Total statutory income 
+354,900 (E) 
+Less: Approved donations (assumed) 
+(1,000)  
+Chargeable income (before exempt amount) 
+353,900 
+Less: Partial tax exemption 
+  
+(102,500)  
+Chargeable income (after exempt amount) 
+251,400  
+Tax payable @ 17% 
+42,738.00 (F) 
+Less: Foreign tax credit 
+  
+(8,159.49)  # 
+Net tax payable 
+34,578.51 
+ 
+ 
+
+ 
+ 
+#Calculation of Foreign Tax Credit 
+$ 
+Singapore tax payable on service income from Foreign Country X 
+5,763.08 
+[A/B x C/E x F] 
+Singapore tax payable on interest income from Foreign Country Y 
+  
+2,396.41 
+[D/E x F] 
+Total Singapore tax payable on income qualifying for FTC 
+  
+8,159.49 
+Total foreign tax paid 
+  
+11,000.00 
+FTC = lower of total Singapore tax payable or foreign tax paid 
+  
+8,159.49 
+ 

@@ -1,0 +1,128 @@
+ 
+14674/22  
+ 
+AS/MS/sg 
+19
+ANNEX 
+ECOFIN.2.B 
+LIMITE 
+EN
+ 
+ANNEX 
+Guidance on foreign source income exemption regimes41 
+On 20 May 2019, the Code of Conduct Group (COCG) agreed on an approach to assess foreign 
+source income exemption regimes. Based on this approach, these guidelines should provide 
+direction for jurisdictions that have already taken a commitment to amend their foreign source 
+income exemption regimes, due to harmful features identified by the COCG. The guidelines will 
+also serve as a basis for the screening of other jurisdictions with similar regimes. Foreign source 
+income exemption regimes, or regimes that charge corporate tax on a territorial basis are not, in 
+themselves, problematic. In fact, exempting foreign profits is acceptable and even recommendable, 
+in certain cases, to prevent double taxation. However, problems arise when such regimes not only 
+prevent double taxation, but also create situations of double-non taxation. This is particularly the 
+case for regimes that have (i) an overly broad definition of the income excluded from taxation, 
+notably foreign source passive income without any conditions or safeguards, and/or (ii) a nexus 
+definition that is non-compliant with the definition of a permanent establishment in the OECD 
+Model Tax Convention. 
+The COCG has assessed such regimes in the past and has drawn on COCG precedents as the basis 
+of this Guidance. Past assessments will not be affected by this guidance to the extent that such 
+assessments took account, where relevant, of the clarifications of this text (see footnote 1) and came 
+to a conclusive analysis of all types of income which are mentioned in this guidance. Regimes that 
+have not been reviewed by the COCG can be reviewed on the basis of this guidance and the criteria 
+of the Code of Conduct. The current procedure for reopening past assessments remains valid. 
+                                                 
+41 The text was clarified in 2022 to ensure transparency and consistency in the evaluation of 
+jurisdictions. 
+
+ 
+14674/22  
+ 
+AS/MS/sg 
+20
+ANNEX 
+ECOFIN.2.B 
+LIMITE 
+EN
+ 
+Passive Income 
+In 2017, the COCG found that a tax system that fully excludes passive income with a foreign link 
+from taxation, without any conditions, is harmful. This is the case even if the profits are determined 
+using internationally established principles, as the end effect is the same as a regime providing 
+beneficial treatment. In 2019, the COCG started screening several jurisdictions which have this kind 
+of system in place. 
+Foreign source income exemption regimes that are broad enough to exclude from taxation passive 
+income (including dividends, interest, royalties, and capital gains) without any conditions, can result 
+in ring-fencing and a lack of substance. Ring-fencing arises because the receipt of passive income 
+generally requires a transaction with a non-resident. Passive income is generally not coupled with 
+economic substance requirements. The COCG has found that the exemption of passive income 
+without clear conditions (e.g. explicit link to some real activity in the jurisdiction) contravenes the 
+principles of the Code. 
+Active Income 
+The COCG agreed that the assessment of foreign source income exemption regimes should focus 
+primarily on the exemption of passive income. However, it also agreed that it was essential to 
+consider specific features of these regimes linked to active income – in particular, whether and how 
+active income is taxed. In particular, regimes that extend the exemption to active income from 
+foreign operations should also be carefully considered, as this can trigger cases of double non-
+taxation. 
+The analysis will therefore focus on the definition of the income deemed to have its source in the 
+jurisdiction, as this will determine whether or not the business income is taxed according to 
+international principles. This analysis will look at whether the jurisdiction applied a definition of 
+permanent establishment in line with that of the OECD Model Tax Convention. This is the 
+internationally agreed principle to assess the economic presence of an entity in another jurisdiction, 
+to determine the allocation of the right to tax. 
+
+ 
+14674/22  
+ 
+AS/MS/sg 
+21
+ANNEX 
+ECOFIN.2.B 
+LIMITE 
+EN
+ 
+Options for remedying harmful foreign income exemption regimes 
+Regardless of the tax treatment of passive or active income arising from domestic sources, 
+jurisdictions with foreign source income exemption regimes that are considered harmful should 
+either abolish the regimes in question or amend them to remove the harmful features. 
+In relation to foreign source income, jurisdictions should either: 
+ introduce taxation of passive income; or 
+ if they exclude from taxation certain types of passive income: 
+ implement adequate substance requirements to the entities concerned for all types of passive 
+income concerned, in line with the EU’s Code of Conduct (Business Taxation)42; 
+ have robust anti-abuse rules in place; and 
+ remove any administrative discretion in determining the income to be excluded from taxation. 
+Furthermore, jurisdictions should ensure the application of internationally accepted principles in 
+relation to the taxation of foreign source active income, notably with regard to the definition of 
+permanent establishment provided by the OECD Model Convention on Double Tax Treaties 
+(including by amending the definition of permanent establishment in a DTA in place already that 
+does not respect international principles) and the consequent income allocation. To prevent double 
+non-taxation, jurisdictions should ensure that the exemption of foreign source active income is 
+granted only when the jurisdiction in which the income arises has subjected the income to tax in 
+accordance with internationally accepted principles. 
+As each of these regimes has its own specificities, the COCG agreed that the Commission services 
+should work with the jurisdictions in question to clarify the areas of concern. Solutions should be 
+developed based on the guidelines above, to address the specific issues identified by the COCG for 
+each regime. Accordingly, this Guidance should not be treated as a stand-alone document and 
+should be accompanied by technical advice and interaction with the jurisdictions under review. 
+                                                 
+42 Where jurisdictions are being assessed under Criterion 2.1, the substance requirements in the 
+COCG guidance on the interpretation of the third criterion (doc. 10419/18) should apply. In this 
+respect, it is noted that for royalties from intellectual property rights, the guidance on the modified 
+nexus approach for IP regimes (doc. 16553/1/14 REV 1) should apply. Where jurisdictions are 
+being assessed under Criterion 2.2, the substance requirements in the COCG scoping paper on 
+criterion 2.2 (doc. 10421/18) should apply. 
+
+ 
+14674/22  
+ 
+AS/MS/sg 
+22
+ANNEX 
+ECOFIN.2.B 
+LIMITE 
+EN
+ 
+Review 
+The countering of harmful tax measures is an ongoing process. This guidance note will therefore be 
+periodically reviewed by the COCG to ensure that it reflects future developments. 
+ 

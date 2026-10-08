@@ -1,0 +1,810 @@
+PART 5
+RELIEFS
+Zero-rating for exports and international services
+21.
+—(1) Subject to this section and sections 21A, 21B and 21C, a supply of goods is zero‑rated only if the goods are exported and a supply of services is zero‑rated only if the services are international services.
+[28/2007; 19/2012]
+(2) Where a taxable person supplies goods or services and the supply is zero‑rated, then, whether or not tax would be chargeable on the supply apart from this section —
+(
+a
+)
+no tax is charged on the supply; but
+(
+b
+)
+it is in all other respects treated as a taxable supply,
+and accordingly the rate at which tax is treated as charged on the supply is nil.
+(3) A supply of services is treated as a supply of international services where the services or the supply are for the time being of any of the following descriptions:
+(
+a
+)
+services (not being ancillary transport activities such as loading, unloading and handling) comprising the transport of passengers or goods —
+(i)
+in the case of transport by air or land, where the transportation is —
+(A)
+from a place outside Singapore to another place outside Singapore;
+(B)
+from a place in Singapore to a place outside Singapore; or
+(C)
+from a place outside Singapore to a place in Singapore; and
+(ii)
+in the case of transport by sea, where the transportation is —
+(A)
+from a place outside Singapore to another place outside Singapore; or
+(B)
+from a place in Singapore or to a place in Singapore, and substantially outside Singapore;
+(iii)
+[
+Deleted by Act 20 of 2010
+]
+(
+b
+)
+services (including any ancillary transport activities such as loading, unloading and handling) comprising the transport of goods from a place in Singapore to another place in Singapore to the extent that those services are supplied by the same supplier as part of the supply of services to which paragraph (
+a
+)(i) and (ii) (other than in relation to any transportation that is from a place outside Singapore to another place outside Singapore) applies;
+(
+c
+)
+services (other than the letting on hire of any means of transport) —
+(i)
+supplied before 1 January 2023, and comprising the insuring or the arranging of the insurance or the arranging of the transport of passengers or goods to which any provision of paragraphs (
+a
+) and (
+b
+) applies; or
+(ii)
+supplied on or after 1 January 2023, and comprising —
+(A)
+the insuring of the transport of passengers to whom any provision of paragraph (
+a
+) applies; or
+(B)
+the insuring or the arranging of the insurance or the arranging of the transport of goods, to which any provision of paragraphs (
+a
+) and (
+b
+) applies;
+[Act 35 of 2022 wef 01/01/2023]
+(
+d
+)
+the letting on hire of any means of transport for use in a place outside Singapore throughout the period of the hiring which —
+(i)
+are exported by the lessor to such a place; or
+(ii)
+are in such a place at the time of the supply;
+(
+e
+)
+subject to subsections (4B) and (4E), services supplied directly in connection with land or any improvement thereto situated outside Singapore;
+[Act 35 of 2022 wef 01/01/2023]
+(
+f
+)
+subject to subsection (4B), services supplied directly in connection with goods situated outside Singapore when the services are performed;
+(
+g
+)
+subject to subsection (4B), services supplied directly in connection with goods for export outside Singapore and supplied to a person who belongs in a country other than Singapore, at the time the services are performed;
+(
+h
+)
+prescribed financial services supplied in connection with goods —
+(i)
+for export outside Singapore; or
+(ii)
+the supply of which involves the removal of the goods from a place outside Singapore to another place outside Singapore;
+(
+i
+)
+services of any of the following descriptions which are performed wholly outside Singapore:
+(i)
+cultural, artistic, sporting, educational or entertainment services;
+(ii)
+exhibition or convention services;
+(iii)
+services ancillary to the services in sub-paragraph (i) or (ii), including that of organising the performance of those services outside Singapore,
+except where, at the time of the performance of those services, there is no necessary connection between —
+(iv)
+the place where the services are physically performed; and
+(v)
+the location of the customer of the services (as defined in paragraph 2 of the Seventh Schedule);
+[Act 34 of 2021 wef 01/01/2023]
+(
+j
+)
+subject to subsections (4B) and (4C), services supplied —
+(i)
+under a contract with a person who belongs in a country outside Singapore; and
+(ii)
+which directly benefit —
+(A)
+a person who belongs in a country other than Singapore and who is outside Singapore at the time the services are performed; or
+(B)
+a registered person who belongs in Singapore;
+(
+k
+)
+prescribed services supplied —
+(i)
+under a contract with a person wholly in the person’s business capacity (and not in the person’s private or personal capacity) and who in that capacity belongs in a country outside Singapore; and
+(ii)
+which directly benefit —
+(A)
+a person wholly in the person’s business capacity (and not in the person’s private or personal capacity) and who in that capacity belongs in a country other than Singapore; or
+(B)
+a registered person who belongs in Singapore;
+(
+l
+)
+prescribed services in connection with —
+(i)
+the handling of ships or aircraft; or
+(ii)
+the handling or storage of goods carried in any ship or aircraft;
+(
+m
+)
+pilotage, salvage or towage services performed in relation to ships or aircraft;
+(
+n
+)
+services comprising the surveying of any ship or aircraft or the classification of any ship or aircraft for the purposes of any register;
+(
+o
+)
+the supply (including the letting on hire) of any ship or aircraft;
+(
+p
+)
+prescribed services comprising the repair, maintenance, broking or management of any ship or aircraft;
+(
+q
+)
+prescribed services comprising the provision of any means of telecommunication transmitted —
+(i)
+from a place outside Singapore to another place outside Singapore;
+(ii)
+from a place in Singapore to a place outside Singapore; or
+(iii)
+from a place outside Singapore to a place in Singapore;
+(
+r
+)
+services supplied in relation to a trust, where the services and the person supplying the services satisfy such conditions as may be prescribed;
+(
+s
+)
+services supplied —
+(i)
+under a contract with a person who belongs in a country outside Singapore; and
+(ii)
+which directly benefit —
+(A)
+a person who belongs in a country other than Singapore; or
+(B)
+a registered person who belongs in Singapore,
+relating to the co-location in Singapore of computer server equipment belonging to the person referred to in sub‑paragraph (i) or (ii);
+(
+t
+)
+prescribed services in connection with the provision of an electronic system relating to the import of goods into or the export of goods out of Singapore;
+(
+u
+)
+subject to subsection (4D), services supplied before 1 January 2022 comprising either of or both —
+(i)
+the supply of a right to promulgate an advertisement by means of any medium of communication; and
+(ii)
+the promulgation of an advertisement by means of any medium of communication,
+where the Comptroller is satisfied that the advertisement is intended to be substantially promulgated outside Singapore;
+[Act 34 of 2021 wef 01/01/2022]
+(
+v
+)
+the supply (including the letting on hire) of any air container or sea container, which is used or to be used for the international transportation of goods and which complies with such other requirements as may be prescribed;
+(
+w
+)
+prescribed services comprising the repair, maintenance or management of any air container or sea container, which is used or to be used for the international transportation of goods and which complies with such other requirements as may be prescribed;
+(
+x
+)
+the supply (including the letting or hire) of qualifying aircraft parts that are certified as airworthy by —
+(i)
+in relation to an aircraft that is not a military aircraft, a person certificated by a national civil aviation authority; and
+(ii)
+in relation to a military aircraft, the government owning that aircraft; or
+(
+y
+)
+prescribed services supplied directly in connection with prescribed goods —
+(i)
+under a contract with a person who belongs in a country outside Singapore; and
+(ii)
+which directly benefit —
+(A)
+a person who belongs in a country other than Singapore; or
+(B)
+a registered person who belongs in Singapore,
+if, at the time the prescribed services are performed, the prescribed goods are —
+(iii)
+at an approved warehouse; or
+(iv)
+at any place from which they may not be removed except with the permission of the proper officer of customs (and by virtue of which the prescribed goods remain under customs control), if —
+(A)
+the goods have been brought to that place from an approved warehouse for the purpose of the repair of, maintenance of or performance of any other similar service on the goods, or for the purpose of an auction, an exhibition or any other similar event involving the display of goods; and
+(B)
+the goods will be returned to any approved warehouse after the activity or event mentioned in sub‑paragraph (A).
+[38/2005; 28/2007; 33/2008; 19/2009; 20/2010; 24/2011; 19/2012; 52/2018]
+(4) For the purposes of subsections (3), (6), (6AA), (6A) and (6B) —
+(
+a
+)
+“aircraft” means any aircraft —
+(i)
+that is wholly used or intended to be wholly used for travel —
+(A)
+from a place outside Singapore to another place outside Singapore;
+(B)
+from a place in Singapore to a place outside Singapore; or
+(C)
+from a place outside Singapore to a place in Singapore; or
+(ii)
+that is a military aircraft;
+“approved warehouse” means a warehouse or other premises approved by the Comptroller as an approved warehouse;
+“co-location”, in relation to computer server equipment, means the provision of a physical environment for the operation of the computer server equipment;
+“non-international aircraft” means any aircraft —
+(i)
+that is not wholly used or intended to be wholly used for travel —
+(A)
+from a place outside Singapore to another place outside Singapore;
+(B)
+from a place in Singapore to a place outside Singapore; or
+(C)
+from a place outside Singapore to a place in Singapore; and
+(ii)
+that is not a military aircraft;
+“qualifying aircraft parts” means such parts and equipment as are designed and built for exclusive use on an aircraft;
+“ship” means any ship (including an oil rig) but does not include any ship —
+(i)
+that is licensed under the Maritime and Port Authority of Singapore Act 1996 as a passenger harbour craft or pleasure craft;
+(ii)
+in respect of which a vessel permit has been granted by the Public Utilities Board under regulations made under the Public Utilities Act 2001; or
+(iii)
+that is designed or adapted for use for recreation or pleasure and is so used within Singapore (unless the use within Singapore is for such purpose that is incidental to its use outside Singapore as the Comptroller may allow);
+(
+b
+)
+the services in subsection (3)(
+e
+) include —
+(i)
+services in the course of the construction, alteration, repair, maintenance or demolition of any building or any civil engineering work; and
+(ii)
+services such as are supplied by estate agents and auctioneers, architects, surveyors, engineers and others involved in matters relating to land; and
+(
+c
+)
+the supply in subsection (3)(
+o
+) of a ship or an aircraft (as the case may be) includes the supply of services under a charter of that ship or aircraft except where the services supplied under such a charter consist of any of the following:
+(i)
+transport of passengers;
+(ii)
+accommodation;
+(iii)
+entertainment;
+(iv)
+catering of food or beverage;
+(v)
+education,
+being services performed substantially in Singapore.
+[19/2009; 20/2010; 24/2011; 1/2016]
+(4A) For the purposes of subsection (3)(
+j
+), (
+k
+), (
+s
+) and (
+y
+), the person with whom the contract is made and the person who directly benefits from the services may be the same person or different persons.
+[19/2012]
+(4AA) The services mentioned in subsection (3)(
+a
+), (
+b
+) and (
+c
+) do not include any services comprising the transport by a taxable person who is a redeliverer (as defined in paragraph 1(1) of the Seventh Schedule) of goods comprised in a Seventh Schedule supply, the insuring or the arranging of the insurance of the goods, or the arranging of the transport of the goods by that taxable person.
+[Act 34 of 2021 wef 01/01/2023]
+(4B) The services referred to in —
+(
+a
+)
+subsection (3)(
+e
+), (
+f
+) and (
+g
+); and
+(
+b
+)
+subsection (3)(
+j
+), if supplied before 1 January 2022,
+do not include any services comprising either or both of the following:
+(
+c
+)
+the supply of a right to promulgate an advertisement by means of any medium of communication;
+(
+d
+)
+the promulgation of an advertisement by means of any medium of communication.
+[Act 34 of 2021 wef 01/01/2022]
+(4C) The services referred to in subsection (3)(
+j
+) do not include any services which are supplied directly in connection with —
+(
+a
+)
+land or any improvement thereto situated inside Singapore; or
+(
+b
+)
+goods situated inside Singapore at the time the services are performed, other than goods referred to in subsection (3)(
+g
+).
+[28/2007]
+(4D) The services referred to in subsection (3)(
+u
+) do not include any services comprising only of the promulgation of an advertisement by means of the transmission, emission or reception of signs, signals, writing, images, sounds or intelligence by any nature of wire, radio, optical or other electromagnetic systems whether or not such signs, signals, writing, images, sounds or intelligence have been subjected to rearrangement, computation or other processes by any means in the course of their transmission, emission or reception.
+[28/2007]
+(4E) The services referred to in subsection (3)(
+e
+) do not include any services comprising arranging or facilitating the booking of accommodation, if supplied on or after 1 January 2023.
+[Act 35 of 2022 wef 01/01/2023]
+(5) Where a description referred to in subsection (3) or (6AA)(
+a
+) is a transaction which would not otherwise be a supply of services, the transaction is, for the purposes of this Act, treated as a supply of services in Singapore.
+[1/2016]
+(6) A supply of goods is zero-rated where the Comptroller is satisfied that the person supplying the goods —
+(
+a
+)
+has exported them; or
+(
+b
+)
+has shipped them —
+(i)
+for use as stores or fuel on an aircraft; or
+(ii)
+for use as merchandise for sale by retail to persons carried on an aircraft,
+and in either case, if such other conditions or restrictions (if any) as may be prescribed by the Minister in regulations or as the Comptroller may impose are fulfilled.
+[20/2010; 1/2016]
+(6AA) Subject to subsection (6AB) —
+(
+a
+)
+a supply of prescribed services is treated as a supply of international services to the extent that the supply is specifically attributable to any particular flight by a non‑international aircraft that is —
+(i)
+from a place outside Singapore to another place outside Singapore;
+(ii)
+from a place in Singapore to a place outside Singapore; or
+(iii)
+from a place outside Singapore to a place in Singapore; and
+(
+b
+)
+a supply of goods is zero-rated to the extent that the supply comprises goods which, to the Comptroller’s satisfaction, are shipped —
+(i)
+for use as stores or fuel on any flight by a non‑international aircraft referred to in paragraph (
+a
+); or
+(ii)
+for use as merchandise for sale by retail to persons carried on any flight by a non‑international aircraft referred to in paragraph (
+a
+).
+[1/2016]
+(6AB) Subsection (6AA) only applies if such other conditions or restrictions (if any) as may be prescribed by the Minister or as the Comptroller may impose are fulfilled.
+[1/2016]
+(6A) Subject to subsection (6B), a sale or letting on hire of goods is zero‑rated where the Comptroller is satisfied that the goods are —
+(
+a
+)
+for use as stores or fuel on a ship;
+(
+b
+)
+for installation on a ship or a ship under construction;
+(
+c
+)
+for use in the maintenance or operation of a ship; or
+(
+d
+)
+for use as merchandise for sale by retail to persons carried on a ship,
+and, in any of those cases, if such other conditions or restrictions (if any) as may be prescribed by the Minister in regulations or as the Comptroller may impose are fulfilled.
+[20/2010; 31/2014; 1/2016]
+(6B) Where there is a sale or letting on hire of goods referred to in subsection (6A) in relation to any ship which is designed or adapted for use for recreation or pleasure, the supply is zero‑rated under that subsection only if the Comptroller is satisfied that the goods are used outside of Singapore.
+[20/2010; 31/2014]
+(7) The Minister may by regulations provide for the zero‑rating of supplies of goods, or of such goods as may be specified in the regulations, in cases where the Comptroller is satisfied that the goods have been or are to be exported and such other conditions (if any) as may be specified in the regulations or as the Comptroller may impose are fulfilled.
+(7A) The Minister may by regulations provide for the following:
+(
+a
+)
+for matters relating to the grant of approval by the Comptroller for a warehouse or other premises to be an approved warehouse;
+(
+b
+)
+where such approval is subject to any condition or requirement and the person to whom the approval is granted fails to comply with any such condition or requirement, for matters relating to the payment to the Comptroller without demand by that person of the tax that would, but for subsection (3)(
+y
+) or section 21C, be chargeable on the supplies that are referred to therein (whether made by that person or any other person) and that take place during such period as may be prescribed, commencing on or after the date of the failure.
+[24/2011]
+(7B) [
+Deleted by Act 19 of 2012
+]
+(8) Where the supply of any goods has been zero-rated under subsection (6), (6AA)(
+b
+) or (6A) or regulations made under subsection (7) and —
+(
+a
+)
+the goods are found in Singapore after the date on which they were alleged to have been or were to be exported or shipped; or
+(
+b
+)
+any condition specified in the regulations made under subsection (6), (6AB), (6A) or (7) or imposed by the Comptroller is not complied with,
+and the presence of the goods in Singapore after that date or the failure to comply with the condition has not been authorised for the purposes of this subsection by the Comptroller, the tax that would have been chargeable on the supply but for the zero‑rating becomes payable immediately by the person to whom the goods were supplied or by any person in whose possession the goods are found in Singapore and the goods are liable to seizure.
+[20/2010; 1/2016]
+(9) The Comptroller may, if he or she thinks fit, waive payment of the whole or part of the tax payable under subsection (8).
+(10) [
+Deleted by Act 34 of 2021 wef 01/01/2022
+]
+Zero-rating of supply of certain tools, machinery and prototypes
+21A.
+—(1) Subject to such conditions as the Minister may prescribe, the supply by any taxable person of —
+(
+a
+)
+any prescribed tool or prescribed machinery used in the manufacture of goods;
+(
+b
+)
+any services directly in connection with such tool or machinery; or
+(
+c
+)
+any prototype of such tool or machinery,
+to a person who belongs in a country outside Singapore and who is not a registered person or is a registered (Seventh Schedule — pay only) person, is zero‑rated where such tool or machinery is used in Singapore for the manufacture of goods for the person who belongs in a country outside Singapore.
+[28/2007; 33/2008; 52/2018]
+(2) Where a supply of goods or services by a taxable person is zero‑rated under subsection (1), then, whether or not tax would be chargeable on the supply apart from this section —
+(
+a
+)
+no tax is charged on the supply; but
+(
+b
+)
+it is in all other respects treated as a taxable supply,
+and accordingly the rate at which tax is treated as charged on the supply is nil.
+[28/2007]
+(3) [
+Deleted by Act 34 of 2021 wef 01/01/2023
+]
+Zero-rating of sale or letting on hire of goods to approved taxable person in shipping or marine industry
+21B.
+—(1) The Minister may by regulations, in relation to a sale or letting on hire of goods for a prescribed purpose made by any taxable person to a taxable person in the shipping or marine industry who is approved by the Comptroller, permit the supply to be zero‑rated.
+[24/2011; 31/2014]
+(2) Where a supply by a taxable person is zero-rated under subsection (1), then, whether or not tax would be chargeable on the supply apart from this section —
+(
+a
+)
+no tax is charged on the supply; but
+(
+b
+)
+it is in all other respects treated as a taxable supply,
+and accordingly the rate at which tax is treated as charged on the supply is nil.
+[24/2011]
+(3) Regulations made under subsection (1) may —
+(
+a
+)
+require the taxable person approved by the Comptroller and to whom a supply referred to in subsection (1) has been made to account for the tax on the supply that would, but for regulations made under subsection (1), be chargeable on the supply, in such circumstances, and in such form and manner and within such time, as may be prescribed; and
+(
+b
+)
+where any requirement of the regulations is not complied with or in such other circumstances as may be prescribed, require an amount equivalent to the tax that would, but for subsection (1), be chargeable on the supply to be accounted for.
+[24/2011]
+(4) The Comptroller may, for the protection of revenue, impose conditions or restrictions in relation to any supply referred to in subsection (1).
+[24/2011]
+(5) [
+Deleted by Act 34 of 2021 wef 01/01/2023
+]
+Zero-rating of grant or assignment of lease, tenancy or licence to occupy land
+21C.
+—(1) The grant or assignment by any taxable person of a lease, tenancy or licence to occupy land where the lease, tenancy or licence —
+(
+a
+)
+is granted or assigned under a contract with a person who belongs in a country outside Singapore; and
+(
+b
+)
+directly benefits a person who belongs in a country other than Singapore,
+is zero-rated if —
+(
+c
+)
+the taxable person has made an application to and the Comptroller has approved the application for a warehouse or other premises to be an approved warehouse;
+(
+d
+)
+the whole of the land which is the subject of the lease, tenancy or licence is part of the approved warehouse; and
+(
+e
+)
+the land which is the subject of the lease, tenancy or licence is used by the taxable person in the taxable person’s business of storing prescribed goods other than the goods of the taxable person.
+[24/2011]
+(2) Where a supply by a taxable person is zero‑rated under subsection (1), then, whether or not tax would be chargeable on the supply apart from this section —
+(
+a
+)
+no tax is charged on the supply; but
+(
+b
+)
+it is in all other respects treated as a taxable supply,
+and accordingly the rate at which tax is treated as charged on the supply is nil.
+[24/2011]
+(3) In this section, “approved warehouse” has the meaning given by section 21(4)(
+a
+).
+[24/2011]
+Exempt supply and exempt import
+22.
+—(1) A supply of goods or services is an exempt supply if it is of a description or of a class for the time being specified in Part 1 of the Fourth Schedule.
+[19/2012]
+(1A) An importation of goods is an exempt import if it is of a description or of a class for the time being specified in Part 2 of the Fourth Schedule.
+[19/2012]
+(2) The Minister may by order vary the description of —
+(
+a
+)
+financial services in paragraph 1 of Part 1, and paragraphs 1 and 3 of Part 3, of the Fourth Schedule by adding to or deleting from the Fourth Schedule or by varying any description or class of financial services for the time being specified in the Fourth Schedule; or
+(
+b
+)
+investment precious metals in paragraph 1 of Part 2, and paragraph 2 of Part 3, of the Fourth Schedule by adding to or deleting from the Fourth Schedule or by varying any description or class of investment precious metals for the time being specified in the Fourth Schedule.
+[19/2012]
+(3) The Fourth Schedule may be varied so as to describe a supply of financial services by reference to other matters unrelated to the characteristics of the services.
+Relief on supply of certain goods under Margin Scheme
+23.
+—(1) The Minister may by regulations make provision for securing a reduction of the tax chargeable on the supply of goods of such descriptions as may be specified in the regulations in cases where no tax was chargeable on a previous supply of the goods and such other conditions are satisfied as may be specified in the regulations or as may be imposed by the Comptroller.
+[20/2010]
+(2) Tax chargeable on the supply of goods referred to in subsection (1) is (unless otherwise provided in regulations made under this section) reduced to the tax charged as if the supply of such goods was for a consideration equal to the excess of A–B, where —
+(
+a
+)
+A is the consideration for which the goods are supplied; and
+(
+b
+)
+B is the consideration for which the goods were acquired,
+and accordingly where there is no excess, the tax is not charged.
+(3) Regulations made under this section may include provisions —
+(
+a
+)
+for giving relief from the tax chargeable on the importation of goods of the description specified in the regulations; and
+(
+b
+)
+for securing a similar reduction where no tax was chargeable on the importation of goods of that description as where no tax was chargeable on a previous supply of the goods.
+(4) Regulations made under this section may extend to cases where the previous supply or the importation took place before tax was chargeable on any supply or importation.
+(5) This section applies, with the necessary modifications, in relation to cases where consequential relief from tax was given on a previous supply by regulations made under section 19(14) but the relief did not extend to the whole amount of the tax.
+(6) Regulations made under this section may make different provisions for goods of different descriptions and for different circumstances.
+(7) In this section, references to a supply on which no tax was chargeable include references to a transaction treated by virtue of an order under section 10(3) as neither a supply of goods nor a supply of services.
+(8) This section does not apply to —
+(
+a
+)
+a supply which is a letting on hire;
+(
+b
+)
+a supply if an invoice or similar document showing an amount as being tax or as being attributable to tax is issued in respect of the supply; and
+(
+c
+)
+any supply by a taxable person where the taxable person fails to keep such records and accounts as the Comptroller may in writing specify or to comply with such conditions as the Comptroller may impose.
+Relief from tax on importation and supply of goods
+24.
+—(1) The Minister may by order make provision for giving relief from the whole or part of the tax chargeable on the importation of goods or the subsequent supply of imported goods, subject to such conditions (including conditions prohibiting or restricting the disposal of or dealing with the goods) as may be imposed by or under the order, if and so far as the relief appears to the Minister to be necessary or expedient.
+(2) The Minister may by order make provision for remitting or repaying, if the Minister thinks fit and subject to such conditions as may be imposed in the order, the whole or part of the tax chargeable on the importation of any goods which are shown to the satisfaction of the Comptroller to have been previously exported from Singapore.
+(3) The Minister may by order make provision for remitting or repaying, subject to such conditions as may be imposed in the order, the whole or part of the tax chargeable on the importation of any goods if the Comptroller is satisfied that —
+(
+a
+)
+the whole or substantially the whole of the goods have been or are to be re-exported; or
+(
+b
+)
+the whole or substantially the whole of the goods have been or are to be incorporated or affixed to goods which have been or are to be exported,
+and where the Comptroller thinks fit to do so in all the circumstances and having regard to the tax chargeable on the supply of similar goods in Singapore.
+(4) The Minister may, having regard to any international agreement or arrangement and subject to such conditions as the Minister may impose, give to any person —
+(
+a
+)
+relief from, or a remission or refund of, the whole or part of any tax chargeable on the importation of goods or supply of goods or services by the person; or
+(
+b
+)
+a refund of the whole or part of any tax on the supply of goods or services to the person —
+(i)
+which, if the person were a taxable person, would be the person’s input tax; or
+(ii)
+for which, as a taxable person, the person is not entitled to any credit as input tax under this Act,
+if the relief, remission or refund appears to the Minister to be necessary or expedient to give effect to the agreement or arrangement.
+(5) In any case where —
+(
+a
+)
+it is proposed that goods which have been imported by any person (called in this subsection the original importer) with the benefit of relief under subsection (1) or (4) are to be transferred to another person (called in this subsection the transferee); and
+(
+b
+)
+on an application made by the transferee, the Comptroller directs that this subsection applies,
+this Act has effect as if, on the date of the transfer of the goods (and in place of the transfer) the goods were exported by the original importer and imported by the transferee and, accordingly, where appropriate, any provision made under subsection (1) or (4) has effect in relation to the tax chargeable on the importation of goods by the transferee.
+Refund or remission of tax in certain cases
+25.
+—(1) The Minister may by regulations provide for the refund or remission of tax chargeable on the supply of goods or services, or on the importation of goods on a claim made in cases of bad debt or insolvency or in such other circumstances and by such person or body as may be prescribed.
+(2) Without limiting subsection (1), such regulations may —
+(
+a
+)
+require a claim to be made within such time and in such form and manner as may be specified by or under the regulations;
+(
+b
+)
+require a claim to be evidenced and quantified by reference to such records and other documents preserved for such period, not exceeding 3 years after the making of the claim, as may be so specified;
+(
+c
+)
+provide for determining what amount (if any) is the outstanding amount of the consideration in particular cases including but not limited to those cases involving part payment or mutual debts;
+(
+d
+)
+provide for the apportionment of tax attributable to the supply of goods or services for the purposes of carrying on the business or of exempt supplies or of any other purpose;
+(
+da
+)
+provide for the circumstances in which, instead of a refund of any amount being made to a person, the amount may or is to be used to reduce the whole or any part of any tax due or which may become due from the person under this Act, by the whole or any part of such amount and to further provide that —
+(i)
+the amount of the tax due from the person is reduced by the amount of the reduction; and
+(ii)
+the amount of the reduction is, to the extent of that amount, deemed to have been refunded to the person by the Comptroller;
+(
+db
+)
+provide that, where the Comptroller makes any refund to a person, the Comptroller may deduct from the refund any expenses that the Comptroller may incur in making the refund;
+(
+e
+)
+require the repayment or recovery of a refund or remission under this section where any requirement of the regulations is not complied with or in such other circumstances as may be prescribed;
+(
+f
+)
+prohibit the selling, giving or receiving in prescribed circumstances of goods in respect of which a claim for refund has been submitted and approved through the prescribed means; and
+(
+g
+)
+make different provisions for different circumstances.
+[21/2013; 52/2018; 42/2020]
+Application of Customs legislation
+26.
+—(1) Except where the contrary intention appears, any written law relating to customs or excise duties on imported goods applies (so far as relevant), with such exceptions, modifications and adaptations as the Minister may by order prescribe —
+(
+a
+)
+in relation to any tax chargeable on the importation of goods as it applies in relation to any customs duty or excise duty; and
+(
+b
+)
+in relation to any goods in respect of which tax is chargeable on the importation thereof or would be so chargeable if the importation were not an exempt import, as it applies to goods in respect of which customs duty or excise duty is chargeable.
+[19/2012]
+(2) Without limiting subsection (1), the Director-General of Customs may, by virtue of that subsection, exercise any power conferred on the Director‑General by any written law relating to customs or excise duties (including the power to issue permits and impose conditions on the import, export, transhipment and removal of goods) as if —
+(
+a
+)
+the reference in that written law to customs duty or excise duty includes a reference to tax chargeable on the importation of goods; and
+(
+b
+)
+the reference in that written law to goods in respect of which customs duty or excise duty is chargeable includes a reference to goods in respect of which tax is chargeable on the importation thereof or would be so chargeable if the importation were not an exempt import.
+[19/2012]
+(3) In this section, “any written law relating to customs or excise duties” means —
+(
+a
+)
+the provisions of the Customs Act 1960;
+(
+b
+)
+the provisions of the Postal Services Act 1999 relating to customs or excise duties on postal articles; and
+(
+c
+)
+any other provision of any written law relating generally to customs or excise duties on imported goods.
+Importation and supply of goods by taxable persons
+27.
+—(1) The Minister may by regulations —
+(
+a
+)
+in relation to goods imported by any taxable person in the course or furtherance of any business carried on by the taxable person, permit those goods to be —
+(i)
+delivered or removed without payment of the tax chargeable on the importation; or
+(ii)
+delivered or removed, and supplied to any other person, without payment of the tax chargeable on the importation or on the supply; and
+(
+b
+)
+in relation to goods supplied by any taxable person in the course or furtherance of any business carried on by the taxable person to another taxable person, permit those goods to be supplied without payment of the tax chargeable on the supply.
+(2) Regulations made under subsection (1) may —
+(
+a
+)
+provide that goods imported by a taxable person in the course or furtherance of any business carried on by the taxable person (as referred to in subsection (1)(
+a
+)) may, subject to such requirements (including conditions, whether precedent or subsequent) as may be prescribed, include —
+(i)
+imported goods which are consigned to the taxable person as recipient in order for the taxable person to make supplies using or in relation to those goods, other than supplies referred to in section 22; or
+(ii)
+goods which are imported in the circumstances referred to in section 33B;
+(
+aa
+)
+require a taxable person referred to in that subsection to account for the tax chargeable on the importation or supply of the goods in such form and manner and within such time as may be prescribed, even though such tax is not payable; and
+(
+b
+)
+where any requirement of the regulations is not complied with or in such other circumstances as may be prescribed, require the tax chargeable on the importation or supply (or an amount equivalent thereto) to be paid by a prescribed person.
+[24/2011; 21/2013; 31/2014]
+(3) The Comptroller may, for the protection of revenue, impose conditions or restrictions in relation to any import or supply of goods referred to in subsection (1).
+Deferment of payment of tax on importation of goods
+27A.
+—(1) The Minister may by regulations in relation to goods imported by any taxable person in the course or furtherance of any business carried on by the taxable person, permit those goods to be delivered or removed in accordance with those regulations even though the tax chargeable on the importation has yet to be paid and despite —
+(
+a
+)
+any other provision of this Act; or
+(
+b
+)
+any written law relating to customs or excise duties applicable in accordance with section 26.
+[20/2010]
+(2) Regulations made under subsection (1) may —
+(
+a
+)
+provide that goods imported by a taxable person in the course or furtherance of any business carried on by the taxable person (as referred to in subsection (1)) may, subject to such requirements (including conditions, whether precedent or subsequent) as may be prescribed, include —
+(i)
+imported goods which are consigned to the taxable person as recipient in order for the taxable person to make supplies using or in relation to those goods, other than supplies referred to in section 22; or
+(ii)
+goods which are imported in the circumstances referred to in section 33B; and
+(
+b
+)
+require a taxable person referred to in subsection (1) to account for and pay the tax chargeable on the importation of the goods in such form and manner, within such time and to such person as may be prescribed.
+[24/2011; 31/2014]
+(3) The Comptroller may, for the protection of revenue, impose conditions in relation to any importation of goods referred to in subsection (1).
+[20/2010]

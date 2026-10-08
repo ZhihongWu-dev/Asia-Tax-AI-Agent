@@ -1,0 +1,310 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Inland Revenue Department 
+The Government of the Hong Kong Special Administrative Region
+of the People's Republic of China  
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES 
+NO. 13 (REVISED) 
+PROFITS TAX  
+ 
+TAXATION OF INTEREST RECEIVED 
+ 
+ 
+ 
+ 
+ 
+ 
+These notes are issued for the information and guidance of taxpayers 
+and their authorised representatives. They have no binding force and do not 
+affect a person’s right of objection and appeal to the Commissioner, the Board 
+of Review or the Courts. 
+ 
+ 
+These notes replace those issued in October 1996. 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+LAU MAK Yee-ming, Alice 
+Commissioner of Inland Revenue 
+ 
+December 2004 
+ 
+Our web site : http://www.ird.gov.hk 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES  
+No. 13 (REVISED) 
+CONTENT 
+Paragraph 
+Introduction 
+1 
+Interest earned by persons other than financial institutions 
+2 
+Profits tax on interest earned by financial institutions 
+8 
+Double taxation relief 
+12 
+
+INTRODUCTION 
+ 
+ 
+Interest tax was repealed with effect from the year of assessment 
+commencing on 1 April 1989.  Since then, only interest received by or 
+accrued to a person carrying a trade, profession or business in Hong Kong is 
+chargeable to tax under profits tax.  This Practice Note sets out the 
+Department’s view on the taxation of interest received. 
+ 
+ 
+INTEREST EARNED BY PERSONS OTHER THAN FINANCIAL 
+INSTITUTIONS  
+ 
+2. 
+Only interest arising in or derived from Hong Kong is liable to 
+profits tax.    For many y
+ ears, the Department has taken the view that for the 
+purpose of determining the place where interest arises or is derived from, it is 
+the location of the originating cause that almost invariably determines the 
+source.  In essence, the place of derivation of interest is the place where the 
+credit was provided to the borrower, i.e. the place where the funds from which 
+ 
+the interest is derived were provided to the borrower, commonly known as the 
+“provision of credit” test.  This view is based on the decisions in 
+Commissioner of Inland Revenue (NZ) v. N V Philips Gloeilampenfabrieken, 10 
+ATD 435 and CIR v. Lever Brothers & Unilever Ltd (1946), 14 SATC 1. 
+ 
+3. 
+If the originating cause is situated in Hong Kong, the source of the 
+interest is in Hong Kong, irrespective of the currency in which the loan is 
+denominated, the place of residence of the debtor or the place where the debtor 
+employs the capital.  Whilst the emphasis is generally placed on the provision 
+of the credit, in some situations, such as mortgages, the originating cause may 
+well be the mortgage itself.  In addition, interest has a Hong Kong source 
+where it forms an integral part of a trading transaction carried out in Hong 
+Kong, e.g. where a Hong Kong manufacturer sells his goods to an overseas 
+buyer on extended credit terms.  In such situations, the interest is just as much 
+a part of the profit as the trading profit itself and also arises in Hong Kong, e.g. 
+BR 20/75, IRBRD, vol. 1, 184 and Studebaker Corporation of Australasia 
+Limited v. C of T, 29 CLR 225. 
+ 
+4. 
+It should also be noted that the “provision of credit test” is not 
+applicable where the loans are not simple loans of m
+ 
+oney.  The Privy Council 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+held in the case of Orion Caribbean Limited v. CIR 4 HKTC 432 that where the 
+taxpayer earned its profits by borrowing and lending of money, the proper test 
+to determine the source of the profits was the operation test, i.e. “one looks to 
+see what the taxpayer has done to earn the profit in question and where he has 
+done it”. In the case of a money lending business, the taxpayer’s business 
+would normally encompass a broader range of activity, including the borrowing 
+and/or lending of money. For this type of business, the Department will apply 
+the operation test instead of the provision of credit test in determining the 
+source of the interest income. 
+5. 
+The question of whether the passive receipt of interest income by a 
+company constitutes the carrying on of a business arises occasionally.  The 
+Department’s long-standing view on the law in this area is governed by the 
+decisions in IRC v. Korean Syndicate Ltd, 12 TC 181; CIR v. The South Behar 
+Railway Co Ltd., 12 TC 657 and American Leaf Blending Co Sdn Bhd v. 
+Director-General of Inland revenue [1978] STC 561.  The current position 
+is – 
+ 
+y 
+the mere receipt of interest by a company does not constitute 
+the carrying on of a business; 
+ 
+y 
+actions that go beyond “mere passive acquiescence” may 
+constitute the carrying on of a business; 
+ 
+y 
+a period of inactivity does not rebut the fact that a company is 
+still carrying on business. 
+ 
+6. 
+In the case of CIR v. Bartica Investment Ltd, 4 HKTC 129, a 
+company placed deposits with financial institutions as security for back-to-back 
+loans, held investments and purchased shares in a listed Hong Kong company.  
+It was held that the company carried on a business in Hong Kong.  Cheung J. 
+decided that, without having to rely on its investment holding and share 
+purchasing activities, the company’s principal on-going activity of placing 
+deposits and furnishing securities was, of itself, sufficient to constitute carrying 
+on a business.  In other words, the company’s activities had gone beyond 
+“mere passive acquiescence”.  The case turned on its own facts and can be 
+distinguished from situations involving the mere passive receipt of interest.  
+The decision does not change the Department’s interpretation and application 
+of the law. 
+2 
+
+ 
+7. 
+Section 15(1)(g) deems interest received in respect of the funds of a 
+business carried on in Hong Kong by a person, other than a corporation, to be 
+receipts arising in Hong Kong from a business carried on in Hong Kong and 
+chargeable to profits tax.  Interest is therefore subject to profits tax on the 
+same basis as all other income received by a business.  In addition, interest 
+received in respect of monies held on trust e.g. interest-bearing clients’ trust 
+accounts that, by agreement with the clients, is retained by a trade, profession 
+or business is also subject to profits tax.  Such income is received as 
+consideration for services rendered and consequently arises in or is derived 
+from that business in Hong Kong and is chargeable to profits tax under section 
+14, e.g. CIR v. Messrs. Lau, Wong & Chan, Solicitors, 2 HKTC 470. 
+ 
+ 
+PROFITS 
+TAX 
+ON 
+INTER
+ 
+EST 
+EARNED 
+BY 
+FINANCIAL 
+INSTITUTIONS  
+ 
+8. 
+The Inland Revenue Ordinance (IRO) was amended in 1978 by the 
+addition of section 15(1)(i).  This subsection deems interest income received 
+by or accrued to financial institutions through or from their businesses in Hong 
+Kong to be profits arising in or be derived from a trade, profession or business 
+carried on in Hong Kong notwithstanding that the provision of credit may have 
+been outside of Hong Kong.  The deeming provision applies only to interest 
+income not otherwise chargeable to profits tax.  The Board of Review in 
+D7/84, IRBRD, vol. 2, 58, held that notwithstanding that the provision of credit 
+was outside Hong Kong, interest derived by a financial institution was 
+chargeable under section 14, the basic charging provision, because the interest 
+arose from the financial institution’s operations in Hong Kong. The decision of 
+the Board of Review is in line with the decision by the Privy Council in Orion 
+Caribbean Limited v. CIR 4 HKTC 432 mentioned in paragraph 4. 
+ 
+9. 
+The main features of section 15(1)(i) are – 
+ 
+y 
+A financial institution is defined as – 
+−  an authorised institution within the meaning of section 2 of 
+the Banking Ordinance; and 
+−  an associated corporation of an authorised institution 
+which would have been liable to be authorised as such an 
+3 
+
+ 
+ 
+institution under the Banking Ordinance had it not been 
+exempt under the relevant provisions. 
+ 
+y 
+Only interest arising through, or from the carrying on of, the 
+business in Hong Kong is subject to profits tax. 
+ 
+y 
+The provision of the credit outside Hong Kong will not, of 
+itself, take the interest received outside of the charge to profits 
+tax. 
+10. 
+Whether interest arises from the carrying on of a business in Hong 
+Kong by a financial institution will be a question of fact to be determined by 
+the totality of the circumstances in each case.  Modern international banking 
+is a highly complex business and circumstances will vary between financial 
+institutions.  At one end of the spectrum will
+ 
+ be financial institutions carrying 
+on business solely in Hong Kong and which, having accepted deposits here, use 
+part of the proceeds to purchase foreign interest-bearing securities or advance 
+loans to overseas borrowers.  Unquestionably, the whole of its profits will 
+arise from its Hong Kong business.  At the other end of the spectrum are 
+situations where the operations carried out in Hong Kong are confined merely 
+to entering a transaction in the books of account.  Clearly, it could not be 
+claimed that the profits on such transactions arise from the carrying on of 
+business in Hong Kong.  Conversely, though, if operations of substance 
+relating to a transaction are carried out in Hong Kong the profits tax liability 
+cannot be escaped merely by entering the transactions in the books of an 
+overseas branch of the Hong Kong financial institution or a special purpose 
+vehicle incorporated in an offshore regime. 
+ 
+11. 
+The complexity of finance operations means that it is not possible to 
+lay down one comprehensive formula to cover all situations.  Cases falling 
+between these two extremes will arise, where it can be said that the profits arise 
+partly from business carried on in Hong Kong and partly from business carried 
+on elsewhere.  In these situations, the operations that are more immediately 
+responsible for the receipt of the profits will determine their chargeability.  If 
+those operations are carried on in Hong Kong, then, the whole of the profits 
+will be assessable here.  On the other hand, where the operations more 
+immediately responsible for the profits are undertaken outside of Hong Kong, 
+then no part of those profits will be chargeable.  In the cases where the extent 
+4 
+
+ 
+and effect of operations undertaken within Hong Kong and outside of Hong 
+Kong are so finely balanced as to render it impracticable to determine which 
+are the more immediately responsible, an apportionment of the profits will be 
+appropriate.  The current basis of assessing the interest income of f inancial 
+institutions is set out in Revised Departmental Interpretation and Practice Note 
+No. 21, issued in March 1998. 
+ 
+ 
+DOUBLE TAXATION RELIEF 
+ 
+12. 
+Section 16(1)(c) provides a limited form of double taxation relief to 
+corporations and to all other persons carrying on a trade, profession or business 
+in Hong Kong in respect of interest or gains from certificates of deposits or 
+ 
+ 
+bills of exchange specified in section 15(1)(f), (g), (i), (j), (k) or (l).  When 
+taxes of substantially the same nature as tax imposed under the IRO are 
+charged elsewhere on such interest or gains then, provided the Commissioner is 
+satisfied that the overseas taxes have been paid, a deduction is granted for those 
+taxes in ascertaining the profits chargeable to profits tax.  Where the overseas 
+tax is charged on the gross amount of earnings and is payable regardless of 
+whether or not a profit is derived such that it falls outside the ambit of this 
+relief, then a deduction will be considered under the principal provision of 
+section 16(1). 
+ 
+ 
+ 
+5 
