@@ -1,0 +1,116 @@
+{
+ "oracle_kind": "snapshot",
+ "case": "scenario_a",
+ "rows": {
+  "HK/DEBT/DIRECT": {
+   "lo": 50.0,
+   "hi": 648.0,
+   "dominated": false,
+   "pending": [
+    "payee.adequate_substance",
+    "payee.exemption_beneficial",
+    "payee.registration_filing_compliant:is_true",
+    "payer.arms_length_interest",
+    "payer.related_party_debt_equity_ratio"
+   ]
+  },
+  "SG/DEBT/INDIRECT": {
+   "lo": 120.0,
+   "hi": 370.0,
+   "dominated": false,
+   "pending": [
+    "payer.arms_length_interest",
+    "payer.related_party_debt_equity_ratio"
+   ]
+  },
+  "HK/DEBT/INDIRECT": {
+   "lo": 50.0,
+   "hi": 848.0,
+   "dominated": true,
+   "pending": [
+    "payee.adequate_substance",
+    "payee.adequate_substance",
+    "payee.exemption_beneficial",
+    "payee.registration_filing_compliant:is_true",
+    "payer.arms_length_interest",
+    "payer.related_party_debt_equity_ratio"
+   ]
+  },
+  "None/DEBT/DIRECT": {
+   "lo": 120.0,
+   "hi": 510.0,
+   "dominated": true,
+   "pending": [
+    "payee.adequate_substance",
+    "payer.arms_length_interest",
+    "payer.related_party_debt_equity_ratio"
+   ]
+  },
+  "SG/DEBT/DIRECT": {
+   "lo": 120.0,
+   "hi": 510.0,
+   "dominated": true,
+   "pending": [
+    "payee.adequate_substance",
+    "payee.is_excluded_entity",
+    "payee.is_relevant_group_entity",
+    "payer.arms_length_interest",
+    "payer.related_party_debt_equity_ratio"
+   ]
+  },
+  "SG/EQUITY/INDIRECT": {
+   "lo": 250.0,
+   "hi": 370.0,
+   "dominated": true,
+   "pending": [
+    "flow.direct_ratio:ge",
+    "flow.holding_months:ge",
+    "payee.exemption_beneficial",
+    "payee.ppt"
+   ]
+  },
+  "None/EQUITY/DIRECT": {
+   "lo": 250.0,
+   "hi": 510.0,
+   "dominated": true,
+   "pending": [
+    "flow.direct_ratio:ge",
+    "flow.holding_months:ge",
+    "payee.adequate_substance",
+    "payee.exemption_beneficial",
+    "payee.ppt"
+   ]
+  },
+  "SG/EQUITY/DIRECT": {
+   "lo": 250.0,
+   "hi": 510.0,
+   "dominated": true,
+   "pending": [
+    "flow.direct_ratio:ge",
+    "flow.holding_months:ge",
+    "payee.adequate_substance",
+    "payee.exemption_beneficial",
+    "payee.is_excluded_entity",
+    "payee.is_relevant_group_entity",
+    "payee.ppt"
+   ]
+  },
+  "HK/EQUITY/DIRECT": {
+   "lo": 300.0,
+   "hi": 648.0,
+   "dominated": true,
+   "pending": [
+    "payee.exemption_beneficial"
+   ]
+  },
+  "HK/EQUITY/INDIRECT": {
+   "lo": 300.0,
+   "hi": 848.0,
+   "dominated": true,
+   "pending": [
+    "payee.adequate_substance",
+    "payee.exemption_beneficial"
+   ]
+  }
+ }
+}

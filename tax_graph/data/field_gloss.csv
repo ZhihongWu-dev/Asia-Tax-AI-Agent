@@ -1,0 +1,193 @@
+field,gloss,value,source_hint
+accounting_period_end,会计期间截止日,日期,年度财务报表
+accumulated_profits_share,应享有的累计未分配利润和盈余公积份额,金额,被投资企业资产负债表
+acquirer_chargeable_in_hk,受让方是否在香港就该所得纳税,是/否,受让方确认
+adequate_substance,在当地是否有足够的经济实质（人员、场所、开支）,税务机关认定,经济实质说明材料
+after_tax_profit,该公司本年度税后利润,金额,经审计财务报表（利润表）
+amount_unknown,该步骤的金额是否尚未提供（未提供则须问，不补值）,是/否,由结构推出
+arms_length_interest,关联利息是否符合独立交易原则,税务机关认定,转让定价资料
+arms_length_max,独立交易区间上限（可扣除金额上限）,金额,转让定价同期资料或基准分析报告
+as_at,判断时点（审视本案例的日期）,日期,案例本身
+assessment_notice_on,评税或核定通知书送达日,日期,税务机关通知书
+asset_disposed_within_2y,受让方是否在转让后 2 年内处置该资产（新加坡 2014 年规则第 7(1)(b) 条：处置则印花税减免撤回）,是/否,交易计划
+asset_transfer_reasonable_purpose,按账面净值划转 IP 是否具有合理商业目的、不以减少、免除或推迟缴税为主要目的（109号第三条）,税务机关认定,划转方案与商业目的说明
+associated_ratio,转让方与受让方之间的共同持股比例（一方持有另一方，或第三方同时持有双方，按链上最低一环）,%,持股结构图
+authority_action,税务机关已采取的行动（无 / 评税 / 调整 / 稽查）,枚举,税务机关文书
+benchmark_rate,金融企业同期同类贷款利率,%,银行报价或贷款合同对照
+beneficial_owner,收款方是否为受益所有人,税务机关认定,受益所有人分析材料
+bo_safe_harbour,是否符合受益所有人安全港（上市公司或其全资子公司等）,是/否,股权结构与上市信息
+bo_via_100pct_owner,是否经同一法域的100%持股方认定受益所有人,是/否,股权结构
+capital_asset,该资产是否为资本性资产（非经营性）,税务机关认定,持有目的与交易记录
+cfc_profit_total,受控外国企业利润总额,金额,该外国企业财务报表
+cfc_share_control,是否按持股比例构成控制,是/否,股权结构
+cfc_tax_burden_ratio,受控外国企业实际税负占法定税率的比例,%,该外国企业纳税申报表与财务报表
+cfc_whitelisted,所在法域是否在白名单,是/否,国税函〔2009〕37号
+cit_rate,该公司实际适用的企业所得税税率（含优惠）,%,企业所得税年度申报表或优惠资格文件
+claim_is_for_prior_year,主张是否针对以前年度,是/否,案例本身
+clawback_event_within_2y,两年内是否发生需追回的情形,是/否,计划安排
+cn_asset_ratio,境外企业资产中内地应税财产的比例,%,被转让企业财务报表
+cn_income_ratio,境外企业收入中来自内地的比例,%,被转让企业财务报表
+cn_main_controlling_investor,是否为该境外企业的主要控股投资者（国税发〔2009〕82号）,税务机关认定,股权结构
+cn_value_ratio,股权价值中来自内地应税财产的比例,%,估值报告
+cny_rate,每单位案例币种折合人民币,数值,中国人民银行人民币汇率中间价
+consideration,转让对价,金额,股权转让合同
+cost_basis,所转让资产（股权或 IP）的计税成本；IP 为尚未扣除的开支（内地为计税基础减已摊销后的净值）,金额,投资或购买凭证、无形资产摊销台账
+covered_taxes_other,支柱二意义下本法域其他涵盖税额（未在本模型各笔流中体现的部分）,金额,集团支柱二计算底稿
+date_of_payment,实际支付日,日期,银行付款凭证
+deductible_at_payer,该笔支付在付款方是否可扣除,是/否,付款方纳税申报
+determination_on,决定作出日,日期,税务机关文书
+direct_payment,是否由被投资企业直接支付,是/否,支付安排
+direct_ratio,直接持股比例,%,股东名册
+distributed_profit_year,利润分配决议写明本次股息所分配的利润年度（方案新设公司：写明其实际缴税最多的可分配年度）,年度,利润分配决议
+dividend_from_pre_reorg_profits,股息是否分配被转让企业在重组股权转让前形成的未分配利润（公告2013年第72号第八条）,是/否,利润分配决议
+effective_management_in_cn,实际管理机构是否在内地（国税发〔2009〕82号四项标准）,税务机关认定,董事会纪要与高管工作地
+exemption_beneficial,适用境外所得豁免是否对纳税人有利,税务机关认定,新加坡申报
+first_notification_on,首次知悉或通知日,日期,通知文书
+fixed_place_in_cn,在内地是否有固定营业场所,是/否,租约、员工与经营地点
+fixed_place_in_hk,在香港是否有固定营业场所,是/否,租约、员工与经营地点
+fixed_place_in_sg,在新加坡是否有固定营业场所,是/否,租约、员工与经营地点
+foreign_headline_rate,来源地法定税率,%,来源地税法
+foreign_tax_lower_than_cn,境外税负是否低于内地,是/否,境外纳税申报
+foreign_tax_rate,该笔所得在境外实际缴纳的税额占所得的比例,%,境外完税凭证
+foreign_taxed,该所得在境外是否已纳税,是/否,境外完税凭证
+ftc_pooling_election,是否选择新加坡境外税收抵免汇总法,是/否,新加坡纳税申报表
+gain_is_capital_in_nature,处置收益是否属资本性质,税务机关认定,持有目的与交易记录
+globe_income,支柱二意义下该成员实体的GloBE所得（股息和持股10%以上股权处置利得一般不计入）,金额,集团支柱二计算底稿
+government_exempt_condition_met,政府或协定指定机构的免税条件是否满足,是/否,收款方身份证明
+gross_revenue,年营业收入,金额,财务报表
+group_revenue_eur,集团合并营业收入（欧元，用于支柱二门槛）,金额,集团合并财务报表
+gst_input_fully_recoverable,付款方的进项消费税能否全额抵扣（只作应税或零税率供应）,是/否,消费税申报表
+gst_recovery_ratio,新加坡消费税进项可抵扣比例,%,新加坡消费税申报
+held_as_trading_stock,该股权是否作为交易存货持有,是/否,会计处理
+hk_resident_or_pe,是否为香港居民或在港常设机构,是/否,注册与经营地点
+hk_tp_small_entity,是否属香港转让定价小型企业豁免,是/否,收入、资产与员工数
+holding_months,支付或处置时的连续持股月数,月数,股东名册与股权变动记录
+immovable_ratio,股权价值中不动产的比例,%,估值报告
+income_sourced_in_hk,该所得是否源自香港,税务机关认定,业务运作地点分析
+income_sourced_in_sg,该所得是否源自新加坡（在新加坡经营的许可、融资业务所得）,税务机关认定,业务运作地点分析
+income_tax_other,该公司本年度在本案各笔流之外缴纳的所得税（其自身经营利润的所得税，未扣除本案所列付款；本案各笔流上的税由引擎自己计入，勿重复）,金额,纳税申报表与完税凭证
+incurred_in_production_of_income,该支出是否为产生应税收入而发生,税务机关认定,支出用途证明
+incurred_in_production_of_profits,该支出是否为产生应评税利润而发生,税务机关认定,支出用途证明
+indirect_cn_target,被转让境外企业是否间接持有内地应税财产,是/否,股权结构
+input_vat_documents_kept,买方备有书面合同、付款证明和境外单位对账单或发票（凭完税凭证抵扣进项）,是/否,合同、付款凭证、对账单或发票
+instrument_used_in_cn,IP 转让书据是否在内地使用（如办理内地专利、商标转让登记）,是/否,国家知识产权局登记材料
+interest_rate,借款利率,%,借款合同
+intragroup_reorg_ratio,集团内重组的持股比例,%,重组方案
+intragroup_transfer,是否为集团内转让,是/否,股权结构
+investee_encouraged_industry,被投资企业是否属鼓励类产业,是/否,产业目录与经营范围
+ip_allowances_claimed,卖方已就该 IP 获得的扣除或减值津贴合计（香港第 16E/16EA 条、新加坡第 19B 条）,金额,以前年度税务计算
+ip_book_amortization,买方账上该 IP 每年的摊销额（按其会计政策；算 GloBE 所得与受控外国企业利润）,金额,买方会计政策与无形资产摊销计划
+ip_book_value,卖方账上该 IP 的账面价值（计算转让年度的会计利润与 GloBE 所得）,金额,卖方财务报表、无形资产明细账
+ip_gain_sourced_in_hk,出售 IP 的收益是否源自香港,税务机关认定,合同谈判、签订与履行地分析
+ip_held_as_capital_asset,所出售的 IP 是否为资本性资产（长期持有用于许可，非买卖存货）,税务机关认定,持有目的与许可记录
+ip_kind,所转让 IP 的种类：PATENT 专利 / SOFTWARE_COPYRIGHT 软件著作权 / IC_LAYOUT 集成电路布图设计 / PLANT_VARIETY 植物新品种 / BIOMEDICINE_VARIETY 生物医药新品种 / KNOW_HOW 专有技术 / TRADEMARK 商标 / COPYRIGHT 其他著作权 / OTHER,枚举,权属证书、IP 转让协议
+ip_never_owned_by_hk_business,该知识产权是否从未由香港业务拥有,是/否,知识产权权属记录
+ip_transfer_gain_sourced_in_cn,非居民转让 IP 所有权的所得是否来源于内地（实施条例第七条未列，主管部门未确定）,税务机关认定,IP 使用地、合同签订与履行地
+ip_used_in_hk,知识产权是否在香港使用,是/否,许可合同与使用地点
+ip_useful_life_years,法律规定或合同约定的 IP 使用年限（如专利剩余保护期）,年,专利证书、IP 转让协议
+is_aircraft_or_ship_lease,是否为飞机或船舶租赁,是/否,租赁合同
+is_equipment_lease,是否为设备租赁,是/否,租赁合同
+is_excluded_entity,是否为新加坡支柱二除外实体,是/否,实体类型
+is_mne_member,是否为跨国企业集团成员,是/否,股权结构
+is_relevant_group_entity,是否为新加坡意义下的相关集团实体,是/否,股权结构
+later_cn_tax_not_reduced,重组后内地税负是否不减少,是/否,重组方案
+lender_interest_taxable_in_hk,贷款方的利息是否在香港纳税,是/否,贷款方确认
+limited_functions_and_risks,境外企业是否仅承担有限功能和风险,是/否,功能风险分析
+listed_market_trade,是否在公开市场交易上市股份,是/否,交易记录
+loan_purpose_income_producing,借款是否用于产生应税收入,是/否,借款用途证明
+managed_from,实际管理机构所在法域（董事会、高管日常经营决策地）,法域,董事会纪要与高管工作地
+max_ratio_12m,前12个月内任一时点的最高持股比例,%,股东名册
+no_adverse_bo_factors,受益所有人的不利因素是否均不存在（公告2018年第9号）,税务机关认定,受益所有人分析材料
+no_main_purpose_of_tax_benefit,取得该所得是否不以获取税收利益为主要目的,税务机关认定,商业目的说明
+no_reasonable_commercial_purpose,间接转让是否缺乏合理商业目的,税务机关认定,商业目的说明
+non_qualifying_expenditure,非合资格研发开支,金额,研发台账
+onpay_ratio_12m,收到后12个月内转付给第三方的比例,%,资金流水
+p2_additional_allocation,法域的追加当期补足额没有可分配的成员（新加坡第 16(3)(a) 条 E 为零或香港第 5.4.3 条分配键为零）时税务机关是否仍要求缴纳,税务机关认定,与税务机关的沟通记录
+p2_carry_back_topup,新加坡追加当期补足额中归属于亏损追溯的部分（MMT 法第 21(2) 条选择后仍留在当年）,金额,集团支柱二计算底稿
+p2_cbcr_pbt,国别报告中该法域的税前利润或亏损（与本案例金额同一币种）,金额,国别报告
+p2_cbcr_revenue,国别报告中该法域的总收入（与本案例金额同一币种）,金额,国别报告
+p2_cbcr_simplified_taxes,该法域的简化涵盖税额：合格财务报表中的所得税费用，剔除非涵盖税、不确定税务处理与被排除的递延税（与本案例金额同一币种）,金额,合格财务报表
+p2_dm_avg_income_eur,该法域当年与前两年 GloBE 所得或亏损的平均数（欧元；新加坡 MMT 法第 19 条、香港 GloBE 第 5.5.2–5.5.3 条）,金额,集团支柱二计算底稿
+p2_dm_avg_revenue_eur,该法域当年与前两年 GloBE 收入的平均数（欧元；新加坡 MMT 法第 19 条、香港 GloBE 第 5.5.2–5.5.3 条）,金额,集团支柱二计算底稿
+p2_dm_elected,申报实体是否为该法域该财年选择适用微利豁免,是/否,GloBE 信息申报表
+p2_etr,支柱二有效税率,%,集团支柱二计算底稿
+p2_eur_rate,每 1 单位本案例币种折合的欧元：财年开始前一个日历年 12 月欧洲央行参考汇率的月平均（新加坡 MMT 条例第 9 条；OECD 2026 年释义第 1 章第 20.1 段）；只用于第一个建模财年，以后各年另给 p2_eur_rate_<年>,比率,欧洲央行汇率
+p2_iir,该补足税伪流是否为母公司按收入纳入规则（IIR）缴纳的份额（口径 D20）,是/否,由结构推出
+p2_negative_tax_election,申报实体是否按新加坡 MMT 法第 21(2) 条选择把追加当期补足额中未归属于亏损追溯的部分转为结转负税额,是/否,GloBE 信息申报表
+p2_qualified_cbcr,该法域该财年有合格国别报告（以合格财务报表编制）,是/否,国别报告
+p2_tcsh_elected,申报实体是否为该法域该财年选择适用过渡期国别报告安全港,是/否,GloBE 信息申报表
+p2_tcsh_history,此前每个适用支柱二规则且在该法域有成员的财年都适用了过渡期国别报告安全港（或此前没有这样的年度）,是/否,以前年度 GloBE 信息申报表
+payable_on,应付日,日期,合同或董事会决议
+payee_in_source_jur,收款方是否位于来源地,是/否,注册地
+payee_is_associate,收款方是否为关联人,是/否,股权结构
+payee_is_financial_institution,收款方是否为金融机构,是/否,牌照
+payee_is_government,收款方是否为政府或其全资机构,是/否,身份证明
+payee_is_related,收款方是否为关联方,是/否,股权结构
+payee_resident_in_cn,收款方是否为内地居民企业,是/否,注册与实际管理机构
+payroll,支柱二实质性所得排除计算用的合资格员工薪酬,金额,薪酬台账
+pboc_benchmark_rate,人民银行公布的贷款基准利率,%,人民银行公告
+period_to,所属期间截止日,日期,申报表
+planned_holding_months,计划继续持有的月数,月数,投资计划
+ppt,主要目的测试：是否以获取协定优惠为主要目的之一（是则不给协定待遇）,税务机关认定,商业目的说明
+price_includes_vat,合同价款是否含增值税,是/否,合同价款条款
+prior_map_outcome,以前相互协商程序的结果,枚举,协商结果文书
+profit_margin,收款方就该笔服务费的利润率,%,收款方财务资料
+profits_arise_in_hk,该利润是否产生于香港,税务机关认定,业务运作地点分析
+profits_not_mainly_active,受控外国企业利润是否主要不是积极经营所得,税务机关认定,外国企业收入构成
+pure_equity_holding,是否为纯股权持有实体,是/否,经营范围与资产构成
+qualifying_rd_expenditure,合资格研发开支,金额,研发台账
+ratio,持股比例,%,股东名册
+reasonable_commercial_purpose_absent,安排是否缺乏合理商业目的（一般反避税）,税务机关认定,商业目的说明
+reasonable_royalty,特许权使用费是否合理,税务机关认定,转让定价资料
+reasonable_service_fee,服务费是否合理且与取得收入有关,税务机关认定,服务记录与转让定价资料
+receipt_kind,境外所得的收取方式（汇入 / 视同汇入 / 未汇入）,枚举,银行记录
+registration_filing_compliant,登记备案是否合规,是/否,备案回执
+reinvested_in_cn,分得利润是否在内地再投资,是/否,再投资协议
+reinvestment_form,再投资方式,枚举,再投资协议
+reinvestment_from_distributed_profit,再投资资金是否来自分得利润,是/否,资金流水
+related_party_debt_equity_ratio,关联债资比,比值,财务报表
+related_party_volume,年度关联交易额,金额,关联交易报告表
+remitted_on,税款解缴日,日期,完税凭证
+reorg_commitment_3y,转让方是否书面承诺 3 年内不转让其持有的受让方股权（财税〔2009〕59号第七条第（一）项）,是/否,书面承诺
+reorg_consideration_in_equity,重组对价是否以股权支付,是/否,重组协议
+reorg_equity_payment_share,重组对价中以股权支付的比例,%,重组协议
+reorg_filed,是否在股权转让合同生效且完成工商变更登记后 30 日内办理特殊性税务处理备案（公告2013年第72号第二条）,是/否,备案表
+reorg_operations_unchanged_12m,重组后连续 12 个月内是否不改变被转让企业原来的实质性经营活动（59号第五条第（三）项）,是/否,经营计划
+reorg_reasonable_commercial_purpose,重组是否具有合理商业目的、不以减少免除或推迟缴税为主要目的（59号第五条第（一）项）,税务机关认定,重组说明
+reorg_shares_kept_12m,取得股权支付的原主要股东是否在重组后连续 12 个月内不转让所取得的股权（59号第五条第（五）项）,是/否,书面承诺
+reorg_wht_burden_unchanged,重组后以后该项股权转让所得的预提税负担是否不变（59号第七条第（一）项）,税务机关认定,协定比对
+residence_cert,是否持有收款方居民身份证明（覆盖支付年度）,是/否,税务居民身份证明
+retention_without_reasonable_business_need,利润不分配是否缺乏合理经营需要,税务机关认定,利润留存用途说明
+return_due_on,纳税申报截止日,日期,税务机关通知
+royalty_deductible_in_hk,特许权使用费在香港是否可扣除,是/否,香港申报
+sbie,支柱二实质性所得排除额,金额,集团支柱二计算底稿
+sch17k_elected,是否选择香港附表17K,是/否,香港申报
+service_consumed_on_site_abroad,服务是否在境外现场消费（如境外会议、住宿、餐饮）,是/否,服务合同与发票
+service_days_12m,任意12个月内在来源地提供服务的天数,天数,出入境与工时记录
+service_fee_is_royalty_for_know_how,服务费是否因使用专有技术而属特许权使用费（国税函〔2009〕507号）,税务机关认定,服务合同与技术交付内容
+service_kind,服务类型（管理 / 工程设计咨询 / 其他）,枚举,服务合同
+service_onshore_share,服务在内地履行部分的比例,%,工时记录
+service_performed_in_residence,服务是否在居民国履行,是/否,工时记录
+service_performed_in_source,服务是否在来源地履行,是/否,工时记录
+shares_cancelled,股份是否因清算或减资而注销（无转让书据，不征印花税）,是/否,由结构推出
+stamp_relief_claimed,是否就关联公司之间的转让申请印花税减免（香港印花税条例第 45 条；新加坡印花税法第 15 条）,是/否,减免申请
+substance_ruled_adequate,香港税务局是否已认定经济实质足够,是/否,裁定书
+substantive_control_over_foreign_company,是否对外国企业构成实质控制,税务机关认定,股权、资金、经营与购销关系
+tangible_assets,支柱二实质性所得排除计算用的有形资产账面价值,金额,固定资产台账
+tax_paid_on,税款缴纳日,日期,完税凭证
+tax_paid_or_secured,税款是否已缴纳或提供担保,是/否,完税凭证
+tech_recognition_open_to_foreign_seller,境外卖方的技术转让能否经内地科技、工信部门认定而免征增值税,税务机关认定,主管税务机关意见
+tech_transfer_between_sisters_allowed,同一股东全资持有的兄弟公司之间的技术转让能否享受减免（111号第四条未写）,税务机关认定,股权结构图
+tech_transfer_registered,技术转让合同已经省级以上科技部门（跨境：商务部门）认定登记,是/否,技术合同认定登记证明
+technology_export_restricted,所转让技术是否属于《中国禁止出口限制出口技术目录》所列,是/否,商务部门审查意见
+tp_adjustment_amount,转让定价调整金额,金额,调整通知书
+tp_adjustment_paid_on,转让定价调整税款缴纳日,日期,完税凭证
+tp_adjustment_tax,转让定价调整补税额,金额,调整通知书
+tp_documentation_provided,是否已准备并提供同期资料,是/否,同期资料
+underlying_profits_taxed,股息所对应利润是否已纳税,是/否,付款方纳税申报
+underlying_tax_share,股息所对应的已纳税额占股息的比例,%,付款方纳税申报与利润分配记录
+unified_borrowing_relending,这笔利息是否属于统借统还：集团或核心企业向金融机构借款（或发债）后转贷给下属单位，利率不高于其借款利率,是/否,集团借款合同、转贷合同与利率
+unwind_step,该笔转让是否为撤销或迁出现有控股公司的步骤（口径 D19）,是/否,由结构推出
+vat_general_taxpayer,付款方是否为增值税一般纳税人,是/否,税务登记
+vat_tech_recognized,技术转让合同已经省级科技、工信部门认定（免征增值税）,是/否,科技、工信部门审核意见
+wound_up_by_plan,该公司是否按方案转出所持股权后清算注销（口径 D19）,是/否,由结构推出
