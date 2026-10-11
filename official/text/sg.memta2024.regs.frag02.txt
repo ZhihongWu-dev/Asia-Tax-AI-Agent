@@ -1,0 +1,102 @@
+PART 3
+USE OF CURRENCY
+Conversion of amount into presentation currency
+5.
+—(1) This regulation applies where, in order to determine for the purpose of Part 2 or 3 of the Act, the top‑up tax for a financial year for —
+(
+a
+)
+a relevant entity (
+X
+); or
+(
+b
+)
+a standalone JV or an entity of a JV group that is treated as a relevant entity under section 25 (also
+X
+),
+an amount used to determine
+X
+’s GloBE income or loss or top‑up amount that is not in the presentation currency has to be converted into that currency pursuant to section 9(1).
+(2) This regulation also applies where an amount used to determine
+X
+’s GloBE income or loss or top-up amount that is to be entered in a GloBE information return to be filed under section 40, is not in the presentation currency.
+(3) The amount is to be converted into the presentation currency in accordance with the applicable rules (including any applicable guidance for hyperinflation) in the applicable financial accounting standards.
+(4) Paragraph (3) applies whether or not the applicable financial accounting standards require the amount to be converted into the presentation currency.
+(5) In this regulation, the applicable financial accounting standards are —
+(
+a
+)
+if
+X
+’s FANIL is the net income or loss determined in accordance with paragraph 6(3)(
+a
+) of the First Schedule to the Act — the financial accounting standard used in preparing the consolidated financial statements for the financial year concerned of the ultimate parent entity of the MNE group of or to which
+X
+is a part or connected; or
+(
+b
+)
+if
+X
+’s FANIL is the net income or loss determined in accordance with paragraph 6(3)(
+b
+) of the First Schedule to the Act — the acceptable financial accounting standard or authorised financial accounting standard used to determine that net income or loss.
+Conversion of amount in functional currency for DTT purposes
+6.
+For the purpose of section 9(6), the conversion of an amount in the functional currency into the currency in section 9(6)(
+a
+) or (
+b
+) is to be made in accordance with the applicable rules (including any applicable guidance for hyperinflation) in the Accounting Standards made or formulated under Part 3 of the Accounting Standards Act 2007.
+Conversion of amount into Singapore dollars
+7.
+—(1) This regulation applies where, in order to ascertain an amount of MTT or DTT payable by a chargeable entity for a financial year, an amount of top‑up tax for the financial year for a relevant entity of the chargeable entity in the presentation currency (not being Singapore dollars) has to be converted into Singapore dollars pursuant to section 9(9).
+(2) The amount is to be converted into Singapore dollars using —
+(
+a
+)
+the average rate of exchange, as made available by the Monetary Authority of Singapore, calculated on the basis of the rate of exchange at the end of each month for that financial year; or
+(
+b
+)
+where no such average rate of exchange is made available by the Monetary Authority of Singapore, such rate of exchange as the Comptroller may determine.
+Conversion of amount not in presentation currency into presentation currency for comparison with euros amount
+8.
+—(1) This regulation applies where, in order to compare an amount relating to an entity (
+Y
+) that is not in the presentation currency to a figure expressed in the Act in euros, that amount has to be first converted into the presentation currency pursuant to section 9(10)(
+a
+).
+(2) That amount is to be converted into the presentation currency in accordance with the applicable rules (including any applicable guidance for hyperinflation) in the applicable financial accounting standards.
+(3) Paragraph (2) applies whether or not the applicable financial accounting standards require the amount to be converted into the presentation currency.
+(4) In this regulation, “applicable financial accounting standards” has the meaning given by regulation 5(5), with the reference to
+X
+replaced with
+Y
+.
+Conversion of amount in presentation currency into euros for comparison with euros amount
+9.
+—(1) This regulation applies where, in order to compare an amount in the presentation currency (not being euros) to a figure expressed in the Act in euros, that amount has to be converted into euros pursuant to section 9(10)(
+b
+).
+(2) The amount is to be converted into euros using the average rate of exchange for the month of December of the calendar year immediately before the financial year for which the consolidated financial statements were prepared or which would have been prepared (as the case may be) using the presentation currency.
+(3) In paragraph (2), the average rate of exchange for the month of December for a calendar year is —
+(
+a
+)
+the average of the daily rates of exchange as quoted by the European Central Bank for that month;
+(
+b
+)
+in the absence of the rate in sub‑paragraph (
+a
+) — the average of the daily rates of exchange as made available by the Monetary Authority of Singapore for that month; and
+(
+c
+)
+in the absence of the rates in sub‑paragraphs (
+a
+) and (
+b
+) — the average of the daily rates of exchange as quoted or made available by the institution that manages the presentation currency for that month.

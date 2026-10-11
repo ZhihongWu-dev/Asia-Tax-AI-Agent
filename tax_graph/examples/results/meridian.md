@@ -1,0 +1,12 @@
+# 问题单：meridian（模板 inbound_services）
+
+方案尚不能给出：下列数据或确认会改变所选方案或其保证税额。只需答这些；答不上请填 unknown（按最不利处理，不会补值）。
+答复写进 `<案例名>.answers.json`：data（数值或 {"value", "source"}）、actions（yes / no / unknown）、rulings（yes / no / unknown）、library。
+
+## SG
+
+| 类型 | 地址 | 问题 | 取值 | 常见出处 | 影响 |
+|---|---|---|---|---|---|
+| 必答（缺则税额无界） | `SERVICER.globe_income` | 请提供：支柱二意义下该成员实体的GloBE所得（股息和持股10%以上股权处置利得一般不计入）（SERVICER.globe_income） | 金额 | 集团支柱二计算底稿 | 无界 |
+
+候选结构 1 个；其中需要上面必答数据才能计算的 1 个。

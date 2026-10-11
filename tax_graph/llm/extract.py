@@ -21,7 +21,7 @@ from ..engine import RULES
 from ..params import Params
 from ..rules.model import ALL, And, Discretion, Leaf, Not, Or, eq, ge, gt, is_false, is_in, is_true, le, lt
 
-DOC = Path(__file__).resolve().parents[2] / "信息收集.md"
+DOC = Path(__file__).resolve().parents[1] / "信息收集.md"
 BOOL, NUMBER, ENUM, DATE, TEXT = "bool", "number", "enum", "date", "text"
 
 

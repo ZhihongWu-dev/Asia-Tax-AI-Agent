@@ -1,0 +1,27 @@
+oracle_kind = text_derived
+ok   HK objection 1 month after the notice
+ok   HK appeal 1 month after the determination
+ok   SG company objection 2 months after the notice
+ok   CN pays interest to a related HK lender within 2:1: 10% withheld (or 7%), 25% deducted while the rate is within the benchmark  [EIT art 4 25%; 财税〔2008〕121号 一 2:1; 实施条例 第三十八条(二): the loan rate is unknown, so the ceiling keeps no deduction; the ceiling's 6% interest VAT, never credited (口径 D25)]
+ok   CN pays interest to a related HK lender at 3:1: deduction only if arm's length and within the benchmark  [121号 二; EIT art 46; 实施条例 第三十八条; 6% interest VAT at the ceiling (口径 D25)]
+ok   CN pays interest to an unrelated HK lender at 3:1: no thin-cap limit, benchmark test still  [EIT art 46 applies to related parties; 实施条例 第三十八条 to every non-financial lender; 6% interest VAT at the ceiling (口径 D25)]
+ok   HK pays a deductible royalty to a SG associate: 16.5% deemed on 100%, 16.5% deducted  [s21A(a); s16(1)]
+ok   HK pays interest to a SG lender: no withholding; deduction needs s16(2) (lender taxable in HK or a financial institution) and is a judgement  [s16(1); no HK interest withholding]
+ok   CN shares sold by a HK company, 30% held, no immovable: Mainland may tax, 10% x 40%  [Arrangement 13(5) >= 25%; EIT 10% on the gain; no treaty benefit, so no PPT item]
+ok   CN shares sold by a HK company, 20% held, no immovable: residence state only  [Arrangement 13(7) (p4) residence only]
+ok   CN shares sold by a HK company, 20% held, 60% immovable: Mainland may tax  [Arrangement 13(4) (p5) > 50% immovable]
+ok   CN listed shares bought and sold on the same exchange by a HK company  [Arrangement 13(6) (p4)]
+ok   CN shares sold by a SG company, 20% held: residence only  [Agreement 13(5)]
+ok   offshore holdco sold, four-factor case: deemed no commercial purpose, 10% x 40%  [公告2015年第7号 第四条]
+ok   offshore holdco sold, value 60%: judged, not deemed  [第三条 综合分析]
+ok   offshore holdco sold on a public market  [第五条(一)]
+ok   intragroup reorganisation, 100% owned, paid in equity, no tax reduction later  [第六条]
+ok   no Mainland property under the target  [第一条 scope]
+ok   CN dividend remitted to SG, taxed abroad at 25%: exempt if the Comptroller agrees, else 17% less credit  [s13(8),(9); s50 credit for 10% Mainland tax]
+ok   CN dividend kept offshore: no Singapore charge  [s10(25)]
+ok   HK dividend remitted to SG, headline 16.5%, underlying taxed: exempt or 17% (no HK tax to credit)  [s13(8),(9),(10); s50A]
+ok   CN interest remitted to SG by a corporate lender: 17% less the 10% Mainland tax (Agreement cap 10%)  [s10(1)(d), s50; Agreement 11(2) 10%]
+ok   CN share gain remitted to SG by a group entity without substance: s10L  [s10L; 17% x 40% less Mainland 10% x 40% credited]
+ok   CN dividend to HK MNE, 3% holding: 16.5% less 10% Mainland tax when substance fails  [s15K; s50 credit]
+ok   SG interest to HK MNE: 16.5% less 15% Singapore withholding when substance fails or the credit was provided in Hong Kong  [s15K; s14 source is a judgement; s50AAA unilateral credit]
+25 checks, 0 with differences

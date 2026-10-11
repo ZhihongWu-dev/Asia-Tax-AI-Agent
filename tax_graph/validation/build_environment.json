@@ -1,0 +1,16 @@
+﻿{
+    "python":  "3.9.23",
+    "command":  "python official/tools/build.py",
+    "exit_code":  0,
+    "packages":  {
+                     "PyMuPDF":  "1.26.5",
+                     "beautifulsoup4":  "4.14.3",
+                     "requests":  "2.32.5",
+                     "openpyxl":  "3.1.5",
+                     "numpy":  "2.0.2",
+                     "sentence-transformers":  "5.1.2"
+                 },
+    "warnings":  [
+                     "UserWarning: Cannot parse header or footer so it will be ignored"
+                 ]
+}

@@ -1,0 +1,226 @@
+
+== scenario A (holding; subject GROUP)
+candidate                                   lo        hi  share@lo  share@hi  disc  plan  fragile  ent dominated
+HK/DEBT/False/DIRECT                     52.50    710.50     52.50    710.50     6     0   380.00    4 
+HK/DEBT/True/DIRECT                      52.50    710.50     52.50    710.50     6     0   380.00    4 
+HK/EQUITY/False/DIRECT                  302.50    650.50    302.50    650.50     6     0     0.00    4 
+HK/EQUITY/True/DIRECT                   302.50    650.50    302.50    650.50     6     0     0.00    4 
+HK/DEBT/False/INDIRECT                   55.00    913.00     55.00    913.00     6     0   520.00    4 yes
+HK/DEBT/True/INDIRECT                    55.00    913.00     55.00    913.00     6     0   520.00    4 yes
+SG/DEBT/False/INDIRECT                   55.00   1415.00     55.00   1415.00     7     2   320.00    5 yes
+SG/DEBT/True/INDIRECT                    55.00   1415.00     55.00   1415.00     7     2   320.00    5 yes
+SG/DEBT/False/DIRECT                     57.50   1417.50     57.50   1417.50     7     5   320.00    5 yes
+SG/DEBT/True/DIRECT                      57.50   1417.50     57.50   1417.50     7     5   320.00    5 yes
+None/DEBT/False/DIRECT                  127.50   1417.50    127.50   1417.50     6     1   250.00    4 yes
+None/DEBT/True/DIRECT                   127.50   1417.50    127.50   1417.50     6     1   250.00    4 yes
+CN/EQUITY/False/INDIRECT                207.50   1590.50    207.50   1590.50     9     3   153.00    5 yes
+CN/EQUITY/True/INDIRECT                 207.50   1590.50    207.50   1590.50     9     3   153.00    5 yes
+CN/EQUITY/False/DIRECT                  207.50   1590.50    207.50   1590.50     9     4   153.00    5 yes
+CN/EQUITY/True/DIRECT                   207.50   1590.50    207.50   1590.50     9     4   153.00    5 yes
+CN/DEBT/False/INDIRECT                  207.50   1650.50    207.50   1650.50     9     2   403.00    5 yes
+CN/DEBT/True/INDIRECT                   207.50   1650.50    207.50   1650.50     9     2   403.00    5 yes
+CN/DEBT/False/DIRECT                    207.50   1650.50    207.50   1650.50     9     3   403.00    5 yes
+CN/DEBT/True/DIRECT                     207.50   1650.50    207.50   1650.50     9     3   403.00    5 yes
+SG/EQUITY/False/INDIRECT                255.00   1355.00    255.00   1355.00     8     4    50.00    5 yes
+SG/EQUITY/True/INDIRECT                 255.00   1355.00    255.00   1355.00     8     4    50.00    5 yes
+None/EQUITY/False/DIRECT                257.50   1357.50    257.50   1357.50     8     2   170.00    4 yes
+None/EQUITY/True/DIRECT                 257.50   1357.50    257.50   1357.50     8     2   170.00    4 yes
+SG/EQUITY/False/DIRECT                  257.50   1357.50    257.50   1357.50     8     7    50.00    5 yes
+SG/EQUITY/True/DIRECT                   257.50   1357.50    257.50   1357.50     8     7    50.00    5 yes
+HK/EQUITY/False/INDIRECT                305.00    853.00    305.00    853.00     6     0   140.00    4 yes
+HK/EQUITY/True/INDIRECT                 305.00    853.00    305.00    853.00     6     0   140.00    4 yes
+best: {'HOLD': 'HK', 'financing': 'DEBT', 'payment': False, 'exit_route': 'DIRECT'}  lo 52.50  hi 710.50
+needs (MISSING, by cost):
+    250.00  ('cn.deduct.interest', 'up1')            payer.related_party_debt_equity_ratio
+    250.00  ('cn.deduct.interest.benchmark', 'up1')  flow.benchmark_rate, flow.interest_rate
+     50.94  ('cn.vat.law.interest', 'up1')           flow.unified_borrowing_relending
+      0.00  ('cn.vat.law.price_includes_vat', 'up1') flow.price_includes_vat
+      0.00  ('sg.ftc.pooling', 'up2')                payee.ftc_pooling_election
+      0.00  ('data.p2_scope', 'HK')                  group.group_revenue_eur
+      0.00  ('data.p2_scope', 'SG')                  group.group_revenue_eur
+      0.00  ('data.p2_scope', 'CN')                  group.group_revenue_eur
+      0.00  ('data.p2_tcsh', 'HK')                   group.p2_cbcr_pbt_hk, group.p2_cbcr_revenue_hk, group.p2_cbcr_simplified_taxes_hk, group.p2_eur_rate, group.p2_qualified_cbcr_hk, group.p2_tcsh_history_hk
+      0.00  ('data.p2_dm', 'HK')                     group.p2_dm_avg_income_eur_hk, group.p2_dm_avg_revenue_eur_hk
+      0.00  ('data.p2_income', 'HOLD')               group.group_revenue_eur
+      0.00  ('data.p2_tcsh', 'SG')                   group.p2_cbcr_pbt_sg, group.p2_cbcr_revenue_sg, group.p2_cbcr_simplified_taxes_sg, group.p2_eur_rate, group.p2_qualified_cbcr_sg, group.p2_tcsh_history_sg
+      0.00  ('data.p2_dm', 'SG')                     group.p2_dm_avg_income_eur_sg, group.p2_dm_avg_revenue_eur_sg
+      0.00  ('data.p2_income', 'ULT')                group.group_revenue_eur
+      0.00  ('data.p2_tcsh', 'CN')                   group.p2_cbcr_pbt_cn, group.p2_cbcr_revenue_cn, group.p2_cbcr_simplified_taxes_cn, group.p2_eur_rate, group.p2_qualified_cbcr_cn, group.p2_tcsh_history_cn
+      0.00  ('data.p2_dm', 'CN')                     group.p2_dm_avg_income_eur_cn, group.p2_dm_avg_revenue_eur_cn
+      0.00  ('data.p2_income', 'OP')                 group.group_revenue_eur
+conditions (PLAN / DISCRETION, by cost):
+    250.00  ('cn.deduct.interest', 'up1')            payer.arms_length_interest
+     65.00  ('hk.onshore.charge', 'up1')             payee.income_sourced_in_hk
+     65.00  ('hk.fsie.substance.interest', 'up1')    payee.adequate_substance
+      0.00  ('sg.fsie.exempt', 'up2')                payee.exemption_beneficial
+      0.00  ('hk.fsie.substance.share_transfer', 'exit') payee.adequate_substance
+      0.00  ('hk.fsie.participation.share_transfer', 'exit') payee.no_main_purpose_of_tax_benefit
+
+== scenario B (holding; subject ULT)
+candidate                                   lo        hi  share@lo  share@hi  disc  plan  fragile  ent dominated
+HK/DEBT/False/DIRECT                    164.50    586.35    184.50     91.35     4     0   432.80    4 
+HK/EQUITY/False/DIRECT                  169.65    531.00    169.65     36.00     3     0   240.90    4 
+HK/DEBT/True/DIRECT                     164.50    675.45    184.50    180.45     4     0   521.90    4 yes
+HK/EQUITY/True/DIRECT                   169.65    620.10    169.65    125.10     3     0   330.00    4 yes
+SG/DEBT/False/INDIRECT                  590.00   1516.75    500.00   1336.75     5     4   302.00    5 yes
+SG/DEBT/False/DIRECT                    590.00   1516.75    500.00   1336.75     5     7   170.00    5 yes
+None/DEBT/False/DIRECT                  590.00   1570.00    760.00   1570.00     4     1   170.00    4 yes
+CN/DEBT/False/DIRECT                    590.00   1570.00    500.00   1250.00     5     4   170.00    5 yes
+SG/DEBT/True/INDIRECT                   590.00   1846.75    500.00   1336.75     5     4   500.00    5 yes
+SG/DEBT/True/DIRECT                     590.00   1846.75    500.00   1336.75     5     7   170.00    5 yes
+None/DEBT/True/DIRECT                   590.00   1900.00    760.00   1570.00     4     1   170.00    4 yes
+CN/DEBT/True/DIRECT                     590.00   1900.00    500.00   1250.00     5     4   170.00    5 yes
+CN/DEBT/False/INDIRECT                  592.50   1572.50    502.50   1252.50     5     2   302.00    5 yes
+CN/DEBT/True/INDIRECT                   592.50   1902.50    502.50   1252.50     5     2   500.00    5 yes
+SG/EQUITY/False/INDIRECT                596.62   1356.25    586.62   1250.00     3     2   132.00    5 yes
+SG/EQUITY/False/DIRECT                  596.62   1356.25    586.62   1250.00     3     5     0.00    5 yes
+SG/EQUITY/True/INDIRECT                 596.62   1686.25    586.62   1250.00     3     2   330.00    5 yes
+SG/EQUITY/True/DIRECT                   596.62   1686.25    586.62   1250.00     3     5     0.00    5 yes
+None/EQUITY/False/DIRECT                606.25   1356.25    606.25   1356.25     2     1     0.00    4 yes
+CN/EQUITY/False/DIRECT                  606.25   1356.25    500.00   1250.00     3     3     0.00    5 yes
+None/EQUITY/True/DIRECT                 606.25   1686.25    606.25   1356.25     2     1     0.00    4 yes
+CN/EQUITY/True/DIRECT                   606.25   1686.25    500.00   1250.00     3     3     0.00    5 yes
+CN/EQUITY/False/INDIRECT                608.75   1358.75    502.50   1252.50     3     1   132.00    5 yes
+CN/EQUITY/True/INDIRECT                 608.75   1688.75    502.50   1252.50     3     1   330.00    5 yes
+HK/DEBT/False/INDIRECT                  669.50    850.45    689.50    685.45     4     0   191.90    4 yes
+HK/DEBT/True/INDIRECT                   669.50    850.45    689.50    685.45     4     0   191.90    4 yes
+HK/EQUITY/False/INDIRECT                674.65    795.10    674.65    630.10     3     0     0.00    4 yes
+HK/EQUITY/True/INDIRECT                 674.65    795.10    674.65    630.10     3     0     0.00    4 yes
+best: {'HOLD': 'HK', 'financing': 'DEBT', 'payment': False, 'exit_route': 'DIRECT'}  lo 164.50  hi 586.35
+needs (MISSING, by cost):
+    170.00  ('sg.deduct.interest', 'up1')            payer.loan_purpose_income_producing
+      0.00  ('data.p2_scope', 'HK')                  group.group_revenue_eur
+      0.00  ('data.p2_scope', 'SG')                  group.group_revenue_eur
+      0.00  ('data.p2_tcsh', 'HK')                   group.p2_cbcr_pbt_hk, group.p2_cbcr_revenue_hk, group.p2_cbcr_simplified_taxes_hk, group.p2_eur_rate, group.p2_qualified_cbcr_hk, group.p2_tcsh_history_hk
+      0.00  ('data.p2_dm', 'HK')                     group.p2_dm_avg_income_eur_hk, group.p2_dm_avg_revenue_eur_hk
+      0.00  ('data.p2_income', 'HOLD')               group.group_revenue_eur
+      0.00  ('data.p2_tcsh', 'SG')                   group.p2_cbcr_pbt_sg, group.p2_cbcr_revenue_sg, group.p2_cbcr_simplified_taxes_sg, group.p2_eur_rate, group.p2_qualified_cbcr_sg, group.p2_tcsh_history_sg
+      0.00  ('data.p2_dm', 'SG')                     group.p2_dm_avg_income_eur_sg, group.p2_dm_avg_revenue_eur_sg
+      0.00  ('data.p2_income', 'OP')                 group.group_revenue_eur
+conditions (PLAN / DISCRETION, by cost):
+    240.90  ('hk.fsie.substance.share_transfer', 'exit') payee.adequate_substance
+    170.00  ('sg.deduct.interest', 'up1')            payer.incurred_in_production_of_income
+     10.95  ('hk.onshore.charge', 'up1')             payee.income_sourced_in_hk
+     10.95  ('hk.fsie.substance.interest', 'up1')    payee.adequate_substance
+
+== scenario C (ip; subject GROUP)
+candidate                                   lo        hi  share@lo  share@hi  disc  plan  fragile  ent dominated
+HK/False/MARKET                         -91.98    110.80    -91.98    110.80     4     1   202.78    3 
+HK/True/MARKET                          -91.98    110.80    -91.98    110.80     4     1   202.78    3 
+None/False/MARKET                        -9.76     63.74     -9.76     63.74     5     2    66.82    3 
+None/True/MARKET                         -9.76     63.74     -9.76     63.74     5     2    66.82    3 
+SG/False/MARKET                         -91.19    185.44    -91.19    185.44     5     4   229.65    4 yes
+SG/True/MARKET                          -91.19    185.44    -91.19    185.44     5     4   229.65    4 yes
+CN/False/MARKET                          -9.76    188.74     -9.76    188.74     6     3   191.82    4 yes
+CN/True/MARKET                           -9.76    188.74     -9.76    188.74     6     3   191.82    4 yes
+best: {'IPCO': 'HK', 'payment': False, 'ip_transfer': 'MARKET'}  lo -91.98  hi 110.80
+needs (MISSING, by cost):
+     28.30  ('cn.vat.law.input_credit', 'roy')       payer.vat_general_taxpayer
+      0.00  ('data.p2_scope', 'HK')                  group.group_revenue_eur
+      0.00  ('data.p2_scope', 'SG')                  group.group_revenue_eur
+      0.00  ('data.p2_scope', 'CN')                  group.group_revenue_eur
+      0.00  ('data.p2_tcsh', 'HK')                   group.p2_cbcr_pbt_hk, group.p2_cbcr_revenue_hk, group.p2_cbcr_simplified_taxes_hk, group.p2_eur_rate, group.p2_qualified_cbcr_hk, group.p2_tcsh_history_hk
+      0.00  ('data.p2_dm', 'HK')                     group.p2_dm_avg_income_eur_hk, group.p2_dm_avg_revenue_eur_hk
+      0.00  ('data.p2_income', 'IPCO')               group.group_revenue_eur
+      0.00  ('data.p2_tcsh', 'SG')                   group.p2_cbcr_pbt_sg, group.p2_cbcr_revenue_sg, group.p2_cbcr_simplified_taxes_sg, group.p2_eur_rate, group.p2_qualified_cbcr_sg, group.p2_tcsh_history_sg
+      0.00  ('data.p2_dm', 'SG')                     group.p2_dm_avg_income_eur_sg, group.p2_dm_avg_revenue_eur_sg
+      0.00  ('data.p2_income', 'ULT')                group.group_revenue_eur
+      0.00  ('data.p2_tcsh', 'CN')                   group.p2_cbcr_pbt_cn, group.p2_cbcr_revenue_cn, group.p2_cbcr_simplified_taxes_cn, group.p2_eur_rate, group.p2_qualified_cbcr_cn, group.p2_tcsh_history_cn
+      0.00  ('data.p2_dm', 'CN')                     group.p2_dm_avg_income_eur_cn, group.p2_dm_avg_revenue_eur_cn
+      0.00  ('data.p2_income', 'OP')                 group.group_revenue_eur
+conditions (PLAN / DISCRETION, by cost):
+    125.00  ('cn.deduct.royalty', 'roy')             payer.reasonable_royalty
+     49.48  ('hk.onshore.charge', 'roy')             payee.income_sourced_in_hk
+     28.30  ('cn.vat.law.input_credit', 'roy')       flow.input_vat_documents_kept:is_true
+     14.15  ('cn-hk.roy.cap@cn', 'roy')              payee.no_adverse_bo_factors
+     14.15  ('cn-hk.ppt@cn', 'roy')                  payee.ppt
+
+== scenario D (services; subject GROUP)
+candidate                                   lo        hi  share@lo  share@hi  disc  plan  fragile  ent dominated
+HK/False                               -200.00    160.80   -200.00    160.80     3     3   340.00    3 
+HK/True                                -200.00    160.80   -200.00    160.80     3     3   340.00    3 
+SG/False                               -172.80    148.00   -172.80    148.00     3     1   285.60    3 
+SG/True                                -172.80    148.00   -172.80    148.00     3     1   285.60    3 
+CN/False                               -140.00    100.00   -140.00    100.00     1     0   200.00    3 
+CN/True                                -140.00    100.00   -140.00    100.00     1     0   200.00    3 
+best: {'SERVICER': 'HK', 'payment': False}  lo -200.00  hi 160.80
+needs (MISSING, by cost):
+     45.28  ('cn.vat.law.input_credit', 'svc')       payer.vat_general_taxpayer
+      0.00  ('cn.vat.law.price_includes_vat', 'svc') flow.price_includes_vat
+      0.00  ('data.p2_scope', 'HK')                  group.group_revenue_eur
+      0.00  ('data.p2_scope', 'SG')                  group.group_revenue_eur
+      0.00  ('data.p2_scope', 'CN')                  group.group_revenue_eur
+      0.00  ('hk.p2.topup', 'p2:SERVICER_NEW')       payee.group_revenue_eur
+      0.00  ('data.p2_tcsh', 'HK')                   group.p2_cbcr_pbt_hk, group.p2_cbcr_revenue_hk, group.p2_cbcr_simplified_taxes_hk, group.p2_eur_rate, group.p2_qualified_cbcr_hk, group.p2_tcsh_history_hk
+      0.00  ('data.p2_dm', 'HK')                     group.p2_dm_avg_income_eur_hk, group.p2_dm_avg_revenue_eur_hk
+      0.00  ('data.p2_tcsh', 'SG')                   group.p2_cbcr_pbt_sg, group.p2_cbcr_revenue_sg, group.p2_cbcr_simplified_taxes_sg, group.p2_eur_rate, group.p2_qualified_cbcr_sg, group.p2_tcsh_history_sg
+      0.00  ('data.p2_dm', 'SG')                     group.p2_dm_avg_income_eur_sg, group.p2_dm_avg_revenue_eur_sg
+      0.00  ('data.p2_income', 'ULT')                group.group_revenue_eur
+      0.00  ('data.p2_tcsh', 'CN')                   group.p2_cbcr_pbt_cn, group.p2_cbcr_revenue_cn, group.p2_cbcr_simplified_taxes_cn, group.p2_eur_rate, group.p2_qualified_cbcr_cn, group.p2_tcsh_history_cn
+      0.00  ('data.p2_dm', 'CN')                     group.p2_dm_avg_income_eur_cn, group.p2_dm_avg_revenue_eur_cn
+      0.00  ('data.p2_income', 'OP')                 group.group_revenue_eur
+conditions (PLAN / DISCRETION, by cost):
+    200.00  ('cn.deduct.service', 'svc')             payer.reasonable_service_fee
+     80.00  ('cn.wht.service_as_royalty', 'svc')     payee.service_fee_is_royalty_for_know_how
+     60.00  ('cn-hk.pe.no_pe@cn', 'svc')             payee.fixed_place_in_cn:is_false, payee.residence_cert:is_true
+     60.00  ('cn-hk.ppt@cn', 'svc')                  payee.ppt
+     45.28  ('cn.vat.law.input_credit', 'svc')       flow.input_vat_documents_kept:is_true
+
+== scenario E (repatriation; subject GROUP)
+candidate                                   lo        hi  share@lo  share@hi  disc  plan  fragile  ent dominated
+HK/LIQUIDATION/False                     60.00    252.00     60.00    252.00     4     0     0.00    3 
+HK/LIQUIDATION/True                      60.00    252.00     60.00    252.00     4     0     0.00    3 
+HK/CAPITAL_REDUCTION/False               60.00    268.50     60.00    268.50     7     1    10.00    3 yes
+HK/CAPITAL_REDUCTION/True                60.00    268.50     60.00    268.50     7     1    10.00    3 yes
+HK/DIVIDEND/False                       100.00    318.00    100.00    318.00     4     0     0.00    3 yes
+HK/DIVIDEND/True                        100.00    318.00    100.00    318.00     4     0     0.00    3 yes
+CN/CAPITAL_REDUCTION/False              142.00    876.00    142.00    876.00     7     4   153.00    4 yes
+CN/CAPITAL_REDUCTION/True               142.00    876.00    142.00    876.00     7     4   153.00    4 yes
+CN/LIQUIDATION/False                    142.00    876.00    142.00    876.00     7     4   153.00    4 yes
+CN/LIQUIDATION/True                     142.00    876.00    142.00    876.00     7     4   153.00    4 yes
+CN/DIVIDEND/False                       142.00    976.00    142.00    976.00     7     4   153.00    4 yes
+CN/DIVIDEND/True                        142.00    976.00    142.00    976.00     7     4   153.00    4 yes
+None/CAPITAL_REDUCTION/False            172.00    675.00    172.00    675.00     6     2   102.00    3 yes
+None/CAPITAL_REDUCTION/True             172.00    675.00    172.00    675.00     6     2   102.00    3 yes
+None/LIQUIDATION/False                  172.00    675.00    172.00    675.00     6     2   102.00    3 yes
+None/LIQUIDATION/True                   172.00    675.00    172.00    675.00     6     2   102.00    3 yes
+SG/CAPITAL_REDUCTION/False              172.00    675.00    172.00    675.00     6     7    30.00    4 yes
+SG/CAPITAL_REDUCTION/True               172.00    675.00    172.00    675.00     6     7    30.00    4 yes
+SG/LIQUIDATION/False                    172.00    675.00    172.00    675.00     6     7    30.00    4 yes
+SG/LIQUIDATION/True                     172.00    675.00    172.00    675.00     6     7    30.00    4 yes
+None/DIVIDEND/False                     192.00    743.00    192.00    743.00     6     2   170.00    3 yes
+None/DIVIDEND/True                      192.00    743.00    192.00    743.00     6     2   170.00    3 yes
+SG/DIVIDEND/False                       192.00    743.00    192.00    743.00     6     5    50.00    4 yes
+SG/DIVIDEND/True                        192.00    743.00    192.00    743.00     6     5    50.00    4 yes
+best: {'HOLD': 'HK', 'repatriation': 'LIQUIDATION', 'payment': False}  lo 60.00  hi 252.00
+needs (MISSING, by cost):
+      0.00  ('sg.ftc.pooling', 'up2')                payee.ftc_pooling_election
+      0.00  ('data.p2_scope', 'HK')                  group.group_revenue_eur
+      0.00  ('data.p2_scope', 'SG')                  group.group_revenue_eur
+      0.00  ('data.p2_scope', 'CN')                  group.group_revenue_eur
+      0.00  ('data.p2_tcsh', 'HK')                   group.p2_cbcr_pbt_hk, group.p2_cbcr_revenue_hk, group.p2_cbcr_simplified_taxes_hk, group.p2_eur_rate, group.p2_qualified_cbcr_hk, group.p2_tcsh_history_hk
+      0.00  ('data.p2_dm', 'HK')                     group.p2_dm_avg_income_eur_hk, group.p2_dm_avg_revenue_eur_hk
+      0.00  ('data.p2_income', 'HOLD')               group.group_revenue_eur
+      0.00  ('data.p2_tcsh', 'SG')                   group.p2_cbcr_pbt_sg, group.p2_cbcr_revenue_sg, group.p2_cbcr_simplified_taxes_sg, group.p2_eur_rate, group.p2_qualified_cbcr_sg, group.p2_tcsh_history_sg
+      0.00  ('data.p2_dm', 'SG')                     group.p2_dm_avg_income_eur_sg, group.p2_dm_avg_revenue_eur_sg
+      0.00  ('data.p2_income', 'ULT')                group.group_revenue_eur
+      0.00  ('data.p2_tcsh', 'CN')                   group.p2_cbcr_pbt_cn, group.p2_cbcr_revenue_cn, group.p2_cbcr_simplified_taxes_cn, group.p2_eur_rate, group.p2_qualified_cbcr_cn, group.p2_tcsh_history_cn
+      0.00  ('data.p2_dm', 'CN')                     group.p2_dm_avg_income_eur_cn, group.p2_dm_avg_revenue_eur_cn
+      0.00  ('data.p2_income', 'OP')                 group.group_revenue_eur
+conditions (PLAN / DISCRETION, by cost):
+      0.00  ('hk.fsie.substance.dividend', 'out.div') payee.adequate_substance
+      0.00  ('hk.fsie.participation.dividend', 'out.div') payee.no_main_purpose_of_tax_benefit
+      0.00  ('sg.fsie.exempt', 'up2')                payee.exemption_beneficial
+      0.00  ('cn.gaar', 'out.div')                   payee.reasonable_commercial_purpose_absent
+
+roundtrip ok: no claim against the row's own floor labels
+ex_post on the present structure (10% withheld on up1, 10% on the exit gain): claims []
+views by role on the present structure (lo): {'HOLD': 302.5, 'OP': 0.0, 'ULT': 0.0}
+roundtrip ok on E (split flow compared as a whole)
+
+== scenario A-paid: 2 candidates keep up1 as taxed (only the exit route is still open)
+claim up1/CN: paid 100.00, rules say [100.00, 100.00], recoverable confirmed 0.00 potential 0.00, routes []
+claim with an old holding, 40% passed on: rules [50.00, 100.00], potential 50.00, confirmed 0.00, clocks ['refund'], routes ['refund', 'map']
+closed ok: after the clocks, up1/CN stays at 100 under both bounds, archived [('up1', 'CN')]
+metamorphic scaling ok
+94 candidates, 0 defects

@@ -1,0 +1,137 @@
+Multinational Enterprise (Minimum Tax) Regulations 2024
+Table of Contents
+Enacting Formula
+Part 1 PRELIMINARY
+1 Citation and commencement
+2 General definitions
+3 Application of Parts in determining top-up amounts of entities for Part 3 of Act
+Part 2 ADJUSTMENTS TO CONSOLIDATED GROUP REVENUE
+4 Adjustments to consolidated group revenue
+4A Computation of consolidated group revenue of MNE group formed by merger of 2 or more groups
+4B Computation of consolidated group revenue of MNE group formed by merger involving entities not belonging to any group, etc.
+4C Application of section 8(1) after demerger of MNE group
+Part 3 USE OF CURRENCY
+5 Conversion of amount into presentation currency
+6 Conversion of amount in functional currency for DTT purposes
+7 Conversion of amount into Singapore dollars
+8 Conversion of amount not in presentation currency into presentation currency for comparison with euros amount
+9 Conversion of amount in presentation currency into euros for comparison with euros amount
+Part 4 ADJUSTMENTS TO FANIL AND GLOBE INCOME OR LOSS
+Division 1  Preliminary provisions
+10 Purpose and application of this Part
+11 FANIL adjusted to be before tax
+12 FANIL must not reflect share acquisition adjustment
+13 Exclusion of excluded dividends
+14 Adjustments for excluded equity gain or loss
+15 Included revaluation method gain or loss
+16 Adjustments for asymmetric foreign exchange gains or losses
+17 Exclusion of expenses for illegal payments, fines and penalties
+18 Adjustment for changes in accounting policies and prior period errors
+19 Accrued pension expense
+20 Treatment of tax credits
+21 Arm’s length requirement for certain transactions
+22 Adjustments for insurers
+23 Exclusion of intra-group financing arrangement expenses
+24 Additional tier one capital
+25 Exclusion of international shipping income and ancillary international shipping income
+Division 2  Adjustments in relation to permanent establishments and flow-through entities
+26 Adjustment for main entity
+27 Allocation of loss to main entity
+28 Adjustment for constituent entity owners of flow-through entity
+Division 3  Optional adjustments
+29 Election for company in distress
+30 Election to use realisation principle
+31 Election to reflect deductions for stock-based compensation
+32 Election to recognise gains over 5 years
+33 Election to exclude intra-group transactions
+34 Election for excluded equity gains and losses to be included
+35 Election for foreign exchange risk hedges
+36 Election where assets and liabilities adjusted to fair value for tax purposes
+Part 5 ADJUSTMENTS TO QUALIFYING CURRENT TAX EXPENSES, QUALIFYING DEFERRED TAX EXPENSES AND ADJUSTED COVERED TAXES
+Division 1  Preliminary provisions
+37 Purpose and application of this Part
+38 Amounts excluded from qualifying current tax expense
+39 Amounts taken into account in qualifying current tax expense
+40 Post-filing adjustments and tax rate changes
+41 Non-marketable transferable tax credits
+42 Qualified flow-through tax benefits
+Division 2  Allocation of covered taxes
+43 Permanent establishments
+44 Reallocation of tax expenses
+44A Blended CFC allocation key
+44B Cross-border allocation of current tax expenses under cross-crediting regimes
+44C Cross-border allocation of deferred tax expenses
+44D Cross-border allocation elections
+Division 3  Deferred taxes and other adjustments
+44E Divergence between GloBE and accounting values
+45 Adjustments to qualifying deferred tax expense
+46 Recaptured deferred tax liabilities
+46A Unclaimed accrual elections
+47 GloBE loss election
+48 Deemed distribution tax election
+Division 4  Modifications for DTT purposes
+49 Modifications in relation to Part 3 of Act
+Part 6 ADJUSTMENTS TO SUBSTANCE-BASED INCOME EXCLUSION
+50 Definitions for this Part
+51 Application of this Part
+52 Exclusion from eligible payroll costs
+53 Adjustment to substance-based income exclusion due to assets being used to derive only international shipping income, etc.
+54 Adjustment to substance-based income exclusion due to eligible employees performing activities in and outside constituent entity’s jurisdiction
+55 Adjustment to substance-based income exclusion due to eligible tangible assets being located in and outside constituent entity’s jurisdiction
+56 Inclusion of certain properties as eligible tangible assets
+57 Eligible payroll costs and eligible tangible assets of permanent establishment
+Part 7 MNE GROUP REORGANISATIONS AND TRANSFER OR ACQUISITION OF ASSETS AND LIABILITIES
+58 Purpose and application of this Part
+59 Constituent entity joining or leaving MNE group
+60 When transfer of controlling interest treated as acquisition and disposal of assets and liabilities
+61 Transfer of assets or liabilities
+Part 7A MULTI-PARENT GROUP
+61A Specified types of arrangement for "multi-parent group"
+61B Application of Act to multi-parent groups
+61C Application of regulations 61A and 61B to multi-parent groups for purpose of Part 3 of Act, etc.
+Part 8 INVESTMENT ENTITIES AND INSURANCE INVESTMENT ENTITIES
+62 Application of this Part
+63 Investment entity and insurance investment entity tax transparency election
+64 Taxable distribution method election
+Part 9 GLOBE SAFE HARBOUR
+Division 1  Preliminary provisions
+65 Application of this Part
+Division 2  Transitional CbCR safe harbour
+66 Definitions for this Division
+67 "Qualifying country-by-country report"
+68 "Qualified financial statements"
+69 Constituent entities eligible for Transitional CbCR Safe Harbour
+70 Conditions for application of Transitional CbCR Safe Harbour
+71 De minimis test
+72 Simplified effective tax rate test
+73 Routine profits test
+74 Basis for determining whether de minimis test, etc., met
+75 Adjustments
+76 Further adjustments for certain arrangements
+77 Application of this Division to joint ventures and JV subsidiaries
+Division 3  QDMTT Safe Harbour
+78 Constituent entities eligible for QDMTT Safe Harbour
+79 Elections for QDMTT Safe Harbour
+80 Disqualifying conditions for constituent entities other than special entities
+81 Disqualifying conditions for joint ventures and JV subsidiaries
+82 Disqualifying conditions for investment entities or insurance investment entities
+83 Disqualifying conditions for minority-owned constituent entities
+Division 4  Simplified calculations safe harbour
+84 "Non-material constituent entity" or "NMCE"
+85 Conditions for application of Simplified Calculations Safe Harbour
+85A Top-up amount of constituent entities of sub-group under Simplified Calculations Safe Harbour
+86 Simplified calculations for NMCE
+Part 10 TRANSITION RULES
+87 Application of this Part
+88 "Transition year"
+89 Deferred tax assets and liabilities must be taken into account in constituent entity’s adjusted covered taxes
+90 Where deferred tax asset relates to a tax credit
+91 Deferred tax asset or liability not to be taken into account in certain circumstances
+92 Value of deferred tax asset or liability, and computation of GloBE income or loss, in case of transfer of assets between constituent entities before transition year
+93 Adjustments for DTT computation where there is new transition year
+Part 11 MISCELLANEOUS PROVISIONS
+94 Formula for determining top-up amounts of entities
+95 Adjustments in computing "adjusted revenue" for de minimis exclusion
+96 Qualified domestic minimum top-up taxes
+97 Qualified IIR
+98 Other documents forming GloBE rules

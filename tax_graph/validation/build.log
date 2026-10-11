@@ -1,0 +1,6 @@
+﻿docs=396 clauses=8438 params=390 blocked=6 problems=0 param_issues=0
+  dense: 34299 units, 0 newly embedded
+graph: units=34299 edges=14243 cross-references=8980 resolved=8453 problems=0
+
+UserWarning: Cannot parse header or footer so it will be ignored
+

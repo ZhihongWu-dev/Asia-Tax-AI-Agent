@@ -1,0 +1,24 @@
+oracle_kind = text_derived
+ok   HK dividend, 30% for 24 months, listed parent (safe harbour)  [treaty.cn-hk.2006.zh#10.2; cn.sta.2018-09#i4]
+ok   HK dividend, 20% holding: the 10% cap equals the domestic rate, nothing pending  [treaty.cn-hk.2006.zh#10.2 其它情况 10%]
+ok   HK dividend, 30% for 6 months only  [cn.gsh.2009-81#i3 连续12个月]
+ok   HK dividend, no safe harbour, on-pays 30%: beneficial owner is a judgement  [cn.sta.2018-09#i2]
+ok   HK dividend, on-pays 60%: the 50% factor fails, no 5%  [cn.sta.2018-09#i2 50%以上]
+ok   HK dividend without a residence certificate  [cn.reg.eit#91 减按10%]
+ok   HK dividend reinvested in the Mainland (capital increase, paid directly)  [cn.cs.2018-102#i2; cn.law.eit#47]
+ok   SG interest to a bank  [treaty.cn-sg.2007.zh#11.2 百分之七; the interest VAT's questions (口径 D23, D25)]
+ok   SG interest to a company: the 10% cap equals the domestic rate; only the payer's benchmark test is pending  [treaty.cn-sg.2007.zh#11.2 百分之十; 实施条例 第三十八条]
+ok   SG interest to the Monetary Authority (listed body, conditions met)  [treaty.cn-sg.2007.p2.zh#2.1]
+ok   SG equipment rent  [treaty.cn-sg.2007.zh#12.2 + 议定书第三条 60%; EIT art 8; 13% VAT on the rent withheld, credited to a general VAT taxpayer holding the documents (增值税法 第十条, 公告2026年第13号); base net of the VAT (公告2013年第9号)]
+ok   HK aircraft lease  [treaty.cn-hk.2006.p4.zh#2 5%; EIT art 8; base net of the 13% VAT (公告2013年第9号)]
+ok   deferred under lo
+ok   not deferred under hi (GAAR)
+ok   remit by payment + 7 days
+ok   interest: obligation on the earlier payable date + 7
+ok   surcharge 0.05%/day x 10 days on 1000
+ok   refund clock 3 years from payment
+ok   MAP clock 3 years from first notification
+ok   administrative review: 60 days from the assessment notice
+ok   administrative review: no clock before the tax is paid or secured
+ok   no treaty rule relied upon without a residence certificate
+22 checks, 0 with differences

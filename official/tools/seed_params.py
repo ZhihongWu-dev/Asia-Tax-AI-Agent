@@ -485,8 +485,6 @@ p("cn.ftc.limit_per_country", "CN", "ALL", "condition", "credit_limit_per_countr
 p("cn.ftc.income_recognition_dividend", "CN", "DIVIDEND", "procedure", "foreign_dividend_recognised_on_resolution", 1, "bool", "cn.cs.2009-125#i3", "2010-01-01",
   "来源于境外的股息、红利等权益性投资收益，应按被投资方作出利润分配决定的日期确认收入实现", "境外股息按分配决议日确认")
 # ---- services and permanent establishment
-p("cn-sg.pe.service_months", SG, "SERVICE_FEE", "condition", "service_pe_months_in_12", 6, "months", "treaty.cn-sg.2007.p2.zh#1", "2008-01-01",
-  "取消第三款第（二）项中“六个月”的规定", "协定第5(3)(二)款原门槛，以替换它的第二议定书为证；库内整合文本的该项已按 superseded.csv 剔除", to="2009-12-31")
 p("cn.service.deemed_profit_design_min", "CN", "SERVICE_FEE", "rate", "deemed_profit_rate_engineering_design_consulting_min", 15, "%", "cn.gsf.2010-19#5", "2010-02-20",
   "从事承包工程作业、设计和咨询劳务的，利润率为15%-30%", "核定利润率区间下端")
 p("cn.service.deemed_profit_design_max", "CN", "SERVICE_FEE", "rate", "deemed_profit_rate_engineering_design_consulting_max", 30, "%", "cn.gsf.2010-19#5", "2010-02-20",
@@ -583,23 +581,149 @@ p("cn.cfc.exempt_profit_max", "CN", "ALL", "condition", "cfc_exempt_if_annual_pr
   "年度利润总额低于500万元人民币", "")
 p("cn.cfc.credit", "CN", "ALL", "condition", "cfc_inclusion_foreign_tax_creditable", 1, "bool", "cn.gsf.2009-02#82", "2008-01-01",
   "计入中国居民企业股东当期所得已在境外缴纳的企业所得税税款，可按照所得税法或税收协定的有关规定抵免", "")
-# ---- 范围.md 7: Mainland VAT on cross-border services and IP
-p("cn.vat.withholding_agent", "CN", "ALL", "condition", "purchaser_withholds_vat_for_nonresident", 1, "bool", "cn.cs.2016-36.a01#6", "2016-05-01",
-  "在境内发生应税行为，在境内未设有经营机构的，以购买方为增值税扣缴义务人", "第六条")
-p("cn.vat.offshore_service_excluded", "CN", "ALL", "condition", "services_wholly_abroad_not_domestic", 1, "bool", "cn.cs.2016-36.a01#13", "2016-05-01",
-  "境外单位或者个人向境内单位或者个人销售完全在境外发生的服务", "第十三条(一)；(二) 完全在境外使用的无形资产")
-p("cn.vat.rate_services", "CN", "ALL", "rate", "vat_rate_services_and_ip", 6, "%", "cn.cs.2016-36.a01#15", "2016-05-01",
-  "税率为6％", "服务、无形资产")
-p("cn.vat.withholding_formula", "CN", "ALL", "condition", "withheld_vat_price_divided_by_one_plus_rate", 1, "bool", "cn.cs.2016-36.a01#20", "2016-05-01",
-  "应扣缴税额=购买方支付的价款÷（1+税率）×税率", "价款含税")
-p("cn.vat.rate_tangible_lease_2016", "CN", "ROYALTY", "rate", "vat_rate_tangible_movable_lease", 17, "%", "cn.cs.2016-36.a01#15", "2016-05-01",
-  "提供有形动产租赁服务，税率为17%", "历史税率；2018-05-01 起 16%，2019-04-01 起 13%", to="2018-04-30")
-p("cn.vat.rate_tangible_lease_2018", "CN", "ROYALTY", "rate", "vat_rate_tangible_movable_lease", 16, "%", "cn.cs.2018-32#i1", "2018-05-01",
-  "原适用17%和11%税率的，税率分别调整为16%、10%", "历史税率", to="2019-03-31")
-p("cn.vat.rate_tangible_lease", "CN", "ROYALTY", "rate", "vat_rate_tangible_movable_lease", 13, "%", "cn.cs.2019-39#i1", "2019-04-01",
-  "原适用16%税率的，税率调整为13%", "有形动产租赁（设备、飞机、船舶租金）现行税率")
-p("cn.vat.input_credit", "CN", "ALL", "condition", "withheld_vat_creditable_as_input", 1, "bool", "cn.cs.2016-36.a01#25", "2016-05-01",
-  "从境外单位或者个人购进服务、无形资产或者不动产，自税务机关或者扣缴义务人取得的解缴税款的完税凭证上注明的增值税额", "一般纳税人")
+# ---- 口径 D23: the VAT Law and its Regulations from 2026-01-01 (cross-border services, IP, leases)
+V = "cn.law.vat"
+p("cn.vat.law.taxable_in_cn", "CN", "ALL", "condition", "services_and_ip_taxable_where_consumed_or_seller_domestic", 1, "bool", V + "#4", "2026-01-01",
+  "除本条第二项、第三项规定外，销售服务、无形资产的，服务、无形资产在境内消费，或者销售方为境内单位和个人", "第四条第（四）项")
+p("cn.vat.law.consumed_in_cn", "CN", "ALL", "condition", "foreign_seller_to_domestic_buyer_consumed_in_cn", 1, "bool", "cn.reg.vat#4", "2026-01-01",
+  "境外单位或者个人向境内单位或者个人销售服务、无形资产，在境外现场消费的服务除外", "实施条例第四条第（一）项；无形资产无境外使用的例外")
+p("cn.vat.law.rate_services", "CN", "ALL", "rate", "vat_rate_services_and_ip", 6, "%", V + "#10", "2026-01-01",
+  "纳税人销售服务、无形资产，除本条第一项、第二项、第五项规定外，税率为百分之六", "第十条第（三）项")
+p("cn.vat.law.rate_tangible_lease", "CN", "ROYALTY", "rate", "vat_rate_tangible_movable_lease", 13, "%", V + "#10", "2026-01-01",
+  "纳税人销售货物、加工修理修配服务、有形动产租赁服务，进口货物，除本条第二项、第四项、第五项规定外，税率为百分之十三", "第十条第（一）项")
+p("cn.vat.law.withholding_agent", "CN", "ALL", "condition", "purchaser_withholds_vat_for_foreign_seller", 1, "bool", V + "#15", "2026-01-01",
+  "境外单位和个人在境内发生应税交易，以购买方为扣缴义务人", "第十五条第一款")
+p("cn.vat.law.withheld_on_sales", "CN", "ALL", "condition", "withheld_vat_is_sales_amount_times_rate", 1, "bool", V + "#15", "2026-01-01",
+  "按照销售额乘以税率计算应扣缴税额", "第十五条第二款；销售额不含增值税（第十七条）")
+p("cn.vat.law.inclusive_price", "CN", "ALL", "condition", "vat_inclusive_price_divided_by_one_plus_rate", 1, "bool", "cn.reg.vat#16", "2026-01-01",
+  "一般计税方法的销售额＝含税销售额÷（1＋税率）", "实施条例第十六条：仅对合并定价（价款含税）适用；价款是否含税为合同事实")
+p("cn.vat.law.input_credit", "CN", "ALL", "condition", "withheld_vat_creditable_as_input", 1, "bool", "cn.reg.vat#12", "2026-01-01",
+  "自境外单位或者个人购进服务、无形资产或者境内不动产取得的完税凭证上列明的增值税税额", "实施条例第十二条第（三）项；一般纳税人")
+p("cn.vat.law.input_credit_invoice", "CN", "ALL", "condition", "domestic_purchase_vat_creditable_on_special_invoice", 1, "bool", "cn.reg.vat#12", "2026-01-01",
+  "从销售方取得的增值税专用发票上列明的增值税税额", "实施条例第十二条第（一）项")
+p("cn.vat.law.input_documents", "CN", "ALL", "condition", "credit_on_tax_receipt_needs_contract_payment_proof_statement", 1, "bool", "cn.cs.2026-input#i1", "2026-01-01",
+  "一般纳税人凭完税凭证抵扣进项税额的，应当具备书面合同、付款证明和境外单位的对账单或者发票", "第一条第（五）项；未提供不得抵扣")
+p("cn.vat.tech_transfer_exempt", "CN", "IP_TRANSFER", "condition", "technology_transfer_vat_exempt", 1, "bool", "cn.cs.2026-10#i2", "2026-01-01",
+  "纳税人提供技术转让、技术开发和与之相关的技术咨询、技术服务", "第二条第（一）项第2目；无截止日")
+p("cn.vat.tech_recognition", "CN", "IP_TRANSFER", "procedure", "technology_contract_recognised_by_provincial_authority", 1, "bool", "cn.cs.2026-10#i2", "2026-01-01",
+  "到纳税人所在地省级科技、工信主管部门进行认定", "持书面合同认定，审核意见报主管税务机关备查；境外卖方无“所在地”，可否认定为税务机关判断")
+p("cn.vat.tech_kinds", "CN", "IP_TRANSFER", "condition", "technology_for_vat", "PATENT;KNOW_HOW", "enum", "cn.cs.2026-09.a02#p19", "2026-01-01",
+  "技术，包括专利技术和非专利技术", "附件2《销售服务、无形资产、不动产注释》；软件著作权、商标等不是“技术”")
+# ---- 口径 D25: VAT on interest (a loan service), both regimes
+p("cn.vat.law.loan_services", "CN", "INTEREST", "condition", "loan_service_is_a_service", 1, "bool", "cn.reg.vat#2", "2026-01-01",
+  "增值税法第三条所称服务，包括交通运输服务、邮政服务、电信服务、建筑服务、金融服务", "金融服务含贷款服务（公告2026年第9号附件2注释）")
+p("cn.vat.law.loan_input_not_creditable", "CN", "INTEREST", "condition", "loan_service_input_vat_not_creditable", 1, "bool", "cn.reg.vat#21", "2026-01-01",
+  "纳税人购进贷款服务的利息支出，及其向贷款方支付的与该贷款服务直接相关的投融资顾问费、手续费、咨询费等费用支出，对应的进项税额暂不得从销项税额中抵扣",
+  "利息的增值税是借款方的成本")
+p("cn.vat.law.unified_borrowing_exempt", "CN", "INTEREST", "condition", "unified_borrowing_relending_interest_exempt", 1, "bool", "cn.cs.2026-10#i2", "2026-01-01",
+  "统借统还业务利息收入，是指统借统还业务中，企业集团或企业集团中的核心企业以及集团所属财务公司按不高于支付给金融机构的借款利率水平或者支付的债券票面利率水平，向企业集团或者集团内下属单位收取的利息",
+  "字段 unified_borrowing_relending；集团外出借人推为否")
+# ---- 口径 D26: a non-resident's income net of the VAT
+p("cn.wht.base_excludes_vat", "CN", "ALL", "condition", "nonresident_income_net_of_vat", 1, "bool", "cn.sta.2013-09#all", "2013-02-19",
+  "应以不含增值税的收入全额作为应纳税所得额", "企业所得税法第三条第三款所得；法规库标注全文有效（2026-10-09）")
+# ---- 口径 D29: a Mainland company's revenue net of the VAT on its own sale
+p("cn.eit.revenue_excludes_output_vat", "CN", "ALL", "condition", "resident_revenue_net_of_output_vat", 1, "bool", "cn.mof.2016-22#i2", "2016-12-03",
+  "按取得的收入金额，贷记“主营业务收入”、“其他业务收入”、“固定资产清理”、“工程结算”等科目，按现行增值税制度规定计算的销项税额（或采用简易计税方法计算的应纳增值税额），贷记“应交税费——应交增值税（销项税额)”",
+  "增值税会计处理规定 二（二）1；年度申报 A101010 按国家统一会计制度填报收入；收入准则第十四条：代第三方收取的款项不计入交易价格")
+# ---- 口径 D22: the IP transfer step — Mainland income tax
+p("cn.ip.transfer_income", "CN", "IP_TRANSFER", "condition", "ip_disposal_is_property_transfer_income", 1, "bool", "cn.reg.eit#16", "2008-01-01",
+  "转让固定资产、生物资产、无形资产、股权、债权等财产取得的收入", "所有权转让为转让财产收入，非特许权使用费（第二十条为使用权）")
+p("cn.ip.net_value", "CN", "IP_TRANSFER", "condition", "net_value_is_basis_less_amortisation", 1, "bool", "cn.reg.eit#74", "2008-01-01",
+  "是指有关资产、财产的计税基础减除已经按照规定扣除的折旧、折耗、摊销、准备金等后的余额", "字段 cost_basis 为该净值")
+p("cn.ip.nonresident_gain_base", "CN", "IP_TRANSFER", "condition", "nonresident_gain_is_proceeds_less_net_value", 1, "bool", "cn.law.eit#19", "2008-01-01",
+  "转让财产所得，以收入全额减除财产净值后的余额为应纳税所得额", "第十九条第（二）项")
+p("cn.ip.source_other_income", "CN", "IP_TRANSFER", "condition", "source_of_other_income_set_by_mof_sat", 1, "bool", "cn.reg.eit#7", "2008-01-01",
+  "其他所得，由国务院财政、税务主管部门确定", "第七条第（三）项只列不动产、动产、权益性投资资产；无形资产转让所得的来源地未见主管部门确定，按税务机关判断")
+p("cn.tech.exempt_max", "CN", "IP_TRANSFER", "limit", "technology_transfer_income_exempt_up_to", 5000000, "CNY", "cn.reg.eit#90", "2008-01-01",
+  "居民企业技术转让所得不超过500万元的部分，免征企业所得税", "一个纳税年度内；案例金额以 cny_rate 折算")
+p("cn.tech.excess_rate", "CN", "IP_TRANSFER", "rate", "technology_transfer_income_excess_taxed_share", 50, "%", "cn.reg.eit#90", "2008-01-01",
+  "超过500万元的部分，减半征收企业所得税")
+p("cn.tech.kinds", "CN", "IP_TRANSFER", "condition", "technology_kinds_for_reduction", "PATENT;SOFTWARE_COPYRIGHT;IC_LAYOUT;PLANT_VARIETY;BIOMEDICINE_VARIETY", "enum",
+  "cn.cs.2010-111#i1", "2008-01-01", "包括居民企业转让专利技术、计算机软件著作权、集成电路布图设计权、植物新品种、生物医药新品种",
+  "非专利技术（专有技术）不在列")
+p("cn.tech.ownership_or_licence", "CN", "IP_TRANSFER", "condition", "transfer_of_ownership_or_5y_global_exclusive_licence", 1, "bool", "cn.cs.2010-111#i2", "2008-01-01",
+  "转让其拥有符合本通知第一条规定技术的所有权或5年以上（含5年）全球独占许可使用权的行为", "本模板为所有权转让")
+p("cn.tech.registration", "CN", "IP_TRANSFER", "procedure", "technology_contract_registered", 1, "bool", "cn.cs.2010-111#i3", "2008-01-01",
+  "境内的技术转让须经省级以上（含省级）科技部门认定登记，跨境的技术转让须经省级以上（含省级）商务部门认定登记", "方案动作")
+p("cn.tech.export_restricted_excluded", "CN", "IP_TRANSFER", "condition", "restricted_or_prohibited_export_technology_excluded", 1, "bool", "cn.cs.2010-111#i3", "2008-01-01",
+  "居民企业取得禁止出口和限制出口技术转让所得，不享受技术转让减免企业所得税优惠政策", "仅技术出口；境内买方时引擎推为否")
+p("cn.tech.related_100_excluded", "CN", "IP_TRANSFER", "condition", "transfer_from_100pct_related_party_excluded", 1, "bool", "cn.cs.2010-111#i4", "2008-01-01",
+  "居民企业从直接或间接持有股权之和达到100%的关联方取得的技术转让所得，不享受技术转让减免企业所得税优惠政策",
+  "一方直接或间接全资持有另一方：引擎推出；同一股东全资持有的兄弟公司未明文规定，按税务机关判断")
+p("cn.ip.amortization_years_min", "CN", "IP_TRANSFER", "limit", "intangible_amortisation_years_min", 10, "years", "cn.reg.eit#67", "2008-01-01",
+  "无形资产的摊销年限不得低于10年")
+p("cn.ip.amortization_agreed_life", "CN", "IP_TRANSFER", "condition", "acquired_intangible_amortised_over_legal_or_agreed_life", 1, "bool", "cn.reg.eit#67", "2008-01-01",
+  "作为投资或者受让的无形资产，有关法律规定或者合同约定了使用年限的，可以按照规定或者约定的使用年限分期摊销", "字段 ip_useful_life_years")
+p("cn.stamp.ip_rate", "CN", "IP_TRANSFER", "rate", "stamp_duty_ip_transfer_instrument_rate", 0.03, "%", "cn.law.stamp.flk#20", "2022-07-01",
+  "商标专用权、著作权、专利权、专有技术使用权转让书据价款的万分之三", "产权转移书据；技术合同同为万分之三")
+p("cn.stamp.abroad_used_in_cn", "CN", "IP_TRANSFER", "condition", "instrument_written_abroad_used_in_cn_taxable", 1, "bool", "cn.law.stamp.flk#1", "2022-07-01",
+  "在中华人民共和国境外书立在境内使用的应税凭证的单位和个人，应当依照本法规定缴纳印花税", "双方均在境外时看书据是否在境内使用（如办理内地专利、商标转让登记）")
+# ---- 口径 D28: the IP step at book value between Mainland companies
+p("cn.reorg.transfer_mode", "CN", "IP_TRANSFER", "condition", "transfer_at_book_value_between_wholly_held_residents", "BOOK", "enum",
+  "cn.cs.2014-109#i3", "2014-01-01", "按账面净值划转股权或资产", "100%直接控制的母子公司之间，或受同一（或相同多家）居民企业100%直接控制的居民企业之间；模板只在此时提供该方式")
+p("cn.reorg.transfer_keep_months", "CN", "IP_TRANSFER", "limit", "no_change_of_business_months_after_transfer", 12, "months",
+  "cn.cs.2014-109#i3", "2014-01-01", "股权或资产划转后连续12个月内不改变被划转股权或资产原来实质性经营活动", "方案动作 reorg_operations_unchanged_12m")
+p("cn.reorg.transfer_filing", "CN", "IP_TRANSFER", "procedure", "special_treatment_return_filed", 1, "bool", "cn.sta.2015-40#i5", "2014-01-01",
+  "分别向各自主管税务机关报送《居民企业资产（股权）划转特殊性税务处理申报表》", "方案动作 reorg_filed；企业所得税年度汇算清缴时")
+p("cn.reorg.transfer_no_gain", "CN", "IP_TRANSFER", "condition", "neither_side_recognises_income", 1, "bool", "cn.cs.2014-109#i3", "2014-01-01",
+  "划出方企业和划入方企业均不确认所得")
+p("cn.reorg.transfer_basis", "CN", "IP_TRANSFER", "condition", "buyer_amortises_seller_tax_basis", 1, "bool", "cn.sta.2015-40#i3", "2014-01-01",
+  "应按被划转资产的原计税基础计算折旧扣除或摊销")
+p("cn.reorg.transfer_fails_deemed_sale", "CN", "IP_TRANSFER", "condition", "conditions_broken_deemed_sale_at_fair_value", 1, "bool", "cn.sta.2015-40#i8",
+  "2014-01-01", "划出方应按原划转完成时股权或资产的公允价值视同销售处理", "第八条第（一）项第四目；划入方按公允价值确认计税基础")
+p("cn.vat.law.deemed_sale_market_value", "CN", "IP_TRANSFER", "condition", "deemed_sale_valued_at_market_price", 1, "bool", "cn.law.vat#19", "2026-01-01",
+  "发生本法第五条规定的视同应税交易以及销售额为非货币形式的，纳税人应当按照市场价格确定销售额", "第五条第（三）项：无偿转让无形资产视同应税交易")
+p("cn.stamp.unstated_amount_market_price", "CN", "IP_TRANSFER", "condition", "unstated_amount_taxed_at_market_price", 1, "bool", "cn.law.stamp.flk#6",
+  "2022-07-01", "书立合同、产权转移书据时的市场价格确定", "第六条第二款：计税依据按实际结算金额仍不能确定的，按书立时的市场价格确定")
+p("cn.stamp.restructuring_exemption_scope", "CN", "IP_TRANSFER", "condition", "restructuring_exemption_not_for_ip_transfers", 1, "bool",
+  "cn.cs.2024-14#i3", "2024-10-01", "对企业改制、合并、分立、破产清算以及事业单位改制书立的产权转移书据，免征印花税",
+  "集团内划转的免征只列土地使用权、房屋等建筑物和构筑物，IP 划转照征", to="2027-12-31")
+# ---- 口径 D22: the treaties — gains from other property are taxed only where the seller resides
+p("cn-hk.gain.other_residence_only", HK, "IP_TRANSFER", "condition", "other_property_gains_residence_only", 1, "bool", "treaty.cn-hk.2006.p4.zh#3", "2015-12-29",
+  "转让第一款至第五款所述财产以外的其它财产取得的收益，应仅在转让者为其居民的一方征税", "第四议定书第三条（第十三条第七款）；生效与适用日期见 cn.sta.2016-12")
+p("cn-sg.gain.other_residence_only", SG, "IP_TRANSFER", "condition", "other_property_gains_residence_only", 1, "bool", AS + "#13.6", "2008-01-01",
+  "缔约国一方居民转让本条以上各款所述财产以外的其他财产取得的收益，应仅在转让者为其居民的缔约国征税", n28)
+# ---- 口径 D22: Hong Kong
+p("hk.ip.clawback", "HK", "IP_TRANSFER", "condition", "proceeds_up_to_deductions_allowed_are_trading_receipt", 1, "bool", "hk.cap112.en#s16E", "",
+  "do not exceed the amount of the deduction, to be treated as a trading receipt of the trade, profession or business, arising in or derived from Hong Kong",
+  "s16E(3) 专利权、专门知识")
+p("hk.ip.clawback_specified", "HK", "IP_TRANSFER", "condition", "excess_over_unallowed_up_to_deductions_is_trading_receipt", 1, "bool", "hk.cap112.en#s16EB", "",
+  "the excess is, to the extent that it is not chargeable to tax under any other section of this Part and does not exceed the amount of the deduction, to be treated as a trading receipt",
+  "s16EB(2) 版权、注册外观设计、注册商标")
+p("hk.ip.purchase_from_associate_no_deduction", "HK", "IP_TRANSFER", "condition", "no_deduction_for_ip_bought_from_associate", 1, "bool", "hk.cap112.en#s16EC", "",
+  "No deduction is allowable under section 16E or 16EA in respect of any relevant right purchased by a person wholly or partly from an associate",
+  "s16EC(2)；集团内转让的买方无扣除")
+p("hk.fsie.ip_disposal_gain", "HK", "IP_TRANSFER", "condition", "ip_disposal_gain_is_specified_foreign_sourced_income", 1, "bool", "hk.cap112.en#s15H", "2024-01-01",
+  "means any gain or profit derived from the sale of intellectual property", "32 of 2023；外地来源须在港收取")
+p("hk.fsie.ip_disposal_not_capital", "HK", "IP_TRANSFER", "condition", "fsie_receipt_not_capital", 1, "bool", "hk.cap112.en#s15I", "2024-01-01",
+  "is to be regarded as not arising from the sale of capital assets even if it so arises", "s15I(1)(b)")
+p("hk.fsie.qualifying_ip_kinds", "HK", "IP_TRANSFER", "condition", "qualifying_ip_for_nexus", "PATENT;SOFTWARE_COPYRIGHT", "enum", "hk.cap112.en#sch17FC", "2024-01-01",
+  "a copyright subsisting in software under the Copyright Ordinance (Cap. 528) or under the law of any place outside Hong Kong",
+  "附表 17FC 第 1(2) 条：专利（含申请）与软件版权；合资格知识产权处置收益按研发分数豁免")
+# ---- 口径 D22: Singapore
+p("sg.ip.balancing_charge", "SG", "IP_TRANSFER", "condition", "sale_within_wda_period_charge", 1, "bool", "sg.ita1947.full#s19B", "2016-01-01",
+  "a charge of an amount equal to the lower of", "s19B(4)：售价超过尚未给予的减值津贴的部分，以已给予的津贴为限")
+p("sg.ip.charge_after_period", "SG", "IP_TRANSFER", "condition", "sale_after_wda_period_charge", 1, "bool", "sg.ita1947.full#s19B", "2016-01-01",
+  "a charge in an amount equal to the price which the rights were sold, transferred or assigned or in an amount equal to the capital expenditure incurred in acquiring the rights, whichever is less",
+  "s19B(5)")
+p("sg.ip.wda_years", "SG", "IP_TRANSFER", "limit", "wda_period_shortest_election", 5, "years", "sg.ita1947.full#s19B", "2016-01-01",
+  "5 years, 10 years or 15 years (as elected by the company)",
+  "s19B(1AA)、(1AB)：不可撤销选择，最短 5 年；s19B(10)(aa)：2028 课税年度基期末日后取得的不给津贴；按历年财年（新设公司的财年由方案设计）",
+  to="2027-12-31")
+p("sg.ip.wda_regime", "SG", "IP_TRANSFER", "condition", "wda_for_rights_acquired_from_ya2017_basis_period", 1, "bool", "sg.ita1947.full#s19B", "2016-01-01",
+  "the acquisition date of those rights is on or after the first day of the basis period relating to the year of assessment 2017",
+  "s19B(1AA)(b)；截止见 s19B(10)(aa)", to="2027-12-31")
+p("sg.ip.wda_related_party_denial", "SG", "IP_TRANSFER", "condition", "no_wda_from_related_party_with_sg_creation_deductions", 1, "bool", "sg.ita1947.full#s19B", "2016-01-01",
+  "whose proceeds from the sale, transfer or assignment of those intellectual property rights to the company are not chargeable to tax",
+  "s19B(10A)(a)：卖方曾就创造该 IP 在新加坡获扣除且其出售所得不课税时不给津贴；境外卖方不适用")
+p("sg.ip.assignee_undertaking", "SG", "IP_TRANSFER", "procedure", "wda_needs_assignee_undertaking", 1, "bool", "sg.ita1947.full#s19B", "2016-01-01",
+  "there is an undertaking by the company that it is an assignee of the intellectual property rights", "s19B(2A)(a)")
+p("sg.ip.owner_situs", "SG", "IP_TRANSFER", "condition", "ip_situated_where_owner_resident", 1, "bool", "sg.ita1947.full#s10L", "2024-01-01",
+  "any intellectual property right, or any licence or other right in respect of any intellectual property right, is situated where the owner of the intellectual property right, licence or right is resident",
+  "s10L(15)(k)：新加坡居民卖方的 IP 位于新加坡，不是 s10L 的境外资产")
+p("sg.ip.purchase_not_use", "SG", "IP_TRANSFER", "condition", "deemed_source_covers_use_payments_only", 1, "bool", "sg.ita1947.full#s12", "",
+  "royalty or other payment in one lump sum or otherwise for the use of or the right to use any movable property",
+  "s12(7)(a)：只覆盖使用费；所有权转让价款不视为来源于新加坡，无预提")
 # ---- 范围.md 6: residence by place of effective management
 p("cn.residence.pem_criteria", "CN", "ALL", "basis", "foreign_incorporated_cn_controlled_company_resident_if_four_criteria", 1, "bool", "cn.gsf.2009-82#i2", "2008-01-01",
   "境外中资企业同时符合以下条件的，根据企业所得税法第二条第二款和实施条例第四条的规定，应判定其为实际管理机构在中国境内的居民企业", "四项标准为事实字段；认定由税务机关确认（裁量）；引擎按图变体取界")
@@ -645,6 +769,86 @@ p("sg.p2.sbie_payroll_transition", "SG", "ALL", "procedure", "sbie_payroll_rate_
   'In section 18(2), the applicable percentage is — ( a ) for a financial year beginning in 2023, 10.0%; ( b ) for a financial year beginning in 2024, 9.8%; ( c ) for a financial year beginning in 2025, 9.6%; ( d ) for a financial year beginning in 2026, 9.4%; ( e ) for a financial year beginning in 2027, 9.2%; ( f ) for a financial year beginning in 2028, 9.0%; ( g ) for a financial year beginning in 2029, 8.2%; ( h ) for a financial year beginning in 2030, 7.4%; ( i ) for a financial year beginning in 2031, 6.6%; ( j ) for a financial year beginning in 2032, 5.8%; and ( k ) for a financial year beginning after 2032, 5.0%', "附表二第 1 段：按财年起始年")
 p("sg.p2.sbie_tangible_transition", "SG", "ALL", "procedure", "sbie_tangible_rate_by_fiscal_year", '2023:8.0;2024:7.8;2025:7.6;2026:7.4;2027:7.2;2028:7.0;2029:6.6;2030:6.2;2031:5.8;2032:5.4', "text", "sg.memta2024.sch2#sch2", "2025-01-01",
   'In section 18(3), the applicable percentage is — ( a ) for a financial year beginning in 2023, 8.0%; ( b ) for a financial year beginning in 2024, 7.8%; ( c ) for a financial year beginning in 2025, 7.6%; ( d ) for a financial year beginning in 2026, 7.4%; ( e ) for a financial year beginning in 2027, 7.2%; ( f ) for a financial year beginning in 2028, 7.0%; ( g ) for a financial year beginning in 2029, 6.6%; ( h ) for a financial year beginning in 2030, 6.2%; ( i ) for a financial year beginning in 2031, 5.8%; ( j ) for a financial year beginning in 2032, 5.4%; and ( k ) for a financial year beginning after 2032, 5.0%', "附表二第 2 段：按财年起始年")
+p("p2.portfolio_shareholding_max", "HK", "ALL", "condition", "portfolio_shareholding_rights_below", 10, "%", "hk.ord.2025-21#p156", "2025-01-01",
+  "carry rights to less than 10% of the profits, capital, reserves, or voting rights of that entity at the vesting date of the distribution or the date of disposition",
+  "GloBE Art 10.1.1 portfolio shareholding：被排除股息与被排除股权损益的例外")
+p("p2.short_term_months", "HK", "ALL", "condition", "short_term_portfolio_shareholding_held_below_months", 12, "months", "hk.ord.2025-21#p161", "2025-01-01",
+  "for less than one year at the vesting date of the distribution", "GloBE Art 10.1.1 short-term portfolio shareholding：一年")
+p("sg.p2.portfolio_shareholding_max", "SG", "ALL", "condition", "portfolio_shareholding_rights_below", 10, "%", "sg.memta2024.s2#s2", "2025-01-01",
+  "carry rights to less than 10% of the profits, capital, reserves, or voting rights of that entity at the date of distribution or disposition",
+  "s2 portfolio shareholding")
+p("sg.p2.short_term_months", "SG", "ALL", "condition", "short_term_portfolio_shareholding_held_below_months", 12, "months", "sg.memta2024.s2#s2", "2025-01-01",
+  "for less than one year at the date of the distribution", "s2 excluded dividends (a)：一年")
+# ---- Pillar Two: de minimis exclusion and transitional CbCR safe harbour (口径 D17)
+p('sg.p2.dm_revenue_max', 'SG', "ALL", 'condition', 'de_minimis_average_revenue_below', 10000000, 'EUR', 'sg.memta2024.s19#s19', "2025-01-01",
+  'the average of the following sums is less than EUR 10 million', 's19(1)(a)：三年平均调整后收入')
+p('sg.p2.dm_income_max', 'SG', "ALL", 'condition', 'de_minimis_average_globe_income_below', 1000000, 'EUR', 'sg.memta2024.s19#s19', "2025-01-01",
+  'the average of the following sums is less than EUR 1 million', 's19(1)(b)：三年平均 GloBE 所得或亏损')
+p('sg.p2.tcsh_fy_start_from', 'SG', "ALL", 'condition', 'tcsh_fy_commences_from', '2025-01-01', 'date', 'sg.memta2024.regs.s70#s70', "2025-01-01",
+  'the financial year commences in the period between 1 January 2025 and 31 December 2026 (both dates inclusive), and ends on or before 30 June 2028', 'reg 70(1)(a)')
+p('sg.p2.tcsh_fy_start_to', 'SG', "ALL", 'condition', 'tcsh_fy_commences_by', '2026-12-31', 'date', 'sg.memta2024.regs.s70#s70', "2025-01-01",
+  'the financial year commences in the period between 1 January 2025 and 31 December 2026 (both dates inclusive), and ends on or before 30 June 2028', 'reg 70(1)(a)')
+p('sg.p2.tcsh_fy_end_by', 'SG', "ALL", 'condition', 'tcsh_fy_ends_by', '2028-06-30', 'date', 'sg.memta2024.regs.s70#s70', "2025-01-01",
+  'the financial year commences in the period between 1 January 2025 and 31 December 2026 (both dates inclusive), and ends on or before 30 June 2028', 'reg 70(1)(a)')
+p('sg.p2.tcsh_dm_revenue_max', 'SG', "ALL", 'condition', 'tcsh_de_minimis_cbcr_revenue_below', 10000000, 'EUR', 'sg.memta2024.regs.s71#s71', "2025-01-01",
+  'as reported on its qualifying country‑by‑country report is less than EUR 10 million', 'reg 71(1)(a)')
+p('sg.p2.tcsh_dm_pbt_max', 'SG', "ALL", 'condition', 'tcsh_de_minimis_cbcr_profit_below', 1000000, 'EUR', 'sg.memta2024.regs.s71#s71', "2025-01-01",
+  'a total profit of less than EUR 1 million, or a loss, before income tax', 'reg 71(1)(b)')
+p('sg.p2.tcsh_etr_2025', 'SG', "ALL", 'rate', 'tcsh_simplified_etr_min_fy_2025', 16, '%', 'sg.memta2024.regs.s72#s72', "2025-01-01",
+  'in the case of a financial year beginning in 2025 — at least 16%', 'reg 72(1)(a)')
+p('sg.p2.tcsh_etr_2026', 'SG', "ALL", 'rate', 'tcsh_simplified_etr_min_fy_2026', 17, '%', 'sg.memta2024.regs.s72#s72', "2025-01-01",
+  'in the case of a financial year beginning on or after 1 January 2026 — at least 17%', 'reg 72(1)(b)；过渡期只到 2026 年开始的财年')
+p('p2.dm_revenue_max', 'HK', "ALL", 'condition', 'de_minimis_average_revenue_below', 10000000, 'EUR', 'hk.ord.2025-21#p91', "2025-01-01",
+  'the average GloBE revenue of such jurisdiction is less than EUR 10 million', 'GloBE Art 5.5.1(a)')
+p('p2.dm_income_max', 'HK', "ALL", 'condition', 'de_minimis_average_globe_income_below', 1000000, 'EUR', 'hk.ord.2025-21#p92', "2025-01-01",
+  'the average GloBE income or loss of such jurisdiction is a loss or is less than EUR 1 million', 'GloBE Art 5.5.1(b)')
+p('p2.tcsh_fy_start_to', 'HK', "ALL", 'condition', 'tcsh_fy_begins_by', '2026-12-31', 'date', 'hk.ord.2025-21#p173', "2025-01-01",
+  'transition period (過渡期) means a period that covers all the fiscal years beginning on or before 31 December 2026 but does not include a fiscal year ending after 30 June 2028', 'Sch 61 Pt 3 s2(1)')
+p('p2.tcsh_fy_end_by', 'HK', "ALL", 'condition', 'tcsh_fy_ends_by', '2028-06-30', 'date', 'hk.ord.2025-21#p173', "2025-01-01",
+  'transition period (過渡期) means a period that covers all the fiscal years beginning on or before 31 December 2026 but does not include a fiscal year ending after 30 June 2028', 'Sch 61 Pt 3 s2(1)')
+p('p2.tcsh_dm_revenue_max', 'HK', "ALL", 'condition', 'tcsh_de_minimis_cbcr_revenue_below', 10000000, 'EUR', 'hk.ord.2025-21#p179', "2025-01-01",
+  'the MNE group’s total revenue for the jurisdiction for the fiscal year is less than EUR 10 million', 'Sch 61 Pt 3 s6(1)(a)')
+p('p2.tcsh_dm_pbt_max', 'HK', "ALL", 'condition', 'tcsh_de_minimis_cbcr_profit_below', 1000000, 'EUR', 'hk.ord.2025-21#p179', "2025-01-01",
+  'the MNE group’s profit before income tax for the jurisdiction for the fiscal year is less than EUR 1 million or the MNE group has a loss', 'Sch 61 Pt 3 s6(1)(b)')
+p('p2.tcsh_etr_2025', 'HK', "ALL", 'rate', 'tcsh_simplified_etr_min_fy_2025', 16, '%', 'hk.ord.2025-21#p180', "2025-01-01",
+  'if the fiscal year starts in the 2025 calendar year—16%', 'Sch 61 Pt 3 s7(1)(a)')
+p('p2.tcsh_etr_2026', 'HK', "ALL", 'rate', 'tcsh_simplified_etr_min_fy_2026', 17, '%', 'hk.ord.2025-21#p180', "2025-01-01",
+  'if the fiscal year starts in the 2026 calendar year—17%', 'Sch 61 Pt 3 s7(1)(b)')
+# ---- the restructuring step (口径 D18)
+p('cn.reorg.acquired_ratio_min', 'CN', 'SHARE_TRANSFER', 'condition', 'special_reorg_equity_acquired_ratio_min', 50, '%', 'cn.cs.2014-109#i1', '2014-01-01',
+  '收购企业购买的股权不低于被收购企业全部股权的50%', '109号第一条：59号第六条第（二）项的 75% 调整为 50%')
+p('cn.reorg.equity_payment_min', 'CN', 'SHARE_TRANSFER', 'condition', 'special_reorg_equity_payment_share_min', 85, '%', 'cn.cs.2009-59#i6', '2008-01-01',
+  '股权支付金额不低于其交易支付总额的85%', '59号第六条第（二）项；第五条第（四）项')
+p('cn.reorg.control_ratio', 'CN', 'SHARE_TRANSFER', 'condition', 'special_reorg_direct_control_ratio', 100, '%', 'cn.cs.2009-59#i7', '2008-01-01',
+  '非居民企业向其100%直接控股的另一非居民企业转让其拥有的居民企业股权', '59号第七条第（一）（三）项：100% 直接控股')
+p('cn.reorg.commitment_years', 'CN', 'SHARE_TRANSFER', 'condition', 'special_reorg_no_transfer_commitment_years', 3, 'years', 'cn.cs.2009-59#i7', '2008-01-01',
+  '在3年（含3年）内不转让其拥有受让方非居民企业的股权', '59号第七条第（一）项：书面承诺')
+p('cn.reorg.keep_months', 'CN', 'SHARE_TRANSFER', 'condition', 'special_reorg_unchanged_months', 12, 'months', 'cn.cs.2009-59#i5', '2008-01-01',
+  '在重组后连续12个月内，不得转让所取得的股权', '59号第五条第（三）（五）项')
+p('cn.reorg.resident_spread_years', 'CN', 'SHARE_TRANSFER', 'rate', 'special_reorg_resident_gain_spread_years', 10, 'years', 'cn.cs.2009-59#i8', '2008-01-01',
+  '可以在10个纳税年度内均匀计入各年度应纳税所得额', '59号第八条：第七条第（三）项的收益')
+p('cn.reorg.filing_days', 'CN', 'SHARE_TRANSFER', 'procedure', 'special_reorg_nonresident_filing_days', 30, 'days', 'cn.sta.2013-72#i2', '2013-12-12',
+  '应于股权转让合同或协议生效且完成工商变更登记手续30日内进行备案', '公告2013年第72号第二条')
+p('cn.reorg.dividend_treaty_denied', 'CN', 'DIVIDEND', 'condition', 'pre_reorg_profits_no_treaty_dividend_reduction', 1, 'bool', 'cn.sta.2013-72#i8', '2013-12-12',
+  '不享受受让方所在国家（地区）与中国签订的税收协定（含税收安排）的股息减税优惠待遇', '公告2013年第72号第八条')
+p('hk.stamp.associated_ratio', 'HK', 'SHARE_TRANSFER', 'condition', 's45_associated_body_ratio_min', 90, '%', 'hk.cap117.en#s45', '',
+  'one is beneficial owner of not less than 90 per cent of the issued share capital of the other', 'SDO s45(2)')
+p('sg.stamp.associated_capital_min', 'SG', 'SHARE_TRANSFER', 'condition', 's15_associated_voting_capital_min', 75, '%', 'sg.sda1929.relief2014.sch1#sch1', '2014-01-16',
+  '75% or more voting capital; and ( b ) more than 50% voting power', 'SDA s15(1)(b)；2014 年规则第 3(1)(b) 条与第一附表')
+p('hk.stamp.clawback_years', 'HK', 'SHARE_TRANSFER', 'limit', 's45_relief_clawback_years', 2, 'years', 'hk.cap117.en#s45', '',
+  'within 2 years after the date of execution of the instrument', 'SDO s45(5A)：受让方的股权变动使双方不再相联（第 (4)(c) 款），减免撤回')
+# ---- 口径 D20: the income inclusion rule — qualified status from the OECD central record (as at 1 December 2025)
+p('p2.qualified_iir_hk', 'HK', 'ALL', 'condition', 'hong_kong_iir_has_transitional_qualified_status', 1, 'bool', 'intl.oecd.globe.central-record.2025-12#p7', '2025-01-01',
+  'Hong Kong (China) Inland Revenue (Amendment) (Minimum Tax for Multinational Enterprise Groups) Ordinance 2025 1 January 2025',
+  'OECD 名录第一表（合格 IIR）；GloBE 第 2.1.3 条、MEMTA 第 13 条判断上层母公司是否适用合格 IIR')
+p('p2.qualified_iir_sg', 'SG', 'ALL', 'condition', 'singapore_iir_has_transitional_qualified_status', 1, 'bool', 'intl.oecd.globe.central-record.2025-12#p8', '2025-01-01',
+  'Singapore Multinational Enterprise (Minimum Tax) Act 2024 1 January 2025', 'OECD 名录第一表（合格 IIR）；内地未列入')
+p('hk.p2.iir_payable_from', 'HK', 'ALL', 'condition', 'iir_top_up_tax_payable_for_fiscal_years_from', 1, 'bool', 'hk.ord.2025-21#p22', '2025-01-01',
+  'The IIR top-up tax is payable in relation to a fiscal year beginning on or after 1 January 2025', 's26AE(6)；UTPR 待刊宪公告指定日期（s26AE(7)），未建模')
+p('sg.p2.mtt_chargeable_entity', 'SG', 'ALL', 'condition', 'mtt_charged_on_responsible_member_located_in_singapore', 1, 'bool', 'sg.memta2024.s12#s12', '2025-01-01',
+  'An entity (called in this Act a chargeable entity) is chargeable with MTT for a financial year if', 's12；责任成员见 s13，税额见 s14、s15')
+p('sg.stamp.clawback_years', 'SG', 'SHARE_TRANSFER', 'limit', 's15_relief_clawback_years', 2, 'years', 'sg.sda1929.relief2014#s7', '2014-01-16',
+  'within 2 years from the date of execution of the instrument', '2014 年规则第 7(1) 条：期内不再相联（(a)）或受让方处置该资产（(b)），减免撤回')
 # ---- domestic flows, by the statutes (范围.md 口径 2)
 p("cn.domestic.dividend_exempt", "CN", "DIVIDEND", "condition", "qualifying_dividends_between_resident_companies_exempt", 1, "bool", "cn.law.eit#26", "2008-01-01",
   "符合条件的居民企业之间的股息、红利等权益性投资收益", "第二十六条(二)；条件见实施条例第八十三条：直接投资")

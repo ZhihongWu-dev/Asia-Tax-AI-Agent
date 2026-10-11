@@ -1,0 +1,56 @@
+fields read by rules: 146   named in 信息收集.md: 195   derived by facts.py: 45
+
+read by a rule, not in the document (0):
+
+in the document, read by no rule (13):
+  _cn
+  _hk
+  _sg
+  amount
+  asset_transfer_reasonable_purpose
+  ip_gain_sourced_in_hk
+  ip_held_as_capital_asset
+  ip_transfer_gain_sourced_in_cn
+  ip_transfer_step
+  reorg_reasonable_commercial_purpose
+  reorg_wht_burden_unchanged
+  tech_recognition_open_to_foreign_seller
+  tech_transfer_between_sisters_allowed
+
+scenario A: 88 required (flow, field) pairs, 36 not stated or derived:
+  exit   flow.acquirer_chargeable_in_hk
+  exit   flow.assessment_notice_on
+  exit   flow.clawback_event_within_2y
+  exit   flow.cn_cost_basis
+  exit   flow.determination_on
+  exit   flow.first_notification_on
+  exit   flow.foreign_tax_rate
+  exit   flow.payable_on
+  exit   flow.remitted_on
+  exit   flow.reorg_acquired_ratio
+  exit   flow.reorg_buyer_resident_in_cn
+  exit   flow.reorg_commitment_3y
+  exit   flow.reorg_control_ratio
+  exit   flow.reorg_equity_payment_share
+  exit   flow.reorg_filed
+  exit   flow.reorg_operations_unchanged_12m
+  exit   flow.reorg_same_residence
+  exit   flow.reorg_shares_kept_12m
+  exit   flow.shares_cancelled
+  exit   flow.tax_paid_on
+  exit   flow.tax_paid_or_secured
+  up1    flow.assessment_notice_on
+  up1    flow.determination_on
+  up1    flow.direct_payment
+  up1    flow.dividend_from_pre_reorg_profits
+  up1    flow.first_notification_on
+  up1    flow.foreign_tax_rate
+  up1    flow.payable_on
+  up1    flow.reinvestment_form
+  up1    flow.reinvestment_from_distributed_profit
+  up1    flow.remitted_on
+  up1    flow.reorg_same_residence
+  up1    flow.tax_paid_on
+  up1    flow.tax_paid_or_secured
+  up2    flow.assessment_notice_on
+  up2    flow.foreign_tax_rate

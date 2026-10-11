@@ -1,0 +1,223 @@
+sg.wht.interest                  CHARGE    A_TEXT        SG           ..  reads=payee.payee_in_source_jur
+sg.wht.royalty                   CHARGE    A_TEXT        SG           ..  reads=payee.payee_in_source_jur
+sg.wht.equipment_rent            CHARGE    A_TEXT        SG           ..  reads=flow.is_equipment_lease,payee.payee_in_source_jur
+sg.wht.fixed_place               CHARGE    A_TEXT        SG           ..  reads=payee.fixed_place_in_sg,payee.payee_in_source_jur
+sg.wht.service_fee               CHARGE    A_TEXT        SG           ..  reads=flow.service_performed_in_source,payee.payee_in_source_jur
+cn-sg.pe.no_pe@sg                EXEMPT    A_TEXT        SG->CN       2010-01-01..  reads=flow.service_days_12m,payee.fixed_place_in_sg,payee.residence_cert
+sg.stamp.buyer                   STAMP     A_TEXT        SG           2014-02-22..  reads=flow.asset_disposed_within_2y,flow.associated_ratio,flow.clawback_event_within_2y,flow.shares_cancelled,flow.stamp_relief_claimed
+sg.gst.reverse_charge            VAT       A_TEXT        SG           2024-01-01..  reads=payee.payee_in_source_jur,payer.gst_input_fully_recoverable
+sg.p2.topup                      CHARGE    A_TEXT        SG->SG       2025-01-01..  reads=flow.p2_iir,payee.group_revenue_eur
+sg.p2.mtt                        CHARGE    A_TEXT        SG->SG       2025-01-01..  reads=flow.p2_iir,payee.group_revenue_eur
+sg.p2.base                       BASE      A_TEXT        SG->SG       ..  reads=flow.p2_additional,flow.p2_etr
+sg.domestic.charge               CHARGE    A_TEXT        SG->SG       ..  reads=payee.payee_in_source_jur
+sg.service.charge                CHARGE    A_TEXT        ALL->SG      ..  reads=flow.receipt_kind,flow.service_performed_in_residence,payee.payee_in_source_jur
+sg.service.base                  BASE      A_TEXT        ALL->SG      ..  reads=flow.profit_margin
+sg.nocharge.ip_purchase          NOCHARGE  A_TEXT        SG           ..  reads=payee.payee_in_source_jur
+sg.ip.wda                        DEDUCTION A_TEXT        SG           2016-01-01..2027-12-31  reads=flow.seller_had_sg_creation_deductions
+sg.ip.wda.horizon                DEDUCT_BASE A_TEXT        SG           ..  reads=flow.ip_horizon_years
+sg.ip.recapture                  CHARGE    A_TEXT        ALL->SG      ..  reads=flow.consideration,flow.cost_basis,flow.ip_allowances_claimed
+sg.ip.revenue                    CHARGE    D_DISCRETION  ALL->SG      ..  reads=flow.consideration,flow.cost_basis
+sg.nocharge.dividend             NOCHARGE  A_TEXT        SG           ..  reads=-
+sg.gain.charge                   CHARGE    A_TEXT        SG           ..  reads=payee.fixed_place_in_sg,payee.payee_in_source_jur
+sg.gain.base                     BASE      A_TEXT        SG           ..  reads=flow.consideration,flow.cost_basis
+sg.gain.capital                  EXEMPT    D_DISCRETION  SG           ..  reads=-
+sg.gain.s13w                     EXEMPT    A_TEXT        SG           2026-01-01..  reads=flow.holding_months,flow.ratio
+sg.deduct.interest               DEDUCTION D_DISCRETION  SG           ..  reads=payer.loan_purpose_income_producing
+sg.deduct.royalty                DEDUCTION D_DISCRETION  SG           ..  reads=-
+sg.deduct.service_fee            DEDUCTION D_DISCRETION  SG           ..  reads=-
+sg.tp.deduction_cap              DEDUCT_BASE A_TEXT        SG           ..  reads=flow.arms_length_max,payee.payee_in_source_jur
+sg.tp.documentation              DEADLINE  A_TEXT        SG           2019-01-01..  reads=payee.payee_is_related,payer.gross_revenue,payer.return_due_on
+sg.tp.surcharge                  PENALTY   A_TEXT        SG           2019-01-01..  reads=flow.tp_adjustment_amount,payee.payee_is_related
+cn-sg.int.cap_bank@sg            RATE_CAP  A_TEXT        SG->CN       2008-01-01..  reads=payee.payee_is_financial_institution
+cn-sg.int.cap_other@sg           RATE_CAP  A_TEXT        SG->CN       2008-01-01..  reads=-
+cn-sg.int.government_exempt@sg   EXEMPT    A_TEXT        SG->CN       2010-01-01..  reads=payee.government_exempt_condition_met,payee.payee_is_government
+cn-sg.roy.cap@sg                 RATE_CAP  A_TEXT        SG->CN       2008-01-01..  reads=-
+cn-sg.roy.equipment_base@sg      BASE      A_TEXT        SG->CN       2008-01-01..  reads=flow.is_equipment_lease
+cn-sg.ppt@sg                     DENY      D_DISCRETION  SG->CN       2023-01-01..  reads=-
+sg.wht.due                       DEADLINE  A_TEXT        SG           ..  reads=flow.date_of_payment
+sg.wht.due_practice              DEADLINE  B_PRACTICE    SG           ..  reads=flow.date_of_payment
+sg.wht.penalty                   PENALTY   A_TEXT        SG           ..  reads=flow.as_at
+sg.dtr.cor                       DEADLINE  A_TEXT        SG->CN       ..  reads=flow.claim_is_for_prior_year,flow.period_to
+sg.dtr.cor_prior_years           DEADLINE  A_TEXT        SG->CN       ..  reads=flow.as_at,flow.claim_is_for_prior_year
+sg.onshore.charge                CHARGE    D_DISCRETION  ALL->SG      ..  reads=payee.payee_in_source_jur
+sg.fsie.charge                   CHARGE    A_TEXT        ALL->SG      ..  reads=flow.receipt_kind,payee.payee_in_source_jur
+sg.fsie.exempt                   EXEMPT    D_DISCRETION  ALL->SG      ..  reads=flow.foreign_headline_rate,flow.foreign_taxed
+sg.s10l.gain                     EXEMPT    D_DISCRETION  ALL->SG      2024-01-01..  reads=payee.is_excluded_entity,payee.is_relevant_group_entity
+sg.fsie.gain.base                BASE      A_TEXT        ALL->SG      ..  reads=flow.consideration,flow.cost_basis
+sg.ftc.dta                       CREDIT    A_TEXT        CN->SG       ..  reads=flow.foreign_tax_rate
+sg.ftc.unilateral                CREDIT    A_TEXT        HK->SG       ..  reads=flow.foreign_tax_rate
+sg.objection                     DEADLINE  A_TEXT        ALL->SG      2014-01-01..  reads=flow.assessment_notice_on
+sg.objection.source              DEADLINE  A_TEXT        SG           2014-01-01..  reads=flow.assessment_notice_on
+sg.ftc.pooling                   CREDIT    A_TEXT        ALL->SG      ..  reads=flow.foreign_headline_rate,flow.foreign_taxed,payee.ftc_pooling_election
+cn.wht.statutory                 CHARGE    A_TEXT        CN           2008-01-01..  reads=payee.payee_in_source_jur
+cn.wht.reduced                   CHARGE    A_TEXT        CN           2008-01-01..  reads=payee.payee_in_source_jur
+cn.service.charge                CHARGE    A_TEXT        CN           2008-01-01..  reads=flow.service_performed_in_source,payee.payee_in_source_jur
+cn.wht.service_as_royalty        CHARGE    D_DISCRETION  CN           2008-01-01..  reads=payee.payee_in_source_jur
+cn.service.deemed_profit         BASE      A_TEXT        CN           ..  reads=flow.service_kind,flow.service_onshore_share
+cn.deduct.service                DEDUCTION D_DISCRETION  CN           2008-01-01..  reads=-
+cn-hk.pe.no_pe@cn                EXEMPT    A_TEXT        CN->HK       2008-06-11..  reads=flow.service_days_12m,payee.fixed_place_in_cn,payee.residence_cert
+cn-sg.pe.no_pe@cn                EXEMPT    A_TEXT        CN->SG       2010-01-01..  reads=flow.service_days_12m,payee.fixed_place_in_cn,payee.residence_cert
+cn.tp.local_file                 DEADLINE  A_TEXT        CN           2016-01-01..  reads=payee.payee_is_related,payer.related_party_volume
+cn.tp.adjustment_interest        PENALTY   A_TEXT        CN           2017-05-01..  reads=flow.pboc_benchmark_rate,flow.tp_adjustment_paid_on,flow.tp_adjustment_tax,payee.payee_is_related,payer.tp_documentation_provided
+cn.vat.law.service               VAT       A_TEXT        CN           2026-01-01..  reads=flow.price_includes_vat,flow.service_consumed_on_site_abroad,payee.payee_in_source_jur
+cn.vat.law.royalty               VAT       A_TEXT        CN           2026-01-01..  reads=flow.is_aircraft_or_ship_lease,flow.is_equipment_lease,flow.price_includes_vat,payee.payee_in_source_jur
+cn.vat.law.lease                 VAT       A_TEXT        CN           2026-01-01..  reads=flow.is_aircraft_or_ship_lease,flow.is_equipment_lease,flow.price_includes_vat,payee.payee_in_source_jur
+cn.vat.law.input_credit          VAT       A_TEXT        CN           2026-01-01..  reads=flow.input_vat_documents_kept,payee.payee_in_source_jur,payer.vat_general_taxpayer
+cn.vat.law.interest              VAT       A_TEXT        CN           2026-01-01..  reads=flow.price_includes_vat,flow.unified_borrowing_relending,payee.payee_in_source_jur
+cn.vat.law.interest_received     VAT       A_TEXT        ALL->CN      2026-01-01..  reads=flow.price_includes_vat,flow.unified_borrowing_relending
+cn.wht.vat_exclusive             BASE      A_TEXT        CN           2013-02-19..  reads=payee.payee_in_source_jur
+cn.resident.vat_exclusive        BASE      A_TEXT        ALL->CN      2016-12-03..  reads=-
+cn.vat.law.ip                    VAT       D_DISCRETION  CN           2026-01-01..  reads=flow.ip_kind,flow.price_includes_vat,flow.vat_tech_recognized,payee.payee_in_source_jur
+cn.vat.law.ip_sale               VAT       A_TEXT        ALL->CN      2026-01-01..  reads=flow.ip_kind,flow.price_includes_vat,flow.vat_tech_recognized
+cn.resident.ip.charge            CHARGE    A_TEXT        ALL->CN      2008-01-01..  reads=flow.consideration,flow.cost_basis
+cn.resident.ip.tech              BASE      D_DISCRETION  ALL->CN      2008-01-01..  reads=flow.cny_rate,flow.consideration,flow.cost_basis,flow.currency,flow.ip_kind,flow.ip_parties_100pct_held,flow.ip_parties_100pct_sisters,flow.tech_transfer_registered,flow.technology_export_restricted
+cn.ip.wht                        CHARGE    D_DISCRETION  CN           2008-01-01..  reads=flow.consideration,flow.cost_basis,payee.payee_in_source_jur
+cn-hk.gain.other@cn              EXEMPT    A_TEXT        CN->HK       2015-12-29..  reads=payee.fixed_place_in_cn,payee.residence_cert
+cn-sg.gain.other@cn              EXEMPT    A_TEXT        CN->SG       2008-01-01..  reads=payee.fixed_place_in_cn,payee.residence_cert
+cn.ip.amortization               DEDUCTION A_TEXT        CN           2008-01-01..  reads=-
+cn.ip.amortization.horizon       DEDUCT_BASE A_TEXT        CN           ..  reads=flow.ip_horizon_years,flow.ip_useful_life_years
+cn.stamp.ip.seller               STAMP     A_TEXT        ALL          2022-07-01..  reads=flow.cn_party,flow.instrument_used_in_cn
+cn.stamp.ip.buyer                STAMP     A_TEXT        ALL          2022-07-01..  reads=flow.cn_party,flow.instrument_used_in_cn
+cn.reorg.asset_transfer          EXEMPT    D_DISCRETION  ALL->CN      2014-01-01..  reads=flow.ip_transfer_mode,flow.reorg_filed,flow.reorg_operations_unchanged_12m
+cn.reorg.asset_transfer.basis    DEDUCT_BASE A_TEXT        CN           2014-01-01..  reads=flow.consideration,flow.cost_basis
+cn.cfc.charge                    CHARGE    D_DISCRETION  ALL->CN      2008-01-01..  reads=flow.cfc_profit_total,flow.cfc_share_control,flow.cfc_tax_burden_ratio,flow.cfc_whitelisted
+cn.stamp.seller                  STAMP     A_TEXT        CN           2022-07-01..  reads=flow.shares_cancelled
+cn.stamp.buyer                   STAMP     A_TEXT        CN           2022-07-01..  reads=flow.shares_cancelled
+cn.liquidation.split             SPLIT     A_TEXT        ALL          ..  reads=-
+cn.capital_reduction.split       SPLIT     A_TEXT        ALL          ..  reads=-
+cn.domestic.charge               CHARGE    A_TEXT        CN->CN       2008-01-01..  reads=payee.payee_in_source_jur
+cn.domestic.dividend_exempt      NOCHARGE  A_TEXT        CN->CN       ..  reads=payee.payee_in_source_jur
+cn.domestic.dividend_listed      CHARGE    A_TEXT        CN->CN       2008-01-01..  reads=flow.holding_months,flow.listed_market_trade,payee.payee_in_source_jur
+cn.resident.charge               CHARGE    A_TEXT        ALL->CN      2008-01-01..  reads=payee.payee_in_source_jur
+cn.resident.gain.charge          CHARGE    A_TEXT        ALL->CN      2008-01-01..  reads=-
+cn.resident.gain.base            BASE      A_TEXT        ALL->CN      ..  reads=flow.cn_cost_basis,flow.consideration,flow.cost_basis
+cn.ftc.direct                    CREDIT    A_TEXT        ALL->CN      ..  reads=-
+cn.ftc.carryforward              CREDIT    A_TEXT        ALL->CN      ..  reads=-
+cn.ftc.dividend                  CREDIT    A_TEXT        ALL->CN      2008-01-01..  reads=flow.direct_ratio,payee.payee_in_source_jur
+cn.ftc.dividend_indirect         CREDIT    A_TEXT        ALL->CN      2008-01-01..  reads=flow.direct_ratio,flow.underlying_tax_share,payee.payee_in_source_jur
+cn.reinvest.deferral             DEFER     A_TEXT        CN           2018-01-01..  reads=flow.direct_payment,flow.reinvested_in_cn,flow.reinvestment_form,flow.reinvestment_from_distributed_profit
+cn.reinvest.credit               CREDIT    A_TEXT        CN           2025-01-01..2028-12-31  reads=flow.direct_payment,flow.investee_encouraged_industry,flow.planned_holding_months,flow.reinvested_in_cn,flow.reinvestment_form
+cn.gaar                          DENY      D_DISCRETION  CN           2008-01-01..  reads=-
+cn-hk.div.cap_qualified@cn       RATE_CAP  D_DISCRETION  CN->HK       2018-04-01..  reads=flow.direct_ratio,flow.holding_months,payee.bo_safe_harbour,payee.bo_via_100pct_owner,payee.onpay_ratio_12m,payee.residence_cert
+cn-hk.div.cap_other@cn           RATE_CAP  D_DISCRETION  CN->HK       2018-04-01..  reads=payee.bo_safe_harbour,payee.bo_via_100pct_owner,payee.onpay_ratio_12m,payee.residence_cert
+cn-hk.int.cap@cn                 RATE_CAP  D_DISCRETION  CN->HK       2018-04-01..  reads=payee.onpay_ratio_12m,payee.residence_cert
+cn-hk.int.government_exempt@cn   EXEMPT    A_TEXT        CN->HK       2007-01-01..  reads=payee.payee_is_government
+cn-hk.roy.cap@cn                 RATE_CAP  D_DISCRETION  CN->HK       2018-04-01..  reads=payee.onpay_ratio_12m,payee.residence_cert
+cn-hk.roy.cap_aircraft_ship_lease@cn RATE_CAP  D_DISCRETION  CN->HK       2018-04-01..  reads=flow.is_aircraft_or_ship_lease,payee.onpay_ratio_12m,payee.residence_cert
+cn-hk.ppt@cn                     DENY      D_DISCRETION  CN->HK       2020-01-01..  reads=-
+cn-sg.div.cap_qualified@cn       RATE_CAP  D_DISCRETION  CN->SG       2018-04-01..  reads=flow.direct_ratio,flow.holding_months,payee.bo_safe_harbour,payee.bo_via_100pct_owner,payee.onpay_ratio_12m,payee.residence_cert
+cn-sg.div.cap_other@cn           RATE_CAP  D_DISCRETION  CN->SG       2018-04-01..  reads=payee.bo_safe_harbour,payee.bo_via_100pct_owner,payee.onpay_ratio_12m,payee.residence_cert
+cn-sg.int.cap_bank@cn            RATE_CAP  D_DISCRETION  CN->SG       2018-04-01..  reads=payee.onpay_ratio_12m,payee.payee_is_financial_institution,payee.residence_cert
+cn-sg.int.cap_other@cn           RATE_CAP  D_DISCRETION  CN->SG       2018-04-01..  reads=payee.onpay_ratio_12m,payee.residence_cert
+cn-sg.int.government_exempt@cn   EXEMPT    A_TEXT        CN->SG       2010-01-01..  reads=payee.government_exempt_condition_met,payee.payee_is_government
+cn-sg.roy.cap@cn                 RATE_CAP  D_DISCRETION  CN->SG       2018-04-01..  reads=payee.onpay_ratio_12m,payee.residence_cert
+cn-sg.roy.equipment_base@cn      BASE      D_DISCRETION  CN->SG       2018-04-01..  reads=flow.is_equipment_lease,payee.onpay_ratio_12m,payee.residence_cert
+cn-sg.ppt@cn                     DENY      D_DISCRETION  CN->SG       2023-01-01..  reads=-
+cn.gain.base                     BASE      A_TEXT        CN           ..  reads=flow.cn_cost_basis,flow.consideration,flow.cost_basis
+cn-hk.gain.residence_only@cn     EXEMPT    A_TEXT        CN->HK       2020-01-01..  reads=flow.immovable_ratio,flow.max_ratio_12m,payee.residence_cert
+cn-hk.gain.listed@cn             EXEMPT    A_TEXT        CN->HK       2015-12-29..  reads=flow.listed_market_trade,payee.residence_cert
+cn-sg.gain.residence_only@cn     EXEMPT    A_TEXT        CN->SG       2008-01-01..  reads=flow.immovable_ratio,flow.max_ratio_12m,payee.residence_cert
+cn.indirect.charge               CHARGE    D_DISCRETION  ALL          2015-02-03..  reads=flow.cn_asset_ratio,flow.cn_income_ratio,flow.cn_value_ratio,flow.foreign_tax_lower_than_cn,flow.indirect_cn_target,flow.limited_functions_and_risks,payee.payee_resident_in_cn
+cn.indirect.gain.base            BASE      A_TEXT        ALL          ..  reads=flow.cn_cost_basis,flow.consideration,flow.cost_basis
+cn.indirect.listed_safe_harbour  EXEMPT    A_TEXT        ALL          2015-02-03..  reads=flow.listed_market_trade
+cn.reorg.special                 DEFER     D_DISCRETION  CN           2014-01-01..  reads=flow.reorg_acquired_ratio,flow.reorg_buyer_resident_in_cn,flow.reorg_commitment_3y,flow.reorg_control_ratio,flow.reorg_equity_payment_share,flow.reorg_filed,flow.reorg_operations_unchanged_12m,flow.reorg_same_residence,flow.reorg_shares_kept_12m,flow.reorg_step,payee.payee_resident_in_cn
+cn.reorg.special_resident        BASE      D_DISCRETION  ALL->CN      2014-01-01..  reads=flow.cn_cost_basis,flow.consideration,flow.cost_basis,flow.reorg_acquired_ratio,flow.reorg_buyer_resident_in_cn,flow.reorg_control_ratio,flow.reorg_equity_payment_share,flow.reorg_filed,flow.reorg_horizon_years,flow.reorg_operations_unchanged_12m,flow.reorg_shares_kept_12m,flow.reorg_step,payee.payee_resident_in_cn
+cn.reorg.treaty_dividend_denied  DENY      A_TEXT        CN           2013-12-12..  reads=flow.dividend_from_pre_reorg_profits,flow.reorg_same_residence,flow.reorg_special_applied
+cn.indirect.reorg                EXEMPT    A_TEXT        ALL          2015-02-03..  reads=flow.intragroup_reorg_ratio,flow.later_cn_tax_not_reduced,flow.reorg_consideration_in_equity
+cn.deduct.interest               DEDUCTION D_DISCRETION  CN           2008-01-01..  reads=payee.payee_is_related,payer.related_party_debt_equity_ratio
+cn.deduct.interest.benchmark     DEDUCT_BASE A_TEXT        CN           ..  reads=flow.benchmark_rate,flow.interest_rate
+cn.tp.deduction_cap              DEDUCT_BASE A_TEXT        CN           ..  reads=flow.arms_length_max,payee.payee_in_source_jur
+cn.deduct.royalty                DEDUCTION D_DISCRETION  CN           2008-01-01..  reads=-
+cn.wht.remit                     DEADLINE  A_TEXT        CN           2017-12-01..  reads=flow.date_of_payment,flow.payable_on
+cn.wht.late_surcharge            PENALTY   A_TEXT        CN           ..  reads=flow.remitted_on
+cn.refund                        DEADLINE  A_TEXT        CN           ..  reads=flow.tax_paid_on
+cn.review                        DEADLINE  A_TEXT        CN           2024-01-01..  reads=flow.assessment_notice_on,flow.tax_paid_or_secured
+cn-hk.map                        DEADLINE  A_TEXT        CN->HK       2013-11-01..  reads=flow.authority_action,flow.first_notification_on,flow.prior_map_outcome
+cn-sg.map                        DEADLINE  A_TEXT        CN->SG       2013-11-01..  reads=flow.authority_action,flow.first_notification_on,flow.prior_map_outcome
+hk.nocharge.outbound             NOCHARGE  A_TEXT        HK           ..  reads=payee.payee_in_source_jur
+hk.service.charge                CHARGE    D_DISCRETION  HK           2018-04-01..  reads=flow.service_performed_in_source,payee.payee_in_source_jur
+hk.service.base                  BASE      A_TEXT        HK           ..  reads=flow.profit_margin
+hk.nocharge.service_offshore     NOCHARGE  A_TEXT        HK           ..  reads=flow.service_performed_in_source,payee.payee_in_source_jur
+cn-hk.pe.no_pe@hk                EXEMPT    A_TEXT        HK->CN       2008-06-11..  reads=flow.service_days_12m,payee.fixed_place_in_hk,payee.residence_cert
+hk.royalty.deemed                CHARGE    A_TEXT        HK           2018-04-01..  reads=flow.ip_used_in_hk,flow.royalty_deductible_in_hk,payee.payee_in_source_jur
+hk.royalty.deemed_profit         BASE      A_TEXT        HK           2003-04-01..  reads=-
+hk.royalty.deemed_profit_associate BASE      A_TEXT        HK           ..  reads=flow.ip_never_owned_by_hk_business,payee.payee_is_associate
+cn-hk.roy.cap@hk                 RATE_CAP  D_DISCRETION  HK->CN       2007-01-01..  reads=payee.residence_cert
+cn-hk.ppt@hk                     DENY      D_DISCRETION  HK->CN       2020-01-01..  reads=-
+hk.stamp.seller                  STAMP     A_TEXT        HK           2023-11-17..  reads=flow.associated_ratio,flow.clawback_event_within_2y,flow.shares_cancelled,flow.stamp_relief_claimed
+hk.stamp.buyer                   STAMP     A_TEXT        HK           2023-11-17..  reads=flow.associated_ratio,flow.clawback_event_within_2y,flow.shares_cancelled,flow.stamp_relief_claimed
+hk.deduct.interest               DEDUCTION D_DISCRETION  HK           2018-04-01..  reads=payee.lender_interest_taxable_in_hk,payee.payee_is_financial_institution
+hk.deduct.service_fee            DEDUCTION D_DISCRETION  HK           2018-04-01..  reads=-
+hk.deduct.royalty                DEDUCTION A_TEXT        HK           2018-04-01..  reads=flow.royalty_deductible_in_hk
+hk.tp.deduction_cap              DEDUCT_BASE A_TEXT        HK           ..  reads=flow.arms_length_max,payee.payee_in_source_jur
+hk.tp.local_file                 DEADLINE  A_TEXT        HK           2018-07-13..  reads=payee.payee_is_related,payer.accounting_period_end,payer.hk_tp_small_entity,payer.is_mne_member
+hk.onshore.charge                CHARGE    D_DISCRETION  ALL->HK      2018-04-01..  reads=payee.payee_in_source_jur
+hk.fsie.charge                   CHARGE    A_TEXT        ALL->HK      2023-01-01..  reads=flow.receipt_kind,payee.is_mne_member,payee.payee_in_source_jur
+hk.fsie.gain.base                BASE      A_TEXT        ALL->HK      ..  reads=flow.consideration,flow.cost_basis
+hk.fsie.ip_nexus                 BASE      A_TEXT        ALL->HK      ..  reads=flow.non_qualifying_expenditure,flow.qualifying_rd_expenditure
+hk.fsie.substance.dividend       EXEMPT    D_DISCRETION  ALL->HK      ..  reads=payee.pure_equity_holding,payee.registration_filing_compliant,payee.substance_ruled_adequate
+hk.fsie.substance.interest       EXEMPT    D_DISCRETION  ALL->HK      ..  reads=payee.pure_equity_holding,payee.registration_filing_compliant,payee.substance_ruled_adequate
+hk.fsie.substance.share_transfer EXEMPT    D_DISCRETION  ALL->HK      ..  reads=payee.pure_equity_holding,payee.registration_filing_compliant,payee.substance_ruled_adequate
+hk.fsie.participation.dividend   EXEMPT    D_DISCRETION  ALL->HK      2023-01-01..  reads=flow.deductible_at_payer,flow.foreign_headline_rate,flow.foreign_taxed,flow.holding_months,flow.ratio,flow.underlying_profits_taxed,payee.hk_resident_or_pe
+hk.fsie.participation.share_transfer EXEMPT    D_DISCRETION  ALL->HK      2023-01-01..  reads=flow.deductible_at_payer,flow.foreign_headline_rate,flow.foreign_taxed,flow.holding_months,flow.ratio,flow.underlying_profits_taxed,payee.hk_resident_or_pe
+hk.fsie.intragroup_relief        EXEMPT    A_TEXT        ALL->HK      ..  reads=flow.acquirer_chargeable_in_hk,flow.clawback_event_within_2y,flow.intragroup_transfer
+hk.nocharge.ip_purchase          NOCHARGE  A_TEXT        HK           ..  reads=payee.payee_in_source_jur
+hk.ip.recapture                  CHARGE    A_TEXT        ALL->HK      2018-04-01..  reads=flow.consideration,flow.cost_basis,flow.ip_allowances_claimed
+hk.ip.fsie                       CHARGE    D_DISCRETION  ALL->HK      2023-01-01..  reads=flow.consideration,flow.cost_basis,flow.ip_allowances_claimed,flow.ip_kind,flow.non_qualifying_expenditure,flow.qualifying_rd_expenditure,flow.receipt_kind,payee.is_mne_member,payee.payee_in_source_jur
+hk.ip.onshore                    CHARGE    D_DISCRETION  ALL->HK      2018-04-01..  reads=flow.consideration,flow.cost_basis
+hk.ftc.dta                       CREDIT    A_TEXT        CN->HK       ..  reads=flow.foreign_tax_rate,payee.hk_resident_or_pe
+hk.ftc.unilateral                CREDIT    A_TEXT        SG->HK       ..  reads=flow.foreign_tax_rate,payee.hk_resident_or_pe
+hk.domestic.charge               CHARGE    D_DISCRETION  HK->HK       2018-04-01..  reads=payee.payee_in_source_jur
+hk.domestic.dividend             NOCHARGE  A_TEXT        HK->HK       ..  reads=payee.payee_in_source_jur
+hk.service.charge_resident       CHARGE    D_DISCRETION  ALL->HK      2018-04-01..  reads=flow.service_performed_in_residence,payee.payee_in_source_jur
+hk.service.base_resident         BASE      A_TEXT        ALL->HK      ..  reads=flow.profit_margin,payee.payee_in_source_jur
+hk.nocharge.service_offshore_resident NOCHARGE  A_TEXT        ALL->HK      ..  reads=flow.service_performed_in_residence,payee.payee_in_source_jur
+hk.p2.topup                      CHARGE    A_TEXT        HK->HK       2025-01-01..  reads=flow.p2_iir,payee.group_revenue_eur
+hk.p2.iir                        CHARGE    A_TEXT        HK->HK       2025-01-01..  reads=flow.p2_iir,payee.group_revenue_eur
+hk.p2.base                       BASE      A_TEXT        HK->HK       ..  reads=flow.p2_additional,flow.p2_etr
+hk.objection                     DEADLINE  A_TEXT        ALL->HK      ..  reads=flow.assessment_notice_on
+hk.objection.source              DEADLINE  A_TEXT        HK           ..  reads=flow.assessment_notice_on
+hk.appeal                        DEADLINE  A_TEXT        ALL->HK      ..  reads=flow.determination_on
+hk.gain.charge                   CHARGE    A_TEXT        HK           2018-04-01..  reads=-
+hk.gain.base                     BASE      A_TEXT        HK           ..  reads=flow.consideration,flow.cost_basis
+hk.gain.capital                  EXEMPT    D_DISCRETION  HK           ..  reads=-
+hk.onshore_gain.certainty        EXEMPT    A_TEXT        HK           2024-01-01..  reads=flow.held_as_trading_stock,flow.holding_months,flow.ratio,payee.sch17k_elected
+184 rules; orphan rate/condition parameters in scope: 38
+  - hk-sg.no_comprehensive_dta
+  - hk.profits.rate_corp_first_tier
+  - hk.interest.deemed_corporation
+  - hk.interest.exempt_instruments
+  - sg.source.interest_borne_by_sg
+  - sg.source.royalty_borne_by_sg
+  - sg.wht.interest_not_sg_trade
+  - sg.wht.interest_not_sg_pe
+  - hk.interest.deemed_financial_institution
+  - hk.interest.deemed_intragroup_financing
+  - hk.ftc.underlying_ratio_min
+  - sg.source.interest_loan_funds_used_in_sg
+  - sg.wht.royalty_not_sg_trade
+  - sg.wht.royalty_not_sg_pe
+  - sg.ftc.underlying_ratio_min
+  - sg.p2.sbie_payroll_rate
+  - sg.p2.sbie_tangible_rate
+  - p2.portfolio_shareholding_max
+  - p2.short_term_months
+  - sg.p2.portfolio_shareholding_max
+  - sg.p2.short_term_months
+  - sg.p2.dm_revenue_max
+  - sg.p2.dm_income_max
+  - sg.p2.tcsh_fy_start_from
+  - sg.p2.tcsh_fy_start_to
+  - sg.p2.tcsh_fy_end_by
+  - sg.p2.tcsh_dm_revenue_max
+  - sg.p2.tcsh_dm_pbt_max
+  - sg.p2.tcsh_etr_2025
+  - sg.p2.tcsh_etr_2026
+  - p2.dm_revenue_max
+  - p2.dm_income_max
+  - p2.tcsh_fy_start_to
+  - p2.tcsh_fy_end_by
+  - p2.tcsh_dm_revenue_max
+  - p2.tcsh_dm_pbt_max
+  - p2.tcsh_etr_2025
+  - p2.tcsh_etr_2026

@@ -1,0 +1,216 @@
+PART 2
+ADJUSTMENTS TO
+CONSOLIDATED GROUP REVENUE
+Adjustments to consolidated group revenue
+4.
+—(1) For the purpose of section 8(1), the consolidated group revenue of an MNE group for a financial year is the revenue reflected in the consolidated financial statements of its ultimate parent entity for that financial year (or if different types of revenue are presented as separate line items in such consolidated financial statements, the aggregate of such revenues) adjusted as follows:
+(
+a
+)
+the revenue of the entities of the MNE group for that financial year from their ordinary activities is included (to the extent it was not already included);
+(
+b
+)
+the cost of sales and other operating expenses for that financial year are added back (to the extent they were already deducted);
+(
+c
+)
+net investment gains for that financial year reflected in the profit and loss statement of the consolidated financial statements are included (to the extent that they were not already included);
+(
+d
+)
+income or gains for that financial year presented as extraordinary or non-recurring items in the consolidated financial statements are included (to the extent that they were not already included).
+[S 860/2025 wef 31/12/2025]
+(2) In paragraph (1)(
+c
+), “net investment gains” means, in the case where investment gains and investment losses are separately reflected in the profit and loss statement of the consolidated financial statements for a financial year, the investment gains reduced by the investment losses (but not below nil) for that financial year.
+Computation of consolidated group revenue of MNE group formed by merger of 2 or more groups
+4A.
+—(1) This regulation applies for the purposes of determining whether, in accordance with section 8, the Act applies for a financial year to an MNE group (called the merged group) that is formed by an arrangement pursuant to which all or substantially all of the entities of each of 2 or more groups (each called a constituent group) become entities of a single MNE group (called the merger).
+(2) In this regulation —
+“first financial year”, in relation to a merged group, means the financial year of the merged group in which the effective date of the merger falls;
+“merger FY” means the period —
+(
+a
+)
+beginning on the first day after the pre-merger FY that is the first period before the first financial year of the merged group; and
+(
+b
+)
+ending on the last day of the first financial year of the merged group;
+“pre-merger FY” means the first, second, third or fourth period before the first financial year of the merged group, each being a period of 12 months that ends in the same calendar month as the calendar month in which the first financial year of the merged group ends.
+Example
+Group M is formed by a merger of the entities of Group A and the entities of Group B, and the effective date of the merger is 1 July 2024. The financial year of Group M in which the effective date of the merger falls i.e., the first financial year of Group M, is 1 July 2024 to 31 December 2024.
+The pre-merger FYs are 1 January 2023 to 31 December 2023, 1 January 2022 to 31 December 2022, 1 January 2021 to 31 December 2021 and 1 January 2020 to 31 December 2020.
+The merger FY is the period beginning on 1 January 2024 and ending on 31 December 2024.
+(3) The merger FY is treated as a financial year of the merged group.
+(4) In determining whether the merged group’s consolidated group revenue is equal to or exceeds the threshold in section 8(2) for any financial year before the merger FY —
+(
+a
+)
+each pre-merger FY is treated as a financial year before the merger FY; and
+(
+b
+)
+the merged group’s consolidated group revenue for a pre-merger FY is computed by aggregating the consolidated group revenue of every constituent group (determined by reference to the consolidated financial statements of the constituent group’s ultimate parent entity) for the pre-merger FY, whether or not the constituent group existed for the entire period of the pre-merger FY.
+(5) In determining whether the merged group’s consolidated group revenue is equal to or exceeds the threshold in section 8(2) for the merger FY, the merged group’s consolidated group revenue for the merger FY is computed by aggregating —
+(
+a
+)
+the consolidated group revenue of every constituent group (determined by reference to the consolidated financial statements of the constituent group’s ultimate parent entity) for its financial year that ends at any time in the merger FY; and
+(
+b
+)
+the consolidated group revenue of the merged group (determined by reference to the consolidated financial statements of its ultimate parent entity) for its first financial year.
+Example
+Group A, Group B and Group C merged to form a single MNE group (called Group M) on 1 July 2024. Each of Group A, Group B and Group C (prior to the merger) and the merged group uses the calendar year as their respective financial years. The merger FY is from 1 January 2024 to 31 December 2024 (both dates inclusive).
+The financial year concerned for the purposes of section 8(1) in respect of Group M is the financial year beginning on 1 January 2025.
+For the financial years 2021, 2022, 2023 and 2024, the respective sums of the consolidated group revenue of Group A, Group B and Group C are as follows:
+Year
+Sums of consolidated group
+revenue (EUR) of Group A,
+Group B and Group C
+2021
+300 million
+2022
+550 million
+2023
+770 million
+2024 — from
+1 January 2024
+to 30 June 2024
+(both dates inclusive)
+355 million
+In the merger FY, the consolidated group revenue of Group M for the period of 1 July 2024 to 31 December 2024 (both dates inclusive) is EUR 400 million.
+In applying section 8(1) to determine whether the Act applies to Group M in respect of the financial year beginning on 1 January 2025, Group M’s consolidated group revenue for the merger FY is EUR 755 million, being the sum of EUR 355 million and EUR 400 million. As the consolidated group revenue of Group M also exceeded EUR 750 million in the financial year 2023 (as determined by the sums of the consolidated group revenue of Group A, Group B and Group C), the Act applies to Group M for financial year 2025 under section 8(1).
+(6) If the financial year of any constituent group ends in a calendar month that is different from the calendar month in which the first financial year of the merged group ends, the constituent group’s consolidated group revenue for each pre-merger FY to be included for the purposes of applying section 8(1) to the merged group is the constituent group’s consolidated group revenue for its financial year that ends at any time in the pre-merger FY.
+[S 129/2025 wef 25/02/2025]
+Computation of consolidated group revenue of MNE group formed by merger involving entities not belonging to any group, etc.
+4B.
+—(1) This regulation applies for the purposes of determining whether, in accordance with section 8, the Act applies for a financial year to an MNE group (called the merged group) that is formed by an arrangement —
+(
+a
+)
+pursuant to which 2 or more entities that are each not a member of any group become entities of an MNE group; or
+(
+b
+)
+pursuant to which one or more entities that are each not a member of any group and the entities of one or more groups (each called a constituent group) become entities of a single MNE group.
+(2) In this regulation —
+“first financial year”, in relation to a merged group, means the financial year of the merged group in which the effective date of the merger falls;
+“merger FY” means the period —
+(
+a
+)
+beginning on the first day after the pre-merger FY that is the first period before the first financial year of the merged group; and
+(
+b
+)
+ending on the last day of the first financial year of the merged group;
+“pre-merger FY” means the first, second, third or fourth period before the first financial year of the merged group, each being a period of 12 months that ends in the same calendar month as the calendar month in which the first financial year of the merged group ends.
+(3) The merger FY is treated as a financial year of the merged group.
+(4) In determining whether the merged group’s consolidated group revenue is equal to or exceeds the threshold in section 8(2) for any financial year before the merger FY —
+(
+a
+)
+each pre-merger FY is treated as a financial year of the merged group before the merger FY; and
+(
+b
+)
+the merged group’s consolidated group revenue for a pre-merger FY is computed by —
+(i)
+in the case of paragraph (1)(
+a
+) — aggregating the revenue of all the entities, as reflected in each entity’s financial statements for the pre-merger FY, whether or not those entities existed for the entire period of the pre-merger FY; or
+(ii)
+in the case of paragraph (1)(
+b
+) — aggregating the revenue of the firstmentioned entity or each of the firstmentioned entities in paragraph (1)(
+b
+) (as reflected in its financial statements for the pre-merger FY) and the consolidated group revenue of every constituent group (determined by reference to the consolidated financial statements of its ultimate parent entity) for the pre-merger FY, whether or not that entity or constituent group existed for the entire period of the pre-merger FY.
+(5) In determining whether the merged group’s consolidated group revenue is equal to or exceeds the threshold in section 8(2) for the merger FY, the merged group’s consolidated group revenue for the merger FY is computed by —
+(
+a
+)
+in the case of paragraph (1)(
+a
+) — aggregating the following:
+(i)
+the revenue of all the entities, as reflected in each entity’s financial statements for its financial year that ends at any time in the merger FY;
+(ii)
+the consolidated group revenue of the merged group (determined by reference to the consolidated financial statements of its ultimate parent entity) for its first financial year; or
+(
+b
+)
+in the case of paragraph (1)(
+b
+) — aggregating the following:
+(i)
+the revenue of the firstmentioned entity or each of the firstmentioned entities, as reflected in its financial statements for its financial year that ends at any time in the merger FY;
+(ii)
+the consolidated group revenue of every constituent group (determined by reference to the consolidated financial statements of its ultimate parent entity) for its financial year that ends at any time in the merger FY;
+(iii)
+the consolidated group revenue of the merged group (determined by reference to the consolidated financial statements of its ultimate parent entity) for its first financial year.
+(6) If the financial year of any entity or any constituent group ends in a calendar month that is different from the calendar month in which the first financial year of the merged group ends, the entity’s revenue or the constituent group’s consolidated group revenue (as the case may be) for each pre-merger FY to be included for the purposes of applying section 8(1) to the merged group is the entity’s revenue or constituent group’s consolidated group revenue for its financial year that ends at any time in the pre-merger FY.
+Example
+An MNE group uses the calendar year as its financial year. On 1 January 2025, an entity that is part of the MNE group acquires ownership interests in another entity that is not part of any group and that uses 30 September as the end of its financial year. The MNE group continues to use the calendar year as its financial year after the acquisition.
+The pre-merger FYs are 1 January 2024 to 31 December 2024, 1 January 2023 to 31 December 2023, 1 January 2022 to 31 December 2022 and 1 January 2021 to 31 December 2021. The merger FY is the period beginning on 1 January 2025 and ending on 31 December 2025.
+In applying section 8(1) to determine whether the Act applies to the MNE group in respect of its financial year beginning 1 January 2025, the revenue of the acquired entity for each of the financial years ending 30 September 2024, 30 September 2023, 30 September 2022, and 30 September 2021 is added to the consolidated group revenue of the MNE group for the 4 preceding financial years ending 31 December 2024, 31 December 2023, 31 December 2022 and 31 December 2021, respectively.
+The acquired entity’s revenue for the period between 1 October 2024 and 31 December 2024 (both dates inclusive) (which would have been included in the financial statements of that entity in the following year if it had not been acquired) is not included in the computation of the MNE group’s consolidated group revenue for the calendar years 2024 and 2025.
+(7) In this regulation, “merger” means an arrangement mentioned in paragraph (1)(
+a
+) or (
+b
+).
+[S 129/2025 wef 25/02/2025]
+Application of section 8(1) after demerger of MNE group
+4C.
+—(1) This regulation applies for the purposes of determining whether, in accordance with section 8, the Act applies for a financial year to an MNE group (called the demerged group) that results from a demerger.
+(2) In this regulation —
+“demerger” means an arrangement pursuant to which the entities of a relevant MNE group are separated into 2 or more groups such that the assets, liabilities, income, expenses and cash flows of those entities are no longer included in the consolidated financial statements of the same ultimate parent entity;
+“FY1” means the first financial year of the demerged group after the effective date of the demerger;
+“FY2” means the second financial year of the demerged group after the effective date of the demerger;
+“FY3” means the third financial year of the demerged group after the effective date of the demerger;
+“FY4” means the fourth financial year of the demerged group after the effective date of the demerger;
+“relevant MNE group” means an MNE group to which —
+(
+a
+)
+the Act applies for its financial year in which the effective date of the demerger falls; or
+(
+b
+)
+a qualified IIR applies for its financial year that begins before 1 January 2025 in which the effective date of the demerger falls.
+[S 860/2025 wef 31/12/2025]
+(3) The Act applies to the demerged group for FY1, FY2, FY3 or FY4 —
+(
+a
+)
+in the case of FY1 — if the demerged group’s consolidated group revenue (determined by reference to the consolidated financial statements of its ultimate parent entity) for FY1 is equal to or exceeds the threshold in section 8(2);
+(
+b
+)
+in the case of FY2 — if the demerged group’s consolidated group revenue (determined by reference to the consolidated financial statements of its ultimate parent entity) for each of FY1 and FY2 is equal to or exceeds the threshold in section 8(2);
+(
+c
+)
+in the case of FY3 — if the demerged group’s consolidated group revenue (determined by reference to the consolidated financial statements of its ultimate parent entity) exceeds the threshold in section 8(2) for at least 2 of the following financial years:
+(i)
+FY1;
+(ii)
+FY2;
+(iii)
+FY3; or
+(
+d
+)
+in the case of FY4 — if the demerged group’s consolidated group revenue (determined by reference to the consolidated financial statements of its ultimate parent entity) exceeds the threshold in section 8(2) for at least 2 of the following financial years:
+(i)
+FY1;
+(ii)
+FY2;
+(iii)
+FY3;
+(iv)
+FY4.
+[S 129/2025 wef 25/02/2025]

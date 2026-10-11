@@ -1,0 +1,8 @@
+{
+ "_note": "Answers to the planner's question sheet. data: value with its source; actions / rulings: yes, no or unknown. Unknown is taken at its worst, never filled in.",
+ "data": {
+  "group.group_revenue_eur": {"value": "unknown", "source": "not given in the case file"}
+ },
+ "actions": {},
+ "rulings": {}
+}

@@ -1,0 +1,169 @@
+{
+ "template": "holding+services",
+ "subject": "GROUP",
+ "members": null,
+ "roles": {
+  "OP": {
+   "loc": "CN",
+   "attrs": {
+    "managed_from": "CN",
+    "vat_general_taxpayer": true,
+    "payee_is_government": false,
+    "payee_is_financial_institution": false,
+    "related_party_volume": 60000000.0,
+    "tp_documentation_provided": true,
+    "after_tax_profit": 8000000.0,
+    "related_party_debt_equity_ratio": 1.5,
+    "income_tax_other": 2666666.67,
+    "globe_income": 10666666.67,
+    "covered_taxes_other": 2666666.67,
+    "payroll": 10000000.0,
+    "tangible_assets": 20000000.0,
+    "p2_qualified_cbcr_cn": true,
+    "p2_tcsh_history_cn": true,
+    "p2_cbcr_revenue_cn": 300000000.0,
+    "p2_cbcr_pbt_cn": 10666666.67,
+    "p2_cbcr_simplified_taxes_cn": 2666666.67,
+    "p2_dm_avg_revenue_eur_cn": 37500000.0,
+    "p2_dm_avg_income_eur_cn": 1333333.33
+   }
+  },
+  "ULT": {
+   "loc": "HK",
+   "attrs": {
+    "managed_from": "HK",
+    "residence_cert": true,
+    "bo_safe_harbour": false,
+    "pure_equity_holding": true,
+    "registration_filing_compliant": true,
+    "payee_is_government": false,
+    "payee_is_financial_institution": false,
+    "fixed_place_in_sg": false,
+    "fixed_place_in_cn": false,
+    "sch17k_elected": false,
+    "substance_ruled_adequate": false,
+    "after_tax_profit": 6000000.0,
+    "income_tax_other": 1185628.74,
+    "revenue": 500000000.0,
+    "total_assets": 400000000.0,
+    "employees": 120,
+    "accounting_period_end": "2026-12-31",
+    "globe_income": 50000000.0,
+    "covered_taxes_other": 2000000.0,
+    "group_revenue_eur": 900000000.0,
+    "payroll": 10000000.0,
+    "tangible_assets": 20000000.0,
+    "p2_qualified_cbcr_hk": true,
+    "p2_tcsh_history_hk": true,
+    "p2_cbcr_revenue_hk": 500000000.0,
+    "p2_cbcr_pbt_hk": 50000000.0,
+    "p2_cbcr_simplified_taxes_hk": 2000000.0,
+    "p2_eur_rate": 0.125,
+    "p2_eur_rate_2027": 0.125,
+    "p2_dm_avg_revenue_eur_hk": 62500000.0,
+    "p2_dm_avg_income_eur_hk": 6250000.0
+   }
+  },
+  "BUYER": {
+   "loc": "HK",
+   "attrs": {
+    "managed_from": "HK"
+   }
+  }
+ },
+ "holds": [
+  {
+   "holder": "ULT",
+   "held": "OP",
+   "ratio": 100.0,
+   "since": "2020-01-01",
+   "cost": 3000.0
+  }
+ ],
+ "flows": {
+  "up1": {
+   "receipt_kind": "REMITTED",
+   "foreign_taxed": true,
+   "foreign_headline_rate": 25,
+   "underlying_profits_taxed": true,
+   "deductible_at_payer": false,
+   "reinvested_in_cn": false,
+   "listed_market_trade": false
+  },
+  "up2": {
+   "receipt_kind": "REMITTED",
+   "foreign_taxed": true,
+   "foreign_headline_rate": 25,
+   "underlying_profits_taxed": true,
+   "deductible_at_payer": false,
+   "reinvested_in_cn": false,
+   "listed_market_trade": false
+  },
+  "exit": {
+   "immovable_ratio": 10,
+   "listed_market_trade": false,
+   "receipt_kind": "REMITTED",
+   "foreign_taxed": true,
+   "foreign_headline_rate": 25,
+   "underlying_profits_taxed": false,
+   "deductible_at_payer": false,
+   "cn_value_ratio": 90,
+   "cn_asset_ratio": 95,
+   "cn_income_ratio": 95,
+   "limited_functions_and_risks": true,
+   "foreign_tax_lower_than_cn": true,
+   "intragroup_reorg_ratio": 0,
+   "reorg_consideration_in_equity": false,
+   "later_cn_tax_not_reduced": false
+  },
+  "reorg": {
+   "immovable_ratio": 10,
+   "listed_market_trade": false,
+   "receipt_kind": "REMITTED",
+   "foreign_taxed": true,
+   "foreign_headline_rate": 25,
+   "underlying_profits_taxed": false,
+   "deductible_at_payer": false,
+   "cn_value_ratio": 90,
+   "cn_asset_ratio": 95,
+   "cn_income_ratio": 95,
+   "limited_functions_and_risks": true,
+   "foreign_tax_lower_than_cn": true,
+   "intragroup_reorg_ratio": 0,
+   "reorg_consideration_in_equity": false,
+   "later_cn_tax_not_reduced": false,
+   "amount": 4000.0
+  },
+  "svc": {
+   "service_location": "CN",
+   "service_days_12m": 60,
+   "service_kind": "MANAGEMENT",
+   "profit_margin": 20,
+   "receipt_kind": "REMITTED",
+   "foreign_taxed": true,
+   "foreign_headline_rate": 25,
+   "price_includes_vat": false
+  }
+ },
+ "present": {
+  "HOLD": null,
+  "financing": "EQUITY",
+  "payment": false,
+  "exit_route": "DIRECT",
+  "SERVICER": "SG"
+ },
+ "settled": {},
+ "closed": [],
+ "event": {
+  "on": "2026-03-31",
+  "years": 1,
+  "dividend": 1000.0,
+  "onward": 900.0,
+  "exit": 5000.0,
+  "exit_on": "2026-12-31",
+  "service_fee": 800.0
+ },
+ "notes": [
+  "battery: composite of holding+services from the fact packs; full facts; timing open"
+ ]
+}

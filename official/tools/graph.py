@@ -144,6 +144,8 @@ CONSTRAINTS = [
      "SELECT cite_id FROM clause_time WHERE valid_from IS NULL OR valid_from = ''"),
     ("W06", "Warning", "复核下载与登记的哈希不一致（verify.csv）：来源页面可能已改",
      "SELECT id FROM verify_result WHERE match != 'yes'"),
+    ("W07", "Warning", "条款里有未转写的公式图片（formulas.csv 未登记）：该处公式在文本层缺失",
+     "SELECT cite_id FROM clause WHERE text LIKE '%[formula image %'"),
 ]
 
 
@@ -548,6 +550,8 @@ def rule_edges():
                 rows.append((src, "param:" + leaf.param, "rule_uses_param"))
         for pid in ([r.value] if isinstance(r.value, str) and not r.value.startswith("observed:") else []) + list(r.uses or ()):
             rows.append((src, "param:" + pid, "rule_uses_param"))
+        if getattr(r, "before", ()):                             # 口径 D30: the law's commencement clause
+            rows.append((src, r.before[1], "rule_cites"))
     return rows
 
 
@@ -871,7 +875,9 @@ def main(argv):
         elif a.startswith("--dense="):
             dense = a.split("=", 1)[1]
     marker = ROOT / "_index" / "dense_model.txt"
-    if dense:
+    if "--no-dense" in argv:
+        dense = None
+    elif dense:
         marker.parent.mkdir(exist_ok=True)
         marker.write_text(dense, encoding="utf-8")
     elif marker.exists():

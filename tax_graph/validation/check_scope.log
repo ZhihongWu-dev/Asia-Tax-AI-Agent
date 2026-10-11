@@ -1,0 +1,97 @@
+ok   Pillar Two: (15% - 10%) x 1000 = 50 top-up on the HK entity (got 50.0)
+ok   Pillar Two: SBIE from payroll and tangible assets at the 2026 transition rates (got 41.6)
+ok   Pillar Two: below EUR 750 million the top-up rule does not apply
+ok   CFC: floor leaves the inclusion uncharged (active income / business need are judgements)
+ok   CFC: ceiling charges 25% on the grossed-up 10m less the 165k the subsidiary bore = 2376250 (got 2376250.0)
+ok   residence: the determination is a pending group, floor 0.00 <= ceiling 250.00
+ok   residence: deciding it the other way never lowers the floor (cost 0.00)
+ok   VAT: 1060 x 6/106 = 60 withheld from the payee and credited to the payer (net nil in the group)
+ok   financing: the bank's 7% withholding is outside the group; the group's floor is the 25% deduction alone (got -250.00)
+ok   financing: with a gross-up clause the group bears the 7% (got -180.00)
+ok   stamp: 0.1% on the seller's and the buyer's notes (got [('payee', 5.0), ('payer', 5.0)])
+ok   SG stamp: 0.2% on the transferee only (got [('payer', 10.0)])
+ok   SG GST: a partially exempt payer with an unknown recovery ratio: 9% at the ceiling, nil at the floor (got [90.0])
+ok   SG Pillar Two: (15% - 10%) x 1000 = 50 domestic top-up (got 50.0)
+ok   P2 blending: ETRs 5% and 25% blend to 15%: no top-up in the jurisdiction (got 0.0, 0.0)
+ok   P2 allocation: 15% x 4000 = 600 shared 3:1 by GloBE income = 450 / 150 (got 450.0, 150.0)
+ok   P2 blending: a loss-making entity lowers the net GloBE income: 100 / 600 = 16.7%, no top-up (got 0.0)
+ok   SG s21(1): 15% x -1000 - (-300) = 150, all on the entity (s16(3)(a)) (got 150.0)
+ok   SG s21(2) election: only the part attributable to the carry back of losses stays (got 40.0)
+ok   SG s21(2) unstated ex ante: the election is a plan action; electing with the attribution unknown: nil .. 150 (got None .. 150.0)
+ok   HK Art 4.1.5 / 5.4.3: 15% x -800 - (-150) = 30, all on the entity whose covered taxes fall below its own 15% (got 30.0)
+ok   P2: a jurisdiction without net GloBE income asks for unknown covered taxes (they may be negative without limit)
+ok   P2 per year: the 2026 and the 2027 top-up, 150 each (got 150.0, 150.0)
+ok   P2: a created holding company's GloBE income comes from its flows (the dividend excluded): 15% x 1000 on ULT (got 150.0)
+ok   P2: the Mainland tax withheld on an excluded dividend (50) is no covered tax: the top-up stays 150 (got 150.0 .. 150.0)
+ok   TCSH: no test met (CbC profit 1000 above the nil carve-out, ETR 0%): top-up 150 (got 150.0)
+ok   TCSH: a CbC loss meets the routine profits test (reg 73(1)(b)); elected: SG top-up nil
+ok   TCSH: simplified ETR 170 / 1000 = 17% meets the 2026 test (reg 72(1)(b)): top-up nil
+ok   TCSH: 16% is below the 2026 test of 17%: top-up 150 (got 150.0)
+ok   TCSH: CbC data unknown: pending, nil at the floor, 150 at the ceiling (got 150.0)
+ok   TCSH: a financial year beginning in 2027 is outside the transition period: top-up 150 (got 150.0)
+ok   TCSH: eligible ex ante, the election is the plan's action (pending; nil at the floor)
+ok   HK de minimis (Art 5.5.1): averages EUR 5m revenue and EUR 0.5m income, elected: top-up nil
+ok   HK de minimis: an average income of EUR 1m is not below EUR 1m: top-up 150 (got 150.0)
+ok   restructuring: a new HOLD between ULT and OP makes ULT transfer OP to HOLD at the stated consideration
+ok   restructuring: 10% on the 1000 gain in general, deferred as a special reorganisation (59号 §7(1)) (got 0 .. 100.0)
+ok   restructuring: special treatment met — the step deferred, HOLD keeps ULT's basis 3000: 10% x 2000 on the exit (got 200.0)
+ok   restructuring: the consideration unknown: asked (the step's tax is unbounded without it)
+ok   restructuring: HK stock to an associated body (SDO s45, 90%): no duty when claimed, 0.1% x 2 otherwise (got 0 .. 8.0)
+ok   restructuring: special treatment across HK / SG, a dividend of pre-transfer profits: no treaty rate (公告2013年第72号 §8): 10% (got 100.0)
+ok   composite: holding + ip — OP held through HOLD only, the royalty to IPCO beside the chain, the IP moved to it (got ['exit', 'iptx', 'reorg', 'roy', 'up1', 'up2'])
+ok   composite: holding and repatriation both distribute OP's profit: not combinable
+ok   IIR: a Singapore ultimate parent pays the MTT on a Mainland entity at 5%: (15% - 5%) x 1000 = 100 (got {'iir:OP>ULT': 100.0})
+ok   IIR: a Mainland ultimate parent applies none, so the Hong Kong intermediate parent does (Art 2.1.2): 100 (got {'iir:OP>HOLD': 100.0})
+ok   IIR: a Singapore ultimate parent applies a qualified IIR, so the Hong Kong intermediate parent does not (Art 2.1.3(a)) (got {'iir:OP>ULT': 100.0})
+ok   IIR: a partially-owned Hong Kong parent (40% held outside) applies it in its own right on all it owns (Art 2.1.4) (got {'iir:OP>HOLD': 100.0})
+ok   IIR: a Singapore entity has its qualified domestic top-up — no IIR top-up remains (got {})
+ok   unwinding: HOLD dissolved — its stake in OP to ULT at market value, then its liquidation to ULT; ULT holds OP from the step
+ok   unwinding: no special reorganisation fits — 10% x (5000 - 3000) in the Mainland on the step, the exit's basis is 5000 (got 200.0, 200.0, exit 0.0)
+ok   unwinding: HOLD moved to Singapore — a new HOLD_NEW buys the stake at market value and holds it; HOLD is wound up
+ok   unwinding: the stake's market value and the liquidation distribution unknown: asked (unbounded without them)
+ok   unwinding: a holding company wound up in the horizon has distributed its profits — no CFC inclusion (there is one while kept)
+ok   a liquidation cancels the shares: its disposal part passes by no transfer instrument, no stamp duty (got [])
+ok   own flows: ULT sells the new HOLD 9 months after the step — the HK s45 relief is withdrawn, the 59号 commitments are broken
+ok   own flows: so the step's HK stamp duty stands even at the floor: 0.1%% x 2 x 4000
+ok   own flows: HOLD sells the SG shares it took over within 2 years — the SG relief is withdrawn (r 7(1)(b)): 0.2%% x 4000 at the floor
+ok   IP transfer: the candidate's owner buys the IP from the present one at the stated value; no step unmodelled (got {None: [('OP', 'IPCO', 400.0)], 'HK': [], 'SG': [('IPCO_NEW', 'IPCO', 400.0)], 'CN': [('IPCO_NEW', 'IPCO', 400.0)]})
+ok   IP transfer: a non-resident's gain — Mainland source the authority's judgement (实施条例 第七条): 0 .. 10% x (400 - 100) = 30 (got 0, 30.0)
+ok   IP transfer: judged Mainland-sourced, the Arrangement still leaves the gain to Hong Kong (Art 13(7)) — not without the residence certificate (got 0.0, 30.0)
+ok   IP transfer: an offshore gain received in Hong Kong is an IP disposal gain (s15I) less the R&D fraction 65% (Sch 17FC): 16.5% x 300 x 35% = 17.33 (got 17.32)
+ok   IP transfer: a capital gain arising in Hong Kong — only the deductions allowed come back (s16E(3)): 16.5% x min(400 - 100, 100) = 16.5 (got 16.5)
+ok   IP transfer: a resident's technology transfer — 5 million yuan exempt, the rest halved (第九十条): 25% x (7m - 5m) x 50% = 250,000; sisters both wholly held by ULT (111号 第四条 silent): up to 25% x 7m (got 250000.0, 1750000.0)
+ok   IP transfer: a trademark is no technology — the whole gain at 25%, and the sale bears 6% VAT (销售方为境内单位) the foreign buyer cannot credit: 480,000 (got 1750000.0, 480000.0)
+ok   IP transfer: one company wholly holding the other is derived (111号 第四条: no reduction); wholly held sisters are flagged for the judgement
+ok   IP transfer: a foreign seller's IP is consumed in the Mainland (实施条例 第四条): 6% x 400 = 24 withheld, credited by OP holding the contract, payment proof and invoice (公告2026年第13号) — not at the ceiling (got 0.0, 24.0)
+ok   IP transfer: Hong Kong to Singapore — Mainland stamp duty 0.03% from each party only if the instrument is used in the Mainland (印花税法 第一条) (got 0.24, 0)
+ok   IP transfer: the Singapore buyer writes the price down over 5 years (s19B(1AA)): 17% x 400 / 5 = 13.6 in the year; none for rights acquired after the basis period for YA 2028 (s19B(10)(aa)) (got -13.6, 0)
+ok   IP transfer: OP amortises the price over the agreed 5-year life (实施条例 第六十七条): 25% x 400 x 2/5 = 40 in the two modelled years (got -40.0)
+ok   IP transfer: the seller keeps the proceeds — its book gain 400 - 100 joins the profit a Mainland parent's CFC rules see (after the tax on it, nil at the floor) and its GloBE income of the year (got [300.0])
+ok   IP transfer: no price stated — no gain is counted (never 0 less the carrying amount); the price is asked (got (0.0, ['flow:iptx.amount']))
+ok   accounts (口径 D29): the new IP company's GloBE income leaves out the VAT taken from its VAT-inclusive royalty, 460 - 500 x 6/106 = 431.70 (got 431.7)
+ok   IP transfer (口径 D27): the new IP company's GloBE income is its royalty less its book amortisation, 500 - 40 = 460; its 5-year allowance with deferred tax recast at 15%: -7.6 in covered taxes; no amortisation stated: asked (got 460.0, -7.6)
+ok   IP transfer: a new IP company bought its IP — its R&D fraction is nil (Sch 17FC s5(3)(c)), never asked
+ok   book value (口径 D28): offered only between Mainland companies wholly held by the same Mainland parent
+ok   IP sale (口径 D29): a VAT-inclusive 400 — OP's VAT 400 x 6/106 = 22.64, and its gain is the net 377.36 less the basis 100: 25% x 277.36 = 69.34 (got 69.34, 22.64)
+ok   book value (口径 D28): no gain for OP and the new company amortises OP's basis, 25% x 100 / 10 = 2.5; if the treatment fails, 25% x 300 and 25% x 400 / 10 (a deemed sale, 公告2015年第40号 第八条) as at market value; the deemed sale's 6% VAT on 400 is credited by the buyer (got (0.0, -2.5, 75.0, -10.0, 75.0, 0.0))
+ok   SG source (口径 D24): a royalty derived from a licensing business run in Singapore is charged on accrual: 17% x 500 less the Mainland's 10% of the VAT-net 500 / 1.06 = 37.83; foreign-sourced and kept abroad: 0 (got 37.83, 0)
+ok   SG s45: an IP bought outright is not withheld, so no s45 filing clock (got [])
+ok   interest VAT (口径 D25, D26): a Singapore lender's 1060 — 6% withheld = 63.6 and never credited, 10% withholding on 1060; a VAT-inclusive price: 60 and the withholding on the net 1000 = 100 (got (63.6, 106.0), (60.0, 100.0))
+ok   interest VAT: a Mainland lender pays 6% on it, no credit for the borrower (63.6); 统借统还 on-lending is exempt (got (63.6, 265.0), (0, 106.0))
+ok   resident's interest (口径 D29): VAT-inclusive 1060 — VAT 60 and 25% on the net 1000 = 250 (got (60.0, 250.0))
+ok   before the VAT Law (口径 D30): no VAT computed and none assumed — the VAT and the withholding base that turns on it are outside the library; borne in the group: no plan; borne by an outside lender: a note (got [('CN', 'income', 'L'), ('CN', 'vat', 'L')], ([('before_law', 'i', '2025-06-30', '增值税法', '2026-01-01', '增值税'), ('before_law', 'i', '2025-06-30', '增值税法', '2026-01-01', '所得税')], []), ([], [('before_law', 'i', '2025-06-30', '增值税法', '2026-01-01', '增值税', 'L'), ('before_law', 'i', '2025-06-30', '增值税法', '2026-01-01', '所得税', 'L')]))
+ok   effective management (口径 D31): a Hong Kong company resident in the Mainland by its management pays the Mainland's 25% on its interest (250) but no Mainland VAT, and its IP sale to a Hong Kong company no VAT or stamp duty — it is established in Hong Kong (got [], 250.0)
+ok   flow cache (口径 D31): the same share transfer of a Mainland-managed target — Hong Kong stamp duty for a Hong Kong target, Singapore's for a Singapore one, whatever the process evaluated before (got [('HK', 'hk.stamp.buyer'), ('HK', 'hk.stamp.seller')], [('SG', 'sg.stamp.buyer')], [('SG', 'sg.stamp.buyer')])
+ok   royalty (口径 D26): the Arrangement's 7% applies to the royalty net of the VAT, 500 / 1.06: 33.02 (got 33.02)
+ok   VAT Law: on 2025-12-31 no VAT is computed (口径 D30: outside the library); from 2026-01-01 6% of the sales amount — 63.6 on a price without VAT, 60 on one with it (实施条例 第十六条) (got [], [('cn.vat.law.royalty', 63.6)], [('cn.vat.law.royalty', 60.0)])
+ok   services elsewhere: a new servicer takes the service over, no asset moves, no step
+ok   new company: the client's HOLD keeps its stated up2 facts; HOLD_NEW's side of up2 is not carried (ULT's side is)
+ok   new company: Singapore's statutory 17% is its headline rate; not listed, its dividend not deductible (design)
+ok   new company: a question about its side has its own address
+ok   new company: an answer about HOLD_NEW in Singapore reaches only that candidate, never the client's own HOLD (got {'HK': True, 'SG': False, 'CN': None})
+ok   domestic interest: 25% charged on the recipient, 15% deducted by the high-tech payer = 100 (got 100.00)
+ok   domestic dividend between residents: exempt (got 0.00)
+ok   SG GST: 9% x (1 - 60%) x 1000 = 36 unrecoverable (got [36.0])
+ok   years: recurring flows repeat with the year in their id (['exit', 'up1', 'up1@2027', 'up2', 'up2@2027'])
+ok   years: two-year bounds hold (402.50, 968.50)
+96 checks, 0 failures

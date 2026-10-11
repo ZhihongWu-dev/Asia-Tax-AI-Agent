@@ -1,0 +1,500 @@
+FAQs
+|
+Feedback
+A-
+A+
+Stamp Duties (Relief from Stamp Duty upon Transfer of Assets between Associated Permitted Entities) Rules 2014
+Status:
+Current version
+as at 09 Oct 2026
+Print
+Select the provisions you wish to print using the checkboxes and then click the relevant "Print"
+Select All
+Clear All
+Print - HTML
+Print - PDF
+Print - Word
+Stamp Duties (Relief from Stamp Duty upon Transfer of Assets between Associated Permitted Entities) Rules 2014
+Table of Contents
+Enacting Formula
+1 Citation and commencement
+2 Definitions
+3 Associated entities
+4 Conditions for relief from ad valorem stamp duty
+5 Statutory declaration
+6 Subsequent disallowance of relief for instruments executed before 16th January 2014
+7 Subsequent disallowance of relief for instruments executed on or after 16th January 2014
+8 Commissioner to be notified of certain occurrences
+9 Revocation
+FIRST SCHEDULE
+Associated permitted entities
+SECOND SCHEDULE
+Required period of association
+THIRD SCHEDULE
+Valuable consideration
+FOURTH SCHEDULE
+Conditions for liquidation or winding up
+Select All
+Clear All
+Print
+HTML
+PDF
+Word
+Stamp Duties (Relief from Stamp Duty upon Transfer of Assets between Associated Permitted Entities) Rules 2014
+Status:
+Current version
+as at 09 Oct 2026
+Please check the legislation timeline to ensure that you are viewing the correct legislation version. See also
+FAQ B3
+.
+Hide Amendment Annotation
+Add to My Collections
+Amendments RSS Feed
+Print
+Help
+Timeline
+Document
+Provision
+Versions
+18 Feb 2005
+or
+find current version as at
+18 Feb 2005
+18 Feb 2005
+S 28/2014
+31 Jan 2002
+2002 RevEd
+Table of Contents
+Reset
+Get Provisions
+Whole Document
+Stamp Duties (Relief from Stamp Duty upon Transfer of Assets between Associated Permitted Entities) Rules 2014
+Status:
+Current version as at 09 Oct 2026
+Timeline
+Authorising Act
+Amendment Annotation
+Loading...
+Actions
+Add to My Collections
+Amendments RSS Feed
+Document
+Provision
+31 Jan 2002
+2002 RevEd
+18 Feb 2005
+S 28/2014
+Search within Legislation
+Exit Search
+Search Results
+No. S 28
+Stamp Duties Act
+(CHAPTER 312)
+Stamp Duties
+(Relief from Stamp Duty upon
+Transfer of Assets between
+Associated Permitted Entities)
+Rules 2014
+In exercise of the powers conferred by sections 15 and 77 of the Stamp Duties Act, the Minister for Finance hereby makes the following Rules:
+Citation and commencement
+1.
+These Rules may be cited as the Stamp Duties (Relief from Stamp Duty upon Transfer of Assets between Associated Permitted Entities) Rules 2014 and shall be deemed to have come into operation on 18th February 2005.
+Definitions
+2.
+In these Rules, unless the context otherwise requires —
+“asset”, in relation to a transfer, conveyance or assignment of the asset by a transferor entity as referred to in rule 4, means any of the following:
+(
+a
+)
+immovable property or any interest thereof held by the entity;
+(
+b
+)
+stocks or any interest thereof of any company held by the entity;
+(
+c
+)
+in the case of an instrument executed on or after 1st January 2006, interest under any mortgage or debenture held by the entity;
+“common holding entity”, in relation to 2 other permitted entities, means the permitted entity that is a holding entity of both of those other entities;
+“first common holding entity”, in relation to 2 other permitted entities, means the permitted entity that is a common holding entity of both of those other entities but is not a holding entity of any other common holding entity of both of those other entities;
+“group”, in relation to entities, means a group of 2 or more entities where each entity —
+(
+a
+)
+is a holding entity of the other or any of the other entities; or
+(
+b
+)
+has the other or one of the other entities as its holding entity,
+or both;
+“holding entity”, in relation to another permitted entity —
+(
+a
+)
+in the case of an instrument executed during the period from 18th February 2005 to 15th January 2014 (both dates inclusive) —
+(i)
+where the other permitted entity is a company (whether with limited liability or otherwise), has the same meaning as in section 5(4) of the Companies Act (Cap. 50) read with section 5(1)(
+a
+) or (
+b
+) thereof (with the necessary modifications for a holding entity that is a permitted entity other than a corporation); and
+(ii)
+where the other permitted entity is a limited liability partnership, means the permitted entity that controls more than half of the voting power in the limited liability partnership, whether directly or through any intermediary that is a permitted entity; and
+(
+b
+)
+in the case of an instrument executed on or after 16th January 2014, means a permitted entity that controls more than half of the voting power in the other permitted entity, whether directly or through any intermediary that is a permitted entity;
+“immediate holding entity”, in relation to another permitted entity —
+(
+a
+)
+in the case of an instrument executed during the period from 18th February 2005 to 15th January 2014 (both dates inclusive) —
+(i)
+where the other permitted entity is a company (whether with limited liability or otherwise), has the same meaning as in section 5(4) of the Companies Act read with section 5(1)(
+a
+) thereof (with the necessary modifications where the immediate holding entity is a permitted entity other than a corporation); and
+(ii)
+where the other permitted entity is a limited liability partnership, means the permitted entity that controls more than half of the voting power in the limited liability partnership directly and not through any intermediary; and
+(
+b
+)
+in the case of an instrument executed on or after 16th January 2014, means a permitted entity that controls more than half of the voting power in the other permitted entity directly and not through any intermediary;
+“permitted entity” means —
+(
+a
+)
+in the case of an instrument executed during the period from 18th February 2005 to 14th February 2007 (both dates inclusive), a company with limited liability; and
+(
+b
+)
+in the case of an instrument executed on or after 15th February 2007 —
+(i)
+a company;
+(ii)
+a statutory body; or
+(iii)
+a limited liability partnership where the contributed capital of the partnership is entirely held by permitted entities;
+“reckonable share capital” means all the issued share capital (by whatever name called) of a company other than issued share capital which consists of shares that do not entitle the holder thereof to the right to vote at a general meeting;
+“transferee entity” means a permitted entity to whom any beneficial interest in an asset is transferred, conveyed or assigned;
+“transferor entity” means a permitted entity by whom any beneficial interest held by it in an asset is transferred, conveyed or assigned;
+“ultimate holding entity” means a permitted entity that —
+(
+a
+)
+is the holding entity of another permitted entity; and
+(
+b
+)
+does not have a holding entity;
+“voting capital” means —
+(
+a
+)
+in relation to a company, its reckonable share capital; and
+(
+b
+)
+in relation to a limited liability partnership, its capital that has been contributed to the partnership by its partners.
+Associated entities
+3.
+—(1) For the purposes of these Rules, 2 permitted entities are associated with each other if the following circumstances apply:
+(
+a
+)
+in the case of an instrument executed during the period from 18th February 2005 to 15th January 2014 (both dates inclusive) —
+(i)
+one of those permitted entities is the beneficial owner (directly or indirectly) of not less than 75% of the voting capital of the other permitted entity; and where the first‑mentioned permitted entity is an indirect beneficial owner of any part of the voting capital of the other permitted entity, the first‑mentioned permitted entity has more than half of the voting power in respect of the other permitted entity; or
+(ii)
+a third permitted entity is a holding entity of those 2 permitted entities, and the third permitted entity is the beneficial owner (directly or indirectly) of not less than 75% of the voting capital of each of the 2 permitted entities; and where the third permitted entity is an indirect beneficial owner of any part of the voting capital of any of the 2 permitted entities, the third permitted entity has more than half of the voting power in respect of that permitted entity; and
+(
+b
+)
+in the case of an instrument executed on or after 16th January 2014 —
+(i)
+one of those permitted entities is a holding entity of the other permitted entity, and is the beneficial owner (whether directly or indirectly) of the voting capital and voting power in the other permitted entity to any extent specified in the First Schedule; or
+(ii)
+a third permitted entity is a holding entity of those 2 permitted entities, and is the beneficial owner (whether directly or indirectly) of the voting capital and voting power in each of those 2 permitted entities to any extent specified in the First Schedule.
+(2) For the purposes of paragraph (1)(
+b
+), where the permitted entity or a third permitted entity, as the case may be, is, through any particular chain of one or more entities (each referred to in this rule as an intermediate entity), an indirect beneficial owner of the voting capital and voting power in the other permitted entity or either of the 2 permitted entities, as the case may be (each such permitted entity referred to in this rule as the subject permitted entity), such ownership shall be disregarded unless —
+(
+a
+)
+each intermediate entity is a permitted entity; and
+(
+b
+)
+each entity in the chain, from and including the permitted entity or third permitted entity, as the case may be, up to and including the last intermediate entity that directly holds beneficial ownership of any voting capital and voting power in the subject permitted entity, is a beneficial owner of the voting capital and voting power, to any extent specified in the First Schedule —
+(i)
+in the next intermediate entity in the chain; and
+(ii)
+in the subject permitted entity.
+(3) Notwithstanding paragraphs (1)(
+b
+) and (2)(
+b
+), where the beneficial ownership of the voting capital and voting power in the subject entity held by the permitted entity or third permitted entity (to the extent specified in the First Schedule) is a cumulative total arising from a combination of —
+(
+a
+)
+direct beneficial ownership and any number of chains of indirect beneficial ownerships; or
+(
+b
+)
+any number of chains of indirect beneficial ownership,
+then the requirements of the First Schedule shall not apply in relation to any beneficial ownership of the voting capital and voting power in the subject entity —
+(i)
+held directly by the permitted entity or third permitted entity, as the case may be; or
+(ii)
+held directly or indirectly, as the case may be, by any intermediate entity.
+Conditions for relief from ad valorem stamp duty
+4.
+For the purposes of section 15(1) of the Act, the conditions for relief from ad valorem stamp duty on an instrument upon the transfer of any asset from a transferor entity to a transferee entity are as follows:
+(
+a
+)
+the instrument —
+(i)
+is executed during the period from 18th February 2005 to 15th January 2014 (both dates inclusive) and has the effect of transferring, conveying or assigning the beneficial interest in the asset owned by the transferor entity to the transferee entity; or
+(ii)
+is executed on or after 16th January 2014 for the purpose of or in connection with the transfer, conveyance or assignment of the beneficial interest in the asset from the transferor entity to the transferee entity, and would, but for these Rules, be chargeable with ad valorem stamp duty;
+(
+b
+)
+the transferor entity and the transferee entity are part of a group that comprises only permitted entities;
+(
+c
+)
+the transfer, conveyance or assignment of the beneficial interest in the asset is not a conveyance on sale referred to in section 31(1) or (2) of the Act;
+(
+d
+)
+at the time of execution of the instrument —
+(i)
+in the case of an instrument that is executed during the period from 18th February 2005 to 15th January 2014 (both dates inclusive), the transferor entity and the transferee entity have been associated with each other for at least 12 months prior to the transfer, conveyance or assignment, except where the transferee entity was incorporated specially for the purpose of the transfer, conveyance or assignment of the asset; and
+(ii)
+in the case of an instrument that is executed on or after 16th January 2014, the permitted entities in the group to which the transferor entity and the transferee entity belong are associated with each other and the periods of association between them are as specified in the second column of the Second Schedule, except —
+(A)
+in the circumstances set out in the third column thereof; or
+(B)
+where the Commissioner otherwise allows in writing;
+(
+e
+)
+valuable consideration for the transfer, conveyance or assignment that is provided by the transferee entity and paid to the transferor entity is in the form of —
+(i)
+cash;
+(ii)
+stock in the transferee entity (where it is a company);
+(iii)
+voting capital in the transferee entity (where it is a limited liability partnership); or
+(iv)
+a combination of sub‑paragraphs (i) and (ii), or (i) and (iii), as the case may be,
+and is in the amount and provided by or at the time specified in the Third Schedule;
+(
+f
+)
+the transfer, conveyance or assignment is made for a bona fide commercial reason;
+(
+g
+)
+unless the Commissioner otherwise allows in writing —
+(i)
+in the case of an instrument that is executed during the period from 18th February 2005 to 15th January 2014 (both dates inclusive), the transfer, conveyance or assignment is in respect of the entire beneficial interest held by the transferor entity in the asset; and
+(ii)
+in the case of an instrument that is executed on or after 16th January 2014 —
+(A)
+where the transfer, conveyance or assignment relates to any asset referred to in paragraph (
+a
+) or (
+c
+) of the definition of “asset” in rule 2, the transferor entity transfers, conveys or assigns to the transferee entity the entire beneficial interest in the asset held by the transferor entity such that the transferor entity has no beneficial interest in the asset following the transfer, conveyance or assignment; and
+(B)
+where the transfer, conveyance or assignment relates to any asset referred to in paragraph (
+b
+) of the definition of “asset” in rule 2, the transferor entity transfers, conveys or assigns to the transferee entity the entire beneficial interest in all of such assets held by the transferor entity in the company such that the transferor entity has no beneficial interest in all such assets following the transfer, conveyance or assignment;
+(
+h
+)
+the instrument was made pursuant to or in connection with an arrangement under which the consideration or any part of it for the transfer, conveyance or assignment is (directly or indirectly) provided by or received from —
+(i)
+the transferee entity;
+(ii)
+a permitted entity associated with the transferee entity; or
+(iii)
+a financial institution acting in the capacity of a lender of funds to the transferee entity;
+(
+i
+)
+the beneficial interest in the asset was previously (directly or indirectly) transferred, conveyed or assigned to the transferor entity by any entity (whether or not a permitted entity) which —
+(i)
+was associated with the transferor entity; or
+(ii)
+was not associated with the transferor entity, where —
+(A)
+duty was paid on the instrument for the transfer, conveyance or assignment to the transferor entity;
+(B)
+relief for such duty was allowed; or
+(C)
+such duty was remitted;
+(
+j
+)
+in the case of an instrument that is executed on or after 16th January 2014, unless the Commissioner otherwise allows, the application for relief is made —
+(i)
+where the instrument is executed in Singapore, within 14 days after such execution; and
+(ii)
+where the instrument is executed outside Singapore, within 30 days after such execution;
+(
+k
+)
+in the case of an instrument executed on or after 16th January 2014, where the application for relief is made before the execution of the instrument, unless the Commissioner otherwise allows, the instrument is executed within 4 months after any indication given by the Commissioner that ad valorem stamp duty will not be chargeable on the instrument on the basis of the likelihood of the other conditions being satisfied.
+Statutory declaration
+5.
+Where a claim is made for relief under section 15(1) of the Act, the Commissioner may require the delivery to him of a statutory declaration of such matter in such form as he may direct, made by an advocate and solicitor or such other person as the Commissioner may allow, and such further evidence as the Commissioner considers necessary.
+Subsequent disallowance of relief for instruments executed before 16th January 2014
+6.
+—(1) The matters referred to in section 15(3)(
+b
+) of the Act in relation to any instrument referred to in rule 4(
+a
+)(i) are any of the following:
+(
+a
+)
+the transferor entity and the transferee entity cease to be associated within the meaning of rule 3(1)(
+a
+) within 2 years from the date of the acquisition of the asset by the transferee entity by reason of a change in the percentage of beneficial ownership of —
+(i)
+the transferor entity in the transferee entity; or
+(ii)
+a holding entity of both the transferor entity and the transferee entity in either or both of those entities,
+unless such change is in consequence of —
+(A)
+a reconstruction;
+(B)
+an amalgamation;
+(C)
+a liquidation or winding up where the conditions specified in paragraph (2) are satisfied; or
+(D)
+a relevant offer of shares of the existing issued share capital of the transferee entity or the transferor entity (in the case of a company), or a relevant offer of voting capital in the transferee entity or transferor entity (in the case of a limited liability partnership);
+(
+b
+)
+the transferee entity disposes of the asset that it has acquired within 2 years from the date of acquisition of the asset, unless such disposal is in consequence of —
+(i)
+a reconstruction;
+(ii)
+an amalgamation; or
+(iii)
+a liquidation or winding up where the assets of the transferee entity are distributed in specie to the immediate holding entity of the transferee entity, and for the period of 2 years from the date of acquisition by the transferee entity —
+(A)
+the immediate holding entity retains the assets of the transferee entity; and
+(B)
+the immediate holding entity remains associated, within the meaning of rule 3(1)(
+a
+), with the transferor entity;
+(
+c
+)
+the instrument was not executed within a period of 12 months from the date of the agreement (written or otherwise) for the acquisition of the asset by the transferee entity.
+(2) Unless the Commissioner otherwise allows, the conditions referred to in paragraph (1)(
+a
+)(C) are as follows:
+(
+a
+)
+in the case of a liquidation or winding up of the transferor entity —
+(i)
+the transferor entity is not the ultimate holding entity of the transferee entity; and
+(ii)
+the transferee entity remains associated with any entity which the transferor entity was directly associated with at the time of the liquidation or winding up (in both cases within the meaning of rule 3(1)(
+a
+)) for a period of 2 years from the date of the acquisition of the asset by the transferee entity; and
+(
+b
+)
+in the case of a liquidation or winding up of the transferee entity, the transferor entity remains associated with any permitted entity which the transferee entity was directly associated with at the time of the liquidation or winding up (in both cases within the meaning of rule 3(1)(
+a
+)) for a period of 2 years from the date of the acquisition of the asset by the transferee entity.
+(3) In this rule, “relevant offer of shares”, in relation to a transferee entity or a transferor entity (as the case may be) that is a company, means —
+(
+a
+)
+the initial public offer; or
+(
+b
+)
+a subsequent offer,
+for subscription or sale of shares (including stock) of the company at their nominal value where —
+(i)
+the shares are listed on the Singapore Exchange, or listed both on the Singapore Exchange and elsewhere; and
+(ii)
+the total issued shares that are offered to the public do not exceed the prevailing minimum requirement set by the Singapore Exchange for a main board listing of the shares at the time of the initial public offer or subsequent offer, as the case may be.
+Subsequent disallowance of relief for instruments executed on or after 16th January 2014
+7.
+—(1) The matters referred to in section 15(3)(
+b
+) of the Act in relation to any instrument referred to in rule 4(
+a
+)(ii) are any of the following:
+(
+a
+)
+the transferor entity and the transferee entity cease to be associated with each other within 2 years from the date of execution of the instrument (referred to in this rule as the initial period) by reason of a change in the percentage of beneficial ownership of the voting capital or voting power, as the case may be —
+(i)
+if the transferor entity and the transferee entity were associated with each other in the circumstances referred to in rule 3(1)(
+b
+)(i), held by the transferor entity in the transferee entity; or
+(ii)
+if the transferor entity and the transferee entity were associated with each other in the circumstances referred to in rule 3(1)(
+b
+)(ii), held by the holding entity of the transferor entity and the transferee entity in either or both of those entities,
+unless such change is in consequence of —
+(A)
+a reconstruction or an amalgamation; or
+(B)
+a liquidation or winding up of the transferor entity or the transferee entity where the conditions specified in the Fourth Schedule are satisfied or where the Commissioner has waived in writing compliance with those conditions;
+(
+b
+)
+the transferee entity disposes of the asset that it has acquired within the initial period, unless such disposal is in consequence of —
+(i)
+a reconstruction or an amalgamation; or
+(ii)
+a liquidation or winding up of the transferee entity where —
+(A)
+the assets of the transferee entity are distributed in specie to the immediate holding entity of the transferee entity; and
+(B)
+for the entire of the initial period, the immediate holding entity retains all those assets and remains associated with the transferor entity;
+(
+c
+)
+unless the Commissioner otherwise allows, the legal interest in the asset is not transferred to the transferee entity within a period of 12 months after the date of execution of the instrument.
+(2) In this rule, the liquidation of a transferor entity or a transferee entity that is a private company includes the conversion, on or after 16th January 2014, of the entity to a limited liability partnership pursuant to section 21 of the Limited Liability Partnerships Act (Cap. 163A), unless, following the conversion, the transferor entity or the transferee entity (as the case may be) ceases to be associated with the limited liability partnership within the meaning of rule 3(1)(
+b
+).
+Commissioner to be notified of certain occurrences
+8.
+—(1) Where a claim for relief under section 15(1) of the Act has been allowed and any matter specified in rule 6 or 7, as the case may be, occurs, each entity which was a party to the instrument shall notify the Commissioner of the circumstances of the occurrence within 30 days from the date of the occurrence.
+(2) Any entity which fails to comply with paragraph (1) shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $1,000.
+Revocation
+9.
+The Stamp Duties (Relief from Stamp Duty upon Transfer of Assets between Associated Companies) Rules (R 2) are revoked.
+Made this 14th day of January 2014.
+LIM SOO HOON
+Permanent Secretary
+(Finance) (Performance),
+Ministry of Finance,
+Singapore.
+[R54.1.0004 Vol. 4; AG/LLRD/SL/312/2005/2 Vol. 4]
+Singapore Statutes Online
+FAQs
+Feedback
+Sitemap
+Report Vulnerability
+Privacy Statement
+Terms of Use
+© 2026 Attorney-General's Chambers of Singapore,
+Last updated 9 Oct 2026
+Singapore Statutes Online is provided by the Legislation Division of the Attorney-General's Chambers of Singapore.

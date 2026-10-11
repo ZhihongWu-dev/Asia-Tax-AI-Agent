@@ -1,0 +1,20 @@
+sg_s45.01  ok   dtr without cor  conditions: payee.ppt, payer.incurred_in_production_of_income, payer.loan_purpose_income_producing
+sg_s45.02  ok   dtr without cor  conditions: payee.ppt, payer.incurred_in_production_of_income, payer.loan_purpose_income_producing
+sg_s45.03  ok   dtr without cor  conditions: payee.government_exempt_condition_met, payee.ppt, payer.incurred_in_production_of_income, payer.loan_purpose_income_producing
+sg_s45.04  ok   dtr without cor  conditions: payer.gst_input_fully_recoverable, payer.gst_recovery_ratio, payer.incurred_in_production_of_income
+sg_s45.05  ok   dtr without cor  our effective rate 6.00% (rate 10% on 60% of gross)  conditions: payee.ppt, payer.gst_input_fully_recoverable, payer.gst_recovery_ratio, payer.incurred_in_production_of_income
+sg_s45.06  ok   dtr without  conditions: payer.incurred_in_production_of_income, payer.loan_purpose_income_producing
+sg_s45.07  ok   dtr without  conditions: payer.gst_input_fully_recoverable, payer.gst_recovery_ratio, payer.incurred_in_production_of_income
+sg_s45.08  ok   dtr without  conditions: payer.incurred_in_production_of_income, payer.loan_purpose_income_producing
+sg_s45.09  ok   dtr without due penalty cor  conditions: payee.ppt, payer.incurred_in_production_of_income, payer.loan_purpose_income_producing
+sg_s45.10  ok   dtr without due penalty cor  conditions: payee.ppt, payer.incurred_in_production_of_income, payer.loan_purpose_income_producing  statutory due 2026-08-15, IRAS practice 2026-08-17
+sg_s45.11  ok   dtr without due penalty cor  conditions: payee.ppt, payer.incurred_in_production_of_income, payer.loan_purpose_income_producing  statutory due 2027-05-15, IRAS practice 2027-05-18
+sg_s45.12  ok   dtr without due penalty cor_rule  conditions: payee.ppt, payer.incurred_in_production_of_income, payer.loan_purpose_income_producing  statutory due 2025-03-15, IRAS practice 2025-03-17
+sg_s45.13  ok   dtr without due penalty cor_rule  conditions: payee.ppt, payer.incurred_in_production_of_income, payer.loan_purpose_income_producing  statutory due 2025-11-15, IRAS practice 2025-11-17
+sg_s45.14  ok   dtr without cor  conditions: payee.ppt, payer.gst_input_fully_recoverable, payer.gst_recovery_ratio, payer.incurred_in_production_of_income
+sg_s45.15  ok   dtr without cor  conditions: payee.ppt, payer.gst_input_fully_recoverable, payer.gst_recovery_ratio, payer.incurred_in_production_of_income
+sg_s45.16  ok   dtr without  conditions: payer.gst_input_fully_recoverable, payer.gst_recovery_ratio, payer.incurred_in_production_of_income
+sg_s45.17  ok   dtr without  conditions: payer.gst_input_fully_recoverable, payer.gst_recovery_ratio, payer.incurred_in_production_of_income
+sg_iras_ex.01  ok   nominal_due penalty  effective due 2025-06-16 (rolled from a Sunday)
+sg_iras_ex.02  ok   nominal_due penalty  effective due 2025-07-15
+19 labels, 0 with differences

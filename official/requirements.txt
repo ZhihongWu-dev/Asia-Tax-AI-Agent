@@ -1,0 +1,6 @@
+# Versions used for the verified full build (Python 3.9.23).
+PyMuPDF==1.26.5
+beautifulsoup4==4.14.3
+requests==2.32.5
+openpyxl==3.1.5
+numpy==2.0.2

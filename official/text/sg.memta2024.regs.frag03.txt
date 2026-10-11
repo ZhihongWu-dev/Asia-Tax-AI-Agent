@@ -1,0 +1,964 @@
+PART 4
+ADJUSTMENTS TO FANIL AND
+GLOBE INCOME OR LOSS
+Division 1 —
+Preliminary provisions
+Purpose and application of this Part
+10.
+—(1) This Part sets out the adjustments that must or may be made to the FANIL of a constituent entity for a financial year for the purpose of determining its GloBE income or loss for that financial year.
+(2) This Part applies to a standalone JV or an entity of a JV group with the following modifications:
+(
+a
+)
+except in sub-paragraph (
+b
+), references to an MNE group are to the standalone JV or the JV group of which the entity is a part;
+(
+b
+)
+references to the filing entity of an MNE group are to the filing entity of the MNE group to which the standalone JV or entity is connected;
+(
+c
+)
+references to the ultimate parent entity of an MNE group are to the standalone JV or the joint venture of the JV group;
+(
+d
+)
+references to a constituent entity are to the standalone JV or the entity;
+(
+e
+)
+other modifications set out in the regulations.
+FANIL adjusted to be before tax
+11.
+The FANIL of a constituent entity of an MNE group for a financial year must be adjusted by adding back any positive amounts and excluding any negative amounts of tax expense (including a deferred tax expense) in respect of the following, as reflected in the FANIL:
+(
+a
+)
+a covered tax (whether or not the income to which the tax relates is excluded from its GloBE income or loss);
+(
+b
+)
+any MTT, or any qualified IIR;
+(
+c
+)
+any DTT, or any qualified domestic minimum top‑up tax;
+(
+d
+)
+a qualified UTPR;
+(
+e
+)
+any disqualified refundable imputation tax (as defined in paragraph 1(7) of the First Schedule to the Act);
+(
+f
+)
+any tax payable by a life insurer in respect of amounts accruing to or paid to policyholders.
+FANIL must not reflect share acquisition adjustment
+12.
+—(1) The FANIL of a constituent entity of an MNE group for a financial year must be adjusted so that it does not reflect any share acquisition adjustment.
+(2) In this regulation, “share acquisition adjustment” means a purchase accounting adjustment to the consolidated financial statements of an ultimate parent entity of an MNE group arising as a result of an entity becoming a constituent entity of the MNE group due to the acquisition of ownership interests in the entity by an existing constituent entity of the MNE group.
+(3) This regulation does not apply to a share acquisition adjustment resulting from an acquisition of ownership interests before 1 December 2021 if the constituent entities of the MNE group do not have sufficient records to identify the adjustment made with reasonable accuracy.
+Exclusion of excluded dividends
+13.
+—(1) Subject to paragraphs (2) and (3), the FANIL of a constituent entity of an MNE group for a financial year must be adjusted to exclude any amount of excluded dividends received or accrued by that constituent entity.
+(2) The following are not to be excluded under paragraph (1):
+(
+a
+)
+a dividend or other distribution paid by another constituent entity of that MNE group that is treated as an expense in that constituent entity’s FANIL;
+(
+b
+)
+a dividend or other distribution paid on an interest in an entity that is a debt interest;
+(
+c
+)
+a dividend or other distribution paid in respect of additional tier one capital (as defined in regulation 24(3)).
+(3) The filing entity of an MNE group may make an election in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules for all the dividends or other distributions received or accrued by any constituent entity of that MNE group for a financial year from its portfolio shareholdings not to be treated as excluded dividends for the purpose of this regulation.
+(4) An election under paragraph (3) must not be revoked for the financial year for which it is made or for any of the subsequent 4 financial years, and any such revocation has no effect.
+(5) If an election under paragraph (3) is revoked for a financial year, another election under that paragraph must not be made (whether in Singapore or in another jurisdiction) in respect of the constituent entity for that or any of the subsequent 4 financial years, and any such election has no effect.
+(6) In paragraph (2)(
+b
+), “debt interest”, in relation to an entity, means an interest that is economically a debt obligation of the entity, and that is not an ownership interest in the entity.
+Adjustments for excluded equity gain or loss
+14.
+—(1) The FANIL of a constituent entity of an MNE group for a financial year must be adjusted for any excluded equity gain or loss as follows:
+(
+a
+)
+in the case of any gain or loss from changes in fair value of a direct ownership interest in another entity or the impairment of such interest, other than a portfolio shareholding — by excluding the amount of the gain or adding back the amount of the loss or impairment as if it were a gain or loss (determined at the relevant time) from a change in fair value of a direct ownership interest or the impairment of such interest in an entity described in paragraph (2);
+[S 860/2025 wef 31/12/2025]
+(
+b
+)
+in the case of a profit or loss in respect of a direct ownership interest in another entity included under the equity method of accounting — by excluding the amount of the profit or adding back the amount of the loss determined at the relevant time;
+(
+c
+)
+in the case of a gain or loss from a disposition of a direct ownership interest in another entity other than a portfolio shareholding — by excluding the amount of the gain or adding back the amount of the loss as if it were a gain or loss (determined at the relevant time) from a disposition of a direct ownership interest in an entity described in paragraph (2).
+(2) The entity in paragraph (1)(
+a
+) or (
+c
+) is one to which the members of the MNE group have, at the relevant time for that provision, direct ownership interests between them that entitle them to 10% or more of that entity’s profits, capital, reserves and voting rights.
+(3) The “relevant time” is —
+(
+a
+)
+in the case of paragraph (1)(
+a
+) and (
+b
+) — the end of the financial year in which the gain, profit or loss arose; and
+(
+b
+)
+in the case of paragraph (1)(
+c
+) — immediately before the disposition.
+Included revaluation method gain or loss
+15.
+—(1) The FANIL of a constituent entity of an MNE group for a financial year must be adjusted by adding any amount of gain, and subtracting any amount of loss, for any included revaluation method gain or loss for that financial year.
+(2) In this regulation —
+“included revaluation method gain or loss” means a gain or loss before tax arising as a result of the use of an accounting method or practice that —
+(
+a
+)
+periodically adjusts the carrying value of the constituent entity’s property, plant and equipment to its fair value;
+(
+b
+)
+records the changes in value in other comprehensive income; and
+(
+c
+)
+does not subsequently report the gains or losses recorded in other comprehensive income through the profit and loss account;
+“property, plant and equipment” means any tangible asset that —
+(
+a
+)
+is held by an entity for its use in the production or supply of goods or services, for rental to another person or entity, or for its administrative purposes; and
+(
+b
+)
+is expected to be used in more than one financial year.
+Adjustments for asymmetric foreign exchange gains or losses
+16.
+—(1) This regulation applies where the accounting currency and the tax currency of a constituent entity of an MNE group are different.
+(2) Where, for a financial year —
+(
+a
+)
+the constituent entity has a gain or loss as a result of fluctuations in the exchange rate between its accounting currency and its tax currency; and
+(
+b
+)
+the gain or loss is reflected differently in its taxable income and in its FANIL,
+its FANIL must be adjusted so that the gain or loss is reflected in its FANIL on the same basis it is reflected in its taxable income.
+(3) Where, for a financial year —
+(
+a
+)
+the constituent entity has a gain or loss as a result of fluctuations in the exchange rate between its accounting currency and a third currency;
+(
+b
+)
+the gain or loss is reflected in its FANIL; and
+(
+c
+)
+the gain or loss is reflected differently in its taxable income,
+its FANIL must be adjusted to exclude that gain or loss.
+(4) Where, for a financial year —
+(
+a
+)
+the constituent entity has a gain or loss as a result of fluctuations in the exchange rate between its tax currency and a third currency; and
+(
+b
+)
+the gain or loss is reflected differently in its FANIL,
+its FANIL must be adjusted so that the gain or loss is fully reflected in its FANIL (whether or not it is reflected in its taxable income).
+(5) In this regulation —
+“accounting currency” means the functional currency in which the financial statements of the constituent entity are kept;
+“tax currency” means the currency in which the profits of the constituent entity are determined for the purposes of determining its liability to covered taxes in the jurisdiction in which it is located;
+“taxable income” means income subject to, and determined for the purposes of, covered taxes;
+“third currency” means any currency which is neither the accounting currency nor the tax currency of the constituent entity.
+Exclusion of expenses for illegal payments, fines and penalties
+17.
+—(1) Where the FANIL of a constituent entity of an MNE group for a financial year reflects —
+(
+a
+)
+expenses incurred for illegal payments; or
+(
+b
+)
+expenses incurred for fines or penalties of EUR 50,000 or more,
+the FANIL must be adjusted to exclude those expenses.
+(2) In paragraph (1)(
+a
+), a payment is illegal if the making of that payment is, or forms part of conduct which is, an offence under the law of —
+(
+a
+)
+the jurisdiction where the constituent entity is located; or
+(
+b
+)
+the jurisdiction where the ultimate parent entity is located.
+(3) In paragraph (1)(
+b
+), where more than one fine or penalty is accrued in respect of the same conduct, or for continuing conduct, those fines or penalties must be aggregated.
+Adjustment for changes in accounting policies and prior period errors
+18.
+Where there has been a change to the net assets and liabilities of a constituent entity of an MNE group at the start of a financial year, the FANIL of that constituent entity for that financial year must be adjusted to include the amount of that change if the change is attributable to —
+(
+a
+)
+a change in accounting policy that affects income or expenses included in the GloBE income or loss of that constituent entity for any financial year; or
+(
+b
+)
+a correction of an error reflected in the GloBE income or loss of that constituent entity for a previous financial year, except to the extent the correction of the error results in the application of regulation 40(2).
+Accrued pension expense
+19.
+—(1) This regulation applies in a financial year where a constituent entity of an MNE group —
+(
+a
+)
+has made any contribution to a pension fund in the financial year;
+(
+b
+)
+has received any amount from the pension fund in the financial year; or
+(
+c
+)
+otherwise has any amount of income or expense relating to the pension fund reflected in its FANIL.
+(2) The FANIL of the constituent entity for the financial year must be adjusted by deducting an amount A + B − C, where —
+(
+a
+)
+A is the amount of income (expressed as a positive amount) or expense (expressed as a negative amount) for the financial year that has accrued in respect of the pension fund in the FANIL of the constituent entity;
+(
+b
+)
+B is the amount of contributions made to the pension fund by the constituent entity in the financial year; and
+(
+c
+)
+C is the amount received by the constituent entity from the pension fund in the financial year.
+Treatment of tax credits
+20.
+—(1) The FANIL of a constituent entity of an MNE group for a financial year must be adjusted so that —
+(
+a
+)
+qualified refundable tax credits are accounted for as income (and not as a negative amount of tax expense);
+(
+b
+)
+tax credits that are marketable transferable tax credits are accounted for as income or loss under paragraph (2), (3) or (4) (and not as a negative amount of tax expense); and
+(
+c
+)
+subject to paragraph (5), other tax credits are accounted for as a negative amount of tax expense in determining the adjusted covered taxes under paragraph 1 of the First Schedule to the Act (and regulation 11 applies accordingly); and are excluded from the FANIL to the extent they are included in the consolidated financial statements as income in the FANIL.
+(2) For the purpose of paragraph (1)(
+a
+) and (
+b
+), a qualified refundable tax credit or marketable transferable tax credit is accounted for as income as follows:
+(
+a
+)
+if the constituent entity is the originator of the tax credit and the tax credit is related to the acquisition or construction of assets and the originator has an accounting policy of reducing the carrying value of its assets in respect of such tax credits or recognising such tax credits as deferred income, the originator must follow the accounting policy;
+(
+b
+)
+in any other case, the face value of the tax credit is treated as income in the financial year in which the entitlement under the tax credit accrues.
+(3) For the purpose of paragraph (1)(
+b
+), where the constituent entity is the originator of the marketable transferable tax credit —
+(
+a
+)
+if the tax credit is transferred by the constituent entity in the financial year in which it is granted or within 15 months after that financial year, the consideration for the transfer must be accounted for as income for the financial year in which it is granted;
+(
+b
+)
+if the tax credit is not transferred by the constituent entity within that period, the value of the tax credit must be accounted for as income when accrued as income according to the accounting policy of the constituent entity;
+(
+c
+)
+if the tax credit is transferred by the constituent entity after that period for a consideration less than the remaining value of the tax credit, the difference between the remaining value of the tax credit and the consideration received must be accounted for as a loss for the financial year in which the transfer occurs; and
+(
+d
+)
+if the tax credit expires, any unutilised value of the tax credit must be accounted for as a loss (or as an increase to the carrying value of the asset where paragraph (2)(
+a
+) applies) for the financial year in which the tax credit expires.
+(4) For the purpose of paragraph (1)(
+b
+), where the constituent entity is a purchaser of the marketable transferable tax credit —
+(
+a
+)
+if any part of the tax credit is utilised by the constituent entity in a financial year, the following amount must be accounted for as income for that financial year:
+where —
+(i)
+A is the amount of the tax credit utilised;
+(ii)
+B is the full value of the tax credit; and
+(iii)
+C is the price paid by the constituent entity for the tax credit;
+(
+b
+)
+if the tax credit is transferred by the constituent entity, the following amount must be accounted for as income or a loss (as the case may be) for the financial year in which the transfer occurs:
+where —
+(i)
+D is the consideration received by the constituent entity for the transfer;
+(ii)
+E is the amount of the tax credit that has been utilised by the constituent entity for that financial year and all previous financial years;
+(iii)
+F is the consideration paid by the constituent entity to acquire the tax credit; and
+(iv)
+G is the total amount that is accounted for as income by the constituent entity under sub‑paragraph (
+a
+) in respect of the tax credit for that financial year and all previous financial years; and
+[S 129/2025 wef 25/02/2025]
+(
+c
+)
+if the tax credit expires, the following amount must be accounted for as a loss for the financial year in which the tax credit expires: (F + G) − E, where F, G and E have the same meanings as in sub‑paragraph (
+b
+).
+(5) Where the constituent entity is the purchaser of a non‑marketable transferable tax credit and incurs a net loss (being a negative amount computed by the formula in regulation 41(2)(
+b
+)) on the transfer of the tax credit to another person, the net loss must be accounted for as a loss for the financial year in which the transfer occurs.
+(6) Where the constituent entity is the purchaser of a qualified refundable tax credit and incurs a net loss after applying the formula in paragraph (4)(
+c
+) on the expiry of the tax credit, the net loss must be accounted for as a loss for the financial year in which the expiry of the tax credit occurs.
+Arm’s length requirement for certain transactions
+21.
+—(1) This regulation applies to a constituent entity of an MNE group if the constituent entity has entered into a transaction (called in this regulation the relevant transaction) with another constituent entity of the MNE group located in a different jurisdiction from the firstmentioned constituent entity, and the relevant transaction is —
+(
+a
+)
+not made under arm’s length conditions; or
+(
+b
+)
+not accounted for in the same amount for both constituent entities.
+(2) This regulation also applies to a constituent entity of an MNE group if the constituent entity has entered into a transaction for the sale or transfer of an asset (also called in this regulation the relevant transaction) with another constituent entity of the MNE group located in the same jurisdiction, a loss arising from the relevant transaction is included in the FANIL of the constituent entity, and the relevant transaction is not made under arm’s length conditions.
+(3) Where this regulation applies to a constituent entity of an MNE group, the FANIL of the constituent entity must be adjusted so that the financial outcome of the relevant transaction is accounted for in the same amount for both constituent entities that are parties to the relevant transaction, and as if the relevant transaction were made under arm’s length conditions.
+(4) Where, for any financial year, a relevant transaction is between a relevant constituent entity (
+A
+) and another constituent entity (
+B
+), and a tax adjustment is made for
+A
+by the taxation authority of the jurisdiction where
+A
+is located in connection with transfer pricing, but no corresponding adjustment is made for
+B
+in the jurisdiction where
+B
+is located, no adjustment is to be made under paragraph (3).
+[S 860/2025 wef 31/12/2025]
+(5) For the purpose of Part 3 of the Act, where the Comptroller disagrees with the application of paragraph (3) by any constituent entity, the Comptroller may adjust the FANIL of that constituent entity to reflect the financial outcome of the relevant transaction if the relevant transaction were made under arm’s length conditions.
+(6) In paragraph (4), a constituent entity of an MNE group is a “relevant constituent entity” for a financial year if —
+(
+a
+)
+it is located in a jurisdiction with a nominal income tax rate below 15% for that financial year;
+(
+b
+)
+where it is not a special entity — the effective tax rate (as determined under section 17) for the constituent entities (not being special entities) of that MNE group located in that jurisdiction for any of the previous 2 financial years is less than 15%;
+(
+c
+)
+where it is a stateless entity — its effective tax rate (as determined under section 22) for any of the previous 2 financial years is less than 15%;
+(
+d
+)
+where it is a minority-owned constituent entity — the effective tax rate (as determined under section 23) for the constituent entities of that MNE group that are minority‑owned constituent entities located in that jurisdiction for any of the previous 2 financial years is less than 15%; or
+(
+e
+)
+where it is an investment entity or insurance investment entity — the effective tax rate (as determined under section 24) for the constituent entities of that MNE group that are investment entities or insurance investment entities located in that jurisdiction for any of the previous 2 financial years is less than 15%.
+(7) In this regulation, “arm’s length conditions”, in relation to a transaction between constituent entities of the same MNE group, means conditions which would be made or imposed between them in their commercial or financial relations if they were not constituent entities of the same MNE group and dealing independently with one another in comparable circumstances.
+(8) In the application under regulation 10(2) of this regulation to a standalone JV or an entity of a JV group, the standalone JV or entity is a “relevant constituent entity” for a financial year if the effective tax rate (as determined under section 25) for the standalone JV or entities of the JV group located in that jurisdiction for any of the previous 2 financial years is less than 15%.
+Adjustments for insurers
+22.
+—(1) The FANIL of a constituent entity of an MNE group that is a life insurer for a financial year must be adjusted to exclude any amount charged to the constituent entity’s policyholders for taxes payable by the constituent entity in respect of amounts accruing to or paid to the policyholders, unless such taxes are taken into account by the constituent entity as an expense (other than as a tax expense amount as defined in regulation 11(
+f
+)) in its FANIL.
+(2) The FANIL of a constituent entity of an MNE group that is a life insurer for a financial year must be adjusted to take into account any returns to its policyholders (if not already taken into account) that correspond to increases or decreases in its liability to its policyholders that are reflected in its FANIL.
+(3) The FANIL of a constituent entity of an MNE group that is an insurer for a financial year must be adjusted to exclude any expense resulting from any change in its insurance reserves in the financial year where the change is economically matched by excluded dividends (after deducting any investment management fees of the constituent entity paid from such excluded dividends) from a security held by the insurer on behalf of a policyholder.
+(4) The FANIL of a constituent entity of an MNE group that is an insurer for a financial year must be adjusted to exclude any expense resulting from any change in its insurance reserves in the financial year where the change is economically matched by an excluded equity gain or loss from a security held by the insurer on behalf of a policyholder.
+Exclusion of intra-group financing arrangement expenses
+23.
+—(1) Where an intra-group financing arrangement could be reasonably expected, over the expected duration of the arrangement, to increase the expenses of a low tax constituent entity of an MNE group for a financial year without a corresponding increase in the income of a high tax constituent entity of that MNE group for that financial year that is taxable in the jurisdiction in which the high tax constituent entity is located, the FANIL of the low tax constituent entity for that financial year must be adjusted to exclude those expenses.
+(2) Paragraph (1) does not apply if the low tax constituent entity is required to include those expenses in its FANIL under regulation 24.
+(3) In this regulation —
+“high tax constituent entity” means a constituent entity of an MNE group located in a jurisdiction where the relevant effective tax rate for that constituent entity would, ignoring intra‑group financing arrangements, be 15% or more;
+“intra-group financing arrangement” means an arrangement between 2 or more constituent entities of an MNE group under which a high tax constituent entity directly or indirectly provides credit or otherwise makes an investment in a low tax constituent entity;
+“low tax constituent entity” means a constituent entity of an MNE group located in a jurisdiction where the relevant effective tax rate for that constituent entity would, ignoring intra‑group financing arrangements, be less than 15%;
+“relevant effective tax rate”, in relation to a constituent entity of an MNE group located in a jurisdiction, means —
+(
+a
+)
+where the constituent entity is not a special entity — the effective tax rate (as determined under section 17) for the constituent entities (not being special entities) of that MNE group located in that jurisdiction;
+(
+b
+)
+where it is a stateless entity — its effective tax rate (as determined under section 22);
+(
+c
+)
+where it is a minority-owned constituent entity — the effective tax rate (as determined under section 23) for the constituent entities of that MNE group that are minority‑owned constituent entities located in that jurisdiction; or
+(
+d
+)
+where it is an investment entity or insurance investment entity — the effective tax rate (as determined under section 24) for the constituent entities of that MNE group that are investment entities or insurance investment entities located in that jurisdiction.
+(4) In the application under regulation 10(2) of this regulation to a standalone JV or an entity of a JV group located in a jurisdiction, the relevant effective tax rate for the standalone JV or entity is the effective tax rate (as determined under section 25) for the standalone JV or entities of the JV group located in that jurisdiction.
+Additional tier one capital
+24.
+—(1) Where a constituent entity of an MNE group records an amount of decrease in its equity for a financial year that is attributable to distributions paid or payable in respect of additional tier one capital issued by the constituent entity and the same amount is not taken into account in its FANIL for that financial year, its FANIL for that financial year must be adjusted to take that amount into account as an expense.
+(2) Where a constituent entity of an MNE group records an amount of increase in its equity for a financial year that is attributable to distributions received or receivable in respect of additional tier one capital held by the constituent entity and the same amount is not taken into account in its FANIL for that financial year, its FANIL for that financial year must be adjusted to take that amount into account as income.
+(3) In this regulation, “additional tier one capital” means an instrument issued by an entity pursuant to regulatory requirements applicable to the banking or insurance sector that is convertible to equity or written down if a pre‑specified trigger event occurs and that has other features which are designed to aid loss absorbency in the event of a financial crisis.
+Exclusion of international shipping income and ancillary international shipping income
+25.
+—(1) Where the FANIL of a constituent entity of an MNE group for a financial year includes any international shipping income or ancillary international shipping income, its FANIL for that financial year must be adjusted as follows:
+(
+a
+)
+if its international shipping income or its ancillary international shipping income is less than nil — each of such amount is excluded from its FANIL;
+(
+b
+)
+if its international shipping income is a positive amount — that amount is excluded from its FANIL;
+(
+c
+)
+if its ancillary international shipping income is a positive amount — the specified amount of such income is excluded from its FANIL.
+(2) Paragraph (1) only applies if, in the financial year, the strategic or commercial management of any ship used in international shipping giving rise to the income in question is effectively carried on within the jurisdiction where the constituent entity is located.
+[S 129/2025 wef 25/02/2025]
+(3) In this regulation, the international shipping income of a constituent entity for a financial year is its net income (or loss) from international shipping activities for the financial year after taking into account —
+(
+a
+)
+costs incurred in that financial year by the constituent entity directly attributable to those international shipping activities; and
+(
+b
+)
+the relevant proportion of the indirect costs incurred in that financial year by the constituent entity that is attributable to those international shipping activities.
+(4) In this regulation, the ancillary international shipping income of a constituent entity for a financial year is its net income (or loss) from ancillary international shipping activities for the financial year after taking into account —
+(
+a
+)
+costs incurred in that financial year by the constituent entity directly attributable to those ancillary international shipping activities; and
+(
+b
+)
+the relevant proportion of the indirect costs incurred in that financial year by the constituent entity that is attributable to those ancillary international shipping activities.
+(5) In paragraphs (3)(
+b
+) and (4)(
+b
+), the relevant proportion for a financial year is the revenue of the constituent entity from international shipping activities or ancillary international shipping activities (as the case may be) for that financial year divided by its total revenue for that financial year.
+(6) In paragraph (1)(
+c
+), the specified amount of ancillary international shipping income for a constituent entity of an MNE group located in a jurisdiction for a financial year is —
+where —
+(
+a
+)
+A is the lower of C and the ancillary international shipping income cap for the MNE group for that jurisdiction for that financial year;
+(
+b
+)
+B is the ancillary international shipping income for that financial year of the constituent entity if such amount is a positive amount, otherwise B is nil; and
+(
+c
+)
+C is the sum of any positive amount of ancillary international shipping income for that financial year of each of the constituent entities of the MNE group located in the same jurisdiction.
+(7) In this regulation —
+“ancillary international shipping activities” means the following activities performed by a constituent entity of an MNE group primarily in connection with international shipping:
+(
+a
+)
+leasing as lessor a ship to be used for international shipping, where the ship is leased on a bareboat charter to a lessee which is a shipping enterprise, and which is not a constituent entity of the same MNE group for a period not exceeding 3 years;
+(
+b
+)
+selling tickets for a domestic leg of an international voyage carried out by another shipping enterprise;
+(
+c
+)
+leasing as lessor a container used for international shipping;
+(
+d
+)
+storing a container used for international shipping temporarily;
+(
+e
+)
+providing engineering, maintenance, cargo handling, catering and customer relations services to shipping enterprises;
+(
+f
+)
+ancillary investment activities carried on as an integral part of international shipping operations;
+“ancillary international shipping income cap”, in relation to an MNE group for a jurisdiction for a financial year, is —
+(
+a
+)
+50% of the sum of the international shipping income for that financial year of the constituent entities of the MNE group located in the same jurisdiction as the constituent entity (including that constituent entity), if such sum is a positive amount; and
+(
+b
+)
+nil, if such sum is nil or less;
+“international shipping” means any transportation of passengers or cargo by ship, except where the ship is operated solely between places within a single jurisdiction, but does not include towing or dredging;
+“international shipping activities” means the following activities performed by a constituent entity of an MNE group:
+(
+a
+)
+carrying out international shipping, whether alone or in conjunction with another person;
+(
+b
+)
+leasing as lessor a ship to be used for international shipping, where —
+(i)
+the ship is leased fully equipped, crewed and supplied; or
+(ii)
+the ship is leased on a bareboat charter to another constituent entity of the same MNE group for international shipping;
+(
+c
+)
+transportation of passengers or cargo by ship in international shipping under a slot-chartering arrangement;
+(
+d
+)
+the sale of a ship used in international shipping, where the ship has been held for use by the constituent entity for at least one year.
+Division 2 —
+Adjustments in relation to
+permanent establishments and flow-through entities
+Adjustment for main entity
+26.
+Subject to regulation 27, where a constituent entity of an MNE group is a main entity of a permanent establishment, its FANIL must be adjusted so as to not take into account the FANIL of the permanent establishment.
+Allocation of loss to main entity
+27.
+—(1) Where, after making the adjustments in these Regulations (other than this regulation), the FANIL for a financial year of a constituent entity of an MNE group that is a permanent establishment is a loss, the loss is to be allocated to the main entity of the permanent establishment to the extent that the loss —
+(
+a
+)
+is treated as an expense of the main entity for the computation of tax in the jurisdiction where it is located; and
+(
+b
+)
+is not set off against income that is subject to tax under the laws of both the jurisdictions where the permanent establishment and the main entity are located.
+(1A) Chapter 3.2.2 of the June 2024 Administrative Guidance applies for the purpose of determining the extent that a loss mentioned in paragraph (1) is treated as an expense of the main entity for the computation of tax in the jurisdiction where it is located.
+[S 860/2025 wef 31/12/2025]
+(2) Where an amount of loss (
+A
+) has been allocated to the main entity of a permanent establishment in paragraph (1) and, in a subsequent financial year, the permanent establishment has a positive amount of FANIL after making the adjustments in these Regulations (other than this regulation), the FANIL of the permanent establishment for that financial year is to be allocated from the permanent establishment to the main entity of the permanent establishment until an amount of the FANIL of the permanent establishment equal to
+A
+is allocated to the main entity of the permanent establishment (in that or subsequent financial years).
+Adjustment for constituent entity owners of flow-through entity
+28.
+Where any part of the FANIL for a financial year of a flow‑through entity of an MNE group is allocated to any constituent entity (
+X
+) of that MNE group that has an ownership interest in the flow‑through entity, the FANIL so allocated is to be adjusted under these Regulations as if the FANIL were part of the FANIL of
+X
+for that financial year.
+[S 860/2025 wef 31/12/2025]
+Division 3 —
+Optional adjustments
+Election for company in distress
+29.
+—(1) This regulation applies to a constituent entity of an MNE group for a financial year where —
+(
+a
+)
+it is released from an obligation to pay a debt;
+(
+b
+)
+an amount of income is reflected in the FANIL of the constituent entity for that financial year in respect of the release;
+(
+c
+)
+the release —
+(i)
+is made pursuant to insolvency, bankruptcy or similar proceedings in the jurisdiction where it is located;
+(ii)
+is made pursuant to an arrangement with a creditor who is not connected with the constituent entity, and the constituent entity has obtained an independent expert opinion that it will not be able to meet payments due within the next 12 months to persons who are not connected with it; or
+(iii)
+is made in a case where sub‑paragraphs (i) and (ii) do not apply and by a creditor who is not connected with the constituent entity, and, at the time of the release, the liabilities of the constituent entity exceed the fair market value of the assets of the constituent entity; and
+(
+d
+)
+the filing entity of the MNE group makes an election in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules that this regulation is to apply to the constituent entity for that financial year.
+(2) Where this regulation applies to a constituent entity, and paragraph (1)(
+c
+)(i) or (ii) applies, its FANIL must be adjusted to exclude —
+(
+a
+)
+any income recognised in respect of the release from an obligation to pay a debt made pursuant to an arrangement with a creditor who is not connected with the constituent entity; and
+(
+b
+)
+any income recognised in respect of the release from an obligation to pay a debt due to a creditor who is connected with the constituent entity, but only if the release is undertaken as part of the same arrangement as that in sub-paragraph (
+a
+).
+[S 860/2025 wef 31/12/2025]
+(3) Where this regulation applies to a constituent entity, and paragraph (1)(
+c
+)(iii) applies, its FANIL must be adjusted by deducting the lowest of —
+(
+a
+)
+the amount of income recognised in respect of the release;
+(
+b
+)
+the amount by which its liabilities exceed the fair market value of its assets before the release; and
+(
+c
+)
+the amount of any tax attributes of the constituent entity reduced as a result of the release.
+(4) In paragraph (3)(
+c
+), “tax attributes” means any loss, deduction, allowance, credit or similar attribute for the reduction of tax recognised under the law of the jurisdiction in which the constituent entity is located.
+Election to use realisation principle
+30.
+—(1) The filing entity of an MNE group may make an election in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules that all of the constituent entities of the MNE group located in a jurisdiction, or all of the constituent entities of the MNE group located in a jurisdiction that are investment entities, are to use the realisation principle in determining gains and losses in relation to —
+(
+a
+)
+all assets and liabilities that are subject to fair value or impairment accounting; or
+(
+b
+)
+tangible assets that are subject to fair value or impairment accounting.
+(2) If an election in paragraph (1) is effective for a financial year in relation to the constituent entities located in a jurisdiction as described in that paragraph, the FANIL for that financial year of each of those constituent entities must be adjusted to take the following into account:
+(
+a
+)
+gains and losses in relation to the assets or liabilities to which the election applies that are attributable to fair value or impairment accounting are excluded;
+(
+b
+)
+the carrying value of an asset or liability to which the election applies that is used to determine any gain or loss in respect of that asset or liability, is the carrying value of that asset or liability at the later of —
+(i)
+the commencement of the first financial year for which the election applies; and
+(ii)
+the time the asset was acquired or the liability was incurred.
+(3) If an election in paragraph (1) is revoked, the FANIL of each constituent entity in respect of which the election was made must be adjusted to include the relevant amount as income or loss in the first financial year for which the election ceases to apply.
+(4) An election under paragraph (1) must not be revoked for the financial year for which it is made or for any of the subsequent 4 financial years, and any such revocation has no effect.
+(5) If an election under paragraph (1) is revoked for a financial year, another election under that paragraph must not be made (whether in Singapore or in another jurisdiction) in respect of the constituent entities located in that jurisdiction for that or any of the subsequent 4 financial years, and any such election has no effect.
+(6) In paragraph (3), the “relevant amount”, in relation to a constituent entity, is the aggregate of A − B, for each asset or liability that was subject to the election in paragraph (1) and that remains held by the constituent entity on the first day of the first financial year for which the election ceases to apply, where —
+(
+a
+)
+A is the fair value of the asset or liability on that day; and
+(
+b
+)
+B is the carrying value of the asset or liability as determined in accordance with paragraph (2)(
+b
+).
+Election to reflect deductions for stock-based compensation
+31.
+—(1) The filing entity of an MNE group may make an election in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules that the constituent entities of the MNE group located in a jurisdiction are to adjust their FANIL to take into account as an expense the amount deducted for tax purposes in that jurisdiction for any stock‑based compensation incurred by those constituent entities in lieu of the expense otherwise recognised for the stock‑based compensation.
+(2) If an election in paragraph (1) is effective for a financial year in relation to the constituent entities located in a jurisdiction, the FANIL for that financial year of each of those constituent entities must be adjusted as follows:
+(
+a
+)
+the amount that was allowed to the constituent entity as a deduction for tax purposes for that financial year in that jurisdiction for any stock‑based compensation is treated as the expense for the stock‑based compensation in lieu of the expense that would otherwise be recognised for the stock‑based compensation;
+(
+b
+)
+where any stock-based compensation is an option that expires without exercise in the financial year, the total amount of the expenses recognised in previous financial years under sub‑paragraph (
+a
+) in respect of that stock‑based compensation is treated as income.
+(2A) Where an election in paragraph (1) is effective as described in paragraph (2) and an amount of stock-based compensation expense that was deducted for tax purposes is added to the carrying value of an asset, that amount so added must be excluded in determining the GloBE income or loss arising from that asset.
+[S 860/2025 wef 31/12/2025]
+(3) Where an election in paragraph (1) is made and —
+(
+a
+)
+expenses for stock-based compensation were taken into account in the FANIL of a constituent entity in any financial year before the election was effective; and
+(
+b
+)
+the sum of those expenses exceeds the sum of what those expenses would have been under paragraph (2)(
+a
+) had the election been in effect for that financial year,
+the FANIL of that constituent entity for the first financial year for which the election is effective must be adjusted to include the amount of that excess as income.
+(4) Where an election in paragraph (1) is revoked, then, if —
+(
+a
+)
+any stock-based compensation for which an expense has been recognised for a constituent entity in accordance with paragraph (2)(
+a
+) has not been paid on the first day of the first financial year for which the election ceases to apply; and
+(
+b
+)
+the total amount of expenses recognised in accordance with paragraph (2)(
+a
+) for that stock‑based compensation exceeds the total amount of expenses that would have been recognised for that stock-based compensation had the election not been made,
+the FANIL of that constituent entity for the first financial year for which the election ceases to apply must be adjusted to include the amount of that excess as income.
+(5) An election under paragraph (1) must not be revoked for the financial year for which it is made or for any of the subsequent 4 financial years, and any such revocation has no effect.
+(6) If an election under paragraph (1) is revoked for a financial year, another election under that paragraph must not be made (whether in Singapore or in another jurisdiction) in respect of the constituent entities located in that jurisdiction for that or any of the subsequent 4 financial years, and any such election has no effect.
+Election to recognise gains over 5 years
+32.
+—(1) The filing entity of an MNE group may make an election in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules that the net gain (called the relevant gain) from the disposal of local tangible assets by the constituent entities of the MNE group located in a jurisdiction (jurisdiction
+X
+) in a financial year (called FY5) is to be allocated between the constituent entities located in jurisdiction
+X
+for FY5 and the previous 4 financial years (collectively called the carry‑back period) in accordance with paragraph (2).
+(2) If an election in paragraph (1) is made, the relevant gain is to be allocated between the constituent entities located in jurisdiction
+X
+in the following manner:
+(
+a
+)
+first, the relevant gain is allocated to the constituent entities that have a net loss from any disposal of local tangible assets in the first financial year of the carry‑back period if that financial year is a loss year, as a gain for that financial year in the following manner:
+(i)
+if the relevant gain is equal to or exceeds the total net losses of all constituent entities of the MNE group located in jurisdiction
+X
+that have a net loss from the disposal of local tangible assets in that financial year, an amount of the relevant gain is allocated to each of those constituent entities up to the amount of the net loss of that constituent entity;
+(ii)
+if the relevant gain is less than the total net losses of all constituent entities of the MNE group located in jurisdiction
+X
+that have a net loss from the disposal of local tangible assets in that financial year, the relevant gain is allocated proportionately between those constituent entities according to the amount of the net loss of each of those constituent entities over the amount of all the net losses of those constituent entities;
+(
+b
+)
+then, any relevant gain not allocated in sub‑paragraph (
+a
+) is allocated to all constituent entities of the MNE group that have a net loss from the disposal of local tangible assets in the second financial year of the carry‑back period if that financial year is a loss year, as a gain for that financial year in the same manner as in sub‑paragraph (
+a
+);
+(
+c
+)
+then, any relevant gain not allocated in sub‑paragraph (
+a
+) or (
+b
+) is allocated to all constituent entities of the MNE group that have a net loss from the disposal of local tangible assets in the third financial year of the carry‑back period if that financial year is a loss year, as a gain for that financial year in the same manner as in sub‑paragraph (
+a
+);
+(
+d
+)
+then, any relevant gain not allocated in sub‑paragraph (
+a
+), (
+b
+) or (
+c
+) is allocated to all constituent entities of the MNE group that have a net loss from the disposal of local tangible assets in the fourth financial year of the carry‑back period if that financial year is a loss year, as a gain for that financial year in the same manner as in sub‑paragraph (
+a
+);
+(
+e
+)
+then, any relevant gain not allocated in sub‑paragraph (
+a
+), (
+b
+), (
+c
+) or (
+d
+) is allocated to all constituent entities of the MNE group that have a net loss from the disposal of local tangible assets in the fifth financial year of the carry‑back period if that financial year is a loss year, as a gain for that financial year in the same manner as in sub‑paragraph (
+a
+);
+(
+f
+)
+then, any relevant gain not allocated in sub‑paragraph (
+a
+), (
+b
+), (
+c
+), (
+d
+) or (
+e
+) is allocated to all constituent entities of the MNE group that have a net gain from the disposal of local tangible assets in the fifth financial year of the carry‑back period in the following manner:
+(i)
+for each financial year in the carry‑back period, 20% of that remaining relevant gain is allocated to those constituent entities that are located in the jurisdiction of the local tangible assets for that financial year;
+(ii)
+for each financial year in the carry‑back period, that amount of the relevant gain in sub‑paragraph (i) is allocated proportionately between those constituent entities referred to in that sub‑paragraph as a gain for that financial year, according to the amount of the net gain from the disposal of local tangible assets in the fifth financial year of the carry‑back period of each of those constituent entities over the amount of all the net gains of those constituent entities;
+(
+g
+)
+if, in the application of sub‑paragraph (
+f
+)(i) for any financial year in the carry‑back period, there is no constituent entity that is located in the jurisdiction of the local tangible assets that has a net gain from the disposal of local tangible assets in the fifth financial year of the carry‑back period, the amount specified in sub‑paragraph (
+f
+)(i) for the firstmentioned financial year is to be allocated equally between the constituent entities located in that jurisdiction for that financial year as a gain for that financial year.
+(3) An election in paragraph (1) does not apply to any gain or loss arising from the transfer of assets between members of the same MNE group.
+(4) If an election in paragraph (1) is made, the FANIL of a constituent entity located in jurisdiction
+X
+for each financial year in the carry‑back period must be adjusted to take any gain allocated in accordance with paragraph (2) into account as income.
+(5) Where the FANIL of a constituent entity for a financial year is adjusted in paragraph (4), the following are to be recalculated for that financial year:
+(
+a
+)
+the effective tax rate (as determined under section 17, including that section as applied by section 22, 23 or 25, or section 24, as the case may be) for the constituent entities of the MNE group located in jurisdiction
+X
+for that financial year;
+(
+b
+)
+the top-up amounts (if any) for those constituent entities for that financial year,
+and section 21(4) (or that provision as applied by section 22, 23, 24 or 25, as the case may be) applies accordingly.
+(6) In this regulation —
+“local tangible asset” means immovable property in the jurisdiction where the constituent entity disposing of it is located;
+“loss year” means a financial year where both of the following apply:
+(
+a
+)
+at least one constituent entity located in jurisdiction
+X
+for that financial year has a net loss from the disposal of local tangible assets in that financial year;
+(
+b
+)
+the sum of the net losses from the disposal of local tangible assets in that financial year of all constituent entities located in jurisdiction
+X
+in that financial year exceeds the sum of the net gains from the disposal of local tangible assets in that financial year of those constituent entities;
+“net gain”, in relation to a disposal of local tangible assets by a constituent entity in a financial year, means the amount of the net gains of the constituent entity as a result of such disposal, excluding any gain or loss arising from the transfer of assets between members of the same MNE group;
+“net loss”, in relation to a disposal of local tangible assets by a constituent entity in a financial year, means the amount of the net losses of the constituent entity as a result of such disposal —
+(
+a
+)
+that excludes any gain or loss arising from the transfer of assets between members of the same MNE group; and
+(
+b
+)
+that is reduced by any relevant gain that was allocated to the constituent entity by a previous application of paragraph (2).
+Election to exclude intra-group transactions
+33.
+—(1) The filing entity of an MNE group may make an election in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules that the constituent entities of the MNE group that are located in the same jurisdiction and are included in a tax consolidation group are to apply the consolidated accounting treatment of the ultimate parent entity to eliminate income, expenses, gains and losses arising from transactions between those constituent entities.
+(2) Where an election under paragraph (1) is effective for a financial year, the FANIL for that financial year of each of those constituent entities must be adjusted accordingly.
+(3) Where an election is made under paragraph (1), the FANIL of the constituent entities to which the election applies must be adjusted in the first financial year for which the election has effect, to ensure that there are no duplications or omissions of items of income, expenses, gains or losses arising from the making of the election.
+(4) If the election is subsequently revoked, then, in the first financial year for which the election ceases to apply, the FANIL of the constituent entities to which the election applies must be adjusted to ensure that there are no duplications or omissions of items of income, expenses, gains or losses arising from the revocation of the election.
+(5) In paragraph (1), the constituent entities of an MNE group located in a jurisdiction are included in a tax consolidation group if, under the law of that jurisdiction, the income, expenses, gains or losses of those constituent entities may for tax purposes be aggregated, surrendered to each other or otherwise shared or transferred between them as a result of a connection between those constituent entities.
+(6) An election under paragraph (1) must not be revoked for the financial year for which it is made or for any of the subsequent 4 financial years, and any such revocation has no effect.
+(7) If an election under paragraph (1) is revoked for a financial year, another election under that paragraph must not be made (whether in Singapore or in another jurisdiction) in respect of the constituent entities located in that jurisdiction for that or any of the subsequent 4 financial years, and any such election has no effect.
+Election for excluded equity gains and losses to be included
+34.
+—(1) The filing entity of an MNE group may make an election in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules that the excluded equity gains or losses specified in paragraph (3) of the constituent entities of the MNE group located in a jurisdiction are to be included in the FANIL of those constituent entities.
+(2) Where an election under paragraph (1) is effective for a financial year, the FANIL for that financial year of each of those constituent entities must be adjusted accordingly.
+(3) An election in paragraph (1) applies to the following excluded equity gains or losses of a constituent entity:
+(
+a
+)
+excluded equity gains or losses that are subject to covered taxes in the jurisdiction where the constituent entity is located;
+(
+b
+)
+excluded equity gains or losses (being changes in fair value of direct ownership interests in an entity or impairments on direct ownership interests in an entity) that are not subject to covered taxes if the gains or losses on the disposition of those direct ownership interests would be subject to covered taxes in the jurisdiction where the constituent entity is located.
+(4) Despite an election in paragraph (1), excluded equity gains or losses in respect of a qualified ownership interest (as defined in regulation 42(5)) owned by a constituent entity must not be included as income in the FANIL of a constituent entity.
+(5) A revocation of an election in paragraph (1) does not have effect in relation to the gains, profits or losses of a constituent entity arising from any direct ownership interests in another entity if —
+(
+a
+)
+a loss in respect of those direct ownership interests has been included in the GloBE income or loss of that constituent entity for any financial year; and
+(
+b
+)
+that loss would otherwise have been excluded under regulation 14,
+and accordingly, the election in paragraph (1) continues to apply to gains, profits and losses in respect of those direct ownership interests.
+(6) An election under paragraph (1) must not be revoked for the financial year for which it is made or for any of the subsequent 4 financial years, and any such revocation has no effect.
+(7) If an election under paragraph (1) is revoked for a financial year, another election under that paragraph must not be made (whether in Singapore or in another jurisdiction) in respect of the constituent entities located in that jurisdiction for that or any of the subsequent 4 financial years, and any such election has no effect.
+Election for foreign exchange risk hedges
+35.
+—(1) The filing entity of an MNE group may make an election in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules that the FANIL of a constituent entity of the MNE group is to be adjusted to exclude the gains or losses in paragraph (3) of that constituent entity.
+(2) Where an election under paragraph (1) is effective for a financial year, the FANIL for that financial year of that constituent entity must be adjusted accordingly.
+(3) An election in paragraph (1) applies to gains or losses of a constituent entity arising from fluctuations in exchange rates to the extent that —
+(
+a
+)
+a gain or loss is attributable to an instrument intended to act as a hedge against currency risk in ownership interests in any entity held by the constituent entity of the MNE group, not being a portfolio shareholding;
+(
+b
+)
+the gain or loss is recorded in other comprehensive income in the consolidated financial statements of the ultimate parent entity of the MNE group;
+(
+c
+)
+the instrument is considered an effective net investment hedge under the authorised financial accounting standard upon which those statements are prepared;
+(
+d
+)
+where the instrument is held by the constituent entity, the economic and accounting effect of the hedge has not been transferred to any other entity; and
+(
+e
+)
+where the instrument is not held by the constituent entity, the economic and accounting effect of the hedge has been transferred to the constituent entity.
+(4) An election under paragraph (1) must not be revoked for the financial year for which it is made or for any of the subsequent 4 financial years, and any such revocation has no effect.
+(5) If an election under paragraph (1) is revoked for a financial year, another election under that paragraph must not be made (whether in Singapore or in another jurisdiction) in respect of that constituent entity for that or any of the subsequent 4 financial years, and any such election has no effect.
+Election where assets and liabilities adjusted to fair value for tax purposes
+36.
+—(1) The filing entity of an MNE group may make an election in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules that the FANIL for a financial year of a constituent entity of the MNE group, that has a relevant tax adjustment in that financial year, is to be adjusted in accordance with paragraph (2).
+(2) Where an election in paragraph (1) is effective for a financial year —
+(
+a
+)
+that constituent entity has an adjustment amount in respect of each of its assets or liabilities that are subject to a relevant tax adjustment in that financial year; and
+(
+b
+)
+the value of an asset or liability that is subject to a relevant tax adjustment is to be treated, for the purpose of determining the FANIL of that constituent entity for that and any subsequent financial year, as its fair value immediately after the occurrence of the event that caused, or enabled, the relevant tax adjustment to be made.
+(3) In paragraph (2)(
+a
+), the adjustment amount is the amount given —
+(
+a
+)
+by subtracting the carrying value of the asset or liability immediately before the event that caused, or enabled, the relevant tax adjustment to be made from the fair value of the asset or liability immediately after the occurrence of that event; and
+(
+b
+)
+if that event results in a non-qualifying gain or loss (as defined in regulation 61(9)) for the constituent entity —
+(i)
+in the case of a non-qualifying gain — by reducing the result of sub‑paragraph (
+a
+) by the amount of that gain; or
+(ii)
+in the case of a non‑qualifying loss — by increasing the result of sub‑paragraph (
+a
+) by the amount of that loss (expressed as a positive number).
+(4) A constituent entity may —
+(
+a
+)
+include the adjustment amount in paragraph (2)(
+a
+) in its FANIL for the financial year in which the relevant tax adjustment is made; or
+(
+b
+)
+split that adjustment amount into 5 equal amounts to be included in its FANIL for that financial year and the subsequent 4 financial years.
+(5) If paragraph (4)(
+b
+) applies and the constituent entity ceases to be a constituent entity of the same MNE group before the end of the fourth subsequent financial year, any amount of the adjustment amount that has not been included in its FANIL for a previous financial year is to be included in its FANIL for the financial year in which it ceases to be a constituent entity of that MNE group.
+(6) In this regulation —
+“relevant tax adjustment” means an adjustment to the value of assets or liabilities of a constituent entity of an MNE group located in a jurisdiction to reflect the fair value of those assets or liabilities, that is required or permitted to be made for tax purposes under the law of that jurisdiction on the occurrence of an event, but does not include adjustments made in connection with transfer pricing, or the sale of trading stock in the course of carrying on a trade;
+“trading stock” has the meaning given by section 10J(9) of the Income Tax Act 1947.

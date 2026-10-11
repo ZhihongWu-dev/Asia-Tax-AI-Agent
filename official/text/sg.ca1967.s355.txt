@@ -1,0 +1,785 @@
+Companies Act 1967
+Table of Contents
+Long Title
+Part 1 PRELIMINARY
+1 Short title
+2 Division into Parts
+3 Repeals
+4 Interpretation
+5 Definition of subsidiary and holding company
+5A Definition of ultimate holding company
+5B Definition of wholly owned subsidiary
+6 When corporations deemed to be related to each other
+7 Interests in shares
+7A Solvency statement and offence for making false statement
+Part 2 ADMINISTRATION OF THIS ACT
+8 Administration of Act and appointment of Registrar of Companies, etc.
+8A Inspection of books of corporation
+8B Power of Magistrate to issue warrant to seize books
+8C Copies of or extracts from books to be admitted in evidence
+8D Destruction, mutilation, etc., of company documents
+8E Saving for advocates and solicitors
+8F Investigation of certain matters
+8G Saving for banks, insurance companies and certain financial institutions
+8H Security of information
+9 (Repealed)
+10 Company auditors
+11 (Repealed)
+12 Registers
+12A Electronic transaction system
+12B Rectification by Court
+12C Rectification by Registrar on application
+12D Rectification or updating on Registrar’s initiative
+12E Exclusion of residential address from public access if contact address is available
+12F Cessation of exclusion of residential address from public access
+13 Enforcement of duty to make returns
+14 Relodging of lost registered documents
+15 Size, durability and legibility of documents delivered to Registrar
+16 (Repealed)
+16A (Repealed)
+Part 3 CONSTITUTION OF COMPANIES
+Division 1  Incorporation
+17 Formation of companies
+18 Private company
+19 Registration and incorporation
+20 Power to refuse registration
+20A Minimum of one member
+21 Membership of holding company
+22 Requirements as to constitution
+Division 2  Powers
+23 Capacity and powers of company
+24 Power of company to provide for employees on cessation of business
+25 Ultra vires transactions
+25A No constructive notice
+25B Power of directors to bind company
+25C Constitutional limitations: transactions with directors or their associates
+25D Persons connected with director in section 25C
+26 General provisions as to alteration of constitution
+26A Power to entrench provisions of constitution of company
+27 Names of companies
+28 Change of name
+29 Omission of "Limited" or "Berhad" in names of limited companies, other than companies registered under Charities Act 1994
+29A Omission of "Limited" or "Berhad" in names of companies registered under Charities Act 1994
+30 Registration of unlimited company as limited company, etc.
+31 Change from public to private company
+32 Default in complying with requirements as to private companies
+33 Alterations of objects in constitution
+34 Alteration of constitution by company pursuant to repeal and re‑enactment of sections 10 and 14 of Residential Property Act 1976
+35 Regulations for company
+36 Model constitution
+37 Adoption of model constitution
+38 As to constitution of companies limited by guarantee
+39 Effect of constitution
+40 Copies of constitution
+41 Ratification by company of contracts made before incorporation
+41A Common seal
+41B Execution of deeds by company
+41C Alternative to sealing
+42 (Repealed)
+42A Company or foreign company with a charitable purpose which contravenes Charities Act 1994 or regulations made thereunder may be wound up or struck off register
+Part 4 SHARES, DEBENTURES AND CHARGES
+Division 1  [Repealed by S 236/2002]
+43 (Repealed)
+44 (Repealed)
+45 (Repealed)
+45A (Repealed)
+46 (Repealed)
+47 (Repealed)
+48 (Repealed)
+49 (Repealed)
+50 (Repealed)
+50A (Repealed)
+51 (Repealed)
+52 (Repealed)
+53 (Repealed)
+54 (Repealed)
+55 (Repealed)
+55A (Repealed)
+55B (Repealed)
+56 (Repealed)
+Division 2  Restrictions on allotment and commencement of business
+57 (Repealed)
+58 (Repealed)
+59 Restriction on allotment in certain cases
+60 Requirements as to statements in lieu of prospectus
+61 Restrictions on commencement of business in certain circumstances
+62 Restriction on varying contracts referred to in prospectus, etc.
+Division 3  Shares
+62A No par value shares
+62B Transitional provisions for section 62A
+63 Return as to allotments by private companies
+63A Return as to allotments by public companies
+63B Lodgment of documents in relation to allotment
+63C Notice of increase in total amount paid up on shares
+64 Rights and powers attaching shares
+64A Issue of shares with different voting rights by public company
+65 Differences in calls and payments, etc.
+66 Share warrants
+67 Use of share capital to pay expenses incurred in issue of new shares
+68 Issue of shares for no consideration
+69 (Repealed)
+69A (Repealed)
+69B (Repealed)
+69C (Repealed)
+69D (Repealed)
+69E (Repealed)
+69F (Repealed)
+70 Redeemable preference shares
+71 Power of company to alter its share capital
+72 Validation of shares improperly issued
+73 Redenomination of shares
+73A Effect of redenomination
+73B Notice of redenomination
+74 Rights of holders of classes of shares
+74A Conversion of shares
+75 Rights of holders of preference shares to be set out in constitution
+76 Company financing dealings in its shares, etc.
+76A Consequences of company financing dealings in its shares, etc.
+76B Company may acquire its own shares
+76C Authority for off‑market acquisition on equal access scheme
+76D Authority for selective off‑market acquisition
+76DA Contingent purchase contract
+76E Authority for market acquisition
+76F Payments to be made only if company is solvent
+76G Reduction of capital or profits or both on cancellation of repurchased shares
+76H Treasury shares
+76I Treasury shares: maximum holdings
+76J Treasury shares: voting and other rights
+76K Treasury shares: disposal and cancellation
+77 Options over unissued shares
+78 Power of company to pay interest out of capital in certain cases
+Division 3A  Reduction of share capital
+78A Preliminary
+78B Reduction of share capital by private company
+78C Reduction of share capital by public company
+78D Creditor’s right to object to company’s reduction
+78E Position at end of period for creditor objections
+78F Power of Court where creditor objection made
+78G Reduction by special resolution subject to Court approval
+78H Creditor protection
+78I Court order approving reduction
+78J Offences for making groundless or false statements
+78K Liability of members on reduced shares
+Division 4  Substantial shareholdings
+79 Application and interpretation of Division
+80 Persons obliged to comply with Division
+81 Substantial shareholdings and substantial shareholders
+82 Substantial shareholder to notify company of interests
+83 Substantial shareholder to notify company of change in interests
+84 Person who ceases to be substantial shareholder to notify company
+85 References to operation of section 7
+86 Persons holding shares as trustees
+87 Registrar may extend time for giving notice under this Division
+88 Company to keep register of substantial shareholders
+89 Offences against certain sections
+90 Defence to prosecutions
+91 Powers of Court with respect to defaulting substantial shareholders
+92 (Repealed)
+Division 5  Debentures
+93 Register of debenture holders and copies of trust deed
+94 Specific performance of contracts
+95 Perpetual debentures
+96 Reissue of redeemed debentures
+97 (Repealed)
+98 (Repealed)
+99 (Repealed)
+100 Power of Court in relation to certain irredeemable debentures
+101 (Repealed)
+102 (Repealed)
+103 (Repealed)
+104 (Repealed)
+105 (Repealed)
+106 (Repealed)
+Division 5A  [Repealed by S 236/2002]
+106A (Repealed)
+106B (Repealed)
+106C (Repealed)
+106D (Repealed)
+106E (Repealed)
+106F (Repealed)
+106G (Repealed)
+106H (Repealed)
+106I (Repealed)
+106J (Repealed)
+106K (Repealed)
+106L (Repealed)
+Division 6  [Repealed by S 236/2002]
+107 (Repealed)
+108 (Repealed)
+109 (Repealed)
+110 (Repealed)
+111 (Repealed)
+112 (Repealed)
+113 (Repealed)
+113A (Repealed)
+114 (Repealed)
+115 (Repealed)
+116 (Repealed)
+117 (Repealed)
+118 (Repealed)
+119 (Repealed)
+120 (Repealed)
+Division 7  Title and transfers
+121 Nature of shares
+122 Numbering of shares
+123 Certificate to be evidence of title
+124 Company may have duplicate common seal
+125 Loss or destruction of certificates
+126 Transfer of shares in private companies
+127 Transfer of debentures in private companies
+128 Registration of transfer at request of transferor by private companies
+128A (Repealed)
+129 Notice of refusal to register transfer by private companies
+130 Transfer of shares and debentures in public companies
+130AA Registration of transfer at request of transferor by public companies
+130AB Notice of refusal to register transfer by public companies
+130AC Transfer by personal representative
+130AD Certification of prima facie title
+130AE Duties of company with respect to issue of certificates and default in issue of certificates
+Division 7A  [Repealed by Act 36 of 2014]
+130A (Repealed)
+130B (Repealed)
+130C (Repealed)
+130CA (Repealed)
+130D (Repealed)
+130E (Repealed)
+130F (Repealed)
+130G (Repealed)
+130H (Repealed)
+130I (Repealed)
+130J (Repealed)
+130K (Repealed)
+130L (Repealed)
+130M (Repealed)
+130N (Repealed)
+130O (Repealed)
+130P (Repealed)
+Division 8  Registration of charges
+131 Registration of charges
+132 Duty to register charges
+133 Duty of company to register charges existing on property acquired
+134 Register of charges to be kept by Registrar
+135 Endorsement of certificate of registration on debentures
+136 Entries of satisfaction and release of property from charge
+137 Extension of time and rectification of register of charges
+138 Company to keep copies of charging instruments and register of charges
+139 Documents made out of Singapore
+140 Charges, etc., created before 29 December 1967
+141 Application of Division
+Part 5 MANAGEMENT AND ADMINISTRATION
+Division 1  Office and name
+142 Registered office of company
+143 Office hours
+144 Publication of name and registration number
+Division 2  Directors and officers
+145 Directors
+145A Acting as nominee director
+146 Restrictions on appointment or advertisement of director
+147 Qualification of director
+148 Restriction on undischarged bankrupt
+149 Disqualification of unfit directors of insolvent companies
+149A Disqualification of directors of companies wound up on grounds of national security or interest
+149B Appointment of directors by ordinary resolution
+150 Appointment of directors to be voted on individually
+151 Validity of acts of directors and officers
+152 Removal of directors
+153 (Repealed)
+154 Disqualification to act as director on conviction of certain offences
+155 Disqualification for persistent default in relation to delivery of documents to Registrar
+155A Disqualification for being director in not less than 3 companies which were struck off within 5‑year period
+155B Debarment for default of relevant requirement of this Act
+155C Disqualification under Limited Liability Partnerships Act 2005
+155D Disqualification under VCC Act
+155E Debarment under VCC Act
+156 Disclosure of interests in transactions, property, offices, etc.
+157 As to the duty and liability of officers
+157A Powers of directors
+157B Director declarations where company has one director
+157C Use of information and advice
+158 Disclosure of company information by certain directors
+159 Power of directors to have regard to interest of its employees, members and rulings of Securities Industry Council
+160 Approval of company required for disposal by directors of company’s undertaking or property
+160A (Repealed)
+160B (Repealed)
+160C (Repealed)
+160D (Repealed)
+161 Approval of company required for issue of shares by directors
+162 Loans and quasi‑loans to directors, credit transactions and related arrangements
+163 Approval of company required for loans and quasi‑loans to, and credit transactions for benefit of, persons connected with directors of lending company, etc.
+163A Exception for expenditure on defending proceedings, etc.
+163B Exception for expenditure in connection with regulatory action or investigation
+164 Register of director’s and chief executive officer’s shareholdings
+164A Power to require disclosure of directors’ emoluments
+165 General duty to make disclosure
+166 (Repealed)
+167 (Repealed)
+168 Payments to director for loss of office, etc.
+169 Provision and improvement of director’s emoluments
+170 (Repealed)
+171 Secretary
+172 Provision protecting officers from liability
+172A Provision of insurance
+172B Third party indemnity
+173 Registers of directors, chief executive officers, secretaries and auditors
+173A Duty of company to provide information on directors, chief executive officers, secretaries and auditors
+173B Duty of directors, chief executive officers, secretaries and auditors to provide information to company
+173C Duty of company to keep consents of directors and secretaries
+173D Saving and transitional provisions for existing particulars of directors, chief executive officers, secretaries and auditors before 3 January 2016
+173E Self‑notification in certain circumstances
+173F Amendment of register by Registrar to indicate death or disqualification
+173G Transitional provision on keeping of contact address and residential address of director, chief executive officer or secretary
+173H Penalty for breach under sections 173, 173A, 173B and 173C
+173I Transitional provisions for old registers of directors, managers, secretaries and auditors
+Division 3  Meetings and proceedings
+173J Arrangements for meetings
+174 Statutory meeting and statutory report
+175 Annual general meeting
+175A When private company need not hold annual general meeting
+176 Convening of extraordinary general meeting on requisition
+177 Calling of meetings
+178 Right to demand a poll
+179 Quorum, chairperson, voting, etc., at meetings
+180 As to member’s rights at meetings
+181 Proxies
+182 Power of Court to order meeting
+183 Circulation of members’ resolutions, etc.
+184 Special resolutions
+184A Passing of resolutions by written means
+184B Requirements for passing of resolutions by written means
+184C Where directors seek agreement to resolution by written means
+184D Members may require general meeting for resolution
+184DA Period for agreeing to written resolution
+184E Company’s duty to notify members that resolution passed by written means
+184F Recording of resolutions passed by written means
+184G Resolutions of one member companies
+185 Resolution requiring special notice
+186 Registration and copies of certain resolutions
+187 Resolutions at adjourned meetings
+188 Minutes of proceedings
+189 Inspection of minute books
+Division 4  Register of members kept by public company
+189A Application and interpretation of Division
+190 Register and index of members of public companies
+191 Where register to be kept
+192 Inspection and closing of register
+193 Consequences of default by agent
+194 Power of Court to rectify register
+195 Limitation of liability of trustee, etc., registered as holder of shares
+196 Branch registers
+Division 4A  Electronic register of members kept by Registrar
+196A Electronic register of members
+196B Information to be provided by pre‑existing private companies
+196C Application of sections 194 and 195
+196D Maintenance of old register of members
+196E Transitional provision on keeping of residential address and contact address of members of private company
+Division 5  Annual return
+197 Annual return by companies
+198 Financial year of company
+Part 6 FINANCIAL STATEMENTS AND AUDIT
+Division 1  Financial statements
+199 Accounting records and systems of control
+200 (Repealed)
+200A (Repealed)
+201 Financial statements and consolidated financial statements
+201A Certain dormant companies exempted from duty to prepare financial statements
+201AA Retention of documents laid before company at annual general meeting
+201B Audit committees
+201C When directors need not lay financial statements before company
+202 Relief from requirements as to form and content of financial statements and directors’ statement
+202A Voluntary revision of defective financial statements, or consolidated financial statements or balance sheet
+202B Registrar’s application to Court in respect of defective financial statements, or consolidated financial statements and balance sheet
+203 Members of company entitled to financial statements, etc.
+203A Provision of summary financial statement to members
+204 Penalty
+Division 2  Audit
+205 Appointment and remuneration of auditors
+205AA Resignation of non‑public interest company auditors
+205AB Resignation of auditor of public interest company or subsidiary company of public interest company
+205AC Written statement to be disseminated unless application to Court made
+205AD Court may order written statement not to be sent out
+205AE Privilege against defamation
+205AF Appointment of new auditor in place of resigning auditor
+205A Certain companies exempt from obligation to appoint auditors
+205B Dormant company exempt from audit requirements
+205C Small company exempt from audit requirements
+205D Registrar may require company exempt from audit requirements to lodge audited financial statements
+206 Auditors’ remuneration
+207 Powers and duties of auditors as to reports on financial statements
+208 Auditors and other persons to enjoy qualified privilege in certain circumstances
+208A Provisions indemnifying auditors
+209 Duties of auditors to trustee for debenture holders
+209A Interpretation of this Part
+209B (Repealed)
+Part 7 ARRANGEMENTS, RECONSTRUCTIONS AND AMALGAMATIONS
+210 Power to compromise with creditors, members and holders of units of shares
+211 Information as to compromise with creditors, members and holders of units of shares of company
+211A (Repealed)
+211B (Repealed)
+211C (Repealed)
+211D (Repealed)
+211E (Repealed)
+211F (Repealed)
+211G (Repealed)
+211H (Repealed)
+211I (Repealed)
+211J (Repealed)
+212 Approval of compromise or arrangement by Court
+213 (Repealed)
+214 (Repealed)
+215 Power to acquire shares of shareholders dissenting from scheme or contract approved by 90% majority
+215AA Joint offers
+215AB Effect of impossibility, etc., of communicating or accepting offer made under scheme or contract
+215A Amalgamations
+215B Amalgamation proposal
+215C Manner of approving amalgamation proposal
+215D Short form amalgamation
+215E Registration of amalgamation
+215F Notice of amalgamation, etc.
+215G Effect of amalgamations
+215H Power of Court in certain cases
+215I Solvency statement in relation to amalgamating company and offence for making false statement
+215J Solvency statement in relation to amalgamated company and offence for making false statement
+215K Transfer of money or other consideration paid under terms of amalgamation to Official Receiver
+216 Personal remedies in cases of oppression or injustice
+216A Derivative or representative actions
+216B Evidence of shareholders’ approval not decisive — Court approval to discontinue action under section 216A
+Part 8
+217 (Repealed)
+218 (Repealed)
+219 (Repealed)
+220 (Repealed)
+221 (Repealed)
+222 (Repealed)
+223 (Repealed)
+224 (Repealed)
+225 (Repealed)
+226 (Repealed)
+227 (Repealed)
+Part 8A
+227AA (Repealed)
+227A (Repealed)
+227B (Repealed)
+227C (Repealed)
+227D (Repealed)
+227E (Repealed)
+227F (Repealed)
+227G (Repealed)
+227H (Repealed)
+227HA (Repealed)
+227I (Repealed)
+227J (Repealed)
+227K (Repealed)
+227L (Repealed)
+227M (Repealed)
+227N (Repealed)
+227O (Repealed)
+227P (Repealed)
+227Q (Repealed)
+227R (Repealed)
+227S (Repealed)
+227T (Repealed)
+227U (Repealed)
+227V (Repealed)
+227W (Repealed)
+227X (Repealed)
+Part 9 INVESTIGATIONS
+228 Application of this Part
+229 Interpretation
+230 Power to declare company or foreign company
+231 Appointment of inspectors for declared companies
+232 Investigation of affairs of company by inspectors at direction of Minister
+233 As to reports of inspectors
+234 (Repealed)
+235 Investigation of affairs of related corporation
+236 Procedure and powers of inspector
+237 As to costs of investigations
+238 Report of inspector to be admissible in evidence
+239 Powers of inspector in relation to a declared company
+240 Suspension of actions and proceedings by declared company
+241 Winding up of company
+242 Penalties
+243 Appointment and powers of inspectors to investigate ownership of company
+244 Power to require information as to persons interested in shares or debentures
+245 Power to impose restrictions on shares or debentures
+246 Inspectors appointed in other countries
+Part 10 DISSOLUTION
+Division 1  [Repealed by Act 40 of 2018]
+247 (Repealed)
+248 (Repealed)
+249 (Repealed)
+250 (Repealed)
+251 (Repealed)
+252 (Repealed)
+Division 2  [Repealed by Act 40 of 2018]
+Subdivision 1 [Repealed by Act 40 of 2018]
+253 (Repealed)
+254 (Repealed)
+255 (Repealed)
+256 (Repealed)
+257 (Repealed)
+258 (Repealed)
+259 (Repealed)
+260 (Repealed)
+261 (Repealed)
+262 (Repealed)
+Subdivision 2 [Repealed by Act 40 of 2018]
+263 (Repealed)
+264 (Repealed)
+265 (Repealed)
+266 (Repealed)
+267 (Repealed)
+268 (Repealed)
+269 (Repealed)
+270 (Repealed)
+271 (Repealed)
+272 (Repealed)
+273 (Repealed)
+274 (Repealed)
+275 (Repealed)
+276 (Repealed)
+Subdivision 3 [Repealed by Act 40 of 2018]
+277 (Repealed)
+278 (Repealed)
+Subdivision 4 [Repealed by Act 40 of 2018]
+279 (Repealed)
+280 (Repealed)
+281 (Repealed)
+282 (Repealed)
+283 (Repealed)
+284 (Repealed)
+285 (Repealed)
+286 (Repealed)
+287 (Repealed)
+288 (Repealed)
+289 (Repealed)
+Division 3  [Repealed by Act 40 of 2018]
+Subdivision 1 [Repealed by Act 40 of 2018]
+290 (Repealed)
+291 (Repealed)
+292 (Repealed)
+293 (Repealed)
+Subdivision 2 [Repealed by Act 40 of 2018]
+294 (Repealed)
+295 (Repealed)
+Subdivision 3 [Repealed by Act 40 of 2018]
+296 (Repealed)
+297 (Repealed)
+298 (Repealed)
+299 (Repealed)
+Subdivision 4 [Repealed by Act 40 of 2018]
+300 (Repealed)
+301 (Repealed)
+302 (Repealed)
+303 (Repealed)
+304 (Repealed)
+305 (Repealed)
+306 (Repealed)
+307 (Repealed)
+308 (Repealed)
+309 (Repealed)
+310 (Repealed)
+311 (Repealed)
+312 (Repealed)
+Division 4  Provisions applicable to every mode of winding up
+Subdivision 1 [Repealed by Act 40 of 2018]
+313 (Repealed)
+314 (Repealed)
+315 (Repealed)
+316 (Repealed)
+317 (Repealed)
+318 (Repealed)
+319 (Repealed)
+320 (Repealed)
+321 (Repealed)
+322 (Repealed)
+322A (Repealed)
+323 (Repealed)
+324 (Repealed)
+325 (Repealed)
+326 (Repealed)
+Subdivision 2 [Repealed by Act 40 of 2018]
+327 (Repealed)
+328 (Repealed)
+Subdivision 3 [Repealed by Act 40 of 2018]
+329 (Repealed)
+330 (Repealed)
+331 (Repealed)
+332 (Repealed)
+333 (Repealed)
+334 (Repealed)
+335 (Repealed)
+Subdivision 4 [Repealed by Act 40 of 2018]
+336 (Repealed)
+337 (Repealed)
+338 (Repealed)
+339 (Repealed)
+340 (Repealed)
+341 (Repealed)
+342 (Repealed)
+Subdivision 5 Dissolution
+343 (Repealed)
+344 Power of Registrar to strike defunct company off register
+344A Striking off on application by company
+344B Withdrawal of application
+344C Objections to striking off
+344D Application for administrative restoration to register
+344E Registrar’s decision on application for administrative restoration
+344F Registrar may restore company deregistered by mistake
+344G Effect of restoration
+344H Retention of books and papers upon striking off
+345 (Repealed)
+346 (Repealed)
+347 (Repealed)
+348 (Repealed)
+349 (Repealed)
+Division 5  [Repealed by Act 40 of 2018]
+350 (Repealed)
+351 (Repealed)
+352 (Repealed)
+353 (Repealed)
+354 (Repealed)
+Division 6  [Repealed by Act 40 of 2018]
+354A (Repealed)
+354B (Repealed)
+354C (Repealed)
+Part 10A TRANSFER OF REGISTRATION
+355 Foreign corporate entities to which this Part applies
+356 Interpretation of this Part
+357 Names of companies to be registered under this Part
+358 Application for registration
+359 Registration
+360 When registration must be refused
+361 Effect of registration
+362 Revocation of registration
+363 Duty of company to register pre‑existing charges
+364 Duties of company with respect to issue of certificates
+364A Regulations
+Part 11 VARIOUS TYPES OF COMPANIES, ETC.
+Division 1  [Repealed by Act 8 of 2003]
+Division 2  Foreign companies
+365 Foreign companies to which this Division applies
+366 Interpretation of this Division
+367 Power of foreign companies to hold immovable property
+368 Documents, etc., to be lodged by foreign companies having place of business in Singapore
+368A Duty of directors and authorised representatives to provide information to foreign company
+368B Saving and transitional provisions for existing particulars of directors and authorised representatives before 3 January 2016
+369 Power to refuse registration of a foreign company in certain circumstances
+370 As to registered office and authorised representatives of foreign companies
+370A Transitional provision for contact address of director or authorised representative of foreign company
+371 Transitory provisions
+372 Return to be filed where documents, etc., altered
+373 Financial statements
+374 Return to be filed on keeping of registers of foreign company
+375 Obligation to state name of foreign company, whether limited, and country where incorporated
+376 Service of document
+377 Cesser of business in Singapore
+377A Application for administrative restoration of foreign company to register
+377B Registrar’s decision on application for administrative restoration of foreign company
+377C Registrar may restore foreign company deregistered by mistake
+377D Effect of restoration of foreign company
+378 Restriction on use of certain names
+379 Register of members of foreign companies
+380 Contents of register and index of members of foreign companies
+381 Register to be prima facie evidence
+382 Certificate as to shareholding
+383 No civil proceedings to be brought in respect of bearer shares or share warrants
+384 Application of provisions of Act
+385 (Repealed)
+386 Penalties
+Part 11A REGISTER OF CONTROLLERS, NOMINEE DIRECTORS AND NOMINEE SHAREHOLDERS OF COMPANIES
+386AA Application of this Part
+386AB Interpretation of this Part
+386AC Meaning of "registrable"
+386AD State of mind of corporation, unincorporated association, etc.
+386AE Meaning of "legal privilege"
+386AF Register of controllers
+386AFA Additional particulars
+386AG Duty of company and foreign company to investigate and obtain information
+386AH Duty of company and foreign company to keep information up‑to‑date
+386AI Duty of company and foreign company to correct information
+386AIA Duty of company and foreign company to ensure information in register is up‑to‑date and correct
+386AJ Controller’s duty to provide information
+386AK Controller’s duty to provide change of information
+386AKA Register of nominee directors
+386AL Nominee directors
+386ALA Register of nominee shareholders
+386ALB Nominee shareholders
+386AM Power to enforce
+386AN Central register of controllers
+386ANA Central registers of nominee directors and nominee shareholders
+386AO Codes of practice, etc.
+386AP Exemption
+Part 12 GENERAL
+Division 1  Enforcement of this Act
+386A Interpretation
+387 Service of documents on company
+387A Electronic transmission of notices of meetings
+387B Electronic transmission of documents
+387C Electronic transmission in accordance with constitution, etc.
+387D Electronic transmission of documents by member, officer or auditor to company or director
+388 Security for costs
+389 As to rights of witnesses to legal representation
+390 Disposal of shares of shareholder whose whereabouts unknown
+391 Power to grant relief
+392 Irregularities
+393 Privileged communications
+394 Production and inspection of books or papers where offence suspected
+395 Form of company records
+396 Duty to take precautions against falsification
+396A Inspection of records
+396B Liability where proper accounts not kept
+397 Translations of instruments, etc.
+398 Certificate of incorporation conclusive evidence
+399 Court may compel compliance
+Division 2  Offences
+400 (Repealed)
+401 False and misleading statement
+402 False statements or reports
+403 Dividends payable from profits only
+404 Fraudulently inducing persons to invest money
+405 Penalty for carrying on business without registering a corporation and for improper use of words "Limited" and "Berhad"
+406 Frauds by officers
+407 General penalty provisions
+408 Default penalties
+409 Proceedings how and when taken
+409A Injunctions
+409B Composition of offences
+Division 3  Miscellaneous
+409C Appeal
+410 Rules
+411 Regulations
+FIRST SCHEDULE
+Repealed written laws
+SECOND SCHEDULE
+Repealed
+THIRD SCHEDULE
+Repealed
+FOURTH SCHEDULE
+Repealed
+FIFTH SCHEDULE
+Repealed
+SIXTH SCHEDULE
+Statement in lieu of prospectus
+SEVENTH SCHEDULE
+Repealed
+EIGHTH SCHEDULE
+Repealed
+NINTH SCHEDULE
+Repealed
+TENTH SCHEDULE
+Repealed
+ELEVENTH SCHEDULE
+Repealed
+TWELFTH SCHEDULE
+Contents of directors’ statement
+THIRTEENTH SCHEDULE
+Criteria for small company and small group
+FOURTEENTH SCHEDULE
+Companies to which Part 11A does not apply
+FIFTEENTH SCHEDULE
+Foreign companies to which Part 11A does not apply
+SIXTEENTH SCHEDULE
+Meanings of "significant control" and "significant interest"
+Legislative History
+Abbreviations
+Comparative Table

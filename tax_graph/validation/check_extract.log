@@ -1,0 +1,14 @@
+ok   residence_cert is typed bool from its is_true predicate
+ok   debt/equity ratio is typed number from its le predicate
+ok   receipt_kind is an enum whose values come from the param (REMITTED/DEBT_SETTLED/MOVABLE_PROPERTY)
+ok   payable_on is a date
+ok   evidence hints come from 信息收集.md
+ok   'yes' on a bool field becomes True, with its quote kept
+ok   evidence = (doc, quote)
+ok   '400%' becomes 400.0 (ratio facts are percent)
+ok   enum value accepted
+ok   ISO date parsed
+ok   a quote not found in the document is not evidence: the field stays missing (P4)
+ok   'maybe' on a bool field is rejected, not guessed
+ok   a field without passages is missing, not invented
+13 checks, 0 failures

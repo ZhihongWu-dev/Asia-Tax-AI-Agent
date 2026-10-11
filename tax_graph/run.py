@@ -1,6 +1,6 @@
 """run (v1 doc §9 entry): a case file in, a readable report out.
 
-    python -m tax_graph.run cases/meridian.json          (conda env "pytorch")
+    python -m tax_graph.run tax_graph/examples/meridian.json --out-dir tax_graph/examples/results
 
 The case file names the template, the subject, the roles with their facts, the holdings, the flow facts, the present
 assignment, what has been paid (settled) and the event. The program builds the Case, runs ex_ante (which carries the
@@ -125,18 +125,19 @@ def render(template, case, event, subject, out, finalized=None, notes=()):
 
 
 def main(argv):
-    """python -m tax_graph.run CASE.json [--answers ANSWERS.json] [--table]
+    """python -m tax_graph.run CASE.json [--answers ANSWERS.json] [--table] [--out-dir DIRECTORY]
     Default: the planner (优化方案 v2) — a question sheet, or one concrete plan, by jurisdiction region; answers are read
     from CASE.answers.json next to the case unless --answers names another file. --table: the candidate table instead."""
     path = argv[1]
+    out_dir = Path(argv[argv.index("--out-dir") + 1]) if "--out-dir" in argv else Path("out")
+    out_dir.mkdir(parents=True, exist_ok=True)
     if "--table" not in argv:
         from .planner import Answers, plan as _plan, render as _render
         template, case, event, subject, ticks, notes = load_case(path)
         ans_path = argv[argv.index("--answers") + 1] if "--answers" in argv else str(Path(path).with_suffix("")) + ".answers.json"
         outcome = _plan(template, event, case, Answers.load(ans_path))
         text = _render(template, event, outcome, Path(path).stem)
-        dst = Path("out") / (Path(path).stem + ".md")
-        dst.parent.mkdir(exist_ok=True)
+        dst = out_dir / (Path(path).stem + ".md")
         dst.write_text(text, encoding="utf-8")
         sys.stdout.buffer.write(text.encode("utf-8"))
         sys.stdout.buffer.write(("\n[written to %s; answers read from %s]\n" % (dst, ans_path)).encode("utf-8"))
@@ -145,8 +146,7 @@ def main(argv):
     out = ex_ante(template, event, case, ticks=ticks or None, subject=subject)
     fin = finalize(template, event, case, out.table, ticks, subject=subject) if ticks else None
     text = render(template, case, event, subject, out, fin, notes)
-    dst = Path("out") / (Path(path).stem + ".table.md")
-    dst.parent.mkdir(exist_ok=True)
+    dst = out_dir / (Path(path).stem + ".table.md")
     dst.write_text(text, encoding="utf-8")
     sys.stdout.buffer.write(text.encode("utf-8"))
     sys.stdout.buffer.write(("\n[written to %s]\n" % dst).encode("utf-8"))

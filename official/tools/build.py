@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 """Merge manifests, convert raw files to text, slice clauses, check params, build sqlite, write STATUS.md.
 
-Python 3.9, conda env "pytorch".   python official/tools/build.py [--dense]   (ends by running graph.py)
+python official/tools/build.py [--dense]   (ends by running graph.py)
 doc / rtf / xls are converted with LibreOffice (headless); results are cached in official/_conv/.
 """
 import csv
 import hashlib
 import io
+import os
 import re
 import shutil
 import sqlite3
@@ -26,7 +27,14 @@ csv.field_size_limit(10 ** 9)
 ROOT = Path(__file__).resolve().parents[1]
 TEXT, CONV = ROOT / "text", ROOT / "_conv"
 ENC = "utf-8-sig"
-SOFFICE = r"C:\Program Files\LibreOffice\program\soffice.exe"
+SOFFICE = os.environ.get("SOFFICE") or shutil.which("soffice") or shutil.which("libreoffice")
+if not SOFFICE:
+    for env_name in ("ProgramFiles", "ProgramFiles(x86)"):
+        base = os.environ.get(env_name)
+        candidate = Path(base) / "LibreOffice" / "program" / "soffice.exe" if base else None
+        if candidate and candidate.is_file():
+            SOFFICE = str(candidate)
+            break
 
 # Only these pages of a PDF are sliced into articles (the rest are annexes holding other instruments).
 PAGE_RANGE = {"treaty.cn-sg.2007.en": (1, 20)}
@@ -183,6 +191,8 @@ def soffice_convert(jobs):
                 shutil.copyfile(str(src), str(dst))
                 todo.append(str(dst))
         for i in range(0, len(todo), 8):
+            if not SOFFICE:
+                raise RuntimeError("LibreOffice is required for uncached Office documents; add it to PATH or set SOFFICE")
             profile = "file:///" + str(CONV / "lo_profile").replace("\\", "/")
             subprocess.run([SOFFICE, "--headless", "--norestore", "-env:UserInstallation=" + profile,
                             "--convert-to", target, "--outdir", str(CONV)] + todo[i:i + 8],
@@ -526,6 +536,36 @@ def slice_html_sections(doc_id, raw):
 SSO_ANCHOR = re.compile(r"^(pr[0-9]+[A-Z]*-|Sc[0-9]+[A-Z]*-)$")
 SSO_REPEALED = re.compile(r"^\d+[A-Z]*\.\s*\[\s*Repealed by [^\]]*\]\s*$", re.S)
 SSO_DROPPED = []                     # (cite_id, text): repealed-provision stubs left out of the clause layer (SSO, e-Legislation)
+SSO_IMAGE = re.compile(r"/Image/([0-9a-f-]{36})\.gif")
+FORMULAS = {}                        # image id -> the formula as read from the official image (formulas.csv)
+UNTRANSCRIBED = []                   # (doc_id, image id): formula images no row of formulas.csv reads
+
+
+def load_formulas(problems):
+    """formulas.csv: SSO prints some formulae as images. Each row keeps the image's raw copy (checked here like a
+    manifest file) and the formula as read from it; slice_sso puts the reading where the image stood."""
+    path = ROOT / "formulas.csv"
+    if not path.exists():
+        return
+    for r in read_csv(path):
+        f = ROOT / r["file"]
+        if not f.exists():
+            problems.append("missing formula image: %s" % r["file"])
+        elif hashlib.sha256(f.read_bytes()).hexdigest() != r["sha256"]:
+            problems.append("sha256 mismatch: formula image %s" % r["image"])
+        else:
+            FORMULAS[r["image"]] = r["transcription"]
+
+
+def sso_formulas(doc_id, soup):
+    """Each formula image becomes its reading, marked as such; an image nobody has read stays visible as a gap."""
+    for img in soup.find_all("img", src=SSO_IMAGE):
+        uid = SSO_IMAGE.search(img["src"]).group(1)
+        if uid in FORMULAS:
+            img.replace_with(" [formula: %s] " % FORMULAS[uid])
+        else:
+            UNTRANSCRIBED.append((doc_id, uid))
+            img.replace_with(" [formula image %s: not transcribed] " % uid)
 HK_REPEALED = re.compile(r"^(?:\d+[A-Z]*\.|Schedule \d+[A-Z]*)\s*\((?:Repealed|Omitted)[^)]*\)\s*$|"
                          r"^(?:\d+[A-Z]*\.|附表\d+[A-Z]*)\s*\(由[^)]*(?:廢除|刪除|删除)\)\s*$")
 
@@ -550,6 +590,7 @@ def slice_sso(doc_id, raw):
     own prov1 box when that box holds no other anchor, else the anchor-to-anchor segment. Repealed-section stubs
     ('18A. [Repealed by Act 21 of 2003]') are not current law and stay out of the clause layer."""
     soup = BeautifulSoup(raw, "lxml")
+    sso_formulas(doc_id, soup)
     segments = None
     out, seen = [], set()
     for pattern, key, kind, label, box_class in ((r"^pr[0-9]+[A-Z]*-$", "s", "section", "s %s", "prov1"),
@@ -605,7 +646,7 @@ def slice_doc(row, text, pages, all_ids):
         return [], "alias"                             # same bytes as another id
     if row.get("text_status") == "xfa_template":
         return slice_xfa(doc_id, text)
-    if doc_id.startswith(("sg.ita", "sg.ia", "sg.ha", "sg.sda", "sg.gsta", "sg.memta")) and row["ext"] == "html":   # Singapore Statutes Online Acts
+    if doc_id.startswith(("sg.ita", "sg.ia", "sg.ha", "sg.sda", "sg.gsta", "sg.memta", "sg.ca")) and row["ext"] == "html":   # Singapore Statutes Online Acts
         out, mode = slice_sso(doc_id, (ROOT / row["file"]).read_bytes())
         if out:
             return out, mode
@@ -726,6 +767,7 @@ def check_form_fields(rows, doc_ids):
 # ---------------------------------------------------------------- main
 def main():
     docs, problems = merge_manifests()
+    load_formulas(problems)
     TEXT.mkdir(exist_ok=True)
     all_ids = {r["id"] for r in docs}
     kinds = {r["id"]: real_kind(ROOT / r["file"], r["ext"]) for r in docs}
@@ -848,6 +890,9 @@ def main():
     if SSO_DROPPED:
         lines += ["", "## 未入条款层的已废止条文（法规在线文本中的废止占位）", ""]
         lines += ["- `%s`：%s" % (c, t[:80]) for c, t in SSO_DROPPED]
+    if UNTRANSCRIBED:
+        lines += ["", "## 未转写的公式图片（formulas.csv 未登记）", ""]
+        lines += ["- `%s`：%s" % (d, u) for d, u in sorted(set(UNTRANSCRIBED))]
     lines += ["", "## 检查", ""]
     lines += ["- " + x for x in (problems + issues)] or ["- 无问题。"]
     (ROOT / "STATUS.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -857,8 +902,9 @@ def main():
         print("  !", x)
     write_csv(ROOT / "repealed_stubs.csv", ["cite_id", "text"], [{"cite_id": c, "text": t} for c, t in SSO_DROPPED])
     import graph                                       # knowledge layer: identities, units, relations, anchors, index
-    graph.main(sys.argv[1:])
+    graph_status = graph.main(sys.argv[1:])
+    return 1 if problems or issues or graph_status else 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

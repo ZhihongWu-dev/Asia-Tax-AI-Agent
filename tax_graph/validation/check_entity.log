@@ -1,0 +1,8 @@
+oracle_kind = text_derived
+ok   pooling election False: Singapore tax after credit
+ok   pooling election True: Singapore tax after credit
+ok   reinvestment FLOOR: Mainland tax on the dividend (deferred under lo; GAAR denies under hi)
+ok   reinvestment FLOOR: later interest 10% withholding less the 5% credit (GAAR denies under hi)
+ok   reinvestment CEILING: Mainland tax on the dividend (deferred under lo; GAAR denies under hi)
+ok   reinvestment CEILING: later interest 10% withholding less the 5% credit (GAAR denies under hi)
+6 checks, 0 with differences

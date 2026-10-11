@@ -1,0 +1,1322 @@
+PART 5
+ADJUSTMENTS TO QUALIFYING CURRENT
+TAX EXPENSES, QUALIFYING DEFERRED
+TAX EXPENSES AND ADJUSTED COVERED TAXES
+Division 1 —
+Preliminary provisions
+Purpose and application of this Part
+37.
+—(1) This Part sets out the adjustments that must or may be made for the purpose of arriving at the adjusted covered taxes of a constituent entity of an MNE group.
+(2) This Part applies to a standalone JV or an entity of a JV group with the following modifications:
+(
+a
+)
+except in sub-paragraph (
+b
+), references to an MNE group are to the standalone JV or the JV group of which the entity is a part;
+(
+b
+)
+references to the filing entity of an MNE group are to the filing entity of the MNE group to which the standalone JV or entity is connected;
+(
+c
+)
+references to a constituent entity are to the standalone JV or the entity;
+(
+d
+)
+other modifications in the provisions of this Part.
+Amounts excluded from qualifying current tax expense
+38.
+—(1) The qualifying current tax expense of a constituent entity of an MNE group for a financial year must be adjusted to exclude the amounts in paragraph (2) (to the extent they would otherwise be included).
+(2) Those amounts are —
+(
+a
+)
+any amount of current tax expense that relates to income or gains that are excluded from the computation of the GloBE income or loss of the constituent entity for the financial year;
+(
+b
+)
+any amount of current tax expense that relates to an uncertain tax position for the constituent entity for the financial year;
+(
+c
+)
+any reduction of current tax expense made in respect of a qualified refundable tax credit or in respect of a marketable transferable tax credit;
+(
+d
+)
+any amount of current tax expense that is not expected to be paid by the constituent entity before the end of the period of 3 years commencing on the first day after the end of the financial year;
+(
+e
+)
+any amount of current tax expense that relates to a gain or loss in respect of the disposal of local tangible assets (as defined in regulation 32(6)) in the financial year for which an election in regulation 32(1) is made for the constituent entity;
+(
+f
+)
+any amount of credit (whether refundable or not) or refund for the constituent entity for the financial year, in respect of covered taxes, that —
+(i)
+is not a qualified refundable tax credit or a marketable transferable tax credit; and
+(ii)
+has not been taken into account in the qualifying current tax expense for the constituent entity for that financial year or a previous financial year;
+(
+g
+)
+any amount of credit (other than one mentioned in sub‑paragraph (
+f
+)) or refund in respect of a tax credit that is not a qualified refundable tax credit or a marketable transferrable tax credit; and
+(
+h
+)
+any current tax expense for a previous financial year.
+(3) The exclusion of the amount in paragraph (2)(
+h
+) is subject to regulation 40(1) and (3).
+(4) Despite paragraph (1), the refundable tax credits that accrued prior to the beginning of the transition year of a constituent entity (as defined in regulation 88) must not be treated as a reduction to the qualifying current tax expense of the constituent entity for the transition year or any subsequent financial year.
+(5) In paragraph (4), “refundable tax credit” means a tax credit (or an amount of tax credit) which is payable in cash or cash equivalent to the constituent entity —
+(
+a
+)
+after any liability to covered taxes has been reduced or discharged by it; or
+(
+b
+)
+in the absence of any tax liability to covered taxes.
+Amounts taken into account in qualifying current tax expense
+39.
+—(1) The qualifying current tax expense of a constituent entity of an MNE group for a financial year must be adjusted to take into account the adjustments in paragraph (2) (to the extent they were not already taken into account).
+(2) Those adjustments are —
+(
+a
+)
+add any positive amount (and subtract any negative amount) of covered taxes that would be (if not for regulation 11) reflected in the FANIL of the constituent entity for the financial year but which (if not for this regulation) is not reflected in the qualifying current tax expense of the constituent entity for the financial year;
+(
+b
+)
+add any amount of covered taxes paid by, and subtract any amount of covered taxes refunded to, the constituent entity in the financial year that relates to an uncertain tax position where the amount was excluded for a previous financial year; and
+(
+c
+)
+add any positive amount (and subtract any negative amount) of covered taxes recorded in the equity or other comprehensive income of the constituent entity for the financial year, relating to amounts taken into account in the GloBE income or loss of the constituent entity and that are subject to covered taxes under the law of the jurisdiction where the constituent entity is located.
+(3) In making the adjustments in paragraph (2), no amount of covered taxes may be taken into account more than once.
+Post-filing adjustments and tax rate changes
+40.
+—(1) If an adjustment is recorded in the financial statements for a financial year in relation to the adjusted covered taxes of a constituent entity for a previous financial year and, had the adjustment been made in the previous financial year, there would not be a decrease in the total adjusted covered taxes for that previous financial year of the constituent entities of the MNE group located in the same jurisdiction, the amount of the adjustment must be taken into account in the adjusted covered taxes of the constituent entity for the financial year in which the adjustment was made.
+[S 860/2025 wef 31/12/2025]
+(2) If an adjustment is recorded in the financial statements for a financial year in relation to the adjusted covered taxes of a constituent entity for a previous financial year and, had the adjustment been made in the previous financial year, there would be a decrease in the total adjusted covered taxes for that previous financial year of the constituent entities of the MNE group located in the same jurisdiction, the following must be recalculated for that previous financial year and any subsequent financial year affected by such adjustment, up to the financial year in which the adjustment was made:
+(
+a
+)
+the adjusted covered taxes of the constituent entity;
+(
+b
+)
+if the decrease in the total adjusted covered taxes of the constituent entities of the MNE group results from a reduction in the GloBE income or loss of the constituent entity, the GloBE income or loss of the constituent entity but only to the extent necessary to prevent the top-up amounts of those constituent entities from decreasing;
+(
+c
+)
+the effective tax rate (as determined under section 17, including that section as applied by section 22, 23 or 25, or section 24, as the case may be) for the constituent entities of the MNE group located in the same jurisdiction;
+(
+d
+)
+the top-up amounts (if any) for those constituent entities,
+and section 21(4) (or that provision as applied by section 22, 23, 24 or 25, as the case may be) applies accordingly.
+[S 860/2025 wef 31/12/2025]
+(3) If the decrease in the total adjusted covered taxes for a financial year of the constituent entities of an MNE group located in a jurisdiction mentioned in paragraph (2) is less than EUR 1 million, the filing entity of that MNE group may elect in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules for the adjustment mentioned in paragraph (2) to be taken into account in the adjusted covered taxes of the constituent entity for the financial year in which the adjustment was made, and, where such election is effective, the adjustment must be taken into account accordingly.
+(4) Where an election described in paragraph (3) is not made and the constituent entity offsets a loss arising in a financial year against income of a previous financial year for tax purposes —
+(
+a
+)
+the loss is treated as giving rise to a deferred tax asset in the firstmentioned financial year, and regulation 45 applies accordingly; and
+(
+b
+)
+the deferred tax asset is deemed to have been used in the previous financial year, and regulation 45 applies accordingly.
+(5) In paragraphs (1) and (3), the amount to be taken into account in the adjusted covered taxes of the constituent entity for the financial year in which the adjustment was made must be adjusted in accordance with regulation 45(3) or (4), where applicable.
+(6) Where any tax rate in respect of covered taxes for a constituent entity is reduced to a rate less than the minimum rate, then —
+(
+a
+)
+any negative amount of deferred tax expense recognised for a financial year by that constituent entity as a result of that reduction is treated as an adjustment made in that financial year to decrease the corresponding qualifying deferred tax expense of that constituent entity for a previous financial year; and
+(
+b
+)
+paragraphs (2) and (3) apply accordingly.
+(7) Where any tax rate in respect of covered taxes for a constituent entity is increased —
+(
+a
+)
+any positive amount of deferred tax expense recognised for a financial year by that constituent entity as a result of that increase is treated as an adjustment made in the financial year as described in sub‑paragraph (
+b
+) to increase the corresponding qualifying deferred tax expense of that constituent entity for a previous financial year up to the maximum amount in sub‑paragraph (
+c
+);
+(
+b
+)
+the adjustment mentioned in sub‑paragraph (
+a
+) is made in the financial year when the deferred tax liability recognised as a result of that increase is reversed (on the payment of the deferred tax);
+(
+c
+)
+the increase of the corresponding qualifying deferred tax expense mentioned in sub‑paragraph (
+a
+) is subject to a maximum of A − B, where —
+(i)
+A is the amount of that deferred tax expense if it had been recognised on the basis of a tax rate equal to the minimum rate; and
+(ii)
+B is the original amount of that deferred tax expense; and
+(
+d
+)
+paragraph (1) applies accordingly.
+(8) If any qualifying current tax expense for a financial year of a constituent entity of an MNE group is not paid within 3 years of the last day of that financial year, and the unpaid qualifying current tax expense is more than EUR 1 million —
+(
+a
+)
+the unpaid amount must be deducted from the adjusted covered taxes of that constituent entity for that financial year; and
+(
+b
+)
+the following must be recalculated for that financial year:
+(i)
+the effective tax rate (as determined under section 17, including that section as applied by section 22, 23 or 25, or section 24, as the case may be) for the constituent entities of the MNE group located in the same jurisdiction;
+(ii)
+the top-up amounts (if any) for those constituent entities,
+and section 21(4) (or that provision as applied by section 22, 23, 24 or 25, as the case may be) applies accordingly.
+Non-marketable transferable tax credits
+41.
+—(1) The adjusted covered taxes for a financial year of a constituent entity of an MNE group that is an originator of a non‑marketable transferable tax credit that transfers the same in the financial year, must be adjusted by treating the consideration for the transfer as a negative amount of tax expense and treating the non‑marketable transferable tax credit as having been used by that constituent entity.
+(2) The adjusted covered taxes for a financial year of a constituent entity of an MNE group that is a purchaser of a non‑marketable transferable tax credit must be adjusted as follows:
+(
+a
+)
+any amount of the tax credit used to satisfy its liability for covered taxes for the financial year is multiplied by —
+where —
+(i)
+A is the full value of the tax credit; and
+(ii)
+B is the price paid by the constituent entity for the tax credit,
+and treated as a negative amount of tax expense;
+(
+b
+)
+if the tax credit is transferred by the constituent entity in the financial year, any positive amount computed by the following formula is treated as a negative amount of tax expense:
+where —
+(i)
+C is the consideration received by the entity for the transfer;
+(ii)
+D is the amount of the tax credit that has been used by the entity for that financial year and all previous financial years;
+(iii)
+E is the consideration paid by the entity to acquire the tax credit; and
+(iv)
+F is the total negative amount of tax expense recognised by the entity under sub‑paragraph (
+a
+) in respect of the tax credit for that financial year and all previous financial years;
+(
+c
+)
+any other amount of the tax credit that is excluded from the adjusted covered taxes is treated as a positive amount of tax expense.
+Qualified flow-through tax benefits
+42.
+—(1) Where an election in regulation 34(1) is effective in relation to a constituent entity of an MNE group for a financial year, the adjusted covered taxes of the constituent entity for the financial year must be adjusted —
+(
+a
+)
+to treat the amount of any qualified flow-through tax benefits from a qualified ownership interest received by the constituent entity in the financial year as a positive amount of tax expense, to the extent that they have been excluded;
+(
+b
+)
+to treat the amount of any other flow-through tax benefits (that are not qualified) from the qualified ownership interest received by the constituent entity in the financial year as a negative amount of tax expense, to the extent that they have not already been so taken into account; and
+(
+c
+)
+to treat the amount of any qualified refundable tax credit, and any proceeds and distributions from the qualified ownership interest received by the constituent entity in the financial year, as negative tax expenses, but only to the extent that the total value of the amount and of the proceeds and distributions for the financial year and any prior financial year does not exceed the total value of the amount mentioned in sub‑paragraph (
+a
+) for the financial year and any prior financial year.
+(2) The amount of qualified flow-through tax benefits from a qualified ownership interest received by a constituent entity in a financial year is —
+(
+a
+)
+if the constituent entity applies the proportional amortisation method for accounting purposes, or irrevocably elects to adopt the proportional amortisation method for the purpose of this regulation —
+(i)
+where the total value of the proceeds, distributions and flow‑through tax benefits from the qualified ownership interest received in the financial year does not exceed the amortisation expense for the financial year under the proportional amortisation method — the amount of the flow‑through tax benefits received in the financial year; and
+(ii)
+where the total value of the proceeds, distributions and flow‑through tax benefits from the qualified ownership interest received in the financial year exceeds the amortisation expense for the financial year under the proportional amortisation method — the amount of the flow‑through tax benefits received in the financial year reduced by the amount of such excess but not below nil; and
+(
+b
+)
+in any other case — the amount of the flow-through tax benefits received in the financial year, but only to the extent that the total value of the proceeds, distributions and flow-through tax benefits from the qualified ownership interest received in the financial year and all previous financial years does not exceed the investment in the qualified ownership interest.
+(3) The filing entity of an MNE group may make an election in accordance with the GloBE rules to adopt the proportional amortisation method in relation to a qualified ownership interest received by a constituent entity of the MNE group in a financial year for the purpose of paragraph (2)(
+a
+).
+(4) An election must be made in the later of the following:
+(
+a
+)
+the financial year in which the constituent entity acquired the qualified ownership interest;
+(
+b
+)
+the first in-scope year of the constituent entity.
+(5) In this regulation —
+“flow-through tax benefits” means tax credits (not being qualified refundable tax credits) and the value of tax deductible losses made available to the owner of qualified ownership interest;
+“proportional amortisation method” means a method of accounting under which —
+(
+a
+)
+the investment in the qualified ownership interest is amortised over the term of the investment with the amortisation expense for a financial year based on the proportion of the flow‑through tax benefits received in the financial year over the flow-through tax benefits expected to be provided over the term of the investment; and
+(
+b
+)
+the difference between the flow‑through tax benefits received and the amortisation expense for the financial year is reflected as a tax expense;
+“qualified ownership interest” means an investment in a flow‑through entity by a constituent entity of an MNE group where —
+(
+a
+)
+the flow-through entity is not a reverse hybrid entity with respect to the income, expenditure, profit or loss attributable to the constituent entity;
+(
+b
+)
+the investment is treated as equity —
+(i)
+for tax purposes in the jurisdiction where the constituent entity is located; and
+(ii)
+under an authorised financial accounting standard in the jurisdiction where the flow‑through entity operates;
+(
+c
+)
+the flow-through entity is not a constituent entity of the MNE group;
+(
+d
+)
+it is reasonable to expect, at the time of making the investment, that the return on the investment would be negative if not for the availability of flow‑through tax benefits;
+(
+e
+)
+the constituent entity has a genuine economic interest in the flow-through entity and is not protected from loss on the investment; and
+(
+f
+)
+flow-through tax benefits under the investment are available to the constituent entity whether or not the MNE group is subject to MTT or a qualified IIR.
+Division 2 —
+Allocation of covered taxes
+Permanent establishments
+43.
+—(1) Where any GloBE income or loss of a permanent establishment is allocated to the main entity of the permanent establishment in regulation 27(2), the qualifying current tax expense in relation to such GloBE income or loss must be allocated to that main entity.
+(2) But the amount allocated in accordance with paragraph (1) must not exceed the amount given by multiplying the amount of the GloBE income or loss described in that paragraph by the highest corporate tax rate on ordinary income in the jurisdiction where the main entity is located.
+(3) Any deferred tax asset arising under the tax law of the jurisdiction where a permanent establishment is located with respect to a loss that is allocated to the main entity of the permanent establishment in regulation 27(1) must be disregarded in determining the adjusted covered taxes of the permanent establishment.
+Reallocation of tax expenses
+44.
+—(1) Where a constituent entity of an MNE group is subject to taxation under a controlled foreign company tax regime on the income of a controlled foreign company for a financial year, the qualifying current tax expense or qualifying deferred tax expense of that constituent entity arising under that regime must be allocated to that controlled foreign company if that controlled foreign company is a constituent entity of that MNE group.
+(2) Where a constituent entity of an MNE group is subject to taxation under a blended CFC regime on the income of its controlled foreign companies for a financial year that commences on or before 31 December 2025 and ends on or before 30 June 2027 —
+(
+a
+)
+the qualifying current tax expense or qualifying deferred tax expense of the constituent entity arising under that regime in respect of each of its controlled foreign companies is determined by the formula —
+where —
+(i)
+A is the blended CFC allocation key of the constituent entity for the controlled foreign company;
+(ii)
+B is the sum of the blended CFC allocation keys of the constituent entity for all its controlled foreign companies; and
+(iii)
+C is the qualifying current tax expense or qualifying deferred tax expense (as the case may be) of the constituent entity arising under that regime in respect of all its controlled foreign companies; and
+(
+b
+)
+the amount computed in sub‑paragraph (
+a
+) in respect of a controlled foreign company must be —
+(i)
+excluded from the adjusted covered taxes of that constituent entity if that controlled foreign company is not a constituent entity of the MNE group; and
+(ii)
+allocated under paragraph (1) to that controlled foreign company if it is a constituent entity of the MNE group.
+(3) [
+Deleted by S 129/2025 wef 25/02/2025
+]
+(4) Where any qualifying current tax expense or qualifying deferred tax expense for a financial year of a constituent entity of an MNE group is in respect of a distribution received (including any deemed distribution in respect of undistributed earnings or capital) from another constituent entity of the MNE group in which that constituent entity has a direct ownership interest, that qualifying current tax expense or qualifying deferred tax expense must be allocated to that other constituent entity.
+(5) Where —
+(
+a
+)
+a constituent entity of an MNE group holds an ownership interest in an entity (
+X
+); and
+(
+b
+)
+X
+is a hybrid entity with respect to any of its income (including any income allocated to
+X
+from a flow-through entity under paragraph 6(9) or (12) of the First Schedule to the Act) that is attributable to such ownership interest,
+then any qualifying current tax expense or qualifying deferred tax expense of the constituent entity for a financial year that is in respect of that income must be allocated to
+X
+.
+[S 860/2025 wef 31/12/2025]
+(5A) Where —
+(
+a
+)
+either —
+(i)
+a constituent entity (
+Y1
+) of an MNE group is a reference entity in relation to another constituent entity of the MNE group that is a flow-through entity (
+Z
+); or
+(ii)
+a constituent entity (
+Y2
+) of an MNE group holds an indirect ownership interest in another constituent entity of the MNE group that is a flow-through entity (also
+Z
+) through a constituent entity (also
+Y1
+) of the MNE group that is a reference entity in relation to
+Z
+, and
+Y2
+is not a reference entity in relation to
+Z
+; and
+(
+b
+)
+Z
+is a reverse hybrid entity with respect to any of its income that is attributable to
+Y1
+,
+then any qualifying current tax expense or qualifying deferred tax expense of
+Y1
+or
+Y2
+for a financial year, to the extent that it is in respect of income that is attributable to
+Y1
+, must be allocated to
+Z
+.
+[S 860/2025 wef 31/12/2025]
+(6) Where any qualifying current tax expense or qualifying deferred tax expense for a financial year of a constituent entity (
+X1
+) of an MNE group is to be allocated to another constituent entity (
+X2
+) of the MNE group under paragraph (1), (2), (5) or (5A), and the qualifying current tax expense or qualifying deferred tax expense is in respect of passive income, the amount of qualifying current tax expense and qualifying deferred tax expense that must be so allocated is subject to a cap determined by the following formula:
+where —
+(
+a
+)
+D is the relevant effective tax rate for
+X2
+determined without regard to any qualifying current tax expense or qualifying deferred tax expense in respect of passive income, that would otherwise have been allocated to
+X2
+under paragraph (1), (2), (5) or (5A); and
+[S 860/2025 wef 31/12/2025]
+(
+b
+)
+E is the amount of the passive income,
+and any amount of qualifying current tax expense or qualifying deferred tax expense not allocated is a qualifying current tax expense or qualifying deferred tax expense of
+X1
+.
+[S 860/2025 wef 31/12/2025]
+(7) In this regulation —
+“applicable rate”, in relation to a blended CFC regime, means the applicable tax rate mentioned in paragraph (
+c
+) of the definition of “blended CFC regime”;
+“blended CFC allocation key” has the meaning given by regulation 44A;
+[S 129/2025 wef 25/02/2025]
+“blended CFC regime” means a controlled foreign company tax regime —
+(
+a
+)
+under which the income and losses of the controlled foreign companies of the entity are aggregated for the purposes of calculating the entity’s tax liability under the regime;
+(
+b
+)
+that does not take into account the income of the entity, or the constituent entities of its MNE group, arising in the jurisdiction where the entity is located, other than the use of any loss to reduce a tax liability under the regime; and
+(
+c
+)
+that operates if the tax rate applicable to the controlled foreign companies is less than a minimum threshold, being a threshold below 15%;
+“controlled foreign company” means the other entity in the definition of “controlled foreign company tax regime”;
+“controlled foreign company tax regime” means a set of tax rules (other than MTT or a qualified IIR) under which an entity with an ownership interest in another entity located in a different jurisdiction is subject to current taxation on its share of part or all of the income of the other entity, whether or not any of that income is distributed to the entity;
+“passive income” means —
+(
+a
+)
+dividends or dividend equivalents;
+(
+b
+)
+interest or interest equivalents;
+(
+c
+)
+rent;
+(
+d
+)
+royalties;
+(
+e
+)
+annuities; or
+(
+f
+)
+net gains from property of a type that produces income described in paragraphs (
+a
+) to (
+e
+);
+“relevant effective tax rate”, in relation to a constituent entity (
+X2
+) of an MNE group, means —
+(
+a
+)
+where
+X2
+is not a special entity — the effective tax rate (as determined under section 17) for the constituent entities (not being special entities) of that MNE group located in the same jurisdiction as
+X2
+, including
+X2
+;
+(
+b
+)
+where
+X2
+is a stateless entity — its effective tax rate (as determined under section 22);
+(
+c
+)
+where
+X2
+is a minority-owned constituent entity — the effective tax rate (as determined under section 23) for the constituent entities of that MNE group that are minority‑owned constituent entities located in the same jurisdiction as
+X2
+, including
+X2
+; and
+(
+d
+)
+where
+X2
+is an investment entity or insurance investment entity — the effective tax rate (as determined under section 24) for the constituent entities of that MNE group that are investment entities or insurance investment entities located in the same jurisdiction as
+X2
+, including
+X2
+.
+(8) For the purposes of this regulation, any amount of qualifying current tax expense or qualifying deferred tax expense of a constituent entity (
+Z1
+) of the MNE group that would have been allocated under this regulation to a standalone JV or an entity of a JV group (
+Z2
+) that is connected to an MNE group if
+Z2
+were a constituent entity of the MNE group, is to be allocated to
+Z2
+.
+(9) For the purpose of paragraph (8), “relevant effective tax rate” means the effective tax rate (as determined under section 25) for
+Z2
+and any other entities of the JV group located in the same jurisdiction as
+Z2
+.
+(10) In the application under regulation 37(2) of this regulation to the allocation of tax expenses from one entity (
+Z3
+) to another entity (
+Z4
+) of the same JV group, “relevant effective tax rate” means the effective tax rate (as determined under section 25) for
+Z4
+and any other entities of the JV group located in the same jurisdiction as
+Z4
+.
+Blended CFC allocation key
+44A.
+—(1) In regulation 44, “blended CFC allocation key”, in relation to a constituent entity (
+X
+) for a controlled foreign company (
+Y
+) of
+X
+, means the amount of
+Y
+’s income in the jurisdiction where it is located that is attributable to
+X
+under the blended CFC regime in question, multiplied by the difference between A and B, where —
+(
+a
+)
+A is the applicable rate for the blended CFC regime; and
+(
+b
+)
+B is —
+(i)
+in a case where
+Y
+is a GloBE entity — the effective tax rate for those GloBE entities (collectively called
+Y1
+) that are located in the same jurisdiction as
+Y
+and that belong to the same class of GloBE entities in paragraph (8)(
+a
+) to (
+g
+) as
+Y
+, as determined by the operation of any of the laws mentioned in paragraph (2);
+(ii)
+in a case where
+Y
+is not a GloBE entity, and there is one or more GloBE entities (each called
+Y2
+) that are located in the same jurisdiction as
+Y
+— the effective tax rate (as determined by the operation of any of the laws mentioned in paragraph (2)) for the
+Y2
+or
+Y2
+s belonging to the class of GloBE entities in paragraph (8)(
+a
+) to (
+g
+) with the highest total amount of income attributable to
+X
+under the blended CFC regime (each called a relevant
+Y2
+); or
+(iii)
+in any other case — the effective tax rate for all entities located in the same jurisdiction as
+Y
+—
+(A)
+in which
+X
+holds an ownership interest; and
+(B)
+that are subject to taxation under the blended CFC regime,
+based on their total income and taxes for the financial year concerned as reflected in their financial statements.
+(2) The laws mentioned in paragraph (1)(
+b
+)(i) and (ii) are —
+(
+a
+)
+section 17 (or that section as applied by section 22, 23 or 25) or section 24, whichever is applicable, with the modifications in paragraph (3); and
+(
+b
+)
+any law equivalent to the applicable provision in sub-paragraph (
+a
+), with the modifications in paragraph (3).
+(3) The modifications mentioned in paragraph (2) are —
+(
+a
+)
+any tax arising under the blended CFC regime is disregarded; and
+(
+b
+)
+where the blended CFC regime provides credit for any qualified domestic minimum top-up tax payable in
+Y
+’s jurisdiction on the same basis as covered taxes payable in that jurisdiction, any qualified domestic minimum top-up tax payable in that jurisdiction is included in the adjusted covered taxes for those constituent entities.
+(4) For the purpose of paragraph (1), where B is equal to or greater than 15% or A, then the blended CFC allocation key is nil.
+(5) For the purpose of paragraph (1)(
+b
+)(i) and (ii), if an election is made to apply for the financial year in question the Transitional CbCR Safe Harbour under regulation 69 or its equivalent under the law of any other jurisdiction to
+Y
+(in the case of paragraph (1)(
+b
+)(i)) or any relevant
+Y2
+(in the case of paragraph (1)(
+b
+)(ii)), the reference to the effective tax rate determined in accordance with paragraph (1)(
+b
+)(i) or (ii) is to the simplified effective tax rate determined in accordance with regulation 72(2).
+(6) For the purpose of paragraph (1)(
+b
+)(i) or (ii), if an election is made to apply for the financial year in question the QDMTT Safe Harbour under regulation 78 or its equivalent under the law of any other jurisdiction to
+Y
+(in the case of paragraph (1)(
+b
+)(i)) or any relevant
+Y2
+(in the case of paragraph (1)(
+b
+)(ii)), the reference to the effective tax rate determined in accordance with paragraph (1)(
+b
+)(i) or (ii) is to an amount determined by the formula
+where —
+(
+a
+)
+D is the sum of the adjusted covered taxes used to determine the effective tax rate for
+Y1
+(in the case of paragraph (1)(
+b
+)(i)) or the relevant
+Y2
+or
+Y2s
+(in the case of paragraph (1)(
+b
+)(ii)) for the purposes of determining the amount of qualified domestic minimum top-up tax imposed by the law of that jurisdiction;
+(
+b
+)
+E is the amount of qualified domestic minimum top-up tax payable in that jurisdiction for that financial year that could be included in the adjusted covered taxes for
+Y1
+(in the case of paragraph (1)(
+b
+)(i)) or the relevant
+Y2
+or
+Y2s
+(in the case of paragraph (1)(
+b
+)(ii)) under paragraph (3)(
+b
+); and
+(
+c
+)
+F is the sum of the GloBE income or loss for that financial year of
+Y1
+(in the case of paragraph (1)(
+b
+)(i)) or the relevant
+Y2
+or
+Y2s
+(in the case of paragraph (1)(
+b
+)(ii)) for the purposes of determining the amount of qualified domestic minimum top-up tax imposed by the law of that jurisdiction.
+(7) For the purpose of paragraph (1)(
+b
+)(i) or (ii), and subject to paragraphs (5) and (6), if an effective tax rate need not be determined for
+Y
+(in the case of paragraph (1)(
+b
+)(i)) or all relevant
+Y2s
+(in the case of paragraph (1)(
+b
+)(ii)) under any of the laws mentioned in paragraph (2), the reference to the effective tax rate determined in accordance with paragraph (1)(
+b
+)(i) or (ii) is to the simplified effective tax rate determined in accordance with regulation 72(2), and for this purpose the reference to the MNE group’s qualifying country-by-country report in regulation 72(2)(
+b
+) is to its qualified financial statements as defined in regulation 68.
+(8) In paragraph (1)(
+b
+)(i) and (ii), GloBE entities are classified as follows:
+(
+a
+)
+constituent entities other than special entities;
+(
+b
+)
+stateless entities;
+(
+c
+)
+minority-owned constituent entities (not being investment entities or insurance investment entities);
+(
+d
+)
+members of a minority-owned subgroup (not being investment entities or insurance investment entities);
+(
+e
+)
+investment entities and insurance investment entities;
+(
+f
+)
+standalone JVs;
+(
+g
+)
+entities of a JV group.
+(9) In this regulation —
+“applicable rate”, “blended CFC regime” and “controlled foreign company” have the meanings given by regulation 44(7);
+“GloBE entity” means a constituent entity of the same MNE group as
+X
+or a joint venture or JV subsidiary that is connected to the same MNE group as
+X
+.
+[S 129/2025 wef 25/02/2025]
+Cross-border allocation of current tax expenses under cross-crediting regimes
+44B.
+—(1) Where the qualifying current tax expense of a constituent entity of an MNE group in a jurisdiction in which a cross-crediting regime applies —
+(
+a
+)
+is to be allocated to another constituent entity of the MNE group in another jurisdiction pursuant to regulation 44(1), (4), (5) or (5A); or
+(
+b
+)
+is to be treated as the qualifying current tax expense of a permanent establishment of the firstmentioned constituent entity in another jurisdiction pursuant to paragraph 1(4) of the First Schedule to the Act,
+the allocation and treatment must be in accordance with the cross-crediting regime methodology.
+(2) Where the cross-crediting regime that applies in the jurisdiction allows only for cross-crediting within particular categories of income, the cross-crediting regime methodology is to be applied to individual categories of income to determine the allocation of qualifying current tax expense within each category.
+(3) A cross-crediting regime applies in a jurisdiction if, under the laws of that jurisdiction, taxes paid with respect to one source of income arising in another jurisdiction give rise to foreign tax credits which can be used against another source of income arising in a further jurisdiction.
+(4) In this regulation, “cross-crediting regime methodology” means the methodology described in the cross-crediting guidance set out in Chapter 3.1 of the June 2024 Administrative Guidance, which applies to this regulation with all necessary modifications.
+[S 860/2025 wef 31/12/2025]
+Cross-border allocation of deferred tax expenses
+44C.
+Where any qualifying deferred tax expense of a constituent entity of an MNE group in a jurisdiction —
+(
+a
+)
+is to be allocated to another constituent entity of the MNE group in another jurisdiction pursuant to regulation 44(1), (4), (5) or (5A); or
+(
+b
+)
+is to be treated as the qualifying deferred tax expense of a permanent establishment of the firstmentioned constituent entity in another jurisdiction pursuant to paragraph 1(4) of the First Schedule to the Act,
+the allocation and treatment must be in accordance with the methodology described in Chapter 4.2 of the June 2024 Administrative Guidance, and that methodology is to apply for this purpose with the necessary modifications.
+[S 860/2025 wef 31/12/2025]
+Cross-border allocation elections
+44D.
+—(1) The filing entity of an MNE group may make an election in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules that the treatment in this regulation applies to all the constituent entities of the MNE group located in a jurisdiction for a financial year.
+(2) Where an election under paragraph (1) is effective for a financial year, any qualifying deferred tax expense which must otherwise be allocated from any constituent entity (
+W
+) located in the jurisdiction to another constituent entity (
+X
+) pursuant to regulation 44(1), (4), (5) or (5A) must be excluded from the qualifying deferred tax expense of
+W
+and must not be allocated to
+X
+.
+(3) Where an election is effective under paragraph (1) for a financial year, any qualifying deferred tax expense of any constituent entity (
+Y
+) located in the jurisdiction which must otherwise be treated as the qualifying deferred tax expense of
+Y
+’s permanent establishment (
+Z
+) pursuant to paragraph 1(4) of the First Schedule to the Act, must not be so treated.
+(4) An election under paragraph (1) must not be revoked for the financial year for which it is made or for any of the subsequent 4 financial years, and any such revocation has no effect.
+(5) If an election under paragraph (1) is revoked for a financial year, another election under that paragraph must not be made (whether in Singapore or in another jurisdiction) in respect of the constituent entities located in that jurisdiction for that financial year or any of the subsequent 4 financial years, and any such election has no effect.
+[S 860/2025 wef 31/12/2025]
+Division 3 —
+Deferred taxes and other adjustments
+Divergence between GloBE and accounting values
+44E.
+—(1) This regulation applies where, because of the operation of any provision of the Act or these Regulations, the FANIL or GloBE income or loss of a constituent entity relating to an asset or liability is to be calculated based on a value (called the GloBE carrying value) which differs from the value of the asset or liability as recorded in the financial statements used to determine the FANIL or GloBE income or loss (called the accounting carrying value).
+(2) Unless otherwise expressly provided in the Act or these Regulations, for the purposes of determining the adjusted covered taxes of the constituent entity —
+(
+a
+)
+the GloBE carrying value is to be updated in accordance with the financial accounting standard used in determining the FANIL of the constituent entity; and
+(
+b
+)
+the deferred tax asset or deferred tax liability relating to that asset or liability is to be determined by reference to the GloBE carrying value (as updated, if applicable), and the qualifying deferred tax expense is to be adjusted accordingly.
+(3) No adjustment is to be made under paragraph (2)(
+a
+) to the GloBE carrying value of an asset for any impairment made to it.
+(4) Paragraph (3) does not apply in a case where the accounting carrying value of an asset after adjusting for impairment (called the post-adjustment accounting value) is less than its GloBE carrying value, and in such a case its GloBE carrying value is to be updated under paragraph (2)(
+a
+) to the post-adjustment accounting value for the purposes of paragraph (2).
+(5) To avoid doubt, and without limiting paragraph (2), paragraph (2) applies to any instance of divergence between the GloBE carrying value and the accounting carrying value for an asset or liability that results from the operation of regulation 21(3), 30(2), 31(2), 36(2) or 61(2)(
+a
+), (3) or (8).
+[S 860/2025 wef 31/12/2025]
+Adjustments to qualifying deferred tax expense
+45.
+—(1) The following adjustments must be made to the qualifying deferred tax expense of a constituent entity of an MNE group for any financial year, but only after making any adjustments under regulation 44E:
+(
+a
+)
+any amount of that expense in respect of an item excluded from the computation of the GloBE income or loss for that financial year of the constituent entity is excluded;
+(
+b
+)
+any amount of that expense that reflects a disallowed accrual or an unclaimed accrual for that financial year is excluded;
+(
+c
+)
+the impact in the financial year of a valuation adjustment or accounting recognition adjustment with respect to a deferred tax asset is excluded;
+(
+d
+)
+any amount of that expense in the financial year arising from a re‑measurement with respect to a change in the rate of tax is excluded;
+(
+e
+)
+any amount of that expense in the financial year that reflects the generation or use of tax credits is excluded;
+(
+f
+)
+any amount of unclaimed accrual for a previous financial year (that was excluded under sub‑paragraph (
+b
+) for that previous financial year) that is paid in the financial year is added;
+[S 129/2025 wef 25/02/2025]
+(
+g
+)
+any amount not reflected in a deferred tax asset that is attributable to a loss for the financial year, being an amount not so reflected only as a result of the recognition criteria not being met, is subtracted;
+(
+h
+)
+any amount of that expense in respect of an amount of qualifying foreign tax credit as determined under paragraph (2) for the financial year is included, but only to the extent that the qualifying foreign tax credit is used to offset a tax on income included in the computation of GloBE income or loss;
+[S 860/2025 wef 31/12/2025]
+(
+i
+)
+any recaptured deferred tax liability under regulation 46 that is paid in the financial year is added;
+(
+j
+)
+any amount of deferred tax expense that relates to a gain or loss in respect of the disposal of local tangible assets (as defined in regulation 32(6)) in the financial year for which an election in regulation 32(1) is made for the constituent entity is excluded;
+[S 860/2025 wef 31/12/2025]
+(
+k
+)
+any amount of a special foreign tax asset for that financial year is subtracted, and any amount of a special foreign tax asset used for that financial year is added, but in each case only to the extent that the special foreign tax asset is used to offset a tax on income included in the computation of GloBE income or loss.
+[S 860/2025 wef 31/12/2025]
+(2) The amount of a qualifying foreign tax credit is the lower of —
+(
+a
+)
+the qualifying foreign tax credit; and
+(
+b
+)
+the amount of any domestic loss used to offset any relevant foreign income that would allow the constituent entity to offset the qualifying foreign tax credit against tax on domestic profits, multiplied by the applicable tax rate in the jurisdiction where the constituent entity is located.
+[S 860/2025 wef 31/12/2025]
+(3) Where a constituent entity of an MNE group has a deferred tax asset calculated on the basis of a tax rate of less than 15% that is attributable to a loss that would have been taken into account in determining its GloBE income or loss for a financial year, the amount of the deferred tax asset may be adjusted to the amount it would be had the tax rate been 15%, and the amount of the adjustment is subtracted from the qualifying deferred tax expense of that constituent entity for that financial year.
+(4) Where a deferred tax expense of a constituent entity of an MNE group for a financial year relates to covered taxes where the tax rate is greater than 15%, the amount of that deferred tax expense must be adjusted to the amount it would be had the tax rate been 15%.
+(4A) The guidance in Chapter 1 of the June 2024 Administrative Guidance applies for the purpose of determining whether an amount of qualifying deferred tax expense reflects an unclaimed accrual, and that guidance is to apply with the necessary modifications for that purpose (for example, a reference to an Unclaimed Accrual Five-Year Election is to an election mentioned in regulation 46A(1)(
+b
+)).
+[S 860/2025 wef 31/12/2025]
+(5) In this regulation —
+“disallowed accrual”, in relation to a financial year, means —
+(
+a
+)
+any movement in deferred tax expense which would be (if not for regulation 11) reflected in the FANIL of a constituent entity of an MNE group for the financial year which relates to an uncertain tax position; or
+(
+b
+)
+any movement in deferred tax expense which would be (if not for regulation 11) reflected in the FANIL of a constituent entity of an MNE group for the financial year which relates to distributions from another constituent entity of the MNE group;
+“qualifying foreign tax credit”, in relation to a constituent entity of an MNE group, means a tax credit in the jurisdiction in which that constituent entity is located for foreign income tax paid by that constituent entity or another constituent entity, where that jurisdiction —
+(
+a
+)
+requires domestic losses to be offset against relevant foreign income before a tax credit can be applied against tax on foreign income; and
+(
+b
+)
+permits a foreign tax credit to be offset against tax on domestic profits to the extent that domestic losses have been offset against relevant foreign income for a previous financial year;
+[S 860/2025 wef 31/12/2025]
+“relevant foreign income”, in relation to a constituent entity of an MNE group, means —
+(
+a
+)
+income of a controlled foreign company of the constituent entity on which the constituent entity is taxed as a result of a controlled foreign company tax regime (as defined in regulation 44(7));
+(
+b
+)
+income of a hybrid entity in which the constituent entity holds an ownership interest, where the hybrid entity is located in a different jurisdiction from the constituent entity;
+(
+c
+)
+income of a reverse hybrid entity in which the constituent entity holds an ownership interest, where the reverse hybrid entity is located in a different jurisdiction from the constituent entity; or
+(
+d
+)
+income of a permanent establishment of the constituent entity, where the permanent establishment is located in a different jurisdiction from the constituent entity;
+[S 860/2025 wef 31/12/2025]
+“special foreign tax asset”, in relation to a constituent entity of an MNE group, means the amount of domestic loss used by the constituent entity to offset (in whole or in part) relevant foreign income, multiplied by the lower of 15% and the applicable tax rate in the jurisdiction in which that constituent entity is located for the financial year in which the domestic loss was used, where that jurisdiction —
+(
+a
+)
+requires the domestic loss to be offset against relevant foreign income before a tax credit can be applied against tax on foreign income;
+(
+b
+)
+limits the extent to which foreign tax credits can be applied against tax for a financial year; and
+(
+c
+)
+permits a re-characterisation of domestic income as foreign income to allow foreign tax credits to be used to a greater extent where the domestic loss has been used to offset (in whole or in part) relevant foreign income for a previous financial year;
+[S 860/2025 wef 31/12/2025]
+“unclaimed accrual”, in relation to a constituent entity of an MNE group for a financial year, means an increase in a deferred tax liability in respect of which the filing entity of that MNE group has elected under regulation 46A not to include in the qualifying deferred tax expense of that constituent entity for that financial year.
+[S 860/2025 wef 31/12/2025]
+(6) Paragraph (1)(
+a
+) to (
+e
+) does not apply in relation to deferred tax assets or liabilities arising before the transition year.
+(7) In making the adjustments in paragraph (1), no item may be taken into account more than once.
+[S 129/2025 wef 25/02/2025]
+Recaptured deferred tax liabilities
+46.
+—(1) A constituent entity of an MNE group has a recaptured deferred tax liability if it has a deferred tax liability, other than an excluded liability, taken into account in its qualifying deferred tax expense for a financial year (called the initial year) that is not reversed by the last day of the fifth financial year after the initial year.
+(2) Where a constituent entity of an MNE group has a recaptured deferred tax liability —
+(
+a
+)
+the amount included in its qualifying deferred tax expense for the initial year in relation to that recaptured deferred tax liability must be excluded for that financial year; and
+(
+b
+)
+the following must be recalculated for the initial year:
+(i)
+the effective tax rate (as determined under section 17, including that section as applied by section 22, 23 or 25, or section 24, as the case may be) for the constituent entity and the other constituent entities of the MNE group located in the same jurisdiction;
+(ii)
+the top-up amounts that those constituent entities would have,
+and section 21(4) (or that section as applied by section 22, 23, 24 or 25, as the case may be) applies accordingly.
+(3) In paragraph (1), “excluded liability” means a tax expense attributable to changes in deferred tax liabilities in respect of —
+(
+a
+)
+cost recovery allowances on tangible assets;
+(
+b
+)
+the cost of a licence or similar arrangement from the government for the use of immovable property or exploitation of natural resources that entails significant investment in tangible assets;
+(
+c
+)
+research and development expenses;
+(
+d
+)
+de-commissioning and remediation expenses;
+(
+e
+)
+fair value accounting on unrealised net gains;
+(
+f
+)
+foreign currency exchange net gains;
+(
+g
+)
+insurance reserves and insurance policy deferred acquisition costs;
+(
+h
+)
+gains from the sale of tangible property located in the same jurisdiction as the constituent entity that are reinvested in tangible property located in the same jurisdiction; or
+(
+i
+)
+additional amounts accrued as a result of accounting principle changes with respect to anything falling within sub‑paragraphs (
+a
+) to (
+h
+).
+(4) The guidance in Chapter 1 of the June 2024 Administrative Guidance applies for the purpose of determining whether a constituent entity of an MNE group has a deferred tax liability (other than an excluded liability) taken into account in its qualifying deferred tax expense for the initial year that is not reversed by the last day of the fifth financial year after the initial year, and that guidance is to apply with the necessary modifications for that purpose (for example, a reference to an Unclaimed Accrual Five-Year Election is to an election mentioned in regulation 46A(1)(
+b
+)).
+[S 860/2025 wef 31/12/2025]
+Unclaimed accrual elections
+46A.
+—(1) The filing entity of an MNE group may, for any increase in a deferred tax liability that would be (if not for regulation 11) reflected in the FANIL of a constituent entity of an MNE group for a financial year, make an election in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules (and in particular the guidance in Chapter 1 of the June 2024 Administrative Guidance) to either —
+(
+a
+)
+not include the increase in the qualifying deferred tax expense of that constituent entity for that financial year if the increase is not expected to be reversed before the end of the fifth financial year after that financial year; or
+(
+b
+)
+not include the increase in the qualifying deferred tax expense of that constituent entity for that financial year if the deferred tax liability is tracked on the basis of a general ledger account, or is tracked within an aggregate deferred tax liability category to which the deferred tax liability belongs, whether or not the increase is expected to be reversed before the end of the fifth financial year after that financial year.
+(2) Where an election mentioned in paragraph (1)(
+b
+) (called in this regulation a paragraph (1)(
+b
+) election) is made for an increase in a deferred tax liability (DTL1), a paragraph (1)(
+b
+) election (called in this regulation a follow-up paragraph (1)(
+b
+) election) must be made for that financial year and at least the next 4 financial years for any increase in DTL1 or another deferred tax liability of that constituent entity that is tracked on the basis of the same general ledger account or within the same aggregate deferred tax category, and such election is treated as having been made even if not made.
+(3) Paragraph (2) does not apply in a case where the firstmentioned paragraph (1)(
+b
+) election in that paragraph is a follow-up paragraph (1)(
+b
+) election.
+(4) Where a follow-up paragraph (1)(
+b
+) election is not made in respect of that constituent entity for any financial year (FYX) after the last financial year mentioned in paragraph (2) (FY5), FYX being the first financial year after FY5 that such election is not made in respect of that constituent entity, then a paragraph (1)(
+b
+) election must not be made in respect of that constituent entity for FYX and any of the next 4 financial years after FYX, and any such election has no effect.
+(5) In this regulation —
+“aggregate deferred tax liability category” means a category of deferred tax liabilities determined in relation to 2 or more general ledger accounts, consistent with the chart of accounts used for the purposes of preparing the financial statements of an entity, where those general ledger accounts fall under the same balance sheet account or sub-balance sheet account;
+“general ledger account” means a single financial account in the chart of accounts used for the purposes of preparing the financial statements of an entity.
+[S 860/2025 wef 31/12/2025]
+GloBE loss election
+47.
+—(1) The filing entity of an MNE group may elect in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules that the treatment in this regulation applies to all the constituent entities of the MNE group located in a jurisdiction.
+(2) An election under paragraph (1) —
+(
+a
+)
+must be made for the transition year of any constituent entity located in that jurisdiction; and
+(
+b
+)
+cannot be made for a jurisdiction that has an eligible distribution tax system (as defined in paragraph 1(7) of the First Schedule to the Act).
+(3) Where an election is effective for a financial year —
+(
+a
+)
+none of the constituent entities located in the jurisdiction for which the election is made is treated as having any qualifying deferred tax expense for that financial year; and
+(
+b
+)
+if the sum of the GloBE income or loss for that financial year of those constituent entities is nil or less, that amount multiplied by 15% is the “special loss deferred tax asset” of those constituent entities for the purposes of this regulation.
+(4) Where an election is effective for a financial year and —
+(
+a
+)
+the sum of the GloBE income or loss for that financial year of the constituent entities located in a jurisdiction for which the election is made is a positive amount; and
+(
+b
+)
+those constituent entities have any special loss deferred tax asset from a previous financial year that has not been used,
+an amount of that special loss deferred tax asset must be used to increase the qualifying current tax expense of the constituent entities with a positive amount of GloBE income or loss for that financial year.
+(5) The amount of the special loss deferred tax asset that is to be used in paragraph (4) is the lower of —
+(
+a
+)
+the amount of the special loss deferred tax asset; and
+(
+b
+)
+the sum of the GloBE income or loss for that financial year of those constituent entities multiplied by 15%,
+and any amount of the special loss deferred tax asset remaining unused remains available for use in a subsequent financial year.
+(6) Any special loss deferred tax asset used in paragraph (4) must be allocated between the constituent entities with a positive amount of GloBE income or loss for the financial year in proportion to the amounts of their GloBE income or loss.
+(7) If an election under paragraph (1) is revoked for the constituent entities located in a jurisdiction, any special loss deferred tax asset of those constituent entities remaining unused on the first day of the first financial year for which the election is revoked is reduced to nil.
+(8) If the ultimate parent entity of the MNE group is a flow-through entity that is located in that jurisdiction, paragraphs (3) to (7) apply in relation to the constituent entities of the MNE group that are located in that jurisdiction, as if the ultimate parent entity were —
+(
+a
+)
+the only constituent entity of a separate MNE group that is located in the jurisdiction; and
+(
+b
+)
+not a constituent entity of the MNE group that is located in that jurisdiction.
+Deemed distribution tax election
+48.
+—(1) Where a jurisdiction has an eligible distribution tax system, the filing entity of an MNE group may make an election in a GloBE information return (whether filed in Singapore or in another jurisdiction) in accordance with the GloBE rules that the treatment in this regulation applies to the constituent entities of the MNE group located in that jurisdiction for a financial year.
+(2) Where an election is effective for a financial year —
+(
+a
+)
+the constituent entities located in the jurisdiction for which the election is made have a deemed distribution tax amount for that financial year, being the lower of —
+(i)
+an amount that, when added to A in section 17(1) for those constituent entities, would result in the effective tax rate (as determined under section 17, including that section as applied by section 22, 23 or 25, or section 24, as the case may be) for those constituent entities for that financial year being 15%; and
+(ii)
+the amount of tax that would have been due in that jurisdiction if those constituent entities had distributed all of their profits for that financial year;
+(
+b
+)
+the combined adjusted covered taxes of those constituent entities for that financial year are increased by the deemed distribution tax amount; and
+(
+c
+)
+a recapture amount equal to that deemed distribution tax amount is recognised for those constituent entities in the next financial year.
+(3) The recapture amount of the constituent entities for a financial year is reduced (but not below nil) by —
+(
+a
+)
+first, the amount of any tax paid in that financial year on any actual or deemed distribution of profits by those constituent entities;
+(
+b
+)
+then, if those constituent entities have a total negative amount of GloBE income or loss for that financial year, the amount of that total loss (expressed as a positive number) multiplied by 15%; and
+(
+c
+)
+then, if any amount computed in sub‑paragraph (
+b
+) for those constituent entities for a previous financial year was not fully deducted against the recapture amount of those constituent entities for any previous financial year, the remainder of that amount,
+on the basis that a recapture amount first recognised in an earlier financial year is reduced before a recapture amount first recognised in a later financial year;
+(4) If any recapture amount of the constituent entities of an MNE group located in a jurisdiction remains at the end of the fourth financial year after the financial year when the recapture amount was first recognised, then, for the financial year when the recapture amount was first recognised —
+(
+a
+)
+that recapture amount is deducted from the combined adjusted covered taxes of those constituent entities;
+(
+b
+)
+then, the effective tax rate (as determined under section 17, including that section as applied by section 22, 23 or 25, or section 24, as the case may be) for those constituent entities is recalculated; and
+(
+c
+)
+then, the top-up amounts that those constituent entities would have are recalculated,
+and section 21(4) (or that section as applied by section 22, 23, 24 or 25, as the case may be) applies accordingly.
+(5) Any amount of tax of a constituent entity that is used in a financial year to reduce a recapture amount in paragraph (3)(
+a
+) must be excluded from the adjusted covered taxes of that constituent entity for that financial year.
+(6) Where, in a financial year, a constituent entity —
+(
+a
+)
+leaves the MNE group;
+(
+b
+)
+transfers all, or substantially all, of its assets to an entity which is not a constituent entity of the MNE group or to an individual;
+(
+c
+)
+transfers all, or substantially all, of its assets to a constituent entity located in another jurisdiction; and
+(
+d
+)
+the constituent entities located in that jurisdiction had, in previous financial years, one or more recapture amounts (each called a recapture year),
+then, for each recapture year —
+(
+e
+)
+the recapture amount for that year (after any reduction in paragraph (3)(
+a
+)) must be deducted from the combined adjusted covered taxes of those constituent entities for that year;
+(
+f
+)
+then, the effective tax rate (as determined under section 17, including that section as applied by section 22, 23 or 25, or section 24, as the case may be) for those constituent entities must be recalculated; and
+(
+g
+)
+then, the top-up amounts that those constituent entities would have must be recalculated, and then adjusted by the relevant ratio for each constituent entity,
+and section 21(4) (or that section as applied by section 22, 23, 24 or 25, as the case may be) applies accordingly.
+(7) In paragraph (6), the relevant ratio for a financial year is the ratio of the GloBE income or loss for the financial year of the constituent entity leaving the MNE group over the sum of the GloBE income or loss for the financial year of the constituent entities of the MNE group, and —
+(
+a
+)
+where the resulting ratio is less than nil, the relevant ratio is nil; and
+(
+b
+)
+where the resulting ratio is more than 1, the relevant ratio is 1.
+(8) In this regulation, “eligible distribution tax system” has the meaning given by paragraph 1(7) of the First Schedule to the Act.
+(9) This regulation does not apply for the purpose of Part 3 of the Act.
+Division 4 —
+Modifications for DTT purposes
+Modifications in relation to Part 3 of Act
+49.
+—(1) Despite the regulations in this Part, for the purpose of Part 3 of the Act —
+(
+a
+)
+where a constituent entity located in Singapore is a permanent establishment, any qualifying current tax expense or qualifying deferred tax expense of its main entity located outside Singapore in respect of the income of that constituent entity must not be allocated to that constituent entity;
+(
+b
+)
+where a constituent entity located in Singapore is a controlled foreign company under a controlled foreign company tax regime, any qualifying current tax expense or qualifying deferred tax expense arising under that regime must not be allocated to that constituent entity;
+(
+c
+)
+where a constituent entity located in Singapore (
+X
+) makes a distribution (including any deemed distribution in respect of undistributed earnings or capital) to another constituent entity located outside Singapore (
+Y
+), any qualifying current tax expense or qualifying deferred tax expense of
+Y
+in respect of that distribution (other than withholding tax imposed by the ITA in respect of that distribution) must not be allocated to
+X
+;
+[S 860/2025 wef 31/12/2025]
+(
+d
+)
+where a constituent entity located in Singapore (
+X
+) is a hybrid entity with respect to any of its income, expenditure, profit or loss attributable to an ownership interest in
+X
+held by another constituent entity of the MNE group located outside Singapore (
+Y
+), and
+Y
+is subject to taxation on the income of
+X
+, any qualifying current tax expense or qualifying deferred tax expense of
+Y
+in respect of the income of
+X
+(other than that recorded in the financial accounts of
+Y
+and which arose from tax imposed by the ITA in respect of that income) must not be allocated to
+X
+;
+[S 860/2025 wef 31/12/2025]
+(
+e
+)
+where —
+(i)
+a constituent entity located in Singapore (
+X
+) is a reverse hybrid entity with respect to any of its income, expenditure, profit or loss attributable to another constituent entity of the MNE group located outside Singapore that is its reference entity (
+Y1
+); and
+(ii)
+Y1
+or another constituent entity of the MNE group located outside Singapore that holds an indirect ownership interest in
+X
+through
+Y1
+(
+Y2
+) is subject to taxation on the income of
+X
+,
+any qualifying current tax expense or qualifying deferred tax expense of
+Y1
+or
+Y2
+in respect of the income of
+X
+(other than that recorded in the financial accounts of
+Y1
+or
+Y2
+and which arose from tax imposed by the ITA in respect of that income) must not be allocated to
+X
+; and
+[S 860/2025 wef 31/12/2025]
+(
+f
+)
+where —
+(i)
+a constituent entity is a section 29(
+b
+) entity (
+X
+) with respect to any of its income, expenditure, profit or loss attributable to another constituent entity of the MNE group located outside Singapore that is its reference entity (
+Y1
+); and
+(ii)
+Y1
+or another constituent entity of the MNE group located outside Singapore that holds an indirect ownership interest in
+X
+through
+Y1
+(
+Y2
+) is subject to taxation on the income of
+X
+,
+any qualifying current tax expense or qualifying deferred tax expense of
+Y1
+or
+Y2
+in respect of the income of
+X
+(other than that recorded in the financial accounts of
+Y1
+or
+Y2
+and which arose from tax imposed by the ITA in respect of that income) must not be allocated to
+X
+.
+[S 860/2025 wef 31/12/2025]
+(2) In this regulation —
+“controlled foreign company” means the other entity in the definition of “controlled foreign company tax regime”;
+“controlled foreign company tax regime” means a set of tax rules (other than MTT or a qualified IIR) under which an entity with an ownership interest in another entity located in a different jurisdiction is subject to current taxation on its share of part or all of the income of the other entity, whether or not any of that income is distributed to the entity.

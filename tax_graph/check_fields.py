@@ -15,7 +15,7 @@ from .cases import BASE_A, CASE_A, EVENT_A
 from .scenarios import HOLDING
 from .fields import fields, missing_fields, required_fields
 
-DOC = Path(__file__).resolve().parents[1] / "信息收集.md"
+DOC = Path(__file__).resolve().parent / "信息收集.md"
 
 
 def doc_fields():

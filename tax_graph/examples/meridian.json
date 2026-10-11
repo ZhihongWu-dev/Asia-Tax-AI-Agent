@@ -1,0 +1,65 @@
+{
+  "template": "inbound_services",
+  "subject": "SERVICER",
+  "members": [
+    "SERVICER"
+  ],
+  "roles": {
+    "SERVICER": {
+      "loc": "SG",
+      "attrs": {
+        "managed_from": "SG",
+        "incorporated_in": "SG",
+        "fixed_place_in_cn": false,
+        "fixed_place_in_hk": false,
+        "payee_is_government": false,
+        "payee_is_financial_institution": false
+      }
+    },
+    "CLIENT": {
+      "loc": "CN",
+      "attrs": {
+        "managed_from": "CN"
+      }
+    }
+  },
+  "holds": [],
+  "flows": {
+    "fee": {
+      "service_days_12m": 76,
+      "service_kind": "ENGINEERING_DESIGN_CONSULTING",
+      "profit_margin": 30,
+      "receipt_kind": "REMITTED",
+      "foreign_headline_rate": 25,
+      "foreign_taxed": true,
+      "tax_paid_on": "2025-12-31",
+      "remitted_on": "2025-12-31",
+      "service_performed_in_source": true,
+      "service_performed_in_residence": true,
+      "vat_borne_by_payer": true
+    }
+  },
+  "present": {
+    "payment": false
+  },
+  "settled": {
+    "fee": {
+      "CN": 100000
+    }
+  },
+  "event": {
+    "service_fee": 1000000,
+    "on": "2025-12-31",
+    "as_at": "2026-10-07"
+  },
+  "notes": [
+    "合同金额 SGD 1,000,000，客户按 10% 扣缴 100,000 并取得扣缴凭证；金额单位为新元。",
+    "付款日与扣缴日案例未给，取 2025-12-31；这只影响退税与相互协商时钟的起算。",
+    "境内履行份额未知：已知境内工作 76 天、大部分工作在新加坡完成，故两地均有履行为事实，service_onshore_share 留空，内地核定税基对份额取区间。",
+    "新加坡税务居民证明（COR）是否已取得未给，residence_cert 留空；协定免税与退税都以它为前提。",
+    "新加坡部分免税（s43(6B)）按公司全年应税所得计算，案例只给了本项目的 100 万收入与 70 万成本，故未填 cit_rate，按 17% 名义税率；profit_margin 30 为本项目利润率。",
+    "service_kind 取 ENGINEERING_DESIGN_CONSULTING（数据分析、模型、系统实施、培训属设计咨询类，国税发〔2010〕19 号第五条 15%–30%）。",
+    "合同未转让专利、著作权或专有技术，客户不得源代码；是否被认定为特许权使用费是裁量项（国税函〔2009〕507 号第四、六条）。",
+    "Meridian 实收 900,000 = 合同额 − 10% 企业所得税，未被代扣增值税；代扣增值税（如有）由客户承担，故 vat_borne_by_payer = true。"
+  ]
+}

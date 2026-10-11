@@ -1,0 +1,83 @@
+{
+  "python": "3.12.7",
+  "results": [
+    {
+      "name": "rules",
+      "command": "python -m tax_graph.rules",
+      "exit_code": 0,
+      "log": "rules.log"
+    },
+    {
+      "name": "check_engine",
+      "command": "python -m tax_graph.check_engine",
+      "exit_code": 0,
+      "log": "check_engine.log"
+    },
+    {
+      "name": "check_fields",
+      "command": "python -m tax_graph.check_fields",
+      "exit_code": 0,
+      "log": "check_fields.log"
+    },
+    {
+      "name": "check_extract",
+      "command": "python -m tax_graph.check_extract",
+      "exit_code": 0,
+      "log": "check_extract.log"
+    },
+    {
+      "name": "check_scope",
+      "command": "python -m tax_graph.check_scope",
+      "exit_code": 0,
+      "log": "check_scope.log"
+    },
+    {
+      "name": "check_entity",
+      "command": "python -m tax_graph.check_entity",
+      "exit_code": 0,
+      "log": "check_entity.log"
+    },
+    {
+      "name": "check_cn_wht",
+      "command": "python -m tax_graph.check_cn_wht",
+      "exit_code": 0,
+      "log": "check_cn_wht.log"
+    },
+    {
+      "name": "check_flow_tax",
+      "command": "python -m tax_graph.check_flow_tax",
+      "exit_code": 0,
+      "log": "check_flow_tax.log"
+    },
+    {
+      "name": "check_hk_tax",
+      "command": "python -m tax_graph.check_hk_tax",
+      "exit_code": 0,
+      "log": "check_hk_tax.log"
+    },
+    {
+      "name": "check_sg_s45",
+      "command": "python -m tax_graph.check_sg_s45",
+      "exit_code": 0,
+      "log": "check_sg_s45.log"
+    },
+    {
+      "name": "meridian",
+      "command": "python -m tax_graph.run tax_graph/examples/meridian.json --out-dir tax_graph/examples/results",
+      "exit_code": 0,
+      "log": "meridian.log"
+    },
+    {
+      "name": "meridian_table",
+      "command": "python -m tax_graph.run tax_graph/examples/meridian.json --out-dir tax_graph/examples/results --table",
+      "exit_code": 0,
+      "log": "meridian_table.log"
+    },
+    {
+      "name": "hk_sample",
+      "command": "python -m tax_graph.run tax_graph/examples/hk_holding_services.synthetic.json --out-dir tax_graph/examples/results --table",
+      "exit_code": 0,
+      "log": "hk_sample.log"
+    }
+  ]
+}

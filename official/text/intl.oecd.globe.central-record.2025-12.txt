@@ -1,0 +1,794 @@
+   1 
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+ 
+ 
+ 
+ 
+ 
+ OECD/G20 Base Erosion and Profit Shifting Project 
+ 
+ 
+ 
+ 
+ 
+ 
+Tax Challenges Arising from the 
+Digitalisation of the Economy –
+Administrative Guidance on the Global 
+Anti-Base Erosion Model Rules (Pillar Two), 
+Central Record for Purposes of the Global 
+Minimum Tax 
+Inclusive Framework on BEPS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+2    
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+This document and any map included herein are without prejudice to the status of or sovereignty over any 
+territory, to the delimitation of international frontiers and boundaries and to the name of any territory, city 
+or area. 
+This document was approved and declassified by the OECD/G20 Inclusive Framework on BEPS on  
+5 January 2026 and prepared for publication by the OECD Secretariat. 
+ 
+Please cite this publication as: 
+OECD (2026), Tax Challenges Arising from the Digitalisation of the Economy – Administrative Guidance on the Global Anti-Base 
+Erosion Model Rules (Pillar Two), Central Record for Purposes of the Global Minimum Tax: Inclusive Framework on BEPS, OECD, 
+https://www.oecd.org/content/dam/oecd/en/topics/policy-sub-issues/global-minimum-tax/administrative-guidance-globe-rules-
+pillar-two-central-record-legislation-transitional-qualified-status.pdf.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Corrigenda to OECD publications may be found at: https://www.oecd.org/en/publications/support/corrigenda.html.  
+© OECD 2026 
+ Attribution 4.0 International (CC BY 4.0) 
+This work is made available under the Creative Commons Attribution 4.0 International licence. By using this work, you accept to be bound by the terms of this licence (https://creativecommons.org/licenses/by/4.0/). 
+Attribution – you must cite the work. 
+Translations – you must cite the original work, identify changes to the original and add the following text: In the event of any discrepancy between the original work and the translation, only the text of original 
+work should be considered valid. 
+Adaptations – you must cite the original work and add the following text: This is an adaptation of an original work by the OECD. The opinions expressed and arguments employed in this adaptation should not 
+be reported as representing the official views of the OECD or of its Member countries.  
+Third-party material – the licence does not apply to third-party material in the work. If using such material, you are responsible for obtaining permission from the third party and for any claims of infringement. 
+You must not use the OECD logo, visual identity or cover image without express permission or suggest the OECD endorses your use of the work. 
+Any dispute arising under this licence shall be settled by arbitration in accordance with the Permanent Court of Arbitration (PCA) Arbitration Rules 2012. The seat of arbitration shall be Paris (France). The number 
+of arbitrators shall be one. 
+ 
+ 
+ 
+
+   3 
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+Executive summary 
+1. 
+In October 2021 members of the OECD/G20 Inclusive Framework on Base Erosion and Profit 
+Shifting (Inclusive Framework) agreed a two-pillar solution to reform the international tax framework in 
+response to the challenges of digitalisation of the economy. As part of the October Statement, Inclusive 
+Framework members agreed to a co-ordinated system of Global anti-Base Erosion (GloBE) rules that are 
+designed to ensure large multinational enterprises (MNEs) pay a minimum level of tax on the income 
+arising in each jurisdiction where they operate. In the October Statement, it was agreed that the GloBE 
+Rules would have the status of a common approach. Under this common approach, jurisdictions are not 
+required to adopt the GloBE Rules, but, if they choose to do so, they will implement and administer the 
+rules in a way that is consistent with the agreed outcomes. The common approach also means that 
+Inclusive Framework members accept the application of the GloBE Rules applied by other members, 
+including agreement as to rule order and the application of any agreed safe harbours. 
+2. 
+The GloBE Model Rules were approved and released by the Inclusive Framework on 20 December 
+2021 Tax Challenges Arising from Digitalisation of the Economy – Global Anti-Base Erosion Model Rules 
+(Pillar Two): Inclusive Framework on BEPS (OECD, 2021[1]). The GloBE Model Rules consist of an 
+interlocking and co-ordinated system of rules which are designed to be implemented into the domestic law 
+of each jurisdiction and operate together to ensure large MNE Groups are subject to a minimum effective 
+tax rate of 15% on any excess profits arising in each jurisdiction where they operate. Consistent with the 
+intention of the Inclusive Framework, the GloBE Rules (including the IIR and UTPR) are designed so that 
+the imposition of top-up tax in accordance with those rules will be compatible with the provisions of the 
+United Nations Model Double Taxation Convention between Developed and Developing Countries 2021 
+(the “UN Model Double Tax Convention”) (United Nations Department of Economic and Social Affairs, 
+2022[2]) and the Model Tax Convention on Income and on Capital: Condensed Version 2017, (the “OECD 
+Model Tax Convention”) (OECD, 2017[3]). 
+3. 
+The Commentary to the GloBE Model Rules was first approved and released by the Inclusive 
+Framework 
+on 
+14 
+March 
+2022 
+Tax 
+Challenges 
+Arising 
+from 
+the 
+Digitalisation 
+of 
+the 
+Economy – Commentary to the Global Anti-Base Erosion Model Rules (Pillar Two), First Edition: Inclusive 
+Framework on BEPS (OECD, 2022[4]) The Commentary clarifies the interpretation and operation of the 
+provisions in the GloBE Model Rules and includes some examples illustrating how the rules apply to 
+specific fact patterns. The Commentary is intended to promote a consistent and common interpretation of 
+the GloBE Model Rules in order to provide certainty for MNE Groups and to facilitate co-ordinated 
+outcomes among implementing jurisdictions. Although the Commentary is detailed and comprehensive, it 
+does not provide guidance on every aspect of the GloBE Model Rules. 
+4. 
+The GloBE Model Rules envision that the Inclusive Framework may issue guidance on both the 
+interpretation and the operation of the rules. The Inclusive Framework has provided interpretive guidance 
+to ensure consistent and common interpretation of the GloBE Rules, provide certainty for MNE Groups 
+and facilitate co-ordinated and transparent outcomes under the rules. Once agreed, the Administrative 
+Guidance is incorporated into the Commentary as it supplements or replaces paragraphs in the 
+Commentary or explains how to apply the language of the rules to particular fact patterns. 
+
+4    
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+Administrative Guidance – Central Record 
+5. 
+The Inclusive Framework released a first version of the central record on 15 January 2025 with 
+legislation that had completed the transitional qualification mechanism process for the IIR, DMTT or 
+QDMTT Safe Harbour. This document includes an updated version of the central record as of 1 December 
+2025 to reflect that additional legislation has completed the transitional qualification mechanism process. 
+This Administrative Guidance will be incorporated into the Commentary to the GloBE Model Rules. 
+ 
+ 
+
+   5 
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+Central record for purposes of 
+the Global Minimum Tax 
+Administrative guidance 
+1. 
+The following text in bold will be inserted in (and the text shown in strikethrough will be deleted 
+from) Annex B of the Tax Challenges Arising from the Digitalisation of the Economy – Consolidated 
+Commentary to the Global Anti-Base Erosion Model Rules (2025): Inclusive Framework on BEPS (OECD, 
+2025[5]).  
+Annex B. Central record for purposes of the Global Minimum Tax 
+This Annex includes the central record of legislation with qualified status for a transitional period, as 
+determined under the transitional qualification mechanism. This central record is current as at 1 
+December 2025 and will be updated on a regular basis and in a timely manner, after a self-certification 
+that has been submitted to the Inclusive Framework has completed the agreed transitional qualification 
+mechanism process. The fact that a jurisdiction’s legislation is not included in this central record does not 
+mean that the legislation is not qualified; rather it means that, as at the date of publication, the process 
+provided for under the transitional qualification mechanism has not yet been initiated or completed for that 
+legislation. 
+The relevant legislation set out in the tables below will be treated as qualified from the effective date of the 
+legislation, which is the date when that legislation becomes applicable to in-scope taxpayers (i.e. the date 
+on or after which the first covered Fiscal Year of an in-scope MNE Group starts).  
+While recognition of qualified status is important for determining the order in which global minimum tax 
+rules apply, there is no requirement for a jurisdiction to introduce such rules. Jurisdictions may have 
+alternative ways of ensuring that MNE Groups pay an effective rate of tax at least 15% on the income 
+arising in their jurisdiction and achieving policy outcomes consistent with the global minimum tax.  
+This Annex also includes the central record of jurisdictions with Qualified SbS Regimes. A 
+jurisdiction is treated as having a Qualified SbS Regime from the effective date listed in the Central 
+Record. 
+This central record is current as at 18 August 2025. 
+Qualified Income Inclusion Rules  
+The central record also indicates if an IIR is an Elective IIR for 2024. An Elective IIR is one that includes a 
+provision in the domestic implementing legislation that allows an MNE Group to elect whether its 
+
+6    
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+Constituent Entities located in the IIR jurisdiction are subject to the IIR. The Inclusive Framework has 
+agreed that an IIR that is an Elective IIR for 2024 can be recognised as qualified under certain 
+circumstances, including that the IIR will not be elective in any other year. 
+ 
+ 
+Domestic law 
+Effective date  
+Australia 
+Taxation (Multinational – Global and Domestic Minimum Tax) Imposition Bill 2024 
+Taxation (Multinational – Global and Domestic Minimum Tax) Bill 2024 
+1 January 2024 
+Austria 
+Bundesgesetz zur Gewährleistung einer globalen Mindestbesteuerung für 
+Unternehmensgruppen (Mindestbesteuerungsgesetz – MinBestG) 
+31 December 2023 
+Belgium 
+Loi portant l’introduction d’un impôt minimum pour les groupes d’entreprises 
+multinationales et les groupes nationaux de grande envergure  
+Wet houdende de invoering van een minimumbelasting voor multinationale 
+ondernemingen en omvangrijke binnenlandse groepen  
+31 December 2023 
+Bulgaria 
+ЗАКОН за корпоративното подоходно облагане  
+31 December 2023 
+Canada 
+Global Minimum Tax Act  
+Loi sur l’impôt minimum mondial  
+31 December 2023 
+Croatia 
+Zakon o minimalnom globalnom porezu na dobit  
+31 December 2023 
+Czechia 
+Zákon č. 416/2023 Sb., o dorovnávacích daních pro velké nadnárodní skupiny a 
+velké vnitrostátní skupiny 
+31 December 2023 
+Denmark 
+Lov nr. 1535 af 12. december 2023 om en ekstraskat for visse koncernenheder 
+(minimumsbeskatningsloven) 
+31 December 2023 
+Finland 
+Laki suurten konsernien vähimmäisverosta 1308/2023 
+31 December 2023 
+France 
+Imposition minimale mondiale des groupes d'entreprises multinationales et des 
+groupes nationaux (Code général des impôts, Chapitre II bis, article 223 VJ à 223 
+WZ) 
+31 December 2023 
+Germany 
+Gesetz zur Gewährleistung einer globalen Mindestbesteuerung für 
+Unternehmensgruppen (Mindeststeuergesetz – MinStG) 
+31 December 2023 
+Gibraltar 
+Global Minimum Tax Act 2024 (2024-20) 
+1 January 2025 
+Greece 
+NOMOΣ ΥΠ’ ΑΡΙΘΜ. 5100 Ενσωμάτωση της Οδηγίας (ΕΕ) 2022/2523 του 
+Συμβουλίου, της 14ης Δεκεμβρίου 2022, σχετι-κά με την εξασφάλιση παγκόσμιου 
+ελάχιστου επιπέδου φορολογίας των ομίλων πολυεθνικών επιχειρήσεων και των 
+εγχώριων ομίλων μεγάλης κλίμακας στην Ευρωπαϊκή Ένωση (Pillar II) και άλ-λες 
+επείγουσες διατάξεις 
+31 December 2023 
+
+   7 
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+Guernsey 
+Income Tax (Approved International Agreements) (Implementation) (OECD Pillar 
+Two GloBE Model Rules) Regulations, 2024 
+1 January 2025 
+Hong Kong 
+(China) 
+Inland Revenue (Amendment) (Minimum Tax for Multinational Enterprise 
+Groups) Ordinance 2025 
+1 January 2025 
+Hungary 
+2023. évi LXXXIV. Törvény a globális minimum-adószintet biztosító kiegészítő 
+adókról és ezzel összefüggésben egyes adótörvények módosításáról 
+31 December 2023 
+Indonesia  
+Pengenaan Pajak Minimum Global Berdasarkan Kesepakatan Internasional (PMK 
+136 TAHUN 2024) 
+1 January 2025 
+Ireland 
+Taxes Consolidation Act 1997, Part 4A (Implementation Of Council Directive (EU) 
+2022/2523 of 15 December 2022 on Ensuring a Global Minimum Level of Taxation 
+For Multinational Enterprise Groups and Large Scale Domestic Groups in the Union) 
+31 December 2023 
+Isle of Man 
+Global Minimum Tax (Pillar Two) Order 2024, Statutory Document No. 2024/0234 
+1 January 2025 
+Italy 
+DECRETO LEGISLATIVO 27 dicembre 2023, n. 209 Attuazione della riforma fiscale 
+in materia di fiscalita' internazionale 
+31 December 2023 
+Japan 
+各対象会計年度の国際最低課税額に対する法人税（法人税法第二編
+第二章第一節・第二節） 
+国際最低課税額等に係る特定基準法人税額に対する地方法人税（地
+方法人税法第三章） 
+1 April 2024 
+Jersey 
+Multinational Taxation (Global Anti-Base Erosion – IIR Tax) (Jersey) Law 2025 
+1 January 2025 
+Korea 
+국제조세조정에 관한 법률 제3절 추가세액의 과세 
+(제72조(소득산입규칙의 적용)) 
+1 January 2024 
+Liechtenstein 
+Gesetz vom 10. November 2023 über die Mindestbesteuerung grosser 
+Unternehmensgruppen (GloBE-Gesetz) 
+1 January 2024 
+Luxembourg 
+Loi du 22 décembre 2023 relative à l’imposition minimale effective en vue de la 
+transposition de la directive (UE) 2022/2523 du Conseil du 15 décembre 2022 visant 
+à assurer un niveau minimum d’imposition mondial pour les groupes d’entreprises 
+multinationales et les groupes nationaux de grande envergure dans l’Union 
+31 December 2023 
+Malaysia 
+Act 851 - Finance (No. 2) Act 2023, Section 30 
+1 January 2025 
+Netherlands 
+Wet minimumbelasting 2024 
+31 December 2023 
+New Zealand 
+Taxation (Annual Rates for 2023–24, Multinational Tax, and Remedial Matters) Act 
+2024 
+1 January 2025 
+North 
+Macedonia 
+Закон за минимален глобален данок на добивка („Службен весник на 
+Република Северна Македонија“ бр.3/25) 
+1 January 2024 
+
+8    
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+Norway 
+Lov 12. januar 2024 nr 1 om suppleringsskatt på underbeskattet inntekt i konsern 
+(suppleringsskatteloven) 
+1 January 2024 
+Poland 
+Ustawa z dnia 6 listopada 2024 r. o opodatkowaniu wyrównawczym jednostek 
+składowych grup międzynarodowych i krajowych (Dz.U. 2024 poz.1685) 
+1 January 20241 
+Portugal 
+Lei n.º 41/2024, de 8 de novembro 
+1 January 2024 
+Qatar 
+Law No. 22 of 2024 amending some provisions of the Income Tax Law 
+promulgated by Law No. 24 of 2018 
+1 January 20252 
+Romania 
+Lege nr. 431/2023 privind asigurarea unui nivel minim global de impozitare a 
+grupurilor de întreprinderi multinaționale și a grupurilor naționale de mari dimensiuni 
+31 December 2023 
+Singapore 
+Multinational Enterprise (Minimum Tax) Act 2024 
+1 January 2025 
+Slovenia 
+Zakon o minimalnem davku (ZMD); Uradni list RS, št. 131/2023) 
+31 December 2023 
+South Africa 
+Global Minimum Tax Act (Act No. 46 of 2024) 
+1 January 2024 
+Spain  
+Ley 7/2024, de 20 de diciembre, por la que se establecen un impuesto 
+complementario para garantizar un nivel mínimo global de imposición para los 
+grupos multinacionales y los grupos nacionales de gran magnitud, un impuesto 
+sobre el margen de intereses y comisiones de determinadas entidades financieras y 
+un impuesto sobre los líquidos para cigarillos electrónicos y otros productos 
+relacionados con el tabaco, y se modifican otras normas tributarias 
+31 December 2023 
+Sweden 
+Lag (2023:875) om tilläggsskatt 
+31 December 2023 
+Switzerland 
+Ordonnance sur l’imposition minimale des grands groupes d’entreprises du 22 
+décembre 2023 (État le 1er janvier 2025), RS 642.161 
+Verordnung über die Mindestbesteuerung grosser Unternehmensgruppen vom 22. 
+Dezember 2023 (Stand am 1. Januar 2025), RS 642.161 
+Ordinanza concernente l’imposizione minima dei grandi gruppi di imprese del 22 
+dicembre 2023 (Stato 1° gennaio 2025), RS 642.161 
+1 January 2025 
+Thailand 
+พระราชก าหนดภาษีส่วนเพิ่ม พ.ศ.2567 
+1 January 2025 
+Türkiye 
+Kanun Numarası 5520 KURUMLAR VERGİSİ KANUNU (BEŞİNCİ KISIM Yerel ve 
+Küresel Asgari Tamamlayıcı Kurumlar Vergisi ve Geçici Maddeler) 
+1 January 2024 
+United 
+Kingdom 
+Finance (No. 2) Act 2023, Part 3 (Multinational Top-up Tax) & Schedules 14 15, 16, 
+16A and 17 
+31 December 2023 
+ 
+1 Elective IIR in 2024. 
+2 Self-certification based on draft secondary legislation. 
+
+   9 
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+Viet Nam 
+Nghị quyết số 107/2023/QH15 của Quốc hội: Về việc áp dụng thuế thu nhập doanh 
+nghiệp bổ sung theo quy định chống xói mòn cơ sở thuế toàn cầu 
+1 January 2024 
+Qualified Domestic Minimum Top-up Tax Rules and QDMTT Safe Harbours 
+The central record below indicates if a DMTT is a Conditional DMTT for 2024. A Conditional DMTT is one 
+that only applies to a Constituent Entity when the MNE Group is subject to the GloBE Rules in another 
+jurisdiction. The Inclusive Framework has agreed that a DMTT that is a Conditional DMTT for 2024 can be 
+recognised as qualified under certain circumstances, including that the DMTT will not be conditional in any 
+other year.  
+The central record also indicates if a DMTT is an Elective DMTT for 2024. An Elective DMTT is one that 
+includes a provision in the domestic implementing legislation that allows an MNE Group to elect whether 
+its Constituent Entities (or members of JV Groups) located in the DMTT jurisdiction are subject to the 
+DMTT. The Inclusive Framework has agreed that a DMTT that is an Elective DMTT for 2024 can be 
+recognised as qualified under certain circumstances, including that the DMTT will not be elective in any 
+other year. In addition, an MNE Group cannot claim the QDMTT Safe Harbour if it is not subject to the 
+Elective DMTT. 
+Where a jurisdiction has introduced a DMTT that also applies below the EUR 750 million threshold, then 
+the qualified status is only applicable to legislation to the extent that legislation applies to an MNE Group 
+which meets the EUR 750 million threshold. 
+ 
+ 
+Domestic law 
+QDMTT Safe 
+Harbour 
+Effective date 
+Australia 
+Taxation (Multinational – Global and Domestic Minimum Tax) 
+Imposition Bill 2024 
+Taxation (Multinational – Global and Domestic Minimum Tax) Bill 
+2024 
+Yes 
+1 January 2024 
+Austria 
+Bundesgesetz zur Gewährleistung einer globalen 
+Mindestbesteuerung für Unternehmensgruppen 
+(Mindestbesteuerungsgesetz – MinBestG) 
+Yes 
+31 December 2023 
+Bahrain 
+Decree-Law No. (11) of 2024 Regarding the Implementation of 
+Tax on Multinational Enterprises 
+Yes 
+1 January 2025 
+Barbados 
+Corporation Top-up Tax Act, 2024-16 
+Yes 
+1 January 20243 
+Belgium 
+Loi portant l’introduction d’un impôt minimum pour les groupes 
+d’entreprises multinationales et les groupes nationaux de grande 
+envergure  
+Yes 
+31 December 2023 
+ 
+3 Conditional DMTT in 2024.  
+
+10    
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+Wet houdende de invoering van een minimumbelasting voor 
+multinationale ondernemingen en omvangrijke binnenlandse 
+groepen  
+Brazil 
+Lei Nº 15.079, de 27 de dezembro de 2024 
+Yes 
+1 January 2025 
+Bulgaria 
+ЗАКОН за корпоративното подоходно облагане  
+Yes 
+31 December 2023 
+Canada 
+Global Minimum Tax Act  
+Loi sur l’impôt minimum mondial  
+Yes 
+31 December 2023 
+Croatia 
+Zakon o minimalnom globalnom porezu na dobit  
+Yes 
+31 December 2023 
+Czechia 
+Zákon č. 416/2023 Sb., o dorovnávacích daních pro velké 
+nadnárodní skupiny a velké vnitrostátní skupiny 
+Yes 
+31 December 2023 
+Denmark 
+Lov nr. 1535 af 12. december 2023 om en ekstraskat for visse 
+koncernenheder (minimumsbeskatningsloven) 
+Yes 
+31 December 2023 
+Finland 
+Laki suurten konsernien vähimmäisverosta 1308/2023 
+Yes 
+31 December 2023 
+France 
+Imposition minimale mondiale des groupes d'entreprises 
+multinationales et des groupes nationaux (Code général des impôts, 
+Chapitre II bis, article 223 VJ à 223 WZ) 
+Yes 
+31 December 2023 
+Germany 
+Gesetz zur Gewährleistung einer globalen Mindestbesteuerung für 
+Unternehmensgruppen (Mindeststeuergesetz – MinStG) 
+Yes 
+31 December 2023 
+Gibraltar 
+Global Minimum Tax Act 2024 (2024-20) 
+Yes 
+1 January 2024 
+Greece 
+NOMOΣ ΥΠ’ ΑΡΙΘΜ. 5100 Ενσωμάτωση της Οδηγίας (ΕΕ) 
+2022/2523 του Συμβουλίου, της 14ης Δεκεμβρίου 2022, σχετι-κά με 
+την εξασφάλιση παγκόσμιου ελάχιστου επιπέδου φορολογίας των 
+ομίλων πολυεθνικών επιχειρήσεων και των εγχώριων ομίλων 
+μεγάλης κλίμακας στην Ευρωπαϊκή Ένωση (Pillar II) και άλ-λες 
+επείγουσες διατάξεις 
+Yes 
+31 December 2023 
+Guernsey 
+Income Tax (Approved International Agreements) (Implementation) 
+(OECD Pillar Two GloBE Model Rules) Regulations, 2024 
+Yes 
+1 January 2025 
+Hong Kong 
+(China) 
+Inland Revenue (Amendment) (Minimum Tax for Multinational 
+Enterprise Groups) Ordinance 2025 
+Yes 
+1 January 2025 
+Hungary 
+2023. évi LXXXIV. Törvény a globális minimum-adószintet biztosító 
+kiegészítő adókról és ezzel összefüggésben egyes adótörvények 
+módosításáról 
+Yes 
+31 December 2023 
+Indonesia  
+Pengenaan Pajak Minimum Global Berdasarkan Kesepakatan 
+Internasional (PMK 136 TAHUN 2024) 
+Yes 
+1 January 2025 
+
+   11 
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+Ireland 
+Taxes Consolidation Act 1997, Part 4A (Implementation Of Council 
+Directive (EU) 2022/2523 of 15 December 2022 on Ensuring a 
+Global Minimum Level of Taxation For Multinational Enterprise 
+Groups and Large Scale Domestic Groups in the Union) 
+Yes 
+31 December 2023 
+Isle of Man 
+Global Minimum Tax (Pillar Two) Order 2024, Statutory Document 
+No. 2024/0234 
+Yes 
+1 January 2025 
+Italy 
+DECRETO LEGISLATIVO 27 dicembre 2023, n. 209 Attuazione 
+della riforma fiscale in materia di fiscalita' internazionale 
+Yes 
+31 December 2023 
+Japan 
+各対象会計年度の国内最低課税額に対する法人税（法
+人税法第二編第二章第一節・第四節、第三編第三章第
+二節） 
+国内最低課税額に係る特定基準法人税額に対する地方
+法人税（地方法人税法第四章） 
+Yes 
+1 April 2026 
+Liechtenstein 
+Gesetz vom 10. November 2023 über die Mindestbesteuerung 
+grosser Unternehmensgruppen (GloBE-Gesetz) 
+Yes 
+1 January 2024 
+Luxembourg 
+Loi du 22 décembre 2023 relative à l’imposition minimale effective 
+en vue de la transposition de la directive (UE) 2022/2523 du Conseil 
+du 15 décembre 2022 visant à assurer un niveau minimum 
+d’imposition mondial pour les groupes d’entreprises multinationales 
+et les groupes nationaux de grande envergure dans l’Union 
+Yes 
+31 December 2023 
+Malaysia 
+Act 851 - Finance (No. 2) Act 2023, Section 30  
+Yes 
+1 January 2025 
+Netherlands 
+Wet minimumbelasting 2024 
+Yes 
+31 December 2023 
+North 
+Macedonia 
+Закон за минимален глобален данок на добивка („Службен 
+весник на Република Северна Македонија“ бр.3/25) 
+Yes 
+1 January 2024 
+Norway 
+Lov 12. januar 2024 nr 1 om suppleringsskatt på underbeskattet 
+inntekt i konsern (suppleringsskatteloven) 
+Yes 
+1 January 2024 
+Poland 
+Ustawa z dnia 6 listopada 2024 r. o opodatkowaniu wyrównawczym 
+jednostek składowych grup międzynarodowych i krajowych (Dz.U. 
+2024 poz.1685) 
+Yes  
+1 January 20244 
+Portugal 
+Lei n.º 41/2024, de 8 de novembro 
+Yes 
+1 January 2024 
+Qatar 
+Law No. 22 of 2024 amending some provisions of the Income 
+Tax Law promulgated by Law No. 24 of 2018 
+Yes 
+1 January 20255 
+ 
+4 Elective DMTT in 2024. 
+5 Self-certification based on draft secondary legislation. 
+
+12    
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+Romania 
+Lege nr. 431/2023 privind asigurarea unui nivel minim global de 
+impozitare a grupurilor de întreprinderi multinaționale și a grupurilor 
+naționale de mari dimensiuni 
+Yes 
+31 December 2023 
+Singapore 
+Multinational Enterprise (Minimum Tax) Act 2024 
+Yes 
+1 January 2025 
+Slovak 
+Republic 
+Zákon č. 507/2023 Z. z. o dorovnávacej dani na zabezpečenie 
+minimálnej úrovne zdanenia nadnárodných skupín podnikov 
+a veľkých vnútroštátnych skupín a o doplnení zákona č. 563/2009 
+Z. z. o správe daní (daňový poriadok) a o zmene a doplnení 
+niektorých zákonov v znení neskorších predpisov 
+Yes 
+31 December 2023 
+Slovenia 
+Zakon o minimalnem davku (ZMD); Uradni list RS, št. 131/2023) 
+Yes 
+31 December 2023 
+South Africa 
+Global Minimum Tax Act (Act No. 46 of 2024) 
+Yes 
+1 January 2024 
+Spain  
+Ley 7/2024, de 20 de diciembre, por la que se establecen un 
+impuesto complementario para garantizar un nivel mínimo global de 
+imposición para los grupos multinacionales y los grupos nacionales 
+de gran magnitud, un impuesto sobre el margen de intereses y 
+comisiones de determinadas entidades financieras y un impuesto 
+sobre los líquidos para cigarillos electrónicos y otros productos 
+relacionados con el tabaco, y se modifican otras normas tributarias 
+Yes 
+31 December 2023 
+Sweden 
+Lag (2023:875) om tilläggsskatt 
+Yes 
+31 December 2023 
+Switzerland 
+Ordonnance sur l’imposition minimale des grands groupes 
+d’entreprises du 22 décembre 2023 (État le 1er janvier 2025), RS 
+642.161 
+Verordnung über die Mindestbesteuerung grosser 
+Unternehmensgruppen vom 22. Dezember 2023 (Stand am 1. 
+Januar 2025), RS 642.161 
+Ordinanza concernente l’imposizione minima dei grandi gruppi di 
+imprese del 22 dicembre 2023 (Stato 1° gennaio 2025), RS 642.161 
+Yes 
+1 January 2024 
+Thailand 
+พระราชก าหนดภาษีส่วนเพิ่ม พ.ศ.2567 
+Yes 
+1 January 2025 
+Türkiye 
+Kanun Numarası 5520 KURUMLAR VERGİSİ KANUNU (BEŞİNCİ 
+KISIM Yerel ve Küresel Asgari Tamamlayıcı Kurumlar Vergisi ve 
+Geçici Maddeler) 
+Yes 
+1 January 2024 
+United Arab 
+Emirates 
+Cabinet Decision No. 142 of 2024 on the Imposition of Top-up Tax 
+on Multinational Enterprises 
+Yes 
+1 January 2025 
+United 
+Kingdom 
+Finance (No. 2) Act 2023, Part 4 (Domestic Top-up Tax) & 
+Schedules 14, 15, 16, 16A, 17, and 18 
+Yes 
+31 December 2023 
+
+   13 
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+Viet Nam 
+Nghị quyết số 107/2023/QH15 của Quốc hội: Về việc áp dụng thuế 
+thu nhập doanh nghiệp bổ sung theo quy định chống xói mòn cơ 
+sở thuế toàn cầu 
+Yes 
+1 January 2024 
+Qualified SbS Regimes 
+ 
+Domestic law 
+Safe Harbour applicable for Fiscal 
+Years commencing on or after 
+United States 
+Internal Revenue Code of 1986 (Pub. L. 99–514, 100 Stat. 2085, 
+enacted October 22, 1986)6 
+1 January 2026 
+ 
+ 
+ 
+ 
+6 The Inclusive Framework determination of the U.S. tax system took into account data provided by the United 
+States delegation with respect to tax years 2019-2022. 
+
+14    
+ 
+TAX CHALLENGES ARISING FROM THE DIGITALISATION OF THE ECONOMY – ADMINISTRATIVE GUIDANCE ON THE GLOBAL ANTI-BASE EROSION MODEL RULES (PILLAR TWO), CENTRAL 
+RECORD FOR PURPOSES OF THE GLOBAL MINIMUM TAX © OECD 2026 
+  
+References 
+ 
+OECD (2025), Tax Challenges Arising from the Digitalisation of the Economy – Consolidated 
+Commentary to the Global Anti-Base Erosion Model Rules (2025): Inclusive Framework on 
+BEPS, OECD/G20 Base Erosion and Profit Shifting Project, OECD Publishing, Paris, 
+https://doi.org/10.1787/a551b351-en. 
+[5] 
+OECD (2022), Tax Challenges Arising from the Digitalisation of the Economy – Commentary 
+to the Global Anti-Base Erosion Model Rules (Pillar Two), First Edition: Inclusive 
+Framework on BEPS, OECD/G20 Base Erosion and Profit Shifting Project, OECD 
+Publishing, Paris, https://doi.org/10.1787/1e0e9cd8-en. 
+[4] 
+OECD (2021), Tax Challenges Arising from Digitalisation of the Economy – Global Anti-Base 
+Erosion Model Rules (Pillar Two): Inclusive Framework on BEPS, OECD/G20 Base 
+Erosion and Profit Shifting Project, OECD Publishing, Paris, 
+https://doi.org/10.1787/782bac33-en. 
+[1] 
+OECD (2017), Model Tax Convention on Income and on Capital: Condensed Version 2017, 
+OECD Publishing, Paris, https://doi.org/10.1787/mtc_cond-2017-en. 
+[3] 
+United Nations Department of Economic and Social Affairs (2022), United Nations Model 
+Double Taxation Convention Between Developed and Developing Countries 2021, United 
+Nations, https://doi.org/10.18356/9789210001007. 
+[2] 
+ 
+ 
+ 
