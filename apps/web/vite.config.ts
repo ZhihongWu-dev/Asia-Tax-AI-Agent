@@ -12,8 +12,8 @@ export default defineConfig(({ mode }) => ({
           loadEnv(mode, ".", "FSIE_WEB_").FSIE_WEB_API_URL ||
           "http://127.0.0.1:8000",
         changeOrigin: false,
-        timeout: 65000,
-        proxyTimeout: 60000,
+        timeout: 260000,
+        proxyTimeout: 260000,
       },
     },
   },

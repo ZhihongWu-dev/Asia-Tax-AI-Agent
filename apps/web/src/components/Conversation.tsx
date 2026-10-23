@@ -241,7 +241,7 @@ export default function Conversation({
                 </small>
               )}
             </div>
-          ) : message.kind === "chat" ? (
+          ) : message.kind === "chat" || message.kind === "consultation" ? (
             <AnswerText text={message.text || ""} />
           ) : message.kind === "research" && message.research ? (
             <div className="research-response">
@@ -315,7 +315,7 @@ export default function Conversation({
         if (area) area.scrollTop = area.scrollHeight;
         setAway(false);
       }}><ArrowDown size={16} /></HintButton>}
-      {Object.keys(current.facts).length > 0 && (
+      {!current.consultation && Object.keys(current.facts).length > 0 && (
         <div className="conversation-actions">
           <HintButton className="text-button" onClick={onFacts}>
             <FileText size={15} />

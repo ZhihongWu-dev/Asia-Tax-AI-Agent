@@ -122,7 +122,8 @@ async def upload_pdf(request: Request, filename: str = Query(min_length=1, max_l
 @router.get("/session")
 def session(user=Depends(required_user)):
     from packages.agent.providers import ProviderSettings
-    return {"model_configured": current_model_config().is_configured, "fields": catalog(),
+    from packages.consultation.settings import brief_enabled
+    return {"model_configured": current_model_config().is_configured, "workflow": "brief" if brief_enabled() else "legacy", "fields": catalog(),
             "can_review": user['id'] in ProviderSettings().reviewer_ids}
 
 

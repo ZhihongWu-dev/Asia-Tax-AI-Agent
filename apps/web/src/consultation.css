@@ -1,0 +1,13 @@
+.consultation-report-controls { max-width: 800px; margin: 0 auto 26px; padding: 0 28px; }
+.consultation-report-status { padding: 18px; border: 1px solid var(--border); border-radius: 12px; line-height: 1.8; background: var(--paper); }
+.consultation-report-status p { margin: 6px 0; }
+.consultation-report-status p:first-child { display: flex; align-items: center; gap: 8px; }
+.consultation-report-status progress { width: 100%; height: 8px; accent-color: var(--teal); margin: 10px 0; }
+.consultation-report-controls button { display: inline-flex; align-items: center; gap: 7px; }
+.consultation-report-backdrop { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; background: #17303d66; padding: 20px; }
+.consultation-report-dialog { width: min(520px, 100%); background: var(--paper); color: var(--navy); border: 1px solid var(--border); border-radius: 16px; padding: 28px; box-shadow: 0 16px 60px #17303d22; }
+.consultation-report-dialog h2 { font-size: 19px; margin-bottom: 16px; }
+.consultation-report-dialog p { line-height: 1.8; color: var(--muted); }
+.consultation-report-dialog label { display: flex; align-items: flex-start; gap: 10px; line-height: 1.8; margin: 20px 0; }
+.consultation-report-dialog input { margin-top: 6px; }
+@media(max-width:700px) { .consultation-report-controls { padding: 0 16px; } }

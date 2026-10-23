@@ -1,4 +1,5 @@
 import type { Case, FieldSpec, FactValue, KnowledgeResult, EntryHint } from "./workspace";
+let activeWorkflow = 'brief';
 
 export class ApiError extends Error {
   constructor(public code: string) {
@@ -50,8 +51,8 @@ export async function request<T>(
 export const api = {
   stream: async (doc: Case, text: string, approved: boolean, requestId: string, signal: AbortSignal, delta: (text: string, reset?: boolean) => void,
                  entryHint: EntryHint = "auto", replyToQuestionId: string | null = null, locale: "zh" | "en" = "zh"): Promise<Case> => {
-    const response = await fetch(`/api/cases/${doc.id}/messages`, {
-      method: "POST", credentials: "same-origin", signal: AbortSignal.any([signal, AbortSignal.timeout(100000)]),
+    const response = await fetch(`/api/cases/${doc.id}/${activeWorkflow === 'brief' ? 'brief/messages' : 'messages'}`, {
+      method: "POST", credentials: "same-origin", signal: AbortSignal.any([signal, AbortSignal.timeout(240000)]),
       headers: { "Content-Type": "application/json", "Accept": "text/event-stream", "X-AsiaTax-Request": "1" },
       body: JSON.stringify({ text, data_approved: approved, revision: doc.revision, request_id: requestId,
         entry_hint: entryHint, reply_to_question_id: replyToQuestionId, locale }),
@@ -75,6 +76,7 @@ export const api = {
           for (const line of frame.split("\n")) {
             if (!line.startsWith("data: ")) continue;
             const event = JSON.parse(line.slice(6));
+            if (event.type === "status") delta(event.text, true);
             if (event.type === "delta") delta(event.text);
             if (event.type === "reset") delta("", true);
             if (event.type === "error") throw new ApiError(event.code);
@@ -89,8 +91,11 @@ export const api = {
     request<KnowledgeResult>(
       `/knowledge/search?q=${encodeURIComponent(query)}`,
     ),
-  session: () =>
-    request<{ fields: FieldSpec[]; model_configured: boolean; can_review?: boolean }>("/session"),
+  session: async () => {
+    const session = await request<{ fields: FieldSpec[]; model_configured: boolean; can_review?: boolean; workflow?: string }>("/session");
+    activeWorkflow = session.workflow || 'legacy';
+    return session;
+  },
   list: () => request<Case[]>("/cases"),
   create: () => request<Case>("/cases", "POST"),
   get: (id: string) => request<Case>(`/cases/${id}`),

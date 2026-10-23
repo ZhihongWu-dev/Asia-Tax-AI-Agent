@@ -134,6 +134,11 @@ export type Analysis = {
   passages: Passage[];
 };
 export type Case = {
+  consultation?: {
+    version: number; stage: 'collecting' | 'ready';
+    facts: Record<string, { value: string | number | boolean | null; quote: string; status: string }>;
+    analyzed_hash?: string; generation_consent?: string; report_job?: string;
+  };
   reply_locale?: "zh" | "en";
   schema_version?: string;
   legacy_bindings?: Record<string, string>;

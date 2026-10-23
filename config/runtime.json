@@ -1,4 +1,5 @@
 {
+  "FSIE_ACTIVE_WORKFLOW": "brief",
   "FSIE_AGENT_ORCHESTRATION": "hybrid",
   "FSIE_AGENT_DYNAMIC_PLANNER": "true",
   "FSIE_AGENT_HARNESS_MODE": "tools",

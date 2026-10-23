@@ -170,7 +170,10 @@ def test_persistence_after_store_reopen(tmp_path):
 
 def test_health_contains_no_connection_string(setup):
     client, _ = setup
-    assert client.get('/health').json() == {'status': 'ok', 'release_level': 'L0'}
+    data = client.get('/health').json()
+    assert data['status'] == 'ok' and data['release_level'] == 'L0'
+    assert set(data) <= {'status', 'release_level', 'runtime', 'revision'}
+    assert set(data.get('runtime', {})) <= {'orchestration', 'provider', 'dynamic_planner', 'harness_mode', 'knowledge_ready'}
     assert client.get('/api/session').headers['cache-control'] == 'no-store'
 
 
