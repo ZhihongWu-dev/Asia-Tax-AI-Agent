@@ -1,8 +1,8 @@
 # Database build status
 
 - Errors: 0
-- Coverage gaps: 94
-- Warnings: 117
+- Coverage gaps: 91
+- Warnings: 118
 - SQLite snapshot: database.sqlite
 
 | Region | Category gaps | Slot gaps | Owned-pair gaps |
@@ -11,7 +11,7 @@
 | cn | 0 | 0 | 0 |
 | hk | 0 | 0 | 0 |
 | id | 0 | 0 | 0 |
-| in | 9 | 9 | 6 |
+| in | 8 | 7 | 6 |
 | jp | 7 | 8 | 5 |
 | kr | 6 | 12 | 4 |
 | my | 5 | 2 | 0 |
@@ -27,19 +27,16 @@ none
 
 gap: category in|1
 gap: category in|3
-gap: category in|4
 gap: category in|5
 gap: category in|7
 gap: category in|8
 gap: category in|9
 gap: category in|page_deadlines
 gap: category in|page_treaties
-gap: slot in|company|anti_abuse without a parameter or absence record
 gap: slot in|company|cfc without a parameter or absence record
 gap: slot in|company|final without a parameter or absence record
 gap: slot in|company|inbound without a parameter or absence record
 gap: slot in|company|outbound_wht without a parameter or absence record
-gap: slot in|individual|anti_abuse without a parameter or absence record
 gap: slot in|individual|cfc without a parameter or absence record
 gap: slot in|individual|inbound without a parameter or absence record
 gap: slot in|individual|outbound_wht without a parameter or absence record
@@ -179,6 +176,7 @@ param id.final.cit_rate: quote differs only by whitespace
 param id.inbound.foreign_dividend_exempt_if_invested: quote differs only by whitespace
 param th.anti_abuse.transfer_pricing_market_price_adjustment: quote differs only by whitespace
 param in.residence.company_poem: quote differs only by whitespace
+param in.anti_abuse.gaar_chapter_applies: quote differs only by whitespace
 param jp.final.individual_top_rate: quote differs only by whitespace
 param jp.outbound_wht.nonresident_payment_withholding: quote differs only by whitespace
 param ae.inbound.individual_uae_business_foreign_income: quote differs only by whitespace

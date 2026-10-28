@@ -410,3 +410,9 @@
 - Parameters added: `th.inbound.foreign_company_thailand_income_taxable`; `th.residence.company_incorporated_under_thai_law`; `th.anti_abuse.transfer_pricing_market_price_adjustment`.
 - Source and scope: the Revenue Department's foreign-company guide states the Thai-source withholding treatment of a foreign company with no Thai business, defines a Thai company as one registered under Thai law, and records the relevant tax-registration/filer rules. Its transfer-pricing page expressly describes market-price adjustment to prevent evasion from manipulated MNE transfer pricing.
 - Acceptance: NOT PASSED (0 errors, 3 Thailand gaps). The three remaining gaps are company CFC, individual anti-abuse and individual CFC. No CFC absence was recorded because the collected official sources do not expressly state that Thailand has no CFC regime; an absence record will be made only with a direct official basis.
+
+## 2026-10-28 — India GAAR rules expansion
+
+- Document added: `in.rules2026`, the official Income-tax Rules, 2026 notification from the Income Tax Department.
+- Parameter added: `in.anti_abuse.gaar_chapter_applies`, citing Rule 128(2), which states the temporal application of Chapter XI GAAR to tax benefits obtained on or after 1 April 2017.
+- Handoff to a person: `in.ita2025`: both public CBDT Act-PDF endpoints (`https://incometaxindia.gov.in/Documents/Act/Income-tax-Act-2025.pdf` and `https://www.incometaxindia.gov.in/documents/d/guest/income_tax_act_2025_as_amended_by_fa_act_2026-pdf`) returned HTTP 403 to the collector after documented curl retries. Download the official current Act PDF in a browser and register it as `in.ita2025` under categories 1;3;4;9; do not substitute a third-party copy.
