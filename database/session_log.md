@@ -440,3 +440,15 @@
 - Handoff to a person: none for this treaty. The separate `in.ita2025` H1 remains open as recorded above.
 - Tool changes: none.
 - Acceptance: NOT PASSED (0 errors, 17 India gaps). The `in-th` owned-pair gap is resolved.
+
+## 2026-10-28 — India–Japan treaty and MLI expansion
+
+- Documents added: `treaty.in-jp.1989.en`; `treaty.in-jp.2006.protocol.en`; `treaty.in-jp.2015.protocol.en`; `treaty.in-jp.1989.mli.en`.
+- Treaty row added: `in-jp`, base Convention in force 1989-12-29, with the official Japanese Ministry of Finance MLI synthesised text as `mli_doc_id`.
+- Parameters added: `in-jp.outbound_wht.dividend_rate` (10%); `in-jp.anti_abuse.ppt_applies` (MLI Article 7(1) principal-purpose test).
+- Official source and scope: the Japanese Ministry of Finance's current treaty list supplies the authentic base Convention, the 2006 and 2015 amending Protocols, their entry-into-force dates, and the official English MLI synthesised text. The Ministry states that MLI effects in India begin for other taxes in taxable periods beginning on or after 2020-04-01; the synthesised text says that it is for facilitating understanding and does not displace the authentic instruments.
+- Slicing problems: the current conservative build only materialises `#all` for newly collected PDF documents because the original, per-format slicers are absent from this package. The exact parameter quotes were verified against the official synthesised text. The 2006 and 2015 Protocols contain replacement language, but precise `superseded.csv` rows cannot be safely written while their base and protocol texts have no stable article-level cite_ids; no whole-document deletion was fabricated. A fixture-backed Japanese Ministry of Finance treaty slicer is required before recording those granular supersessions.
+- Rate-table mismatches: none.
+- Handoff to a person: none for this treaty. The separate `in.ita2025` H1 remains open as recorded above.
+- Tool changes: none.
+- Acceptance: NOT PASSED (0 errors, 16 India gaps). The `in-jp` owned-pair gap is resolved.
