@@ -535,6 +535,13 @@
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 53 gaps`; scoped Japan build `NOT PASSED: 0 errors, 9 gaps`. Japan's remaining gaps are company and individual anti-abuse and inbound slots, plus five owned treaty pairs.
 - Remote upload and verification: dry run recorded 366 objects, 11 jurisdiction rows, 181 document rows, 362 file rows, 5,998 clause rows, 258 parameter rows, 24 decision rows and 43 treaty rows. Preflight found 360 existing remote objects. `upload.py --partial --resume` then `upload.py --partial --verify` passed with all 366 object names and all 7 table row counts matching local data.
 
+## 2026-10-28 — Japan-owned treaty-pair coverage
+
+- Documents added: the official Ministry of Finance bilingual base-convention PDFs for Japan–Korea (1998), Japan–Malaysia (1999), Japan–Singapore (1994), Japan–Thailand (1990), and Japan–Viet Nam (1995).
+- Treaty rows added: `jp-kr`, `jp-my`, `jp-sg`, `jp-th`, and `jp-vn`, using the official list's stated entry-into-force dates. The Ministry list records MLI notifications for these pairs, but no official synthesised text or separately registered MLI instrument is asserted in this update; the rows state that limitation explicitly.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 48 gaps`; scoped Japan build `NOT PASSED: 0 errors, 4 gaps`. All Japan category and owned-pair coverage is now present. The remaining Japan gaps are company and individual anti-abuse and inbound slots.
+- Remote upload and verification: dry run recorded 376 objects, 11 jurisdiction rows, 186 document rows, 372 file rows, 6,003 clause rows, 258 parameter rows, 24 decision rows and 48 treaty rows. Preflight found 366 existing remote objects. The partial resume upload added 10 objects and `upload.py --partial --verify` passed with all 376 object names and all 7 table row counts matching local data.
+
 ## 2026-10-28 — Japan CFC overview and attribution mechanism
 
 - Document added: `jp.mof.cfc-overview`, the Japanese Ministry of Finance's current overview of the foreign-subsidiary combined-taxation system.

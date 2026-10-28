@@ -1,7 +1,7 @@
 # Database build status
 
 - Errors: 0
-- Coverage gaps: 53
+- Coverage gaps: 48
 - Warnings: 131
 - SQLite snapshot: database.sqlite
 
@@ -12,7 +12,7 @@
 | hk | 0 | 0 | 0 |
 | id | 0 | 0 | 0 |
 | in | 1 | 0 | 3 |
-| jp | 0 | 4 | 5 |
+| jp | 0 | 4 | 0 |
 | kr | 6 | 12 | 4 |
 | my | 0 | 0 | 0 |
 | sg | 0 | 0 | 0 |
@@ -33,11 +33,6 @@ gap: slot jp|company|anti_abuse without a parameter or absence record
 gap: slot jp|company|inbound without a parameter or absence record
 gap: slot jp|individual|anti_abuse without a parameter or absence record
 gap: slot jp|individual|inbound without a parameter or absence record
-gap: pair jp-kr without a treaty row
-gap: pair jp-my without a treaty row
-gap: pair jp-sg without a treaty row
-gap: pair jp-th without a treaty row
-gap: pair jp-vn without a treaty row
 gap: category kr|5
 gap: category kr|7
 gap: category kr|8
