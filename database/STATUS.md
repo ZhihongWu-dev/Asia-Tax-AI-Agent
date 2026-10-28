@@ -1,8 +1,8 @@
 # Database build status
 
 - Errors: 0
-- Coverage gaps: 88
-- Warnings: 118
+- Coverage gaps: 87
+- Warnings: 119
 - SQLite snapshot: database.sqlite
 
 | Region | Category gaps | Slot gaps | Owned-pair gaps |
@@ -11,7 +11,7 @@
 | cn | 0 | 0 | 0 |
 | hk | 0 | 0 | 0 |
 | id | 0 | 0 | 0 |
-| in | 5 | 7 | 6 |
+| in | 5 | 7 | 5 |
 | jp | 7 | 8 | 5 |
 | kr | 6 | 12 | 4 |
 | my | 5 | 2 | 0 |
@@ -41,7 +41,6 @@ gap: pair in-jp without a treaty row
 gap: pair in-kr without a treaty row
 gap: pair in-my without a treaty row
 gap: pair in-sg without a treaty row
-gap: pair in-th without a treaty row
 gap: pair in-vn without a treaty row
 gap: category jp|3
 gap: category jp|4
@@ -188,6 +187,7 @@ param ae-sg.outbound_wht.interest_rate: quote differs only by whitespace
 param ae-sg.outbound_wht.royalty_rate: quote differs only by whitespace
 param ae-sg.anti_abuse.ppt_applies: quote differs only by whitespace
 param ae-th.outbound_wht.dividend_rate: quote differs only by whitespace
+param in-th.outbound_wht.dividend_rate: quote differs only by whitespace
 param ae-th.outbound_wht.interest_rate_financial_institution: quote differs only by whitespace
 param ae-th.outbound_wht.interest_rate_other: quote differs only by whitespace
 param ae-th.outbound_wht.royalty_rate: quote differs only by whitespace

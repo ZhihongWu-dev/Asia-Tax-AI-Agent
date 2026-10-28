@@ -428,3 +428,15 @@
 - Handoff to a person: `in.ita2025` remains unresolved as recorded in the preceding session entry; its official Act PDF endpoints returned HTTP 403 to the collector.
 - Tool changes: none.
 - Acceptance: NOT PASSED (0 errors, 18 India gaps). The round removed categories 7, 8 and `page_deadlines`.
+
+## 2026-10-28 — India–Thailand treaty expansion
+
+- Documents added: `treaty.in-th.2015.en`; `treaty.in-th.2015.protocol.en`.
+- Treaty row added: `in-th`, in force 2016-01-05.
+- Parameters added: `in-th.outbound_wht.dividend_rate` (10% source-state cap where the beneficial owner is a resident of the other Contracting State).
+- Official source and scope: the Thai Revenue Department's current DTA index identifies the 2015 India treaty and its protocol as in force from 2016-01-05, MLI-modified from 2022-07-01, with no synthesised text published. Article 10(2) of the official treaty caps dividend tax at 10%. The protocol is supplementary and contains no express replacement of a treaty provision; no supersession row is required.
+- Slicing problems: the official English PDF uses mixed-case `Article` headings that the existing English-treaty slicer did not recognise, so both documents are intentionally retained as whole-document clauses and the parameter cites `#all`. The exact quote was verified by the build. No tool change was made.
+- Rate-table mismatches: none.
+- Handoff to a person: none for this treaty. The separate `in.ita2025` H1 remains open as recorded above.
+- Tool changes: none.
+- Acceptance: NOT PASSED (0 errors, 17 India gaps). The `in-th` owned-pair gap is resolved.
