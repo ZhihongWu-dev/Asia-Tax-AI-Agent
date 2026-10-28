@@ -1,7 +1,7 @@
 # Database build status
 
 - Errors: 0
-- Coverage gaps: 79
+- Coverage gaps: 78
 - Warnings: 126
 - SQLite snapshot: database.sqlite
 
@@ -11,7 +11,7 @@
 | cn | 0 | 0 | 0 |
 | hk | 0 | 0 | 0 |
 | id | 0 | 0 | 0 |
-| in | 4 | 2 | 3 |
+| in | 3 | 2 | 3 |
 | jp | 7 | 8 | 5 |
 | kr | 6 | 12 | 4 |
 | my | 5 | 2 | 0 |
@@ -26,7 +26,6 @@ none
 ## Gaps
 
 gap: category in|3
-gap: category in|5
 gap: category in|9
 gap: category in|page_treaties
 gap: slot in|company|cfc without a parameter or absence record

@@ -1,0 +1,153 @@
+Step-by-Step Guide to Fill FSI, TR, and FA Schedule in ITR 
+ 
+1. Understanding Foreign Assets and Income Disclosure 
+If a taxpayer has any assets outside of India—such as immovable property, bank accounts, 
+investments, or other assets—or earns income from foreign sources, careful attention must be 
+paid during the Income Tax Return filing process. 
+2. Selecting the Appropriate ITR Form 
+Taxpayers must select an ITR form that includes a specific section called Schedule FA (Foreign 
+Assets). The two simplest Income Tax return forms—ITR-1 and ITR-4—do not contain the 
+required Schedule FA section. 
+Important: Taxpayers with any foreign assets or income should not file using ITR-1 
+or ITR-4, as these forms lack the necessary reporting schedules for foreign disclosures. 
+3. Schedule FSI: Details of Income from Outside India and Tax Relief 
+Applicability and Scope:  
+Schedule FSI applies to taxpayers who are residents of India. In this schedule, taxpayers must 
+report all income that accrues or arises from sources outside India. Importantly, such income 
+must also be separately reported in the head-wise computation of total income, with the relevant 
+head of income clearly indicated. 
+Key Information to Provide 
+ 
+Country Code: Use the International Subscriber Dialling (ISD) code of the country where the 
+income originates. 
+ 
+Taxpayer Identification Number (TIN): Enter the TIN of the assessee in the country where 
+tax has been paid. If the country has not allotted a TIN, provide the passport number instead. 
+ 
+Tax Relief and DTAA Details: If tax has been paid outside India on foreign source income and 
+tax relief is being claimed in India, mention the relevant article of the applicable Double 
+Taxation Avoidance Agreement (DTAA). 
+ 
+Form 67 Requirement: Ensure that details of foreign tax credit and income are reported in 
+Form 67 to claim the credit in India. 
+4. Schedule TR: Summary of Tax Relief Claimed for Taxes Paid Outside 
+India 
+Applicability and Scope: 
+Schedule TR provides a consolidated summary of tax relief being claimed in India for taxes 
+paid outside India with respect to each country. This schedule consolidates the detailed 
+information furnished in Schedule FSI. 
+
+Required Entries 
+ 
+Column (a) and (b) — Country Code and TIN: Specify the relevant country code using the 
+International Subscriber Dialling (ISD) code and provide the Taxpayer Identification Number 
+(TIN). If a TIN has not been allotted in that country, substitute the passport number. 
+ 
+Column (c) — Tax Paid Outside India: Mention the tax paid on the income declared in 
+Schedule FSI. This will be the total tax paid under column (c) of Schedule FSI for each country. 
+ 
+Column (d) — Tax Relief Available: Specify the tax relief available, which will be the total 
+tax relief available under column (e) of Schedule FSI for each country. 
+ 
+Column (e) — Provision of Income-tax Act: Specify the provision under which tax relief is 
+being claimed—namely, section 90, section 90A, or section 91. 
+5. Schedule FA: Details of Foreign Assets and Income from Any Source 
+Outside India 
+Applicability and Scope: 
+Residents of India are required to furnish details of any foreign assets in this schedule. In case 
+you are a resident in India, the details of all foreign assets or accounts in respect of which you are a 
+beneficial owner, a beneficiary or the legal owner, is required to be mandatorily disclosed in the 
+Schedule FA. For this purpose, 
+ 
+(a) Beneficial owner in respect of an asset means an individual who has provided, 
+directly or indirectly, consideration for the asset and where such asset is held for the 
+immediate or future benefit, direct or indirect, of the individual providing the 
+consideration or any other person.  
+ 
+(b) Beneficiary in respect of an asset means an individual who derives an immediate or 
+future benefit, directly or indirectly, in respect of the asset and where the consideration 
+for such asset has been provided by any person other than such beneficiary.  
+ 
+If the taxpayer is both legal owner and beneficial owner, the legal owner status should be 
+mentioned in the ownership column. However, Schedule FA need not be completed if the 
+taxpayer is classified as "not ordinarily resident" or a "non-resident." 
+Mandatory Disclosure Rules: Residents of India must disclose all foreign assets or accounts 
+in respect of which they are beneficial owners, beneficiaries, or legal owners. This disclosure 
+requirement is comprehensive and covers all types of foreign holdings. 
+Overview of Tables A1 to G 
+Taxpayers must furnish details of foreign assets or accounts of the following nature, held at any 
+time during the relevant calendar year ending on December 31st: 
+Table A1 — Foreign Depository Accounts 
+Accounts held in foreign depositories, including peak balance, closing balance, and gross 
+interest paid or credited during the calendar year. 
+
+Table A2 — Foreign Custodian Accounts 
+Accounts maintained with foreign custodians, including peak balance, closing balance, and 
+gross amounts paid or credited (specified by type: interest, dividend, proceeds from sale, or 
+other income). 
+Table A3 — Foreign Equity and Debt Interest 
+Investments in foreign equities and debt instruments, including initial value, peak value, 
+closing value, gross interest paid, total gross amounts paid or credited, and proceeds from sale 
+or redemption. 
+Table A4 — Foreign Cash Value Insurance or Annuity Contracts 
+Insurance or annuity contracts held abroad, including the cash or surrender value as at year-
+end and total gross amounts paid or credited during the calendar year. 
+Table B — Financial Interest in Any Entity Outside India 
+Details of holdings in foreign entities, including investment value at cost, nature and amount 
+of income accrued, and the portion of foreign source income chargeable to tax in India, along 
+with the relevant ITR schedule where income was offered to tax. For the purposes of disclosure 
+in table B, financial interest would include, but would not be limited to, any of the following cases: 
+ 
+(1) the resident assessee is the owner of record or holder of legal title of any financial account, 
+irrespective of whether he is the beneficiary or not  
+ 
+(2) the owner of record or holder of title is one of the following: 
+ 
+(i) an agent, nominee, attorney or a person acting in some other capacity on 
+behalf of the resident assessee with respect to the entity;  
+(ii) a corporation in which the resident assessee owns, directly or indirectly, any 
+share or voting power;  
+(iii) a partnership in which the resident assessee owns, directly or indirectly, an 
+interest in partnership profits or an interest in partnership capital;  
+(iv) a trust of which the resident assessee has beneficial or ownership interest.  
+(v) any other entity in which the resident assessee owns, directly or indirectly, 
+any voting power or equity interest or assets or interest in profits.  
+ 
+Table C — Immovable Property Outside India 
+Details of foreign immovable property holdings, including investment value at cost, nature and 
+amount of income derived, and the portion chargeable to tax in India, with reference to the 
+relevant ITR schedule. 
+ 
+
+Table D — Other Capital Assets Outside India 
+Details of other capital assets held abroad (excluding stock-in-trade and business assets), 
+including investment value at cost, nature and amount of income derived, and the portion 
+chargeable to tax in India. 
+Table E — Foreign Accounts with Signing Authority 
+Details of foreign accounts in which the taxpayer holds signing authority but are not reported 
+in tables A1 to D, including peak balance or total investment value at cost. 
+Table F — Trusts Created Outside India 
+Details of trusts established under the laws of a country outside India in which the taxpayer 
+serves as trustee, beneficiary, or settlor, including the amount of income derived from such 
+trusts that is chargeable to tax in India. 
+Table G — Other Foreign-Source Income 
+Details of any other income derived from foreign sources not included in tables A1 to F, along 
+with the amount that is chargeable to tax in India. 
+6. Currency Conversion and Valuation Guidelines 
+Exchange Rate Conversion: All peak balances, values of investment, and amounts of foreign-
+sourced income must be converted into Indian currency using the telegraphic transfer buying 
+rate of the foreign currency as on the relevant date: the date of peak balance in the account, the 
+date of investment, or the closing date of the calendar year ending on December 31st. 
+Telegraphic Transfer Buying Rate Definition: The telegraphic transfer buying rate, in 
+relation to a foreign currency, is the rate of exchange adopted by the State Bank of India 
+(constituted under the State Bank of India Act, 1955) for buying such currency, having regard 
+to guidelines specified by the Reserve Bank of India for buying such currency through 
+telegraphic transfer. 
+Calendar Year Reference: For Assessment Year 2025-26, the calendar year ending on 
+December 31st comprises the period from January 1, 2024, to December 31, 2024, in respect 
+of foreign assets or accounts. 
+7. Important Clarifications 
+Concurrent Reporting in Schedule AL: Even if foreign assets have been held during the 
+previous year and duly reported in Schedule FA, such assets are still required to be reported in 
+Schedule AL (if applicable). Dual reporting ensures complete transparency and compliance 
+with all disclosure requirements.
