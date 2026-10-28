@@ -549,6 +549,14 @@
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 46 gaps`; scoped Japan build `NOT PASSED: 0 errors, 2 gaps`. The only remaining Japan gaps are company and individual anti-abuse slots.
 - Remote upload and verification: dry run recorded 378 objects, 11 jurisdiction rows, 187 document rows, 374 file rows, 6,004 clause rows, 260 parameter rows, 24 decision rows and 48 treaty rows. Preflight found 376 existing remote objects. The partial resume upload added 2 objects and `upload.py --partial --verify` passed with all 378 object names and all 7 table row counts matching local data.
 
+## 2026-10-28 — Japan anti-abuse completion
+
+- Documents added: `jp.nta.consolidated-tax-avoidance-denial` and `jp.nta.tax-shelter-countermeasures`, official National Tax Agency research material on denial provisions and tax-shelter countermeasures.
+- Company parameter added: `jp.anti_abuse.company.consolidated_corporation_denial` records the stated denial rule for consolidated corporations where an act or calculation produces an unreasonable reduction of tax. It is not represented as a universal company GAAR.
+- Individual decision added: `jp.absent.individual.anti_abuse`. The cited NTA material describes countermeasures such as denial of acts or calculations by family companies; no official anti-abuse test for an individual dividend recipient was identified in the checked core materials, so no individual rule is invented.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 44 gaps`; scoped Japan build `PASSED`. Japan now has no remaining coverage gaps.
+- Remote upload and verification: dry run recorded 382 objects, 11 jurisdiction rows, 189 document rows, 378 file rows, 6,006 clause rows, 261 parameter rows, 25 decision rows and 48 treaty rows. Preflight found 378 existing remote objects. The partial resume upload added 4 objects and `upload.py --partial --verify` passed with all 382 object names and all 7 table row counts matching local data.
+
 ## 2026-10-28 — Japan CFC overview and attribution mechanism
 
 - Document added: `jp.mof.cfc-overview`, the Japanese Ministry of Finance's current overview of the foreign-subsidiary combined-taxation system.
