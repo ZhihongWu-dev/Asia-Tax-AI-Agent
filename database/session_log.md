@@ -645,3 +645,16 @@
 - Tool changes: `fetch.py` now implements the task sheet's `--register-file` workflow for an original downloaded manually from an official page. `build.py` now invalidates a generated clause view when a source file is replaced under the same document id, including the PDF-after-HTML-shell case. `upload.py` reconciliation now updates only differing same-key rows and remote verification compares exact rows rather than counts; Storage upload has a credential-safe curl fallback after a Python TLS error. Checks: Python compilation passed; the slicer runner reported no fixtures and preserved its disabled automatic re-slicing behavior; full builds reported zero errors; `clause_diff.py` reported no removed or added citation ids; all previously passing jurisdictions (ae, cn, hk, id, jp, my, sg and th) remained PASSED. No new source format was introduced, so the PDF fixture requirement did not apply.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 23 gaps`; scoped Korea build `NOT PASSED: 0 errors, 4 gaps`. Korea's category-3 and both CFC slot gaps are resolved. Remaining Korea slots are company/individual anti-abuse and outbound withholding.
 - Remote upload and verification: a first full object upload stopped before its database transaction; a guarded resume then reconciled the replacement data. Final `upload.py --partial --verify` passed with 425 Storage objects and exact values in all seven remote tables matching local data.
+
+## 2026-10-28 — Korea substance-over-form anti-abuse coverage
+
+- Registered: none; used the official `kr.itca.enforcement-decree` PDF registered in the preceding round.
+- Download failures: none.
+- Parameters added: `kr.anti_abuse.substance_over_form_principle`.
+- Absence records added: none.
+- Slicing problems: none; the parameter cites the existing conservative `#all` PDF extraction.
+- Rate-table mismatches: none.
+- Handoff to a person: none.
+- Tool changes: none.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 21 gaps`; scoped Korea build `NOT PASSED: 0 errors, 2 gaps`. The company and individual anti-abuse slots are resolved by Article 3's international-transaction substance-over-form rule. Remaining Korea slots are company and individual outbound withholding.
+- Remote upload and verification: guarded reconciliation inserted 1 parameter row. Final `upload.py --partial --verify` passed with 425 Storage objects and exact values in all seven remote tables matching local data.
