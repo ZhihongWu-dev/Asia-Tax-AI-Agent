@@ -18,6 +18,7 @@ from urllib.parse import quote
 
 import psycopg
 import requests
+from psycopg import sql
 
 from build import audit
 from common import DATA, TABLES, rows
@@ -27,6 +28,10 @@ REMOTE_SCHEMA = 'database'
 BUCKET = 'database'
 STAGING_SCHEMA = 'database_upload_stage'
 COPY_BATCH_ROWS = 250
+PRIMARY_KEYS = {
+    'jurisdiction': 'code', 'doc': 'id', 'files': 'path', 'clause': 'cite_id',
+    'param': 'param_id', 'decision': 'id', 'treaty': 'pair',
+}
 
 
 def env_values() -> dict[str, str]:
@@ -240,6 +245,48 @@ def replace_tables(database_url: str) -> None:
         connection.commit()
 
 
+def reconcile_missing_rows(database_url: str) -> None:
+    """Insert only local rows absent by primary key, within one transaction.
+
+    This is deliberately narrower than a schema replacement.  It is valid only
+    when the remote set is a strict subset of local data: a remote-only key is
+    an unexpected divergence and stops the operation before any write.
+    """
+    with psycopg.connect(database_url) as connection:
+        with connection.cursor() as cursor:
+            for table, fields in TABLES.items():
+                key = PRIMARY_KEYS[table]
+                local = {record[key]: record for record in rows(table)}
+                cursor.execute(
+                    sql.SQL('SELECT {} FROM {}.{}').format(
+                        sql.Identifier(key), sql.Identifier(REMOTE_SCHEMA), sql.Identifier(table)
+                    )
+                )
+                remote_keys = {record[0] for record in cursor.fetchall()}
+                unexpected = remote_keys - set(local)
+                if unexpected:
+                    raise ValueError(
+                        f'Reconciliation refused for {table}: remote-only primary keys are present.'
+                    )
+                missing = [local[record_key] for record_key in sorted(set(local) - remote_keys)]
+                if not missing:
+                    print(f'Table reconciliation: {table} already matches.', flush=True)
+                    continue
+                print(f'Table reconciliation: inserting {len(missing)} missing {table} rows.', flush=True)
+                statement = sql.SQL('INSERT INTO {}.{} ({}) VALUES ({})').format(
+                    sql.Identifier(REMOTE_SCHEMA),
+                    sql.Identifier(table),
+                    sql.SQL(', ').join(sql.Identifier(field) for field in fields),
+                    sql.SQL(', ').join(sql.Placeholder() for _ in fields),
+                )
+                cursor.executemany(
+                    statement,
+                    [tuple(record[field] or None for field in fields) for record in missing],
+                )
+        print('Table reconciliation: committing additive changes.', flush=True)
+        connection.commit()
+
+
 def preflight_remote(database_url: str, supabase_url: str, supabase_key: str) -> int:
     """Confirm the intended schema and bucket are reachable without mutation."""
     remote = remote_objects(database_url, supabase_url, supabase_key)
@@ -290,6 +337,7 @@ def main() -> None:
     parser.add_argument('--status', action='store_true', help='read-only remote row and object-count report')
     parser.add_argument('--resume', action='store_true', help='upload only local objects absent from the selected bucket')
     parser.add_argument('--partial', action='store_true', help='allow coverage gaps when explicitly authorised')
+    parser.add_argument('--reconcile', action='store_true', help='insert only local rows missing by primary key; refuse remote-only rows')
     args = parser.parse_args()
     errors, gaps, warnings = audit()
     if errors:
@@ -322,8 +370,12 @@ def main() -> None:
         upload_object(supabase_url, supabase_key, name)
     for name in sorted(remote - wanted):
         delete_object(supabase_url, supabase_key, name)
-    replace_tables(database_url)
-    print('Upload complete: Storage bucket and database schema were replaced.', flush=True)
+    if args.reconcile:
+        reconcile_missing_rows(database_url)
+        print('Upload complete: Storage bucket and missing database rows were reconciled.', flush=True)
+    else:
+        replace_tables(database_url)
+        print('Upload complete: Storage bucket and database schema were replaced.', flush=True)
 
 
 if __name__ == '__main__':

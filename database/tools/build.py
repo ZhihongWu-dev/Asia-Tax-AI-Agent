@@ -38,6 +38,7 @@ def materialize_new_documents():
     changed = False
     for doc in docs:
         raw = DATA / doc['file']
+        raw_bytes = raw.read_bytes()
         raw_hash = sha256(raw)
         raw_row = next((row for row in file_rows if row['path'] == doc['file']), None)
         source_changed = raw_row is not None and (
@@ -55,13 +56,25 @@ def materialize_new_documents():
             clauses[:] = [clause for clause in clauses if clause['doc_id'] != doc['id']]
             known_docs.discard(doc['id'])
             changed = True
-        if doc['id'] in known_docs:
+        text_path = DATA / 'text' / (doc['id'] + '.txt')
+        # Some official download endpoints end in .do while returning a PDF.
+        # Rebuild a prior generated view only when it has impossible PostgreSQL
+        # text content (a NUL byte); the original object remains unchanged.
+        generated_has_nul = text_path.is_file() and b'\x00' in text_path.read_bytes()
+        if doc['id'] in known_docs and not generated_has_nul:
             continue
+        if generated_has_nul:
+            clauses[:] = [clause for clause in clauses if clause['doc_id'] != doc['id']]
+            known_docs.discard(doc['id'])
+            changed = True
         suffix = raw.suffix.lower()
         if suffix in {'.html', '.htm', '.xml'}:
-            from bs4 import BeautifulSoup
-            text = BeautifulSoup(raw.read_bytes(), 'lxml').get_text('\n')
-        elif suffix == '.pdf':
+            if raw_bytes.startswith(b'%PDF-'):
+                suffix = '.pdf'
+            else:
+                from bs4 import BeautifulSoup
+                text = BeautifulSoup(raw_bytes, 'lxml').get_text('\n')
+        if suffix == '.pdf' or raw_bytes.startswith(b'%PDF-'):
             import fitz
             text = '\n'.join(page.get_text() for page in fitz.open(raw))
             # Use OCR only for an image-only PDF. The original object is
@@ -93,12 +106,11 @@ def materialize_new_documents():
         else:
             text = raw.read_text(encoding='utf-8', errors='replace')
             if suffix == '.rtf': text = re.sub(r'\\[a-z]+-?\d* ?', ' ', text).replace('{', ' ').replace('}', ' ')
-        text = html.unescape(text).strip()
+        text = html.unescape(text).replace('\x00', '').strip()
         if not text: raise ValueError(f'doc {doc["id"]}: no extractable text')
-        text_path = DATA / 'text' / (doc['id'] + '.txt')
         relative = str(text_path.relative_to(DATA))
         text_row = next((row for row in file_rows if row['path'] == relative), None)
-        if text_row is None or source_changed:
+        if text_row is None or source_changed or generated_has_nul:
             text_path.parent.mkdir(parents=True, exist_ok=True)
             text_path.write_text(text + '\n', encoding='utf-8')
             metadata = {'path': relative, 'sha256': sha256(text_path), 'bytes': str(text_path.stat().st_size)}
