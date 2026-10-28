@@ -612,3 +612,10 @@
 - Scope: the directory includes the official NTS links for Malaysia, Singapore, Thailand and Viet Nam. Those four treaty texts are not registered in this round because the linked NTS tax-law subsite did not return a downloadable original in the collection environment; no empty or unverified source was stored.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 33 gaps`; scoped Korea build `NOT PASSED: 0 errors, 11 gaps`. The update removed Korea's `page_treaties` category gap.
 - Remote upload and verification: guarded reconciliation uploaded 2 new Storage objects and inserted 1 document, 2 file records and 1 clause. `upload.py --partial --verify` passed with 396 object names and all 7 table row counts matching local data.
+
+## 2026-10-28 — India treaty-pair coverage
+
+- Official sources added: the current Malaysian Inland Revenue Board DTA and MLI synthesised texts for India; the Korean National Law Information Center promulgated India-Korea agreement; and the Viet Nam Ministry of Foreign Affairs treaty record HB1464 plus its linked 83-page treaty-PDF attachment.
+- Treaty rows added: `in-my`, `in-kr`, and `in-vn`. Their recorded entry-into-force dates are respectively 2012-12-26, 2016-09-12, and 1995-02-02. The India-Malaysia row identifies the published MLI synthesised text while retaining the source's limitation that authentic DTA and MLI texts control.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 30 gaps`; scoped India build `NOT PASSED: 0 errors, 1 gap`. India's three owned-pair gaps are closed. Its remaining `page_treaties` gap is retained because the official Indian DTA directory currently returns HTTP 403 to the collector; no inaccessible page is falsely recorded as collected.
+- Remote upload and verification: guarded reconciliation uploaded 10 new Storage objects and inserted 5 documents, 10 file records, 5 clauses, and 3 treaty rows. `upload.py --partial --verify` passed with 406 object names and all 7 table row counts matching local data.

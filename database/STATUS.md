@@ -1,7 +1,7 @@
 # Database build status
 
 - Errors: 0
-- Coverage gaps: 33
+- Coverage gaps: 30
 - Warnings: 133
 - SQLite snapshot: database.sqlite
 
@@ -11,7 +11,7 @@
 | cn | 0 | 0 | 0 |
 | hk | 0 | 0 | 0 |
 | id | 0 | 0 | 0 |
-| in | 1 | 0 | 3 |
+| in | 1 | 0 | 0 |
 | jp | 0 | 0 | 0 |
 | kr | 0 | 7 | 4 |
 | my | 0 | 0 | 0 |
@@ -26,9 +26,6 @@ none
 ## Gaps
 
 gap: category in|page_treaties
-gap: pair in-kr without a treaty row
-gap: pair in-my without a treaty row
-gap: pair in-vn without a treaty row
 gap: slot kr|company|anti_abuse without a parameter or absence record
 gap: slot kr|company|cfc without a parameter or absence record
 gap: slot kr|company|final without a parameter or absence record
