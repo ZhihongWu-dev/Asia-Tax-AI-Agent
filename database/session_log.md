@@ -520,6 +520,13 @@
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 73 gaps`; scoped Malaysia build `NOT PASSED: 0 errors, 3 gaps`. The remaining Malaysia gaps are category 3 and the company and individual CFC slots.
 - Remote upload and verification: preflight found 352 existing objects. The table-only synchronization uploaded and deleted 0 Storage objects, and `upload.py --partial --verify` passed with all 352 object names and all 7 table row counts matching local data.
 
+## 2026-10-28 — Japan treaty index and certificate-of-residence procedure
+
+- Documents added: `jp.nta.tax-conventions-index`, the National Tax Agency international-taxation index, categorised as `page_treaties`; and `jp.nta.certificate-of-residence-application`, the National Tax Agency form for an application for a certificate of residence in Japan, categorised as 8.
+- Source and scope: the international-taxation index publishes Japan's current tax-convention list. The certificate form is expressly for a Japanese tax resident to request a certificate in order to obtain income-tax-convention benefits. These sources establish the official listing and procedure pages only; no treaty rate, eligibility condition, or residence test beyond the form's stated purpose is inferred.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 59 gaps`; scoped Japan build `NOT PASSED: 0 errors, 15 gaps`. This resolves Japan `page_treaties` and category 8. The remaining Japan gaps are categories 4, 5, 6 and 9; six company/individual anti-abuse, inbound and residence slots; and five owned treaty pairs.
+- Remote upload and verification: dry run recorded 360 objects, 11 jurisdiction rows, 178 document rows, 356 file rows, 5,995 clause rows, 256 parameter rows, 23 decision rows and 43 treaty rows. Preflight found 356 existing remote objects. The subsequent partial resume synchronization completed, and `upload.py --partial --verify` passed with all 360 object names and all 7 table row counts matching local data.
+
 ## 2026-10-28 — Japan CFC overview and attribution mechanism
 
 - Document added: `jp.mof.cfc-overview`, the Japanese Ministry of Finance's current overview of the foreign-subsidiary combined-taxation system.
