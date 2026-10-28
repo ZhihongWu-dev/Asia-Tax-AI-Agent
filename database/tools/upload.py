@@ -173,15 +173,38 @@ def remote_objects(database_url: str, supabase_url: str, supabase_key: str) -> s
 
 
 def upload_object(url: str, key: str, name: str) -> None:
+    destination = f'{url}/storage/v1/object/{BUCKET}/{quote(name, safe="/")}'
     try:
         with (DATA / name).open('rb') as payload:
             response = requests.post(
-                f'{url}/storage/v1/object/{BUCKET}/{quote(name, safe="/")}',
+                destination,
                 headers={**storage_headers(key), 'x-upsert': 'true', 'Content-Type': 'application/octet-stream'},
                 data=payload, timeout=300,
             )
     except requests.RequestException as error:
-        raise ValueError(f'Storage upload request failed for {name}: {type(error).__name__}') from error
+        # The Python TLS transport can fail for a single large object in this
+        # environment although curl reaches the same configured endpoint. Keep
+        # the key in a 0600 config file, as in curl_storage_list, and use the
+        # same explicit object destination rather than broadening its scope.
+        escaped_key = key.replace('\\', '\\\\').replace('"', '\\"')
+        with tempfile.NamedTemporaryFile('w', encoding='utf-8', prefix='database-storage-', delete=False) as config:
+            config.write(f'header = "apikey: {escaped_key}"\n')
+            config.write(f'header = "Authorization: Bearer {escaped_key}"\n')
+            config.write('header = "x-upsert: true"\n')
+            config.write('header = "Content-Type: application/octet-stream"\n')
+            config_path = Path(config.name)
+        try:
+            config_path.chmod(0o600)
+            completed = subprocess.run(
+                ['curl', '--silent', '--show-error', '--fail', '--connect-timeout', '10', '--max-time', '300',
+                 '--config', str(config_path), '--request', 'POST', '--data-binary', '@' + str(DATA / name), destination],
+                text=True, capture_output=True,
+            )
+            if completed.returncode:
+                raise ValueError(f'Storage upload fallback failed for {name}: {completed.stderr.strip()}') from error
+            return
+        finally:
+            config_path.unlink(missing_ok=True)
     if not response.ok:
         raise ValueError(f'Storage upload failed for {name}: HTTP {response.status_code}')
 
@@ -246,11 +269,13 @@ def replace_tables(database_url: str) -> None:
 
 
 def reconcile_missing_rows(database_url: str) -> None:
-    """Insert only local rows absent by primary key, within one transaction.
+    """Reconcile local rows by primary key, within one transaction.
 
-    This is deliberately narrower than a schema replacement.  It is valid only
-    when the remote set is a strict subset of local data: a remote-only key is
-    an unexpected divergence and stops the operation before any write.
+    This is deliberately narrower than a schema replacement. Local data is
+    authoritative: a remote-only key is an unexpected divergence and stops
+    the operation before any write. Existing keys are updated only when one
+    or more stored fields differ, which supports a replacement original under
+    an existing document identifier.
     """
     with psycopg.connect(database_url) as connection:
         with connection.cursor() as cursor:
@@ -259,31 +284,44 @@ def reconcile_missing_rows(database_url: str) -> None:
                 local = {record[key]: record for record in rows(table)}
                 cursor.execute(
                     sql.SQL('SELECT {} FROM {}.{}').format(
-                        sql.Identifier(key), sql.Identifier(REMOTE_SCHEMA), sql.Identifier(table)
+                        sql.SQL(', ').join(sql.Identifier(field) for field in fields),
+                        sql.Identifier(REMOTE_SCHEMA), sql.Identifier(table),
                     )
                 )
-                remote_keys = {record[0] for record in cursor.fetchall()}
+                remote_records = {record[fields.index(key)]: record for record in cursor.fetchall()}
+                remote_keys = set(remote_records)
                 unexpected = remote_keys - set(local)
                 if unexpected:
                     raise ValueError(
                         f'Reconciliation refused for {table}: remote-only primary keys are present.'
                     )
                 missing = [local[record_key] for record_key in sorted(set(local) - remote_keys)]
-                if not missing:
+                changed = [
+                    local[record_key] for record_key in sorted(set(local) & remote_keys)
+                    if tuple(local[record_key][field] or None for field in fields) != remote_records[record_key]
+                ]
+                if not missing and not changed:
                     print(f'Table reconciliation: {table} already matches.', flush=True)
                     continue
-                print(f'Table reconciliation: inserting {len(missing)} missing {table} rows.', flush=True)
-                statement = sql.SQL('INSERT INTO {}.{} ({}) VALUES ({})').format(
-                    sql.Identifier(REMOTE_SCHEMA),
-                    sql.Identifier(table),
+                if missing:
+                    print(f'Table reconciliation: inserting {len(missing)} missing {table} rows.', flush=True)
+                if changed:
+                    print(f'Table reconciliation: updating {len(changed)} changed {table} rows.', flush=True)
+                statement = sql.SQL('INSERT INTO {}.{} ({}) VALUES ({}) ON CONFLICT ({}) DO UPDATE SET {}').format(
+                    sql.Identifier(REMOTE_SCHEMA), sql.Identifier(table),
                     sql.SQL(', ').join(sql.Identifier(field) for field in fields),
                     sql.SQL(', ').join(sql.Placeholder() for _ in fields),
+                    sql.Identifier(key),
+                    sql.SQL(', ').join(
+                        sql.SQL('{} = EXCLUDED.{}').format(sql.Identifier(field), sql.Identifier(field))
+                        for field in fields if field != key
+                    ),
                 )
                 cursor.executemany(
                     statement,
-                    [tuple(record[field] or None for field in fields) for record in missing],
+                    [tuple(record[field] or None for field in fields) for record in missing + changed],
                 )
-        print('Table reconciliation: committing additive changes.', flush=True)
+        print('Table reconciliation: committing reconciled changes.', flush=True)
         connection.commit()
 
 
@@ -307,14 +345,29 @@ def verify_remote(database_url: str, supabase_url: str, supabase_key: str, objec
     with psycopg.connect(database_url) as connection:
         with connection.cursor() as cursor:
             for table in TABLES:
+                fields = TABLES[table]
+                key = PRIMARY_KEYS[table]
                 cursor.execute(f'SELECT count(*) FROM {REMOTE_SCHEMA}.{table}')
                 actual = cursor.fetchone()[0]
                 expected = len(rows(table))
                 if actual != expected:
                     raise ValueError(f'Remote row count differs for {table}: expected {expected}, found {actual}')
+                cursor.execute(
+                    sql.SQL('SELECT {} FROM {}.{}').format(
+                        sql.SQL(', ').join(sql.Identifier(field) for field in fields),
+                        sql.Identifier(REMOTE_SCHEMA), sql.Identifier(table),
+                    )
+                )
+                remote_rows = {record[fields.index(key)]: record for record in cursor.fetchall()}
+                local_rows = {
+                    record[key]: tuple(record[field] or None for field in fields)
+                    for record in rows(table)
+                }
+                if remote_rows != local_rows:
+                    raise ValueError(f'Remote row values differ from local data for {table}')
     if remote != wanted:
         raise ValueError('Remote Storage object names differ from the local upload set')
-    print(f'Remote verification passed: {len(wanted)} objects and {len(TABLES)} table row counts match local data.', flush=True)
+    print(f'Remote verification passed: {len(wanted)} objects and exact values in {len(TABLES)} tables match local data.', flush=True)
 
 
 def remote_status(database_url: str, supabase_url: str, supabase_key: str, objects: list[str]) -> None:

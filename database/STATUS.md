@@ -1,8 +1,8 @@
 # Database build status
 
 - Errors: 0
-- Coverage gaps: 25
-- Warnings: 133
+- Coverage gaps: 23
+- Warnings: 134
 - SQLite snapshot: database.sqlite
 
 | Region | Category gaps | Slot gaps | Owned-pair gaps |
@@ -13,7 +13,7 @@
 | id | 0 | 0 | 0 |
 | in | 1 | 0 | 0 |
 | jp | 0 | 0 | 0 |
-| kr | 0 | 6 | 0 |
+| kr | 0 | 4 | 0 |
 | my | 0 | 0 | 0 |
 | sg | 0 | 0 | 0 |
 | th | 0 | 0 | 0 |
@@ -27,10 +27,8 @@ none
 
 gap: category in|page_treaties
 gap: slot kr|company|anti_abuse without a parameter or absence record
-gap: slot kr|company|cfc without a parameter or absence record
 gap: slot kr|company|outbound_wht without a parameter or absence record
 gap: slot kr|individual|anti_abuse without a parameter or absence record
-gap: slot kr|individual|cfc without a parameter or absence record
 gap: slot kr|individual|outbound_wht without a parameter or absence record
 gap: category vn|2
 gap: category vn|3
@@ -181,6 +179,7 @@ param id-my.outbound_wht.interest_rate_government: quote differs only by whitesp
 param id-my.anti_abuse.ppt_applies: quote differs only by whitespace
 param id-vn.outbound_wht.dividend_rate: quote differs only by whitespace
 param id-vn.outbound_wht.royalty_rate: quote differs only by whitespace
+param kr.cfc.controlled_foreign_company_reporting_required: quote differs only by whitespace
 decision my.absent.3: quote differs only by whitespace
 decision my.absent.cfc: quote differs only by whitespace
 decision th.absent.individual.anti_abuse: quote differs only by whitespace

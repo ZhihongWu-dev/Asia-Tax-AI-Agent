@@ -632,3 +632,16 @@
 - Parameter added: `kr.final.company_cit_return_deadline_months` with value 3 months. The National Tax Service filing-deadline page states that corporate-income-tax filing and payment are due no later than three months after the end of the business year.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 25 gaps`; scoped Korea build `NOT PASSED: 0 errors, 6 gaps`. The update closes the Korea company final-tax slot without inferring a rate or a general final-liability rule beyond the cited deadline.
 - Remote upload and verification: guarded reconciliation inserted 1 parameter row. `upload.py --partial --verify` passed with 422 object names and all 7 table row counts matching local data.
+
+## 2026-10-28 — Korea CFC official PDF and replacement-safe synchronization
+
+- Registered: `kr.itca.enforcement-decree`, replaced under the same document id with the 163-page English PDF downloaded from the Korean National Law Information Center's official page after direct HTTP retrieval timed out.
+- Download failures: direct requests and curl access to the official dynamic page timed out; the site-provided browser download completed and its final page was extracted successfully.
+- Parameters added: `kr.cfc.controlled_foreign_company_reporting_required`.
+- Absence records added: none.
+- Slicing problems: the existing PDF extractor creates a conservative `#all` clause. The text includes the official Article 70 wording on CFC financial statements, returns and retained-earnings records; no unsupported numeric threshold was inferred.
+- Rate-table mismatches: none.
+- Handoff to a person: none.
+- Tool changes: `fetch.py` now implements the task sheet's `--register-file` workflow for an original downloaded manually from an official page. `build.py` now invalidates a generated clause view when a source file is replaced under the same document id, including the PDF-after-HTML-shell case. `upload.py` reconciliation now updates only differing same-key rows and remote verification compares exact rows rather than counts; Storage upload has a credential-safe curl fallback after a Python TLS error. Checks: Python compilation passed; the slicer runner reported no fixtures and preserved its disabled automatic re-slicing behavior; full builds reported zero errors; `clause_diff.py` reported no removed or added citation ids; all previously passing jurisdictions (ae, cn, hk, id, jp, my, sg and th) remained PASSED. No new source format was introduced, so the PDF fixture requirement did not apply.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 23 gaps`; scoped Korea build `NOT PASSED: 0 errors, 4 gaps`. Korea's category-3 and both CFC slot gaps are resolved. Remaining Korea slots are company/individual anti-abuse and outbound withholding.
+- Remote upload and verification: a first full object upload stopped before its database transaction; a guarded resume then reconciled the replacement data. Final `upload.py --partial --verify` passed with 425 Storage objects and exact values in all seven remote tables matching local data.

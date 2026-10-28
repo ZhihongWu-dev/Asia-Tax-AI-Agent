@@ -41,8 +41,11 @@ def materialize_new_documents():
         raw_bytes = raw.read_bytes()
         raw_hash = sha256(raw)
         raw_row = next((row for row in file_rows if row['path'] == doc['file']), None)
-        source_changed = raw_row is not None and (
-            raw_row['sha256'] != raw_hash or raw_row['bytes'] != str(raw.stat().st_size)
+        source_changed = (
+            (raw_row is None and doc['id'] in known_docs)
+            or (raw_row is not None and (
+                raw_row['sha256'] != raw_hash or raw_row['bytes'] != str(raw.stat().st_size)
+            ))
         )
         if raw_row is None:
             file_rows.append({'path': doc['file'], 'sha256': sha256(raw), 'bytes': str(raw.stat().st_size)})
@@ -53,6 +56,7 @@ def materialize_new_documents():
             # clause, so its checksums and citations cannot refer to stale
             # content.  Normal reviewed documents remain untouched.
             raw_row.update({'sha256': raw_hash, 'bytes': str(raw.stat().st_size)})
+        if source_changed:
             clauses[:] = [clause for clause in clauses if clause['doc_id'] != doc['id']]
             known_docs.discard(doc['id'])
             changed = True
@@ -61,9 +65,14 @@ def materialize_new_documents():
         # Rebuild a prior generated view only when it has impossible PostgreSQL
         # text content (a NUL byte); the original object remains unchanged.
         generated_has_nul = text_path.is_file() and b'\x00' in text_path.read_bytes()
-        if doc['id'] in known_docs and not generated_has_nul:
+        # A manually registered PDF can replace an earlier dynamic-page shell
+        # under the same document id.  An HTML document cannot be a valid text
+        # extraction of a PDF, so rebuild that generated view from the PDF.
+        generated_html_shell = text_path.is_file() and text_path.read_bytes().lstrip().lower().startswith((b'<!doctype html', b'<html'))
+        generated_format_mismatch = raw_bytes.startswith(b'%PDF-') and generated_html_shell
+        if doc['id'] in known_docs and not generated_has_nul and not generated_format_mismatch:
             continue
-        if generated_has_nul:
+        if generated_has_nul or generated_format_mismatch:
             clauses[:] = [clause for clause in clauses if clause['doc_id'] != doc['id']]
             known_docs.discard(doc['id'])
             changed = True
@@ -110,7 +119,7 @@ def materialize_new_documents():
         if not text: raise ValueError(f'doc {doc["id"]}: no extractable text')
         relative = str(text_path.relative_to(DATA))
         text_row = next((row for row in file_rows if row['path'] == relative), None)
-        if text_row is None or source_changed or generated_has_nul:
+        if text_row is None or source_changed or generated_has_nul or generated_format_mismatch:
             text_path.parent.mkdir(parents=True, exist_ok=True)
             text_path.write_text(text + '\n', encoding='utf-8')
             metadata = {'path': relative, 'sha256': sha256(text_path), 'bytes': str(text_path.stat().st_size)}
