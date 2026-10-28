@@ -527,6 +527,14 @@
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 59 gaps`; scoped Japan build `NOT PASSED: 0 errors, 15 gaps`. This resolves Japan `page_treaties` and category 8. The remaining Japan gaps are categories 4, 5, 6 and 9; six company/individual anti-abuse, inbound and residence slots; and five owned treaty pairs.
 - Remote upload and verification: dry run recorded 360 objects, 11 jurisdiction rows, 178 document rows, 356 file rows, 5,995 clause rows, 256 parameter rows, 23 decision rows and 43 treaty rows. Preflight found 356 existing remote objects. The subsequent partial resume synchronization completed, and `upload.py --partial --verify` passed with all 360 object names and all 7 table row counts matching local data.
 
+## 2026-10-28 — Japan residence, anti-avoidance and share-transfer expansion
+
+- Documents added: `jp.nta.resident-nonresident-classification` (category 6), `jp.mof.excessive-interest-antiavoidance` (category 4), and `jp.nta.nonresident-share-transfer` (category 9). All are current National Tax Agency or Ministry of Finance materials.
+- Parameters added: the NTA resident-classification guidance supplies the domestic individual test (Japanese domicile or a place of residence continuously held for at least one year) and the corporate head-office/principal-office classification rule. The entries do not substitute a domestic classification rule for any treaty-specific tie breaker.
+- Decision added: `jp.absent.5`. The checked NTA treaty forms and MOF convention material use treaty-benefit language but provide no Japanese guidance setting beneficial-owner determination factors, so the category-5 document gap is recorded rather than invented.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 53 gaps`; scoped Japan build `NOT PASSED: 0 errors, 9 gaps`. Japan's remaining gaps are company and individual anti-abuse and inbound slots, plus five owned treaty pairs.
+- Remote upload and verification: dry run recorded 366 objects, 11 jurisdiction rows, 181 document rows, 362 file rows, 5,998 clause rows, 258 parameter rows, 24 decision rows and 43 treaty rows. Preflight found 360 existing remote objects. `upload.py --partial --resume` then `upload.py --partial --verify` passed with all 366 object names and all 7 table row counts matching local data.
+
 ## 2026-10-28 — Japan CFC overview and attribution mechanism
 
 - Document added: `jp.mof.cfc-overview`, the Japanese Ministry of Finance's current overview of the foreign-subsidiary combined-taxation system.
