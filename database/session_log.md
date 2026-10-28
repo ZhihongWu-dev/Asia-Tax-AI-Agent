@@ -1,4 +1,5 @@
 ## 2026-10-25 all — extension baseline
+
 - Registered: none
 - Download failures: none
 - Parameters added: 0
@@ -518,6 +519,13 @@
 - Decision added: `my.absent.5`. HASiL's current DTAA withholding-tax FAQ and e-Residence guidance require residence evidence and set out treaty-rate procedure, but neither provides a guidance document defining factors for beneficial ownership. The category-5 absence is recorded under the specification's document-gap rule; no treaty-rate or ownership test is fabricated.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 73 gaps`; scoped Malaysia build `NOT PASSED: 0 errors, 3 gaps`. The remaining Malaysia gaps are category 3 and the company and individual CFC slots.
 - Remote upload and verification: preflight found 352 existing objects. The table-only synchronization uploaded and deleted 0 Storage objects, and `upload.py --partial --verify` passed with all 352 object names and all 7 table row counts matching local data.
+
+## 2026-10-28 — Japan CFC overview and attribution mechanism
+
+- Document added: `jp.mof.cfc-overview`, the Japanese Ministry of Finance's current overview of the foreign-subsidiary combined-taxation system.
+- Parameter added: `jp.cfc.foreign_subsidiary_income_attributed`. The overview states that, where a foreign subsidiary is a paper company or fails an economic-activity condition, an amount corresponding to the subsidiary's income is treated as income of domestic corporations, etc. and taxed on a combined basis. It also identifies 27% and 20% tax-burden thresholds for the stated exemption, but no threshold is added as a standalone parameter because the summary does not provide the complete qualifying conditions.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 61 gaps`; scoped Japan build `NOT PASSED: 0 errors, 17 gaps`. The remaining Japan gaps are categories 4, 5, 6, 8, 9 and `page_treaties`; company and individual anti-abuse, inbound and residence slots; and five owned treaty pairs.
+- Remote upload and verification: preflight found 354 existing objects. The synchronization uploaded 2 objects and deleted none. A first verification caught an incomplete table swap (`doc` remained at 175 rows); a controlled `--resume` retry completed it, then `--partial --verify` passed with all 356 object names and all 7 table row counts matching local data.
 
 ## 2026-10-28 — Thailand CFC and individual anti-abuse absence records
 
