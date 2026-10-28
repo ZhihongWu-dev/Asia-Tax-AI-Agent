@@ -512,3 +512,9 @@
 - Source and scope: the page identifies the statutory residence provisions for individuals, companies and other entities; explains that an e-Residence certificate is applied for to claim Malaysia treaty benefits and avoid double taxation; and sets out application channel, supporting-document and processing information. The original Malay text is retained because it is the official page language. No additional tax-rate or CFC result is inferred.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 74 gaps`; scoped Malaysia build `NOT PASSED: 0 errors, 4 gaps`. This resolves categories 6, 7 and 8. The remaining Malaysia gaps are category 3, category 5, and the company and individual CFC slots.
 - Remote upload and verification: preflight found 350 existing objects. `upload.py --partial --resume` uploaded 2 objects, and `upload.py --partial --verify` passed with 352 object names and all 7 table row counts matching local data.
+
+## 2026-10-28 — Malaysia beneficial-owner guidance absence recorded
+
+- Decision added: `my.absent.5`. HASiL's current DTAA withholding-tax FAQ and e-Residence guidance require residence evidence and set out treaty-rate procedure, but neither provides a guidance document defining factors for beneficial ownership. The category-5 absence is recorded under the specification's document-gap rule; no treaty-rate or ownership test is fabricated.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 73 gaps`; scoped Malaysia build `NOT PASSED: 0 errors, 3 gaps`. The remaining Malaysia gaps are category 3 and the company and individual CFC slots.
+- Remote upload and verification: preflight found 352 existing objects. The table-only synchronization uploaded and deleted 0 Storage objects, and `upload.py --partial --verify` passed with all 352 object names and all 7 table row counts matching local data.
