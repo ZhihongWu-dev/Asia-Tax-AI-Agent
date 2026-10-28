@@ -526,6 +526,13 @@
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 67 gaps`; scoped Thailand build `PASSED`. Thailand now has no remaining coverage gaps.
 - Remote upload and verification: preflight found 352 existing objects. The table-only synchronization uploaded and deleted 0 Storage objects. A first verification caught an incomplete table swap (`decision` remained at 18 rows); a controlled `--resume` retry completed it, then `--partial --verify` passed with all 352 object names and all 7 table row counts matching local data.
 
+## 2026-10-28 — India CFC distinction and absence records
+
+- Document added: `in.itd.act2025-scope`, the official Income Tax Department explanation of the Income-tax Act 2025's scope and transition.
+- Decisions added: `in.absent.3` and `in.absent.cfc`. The current Act portal describes tax charged on a person's total income and states that the 2025 Act imposes no new tax. The only “controlled foreign corporation” wording in the notified 2026 Rules is a FATCA sponsored-financial-institution reporting definition, not an income-attribution rule. It is preserved as such and not misclassified as a domestic CFC regime.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 64 gaps`; scoped India build `NOT PASSED: 0 errors, 4 gaps`. The remaining India work is the treaty-list page and owned pairs `in-kr`, `in-my`, and `in-vn`.
+- Remote upload and verification: preflight found 352 existing objects. The synchronization uploaded 2 objects and deleted none; `upload.py --partial --verify` passed with all 354 object names and all 7 table row counts matching local data.
+
 ## 2026-10-28 — Malaysia CFC distinction and absence records
 
 - Decisions added: `my.absent.3` and `my.absent.cfc`. The current Income Tax Act's controlled-company and transaction-adjustment provisions do not attribute a foreign subsidiary's undistributed profits to Malaysian shareholders. Part XI's multinational-top-up-tax Income Inclusion Rule is Pillar Two minimum-tax legislation, not an ordinary CFC regime, so it is not relabelled as one.
