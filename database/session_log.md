@@ -598,3 +598,10 @@
 - Source and scope: the National Tax Service corporate overview states that a corporation with its head office, principal office, or place of effective management in Korea is liable on income arising in and outside Korea. The NTS individual FAQ provides the one-year place-of-residence threshold, worldwide-income reporting for a Korean resident, and the stated taxable individual income categories. None of these domestic rules is presented as a treaty tie-breaker or as a rule for non-residents.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 37 gaps`; scoped Korea build `NOT PASSED: 0 errors, 15 gaps`. The update removed five Korea slot gaps.
 - Remote upload and verification: guarded reconciliation inserted 5 parameter rows; `upload.py --partial --verify` passed with all 388 object names and all 7 table row counts matching local data.
+
+## 2026-10-28 — Korea official rate, filing and certificate pages
+
+- Documents added: `kr.nts.corporate-rate-2026` (corporate-tax rate page), `kr.nts.filing-returns` (official English filing-deadline page), and `kr.nts.forms` (official certificate and treaty-application form directory).
+- Source and scope: all three are National Tax Service pages. The rate page states the 2026 corporate-rate bands; the filing page states the three-month corporate-income-tax filing/payment deadline; the forms directory lists Certificate of Residence and the Korean-source-income treaty exemption application. They are recorded as source pages, without inventing rate or eligibility parameters beyond their stated content.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 34 gaps`; scoped Korea build `NOT PASSED: 0 errors, 12 gaps`. The update removed Korea category 8, `page_rates`, and `page_deadlines` gaps.
+- Remote upload and verification: guarded reconciliation uploaded 6 new Storage objects and inserted 3 documents, 6 file records and 3 clauses. `upload.py --partial --verify` passed with all 394 object names and all 7 table row counts matching local data.
