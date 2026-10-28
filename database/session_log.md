@@ -658,3 +658,16 @@
 - Tool changes: none.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 21 gaps`; scoped Korea build `NOT PASSED: 0 errors, 2 gaps`. The company and individual anti-abuse slots are resolved by Article 3's international-transaction substance-over-form rule. Remaining Korea slots are company and individual outbound withholding.
 - Remote upload and verification: guarded reconciliation inserted 1 parameter row. Final `upload.py --partial --verify` passed with 425 Storage objects and exact values in all seven remote tables matching local data.
+
+## 2026-10-28 — Viet Nam CFC / Pillar Two distinction
+
+- Registered: none; used the current official `vn.law.cit2025.en` text.
+- Download failures: none.
+- Parameters added: none.
+- Absence records added: `vn.absent.3`, `vn.absent.cfc`.
+- Slicing problems: none; both records cite the existing conservative `#all` legal-text extraction.
+- Rate-table mismatches: none.
+- Handoff to a person: none.
+- Tool changes: none.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 18 gaps`; scoped Viet Nam build `NOT PASSED: 0 errors, 15 gaps`. The current law's qualified domestic minimum top-up tax under the Income Inclusion Rule is preserved, but it is not misclassified as an ordinary CFC regime. This closes category 3 and both CFC slots.
+- Remote upload and verification: guarded reconciliation inserted 2 decision rows. Final `upload.py --partial --verify` passed with 425 Storage objects and exact values in all seven remote tables matching local data.
