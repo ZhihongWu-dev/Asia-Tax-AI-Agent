@@ -452,3 +452,15 @@
 - Handoff to a person: none for this treaty. The separate `in.ita2025` H1 remains open as recorded above.
 - Tool changes: none.
 - Acceptance: NOT PASSED (0 errors, 16 India gaps). The `in-jp` owned-pair gap is resolved.
+
+## 2026-10-28 — India–Singapore treaty, protocols and MLI expansion
+
+- Document added: `treaty.in-sg.1994.en`.
+- Treaty row added: `in-sg`, in force 1994-05-27, with the same official IRAS current treaty PDF as `mli_doc_id`.
+- Parameters added: `in-sg.outbound_wht.holding_pct_min`; `in-sg.outbound_wht.dividend_rate_reduced`; `in-sg.outbound_wht.dividend_rate_other`; `in-sg.anti_abuse.ppt_applies`.
+- Official source and scope: the IRAS current treaty PDF has the 1994 Agreement, the 2005, 2011 and 2016 Protocols as Annexes D-B, and the MLI changes as Annex A. Article 10(2) gives a 10% dividend cap for a beneficial-owner company holding at least 25% and 15% in other cases. Annex A inserts Article 29A's principal-purpose test. IRAS identifies the 2019 DTA Order as in force from 2019-10-01 and gives the MLI effect dates.
+- Slicing problems: the conservative build retains the newly collected PDF as `#all`; all four parameter quotes were verified verbatim against that official text. The embedded Annexes preserve the full protocol texts, but fixture-backed clause slicing is needed before granular supersession rows can be safely represented.
+- Rate-table mismatches: none.
+- Handoff to a person: none for this treaty. The separate `in.ita2025` H1 remains open as recorded above.
+- Tool changes: none.
+- Acceptance: NOT PASSED (0 errors, 15 India gaps). The `in-sg` owned-pair gap is resolved.

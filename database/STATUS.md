@@ -1,8 +1,8 @@
 # Database build status
 
 - Errors: 0
-- Coverage gaps: 86
-- Warnings: 121
+- Coverage gaps: 85
+- Warnings: 124
 - SQLite snapshot: database.sqlite
 
 | Region | Category gaps | Slot gaps | Owned-pair gaps |
@@ -11,7 +11,7 @@
 | cn | 0 | 0 | 0 |
 | hk | 0 | 0 | 0 |
 | id | 0 | 0 | 0 |
-| in | 5 | 7 | 4 |
+| in | 5 | 7 | 3 |
 | jp | 7 | 8 | 5 |
 | kr | 6 | 12 | 4 |
 | my | 5 | 2 | 0 |
@@ -39,7 +39,6 @@ gap: slot in|individual|inbound without a parameter or absence record
 gap: slot in|individual|outbound_wht without a parameter or absence record
 gap: pair in-kr without a treaty row
 gap: pair in-my without a treaty row
-gap: pair in-sg without a treaty row
 gap: pair in-vn without a treaty row
 gap: category jp|3
 gap: category jp|4
@@ -189,6 +188,9 @@ param ae-th.outbound_wht.dividend_rate: quote differs only by whitespace
 param in-th.outbound_wht.dividend_rate: quote differs only by whitespace
 param in-jp.outbound_wht.dividend_rate: quote differs only by whitespace
 param in-jp.anti_abuse.ppt_applies: quote differs only by whitespace
+param in-sg.outbound_wht.holding_pct_min: quote differs only by whitespace
+param in-sg.outbound_wht.dividend_rate_reduced: quote differs only by whitespace
+param in-sg.anti_abuse.ppt_applies: quote differs only by whitespace
 param ae-th.outbound_wht.interest_rate_financial_institution: quote differs only by whitespace
 param ae-th.outbound_wht.interest_rate_other: quote differs only by whitespace
 param ae-th.outbound_wht.royalty_rate: quote differs only by whitespace
