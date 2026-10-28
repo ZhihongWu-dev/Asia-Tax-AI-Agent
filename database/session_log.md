@@ -518,3 +518,10 @@
 - Decision added: `my.absent.5`. HASiL's current DTAA withholding-tax FAQ and e-Residence guidance require residence evidence and set out treaty-rate procedure, but neither provides a guidance document defining factors for beneficial ownership. The category-5 absence is recorded under the specification's document-gap rule; no treaty-rate or ownership test is fabricated.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 73 gaps`; scoped Malaysia build `NOT PASSED: 0 errors, 3 gaps`. The remaining Malaysia gaps are category 3 and the company and individual CFC slots.
 - Remote upload and verification: preflight found 352 existing objects. The table-only synchronization uploaded and deleted 0 Storage objects, and `upload.py --partial --verify` passed with all 352 object names and all 7 table row counts matching local data.
+
+## 2026-10-28 — Malaysia CFC distinction and absence records
+
+- Decisions added: `my.absent.3` and `my.absent.cfc`. The current Income Tax Act's controlled-company and transaction-adjustment provisions do not attribute a foreign subsidiary's undistributed profits to Malaysian shareholders. Part XI's multinational-top-up-tax Income Inclusion Rule is Pillar Two minimum-tax legislation, not an ordinary CFC regime, so it is not relabelled as one.
+- Source and scope: the category-3 and all-subject CFC absence records cite section 3's charge on income accruing in, derived from, or received in Malaysia. The all-subject record deliberately covers both company and individual CFC slots. Checked the current HASiL Act 53 text and international-tax guidance.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 70 gaps`; scoped Malaysia build `PASSED`. Malaysia now has no remaining coverage gaps.
+- Remote upload and verification: preflight found 352 existing objects. The table-only synchronization uploaded and deleted 0 Storage objects, and `upload.py --partial --verify` passed with all 352 object names and all 7 table row counts matching local data.
