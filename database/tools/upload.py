@@ -193,15 +193,18 @@ def delete_object(url: str, key: str, name: str) -> None:
 def replace_tables(database_url: str) -> None:
     with psycopg.connect(database_url) as connection:
         with connection.cursor() as cursor:
+            print('Table sync: checking target schema.', flush=True)
             cursor.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = %s AND table_type = 'BASE TABLE'", (REMOTE_SCHEMA,))
             present = {row[0] for row in cursor.fetchall()}
             absent = set(TABLES) - present
             if absent:
                 raise ValueError('Remote schema is missing expected tables: ' + ', '.join(sorted(absent)))
+            print('Table sync: creating staging schema.', flush=True)
             cursor.execute(f'DROP SCHEMA IF EXISTS {STAGING_SCHEMA} CASCADE')
             cursor.execute(f'CREATE SCHEMA {STAGING_SCHEMA}')
             for table, fields in TABLES.items():
                 try:
+                    print(f'Table sync: staging {table} ({len(rows(table))} rows).', flush=True)
                     cursor.execute(f'CREATE TABLE {STAGING_SCHEMA}.{table} (LIKE {REMOTE_SCHEMA}.{table} INCLUDING ALL)')
                     if rows(table):
                         # A whole clause.csv COPY can exceed the managed
@@ -230,8 +233,10 @@ def replace_tables(database_url: str) -> None:
                     detail = str(error).splitlines()[0]
                     suffix = f' [{state}]' if state else ''
                     raise ValueError(f'Unable to stage table {table}{suffix}: {detail}') from error
+            print('Table sync: replacing target schema.', flush=True)
             cursor.execute(f'DROP SCHEMA {REMOTE_SCHEMA} CASCADE')
             cursor.execute(f'ALTER SCHEMA {STAGING_SCHEMA} RENAME TO {REMOTE_SCHEMA}')
+        print('Table sync: committing replacement.', flush=True)
         connection.commit()
 
 
@@ -262,7 +267,7 @@ def verify_remote(database_url: str, supabase_url: str, supabase_key: str, objec
                     raise ValueError(f'Remote row count differs for {table}: expected {expected}, found {actual}')
     if remote != wanted:
         raise ValueError('Remote Storage object names differ from the local upload set')
-    print(f'Remote verification passed: {len(wanted)} objects and {len(TABLES)} table row counts match local data.')
+    print(f'Remote verification passed: {len(wanted)} objects and {len(TABLES)} table row counts match local data.', flush=True)
 
 
 def remote_status(database_url: str, supabase_url: str, supabase_key: str, objects: list[str]) -> None:
@@ -274,7 +279,7 @@ def remote_status(database_url: str, supabase_url: str, supabase_key: str, objec
             for table in TABLES:
                 cursor.execute(f'SELECT count(*) FROM {REMOTE_SCHEMA}.{table}')
                 print(f'  remote {table}: {cursor.fetchone()[0]} rows')
-    print(f'Remote objects: {len(remote)}; local-only: {len(wanted - remote)}; remote-only: {len(remote - wanted)}')
+    print(f'Remote objects: {len(remote)}; local-only: {len(wanted - remote)}; remote-only: {len(remote - wanted)}', flush=True)
 
 
 def main() -> None:
@@ -292,16 +297,16 @@ def main() -> None:
     if gaps and not args.partial:
         raise SystemExit(f'Upload blocked: {len(gaps)} coverage gaps. Use --partial only with explicit approval.')
     objects = local_objects()
-    print(f'Validation: {len(errors)} errors, {len(gaps)} gaps, {len(warnings)} warnings.')
-    print(f'Objects: {len(objects)} (including {len(DOCS)} documentation files)')
+    print(f'Validation: {len(errors)} errors, {len(gaps)} gaps, {len(warnings)} warnings.', flush=True)
+    print(f'Objects: {len(objects)} (including {len(DOCS)} documentation files)', flush=True)
     for table in TABLES:
-        print(f'  {table}: {len(rows(table))} rows')
+        print(f'  {table}: {len(rows(table))} rows', flush=True)
     if args.dry_run:
-        print('Dry run only. No credential was used and no remote write was performed.')
+        print('Dry run only. No credential was used and no remote write was performed.', flush=True)
         return
     database_url, supabase_url, supabase_key = configuration()
     if args.preflight:
-        print(f'Remote preflight passed: {preflight_remote(database_url, supabase_url, supabase_key)} existing bucket objects; expected schema tables are present.')
+        print(f'Remote preflight passed: {preflight_remote(database_url, supabase_url, supabase_key)} existing bucket objects; expected schema tables are present.', flush=True)
         return
     if args.verify:
         verify_remote(database_url, supabase_url, supabase_key, objects)
@@ -312,25 +317,25 @@ def main() -> None:
     remote = remote_objects(database_url, supabase_url, supabase_key)
     wanted = set(objects)
     upload_names = sorted(wanted - remote) if args.resume else objects
-    print(f'Uploading {len(upload_names)} objects; deleting {len(remote - wanted)} obsolete bucket objects.')
+    print(f'Uploading {len(upload_names)} objects; deleting {len(remote - wanted)} obsolete bucket objects.', flush=True)
     for name in upload_names:
         upload_object(supabase_url, supabase_key, name)
     for name in sorted(remote - wanted):
         delete_object(supabase_url, supabase_key, name)
     replace_tables(database_url)
-    print('Upload complete: Storage bucket and database schema were replaced.')
+    print('Upload complete: Storage bucket and database schema were replaced.', flush=True)
 
 
 if __name__ == '__main__':
     try:
         main()
-    except ValueError as error:
-        print(f'Upload validation failed: {error}')
-        raise SystemExit(1)
-    except (ValueError, psycopg.Error, requests.RequestException) as error:
+    except (psycopg.Error, requests.RequestException) as error:
         # Connection exceptions can contain a full URI. Keep diagnostics useful
         # without exposing configured database URLs or credentials.
         status = getattr(getattr(error, 'response', None), 'status_code', None)
         detail = f' HTTP {status}' if status is not None else ''
-        print(f'Upload failed during a remote operation ({type(error).__name__}{detail}); no database schema replacement was committed.')
+        print(f'Upload failed during a remote operation ({type(error).__name__}{detail}); no database schema replacement was committed.', flush=True)
+        raise SystemExit(1)
+    except ValueError as error:
+        print(f'Upload validation failed: {error}', flush=True)
         raise SystemExit(1)
