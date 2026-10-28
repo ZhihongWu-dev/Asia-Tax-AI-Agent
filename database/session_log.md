@@ -416,3 +416,15 @@
 - Document added: `in.rules2026`, the official Income-tax Rules, 2026 notification from the Income Tax Department.
 - Parameter added: `in.anti_abuse.gaar_chapter_applies`, citing Rule 128(2), which states the temporal application of Chapter XI GAAR to tax benefits obtained on or after 1 April 2017.
 - Handoff to a person: `in.ita2025`: both public CBDT Act-PDF endpoints (`https://incometaxindia.gov.in/Documents/Act/Income-tax-Act-2025.pdf` and `https://www.incometaxindia.gov.in/documents/d/guest/income_tax_act_2025_as_amended_by_fa_act_2026-pdf`) returned HTTP 403 to the collector after documented curl retries. Download the official current Act PDF in a browser and register it as `in.ita2025` under categories 1;3;4;9; do not substitute a third-party copy.
+
+## 2026-10-28 — India treaty-relief and residence-certificate procedure expansion
+
+- Documents added: `in.itd.form41-dtaa`; `in.itd.form42-trc`; `in.itd.tax-calendar`.
+- Official source and scope: the Income Tax Department's Form 41 manual states that a non-resident claiming DTAA relief must furnish the prescribed online information under section 159 and Rule 75; it covers the treaty-relief filing procedure (category 7). The Form 42 manual states that an Indian resident applies to the Assessing Officer for a certificate of residence, which is issued in Form 43 when the officer is satisfied; it covers the residence-certificate procedure (category 8). The official portal homepage exposes the Tax Calendar under Important Deadlines; its dynamic calendar entry covers the deadline-page category.
+- Parameters added: none.
+- Absence records added: none.
+- Slicing problems: none; the three official guidance/page documents are intentionally cited as whole documents.
+- Rate-table mismatches: none.
+- Handoff to a person: `in.ita2025` remains unresolved as recorded in the preceding session entry; its official Act PDF endpoints returned HTTP 403 to the collector.
+- Tool changes: none.
+- Acceptance: NOT PASSED (0 errors, 18 India gaps). The round removed categories 7, 8 and `page_deadlines`.
