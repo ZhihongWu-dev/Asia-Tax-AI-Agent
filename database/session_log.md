@@ -505,3 +505,10 @@
 - Source and scope: rule 12 determines income attributable to Indian assets on a transfer outside India of a share or interest in a company or entity. Its formula expressly refers to Indian assets from which the share or interest derives substantial value, and requires the transferor to furnish the accountant-verified Form 4 report. This is the category 9 indirect-share-transfer material; the rule is not misrepresented as a general rate or a new CFC rule.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 77 gaps`; scoped India build `NOT PASSED: 0 errors, 7 gaps`. The remaining India gaps are category 3, `page_treaties`, company and individual CFC slots, and treaty rows `in-kr`, `in-my`, `in-vn`.
 - Remote upload and verification: preflight found 350 existing objects. The table-only synchronization uploaded and deleted 0 Storage objects, and `upload.py --partial --verify` passed with all 350 object names and all 7 table row counts matching local data.
+
+## 2026-10-28 — Malaysia residence, treaty-procedure and COR expansion
+
+- Document added: `my.hasil.e-residence`, the official HASiL `Sijil Taraf Mastautin / e-Residence` page, in Malay and categorised under 6, 7 and 8.
+- Source and scope: the page identifies the statutory residence provisions for individuals, companies and other entities; explains that an e-Residence certificate is applied for to claim Malaysia treaty benefits and avoid double taxation; and sets out application channel, supporting-document and processing information. The original Malay text is retained because it is the official page language. No additional tax-rate or CFC result is inferred.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 74 gaps`; scoped Malaysia build `NOT PASSED: 0 errors, 4 gaps`. This resolves categories 6, 7 and 8. The remaining Malaysia gaps are category 3, category 5, and the company and individual CFC slots.
+- Remote upload and verification: preflight found 350 existing objects. `upload.py --partial --resume` uploaded 2 objects, and `upload.py --partial --verify` passed with 352 object names and all 7 table row counts matching local data.
