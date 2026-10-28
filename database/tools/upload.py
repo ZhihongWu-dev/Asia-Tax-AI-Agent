@@ -118,7 +118,7 @@ def curl_storage_list(url: str, key: str, prefix: str) -> list[dict]:
         config_path.unlink(missing_ok=True)
 
 
-def remote_objects(url: str, key: str, prefix: str = '') -> set[str]:
+def remote_objects_http(url: str, key: str, prefix: str = '') -> set[str]:
     """Recursively list objects in exactly the selected bucket.
 
     The Supabase Storage list endpoint is reliable through curl in this
@@ -143,10 +143,28 @@ def remote_objects(url: str, key: str, prefix: str = '') -> set[str]:
             continue
         relative = f'{prefix}/{name}'.strip('/')
         if entry.get('id') is None and entry.get('metadata') is None:
-            result |= remote_objects(url, key, relative)
+            result |= remote_objects_http(url, key, relative)
         else:
             result.add(relative)
     return result
+
+
+def remote_objects(database_url: str, supabase_url: str, supabase_key: str) -> set[str]:
+    """List exactly the target bucket's object names without recursive HTTP calls.
+
+    The configured PostgreSQL connection is already required for the atomic
+    schema replacement.  Querying `storage.objects` through that same channel
+    avoids one Storage REST request per folder during preflight and verification.
+    Retain the REST implementation as a fallback for deployments whose database
+    role cannot read the Storage metadata table.
+    """
+    try:
+        with psycopg.connect(database_url) as connection:
+            with connection.cursor() as cursor:
+                cursor.execute('SELECT name FROM storage.objects WHERE bucket_id = %s', (BUCKET,))
+                return {row[0] for row in cursor.fetchall()}
+    except psycopg.Error:
+        return remote_objects_http(supabase_url, supabase_key)
 
 
 def upload_object(url: str, key: str, name: str) -> None:
@@ -219,7 +237,7 @@ def replace_tables(database_url: str) -> None:
 
 def preflight_remote(database_url: str, supabase_url: str, supabase_key: str) -> int:
     """Confirm the intended schema and bucket are reachable without mutation."""
-    remote = remote_objects(supabase_url, supabase_key)
+    remote = remote_objects(database_url, supabase_url, supabase_key)
     with psycopg.connect(database_url) as connection:
         with connection.cursor() as cursor:
             cursor.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = %s AND table_type = 'BASE TABLE'", (REMOTE_SCHEMA,))
@@ -232,7 +250,7 @@ def preflight_remote(database_url: str, supabase_url: str, supabase_key: str) ->
 
 def verify_remote(database_url: str, supabase_url: str, supabase_key: str, objects: list[str]) -> None:
     """Compare remote object names and table row counts without mutation."""
-    remote = remote_objects(supabase_url, supabase_key)
+    remote = remote_objects(database_url, supabase_url, supabase_key)
     wanted = set(objects)
     with psycopg.connect(database_url) as connection:
         with connection.cursor() as cursor:
@@ -249,7 +267,7 @@ def verify_remote(database_url: str, supabase_url: str, supabase_key: str, objec
 
 def remote_status(database_url: str, supabase_url: str, supabase_key: str, objects: list[str]) -> None:
     """Display counts and object-set differences without mutating remote state."""
-    remote = remote_objects(supabase_url, supabase_key)
+    remote = remote_objects(database_url, supabase_url, supabase_key)
     wanted = set(objects)
     with psycopg.connect(database_url) as connection:
         with connection.cursor() as cursor:
@@ -291,7 +309,7 @@ def main() -> None:
     if args.status:
         remote_status(database_url, supabase_url, supabase_key, objects)
         return
-    remote = remote_objects(supabase_url, supabase_key)
+    remote = remote_objects(database_url, supabase_url, supabase_key)
     wanted = set(objects)
     upload_names = sorted(wanted - remote) if args.resume else objects
     print(f'Uploading {len(upload_names)} objects; deleting {len(remote - wanted)} obsolete bucket objects.')

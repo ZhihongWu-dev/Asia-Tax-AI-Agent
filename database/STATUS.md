@@ -1,8 +1,8 @@
 # Database build status
 
 - Errors: 0
-- Coverage gaps: 81
-- Warnings: 125
+- Coverage gaps: 79
+- Warnings: 126
 - SQLite snapshot: database.sqlite
 
 | Region | Category gaps | Slot gaps | Owned-pair gaps |
@@ -11,7 +11,7 @@
 | cn | 0 | 0 | 0 |
 | hk | 0 | 0 | 0 |
 | id | 0 | 0 | 0 |
-| in | 4 | 4 | 3 |
+| in | 4 | 2 | 3 |
 | jp | 7 | 8 | 5 |
 | kr | 6 | 12 | 4 |
 | my | 5 | 2 | 0 |
@@ -30,9 +30,7 @@ gap: category in|5
 gap: category in|9
 gap: category in|page_treaties
 gap: slot in|company|cfc without a parameter or absence record
-gap: slot in|company|outbound_wht without a parameter or absence record
 gap: slot in|individual|cfc without a parameter or absence record
-gap: slot in|individual|outbound_wht without a parameter or absence record
 gap: pair in-kr without a treaty row
 gap: pair in-my without a treaty row
 gap: pair in-vn without a treaty row
@@ -168,6 +166,7 @@ param th.anti_abuse.transfer_pricing_market_price_adjustment: quote differs only
 param in.residence.company_poem: quote differs only by whitespace
 param in.anti_abuse.gaar_chapter_applies: quote differs only by whitespace
 param in.final.company_default_cit_rate: quote differs only by whitespace
+param in.outbound_wht.nonresident_payment_tds_required: quote differs only by whitespace
 param jp.final.individual_top_rate: quote differs only by whitespace
 param jp.outbound_wht.nonresident_payment_withholding: quote differs only by whitespace
 param ae.inbound.individual_uae_business_foreign_income: quote differs only by whitespace
