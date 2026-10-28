@@ -626,3 +626,9 @@
 - Treaty rows added: `kr-my`, `kr-sg`, `kr-th`, and `kr-vn`. The base entry-into-force dates are recorded as 1983-01-02, 2019-12-31, 2007-06-29, and 1994-09-11. The Korea-Viet Nam second protocol is separately preserved and records entry into force on 2021-01-20.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 26 gaps`; scoped Korea build `NOT PASSED: 0 errors, 7 gaps`. All Korea owned-pair gaps are now closed; the remaining Korea gaps are domestic company and individual rule slots.
 - Remote upload and verification: a first 30-second upload window had already committed the 8 document rows before its status returned. A subsequent overlapping reconciliation saw their primary keys and stopped on `UniqueViolation`; a fresh read confirmed the remote rows matched local identity and the final idempotent reconciliation completed. `upload.py --partial --verify` passed with 422 object names and all 7 table row counts matching local data.
+
+## 2026-10-28 — Korea corporate return deadline
+
+- Parameter added: `kr.final.company_cit_return_deadline_months` with value 3 months. The National Tax Service filing-deadline page states that corporate-income-tax filing and payment are due no later than three months after the end of the business year.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 25 gaps`; scoped Korea build `NOT PASSED: 0 errors, 6 gaps`. The update closes the Korea company final-tax slot without inferring a rate or a general final-liability rule beyond the cited deadline.
+- Remote upload and verification: guarded reconciliation inserted 1 parameter row. `upload.py --partial --verify` passed with 422 object names and all 7 table row counts matching local data.
