@@ -1,13 +1,17 @@
 # Database collection tools
 
-This directory contains the reusable tools developed for the CSV-first tax
-database package. It intentionally excludes source originals, generated text,
-database snapshots, and credentials; those must be supplied through the
-separate data package.
+This directory contains a complete, reproducible CSV-first tax database
+package: reusable tools, structured CSV records, official-source originals in
+`raw/`, derived text in `text/`, the materialised SQLite database, and the
+local Supabase snapshot. It can therefore be cloned on another computer and
+used for continued database work without locating a separate data package.
+
+Credentials are deliberately excluded. Supply them only through a local,
+git-ignored `.env` file when Supabase upload or verification is needed.
 
 ## Expected data-package layout
 
-Place the following alongside this README before running the tools:
+The repository already contains the following layout:
 
 ```text
 database/
@@ -22,11 +26,12 @@ as authoritative and never silently repairs records.
 
 ## Setup and use
 
-Use the project’s Python 3.11 Conda environment and install the declared
-dependencies:
+Create the project’s Python 3.11 Conda environment once on a new computer,
+then install the declared dependencies:
 
 ```bash
 source /opt/anaconda3/etc/profile.d/conda.sh
+conda create -n tax python=3.11 -y
 conda activate tax
 pip install -r database/requirements.txt
 ```
