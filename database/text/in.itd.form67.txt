@@ -1,0 +1,515 @@
+Form 67 User Manual | Income Tax Department
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Skip to main content
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  Form 67 User Manual
+              
+
+
+
+                  Form 67 User Manual
+              
+
+
+
+
+
+
+Form 67 User Manual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Overview
+
+
+As per Rule 128 of the Income Tax Rules, 1962, a resident taxpayer is eligible to claim credit for any foreign tax paid, in a country or specified territory outside India. The credit shall be allowed only if the assessee furnishes the required particulars in Form 67 within the specified timelines.
+
+
+Form 67 can only be submitted through online mode. This service enables the registered users to file Form 67 online through the e-Filing portal.
+
+
+2. Prerequisites for availing this service
+
+
+• Registered user on the e-Filing portal with valid user ID and password.
+
+• PAN and Aadhaar of the taxpayer are linked. (Recommended)
+
+• Status of PAN of Taxpayer should be "Active"
+
+
+3. About the Form
+
+
+3.1 
+Purpose
+
+
+A resident taxpayer who has credit for the amount of any foreign tax paid in a country outside India by way of deduction or otherwise will be required to furnish the statement in Form 67 on or before the due date specified for furnishing the return of income under sub-section (1) of Section 139 to claim credit of such taxes. 
+
+
+Form 67 will also be required to be furnished in case the carry backward of loss of the current year results in refund of foreign tax for which credit has been claimed in any earlier previous years.
+
+
+3.2 Who can use it?
+
+
+A resident taxpayer who has credit for the amount of any foreign tax paid in a country outside India by way of deduction or otherwise.
+
+
+4. Form at a Glance
+
+
+
+Form 67 has 4 sections:
+
+
+
+
+Part A
+
+
+Part B
+
+
+Verification
+
+
+Attachments
+
+	 
+
+
+
+
+
+
+
+
+4.1. Part A
+
+
+
+
+Part A
+ of the form entails basic information such as your Name, PAN or Aadhaar, Address and Assessment Year.
+
+ 
+
+
+
+
+
+You are also required to the add the receipt details of the income from a country or specified territory outside India and Foreign Tax Credit claimed.
+
+ 
+
+
+
+
+
+
+4.2. Part B
+
+
+
+
+Part B 
+of the form is where you will be required to provide details of refund of foreign tax as result of carry backward of losses and disputed foreign tax.
+
+ 
+
+
+
+
+
+
+4.3. Verification
+
+
+
+The 
+Verification
+ section contains a self-declaration form containing fields as per Rule 128 of the Income Tax Rules, 1962. 
+
+ 
+
+
+
+
+
+
+4.4. Attachments
+
+
+
+The last section of Form 67 is 
+Attachments
+ where you need to attach a copy of the certificate or statement and proof of payment / deduction of foreign tax.
+
+ 
+
+
+
+
+5. How to Access and Submit
+
+
+
+
+You can fill and submit Form 67 only in online mode through the e-Filing portal.
+
+
+
+
+Follow the below steps to fill and submit Form 67 through 
+online mode
+.
+
+
+
+
+Step 1:
+ Log in to the e-Filing portal using your user ID and password.
+
+ 
+
+
+
+
+For Individual users, if PAN is not linked with the Aadhaar you will see a pop-up message that your PAN is made inoperative as it is not linked with your Aadhaar. 
+
+To link the PAN with Aadhaar, click on
+ Link Now
+ button else click 
+Continue
+.
+
+ 
+
+
+
+
+
+
+Step 2: 
+On your 
+Dashboard,
+ click 
+e-File
+ > 
+Income Tax Forms
+ > 
+File Income Tax Forms.
+
+
+
+
+
+
+Step 3: 
+On the 
+File Income Tax Forms
+ page, select 
+Form 67
+. Alternatively, enter 
+Form 67
+ in the search box to find the form.
+
+ 
+
+
+
+
+
+
+Step 4
+: On the 
+Form 67
+ page, select the 
+Assessment Year (A.Y.)
+ and click 
+Continue.
+
+ 
+
+
+
+
+
+
+Step 5
+: On the 
+Instructions
+ page, click 
+Let's Get Started.
+
+ 
+
+
+
+
+Step 6
+: On click of 
+Let's Get Started
+, Form 67 is displayed. Fill all the required details and click 
+Preview
+.
+
+ 
+
+
+
+
+
+
+Step 7:
+ On the 
+Preview
+ page, verify the details and click 
+Proceed to e-Verify.
+
+ 
+
+
+
+
+
+
+Step 8
+: Click 
+Yes
+ to e-Verify..
+
+ 
+
+
+
+
+
+
+Step 9
+: On clicking 
+Yes
+, you will be taken to the 
+e-Verify
+ page.
+
+
+
+
+Note:If your PAN is inoperative, you will see a warning message in pop-up that PAN of the taxpayer is inoperative as it is not linked with Aadhaar.
+
+
+You can link PAN with Aadhaar by clicking on 
+Link Now
+ option otherwise click 
+Continue.
+
+
+
+
+
+
+Note:
+ Refer to 
+How to e-Verify
+ user manual to learn more.
+
+
+
+After successful e-Verification, a success message is displayed along with a Transaction ID and Acknowledgement Number. Please keep a note of the Transaction ID and Acknowledgement for future reference. You will also receive a confirmation message on the email ID registered on the e-Filing portal.
+
+
+4. Related Topics
+
+
+
+
+Login
+
+
+Dashboard and Worklist
+
+
+Income Tax Forms (Upload)
+
+
+Register DSC
+
+
+Generate EVC
+
+
+Authorized and Register as Representative 
+
+
+View Filed Forms

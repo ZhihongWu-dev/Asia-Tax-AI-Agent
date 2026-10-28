@@ -104,7 +104,8 @@ def curl_storage_list(url: str, key: str, prefix: str) -> list[dict]:
     try:
         config_path.chmod(0o600)
         completed = subprocess.run(
-            ['curl', '--silent', '--show-error', '--fail', '--config', str(config_path),
+            ['curl', '--silent', '--show-error', '--fail', '--connect-timeout', '10', '--max-time', '20',
+             '--config', str(config_path),
              f'{url}/storage/v1/object/list/{BUCKET}'], text=True, capture_output=True,
         )
         if completed.returncode:
@@ -118,17 +119,23 @@ def curl_storage_list(url: str, key: str, prefix: str) -> list[dict]:
 
 
 def remote_objects(url: str, key: str, prefix: str = '') -> set[str]:
-    """Recursively list objects in exactly the selected bucket."""
+    """Recursively list objects in exactly the selected bucket.
+
+    The Supabase Storage list endpoint is reliable through curl in this
+    environment, while the Python TLS transport can stall before it reports a
+    retryable error. Prefer the supported curl path and retain requests as a
+    fallback for installations where curl itself is unavailable.
+    """
     try:
+        entries = curl_storage_list(url, key, prefix)
+    except ValueError:
         response = requests.post(
             f'{url}/storage/v1/object/list/{BUCKET}', headers=storage_headers(key),
             json={'prefix': prefix, 'limit': 1000, 'offset': 0, 'sortBy': {'column': 'name', 'order': 'asc'}},
-            timeout=60,
+            timeout=15,
         )
         response.raise_for_status()
         entries = response.json()
-    except requests.RequestException:
-        entries = curl_storage_list(url, key, prefix)
     result: set[str] = set()
     for entry in entries:
         name = entry.get('name', '')
