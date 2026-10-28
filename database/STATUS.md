@@ -1,8 +1,8 @@
 # Database build status
 
 - Errors: 0
-- Coverage gaps: 70
-- Warnings: 128
+- Coverage gaps: 67
+- Warnings: 129
 - SQLite snapshot: database.sqlite
 
 | Region | Category gaps | Slot gaps | Owned-pair gaps |
@@ -16,7 +16,7 @@
 | kr | 6 | 12 | 4 |
 | my | 0 | 0 | 0 |
 | sg | 0 | 0 | 0 |
-| th | 0 | 3 | 0 |
+| th | 0 | 0 | 0 |
 | vn | 9 | 9 | 0 |
 
 ## Errors
@@ -74,9 +74,6 @@ gap: pair kr-my without a treaty row
 gap: pair kr-sg without a treaty row
 gap: pair kr-th without a treaty row
 gap: pair kr-vn without a treaty row
-gap: slot th|company|cfc without a parameter or absence record
-gap: slot th|individual|anti_abuse without a parameter or absence record
-gap: slot th|individual|cfc without a parameter or absence record
 gap: category vn|2
 gap: category vn|3
 gap: category vn|5
@@ -226,3 +223,4 @@ param id-vn.outbound_wht.dividend_rate: quote differs only by whitespace
 param id-vn.outbound_wht.royalty_rate: quote differs only by whitespace
 decision my.absent.3: quote differs only by whitespace
 decision my.absent.cfc: quote differs only by whitespace
+decision th.absent.individual.anti_abuse: quote differs only by whitespace
