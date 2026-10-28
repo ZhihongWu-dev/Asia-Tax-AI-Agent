@@ -1,0 +1,408 @@
+Income Tax Act 1947
+Table of Contents
+Long Title
+Part 1 PRELIMINARY
+1 Short title
+2 Interpretation
+2A Purpose of Act
+Part 2 ADMINISTRATION
+3 Appointment of Comptroller and other officers
+3A Assignment of function or power to public body
+4 Powers of Comptroller
+5 Approved pension or provident fund or society
+6 Official secrecy
+7 Rules
+8 Service and signature of notices, etc.
+8A Use of electronic service
+9 Free postage
+Part 3 IMPOSITION OF INCOME TAX
+10 Charge of income tax
+10A Profits of unit trusts
+10B Excess provident fund contributions, etc., from employer deemed to be income
+10BA Voluntary contributions by platform operator deemed to be income
+10C Income from finance or operating lease
+10D Ascertainment of income from business of making investments
+10E Ascertainment of income from certain public‑private partnership arrangements
+10F Ascertainment of income from business of hiring out motor cars or providing driving instruction or chauffeur services
+10G Withdrawals from Supplementary Retirement Scheme
+10H Securities lending or repurchase arrangement
+10I Additional Tier 1 capital instruments
+10J Tax treatment for trading stock appropriated for non‑trade or capital purpose
+10K Tax treatment for covered bond transactions
+10L Gains from the sale of foreign assets
+11 Ascertainment of income of clubs, trade associations, etc.
+12 Sources of income
+Part 4 EXEMPTION FROM INCOME TAX
+13 Exempt income
+13A Exemption of shipping profits
+13B Assessment of income not entitled to exemption under section 43A, 43C, 43D or 43H
+13C Exemption of income of trustee of trust fund arising from funds managed by fund manager in Singapore
+13D Exemption of income of prescribed persons arising from funds managed by fund manager in Singapore
+13E Exemption of international shipping profits
+13F Exemption of income of foreign trust
+13G Exemption of income of venture company
+13H Exemption of tax on gains or profits from equity remuneration incentive scheme (SMEs)
+13I Exemption of tax on gains or profits from equity remuneration incentive scheme
+13J Exemption of tax on gains or profits from equity remuneration incentive scheme (start‑ups)
+13K Exemption of tax on income derived by non‑ordinarily resident individual
+13L Exemption of income of foreign account of philanthropic purpose trust
+13M Exemption of income derived from asset securitisation transaction
+13N Exemption of relevant income of prescribed locally‑administered trust
+13O Exemption of income of company incorporated and resident in Singapore arising from funds managed by fund manager in Singapore
+13OA Exemption of income of partners of limited partnership arising from funds managed by fund manager in Singapore
+13P Exemption of income of shipping investment enterprise
+13Q Exemption of trust income to which beneficiary is entitled
+13QA Exemption of estate income received by beneficiary, etc.
+13R Exemption of income of not‑for‑profit organisation
+13S Exemption of income derived by law practice from international arbitration held in Singapore
+13T Exemption of relevant income of eligible family‑owned investment holding company
+13U Exemption of income arising from funds managed by fund manager in Singapore
+13V Exemption of certain income of prescribed sovereign fund entity, approved foreign government-owned entity, and prescribed or approved international organisation
+13W Exemption of gains or profits from disposal of ordinary shares or preference shares
+13X Exemption of certain payments received in connection with COVID‑19 events
+Part 5 DEDUCTIONS AGAINST INCOME
+14 Deductions allowed
+14A Deduction for costs for protecting intellectual property
+14B Further deduction for expenses relating to approved trade fairs, exhibitions or trade missions, maintenance of overseas trade office, or electronic commerce
+14C Expenditure on research and development
+14D Enhanced deduction for qualifying expenditure on research and development
+14E Further deduction for expenditure on research and development project
+14EA Deduction for expenditure incurred on qualifying innovation projects
+14EB Deduction for payment under innovation cost-sharing agreement
+14F Expenditure on building modifications for benefit of disabled employees
+14G Provisions by banks and qualifying finance companies for impairment losses, etc., from non‑credit‑impaired loans and securities
+14H Further or double deduction for overseas investment development expenditure
+14I Further or double deduction for salary expenditure for employees posted overseas
+14J Deduction for upfront land premium
+14K Deduction for special reserve of approved general insurer
+14L Deduction for treasury shares transferred under employee equity‑based remuneration scheme
+14M Deduction for shares transferred by special purpose vehicle under employee equity‑based remuneration scheme
+14MA Deduction for new shares issued by holding company under employee equity‑based remuneration scheme
+14N Deduction for renovation or refurbishment expenditure
+14O Deduction for qualifying training expenditure for years of assessment 2011 to 2018
+14P Deduction for qualifying design expenditure
+14Q Deduction for expenditure on leasing of PIC automation equipment under qualifying lease
+14R Deduction for expenses incurred before first dollar of income from trade, business, profession or vocation
+14S Deduction for amortisation of intangible asset created under public‑private partnership arrangement
+14T Deduction for expenditure on licensing intellectual property rights
+14U Enhanced deduction for expenditure on licensing intellectual property rights
+14V Deduction for expenditure incurred to comply with statutory and regulatory requirements
+14W Deduction for expenditure incurred by individual in deriving passive rental income in Singapore
+14X Attribution of deductible expenses incurred before commencement of trade, etc.
+14Y Further or double deduction for qualifying expenditure on issue of debentures and making available debentures for secondary trading
+14Z Deduction for expenditure for services or secondment to institutions of a public character
+14ZA Deduction for expenditure incurred in deriving income from driving chauffeured private hire car or taxi
+14ZB Deduction for expenditure incurred by individual in deriving commission
+14ZC Deduction for payments made to drivers of chauffeured private hire cars and taxis
+14ZD Deduction for payments made to lessees or licensees to mitigate impact of COVID‑19 event
+14ZE Deduction for expenditure incurred in obtaining or granting, etc., leases of immovable properties
+14ZF Deduction for expenditure incurred on immovable property while vacant
+14ZG Deduction for qualifying training expenditure for years of assessment 2024 to 2028
+14ZH Deduction for expenditure incurred in deriving income from providing delivery services
+14ZI Deduction for real estate investment trust units held by managers of real estate investment trusts
+14ZJ Deduction for expenditure on green certificates and green credits
+15 Deductions not allowed
+15A Limit on deduction allowed for leasing or licensing expenditure in 2020
+15B Limit on deduction allowed for leasing or licensing expenditure in 2021
+Part 6 CAPITAL ALLOWANCES
+16 Initial and annual allowances for industrial buildings and structures
+17 Balancing allowances and charges for industrial buildings and structures
+18 Definitions for sections 16, 17 and 18B
+18A (Repealed)
+18B Transitional provisions for capital expenditure incurred on industrial buildings or structures on or after 23 Febuary 2010
+18C Initial and annual allowances for certain buildings and structures
+19 Initial and annual allowances for machinery or plant
+19A Allowances of 3 years or 2 years write‑off for machinery and plant, and 100% write‑off for computer, prescribed automation equipment and robot, etc.
+19B Writing‑down allowances for intellectual property rights
+19C Writing‑down allowances for approved cost‑sharing agreement for research and development activities
+19D Writing‑down allowance for IRU
+19E Use of open‑market price for making allowances under sections 19, 19A and 19D
+20 Balancing allowances and charges for machinery or plant
+21 Replacement of machinery or plant
+22 Expenditure on machinery or plant
+22A Order of set‑off of allowances
+23 Carry forward of allowances
+24 Special provisions as to certain sales
+25 Special provisions as to certain transfers
+Part 7 ASCERTAINMENT OF CERTAIN INCOME
+26 Profits of insurers
+26A Ascertainment of income of member of Lloyd’s syndicate
+27 Profits of non‑resident shipowner or charterer
+28 Profits of non‑resident air transport and cable undertakings
+29 (Repealed)
+30 (Repealed)
+31 Income arising from settlements
+32 Valuation of trading stock on discontinuance or transfer of trade or business
+32A Valuation of cost of trading stock converted from non‑trade or capital asset
+33 Comptroller to disregard certain transactions and dispositions
+33A Surcharge on adjustments under section 33
+34 Decision of Comptroller no bar to appeal
+34A Adjustment on change of basis of computing profits of financial instruments resulting from FRS 39 or SFRS for Small Entities
+34AA Adjustment on change of basis of computing profits of financial instruments resulting from FRS 109 or SFRS(I) 9
+34AAA Change of basis for computing profits from financial instruments for insurers
+34AB Chargeability of profit or loss from foreign exchange differences
+34B Islamic financing arrangements
+34C Amalgamation of companies
+34CA Transfer of businesses by insurer
+34D Transactions not at arm’s length
+34E Surcharge on transfer pricing adjustments
+34F Transfer pricing documentation
+34G Modification of provisions for companies redomiciled in Singapore
+34H Tax credits for approved redomiciled companies
+34I Adjustments arising from adoption of FRS 115 or SFRS(I) 15
+34J Tax treatment arising from adoption of FRS 116 or SFRS(I) 16
+34K Net tonnage basis of taxation
+Part 8 ASCERTAINMENT OF STATUTORY INCOME
+35 Basis for computing statutory income
+35A Cessation of source of income commenced before 1 January 1969
+36 Partnership
+36A Limited liability partnership
+36B Registered business trusts
+36C Limited partnership
+Part 9 ASCERTAINMENT OF ASSESSABLE INCOME
+37 Assessable income
+37A Adjustment of capital allowances, losses or donations between income subject to tax at different rates
+37AA Deduction for donation of money by person related to or connected with company approved under section 13O, limited partnership approved under section 13OA or person, master fund, etc., approved under section 13U
+37AB Deduction for donation of money for overseas emergency humanitarian assistance
+37B Group relief for Singapore companies
+37C Transfer of qualifying deduction between spouses
+37D Carry‑back of capital allowances and losses
+37E Carry‑back of capital allowances and losses between spouses
+37F Deduction for incremental expenditure on research and development
+37G Cash payout under Productivity and Innovation Credit Scheme
+37H Productivity and Innovation Credit bonus
+37I Modification of sections 37G and 37H in their application to partnership
+37J Enhanced deduction or allowance under Productivity and Innovation Credit Plus Scheme
+37K Abusive PIC arrangements
+37L Promoters of abusive PIC arrangements
+37M Penalties for false information, etc., resulting in payment under section 37G or 37H
+37N Deduction for qualifying investments in qualifying start‑up companies
+37O Deduction for acquisition of shares of companies
+37P Treatment of unabsorbed donations attributable to exempt income
+37Q Exclusion of expenditure or payment subsidised by capital grant
+37R Cash payout under Enterprise Innovation Scheme
+37S Penalties for false information, etc., resulting in payment under section 37R
+Part 10 ASCERTAINMENT OF CHARGEABLE INCOME AND PERSONAL RELIEFS
+38 Chargeable income
+39 Relief and deduction for resident individual
+39A Limit on total deduction under section 39
+40 (Repealed)
+40A Relief for non‑resident public entertainers
+40B Relief for non‑resident employees
+40C Relief for non‑resident SRS members
+40D Relief for non‑resident deriving income from activity as public entertainer and employee, etc.
+41 Proof of claims for deduction or relief
+Part 11 RATES OF TAX
+42 Rates of tax upon individuals
+42A Rebate for children of family
+43 Rate of tax upon companies and others
+43A Concessionary rate of tax for Asian Currency Unit, Fund Manager and securities company
+43B Special rate of tax for non‑resident shipowner or charterer or air transport undertaking
+43C Exemption and concessionary rate of tax for insurance and reinsurance business
+43D Concessionary rate of tax for headquarters company
+43E Concessionary rate of tax for Finance and Treasury Centre
+43F Concessionary rate of tax for offshore leasing of machinery and plant
+43G Concessionary rate of tax for trustee company
+43H Concessionary rate of tax for income derived from debt securities
+43I Concessionary rate of tax for global trading company and qualifying company
+43J Concessionary rate of tax for financial sector incentive company
+43K Concessionary rate of tax for provision of processing services to financial institutions
+43L Concessionary rate of tax for shipping investment manager
+43M Concessionary rate of tax for trust income to which beneficiary is entitled
+43MA Concessionary rate of tax for estate income received by beneficiary, etc.
+43N Concessionary rate of tax for leasing of aircraft and aircraft engines
+43O Concessionary rate of tax for aircraft investment manager
+43P Concessionary rate of tax for container investment enterprise
+43Q Concessionary rate of tax for container investment manager
+43R Concessionary rate of tax for approved insurance brokers
+43S Concessionary rate of tax for income derived from managing qualifying registered business trust or company
+43T Concessionary rate of tax for ship broking and forward freight agreement trading
+43U Concessionary rate of tax for shipping‑related support services
+43V Concessionary rate of tax for income derived from managing approved venture company
+43W Concessionary rate of tax for international growth company
+43X Concessionary rate of tax for intellectual property income
+Part 12 DEDUCTION OF TAX AT SOURCE
+44 (Repealed)
+44A (Repealed)
+45 Withholding of tax in respect of interest paid to non‑resident persons
+45A Application of section 45 to royalties, management fees, etc.
+45AA Tax deemed withheld and recoverable from person in breach of condition imposed under section 13(4)
+45B Application of section 45 to non‑resident director’s remuneration
+45C Application of section 45 to distribution by unit trust
+45D Application of section 45 to gains from real property transaction
+45E Application of section 45 to withdrawals by non‑citizen SRS members, etc.
+45EA Approval of deduction of investment from SRS account of non‑citizen
+45F Application of section 45 to income from profession or vocation carried on by non‑resident individual, etc.
+45G Application of section 45 to distribution from any real estate investment trust
+45GA Application of section 45 to income derived as public entertainer
+45H Application of section 45 to commission or other payment of licensed international market agent
+45I Sections 45 and 45A not applicable to certain payments
+45J Application of section 45, etc., to Government
+Part 13 ALLOWANCES FOR TAX CHARGED
+46 Tax deducted from interests, etc.
+47 (Repealed)
+Part 14 RELIEF AGAINST DOUBLE TAXATION
+48 (Repealed)
+49 Avoidance of double taxation arrangements
+50 Tax credits
+50A Unilateral tax credits
+50B Tax credits for trust income to which beneficiary is entitled
+50BA Tax credits for estate income received by beneficiary, etc.
+50C Pooling of credits
+Part 15 PERSONS CHARGEABLE
+Husband and wife
+51 Income of wife
+Trustees, agents and curators
+52 Chargeability of trustees, etc.
+53 Chargeability of agent of person residing out of Singapore
+54 Liability of person chargeable in respect of incapacitated person
+55 Liability of managers of companies or bodies of persons
+56 Indemnification of representative
+57 Power to appoint agent, etc., for recovery of tax
+58 Deceased persons
+59 Duty of liquidator on winding up of company or limited liability partnership
+60 Chargeability of joint trustees
+61 (Repealed)
+Part 16 RETURNS
+62 Notice of chargeability and returns
+62A The basic rule: Singapore dollar to be used
+62B Currency other than Singapore dollar to be used in certain circumstances
+63 Furnishing of estimate of chargeable income if no return is made under section 62
+64 Comptroller may call for further returns
+65 Power to call for returns
+65A Statement of bank accounts, assets, etc.
+65B Power of Comptroller to obtain information
+65C Failure to comply with section 64, 65, 65A or 65B
+65D Section 65B notice applies despite duty of secrecy under Banking Act 1970 or Trust Companies Act 2005
+65E Section 65B notice may be subject to confidentiality duty
+65F Arrest of person
+65G No unnecessary restraint
+65H Arresting officer to be armed
+65I Search of place entered by person sought to be arrested
+65J Arrested person may be orally examined
+65K Disposal of item furnished or seized
+66 Returns to be deemed to be furnished by due authority
+67 Keeping of books of account and giving of receipts
+68 Official information and secrecy, and returns by employer
+68A Duty to collect and retain information of certain persons, etc.
+69 Lists to be prepared by representative or agent
+70 Occupiers to furnish return of rent payable
+71 Return to be made by partnership
+71A (Repealed)
+Part 17 ASSESSMENTS AND OBJECTIONS
+72 Comptroller to make assessments
+73 Advance assessments
+74 Additional assessments
+74A Revised assessments as relief for late GST registration
+75 Waiver of small assessments
+76 Service of notices of assessment and revision of assessment
+77 Errors and defects in assessment and notice
+Part 18 APPEALS
+78 Board of Review
+79 Right of appeal
+80 Hearing and disposal of appeals
+80A Hearing of appeal by committee where member becomes unavailable
+80B Hearing of appeal by single member where member becomes unavailable
+81 Appeals to General Division of High Court
+82 Cases stated for General Division of High Court
+83 Proceedings before Board
+84 Assessments to be final and conclusive
+Part 19 COLLECTION, RECOVERY AND REPAYMENT OF TAX
+85 Time within which payment is to be made
+86 Recovery of tax from persons leaving Singapore
+87 Penalty for non‑payment of tax and enforcement of payment
+88 Change of address
+89 Suit for tax by Comptroller
+90 Statement of Comptroller sufficient
+91 Deduction of tax from emoluments and pensions
+92 Remission, reduction or refund of tax
+92A Remission of tax of companies for year of assessment 2011
+92B Cash grant for companies for year of assessment 2011
+92C Cash grant for companies for year of assessment 2012
+92D Remission of tax of companies for years of assessment 2013, 2014 and 2015
+92E Remission of tax of companies for year of assessment 2016
+92F Remission of tax of companies for year of assessment 2017
+92G Remission of tax of companies for year of assessment 2018
+92H Remission of tax of companies for year of assessment 2019
+92I Remission of tax of companies for year of assessment 2020
+92J Remission of tax for companies for year of assessment 2024 and cash grant for companies
+92K Rebate for company for listing shares on stock exchange in Singapore
+92L Remission of tax for companies for year of assessment 2025 and cash grant for companies
+93 Repayment of tax
+93AA Modification of section 93 for repayment of tax for training allowance under Workfare Training Support scheme
+93A Relief in respect of error or mistake
+93B Refundable investment credits
+93C Recovery of cash grant from companies
+Part 20 OFFENCES AND PENALTIES
+94 General penalties
+94A Penalty for failure to make return
+95 Penalty for incorrect return, etc.
+96 Tax evasion and wilful action to obtain PIC bonus
+96A Serious fraudulent tax evasion and action to obtain PIC bonus
+97 Penalties for offences by authorised and unauthorised persons
+98 Penalty for obstructing Comptroller or officers
+99 Tax to be payable despite any proceedings for penalties
+100 Provisions relating to penalty
+101 Consent for prosecution
+102 Service of summons
+102A Notice to attend court
+103 Saving for criminal proceedings
+104 Admissibility of certain statements and documents as evidence
+104A Protection of informers
+105 Jurisdiction of court
+Part 20A EXCHANGE OF INFORMATION UNDER AVOIDANCE OF DOUBLE TAXATION ARRANGEMENTS AND EXCHANGE OF INFORMATION ARRANGEMENTS
+105A Interpretation of this Part
+105B Purpose of this Part
+105BA Exchange of information arrangement
+105C (Repealed)
+105D Request for information
+105E Comptroller to serve notice of request on certain persons
+105F Power of Comptroller to obtain information
+105G Power of Comptroller to obtain information from other authorities
+105GA Information may be used for administration of Act
+105H Rules for purposes of this Part
+105HA Confidentiality requirements for judicial review proceedings
+Part 20B INTERNATIONAL AGREEMENTS TO IMPROVE TAX COMPLIANCE
+105I Interpretation of this Part
+105J Purpose of this Part
+105K International tax compliance agreements
+105L Provision of information to Comptroller
+105M Offences
+105MA Anti‑avoidance
+105N Power of Comptroller to obtain information
+105O Information may be used for administration of Act
+105P Regulations to implement international tax compliance agreements, etc.
+105PA Duty to provide information under regulations prevails over duty of secrecy, etc.
+105Q Confidentiality requirements for judicial review proceedings
+Part 21 MISCELLANEOUS
+105R Revocation of approval
+105S Conditions for application of tax incentive treated as conditions of approval
+106 Powers to amend Schedules
+107 Variable capital companies or VCCs
+108 Advance rulings
+FIRST SCHEDULE
+Institution, authority, person or fund exempted
+SECOND SCHEDULE
+Rates of tax
+THIRD SCHEDULE
+FOURTH SCHEDULE
+Prescribed sections
+FIFTH SCHEDULE
+Child relief
+SIXTH SCHEDULE
+Number of years of working life of asset
+SEVENTH SCHEDULE
+Advance rulings
+EIGHTH SCHEDULE
+Information to be included in a request for information under Part 20A
+NINTH SCHEDULE
+Specified public schemes
+TENTH SCHEDULE
+Tenth Schedule entities
+ELEVENTH SCHEDULE
+Prescribed information
+TWELFTH SCHEDULE
+Net tonnage basis of taxation
+Legislative History
+Abbreviations
+Comparative Table

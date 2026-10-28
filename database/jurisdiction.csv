@@ -1,0 +1,12 @@
+code,name,currency,company_in_scope,individual_in_scope
+cn,Mainland China,CNY,yes,yes
+hk,Hong Kong,HKD,yes,yes
+sg,Singapore,SGD,yes,yes
+id,Indonesia,IDR,yes,yes
+vn,Vietnam,VND,yes,yes
+my,Malaysia,MYR,yes,yes
+th,Thailand,THB,yes,yes
+ae,United Arab Emirates,AED,yes,yes
+jp,Japan,JPY,yes,yes
+kr,Korea,KRW,yes,yes
+in,India,INR,yes,yes

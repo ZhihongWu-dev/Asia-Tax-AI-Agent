@@ -1,0 +1,657 @@
+{
+  "created_at": "2026-10-25T14:46:26.567847+00:00",
+  "acceptance": "NOT RUN: original prescribed tools are missing",
+  "scope": "Preliminary snapshot integrity and coverage checks only; not legal validation or build.py acceptance.",
+  "table_rows": {
+    "jurisdiction": 11,
+    "doc": 95,
+    "files": 190,
+    "clause": 5911,
+    "param": 124,
+    "decision": 14,
+    "treaty": 19
+  },
+  "indexed_files_verified": 190,
+  "findings": [
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-hk.outbound_wht.dividend_rate_reduced",
+      "detail": "treaty.cn-hk.2006.zh#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-hk.anti_abuse.ppt_applies",
+      "detail": "treaty.cn-hk.2006.p5.zh#6"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-in.outbound_wht.dividend_rate",
+      "detail": "treaty.cn-in.1994.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-id.outbound_wht.dividend_rate",
+      "detail": "treaty.cn-id.2001.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-id.anti_abuse.ppt_applies",
+      "detail": "treaty.cn-id.2001.mli.en#27.mli7"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-jp.outbound_wht.dividend_rate",
+      "detail": "treaty.cn-jp.1983.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-jp.anti_abuse.ppt_applies",
+      "detail": "treaty.cn-jp.1983.mli.en#28.mli7"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-my.outbound_wht.dividend_rate",
+      "detail": "treaty.cn-my.1985.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-my.anti_abuse.ppt_applies",
+      "detail": "treaty.cn-my.1985.mli.en#27.mli7"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-vn.outbound_wht.dividend_rate",
+      "detail": "treaty.cn-vn.1995.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-vn.anti_abuse.ppt_applies",
+      "detail": "treaty.cn-vn.1995.mli.en#27.mli7"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-kr.outbound_wht.dividend_rate_reduced",
+      "detail": "treaty.cn-kr.1994.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-kr.outbound_wht.holding_pct_min",
+      "detail": "treaty.cn-kr.1994.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-kr.anti_abuse.ppt_applies",
+      "detail": "treaty.cn-kr.1994.mli.en#27.mli7"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-sg.outbound_wht.dividend_rate_reduced",
+      "detail": "treaty.cn-sg.2007.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-sg.outbound_wht.holding_pct_min",
+      "detail": "treaty.cn-sg.2007.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-sg.anti_abuse.ppt_applies",
+      "detail": "treaty.cn-sg.2007.mli.en#27.mli7"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-th.outbound_wht.dividend_rate_reduced",
+      "detail": "treaty.cn-th.1986.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-th.outbound_wht.holding_pct_min",
+      "detail": "treaty.cn-th.1986.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-th.anti_abuse.ppt_applies",
+      "detail": "treaty.cn-th.1986.mli.en#27.mli7"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "cn-in.anti_abuse.ppt_applies",
+      "detail": "treaty.cn-in.1994.p2.en#11"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-id.outbound_wht.dividend_rate_reduced",
+      "detail": "treaty.hk-id.2010.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-id.outbound_wht.holding_pct_min",
+      "detail": "treaty.hk-id.2010.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-id.anti_abuse.ppt_applies",
+      "detail": "treaty.hk-id.2010.mli.en#26.mli7"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-in.outbound_wht.dividend_rate",
+      "detail": "treaty.hk-in.2018.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-in.anti_abuse.ppt_applies",
+      "detail": "treaty.hk-in.2018.mli.en#28.mli7"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-jp.outbound_wht.dividend_rate_reduced",
+      "detail": "treaty.hk-jp.2010.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-jp.outbound_wht.holding_pct_min",
+      "detail": "treaty.hk-jp.2010.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-jp.outbound_wht.holding_months_min",
+      "detail": "treaty.hk-jp.2010.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-jp.anti_abuse.ppt_applies",
+      "detail": "treaty.hk-jp.2010.mli.en#26.mli7"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-kr.outbound_wht.dividend_rate_reduced",
+      "detail": "treaty.hk-kr.2014.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-kr.outbound_wht.holding_pct_min",
+      "detail": "treaty.hk-kr.2014.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-kr.anti_abuse.ppt_applies",
+      "detail": "treaty.hk-kr.2014.mli.en#26.mli7"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-my.outbound_wht.dividend_rate_reduced",
+      "detail": "treaty.hk-my.2012.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-my.outbound_wht.holding_pct_min",
+      "detail": "treaty.hk-my.2012.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-my.outbound_wht.dividend_rate_other",
+      "detail": "treaty.hk-my.2012.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-my.anti_abuse.ppt_applies",
+      "detail": "treaty.hk-my.2012.mli.en#27.mli7"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-th.outbound_wht.dividend_rate",
+      "detail": "treaty.hk-th.2005.mli.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-th.anti_abuse.ppt_applies",
+      "detail": "treaty.hk-th.2005.mli.en#25.mli7"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "hk-vn.anti_abuse.ppt_applies",
+      "detail": "intl.oecd.mli.en#7.1"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "sg-th.outbound_wht.dividend_rate",
+      "detail": "treaty.sg-th.2015.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "sg-th.anti_abuse.ppt_applies",
+      "detail": "treaty.sg-th.2015.en#annexA.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "sg-vn.outbound_wht.dividend_rate_reduced",
+      "detail": "treaty.sg-vn.1994.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "sg-vn.outbound_wht.holding_pct_min",
+      "detail": "treaty.sg-vn.1994.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "sg-vn.outbound_wht.dividend_rate_mid",
+      "detail": "treaty.sg-vn.1994.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "sg-vn.outbound_wht.holding_pct_min.mid",
+      "detail": "treaty.sg-vn.1994.en#10.2"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "sg-vn.anti_abuse.ppt_applies",
+      "detail": "treaty.sg-vn.1994.en#annexA.3"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "sg.final.cit_rate",
+      "detail": "sg.ita1947#s43"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "sg.inbound.ftc_method",
+      "detail": "sg.ita1947#s50A"
+    },
+    {
+      "kind": "quote_whitespace_difference",
+      "target": "sg.residence.residence_days_min",
+      "detail": "sg.ita1947#s2"
+    }
+  ],
+  "missing_required_files": [
+    "tools/build.py",
+    "tools/fetch.py",
+    "tools/find.py",
+    "tools/clause_diff.py",
+    "tools/upload.py",
+    "samples/slicers-2026-10-23/run_slicers.py",
+    "superseded.csv"
+  ],
+  "coverage": [
+    {
+      "jur": "cn",
+      "documents": 24,
+      "parameters": 36,
+      "missing_categories": [],
+      "missing_slots": [],
+      "missing_owned_pairs": []
+    },
+    {
+      "jur": "hk",
+      "documents": 10,
+      "parameters": 18,
+      "missing_categories": [],
+      "missing_slots": [],
+      "missing_owned_pairs": []
+    },
+    {
+      "jur": "sg",
+      "documents": 5,
+      "parameters": 12,
+      "missing_categories": [],
+      "missing_slots": [],
+      "missing_owned_pairs": []
+    },
+    {
+      "jur": "id",
+      "documents": 0,
+      "parameters": 0,
+      "missing_categories": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "page_treaties",
+        "page_rates",
+        "page_deadlines"
+      ],
+      "missing_slots": [
+        "company|outbound_wht",
+        "company|inbound",
+        "company|final",
+        "company|residence",
+        "company|cfc",
+        "company|anti_abuse",
+        "individual|outbound_wht",
+        "individual|inbound",
+        "individual|final",
+        "individual|residence",
+        "individual|cfc",
+        "individual|anti_abuse"
+      ],
+      "missing_owned_pairs": [
+        "id-in",
+        "id-jp",
+        "id-kr",
+        "id-my",
+        "id-sg",
+        "id-th",
+        "id-vn"
+      ]
+    },
+    {
+      "jur": "vn",
+      "documents": 0,
+      "parameters": 0,
+      "missing_categories": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "page_treaties",
+        "page_rates",
+        "page_deadlines"
+      ],
+      "missing_slots": [
+        "company|outbound_wht",
+        "company|inbound",
+        "company|final",
+        "company|residence",
+        "company|cfc",
+        "company|anti_abuse",
+        "individual|outbound_wht",
+        "individual|inbound",
+        "individual|final",
+        "individual|residence",
+        "individual|cfc",
+        "individual|anti_abuse"
+      ],
+      "missing_owned_pairs": []
+    },
+    {
+      "jur": "my",
+      "documents": 0,
+      "parameters": 0,
+      "missing_categories": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "page_treaties",
+        "page_rates",
+        "page_deadlines"
+      ],
+      "missing_slots": [
+        "company|outbound_wht",
+        "company|inbound",
+        "company|final",
+        "company|residence",
+        "company|cfc",
+        "company|anti_abuse",
+        "individual|outbound_wht",
+        "individual|inbound",
+        "individual|final",
+        "individual|residence",
+        "individual|cfc",
+        "individual|anti_abuse"
+      ],
+      "missing_owned_pairs": [
+        "my-sg",
+        "my-th",
+        "my-vn"
+      ]
+    },
+    {
+      "jur": "th",
+      "documents": 0,
+      "parameters": 0,
+      "missing_categories": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "page_treaties",
+        "page_rates",
+        "page_deadlines"
+      ],
+      "missing_slots": [
+        "company|outbound_wht",
+        "company|inbound",
+        "company|final",
+        "company|residence",
+        "company|cfc",
+        "company|anti_abuse",
+        "individual|outbound_wht",
+        "individual|inbound",
+        "individual|final",
+        "individual|residence",
+        "individual|cfc",
+        "individual|anti_abuse"
+      ],
+      "missing_owned_pairs": [
+        "th-vn"
+      ]
+    },
+    {
+      "jur": "ae",
+      "documents": 0,
+      "parameters": 0,
+      "missing_categories": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "page_treaties",
+        "page_rates",
+        "page_deadlines"
+      ],
+      "missing_slots": [
+        "company|outbound_wht",
+        "company|inbound",
+        "company|final",
+        "company|residence",
+        "company|cfc",
+        "company|anti_abuse",
+        "individual|outbound_wht",
+        "individual|inbound",
+        "individual|final",
+        "individual|residence",
+        "individual|cfc",
+        "individual|anti_abuse"
+      ],
+      "missing_owned_pairs": [
+        "ae-cn",
+        "ae-hk",
+        "ae-id",
+        "ae-in",
+        "ae-jp",
+        "ae-kr",
+        "ae-my",
+        "ae-sg",
+        "ae-th",
+        "ae-vn"
+      ]
+    },
+    {
+      "jur": "jp",
+      "documents": 0,
+      "parameters": 0,
+      "missing_categories": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "page_treaties",
+        "page_rates",
+        "page_deadlines"
+      ],
+      "missing_slots": [
+        "company|outbound_wht",
+        "company|inbound",
+        "company|final",
+        "company|residence",
+        "company|cfc",
+        "company|anti_abuse",
+        "individual|outbound_wht",
+        "individual|inbound",
+        "individual|final",
+        "individual|residence",
+        "individual|cfc",
+        "individual|anti_abuse"
+      ],
+      "missing_owned_pairs": [
+        "jp-kr",
+        "jp-my",
+        "jp-sg",
+        "jp-th",
+        "jp-vn"
+      ]
+    },
+    {
+      "jur": "kr",
+      "documents": 0,
+      "parameters": 0,
+      "missing_categories": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "page_treaties",
+        "page_rates",
+        "page_deadlines"
+      ],
+      "missing_slots": [
+        "company|outbound_wht",
+        "company|inbound",
+        "company|final",
+        "company|residence",
+        "company|cfc",
+        "company|anti_abuse",
+        "individual|outbound_wht",
+        "individual|inbound",
+        "individual|final",
+        "individual|residence",
+        "individual|cfc",
+        "individual|anti_abuse"
+      ],
+      "missing_owned_pairs": [
+        "kr-my",
+        "kr-sg",
+        "kr-th",
+        "kr-vn"
+      ]
+    },
+    {
+      "jur": "in",
+      "documents": 0,
+      "parameters": 0,
+      "missing_categories": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "page_treaties",
+        "page_rates",
+        "page_deadlines"
+      ],
+      "missing_slots": [
+        "company|outbound_wht",
+        "company|inbound",
+        "company|final",
+        "company|residence",
+        "company|cfc",
+        "company|anti_abuse",
+        "individual|outbound_wht",
+        "individual|inbound",
+        "individual|final",
+        "individual|residence",
+        "individual|cfc",
+        "individual|anti_abuse"
+      ],
+      "missing_owned_pairs": [
+        "in-jp",
+        "in-kr",
+        "in-my",
+        "in-sg",
+        "in-th",
+        "in-vn"
+      ]
+    }
+  ],
+  "expected_pairs": 55,
+  "registered_pairs": 19,
+  "missing_pairs": [
+    "ae-cn",
+    "ae-hk",
+    "ae-id",
+    "ae-in",
+    "ae-jp",
+    "ae-kr",
+    "ae-my",
+    "ae-sg",
+    "ae-th",
+    "ae-vn",
+    "id-in",
+    "id-jp",
+    "id-kr",
+    "id-my",
+    "id-sg",
+    "id-th",
+    "id-vn",
+    "in-jp",
+    "in-kr",
+    "in-my",
+    "in-sg",
+    "in-th",
+    "in-vn",
+    "jp-kr",
+    "jp-my",
+    "jp-sg",
+    "jp-th",
+    "jp-vn",
+    "kr-my",
+    "kr-sg",
+    "kr-th",
+    "kr-vn",
+    "my-sg",
+    "my-th",
+    "my-vn",
+    "th-vn"
+  ]
+}

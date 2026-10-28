@@ -1,0 +1,3175 @@
+{
+  "created_at": "2026-10-25T14:03:50.389614+00:00",
+  "schema": "database",
+  "bucket": "database",
+  "tables": [
+    {
+      "name": "clause",
+      "rows": 5911,
+      "columns": [
+        [
+          "cite_id",
+          "text"
+        ],
+        [
+          "doc_id",
+          "text"
+        ],
+        [
+          "label",
+          "text"
+        ],
+        [
+          "text",
+          "text"
+        ]
+      ],
+      "sha256": "1cf5b052104ae78591014ad9833b93ce0ebd1172e9dbdd8673ef35fb8fd52a0e",
+      "bytes": 8957071
+    },
+    {
+      "name": "decision",
+      "rows": 14,
+      "columns": [
+        [
+          "id",
+          "text"
+        ],
+        [
+          "jur",
+          "text"
+        ],
+        [
+          "category",
+          "text"
+        ],
+        [
+          "subject",
+          "text"
+        ],
+        [
+          "slot",
+          "text"
+        ],
+        [
+          "statement",
+          "text"
+        ],
+        [
+          "cite_id",
+          "text"
+        ],
+        [
+          "quote",
+          "text"
+        ]
+      ],
+      "sha256": "f1a1bd14715493543b9da24f89720a35156fc8b4e83e8d04faf46e9a849a288b",
+      "bytes": 5758
+    },
+    {
+      "name": "doc",
+      "rows": 95,
+      "columns": [
+        [
+          "id",
+          "text"
+        ],
+        [
+          "jur",
+          "text"
+        ],
+        [
+          "type",
+          "text"
+        ],
+        [
+          "category",
+          "text"
+        ],
+        [
+          "title",
+          "text"
+        ],
+        [
+          "url",
+          "text"
+        ],
+        [
+          "file",
+          "text"
+        ],
+        [
+          "sha256",
+          "text"
+        ],
+        [
+          "lang",
+          "text"
+        ],
+        [
+          "effective_from",
+          "text"
+        ],
+        [
+          "effective_to",
+          "text"
+        ],
+        [
+          "note",
+          "text"
+        ]
+      ],
+      "sha256": "f9bb85ed759549e9e388a2030dfc344828c647d4c3754aa5e6226362260d3ec4",
+      "bytes": 33802
+    },
+    {
+      "name": "files",
+      "rows": 190,
+      "columns": [
+        [
+          "path",
+          "text"
+        ],
+        [
+          "sha256",
+          "text"
+        ],
+        [
+          "bytes",
+          "text"
+        ]
+      ],
+      "sha256": "a4247705b6732bf646c69c631960e9fb5d07c95112b8de6a9380e9b3c252cb88",
+      "bytes": 19406
+    },
+    {
+      "name": "jurisdiction",
+      "rows": 11,
+      "columns": [
+        [
+          "code",
+          "text"
+        ],
+        [
+          "name",
+          "text"
+        ],
+        [
+          "currency",
+          "text"
+        ],
+        [
+          "company_in_scope",
+          "text"
+        ],
+        [
+          "individual_in_scope",
+          "text"
+        ]
+      ],
+      "sha256": "62830fa03a12b965a7813f1fe9b8dea68ed142521e65206aece3f796c7822c0e",
+      "bytes": 331
+    },
+    {
+      "name": "param",
+      "rows": 124,
+      "columns": [
+        [
+          "param_id",
+          "text"
+        ],
+        [
+          "scope",
+          "text"
+        ],
+        [
+          "subject",
+          "text"
+        ],
+        [
+          "slot",
+          "text"
+        ],
+        [
+          "name",
+          "text"
+        ],
+        [
+          "value",
+          "text"
+        ],
+        [
+          "unit",
+          "text"
+        ],
+        [
+          "cite_id",
+          "text"
+        ],
+        [
+          "quote",
+          "text"
+        ],
+        [
+          "effective_from",
+          "text"
+        ],
+        [
+          "effective_to",
+          "text"
+        ],
+        [
+          "note",
+          "text"
+        ]
+      ],
+      "sha256": "62f1ea291643293a720059bf0348b290c0d483e0a21df7df3f1c84458048db97",
+      "bytes": 37542
+    },
+    {
+      "name": "treaty",
+      "rows": 19,
+      "columns": [
+        [
+          "pair",
+          "text"
+        ],
+        [
+          "doc_id",
+          "text"
+        ],
+        [
+          "in_force_from",
+          "text"
+        ],
+        [
+          "mli_doc_id",
+          "text"
+        ],
+        [
+          "note",
+          "text"
+        ]
+      ],
+      "sha256": "434976f57d63849d46481f0e7b2d62e53288f35d2bf027a840005dde57b02c26",
+      "bytes": 7972
+    }
+  ],
+  "objects": [
+    {
+      "name": "docs/spec.en.md",
+      "size": 52528,
+      "updated_at": "2026-10-24T16:34:11.932Z",
+      "metadata": {
+        "eTag": "\"b702f57369dfd6d7c38cc423eefa32ee\"",
+        "size": 52528,
+        "mimetype": "text/markdown; charset=utf-8",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:12.000Z",
+        "contentLength": 52528,
+        "httpStatusCode": 200
+      },
+      "sha256": "261421cc00dc1fe6be6866aa75f112b7c259869a749258e1e41295b7e46df3d6"
+    },
+    {
+      "name": "docs/spec.zh.md",
+      "size": 43406,
+      "updated_at": "2026-10-24T16:34:11.229Z",
+      "metadata": {
+        "eTag": "\"e5ac62f7a7fb1ab034f8b43b6b7ffb55\"",
+        "size": 43406,
+        "mimetype": "text/markdown; charset=utf-8",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:12.000Z",
+        "contentLength": 43406,
+        "httpStatusCode": 200
+      },
+      "sha256": "a97f9161142169dd7b4f69699204a12488e3469f1de6cdcfb54df0e0f4a337c7"
+    },
+    {
+      "name": "docs/task_sheet.en.md",
+      "size": 21031,
+      "updated_at": "2026-10-24T16:34:13.272Z",
+      "metadata": {
+        "eTag": "\"a43fb93398b9e67a560a723528d87be7\"",
+        "size": 21031,
+        "mimetype": "text/markdown; charset=utf-8",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:14.000Z",
+        "contentLength": 21031,
+        "httpStatusCode": 200
+      },
+      "sha256": "9e4887564b1fa241f147c9660f58a3601cf36b1ae4aaebe217c6d139e97b2793"
+    },
+    {
+      "name": "docs/task_sheet.zh.md",
+      "size": 19229,
+      "updated_at": "2026-10-24T16:34:12.580Z",
+      "metadata": {
+        "eTag": "\"1c4852ea8e0be4127393d022ac1d8e8f\"",
+        "size": 19229,
+        "mimetype": "text/markdown; charset=utf-8",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:13.000Z",
+        "contentLength": 19229,
+        "httpStatusCode": 200
+      },
+      "sha256": "07c22bd30aee3c6f94a32c8ce2c75c16e7edacf6a5f60945865807f60143c131"
+    },
+    {
+      "name": "raw/cn-hk/treaty.cn-hk.2006.p2.zh.pdf",
+      "size": 57562,
+      "updated_at": "2026-10-24T16:30:06.232Z",
+      "metadata": {
+        "eTag": "\"9db9ebcc7c4ff8e83da17853195e8196\"",
+        "size": 57562,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:07.000Z",
+        "contentLength": 57562,
+        "httpStatusCode": 200
+      },
+      "sha256": "251c6d1ecfee96fe6f4cb985317bb73275b37e34723690c8e86450362f528a8f"
+    },
+    {
+      "name": "raw/cn-hk/treaty.cn-hk.2006.p3.zh.pdf",
+      "size": 161742,
+      "updated_at": "2026-10-24T16:30:07.857Z",
+      "metadata": {
+        "eTag": "\"e90caeb82b29d873b5d77e576bda91f5\"",
+        "size": 161742,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:08.000Z",
+        "contentLength": 161742,
+        "httpStatusCode": 200
+      },
+      "sha256": "2e7be7c6233b537c595e2e00866d2b961bff4d7d3bec1f5c13846248e5c5658e"
+    },
+    {
+      "name": "raw/cn-hk/treaty.cn-hk.2006.p4.zh.pdf",
+      "size": 87020,
+      "updated_at": "2026-10-24T16:30:09.610Z",
+      "metadata": {
+        "eTag": "\"7b7442af82306da06faddfcf521761d5\"",
+        "size": 87020,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:10.000Z",
+        "contentLength": 87020,
+        "httpStatusCode": 200
+      },
+      "sha256": "5240afdf2e62da5622e360d45e319e6f663e88ff726b7d7e2182cdc06cb196b1"
+    },
+    {
+      "name": "raw/cn-hk/treaty.cn-hk.2006.p5.zh.pdf",
+      "size": 237584,
+      "updated_at": "2026-10-24T16:30:10.769Z",
+      "metadata": {
+        "eTag": "\"42f0b9db2b3ccf262738b6736e6b1aec\"",
+        "size": 237584,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:11.000Z",
+        "contentLength": 237584,
+        "httpStatusCode": 200
+      },
+      "sha256": "d6f1e32ebfcd827d490874d935b0dc2f079a193d1c58c0c4f69564d8baa54e8a"
+    },
+    {
+      "name": "raw/cn-hk/treaty.cn-hk.2006.zh.pdf",
+      "size": 200445,
+      "updated_at": "2026-10-24T16:30:11.745Z",
+      "metadata": {
+        "eTag": "\"c029fc12901b234d7510528882d8203e\"",
+        "size": 200445,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:12.000Z",
+        "contentLength": 200445,
+        "httpStatusCode": 200
+      },
+      "sha256": "42c1f0b5c90a7f656ed1f9ec73f4747c67dd1ff72e816dc1630e94ffbb008c8b"
+    },
+    {
+      "name": "raw/cn-id/treaty.cn-id.2001.en.pdf",
+      "size": 107015,
+      "updated_at": "2026-10-24T16:30:13.451Z",
+      "metadata": {
+        "eTag": "\"2275608a1da90802c4af9e54ff6a6082\"",
+        "size": 107015,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:14.000Z",
+        "contentLength": 107015,
+        "httpStatusCode": 200
+      },
+      "sha256": "455ac7edae37c905f6393e2d599527ee7e06ef2a700c189a16c02088ec5437e8"
+    },
+    {
+      "name": "raw/cn-id/treaty.cn-id.2001.mli.en.pdf",
+      "size": 188172,
+      "updated_at": "2026-10-24T16:30:15.242Z",
+      "metadata": {
+        "eTag": "\"31e472af435b54450ad8208b57dbe740\"",
+        "size": 188172,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:16.000Z",
+        "contentLength": 188172,
+        "httpStatusCode": 200
+      },
+      "sha256": "407195492437074c958154dadfa93d3d83f7f9f8f10c9d0b78e6be1c9f0e870c"
+    },
+    {
+      "name": "raw/cn-id/treaty.cn-id.2001.mou.en.pdf",
+      "size": 63636,
+      "updated_at": "2026-10-24T16:30:15.932Z",
+      "metadata": {
+        "eTag": "\"7390f463b759df3e5debaed8ca2a8c70\"",
+        "size": 63636,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:16.000Z",
+        "contentLength": 63636,
+        "httpStatusCode": 200
+      },
+      "sha256": "6a1bf6730593fe40f5ff0cb2782200b7d984cda61ef51ab53505cb995eddcbf6"
+    },
+    {
+      "name": "raw/cn-id/treaty.cn-id.2001.p1.en.pdf",
+      "size": 64989,
+      "updated_at": "2026-10-24T16:30:16.628Z",
+      "metadata": {
+        "eTag": "\"58e241ebb246bb06f842adb4a7c5369a\"",
+        "size": 64989,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:17.000Z",
+        "contentLength": 64989,
+        "httpStatusCode": 200
+      },
+      "sha256": "9e6576edad49b2ab5da864fdc1b466ecfeffd09facb49878ae4dc6e8bbf19922"
+    },
+    {
+      "name": "raw/cn-in/treaty.cn-in.1994.en.pdf",
+      "size": 114757,
+      "updated_at": "2026-10-24T16:30:17.549Z",
+      "metadata": {
+        "eTag": "\"81648077eae84302426b84d6fe6b02a2\"",
+        "size": 114757,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:18.000Z",
+        "contentLength": 114757,
+        "httpStatusCode": 200
+      },
+      "sha256": "73343d958ebd556356411ff082e70e122630df9bf067c6cf6dc361b28f3410ea"
+    },
+    {
+      "name": "raw/cn-in/treaty.cn-in.1994.p1.en.pdf",
+      "size": 20910,
+      "updated_at": "2026-10-24T16:30:18.193Z",
+      "metadata": {
+        "eTag": "\"07060b7b1e7e6cbf7b49d4aa075bc7d2\"",
+        "size": 20910,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:19.000Z",
+        "contentLength": 20910,
+        "httpStatusCode": 200
+      },
+      "sha256": "a7ccf7ecabcc396e3fbd04ffc274daefa4d49a64957368d0ce731cf4f947e2fd"
+    },
+    {
+      "name": "raw/cn-in/treaty.cn-in.1994.p2.en.pdf",
+      "size": 172180,
+      "updated_at": "2026-10-24T16:30:19.923Z",
+      "metadata": {
+        "eTag": "\"59ac7002a24d0ac33fdc588a24f86562\"",
+        "size": 172180,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:20.000Z",
+        "contentLength": 172180,
+        "httpStatusCode": 200
+      },
+      "sha256": "b50a6b409bf13fa318d84833239f51211056ff24284c4515196b2852f0d851bf"
+    },
+    {
+      "name": "raw/cn-jp/treaty.cn-jp.1983.en.pdf",
+      "size": 116074,
+      "updated_at": "2026-10-24T16:30:20.871Z",
+      "metadata": {
+        "eTag": "\"3c2a680c140abfc6a584177e5890858c\"",
+        "size": 116074,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:21.000Z",
+        "contentLength": 116074,
+        "httpStatusCode": 200
+      },
+      "sha256": "296d8c4cc86752a926977d1850e53852d0f5b3302a46f5991d7d46f69136fdc2"
+    },
+    {
+      "name": "raw/cn-jp/treaty.cn-jp.1983.mli.en.pdf",
+      "size": 149470,
+      "updated_at": "2026-10-24T16:30:21.859Z",
+      "metadata": {
+        "eTag": "\"b10ca20a21031b0bf4e7149e76211eb5\"",
+        "size": 149470,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:22.000Z",
+        "contentLength": 149470,
+        "httpStatusCode": 200
+      },
+      "sha256": "41ba57b2c39082f8ed6f1ec674623c8c1e1ff847aba7de97b21134046ffbf3e9"
+    },
+    {
+      "name": "raw/cn-jp/treaty.cn-jp.1983.notes.en.pdf",
+      "size": 37532,
+      "updated_at": "2026-10-24T16:30:22.517Z",
+      "metadata": {
+        "eTag": "\"fec7e703943c58d8e4adf92ad3c3c615\"",
+        "size": 37532,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:23.000Z",
+        "contentLength": 37532,
+        "httpStatusCode": 200
+      },
+      "sha256": "39789ec066b092482d5dbe5d35e94471281ad09ae333603aee105098d0ea4898"
+    },
+    {
+      "name": "raw/cn-jp/treaty.cn-jp.1983.p1.en.pdf",
+      "size": 21384,
+      "updated_at": "2026-10-24T16:30:23.480Z",
+      "metadata": {
+        "eTag": "\"7be48e8db5e5fb2b6a29adb74b5f5fb0\"",
+        "size": 21384,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:24.000Z",
+        "contentLength": 21384,
+        "httpStatusCode": 200
+      },
+      "sha256": "ed61c0e5fcdeee8fe6ac614f3c516d4f9936540fff2885a6b7db262fe940d99a"
+    },
+    {
+      "name": "raw/cn-kr/treaty.cn-kr.1994.en.pdf",
+      "size": 111459,
+      "updated_at": "2026-10-24T16:30:24.402Z",
+      "metadata": {
+        "eTag": "\"30f699002566fd7c9854431ca4f3e034\"",
+        "size": 111459,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:25.000Z",
+        "contentLength": 111459,
+        "httpStatusCode": 200
+      },
+      "sha256": "8a90a80f2287821e5684a1478e7955f861428c7b7c56ce105397633b3d59f14c"
+    },
+    {
+      "name": "raw/cn-kr/treaty.cn-kr.1994.mli.en.pdf",
+      "size": 201941,
+      "updated_at": "2026-10-24T16:30:25.412Z",
+      "metadata": {
+        "eTag": "\"8551501043c4f0b7922862c754c2aac7\"",
+        "size": 201941,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:26.000Z",
+        "contentLength": 201941,
+        "httpStatusCode": 200
+      },
+      "sha256": "2efb74821ecf3d6e827fc3342ac13ec96e3efbc9e210f27dd11bdcd9e6ac68c4"
+    },
+    {
+      "name": "raw/cn-kr/treaty.cn-kr.1994.mou1.en.pdf",
+      "size": 23076,
+      "updated_at": "2026-10-24T16:30:26.340Z",
+      "metadata": {
+        "eTag": "\"e528dde023a30efac7930cfc2af8b75d\"",
+        "size": 23076,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:27.000Z",
+        "contentLength": 23076,
+        "httpStatusCode": 200
+      },
+      "sha256": "85092fd125c7142ef22e716e2ab26dcbbadf8781baf844e4ac857816605081e3"
+    },
+    {
+      "name": "raw/cn-kr/treaty.cn-kr.1994.mou2.en.pdf",
+      "size": 27236,
+      "updated_at": "2026-10-24T16:30:26.969Z",
+      "metadata": {
+        "eTag": "\"e222166314adf26d477441344f7221bf\"",
+        "size": 27236,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:27.000Z",
+        "contentLength": 27236,
+        "httpStatusCode": 200
+      },
+      "sha256": "b398931992f356960d3d9922cef13f2cba823c74e20c3b0f932beea83c472596"
+    },
+    {
+      "name": "raw/cn-kr/treaty.cn-kr.1994.p1.en.pdf",
+      "size": 20747,
+      "updated_at": "2026-10-24T16:30:27.604Z",
+      "metadata": {
+        "eTag": "\"004f9931c34d3f22893b89e060de5d54\"",
+        "size": 20747,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:28.000Z",
+        "contentLength": 20747,
+        "httpStatusCode": 200
+      },
+      "sha256": "a1b2e7fa14cbdd396679221f0c28803dae9c4a3565ea532c4b535f52af62fb0e"
+    },
+    {
+      "name": "raw/cn-kr/treaty.cn-kr.1994.p2.en.pdf",
+      "size": 36340,
+      "updated_at": "2026-10-24T16:30:28.530Z",
+      "metadata": {
+        "eTag": "\"a89d67011470b42ff945b8ab49c9cf36\"",
+        "size": 36340,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:29.000Z",
+        "contentLength": 36340,
+        "httpStatusCode": 200
+      },
+      "sha256": "f705e78bf8a57bb94d8a8db10d006434e947d5db750d8d200bd6c40a703c0ac9"
+    },
+    {
+      "name": "raw/cn-my/treaty.cn-my.1985.en.pdf",
+      "size": 188656,
+      "updated_at": "2026-10-24T16:30:29.505Z",
+      "metadata": {
+        "eTag": "\"5c88660489878c671fed97bf601dc407\"",
+        "size": 188656,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:30.000Z",
+        "contentLength": 188656,
+        "httpStatusCode": 200
+      },
+      "sha256": "2be5956889b35de6257b4095638120d6e892c8f18dc957ff8084728cb5c9797f"
+    },
+    {
+      "name": "raw/cn-my/treaty.cn-my.1985.mli.en.pdf",
+      "size": 158781,
+      "updated_at": "2026-10-24T16:30:30.800Z",
+      "metadata": {
+        "eTag": "\"b80bda852c3bcabd6a906a2154ea5707\"",
+        "size": 158781,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:31.000Z",
+        "contentLength": 158781,
+        "httpStatusCode": 200
+      },
+      "sha256": "69b33ab79280a4595ca5da708b6a5776c4a61f199c5b32ed46188d8ae26c897d"
+    },
+    {
+      "name": "raw/cn-my/treaty.cn-my.1985.notes.en.pdf",
+      "size": 77603,
+      "updated_at": "2026-10-24T16:30:31.685Z",
+      "metadata": {
+        "eTag": "\"72e780751d9f2fb594a9ceae8e096e74\"",
+        "size": 77603,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:32.000Z",
+        "contentLength": 77603,
+        "httpStatusCode": 200
+      },
+      "sha256": "27d633130ec8facd4b46f676e9ecf1a5c0d0e922d98aa4a8dba996077310ed6a"
+    },
+    {
+      "name": "raw/cn-my/treaty.cn-my.1985.p1.en.pdf",
+      "size": 26495,
+      "updated_at": "2026-10-24T16:30:32.492Z",
+      "metadata": {
+        "eTag": "\"44f94d903870741762507616db1122aa\"",
+        "size": 26495,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:33.000Z",
+        "contentLength": 26495,
+        "httpStatusCode": 200
+      },
+      "sha256": "eb34ba11cb565e17ec019326a2903c3ac7a91cce183cff1f8fbcef95cf3fcd7d"
+    },
+    {
+      "name": "raw/cn-sg/treaty.cn-sg.2007.en.pdf",
+      "size": 124468,
+      "updated_at": "2026-10-24T16:30:33.445Z",
+      "metadata": {
+        "eTag": "\"a3b5780aadce1dad316d25d7e8ed558d\"",
+        "size": 124468,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:34.000Z",
+        "contentLength": 124468,
+        "httpStatusCode": 200
+      },
+      "sha256": "25c5c6ef1e2a65f0e7b0294e8f9b0bf71e23a153ba5fe6d4bf699f42bb76c330"
+    },
+    {
+      "name": "raw/cn-sg/treaty.cn-sg.2007.mli.en.pdf",
+      "size": 185368,
+      "updated_at": "2026-10-24T16:30:35.508Z",
+      "metadata": {
+        "eTag": "\"170dfa2f15a0e8f0cb723275a0036a10\"",
+        "size": 185368,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:36.000Z",
+        "contentLength": 185368,
+        "httpStatusCode": 200
+      },
+      "sha256": "06c98cb98d665e9f5cdedcaa3bb7b14e560ef303125951ed38f3d9e042f5e2ea"
+    },
+    {
+      "name": "raw/cn-sg/treaty.cn-sg.2007.p2.en.pdf",
+      "size": 19515,
+      "updated_at": "2026-10-24T16:30:36.398Z",
+      "metadata": {
+        "eTag": "\"dd5ab025c1fa4a0b104f29759bfeb822\"",
+        "size": 19515,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:37.000Z",
+        "contentLength": 19515,
+        "httpStatusCode": 200
+      },
+      "sha256": "0d683bdd917351d29652036c0db680db4da75efd02bd6876fe48944c2d1391b0"
+    },
+    {
+      "name": "raw/cn-sg/treaty.cn-sg.2007.p3.en.pdf",
+      "size": 11948,
+      "updated_at": "2026-10-24T16:30:37.014Z",
+      "metadata": {
+        "eTag": "\"5dec80fab9fd042ab58a5bfcc2745701\"",
+        "size": 11948,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:37.000Z",
+        "contentLength": 11948,
+        "httpStatusCode": 200
+      },
+      "sha256": "057cd3428a803cce9836b7fabcf466d2dd0fce4bc909da0bee36e13f615140aa"
+    },
+    {
+      "name": "raw/cn-th/treaty.cn-th.1986.en.pdf",
+      "size": 108509,
+      "updated_at": "2026-10-24T16:30:37.940Z",
+      "metadata": {
+        "eTag": "\"efd48c6702c7c910f64d9b47344e89b0\"",
+        "size": 108509,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:38.000Z",
+        "contentLength": 108509,
+        "httpStatusCode": 200
+      },
+      "sha256": "c62fa55742206838d840f9293e320e4b2b15877cfb892243f9fb6c1ab81071c1"
+    },
+    {
+      "name": "raw/cn-th/treaty.cn-th.1986.mli.en.pdf",
+      "size": 151153,
+      "updated_at": "2026-10-24T16:30:38.960Z",
+      "metadata": {
+        "eTag": "\"7f5198c33c69fc7a7eace68d6a537c80\"",
+        "size": 151153,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:39.000Z",
+        "contentLength": 151153,
+        "httpStatusCode": 200
+      },
+      "sha256": "ea1815119fac04b40c86d58d001895190150a5fc327c0705c80487a517d73f01"
+    },
+    {
+      "name": "raw/cn-vn/treaty.cn-vn.1995.en.pdf",
+      "size": 114552,
+      "updated_at": "2026-10-24T16:30:40.162Z",
+      "metadata": {
+        "eTag": "\"6504d31849b50f73491c40175f3c6d82\"",
+        "size": 114552,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:41.000Z",
+        "contentLength": 114552,
+        "httpStatusCode": 200
+      },
+      "sha256": "0f48e1443a7959a6882fac317757eb2d18082b1d544ff595fce1ede6b25e0dad"
+    },
+    {
+      "name": "raw/cn-vn/treaty.cn-vn.1995.mli.en.pdf",
+      "size": 273844,
+      "updated_at": "2026-10-24T16:30:41.265Z",
+      "metadata": {
+        "eTag": "\"6f426438c834a4bfd14c7e3a42e8467a\"",
+        "size": 273844,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:42.000Z",
+        "contentLength": 273844,
+        "httpStatusCode": 200
+      },
+      "sha256": "52b6acc8fe22096ddd1da98102a8154dca532f5bd347a48e306b061257eb8532"
+    },
+    {
+      "name": "raw/cn-vn/treaty.cn-vn.1995.notes.en.pdf",
+      "size": 25646,
+      "updated_at": "2026-10-24T16:30:42.632Z",
+      "metadata": {
+        "eTag": "\"e00048e801f8dad84c3ce3c094b7f62e\"",
+        "size": 25646,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:43.000Z",
+        "contentLength": 25646,
+        "httpStatusCode": 200
+      },
+      "sha256": "339fbad633f48556a96f64129edbc9a1bd45e8a370faf1555ad7580b04f55a4f"
+    },
+    {
+      "name": "raw/cn-vn/treaty.cn-vn.1995.p1.en.pdf",
+      "size": 20840,
+      "updated_at": "2026-10-24T16:30:43.274Z",
+      "metadata": {
+        "eTag": "\"7b2f110163eee545dfb4697008c3a671\"",
+        "size": 20840,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:44.000Z",
+        "contentLength": 20840,
+        "httpStatusCode": 200
+      },
+      "sha256": "7f31130de9a2532b0f85fdf144708b811a0e78e77a8d369f7a3fdebd325683c2"
+    },
+    {
+      "name": "raw/cn/cn.cs.2009-125.html",
+      "size": 47878,
+      "updated_at": "2026-10-24T16:30:44.007Z",
+      "metadata": {
+        "eTag": "\"cb3bb0175b3d47fedae1f088aebeeb1c\"",
+        "size": 47878,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:44.000Z",
+        "contentLength": 47878,
+        "httpStatusCode": 200
+      },
+      "sha256": "ba5b09a72ae33414c331267b540af0bf77db3cb061cad6b57b2172039916700c"
+    },
+    {
+      "name": "raw/cn/cn.cs.2017-84.html",
+      "size": 37822,
+      "updated_at": "2026-10-24T16:30:45.408Z",
+      "metadata": {
+        "eTag": "\"016bdff4e1a661e164797c2ff1326884\"",
+        "size": 37822,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:46.000Z",
+        "contentLength": 37822,
+        "httpStatusCode": 200
+      },
+      "sha256": "cc499bb5edd4d57e6b9b0b2345c6fc0b725f5aecfbeb32fe49ac1d4609c3c17b"
+    },
+    {
+      "name": "raw/cn/cn.cs.2019-34.html",
+      "size": 37143,
+      "updated_at": "2026-10-24T16:30:46.787Z",
+      "metadata": {
+        "eTag": "\"4adbf4466cfa5f0dab422d08e8f137de\"",
+        "size": 37143,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:47.000Z",
+        "contentLength": 37143,
+        "httpStatusCode": 200
+      },
+      "sha256": "91a9f82126ad7febd388019a0c93f70b571e4e53e1648ce93a1494e5f30136b1"
+    },
+    {
+      "name": "raw/cn/cn.cs.2020-03.html",
+      "size": 56826,
+      "updated_at": "2026-10-24T16:30:47.487Z",
+      "metadata": {
+        "eTag": "\"592f9c05a86479559b1f9f0dd9458755\"",
+        "size": 56826,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:48.000Z",
+        "contentLength": 56826,
+        "httpStatusCode": 200
+      },
+      "sha256": "7006ad16125446a9cc977d87335034bef4386c4d2475f644cbd351d50d9a2df4"
+    },
+    {
+      "name": "raw/cn/cn.cs.2026-27.html",
+      "size": 18842,
+      "updated_at": "2026-10-24T16:30:48.143Z",
+      "metadata": {
+        "eTag": "\"afea61e3a099f6b9f53afc8f126fc1fd\"",
+        "size": 18842,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:49.000Z",
+        "contentLength": 18842,
+        "httpStatusCode": 200
+      },
+      "sha256": "cf9cd12fc6ddc8dc9ed379e9e37f99a9a15b11158f9c84ce63393cc8747189d0"
+    },
+    {
+      "name": "raw/cn/cn.gsf.2009-02.html",
+      "size": 106828,
+      "updated_at": "2026-10-24T16:30:49.595Z",
+      "metadata": {
+        "eTag": "\"d4619087454218184936b3c674668e10\"",
+        "size": 106828,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:50.000Z",
+        "contentLength": 106828,
+        "httpStatusCode": 200
+      },
+      "sha256": "ce6c25ee670402af26720cc9a46791b3a10a680a9e7220f2dcb18740b1965ae9"
+    },
+    {
+      "name": "raw/cn/cn.gsf.2009-82.html",
+      "size": 40363,
+      "updated_at": "2026-10-24T16:30:50.256Z",
+      "metadata": {
+        "eTag": "\"24b575c7cabc00474fd92f511b7ada7f\"",
+        "size": 40363,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:51.000Z",
+        "contentLength": 40363,
+        "httpStatusCode": 200
+      },
+      "sha256": "9e6dee91bc2b40db5124fc6f9004cdf8d866b08ab954d6f15203d00fdd6b47df"
+    },
+    {
+      "name": "raw/cn/cn.gsh.2009-37.html",
+      "size": 35867,
+      "updated_at": "2026-10-24T16:30:50.937Z",
+      "metadata": {
+        "eTag": "\"da6d3e8c7055f23bb410aa003815f91c\"",
+        "size": 35867,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:51.000Z",
+        "contentLength": 35867,
+        "httpStatusCode": 200
+      },
+      "sha256": "8655c7c5d74638d47a40a69870f578916bb6fa21762bf60461c6289b02805ea3"
+    },
+    {
+      "name": "raw/cn/cn.law.eit.html",
+      "size": 26727,
+      "updated_at": "2026-10-24T16:30:51.585Z",
+      "metadata": {
+        "eTag": "\"52f517837a37c8f86a24c741459be54d\"",
+        "size": 26727,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:52.000Z",
+        "contentLength": 26727,
+        "httpStatusCode": 200
+      },
+      "sha256": "ce155d4c61c537da01dd89b0e4b3660d8d253674df67392fc95d7f599f39e900"
+    },
+    {
+      "name": "raw/cn/cn.law.iit.html",
+      "size": 49746,
+      "updated_at": "2026-10-24T16:30:52.249Z",
+      "metadata": {
+        "eTag": "\"5885f08bbc94e91c27ef7d9485fc704a\"",
+        "size": 49746,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:53.000Z",
+        "contentLength": 49746,
+        "httpStatusCode": 200
+      },
+      "sha256": "442006d0f1157e381eb044c60a4cafad7bae30f5dcf3592d1bdf72d99a798cb7"
+    },
+    {
+      "name": "raw/cn/cn.order.32.html",
+      "size": 46320,
+      "updated_at": "2026-10-24T16:30:53.938Z",
+      "metadata": {
+        "eTag": "\"db9932df056b3a9b80a288a9e19b769b\"",
+        "size": 46320,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:54.000Z",
+        "contentLength": 46320,
+        "httpStatusCode": 200
+      },
+      "sha256": "a5c86149f3c0a24a803ca5a927590b4f95a42dd7ada91c9e324da54e67476e51"
+    },
+    {
+      "name": "raw/cn/cn.reg.eit.html",
+      "size": 153832,
+      "updated_at": "2026-10-24T16:30:54.913Z",
+      "metadata": {
+        "eTag": "\"1745652b3cc6fa4805bfad0f1eebdd05\"",
+        "size": 153832,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:55.000Z",
+        "contentLength": 153832,
+        "httpStatusCode": 200
+      },
+      "sha256": "795c5b9c964eeb280138a7ca25091228be48e1204c55b6b7229085e85e3d1f53"
+    },
+    {
+      "name": "raw/cn/cn.reg.iit.html",
+      "size": 52922,
+      "updated_at": "2026-10-24T16:30:55.621Z",
+      "metadata": {
+        "eTag": "\"6b52d72cc2ba3e65c7667ec9a848ee67\"",
+        "size": 52922,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:56.000Z",
+        "contentLength": 52922,
+        "httpStatusCode": 200
+      },
+      "sha256": "e5f3ca819c7638df993babe537b9c91907b87bf5ae8f0213c8fa9fef4019a221"
+    },
+    {
+      "name": "raw/cn/cn.sta.2008-112.html",
+      "size": 38754,
+      "updated_at": "2026-10-24T16:30:56.297Z",
+      "metadata": {
+        "eTag": "\"fd14732c4c04e6aceb249dbbd74a1f93\"",
+        "size": 38754,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:57.000Z",
+        "contentLength": 38754,
+        "httpStatusCode": 200
+      },
+      "sha256": "67900dca7a249082641bb3fa4a9b9c8cbbc543c1c6cf20296d77e0b03ea9064b"
+    },
+    {
+      "name": "raw/cn/cn.sta.2014-09.html",
+      "size": 37200,
+      "updated_at": "2026-10-24T16:30:57.680Z",
+      "metadata": {
+        "eTag": "\"406b4af1d0fe789a1096e0b0af0ec116\"",
+        "size": 37200,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:58.000Z",
+        "contentLength": 37200,
+        "httpStatusCode": 200
+      },
+      "sha256": "c0ede28778e3e55780a4d08da97097eb3c113aacac6f14b148f0b8c67a466f1e"
+    },
+    {
+      "name": "raw/cn/cn.sta.2015-07.html",
+      "size": 48396,
+      "updated_at": "2026-10-24T16:30:58.356Z",
+      "metadata": {
+        "eTag": "\"9b7e7769781c53ae428390e0597701ac\"",
+        "size": 48396,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:59.000Z",
+        "contentLength": 48396,
+        "httpStatusCode": 200
+      },
+      "sha256": "22048d111aa4567f939c7032355cc664a8f3a125f259b3208626f1a87cf9dfdc"
+    },
+    {
+      "name": "raw/cn/cn.sta.2017-37.html",
+      "size": 49467,
+      "updated_at": "2026-10-24T16:30:59.042Z",
+      "metadata": {
+        "eTag": "\"1fdad9bc81bf8f859920b786bc52dde2\"",
+        "size": 49467,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:30:59.000Z",
+        "contentLength": 49467,
+        "httpStatusCode": 200
+      },
+      "sha256": "ca6605033b6a75029152e7a71fe94f33fd7c91222e7af9b3007579fa750b7166"
+    },
+    {
+      "name": "raw/cn/cn.sta.2018-09.html",
+      "size": 42876,
+      "updated_at": "2026-10-24T16:30:59.737Z",
+      "metadata": {
+        "eTag": "\"94f28103aad14f33f6302a00234e72e9\"",
+        "size": 42876,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:00.000Z",
+        "contentLength": 42876,
+        "httpStatusCode": 200
+      },
+      "sha256": "258333c80afca37b9f2594ea328ab50a81bf517a2af1de776bcd579b1392b309"
+    },
+    {
+      "name": "raw/cn/cn.sta.2019-35.a01.xls",
+      "size": 27648,
+      "updated_at": "2026-10-24T16:31:00.407Z",
+      "metadata": {
+        "eTag": "\"486894da86cd9e46bccdfe2b76b5ad3b\"",
+        "size": 27648,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:01.000Z",
+        "contentLength": 27648,
+        "httpStatusCode": 200
+      },
+      "sha256": "363b13d51718d60fbd2d2964f7fec483aee2ca61a49c03acedf2412a32ce3881"
+    },
+    {
+      "name": "raw/cn/cn.sta.2019-35.html",
+      "size": 49920,
+      "updated_at": "2026-10-24T16:31:01.076Z",
+      "metadata": {
+        "eTag": "\"9bfecf4d205e762403aeb1ce4cbf9e2b\"",
+        "size": 49920,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:02.000Z",
+        "contentLength": 49920,
+        "httpStatusCode": 200
+      },
+      "sha256": "a028eb91e1c4ed6929dc79ba98fc93cb00a1c4587681c33ecdc9a19e186fda2f"
+    },
+    {
+      "name": "raw/cn/cn.sta.2025-04.a01.pdf",
+      "size": 67726,
+      "updated_at": "2026-10-24T16:31:02.527Z",
+      "metadata": {
+        "eTag": "\"edf4ab7ba3e33f89a7180377c948c8a8\"",
+        "size": 67726,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:03.000Z",
+        "contentLength": 67726,
+        "httpStatusCode": 200
+      },
+      "sha256": "659ceafc7b046cf252e027a576c74fdb3071ed3bf49601a0ed1c8caafdbe7559"
+    },
+    {
+      "name": "raw/cn/cn.sta.2025-04.a02.pdf",
+      "size": 98433,
+      "updated_at": "2026-10-24T16:31:03.448Z",
+      "metadata": {
+        "eTag": "\"dfa9271a851e3181f0bf58b0dbaedcb3\"",
+        "size": 98433,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:04.000Z",
+        "contentLength": 98433,
+        "httpStatusCode": 200
+      },
+      "sha256": "2292355a01154b7877649ad1beb1ad32a9f9649e3d74a36d38590f4d6c01bc59"
+    },
+    {
+      "name": "raw/cn/cn.sta.2025-04.html",
+      "size": 44258,
+      "updated_at": "2026-10-24T16:31:04.118Z",
+      "metadata": {
+        "eTag": "\"e9cc5c430f5d4a2c06e115c2b7bc5446\"",
+        "size": 44258,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:05.000Z",
+        "contentLength": 44258,
+        "httpStatusCode": 200
+      },
+      "sha256": "5573f46499af36a40348819ae7263c6e0fef41be1d2b1d8c151fd2f13cdaf7bd"
+    },
+    {
+      "name": "raw/cn/cn.sta.ssty.html",
+      "size": 139875,
+      "updated_at": "2026-10-24T16:31:05.046Z",
+      "metadata": {
+        "eTag": "\"9afe707b87892273ab2147c6ab49fd57\"",
+        "size": 139875,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:05.000Z",
+        "contentLength": 139875,
+        "httpStatusCode": 200
+      },
+      "sha256": "07dfed9dcd45d80a77ae1f318ceec2cda972b918af5301263747879119e9d24e"
+    },
+    {
+      "name": "raw/hk-id/treaty.hk-id.2010.en.rtf",
+      "size": 173805,
+      "updated_at": "2026-10-24T16:31:06.845Z",
+      "metadata": {
+        "eTag": "\"e8707ee349453f5206cc10780123bde9\"",
+        "size": 173805,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:07.000Z",
+        "contentLength": 173805,
+        "httpStatusCode": 200
+      },
+      "sha256": "e932a9e4c0f56d0189bd877254a6c4f795c872c95a1e8b34d2aa2abd99386d08"
+    },
+    {
+      "name": "raw/hk-id/treaty.hk-id.2010.mli.en.pdf",
+      "size": 424361,
+      "updated_at": "2026-10-24T16:31:08.079Z",
+      "metadata": {
+        "eTag": "\"5d2d2d7d16d053e4dfaf2928b11c1dc6\"",
+        "size": 424361,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:09.000Z",
+        "contentLength": 424361,
+        "httpStatusCode": 200
+      },
+      "sha256": "4ad893e3ba9a0f4bff78d7c26e9dce0602452bc5d41b7024744af6d05b84764b"
+    },
+    {
+      "name": "raw/hk-in/treaty.hk-in.2018.en.rtf",
+      "size": 187768,
+      "updated_at": "2026-10-24T16:31:08.971Z",
+      "metadata": {
+        "eTag": "\"40f1a08425144c5d3c23cbf4036e7137\"",
+        "size": 187768,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:09.000Z",
+        "contentLength": 187768,
+        "httpStatusCode": 200
+      },
+      "sha256": "11a9dc4d72e3149ca374e25f671d3372dba6b888a1a07c564d6456f827c0d2e0"
+    },
+    {
+      "name": "raw/hk-in/treaty.hk-in.2018.mli.en.pdf",
+      "size": 393743,
+      "updated_at": "2026-10-24T16:31:09.956Z",
+      "metadata": {
+        "eTag": "\"d320e28d9837a461bb76e098a342070a\"",
+        "size": 393743,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:10.000Z",
+        "contentLength": 393743,
+        "httpStatusCode": 200
+      },
+      "sha256": "c8f173fd0b96381a48a83f2657369be9767f99fcf896be64de4b1a6fa6cae87f"
+    },
+    {
+      "name": "raw/hk-jp/treaty.hk-jp.2010.en.rtf",
+      "size": 257573,
+      "updated_at": "2026-10-24T16:31:11.308Z",
+      "metadata": {
+        "eTag": "\"4767536fddf6e1da4e23d9420fdb0040\"",
+        "size": 257573,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:12.000Z",
+        "contentLength": 257573,
+        "httpStatusCode": 200
+      },
+      "sha256": "12613b25c5f20b47576cc61b02193933516ed430130b74a6604b2fdae190d986"
+    },
+    {
+      "name": "raw/hk-jp/treaty.hk-jp.2010.mli.en.pdf",
+      "size": 634735,
+      "updated_at": "2026-10-24T16:31:13.123Z",
+      "metadata": {
+        "eTag": "\"a79a9bbf522460ec7235fcee5b26b5a7\"",
+        "size": 634735,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:14.000Z",
+        "contentLength": 634735,
+        "httpStatusCode": 200
+      },
+      "sha256": "fc3253a9853b9360c8b4bc55561450152224a02d00fb1c8d9046584fbf728df8"
+    },
+    {
+      "name": "raw/hk-jp/treaty.hk-jp.2010.notes.en.pdf",
+      "size": 161866,
+      "updated_at": "2026-10-24T16:31:14.590Z",
+      "metadata": {
+        "eTag": "\"cecb1102f7a1a1b169ebab4e0216aaa6\"",
+        "size": 161866,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:15.000Z",
+        "contentLength": 161866,
+        "httpStatusCode": 200
+      },
+      "sha256": "a55de38aecf5810fb6e6ccf1ba1c1f518802284e0efebc4868d70dcd8839d4f1"
+    },
+    {
+      "name": "raw/hk-kr/treaty.hk-kr.2014.en.rtf",
+      "size": 159089,
+      "updated_at": "2026-10-24T16:31:15.574Z",
+      "metadata": {
+        "eTag": "\"1538bfb9d2fbbfa5afcbe82b986b7dac\"",
+        "size": 159089,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:16.000Z",
+        "contentLength": 159089,
+        "httpStatusCode": 200
+      },
+      "sha256": "88c47a6c12f2b478ca188267226e752272432ad0a91cd3205d8b148a8aa7adc1"
+    },
+    {
+      "name": "raw/hk-kr/treaty.hk-kr.2014.mli.en.pdf",
+      "size": 654219,
+      "updated_at": "2026-10-24T16:31:17.863Z",
+      "metadata": {
+        "eTag": "\"2ceaf75c188c188d01a7d5177d0818fc\"",
+        "size": 654219,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:18.000Z",
+        "contentLength": 654219,
+        "httpStatusCode": 200
+      },
+      "sha256": "4775bce7560deae8b65845749505a6d940ac02d64f1c5e865e3965612b904165"
+    },
+    {
+      "name": "raw/hk-my/treaty.hk-my.2012.en.rtf",
+      "size": 166822,
+      "updated_at": "2026-10-24T16:31:18.780Z",
+      "metadata": {
+        "eTag": "\"1ff36e63bfc6c4505abe97cf240581c6\"",
+        "size": 166822,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:19.000Z",
+        "contentLength": 166822,
+        "httpStatusCode": 200
+      },
+      "sha256": "4342e18002f152268455f6b691a9489f699f5e7b2217ce2c8ae8fe33b60d1a6a"
+    },
+    {
+      "name": "raw/hk-my/treaty.hk-my.2012.mli.en.pdf",
+      "size": 411404,
+      "updated_at": "2026-10-24T16:31:20.176Z",
+      "metadata": {
+        "eTag": "\"c7894899bf98d182c8efa78ae1ee48d2\"",
+        "size": 411404,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:21.000Z",
+        "contentLength": 411404,
+        "httpStatusCode": 200
+      },
+      "sha256": "513c437760fd992d1329e970b36fd05e8de7d16115fe9beafaa3f7c8f26b818d"
+    },
+    {
+      "name": "raw/hk-th/treaty.hk-th.2005.en.rtf",
+      "size": 148633,
+      "updated_at": "2026-10-24T16:31:22.588Z",
+      "metadata": {
+        "eTag": "\"6a108c537dd225e4aaa9f53b406c701c\"",
+        "size": 148633,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:23.000Z",
+        "contentLength": 148633,
+        "httpStatusCode": 200
+      },
+      "sha256": "abf3e3ecd402bdfc76d9bebcfbb0d3ee517f2ac583dc547eec49de6016c82d99"
+    },
+    {
+      "name": "raw/hk-th/treaty.hk-th.2005.mli.en.pdf",
+      "size": 746701,
+      "updated_at": "2026-10-24T16:31:25.186Z",
+      "metadata": {
+        "eTag": "\"0d11fbada0a8ce160f3b71e0fb4b1db6\"",
+        "size": 746701,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:26.000Z",
+        "contentLength": 746701,
+        "httpStatusCode": 200
+      },
+      "sha256": "856a91066866630b53fcabc5b937bfea6fd37116c7d0e623066942d8bfbc017d"
+    },
+    {
+      "name": "raw/hk-th/treaty.hk-th.2005.notes.en.pdf",
+      "size": 64546,
+      "updated_at": "2026-10-24T16:31:25.955Z",
+      "metadata": {
+        "eTag": "\"06e1f7c05107a0b2044309a8a9e1162f\"",
+        "size": 64546,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:26.000Z",
+        "contentLength": 64546,
+        "httpStatusCode": 200
+      },
+      "sha256": "ce19588a93c0fd297f303ffa38f1f689e5372d7a67ff5f5b6c883ffd7c46f7a9"
+    },
+    {
+      "name": "raw/hk-vn/treaty.hk-vn.2008.en.rtf",
+      "size": 190422,
+      "updated_at": "2026-10-24T16:31:26.858Z",
+      "metadata": {
+        "eTag": "\"bd8ca228d40b4ee508a6835909e311f5\"",
+        "size": 190422,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:27.000Z",
+        "contentLength": 190422,
+        "httpStatusCode": 200
+      },
+      "sha256": "7801d330c0454a2c836604b30cd9d30d0f71e1c9ed08bd1a480680342d05dcd7"
+    },
+    {
+      "name": "raw/hk/hk.cap112.rtf",
+      "size": 11728778,
+      "updated_at": "2026-10-24T16:31:54.145Z",
+      "metadata": {
+        "eTag": "\"d54c3596d2838c94e1723fa0eed5b3e2\"",
+        "size": 11728778,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:54.000Z",
+        "contentLength": 11728778,
+        "httpStatusCode": 200
+      },
+      "sha256": "e28849ff385862416718714208c9fa05d27b022ca475b687c6f1c4591a100134"
+    },
+    {
+      "name": "raw/hk/hk.dipn.44.pdf",
+      "size": 345955,
+      "updated_at": "2026-10-24T16:31:55.523Z",
+      "metadata": {
+        "eTag": "\"884c63afcd0c84000398485832a2d8e8\"",
+        "size": 345955,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:56.000Z",
+        "contentLength": 345955,
+        "httpStatusCode": 200
+      },
+      "sha256": "b894ef31bbeb34e597b0c5d12004dde45718638e5e841c14b1510d02bb705c43"
+    },
+    {
+      "name": "raw/hk/hk.form.ir1313a.pdf",
+      "size": 557726,
+      "updated_at": "2026-10-24T16:31:58.605Z",
+      "metadata": {
+        "eTag": "\"696cb36220aac4a342c0167158a4236f\"",
+        "size": 557726,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:31:59.000Z",
+        "contentLength": 557726,
+        "httpStatusCode": 200
+      },
+      "sha256": "04d7c98e34659492a0a6635434aa0c339e2839cb4daad7bd26d87f7ab0066f8e"
+    },
+    {
+      "name": "raw/hk/hk.form.ir1313b.pdf",
+      "size": 1099099,
+      "updated_at": "2026-10-24T16:32:01.896Z",
+      "metadata": {
+        "eTag": "\"545b6e0867d2c33b31585b387b24deb5\"",
+        "size": 1099099,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:02.000Z",
+        "contentLength": 1099099,
+        "httpStatusCode": 200
+      },
+      "sha256": "de71a50a48a7ad3af67edcd382e3ea4197549816e9a4baa04c2728db878909b4"
+    },
+    {
+      "name": "raw/hk/hk.form.ir1314a.pdf",
+      "size": 265821,
+      "updated_at": "2026-10-24T16:32:03.083Z",
+      "metadata": {
+        "eTag": "\"e7bcd77b0265eca434bbdd62cbfbf8dc\"",
+        "size": 265821,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:04.000Z",
+        "contentLength": 265821,
+        "httpStatusCode": 200
+      },
+      "sha256": "e5e05877e8d7ead1722724081814366d300992e7eaeb7d1071dd4dc3ab7c0c5c"
+    },
+    {
+      "name": "raw/hk/hk.form.ir1314b.pdf",
+      "size": 937202,
+      "updated_at": "2026-10-24T16:32:05.304Z",
+      "metadata": {
+        "eTag": "\"39d19ed5642613f92e9e99def7a2c72f\"",
+        "size": 937202,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:06.000Z",
+        "contentLength": 937202,
+        "httpStatusCode": 200
+      },
+      "sha256": "61a2f9d7ec46767522e72d7828e86f4c117797045d21ecb942f1975611d67246"
+    },
+    {
+      "name": "raw/hk/hk.ird.cor.faq.html",
+      "size": 85190,
+      "updated_at": "2026-10-24T16:32:06.195Z",
+      "metadata": {
+        "eTag": "\"26b9c01b813c498e3b33086e45dd680b\"",
+        "size": 85190,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:07.000Z",
+        "contentLength": 85190,
+        "httpStatusCode": 200
+      },
+      "sha256": "dbf4a240ce242f86783086002a5969c67f8dbd5cfa9e240a780930c3e5757eb3"
+    },
+    {
+      "name": "raw/hk/hk.ird.cor.html",
+      "size": 52707,
+      "updated_at": "2026-10-24T16:32:07.604Z",
+      "metadata": {
+        "eTag": "\"9bb56a09f75eb7914c62fd5d9e74b399\"",
+        "size": 52707,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:08.000Z",
+        "contentLength": 52707,
+        "httpStatusCode": 200
+      },
+      "sha256": "99e8c99a1c0022b2cd4876d36184599f8eeac094022391219b1b369950efd323"
+    },
+    {
+      "name": "raw/hk/hk.ird.dta-list.html",
+      "size": 131315,
+      "updated_at": "2026-10-24T16:32:09.246Z",
+      "metadata": {
+        "eTag": "\"f11569226835b87716d8e84d18f19d7c\"",
+        "size": 131315,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:10.000Z",
+        "contentLength": 131315,
+        "httpStatusCode": 200
+      },
+      "sha256": "367c3813447a15653fbb931740a02c610bf213cc067e915b814a6a6de86c3a4e"
+    },
+    {
+      "name": "raw/hk/hk.ird.dta-rates.html",
+      "size": 98597,
+      "updated_at": "2026-10-24T16:32:10.150Z",
+      "metadata": {
+        "eTag": "\"f4cad6d7ef354b10ab011ef1938e6fbb\"",
+        "size": 98597,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:11.000Z",
+        "contentLength": 98597,
+        "httpStatusCode": 200
+      },
+      "sha256": "49d50b2a5b0c3689a6f9013c266a7c09338ee76c5295d9c28fba9cd9376f5ff9"
+    },
+    {
+      "name": "raw/intl/intl.mli.notification-35-7b.hk.en.pdf",
+      "size": 911223,
+      "updated_at": "2026-10-24T16:32:11.790Z",
+      "metadata": {
+        "eTag": "\"46685f73602e1b9565b36abc3fc72cf4\"",
+        "size": 911223,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:12.000Z",
+        "contentLength": 911223,
+        "httpStatusCode": 200
+      },
+      "sha256": "3b717267695dda157905325ff5ed269d15f77d997d3c5b9d204debded3212fec"
+    },
+    {
+      "name": "raw/intl/intl.mli.positions.cn.en.pdf",
+      "size": 201491,
+      "updated_at": "2026-10-24T16:32:12.767Z",
+      "metadata": {
+        "eTag": "\"e4c6d2680e12f8c4ada0247960a44a7e\"",
+        "size": 201491,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:13.000Z",
+        "contentLength": 201491,
+        "httpStatusCode": 200
+      },
+      "sha256": "47cdf107c8a4aae39d6cf060c055f9143be3a4fb623c3f377326ff799be5fd3f"
+    },
+    {
+      "name": "raw/intl/intl.oecd.mli.en.pdf",
+      "size": 282870,
+      "updated_at": "2026-10-24T16:32:14.162Z",
+      "metadata": {
+        "eTag": "\"bbad1920a23f0004322076ff6f47fe8f\"",
+        "size": 282870,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:15.000Z",
+        "contentLength": 282870,
+        "httpStatusCode": 200
+      },
+      "sha256": "f863f260005376b11f4677b60d6e5b51ac2947e582d2defc26170db42020c691"
+    },
+    {
+      "name": "raw/sg-th/treaty.sg-th.2015.en.pdf",
+      "size": 331029,
+      "updated_at": "2026-10-24T16:32:16.062Z",
+      "metadata": {
+        "eTag": "\"d9d03e8fd2f0c7861c36e81f0e57c388\"",
+        "size": 331029,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:16.000Z",
+        "contentLength": 331029,
+        "httpStatusCode": 200
+      },
+      "sha256": "b0d6ec054ad3062887d5a72c30ea5e1f3234e673d119c1a170c5ec000d9474e1"
+    },
+    {
+      "name": "raw/sg-vn/treaty.sg-vn.1994.en.pdf",
+      "size": 235482,
+      "updated_at": "2026-10-24T16:32:17.842Z",
+      "metadata": {
+        "eTag": "\"1d1aaaad703c447b4e7e1e27a7650b49\"",
+        "size": 235482,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:18.000Z",
+        "contentLength": 235482,
+        "httpStatusCode": 200
+      },
+      "sha256": "948b2597f2996af06d048be2eb1a74ca1772e7d110b31a969985fa3dbdeca503"
+    },
+    {
+      "name": "raw/sg/sg.iras.cor.apply.html",
+      "size": 279867,
+      "updated_at": "2026-10-24T16:32:19.664Z",
+      "metadata": {
+        "eTag": "\"8dcdabe2a03ea1be95c65a1384e9e814\"",
+        "size": 279867,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:20.000Z",
+        "contentLength": 279867,
+        "httpStatusCode": 200
+      },
+      "sha256": "146886aee8f6c0fd1c86b6864a9c8b8dbef83a1757a1f37a1ba627cd70b19602"
+    },
+    {
+      "name": "raw/sg/sg.iras.cor.html",
+      "size": 261737,
+      "updated_at": "2026-10-24T16:32:21.066Z",
+      "metadata": {
+        "eTag": "\"bc54838068d7a3afb2d6198f0554f975\"",
+        "size": 261737,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:22.000Z",
+        "contentLength": 261737,
+        "httpStatusCode": 200
+      },
+      "sha256": "7b367b79b714e829bc284806c1033b060f0da0ae67b6acb61143964b1c191ee2"
+    },
+    {
+      "name": "raw/sg/sg.iras.dta-list.html",
+      "size": 260341,
+      "updated_at": "2026-10-24T16:32:21.949Z",
+      "metadata": {
+        "eTag": "\"921e31f8ca352b3df748299b239b97b2\"",
+        "size": 260341,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:22.000Z",
+        "contentLength": 260341,
+        "httpStatusCode": 200
+      },
+      "sha256": "fa19a8ee4f22cac4c584d3f1687bedd270333f57cc20a8eb5234d12bb7036a73"
+    },
+    {
+      "name": "raw/sg/sg.iras.wht-rates.html",
+      "size": 270996,
+      "updated_at": "2026-10-24T16:32:24.139Z",
+      "metadata": {
+        "eTag": "\"be206b37a7b6d5f6ec36a2bb73f1c67a\"",
+        "size": 270996,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:25.000Z",
+        "contentLength": 270996,
+        "httpStatusCode": 200
+      },
+      "sha256": "646153fcab4d9cf6715da682af82c459b0e09c7b227278bff9c3c27d09e014a9"
+    },
+    {
+      "name": "raw/sg/sg.ita1947.html",
+      "size": 6053274,
+      "updated_at": "2026-10-24T16:32:38.703Z",
+      "metadata": {
+        "eTag": "\"a3296eaff16a0a899963e1a953cc9079\"",
+        "size": 6053274,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:39.000Z",
+        "contentLength": 6053274,
+        "httpStatusCode": 200
+      },
+      "sha256": "0f391fcc85017d7998a2cf376e4df68de13f4c497a24cb497b1d419951439758"
+    },
+    {
+      "name": "text/cn.cs.2009-125.txt",
+      "size": 13611,
+      "updated_at": "2026-10-24T16:32:40.114Z",
+      "metadata": {
+        "eTag": "\"130b0d5f9a7496d6d0ca4b225577cd26\"",
+        "size": 13611,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:41.000Z",
+        "contentLength": 13611,
+        "httpStatusCode": 200
+      },
+      "sha256": "2c46bf9c6cb73bc806534223eacd3e2a9d9fe3b0fdd2e2dc70168d74111652e7"
+    },
+    {
+      "name": "text/cn.cs.2017-84.txt",
+      "size": 2019,
+      "updated_at": "2026-10-24T16:32:40.756Z",
+      "metadata": {
+        "eTag": "\"71ce2b2625878bd732c7782e1fd3352a\"",
+        "size": 2019,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:41.000Z",
+        "contentLength": 2019,
+        "httpStatusCode": 200
+      },
+      "sha256": "cb5032ee960b35b346f3433afb5661d249e95e56384bc87b6745287b255669d9"
+    },
+    {
+      "name": "text/cn.cs.2019-34.txt",
+      "size": 1338,
+      "updated_at": "2026-10-24T16:32:41.410Z",
+      "metadata": {
+        "eTag": "\"379f357a7ee148b9212a55ac69714432\"",
+        "size": 1338,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:42.000Z",
+        "contentLength": 1338,
+        "httpStatusCode": 200
+      },
+      "sha256": "57351dc3653cbe59e905798df48bd59494e0c42329c641ef9672b64780380f7b"
+    },
+    {
+      "name": "text/cn.cs.2020-03.txt",
+      "size": 9732,
+      "updated_at": "2026-10-24T16:32:42.071Z",
+      "metadata": {
+        "eTag": "\"fbf4670568d32da9340933385532674d\"",
+        "size": 9732,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:43.000Z",
+        "contentLength": 9732,
+        "httpStatusCode": 200
+      },
+      "sha256": "ffaa0d959d5bbb18d759e4070faa901d2b706d717a25ec986ef080f29f00b53f"
+    },
+    {
+      "name": "text/cn.cs.2026-27.txt",
+      "size": 951,
+      "updated_at": "2026-10-24T16:32:42.744Z",
+      "metadata": {
+        "eTag": "\"9fcb885c758989e7fca0aa2db8471a1e\"",
+        "size": 951,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:43.000Z",
+        "contentLength": 951,
+        "httpStatusCode": 200
+      },
+      "sha256": "79a41ac7ce3f7f764f9d86874ffeaa2a98d0e1e4ef5b3da892373ab5eae7e7b0"
+    },
+    {
+      "name": "text/cn.gsf.2009-02.txt",
+      "size": 63362,
+      "updated_at": "2026-10-24T16:32:43.439Z",
+      "metadata": {
+        "eTag": "\"6a3b6cf0bce190b3c1c370292a56fc27\"",
+        "size": 63362,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:44.000Z",
+        "contentLength": 63362,
+        "httpStatusCode": 200
+      },
+      "sha256": "5c4303e5d8cb5ddfad9b05480ee3b042946fad1d3e0520c911802c6f4c6641b5"
+    },
+    {
+      "name": "text/cn.gsf.2009-82.txt",
+      "size": 6769,
+      "updated_at": "2026-10-24T16:32:44.630Z",
+      "metadata": {
+        "eTag": "\"e2870cb423a76d6a6b1d2a96902583f2\"",
+        "size": 6769,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:45.000Z",
+        "contentLength": 6769,
+        "httpStatusCode": 200
+      },
+      "sha256": "d5ecbf4c3ac8309a8a09d7f11a723f783e6472e6aae523e2cff140ef35d0a0bf"
+    },
+    {
+      "name": "text/cn.gsh.2009-37.txt",
+      "size": 2773,
+      "updated_at": "2026-10-24T16:32:45.597Z",
+      "metadata": {
+        "eTag": "\"df5608b35b1dae682ab47417c26f78aa\"",
+        "size": 2773,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:46.000Z",
+        "contentLength": 2773,
+        "httpStatusCode": 200
+      },
+      "sha256": "5c0b5178caa4b5df168c2c9ac0a21b3cbd2425995c455da9868f0c07faea0bbe"
+    },
+    {
+      "name": "text/cn.law.eit.txt",
+      "size": 17046,
+      "updated_at": "2026-10-24T16:32:46.257Z",
+      "metadata": {
+        "eTag": "\"64792413805cc2fcc68f055e45d16d40\"",
+        "size": 17046,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:47.000Z",
+        "contentLength": 17046,
+        "httpStatusCode": 200
+      },
+      "sha256": "d00cf3e3ebaee53bff64b6af7fc49df08ed9eeb0c30ac1933a344624119092ef"
+    },
+    {
+      "name": "text/cn.law.iit.txt",
+      "size": 11135,
+      "updated_at": "2026-10-24T16:32:47.414Z",
+      "metadata": {
+        "eTag": "\"dd2d621f7ed63a187a58d1e2ea315936\"",
+        "size": 11135,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:48.000Z",
+        "contentLength": 11135,
+        "httpStatusCode": 200
+      },
+      "sha256": "4b895356d74975982e4bb9e99c1b990255f57131b58e35d33fc94fdfb647129f"
+    },
+    {
+      "name": "text/cn.order.32.txt",
+      "size": 7686,
+      "updated_at": "2026-10-24T16:32:48.347Z",
+      "metadata": {
+        "eTag": "\"7dd964e9cbfe5fb8537f26c28d2680e9\"",
+        "size": 7686,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:49.000Z",
+        "contentLength": 7686,
+        "httpStatusCode": 200
+      },
+      "sha256": "7fac06bb87769f079710dd30c06ed5cecc6721b41e3977b321aff5a5d7c4b5cd"
+    },
+    {
+      "name": "text/cn.reg.eit.txt",
+      "size": 49027,
+      "updated_at": "2026-10-24T16:32:49.764Z",
+      "metadata": {
+        "eTag": "\"683c37e86698ed5ada200d041fdd7e1b\"",
+        "size": 49027,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:50.000Z",
+        "contentLength": 49027,
+        "httpStatusCode": 200
+      },
+      "sha256": "a298bd0106229f16ce8a161740733385a7506aa3efcb6c74adf31b6d895585d5"
+    },
+    {
+      "name": "text/cn.reg.iit.txt",
+      "size": 15542,
+      "updated_at": "2026-10-24T16:32:50.396Z",
+      "metadata": {
+        "eTag": "\"1361d34ec275e33dbd0d3999571b9805\"",
+        "size": 15542,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:51.000Z",
+        "contentLength": 15542,
+        "httpStatusCode": 200
+      },
+      "sha256": "a9adc27c94cc066e55060b964fb83c4ab7972efc6dd3e4e3c42f6e1d4e870553"
+    },
+    {
+      "name": "text/cn.sta.2008-112.txt",
+      "size": 3223,
+      "updated_at": "2026-10-24T16:32:51.179Z",
+      "metadata": {
+        "eTag": "\"e63ee8da6a8dd268fcda1d0b8b8d3676\"",
+        "size": 3223,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:52.000Z",
+        "contentLength": 3223,
+        "httpStatusCode": 200
+      },
+      "sha256": "63b9fd3622cb79b2aa2da0b8913d8f6338c074d5a12e765edb513e13aa58d577"
+    },
+    {
+      "name": "text/cn.sta.2014-09.txt",
+      "size": 3821,
+      "updated_at": "2026-10-24T16:32:52.579Z",
+      "metadata": {
+        "eTag": "\"fda11fc30538a4e1b77e337f18ca19ab\"",
+        "size": 3821,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:53.000Z",
+        "contentLength": 3821,
+        "httpStatusCode": 200
+      },
+      "sha256": "e307c20fd6f7f1e83da850aa48c5417d0d1e077aca59b00d2860b2a105fb90b4"
+    },
+    {
+      "name": "text/cn.sta.2015-07.txt",
+      "size": 11557,
+      "updated_at": "2026-10-24T16:32:53.266Z",
+      "metadata": {
+        "eTag": "\"2a8ca92d087d657034901c95cdf6a972\"",
+        "size": 11557,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:54.000Z",
+        "contentLength": 11557,
+        "httpStatusCode": 200
+      },
+      "sha256": "f55c46d20de591b4726b0ca087617d2146499ced862f399fe19319e3690522ff"
+    },
+    {
+      "name": "text/cn.sta.2017-37.txt",
+      "size": 12123,
+      "updated_at": "2026-10-24T16:32:53.911Z",
+      "metadata": {
+        "eTag": "\"e30437b9be25db698d3dd8ba40bf2aa7\"",
+        "size": 12123,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:54.000Z",
+        "contentLength": 12123,
+        "httpStatusCode": 200
+      },
+      "sha256": "c88944d1c16784aaaf7f0033d02c5f8f4ee460fda8b430897d37d6c92deab7b8"
+    },
+    {
+      "name": "text/cn.sta.2018-09.txt",
+      "size": 7096,
+      "updated_at": "2026-10-24T16:32:54.544Z",
+      "metadata": {
+        "eTag": "\"69c7f4daab67bc41f092d3c8b03e6d4e\"",
+        "size": 7096,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:55.000Z",
+        "contentLength": 7096,
+        "httpStatusCode": 200
+      },
+      "sha256": "1e4d2d5faf6ee8e133991a14c2907bb121623871fbde9bd9ee65673d51ec0813"
+    },
+    {
+      "name": "text/cn.sta.2019-35.a01.txt",
+      "size": 5270,
+      "updated_at": "2026-10-24T16:32:55.916Z",
+      "metadata": {
+        "eTag": "\"ca2adad0882b182757a6b0e3820e5366\"",
+        "size": 5270,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:56.000Z",
+        "contentLength": 5270,
+        "httpStatusCode": 200
+      },
+      "sha256": "34a920622fe407024f2150ac95ba186a6803a558b85dc7559274a6576ed47cd2"
+    },
+    {
+      "name": "text/cn.sta.2019-35.txt",
+      "size": 9296,
+      "updated_at": "2026-10-24T16:32:57.353Z",
+      "metadata": {
+        "eTag": "\"c980c18cc03b4f4f93dc5b60b5b70759\"",
+        "size": 9296,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:58.000Z",
+        "contentLength": 9296,
+        "httpStatusCode": 200
+      },
+      "sha256": "26344a6dfd56a8792cab7aec30e90a70e5c80336bdb6917e8a2a68a099cf7e4a"
+    },
+    {
+      "name": "text/cn.sta.2025-04.a01.txt",
+      "size": 659,
+      "updated_at": "2026-10-24T16:32:58.013Z",
+      "metadata": {
+        "eTag": "\"cdb0f31efb24d3d3a75e552658410b54\"",
+        "size": 659,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:58.000Z",
+        "contentLength": 659,
+        "httpStatusCode": 200
+      },
+      "sha256": "813ad1439cf47bef92ef9babde5a2d5aa2033f183f7459bfcb968190fba8c243"
+    },
+    {
+      "name": "text/cn.sta.2025-04.a02.txt",
+      "size": 9717,
+      "updated_at": "2026-10-24T16:32:58.652Z",
+      "metadata": {
+        "eTag": "\"32a2f45a45d93bbf9fbb08a2303d9def\"",
+        "size": 9717,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:32:59.000Z",
+        "contentLength": 9717,
+        "httpStatusCode": 200
+      },
+      "sha256": "64066bd22e92e9d99a484ea5fa967ce80f8ef83020b07af23831afa1b4405cbe"
+    },
+    {
+      "name": "text/cn.sta.2025-04.txt",
+      "size": 6036,
+      "updated_at": "2026-10-24T16:32:59.310Z",
+      "metadata": {
+        "eTag": "\"d4ff4ce136c86f2c78b7ed2af1cd1053\"",
+        "size": 6036,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:00.000Z",
+        "contentLength": 6036,
+        "httpStatusCode": 200
+      },
+      "sha256": "5f9a10e651d74e8ecc8faddce43e46da5f769c46ebb403912a60877e9c61ab47"
+    },
+    {
+      "name": "text/cn.sta.ssty.txt",
+      "size": 15923,
+      "updated_at": "2026-10-24T16:33:02.470Z",
+      "metadata": {
+        "eTag": "\"59c498719ed94a4a2a0e92ef57b06316\"",
+        "size": 15923,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:03.000Z",
+        "contentLength": 15923,
+        "httpStatusCode": 200
+      },
+      "sha256": "23e2ae510f9288da4d4962934abe0d642a80069e12be18e6841342e44b6eeb0b"
+    },
+    {
+      "name": "text/hk.cap112.txt",
+      "size": 2572704,
+      "updated_at": "2026-10-24T16:33:09.926Z",
+      "metadata": {
+        "eTag": "\"5f49d6150eaf8b3b0edf68d7c609a32b\"",
+        "size": 2572704,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:10.000Z",
+        "contentLength": 2572704,
+        "httpStatusCode": 200
+      },
+      "sha256": "a2f7b609f1b68d57406611dadaecdd7ecf6f643ac3da5a8f9d1eee97f4ec2f53"
+    },
+    {
+      "name": "text/hk.dipn.44.txt",
+      "size": 145542,
+      "updated_at": "2026-10-24T16:33:11.869Z",
+      "metadata": {
+        "eTag": "\"6fc91b79e82420d6a975e683d323626a\"",
+        "size": 145542,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:12.000Z",
+        "contentLength": 145542,
+        "httpStatusCode": 200
+      },
+      "sha256": "8c81c5b9cbc664f2fe80229d8d37d8c04456fb629a726aa76482bf9ea523cedb"
+    },
+    {
+      "name": "text/hk.form.ir1313a.txt",
+      "size": 21640,
+      "updated_at": "2026-10-24T16:33:12.560Z",
+      "metadata": {
+        "eTag": "\"872be97b8b3c87d5e2aa72a5394faeea\"",
+        "size": 21640,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:13.000Z",
+        "contentLength": 21640,
+        "httpStatusCode": 200
+      },
+      "sha256": "e23d69828fdb5946fa809ba27287fc5eb8414cb32249333cb623feadeb0fde72"
+    },
+    {
+      "name": "text/hk.form.ir1313b.txt",
+      "size": 15767,
+      "updated_at": "2026-10-24T16:33:13.209Z",
+      "metadata": {
+        "eTag": "\"8c7dd39381e3417fdb3c1211c499f8ef\"",
+        "size": 15767,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:14.000Z",
+        "contentLength": 15767,
+        "httpStatusCode": 200
+      },
+      "sha256": "88379bcb0ba64a786e0dce850641b0260298c2d51efed05dd10f1598e0d4a0e4"
+    },
+    {
+      "name": "text/hk.form.ir1314a.txt",
+      "size": 7119,
+      "updated_at": "2026-10-24T16:33:14.831Z",
+      "metadata": {
+        "eTag": "\"6c1a17db00cfe04628cb0ec8562c973b\"",
+        "size": 7119,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:15.000Z",
+        "contentLength": 7119,
+        "httpStatusCode": 200
+      },
+      "sha256": "b925370454ccebdb7d3e2de2308624e0de10947433937212adc47052670d7e8b"
+    },
+    {
+      "name": "text/hk.form.ir1314b.txt",
+      "size": 5998,
+      "updated_at": "2026-10-24T16:33:15.479Z",
+      "metadata": {
+        "eTag": "\"ae378dcc2765b10e17545e1f8b39296c\"",
+        "size": 5998,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:16.000Z",
+        "contentLength": 5998,
+        "httpStatusCode": 200
+      },
+      "sha256": "ae73ae21a71d27aa407e251d1272989f08e23567f204cf8bb8829412e9f5bd6c"
+    },
+    {
+      "name": "text/hk.ird.cor.faq.txt",
+      "size": 12161,
+      "updated_at": "2026-10-24T16:33:16.119Z",
+      "metadata": {
+        "eTag": "\"db436af0682e2c4ca8b6dd98b9308da2\"",
+        "size": 12161,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:17.000Z",
+        "contentLength": 12161,
+        "httpStatusCode": 200
+      },
+      "sha256": "0ac8a5e1c0de6c84ac35f67997acb475a96c4c33be3291a4a8b687aa4a69843f"
+    },
+    {
+      "name": "text/hk.ird.cor.txt",
+      "size": 7123,
+      "updated_at": "2026-10-24T16:33:16.770Z",
+      "metadata": {
+        "eTag": "\"25fdffe9e5e4bcfa4d09d79dd2376124\"",
+        "size": 7123,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:17.000Z",
+        "contentLength": 7123,
+        "httpStatusCode": 200
+      },
+      "sha256": "ef6638dc47a58328d1adbd920e6c45bb436cdd6130bdab2ab390d9060fbcb5e6"
+    },
+    {
+      "name": "text/hk.ird.dta-list.txt",
+      "size": 14424,
+      "updated_at": "2026-10-24T16:33:17.709Z",
+      "metadata": {
+        "eTag": "\"3f66cd84b3e022f861a6f9bc14043906\"",
+        "size": 14424,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:18.000Z",
+        "contentLength": 14424,
+        "httpStatusCode": 200
+      },
+      "sha256": "bfecc31b9ce89aebcea6c208ce3a85636382b66abe12cf0f72d4ee45cf6b8ebe"
+    },
+    {
+      "name": "text/hk.ird.dta-rates.txt",
+      "size": 4134,
+      "updated_at": "2026-10-24T16:33:18.426Z",
+      "metadata": {
+        "eTag": "\"d9bd49311482988c56a0d10bbcf268bc\"",
+        "size": 4134,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:19.000Z",
+        "contentLength": 4134,
+        "httpStatusCode": 200
+      },
+      "sha256": "d4117a024fdbf4f86651d6557453cd6298934d6fa6671423f70d494e2d192969"
+    },
+    {
+      "name": "text/intl.mli.notification-35-7b.hk.en.txt",
+      "size": 4463,
+      "updated_at": "2026-10-24T16:33:19.597Z",
+      "metadata": {
+        "eTag": "\"92e8f6043488a4cec00bc134ccb446b8\"",
+        "size": 4463,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:20.000Z",
+        "contentLength": 4463,
+        "httpStatusCode": 200
+      },
+      "sha256": "0d92bc92ebae613a547ff02c85a400c5d4e7dbd1e54c57f4c2bbb209beed3527"
+    },
+    {
+      "name": "text/intl.mli.positions.cn.en.txt",
+      "size": 75696,
+      "updated_at": "2026-10-24T16:33:20.502Z",
+      "metadata": {
+        "eTag": "\"a3c862c787b9eb37699a6bafff4b7480\"",
+        "size": 75696,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:21.000Z",
+        "contentLength": 75696,
+        "httpStatusCode": 200
+      },
+      "sha256": "076f3536744edf27cdb73eb993a1678e1d34fc04affeed27b54c041ac8abbc1d"
+    },
+    {
+      "name": "text/intl.oecd.mli.en.txt",
+      "size": 147757,
+      "updated_at": "2026-10-24T16:33:21.717Z",
+      "metadata": {
+        "eTag": "\"0195d2742d3e33460cbd9312c8541307\"",
+        "size": 147757,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:22.000Z",
+        "contentLength": 147757,
+        "httpStatusCode": 200
+      },
+      "sha256": "d142b671de5736ebb63e63fd772a28bf2400540154ed3dfc0cc72dd698cf1b15"
+    },
+    {
+      "name": "text/sg.iras.cor.apply.txt",
+      "size": 14566,
+      "updated_at": "2026-10-24T16:33:23.085Z",
+      "metadata": {
+        "eTag": "\"8058abdcdd9cc3470cb30e7a5b46df5e\"",
+        "size": 14566,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:24.000Z",
+        "contentLength": 14566,
+        "httpStatusCode": 200
+      },
+      "sha256": "915dd1fa9b406a808b1e7ba7507dca95c2b59f9be1777a3a42bc8fd6330a327a"
+    },
+    {
+      "name": "text/sg.iras.cor.txt",
+      "size": 3739,
+      "updated_at": "2026-10-24T16:33:23.721Z",
+      "metadata": {
+        "eTag": "\"4246d1baf2f1068865cfe1f35d5bef6a\"",
+        "size": 3739,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:24.000Z",
+        "contentLength": 3739,
+        "httpStatusCode": 200
+      },
+      "sha256": "2b52c64c6fd1115a631c966eb3caf79befc49e597eb155b2dd786f4430a7030e"
+    },
+    {
+      "name": "text/sg.iras.dta-list.txt",
+      "size": 1025,
+      "updated_at": "2026-10-24T16:33:24.355Z",
+      "metadata": {
+        "eTag": "\"d2f36ba380e2d28c7733a1191e967fe8\"",
+        "size": 1025,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:25.000Z",
+        "contentLength": 1025,
+        "httpStatusCode": 200
+      },
+      "sha256": "3b62b7aa05f58971e0de4d4c2bd4e89619c220df7bc4b1c26e8cb54724e54d8d"
+    },
+    {
+      "name": "text/sg.iras.wht-rates.txt",
+      "size": 4000,
+      "updated_at": "2026-10-24T16:33:25.033Z",
+      "metadata": {
+        "eTag": "\"ea02912c0113fbf050e449e3cff5ad49\"",
+        "size": 4000,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:25.000Z",
+        "contentLength": 4000,
+        "httpStatusCode": 200
+      },
+      "sha256": "31466029d63bbb3396b3edb4553bd8f704ac90658adb049ddf4bbab519f869ca"
+    },
+    {
+      "name": "text/sg.ita1947.txt",
+      "size": 22826,
+      "updated_at": "2026-10-24T16:33:25.698Z",
+      "metadata": {
+        "eTag": "\"f80233b0e42b139a665a5899fc3cb8e8\"",
+        "size": 22826,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:26.000Z",
+        "contentLength": 22826,
+        "httpStatusCode": 200
+      },
+      "sha256": "efcd7b23765d6da945e0cb350477e82d15d5035d7a59db41fb0f24a3d803ace0"
+    },
+    {
+      "name": "text/treaty.cn-hk.2006.p2.zh.txt",
+      "size": 2312,
+      "updated_at": "2026-10-24T16:33:26.365Z",
+      "metadata": {
+        "eTag": "\"653ed7b1fcc543ef2d7bdedc7644dbb1\"",
+        "size": 2312,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:27.000Z",
+        "contentLength": 2312,
+        "httpStatusCode": 200
+      },
+      "sha256": "6e7592359ff22e91ac6e1edff79e08e373a2e4607562ca5ec58167c76d575717"
+    },
+    {
+      "name": "text/treaty.cn-hk.2006.p3.zh.txt",
+      "size": 2749,
+      "updated_at": "2026-10-24T16:33:27.041Z",
+      "metadata": {
+        "eTag": "\"770b8503aad5cf6961ecb04c7975f575\"",
+        "size": 2749,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:27.000Z",
+        "contentLength": 2749,
+        "httpStatusCode": 200
+      },
+      "sha256": "4b2b9b97d6298ea9216f8b2f627532bb1b3b9888333f43a5b823468f736186b9"
+    },
+    {
+      "name": "text/treaty.cn-hk.2006.p4.zh.txt",
+      "size": 3102,
+      "updated_at": "2026-10-24T16:33:27.703Z",
+      "metadata": {
+        "eTag": "\"cf6b7939ddfe800c91ec392c6500c1e2\"",
+        "size": 3102,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:28.000Z",
+        "contentLength": 3102,
+        "httpStatusCode": 200
+      },
+      "sha256": "6ba403942fce5d51e3fb220ed777b4603cb02a2b6210bfba56662c963b63dda4"
+    },
+    {
+      "name": "text/treaty.cn-hk.2006.p5.zh.txt",
+      "size": 6985,
+      "updated_at": "2026-10-24T16:33:28.325Z",
+      "metadata": {
+        "eTag": "\"edf6e3c75c378d7569263574a8c439c3\"",
+        "size": 6985,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:29.000Z",
+        "contentLength": 6985,
+        "httpStatusCode": 200
+      },
+      "sha256": "0431bb00a77345963696803379767b839cf346442f0aa7b02fd8410f72f47148"
+    },
+    {
+      "name": "text/treaty.cn-hk.2006.zh.txt",
+      "size": 32451,
+      "updated_at": "2026-10-24T16:33:28.968Z",
+      "metadata": {
+        "eTag": "\"e4a974f36b8658659b172dc77f6cf2e0\"",
+        "size": 32451,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:29.000Z",
+        "contentLength": 32451,
+        "httpStatusCode": 200
+      },
+      "sha256": "e7691c80cb241fc4db585b5175cb858c0cbc455573bcbc8b8bf5b446c8ceb3ac"
+    },
+    {
+      "name": "text/treaty.cn-id.2001.en.txt",
+      "size": 46721,
+      "updated_at": "2026-10-24T16:33:29.636Z",
+      "metadata": {
+        "eTag": "\"f524fcf8850b9d8074c0f5716fc8e4a0\"",
+        "size": 46721,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:30.000Z",
+        "contentLength": 46721,
+        "httpStatusCode": 200
+      },
+      "sha256": "cfdd851933ac14cc9e2adf9193f2d4dc7da64a9674c15876c37cb728eaf81d7e"
+    },
+    {
+      "name": "text/treaty.cn-id.2001.mli.en.txt",
+      "size": 58390,
+      "updated_at": "2026-10-24T16:33:31.541Z",
+      "metadata": {
+        "eTag": "\"d5d68494f50120334ca5b98de0c1e290\"",
+        "size": 58390,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:32.000Z",
+        "contentLength": 58390,
+        "httpStatusCode": 200
+      },
+      "sha256": "ffe0163e57a8a130c23a432348721360ae1bf9e426cab8b3c932cec5bb89bfb6"
+    },
+    {
+      "name": "text/treaty.cn-id.2001.mou.en.txt",
+      "size": 2150,
+      "updated_at": "2026-10-24T16:33:32.179Z",
+      "metadata": {
+        "eTag": "\"c23b4d457b79d919d76d09d1a91d544a\"",
+        "size": 2150,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:33.000Z",
+        "contentLength": 2150,
+        "httpStatusCode": 200
+      },
+      "sha256": "c52a3ae5d6ecc2d2507c577ced28af2abcd737f68805fdd01dd8866dda3e9b83"
+    },
+    {
+      "name": "text/treaty.cn-id.2001.p1.en.txt",
+      "size": 2083,
+      "updated_at": "2026-10-24T16:33:32.799Z",
+      "metadata": {
+        "eTag": "\"0d45b88fb86c669b7519c0ab1778ddef\"",
+        "size": 2083,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:33.000Z",
+        "contentLength": 2083,
+        "httpStatusCode": 200
+      },
+      "sha256": "ad9de9d3c9e5c3da7a2f7e593cb4ca2a23cf1675aa406f529d5d0d4ae3706739"
+    },
+    {
+      "name": "text/treaty.cn-in.1994.en.txt",
+      "size": 49320,
+      "updated_at": "2026-10-24T16:33:33.436Z",
+      "metadata": {
+        "eTag": "\"a2d0dd5dda7d6b5505474044dda7e895\"",
+        "size": 49320,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:34.000Z",
+        "contentLength": 49320,
+        "httpStatusCode": 200
+      },
+      "sha256": "c0522f73840ca0212b805d4f631b93374cd89afe9ecd64f808165d823b29103a"
+    },
+    {
+      "name": "text/treaty.cn-in.1994.p1.en.txt",
+      "size": 1602,
+      "updated_at": "2026-10-24T16:33:34.085Z",
+      "metadata": {
+        "eTag": "\"59e47c859ddbc10c6b2df364d5d933e1\"",
+        "size": 1602,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:35.000Z",
+        "contentLength": 1602,
+        "httpStatusCode": 200
+      },
+      "sha256": "045b7d5174648c8356ade4bfa33430b1813eab54aedc0decdb4f58a9532432cd"
+    },
+    {
+      "name": "text/treaty.cn-in.1994.p2.en.txt",
+      "size": 20738,
+      "updated_at": "2026-10-24T16:33:34.726Z",
+      "metadata": {
+        "eTag": "\"96a926ac751b50b38054d2171d69e402\"",
+        "size": 20738,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:35.000Z",
+        "contentLength": 20738,
+        "httpStatusCode": 200
+      },
+      "sha256": "565f2778af7f7967654e36ad873b4c54a0abef5cdb6af28cc200769bb51899fa"
+    },
+    {
+      "name": "text/treaty.cn-jp.1983.en.txt",
+      "size": 47222,
+      "updated_at": "2026-10-24T16:33:36.220Z",
+      "metadata": {
+        "eTag": "\"33494fa202fddff044c3324a4f90ee63\"",
+        "size": 47222,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:37.000Z",
+        "contentLength": 47222,
+        "httpStatusCode": 200
+      },
+      "sha256": "f97c0710d11904481dae69a41d7c4251a000cc7a0d91e9c5530e5d687f402745"
+    },
+    {
+      "name": "text/treaty.cn-jp.1983.mli.en.txt",
+      "size": 55238,
+      "updated_at": "2026-10-24T16:33:36.950Z",
+      "metadata": {
+        "eTag": "\"64d17532f2815c29560b5af362d34d67\"",
+        "size": 55238,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:37.000Z",
+        "contentLength": 55238,
+        "httpStatusCode": 200
+      },
+      "sha256": "0d4e61f06be76203fe7397ab3791cbfec6e4deb68fec1bec9b6aab10a3873bd4"
+    },
+    {
+      "name": "text/treaty.cn-jp.1983.notes.en.txt",
+      "size": 9081,
+      "updated_at": "2026-10-24T16:33:37.588Z",
+      "metadata": {
+        "eTag": "\"43548ab1b8cf35f1fcc9a903cd963d6d\"",
+        "size": 9081,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:38.000Z",
+        "contentLength": 9081,
+        "httpStatusCode": 200
+      },
+      "sha256": "7aafda5b49dbeefd8f86671b575d01199edce90208467ef36ab52757007eb0d5"
+    },
+    {
+      "name": "text/treaty.cn-jp.1983.p1.en.txt",
+      "size": 1875,
+      "updated_at": "2026-10-24T16:33:38.246Z",
+      "metadata": {
+        "eTag": "\"a09222c55cb0ceaa0543e4bd9ea86189\"",
+        "size": 1875,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:39.000Z",
+        "contentLength": 1875,
+        "httpStatusCode": 200
+      },
+      "sha256": "de3b43a71915c673b955c1b5ad5f599a170140b0f9a1831542291fc1029f9e81"
+    },
+    {
+      "name": "text/treaty.cn-kr.1994.en.txt",
+      "size": 46770,
+      "updated_at": "2026-10-24T16:33:38.911Z",
+      "metadata": {
+        "eTag": "\"429dba4df54b181b98adcdc711aa9682\"",
+        "size": 46770,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:39.000Z",
+        "contentLength": 46770,
+        "httpStatusCode": 200
+      },
+      "sha256": "2e5c6bbb644400ab721a5392c54b972bac84559dca711c643df30c11aa0d2083"
+    },
+    {
+      "name": "text/treaty.cn-kr.1994.mli.en.txt",
+      "size": 62049,
+      "updated_at": "2026-10-24T16:33:39.838Z",
+      "metadata": {
+        "eTag": "\"ac17bdd4d4a30be6c94d277b4e44954b\"",
+        "size": 62049,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:40.000Z",
+        "contentLength": 62049,
+        "httpStatusCode": 200
+      },
+      "sha256": "7151cf2a99b426b282e716bf1ceb18839aff6547634f52f1643e06b700014935"
+    },
+    {
+      "name": "text/treaty.cn-kr.1994.mou1.en.txt",
+      "size": 2505,
+      "updated_at": "2026-10-24T16:33:41.225Z",
+      "metadata": {
+        "eTag": "\"b4d382c3ab6c1eb8348b65afd4734438\"",
+        "size": 2505,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:42.000Z",
+        "contentLength": 2505,
+        "httpStatusCode": 200
+      },
+      "sha256": "c15be66599625ef0450dc89edb4041c6b16242d6943c87ecf0dfd8f9b9e2a560"
+    },
+    {
+      "name": "text/treaty.cn-kr.1994.mou2.en.txt",
+      "size": 4442,
+      "updated_at": "2026-10-24T16:33:41.882Z",
+      "metadata": {
+        "eTag": "\"b4692cc9cb7b4d7aab53897c97b07078\"",
+        "size": 4442,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:42.000Z",
+        "contentLength": 4442,
+        "httpStatusCode": 200
+      },
+      "sha256": "7fb3847855e364c9e7fb3cc81e36f9e095fe64535587fdd3787dde537a130e50"
+    },
+    {
+      "name": "text/treaty.cn-kr.1994.p1.en.txt",
+      "size": 1561,
+      "updated_at": "2026-10-24T16:33:42.619Z",
+      "metadata": {
+        "eTag": "\"e1613012b10d742244aab1da4051938d\"",
+        "size": 1561,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:43.000Z",
+        "contentLength": 1561,
+        "httpStatusCode": 200
+      },
+      "sha256": "8f31359b7e8216a3f432991d4d76795860e9ee11d4d068f8b5e8c7847d60c45a"
+    },
+    {
+      "name": "text/treaty.cn-kr.1994.p2.en.txt",
+      "size": 7305,
+      "updated_at": "2026-10-24T16:33:43.256Z",
+      "metadata": {
+        "eTag": "\"16d63aa9713b9e023ebbb91cacd4ecb8\"",
+        "size": 7305,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:44.000Z",
+        "contentLength": 7305,
+        "httpStatusCode": 200
+      },
+      "sha256": "ab01a6c40451ea92a165852a961e8d3ffd6dd55d98615f6e1a5da83dcb12bbcc"
+    },
+    {
+      "name": "text/treaty.cn-my.1985.en.txt",
+      "size": 51767,
+      "updated_at": "2026-10-24T16:33:43.927Z",
+      "metadata": {
+        "eTag": "\"249a6e817bd5f0b472524acfbd64cd42\"",
+        "size": 51767,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:44.000Z",
+        "contentLength": 51767,
+        "httpStatusCode": 200
+      },
+      "sha256": "d27e7b9f263e552379f1a707a7240902d60715ea9d199bbc27c0f4a017ac2820"
+    },
+    {
+      "name": "text/treaty.cn-my.1985.mli.en.txt",
+      "size": 61076,
+      "updated_at": "2026-10-24T16:33:44.625Z",
+      "metadata": {
+        "eTag": "\"4a23d99e2481079cc1573d76f4990182\"",
+        "size": 61076,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:45.000Z",
+        "contentLength": 61076,
+        "httpStatusCode": 200
+      },
+      "sha256": "7071ef11d936fafd4cdd0697cd40c77cbf7cc9da2317c62400e4a6c1ab13164f"
+    },
+    {
+      "name": "text/treaty.cn-my.1985.notes.en.txt",
+      "size": 5330,
+      "updated_at": "2026-10-24T16:33:45.817Z",
+      "metadata": {
+        "eTag": "\"fc3308029838d6689eb2eea7214f9c02\"",
+        "size": 5330,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:46.000Z",
+        "contentLength": 5330,
+        "httpStatusCode": 200
+      },
+      "sha256": "d68c5542eb1275722bd9956a098b0f20fdc2d7df0116f437b3de852f1ab7732f"
+    },
+    {
+      "name": "text/treaty.cn-my.1985.p1.en.txt",
+      "size": 1475,
+      "updated_at": "2026-10-24T16:33:46.589Z",
+      "metadata": {
+        "eTag": "\"7d1af1fa395ad21cb3c61b5262126d41\"",
+        "size": 1475,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:47.000Z",
+        "contentLength": 1475,
+        "httpStatusCode": 200
+      },
+      "sha256": "899ec509d7aea1d7a4cc5534eaa1a0a7d7cebabf79bd053854b549932be11bff"
+    },
+    {
+      "name": "text/treaty.cn-sg.2007.en.txt",
+      "size": 50118,
+      "updated_at": "2026-10-24T16:33:47.980Z",
+      "metadata": {
+        "eTag": "\"c22cccc1c428ff5d89a4fbce9778c17b\"",
+        "size": 50118,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:48.000Z",
+        "contentLength": 50118,
+        "httpStatusCode": 200
+      },
+      "sha256": "e99fafc48b3da1180cef8e5e5138d274150e9c1a89733df328e5f315066dffe2"
+    },
+    {
+      "name": "text/treaty.cn-sg.2007.mli.en.txt",
+      "size": 64409,
+      "updated_at": "2026-10-24T16:33:48.698Z",
+      "metadata": {
+        "eTag": "\"e0975e0e30c93d8682012169d12cf53c\"",
+        "size": 64409,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:49.000Z",
+        "contentLength": 64409,
+        "httpStatusCode": 200
+      },
+      "sha256": "edd5ad9ac26a6582a32f2ab85ec85692c543e49fd104489b585961024950d4e2"
+    },
+    {
+      "name": "text/treaty.cn-sg.2007.p2.en.txt",
+      "size": 3940,
+      "updated_at": "2026-10-24T16:33:49.378Z",
+      "metadata": {
+        "eTag": "\"305b2ff06d6b8f8a95ea92f051184225\"",
+        "size": 3940,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:50.000Z",
+        "contentLength": 3940,
+        "httpStatusCode": 200
+      },
+      "sha256": "511732d70cea7770bb0fe12d76d29b312dd8fb850f0c1fd2fae3b3490b77dbcf"
+    },
+    {
+      "name": "text/treaty.cn-sg.2007.p3.en.txt",
+      "size": 4843,
+      "updated_at": "2026-10-24T16:33:50.032Z",
+      "metadata": {
+        "eTag": "\"1b1fb26c586661627ea51cc3ceda11f1\"",
+        "size": 4843,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:50.000Z",
+        "contentLength": 4843,
+        "httpStatusCode": 200
+      },
+      "sha256": "dc5603ea6d35d7572e5e23cb3309bc1c363373bd034b41aedaaeb2699491e830"
+    },
+    {
+      "name": "text/treaty.cn-th.1986.en.txt",
+      "size": 48005,
+      "updated_at": "2026-10-24T16:33:50.753Z",
+      "metadata": {
+        "eTag": "\"3c73bc83ea70d938f608b0abff73920c\"",
+        "size": 48005,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:51.000Z",
+        "contentLength": 48005,
+        "httpStatusCode": 200
+      },
+      "sha256": "a39194875baad4443a395034cd60066c26f72c25cc7adaa09b948a7eb8939f10"
+    },
+    {
+      "name": "text/treaty.cn-th.1986.mli.en.txt",
+      "size": 54310,
+      "updated_at": "2026-10-24T16:33:51.566Z",
+      "metadata": {
+        "eTag": "\"a7db7765bf29f6710ba0dd8418c27ffb\"",
+        "size": 54310,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:52.000Z",
+        "contentLength": 54310,
+        "httpStatusCode": 200
+      },
+      "sha256": "67be4a78c0d18d8a698d59437722846a81ea3dc177bf54e7fc18a75ed369755a"
+    },
+    {
+      "name": "text/treaty.cn-vn.1995.en.txt",
+      "size": 49090,
+      "updated_at": "2026-10-24T16:33:52.247Z",
+      "metadata": {
+        "eTag": "\"f1bc58afd8c610274a05ce5370115db8\"",
+        "size": 49090,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:53.000Z",
+        "contentLength": 49090,
+        "httpStatusCode": 200
+      },
+      "sha256": "a7cc7a05c2d4ef304e07059e13de713fb2964533e6bef5523e2ee5151f5072b6"
+    },
+    {
+      "name": "text/treaty.cn-vn.1995.mli.en.txt",
+      "size": 60025,
+      "updated_at": "2026-10-24T16:33:53.265Z",
+      "metadata": {
+        "eTag": "\"4cf0ea7eaeed3f361cde1ed401ab9738\"",
+        "size": 60025,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:54.000Z",
+        "contentLength": 60025,
+        "httpStatusCode": 200
+      },
+      "sha256": "398ebbb80c4611bd670c7f21dd74bbaa442fb9d8829bfe74157a2671edf9de11"
+    },
+    {
+      "name": "text/treaty.cn-vn.1995.notes.en.txt",
+      "size": 3837,
+      "updated_at": "2026-10-24T16:33:53.957Z",
+      "metadata": {
+        "eTag": "\"f89939f5b92ce8cd66137cdedd61f0cc\"",
+        "size": 3837,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:54.000Z",
+        "contentLength": 3837,
+        "httpStatusCode": 200
+      },
+      "sha256": "7e4dcd826af535afef4bf87c17509b59c5965fb87c94060ff8d4ce6dc038163f"
+    },
+    {
+      "name": "text/treaty.cn-vn.1995.p1.en.txt",
+      "size": 1557,
+      "updated_at": "2026-10-24T16:33:54.624Z",
+      "metadata": {
+        "eTag": "\"e420c4fef2db98b0a4074fcdf795acbe\"",
+        "size": 1557,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:55.000Z",
+        "contentLength": 1557,
+        "httpStatusCode": 200
+      },
+      "sha256": "d4e77f1998f9c3fd07946577a5b54ea75f2cd46fb523825e6779997efbd08e41"
+    },
+    {
+      "name": "text/treaty.hk-id.2010.en.txt",
+      "size": 59561,
+      "updated_at": "2026-10-24T16:33:55.346Z",
+      "metadata": {
+        "eTag": "\"629373bdf17fbe9bc56fa162aa9f4420\"",
+        "size": 59561,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:56.000Z",
+        "contentLength": 59561,
+        "httpStatusCode": 200
+      },
+      "sha256": "b25738476731f0a0d5e98ecffb69859cea31b5d3cd983f9662946aad04a97edc"
+    },
+    {
+      "name": "text/treaty.hk-id.2010.mli.en.txt",
+      "size": 69415,
+      "updated_at": "2026-10-24T16:33:56.244Z",
+      "metadata": {
+        "eTag": "\"5980d2ea93fb5abc7299429a5618e2f1\"",
+        "size": 69415,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:57.000Z",
+        "contentLength": 69415,
+        "httpStatusCode": 200
+      },
+      "sha256": "c67b6d950c1e02563faf47ceb401f5762495b91d718786207922080cea45f256"
+    },
+    {
+      "name": "text/treaty.hk-in.2018.en.txt",
+      "size": 63524,
+      "updated_at": "2026-10-24T16:33:56.968Z",
+      "metadata": {
+        "eTag": "\"2f45e44e1477019539cafdc0fab726cb\"",
+        "size": 63524,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:57.000Z",
+        "contentLength": 63524,
+        "httpStatusCode": 200
+      },
+      "sha256": "35966b3a296b69ee444ec0d6a5cab5a84b7fb4d1b53de626ebfa7abfae44ff03"
+    },
+    {
+      "name": "text/treaty.hk-in.2018.mli.en.txt",
+      "size": 72785,
+      "updated_at": "2026-10-24T16:33:58.149Z",
+      "metadata": {
+        "eTag": "\"96788bc931f34356c8a201a6b9cefd04\"",
+        "size": 72785,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:59.000Z",
+        "contentLength": 72785,
+        "httpStatusCode": 200
+      },
+      "sha256": "0ba373b4921da108861d3bc5237cc2490d72b855b652525dece04f08ed3ab426"
+    },
+    {
+      "name": "text/treaty.hk-jp.2010.en.txt",
+      "size": 74266,
+      "updated_at": "2026-10-24T16:33:59.022Z",
+      "metadata": {
+        "eTag": "\"fc93b831f0a4ef02d14fe58b41bcc5a9\"",
+        "size": 74266,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:33:59.000Z",
+        "contentLength": 74266,
+        "httpStatusCode": 200
+      },
+      "sha256": "68d6e139a693bd03b2644d1964e86b21c851da172124ac46c97175189702d999"
+    },
+    {
+      "name": "text/treaty.hk-jp.2010.mli.en.txt",
+      "size": 78933,
+      "updated_at": "2026-10-24T16:34:00.181Z",
+      "metadata": {
+        "eTag": "\"04cc523718df5f902fefd6e85e6e3cba\"",
+        "size": 78933,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:01.000Z",
+        "contentLength": 78933,
+        "httpStatusCode": 200
+      },
+      "sha256": "a1643801c32eac82257bc028aa8f5ec200a3709dab3e6b9f802e18b869d89ba8"
+    },
+    {
+      "name": "text/treaty.hk-jp.2010.notes.en.txt",
+      "size": 4732,
+      "updated_at": "2026-10-24T16:34:01.555Z",
+      "metadata": {
+        "eTag": "\"9f9dcc79acf9396400657570c615c3f0\"",
+        "size": 4732,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:02.000Z",
+        "contentLength": 4732,
+        "httpStatusCode": 200
+      },
+      "sha256": "486d9076ad201459b91bc5ef29b53bbf6ed7c18030c2f5f1215813ce83597631"
+    },
+    {
+      "name": "text/treaty.hk-kr.2014.en.txt",
+      "size": 52330,
+      "updated_at": "2026-10-24T16:34:02.272Z",
+      "metadata": {
+        "eTag": "\"39f28f1fb0b26c257d64dc22cc937b9c\"",
+        "size": 52330,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:03.000Z",
+        "contentLength": 52330,
+        "httpStatusCode": 200
+      },
+      "sha256": "445b0bf7c3706e70a3a1a757efbcbdaa349ede5226ff859020631cf4660ad47e"
+    },
+    {
+      "name": "text/treaty.hk-kr.2014.mli.en.txt",
+      "size": 62264,
+      "updated_at": "2026-10-24T16:34:02.984Z",
+      "metadata": {
+        "eTag": "\"cf7ea57ab5d4bfb4b7ec682b0ab40304\"",
+        "size": 62264,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:03.000Z",
+        "contentLength": 62264,
+        "httpStatusCode": 200
+      },
+      "sha256": "2c0c86c2b57d1a035c49ac76204e2bce1a062540ce73d282bbb00339336b38ba"
+    },
+    {
+      "name": "text/treaty.hk-my.2012.en.txt",
+      "size": 56113,
+      "updated_at": "2026-10-24T16:34:03.701Z",
+      "metadata": {
+        "eTag": "\"35f7d30678a55864d38afc6f7330978c\"",
+        "size": 56113,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:04.000Z",
+        "contentLength": 56113,
+        "httpStatusCode": 200
+      },
+      "sha256": "785571dd0391dd61b7c1a5ab7a648953b6de877f064395b72f390e3e03536d9f"
+    },
+    {
+      "name": "text/treaty.hk-my.2012.mli.en.txt",
+      "size": 66296,
+      "updated_at": "2026-10-24T16:34:04.584Z",
+      "metadata": {
+        "eTag": "\"35fddc6beb03dcdb18bb2e13ac71621e\"",
+        "size": 66296,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:05.000Z",
+        "contentLength": 66296,
+        "httpStatusCode": 200
+      },
+      "sha256": "fd87b933fc678bf7c27b992a261d2c2d1325594c750542d0e822a6711ed29af0"
+    },
+    {
+      "name": "text/treaty.hk-th.2005.en.txt",
+      "size": 53906,
+      "updated_at": "2026-10-24T16:34:06.528Z",
+      "metadata": {
+        "eTag": "\"36b588ecc37e4eb74619e48eb405490b\"",
+        "size": 53906,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:07.000Z",
+        "contentLength": 53906,
+        "httpStatusCode": 200
+      },
+      "sha256": "fee551467e0f673b7cde2e7c4cd8617286c82632c7e722e2da8204bb0dcc21d2"
+    },
+    {
+      "name": "text/treaty.hk-th.2005.mli.en.txt",
+      "size": 63120,
+      "updated_at": "2026-10-24T16:34:07.220Z",
+      "metadata": {
+        "eTag": "\"9a09434a13f8c9a2f5fd28e40e4d8d05\"",
+        "size": 63120,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:08.000Z",
+        "contentLength": 63120,
+        "httpStatusCode": 200
+      },
+      "sha256": "bc0c97a96913f00742504b1f93c0bbd4bf2ac3422eb266829a70582cc1e04fae"
+    },
+    {
+      "name": "text/treaty.hk-th.2005.notes.en.txt",
+      "size": 2375,
+      "updated_at": "2026-10-24T16:34:07.878Z",
+      "metadata": {
+        "eTag": "\"b5b7f1edf35bdc09fbcf8a41d87a6d96\"",
+        "size": 2375,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:08.000Z",
+        "contentLength": 2375,
+        "httpStatusCode": 200
+      },
+      "sha256": "80579c1bc9b6991528f099f0dd39d002a5fe61c2ee58a92b8b184b7966af8c28"
+    },
+    {
+      "name": "text/treaty.hk-vn.2008.en.txt",
+      "size": 63629,
+      "updated_at": "2026-10-24T16:34:08.598Z",
+      "metadata": {
+        "eTag": "\"b5ed087d9f5e7f943643119499197601\"",
+        "size": 63629,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:09.000Z",
+        "contentLength": 63629,
+        "httpStatusCode": 200
+      },
+      "sha256": "def59710f4614ae7473f5cb4b3aa727130685365948995bd421994ca6d8021cd"
+    },
+    {
+      "name": "text/treaty.sg-th.2015.en.txt",
+      "size": 99244,
+      "updated_at": "2026-10-24T16:34:09.823Z",
+      "metadata": {
+        "eTag": "\"0cd16b73e55450af582de3312d68ed0a\"",
+        "size": 99244,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:10.000Z",
+        "contentLength": 99244,
+        "httpStatusCode": 200
+      },
+      "sha256": "77b47c7ad46d8eef0965a29cbfa9696cb67460060f220bcea0bd154877904b3d"
+    },
+    {
+      "name": "text/treaty.sg-vn.1994.en.txt",
+      "size": 64096,
+      "updated_at": "2026-10-24T16:34:10.542Z",
+      "metadata": {
+        "eTag": "\"5da80d8284819f57cf8894fd6f1cf1c5\"",
+        "size": 64096,
+        "mimetype": "application/octet-stream",
+        "cacheControl": "no-cache",
+        "lastModified": "2026-10-24T16:34:11.000Z",
+        "contentLength": 64096,
+        "httpStatusCode": 200
+      },
+      "sha256": "10f709acdc0c82e8f76cd835cca4f0e025938d185b8062461f2c5aef1593e781"
+    }
+  ],
+  "postgres_version": "17.6",
+  "dump_sha256": "0cdf4609f9186106790e36aa20c8f53badace44858f4eae4e40031df8ae2eed6",
+  "storage_stable_during_download": true,
+  "indexed_files_verified": 190
+}

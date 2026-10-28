@@ -1,0 +1,369 @@
+<!DOCTYPE html><html lang="ja">
+
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <title>No.2260 所得税の税率｜国税庁</title>
+    <link href="/template/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+			<script src="/template/js/html5shiv.min.js"></script>
+			<script src="/template/js/respond.min.js"></script>
+		<![endif]-->
+    <script src="/template/js/jquery.min.js"></script>
+    <script src="/template/js/bootstrap.min.js"></script>
+    <link href="/template/css/common.css" rel="stylesheet">
+    <link href="/template/css/import.css" rel="stylesheet">
+    <script src="/template/js/custom.js"></script>
+
+    <script>
+      //<![CDATA[
+      function input_check() {
+        m = document.form1.text1.value;
+        m = (parseInt(m / 1000)) * 1000
+        if (m > 0)
+          if ((m > 0) && (m <= 1950000)) {
+            z = m * 5 / 100
+            alert("入力された金額に対する税額は、" + check_money(m) + "×5%=" + check_money(z) + "円になります。");
+          } else if ((m > 1950000) && (m <= 3300000)) {
+          z = m * 10 / 100 - 97500
+          alert("入力された金額に対する税額は、" + check_money(m) + "×10%-97,500=" + check_money(z) + "円になります。");
+        } else if ((m > 3300000) && (m <= 6950000)) {
+          z = m * 20 / 100 - 427500
+          alert("入力された金額に対する税額は、" + check_money(m) + "×20%-427,500=" + check_money(z) + "円になります。");
+        } else if ((m > 6950000) && (m <= 9000000)) {
+          z = m * 23 / 100 - 636000
+          alert("入力された金額に対する税額は、" + check_money(m) + "×23%-636,000=" + check_money(z) + "円になります。");
+        } else if ((m > 9000000) && (m <= 18000000)) {
+          z = m * 33 / 100 - 1536000
+          alert("入力された金額に対する税額は、" + check_money(m) + "×33%-1,536,000=" + check_money(z) + "円になります。");
+        } else if ((m > 18000000)) {
+          z = m * 40 / 100 - 2796000
+          alert("入力された金額に対する税額は、" + check_money(m) + "×40%-2,796,000=" + check_money(z) + "円になります。");
+        } else {
+          alert("入力が間違っています。");
+          document.form1.text1.focus();
+        }
+      }
+
+      function check_money(val) {
+        kugiri = 3;
+        mark = ",";
+        money = val.toString();
+        for (i = money.length; i > 0; i--) {
+          if (i % kugiri == 0 && i != money.length) {
+            lstr = money.slice(0, -i);
+            rstr = money.slice(-i);
+            money = lstr + mark + rstr;
+          }
+        }
+        return money;
+      }
+      //]]>
+    </script>
+    <script src="/template/js/include.js"></script>
+
+    <script>
+      //<![CDATA[
+      $(function() {
+        $('.info-btn').click(function() {
+          var index = $('.info-btn').index(this);
+          var btn = $(this);
+          $('.info-item').eq(index).slideToggle("fast", function() {
+            $(btn).html(
+              $(this).is(':visible') ? '<img src="/img/close.png" alt="▲とじる" width="61" height="20" style="margin-left:10px">' : '<img src="/img/open.png" alt="▼ひらく" width="61" height="20" style="margin-left:10px">'
+            );
+          });
+        });
+      });
+      //]]>
+    </script>
+    <link href="/taxes/shiraberu/taxanswer/css/taxanswer.css" rel="stylesheet">
+<!--チャットボット↓-->
+	<link href="/template/css/chatbot.css" rel="stylesheet">
+	<script src="/template/js/chatbot.js"></script>
+<!--チャットボット↑-->
+  </head>
+
+  <body>
+    <noscript>すべての機能をご利用いただくにはJavascriptを有効にしてください。</noscript>
+
+    <div class="container">
+
+
+      <div id="header"></div>
+
+
+      <div class="wrap">
+
+        <div class="clearfix">
+
+          <div class="left-content contents">
+
+
+
+
+
+
+            <div id="contents">
+              <div class="imp-cnt" id="bodyArea">
+                <p class="skip"></p>
+                <ol class="breadcrumb">
+                  <li><a href="/">ホーム</a></li>
+                  <li><a href="/taxes/index.htm">税の情報・手続・用紙</a></li>
+                  <li><a href="/taxes/shiraberu/index.htm">税について調べる</a></li>
+                  <li><a href="/taxes/shiraberu/taxanswer/index2.htm">タックスアンサー（よくある税の質問）</a></li>
+                  <li class="active">No.2260 所得税の税率</li>
+                </ol>
+                <div class="page-header" id="page-top">
+                  <h1>No.2260 所得税の税率</h1>
+                </div>
+                <p>[令和8年4月1日現在法令等]</p>
+                <h2>対象税目</h2>
+                <p>所得税</p>
+                <h2>概要</h2>
+                <p>所得税の税率は、分離課税に対するものなどを除くと、5パーセントから45パーセントの7段階に区分されています。</p>
+                <p></p>
+                <h2>計算方法・計算式</h2>
+                <p>課税される所得金額（1,000円未満の端数金額を切り捨てた後の金額です。）に対する所得税の金額は、次の「所得税の速算表」を使用すると簡単に求められます。</p>
+                <!-- <h3>平成27年分以後</h3> -->
+                <table class="table table-bordered datatable width100">
+                  <tbody>
+                    <tr>
+                      <th scope="col" style="width: 62%;"> 課税される所得金額</th>
+                      <th scope="col" style="width: 13%;"> 税率</th>
+                      <th scope="col" style="width: 25%;"> 控除額</th>
+                    </tr>
+                    <tr>
+                      <th style="text-align: left;" scope="row"> 1,000円 から 1,949,000円まで</th>
+                      <td style="text-align: center;"> 5％</td>
+                      <td style="text-align: right;"> 0円</td>
+                    </tr>
+                    <tr>
+                      <th style="text-align: left;" scope="row">1,950,000円 から 3,299,000円まで</th>
+                      <td style="text-align: center;"> 10％</td>
+                      <td style="text-align: right;"> 97,500円</td>
+                    </tr>
+                    <tr>
+                      <th style="text-align: left;" scope="row">3,300,000円 から 6,949,000円まで</th>
+                      <td style="text-align: center;">20％</td>
+                      <td style="text-align: right;">427,500円</td>
+                    </tr>
+                    <tr>
+                      <th style="text-align: left;" scope="row">6,950,000円 から 8,999,000円まで</th>
+                      <td style="text-align: center;">23％</td>
+                      <td style="text-align: right;">636,000円</td>
+                    </tr>
+                    <tr>
+                      <th style="text-align: left;" scope="row">9,000,000円 から 17,999,000円まで</th>
+                      <td style="text-align: center;"> 33％</td>
+                      <td style="text-align: right;"> 1,536,000円</td>
+                    </tr>
+                    <tr>
+                      <th style="text-align: left;" scope="row">18,000,000円 から 39,999,000円まで</th>
+                      <td style="text-align: center;"> 40％</td>
+                      <td style="text-align: right;"> 2,796,000円</td>
+                    </tr>
+                    <tr>
+                      <th style="text-align: left;" scope="row">40,000,000円 以上</th>
+                      <td style="text-align: center;"> 45％</td>
+                      <td style="text-align: right;"> 4,796,000円</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>※1 令和7年分からは、基準所得金額（確定申告を要しない配当所得等を含めるなどした一定の所得金額）が3億3,000万円を超える場合で、その超える部分の金額の22.5％相当額が、その年分の通常の所得税および復興特別所得税を上回るときは、その上回る部分の所得税額が加算されます。</p>
+                <p>詳しくは、<a href="/taxes/shiraberu/taxanswer/shotoku/2270.htm">コード2270「特定の基準所得金額の課税の特例」</a>を参照してください。</p>
+				<p>※2 平成25年から令和29年までの各年分の確定申告においては、所得税と復興特別所得税（原則としてその年分の基準所得税額の2.1パーセント）を併せて申告・納付することとなります。</p>
+                <p>※3　令和8年度税制改正により、防衛特別所得税の創設ならびに復興特別所得税の税率の引下げおよび課税期間の延長が行われ、令和9年以後に適用されます（改正前と改正後とで、防衛特別所得税及び復興特別所得税の合計税率に変更はありません。）。</p>
+				<h2>具体例</h2>
+                <p>（課税される所得金額が7,000,000円の場合）</p>
+                <p>求める所得税の税額は次のようになります。</p>
+                <p>7,000,000円×0.23 - 636,000円= 974,000円</p>
+                <p>※ 復興特別所得税の税額は次のようになります。</p>
+                <p>947,000×0.021＝19,887円</p>
+				<h2>根拠法令等</h2>
+                <p>所法89、通法118、措法41の19、復興財確法8、9、10、13、18、防衛財確法5の9</p>
+                <h2>関連リンク</h2>
+                <p>◆パンフレット・手引き</p>
+                <p>・<a href="/taxes/shiraberu/shinkoku/syotoku/index.htm" target="_blank">確定申告書等の様式・手引き等</a></p>
+                <p>◆各種様式</p>
+                <p>・<a href="/taxes/tetsuzuki/shinsei/annai/shinkoku/annai/1557_2.htm" target="_blank">申告書・申告書付表と税額計算書等　一覧（申告所得税）</a></p>  
+                <p>◆<a href="https://www.keisan.nta.go.jp/kyoutu/ky/sm/top#bsctrl" target="_blank">確定申告書等作成コーナー</a></p> 
+                <p>画面の案内に沿って金額を入力することによりご自宅等で確定申告書等の作成・提出ができます。</p>
+                <p>必要な付表や明細書も、入力することで自動的に作成されます。</p> 
+                <h2>お問い合わせ先</h2>
+                <p>国税に関するご相談は、<a href="/taxes/shiraberu/shirabekata/9200.htm#a02">税についての相談窓口</a>をご覧ください。</p>
+                <div class="contents-feedback">
+                  <div class="display-before">
+                    <div class="title-feedback">このコンテンツはお役にたちましたか？</div>
+                    <div class="feedback-set">
+                      <a class="feedback-btn" data-type="good">はい</a>
+                      <a class="feedback-btn" data-type="bad">いいえ</a>
+                    </div>
+                  </div>
+                  <div class="display-after">ご協力ありがとうございました</div>
+                  <div class="surbey-link"><a href="/suggestion/taxanser/input_form.html">
+                      <p>今後の改善のための参考とさせていただくため、<br>アンケートを実施しています。ぜひご協力をお願いいたします。</p><span>アンケートへ</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="page-top-link"><a href="#page-top">このページの先頭へ</a></p>
+
+          </div>
+          <!--/left-menu-->
+
+          <div class="right-menu">
+
+
+            <div class="panel panel-default sidenavi bmg20">
+              <div class="panel-heading">
+                <h2 class="panel-title"><a href="/taxes/index.htm">税の情報・手続・用紙</a></h2>
+              </div>
+              <div class="panel-group" id="navi-Accordion">
+
+
+
+
+
+
+                <h3 class="sidenavi-title"><a class="navi_title" href="/taxes/shiraberu/index.htm">税について調べる</a><a class="navi_btn" data-parent="#sidenaviAccordion" data-toggle="collapse" href="#sidenaviAccordionCollapse1"><img alt="メニューを閉じる" src="/template/img/template/navi_up.png"></a></h3>
+                <div class="panel-collapse collapse in" id="sidenaviAccordionCollapse1">
+                  <ul>
+                    <li><a href="/taxes/shiraberu/shinkoku/kakutei.htm">所得税（確定申告書等作成コーナー）</a></li>
+                    <li><a href="/taxes/shiraberu/taxanswer/index2.htm">タックスアンサー（よくある税の質問）</a></li>
+                    <li><a href="/taxes/shiraberu/sodan/index.htm">税の相談</a></li>
+                    <li><a href="/taxes/shiraberu/zeimokubetsu/index.htm">税目別情報</a></li>
+                    <li><a href="http://www.rosenka.nta.go.jp/">路線価図・評価倍率表</a></li>
+                    <li><a href="/taxes/shiraberu/saigai/index.htm">災害関連情報</a></li>
+                    <li><a href="/taxes/shiraberu/kokusai/index.htm">国際税務関係情報</a></li>
+                    <li><a href="/taxes/shiraberu/shirabekata/info.htm">税についての上手な調べ方</a></li>
+                  </ul>
+                </div>
+                <h3 class="sidenavi-title"><a class="navi_title" href="/taxes/tetsuzuki/index.htm">申告手続・用紙</a><a class="navi_btn collapsed" data-parent="#sidenaviAccordion" data-toggle="collapse" href="#sidenaviAccordionCollapse2"><img alt="メニューを開く" src="/template/img/template/navi_down.png"></a></h3>
+                <div class="panel-collapse collapse" id="sidenaviAccordionCollapse2">
+                  <ul>
+                    <li><a href="/taxes/tetsuzuki/shinsei/index.htm">申告・申請・届出等、用紙（手続の案内・様式）</a></li>
+                    <li><a href="/taxes/tetsuzuki/mynumberinfo/index.htm">社会保障・税番号制度(マイナンバー)</a></li>
+                  </ul>
+                </div>
+                <h3 class="sidenavi-title"><a class="navi_title" href="/taxes/nozei/index.htm">納税・納税証明書手続</a><a class="navi_btn collapsed" data-parent="#sidenaviAccordion" data-toggle="collapse" href="#sidenaviAccordionCollapse3"><img alt="メニューを開く" src="/template/img/template/navi_down.png"></a></h3>
+                <div class="panel-collapse collapse" id="sidenaviAccordionCollapse3">
+                  <ul>
+                    <li><a href="/taxes/nozei/annai/index.htm">納税に関する総合案内</a></li>
+                    <li><a href="/taxes/nozei/nozei-shomei/01.htm">納税証明書</a></li>
+                    <li><a href="/taxes/nozei/enno-butsuno/01.htm">延納・物納申請等</a></li>
+                    <li><a href="/taxes/nozei/entaizei/keisan/entai.htm">延滞税</a></li>
+                  </ul>
+                </div>
+                <h3 class="sidenavi-title"><a class="navi_title" href="/taxes/zeirishi/index.htm">税理士に関する情報</a><a class="navi_btn collapsed" data-parent="#sidenaviAccordion" data-toggle="collapse" href="#sidenaviAccordionCollapse4"><img alt="メニューを開く" src="/template/img/template/navi_down.png"></a></h3>
+                <div class="panel-collapse collapse" id="sidenaviAccordionCollapse4">
+                  <ul>
+                    <li><a href="/taxes/zeirishi/index.htm#news">新着情報</a></li>
+                    <li><a href="/taxes/zeirishi/zeirishiseido/seido.htm">税理士制度</a></li>
+                    <li><a href="/taxes/zeirishi/zeirishishiken/zeirishi.htm">税理士試験</a></li>
+                    <li><a href="/taxes/zeirishi/chokai/chokai.htm">税理士に関する懲戒処分等</a></li>
+                    <li><a href="/taxes/zeirishi/search/search.htm">税理士をお探しの方</a></li>
+                    <li><a href="/taxes/zeirishi/zeirishiseido/qa.htm">税理士関係法令等・Q＆A</a></li>
+                  </ul>
+                </div>
+                <h3 class="sidenavi-title"><a class="navi_title" href="/taxes/sake/index.htm">お酒に関する情報</a><a class="navi_btn collapsed" data-parent="#sidenaviAccordion" data-toggle="collapse" href="#sidenaviAccordionCollapse5"><img alt="メニューを開く" src="/template/img/template/navi_down.png"></a></h3>
+                <div class="panel-collapse collapse" id="sidenaviAccordionCollapse5">
+                  <ul>
+                    <li><a href="/taxes/sake/index.htm#syuzei">酒税関係及び各種施策</a></li>
+                    <li><a href="/taxes/sake/index.htm#ippan">一般的な酒税の取扱い</a></li>
+                    <li><a href="/taxes/sake/index.htm#senmonsyuzei">専門的な酒税の取扱い</a></li>
+                    <li><a href="/taxes/sake/index.htm#senmonsodan">専門的な酒税の相談</a></li>
+                    <li><a href="/taxes/sake/index.htm#shinkoku">酒税の申告・納付や届出等</a></li>
+                    <li><a href="/taxes/sake/index.htm#denwa">電話相談センター・税務署の案内</a></li>
+                    <li><a href="/taxes/sake/index.htm#shingikai">審議会等</a></li>
+                    <li><a href="/taxes/sake/index.htm#tokei">統計情報・各種資料</a></li>
+                    <li><a href="/taxes/sake/index.htm#qa">お酒に関するQ＆A(よくある質問)</a></li>
+                  </ul>
+                </div>
+                <h3 class="sidenavi-title"><a href="/taxes/kids/index.htm" class="navi_title">税の学習コーナー</a></h3>
+
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+          <!--/right-menu-->
+
+        </div>
+        <!--/clearfix-->
+<!--チャットボット↓-->
+<div id="chatbot-banner">
+  <map name="banner-map">
+    <area shape="circle" alt="バナーを消す" coords="19,20,12" href="javascript:void(0)" onClick="document.getElementById('chatbot-banner').style.display='none'">
+    <area shape="rect" alt="チャットボットに相談する" coords="0,0,349,87" href="#" onClick="letsChat(event, 'https://www.chat.nta.go.jp/?utm_source=ntahome_taxanswer', 'taxcb')">
+  </map>
+  <img style="width:350px;" src="/img/03_NTA_CB_Bnr_balloon.png" usemap="#banner-map">
+</div>
+<!--チャットボット↑-->
+			</div>
+			<!--/wrap-->
+
+
+      <footer>
+        <h2>サイトマップ（コンテンツ一覧）</h2>
+        <ol class="breadcrumb footer">
+          <li><a href="/">ホーム</a></li>
+          <li><a href="/taxes/index.htm">税の情報・手続・用紙</a></li>
+          <li><a href="/taxes/shiraberu/index.htm">税について調べる</a></li>
+          <li><a href="/taxes/shiraberu/taxanswer/index2.htm">タックスアンサー（よくある税の質問）</a></li>
+          <li class="active">No.2260 所得税の税率</li>
+        </ol>
+        <div id="footer"></div>
+      </footer>
+
+    </div>
+    <!--/container-->
+
+
+
+
+
+
+
+
+    <script>
+      var sendPath = "/taxes/shiraberu/taxanswer/cgi-bin/questionnaire.php";
+      var feedBackElement = $(".display-before");
+      var thanksElement = $(".display-after");
+      var lastPathName = location.pathname.split("/").pop();
+      $(".feedback-btn").each(function(i, btn) {
+        var type = $(btn).data("type");
+        var sendData = "type=" + type + "&url=" + lastPathName;
+        $(btn).click(function() {
+          $.ajax({
+              type: "GET",
+              url: sendPath,
+              data: sendData,
+            })
+            .done(function() {})
+            .fail(function(jqXHR) {
+              console.error(jqXHR);
+            })
+          feedBackElement.hide();
+          thanksElement.show();
+        });
+      });
+    </script>
+  </body>
+
+</html>

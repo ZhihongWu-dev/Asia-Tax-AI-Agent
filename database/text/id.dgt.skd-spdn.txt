@@ -1,0 +1,197 @@
+Pendaftaran Wajib Pajak
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    Situs Resmi Direktorat Jenderal Pajak Republik Indonesia
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Surat Keterangan Domisili Subjek Pajak Dalam Negeri
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Informasi Umum
+
+
+
+
+
+
+
+
+Surat Keterangan Domisili Bagi Subjek Pajak Dalam Negeri Indonesia adalah surat keterangan yang diterbitkan oleh pejabat yang berwenang di lingkungan Direktorat Jenderal Pajak bagi Wajib Pajak dalam negeri yang isinya menerangkan bahwa Wajib Pajak dimaksud adalah subjek pajak dalam negeri Indonesia se bagaimana dimaksud dalam Undang-Undang PPh. (PER-28/PJ/2018)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Persyaratan
+
+
+
+
+
+
+
+
+1. Permohonan Penerbitan SKD SPDN
+2. Wajib Pajak tersebut memenuhi persyaratan sebagai berikut:
+a. Wajib Pajak berstatus subjek pajak dalam negeri Indonesia sebagaimana dimaksud dalam Pasal 2 ayat (3) Undang-Undang PPh;
+b. Wajib Pajak telah memiliki Nomor Pokok Wajib Pajak;
+c. Wajib Pajak telah menyampaikan:
+1) SPT Tahunan PPh Tahun Pajak terakhir yang sudah menjadi kewajiban Wajib Pajak berdasarkan ketentuan peraturan perundang-undangan di bidang perpajakan, dalam hal Wajib Pajak mengajukan permohonan penerbitan SKD SPDN untuk Tahun Pajak atau Bagian Tahun Pajak saat permohonan penerbitan SKD SPDN diajukan; atau
+2) SPT Tahunan PPh untuk Tahun Pajak atau Bagian Tahun Pajak yang diajukan permohonan penerbitan SKD SPDN yang menjadi kewajiban Wajib Pajak berdasarkan ketentuan peraturan perundang­undangan di bidang perpajakan, dalam hal Wajib Pajak mengajukan permohonan penerbitan SKD SPDN untuk Tahun Pajak atau Bagian Tahun Pajak sebelum tahun saat permohonan penerbitan SKD SPDN diajukan; dan
+d. permohonan yang diajukan memenuhi persyaratan administratif permohonan penerbitan SKD SPDN, yaitu:
+1) diajukan untuk:
+a) satu Negara Mitra yang menjadi tempat penghasilan bersumber;
+b) satu Tahun Pajak atau Bagian Tahun Pajak; dan
+c) satu lawan transaksi; dan
+2) memuat informasi mengenai lawan transaksi di Negara Mitra paling sedikit berupa:
+a) nama lawan transaksi;
+b) taxpayer identification number dan/ atau alamat dari lawan transaksi; dan
+c) penjelasan mengenai penghasilan yang berasal dari lawan transaksi.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Prosedur dan Alur Modul
+
+
+
+
+
+
+
+
+Wajib Pajak OP/Wakil/Kuasa mengakses Portal Wajib Pajak dan login dengan NIK/NPWP Pribadi 16 digit
+Wakil/Kuasa memilih impersonating sebagai Badan/ OP yang diwakili
+Wajib Pajak OP/Wakil/Kuasa memilih menu "Layanan Wajib Pajak" lalu pilih "Layanan Administrasi" dan klik " Buat Permohonan Layanan Administrasi"
+Wakil/Kuasa memilih "Nomor Penunjukan"
+Wajib Pajak OP/Wakil/Kuasa memilih jenis layanan "Surat Keterangan Domisili " dan jenis sub-layanan "Surat Keterangan Domisili Subjek Pajak Dalam Negeri (SKD SPDN)"
+Wajib Pajak OP/Wakil/Kuasa klik "Alur Kasus" lalu mengisi data-data permohonan, klik "Simpan", klik "Create PDF" dan tanda tangan dalam dokumen menggunakan sign Wajib Pajak OP/Wakil/Kuasa dan klik "Submit"
+Sistem akan otomatis menerbitkan dokumen "Bukti Penerimaan Elektronik (BPE)", setelah Wajib Pajak OP/Wakil/Kuasa klik tombol untuk melanjutkan proses, sistem akan menerbitkan "Certificate Of Taxpayer Residency (SKD SPDN)"
+Wajib Pajak OP/Wakil/Kuasa menekan tombol untuk melanjutkan proses dan selanjutnya sistem akan merekam SKD SPDN dalam daftar fasilitas serta mengirimkan dokumen Certificate Of Taxpayer Residency (SKD SPDN) ke Portal Wajib Pajak
+Selesai
+
+
+
+
+
+
+
+
+Direktorat Jenderal Pajak ©2025

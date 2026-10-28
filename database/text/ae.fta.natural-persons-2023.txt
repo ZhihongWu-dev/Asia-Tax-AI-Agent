@@ -1,0 +1,1926 @@
+INTERNAL 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Taxation of Natural 
+Persons under the 
+Corporate Tax Law 
+ 
+Corporate Tax Guide | CTGTNP1 
+ 
+November 2023 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 
+1 
+Contents 
+ 
+1. Glossary .............................................................................. 3 
+2. Introduction ........................................................................ 8 
+2.1. Overview ............................................................................................................... 8 
+2.2. Purpose of this guide ............................................................................................ 8 
+2.3. Who should read this guide? ................................................................................. 8 
+2.4. How to use this guide ............................................................................................ 8 
+2.5. Legislative references ........................................................................................... 9 
+2.6. Status of this guide.............................................................................................. 10 
+3. When does the Corporate Tax Law apply to natural 
+persons? ........................................................................... 11 
+3.1. Who is a natural person? .................................................................................... 11 
+3.2. Corporate Tax Law and natural persons ............................................................. 11 
+3.3. Key considerations .............................................................................................. 11 
+3.4. Natural persons: resident and non-resident ......................................................... 12 
+3.5. What income is considered taxable for natural persons? .................................... 14 
+3.6. What is a Business and a Business Activity ........................................................ 16 
+3.7. Business or Business Activities that are subject to Corporate Tax ...................... 16 
+3.8. Exclusions from Corporate Tax ........................................................................... 19 
+3.8.1. Wage ............................................................................................................. 19 
+3.8.2. Personal Investment income .......................................................................... 20 
+3.8.3. Real Estate Investment income ..................................................................... 22 
+3.9. Natural persons deriving State Sourced Income ................................................. 23 
+3.10. Computation of Turnover..................................................................................... 24 
+3.11. Corporate Tax rate for natural persons ................................................................ 25 
+3.12. Interaction with Small Business Relief ................................................................. 26 
+4. Corporate Tax calculations for natural persons ........... 28 
+4.1. Interest deduction ............................................................................................... 28 
+4.2. General deduction rules relating to Business expenditure ................................... 29 
+4.3. Non-deductible expenditure rules and natural persons ........................................ 29 
+4.4. Related Parties for natural persons ..................................................................... 30 
+4.4.1. Other natural persons .................................................................................... 30 
+4.4.2. Juridical persons ............................................................................................ 31 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 
+2 
+4.4.3. Partners in the same Unincorporated Partnership .......................................... 33 
+4.4.4. Trusts and foundations .................................................................................. 33 
+4.5. Connected Persons ............................................................................................. 33 
+5. Interaction with other Business forms and entities ...... 35 
+5.1. Juridical person ................................................................................................... 35 
+5.2. Sole proprietorship .............................................................................................. 35 
+5.3. Unincorporated Partnerships ............................................................................... 35 
+5.4. Family Foundation............................................................................................... 36 
+6. Corporate Tax compliance for natural persons ............ 37 
+6.1. Tax Registration .................................................................................................. 37 
+6.2. Tax Deregistration ............................................................................................... 38 
+6.2.1. Cessation of Business or Business Activity .................................................... 38 
+6.2.2. Death of the Taxable Person ......................................................................... 39 
+6.3. Tax Period .......................................................................................................... 39 
+6.4. Accounting Standards and Financial Statements ................................................ 40 
+6.5. Tax Return .......................................................................................................... 40 
+7. Annexures ......................................................................... 41 
+7.1. Annexure 1: Commercial business ...................................................................... 41 
+8. Updates and Amendments .............................................. 44 
+ 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 
+3 
+1. Glossary 
+ 
+Accounting Income: The accounting net profit or loss for the relevant Tax Period as 
+per the Financial Statements prepared in accordance with the provisions of Article 20 
+of the Corporate Tax Law. 
+ 
+Accounting Standards: The accounting standards specified in Ministerial Decision 
+No. 114 of 2023. 
+ 
+Administrative Penalties: Amounts imposed and collected under the Corporate Tax 
+Law or the Tax Procedures Law. 
+ 
+AED: The United Arab Emirates dirham. 
+ 
+Authority: Federal Tax Authority. 
+ 
+Business: Any activity conducted regularly, on an ongoing and independent basis by 
+any Person and in any location, such as industrial, commercial, agricultural, 
+vocational, professional, service or excavation activities or any other activity related to 
+the use of tangible or intangible properties. 
+ 
+Business Activity: Any transaction or activity, or series of transactions or series of 
+activities conducted by a Person in the course of its Business. 
+ 
+Cash Basis of Accounting: An accounting method under which the Taxable Person 
+recognises income and expenditure when cash payments are received and paid. 
+ 
+Connected Person: Any Person affiliated with a Taxable Person as determined in 
+Article 36(2) of the Corporate Tax Law. 
+ 
+Control: The direction and influence over one Person by another Person in 
+accordance with the conditions of Article 35(2) of the Corporate Tax Law. 
+ 
+Corporate Tax: The tax imposed by the Corporate Tax Law on juridical persons and 
+Business income. 
+ 
+Corporate Tax Law: Federal Decree-Law No. 47 of 2022 on the Taxation of 
+Corporations and Businesses. 
+ 
+Corporate Tax Payable: Corporate Tax that has or will become due for payment to 
+the FTA in respect of one or more Tax Periods. 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 
+4 
+Dividend: Any payments or distributions that are declared or paid on or in respect of 
+shares or other rights participating in the profits of the issuer of such shares or rights 
+which do not constitute a return on capital or a return on debt claims, whether such 
+payments or distributions are in cash, securities, or other properties, and whether 
+payable out of profits or retained earnings or from any account or legal reserve or from 
+capital reserve or revenue. This will include any payment or benefit which in substance 
+or effect constitutes a distribution of profits made in connection with the acquisition or 
+redemption or cancellation of shares or termination of other ownership interests or 
+rights or any transaction or arrangement with a Related Party or Connected Person 
+which does not comply with Article 34 of the Corporate Tax Law. 
+ 
+Double Taxation Agreement: An international agreement signed by two or more 
+countries for the avoidance of double taxation and the prevention of fiscal evasion on 
+income and capital.  
+ 
+Exempt Income: Any income exempt from Corporate Tax under the Corporate Tax 
+Law. 
+ 
+Family Foundation: Any foundation, trust or similar entity that meets the conditions 
+of Article 17 of the Corporate Tax Law. 
+ 
+Financial Statements: A complete set of statements as specified under the 
+Accounting Standards applied by the Taxable Person, which includes, but is not limited 
+to, statement of income, statement of other comprehensive income, balance sheet, 
+statement of changes in equity and cash flow statement. 
+ 
+FTA: Federal Tax Authority, being the Authority in charge of administration, collection 
+and enforcement of federal taxes in the UAE. 
+ 
+General Interest Deduction Limitation Rule: The limitation provided under Article 
+30 of the Corporate Tax Law. 
+ 
+Government Entity: The federal government, local governments, ministries, 
+government departments, government agencies, authorities and public institutions of 
+the Federal Government or Local Governments. 
+ 
+IFRS: International Financial Reporting Standards. 
+ 
+IFRS for SMEs: International Financial Reporting Standard for small and medium-
+sized entities. 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 
+5 
+Interest: Any amount accrued or paid for the use of money or credit, including 
+discounts, premiums and profit paid in respect of an Islamic financial instrument and 
+other payments economically equivalent to Interest, and any other amounts incurred 
+in connection with the raising of finance, excluding payments of the principal amount. 
+ 
+Legal Representative: The guardian or custodian of an incapacitated person or 
+minor, or the bankruptcy trustee appointed by the court for a company that is in 
+bankruptcy, or any other Person legally appointed to represent another Person. 
+ 
+Licence: A document issued by a Licensing Authority under which a Business or 
+Business Activity is conducted in the UAE. 
+ 
+Licensing Authority: The competent authority concerned with licensing or 
+authorising a Business or Business Activity in the UAE.  
+ 
+Local Government: Any of the governments of the Member Emirates of the 
+Federation. 
+ 
+Market Value: The price which could be agreed in an arm’s-length free market 
+transaction between Persons who are not Related Parties or Connected Persons in 
+similar circumstances. 
+ 
+Non-Resident Person: The Taxable Person specified in Article 11(4) of the Corporate 
+Tax Law. 
+ 
+Permanent Establishment: A place of Business or other form of presence in the UAE 
+of a Non-Resident Person in accordance with Article 14 of the Corporate Tax Law. 
+ 
+Person: Any natural person or juridical person. 
+ 
+Personal Investment: Investment activity that a natural person conducts for their 
+personal account that is neither conducted through a Licence or requiring a Licence 
+from a Licensing Authority in the UAE, nor considered as a commercial business in 
+accordance with the Federal Decree-Law No. 50 of 2022 issuing the Commercial 
+Transactions Law. 
+ 
+Preferred Shares: The category of capital stock or equity interest which gives its 
+owner priority entitlement to profits and liquidation proceeds ahead of owners of 
+Ordinary Shares. 
+ 
+Real Estate Investment: Any investment activity conducted by a natural person 
+related to, directly or indirectly, the sale, leasing, sub-leasing, and renting of land or 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 
+6 
+real estate property in the UAE that is not conducted, or does not require to be 
+conducted through a Licence from a Licensing Authority. 
+ 
+Related Party: Any Person associated with a Taxable Person as determined in Article 
+35(1) of the Corporate Tax Law. 
+ 
+Resident Person: The Taxable Person specified in Article 11(3) of the Corporate Tax 
+Law. 
+ 
+Revenue: The gross amount of income derived during a Tax Period. 
+ 
+Small Business Relief: A Corporate Tax relief that allows eligible Taxable Persons 
+to be treated as having no Taxable Income for the relevant Tax Period in accordance 
+with Article 21 of the Corporate Tax Law and Ministerial Decision No. 73 of 2023. 
+ 
+State: United Arab Emirates. 
+ 
+State Sourced Income: Income accruing in, or derived from, the UAE as specified in 
+Article 13 of the Corporate Tax Law. 
+ 
+Tax Deregistration: A procedure under which a Person is deregistered for Corporate 
+Tax purposes with the FTA. 
+ 
+Tax Period: The period for which a Tax Return is required to be filed. 
+ 
+Tax Registration: A procedure under which a Person registers for Corporate Tax 
+purposes with the FTA. 
+ 
+Tax Registration Number: A unique number issued by the FTA to each Person who 
+is registered for Corporate Tax purposes in the UAE.  
+ 
+Tax Return: Information filed with the FTA for Corporate Tax purposes in the form 
+and manner as prescribed by the FTA, including any schedule or attachment thereto, 
+and any amendment thereof. 
+ 
+Taxable Income: The income that is subject to Corporate Tax under the Corporate 
+Tax Law. 
+ 
+Taxable Person: A Person subject to Corporate Tax in the UAE under the Corporate 
+Tax Law. 
+ 
+Turnover: The gross amount of income derived during a Gregorian calendar year. 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 
+7 
+UAE: United Arab Emirates. 
+ 
+Unincorporated Partnership: A relationship established by contract between two 
+Persons or more, such as a partnership or trust or any other similar association of 
+Persons, in accordance with the applicable legislation of the UAE. 
+ 
+Wage: The wage that is given to the employee in consideration of their services under 
+the employment contract, whether in cash or in kind, payable annually, monthly, 
+weekly, daily, hourly, or by piece-meal, and includes all allowances, and bonuses in 
+addition to any other benefits provided for, in the employment contract or in 
+accordance with the applicable legislation in the UAE.  
+ 
+Withholding Tax: Corporate Tax to be withheld from State Sourced Income in 
+accordance with Article 45 of the Corporate Tax Law. 
+ 
+ 
+ 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 
+8 
+2. Introduction 
+ 
+2.1. Overview 
+ 
+Federal Decree-Law No. 47 of 2022 on the Taxation of Corporations and Businesses 
+(“Corporate Tax Law”) was issued on 3 October 2022 and was published in Issue #737 
+of the Official Gazette of the United Arab Emirates (“UAE”) on 10 October 2022.  
+ 
+The Corporate Tax Law provides the legislative basis for imposing a federal tax on 
+corporations and Business profits (“Corporate Tax”) in the UAE.  
+ 
+The provisions of the Corporate Tax Law shall apply to Tax Periods commencing on 
+or after 1 June 2023. 
+ 
+2.2. Purpose of this guide  
+ 
+This guide is designed to provide general guidance on the taxation of natural persons 
+under the Corporate Tax Law. It provides readers with an overview of: 
+ 
+• 
+When does the Corporate Tax Law apply to natural persons? 
+• 
+Calculation of Corporate Tax for natural persons. 
+• 
+Interactions with other Businesses. 
+• 
+Corporate Tax compliance for natural persons. 
+ 
+2.3. Who should read this guide?   
+ 
+The guide should be read by any natural person, to help them understand how the 
+provisions of the Corporate Tax Law apply to a natural person. It is intended to be read 
+in conjunction with the Corporate Tax Law, the implementing decisions and other 
+relevant guidance published by the FTA. 
+ 
+2.4. How to use this guide 
+ 
+The relevant articles of the Corporate Tax Law and the implementing decisions are 
+indicated in each section of the guide.  
+ 
+It is recommended that the guide is read in its entirety to provide a complete 
+understanding of the definitions and interactions of the different rules. Further 
+guidance on some of the areas covered in this guide can be found in other topic 
+specific guides. 
+ 
+In some instances, simple examples are used to illustrate how key elements of the 
+Corporate Tax Law apply to natural persons. The examples in the guide: 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 
+9 
+- 
+show how these elements operate in isolation and do not show the interactions 
+with other provisions of the Corporate Tax Law that may occur. They do not, and 
+are not intended to, cover the full facts of the hypothetical scenarios used nor all 
+aspects of the Corporate Tax regime, and should not be relied upon for legal or tax 
+advice purposes; and 
+- 
+are only meant for providing the readers with general information on the subject 
+matter of this guide. They are exclusively intended to explain the rules related to 
+the subject matter of this guide and do not relate at all to the tax or legal position 
+of any specific juridical or natural persons. 
+ 
+2.5. Legislative references 
+ 
+In this guide, the following legislation will be referred to as follows: 
+• 
+Federal Law No. 5 of 1985 on the Issuance of Civil Transactions Law, and its 
+amendments is referred to as “Civil Transactions Law”; 
+• 
+Federal Decree-Law No. 19 of 2020 on Trust is referred to as “Trust Law”; 
+• 
+Federal Decree-Law No. 28 of 2022 on Tax Procedures is referred to as “Tax 
+Procedures Law”; 
+• 
+Federal Decree-Law No. 47 of 2022 on the Taxation of Corporations and 
+Businesses is referred to as “Corporate Tax Law”; 
+• 
+Federal Decree-Law No. 50 of 2022 issuing the Commercial Transactions Law is 
+referred to as “Commercial Transactions Law”; 
+• 
+Cabinet Decision No. 49 of 2023 on Specifying the Categories of Businesses or 
+Business Activities Conducted by a Resident or Non-Resident Natural Person that 
+are Subject to Corporate Tax is referred to as “Cabinet Decision No. 49 of 2023”; 
+• 
+Cabinet Decision No. 74 of 2023 on the Executive Regulation of Federal Decree-
+Law No. 28 of 2022 on Tax Procedures is referred to as “Cabinet Decision No. 74 
+of 2023”; 
+• 
+Cabinet Decision No. 85 of 2022 on Determination of Tax Residency is referred to 
+as “Cabinet Decision No. 85 of 2022”; 
+• 
+Cabinet Decision No. 116 of 2022 on Determination of the Amount of Annual 
+Income Subject to Corporate Tax is referred to as “Cabinet Decision No. 116 of 
+2022”; 
+• 
+Ministerial Decision No. 27 of 2023 on Implementation of Certain Provisions of 
+Cabinet Decision No. 85 of 2022 on Determination of Tax Residency is referred to 
+as “Ministerial Decision No. 27 of 2023”; 
+• 
+Ministerial Decision No. 73 of 2023 on Small Business Relief for the Purposes of 
+Federal Decree-Law No. 47 of 2022 on the Taxation of Corporations and 
+Businesses is referred to as “Ministerial Decision No. 73 of 2023”; 
+• 
+Ministerial Decision No. 82 of 2023 on the Determination of Categories of Taxable 
+Persons Required to Prepare and Maintain Audited Financial Statements for the 
+Purposes of Federal Decree-Law No. 47 of 2022 on the Taxation of Corporations 
+and Businesses is referred to as “Ministerial Decision No. 82 of 2023”; 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 10 
+• 
+Ministerial Decision No. 114 of 2023 on the Accounting Standards and Methods 
+for the Purposes of Federal Decree-Law No. 47 of 2022 on the Taxation of 
+Corporations and Businesses is referred to as “Ministerial Decision No. 114 of 
+2023”; 
+• 
+Ministerial Decision No.134 of 2023 on the General Rules for Determining Taxable 
+Income for the Purposes of Federal Decree-Law No. 47 of 2022 on the Taxation 
+of Corporations and Businesses is referred to as “Ministerial Decision No. 134 of 
+2023”; and 
+• 
+Federal Tax Authority Decision No. 6 of 2023 on Tax Deregistration Timeline for 
+the Purposes of Federal Decree-Law No. 47 of 2022 on the Taxation of 
+Corporations and Businesses is referred to as “FTA Decision No. 6 of 2023”. 
+ 
+2.6. Status of this guide  
+ 
+This guidance is not a legally binding statement, but is intended to provide assistance 
+in understanding the implications for a natural person of the Corporate Tax regime in 
+the UAE. The information provided in this guide should not be interpreted as legal or 
+tax advice. It is not meant to be comprehensive and does not provide a definitive 
+answer in every case. It is based on the legislation as it stood when the guide was 
+published. Each Person’s own specific circumstances should be considered.  
+ 
+The Corporate Tax Law, the implementing decisions and the guidance materials 
+referred to in this document will set out the principles and rules that govern the 
+application of Corporate Tax. Nothing in this publication modifies or is intended to 
+modify the requirements of any legislation.  
+ 
+This document is subject to change without notice. 
+ 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 11 
+3. When does the Corporate Tax Law apply to natural 
+persons? 
+ 
+3.1. Who is a natural person? 
+ 
+The term natural person takes its ordinary meaning, and refers to a living human 
+person of any age, whether resident in the UAE or elsewhere. For minors or 
+incapacitated individuals, the Corporate Tax obligations shall be fulfilled by their Legal 
+Representative.1  
+ 
+3.2. Corporate Tax Law and natural persons 
+ 
+In order to level the playing field between incorporated businesses and unincorporated 
+businesses conducted by individuals, the Corporate Tax Law applies to natural 
+persons to the extent they are conducting a Business or Business Activity in the UAE, 
+have a Permanent Establishment in the UAE, or derive State Sourced Income (i.e. 
+income that is accrued in, or derived from, the UAE).  
+ 
+However, certain types of income are always exempt from Corporate Tax for natural 
+persons. For a natural person, the Corporate Tax Law does not apply to their 
+employment income, Personal Investment income, or Real Estate Investment income. 
+These types of income are discussed in more detail below in the relevant sections. 
+ 
+Furthermore, international agreements, including Double Taxation Agreements, 
+prevail where there is inconsistency between the provisions of the Corporate Tax Law 
+and the agreement. 2 Therefore, the position under applicable Double Taxation 
+Agreements between the UAE and other jurisdictions should be considered in 
+determining the residence and extent of UAE Corporate Tax for a natural person. 
+ 
+3.3. Key considerations 
+ 
+The following considerations are key when determining whether a natural person will 
+be subject to Corporate Tax: 
+1. A natural person who conducts a Business or Business Activity in the UAE is 
+considered to be a Taxable Person, and a Resident Person as defined in the 
+Corporate Tax Law.3  
+                                               
+1 Article 7 of the Tax Procedures Law and Cabinet Decision No. 74 of 2023. 
+2 Article 66 of the Corporate Tax Law. 
+3 Article 11(3) of the Corporate Tax Law. 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 12 
+2. A natural person is subject to Corporate Tax on their Business or Business Activity 
+only where the total Turnover derived from Business or Business Activities 
+conducted in the UAE exceeds AED 1 million within a Gregorian calendar year.4  
+3. For a natural person, income from the following categories is not considered as 
+arising from a Business or Business Activity, and is disregarded when determining 
+Turnover and not subject to Corporate Tax, regardless of the amount:5 
+o 
+Wage, 
+o 
+Personal Investment income, and 
+o 
+Real Estate Investment income. 
+ 
+Where the Turnover from Business or Business Activities conducted in the UAE 
+exceeds AED 1 million within a Gregorian calendar year, the natural person (whether 
+resident or non-resident) is required to comply with the obligations of the Corporate 
+Tax Law, including registration for Corporate Tax purposes with the FTA, submitting 
+Corporate Tax Returns and paying Corporate Tax (see Section 6). 
+ 
+3.4. Natural persons: resident and non-resident 
+ 
+For natural persons, physical residence in the UAE, whether by virtue of citizenship or 
+a residency visa, is not the criterion that determines whether they are Resident 
+Persons for Corporate Tax purposes, or whether their income is taxable. Instead, the 
+approach is as follows: 
+1. When a natural person resides in the UAE and they conduct Business or Business 
+Activities in the UAE, they are considered to be a Resident Person and, therefore, 
+a Taxable Person for Corporate Tax purposes, subject to the key considerations 
+covered above (in Section 3.3). 
+2. When a natural person resides outside the UAE – for instance, having their home 
+in another country – they become a Resident Person for Corporate Tax purposes 
+if they conduct Business or Business Activity in the UAE, subject to the key 
+considerations covered above (in Section 3.3). Accordingly, under the UAE 
+Corporate Tax Law, and if the natural person has not invoked the application of 
+an applicable Double Taxation Agreement, any natural person conducting 
+Business or Business Activity in the UAE will be a Resident Person for purposes 
+of the Corporate Tax Law. 
+ 
+Note that, where a natural person resides in a country that has an applicable Double 
+Taxation Agreement with the UAE, and as a result of the application of that Double 
+Taxation Agreement the natural person is not resident in the UAE but has a Permanent 
+Establishment in the UAE (and the Turnover attributable to the Permanent 
+Establishment exceeds AED 1 million within a Gregorian calendar year), they would 
+                                               
+4 Article 2(1) of Cabinet Decision No. 49 of 2023. 
+5 Article 2(2) of Cabinet Decision No. 49 of 2023. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 13 
+be a Non-Resident Person  and Taxable in the UAE as defined in Article 11(4) of the 
+Corporate Tax Law.  
+ 
+This guide only addresses the tax implications for natural persons under the UAE 
+Corporate Tax Law, i.e. without consideration of the potential implications of a Double 
+Taxation Agreement. 
+ 
+A natural person residing outside the UAE may also become a Non-Resident Taxable 
+Person if they derive State Sourced Income, which is income that accrues in, or is 
+derived from, the UAE, but is not derived through a Business or Business Activity 
+conducted by the natural person in the UAE (see Section 3.9). 
+ 
+Natural persons who are Non-Resident Persons should assess the potential 
+implications of a Double Taxation Agreement, taking into account relevant facts and 
+circumstances and read with Cabinet Decision No. 85 of 2022 and Ministerial Decision 
+No. 27 of 2023, where relevant. 
+ 
+Example 1: A natural person present in the UAE for client meeting 
+ 
+A natural person, Mrs. Z, employed by a foreign company based outside the UAE, 
+visits the UAE for 5 days to meet with clients, present new products, and visit 
+production facilities. 
+ 
+Mrs. Z is present in the UAE in their capacity as an employee. She is not conducting 
+a Business or Business Activity in the UAE on her own account, and, therefore, 
+Mrs. Z is not considered a Resident Person under the Corporate Tax Law. 
+ 
+Example 2: A natural person working from the UAE 
+ 
+A natural person, Mr. X on a visit visa to the UAE, sets up a small workshop to 
+restore antique jewellery. Working for himself, he generates a Turnover of AED 
+1,700,000 through selling items over several months in a Gregorian calendar year. 
+ 
+Mr. X is considered to be a Resident Person, as he is conducting a Business or 
+Business Activity in the UAE on his own account. His Turnover for the year is in 
+excess of AED 1 million, so the Business or Business Activity would be subject to 
+Corporate Tax. 
+  
+Mr. X will be a Resident Person for Corporate Tax purposes. 
+ 
+Note that whether a natural person is resident for Corporate Tax purposes is not 
+affected by whether immigration, work permit and Business licensing requirements 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 14 
+have been correctly dealt with or not. 
+ 
+3.5. What income is considered taxable for natural persons? 
+ 
+Only income derived from a Business or Business Activity conducted in the UAE by a 
+natural person is subject to Corporate Tax. 
+ 
+However, if a natural person’s total Turnover from Business or Business Activities 
+conducted in the UAE does not exceed AED 1 million within a Gregorian calendar 
+year, they do not have to register for or pay Corporate Tax on their income from the 
+Business or Business Activities. The Turnover may include “in-kind” payments which 
+are valued at Market Value.  
+ 
+For Corporate Tax purposes, Wage (employment income), Personal Investment 
+income, and Real Estate Investment income derived by a natural person are out of 
+scope of Corporate Tax and not taken into account for the purpose of determining the 
+AED 1 million threshold. 
+ 
+Example 3: A natural person providing consultancy services (self-employed) 
+ 
+A natural person, Mrs. A, based in the UAE, provides consultancy services to a 
+third-party company based outside the UAE and gets paid AED 1,200,000 for these 
+services within a Gregorian calendar year. After setting off their deductible costs, 
+her net profit is AED 900,000. 
+ 
+Mrs. A works for herself, and is not employed by the foreign company, so the 
+income derived is not in the nature of a Wage. The income also does not have the 
+nature of Personal Investment income or Real Estate Investment income.  
+ 
+In this case, the income from the consultancy services is that of a Business or 
+Business Activity. As the Turnover exceeds AED 1 million, Mrs. A’s income from 
+the consultancy services is subject to Corporate Tax. 
+ 
+Assuming that all costs are deductible for Corporate Tax purposes, Mrs. A’s 
+Taxable Income is AED 900,000. Note there is no exemption for the profit relating 
+to the first AED 1 million of Turnover. However, the Mrs. A will be able to benefit 
+from the 0% rate on the first AED 375,000 of Taxable Income. 
+ 
+In addition, as the Revenue (AED 1,200,000) of the Mrs. A does not exceed AED 
+3 million and assuming that the Revenue for previous Tax Periods also does not 
+exceed AED 3 million, she can elect for Small Business Relief. This would mean 
+she is treated as not having derived any Taxable Income for the relevant Tax Period 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 15 
+(see Section 3.12). 
+ 
+Example 4: A natural person earning money as an influencer 
+ 
+A natural person, Mr. B, based in the UAE, creates content on various social media 
+platforms. They earn money from and through these platforms. One source of 
+income comes from collaboration with brand owners to create sponsored content 
+and from participating in brand campaigns. In such collaborations, they negotiate 
+payment terms with the brand, which involve a commission and “in-kind” 
+consideration, such as receiving products from the brand owners. 
+ 
+During the 2024 Gregorian calendar year, Mr. B derives Turnover of AED 3,400,000 
+including the Market Value of “in-kind” payments. 
+ 
+Mr. B is considered to be a Resident Person, as he is conducting a Business or 
+Business Activity in the UAE on their own account. His Turnover for the year is in 
+excess of AED 1 million, so the Business or Business Activity would be subject to 
+Corporate Tax. 
+ 
+Example 5: A natural person providing consultancy services (employed) 
+ 
+A natural person, Miss C, is employed by Company A, a company incorporated and 
+effectively managed and controlled outside the UAE. Miss C provides consultancy 
+services to an unrelated company also based outside the UAE. Miss C does this 
+while being physically present in offices rented by Company A in the UAE. 
+Company A gets paid AED 2 million for the consultancy services rendered by the 
+natural person.  
+ 
+In this case, Miss C is not considered to be a Taxable Person as they are an 
+employee of Company A and not conducting Business Activity on their own 
+account. However, Company A may be subject to Corporate Tax as a Non-
+Resident Person, if it is considered to have a Permanent Establishment in the UAE. 
+ 
+Example 6: A natural person receiving investment income 
+ 
+A retired natural person, Mr. D, in the UAE earns portfolio income from money 
+invested through a UAE based asset management company. This is Mr. D’s only 
+source of income. Mr. D does not require a Licence from a Licensing Authority to 
+make their investments. 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 16 
+Mr. D’s income is exempt as it is Personal Investment income. Mr. D is not a 
+Taxable Person and the portfolio income is not subject to Corporate Tax. 
+ 
+3.6. What is a Business and a Business Activity 
+ 
+The Corporate Tax Law provides the definitions of Business and Business Activity 
+(see Glossary above) that fall under the scope of Corporate Tax in the UAE.6  
+ 
+Business Activity has a very comprehensive definition and includes any transaction or 
+activity, or series of transactions or activities, conducted by a Person in the course of 
+its Business. 
+ 
+Business is defined as any activity conducted regularly, on an ongoing and 
+independent basis. The definition provides the following examples for activities 
+constituting a Business: “industrial, commercial, agricultural, vocational, professional, 
+service or excavation activities”. The definition also mentions that any other activity 
+related to the use of tangible or intangible properties constitutes a Business. 
+ 
+Nevertheless, “ongoing” should not be interpreted in such a way so as to exclude 
+short-term activities. As such, short-term activities can be within the scope of 
+Corporate Tax on the basis that they constitute a “transaction or activity, or series of 
+transactions or series of activities” as prescribed in the definition. The definition allows 
+for a short-term commercial activity to be considered a Business for Corporate Tax 
+purposes. This is why the Corporate Tax Law refers to the “conduct” of a Business 
+rather than the “carrying on” of a Business.  
+ 
+Examples of activities conducted by a natural person that are not typically considered 
+a Business or a Business Activity would include lottery winnings or game show prizes. 
+ 
+However, whether or not a Business is conducted on an ongoing basis will be 
+evaluated on a case-by-case basis.  
+ 
+3.7. Business or Business Activities that are subject to Corporate Tax 
+ 
+Business or Business Activities conducted by a natural person in the UAE are subject 
+to Corporate Tax if the total Turnover exceeds AED 1 million within a Gregorian 
+calendar year.7 Turnover does not include gross income derived from the sources 
+previously noted and further described in Section 3.8 below. 
+ 
+                                               
+6 Article 1 of the Corporate Tax Law. 
+7 Article 2(1) of Cabinet Decision No. 49 of 2023. 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 17 
+The term Turnover is defined as the gross amount of income derived during a 
+Gregorian calendar year.8  This means that the Turnover is the sum of all the income 
+before any costs are deducted. 9  
+ 
+Where a natural person is considered a Resident Person and the total Turnover 
+derived from Business or Business Activities conducted in the UAE exceeds AED 1 
+million, their Taxable Income will include income derived from the UAE and from 
+outside the UAE but only insofar as it relates to the Business or Business Activities 
+conducted by the natural person in the UAE.10 
+ 
+In other words, if a natural person conducts a Business or Business Activity while 
+being present in the UAE, their Taxable Income (if any) will include income derived 
+from sources (for example, clients) located in the UAE and outside of the UAE, as long 
+as the income relates to the Business or Business Activities they are conducting in the 
+UAE. 
+ 
+For the purpose of determining whether the income is related to the Business or 
+Business Activity conducted in the UAE, it would be relevant to consider (among 
+others), the following elements: 
+- 
+whether persons who contributed to producing or selling the goods or services are 
+managed, working from or residents of the UAE, 
+- 
+whether contracting or Business development related to selling the goods or 
+providing the services was conducted from the UAE, or 
+- 
+whether the assets that contributed to the production of the goods or rendering of 
+the services are located in the UAE. 
+ 
+On the other hand, in general terms, where a natural person is considered a Non-
+Resident Person and the total Turnover derived from Business or Business Activities 
+conducted in the UAE exceeds AED 1 million, such natural person’s Taxable Income 
+would be limited to income derived from the UAE. 
+ 
+Example 7: A natural person conducting Business overseas with Business 
+Activity in the UAE 
+ 
+A natural person, Mr. E, conducts a Business in Country A as an architect and 
+generates the equivalent of AED 950,000 in providing architectural services. Mr. E 
+travels to the UAE on a regular basis with a view to establishing himself as an 
+architect in the UAE, and whilst in the UAE, he provides architectural services to 
+the value of AED 100,000. 
+                                               
+8 Article 1 of Cabinet Decision No. 49 of 2023. 
+9 Further guidance on Turnover is provided later in this Section. 
+10 Article 12(2) of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 18 
+ 
+Mr. E is considered to be a Resident Person in the UAE, as he is conducting a 
+Business or Business Activity in the UAE. His worldwide Turnover for the year is in 
+excess of AED 1 million, however, he is not subject to Corporate Tax as the 
+Turnover derived from Business or Business Activity in the UAE does not exceed 
+AED 1 million. The income derived from activities conducted in Country A does not 
+result from the use of assets or other resources located in the UAE. Accordingly, 
+that income is not related to the Business or Business Activity conducted in the 
+UAE. 
+ 
+When calculating the Turnover, Mr. E should only include income derived from the 
+UAE or related to the Business or Business Activity in the UAE.   
+ 
+Accordingly, wholly separate Business and Business Activity which are not related 
+or connected to the Business conducted in the UAE will not be taxable in the UAE 
+and, therefore, will not be considered for the AED 1 million threshold. Thus, Mr. E 
+will not have to register for Corporate Tax purposes. 
+ 
+If the income of AED 950,000 was related to the Business or Business Activity 
+conducted in the UAE, then Mr. E would be required to register for Corporate Tax 
+purposes as the AED 1 million threshold would be exceeded. 
+ 
+Example 8: Natural person deriving income from consultancy services 
+ 
+A natural person, Mrs. F, provides consultancy services in the UAE, and is, 
+therefore, considered a Resident Person for Corporate Tax purposes.  
+ 
+While based in the UAE, Mrs. F visits another jurisdiction to provide consultancy 
+services for a foreign company based in that other jurisdiction. The consultancy 
+services do not form part of a separate Business. 
+ 
+The income earned from the foreign company shall be included in Mrs. F’s Taxable 
+Income as it is not derived from a separate Business that she conducts outside the 
+UAE. 
+ 
+Example 9: A natural person practising as a physiotherapist in the UAE 
+ 
+A natural person, Mr. G, works as a physiotherapist in Country A, where he has 
+established his own clinic and has employed a secretary and a clinic assistant. 
+ 
+Mr. G comes to the UAE and establishes a physiotherapy clinic after receiving the 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 19 
+necessary Licence from the relevant UAE Licensing Authority. Mr. G also continues 
+to provide therapy sessions to his regular patients in his clinic in Country A while 
+he is back home. 
+ 
+Mr. G is considered to be a Resident Person in the UAE, as he is conducting 
+Business or Business Activity in the UAE. 
+ 
+Due to his work in the UAE and reputation for providing high-quality services, Mr. 
+G receives requests to provide treatment sessions from therapy centres in various 
+Gulf countries. 
+ 
+In this scenario, when calculating the Mr. G’s Turnover, both the income derived 
+from the UAE and from other Gulf countries (not being considered as Wage) should 
+be included as they relate to Business or Business Activities conducted in the UAE.  
+ 
+The income derived from the Gulf countries relates to the Business or Business 
+Activity in the UAE because those services are attributable to the UAE practice. 
+ 
+As for the income derived in Country A, it is not related to Mr. G’s Business in the 
+UAE since it was solely earned from regular patients of the separate Business in 
+that Country. 
+ 
+3.8. Exclusions from Corporate Tax 
+ 
+For a natural person, the income from specific activities (Wage, Personal Investment 
+income and Real Estate Investment income)  is not subject to Corporate Tax as these 
+sources are not considered as Business or Business Activities under the Corporate 
+Tax Law. This income is also not taken into account in determining if a natural person 
+has derived Turnover in excess of AED 1 million in a Gregorian calendar year from 
+Business or Business Activities conducted in the UAE. 
+ 
+3.8.1. Wage 
+ 
+Wage, including any compensation or benefit received, whether in cash or in-kind, by 
+any employee from their employer is not subject to Corporate Tax. Thus, a salary or 
+other form of remuneration received by a natural person as an employee from their 
+employer would not fall within the scope of Corporate Tax. The question of whether a 
+natural person is an employee and earns a salary or other form of remuneration as 
+such, is a question of fact to be determined on a case-by-case basis.  
+ 
+A natural person appointed as a director, for example as a member of the board of 
+directors of a Public Joint Stock Company, may receive fees and other similar 
+payments for carrying out this role, either in the course of their employment or as an 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 20 
+independent party appointed to a board of directors. Generally, director fees will not 
+be considered as a Business or Business Activity, and therefore would not be subject 
+to Corporate Tax. 
+ 
+Example 10: A natural person who is an employee and member of a board of 
+directors 
+ 
+A natural person, Mr. H, works for a company based in the UAE.  
+ 
+Mr. H holds a senior management position in the company and plays a crucial role 
+in its day-to-day operations. In addition to his employment responsibilities, he is a 
+member of the board of directors. 
+ 
+As an employee, Mr. H receives a market rate salary for his executive role, which 
+is determined by his employment contract and is subject to applicable employment 
+laws. 
+ 
+As a board member of the company, Mr. H also receives fees from the company 
+for attending board meetings. 
+ 
+The salary received by Mr. H is in the nature of a Wage and accordingly is not 
+subject to Corporate Tax.  
+ 
+In addition, the remuneration received by Mr. H in their capacity as a member of 
+the board of directors in the circumstances as set out above, would typically be 
+considered a Wage in the same way as an employee's salary and accordingly is 
+not subject to Corporate Tax. 
+ 
+3.8.2. Personal Investment income  
+ 
+Personal Investment income is not subject to Corporate Tax when derived by natural 
+persons from investment activity conducted in their personal capacity that is neither 
+conducted through a Licence or requiring a Licence from a Licensing Authority, nor 
+considered as a commercial business in accordance with the Commercial 
+Transactions Law. 
+ 
+To conduct Business in the UAE, a Licence may be required. The nature of the 
+economic activity defines the type of Licence required. In general, there are different 
+types of Licences, including industrial, commercial, crafts, tourism, agricultural, and 
+professional. However, in addition to these Licences, other types of Licences may be 
+issued by Local Governments, for example, a freelance Licence. 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 21 
+As mentioned above, Personal Investment is an investment activity that a natural 
+person conducts for their personal account and should not be an activity that is 
+“considered as a commercial business” in accordance with the Commercial 
+Transactions Law. 11 This law establishes various criteria for identifying a commercial 
+business.12  Broadly, a commercial business is defined as work practiced by a trader 
+in relation to their trade, or speculation works practiced by a person, whether or not a 
+trader, for the purpose of realising a profit, work considered by the Commercial 
+Transactions Law as commercial business (by virtue of its nature, if carried out as an 
+occupation, or equivalent), or work associated with or facilitating a commercial 
+business.13 
+ 
+However, where an activity is not considered a commercial business as per the 
+Commercial Transactions Law, it will not automatically be considered a Personal 
+Investment activity, unless it is conducted on the person's personal account and is 
+neither conducted through a Licence or required to be conducted through a Licence. 
+ 
+For details of the list of the categories mentioned above, please refer to Annexure 1 
+and to the Commercial Transactions Law. 
+ 
+Example 11: A natural person investing in listed securities 
+ 
+A natural person, Mrs. J, based in the UAE, invests (using personal savings) in 
+listed securities on a stock exchange where she earns income from her investment. 
+She does not require a Licence to make such an investment. 
+ 
+The income derived by Mrs. J is Personal Investment income and accordingly is 
+not subject to Corporate Tax. 
+ 
+Example 12: A natural person selling his personal car 
+ 
+A natural person, Miss K, based in the UAE, sells her personal luxury car for AED 
+1,500,000. The car is rare, and she makes a profit of AED 200,000.  
+ 
+The income derived by Miss K due to the sale of the car is not subject to Corporate 
+Tax as the sale of the car is on the personal account of the natural person and does 
+not require a Licence.   
+ 
+                                               
+11 Article 1 of Cabinet Decision No. 49 of 2023. 
+12 Article 4 of the Commercial Transactions Law. 
+13 Articles 5, 6 and 7 of the Commercial Transactions Law. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 22 
+Example 13: A natural person selling artwork 
+ 
+A natural person, Mr. L, based in the UAE, observes that the prices of the artwork 
+of a specific UAE artist have been increasing for more than a decade. Mr. L sets 
+up a small office at home and starts buying the artworks from the UAE in order to 
+sell them to clients located outside of the UAE through a network of partners located 
+in different countries. The total Turnover from this activity amounts to AED 5 million 
+within a Gregorian calendar year. 
+ 
+The income derived by Mr. L due to the sale of the artwork will be subject to 
+Corporate Tax as it is considered to be the conduct of a Business or Business 
+Activity.  
+ 
+3.8.3. Real Estate Investment income 
+ 
+Real Estate Investment income is not subject to Corporate Tax when derived by 
+natural persons if it is related, directly or indirectly, to the selling, leasing, sub-leasing, 
+and renting of land or real estate property in the UAE that is not through a Licence nor 
+requiring a Licence from a Licensing Authority. 
+ 
+Example 14: A natural person selling a residential apartment 
+ 
+A natural person, Mr. M, based in the UAE, sells his residential apartment for AED 
+2,500,000. As the value of the apartment had increased since he bought it, Mr. M 
+makes a profit of AED 500,000.  
+ 
+The income derived by the Mr. M due to the sale of their apartment is not subject 
+to Corporate Tax as he was not required to obtain a Licence to execute the sale. 
+ 
+Example 15: A natural person earning rental income 
+ 
+A natural person, Mrs. N, based in the UAE, owns several properties located in the 
+UAE and rents them out for AED 1,200,000 per calendar year. 
+ 
+As long as such activity is not required to be conducted through a Licence from a 
+Licensing Authority, the income derived by Mrs. N is not subject to Corporate Tax 
+as the activity is Real Estate Investment. 
+ 
+ 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 23 
+ 
+ 
+ 
+3.9. Natural persons deriving State Sourced Income  
+ 
+State Sourced Income is defined as income which is:14  
+• 
+derived from a UAE Resident Person, 
+• 
+derived from a UAE Permanent Establishment of a Non-Resident Person, or 
+• 
+accrued in or derived from activities performed, assets located, capital invested, 
+rights used, or services performed or benefitted from in the UAE. 
+ 
+State Sourced Income includes, but is not limited to, Dividends from UAE companies, 
+payments from UAE Businesses, royalties paid from the UAE and Interest from a UAE 
+bank account. The following are all examples of State Sourced Income:15 
+- 
+Income from the sale of goods in the UAE, 
+- 
+Income from the provision of services that are rendered or utilised or benefitted 
+from in the UAE, 
+- 
+Income from a contract insofar as it has been wholly or partly performed or 
+benefitted from in the UAE, 
+- 
+Income from movable or immovable property in the UAE, 
+- 
+Income from the disposal of shares or capital of a Resident Person, 
+- 
+Income from the use or right to use in the UAE, or the grant of permission to use 
+in the UAE, any intellectual or intangible property, 
+- 
+Interest that meets any of the following conditions: 
+o 
+The loan is secured by movable or immovable property located in the UAE, 
+o 
+The borrower is a Resident Person, or 
+o 
+The borrower is a Government Entity. 
+- 
+Insurance or reinsurance premiums in any of the following instances: 
+o 
+The insured asset is located in the UAE, 
+o 
+The insured Person is a Resident Person, or 
+o 
+The insured activity is conducted in the UAE. 
+ 
+Certain State Sourced Income, derived by a Non-Resident Person including a natural 
+person, that is not attributable to a Permanent Establishment, may be subject to 
+Withholding Tax. The current Withholding Tax rate is 0%.16   
+ 
+The Withholding Tax rate on State Source Income is currently 0%.  
+  
+                                               
+14 Article 13(1) of the Corporate Tax Law. 
+15 Article 13(2) of the Corporate Tax Law. 
+16 Article 45 of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 24 
+However, if the natural person is a Resident Person (or is a Non-Resident Person 
+having a Permanent Establishment in the UAE), their related income would be subject 
+to Corporate Tax at the applicable rate (rather than Withholding Tax). This would 
+require them to register with the FTA for Corporate Tax purposes, subject to the key 
+considerations covered in Section 3.3.  
+ 
+3.10. Computation of Turnover 
+ 
+For the purposes of calculating the Turnover of natural persons, gross income derived 
+during a Gregorian calendar year from all the categories of Businesses or Business 
+Activities that they conduct should be taken into consideration. For example, income 
+derived from a sole proprietorship or their share of income from a fiscally transparent 
+Unincorporated Partnership would need to be combined.  
+ 
+Income derived from Wage, Personal Investments, or Real Estate Investments is 
+excluded when determining the Turnover.  
+ 
+For the purpose of determining whether the natural person’s Turnover exceeds the 
+threshold of AED 1 million, the Turnover is that of the Gregorian calendar year in 
+question.17 Turnover should be measured on an accrual basis of accounting except 
+where the natural person applies the Cash Basis of Accounting.18 
+ 
+Example 16: Natural person deriving income from sales of goods and 
+receiving a Wage 
+ 
+A natural person, Mr. O, based in the UAE, earns the following income during a 
+Gregorian calendar year: 
+• 
+Annual salary from an employment contract: AED 300,000 
+• 
+Bonuses in accordance with the employment contract: AED 150,000 
+• 
+Turnover from baking and selling cupcakes: AED 900,000  
+ 
+Only the income derived from the sale of the cupcakes should be taken into 
+consideration when calculating the total Turnover as the rest of the income is Wage 
+and should not be taken into account. 
+ 
+The Turnover is AED 900,000 and does not exceed the threshold of AED 1 million. 
+Therefore, Mr. O is not subject to Corporate Tax in the calendar year. 
+ 
+ 
+ 
+                                               
+17 Article 2(1) of Cabinet Decision No. 49 of 2023. 
+18 Article 2 of Ministerial Decision No. 114 of 2023. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 25 
+3.11. Corporate Tax rate for natural persons 
+ 
+The below rates apply to the total Taxable Income of a natural person, i.e. the Taxable 
+Income derived from all Businesses or Business Activities conducted in the UAE by 
+such natural person and not the Taxable Income of each Business or Business Activity 
+separately. 
+ 
+When the Turnover derived by the natural person in a Gregorian calendar year 
+exceeds the AED 1 million, the Taxable Income of a natural person will be subject to 
+Corporate Tax at the following rates:19   
+• 
+0% on the portion of the Taxable Income not exceeding AED 375,000. 
+• 
+9% on the portion of the Taxable Income that exceeds AED 375,000. 
+ 
+Example 17: Natural person receives a Wage and conducts Business in the 
+UAE 
+ 
+A natural person, Miss P, based in the UAE, conducted the following activities 
+during a Gregorian calendar year: 
+• 
+Worked for 3 months under an employment contract and earned AED 200,000. 
+• 
+Worked as a freelance graphic designer in the UAE generating AED 1,600,000 
+Turnover (assume AED 400,000 of deductible expenses). 
+• 
+Ran a sole proprietorship that sold mobile phones and accessories in the UAE 
+and overseas. The gross income from domestic sales amounted to AED 
+1,200,000, and AED 800,000 from overseas sales (assuming AED 1,400,000 
+of deductible expenses). 
+ 
+Step 1 – Calculation of the Turnover 
+ 
+The income derived from freelance activity, and from the sole proprietorship (both 
+domestic and overseas sales, as the latter is related to the activity conducted in the 
+UAE) are taken into consideration in computing the Turnover. Wage income is not 
+considered. Therefore: 
+ 
+Turnover = 1,600,000 + 1,200,000 + 800,000 = AED 3,600,000. As such, the 
+natural person is considered to conduct Business or Business Activities that are 
+subject to Corporate Tax, and the Corporate Tax is computed on the Taxable 
+Income, which is the Accounting Income after the relevant required adjustments as 
+per the Corporate Tax Law. 
+ 
+ 
+                                               
+19 Article 3 of the Corporate Tax Law and Articles 2(1) and 3 of Cabinet Decision No. 116 of 2022. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 26 
+Step 2 – Calculation of Taxable Income 
+ 
+Accounting Income = Turnover – expenses = 3,600,000 – (400,000 + 1,400,000) = 
+AED 1,800,000. 
+ 
+Adjustments = 0. In this case it is assumed no adjustments are required. 
+ 
+Taxable Income = Accounting Income +\- adjustments = 1,800,000 +\- 0 = AED 
+1,800,000. 
+ 
+Step 3 – Calculation of the Corporate Tax 
+ 
+AED 375,000 x 0% = 0. 
+(Taxable Income over AED 375,000): 1,425,000 x 9% = AED 128,250. 
+ 
+Corporate Tax Payable = AED 128,250. 
+ 
+3.12. Interaction with Small Business Relief 
+ 
+It is possible for a natural person to elect for Small Business Relief under Article 21 of 
+the Corporate Tax Law. The relevant conditions need to be satisfied, including the fact 
+that the Revenue from the taxable Business or Business Activity of the natural person 
+in the relevant Tax Period and previous Tax Periods does not exceed AED 3 million 
+for each Tax Period.20    
+ 
+Note that the Small Business Relief is based on Revenue, where Revenue is defined 
+as the gross amount of income derived during a Tax period. A natural person’s Tax 
+Period is the Gregorian calendar year (see Section 6.3). Thus, a natural person’s 
+Revenue will be the same as Turnover, being the gross amount of income derived 
+during a Gregorian calendar year. 
+ 
+Example 18: Natural person electing for Small Business Relief 
+ 
+A natural person, Mr. Q, based in the UAE, is self-employed and earns the following 
+income during a calendar year: 
+• 
+Real Estate Investment income: AED 2,300,000 
+• 
+Income derived from providing consulting services: AED 1,900,000 
+ 
+Only the income derived from providing consulting services should be taken into 
+consideration when calculating Turnover. The Real Estate Investment income is 
+                                               
+20 Article 2(1) of Ministerial Decision No. 73 of 2023. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 27 
+not derived through a Licence and, thus, is not considered to be a Business or 
+Business Activity for Mr. Q and, therefore, is not included in the Turnover.  
+ 
+The Turnover is AED 1,900,000. This exceeds the AED 1 million threshold but is 
+below the AED 3 million threshold for Small Business Relief.  
+ 
+In this case, Mr. Q will have to register with the FTA for Corporate Tax purposes; 
+and he may elect for Small Business Relief as his Turnover does not exceed AED 
+3 million assuming that the Turnover from previous Tax Periods does not exceed 
+AED 3 million and all other requirements for this relief are met. 
+ 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 28 
+4. Corporate Tax calculations for natural persons 
+ 
+4.1. Interest deduction 
+ 
+Where a natural person is subject to Corporate Tax, the General Interest Deduction 
+Limitation Rule does not apply.21 This rule would otherwise cap Interest deductions at 
+the higher of AED 12,000,000 or 30% of their taxable earnings before the deduction 
+of Interest, tax, depreciation and amortisation (EBITDA).22  
+ 
+Instead, for a natural person, provided that the Interest expenditure is incurred wholly 
+and exclusively for the purposes of the natural person’s Business, and meets the arm’s 
+length principle, the Interest expenditure will be fully deductible.23    
+ 
+Example 19: A natural person taking a loan not wholly and exclusively for 
+business purposes 
+ 
+A natural person, Mrs. R, based in the UAE, provides advisory services to various 
+UAE based companies and earns AED 4 million for these services in a Gregorian 
+calendar year. 
+ 
+Mrs. R takes a loan to purchase the apartment she lives in, as well as to purchase 
+a new office premises to work from. 
+ 
+In this case, Mrs. R will not be entitled to deduct the Interest expense relating to 
+the portion of the loan applied to fund the purchase of the apartment. However, she 
+should apportion the Interest expense as she would be entitled to deduct the 
+Interest expense relating to the portion of the loan applied to the purchase of the 
+office.  
+ 
+This is on the basis that the latter cost is incurred wholly and exclusively for the 
+purposes of Mrs. R’s Business, but the former is not. 
+ 
+Example 20: General Interest Deduction Limitation Rule not applicable to 
+natural persons 
+ 
+A natural person, Mr. S, based in the UAE, conducts a licensed real estate activity, 
+buying and selling UAE real estate properties, and earns gross income of AED 104 
+million from sales in the calendar year. 
+                                               
+21 Article 30(6)(c) of the Corporate Tax Law. 
+22 Article 30(1) and 30(3) of the Corporate Tax Law and Article 8 of Ministerial Decision no. 126 of 2023. 
+23 Article 28(1) of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 29 
+ 
+Assuming the EBITDA (earnings before the deduction of Interest, tax, depreciation 
+and amortisation) of Mr. S is AED 30 million and the incurred Interest expenses 
+related to this activity for the same calendar year amount to AED 15 million. 
+ 
+The Interest expense is more than 30% of EBITDA (AED 30 million x 30% = AED 
+9 million) as well as the de minimis of AED 12 million. However, the Interest 
+expense is fully deductible as the General Interest Deduction Limitation Rule does 
+not apply to natural persons. 
+ 
+4.2. General deduction rules relating to Business expenditure 
+ 
+Expenditure incurred by a natural person wholly and exclusively for the purposes of 
+his or her Business that is not capital in nature shall be deductible in the Tax Period in 
+which it is incurred. This general rule is subject to certain limitations. Accordingly, no 
+deduction is allowed in relation to the following:24  
+a. Expenditure not incurred for the purposes of the natural person’s Business. 
+b. Expenditure incurred in deriving Exempt Income (other than Interest expenditure).  
+c. Losses not connected with or arising out of the natural person’s Business.  
+ 
+If expenditure is incurred for more than one purpose, a deduction would be allowed 
+for any identifiable part or proportion of the expenditure incurred wholly and exclusively 
+for the purposes of deriving Taxable Income, or if not incurred wholly and exclusively 
+for the purposes of Business, an appropriate proportion of any unidentifiable part or 
+proportion of the expenditure incurred for the purposes of deriving Taxable Income 
+that has been determined on a fair and reasonable basis, having regard to the relevant 
+facts and circumstances of the natural person’s Business. 
+ 
+4.3. Non-deductible expenditure rules and natural persons 
+ 
+Article 33 of the Corporate Tax Law disallows deductions for certain types of 
+expenditure. This includes a specific disallowance for amounts withdrawn from a 
+Business by a natural person.25 For example, amounts withdrawn by a natural person 
+from their sole proprietorship Business – even if described as Wage or salary – cannot 
+be deducted in calculating the Taxable Income arising from that Business. 
+ 
+ 
+ 
+ 
+                                               
+24 Article 28 of the Corporate Tax Law. 
+25 Article 33(5) of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 30 
+Example 21: Taxable Income of a sole proprietorship 
+ 
+A natural person, Mr. T conducts a Business through a sole proprietorship in the 
+UAE. Mr. T has registered for Corporate Tax with the FTA after meeting the 
+required conditions. 
+ 
+For the Tax Period ended 31 December 2025, Mr. T withdrew AED 200,000 from 
+the business and recorded this in his Business accounts as an annual salary cost 
+on the basis that Mr. T is operating the Business. 
+ 
+Since Mr. T is running a sole proprietorship Business, no deduction is allowed for 
+the AED 200,000, as Mr. T and the Business are one and the same Taxable Person 
+even if the salary would have been an arm’s length salary. 
+ 
+4.4. Related Parties for natural persons 
+ 
+The transactions of a natural person with Related Parties are required to follow the 
+arm’s length principle for the purposes of Corporate Tax.26 The arm’s length principle 
+requires the results of transactions or arrangements between Related Parties to be 
+consistent with the results that would have been realised if Persons who were not 
+Related Parties had engaged in a similar transaction or arrangement under similar 
+circumstances. 
+ 
+A natural person can be a Related Party of one or more natural or juridical persons. 
+This is discussed below. 
+ 
+4.4.1. Other natural persons 
+ 
+Two or more natural persons are considered to be Related Parties if their relationship 
+is within the fourth degree of kinship or affiliation, including by way of adoption or 
+guardianship.27 
+ 
+In calculating the degree of kinship: 
+a. A relative of one of the spouses is considered of the same degree of kinship in 
+relation to the other spouse.28 
+                                               
+26 Article 34 of the Corporate Tax Law. 
+27 Article 35(1)(a) of the Corporate Tax Law. 
+28 Article 79 of the Civil Transactions Law. 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 31 
+b. In the case of direct kinship, the degree is calculated by considering each 
+descendant (a son or daughter) a degree upward to the ascendant (the father or 
+mother).29 
+c. In the case of indirect kinship, degrees are counted upwards from the descendant 
+to the common ancestor and then downwards from the latter to the other 
+descendant. Each descendant, excluding the common ancestor, is counted as a 
+degree.30 
+ 
+A husband and wife are considered to be in a relationship of the first degree of 
+affiliation. 
+ 
+Example 22: Examples of kinship and affiliation 
+ 
+First-degree: husband and wife, parents and children as well as parents and 
+children of the spouse. 
+ 
+Second-degree: Grandparents, grandchildren and siblings as well as grandparents, 
+grandchildren and siblings of the spouse. 
+ 
+Third-degree: Great-grandparents, great grandchildren, uncles, aunts, nieces and 
+nephews as well as great-grandparents, great grandchildren, uncles, aunts, nieces 
+and nephews of the spouse. 
+ 
+Fourth-degree: Great-great-grandparents, great-great-grandchildren, grand uncle, 
+grand aunt, grandniece, grandnephew and first cousins as well as great-great-
+grandparents, great-great-grandchildren, grand uncle, grand aunt, grandniece, 
+grandnephew and first cousins of the spouse. 
+ 
+4.4.2. Juridical persons  
+ 
+A natural person’s Related Party relationships with juridical persons are identified 
+based on ownership and Control.31  
+ 
+4.4.2.1. 
+Relationship based on ownership 
+ 
+A juridical person is considered to be a Related Party of a natural person if the natural 
+person or one or more Related Parties of the natural person are shareholders in the 
+                                               
+29 Article 78 of the Civil Transactions Law. 
+30 Article 78 of the Civil Transactions Law. 
+31 Article 35(1)(b) of the Corporate Tax Law. 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 32 
+juridical person, and the natural person, alone or together with its Related Parties, 
+directly or indirectly owns a 50% or more interest in the juridical person.32 
+ 
+Example 23: Related Parties based on ownership 
+ 
+Case 1: A natural person owns 50% of a UAE limited liability company, Company 
+A: The natural person and Company A are Related Parties. 
+ 
+Case 2: A natural person’s spouse owns 50% of Company A: The natural person, 
+the spouse and Company A are considered Related Parties. 
+ 
+Case 3: A natural person owns 40% of Company A and the uncle of the individual’s 
+spouse owns 15% of the same company: The natural person, the spouse, the 
+spouse’s uncle and Company A are considered Related Parties. 
+ 
+Case 4: A natural person owns 80% of Company A, and Company A owns 70% of 
+another UAE limited liability company, Company B:  
+- 
+The natural person owns indirectly 56% (80% x 70% = 56%) of Company B. 
+- 
+The natural person and Company A are Related Parties – direct ownership. 
+- 
+The natural person and Company B are Related Parties – indirect 
+ownership. 
+ 
+4.4.2.2. 
+Relationship based on Control 
+ 
+A juridical person is considered to be a Related Party for a natural person if the natural 
+person, alone or together with its Related Parties, directly or indirectly Controls the 
+juridical person.33  
+ 
+For a natural person, Control means the ability of the natural person to influence 
+another Person. Control may be exerted in different ways:34  
+• 
+the ability to exercise 50% or more of the voting rights; or 
+• 
+the ability to determine the composition of 50% or more of the board of directors; 
+or 
+• 
+the ability to receive 50% or more of the profits; or 
+• 
+the ability to determine, or exercise significant influence over, the conduct of the 
+Business and affairs. 
+ 
+ 
+ 
+                                               
+32 Article 35(1)(b)(1) of the Corporate Tax Law. 
+33 Article 35(1)(b)(2) of the Corporate Tax Law. 
+34 Article 35(2) of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 33 
+ 
+4.4.3. Partners in the same Unincorporated Partnership 
+ 
+Partners in an Unincorporated Partnership, whether the Unincorporated Partnership 
+has applied to be treated as a Taxable Person or not, are Related Parties.35 This is 
+because of the partners’ shared Control over the Business of the partnership. 
+ 
+4.4.4. Trusts and foundations 
+ 
+A Person who is the trustee, founder, settlor or beneficiary of a trust or foundation will 
+be considered Related Parties of the trust or foundation and its Related Parties.36 
+ 
+4.5. Connected Persons 
+ 
+Similar to the requirement that transactions conducted between Related Parties 
+should meet the arm’s length principle for Corporate Tax purposes, a payment or 
+benefit provided by a Taxable Person to its Connected Person in exchange for 
+services (or whatever is otherwise provided), is deductible for Corporate Tax purposes 
+only to the extent that it follows the arm’s length principle.  
+ 
+A payment or benefit made by a Taxable Person to a Connected Person in excess of 
+the Market Value in relation to such transactions is not deductible for such Taxable 
+Person. This is also subject to the expenditure meeting the general requirements to 
+be deductible under Article 28 of the Corporate Tax Law. 
+ 
+Unlike the Related Party rules, the Connected Persons provisions only apply to the 
+Taxable Person making the payment, not the recipient. Article 36 defines a Connected 
+Person as an owner, director or officer of the Taxable Person, or a Related Party of 
+any owner, director or officer.  
+ 
+A Taxable Person that is a natural person will not have an owner, director or officer, 
+as these concepts relate to juridical persons. The only aspect of the definition of 
+Connected Person which may apply to a natural person is that partners in an 
+Unincorporated Partnership are Connected Persons with each other (and also the 
+other partners’ Related Parties, such as relevant family members). 
+ 
+Example 24: Related Parties, Control and Connected Persons 
+ 
+Mr. B is a first cousin of Ms. C. Mr. B owns 75% of Company X (a UAE company). 
+Ms. C owns 20% of Company Y (a UAE company). She owns Preferred Shares 
+                                               
+35 Article 35(1)(e) of the Corporate Tax Law. 
+36 Article 35(1)(f) of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 34 
+which entitle her to 60% of the voting rights in Company Y. She is also a partner in 
+a UAE Unincorporated Partnership, P Partners. The other partner in the partnership 
+is a UAE company, Company Z. 
+ 
+ 
+ 
+• 
+Mr. B and Ms. C are Related Parties as they are first cousins, and related to 
+the fourth degree of kinship. 
+• 
+Mr. B and Company X are Related Parties - Mr B is a natural person who 
+directly owns more than 50% of the juridical person Company X. Mr. B is a 
+Connected Person of Company X because he is an owner of Company X.  
+• 
+Mr B and Company Y are Related Parties - Mr B is an individual who, together 
+with his Related Party, Ms C, Controls Company Y. Both Mr B and Ms C are 
+Connected Persons of Company Y because Ms. C is an owner of Company Y 
+and Mr. B is a Related Party of Ms C. 
+• 
+Mr. B is a Connected Person of Company Z – Mr. B is a Related Party of Ms 
+C, who is a partner in the same Unincorporated Partnership as Company Z. 
+• 
+Ms. C and Company X are Related Parties - Ms C is an individual who, together 
+with her Related Party, Mr. B, Controls Company X. Ms. C is a Connected 
+Person of Company X because she is a Related Party of Mr. B who owns 
+Company X.  
+• 
+Ms. C and Company Y are Related Parties – Ms. C is an individual who directly 
+Controls a juridical person, Company Y, as, albeit she owns 20% of Company 
+Y, she holds more than 50% of the voting rights. Ms. C is a Connected Person 
+of Company Y.  
+• 
+Ms. C and Company Z are Related Parties - they are partners in the same 
+Unincorporated Partnership P. Ms. C is a Connected Person of Company Z.  
+because she is a partner with Company Z in the same Unincorporated 
+Partnership P. 
+ 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 35 
+5. Interaction with other Business forms and entities 
+ 
+5.1. Juridical person 
+ 
+A juridical person is a legal entity with a separate personality. Ownership of a juridical 
+person by a natural person does not in itself make the natural person a Taxable 
+Person. 
+ 
+Subject to the conditions explained above, natural persons and juridical persons can 
+be considered Related Parties or Connected Persons. If a natural person conducts 
+Businesses or Business Activities in their own right, any transaction or arrangement 
+they conduct with a juridical person that is a Related Party should meet the arm’s 
+length principle for the purposes of Corporate Tax.  
+ 
+5.2. Sole proprietorship  
+ 
+A sole proprietorship is a type of Businesses owned and conducted by a natural person 
+on his/her own account and in their own name, as the case may be.  
+ 
+For Corporate Tax purposes, the sole proprietorship and the natural person are one 
+and the same because of their direct relationship and Control over the Business and 
+their unlimited liability for the debts and other obligations of the Business. The natural 
+person conducting the Business will be the Taxable Person, not the sole proprietorship 
+itself. 
+ 
+5.3. Unincorporated Partnerships 
+ 
+An Unincorporated Partnership is a relationship established by contract between two 
+Persons or more. Generally, each partner in an Unincorporated Partnership is treated 
+as an individual Taxable Person for the purposes of the Corporate Tax Law.37 Subject 
+to the Turnover threshold conditions (see Section 3.7), a natural person partner is 
+subject to Corporate Tax directly on their distributive share and their Taxable Income 
+is determined according to the standard rules. 
+ 
+The partners in the Unincorporated Partnership may apply to the FTA for the 
+Unincorporated Partnership to be treated as a Taxable Person.38 Where such an 
+application is approved, the income of the Unincorporated Partnership is taxed at the 
+level of the Unincorporated Partnership instead of at the level of the partners.  
+ 
+                                               
+37 Article 16(1) of the Corporate Tax Law. 
+38 Article 16(8) of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 36 
+In this situation, the partner would need to assess if they had any other Business (other 
+than the partnership) which may be subject to Corporate Tax based on the principles 
+explained in the previous sections. If not, such partner would not be subject to 
+Corporate Tax (other than through the partnership). 
+ 
+5.4. Family Foundation 
+ 
+Natural persons can set up a Family Foundation using different structures such as a 
+contractual trust, a private trust company, a foundation or any other similar entity to 
+hold and manage personal assets and investments for asset protection, succession, 
+etc.  
+ 
+Some of these structures (such as a trust or foundation) may be considered to have a 
+separate legal personality i.e. a juridical person as per the applicable legislation in the 
+UAE, for example the Federal Trust Law.39 A juridical person is treated as a Taxable 
+Person and not a fiscally transparent entity for Corporate Tax purposes.  
+ 
+Where a Family Foundation is a juridical person, it would be subject to Corporate Tax. 
+In particular, any investment income of its founder, settlor or any of its beneficiaries 
+would be subject to Corporate Tax at the Family Foundation level. Any income 
+received by natural persons, as beneficiaries, from a Family Foundation that is a 
+Taxable Person would not be Taxable Income in the hands of the beneficiary as it 
+would be investment income already subject to Corporate Tax at the Family 
+Foundation level.  
+  
+However, a Family Foundation can make an application to the FTA to be treated as 
+an Unincorporated Partnership (and, therefore, transparent from a Corporate Tax 
+perspective) where certain conditions are met.40 One of these conditions is that the 
+Family Foundation does not conduct any activity that would have constituted a 
+Business or Business Activity as per Article 11(6) of the Corporate Tax Law had the 
+activity been undertaken, or its assets been held, directly by its founder, settlor, or any 
+of its beneficiaries. Therefore, if the Family Foundation is eligible to be treated as an 
+Unincorporated Partnership and is treated as such where an application is submitted 
+and approved by the FTA, the share of income of the natural persons as beneficiaries 
+would not constitute Taxable Income for the natural persons. This reflects the 
+requirement that the Family Foundation does not conduct any activity that would have 
+constituted a Business or Business Activity had the activity been undertaken, or its 
+assets been held, directly by the natural persons. 
+ 
+ 
+                                               
+39 Article 3 of the Trust Law. 
+40 Article 17(1) of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 37 
+6. Corporate Tax compliance for natural persons 
+ 
+6.1. Tax Registration 
+ 
+Natural persons conducting Businesses or Business Activities in the UAE that are 
+subject to Corporate Tax are only required to register for Corporate Tax purposes once 
+the total Turnover derived from such Businesses or Business Activities exceeds AED 
+1 million within a Gregorian calendar year.41 
+ 
+In case a natural person is a partner in an Unincorporated Partnership that is not 
+treated as a Taxable Person in its own right, they are treated as conducting the 
+Business of the Unincorporated Partnership. Therefore, they would need to assess 
+whether they are Taxable Persons in their individual capacity and whether they need 
+to register for Corporate Tax purposes by allocating the income of the partnership 
+based on their distributive share in the partnership during the Gregorian calendar year 
+and adding this to their Turnover from any other Business which they carry on (if any).  
+ 
+If following their initial Tax Registration, a natural person conducts new Business or 
+Business Activities, the same Tax Registration Number will be utilised for such 
+Business or Business Activities, and the natural person is not required to register again 
+with the FTA for Corporate Tax purposes. In this case, the natural person is required 
+to include the Taxable Income and the relevant information of the new Business or 
+Business Activities in their Tax Return under the same Tax Registration Number (see 
+Section 6.5 below). 
+ 
+When a natural person who has registered for Corporate Tax with the FTA finds their 
+Turnover not exceeding the AED 1 million threshold during any subsequent Gregorian 
+calendar year, they will retain their Tax Registration status. They are not permitted to 
+deregister for Corporate Tax unless they have ceased conducting Business or 
+Business Activities as explained in Section 6.2 below. 
+ 
+Example 25: Corporate Tax Registration for natural persons 
+ 
+Case 1: A natural person is a shareholder in a joint stock company and does not 
+conduct Business independently from the company. In such case, the natural 
+person is not required to register. 
+ 
+Case 2: A natural person develops accounting software in the UAE and starts 
+selling licenses to companies and the total sales in a Gregorian calendar year are 
+AED 1,200,000. In such case, the natural person is required to register. 
+                                               
+41 Article 2(1) of Cabinet Decision No. 49 of 2023 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 38 
+ 
+Case 3: A natural person is a shareholder of a joint stock company and opens an 
+independent car rental agency operated from his home in the UAE that generates 
+a monthly income of AED 500,000. In such case, the natural person is required to 
+register as his total income in the Gregorian calendar year in the UAE exceeds 
+AED 1 million. 
+ 
+Case 4: A natural person employed by a UAE limited liability company sells his 2 
+personal cars for more than AED 550,000 each. In such case, the natural person 
+is not required to register on the basis that this is not a Business Activity. 
+ 
+Case 5: A natural person derives rental income from 3 apartments they own in the 
+UAE that they bought as a Real Estate Investment. They do not hold a Licence or 
+require a Licence to rent the apartments. In such case, the natural person is not 
+required to register. 
+ 
+6.2. Tax Deregistration 
+ 
+6.2.1. Cessation of Business or Business Activity 
+ 
+A natural person registered for Corporate Tax purposes, or in certain cases, their Legal 
+Representative, shall file a Tax Deregistration application with the FTA in case of 
+cessation of Business or Business Activity whether by dissolution, liquidation, or 
+otherwise.42 The application shall be filed within 3 months of the date of cessation of 
+the Business or Business Activity.43  
+ 
+The application shall not be filed if any of the natural person’s Businesses or Business 
+Activities are still active or being conducted, even if the natural person’s Turnover falls 
+under the AED 1 million threshold within a Gregorian calendar year. 
+ 
+Since the Tax Period of a natural person is the Gregorian calendar year (see Section 
+6.3) and their Taxable Income includes all Businesses or Business Activities 
+conducted during that year (see Section 3.10), a natural person has only one Tax 
+Registration Number for all their Businesses or Business Activities (see Section 6.1). 
+If the natural person has more than one Business or Business Activity, then the natural 
+person should deregister only when all Business or Business Activity has ceased.  
+ 
+Where a natural person has ceased Business or Business Activities part-way through 
+a Tax Period, the Tax Period will come to an end (see Section 6.3). The Tax 
+Deregistration application must be submitted within 3 months of the cessation and the 
+                                               
+42 Article 52(1) of the Corporate Tax Law, and Article 42(2) of the Tax Procedures Law. 
+43 Article 2(1) of FTA Decision No. 6 of 2023. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 39 
+Tax Return will be due in line with ordinary time limits (9 months from the end of the 
+Tax Period) (see Section 6.5). The Tax Deregistration will not be approved where the 
+natural person has not filed all the required Tax Returns, including the Tax Return for 
+the Tax Period up to and including the date of cessation, and paid all due Corporate 
+Tax and Administrative Penalties.44 
+ 
+In the event that a natural person submits an application for deregistration and then in 
+the same year commenced a new Business or Business Activity following 
+deregistration, the suspended Tax Registration Number is reactivated.45  
+ 
+6.2.2. Death of the Taxable Person 
+ 
+In instances where a natural person conducting Business or Business Activities dies, 
+the natural person ceases to be a Taxable Person. The settlement of any outstanding 
+Corporate Tax liabilities due from the natural person prior to the date of death, shall 
+be made in accordance with the provisions of Article 42(1) of the Tax Procedures Law. 
+These apply as follows: 
+ 
+• 
+For Corporate Tax Payable due prior to the date of death, settlement shall be 
+made from the value of the elements of the estate or income arising thereof prior 
+to distribution among the heirs or legatees. 
+• 
+If it transpires after the distribution of the estate that there is Corporate Tax 
+Payable still outstanding, recourse shall be had against the heirs and legatees for 
+settlement of such outstanding tax each to the extent of their share in the estate, 
+unless a clearance certificate has been obtained from the FTA for the estate 
+representative or any of the heirs.  
+ 
+6.3. Tax Period 
+ 
+The Tax Period for a natural person who conducts Business or Business Activity that 
+is subject to Corporate Tax, shall be the Gregorian calendar year. The Gregorian 
+calendar year runs from 1 January until 31 December. The first potential Tax Period 
+for a natural person is the 2024 Gregorian calendar year. A natural person starting 
+their Business or Business Activity on 1 October 2024 would need to assess whether 
+they exceed the AED 1 million threshold on 31 December 2024. If this is the case, they 
+would need to register for Corporate Tax purposes and their first Tax Period would be 
+the Gregorian calendar year commencing on 1 January 2024 and ending on 31 
+December 2024. They would need to file their Corporate Tax return before the end of 
+September 2025. 
+ 
+                                               
+44 Article 52(2) of the Corporate Tax Law. 
+45 Article 6(3) of Cabinet Decision No. 74 of 2023. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 40 
+6.4. Accounting Standards and Financial Statements 
+ 
+A natural person that is a Taxable Person shall prepare standalone Financial 
+Statements in accordance with International Financial Reporting Standards (“IFRS”). 
+However, where their Turnover does not exceed AED 50 million, they may apply the 
+International Financial Reporting Standard for small and medium-sized entities (“IFRS 
+for SMEs”).46 
+ 
+When it comes to the method of accounting, they may prepare Financial Statements 
+using the Cash Basis of Accounting if their Turnover does not exceed AED 3 million, 
+or in exceptional circumstances pursuant to an application submitted to and approved 
+by the FTA.47 
+ 
+The Financial Statements should be prepared based on the aggregation of all the 
+Business and Business Activities subject to Corporate Tax that are conducted by the 
+natural person.  
+ 
+Where natural persons derive Turnover exceeding AED 50 million, they must prepare 
+and maintain audited Financial Statements for the relevant Tax Period.48 
+ 
+6.5. Tax Return 
+ 
+A natural person that is a Taxable Person must file a Corporate Tax Return to the FTA 
+no later than 9 months from the end of the relevant Tax Period.49 
+ 
+Natural persons should submit a single Tax Return for all their Businesses and 
+Business Activities subject to Corporate Tax. 
+ 
+Natural persons who have registered with the FTA for Corporate Tax after meeting the 
+relevant conditions, will be required to file a ‘nil’ Tax Return within 9 months following 
+the end of subsequent Tax Period in which their total Turnover derived from the 
+Business or Business Activities conducted in the UAE does not exceed AED 1 million. 
+As for the Tax Periods where their Turnover exceeds AED 1 million, they should file 
+the Tax Return as indicated above.   
+ 
+                                               
+46 Article 4 of Ministerial Decision No. 114 of 2023. 
+47 Article 2 of Ministerial Decision No. 114 of 2023. 
+48 Article 2 of Ministerial Decision No. 82 of 2023. 
+49 Article 53 of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 41 
+7. Annexures 
+ 
+7.1. Annexure 1: Commercial business 
+ 
+A commercial business, as per the Commercial Transaction Law, includes:50 
+1. the work practiced by the trader in relation to his trade, and each work practiced 
+by the trader considered related to his trade, unless otherwise is evident; 
+2. speculation works practiced by a person, whether or not a trader, for purpose of 
+realising profit; 
+3. the works considered by the Law as commercial business; and  
+4. the works associated with or facilitating a commercial business.  
+ 
+The following works shall be considered commercial business, by virtue of their 
+nature:51 
+1. Purchase of tangible and intangible chattel for purpose of sale with profit whether 
+sold as is, or after transformation or manufacture.  
+2. Purchase or hire of tangible and intangible chattel for purpose of lease.  
+3. Sale or hire of purchased or hired chattel as aforementioned.  
+4. Operations of banks, exchanges, stock market, operations of mutual funds, trust 
+funds and financial institutions and all other operations of financial brokerage.  
+5. All commercial papers’ operations, whatever the capacity of the interested parties 
+therein, and whatever the nature of the operations for which the same is created.  
+6. All works of marine and air navigation, including:  
+a. Building, selling, purchasing, leasing, chartering, repairing or maintaining 
+ships and aircrafts, and marine and air consignments, including the marine 
+and air transport.  
+b. Selling or purchasing equipment, tools or materials of ships or aircrafts or their 
+catering.  
+c. Loading and discharge works.  
+d. Marine and aircraft loans.  
+7. Works of incorporation of commercial companies.  
+8. Current account.  
+9. Different kinds of insurance.  
+10. Sale at public auction except those conducted by the judiciary.  
+11. Works of hotels, restaurants, cinemas, theatres, playgrounds and theme parks.  
+12. Works of production, sale, transport and distribution of water, electricity and gas.  
+13. Issue of newspapers and magazines, if the purpose of the issue is realizing profit 
+through publication of advertisements, news and articles.  
+14. Post and communications’ works.  
+15. Works of radio and TV broadcast and studios of recording and photography.  
+                                               
+50 Article 4 of the Commercial Transactions Law. 
+51 Article 5 of the Commercial Transactions Law. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 42 
+16. Works of public warehouses and mortgages created on the properties lodged 
+therein.  
+17. Virtual asset works.  
+ 
+The following works shall be considered commercial business, if carried out as 
+occupation:52 
+1. Brokerage.  
+2. Commercial agency.  
+3. Commission agency.  
+4. Commercial representation.  
+5. Supply contracts.  
+6. Purchase and sale of plots or real estates for purpose of realizing profit from their 
+sale, in their original condition, or after transformation or division.  
+7. Land transport.  
+8. Real estate works, whenever the contractor undertakes to provide materials or 
+workers.  
+9. Extractive industries of natural resources.  
+10. Works of tourism, travel, export, import, customs clearance, and service and 
+recruitment bureaus.   
+11. Works of printing, publication, photography, recording and advertisement.  
+12. Industry.  
+13. Works of animal and fishery resources.  
+14. Hire and lease of others’ labour for purpose of hire.  
+15. Lease or hire of homes or flats and rooms, whether or not furnished, for purpose 
+of re-lease.  
+16. Creation, sale, lease and management of electronic platforms, websites, smart 
+applications, data, artificial intelligence and other digital transformation works.  
+ 
+The works that can be considered equivalent to the considered commercial business 
+described above for the similarity of their characters and purposes shall be considered 
+commercial business.53  
+ 
+The Commercial Transaction Law indicates the following to not be considered 
+commercial business:54 
+1. Sale of farms and produce cultivated in the owned or cultivated land, even after 
+the transformation by the means normally used, unless this is practiced as an 
+occupation. If the farmer permanently establishes a store or a factory to sell the 
+produce as is, or after processing, the sale in such case shall be deemed 
+commercial business.  
+                                               
+52 Article 6 of the Commercial Transactions Law. 
+53 Article 7 of the Commercial Transactions Law. 
+54 Article 8 of the Commercial Transactions Law. 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 43 
+2. Practice of any agritourism activity, with or without consideration, including 
+allowing third party’s access to the farm, purchase and hire from the farm, or visit 
+or stay for a short period for purpose of access or enjoyment of farming activities, 
+watching or buying animals or their products, learning, training or other activities 
+practiced in the farm.  
+3. The work in which the individuals rely on their physical or mental effort to realize 
+profit or a sum of money rather than relying on monetary capital. 
+4. Making and selling a work of art made by the artist himself or by using workers, 
+and printing and selling by the author of his work. 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of natural persons under the Corporate Tax Law | CTGTNP1 44 
+8. Updates and Amendments 
+ 
+Date of amendment Amendments made 
+November 2023 
+• First version

@@ -1,0 +1,3147 @@
+LHDN.AG.600-1/7/3 
+                                                                                          
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+GUIDELINES 
+ 
+ 
+TAX TREATMENT IN RELATION TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+ 
+(DATE OF PUBLICATION: 20 JUNE 2024) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+PUBLISHED 
+ 
+ 
+Third Edition  
+ 
+Second Editon on 29 December 2022 
+ 
+First Edition on 29 September 2022 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+GUIDELINES OF THE DIRECTOR GENERAL 
+ 
+Section 134A of the Income Tax Act 1967 (ITA) provides that the Director General is 
+empowered to issue Guidelines which the Director General thinks is expedient or 
+necessary. 
+ 
+A Guideline is published as a guide for the public and officers of the Inland Revenue 
+Board of Malaysia. It provides the Director General’s clarification of a particular 
+provision of the tax law or facilitates the compliance of the law or any other matter 
+relating to it. 
+ 
+The Director General may revoke, revise or amend the whole or any part of this 
+Guideline by publishing a new Guideline. 
+ 
+Director General of Inland Revenue, 
+Inland Revenue Board of Malaysia. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Contents 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     
+Page  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     
+1.  
+Introduction  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2.  
+Objective 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3. 
+Provisions of the Law 
+ 
+ 
+ 
+ 
+ 
+         
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4. 
+Interpretation  
+ 
+ 
+ 
+            
+ 
+ 
+ 
+ 
+ 
+ 
+       
+ 
+ 
+ 
+5.  
+Tax Treatment  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5.1  
+Foreign income received in Malaysia by a resident          
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5.2  
+Foreign income received in Malaysia which is exempted 
+from tax from 1 January 2022 until 31 December 2026 
+ 
+ 
+ 
+ 
+ 
+5.2.1 Foreign dividend income received in Malaysia by a 
+resident 
+company, 
+resident 
+limited 
+liability 
+partnership and resident individual in relation to a 
+partnership business in Malaysia  
+ 
+ 
+5.2.2 Foreign income received in Malaysia by a resident  
+individual 
+ 
+ 
+ 
+ 
+ 
+ 
+5.2.3  Expenses or deductions incurred in relation to 
+foreign income received in Malaysia by a resident
+ 
+ 
+ 
+ 
+5.2.4  Record keeping of supporting documents and 
+declaration of the foreign income which is tax- 
+exempt 
+ 
+ 
+ 
+ 
+ 
+6.  
+Tax treatment on foreign income related to Cukai Makmur 
+ 
+7. 
+Disclaimer                                                                                                                                  
+ 
+ 
+            
+ 
+ 
+       1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 
+ 
+3 
+ 
+3 
+ 
+ 
+16 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+17 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+25 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+28 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+29 
+ 
+ 
+30 
+ 
+ 
+35  
+ 
+
+ 
+ 
+ 
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 1 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+1. 
+INTRODUCTION 
+ 
+1.1 This guideline is issued pursuant to the amendment of Paragraph 28 of 
+Schedule 6, Income Tax Act 1967 (ITA 1967) by Finance Act 2021 [Act 
+833] which foreign income received in Malaysia by a person who is 
+resident will be taxable effective from 1 January 2022. 
+1.2 The amendment of this provision is to provide equitable tax treatment on 
+the foreign income with the income accrued in or derived from Malaysia in 
+line with Malaysia’s commitment towards compliance with international tax 
+best practices.  
+1.3 However, there are tax exemptions given in relation to foreign income 
+received in Malaysia by a resident subject to certain conditions. 
+1.4 Foreign income received in Malaysia which is eligible for the tax 
+exemptions are as follows: 
+(a) 
+Foreign dividend income received in Malaysia by a resident 
+company, resident LLP and resident individual in relation to a 
+partnership business in Malaysia [P.U.(A) 235/2022 and P.U.(A) 
+157/2024]. 
+(b) 
+All foreign income excluding income from a partnership business 
+received in Malaysia by a resident individual [P.U.(A) 234/2022]. 
+1.5   The exemption in paragraphs 1.4(a) does not apply to a resident carrying 
+on the business of banking, insurance or sea or air transport. 
+ 
+2. 
+OBJECTIVE 
+The objective of this guideline is to explain the tax treatment of foreign income 
+received in Malaysia by a resident. 
+ 
+3. 
+PROVISIONS OF THE LAW  
+3.1 Sections 3, 4, 7, 8, 61, 132, 133, paragraph 6(1)(p), Part XX of Schedule 
+1, paragraph 28 of Schedule 6 and Schedule 7 of the ITA 1967; and 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 2 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+3.2 The relevant subsidiary legislation referred to in this guideline is the 
+Income Tax Order as follows: 
+(a) 
+Income Tax (Exemption) Order 2022 [P.U.(A) 96/2022]; 
+(b) 
+Income Tax (Exemption) Order (No. 5) 2022 [P.U.(A) 234/2022];   
+(c) 
+Income Tax (Exemption) Order (No. 6) 2022 [P.U.(A) 235/2022]; and 
+(d) 
+Income Tax (Exemption) (No. 6) Order 2022 (Amendment) Order 
+2024 [P.U.(A) 157/2024] 
+ 
+4. 
+INTERPRETATION 
+The words used in this guideline have the following meaning: 
+4.1 
+"Cukai Makmur" means a one-off tax imposed on a company that have 
+chargeable income exceeding RM100 million for the year of assessment 
+(YA) 2022 as provided in Paragraph 2, Part I, Schedule 1 of the ITA 
+1967. 
+4.2  "Received in Malaysia" means transferred or brought into Malaysia 
+whether in the form of cash or through electronic funds transfer; or both. 
+4.3  
+"Cash" means notes, coins and cheques. 
+4.4  
+"Electronic fund transfer" means bank transfer (e.g. credit transfer, debit 
+transfer), payment card (debit card, credit card and charge card), 
+electronic money (e-money), privately-issued digital assets (e.g. crypto-
+assets, stablecoins) and Central bank digital currency (CBDC). 
+4.5  
+"Bilateral tax credit" means tax credit in respect of income which is 
+subject to Malaysian tax has been charged to foreign tax where the 
+country who charged the tax has a Double Taxation Avoidance 
+Agreement (DTA) with Malaysia under Section 132 of the ITA 1967. 
+Bilateral tax credit only applicable if the "Elimination of Double Taxation" 
+article is covered in the relevant DTA. 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 3 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+4.6  
+"Unilateral tax credit" means tax credit for income subject to Malaysian 
+tax that has been charged to foreign tax where the country who charged 
+the tax does not have a DTA with Malaysia under Section 133 of the ITA 
+1967. 
+4.7  
+"Resident" means resident in Malaysia for the basis year for a year of 
+assessment by virtue of section 7, 8 or subsection 61(3) of the ITA 1967. 
+4.8  
+"Foreign income " means the type of income under section 4 of the ITA 
+1967 that arises from sources outside Malaysia. 
+4.9  "Company" means a company which:  
+(a) 
+is incorporated or registered under the Companies Act 2016; or  
+(b) 
+is incorporated under the Labuan Companies Act 1990 and the 
+company has made an election under section 3A of the Labuan 
+Business Activities Tax Act 1990 (from year of assessment 2022). 
+4.10  "Partnership" means a partnership in Malaysia registered under the 
+Business Registration Act 1956 which is regulated by the Companies 
+Commission of Malaysia. 
+4.11  "Limited Liability Partnership" means a limited liability partnership which 
+is registered under the Limited Liability Partnerships Act 2012 based on 
+the ITA 1967 and P.U.(A) 235/2022. 
+5 
+TAX TREATMENT 
+5.1 
+Foreign income received in Malaysia by a resident  
+5.1.1 Effective from 1 January 2022, generally, all types of foreign 
+income received in Malaysia by a resident is subject to tax. 
+5.1.2 The list of foreign income which is subject to this tax treatment 
+according to Section 4 of the ITA 1967 are as follows: 
+(a) Business; 
+(b) Employment; 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 4 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+(c) Dividend, interest or discounts; 
+(d) Rent, royalty or premium; 
+(e) Pension, annuity or periodic payments; and 
+ (f) Other income other than from (a) to (e) above. 
+5.1.3 Expenses or deductions incurred in relation to foreign income 
+received in Malaysia will be allowed subject to the provisions 
+under the ITA 1967. 
+5.1.4 Foreign income received in Malaysia that has been taxed by other 
+jurisdictions either through withholding tax or income tax, are 
+eligible for bilateral or unilateral tax credit under the provisions of 
+sections 132 and 133 of the ITA 1967. 
+5.1.5 A resident who is claiming tax credits must keep evidence that 
+foreign tax has been imposed on that particular income. 
+5.1.6 Tax credit for a year of assessment has to be claimed within two 
+(2) years after the end of that year of assessment. For more 
+information, kindly refer to Public Ruling No. 11/2021 entitled 
+"Bilateral Credit and Unilateral Credit". 
+5.1.7 If the tax credit claimed for a year of assessment exceeds the 
+Malaysian tax payable on foreign income received in Malaysia, 
+the excess tax credit shall be disregarded. 
+5.1.8 For the period of 1 January 2022 until 30 June 2022, foreign 
+income received in Malaysia will be taxed at a rate of 3% under 
+Part XX Schedule 1 of the ITA 1967. 
+5.1.9 Effective from 1 July 2022, foreign income received in Malaysia is 
+subject to the prevailing tax rate. 
+5.1.10 The following are the examples for the tax treatment on foreign 
+income received in Malaysia other than foreign income which is 
+exempted from tax mentioned in paragraph 1.4: 
+ 
+Example 1 
+ 
+Dinamik Bhd. closes accounts on September 30th annually. The 
+company has provided loans to related companies in Country A (with 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 5 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+DTA) and Country B (without DTA). The company receives interest 
+income from the loan for the period 1.7.2022 until 30.9.2022. 
+ 
+The loan rendered by Dinamik Bhd. to its related companies in Country 
+A and Country B is a loan obtained from financial institutions in Malaysia 
+which is charged interest of RM8,000 and RM20,000 respectively. 
+ 
+Income declared in the YA 2022 Income Tax Return Form (ITRF) as 
+follows: 
+Details 
+RM 
+ 
+Gross business income from Malaysia  
+(Allowable business expenses RM500,000) 
+2,500,000 
+Gross interest income from Malaysia                                
+(Interest expense on loans RM10,000) 
+60,000 
+Gross interest income from abroad received in 
+Malaysia for the period 1.7.2022 until 30.9.2022: 
+ 
+Gross interest income from Country A                              
+(Interest expense on loans RM8,000) 
+30,000 
+Gross interest income from Country B                              
+(Interest expense on loans RM20,000) 
+80,000 
+Approved donations 
+5,000 
+Gross interest income from loans has been subject to withholding tax in 
+country A and country B as follows: 
+Country 
+Withholding 
+Tax Rate 
+(%) 
+Withholding Tax Amount 
+(RM) 
+Country A 
+15 
+4,500 
+Country B 
+30 
+24,000 
+      Tax computation for Dinamik Bhd for YA 2022 as follows: 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 6 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Details 
+RM 
+RM 
+Statutory income from business (Malaysia) 
+(RM2,500,000 – RM500,000) 
+ 
+2,000,000 
+Statutory interest income (Malaysia) 
+(RM60,000 – RM10,000) 
+50,000 
+ 
+Statutory interest income from abroad: 
+ 
+ 
+Interest on loans (Country A)  
+(RM30,000 – RM8,000) 
+22,000 
+ 
+Interest on loans (Country B) 
+(RM80,000 – RM20,000) 
+60,000 
+ 
+ 
+Aggregate statutory income from interest 
+ 
+132,000 
+Aggregate income 
+ 
+2,132,000 
+Less: Approved donations 
+ 
+(5,000) 
+Total income/Chargeble income 
+ 
+2,127,000 
+Tax at the rate of 24% 
+ 
+510,480 
+Less: Section 132 tax credit (Country A) 
+4,5001 
+ 
+          Section 133 tax credit (Country B) 
+12,0002 
+(16,500) 
+Tax payable 
+ 
+493,980 
+ 
+Note: 
+1Computation 
+(i) Bilateral credit (Tax Credit under Section 132 of the ITA 1967)  
+= 
+Foreign income (statutory 
+income) (RM) 
+Total income (RM) 
+ 
+x 
+Malaysian tax payable 
+before bilateral credit (RM) 
+ 
+      = 
+30,000 – 8,000 
+x 
+510,480 
+2,127,000 
+ 
+  = 
+22,000 
+x 
+510,480 
+2,127,000 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 7 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+=     RM5,280 
+Or 
+ 
+foreign tax charged, whichever is lower 
+=   RM5,280 or foreign tax charges (RM4,500) 
+ =   RM4,5001 
+ 
+2 Computation: 
+(i) Unilateral credit (Tax Credit under Section 133 of the ITA 1967)  
+ 
+= 
+Foreign income (statutory income) 
+(RM) 
+ 
+Total income (RM) 
+ 
+x 
+Malaysian tax 
+payable before 
+unilateral credit 
+(RM) 
+ 
+ 
+   = 
+ 
+ 
+80,000 – 20,000 
+x 
+510,480 
+ 
+2,127,000 
+ 
+= 
+60,000 
+x 
+510,480 
+2,127,000 
+= RM14,400 
+ 
+Or 
+ 
+1/2 of foreign tax charged, whichever is lower 
+ 
+=   RM14,400 or ½ of foreign tax charges (1/2 x 24,000 =   
+RM12,000) 
+=    RM12,0002 
+5.1.11 The tax treatment of foreign income received in Malaysia is divided 
+into two periods as follows: 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 8 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Period 
+Tax Rate 
+1.1.2022 until 30.6.2022 
+3% from gross income 
+Effective from 1.7.2022 
+At the prevailing tax rate  
+ 
+Example 2 
+ 
+Hebat Bhd. closes accounts on 31st August every year. The company 
+provides loans to related companies abroad. Gross interest income 
+received from Country C (with DTA) and Country D (without DTA) in 
+Malaysia on 5.5.2022 and 11.7.2022 amounting to RM800,000 and 
+RM600,000 respectively. 
+ 
+Information related to the income of Syarikat Hebat Bhd for the year 2022 
+is as follows: 
+ 
+Gross interest income from loans has been subject to withholding tax as 
+follows: 
+Income 
+RM 
+ 
+Gross business income (Malaysia) 
+(Allowable business expenses RM500,000) 
+2,000,000 
+ 
+Gross interest income (Malaysia) 
+(Interest expense on loans RM100,000)  
+500,000 
+Gross interest income from Country C received in 
+Malaysia on 5.5.2022  
+(Interest expense on loans RM100,000) 
+800,000 
+Gross interest income from Country D received in 
+Malaysia on 11.7.2022 
+(Interest expense on loans RM100,000) 
+600,000 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 9 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Country  
+Withholding 
+Tax Rate 
+(%) 
+Withholding Tax 
+Amount 
+(RM) 
+Country C 
+15 
+120,000 
+Country D 
+30 
+180,000 
+ 
+          Tax computation for Hebat Bhd. for YA 2022 as follows: 
+Particulars 
+RM 
+RM 
+Statutory income from business (Malaysia) 
+(RM2,000,000 – RM500,000) 
+ 1,500,000 
+Statutory interest income (Malaysia) 
+(RM500,000 – RM100,000) 
+400,000 
+ 
+Statutory interest income from abroad: 
+ 
+ 
+Interest income on loans (Country C)  
+[Interest expense of RM100,000 is not 
+allowed because the interest was received in 
+Malaysia on 5.5.2022 (during the period 
+1.1.2022 until 30.6.2022)]. 
+800,000 
+ 
+Interest income on loans (Country D) 
+(RM600,000 – RM100,000)  
+500,000 
+ 
+Total statutory interest income 
+ 1,700,000 
+Total income/Chargeable income 
+ 3,200,000 
+Tax at the rate of 3% (Country C) 
+(RM800,000 x 3%) 
+24,000 
+ 
+Tax at the rate of 24%  
+[(RM400,000 + RM500,000 (Country D) + 
+RM1,500,000) x 24%] 
+576,000 
+ 
+Total Income Tax Charged 
+ 
+600,000 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 10 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Particulars 
+RM 
+RM 
+Less: Section 132 tax credit (Country C) 
+24,0003 
+ 
+          Section 133 tax credit (Country D) 
+90,0004 (114,000) 
+Tax payable 
+ 
+486,000 
+Note: 
+Computation of Tax Credit under Section 132 of the ITA 1967: 
+3Interest (Country C) 
+Computation of bilateral credit: 
+= 
+Foreign interest income 
+(gross)(RM) 
+ 
+x 
+Malaysian tax payable 
+before bilateral credit (at the 
+rate of 3%) (RM) 
+ 
+Total income (related to the tax 
+charged at the rate of 3%) 
+ 
+= 
+ 
+RM800,000 
+x 
+RM24,000 
+RM800,000 
+         = 
+    RM 24,000 
+or 
+ 
+foreign tax charged, whichever is lower 
+=  
+RM24,000 or foreign tax charged of RM120,000 
+=       RM24,0003 (The bilateral tax credit allowed) 
+In determining the qualifying amount of tax credit to be claimed by Hebat 
+Bhd on interest income from Country C, foreign income subject to 
+Malaysian tax rate of 3% must be compared to the amount of foreign tax 
+charged (RM120,000). Since the foreign income is taxed on the amount 
+of gross income by virtue of Part XX, Schedule 1 of ITA 1967 separately 
+and is not included in the determination of tax charged at the current rate 
+(24%), the ratio of statutory foreign income to the total income subject to 
+Malaysian tax at the rate of 24% is disregarded.  
+ 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 11 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Computation of Tax Credit under Section 133 of the ITA 1967: 
+ 
+4Interest (Country D) 
+(i) 
+Computation of the proportion of statutory income in respect of 
+foreign income: 
+      = 
+Foreign interest income (gross) (RM) 
+ 
+x 
+Aggregate 
+statutory income 
+from interest 
+(RM) 
+ 
+Foreign and Malaysian interest 
+income (gross) (excluding income 
+received during the period 1.1.2022 – 
+30.6.2022) (RM) 
+ 
+= 
+RM600,000 
+x 
+(RM1,700,000 
+– RM800,000) 
+(RM500,000+RM600,000) 
+ 
+        =  
+RM600,000 
+x 
+RM900,000 
+RM1,100,000 
+    
+    =   RM490,909.09 
+ 
+(ii) 
+Computation of unilateral credit:  
+ 
+ 
+= 
+Foreign income (statutory 
+income) (RM) 
+Total income (RM) 
+ 
+ 
+x 
+Malaysian tax 
+payable before 
+unilateral credit 
+(RM) 
+ 
+ 
+   = 
+RM490,909 
+x 
+(RM600,000 – 
+RM24,000) 
+(RM3,200,000 – RM800,000) 
+   = 
+RM490,909 
+x 
+RM576,000 
+RM2,400,000 
+= RM117,818.16 
+ 
+or 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 12 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+ 
+1/2 of foreign tax charged, whichever is lower 
+= RM117,818.16 or ½ of foreign tax charged 
+   (½ x RM180,000 = RM90,000)  
+=RM90,0004 
+ 
+5.1.12  The following are the examples of the tax treatment of foreign 
+income received in Malaysia which consist of income from more 
+than one year of assessment. 
+ 
+Example 3 
+M Digital PLT (MDP) closes accounts on December 31st every year. 
+Based on MDP’s records, the total income of MDP is as follows: 
+ 
+ 
+Interest has been taxed at the rate of 15% in Country E every year. 
+Interest from Country E received in Malaysia is S$34,000. 
+Foreign income received in Malaysia for a year of assessment must be 
+identified by the taxpayer. Therefore, the interest income from Country E 
+of S$34,000 received in Malaysia in YA 2023 is identified by MDP which 
+Year of 
+Assessment 
+(YA) 
+ 
+ 
+Malaysia 
+income 
+(RM) 
+ 
+Gross 
+interest 
+from 
+Country 
+E (S$) 
+ 
+Country E 
+tax 
+payable 
+(S$) 
+ 
+ 
+Interest 
+after tax 
+in 
+Country 
+E (S$) 
+ 
+ 
+Interest 
+from 
+Country E 
+received 
+in 
+Malaysia 
+(S$) 
+2020 
+100,000 
+50,000 
+7,500 
+42,500 
+- 
+2021 
+110,000 
+- 
+- 
+- 
+- 
+2022 
+120,000 
+45,000 
+6,750 
+38,250 
+- 
+2023 
+130,000 
+30,000 
+4,500 
+25,500 
+34,000 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 13 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+consists of interest for YA 2022 (S$8,500) and interest for YA 2023 
+(S$25,500).  
+If the foreign income received in Malaysia consist of income from more 
+than one year of assessment, the taxpayer has to identify the relevant 
+year of assessment in which income is brought into Malaysia. 
+The burden of proof is on the taxpayer during the audit. 
+In this example, MDP is eligible to claim a tax credit because the same 
+income has been taxed twice where there is DTA between Malaysia and 
+Country E. The date of remittance is on 15.12.2023 and the currency 
+exchange rate is at RM2.2038 = S$1. 
+The tax computation of MDP for YA 2023 and tax credit under Section 
+132 of the ITA 1967 is as follows: 
+Details 
+RM 
+RM 
+Income from Malaysia 
+ 
+130,000 
+Income from Country E received in 
+Malaysia; 
+ 
+ 
+Gross interest for YA 2023  
+(S$30,000 x RM2.2038) 
+66,114 
+ 
+Gross interest for YA 2022  
+(S$34,000 – S$25,500) / 85% 
+= S$8,500 / 0.85 
+= S$10,000 
+(S$10,000 x RM2.2038) 
+22,038 
+ 
+Aggregate interest income from Country 
+E received in Malaysia  
+ 
+88,152 
+Total income/Chargeable income 
+ 
+218,152 
+Computation of tax payable: 
+ 
+ 
+Tax at rate 24% (RM218,152 x 24%) 
+ 
+52,356.48 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 14 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Details 
+RM 
+RM 
+Less : Section 132 tax credit 
+ 
+ 
+(i) (RM88,152 / RM218,152) x 
+RM52,356.48  
+21,156.48 
+ 
+Or 
+ 
+ 
+(ii) Tax in Country E for YA 2023  
+           (S$4,500 x RM2.2038)   
+= RM9,917.10 
+ 
+ 
+           Tax in Country E for YA 2022 
+           (S$10,000 x 15%) x RM2.2038  
+= RM3,305.70 
+Total tax in Country E for YA 
+2022 and YA 2023  
+= RM9,917.10 + RM3,305.70 
+13,222.80 
+ 
+Whichever is lower 
+ (13,222.80) 
+Tax payable 
+ 
+39,133.68 
+ 
+Example 4 
+The facts are the same as in Example 3 with the additional information 
+that MDP has obtained an overdraft facility from Bank AK to make 
+investments in Country E.  MDP was able to prove that the investment 
+made in Country E is fully financed through overdraft and the overdraft 
+interest expense is not claimed in tax computation on interest income in 
+Country E. The interest expense incurred by MDP is as follows: 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 15 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Year of 
+Assessment 
+(YA) 
+Overdraft interest expense 
+related to investment in 
+Country E (RM) 
+2020 
+10,000 
+2021 
+10,000 
+2022 
+10,000 
+2023 
+10,000 
+Tax computation of MDP for YA 2023 and tax credit under Section 132 of 
+the ITA 1967 as follows: 
+Details 
+RM 
+RM 
+Income from Malaysia 
+ 
+130,000 
+Statutory income from Country E 
+received in Malaysia:  
+ 
+ 
+Interest for YA 2023  
+Gross interest: RM66,114 
+Less: Allowable expenses = RM10,000 
+(RM66,114 – RM10,000) 
+ 
+ 
+56,114 
+ 
+Interest for YA 2022  
+Gross interest: RM22,038 
+Less: Allowable expenses = RM2,222 
+(S$10,000/S$45,000 x RM10,000) 
+(RM22,038 – RM2,222) 
+ 
+ 
+ 
+19,816 
+ 
+Aggregate statutory interest income 
+from Country E  
+ 
+75,930 
+Total income/Chargeable income 
+ 
+205,930 
+Computation of tax payable: 
+ 
+ 
+Tax at rate 24% (RM205,930 x 24%) 
+ 
+49,423.20 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 16 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Details 
+RM 
+RM 
+Less : Section 132 tax credit 
+ 
+ 
+(RM75,930 / RM205,930) x 
+RM49,423.20  
+18,223.20 
+ 
+Or 
+ 
+ 
+Total tax in Country E for YA 2022 and 
+YA 2023 
+13,222.80 
+ 
+Whichever is lower 
+ 
+(13,222.80) 
+Tax payable 
+ 
+36,200.40 
+5.2 
+Foreign income received in Malaysia which is exempted from tax from 
+1 January 2022 until 31 December 2026  
+Taxpayer’s 
+Category 
+Types of Tax-
+Exempt 
+Income  
+Qualifying Conditions 
+ 
+• Company  
+• Limited 
+Liability 
+Partnership 
+(LLP) 
+• Individual 
+partner in 
+relation to 
+partnership 
+business in 
+Malaysia 
+(IIP) 
+ 
+ 
+Dividend 
+ 
+Option 
+A 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Option 
+B 
+ 
+ 
+Comply 
+with 
+the 
+participation 
+exemption 
+requirements that is: 
+(a) The 
+dividend 
+income 
+has been subjected to 
+tax in the country of 
+origin; and 
+(b) The highest tax rate 
+(headline tax) in the 
+country of origin is not 
+less than 15%; 
+Or 
+ 
+Comply with the economic 
+substance requirements. 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 17 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Taxpayer’s 
+Category 
+Types of Tax-
+Exempt 
+Income  
+Qualifying Conditions 
+Individual 
+All 
+types 
+of 
+income 
+other 
+than 
+partnership 
+income. 
+The income has been subjected to 
+tax in the country of origin. 
+ 
+ 
+5.2.1 Foreign dividend income received in Malaysia by a resident 
+company, resident LLP, and resident IIP (Company/ LLP/ IIP)  
+5.2.1.1 
+Foreign dividend income received in Malaysia by Company/ 
+LLP/ IIP from 1 January 2022 until 31 December 2026 is 
+exempted from tax subject to the following conditions:  
+Comply with the participation exemption requirements that is: 
+(a) The dividend income has been subjected to tax in the 
+country of origin; and 
+(b) The highest tax rate (headline tax) in the country of origin is 
+not less than 15%: 
+OR 
+ 
+Comply with the economic substance requirements.  
+5.2.1.2 
+For the purpose of tax exemption, a Company/ LLP/ IIP may 
+choose whether to comply with the qualifying condition being 
+participation exemption or economic substance requirements 
+in paragraph 5.2.1.1.  
+5.2.1.3 
+Tax-exempt dividend is dividend paid by a foreign entity where 
+their operating income has been subjected to foreign tax. 
+5.2.1.4 
+Qualifying Conditions 
+Comply with the participation exemption requirements as 
+follows: 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 18 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+(a) 
+Dividend income is subject to tax in the country 
+of origin which the income arises 
+In determining whether dividend has been subjected 
+to tax in the country of origin where the income arises, 
+the conditions are as follows: 
+(i) 
+Tax has been imposed in the country of origin 
+on foreign dividend income received in Malaysia 
+as follows:  
+(A) Tax paid or payable in the country of origin 
+is either income tax or withholding tax; or 
+(B) Foreign dividend income received has 
+been subjected to underlying tax. 
+Note:  
+I. 
+Underlying tax is an income tax paid or payable in 
+the country of origin related to the underlying profit 
+that arises from operating income in the country of 
+origin where the income after tax is used to pay 
+dividend. 
+II. 
+If the payer company (Company X) pays dividend 
+out of dividend received from another company 
+(Company Y) (either within the country which is the 
+same as Company X or otherwise), the underlying 
+tax paid by Company Y on the dividend cannot be 
+considered as tax paid or payable by Company X 
+for the purpose of these qualifying conditions (refer 
+to the illustration in Appendix 1). 
+OR 
+(ii) 
+Tax is not imposed in the country of origin because 
+foreign dividend is paid out of underlying profits 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 19 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+arising from operating income in the country of 
+origin which is not subjected to tax due to: 
+(A) Unabsorbed losses or capital allowances; 
+(B) Arising from capital gains; 
+(C) Enjoyed tax incentives in compliance with 
+substantive requirements in the country; or 
+(D) Tax regulations under the tax consolidation 
+regime in the country of origin (refer to the 
+illustration in Appendix 2(a) and 2(b)). 
+ 
+(b) 
+The headline tax rate in the country of origin is not 
+less than 15% 
+ 
+(i) 
+The foreign country headline tax rate refers to 
+the highest corporate tax rate in the country of 
+origin: 
+(A) in the year that dividend is subject to 
+withholding tax: or 
+(B) in the year that dividend is received in 
+Malaysia.   
+(ii) 
+The tax rate shall not be less than 15%. 
+(iii) The headline tax rate is not necessarily the 
+actual tax rate imposed on the foreign dividend 
+income. 
+ 
+Example 5 
+United Ltd is a resident company in Country F. On 
+15.2.2021, United Ltd paid dividend to Deco Co. 
+which is a resident in Malaysia with a tax rate imposed 
+in Country F of 10%. The headline tax rate of Country 
+F in YA 2021 is 20%. 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 20 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+ 
+ 
+  
+Deco Co. deposited the net dividend income of 
+RM18,000 into its account in Country F. On 5.1.2022, 
+Deco Co. transferred that income from Country F's 
+account to its account in Malaysia. 
+The headline tax rate in Country F (20%) fulfilled the 
+condition of not less than 15%, therefore, the dividend 
+income received in Malaysia from Country F is tax-
+exempt. 
+Example 6 
+The foreign company pays dividend in year 2026 out 
+of its underlying profit of year 2022. The dividend is 
+received in Malaysia by a resident taxpayer in year 
+2026. No withholding tax is charged on that dividend 
+when it is declared. 
+The headline tax rate refers to the year 2022. 
+Example 7 
+The facts are as in Example 6, however withholding 
+tax is charged on the dividend when it is declared. 
+The headline tax rate refers to the year 2026. 
+ 
+(c) 
+Comply 
+with 
+the 
+economic 
+substance 
+requirements 
+ 
+(i) 
+A Company/ LLP/ IIP shall be regarded as 
+having economic substance if it has: 
+ 
+  RM 
+Gross dividend 
+20,000 
+Less: Tax rate (10%) 
+ 2,000 
+Net dividend 
+18,000 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 21 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+(A) employed adequate number of employees 
+with necessary qualifications to carry out 
+the 
+specified 
+economic 
+activities 
+in 
+Malaysia; and 
+(B) incur adequate amount of operating 
+expenditure for carrying out the specified 
+economic activities in Malaysia. 
+(ii) 
+As the mode of operation varies from industry to 
+industry, it is neither feasible nor appropriate to 
+specify any minimum threshold for the economic 
+substance requirement as it would depend on 
+the facts of each case. Factors that will be taken 
+into account include: 
+(A) the number of employees having regard to 
+the nature of the relevant activities, e.g. 
+whether it is a capital or labour-intensive 
+industry; 
+(B) whether the employees are employed on a 
+full-time or part-time basis; and  
+(C) whether office premises have been used 
+for undertaking the relevant activities and 
+whether the premises are adequate for 
+such activities.  
+(iii) 
+Specified economic activities means: 
+(A) 
+Investment holding entity 
+• Holding and managing its equity 
+participation in other entities; or 
+• Making 
+necessary 
+strategic 
+decisions in respect of any assets 
+the 
+entity 
+acquires, 
+holds 
+or 
+disposes of; and managing and 
+bearing principal risks in respect of 
+such assets 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 22 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+(B) 
+Other than investment holding entity 
+In the case of a Company/ LLP/ IIP 
+carrying out a trade, profession or 
+business 
+in 
+Malaysia, 
+specified 
+economic activities refer to the business 
+operations carried out. 
+(iv) 
+A service director who is employed based on a 
+contract of service and not a contract for 
+service can be considered as an employee. 
+Therefore, a non-service director is not 
+considered as an employee. 
+(v) 
+Outsourcing of specified economic activities by 
+a Company/ LLP/ IIP to an outsourcing entity 
+is permitted if the following conditions are 
+complied: 
+(A) 
+The specified economic activities are 
+carried out by the outsourced entity in 
+Malaysia; 
+(B) 
+A Company/ LLP/ IIP has exercised 
+adequate monitoring and control on the 
+carrying out of the specified economic 
+activities by the outsourced entity: 
+(C) 
+The outsourced entity is generally 
+expected to charge the Company/ LLP/ 
+IIP a fee for the specified economic 
+activities performed subject to the 
+application of transfer pricing rules; 
+(D) 
+The number of qualified employees 
+employed and the amount of operating 
+expenditure incurred by the outsourced 
+entity in Malaysia are in line with the 
+level of specified economic activities 
+carried out by the outsourced entity; and 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 23 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+(E) 
+If 
+the 
+outsourced 
+entity 
+provides 
+services to more than one Company/ 
+LLP/ IIP, computation of expenditure 
+must be apportioned accordingly. 
+ 
+ 
+ 
+Example 8 
+Syarikat Yahada Sdn. Bhd. (SYSB) is a resident 
+investment holding company in Malaysia.  
+SYSB own a subsidiary, Oceanic Trading Ltd. (OTL), 
+which operates in Country G. On February 1, 2022, 
+OTL paid dividend to SYSB with withholding tax at the 
+rate of 18% in Country G. 
+The details of dividend received by SYSB:  
+  
+ 
+ 
+ 
+  RM  
+ 
+   
+Gross Dividend 
+ 
+80,000 
+Minus: Tax Rate (18%)  
+14,400 
+Net Dividend   
+ 
+65,600 
+SYSB received a net dividend of RM65,600 from OTL 
+in Country G. SYSB only has 2 non-service directors 
+appointed to carry out tasks of the company. 
+The conditions that SYSB has complied with is as 
+follows: 
+Option A. Comply with the participation exemption 
+requirements that is: Dividend has been 
+subject to tax in the country of origin and 
+the headline tax rate exceeds 15%: 
+Therefore, dividend received by SYSB is eligible for 
+tax exemption for foreign income received in 
+Malaysia. In this situation, SYSB no longer needs to 
+comply with economic substance requirements to 
+meet the tax exemption conditions. 
+ 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 24 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Example 9 
+Syarikat Alphacorp Sdn. Bhd. (SASB) is a resident 
+company in Malaysia that conducts business in the 
+information technology industry and has a subsidiary, 
+BetaTech Ltd. (BTL), which operates in Country H.  
+SASB has a computer component manufacturing 
+factory that employs 320 skilled and semi-skilled 
+workers to operate the factory. 
+On 1 May 2022, BTL pays dividend to SASB with a 
+withholding tax rate of 12% in Country H. 
+The details of the dividend received by SASB: 
+  
+ 
+ 
+ 
+  RM 
+Gross Dividend  
+ 
+50,000 
+Minus: Tax Rate (12%)  
+ 6,000 
+Net Dividend   
+ 
+44,000 
+In this example, SASB comply with economic 
+substance requirements because it employs a 
+sufficient number of employees and incurs sufficient 
+operating expenses. 
+Therefore, dividend received by SASB is eligible for 
+tax exemption. Although the 15% headline tax 
+condition cannot be complied with, SASB still fulfill the 
+tax exemption conditions by complying with the 
+economic substance requirements. 
+Example 10 
+Syarikat Energi SB (SESB) is a resident investment 
+holding company in Malaysia involved in the real 
+estate sector. The company only has one managing 
+director and one company secretary operating in Seri 
+Hartamas, Kuala Lumpur. 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 25 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+The company's investment activities are outsourced 
+by appointing Ultimate Solutions Sdn. Bhd (USSB) to 
+carry out SESB's investment function activities. 
+Monitoring and control are implemented on these 
+outsourcing activities to ensure that economic 
+substance requirements are met. 
+SESB has fulfilled all the outsourcing conditions as 
+stated in paragraph 5.2.1.4 (c) (v). 
+Based on compliance with all the above conditions, 
+SESB is considered to have economic substance for 
+the company's outsourcing activities in Malaysia. 
+Therefore, SESB is eligible for tax exemption for 
+foreign dividend income received in Malaysia. 
+ 
+5.2.1.5  
+The tax treatment of foreign dividend received in Malaysia 
+by Company/ LLP/ IIP from 1 January 2022 until 31 
+December 2026 can be referred to the illustrations in 
+Appendix 3. 
+5.2.2 Foreign income received in Malaysia by a resident individual 
+5.2.2.1 
+All foreign income other than partnership income received 
+in Malaysia by a resident individual from 1 January 2022 
+until 31 December 2026 is exempt from tax provided the 
+income has been subjected to tax in the country of origin. 
+5.2.2.2 
+Qualifying conditions 
+In determining whether foreign income received has been 
+taxed in the country of origin, the conditions are as follows: 
+(a) Tax has been imposed in the country of origin on 
+foreign income received in Malaysia where the tax 
+paid or payable in the country of origin is income tax 
+or withholding tax; or 
+(b) Tax is not imposed in the country of origin due to 
+certain reasons as follows: 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 26 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Foreign 
+income 
+other 
+than dividend income 
+Foreign dividend income 
+(i) Foreign 
+income 
+received in Malaysia is 
+not subject to tax in the 
+country of origin due to 
+the country's taxation 
+system. 
+(ii) Foreign 
+income 
+received in Malaysia is 
+not subject to tax in the 
+country 
+of 
+origin 
+because the individual's 
+income does not reach 
+the taxability amount in 
+the country of origin. 
+(iii) Income is given an 
+exemption through a tax 
+incentive. 
+(i) Foreign 
+dividend 
+income received by an 
+individual in Malaysia 
+has been subjected to 
+underlying tax. 
+(ii) Foreign 
+dividend 
+income is paid from 
+underlying 
+profits 
+arising out of operating 
+profits which has not 
+been subjected to tax 
+due to: 
+(A) Unabsorbed 
+losses or capital 
+allowances; 
+(B) Arising 
+from 
+capital gains; 
+(C) Enjoyed 
+tax 
+incentives 
+in 
+compliance 
+with 
+substantive 
+requirements 
+in 
+the country; or 
+(D) Tax 
+regulations 
+under 
+the 
+tax 
+consolidation 
+regime 
+in 
+the 
+country of origin. 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 27 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Example 11 
+Foreign income received in Malaysia is not taxable due to the 
+taxation’s system in the country of origin  
+Amansyah, a Malaysian resident, worked as a petroleum welder 
+with a company based in Brunei starting from 2020. He receives 
+employment income from Brunei. Based on Brunei's taxation 
+system, employment income received is not subjected to tax.  In 
+2022, Amansyah plans to bring back his income to Malaysia. 
+Income received from employment in Brunei is not subject to tax 
+in Brunei. Therefore, the employment income brought into 
+Malaysia by Amansyah is exempted from tax in Malaysia as the 
+conditions under P.U. (A) 234/2022 and this Guideline has been 
+fulfilled.  
+Example 12 
+Foreign income received in Malaysia has been subjected to 
+tax in the country of origin  
+Eric, a Malaysian resident, works as an accountant in an 
+architectural firm in Singapore from 2020. Eric and his family live 
+in Johor Bahru and he commutes from his house to Singapore 
+every day. At the end of each month, he brings back the salary 
+received from his employment in Singapore to Malaysia and the 
+employment income is taxed in Singapore. Part of his salary was 
+credited to a retirement fund in Singapore by his employer. 
+Under P.U.(A) 234/2022, income arising from Singapore brought 
+into Malaysia by Eric is exempted from tax in Malaysia since the 
+income has been taxed in Singapore. 
+Example 13 
+ 
+Foreign income received in Malaysia has been given 
+incentive / tax exemption in the country of origin  
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 28 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+The facts are same as in Example 12 except that Eric has 
+terminated his employment in Singapore on 31.3.2025.  On 
+1.5.2025, Eric withdraws his retirement fund saving in Singapore 
+and brings it into Malaysia. 
+ 
+Any saving in an approved retirement fund in Singapore are tax- 
+exempt in Singapore. Based on P.U.(A) 234/2022 and this 
+Guideline, the retirement fund which is brought into Malaysia by 
+Eric is not taxable in Malaysia due to it being tax-exempt in 
+Singapore. 
+ 
+5.2.3 Expenses or deductions incurred in relation to foreign 
+income received in Malaysia by a resident 
+5.2.3.1 
+In determining taxable income from gross income for the 
+basis period for a year of assessment, any expenses or 
+deductions incurred in relation to the tax- exempt foreign 
+income should be disregarded. 
+5.2.3.2 
+Therefore, part of the expenses or deductions related to 
+foreign income brought into Malaysia which is exempted 
+from tax under P.U.(A) 234/2022 and P.U.(A) 235/2022 
+should be disregarded. 
+ 
+ 
+Example 14 
+ 
+Lulu Sdn. Bhd. operates a business in Johor Bahru and is a 
+shareholder of SS company in Singapore. 
+ 
+The following is the income declared in the YA 2022 ITRF:  
+Details 
+RM 
+Gross income from business 
+2,500,000 
+Allowable business expenses 
+500,000 
+Gross dividend from Singapore received in 
+Malaysia 
+(Expenses related to dividend income RM24,000) 
+100,000 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 29 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Tax computation of Lulu Sdn. Bhd. for YA 2022:  
+Details 
+RM 
+RM 
+Business statutory income 
+(RM2,500,000 – RM500,000) 
+ 
+2,000,000 
+Foreign dividend income (gross) 
+*exempted from tax under P.U.(A) 
+235/2022 
+100,000 
+- 
+Chargeable income 
+ 
+2,000,000 
+Tax payable at tax rate 24% 
+      480,000 
+ 
+5.2.4 Record keeping of supporting documents and declaration of 
+the foreign income which is tax-exempt 
+ 
+5.2.4.1  
+Taxpayers must keep documents such as dividend 
+vouchers, notice of assessment or other documents in 
+accordance with the provisions of Section 82 and 
+Section 82A of the ITA 1967 which indicate that the 
+income has been taxed outside Malaysia. 
+ 
+5.2.4.2  
+Taxpayers need to declare that the foreign income is 
+eligible for tax exemption in the ITRF as follows: 
+ 
+(a) 
+Type and amount of foreign income; 
+(b) 
+Country where the income arises; 
+(c) 
+Headline tax rates of foreign country (for 
+company / LLP/ IIP in Malaysia); 
+(d) 
+Amount of tax imposed by foreign country; 
+(e) 
+Individual income is not subject to foreign tax; 
+ 
+(f) 
+Dividend income received has been subjected to 
+underlying tax; 
+(g) 
+No underlying tax is imposed due to certain 
+reasons;  
+(h) 
+Confirmation letter or the approval of incentive / 
+tax exemption from the tax jurisdictions of foreign 
+country; and 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 30 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+(i) 
+Any information to be determined other than in 
+paragraph 5.2.4.2 (a) to (h).  
+ 
+5.2.4.3 
+Supporting documents as mentioned in paragraph 
+5.2.5.1 should be kept for auditing purposes. 
+ 
+5.2.4.4  
+Based on the provisions of Paragraph 9, Schedule 7 of 
+the ITA 1967, any claim for bilateral credit for a year of 
+assessment must be made in writing to Director 
+General of Inland Revenue not more than two years 
+after the end of the year of assessment. 
+ 
+6 
+TAX TREATMENT ON FOREIGN INCOME RELATED TO CUKAI MAKMUR 
+Any foreign income received in Malaysia in YA 2022 is not subjected to Cukai 
+Makmur [P.U.(A) 96/2022]. 
+ 
+Example 15 
+ 
+Good Glove Sdn. Bhd., a company engaged in glove manufacturing activities 
+closed its accounts on 30th November every year. The company also provides 
+loans to related companies outside Malaysia. 
+ 
+The income declared in the YA 2022 ITRF as follows: 
+Income 
+RM 
+Business statutory income (Malaysia) 
+150,000,000 
+Statutory interest income (foreign) received 
+on 1.7.2022 
+25,000,000 
+Total income / Chargeable income 
+175,000,000 
+ 
+Tax payable for YA 2022 by Good Glove Sdn. Bhd. as follows: 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 31 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+ 
+Chargeable Income 
+(RM) 
+Income Tax 
+Rate 
+(%) 
+Tax Payable 
+(RM) 
+Business statutory income (Malaysia): 
+ 
+ 
+The first 100 million 
+24 
+24,000,000 
+Next 50 million  
+33 
+16,500,000 
+Statutory interest income (foreign): 
+ 
+ 
+25 million 
+24 
+6,000,000 
+Tax payable 
+46,500,000 
+ 
+Example 16 
+ 
+Ro Ro Bhd, a company that carries out heavy machinery assembly activities, 
+close its accounts on 31st October every year. The company also provides loans 
+to related companies outside Malaysia. 
+ 
+Income declared in the ITRF YA 2022 as follows: 
+Income 
+RM 
+Business statutory income (Malaysia) 
+95,000,000 
+Interest statutory income (foreign) received in 
+Malaysia on 15.8.2022 
+25,000,000 
+Total income / Chargeable income 
+120,000,000 
+ 
+The tax payable for YA 2022 by Syarikat Ro Ro Bhd.: 
+Chargeable Income 
+(RM) 
+Income 
+Tax Rate 
+(%) 
+Tax Payable 
+ (RM) 
+Business statutory income (Malaysia):  
+ 95 million  
+ 
+24 
+ 
+22,800,000 
+Statutory interest income (foreign) 
+ 25 million  
+ 
+24 
+ 
+6,000,000 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 32 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Tax Payable 
+28,800,000 
+ 
+Example 17 
+Sunset Sdn. Bhd., a resident company in Malaysia closes its accounts on 31st 
+December every year. 
+Income of Sunset Sdn. Bhd. for YA 2022: 
+Details 
+RM 
+Gross business income (Malaysia) 
+120,000,000 
+ 
+Gross royalty income (foreign) * received in Malaysia on 
+1.2.2022 
+(Withholding tax is charged at rate of 10%)  
+ 
+ 
+ 
+10,000,000 
+Gross royalty income (foreign) ** received in Malaysia on 
+1.7.2022 
+(Withholding tax is charged at rate of 10%)  
+30,000,000 
+Rental income (paragraph 4(d)) 
+20,000,000 
+Allowable business expenses  
+12,000,000 
+Approved donations  
+5,000,000 
+Note: 
+* Without DTA  
+** With DTA  
+ 
+Tax payable for YA 2022 by Sunset Sdn. Bhd.: 
+Details 
+RM 
+RM 
+Gross business income (Malaysia) 
+ 
+ 
+120,000,000 
+Less: Business expenses 
+ 
+12,000,000 
+Business statutory income 
+ 108,000,000 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 33 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Details 
+RM 
+RM 
+Statutory foreign royalty income (received in 
+Malaysia on 1.2.2022) 
+10,000,000 
+ 
+Statutory foreign royalty income 
+(received in Malaysia on 1.7.2022) 
+ 
+ 
+30,000,000 
+Statutory rental income 
+ 
+ 
+20,000,000 
+Aggregate income 
+ 
+ 
+158,000,000 
+Less: Approved donation  
+ 
+5,000,000 
+Chargeable income 
+ 153,000,000 
+ 
+Apportionment of Chargeable Income: 
+ 
+(1) Foreign income received in Malaysia during the period 1.7.2022 – 
+31.12.2022: 
+ 
+= 
+Foreign statutory income received in Malaysia 
+(1.7.2022 – 31.12.2022) 
+x 
+Chargeable 
+income 
+ 
+Aggregate income 
+ 
+= 
+RM30,000,000 
+x 
+RM153,000,000 
+ 
+ 
+RM158,000,000 
+ 
+ 
+ 
+ 
+ 
+     = RM29,050,633 (A) 
+ 
+(2) Income other than foreign income received in Malaysia during the period 
+1.7.2022 – 31.12.2022: 
+Chargeable income – (A) 
+ = RM153,000,000 – RM29,050,633  
+ = RM123,949,367 
+Tax Computation: 
+(1) Foreign income received in Malaysia 
+during the period 1.1.2022 – 30.6.2022 
+      = RM10,000,000 x 3% 
+ 
+300,000 
+ 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 34 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Details 
+RM 
+RM 
+Foreign income received in Malaysia 
+during the period 1.7.2022 – 31.12.2022 
+     = 29,050,633 x 24% 
+6,972,152 
+ 
+ 
+(2) Income 
+other 
+than 
+foreign 
+income 
+received in Malaysia during the period 
+1.7.2022 – 31.12.2022 
+      = RM123,949,367 
+         First RM100 million x 24% 
+          Next RM 23,949,367 x 33% 
+ 
+ 
+ 
+24,000,000 
+7,903,291 
+38,875,443 
+Total income tax charged 
+ 
+39,175,443 
+Less: 
+ 
+ 
+Section 132 Tax Credit 
+3,000,000 5 
+ 
+Section 133 Tax Credit  
+300,000 6 
+(3,300,000) 
+Tax payable 
+ 
+35,875,443 
+ 
+Note: 
+ 
+5Computation of bilateral tax credit (Section 132 of the ITA 1967) for royalty 
+income: 
+ 
+= 
+Statutory royalty income 
+(Foreign) 
+Total income 
+x 
+Malaysian tax payable 
+before bilateral credit 
+ 
+= 
+RM30,000,000  
+RM153,000,000 X RM38,875,443 
+=  RM7,622,635.88 
+=   RM7,622,635.88 or foreign tax charged of *RM3,000,000, whichever      
+is lower 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 35 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+=   RM3,000,000 5 (The bilateral tax credit allowed) 
+ 
+6 Computation of unilateral tax credit (Section 133 of the ITA 1967) for royalty 
+income: 
+= RM300,000 or foreign tax charged of RM500,000  
+ (1/2 x **RM1,000,000), whichever is lower 
+= RM300,0006 (The unilateral tax credit allowed) 
+ 
+7 
+DISCLAIMER 
+ 
+The examples in this Guideline are for illustrative purposes only and are not 
+exhaustive. 
+ 
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+20 June 2024 
+ 
+ 
+c.c. LHDN.01/35/(S)/42/51/211 
+ 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 36 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Appendix 1 
+ 
+Foreign dividend received in Malaysia from foreign companies with a headline 
+tax rate not less than 15%.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Company 
+X 
+COUNTRY Z 
+MALAYSIA 
+Syarikat 
+Alpha 
+Bhd. 
+1. Company X and Company Y have a 
+headline tax rate not less than 15%. 
+ 
+2. Tax is paid by Company Y out of its 
+operating profits from which dividend 
+are paid to Company X. 
+ 
+3. No tax is paid by Company X on 
+dividend received from Company Y. 
+Refer to Subsubparagraph 5.2.1.4 (a) 
+(i) (B) (II). 
+4. There is no withholding tax paid by 
+Syarikat Alpha Bhd. on dividend 
+received from Company X.  
+ 
+5. Therefore, the dividend received 
+by Syarikat Alpha Bhd. from 
+Company X in Country Z is not 
+tax- exempt. 
+Company 
+Y 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 37 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Appendix 2(b) 
+ 
+Foreign dividend received in Malaysia from the parent company from a group of 
+companies located abroad with a headline tax rate not less than 15% and under 
+the tax consolidation system. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Co. A 
+Co. B 
+Co. C 
+Co. D 
+COUNTRY X 
+MALAYSIA 
+Syarikat 
+Alpha 
+Bhd. 
+1. Co. A, B, C and D have a headline tax 
+rate not less than 15%. 
+ 
+2. Co. A, B and C pay dividend (out of its 
+operating profits) to Co. D where the 
+dividend has been taxed in Country X. 
+ 
+3. Co. D is the parent company of Co. A, 
+B and C which are the main companies 
+under the tax consolidation system of 
+Country X. 
+4. Alpha Company Bhd. Is not subjected 
+to withholding tax in Country X. 
+ 
+5. In this situation, the dividend received 
+by Syarikat Alpha Bhd. from Co. D in 
+Country X received in Malaysia is 
+exempted from tax as the dividend has 
+been subjected to tax under the tax 
+consolidation system of Country X 
+received by the parent company (Co. 
+D) and the headline tax rate in Country 
+X is not less than15%. 
+ 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 38 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Appendix 2(a) 
+ 
+Foreign dividend received in Malaysia from the parent company from a group of 
+companies located abroad with a headline tax rate not less than 15% and under 
+the tax consolidation system.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Co. A 
+Co. B 
+Co. C 
+Co. D 
+COUNTRY X 
+MALAYSIA 
+Syarikat 
+Alpha 
+Bhd. 
+1.  Co. A, B, C and D have a headline tax 
+rate not less than 15%. 
+ 
+2.  Co. A, B and C pay dividend (out of its 
+operating profits) to Co. D where the 
+dividend is not taxed in Country X. 
+Refer 
+to 
+Subsubparagraph 
+5.2.1.4(a)(ii)(A) to 5.2.1.4(a)(ii)(C). 
+ 
+3.  Co. D is the parent company of Co. A, 
+B and C which are the main companies 
+under the tax consolidation system of 
+Country X. 
+4.   Although the dividends received by 
+Syarikat Alpha Berhad from Co. D 
+is not taxed in Country X, dividends 
+received from outside Malaysia are 
+exempt from tax because the 
+dividends are considered to have 
+been subject to tax in Country X's 
+tax consolidation system. Country 
+X and the headline tax rate in 
+Country X is no less than 15%. 
+ 
+
+  
+ 
+ 
+INLAND REVENUE BOARD OF MALAYSIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 39 of 39 
+TAX TREATMENT IN RELATION 
+TO INCOME RECEIVED FROM 
+ABROAD (AMENDMENT) 
+Appendix 3 
+ 
+The following table illustrates the tax treatment of foreign dividend received in Malaysia 
+by a resident company, resident LLP or resident individual in relation to a partnership 
+business in Malaysia from 1 January 2022 until 31 December 2026. 
+ 
+ 
+Scenari
+o 
+Taxes are 
+paid by 
+foreign 
+companies 
+on its 
+operating 
+profits out of 
+which 
+dividends are 
+paid to a 
+resident 
+company/ 
+LLP/ IIP 
+Dividend 
+received by a 
+resident 
+company/ 
+LLP/ IIP are 
+subject to 
+Withholding 
+Tax  
+Qualifying requirements are fulfilled 
+(Option A atau Option B) 
+ 
+Dividends are 
+tax-exempt 
+Option A 
+Option B 
+Subject to 
+tax 
+Headline 
+tax rates 
+ 
+Requirem
+ents 
+fulfilled  
+Economic 
+Substance 
+requirement 
+Yes  
+ 
+No 
+ 
+More or 
+atau less 
+than 15% 
+Yes  
+ 
+No 
+ 
+Yes  
+ 
+No 
+ 
+1 
+No 
+No 
+ 
+/ 
+≥15% 
+X 
+/ 
+ 
+/ 
+ 
+2 
+No 
+Yes 
+/ 
+ 
+/ 
+ 
+/ 
+ 
+3 
+Yes  
+No 
+/ 
+ 
+/ 
+/ 
+ 
+4 
+Yes 
+Yes 
+/ 
+ 
+/ 
+/ 
+ 
+5 
+No 
+No 
+ 
+/ 
+<15% 
+X 
+/ 
+ 
+/ 
+ 
+6 
+No 
+Yes 
+/ 
+ 
+X 
+ 
+/ 
+ 
+/ 
+7 
+Yes  
+No 
+/ 
+ 
+X 
+/ 
+ 
+/ 
+ 
+8 
+Yes 
+Yes 
+/ 
+ 
+X 
+ 
+/ 
+ 
+/

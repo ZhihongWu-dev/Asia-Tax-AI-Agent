@@ -1,0 +1,3324 @@
+Tax Resident and Tax 
+Residency Certificate 
+ 
+Tax Procedures Guide | TPGTR1 
+ 
+October 2024 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+1 
+Contents 
+ 
+1. Glossary .............................................................................. 3 
+2. Introduction ........................................................................ 8 
+2.1. Overview ............................................................................................................... 8 
+2.2. Purpose of this guide ............................................................................................ 8 
+2.3. Who should read this guide? ................................................................................. 8 
+2.4. How to use this guide ............................................................................................ 8 
+2.5. Legislative references ........................................................................................... 9 
+2.6. Status of this guide.............................................................................................. 10 
+3. Concept of tax residence ................................................ 11 
+4. Resident Person under the Corporate Tax Law ............ 12 
+4.1. Resident Person that is a juridical person ........................................................... 12 
+4.1.1. Juridical person incorporated or formed in the UAE ....................................... 13 
+4.1.2. Free Zones .................................................................................................... 15 
+4.1.3. Exempt Persons ............................................................................................ 15 
+4.1.4. Effective management and control ................................................................. 16 
+4.1.5. Criteria for identifying person who make key management and commercial 
+decisions ................................................................................................................. 17 
+4.1.6. Where key management and commercial decisions are made ...................... 21 
+4.1.7. Income subject to Corporate Tax ................................................................... 26 
+4.1.8. Income from foreign sources received by a juridical Resident Person ............ 27 
+4.2. Resident Person that is a natural person ............................................................. 28 
+5. Tax residency under UAE domestic law ........................ 31 
+5.1. Juridical person that is Tax Resident under UAE domestic law ........................... 31 
+5.1.1. Juridical person incorporated or otherwise formed or recognised in the UAE . 31 
+5.1.2. Juridical persons otherwise considered a Tax Resident under other UAE Tax 
+Laws 32 
+5.1.3. Tax residency of foreign companies with UAE branches ................................ 33 
+5.1.4. Tax residency of Exempt Persons .................................................................. 33 
+5.2. Natural person that is Tax Resident under UAE domestic law ............................. 34 
+5.2.1. 183-days+ test ............................................................................................... 37 
+5.2.2. 90-days+ test ................................................................................................. 38 
+5.2.3. Exceptional circumstances leading to a physical presence ............................ 41 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+2 
+5.2.4. Usual or primary place of residence and centre of financial and personal 
+interests test ............................................................................................................ 43 
+6. Tax residency under Double Taxation Agreements ..... 46 
+6.1. Juridical persons that are tax resident under Double Taxation Agreements ........ 46 
+6.1.1. Tax residence of Government Entities under Double Taxation Agreements ... 46 
+6.1.2. Tax residence of Exempt Persons under Double Taxation Agreements ......... 47 
+6.1.3. Double Taxation Agreements tie-breaker rules for juridical persons ............... 47 
+6.2. Natural persons that are tax resident under Double Taxation Agreements .......... 48 
+6.2.1. Double Taxation Agreement tie-breaker rules for natural persons .................. 49 
+6.2.2. Non-resident under the Double Taxation Agreement ..................................... 51 
+7. Obtaining a Tax Residency Certificate ........................... 53 
+7.1. Tax Residency Certificate ................................................................................... 53 
+7.2. Periods covered by the Tax Residency Certificate .............................................. 53 
+7.3. How to apply for a Tax Residency Certificate ...................................................... 54 
+7.4. Applying for a Tax Residency Certificate for the purposes of a Double Taxation 
+Agreement ........................................................................................................ 55 
+7.5. Required documentation ..................................................................................... 56 
+7.5.1. Documentation required to apply for a Tax Residency Certificate for purposes 
+other than the application of a Double Taxation Agreement ..................................... 56 
+7.5.2. Documentation required to apply for a Tax Residency Certificate for Double 
+Taxation Agreement purposes ................................................................................. 57 
+7.6. Application response by the FTA ......................................................................... 58 
+7.7. Fees .................................................................................................................... 59 
+8. International form stamping ............................................ 60 
+9. Appendix 1: Tax Resident Certificate sample ............... 62 
+10. Appendix 2: Residency criteria of various legislative 
+instruments ....................................................................... 63 
+11. Updates and Amendments .............................................. 66 
+ 
+ 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+3 
+1. Glossary 
+ 
+AED: The United Arab Emirates dirham. 
+ 
+Authority: Federal Tax Authority. 
+ 
+Business: Any activity conducted regularly, on an ongoing and independent basis by 
+any Person and in any location, such as industrial, commercial, agricultural, 
+vocational, professional, service or excavation activities or any other activity related to 
+the use of tangible or intangible properties. 
+ 
+Business Activity: Any transaction or activity, or series of transactions or series of 
+activities conducted by a Person in the course of its Business. 
+ 
+Connected Person: Any Person affiliated with a Taxable Person as determined in 
+Clause 2 of Article 36 of the Corporate Tax Law. 
+ 
+Corporate Tax: The tax imposed by the Corporate Tax Law on juridical persons and 
+Business income. 
+ 
+Corporate Tax Law: Federal Decree-Law No. 47 of 2022 on the Taxation of 
+Corporations and Businesses, and its amendments. 
+ 
+Corporate Tax Payable: Corporate Tax that has or will become due for payment to 
+the FTA in respect of one or more Tax Periods. 
+ 
+Double Taxation Agreement: An international agreement signed by two or more 
+countries for the avoidance of double taxation and the prevention of fiscal evasion on 
+income and capital. 
+ 
+Exempt Person: A Person exempt from Corporate Tax under Article 4 of the 
+Corporate Tax Law. 
+ 
+Extractive Business: The Business or Business Activity of exploring, extracting, 
+removing, or otherwise producing and exploiting the Natural Resources of the UAE, or 
+any interest therein as determined by the Minister. 
+ 
+Financial Statements: A complete set of statements as specified under the 
+Accounting Standards applied by the Taxable Person, which includes, but is not limited 
+to, statement of income, statement of other comprehensive income, balance sheet, 
+statement of changes in equity and cash flow statement. 
+ 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+4 
+Financial Year: The Gregorian calendar year, or the twelve-month period for which 
+the Taxable Person prepares Financial Statements. 
+ 
+Foreign Permanent Establishment: A place of Business or other form of presence 
+outside the UAE of a Resident Person that is determined in accordance with the criteria 
+prescribed in Article 14 of the Corporate Tax Law. 
+ 
+Foreign Tax Credit: Tax paid under the laws of a foreign jurisdiction on income or 
+profits that may be deducted from the Corporate Tax due, in accordance with the 
+conditions of Article 47(2) of the Corporate Tax Law. 
+ 
+Free Zone: A designated and defined geographic area within the UAE that is specified 
+in a decision issued by the Cabinet at the suggestion of the Minister. 
+ 
+Free Zone Person: A juridical person incorporated, established or otherwise 
+registered in a Free Zone, including a branch of a Non-Resident Person registered in 
+a Free Zone. 
+ 
+FTA: Federal Tax Authority, being the Authority responsible for the administration, 
+collection and enforcement of federal taxes in the UAE. 
+ 
+Government Controlled Entity: Any juridical person, directly or indirectly wholly 
+owned and controlled by a Government Entity, as specified in a decision issued by the 
+Cabinet at the suggestion of the Minister. 
+ 
+Government Entity: The Federal Government, Local Governments, ministries, 
+government departments, government agencies, authorities and public institutions of 
+the Federal Government or Local Governments. 
+ 
+Licence: A document issued by a Licensing Authority under which a Business or 
+Business Activity is conducted in the UAE. 
+ 
+Local Government: Any of the governments of the Member Emirates of the 
+Federation. 
+ 
+Mandated Activity: Any activity conducted by a Government Controlled Entity in 
+accordance with the legal instrument establishing or regulating the entity, that is 
+specified in a decision issued by the Cabinet at the suggestion of the Minister. 
+ 
+Minister: Minister of Finance. 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+5 
+Mutual Agreement Procedure: A process that allows competent authorities of 
+contracting states to resolve disputes regarding the application of Double Taxation 
+Agreements.  
+ 
+Natural Resources: Water, oil, gas, coal, naturally formed minerals, and other non-
+renewable, non-living natural resources that may be extracted from the UAE’s 
+Territory.   
+ 
+Non-Extractive Natural Resource Business: The Business or Business Activity of 
+separating, treating, refining, processing, storing, transporting, marketing or 
+distributing the Natural Resources of the UAE. 
+ 
+Non-Resident Person: The Taxable Person specified in Article 11(4) of the Corporate 
+Tax Law. 
+ 
+OECD: The Organisation for Economic Cooperation and Development. 
+ 
+Participating Interest: An ownership interest in the shares or capital of a juridical 
+person that meets the conditions referred to in Article 23 of the Corporate Tax Law. 
+ 
+Permanent Establishment: A place of Business or other form of presence in the UAE 
+of a Non-Resident Person in accordance with Article 14 of the Corporate Tax Law. 
+ 
+Permanent Place of Residence: The place located in the UAE and available to the 
+natural person at all times. 
+ 
+Person: Any natural person or juridical person. 
+ 
+Qualifying Investment Fund: Any entity whose principal activity is the issuing of 
+investment interests to raise funds or pool investor funds or establish a joint investment 
+fund with the aim of enabling the holder of such an investment interest to benefit from 
+the profits or gains from the entity’s acquisition, holding, management or disposal of 
+investments, in accordance with the applicable legislation and when it meets the 
+conditions set out in Article 10 of the Corporate Tax Law. 
+ 
+Qualifying Public Benefit Entity: Any entity that meets the conditions set out in 
+Article 9 of the Corporate Tax Law and that is listed in a decision issued by the Cabinet 
+at the suggestion of the Minister. 
+ 
+Related Party: Any Person associated with a Taxable Person as determined in Article 
+35(1) of the Corporate Tax Law. 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+6 
+Residence Permit: The permit or authorisation issued by the competent authorities 
+in the UAE granting the natural person the right to reside or work within the territory of 
+the UAE, and does not include any temporary permit to enter the UAE for a specified 
+period for the purposes of temporary travel, tourism, sport, medical treatment or any 
+other purpose. 
+ 
+Resident Person: The Taxable Person specified in Article 11(3) of the Corporate Tax 
+Law. 
+ 
+State: United Arab Emirates. 
+ 
+State Sourced Income: Income accruing in, or derived from, the UAE as specified in 
+Article 13 of the Corporate Tax Law. 
+ 
+Tax: Every federal tax imposed under the Tax Law, that the FTA is mandated to 
+administer, collect and enforce. 
+ 
+Tax Law: Any federal law whereby Tax is imposed. 
+ 
+Tax Period: The period for which a Tax Return is required to be filed. 
+ 
+Tax Registration Number: A unique number issued by the FTA to each Person who 
+is registered for Corporate Tax purposes in the UAE. 
+ 
+Tax Residency Certificate: A certificate issued by the FTA proving that the Person 
+is a Tax Resident in the UAE.  
+ 
+Tax Resident: The Person who is resident of the UAE as specified in Articles 3 and 4 
+of Cabinet Decision No. 85 of 2022. 
+ 
+Tax Return: Information filed with the FTA for Corporate Tax purposes in the form 
+and manner as prescribed by the FTA, including any schedule or attachment thereto, 
+and any amendment thereof. 
+ 
+Taxable Income: The income that is subject to Corporate Tax under the Corporate 
+Tax Law. 
+ 
+Taxable Person: A Person subject to Corporate Tax in the UAE under the Corporate 
+Tax Law. 
+ 
+Turnover: The gross amount of income derived during a Gregorian calendar year. 
+ 
+UAE: United Arab Emirates. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+7 
+ 
+Withholding Tax: Corporate Tax to be withheld from State Sourced Income in 
+accordance with Article 45 of the Corporate Tax Law. 
+ 
+ 
+ 
+ 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+8 
+2. Introduction 
+ 
+2.1. 
+Overview 
+ 
+Federal Decree-Law No. 47 of 2022 on the Taxation of Corporations and Businesses 
+and its amendments (“Corporate Tax Law”) was issued on 3 October 2022 and was 
+published in Issue #737 of the Official Gazette of the United Arab Emirates (“UAE”) on 
+10 October 2022.  
+ 
+The Corporate Tax Law provides the legislative basis for imposing a federal tax on 
+corporations and Business profits (“Corporate Tax”) in the UAE.  
+ 
+The provisions of the Corporate Tax Law shall apply to Tax Periods commencing on 
+or after 1 June 2023. 
+ 
+2.2. 
+Purpose of this guide  
+ 
+This guide is designed to provide general guidance on Corporate Tax in the UAE and 
+on tax residency rules. It provides readers with an overview of the following: 
+• 
+how a Person can determine whether they are a Resident Person for Corporate 
+Tax purposes, 
+• 
+how a Person can determine whether they are a UAE Tax Resident under 
+domestic law, 
+• 
+how a Person can determine whether they are a UAE Tax Resident under a 
+Double Taxation Agreement (“DTA”), and 
+• 
+how a UAE Tax Resident can obtain a Tax Residency Certificate.   
+ 
+2.3. 
+Who should read this guide?   
+ 
+This guide should be read by anyone that is responsible for tax matters, operating in 
+the UAE, who wants to know more about the application of the domestic Tax 
+Residency rules in the UAE, as well as their tax agents and advisers. It is intended to 
+be read in conjunction with the Corporate Tax Law, the implementing decisions and 
+other relevant guidance published by the FTA. 
+ 
+2.4. 
+How to use this guide 
+ 
+The relevant articles of the Corporate Tax Law and the implementing decisions are 
+indicated in each section of the guide. 
+ 
+It is recommended that the guide is read in its entirety to provide a complete 
+understanding of the definitions and interactions of the different rules. Further 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+9 
+guidance on some of the areas covered in this guide can be found in other topic-
+specific guides. 
+ 
+In some instances, examples are used to illustrate how key elements of the Corporate 
+Tax Law apply to Resident Persons and the impact on the application to obtain a Tax 
+Residency Certificate. The examples in the guide: 
+- 
+show how these elements operate in isolation and do not show the interactions 
+with other provisions of the Corporate Tax Law that may occur. They do not, and 
+are not intended to, cover the full facts of the hypothetical scenarios used nor all 
+aspects of the Corporate Tax regime, and should not be relied upon for legal or 
+tax advice purposes, and 
+- 
+are only meant for providing the readers with general information on the subject 
+matter of this guide. They are exclusively intended to explain the rules related to 
+the subject matter of this guide and do not relate at all to the tax or legal position 
+of any specific Persons. 
+ 
+2.5. 
+Legislative references 
+ 
+In this guide, the following legislation will be referred to as follows: 
+• 
+Federal Law No. 5 of 1985 on Civil Transactions, and its amendments, is referred 
+to as “Federal Law No. 5 of 1985’’, 
+• 
+Federal Decree-Law No. 32 of 2021 on Commercial Companies is referred to as 
+“Federal Decree-Law No. 32 of 2021”, 
+• 
+Federal Decree-Law No. 28 of 2022 on Tax Procedures is referred to as “Federal 
+Decree-Law No. 28 of 2022”, 
+• 
+Federal Decree-Law No. 47 of 2022 on the Taxation of Corporations and 
+Businesses, and its amendments, is referred to as “Corporate Tax Law”, 
+• 
+Federal Decree-Law No. 31 of 2023 on Trusts is referred to as “Federal Decree-
+Law No. 31 of 2023”, 
+• 
+Cabinet Decision No. 65 of 2020 on Fees for the Services Provided by the Federal 
+Tax Authority, and its amendments is referred to as “Cabinet Decision No. 65 of 
+2020’’, 
+• 
+Cabinet Decision No. 85 of 2022 on Determination of Tax Residency is referred to 
+as “Cabinet Decision No. 85 of 2022”, 
+• 
+Cabinet Decision No. 49 of 2023 on Specifying the Categories of Businesses or 
+Business Activities Conducted by a Resident or Non-Resident Natural Person that 
+are Subject to Corporate Tax is referred to as “Cabinet Decision No. 49 of 2023”,  
+• 
+Cabinet Decision No. 56 of 2023 on Determination of a Non-Resident Person’s 
+Nexus in the State for the Purposes of Federal Decree-Law No. 47 of 2022 on the 
+Taxation of Corporations and Businesses is referred to as “Cabinet Decision No. 
+56 of 2023”, 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+10 
+• 
+Cabinet Decision No. 74 of 2023 on the Executive Regulation of Federal Decree-
+Law No. 28 of 2022 on Tax Procedures is referred to as “Cabinet Decision No. 74 
+of 2023”, 
+• Ministerial Decision No. 27 of 2023 on Implementation of certain Provisions of 
+Cabinet Decision No. 85 of 2022 on Determination of Tax Residency is referred to 
+as “Ministerial Decision No. 27 of 2023”, 
+• Ministerial Decision No. 116 of 2023 on the Participation Exemption for the 
+Purposes of Federal Decree-Law No. 47 of 2022 on the Taxation of Corporations 
+and Businesses is referred to as “Ministerial Decision No. 116 of 2023”, 
+ 
+• Ministerial Decision No. 247 of 2023 on the Issuance of Tax Residency Certificate 
+for the Purposes of International Agreements is referred to as “Ministerial Decision 
+No. 247 of 2023”, 
+• Foundations Regulations 2017 of the Abu Dhabi Global Market is referred to as 
+“ADGM Foundations Regulations 2017”, 
+• Dubai International Financial Centre Law No. 3 of 2018 is referred to as “DIFC Law 
+No. 3 of 2018”, and 
+• Ras Al Khaimah International Corporate Centre Regulations 2019 is referred to as 
+“RAK ICC Foundations Regulations 2019”. 
+ 
+2.6. 
+Status of this guide  
+ 
+This guidance is not a legally binding document but is intended to provide assistance 
+in understanding the tax implications for Persons relating to the Corporate Tax regime 
+in the UAE. The information provided in this guide should not be interpreted as legal 
+or tax advice. It is not meant to be comprehensive and does not provide a definitive 
+answer in every case. It is based on the legislation as it stood when the guide was 
+published. Each Person’s own specific circumstances should be considered.  
+ 
+The Corporate Tax Law, the implementing decisions and the guidance materials 
+referred to in this document will set out the principles and rules that govern the 
+application of Corporate Tax in the UAE. Nothing in this publication modifies or is 
+intended to modify the requirements of any legislation. 
+ 
+This document is subject to change without notice. 
+ 
+ 
+ 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+11 
+3. Concept of tax residence 
+ 
+The essential purpose of the concept of tax residence is to establish a connecting 
+factor between a Person and a specific jurisdiction for tax purposes. A Person may be 
+either a natural person (an individual) or a juridical person (a separate legal entity). 
+ 
+A Person may be liable to tax in any jurisdiction where the Person meets the criteria 
+to be a tax resident. Each country has sovereignty to establish its own definition of tax 
+residency and, therefore, it is possible for a Person with cross-border economic 
+activities to be considered tax resident in more than one jurisdiction. 
+ 
+Where a Person is dual resident (that is, tax resident in two jurisdictions), the 
+applicable DTA between the two jurisdictions generally determines the jurisdiction that 
+is considered to be the residence state of the Person and how taxing rights should be 
+allocated between the two jurisdictions. One jurisdiction may be considered the 
+“residence state” while the other jurisdiction may be considered the “source state”.  
+ 
+Where there is a DTA, a Person that is tax resident in one jurisdiction but has been 
+subject to tax in both jurisdictions should be able to claim relief from double taxation, 
+such as applying a reduced withholding tax rate or requesting a withholding tax refund. 
+To do this, a Person may be required to provide a Tax Residency Certificate (“TRC”) 
+issued by a jurisdiction. A Person can apply to the FTA for a TRC (see Section 7). The 
+FTA also provides an international form stamping service (see Section 8). 
+ 
+Tax residency is a different from other types of residency, such as for immigration 
+purposes. Holding a Residence Permit or right to reside in the UAE based on the 
+applicable immigration rules does not automatically mean that a natural person is also 
+a Tax Resident in the UAE. Similarly, it is possible for a natural person to satisfy the 
+criteria to be considered a Tax Resident of the UAE without holding a Residence 
+Permit. 
+ 
+Being a “Resident Person” subject to Corporate Tax (see Section 4) is not the same 
+as being a “Tax Resident” of the UAE (see Section 5) for the purposes of other taxes 
+or being tax resident in the UAE for the purposes of a DTA entered into between the 
+UAE and another jurisdiction.  
+ 
+Being a “Resident Person” for Corporate Tax purposes is also different from the 
+concepts of residency used in subjects such as citizenship or when considering where 
+a person is domiciled or habitually resides. These concepts are further detailed in 
+Section 6. 
+ 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+12 
+4. Resident Person under the Corporate Tax Law 
+ 
+A Taxable Person is a Person subject to UAE Corporate Tax. Such a Person is either 
+a “Resident Person” or a “Non-Resident Person”.1 Furthermore, a Person is either a 
+“juridical person” or a “natural person”. These classifications determine the scope of 
+the Person’s Corporate Tax obligations. 
+ 
+Resident Person 
+ 
+A juridical person that is a Resident Person is subject to Corporate Tax on its Taxable 
+Income derived from inside and outside the UAE (worldwide income).2  
+ 
+A natural person that is a Resident Person is subject to Corporate Tax on his or her 
+Taxable Income derived from in and outside the UAE, provided it relates to the 
+Businesses or Business Activities conducted by the natural person in the UAE,3 and 
+the Turnover derived from such Businesses or Business Activities exceeds AED 
+1,000,000 within a Gregorian calendar year.4  
+ 
+For both a juridical person and a natural person who is a Resident Person, the 
+Corporate Tax Law exempts certain income earned outside of the UAE, and allows a 
+credit for taxes paid in a foreign country on income that is also subject to Corporate 
+Tax in the UAE. 
+ 
+Non-Resident Person 
+ 
+A Non-Resident Person, whether a juridical person or natural person, is generally only 
+subject to Corporate Tax on income sourced in the UAE, or attributable to a Permanent 
+Establishment in the UAE. 
+ 
+A Non-Resident Person that is a juridical person may also be subject to Corporate Tax 
+on income derived from a nexus in the UAE.5 
+ 
+4.1. 
+Resident Person that is a juridical person 
+ 
+A juridical person refers to a legal entity that is incorporated, established or recognised 
+under the relevant legislation. The relevant legislation includes the Federal, Emirate, 
+Free Zone legislation and regulations, and appropriate laws of foreign jurisdictions. A 
+                                               
+1 Article 11(2) of the Corporate Tax Law. 
+2 Article 12(1) of the Corporate Tax Law. 
+3 Article 12(2) of the Corporate Tax Law. 
+4 Article 2(1) of Cabinet Decision No. 49 of 2023. 
+5 Article 2(1) of Cabinet Decision No. 56 of 2023. 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+13 
+juridical person has a legal personality separate from its founders, owners and 
+directors. 
+A juridical person is a Resident Person who is in scope for Corporate Tax purposes if:  
+• 
+it is incorporated or otherwise established or recognised under the applicable 
+legislation of the UAE, irrespective of where its effective management and control 
+is exercised,6 or 
+• 
+it is incorporated or otherwise established or recognised under the applicable 
+legislation outside the UAE but its effective management and control is exercised 
+in the UAE7 (see Section 4.1.4). 
+ 
+4.1.1. Juridical person incorporated or formed in the UAE 
+ 
+A juridical person can be incorporated or established under different legal forms.  
+ 
+In the UAE, juridical persons include Limited Liability Companies (LLCs), Private 
+Shareholding Companies (PSCs) with one single interest holder, Public or Private 
+Joint Stock Companies (PJSCs), foundations or trusts that have been established 
+under the UAE “mainland” legislation. 
+ 
+Civil companies incorporated or established in the UAE are also considered to be 
+juridical persons.8 
+ 
+Furthermore, companies that are labelled as “offshore companies”, which are 
+incorporated in the UAE are also considered to be juridical persons. 
+ 
+According to Federal Law No. 5 of 1985, a juridical person has:  
+• 
+a separate financial liability from any other person, and 
+• 
+legal capacity within the limits laid down by law or establishing document, and 
+• 
+the right to bring legal proceedings, and 
+• 
+a separate place of residence.9 
+ 
+However, whether a person is juridical will ultimately be assessed based on the 
+establishment law of each entity. 
+ 
+Example 1: Juridical person legally formed under the UAE law 
+ 
+Company A is a media outlet that was established under Federal Decree-Law No. 
+32 of 2021 as an entity with separate legal personality. As a juridical person 
+                                               
+6 Article 11(3)(a) of the Corporate Tax Law. 
+7 Article 11(3)(b) of the Corporate Tax Law. 
+8 Article 92 of the Federal Law No. 5 of 1985. 
+9 Article 93 of the Federal Law No. 5 of 1985. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+14 
+established under the laws of the UAE, Company A is a Resident Person for 
+Corporate Tax purposes. 
+ 
+A UAE branch of a UAE juridical person is seen as an extension of its head office and, 
+therefore, not considered a separate juridical person from its head office.10 
+ 
+Example 2: UAE branch of a juridical person incorporated in the UAE 
+ 
+Company B is an LLC that is incorporated in the UAE. Company B has a head 
+office in Dubai, but mainly operates from branches in Ajman, Sharjah, and Abu 
+Dhabi. 
+ 
+As a juridical person that is incorporated in the UAE, Company B is a Resident 
+Person for Corporate Tax purposes. 
+ 
+Although Company B has separate offices and premises for its branches across 
+the UAE, these branches are all considered an extension of Company B’s head 
+office. The head office and its branches are treated as one and the same, i.e. 
+Company B and all of its UAE branches are considered as one juridical person that 
+is a Resident Person. 
+ 
+Similarly, a UAE branch of a foreign juridical person is an extension of its parent or 
+head office and is not considered a separate legal entity from the parent or head office. 
+A UAE branch of a foreign company cannot be considered a Resident Person in its 
+own right. Instead, the foreign company with a UAE branch has a UAE Permanent 
+Establishment, and is considered as a Non-Resident Person for Corporate Tax 
+purposes.11 
+ 
+Example 3: UAE branch of a foreign company 
+ 
+Company C is a company that is incorporated in Country C. It registers a branch in 
+Al Ain, Abu Dhabi, for the purposes of facilitating loan arrangements for other 
+companies in the same group.  
+ 
+Company C has no other connection to the UAE and is not considered a Resident 
+Person under the Corporate Tax Law because it is not effectively managed and 
+controlled in the UAE. Instead, because of its Abu Dhabi branch and assuming that 
+                                               
+10 Article 11(5) of the Corporate Tax Law. 
+11 Article 11(4)(a) of the Corporate Tax Law. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+15 
+the necessary conditions are met, Company C has a Permanent Establishment in 
+the UAE and is considered a Non-Resident Person for Corporate Tax purposes. 
+ 
+4.1.2. Free Zones 
+ 
+Free Zones in the UAE have been set up to encourage investment and facilitate trade. 
+These Free Zones offer businesses highly efficient infrastructure and distinct services 
+that facilitate smooth workflows. 
+ 
+The Corporate Tax rules for a juridical person also apply to a Free Zone Person. 
+Therefore, if a juridical person is incorporated or formed in a Free Zone in the UAE, 
+the juridical person is also a Resident Person for Corporate Tax purposes.12 
+ 
+For the purposes of applying the Free Zone regime for Corporate Tax purposes, a 
+branch of a foreign company established or registered in a Free Zone is considered 
+the head office with the foreign parent being considered as a foreign branch. However, 
+for tax residency purposes, where a branch of a foreign company (that is tax resident 
+outside of the UAE) is established in a UAE Free Zone, the foreign company is 
+considered to be a Non-Resident Person for Corporate Tax purposes. 
+ 
+4.1.3. Exempt Persons 
+ 
+An Exempt Person for Corporate Tax purposes is not considered a Resident Person 
+subject to Corporate Tax, unless that Person conducts a Business or Business Activity 
+that is outside the scope of their exempted activity.  
+ 
+This only applies to Government Entities,13 Government Controlled Entities,14 Persons 
+engaged in an Extractive Business, 15 or a Non-Extractive Natural Resource 
+Business.16 
+ 
+In these instances, the Business or Business Activity of the Exempt Person that is not 
+its exempted activity is treated as an independent Business that is subject to Corporate 
+Tax.17 
+ 
+ 
+                                               
+12 Article 11(3)(a) of the Corporate Tax Law. 
+13 Article 5(2) of the Corporate Tax Law. 
+14 Article 6(2) of the Corporate Tax Law. 
+15 Article 7(2) of the Corporate Tax Law. 
+16 Article 8(2) of the Corporate Tax Law. 
+17 Articles 7(4) and 8(4) of the Corporate Tax Law. 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+16 
+4.1.4. Effective management and control 
+ 
+Determining residency for Corporate Tax purposes solely on the basis of place of 
+incorporation does not always reflect the economic reality of where the business 
+operates. Accordingly, for a juridical person incorporated or formed outside the UAE, 
+the determination of residence for Corporate Tax purposes takes into account where 
+the juridical person is effectively managed and controlled.18 This is in line with many 
+tax regimes in other countries that apply similar concepts such as “central 
+management and control” or “place of effective management” rules to determine tax 
+residency.  
+ 
+If a juridical person is not incorporated in the UAE but is effectively managed and 
+controlled in the UAE, it is considered a Resident Person for Corporate Tax 
+purposes.19 This is assessed for each particular case based on its specific facts and 
+circumstances. 
+ 
+The consequence of a non-UAE incorporated company being effectively managed and 
+controlled in the UAE, and therefore a Resident Person, is that the company is subject 
+to Corporate Tax on its profits sourced from both the UAE and from abroad, in the 
+same way as a company that is incorporated under the laws of the UAE.20 
+ 
+The place of effective management and control is understood as the place where “key 
+management and commercial decisions” that are necessary for the conduct of the 
+juridical person’s Business as a whole are, in substance, made. 
+ 
+The key management and commercial decisions that are necessary for the conduct of 
+Business may include, but are not limited to, the following activities: 
+• 
+setting the general policies, for example, investment policies and operational 
+policies, 
+• 
+determining the strategic direction of the company’s operations, 
+• 
+deciding the type of transactions that the company can enter into, for example, 
+mergers, acquisitions and purchase or sale of significant assets, 
+• 
+appointing c-suite and other senior executives and granting them authority to 
+manage or carry out the day-to-day operations of the company, 
+• 
+directly or indirectly overseeing the persons appointed to manage or carry out the 
+day-to-day business of the company, or 
+• 
+handling key finance matters such as the determination of how profits are used 
+and declaration of dividends. 
+ 
+                                               
+18 Article 11(3)(b) of the Corporate Tax Law. 
+19 Article 11(3)(b) of the Corporate Tax Law. 
+20 Article 12(1) of the Corporate Tax Law. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+17 
+Broadly, effective management and control relates to where the strategic level of 
+control (as opposed to day-to-day management) is conducted. This is in line with the 
+commentary on the OECD Model Tax Convention (“OECD Commentary”). 
+The following are not considered to be key management and commercial decisions, 
+and, therefore, do not constitute effective management and control: 
+• 
+formal finalisation or approval of decisions made by others, 
+• 
+mere implementation of decisions made by others, 
+• 
+day-to-day conduct and management of a company’s activities and operations, or 
+• 
+legal and administration matters such as keeping a share register or undertaking 
+minimum acts necessary to maintain a company's registration. 
+ 
+A juridical person can have multiple places of management, but only has one place of 
+effective management and control at any one time. Therefore, if a juridical person’s 
+key management and commercial decisions affecting its Business as a whole are 
+made in multiple locations, the place of effective management and control will be the 
+location where those decisions are regularly and predominantly made. 
+ 
+The place of effective management and control test is one of substance over form and 
+all relevant facts and circumstances must be examined on a case-by-case basis. This 
+analysis can be broadly done in two steps: 
+• 
+Step 1: Identifying the persons who make the key management and commercial 
+decisions. 
+• 
+Step 2: Determining the place where the key management and commercial 
+decisions are in substance made. 
+ 
+4.1.5. Criteria for identifying person who make key management and 
+commercial decisions 
+ 
+When determining who makes the key management and commercial decisions 
+necessary for the conduct of a juridical person’s Business, it is necessary to consider 
+the Persons who substantially make those decisions and not those who merely 
+formalise or approve the decisions made by others. 
+ 
+This analysis should consider the following key factors: 
+• 
+who has the legal power or authority to make the key management and 
+commercial decisions of the juridical person? 
+• 
+do the persons with the legal power to make the key management and commercial 
+decision in fact exercise this power? 
+• 
+if the persons with the legal power to make the key management and commercial 
+decisions do not exercise this power, who does? 
+ 
+Three tests to identify the Person (or Persons) who make key management and 
+commercial decisions are considered below:  
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+18 
+• 
+the board of directors’ test, 
+• 
+the delegation of authority test, and  
+• 
+the shareholders activity test. 
+ 
+4.1.5.1. 
+Board of directors test 
+ 
+Although the effective management and control test ultimately depends on considering 
+all the underlying facts and circumstances, it is necessary to review the relevant laws 
+or other legal instruments that govern the status of the juridical person as a starting 
+point to identify the Persons entrusted with the effective management and control of 
+the juridical person according to its legal framework.  
+ 
+The applicable company laws and the instrument governing the management of the 
+juridical person, for example, the memorandum or articles of association usually gives 
+certain senior persons the legal power to manage and control a juridical person.  
+ 
+Typically, effective management and control is legally entrusted to the board of 
+directors, although in some cases, this could be entrusted to a single individual such 
+as a managing director. This may differ between jurisdictions, and between different 
+types of juridical persons in each jurisdiction, and may depend on the instrument 
+governing the management of the juridical person. For example, according to the 
+Federal Decree-Law No. 32 of 2021, management of an LLC is entrusted to the board 
+of directors or managers as determined by the memorandum of association or statute 
+of the company.21  
+ 
+Where the board of directors have the legal power to make the key management and 
+commercial decisions of a juridical person, it is necessary to consider whether the 
+board of directors in fact make those decisions, or whether the decisions are in 
+substance made by another person. A key factor is whether the board is able to come 
+to a different conclusion to that reached by another person or whether the board 
+merely “rubber stamps” the decisions made by another person. 
+ 
+Other factors include:  
+• 
+whether the directors are suitably qualified and experienced, and have sufficient 
+knowledge of the juridical person and its Business, in order to make appropriate 
+decisions, 
+• 
+whether the board of directors take instructions, and act on instructions, from 
+another Person (or Persons), 
+• 
+the composition of the board of directors (both the executive and non-executive 
+directors) and the role of different directors. For example, the executive directors 
+                                               
+21 Article 83(1) of Federal Decree-Law No. 32 of 2021. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+19 
+may be actively involved in decision-making while the non-executive directors do 
+not have a decision-making role.  
+ 
+If key management and commercial decisions are not taken at board meetings by the 
+board of directors, it is necessary to determine how and where those decisions are 
+taken, and by whom. 
+ 
+4.1.5.2. 
+Delegation of authority test 
+ 
+Mere legal power or authority to make the key management and commercial decisions 
+of a juridical person is not sufficient to establish who exercises the effective 
+management and control, and relevant consideration should be given to the persons 
+who in fact develop and make the key management and commercial decisions. 
+ 
+In some cases, the Persons who have been granted the legal authority to exercise 
+effective management and control may not, in reality, be actively involved in the 
+decision-making process or governance of the juridical person, or may have delegated 
+some or all of their powers to others, for example, to board executive committees or 
+senior management.  
+ 
+In determining whether those with delegated authority indeed exercise effective 
+management and control, it is important to consider the functions of the parties. If the 
+board of directors, for example, evaluates the advice provided by senior management 
+and chooses whether or not to follow such advice based on its suitability for the 
+Business of the juridical person, then the board of directors would be considered to be 
+the real decision makers exercising effective management and control. However, if the 
+board of directors merely implements or approves decisions provided by the senior 
+management without independent consideration, the senior management is likely to 
+be considered to exercise effective management and control.  
+ 
+Given that the delegation of authority may be either formal or informal (based on the 
+actual conduct), it is important to consider the underlying facts and circumstances.  
+ 
+The following factors may be examined: 
+• 
+Whether the board of directors has appointed other Persons (for example, senior 
+management personnel) to conduct the company's day-to-day business. 
+• 
+Whether the appointed Persons implicitly control the juridical person by regularly 
+overseeing the affairs and monitoring the performance of the juridical person, or 
+formulating key strategies and policies, or making key commercial decisions, 
+without the active intervention of the board of directors. 
+• 
+Whether the appointed Persons provide advice, recommendations or options 
+relating to the key management and commercial decisions, which are merely 
+approved or implemented by the board of directors. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+20 
+• 
+Whether the board of directors actually considers whether or not to follow the 
+advice or directions provided by the appointed Persons or others, based on the 
+suitability of those recommendations for the overall Business of the juridical 
+person. 
+ 
+4.1.5.3. 
+Shareholders activity test 
+ 
+Depending on the level of actions taken by a shareholder, these can amount in practice 
+to effective management and control. 
+ 
+Shareholders generally contribute to certain fundamental decisions such as the 
+dissolution, liquidation or deregistration of the juridical person, the modification of the 
+rights attaching to various share classes or issuance of new shares, appointment of 
+those who control and direct the operations of the juridical person, etc. Such decisions 
+are, generally, not relevant to the determination of the juridical person’s place of 
+effective management and control. 
+ 
+For a shareholder to be considered to be exercising effective management and 
+control, the key decisions taken by that shareholder must go beyond decisions related 
+to guidance or mere influence on the normal management and policy formulation of 
+the juridical person’s activities. For example, the decisions that a parent company of 
+a multinational enterprises group would be expected to take for the strategic direction 
+of the group as a whole or supervision of the operations of group members. In some 
+cases, shareholders may limit the authority of, or provide guidelines for, the board and 
+senior management of a juridical person. 
+ 
+These limitations and guidelines, together with all the other facts and circumstances, 
+must be reviewed to determine whether the effect is that the shareholder is actually 
+making the key decisions or whether the person receiving guidance is still making its 
+own key decisions. 
+ 
+Undue influence on the board of directors or assumption of their powers by a 
+shareholder may constitute effective management and control. This may be the case 
+where the juridical person is wholly owned or controlled by a single person and its 
+Related Parties or Connected Persons. In such cases, it is important to establish 
+whether the board of directors of the juridical person independently makes its own 
+decisions or merely implements the decisions or recommendations given by the 
+shareholder without giving them any independent consideration of its own. 
+ 
+For the board of directors to exercise effective management and control, there should 
+be a degree of autonomy or independence which those directors have in making the 
+key decisions without reference to the shareholder. In instances where the majority of 
+the members of the board of directors consist of specific shareholders, this should be 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+21 
+considered for the sake of determining whether the shareholders are exercising 
+effective management and control over the board. 
+ 
+4.1.6. Where key management and commercial decisions are made 
+ 
+Once the person (or persons) who exercise effective management and control are 
+identified, the next step is to identify the location of the person (or persons) when 
+making the key management and commercial decisions. The place of domicile and/or 
+residence of such persons may be taken into consideration but is not necessarily the 
+determining factor. All relevant facts and circumstances must be evaluated on a case-
+by-case basis in determining the place of effective management and control of a 
+juridical person. 
+ 
+The following factors should be considered: 
+a) The place where board meetings are physically held. This is a significant indication 
+of the place of effective management and control only if the board of directors 
+retains and exercises its authority to govern the juridical person and does, in 
+substance, makes the key management and commercial decisions during board 
+meetings. Otherwise, consideration should be given to the place where such 
+decisions are made. 
+b) Board meetings may be held wholly virtually, or there may be a physical meeting 
+location where some directors attend physically while others attend virtually. 
+Consequently, the physical location of the board meeting may not be 
+determinative of the place of effective management and control, but rather, the 
+physical location where the directors with the overriding decision-making powers 
+join from. 
+c) If the board of directors have other meetings outside the board meeting to make 
+key management and commercial decisions, consideration should be given to 
+such meetings, for example, who participates, what decisions are made during 
+such meetings, and where such meetings take place. 
+d) In some cases, key management and commercial decisions are made via written 
+resolutions or by email that are circulated on behalf of decision makers that are in 
+different physical locations. The particular facts and circumstances of where the 
+persons ultimately making the decisions are located may determine the place of 
+effective management and control. 
+e) Minutes or other documents recording where the key management and 
+commercial decisions are made, may be relevant. Board minutes can provide 
+evidence of the decisions made, the persons who made the decisions and the 
+place where the decisions were made. Certain details in the board minutes such 
+as why the decisions were made and whether alternatives were considered or 
+rejected can be valuable evidence of the exercise of effective management and 
+control. Other evidence, however, may also be relied upon. This may include 
+papers circulated to board members in advance of meetings, emails, statements 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+22 
+or other correspondence showing the board's deliberations and the role played by 
+each director in the decision-making process. 
+f) 
+If the effective management and control is exercised by Persons other than the 
+board of directors, implicitly or by delegation of authority to, for example, 
+shareholders, senior management, executive committees, etc., the place of 
+effective management and control may be the location where those with delegated 
+authority make the key management and commercial decisions. 
+g) The nature of the Business may determine where key management and 
+commercial decisions are made in practice. 
+ 
+Generally, legal, administrative and operational factors such as the place of 
+incorporation, the location of the registered office, the location where the shareholder 
+register is kept, the place where accounting records are kept and the place where the 
+day-to-day operations of the Business are carried out, do not have relevance in 
+determining the place of effective management and control. 
+ 
+Additionally, even when the key management and commercial decisions are made in 
+the UAE, a place of effective management and control may not be created where: 
+a) Key management and commercial decisions are made in the UAE on an 
+occasional or one-off basis. This will depend on how significant the decisions are 
+and whether there is a regular pattern of the key decisions being made in the UAE.   
+b) The presence of the Person (or Persons) making the key management and 
+commercial decisions in the UAE is as a result of temporary and exceptional 
+circumstances. This may include, but is not limited to, the following: 
+• 
+adoption of public health measures by competent authorities in the UAE, or 
+in another relevant jurisdiction, or by the World Health Organisation, 
+• 
+imposition of travel restrictions by competent authorities in the UAE, or in 
+another relevant jurisdiction, 
+• 
+imposition of legal sanctions on a person preventing them from leaving the 
+UAE, 
+• 
+acts of war, or the occurrence of terrorist attacks, 
+• 
+natural disasters or force majeure beyond reasonable control, or 
+• 
+an emergency health condition affecting a person or their relatives (up to the 
+fourth degree, including by way of adoption or guardianship). 
+ 
+In circumstances where a juridical person's key management and commercial 
+decisions are made in more than one place, the relevant facts and circumstances 
+should be examined to identify the place where effective management and control is 
+made as a matter of substance. 
+ 
+If the factors listed above are inconclusive in determining the place of effective 
+management and control, the place in which the juridical person has the strongest 
+economic nexus may be considered. This is determined by examining various factors 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+23 
+such as where the juridical person has most of its employees and assets, carries on 
+most of its activities, derives most of its revenues or where the senior management 
+functions are carried on. 
+ 
+4.1.6.1. 
+Virtual Meetings 
+ 
+Business decisions may not necessarily occur in a single location. If the directors who 
+make the key management and commercial decisions regularly attend board meetings 
+virtually or from different locations, the following factors may be considered in 
+determining the location of effective management and control: 
+• 
+the regularity of virtual and physical attendance of board meetings by the directors, 
+• 
+the physical location of the directors when they virtually attend board meetings, 
+and whether that location changes, 
+• 
+the level of influence each director has in the overall decision-making process of 
+the board, and 
+• 
+the number of directors that attend virtually compared to those who attend 
+physically. 
+ 
+Example 4: Juridical person effectively managed and controlled in the UAE - 
+“rubber stamping” decisions 
+ 
+Company D is established in Country D, and owns investment properties in Country 
+D. Company D is owned by an individual (Mr U) who resides and is physically based 
+in the UAE. 
+ 
+Company D’s annual board meetings are held in Country D. These meetings are 
+attended by directors physically based in Country D, whose involvement in the 
+company is attending such meetings and the day-to-day management of Company 
+D. Mr U does not attend the board meetings. 
+ 
+The directors in Country D do not receive information that would enable them to 
+reasonably reach commercial decisions, and from the board minutes, it appears 
+that the directors merely follow the directions of Mr U without question. 
+ 
+Based on these facts, Company D is likely to be effectively managed and controlled 
+in the UAE, as the board in Country D appears to be merely “rubber stamping” 
+decisions made in the UAE by Mr U. 
+ 
+ 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+24 
+Example 5: Juridical person effectively managed and controlled in the UAE – 
+board meetings 
+ 
+Company E is incorporated in Country E, and provides global logistics services. 
+The board of directors make all the key management and commercial decisions.   
+All the directors attend board meetings physically. Such meetings are held in Dubai, 
+UAE, being a convenient location for all the directors to travel to.  
+ 
+On the basis that the key management and commercial decisions of Company E 
+are made at the board meetings that are held in Dubai, Company E is effectively 
+managed and controlled in the UAE. 
+ 
+Example 6: Juridical person not effectively managed and controlled in the 
+UAE 
+ 
+Company F is incorporated in Country F, and manufactures and supplies medical 
+equipment. The majority shareholder of Company F is another company, Company 
+G, based in Country G.  
+   
+The board of directors of Company F regularly hold their board meetings in Abu 
+Dhabi, UAE, where many of the directors of Company F live. However, the board 
+of directors typically acts at the directions of Company G, without independent 
+consideration. Minutes of the board meetings of Company F suggests that all the 
+key management and commercial decisions of Company F are in fact made by 
+Company G’s board of directors. Company G’s board of directors always hold their 
+board meetings in Country G.  
+ 
+Based on these facts, it is likely that Company F is effectively managed and 
+controlled in Country G, rather than in Abu Dhabi, UAE. The board of directors of 
+Company F are merely “rubber stamping” decisions made by Company G based in 
+Country G. 
+ 
+The table below provides further guidance for determining the place of effective 
+management and control for the purposes of the Corporate Tax Law for a juridical 
+person that is incorporated outside the UAE. 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+25 
+Test 
+Factors likely to create a 
+place of effective 
+management and control in 
+the UAE 
+Factors not likely to create a 
+place of effective 
+management and control in 
+the UAE 
+Board of directors’ 
+test, 
+where 
+key 
+management 
+and 
+commercial decisions 
+are 
+made 
+by 
+the 
+board of directors. 
+ 
+- 
+Board 
+meetings 
+are 
+physically and regularly 
+held in the UAE. 
+- 
+Board meetings are held 
+virtually and the majority 
+of 
+the 
+directors 
+are 
+physically located in the 
+UAE when they attend 
+the virtual meetings.   
+- 
+Decisions 
+are 
+made 
+outside 
+of 
+board 
+meetings (for example, 
+through resolutions or 
+emails), and the majority 
+of 
+the 
+directors 
+are 
+physically located in the 
+UAE 
+when 
+such 
+decisions are made. 
+- 
+Board 
+meetings 
+are 
+physically and regularly 
+held outside the UAE.  
+- 
+A board meeting was 
+physically held in the 
+UAE, but on a one-off 
+basis.   
+- 
+Board meetings are held 
+virtually and the majority 
+of the directors are not 
+physically located in the 
+UAE when they attend 
+the virtual meetings.  
+- 
+A board meeting, held 
+virtually, was attended by 
+directors 
+physically 
+located in the UAE at the 
+time, but this was a one-
+off 
+occurrence 
+or 
+a 
+consequence 
+of 
+a 
+temporary 
+and 
+exceptional situation. 
+- 
+Decisions 
+are 
+made 
+outside 
+of 
+board 
+meetings (for example, 
+through resolutions or 
+emails), and the majority 
+of the directors are not 
+physically located in the 
+UAE 
+when 
+such 
+decisions are made. 
+Delegation 
+test, 
+where 
+key 
+management 
+and 
+commercial decisions 
+are made by persons 
+other than the board 
+of 
+directors 
+(“delegated 
+persons”). 
+- 
+The 
+majority 
+of 
+the 
+directors 
+are 
+located 
+outside the UAE but they 
+merely “rubber stamp” 
+decisions made by the 
+delegated persons who 
+are physically located in 
+the UAE when making 
+decisions.  
+- 
+An executive committee, 
+being 
+delegated 
+- 
+The 
+majority 
+of 
+the 
+directors are located in 
+the 
+UAE 
+but merely 
+“rubber stamp” decisions 
+made by the delegated 
+persons 
+who 
+are 
+physically 
+located 
+outside the UAE when 
+making decisions.  
+- 
+An executive committee, 
+being 
+delegated 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+26 
+Test 
+Factors likely to create a 
+place of effective 
+management and control in 
+the UAE 
+Factors not likely to create a 
+place of effective 
+management and control in 
+the UAE 
+persons, 
+makes 
+decisions in the UAE. 
+Senior management, being 
+delegated persons, make 
+decisions from an office 
+located in the UAE.  
+persons, 
+makes 
+decisions 
+outside 
+the 
+UAE. 
+- 
+Senior 
+management, 
+being 
+delegated 
+persons, 
+makes 
+decisions from an office 
+located outside the UAE. 
+Shareholder 
+activity 
+test, 
+where 
+key 
+management 
+and 
+commercial decisions 
+are made by one or 
+more 
+shareholders 
+(“delegated 
+shareholder”), rather 
+than by the board of 
+directors.  
+- 
+The 
+majority 
+of 
+the 
+directors 
+are 
+located 
+outside the UAE but 
+merely “rubber stamp” 
+decisions made by the 
+delegated 
+shareholder, 
+who is physically located 
+in the UAE when making 
+decisions. 
+- 
+A 
+number 
+of 
+shareholders 
+are 
+physically 
+located 
+outside of the UAE but 
+these shareholders are 
+not 
+delegated 
+shareholders. 
+On 
+the 
+other 
+hand, 
+the 
+delegated shareholder is 
+physically located in the 
+UAE 
+when 
+making 
+decisions.  
+- 
+The 
+majority 
+of 
+the 
+directors are located in 
+the 
+UAE 
+but merely 
+“rubber stamp” decisions 
+made by the delegated 
+shareholder, 
+who 
+is 
+physically 
+located 
+outside the UAE when 
+making decisions.  
+- 
+A 
+number 
+of 
+shareholders 
+are 
+physically located in the 
+UAE 
+but 
+these 
+shareholders 
+are 
+not 
+delegated shareholders. 
+On the other hand, the 
+delegated shareholder is 
+physically 
+located 
+outside the UAE when 
+making decisions.  
+ 
+4.1.7. Income subject to Corporate Tax 
+ 
+A juridical person that is a Resident Person is subject to Corporate Tax on their 
+Taxable Income, which can be derived from both within and from outside the UAE.22 
+This means that a juridical person that is a Resident Person is taxed on all income 
+earned, irrespective of whether the income is sourced in the UAE or a foreign country. 
+ 
+ 
+ 
+                                               
+22 Article 12(1) of the Corporate Tax Law. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+27 
+ 
+4.1.8. Income from foreign sources received by a juridical Resident Person 
+ 
+Where a juridical person that is a Resident Person has a Foreign Permanent 
+Establishment, the juridical person can make an election to exclude the income and 
+expenditure derived by the Foreign Permanent Establishment in calculating its 
+Taxable Income, if certain conditions are satisfied.23 
+ 
+A Foreign Permanent Establishment refers to a fixed place of Business, such as an 
+overseas branch, office or factory, or a dependent agent who habitually exercises an 
+authority to conduct a Business or Business Activity on behalf of a Resident Person 
+overseas. 
+ 
+Example 7: Foreign source income from Foreign Permanent Establishments 
+ 
+Company H is a hospitality and travel company incorporated in the UAE. It has 
+Foreign Permanent Establishments in other countries in the form of sales offices. 
+ 
+As a UAE incorporated company, Company H is a juridical person that is a Resident 
+Person for Corporate Tax purposes. Normally, this means that Company H is 
+subject to Corporate Tax on its income earned in the UAE and the income earned 
+by its Foreign Permanent Establishments. 
+ 
+However, Company H meets the necessary conditions that are required to be able 
+to make a Foreign Permanent Establishment election. If Company H makes this 
+election, it should not include the income and associated expenditure or losses 
+from its Foreign Permanent Establishments when calculating its Taxable Income 
+for the purposes of the Corporate Tax Law. 
+ 
+In addition, certain income received from foreign companies is exempt from Corporate 
+Tax if the Resident Person holds a Participating Interest in the foreign company.24 A 
+Participating Interest is an interest in a juridical person that meets all the conditions of 
+Article 23(2) of the Corporate Tax Law. 
+ 
+If the conditions for a Participating Interest are met, the following income will be exempt 
+from Corporate Tax: 
+                                               
+23 Article 24(1) of the Corporate Tax Law. 
+24 Article 22(2) and (3) read with Article 23 of the Corporate Tax Law and Ministerial Decision No. 116 
+of 2023. 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+28 
+• 
+Dividends and other distributions derived from a Participating Interest in a foreign 
+juridical person that is not a Resident Person,25 
+• 
+gains or losses on the transfer, sale, or other disposition of the whole or part of 
+the Participating Interest,26 
+• 
+foreign exchange gains or losses in relation to a Participating Interest,27 and 
+• 
+impairment gains or losses in relation to a Participating Interest.28 
+ 
+Furthermore, a Foreign Tax Credit may be available for tax paid in foreign jurisdictions 
+on income that is also subject to UAE Corporate Tax.29 The available Foreign Tax 
+Credit reduces the Corporate Tax Payable in the UAE by the value of foreign taxes 
+paid on the relevant income, up to the UAE Corporate Tax liability. This relief is 
+unilateral and does not take into consideration any double taxation relief available 
+under an applicable DTA or any other reciprocal relief from a foreign taxing jurisdiction. 
+ 
+4.2. 
+Resident Person that is a natural person 
+ 
+Natural persons will only be treated as a Resident Person for Corporate Tax purposes 
+if they conduct Business or Business Activity in the UAE, and the Turnover from such 
+Business or Business Activity exceeds AED 1 million in a Gregorian calendar year.30 
+ 
+Natural persons can engage in a Business or Business Activity via, for example, a sole 
+proprietorship. A sole proprietorship is a trading business owned and operated by a 
+natural person, where the proprietor is not separate from the business. For Corporate 
+Tax purposes, a sole proprietorship is treated as being one and the same as the 
+natural person or natural persons owning them. This is because of the direct 
+relationship and control of the natural person over the business and their unlimited 
+liability for the business’ debts and other obligations. 
+ 
+Natural persons will only be subject to Corporate Tax on the Taxable Income of their 
+Business or Business Activity in the UAE. Any income earned outside the UAE is not 
+subject to Corporate Tax unless it is in relation to the Business or Business Activity 
+conducted in the UAE.31 
+ 
+                                               
+25 Article 23(5)(a) of the Corporate Tax Law. 
+26 Article 23(5)(b) of the Corporate Tax Law. 
+27 Article 23(5)(c) of the Corporate Tax Law. 
+28 Article 23(5)(d) of the Corporate Tax Law. 
+29 Article 47(1) of the Corporate Tax Law. 
+30 Article 11(3)(c) of the Corporate Tax Law, read with Article 11(6) of the Corporate Tax Law and Article 
+2 of Cabinet Decision No. 49 of 2023. 
+31 Article 12(2) of the Corporate Tax Law. 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+29 
+Irrespective of where a natural person is domiciled or ordinarily resides, the natural 
+person will be subject to Corporate Tax in the UAE on the income generated from a 
+taxable Business or a Business Activity performed in the UAE, provided that the total 
+Turnover from all the Business or Business Activities conducted in the UAE exceeds 
+AED 1 million in a Gregorian calendar year.32 
+ 
+“Business” is defined as any activity that is conducted regularly, on an ongoing and 
+independent basis by any Person and in any location.33 For example, commercial 
+activities, such as the selling of products, or the provision of services, are likely to 
+constitute a Business. Similarly, a Person’s trade or profession is also likely to 
+constitute a Business. 
+ 
+The definition of a “Business Activity” is wider than that of a “Business”, and is defined 
+as any transaction or activity, or series of transactions or activities, conducted by a 
+Person in the course of its Business. For example, where a Person provides services, 
+activities such as internal resourcing, marketing, and the actual delivery of the 
+services, these would all constitute Business Activities. Similarly, where a Person 
+manufactures a product, the manufacturing activities as well as the sales and 
+marketing activities would constitute Business Activities. 
+ 
+Cabinet Decision No. 49 of 2023 specifies the conditions where a natural person is 
+subject to Corporate Tax. It states that the following will not be considered Business 
+or Business Activity and is, therefore, not be subject to Corporate Tax:34 
+• 
+Wage or salary, such as earnings from employment, 
+• 
+Personal investment income, where a Licence is not required, and 
+• 
+Real estate income, where a Licence is not required. 
+ 
+Example 8: Natural person who has income sourced from abroad 
+ 
+Ms J is a professor of history who teaches at a university in Sharjah, UAE, where 
+she is an employee. 
+ 
+Once a month, Ms J travels to Country K where she and other experts in her field 
+review examination material on Middle Eastern history. She is paid a fee by the 
+university in Country K for this work. She does no additional work in relation to this 
+work whilst she is in the UAE. 
+ 
+Ms J’s additional income earned whilst in Country K does not relate to a Business 
+she runs in the UAE. Furthermore, as the only income she receives in the UAE 
+                                               
+32 Article 2(1) of Cabinet Decision No. 49. 
+33 Article 1 of the Corporate Tax Law. 
+34 Article 2(2) of Cabinet Decision No. 49 of 2023. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+30 
+relates to employment income, Ms J is not a Resident Person for Corporate Tax 
+purposes. 
+ 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+31 
+5. Tax residency under UAE domestic law 
+ 
+The criteria for UAE domestic tax residency are set out by Article 53 of Federal Decree-
+Law No. 28 of 2022, and Cabinet Decision No. 85 of 2022. Additional clarifications and 
+implementation regulations with respect to natural persons are set out in Ministerial 
+Decision No. 27 of 2023. Meeting the criteria of the UAE domestic tax residency will 
+mean that the Person is Tax Resident and, upon a successful application to the FTA, 
+this will be evidenced by the issuance of a Tax Residency Certificate. 
+ 
+For example, a Person may need to provide a Tax Residency Certificate to a bank to 
+evidence their Tax Resident status. 
+ 
+Being Tax Resident under domestic law does not mean a Person is necessarily 
+subject to Corporate Tax. The Person would still need to be a Taxable Person under 
+the Corporate Tax Law in order to be liable to Corporate Tax (see Section 4). 
+ 
+5.1. 
+Juridical person that is Tax Resident under UAE domestic law 
+ 
+As per Article 3 of Cabinet Decision No. 85 of 2022, a juridical person is considered to 
+be a Tax Resident of the UAE if it is: 
+• 
+incorporated or otherwise formed or recognised in the UAE,35 or 
+• 
+it is otherwise considered a Tax Resident of the UAE under other Tax Laws in the 
+UAE (for example, the UAE Corporate Tax law).36 
+ 
+5.1.1. Juridical person incorporated or otherwise formed or recognised in the 
+UAE 
+ 
+A juridical person can be established under different legal forms, such as: 
+• 
+companies such as Limited Liability Company, Private Shareholding Company, 
+Public and Private Joint Stock Company, 
+• 
+civil companies, 
+• 
+foundations,37 
+• 
+trusts established under Federal Law No. 31 of 2023.38 
+ 
+The UAE tax residency rules for a juridical person equally apply to persons established 
+and operating in Free Zones. Therefore, if a juridical person is incorporated or 
+                                               
+35 Article 3(1) of Cabinet Decision No. 85 of 2022. 
+36 Article 3(2) of Cabinet Decision No. 85 of 2022. 
+37 Part 2 of DIFC Law No. 3 of 2018, Part 2 of ADGM Foundations Regulations 2017 and Part 2 of RAK 
+ICC Foundations Regulations 2019. 
+38 Article 3 and Chapter 2 of the Federal Decree-Law No. 31 of 2023. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+32 
+otherwise formed in a Free Zone in the UAE, this juridical person is a UAE Tax 
+Resident and able to apply for a Tax Residency Certificate.  
+Example 9: Juridical person incorporated in the UAE 
+ 
+Company L is an LLC incorporated in the UAE. Company L’s head office is in 
+Dubai, but Company L operates from branches in Ajman, Sharjah, and Abu Dhabi.  
+ 
+As a juridical person that is incorporated in the UAE, Company L is a UAE Tax 
+Resident. 
+ 
+Although Company L has separate offices and premises for its branches across 
+the UAE, these branches are all considered an extension of Company L’s head 
+office. 
+ 
+Example 10: Foreign company with UAE clients 
+ 
+Company M is a company incorporated in, and effectively managed and controlled 
+in Country M. Company M does not have a physical presence or a dependent agent 
+in the UAE but it has many customers in the UAE from whom it derives a significant 
+portion of its worldwide revenue. 
+ 
+Company M is not a UAE Tax Resident even though it derives a significant amount 
+of revenue from the UAE. 
+ 
+5.1.2. Juridical persons otherwise considered a Tax Resident under other 
+UAE Tax Laws 
+ 
+A juridical person will be UAE Tax Resident if considered as a resident for tax 
+purposes.
+39 This includes the Corporate Tax Law. 
+ 
+Under the Corporate Tax Law, a juridical person that is not incorporated in the UAE 
+may still be considered to be a Resident Person if it is effectively managed and 
+controlled in the UAE.40 
+ 
+ 
+ 
+ 
+                                               
+39 Article 3(2) of Cabinet Decision No. 85 of 2022. 
+40 Article 11(3)(b) of the Corporate Tax Law. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+33 
+Example 11: Foreign company effectively managed and controlled in the UAE 
+ 
+Company N is a limited company incorporated in Country N. However, in 2024, 
+Company N was effectively managed and controlled in the UAE and, therefore, 
+considered a Resident Person for Corporate Tax purposes. As a consequence, the 
+worldwide income of Company N was subject to Corporate Tax. 
+ 
+5.1.3. Tax residency of foreign companies with UAE branches 
+ 
+A UAE branch of a juridical person is an extension of its parent or head office and is 
+not considered a separate legal entity in its own right. Therefore, a UAE branch of a 
+foreign company (that is incorporated, and effectively managed and controlled, in a 
+foreign jurisdiction) is not considered to be a Tax Resident Person.41 Instead, the 
+foreign company is considered to be a Non-Resident Person. 
+ 
+If, however, the foreign company (that is incorporated in a foreign jurisdiction) is 
+effectively managed and controlled in the UAE, the foreign company (along with its 
+branches) is considered to be a Resident Person for the purposes of the Corporate 
+Tax Law42 and, therefore, Tax Resident in the UAE.43 
+ 
+5.1.4. Tax residency of Exempt Persons 
+ 
+The tax residency status of an Exempt Person is determined by reference to the type 
+of Exempt Person in question. Exempt Persons include four categories of persons: 
+ 
+Category 1: Automatically Exempt Persons 
+This applies to Government Entities.44 The Business or Business Activity of this type 
+of Exempt Person that is not its exempted activity is treated as an independent 
+Business subject to Corporate Tax.45 A Government Entity, despite being an Exempt 
+Person, is established in the UAE and, therefore, considered as a Tax Resident.46 
+ 
+Category 2: Exempt if they notify the Ministry of Finance, and meet the relevant 
+conditions 
+                                               
+41 Article 3(1) of Cabinet Decision No. 85 of 2022. 
+42 Article 11(3)(b) of the Corporate Tax Law. 
+43 Article 3(2) of Cabinet Decision No. 85 of 2022. 
+44 Articles 4(a) and 5(2) of the Corporate Tax Law. 
+45 Article 5(3) of the Corporate Tax Law. 
+46 Article 3(1) of Cabinet Decision No. 85 of 2022. 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+34 
+This applies to Persons engaged in an Extractive Business47 or a Non-Extractive 
+Natural Resource Business.48 The Business or Business Activity of these Exempt 
+Persons that are not based on exempted activity is treated as an independent 
+Business subject to Corporate Tax. 49 This type of Exempt Person is either 
+incorporated or otherwise formed or recognised in the UAE and, therefore, considered 
+as a Tax Resident.50 
+ 
+Category 3: Exempt Persons if listed in a Cabinet Decision and subject to meeting 
+relevant conditions 
+This applies to Government Controlled Entities 51 and Qualifying Public Benefit 
+Entities.52 They will be either incorporated or otherwise formed or recognised in the 
+UAE and, therefore, considered as a Tax Resident.53  
+ 
+Category 4: Exempt Persons upon application to, and approval by, the FTA 
+This applies to public and private pensions and social security funds,54 Qualifying 
+Investment Funds,55 and UAE incorporated juridical persons that are wholly owned 
+and controlled by specific Exempt Persons.56 These Exempt Persons will be either 
+incorporated or otherwise formed or recognised in the UAE and, therefore, considered 
+as a Tax Resident.57 
+ 
+5.2. 
+Natural person that is Tax Resident under UAE domestic law 
+ 
+A natural person will be considered a Tax Resident in the UAE for domestic tax 
+purposes if they meet at least one of the three conditions set out in Article 4 of Cabinet 
+Decision No. 85 of 2022: 
+1. They were physically present in the UAE for 183 days or more, within the relevant 
+12 consecutive months. 
+2. They were physically present in the UAE for a period of 90 days or more, within 
+the relevant 12 consecutive months, and: 
+o 
+they are a UAE or Gulf Cooperation Council (GCC) national, or hold a valid 
+UAE Resident Permit, and 
+                                               
+47 Articles 4(1)(c) and 7(2) of the Corporate Tax Law. 
+48 Articles 4(1)(d) and 8(2) of the Corporate Tax Law. 
+49 Articles 7(4) and 8(4) of the Corporate Tax Law. 
+50 Article 3(1) of Cabinet Decision No. 85 of 2022. 
+51 Articles 4(1)(b) and 6(2) of the Corporate Tax Law. 
+52 Articles 4(1)(e) and 9(2) of the Corporate Tax Law. 
+53 Article 3(1) of Cabinet Decision No. 85 of 2022. 
+54 Article 4(1)(g) of the Corporate Tax Law. 
+55 Article 4(1)(f) of the Corporate Tax Law. 
+56 Article 4(1)(h) of the Corporate Tax Law. 
+57 Article 3(1) of Cabinet Decision No. 85 of 2022. 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+35 
+o 
+they have a Permanent Place of Residence in the UAE, or carry on an 
+employment or Business in the UAE. 
+3. Their usual or primary place of residence and centre of financial and personal 
+interests were in the UAE.58 
+ 
+The following flowchart illustrates these conditions: 
+ 
+                                               
+58 Article 4(1) of Cabinet Decision No. 85 of 2022. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+36 
+Was the natural person 
+physically present in 
+the UAE for 183 days 
+or more of the relevant 
+12-month period?
+Was the natural person 
+physically present in 
+the UAE for 90 days or 
+more within the 
+relevant 12-month 
+period?
+Is the natural person a 
+UAE or GCC national 
+or holds a UAE 
+Resident Permit?
+Does the natural 
+person have a 
+permanent place of 
+residence in the UAE?
+Does the natural 
+person carry out 
+employment of have a 
+Business in the UAE?
+Is the natural person s 
+usual place of 
+residence in the UAE?
+Is the natural person s 
+centre of financial and 
+personal interest in the 
+UAE?
+No
+No
+Yes
+Yes
+No
+Yes
+UAE Tax Resident
+Not UAE Tax Resident
+Yes
+Yes
+Yes
+No
+No
+No
+No
+No
+No
+Yes
+ 
+ 
+Does the natural 
+person carry out 
+employment or have 
+a Business in the 
+UAE? 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+37 
+5.2.1. 183-days+ test 
+ 
+If a natural person was physically present in the UAE for 183 days or more in the 
+relevant continuous 12-month period, they are considered a UAE Tax Resident for 
+such a 12-month period.59 It does not matter what activity, if any, is undertaken by the 
+natural person during those 183 days. 
+The term “day” means a calendar day, and the term “month” means a calendar month 
+for the purposes of meeting the physical presence test.60 Being physically present 
+refers to being within the state borders of the UAE. 
+For the purposes of calculating whether the 183-day threshold has been met, any day 
+or any part of a day, however brief, that a natural person was present in the UAE will 
+be counted as a full day.61 The days do not need to be consecutive.62 If any of the 
+days the natural person spent in the UAE were due to exceptional circumstances, 
+these may be disregarded for the purposes of meeting the threshold.63 For more 
+information about exceptional circumstances, see Section 5.2.3. 
+ 
+Example 12: Days spent in the UAE 
+ 
+In 2025, Harry spends the following days in the UAE: 
+ 
+Travel to the UAE 
+Travel from the UAE 
+Days in the UAE 
+(inclusive of travel days) 
+3 January 
+6 March 
+63 
+8 June 
+9 August 
+63 
+23 August 
+6 September 
+15 
+28 September 
+11 November 
+45 
+Total 
+186 
+ 
+As any “part of day” is included when considering the “physically present test”, 
+Harry should include the days of travel to and from the UAE when calculating his 
+days of presence in the UAE. 
+ 
+                                               
+59 Article 4(2) of Cabinet Decision No. 85 of 2022. 
+60 Article 3(1) of Ministerial Decision No. 27 of 2023. 
+61 Article 3(2) of Ministerial Decision No. 27 of 2023. 
+62 Article 3(3) of Ministerial Decision No. 27 of 2023. 
+63 Article 4(1) of Ministerial Decision No. 27 of 2023. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+38 
+As a result, in 2025, Harry has spent 186 days in the UAE. He can, therefore, be 
+considered a UAE Tax Resident for the 12-month period from January to December 
+2025. 
+ 
+5.2.2. 90-days+ test 
+ 
+If a natural person was physically present in the UAE for fewer than 183 days in the 
+relevant continuous 12-month period, they may still be considered a UAE Tax 
+Resident if they were present in the UAE for at least 90 days and also meet both of 
+the following conditions:64  
+• 
+they have a legal right to reside in the UAE by virtue of being a national of the UAE 
+or another GCC Member State, or holding a valid Residence Permit in the UAE, 
+and 
+• 
+they also have a “Permanent Place of Residence” in the UAE or carry on 
+employment or a Business in the UAE. 
+ 
+The meaning and determination of what constitutes a “day” for the purposes of the 90-
+day test is the same as in the 183-day test. 
+ 
+5.2.2.1. 
+Permanent Place of Residence 
+ 
+A Permanent Place of Residence means a furnished house, apartment, room or other 
+form of dwelling, which a natural person has arranged to have made continuously 
+available to them.65 This means that a Permanent Place of Residence does not need 
+to be owned by the natural person to meet this test, but can be rented or otherwise 
+occupied by the natural person as a dwelling,66 provided it is available to them at all 
+times continuously and on a regular basis, with some degree of permanency and 
+stability, based on a right of occupation.67 
+ 
+A place will not be considered a Permanent Place of Residence if it is occupied by the 
+natural person just occasionally or temporarily for the purposes of a stay which is for 
+a short duration, for example, for the purposes of travel for business, leisure or 
+education.68 
+ 
+There is a distinction between a Permanent Place of Residence for the purposes of 
+Article 4(3) of Cabinet Decision No. 85 of 2022 and a usual or primary place of 
+residence for the purposes of its Article 4(1) of Cabinet Decision No. 85 of 2022. A 
+                                               
+64 Article 4(3) of Cabinet Decision No. 85 of 2022. 
+65 Article 5(1) of Ministerial Decision No. 27 of 2023. 
+66 Article 5(3) of Ministerial Decision No. 27 of 2023. 
+67 Article 5(2) of Ministerial Decision No. 27 of 2023. 
+68 Article 5(2) of Ministerial Decision No. 27 of 2023. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+39 
+usual or primary place of residence refers to the country where a natural person 
+normally resides (see Section 5.2.4.1), whereas a Permanent Place of Residence 
+refers to a form of dwelling that is continuously available to the natural person, 
+regardless of whether they habitually reside there. 
+ 
+Example 13: 90+ days physically present and Permanent Place of Residence 
+ 
+During 2024, Fatima spent 95 days staying in a one-bedroom apartment in Dubai, 
+UAE, which her sister, Nadia, owns but does not occupy. Nadia has given Fatima 
+full access to the apartment, so Fatima can use it whenever she stays in the city. 
+Fatima is a foreign national who holds a long-term UAE Residence Permit. 
+ 
+Fatima should be considered a UAE Tax Resident for the 12-month period from 
+January to December 2024 because: 
+• 
+she has been physically present in the UAE for over 90 days in 2024, and 
+• 
+she has the legal right to reside in the UAE because she holds a UAE 
+Residence Permit, and 
+• 
+she has a Permanent Place of Residence in the UAE given her ability to 
+continuously access and stay in Nadia's apartment at any given time and for 
+any duration.  
+ 
+Nadia's apartment still counts as a Permanent Place of Residence for Fatima, even 
+though Fatima does not own it and she does not pay Nadia any rent for occupying 
+the apartment. 
+ 
+Example 14: 90+ days physically present and no Permanent Place of 
+Residence 
+ 
+Sulaiman, a non-UAE and non-GCC citizen, enjoys spending time in the UAE. 
+During the 12 months of calendar year 2024, he spent 100 days in the UAE, 
+entering the country under tourist visas. While in the UAE, Sulaiman stayed in a 
+number of different hotels he booked online and he spent most of his time in the 
+UAE doing leisure activities such as shopping and sightseeing. He does not 
+conduct any Business in the UAE, nor carry out any employment in the UAE. 
+ 
+Sulaiman should not be considered a UAE Tax Resident for the 12 months ended 
+31 December 2024 because even though he has spent over 90 days in the relevant 
+12-month period in the UAE: 
+• 
+he does not have a legal right to permanently reside in the UAE and has always 
+entered the UAE as a tourist, and 
+• 
+he does not have a Permanent Place of Residence in the UAE. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+40 
+He also did not carry on employment or Business in the UAE, or hold a valid 
+Residence Permit.   
+ 
+The hotels where Sulaiman has stayed do not count as a Permanent Place of 
+Residence in the UAE for him as he stayed there only temporarily for leisure 
+purposes. The hotel rooms were not continuously made available to him, he had to 
+check the availability and make a booking each time prior to his arrival. 
+ 
+5.2.2.2. 
+Employment 
+ 
+A natural person will be considered to be carrying on employment in the UAE, if: 
+• 
+they are party to a contract with an employer, which is incorporated or otherwise 
+formed or recognised in the UAE, under which they serve the employer under the 
+employer’s administration or supervision for a promised remuneration by the 
+employer,69 
+• 
+they are in a continuing relationship where all or substantially all of their income 
+for their labour performed in the UAE is derived from one party,70 and 
+• 
+it is not an engagement on a voluntary role.71 
+ 
+Employment status does not consider the nature of the employment contract, which 
+can be limited or unlimited, on a full-time or part-time basis.72  
+ 
+5.2.2.3. 
+Business 
+ 
+Business is defined as an activity conducted regularly, on an ongoing and independent 
+basis by any Person, such as industrial, commercial, agricultural, professional, 
+vocational, service or excavation activities or anything related to the use of tangible or 
+intangible properties.73 
+ 
+Business should be interpreted broadly to include any activity such as the 
+development, sale, production, manufacturing, exploitation, marketing or distribution 
+of tangible and intangible properties. 
+ 
+The term “vocational” is to be interpreted as a skilled craft or trade, and “professional” 
+is an occupation in which skill is applied to the affairs of others to meet their needs. 
+Common examples of vocational and professional activities include accountancy, 
+craftsmanship, consulting, teaching, architecture, medical and legal services. 
+                                               
+69 Article 6(1)(a) of Ministerial Decision No. 27 of 2023. 
+70 Article 6(1)(b) of Ministerial Decision No. 27 of 2023. 
+71 Article 6(3) of Ministerial Decision No. 27 of 2023. 
+72 Article 6(2) of Ministerial Decision No. 27 of 2023. 
+73 Article 1 of Cabinet Decision No. 85 of 2022. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+41 
+Business can mean the carrying out of any economic activity, whether continuous or 
+for a set period of time, by any Person; it does not necessarily need to generate a 
+profit. Although a Business is typically carried on continuously and there is repetition 
+of commercial activity, the definition allows for a short-term commercial activity to also 
+be considered a Business.  
+ 
+Example 15: 90 days+ and employment in the UAE 
+ 
+Saleh is a GCC national. In the last 12 months, he was employed by Company O, 
+a UAE incorporated company, to travel to different destinations in the UAE and 
+promote their products. His employment lasted three months and he spent a total 
+of 100 days in the UAE. Saleh held a UAE work visa during this time.  
+ 
+While in the UAE, Saleh stayed in various hotel rooms booked and paid for by 
+Company O. As such, he did not have a Permanent Place of Residence in the UAE. 
+Still, Saleh was a UAE Tax Resident for the 12-month period because: 
+• 
+he was physically present in the UAE for over 90 days in the year, and 
+• 
+he has the legal right to reside in the UAE because he is a GCC national, and 
+• 
+he had employment in the UAE by virtue of his employment contract with a 
+company incorporated in the UAE. 
+ 
+Even though Saleh is considered a Tax Resident in the UAE, he is not a Resident 
+Person for Corporate Tax purposes because he does not conduct any Business in 
+the UAE. 
+ 
+5.2.3. Exceptional circumstances leading to a physical presence 
+ 
+There are occasions in which natural persons will be physically present in the UAE for 
+reasons beyond their control. An exceptional circumstance is an event occurring while 
+the natural person is already in the UAE, which prevents them from leaving the UAE 
+as originally planned. The exceptional circumstance must be an event beyond the 
+natural person's control that they could not reasonably have predicted or prevented.74 
+ 
+Examples of exceptional circumstances may include, but are not limited to: 
+• 
+local or national emergencies, for example, natural disasters, closing of borders, 
+war or civil unrest, 
+• 
+personal emergencies, for example, a sudden or critical illness or injury to the 
+natural person. 
+ 
+                                               
+74 Article 4(2) of Ministerial Decision No. 27 of 2023. 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+42 
+As a result, a natural person may inadvertently be a UAE Tax Resident. When 
+calculating the number of days that a natural person has spent in the UAE, the days 
+they stayed in the UAE due to exceptional circumstances shall be disregarded.75 
+ 
+Example 16: Exceptional circumstances 
+ 
+Nicholas spent 180 days in the UAE during 2025. He visited the UAE on tourist 
+visas and has no employment or business connections to the UAE.  
+ 
+On the day before he was due to fly back to his home country, Nicholas suddenly 
+fell critically ill. He was required to spend an additional week in the UAE so that he 
+could have emergency surgery. He flew home on his 187th day in the UAE.  
+ 
+Normally, the fact that Nicholas spent over 183 days in the UAE would result in him 
+being considered a Tax Resident in the UAE. However, as his extended stay was 
+the result of a medical emergency that he could not control and could not have 
+reasonably predicted or prevented, the additional days he spent in the UAE should 
+be excluded when calculating his total number of days in the UAE. 
+ 
+This means that, despite being physically present in the UAE for over 183 days, 
+Nicholas may not necessarily be considered a Tax Resident for the relevant 12-
+month period under the days count test as he has no employment or other 
+significant connections to the UAE. 
+ 
+Example 17: Non-exceptional circumstances 
+ 
+Sam spent 175 days in the UAE during 2024. He is a non-UAE and non-GCC 
+national with a UAE tourist visa, with no permanent home in the UAE. 
+ 
+Instead of flying home, Sam decided to stay in the UAE for a few additional days in 
+order to have an elective medical procedure in a hospital in Dubai.  
+ 
+As a result of his extended stay, Sam spent a total of 190 days in the UAE during 
+2024. As he made the conscious decision to schedule the elective medical 
+procedure knowing it would require recovery time in the UAE, the additional days 
+spent in the UAE beyond 180 days were within Sam’s control and will not be 
+classed as exceptional circumstances. 
+ 
+Therefore, Sam is considered to be UAE Tax Resident under the physical presence 
+test. 
+                                               
+75 Article 4(1) of Ministerial Decision No. 27 of 2023. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+43 
+ 
+5.2.4. Usual or primary place of residence and centre of financial and 
+personal interests test 
+ 
+A natural person will be considered a Tax Resident in the UAE if both their usual or 
+primary place of residence and the centre of their financial and personal interests are 
+in the UAE.76 Both of these conditions must be simultaneously satisfied in order for a 
+natural person to be considered a UAE Tax Resident. 
+ 
+5.2.4.1. 
+Usual or primary place of residence 
+ 
+A “usual or primary place of residence” refers to the country where a natural person 
+habitually or normally lives as a part of their settled routine and where they spend most 
+of their time as compared to any other place.77  
+ 
+This is the country in which a natural person is customarily or usually present, which 
+depends on the frequency, duration and regularity of stays that are part of a person's 
+life over a sufficient length of time. 
+ 
+The concept of “usual or primary place of residence”78 is distinct from a “Permanent 
+Place of Residence”79 (or permanent home). A usual or primary place of residence 
+refers to the country where a natural person normally resides, whereas a Permanent 
+Place of Residence refers to a form of dwelling that is continuously available to the 
+natural person, regardless of whether they habitually reside there. 
+ 
+5.2.4.2. 
+Centre of their financial and personal interests 
+ 
+The “centre of financial and personal interests” condition considers factors such as the 
+place of employment, place of business, and where the financial and other 
+investments are located and managed.80 It also considers other factors such as family 
+and social connections, memberships of clubs and associations and any cultural and 
+other activities the natural person takes part in. 
+ 
+Having one’s centre of financial and personal interests in the UAE does not mean that 
+the natural person cannot have interests outside the UAE. However, the UAE must be 
+the place where these interests are the closest or of the greatest significance to the 
+natural person.81 
+                                               
+76 Article 4(1) of the Cabinet Decision No. 85 of 2022. 
+77 Articles 2(1) and 2(2) of the Ministerial Decision No. 27 of 2023. 
+78 Article 2(1) of Ministerial Decision No. 27 of 2023. 
+79 Article 5(1) of Ministerial Decision No. 27 of 2023. 
+80 Article 2(3) of Ministerial Decision No. 27 of 2023. 
+81 Article 2(3) of Ministerial Decision No. 27 of 2023. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+44 
+ 
+It is not only the number of connections but also the depths and importance of those 
+connections that is considered. For example, the location of close family members or 
+a business in the UAE has a more significant weight than holding a membership of a 
+sports club in another country. 
+ 
+Example 18: Usual or primary place of residence and centre of financial and 
+personal interests’ criteria 
+ 
+Laila is a UAE national, who owns an apartment in Sharjah, UAE. However, she 
+spends most of her time in Country P, where she has lived with her husband and 
+children in a house owned by her parents for the past 10 years. Laila has a full-time 
+job in Country P as a teacher and she is an integral part of the local community. 
+ 
+Every year, Laila spends a few weeks outside of Country P when she travels to the 
+UAE to see her extended family and friends, during which time she stays in her 
+apartment in Sharjah. She intends to use the apartment as her main home at some 
+point in the future. In the last 12 months, she spent a total of 30 days in the UAE. 
+ 
+Based on these facts, Laila’s usual or primary place of residence is in Country P 
+because this is where she habitually lives and spends more time as compared to 
+the UAE and any other country. The fact that her employment, close family 
+members and social ties are also all in Country P indicates that her centre of 
+financial and personal interests is also in Country P. Therefore, for the last 12 
+months, based on the “usual or primary place of residence and centre of financial 
+and personal interests” test, Laila is not considered a UAE Tax Resident. 
+ 
+Example 19: Usual or primary place of residence’s criteria 
+ 
+Caleb was born in Country Q but has moved to the UAE, where he is a full-time 
+university student. He lives in an apartment in the UAE, which he rents on an annual 
+basis, and he travels back to Country Q for one month each summer.  
+ 
+The UAE is the country where Caleb normally lives and he spends more time in the 
+UAE than in Country Q or any other country. Based on these facts, Caleb has his 
+usual or primary place of residence in the UAE. 
+ 
+Example 20: Centre of financial and personal interests’ criteria 
+ 
+Aria is a citizen of Country R. Five years ago, Aria was offered the opportunity to 
+relocate to the UAE with her husband and son. She left her job in Country R and 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+45 
+now works full-time in the UAE. She and her husband sold their apartment in 
+Country R and have purchased a villa in the UAE close to their son’s school, where 
+they normally reside. She is a member of a tennis club and volunteers for a local 
+charity every weekend. Her parents still live in Country R and she keeps a bank 
+account there, which she uses occasionally when she visits. 
+ 
+Based on these facts, the UAE is the place where Aria’s centre of financial and 
+personal interests is closest and of greatest significance to her. Despite her still 
+having extended family in Country R, the UAE is the place where her close family 
+members, her husband and son, are located. It is also the place where her full-time 
+job/main source of income and only property are located. Her social and other 
+connections are closer to the UAE than in Country R. 
+ 
+ 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+46 
+6. Tax residency under Double Taxation Agreements 
+ 
+Each DTA has its own rules and criteria for determining when juridical and natural 
+persons are considered to be tax resident in the countries which are party to the DTA. 
+This may differ from the criteria for determining who is a UAE Tax Resident under 
+domestic law, or a Resident Person under the Corporate Tax Law. Therefore, each 
+scenario should be considered on a case-by-case basis and in light of the wording of 
+the specific DTA. 
+ 
+A DTA that is in force in the UAE, takes precedence over the provisions of any 
+domestic law, including the Corporate Tax Law82 and Cabinet Decision No. 85 of 
+2022.83 Therefore, meeting the definition of a Resident Person under the Corporate 
+Tax Law does not automatically mean that a Resident Person will be considered a tax 
+resident in the UAE for the purposes of a DTA. 
+ 
+ A key feature of DTAs are the rules that determine in which country the juridical 
+person is tax resident. Under an applicable DTA, tax residence may be assigned to 
+the UAE or to another jurisdiction depending on the facts and circumstances and the 
+residence criteria of the relevant agreement (“treaty resident”). The list of countries 
+with which the UAE has signed a DTA can be found on the Ministry of Finance website. 
+ 
+6.1. 
+Juridical persons that are tax resident under Double Taxation Agreements 
+ 
+Residency is defined in each DTA in a specific manner. In general, the tax residency 
+test in a DTA typically requires a juridical person seeking to apply the DTA to either be 
+liable to tax, have a legal connection (for example, incorporation), or economic 
+connection (for example, effective management or substantial presence), or a 
+combination thereof, in the relevant country. 
+ 
+If a juridical person is considered to be a tax resident in the UAE under the applicable 
+DTA, it is eligible to apply for a Tax Residency Certificate in the UAE in order to obtain 
+the benefits of the applicable DTA, if required.  
+  
+6.1.1. Tax residence of Government Entities under Double Taxation 
+Agreements 
+ 
+Government Entities are automatically considered Exempt Persons for Corporate Tax 
+purposes. Additionally, Government Controlled Entities are Exempt Persons in relation 
+to income from their Mandated Activities.  
+  
+                                               
+82 Article 66 of the Corporate Tax Law. 
+83 Article 6 of Cabinet Decision No. 85 of 2022. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+47 
+In the context of DTAs, Government Entities and Government Controlled Entities are 
+generally considered as UAE tax resident and should accordingly be eligible to avail 
+benefits under the DTAs, wherever relevant. However, if the relevant DTA defines 
+Government for the purposes of the DTA, this shall prevail. 
+ 
+6.1.2. Tax residence of Exempt Persons under Double Taxation Agreements 
+ 
+If an Exempt Person is considered a tax resident under the provisions of the DTA, it 
+can benefit from its provisions. Some DTAs have specific rules for juridical persons 
+that are commonly exempt from Corporate Tax such as Government Entities, public 
+benefit entities and pension funds. Where a DTA’s criteria is based on being liable to 
+tax, Exempt Persons will be able to benefit from its provisions, as they are all 
+considered liable to tax in the UAE. 
+ 
+6.1.3. Double Taxation Agreements tie-breaker rules for juridical persons 
+ 
+DTAs adopt various approaches to solve dual residence situations for juridical 
+persons. These are generally summarised as follows: 
+• 
+the place of effective management criteria, 
+• 
+the Mutual Agreement Procedure, and 
+• 
+other criteria, such as where the head office is located or where the juridical person 
+is incorporated. 
+ 
+6.1.3.1. 
+The place of effective management 
+ 
+Following the pre-2017 OECD Model Tax Convention, a company that has dual-
+residency status is considered tax resident for tax purposes in the country in which its 
+place of effective management and control is situated.  
+  
+The OECD Commentary defines place of effective management as the place where 
+the key management and commercial decisions that are necessary for the conduct of 
+the entity’s business as a whole are in substance made, and makes the point that 
+whilst an entity may have multiple places of management, it can only have one place 
+of effective management at any one point in time. 
+ 
+Example 21: Dual residence of juridical person incorporated in one country 
+and effectively managed and controlled in another country 
+ 
+Company S is a limited liability company incorporated in Country S. However, all of 
+the company’s board meetings take place in the UAE and all key management and 
+commercial decisions are made in the UAE. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+48 
+Under Country S’s domestic law, Company S is tax resident in Country S due to 
+being incorporated in Country S. However, under UAE domestic law, Company S 
+is considered to be tax resident in the UAE on the basis that it is effectively 
+managed and controlled in the UAE. 
+ 
+As a result, Company S is tax resident in both the UAE and in Country S. However, 
+in instances where a juridical person is tax resident in both countries, the applicable 
+DTA between Country S and the UAE provides for a tie-breaker to allocate tax 
+residency to the country in which a juridical person is effectively managed and 
+controlled.  
+ 
+This means that Company S will only be tax resident in the UAE because the 
+company is effectively managed and controlled in the UAE. 
+ 
+6.1.3.2. 
+The Mutual Agreement Procedure 
+ 
+Following the 2017 OECD Model Tax Convention, many DTAs consider the Mutual 
+Agreement Procedure (“MAP”) in instances of dual residence. The MAP is a 
+mechanism through which the competent authorities of the countries involved 
+endeavour to resolve differences or difficulties on the interpretation or application of 
+the DTA on a mutually agreed basis, including cases where the residency status is 
+unclear. 
+ 
+6.1.3.3. 
+Other criteria to solve dual residence situations 
+ 
+Many DTAs entered into by the UAE rely on other criteria to solve dual residence 
+situations such as the place of incorporation or the place where the head office is 
+located. 
+ 
+6.2. 
+Natural persons that are tax resident under Double Taxation Agreements 
+ 
+As discussed, the concept of a natural person being a Resident Person for Corporate 
+Tax purposes is separate to the concept of the natural person’s tax residency status.  
+ 
+A natural person will be considered a UAE tax resident for DTA purposes if he or she 
+meets the conditions set out in the applicable DTA. 
+ 
+The UAE has an extensive DTA network, which aims to avoid a situation of double 
+taxation by defining the taxing rights of each country or granting relief from double 
+taxation. These DTAs have their own rules and criteria for determining when natural 
+persons are considered tax resident in the countries which are party to the DTA.  
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+49 
+As each DTA has its own tax residency rules, it is important to confirm the definition 
+and criteria of a tax resident under the relevant DTA (generally, set out in the provision 
+equivalent to Article 4 of the OECD’s Model Tax Convention). 
+ 
+In general, the residency criteria in a DTA typically requires an individual seeking to 
+apply the DTA to either be liable to tax, to have the relevant citizenship or nationality, 
+to have physical presence in the relevant country, or be domiciled or resident there. 
+ 
+If the criteria in a DTA includes a reference to being “resident under the laws of the 
+United Arab Emirates”, the requirement to be Tax Resident as per Cabinet Decision 
+No. 85 of 2022 is the relevant criteria (see Section 5). 
+ 
+6.2.1. Double Taxation Agreement tie-breaker rules for natural persons 
+ 
+Where a natural person satisfies the criteria to be considered tax resident in both the 
+UAE and in another jurisdiction under the relevant DTA, the tie-breaker rules in the 
+DTA would allocate the residence of the natural person to either the UAE or to the 
+other country.  
+ 
+The tie-breaker rules typically consider:  
+1. In which country is the natural person’s permanent home located? 
+2. If the natural person has a permanent home in both countries, where is the natural 
+person’s “centre of vital interests”? 
+3. If the natural person does not have a permanent home in either country, or if the 
+location of the natural person’s centre of vital interests cannot be determined, 
+where is the natural person’s “habitual abode”? 
+4. If the natural person has their habitual abode in both jurisdictions or in neither of 
+them, of which jurisdiction is the natural person a “national”? 
+ 
+Where the tie-breaker rules do not resolve the dual residency status of the natural 
+person, the competent authorities under the relevant DTA may consult with each other 
+and agree the natural person’s tax residency status.84 Determining the tax residency 
+for a natural person is heavily dependent on facts and circumstances for each specific 
+case. 
+ 
+6.2.1.1. 
+Permanent home test 
+ 
+To determine tax residence, a permanent home means a house, apartment, furnished 
+room or other form of dwelling, which the natural person has arranged to have made 
+continuously available to them. A permanent home does not need to be owned by the 
+                                               
+84 These are the designated representatives from the contracting jurisdictions under the relevant 
+Double Taxation Agreement. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+50 
+natural person but can be rented or otherwise occupied by the natural person, 
+provided it is available to them at all times continuously. The natural person also needs 
+to regularly occupy the home, with some degree of permanency and stability, based 
+on a right of occupation. 
+ 
+A permanent home is not a place occupied by the natural person occasionally or 
+temporarily, for example, for the purposes of travel for business, leisure or education. 
+ 
+This test applies to the period of time in which the natural person’s residency position 
+affects their tax liability. For example, if a natural person moves to a new country and 
+changes their permanent residence part-way through a Financial Year, the original 
+country would treat the natural person as a resident until the date of the move, after 
+which, the new country would treat the natural person as a tax resident.  
+ 
+If a natural person has two places that could be considered as home at any point in 
+time, the question arises as to which one, if any, is “permanent”. This is often where 
+the natural person arranges and retains a home for permanent use, as opposed to 
+staying at a particular place for a short duration. The accommodation should be 
+continuously available at all times to pass the permanent home test. 
+ 
+6.2.1.2. 
+Centre of vital interests test 
+ 
+Centre of vital interests is the country with which a natural person’s personal and 
+economic relations are the closest. This requires a holistic assessment of the natural 
+person's family and social relations, their occupation and place of business, any 
+political and cultural activities and the place from which they administer their property. 
+  
+Both the number as well as the depth and importance of the natural person’s 
+connections should be considered in determining where the centre of vital interests is 
+located. For example, the location of family members in one jurisdiction may be a more 
+decisive factor than the membership of various sports and social clubs in another 
+country. 
+ 
+A natural person cannot have more than one centre of vital interests but if that centre 
+cannot be determined in practice, the next test (“habitual abode”) should be applied. 
+ 
+6.2.1.3. 
+Habitual abode 
+ 
+If the counting of days in a particular period does not determine where the natural 
+person is resident, then a longer period of time may be considered in order to 
+determine where the natural person habitually spends their time.  
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+51 
+To determine where the individual has a habitual abode, factors such as the frequency 
+of the person’s visits, as well as the length and purpose of their stay is considered.  
+ 
+If a natural person habitually spends equal amounts of time between two countries, 
+and the connection does not prevail in relation to one of the countries, then the final 
+test (“nationality”) is applied. 
+ 
+6.2.1.4. 
+Nationality 
+ 
+Finally, the natural person should be considered resident in the country of which they 
+are a national.  
+ 
+Where they are a national of both countries or neither of them, the cross-border tax 
+dispute shall be decided by the two contracting states through a MAP. 
+ 
+6.2.2. Non-resident under the Double Taxation Agreement 
+ 
+Where the natural person is considered resident in a foreign country covered by a DTA 
+between the UAE and that foreign country, the provisions of the applicable DTA has 
+an impact on his or her tax residency status.  
+ 
+This may depend on the nature of the income derived in the UAE by the natural person. 
+Any income that falls under the “Business Profits” article of the relevant DTA 
+(generally, set out in the provision equivalent to Article 7 of the OECD Model Tax 
+Convention) would generally remain taxable in the UAE if the non-resident natural 
+person has a Permanent Establishment in the UAE.85 In this case, the natural person 
+is subject to Corporate Tax on the income attributable to the Permanent Establishment 
+in the UAE. 
+ 
+Generally, the application of the DTA is only relevant where the total Turnover from 
+the Businesses or Business Activities conducted in the UAE exceeds AED 1 million in 
+a Gregorian calendar year, which is the triggering criteria for a natural person to be 
+subject to Corporate Tax. 
+ 
+                                               
+85 Or if the natural person earns income from independent personal services or professional activities 
+carried out through a “fixed base” in the UAE. This concept was previously recognised under Article 14 
+“Independent Personal Services” of the 1977 OECD Model Tax Convention, but has since been 
+incorporated into Article 5 “Permanent Establishment” as part of the 2000 update to the OECD Model 
+Tax Convention. In the model double taxation convention between developed and developing countries 
+issued by the United Nation (another common basis for a model Double Taxation Agreement), the 
+concept of independent personal services and “fixed base” continues to be acknowledged in a separate 
+Article in the Model Tax Convention (Article 14). 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+52 
+Where a non-resident natural person does not conduct a Business or Business Activity 
+in the UAE, he or she may be subject to Corporate Tax on State Sourced Income. 
+However, this is currently via a Withholding Tax rate of 0%. 
+ 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+53 
+7. Obtaining a Tax Residency Certificate 
+ 
+7.1. 
+Tax Residency Certificate 
+ 
+A Tax Residency Certificate is a certificate issued by the FTA proving that the Person 
+is a Tax Resident in the UAE. 
+ 
+A Tax Residency Certificate can be obtained for DTA purposes and for purposes other 
+than the application of a DTA. 
+ 
+The relevant criteria for obtaining a Tax Residency Certificate and the relevant 
+procedure are further detailed below. 
+ 
+7.2. 
+Periods covered by the Tax Residency Certificate 
+ 
+Applicants must include which Tax Period or other 12-month period to be covered by 
+the 
+Tax 
+Residency 
+Certificate, 
+depending 
+on 
+the 
+specific 
+situation. 
+If a Tax Period is selected, it can only be the current Tax Period or a prior Tax Period. 
+ 
+For juridical persons, the Tax Period is the Financial Year. Generally, this is the 12-
+month period for which the Taxable Person prepares Financial Statements. 
+ 
+For natural persons, the Tax Period is the Gregorian calendar year. 
+ 
+Where a Tax Residency Certificate is required for the current period, the application 
+will only be considered by the FTA as follows: 
+ 
+ 
+Juridical person 
+ 
+ 
+After three (3) months into the period. 
+ 
+Natural person 
+ 
+As soon as the criteria to be Tax 
+Resident are met. 
+ 
+ 
+Government Entities and Government 
+Controlled Entities 
+ 
+ 
+One day into the period. 
+ 
+A Tax Residency Certificate cannot be obtained for a future period (i.e. for a Tax Period 
+or a 12-month period that has not commenced), as the FTA cannot certify that a 
+Person will continue to be UAE Tax Resident for a future period.  
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+54 
+In addition, a Tax Residency Certificate cannot be obtained for a period longer than 
+12 months. 
+ 
+Newly incorporated companies who have yet to file a Corporate Tax Return must be 
+established for 12 months before being eligible to apply for a Tax Residency 
+Certificate. 
+ 
+As Exempt Persons are considered to be liable to tax, they are, therefore, able to apply 
+for a Tax Residency Certificate.  
+ 
+7.3. 
+How to apply for a Tax Residency Certificate 
+ 
+A juridical person or natural person can apply for a Tax Residency Certificate via the 
+FTA's online EmaraTax portal, using their EmaraTax account. The steps are provided 
+below: 
+ 
+Step 1: Go to the EmaraTax portal. 
+https://eservices.tax.gov.ae/ar-ae/login?returnurl=%2far-ae%2fuser%2fdashboard  
+ 
+Step 2: Create an account. 
+ 
+You can use a current account on EmaraTax, create a new one, or link the old account 
+related to the previous Tax Certificate portal. 
+ 
+Step 3: Once logged in, choose “other services”. 
+ 
+Step 4: Select “Tax Residency Certificate”. 
+ 
+Step 5: Select the Tax Registration Number (“TRN”) for Corporate Tax for the 
+applicant applying for a Tax Residency Certificate. 
+ 
+If there is no Corporate Tax TRN, choose the last option "No TRN". However, if you 
+are obtaining a Tax Residency Certificate for the purposes of a DTA, the other 
+contracting state may require this. 
+ 
+Providing a TRN will reduce the application fees and also entitle the applicant to autofill 
+the details in the application. 
+ 
+Step 6: Select the type of Tax Residency Certificate requested. 
+ 
+This will either be for the purposes of a DTA or otherwise. For those applying to benefit 
+from a DTA, the other applicable country will need to be selected first. 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+55 
+Step 7: Complete the remaining fields and upload supporting documentation. 
+ 
+This will include the ability to request printed certificates and request the FTA to attest 
+an international form (see Section 8). 
+ 
+Step 8: Pay the submission fees (see Section 7.7). 
+ 
+Step 9: Submit the application. 
+ 
+Step 10: After obtaining FTA’s approval, pay the processing fees (see Section 7.7). 
+ 
+Failure to pay the processing fees within 30 business days may result in your 
+application being cancelled. Instead, the applicant would be required to resubmit a 
+new application and repay the submission fee. 
+ 
+Step 11: Download the certificate. 
+ 
+Once the applicant has paid the processing amount, a download icon will be displayed 
+for the particular request from the Tax Residency Certificate platform, in which the 
+applicant can click and download the digital Tax Residency Certificate. 
+ 
+The Tax Residency Certificate will also be sent to their registered email ID. 
+ 
+If applicant also requested a printed certificate, it will be delivered by courier (Emirates 
+post). 
+ 
+7.4. 
+Applying for a Tax Residency Certificate for the purposes of a Double 
+Taxation Agreement 
+ 
+If the FTA is satisfied that the applicant meets the conditions to be considered a Tax 
+Resident in the UAE in accordance with the provisions of the relevant DTA, the FTA 
+will approve the application and issue a Tax Residency Certificate,
+86 stating the 
+applicable DTA. 
+ 
+The application must include all necessary information for the FTA to be able to review 
+and issue the Tax Residency Certificate, as further detailed below. 
+ 
+Where the other country requires a specific form to be stamped to avail benefits under 
+a DTA, this service is also available from the FTA (see Section 8). 
+ 
+                                               
+86 Article 2(3) of Ministerial Decision No. 247 of 2023. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+56 
+7.5. 
+Required documentation 
+ 
+The FTA will only issue a Tax Residency Certificate where it is satisfied that the Person 
+meets the criteria to be a UAE Tax Resident.87 As a result, the FTA can request 
+supporting evidence and any documentation which it deems necessary for deciding 
+whether to issue a Tax Residency Certificate. The following documentation will 
+typically be required for the application period, where relevant. 
+ 
+7.5.1. Documentation required to apply for a Tax Residency Certificate for 
+purposes other than the application of a Double Taxation Agreement 
+ 
+Type of Applicant 
+Documentation requirements 
+Natural person 
+Has been physically present in the UAE for 183 days or more 
+in a consecutive 12-month period: 
+a. Emirates ID and resident visa, or 
+b. copy of passport, and entry and exit report from the 
+Federal Authority of Identity and Citizenship or a local 
+competent Government entity. 
+ 
+Has been physically present in the UAE between 90-182 days 
+in a consecutive 12-month period: 
+a. one of the following: 
+- 
+Emirates ID and resident visa, or 
+- 
+copy of passport, and entry and exit report from the 
+Federal Authority of Identity and Citizenship or a local 
+competent Government entity, 
+AND 
+b. one of the following: 
+- 
+proof of employment or Business: proof of source of 
+income, salary certificate, or evidence of carrying on a 
+business in the UAE, or  
+- 
+proof of permanent place of residence: for example, 
+certified tenancy contract, other long-term rental 
+contract, or written or signed statement from the landlord 
+or owner of the property, or title deed with a utility bill (i.e. 
+water/electricity or gas) in the name of the natural 
+person. 
+ 
+Has a primary place of residence and centre of financial and 
+personal interests in the UAE: 
+a. one of the following: 
+                                               
+87 Article 2(3) of Ministerial Decision No. 247 of 2023. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+57 
+Type of Applicant 
+Documentation requirements 
+- 
+Emirates ID and resident visa, or 
+- 
+copy of passport, and entry and exit report from the 
+Federal Authority of Identity and Citizenship or a local 
+competent Government entity. 
+b. proof of financial and personal interests in the UAE: a 
+written statement explaining how the applicant believes 
+their financial and personal interests are in the UAE, 
+alongside all supporting documentation, and 
+c. proof of primary place of residence: for example, certified 
+tenancy contract, other long-term rental contracts for each 
+property residing in, or written and signed statement from 
+the landlord or owner of the property, or title deed with a 
+utility bill (i.e. water/electricity or gas) in the name of the 
+natural person, and 
+d. proof of source of income, if applicable: for example, salary 
+certificate, share certificate, Trade License, savings, or 
+other proofs of income (e.g. local bank statements). 
+Juridical person 
+a. Licence (for example, trade licence) and lease agreement,  
+b. UAE Corporate Tax TRN, if applicable, 
+c. certificate of incorporation, 
+d. certified copy of the Memorandum of Association, 
+e. authorised signatory (name, Emirates ID and passport) and 
+proof of their authorisation (Establishment Contract or the 
+Power of Attorney). 
+f. 
+proof of being effectively managed and controlled in the 
+UAE (if applicable) – this should be a written statement 
+explaining how the applicant believes their effective 
+management and control is in the UAE, alongside all 
+supporting documentation. 
+ 
+7.5.2. Documentation required to apply for a Tax Residency Certificate for 
+Double Taxation Agreement purposes88 
+ 
+Type of Applicant Documentation requirements 
+Natural person 
+a. one of the following: 
+- 
+Emirates ID and resident visa, or 
+- 
+copy of passport, and entry and exit report from the 
+Federal Authority of Identity and Citizenship or a local 
+competent Government entity 
+b. proof of residence, if applicable, 
+                                               
+88 Attachment to Ministerial Decision No. 247 of 2023. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+58 
+Type of Applicant Documentation requirements 
+c. source of income/salary certificate, 
+ 
+If the DTA residence requirements refers to being resident in 
+the UAE, you should provide the relevant documents from the 
+previous table (that is, documents required for a Tax Residence 
+Certificate for purposes other than a DTA). 
+Juridical person 
+a. Licence (for example, trade licence) and lease agreement, 
+b. UAE Corporate Tax TRN, if applicable, 
+c. certificate of incorporation, 
+d. certified copy of the Memorandum of Association, 
+e. authorised signatory (name, Emirates ID and passport) and 
+proof of their authorisation (Establishment Contract or the 
+Power of Attorney), 
+f. 
+proof of being effectively managed and controlled in the 
+UAE (if applicable) – this should be a written statement 
+explaining how the applicant believes their effective 
+management and control is in the UAE, alongside all 
+supporting documentation. 
+ 
+7.6. 
+Application response by the FTA 
+ 
+Upon submission of the application, the FTA will review the application and, if 
+approved, issue the Tax Residency Certificate for applicants to download. Users can 
+request hard copies of their certificates for an additional fee.  
+ 
+The Tax Residency Certificate is only applicable to the period selected by the 
+applicant. However, the FTA has the authority to withdraw a Tax Residency Certificate 
+if they become aware of incorrect information or a change in facts that prevent the 
+applicant from being a Tax Resident. 
+ 
+The FTA takes, in general, 10 business days to respond from the date the completed 
+application was received. A response will be in the form of approval, rejection or 
+request for further information. If there is a request for further information, the applicant 
+has 30 business days to respond, with an option to request an extension through 
+resubmission. This is to allow the applicant to obtain all the relevant documents and 
+information in sufficient time (for example, to renew a Licence or passport).  
+ 
+If the applicant requests hard copies of the certificate, the FTA will take 5 business 
+days to respond from the date the certificate fee payment is completed. The FTA will 
+only deliver to addresses in the UAE. The cost of this service is included within the fee 
+for requesting a hard copy of the certificate. 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+59 
+7.7. 
+Fees 
+ 
+The issuance of a Tax Residency Certificate is subject to certain fees as determined 
+by Cabinet Decision No. 65 of 2020. The submission fee to obtain a Tax Residency 
+Certificate is AED 50 and non-refundable. Once approved, the processing fee is as 
+follows: 
+Review of the application and issuance of an electronic Tax  
+Residency Certificate to a Registrant with the Authority (Tax 
+Registrants with a Corporate Tax TRN). 
+AED 500 
+Review of the application and issuance of an electronic Tax  
+Residency Certificate to a natural person not registered with 
+the Authority (Natural persons without a Corporate Tax TRN). 
+AED 1,000 
+Review of the application and issuance of an electronic Tax  
+Residency Certificate to a legal person not registered with 
+the Authority (Juridical persons without a Corporate Tax TRN). 
+AED 1,750 
+ 
+Additional fees of AED 250 will be added for each request of a hard copy certificate. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+60 
+8. International form stamping 
+ 
+Some jurisdictions require Persons applying to avail benefits under a DTA to provide 
+an authorised or signed document to show that they are a Tax Resident of a particular 
+jurisdiction with which an applicable DTA exists. Generally, jurisdictions should accept 
+a Tax Residency Certificate issued by the FTA as evidence of a Person’s tax residency 
+in the UAE. However, some jurisdictions provide their own Tax Residency Certificate 
+forms which they require to be stamped by the tax authority in the country where a 
+Person claims to be a tax resident. 
+ 
+The FTA can, upon request, stamp forms provided by other jurisdictions. The form 
+should be filled in and duly signed and stamped by the applicant and must cover the 
+same 12-month period and jurisdiction as the applicant’s relevant Tax Residency 
+Certificate. In cases of a juridical person, a stamp is also required by the authorised 
+signatory. 
+ 
+The original form provided by the other jurisdiction should be in English or Arabic. If 
+not, the form should be translated into either English or Arabic. The translation must 
+be approved in accordance with the law regulating translation in the UAE.89 
+ 
+In order to have their form signed and stamped, the applicant must send the form by 
+courier service to the FTA. The cost for the service of international form stamping is 
+included in the Tax Residency Certificate processing fee. However, the applicant will 
+bear fees for sending and returning the documents.  
+ 
+If the applicant does not purchase a return courier service, the applicant will be 
+required to collect the documents and form physically from the relevant FTA office. 
+These documents will only be retained by the FTA for six months from the date of 
+notifying the applicant. 
+ 
+The FTA can also electronically send the signed and stamped form to the applicant, 
+upon request, for no additional fee. 
+ 
+FTA takes, in general, 10 business days to respond from the date the completed form 
+is received and the processing fee of the relevant Tax Residency Certificate has been 
+paid. A response will be in the form of sending the international form via the applicant’s 
+pre-paid return courier service or a notification that the documents are ready to be 
+collected.  
+ 
+                                               
+89 Article 5 of Cabinet Decision No. 74 of 2023. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+61 
+Applicants also have the option to submit any specific forms online as a scanned copy 
+to be signed with an FTA ink signature, provided it is recognised and accepted by the 
+other country. 
+ 
+The specified form can be attached alongside the application in Tax Residency 
+Certificate portal. It will be returned through the application with the required signature. 
+The form should be filled by the taxpayer and it should match the application in the 
+system in terms of the Financial Year of the certificate. 
+ 
+ 
+ 
+ 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+62 
+9. Appendix 1: Tax Resident Certificate sample 
+ 
+The following is a sample of a Tax Residency Certificate for Double Tax Agreements:
+90 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                               
+90 Attachment to Ministerial Decision No. 247 of 2023 
+Tax Residency Certificate 
+Application number: […] 
+Application date: […] 
+Name of applicant: […] 
+Nationality (if applicable): […] 
+Passport number (if applicable): […] 
+Resident visa number(s) (if applicable): […] 
+Emirates ID number (if applicable): […] 
+Commercial licence number and licencing authority (if applicable): […] 
+Tax Registration Number for Corporate Tax purposes (if applicable): […] 
+ 
+The Federal Tax Authority to the best of its knowledge certifies that [name of applicant] 
+is a resident of the United Arab Emirates pursuant to the provisions of [full name of the 
+double taxation agreement] entered into between the United Arab Emirates and [name 
+of the other country] on [signature date of agreement]. 
+ 
+This certificate is valid from [../../..] to [../../..]. 
+ 
+[Signature and Federal Tax Authority’s stamp] 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+63 
+10. Appendix 2: Residency criteria of various legislative 
+instruments 
+ 
+ 
+Corporate Tax Law 
+Cabinet Decision No. 
+85 of 2022 
+Double 
+Taxation 
+Agreements 
+Natural 
+person 
+Resident Person 
+ 
+When 
+both 
+conditions are met: 
+• 
+conducts 
+Business 
+or 
+Business 
+Activity in the 
+UAE, 
+AND 
+• 
+Turnover 
+from 
+such 
+Business 
+or 
+Business 
+Activity exceeds 
+AED 1 million in 
+a 
+Gregorian 
+calendar year. 
+ 
+ 
+Tax Resident 
+ 
+When condition A, B or 
+C is met: 
+Condition A 
+Physically present in 
+the UAE for 183 days 
+or more, within the 
+relevant 12 
+consecutive months. 
+Condition B 
+Physically present in 
+the UAE for a period of 
+90 days or more, within 
+the relevant 12 
+consecutive months, 
+and: 
+o is a UAE or Gulf 
+Cooperation 
+Council (GCC) 
+national, or holds a 
+valid UAE 
+residential 
+permit/visa, and 
+o has a Permanent 
+Place of Residence 
+in the UAE, or carry 
+on an employment 
+or Business in UAE. 
+Condition C 
+Usual or primary place 
+of residence and 
+centre of financial and 
+tax residency 
+ 
+Each DTA has its own 
+tax residency rules and 
+needs to be considered 
+on 
+a 
+case-by-case 
+basis. 
+ 
+The criteria generally 
+include 
+being 
+either 
+liable to tax, having the 
+relevant citizenship or 
+nationality, 
+being 
+physical presence in 
+the relevant country, or 
+being 
+domiciled 
+or 
+resident in the relevant 
+country. 
+ 
+Where the criteria in a 
+DTA refers to being 
+resident, then for UAE 
+purposes, the criteria 
+follow Cabinet Decision 
+No. 85 of 2022. 
+ 
+If under the DTA, the 
+Person is resident in 
+both jurisdictions, the 
+tax 
+residency 
+is 
+determined 
+after 
+considering 
+the 
+tie-
+breaker rules. 
+ 
+The tie-breaker rules 
+typically consider the 
+following, in this order:  
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+64 
+ 
+Corporate Tax Law 
+Cabinet Decision No. 
+85 of 2022 
+Double 
+Taxation 
+Agreements 
+personal interests are 
+in the UAE.91 
+ 
+ 
+1. Location 
+of 
+permanent home 
+2. Location of centre 
+of vital interests 
+3. Location of habitual 
+abode 
+4. Country 
+of 
+nationality 
+5. The 
+Mutual 
+Agreement 
+Procedure 
+Juridical 
+person 
+Resident Person 
+ 
+When 
+either 
+condition is met: 
+• 
+incorporated or 
+otherwise 
+established 
+or 
+recognised 
+in 
+under 
+the 
+applicable 
+legislation of the 
+UAE, or 
+• 
+incorporated or 
+otherwise 
+established 
+or 
+recognised 
+under 
+the 
+applicable 
+legislation 
+outside the UAE 
+but 
+it 
+is 
+effectively 
+managed 
+and 
+controlled in the 
+UAE 
+Tax Resident 
+ 
+When either condition 
+is met: 
+• 
+incorporated 
+or 
+otherwise 
+formed 
+or recognised in 
+the UAE, or 
+• 
+otherwise 
+considered a Tax 
+Resident 
+of 
+the 
+UAE under other 
+Tax Laws in the 
+UAE such as under 
+the Corporate Tax 
+Law. 
+ 
+tax residency 
+ 
+Each DTA has its own 
+tax residency rules so 
+needs to be considered 
+on 
+a 
+case-by-case 
+basis. 
+ 
+The criteria typically 
+include 
+being 
+either 
+liable to tax, having a 
+legal connection (for 
+example, 
+incorporation), 
+or 
+having an economic 
+connection 
+(for 
+example, 
+effective 
+management 
+or 
+substantial presence), 
+or 
+a 
+combination 
+thereof, in the relevant 
+country. 
+ 
+If under the DTA, the 
+Person is resident in 
+both jurisdictions, the 
+tax 
+residency 
+is 
+                                               
+91 Article 4(1) of Cabinet Decision No. 85 of 2022. 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+65 
+ 
+Corporate Tax Law 
+Cabinet Decision No. 
+85 of 2022 
+Double 
+Taxation 
+Agreements 
+normally determined by 
+a tie-breaker. 
+ 
+The 
+tie-breaker 
+rule 
+generally 
+adopts 
+various 
+approaches 
+including: 
+• 
+the 
+place 
+of 
+effective 
+management 
+criteria, 
+• 
+location of the head 
+office, 
+• 
+the 
+Mutual 
+Agreement 
+Procedure. 
+ 
+ 
+ 
+ 
+
+ 
+Tax Procedures Guide | Tax Resident and Tax Residency Certificate | TPGTR1 
+66 
+11. Updates and Amendments 
+ 
+Date of amendment Amendments made 
+October 2024 
+• First version
