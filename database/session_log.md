@@ -605,3 +605,10 @@
 - Source and scope: all three are National Tax Service pages. The rate page states the 2026 corporate-rate bands; the filing page states the three-month corporate-income-tax filing/payment deadline; the forms directory lists Certificate of Residence and the Korean-source-income treaty exemption application. They are recorded as source pages, without inventing rate or eligibility parameters beyond their stated content.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 34 gaps`; scoped Korea build `NOT PASSED: 0 errors, 12 gaps`. The update removed Korea category 8, `page_rates`, and `page_deadlines` gaps.
 - Remote upload and verification: guarded reconciliation uploaded 6 new Storage objects and inserted 3 documents, 6 file records and 3 clauses. `upload.py --partial --verify` passed with all 394 object names and all 7 table row counts matching local data.
+
+## 2026-10-28 — Korea official tax-treaty directory
+
+- Document added: `kr.nts.tax-treaty-index`, the National Tax Service English tax-treaty directory. It provides the official directory coverage page and links to country-specific Korean treaty records.
+- Scope: the directory includes the official NTS links for Malaysia, Singapore, Thailand and Viet Nam. Those four treaty texts are not registered in this round because the linked NTS tax-law subsite did not return a downloadable original in the collection environment; no empty or unverified source was stored.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 33 gaps`; scoped Korea build `NOT PASSED: 0 errors, 11 gaps`. The update removed Korea's `page_treaties` category gap.
+- Remote upload and verification: guarded reconciliation uploaded 2 new Storage objects and inserted 1 document, 2 file records and 1 clause. `upload.py --partial --verify` passed with 396 object names and all 7 table row counts matching local data.
