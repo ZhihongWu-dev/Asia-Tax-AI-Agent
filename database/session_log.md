@@ -542,6 +542,13 @@
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 48 gaps`; scoped Japan build `NOT PASSED: 0 errors, 4 gaps`. All Japan category and owned-pair coverage is now present. The remaining Japan gaps are company and individual anti-abuse and inbound slots.
 - Remote upload and verification: dry run recorded 376 objects, 11 jurisdiction rows, 186 document rows, 372 file rows, 6,003 clause rows, 258 parameter rows, 24 decision rows and 48 treaty rows. Preflight found 366 existing remote objects. The partial resume upload added 10 objects and `upload.py --partial --verify` passed with all 376 object names and all 7 table row counts matching local data.
 
+## 2026-10-28 — Japan inbound foreign-income coverage
+
+- Document added: `jp.nta.international-taxation-basics`, the National Tax Agency's international-taxation basic material, categorised under 1 and 2.
+- Parameters added: `jp.inbound.company.foreign_income_taxable` and `jp.inbound.individual.foreign_income_taxable`. The first records the stated worldwide-income rule for domestic corporations. The individual parameter expressly preserves the source's exclusion of non-permanent residents, rather than treating the rule as universal.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 46 gaps`; scoped Japan build `NOT PASSED: 0 errors, 2 gaps`. The only remaining Japan gaps are company and individual anti-abuse slots.
+- Remote upload and verification: dry run recorded 378 objects, 11 jurisdiction rows, 187 document rows, 374 file rows, 6,004 clause rows, 260 parameter rows, 24 decision rows and 48 treaty rows. Preflight found 376 existing remote objects. The partial resume upload added 2 objects and `upload.py --partial --verify` passed with all 378 object names and all 7 table row counts matching local data.
+
 ## 2026-10-28 — Japan CFC overview and attribution mechanism
 
 - Document added: `jp.mof.cfc-overview`, the Japanese Ministry of Finance's current overview of the foreign-subsidiary combined-taxation system.

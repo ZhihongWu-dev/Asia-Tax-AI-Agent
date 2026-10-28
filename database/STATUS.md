@@ -1,8 +1,8 @@
 # Database build status
 
 - Errors: 0
-- Coverage gaps: 48
-- Warnings: 131
+- Coverage gaps: 46
+- Warnings: 133
 - SQLite snapshot: database.sqlite
 
 | Region | Category gaps | Slot gaps | Owned-pair gaps |
@@ -12,7 +12,7 @@
 | hk | 0 | 0 | 0 |
 | id | 0 | 0 | 0 |
 | in | 1 | 0 | 3 |
-| jp | 0 | 4 | 0 |
+| jp | 0 | 2 | 0 |
 | kr | 6 | 12 | 4 |
 | my | 0 | 0 | 0 |
 | sg | 0 | 0 | 0 |
@@ -30,9 +30,7 @@ gap: pair in-kr without a treaty row
 gap: pair in-my without a treaty row
 gap: pair in-vn without a treaty row
 gap: slot jp|company|anti_abuse without a parameter or absence record
-gap: slot jp|company|inbound without a parameter or absence record
 gap: slot jp|individual|anti_abuse without a parameter or absence record
-gap: slot jp|individual|inbound without a parameter or absence record
 gap: category kr|5
 gap: category kr|7
 gap: category kr|8
@@ -76,6 +74,8 @@ gap: slot vn|individual|residence without a parameter or absence record
 
 ## Warnings
 
+param jp.inbound.individual.foreign_income_taxable: quote differs only by whitespace
+param jp.inbound.company.foreign_income_taxable: quote differs only by whitespace
 param cn-hk.outbound_wht.dividend_rate_reduced: quote differs only by whitespace
 param cn-hk.anti_abuse.ppt_applies: quote differs only by whitespace
 param cn-in.outbound_wht.dividend_rate: quote differs only by whitespace
