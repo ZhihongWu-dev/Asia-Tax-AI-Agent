@@ -498,3 +498,10 @@
 - Source and scope: the guide defines an asset's beneficial owner as the individual who directly or indirectly provided consideration where the asset is held for that individual's or another person's immediate or future benefit. It is recorded as beneficial-owner determination guidance for foreign-asset disclosure only; it is not used to infer entitlement to tax-treaty benefits or a treaty rate.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 78 gaps`; scoped India build `NOT PASSED: 0 errors, 8 gaps`. This resolves India category 5. The remaining India gaps are category 3, category 9, `page_treaties`, company and individual CFC slots, and treaty rows `in-kr`, `in-my`, `in-vn`.
 - Remote upload and verification: preflight found 348 existing objects. `upload.py --partial --resume` uploaded 2 objects, and `upload.py --partial --verify` passed with 350 object names and all 7 table row counts matching local data.
+
+## 2026-10-28 — India indirect-share-transfer classification correction
+
+- Classification corrected: the existing official `in.rules2026` document now carries categories `4;9`, rather than only category 4. No source file was replaced or duplicated.
+- Source and scope: rule 12 determines income attributable to Indian assets on a transfer outside India of a share or interest in a company or entity. Its formula expressly refers to Indian assets from which the share or interest derives substantial value, and requires the transferor to furnish the accountant-verified Form 4 report. This is the category 9 indirect-share-transfer material; the rule is not misrepresented as a general rate or a new CFC rule.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 77 gaps`; scoped India build `NOT PASSED: 0 errors, 7 gaps`. The remaining India gaps are category 3, `page_treaties`, company and individual CFC slots, and treaty rows `in-kr`, `in-my`, `in-vn`.
+- Remote upload and verification: preflight found 350 existing objects. The table-only synchronization uploaded and deleted 0 Storage objects, and `upload.py --partial --verify` passed with all 350 object names and all 7 table row counts matching local data.
