@@ -802,3 +802,10 @@
 - Tool changes: none.
 - Acceptance: full-library `NOT PASSED: 0 errors, 5 gaps`; this closes four Viet Nam individual slots without inferring company rules or anti-abuse rules.
 - Remote upload and verification: the re-materialised statutory text object was explicitly replaced, then reconciliation updated 1 document metadata record and inserted 4 parameters. Final `upload.py --partial --verify` passed with all 441 Storage object names and exact values in all seven remote tables matching local data. Direct SHA-256 readback of the statutory text matched local bytes.
+
+## 2026-10-29 — Viet Nam related-party anti-abuse rule
+
+- Registered: `vn.gov.related-party-tax-avoidance`, official guidance on related-party transfer-pricing avoidance, for category 4.
+- Parameters added: `vn.anti_abuse.company.related_party_non_arm_length_reassessment`.
+- Acceptance: full-library `NOT PASSED: 0 errors, 4 gaps`; the guidance closes the company anti-abuse slot without extending it to individuals.
+- Remote upload and verification: resumable reconciliation uploaded the original page and generated text, inserted 1 document, 2 file records, 1 clause and 1 parameter, and committed. Final `upload.py --partial --verify` passed with all 443 Storage object names and exact values in all seven remote tables matching local data.
