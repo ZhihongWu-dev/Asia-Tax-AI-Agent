@@ -698,3 +698,16 @@
 - Tool changes: `build.py` now keeps tag-stripped text for HTML, XML and HTM originals rather than overwriting it with the raw markup, and detects an old unstripped generated view so it is rebuilt. Checks: clause identifiers saved before the change; Python compilation passed; the slicer runner confirmed automatic re-slicing remains disabled with no fixtures; full build reported 0 errors and 16 gaps; `clause_diff.py` reported no removed or added identifiers; all previously passing jurisdictions (ae, cn, hk, id, jp, my, sg and th) remained PASSED. No new source format was introduced, so no new fixture was required.
 - Acceptance: scoped Viet Nam build `NOT PASSED: 0 errors, 13 gaps`. The official treaty-directory category is closed; remaining Viet Nam gaps are categories 5–8, rate/deadline pages, and the listed domestic company/individual slots.
 - Remote upload and verification: uploaded 2 Storage objects; reconciliation inserted 1 document, 2 file records and 1 clause, and updated 3 generated file records and 3 generated clauses after the extractor repair. Final `upload.py --partial --verify` passed: all 429 Storage objects and exact values in all seven remote tables match local data.
+
+## 2026-10-29 — Viet Nam Government Portal attachment-domain validation
+
+- Registered: none.
+- Download failures: direct collection of the current tax-treaty-procedure consolidated PDF at `https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/14-vbhn-btc.pdf` could not resolve its host in the ordinary collection network. Two separately authorized fetch attempts were stopped by the execution-permission review before an external request was made. The browser opened the official PDF but did not save a local original.
+- Parameters added: none.
+- Absence records added: none.
+- Slicing problems: none.
+- Rate-table mismatches: none.
+- Handoff to a person: none; collection will continue through an obtainable official original rather than treating a search result or browser text as a source file.
+- Tool changes: `common.py` now recognises `datafiles.chinhphu.vn` as an official Government Portal attachment host. The Government Portal's own document record links to this attachment subdomain. Checks: clause identifiers saved before the change; Python compilation passed; the slicer runner confirmed automatic re-slicing remains disabled with no fixtures; full build reported 0 errors and 16 gaps; `clause_diff.py` reported no removed or added identifiers; all previously passing jurisdictions (ae, cn, hk, id, jp, my, sg and th) remained PASSED. No source format changed and no fixture was required.
+- Acceptance: unchanged at full-library `NOT PASSED: 0 errors, 16 gaps`; no source data was registered in this routing-only update.
+- Remote upload and verification: the authorized full refresh posted all 429 local Storage objects and replaced the selected schema from the validated local package. `upload.py --partial --verify` passed with all 429 object names and exact values in all seven remote tables matching local data. A separate SHA-256 readback of all four uploaded specification/task-sheet documents also matched their local bytes.
