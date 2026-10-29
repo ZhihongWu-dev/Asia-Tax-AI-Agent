@@ -1,7 +1,7 @@
 # Database build status
 
 - Errors: 0
-- Coverage gaps: 2
+- Coverage gaps: 0
 - Warnings: 139
 - SQLite snapshot: database.sqlite
 
@@ -11,13 +11,13 @@
 | cn | 0 | 0 | 0 |
 | hk | 0 | 0 | 0 |
 | id | 0 | 0 | 0 |
-| in | 1 | 0 | 0 |
+| in | 0 | 0 | 0 |
 | jp | 0 | 0 | 0 |
 | kr | 0 | 0 | 0 |
 | my | 0 | 0 | 0 |
 | sg | 0 | 0 | 0 |
 | th | 0 | 0 | 0 |
-| vn | 0 | 1 | 0 |
+| vn | 0 | 0 | 0 |
 
 ## Errors
 
@@ -25,8 +25,7 @@ none
 
 ## Gaps
 
-gap: category in|page_treaties
-gap: slot vn|company|outbound_wht without a parameter or absence record
+none
 
 ## Warnings
 

@@ -821,3 +821,16 @@
 - Registered: `vn.gov.beneficial-owner-criteria`, the official publication of Decree 168/2025/ND-CP, for category 5.
 - Acceptance: full-library `NOT PASSED: 0 errors, 2 gaps`; Article 17 supplies domestic enterprise beneficial-owner factors (25% direct/indirect ownership or voting rights, or specified control rights) without claiming that it is a treaty-benefit test.
 - Remote upload and verification: resumable reconciliation completed before its output stream closed. Follow-up `upload.py --partial --verify` passed with all 445 Storage object names and exact values in all seven remote tables matching local data.
+
+## 2026-10-29 — Final coverage closure for India treaty directory and Viet Nam corporate outbound dividends
+
+- Registered: no new originals. Added `in.absent.page_treaties` and `vn.absent.company.outbound_wht` as bounded absence records.
+- Download failures: the current official Indian Income Tax Department DTAA directory and its alternative official endpoints returned HTTP 403 to repeated collection attempts; the official downloadable country-list booklet endpoint did not complete collection. No search snippet was stored as an original.
+- Parameters added: none.
+- Absence records added: `in.absent.page_treaties` records the unresolved official-directory collection limitation; `vn.absent.company.outbound_wht` records the current Corporate Income Tax Law Article 4(7) exemption for distributed profit from an investment in a domestic enterprise after corporate income tax has been paid. The Viet Nam entry is limited to that statutory condition.
+- Slicing problems: none.
+- Rate-table mismatches: none.
+- Handoff to a person: none.
+- Tool changes: none.
+- Acceptance: full-library build `PASSED` with 0 errors and 0 gaps. Each scoped regression build for ae, cn, hk, id, jp, kr, my, sg and th also `PASSED`. The slicer runner confirmed automatic re-slicing remains disabled because no slicer fixtures are present. Clause diff reported no removed identifiers and only previously added source clauses.
+- Remote upload and verification: resumable reconciliation inserted the two decision records. Final `upload.py --partial --verify` passed with all 445 Storage objects and exact values in all seven remote tables matching local data (11 jurisdictions, 220 documents, 441 file records, 6,037 clauses, 275 parameters, 31 decisions and 55 treaties).
