@@ -671,3 +671,17 @@
 - Tool changes: none.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 18 gaps`; scoped Viet Nam build `NOT PASSED: 0 errors, 15 gaps`. The current law's qualified domestic minimum top-up tax under the Income Inclusion Rule is preserved, but it is not misclassified as an ordinary CFC regime. This closes category 3 and both CFC slots.
 - Remote upload and verification: guarded reconciliation inserted 2 decision rows. Final `upload.py --partial --verify` passed with 425 Storage objects and exact values in all seven remote tables matching local data.
+
+## 2026-10-29 — Viet Nam individual income-tax consolidated original
+
+- Registered: `vn.law.pit2026.vi`, the National Assembly Office's consolidated Personal Income Tax Law (No. 112/VBHN-VPQH), issued on 2026-05-20 and downloaded from its official Government Portal record.
+- Download failures: none for the original; the collection environment cannot resolve external hosts to obtain a Vietnamese OCR model.
+- Parameters added: none.
+- Absence records added: none.
+- Slicing problems: the official PDF is a scan with only the document number and issue date in its embedded text layer. The installed English OCR can read an approximate transliteration, but not a reliable verbatim Vietnamese legal text, so it is not used to create citations or parameters.
+- Rate-table mismatches: none.
+- Handoff to a person:
+  - H3 `vn.law.pit2026.vi`: the official Government Portal record at `https://chinhphu.vn/?classid=2629&docid=218215&pageid=27160` supplies only a scanned PDF; its source text is not usable for verbatim legal citations. The official National Legal Database was checked but its search surface exposed reCAPTCHA and did not provide a usable text version. Please supply or identify a text-layer official version, or decide not to collect this document.
+- Tool changes: none.
+- Acceptance: full materialising build `NOT PASSED: 0 errors, 17 gaps`; scoped Viet Nam build `NOT PASSED: 0 errors, 14 gaps`. Category 2 is now represented by its current official consolidated original, but its individual final, inbound, outbound-withholding and residence slots remain open pending usable text.
+- Remote upload and verification: the authorized `--partial --resume --reconcile` attempt validated 0 errors, 17 gaps and 427 objects locally, then stopped with `ConnectionError` before a remote operation. It did not write or replace the remote database, so remote verification remains pending.
