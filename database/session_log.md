@@ -815,3 +815,9 @@
 - Registered: no new original. Added `vn.absent.individual.anti_abuse` after checking the current PIT law and company-specific related-party guidance.
 - Acceptance: full-library `NOT PASSED: 0 errors, 3 gaps`; the individual anti-abuse slot is now explicitly recorded as absent rather than filled by an unsupported company rule.
 - Remote upload and verification: reconciliation inserted 1 decision; `upload.py --partial --verify` passed with all 443 Storage object names and exact values in all seven remote tables matching local data.
+
+## 2026-10-29 — Viet Nam beneficial-owner criteria
+
+- Registered: `vn.gov.beneficial-owner-criteria`, the official publication of Decree 168/2025/ND-CP, for category 5.
+- Acceptance: full-library `NOT PASSED: 0 errors, 2 gaps`; Article 17 supplies domestic enterprise beneficial-owner factors (25% direct/indirect ownership or voting rights, or specified control rights) without claiming that it is a treaty-benefit test.
+- Remote upload and verification: resumable reconciliation completed before its output stream closed. Follow-up `upload.py --partial --verify` passed with all 445 Storage object names and exact values in all seven remote tables matching local data.
