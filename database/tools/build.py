@@ -70,9 +70,12 @@ def materialize_new_documents():
         # extraction of a PDF, so rebuild that generated view from the PDF.
         generated_html_shell = text_path.is_file() and text_path.read_bytes().lstrip().lower().startswith((b'<!doctype html', b'<html'))
         generated_format_mismatch = raw_bytes.startswith(b'%PDF-') and generated_html_shell
-        if doc['id'] in known_docs and not generated_has_nul and not generated_format_mismatch:
+        # An HTML original must have a tag-stripped generated text view.  This
+        # also refreshes a stale view created by an earlier extractor bug.
+        generated_unstripped_html = raw.suffix.lower() in {'.html', '.htm', '.xml'} and generated_html_shell
+        if doc['id'] in known_docs and not generated_has_nul and not generated_format_mismatch and not generated_unstripped_html:
             continue
-        if generated_has_nul or generated_format_mismatch:
+        if generated_has_nul or generated_format_mismatch or generated_unstripped_html:
             clauses[:] = [clause for clause in clauses if clause['doc_id'] != doc['id']]
             known_docs.discard(doc['id'])
             changed = True
@@ -83,7 +86,7 @@ def materialize_new_documents():
             else:
                 from bs4 import BeautifulSoup
                 text = BeautifulSoup(raw_bytes, 'lxml').get_text('\n')
-        if suffix == '.pdf' or raw_bytes.startswith(b'%PDF-'):
+        elif suffix == '.pdf' or raw_bytes.startswith(b'%PDF-'):
             import fitz
             text = '\n'.join(page.get_text() for page in fitz.open(raw))
             # Use OCR only for an image-only PDF. The original object is
@@ -119,7 +122,7 @@ def materialize_new_documents():
         if not text: raise ValueError(f'doc {doc["id"]}: no extractable text')
         relative = str(text_path.relative_to(DATA))
         text_row = next((row for row in file_rows if row['path'] == relative), None)
-        if text_row is None or source_changed or generated_has_nul or generated_format_mismatch:
+        if text_row is None or source_changed or generated_has_nul or generated_format_mismatch or generated_unstripped_html:
             text_path.parent.mkdir(parents=True, exist_ok=True)
             text_path.write_text(text + '\n', encoding='utf-8')
             metadata = {'path': relative, 'sha256': sha256(text_path), 'bytes': str(text_path.stat().st_size)}

@@ -685,3 +685,16 @@
 - Tool changes: none.
 - Acceptance: full materialising build `NOT PASSED: 0 errors, 17 gaps`; scoped Viet Nam build `NOT PASSED: 0 errors, 14 gaps`. Category 2 is now represented by its current official consolidated original, but its individual final, inbound, outbound-withholding and residence slots remain open pending usable text.
 - Remote upload and verification: an initial normal-environment attempt stopped with `ConnectionError` before a remote operation. The authorized re-run then uploaded 2 Storage objects and reconciled 1 document, 2 file records and 1 clause. Final `upload.py --partial --verify` passed: all 427 Storage objects and exact values in all seven remote tables match local data.
+
+## 2026-10-29 — Viet Nam Ministry of Foreign Affairs treaty directory and HTML extraction repair
+
+- Registered: `vn.mofa.treaty-index`, the official Ministry of Foreign Affairs International Treaties Database directory page.
+- Download failures: the Korea NTS non-resident domestic-income FAQ was read in a browser but its automatic collector TLS handshake failed; no non-verifiable browser text was registered or used as a parameter.
+- Parameters added: none.
+- Absence records added: none.
+- Slicing problems: none. The directory is retained as one conservative `#all` page clause because it is a navigation/index page, not a treaty instrument.
+- Rate-table mismatches: none.
+- Handoff to a person: none.
+- Tool changes: `build.py` now keeps tag-stripped text for HTML, XML and HTM originals rather than overwriting it with the raw markup, and detects an old unstripped generated view so it is rebuilt. Checks: clause identifiers saved before the change; Python compilation passed; the slicer runner confirmed automatic re-slicing remains disabled with no fixtures; full build reported 0 errors and 16 gaps; `clause_diff.py` reported no removed or added identifiers; all previously passing jurisdictions (ae, cn, hk, id, jp, my, sg and th) remained PASSED. No new source format was introduced, so no new fixture was required.
+- Acceptance: scoped Viet Nam build `NOT PASSED: 0 errors, 13 gaps`. The official treaty-directory category is closed; remaining Viet Nam gaps are categories 5–8, rate/deadline pages, and the listed domestic company/individual slots.
+- Remote upload and verification: uploaded 2 Storage objects; reconciliation inserted 1 document, 2 file records and 1 clause, and updated 3 generated file records and 3 generated clauses after the extractor repair. Final `upload.py --partial --verify` passed: all 429 Storage objects and exact values in all seven remote tables match local data.

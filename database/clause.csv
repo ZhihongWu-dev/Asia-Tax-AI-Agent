@@ -478766,806 +478766,6 @@ $(document).ready(function()
   <script type=""text/javascript"" src=""/LSW/js/common/hrefRemove.js""></script>  
  </body>
 </html>"
-treaty.in-vn.1994.mofa#all,treaty.in-vn.1994.mofa,Whole document,"<html>
-<head>
-	<title>Treaties Database</title>
-	<meta charset=""utf-8"" />
-	<meta name=""viewport"" content=""width=device-width, initial-scale=1, user-scalable=no"" />
-	<meta name=""theme-color"" content=""#1061ad"">
-
-    <meta property=""og:type"" content=""website"" />
-<meta property=""og:site_name"" content=""Treaties Database"" />
-<meta property=""og:title"" content=""HB1464 | Treaties Database"" />
-<meta property=""og:description"" content=""Agreement between the Socialist Republic of Viet Nam and the Republic of India for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income"" />
-<meta property=""og:url"" content=""https://treaty.mofa.gov.vn/en-us/treaties/bilateral-treaties/HB1464/agreement-between-the-socialist-republic-of-viet-nam-and-the-republic-of-india-for-the-avoidance-of"" />
-<meta property=""og:image"" content=""https://treaty.mofa.gov.vn/assets/brand/og-quoc-huy.png"" />
-<meta property=""og:image:secure_url"" content=""https://treaty.mofa.gov.vn/assets/brand/og-quoc-huy.png"" />
-<meta property=""og:image:type"" content=""image/png"" />
-<meta property=""og:image:width"" content=""1200"" />
-<meta property=""og:image:height"" content=""630"" />
-<meta property=""og:image:alt"" content=""Treaties Database"" />
-<meta name=""twitter:card"" content=""summary_large_image"" />
-<meta name=""twitter:title"" content=""HB1464 | Treaties Database"" />
-<meta name=""twitter:description"" content=""Agreement between the Socialist Republic of Viet Nam and the Republic of India for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income"" />
-<meta name=""twitter:image"" content=""https://treaty.mofa.gov.vn/assets/brand/og-quoc-huy.png"" />
-
-    
-    
-
-
-	<link rel=""icon"" type=""image/x-icon"" href=""/images/favicon.ico"">
-	<link href=""/vendors/bootstrap/css/bootstrap.min.css"" rel=""stylesheet"">
-	<link href=""/fonts/css.css?family=Mulish:300,400,700&display=swap"" rel=""stylesheet"">
-	<link rel=""stylesheet"" href=""/vendors/bootstrap/css/bootstrap-icons.min.css"">
-	<link rel=""stylesheet"" href=""/css/main.css?v=2.0.36"" />
-	<link rel=""stylesheet"" href=""/css/sidebars.css?v=2.0.36"" />
-</head>
-<body class=""d-flex flex-column min-vh-100"">
-	<header>
-		<!-- Navigation -->
-<!-- Banner -->
-<div id=""header-container"">
-    <nav class=""navbar navbar-expand-lg navbar-light bg-white border-bottom"" id=""banner"">
-        <div class=""container-fluid px-lg-3 d-flex align-items-center flex-nowrap"">
-            <!-- Logo -->
-            <a class=""navbar-brand text-primary d-flex me-auto"" href=""/en-us/"">
-                <div class=""d-flex flex-column flex-lg-row
-                align-items-center align-items-lg-start
-                text-center text-lg-start"">
-                    <!-- Quốc huy -->
-                    <img src=""/assets/brand/emblem_of_vietnam.svg""
-                         alt=""Quốc huy""
-                         class=""emblem mb-1 mb-lg-0 me-lg-3"">
-                    <!-- Logo MOFA + subtitle -->
-                    <div class=""d-flex flex-column align-items-center align-items-lg-start"">
-                        <span class=""oswald-title text-uppercase"">Ministry of Foreign Affairs Viet Nam</span>
-                        <span class=""oswald-subtitle"">Treaties Database</span>
-                    </div>
-                </div>
-            </a>
-            <!-- Cụm bên phải -->
-            <div class=""d-flex flex-column align-items-end ms-auto
-                    d-lg-flex flex-lg-row align-items-lg-center gap-1 gap-lg-3"">
-                <!-- Ngôn ngữ -->
-                <a class=""text-decoration-none navbar-subtitle mb-3"" href=""/vi-vn/dieu-uoc/dieu-uoc-song-phuong/HB1464/hiep-dinh-giua-nuoc-cong-hoa-xa-hoi-chu-nghia-viet-nam-va-nuoc-cong-hoa-an-do-ve-tranh-danh-thue-hai"">
-                        <span class=""me-1"">Tiếng Việt</span>
-                        <img class=""icon-lang"" src=""/images/vn-flag-icon-32.png"" alt=""Tiếng Việt"" />
-                </a>
-                <!-- Nút toggle cho offcanvas trên mobile -->
-                <button class=""navbar-toggler d-lg-none mt-1"" type=""button"" data-bs-toggle=""offcanvas"" data-bs-target=""#offcanvasMenu"" aria-controls=""offcanvasMenu"" aria-label=""Menu"">
-                    <i class=""bi bi-list fs-3 text-dark""></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-</div>
-		<!-- Breadcrumb / You are here -->
-		<div class=""breadcrumb-bar d-flex justify-content-between"">
-			<div>
-
-
-    <ul class=""breadcrumb mb-0"">
-        <li class=""d-none d-xl-block me-2"">You are here: </li>
-            <li><a class=""text-decoration-none fw-bold"" href=""/en-us/"">Home</a> <span class=""divider mx-1"">/</span></li>
-            <li><a class=""text-decoration-none fw-bold"" href=""/en-us/treaties/"">Treaties</a> <span class=""divider mx-1"">/</span></li>
-            <li><a class=""text-decoration-none fw-bold"" href=""/en-us/treaties/bilateral-treaties/"">Bilateral treaties</a> <span class=""divider mx-1"">/</span></li>
-
-        <li class=""active"">HB1464</li>
-    </ul>
-
-			</div>
-			<div class=""d-flex align-items-center"">
-			    <a class=""text-decoration-none"" href=""https://treaty.mofa.gov.vn:8443"" target=""_blank"">
-                    Login <i class=""bi bi-person-fill""></i>
-                </a>
-			</div>
-		</div>
-	</header>
-	<main class=""flex-fill"">
-    	<!-- Offcanvas menu cho mobile -->
-<div class=""offcanvas offcanvas-start"" tabindex=""-1"" id=""offcanvasMenu"" aria-labelledby=""offcanvasMenuLabel"">
-    <div class=""offcanvas-header border-bottom"">
-        <a href=""/en-us/"" class=""d-flex align-items-center text-decoration-none text-secondary"">
-            <i class=""bi bi-house-door-fill me-2""></i>
-            <h5 class=""offcanvas-title mb-0"" id=""offcanvasMenuLabel"">Home</h5>
-        </a>
-        <button type=""button"" class=""btn-close"" data-bs-dismiss=""offcanvas"" aria-label=""Close""></button>
-    </div>
-    <div class=""offcanvas-body"">
-        <ul class=""nav flex-column"">
-        <li class=""nav-item active"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/"">
-                            <span><strong>Treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#off-1137"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse show"" id=""off-1137"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/recent-treaties-in-force/"">
-                        <span>Recent treaties in force</span>
-                </a>
-        </li>
-        <li class=""nav-item active"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/bilateral-treaties/"">
-                            <span><strong>Bilateral treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#off-1099"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse"" id=""off-1099"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2026"">
-                        <span>2026</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2025"">
-                        <span>2025</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2024"">
-                        <span>2024</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2023"">
-                        <span>2023</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2022"">
-                        <span>2022</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2021"">
-                        <span>Other years...</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/multilateral-treaties/"">
-                            <span><strong>Multilateral treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#off-1100"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse"" id=""off-1100"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2026"">
-                        <span>2026</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2025"">
-                        <span>2025</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2024"">
-                        <span>2024</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2023"">
-                        <span>2023</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2022"">
-                        <span>2022</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2021"">
-                        <span>Other years...</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/treaties/download-treaties/"">
-                        <span>Download treaties</span>
-                        <i class=""bi bi-download""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1144"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Guidance</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""off-1144"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/applicable-laws-and-regulations/"">
-                        <span>Applicable laws and regulations</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/procedure/"">
-                        <span>Procedure</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/sample-clauses/"">
-                        <span>Sample Clauses</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaty-practices-of-selected-countries/"">
-                        <span><strong>Treaty practices of selected countries</strong></span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/advanced-search/"">
-                        <span><strong>Advanced Search</strong></span>
-                        <i class=""bi bi-search""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/contact-us/"">
-                        <span><strong>Contact Us</strong></span>
-                        <i class=""bi bi-envelope""></i>
-                </a>
-        </li>
-            <li class=""border-top my-1""></li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1181"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Vietnamese MOFA Portal</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""off-1181"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1182"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                        <span><strong>Public services</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse"" id=""off-1182"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/nguoi-viet-nam"" target=""_blank"">
-                        <span>For Vietnamese citizens</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/nguoi-nuoc-ngoai"" target=""_blank"">
-                        <span>For foreign nationals</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/cac-don-vi"" target=""_blank"">
-                        <span>Diplomatic Missions</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1187"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Other links</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""off-1187"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://chinhphu.vn/"" target=""_blank"">
-                        <span>Vietnamese Government Portal</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://vbpl.vn/"" target=""_blank"">
-                        <span>National Legal Database</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1231"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                        <span><strong>Viet Nam's Free Trade Agreements</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse"" id=""off-1231"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://trungtamwto.vn/fta"" target=""_blank"">
-                        <span>https://trungtamwto.vn/fta</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://vntr.moit.gov.vn/en"" target=""_blank"">
-                        <span>https://vntr.moit.gov.vn</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://lanhsuvietnam.gov.vn/Lists/BaiViet/B%C3%A0i%20vi%E1%BA%BFt/DispForm.aspx?List=dc7c7d75%2D6a32%2D4215%2Dafeb%2D47d4bee70eee&ID=513"" target=""_blank"">
-                        <span>Treaties on visa exemption between Viet Nam and other countries</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://treaties.un.org/pages/ParticipationStatus.aspx?clang=_en"" target=""_blank"">
-                        <span>UN Treaty Series</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://agreement.asean.org/explanatory/show.html"" target=""_blank"">
-                        <span>ASEAN Legal Instruments</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-</ul>
-
-    </div>
-</div>
-    	<!-- Scroll to Top Button -->
-    	<button class=""scroll-to-top"" id=""btnScrollToTop"">
-    		<span class=""bi bi-arrow-up""></span>
-    	</button>
-    	<div class=""container-xxl mt-3"">
-    		
-	<div class=""row"">
-		<div class=""col-lg-3 d-none d-lg-block"">
-<div class=""d-none d-lg-block"" id=""desktopSidebar"">
-    <nav id=""desktopAccordion"">
-        <ul class=""nav flex-column"">
-        <li class=""nav-item active"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/"">
-                            <span><strong>Treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#side-1137"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse show"" id=""side-1137"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/recent-treaties-in-force/"">
-                        <span>Recent treaties in force</span>
-                </a>
-        </li>
-        <li class=""nav-item active"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/bilateral-treaties/"">
-                            <span><strong>Bilateral treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#side-1099"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse"" id=""side-1099"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2026"">
-                        <span>2026</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2025"">
-                        <span>2025</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2024"">
-                        <span>2024</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2023"">
-                        <span>2023</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2022"">
-                        <span>2022</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2021"">
-                        <span>Other years...</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/multilateral-treaties/"">
-                            <span><strong>Multilateral treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#side-1100"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse"" id=""side-1100"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2026"">
-                        <span>2026</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2025"">
-                        <span>2025</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2024"">
-                        <span>2024</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2023"">
-                        <span>2023</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2022"">
-                        <span>2022</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2021"">
-                        <span>Other years...</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/treaties/download-treaties/"">
-                        <span>Download treaties</span>
-                        <i class=""bi bi-download""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1144"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Guidance</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""side-1144"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/applicable-laws-and-regulations/"">
-                        <span>Applicable laws and regulations</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/procedure/"">
-                        <span>Procedure</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/sample-clauses/"">
-                        <span>Sample Clauses</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaty-practices-of-selected-countries/"">
-                        <span><strong>Treaty practices of selected countries</strong></span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/advanced-search/"">
-                        <span><strong>Advanced Search</strong></span>
-                        <i class=""bi bi-search""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/contact-us/"">
-                        <span><strong>Contact Us</strong></span>
-                        <i class=""bi bi-envelope""></i>
-                </a>
-        </li>
-            <li class=""border-top my-1""></li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1181"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Vietnamese MOFA Portal</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""side-1181"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1182"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                        <span><strong>Public services</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse"" id=""side-1182"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/nguoi-viet-nam"" target=""_blank"">
-                        <span>For Vietnamese citizens</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/nguoi-nuoc-ngoai"" target=""_blank"">
-                        <span>For foreign nationals</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/cac-don-vi"" target=""_blank"">
-                        <span>Diplomatic Missions</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1187"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Other links</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""side-1187"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://chinhphu.vn/"" target=""_blank"">
-                        <span>Vietnamese Government Portal</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://vbpl.vn/"" target=""_blank"">
-                        <span>National Legal Database</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1231"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                        <span><strong>Viet Nam's Free Trade Agreements</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse"" id=""side-1231"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://trungtamwto.vn/fta"" target=""_blank"">
-                        <span>https://trungtamwto.vn/fta</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://vntr.moit.gov.vn/en"" target=""_blank"">
-                        <span>https://vntr.moit.gov.vn</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://lanhsuvietnam.gov.vn/Lists/BaiViet/B%C3%A0i%20vi%E1%BA%BFt/DispForm.aspx?List=dc7c7d75%2D6a32%2D4215%2Dafeb%2D47d4bee70eee&ID=513"" target=""_blank"">
-                        <span>Treaties on visa exemption between Viet Nam and other countries</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://treaties.un.org/pages/ParticipationStatus.aspx?clang=_en"" target=""_blank"">
-                        <span>UN Treaty Series</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://agreement.asean.org/explanatory/show.html"" target=""_blank"">
-                        <span>ASEAN Legal Instruments</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-</ul>
-
-    </nav>
-</div>
-		</div>
-		<div class=""col-lg-9"">
-			
-	<p class=""fw-bold"">File ID: HB1464</p>
-	<hr class=""border border-primary border-1 rounded"" />
-	<p class=""lead"">
-		Agreement between the Socialist Republic of Viet Nam and the Republic of India for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income
-	</p>
-	<hr class=""border border-primary border-1 rounded"" />
-	<div class=""row fs-6 fw-light"">
-		<div class=""col-md-4"">
-			<span class=""fst-italic"">Date of signature:</span><span class=""fw-bold ms-1 me-2"">07/09/1994</span>
-		</div>
-		<div class=""col-md-4"">
-			<span class=""fst-italic"">Date of entry into force:</span><span class=""fw-bold ms-1 me-2"">02/02/1995</span>
-		</div>
-		<div class=""col-md-4"">
-			<span class=""fst-italic"">On behalf of:</span><span class=""fw-bold ms-1 me-2"">
-Government			</span>
-		</div>
-		<div class=""col-md-4"">
-			<span class=""fst-italic"">Status:</span><span class=""fw-bold ms-1 me-2"">
-				In force
-			</span>
-		</div>
-		
-			<div class=""col-md-8"">
-				<span class=""fst-italic"">Proposing authority:</span>
-				<span class=""fw-bold ms-1 me-2"">
-Bộ Tài chính				</span>
-			</div>
-			<div class=""col-md-8"">
-				<span class=""fst-italic"">Treaty text:</span>
-					<i class=""bi bi-paperclip""></i>
-					<a href=""https://treaty.mofa.gov.vn:8443/api/files/attachment/5a256adb-d60d-457c-84bd-50612fdf64a7"" target=""_blank"">hb1464</a>
-					<span class=""me-3""> - 2.83 MB </span>
-			</div>
-	</div>
-
-		</div>
-	</div>
-
-    	</div>
-	</main>
-	<!-- Footer -->
-	<footer class=""container-fluid footer mt-auto"">
-		<div class=""container"">
-
-<footer class=""d-flex flex-wrap justify-content-between align-items-center py-3 my-4"">
-    <p class=""col-md-8 mb-0 text-body-secondary"">© Department of International Law and Treaties, Ministry of Foreign Affairs. All rights reserved.</p>
-    <ul class=""nav col-md-4 justify-content-end"">
-            <li class=""nav-item"">
-                <a href=""#"" class=""nav-link px-2 text-body-secondary""
-                   data-bs-toggle=""modal"" data-bs-target=""#disclaimerModal"">Disclaimer</a>
-            </li>
-    </ul>
-</footer>
-    <div class=""modal fade"" id=""disclaimerModal"" data-bs-backdrop=""static"" data-bs-keyboard=""false"" tabindex=""-1"" aria-labelledby=""disclaimerModalLabel"" aria-hidden=""true"">
-        <div class=""modal-dialog modal-dialog-centered"">
-            <div class=""modal-content"">
-                <div class=""modal-header"">
-                    <h5 class=""modal-title"" id=""disclaimerModalLabel"">Disclaimer</h5>
-                    <button type=""button"" class=""btn-close"" data-bs-dismiss=""modal"" aria-label=""Close""></button>
-                </div>
-                <div class=""modal-body"">
-                    <p>The Ministry of Foreign Affairs is not responsible for the exploitation or use of information from this website for illegal purposes.</p>
-                </div>
-                <div class=""modal-footer"">
-                    <button type=""button"" class=""btn btn-secondary"" data-bs-dismiss=""modal"">Close</button>
-                    <button type=""button"" class=""btn btn-primary"" data-bs-dismiss=""modal"">Understood</button>
-                </div>
-            </div>
-        </div>
-    </div>
-		</div>
-	</footer>
-
-	<!-- Scripts -->
-	<script src=""/vendors/jquery/3.7.1/jquery.min.js""></script>
-	<script src=""/vendors/bootstrap/js/bootstrap.bundle.min.js""></script>
-	<script src=""/scripts/site.js?v=2.0.36""></script>
-	
-	
-
-</body>
-</html>"
 treaty.in-vn.1994.mofa.text#all,treaty.in-vn.1994.mofa.text,Whole document,"vel HeRISA
 it es mT - =
 ‘ i
@@ -488463,806 +487663,6 @@ Minister of Foreign Affairs Acting Minister of Foreign Affairs
 and Trade
 
 F LS"
-treaty.kr-vn.1994.mofa#all,treaty.kr-vn.1994.mofa,Whole document,"<html>
-<head>
-	<title>Treaties Database</title>
-	<meta charset=""utf-8"" />
-	<meta name=""viewport"" content=""width=device-width, initial-scale=1, user-scalable=no"" />
-	<meta name=""theme-color"" content=""#1061ad"">
-
-    <meta property=""og:type"" content=""website"" />
-<meta property=""og:site_name"" content=""Treaties Database"" />
-<meta property=""og:title"" content=""HB1411 | Treaties Database"" />
-<meta property=""og:description"" content=""Agreement between the Government of the Socialist Republic of Viet Nam and the Government of the Republic of Korea for the avoidance of double taxation and the prevention of fiscal evasion with respect to taxes on income"" />
-<meta property=""og:url"" content=""https://treaty.mofa.gov.vn/en-us/treaties/bilateral-treaties/HB1411/agreement-between-the-government-of-the-socialist-republic-of-viet-nam-and-the-government-of-the-republic-of-korea-for-the-avoidance-of-double-taxation-and-the-prevention-of-fiscal-evasion-with-respect-to-taxes-on-income"" />
-<meta property=""og:image"" content=""https://treaty.mofa.gov.vn/assets/brand/og-quoc-huy.png"" />
-<meta property=""og:image:secure_url"" content=""https://treaty.mofa.gov.vn/assets/brand/og-quoc-huy.png"" />
-<meta property=""og:image:type"" content=""image/png"" />
-<meta property=""og:image:width"" content=""1200"" />
-<meta property=""og:image:height"" content=""630"" />
-<meta property=""og:image:alt"" content=""Treaties Database"" />
-<meta name=""twitter:card"" content=""summary_large_image"" />
-<meta name=""twitter:title"" content=""HB1411 | Treaties Database"" />
-<meta name=""twitter:description"" content=""Agreement between the Government of the Socialist Republic of Viet Nam and the Government of the Republic of Korea for the avoidance of double taxation and the prevention of fiscal evasion with respect to taxes on income"" />
-<meta name=""twitter:image"" content=""https://treaty.mofa.gov.vn/assets/brand/og-quoc-huy.png"" />
-
-    
-    
-
-
-	<link rel=""icon"" type=""image/x-icon"" href=""/images/favicon.ico"">
-	<link href=""/vendors/bootstrap/css/bootstrap.min.css"" rel=""stylesheet"">
-	<link href=""/fonts/css.css?family=Mulish:300,400,700&display=swap"" rel=""stylesheet"">
-	<link rel=""stylesheet"" href=""/vendors/bootstrap/css/bootstrap-icons.min.css"">
-	<link rel=""stylesheet"" href=""/css/main.css?v=2.0.36"" />
-	<link rel=""stylesheet"" href=""/css/sidebars.css?v=2.0.36"" />
-</head>
-<body class=""d-flex flex-column min-vh-100"">
-	<header>
-		<!-- Navigation -->
-<!-- Banner -->
-<div id=""header-container"">
-    <nav class=""navbar navbar-expand-lg navbar-light bg-white border-bottom"" id=""banner"">
-        <div class=""container-fluid px-lg-3 d-flex align-items-center flex-nowrap"">
-            <!-- Logo -->
-            <a class=""navbar-brand text-primary d-flex me-auto"" href=""/en-us/"">
-                <div class=""d-flex flex-column flex-lg-row
-                align-items-center align-items-lg-start
-                text-center text-lg-start"">
-                    <!-- Quốc huy -->
-                    <img src=""/assets/brand/emblem_of_vietnam.svg""
-                         alt=""Quốc huy""
-                         class=""emblem mb-1 mb-lg-0 me-lg-3"">
-                    <!-- Logo MOFA + subtitle -->
-                    <div class=""d-flex flex-column align-items-center align-items-lg-start"">
-                        <span class=""oswald-title text-uppercase"">Ministry of Foreign Affairs Viet Nam</span>
-                        <span class=""oswald-subtitle"">Treaties Database</span>
-                    </div>
-                </div>
-            </a>
-            <!-- Cụm bên phải -->
-            <div class=""d-flex flex-column align-items-end ms-auto
-                    d-lg-flex flex-lg-row align-items-lg-center gap-1 gap-lg-3"">
-                <!-- Ngôn ngữ -->
-                <a class=""text-decoration-none navbar-subtitle mb-3"" href=""/vi-vn/dieu-uoc/dieu-uoc-song-phuong/HB1411/hiep-dinh-giua-chinh-phu-nuoc-cong-hoa-xa-hoi-chu-nghia-viet-nam-va-chinh-phu-nuoc-dai-han-dan-quoc"">
-                        <span class=""me-1"">Tiếng Việt</span>
-                        <img class=""icon-lang"" src=""/images/vn-flag-icon-32.png"" alt=""Tiếng Việt"" />
-                </a>
-                <!-- Nút toggle cho offcanvas trên mobile -->
-                <button class=""navbar-toggler d-lg-none mt-1"" type=""button"" data-bs-toggle=""offcanvas"" data-bs-target=""#offcanvasMenu"" aria-controls=""offcanvasMenu"" aria-label=""Menu"">
-                    <i class=""bi bi-list fs-3 text-dark""></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-</div>
-		<!-- Breadcrumb / You are here -->
-		<div class=""breadcrumb-bar d-flex justify-content-between"">
-			<div>
-
-
-    <ul class=""breadcrumb mb-0"">
-        <li class=""d-none d-xl-block me-2"">You are here: </li>
-            <li><a class=""text-decoration-none fw-bold"" href=""/en-us/"">Home</a> <span class=""divider mx-1"">/</span></li>
-            <li><a class=""text-decoration-none fw-bold"" href=""/en-us/treaties/"">Treaties</a> <span class=""divider mx-1"">/</span></li>
-            <li><a class=""text-decoration-none fw-bold"" href=""/en-us/treaties/bilateral-treaties/"">Bilateral treaties</a> <span class=""divider mx-1"">/</span></li>
-
-        <li class=""active"">HB1411</li>
-    </ul>
-
-			</div>
-			<div class=""d-flex align-items-center"">
-			    <a class=""text-decoration-none"" href=""https://treaty.mofa.gov.vn:8443"" target=""_blank"">
-                    Login <i class=""bi bi-person-fill""></i>
-                </a>
-			</div>
-		</div>
-	</header>
-	<main class=""flex-fill"">
-    	<!-- Offcanvas menu cho mobile -->
-<div class=""offcanvas offcanvas-start"" tabindex=""-1"" id=""offcanvasMenu"" aria-labelledby=""offcanvasMenuLabel"">
-    <div class=""offcanvas-header border-bottom"">
-        <a href=""/en-us/"" class=""d-flex align-items-center text-decoration-none text-secondary"">
-            <i class=""bi bi-house-door-fill me-2""></i>
-            <h5 class=""offcanvas-title mb-0"" id=""offcanvasMenuLabel"">Home</h5>
-        </a>
-        <button type=""button"" class=""btn-close"" data-bs-dismiss=""offcanvas"" aria-label=""Close""></button>
-    </div>
-    <div class=""offcanvas-body"">
-        <ul class=""nav flex-column"">
-        <li class=""nav-item active"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/"">
-                            <span><strong>Treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#off-1137"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse show"" id=""off-1137"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/recent-treaties-in-force/"">
-                        <span>Recent treaties in force</span>
-                </a>
-        </li>
-        <li class=""nav-item active"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/bilateral-treaties/"">
-                            <span><strong>Bilateral treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#off-1099"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse"" id=""off-1099"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2026"">
-                        <span>2026</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2025"">
-                        <span>2025</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2024"">
-                        <span>2024</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2023"">
-                        <span>2023</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2022"">
-                        <span>2022</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2021"">
-                        <span>Other years...</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/multilateral-treaties/"">
-                            <span><strong>Multilateral treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#off-1100"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse"" id=""off-1100"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2026"">
-                        <span>2026</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2025"">
-                        <span>2025</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2024"">
-                        <span>2024</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2023"">
-                        <span>2023</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2022"">
-                        <span>2022</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2021"">
-                        <span>Other years...</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/treaties/download-treaties/"">
-                        <span>Download treaties</span>
-                        <i class=""bi bi-download""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1144"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Guidance</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""off-1144"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/applicable-laws-and-regulations/"">
-                        <span>Applicable laws and regulations</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/procedure/"">
-                        <span>Procedure</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/sample-clauses/"">
-                        <span>Sample Clauses</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaty-practices-of-selected-countries/"">
-                        <span><strong>Treaty practices of selected countries</strong></span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/advanced-search/"">
-                        <span><strong>Advanced Search</strong></span>
-                        <i class=""bi bi-search""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/contact-us/"">
-                        <span><strong>Contact Us</strong></span>
-                        <i class=""bi bi-envelope""></i>
-                </a>
-        </li>
-            <li class=""border-top my-1""></li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1181"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Vietnamese MOFA Portal</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""off-1181"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1182"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                        <span><strong>Public services</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse"" id=""off-1182"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/nguoi-viet-nam"" target=""_blank"">
-                        <span>For Vietnamese citizens</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/nguoi-nuoc-ngoai"" target=""_blank"">
-                        <span>For foreign nationals</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/cac-don-vi"" target=""_blank"">
-                        <span>Diplomatic Missions</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1187"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Other links</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""off-1187"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://chinhphu.vn/"" target=""_blank"">
-                        <span>Vietnamese Government Portal</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://vbpl.vn/"" target=""_blank"">
-                        <span>National Legal Database</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1231"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                        <span><strong>Viet Nam's Free Trade Agreements</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse"" id=""off-1231"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://trungtamwto.vn/fta"" target=""_blank"">
-                        <span>https://trungtamwto.vn/fta</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://vntr.moit.gov.vn/en"" target=""_blank"">
-                        <span>https://vntr.moit.gov.vn</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://lanhsuvietnam.gov.vn/Lists/BaiViet/B%C3%A0i%20vi%E1%BA%BFt/DispForm.aspx?List=dc7c7d75%2D6a32%2D4215%2Dafeb%2D47d4bee70eee&ID=513"" target=""_blank"">
-                        <span>Treaties on visa exemption between Viet Nam and other countries</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://treaties.un.org/pages/ParticipationStatus.aspx?clang=_en"" target=""_blank"">
-                        <span>UN Treaty Series</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://agreement.asean.org/explanatory/show.html"" target=""_blank"">
-                        <span>ASEAN Legal Instruments</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-</ul>
-
-    </div>
-</div>
-    	<!-- Scroll to Top Button -->
-    	<button class=""scroll-to-top"" id=""btnScrollToTop"">
-    		<span class=""bi bi-arrow-up""></span>
-    	</button>
-    	<div class=""container-xxl mt-3"">
-    		
-	<div class=""row"">
-		<div class=""col-lg-3 d-none d-lg-block"">
-<div class=""d-none d-lg-block"" id=""desktopSidebar"">
-    <nav id=""desktopAccordion"">
-        <ul class=""nav flex-column"">
-        <li class=""nav-item active"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/"">
-                            <span><strong>Treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#side-1137"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse show"" id=""side-1137"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/recent-treaties-in-force/"">
-                        <span>Recent treaties in force</span>
-                </a>
-        </li>
-        <li class=""nav-item active"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/bilateral-treaties/"">
-                            <span><strong>Bilateral treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#side-1099"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse"" id=""side-1099"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2026"">
-                        <span>2026</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2025"">
-                        <span>2025</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2024"">
-                        <span>2024</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2023"">
-                        <span>2023</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2022"">
-                        <span>2022</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2021"">
-                        <span>Other years...</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/multilateral-treaties/"">
-                            <span><strong>Multilateral treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#side-1100"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse"" id=""side-1100"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2026"">
-                        <span>2026</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2025"">
-                        <span>2025</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2024"">
-                        <span>2024</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2023"">
-                        <span>2023</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2022"">
-                        <span>2022</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2021"">
-                        <span>Other years...</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/treaties/download-treaties/"">
-                        <span>Download treaties</span>
-                        <i class=""bi bi-download""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1144"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Guidance</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""side-1144"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/applicable-laws-and-regulations/"">
-                        <span>Applicable laws and regulations</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/procedure/"">
-                        <span>Procedure</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/sample-clauses/"">
-                        <span>Sample Clauses</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaty-practices-of-selected-countries/"">
-                        <span><strong>Treaty practices of selected countries</strong></span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/advanced-search/"">
-                        <span><strong>Advanced Search</strong></span>
-                        <i class=""bi bi-search""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/contact-us/"">
-                        <span><strong>Contact Us</strong></span>
-                        <i class=""bi bi-envelope""></i>
-                </a>
-        </li>
-            <li class=""border-top my-1""></li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1181"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Vietnamese MOFA Portal</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""side-1181"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1182"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                        <span><strong>Public services</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse"" id=""side-1182"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/nguoi-viet-nam"" target=""_blank"">
-                        <span>For Vietnamese citizens</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/nguoi-nuoc-ngoai"" target=""_blank"">
-                        <span>For foreign nationals</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/cac-don-vi"" target=""_blank"">
-                        <span>Diplomatic Missions</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1187"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Other links</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""side-1187"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://chinhphu.vn/"" target=""_blank"">
-                        <span>Vietnamese Government Portal</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://vbpl.vn/"" target=""_blank"">
-                        <span>National Legal Database</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1231"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                        <span><strong>Viet Nam's Free Trade Agreements</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse"" id=""side-1231"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://trungtamwto.vn/fta"" target=""_blank"">
-                        <span>https://trungtamwto.vn/fta</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://vntr.moit.gov.vn/en"" target=""_blank"">
-                        <span>https://vntr.moit.gov.vn</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://lanhsuvietnam.gov.vn/Lists/BaiViet/B%C3%A0i%20vi%E1%BA%BFt/DispForm.aspx?List=dc7c7d75%2D6a32%2D4215%2Dafeb%2D47d4bee70eee&ID=513"" target=""_blank"">
-                        <span>Treaties on visa exemption between Viet Nam and other countries</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://treaties.un.org/pages/ParticipationStatus.aspx?clang=_en"" target=""_blank"">
-                        <span>UN Treaty Series</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://agreement.asean.org/explanatory/show.html"" target=""_blank"">
-                        <span>ASEAN Legal Instruments</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-</ul>
-
-    </nav>
-</div>
-		</div>
-		<div class=""col-lg-9"">
-			
-	<p class=""fw-bold"">File ID: HB1411</p>
-	<hr class=""border border-primary border-1 rounded"" />
-	<p class=""lead"">
-		Agreement between the Government of the Socialist Republic of Viet Nam and the Government of the Republic of Korea for the avoidance of double taxation and the prevention of fiscal evasion with respect to taxes on income
-	</p>
-	<hr class=""border border-primary border-1 rounded"" />
-	<div class=""row fs-6 fw-light"">
-		<div class=""col-md-4"">
-			<span class=""fst-italic"">Date of signature:</span><span class=""fw-bold ms-1 me-2"">20/05/1994</span>
-		</div>
-		<div class=""col-md-4"">
-			<span class=""fst-italic"">Date of entry into force:</span><span class=""fw-bold ms-1 me-2"">11/09/1994</span>
-		</div>
-		<div class=""col-md-4"">
-			<span class=""fst-italic"">On behalf of:</span><span class=""fw-bold ms-1 me-2"">
-Government			</span>
-		</div>
-		<div class=""col-md-4"">
-			<span class=""fst-italic"">Status:</span><span class=""fw-bold ms-1 me-2"">
-				In force
-			</span>
-		</div>
-		
-			<div class=""col-md-8"">
-				<span class=""fst-italic"">Proposing authority:</span>
-				<span class=""fw-bold ms-1 me-2"">
-Bộ Tài chính				</span>
-			</div>
-			<div class=""col-md-8"">
-				<span class=""fst-italic"">Treaty text:</span>
-					<i class=""bi bi-paperclip""></i>
-					<a href=""https://treaty.mofa.gov.vn:8443/api/files/attachment/f93b1951-9e76-4c9f-a70d-7c9c7cea2ced"" target=""_blank"">HB1411</a>
-					<span class=""me-3""> - 2.08 MB </span>
-			</div>
-	</div>
-
-		</div>
-	</div>
-
-    	</div>
-	</main>
-	<!-- Footer -->
-	<footer class=""container-fluid footer mt-auto"">
-		<div class=""container"">
-
-<footer class=""d-flex flex-wrap justify-content-between align-items-center py-3 my-4"">
-    <p class=""col-md-8 mb-0 text-body-secondary"">© Department of International Law and Treaties, Ministry of Foreign Affairs. All rights reserved.</p>
-    <ul class=""nav col-md-4 justify-content-end"">
-            <li class=""nav-item"">
-                <a href=""#"" class=""nav-link px-2 text-body-secondary""
-                   data-bs-toggle=""modal"" data-bs-target=""#disclaimerModal"">Disclaimer</a>
-            </li>
-    </ul>
-</footer>
-    <div class=""modal fade"" id=""disclaimerModal"" data-bs-backdrop=""static"" data-bs-keyboard=""false"" tabindex=""-1"" aria-labelledby=""disclaimerModalLabel"" aria-hidden=""true"">
-        <div class=""modal-dialog modal-dialog-centered"">
-            <div class=""modal-content"">
-                <div class=""modal-header"">
-                    <h5 class=""modal-title"" id=""disclaimerModalLabel"">Disclaimer</h5>
-                    <button type=""button"" class=""btn-close"" data-bs-dismiss=""modal"" aria-label=""Close""></button>
-                </div>
-                <div class=""modal-body"">
-                    <p>The Ministry of Foreign Affairs is not responsible for the exploitation or use of information from this website for illegal purposes.</p>
-                </div>
-                <div class=""modal-footer"">
-                    <button type=""button"" class=""btn btn-secondary"" data-bs-dismiss=""modal"">Close</button>
-                    <button type=""button"" class=""btn btn-primary"" data-bs-dismiss=""modal"">Understood</button>
-                </div>
-            </div>
-        </div>
-    </div>
-		</div>
-	</footer>
-
-	<!-- Scripts -->
-	<script src=""/vendors/jquery/3.7.1/jquery.min.js""></script>
-	<script src=""/vendors/bootstrap/js/bootstrap.bundle.min.js""></script>
-	<script src=""/scripts/site.js?v=2.0.36""></script>
-	
-	
-
-</body>
-</html>"
 treaty.kr-vn.1994.mofa.text#all,treaty.kr-vn.1994.mofa.text,Whole document,"HIEP DINH
 
 GIUA
@@ -491924,806 +490324,6 @@ wo HO TE
 MINISTER OF FOREIGN AFFAIRS
 
 “~ MINISTER OF FINANCE"
-treaty.kr-vn.2019.protocol.mofa#all,treaty.kr-vn.2019.protocol.mofa,Whole document,"<html>
-<head>
-	<title>Treaties Database</title>
-	<meta charset=""utf-8"" />
-	<meta name=""viewport"" content=""width=device-width, initial-scale=1, user-scalable=no"" />
-	<meta name=""theme-color"" content=""#1061ad"">
-
-    <meta property=""og:type"" content=""website"" />
-<meta property=""og:site_name"" content=""Treaties Database"" />
-<meta property=""og:title"" content=""HB5267 | Treaties Database"" />
-<meta property=""og:description"" content=""Second Protocol amending the Agreement between the Government of the Socialist Republic of Viet Nam and the Government of the Republic of Korea for the avoidance of double taxation and the prevention of fiscal evasion with respect to taxes on income signed at Ha Noi on 20 May 1994"" />
-<meta property=""og:url"" content=""https://treaty.mofa.gov.vn/en-us/treaties/bilateral-treaties/HB5267/second-protocol-amending-the-agreement-between-the-government-of-the-socialist-republic-of-viet-nam"" />
-<meta property=""og:image"" content=""https://treaty.mofa.gov.vn/assets/brand/og-quoc-huy.png"" />
-<meta property=""og:image:secure_url"" content=""https://treaty.mofa.gov.vn/assets/brand/og-quoc-huy.png"" />
-<meta property=""og:image:type"" content=""image/png"" />
-<meta property=""og:image:width"" content=""1200"" />
-<meta property=""og:image:height"" content=""630"" />
-<meta property=""og:image:alt"" content=""Treaties Database"" />
-<meta name=""twitter:card"" content=""summary_large_image"" />
-<meta name=""twitter:title"" content=""HB5267 | Treaties Database"" />
-<meta name=""twitter:description"" content=""Second Protocol amending the Agreement between the Government of the Socialist Republic of Viet Nam and the Government of the Republic of Korea for the avoidance of double taxation and the prevention of fiscal evasion with respect to taxes on income signed at Ha Noi on 20 May 1994"" />
-<meta name=""twitter:image"" content=""https://treaty.mofa.gov.vn/assets/brand/og-quoc-huy.png"" />
-
-    
-    
-
-
-	<link rel=""icon"" type=""image/x-icon"" href=""/images/favicon.ico"">
-	<link href=""/vendors/bootstrap/css/bootstrap.min.css"" rel=""stylesheet"">
-	<link href=""/fonts/css.css?family=Mulish:300,400,700&display=swap"" rel=""stylesheet"">
-	<link rel=""stylesheet"" href=""/vendors/bootstrap/css/bootstrap-icons.min.css"">
-	<link rel=""stylesheet"" href=""/css/main.css?v=2.0.36"" />
-	<link rel=""stylesheet"" href=""/css/sidebars.css?v=2.0.36"" />
-</head>
-<body class=""d-flex flex-column min-vh-100"">
-	<header>
-		<!-- Navigation -->
-<!-- Banner -->
-<div id=""header-container"">
-    <nav class=""navbar navbar-expand-lg navbar-light bg-white border-bottom"" id=""banner"">
-        <div class=""container-fluid px-lg-3 d-flex align-items-center flex-nowrap"">
-            <!-- Logo -->
-            <a class=""navbar-brand text-primary d-flex me-auto"" href=""/en-us/"">
-                <div class=""d-flex flex-column flex-lg-row
-                align-items-center align-items-lg-start
-                text-center text-lg-start"">
-                    <!-- Quốc huy -->
-                    <img src=""/assets/brand/emblem_of_vietnam.svg""
-                         alt=""Quốc huy""
-                         class=""emblem mb-1 mb-lg-0 me-lg-3"">
-                    <!-- Logo MOFA + subtitle -->
-                    <div class=""d-flex flex-column align-items-center align-items-lg-start"">
-                        <span class=""oswald-title text-uppercase"">Ministry of Foreign Affairs Viet Nam</span>
-                        <span class=""oswald-subtitle"">Treaties Database</span>
-                    </div>
-                </div>
-            </a>
-            <!-- Cụm bên phải -->
-            <div class=""d-flex flex-column align-items-end ms-auto
-                    d-lg-flex flex-lg-row align-items-lg-center gap-1 gap-lg-3"">
-                <!-- Ngôn ngữ -->
-                <a class=""text-decoration-none navbar-subtitle mb-3"" href=""/vi-vn/dieu-uoc/dieu-uoc-song-phuong/HB5267/nghi-dinh-thu-thu-hai-sua-doi-hiep-dinh-giua-chinh-phu-nuoc-cong-hoa-xa-hoi-chu-nghia-viet-nam-va"">
-                        <span class=""me-1"">Tiếng Việt</span>
-                        <img class=""icon-lang"" src=""/images/vn-flag-icon-32.png"" alt=""Tiếng Việt"" />
-                </a>
-                <!-- Nút toggle cho offcanvas trên mobile -->
-                <button class=""navbar-toggler d-lg-none mt-1"" type=""button"" data-bs-toggle=""offcanvas"" data-bs-target=""#offcanvasMenu"" aria-controls=""offcanvasMenu"" aria-label=""Menu"">
-                    <i class=""bi bi-list fs-3 text-dark""></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-</div>
-		<!-- Breadcrumb / You are here -->
-		<div class=""breadcrumb-bar d-flex justify-content-between"">
-			<div>
-
-
-    <ul class=""breadcrumb mb-0"">
-        <li class=""d-none d-xl-block me-2"">You are here: </li>
-            <li><a class=""text-decoration-none fw-bold"" href=""/en-us/"">Home</a> <span class=""divider mx-1"">/</span></li>
-            <li><a class=""text-decoration-none fw-bold"" href=""/en-us/treaties/"">Treaties</a> <span class=""divider mx-1"">/</span></li>
-            <li><a class=""text-decoration-none fw-bold"" href=""/en-us/treaties/bilateral-treaties/"">Bilateral treaties</a> <span class=""divider mx-1"">/</span></li>
-
-        <li class=""active"">HB5267</li>
-    </ul>
-
-			</div>
-			<div class=""d-flex align-items-center"">
-			    <a class=""text-decoration-none"" href=""https://treaty.mofa.gov.vn:8443"" target=""_blank"">
-                    Login <i class=""bi bi-person-fill""></i>
-                </a>
-			</div>
-		</div>
-	</header>
-	<main class=""flex-fill"">
-    	<!-- Offcanvas menu cho mobile -->
-<div class=""offcanvas offcanvas-start"" tabindex=""-1"" id=""offcanvasMenu"" aria-labelledby=""offcanvasMenuLabel"">
-    <div class=""offcanvas-header border-bottom"">
-        <a href=""/en-us/"" class=""d-flex align-items-center text-decoration-none text-secondary"">
-            <i class=""bi bi-house-door-fill me-2""></i>
-            <h5 class=""offcanvas-title mb-0"" id=""offcanvasMenuLabel"">Home</h5>
-        </a>
-        <button type=""button"" class=""btn-close"" data-bs-dismiss=""offcanvas"" aria-label=""Close""></button>
-    </div>
-    <div class=""offcanvas-body"">
-        <ul class=""nav flex-column"">
-        <li class=""nav-item active"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/"">
-                            <span><strong>Treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#off-1137"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse show"" id=""off-1137"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/recent-treaties-in-force/"">
-                        <span>Recent treaties in force</span>
-                </a>
-        </li>
-        <li class=""nav-item active"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/bilateral-treaties/"">
-                            <span><strong>Bilateral treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#off-1099"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse"" id=""off-1099"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2026"">
-                        <span>2026</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2025"">
-                        <span>2025</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2024"">
-                        <span>2024</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2023"">
-                        <span>2023</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2022"">
-                        <span>2022</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2021"">
-                        <span>Other years...</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/multilateral-treaties/"">
-                            <span><strong>Multilateral treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#off-1100"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse"" id=""off-1100"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2026"">
-                        <span>2026</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2025"">
-                        <span>2025</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2024"">
-                        <span>2024</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2023"">
-                        <span>2023</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2022"">
-                        <span>2022</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2021"">
-                        <span>Other years...</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/treaties/download-treaties/"">
-                        <span>Download treaties</span>
-                        <i class=""bi bi-download""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1144"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Guidance</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""off-1144"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/applicable-laws-and-regulations/"">
-                        <span>Applicable laws and regulations</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/procedure/"">
-                        <span>Procedure</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/sample-clauses/"">
-                        <span>Sample Clauses</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaty-practices-of-selected-countries/"">
-                        <span><strong>Treaty practices of selected countries</strong></span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/advanced-search/"">
-                        <span><strong>Advanced Search</strong></span>
-                        <i class=""bi bi-search""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/contact-us/"">
-                        <span><strong>Contact Us</strong></span>
-                        <i class=""bi bi-envelope""></i>
-                </a>
-        </li>
-            <li class=""border-top my-1""></li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1181"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Vietnamese MOFA Portal</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""off-1181"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1182"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                        <span><strong>Public services</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse"" id=""off-1182"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/nguoi-viet-nam"" target=""_blank"">
-                        <span>For Vietnamese citizens</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/nguoi-nuoc-ngoai"" target=""_blank"">
-                        <span>For foreign nationals</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/cac-don-vi"" target=""_blank"">
-                        <span>Diplomatic Missions</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1187"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Other links</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""off-1187"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://chinhphu.vn/"" target=""_blank"">
-                        <span>Vietnamese Government Portal</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://vbpl.vn/"" target=""_blank"">
-                        <span>National Legal Database</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#off-1231"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                        <span><strong>Viet Nam's Free Trade Agreements</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse"" id=""off-1231"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://trungtamwto.vn/fta"" target=""_blank"">
-                        <span>https://trungtamwto.vn/fta</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://vntr.moit.gov.vn/en"" target=""_blank"">
-                        <span>https://vntr.moit.gov.vn</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://lanhsuvietnam.gov.vn/Lists/BaiViet/B%C3%A0i%20vi%E1%BA%BFt/DispForm.aspx?List=dc7c7d75%2D6a32%2D4215%2Dafeb%2D47d4bee70eee&ID=513"" target=""_blank"">
-                        <span>Treaties on visa exemption between Viet Nam and other countries</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://treaties.un.org/pages/ParticipationStatus.aspx?clang=_en"" target=""_blank"">
-                        <span>UN Treaty Series</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://agreement.asean.org/explanatory/show.html"" target=""_blank"">
-                        <span>ASEAN Legal Instruments</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-</ul>
-
-    </div>
-</div>
-    	<!-- Scroll to Top Button -->
-    	<button class=""scroll-to-top"" id=""btnScrollToTop"">
-    		<span class=""bi bi-arrow-up""></span>
-    	</button>
-    	<div class=""container-xxl mt-3"">
-    		
-	<div class=""row"">
-		<div class=""col-lg-3 d-none d-lg-block"">
-<div class=""d-none d-lg-block"" id=""desktopSidebar"">
-    <nav id=""desktopAccordion"">
-        <ul class=""nav flex-column"">
-        <li class=""nav-item active"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/"">
-                            <span><strong>Treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#side-1137"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse show"" id=""side-1137"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/recent-treaties-in-force/"">
-                        <span>Recent treaties in force</span>
-                </a>
-        </li>
-        <li class=""nav-item active"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/bilateral-treaties/"">
-                            <span><strong>Bilateral treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#side-1099"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse"" id=""side-1099"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2026"">
-                        <span>2026</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2025"">
-                        <span>2025</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2024"">
-                        <span>2024</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2023"">
-                        <span>2023</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2022"">
-                        <span>2022</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/bilateral-treaties/?year=2021"">
-                        <span>Other years...</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <div class=""nav-item d-flex align-items-center"">
-                        <a class=""nav-link d-flex align-items-center flex-grow-1"" href=""/en-us/treaties/multilateral-treaties/"">
-                            <span><strong>Multilateral treaties</strong></span>
-                        </a>
-                        <a class=""nav-link ms-auto"" href=""#side-1100"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                            <i class=""bi bi-chevron-right rotate-icon""></i>
-                        </a>
-                    </div>
-                <div class=""collapse"" id=""side-1100"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2026"">
-                        <span>2026</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2025"">
-                        <span>2025</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2024"">
-                        <span>2024</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2023"">
-                        <span>2023</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2022"">
-                        <span>2022</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaties/multilateral-treaties/?year=2021"">
-                        <span>Other years...</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/treaties/download-treaties/"">
-                        <span>Download treaties</span>
-                        <i class=""bi bi-download""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1144"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Guidance</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""side-1144"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/applicable-laws-and-regulations/"">
-                        <span>Applicable laws and regulations</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/procedure/"">
-                        <span>Procedure</span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/guidance/sample-clauses/"">
-                        <span>Sample Clauses</span>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link""
-                   href=""/en-us/treaty-practices-of-selected-countries/"">
-                        <span><strong>Treaty practices of selected countries</strong></span>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/advanced-search/"">
-                        <span><strong>Advanced Search</strong></span>
-                        <i class=""bi bi-search""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""/en-us/contact-us/"">
-                        <span><strong>Contact Us</strong></span>
-                        <i class=""bi bi-envelope""></i>
-                </a>
-        </li>
-            <li class=""border-top my-1""></li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1181"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Vietnamese MOFA Portal</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""side-1181"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1182"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                        <span><strong>Public services</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse"" id=""side-1182"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/nguoi-viet-nam"" target=""_blank"">
-                        <span>For Vietnamese citizens</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/nguoi-nuoc-ngoai"" target=""_blank"">
-                        <span>For foreign nationals</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://mofa.gov.vn/cac-don-vi"" target=""_blank"">
-                        <span>Diplomatic Missions</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1187"" data-bs-toggle=""collapse"" aria-expanded=""true"">
-                        <span><strong>Other links</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse show"" id=""side-1187"">
-                    <ul class=""nav flex-column level-2"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://chinhphu.vn/"" target=""_blank"">
-                        <span>Vietnamese Government Portal</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://vbpl.vn/"" target=""_blank"">
-                        <span>National Legal Database</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                    <a class=""nav-link d-flex justify-content-between align-items-center"" href=""#side-1231"" data-bs-toggle=""collapse"" aria-expanded=""false"">
-                        <span><strong>Viet Nam's Free Trade Agreements</strong></span>
-                        <i class=""bi bi-chevron-right rotate-icon""></i>
-                    </a>
-                <div class=""collapse"" id=""side-1231"">
-                    <ul class=""nav flex-column level-3"">
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://trungtamwto.vn/fta"" target=""_blank"">
-                        <span>https://trungtamwto.vn/fta</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://vntr.moit.gov.vn/en"" target=""_blank"">
-                        <span>https://vntr.moit.gov.vn</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://lanhsuvietnam.gov.vn/Lists/BaiViet/B%C3%A0i%20vi%E1%BA%BFt/DispForm.aspx?List=dc7c7d75%2D6a32%2D4215%2Dafeb%2D47d4bee70eee&ID=513"" target=""_blank"">
-                        <span>Treaties on visa exemption between Viet Nam and other countries</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://treaties.un.org/pages/ParticipationStatus.aspx?clang=_en"" target=""_blank"">
-                        <span>UN Treaty Series</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-        <li class=""nav-item"">
-                <a class=""nav-link d-flex justify-content-between align-items-center""
-                   href=""https://agreement.asean.org/explanatory/show.html"" target=""_blank"">
-                        <span>ASEAN Legal Instruments</span>
-                        <i class=""bi bi-box-arrow-up-right""></i>
-                </a>
-        </li>
-</ul>
-
-                </div>
-        </li>
-</ul>
-
-    </nav>
-</div>
-		</div>
-		<div class=""col-lg-9"">
-			
-	<p class=""fw-bold"">File ID: HB5267</p>
-	<hr class=""border border-primary border-1 rounded"" />
-	<p class=""lead"">
-		Second Protocol amending the Agreement between the Government of the Socialist Republic of Viet Nam and the Government of the Republic of Korea for the avoidance of double taxation and the prevention of fiscal evasion with respect to taxes on income signed at Ha Noi on 20 May 1994
-	</p>
-	<hr class=""border border-primary border-1 rounded"" />
-	<div class=""row fs-6 fw-light"">
-		<div class=""col-md-4"">
-			<span class=""fst-italic"">Date of signature:</span><span class=""fw-bold ms-1 me-2"">27/11/2019</span>
-		</div>
-		<div class=""col-md-4"">
-			<span class=""fst-italic"">Date of entry into force:</span><span class=""fw-bold ms-1 me-2"">20/01/2021</span>
-		</div>
-		<div class=""col-md-4"">
-			<span class=""fst-italic"">On behalf of:</span><span class=""fw-bold ms-1 me-2"">
-Government			</span>
-		</div>
-		<div class=""col-md-4"">
-			<span class=""fst-italic"">Status:</span><span class=""fw-bold ms-1 me-2"">
-				In force
-			</span>
-		</div>
-		
-			<div class=""col-md-8"">
-				<span class=""fst-italic"">Proposing authority:</span>
-				<span class=""fw-bold ms-1 me-2"">
-Bộ Tài chính				</span>
-			</div>
-			<div class=""col-md-8"">
-				<span class=""fst-italic"">Treaty text:</span>
-					<i class=""bi bi-paperclip""></i>
-					<a href=""https://treaty.mofa.gov.vn:8443/api/files/attachment/4e4a1604-dee2-4d44-b111-20a2978c9e59"" target=""_blank"">HB5267</a>
-					<span class=""me-3""> - 1.46 MB </span>
-			</div>
-	</div>
-
-		</div>
-	</div>
-
-    	</div>
-	</main>
-	<!-- Footer -->
-	<footer class=""container-fluid footer mt-auto"">
-		<div class=""container"">
-
-<footer class=""d-flex flex-wrap justify-content-between align-items-center py-3 my-4"">
-    <p class=""col-md-8 mb-0 text-body-secondary"">© Department of International Law and Treaties, Ministry of Foreign Affairs. All rights reserved.</p>
-    <ul class=""nav col-md-4 justify-content-end"">
-            <li class=""nav-item"">
-                <a href=""#"" class=""nav-link px-2 text-body-secondary""
-                   data-bs-toggle=""modal"" data-bs-target=""#disclaimerModal"">Disclaimer</a>
-            </li>
-    </ul>
-</footer>
-    <div class=""modal fade"" id=""disclaimerModal"" data-bs-backdrop=""static"" data-bs-keyboard=""false"" tabindex=""-1"" aria-labelledby=""disclaimerModalLabel"" aria-hidden=""true"">
-        <div class=""modal-dialog modal-dialog-centered"">
-            <div class=""modal-content"">
-                <div class=""modal-header"">
-                    <h5 class=""modal-title"" id=""disclaimerModalLabel"">Disclaimer</h5>
-                    <button type=""button"" class=""btn-close"" data-bs-dismiss=""modal"" aria-label=""Close""></button>
-                </div>
-                <div class=""modal-body"">
-                    <p>The Ministry of Foreign Affairs is not responsible for the exploitation or use of information from this website for illegal purposes.</p>
-                </div>
-                <div class=""modal-footer"">
-                    <button type=""button"" class=""btn btn-secondary"" data-bs-dismiss=""modal"">Close</button>
-                    <button type=""button"" class=""btn btn-primary"" data-bs-dismiss=""modal"">Understood</button>
-                </div>
-            </div>
-        </div>
-    </div>
-		</div>
-	</footer>
-
-	<!-- Scripts -->
-	<script src=""/vendors/jquery/3.7.1/jquery.min.js""></script>
-	<script src=""/vendors/bootstrap/js/bootstrap.bundle.min.js""></script>
-	<script src=""/scripts/site.js?v=2.0.36""></script>
-	
-	
-
-</body>
-</html>"
 treaty.kr-vn.2019.protocol.mofa.text#all,treaty.kr-vn.2019.protocol.mofa.text,Whole document,"NGHI DINH THU THU HAI SUA DOI HIEP DINH GIU'A
 CHINH PHU NUOC CONG HOA XA HOI CHU NGHIA VIET NAM
 vA
@@ -499900,3 +497500,6745 @@ administrative fines under Article 91 (1) through (4) of the Act. <Amended on Fe
 [Moved from Article 143 <Dec. 29, 2023>]"
 vn.law.pit2026.vi#all,vn.law.pit2026.vi,Whole document,"112
 20"
+treaty.in-vn.1994.mofa#all,treaty.in-vn.1994.mofa,Whole document,"Treaties Database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ministry of Foreign Affairs Viet Nam
+
+
+Treaties Database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tiếng Việt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You are here: 
+
+
+Home
+ 
+/
+
+
+Treaties
+ 
+/
+
+
+Bilateral treaties
+ 
+/
+
+
+HB1464
+
+
+
+
+
+
+
+
+
+                    Login 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Recent treaties in force
+
+
+
+
+
+
+
+
+
+
+
+
+Bilateral treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Other years...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Multilateral treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Other years...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Download treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Guidance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Applicable laws and regulations
+
+
+
+
+
+
+
+
+
+
+Procedure
+
+
+
+
+
+
+
+
+
+
+Sample Clauses
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaty practices of selected countries
+
+
+
+
+
+
+
+
+
+
+Advanced Search
+
+
+
+
+
+
+
+
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vietnamese MOFA Portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Public services
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For Vietnamese citizens
+
+
+
+
+
+
+
+
+
+
+
+
+For foreign nationals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Diplomatic Missions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Other links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vietnamese Government Portal
+
+
+
+
+
+
+
+
+
+
+
+
+National Legal Database
+
+
+
+
+
+
+
+
+
+
+
+
+Viet Nam's Free Trade Agreements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://trungtamwto.vn/fta
+
+
+
+
+
+
+
+
+
+
+
+
+https://vntr.moit.gov.vn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaties on visa exemption between Viet Nam and other countries
+
+
+
+
+
+
+
+
+
+
+
+
+UN Treaty Series
+
+
+
+
+
+
+
+
+
+
+
+
+ASEAN Legal Instruments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Recent treaties in force
+
+
+
+
+
+
+
+
+
+
+
+
+Bilateral treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Other years...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Multilateral treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Other years...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Download treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Guidance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Applicable laws and regulations
+
+
+
+
+
+
+
+
+
+
+Procedure
+
+
+
+
+
+
+
+
+
+
+Sample Clauses
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaty practices of selected countries
+
+
+
+
+
+
+
+
+
+
+Advanced Search
+
+
+
+
+
+
+
+
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vietnamese MOFA Portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Public services
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For Vietnamese citizens
+
+
+
+
+
+
+
+
+
+
+
+
+For foreign nationals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Diplomatic Missions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Other links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vietnamese Government Portal
+
+
+
+
+
+
+
+
+
+
+
+
+National Legal Database
+
+
+
+
+
+
+
+
+
+
+
+
+Viet Nam's Free Trade Agreements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://trungtamwto.vn/fta
+
+
+
+
+
+
+
+
+
+
+
+
+https://vntr.moit.gov.vn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaties on visa exemption between Viet Nam and other countries
+
+
+
+
+
+
+
+
+
+
+
+
+UN Treaty Series
+
+
+
+
+
+
+
+
+
+
+
+
+ASEAN Legal Instruments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+File ID: HB1464
+
+
+
+
+
+		Agreement between the Socialist Republic of Viet Nam and the Republic of India for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income
+	
+
+
+
+
+
+
+
+
+Date of signature:
+07/09/1994
+
+
+
+
+
+
+Date of entry into force:
+02/02/1995
+
+
+
+
+
+
+On behalf of:
+
+Government			
+
+
+
+
+
+
+Status:
+
+				In force
+			
+
+
+
+
+
+
+Proposing authority:
+
+
+
+Bộ Tài chính				
+
+
+
+
+
+
+Treaty text:
+
+
+
+
+hb1464
+
+
+ - 2.83 MB 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+© Department of International Law and Treaties, Ministry of Foreign Affairs. All rights reserved.
+
+
+
+
+
+
+Disclaimer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Disclaimer
+
+
+
+
+
+
+
+
+The Ministry of Foreign Affairs is not responsible for the exploitation or use of information from this website for illegal purposes.
+
+
+
+
+
+
+Close
+
+
+Understood"
+treaty.kr-vn.1994.mofa#all,treaty.kr-vn.1994.mofa,Whole document,"Treaties Database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ministry of Foreign Affairs Viet Nam
+
+
+Treaties Database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tiếng Việt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You are here: 
+
+
+Home
+ 
+/
+
+
+Treaties
+ 
+/
+
+
+Bilateral treaties
+ 
+/
+
+
+HB1411
+
+
+
+
+
+
+
+
+
+                    Login 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Recent treaties in force
+
+
+
+
+
+
+
+
+
+
+
+
+Bilateral treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Other years...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Multilateral treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Other years...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Download treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Guidance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Applicable laws and regulations
+
+
+
+
+
+
+
+
+
+
+Procedure
+
+
+
+
+
+
+
+
+
+
+Sample Clauses
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaty practices of selected countries
+
+
+
+
+
+
+
+
+
+
+Advanced Search
+
+
+
+
+
+
+
+
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vietnamese MOFA Portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Public services
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For Vietnamese citizens
+
+
+
+
+
+
+
+
+
+
+
+
+For foreign nationals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Diplomatic Missions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Other links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vietnamese Government Portal
+
+
+
+
+
+
+
+
+
+
+
+
+National Legal Database
+
+
+
+
+
+
+
+
+
+
+
+
+Viet Nam's Free Trade Agreements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://trungtamwto.vn/fta
+
+
+
+
+
+
+
+
+
+
+
+
+https://vntr.moit.gov.vn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaties on visa exemption between Viet Nam and other countries
+
+
+
+
+
+
+
+
+
+
+
+
+UN Treaty Series
+
+
+
+
+
+
+
+
+
+
+
+
+ASEAN Legal Instruments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Recent treaties in force
+
+
+
+
+
+
+
+
+
+
+
+
+Bilateral treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Other years...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Multilateral treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Other years...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Download treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Guidance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Applicable laws and regulations
+
+
+
+
+
+
+
+
+
+
+Procedure
+
+
+
+
+
+
+
+
+
+
+Sample Clauses
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaty practices of selected countries
+
+
+
+
+
+
+
+
+
+
+Advanced Search
+
+
+
+
+
+
+
+
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vietnamese MOFA Portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Public services
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For Vietnamese citizens
+
+
+
+
+
+
+
+
+
+
+
+
+For foreign nationals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Diplomatic Missions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Other links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vietnamese Government Portal
+
+
+
+
+
+
+
+
+
+
+
+
+National Legal Database
+
+
+
+
+
+
+
+
+
+
+
+
+Viet Nam's Free Trade Agreements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://trungtamwto.vn/fta
+
+
+
+
+
+
+
+
+
+
+
+
+https://vntr.moit.gov.vn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaties on visa exemption between Viet Nam and other countries
+
+
+
+
+
+
+
+
+
+
+
+
+UN Treaty Series
+
+
+
+
+
+
+
+
+
+
+
+
+ASEAN Legal Instruments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+File ID: HB1411
+
+
+
+
+
+		Agreement between the Government of the Socialist Republic of Viet Nam and the Government of the Republic of Korea for the avoidance of double taxation and the prevention of fiscal evasion with respect to taxes on income
+	
+
+
+
+
+
+
+
+
+Date of signature:
+20/05/1994
+
+
+
+
+
+
+Date of entry into force:
+11/09/1994
+
+
+
+
+
+
+On behalf of:
+
+Government			
+
+
+
+
+
+
+Status:
+
+				In force
+			
+
+
+
+
+
+
+Proposing authority:
+
+
+
+Bộ Tài chính				
+
+
+
+
+
+
+Treaty text:
+
+
+
+
+HB1411
+
+
+ - 2.08 MB 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+© Department of International Law and Treaties, Ministry of Foreign Affairs. All rights reserved.
+
+
+
+
+
+
+Disclaimer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Disclaimer
+
+
+
+
+
+
+
+
+The Ministry of Foreign Affairs is not responsible for the exploitation or use of information from this website for illegal purposes.
+
+
+
+
+
+
+Close
+
+
+Understood"
+treaty.kr-vn.2019.protocol.mofa#all,treaty.kr-vn.2019.protocol.mofa,Whole document,"Treaties Database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ministry of Foreign Affairs Viet Nam
+
+
+Treaties Database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tiếng Việt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You are here: 
+
+
+Home
+ 
+/
+
+
+Treaties
+ 
+/
+
+
+Bilateral treaties
+ 
+/
+
+
+HB5267
+
+
+
+
+
+
+
+
+
+                    Login 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Recent treaties in force
+
+
+
+
+
+
+
+
+
+
+
+
+Bilateral treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Other years...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Multilateral treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Other years...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Download treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Guidance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Applicable laws and regulations
+
+
+
+
+
+
+
+
+
+
+Procedure
+
+
+
+
+
+
+
+
+
+
+Sample Clauses
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaty practices of selected countries
+
+
+
+
+
+
+
+
+
+
+Advanced Search
+
+
+
+
+
+
+
+
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vietnamese MOFA Portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Public services
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For Vietnamese citizens
+
+
+
+
+
+
+
+
+
+
+
+
+For foreign nationals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Diplomatic Missions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Other links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vietnamese Government Portal
+
+
+
+
+
+
+
+
+
+
+
+
+National Legal Database
+
+
+
+
+
+
+
+
+
+
+
+
+Viet Nam's Free Trade Agreements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://trungtamwto.vn/fta
+
+
+
+
+
+
+
+
+
+
+
+
+https://vntr.moit.gov.vn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaties on visa exemption between Viet Nam and other countries
+
+
+
+
+
+
+
+
+
+
+
+
+UN Treaty Series
+
+
+
+
+
+
+
+
+
+
+
+
+ASEAN Legal Instruments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Recent treaties in force
+
+
+
+
+
+
+
+
+
+
+
+
+Bilateral treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Other years...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Multilateral treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Other years...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Download treaties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Guidance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Applicable laws and regulations
+
+
+
+
+
+
+
+
+
+
+Procedure
+
+
+
+
+
+
+
+
+
+
+Sample Clauses
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaty practices of selected countries
+
+
+
+
+
+
+
+
+
+
+Advanced Search
+
+
+
+
+
+
+
+
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vietnamese MOFA Portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Public services
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For Vietnamese citizens
+
+
+
+
+
+
+
+
+
+
+
+
+For foreign nationals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Diplomatic Missions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Other links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vietnamese Government Portal
+
+
+
+
+
+
+
+
+
+
+
+
+National Legal Database
+
+
+
+
+
+
+
+
+
+
+
+
+Viet Nam's Free Trade Agreements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://trungtamwto.vn/fta
+
+
+
+
+
+
+
+
+
+
+
+
+https://vntr.moit.gov.vn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Treaties on visa exemption between Viet Nam and other countries
+
+
+
+
+
+
+
+
+
+
+
+
+UN Treaty Series
+
+
+
+
+
+
+
+
+
+
+
+
+ASEAN Legal Instruments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+File ID: HB5267
+
+
+
+
+
+		Second Protocol amending the Agreement between the Government of the Socialist Republic of Viet Nam and the Government of the Republic of Korea for the avoidance of double taxation and the prevention of fiscal evasion with respect to taxes on income signed at Ha Noi on 20 May 1994
+	
+
+
+
+
+
+
+
+
+Date of signature:
+27/11/2019
+
+
+
+
+
+
+Date of entry into force:
+20/01/2021
+
+
+
+
+
+
+On behalf of:
+
+Government			
+
+
+
+
+
+
+Status:
+
+				In force
+			
+
+
+
+
+
+
+Proposing authority:
+
+
+
+Bộ Tài chính				
+
+
+
+
+
+
+Treaty text:
+
+
+
+
+HB5267
+
+
+ - 1.46 MB 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+© Department of International Law and Treaties, Ministry of Foreign Affairs. All rights reserved.
+
+
+
+
+
+
+Disclaimer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Disclaimer
+
+
+
+
+
+
+
+
+The Ministry of Foreign Affairs is not responsible for the exploitation or use of information from this website for illegal purposes.
+
+
+
+
+
+
+Close
+
+
+Understood"
+vn.mofa.treaty-index#all,vn.mofa.treaty-index,Whole document,"Cơ sở dữ liệu Điều ước quốc tế
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bộ Ngoại giao Việt Nam
+
+
+Cơ sở dữ liệu Điều ước quốc tế
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+English
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bạn đang ở đây: 
+
+
+Trang chủ
+ 
+/
+
+
+Điều ước
+
+
+
+
+
+
+
+
+
+                    Đăng nhập 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Trang chủ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Điều ước
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Điều ước quốc tế mới có hiệu lực
+
+
+
+
+
+
+
+
+
+
+
+
+Điều ước song phương
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Năm khác...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Điều ước đa phương
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Năm khác...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tải danh mục điều ước quốc tế
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hướng dẫn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Văn bản liên quan
+
+
+
+
+
+
+
+
+
+
+Quy trình, thủ tục
+
+
+
+
+
+
+
+
+
+
+Một số điều khoản mẫu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thực tiễn các nước
+
+
+
+
+
+
+
+
+
+
+Tìm kiếm nâng cao
+
+
+
+
+
+
+
+
+
+
+
+
+Liên hệ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mofa.gov.vn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dịch vụ công
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dịch vụ công cho người Việt
+
+
+
+
+
+
+
+
+
+
+
+
+Dịch vụ công cho người nước ngoài
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cơ quan đại diện
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Liên kết khác
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cổng thông tin điện tử chính phủ
+
+
+
+
+
+
+
+
+
+
+
+
+Cơ sở dữ liệu pháp luật quốc gia
+
+
+
+
+
+
+
+
+
+
+
+
+Các Hiệp định Thương mại tự do Việt Nam tham gia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://trungtamwto.vn
+
+
+
+
+
+
+
+
+
+
+
+
+https://vntr.moit.gov.vn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Các điều ước quốc tế về miễn thị thực giữa Việt Nam và các nước
+
+
+
+
+
+
+
+
+
+
+
+
+Trang cơ sở dữ liệu điều ước quốc tế của Liên hợp quốc
+
+
+
+
+
+
+
+
+
+
+
+
+Trang cơ sở dữ liệu của ASEAN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Điều ước
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Điều ước quốc tế mới có hiệu lực
+
+
+
+
+
+
+
+
+
+
+
+
+Điều ước song phương
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Năm khác...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Điều ước đa phương
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026
+
+
+
+
+
+
+
+
+
+
+2025
+
+
+
+
+
+
+
+
+
+
+2024
+
+
+
+
+
+
+
+
+
+
+2023
+
+
+
+
+
+
+
+
+
+
+2022
+
+
+
+
+
+
+
+
+
+
+Năm khác...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tải danh mục điều ước quốc tế
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hướng dẫn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Văn bản liên quan
+
+
+
+
+
+
+
+
+
+
+Quy trình, thủ tục
+
+
+
+
+
+
+
+
+
+
+Một số điều khoản mẫu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thực tiễn các nước
+
+
+
+
+
+
+
+
+
+
+Tìm kiếm nâng cao
+
+
+
+
+
+
+
+
+
+
+
+
+Liên hệ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mofa.gov.vn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dịch vụ công
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dịch vụ công cho người Việt
+
+
+
+
+
+
+
+
+
+
+
+
+Dịch vụ công cho người nước ngoài
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cơ quan đại diện
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Liên kết khác
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cổng thông tin điện tử chính phủ
+
+
+
+
+
+
+
+
+
+
+
+
+Cơ sở dữ liệu pháp luật quốc gia
+
+
+
+
+
+
+
+
+
+
+
+
+Các Hiệp định Thương mại tự do Việt Nam tham gia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://trungtamwto.vn
+
+
+
+
+
+
+
+
+
+
+
+
+https://vntr.moit.gov.vn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Các điều ước quốc tế về miễn thị thực giữa Việt Nam và các nước
+
+
+
+
+
+
+
+
+
+
+
+
+Trang cơ sở dữ liệu điều ước quốc tế của Liên hợp quốc
+
+
+
+
+
+
+
+
+
+
+
+
+Trang cơ sở dữ liệu của ASEAN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Điều ước 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Tất cả --
+
+
+2026
+
+
+2025
+
+
+2024
+
+
+2023
+
+
+2022
+
+
+2021 ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            					Tìm kiếm 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tìm kiếm nâng cao 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hiển thị 1-10 bản ghi trong 1895 điều ước tìm thấy
+
+
+
+
+Sắp xếp:
+
+
+
+        Tên điều ước
+    
+
+
+|
+
+
+Ngày ký
+
+
+|
+
+
+Ngày hiệu lực
+
+
+|
+
+
+
+        Bên ký kết
+    
+
+
+|
+
+
+
+        Cơ quan đề xuất
+    
+
+
+
+
+Mã hồ sơ: HB5317
+
+
+
+Công hàm trao đổi giữa Chính phủ nước CHXHCN Việt Nam và Chính phủ Nhật Bản về Dự án học bổng phát triển nguồn nhân lực Việt Nam - Nhật Bản năm tài khóa 2026    			
+
+
+
+
+
+
+Ngày ký:
+07/09/2026
+
+
+
+
+
+
+Ngày hiệu lực:
+07/09/2026
+
+
+
+
+
+
+Danh nghĩa:
+
+Chính phủ    					
+
+
+
+
+
+
+Tình trạng hiệu lực:
+
+    						Đang hiệu lực
+    					
+
+
+
+
+
+
+Cơ quan đề xuất:
+
+
+
+Bộ Giáo dục và Đào tạo                            
+
+
+
+
+
+
+Văn bản điều ước:
+
+
+
+
+HB5317_CH
+
+
+ - 3,91 MB 
+
+
+
+
+
+
+
+
+Mã hồ sơ: HB5802
+
+
+
+Nghị định thư sửa đổi Hiệp định Hàng hải thương mại giữa Chính phủ nước Cộng hòa xã hội chủ nghĩa Việt Nam và Chính phủ Liên bang Nga ký ngày 27 tháng 5 năm 1993    			
+
+
+
+
+
+
+Ngày ký:
+01/04/2026
+
+
+
+
+
+
+Ngày hiệu lực:
+03/08/2026
+
+
+
+
+
+
+Danh nghĩa:
+
+Chính phủ    					
+
+
+
+
+
+
+Tình trạng hiệu lực:
+
+    						Đang hiệu lực
+    					
+
+
+
+
+
+
+Cơ quan đề xuất:
+
+
+
+Bộ Xây dựng                            
+
+
+
+
+
+
+Văn bản điều ước:
+
+
+
+
+HB5802_NDT
+
+
+ - 1,79 MB 
+
+
+
+
+
+
+
+
+Mã hồ sơ: HB5795
+
+
+
+Công hàm trao đổi giữa Chính phủ nước Cộng hòa xã hội chủ nghĩa Việt Nam và Chính phủ Nhật Bản cho Chương trình ""Hỗ trợ ngân sách chung cho chuyển đổi xanh hướng tới mục tiêu tăng trưởng xanh và thích ứng với biến đổi khí hậu"" [dịch không chính thức]    			
+
+
+
+
+
+
+Ngày ký:
+20/03/2026
+
+
+
+
+
+
+Ngày hiệu lực:
+20/03/2026
+
+
+
+
+
+
+Danh nghĩa:
+
+Chính phủ    					
+
+
+
+
+
+
+Tình trạng hiệu lực:
+
+    						Đang hiệu lực
+    					
+
+
+
+
+
+
+Cơ quan đề xuất:
+
+
+
+Bộ Tài chính                            
+
+
+
+
+
+
+Văn bản điều ước:
+
+
+
+
+HB5795
+
+
+ - 2,03 MB 
+
+
+
+
+
+
+
+
+Mã hồ sơ: HB5796
+
+
+
+Công hàm trao đổi giữa Chính phủ nước Cộng hòa xã hội chủ nghĩa Việt Nam và Chính phủ Nhật Bản cho dự án ""Phát triển nông thôn thích ứng với thiên tai"" [dịch không chính thức]    			
+
+
+
+
+
+
+Ngày ký:
+20/03/2026
+
+
+
+
+
+
+Ngày hiệu lực:
+20/03/2026
+
+
+
+
+
+
+Danh nghĩa:
+
+Chính phủ    					
+
+
+
+
+
+
+Tình trạng hiệu lực:
+
+    						Đang hiệu lực
+    					
+
+
+
+
+
+
+Cơ quan đề xuất:
+
+
+
+Bộ Tài chính                            
+
+
+
+
+
+
+Văn bản điều ước:
+
+
+
+
+HB5796
+
+
+ - 3,04 MB 
+
+
+
+
+
+
+
+
+Mã hồ sơ: HB5797
+
+
+
+Công hàm trao đổi giữa Chính phủ nước Cộng hòa xã hội chủ nghĩa Việt Nam và Chính phủ Nhật Bản cho dự án ""Phát triển cơ sở hạ tầng thích ứng với biến đổi khí hậu để hỗ trợ sản xuất cho đồng bào dân tộc các tỉnh miền núi, trung du phía Bắc"" [dịch không chính thức]    			
+
+
+
+
+
+
+Ngày ký:
+20/03/2026
+
+
+
+
+
+
+Ngày hiệu lực:
+20/03/2026
+
+
+
+
+
+
+Danh nghĩa:
+
+Chính phủ    					
+
+
+
+
+
+
+Tình trạng hiệu lực:
+
+    						Đang hiệu lực
+    					
+
+
+
+
+
+
+Cơ quan đề xuất:
+
+
+
+Bộ Tài chính                            
+
+
+
+
+
+
+Văn bản điều ước:
+
+
+
+
+HB5797
+
+
+ - 2,05 MB 
+
+
+
+
+
+
+
+
+Mã hồ sơ: HB5705
+
+
+
+Hiệp định giữa Chính phủ nước Cộng hòa xã hội chủ nghĩa Việt Nam và Chính phủ nước Cộng hòa Mô-dăm-bích về hợp tác trong lĩnh vực giáo dục đại học    			
+
+
+
+
+
+
+Ngày ký:
+29/01/2026
+
+
+
+
+
+
+Ngày hiệu lực:
+29/01/2026
+
+
+
+
+
+
+Danh nghĩa:
+
+Chính phủ    					
+
+
+
+
+
+
+Tình trạng hiệu lực:
+
+    						Đang hiệu lực
+    					
+
+
+
+
+
+
+Cơ quan đề xuất:
+
+
+
+Bộ Giáo dục và Đào tạo                            
+
+
+
+
+
+
+Văn bản điều ước:
+
+
+
+
+HB5705_HĐ
+
+
+ - 17,89 MB 
+
+
+
+
+
+
+
+
+Mã hồ sơ: HB5787
+
+
+
+Hiệp định Viện trợ không hoàn lại của Dự án ""Quản lý bền vững các chất được kiểm soát theo Nghị định thư Montreal"" giữa nước CHXHCN Việt Nam và Ngân hàng Tái thiết và Phát triển quốc tế [dịch không chính thức]    			
+
+
+
+
+
+
+Ngày ký:
+07/01/2026
+
+
+
+
+
+
+Ngày hiệu lực:
+
+
+
+
+
+
+Danh nghĩa:
+
+Nhà nước    					
+
+
+
+
+
+
+Tình trạng hiệu lực:
+
+    						Chưa hiệu lực
+    					
+
+
+
+
+
+
+Cơ quan đề xuất:
+
+
+
+Ngân hàng Nhà nước Việt Nam                            
+
+
+
+
+
+
+Văn bản điều ước:
+
+
+
+
+HB5787
+
+
+ - 1,96 MB 
+
+
+
+
+
+
+
+
+Mã hồ sơ: HB5794
+
+
+
+Hiệp định số 2000005709 cho dự án ""Giảm thiểu khí thải tại khu vực Tây Nguyên và duyên hải Nam Trung Bộ Việt Nam nhằm góp phần thực hiện các mục tiêu Chương trình hành động quốc gia REDD+ tại Bộ Nông nghiệp và Môi trường"" vốn viện trợ không hoàn lại do Quỹ Khí hậu Xanh (GCF) uỷ thác qua Quỹ Quốc tế về phát triển nông nghiệp (IFAD) [dịch không chính thức]    			
+
+
+
+
+
+
+Ngày ký:
+05/01/2026
+
+
+
+
+
+
+Ngày hiệu lực:
+17/03/2026
+
+
+
+
+
+
+Danh nghĩa:
+
+Nhà nước    					
+
+
+
+
+
+
+Tình trạng hiệu lực:
+
+    						Đang hiệu lực
+    					
+
+
+
+
+
+
+Cơ quan đề xuất:
+
+
+
+Bộ Nông nghiệp và Môi trường                            
+
+
+
+
+
+
+Văn bản điều ước:
+
+
+
+
+HB5794
+
+
+ - 11,36 MB 
+
+
+
+
+
+
+
+
+Mã hồ sơ: HB633
+
+
+
+Hiệp định tài chính giữa Chính phủ nước Cộng hòa xã hội chủ nghĩa Việt Nam và Liên minh Châu Âu cho Dự án ""Hỗ trợ ngành lâm nghiệp Việt Nam của Liên minh Châu Âu"" [dịch không chính thức]    			
+
+
+
+
+
+
+Ngày ký:
+31/12/2025
+
+
+
+
+
+
+Ngày hiệu lực:
+31/12/2025
+
+
+
+
+
+
+Danh nghĩa:
+
+Chính phủ    					
+
+
+
+
+
+
+Tình trạng hiệu lực:
+
+    						Đang hiệu lực
+    					
+
+
+
+
+
+
+Cơ quan đề xuất:
+
+
+
+Bộ Nông nghiệp và Môi trường                            
+
+
+
+
+
+
+Văn bản điều ước:
+
+
+
+
+HB633_HĐ
+
+
+ - 19,64 MB 
+
+
+
+
+
+
+
+
+Mã hồ sơ: NB51
+
+
+
+Công ước về miễn hợp pháp hóa đối với Giấy tờ công của nước ngoài [gia nhập] [dịch không chính thức]     			
+
+
+
+
+
+
+Ngày ký:
+31/12/2025
+
+
+
+
+
+
+Ngày hiệu lực:
+11/09/2026
+
+
+
+
+
+
+Danh nghĩa:
+
+Chính phủ    					
+
+
+
+
+
+
+Tình trạng hiệu lực:
+
+    						Đang hiệu lực
+    					
+
+
+
+
+
+
+Cơ quan đề xuất:
+
+
+
+Bộ Ngoại giao                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10
+
+
+25
+
+
+50
+
+
+
+
+bản ghi một trang
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+‹
+
+
+
+
+
+
+1
+
+
+
+
+
+
+2
+
+
+
+
+
+
+3
+
+
+
+
+…
+
+
+190
+
+
+
+
+›
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+© Bản quyền thuộc về Vụ Luật pháp và Điều ước Quốc tế - Bộ Ngoại giao
+
+
+
+
+
+
+Tuyên bố miễn trừ trách nhiệm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tuyên bố miễn trừ trách nhiệm
+
+
+
+
+
+
+
+
+Bộ Ngoại giao không chịu trách nhiệm đối với việc khai thác, sử dụng thông tin từ trang cơ sở dữ liệu này để phục vụ các hành vi bất hợp pháp.
+
+
+
+
+
+
+Đóng
+
+
+Đã hiểu"

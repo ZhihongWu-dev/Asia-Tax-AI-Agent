@@ -398,7 +398,7 @@ text/treaty.in-my.2012.mli.hasil.txt,3958cd8515c9b22e36020449fdff2552ca91bd05b82
 raw/in-kr/treaty.in-kr.2015.law.do,8d664465c248ca4ac866d53eba2f7b0cd3cfa6bce182c03d6cba95089a854afb,44522
 text/treaty.in-kr.2015.law.txt,c1360ac0b52f13b7c911c307d0b11e15f30b9dccddd2ba46eb1e60ddd84efb14,44415
 raw/in-vn/treaty.in-vn.1994.mofa.html,97906a6ded4e1abb3e61b47ed1fb7bdbe186f9bfe1c46667917ecdcf65a8c867,36431
-text/treaty.in-vn.1994.mofa.txt,5de82261eabfa5e114e51547c0a1505336a3bdd13a095cc6cd3d7734ea325b34,36287
+text/treaty.in-vn.1994.mofa.txt,7cff92a4b30e8cd5a0cdbc9ec1f81f5d790ecd6609206c9f064d9594bbe5fcbe,3541
 raw/in-vn/treaty.in-vn.1994.mofa.text.html,1901252da513bf4d2f4d7003268d79744a8f27d0960dbe37f15908e2d78a6f70,2966441
 text/treaty.in-vn.1994.mofa.text.txt,fbc771811cf55c32670ab640c6f4da48241f2b9cfb74d7e6c808200e0f4d1dbb,98324
 raw/kr-my/treaty.kr-my.1982.hasil.pdf,a3405beedef10de991d74576ba34dc0a1cf106ff9b8a4942d35f3a2a1e0aa5f4,301040
@@ -410,11 +410,11 @@ text/treaty.kr-sg.2019.iras.txt,c7948569b6f121ace436066e7336b3266b03918ca8b4a9f3
 raw/kr-th/treaty.kr-th.2006.rd.pdf,e36cce7c7770666459337abb136aca6904bb6fa7a5da3f74852846d2cbaef177,3081430
 text/treaty.kr-th.2006.rd.txt,b9ab6836c78b446064875ed9dcd7df3ff2e783630b807cd746b3d5032fdfce7f,58133
 raw/kr-vn/treaty.kr-vn.1994.mofa.html,aa561c615aae21e5866f914dfea2a8d78d585f7e3dfb5315d1ef425308b852ce,36659
-text/treaty.kr-vn.1994.mofa.txt,95064288a39c6393d5b046f05c14cd7caeb25903ea8a5fe1c00f6eba249ae6d0,36515
+text/treaty.kr-vn.1994.mofa.txt,ed51d3cb44ea6edd761c1195b7108ec285228dc25f7413c00210a4660c35420b,3577
 raw/kr-vn/treaty.kr-vn.1994.mofa.text.html,0c77906238b64b1819cd5dfe6c5e9fcabada5fa6b0b8425569879e09738b3f9b,2185548
 text/treaty.kr-vn.1994.mofa.text.txt,b15071783be816dccbd546e4351d4f108bb5bddb70e454dffa832f45e628d40d,96104
 raw/kr-vn/treaty.kr-vn.2019.protocol.mofa.html,826e445da1de0464bbabe5d7cc1d43f5058672414d773200686ca2b0c9b075fa,36719
-text/treaty.kr-vn.2019.protocol.mofa.txt,0b37088879af54e0d0bda12a256444d0c50972b28efed07233913408e346c6bc,36575
+text/treaty.kr-vn.2019.protocol.mofa.txt,a723240ab30d226ffd6846d3d0a6fcdc1431b65abe5c6f94067bdbb8966bbf49,3638
 raw/kr-vn/treaty.kr-vn.2019.protocol.mofa.text.html,129847e1cc696ec581218a8925b605e66dc81363395ad7a602d0e93ba00cbad7,1535211
 text/treaty.kr-vn.2019.protocol.mofa.text.txt,a815114a29a5cb97d4f32667fde71c2daf7da5a3bfa951e936791eb12b5f5126,42117
 raw/kr/kr.itca.enforcement-decree.do,44c80d358fbddbe5d7e96c0b8218224809a1fd002967fb80fffac43952e0c9f1,143308
@@ -422,3 +422,5 @@ text/kr.itca.enforcement-decree.txt,d5a3513c861ca230c41f6913580e95852c453409b367
 raw/kr/kr.itca.enforcement-decree.pdf,186cb47334d8b9ab32c846c6045d9ffc7565364a7cfbbe56d01643b9b29ab1c1,497698
 raw/vn/vn.law.pit2026.vi.pdf,7be8f6acc114eade6952cbbdfb33e3b6c6574ee819722509b91c5cb2b160d0a7,6836177
 text/vn.law.pit2026.vi.txt,7b1c51f025efd1656d17961b25bf19b1770cd997edc0e481bc11176c30756169,7
+raw/vn/vn.mofa.treaty-index.html,9ddfedc6e862deba0a4394b5c7a6758cfc3827e71a24cdc79a2bc685ae33ff8c,62081
+text/vn.mofa.treaty-index.txt,d268109dc3321dbc5776ba991f7482682fd7a91384cc395f8cc4243a7c49da7e,10657
