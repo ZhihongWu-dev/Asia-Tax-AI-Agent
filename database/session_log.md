@@ -763,3 +763,16 @@
 - Tool changes: `common.py` now recognises `xaydungchinhsach.chinhphu.vn`, the official Government policy portal domain. Checks: Python compilation passed; the slicer runner confirmed automatic re-slicing remains disabled with no fixtures; full build reported 0 errors and 11 gaps. No new source format was introduced, so no fixture was required.
 - Acceptance: full-library `NOT PASSED: 0 errors, 11 gaps`; the new source closes Viet Nam's `page_deadlines` category.
 - Remote upload and verification: resumable reconciliation uploaded the original page and generated text, inserted 1 document, 2 file records and 1 clause, and committed. Final `upload.py --partial --verify` passed with all 439 Storage object names and exact values in all seven remote tables matching local data. Direct SHA-256 readback matched both newly uploaded objects.
+
+## 2026-10-29 — Viet Nam PIT withholding-rate page
+
+- Registered: `vn.gov.pit-withholding-rates`, the official Government policy portal page on current PIT withholding rules and its rate table, for `page_rates`.
+- Download failures: none.
+- Parameters added: none. The page is a rate-table cross-check and is not used to replace statute or treaty citations for dividend-tax parameters.
+- Absence records added: none.
+- Slicing problems: none; the page is conservatively recorded as `#all`.
+- Rate-table mismatches: none.
+- Handoff to a person: none.
+- Tool changes: none.
+- Acceptance: full-library `NOT PASSED: 0 errors, 10 gaps`; the new source closes Viet Nam's `page_rates` category.
+- Remote upload and verification: resumable reconciliation uploaded the original page and generated text, inserted 1 document, 2 file records and 1 clause, and committed. Final `upload.py --partial --verify` passed with all 441 Storage object names and exact values in all seven remote tables matching local data. Direct SHA-256 readback matched both newly uploaded objects.
