@@ -809,3 +809,9 @@
 - Parameters added: `vn.anti_abuse.company.related_party_non_arm_length_reassessment`.
 - Acceptance: full-library `NOT PASSED: 0 errors, 4 gaps`; the guidance closes the company anti-abuse slot without extending it to individuals.
 - Remote upload and verification: resumable reconciliation uploaded the original page and generated text, inserted 1 document, 2 file records, 1 clause and 1 parameter, and committed. Final `upload.py --partial --verify` passed with all 443 Storage object names and exact values in all seven remote tables matching local data.
+
+## 2026-10-29 — Viet Nam individual anti-abuse absence record
+
+- Registered: no new original. Added `vn.absent.individual.anti_abuse` after checking the current PIT law and company-specific related-party guidance.
+- Acceptance: full-library `NOT PASSED: 0 errors, 3 gaps`; the individual anti-abuse slot is now explicitly recorded as absent rather than filled by an unsupported company rule.
+- Remote upload and verification: reconciliation inserted 1 decision; `upload.py --partial --verify` passed with all 443 Storage object names and exact values in all seven remote tables matching local data.
