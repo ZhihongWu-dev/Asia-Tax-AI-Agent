@@ -737,3 +737,16 @@
 - Tool changes: `common.py` now recognises `congbaocdn.chinhphu.vn`, the official Government Portal/Government Gazette attachment domain. Checks: Python compilation passed; the slicer runner confirmed automatic re-slicing remains disabled with no fixtures; scoped Viet Nam materialising build reported 0 errors and 11 gaps; full build reported 0 errors and 12 gaps; clause diff showed no removed identifiers and only the expected new Korea and Viet Nam source clauses versus the saved pre-round set; all previously passing jurisdictions (ae, cn, hk, id, jp, kr, my, sg and th) remained PASSED. No new source format was introduced, so no fixture was required.
 - Acceptance: full-library `NOT PASSED: 0 errors, 12 gaps`; the new source closes Viet Nam categories 7 and 8. Remaining gaps are India treaty-list page; and Viet Nam categories 5, 6, rate/deadline pages, company anti-abuse/outbound-withholding, and individual anti-abuse/final/inbound/outbound-withholding/residence slots.
 - Remote upload and verification: resumable reconciliation uploaded the original PDF and generated text, inserted 1 document, 2 file records and 1 clause, and committed. Final `upload.py --partial --verify` passed with all 437 Storage object names and exact values in all seven remote tables matching local data.
+
+## 2026-10-29 — Viet Nam current PIT-law original refresh
+
+- Registered: replaced `vn.law.pit2026.vi` with the official Government Gazette issue 37 original that publishes current Personal Income Tax Law No. 109/2025/QH15, effective 1 July 2026.
+- Download failures: the first Government Gazette download-page URL returned current portal-home HTML rather than the requested original. It was not retained. The direct official Gazette-issue PDF was collected instead.
+- Parameters added: none. The PDF has only a non-substantive text layer in the current extraction environment, so no numerical or legal proposition was inferred from a search snippet.
+- Absence records added: none.
+- Slicing problems: source text extraction yielded only page-level markers (`112`, `20`); treat this as an H3 source-access limitation pending a usable official text original or an approved Vietnamese OCR capability.
+- Rate-table mismatches: none.
+- Handoff to a person: none.
+- Tool changes: `common.py` now recognises `congbao.chinhphu.vn`, the verified official Government Gazette publication domain. Checks: Python compilation passed; the slicer runner confirmed automatic re-slicing remains disabled with no fixtures; full build reported 0 errors and 12 gaps. No new source format was introduced, so no fixture was required.
+- Acceptance: unchanged at full-library `NOT PASSED: 0 errors, 12 gaps`; the current-law original is preserved, but the unavailable text layer does not close a coverage gap.
+- Remote upload and verification: the replaced official original was uploaded explicitly, then reconciliation updated 1 document, 2 file records and 1 clause. Final `upload.py --partial --verify` passed with all 437 Storage object names and exact values in all seven remote tables matching local data. Direct SHA-256 readback of the current-law original matched local bytes.
