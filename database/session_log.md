@@ -750,3 +750,16 @@
 - Tool changes: `common.py` now recognises `congbao.chinhphu.vn`, the verified official Government Gazette publication domain. Checks: Python compilation passed; the slicer runner confirmed automatic re-slicing remains disabled with no fixtures; full build reported 0 errors and 12 gaps. No new source format was introduced, so no fixture was required.
 - Acceptance: unchanged at full-library `NOT PASSED: 0 errors, 12 gaps`; the current-law original is preserved, but the unavailable text layer does not close a coverage gap.
 - Remote upload and verification: the replaced official original was uploaded explicitly, then reconciliation updated 1 document, 2 file records and 1 clause. Final `upload.py --partial --verify` passed with all 437 Storage object names and exact values in all seven remote tables matching local data. Direct SHA-256 readback of the current-law original matched local bytes.
+
+## 2026-10-29 — Viet Nam tax-filing-deadline page
+
+- Registered: `vn.gov.tax-filing-deadlines`, the official Government policy portal page on tax-return filing deadlines, for `page_deadlines`.
+- Download failures: none.
+- Parameters added: none. The page is recorded as a deadline cross-checking page rather than a source for a dividend-tax parameter.
+- Absence records added: none.
+- Slicing problems: none; the page is conservatively recorded as `#all` and states, among other rules, the stated deadline for a return filed for each occurrence.
+- Rate-table mismatches: none.
+- Handoff to a person: none.
+- Tool changes: `common.py` now recognises `xaydungchinhsach.chinhphu.vn`, the official Government policy portal domain. Checks: Python compilation passed; the slicer runner confirmed automatic re-slicing remains disabled with no fixtures; full build reported 0 errors and 11 gaps. No new source format was introduced, so no fixture was required.
+- Acceptance: full-library `NOT PASSED: 0 errors, 11 gaps`; the new source closes Viet Nam's `page_deadlines` category.
+- Remote upload and verification: resumable reconciliation uploaded the original page and generated text, inserted 1 document, 2 file records and 1 clause, and committed. Final `upload.py --partial --verify` passed with all 439 Storage object names and exact values in all seven remote tables matching local data. Direct SHA-256 readback matched both newly uploaded objects.

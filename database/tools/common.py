@@ -34,7 +34,7 @@ OFFICIAL = {
     'www.oecd.org', 'laws.e-gov.go.jp', 'www.law.go.kr', 'www.nts.go.kr', 'taxlaw.nts.go.kr', 'www.nta.go.jp', 'uaelegislation.gov.ae',
     'tax.gov.ae', 'www.tax.gov.ae', 'mof.gov.ae',
     'www.incometax.gov.in', 'incometaxindia.gov.in', 'www.incometaxindia.gov.in',
-    'en.baochinhphu.vn', 'chinhphu.vn', 'congbao.chinhphu.vn', 'datafiles.chinhphu.vn', 'congbaocdn.chinhphu.vn', 'treaty.mofa.gov.vn', 'www.hasil.gov.my', 'phl.hasil.gov.my', 'www.rd.go.th', 'www.pajak.go.id', 'pajak.go.id', 'stats.pajak.go.id', 'wmstatic-prd.incometaxindia.gov.in',
+    'en.baochinhphu.vn', 'chinhphu.vn', 'xaydungchinhsach.chinhphu.vn', 'congbao.chinhphu.vn', 'datafiles.chinhphu.vn', 'congbaocdn.chinhphu.vn', 'treaty.mofa.gov.vn', 'www.hasil.gov.my', 'phl.hasil.gov.my', 'www.rd.go.th', 'www.pajak.go.id', 'pajak.go.id', 'stats.pajak.go.id', 'wmstatic-prd.incometaxindia.gov.in',
 }
 
 
