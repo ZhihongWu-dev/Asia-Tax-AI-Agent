@@ -1,7 +1,7 @@
 # Database build status
 
 - Errors: 0
-- Coverage gaps: 14
+- Coverage gaps: 12
 - Warnings: 135
 - SQLite snapshot: database.sqlite
 
@@ -17,7 +17,7 @@
 | my | 0 | 0 | 0 |
 | sg | 0 | 0 | 0 |
 | th | 0 | 0 | 0 |
-| vn | 6 | 7 | 0 |
+| vn | 4 | 7 | 0 |
 
 ## Errors
 
@@ -28,8 +28,6 @@ none
 gap: category in|page_treaties
 gap: category vn|5
 gap: category vn|6
-gap: category vn|7
-gap: category vn|8
 gap: category vn|page_deadlines
 gap: category vn|page_rates
 gap: slot vn|company|anti_abuse without a parameter or absence record
