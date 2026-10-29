@@ -61,6 +61,7 @@ def materialize_new_documents():
             known_docs.discard(doc['id'])
             changed = True
         text_path = DATA / 'text' / (doc['id'] + '.txt')
+        raw_starts_html = raw_bytes.lstrip().lower().startswith((b'<!doctype html', b'<html'))
         # Some official download endpoints end in .do while returning a PDF.
         # Rebuild a prior generated view only when it has impossible PostgreSQL
         # text content (a NUL byte); the original object remains unchanged.
@@ -72,7 +73,7 @@ def materialize_new_documents():
         generated_format_mismatch = raw_bytes.startswith(b'%PDF-') and generated_html_shell
         # An HTML original must have a tag-stripped generated text view.  This
         # also refreshes a stale view created by an earlier extractor bug.
-        generated_unstripped_html = raw.suffix.lower() in {'.html', '.htm', '.xml'} and generated_html_shell
+        generated_unstripped_html = (raw.suffix.lower() in {'.html', '.htm', '.xml'} or raw_starts_html) and generated_html_shell
         if doc['id'] in known_docs and not generated_has_nul and not generated_format_mismatch and not generated_unstripped_html:
             continue
         if generated_has_nul or generated_format_mismatch or generated_unstripped_html:
@@ -80,7 +81,7 @@ def materialize_new_documents():
             known_docs.discard(doc['id'])
             changed = True
         suffix = raw.suffix.lower()
-        if suffix in {'.html', '.htm', '.xml'}:
+        if suffix in {'.html', '.htm', '.xml'} or raw_starts_html:
             if raw_bytes.startswith(b'%PDF-'):
                 suffix = '.pdf'
             else:
