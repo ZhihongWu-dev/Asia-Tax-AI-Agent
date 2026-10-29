@@ -776,3 +776,16 @@
 - Tool changes: none.
 - Acceptance: full-library `NOT PASSED: 0 errors, 10 gaps`; the new source closes Viet Nam's `page_rates` category.
 - Remote upload and verification: resumable reconciliation uploaded the original page and generated text, inserted 1 document, 2 file records and 1 clause, and committed. Final `upload.py --partial --verify` passed with all 441 Storage object names and exact values in all seven remote tables matching local data. Direct SHA-256 readback matched both newly uploaded objects.
+
+## 2026-10-29 — Viet Nam residence-day guidance coverage
+
+- Registered: no new original. Updated `vn.gov.pit-withholding-rates` to cover category 6 as well as `page_rates`.
+- Download failures: none.
+- Parameters added: none. The official guidance gives the 183-day dividing line for foreign individuals' work-presence treatment, but no standalone parameter is inferred beyond the exact stated context.
+- Absence records added: none.
+- Slicing problems: none.
+- Rate-table mismatches: none.
+- Handoff to a person: none.
+- Tool changes: none.
+- Acceptance: full-library `NOT PASSED: 0 errors, 9 gaps`; the updated official source closes Viet Nam category 6.
+- Remote upload and verification: no Storage object changed. Reconciliation updated 1 document metadata record and committed. Final `upload.py --partial --verify` passed with all 441 Storage object names and exact values in all seven remote tables matching local data.
