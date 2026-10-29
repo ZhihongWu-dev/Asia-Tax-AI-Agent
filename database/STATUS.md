@@ -1,8 +1,8 @@
 # Database build status
 
 - Errors: 0
-- Coverage gaps: 9
-- Warnings: 135
+- Coverage gaps: 5
+- Warnings: 139
 - SQLite snapshot: database.sqlite
 
 | Region | Category gaps | Slot gaps | Owned-pair gaps |
@@ -17,7 +17,7 @@
 | my | 0 | 0 | 0 |
 | sg | 0 | 0 | 0 |
 | th | 0 | 0 | 0 |
-| vn | 1 | 7 | 0 |
+| vn | 1 | 3 | 0 |
 
 ## Errors
 
@@ -30,10 +30,6 @@ gap: category vn|5
 gap: slot vn|company|anti_abuse without a parameter or absence record
 gap: slot vn|company|outbound_wht without a parameter or absence record
 gap: slot vn|individual|anti_abuse without a parameter or absence record
-gap: slot vn|individual|final without a parameter or absence record
-gap: slot vn|individual|inbound without a parameter or absence record
-gap: slot vn|individual|outbound_wht without a parameter or absence record
-gap: slot vn|individual|residence without a parameter or absence record
 
 ## Warnings
 
@@ -167,6 +163,10 @@ param id-vn.outbound_wht.dividend_rate: quote differs only by whitespace
 param id-vn.outbound_wht.royalty_rate: quote differs only by whitespace
 param kr.cfc.controlled_foreign_company_reporting_required: quote differs only by whitespace
 param kr.anti_abuse.substance_over_form_principle: quote differs only by whitespace
+param vn.inbound.individual.foreign_income_taxable: quote differs only by whitespace
+param vn.residence.individual.residence_days_min: quote differs only by whitespace
+param vn.final.individual.dividend_tax_rate: quote differs only by whitespace
+param vn.outbound_wht.individual.dividend_wht_rate: quote differs only by whitespace
 decision my.absent.3: quote differs only by whitespace
 decision my.absent.cfc: quote differs only by whitespace
 decision th.absent.individual.anti_abuse: quote differs only by whitespace

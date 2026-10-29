@@ -789,3 +789,16 @@
 - Tool changes: none.
 - Acceptance: full-library `NOT PASSED: 0 errors, 9 gaps`; the updated official source closes Viet Nam category 6.
 - Remote upload and verification: no Storage object changed. Reconciliation updated 1 document metadata record and committed. Final `upload.py --partial --verify` passed with all 441 Storage object names and exact values in all seven remote tables matching local data.
+
+## 2026-10-29 — Viet Nam current PIT-law parameters
+
+- Registered: no new original. The previously registered official Gazette original for `vn.law.pit2026.vi` was rematerialised after an attempted alternative attachment refresh, producing its substantive statutory text view.
+- Download failures: the alternate official attachment did not yield usable extracted text; the previously verified Gazette original was restored.
+- Parameters added: `vn.inbound.individual.foreign_income_taxable`, `vn.residence.individual.residence_days_min`, `vn.final.individual.dividend_tax_rate`, and `vn.outbound_wht.individual.dividend_wht_rate`.
+- Absence records added: none.
+- Slicing problems: none; the recovered statutory text is conservatively recorded as `#all`. Article 2 gives residents' worldwide-income scope and alternative 183-day residence test; Article 3 includes dividends within capital-investment income; Article 12 sets 5% for resident capital-investment income; Article 22 sets 5% for non-resident investment income from a Vietnamese organisation or individual.
+- Rate-table mismatches: none.
+- Handoff to a person: none.
+- Tool changes: none.
+- Acceptance: full-library `NOT PASSED: 0 errors, 5 gaps`; this closes four Viet Nam individual slots without inferring company rules or anti-abuse rules.
+- Remote upload and verification: the re-materialised statutory text object was explicitly replaced, then reconciliation updated 1 document metadata record and inserted 4 parameters. Final `upload.py --partial --verify` passed with all 441 Storage object names and exact values in all seven remote tables matching local data. Direct SHA-256 readback of the statutory text matched local bytes.
