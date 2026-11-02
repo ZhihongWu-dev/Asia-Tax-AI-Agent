@@ -1,0 +1,62 @@
+{
+  "current": {
+    "title": "Current structure",
+    "chain": [
+      {
+        "name": "Mr Tan",
+        "note": "Singapore resident"
+      },
+      {
+        "name": "Brightpeak (Singapore)",
+        "note": "3 employees"
+      },
+      {
+        "name": "Morning Peak (Hong Kong)",
+        "note": "pure holding, no staff"
+      },
+      {
+        "name": "Chenguang (Shenzhen)",
+        "note": "dividend payer"
+      }
+    ],
+    "holds": [
+      "holds 100%",
+      "holds 100%",
+      "holds 70%"
+    ],
+    "dividend_to": 2,
+    "dividend_label": "Dividend",
+    "result": "Mainland withholding 10%, Hong Kong 0 to 16.5%\nTotal RMB 1.40m to 2.31m"
+  },
+  "steps_title": "Restructuring steps",
+  "steps": [
+    "Shareholders re-resolve and defer the dividend",
+    "Morning Peak transfers the 70% stake to Brightpeak at fair value",
+    "File the transfer tax return and register the change",
+    "Chenguang pays the dividend to Brightpeak"
+  ],
+  "target": {
+    "title": "Recommended structure",
+    "chain": [
+      {
+        "name": "Mr Tan",
+        "note": "Singapore resident"
+      },
+      {
+        "name": "Brightpeak (Singapore)",
+        "note": "3 employees"
+      },
+      {
+        "name": "Chenguang (Shenzhen)",
+        "note": "dividend payer"
+      }
+    ],
+    "holds": [
+      "holds 100%",
+      "holds 70%"
+    ],
+    "dividend_to": 1,
+    "dividend_label": "Dividend",
+    "result": "Mainland withholding 10%, or 5% if eligible; Singapore 0\nTotal RMB 1.40m, or RMB 0.70m if eligible"
+  }
+}

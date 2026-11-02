@@ -54,3 +54,9 @@ evals/b_workflow/runs/model_e2e_quota_*.json
 
 # Local legacy document reader installed during deployment
 .tools/
+
+# Cases are runtime data, and hold client documents
+/cases/
+
+# Optimizer products of command-line runs; optimize.py run writes them again
+/optimization/products/

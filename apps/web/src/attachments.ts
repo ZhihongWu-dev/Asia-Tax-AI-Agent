@@ -2,25 +2,27 @@ import { ApiError } from './api';
 export type Attachment = { name: string; kind?: 'pdf' | 'word' | 'excel' | 'image'; thumbnail?: string; warnings?: string[]; page_count: number; pages: { page: number; label?: string; text: string }[]; empty_pages: number[] };
 const marker = '\n\n[Taxrora attachment]\n';
 const legacyMarker = '\n\n[Taxrora PDF attachment]\n';
-export function withAttachment(text: string, file?: Attachment) {
-  return file ? text + marker + JSON.stringify(file) : text;
+export const MAX_ATTACHMENTS = 30;
+export function withAttachments(text: string, files: Attachment[]) {
+  return files.length ? text + marker + JSON.stringify(files) : text;
 }
-export function splitAttachment(text: string): { text: string; file?: Attachment } {
+export function splitAttachments(text: string): { text: string; files: Attachment[] } {
   const delimiter = text.includes(marker) ? marker : legacyMarker;
   const index = text.indexOf(delimiter);
-  if (index < 0) return { text };
+  if (index < 0) return { text, files: [] };
   try {
-    const file = JSON.parse(text.slice(index + delimiter.length));
-    if (typeof file.name !== 'string' || !Array.isArray(file.pages) || !file.pages.every((p: { page: unknown; text: unknown }) => typeof p?.page === 'number' && typeof p?.text === 'string')) return { text };
-    return { text: text.slice(0, index), file };
-  } catch { return { text }; }
+    const parsed = JSON.parse(text.slice(index + delimiter.length));
+    const files: Attachment[] = Array.isArray(parsed) ? parsed : [parsed];                       // messages stored before several files were allowed
+    if (!files.every(file => typeof file.name === 'string' && Array.isArray(file.pages) && file.pages.every((p: { page: unknown; text: unknown }) => typeof p?.page === 'number' && typeof p?.text === 'string'))) return { text, files: [] };
+    return { text: text.slice(0, index), files };
+  } catch { return { text, files: [] }; }
 }
 export async function uploadAttachment(file: File, signal: AbortSignal): Promise<Attachment> {
   if (!/\.(pdf|docx?|xlsx?|png|jpe?g|webp)$/i.test(file.name)) throw new ApiError('attachment_type');
   if (file.size > 10 * 1024 * 1024) throw new ApiError('pdf_too_large');
   const response = await fetch(`/api/attachments?filename=${encodeURIComponent(file.name)}`, {
     method: 'POST', credentials: 'same-origin', signal,
-    headers: { 'Content-Type': 'application/octet-stream', 'X-AsiaTax-Request': '1' }, body: file,
+    headers: { 'Content-Type': 'application/octet-stream', 'X-Taxrora-Request': '1' }, body: file,
   });
   if (response.status === 401) window.dispatchEvent(new Event('taxora:unauthorized'));
   const data = await response.json().catch(() => ({}));

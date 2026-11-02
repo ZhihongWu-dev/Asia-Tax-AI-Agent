@@ -1,9 +1,0 @@
-# Mainland China: Official Source Catalog for Cross-Border Dividends
-
-The current level is `source-catalog baseline`, checked on 2026-10-03. See `source_manifest.json` for the five declared topics and seven official sources. The catalog records sources, jurisdictions, languages, topics, applicability dates, version notes, coverage gaps, and professional validation status. Unknown dates are explicitly left blank and explained in version notes. All records are `unverified`.
-
-Run `python -m alembic upgrade head`, then `python -m packages.knowledge_pipeline.catalog` to load the catalog into cloud PostgreSQL. Repeated runs update by `source_id` without adding duplicate rows. Use `python -m packages.knowledge_pipeline.catalog --search dividend_withholding` to find catalog entries; see the manifest for other topic IDs. This package does not capture full texts, generate statutory passages, or integrate with Hong Kong FSIE chat retrieval. Mainland records have `l0_in_scope=false` to prevent catalog metadata from being mistaken for citable Hong Kong original text.
-
-Official pages were checked individually through web search on 2026-10-03. The State Taxation Administration site returned 403 to automated HTTP requests from this machine, so `http_status` is left blank in the database; no successful machine capture or hash validation is claimed. Before a later release, check catalog links in a browser, review amendments and each protocol, and have mainland tax experts confirm the materials' current applicability. In particular, the original arrangement and the Fifth Protocol do not constitute a complete consolidated text; the First through Fourth Protocols still need to be organized.
-
-This catalog helps locate official evidence only. It cannot be used on its own to calculate tax rates, determine beneficial owner eligibility, or provide case-specific filing plans.

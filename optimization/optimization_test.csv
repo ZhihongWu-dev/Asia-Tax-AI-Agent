@@ -1,0 +1,4 @@
+test_id,input,expect
+case001.best,optimization/examples/case001.json,best cn:company->sg:company 5 5
+case001.open,optimization/examples/case001.json,"open bo,parent_bo,ppt"
+case001.valued.best,optimization/examples/case001_valued.json,best cn:company->sg:company 5 5

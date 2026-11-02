@@ -1,0 +1,131 @@
+{
+ "case": "CASE-001",
+ "note": "Variant of case001.json with illustrative valuation inputs (NOT from the case documents) and a 5-year horizon, to exercise one_off_cost, payback and total_N ranking.",
+ "date": "2026-04-30",
+ "mode": "record",
+ "amount": 14000000,
+ "currency": "CNY",
+ "payer": {
+  "jur": "cn",
+  "facts": {
+   "incorporated_in": "cn",
+   "managed_in": "cn",
+   "listed": false
+  }
+ },
+ "payee": {
+  "jur": "hk",
+  "subject": "company",
+  "facts": {
+   "incorporated_in": "hk",
+   "managed_in": "hk",
+   "mne_entity": true,
+   "received_in_jurisdiction": true,
+   "payee_is_government": false,
+   "payee_listed_in_partner": false,
+   "parent_jur": "sg",
+   "parent_holding_pct": 100,
+   "parent_holding_months": 85,
+   "parent_treaty_not_worse": true,
+   "passes_on_within_12m": false,
+   "substantive_business": false,
+   "employees_in_jurisdiction": 0,
+   "premises_in_jurisdiction": false,
+   "listed": false
+  }
+ },
+ "payment": {
+  "holding_pct": 70,
+  "holding_months": 82,
+  "payer_listed": false,
+  "payer_fie": true,
+  "payer_tax_rate": 25,
+  "payer_income_taxed": true,
+  "payer_etr": 25,
+  "payer_jur": "cn"
+ },
+ "answers": {
+  "bo": "unknown",
+  "parent_bo": "unknown",
+  "ppt": "unknown",
+  "gaar": "no",
+  "substance": "no",
+  "fsie_mpr": "no"
+ },
+ "assume": [],
+ "entities": {
+  "sg:company": {
+   "facts": {
+    "incorporated_in": "sg",
+    "managed_in": "sg",
+    "mne_entity": true,
+    "received_in_jurisdiction": true,
+    "substantive_business": true,
+    "employees_in_jurisdiction": 3,
+    "premises_in_jurisdiction": true,
+    "listed": false,
+    "parent_jur": "sg",
+    "parent_holding_pct": 100,
+    "parent_holding_months": 85,
+    "parent_treaty_not_worse": false,
+    "payee_is_government": false,
+    "payee_listed_in_partner": false
+   },
+   "holds": "hk:company",
+   "holding_pct": 100,
+   "holding_months": 85
+  },
+  "sg:individual": {
+   "facts": {
+    "domicile_in": "sg",
+    "ordinarily_resides": true,
+    "listed": false,
+    "mne_entity": false
+   },
+   "holds": "sg:company",
+   "holding_pct": 100,
+   "holding_months": 85,
+   "note": "Mr Chen, sole shareholder of the Singapore company (prompt.md); days_present not stated in the documents"
+  }
+ },
+ "destinations": [
+  [
+   "sg",
+   "company"
+  ],
+  [
+   "sg",
+   "individual"
+  ]
+ ],
+ "limits": {
+  "max_hops": 3,
+  "max_moves": 2,
+  "max_labels": 50,
+  "max_fork_keys": 3
+ },
+ "constraints": {
+  "exclude": [],
+  "allow_restructure": true,
+  "payback_max": null
+ },
+ "as_of": "2026-10-31",
+ "fx": "optimization/examples/fx_case001.json",
+ "valuation": {
+  "cn:company": {
+   "net_assets": 120000000,
+   "cost_base": 60000000,
+   "appraised_value": null,
+   "property_rich_ratio": 0,
+   "currency": "CNY"
+  },
+  "hk:company": {
+   "net_assets": 90000000,
+   "cost_base": 50000000,
+   "appraised_value": null,
+   "property_rich_ratio": 0,
+   "currency": "HKD"
+  }
+ },
+ "horizon_years": 5
+}

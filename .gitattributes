@@ -1,0 +1,2 @@
+# The library checks its files against the sha256 in files.csv: store them byte for byte
+database/** -text

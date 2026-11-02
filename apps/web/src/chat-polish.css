@@ -16,11 +16,9 @@
 .history-tabs button { border:0; border-bottom:1px solid transparent; background:none; color:#738477; font-size:13px; padding:5px; }
 .history-tabs button[aria-pressed=true] { color:#173f35; border-bottom:1px solid #173f35; }
 .history-entry .nav-heading { padding:12px 8px 4px; font-size:12px; }
-.history-actions { display:flex; justify-content:flex-end; gap:10px; padding:0 8px 5px; }
-.history-actions button,.rename-form button { border:0; border-radius:4px; background:none; color:#6a7e6d; font-size:13px; padding:4px; }
-.history-actions button:hover,.rename-form button:hover { background:#dce6d7; color:#173f35; }
+.rename-form button { border:0; border-radius:4px; background:none; color:#6a7e6d; font-size:13px; padding:4px; }
+.rename-form button:hover { background:#dce6d7; color:#173f35; }
 .sidebar .case-search { margin-bottom:12px; }
-.history-actions button:disabled { opacity:.4; cursor:not-allowed; }
 .rename-form { display:flex; flex-wrap:wrap; gap:8px; padding:8px; }
 .rename-form input { width:100%; min-width:0; padding:8px; border:1px solid #9ab2a2; border-radius:6px; color:#173f35; background:#fff; }
 .history-row { display:flex; align-items:center; position:relative; border-radius:8px; margin-bottom:3px; }
@@ -40,10 +38,6 @@
 @media (prefers-reduced-motion:reduce) { .action-tooltip { animation:none; } }
 
 .markdown-answer a { color:#1657b8; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere; }
-
-.research-sources { margin-top:18px; border:1px solid #dce4d9; border-radius:10px; padding:12px 16px; }
-.research-sources > summary { cursor:pointer; font-weight:600; color:#173f35; }
-.research-sources > p { color:#647d6c; font-size:13px; }
 .markdown-answer li { margin:8px 0; }
 
 /* Give each answer section room to breathe, with a distinct follow-up callout. */

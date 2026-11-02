@@ -1,0 +1,22 @@
+file,kind,format,party,evidences,variables
+S01_payer_business_licence.png,simulated,png,payer,business licence: name USCC type (HK-Mainland JV = FIE) registered capital legal representative,payer_fie;payer_listed;incorporated_in(payer)
+S02_payer_registration_extract.pdf,simulated,pdf,payer,registry extract: shareholders 70%/30% with contribution dates; 2019-06-30 share transfer,holding_pct;holding_months
+S03_payer_articles_extract.pdf,simulated,pdf,payer,articles: shareholders and contributions; dividends by paid-up ratio; board meets at the registered address,holding_pct;managed_in(payer)
+S04_payer_shareholders_resolution_2025_profit_distribution.pdf,simulated,pdf,payer,resolution of 2026-03-20: RMB 20m dividend; RMB 14m to the HK shareholder; payment by 2026-04-30; treaty claim authorised,amount;date
+S05_payer_EIT_annual_return_2025_extract.pdf,simulated,pdf,payer,2025 EIT return: taxable income RMB 46m at 25% = RMB 11.5m paid,payer_tax_rate;payer_income_taxed;payer_etr
+S06_payer_2024_dividend_remittance_and_tax_certificate_p1.png,simulated,png,payer,2024 remittance of the FY2023 dividend to HSBC Hong Kong (net of 10% WHT),history;received_in_jurisdiction
+S06_payer_2024_dividend_remittance_and_tax_certificate_p2.png,simulated,png,payer,tax payment certificate: RMB 840000 withheld at 10% no treaty claimed,history
+S07_payee_certificate_of_incorporation.png,simulated,png,payee,HK certificate of incorporation 2019-03-12 company no. 2831146,incorporated_in(payee)
+S08_payee_annual_return_NAR1_extract.pdf,simulated,pdf,payee,annual return: registered office = secretary's address; directors (SG and HK); sole member Brightpeak Asia Pte. Ltd.,managed_in(payee);bo factors
+S09_payee_board_minutes_2026-03-25.pdf,simulated,pdf,payee,board meeting held in Hong Kong; accept dividend into HSBC HK account; claim 5%; apply for CoR 2026; onward distribution requested by parent; no employees,managed_in(payee);received_in_jurisdiction;bo factors;ppt factors
+S10_payee_audited_financial_statements_2025_extract.pdf,simulated,pdf,payee,audited accounts: investment holding; no employees; MNE group member; s15M participation exemption view; 70% held since 2019-06-30,mne_entity;holding_months;substance factors;bo factors
+S11_payee_certificate_of_resident_status_2025.pdf,simulated,pdf,payee,IRD certificate of resident status for 2025 (2026 pending),payee_resident (evidence)
+S12_payee_HSBC_statement_2024-06_extract.png,simulated,png,payee,2024 dividend received in the Hong Kong bank account,received_in_jurisdiction;history
+S13_group_structure_chart.png,simulated,png,group,structure: Mr Tan (SG) -> Brightpeak Asia (SG) -> Brightpeak HK -> Chenguang (CN 70%),holding_pct;payer_jur;ultimate owner
+S14_ultimate_parent_ACRA_profile_extract.pdf,simulated,pdf,parent,ACRA profile of the Singapore parent: sole shareholder Mr Tan; 3 employees; SG tax resident,alternative path (direct SG holding)
+S15_payee_secretarial_services_invoice_2026.png,simulated,png,payee,secretarial firm provides registered office and nominee administrative support,substance factors;bo factors
+real/R01_非居民纳税人享受协定待遇信息报告表（国家税务总局公告2019年第35号附件）.xls,real,xls,procedure,blank information reporting form for treaty benefits (STA 2019 No. 35 attachment) - https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194891/content.html,procedure cn.sta.2019-35
+real/R02_IR1313A_Application_for_Certificate_of_Resident_Status_Mainland.pdf,real,pdf,procedure,blank IRD form IR1313A (certificate of resident status for the Mainland Arrangement) - https://www.ird.gov.hk/eng/pdf/ir1313a_e.pdf,procedure hk.form.ir1313a
+real/R03_DIPN44_Mainland_HK_Arrangement.pdf,real,pdf,guidance,IRD Departmental Interpretation and Practice Note 44 on the Arrangement - https://www.ird.gov.hk/eng/pdf/dipn44.pdf,bo factors;residence
+real/R04_国家税务总局公告2018年第9号_受益所有人.html,real,html,guidance,STA Announcement 2018 No. 9 on beneficial owner (factors and safe harbours) - https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194781/content.html,bo factors
+real/R05_内地和香港避免双重征税安排（含第一议定书）.pdf,real,pdf,treaty,the Arrangement text (article 10 dividends) - https://www.chinatax.gov.cn/chinatax/n810341/n810770/c1153751/5131982/files/11537511.pdf,cap:5%/10%

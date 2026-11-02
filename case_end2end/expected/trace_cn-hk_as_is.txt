@@ -1,0 +1,68 @@
+PASS  cn|company|residence|*  status=T  value=yes/yes
+   rule cn.residence.company: incorporated_in = 'cn' or managed_in = 'cn' -> resident
+   clause cn.law.eit#2 (law, 中华人民共和国企业所得税法)
+PASS  hk|company|residence|*  status=T  value=yes/yes
+   rule hk.residence.company: incorporated_in = 'hk' or managed_in = 'hk' -> resident
+   clause hk.cap112#s50AAC (law, Inland Revenue Ordinance (Cap. 112))
+PASS  cn|company|outbound_wht|hk  status=U  value=5/10
+   rule cn-hk.outbound_wht.cap_10: payee_resident = true and (pred(bo) or $cn.outbound_wht.bo_safe_harbour_government = true and payee_is_government = true or $cn.outbound_wht.bo_safe_harbour_listed = true and payee_listed_in_partner = true or parent_holding_pct >= $cn.outbound_wht.bo_safe_harbour_parent_holding_pct_min and parent_holding_months >= $cn.outbound_wht.bo_safe_harbour_holding_months_min and parent_treaty_not_worse = true and pred(parent_bo)) -> cap:cn-hk.outbound_wht.dividend_rate_other
+   param cn-hk.outbound_wht.dividend_rate_other = 10 % <- treaty.cn-hk.2006.zh#10.2
+   param cn.outbound_wht.bo_safe_harbour_government = yes bool <- cn.sta.2018-09#i4
+   param cn.outbound_wht.bo_safe_harbour_listed = yes bool <- cn.sta.2018-09#i4
+   param cn.outbound_wht.bo_safe_harbour_parent_holding_pct_min = 100 % <- cn.sta.2018-09#i3
+   param cn.outbound_wht.bo_safe_harbour_holding_months_min = 12 months <- cn.sta.2018-09#i5
+   clause treaty.cn-hk.2006.zh#10.2 (treaty, 内地和香港特别行政区关于对所得避免双重征税和防止偷漏税的安排（含第一议定书）)
+   clause cn.sta.2018-09#i2 (guidance, 国家税务总局关于税收协定中“受益所有人”有关问题的公告)
+   clause cn.sta.2018-09#i3 (guidance, 国家税务总局关于税收协定中“受益所有人”有关问题的公告)
+   clause cn.sta.2018-09#i4 (guidance, 国家税务总局关于税收协定中“受益所有人”有关问题的公告)
+   decision D-cn-5 <- cn.sta.2018-09#i3
+   rule cn-hk.outbound_wht.cap_5: payee_resident = true and holding_pct >= $cn-hk.outbound_wht.holding_pct_min and (pred(bo) or $cn.outbound_wht.bo_safe_harbour_government = true and payee_is_government = true or $cn.outbound_wht.bo_safe_harbour_listed = true and payee_listed_in_partner = true or parent_holding_pct >= $cn.outbound_wht.bo_safe_harbour_parent_holding_pct_min and parent_holding_months >= $cn.outbound_wht.bo_safe_harbour_holding_months_min and parent_treaty_not_worse = true and pred(parent_bo)) -> cap:cn-hk.outbound_wht.dividend_rate_reduced
+   param cn-hk.outbound_wht.dividend_rate_reduced = 5 % <- treaty.cn-hk.2006.zh#10.2
+   param cn-hk.outbound_wht.holding_pct_min = 25 % <- treaty.cn-hk.2006.zh#10.2
+   param cn.outbound_wht.bo_safe_harbour_government = yes bool <- cn.sta.2018-09#i4
+   param cn.outbound_wht.bo_safe_harbour_listed = yes bool <- cn.sta.2018-09#i4
+   param cn.outbound_wht.bo_safe_harbour_parent_holding_pct_min = 100 % <- cn.sta.2018-09#i3
+   param cn.outbound_wht.bo_safe_harbour_holding_months_min = 12 months <- cn.sta.2018-09#i5
+   clause treaty.cn-hk.2006.zh#10.2 (treaty, 内地和香港特别行政区关于对所得避免双重征税和防止偷漏税的安排（含第一议定书）)
+   clause cn.sta.2018-09#i2 (guidance, 国家税务总局关于税收协定中“受益所有人”有关问题的公告)
+   clause cn.sta.2018-09#i3 (guidance, 国家税务总局关于税收协定中“受益所有人”有关问题的公告)
+   clause cn.sta.2018-09#i4 (guidance, 国家税务总局关于税收协定中“受益所有人”有关问题的公告)
+   decision D-cn-5 <- cn.sta.2018-09#i3
+   rule cn.outbound_wht.statutory: true -> rate:cn.outbound_wht.dividend_wht_rate
+   param cn.outbound_wht.dividend_wht_rate = 10 % <- cn.reg.eit#91
+   clause cn.law.eit#3 (law, 中华人民共和国企业所得税法)
+   clause cn.law.eit#4 (law, 中华人民共和国企业所得税法)
+   clause cn.reg.eit#91 (regulation, 中华人民共和国企业所得税法实施条例)
+PASS  cn|company|anti_abuse|hk  status=U  value=no/yes
+   rule cn-hk.anti_abuse.ppt: payee_resident = true and $cn-hk.anti_abuse.ppt_applies = true and pred(ppt) -> deny
+   param cn-hk.anti_abuse.ppt_applies = yes bool <- treaty.cn-hk.2006.p5.zh#6
+   clause treaty.cn-hk.2006.p5.zh#6 (treaty, 《内地和香港特别行政区关于对所得避免双重征税和防止偷漏税的安排》第五议定书)
+PASS  hk|company|inbound|cn  status=T  value=0/0
+   rule hk.inbound.credit: true -> credit
+   clause hk.cap112#s15N (law, Inland Revenue Ordinance (Cap. 112))
+   rule hk.inbound.credit_underlying: holding_pct >= $hk.inbound.indirect_credit_holding_pct_min -> credit
+   param hk.inbound.indirect_credit_holding_pct_min = 10 % <- hk.cap112#s50AAAC
+   clause hk.cap112#s50AAAC (law, Inland Revenue Ordinance (Cap. 112))
+   rule hk.inbound.fsie_taxable: $hk.inbound.foreign_dividend_taxable = true and mne_entity = true and received_in_jurisdiction = true -> taxable
+   param hk.inbound.foreign_dividend_taxable = yes bool <- hk.cap112#s15I
+   clause hk.cap112#s15I (law, Inland Revenue Ordinance (Cap. 112))
+   clause hk.cap112#s15H (law, Inland Revenue Ordinance (Cap. 112))
+   rule hk.inbound.participation_exemption: payee_resident = true and holding_pct >= $hk.inbound.exemption_holding_pct_min and holding_months >= $hk.inbound.exemption_holding_months_min and payer_tax_rate >= $hk.inbound.source_tax_rate_min and payer_income_taxed = true -> exempt
+   param hk.inbound.exemption_holding_pct_min = 5 % <- hk.cap112#s15M
+   param hk.inbound.exemption_holding_months_min = 12 months <- hk.cap112#s15M
+   param hk.inbound.source_tax_rate_min = 15 % <- hk.cap112#s15N
+   clause hk.cap112#s15M (law, Inland Revenue Ordinance (Cap. 112))
+   clause hk.cap112#s15N (law, Inland Revenue Ordinance (Cap. 112))
+   decision D-hk-1 <- hk.cap112#s15N
+PASS  hk|company|anti_abuse|cn  status=T  value=no/no
+PASS  hk|company|final|*  status=U  value=8.25/16.5
+   rule hk.final.cit: true -> rate:hk.final.cit_rate
+   param hk.final.cit_rate = 16.5 % <- hk.cap112#sch8B
+   clause hk.cap112#sch8B (law, Inland Revenue Ordinance (Cap. 112))
+   rule hk.final.cit_lower_tier: assessable_profits <= $hk.final.cit_lower_tier_max -> rate:hk.final.cit_rate.lower_tier
+   param hk.final.cit_rate.lower_tier = 8.25 % <- hk.cap112#sch8B
+   param hk.final.cit_lower_tier_max = 2000000 HKD <- hk.cap112#sch8B
+   clause hk.cap112#sch8B (law, Inland Revenue Ordinance (Cap. 112))
+   decision D-hk-2 <- hk.cap112#sch8B
+PASS  hk|company|cfc|*  status=absent  value=no/no
+items=8 failed=0

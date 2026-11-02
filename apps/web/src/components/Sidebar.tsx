@@ -1,6 +1,5 @@
 import HintButton from "./HintButton";
 import {
-  BookOpen,
   CircleHelp,
   MessageSquare,
   Plus,
@@ -122,10 +121,6 @@ export default function Sidebar({
       <div className="sidebar-bottom">
         {user && <div className="account-row"><UserRound size={17} /><span title={user.email}>{user.email}</span><HintButton className="icon-button" disabled={signingOut} aria-label={t("退出登录")} title={t("退出登录")} onClick={async () => { setSigningOut(true); setLogoutError(false); try { await logout(); } catch { setLogoutError(true); } finally { setSigningOut(false); } }}><LogOut size={17} /></HintButton></div>}
         {logoutError && <p role="alert">{t("退出失败，请重试。")}</p>}
-        <HintButton className="side-link" onClick={() => onPanel("sources")}>
-          <BookOpen size={17} />
-          {t("法规资料库")}
-        </HintButton>
         <HintButton className="side-link" onClick={() => onPanel("about")}>
           <CircleHelp size={17} />
           {t("关于 Taxrora")}

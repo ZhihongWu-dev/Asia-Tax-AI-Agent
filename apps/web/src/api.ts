@@ -1,4 +1,4 @@
-import type { Case, FieldSpec, FactValue, KnowledgeResult, EntryHint } from "./workspace";
+import type { ActivityItem, Case, RunState } from "./workspace";
 
 export class ApiError extends Error {
   constructor(public code: string) {
@@ -6,16 +6,7 @@ export class ApiError extends Error {
   }
 }
 export function isRetryable(code: string) {
-  return [
-    "network_error",
-    "model_failed",
-    "model_not_configured",
-    "service_unavailable",
-    "storage_unavailable",
-    "auth_unavailable",
-    "knowledge_unavailable",
-    "tool_failed",
-  ].includes(code);
+  return ["network_error", "service_unavailable", "storage_unavailable", "auth_unavailable"].includes(code);
 }
 export async function request<T>(
   path: string,
@@ -29,7 +20,7 @@ export async function request<T>(
       method,
       credentials: "same-origin",
       signal: controller.signal,
-      headers: { "Content-Type": "application/json", "X-AsiaTax-Request": "1" },
+      headers: { "Content-Type": "application/json", "X-Taxrora-Request": "1" },
       body: body === undefined ? undefined : JSON.stringify(body),
     });
     const data = await response.json().catch(() => ({}));
@@ -48,13 +39,13 @@ export async function request<T>(
   }
 }
 export const api = {
-  stream: async (doc: Case, text: string, approved: boolean, requestId: string, signal: AbortSignal, delta: (text: string, reset?: boolean) => void,
-                 entryHint: EntryHint = "auto", replyToQuestionId: string | null = null, locale: "zh" | "en" = "zh"): Promise<Case> => {
+  stream: async (doc: Case, text: string, requestId: string, signal: AbortSignal,
+                 delta: (text: string, reset?: boolean) => void,
+                 activity: (item: ActivityItem) => void): Promise<Case> => {
     const response = await fetch(`/api/cases/${doc.id}/messages`, {
-      method: "POST", credentials: "same-origin", signal: AbortSignal.any([signal, AbortSignal.timeout(100000)]),
-      headers: { "Content-Type": "application/json", "Accept": "text/event-stream", "X-AsiaTax-Request": "1" },
-      body: JSON.stringify({ text, data_approved: approved, revision: doc.revision, request_id: requestId,
-        entry_hint: entryHint, reply_to_question_id: replyToQuestionId, locale }),
+      method: "POST", credentials: "same-origin", signal,
+      headers: { "Content-Type": "application/json", "Accept": "text/event-stream", "X-Taxrora-Request": "1" },
+      body: JSON.stringify({ text, revision: doc.revision, request_id: requestId }),
     });
     if (response.status === 401) window.dispatchEvent(new Event("taxora:unauthorized"));
     if (!response.ok) {
@@ -77,6 +68,7 @@ export const api = {
             const event = JSON.parse(line.slice(6));
             if (event.type === "delta") delta(event.text);
             if (event.type === "reset") delta("", true);
+            if (event.type === "activity") activity(event.item);
             if (event.type === "error") throw new ApiError(event.code);
             if (event.type === "done") return event.case as Case;
           }
@@ -85,51 +77,13 @@ export const api = {
       throw new ApiError("network_error");
     } finally { await reader.cancel().catch(() => {}); reader.releaseLock(); }
   },
-  search: (query: string) =>
-    request<KnowledgeResult>(
-      `/knowledge/search?q=${encodeURIComponent(query)}`,
-    ),
-  session: () =>
-    request<{ fields: FieldSpec[]; model_configured: boolean; can_review?: boolean }>("/session"),
   list: () => request<Case[]>("/cases"),
   create: () => request<Case>("/cases", "POST"),
   get: (id: string) => request<Case>(`/cases/${id}`),
-  domainCapabilities: () => request<{ready: boolean; release: string; supported_templates: string[]}>("/domain/capabilities"),
-  domainSetup: (doc: Case, caseInput: Record<string, unknown>, dataApproved: boolean, requestId: string,
-                mode = "plan_structure", bindings: Record<string, string> = {}) =>
-    request<Case>(`/cases/${doc.id}/domain-case`, "PUT", { revision: doc.revision, request_id: requestId,
-      case_input: caseInput, data_approved: dataApproved, mode, bindings }),
-  domainDraft: (doc: Case) => request<{case: Record<string, unknown> | null; bindings: Record<string, string>;
-    gaps: string[]; unmapped: string[]}>(`/cases/${doc.id}/domain-draft`),
-  domainControl: (doc: Case, action: string) => request<Case>(`/cases/${doc.id}/domain-control`, "POST",
-    {revision: doc.revision, request_id: crypto.randomUUID(), action}),
-  domainConfirm: (doc: Case) => request<Case>(`/cases/${doc.id}/domain-confirm`, "POST",
-    {revision: doc.revision, request_id: crypto.randomUUID()}),
-  domainReport: (doc: Case, allowPartial: boolean) => request<Case>(`/cases/${doc.id}/domain-report`, "POST",
-    {revision: doc.revision, request_id: crypto.randomUUID(), allow_partial: allowPartial}),
-  domainProfessional: (doc: Case, questionId: string, value: string | string[], reference: Record<string, string>) =>
-    request<Case>(`/cases/${doc.id}/domain-professional`, "POST", {revision: doc.revision,
-      request_id: crypto.randomUUID(), question_id: questionId, value, reference}),
-  finalReview: (doc: Case, reportId: string, reportHash: string, decision: string, note: string) =>
-    request<Case>(`/cases/${doc.id}/analyses/${reportId}/review`, "POST", { revision: doc.revision,
-      request_id: crypto.randomUUID(), report_hash: reportHash, decision, note }),
-  domainPlan: (doc: Case, requestId: string) =>
-    request<Case>(`/cases/${doc.id}/domain-plan`, "POST", { revision: doc.revision, request_id: requestId }),
-  domainAnswers: (doc: Case, answers: {key: string; kind: string; value: string; question_id: string}[], requestId: string, locale: string) =>
-    request<Case>(`/cases/${doc.id}/domain-answers`, "POST", { revision: doc.revision, request_id: requestId, answers, locale }),
-  domainAnswer: (doc: Case, key: string, kind: string, value: string, requestId: string, questionId?: string, disposition = "answer") =>
-    request<Case>(`/cases/${doc.id}/domain-answer`, "POST", { revision: doc.revision, request_id: requestId,
-      key, kind, value, question_id: questionId, disposition }),
-  mutate: (
-    current: Case,
-    action: "messages" | "facts" | "confirm" | "analyze" | "organization",
-    payload: Record<string, unknown> = {},
-    requestId: string = crypto.randomUUID(),
-  ) =>
-    request<Case>(
-      `/cases/${current.id}/${action}`,
-      action === "facts" || action === "organization" ? "PATCH" : "POST",
-      { revision: current.revision, request_id: requestId, ...payload },
-    ),
+  run: (id: string, after: number) => request<RunState>(`/cases/${id}/run?after=${after}`),
+  resumeRun: (id: string) => request(`/cases/${id}/run`, "POST"),
+  stopRun: (id: string) => request(`/cases/${id}/run/stop`, "POST"),
+  organize: (doc: Case, changes: { title?: string; archived?: boolean }) =>
+    request<Case>(`/cases/${doc.id}/organization`, "PATCH",
+      { revision: doc.revision, request_id: crypto.randomUUID(), ...changes }),
 };
-export type FactPatch = Record<string, FactValue | null>;

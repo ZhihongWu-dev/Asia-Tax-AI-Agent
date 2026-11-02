@@ -1,0 +1,48 @@
+1
+These WHT rates apply when the income is derived by the non-resident person through operations carried on outside Singapore. They are to be applied on the gross payment. The resulting tax payable is a final tax. The following tax rates apply on gross payments when operations are carried out in Singapore:
+Non-resident person (other than individuals):
+Prevailing Corporate Income Tax rate
+Non-resident individuals: 24% (22% for income due and payable from 01 Jan 2016 to 31 Dec 2022)
+. This does not apply to scenario in footnote 2.
+2
+For royalty payments to an author, a composer or a choreographer, the prevailing tax rate of 24% (22% for income due and payable from 01 Jan 2016 to 31 Dec 2022)
+shall apply to either net royalties or 10% of the gross royalties up to Year of Assessment (YA) 2026, whichever is lower). As announced in Budget 2024, the current tax concession of taxing only 10% of gross royalties will be withdrawn in phases over 3 years. From YA 2027, there will be a gradual increment of the percentage of gross royalties subject to tax by 30%-points per year (i.e. 40% for YA 2027 and 70% for YA 2028). From YA 2029, 100% of gross royalties less any allowable deductions and capital allowances (i.e. net amount of royalties) will be subject to tax.
+Learn more about
+Tax concession for royalty
+payments and the phased withdrawal of the concession from YA 2027.
+3
+For a non-resident company, WHT is based on the prevailing Corporate Income Tax rate for the year when the services were provided, even if the payment to the non-resident is made in a different year. For example, if the service was provided in Dec 2018 but payment was made in 2019, the prevailing Corporate Income Tax rate is that for 2018 (Year of Assessment 2019).
+4
+[UPDATED!] As announced in Budget 2025, the reduced WHT rate of 10% that applies to distributions made during the period from 18 Feb 2005 to 31 Dec 2025 will be extended for another 5 years from 31 Dec 2025 to 31 Dec 2030. WHT does not apply to any distribution made by a REIT where tax has already been paid, on the income from which the distribution
+is made, by the trustee of the trust.
+A qualifying non-resident non-individual unit holder is one who:
+1. Does not have any permanent establishment (“PE”) in Singapore, or
+2. Carries on any operation in Singapore through a PE in Singapore, but the funds used by that unit holder to acquire the units in that REIT were not obtained from that operation.
+If tax has been deducted in error at the prevailing Corporate Income Tax rate from the distributions made to nominees whose beneficiaries are any of the persons listed below, the Comptroller will refund the tax over-deducted to the trustee of the REIT on a quarterly basis. The beneficiaries
+^
+may be any of the following:
+qualifying individual;
+qualifying non-resident non-individual;
+charity registered under the Charities Act (Cap. 37) or established by any written law;
+town council;
+statutory board;
+co-operative society registered under the Co-operative Societies Act (Cap. 62); or
+trade union registered under the Trade Unions Act (Cap. 333).
+^
+Not including any person acting in the capacity of a trustee.
+Where refund requests for tax over-deducted have been submitted to IRAS through the trustee of the REIT, the trustee shall inform the beneficiaries to
+not
+make further claims for Section 46(1)(d) tax credits corresponding to such refunds in their Income Tax Return submissions.
+The trustee, in turn will refund the amount to the nominees. For this purpose, the trustee is required to send its request as follows:
+For WHT records submitted within 2 back years from the current date
+Please amend the WHT record via
+mytax.iras.gov.sg
+> S45 > View/Amend S45 Form.
+For WHT records submitted more than 2 back years from the current date
+Please submit the filing amendments online as a
+business payer
+or a
+tax agent/individual payer
+with the
+supporting documents
+(PDF, 78KB) uploaded.

@@ -1,0 +1,4303 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Inland Revenue Department 
+The Government of the Hong Kong Special Administrative Region
+of the People's Republic of China  
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES 
+NO. 44(REVISED) 
+ARRANGEMENT BETWEEN THE MAINLAND OF CHINA AND 
+THE HONG KONG SPECIAL ADMINISTRATIVE REGION   
+FOR THE AVOIDANCE OF DOUBLE TAXATION AND   
+THE PREVENTION OF FISCAL EVASION   
+WITH RESPECT TO TAXES ON INCOME   
+These notes are issued for the information of taxpayers and their tax 
+representatives. They contain the Department’s interpretation and practices in 
+relation to the law as it stood at the date of publication.  Taxpayers are 
+reminded that their right of objection against the assessment and their right of 
+appeal to the Commissioner, the Board of Review or the Court are not affected 
+by the application of these notes. 
+These notes replace those issued in April 2007. 
+LAU MAK Yee-ming, Alice
+Commissioner of Inland Revenue 
+August 2008 
+Our web site : www.ird.gov.hk 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DEPARTMENTAL INTERPRETATION AND PRACTICE NOTES  
+No. 44(REVISED)  
+CONTENT  
+Paragraph  
+Introduction 
+1  
+Arrangement for the avoidance of double taxation 
+3  
+ 
+Relationship between the comprehensive arrangement and the 
+5  
+Ordinance  
+Effective dates and applicable text 
+8  
+Article 1    Persons covered 
+11  
+Article 2   Taxes covered 
+12  
+Article 3    General definitions 
+15  
+Article 4    Resident 
+19  
+ 
+(I) 
+ Resident individual 
+21 
+ 
+(II) Resident company 
+ 
+26  
+ 
+(III) Resident persons other than individuals and  
+31  
+companies  
+ 
+Certification of resident status 
+32  
+ 
+Article 5    Permanent establishment 
+ 
+The concept of a permanent establishment 
+36  
+A building site, a construction, assembly or 
+38  
+installation project  
+ 
+Provision of services by an enterprise 
+42 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The place where preparatory or auxiliary activities 
+44 
+are conducted  
+ 
+Business agent 
+ 
+47 
+ 
+Article 6  
+Income from immovable property 
+48  
+ 
+Article 7   
+Business profits  
+ 
+Allocation of taxing rights 
+55  
+ 
+Computation of business profits 
+56 
+ 
+Other methods of computing profits 
+62 
+ 
+Other principles 
+64 
+ 
+Article 8   
+Shipping, air and land transport 
+67 
+ 
+Shipping transport 
+68 
+ 
+Air transport 
+69 
+ 
+Land transport 
+70 
+ 
+Article 9  
+Associated enterprises 
+73  
+ 
+Adjusting the profits of an enterprise of One Side 
+74  
+Making an appropriate adjustment to the profits of an 
+75  
+enterprise of the Other Side  
+ 
+ 
+ 
+Income from investment – Dividends, Interest and Royalties  
+79  
+Article 10  
+Dividends 
+84  
+Article 11  
+Interest 
+90  
+Article 12  
+Royalties 
+96  
+Article 13  
+Capital gains 
+101  
+Article 14  Income from employment 
+109  
+“Present for not exceeding 183 days” exemption 
+110  
+condition  
+Hong Kong residents working across the Mainland 
+114  
+border  
+ii 
+
+ 
+ 
+Article 15 
+Directors’ fees 
+115
+ 
+Article 16 
+Artistes and sportspersons 
+116  
+ 
+Article 17 
+Pensions 
+117  
+ 
+Article 18 
+Government service 
+120  
+ 
+Article 19 
+Students 
+125  
+ 
+Article 20 
+Other income 
+126  
+ 
+Article 21 
+Methods for elimination of double taxation 
+128  
+ 
+Article 22 
+Non-discrimination 
+141  
+ 
+Article 23 
+Mutual agreement procedure 
+144  
+ 
+Article 24 
+Exchange of information 
+148  
+ 
+Article 25 
+Miscellaneous provisions 
+158  
+ 
+Article 26 
+Entry into force 
+159  
+ 
+Article 27 
+Termination 
+160  
+ 
+Conclusion 
+161  
+ 
+ 
+iii 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+INTRODUCTION  
+On 11 February 1998, representatives of the Mainland of China (“the 
+Mainland”) and the Hong Kong Special Administrative Region (“Hong Kong”) 
+signed a Memorandum that detailed an “Arrangement between the Mainland of 
+China and the Hong Kong Special Administrative Region for the Avoidance of 
+Double Taxation on Income” (“the Limited Arrangement”).  The Limited 
+Arrangement covers mainly business profits of an enterprise operating through 
+a permanent establishment, shipping, air or land transport income, as well as 
+income from personal services. Some two years later, on 2 February 2000, 
+the Mainland and Hong Kong signed the “Air Services Arrangement between 
+the Mainland of China and the Hong Kong Special Administrative Region” 
+(“the Air Services Arrangement”). 
+2. 
+However, with China’s subsequent accession to the World Trade 
+Organisation and the increasingly close economic ties between the Mainland 
+and Hong Kong, both the Mainland and Hong Kong considered it necessary to 
+expand the Limited Arrangement into a comprehensive arrangement for the 
+avoidance of double taxation, i.e. one on a par with international standards. 
+Accordingly, on 21 August 2006, the Mainland and Hong Kong signed an 
+“Arrangement between the Mainland of China and the Hong Kong Special 
+Administrative Region for the Avoidance of Double Taxation and the 
+Prevention of Fiscal Evasion with respect to Taxes on Income”(“the 
+Comprehensive Arrangement”), to eliminate any situation of double taxation 
+that might otherwise be faced by a Mainland or Hong Kong investor in the 
+conduct of cross-border economic activities. In the lead up to the signing, 
+differences in the interpretation of some of the provisions of the 
+Comprehensive Arrangement were identified by both Sides during the course 
+of negotiations. However, neither the Mainland nor Hong Kong had any 
+desire to engage in prolonged discussions that could hinder the early 
+implementation of the Comprehensive Arrangement.  Hence, the differences 
+were put aside for further deliberation in the post implementation stage. Both 
+Sides then resumed discussions and consensus was reached on the 
+interpretation and implementation of the outstanding issues. The Mainland 
+and Hong Kong exchanged letters (“the exchange letters”) and formally signed 
+the “Second Protocol to the Arrangement between the Mainland of China and 
+the Hong Kong Special Administrative Region for the Avoidance of Double 
+Taxation and the Prevention of Fiscal Evasion with respect to Taxes on 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Income”(“the Second Protocol”) on 11 September 2007 and 30 January 2008 
+respectively. 
+ARRANGEMENT FOR THE AVOIDANCE OF DOUBLE TAXATION 
+3. 
+For the purpose of giving effect to the Comprehensive Arrangement, 
+an Order (“Specification of Arrangements (the Mainland of China) (Avoidance 
+of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes 
+on Income) Order”) was made by the Chief Executive in Council on 27 
+October 2006, under section 49 of the Inland Revenue Ordinance (Cap. 112) 
+(“the Ordinance”). The Order was published in the Gazette as Legal Notice 
+234 of 2006. For the purpose of giving effect to the Second Protocol, an 
+Order (“Specification of Arrangements (the Mainland of China) (Avoidance of 
+Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on 
+Income) (Second Protocol) Order”) was made by the Chief Executive in 
+Council on 15 April 2008. The Order was published in the Gazette as Legal 
+Notice 89 of 2008. 
+4. 
+The purpose of the Comprehensive Arrangement is to allocate the 
+right to tax between the two Sides on a reasonable basis so as to avoid double 
+taxation of the same item of income in both Sides. The provisions of the 
+Comprehensive Arrangement have been made by reference to those contained 
+in the Model Tax Conventions of the Organisation for Economic Co-operation 
+and Development (the “OECD”) and the United Nations.  Appropriate 
+modifications have been made to cope with the particular requirements of the 
+Mainland and Hong Kong.  In the interpretation and application of the 
+provisions of the Comprehensive Arrangement, both Sides will refer to the 
+Vienna Convention on the Law of Treaties (1969), the Commentaries on the 
+relevant Articles of the Model Tax Conventions of the OECD and the United 
+Nations, as well as to their respective principles of interpretation of taxation 
+law. 
+2  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+RELATIONSHIP BETWEEN THE COMPREHENSIVE 
+ARRANGEMENT AND THE ORDINANCE 
+5. 
+The Comprehensive Arrangement has been implemented in 
+accordance with section 49 of the Ordinance and accordingly has legal effect. 
+The Comprehensive Arrangement and the Ordinance (including subsidiary 
+legislation) are interrelated and complement each other. For matters falling 
+within its scope, the Comprehensive Arrangement performs the function of 
+allocating the right to tax between the two Sides. When the right to tax has 
+been allocated, both Sides will continue to refer to their respective domestic 
+taxation legislation to resolve problems of tax administration and enforcement, 
+such as in deciding whether certain income should be subject to tax, and in the 
+computation of assessable income and tax payable. 
+6. 
+In handling problems arising from any inconsistency between the 
+Comprehensive Arrangement and the Ordinance, priority will be accorded to 
+the Comprehensive Arrangement to ensure compliance with its provisions.  
+Hong Kong adopts the “preferential treatment” principle, i.e. where the 
+Comprehensive Arrangement and the Ordinance contain different provisions 
+relating to the same matter, preference will be given to the provisions that are 
+most beneficial to the taxpayers. For example, if a Mainland resident renders 
+employment services in Hong Kong but does not meet the exemption 
+conditions stipulated in Article 14 (e.g. his remuneration is paid by a Hong 
+Kong employer), he will still be exempt from tax under the Ordinance if his 
+visit to Hong Kong in the year of assessment concerned does not exceed a total 
+of 60 days. 
+7. 
+The Comprehensive Arrangement should not affect existing 
+concessional practices in Hong Kong. Take for example the case of a Hong 
+Kong manufacturer who concludes a contract processing arrangement with a 
+Mainland entity.  In accordance with paragraphs 13 to 19 of Departmental 
+Interpretation and Practice Notes No. 21 (Revised 1998), 50% of his profits 
+may be regarded as profits arising outside Hong Kong and not chargeable to 
+profits tax in Hong Kong. This method of apportioning profits that arise both 
+inside and outside Hong Kong on a 50:50 basis remains applicable. 
+According to the provisions of the Comprehensive Arrangement, the Hong 
+Kong manufacturer could be regarded as having a permanent establishment in 
+the Mainland and is therefore liable to tax there. However, it is noted that it is 
+3  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+not the present intention of the Mainland to change the way it taxes profits 
+derived from this type of operation.  Nevertheless, the possibility that in future 
+profits attributable to the permanent establishment may be taxed in accordance 
+with the Comprehensive Arrangement cannot be ruled out. 
+EFFECTIVE DATES AND APPLICABLE TEXT 
+8. 
+The Comprehensive Arrangement entered into force on 8 December 
+2006. In the Mainland, the provisions of the Comprehensive Arrangement 
+shall apply to income derived in taxable years beginning on or after 1 January 
+2007; and in Hong Kong, in years of assessment beginning on or after 1 April 
+2007. The exchange letters became effective on 11 September 2007 that was 
+the date of signature and the Second Protocol became effective on 11 June 
+2008. 
+9. 
+A Hong Kong enterprise may adopt the end date of a year of 
+assessment as its accounting date, i.e. 31 March, or any other date falling 
+within that year of assessment. The “basis period” for the enterprise will be 
+the year ending on the accounting date that falls within that year of assessment. 
+The basis period for the year of assessment 2007/08 may therefore commence 
+as early as 2 April 2006 (i.e. the period from 2 April 2006 to 1 April 2007 as 
+the basis period for the year of assessment 2007/08).  Income derived during 
+that basis period will be dealt with in accordance with the provisions of the 
+Comprehensive Arrangement. 
+10. 
+In Hong Kong, since the policy of bilingual legislation is in place, 
+both the English and the Chinese texts of the Comprehensive Arrangement are 
+legally binding. 
+It stands to reason, however, since the Comprehensive 
+Arrangement is written in the Chinese language only, that any negotiation 
+between the Mainland and Hong Kong on the implementation of the 
+Comprehensive Arrangement would be conducted with reference to the 
+Chinese text. 
+4  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Article 1    PERSONS COVERED 
+11. 
+The stated purpose of the Comprehensive Arrangement is for the 
+avoidance of double taxation in both Sides.  The Comprehensive Arrangement 
+only applies to persons who are residents of One Side or both Sides. The 
+terms “resident of the Mainland” and “resident of Hong Kong” are defined in 
+paragraph 1 of Article 4. 
+Article 2 
+TAXES COVERED 
+12. 
+In contrast to the Limited Arrangement, the Comprehensive 
+Arrangement adds property tax as one of the taxes of Hong Kong under its 
+coverage. More particularly, the existing taxes covered by the Comprehensive 
+Arrangement are profits tax, salaries tax and property tax, whether or not the 
+tax is charged under personal assessment, in Hong Kong; and individual 
+income tax, foreign investment enterprises income tax and foreign enterprises 
+income tax in the Mainland. According to Article 1 of the Second Protocol, in 
+the Mainland the existing taxes covered by the Comprehensive Arrangement 
+starting from 2008 are individual income tax and enterprise income tax. 
+Other taxes do not come within the scope of the Comprehensive Arrangement 
+(except that business tax is included in the Mainland for the purposes of Article 
+8 of the Comprehensive Arrangement, see paragraph 67 below). 
+13. 
+The Comprehensive Arrangement applies to all income that is 
+subject to the abovementioned taxes, including taxes on gains from the 
+alienation of movable and immovable property and taxes on capital 
+appreciation. As such, receipts of capital nature come within the scope of the 
+Comprehensive Arrangement. However, it is left to the domestic law of each 
+Side to decide whether receipts of capital nature should be taxed. 
+14. 
+The Comprehensive Arrangement will also apply to any identical or 
+substantially similar taxes that are imposed after the date of signature of the 
+Comprehensive Arrangement in addition to, or in place of, the existing taxes as 
+well as any other taxes falling within Article 2 which may be imposed in future. 
+5  
+
+  
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Article 3    GENERAL DEFINITIONS 
+15. 
+To facilitate the accurate interpretation and implementation of the 
+Comprehensive Arrangement by both Sides, definitions of some of its key 
+terms have been included in Article 3. 
+16. 
+The term “person” has been defined widely in the Comprehensive 
+Arrangement to include an individual, a company, a trust, a partnership and any 
+other body of persons. 
+17. 
+The term “enterprise” applies to the carrying on of business activities 
+of any form. The term “business” includes the performance of professional 
+services and other activities of an independent character.  The terms 
+“enterprise of One Side” and “enterprise of the Other Side” mean respectively 
+“an enterprise carried on by a resident of One Side”, and “an enterprise carried 
+on by a resident of the Other Side”. An enterprise carried on by a resident 
+includes an enterprise carried on by a resident company, a resident individual, a 
+resident partnership, or a resident body of persons. 
+18. 
+Paragraph 3 of Article 3 expressly states that as regards the 
+application of the Comprehensive Arrangement by One Side (e.g. tax is 
+imposed in accordance with the Comprehensive Arrangement), any term not 
+defined therein shall, unless the context otherwise requires, have the meaning 
+which it has at the time of the application under the laws of that Side 
+concerning the relevant taxes. 
+Article 4  
+RESIDENT 
+19. 
+In view of the differences between the taxation systems in the 
+Mainland and Hong Kong, both Sides define the term “resident of One Side” 
+differently.  
+6  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                        
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+20. 
+The Mainland basically follows the Model Tax Convention of the 
+OECD with its definition of the term “resident of the Mainland”1. Since Hong 
+Kong adopts a territoriality concept of taxation, tax is only imposed upon 
+income derived from Hong Kong.  No one is liable to tax in Hong Kong 
+merely because of his resident status.  As such, Hong Kong is not in a position 
+to adopt the definition provided in the OECD Model Tax Convention.  Instead, 
+a detailed definition of “resident of Hong Kong” has been included in the 
+Comprehensive Arrangement to enable taxpayers to ascertain whether they are 
+entitled to the benefits of the Comprehensive Arrangement.  It should be noted, 
+however, that the definition of “resident of Hong Kong”(香港居民) in the 
+Comprehensive Arrangement is different from the meaning given to “a resident 
+person”(居港者) in section 20AB of the Ordinance.  With regard to the latter, 
+the Ordinance makes it clear that the meaning applies only to the interpretation 
+of provisions relating to offshore funds. 
+(I) 
+ Resident individual 
+21. 
+In Hong Kong, a resident individual means: 
+(1)  
+an individual who ordinarily resides in Hong Kong; 
+(2)  
+an individual who stays in Hong Kong for more than 180 days 
+during the relevant year of assessment or for more than 300 
+days in two consecutive years of assessment (one of which is 
+the relevant year of assessment). 
+22. 
+It is generally considered that an individual “ordinarily resides” in 
+Hong Kong if he has a permanent home in Hong Kong where he or his family 
+lives. Other relevant factors include the duration of his stay in Hong Kong, 
+whether he has a permanent place of residence in Hong Kong, whether he owns 
+any property overseas for residential purposes, and whether he is primarily 
+resident in Hong Kong or overseas. 
+According to Article 4(1) of the Comprehensive Arrangement and the amendment in Article 2 of 
+the Second Protocol, in the Mainland “resident of One Side” refers to any person who, under the 
+laws of the Mainland, is liable to tax therein by reason of his/its domicile, residence, place of 
+establishment, place of effective management or any other criterion of a similar nature. This term, 
+however, does not include any person who is liable to tax in the Mainland in respect of income 
+from sources in the Mainland. 
+7  
+1 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+23. 
+In calculating the 180 or 300 days of stay in Hong Kong, an 
+individual will be considered to be a Hong Kong resident if he stays in Hong 
+Kong for a period or a number of periods amounting to more than 180 days in 
+the relevant year of assessment, or for a period or periods amounting to more 
+than 300 days in two consecutive years of assessment (one of which is the 
+relevant year of assessment). However, where the individual concerned is 
+also a permanent resident of a third State and makes investment or carries on 
+business in the Mainland, it is known that the Mainland will apply any treaty 
+signed between China and the State of which that individual is a permanent 
+resident. If there is no such treaty, the Mainland would consider to apply its 
+relevant domestic laws. 
+24. 
+Where, under the Comprehensive Arrangement, an individual is a 
+resident of both Sides, his status will be determined in accordance with the 
+order of priority set out in paragraph 2 of Article 4: 
+(1)  
+he shall be deemed to be a resident only of the Side in which 
+he has a permanent home available to him; if he has a 
+permanent home available to him in both Sides, he shall be 
+deemed to be a resident only of the Side with which his 
+personal and economic relations are closer (“centre of vital 
+interests”); 
+(2)  
+if the Side in which he has his centre of vital interests cannot 
+be determined, or if he does not have a permanent home 
+available to him in either Side, he shall be deemed to be a 
+resident only of the Side in which he has an habitual abode; 
+(3)  
+if he has an habitual abode in both Sides or in neither of them, 
+the competent authorities of both Sides shall resolve the issue 
+by mutual agreement. 
+25. 
+If an individual who is a resident of both Sides, but deemed in 
+accordance with the abovementioned provisions to be a resident of Hong Kong, 
+the tax authorities will treat him as a resident of Hong Kong when applying the 
+provisions of the Comprehensive Arrangement. The term “permanent home” 
+in paragraphs 22 and 24 above refers to a home owned or possessed by an 
+individual that is permanent in nature. In other words, this home must be 
+8  
+
+ 
+ 
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+retained for permanent use as opposed to being for temporary stays. If the 
+individual has a permanent home in both Sides concurrently, it is necessary to 
+ascertain with which of the two Sides his personal and economic relations are 
+closer. Regard will be had to his family and social relations; his occupations; 
+his political, cultural and other activities; his place of business; and the place 
+from which he administers his property, etc.  The circumstances must be 
+examined as a whole, but it is nevertheless obvious that considerations based 
+on the personal acts of the individual must receive special attention. 
+(II) 
+Resident company 
+26. 
+Where a company is incorporated in Hong Kong, or if incorporated 
+outside Hong Kong is normally managed or controlled in Hong Kong, it will be 
+considered to be a resident of Hong Kong under paragraph 1(2)(iii) of Article 4. 
+A company incorporated in Hong Kong includes a company that is 
+incorporated as a legal entity in accordance with the Companies Ordinance 
+(Cap. 32) of Hong Kong. 
+27. 
+The concept of “normally managed or controlled in Hong Kong”, as 
+compared to that of “central management and control” established in common 
+law, has a broader meaning as it does not require that both management and 
+control be exercised in Hong Kong. “Management”, in this context, refers to 
+management of daily business operations, or implementation of the decisions 
+made by top management, etc. “Control”, on the other hand, refers to control 
+of the whole business at the top level, including formulating the central policy 
+of the business, making strategic policies of the company, choosing business 
+financing, evaluating business performance, etc.  The board of directors 
+usually exercises “control”. In other words, if the business of the company is 
+normally managed or controlled in Hong Kong, including the management of 
+its daily business operations, or the implementation of the decisions made by 
+top management, or the making of top-level policies, in Hong Kong, the 
+company will be considered to be a resident of Hong Kong.  The 
+“management” or “control” of a company may, of course, be conducted in 
+more than one place. However, so long as a company is normally managed or 
+controlled in Hong Kong, it will be considered to be a resident of Hong Kong. 
+If the Hong Kong branch of an overseas bank is managed in Hong Kong, the 
+bank will be regarded as a resident of Hong Kong.  The Mainland, however, 
+takes the view that in deciding whether an overseas bank is “normally managed 
+9  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+or controlled in Hong Kong”; one should consider the management or control 
+of the bank instead of that of the branch in Hong Kong only.  Hong Kong will 
+continue to discuss with the Mainland on this point with a view to reaching a 
+consensus. 
+28. 
+While the term “normally managed or controlled” has a broader 
+meaning than that of “central management and control”, in principle, a 
+company will only be a resident of the place in which it actually exercises its 
+business operations or control.  The conclusion is wholly one of fact. 
+Regard will be had to factors such as the nature of business operated by the 
+company, mode of operation, whether it has a permanent office or employs 
+staff in Hong Kong, and whether Hong Kong is the place where its board of 
+directors meets to formulate policy. 
+29. 
+Where by reason of the definitions adopted by both Sides, a 
+company is a resident of both Sides, its resident status will be determined in 
+accordance with paragraph 3 of Article 4, that is, the company shall be deemed 
+to be a resident only of the Side in which its place of effective management is 
+situated. 
+30. 
+The term “place of effective management” refers to the place where 
+key management and strategic decisions that are necessary for the conduct of 
+the company’s business are in substance made. Under normal circumstances, 
+it is the place where the most senior persons of a company formulate the 
+direction and work plans of the company. A company can have only one 
+place of effective management at any one time. 
+(III) Resident persons other than individuals and companies 
+31. 
+It is stated in paragraph 1(2)(iv) of Article 4 that any other person 
+constituted under the laws of Hong Kong, or if constituted outside Hong Kong, 
+being normally managed or controlled in Hong Kong, will be considered to be 
+a resident of Hong Kong. In Hong Kong, partnerships are the mode most 
+likely to be encountered. In determining whether a trust, partnership or any 
+other body of persons is normally managed or controlled in Hong Kong, the 
+criteria are the same as those adopted in determining the resident status of a 
+company. 
+10  
+
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Certification of resident status 
+32. 
+In applying the Comprehensive Arrangement, the tax authority of the 
+Mainland may require an individual, a company, or a body of persons to 
+produce a certificate from the Hong Kong Inland Revenue Department 
+certifying that the person is a “resident” of Hong Kong.  This would generally 
+only be required where there is a possibility that the person is a resident of both 
+Sides, or there is a need to verify the resident status of the person.  The 
+relevant application forms and procedures are published on the Inland Revenue 
+Department website (www.ird.gov.hk). 
+33. 
+Upon receipt of an application, the Inland Revenue Department will 
+examine the information supplied by the person, and if it is sufficient, issue a 
+Certificate of Hong Kong Resident Status for the purposes of the 
+Comprehensive Arrangement and the processing time normally requires 21 
+working days. Where the evidence available is insufficient, the Department 
+will request the applicant to supply the additional information required. 
+34. 
+In general, for a company that is incorporated in Hong Kong, a 
+Certified Extract of Information on the Business Register or a copy of the 
+Certificate of Incorporation of the company is sufficient evidence.  An 
+application for a Certified Extract of Information on the Business Register may 
+be made online or in person. 
+35. 
+On the other hand, where the Inland Revenue Department is unable 
+to ascertain that a person is a resident of the Mainland from the available 
+information, it will issue a letter referring the person to the Mainland tax 
+authorities to issue a certificate of resident status for him. If the person is 
+unable to produce proof of his status, he will not be entitled to the benefits of 
+the Comprehensive Arrangement. 
+Article 5  
+PERMANENT ESTABLISHMENT 
+The concept of a permanent establishment 
+36. 
+Three criteria, namely, space (a fixed place of business), time 
+(continuous or aggregate periods), and function (activities of a preparatory or 
+11  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+auxiliary character), are used to ascertain whether the activities of an enterprise 
+of One Side constitute a permanent establishment in the Other Side. 
+Paragraph 1 of Article 5 generally explains that a permanent establishment is a 
+fixed place of business through which the business activities of the enterprise 
+are carried on.  There is no qualification on the scale or the form of the place 
+of business. A permanent establishment will normally have the following 
+features: 
+(1)  
+It must be a place of business. This may include a house, a 
+site, equipment or facilities (such as machinery and 
+equipment), a warehouse, and a stall used for carrying on the 
+business of the enterprise, whether owned or rented by the 
+enterprise. 
+(2)  
+It must be a fixed place of business with a certain degree of 
+permanence.  The temporary interruption or suspension of 
+business activities conducted at a fixed place of business will 
+not affect the existence of a permanent establishment. 
+(3)  The enterprise must carry on the whole or a part of its 
+business through this fixed place of business. 
+37. 
+Paragraph 2 of Article 5 provides that the term “permanent 
+establishment” includes especially “a place of management; a branch; an office; 
+a factory; a workshop; a mine, an oil or gas well, a quarry or any other place of 
+extraction of natural resources”. 
+It is clear from the words “includes 
+especially” that the paragraph does not preclude the determination of any other 
+place of business as a permanent establishment in accordance with the general 
+definition of the term. It should be noted that the “place of management” 
+mentioned in the list refers to a place of work or an office where some of the 
+supervisory activities for an enterprise may be exercised. This is in contrast to 
+the criteria in Article 4, i.e. the “normally managed or controlled in Hong 
+Kong” criterion used for determining whether a person is a Hong Kong resident; 
+the “head office” criterion used for determining whether a person is a resident 
+of the Mainland prior to the effective date of the Second Protocol; and the 
+“place of effective management” criterion used for resolving the issue of dual 
+residence of both Sides. Paragraph 7 of Article 5 is also pertinent, providing 
+that the fact that a company which is a resident of One Side controls or is 
+12  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+controlled by a company which is a resident of the Other Side, or which carries 
+on business in that Other Side, will not of itself constitute either company a 
+permanent establishment of the other. 
+A building site, a construction, assembly or installation project 
+38. 
+The term “permanent establishment” also includes “a building site, a 
+construction, assembly or installation project or supervisory activities in 
+connection therewith, but only if such site, project or activities last more than 6 
+months”. The Ordinance imposes tax on income derived from contracting 
+work carried out in Hong Kong in accordance with the territoriality principle. 
+The duration of the work is not a relevant factor. However, pursuant to the 
+Comprehensive Arrangement, chargeability of profits in respect of contracting 
+work carried out in Hong Kong by an enterprise of the Mainland will be 
+governed by the duration of the work. An enterprise of the Mainland will be 
+deemed to have a permanent establishment in Hong Kong only if the 
+contracting work carried out in Hong Kong lasts more than six months. 
+Profits attributed to that permanent establishment will be subject to tax in Hong 
+Kong in accordance with the provisions of Article 7 (Business Profits) (see 
+paragraphs 55 to 66 below). Profits in respect of contracting work of a shorter 
+duration will not be subject to tax in Hong Kong. Similarly, an enterprise of 
+Hong Kong will not be regarded as having a permanent establishment in the 
+Mainland if contracting work carried out in the Mainland does not last more 
+than six months and accordingly will not be subject to tax there. 
+39. 
+The period for which a project is carried out is counted from the date 
+the contractor commences work (including any preparatory activities) up until 
+the date on which the work is totally completed and handed over to the user. 
+If the period covers two years, the period is counted on a continuous basis 
+straddling over the years in question. In a case where two or more 
+sub-projects are contracted for by a person at the same site or for the same 
+project, the period is counted from the date of commencement of the first 
+sub-project to the date of completion of the last sub-project of that person. In 
+other words, the respective sub-projects would not be counted separately. 
+“Two or more sub-projects contracted for at the same site or for the same 
+project” refers to sub-projects that would form a coherent whole commercially 
+and geographically.  Where sub-projects are situated at different localities and 
+are contracted for in relation to different projects, the respective periods would 
+13  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+be counted separately. In such a case a permanent establishment would not be 
+considered to exist in relation to a particular sub-project if it does not last more 
+than 6 months. A project that does not last more than 6 months would not be 
+regarded as a permanent establishment even if another project of the enterprise 
+constitutes a permanent establishment. 
+40. 
+Where, after the commencement of work, a project is suspended (but 
+not terminated or ended) pending, for example, the arrival of equipment and 
+materials or because of bad weather, and the persons, equipment and facilities 
+as well as materials involved have not been completely moved out, the duration 
+of the project will, in such a case, be counted continuously without any 
+deduction for the days on which the project is suspended. 
+41. 
+If the enterprise subcontracts part of a project to a subcontractor who 
+commences work earlier than the contractor, then in accordance with paragraph 
+39 above, the duration of the entire project would be counted from the date the 
+subcontractor commences work up to the date on which the work is totally 
+completed and handed over to the user. This method of counting the project 
+period does not affect the separate and independent calculation of the duration 
+of continuous work by the subcontractor.  Where a subcontractor is an 
+enterprise of the Mainland, its subcontracted work in Hong Kong will not 
+constitute a permanent establishment if it does not last more than six months. 
+In such a case, exemption from profits tax in Hong Kong would be granted 
+under the Comprehensive Arrangement to the subcontractor.  On the other 
+hand, if the subcontractor is a resident of Hong Kong operating in the Mainland, 
+exemption from tax in the Mainland would likewise be granted under the 
+Comprehensive Arrangement. 
+Provision of services by an enterprise 
+42. 
+A permanent establishment also includes “the furnishing of services, 
+including consultancy services, by an enterprise of One Side in the Other Side, 
+directly or through employees or other personnel engaged by the enterprise, but 
+only if such services continue (for the same or a connected project) for a period 
+or periods aggregating more than 6 months within any 12-month period”. The 
+scope of consultancy services includes: 
+14  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(1)  
+improvement of existing production facilities and products, 
+selection of technical know-how, or enhancement of 
+supervisory and management skills, etc.; 
+(2)  feasibility studies of investment projects and selection of 
+design plans. 
+43. 
+The counting of “a period or periods aggregating more than 6 
+months within any 12-month period” may commence with any month during 
+the course of a service contract. Where services have been furnished by an 
+enterprise directly or through employees or other personnel in the Other Side 
+for a continuous or cumulative period of more than 6 months within any 
+12-month period, the enterprise will be considered to have a permanent 
+establishment in the Other Side. 
+Profits attributed to that permanent 
+establishment will be subject to tax in the Other Side in accordance with the 
+provisions of Article 7 (Business Profits) (see paragraphs 55 to 66 below). In 
+the determination of whether a Mainland enterprise furnishing services should 
+be regarded as having a permanent establishment in Hong Kong, the criterion is 
+whether services are furnished by the enterprise directly (e.g. a sole-proprietor) 
+or through employees or other personnel in Hong Kong for a continuous or 
+cumulative period of more than 6 months (within any 12-month period). 
+There is no definition of the term “month” in the Comprehensive Arrangement. 
+The Commentary of the United Nations Model has not given further 
+explanations of the relevant provision and has not specified clearly how the 6 
+months are to be counted. Hence the Mainland and Hong Kong have adopted 
+different counting methods. The Mainland considers that since only “month” 
+is provided as a counting unit under the Comprehensive Arrangement, she is 
+entitled not to consider the number of days in its implementation.  The 
+Mainland adopts the following method of counting the months: the Mainland 
+will take the period from the month in which an employee of a Hong Kong 
+enterprise arrived in the Mainland for furnishing services up until the month in 
+which the project was completed and the employee left the Mainland as the 
+relevant period. If during this relevant period, no service was provided by the 
+employee in the Mainland for a period of 30 consecutive days, 1 month can be 
+deducted. If it results in more than 6 months by using this counting method, 
+the Hong Kong enterprise will be considered to have a permanent 
+establishment in the Mainland.  For a project that lasts for more than 12 
+months, any 12-month period commencing from the month the employee 
+15  
+
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+arriving in the Mainland or ending in the month leaving the Mainland during 
+the course of the project shall be adopted for the purposes of applying the 
+counting method.  In Hong Kong, the term “month” is defined in the 
+Interpretation and General Clauses Ordinance (Cap. 1) as “calendar month”. 
+In its ordinary meaning, month (calendar month) means a period of time 
+between the same dates in successive calendar months; a period of around 30 
+days (365 days divided by 12); a period of 28 days or a period of 4 weeks. 
+For the purposes of paragraph 3(2) of Article 5, Hong Kong considers that the 
+term “month” to be a period of 30 days. In counting whether a Mainland 
+enterprise has furnished services in Hong Kong “for a period or periods 
+aggregating more than 6 months within any 12-month period”, Hong Kong will 
+add together each time period that services have been provided in Hong Kong 
+by the Mainland enterprise directly or through its employees (irrespective of 
+the length of the time period) within any 12-month period. If the cumulative 
+number of days during the time period or time periods during which services 
+have been provided in Hong Kong within that 12-month period exceeds 180 
+days, Hong Kong would consider that the Mainland enterprise has a permanent 
+establishment in Hong Kong. With effect from 11 June 2008, the term “6 
+months” was repealed and substituted by “183 days” under Article 3 of the 
+Second Protocol.  In other words, if within any 12-month period the 
+cumulative number of days during which services have been provided by an 
+enterprise of One Side in the Other Side exceeds 183 days, that enterprise will 
+be regarded as having a permanent establishment in the Other Side. For the 
+transitional arrangement, Hong Kong agreed with the Mainland that the new 
+“183 days” rule will only apply to those services which commenced after, and 
+for which the employees rendering such services arrived at Hong Kong after, 
+the effective date of the Second Protocol. For those enterprises which have 
+commenced to provide services in Hong Kong prior to the effective date of the 
+Second Protocol, the original “6 months” rule will still be adopted in 
+determining whether they have a permanent establishment in Hong Kong. 
+Whilst the method of counting the “183 days” was not stated in the Second 
+Protocol, both Sides will in practice use the “days of physical presence” 
+method. The day when one is in the Other Side, and the day of arrival or 
+departure, irrespective of the duration and the purpose of the stay, will be 
+counted as one day. This is because it is difficult if not impossible for the tax 
+authority to ascertain, and for the taxpayers to prove, whether services were 
+rendered on any particular day of presence in the jurisdictions concerned. 
+16  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The place where preparatory or auxiliary activities are conducted 
+44. 
+In defining a permanent establishment, the Comprehensive 
+Arrangement excludes a fixed place of business whose activities, for the 
+enterprise, are purely of a preparatory or auxiliary character. This is because 
+such activities, even if carried on through a fixed place of business, are of a 
+preparatory or auxiliary character and do not themselves directly generate 
+profits. 
+45. 
+Paragraph 4 of Article 5 lists various activities of a preparatory or 
+auxiliary character that may be carried out for the enterprise without 
+constituting a permanent establishment.  They include: 
+(1)  
+the use of facilities solely for the purpose of storage, display 
+or delivery of goods or merchandise belonging to the 
+enterprise; 
+(2)  
+the maintenance of a stock of goods or merchandise belonging 
+to the enterprise solely for the purpose of storage, display or 
+delivery; 
+(3)  
+the maintenance of a stock of goods or merchandise belonging 
+to the enterprise solely for the purpose of processing by 
+another enterprise; 
+(4)  
+the maintenance of a fixed place of business solely for the 
+purpose of purchasing goods or merchandise, or of collecting 
+information, for the enterprise; 
+(5)  
+the maintenance of a fixed place of business solely for the 
+purpose of carrying on, for the enterprise, any other activity of 
+a preparatory or auxiliary character; 
+(6)  
+the maintenance of a fixed place of business solely for any 
+combination of the activities mentioned in subparagraphs (1) 
+to (5) above, provided that the overall activity of the fixed 
+place of business resulting from this combination is of a 
+preparatory or auxiliary character. 
+17  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+46. 
+The purpose of paragraph 4 of Article 5 is to clarify what are 
+accepted as genuine “representative offices” and not regarded as permanent 
+establishments subject to tax.  However, attention should be drawn to the 
+following: 
+(1)  
+the activities should be for the enterprise itself; 
+(2)  
+the activities should not directly generate profits; and 
+(3)  
+the function of the place of business should only be of a 
+supportive nature. If the place of business conducts certain 
+supervisory management functions for the enterprise or 
+manages certain business operations, its activities would not 
+be regarded as being of the required character.  In this event, 
+the place of business would be regarded as a place of 
+management and would therefore constitute a permanent 
+establishment. 
+Where the activities carried out in the Other Side by a representative office go 
+beyond the exceptions set out in paragraph 4 of Article 5, the representative 
+office would be regarded as a permanent establishment.  Profits attributed to 
+that permanent establishment would be taxed in the Other Side in accordance 
+with the provisions of Article 7 (Business Profits) (see paragraphs 55 to 66 
+below). 
+Business agent 
+47. 
+Paragraph 5 of Article 5 of the Comprehensive Arrangement 
+expressly points out that a dependent agent (i.e. an agent acting under the 
+control and leadership of an enterprise of One Side), who regularly acts on 
+behalf of that enterprise in the Other Side and has, and habitually exercises, an 
+authority to conclude contracts in the name of that enterprise, that enterprise 
+will be deemed to have a permanent establishment in the Other Side. In Hong 
+Kong, if a dependent agent is not a final signatory to a contract but participates 
+in detailed negotiations and formulates the contract provisions on behalf of the 
+relevant Mainland enterprise, that Mainland enterprise will still be deemed to 
+have a permanent establishment in Hong Kong. Paragraph 6 of Article 5 
+states that an enterprise of One Side will not be deemed to have a permanent 
+18  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+establishment in the Other Side if its activities in that Other Side are conducted 
+through an independent agent who is acting in the ordinary course of its 
+business. However, when the activities of such an agent are wholly or almost 
+wholly performed on behalf of that enterprise, he would not be regarded as an 
+independent agent. The scope of his duties and responsibilities and whether 
+he has the right to conclude contracts on behalf of the enterprise would 
+determine whether or not that enterprise has a permanent establishment in that 
+Other Side. 
+Article 6 
+INCOME FROM IMMOVABLE PROPERTY 
+48. 
+“Income from immovable property” means the income derived from 
+the use of immovable property without transfer of ownership. Income derived 
+from alienation of immovable property will be dealt with in accordance with 
+the provisions of Article 13 (Capital Gains). 
+49. 
+It is specifically provided in paragraph 1 of Article 6 that income 
+derived by a resident of One Side from immovable property (including income 
+from agriculture or forestry) situated in the Other Side may be taxed in that 
+Other Side. 
+50. 
+According to the elaboration in paragraph 3 of Article 6, income 
+derived from immovable property may be income derived from the direct use 
+of immovable property by the owner, such as running a farm or carrying on 
+animal husbandry, or income derived from letting or use in any other form of 
+immovable property. 
+51. 
+To avoid possible disputes over differences in interpretation, the term 
+“immovable property” is given the meaning which it has under the laws of the 
+Side in which the property in question is situated. In Hong Kong, under the 
+Interpretation and General Clauses Ordinance (Cap. 1), “immovable property” 
+means: 
+(1) 
+land, whether covered by water or not; 
+(2) 
+any estate, right, interest or easement in or over any land; and 
+19  
+
+   
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+(3)  
+things attached to land or permanently fastened to anything 
+attached to land. 
+52. 
+Apart from defining the meaning of immovable property according 
+to the respective laws of each Side, it is specifically provided in paragraph 2 of 
+Article 6 that certain assets and rights must always be regarded as immovable 
+property. These assets and rights include property accessory to immovable 
+property, livestock and equipment used in agriculture and forestry, and rights to 
+which the provisions of general laws in respect of real estate apply. However, 
+ships and aircraft shall never be regarded as immovable property. 
+53. 
+The term “property accessory to immovable property” does not mean 
+a simple storage in or in connection with immovable property, but refers to a 
+component part of an essential function of the immovable property, such as an 
+air-conditioning system or elevator of a building. 
+54. 
+Paragraphs 1 and 3 of Article 6 also apply to income derived by an 
+enterprise from immovable property. According to the rules set out above, 
+income derived by an enterprise of One Side from immovable property situated 
+in the Other Side may be taxed in that Other Side, regardless of whether it has a 
+permanent establishment in that Other Side, whether the immovable property is 
+part of that permanent establishment, or whether the income is derived through 
+that permanent establishment. 
+Article 7 
+BUSINESS PROFITS 
+Allocation of taxing rights 
+55. 
+Business profits refer to profits derived by an enterprise from its 
+business activities.  Under the provisions of paragraph 1 of Article 7, the 
+profits of an enterprise of One Side shall be taxable only in that Side (i.e. the 
+Other Side has no right to tax) unless the enterprise carries on business in the 
+Other Side through a permanent establishment situated therein, in which case 
+its profits may be taxed in that Other Side, but only so much of them as is 
+attributable to that permanent establishment. 
+20  
+
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Computation of business profits 
+56. 
+The Comprehensive Arrangement does not expressly specify the 
+method for computing business profits, but instead sets out some principles 
+which must be followed. Both Sides may compute profits in accordance with 
+their own relevant domestic law, provided that such principles are followed. 
+In Hong Kong, assessable profits are based on profits computed by enterprises 
+in accordance with the prevailing generally accepted principles of commercial 
+accounting as adjusted in conformity with the provisions of the Ordinance. 
+57. 
+The principles stipulated in the Comprehensive Arrangement are set 
+out in paragraphs 2 and 3 of Article 7. Paragraph 2 stipulates that a permanent 
+establishment will be considered as a distinct and separate enterprise, while 
+paragraph 3 contains provisions in relation to the deduction of expenses and the 
+treatment of income. 
+58. 
+Where a permanent establishment situated in the Other Side carries 
+on business with the head office or other offices of the enterprise of which it is 
+a permanent establishment, it should do so in accordance with the arm’s length 
+principle as between two entirely independent enterprises engaged in the same 
+or similar activities. There will in each Side be attributed to that permanent 
+establishment the profits which it might be expected to make under such 
+conditions. For information concerning transfer pricing and the arm’s length 
+principle, see the relevant Departmental Interpretation and Practice Notes 
+issued by the Inland Revenue Department. 
+59. 
+In computing the profits of a permanent establishment, there will be 
+allowed as deductions expenses (wherever incurred) that are incurred for the 
+purposes of producing the relevant profits, including executive and general 
+administrative expenses so incurred (including a reasonable share of the 
+administrative expenses of the head office). Relevant expenses which can be 
+clearly attributed to that permanent establishment can be deducted. Otherwise, 
+an allocation of the relevant expenses should be made. The allocation can be 
+based on the proportion of the business turnover or gross profit of the 
+permanent establishment to that of the enterprise. The resultant expenses will 
+be considered as the expenses actually incurred by the permanent establishment, 
+though possibly not the amount actually paid by it. 
+21  
+
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+60. 
+A permanent establishment and its head office are one and the same 
+legal entity. Therefore, a permanent establishment should not pay any amount 
+to the head office for its investments or services. Paragraph 3 of Article 7 
+specifically sets out three categories of amounts which will not be deducted in 
+determining the profits of a permanent establishment, whether they are paid to 
+the head office of the enterprise or any of its other offices (other than 
+reimbursement of actual expenses): 
+(1)  
+by way of royalties, remuneration, fees or any other similar 
+payments in return for the use of patents or other rights; or 
+(2)  
+by way of commission for specific services performed or for 
+management; or 
+(3)  by way of interest on moneys lent to the permanent 
+establishment, except in the case of a banking enterprise, i.e. 
+relevant interest is deductible in such a case. 
+61. 
+Likewise, the above provisions will also apply to the income of a 
+permanent establishment, i.e. the amounts falling within the above three 
+categories (other than reimbursement of actual expenses) charged by the 
+permanent establishment to the head office of the enterprise or any of its other 
+offices would not be included in determining its profits, except that in the case 
+of a banking enterprise the relevant interest income would be included in 
+determining the profits of the permanent establishment. 
+Other methods of computing profits 
+62. 
+If the financial statements prepared by an enterprise can give a true 
+view of the state of affairs of the permanent establishment, they should be used 
+to determine the profits attributed to that permanent establishment.  However, 
+insofar as it has been customary in One Side to determine the profits to be 
+attributed to a permanent establishment by apportioning the total profits of the 
+enterprise to its various units or by any other methods provided for in the laws 
+of the Side concerned, the enterprise may continue using that method. 
+However, the result of using such a method must be in accordance with the 
+principles contained in Article 7. 
+22  
+
+   
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+                                                        
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+63. 
+For banks and other persons whose head offices are situated outside 
+Hong Kong, Rules 3 and 5 of the Inland Revenue Rules provide methods for 
+determining the profits of their branches and permanent establishments2 in 
+Hong Kong.  Those methods are, however, only applicable where the 
+financial statements of the branches and permanent establishments in Hong 
+Kong do not disclose their true profits arising in or derived from Hong Kong. 
+(1)  
+Under Rule 3, the same proportion of the total profits of the 
+bank as the assets of the Hong Kong branch bear to the total 
+assets of the bank would be treated as profits of the Hong 
+Kong branch. 
+For the purposes of determining the total 
+profits of the bank, similar adjustments for tax purposes 
+would be made in the accounts of the bank as would have 
+been necessary had the whole of those profits been liable to 
+tax under the Ordinance. If the assessor is of the opinion 
+that the above method would be inappropriate, he may 
+estimate the amount of the profits of the Hong Kong branch. 
+(2)  
+Under Rule 5, the same proportion of the total profits of the 
+enterprise as the turnover in Hong Kong bears to the total 
+turnover of the enterprise would be treated as profits of the 
+permanent establishment in Hong Kong. For the purposes of 
+determining the total profits of the enterprise, similar 
+adjustments for tax purposes would be made in the accounts 
+of the enterprise as would have been necessary had the whole 
+of those profits been liable to tax under the Ordinance. If the 
+assessor is of the opinion that the above method would be 
+inappropriate, he may compute the amount of the profits 
+derived from Hong Kong on a fair percentage of the turnover 
+in Hong Kong. 
+Other principles 
+64. 
+Paragraph 5 of Article 7 of the Comprehensive Arrangement stipulates 
+that no profits will be attributed to a permanent establishment by reason of the 
+“Permanent establishment” for the purposes of Rule 5 is defined to mean a “branch, management 
+or other place of business, but does not include an agency unless the agent has, and habitually 
+exercises, a general authority to negotiate and conclude contracts on behalf of his principal or has a 
+stock of merchandise from which he regularly fills orders on his behalf”. 
+23  
+2 
+
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+mere purchase by that permanent establishment of goods or merchandise for 
+the enterprise. This is because purchasing activities do not directly generate 
+profits in the overall business activities. In fact, it is very difficult to compute 
+the part of the total business profits that is attributable to such purchasing 
+activities. 
+65. 
+The profits to be attributed to the permanent establishment must be 
+determined by the same method year by year unless there is good and sufficient 
+reason for a change. More particularly, the method should not be changed 
+merely because some other method would produce more favourable results. 
+66. 
+“Business profits” may include, apart from profits derived from 
+business activities, income such as that from immovable property, dividends 
+and interest. The taxation of these categories of income is governed by other 
+Articles of the Comprehensive Arrangement. To clarify the application of 
+Article 7 in relation to other Articles, paragraph 7 of Article 7 provides that 
+where profits include items of income which are dealt with separately in other 
+Articles of the Comprehensive Arrangement, then the provisions of those 
+Articles will not be affected by the provisions of Article 7. It should be noted, 
+however, that some Articles contain provisions stating that the provisions of 
+Article 7 shall apply if the relevant property in respect of which the income is 
+paid is effectively connected with a permanent establishment.  Those 
+provisions are paragraph 4 of Article 10, paragraph 5 of Article 11, paragraph 4 
+of Article 12, and paragraph 2 of Article 20. 
+Article 8 
+SHIPPING, AIR AND LAND TRANSPORT 
+67. 
+Article 8 provides that revenue and profits derived by an enterprise 
+of One Side (i.e. an enterprise of the Mainland or an enterprise of Hong Kong) 
+from the operation of ships, aircraft or land transport vehicles in shipping, air 
+and land transport businesses (except when the ship, aircraft or land transport 
+vehicle is operated solely between places in the Other Side) shall be exempt 
+from tax in the Other Side. The taxes exempted in the Mainland include 
+enterprise income tax and business tax. Enterprise income tax is calculated by 
+reference to profits whereas business tax is calculated by reference to revenue. 
+Accordingly, the Article specifically includes revenue and profits in the scope 
+of the exemption. Revenue and profits refer to revenue and profits derived by 
+24  
+
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+an enterprise from cross-border shipping, air and land transport businesses. 
+Revenue and profits of an enterprise derived from services provided in the 
+Other Side (other than those from cross-border shipping, air and land transport) 
+will not be exempt in that Other Side if such services are provided through a 
+permanent establishment situated in that Other Side. This Article also applies 
+to revenue and profits derived from participation in a partnership business, joint 
+venture business or international business agency. 
+Shipping transport 
+68. 
+Under Article 8, profits derived by a Hong Kong shipping enterprise 
+from its shipping business will be taxed in Hong Kong alone. In this regard, 
+the exercise of the taxing rights is subject to the provisions of section 23B of 
+the Ordinance. For example, where an enterprise is deemed to be carrying on 
+a business in Hong Kong as an owner of ships, “relevant sums” (as defined in 
+section 23B(12)) does not include any sums derived from any relevant carriage 
+shipped aboard a “registered ship” (as defined in section 23B(12)) at any 
+location within the waters of Hong Kong and proceeding to sea therefrom. 
+The ratio of the relevant sums to the total shipping revenue is used to apportion 
+the worldwide shipping profits of the Hong Kong ship-owner and calculate the 
+assessable shipping profits derived from Hong Kong. Accordingly any sums 
+from relevant carriage shipped aboard a registered ship at any location within 
+the waters of Hong Kong and proceeding to sea therefrom by a Hong Kong 
+shipping enterprise will continue to be exempt from tax in Hong Kong. 
+Air transport 
+69. 
+Likewise, profits derived by a Hong Kong air transport enterprise 
+from its air transport business will be taxed in Hong Kong alone. According 
+to section 23C of the Ordinance, “relevant sums” (as defined in section 23C (5)) 
+includes any sums derived from any relevant carriage shipped in Hong Kong 
+and any relevant charter hire. The proportion of the relevant sums to the total 
+revenue is used to apportion worldwide aircraft profits and calculate assessable 
+aircraft profits derived from Hong Kong. By virtue of section 23C(2A), sums 
+from relevant carriage and charter hire from the Mainland derived by a Hong 
+Kong air transport enterprise, that are exempt from tax in the Mainland under 
+the Comprehensive Arrangement, are included as relevant sums in calculating 
+profits chargeable to profits tax in Hong Kong. 
+25  
+
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Land transport 
+70. 
+Article 8 is regarded as having application to a Hong Kong 
+enterprise that carries on a business of land transport.  A land transport 
+business is subject to tax under section 14 of the Ordinance. That is, any 
+person who carries on a land transport business in Hong Kong is chargeable to 
+tax on the profits arising in or derived from Hong Kong. 
+71. 
+According to Article 8, a Hong Kong land transport enterprise will 
+only be subject to tax in Hong Kong and will be exempt from enterprise 
+income tax and business tax in the Mainland. Similarly, revenue earned by a 
+Mainland land transport enterprise from Hong Kong uplifts to the Mainland 
+will be exempt from profits tax in Hong Kong. 
+72. 
+A cross-border land transport business between the Mainland and 
+Hong Kong usually takes the form of a cooperative enterprise. Typically the 
+Hong Kong participant would make his investment in the form of vehicles and 
+capital. The Mainland participant would be responsible for obtaining permits 
+and licences, tax compliance and other management services.  The Hong 
+Kong participant would be responsible for Hong Kong uplifts and the Mainland 
+participant for uplifts in the Mainland.  Occasionally, the Hong Kong 
+participant could enter into a contract with the customer for the return trip. 
+This kind of cooperative enterprise is regarded as a joint business of 
+cross-border transport operated by residents of both Sides.  It follows, 
+pursuant to paragraph 2 of Article 8, that the respective shares of profits 
+derived by each participant from the joint business operation would be exempt 
+from tax by the Other Side and would be taxed in the Side of which the 
+participant is a resident in accordance with its taxation laws. 
+Article 9 
+ASSOCIATED ENTERPRISES 
+73. 
+For the purpose of relieving its total tax burden, a cross-border group 
+may, by means of altering the pricing or business charges (i.e., the transfer 
+pricing method), attempt to transfer the profits derived by an enterprise of the 
+group from cross-border business activities to an associated enterprise. 
+Article 9 provides that taxation authorities may make adjustments to profits 
+where transactions between associated enterprises have not been entered into 
+on an arm’s length basis. 
+26  
+
+   
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Adjusting the profits of an enterprise of One Side 
+74. 
+Paragraph 1 of Article 9 provides that in the following two different 
+situations, if the commercial or financial relations between the two enterprises 
+are different from those between independent enterprises, any profits which 
+would have accrued to one of the enterprises but have not done so by reason of 
+those relations, may be included in the profits of that enterprise and taxed as 
+such. The two situations are: 
+(1)  
+an enterprise of One Side participates directly or indirectly in 
+the management, control or capital of an enterprise of the 
+Other Side; or 
+(2)  the same person participates directly or indirectly in the 
+management, control or capital of an enterprise of One Side 
+and an enterprise of the Other Side. 
+Making an appropriate adjustment to the profits of an enterprise of the Other 
+Side 
+75. 
+Under the provisions of paragraph 1 of Article 9, where One Side 
+includes in the profits of an enterprise of that Side profits of an enterprise that 
+have been charged to tax in the Other Side, the Other Side shall make an 
+appropriate adjustment to the amount of the tax charged on those profits in 
+accordance with the provisions of paragraph 2. 
+76. 
+Insofar as Hong Kong is concerned, “appropriate adjustment” means 
+where the Inland Revenue Department agrees fully with the calculation of the 
+Mainland, the Hong Kong enterprise can get an adjustment of the full amount; 
+where the Department agrees with an amount less than that worked out by the 
+Mainland, the Hong Kong enterprise can get an adjustment of that smaller 
+amount; where the Department disagrees with the Mainland on the adjustment, 
+no adjustment will be made. The competent authorities of both Sides will, if 
+necessary, consult each other in determining such adjustment. 
+77. 
+The Hong Kong enterprise can present its case to the Inland Revenue 
+Department under Article 23 (Mutual Agreement Procedure) if its taxation 
+treatment is not in accordance with the provisions of the Comprehensive 
+27  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Arrangement. The competent authorities of both Sides would endeavour to 
+resolve the case by mutual agreement.  However, such a case must be 
+presented within 3 years from the first notification of the action resulting in 
+taxation not in accordance with the provisions of the Comprehensive 
+Arrangement. 
+78. 
+As the issue of transfer pricing arising from the provisions on 
+“associated enterprises” is complicated, the Inland Revenue Department 
+intends to publish a Departmental Interpretation and Practice Note on the 
+subject. The Note will provide information and guidance on the time limit for 
+claims, factors to be taken into consideration in relation to appropriate 
+adjustments, the tax adjustment methods, etc. 
+INCOME FROM INVESTMENT – DIVIDENDS, INTEREST AND 
+ROYALTIES 
+79. 
+Income derived from investment activities is indirect or passive 
+income, and is different from profits from business activities. The taxation of 
+such income (including dividends, interest and royalties) is governed by 
+specific Articles of the Comprehensive Arrangement. 
+80. 
+Under the Comprehensive Arrangement, the key principle in relation 
+to business profits is that an enterprise of One Side will not be taxed in the 
+Other Side unless it carries on business in that Other Side through a permanent 
+establishment situated therein. On the other hand, if the enterprise does carry 
+on business in the latter manner, the profits attributable to that permanent 
+establishment may be taxed in that Other Side.  However, for investment 
+income, the Side where the income arises has the taxing rights even if there is 
+no permanent establishment situated therein. 
+81. 
+Although the Side of the source of investment income has the taxing 
+rights, this does not mean that the Side of which the recipient is a resident has 
+no taxing rights. In other words, both the Side of source and the Side of 
+residence are given the right to tax the same item of investment income (the 
+Side of residence is required to give double taxation relief to its residents for 
+any income doubly taxed, see paragraphs 128 to 140 below). It is specifically 
+stipulated in the relevant provisions of the Comprehensive Arrangement that 
+28  
+
+ 
+ 
+ 
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+    
+ 
+the investment income should be taxed in the Side of source according to its 
+laws. Thus, where the domestic laws of the Side of source provide tax relief 
+or special tax treatment, the Comprehensive Arrangement does not affect the 
+application of such laws. 
+In addition, the relevant provisions of the 
+Comprehensive Arrangement set limits on the tax rates that the Side of source 
+may impose. 
+More particularly, notwithstanding the provisions of any 
+domestic laws of the Side of source, the tax imposed on investment income 
+derived by a resident of the Other Side (“beneficial owner” that satisfies the 
+following conditions) should not exceed the amount provided for in the 
+Comprehensive Arrangement. 
+82. 
+The Side of source will only limit its right to tax if a condition is met: 
+the beneficial owner of the investment income must be a resident of the Other 
+Side. “Beneficial owner” may be an individual, a company or a trust, and is 
+the person who actually receives the benefit and fully controls the income. 
+For example, if the investment income is received by a unit trust, the beneficial 
+owner is the unit trust itself, and is not the individual beneficiary of the unit 
+trust. Where the recipient of the investment income does not actually receive 
+the economic benefit of the income concerned, but only collects it in the 
+capacity of an agent or a nominee and will subsequently transfer the income to 
+the actual owner in accordance with a contract or law, such an agent or a 
+nominee will not be deemed to be the beneficial owner of the income. In 
+other words, even though an agent or a nominee is a resident of the Other Side, 
+the Side of source need not apply the tax limitation if the beneficial owner is 
+not a resident of the Other Side. 
+83. 
+On the other hand, as long as the “beneficial owner” is a resident of 
+the Other Side, the limitation of tax on the income in the Side of source 
+remains applicable, regardless of whether the agent or nominee is a resident of 
+the Other Side at the time of the receipt of the relevant income. 
+Article 10 
+DIVIDENDS 
+84. 
+Paragraph 1 of Article 10 provides that dividends paid by a company 
+which is a resident of One Side to a resident of the Other Side, may be taxed in 
+that Other Side, that is, the Side of residence has the right to tax the dividends. 
+The meaning of the term “pay” is not limited to actual payment but will include 
+29  
+
+ 
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+the fulfillment of the obligation to put funds at the disposal of the shareholder 
+in the manner required by contract or by custom. 
+85. 
+Paragraph 2 of Article 10 provides that such dividends may also be 
+taxed in the Side of which the company paying the dividends is a resident (i.e. 
+the Side of source) and according to the laws of that Side. The tax so charged, 
+in 2 tiers, shall not exceed: 
+(1)  
+where the beneficial owner is a company directly owning at 
+least 25% of the capital of the company which pays the 
+dividends, 5% of the gross amount of the dividends; 
+(2)  
+in any other case, 10% of the gross amount of the dividends. 
+86. 
+As dividends are not chargeable to tax in Hong Kong, the limitation 
+of tax rates has no practical application in Hong Kong.  It is also stipulated in 
+paragraph 2 of Article 10 that the limitation of tax rates on dividends will not 
+affect the taxation of the company in respect of the profits out of which the 
+dividends are paid. 
+87. 
+Paragraph 3 of Article 10 defines the term “dividends” to mean 
+“income from shares or other rights, not being debt-claims, participating in 
+profits” and “income from other corporate rights which is subjected to the same 
+taxation treatment as income from shares under the laws of the Side of which 
+the company making the distribution is a resident”.  The first part of the 
+meaning makes it clear that the relevant income must be derived from 
+shareholding rather than debt-claims. The second part links the definition to 
+the laws of the Side of which the company paying the dividends is a resident. 
+88. 
+The provisions of Article 7 (Business Profits) shall apply if the 
+beneficial owner of the dividends, being a resident of One Side, carries on 
+business in the Other Side (of which the company paying the dividends is a 
+resident) through a permanent establishment situated therein, and the 
+shareholding in respect of which the dividends are paid is effectively connected 
+with that permanent establishment. 
+89. 
+In respect of the taxation on dividends, paragraph 5 of Article 10 
+further provides that dividends paid by, or undistributed profits of, a company 
+30  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+which is a resident of One Side may not be taxed by the Other Side even if the 
+dividends paid or the undistributed profits consist of profits or income arising 
+in that Other Side. For example, where a Hong Kong resident company 
+carries on business through a permanent establishment situated in the Mainland 
+and makes profits, the relevant profits may be taxed in the Mainland under the 
+provisions of Article 7 (Business Profits). When the Hong Kong resident 
+company pays dividends out of its profits, the Mainland may not impose any 
+tax on the dividends, except insofar as such dividends are paid to a resident of 
+the Mainland, or insofar as the shareholding in respect of which the dividends 
+are paid is effectively connected with a permanent establishment situated in the 
+Mainland. 
+Article 11 
+INTEREST 
+90. 
+The taxation principles laid down in paragraphs 1 and 2 of Article 11 
+are the same as those in paragraphs 1 and 2 of Article 10. What differs is that 
+the source of interest is “the Side in which the interest arises”. Under the 
+provisions of paragraph 6 of Article 11, interest will be deemed to arise in a 
+Side when the payer is the Government of that Side, a local authority thereof or 
+a resident of that Side. However, where the person paying the interest has in a 
+Side a permanent establishment in connection with which the indebtedness on 
+which the interest is paid was incurred, and such interest is borne by that 
+permanent establishment, then such interest will be deemed to arise in the Side 
+in which the permanent establishment is situated. In other words, the source 
+of interest is the Side in which the payer who effectively bears the interest is 
+situated. 
+91. 
+The limitations of tax rates in the Side in which the interest arises are 
+in 2 tiers as follows: 
+(1)  
+the tax charged will not exceed 7% of the gross amount of the 
+interest, except in the following situation; 
+(2)  
+interest is exempt from tax in the Side of source if it is 
+received by the Government of the Other Side or any other 
+institutions mutually recognized by the competent authorities 
+of both Sides. 
+(Currently, the institutions mutually 
+31  
+
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+recognized by the competent authorities of both Sides are: in 
+the case of the Mainland, China Development Bank, The 
+Export-Import Bank of China and Agricultural Development 
+Bank of China, and with effect from 11 September 2007 the 
+National Council for Social Security Fund and China Export 
+& Credit Insurance Corporation; and in the case of Hong 
+Kong, the Hong Kong Monetary Authority.) 
+92. 
+The term “interest”, as defined in paragraph 4 of Article 11, means 
+“income from debt-claims of every kind, whether or not it is secured by 
+mortgage or whether or not it carries a right to participate in the debtor’s 
+profits” (i.e. interest is limited to income derived from debt-claims).  In 
+addition, “income from bonds, debentures and Government securities, 
+including premiums and prizes attaching to such bonds, debentures or 
+securities” are interest within the meaning of the definition.  Generally 
+speaking, the difference between the amount paid to and received from an 
+issuing institution by a subscriber is the interest on debentures.  Penalty 
+charges for late payment will not be regarded as interest. 
+93. 
+The provisions of paragraphs 1, 2 and 3 of Article 11 will not apply 
+if the beneficial owner of the interest, being the Government of One Side, a 
+local authority thereof or a resident of that Side, carries on business in the 
+Other Side in which the interest arises through a permanent establishment 
+situated therein and the debt-claim in respect of which the interest is paid is 
+effectively connected with that permanent establishment. In such a case, the 
+provisions of Article 7 (Business Profits) will apply. 
+94. 
+In a situation of the kind provided for in paragraph 7 of Article 11, 
+the provisions of Article 11 will have limited application. Such a situation is 
+one where, by reason of a special relation between the payer and the beneficial 
+owner of the interest or between both of them and some other person, the 
+amount of interest paid exceeds, for whatever reasons, the amount which would 
+have been agreed upon in the absence of such relation. In such a case, the 
+provisions of Article 11 will apply only to the last-mentioned amount. The 
+excess part of the payments will remain taxable according to the laws of each 
+Side, but due regard will still be had to the other provisions of the 
+Comprehensive Arrangement. 
+32  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+95. 
+As Hong Kong only taxes interest arising in Hong Kong from 
+business carried on in Hong Kong, the limitation of tax rates does not have any 
+practical application in Hong Kong. 
+Article 12 
+ROYALTIES 
+96. 
+The provisions of Article 12 and the criteria for determining the 
+locality of the source are the same as those for Article 11. Regarding the 
+limitation of the tax rate, it is 7% of the gross amount of the royalties in all 
+cases. 
+97. 
+The definition of “royalties” as provided for in paragraph 3 of Article 
+12 is wide enough to cover the provisions of paragraphs (a), (b), (ba) and (d) of 
+section 15(1) of the Ordinance. 
+98. 
+Where a resident of the Mainland receives royalties which are 
+deemed to be chargeable to tax under paragraphs (a), (b) and (ba) of section 
+15(1) of the Ordinance, the Mainland resident is taxed at the following rates by 
+virtue of section 21A (1)(b): 
+(1)  
+corporations – at a tax rate of 17.5% (the tax rate for the year 
+2007/08 is 17.5%) on 30% of the gross amount, i.e. 5.25% of 
+the gross amount; 
+(2)   persons other than corporations – at a tax rate of 16% (the tax 
+rate for the year 2007/08 is 16%) on 30% of the gross amount, 
+i.e. 4.8% of the gross amount. 
+Since the Comprehensive Arrangement has entered into force, as the applicable 
+tax rate is 7% which is higher than the rates mentioned above, royalties arising 
+in Hong Kong and paid to a resident of the Mainland will be taxed at the 
+effective rate (i.e. 5.25% or 4.8%) instead of the rate as provided for in the 
+Comprehensive Arrangement. However, if royalties arising in Hong Kong 
+and paid to a resident of the Mainland are part of a scheme directed at 
+exploiting section 21A of the Ordinance, the Comprehensive Arrangement will 
+not prejudice the right of Hong Kong to apply its laws and measures 
+concerning tax avoidance (see paragraph 158 below). 
+33  
+
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+99. 
+Where a resident of the Mainland receives royalties which are 
+deemed to be chargeable to tax under section 15(1)(d) of the Ordinance (for 
+example, hire charges for the use of or the right to use industrial, commercial 
+and scientific equipment in Hong Kong), such a resident will be taxed subject 
+to the provisions of the Comprehensive Arrangement as follows: 
+Example 1 
+Company A, a resident of the Mainland, derives from Hong Kong 
+royalties of $900,000 during the year from 1 April 2007 to 31 March 
+2008. 
+After deduction of allowable expenses and depreciation 
+allowances in respect of the relevant equipment, the amount of 
+assessable profits of Company A is $500,000 and the tax payable 
+thereon is $87,500 (i.e. 9.7% of the gross amount), calculated at the 
+rate of 17.5% (the tax rate for the year 2007/08 is 17.5%). 
+As the tax rate provided for in the Comprehensive Arrangement is 
+7% of the gross amount of royalties (i.e. $900,000 x 7%), the tax 
+payable by Company A will be reduced to $63,000. 
+Example 2 
+Same as Example 1 except that the amount of assessable profits of 
+Company A is $300,000 and the tax payable thereon is $52,500 (i.e. 
+5.8% of the gross amount), calculated at the rate of 17.5% (the tax 
+rate for the year 2007/08 is 17.5%). 
+As the tax rate provided for in the Comprehensive Arrangement is 
+7% of the gross amount of royalties, the tax payable remains as 
+$52,500, unaffected by the Comprehensive Arrangement. 
+100. 
+The provisions of Article 12 will not apply if the beneficial owner of 
+the royalties, being the Government of One Side, a local authority thereof or a 
+resident of that Side, carries on business in the Other Side in which the 
+royalties arise through a permanent establishment situated therein, and the right 
+or property in respect of which the royalties are paid is effectively connected 
+with that permanent establishment. In such a case, the provisions of Article 7 
+(Business Profits) will apply. In other words, if the abovementioned 
+34  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+  
+Mainland residents have a permanent establishment situated in Hong Kong, 
+and the right in respect of which the royalties are paid is effectively connected 
+with that permanent establishment, the royalties concerned will be included in 
+the computation of the profits of that permanent establishment. The profits of 
+that permanent establishment will be taxed in accordance with the provisions of 
+Article 7 (Business Profits). The limitation of tax rate as provided for in 
+Article 12 would have no application. 
+Article 13 
+CAPITAL GAINS 
+101. 
+Article 13 allocates the right of tax on the gains from the alienation 
+of property. It should be noted that Article 13 does not distinguish as to the 
+nature of the capital gains. Accordingly, “capital gains” may include gains of 
+a capital nature and gains of a revenue nature (speculative gains). 
+102. 
+Paragraph 1 of Article 13 deals with gains derived by a resident of 
+One Side from the alienation of immovable property situated in the Other Side. 
+Paragraph 2 of Article 13 deals with gains derived from the alienation of 
+movable property forming part of the business property of a permanent 
+establishment which an enterprise of One Side has in the Other Side, including 
+gains from the alienation of such a permanent establishment.  Both paragraphs 
+allow the Other Side to impose tax. This is consistent with the principle on 
+the allocation of taxing rights as provided for in Article 6 (Income from 
+Immovable Property) and Article 7 (Business Profits). The term “movable 
+property” means all property other than immovable property, including 
+intangible assets such as goodwill. 
+103. 
+Gains derived by an enterprise of One Side from the alienation of 
+ships or aircraft or land transport vehicles operated in shipping, air and land 
+transport or movable property pertaining to the operation of such ships, aircraft 
+or land transport vehicles, shall be taxable only in that Side under the 
+provisions of paragraph 3 of Article 13. This is consistent with the principle 
+on the allocation of taxing rights as provided for in Article 8 (Shipping, Air and 
+Land Transport). 
+104. 
+Paragraphs 4 and 5 of Article 13 deal with gains derived from the 
+alienation of shares in a company. 
+35  
+
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+105. 
+Under the provisions of paragraph 4 of Article 13, gains derived 
+from the alienation of shares in a company the assets of which are comprised, 
+directly or indirectly, mainly of immovable property situated in One Side may 
+be taxed in that Side. Both Sides, pursuant to paragraph 2 of the Protocol, 
+take 50% as the benchmark in determining whether the assets of a company are 
+comprised “mainly” of immovable property. Where the value of immovable 
+property is not less than 50% of the value of the total assets of a company, the 
+assets of that company will be deemed to be comprised mainly of immovable 
+property. In calculating the value of the total assets of a company, debts of 
+that company (including liabilities secured by mortgages on the relevant 
+immovable property) must not be deducted. Both Sides hold different views 
+as to the relevant point in time for deciding whether the value of immovable 
+property equals or exceeds 50% of the value of the total assets of the company. 
+Hong Kong holds the view that it means the time of the alienation of shares, 
+whereas the Mainland holds the view that it means any time in the period 
+during which the alienator held any shares in the company.  The State 
+Administration of Taxation has discussion with the Hong Kong Inland Revenue 
+Department and then concluded the Second Protocol. Both Sides agreed to 
+set a time frame of “3 years” for the purposes of deciding whether the value of 
+immovable property equaled or exceeded 50% of the value of the total assets. 
+Though the State Administration of Taxation has not adopted Hong Kong’s 
+interpretation, the specification of a time frame has already provided more 
+certainty in the interpretation of this provision. Hong Kong would continue to 
+discuss with the Mainland on this issue. 
+106. 
+Before the Second Protocol became effective, Hong Kong will 
+calculate the value of assets on the basis of market value as at the time of the 
+alienation of the shares concerned; whereas the Mainland will calculate the 
+value on the basis of historical cost. In general, Hong Kong Inland Revenue 
+Department will accept the last available audited financial statements of the 
+company whose shares are alienated, supplemented by its management 
+accounts up to the date of alienation of the shares (the latter may be unaudited), 
+for the purposes of calculating the value of assets.  In the Mainland, the value 
+of assets is calculated at present on the basis of historical cost. The State 
+Administration of Taxation has, however, agreed that notwithstanding the 
+different bases adopted by the two Sides for their respective calculations, where 
+the calculation satisfies the taxing conditions and tax is imposed in both Sides, 
+the Side of residence should give credit to its resident for income doubly taxed. 
+36  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+For the alienation of shares on or after 11 June 2008 (effective date of the 
+Second Protocol), both Sides will calculate the value of assets by reference to 
+the book value at the end of any of the 3 taxable years prior to the alienation. 
+The calculation will base on generally accepted accounting standards which 
+include normal depreciation and revaluation provisions.  The following 
+example shows how the new calculation method is applied: 
+Example 3 
+On 1 May 2004, a Mainland resident Mr. Wong bought shares in 
+Company B, which closed its accounts annually on 31 December. 
+Company B held immovable properties in Hong Kong, with the 
+properties representing, as per the accounts at the end of the taxable 
+year, the following percentages of total company assets: 
+(a) for 2004, 60%; 
+(b) for 2005, 40%; 
+(c) for 2006, 40%; 
+(d) for 2007, 40%. 
+Mr. Wong sold the shares of Company B on 23 June 2008 and made 
+a profit. 
+The new rule will apply as the Second Protocol has become effective 
+at the time of alienation, 23 June 2008. The book value at the end 
+of the 3 taxable years prior to the alienation will be used in 
+determining whether the assets of Company B are comprised 
+“mainly” of immovable property.  According to the year-end 
+accounts for 2005 to 2007, the immovable properties only accounted 
+for 40% of the total assets of Company B. Hence, the assets of 
+Company B were not at any time comprised “mainly” of immovable 
+property.  According to paragraph 4 of Article 13 of the 
+Comprehensive Arrangement, Hong Kong does not have the taxing 
+rights on the gains on alienation received by Mr. Wong. 
+In Hong Kong, the taxable year refers to the period from 1 April to 
+31 March of the next year. Hence, strictly speaking the Department 
+should require Company B to provide annual accounts as at 31 
+March for each year from 2005 to 2007.  In general, the Department 
+would adopt a more flexible approach and would accept the relevant 
+37  
+
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+company’s accounting year-end accounts (with the exception of tax 
+planning cases). 
+107. 
+Before the Second Protocol became effective, gains derived from the 
+alienation of “shares”, other than shares referred to in paragraph 4 of Article 13, 
+of not less than 25% of the entire shareholding of a company which is a 
+resident of One Side may be taxed in that Side under the provisions of 
+paragraph 5 of Article 13.  Hong Kong interprets the word “shares” as 
+referring to shares sold at the time of alienation, rather than the total shares in a 
+company held or once held by the alienator. In other words, it is only when 
+shares alienated are not less than 25% of the entire shareholding of a company 
+may gains derived from the alienation be taxed in that Side. It is understood 
+that the Mainland interprets “25%” as referring to 25% or more of the shares in 
+a company once held by the alienator. That is, if shares representing 25% or 
+more of the entire shareholding of a Mainland company were once held by a 
+Hong Kong resident, gains derived by the Hong Kong resident from the 
+alienation of all or part of his/its shareholding may be taxed in the Mainland. 
+After negotiation, the State Administration of Taxation and the Hong Kong 
+Inland Revenue Department reached a consensus that the “25%” applied to the 
+shares held by the alienator. Under the Second Protocol, both Sides agreed to 
+set a time frame of 12 months for the purpose of deciding whether the alienator 
+has “once held” at least 25% of the shareholding.  However, the alienation of 
+shares prior to the effective date of the Second Protocol (i.e. 11 June 2008) 
+would not be affected by this new provision. According to Article 5 of the 
+Second Protocol, gains derived by a resident of One Side from the alienation of 
+shares in the capital of a company which is a resident of the Other Side may be 
+taxed in that Other Side if, at any time within the 12 months before the 
+alienation, the recipient of the gains had a participation, directly or indirectly, 
+of not less than 25% of the capital of the company. 
+Example 4 
+On 1 April 2006, a Mainland resident, Mr. Cheung, acquired 35% 
+of the entire shareholding of a Hong Kong company, Company C. 
+Mr. Cheung made a profit in selling 25% and 10% shares of 
+Company C on 1 May 2007 and 23 June 2008 respectively. 
+38  
+
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Paragraphs 1 to 4 of Article 13 of the Comprehensive Arrangement 
+will not apply. However, Hong Kong has the taxing rights on Mr. 
+Cheung’s gains received from the alienation of 25% shares of 
+Company C on 1 May 2007 (i.e. before the effective date of the 
+Second Protocol), according to paragraph 5 of Article 13. Even 
+though Hong Kong has the taxing rights, whether the gains would 
+be taxed still depends on other factors, like whether the gains were 
+capital or revenue in nature. 
+By the time Mr. Cheung sold the 10% shares of Company C on 23 
+June 2008 the Second Protocol has come into effect.  As Mr. 
+Cheung only had a participation of less than 25% of the capital of 
+Company C during the 12 months prior to the alienation, his gains 
+from the second sale of shares will not be subject to tax in Hong 
+Kong according to the new rule under paragraph 5. 
+108. 
+Gains derived from the alienation of any property, other than that 
+referred to in paragraphs 1 to 5 of Article 13, shall be taxable only in the Side 
+of which the alienator is a resident. 
+Article 14 
+INCOME FROM EMPLOYMENT 
+109. 
+Paragraph 1 of Article 14 provides that salaries, wages and other 
+similar remuneration derived by a resident of One Side in respect of an 
+employment shall be taxable only in that Side unless the employment is 
+exercised in the Other Side. If the employment is exercised in the Other Side, 
+such remuneration as is derived therefrom may be taxed in that Other Side. 
+However, remuneration derived by a resident of One Side in respect of an 
+employment exercised in the Other Side will be exempt from tax in that Other 
+Side if all the following three conditions are satisfied: 
+(1)  
+the recipient is present in the Other Side for a period or 
+periods not exceeding in the aggregate 183 days in any 
+12-month period commencing or ending in the taxable period 
+concerned; 
+39  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+(2)  
+the remuneration is paid by, or on behalf of, an employer who 
+is not a resident of the Other Side; 
+(3)  
+the remuneration is not borne by a permanent establishment 
+which the employer has in the Other Side. 
+In addition, it is provided in paragraph 3 of Article 14 that remuneration 
+derived in respect of an employment exercised aboard a ship, an aircraft or a 
+land transport vehicle operated in shipping, air and land transport by an 
+enterprise of One Side shall be taxable only in that Side. 
+“Present for not exceeding 183 days” exemption condition 
+110. 
+Under the provisions of paragraph 2(1) of Article 14, where an 
+employment is exercised by a resident of One Side in the Other Side, one of the 
+conditions for tax exemption is satisfied only when he is present in the Other 
+Side for a period or periods not exceeding in the aggregate 183 days in any 
+12-month period commencing or ending in the taxable period concerned. 
+“Any 12-month period commencing or ending in the taxable period concerned” 
+denotes two concepts, namely, that the number of days of presence may 
+straddle over 2 years, i.e. the days of presence can be calculated continuously 
+or in the aggregate irrespective of the year; and that a floating calculation 
+method may be adopted. The 12-month period can commence or end at any 
+day within the taxable period concerned.  The taxable period in the Mainland 
+is the calendar year, whereas the taxable period (i.e. the year of assessment) in 
+Hong Kong is the period from 1 April to 31 March of the next year. 
+111. 
+Take the year of assessment 2008/09 as an example, the time period 
+that should be taken into account, based on the two concepts mentioned above, 
+is between 2 April 2007 and 30 March 2010. If a Mainland resident is not 
+present in Hong Kong for more than 183 days in any 12-month period in the 
+time period identified above, he has met the “present for not exceeding 183 
+days” exemption condition for the year of assessment 2008/09.  However, if 
+the Mainland resident is present in Hong Kong for more than 183 days in any 
+12-month period in the time period identified above, remuneration derived by 
+him in respect of the employment exercised in Hong Kong is chargeable to 
+Hong Kong salaries tax for the year of assessment 2008/09. 
+40  
+
+   
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+112.  
+In the year when Article 14 of the Comprehensive Arrangement 
+became effective (the year 2007 for the Mainland and the year of assessment 
+2007/08 for Hong Kong), the Mainland adopts 1 January 2007 as the 
+commencement date for the purposes of ascertaining the number of days a 
+Hong Kong resident is present in the Mainland; whilst Hong Kong adopts 1 
+April 2007 as the commencement date for the purposes of ascertaining the 
+number of days a Mainland resident is present in Hong Kong.  In other words, 
+in the first year of Article 14’s application, the Mainland regards any 12-month 
+period to be any 12-month period commencing in the period from 1 January 
+2007 to 31 December 2007; and Hong Kong regards any 12-month period to be 
+any 12-month period commencing in the period from 1 April 2007 to 31 March 
+2008. 
+113. 
+The “days of physical presence” method is adopted in deciding 
+whether a resident is present in the Other Side for a period or periods exceeding 
+183 days.  Under this method, the day of arrival or departure and each day in 
+the period during which he stays in the Other Side, however brief and for 
+whatever reasons, will be counted as one day respectively. 
+Hong Kong residents working across the Mainland border 
+114.     If a resident of Hong Kong provides services both in the Mainland 
+and in Hong Kong, the tax treatment in both Sides is as follows: 
+(1) 
+Tax liabilities in Hong Kong 
+- 
+the income derived from his Hong Kong employment will 
+be wholly assessable irrespective of whether it has been 
+paid by the Hong Kong employer or a Mainland 
+establishment. However, if the Hong Kong resident has 
+paid individual income tax in respect of the income 
+attributable to services rendered by him in the Mainland, 
+he may apply for tax exemption for that part of the income 
+under section 8(1A)(c) of the Ordinance, or for a tax credit 
+under the provisions of Article 21 of the Comprehensive 
+Arrangement.  Application may be made on his tax return 
+for the year of assessment concerned, and supported with 
+evidence of the Mainland tax payment.  In general, tax 
+41  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+exemption provides greater tax relief than that provided by 
+tax credit. A Hong Kong resident who has declared and 
+paid salaries tax on his employment income, and who has 
+subsequently paid individual income tax on all or part of 
+his employment income in the Mainland because he has 
+rendered services there, can apply, under section 70A of 
+the Ordinance, to have his assessment revised in 
+accordance with the provisions of section 8(1A)(c). 
+-  the income derived from his non-Hong Kong employment 
+will be assessed according to the number of days in Hong 
+Kong irrespective of whether it has been paid by an 
+overseas employer or a Mainland establishment, provided 
+that his visit(s) to Hong Kong exceed 60 days and during 
+which he renders services.  
+(2) 
+ Tax liabilities in the Mainland  
+- 
+If, under his employment, a Hong Kong resident renders 
+services in the Mainland only (i.e. services are not 
+rendered whilst in Hong Kong), all his income from that 
+employment will be regarded as attributable to services 
+rendered in the Mainland. 
+Such income is wholly 
+chargeable to Mainland tax, irrespective of whether it is 
+paid by a Mainland establishment or an overseas employer 
+(including a Hong Kong employer) unless he satisfies the 
+three conditions mentioned in paragraph 109 above. 
+- 
+If, under his employment, a Hong Kong resident renders 
+services both in the Mainland and in Hong Kong, and his 
+aggregated periods of stay in the Mainland do not exceed 
+183 days, income paid or borne by the Mainland 
+establishment will be chargeable to individual income tax. 
+Tax will be calculated on the chargeable income and then 
+apportioned on time basis. Income paid by an overseas 
+employer (including a Hong Kong employer) is not 
+chargeable.  
+42  
+
+ 
+ 
+ 
+ 
+-  If, under his employment, a Hong Kong resident renders 
+services both in the Mainland and in Hong Kong, and his 
+aggregated periods of stay in the Mainland exceed 183 
+days, the total income received from the Mainland 
+establishment and the overseas employer (including Hong 
+Kong employer) will be chargeable to individual income 
+tax. Tax will be calculated on the total income and then 
+apportioned on time basis. 
+ 
+(3) 
+ Counting of days of stay for calculating tax liabilities  
+ 
+- For tax computation purposes, the aggregated periods of 
+stay in a year of assessment is the aggregate of the days in 
+each period of stay where the number of days is counted 
+under the rule of the “days of physical presence” minus 
+one day.  
+ 
+-  The Mainland and Hong Kong are geographically so close 
+to each other that a taxpayer may travel between the 
+Mainland and Hong Kong on a particular day and provides 
+services in both Sides.  As such, it is not appropriate to 
+apply the rule of the “days of physical presence” minus 
+one day.  However, serious double taxation could occur if 
+both Sides apply the rule of “days of physical presence”.  
+To address such cases, the State Administration of 
+Taxation and the Hong Kong Inland Revenue Department 
+have reached consensus.  If a taxpayer travels between 
+the Mainland and Hong Kong on a particular day and 
+provides services in both Sides, he would be counted as 
+present in the Mainland for half a day and in Hong Kong 
+for half a day.  However, if he only provides services 
+either in the Mainland or Hong Kong on that day, he 
+would be counted as having been present for one day in 
+the Mainland or Hong Kong, as the case may be.  
+ 
+43  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+Article 15 
+DIRECTORS’ FEES 
+115. 
+Article 15 provides that directors’ fees and other similar payments 
+derived by a resident of One Side in his capacity as a member of the board of 
+directors of a company which is a resident of the Other Side may be taxed in 
+that Other Side. In other words, directors’ fees received by a resident of either 
+Side in his capacity as a director of a company may be taxed in the Side of 
+which the company is a resident, irrespective of the period of his stay in either 
+Side or the place where the services are actually rendered.  Therefore, 
+directors’ fees derived by a Hong Kong resident in his capacity as a director of 
+a Mainland company will all be subject to the individual income tax in the 
+Mainland. Likewise, directors’ fees derived by a Mainland resident in his 
+capacity as a director of a Hong Kong company will all be subject to salaries 
+tax in Hong Kong. “Directors’ fees and other similar payments” include 
+benefits in kind (such as share options, the use of a residence or car, health or 
+life insurance coverage and club memberships). “Directors’ fees and other 
+similar payments” do not include wages, salaries and other remunerations paid 
+to a director on account of his other functions with the company (e.g. as an 
+employee or consultant). Such wages, salaries and other remunerations will 
+be dealt with in accordance with Article 14 (in the case of income from 
+employment) and Article 7 (in the case of business profits). 
+Article 16 
+ARTISTES AND SPORTSPERSONS 
+116. 
+Paragraph 1 of Article 16 provides that income derived by a resident 
+of One Side as an entertainer, a musician or a sportsperson, from his personal 
+activities as such exercised in the Other Side, may be taxed in that Other Side. 
+A theatre artiste, a musician or a sportsperson who performs in the Other Side 
+may derive substantial amounts of income, yet his stay may only be for a short 
+period of time, usually not exceeding 183 days. Therefore, paragraph 1 of 
+Article 16 provides that the relevant income may be taxed in the Side where his 
+activities are exercised. In addition, paragraph 2 of Article 16 stipulates that 
+income in respect of personal activities exercised by an artiste or a sportsperson 
+may be taxed in the Side in which the activities are exercised, irrespective of 
+whether the income accrues ultimately to the artiste or sportsperson himself or 
+to another person (including a company or any other legal entity). This is to 
+ensure that all income derived by an entertainer or a sportsperson in respect of 
+44  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+his personal activities may be taxed in the Side in which the activities are 
+exercised. 
+Article 17 
+PENSIONS 
+117. 
+Regarding pensions and other similar remuneration paid to a resident 
+of One Side in consideration of past employment, Article 17 stipulates a 
+taxation principle that is different from that on which income from employment 
+is taxed. The term “pensions and other similar remuneration” includes annuities 
+paid in respect of past employment, lump sum payments in lieu of pensions 
+received at the time of or after leaving services, sums received by way of 
+commutation of pensions and pensions received by widows and orphans. 
+However, Article 17 does not apply to a lump sum payment made upon 
+cessation of an employment or termination of a contract. Such a payment 
+falls within the meaning of income from employment and therefore will be 
+taxed in accordance with the provisions of Article 14. 
+118. 
+According to the provisions of paragraph 1 of Article 17, pensions 
+received by an individual shall be taxable only in the Side of which the 
+individual is a resident, except that government pensions will be taxed in 
+accordance with paragraph 2 of Article 18.  Paragraph 2 of Article 17 also 
+stipulates that notwithstanding the provisions of paragraph 1, pensions and 
+other payments made under the following pension schemes shall be taxable 
+only in the Side in which the schemes are implemented: 
+(1)  
+a public scheme which is part of the social security system 
+implemented by the Government of One Side or a local 
+authority thereof; 
+(2)  
+an arrangement in which individuals may participate to secure 
+retirement benefits and which is recognized for tax purposes 
+in One Side. 
+119. 
+According to the provisions of paragraph 2 of Article 17, pensions 
+and other similar payments made under a public scheme which is part of the 
+social security system implemented in the Mainland shall be taxable only in the 
+Mainland; whilst pensions and other similar payments made under a 
+45  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+“recognized retirement scheme” in Hong Kong shall be taxable only in Hong 
+Kong. In Hong Kong, a “recognized retirement scheme” means a “recognized 
+occupational retirement scheme” and a “mandatory provident fund scheme”. 
+Article 18 
+GOVERNMENT SERVICE 
+120. 
+According to the principle of Article 18, remuneration and pensions 
+paid by the Government of One Side to an individual (other than an individual 
+who is a resident of the Other Side and renders services in that Other Side) in 
+respect of services rendered to that Government, in the discharge of 
+government functions shall be taxable only in that Side. 
+121. 
+There are three paragraphs in Article 18. Paragraph 1 applies to 
+remuneration other than pensions. Sub-paragraph (1) states that salaries and 
+wages paid by the Government of One Side or a local authority thereof to an 
+individual in respect of services rendered to that Government or authority, in 
+the discharge of government functions, shall be taxable only in that Side.  
+Sub-paragraph (2) applies to cases which are exceptions to those covered by 
+sub-paragraph (1). Sub-paragraph (2) stipulates that salaries and wages paid 
+by the Government of One Side or a local authority thereof to an individual in 
+respect of services rendered to that Government or authority, in the discharge of 
+government functions shall be taxable only in the Other Side if the services are 
+rendered in that Other Side and the individual is a resident of that Other Side 
+who did not become a resident of that Other Side by reason only of the 
+rendering of such services. The expression “a resident of that Other Side who 
+did not become a resident of that Other Side by reason only of the rendering of 
+such services” in sub-paragraph (2) refers to an individual who is originally a 
+resident of that Other Side and does not become the resident of that Other Side 
+only because he is employed by the Government of One Side or a local 
+authority thereof to render services in that Other Side. 
+122. 
+For example, the income of a Hong Kong resident employed by the 
+Hong Kong Government to work in its office in Beijing shall be taxable only in 
+Hong Kong. On the other hand, the income of a Mainland resident employed 
+by the Hong Kong Government to work in the Beijing office shall be taxable 
+only in the Mainland. The income of a Mainland resident employed by the 
+Central People’s Government to work in the Hong Kong office shall be taxable 
+46  
+
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+only in the Mainland. If a Hong Kong resident is employed by the Central 
+People’s Government to work in the Hong Kong office, his income shall be 
+taxable only in Hong Kong. 
+123. 
+Paragraph 2 of Article 18 applies to pensions and its taxation 
+principle is the same as that laid in paragraph 1.  The expression “or paid out 
+of funds created or contributed as employer” in sub-paragraph (1) makes it 
+clear that pensions include the pensions directly paid by the Government of 
+One Side or a local authority thereof and the pensions paid out of funds created 
+or contributed as employer by the Government of One Side or a local authority 
+thereof.  Sub-paragraph (2) provides for cases which are exceptions to those 
+covered by sub-paragraph (1), which is the situation covered in sub-paragraph 
+(2) of paragraph 1, as stated in the foregoing paragraph 121 above.    
+124. 
+Paragraph 3 of Article 18 states clearly that paragraphs 1 and 2 do 
+not apply if the services are rendered in connection with a business carried on 
+by the Government of One Side or a local authority thereof. In such cases the 
+ordinary rules apply: Article 14 (Income from Employment) for salaries and 
+wages; Article 15 (Directors’ Fees) for directors’ fees and other similar 
+payments; Article 16 (Artistes and Sportspersons) for income derived by 
+artistes and sportspersons; and Article 17 (Pensions) for pensions and other 
+similar remuneration. 
+Article 19 
+STUDENTS 
+125. 
+Article 19 gives limited tax exemption to students so as to assist and 
+nurture talents as well as to take care of students’ living expenses. The Article 
+provides that “payments which a student who is or was immediately before 
+visiting One Side a resident of the Other Side and who is present in the One 
+Side solely for the purpose of his education receives for the purpose of his 
+maintenance and education shall not be taxed in that One Side, provided that 
+such payments arise from sources outside that One Side.”  Qualifying 
+payments include tuition fees, student grants and scholarships from sources 
+outside that One Side. 
+47  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Article 20 
+OTHER INCOME 
+126. 
+Article 20 is written by reference to the United Nations Model. It 
+provides that items of income of a resident of One Side, wherever arising, not 
+dealt with in the Articles of the Comprehensive Arrangement shall be taxable 
+only in that Side. However, the abovementioned income, if arising in the 
+Other Side, may also be taxed in that Other Side. 
+127. 
+Article 20 also provides that the provisions of Article 7 (Business 
+Profits) shall apply to income, other than income from immovable property as 
+defined in paragraph 2 of Article 6, if the recipient of such income, being a 
+resident of One Side, carries on business in the Other Side through a permanent 
+establishment situated therein and a right or property in respect of which the 
+income is paid is effectively connected with such permanent establishment. 
+Article 21 
+METHODS FOR ELIMINATION OF DOUBLE TAXATION 
+128. 
+Under the Comprehensive Arrangement, both Sides eliminate double 
+taxation by the allowance of a tax credit. In accordance with the provisions of 
+the Comprehensive Arrangement, Mainland tax paid in the Mainland in respect 
+of any item of income derived by a resident of Hong Kong will be allowed as a 
+credit against the Hong Kong tax payable on that income by that resident. 
+However, the amount of tax credit will not exceed the amount of tax payable in 
+respect of that item of income, computed in accordance with the provisions of 
+the Ordinance. 
+129. 
+In processing an application for tax credit, One Side will consider 
+whether the relevant tax is imposed by the Other Side under the laws of that 
+Other Side (and such laws being in accordance with the provisions of the 
+Comprehensive Arrangement). A tax credit will be granted only if the answer 
+is in the affirmative. 
+130. 
+The Comprehensive Arrangement provides that the method for 
+elimination of double taxation adopted in Hong Kong will be subject to the 
+provisions of the Ordinance relating to the allowance of a deduction and a 
+credit. Section 50 of the Ordinance provides for the allowance of a tax credit 
+in respect of arrangements having effect under section 49.  This section 
+48  
+
+ 
+ 
+ 
+ 
+ 
+provides the basis for the granting of a tax credit in relation to an item of 
+income stipulated in the Comprehensive Arrangement and in respect of which 
+tax has been paid in the Mainland.  Only tax paid in the Mainland can be 
+allowed as a credit under the Comprehensive Arrangement against Hong Kong 
+tax. In accordance with section 50(2), an applicant for a tax credit must be 
+resident in Hong Kong during the year of assessment in which the income is 
+earned. 
+However, if income derived by a Hong Kong resident from the 
+Mainland does not arise in Hong Kong, it will not be chargeable to tax in Hong 
+Kong.  The tax paid in the Mainland in respect of that item of income cannot 
+be allowed as a credit because the question of double taxation does not arise.  
+In the case of a Hong Kong manufacturer whose profits are apportioned on a 
+50:50 basis, only half of the profits will be taxed in Hong Kong.  The other 
+half is regarded as having been derived from the Mainland and is thus not 
+chargeable to tax in Hong Kong.  Under such circumstances, where tax has 
+been paid in the Mainland in respect of half or less than half of the profits, such 
+tax will not be allowed as a credit against the Hong Kong tax payable.  If 
+more than one half of the profits are regarded by the Mainland as profits 
+derived therefrom according to the Comprehensive Arrangement, then the tax 
+paid in the Mainland in respect of such profits, in excess of one half of the total 
+profits, will be allowed as a credit against the tax payable in Hong Kong.  
+131. 
+According to the abovementioned tax credit method, the tax credit in 
+respect of tax paid in the Mainland allowable for set off in Hong Kong is 
+computed in accordance with sections 50(3) and 50(5) of the Ordinance as 
+follows: 
+Example 5 
+ 
+ 
+Hong 
+The 
+Kong 
+Mainland
+ 
+ 
+$ 
+ $ 
+ 
+Total assessable income (Gross) 
+1,500 
+ 
+Including income in respect of which tax 
+500 
+has been paid in the Mainland in 
+accordance 
+with 
+the 
+Comprehensive 
+Arrangement 
+ 
+Tax rate (Partnership business) 
+16% 
+33% 
+ 
+ 
+49  
+
+ 
+ 
+ 
+Tax payable 
+ 
+ 
+ 
+Hong Kong : $1,500 x 16% 
+240 
+ 
+ 
+The Mainland : $500 x 33% 
+ 
+165 
+ 
+Total tax liabilities of the two Sides before allowance of tax credit 
+ 
+$240 + $165 = $405 
+Less : Tax credit 
+ 
+ 
+ 
+ 
+- Tax paid in the Mainland  
+$165 )   
+ 
+ 
+ 
+ 
+ 
+or 
+)   
+ 
+ 
+ 
+- The tax credit limit (Note 1) 
+) 
+ 
+ 
+ 
+ 
+$500 x 16%    = 
+$80 )  
+  
+ 
+(whichever is smaller) 
+(80) (Note 2) 
+ 
+Total tax liabilities of the two 
+$325 
+160 
++  165 
+Sides after allowance of tax credit 
+ 
+ 
+      (Note  1)   In accordance with section 50(5), the amount of tax paid in the 
+Mainland not allowed as a tax credit, i.e. $102 ($165 – $63), can be 
+allowed as a deduction as shown in the detailed computation below: 
+ 
+ 
+ 
+ $ 
+ $ 
+ 
+Mainland tax paid 
+ 
+ 
+165 
+ 
+Net income from the Mainland after tax  
+(grossed up at effective Hong Kong tax rate) 
+100%
+$335 x  
+398
+ 
+100% – 16% 
+ 
+Less:  Net Income from the Mainland  
+ 
+ 
+after tax $(500 – 165) 
+(335) 
+ 
+Less:  Tax credit limit for tax paid in the Mainland 
+(63) 
+ 
+Tax paid in the Mainland not allowed as a tax credit 
+102 
+ 
+ 
+ 
+ 
+Hong Kong tax payable before tax credit 
+ 
+ 
+ 
+ $[1,000 + (500 – 102)] x 16% 
+ 
+ 
+ 
+=$(1,000 + 398) x 16% 
+ 
+223
+ 
+Less: Tax credit limit for tax paid in the Mainland 
+(63) 
+ 
+Hong Kong tax payable after allowance of tax credit 
+160 
+50 
+
+ 
+ 
+ 
+ 
+      (Note  2)  The formula of the credit limit is based on sections 50(3) and 50(5) 
+of the Ordinance.  If the tax payable by a taxpayer is computed at 
+flat rate, the following simplified formula can be used to compute the 
+credit limit: 
+ 
+ 
+ 
+ 
+Tax credit limit  
+Taxable income 
+Tax payable in Hong Kong 
+for tax paid in the = 
+x 
+ 
+from the Mainland 
+Total assessable income 
+Mainland 
+ 
+ 
+ 
+ 
+ 
+ 
+$ 
+ 
+Taxable income in the Mainland 
+ 
+500 
+ 
+Tax payable in Hong Kong before allowance of  
+240 
+tax credit 
+ 
+Total assessable income 
+1,500
+Tax credit limit for tax paid in  
+240
+= $500 x
+ 
+the Mainland  
+1,500 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+= $80 
+ 
+132. 
+In the case of an individual taxpayer whose tax is computed at 
+progressive tax rates, the tax credit is computed as follows:  
+ 
+ 
+Example 6 
+ 
+ 
+ 
+ 
+ 
+$ 
+ 
+Total Hong Kong assessable income 
+200,000 
+ 
+Including gross income from the Mainland before tax 
+  120,000 
+ 
+Tax paid in the Mainland 
+10,000 
+ 
+Tax rate in the Mainland 
+8.33% 
+ 
+Net income after tax from the Mainland 
+110,000 
+ 
+ 
+The effective tax rate in Hong Kong and the tax credit are computed 
+as follows: 
+ 
+ 
+$ 
+ 
+Total Hong Kong assessable income 
+ 
+200,000 
+Less: Deductible items 
+ 
+ (12,000) 
+ 
+Net assessable income 
+ 
+188,000 
+Less: Personal allowance 
+ 
+(100,000) 
+ 
+Net chargeable income 
+ 
+88,000 
+ 
+51 
+
+ 
+ 
+Tax payable on: 
+ 
+ 
+The first 
+$30,000   x  2% 
+ 
+600 
+ 
+ 
+The second  
+$30,000   x  7% 
+ 
+2,100 
+ 
+ 
+The remaining 
+$28,000
+ x  13% 
+ 
+3,640 
+ 
+ 
+ 
+ 
+$88,000 
+ 
+6,340 
+ 
+Tax payable 
+The effective tax rate in Hong Kong = 
+x 100%
+Net assessable income 
+ 
+ 
+6,340
+= 
+x 100%
+ 
+ 
+188,000 
+ 
+ 
+= 3.37%  
+ 
+ 
+ 
+Net income from the Mainland after tax  
+(grossed up at the effective tax rate in Hong Kong) (Note 1)  
+ 
+ 
+ 
+ 
+ $ 
+100%
+ 
+$110,000 x 
+113,836
+ 
+(100% – 3.37%)  
+ 
+ 
+ 
+ 
+ 
+Less: Net income from the Mainland after tax 
+(110,000) 
+ 
+Tax credit limit for tax paid in the Mainland 
+3,836 
+ 
+ 
+Under section 50(5), the actual tax payable in Hong Kong is 
+computed as follows: 
+ 
+ 
+ 
+             
+$ 
+ 
+ $ 
+ 
+Assessable income (Hong Kong) 
+80,000 
+ 
+ 
+Assessable income (the Mainland) 
+110,000  
+after deduction of tax 
+ 
+ 
+Add: tax deducted in the Mainland 
+ 10,000  
+ 
+Gross income from the Mainland before tax 
+ 
+120,000 
+ 
+Total Hong Kong assessable income  
+ 
+200,000 
+ 
+ 
+Less: amount not allowed as a tax credit (Note 1) 
+ (6,164) 
+ 
+ 
+ 
+ 
+ 
+193,836 
+ 
+ 
+Less: Deductible items 
+ 
+ 
+ (12,000) 
+ 
+ 
+ 
+ 
+ 
+181,836 
+ 
+ 
+Less: Personal allowance 
+ 
+ 
+(100,000) 
+ 
+Net chargeable income 
+ 
+ 
+81,836 
+ 
+52 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Tax payable on: 
+ 
+ 
+ 
+ 
+ 
+The first     
+$30,000  
+x   2% 
+ 
+600 
+ 
+ 
+The second    $30,000  
+x   7% 
+ 
+2,100 
+ 
+ 
+The remaining  $21,836  
+x  13% 
+ 
+2,838 
+ 
+ 
+$81,836 
+ 
+ 
+5,538 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Less: tax credit allowed 
+ 
+ 
+(3,836) 
+ 
+ 
+Hong Kong tax payable 
+ 
+ 
+1,702
+ 
+     (Note  1)  Under section 50(5), tax paid in the Mainland which is not allowed as a 
+tax credit can be deducted from the income 
+ 
+ 
+ 
+ 
+ 
+Amount not allowed as a tax credit $10,000 – $3,836 = $6,164 
+ 
+ 
+ 
+ 
+ 
+Net income from the Mainland after tax 
+$120,000 – $6,164  
+(grossed up at effective tax rate in Hong Kong) 
+= $113,836 
+ 
+ 
+ 
+133. 
+The computation of tax credits where profits are attributed to a 
+permanent establishment situated in the Mainland: 
+ 
+ 
+ 
+Example 7 
+ 
+ 
+Hong Kong Resident Company 
+ $    
+Total business receipts                            15,000,000   
+(from the Mainland and Hong Kong)                 
+ 
+ 
+Assessable  profit                                 1,000,000   
+  
+ 
+  Profits tax rate (company) 17.5%  
+ 
+ 
+  Tax payable  $1,000,000 x 17.5%
+ =          175,000   
+ 
+ 
+Mainland Contract 
+Sales of machinery and equipment including installation (which 
+takes more than 6 months to complete) to the Special Economic 
+Zone of the Mainland (Tax rate : 15%)  
+ 
+Total price 
+$2,000,000 
+ 
+Profits attributed to the permanent establishment =  $10,000 
+ 
+ 
+Enterprise income tax in the Mainland 
+= $10,000 x 15% 
+ 
+           
+ 
+  
+ =  $1,500  
+53 
+
+ 
+ 
+ Tax credit in respect of profits attributed to the permanent 
+establishment in the Mainland 
+ 
+ 
+ 
+Profits attributed to the permanent 
+Tax paya
+= 
+x
+ble 
+establishment in the Mainland 
+Assessable profits  
+ 
+175,000 
+= $10,000  x 
+1,000,000  
+ =  $1,750 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Actual tax credit allowed is to be restricted to the actual tax paid in 
+the Mainland, i.e. $1,500 
+ 
+ 
+134. 
+The computation of tax credit for royalties received by Hong Kong 
+residents: 
+ 
+Example 8 
+ 
+Hong Kong resident Company D prepares its accounts annually for 
+the year ending 31 December.  For the year ended 31 December 
+2007, Company D receives royalties of $90,000 from the Mainland 
+and the tax withheld in the Mainland is $6,300 (i.e. $90,000 x 7%). 
+Such royalties are income arising in Hong Kong.  The amount of 
+expenses allowable for deduction under the Ordinance (excluding 
+the tax withheld) is $70,000.  Company D does not have any other 
+income or expenses during the relevant year.  
+ 
+ $ 
+Assessable income for the year of assessment 2007/08  
+$(90,000 – 70,000) 
+20,000 
+Tax payable before allowance of tax credit  
+ 
+(the tax rate for the year 2007/08 is 17.5%) 
+3,500 
+Less: Tax credit 
+ 
+- Tax paid in the Mainland   $6,300 ) 
+ 
+ 
+or 
+) 
+ 
+ 
+ 
+ 
+ 
+54  
+
+ 
+ 
+ 
+ 
+- The tax credit limit (Note 1)   
+) 
+ 
+$20,000  x 17.5%  = $3,500 ) 
+ 
+(whichever is smaller) 
+ 
+(3,500)(Note 2) 
+Tax payable after allowance of tax credit  
+0
+ 
+     (Note  1)  In accordance with section 50(5), tax paid in the Mainland which is 
+not allowed as a tax credit, i.e. $3,394 ($6,300 – $2,906), can be 
+allowed as a deduction as shown in the detailed computation below: 
+ 
+ 
+ 
+ 
+ 
+ 
+$ 
+$ 
+ 
+Mainland tax paid 
+ 
+ 
+6,300 
+ 
+ 
+Net income from the Mainland after tax  
+(grossed up at effective Hong Kong tax rate) 
+100%
+$13,700 x  
+16,606 
+ 
+100% – 17.5% 
+ 
+Less: Net income from the Mainland after deduction of tax 
+ 
+ 
+ $(20,000 – 6,300) 
+(13,700)  
+ 
+Less: Tax credit limit for tax paid in the Mainland 
+(2,906) 
+ 
+Tax paid in the Mainland not allowed as  
+3,394 
+a tax credit 
+ 
+ 
+ 
+ 
+Hong Kong tax payable before tax credit 
+ 
+2,906 
+ 
+ $(20,000 – 3,394) x 17.5% 
+ 
+Less: Tax credit limit for tax paid in the Mainland 
+(2,906) 
+ 
+Hong Kong tax payable after allowance of tax credit 
+0
+ 
+     (Note  2)  The formula of the credit limit is based on sections 50(3) and 50(5) 
+of the Ordinance.  As the tax payable by Company D is computed 
+at flat rate, the following simplified formula can be used to compute 
+the credit limit: 
+ 
+ 
+ 
+Tax credit limit  
+Taxable income    
+Tax payable in Hong Kong 
+for tax paid in the 
+= 
+x 
+from the Mainland 
+ 
+Mainland 
+Total assessable income 
+ 
+55  
+
+ 
+ 
+ 
+ 
+$ 
+ 
+Taxable income from the Mainland 
+ 
+20,000 
+ 
+Tax payable in Hong Kong before  
+3,500 
+allowance of tax credit 
+ 
+Total assessable income 
+ 
+20,000
+ 
+ 
+$3,
+Tax credit limit for tax paid  
+500
+= $20,000  x 
+ 
+in the Mainland 
+$20,000 
+ 
+ 
+ 
+ 
+ 
+= $3,500 
+ 
+Example 9 
+ 
+Following Example 8, assume Company D, in addition to the 
+royalties from the Mainland, receives royalties of $80,000 from 
+Thailand and the tax withheld in Thailand is $8,000 (i.e. $80,000 x 
+10%).  Company D incurs expenses of $20,000 (excluding the tax 
+withheld in the Thailand) in the production of royalties from 
+Thailand and such expenses are allowable for deduction under the 
+Ordinance.  Company D does not have other income or expenses 
+during the relevant year. 
+$ 
+Assessable income for the year of assessment 2007/08 
+ $(90,000 + 80,000 – 70,000 – 20,000) 
+80,000 
+Tax payable before allowance of tax credit  
+ 
+(the tax rate for the year 2007/08 is 17.5%) 
+14,000 
+Less: Tax credit 
+ 
+- Tax credit limit for tax paid in the Mainland, 
+ 
+see Example 8 above 
+(3,500) 
+- Tax paid in Thailand   $8,000 
+) 
+ 
+or 
+ 
+)
+ 
+ 
+ 
+- The tax credit limit   $10,500  )  
+ 
+[$(80,000 – 20,000) x 17.5%]    )  
+ 
+(whichever is smaller) 
+ 
+ 
+(8,000)  
+Tax payable after allowance of tax credit  
+2,500 
+ 
+Since the Comprehensive Arrangement applies to years of assessment 
+beginning on or after 1 April 2007 in Hong Kong, the tax withheld in the 
+Mainland in respect of the royalties received by Hong Kong resident Company 
+ 
+ 
+56  
+
+ 
+   
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+D from 1 January 2007 to 31 March 2007 will be allowed as a credit against its 
+Hong Kong tax payable, see paragraph 9 above. 
+135. 
+Section 50(4) of the Ordinance provides that the total tax credit to be 
+allowed to a Hong Kong resident for a year of assessment in respect of foreign 
+tax paid shall not exceed the total tax payable in Hong Kong for that year of 
+assessment. Therefore, if a Hong Kong resident suffers a loss in a year of 
+assessment and does not pay any Hong Kong tax (i.e. tax credit allowed is 
+zero), the tax paid by him in the Mainland will not be allowed as a credit. 
+136. 
+Under section 50(5), the amount of tax paid in the Mainland is 
+included in computing profits or income subject to tax in Hong Kong. 
+However, due to the differences in tax rates between the Mainland and Hong 
+Kong, the tax paid in the Mainland may exceed the amount of the credit limit. 
+In such circumstances, the excess is allowed as a deduction. Any tax paid in 
+the Mainland that is not allowed as a credit is not available to be carried 
+forward to subsequent years of assessment. 
+137. 
+A claim for a tax credit is required, in accordance with section 50(9) 
+of the Ordinance, to be made within 2 years after the end of the relevant year of 
+assessment. The claim can be submitted with the tax return for the relevant 
+year of assessment or made separately in writing.  Any dispute over the 
+allowance of a tax credit is to be dealt with in accordance with the objection 
+and appeal provisions of the Ordinance. 
+138. 
+Under the provisions of section 50(10) of the Ordinance, a Hong 
+Kong resident who considers that the tax credit allowed for a year of 
+assessment is excessive or insufficient because of a subsequent adjustment to 
+the amount of tax payable by either Side can make a claim within 2 years from 
+the time when the assessment, adjustment or other determination by either Side 
+has been made. The period for lodging the claim will not be limited by the 
+time for raising an assessment or for lodgement of any other claim under the 
+Ordinance.  The relevant assessment, adjustment or determination must be 
+material in determining whether and to what extent a tax credit is allowable. 
+It should be noted that those provisions do not apply to any new claim for a tax 
+credit, as the application for such claim should be made in accordance with 
+section 50(9). 
+57  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+139. 
+Paragraph 3 of Article 21 provides that where dividends received by 
+a resident company of One Side which controls not less than 10% of the shares 
+of a resident company of the Other Side, the credit that the resident company of 
+that One Side is entitled to will include the tax paid by the company which 
+pays the dividends in respect of the profits from which such dividends are 
+derived. As dividends are not chargeable to tax in Hong Kong, this provision 
+will have no practical application to Hong Kong resident companies. 
+140. 
+Before a tax credit is allowed, it will need to be established to the 
+satisfaction of the Inland Revenue Department that the tax has been paid by the 
+person in the Mainland. The person will need to submit the tax computation 
+issued by the tax authority of the Mainland (showing details of the relevant 
+income and tax paid thereon) together with documentary evidence to the effect 
+that the tax has been paid and is not subject to any further adjustment. 
+Article 22 
+NON-DISCRIMINATION 
+141. 
+Paragraph 1 of Article 22 establishes the principle that, for purposes 
+of taxation, discrimination based on the actual situs of an enterprise is 
+forbidden.  This paragraph provides that the taxation on a permanent 
+establishment which an enterprise of One Side has in the Other Side shall not 
+be less favourably levied in that Other Side than the taxation levied on 
+enterprises of that Other Side carrying on the same activities. 
+142. 
+Paragraph 2 of Article 22 aims at eliminating discrimination on the 
+grounds of the resident status of the persons receiving payments.  This 
+paragraph provides that interest, royalties and other disbursements paid by an 
+enterprise of One Side to a resident of the Other Side shall, for the purpose of 
+determining the taxable profits of such enterprise, be deductible under the same 
+conditions as if they had been paid to a resident of that One Side, except under 
+specified circumstances. 
+143. 
+Paragraph 3 of Article 22 forbids One Side to give less favourable 
+treatment to enterprises of that Side where the capital of the enterprise is 
+wholly or partly owned or controlled, directly or indirectly, by one or more 
+residents of the Other Side. This paragraph provides that enterprises of One 
+Side shall not, by reason of their capital being owned or controlled by residents 
+58  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+of the Other Side, be subjected in the One Side to any taxation or any 
+requirement connected therewith which is other or more burdensome than the 
+taxation and connected requirements to which other similar enterprises of the 
+One Side are or may be subjected. 
+Article 23 
+MUTUAL AGREEMENT PROCEDURE 
+144. 
+The Comprehensive Arrangement is a bilateral arrangement made 
+between the State Administration of Taxation and the Hong Kong Inland 
+Revenue Department after consultation which allocates the right to tax between 
+the two jurisdictions. It sets out mainly matters of principle. In the course of 
+applying the Comprehensive Arrangement, it is possible that problems relating 
+to the specific interpretation of the provisions and uncertainties may arise and 
+need to be addressed. For this reason, Article 23 provides that the competent 
+authorities of both Sides shall endeavour to resolve by mutual agreement any 
+difficulties or doubts arising as to the interpretation or application of the 
+Comprehensive Arrangement, and may also consult together for the elimination 
+of double taxation in cases not provided for in the Comprehensive Arrangement. 
+For the purposes of reaching an agreement, representatives of the competent 
+authorities of both Sides may meet and exchange their opinions verbally. 
+Consultation in respect of the Comprehensive Arrangement shall be dealt with 
+centrally between the State Administration of Taxation and the Hong Kong 
+Inland Revenue Department, and not be conducted separately between the 
+Hong Kong Inland Revenue Department and different local taxation authorities 
+of the Mainland. 
+145. 
+Paragraph 1 of Article 23 states clearly that where a person considers 
+that the actions of One Side or both Sides result or will result for him in 
+taxation not in accordance with the provisions of the Comprehensive 
+Arrangement, he may present his case to the competent authority of the Side of 
+which he is a resident. The case must be presented within 3 years from the 
+first notification of the action resulting in taxation not in accordance with the 
+provisions of the Comprehensive Arrangement. 
+146. 
+The competent authority receiving the claim shall endeavour, if the 
+objection appears to it to be justified, and if it is not itself able to arrive at a 
+satisfactory solution, to resolve the case by mutual agreement with the 
+59  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+competent authority of the Other Side, with a view to the avoidance of taxation 
+which is not in accordance with the Comprehensive Arrangement.  Any 
+agreement reached shall be implemented notwithstanding any time limits in the 
+respective domestic laws of both Sides. 
+147. 
+Hong Kong residents presenting to the Commissioner of Inland 
+Revenue a case which satisfies the requirements set out in paragraph 145 above, 
+should also provide all information relevant to the case (e.g. details of activities 
+that give rise to taxation carried out in the Mainland or in Hong Kong, details 
+of negotiations with the competent authority of the Mainland including copies 
+of documents, letters, notices of assessment and demand notes), so that the 
+Inland Revenue Department may examine the case and consult with the 
+competent authority of the Mainland. 
+Article 24 
+EXCHANGE OF INFORMATION 
+148. 
+In line with international practice, the Comprehensive Arrangement 
+contains provisions on the exchange of information.  Paragraph 1 of Article 24 
+states that the competent authorities of both Sides shall exchange such 
+information as is necessary for carrying out the provisions of the 
+Comprehensive Arrangement or of the domestic laws of both Sides concerning 
+taxes covered by the Comprehensive Arrangement. Paragraph 1 also makes it 
+clear that the exchange of information is not restricted by Article 1 (Persons 
+Covered), i.e. information relating to persons who are not residents of One Side 
+or both Sides may be exchanged, provided that the exchange of information is 
+for purposes compatible with this Article. 
+149. 
+In order to ensure that information relating to taxpayers will not be 
+misused, the Comprehensive Arrangement provides that any information 
+received by One Side from the Other Side shall be treated as secret in the same 
+manner as information obtained under the domestic laws of that Side. In other 
+words, both the Mainland and Hong Kong shall keep information obtained 
+from the other party confidential and such information shall be disclosed only 
+to persons or authorities concerned with the assessment or collection of, the 
+enforcement or prosecution in respect of, or the determination of appeals in 
+relation to, the taxes covered by the Comprehensive Arrangement.  Such 
+persons or authorities shall use the information only for such purposes.  They 
+60  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+may disclose the information in public court proceedings or in judicial 
+decisions, including, in case of Hong Kong, the decisions of the Board of 
+Review.  Both Sides also specify in the Protocol to the Comprehensive 
+Arrangement that information may not be disclosed to any other jurisdiction 
+without the consent of the Side which furnished the information in the first 
+place. 
+150. 
+Information received by the Mainland from the competent authority 
+of Hong Kong will not be used by the Mainland to impose taxes which are not 
+taxes covered by the Comprehensive Arrangement, such as custom duties and 
+value-added taxes.   
+151. 
+Paragraph 2 of Article 24 specifies that in no case shall the 
+provisions of paragraph 1 in relation to the exchange of information be 
+construed so as to impose on One Side the obligation to carry out 
+administrative measures at variance with the laws and the administrative 
+practice of either Side; to supply information which is not obtainable under the 
+laws or in the normal course of the administration of either Side; or to supply 
+information which would disclose any trade, business, industrial, commercial 
+or professional secret or trade process, or information, the disclosure of which 
+would be contrary to public policy. 
+152. 
+The power conferred on the Inland Revenue Department by virtue of 
+the provisions of the Ordinance in relation to the seeking of information is 
+restricted to cases where any matter relating to any liability or obligation of any 
+person under the Ordinance is at issue. 
+153. 
+Currently the Department would, in general, not provide automatic 
+exchange of information, such as supply of bank interest information on a 
+periodic basis. Nor would the Department spontaneously provide information 
+which it supposes to be of interest to the Mainland. The Department will only 
+supply information upon specific requests received from the competent 
+authority of the Mainland in justifiable cases, and only where such requests are 
+in compliance with the conditions as laid down in the Comprehensive 
+Arrangement. These general rules will also be adopted by the Mainland. It 
+is understood that the means of seeking information available under the internal 
+taxation procedures should be exhausted in the first place before any request 
+for information would be made to the Other Side. 
+61  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+154. 
+Article 24 provides that the exchange of information shall be 
+conducted by the competent authorities of both Sides.  Paragraph 1(8) of 
+Article 3 of the Comprehensive Arrangement provides that “competent 
+authority” means, in the case of the Mainland, the State Administration of 
+Taxation or its authorized representatives; and in the case of Hong Kong, the 
+Commissioner of Inland Revenue or his authorized representative.  Therefore, 
+all requests for exchange of information should be put forward by the State 
+Administration of Taxation (unless the State Administration of Taxation has 
+authorized a representative).  The Hong Kong Inland Revenue Department 
+will not exchange information with unauthorized local tax authorities of the 
+Mainland. 
+155. 
+Section 49(5) of the Ordinance stipulates that “where any 
+arrangements have effect by virtue of this section, the obligation as to secrecy 
+imposed by section 4 shall not prevent the disclosure to any authorized officer 
+of the government with which the arrangements are made of such information 
+as is required to be disclosed under the arrangements”. In addition, according 
+to paragraph (c) of section 58(1) of the Personal Data (Privacy) Ordinance 
+(Chapter 486), disclosure of relevant information to the competent authority of 
+the Mainland by the Commissioner of Inland Revenue or his authorized 
+representative for the purposes of implementing the Comprehensive 
+Arrangement does not violate the information protection principles of the 
+Personal Data (Privacy) Ordinance. 
+156. 
+The Commissioner of Inland Revenue has obtained legal advice on 
+the Exchange of Information Article of the Comprehensive Arrangement. 
+Provided that the Inland Revenue Department complies with the rules as laid 
+down in the Comprehensive Arrangement when carrying out the relevant 
+provisions, there would be no contravention of the Basic Law or the 
+International Covenant on Civil and Political Rights. Hong Kong’s existing 
+legislation (including the Personal Data (Privacy) Ordinance) does not provide 
+that the Inland Revenue Department should inform the taxpayer concerned if it 
+has passed on information relating to him to the competent authority of the 
+Mainland. Accordingly, the Department would not provide taxpayers with 
+details of any such exchanges. 
+157. 
+Information exchange is carried out only after the Comprehensive 
+Arrangement is in force. Where information that existed prior to the entry 
+62  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+into force of the Comprehensive Arrangement is exchanged, such information 
+should not be used in the assessment or collection of, the enforcement or 
+prosecution in respect of, or the determination of appeals in relation to, the 
+taxes for the following years: 
+(1) 
+In the Mainland: any taxable years before 1 January 2007; 
+(2) 
+In Hong Kong: any years of assessment before 1 April 2007. 
+Article 25 
+MISCELLANEOUS PROVISIONS 
+158. 
+Article 25 states clearly that nothing in the Comprehensive 
+Arrangement shall prejudice the right of either Side to apply its domestic laws 
+and measures to prevent tax avoidance. “To prevent tax avoidance” shall be 
+construed as including the prevention of the abusive use of the Comprehensive 
+Arrangement. In the case of Hong Kong, the laws and measures concerning 
+tax avoidance include sections 5B, 9(1A), 9A, 15(1)(j), 15(1)(k), 15(1)(l), 16(2), 
+16(2A), 16(2B), 16(2C), 16(2D), 16(2E), 16(2F), 16E(2A), 16E(2B), 18D(2A), 
+20, 20AE, 21A(1)(a), 22B, 38B, 39E, 61, 61A and 61B of the Ordinance. 
+Article 26 
+ENTRY INTO FORCE 
+159. 
+In Hong Kong, the provisions of the Comprehensive Arrangement 
+shall apply to income derived in the years of assessment beginning on or after 1 
+April 2007; and in the Mainland, in the taxable years beginning on or after 1 
+January 2007. 
+The relevant provisions of the Air Services Arrangement 
+(paragraph 6 of Article 11) signed between the Mainland and Hong Kong and 
+the Limited Arrangement (see paragraph 1 above) shall cease to have effect on 
+the date on which the Comprehensive Arrangement applies to the relevant 
+types of tax. The provisions of the Comprehensive Arrangement shall apply 
+in the Shenzhen Bay Port Hong Kong Port Area from its commencement of 
+operation on 1 July 2007. 
+63  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Article 27 
+TERMINATION 
+160. 
+The Comprehensive Arrangement shall remain in force indefinitely, 
+but One Side may give the Other Side written notice of termination on or 
+before 30 June in any calendar year beginning after the expiration of a period 
+of 5 years from the date of its entry into force. 
+In such event, the 
+Comprehensive Arrangement shall cease to have effect from: 
+(1)  
+in the Mainland: the taxable year beginning on or after 1 
+January in the calendar year next following the year in which 
+the notice is given; 
+(2)  
+in Hong Kong: the year of assessment beginning on or after 1 
+April in the calendar year next following the year in which the 
+notice is given. 
+CONCLUSION 
+161. 
+The Comprehensive Arrangement is intended to effectively resolve 
+problems of double taxation faced by residents of the Mainland and Hong 
+Kong and to promote commercial and trading activities between the two Sides. 
+The explanations concerning Mainland taxation treatment mentioned in this 
+Note (in the Chinese version) have been vetted by the International Taxation 
+Department of the State Administration of Taxation. This would contribute to 
+the effective implementation of the Comprehensive Arrangement. 
+64  

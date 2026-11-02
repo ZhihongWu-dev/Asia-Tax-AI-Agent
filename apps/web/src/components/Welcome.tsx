@@ -1,6 +1,4 @@
-import { BookOpen, Landmark, ListChecks } from "lucide-react";
 import { BrandMark } from "./Brand";
-import { suggestions, type EntryHint } from "../workspace";
 import { useLocale } from "../locale";
 
 export default function Welcome() {
@@ -13,29 +11,5 @@ export default function Welcome() {
       <h1 id="welcome-title">{t("让税务问题，更清晰。")}</h1>
       <p>{t("梳理事实，查阅依据，从一次对话开始。")}</p>
     </section>
-  );
-}
-export function SuggestedQuestions({
-  onSelect,
-}: {
-  onSelect: (text: string, hint: EntryHint) => void;
-}) {
-  const { t } = useLocale();
-  const icons = [Landmark, ListChecks, BookOpen];
-  return (
-    <div className="suggested-questions" aria-label={t("快捷问题")}>
-      {suggestions.map((suggestion, i) => {
-        const Icon = icons[i];
-        return (
-          <button
-            key={suggestion.id}
-            onClick={() => onSelect(t(suggestion.text), suggestion.entryHint)}
-          >
-            <Icon size={15} strokeWidth={1.5} />
-            {t(suggestion.title)}
-          </button>
-        );
-      })}
-    </div>
   );
 }

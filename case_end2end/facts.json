@@ -1,0 +1,53 @@
+{
+  "case": "CASE-001 cn-hk dividend (Shenzhen Chenguang -> Brightpeak Holdings (HK))",
+  "note": "Ground truth for the extraction stage. Variable names follow rule/variable.csv; every value names the document and the passage it comes from. Fictitious data except the documents under documents/real/.",
+  "filled_on": "2026-03-26",
+  "transaction_status": "planned: the dividend was resolved on 2026-03-20 and is payable by 2026-04-30; not yet paid when the background was entered",
+  "flow": {"payer_jur": "cn", "payee_jur": "hk", "subject": "company", "date": "2026-04-30",
+           "amount": {"value": 14000000, "currency": "CNY", "source": "S04", "quote": "晨峰控股（香港）有限公司：人民币 14,000,000.00 元（70%）"}},
+  "payment": {
+    "holding_pct": {"value": 70, "source": "S02", "quote": "3,500 | 70% | 2019-06-30", "also": ["S03 第八条", "S13"]},
+    "holding_months": {"value": 82, "source": "S02", "quote": "出资日期 2019-06-30", "derivation": "2019-06-30 to the payment date 2026-04-30 = 82 months of continuous holding; S10 note 8 confirms the acquisition date"},
+    "payer_listed": {"value": false, "source": "S01", "quote": "有限责任公司（台港澳与境内合资）", "basis": "a limited liability company, not a joint-stock company; no listing"},
+    "payer_fie": {"value": true, "source": "S01", "quote": "有限责任公司（台港澳与境内合资）"},
+    "payer_tax_rate": {"value": 25, "source": "S05", "quote": "税率（25%）"},
+    "payer_income_taxed": {"value": true, "source": "S05", "quote": "本年累计实际已缴纳的所得税额 11,500,000.00"},
+    "payer_etr": {"value": 25, "source": "S05", "derivation": "11,500,000 / 46,000,000"},
+    "payer_jur": {"value": "cn", "source": "S01"}
+  },
+  "payer": {
+    "incorporated_in": {"value": "cn", "source": "S01", "quote": "登记机关 深圳市市场监督管理局"},
+    "managed_in": {"value": "cn", "source": "S03", "quote": "董事会每年至少在公司住所地召开两次会议"}
+  },
+  "payee": {
+    "incorporated_in": {"value": "hk", "source": "S07", "quote": "is this day incorporated in Hong Kong under the Companies Ordinance"},
+    "managed_in": {"value": "hk", "source": "S09", "quote": "held at Room 1203, 12/F, Tower 2, Admiralty Centre, 18 Harcourt Road, Hong Kong", "caveat": "the chairman attends from Singapore by video; S11 shows the IRD accepted Hong Kong residence for 2025"},
+    "mne_entity": {"value": true, "source": "S10", "quote": "The Company is a member of a multinational enterprise group within the meaning of section 15H"},
+    "received_in_jurisdiction": {"value": true, "kind": "structure", "source": "S09", "quote": "the net proceeds be received into the Company's HKD account no. 652-312488-838 with The Hongkong and Shanghai Banking Corporation Limited, Hong Kong", "also": ["S12 (2024 dividend received in Hong Kong)"]},
+    "other_taxable_income": {"value": null, "source": "S10", "note": "FY2025 loss; the 2026 figure does not exist yet -> MISSING, only matters for the two-tier schedule on taxed income"},
+    "payee_is_government": {"value": false, "source": "S07"},
+    "payee_listed_in_partner": {"value": false, "source": "S08", "quote": "Total number of issued shares 10,000 ... Member Brightpeak Asia Pte. Ltd. ... 10,000 ordinary (100%)", "basis": "a private company with a single corporate member"},
+    "parent_jur": {"value": "sg", "source": "S08", "quote": "Brightpeak Asia Pte. Ltd. (UEN 201912345K) ... 10,000 ordinary (100%)", "also": ["S13", "S14"]},
+    "parent_holding_pct": {"value": 100, "source": "S08", "quote": "10,000 ordinary (100%)"},
+    "parent_holding_months": {"value": 85, "source": "S08", "quote": "Date of registration 12 March 2019", "derivation": "2019-03-12 to 2026-04-30 = 85 months"},
+    "parent_treaty_not_worse": {"value": true, "kind": "derived", "derivation": "cn-sg.outbound_wht.dividend_rate_reduced = 5 with holding_pct_min 25 equals cn-hk.outbound_wht.dividend_rate_reduced = 5 with 25; the parent would receive the same benefit (STA 2018 No. 9 item 3, 'qualifying person')"},
+    "passes_on_within_12m": {"value": false, "source": "S09", "quote": "No resolution was passed; the matter was deferred pending tax advice", "caveat": "the parent has asked for onward distribution (S09 item 4); an obligation by contract or established practice would turn this factor against beneficial ownership (STA 2018 No. 9 item 2(1)); the 2024 dividend was retained (S10, S12)"},
+    "substantive_business": {"value": false, "source": "S10", "quote": "The principal activity of the Company is investment holding ... The Company had no employees during the year"},
+    "employees_in_jurisdiction": {"value": 0, "source": "S10", "quote": "The Company had no employees during the year (2024: none)"},
+    "premises_in_jurisdiction": {"value": false, "source": "S08", "quote": "address of the company secretary, Harbourline Corporate Services Limited", "also": ["S15"]}
+  },
+  "predicates": {
+    "bo": {"answer": "unknown", "basis": "pure holding company, no employees (S10 note 6), registered office and administration provided by the secretary (S08, S15), sole shareholder has asked for onward distribution (S09 item 4); the item-4 safe harbours do not apply (private company owned by a Singapore company)"},
+    "parent_bo": {"answer": "unknown", "basis": "Brightpeak Asia Pte. Ltd. has three employees and regional holding activities (S14) and would be a 'qualifying person' under item 3 (same 5% benefit under the China-Singapore treaty); whether it itself is beneficial owner under the item-2 factors has not been examined"},
+    "ppt": {"answer": "unknown", "basis": "the Hong Kong company was interposed in 2019 by acquisition from another Hong Kong company (S02 change record); purpose not documented"},
+    "gaar": {"answer": "no", "basis": "no artificial step beyond the holding structure itself; the same question is covered by bo and ppt"},
+    "substance": {"answer": "no", "basis": "s15K(2)(a): a pure equity-holding entity needs adequate human resources and premises in Hong Kong; the company has none (S10 note 6, S15)"},
+    "fsie_mpr": {"answer": "no", "basis": "the holding predates the FSIE regime (acquired 2019, regime from 2023); no arrangement entered into in respect of the dividend"}
+  },
+  "history": {
+    "dividend_2024": {"gross": 8400000, "payee_share": 5880000, "withheld": 840000, "rate": 10, "treaty_claimed": false, "received_in_hk": true, "source": ["S06", "S12"],
+                      "refund_note": "under STA 2019 No. 35 art. 10 only the excess over the treaty rate is refundable: 5,880,000 x (10% - 5%) = 294,000 if the 2024 payment qualified for 5%; the 840,000 figure in S06 is the whole tax withheld on RMB 8,400,000, of which the Hong Kong shareholder's part was RMB 5,880,000 (70%)"}
+  },
+  "expected_questions": ["bo or parent_bo (DISCRETION; either route establishes beneficial ownership)", "ppt (DISCRETION)"],
+  "expected_interval_cn_outbound_wht": {"floor": 5, "ceiling": 10, "unit": "% of RMB 14,000,000", "amounts": {"floor": 700000, "ceiling": 1400000}}
+}

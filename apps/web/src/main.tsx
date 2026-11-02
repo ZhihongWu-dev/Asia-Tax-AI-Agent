@@ -4,9 +4,9 @@ import App from "./App";
 import AuthGate from "./auth";
 import { LocaleProvider } from "./locale";
 import "./styles.css";
+import "./run-panel.css";
 import "./auth.css";
 import "./chat-polish.css";
-import "./button-theme.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

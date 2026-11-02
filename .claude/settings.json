@@ -1,0 +1,31 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Grep|Glob|Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+            "args": ["${CLAUDE_PROJECT_DIR}/agent/tools/guard_hook.py"],
+            "timeout": 10,
+            "statusMessage": "case-file guard"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+            "args": ["${CLAUDE_PROJECT_DIR}/agent/tools/log_hook.py"],
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

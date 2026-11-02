@@ -1,0 +1,100 @@
+{
+ "base": "CNY",
+ "date": "2026-04-30",
+ "jur": "",
+ "role": "",
+ "retrieved_at": "2026-10-31T15:48:33+00:00",
+ "rule": [],
+ "rates": {
+  "HKD": {
+   "rate": 1.1471,
+   "source": "market: Frankfurter (ECB reference rates)",
+   "url": "https://api.frankfurter.dev/v1/2026-04-30?base=CNY&symbols=AED,HKD,IDR,INR,JPY,KRW,MYR,SGD,THB,VND",
+   "date": "2026-04-30",
+   "note": ""
+  },
+  "IDR": {
+   "rate": 2540.11,
+   "source": "market: Frankfurter (ECB reference rates)",
+   "url": "https://api.frankfurter.dev/v1/2026-04-30?base=CNY&symbols=AED,HKD,IDR,INR,JPY,KRW,MYR,SGD,THB,VND",
+   "date": "2026-04-30",
+   "note": ""
+  },
+  "INR": {
+   "rate": 13.8994,
+   "source": "market: Frankfurter (ECB reference rates)",
+   "url": "https://api.frankfurter.dev/v1/2026-04-30?base=CNY&symbols=AED,HKD,IDR,INR,JPY,KRW,MYR,SGD,THB,VND",
+   "date": "2026-04-30",
+   "note": ""
+  },
+  "JPY": {
+   "rate": 22.927,
+   "source": "market: Frankfurter (ECB reference rates)",
+   "url": "https://api.frankfurter.dev/v1/2026-04-30?base=CNY&symbols=AED,HKD,IDR,INR,JPY,KRW,MYR,SGD,THB,VND",
+   "date": "2026-04-30",
+   "note": ""
+  },
+  "KRW": {
+   "rate": 216.29,
+   "source": "market: Frankfurter (ECB reference rates)",
+   "url": "https://api.frankfurter.dev/v1/2026-04-30?base=CNY&symbols=AED,HKD,IDR,INR,JPY,KRW,MYR,SGD,THB,VND",
+   "date": "2026-04-30",
+   "note": ""
+  },
+  "MYR": {
+   "rate": 0.58137,
+   "source": "market: Frankfurter (ECB reference rates)",
+   "url": "https://api.frankfurter.dev/v1/2026-04-30?base=CNY&symbols=AED,HKD,IDR,INR,JPY,KRW,MYR,SGD,THB,VND",
+   "date": "2026-04-30",
+   "note": ""
+  },
+  "SGD": {
+   "rate": 0.18689,
+   "source": "market: Frankfurter (ECB reference rates)",
+   "url": "https://api.frankfurter.dev/v1/2026-04-30?base=CNY&symbols=AED,HKD,IDR,INR,JPY,KRW,MYR,SGD,THB,VND",
+   "date": "2026-04-30",
+   "note": ""
+  },
+  "THB": {
+   "rate": 4.7659,
+   "source": "market: Frankfurter (ECB reference rates)",
+   "url": "https://api.frankfurter.dev/v1/2026-04-30?base=CNY&symbols=AED,HKD,IDR,INR,JPY,KRW,MYR,SGD,THB,VND",
+   "date": "2026-04-30",
+   "note": ""
+  },
+  "AED": {
+   "rate": 0.550635,
+   "source": "market: exchangerate-api open endpoint (latest daily)",
+   "url": "https://open.er-api.com/v6/latest/CNY",
+   "date": "Sat, 31 Oct 2026 00:02:31 +0000",
+   "note": "latest rate, not the rate of --date"
+  },
+  "VND": {
+   "rate": 3875.968992,
+   "source": "market: exchangerate-api open endpoint (latest daily)",
+   "url": "https://open.er-api.com/v6/latest/CNY",
+   "date": "Sat, 31 Oct 2026 00:02:31 +0000",
+   "note": "latest rate, not the rate of --date"
+  },
+  "CNY": {
+   "rate": 1.0,
+   "source": "base",
+   "url": "",
+   "date": "2026-04-30",
+   "note": ""
+  }
+ },
+ "sources": [
+  {
+   "name": "frankfurter",
+   "url": "https://api.frankfurter.dev/v1/2026-04-30?base=CNY&symbols=AED,HKD,IDR,INR,JPY,KRW,MYR,SGD,THB,VND",
+   "date": "2026-04-30"
+  },
+  {
+   "name": "open.er-api.com",
+   "url": "https://open.er-api.com/v6/latest/CNY",
+   "date": "Sat, 31 Oct 2026 00:02:31 +0000"
+  }
+ ],
+ "missing": []
+}

@@ -1,8 +1,0 @@
-{
-  "template": "holding", "currency": "CNY",
-  "roles": {"OP": {"loc": "CN", "attrs": {}}, "ULT": {"loc": "HK", "attrs": {}}},
-  "holds": [{"holder": "ULT", "held": "OP", "ratio": 100, "since": "2020-01-01"}],
-  "flows": {"up1": {}}, "present": {"HOLD": null, "financing": "EQUITY", "payment": false},
-  "event": {"dividend": 1000000, "on": "2026-10-11", "as_at": "2026-10-11"},
-  "members": ["OP", "ULT"], "notes": ["合成工程测试案例；金额以 CNY 计；无真实客户资料。"]
-}

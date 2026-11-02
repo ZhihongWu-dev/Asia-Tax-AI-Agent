@@ -1,23 +1,19 @@
-import type { Attachment } from './attachments';
+import type { Attachment } from "./attachments";
 import HintButton from "./components/HintButton";
 import { useEffect, useRef, useState } from "react";
-import {
-  Globe2,
-  Menu,
-  Network,
-  PanelRightClose,
-  PanelRightOpen,
-} from "lucide-react";
-import { caseTitle, sourceInfo, type Panel } from "./workspace";
+import { Activity, Globe2, Menu } from "lucide-react";
+import { caseTitle, type Panel } from "./workspace";
 import { useWorkspace } from "./hooks/useWorkspace";
+import { useRun } from "./hooks/useRun";
 import { isRetryable } from "./api";
-import { useLocale, translate } from "./locale";
+import { useLocale } from "./locale";
 import { useOverlayFocus } from "./hooks/useOverlayFocus";
 import Composer from "./components/Composer";
 import Conversation from "./components/Conversation";
 import DetailsPanel from "./components/DetailsPanel";
+import RunPanel from "./components/RunPanel";
 import Sidebar from "./components/Sidebar";
-import Welcome, { SuggestedQuestions } from "./components/Welcome";
+import Welcome from "./components/Welcome";
 import Brand from "./components/Brand";
 import BrandLoader from "./components/BrandLoader";
 
@@ -26,28 +22,28 @@ export default function App() {
   const {
     cases,
     current,
-    applyServerCase,
-    fields,
     busy,
     currentBusy,
     error,
-    errorLocale,
     setActiveId,
     drafts,
     changeDraft,
-    chooseSuggestion,
     send,
-    save,
-    confirmAndAnalyze,
-    analyze,
     newCase: createCase,
     retry,
-    organize, partial, canStop, stop,
+    organize, partial, process, reload, canStop, stop,
   } = useWorkspace();
-  const [showConsent, setShowConsent] = useState(false);
-  const [consent, setConsent] = useState(false);
+  const { run, resume, halt } = useRun(current?.id, current?.revision, reload);
+  const working = run.active || run.turning;
+  const started = run.steps.some((step) => step.runs > 0);
+  const [runOpen, setRunOpen] = useState(false);
+  const wasActive = useRef(false);
+  useEffect(() => {
+    if (run.active && !wasActive.current) setRunOpen(true);
+    wasActive.current = run.active;
+  }, [run.active]);
+  useEffect(() => setRunOpen(false), [current?.id]);
   const [panel, setPanel] = useState<Panel>(null);
-  const [source, setSource] = useState(sourceInfo[0].id);
   const [mobileNav, setMobileNav] = useState(false);
   const [narrow, setNarrow] = useState(() => window.matchMedia("(max-width: 1100px)").matches);
   const panelRef = useRef<HTMLDivElement>(null),
@@ -73,15 +69,7 @@ export default function App() {
     setMobileNav(false);
     void createCase();
   }
-  async function sendMessage(text: string, file?: Attachment) {
-    if (!current.data_approved && !consent) {
-      setShowConsent(true);
-      return false;
-    }
-    setShowConsent(false);
-    return send(text, consent, file);
-  }
-  const modalOpen = mobileNav;
+  const sendMessage = (text: string, files: Attachment[]) => send(text, files);
   if (!current)
     return (
       <main className="startup">
@@ -95,7 +83,7 @@ export default function App() {
       </main>
     );
   return (
-    <div className={`app-shell ${panel ? "panel-workspace" : ""}`}>
+    <div className={`app-shell ${panel ? "panel-workspace" : ""} ${runOpen && started && !panel ? "run-open" : ""}`}>
       <div
         ref={navRef}
         className={`sidebar-slot ${mobileNav ? "is-open" : ""}`}
@@ -121,7 +109,7 @@ export default function App() {
       </div>
       <main
         className={`main-workspace ${empty ? "is-empty" : ""}`}
-        inert={modalOpen || Boolean(panel) ? true : undefined}
+        inert={mobileNav || Boolean(panel) ? true : undefined}
       >
         <header className="topbar">
           <div className="page-title">
@@ -138,35 +126,24 @@ export default function App() {
             <span>{empty ? t("税务助手") : caseTitle(current, t)}</span>
           </div>
           <div className="topbar-actions">
+            {started && (
+              <HintButton
+                className={`language-toggle run-toggle ${run.active ? "is-active" : ""}`}
+                aria-label={t("打开进度面板")}
+                aria-expanded={runOpen}
+                onClick={() => setRunOpen(!runOpen)}
+              >
+                <Activity size={14} />
+                <span>{t("进度")}</span>
+              </HintButton>
+            )}
             <HintButton
               className="language-toggle"
               aria-label={locale === "zh" ? "Switch to English" : "切换为中文"}
               onClick={() => setLocale(locale === "zh" ? "en" : "zh")}
             >
               <Globe2 size={14} />
-              <span>{locale === "zh" ? "中文" : "EN"}</span>
-            </HintButton>
-            <HintButton
-              className="icon-button"
-              aria-label={t("结构分析")}
-              title={t("结构分析")}
-              aria-expanded={panel === "structure"}
-              onClick={() => openPanel("structure")}
-            >
-              <Network size={18} />
-            </HintButton>
-            <HintButton
-              className="icon-button"
-              aria-label={panel === "facts" ? t("收起案例信息") : t("打开案例信息")}
-              title={t("案例信息")}
-              aria-expanded={panel === "facts"}
-              onClick={() => setPanel(panel === "facts" ? null : "facts")}
-            >
-              {panel === "facts" ? (
-                <PanelRightClose size={19} />
-              ) : (
-                <PanelRightOpen size={19} />
-              )}
+              <span>{locale === "zh" ? "EN" : "中文"}</span>
             </HintButton>
           </div>
         </header>
@@ -175,74 +152,32 @@ export default function App() {
             {empty ? (
               <Welcome />
             ) : (
-              <Conversation
-                current={current}
-                fields={fields}
-                busy={currentBusy}
-                partial={partial}
-                onAnalyze={analyze}
-                onFacts={() => openPanel("facts")}
-              />
+              <Conversation current={current} busy={currentBusy} partial={partial} process={process} blocks={run.blocks} working={working} />
             )}
           </div>
           <div className="composer-area">
-            {current.orchestration?.active_task && (
-              <div className="key-hint" role="status">
-                {t("当前任务")}：{t(`task:${current.orchestration.active_task.kind}`)}
-                {current.orchestration.active_task.status === "paused" && <HintButton
-                  className="text-button" onClick={() => changeDraft("继续案件")}>{t("恢复任务")}</HintButton>}
-                {current.orchestration.suspended_task && <HintButton className="text-button"
-                  onClick={() => changeDraft("继续案件")}>{t("恢复之前的任务")}</HintButton>}
-              </div>
-            )}
             {error && !panel && (
               <div className="request-error" role="alert">
-                {translate(`error:${error}`, errorLocale)}{" "}
-                {isRetryable(error) && (
-                  <HintButton onClick={retry}>{translate("重试", errorLocale)}</HintButton>
-                )}
+                {t(`error:${error}`)}{" "}
+                {isRetryable(error) && <HintButton onClick={retry}>{t("重试")}</HintButton>}
               </div>
             )}
-            {showConsent && (
-              <div className="data-consent">
-                <label>
-                  <input
-                    type="checkbox"
-                    checked={consent}
-                    onChange={(e) => setConsent(e.target.checked)}
-                  />
-                  {t("本次仅提交合成研究资料，不含真实客户或个人信息。")}
-                </label>
-                <p>{t("输入将发送至配置的模型服务。确认后请再次发送。")}</p>
-              </div>
-            )}
-
             <Composer
               key={current.id}
               lastSentText={current.messages.filter(m => m.role === "user" && !m.delivery).at(-1)?.text}
               text={drafts[current.id] || ""}
               onChange={changeDraft}
-              busy={busy}
+              busy={busy || working}
               onStop={canStop ? stop : undefined}
               onSend={sendMessage}
             />
-            {empty && (
-              <SuggestedQuestions
-                onSelect={(text, hint) => {
-                  chooseSuggestion(text, hint);
-                  document
-                    .querySelector<HTMLTextAreaElement>("textarea")
-                    ?.focus();
-                }}
-              />
-            )}
           </div>
         </div>
         <footer className="workspace-footer">
           {t("专业判断，请由税务顾问复核。")}
         </footer>
       </main>
-      {modalOpen && (
+      {mobileNav && (
         <div
           className="overlay-backdrop"
           aria-hidden="true"
@@ -252,31 +187,14 @@ export default function App() {
           }}
         />
       )}
+      {runOpen && started && !panel && (
+        <div className="run-slot">
+          <RunPanel run={run} onResume={() => void resume()} onHalt={() => void halt()} onClose={() => setRunOpen(false)} />
+        </div>
+      )}
       {panel && (
-        <div
-          className="panel-slot"
-          ref={panelRef}
-          role="main"
-          aria-label={t("研究详情")}
-        >
-          <DetailsPanel
-            key={`${current.id}-${panel}`}
-            panel={panel}
-            current={current}
-            selectedSource={source}
-            onClose={() => setPanel(null)}
-            fields={fields}
-            busy={busy}
-            onConfirm={async () => {
-              if (await confirmAndAnalyze()) setPanel(null);
-            }}
-            error={error}
-            onRetry={retry}
-            onSave={save}
-            onSelectSource={setSource}
-            onDomainUpdate={applyServerCase}
-            onEditFacts={() => setPanel("facts")}
-          />
+        <div className="panel-slot" ref={panelRef} role="main" aria-label={t("关于 Taxrora")}>
+          <DetailsPanel key={panel} onClose={() => setPanel(null)} />
         </div>
       )}
     </div>
