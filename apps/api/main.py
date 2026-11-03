@@ -42,6 +42,8 @@ app = FastAPI(lifespan=lifespan, title="Asia Tax AI Agent — HK FSIE L0", versi
 from apps.api.auth import router as auth_router
 app.include_router(auth_router)
 app.include_router(router)
+from apps.api.consultation import router as consultation_router
+app.include_router(consultation_router)
 # Trust only this service's platform hostname, never every Render tenant.
 allowed_hosts = ["127.0.0.1", "localhost", "testserver"]
 render_hostname = os.environ.get("RENDER_EXTERNAL_HOSTNAME", "")
@@ -64,6 +66,18 @@ async def private_responses(request: Request, call_next):
     response.headers["Cache-Control"] = "no-store"
     response.headers["X-Content-Type-Options"] = "nosniff"
     return response
+
+
+@app.middleware('http')
+async def active_workflow(request: Request, call_next):
+    # Keep the old implementation available for rollback, but suspend its business entry points.
+    from packages.consultation.settings import brief_enabled
+    path = request.url.path
+    if brief_enabled() and (path.startswith('/api/knowledge/') or path.startswith('/api/domain/') or
+            re.fullmatch(r'/api/cases/[^/]+/(?:messages|facts|confirm|analyze|domain[^/]*|analyses/.*)', path)):
+        return JSONResponse({'detail': 'workflow_deactivated'}, status_code=409,
+                            headers={'Cache-Control': 'no-store'})
+    return await call_next(request)
 
 
 @app.get("/health")

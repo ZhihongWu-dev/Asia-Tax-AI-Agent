@@ -20,6 +20,7 @@ import Sidebar from "./components/Sidebar";
 import Welcome, { SuggestedQuestions } from "./components/Welcome";
 import Brand from "./components/Brand";
 import BrandLoader from "./components/BrandLoader";
+import BriefReportControls from './components/BriefReportControls';
 
 export default function App() {
   const { t, locale, setLocale } = useLocale();
@@ -175,7 +176,7 @@ export default function App() {
             {empty ? (
               <Welcome />
             ) : (
-              <Conversation
+              <><Conversation
                 current={current}
                 fields={fields}
                 busy={currentBusy}
@@ -183,6 +184,8 @@ export default function App() {
                 onAnalyze={analyze}
                 onFacts={() => openPanel("facts")}
               />
+              <BriefReportControls key={current.id} doc={current} busy={currentBusy} update={applyServerCase}
+                edit={() => document.querySelector<HTMLTextAreaElement>('textarea')?.focus()} /></>
             )}
           </div>
           <div className="composer-area">

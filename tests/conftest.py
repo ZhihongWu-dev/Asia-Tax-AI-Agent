@@ -15,3 +15,4 @@ def isolated_agent_logs(monkeypatch):
     monkeypatch.setenv('FSIE_AGENT_LOG_DIR', 'off')
     # Unit API tests use injected providers, not a live library subprocess.
     monkeypatch.setenv('FSIE_AGENT_PROVIDER', 'legacy')
+    monkeypatch.setenv('FSIE_ACTIVE_WORKFLOW', 'legacy')

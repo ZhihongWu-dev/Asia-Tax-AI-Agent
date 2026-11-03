@@ -20,6 +20,7 @@ dependencies = [
     "uvicorn[standard]>=0.30",
     "beautifulsoup4>=4.12",
     "pypdf>=4",
+    "reportlab>=4.2,<5",
     "Pillow==11.3.0",
     "rapidocr-onnxruntime==1.4.4",
     "openpyxl>=3.1,<4",
