@@ -1,0 +1,56 @@
+cn|company|residence|*  status=T  floor=yes  ceiling=yes  kind=conditional
+   floor    cn.residence.company
+   ceiling  cn.residence.company
+   cond     cn.residence.company                     T 
+   cite     cn.law.eit#2
+hk|company|residence|*  status=T  floor=yes  ceiling=yes  kind=conditional
+   floor    hk.residence.company
+   ceiling  hk.residence.company
+   cond     hk.residence.company                     T 
+   cite     hk.cap112#s50AAC
+cn|company|outbound_wht|hk  status=U  floor=5  ceiling=10  kind=statutory
+   floor    cn-hk.outbound_wht.cap_10, cn-hk.outbound_wht.cap_5, cn.outbound_wht.statutory
+   ceiling  cn.outbound_wht.statutory
+   cond     cn.outbound_wht.statutory                T 
+   cond     cn-hk.outbound_wht.cap_5                 U DISCRETION:bo DISCRETION:parent_bo
+   cond     cn-hk.outbound_wht.cap_10                U DISCRETION:bo DISCRETION:parent_bo
+   pending  cn-hk.outbound_wht.cap_5 -> DISCRETION:bo,DISCRETION:parent_bo; cn-hk.anti_abuse.ppt -> DISCRETION:ppt
+   cite     cn.law.eit#3, cn.law.eit#4, cn.reg.eit#91, cn.sta.2018-09#i2, cn.sta.2018-09#i3, cn.sta.2018-09#i4, treaty.cn-hk.2006.zh#10.2
+   decision D-cn-5
+cn|company|anti_abuse|hk  status=U  floor=no  ceiling=yes  kind=conditional
+   floor    -
+   ceiling  cn-hk.anti_abuse.ppt
+   cond     cn.anti_abuse.gaar                       F 
+   cond     cn-hk.anti_abuse.ppt                     U DISCRETION:ppt
+   pending  cn-hk.anti_abuse.ppt -> DISCRETION:ppt
+   cite     treaty.cn-hk.2006.p5.zh#6
+hk|company|inbound|cn  status=T  floor=0  ceiling=0  kind=conditional
+   floor    hk.inbound.credit, hk.inbound.credit_underlying, hk.inbound.fsie_taxable, hk.inbound.participation_exemption
+   ceiling  hk.inbound.credit, hk.inbound.credit_underlying, hk.inbound.fsie_taxable, hk.inbound.participation_exemption
+   cond     hk.inbound.fsie_taxable                  T 
+   cond     hk.inbound.participation_exemption       T 
+   cond     hk.inbound.substance_exemption           F 
+   cond     hk.inbound.credit                        T 
+   cond     hk.inbound.credit_underlying             T 
+   cite     hk.cap112#s15H, hk.cap112#s15I, hk.cap112#s15M, hk.cap112#s15N, hk.cap112#s50AAAC
+   decision D-hk-1
+hk|company|anti_abuse|cn  status=T  floor=no  ceiling=no  kind=none
+   floor    -
+   ceiling  -
+   cond     hk.anti_abuse.gaar                       F 
+   cond     hk.anti_abuse.fsie_main_purpose          F 
+   cite     -
+hk|company|final|*  status=U  floor=8.25  ceiling=16.5  kind=statutory
+   floor    hk.final.cit_lower_tier
+   ceiling  hk.final.cit
+   cond     hk.final.cit                             T 
+   cond     hk.final.cit_lower_tier                  U MISSING:assessable_profits
+   cond     hk.final.domestic_exempt                 F 
+   pending  hk.final.cit_lower_tier -> MISSING:assessable_profits
+   cite     hk.cap112#sch8B
+   decision D-hk-2
+hk|company|cfc|*  status=absent  floor=no  ceiling=no  kind=none
+   floor    -
+   ceiling  -
+   cite     -
+

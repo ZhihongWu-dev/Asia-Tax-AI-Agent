@@ -1,0 +1,50 @@
+{
+ "mcpServers": {
+  "tax-case-front": {
+   "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+   "args": [
+    "agent/tools/case_server.py",
+    "--root",
+    "cases",
+    "--agent",
+    "front"
+   ]
+  },
+  "tax-db": {
+   "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+   "args": [
+    "database/tools/mcp_server.py",
+    "--root",
+    "database"
+   ]
+  },
+  "tax-rule": {
+   "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+   "args": [
+    "rule/tools/mcp_server.py",
+    "--root",
+    "rule",
+    "--db",
+    "database",
+    "--cases",
+    "cases"
+   ]
+  },
+  "tax-opt-front": {
+   "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+   "args": [
+    "optimization/tools/mcp_server.py",
+    "--root",
+    "optimization",
+    "--rule",
+    "rule",
+    "--db",
+    "database",
+    "--products-root",
+    "cases",
+    "--role",
+    "front"
+   ]
+  }
+ }
+}
