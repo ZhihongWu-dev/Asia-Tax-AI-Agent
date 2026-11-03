@@ -1,0 +1,984 @@
+1
+SYNTHESISED TEXT OF THE MLI AND THE AGREEMENT BETWEEN 
+THE GOVERNMENT OF THE PEOPLE’S REPUBLIC OF CHINA AND 
+THE GOVERNMENT OF THE REPUBLIC OF KOREA FOR 
+THE AVOIDANCE OF DOUBLE TAXATION AND THE PREVENTION 
+OF FISCAL EVASION WITH RESPECT TO TAXES ON INCOME 
+General disclaimer on the Synthesised text document
+This document presents the synthesised text for the application of the Agreement between 
+the Government of the People’s Republic of China and the Government of the Republic 
+of Korea for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with 
+respect to Taxes on Income signed on 28 March, 1994 (the “Agreement”), as modified by 
+the Multilateral Convention to Implement Tax Treaty Related Measures to Prevent Base 
+Erosion and Profit Shifting signed by the People’s Republic of China on 7 June, 2017 and 
+by Korea on 7 June, 2017 (the “MLI”).
+The document was prepared on the basis of the MLI position of the People’s Republic of 
+China submitted to the Depositary upon approval on 25 May 2022 and of the MLI 
+position of Korea submitted to the Depositary upon ratification on 13 May, 2020. These 
+MLI positions are subject to modifications as provided in the MLI. Modifications made to 
+MLI positions could modify the effects of the MLI on this Agreement.
+The authentic legal texts of the Agreement and the MLI take precedence and remain the 
+legal texts applicable.
+The provisions of the MLI that are applicable with respect to the provisions of the 
+Agreement are included in boxes throughout the text of this document in the context of 
+the relevant provisions of the Agreement. The boxes containing the provisions of the MLI 
+have generally been inserted in accordance with the ordering of the provisions of the 
+2017 OECD Model Tax Convention.
+Changes to the text of the provisions of the MLI have been made to conform the 
+terminology used in the MLI to the terminology used in the Agreement (such as “Covered 
+Tax Agreement” and “Agreement”, “Contracting Jurisdictions” and “Contracting 
+States”), to ease the comprehension of the provisions of the MLI. The changes in 
+terminology are intended to increase the readability of the document and are not intended 
+to change the substance of the provisions of the MLI. Similarly, changes have been made 
+to parts of provisions of the MLI that describe existing provisions of the Agreement: 
+descriptive language has been replaced by legal references of the existing provisions to 
+ease the readability.
+In all cases, references made to the provisions of the Agreement or to the Agreement 
+
+2
+must be understood as referring to the Agreement as modified by the provisions of the 
+MLI, provided such provisions of the MLI have taken effect.
+References
+The authentic legal texts of the MLI and the Agreement can be found on the webpage of 
+the State Taxation Administration of the People’s Republic of China.
+(http://www.chinatax.gov.cn/n810341/n810770/c1153573/content.html)
+The MLI position of the People’s Republic of China submitted to the Depositary upon 
+approval on 25 May 2022 and the MLI position of the Republic of Korea submitted to the 
+Depositary upon ratification on 13 May, 2020 can be found on the MLI Depositary 
+(OECD) webpage. 
+(http://www.oecd.org/tax/treaties/beps-mli-signatories-and-parties.pdf)
+Disclaimer on the entry into effect of the provisions of the MLI
+The provisions of the MLI applicable to this Agreement do not take effect on the same 
+dates as the original provisions of the Agreement. Each of provisions of the MLI could 
+take effect on different dates, depending on the types of taxes involved (taxes withheld at 
+source or other taxes levied) and on the choices made by the People’s Republic of China 
+and Korea in their MLI positions.
+Dates of the deposit of instruments of ratification, acceptance or approval: 25 May 2022 
+for the People’s Republic of China and 13 May, 2020 for Korea.
+Entry into force of the MLI: 1 September 2022 for the People’s Republic of China and 1 
+September, 2020 for Korea.
+In accordance with paragraph 1 of Article 35 of the MLI, the provisions of the MLI have 
+effect with respect to this Agreement:
+a) with respect to taxes withheld at source on amounts paid or credited to non-residents, 
+where the event giving rise to such taxes occurs on or after 1 January 2023; and
+b) with respect to all other taxes, for taxes levied with respect to taxable periods 
+beginning on or after 1 March 2023.
+
+3
+AGREEMENT 
+BETWEEN 
+THE GOVERNMENT OF THE PEOPLE’S REPUBLIC OF CHINA AND 
+THE GOVERNMENT OF THE REPUBLIC OF KOREA
+FOR THE AVOIDANCE OF DOUBLE TAXATION AND 
+THE PREVENTION OF FISCAL EVASION WITH RESPECT 
+TO TAXES ON INCOME
+The Government of the People’s Republic of China and the Government of the 
+Republic of Korea;
+[REPLACED by paragraph 1 of Article 6 of the MLI] [Desiring to conclude 
+an Agreement for the avoidance of double taxation and the prevention of fiscal 
+evasion with respect to taxes on income and capital;]
+The following paragraph 1 of Article 6 of the MLI replaces the text referring to an 
+intent to eliminate double taxation in the preamble of this Agreement: 
+ARTICLE 6 OF THE MLI – PURPOSE OF A COVERED TAX AGREEMENT
+Intending to eliminate double taxation with respect to the taxes covered by this 
+Agreement without creating opportunities for non-taxation or reduced taxation 
+through tax evasion or avoidance (including through treaty-shopping arrangements 
+aimed at obtaining reliefs provided in this Agreement for the indirect benefit of 
+residents of third jurisdictions),
+Have agreed as follows:
+ARTICLE 1
+PERSONAL SCOPE
+This Agreement shall apply to persons who are residents of one or both of the 
+Contracting States. 
+ARTICLE 2
+TAXES COVERED
+1.  This Agreement shall apply to taxes on income imposed on behalf of a 
+Contracting State or of its local authorities, irrespective of the manner in which they 
+are levied. 
+
+4
+2.  There shall be regarded as taxes on income all taxes imposed on total income, or 
+on elements of income, including taxes on gains from the alienation of movable or 
+immovable property, as well as taxes on capital appreciation. 
+3.  The existing taxes to which the Agreement shall apply are: 
+(a) In the People’s Republic of China: 
+(i)
+the individual income tax; 
+(ii) the income tax for enterprises with foreign investment and foreign 
+enterprises; and
+(iii) the local income tax; 
+ (hereinafter referred to as “Chinese tax” ) ; 
+(b) In the Republic of Korea: 
+(i)
+the income tax; 
+(ii) the corporation tax; and
+(iii) the inhabitant tax; 
+ (hereinafter referred to as “Korean tax” ) . 
+4.  This Agreement shall apply also to any identical or substantially similar taxes 
+which are imposed after the date of signature of the Agreement in addition to, or in 
+place of, the existing taxes referred to in paragraph 3. The competent authorities of the 
+Contracting States shall notify each other of any substantial changes which have been 
+made in their respective taxation laws within a reasonable period of time after such 
+changes. 
+ARTICLE 3
+GENERAL DEFINITIONS 
+1.  For the purposes of this Agreement, unless the context otherwise requires: 
+(a) the term “China” means the People’s Republic of China; when used in 
+geographical sense, means all the territory of the People’s Republic of 
+China, including its territorial sea, in which the Chinese laws relating to 
+taxation apply, and any area beyond its territorial sea, within which the 
+People’s Republic of China has sovereign rights of exploration for and 
+
+5
+exploitation of resources of the seabed and its sub-soil and superjacent 
+water resources in accordance with international law; 
+(b) the term “Korea” means the Republic of Korea; when used in geographical 
+sense, means all the territory of the Republic of Korea, including its 
+territorial sea, in which the Korean laws relating to taxation apply, and any 
+area beyond its territorial sea, within which the Republic of Korea has 
+sovereign rights of exploration for and exploitation of resources of the 
+seabed and its sub-soil and superjacent water resources in accordance with 
+international law; 
+(c) the terms “a Contracting State” and “the other Contracting State” mean 
+China or Korea as the context requires; 
+(d) the term “tax” means Chinese tax or Korean tax, as the context requires; 
+(e) the term “person” includes an individual, a company and any other body of 
+persons; 
+(f)
+the term “company” means any body corporate or any entity which is 
+treated as a body corporate for tax purposes; 
+(g) the terms “enterprise of a Contracting State” and “enterprise of the other 
+Contracting State” mean, respectively, an enterprise carried on by a resident 
+of a Contracting State and an enterprise carried on by a resident of the other 
+Contracting State; 
+(h) the term “nationals” means: 
+(i)
+all individuals possessing the nationality of a Contracting State; 
+(ii) all legal persons, partnerships and associations deriving their status as 
+such from the laws in force in a Contracting State;
+(i)
+the term “international traffic” means any transport by a ship or aircraft 
+operated by an enterprise which has its place of head office or effective 
+management in a Contracting State, except when the ship or aircraft is 
+operated solely between places in the other Contracting State; 
+(j)
+the term “competent authority” means: 
+(i)
+in the case of China, the State Tax Bureau or its authorized 
+representative; 
+
+6
+(ii) in the case of Korea, the Minister of Finance or his authorized 
+representative. 
+2.  As regards the application of this Agreement by a Contracting State, any term 
+not defined therein shall, unless the context otherwise requires, have the meaning 
+which it has under the laws of that Contracting State concerning the taxes to which 
+this Agreement applies. 
+ARTICLE 4
+RESIDENT
+1.  For the purposes of this Agreement, the term “resident of a Contracting State” 
+means any person who, under the laws of that Contracting State, is liable to tax 
+therein by reason of his domicile, residence, place of head office, place of effective 
+management, or any other criterion of a similar nature. 
+2.  Where by reason of the provisions of paragraph 1 an individual is a resident of 
+both Contracting States, then his status shall be determined as follows: 
+(a) he shall be deemed to be a resident of the Contracting State in which he 
+has a permanent home available to him; if he has a permaneat home 
+available to him in both States, he shall be deemed to be a resident of the 
+Contracting State with which his personal and economic relations are 
+closer (centre of vital interests) ; 
+(b) if the State in which he has his centre of vital interests cannot be 
+determined, or if he has not a permanent home available to him in either 
+Contracting State, he shall be deemed to be a resident of the State in which 
+he has a habitual abode; 
+(c) if he has a habitual abode in both Contracting States or in neither of them, 
+he shall be deemed to be a resident of the Contracting State of which he is 
+a national; 
+(d) if he is a national of both Contracting States or of neither of them, 
+the competent authorities of the Contracting States shall settle the 
+question by mutual agreement. 
+3.  Where by reason of the provisions of paragraph 1 a person other than an 
+individual is a resident of both Contracting States, the competent authorities of the 
+Contracting States shall by mutual agreement endeavour to settle the question and to 
+determine the mode of application of this Agreement to such person. 
+
+7
+ARTICLE 5
+PERMANENT ESTABLISHMENT
+1.  For the purposes of this Agreement, the term “permanent establishment” means a 
+fixed place of business through which the business of an enterprise is wholly or partly 
+carried on. 
+2.  The term “permanent establishment” includes especially: 
+(a) a place of management; 
+(b) a branch; 
+(c) an office; 
+(d) a factory; 
+(e) a workshop; and
+(f)
+a mine, an oil or gas well, a quarry or any other place of extraction of 
+natural resources. 
+3.  The term “permanent establishment” likewise encompasses: 
+(a) a building site, a construction, assembly or installation project or 
+supervisory activities in connection therewith, but only where such site, 
+project or activities continue for a period of more than 6 months; 
+(b) the furnishing of services, including consultancy services, by an enterprise 
+of a Contracting State through employees or other engaged personnel in 
+the other Contracting State, provided that such activities continue for the 
+same project or a connected project for a period or periods aggregating 
+more than 6 months within any 12-month period. 
+4.  Notwithstanding the provisions of paragraphs 1 to 3, the term “permanent 
+establishment” shall be deemed not to include: 
+(a) the use of facilities solely for the purpose of storage, display or delivery of 
+goods or merchandise belonging to the enterprise; 
+(b) the maintenance of a stock of goods or merchandise belonging to the 
+enterprise solely for the purpose of storage, display or delivery; 
+
+8
+(c) the maintenance of a stock of goods or merchandise belonging to the 
+enterprise solely for the purpose of processing by another enterprise; 
+(d) the maintenance of a fixed place of business solely for the purpose of 
+purchasing goods or merchandise or of collecting information, for the 
+enterprise; 
+(e) the maintenance of a fixed place of business solely for the purpose of 
+carrying on, for the enterprise, any other activity of a preparatory or 
+auxiliary character; 
+(f) the maintenance of a fixed place of business solely for any 
+combination of activities mentioned in sub-paragraphs (a) to (e), 
+provided that the overall activity of the fixed place of business 
+resulting from this combination is of a preparatory or auxiliary 
+character.
+5.  Notwithstanding the provisions of paragraphs 1 and 2, where a person—other 
+than an agent of an independent status to whom the provisions of paragraph 6 
+apply—is acting in a Contracting State on behalf of an enterprise of the other 
+Contracting State, has and habitually exercises an authority to conclude contracts in 
+the name of the enterprise, that enterprise shall be deemed to have a permanent 
+establishment in the first-mentioned Contracting State in respect of any activities 
+which that person undertakes for the enterprise, unless the activities of such person 
+are limited to those mentioned in paragraph 4 which, if exercised through a fixed 
+place of business, would not make this fixed place of business a permanent 
+establishment under the provisions of that paragraph. 
+6.  An enterprise of a Contracting State shall not be deemed to have a permanent 
+establishment in the other Contracting State merely because it carries on business in 
+that other Contracting State through a broker, general commission agent or any other 
+agent of an independent status, provided that such persons are acting in the ordinary 
+course of their business. However, when the activities of such an agent are devoted 
+wholly or almost wholly on behalf of that enterprise, he will not be considered an 
+agent of an independent status within the meaning of this paragraph. 
+7.  The fact that a company which is a resident of a Contracting State controls or is 
+controlled by a company which is a resident of the other Contracting State, or which 
+carries on business in that other State (whether through a permanent establishment or 
+otherwise), shall not of itself constitute either company a permanent establishment of 
+the other. 
+
+9
+ARTICLE 6
+INCOME FROM IMMOVABLE PROPERTY
+1.  Income derived by a resident of a Contracting State from immovable property 
+(including income from agriculture or forestry) situated in the other Contracting State 
+may be taxed in that other State. 
+2.  The term “immovable property” shall have the meaning which it has under the 
+law of the Contracting State in which the property in question is situated. The term 
+shall in any case include property accessory to immovable property, livestock and 
+equipment used in agriculture and forestry, rights to which the provisions of general 
+law respecting landed property apply, usufruct of immovable property and rights to 
+variable or fixed payments as consideration for the working of, or the right to work, 
+mineral deposits, sources and other natural resources. Ships and aircraft shall not be 
+regarded as immovable property. 
+3.  The provisions of paragraph 1 shall apply to income derived from the direct use, 
+letting or use in any other form of immovable property. 
+4.  The provisions of paragraphs 1 and 3 shall also apply to the income from 
+immovable property of an enterprise and to income from immovable property used for 
+the performance of independent personal services. 
+ARTICLE 7
+BUSINESS PROFITS
+1.  The profits of an enterprise of a Contracting State shall be taxable only in that 
+Contracting State unless the enterprise carries on business in the other Contracting 
+State through a permanent establishment situated therein. If the enterprise carries on 
+business as aforesaid, the profits of the enterprise may be taxed in the other 
+Contracting State but only so much of them as is attributable to that permanent 
+establishment.
+2.  Subject to the provisions of paragraph 3, where an enterprise of a Contracting 
+State carries on business in the other Contracting State through a permanent 
+establishment situated therein, there shall in each Contracting State be attributed to 
+that permanent establishment the profits which it might be expected to make if it were 
+a distinct and separate enterprise engaged in the same or similar activities under the 
+same or similar conditions and dealing wholly independently with the enterprise of 
+which it is a permanent establishment. 
+3.  In determining the profits of a permanent establishment, there shall be allowed as 
+deductions expenses which are incurred for the purposes of the business of the 
+permanent establishment, including executive and general administrative expenses so 
+
+10
+incurred, whether in the State in which the permanent establishment is situated or 
+elsewhere. 
+4.  In so far as it has been customary in a Contracting State to determine the profits 
+to be attributed to a permanent establishment on the basis of an apportionment of the 
+total profits of the enterprise to its various parts, nothing in paragraph 2 shall preclude 
+that Contracting State from determining the profits to be taxed by such an 
+apportionment as may be customary. The method of apportionment adopted shall, 
+however, be such that the result shall be in accordance with the principles contained 
+in this Article. 
+5.  No profits shall be attributed to a permanent establishment by reason of the mere 
+purchase by that permanent establishment of goods or merchandise for the enterprise. 
+6.  For the purposes of the preceding paragraphs, the profits to be attributed to the 
+permanent establishment shall be determined by the same method year by year unless 
+there is good and sufficient reason to the contrary. 
+7.  Where profits include items of income which are dealt with separately in other 
+Articles of this Agreement, then the provisions of those Articles shall not be affected 
+by the provisions of this Article. 
+ARTICLE 8
+SHIPPING AND AIR TRANSPORT
+1.  Profits from the operation of ships or aircraft in international traffic shall be 
+taxable only in the Contracting State in which the place of head office or effective 
+management of the enterprise is situated. 
+2.  If the place of head office or effective management of a shipping enterprise is 
+aboard a ship, then it shall be deemed to be situated in the Contracting State in which 
+the home harbour of the ship is situated, or, if there is no such home harbour, in the 
+Contracting State of which the operator of the ship is a resident. 
+3.  The provisions of paragraph 1 shall also apply to profits from the participation in 
+a pool, a joint business or an international operating agency. 
+ARTICLE 9
+ASSOCIATED ENTERPRISES
+Where
+
+11
+(a)
+an enterprise of a Contracting State participates directly or indirectly in the 
+management, control or capital of an enterprise of the other Contracting 
+State, or
+(b) the same persons participate directly or indirectly in the management, 
+control or capital of an enterprise of a Contracting State and an enterprise 
+of the other Contracting State, 
+and in either case conditions are made or imposed between the two enterprises in 
+their commercial or financial relations which differ from those which would be made 
+between independent enterprises, then any profits which would, but for those 
+conditions, have accrued to one of the enterprises, but, by reason of those conditions, 
+have not so accrued, may be included in the profits of that enterprise and taxed 
+accordingly. 
+The following paragraph 1 of Article 17 of the MLI applies and supersedes the 
+provisions of this Agreement: 
+ARTICLE 17 OF THE MLI – CORRESPONDING ADJUSTMENTS
+Where a Contracting State includes in the profits of an enterprise of that Contracting 
+State — and taxes accordingly — profits on which an enterprise of the other 
+Contracting State has been charged to tax in that other Contracting State and the 
+profits so included are profits which would have accrued to the enterprise of the 
+first-mentioned Contracting State if the conditions made between the two enterprises 
+had been those which would have been made between independent enterprises, then 
+that other Contracting State shall make an appropriate adjustment to the amount of the 
+tax charged therein on those profits. In determining such adjustment, due regard shall 
+be had to the other provisions of this Agreement and the competent authorities of the 
+Contracting States shall if necessary consult each other.
+ARTICLE 10
+DIVIDENDS
+1.  Dividends paid by a company which is a resident of a Contracting State to a 
+resident of the other Contracting State may be taxed in that other Contracting State. 
+2.  However, such dividends may also be taxed in the Contracting State of which the 
+company paying the dividends is a resident, and according to the laws of that State, 
+but if the recipient is the beneficial owner of the dividends the tax so charged shall not 
+exceed: 
+
+12
+(a) 5 per cent of the gross amount of the dividends if the beneficial owner is a 
+company (other than a partnership) which holds directly at least 25 per 
+cent of the capital of the company paying the dividends; 
+(b) 10 per cent of the gross amount of the dividends in all other cases. 
+This paragraph shall not affect the taxation of the company in respect of the 
+profits out of which the dividends are paid. 
+3.  The term “dividends” as used in this Article means income from shares, or other 
+rights, not being debt-claims, participating in profits, as well as income from other 
+corporate rights which is subjected to the same taxation treatment as income from 
+shares by the laws of the State of which the company making the distribution is a 
+resident. 
+4.  The provisions of paragraphs 1 and 2 shall not apply if the beneficial owner of the 
+dividends, being a resident of a Contracting State, carries on business in the other 
+Contracting State of which the company paying the dividends is a resident, through a 
+permanent establishment situated therein, or performs in that other Contracting State 
+independent personal services from a fixed base situated therein, and the holding in 
+respect of which the dividends are paid is effectively connected with such permanent 
+establishment or fixed base. In such case, the provisions of Article 7 or Article 14, as 
+the case may be, shall apply. 
+5.  Where a company which is a resident of a Contracting State derives profits or 
+income from the other Contracting State, that other Contracting State may not impose 
+any tax on the dividends paid by the company, except insofar as such dividends are 
+paid to a resident of that other Contracting State or insofar as the holding in respect of 
+which the dividends are paid is effectively connected with a permanent establishment 
+or a fixed base situated in that other Contracting State, nor subject the company’s 
+undistributed profits to a tax on the company’s undistributed profits, even if the 
+dividends paid or the undistributed profits consist wholly or partly of profits or 
+income arising in such other Contracting State.
+ARTICLE 11
+INTEREST
+1.  Interest arising in a Contracting State and paid to a resident of the other 
+Contracting State may be taxed in that other Contracting State. 
+2.  However, such interest may also be taxed in the Contracting State in which it 
+arises and according to the laws of that Contracting State, but if the recipient is the 
+beneficial owner of the interest the tax so charged shall not exceed 10 per cent of the 
+gross amount of the interest. 
+
+13
+3.  Notwithstanding the provisions of paragraph 2, interests arising in a Contracting 
+State and derived by the Government of the other Contracting State including local 
+authorities thereof, the central bank of the other Contracting State or any financial 
+institution performing functions of a governmental nature or by any resident of the 
+other Contracting State with respect to debt-claims guaranteed or indirectly financed 
+by the Government of that other Contracting State including local authorities thereof, 
+the central bank of that other Contracting State or any financial institution performing 
+functions of a governmental nature shall be exempt from tax in the first-mentioned 
+Contracting State. 
+4.  The term “interest” as used in this Article means income from debt-claims of 
+every kind, whether or not secured by mortgage and whether or not carrying a right to 
+participate in the debtor’s profits, and in particular, income from government 
+securities and income from bonds or debentures, including premiums and prizes 
+attaching to such securities, bonds or debentures. 
+5.  The provisions of paragraphs 1, 2 and 3 shall not apply if the beneficial owner of 
+the interest, being a resident of a Contracting State, carries on business in the other 
+Contracting State in which the interest arises, through a permanent establishment 
+situated therein, or performs in that other Contracting State independent personal 
+services from a fixed base situated therein, and the debt-claims in respect of which the 
+interest is paid is effectively connected with such permanent establishment or fixed 
+base. In such case the provisions of Article 7 or Article 14, as the case may be, shall 
+apply. 
+6.  Interest shall be deemed to arise in a Contracting State when the payer is the 
+Government of that Contracting State, a local authority or a resident of that 
+Contracting State. Where, however, the person paying the interest, whether he is a 
+resident of a Contracting State or not, has in a Contracting State a permanent 
+establishment or a fixed base in connection with which the indebtedness on which the 
+interest is paid was incurred, and such interest is borne by such permanent 
+establishment or fixed base, then such interest shall be deemed to arise in the 
+Contracting State in which the permanent establishment or fixed base is situated. 
+7.  Where, by reason of a special relationship between the payer and the beneficial 
+owner or between both of them and some other person, the amount of the interest, 
+having regard to the debt-claims for which it is paid, exceeds the amount which would 
+have been agreed upon by the payer and the beneficial owner in the absence of such 
+relationship, the provisions of this Article shall apply only to the last-mentioned 
+amount. In such case, the excess part of the payments shall remain taxable according 
+to the laws of each Contracting State, due regard being had to the other provisions of 
+this Agreement.
+
+14
+ARTICLE 12
+ROYALTIES
+1.  Royalties arising in a Contracting State and paid to a resident of the other 
+Contracting State may be taxed in that other Contracting State. 
+2.  However, such royalties may also be taxed in the Contracting State in which they 
+arise, and according to the laws of that Contracting State, but if the recipient is the 
+beneficial owner of the royalties, the tax so charged shall not exceed 10 per cent of 
+the gross amount of the royalties. 
+3.  The term “royalties” as used in this Article means payments of any kind received 
+as a consideration for the use of, or the right to use, any copyright of literary, artistic 
+or scientific work including cinematograph films and films or tapes for radio or 
+television broadcasting, any patent, know-how, trade mark, design or model, plan, 
+secret formula or process, or for the use of, or the right to use, industrial, commercial 
+or scientific equipment, or for information concerning industrial, commercial or 
+scientific experience. 
+4.  The provisions of paragraphs 1 and 2 shall not apply if the beneficial owner of the 
+royalties, being a resident of a Contracting State, carries on business in the other 
+Contracting State in which the royalties arise, through a permanent establishment 
+situated therein, or performs in that other Contracting State independent personal 
+services from a fixed base situated therein, and the right or property in respect of 
+which the royalties are paid is effectively connected with such permanent 
+establishment or fixed base. In such case, the provisions of Article 7 or Article 14, as 
+the case may be, shall apply. 
+5.  Royalties shall be deemed to arise in a Contracting State when the payer is the 
+Government of that Contracting State, a local authority or a resident of that 
+Contracting State. Where, however, the person paying the royalties, whether he is a 
+resident of a Contracting State or not, has in a Contracting State a permanent 
+establishment or a fixed base in connection with which the liability to pay the 
+royalties was incurred, and such royalties are borne by such permanent establishment 
+or fixed base, then such royalties shall be deemed to arise in the Contracting State in 
+which the permanent establishment or fixed base is situated. 
+6.  Where, by reason of a special relationship between the payer and the beneficial 
+owner or between both of them and some other person, the amount of the royalties, 
+having regard to the use, right or information for which they are paid, exceeds the 
+amount which would have been agreed upon by the payer and the beneficial owner in 
+the absence of such relationship, the provisions of this Article shall apply only to the 
+last mentioned amount. In such case, the excess part of the payments shall remain 
+
+15
+taxable according to the laws of each Contracting State, due regard being had to the 
+other provisions of this Agreement.
+ARTICLE 13
+CAPITAL GAINS
+1.  Gains derived by a resident of a Contracting State from the alienation of 
+immovable property referred to in Article 6 and situated in the other Contracting State 
+may be taxed in that other Contracting State. 
+2.  Gains from the alienation of movable property forming part of the business 
+property of a permanent establishment which an enterprise of a Contracting State has 
+in the other Contracting State or of movable property pertaining to a fixed base 
+available to a resident of a Contracting State in the other Contracting State for the 
+purpose of performing independent personal services, including such gains from the 
+alienation of such a permanent establishment (alone or together with the whole 
+enterprise) or of such a fixed base, may be taxed in that other Contracting State. 
+3.  Gains from the alienation of ships or aircraft operated in international traffic or 
+movable property pertaining to the operation of such ships or aircraft shall be taxable 
+only in the Contracting State in which the place of head office or effective 
+management of the enterprise is situated. 
+4.  Gains from the alienation of shares of the capital stock of a company the property 
+of which consists directly or indirectly principally of immovable property situated in a 
+Contracting State may be taxed in that Contracting State. 
+5.  Gains from the alienation of any property other than that referred to in paragraphs 
+1 to 4 shall be taxable only in the Contracting State of which the alienator is a 
+resident. 
+ARTICLE 14
+INDEPENDENT PERSONAL SERVICES
+1.  Income derived by a resident of a Contracting State in respect of professional 
+services or other activities of an independent character shall be taxable only in that 
+Contracting State except in one of the following circumstances, when such income 
+may also be taxed in the other Contracting State: 
+(a) if he has a fixed base regularly available to him in the other Contracting 
+State for the purpose of performing his activities; in that case, only so 
+much of the income as is attributable to that fixed base may be taxed in 
+that other Contracting State; 
+
+16
+(b) if his stay in the other Contracting State is for a period or periods 
+exceeding in the aggregate 183 days in the calendar year concerned; in that 
+case, only so much of the income as is derived from his activities 
+performed in that other Contracting State may be taxed in that other 
+Contracting State. 
+2.  The term “professional services” includes especially independent scientific, 
+literary, artistic, educational or teaching activities as well as the independent activities 
+of physicians, lawyers, engineers, architects, dentists and accountants.
+ARTICLE 15
+DEPENDENT PERSONAL SERVICES
+1.  Subject to the provisions of Articles 16, 18, 19, 20 and 21, salaries, wages and 
+other similar remuneration derived by a resident of a Contracting State in respect of 
+an employment shall be taxable only in that Contracting State unless the employment 
+is exercised in the other Contracting State. If the employment is so exercised, such 
+remuneration as is derived therefrom may be taxed in that other Contracting State. 
+2.  Notwithstanding the provisions of paragraph 1, remuneration derived by a 
+resident of a Contracting State in respect of an employment exercised in the other 
+Contracting State shall be taxable only in the first-mentioned State if: 
+(a) the recipient is present in the other Contracting State for a period or 
+periods not exceeding in the aggregate 183 days in any twelve-month 
+period concerned; and
+(b) the remuneration is paid by, or on behalf of, an employer who is not a 
+resident of the other Contracting State; and
+(c) the remuneration is not borne by a permanent establishment or a fixed base 
+which the employer has in the other Contracting State. 
+3.  Notwithstanding the provisions of paragraphs 1 and 2 of this Article, 
+remuneration derived in respect of an employment exercised aboard a ship or aircraft 
+operated by an enterprise of a Contracting State in international traffic, shall be 
+taxable only in the Contracting State in which the place of head office or effective 
+management of the enterprise is situated. 
+ARTICLE 16
+DIRECTORS' FEES
+
+17
+Directors’ fees and other similar payments derived by a resident of a Contracting 
+State in his capacity as a member of the board of directors of a company which is a 
+resident of the other Contracting State may be taxed in that other Contracting State. 
+ARTICLE 17
+ARTISTES AND ATHLETES 
+1.  Notwithstanding the provisions of Articles 14 and 15, income derived by a 
+resident of a Contracting State as an entertainer, such as a theatre, motion picture, 
+radio or television artiste, or a musician, or as an athlete, from his personal activities 
+as such exercised in the other Contracting State, may be taxed in that other 
+Contracting State.
+2.  Where income in respect of personal activities exercised by an entertainer or an 
+athlete in his capacity as such accrues not to the entertainer or athlete himself but to 
+another person, that income may, notwithstanding the provisions of Articles 7, 14 and 
+15, be taxed in the Contracting State in which the activities of the entertainer or 
+athlete are exercised. 
+3.  Notwithstanding the provisions of paragraphs 1 and 2 of this Article, income 
+derived by entertainers or athletes who are residents of a Contracting State from the 
+activities exercised in the other Contracting State under a plan of cultural exchange 
+between the Governments of both Contracting States shall be exempt from tax in that 
+other Contracting State. 
+ARTICLE 18
+ PENSIONS
+1.  Subject to the provisions of paragraph 2 of Article 19, pensions and other similar 
+remuneration paid to a resident of a Contracting State in consideration of past 
+employment shall be taxable only in that Contracting State. 
+2.  Notwithstanding the provisions of paragraph 1, pensions paid and other similar 
+payments made by the Government of a Contracting State or a local authority thereof 
+under a public welfare scheme of the social security system of that Contracting State 
+shall be taxable only in that Contracting State. 
+ARTICLE 19
+GOVERNMENT SERVICE
+1.   (a) 
+Remuneration, other than pension, paid by the Government of a 
+Contracting State, a local authority or organization thereof to an 
+individual in respect of services rendered to the Government of that 
+Contracting State, a local authority or organization thereof, in the 
+
+18
+discharge of the functions of a governmental nature, shall be taxable only 
+in that Contracting State. 
+(b) However, such remuneration shall be taxable only in the other Contracting 
+State if the services are rendered in that other Contracting State and the 
+individual is a resident of that other Contracting State who: 
+(i)
+is a national of that other Contracting State; or
+(ii) did not become a resident of that other Contracting State solely for the 
+purpose of rendering the services. 
+2.  (a)
+Any pension paid by, or out of funds created by, the Government of a 
+Contracting State, a local authority or organization thereof to an individual 
+in respect of services rendered to the Government of that Contracting State, 
+a local authority or organization thereof, in the discharge of the functions of 
+a governmental nature, shall be taxable only in that Contracting State. 
+(b) However, such pension shall be taxable only in the other Contracting State 
+if the individual is a resident of, and a national of, that other Contracting 
+State. 
+3.  The provisions of Articles 15, 16, 17 and 18 shall apply to remuneration and 
+pensions in respect of services rendered in connection with a business carried on by 
+the Government of a Contracting State or a local authority thereof.
+ARTICLE 20 
+STUDENTS AND TRAINEES
+A student, business apprentice or trainee who is or was immediately before 
+visiting a Contracting State a resident of the other Contracting State and who is 
+present in the first-mentioned State solely for the purpose of his education or training 
+shall be exempt from tax in that first-mentioned State on the following payments or 
+income received or derived by him for the purpose of his maintenance, education or 
+training: 
+(a) payments derived from sources outside that Contracting State for the 
+purpose of his maintenance, education, study, research or training; 
+(b) grants, scholarships or awards supplied by the Government, or a scientific, 
+educational, cultural or other tax-exempt organization; and
+(c) income derived from personal services in connection with his education or 
+training performed in that Contracting State. 
+
+19
+ARTICLE 21 
+TEACHERS AND RESEARCHERS
+An individual who is, or immediately before visiting a Contracting State, was a 
+resident of the other Contracting State and, at the invitation of a university, college, 
+school or other educational institution or scientific research institution recognized as 
+non-profitable by the Government of the first-mentioned Contracting State, is present 
+in the first-mentioned Contracting State solely for the purpose of teaching, giving 
+lectures or conducting research, shall be exempt from tax in the first-mentioned 
+Contracting State, for a period of three years from the date of his first arrival in the 
+first-mentioned Contracting State in respect of remuneration for such teaching, 
+lectures or research. 
+ARTICLE 22
+OTHER INCOME
+1.  Items of income of a resident of a Contracting State, wherever arising, not dealt 
+with in the foregoing Articles of this Agreement shall be taxable only in that 
+Contracting State. 
+2.  The provisions of paragraph 1 shall not apply to income, other than income from 
+immovable property as defined in paragraph 2 of Article 6, if the recipient of such 
+income, being a resident of a Contracting State, carries on business in the other 
+Contracting State through a permanent establishment situated therein, or performs in 
+that other Contracting State independent personal services from a fixed base situated 
+therein, and the right or property in respect of which the income is paid is effectively 
+connected with such permanent establishment or fixed base. In such case the 
+provisions of Article 7 or Article 14, as the case may be, shall apply. 
+ARTICLE 23
+METHODS FOR ELIMINATION OF DOUBLE TAXATION
+1.  In the case of a resident of China, double taxation shall be avoided as follows: 
+(a) Where a resident of China derives income from Korea, the amount of tax 
+on that income payable under the laws of Korean tax and in accordance 
+with the provisions of this Agreement, may be credited against the Chinese 
+tax imposed on that resident. The amount of credit, however, shall not 
+exceed the amount of the Chinese tax on that income computed in 
+accordance with the taxation laws and regulations of China. 
+(b) Where the income derived from Korea is a dividend paid by a company 
+which is a resident of Korea to a company which is a resident of China and 
+
+20
+which owns not less than 10 percent of the shares of the company paying 
+the dividend, the credit shall take into account the tax paid to Korea by the 
+company paying the dividend in respect of its income. 
+2.  In the case of a resident of Korea, double taxation shall be avoided as follows: 
+Subject to the provisions of Korean tax law regarding the allowance as a credit 
+against Korean tax of tax payable in any country other than Korea (which shall not 
+affect the general principle hereof), the Chinese tax payable (excluding, in the case of 
+dividend, tax payable in respect of profits out of which the dividend is paid) under the 
+laws of China and in accordance with this Agreement, whether directly or by 
+deduction, in respect of income from sources within China shall be allowed as a credit 
+against Korean tax payable in respect of that income. The credit shall not, however, 
+exceed that proportion of Korean tax which the income from sources within China 
+bears to the entire income subject to Korean tax. 
+3.  The tax payable in a Contracting State mentioned in paragraphs 1 and 2 of this 
+Article, shall be deemed to include the tax which would have been payable but for the 
+legal provisions concerning tax reduction, exemption or other tax incentives of the 
+Contracting State for the promotion of economic development. 
+For the purpose of this paragraph, the amount of tax shall be deemed to be 10 per 
+cent of the gross amount of the dividends, interest and royalties in the case of 
+paragraph 2 of Article 10, paragraph 2 of Article 11 and paragraph 2 of Article 12, 
+respectively. 
+4.  The provisions of paragraph 3 of this Article shall apply only during a period of 
+ten years starting from the first day of the calendar year following that in which this 
+Agreement enters into force in accordance with the provisions of Article 28. 
+ARTICLE 24
+NON-DISCRIMINATION
+1.  Nationals of a Contracting State shall not be subjected in the other Contracting 
+State to any taxation or any requirement connected therewith, which is other or more 
+burdensome than the taxation and connected requirements to which nationals of that 
+other Contracting State in the same circumstances are or may be subjected. The 
+provisions of this paragraph shall, notwithstanding the provisions of Article 1, also 
+apply to persons who are not residents of one or both of the Contracting States. 
+2.  The taxation on a permanent establishment which an enterprise of a Contracting 
+State has in the other Contracting State shall not be less favourably levied in that other 
+Contracting State than the taxation levied on enterprises of that other Contracting 
+State carrying on the same activities. The provisions of this paragraph shall not be 
+
+21
+construed as obliging a Contracting State to grant to residents of the other Contracting 
+State any personal allowances, reliefs and reductions for taxation purposes on account 
+of civil status or family responsibilities which it grants to its own residents. 
+3.  Except where the provisions of Article 9, paragraph 7 of Article 11, or paragraph 
+6 of Article 12, apply, interest, royalties and other disbursements paid by an enterprise 
+of a Contracting State to a resident of the other Contracting State shall, for the 
+purpose of determining the taxable profits of such enterprise, be deductible under the 
+same conditions as if they had been paid to a resident of the first-mentioned State. 
+4.  Enterprises of a Contracting State, the capital of which is wholly or partly owned 
+or controlled, directly or indirectly, by one or more residents of the other Contracting 
+State, shall not be subjected in the first-mentioned State to any taxation or any 
+requirement connected therewith which is other or more burdensome than the taxation 
+and connected requirements to which other similar enterprises of the first-mentioned 
+State are or may be subjected. 
+5.  The provisions of this Article shall, notwithstanding the provisions of Article 2, 
+apply to taxes of every kind and description. 
+ARTICLE 25
+MUTUAL AGREEMENT PROCEDURE
+1.  Where a person considers that the actions of one or both of the Contracting States 
+result or will result for him in taxation not in accordance with the provisions of this 
+Agreement, he may, irrespective of the remedies provided by the domestic law of 
+those States, present his case to the competent authority of the Contracting State of 
+which he is a resident or, if his case comes under paragraph 1 of Article 24, to that of 
+the Contracting State of which he is a national. The case must be presented within 
+three years from the first notification of the action resulting in taxation not in 
+accordance with the provisions of the Agreement. 
+2.  The competent authority shall endeavour, if the objection appears to it to be 
+justified and if it is not itself able to arrive at a satisfactory solution, to resolve the 
+case by mutual agreement with the competent authority of the other Contracting State, 
+with a view to the avoidance of taxation which is not in accordance with the 
+provisions of this Agreement. Any agreement reached shall be implemented 
+notwithstanding any time limits in the domestic law of the Contracting States. 
+3.  The competent authorities of the Contracting States shall endeavour to resolve by 
+mutual agreement any difficulties or doubts arising as to the interpretation or 
+application of the Agreement. They may also consult together for the elimination of 
+double taxation in cases not provided for in this Agreement. 
+
+22
+4.  The competent authorities of the Contracting States may communicate with each 
+other directly for the purpose of reaching an agreement in the sense of paragraphs 2 
+and 3. When it seems advisable for reaching agreement, representatives of the 
+competent authorities of the Contracting States may meet together for an oral 
+exchange of opinions.
+ARTICLE 26
+EXCHANGE OF INFORMATION
+1.  The competent authorities of the Contracting States shall exchange such 
+information as is necessary for carrying out the provisions of this Agreement or of 
+the domestic laws of the Contracting States concerning taxes covered by the 
+Agreement, insofar as the taxation thereunder is not contrary to this Agreement, in 
+particular for the prevention of evasion of such taxes. The exchange of information 
+is not restricted by Article 1. Any information received by a Contracting State shall 
+be treated as secret in the same manner as information obtained under the domestic 
+laws of that State and shall be disclosed only to persons or authorities (including 
+courts or administrative bodies) involved in assessment or collection of, the 
+enforcement or prosecution in respect of, or the determination of appeals in relation 
+to, the taxes covered by the Agreement. Such persons or authorities shall use the 
+information only for such purposes. They may disclose the information in public 
+court proceedings or in judicial decisions. 
+2.  In no case shall the provisions of paragraph 1 be construed so as to impose on a 
+Contracting State the obligation: 
+(a) to carry out administrative measures at variance with the laws and 
+administrative practice of that or of the other Contracting State; 
+(b) to supply information which is not obtainable under the laws or in the 
+normal course of the administration of that or of the other Contracting 
+State; 
+(c) to supply information which would disclose any trade, business, industrial, 
+commercial or professional secret or trade process, or information, the 
+disclosure of which would be contrary to public policy (ordre public) . 
+ARTICLE 27 
+DIPLOMATIC AGENTS AND CONSULAR OFFICERS
+Nothing in this Agreement shall affect the fiscal privileges of diplomatic agents 
+or consular officers under the general rules of international law or under the 
+provisions of special agreements. 
+
+23
+The following paragraph 1 of Article 7 of the MLI applies and supersedes the 
+provisions of this Agreement:
+ARTICLE 7 OF THE MLI –PREVENTION OF TREATY ABUSE
+(Principal purposes test provision)
+Notwithstanding any provisions of this Agreement, a benefit under this Agreement 
+shall not be granted in respect of an item of income if it is reasonable to conclude, 
+having regard to all relevant facts and circumstances, that obtaining that benefit was 
+one of the principal purposes of any arrangement or transaction that resulted directly 
+or indirectly in that benefit, unless it is established that granting that benefit in these 
+circumstances would be in accordance with the object and purpose of the relevant 
+provisions of this Agreement.
+ARTICLE 28
+ENTRY INTO FORCE
+1.  This Agreement shall enter into force on the thirtieth day after the date on which 
+diplomatic notes indicating the completion of internal legal procedures necessary in 
+each country for the entry into force of this Agreement have been exchanged.
+2.  The Agreement shall have effect: 
+(a) in respect of taxes withheld at the source on or after the first day of 
+January in the year following that in which this Agreement enters into 
+force; and
+(b) in respect of other taxes for the taxable year beginning on or after the first 
+day of January in the year following that in which this Agreement enters 
+into force. 
+ARTICLE 29
+TERMINATION
+This Agreement shall remain in force indefinitely but either of the Contracting 
+States may, on or before the thirtieth day of June in any calendar year beginning after 
+the expiration of a period of five years from the date of its entry into force, give 
+written notice of termination to the other Contracting State through the diplomatic 
+channels. In such event, this Agreement shall cease to have effect: 
+(a) in respect of taxes withheld at the source on or after the first day of 
+January of the calendar year next following that in which the notice is 
+given; and
+
+24
+(b) in respect of other taxes for any taxable year beginning on or after the first 
+day of January of the calendar year next following that in which the notice 
+is given. 
+IN WITNESS WHEREOF the undersigned, duly authorized thereto by their 
+respective Governments, have signed this Agreement. 
+DONE in duplicate at Beijing this 28th day of March of the year one thousand nine 
+hundred and ninety four in the Chinese, Korean and English languages, all texts being 
+equally authentic. In case of any divergence of interpretation, the English text shall 
+prevail. 
+     For the Government               
+For the Government
+of the People’s Republic of China         
+of the Republic of Korea
+
+25
+PROTOCOL
+At the signing of the Agreement between the Government of the People’s 
+Republic of China and the Government of the Republic of Korea for the Avoidance of 
+Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on 
+Income, both sides have agreed upon the following provisions which form an integral 
+part of the Agreement. 
+1.  In respect of Article 8 “Shipping and Air Transport”, it is understood that China 
+shall exempt the business tax on the operation of ships or aircraft in international 
+traffic by an enterprise of Korea and Korea shall exempt the value added tax on the 
+operation of ships or aircraft in international traffic by an enterprise of China. 
+2.  In respect of Article 15 “Dependent Personal Services”, it is understood that 
+employees who are sent by the shipping or air transportation enterprises of a 
+Contracting State to the other Contracting State shall be taxable on their remuneration 
+only in the first-mentioned Contracting State. 
+IN WITNESS WHEREOF the undersigned, duly authorized thereto by their 
+respective Governments, have signed this Protocol. 
+DONE in duplicate at Beijing this 28th day of March of the year one thousand nine 
+hundred and ninety four in the Chinese, Korean and English languages, all texts being 
+equally authentic. 
+In case of any divergence of interpretation, the English text shall prevail. 
+      
+For the Government               
+For the Government
+of the People’s Republic of China         
+of the Republic of Korea
+
+26
+SECOND PROTOCOL TO THE AGREEMENT BETWEEN 
+THE GOVERNMENT OF THE PEOPLE’S REPUBLIC OF CHINA 
+AND THE GOVERNMENT OF THE REPUBLIC OF KOREA
+FOR THE AVOIDANCE OF DOUBLE 
+TAXATION AND THE PREVENTION OF 
+FISCAL EVASION WITH RESPECT TO 
+TAXES ON INCOME
+The Government of the People’s Republic of China and the Government of the Republic of 
+Korea (hereinafter referred to as the “Contracting States”),
+Having regard to the Agreement between the Government of the People’s Republic of China 
+and the Government of the Republic of Korea for the Avoidance of Double Taxation and the 
+Prevention of Fiscal Evasion with respect to Taxes on Income signed at Beijing on the 28th day 
+of March 1994 (hereafter referred to as “the Agreement”),
+Have agreed that the following provisions shall form an integral part of the Agreement:
+Article 1
+In respect of Article 1 of the Agreement, it is understood that the Agreement shall not apply 
+to any company, trust or other entity that is a resident of a Contracting State and is 
+beneficially owned or controlled, directly or indirectly, by one or more persons who are not 
+residents of that State, if the amount of the tax imposed on the income of the company, trust 
+or other entity by that State (after taking into account any reduction or offset of the amount 
+of tax in any manner, including a refund, reimbursement, contribution, credit or allowance 
+to the company, trust, or other entity or to any other person) is substantially lower than the 
+amount that would be imposed by that State if all of the shares of the capital stock of the 
+company or all of the interests in the trust or other entity, as the case may be, were 
+beneficially owned by one or more individuals who were residents of that State. However, 
+this paragraph shall not apply if 90 per cent or more of the income on which the lower 
+amount of tax is imposed is derived exclusively from the active conduct of a trade or 
+business carried on by it, other than passive income from investment business.
+Article 2
+In respect of the Korean taxes covered by Article 2 of the Agreement, it is understood that 
+the Agreement shall also apply to the Korean special tax for rural development surcharged 
+directly or indirectly on the tax base of the income tax or the corporation tax.
+
+27
+Article 3
+Paragraph 7 of Article 11 of the Agreement shall be deleted and replaced by the 
+following:
+“7. Where, by reason of a special relationship between the payer and the beneficial owner or 
+between both of them and some other person, the amount of the interest exceeds the 
+amount which would have been agreed upon by the payer and the beneficial owner in the 
+absence of such relationship, the provisions of this Article shall apply only to the 
+last-mentioned amount. In such case, the excess part of the payments shall remain taxable 
+according to the laws of each Contracting State, due regard being had to the other 
+provisions of this Agreement.”
+Article 4
+Paragraph 1 of Article 23 of Korea’s text and Paragraph 2 of Article 23 of China’s text 
+shall be deleted and replaced by the following:
+“1. In the case of a resident of Korea, double taxation shall be avoided as follows:
+Subject to the provisions of Korean tax law regarding the allowance as a credit against 
+Korean tax of tax payable in any country other than Korea (which shall not affect the 
+general principle hereof):
+(a)
+the Chinese tax payable (excluding, in the case of a dividend, tax payable in 
+respect of profits out of which the dividend is paid) under the laws of China and in 
+accordance with this Agreement, whether directly or by deduction, in respect of income 
+from sources within China, shall be allowed as a credit against Korean tax payable in 
+respect of that income. The credit shall not, however, exceed that proportion of Korean tax 
+which the income from sources within China bears to the entire income subject to Korean 
+tax;
+(b)
+in the case of a dividend paid by a company which is a resident of China to a 
+company which is a resident of Korea and which owns not less than 10 percent of the shares 
+of the company paying the dividend, the credit shall take into account (in addition to any 
+Chinese tax for which credit may be allowed under the provisions of subparagraph (a) of 
+this paragraph) the Chinese tax payable by the company paying the dividend in respect of 
+the profits out of which such dividend is paid.”
+Article 5
+
+28
+1.
+Paragraph 3 of Article 23 of the Agreement shall be deleted, replaced by the following 
+and shall have effect for another period of ten years starting from January 1st, 2005:
+“3. The tax payable in a Contracting State mentioned in subparagraph (a) of paragraph 1 
+and paragraph 2 of this Article shall be deemed to include the tax which would have been 
+payable but for the legal provisions concerning tax reduction, exemption or other tax 
+incentives of the Contracting State for the promotion of economic development. For the 
+purpose of this paragraph, the amount of tax shall be deemed to be 10 per cent of the gross 
+amount of the dividends, interest and royalties in the case of paragraph 2 of Article 10, 
+paragraph 2 of Article 11 and paragraph 2 of Article 12, respectively.”
+2.
+Paragraph 4 of Article 23 of the Agreement shall be deleted.
+Article 6
+Notwithstanding paragraph 3 of Article 23, a resident of a Contracting State deriving 
+income from the other Contracting State, being income referred to in that paragraph, shall 
+not be deemed to have paid tax in respect of such income where the competent authority of 
+a Contracting State considers, after consultation with the competent authority of the other 
+Contracting State, that it is inappropriate to grant the benefits of paragraph 3 of Article 23 
+to the said resident, having regard to:
+(a)
+whether any arrangements have been entered into by any person for the purpose of 
+taking advantage of paragraph 3 of Article 23 for the benefit of that person or any other 
+person; or
+(b)
+whether any benefit accrues or may accrue to any person who is neither a resident of 
+one Contracting State nor a resident of the other Contracting State; or
+(c)
+the prevention of fraud, evasion or avoidance of the taxes to which the Agreement 
+applies.
+Article 7
+The Contracting States shall notify each other through diplomatic channels that the 
+procedures required by its laws for the entry into force of this Second Protocol have been 
+complied with. This Second Protocol shall enter into force on the date of the later 
+notification.
+IN WITNESS WHEREOF the undersigned, duly authorized thereto by their respective 
+Governments, have signed this Second Protocol.
+
+29
+DONE in duplicate at ………….., this ……. day of ………, 2006, in the Chinese, Korean 
+and English languages, all texts being equally authentic. In case of any divergence of 
+interpretation, the English text shall prevail.
+For the Government            
+    
+     For the Government
+of the People’s Republic of China         
+of the Republic of Korea

@@ -1,0 +1,2508 @@
+INTERNAL 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Taxation of Foreign 
+Source Income  
+ 
+Corporate Tax Guide | CTGFSI1 
+ 
+November 2023 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+1 
+Contents 
+ 
+1. Glossary .............................................................................. 3 
+2. Introduction ........................................................................ 8 
+2.1. Overview ............................................................................................................... 8 
+2.2. Purpose of this guide ............................................................................................ 8 
+2.3. Who should read this guide? ................................................................................. 8 
+2.4. How to use this guide ............................................................................................ 8 
+2.5. Legislative references ........................................................................................... 9 
+2.6. Status of this guide.............................................................................................. 10 
+3. Relevance of foreign source income under the 
+Corporate Tax Law ........................................................... 12 
+4. What is foreign source income? ..................................... 14 
+4.1. Examples of foreign source income .................................................................... 14 
+4.2. Is income derived from a Free Zone Person foreign source income? .................. 14 
+4.3. Is income derived by a Qualifying Free Zone Person from a Permanent 
+Establishment foreign source income?.............................................................. 15 
+5. Who is subject to tax on foreign source income? ........ 16 
+5.1. Resident Person under the Corporate Tax Law ................................................... 18 
+5.1.1. 
+Juridical person .............................................................................................. 18 
+5.1.2. 
+Natural person ............................................................................................... 18 
+5.2. Non-Resident Person under the Corporate Tax Law ........................................... 23 
+5.2.1. 
+Juridical person .............................................................................................. 23 
+5.2.2. 
+Natural person ............................................................................................... 25 
+5.3. Impact of Double Taxation Agreements on foreign source income ...................... 25 
+6. When does foreign source income become taxable in 
+the UAE? ........................................................................... 26 
+7. How is foreign source income taxed? ........................... 27 
+7.1. Determining Taxable Income .............................................................................. 27 
+7.1.1. 
+Applicable Accounting Standards ................................................................... 27 
+7.1.2. 
+Cash Basis of Accounting .............................................................................. 27 
+7.1.3. 
+Expenditure and losses relating to foreign source income ............................. 28 
+7.1.4. 
+Aggregation of foreign income and expenditure ............................................. 29 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+2 
+7.1.5. 
+Income in foreign currency to be converted to AED ....................................... 30 
+7.2. Exemptions of particular relevance for foreign source income ............................. 31 
+7.2.1. 
+Participation Exemption ................................................................................. 31 
+7.2.2. 
+Foreign Permanent Establishment exemption ................................................ 32 
+7.3. Determining Corporate Tax Payable ................................................................... 34 
+8. Foreign Tax Credit............................................................ 35 
+8.1. What is Foreign Tax Credit? ................................................................................ 35 
+8.1.1. 
+Foreign taxes for which Foreign Tax Credit is available ................................. 35 
+8.1.2. 
+When will foreign tax be considered as “paid”? .............................................. 36 
+8.2. Who can claim Foreign Tax Credit? .................................................................... 37 
+8.3. How to calculate the Foreign Tax Credit .............................................................. 38 
+8.3.1. 
+General .......................................................................................................... 38 
+8.3.2. 
+Unutilised Foreign Tax Credit ......................................................................... 40 
+8.3.3. 
+Income-by-income approach: multiple sources of foreign income .................. 41 
+8.3.4. 
+Scenarios where no Foreign Tax Credit is allowed ........................................ 42 
+8.4. Timing mismatches ............................................................................................. 44 
+8.5. Impact of Double Taxation Agreements .............................................................. 49 
+8.6. Documentation .................................................................................................... 49 
+9. Updates and Amendments .............................................. 51 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+3 
+1. Glossary 
+ 
+Accounting Income: The accounting net profit or loss for the relevant Tax Period as 
+per the Financial Statements prepared in accordance with the provisions of Article 20 
+of the Corporate Tax Law. 
+ 
+Accounting Standards: The accounting standards specified in Ministerial Decision 
+No. 114 of 2023.  
+ 
+Accrual Basis of Accounting: An accounting method under which the Taxable 
+Person recognises income when earned and expenditure when incurred. 
+ 
+AED: The United Arab Emirates dirham. 
+ 
+Authority: Federal Tax Authority. 
+ 
+Business: Any activity conducted regularly, on an ongoing and independent basis by 
+any Person and in any location, such as industrial, commercial, agricultural, 
+vocational, professional, service or excavation activities or any other activity related to 
+the use of tangible or intangible properties. 
+ 
+Business Activity: Any transaction or activity, or series of transactions or activities, 
+conducted by a Person in the course of its Business. 
+ 
+Cash Basis of Accounting: An accounting method under which the Taxable Person 
+recognises income and expenditure when cash payments are received and paid. 
+ 
+Connected Person: Any Person affiliated with a Taxable Person as determined in 
+Article 36(2) of the Corporate Tax Law.  
+ 
+Corporate Tax: The tax imposed by the Corporate Tax Law on juridical persons and 
+Business income. 
+ 
+Corporate Tax Law: Federal Decree-Law No. 47 of 2022 on the Taxation of 
+Corporations and Businesses. 
+ 
+Corporate Tax Payable: Corporate Tax that has or will become due for payment to 
+the FTA in respect of one or more Tax Periods. 
+ 
+Dividend: Any payments or distributions that are declared or paid on or in respect of 
+shares or other rights participating in the profits of the issuer of such shares or rights 
+which do not constitute a return on capital or a return on debt claims. These payments 
+or distributions are considered dividends whether based in cash, securities, or other 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+4 
+properties, and whether payable out of profits or retained earnings or from any account 
+or legal reserve or from capital reserve or revenue. This will include any payment or 
+benefit which in substance or effect constitutes a distribution of profits made in 
+connection with the acquisition or redemption or cancellation of shares or termination 
+of other ownership interests or rights. It also comprises any transaction or arrangement 
+with a Related Party or Connected Person which does not comply with Article 34 of 
+the Corporate Tax Law. 
+ 
+Domestic Permanent Establishment: A place of Business or other form of presence 
+of a Qualifying Free Zone Person outside the Free Zone in the UAE. 
+ 
+Double Taxation Agreement: An international agreement signed by two or more 
+countries for the avoidance of double taxation and the prevention of fiscal evasion on 
+income and capital. 
+ 
+Exempt Income: Any income exempt from Corporate Tax under the Corporate Tax 
+Law. 
+ 
+Financial Statements: A complete set of statements as specified under the 
+Accounting Standards applied by the Taxable Person, which includes, but is not limited 
+to, statement of income, statement of other comprehensive income, balance sheet, 
+statement of changes in equity and cash flow statement.  
+ 
+Financial Year: The Gregorian calendar year, or the twelve-month period for which 
+the Taxable Person prepares Financial Statements. 
+ 
+Foreign Permanent Establishment: A place of Business or other form of presence 
+outside the UAE of a Resident Person that is determined in accordance with the criteria 
+prescribed in Article 14 of the Corporate Tax Law. 
+ 
+Foreign Tax Credit: Tax paid under the laws of a foreign jurisdiction on income or 
+profits that may be deducted from the Corporate Tax due, in accordance with the 
+conditions of Article 47(2) of the Corporate Tax Law. 
+ 
+Free Zone: A designated and defined geographic area within the UAE that is specified 
+in a decision issued by the Cabinet at the suggestion of the Minister. 
+ 
+Free Zone Person: A juridical person incorporated, established or otherwise 
+registered in a Free Zone, including a branch of a Non-Resident Person registered in 
+a Free Zone. 
+ 
+FTA: Federal Tax Authority, being the Authority in charge of administration, collection 
+and enforcement of federal taxes in the UAE. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+5 
+Government Entity: The Federal Government, Local Governments, ministries, 
+government departments, government agencies, authorities and public institutions of 
+the Federal Government or Local Governments. 
+ 
+IFRS: International Financial Reporting Standards. 
+ 
+IFRS for SMEs: International Financial Reporting Standard for small and medium-
+sized entities. 
+ 
+Immovable Property: Means any of the following: 
+a. Any area of land over which rights or interests or services can be created. 
+b. Any building, structure or engineering work attached to the land permanently or 
+attached to the seabed. 
+c. Any fixture or equipment which makes up a permanent part of the land or is 
+permanently attached to the building, structure or engineering work or attached to 
+the seabed. 
+ 
+Interest: Any amount accrued or paid for the use of money or credit, including 
+discounts, premiums and profit paid in respect of an Islamic financial instrument and 
+other payments economically equivalent to interest, and any other amounts incurred 
+in connection with the raising of finance, excluding payments of the principal amount. 
+ 
+Licence: A document issued by a Licensing Authority under which a Business or 
+Business Activity is conducted in the UAE.  
+ 
+Licensing Authority: The competent authority concerned with licensing or 
+authorising a Business or Business Activity in the UAE. 
+ 
+Market Value: The price which could be agreed in an arm’s-length free market 
+transaction between Persons who are not Related Parties or Connected Persons in 
+similar circumstances. 
+ 
+Non-Resident Person: The Taxable Person specified in Article 11(4) of the Corporate 
+Tax Law. 
+ 
+Participating Interest: An ownership interest in the shares or capital of a juridical 
+person that meets the conditions referred to in Article 23 of the Corporate Tax Law. 
+ 
+Participation: The juridical person in which the Participating Interest is held. 
+ 
+Participation Exemption: An exemption from Corporate Tax for income from a 
+Participating Interest, available under Article 23 of the Corporate Tax Law and as 
+specified under Ministerial Decision No. 116 of 2023. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+6 
+ 
+Permanent Establishment: A place of Business or other form of presence in the UAE 
+of a Non-Resident Person in accordance with Article 14 of the Corporate Tax Law. 
+ 
+Person: Any natural person or juridical person. 
+ 
+Personal Investment: Investment activity that a natural person conducts for their 
+personal account that is neither conducted through a Licence or requiring a Licence 
+from a Licensing Authority in the UAE, nor considered as a commercial business in 
+accordance with the Federal Decree-Law No. 50 of 2022 issuing the Commercial 
+Transactions Law. 
+ 
+Qualifying Activities: Any activities determined in accordance with Article 2 of 
+Ministerial Decision No. 265 of 2023 and conducted by a Qualifying Free Zone Person 
+from which Qualifying Income is derived. 
+ 
+Qualifying Free Zone Person: A Free Zone Person that meets the conditions of 
+Article 18 of the Corporate Tax Law and is subject to Corporate Tax under Article 3(2) 
+of the Corporate Tax Law.  
+ 
+Qualifying Income: Any income derived by a Qualifying Free Zone Person that is 
+subject to Corporate Tax at the rate specified in Article 3(2)(a) of the Corporate Tax 
+Law. 
+ 
+Real Estate Investment: Any investment activity conducted by a natural person 
+related to, directly or indirectly, the sale, leasing, sub-leasing, and renting of land or 
+real estate property in the UAE that is not conducted, or does not require to be 
+conducted, through a Licence from a Licensing Authority. 
+ 
+Related Party: Any Person associated with a Taxable Person as determined in Article 
+35(1) of the Corporate Tax Law. 
+ 
+Resident Person: The Taxable Person specified in Article 11(3) of the Corporate Tax 
+Law. 
+ 
+Revenue: The gross amount of income derived during a Tax Period. 
+ 
+Small Business Relief: A Corporate Tax relief that allows eligible Taxable Persons 
+to be treated as having no Taxable Income for the relevant Tax Period in accordance 
+with Article 21 of the Corporate Tax Law and Ministerial Decision No. 73 of 2023. 
+ 
+State Sourced Income: Income accruing in, or derived from, the UAE as specified in 
+Article 13 of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+7 
+ 
+Tax Loss: Any negative Taxable Income as calculated under the Corporate Tax Law 
+for a given Tax Period. 
+ 
+Tax Period: The period for which a Tax Return is required to be filed. 
+ 
+Tax Return: Information filed with the FTA for Corporate Tax purposes in the form 
+and manner as prescribed by the FTA, including any schedule or attachment thereto, 
+and any amendment thereof. 
+ 
+Taxable Income: The income that is subject to Corporate Tax under the Corporate 
+Tax Law. 
+ 
+Taxable Person: A Person subject to Corporate Tax in the UAE under the Corporate 
+Tax Law. 
+ 
+Turnover: The gross amount of income derived during a Gregorian calendar year.  
+ 
+UAE: United Arab Emirates. 
+ 
+Voluntary Disclosure: A form prepared by the FTA pursuant to which a Taxpayer 
+notifies the FTA of an error or omission in the Tax Return, Tax Assessment or Tax 
+refund application, in accordance with the provisions of Article 10 of the Tax 
+Procedures Law.  
+ 
+Wage: The wage that is given to the employee in consideration of their services under 
+the employment contract, whether in cash or in kind, payable annually, monthly, 
+weekly, daily, hourly, or by piece-meal, and includes all allowances, and bonuses in 
+addition to any other benefits provided for, in the employment contract or in 
+accordance with the applicable legislation in the UAE. 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+8 
+2. Introduction 
+ 
+2.1. 
+Overview 
+ 
+Federal Decree-Law No. 47 of 2022 on the Taxation of Corporations and Businesses 
+(“Corporate Tax Law”) was issued on 3 October 2022 and was published in Issue #737 
+of the Official Gazette of the United Arab Emirates (“UAE”) on 10 October 2022.  
+  
+The Corporate Tax Law provides the legislative basis for imposing a federal tax on 
+corporations and Business profits (“Corporate Tax”) in the UAE. 
+ 
+The provisions of the Corporate Tax Law apply to Tax Periods commencing on or after 
+1 June 2023.  
+ 
+2.2. 
+Purpose of this guide  
+ 
+This guide is designed to provide general guidance to taxpayers on the taxation of 
+foreign source income under the Corporate Tax Law. The guide explains the following:  
+ 
+• 
+Relevance of foreign source income under the Corporate Tax Law; 
+• 
+What is considered foreign source income for Taxable Persons under the 
+Corporate Tax Law? 
+• 
+Which Taxable Persons are subject to tax on foreign source income? 
+• 
+When is foreign source income taxable?  
+• 
+Determining Taxable Income and Exempt Income in respect of foreign source 
+income; and 
+• 
+What is a Foreign Tax Credit, and how is it computed? 
+ 
+2.3. 
+Who should read this guide? 
+ 
+The guide should be read by a Taxable Person who receives or derives income from 
+sources outside the UAE, including a Qualifying Free Zone Person. It is intended to 
+be read in conjunction with the Corporate Tax Law, the implementing decisions and 
+other relevant guidance published by the FTA. 
+ 
+2.4. 
+How to use this guide 
+ 
+The relevant articles of the Corporate Tax Law and the implementing decisions are 
+indicated in each section of the guide.  
+ 
+It is recommended that the guide is read in its entirety to provide a complete 
+understanding of the definitions and interactions of the different rules. Further 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+9 
+guidance on some of the areas covered in this guide can be found in topic specific 
+guides.  
+ 
+In some instances, simple examples are used to illustrate how the key Corporate Tax 
+rules apply to foreign source income. The examples in the guide: 
+- 
+show how these elements operate in isolation and do not show the interactions 
+with other provisions of the Corporate Tax Law that may occur. They do not, and 
+are not intended to, cover the full facts of the hypothetical scenarios used nor all 
+aspects of the Corporate Tax regime, and should not be relied upon for legal or 
+tax advice purposes; and 
+- 
+are only meant for providing the readers with general information on the subject 
+matter of this guide. They are exclusively intended to explain the rules related to 
+the subject matter of this guide and do not relate at all to the tax or legal position 
+of any specific juridical or natural person.  
+ 
+The numerical examples in the guide are provided in the context of Taxable Persons, 
+other than a Qualifying Free Zone Person. While the principles discussed in the 
+examples equally apply in the context of a Qualifying Free Zone Person, the tax 
+calculations may differ on the basis of the Corporate Tax rate applicable under Article 
+3(2) of the Corporate Tax Law.  
+ 
+Further, where relevant, the analysis in the examples in the guide are subject to the 
+impact of the relevant Double Taxation Agreement, if any. To the extent the terms of 
+a Double Taxation Agreement are inconsistent with the provisions of the Corporate 
+Tax Law, the terms of the Double Taxation Agreement shall prevail.1 
+ 
+2.5. 
+Legislative references 
+ 
+In this guide, the following legislation will be referred to as follows: 
+ 
+• 
+Federal Decree-Law No. 28 of 2022 on Tax Procedures is referred to as “Tax 
+Procedures Law”; 
+• 
+Federal Decree-Law No. 47 of 2022 on the Taxation of Corporations and 
+Businesses is referred to as “Corporate Tax Law”; 
+• 
+Cabinet Decision No. 49 of 2023 on Specifying the Categories of Businesses or 
+Business Activities Conducted by a Resident or Non-Resident Natural Person that 
+are Subject to Corporate Tax is referred to as “Cabinet Decision No. 49 of 2023”; 
+• 
+Cabinet Decision No. 56 of 2023 on Determination of a Non-Resident Person’s 
+Nexus in the UAE for the Purposes of Federal Decree-Law No. 47 of 2022 on the 
+Taxation of Corporations and Businesses is referred to as “Cabinet Decision No. 
+56 of 2023”; 
+                                               
+1 Article 66 of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+10 
+• 
+Cabinet Decision No. 74 of 2023 on the Executive Regulation of Federal Decree-
+Law No. 28 of 2022 on Tax Procedures is referred to as “Cabinet Decision No. 
+74”; 
+• 
+Cabinet Decision No. 100 of 2023 on Determining Qualifying Income for the 
+Qualifying Free Zone Person for the Purposes of Federal Decree-Law No. 47 of 
+2022 on the Taxation of Corporations and Businesses is referred to as “Cabinet 
+Decision No. 100 of 2023”;  
+• 
+Ministerial Decision No. 114 of 2023 on the Accounting Standards and Methods 
+for the Purposes of Federal Decree-Law No. 47 of 2022 on the Taxation of 
+Corporations and Businesses is referred to as “Ministerial Decision No. 114 of 
+2023”; 
+• 
+Ministerial Decision No. 116 of 2023 on the Participation Exemption for the 
+Purposes of Federal Decree-Law No. 47 of 2022 on the Taxation of Corporations 
+and Businesses is referred to as “Ministerial Decision No. 116 of 2023”; 
+• 
+Ministerial Decision No. 134 of 2023 on the General Rules for Determining 
+Taxable Income for the Purposes of Federal Decree-Law No. 47 of 2022 on the 
+Taxation of Corporations and Businesses is referred to as “Ministerial Decision 
+No. 134 of 2023”;  
+• 
+Ministerial Decision No. 265 of 2023 regarding Qualifying Activities and Excluded 
+Activities for the Purposes of Federal Decree-Law No. 47 of 2022 on the Taxation 
+of Corporations and Businesses is referred to as “Ministerial Decision No. 265 of 
+2023”;  
+• 
+Federal Tax Authority Decision No. 5 of 2023 on Conditions for Change in Tax 
+Period for the Purposes of Federal Decree-Law No. 47 of 2022 on the Taxation of 
+Corporations and Businesses is referred to as “FTA Decision No. 5 of 2023”; and 
+• 
+Federal Tax Authority Decision No. 13 of 2023 on Determination of Conditions for 
+Conversion of Amounts Quantified in a Currency other than the United Arab 
+Emirates Dirham for the Purposes of the Federal Decree-Law No. 47 of 2022 on 
+the Taxation of Corporations and Businesses is referred to as “FTA Decision No. 
+13 of 2023”. 
+ 
+2.6. 
+Status of this guide  
+ 
+This guidance is not a legally binding document, but is intended to provide assistance 
+in understanding the provisions of the Corporate Tax Law. The information provided 
+in this guide should not be interpreted as legal or tax advice. It is not meant to be 
+comprehensive and does not provide a definitive answer in every case. It is based on 
+the legislation as it reads when the guide is published. Each Person’s own specific 
+circumstances should be considered.  
+ 
+The Corporate Tax Law, the implementing decisions and the guidance materials 
+referred to in this document will set out the principles and rules that govern the 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+11 
+application of the Corporate Tax Law. Nothing in this publication modifies or is 
+intended to modify the requirements of any legislation. 
+ 
+This document is subject to change without notice.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+12 
+3. Relevance of foreign source income under the Corporate 
+Tax Law 
+ 
+A Resident Person in the UAE, or a Non-Resident Person with a Permanent 
+Establishment in the UAE, may earn income from a foreign jurisdiction i.e. “foreign 
+source income” due to activities, operations or assets in another jurisdiction. The UAE 
+Corporate Tax treatment of foreign source income depends on the type of Person 
+receiving the income, the nature of the income and the availability of exemptions and 
+reliefs. 
+ 
+In the case of a Taxable Person, foreign source income may be subject to Corporate 
+Tax as follows: 
+ 
+• 
+A juridical Resident Person, for example a company incorporated in the UAE, is 
+subject to tax on its worldwide income. Hence, any foreign source income may be 
+subject to Corporate Tax in the UAE.2 
+• 
+A natural Resident Person is subject to tax on any income derived from a Business 
+or Business Activity they conduct in the UAE if the total Turnover from such a 
+Business or Business Activities is above AED 1 million within a Gregorian calendar 
+year. 3 Thus, any foreign source income which is linked to the Business or 
+Business Activity they conduct in the UAE may be subject to Corporate Tax in the 
+UAE.4 
+ 
+A Non-Resident Person having a Permanent Establishment in the UAE is typically 
+taxed on the income generated from activities conducted in the UAE. Thus, if it 
+receives any foreign source income attributable to its Permanent Establishment in the 
+UAE, that income may be subject to Corporate Tax.5 
+ 
+The next step is to consider if any exemptions are available with respect to the foreign 
+source income, typically to reduce or eliminate potential double taxation. 6 For 
+example: 
+• 
+the Participation Exemption with respect to Dividends, profit distributions and 
+capital gains derived from juridical Non-Resident Persons (see Section 7.2.1)7 
+                                               
+2 Article 12(1) of the Corporate Tax Law.  
+3 Article 2(1) of Cabinet Decision No. 49 of 2023. 
+4 Article 12(2) read with Article 11(6) of the Corporate Tax Law. 
+5 Article 12(3)(a) of the Corporate Tax Law. 
+6 Article 20(2)(b) of the Corporate Tax Law. 
+7 Article 23 of the Corporate Tax Law. 
+ 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+13 
+• 
+the Foreign Permanent Establishment exemption whereby the income and 
+associated expenditure of certain foreign business operations is disregarded when 
+determining Taxable Income (see Section 7.2.2)8 
+ 
+Where no exclusion or exemption applies, the foreign source income is taxable in the 
+UAE. However, if taxes are paid in the foreign jurisdiction on the foreign source 
+income, this may give rise to a Foreign Tax Credit, potentially reducing the Corporate 
+Tax Payable in the UAE (see Section 8).9  
+ 
+ 
+                                               
+8 Article 24 of the Corporate Tax Law. 
+9 Article 44(2) read with Article 47 of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+14 
+4. What is foreign source income?  
+ 
+Foreign source income, for the purposes of the Corporate Tax Law, is any income 
+which has originated in a foreign jurisdiction and is earned or received by a Person in 
+the UAE.  
+ 
+While such income may be subject to tax in the hands of certain Taxable Persons in 
+the UAE (see Section 5), the Corporate Tax Law itself does not expressly define 
+“foreign source income”. It does, however, define State Sourced Income in Article 13, 
+which is broadly, income considered to have been originated in or that is derived from 
+the UAE. Conversely, foreign source income would typically be income derived from 
+outside the UAE. Further, foreign source income could be accrued in or derived from 
+activities performed, assets located, capital invested, rights used, or services 
+performed or benefitted from outside the UAE. 
+ 
+4.1. 
+Examples of foreign source income 
+ 
+A non-exhaustive list of income coming from a foreign source which may be 
+considered for the purposes of the Corporate Tax Law includes:  
+• 
+dividends and other profit distributions from juridical Non-Resident Persons, 
+• 
+income from the disposal of shares or capital of a juridical Non-Resident Persons, 
+• 
+interest income from a loan or deposit outside the UAE, 
+• 
+income from the sale of goods or provision of services outside the UAE, 
+• 
+income from movable or immovable property located outside the UAE, 
+• 
+royalties for use of intellectual or intangible property outside the UAE, and  
+• 
+profits, or losses, of a Foreign Permanent Establishment of a Resident Person. 
+ 
+In all cases, income would not be considered as foreign source income if it is State 
+Sourced Income. 
+ 
+4.2. 
+Is income derived from a Free Zone Person foreign source income? 
+ 
+A Free Zone is a designated and defined geographic area within the UAE that is 
+specified in a decision issued by the Cabinet at the suggestion of the Minister.10 
+Further, a Free Zone Person is defined as a juridical person incorporated, established 
+or otherwise registered in a Free Zone, including a branch of a Non-Resident Person 
+registered in a Free Zone.11  
+ 
+Since a Free Zone is an area within the UAE territory, income derived from a Free 
+Zone Person will either be:  
+                                               
+10 Article 1 of the Corporate Tax Law. 
+11 Article 1 of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+15 
+• 
+income derived from a Resident Person, or 
+• 
+income derived from a Non-Resident Person that is attributable to a Permanent 
+Establishment of that Non-Resident Person in the UAE.  
+ 
+Hence, income derived from a Free Zone Person does not qualify as foreign source 
+income.  
+ 
+4.3. 
+Is income derived by a Qualifying Free Zone Person from a Permanent 
+Establishment foreign source income?  
+ 
+A Qualifying Free Zone Person may derive income or profits from a Domestic or 
+Foreign Permanent Establishment. 
+ 
+Income or profits from a Domestic Permanent Establishment, which is a Permanent 
+Establishment located in the mainland in the UAE, is not considered foreign source 
+income.  
+ 
+Income or profits derived by a Qualifying Free Zone Person from its Foreign 
+Permanent Establishment, which is a Permanent Establishment located outside the 
+UAE, is foreign source income.  
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+16 
+5. Who is subject to tax on foreign source income?  
+ 
+A Taxable Person may be either a Resident Person or a Non-Resident Person. A 
+Resident Person or a Non-Resident Person can be either a juridical person or a natural 
+person.  
+ 
+The income subject to Corporate Tax in the hands of a Taxable Person depends on 
+that Person’s legal status (i.e. juridical person or natural person), and their residence 
+status (i.e. Resident Person or Non-Resident Person).12  
+ 
+The residence status together with the legal status determine (a) whether foreign 
+source income is subject to Corporate Tax in the hands of a Taxable Person, and (b) 
+the extent to which such income is subject to Corporate Tax. 
+ 
+ 
+ 
+                                               
+12 Article 12 of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+17 
+Figure 1: Taxation of foreign source income for a Taxable Person under the 
+Corporate Tax Law 
+ 
+ 
+ 
+ 
+Yes 
+No 
+No 
+Taxable Person 
+Resident Person 
+Non- Resident Person 
+Juridical person 
+Natural person 
+Juridical person 
+Natural person 
+Subject to Corporate 
+Tax on foreign 
+source income 
+Conducts a Business 
+or Business Activity in 
+the UAE?  
+Does Turnover from a 
+Business or Business Activity 
+exceed AED 1 million in a 
+Gregorian calendar year?*  
+Subject to Corporate 
+Tax on foreign source 
+income that relates to 
+a Business or 
+Business Activities 
+conducted in the UAE 
+Not subject to 
+Corporate Tax 
+Yes 
+No 
+Has a Permanent 
+Establishment in 
+the UAE?  
+Subject to Corporate Tax 
+on foreign source income 
+that is attributable to a 
+Permanent Establishment 
+in the UAE 
+Foreign source income is not 
+subject to Corporate Tax 
+(subject to Corporate Tax only 
+on State Sourced Income*** or 
+income from UAE nexus) 
+No 
+Yes 
+Has Permanent 
+Establishment in the 
+UAE?** 
+Does Turnover attributable 
+to Permanent 
+Establishment exceed 
+AED 1 million in a 
+Gregorian calendar year?  
+Yes 
+* Wages, Personal Investment income, and Real Estate Investment income do not count as Turnover from a Business or Business Activity. 
+** If a natural person conducts a Business or Business Activity in the UAE, they are a Resident Person under the Corporate Tax Law, subject 
+to an applicable Double Taxation Agreement.  
+*** Subject to withholding tax, currently at a rate of 0%. 
+Yes 
+Not subject to 
+Corporate Tax 
+No 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+18 
+5.1. 
+Resident Person under the Corporate Tax Law  
+ 
+As noted above, a Resident Person is either a juridical person or a natural person. 
+Whether they are subject to Corporate Tax on their foreign source income and the 
+extent to which the UAE has taxing rights in relation to this income is discussed below. 
+ 
+5.1.1. 
+Juridical person 
+ 
+A juridical person is considered as a Resident Person if it is incorporated in the UAE, 
+or incorporated outside of the UAE but effectively managed and controlled in the 
+UAE.13 It is subject to Corporate Tax on its worldwide income under the Corporate Tax 
+Law, i.e. on:14 
+• 
+income derived from the UAE, and  
+• 
+income derived from outside the UAE.  
+ 
+Accordingly, a Resident Person which is a juridical person is subject to Corporate Tax 
+on both its domestic and foreign source income. To mitigate or prevent potential 
+double taxation of foreign source income, the Corporate Tax Law exempts certain 
+types of foreign source income via the Participation Exemption (see Section 7.2.1) and 
+the Foreign Permanent Establishment exemption (see Section 7.2.2). To the extent 
+foreign source income is included in the Taxable Income of a Taxable Person, 
+potential double taxation can be reduced or eliminated by way of a Foreign Tax Credit 
+(see Section 8).  
+ 
+Further, the taxation of foreign source income in the hands of a Resident Person can 
+be impacted by a Double Taxation Agreement under certain scenarios (see Section 
+5.3). 
+ 
+5.1.2. 
+Natural person  
+ 
+A natural person is a Resident Person if they conduct a Business or Business 
+Activity(ies) in the UAE15 that are not considered an excluded income for Corporate 
+Tax purposes.16 Hence, such person is taxable on:17 
+• 
+income derived from the UAE, and  
+• 
+income derived from outside the UAE, insofar as it relates to the Business or 
+Business Activity conducted by the natural person in the UAE. 
+ 
+                                               
+13 Article 11(3)(a) and 11(3)(b) of the Corporate Tax Law.  
+14 Article 12(1) of the Corporate Tax Law.  
+15 Article 11(3)(c) of the Corporate Tax Law.  
+16 Wages, Personal Investment income and Real Estate Investment income, irrespective of their 
+source, are excluded. 
+17 Article 12(2) of the Corporate Tax Law.  
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+19 
+In other words, a natural person is subject to Corporate Tax on foreign source income 
+if it is related to their Business or Business Activity(ies) in the UAE. 
+ 
+Accordingly, if a natural person, whether they are a Resident Person or a Non-
+Resident Person, carries on a wholly separate Business in a foreign jurisdiction, which 
+does not relate to their Business or Business Activity conducted in the UAE, the 
+income from the Business in the foreign jurisdiction will not be taxable in the UAE.  
+ 
+Wages, Personal Investment income and Real Estate Investment income are not 
+subject to Corporate Tax, irrespective of their source.18 Furthermore, natural persons 
+are only subject to Corporate Tax if the total Turnover derived from their Business or 
+Business Activity(ies) exceeds AED 1 million within a Gregorian calendar year.19 
+ 
+Example 1: Calculating the AED 1 million Turnover threshold for natural 
+persons 
+ 
+Mr A, a natural person, who lives in and is a citizen of Country U, is engaged in the 
+following Businesses:  
+ 
+Business 
+Nature of Business Activity 
+Turnover 
+from 
+Business (Amount in 
+AED) 
+Brokerage 
+services 
+for 
+commercial 
+properties 
+Mr A sets up a sole proprietor Business 
+in 
+the 
+UAE 
+rendering 
+brokerage 
+services for commercial properties to 
+various clients in the UAE as well as 
+outside the UAE. 
+800,000 
+Interior 
+design 
+services 
+Business carried out by Mr A entirely in 
+Country U and the services are 
+rendered to various clients in Country 
+U. 
+ 
+The employees, assets, bank accounts, 
+and offices for this Business are 
+separate from the brokerage Business 
+and are based in Country U.  
+2,000,000 
+ 
+                                               
+18 Article 2(2) of Cabinet Decision No. 49 of 2023.  
+19 Article 2(1) of Cabinet Decision No. 49 of 2023.  
+ 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+20 
+Businesses or Business Activities conducted by a natural person, whether resident 
+or non-resident, are subject to Corporate Tax only where the total Turnover derived 
+from such Businesses or Business Activities exceeds AED 1 million within a 
+Gregorian calendar year.20  
+ 
+In this example, Mr A conducts two Businesses. The brokerage Business is 
+conducted by Mr A in the UAE. The interior design Business is a wholly separate 
+Business, unconnected to the brokerage Business, conducted outside of the UAE 
+using separate employees, assets, bank accounts, and offices.  
+ 
+Mr. A, being a Resident Person under Article 11(3)(c) of the Corporate Tax Law, will 
+be subject to Corporate Tax on both UAE and foreign source income derived from 
+the brokerage Business, if Turnover from this Business exceeds AED 1 million. The 
+income derived from interior design services will not be subject to Corporate Tax 
+since it is a separate Business conducted wholly outside the UAE.21 
+  
+Accordingly, only the domestic and foreign Turnover from the Business conducted 
+in the UAE that is not Wage, Personal Investment income or Real Estate Investment 
+income, is considered for calculating the Turnover threshold of AED 1 million. In this 
+case, the Turnover from the brokerage Business conducted in the UAE is AED 
+800,000, which is below AED 1 million. Hence, Mr A is not subject to Corporate Tax 
+and is not required to register for Corporate Tax.  
+ 
+Example 2: Separate Businesses  
+ 
+Mr B, a natural person who lives in and is a citizen of Country B, is engaged in the 
+following Businesses:  
+ 
+Business 
+Nature of Business Activity 
+Manufacture and 
+sale of paper 
+• 
+Mr B has a factory in Country B which manufactures 
+paper. The labour, raw materials and assets required for 
+this activity are entirely in Country B.  
+• 
+The product is sold to third party customers and is also 
+used by Mr B in his paper craft Business. 
+Manufacture and 
+sale 
+of 
+paper 
+craft items 
+• 
+Mr B has a Licence from a Licensing Authority in the UAE 
+under which various paper craft items (typically 
+decorative items) are prepared in the UAE and sold both 
+in and outside the UAE. 
+                                               
+20 Article 11(6) read with Article 2(1) of Cabinet Decision No. 49 of 2023. 
+21 Article 11(3)(c) read with Article 11(6), Article 12(2) and Cabinet Decision No. 49 of 2023. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+21 
+• 
+The paper used as raw material for the manufacture of 
+craft items is manufactured by Mr B in Country B. 
+However, the labour, assets and factory required for the 
+craft Business are entirely in the UAE and are separate 
+from the paper Business.  
+ 
+Mr B conducts a Business or Business Activity in the UAE. Hence, he qualifies as a 
+Resident Person under Article 11(3)(c) of the Corporate Tax Law. Accordingly, he is 
+subject to tax on income derived from a UAE source and also foreign source income 
+to the extent it relates to his Business in the UAE.22  
+• 
+Since the manufacturing and sale of paper crafts items is conducted in the UAE, 
+income from items sold in the UAE as well as outside the UAE will be subject to 
+Corporate Tax.  
+• 
+The Business of manufacturing and selling paper is conducted using 
+independent resources in Country B. The labour, raw materials and assets 
+required for this activity are entirely in Country B and hence is a separate 
+Business conducted outside the UAE. Merely because the product from this 
+Business is used as a raw material in the Business of craft items does not imply 
+that it is the same Business.  
+ 
+Based on the available information, the income from the craft paper Business would 
+be subject to Corporate Tax in the UAE and income from the Business of 
+manufacturing and selling paper would not be subject to Corporate Tax.  
+ 
+Note:  
+• 
+For the purposes of this example, it is assumed that the total Turnover of Mr B 
+from his Business or Business Activity conducted in the UAE (i.e. paper crafts 
+business) exceeds AED 1 million within a Gregorian calendar year.  
+• 
+The analysis above may differ under a Double Taxation Agreement as the 
+application of the Agreement might impact the residence status. Refer to Section 
+5.3.  
+ 
+Example 3: Foreign income related to a Business in the UAE  
+ 
+Mr C is a natural person who is a tax resident of Country C. Mr C provides fashion 
+design services to various clients around the world, including in the UAE.  
+ 
+Mr C earns the following income from the UAE: 
+ 
+                                               
+22 Article 11(3)(c), Article 11(6) and Article 12(2) of the Corporate Tax Law read with Cabinet Decision 
+No. 49 of 2023. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+22 
+Income derived from the UAE 
+Corporate Tax implications 
+• 
+Income from Business Activity: Mr 
+C has an office in the UAE to meet 
+and conduct meetings with his UAE 
+clients 
+of 
+his 
+fashion 
+design 
+Business.  
+Mr C is conducting a Business in the 
+UAE. Hence, he will be treated as a 
+Resident Person for Corporate Tax 
+purposes and income generated from 
+consulting clients in the UAE will be 
+subject to Corporate Tax, provided the 
+total Turnover from Mr C’s Business or 
+Business Activities conducted in the 
+UAE exceeds AED 1 million within a 
+Gregorian calendar year.23 
+• 
+Rental income: Mr C has an 
+apartment in the UAE that he has 
+rented out to earn rental income for 
+which he does not require a Licence 
+from a Licensing Authority. The 
+apartment is not used to conduct 
+his Business.  
+The rental income from the apartment 
+will 
+be 
+treated 
+as 
+Real 
+Estate 
+Investment income and, hence, is not 
+be subject to Corporate Tax.24 
+  
+Mr C earns the following income from Country C: 
+ 
+Income derived from Country C 
+Corporate Tax implications 
+• 
+Wages from working part time for 
+an employer based in Country C. 
+ 
+Although Mr C is a Resident Person 
+under the Corporate Tax Law, Mr C’s 
+wages will not be subject to Corporate 
+Tax, as Corporate Tax does not apply 
+to a natural person’s salary, wages and 
+other employment income.25  
+• 
+Rental income from an apartment in 
+Country C not used for Business 
+purposes. 
+Although Mr C is a Resident Person 
+under the Corporate Tax Law, the rental 
+income from the apartment, which does 
+not require a Licence from a Licensing 
+Authority in the UAE, will be treated as 
+Real Estate Investment income and, 
+therefore, will not be subject to 
+Corporate Tax.26 
+                                               
+23 Article 11(6) of the Corporate Tax Law read with Cabinet Decision No. 49 of 2023.  
+24 Article 11(6) of the Corporate Tax Law read with Cabinet Decision No. 49 of 2023. 
+25 Article 11(6) of the Corporate Tax Law read with Cabinet Decision No. 49 of 2023. 
+26 Article 11(6) of the Corporate Tax Law read with Cabinet Decision No. 49 of 2023. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+23 
+ 
+Note: The analysis above may differ under a Double Taxation Agreement as the 
+application of the Agreement might impact the residence status. Refer to Section 
+5.3. 
+ 
+5.2. 
+Non-Resident Person under the Corporate Tax Law  
+ 
+As noted above, a Non-Resident Person can be a juridical person or a natural person. 
+Whether such Persons are subject to Corporate Tax on their foreign source income 
+and the extent to which the UAE has taxing rights on such foreign source income is 
+discussed below. 
+ 
+5.2.1. 
+Juridical person 
+ 
+A juridical person is a Non-Resident Person if it is incorporated or formed outside the 
+UAE and not effectively managed and controlled in the UAE. Such person is a Taxable 
+Person to the extent it:27  
+• 
+has a Permanent Establishment in the UAE;  
+• 
+derives UAE sourced income; or  
+• 
+has a nexus in the UAE.28  
+ 
+A juridical person that is a Non-Resident Person is subject to Corporate Tax on the 
+following:29 
+• 
+Taxable Income attributable to its UAE Permanent Establishment. 
+• 
+State Sourced Income that is not attributable to its UAE Permanent Establishment. 
+• 
+Taxable Income that is attributable to its UAE nexus. 
+ 
+State Sourced Income and UAE nexus income are, by their nature, not foreign source 
+income as there is a link present with the UAE. Therefore, a Non-Resident Person, 
+which is a juridical person, can only have foreign source income if it has a Permanent 
+Establishment in the UAE. 
+ 
+Where a Non-Resident Person, which is a juridical person, has a Permanent 
+Establishment in the UAE, it will be subject to Corporate Tax on Taxable Income 
+attributable to that Permanent Establishment.30 Taxable Income, irrespective of its 
+source (i.e. whether derived from the UAE or a foreign jurisdiction) will be subject to 
+Corporate Tax if it is attributable to its Permanent Establishment in the UAE. In other 
+words, a Non-Resident Person can be subject to Corporate Tax on foreign source 
+                                               
+27 Article 11(4) of the Corporate Tax Law. 
+28 Article 11(4)(c) of the Corporate Tax Law read with Cabinet Decision No. 56 of 2023. 
+29 Article 12(3) of the Corporate Tax Law. 
+30 Article 12(3)(a) of the Corporate Tax Law.  
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+24 
+income provided the foreign source income is attributable to its Permanent 
+Establishment in the UAE.  
+ 
+Example 4: Foreign source income attributable to UAE Permanent 
+Establishment 
+Company A is incorporated in and tax resident of Country X. It is managed outside 
+the UAE but has a Permanent Establishment in the UAE (“UAE PE”). Therefore, 
+Company A is a Non-Resident Person under the UAE Corporate Tax Law.  
+ 
+UAE PE has made a loan to Company G (a company incorporated in and tax 
+resident of Country Y). The security/collateral on the loan is an immovable property 
+situated outside the UAE.  
+ 
+The Interest received by the UAE PE on the loan does not have a UAE source 
+since:31  
+• 
+the loan is not secured by Immovable Property located in the UAE,  
+• 
+the borrower (i.e. Company G) is not a Resident Person, and 
+• 
+the borrower (i.e. Company G) is not a Government Entity.  
+ 
+However, since the foreign source Interest income is attributable to Company A’s 
+Permanent Establishment in the UAE, the Interest will be subject to Corporate Tax 
+in the hands of Company A’s Permanent Establishment in the UAE. 
+ 
+ 
+ 
+ 
+                                               
+31 As per Article 13(2)(g) of the Corporate Tax Law, Interest income is UAE sourced if the loan is 
+secured by movable or immovable property located in the UAE; or the is secured by movable or 
+immovable property located in the State; or the borrower is a Government Entity.  
+ 
+Company A 
+Company G  
+UAE PE 
+Country X 
+UAE 
+Country Y 
+Interest payment 
+Loan 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+25 
+5.2.2. 
+Natural person 
+ 
+As noted above, a natural person who conducts a Business or Business Activity in the 
+UAE is a Resident Person and will be subject to Corporate Tax (see Section 5.1.2).32  
+ 
+A natural person, who is not a Resident Person, is a Non-Resident Person if they:33 
+• 
+have a Permanent Establishment in the UAE and a Turnover attributable to their 
+Permanent Establishment that exceeds AED 1 million within a Gregorian calendar 
+year; or 
+• 
+derive State Sourced Income.  
+ 
+State Sourced Income is not considered foreign source income as there is a link 
+present with the UAE. Therefore, a Non-Resident Person, which is a natural person, 
+can only have foreign source income if they have a Permanent Establishment in the 
+UAE (with a Turnover exceeding AED 1 million within a Gregorian calendar year) and 
+the foreign source income is attributable to its Permanent Establishment in the UAE. 
+ 
+5.3. 
+Impact of Double Taxation Agreements on foreign source income 
+ 
+A Double Taxation Agreement takes precedence over the provisions of the Corporate 
+Tax Law to the extent there is any inconsistency between the agreement and the 
+provisions of the Corporate Tax Law.34 Therefore, meeting the definition of a Resident 
+Person under the Corporate Tax Law, i.e. referred to in the agreement as UAE 
+domestic law, does not automatically mean that a Resident Person will be tax resident 
+in the UAE where a Double Taxation Agreement applies. Residence may be assigned 
+to the UAE or another jurisdiction under an applicable Double Taxation Agreement. 
+This impacts the taxation of foreign source income. 
+ 
+For instance, where an applicable Double Taxation Agreement assigns residence to 
+another jurisdiction, that foreign jurisdiction will have the taxing right as a residence 
+country over the income of that Person. In this situation, the UAE would not have a 
+taxing right over any income of that Person unless that income is sourced from the 
+UAE under the Corporate Tax Law and to the extent the taxing right is allocated to the 
+UAE under the applicable Double Taxation Agreement. 
+ 
+ 
+ 
+ 
+ 
+                                               
+32 Article 11(3)(c) of the Corporate Tax Law.  
+33 Article 11(4) of the Corporate Tax Law. 
+34 Article 66 of the Corporate Tax Law.  
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+26 
+6. When does foreign source income become taxable in the 
+UAE?  
+ 
+As noted above in Section 5, whether a Person is taxable on their foreign source 
+income depends on their legal status (juridical person or natural person) and tax 
+residence status (Resident Person or Non-Resident Person). 
+ 
+Once it is determined that the UAE has the taxing rights with respect to the foreign 
+source income received by a Taxable Person and that income is subject to Corporate 
+Tax, it is pertinent to determine the Tax Period in which such foreign source income 
+would be subject to Corporate Tax. 
+ 
+For a juridical person, the Tax Period is the 12-month period for which the person 
+prepares its Financial Statements.35 A juridical person can make an application to the 
+FTA to change its Tax Period or use a different Tax Period.36 However, for a natural 
+person, the Tax Period is always the Gregorian calendar year, or a part thereof if the 
+Business is conducted only for part of the Gregorian calendar year. 
+ 
+The timing of taxation of foreign source income follows the general income attribution 
+rules of the Corporate Tax Law. Accordingly, the timing of taxation of foreign source 
+income depends on whether the Taxable Person has adopted the Cash Basis or 
+Accrual Basis of Accounting (see Sections 7.1.1 and 7.1.2). 
+• 
+Cash Basis of Accounting is a method under which the Taxable Person recognises 
+income and expenditure as and when cash payments are received and paid;37 
+• 
+Accrual Basis of Accounting is a method under which the Taxable Person 
+recognises income when earned and expenditure when incurred,38 i.e. revenue 
+and costs may be recorded in the Financial Statements before or after the cash 
+payments are received or paid. Financial Statements must be prepared based on 
+IFRS or IFRS for SMEs (see Section 7.1.1 below).39  
+ 
+ 
+ 
+                                               
+35 Article 57(2) of the Corporate Tax Law.  
+36 Article 58 of the Corporate Tax Law read with FTA Decision No. 5 of 2023.  
+37 Article 1 of Ministerial Decision No. 114 of 2023.  
+38 Article 1 of Ministerial Decision No. 134 of 2023.  
+39 Article 4 of Ministerial Decision No. 114 of 2023. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+27 
+7. How is foreign source income taxed?  
+ 
+7.1. 
+Determining Taxable Income 
+ 
+Article 20 of the Corporate Tax Law provides general rules for determining the Taxable 
+Income of a Taxable Person. 
+ 
+The accounting net profit, or loss, as per the Financial Statements is the starting point 
+for determining Taxable Income for a particular Tax Period, which is then adjusted as 
+required, for example for all exemptions, reliefs, other deductions, non-deductible 
+expenditure, tax loss relief, etc.40 
+ 
+The general rules for determining Taxable Income apply equally to foreign source 
+income earned by a Taxable Person. 
+ 
+7.1.1. 
+Applicable Accounting Standards 
+ 
+For the purposes of the UAE Corporate Tax Law, a Taxable Person is required to 
+prepare Financial Statements based on IFRS. Where the Revenue of the Taxable 
+Person does not exceed AED 50 million, they may choose to apply IFRS for SMEs 
+instead.41 Revenue is defined as the gross amount of income derived by a Taxable 
+Person during a Tax Period.42 
+ 
+Accordingly, where a Taxable Person earns or receives foreign source income, they 
+are required to apply the same Accounting Standards as required for domestic (i.e. 
+UAE) income. 
+ 
+7.1.2. 
+Cash Basis of Accounting 
+ 
+While Taxable Persons are generally required to use the Accrual Basis of Accounting, 
+they may use the Cash Basis of Accounting where their Revenue does not exceed 
+AED 3 million, or in exceptional circumstances pursuant to an application submitted to 
+the FTA.43 
+ 
+Accordingly, a Taxable Person can apply the Cash Basis of Accounting where total 
+Revenue (i.e. Revenue from UAE and foreign sources) generated for a Tax Period 
+does not exceed AED 3 million. 
+ 
+                                               
+40 Article 20(2) of the Corporate Tax Law. 
+41 Article 4 of the Ministerial Decision No. 114 of 2023. 
+42 Definition in Article 1 of the Corporate Tax Law. 
+43 Article 2 of the Ministerial Decision No. 114 of 2023. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+28 
+ 
+Example 5: Revenue derived from UAE and foreign sources 
+ 
+Company A (a company incorporated and resident in the UAE) is in the business of 
+distributing consumer products worldwide. During the Tax Period from 1 January 
+2024 to 31 December 2024, it received the following: 
+• 
+AED 1,500,000 – sales revenue from customers in the UAE. 
+• 
+AED 900,000 – sales revenue from customers in Country S. 
+• 
+AED 500,000 – Dividend from Company B, a wholly owned subsidiary in the 
+UAE. 
+• 
+AED 110,000 – Dividend from Company F, a wholly owned subsidiary 
+incorporated and resident in Country S. 
+ 
+It is assumed that the ownership interest held by Company A in Company F qualifies 
+as a Participating Interest under Article 23 of the Corporate Tax Law. 
+ 
+Since the Revenue accrued by Company A from all the above sources exceeds AED 
+3,000,000 (i.e. AED 3,010,000 in total), it cannot adopt the Cash Basis of 
+Accounting. It is irrelevant that its total Revenue from foreign sources (AED 900,000 
+plus AED 110,000) does not exceed the prescribed threshold of AED 3,000,000, as 
+Revenue is calculated on a worldwide basis. 
+ 
+Additionally, whilst the Dividends received from its subsidiaries (Company B and 
+Company F) are not taxable as they are Exempt Income,44 such receipts still count 
+towards the Revenue threshold of AED 3,000,000 for the purposes of determining 
+whether it can adopt Cash Basis of Accounting. 
+ 
+7.1.3. 
+Expenditure and losses relating to foreign source income 
+ 
+The general rules for determining Taxable Income apply in relation to foreign source 
+income. Namely, any expenditure incurred wholly and exclusively for Business 
+purposes is normally allowable as a deduction. There are exceptions such as costs 
+relating to Exempt Income, for example, costs incurred to acquire a Participating 
+Interest in a foreign Participation. Any loss incurred would be offset in accordance with 
+the normal rules. 45 Note that expenditure associated with a Foreign Permanent 
+Establishment is not deductible where a Foreign Permanent Establishment exemption 
+election has been made under Article 24 of the Corporate Tax Law (see Section 7.2.2).  
+ 
+ 
+                                               
+44 Exempt under Article 22(1) in respect of Dividend income from a juridical Resident Person and Article 
+22(2) in respect of Dividend from a foreign Participation.  
+45 As per Article 20(2)(d) and 20(2)(f) of the Corporate Tax Law.  
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+29 
+Example 6: Expenses and losses relating to foreign source income 
+ 
+Company G (a company incorporated and resident in the UAE) is engaged in the 
+export of electronic items and has earned foreign source income and incurred 
+expenses during the relevant Tax Period as follows:  
+ 
+Item 
+Amount (in AED) 
+Income from the export of goods 
+20 million 
+Dividends received from foreign Participation 
+5 million 
+Less: Cost of goods sold 
+(10 million) 
+Less: Marketing and distribution cost 
+(15 million) 
+Less: Expense incurred in managing investments in foreign 
+Participations 
+(0.5 million) 
+Accounting net profit/(loss) 
+(0.5 million) 
+ 
+To determine the Taxable Income of Company G: 
+ 
+• 
+Dividends received from a foreign Participation are exempt under the 
+Participation Exemption.46 Hence, the Dividend income (i.e. AED 5 million) and 
+expense incurred to earn the Dividend, which is an Exempt Income, (i.e. AED 
+0.5 million) will not be considered in determining Taxable Income.  
+• 
+As a consequence, the income less expenses results in a loss of AED 5 million. 
+This loss can be carried forward and set off in subsequent years.47  
+ 
+7.1.4. 
+Aggregation of foreign income and expenditure 
+ 
+Taxable Income and deductible expenditure from all sources, whether domestic or 
+foreign, are aggregated for the purposes of calculating Taxable Income. Thus, Tax 
+Losses from a foreign source can be offset against income from UAE sources when 
+determining Taxable Income. This excludes expenses relating to Exempt Income (for 
+instance foreign Dividends which qualify for the Participation Exemption) and losses 
+or expenses relating to a Foreign Permanent Establishment where an election has 
+been made under Article 24 of the Corporate Tax Law (see Section 7.2.2).  
+ 
+ 
+ 
+ 
+                                               
+46 Article 22(2) read with Article 23 of the Corporate Tax Law.  
+47 As per Article 37 and Article 39 of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+30 
+ 
+Example 7: Net loss in relation to foreign source income 
+ 
+Company A (a company incorporated and resident in the UAE) distributes consumer 
+products in the UAE and also exports to Country S. Its sales to Country S do not 
+constitute a Permanent Establishment in Country S. During the Tax Period from 1 
+January 2024 to 31 December 2024, it received/incurred the following: 
+ 
+UAE-related: 
+• 
+AED 5,000,000 – sales revenue from customers in the UAE. 
+• 
+AED 2,000,000 – costs in relation to domestic sales. 
+ 
+Country S-related: 
+• 
+AED 2,000,000 – sales revenue from customers in Country S. 
+• 
+AED 3,500,000 – costs in relation to Country S sales, including loss due to fire 
+which destroyed stock destined for Country S customers. 
+ 
+Company A makes a net profit of AED 3,000,000 with respect to its UAE operations, 
+whereas it made a net loss of AED 1,500,000 with respect to its foreign source 
+income from Country S. 
+ 
+Company A is required to aggregate all its domestic and foreign income and costs 
+to calculate its Taxable Income. Thus, in this case, the overall Taxable Income of 
+Company A would be AED 1,500,000. 
+ 
+Note that Company A does not qualify for Small Business Relief in the Tax Period 
+ending 31 December 2024 because its Revenue exceeds AED 3 million. 
+ 
+7.1.5. 
+Income in foreign currency to be converted to AED 
+ 
+It is likely that most foreign source income will be in a currency other than AED. It is 
+also possible that financial records relating to foreign business operations are in the 
+local currency of the foreign jurisdiction. 
+ 
+For the purposes of determining Taxable Income and Corporate Tax, amounts 
+quantified in foreign currency have to be converted into AED based on the applicable 
+exchange rate published by the Central Bank of the UAE, as follows:48  
+• 
+spot rates, based on currency exchange markets, where it is reasonable to do so;  
+• 
+monthly average rates where it is not reasonable to use spot rates and using a 
+monthly average provides a reasonable approximation of Corporate Tax Payable; 
+or 
+                                               
+48 Article 43 of the Corporate Tax Law read with Article 13(1) of FTA Decision No. 13 of 2023. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+31 
+• 
+yearly average exchange rates where it is not reasonable to use spot rates or 
+monthly average rates. 
+ 
+The method adopted to convert amounts from foreign currency to AED should be used 
+consistently throughout a Tax Period.49 A Taxable Person is required to keep records 
+of the reason for the currency translation method selected and the rates used.50 
+ 
+If a change to the currency conversion method is made in a subsequent Tax Period, 
+a Taxable Person is required to keep records of the reason(s) for the change.51 
+ 
+7.2. 
+Exemptions of particular relevance for foreign source income 
+ 
+7.2.1. 
+Participation Exemption 
+ 
+Certain income in relation to a Participating Interest is exempt from Corporate Tax if it 
+meets the conditions set out in Article 23 of the Corporate Tax Law. A Participating 
+Interest is a significant ownership interest in a juridical person. Various conditions 
+including minimum 5% ownership or minimum acquisition cost of AED 4 million and a 
+12-month holding period are required to be satisfied. The exemption covers, amongst 
+other income, Dividends and other profit distributions, as well as capital gains or losses 
+from the transfer, sale or other disposal of a Participating Interest.52 
+ 
+If a Resident Person has a Foreign Permanent Establishment (see Section 7.2.2), and 
+has utilised a Tax Loss incurred in that Foreign Permanent Establishment, that Tax 
+Loss must be fully offset by the Taxable Income from the Foreign Permanent 
+Establishment in a subsequent Tax Period or Tax Periods before the Taxable Person 
+can elect to apply the Foreign Permanent Establishment exemption. 53 Where a 
+Foreign Permanent Establishment is incorporated before the previously utilised Tax 
+Loss is fully offset, any Dividends or other income arising upon or following 
+incorporation of the Foreign Permanent Establishment cannot benefit from the 
+Participation Exemption until such income offsets the entirety of the previously utilised 
+Tax Loss.54 
+ 
+ 
+ 
+ 
+ 
+                                               
+49 Article 2(2) of FTA Decision No. 13 of 2023.  
+50 Article 2(3) of FTA Decision No. 13 of 2023.  
+51 Article 2(4) of FTA Decision No. 13 of 2023.  
+52 Articles 22(2) and Article 22(3) read with Article 23 of the Corporate Tax Law. 
+53 Article 13(1) of Ministerial Decision No. 116 of 2023. 
+54 Article 13(2) of Ministerial Decision No. 116 of 2023. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+32 
+7.2.2. 
+Foreign Permanent Establishment exemption 
+ 
+7.2.2.1. 
+Overview 
+ 
+A Resident Person can make an election to disregard the income and associated 
+expenditure of its Foreign Permanent Establishment while determining the Resident 
+Person’s Taxable Income.55 This is subject to satisfaction of certain conditions, as 
+discussed below. 
+ 
+7.2.2.2. 
+Conditions 
+for 
+claiming 
+Foreign 
+Permanent 
+Establishment 
+exemption 
+ 
+For the purpose of this exemption, the Foreign Permanent Establishment must meet 
+the conditions of Article 14 of the Corporate Tax Law if the foreign activities were 
+carried on in the UAE.56 
+ 
+A Resident Person can elect to disregard the income and associated expenditure of 
+its Foreign Permanent Establishments while determining its Taxable Income if those 
+Permanent Establishments are subject to Corporate Tax, or a tax of a similar 
+character, at a rate not less than 9% under the applicable tax legislation of the foreign 
+jurisdiction in which it is located.57 If this condition is not satisfied, the net income 
+derived from the Foreign Permanent Establishment would not be eligible for the 
+Foreign Permanent Establishment exemption. 
+ 
+An election for the exemption applies to all Foreign Permanent Establishments of the 
+Resident Person that meet the required conditions. 58 A Resident Person having 
+multiple Foreign Permanent Establishments cannot choose different treatments for 
+different Foreign Permanent Establishments. In other words, if a Resident Person 
+wishes to claim exemption from Corporate Tax for one of its Foreign Permanent 
+Establishments, all of its other Foreign Permanent Establishments will be exempt as 
+well, provided they meet the condition above, prescribed under Article 24(7) of the 
+Corporate Tax Law. 
+ 
+However, if Tax Losses incurred in a Foreign Permanent Establishment have been 
+previously offset against other profits (for example, from the head office), an election 
+                                               
+55 Article 24(1) of the Corporate Tax Law. 
+56 Conditions of Article 14 have to be applied in the relevant context when reading Article 24 of the 
+Corporate Tax Law i.e. the expression “Resident Person” shall be used instead of the expression 
+“Non-Resident Person” and the expression “outside the State” shall be used instead of the 
+expression “in the State”. 
+57 Article 24(7) of the Corporate Tax Law.  
+58 Article 24(6) of the Corporate Tax Law. 
+ 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+33 
+under Article 24 of the Corporate Tax Law is not permitted until that Tax Loss is fully 
+offset by the Taxable Income from that Foreign Permanent Establishment in a 
+subsequent Tax Period or Tax Periods.59 
+ 
+7.2.2.3. 
+Implications of electing for Foreign Permanent Establishment 
+exemption 
+ 
+Where a Resident Person makes an election for the Foreign Permanent Establishment 
+exemption, it applies to all Foreign Permanent Establishments. 60 Thus, it is not 
+possible to choose to include some, but not all, Foreign Permanent Establishments. 
+An exception would be any Permanent Establishments which do not qualify for the 
+exemption due to failing the requirement to be subject to a sufficient level of tax. 
+ 
+Where the Foreign Permanent Establishment exemption applies, the following are not 
+taken into account in determining Taxable Income:61 
+• 
+losses of the Foreign Permanent Establishment, 
+• 
+income and the associated expenditure of the Foreign Permanent Establishment, 
+and 
+• 
+Foreign Tax Credits in relation to the Foreign Permanent Establishment. 
+ 
+Each Foreign Permanent Establishment is treated as an independent Person, 
+separate from the UAE head office, meaning Taxable Income for the purposes of the 
+Corporate Tax Law is calculated as if each Foreign Permanent Establishment is a 
+separate Person. 62 The net income of all Foreign Permanent Establishments is 
+exempted when determining the Taxable Income of the Resident Person i.e. the UAE 
+head office. 
+ 
+Regarding the allocation of profit, a Foreign Permanent Establishment is deemed to 
+be a Related Party of the UAE head office.63 Therefore, any transactions between a 
+Foreign Permanent Establishment and its UAE head office, or other Related Parties 
+of the UAE head office, must be in line with the arm’s length principle (transfer pricing 
+provisions) under Article 34 of the Corporate Tax Law (i.e. pricing at arm’s length).  
+ 
+ 
+ 
+ 
+                                               
+59 Article 13(1) of Ministerial Decision No. 116 of 2023. 
+60 Article 24(6) of the Corporate Tax Law.  
+61 Article 24(2) of the Corporate Tax Law.  
+62 Article 24(4) of the Corporate Tax Law. 
+63 Article 35(1)(d) of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+34 
+Example 8: Related Party transactions (transfer of assets and repatriation of 
+funds) 
+ 
+Company A (a company incorporated and resident in the UAE) has set up a clothes-
+manufacturing unit (branch office) in Country B which constitutes a Foreign 
+Permanent Establishment. It also has a subsidiary, Company U, which is a company 
+incorporated and resident in Country U. 
+ 
+To enhance clothes manufacturing, machinery is transferred from Company U to 
+Company A’s Foreign Permanent Establishment in Country B. 
+ 
+At the end of the Tax Period the Foreign Permanent Establishment repatriates its 
+profit to its head office i.e. Company A. 
+ 
+Whilst legally the Foreign Permanent Establishment is part of Company A, for 
+Corporate Tax purposes it is treated as a separate and independent Person which 
+is related to the head office and any other Related Party of the head office. Thus, 
+when determining the profit which could benefit from the Foreign Permanent 
+Establishment exemption, the transfer of the asset from Company U to the Foreign 
+Permanent Establishment of Company A must be in line with the arm’s length 
+principle. 
+ 
+The repatriation of surplus funds from the branch in Country B to its head office in 
+in the UAE is receipt of own funds by Company A since branch and head office are 
+the same legal person. Hence, the repatriation transaction is not a taxable event 
+from the perspective of Company A and is ignored for Corporate Tax purposes. This 
+is the case whether or not an election has been made for the Foreign Permanent 
+Establishment exemption. 
+ 
+7.3. 
+Determining Corporate Tax Payable  
+ 
+The Corporate Tax Law does not prescribe any separate Corporate Tax rates for 
+foreign source income. Thus, foreign source income is aggregated with all other 
+income when determining Taxable Income. For a Taxable Person, other than a 
+Qualifying Free Zone Person, the applicable rates currently are:64 
+• 
+0% for Taxable Income up to and including AED 375,000; and 
+• 
+9% for Taxable Income exceeding AED 375,000. 
+ 
+Where a Taxable Person has paid foreign tax in another jurisdiction, a tax credit may 
+be available.65 Refer to Section 8 for details. 
+                                               
+64 Article 3(1) of the Corporate Tax Law. 
+65 Article 47 of the Corporate Tax Law.  
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+35 
+8. Foreign Tax Credit 
+ 
+8.1. 
+What is Foreign Tax Credit?  
+ 
+As discussed in Section 5, Resident Persons or Non-Resident Persons with a 
+Permanent Establishment in the UAE are subject to tax on foreign source income. To 
+mitigate or prevent potential double taxation of foreign source income, the Corporate 
+Tax Law exempts certain types of foreign source income through the Participation 
+Exemption (see Section 7.2.1) and the Foreign Permanent Establishment exemption 
+(see Section 7.2.2). However, to the extent foreign source income is nevertheless 
+included in the Taxable Income of a Taxable Person, potential double taxation can be 
+reduced or eliminated by way of a Foreign Tax Credit. 
+ 
+A Foreign Tax Credit allows a Taxable Person to deduct taxes paid under the tax laws 
+of a foreign jurisdiction from the UAE Corporate Tax due on the same income.66 
+ 
+8.1.1. 
+Foreign taxes for which Foreign Tax Credit is available 
+ 
+A Foreign Tax Credit is available for any foreign tax that is of a similar character to 
+Corporate Tax. The following conditions should be all satisfied for a foreign tax to be 
+considered of similar character to Corporate Tax:  
+• 
+The foreign tax is imposed by and payable to the government (federal or state 
+government) of a foreign jurisdiction. 
+• 
+Payment of the foreign tax is compulsory and enforceable by tax laws in that 
+foreign jurisdiction. 
+• 
+The foreign tax is imposed on profit or net income (i.e. income less deductions). 
+Foreign withholding tax is deemed to meet this requirement.  
+ 
+The provisions of any applicable Double Taxation Agreement shall be taken into 
+consideration when determining which foreign taxes are eligible for a Foreign Tax 
+Credit (see Section 8.5).  
+ 
+The following factors are not relevant in determining if a foreign tax is of similar 
+character to Corporate Tax: 
+• 
+whether the amount is imposed under a separate legislation from the primary 
+taxing legislation of the foreign jurisdiction; 
+• 
+the name given to the tax paid in the foreign jurisdiction; and 
+• 
+the method by which an amount is collected: even if a foreign jurisdiction collects 
+an amount by way of a withholding tax mechanism, such tax remains creditable if 
+it is a tax levied by the foreign jurisdiction on business income.  
+ 
+                                               
+66 Article 47(1) of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+36 
+The following is a non-exhaustive list of taxes that are not considered to be of a similar 
+character to Corporate Tax: 
+• 
+consumption taxes such as value added tax, goods and services tax, or sales tax, 
+• 
+customs duty or excise tax or other forms of import duties, 
+• 
+transaction taxes such as stamp tax and capital duty,  
+• 
+property taxes and wealth taxes calculated based on ownership of specified items 
+or value of assets without regard to income, and 
+• 
+estate tax or other forms of inheritance taxes and duties. 
+ 
+Some jurisdictions may impose taxes calculated on multiple components to the tax 
+base: some taxes on income and others on non-income elements. The other taxes 
+levied in a foreign jurisdiction may be in respect of a taxpayer’s activities in that 
+jurisdiction and be administratively and conceptually part of the system of corporate 
+taxation in that foreign jurisdiction. Where such taxes are predominately a tax on a 
+taxpayer’s income, and it would be administratively burdensome to split its income and 
+non-income components, provided the amount can meet the other conditions outlined 
+above and none of the exclusions apply, then such taxes should be treated as being 
+of similar character to UAE Corporate Tax. An example of a tax with multiple 
+components is the corporate Zakat levied by the Kingdom of Saudi Arabia. The Zakat 
+operates as a tax on income or equity or both and will, therefore, be considered as 
+similar to Corporate Tax. 
+ 
+Amounts paid to a foreign government as interest, fines, penalties, or any similar 
+obligation are not taxes imposed on income, but instead are levied due to defaults 
+such as late payment of tax. Hence, such amounts paid in a foreign jurisdiction are not 
+similar in essence to Corporate Tax and do not qualify for Foreign Tax Credit. 
+ 
+8.1.2. 
+When will foreign tax be considered as “paid”? 
+ 
+A Foreign Tax Credit is potentially available with respect to tax “paid” under the tax 
+law of a foreign jurisdiction. In this regard, “paid” means the following: 
+• 
+The amount that has been remitted to the tax authorities in the foreign jurisdiction; 
+or  
+• 
+The amount that has accrued to the tax authorities in the foreign jurisdiction and 
+as such represents a committed amount to the foreign tax authority but it is not yet 
+paid. 
+ 
+A Taxable Person is required to maintain all necessary records for the purposes of 
+claiming a Foreign Tax Credit (see Section 8.6).67 If a Taxable Person has claimed 
+Foreign Tax Credit for a Tax Period, they should be able to provide proof of the tax 
+paid to the foreign tax authority, if requested by the FTA. 
+                                               
+67 Article 47(4) of the Corporate Tax Law.  
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+37 
+ 
+The amount would not be considered as “paid” to the foreign tax authority under the 
+following scenarios: 
+• 
+where the tax liability in the foreign jurisdiction is contingent or not yet formally 
+accrued (for example a foreign tax authority has assessed higher taxable income 
+but the Person has challenged the assessment before court or judicial authorities 
+and a final decision has not been issued yet); or  
+• 
+where the amount of tax paid in a foreign jurisdiction has been refunded or has 
+been confirmed as being refundable.  
+ 
+It is possible that a Taxable Person has claimed a Foreign Tax Credit with respect to 
+tax paid in a foreign jurisdiction but that tax is subsequently refunded in the foreign 
+jurisdiction. This will result in a reduction of the Foreign Tax Credit available to the 
+Taxable Person under the Corporate Tax Law. Where this results in an increase in 
+Corporate Tax Payable in excess of AED 10,000, the Taxable Person must submit a 
+Voluntary Disclosure to the FTA within 20 Business Days from the date when the 
+Taxable Person became aware of the repayment of foreign tax in the foreign 
+jurisdiction.68 
+ 
+If the increase in Corporate Tax Payable is AED 10,000 or less, the Taxable Person 
+must correct the Foreign Tax Credit claim in the earlier of the following:  
+• 
+the Tax Return that has become due for submission for a previous Tax Period; or  
+• 
+the Tax Return for the Tax Period in which foreign tax is refunded.69 
+ 
+If, conversely, the foreign tax paid increases with the result that a higher Foreign Tax 
+Credit could be claimed, a Taxable Person may submit a Voluntary Disclosure,70 along 
+with an application for a Corporate Tax refund. The FTA will then assess the impact 
+of the higher Foreign Tax Credit on the Taxable Person’s Corporate Tax position.71 
+ 
+8.2. 
+Who can claim Foreign Tax Credit? 
+ 
+Where foreign source income is taxable under the Corporate Tax Law, a Taxable 
+Person can claim a Foreign Tax Credit for tax paid on this income in a foreign 
+jurisdiction. As discussed in Section 5, foreign source income is taxable for the 
+following Taxable Persons: 
+• 
+Resident juridical person;  
+                                               
+68 Article 10(1)(a) of Cabinet Decision No. 74 of 2023. 
+69 Article 10(1)(b) of Cabinet Decision No. 74 of 2023. 
+70 Article 10(1) or Article 10(2) of the Tax Procedures Law. 
+71 Article 23 of the Tax Procedures Law. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+38 
+• 
+Resident natural person to the extent such foreign source income relates to a 
+Business or Business Activities conducted by the natural person in the UAE if the 
+total Turnover exceeds AED 1 million in the Gregorian calendar year; and 
+• 
+Non-Resident Person having a Permanent Establishment in the UAE and the 
+foreign source income is attributable to the Permanent Establishment. 
+  
+Example 9: Foreign Tax Credit in hands of a Non-Resident Person 
+ 
+ 
+ 
+Company A is incorporated in and tax resident in Country X. It is managed outside 
+the UAE but has a Permanent Establishment in the UAE (UAE PE). Therefore, 
+Company A is a Non-Resident Person under UAE Corporate Tax Law. 
+ 
+The UAE PE of Company A has granted a loan to Company G, resident in Country 
+Y. The Interest on the loan is foreign source income attributable to Company A’s 
+Permanent Establishment in the UAE. The Interest income is subject to withholding 
+tax in Country Y at the time of payment to Company A’s Permanent Establishment 
+in UAE.  
+ 
+The Corporate Tax Payable by Company A’s UAE Permanent Establishment on the 
+foreign source income can be reduced by a Foreign Tax Credit in respect of taxes 
+paid in Country Y, subject to conditions on calculation set out in Section 8.3. 
+ 
+8.3. 
+How to calculate the Foreign Tax Credit  
+ 
+8.3.1. 
+General 
+ 
+The Foreign Tax Credit cannot exceed the amount of UAE Corporate Tax due on the 
+relevant foreign income.72 Thus, the amount of Foreign Tax Credit is the lower of the 
+following: 
+                                               
+72 Article 47(2) of the Corporate Tax Law. 
+Company A 
+Company G 
+UAE PE 
+Country X 
+UAE 
+Country Y 
+Interest payment 
+Loan 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+39 
+• 
+The actual amount of tax paid on foreign source income in the foreign jurisdiction. 
+- 
+Foreign tax paid is likely to be in a currency other than AED. For the purposes 
+of the Corporate Tax Law, any amount quantified in another currency must be 
+converted to AED (see Section 7.1.5).73 
+And 
+• 
+The amount of the Corporate Tax due on the foreign source income. 
+- 
+Since Corporate Tax applies to income on a net basis, the net foreign source 
+income is to be determined by deducting economically linked expenditure from 
+the relevant income. The deductibility of expenditure will be in accordance with 
+the provisions of the Corporate Tax Law.74 It is possible that the foreign country 
+has taxed the foreign source income on a gross basis, particularly in the case 
+of withholding tax. However, since the Corporate Tax Law taxes income net of 
+expenses, a Foreign Tax Credit is to be determined on net foreign source 
+income. 
+- 
+Foreign Tax Credit is not available in respect of Exempt Income such as foreign 
+Dividends exempt in the UAE under the Participation Exemption, even if taxes 
+on such income have been withheld in the foreign jurisdiction. Similarly, Foreign 
+Tax Credit will not be available if the Taxable Person has a loss position under 
+the Corporate Tax Law (see Section 8.3.4). 
+- 
+As there are two rates of Corporate Tax in the UAE (i.e. 0% and 9%),75 the 
+Corporate Tax due on foreign source income is to be determined on a weighted 
+average basis using the following formula:  
+Corporate Tax due on relevant foreign source income = 
+X*Y
+Z 
+X= Corporate Tax due on total Taxable Income of the Taxable Person before 
+any Foreign Tax Credit 
+Y= Relevant foreign source income  
+Z= Total Taxable Income of the Taxable Person 
+ 
+Example 10: Calculating Foreign Tax Credit 
+ 
+Company A (a company incorporated and resident in the UAE) has total net Taxable 
+Income of AED 10 million during the relevant Tax Period out of which AED 1 million 
+is net Interest income earned from Country X, i.e. foreign source income. In Country 
+X, Company A has paid withholding tax equivalent to AED 50,000.  
+ 
+The Corporate Tax Payable of Company A will be as follows:  
+ 
+ 
+                                               
+73 Article 43 of the Corporate Tax Law.  
+74 Deductions as specified under Chapter 9 of the Corporate Tax Law. 
+75 Article 3 of the Corporate Tax Law.  
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+40 
+Item 
+Amount (AED) 
+ Taxable Income (including foreign source income of AED 1 
+million) 
+10,000,000 
+ Corporate Tax due on Taxable Income  
+[(10,000,000 - 375,000) * 9%] 
+866,250 
+ Less: Foreign Tax Credit:  
+[lower of the following:  
+• 
+AED 50,000 (being the actual amount of foreign tax paid 
+in the foreign jurisdiction)  
+• 
+AED 86,625 [866,250 * 1 million / 10 million] (being the 
+amount of the UAE Corporate Tax due on the foreign source 
+income)] 
+ 
+(50,000) 
+ Corporate Tax Payable 
+816,250 
+ 
+8.3.2. 
+Unutilised Foreign Tax Credit 
+ 
+Any unutilised Foreign Tax Credit cannot be carried forward to future Tax Periods or 
+carried back to earlier Tax Periods.76 Thus, unutilised Foreign Tax Credit will be 
+forfeited. Further, a deduction from taxable profits for the unutilised Foreign Tax Credit 
+is not possible.77  
+ 
+Example 11: Excess Foreign Tax Credit 
+ 
+Company A (a company incorporated and resident in the UAE) derived AED 1 
+million as foreign source royalty income from Company B, resident of Country X. At 
+the time of payment, the equivalent of AED 100,000 was withheld in Country X as 
+withholding tax. To earn this income, Company A has incurred expenditure of AED 
+200,000. 
+ 
+Assuming that Company A does not have any other income and does not elect for 
+Small Business Relief, the Corporate Tax Payable by Company A will be as follows: 
+ 
+Item 
+Amount (AED) 
+Foreign source income 
+1,000,000 
+Less: Expenditure 
+200,000 
+Taxable Income 
+800,000 
+Corporate Tax due on Taxable Income [(800,000 - 
+375,000) * 9%] 
+38,250 
+                                               
+76 Article 47(3) of the Corporate Tax Law. 
+77 Article 33(8) of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+41 
+Less: Foreign Tax Credit:  
+[lower of the following:  
+• 
+AED 100,000 (being the actual amount of foreign 
+tax paid in the foreign jurisdiction)  
+• 
+AED 38,250 (being the amount of the Corporate 
+Tax due on the foreign source income)] 
+(38,250) 
+Corporate Tax Payable 
+0 
+Balance unutilised Foreign Tax Credit (which will be 
+forfeited) 
+61,750 
+ 
+8.3.3. 
+Income-by-income approach: multiple sources of foreign income 
+ 
+The Foreign Tax Credit cannot exceed the amount of Corporate Tax due on the 
+“relevant” foreign income.78 The use of the term “relevant” indicates that a Foreign Tax 
+Credit is to be calculated on an income-by-income basis. Thus, where a Taxable 
+Person has multiple sources of foreign income, the excess Foreign Tax Credit of one 
+foreign source income cannot be set off against the Corporate Tax due on another 
+foreign source income.  
+ 
+Example 12: Multiple sources of foreign income 
+ 
+Company A, a company incorporated and resident in the UAE, has earned foreign 
+source income as follows:  
+ 
+Item 
+Foreign source income 
+(net of expense) (AED) 
+Foreign tax (AED) 
+Interest earned from 
+Country X 
+100,000 
+1,000 
+Royalty earned from 
+Country Y 
+500,000 
+50,000 
+Total  
+600,000 
+51,000 
+ 
+Assuming that Company A does not have any other income and does not elect for 
+Small Business Relief, the Corporate Tax Payable by Company A will be as follows: 
+ 
+Item 
+Amount (AED) 
+ Taxable Income 
+600,000 
+ Corporate Tax due on Taxable Income [(600,000- 
+375,000) * 9%] 
+20,250 
+ Less: Foreign Tax Credit for tax paid in Country X  
+(1,000) 
+                                               
+78 Article 47(2) of the Corporate Tax Law.  
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+42 
+[lower of the following:  
+• AED 1,000 (being the actual amount of foreign tax 
+paid in the foreign jurisdiction)  
+• AED 3,375 [100,000/600,000 of 20,250] (being the 
+amount of the Corporate Tax due on the foreign 
+source income)] 
+ Less: Foreign Tax Credit for tax paid in Country Y  
+[lower of the following:  
+• AED 50,000 (being the actual amount of foreign 
+tax paid in the foreign jurisdiction)  
+• AED 16,875 [500,000/600,000 of 20,250] (being 
+the amount of the Corporate Tax due on the 
+foreign source income)] 
+(16,875) 
+Corporate Tax Payable 
+2,375 
+Unutilised Foreign Tax Credit in relation to foreign tax 
+paid in Country Y (which is forfeited) 
+33,125 
+ 
+Note that the excess Foreign Tax Credit in relation to Country Y cannot be set off 
+against the tax due on income from Country X. 
+ 
+8.3.4. 
+Scenarios where no Foreign Tax Credit is allowed 
+  
+A Foreign Tax Credit cannot exceed the amount of Corporate Tax due on the relevant 
+foreign income.79 Accordingly, where there is no Corporate Tax Payable on foreign 
+source income, no Foreign Tax Credit is allowed against such income. Therefore, a 
+Foreign Tax Credit is not available in respect of Exempt Income. Likewise, a Foreign 
+Tax Credit is not available where no Corporate Tax is payable due to an election for 
+Small Business Relief or a natural person’s Turnover being below AED 1 million. This 
+is also the case where foreign source income is Qualifying Income of a Qualifying Free 
+Zone Person, i.e. subject to 0% Corporate Tax. 
+ 
+Also, where a Taxable Person’s Taxable Income is negative, i.e. they make a loss, 
+there is no Corporate Tax Payable. In such a case, if Taxable Income includes foreign 
+source income on which tax has been paid in the foreign jurisdiction, no Foreign Tax 
+Credit is available in the absence of any Corporate Tax Payable.  
+ 
+Example 13: Exempt Income 
+ 
+Company A, a company incorporated and resident in UAE, owns 100% of the shares 
+in Company B, a company incorporated and managed in Country X and tax resident 
+of Country X. Company B qualifies as a Participating Interest for the purpose of the 
+                                               
+79 Article 47(2) of the Corporate Tax Law.  
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+43 
+Participation Exemption. Company A receives Dividend income from Company B. 
+Country X has levied withholding tax on the Dividend.  
+ 
+In the UAE, the Dividend is exempt under the Participation Exemption and so there 
+is no Corporate Tax Payable in respect of it. Accordingly, a Foreign Tax Credit is not 
+available in respect of the withholding tax paid in Country X. 
+ 
+Example 14: Loss scenario 
+ 
+Company A, a company incorporated and resident in the UAE, has the following 
+Taxable Income in the Tax Period ending 31 December 2024: 
+ 
+Item 
+Taxable Income (AED) 
+UAE source net income / (loss) 
+(1,000,000) 
+Net interest income from Country X 
+500,000 
+Net Taxable Income/(loss) 
+(500,000) 
+ 
+Foreign source Interest income has been subject to withholding tax in Country X of 
+AED 5,000.  
+ 
+Since Company A has an overall tax loss in the Tax Period, there is no Corporate 
+Tax Payable. Accordingly, a Foreign Tax Credit cannot be claimed in respect of the 
+tax paid in Country X and as such the unutilised Foreign Tax Credit is forfeited.80 
+  
+Example 15: Qualifying Free Zone Person’s Qualifying Income derived from 
+foreign source 
+ 
+Company A, a company incorporated and resident in the UAE, is a Qualifying Free 
+Zone Person. Company A makes a loan to its wholly owned foreign subsidiary 
+(Company F) in Country F and receives Interest income from Company F. 
+Withholding tax is deducted from its Interest income in Country F.  
+ 
+In the UAE, the Interest income is income derived from a transaction with a Non-
+Free Zone Person in respect of a Qualifying Activity. 81 Hence it is Qualifying 
+Income82 which is subject to tax at the rate of 0% in the hands of Company A. 
+Accordingly, a Foreign Tax Credit is not available in respect of the withholding tax 
+                                               
+80 Article 47(3) of the Corporate Tax Law.  
+81 Under Article 2(1)(j) of Ministerial Decision No. 265 of 2023, treasury and financing services by a 
+Qualifying Free Zone Person to its Related Parties is a Qualifying Activity. 
+82 Article 3(1)(b) of Cabinet Decision No. 100 of 2023.  
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+44 
+paid in Country F as the credit is limited to the amount of UAE Corporate Tax, which 
+is nil. 
+ 
+8.4. 
+Timing mismatches 
+ 
+Corporate Tax due can be reduced by the amount of a Foreign Tax Credit for the 
+“relevant Tax Period”.83 However, there may be a mismatch of relevant Tax Periods 
+between the UAE and the foreign jurisdiction. For instance, the foreign source income 
+may be taxed at a different time or on a different basis in the UAE and the foreign 
+jurisdiction (for example, cash basis vs accrual basis).  
+ 
+To address any timing mismatch issues, a symmetrical approach is applied, where 
+foreign tax paid follows the corresponding foreign source income on which such tax is 
+paid. Accordingly, credit for foreign tax paid will be allowed in the Tax Period in which 
+the foreign source income forms part of Taxable Income under the Corporate Tax Law. 
+ 
+Example 16: Accrual basis vs realisation basis 
+ 
+Company A, a company incorporated and resident in the UAE, has a Permanent 
+Establishment in a foreign country, Country X. In Year 1, the assets of the 
+Permanent Establishment are revalued to fair market value in accordance with the 
+applicable Accounting Standards, resulting in an unrealised gain. In Year 2, 
+Company A sells the assets of the Permanent Establishment, thereby realising the 
+gain. 
+ 
+In Year 1, the unrealised gain is taxed in Country X on an accrual basis and 
+Company A pays tax on such income in Country X.  
+  
+In the UAE, Company A has not elected for the Foreign Permanent Establishment 
+exemption under Article 24 of the Corporate Tax Law. It has elected to take into 
+account gains and losses on a realisation basis under Article 20(3) of the Corporate 
+Tax Law. Hence, the unrealised gain is taxable in the UAE only in Year 2 when the 
+gain is realised on sale of asset.  
+ 
+In Year 1, the unrealised gain is not part of the Taxable Income of Company A so 
+credit for foreign tax paid in Country X cannot be claimed in Year 1. However, when 
+the gain is taxable in the UAE in Year 2, a Foreign Tax Credit for the tax paid in 
+Country X in Year 1 can be claimed. 
+                                               
+83 Article 47(1) of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+45 
+ 
+ 
+Example 17: Variation on accrual basis vs realisation basis 
+ 
+Company A, a company incorporated and resident in the UAE, has a Permanent 
+Establishment in a foreign country, Country X. In Year 1, the assets of the 
+Permanent Establishment are revalued to fair market value in accordance with the 
+applicable Accounting Standards, resulting in an unrealised gain. In Year 3, 
+Company A sells the assets of the Permanent Establishment, thereby realising the 
+gain. Company A does not have any other income in Year 3.  
+ 
+In Year 1, the profits of the Permanent Establishment, including the unrealised gain, 
+are equivalent to AED 2 million. The profits are taxed in Country X on an accrual 
+basis. Company A pays tax at the rate of 20% on its income in Country X as follows:  
+ 
+Item 
+Taxable 
+Income (AED 
+equivalent) 
+Tax paid (AED 
+equivalent) 
+Profits of Permanent Establishment    
+(other than unrealised gain) 
+1,500,000 
+300,000 
+Unrealised gain 
+500,000 
+100,000 
+Total 
+2,000,000 
+400,000 
+ 
+In the UAE, Company A only has income from a Foreign Permanent Establishment. 
+Company A has not elected for the Foreign Permanent Establishment exemption 
+under Article 24 of the Corporate Tax Law. It has elected to take into account gains 
+and losses on a realisation basis under Article 20(3) of the Corporate Tax Law. 
+Hence, the unrealised gain is taxable in the UAE only in Year 3 when the gain is 
+realised on sale of asset. 
+ 
+In this case, Foreign Tax Credit will be available to Company A as follows: 
+ 
+In Year 1:  
+Item 
+Amount (AED) 
+Accounting Income 
+2,000,000 
+Less: Adjustment under Article 20(2)(a) read with Article 
+20(3) [gains to be taxed only when realised] 
+500,000 
+ Taxable Income 
+1,500,000 
+ Corporate Tax due on Taxable Income [(1,500,000- 
+375,000)*9%] 
+101,250 
+ Less: Foreign Tax Credit for tax paid in Country X  
+[lower of the following:  
+(101,250) 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+46 
+• AED 300,000 (being the actual amount of foreign tax 
+paid in the foreign jurisdiction less the tax on unrealised 
+gain)  
+• AED 101,250 (being the amount of the Corporate Tax 
+due on the foreign source income)] 
+Corporate Tax Payable 
+0 
+Unutilised Foreign Tax Credit: i.e. 300,000 - 101,250 (which 
+is forfeited) 
+198,750 
+ 
+In Year 3 
+Item 
+Amount (AED) 
+ Taxable Income (realised gains) 
+500,000 
+ Corporate Tax due on Taxable Income [(500,000-375,000) 
+*9%] 
+11,250 
+ Less: Foreign Tax Credit for tax paid in Country X  
+[lower of the following:  
+• AED 100,000 (foreign tax paid in Year 1 is considered in 
+Year 1’s Foreign Tax Credit calculation)  
+• AED 11,250 (being the amount of the Corporate Tax 
+due on the foreign source income)] 
+(11,250) 
+Corporate Tax Payable 
+0 
+ 
+As seen from the calculation above, in Year 1, the unrealised gains will be reduced 
+while determining Taxable Income and the corresponding tax paid in Country X in 
+Year 1 on such income should also be reduced while calculating Foreign Tax Credit 
+in Year 1. Hence, the amount of unutilised Foreign Tax Credit in relation to foreign 
+tax paid in Country X, which is forfeited in Year 1, will be AED 198,750 (i.e. 300,000- 
+101,250).  
+ 
+The foreign tax of AED 100,000 on the unrealised gain is creditable only in the year 
+in which the unrealised gain is subject to tax in the UAE i.e. in Year 3 when the gain 
+is realised. Hence, in Year 3, Company A can claim a Foreign Tax Credit in respect 
+of AED 100,000 and accordingly, does not have to pay any Corporate Tax in Year 
+3.  
+ 
+Example 18: Income accrued and paid in different Tax Periods 
+ 
+Company C, a company incorporated and resident in the UAE, holds 2% of the 
+shares of Company D, a company incorporated and managed outside the UAE, 
+which were acquired for AED 1 million.  
+ 
+Company D is tax resident of Country Z which follows a Gregorian calendar year for 
+tax purposes. Company C also follows the Gregorian calendar year as its Tax Period 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+47 
+in the UAE and follows the Accrual Basis of Accounting for the purposes of the 
+Corporate Tax Law. 
+ 
+On 1 June 2024 Company D declares a Dividend and at that time, Company C 
+records a Dividend receivable of AED 50,000 in its Financial Statements. However, 
+this Dividend is paid by Company D on 1 March 2025 and at the time when the 
+payment is made, tax is withheld and paid to the tax authorities of Country D. 
+ 
+The ownership interest held by Company C in Company D does not qualify as a 
+Participating Interest and hence, income received from Company D is not exempt 
+under the Participation Exemption. Company C includes the foreign Dividend 
+income in its Taxable Income for the Tax Period ending 31 December 2024.  
+ 
+For the purposes of a Foreign Tax Credit under the Corporate Tax Law, the 
+withholding tax on the Dividend income will be considered to be “paid” in the Tax 
+Period when the Dividend income is accrued in the Financial Statements and 
+accordingly, included in the Taxable Income. It is not relevant that the Tax Period 
+when the income is actually paid out and tax is remitted to the foreign tax authority 
+is different. Accordingly, even though the withholding tax is actually levied and 
+remitted to the tax authority of Country Z in the Gregorian calendar year 2025, 
+Company C can claim a Foreign Tax Credit in respect of that withholding tax in the 
+Tax Period ending 31 December 2024 when the Dividend income is included in 
+Taxable Income.  
+ 
+Company C is required to maintain appropriate documentation in respect of the 
+Foreign Tax Credit claimed. If the FTA conducts a tax audit of Company C for the 
+Tax Period ending 31 December 2024, Company C should be able to provide proof 
+of the withholding tax which has been paid to the tax authority of Country Z. 
+ 
+Example 19: Different Financial Years in UAE and foreign jurisdiction  
+ 
+ 
+1 January 2025  
+1 April 2024 
+31 December 2025 
+31 March 2025 
+Tax Period of Company A in the UAE 
+Tax Period of payer in Country X 
+Loan issued 
+Payment of interest due 
+for calendar year 2025 
+Interest derived by Company A for the period 1 January 
+2025 to 31 March 2025 
+ 
+-Taxable in Tax Period 1 April 2024 to 31 March 2025 in 
+the UAE 
+-Tax Paid in next Tax Period in Country X 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+48 
+ 
+Company A, a company incorporated and resident in the UAE, issued a loan on 1 
+January 2025 to Company B, a company incorporated and managed in Country X 
+and tax resident of Country X. Under the terms of the loan, Interest is payable at the 
+end of each Gregorian calendar year in respect of that year. Thus, for the Gregorian 
+calendar year 2025, the Company B will pay Interest on 31 December 2025.  
+ 
+Company A follows 1 April to 31 March as its Tax Period in the UAE and uses the 
+Accrual Basis of Accounting. Accordingly, Interest income on the loan is first taxable 
+in the Tax Period beginning 1 April 2024 and ending on 31 March 2025. Company 
+A’s Corporate Tax for that period is to be paid by 31 December 2025 under Article 
+48 of the Corporate Tax Law. 
+ 
+Country X follows a Gregorian calendar year for tax purposes. Under the tax laws 
+of Country X, tax is to be withheld on Interest at the time of payment of Interest and 
+upon deduction, the tax is to be immediately remitted to the foreign tax authority. 
+Thus, when Company B pays Interest due for the Gregorian calendar year 2025 on 
+31 December 2025, it withholds taxes on such Interest payment and remits the same 
+with tax authority of Country X on 31 December 2025. 
+ 
+For Company A, the foreign Interest accrued during the period 1 January 2025 to 
+31 March 2025 is one quarter (i.e. 3 out of 12 months) of the 2025 period and will 
+be included in Company A’s Taxable Income for the Tax Period 1 April 2024 to 31 
+March 2025. However, this Interest will be paid by Company B only on 31 December 
+2025 and the withholding tax will be remitted only at the time of payment. Thus, 
+while the Interest income will form part of Company A’s Taxable Income for the Tax 
+Period 1 April 2024 to 31 March 2025, withholding tax on such income will be 
+actually remitted to tax authority of Country X only in the next Tax Period.  
+ 
+However, for the purposes of a Foreign Tax Credit under Article 47 of the Corporate 
+Tax Law, the foreign tax (i.e. withholding tax in Country X) will be considered to be 
+"paid" when the Interest income is accrued in the Financial Statements of Company 
+A and not when the income is actually paid out and withholding tax is remitted in 
+Country X. Accordingly, Company A can claim a Foreign Tax Credit in respect of the 
+proportionate withholding tax in the Tax Period ending 31 March 2025 when the 
+Interest income is included in Taxable Income.  
+ 
+Company A is required to maintain appropriate documentation in respect of Foreign 
+Tax Credit claimed. If the FTA conducts a tax audit of Company A for the Tax Period 
+ending 31 March 2025, Company C should be able to provide proof of the 
+withholding tax paid to the tax authority of Country Z. 
+ 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+49 
+8.5. 
+Impact of Double Taxation Agreements 
+ 
+A Foreign Tax Credit under Article 47 of the Corporate Tax Law is allowed even if 
+foreign tax is paid in a jurisdiction with which the UAE does not have a Double Taxation 
+Agreement. 
+ 
+Sometimes a Double Taxation Agreement to which the UAE is a party may specify a 
+method of providing relief from double taxation which is different to the Foreign Tax 
+Credit rules set out in Article 47 of the Corporate Tax Law. Article 66 of the Corporate 
+Tax Law provides that to the extent the terms of a Double Taxation Agreement are 
+inconsistent with provisions of the Corporate Tax Law, the terms of the Double 
+Taxation Agreement shall prevail.  
+ 
+Example 20: Examples of other relief under Double Taxation Agreements 
+ 
+• 
+Exemption (instead of a tax credit) for relieving double taxation: In this case the 
+foreign source income would be treated as exempt from Corporate Tax and 
+would not form part of a Taxable Person’s Taxable Income. 
+• 
+Tax sparing relief: This allows a notional foreign tax credit for the taxes that have 
+been “spared” in the source country under a tax incentive scheme or 
+programme. 
+• 
+Relief in respect of taxes which are not imposed on net income or profits, but on 
+some other criteria such as net worth (for example, Zakat). 
+ 
+Where a Double Taxation Agreement provides for the source country to tax the foreign 
+source income at a specified rate, for instance to tax Dividends at the rate of 5%, the 
+UAE Foreign Tax Credit would be limited to 5% (assuming that the foreign Dividend is 
+not exempt under the Participation Exemption). 
+ 
+8.6. 
+Documentation 
+ 
+A Taxable Person is required to maintain all necessary records for the purposes of 
+claiming a Foreign Tax Credit.84 The records maintained by the Taxable Person should 
+include all of the following details:  
+• 
+the amount of foreign source income subject to tax in the foreign jurisdiction in the 
+currency adopted in the foreign jurisdiction 
+• 
+the exchange rate used to convert the foreign income to AED 
+• 
+the financial year in which the foreign source income was derived 
+• 
+the nature and amount of foreign tax levied on the foreign source income  
+• 
+the date on which the foreign tax was paid 
+                                               
+84 Article 47(4) of the Corporate Tax Law. 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+50 
+• 
+whether the tax paid in the foreign jurisdiction represents an advance instalment 
+of tax or withholding tax or final tax payment  
+ 
+The following documents are acceptable evidence of the payment of tax in a foreign 
+jurisdiction: 
+• 
+Official receipt issued by the relevant foreign tax authority evidencing payment of 
+tax  
+• 
+In case of withholding tax, a certificate of deduction of withholding tax issued by 
+the relevant foreign tax authority 
+• 
+A copy of a tax return filed in the foreign jurisdiction, accompanied by calculations 
+of taxable income and corporate tax on such income when relevant 
+• 
+A letter from the relevant foreign tax authority stating all taxes for that income year 
+have been paid  
+ 
+If the above documents are not available in Arabic or English, a certified translation 
+must be provided. 
+ 
+ 
+ 
+
+ 
+Corporate Tax Guide | Taxation of foreign source income | CTGFSI1 
+51 
+9. Updates and Amendments 
+ 
+Date of amendment 
+Amendments made 
+November 2023 
+• First version

@@ -1,0 +1,66 @@
+## sheet: 企业税收居民身份信息表
+附件 Attach Form(s)
+非居民纳税人享受协定待遇信息报告表
+Information Reporting Form for Non-resident Taxpayers Claiming Treaty Benefits
+金额单位：人民币元（列至角分）
+Monetary unit: RMB Yuan (Keep two decimal places)
+非居民纳税人填写第1项至第17项信息，并对填报信息的真实性、准确性、合法性承担法律责任。
+Non-resident Taxpayers fill in the blanks of item 1 to 17 and take legal responsibility for the authenticity, accuracy and legitimacy of the information.
+1.中文名称
+Name in Chinese | 2.在中国的纳税人识别号（统一社会信用代码）
+Tax identification number in China (Uniform social credit code)
+3.在居民国（地区）名称
+Name in resident jurisdiction | 4.在居民国（地区）的纳税人识别号
+Tax identification number in resident jurisdiction
+5.在中国的联系地址、邮政编码
+Contact address and zip code in China | 6.在中国的联系电话
+Telephone number in China
+7.在居民国（地区）的联系地址、邮政编码
+Contact address and zip code in resident jurisdiction | 8.在居民国（地区）的联系电话
+Telephone number in resident jurisdiction
+9.居民国（地区）
+Resident jurisdiction | 10.电子邮箱
+E-mail address
+11.享受协定名称
+The applicable treaty | 12.适用协定条款名称
+Applicable articles of the treaty
+13.非居民纳税人是否取得缔约对方税务主管当局开具的证明非居民纳税人取得所得的当年度或上一年度税收居民身份的税收居民身份证明
+Whether the non-resident taxpayer obtained the tax resident certificate issued by the competent tax authority of the other contracting jurisdiction to prove the residence status of non-resident taxpayer for the year or its previous year during which the payment is received | □ 是   Yes
+□ 否   No
+14.享受协定待遇所得金额
+Amount of the income with respect to which tax treaty benefits are claimed | 15.享受协定待遇减免税额
+Amount of tax reduced or exempted
+16.适用股息、利息、特许权使用费条款时，非居民纳税人为“受益所有人”的政策依据是《国家税务总局关于税收协定中“受益所有人”有关问题的公告》（国家税务总局公告2018年第9号）的：
+□ 第二条；□ 第三条第（一）项；□ 第三条第（二）项；□第四条；□ 其他：请说明________________
+If the article of dividends, interest or royalties is applied, the policy basis for non-resident taxpayer to be the "beneficial owner" is the □ Article 2; □ Item 1 of Article 3; □ Item 2 of Article 3; □ Article 4; □ Others: Please specify________________ of the Public Notice of the State Taxation Administration on "Beneficial Owner" set forth in Double Taxation Agreements (Public Notice [2018] No.9 of the State Taxation Administration).
+17.我谨声明：根据缔约对方法律法规和税收协定居民条款，我为缔约对方税收居民，相关安排和交易的主要目的不是为了获取税收协定待遇。我自行判断符合协定待遇条件，自行享受协定待遇，承担相应法律责任。我将按规定归集和留存相关资料备查，接受税务机关后续管理。
+I hereby declare: According to the laws, regulations of the other contracting jurisdiction and the article of resident of the tax treaty, I am a resident of the other contracting jurisdiction, the principal purpose of the relevant arrangement and transaction is not to obtain tax treaty benefits. Through self-assessment, I believe that I am in conformity with the conditions for claiming tax treaty benefits, so I will enjoy tax treaty benefits. Therefore, I take due legal responsibilities. I will collect and retain relevant materials for review in accordance with the regulations, and accept the follow-up administration of the tax authority.                          
+
+非居民纳税人签章或签字                                                                     年         月        日
+Seal or signature of non-resident taxpayer                                                Y          M         D
+以下信息不需要非居民纳税人填写
+Non-resident taxpayers do not need to fill in the following blanks
+18.扣缴义务人名称
+Name of withholding agent
+19.扣缴义务人纳税人识别号（统一社会信用代码）： □□□□□□□□□□□□□□□□□□     
+Tax identification number of withholding agent (Uniform social credit code)
+经办人签字：
+Signature of the case handler：
+经办人身份证件号码：
+ID number of the case handler：
+扣缴义务人签章：
+Seal of the withholding agent： | 经办人签字：
+Signature of the case handler：
+经办人身份证件号码：
+ID number of the case handler：
+代理机构签章：
+Seal of the tax agent：
+代理机构统一社会信用代码：
+Uniform social credit code of the tax agent： | 受理人：
+Received by：
+受理税务机关（章）：
+Tax authority in charge (Seal)：
+受理日期：     年   月   日
+Date of case acceptance: 
+               Y    M    D
+国家税务总局监制
