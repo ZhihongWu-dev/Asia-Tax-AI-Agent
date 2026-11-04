@@ -52,7 +52,7 @@
 
 ## 6. 工具与权限
 
-读草稿、出处表、handoff 和流程图范例用宿主 Read；核对法规全称用 `tax-db`。写经 `tax-case-polish`：`write_polished`、`edit_polished`、`render_pdf`、`notes_append`、`bug_append`、`report_check`。当前模型 qwen3.7-max 不收图片，润色不读 PDF 和图片，守卫会拒绝；版面靠 `render_pdf` 返回的页数、各节和流程图所在页、每页填充比例判断。
+读草稿、出处表、handoff 和流程图范例用宿主 Read；核对法规全称用 `tax-db`。写经 `tax-case-polish`：`write_polished`、`edit_polished`、`render_pdf`、`notes_append`、`bug_append`、`report_check`。润色不读 PDF 和图片（2026-11-03 前所用的 qwen3.7-max 不收图片），守卫会拒绝；版面靠 `render_pdf` 返回的页数、各节和流程图所在页、每页填充比例判断。
 
 ## 7. 自检
 
@@ -88,4 +88,8 @@
 动笔前在 plan 底稿写取舍，改完在 changes 底稿写删了什么、并了什么。全文只写一次，之后改句子用 `edit_polished`，不要重发全文；出处改动用 mode=append 只发改过的条目。渲染前先调 `report_check`（target=polished，text_only=true）到 problems 为空，`render_pdf` 在文字有问题时不渲染。然后反复调 render_pdf 和 report_check（target=polished），直到 latex_errors 和 overfull 为零、problems 为空。body_pages 是附录之前的页数，在五到十之间即可，不必为页数继续删改。你看不到页面，不要读 PDF 或图片，用 render_pdf 返回的页数、各节和流程图所在页、每页填充比例判断版面：flow_page 应是一；某个中间页的 page_fill 明显偏低，说明图或表被挤到了下一页，调整它前面的文字。逐项看 numbers_omitted 和 sources_cut，确认没有删掉必须留下的内容。
 
 成稿用 handoff.md 要求的语言；你写的底稿和 bug 用英文；引文原样。系统自己的毛病用 bug_append 记录，只报不修。最后用几句话说明页数、删减的主要内容和 report_check 结果。
+
+改版：任务里写 Mode: revised edition 时，草稿里与上一版草稿相同的章节，逐字沿用上一版成稿的文字；只润色改过的章节和变化说明，再出 PDF。
+
+阅读：开始前编排器会写一份预取包，任务里给出路径：你要用的文件、草稿里 {{block:<名>}} 标记所代表的程序表格（在润色稿里写出表格本身，或者删去；不改任何一格）、report_check 检什么、流程图的格式。系统的其他东西你都不需要：不要读它的代码和规范。
 ```

@@ -78,7 +78,8 @@ class Checker:
             stored = op.jload(self.P / e["items_ref"])["items"]
             if json.dumps(items, sort_keys=True) != json.dumps(stored, sort_keys=True):
                 self.fail("2: edge %s items differ from a fresh eval_flow" % e["edge_id"])
-            tx = self.opt.hop_tax(items)
+            sp_ = self.opt.source_prior(e["hop_facts"]) if e["tail"] == self.graph["source"] else None
+            tx = self.opt.hop_tax(items, sp_, prior_own=sp_)
             for side in ("floor", "ceiling"):
                 if not close(tx[side]["w"], e["w"][side]):
                     self.fail("3: edge %s %s weight %s != recomputed %s" % (e["edge_id"], side, e["w"][side], tx[side]["w"]))
@@ -121,21 +122,23 @@ class Checker:
         dest = set(self.graph["destinations"])
         found = []
 
-        def dfs(node, w_f, w_c, needs, hops, restr, moves, path, transfers=frozenset()):
+        def dfs(node, w_f, w_c, needs, hops, restr, moves, path, transfers=frozenset(), last=None):
             if node in dest and hops > 0:
                 found.append({"node": node, "w": {"floor": round(w_f, 6), "ceiling": round(w_c, 6)}, "needs": needs, "hops": hops, "restructure": restr, "path": path, "transfers": transfers})
             if hops >= lim["max_hops"]:
                 return
             for e in edges_out.get(node, []):
+                if e["head"].endswith(":individual") and e["head"] not in dest:
+                    continue                                  # dead end, as in the labels
                 if moves + len(e["moves"]) > lim["max_moves"]:
                     continue
                 ew = e["w"]
-                if e["amount_dependent"]:
-                    ew = self.opt.amount_dependent_weight(e, {"w": {"floor": w_f, "ceiling": w_c}, "label_id": "dfs"})
+                if e["amount_dependent"] or e.get("prior_dependent"):
+                    ew = self.opt.path_weight(e, {"w": {"floor": w_f, "ceiling": w_c}, "label_id": "dfs", "edge": last and last[0], "edge_w": last and last[1]})
                     if ew is None:
                         continue
                 dfs(e["head"], round(w_f + ew["floor"], 6), round(w_c + ew["ceiling"], 6), needs | {tuple(n) for n in e["needs"]}, hops + 1,   # same rounding as the labels
-                    restr + len(e["restructure"]), moves + len(e["moves"]), path + [e["edge_id"]], transfers | frozenset(self.opt.transfer_tags(e)))
+                    restr + len(e["restructure"]), moves + len(e["moves"]), path + [e["edge_id"]], transfers | frozenset(self.opt.transfer_tags(e)), (e["edge_id"], ew))
 
         dfs(self.graph["source"], 0.0, 0.0, frozenset(), 0, 0, 0, [])
 
@@ -181,12 +184,12 @@ class Checker:
             hops = op.jload(self.P / "hops" / ("%s.json" % t["branch_id"]))["items"]
             for side in ("floor", "ceiling"):
                 keep = 1.0
-                for items in hops:
-                    keep *= 1 - self.opt.hop_tax(items)[side]["t"]
+                for items, h in zip(hops, t["hops"]):                # each hop with the tax borne before it, as stored
+                    keep *= 1 - self.opt.hop_tax(items, h.get("prior"), bool(h.get("retention")), h.get("prior_own"))[side]["t"]
                 if not close(100 * (1 - keep), t["per_100"][side]):
                     self.fail("5: %s %s per_100 %s != recomputed %s" % (t["branch_id"], side, t["per_100"][side], 100 * (1 - keep)))
         ranked = [r for r in self.ranking["ranking"] if r["rank"] is not None]
-        keys = [tuple(r["keys"]) for r in ranked]
+        keys = [(r.get("answers_against", 0),) + tuple(r["keys"]) for r in ranked]      # answers against the client first, then the keys
         if keys != sorted(keys):
             self.fail("5: ranking not sorted by its keys")
         by_b = {t["branch_id"]: t for t in self.tax}
@@ -205,20 +208,21 @@ class Checker:
             ex = d.get("exposure_if_denied")
             if ex and "cells" in ex:
                 for s in ("floor", "ceiling"):
-                    tot = sum(c["tax"][s] + c["interest"][s] + c["fine"][s] for c in ex["cells"])
+                    tot = sum(c["tax"][s] + c["interest"][s] + c["fine"][s] for c in ex["cells"]) + (ex.get("offset") or {}).get(s, 0)
                     if not close(tot, ex["total"][s]):
-                        self.fail("8: exposure %s total %s != sum over cells" % (d["branch_id"], s))
+                        self.fail("8: exposure %s total %s != sum over cells + offset" % (d["branch_id"], s))
+                    if not close(sum(c["tax"][s] for c in ex["cells"]) + (ex.get("offset") or {}).get(s, 0), ex["tax"][s]):
+                        self.fail("8: exposure %s tax %s != sum of cell taxes + offset" % (d["branch_id"], s))
             oo = d.get("one_off_cost") or {}
             if oo.get("transfers") and oo["total"]["floor"] is not None:
                 for s in ("floor", "ceiling"):
                     tot = sum((tr.get("in_payment_currency") or {}).get(s, 0.0) for tr in oo["transfers"] if tr.get("in_payment_currency"))
                     if not close(tot, oo["total"][s]):
                         self.fail("8: one_off %s total %s != sum of transfers" % (d["branch_id"], s))
-        if self.ranking["key"] == "total_N":
-            for r in ranked:
-                d = next(d for d in self.deltas if d["branch_id"] == r["branch_id"])
-                if not close(r["keys"][0], d["total_N"]["ceiling"]):
-                    self.fail("8: ranking key is not total_N for %s" % r["branch_id"])
+        for d in self.deltas:                                 # payback in payments = one-off (floor) / saving per payment (floor side)
+            pb, sv, oo = d.get("payback_payments"), (d.get("saving_per_payment") or {}).get("floor"), ((d.get("one_off_cost") or {}).get("total") or {}).get("floor")
+            if pb is not None and oo and sv and abs(pb - oo / sv) > 1e-5:
+                self.fail("8: payback_payments %s != one_off / saving" % d["branch_id"])
 
     # 6 ----------------------------------------------------------
     def assumptions(self):
@@ -288,6 +292,7 @@ def run_tests(path, products_root):
                 fails.append("%s: expected best %s got %s %s" % (t["test_id"], " ".join(words[1:]), path, tx))
         elif words[0] == "open":
             keys = {o["key"] for o in op.jload(out / "open_items.json")["open_items"]}
+            keys |= {op.base_key(k) for k in keys}                    # bo@cn answers to bo
             missing = [k for k in words[1].split(",") if k not in keys]
             if missing:
                 fails.append("%s: open items missing %s" % (t["test_id"], missing))

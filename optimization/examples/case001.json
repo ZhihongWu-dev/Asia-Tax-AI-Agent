@@ -1,6 +1,6 @@
 {
  "case": "CASE-001",
- "note": "Input of the optimization layer built from case_end2end/facts.json (cn -> hk dividend, Singapore parent). Valuation and horizon are left out here; see case001_valued.json for the one-off-cost variant.",
+ "note": "Input of the optimization layer built from case_end2end/facts.json (cn -> hk dividend, Singapore parent). Valuation are left out here; see case001_valued.json for the one-off-cost variant.",
  "date": "2026-04-30",
  "mode": "record",
  "amount": 14000000,
@@ -111,6 +111,5 @@
  },
  "as_of": "2026-10-31",
  "fx": "optimization/examples/fx_case001.json",
- "valuation": {},
- "horizon_years": null
+ "valuation": {}
 }

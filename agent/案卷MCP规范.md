@@ -116,7 +116,7 @@ cases/<case_id>/
 |---|---|
 | `round_current` | case_id → 账本当前条目加推出的状态（§2 表）和 `return_to` |
 | `review_status` | case_id, which ∈ {intake, draft, final} → 对应核对单的总判断、退回去向与写入时间；不存在返回 `none` |
-| `intake_check` | case_id → 列表：facts.json 能被优化层读入（调 `tax-opt` 的 `validate_input`）；不带 answers，有 instructed_on，past_payments 每行有 date、payee_share；answers.json 的键都是谓词；sources 覆盖 facts 每个键且每条有 doc + page + quote；answers 的 yes / no / unknown_asked 都有原话且原话在 dialogue.md 里；confirmed_by_client 为真的有 confirmed_note；推出的状态是否 intake_ok |
+| `intake_check` | case_id → 列表：facts.json 能被优化层读入（调 `tax-opt` 的 `validate_input`）；不带 answers，有 instructed_on，past_payments 是顶层列表且每行有 date、payee_share；写了 destinations；payer、payee、entities、destinations 的地区都在规则层范围内；payer、payee、payment、entities 的事实键都是规则层变量；收款方的上层（parent_jur）在 entities 里；constraints.json 只有 consider、exclude、allow_restructure、payback_max、allowed_subjects；answers.json 的键都是谓词；sources 覆盖 facts 每个键且每条有 doc + page + quote；answers 的 yes / no / unknown_asked 都有原话且原话在 dialogue.md 里；confirmed_by_client 为真的有 confirmed_note；推出的状态是否 intake_ok |
 | `report_check` | case_id, run_id, target ∈ {auto, draft, polished}（auto = 有润色稿就核润色稿）→ 列表：抬头日期等于 instructed_on；past_payments 的可退金额和对不上的数字在报告里；润色稿正文没有优化层用语、没有超过 55 词的句子；报告头、一到七节、附录 A / B 都在；无系统标识；出处表每条有 where、ref 存在（产物路径可打开；cite_id 用 `tax-db` 的 `clause` 查）；核润色稿时额外报：`number_drift`（润色稿里草稿没有的数字）、`claims_changed`、`where_unlocated`、口语标签、案号或 run_id 留在成稿里、PDF 过期或正文不在 5 到 10 页之间；`numbers_omitted` 和 `sources_cut` 只列出被删内容，不算问题 |
 
 自检只报不改，结果是列表，Agent 自己决定怎么办；复核仍按自己的规范逐条核，不以自检通过为准。两个自检是服务里唯一调用另两个服务的地方（import 它们的读函数，不经 MCP）。

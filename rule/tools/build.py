@@ -363,6 +363,8 @@ def coverage(by_id, lib):
             if (j.get(col) or "yes").lower() not in ("yes", "y", "1", "true"):
                 continue
             for slot in SLOTS:
+                if slot == "exit" and s == "company":           # an individual leaving; relocating companies is out of scope
+                    continue
                 if (j["code"], s, slot) not in covered:
                     gaps.append("%s|%s|%s" % (j["code"], s, slot))
     return gaps

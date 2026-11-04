@@ -48,6 +48,8 @@ class Tail:
         self.items, self.result, self.session_id = [], {}, ""
 
     def read(self):
+        if not self.path.exists():                      # moved away (an archived attempt): keep what was read
+            return []
         with open(self.path, "rb") as f:
             f.seek(self.offset)
             data = f.read()

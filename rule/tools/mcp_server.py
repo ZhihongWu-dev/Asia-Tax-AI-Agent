@@ -191,13 +191,22 @@ def build_server(root, db, cases):
         return st.guard(lambda: {"judgment_points": st.q.judgment_points(st.flow_list(flow), slot or None, date, kv(facts), kv(answers), mode)})
 
     @s.tool()
-    def requirements(slot: str = "", rule: str = "", effect: str = "", date: str = "") -> dict:
-        """Conditions, procedure, cite_ids and reference parameters of a cell's rules (or of one rule)."""
+    def requirements(slot: str = "", rule: str = "", effect: str = "", date: str = "", brief: bool = True) -> dict:
+        """Conditions, procedure, cite_ids and reference parameters of a cell's rules (or of one rule). brief (the default) keeps per
+        rule its id, effect, direction, condition (first 200 characters), variables, predicates and cite_ids, and per reference
+        parameter its id, value, unit and cite_id; brief=false gives everything, quotes and condition trees included."""
         if not (slot or rule):
             return err("invalid", "give slot or rule")
         if slot and not date:
             return st.need_date(date)
-        return st.guard(st.q.requirements, slot or None, effect or None, rule or None, date or None)
+        out = st.guard(st.q.requirements, slot or None, effect or None, rule or None, date or None)
+        if brief and isinstance(out, dict) and "rules" in out:
+            out["rules"] = [{"rule_id": r.get("rule_id"), "effect": r.get("effect"), "direction": r.get("direction"),
+                             "condition": (r.get("condition") or "")[:200], "variables": r.get("variables"), "predicates": r.get("predicates"),
+                             "cite_ids": r.get("cite_ids"), "decision_ids": r.get("decision_ids")} for r in out["rules"]]
+            out["reference_params"] = [{k: p.get(k) for k in ("param_id", "value", "unit", "cite_id")} for p in out.get("reference_params") or []]
+            out["brief"] = "brief=false for quotes, procedures and condition trees"
+        return out
 
     @s.tool()
     def options(payer_jur: str, payee_jur: str, subject: str, date: str) -> dict:

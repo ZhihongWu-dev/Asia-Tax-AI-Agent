@@ -62,12 +62,26 @@ class State:
             return None
         return p
 
+    def normalise(self, rel):
+        """The same products folder written from the project root (cases/<case>/...) or from the case folder
+        (intake/products/<run_id>, unique across cases) resolves as <case>/intake/products/<run_id>."""
+        rel = str(rel or "").replace("\\", "/").strip("/")
+        head = self.products_root.name + "/"
+        if rel.startswith(head):
+            rel = rel[len(head):]
+        if rel.startswith("intake/products/"):
+            hits = [p for p in self.products_root.glob("*/" + rel) if (p / "version.json").exists()]
+            if len(hits) == 1:
+                rel = str(hits[0].relative_to(self.products_root)).replace("\\", "/")
+        return rel
+
     def products_dir(self, rel):
+        rel = self.normalise(rel)
         p = self.inside(rel)
         if p is None:
             return None, err("forbidden", "products path must be relative to the products root and stay inside it", products=rel)
         if not (p / "version.json").exists():
-            return None, err("not_found", "no products directory (version.json missing) at %s" % rel, products=rel)
+            return None, err("not_found", "no products directory (version.json missing) at %s; the path is relative to the cases folder: <case_id>/intake/products/<run_id>" % rel, products=rel)
         return p, None
 
     def load(self, products, name):
@@ -96,7 +110,7 @@ class State:
             return err("invalid", "%s: %s" % (type(e).__name__, e), input=rel)
         return self.stamp({"input": rel, "date": o.date, "mode": o.mode, "amount": o.amount if hasattr(o, "amount") else inp.get("amount"),
                            "currency": o.currency, "payer": o.payer.get("jur"), "payee": [o.payee.get("jur"), o.payee.get("subject")],
-                           "entities": sorted(o.entities), "destinations": o.destinations, "horizon_years": o.horizon,
+                           "entities": sorted(o.entities), "destinations": o.destinations,
                            "fx_loaded": bool(o.fx), "valuation": bool(o.valuation)})
 
     def run(self, case_id, rel):
@@ -108,7 +122,9 @@ class State:
         if not p.exists():
             return err("not_found", "no input file %s" % rel, input=rel)
         raw = p.read_bytes()
-        run_id = "%s-%s" % (datetime.now(timezone.utc).strftime("%Y%m%d"), hashlib.sha256(raw).hexdigest()[:8])
+        # the run id names the input and the code that computes it: the optimizer, the rules and the parameters
+        code = b"".join(q.read_bytes() for q in (Path(op.__file__), Path(self.rule) / "rule.csv", Path(self.db) / "param.csv") if q.exists())
+        run_id = "%s-%s" % (datetime.now(timezone.utc).strftime("%Y%m%d"), hashlib.sha256(raw + code).hexdigest()[:8])
         out = self.products_root / case_id / "intake" / "products" / run_id
         if out.exists():
             return err("conflict", "products directory already exists; the same input was run today", run_id=run_id,
@@ -197,9 +213,20 @@ class State:
         rows = [x for x in d["deltas"] if (not cand_id or x.get("cand_id") == cand_id) and (not branch_id or x.get("branch_id") == branch_id)]
         if not cand_id and not branch_id:                       # one short row a branch: the full rows of a large run exceed a tool result
             rows = [{"branch_id": x["branch_id"], "cand_id": x["cand_id"], "vs_as_is": (x.get("vs_as_is") or {}).get("amount"), "vs_best": (x.get("vs_best") or {}).get("amount"),
-                     "payback_years": x.get("payback_years")} for x in rows]
+                     "saving_per_payment": x.get("saving_per_payment"), "payback_payments": x.get("payback_payments")} for x in rows]
             return self.stamp({"products": products, "summary": True, "note": "give cand_id or branch_id for the full rows", "deltas": rows}, p)
         return self.stamp({"products": products, "cand_id": cand_id, "branch_id": branch_id, "deltas": rows}, p)
+
+    def scenarios(self, products, changes_first):
+        """scenarios.json; with changes_first only the scenarios whose first structure differs from all favourable."""
+        p, d, e = self.load(products, "scenarios.json")
+        if e:
+            return e
+        rows = d.get("scenarios", [])
+        if changes_first:
+            fav = rows[0]["first"] if rows else None
+            rows = [r for r in rows if r["scenario_id"] in ("all_favourable", "all_unfavourable") or r["first"] != fav]
+        return self.stamp({"products": products, "points": d.get("points", []), "structure_rank": d.get("structure_rank", {}), "scenarios": rows}, p)
 
     def open_items(self, products, changes_rank):
         p, d, e = self.load(products, "open_items.json")
@@ -275,13 +302,20 @@ class State:
         return self.stamp(res)
 
 
-def build_server(root, rule, db, products_root, role):
+def build_server(root, rule, db, products_root, role, only=None):
     from mcp.server.mcpserver import MCPServer
     if role not in ("front", "reader"):
         raise SystemExit("--role must be front or reader")
     st = State(root, rule, db, products_root, role)
     s = MCPServer("tax-opt-front" if role == "front" else "tax-opt", version=SERVER_VERSION,
                   instructions="Optimization layer: run / evaluate and sliced reads of a products directory. Paths are relative to the cases root.")
+    if only:                                                    # register only these tools (agent/retrieval_spec.en.md §5.3: the readers moved to tax-read)
+        register = s.tool
+
+        def tool(*a, **kw):
+            dec = register(*a, **kw)
+            return lambda fn: dec(fn) if fn.__name__ in only else fn
+        s.tool = tool
 
     if role == "front":
         @s.tool()
@@ -330,6 +364,11 @@ def build_server(root, rule, db, products_root, role):
         return st.deltas(products, cand_id, branch_id)
 
     @s.tool()
+    def scenarios(products: str, changes_first: bool = False) -> dict:
+        """scenarios.json: every structure under the same judgment answers (all favourable, one point against, all against), the first and second of each; changes_first keeps only the scenarios whose first structure differs."""
+        return st.scenarios(products, changes_first)
+
+    @s.tool()
     def open_items(products: str, changes_rank: bool | None = None) -> dict:
         """open_items.json, optionally only the items that do / do not change the ranking."""
         return st.open_items(products, changes_rank)
@@ -374,8 +413,9 @@ def main():
     ap.add_argument("--db", default=str(op.DB))
     ap.add_argument("--products-root", default=str(HERE.parents[1] / "cases"))
     ap.add_argument("--role", default="reader", choices=("front", "reader"))
+    ap.add_argument("--only", default="", help="comma-separated tool names to register (default: all)")
     a = ap.parse_args()
-    server, _ = build_server(a.root, a.rule, a.db, a.products_root, a.role)
+    server, _ = build_server(a.root, a.rule, a.db, a.products_root, a.role, [x for x in a.only.split(",") if x] or None)
     server.run(transport="stdio")
     return 0
 

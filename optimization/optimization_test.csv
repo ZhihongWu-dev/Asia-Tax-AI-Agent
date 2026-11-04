@@ -1,4 +1,7 @@
 test_id,input,expect
-case001.best,optimization/examples/case001.json,best cn:company->sg:company 5 5
+case001.best,optimization/examples/case001.json,best cn:company->hk:company->sg:individual 5 5
 case001.open,optimization/examples/case001.json,"open bo,parent_bo,ppt"
-case001.valued.best,optimization/examples/case001_valued.json,best cn:company->sg:company 5 5
+case001.valued.best,optimization/examples/case001_valued.json,best cn:company->hk:company->sg:individual 5 5
+cfc_jp.best,optimization/examples/case_cfc_jp.json,best cn:company->sg:company->jp:company 6.102 23.200005
+cfc_jp.open,optimization/examples/case_cfc_jp.json,"open payer_etr,valuation_missing"
+exit_jp.best,optimization/examples/case_exit_jp.json,best jp:company->sg:company->sg:individual 5 5

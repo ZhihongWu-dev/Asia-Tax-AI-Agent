@@ -137,8 +137,8 @@ def tv_not(part):
 
 
 class Context:
-    def __init__(self, rs, date, facts, answers, mode):
-        self.rs, self.date, self.mode = rs, date, mode
+    def __init__(self, rs, date, facts, answers, mode, jur=None):
+        self.rs, self.date, self.mode, self.jur = rs, date, mode, jur
         self.facts = rs.typed_facts(facts)
         self.answers = {k: (v or "").strip().lower() for k, v in (answers or {}).items()}
 
@@ -196,7 +196,8 @@ class Context:
         if k == "not":
             return tv_not(self.eval(v))
         if k == "pred":
-            a = self.answers.get(v)
+            a = self.answers.get("%s@%s" % (v, self.jur)) if self.jur else None      # an answer for this authority first
+            a = a or self.answers.get(v)
             if a == "yes":
                 return "T", frozenset()
             if a == "no":
@@ -282,7 +283,23 @@ def compose(rs, slot, rules, side="ceiling", certain=None, val=None):
         res["value"] = {"interest": sorted(interest, key=lambda x: x["param"]), "interest_cap": min(caps) if caps else None,
                         "fine_min": _r(min(fmin)) if fmin else (0.0 if fmax else None), "fine_max": _r(max(fmax)) if fmax else None}
         return res
-    if slot in ("outbound_wht", "final", "restructure"):
+    if slot == "cfc":
+        res["value"] = bool(eff.get("include"))
+        res["rate"], res["credit"], res["credit_underlying"] = None, False, False
+        if res["value"]:                                      # inclusion: the rate and credit of the shareholder's tax on it
+            chosen = pick_single(rs, eff.get("rate", []), "rate", side, certain, pv)
+            rate = pv(chosen) if chosen else None
+            picked = list(eff["include"]) + ([chosen] if chosen else [])
+            for s in eff.get("surtax", []):
+                if rate is not None:
+                    rate = rate * (1 + pv(s) / 100)
+                    picked.append(s)
+            res["rate"], res["credit"] = _r(rate), bool(eff.get("credit") or eff.get("credit_underlying"))
+            res["credit_underlying"] = bool(eff.get("credit_underlying"))   # the credit reaches the taxes of lower tiers too
+            picked += eff.get("credit", []) + eff.get("credit_underlying", [])
+        res["rules"] = sorted({r["id"] for r in picked})
+        return res
+    if slot in ("outbound_wht", "final", "restructure", "exit"):
         chosen = pick_single(rs, eff.get("rate", []), "rate", side, certain, pv)
         rate = pv(chosen) if chosen else None
         picked += [chosen] if chosen else []
@@ -290,7 +307,7 @@ def compose(rs, slot, rules, side="ceiling", certain=None, val=None):
             if rate is not None:
                 rate = rate * (1 + pv(s) / 100)
                 picked.append(s)
-        if slot in ("outbound_wht", "restructure"):
+        if slot in ("outbound_wht", "restructure", "exit"):
             caps = [pv(c) for c in eff.get("cap", [])]
             if caps and rate is not None:
                 rate = min([rate] + caps)
@@ -314,11 +331,10 @@ def compose(rs, slot, rules, side="ceiling", certain=None, val=None):
         incl, more = included(rs, eff, side, certain, pv) if eff.get("taxable") else (0.0, [])
         res["value"] = _r(incl)
         res["credit"] = bool(eff.get("credit"))
-        res["rules"] = sorted({r["id"] for r in eff.get("taxable", []) + more + eff.get("credit", [])})
+        res["credit_underlying"] = bool(eff.get("credit_underlying"))
+        res["rules"] = sorted({r["id"] for r in eff.get("taxable", []) + more + eff.get("credit", []) + eff.get("credit_underlying", [])})
     elif slot == "residence":
         res["value"] = bool(eff.get("resident"))
-    elif slot == "cfc":
-        res["value"] = bool(eff.get("include"))
     elif slot == "anti_abuse":
         res["value"] = bool(eff.get("deny"))
         res["overrides"] = sorted({o for r in eff.get("deny", []) for o in r["overrides_list"]})
@@ -403,7 +419,7 @@ def eval_cell(rs, slot_key, date, facts, answers, mode="record", suppress=None, 
     jur, subject, slot, flow = parts
     facts = dict(facts or {})
     mode = facts.pop("mode", mode) or mode                 # rule_test may set the mode through the facts column
-    ctx = Context(rs, date, facts, answers, mode)
+    ctx = Context(rs, date, facts, answers, mode, jur)
     cands = rs.candidates(jur, subject, slot, flow, date)
     tv = {r["id"]: ctx.eval(r["tree"]) for r in cands}
     dirs = {r["id"]: direction(rs, r, cands) for r in cands}
@@ -453,6 +469,7 @@ def eval_cell(rs, slot_key, date, facts, answers, mode="record", suppress=None, 
     by_id = {r["id"]: r for r in cands}
     used = {rid for side in SIDES for rid in res[side]["rules"]}
     used_keys = {v for r in cands for v in leaves(r["tree"], "var")} | {k for r in cands for k in leaves(r["tree"], "pred")}
+    used_keys |= {"%s@%s" % (k, jur) for r in cands for k in leaves(r["tree"], "pred")}
     assumptions = sorted(k for k in (assume or ()) if k in used_keys and (k in facts or k in (answers or {})))
     item = {
         "slot_key": slot_key, "jur": jur, "subject": subject, "slot": slot, "counterparty": flow, "date": date,
@@ -562,11 +579,57 @@ def apply_anti_abuse(rs, aa, targets):
     return items, aa
 
 
+def treaty_rate(rs, pair, pct, date):
+    """The dividend cap of treaty `pair` (e.g. cn-sg) for a holder of `pct` %, from the library parameters; None when the
+    pair has no dividend parameter, Unknown when the holding decides and is not given."""
+    def p(name):
+        pid = "%s.outbound_wht.%s" % (pair, name)
+        return rs.pvalue(pid) if pid in rs.lib.params and rs.lib.param_effective(pid, date) else None
+    reduced, least, other = p("dividend_rate_reduced"), p("holding_pct_min"), p("dividend_rate_other")
+    other = p("dividend_rate") if other is None else other
+    if reduced is not None and least is not None:
+        if pct is None:
+            return Unknown({("MISSING", "holding_pct")})
+        if float(pct) >= least:
+            return reduced
+    elif reduced is not None:
+        return reduced
+    return other
+
+
+def parent_treaty_not_worse(rs, S, R, facts, date):
+    """Derived variable parent_treaty_not_worse (rule/variable.csv): would the payee's parent, receiving the dividend
+    directly, have a dividend cap at least as good as the payee's? No treaty for the parent's pair: not a qualifying
+    person. None when there is no parent."""
+    parent = facts.get("parent_jur")
+    if not parent:
+        return None
+    pct = facts.get("holding_pct")
+    up = facts.get("parent_holding_pct")
+    mine = treaty_rate(rs, "%s-%s" % (S, R), pct, date)
+    if str(parent).lower() == S.lower():
+        return False                                   # a parent resident in the source state has no treaty with it
+    theirs = treaty_rate(rs, "%s-%s" % (S, str(parent).lower()), None if pct is None or up is None else float(pct) * float(up) / 100, date)
+    for v in (mine, theirs):
+        if isinstance(v, Unknown):
+            return v
+    if theirs is None:
+        return False
+    if mine is None:
+        return True
+    return theirs <= mine
+
+
 def eval_flow(rs, payer_jur, payee_jur, subject, date, facts, answers, mode="record", assume=None):
     """A dividend from a company in payer_jur to a `subject` in payee_jur. facts: plain names for the payment,
     `payer.<name>` / `payee.<name>` for the two entities. Returns the items of the nine cells (spec §5)."""
     S, R = payer_jur, payee_jur
     payer_f, payee_f = entity_view(facts, "payer"), entity_view(facts, "payee")
+    derived = parent_treaty_not_worse(rs, S, R, payee_f, date)      # computed from the parameters, not asked (variable.csv)
+    if derived is not None:
+        for view in (payer_f, payee_f):
+            if view.get("parent_treaty_not_worse") in (None, ""):
+                view["parent_treaty_not_worse"] = derived
     items = []
     res_payer_S = eval_cell(rs, "%s|company|residence|*" % S, date, payer_f, answers, mode, assume=assume)
     res_payee_R = eval_cell(rs, "%s|%s|residence|*" % (R, subject), date, payee_f, answers, mode, assume=assume)
@@ -679,6 +742,8 @@ def run_test(rs, t):
         got_status = "U:" + ",".join(sorted(k for _, k in cond[1]))
     if rule["eff"] in OWN_VALUE_EFFECTS:                     # penalty dict / stamp: the test checks this rule's own figure
         got_val = fmt_value(rs.pvalue(rule["param"])) if rule_id in item["rules_applied"]["ceiling"] else "-"
+    elif item["slot"] == "cfc" and rule["eff"] in ("rate", "surtax", "schedule"):
+        got_val = fmt_value(item["ceiling"].get("rate"))
     else:
         got_val = fmt_value(item["ceiling"]["value"])
     if got_status != w_status or not same_value(got_val, w_val):

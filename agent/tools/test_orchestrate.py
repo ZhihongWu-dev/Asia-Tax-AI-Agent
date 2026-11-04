@@ -34,10 +34,12 @@ def check(name, ok, detail=""):
 class Script:
     """Plays the agents. `verdicts` holds the checklists each review node writes, in order; the last one repeats."""
 
-    def __init__(self, root, case_id, intake=("RUNNABLE",), draft=("POLISHABLE",), final=("DELIVERABLE",)):
+    def __init__(self, root, case_id, intake=("RUNNABLE",), draft=("POLISHABLE",), final=("DELIVERABLE",), legal=("POLISHABLE",), legal_final=("DELIVERABLE",), reason=""):
         self.ids = {a: Case(root, a) for a in ("front", "analysis", "polish", "review")}
         self.case_id, self.tasks, self.nodes = case_id, [], []
-        self.verdicts = {"review_intake": list(intake), "review_draft": list(draft), "review_final": list(final)}
+        self.verdicts = {"review_intake": list(intake), "review_draft": list(draft), "review_final": list(final),
+                         "review_legal": list(legal), "review_final_legal": list(legal_final)}
+        self.reason = reason                                # a sentence stating a legal reason, written into every draft
         self.fail_at, self.silent_at, self.issue_at = {}, set(), set()
 
     def __call__(self, agent, task, case_id, label):
@@ -52,7 +54,7 @@ class Script:
         c, cur = self.case_id, self.ids["front"].round_current(self.case_id)
         run_id = cur.get("run_id")
         if label == "analysis":
-            self.ids["analysis"].write_report(c, run_id, "briefing", "draft %d" % len(self.nodes))
+            self.ids["analysis"].write_report(c, run_id, "briefing", "draft %d\n\n%s" % (len(self.nodes), self.reason))
             self.ids["analysis"].write_report(c, run_id, "sources", "[]")
         elif label == "polish":
             if label in self.issue_at:
@@ -65,7 +67,7 @@ class Script:
         else:
             v = self.verdicts[label]
             verdict = v.pop(0) if len(v) > 1 else v[0]
-            which = {"review_intake": "intake", "review_draft": "draft", "review_final": "final"}[label]
+            which = {"review_intake": "intake", "review_draft": "draft", "review_final": "final", "review_legal": "legal_draft", "review_final_legal": "legal_final"}[label]
             back, word = verdict.split(":") if ":" in verdict else ("", verdict)
             body = "Finding.\n" + ("RETURN: %s\n" % back if back else "") + "Verdict: %s" % word
             result = self.ids["review"].write_review(c, which, body)
@@ -109,7 +111,8 @@ def main():
     rows = [json.loads(x) for x in (root / "C1" / "log" / "runs.jsonl").read_text(encoding="utf-8").splitlines()]
     check("runs.jsonl has start and end rows and the stop", {x["event"] for x in rows} == {"start", "end", "stop"} and rows[1].get("status_after") == "intake_ok", rows[:2])
     check("run lock released", not (root / "C1" / "log" / "run.lock").exists())
-    check("task text is the English sentence of the spec", s.tasks[0] == "Check the intake package of case C1.", s.tasks[0])
+    check("task text is the English sentence of the spec", s.tasks[0].startswith("Check the intake package of case C1."), s.tasks[0])
+    check("the task names the prefetch pack and the case's files", "prefetch pack" in s.tasks[0] and "intake/index/pack/review_intake.md" in s.tasks[0].replace("\\", "/"), s.tasks[0][:300])
 
     s = fresh(root, "C2", draft=("analysis:REVISE", "POLISHABLE"))
     r = orch.run_case("C2")
@@ -190,6 +193,17 @@ def main():
     st = orch.status_of("C12")
     check("status reports the next step and the last stop", st["next"] == "analysis" and st["last_stop"]["stop"] == "revision_limit", st)
 
+    s = fresh(root, "C14", legal=("analysis:REVISE", "POLISHABLE"), reason="The exemption applies because section 13 requires a headline rate of at least 15%.")
+    r = orch.run_case("C14")
+    check("the legal lane runs beside the draft review", "review_legal" in s.nodes and s.nodes.index("review_legal") > s.nodes.index("review_draft") - 2, s.nodes)
+    check("a lane REVISE sends the draft back although the main review passed", r["nodes"] == happy[:4] + ["analysis", "review_draft", "polish", "review_final"] and r["stop"] == "delivered", r)
+    check("the author is pointed at the lane's checklist", "review_legal.md" in s.tasks[s.nodes.index("analysis", 3)], s.tasks)
+    check("a polished report without new legal sentences carries the final lane", "review_final_legal" not in s.nodes and (root / "C14" / "report" / r["run_id"] / "review_final_legal.md").exists(), s.nodes)
+
+    s = fresh(root, "C15", draft=("analysis:REVISE", "POLISHABLE"), legal=("analysis:REVISE", "POLISHABLE"), reason="Section 13 requires at least 15%.")
+    r = orch.run_case("C15")
+    check("both reviews sending it back give the author both checklists", "review.md and " in s.tasks[s.nodes.index("analysis", 3)] and "review_legal.md" in s.tasks[s.nodes.index("analysis", 3)], s.tasks)
+
     s = fresh(root, "C13")
     (root / "C13" / "log").mkdir(exist_ok=True)
     (root / "C13" / "log" / "run.lock").write_text(str(os.getpid()), encoding="utf-8")
@@ -214,7 +228,7 @@ def main():
     check("parse_output takes the result event of a list", orch.parse_output('[{"type":"system"},{"type":"result","num_turns":5}]').get("num_turns") == 5)
 
     env = orch.claude_env("polish")
-    check("env carries the polish model and the gateway settings", env["ANTHROPIC_MODEL"] == "qwen3.7-max" and env["ENABLE_TOOL_SEARCH"] == "false" and env["LANGSMITH_TRACING"] == "false" and env["CLAUDE_AGENT_NAME"] == "polish")
+    check("env carries the polish model and the gateway settings", env["ANTHROPIC_MODEL"] == orch.MODELS["polish"] and env["ENABLE_TOOL_SEARCH"] == "false" and env["LANGSMITH_TRACING"] == "false" and env["CLAUDE_AGENT_NAME"] == "polish")
 
     flags = orch.agent_flags("polish")
     servers = json.loads(Path(flags[flags.index("--mcp-config") + 1]).read_text(encoding="utf-8"))["mcpServers"]

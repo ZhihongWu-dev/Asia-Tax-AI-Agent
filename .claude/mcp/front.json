@@ -10,12 +10,18 @@
     "front"
    ]
   },
-  "tax-db": {
+  "tax-read-front": {
    "command": "C:/Coding/Anaconda/envs/tax/python.exe",
    "args": [
-    "database/tools/mcp_server.py",
+    "agent/tools/read_server.py",
     "--root",
-    "database"
+    "cases",
+    "--db",
+    "database",
+    "--rule",
+    "rule",
+    "--agent",
+    "front"
    ]
   },
   "tax-rule": {

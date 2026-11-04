@@ -22,7 +22,7 @@ TABLES = {
 GENERATED = {"rule": ["requires", "predicates"]}          # sqlite only
 
 SUBJECTS = ("company", "individual", "all")              # same values as param.subject in the library
-SLOTS = ("outbound_wht", "inbound", "final", "residence", "cfc", "anti_abuse", "penalty", "restructure")
+SLOTS = ("outbound_wht", "inbound", "final", "residence", "cfc", "anti_abuse", "penalty", "restructure", "exit")
 VAR_KINDS = ("client_fact", "structure", "derived")
 VAR_TYPES = ("bool", "number", "date", "text", "enum")
 AUTHORITATIVE_DOC_TYPES = ("law", "regulation", "treaty")
@@ -33,17 +33,18 @@ DATE = re.compile(r"\d{4}-\d{2}-\d{2}$")
 # direction "unfav": applying the effect is unfavourable to the taxpayer; "fav": favourable (spec §2.2)
 EFFECTS = {
     "resident": (("residence",), False, "unfav"),
-    "rate": (("outbound_wht", "final", "restructure"), True, "unfav"),
-    "surtax": (("outbound_wht", "final"), True, "unfav"),
+    "rate": (("outbound_wht", "final", "restructure", "cfc", "exit"), True, "unfav"),
+    "surtax": (("outbound_wht", "final", "cfc", "exit"), True, "unfav"),
     "cap": (("outbound_wht",), True, "fav"),
     "exempt": (("outbound_wht", "inbound", "final", "restructure"), False, "fav"),
     "taxable": (("inbound",), False, "unfav"),
     "share": (("inbound", "final"), True, "fav"),
     "exclude": (("inbound", "final"), True, "fav"),
-    "credit": (("inbound", "restructure"), False, "fav"),
+    "credit": (("inbound", "restructure", "cfc"), False, "fav"),
+    "credit_underlying": (("inbound", "cfc"), False, "fav"),   # the credit also covers the tax borne by the profits the dividend is paid from
     "include": (("cfc",), False, "unfav"),
     "deny": (("anti_abuse",), False, "unfav"),
-    "schedule": (("final", "restructure"), True, "unfav"),
+    "schedule": (("final", "restructure", "cfc"), True, "unfav"),
     "stamp": (("restructure",), True, "unfav"),           # stamp duty on a share transfer, % of the consideration; stamp rules add up           # progressive schedule; the parameter is <base>_bracket_1_rate (spec §2.2)
     "interest": (("penalty",), True, "unfav"),         # late-payment interest / surcharge; period from the parameter name (spec §2.2)
     "interest_cap": (("penalty",), True, "unfav"),

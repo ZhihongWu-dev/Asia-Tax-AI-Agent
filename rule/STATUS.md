@@ -4,19 +4,19 @@ Written by `rule/tools/build.py` at every build; do not edit.
 
 | What | Count |
 |---|---|
-| Rules | 191 |
-| Variables / predicates | 56 / 10 |
-| Interpretation decisions (rows) | 21 |
-| Golden tests (passed / total) | 503 / 503 |
+| Rules | 200 |
+| Variables / predicates | 60 / 10 |
+| Interpretation decisions (rows) | 27 |
+| Golden tests (passed / total) | 529 / 529 |
 | Errors | 0 |
-| Coverage gaps (jurisdiction, subject, slot) | 96 |
+| Coverage gaps (jurisdiction, subject, slot) | 102 |
 | Conditioned rules without a T, F and U test | 0 |
 
 ## Rules by jurisdiction
 
 | Jurisdiction | Rules |
 |---|---|
-| cn | 65 |
+| cn | 68 |
 | hk | 16 |
 | sg | 18 |
 | id | 0 |
@@ -24,7 +24,7 @@ Written by `rule/tools/build.py` at every build; do not edit.
 | my | 0 |
 | th | 35 |
 | ae | 0 |
-| jp | 57 |
+| jp | 63 |
 | kr | 0 |
 | in | 0 |
 
@@ -56,6 +56,7 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - id|individual|anti_abuse
 - id|individual|penalty
 - id|individual|restructure
+- id|individual|exit
 - vn|company|outbound_wht
 - vn|company|inbound
 - vn|company|final
@@ -72,6 +73,7 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - vn|individual|anti_abuse
 - vn|individual|penalty
 - vn|individual|restructure
+- vn|individual|exit
 - my|company|outbound_wht
 - my|company|inbound
 - my|company|final
@@ -88,6 +90,7 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - my|individual|anti_abuse
 - my|individual|penalty
 - my|individual|restructure
+- my|individual|exit
 - ae|company|outbound_wht
 - ae|company|inbound
 - ae|company|final
@@ -104,6 +107,7 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - ae|individual|anti_abuse
 - ae|individual|penalty
 - ae|individual|restructure
+- ae|individual|exit
 - kr|company|outbound_wht
 - kr|company|inbound
 - kr|company|final
@@ -120,6 +124,7 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - kr|individual|anti_abuse
 - kr|individual|penalty
 - kr|individual|restructure
+- kr|individual|exit
 - in|company|outbound_wht
 - in|company|inbound
 - in|company|final
@@ -136,6 +141,7 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - in|individual|anti_abuse
 - in|individual|penalty
 - in|individual|restructure
+- in|individual|exit
 
 ## Conditioned rules without a T, F and U test
 

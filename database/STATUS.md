@@ -4,21 +4,23 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 
 | What | Count |
 |---|---|
-| Documents | 156 |
-| Clauses | 18405 |
+| Documents | 159 |
+| Clauses | 18430 |
 | Clauses left out (superseded.csv) | 214 |
 | Repealed-provision stubs left out | 50 |
-| Parameters | 353 |
+| Parameters | 369 |
 | Treaty rows | 25 |
-| Absence records | 26 |
+| Absence records | 34 |
 | Errors / warnings | 0 / 0 |
-| Gaps: (jurisdiction, category) / (jurisdiction, subject, slot) / pairs without a treaty row / unresolved downloads | 78 / 96 / 30 / 2 |
+| Gaps: (jurisdiction, category) / (jurisdiction, subject, slot) / pairs without a treaty row / unresolved downloads | 78 / 108 / 30 / 2 |
 
 ## Documents
 
 | id | jur | type | category | format | text | slicing | clauses | title |
 |---|---|---|---|---|---|---|---|---|
 | cn.cs.2009-125 | cn | guidance | 1 | html | ok | cn_item | 16 | 财政部 国家税务总局关于企业境外所得税收抵免有关问题的通知 |
+| cn.cs.2009-59 | cn | guidance | 9 | html | ok | cn_item | 13 | 财政部 国家税务总局关于企业重组业务企业所得税处理若干问题的通知 |
+| cn.cs.2009-60 | cn | guidance | 9 | html | ok | cn_item | 6 | 财政部 国家税务总局关于企业清算业务企业所得税处理若干问题的通知 |
 | cn.cs.2017-84 | cn | guidance | 1 | html | ok | cn_item | 4 | 财政部 税务总局关于完善企业境外所得税收抵免政策问题的通知 |
 | cn.cs.2019-34 | cn | guidance | 6 | html | ok | cn_item | 3 | 财政部 税务总局关于在中国境内无住所的个人居住时间判定标准的公告 |
 | cn.cs.2020-03 | cn | guidance | 2 | html | ok | cn_item | 14 | 财政部 税务总局关于境外所得有关个人所得税政策的公告 |
@@ -35,6 +37,7 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | cn.reg.eit | cn | regulation | 1;3;4;9 | html | ok | cn_article | 132 | 中华人民共和国企业所得税法实施条例 |
 | cn.reg.iit | cn | regulation | 2 | html | ok | cn_article | 36 | 中华人民共和国个人所得税法实施条例 |
 | cn.sta.2008-112 | cn | guidance | page_rates | html | ok | cn_item | 3 | 国家税务总局关于下发协定股息税率情况一览表的通知 |
+| cn.sta.2009-81 | cn | guidance | 1 | html | ok | cn_item | 6 | 国家税务总局关于执行税收协定股息条款有关问题的通知（国税函〔2009〕81号） |
 | cn.sta.2014-09 | cn | guidance | 6 | html | ok | cn_item | 5 | 国家税务总局关于依据实际管理机构标准实施居民企业认定有关问题的公告 |
 | cn.sta.2014-67 | cn | guidance | 9 | html | ok | cn_article | 31 | 股权转让所得个人所得税管理办法（试行）（国家税务总局公告2014年第67号） |
 | cn.sta.2015-07 | cn | guidance | 9 | html | ok | cn_item | 19 | 国家税务总局关于非居民企业间接转让财产企业所得税若干问题的公告 |
@@ -276,6 +279,7 @@ Cells of jurisdiction | subject | slot with neither a parameter nor an absence r
 - id|company|anti_abuse
 - id|company|penalty
 - id|company|restructure
+- id|company|exit
 - id|individual|outbound_wht
 - id|individual|inbound
 - id|individual|final
@@ -284,6 +288,7 @@ Cells of jurisdiction | subject | slot with neither a parameter nor an absence r
 - id|individual|anti_abuse
 - id|individual|penalty
 - id|individual|restructure
+- id|individual|exit
 - vn|company|outbound_wht
 - vn|company|inbound
 - vn|company|final
@@ -292,6 +297,7 @@ Cells of jurisdiction | subject | slot with neither a parameter nor an absence r
 - vn|company|anti_abuse
 - vn|company|penalty
 - vn|company|restructure
+- vn|company|exit
 - vn|individual|outbound_wht
 - vn|individual|inbound
 - vn|individual|final
@@ -300,6 +306,7 @@ Cells of jurisdiction | subject | slot with neither a parameter nor an absence r
 - vn|individual|anti_abuse
 - vn|individual|penalty
 - vn|individual|restructure
+- vn|individual|exit
 - my|company|outbound_wht
 - my|company|inbound
 - my|company|final
@@ -308,6 +315,7 @@ Cells of jurisdiction | subject | slot with neither a parameter nor an absence r
 - my|company|anti_abuse
 - my|company|penalty
 - my|company|restructure
+- my|company|exit
 - my|individual|outbound_wht
 - my|individual|inbound
 - my|individual|final
@@ -316,6 +324,7 @@ Cells of jurisdiction | subject | slot with neither a parameter nor an absence r
 - my|individual|anti_abuse
 - my|individual|penalty
 - my|individual|restructure
+- my|individual|exit
 - ae|company|outbound_wht
 - ae|company|inbound
 - ae|company|final
@@ -324,6 +333,7 @@ Cells of jurisdiction | subject | slot with neither a parameter nor an absence r
 - ae|company|anti_abuse
 - ae|company|penalty
 - ae|company|restructure
+- ae|company|exit
 - ae|individual|outbound_wht
 - ae|individual|inbound
 - ae|individual|final
@@ -332,6 +342,7 @@ Cells of jurisdiction | subject | slot with neither a parameter nor an absence r
 - ae|individual|anti_abuse
 - ae|individual|penalty
 - ae|individual|restructure
+- ae|individual|exit
 - kr|company|outbound_wht
 - kr|company|inbound
 - kr|company|final
@@ -340,6 +351,7 @@ Cells of jurisdiction | subject | slot with neither a parameter nor an absence r
 - kr|company|anti_abuse
 - kr|company|penalty
 - kr|company|restructure
+- kr|company|exit
 - kr|individual|outbound_wht
 - kr|individual|inbound
 - kr|individual|final
@@ -348,6 +360,7 @@ Cells of jurisdiction | subject | slot with neither a parameter nor an absence r
 - kr|individual|anti_abuse
 - kr|individual|penalty
 - kr|individual|restructure
+- kr|individual|exit
 - in|company|outbound_wht
 - in|company|inbound
 - in|company|final
@@ -356,6 +369,7 @@ Cells of jurisdiction | subject | slot with neither a parameter nor an absence r
 - in|company|anti_abuse
 - in|company|penalty
 - in|company|restructure
+- in|company|exit
 - in|individual|outbound_wht
 - in|individual|inbound
 - in|individual|final
@@ -364,6 +378,7 @@ Cells of jurisdiction | subject | slot with neither a parameter nor an absence r
 - in|individual|anti_abuse
 - in|individual|penalty
 - in|individual|restructure
+- in|individual|exit
 
 Pairs without a treaty row (a row with empty doc_id records "no treaty"):
 

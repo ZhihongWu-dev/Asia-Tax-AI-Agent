@@ -24,6 +24,7 @@ Two things: running the optimization (`run`, `evaluate`) and reading the product
 | `fx` | base, date, jur?, role, subject, symbols? → exchange rates and the statutory reading (fx.py `fetch`), writes no file | read (internet) |
 | `ranking` | products → ranking.json | read |
 | `deltas` | products, cand_id? / branch_id? → the full deltas rows of that candidate / branch; with neither, a one-line summary per branch | read |
+| `scenarios` | products, changes_first? → scenarios.json: every structure's tax under the same judgment answers, the first and second structure of each scenario, the structure ranks; changes_first keeps only the scenarios whose first structure differs from all favourable | read |
 | `open_items` | products, changes_rank? → the filtered open_items | read |
 | `paths` | products, cand_id? → the candidate's path, moves, restructure, dominated_by | read |
 | `tax` | products, branch_id? → the tax components of every hop of that branch (floor / ceiling) | read |

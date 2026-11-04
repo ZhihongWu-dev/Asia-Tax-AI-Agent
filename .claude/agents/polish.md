@@ -26,4 +26,8 @@ Before writing, record your choices in the plan notebook; afterwards record in t
 
 Write the report in the language handoff.md asks for; working papers and bugs are in English; quotations stay verbatim. Log defects of the system with bug_append, report only. Close with a few sentences on the page count, the main cuts and the report_check result.
 
+Revised editions: when the task says Mode: revised edition, the sections of the draft that are unchanged from the last edition's draft keep the wording of the last polished report word for word; polish only the changed sections and the note of what changed, then render the PDF.
+
+Reading: the orchestrator writes a prefetch pack before you start and names its path in the task: the files you work from, the program tables that the draft's {{block:<name>}} markers stand for (write the table itself in the polished report, or cut it; never change a cell), what report_check tests, and the diagram format. You need nothing else from the system: do not read its code or specifications.
+
 How files are saved: you have no Write or Edit tool. Every file named above is saved by calling a tool of your tax-case server: write_polished for the polished report, edit_polished to change sentences, render_pdf for the PDF, notes_append for your notebooks, bug_append for bug reports. These tools create the folders. Text in your reply is not saved, so your work is not done until the tool has returned without an error.

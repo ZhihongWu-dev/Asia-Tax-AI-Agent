@@ -26,16 +26,19 @@ BODY_FLOOR, BODY_LIMIT = 5, 10                         # pages before the append
 BOOKS = {"front": ("reading", "construal", "ask", "rounds"),
          "analysis": ("precommit", "products", "law", "paths", "flags"),
          "polish": ("plan", "changes", "issues"),
-         "review": ("expect", "recalc", "checks")}
+         "review": ("expect", "recalc", "checks", "legal")}
 INTAKE_NAMES = ("facts", "sources", "answers", "notes", "constraints", "handoff")
 INTAKE_FILES = {"facts": "facts.json", "sources": "sources.json", "answers": "answers.json", "notes": "notes.md",
                 "constraints": "constraints.json", "handoff": "handoff.md"}
 DIRTY_NAMES = ("facts", "sources", "answers", "notes", "constraints")   # everything stage 1 reviews; the handoff is not reviewed
-VERDICTS = {"intake": ("RUNNABLE", "REVISE"), "draft": ("POLISHABLE", "REVISE"), "final": ("DELIVERABLE", "REVISE")}
-RETURNS = {"draft": ("analysis", "front"), "final": ("polish", "analysis", "front")}   # who a REVISE checklist may send the case back to
+VERDICTS = {"intake": ("RUNNABLE", "REVISE"), "draft": ("POLISHABLE", "REVISE"), "final": ("DELIVERABLE", "REVISE"),
+            "legal_draft": ("POLISHABLE", "REVISE"), "legal_final": ("DELIVERABLE", "REVISE")}   # legal_*: the legal-reasoning lane (orchestration spec §12)
+RETURNS = {"draft": ("analysis", "front"), "final": ("polish", "analysis", "front"),
+           "legal_draft": ("analysis",), "legal_final": ("polish", "analysis")}   # who a REVISE checklist may send the case back to
+CHECKLISTS = {"draft": "review.md", "final": "review_final.md", "legal_draft": "review_legal.md", "legal_final": "review_final_legal.md"}
 PARTS = (("策略思路", "strategy"), ("现状", "current state"), ("备选方案", "alternatives"),
          ("最优方案", "optimal"), ("税负比较", "tax comparison"), ("条件与要求", "requirements"), ("执行", "implementation"))
-LEAKS = (r"\[S\d+\]", r"\b[cx]\d+\.b\d+\b", r"\bcand_id\b", r"\bbranch_id\b", r"\brun_id\b", r"\bper_100\b", r"\bchanges_rank\b",
+LEAKS = (r"\d{8}-[0-9a-f]{8}:[a-z_]+:", r"CASE-\d{8}-[0-9a-f]{6}:[a-z_]+:", r"#[\w.()\-]+@\d+", r"\[S\d+\]", r"\b[cx]\d+\.b\d+\b", r"\bcand_id\b", r"\bbranch_id\b", r"\brun_id\b", r"\bper_100\b", r"\bchanges_rank\b",
          r"\bopen_items\b", r"\b(floor|ceiling)\b", r"\w+\.json\b", r"\bif_(yes|no)\b", r"\btotal_N\b", r"\bslot_key\b",
          r"规则工具", r"规则层", r"优化层", r"法规库", r"模型", r"产物", r"未收录", r"补录", r"(?i)\brule (tool|layer)\b", r"(?i)\boptimi[sz](er|ation layer)\b",
          r"(?i)\bnot (yet )?(on file|in the library)\b")
@@ -115,8 +118,26 @@ def passed(path, which, since):
             and verdict_of(path.read_text(encoding="utf-8"), which) == VERDICTS[which][0])
 
 
-FACT_KEYS = ("date", "mode", "amount", "currency", "payer", "payee", "payment", "assume", "entities", "destinations", "valuation", "horizon_years",
+FACT_KEYS = ("date", "mode", "amount", "currency", "payer", "payee", "payment", "assume", "entities", "destinations", "valuation",
              "as_of", "fx", "limits", "constraints", "case", "note", "instructed_on", "past_payments", "answers")
+
+
+CONSTRAINT_KEYS = ("consider", "exclude", "allow_restructure", "payback_max", "allowed_subjects")
+FACT_EXTRA = ("listed", "exit_assets_cost")              # read by the optimizer beyond rule/variable.csv
+
+
+def rule_jurisdictions():
+    """The jurisdictions the rule layer has rules for: the system's scope."""
+    with open(PROJECT / "rule" / "rule.csv", encoding="utf-8-sig") as f:
+        return {r["rule_id"].split(".")[0] for r in csv.DictReader(f) if r.get("rule_id") and "-" not in r["rule_id"].split(".")[0]}   # pair prefixes are treaty rules
+
+
+def variable_names():
+    with open(PROJECT / "rule" / "variable.csv", encoding="utf-8-sig") as f:
+        return {r["name"] for r in csv.DictReader(f)} | set(FACT_EXTRA)
+
+
+VALUATION_KEYS = ("net_assets", "cost_base", "cost_currency", "appraised_value", "property_rich_ratio", "currency", "as_of", "source", "note")
 
 
 def shape_problems(facts):
@@ -132,6 +153,50 @@ def shape_problems(facts):
     odd = sorted(k for k in facts if k not in FACT_KEYS)
     if odd:
         out.append("facts.json: top-level keys the optimizer does not read: %s. Facts of the payment go inside payment, of a company inside its facts; see optimization/examples/case001.json" % ", ".join(odd))
+    if isinstance(facts.get("payment"), dict) and "past_payments" in facts["payment"]:
+        out.append("facts.json: past_payments is a top-level list, not inside payment")
+    if "destinations" not in facts:
+        out.append("facts.json needs destinations: where the client wants the money to end up, as [jur, subject] pairs; the payee alone when the client has not said")
+    obj = lambda x: x if isinstance(x, dict) else {}                  # a wrong shape is reported once below, never a crash
+    entities = obj(facts.get("entities"))
+    if facts.get("entities") is not None and not isinstance(facts.get("entities"), dict):
+        out.append('facts.json: entities must be an object keyed by node, {"sg:company": {"holds": "hk:company", "facts": {...}}, ...}; see optimization/examples/case001.json')
+    dests = facts.get("destinations") if isinstance(facts.get("destinations"), list) else []
+    if facts.get("destinations") is not None and not isinstance(facts.get("destinations"), list):
+        out.append('facts.json: destinations must be a list of [jur, subject] pairs, such as [["sg", "company"], ["sg", "individual"]]')
+    names = variable_names()
+    places = [(role, obj(facts.get(role)).get("facts")) for role in ("payer", "payee")] + [("payment", facts.get("payment"))]
+    places += [("entities." + n, obj(e).get("facts")) for n, e in entities.items()]
+    for where, fs in places:
+        odd = sorted(k for k in (fs or {}) if k not in names and k != "past_payments") if isinstance(fs, dict) else []
+        if odd:
+            out.append("facts.json: %s carries keys that are no rule-layer variable: %s. Use only names from variables(); figures of earlier dividends go into past_payments" % (where, ", ".join(odd)))
+    payee = obj(facts.get("payee"))
+    scope = rule_jurisdictions()
+    named = [(role, facts[role].get("jur")) for role in ("payer", "payee") if isinstance(facts.get(role), dict)]
+    named += [("entities", str(n).split(":")[0]) for n in entities]
+    named += [("destinations", d[0] if isinstance(d, (list, tuple)) and d else str(d).split(":")[0]) for d in dests]
+    named += [("constraints.consider", j) for j in ((facts.get("constraints") or {}).get("consider") or [])] if isinstance(facts.get("constraints"), dict) else []
+    outside = sorted({"%s %s" % (where, str(j).upper()) for where, j in named if j and str(j).lower() not in scope})
+    if outside:
+        out.append("facts.json names jurisdictions the system has no rules for (%s); the scope is %s. Tell the client in plain words that these are outside what the system covers; "
+                   "keep only a case whose payer, payee and destinations are inside the scope" % (", ".join(outside), ", ".join(sorted(s.upper() for s in scope))))
+    for node, v in obj(facts.get("valuation")).items():                # keys the optimizer does not read are silently lost
+        odd = sorted(k for k in obj(v) if k not in VALUATION_KEYS)
+        if odd:
+            out.append("facts.json: valuation.%s carries keys the optimizer does not read: %s (allowed: %s); valuation is keyed by the company whose shares "
+                       "are transferred, and cost_base is what the present holder paid for the stake it holds" % (node, ", ".join(odd), ", ".join(VALUATION_KEYS)))
+    val = obj(facts.get("valuation"))
+    payer_node = "%s:company" % obj(facts.get("payer")).get("jur")
+    payee_node = "%s:%s" % (payee.get("jur"), payee.get("subject"))
+    mine, theirs = obj(val.get(payer_node)), obj(val.get(payee_node))
+    if theirs.get("cost_base") not in (None, "") and mine.get("cost_base") in (None, "") and not theirs.get("note"):
+        out.append("facts.json: valuation.%s.cost_base is read as what %s's own holder paid for the shares of %s, while valuation.%s has no cost_base. If the figure is "
+                   "what %s paid for its stake in %s, move it to valuation.%s.cost_base. If it really is the cost of %s's own shares, say so in valuation.%s.note"
+                   % (payee_node, payee_node, payee_node, payer_node, payee_node, payer_node, payer_node, payee_node, payee_node))
+    parent = obj(payee.get("facts")).get("parent_jur")
+    if parent and not any(str(n).split(":")[0].lower() == str(parent).lower() for n in entities):
+        out.append("facts.json: the payee's parent (parent_jur %s) is not in entities: every known company or person above the payee goes into entities with holds, holding_pct and holding_months" % parent)
     return out
 
 
@@ -245,11 +310,15 @@ class Case:
             if not draft[0].exists():
                 return "ran"
             # file times carry the order: a rewritten draft drops the case back to drafted, whatever came after it
-            if not passed(review, "draft", newest(*draft)):
+            lanes = (rd / ".lanes").exists()
+            legal = rd / CHECKLISTS["legal_draft"]
+            if not passed(review, "draft", newest(*draft)) or (lanes and not passed(legal, "legal_draft", newest(*draft))):
                 return "drafted"
-            if not pol.exists() or pol.stat().st_mtime < review.stat().st_mtime:
+            if not pol.exists() or pol.stat().st_mtime < max(review.stat().st_mtime, legal.stat().st_mtime if lanes else 0):
                 return "reviewed"
-            return "delivered" if passed(rd / "review_final.md", "final", newest(*report_files(rd))) else "polished"
+            since = newest(*report_files(rd))
+            final_ok = passed(rd / "review_final.md", "final", since) and (not lanes or passed(rd / CHECKLISTS["legal_final"], "legal_final", since))
+            return "delivered" if final_ok else "polished"
         if ri.exists() and verdict_of(ri.read_text(encoding="utf-8"), "intake") == "RUNNABLE":
             last_write = cur.get("last_intake_write") or ""
             reviewed = cur.get("review_intake_written") or ""
@@ -271,14 +340,26 @@ class Case:
             return None
         rd = cd / "report" / cur["run_id"]
         if st == "drafted":
-            which, p, since, default = "draft", rd / "review.md", newest(*draft_files(rd)), "analysis"
+            stage, since, default = ("draft", "legal_draft"), newest(*draft_files(rd)), "analysis"
         else:
-            which, p, since, default = "final", rd / "review_final.md", newest(*report_files(rd)), "polish"
-        if p.exists() and p.stat().st_mtime >= since:
-            text = p.read_text(encoding="utf-8")
-            if verdict_of(text, which) == "REVISE":
-                return {"which": which, "to": return_of(text) or default, "path": str(p)}
-        return None
+            stage, since, default = ("final", "legal_final"), newest(*report_files(rd)), "polish"
+        found = []                                             # every REVISE of the stage: the main review and the legal lane
+        for which in stage:
+            p = rd / CHECKLISTS[which]
+            if p.exists() and p.stat().st_mtime >= since:
+                text = p.read_text(encoding="utf-8")
+                if verdict_of(text, which) == "REVISE":
+                    found.append({"which": which, "to": return_of(text) or default, "path": str(p)})
+        if not found:
+            return None
+        order = ("front", "analysis", "polish")                 # the furthest return wins; the others ride along
+        found.sort(key=lambda f: order.index(f["to"]))
+        first = dict(found[0], which=stage[0])
+        if len(found) > 1:
+            first["also"] = [f["path"] for f in found[1:]]
+        elif found[0]["which"] != stage[0]:
+            first["path"] = found[0]["path"]
+        return first
 
     def round_tag(self, ledger):
         cur = self.current(ledger)
@@ -385,14 +466,14 @@ class Case:
         if e:
             return e
         if which not in VERDICTS:
-            return err("invalid", "which must be intake, draft or final")
+            return err("invalid", "which must be intake, draft, final, legal_draft or legal_final")
         if which == "intake":
             p = cd / "intake" / "review_intake.md"
         else:
             run_id = self.current(ledger).get("run_id")
             if not run_id:
                 return {"which": which, "verdict": "none", "detail": "no run in the current round", "version": SERVER_VERSION}
-            p = cd / "report" / run_id / ("review.md" if which == "draft" else "review_final.md")
+            p = cd / "report" / run_id / CHECKLISTS[which]
         if not p.exists():
             return {"which": which, "verdict": "none", "path": str(p), "version": SERVER_VERSION}
         text = p.read_text(encoding="utf-8")
@@ -527,6 +608,8 @@ class Case:
         cd, ledger, e = self.opened(case_id)
         if e:
             return e
+        if self.sectioned(cd, run_id):
+            return self.edit_section(case_id, run_id, edits)
         return self.apply_edits(cd / "report" / run_id / "briefing.md", edits, case_id, run_id)
 
     def edit_polished(self, case_id, run_id, edits):
@@ -536,6 +619,94 @@ class Case:
         if e:
             return e
         return self.apply_edits(cd / "report" / run_id / "briefing.polished.md", edits, case_id, run_id)
+
+    def sectioned(self, cd, run_id):
+        """A draft built from parts: only when the orchestrator switched it on for this run (sections/.sectioned)."""
+        return (cd / "report" / run_id / "sections" / ".sectioned").exists()
+
+    def sections_mod(self):
+        sys.path.insert(0, str(HERE))
+        import sections as secm
+        secm.CASES = self.root
+        return secm
+
+    def reassemble(self, cd, case_id, run_id):
+        """After a part changed: the draft is put together again, once the section writers have all finished."""
+        if (cd / "report" / run_id / "sections" / ".assembled").exists():
+            secm = self.sections_mod()
+            secm.assemble(case_id, run_id, secm.products_version(case_id, run_id))
+
+    def write_section(self, case_id, run_id, section, content, sources=None):
+        """One part of a sectioned draft: report/<run_id>/sections/<section>.md and its sources (ids are given the part as prefix)."""
+        if (e := self.need("analysis")):
+            return e
+        cd, ledger, e = self.opened(case_id)
+        if e:
+            return e
+        cur = self.current(ledger)
+        if not cur.get("run_id") or run_id != cur["run_id"]:
+            return err("conflict", "run_id %s is not the current round's run (%s)" % (run_id, cur.get("run_id")))
+        if not self.sectioned(cd, run_id):
+            return err("invalid", "this draft is written whole, not in parts: save each part with write_report mode=append and change sentences with edit_report")
+        secm = self.sections_mod()
+        if section in secm.PROGRAM:
+            return err("invalid", "part %s is written by the program from the sources" % section)
+        if section not in secm.ORDER:
+            return err("invalid", "section must be one of %s" % ", ".join(x for x in secm.ORDER if x not in secm.PROGRAM))
+        lead = secm.TITLES.get(section, "").split(" — ")[0]
+        if lead and not re.match(r"^##\s+%s" % re.escape(lead), content.strip()):
+            return err("invalid", "part %s must start with its heading line, such as: ## %s" % (section, secm.TITLES[section]))
+        rows = []
+        if sources not in (None, "", []):
+            try:
+                data = json.loads(sources) if isinstance(sources, str) else sources
+            except ValueError as ex:
+                return err("invalid", "sources is not valid JSON: %s" % ex)
+            rows = data if isinstance(data, list) else data.get("sources") if isinstance(data, dict) else None
+            if not isinstance(rows, list):
+                return err("invalid", "sources must be a list of {id, where, claim, kind, ref}")
+            for i, r in enumerate(rows):
+                if not isinstance(r, dict):
+                    return err("invalid", "sources[%d] is not an object" % i)
+                missing = [k for k in ("id", "where", "kind", "ref") if k not in r]
+                if missing:
+                    return err("invalid", "sources[%d] lacks %s" % (i, ", ".join(missing)))
+                if r["kind"] not in ("product", "tool", "cite", "url", "document"):
+                    return err("invalid", "sources[%d].kind must be product | tool | cite | url | document (names come from the frame)" % i)
+                if not str(r["id"]).startswith(section + "-"):
+                    r["id"] = "%s-%s" % (section, r["id"])
+        sd = cd / "report" / run_id / "sections"
+        sd.mkdir(parents=True, exist_ok=True)
+        self.write_with_prev(sd / ("%s.md" % section), content.strip() + "\n")
+        sp = sd / ("%s.sources.json" % section)
+        merged = self.merged_rows(sp, rows) if rows else (json.loads(sp.read_text(encoding="utf-8")) if sp.exists() else [])
+        sp.write_text(json.dumps(merged, ensure_ascii=False, indent=1), encoding="utf-8")
+        self.reassemble(cd, case_id, run_id)
+        return {"case_id": case_id, "run_id": run_id, "section": section, "sources": len(merged), "version": SERVER_VERSION}
+
+    def edit_section(self, case_id, run_id, edits):
+        """Sentences of a sectioned draft: each old text must occur exactly once across the parts; all or none."""
+        if (e := self.need("analysis")):
+            return e
+        cd, ledger, e = self.opened(case_id)
+        if e:
+            return e
+        sd = cd / "report" / run_id / "sections"
+        files = {q: q.read_text(encoding="utf-8") for q in sorted(sd.glob("*.md"))}
+        if not isinstance(edits, list) or not edits:
+            return err("invalid", "give a list of {old, new}")
+        for i, ed in enumerate(edits):
+            old = ed.get("old") if isinstance(ed, dict) else None
+            hits = [q for q, t in files.items() if old and old in t]
+            n = sum(files[q].count(old) for q in hits) if old else 0
+            if n != 1:
+                return err("invalid", "edits[%d]: the old text occurs %d times across the parts, it must occur once; nothing was changed" % (i, n))
+            files[hits[0]] = files[hits[0]].replace(old, str(ed.get("new", "")))
+        for q, t in files.items():
+            if q.read_text(encoding="utf-8") != t:
+                self.write_with_prev(q, t)
+        self.reassemble(cd, case_id, run_id)
+        return {"case_id": case_id, "run_id": run_id, "edits": len(edits), "version": SERVER_VERSION}
 
     def write_report(self, case_id, run_id, name, content, mode="replace"):
         if (e := self.need("analysis")):
@@ -548,6 +719,22 @@ class Case:
             return err("conflict", "run_id %s is not the current round's run (%s)" % (run_id, cur.get("run_id")))
         if name not in ("briefing", "sources"):
             return err("invalid", "name must be briefing or sources")
+        if self.sectioned(cd, run_id):
+            if name == "briefing":
+                return err("invalid", "this draft is built from parts: write one part with write_section, change sentences with edit_section")
+            if mode != "append":
+                return err("invalid", "the sources table is never resent whole: add or replace rows with mode=append, or give them with write_section")
+            sp = cd / "report" / run_id / "sections" / "extra.sources.json"
+            try:
+                data = json.loads(content)
+            except ValueError as ex:
+                return err("invalid", "not valid JSON: %s" % ex)
+            rows = data if isinstance(data, list) else data.get("sources") if isinstance(data, dict) else None
+            if not isinstance(rows, list) or any(not isinstance(r, dict) or "id" not in r for r in rows):
+                return err("invalid", "sources must be a list of {id, where, claim, kind, ref}")
+            sp.write_text(json.dumps(self.merged_rows(sp, rows), ensure_ascii=False, indent=1), encoding="utf-8")
+            self.reassemble(cd, case_id, run_id)
+            return {"case_id": case_id, "run_id": run_id, "written": str(sp), "version": SERVER_VERSION}
         if mode not in ("replace", "append"):
             return err("invalid", "mode must be replace or append")
         path = cd / "report" / run_id / ("briefing.md" if name == "briefing" else "briefing.sources.json")
@@ -563,8 +750,8 @@ class Case:
                 missing = [k for k in ("id", "kind", "ref") if k not in r]
                 if missing:
                     return err("invalid", "sources[%d] lacks %s" % (i, ", ".join(missing)))
-                if r["kind"] not in ("product", "tool", "cite", "url", "document"):
-                    return err("invalid", "sources[%d].kind must be product | tool | cite | url | document" % i)
+                if r["kind"] not in ("product", "tool", "cite", "url", "document", "name"):
+                    return err("invalid", "sources[%d].kind must be product | tool | cite | url | document | name" % i)
             content = json.dumps(self.merged_rows(path, rows) if mode == "append" else data, ensure_ascii=False, indent=1)
         elif mode == "append" and path.exists():
             content = path.read_text(encoding="utf-8").rstrip() + "\n\n" + content.strip() + "\n"
@@ -659,7 +846,7 @@ class Case:
         if e:
             return e
         if which not in VERDICTS:
-            return err("invalid", "which must be intake, draft or final")
+            return err("invalid", "which must be intake, draft, final, legal_draft or legal_final")
         v = verdict_of(content, which)
         if v is None:
             return err("invalid", "last line must end with one of %s" % " / ".join(VERDICTS[which]), last_line=last_line(content))
@@ -670,12 +857,15 @@ class Case:
             path = cd / "intake" / "review_intake.md"
         else:
             if not cur.get("run_id") or (run_id and run_id != cur["run_id"]):
+                if not cur.get("run_id"):
+                    return err("conflict", "this round has no run yet: the case is at the intake stage (status %s), so the only review now is which=intake; "
+                                           "report folders of earlier rounds are not reviewed again. This is not a system defect" % self.status(cd, ledger))
                 return err("conflict", "run_id %s is not the current round's run (%s)" % (run_id, cur.get("run_id")))
             rd = cd / "report" / cur["run_id"]
-            subject = rd / ("briefing.md" if which == "draft" else "briefing.polished.md")
+            subject = rd / ("briefing.md" if which in ("draft", "legal_draft") else "briefing.polished.md")
             if not subject.exists():
                 return err("conflict", "there is no %s to review yet" % subject.name)
-            path = rd / ("review.md" if which == "draft" else "review_final.md")
+            path = rd / CHECKLISTS[which]
         self.write_with_prev(path, content)
         if which == "intake":
             cur["review_intake_written"] = now()
@@ -781,6 +971,15 @@ class Case:
                 problems.append("facts.json rejected by the optimizer: %s: %s" % (type(ex).__name__, str(ex)[:200]))
             finally:
                 os.chdir(cwd)
+        cons_path = it / "constraints.json"
+        if cons_path.exists():
+            try:
+                cons = json.loads(cons_path.read_text(encoding="utf-8"))
+                odd = sorted(k for k in cons if k not in CONSTRAINT_KEYS) if isinstance(cons, dict) else ["(not an object)"]
+                if odd:
+                    problems.append("constraints.json keys the optimizer does not read: %s (allowed: %s); other notes go into handoff.md" % (", ".join(odd), ", ".join(CONSTRAINT_KEYS)))
+            except ValueError as ex:
+                problems.append("constraints.json is not valid JSON: %s" % ex)
         if facts is not None and sources is not None:
             rows = sources if isinstance(sources, list) else sources.get("sources", [])
             keys = {r.get("key") for r in rows}
@@ -817,11 +1016,13 @@ class Case:
                     elif squash(quote) not in dq:
                         problems.append("answers[%s] quote not found in dialogue.md: quote the client's own message; if the client has not spoken to this point it is unknown_not_asked" % pred)
                 elif val not in ("unknown_not_asked", "unknown"):
-                    problems.append("answers[%s] has value %r (allowed: yes, no, unknown_asked, unknown_not_asked)" % (pred, val))
+                    problems.append("answers[%s] has value %r (allowed: yes, no, unknown_asked, unknown_not_asked): the status itself is the value, "
+                                    "{\"value\": \"unknown_not_asked\"} for a point the client has not spoken to" % (pred, val))
         st = self.status(cd, ledger)
-        note = ("" if st == "intake_ok" else
+        passed_intake = st != "intake"                                   # a round past intake_ok (ran, drafted, ...) passed its intake review
+        note = ("" if passed_intake else
                 "status is still intake: intake_ok needs the stage-1 review to end with RUNNABLE after the last facts / answers / constraints write; an empty problems list is not that review")
-        return {"case_id": case_id, "status": st, "intake_ok": st == "intake_ok", "problems": problems, "note": note, "version": SERVER_VERSION}
+        return {"case_id": case_id, "status": st, "intake_ok": passed_intake, "problems": problems, "note": note, "version": SERVER_VERSION}
 
     def _lib(self):
         if self._db is None:
@@ -903,6 +1104,8 @@ class Case:
                 problems.append("source %s lacks where" % r.get("id"))
             kind, ref = r.get("kind"), str(r.get("ref", ""))
             if kind == "product":
+                if re.match(r"^\d{8}-[0-9a-f]{8}:[a-z_]+:", ref):
+                    continue                                    # a record id of the retrieval layer: cite_check below resolves it
                 p = (cd / ref) if not Path(ref).is_absolute() else Path(ref)
                 if not p.exists() and not (self.root / ref).exists():
                     problems.append("source %s: product path not found: %s" % (r.get("id"), ref))
@@ -910,10 +1113,55 @@ class Case:
                 cite = ref.split()[0]
                 if cite not in self._lib().by_cite:
                     problems.append("source %s: cite_id not in the library: %s" % (r.get("id"), cite))
+        imp_path = rd / "impact.json"
+        if which == "draft" and imp_path.exists():                      # a revised edition: what the last edition said and no longer holds
+            try:
+                imp = json.loads(imp_path.read_text(encoding="utf-8"))
+            except ValueError:
+                imp = {}
+            if imp.get("level") == "revise":
+                body = squeeze(text)
+                kept = [s for s in imp.get("stale", []) if squeeze(s.get("fragment", "")) and squeeze(s["fragment"]) in body]
+                if kept:
+                    problems.append("stale sentences of the last edition carried unchanged: " + "; ".join('"%s"' % s["fragment"][:80] for s in kept[:8]))
+                sys.path.insert(0, str(HERE))
+                import impact as impm
+                impm.CASES = self.root
+                try:
+                    old = impm.products_dir(case_id, imp["baseline_run"])
+                    new = impm.products_dir(case_id, run_id)
+                    gone = impm.amounts_in(old) - impm.amounts_in(new) - set(imp.get("time_only") or [])
+                    still = sorted({s["figure"] for s in impm.sentences_with(text, gone)})
+                    if still:
+                        problems.append("figures of the last edition that this run's products no longer state: " + ", ".join(still[:12]))
+                except (OSError, KeyError, ValueError) as ex:
+                    problems.append("revised edition check failed: %s" % ex)
+                if not re.search(r"(?i)chang\w* since (the|our) (last|previous|earlier)", text[:6000]):
+                    problems.append("a revised edition opens Part 1 with a note of what changed since the last edition")
+        if which == "draft":                                    # provenance (agent/retrieval_spec.en.md §10 cite_check)
+            try:
+                if str(HERE) not in sys.path:
+                    sys.path.insert(0, str(HERE))
+                import read_core
+                cc = read_core.Reader(self.agent, cases_root=self.root, log=False).cite_check(case_id, run_id, "draft")
+            except Exception as ex:                             # noqa: BLE001
+                cc = {"error": "internal", "detail": "%s: %s" % (type(ex).__name__, ex)}
+            if not cc.get("error"):
+                if cc["unresolved_refs"]:
+                    problems.append("sources rows whose ref does not resolve (use the ids tax-read returns): " +
+                                    ", ".join("%s %s" % (u["id"], u["ref"][:60]) for u in cc["unresolved_refs"][:10]))
+                if cc["uncovered_figures"]:
+                    problems.append("figures that no source row states (cite the record or clause that gives them, or take the figure from it): " +
+                                    "; ".join('%s in "%s"' % (u["figure"], u["line"][:70]) for u in cc["uncovered_figures"][:10]))
         # polish may cut but not change: a number new to the report is a problem, a number left out is only listed for review
         drift, omitted, changed, cut, unlocated, pdf_pages, body_pages = [], [], [], [], [], None, None
         if which == "polished" and draft.exists():
-            before, after = numbers_in(draft.read_text(encoding="utf-8")), numbers_in(text)
+            draft_text = draft.read_text(encoding="utf-8")
+            fb = rd / "frame" / "blocks"                     # a whole draft keeps {{block:<name>}} markers: count the figures of the tables they stand for
+            if fb.exists():
+                draft_text = re.sub(r"\{\{block:([a-z_]+)\}\}", lambda m: (fb / ("%s.md" % m.group(1))).read_text(encoding="utf-8")
+                                    if (fb / ("%s.md" % m.group(1))).exists() else m.group(0), draft_text)
+            before, after = numbers_in(draft_text), numbers_in(text)
             drift, omitted = sorted(after - before), sorted(before - after)
             if drift:
                 problems.append("numbers in the polished report that are not in the draft: " + ", ".join(drift[:12]))
@@ -1019,6 +1267,18 @@ def build_server(root, agent):
             return case.write_report(case_id, run_id, name, content, mode)
 
         @s.tool()
+        def write_section(case_id: str, run_id: str, section: str, content: str, sources: str = "") -> dict:
+            """Write one part of a sectioned draft (section = head | 1 | 2 | 3 | 4 | 5 | 6 | 7 | A) with the sources of that part (a JSON list of
+            {id, where, claim, kind, ref}). A part starts with its heading line; {{block:<name>}} on a line of its own inserts a program table from
+            report/<run_id>/frame/frame.md together with its sources. Writing a part again replaces that part only; its sources are added or replaced by id."""
+            return case.write_section(case_id, run_id, section, content, sources)
+
+        @s.tool()
+        def edit_section(case_id: str, run_id: str, edits: list[dict]) -> dict:
+            """Change sentences of a sectioned draft: edits = [{old, new}], each old text must occur exactly once across the parts, all or none."""
+            return case.edit_section(case_id, run_id, edits)
+
+        @s.tool()
         def edit_report(case_id: str, run_id: str, edits: list[dict]) -> dict:
             """Change sentences of briefing.md: edits = [{old, new}], each old text must occur exactly once, all or none."""
             return case.edit_report(case_id, run_id, edits)
@@ -1042,7 +1302,7 @@ def build_server(root, agent):
     if agent == "review":
         @s.tool()
         def write_review(case_id: str, which: str, content: str, run_id: str = "") -> dict:
-            """Write intake/review_intake.md (which=intake, RUNNABLE / REVISE), report/<run_id>/review.md (which=draft, POLISHABLE / REVISE) or report/<run_id>/review_final.md (which=final, DELIVERABLE / REVISE). The last line is the verdict; a REVISE in draft or final has RETURN: analysis, polish or front on the line before it."""
+            """Write intake/review_intake.md (which=intake, RUNNABLE / REVISE), report/<run_id>/review.md (which=draft, POLISHABLE / REVISE), report/<run_id>/review_final.md (which=final, DELIVERABLE / REVISE), or the legal-reasoning lane's review_legal.md (which=legal_draft, POLISHABLE / REVISE) and review_final_legal.md (which=legal_final, DELIVERABLE / REVISE). The last line is the verdict; a REVISE other than intake has RETURN: analysis, polish or front on the line before it."""
             return case.write_review(case_id, which, content, run_id)
 
     # ---- own notebooks and bug log (every identity)
