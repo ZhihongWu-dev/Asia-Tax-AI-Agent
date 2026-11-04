@@ -38,6 +38,20 @@ Runs can take hours. They are separate processes: closing the page or restarting
 
 The design is in `agent/orchestration_cli_spec.en.md`, section 8 for the web host.
 
+## Local and cloud editions
+
+The full product runs locally only. The cloud deployment (Render) runs a light edition:
+
+| | Local | Cloud |
+|---|---|---|
+| Law retrieval | keyword, graph and dense search (BGE-M3), reranking (Qwen3-Reranker) | keyword and graph search only |
+| Scanned uploads | OCR with Qwen3-VL | not read (marked "needs OCR"); text PDFs are read |
+| Long runs | keep going when the page is closed | the free plan sleeps after 15 minutes without requests: keep the page open during a run |
+| Sign-in | one local user | Supabase email accounts, cases kept per user |
+
+The tax computation (library, rules, optimizer) and the four agents are the same in both. The full product on the cloud
+needs a larger Render plan.
+
 ## API
 
 | Method | Path | Purpose |

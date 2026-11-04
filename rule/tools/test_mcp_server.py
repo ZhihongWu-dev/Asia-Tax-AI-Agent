@@ -81,8 +81,11 @@ def main():
         check("judgment_points (typed facts) = Query.judgment_points (string facts)", same(r["judgment_points"], d))
         check("judgment_points finds the bo predicate", any(j["predicate"] == "bo" for j in r["judgment_points"]), json.dumps(r)[:200])
 
-        r = await call(server, "requirements", {"slot": cap["slot_key"], "date": date})
+        r = await call(server, "requirements", {"slot": cap["slot_key"], "date": date, "brief": False})
         check("requirements = Query.requirements", same(strip(r), st.q.requirements(cap["slot_key"], None, None, date)))
+        b = await call(server, "requirements", {"slot": cap["slot_key"], "date": date})
+        check("requirements brief by default: the same rules, smaller", [x["rule_id"] for x in b["rules"]] == [x["rule_id"] for x in r["rules"]]
+              and len(json.dumps(b)) < len(json.dumps(r)))
         r = await call(server, "requirements", {})
         check("requirements without slot/rule -> invalid", r.get("error") == "invalid")
 

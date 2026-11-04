@@ -2,35 +2,169 @@
   "mcpServers": {
     "tax-db": {
       "command": "C:/Coding/Anaconda/envs/tax/python.exe",
-      "args": ["database/tools/mcp_server.py", "--root", "database"]
+      "args": [
+        "database/tools/mcp_server.py",
+        "--root",
+        "database"
+      ]
     },
     "tax-rule": {
       "command": "C:/Coding/Anaconda/envs/tax/python.exe",
-      "args": ["rule/tools/mcp_server.py", "--root", "rule", "--db", "database", "--cases", "cases"]
+      "args": [
+        "rule/tools/mcp_server.py",
+        "--root",
+        "rule",
+        "--db",
+        "database",
+        "--cases",
+        "cases"
+      ]
     },
     "tax-opt-front": {
       "command": "C:/Coding/Anaconda/envs/tax/python.exe",
-      "args": ["optimization/tools/mcp_server.py", "--root", "optimization", "--rule", "rule", "--db", "database", "--products-root", "cases", "--role", "front"]
+      "args": [
+        "optimization/tools/mcp_server.py",
+        "--root",
+        "optimization",
+        "--rule",
+        "rule",
+        "--db",
+        "database",
+        "--products-root",
+        "cases",
+        "--role",
+        "front"
+      ]
     },
     "tax-opt": {
       "command": "C:/Coding/Anaconda/envs/tax/python.exe",
-      "args": ["optimization/tools/mcp_server.py", "--root", "optimization", "--rule", "rule", "--db", "database", "--products-root", "cases", "--role", "reader"]
+      "args": [
+        "optimization/tools/mcp_server.py",
+        "--root",
+        "optimization",
+        "--rule",
+        "rule",
+        "--db",
+        "database",
+        "--products-root",
+        "cases",
+        "--role",
+        "reader"
+      ]
     },
     "tax-case-front": {
       "command": "C:/Coding/Anaconda/envs/tax/python.exe",
-      "args": ["agent/tools/case_server.py", "--root", "cases", "--agent", "front"]
+      "args": [
+        "agent/tools/case_server.py",
+        "--root",
+        "cases",
+        "--agent",
+        "front"
+      ]
     },
     "tax-case-analysis": {
       "command": "C:/Coding/Anaconda/envs/tax/python.exe",
-      "args": ["agent/tools/case_server.py", "--root", "cases", "--agent", "analysis"]
+      "args": [
+        "agent/tools/case_server.py",
+        "--root",
+        "cases",
+        "--agent",
+        "analysis"
+      ]
     },
     "tax-case-polish": {
       "command": "C:/Coding/Anaconda/envs/tax/python.exe",
-      "args": ["agent/tools/case_server.py", "--root", "cases", "--agent", "polish"]
+      "args": [
+        "agent/tools/case_server.py",
+        "--root",
+        "cases",
+        "--agent",
+        "polish"
+      ]
     },
     "tax-case-review": {
       "command": "C:/Coding/Anaconda/envs/tax/python.exe",
-      "args": ["agent/tools/case_server.py", "--root", "cases", "--agent", "review"]
+      "args": [
+        "agent/tools/case_server.py",
+        "--root",
+        "cases",
+        "--agent",
+        "review"
+      ]
+    },
+    "tax-read-front": {
+      "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+      "args": [
+        "agent/tools/read_server.py",
+        "--root",
+        "cases",
+        "--db",
+        "database",
+        "--rule",
+        "rule",
+        "--agent",
+        "front"
+      ]
+    },
+    "tax-read-analysis": {
+      "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+      "args": [
+        "agent/tools/read_server.py",
+        "--root",
+        "cases",
+        "--db",
+        "database",
+        "--rule",
+        "rule",
+        "--agent",
+        "analysis"
+      ]
+    },
+    "tax-read-review": {
+      "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+      "args": [
+        "agent/tools/read_server.py",
+        "--root",
+        "cases",
+        "--db",
+        "database",
+        "--rule",
+        "rule",
+        "--agent",
+        "review"
+      ]
+    },
+    "tax-read-polish": {
+      "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+      "args": [
+        "agent/tools/read_server.py",
+        "--root",
+        "cases",
+        "--db",
+        "database",
+        "--rule",
+        "rule",
+        "--agent",
+        "polish"
+      ]
+    },
+    "tax-opt-calc": {
+      "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+      "args": [
+        "optimization/tools/mcp_server.py",
+        "--root",
+        "optimization",
+        "--rule",
+        "rule",
+        "--db",
+        "database",
+        "--products-root",
+        "cases",
+        "--role",
+        "reader",
+        "--only",
+        "evaluate,fx"
+      ]
     }
   }
 }

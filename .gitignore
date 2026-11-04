@@ -1,5 +1,4 @@
 # Environment and secrets
-.env
 .env.*
 !.env.example
 *.pem
@@ -60,3 +59,8 @@ evals/b_workflow/runs/model_e2e_quota_*.json
 
 # Optimizer products of command-line runs; optimize.py run writes them again
 /optimization/products/
+
+# Retrieval indexes (rebuilt by agent/tools/law_index.py and read_index.py)
+database/index/
+**/intake/index/
+**/intake/products/*/index/

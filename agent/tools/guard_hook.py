@@ -15,6 +15,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import access  # noqa: E402
+
 AGENTS = ("front", "analysis", "polish", "review")
 WRITE_TOOLS = ("Edit", "Write", "MultiEdit", "NotebookEdit")
 READ_TOOLS = ("Read", "Grep", "Glob")
@@ -76,46 +79,8 @@ def main():
                     return 0
         if rel is None:
             return 0
-        parts = rel.split("/")
-        case_id = parts[0]
-        ledger = {}
-        lp = cases_root / case_id / "rounds.json"
-        if lp.exists():
-            try:
-                ledger = json.loads(lp.read_text(encoding="utf-8"))
-            except ValueError:
-                ledger = {}
-        cur = None
-        if ledger:
-            cur = next((r for r in ledger.get("rounds", []) if r.get("round") == ledger.get("current")), None)
-        cur_round = cur.get("round") if cur else None
-        cur_run = cur.get("run_id") if cur else None
-        review_written = bool(cur_run) and (cases_root / case_id / "report" / cur_run / "review.md").exists()
-        if len(parts) >= 3 and parts[1] == "notes":
-            owner = parts[2]
-            rnd = parts[3] if len(parts) >= 4 else ""
-            if owner != agent:
-                if agent == "review" and owner == "analysis" and review_written and rnd == "round-%s" % cur_round:
-                    return 0
-                return deny("%s may not read %s's notes" % (agent, owner))
-            if rnd and cur_round is not None and rnd != "round-%s" % cur_round:
-                return deny("notes of an earlier round are not read (current is round-%s)" % cur_round)
-            return 0
-        if len(parts) >= 3 and parts[1] == "bugs":
-            owner = parts[2].split(".")[0]
-            if owner != agent:
-                return deny("%s may not read %s's bug log" % (agent, owner))
-            return 0
-        if len(parts) >= 2 and parts[1] == "log":
-            if agent == "review" and review_written:
-                return 0
-            return deny("the call log is read by the review agent only, after its review.md is written")
-        if agent in ("analysis", "polish") and cur_run:
-            if len(parts) >= 3 and parts[1] == "report" and parts[2] != cur_run:
-                return deny("%s does not read earlier runs' reports" % agent)
-            if len(parts) >= 4 and parts[1] == "intake" and parts[2] == "products" and parts[3] != cur_run:
-                return deny("%s does not read earlier runs' products" % agent)
-        return 0
+        reason = access.denied(agent, rel, cases_root)
+        return deny(reason) if reason else 0
     except Exception:  # noqa: BLE001
         return 0
 

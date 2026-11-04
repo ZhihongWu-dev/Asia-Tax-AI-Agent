@@ -54,7 +54,7 @@ Folder `cases/<case_id>/notes/polish/round-N/`, append-only; entry header `### <
 
 ## 6. Tools and permissions
 
-Read the draft, the sources table, the handoff and the flowchart example with the host's Read; check the full names of laws with `tax-db`. Write through `tax-case-polish`: `write_polished`, `edit_polished`, `render_pdf`, `notes_append`, `bug_append`, `report_check`. The current model, qwen3.7-max, takes no images, so polish reads no PDFs or images and the guard refuses them; it judges the layout from the page count, the page of each section and of the flowchart, and the fill of each page that `render_pdf` returns.
+Read the draft, the sources table, the handoff and the flowchart example with the host's Read; check the full names of laws with `tax-db`. Write through `tax-case-polish`: `write_polished`, `edit_polished`, `render_pdf`, `notes_append`, `bug_append`, `report_check`. Polish reads no PDFs or images (qwen3.7-max, its model until 2026-11-03, took none) and the guard refuses them; it judges the layout from the page count, the page of each section and of the flowchart, and the fill of each page that `render_pdf` returns.
 
 ## 7. Self-check
 
@@ -90,4 +90,8 @@ Write briefing.polished.md with write_polished, name=polished. Send the sources 
 Before writing, record your choices in the plan notebook; afterwards record in the changes notebook what was cut or merged. Write the whole text once; afterwards change sentences with `edit_polished` and never resend the whole text, and send only the changed sources with mode=append. Before rendering, call `report_check` (target=polished, text_only=true) until problems is empty: `render_pdf` refuses while the text has problems. Then repeat render_pdf and report_check (target=polished) until latex_errors and overfull are zero and problems is empty. body_pages is the page count before the appendices; anything from five to ten is fine, so do not keep editing for the page count. You cannot see pages, so do not read the PDF or any image; judge the layout from what render_pdf returns: the page count, the page of each section and of the flowchart, and the fill of each page. flow_page should be 1; a clearly low page_fill on a middle page means a diagram or table jumped to the next page, so adjust the text before it. Go through numbers_omitted and sources_cut and confirm nothing that must stay was cut.
 
 Write the report in the language handoff.md asks for; working papers and bugs are in English; quotations stay verbatim. Log defects of the system with bug_append, report only. Close with a few sentences on the page count, the main cuts and the report_check result.
+
+Revised editions: when the task says Mode: revised edition, the sections of the draft that are unchanged from the last edition's draft keep the wording of the last polished report word for word; polish only the changed sections and the note of what changed, then render the PDF.
+
+Reading: the orchestrator writes a prefetch pack before you start and names its path in the task: the files you work from, the program tables that the draft's {{block:<name>}} markers stand for (write the table itself in the polished report, or cut it; never change a cell), what report_check tests, and the diagram format. You need nothing else from the system: do not read its code or specifications.
 ```

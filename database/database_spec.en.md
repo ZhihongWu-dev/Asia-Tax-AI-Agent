@@ -34,7 +34,7 @@ D  Extracting values
    ▼
 E  Coverage check
    11 jurisdictions × 13 categories (10 content + 3 page categories; category 11, interpretive sources, is not counted): each cell has a document or an absence record
-   11 jurisdictions × {company, individual} × 8 slots: each cell has a parameter or an absence record
+   11 jurisdictions × {company 8 slots, individual 9 slots}: each cell has a parameter or an absence record
    55 jurisdiction pairs: each pair has a treaty row or a "no treaty" row
 ```
 
@@ -56,7 +56,7 @@ When a jurisdiction has no document for a category, register an absence record i
 6. Guidance on residence (place of effective management standard, counting an individual's days of residence); needed only when the law refers to guidance.
 7. Documents and forms for the procedure to claim or file for treaty benefits (who files, when, what).
 8. Procedure for the certificate of residence (conditions of issue, how to apply).
-9. Tax provisions on share transfers, only for the one-off cost of setting up a structure: income tax on transfer gains (including deemed disposals and indirect transfers by non-residents), stamp duty on share transfers (rate, base) and the valuation rules for unlisted shares (net assets, appraisal). Other stamp duties and deed tax are not collected: deed tax concerns immovable property only.
+9. Tax provisions on share transfers and on a company moving out, only for the one-off cost of setting up a structure: the deemed liquidation of a company that leaves (such as Mainland Caishui [2009] No. 59 item 4 and No. 60); income tax on transfer gains (including deemed disposals and indirect transfers by non-residents), stamp duty on share transfers (rate, base) and the valuation rules for unlisted shares (net assets, appraisal). Other stamp duties and deed tax are not collected: deed tax concerns immovable property only.
 10. Penalty provisions: surcharge or interest on tax paid or remitted late (rate, start, cap), fine multiples for tax underpaid or not withheld (minimum, maximum), additional taxes. Collect only the provisions that carry the figures; they feed the "exposure if a benefit is denied" computation. Usually in the tax administration act, the general rules act or the penalty chapter of the income tax act.
 11. Interpretive sources (optional): court decisions, the OECD Model commentary, rulings on individual cases. They may be cited only by rule-layer decisions to explain a reading; **never as the source of a parameter**: the build reports an error when `param.cite_id` points into a document that belongs to category 11 only. The coverage check ignores this category.
 
@@ -96,7 +96,7 @@ If any item is missed, the corresponding rate, condition, certificate or timelin
 | `doc` | id, jur (jurisdiction code; treaties and protocols take the pair, such as `cn-hk`; multilateral documents such as the MLI take `intl`), type, category (the categories of §2, several allowed, separated by semicolons), title, url, file, sha256, lang (required; the document's language code, such as zh, en, th, ar), effective_from, effective_to, note | id |
 | `treaty` | pair, doc_id (empty = no treaty), in_force_from, mli_doc_id, note | pair |
 | `clause` | cite_id, doc_id, label, text | cite_id, doc_id |
-| `param` | param_id, scope (jurisdiction or pair), subject (company / individual / all), slot (outbound_wht / inbound / final / residence / cfc / anti_abuse / penalty / restructure), name, value, unit, cite_id, quote, effective_from, effective_to, note, changed_on, superseded_by | param_id |
+| `param` | param_id, scope (jurisdiction or pair), subject (company / individual / all), slot (outbound_wht / inbound / final / residence / cfc / anti_abuse / penalty / restructure / exit), name, value, unit, cite_id, quote, effective_from, effective_to, note, changed_on, superseded_by | param_id |
 | `decision` | id, jur, category, subject, slot, statement, cite_id, quote (each row is an absence record: fill in either category, or subject and slot; see §2 and §4.4) | id |
 
 **What each table and column means** (all examples are real rows of the library)
@@ -149,6 +149,7 @@ If any item is missed, the corresponding rate, condition, certificate or timelin
   - cfc: controlled foreign company rules;
   - anti_abuse: general anti-avoidance rules, and limits on treaty benefits (PPT);
   - penalty: surcharge / interest on late payment, fine multiples for tax underpaid or not withheld; subject is normally `all`;
+  - exit: the tax on leaving the jurisdiction: for an individual, the income tax on the assets deemed transferred on departure (thresholds, years of residence, rate, base); for a company that moves its registration or its place of effective management out, the deemed liquidation or disposal (whether it is deemed, the base of the liquidation income, the rate, the shareholder's dividend and gain). The company part was added by the user's decision of 2026-11-04;
   - restructure: the one-off tax on transferring shares of a company of this jurisdiction: income tax on the gain (rate, base, indirect transfers, safe harbours, treaty Article 13), stamp duty on the transfer, valuation rules for unlisted shares. subject is the transferor's type.
 - name: what the number is, such as dividend_rate (tax rate on dividends) and holding_pct_min (minimum shareholding).
 - value, unit: value and unit, such as `10` and `%`, `12` and `months`, `yes` and `bool`.
@@ -289,6 +290,7 @@ Read the sliced provisions and write one row per number or criterion into `param
 | `cfc` | whether CFC rules apply, low-tax threshold, control threshold | CFC rules for individual shareholders | `cfc_applies`, `low_tax_rate_max`, `control_pct_min` |
 | `anti_abuse` | GAAR, domestic limits on treaty benefits (PPT) | same | `gaar_applies`, `ppt_applies` |
 | `restructure` | rate and base of income tax on a non-resident company's gain from transferring shares of a local company, indirect-transfer rules and safe harbours, rate for a resident company, stamp duty rate and base on share transfers, valuation of unlisted shares | rates for non-resident / resident individuals, otherwise the same | `gain_tax_rate`, `gain_base` (text), `indirect_transfer_applies`, `group_safe_harbour_pct_min`, `taxable_holding_pct_min`, `taxable_transferred_pct_min`, `stamp_rate`, `stamp_base` (text), `valuation_basis` (text); pairs: `taxable_holding_pct_min`, `property_rich_pct_min`, `listed_exempt` |
+| `exit` | whether a company that moves out is deemed liquidated or to have disposed of its assets, the base of the liquidation income, the rate, the shareholder's dividend and gain (`deemed_liquidation`, `gain_base` (text), `rate`, `shareholder_dividend_base` (text), `shareholder_gain_base` (text)) | the threshold, years of residence, rate and base of the deemed transfer on departure | `assets_value_min`, `resident_years_max`, `rate`, `surtax_rate`, `gain_base` (text) |
 | `penalty` | late-payment surcharge / interest, fine multiples (subject `all`) | same | `late_interest_pct_per_day` / `_per_month` / `_per_year` (the period is in the name), `late_surcharge_pct_initial` (one-off), `late_interest_cap_pct`, `fine_pct` (fixed), `fine_pct_min`, `fine_pct_max`; harsher cases (evasion, concealment) get a suffix and their own row, the rule layer uses the ordinary case only |
 
 **Third-country currencies**: when a treaty threshold uses a currency not in jurisdiction.csv (such as `US$10 million`), the unit is `text` and the value is the original wording.
@@ -299,7 +301,7 @@ Read the sliced provisions and write one row per number or criterion into `param
 
 **Finding provisions and sentences**: `python database/tools/find.py <word> [<word> ...] [--jur <jur>]` lists the cite_ids of provisions containing these words and the whole sentence each word is in, which can be used directly as the quote; `python database/tools/find.py --cite <cite_id>` prints the full text of one provision.
 
-Every slot of every subject of every jurisdiction must be accounted for: at least one parameter with the jurisdiction's code as scope, or an absence record (decision with jur, subject and slot filled in, category empty, citing the provision that defines the scope of the tax with a verbatim quote). When the law has no rule for a slot (for example, no withholding tax on dividends), register an absence record; do not write a parameter with an empty or "none" value.
+Every slot of every subject of every jurisdiction must be accounted for (9 for companies and 9 for individuals, exit included; the company exit counts from 2026-11-04): at least one parameter with the jurisdiction's code as scope, or an absence record (decision with jur, subject and slot filled in, category empty, citing the provision that defines the scope of the tax with a verbatim quote). When the law has no rule for a slot (for example, no withholding tax on dividends), register an absence record; do not write a parameter with an empty or "none" value.
 
 ### 4.5 Delivery
 
@@ -422,6 +424,6 @@ Data checked: the jurisdiction's documents and absence records; the parameters, 
 
 **Gaps**:
 - Any of the 13 categories (10 content + 3 page categories; category 11 not counted) with neither a document nor an absence record;
-- Any of the 8 slots for companies and for individuals with neither a parameter of the jurisdiction nor an absence record;
+- Any of the 8 slots for companies or the 9 for individuals with neither a parameter of the jurisdiction nor an absence record;
 - Any pair the jurisdiction is in charge of (it comes first in alphabetical order) without a treaty row; for a pair with no treaty, doc_id is empty and the note says "no treaty";
 - Downloads in blocked.csv for the jurisdiction that are not yet in doc.csv; if confirmed not needed, delete the row and give the reason in the session record.

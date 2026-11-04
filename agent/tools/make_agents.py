@@ -18,18 +18,18 @@ from pathlib import Path
 PROJECT = Path(__file__).resolve().parents[2]
 SPECS = {"front": "front_agent_spec.en.md", "analysis": "analysis_agent_spec.en.md",
          "polish": "polish_agent_spec.en.md", "review": "review_agent_spec.en.md"}
-COMMON_TOOLS = ["Read", "Glob", "Grep", "WebSearch", "WebFetch", "mcp__tax-db__*", "mcp__tax-rule__*"]
-TOOLS = {
-    "front": COMMON_TOOLS + ["Bash", "mcp__tax-opt-front__*", "mcp__tax-case-front__*"],
-    "analysis": COMMON_TOOLS + ["mcp__tax-opt__*", "mcp__tax-case-analysis__*"],
+COMMON_TOOLS = ["Read", "Glob", "Grep", "WebSearch", "WebFetch", "mcp__tax-rule__*"]
+TOOLS = {                        # agent/retrieval_spec.en.md §5.3: the library and product readers moved into tax-read
+    "front": COMMON_TOOLS + ["Bash", "mcp__tax-read-front__*", "mcp__tax-opt-front__*", "mcp__tax-case-front__*"],
+    "analysis": COMMON_TOOLS + ["mcp__tax-read-analysis__*", "mcp__tax-opt-calc__*", "mcp__tax-case-analysis__*"],
     "polish": ["Read", "Glob", "Grep", "mcp__tax-db__*", "mcp__tax-case-polish__*"],
-    "review": COMMON_TOOLS + ["mcp__tax-opt__*", "mcp__tax-case-review__*"],
+    "review": COMMON_TOOLS + ["mcp__tax-read-review__*", "mcp__tax-opt-calc__*", "mcp__tax-case-review__*"],
 }
 SERVERS = {
-    "front": ("tax-case-front", "tax-db", "tax-rule", "tax-opt-front"),
-    "analysis": ("tax-case-analysis", "tax-db", "tax-rule", "tax-opt"),
+    "front": ("tax-case-front", "tax-read-front", "tax-rule", "tax-opt-front"),
+    "analysis": ("tax-case-analysis", "tax-read-analysis", "tax-rule", "tax-opt-calc"),
     "polish": ("tax-case-polish", "tax-db"),
-    "review": ("tax-case-review", "tax-db", "tax-rule", "tax-opt"),
+    "review": ("tax-case-review", "tax-read-review", "tax-rule", "tax-opt-calc"),
 }
 DESC = {
     "front": "Front agent of the cross-border dividend tax planning system: talks to the client, extracts facts, starts the orchestrator and hands the report over",
@@ -37,12 +37,12 @@ DESC = {
     "polish": "Polish agent: rewrites the reviewed draft to a top-firm standard without changing any number, fact or conclusion, and produces the PDF; started by the orchestrator at status reviewed",
     "review": "Review agent: checks the intake package, the briefing draft and the polished report against the draft, writes only checklists; started by the orchestrator",
 }
-STAGES = ("intake package", "briefing draft", "final comparison")
+STAGES = ("intake package", "briefing draft", "final comparison", "legal-reasoning lane")
 SAVE_TOOLS = {
     "front": "write_intake for the intake package, put_document for documents, dialogue_append for the client's words, to_collect_append for collection requests",
-    "analysis": "write_report for the report files (mode=append adds a part or rows), edit_report to change sentences",
+    "analysis": "write_section for one part of a draft built from parts and edit_section to change its sentences; for a draft without parts, write_report (mode=append adds a part or rows) and edit_report",
     "polish": "write_polished for the polished report, edit_polished to change sentences, render_pdf for the PDF",
-    "review": "write_review for the checklist (which = intake, draft or final, matching your stage)",
+    "review": "write_review for the checklist (which = intake, draft, final, legal_draft or legal_final, matching your stage)",
 }
 SAVING = ("How files are saved: you have no Write or Edit tool. Every file named above is saved by calling a tool of your tax-case server: %s, "
           "notes_append for your notebooks, bug_append for bug reports. These tools create the folders. Text in your reply is not saved, "
@@ -65,7 +65,7 @@ def prompt_of(name):
         raise SystemExit("%s must have %d prompt blocks, found %d" % (SPECS[name], len(STAGES), len(blocks)))
     parts = ["=== Stage %d: %s ===\n%s" % (i + 1, stage, block.rstrip()) for i, (stage, block) in enumerate(zip(STAGES, blocks))]
     return ("Run the stage your task names: \"Check the intake package\" is stage 1, \"Check the briefing draft\" is stage 2, "
-            "\"Compare the polished report\" is stage 3.\n\n" + "\n\n".join(parts))
+            "\"Compare the polished report\" is stage 3, \"Check the legal reasoning\" is stage 4.\n\n" + "\n\n".join(parts))
 
 
 def main():

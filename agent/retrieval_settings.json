@@ -1,0 +1,15 @@
+{
+ "law": {
+  "bm25": true,
+  "dense": true,
+  "balance": true,
+  "graph": true,
+  "rerank": false
+ },
+ "products": {
+  "rerank": true
+ },
+ "case": {
+  "rerank": true
+ }
+}

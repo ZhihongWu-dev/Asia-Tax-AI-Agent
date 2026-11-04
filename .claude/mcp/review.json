@@ -10,12 +10,18 @@
     "review"
    ]
   },
-  "tax-db": {
+  "tax-read-review": {
    "command": "C:/Coding/Anaconda/envs/tax/python.exe",
    "args": [
-    "database/tools/mcp_server.py",
+    "agent/tools/read_server.py",
     "--root",
-    "database"
+    "cases",
+    "--db",
+    "database",
+    "--rule",
+    "rule",
+    "--agent",
+    "review"
    ]
   },
   "tax-rule": {
@@ -30,7 +36,7 @@
     "cases"
    ]
   },
-  "tax-opt": {
+  "tax-opt-calc": {
    "command": "C:/Coding/Anaconda/envs/tax/python.exe",
    "args": [
     "optimization/tools/mcp_server.py",
@@ -43,7 +49,9 @@
     "--products-root",
     "cases",
     "--role",
-    "reader"
+    "reader",
+    "--only",
+    "evaluate,fx"
    ]
   }
  }

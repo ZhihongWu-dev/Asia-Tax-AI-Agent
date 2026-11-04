@@ -56,7 +56,8 @@ TABLES = {                                           # name -> columns; the orde
 FILLED = ["jurisdiction", "treaty", "doc", "param", "decision"]
 SUPERSEDED = ["doc_id", "clause", "by", "since", "note", "phrase"]     # clauses replaced by a protocol or the MLI (§4.3)
 SUBJECTS = ("company", "individual", "all")
-SLOTS = ("outbound_wht", "inbound", "final", "residence", "cfc", "anti_abuse", "penalty", "restructure")
+SLOTS = ("outbound_wht", "inbound", "final", "residence", "cfc", "anti_abuse", "penalty", "restructure", "exit")
+INDIVIDUAL_ONLY = ()                                 # exit covers both: an individual leaving, a company moving its seat or registration (user, 2026-11-04)
 DOC_TYPES = ("law", "regulation", "guidance", "treaty", "form", "page", "attachment")
 CATEGORIES = ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "page_treaties", "page_rates", "page_deadlines")   # §2
 COVERED_CATEGORIES = tuple(c for c in CATEGORIES if c != "11")   # 11 = interpretive sources: optional, never a parameter source
@@ -125,6 +126,9 @@ def real_kind(path, ext):
     return ext
 
 
+PAGE_CHROME = ("【打印】", "网站纠错", "纠错或建议")
+
+
 def html_text(raw):
     soup = BeautifulSoup(raw, "lxml")
     for t in soup(["script", "style", "noscript", "header", "footer", "nav", "iframe"]):
@@ -151,7 +155,17 @@ def html_text(raw):
             node = best
     text = node.get_text("\n")
     lines = [re.sub(r"[ \t\u00a0\u3000]+", " ", ln).strip() for ln in text.splitlines()]
-    return "\n".join(ln for ln in lines if ln)
+    lines = [ln for ln in lines if ln]
+    # page chrome of the STA sites printed after the text when it is not in <p> (cn.cs.2009-59 on fgk.chinatax.gov.cn,
+    # cn.cs.2009-60 on www.chinatax.gov.cn): cut at the first such line in the second half of the page
+    size = sum(len(ln) for ln in lines)
+    seen = 0
+    for i, ln in enumerate(lines):
+        if ln in PAGE_CHROME and seen > size / 2:
+            lines = lines[:i]
+            break
+        seen += len(ln)
+    return "\n".join(lines)
 
 
 def pdf_pages(path):
@@ -1613,7 +1627,8 @@ def coverage_slots(params, decisions, juris):
         for s, col in (("company", "company_in_scope"), ("individual", "individual_in_scope")):
             if (j.get(col) or "yes").lower() not in ("yes", "y", "1", "true"):
                 continue
-            gaps += ["%s|%s|%s" % (j["code"], s, slot) for slot in SLOTS if (j["code"], s, slot) not in have]
+            gaps += ["%s|%s|%s" % (j["code"], s, slot) for slot in SLOTS
+                     if (j["code"], s, slot) not in have and not (s == "company" and slot in INDIVIDUAL_ONLY)]
     return gaps
 
 

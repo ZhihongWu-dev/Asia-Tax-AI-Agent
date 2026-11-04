@@ -13,6 +13,8 @@ export const STEP_LABEL: Record<string, string> = {
   review_draft: "简报复核",
   polish: "润色与出具 PDF",
   review_final: "终稿比对",
+  review_legal: "法律理由复核",
+  review_final_legal: "终稿法律理由复核",
   "front-relay": "向你汇报",
 };
 export const AGENT_LABEL: Record<string, string> = {

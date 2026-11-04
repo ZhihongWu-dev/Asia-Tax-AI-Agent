@@ -1,6 +1,6 @@
 {
  "case": "CASE-001",
- "note": "Variant of case001.json with illustrative valuation inputs (NOT from the case documents) and a 5-year horizon, to exercise one_off_cost, payback and total_N ranking.",
+ "note": "Variant of case001.json with illustrative valuation inputs (NOT from the case documents), to exercise one_off_cost, payback and total_N ranking.",
  "date": "2026-04-30",
  "mode": "record",
  "amount": 14000000,
@@ -126,6 +126,5 @@
    "property_rich_ratio": 0,
    "currency": "HKD"
   }
- },
- "horizon_years": 5
+ }
 }

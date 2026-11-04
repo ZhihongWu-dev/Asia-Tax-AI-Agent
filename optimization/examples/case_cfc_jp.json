@@ -1,0 +1,78 @@
+{
+ "case": "EX-CFC-JP",
+ "note": "Fictitious. A Japanese company holds a Hong Kong paper company that holds a Mainland company. Japan's CFC rule (SMA 66-6) includes the Hong Kong company's profit whether it stays in Hong Kong or is paid up; holding directly avoids the inclusion.",
+ "date": "2026-04-30",
+ "mode": "record",
+ "amount": 10000000,
+ "currency": "CNY",
+ "payer": {
+  "jur": "cn",
+  "facts": {
+   "incorporated_in": "cn",
+   "managed_in": "cn",
+   "listed": false
+  }
+ },
+ "payee": {
+  "jur": "hk",
+  "subject": "company",
+  "facts": {
+   "incorporated_in": "hk",
+   "managed_in": "hk",
+   "mne_entity": true,
+   "received_in_jurisdiction": true,
+   "payee_is_government": false,
+   "payee_listed_in_partner": false,
+   "passes_on_within_12m": false,
+   "substantive_business": false,
+   "employees_in_jurisdiction": 0,
+   "premises_in_jurisdiction": false,
+   "listed": false,
+   "payer_etr": 0,
+   "specified_cfc": true
+  }
+ },
+ "payment": {
+  "holding_pct": 100,
+  "holding_months": 36,
+  "payer_listed": false,
+  "payer_tax_rate": 25,
+  "payer_income_taxed": true,
+  "payer_etr": 25,
+  "payer_jur": "cn"
+ },
+ "answers": {
+  "bo": "yes",
+  "parent_bo": "yes",
+  "ppt": "no",
+  "gaar": "no",
+  "substance": "no",
+  "fsie_mpr": "no",
+  "cfc_activity": "no"
+ },
+ "assume": [],
+ "entities": {
+  "jp:company": {
+   "facts": {
+    "incorporated_in": "jp",
+    "managed_in": "jp",
+    "listed": false,
+    "resident_holding_pct": 100,
+    "paid_in_capital": 500000000
+   },
+   "holding_pct": 100,
+   "holding_months": 36,
+   "holds": "hk:company"
+  }
+ },
+ "destinations": [
+  [
+   "hk",
+   "company"
+  ],
+  [
+   "jp",
+   "company"
+  ]
+ ]
+}

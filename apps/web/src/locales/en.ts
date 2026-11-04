@@ -40,6 +40,8 @@ export const en: Record<string, string> = {
   "简报复核": "Draft review",
   "润色与出具 PDF": "Polish and PDF",
   "终稿比对": "Final check",
+  "法律理由复核": "Legal-reasoning review",
+  "终稿法律理由复核": "Final legal-reasoning check",
   "向你汇报": "Reporting back",
   "交付": "Delivered",
   "前台 Agent": "Front agent",
