@@ -18,7 +18,7 @@ a doc on `main`, your own habits), the guide wins.
 
 Cross-border dividend tax planning for companies and individuals in Asia (TUM project study). A client describes a
 transaction in a chat; agents take the intake, a deterministic program computes every candidate structure from the law,
-and the agents write, review and polish a report. The project goals are in `goals.en.md` (Chinese `目标.md` prevails).
+and the agents write and review a report, which the program typesets. The project goals are in `goals.en.md` (Chinese `目标.md` prevails).
 
 ## Layout
 
@@ -27,12 +27,12 @@ and the agents write, review and polish a report. The project goals are in `goal
 | `database/` | The law library: official texts, clauses, parameters with verbatim quotes, absence records. Built by `database/tools/build.py`. Spec: `database/database_spec.en.md` |
 | `rule/` | The rule layer: the law as structured, evaluable rules over the library (`rule.csv`, `variable.csv`, `decision.csv`, golden tests in `rule_test.csv`). Spec: `rule/rule_layer_spec.en.md` |
 | `optimization/` | The optimizer: enumerates structures, evaluates each hop through the rule layer, ranks by tax per payment. Spec: `optimization/optimization_layer_spec.en.md` |
-| `agent/` | The four agents (front, analysis, review, polish), their specs and prompts, the case MCP server, the orchestrator (`agent/tools/orchestrate.py`, LangGraph flow, Claude Code executes the agents), retrieval, PDF rendering |
+| `agent/` | The three agents (front, analysis, review; the polish stage was removed on 2026-11-06), their specs and prompts, the case MCP server, the orchestrator (LangGraph flow; `agent/tools/orchestrate_codex.py` runs the agents on the Codex CLI with qwen by default, `agent/tools/orchestrate.py` on Claude Code), retrieval, PDF rendering |
 | `apps/api/` | The web host (FastAPI) behind the chat UI; `python apps/api/server.py` |
 | `apps/web/` | The chat UI (React + Vite); `npm ci && npm run build` writes `apps/web/dist`, which the host serves |
 | `case_end2end/` | One fictitious end-to-end case with its documents and expected results |
 | `cases/` | Runtime case files with client documents. Git-ignored; never commit them |
-| `.mcp.json`, `.claude/` | MCP servers and generated agent definitions (`agent/tools/make_agents.py` regenerates `.claude/agents` and `.claude/mcp`) |
+| `.mcp.json`, `.claude/`, `.codex/` | MCP servers and generated agent definitions (`agent/tools/make_agents.py` regenerates `.claude/agents` and `.claude/mcp`, then `agent/tools/make_codex.py` regenerates `.codex/agents`) |
 
 ## Environment
 

@@ -64,8 +64,9 @@ Run the checks in `AGENTS.md` and paste their real output into the report. Then 
 - machine-specific paths: `.mcp.json`, `.claude/mcp/*.json` and `.claude/settings.json` name one machine's
   `C:/Coding/Anaconda/envs/tax/python.exe`. Make them portable and regenerate `.claude/` with
   `agent/tools/make_agents.py`;
-- Windows-only assumptions (the orchestrator looks for `claude.exe` in the VS Code extension when `CLAUDE_BIN` is unset
-  and `claude` is not on PATH);
+- Windows-only assumptions (the Codex adapter looks for the app-bundled `codex.exe` under `%LOCALAPPDATA%\OpenAI\Codex\bin`
+  when `TAX_CODEX_BIN` is unset, then for `codex` on PATH; the Claude path looks for `claude.exe` in the VS Code
+  extension when `CLAUDE_BIN` is unset and `claude` is not on PATH);
 - uploads: the host accepts `.doc`, `.docx`, `.xls` and `.xlsx` (`UPLOAD_TYPES` in `apps/api/server.py`), but
   `agent/tools/doc_parse.py` reads only PDFs and images, so a Word or Excel upload is never read. Make them readable
   (`openpyxl` is installed; a `.docx` is a zip of XML) or stop accepting them, and say which;
@@ -92,10 +93,14 @@ become our checks). What our host does today, so you can see the gaps:
 - Cases are folders of files under `cases/`; the agents read and write those files, so keep the layout. They must
   survive deploys and restarts. A free Render service has no persistent disk, so sync the case folders to the team's
   cloud store (the Supabase project behind the sign-in) and restore them on start.
-- The orchestrator starts the Claude Code CLI; the build must install it (`npm i -g @anthropic-ai/claude-code`) and set
-  `CLAUDE_BIN` or put it on PATH.
-- The model key is read from `.env` only (`qwen_key`, `claude_env` in `agent/tools/orchestrate.py`); also read the
-  process environment. The keys come from the committed `.env`; values that differ on the cloud (`site_url` = the
+- Since 2026-11-07 the agents run on the Codex CLI (`agent/tools/orchestrate_codex.py`, configuration
+  `agent/harness.json`; the web host's default, `TAX_HARNESS=claude` for the earlier Claude Code path). The build must
+  install a Linux Codex CLI that talks to an OpenAI-compatible provider over the Responses API (the npm package
+  `@openai/codex`; locally tested with 0.165.0-alpha.1.2, so check the cloud version against it) and set `TAX_CODEX_BIN`
+  or put `codex` on PATH. Each agent call is a fresh process with its own `CODEX_HOME` under `.codex/runtime/`, which
+  must be writable and grows with every call. Claude Code is needed only if the cloud runs with `TAX_HARNESS=claude`.
+- The model key is read from `.env` only (`qwen_key`: `harness.process_env` in `agent/tools/harness.py` for the Codex
+  path, `claude_env` in `agent/tools/orchestrate.py` for the Claude path); also read the process environment. The keys come from the committed `.env`; values that differ on the cloud (`site_url` = the
   deployment address, secure cookies) go into `render.yaml` and override `.env`.
 - Two Supabase settings, not one. Sign-in and the cloud case store use the team's settings that `render.yaml` and
   `apps/api/auth.py` name (`FSIE_AUTH_*`, `FSIE_DATABASE_URL`). Our lowercase `supabase_url`, `supabase_key` and
@@ -115,8 +120,8 @@ become our checks). What our host does today, so you can see the gaps:
   - A run (one to three hours) is a child process of the web service, and a sleeping service kills it. Keep the
     service awake while a run is in progress (the open page already polls the progress; make sure that polling counts,
     or have the run itself keep the service busy), and tell the client in the UI not to close the page during a run.
-  - Measure the memory of one run on the cloud (the Claude Code CLI plus the MCP servers it starts). If 512 MB is not
-    enough, say so with the figure.
+  - Measure the memory of one run on the cloud (the Codex CLI plus the MCP servers it starts; the review node runs two
+    agents at once, the main check and the legal lane). If 512 MB is not enough, say so with the figure.
   In the report, list what the light edition loses against the local one, and which Render plan would run the full
   product. `README.md` has a section "Local and cloud editions" that says the cloud runs the light edition only; once
   deployed, make it true: the address, and the limits as you measured them.
