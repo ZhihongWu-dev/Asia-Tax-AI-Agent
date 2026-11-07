@@ -52,6 +52,9 @@ if "kr" in which:
     raw = s.encode("utf-8")
     out, mode = build.slice_kr("kr.cita", raw)
     report("KR 법인세법", out, mode, ("kr.cita#98", "kr.cita#98.1", "kr.cita#98-2", "kr.cita#2"))
+    text = chr(10).join(build.pdf_pages(D / "kr.cita.20260701.pdf"))      # the same act printed from law.go.kr as PDF (2026-11-07)
+    out, mode = build.slice_kr_pdf("kr.cita.pdf", text)
+    report("KR 법인세법, law.go.kr PDF as at 2026-07-01", out, mode, ("kr.cita.pdf#98", "kr.cita.pdf#98.1"))
 if "in" in which:
     p = D / "in.ita1961.pdf"
     if p.exists():
@@ -69,6 +72,9 @@ if "my" in which:
     text = chr(10).join(build.pdf_pages(D / "my.ita1967.pdf"))
     out, mode = build.slice_act("my.ita1967", text, "my")
     report("MY Income Tax Act 1967", out, mode, ("my.ita1967#s109", "my.ita1967#s44"))
+    text = chr(10).join(build.pdf_pages(D / "my.pua235.2022.pdf"))         # a bilingual order: Malay half, then English (2026-11-07)
+    out, mode = build.slice_act("my.pua235", text, "my")
+    report("MY P.U. (A) 235/2022 (bilingual)", out, mode, ("my.pua235#s4", "my.pua235#ms.s4"))
 if "th" in which:
     for page in ("5937", "5939"):
         text = build.html_text((D / ("th.rc.th.%s.html" % page)).read_bytes())

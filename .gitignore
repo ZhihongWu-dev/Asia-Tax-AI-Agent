@@ -66,3 +66,6 @@ evals/b_workflow/runs/model_e2e_quota_*.json
 database/index/
 **/intake/index/
 **/intake/products/*/index/
+
+# OCR runs in progress (database/tools/ocr.py)
+database/ocr/.parts/

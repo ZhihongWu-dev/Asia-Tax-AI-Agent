@@ -370,3 +370,982 @@ cn.exit.gain_base,cn,company,exit,gain_base,"realisable value or transaction pri
 cn.exit.rate,cn,company,exit,rate,25,%,cn.law.eit#4,企业所得税的税率为25％,2008-01-01,,Liquidation income is declared and taxed before deregistration (EIT Law art. 55) at the enterprise income tax rate; preferential rates of the enterprise are not carried into the liquidation period here.,,
 cn.exit.shareholder_dividend_base,cn,company,exit,shareholder_dividend_base,share of the residual assets equal to the shareholder's portion of accumulated undistributed profits and surplus reserves,text,cn.cs.2009-60#i5,被清算企业的股东分得的剩余资产的金额，其中相当于被清算企业累计未分配利润和累计盈余公积中按该股东所占股份比例计算的部分，应确认为股息所得,2008-01-01,,"Shareholder level of the deemed liquidation: this part is a dividend (for a non-resident shareholder, the dividend withholding and treaty caps apply).",,
 cn.exit.shareholder_gain_base,cn,company,exit,shareholder_gain_base,"residual assets less the dividend part, above or below the shareholder's investment cost",text,cn.cs.2009-60#i5,剩余资产减除股息所得后的余额，超过或低于股东投资成本的部分，应确认为股东的投资转让所得或损失,2008-01-01,,"Shareholder level of the deemed liquidation: this part is a gain or loss on the investment (for a non-resident shareholder, the share-transfer rules of the restructure slot apply).",,
+id.final.cit_rate,id,company,final,cit_rate,22,%,id.tax-law-compilation-2022#p184,The Resident corporate Taxpayers and the permanent establishments is at 22% (twenty two percent) which comes to effect as of the fiscal year 2022.,2022-01-01,,"This official compilation identifies amendments through Law Number 7 of 2021. A separate, later official source is required before treating this as changed after that source date.",,
+id.inbound.foreign_dividend_exempt_if_invested,id,all,inbound,foreign_dividend_exempt_if_invested,yes,bool,id.tax-law-compilation-2022#p133,"dividends originating from abroad and income after tax from an overseas permanent establishment that are received or earned by resident corporate Taxpayers or resident individual Taxpayers, as long as they are invested or used to support other business activities in the territory of the Republic of Indonesia within a certain period of time",,,"The cited exemption condition has further statutory requirements, including investment amount or timing; use the source before applying it.",,
+vn.final.cit_rate,vn,company,final,cit_rate,20,%,vn.law.cit2025.en#all,"The standard corporate income tax rate is 20 percent, except for cases specified in Clauses 2, 3, and 4 of this Article and targets enjoying tax rate incentives specified in Article 13 of this Law.",2025-01-01,,"Standard company rate, subject to the listed statutory exceptions and incentives. The law applies from the 2025 corporate income tax period.",,
+vn.inbound.foreign_income_taxable,vn,company,inbound,foreign_income_taxable,yes,bool,vn.law.cit2025.en#all,Enterprises established under the provisions of Vietnamese law shall pay tax on taxable income arising in Viet Nam and taxable income arising outside Viet Nam;,2025-01-01,,Worldwide taxable-income rule for enterprises established under Vietnamese law.,,
+vn.inbound.foreign_tax_credit_cap,vn,company,inbound,foreign_tax_credit_cap,vietnamese_cit_on_same_income,text,vn.law.cit2025.en#all,"Vietnamese enterprises investing abroad that earn income from overseas production and business activities in a tax period shall have the corporate income tax paid under the laws of the recipient country deducted from corporate income tax payable in Viet Nam, provided that the deduction does not exceed corporate income tax calculated under Viet Nam's corporate income legislation.",2025-01-01,,"Foreign corporate tax credit for the stated overseas activities, capped at the Vietnamese corporate tax calculated on that income.",,
+vn.residence.worldwide_tax_scope,vn,company,residence,worldwide_tax_scope,yes,bool,vn.law.cit2025.en#all,Enterprises established under the provisions of Vietnamese law shall pay tax on taxable income arising in Viet Nam and taxable income arising outside Viet Nam;,2025-01-01,,Records the statutory tax scope for Vietnamese-law enterprises; it is not a complete treaty-residence tie-breaker test.,,
+in.final.individual_top_rate,in,individual,final,individual_top_rate,30,%,in.law.ita2025.fa2026.en#s202,"7.
+Above ` 2400000
+30%",2026-04-01,,"Primary section 202(1), default new regime for tax years beginning on or after 1 April 2026. The 30% is the top marginal ordinary-income slab only, on income above INR 2400000; not a flat rate on all income or the effective tax rate. Subject to the statutory income-computation rules, opt-out mechanism, special-rate provisions, rebate, surcharge and cess where applicable. Legacy AY 2026-27 page remains archived as a cross-check, not the authority for new-law TY 2026-27.",,
+in.residence.residence_days_threshold,in,individual,residence,residence_days_threshold,182,days,in.law.ita2025.fa2026.en#s6,"(2) An individual shall be resident in India in a tax year, if he—
+	
+(a)	 is in India for a total period of one hundred and eighty-two days or more 
+in that tax year; or
+
+	
+(b)	 is in India cumulatively for sixty days or more during that year and has 
+been in India cumulatively for three hundred and sixty-five days or more 
+in the four years preceding such tax year.",2026-04-01,,"Section 6(2)(a) is one sufficient presence condition, not the complete residence algorithm. Section 6(2)(b) also provides a 60-day plus 365-day/four-year route; sections 6(3)-(8) contain citizen/visitor, 120-day and deemed-residence conditions; section 6(13) addresses not-ordinarily-resident status. Use the full section for classification. Primary source migrated from the FAQ after checking the Finance Act 2026 amended Act; commencement is 1 April 2026 under section 1(3).",,
+in.residence.residence_test,in,company,residence,residence_test,indian_company_or_poem_in_india,text,in.law.ita2025.fa2026.en#s6,"(10)(a) A company is said to be a resident in India in any tax year, if—
+	
+(i)	 it is an Indian company; or
+	
+(ii)	 its place of effective management is in India in that tax year;
+(b) for the purposes of this sub-section, “place of effective management” means a 
+place where key management and commercial decisions necessary for the conduct 
+of business of the company as a whole are, in substance, made.",2026-04-01,,Primary statutory source replaces the FAQ citation. Section 6(10) states the Indian-company or place-of-effective-management test and defines POEM by substantive key management and commercial decisions. The Act commences on 1 April 2026 under section 1(3).,,
+in.anti_abuse.gaar_chapter_applies,in,all,anti_abuse,gaar_chapter_applies,yes,bool,in.rules2026#s128(2),"the provisions of Chapter XI shall apply to any arrangement, irrespective of the date on which it has been entered into, in respect of the tax benefit obtained from the arrangement on or after the 1st April, 2017.",2026-04-01,,"Rule 128(2) of the officially notified Income-tax Rules, 2026 states the GAAR Chapter XI application rule.",,
+in.final.company_default_cit_rate,in,company,final,company_default_cit_rate,30,%,in.law.finance2026.gazette.en#s161(4),"I. In the case of a domestic company,— 
+ 
+(i) where its total turnover or the gross 
+receipt in the tax year 2024-25 does not exceed 
+₹ 400 crores; 
+25% of the total income; 
+(ii) other than that referred to in item (i). 
+30% of the total income.",2026-04-01,2027-03-31,"Finance Act 2026 section 3(1) charges tax for TY 2026-27 under the 2025 Act at First Schedule Part I-B rates. Paragraph E.I(ii) is the residual domestic-company base rate, outside the 25% condition in E.I(i) (turnover/gross receipts in TY 2024-25 at most INR 400 crore) and subject to applicable statutory elective/special regimes, including sections 199-201. Surcharge, cess, MAT and special-income treatment are not included in this base rate. Income-period dates are 1 April 2026 to 31 March 2027; later annual rates must be checked rather than assumed. The archived AY 2026-27 overview is not the current-year authority.",,
+in.inbound.foreign_tax_credit_form67_required,in,all,inbound,foreign_tax_credit_form67_required,yes,bool,in.itd.form67#h3,A resident taxpayer who has credit for the amount of any foreign tax paid in a country outside India by way of deduction or otherwise will be required to furnish the statement in Form 67,2025-04-01,2026-03-31,"Legacy Income-tax Act 1961 income-period record, limited here to FY 2025-26 / AY 2026-27. Effective dates identify the income period, not a prohibition on later filing. Old-year returns remain governed by the 1961 Act even when filed after 1 April 2026; this legacy manual is not relied on for the current filing deadline. For new-law tax years beginning 1 April 2026 use Form 44 under Rule 76 of the Income-tax Rules 2026. Transition cross-check: in.itd.forms-transition2026, question 19.",,
+in.outbound_wht.nonresident_payment_tds_required,in,all,outbound_wht,nonresident_payment_tds_required,yes,bool,in.law.ita2025.fa2026.en#s393,"(2) Where any income or sum of the nature specified in column B of the Table 
+below, is credited or paid by the person specified in column D during the tax year, 
+to a non-resident specified in column C, the person responsible for paying such 
+income or sum shall deduct income-tax on the amount of such income or sum,—
+	
+(a)	 at the rate specified in column E;
+	
+(b)	 at the time of credit of income or sum to the account of the payee or at 
+the time of its payment in cash or by way of a cheque or a draft or by 
+any other mode, whichever is earlier; and
+	
+(c)	 subject to the provisions of sub-sections (4), (8) and (9).",2026-04-01,,"New-law nonresident withholding obligation under section 393(2), limited to covered income/sums and specified payer/payee categories in its table, subject to subsections (4), (8), (9), applicable rates and relief. The earlier of credit or payment determines the old/new TDS law; an event before 1 April 2026 remains under the 1961 Act even if paid later. Remittance information under Rule 220 is a separate obligation controlled by the remittance date. No universal dividend rate is inferred. Cross-check: in.itd.tds-transition2026 questions 4-6 and 10.",,
+ae.final.cit_rate,ae,individual,final,cit_rate,9,%,ae.cabinet116.2022.taxable-threshold.en#a3,"Article 3 – Income Subject to Corporate Tax at (9%) Nine 
+Percent  
+For the purposes of Paragraph (b) of Clause 1 of Article 3 of the Corporate Tax Law, 
+the Taxable Income of a Taxable Person that exceeds the amount of (375,000) three 
+hundred seventy-five thousand dirhams shall be subject to Corporate Tax at (9%) nine 
+percent in the relevant Tax Period.",2024-01-01,,"Natural-person UAE business tax applies only where qualifying business turnover exceeds AED 1 million in a Gregorian calendar year under Cabinet Decision 49/2023 Article 2. First possible tax period is calendar 2024 (FTA natural-person guide section 6.3), not June 2023. This is 9% only above AED 375000 taxable income, with a 0% lower band; turnover is not taxable profit. Statutory exclusions and relief may apply.",,
+ae.inbound.foreign_income_taxable_if_related_to_uae_business,ae,individual,inbound,foreign_income_taxable_if_related_to_uae_business,yes,bool,ae.law.corporate-tax.legislation1582.en#a12,"2. The Taxable Income of a Resident Person, who is a natural person, is the income derived 
+from the State or from outside the State insofar as it relates to the Business or Business 
+Activity conducted by the natural person in the State as set out in Clause 6 of Article 11 of 
+this Decree-Law.",2024-01-01,,"Foreign-source income is included only insofar as related to the natural person’s UAE business/activity under Article 11(6); no unrestricted worldwide personal-income rule is inferred. Cabinet Decision 49/2023 exclusions and the AED 1 million turnover condition apply. First possible individual tax period is calendar 2024, corroborated by FTA guide section 6.3.",,
+ae.residence.residence_test,ae,individual,residence,residence_test,conducting_uae_business,text,ae.law.corporate-tax.legislation1582.en#a11,c. A natural person who conducts a Business or Business Activity in the State.,2024-01-01,,"Corporate-tax Resident Person definition for a natural person conducting UAE business, subject to Article 11(6), Cabinet Decision 49/2023 business categories and applicable treaties. Dates identify natural-person tax-period application, first calendar year 2024, rather than the separate domestic residence-days test.",,
+ae.outbound_wht.nonresident_state_source_rate,ae,all,outbound_wht,nonresident_state_source_rate,0,%,ae.law.corporate-tax.legislation1582.en#a47(1),"1. The income earned in the State by a non-resident person shall be subject to tax at a rate of 
+(0%) zero percent in form of withholding tax, or at any other rate for withholding tax to 
+be determined by a Cabinet resolution upon the proposal of the Minister, to the extent 
+that such income is not attributable to a permanent establishment or a connection in 
+accordance with the provisions of Paragraph (A) or Paragraph (C) of Clause (3) of Article 
+(12) of this Decree-Law.",2023-06-01,,"Current Article 45 default withholding rate on covered nonresident State-sourced income, excluding income attributable to a UAE PE or nexus under Article 12(3)(a)/(c). The Cabinet may prescribe other rates/categories; no permanent zero-rate guarantee or exemption from ordinary PE/nexus taxation is inferred.",,
+ae.residence.residence_test.company,ae,company,residence,residence_test,incorporated_or_effectively_managed_in_uae,text,ae.law.corporate-tax.legislation1582.en#a11(3),"3. A Resident Person is any of the following Persons: 
+a. A juridical person that is incorporated, established or otherwise recognized under the 
+applicable legislation of the State, including a Free Zone Person. 
+
+Federal Decree-Law of 2022 On Corporate and Business Tax 
+ 
+ 
+ 
+b. A juridical person that is incorporated, established or otherwise recognized under the 
+applicable legislation of a foreign jurisdiction and is effectively managed and 
+controlled in the State. 
+c. A natural person who conducts a Business or Business Activity in the State. 
+d. Any other Person as may be determined in a resolution issued by the Cabinet at the 
+suggestion of the Minister.",2023-06-01,,"Corporate-tax Resident Person status under Article 11(3)(a)-(b): UAE incorporation/establishment/recognition (including Free Zone Persons), or a foreign juridical person effectively managed and controlled in the UAE. This is not the separate natural-person domestic residence-days test. Article 69 governs first tax periods; treaty effects must be assessed separately.",,
+ae.anti_abuse.transfer_pricing_applies_to_related_parties,ae,company,anti_abuse,transfer_pricing_applies_to_related_parties,yes,bool,ae.law.corporate-tax.legislation1582.en#a34(1),"1. In determining the Taxable Income, transactions and arrangements between Related 
+Parties shall meet the arm's length standard as specified in Clauses 2, 3, 4 and 5 of this 
+Article and any conditions that may be prescribed in a decision issued by the Authority. 
+
+Federal Decree-Law of 2022 On Corporate and Business Tax 
+ ",2023-06-01,,Related-party transactions/arrangements must satisfy the Article 34 arm’s-length standard and prescribed conditions/methods. This parameter does not certify every connected-person deduction condition; payments to Connected Persons have additional rules in Article 36.,,
+ae.final.cit_rate.company,ae,company,final,cit_rate,9,%,ae.cabinet116.2022.taxable-threshold.en#a3,"Article 3 – Income Subject to Corporate Tax at (9%) Nine 
+Percent  
+For the purposes of Paragraph (b) of Clause 1 of Article 3 of the Corporate Tax Law, 
+the Taxable Income of a Taxable Person that exceeds the amount of (375,000) three 
+hundred seventy-five thousand dirhams shall be subject to Corporate Tax at (9%) nine 
+percent in the relevant Tax Period.",2023-06-01,,"Ordinary 9% marginal corporate-tax band above AED 375000 of taxable income, not 9% on all income. Tax periods commence on or after 1 June 2023 under Article 69. Qualifying Free Zone Persons and exempt persons have separate rules. In-scope MNE constituent entities may also be subject to UAE DMTT for fiscal years beginning on or after 1 January 2025; 9% is not a ceiling on their combined liability.",,
+ae.inbound.foreign_income_taxable_for_resident_juridical_person,ae,company,inbound,foreign_income_taxable_for_resident_juridical_person,yes,bool,ae.law.corporate-tax.legislation1582.en#a12,"1. A Resident Person, which is a juridical person, is subject to Corporate Tax on its Taxable 
+Income derived from the State or from outside the State, in accordance with the provisions 
+of this Decree-Law.",2023-06-01,,"General resident-juridical-person tax base includes UAE and foreign-source taxable income, subject to the law, exemptions, participation/foreign-PE rules and foreign-tax credits. This does not certify all foreign income as taxable or deny specific relief.",,
+ae.anti_abuse.gaar_allows_tax_advantage_adjustment,ae,all,anti_abuse,gaar_allows_tax_advantage_adjustment,yes,bool,ae.law.corporate-tax.legislation1582.en#a50,"1. This Article applies to a transaction or an arrangement if, having regard to all relevant 
+circumstances, it can be reasonably concluded that: 
+a. the entering into or carrying out of the transaction or arrangement, or any part thereof, 
+is not for a valid commercial or other non-fiscal reason which reflects economic reality; 
+and 
+b. the main purpose or one of the main purposes of the transaction or arrangement, or 
+any part thereof, is to obtain a Corporate Tax advantage that is not consistent with the 
+intention or purpose of this Decree-Law. 
+2. For the purposes of this Article, a Corporate Tax advantage includes, but is not limited to, 
+the following: 
+a. A refund or an erroneous refund of Corporate Tax. 
+b. Avoidance or reduction of Corporate Tax Payable. 
+c. Deferral of the payment of Corporate Tax or expediting its refund. 
+d. Avoidance of an obligation to deduct or compute the Corporate Tax. 
+3. Where the provisions of this Article apply to a transaction or arrangement, the Authority 
+may make a determination that one or more specified Corporate Tax advantages obtained 
+as a result of the transaction or arrangement are to be counteracted or adjusted.",2023-06-01,,"Article 50 requires the commercial/economic-reality and main-purpose tax-advantage tests; the FTA may counteract or adjust the advantage. Statutory factors and burden apply. Effective date records ordinary CT tax-period application; Article 61(3) separately extends this rule to arrangements entered into on or after Official Gazette publication, so the parameter date is not a grandfathering guarantee for earlier arrangements.",,
+ae.residence.residence_days_min,ae,individual,residence,residence_days_min,183,days,ae.fta.tax-resident-certificate-2024#p38,If a natural person was physically present in the UAE for 183 days or more in the,2023-03-01,,"Domestic-law test measured within the relevant continuous 12-month period; any day or part of a day counts, subject to the guide's exceptional-circumstances rules.",,
+ae.residence.conditional_residence_days_min,ae,individual,residence,conditional_residence_days_min,90,days,ae.fta.tax-resident-certificate-2024#p39,Resident if they were present in the UAE for at least 90 days and also meet both of,2023-03-01,,"Alternative domestic-law test. It additionally requires UAE/GCC nationality or a valid UAE Residence Permit, plus a permanent place of residence in the UAE or UAE employment/business.",,
+ae-cn.outbound_wht.dividend_rate,ae-cn,all,outbound_wht,dividend_rate,7,%,treaty.ae-cn.1993.mli.en#11.2,so charged shall not exceed seven per cent (7 per cent) of the gross amount of the,1994-07-22,,General source-state cap for dividends paid to a beneficial owner; government and qualifying government-owned recipients may qualify for exclusive residence-state taxation under paragraph 3.,,
+ae-cn.outbound_wht.interest_rate,ae-cn,all,outbound_wht,interest_rate,7,%,treaty.ae-cn.1993.mli.en#11.2,tax so charged shall not exceed seven per cent,1994-07-22,,General source-state cap for interest paid to a beneficial owner; paragraph 3 contains exemptions for specified government and financial recipients.,,
+ae-cn.outbound_wht.royalty_rate,ae-cn,all,outbound_wht,royalty_rate,10,%,treaty.ae-cn.1993.mli.en#12.2,the tax so charged shall not exceed ten per cent,1994-07-22,,General source-state cap for royalties paid to a beneficial owner.,,
+ae-cn.anti_abuse.ppt_applies,ae-cn,all,anti_abuse,ppt_applies,yes,bool,treaty.ae-cn.1993.mli.en#27.mli7,obtaining that benefit was one of the principal purposes of any arrangement or transaction,,,MLI Article 7(1) principal-purposes test in the official synthesised text. MLI effect dates vary by tax type: withholding events from 2023-01-01 and other taxes for taxable periods beginning on or after 2023-03-01.,,
+ae-hk.outbound_wht.dividend_rate_government,ae-hk,all,outbound_wht,dividend_rate_government,0,%,treaty.ae-hk.2014.mli.en#10.2,zero per cent of the gross amount of the dividends if the,,,"Applies to the Government or local governments of the other Contracting Party and their directly wholly-owned institutions or entities, subject to Article 10.",,
+ae-hk.outbound_wht.dividend_rate_other,ae-hk,all,outbound_wht,dividend_rate_other,5,%,treaty.ae-hk.2014.mli.en#10.2,five per cent of the gross amount of the dividends in all other,,,General source-state dividend cap for a beneficial owner. The treaty entered into force on 2015-12-10; Hong Kong application begins in year of assessment 2016/2017.,,
+ae-hk.outbound_wht.interest_rate,ae-hk,all,outbound_wht,interest_rate,5,%,treaty.ae-hk.2014.mli.en#11.2,"beneficial owner of the interest is a resident of the other Contracting Party, the tax so charged shall not exceed five per cent",,,General source-state interest cap for a beneficial owner; Article 11 also contains specified government-recipient exemptions.,,
+ae-hk.outbound_wht.royalty_rate,ae-hk,all,outbound_wht,royalty_rate,5,%,treaty.ae-hk.2014.mli.en#12.2,"beneficial owner of the royalties is a resident of the other Contracting Party, the tax so charged shall not exceed five per cent",,,General source-state royalty cap for a beneficial owner.,,
+ae-hk.anti_abuse.ppt_applies,ae-hk,all,anti_abuse,ppt_applies,yes,bool,treaty.ae-hk.2014.mli.en#25.mli7,obtaining that benefit was one of the principal purposes of any arrangement or transaction,,,MLI Article 7(1) principal-purposes test. Hong Kong effect dates are 2023-04-01 for withholding events and years of assessment from 2024-04-01 for other taxes; UAE dates are 2024-01-01 for withholding events and taxable periods from 2023-09-23 for other taxes.,,
+ae-id.outbound_wht.dividend_rate,ae-id,all,outbound_wht,dividend_rate,10,%,treaty.ae-id.2019.en#10.2,charged shall not exceed 10% (ten percent) of the gross amount of the,,,"General source-state dividend cap for a beneficial owner under Article 10. OCR text, to be checked against the original.",,
+ae-id.outbound_wht.dividend_rate_government,ae-id,all,outbound_wht,dividend_rate_government,0,%,treaty.ae-id.2019.en#10.4,shall be exempt from tax in the first-mentioned Contracting State.,,,"Article 10 government-recipient dividend exemption; the quote is retained exactly as extracted from the official attachment. OCR text, to be checked against the original.",,
+ae-id.outbound_wht.interest_rate,ae-id,all,outbound_wht,interest_rate,7,%,treaty.ae-id.2019.en#11.2,tax so charged shall not exceed 7% (seven percent),,,"General source-state interest cap for a beneficial owner under Article 11; specified government and central-bank recipients are exempt. OCR text, to be checked against the original.",,
+ae-id.outbound_wht.royalty_rate,ae-id,all,outbound_wht,royalty_rate,5,%,treaty.ae-id.2019.en#12.2,the tax so charged shall not exceed 5%,,,"General source-state royalty cap for a beneficial owner under Article 12. OCR text, to be checked against the original.",,
+ae-id.anti_abuse.ppt_applies,ae-id,all,anti_abuse,ppt_applies,yes,bool,treaty.ae-id.2019.en#29,obtaining that benefit was one of the principal purposes of any arrangement,,,"Article 27 principal-purposes test in the replacement 2019 treaty text. OCR text, to be checked against the original.",,
+ae-jp.outbound_wht.dividend_rate_parent,ae-jp,all,outbound_wht,dividend_rate_parent,5,%,treaty.ae-jp.2013.summary.en#all,５％（at least 10%）,2015-01-01,,"Official Ministry of Finance Japan convention summary: 5% dividend cap for a parent/subsidiary relationship meeting at least 10% shareholding. Supporting summary, not the unavailable base PDF.",,
+ae-jp.outbound_wht.dividend_rate_other,ae-jp,all,outbound_wht,dividend_rate_other,10,%,treaty.ae-jp.2013.summary.en#all,10％（others）,2015-01-01,,"Official Ministry of Finance Japan convention summary: 10% dividend cap in other cases. Supporting summary, not the unavailable base PDF.",,
+ae-jp.outbound_wht.interest_rate_government,ae-jp,all,outbound_wht,interest_rate_government,0,%,treaty.ae-jp.2013.summary.en#all,"Exemption (received by Governments, etc.)",2015-01-01,,Official Ministry of Finance Japan convention summary table: government and analogous recipients are exempt for interest.,,
+ae-jp.outbound_wht.interest_rate,ae-jp,all,outbound_wht,interest_rate,10,%,treaty.ae-jp.2013.summary.en#all,"Taxation on investment income (dividends, interest and royalties) in the source country is reduced as follows:",2015-01-01,,Official Ministry of Finance Japan summary table lists a 10% cap for other interest; table layout is retained in the source but flattened in text extraction.,,
+ae-jp.outbound_wht.royalty_rate,ae-jp,all,outbound_wht,royalty_rate,10,%,treaty.ae-jp.2013.summary.en#all,"Taxation on investment income (dividends, interest and royalties) in the source country is reduced as follows:",2015-01-01,,Official Ministry of Finance Japan summary table lists a 10% royalty cap; table layout is retained in the source but flattened in text extraction.,,
+ae-jp.anti_abuse.ppt_applies,ae-jp,all,anti_abuse,ppt_applies,yes,bool,treaty.ae-jp.2013.mli.en#all,principal purpose or one of the principal purposes of any arrangement or transaction was to obtain those benefits,2020-01-01,,MLI Article 7(1) applies from 2020-01-01 for withholding events and from taxable periods beginning on or after 2020-03-01 for other taxes.,,
+ae-kr.outbound_wht.dividend_rate_parent,ae-kr,all,outbound_wht,dividend_rate_parent,5,%,treaty.ae-kr.2019.en#10.2,a) 5 per cent of the gross amount of the dividends if the beneficial owner is a company (other than a partnership) which holds directly at least 10 per cent of the capital of the company paying the dividends;,2021-01-01,,Source-state dividend cap for a beneficial-owner company (other than a partnership) that directly holds at least 10% of the payer's capital. The treaty took legal effect in 2020; Article 28 makes its withholding provisions effective for payments from 2021-01-01.,,
+ae-kr.outbound_wht.dividend_rate_other,ae-kr,all,outbound_wht,dividend_rate_other,10,%,treaty.ae-kr.2019.en#10.2,b) 10 per cent of the gross amount of the dividends in all other cases.,2021-01-01,,General source-state dividend cap for a beneficial owner in cases not qualifying for Article 10(2)(a).,,
+ae-kr.outbound_wht.interest_rate,ae-kr,all,outbound_wht,interest_rate,10,%,treaty.ae-kr.2019.en#11.2,the tax so charged shall not exceed 10 per cent of the gross amount of the interest.,2021-01-01,,General source-state interest cap for a beneficial owner. Article 11(3) separately provides exclusive residence-state taxation for specified government recipients.,,
+ae-kr.outbound_wht.royalty_rate,ae-kr,all,outbound_wht,royalty_rate,10,%,treaty.ae-kr.2019.en#12.2,the tax so charged shall not exceed 10 per cent of the gross amount of the royalties.,2021-01-01,,General source-state royalty cap for a beneficial owner.,,
+ae-kr.anti_abuse.ppt_applies,ae-kr,all,anti_abuse,ppt_applies,yes,bool,treaty.ae-kr.2019.en#26.5,"obtaining that benefit was one of the principal purposes of any arrangement or transaction that resulted directly or indirectly in that benefit, unless it is established that granting that benefit in these circumstances would be in accordance with the object and purpose of the relevant provisions of this Convention",2021-01-01,,"Article 26(5) is a principal-purposes test contained directly in the replacement treaty, subject to its object-and-purpose exception; it is not dependent on a separate MLI text.",,
+ae-sg.outbound_wht.dividend_rate,ae-sg,all,outbound_wht,dividend_rate,0,%,treaty.ae-sg.1995.mli.en#annexB.5.1,Dividends paid by a company which is a resident of a Contracting State to a resident of the other Contracting State shall be taxable only in that other State.,2017-01-01,,Second Protocol Article V replaces former Article 10(1)–(4). This records the resulting exclusive residence-state taxation; the Protocol takes effect from 2017-01-01.,,
+ae-sg.outbound_wht.interest_rate,ae-sg,all,outbound_wht,interest_rate,0,%,treaty.ae-sg.1995.mli.en#annexB.6.1,Interest arising in a Contracting State and paid to a resident of the other Contracting State shall be taxable only in that other State.,2017-01-01,,Second Protocol Article VI replaces former Article 11(1)–(4). This records the resulting exclusive residence-state taxation; the Protocol takes effect from 2017-01-01.,,
+ae-sg.outbound_wht.royalty_rate,ae-sg,all,outbound_wht,royalty_rate,5,%,treaty.ae-sg.1995.mli.en#12.2,of the royalties then the tax so charged shall not exceed 5 percent of the gross amount of such royalties.,1996-08-30,,Article 12 source-state cap for a beneficial owner. The Second Protocol removes equipment royalties from the definition but does not replace this rate cap.,,
+ae-sg.anti_abuse.ppt_applies,ae-sg,all,anti_abuse,ppt_applies,yes,bool,treaty.ae-sg.1995.mli.en#annexA.4,"obtaining that benefit was one of the principal purposes of any arrangement or transaction that resulted directly or indirectly in that benefit, unless it is established that granting that benefit in these circumstances would be in accordance with the object and purpose of the relevant provisions of this Agreement.",2020-01-01,,MLI Annex A new Article 27A(1) principal-purposes test. The official consolidated text gives its Singapore withholding-tax effect date as 2020-01-01.,,
+ae-th.outbound_wht.dividend_rate,ae-th,all,outbound_wht,dividend_rate,10,%,treaty.ae-th.2000.en#10.2,the tax so charged shall not exceed 10 per cent of the gross amount of the dividends.,2001-02-01,,"Article 10(2) general source-state cap for a beneficial owner. The official Thai Revenue Department treaty introduction states withholding application from 2001-02-01. OCR text, to be checked against the original.",,
+in-th.outbound_wht.dividend_rate,in-th,all,outbound_wht,dividend_rate,10,%,treaty.in-th.2015.en#10.2,the tax so charged shall not exceed 10 per cent of the gross amount of the dividends.,2016-01-05,,"Article 10(2) general source-state cap where the beneficial owner is a resident of the other Contracting State. The official Thai Revenue Department DTA index records entry into force on 2016-01-05. OCR text, to be checked against the original.",,
+in-jp.outbound_wht.dividend_rate,in-jp,all,outbound_wht,dividend_rate,10,%,treaty.in-jp.1989.mli.en#10.2,the tax so charged shall not exceed 10 per cent of the gross amount of the dividends.,2007-04-01,,"Article 10(2), as replaced by the 2006 Protocol. The 2006 Protocol became applicable in India to source-withheld amounts paid or credited on or after 2007-04-01; the official Japanese MLI synthesised text presents the current provision.",,
+in-jp.anti_abuse.ppt_applies,in-jp,all,anti_abuse,ppt_applies,yes,bool,treaty.in-jp.1989.mli.en#27.mli7,"a benefit under the Convention shall not be granted in respect of an item of income if it is reasonable to conclude, having regard to all relevant facts and circumstances, that obtaining that benefit was one of the principal purposes of any arrangement or transaction that resulted directly or indirectly in that benefit",2020-04-01,,MLI Article 7(1) principal-purpose test as set out in the official Japanese Ministry of Finance synthesised text. The Ministry states that MLI effects in India apply to other taxes for taxable periods beginning on or after 2020-04-01.,,
+in-sg.outbound_wht.holding_pct_min,in-sg,company,outbound_wht,holding_pct_min,25,%,treaty.in-sg.1994.en#10.2,10% of the gross amount of the dividends if the beneficial owner is a company which owns at least 25% of the shares of the company paying the dividends;,1994-04-01,,Article 10(2)(a) holding condition in the official IRAS current treaty PDF; India effective date stated in its front matter.,,
+in-sg.outbound_wht.dividend_rate_reduced,in-sg,company,outbound_wht,dividend_rate_reduced,10,%,treaty.in-sg.1994.en#10.2,10% of the gross amount of the dividends if the beneficial owner is a company which owns at least 25% of the shares of the company paying the dividends;,1994-04-01,,Article 10(2)(a) reduced dividend source-state cap in the official IRAS current treaty PDF.,,
+in-sg.outbound_wht.dividend_rate_other,in-sg,all,outbound_wht,dividend_rate_other,15,%,treaty.in-sg.1994.en#10.2,15% of the gross amount of the dividends in all other cases.,1994-04-01,,Article 10(2)(b) other-case dividend source-state cap in the official IRAS current treaty PDF.,,
+in-sg.anti_abuse.ppt_applies,in-sg,all,anti_abuse,ppt_applies,yes,bool,treaty.in-sg.1994.en#annexA.2,"a benefit under this Agreement shall not be granted in respect of an item of income or capital if it is reasonable to conclude, having regard to all relevant facts and circumstances, that obtaining that benefit was one of the principal purposes of any arrangement or transaction that resulted directly or indirectly in that benefit",2020-04-01,,"Annex A, item 2 inserts Article 29A (principal-purpose test). Annex A, item 3 gives Singapore other-tax effect from basis periods beginning on or after 2020-04-01; the IRAS MLI page records the India DTA MLI amendment effective 2019-10-01.",,
+ae-th.outbound_wht.interest_rate_financial_institution,ae-th,all,outbound_wht,interest_rate_financial_institution,10,%,treaty.ae-th.2000.en#11.2,(a) 10 per cent of the gross amount of the interest if it is received by any financial institution (including an insurance company);,2001-02-01,,"Article 11(2)(a) cap for a financial institution, including an insurance company. Article 11(3) separately exempts specified government and government-guaranteed interest. OCR text, to be checked against the original.",,
+ae-th.outbound_wht.interest_rate_other,ae-th,all,outbound_wht,interest_rate_other,15,%,treaty.ae-th.2000.en#11.2,(b) 15 per cent of the gross amount of the interest in other cases.,2001-02-01,,"Article 11(2)(b) cap for beneficial-owner interest not within the financial-institution rule. OCR text, to be checked against the original.",,
+ae-th.outbound_wht.royalty_rate,ae-th,all,outbound_wht,royalty_rate,15,%,treaty.ae-th.2000.en#12.2,the tax so charged shall not exceed 15 per cent of the gross amount of the royalties.,2001-02-01,,"Article 12(2) general source-state royalty cap for a beneficial owner. OCR text, to be checked against the original.",,
+ae-vn.outbound_wht.dividend_rate_parent,ae-vn,all,outbound_wht,dividend_rate_parent,5,%,treaty.ae-vn.2009.en#10.2,(a) 5 percent of the gross amount of the dividends if the beneficial owner is a company (other than a partnership) which holds directly more than 50 per cent or at least 10 million USD of the capital of the company paying the dividends;,2010-04-12,,"Article 10(2)(a) cap for the stated direct company holding. The condition is more than 50% capital or at least USD 10 million capital, not a generic 10% holding threshold.",,
+ae-vn.outbound_wht.dividend_rate_other,ae-vn,all,outbound_wht,dividend_rate_other,15,%,treaty.ae-vn.2009.en#10.2,(b) 15 percent of the gross amount of the dividends in all other cases.,2010-04-12,,Article 10(2)(b) general source-state dividend cap for a beneficial owner.,,
+ae-vn.outbound_wht.dividend_rate_government,ae-vn,all,outbound_wht,dividend_rate_government,0,%,treaty.ae-vn.2009.en#10.3,shall be taxable only in that other Contracting State if the beneficial owner of the dividend is the Government of that other Contracting State or any of its institutions.,2010-04-12,,Article 10(3) exclusive residence-state rule for the stated government or government-owned beneficial owners.,,
+ae-vn.outbound_wht.interest_rate,ae-vn,all,outbound_wht,interest_rate,10,%,treaty.ae-vn.2009.en#11.2,the tax so charged shall not exceed 10 percent of the gross amount of the interest.,2010-04-12,,Article 11(2) general source-state interest cap for a beneficial owner; Article 11(3) separately exempts listed government and government-owned recipients.,,
+ae-vn.outbound_wht.royalty_rate,ae-vn,all,outbound_wht,royalty_rate,10,%,treaty.ae-vn.2009.en#12.2,the tax so charged shall not exceed 10 percent of the gross amount of such royalties.,2010-04-12,,Article 12(2) general source-state royalty cap for a beneficial owner.,,
+id.outbound_wht.default_nonresident_rate,id,all,outbound_wht,default_nonresident_rate,20,%,id.dgt.article26#all,"If they do not qualify for the Tax Treaty, the applicable Article 26 Income Tax rate is 20%;",,,Default Article 26 rate when the non-resident does not qualify for treaty treatment.,,
+id.outbound_wht.treaty_rate_available,id,all,outbound_wht,treaty_rate_available,yes,bool,id.dgt.article26#all,Withhold Article 26 Income Tax using the Tax Treaty rate if they qualify under PER-25/PJ/2018 and generate a withholding Article 26 Income Tax receipt using Article 23/26 Income Tax e-Bupot application;,,,The stated treaty-rate treatment is conditional on qualification under PER-25/PJ/2018.,,
+id.outbound_wht.payment_deadline,id,all,outbound_wht,payment_deadline,10,days,id.dgt.article26#all,Pay the Income Tax by first creating a billing code. The payment must be made no later than the 10th day of the following month to a Collecting Agent;,,,Payment deadline for the described Article 26 withholding process.,,
+id.residence.residence_days_threshold,id,individual,residence,residence_days_threshold,183,days,id.tax-law-compilation-2022#p121,are staying in Indonesia for more than 183 (one hundred and eighty-three) days within 12 (twelve) months period;,,,"One statutory resident-individual test. The text says more than 183 days, rather than 183 days or more.",,
+id.residence.residence_test,id,company,residence,residence_test,established_or_domiciled_in_indonesia,text,id.tax-law-compilation-2022#p121,"corporate established or having their domicile in Indonesia, except for certain units of government agencies that meet the following criteria:",,,"Statutory resident-corporate test, subject to the stated government-agency exception.",,
+id.final.individual_top_rate,id,individual,final,individual_top_rate,35,%,id.tax-law-compilation-2022#p184,"above Rp.  5.000.000.000,00 (five billion rupiah) 35%  (thirty five percent)",,,Top bracket of the stated resident-individual taxable-income table.,,
+id.cfc.overseas_dividend_receipt_time,id,all,cfc,overseas_dividend_receipt_time,minister_determined,text,id.tax-law-compilation-2022#p187,The Minister of Finance has the authority to determine the receipt time of dividend by the resident Taxpayer for his/her equity participation in an overseas business entity other than business entities that sells their,,,The source sentence crosses a PDF page break immediately after the quoted words. It applies under the following statutory 50% resident-taxpayer participation conditions and is not a general CFC-rate rule.,,
+id.anti_abuse.substance_over_form,id,all,anti_abuse,substance_over_form,yes,bool,id.tax-law-compilation-2022#p189,"One on ways to avoid tax is by carrying out a transaction that is not in compliance with the real situation which is contrary to the substance over form principle, namely recognition of economic substance over its formal form.",,,"Elucidation of Article 18; this records the stated anti-avoidance principle, not a complete GAAR procedure.",,
+ae-my.outbound_wht.dividend_rate,ae-my,all,outbound_wht,dividend_rate,10,%,treaty.ae-my.1995.en#10.2,if the recipient is the beneficial owner of the dividends the tax so charged shall not exceed 10% per cent of the gross amount of the dividends.,1997-01-01,,"Article 10(2) source-state cap for dividends paid by a UAE-resident company to a Malaysian beneficial owner. The agreement's Article 28 makes withholding rules effective from the first day of the calendar year following entry into force; the official Malaysian index records entry into force on 1996-09-18. OCR text, to be checked against the original.",,
+ae-my.outbound_wht.interest_rate,ae-my,all,outbound_wht,interest_rate,5,%,treaty.ae-my.1995.en#11.2,"but if the recipient is the beneficial owner of the interest, the tax so charged shall not exceed 5% (five percent) of the gross amount of the interest .",1997-01-01,,"Article 11(2) general source-state cap for a beneficial owner. OCR text, to be checked against the original.",,
+ae-my.outbound_wht.interest_rate_government,ae-my,all,outbound_wht,interest_rate_government,0,%,treaty.ae-my.1995.en#11.3,the Government of a Contracting State shall be exempt from tax in the other Contracting State in respect of interest derived by the Government from that other State.,1997-01-01,,"Article 11(3) government-recipient exemption. OCR text, to be checked against the original.",,
+ae-my.outbound_wht.royalty_rate,ae-my,all,outbound_wht,royalty_rate,10,%,treaty.ae-my.1995.en#13.2,but if the recipient is the beneficial owner of the royalties then the tax so charged shall not exceed 10% of the gross amount of such royalties.,1997-01-01,,"Article 13(2) source-state cap for a beneficial owner. OCR text, to be checked against the original.",,
+id-in.outbound_wht.dividend_rate,id-in,all,outbound_wht,dividend_rate,10,%,treaty.id-in.2012.mli.en#10.2,the tax so charged shall not exceed 10 % (ten per cent) of the gross amount of the dividends.,2021-01-01,,Article 10(2) source-state cap for a beneficial owner; the Indonesian DGT treaty index states MLI-modified application from 2021-01-01.,,
+id-in.outbound_wht.interest_rate,id-in,all,outbound_wht,interest_rate,10,%,treaty.id-in.2012.mli.en#11.2,the tax so charged shall not exceed 10% (ten percent) of the gross amount of the interest.,2021-01-01,,Article 11(2) source-state cap for a beneficial owner.,,
+id-in.outbound_wht.interest_rate_government,id-in,all,outbound_wht,interest_rate_government,0,%,treaty.id-in.2012.mli.en#11.3,"interest arising in a Contracting State shall be exempt from tax in that State, provided that it is derived and beneficially owned by :",2021-01-01,,Article 11(3) government and listed public-institution exemption; the following subparagraphs enumerate the covered entities.,,
+id-in.outbound_wht.royalty_rate,id-in,all,outbound_wht,royalty_rate,10,%,treaty.id-in.2012.mli.en#12.2,the tax so charged shall not exceed 10% (ten per cent) of the gross amount of the royalties or fees for technical services.,2021-01-01,,Article 12(2) source-state cap for a beneficial owner.,,
+id-in.anti_abuse.ppt_applies,id-in,all,anti_abuse,ppt_applies,yes,bool,treaty.id-in.2012.mli.en#24.mli7,"obtaining that benefit was one of the principal purposes of any arrangement or transaction that resulted directly or indirectly in that benefit, unless it is established that granting that benefit in these circumstances would be in accordance with the object and purpose of the relevant provisions of this Agreement.",2021-01-01,,MLI Article 7(1) principal-purpose test in the DGT synthesised text.,,
+id-jp.outbound_wht.dividend_rate_parent,id-jp,company,outbound_wht,dividend_rate_parent,10,%,treaty.id-jp.1982.mli.en#10.2,10 percent of the gross amount of the dividends if the beneficial owner is a company which owns at least 25 percent of the voting shares of the company paying the dividends during the period of twelve months immediately before the end of the accounting period for which the distribution of profits takes place;,2021-01-01,,"Article 10(2)(a) beneficial-owner company cap, subject to its stated 25% voting-share and 12-month conditions.",,
+id-jp.outbound_wht.holding_pct_min,id-jp,company,outbound_wht,holding_pct_min,25,%,treaty.id-jp.1982.mli.en#10.2,company which owns at least 25 percent of the voting shares of the company paying the dividends,2021-01-01,,Article 10(2)(a) ownership condition for the 10% dividend cap.,,
+id-jp.outbound_wht.holding_months_min,id-jp,company,outbound_wht,holding_months_min,12,months,treaty.id-jp.1982.mli.en#10.2,during the period of twelve months immediately before the end of the accounting period for which the distribution of profits takes place;,2021-01-01,,Article 10(2)(a) holding-duration condition.,,
+id-jp.outbound_wht.dividend_rate_other,id-jp,all,outbound_wht,dividend_rate_other,15,%,treaty.id-jp.1982.mli.en#10.2,15 per cent of the gross amount of the dividends in all other cases.,2021-01-01,,Article 10(2)(b) general beneficial-owner dividend cap.,,
+id-jp.outbound_wht.interest_rate,id-jp,all,outbound_wht,interest_rate,10,%,treaty.id-jp.1982.mli.en#11.2,the tax so charged shall not exceed 10 percent of the gross amount of the interest.,2021-01-01,,Article 11(2) general source-state cap for a beneficial owner.,,
+id-jp.outbound_wht.royalty_rate,id-jp,all,outbound_wht,royalty_rate,10,%,treaty.id-jp.1982.mli.en#12.2,the tax so charged shall not exceed 10 percent of the gross amount of the royalties.,2021-01-01,,Article 12(2) general source-state cap for a beneficial owner.,,
+id-jp.anti_abuse.ppt_applies,id-jp,all,anti_abuse,ppt_applies,yes,bool,treaty.id-jp.1982.mli.en#28.mli7,"that obtaining that benefit was one of the principal purposes of any arrangement or transaction that resulted directly or indirectly in that benefit, unless it is established that granting that benefit in these circumstances would be in accordance with the object and purpose of the relevant provisions of the Agreement.",2021-01-01,,MLI Article 7(1) principal-purpose test in the DGT synthesised text.,,
+id-kr.outbound_wht.dividend_rate_parent,id-kr,company,outbound_wht,dividend_rate_parent,10,%,treaty.id-kr.1988.mli.en#10,10 per cent of the gross amount of the dividends if the beneficial owner is a company (other than a partnership) which holds directly at least 25 per cent of the capital of the company paying the dividends;,2021-01-01,,"Article 10(2)(a) beneficial-owner company cap, subject to its direct 25% capital condition.",,
+id-kr.outbound_wht.holding_pct_min,id-kr,company,outbound_wht,holding_pct_min,25,%,treaty.id-kr.1988.mli.en#10,holds directly at least 25 per cent of the capital of the company paying the dividends;,2021-01-01,,Article 10(2)(a) ownership condition.,,
+id-kr.outbound_wht.dividend_rate_other,id-kr,all,outbound_wht,dividend_rate_other,15,%,treaty.id-kr.1988.mli.en#10,15 per cent of the gross amount of the dividends in all other cases.,2021-01-01,,Article 10(2)(b) general beneficial-owner dividend cap.,,
+id-kr.outbound_wht.interest_rate,id-kr,all,outbound_wht,interest_rate,10,%,treaty.id-kr.1988.mli.en#11,the tax so charged shall not exceed 10 per cent of the gross amount of the interest.,2021-01-01,,Article 11(2) general source-state cap for a beneficial owner.,,
+id-kr.outbound_wht.interest_rate_government,id-kr,all,outbound_wht,interest_rate_government,0,%,treaty.id-kr.1988.mli.en#11,shall be exempt from tax in the first-mentioned Contracting State.,2021-01-01,,"Article 11(3) exemption for stated government, central-bank, public-financial-institution and qualifying guaranteed/financed debt claims.",,
+id-kr.outbound_wht.royalty_rate,id-kr,all,outbound_wht,royalty_rate,15,%,treaty.id-kr.1988.mli.en#12,the tax so charged shall not exceed 15 per cent of the gross amount of the royalties.,2021-01-01,,Article 12(2) general source-state cap for a beneficial owner.,,
+id-kr.anti_abuse.ppt_applies,id-kr,all,anti_abuse,ppt_applies,yes,bool,treaty.id-kr.1988.mli.en#28.mli7,"that obtaining that benefit was one of the principal purposes of any arrangement or transaction that resulted directly or indirectly in that benefit, unless it is established that granting that benefit in these circumstances would be in accordance with the object and purpose of the relevant provisions of the Agreement.",2021-01-01,,MLI Article 7(1) principal-purpose test in the DGT synthesised text.,,
+id-my.outbound_wht.dividend_rate,id-my,all,outbound_wht,dividend_rate,15,%,treaty.id-my.1991.mli.en#10.mli17,the tax so charged shall not exceed 15% of the gross amount of the dividends.,2022-01-01,,Article 10(2) cap on dividends paid by an Indonesian-resident company to a Malaysian beneficial owner.,,
+id-my.outbound_wht.interest_rate,id-my,all,outbound_wht,interest_rate,15,%,treaty.id-my.1991.mli.en#11.2,the tax so charged shall not exceed 15% of the gross amount of the interest.,2022-01-01,,Article 11(2) general source-state cap for a beneficial owner.,,
+id-my.outbound_wht.interest_rate_government,id-my,all,outbound_wht,interest_rate_government,0,%,treaty.id-my.1991.mli.en#11.4,the Government of a Contracting State shall be exempt from tax in the other Contracting State in respect of interest derived by the Government from that other State.,2022-01-01,,Article 11(4) government-recipient interest exemption.,,
+id-my.anti_abuse.ppt_applies,id-my,all,anti_abuse,ppt_applies,yes,bool,treaty.id-my.1991.mli.en#28.mli7,"obtaining that benefit was one of the principal purposes of any arrangement or transaction that resulted directly or indirectly in that benefit, unless it is established that granting that benefit in these circumstances would be in accordance with the object and purpose of the relevant provisions of the Agreement.",2022-01-01,,MLI Article 7(1) principal-purpose test in the DGT synthesised text.,,
+id-vn.outbound_wht.dividend_rate,id-vn,all,outbound_wht,dividend_rate,15,%,treaty.id-vn.1997.mli.en#10.2,the tax so charged shall not exceed 15 per cent of the gross amount of the dividends.,2000-01-01,,Article 10(2) general source-state cap for a beneficial owner.,,
+id-vn.outbound_wht.interest_rate,id-vn,all,outbound_wht,interest_rate,15,%,treaty.id-vn.1997.mli.en#11.2,the tax so charged shall not exceed 15 per cent of the gross amount of the interest.,2000-01-01,,Article 11(2) general source-state cap for a beneficial owner.,,
+id-vn.outbound_wht.interest_rate_government,id-vn,all,outbound_wht,interest_rate_government,0,%,treaty.id-vn.1997.mli.en#11.3,shall be exempt from tax in the first-mentioned State.,2000-01-01,,"Article 11(3) exemption for the other State's government, local authorities, political subdivision, central bank and qualifying government-controlled financial institutions.",,
+id-vn.outbound_wht.royalty_rate,id-vn,all,outbound_wht,royalty_rate,15,%,treaty.id-vn.1997.mli.en#12.2,the tax so charged shall not exceed 15 per cent of the gross amount of such royalties.,2000-01-01,,Article 12(2) general source-state cap for a beneficial owner.,,
+kr.residence.management_place_in_korea,kr,company,residence,management_place_in_korea,yes,bool,kr.corporate-tax-act.20260701.ko#2,"제2조(정의) 이 법에서 사용하는 용어의 뜻은 다음과 같다. <개정 2013. 1. 1., 2018. 12. 24., 2022. 12. 31.>
+1. “내국법인”이란 본점, 주사무소 또는 사업의 실질적 관리장소가 국내에 있는 법인을 말한다.",,,"Domestic corporation under primary Article 2(1): head office, principal office or place of effective management in Korea. Classification rule, not a complete treaty residence/tie-breaker determination. Reviewed July 2026 consolidation; no new commencement date inferred.",,
+kr.inbound.worldwide_income_taxable,kr,company,inbound,worldwide_income_taxable,yes,bool,kr.nts.corporate-tax-overview#h2,"본점, 주사무소 또는 사업의 실질적 관리장소가 국내에 있는 법인(내국법인)은 국내·외에서 발생하는 모든 소득에 대하여 법인세 납세의무가 있습니다.",,,"The NTS overview states that a domestic corporation is liable for corporate tax on income arising both inside and outside Korea. This is a general resident-company jurisdictional scope rule: statutory exclusions, exemptions and foreign-tax credits must be assessed for particular foreign income; it does not establish that every foreign receipt is taxed.",,
+kr.inbound.worldwide_income_reportable,kr,individual,inbound,worldwide_income_reportable,yes,bool,kr.income-tax-act.20260701.ko#3,"제3조(과세소득의 범위) ① 거주자에게는 이 법에서 규정하는 모든 소득에 대해서 과세한다. 다만, 해당 과세기간 종료
+일 10년 전부터 국내에 주소나 거소를 둔 기간의 합계가 5년 이하인 외국인 거주자에게는 과세대상 소득 중 국외에
+서 발생한 소득의 경우 국내에서 지급되거나 국내로 송금된 소득에 대해서만 과세한다.",,,"General resident-income tax scope, qualified by Article 3(1): a foreign-national resident whose aggregate Korean domicile/residence period is no more than five years during the ten years preceding the end of the tax period is taxed on foreign-source income only when paid in or remitted to Korea. Korean-source income and other conditions remain separately applicable. The old unrestricted English FAQ is not current authority.",,
+kr.final.global_income_taxable,kr,individual,final,global_income_taxable,yes,bool,kr.income-tax-act.20260701.ko#4,"제4조(소득의 구분) ① 거주자의 소득은 다음 각 호와 같이 구분한다. <개정 2013. 1. 1., 2020. 12. 29., 2024. 12. 31.>
+1. 종합소득
+
+법제처                                                            3                                                       국가법령정보센터
+소득세법
+　이 법에 따라 과세되는 모든 소득에서 제2호 및 제3호에 따른 소득을 제외한 소득으로서 다음 각 목의 소득을 합
+산한 것
+가. 이자소득
+나. 배당소득
+다. 사업소득
+라. 근로소득
+마. 연금소득
+바. 기타소득
+2. 퇴직소득
+2의2. 삭제<2024. 12. 31.>
+3. 양도소득",,,"Current primary Article 4 categories: comprehensive income (interest, dividends, business, employment, pensions and other income), retirement income and capital gains, subject to applicable exemptions/special rules. The archived FAQ separate timber-income category is not retained as current classification. This is not a claim every receipt is taxable or every category uses one progressive table.",,
+kr.final.cit_return_deadline,kr,company,final,cit_return_deadline,3,months,kr.corporate-tax-act.20260701.ko#60,"제60조(과세표준 등의 신고) ① 납세의무가 있는 내국법인은 각 사업연도의 종료일이 속하는 달의 말일부터 3개월(제
+60조의2제1항 본문에 따라 내국법인이 성실신고확인서를 제출하는 경우에는 4개월로 한다) 이내에 대통령령으로
+정하는 바에 따라 그 사업연도의 소득에 대한 법인세의 과세표준과 세액을 납세지 관할 세무서장에게 신고하여야
+한다. <개정 2018. 12. 24.>",,,"Ordinary domestic-company return filing deadline: three months from the end of the month containing the business-year end. Article 60(1) expressly allows four months for the Article 60-2 good-faith verification certificate case. This parameter records filing; it does not establish every payment, consolidated-group or foreign-company deadline.",,
+kr.cfc.cfc_reporting_required,kr,all,cfc,cfc_reporting_required,yes,bool,kr.itca.enforcement-decree#p59,"A Korean national subject to the application of Articles 27, 29 (excluding cases falling under the proviso, with the exception of the subparagraphs, of paragraph (1) of that Article), and 30 through 33 of the Act shall submit the following documents to the head of the tax office having jurisdiction over the place for tax payment pursuant to Article 34 of the Act:",2025-02-28,,"Article 70 requires CFC financial statements, a tax return and retained-earnings computation records from persons subject to the CFC provisions. The all-subject scope reflects the statute's Korean-national terminology and avoids inferring a separate threshold from this reporting provision.",,
+kr.anti_abuse.substance_over_form_principle,kr,all,anti_abuse,substance_over_form_principle,yes,bool,kr.itca.enforcement-decree#p4,the tax burden calculated according to the economic substance of the relevant transaction.,2025-02-28,,Article 3 is an international-transaction substance-over-form rule. It is recorded for both company and individual scopes without treating it as a treaty-specific PPT or inferring any additional condition.,,
+kr.outbound_wht.nonresident_domestic_source_withholding_required,kr,all,outbound_wht,nonresident_domestic_source_withholding_required,yes,bool,kr.nts.nonresident-wht-agent#h2,"비거주자 등에게 원천징수대상 국내원천소득을 지급하는 자 또는 세법에서 원천징수의무자로 지정된 자(법인세법 제98조, 소득세법 제156조)",,,The NTS identifies the withholding agent for Korean-source income subject to withholding and cites both the Corporate Tax Act and the Income Tax Act; it applies to the stated non-resident/foreign-corporation context and does not supply one dividend-specific rate.,,
+vn.inbound.foreign_income_taxable.individual,vn,individual,inbound,foreign_income_taxable,yes,bool,vn.law.pit2026.vi#2.1,Người nộp thuế thu nhập cá nhân là cá nhân cư trú có thu nhập chịu thuế quy định tại Điều 3 của Luật này phát sinh trong và ngoài lãnh thổ Việt Nam,2026-07-01,,Article 2 subjects a resident individual to the Law's taxable income arising both within and outside Viet Nam. Cross-checked on 1 November 2026 against image-reviewed vn.law.pit.consolidation112.2026.vi#a2(1). This bounded cross-check does not certify the remaining OCR or unrelated amendments.,,
+vn.residence.residence_days_min,vn,individual,residence,residence_days_min,183,days,vn.law.pit2026.vi#2.2,Có mặt tại Việt Nam từ 183 ngày trở lên tính trong 01 năm dương lịch hoặc tính theo 12 tháng liên tục kể từ ngày đầu tiên có mặt tại Việt Nam,2026-07-01,,One of Article 2's alternative residence conditions is presence in Viet Nam for at least 183 days in a calendar year or 12 consecutive months from first presence. Cross-checked on 1 November 2026 against image-reviewed vn.law.pit.consolidation112.2026.vi#a2(2)(a). This bounded cross-check does not certify the remaining OCR or unrelated amendments.,,
+vn.final.dividend_tax_rate,vn,individual,final,dividend_tax_rate,5,%,vn.law.pit2026.vi#12.1,Thuế đối với thu nhập từ đầu tư vốn của cá nhân cư trú được xác định bằng thu nhập tính thuế nhân (x) với thuế suất 5%.,2026-07-01,,Article 3 expressly includes dividends within capital-investment income; Article 12 applies the 5% rate to a resident individual's capital-investment income. Cross-checked on 1 November 2026 against image-reviewed vn.law.pit.consolidation112.2026.vi#a12(1). This bounded cross-check does not certify the remaining OCR or unrelated amendments.,,
+vn.outbound_wht.dividend_wht_rate,vn,individual,outbound_wht,dividend_wht_rate,5,%,vn.law.pit2026.vi#22,"Thuế thu nhập cá nhân đối với thu nhập từ đầu tư vốn của cá nhân không cư trú được xác định bằng tổng số thu nhập mà cá nhân không cư trú nhận được từ việc đầu tư vốn vào tổ chức, cá nhân tại Việt Nam nhân (x) với thuế suất 5%.",2026-07-01,,Article 3 includes dividends within capital-investment income. Article 22 applies a 5% rate to a non-resident individual's capital-investment income from investment in a Vietnamese organisation or individual. Cross-checked on 1 November 2026 against image-reviewed vn.law.pit.consolidation112.2026.vi#a22. This bounded cross-check does not certify the remaining OCR or unrelated amendments.,,
+vn.anti_abuse.related_party_non_arm_length_reassessment,vn,company,anti_abuse,related_party_non_arm_length_reassessment,yes,bool,vn.gov.related-party-tax-avoidance#h4,"Trường hợp doanh nghiệp lợi dụng quan hệ liên kết để xác lập giá mua, giá bán, chi phí, doanh thu hoặc các điều kiện giao dịch không phù hợp với giao dịch độc lập, qua đó làm giảm nghĩa vụ thuế tại Việt Nam, dịch chuyển lợi nhuận sang pháp nhân khác hoặc sang quốc gia, vùng lãnh thổ có mức thuế thấp thì cơ quan quản lý thuế có quyền xác định lại nghĩa vụ thuế theo quy định.",2026-07-01,,Official guidance states that the tax authority may reassess liability where a company uses related-party terms that are not arm's length and thereby reduces Vietnamese tax or shifts profit.,,
+in.inbound.foreign_tax_credit_form44_required,in,all,inbound,foreign_tax_credit_form44_required,yes,bool,in.rules2026#s76(10),"(10) Credit of any foreign tax shall be allowed on furnishing the following documents by the assessee: — 
+(a) 
+a statement of income from the country or specified territory outside India offered for tax for the tax 
+year and of foreign tax deducted or paid on such income in Form No. 44 and verified in the manner specified 
+therein; and 
+ 
+(b) 
+certificate or statement specifying the nature of income and the amount of tax deducted therefrom 
+or paid by the assessee, — 
+(i) 
+from the tax authority of the country or specified territory outside India; or 
+ 
+(ii) 
+from the person responsible for deduction of such tax; or 
+ 
+(iii) 
+signed by the assessee.",2026-04-01,,"Resident foreign-tax-credit claims under new-law tax years require Form 44 and the supporting certificate/statement. Subject to the complete Rule 76 conditions, including tax-year income recognition, disputed-tax restrictions and the source/country credit limitation; not a guarantee of credit for every foreign payment.",,
+in.inbound.foreign_tax_credit_form44_filing_months,in,all,inbound,foreign_tax_credit_form44_filing_months,12,months,in.rules2026#s76,"(12) The statement in Form No. 44 referred to in sub-rule (10)(a) and the certificate or the statement referred to in 
+sub-rule (10)(b) shall be furnished within twelve months from the end of the relevant tax year in which the income 
+referred to in sub-rule (1) has been offered to tax or assessed to tax in India and the return for such tax year has been 
+furnished within the time specified under section 263(1) or (4), subject to the provisions of sub-rule (13). 
+ 
+(13) Where the return has been furnished under section 263(6)(a), the statement in Form No. 44 referred to in sub-rule 
+(10)(a) and the certificate or the statement referred to in sub-rule (10)(b), to the extent it relates to the income 
+included in the updated return, shall be furnished on or before the date on which such return is furnished.",2026-04-01,,"Deadline measured from the end of the relevant tax year, conditional on a return within section 263(1) or (4). Rule 76(13) instead requires the Form 44 and supporting documents for income in an updated return by the updated-return filing date. The quoted exception is part of this record; twelve months is not a universal extension.",,
+in.inbound.company_form44_accountant_verification_required,in,company,inbound,company_form44_accountant_verification_required,yes,bool,in.rules2026#s76(16),"(16) Form No. 44 shall be verified by an accountant defined in section 515(3)(b), — 
+(a) where the assessee is a company; or  
+(b) in all other cases, where the amount of foreign tax paid outside India for a tax year equals or exceeds ₹ 
+100000.",2026-04-01,,"For a company claiming foreign-tax credit under Rule 76, Form 44 requires verification by an accountant defined in section 515(3)(b). The separate foreign-tax-paid threshold for other persons is not applied to companies.",,
+in.outbound_wht.nonresident_remittance_information_form,in,all,outbound_wht,nonresident_remittance_information_form,Form 145,text,in.rules2026#s220,"(1) 
+The person responsible for paying to a non-resident, not being a company, or to a foreign company, any sum 
+chargeable under the Act, shall furnish the following:— 
+(a)information in Part A of Form No. 145, if the amount of payment or the aggregate of such payments, as 
+the case may be, made during the tax year does not exceed ₹ 500000; 
+(b)information in Part B of Form No. 145, if the amount of payment or the aggregate of such payments 
+exceeds ₹ 500000 and where a certificate or order is obtained from the Assessing Officer under section 
+395(1) or (2); 
+(c)information in Part C of Form No. 145, if the amount of payment or the aggregate of such payments 
+exceeds ₹ 500000 and where a certificate in Form No. 146 from an accountant as defined in section 
+515(3)(b) is obtained, but where information in Part B of the said Form has been furnished, no information is 
+required to be furnished in Part C of the said Form.  
+(2) The person responsible for paying to a non-resident, not being a company, or to a foreign company, any sum 
+which is not chargeable under the provisions of the Act, shall furnish the information in Part D of Form No. 145. 
+
+1696  
+THE GAZETTE OF INDIA : EXTRAORDINARY 
+   [PART II—SEC. 3(i)] 
+ 
+(3)  No information shall be required to be furnished for any sum that is not chargeable under the Act, irrespective of 
+sub-rule (2), if,— 
+(a) the remittance is made by an individual and it does not require prior approval of Reserve Bank of India as 
+per the provisions of section 5 of the Foreign Exchange Management Act, 1999 (42 of 1999) read with 
+Schedule III to the Foreign Exchange (Current Account Transaction) Rules, 2000 made under the said Act; or 
+(b) the remittance is made by a Unit of an International Financial Services Centre referred to in section 
+147(1)(b); or 
+ (c) the remittance is of the nature specified in column C of the specified list below: 
+ 
+Sl. 
+No. 
+Purpose code as per 
+Reserve Bank of 
+India 
+Nature of payment 
+A 
+B 
+C 
+S0001 
+Indian investment abroad - in equity capital(shares). 
+S0002 
+Indian investment abroad - in debt securities. 
+S0003 
+Indian investment abroad - in branches and wholly owned subsidiaries. 
+S0004 
+Indian investment abroad - in subsidiaries and associates. 
+S0005 
+Indian investment abroad - in real estate. 
+S0011 
+Loans extended to non-residents. 
+S0101 
+Advance payment against imports. 
+S0102 
+Payment towards import (settlement of invoice). 
+S0103 
+Imports by diplomatic missions. 
+S0104 
+Intermediary trade. 
+S0190 
+Imports below ₹500000. - (For use by Exchange Control Department offices). 
+S0202 
+Payment for operating expenses of Indian shipping companies operating abroad. 
+S0208 
+Operating expenses of Indian Airlines companies operating abroad. 
+S0212 
+Booking of passages abroad - Airlines companies. 
+S0301 
+Remittance towards business travel. 
+S0302 
+Travel under basic travel quota (BTQ). 
+S0303 
+Travel for pilgrimage. 
+S0304 
+Travel for medical treatment. 
+S0305 
+Travel for education (including fees, hostel expenses etc.). 
+S0401 
+Postal services. 
+S0501 
+Construction of projects abroad by Indian companies including import of goods at 
+project site. 
+S0602 
+Freight insurance - relating to import and export of goods. 
+S1011 
+Payments for maintenance of offices abroad. 
+S1201 
+Maintenance of Indian embassies abroad. 
+S1202 
+Remittances by foreign embassies in India. 
+S1301 
+Remittance by non-residents towards family maintenance and savings. 
+
+[भाग II—खण्‍ड 3(i)] 
+भारत‍का‍राजपत्र‍:‍असाधारण  
+1697 
+ 
+S1302 
+Remittance towards personal gifts and donations. 
+S1303 
+Remittance towards donations to religious and charitable institutions abroad. 
+S1304 
+Remittance towards grants and donations to other Governments and charitable 
+institutions established by the Governments. 
+S1305 
+Contributions or donations by the Government to international institutions. 
+S1306 
+Remittance towards payment or refund of taxes. 
+S1501 
+Refunds or rebates or reduction in invoice value on account of exports. 
+S1503 
+Payments by residents for international bidding.",2026-04-01,,"Reporting procedure, distinct from taxability and withholding. Part A applies to chargeable sums up to INR 500000 in aggregate per tax year; Part B above that threshold with the specified AO certificate/order; otherwise Part C above that threshold requires a Form 146 accountant certificate. Nonchargeable sums use Part D subject to Rule 220(3) exceptions. Form 145/146 transition follows the actual remittance date from 1 April 2026; the income period and TDS trigger can remain governed by the old Act. See in.itd.forms-transition2026 questions 19-25. No universal Form 146 requirement is inferred.",,
+in.final.company_turnover_qualified_cit_rate,in,company,final,company_turnover_qualified_cit_rate,25,%,in.law.finance2026.gazette.en#s161(4),"I. In the case of a domestic company,— 
+ 
+(i) where its total turnover or the gross 
+receipt in the tax year 2024-25 does not exceed 
+₹ 400 crores; 
+25% of the total income; 
+(ii) other than that referred to in item (i). 
+30% of the total income.",2026-04-01,2027-03-31,"TY 2026-27 ordinary domestic-company rate under Finance Act 2026 section 3 and First Schedule Part I-B Paragraph E.I(i): turnover or gross receipts in TY 2024-25 must not exceed INR 400 crore. This turnover reference year differs from legacy AY 2026-27. Subject to applicable elective/special regimes; excludes surcharge, cess, MAT and special-income treatment. Do not extend the annual rate beyond this tax year without verification.",,
+in.final.company_section200_elective_cit_rate,in,company,final,company_section200_elective_cit_rate,22,%,in.law.ita2025.fa2026.en#s200,"Tax on income of certain domestic companies.
+200.	 	(1) Irrespective of anything contained in this Act but subject to the provisions 
+	 	 	 	 	of Parts A, B, E and this Part (other than sections 199 and 201) of this 
+Chapter, the income-tax payable for a tax year shall be at the rate of 22%, at the 
+option of a person being a domestic company, in respect of the total income of such 
+person computed in the following manner:—
+	
+(a)	 without any deduction under—
+	
+(i)	 section 45(2) or 47(1)(b); or
+	
+(ii)	 Chapter VIII other than provisions of section 146 or 148; or
+	
+(iii)	 sections specified in section 205(1)(a) to (g);
+	
+(b)	 without set off of any loss carried forward or depreciation from any 
+earlier tax year, if such loss or depreciation is attributable to any of the 
+deductions referred to in clause (a);
+	
+(c)	 without set off of any loss or allowance for unabsorbed depreciation 
+deemed so under section 116, if such loss or depreciation is attributable 
+to any of the deductions referred to in clause (a).",2026-04-01,,"Elective domestic-company base rate under section 200, not a general 22% rate for every company. All computation restrictions and the option/continuity rules in section 200(1)-(5) apply; failure can invalidate the option for the relevant and subsequent years. Excludes surcharge, cess and separately applicable special-income provisions.",,
+ae.final.individual_business_turnover_condition,ae,individual,final,individual_business_turnover_condition,qualifying_business_turnover_exceeds_AED_1000000_per_Gregorian_calendar_year,text,ae.cabinet49.2023.natural-persons.en#a2,"Article (2)
+ 
+Categories of Businesses or Business Activities Conducted by a Natural Person 
+that are Subject to Corporate Tax
+ 
+1. For the purposes of Clause (6) of Article (11) of the Corporate Tax Law, Businesses or 
+Business Activities, conducted by a resident or non-resident natural person, shall be 
+subject to Corporate Tax only where the total Turnover derived from such Businesses 
+
+or Business Activities exceeds AED 1,000,000 (one million United Arab Emirates 
+dirhams) within a Gregorian calendar year. 
+2. Notwithstanding Clause (1) of this Article, activities that give rise to Turnover from the 
+following sources shall not be considered as Businesses or Business Activities 
+conducted by a resident or non-resident natural person subject to Corporate Tax, 
+regardless of the amount of Turnover derived from such activities: 
+a. Wage. 
+b. Personal Investment income. 
+c. Real Estate Investment income. 
+3. The natural person that is not conducting a Business or Business Activities subject to 
+Corporate Tax in accordance with this Article shall not be required to register for 
+Corporate Tax.",2024-01-01,,"Condition concerns gross business turnover, not a tax-free profit allowance. Wage, Personal Investment and Real Estate Investment categories are excluded subject to their Article 1 definitions (including licensing/commercial-business conditions). Corporate-tax tax-period application begins with calendar 2024, as clarified by the FTA natural-person guide section 6.3.",,
+ae.final.individual_specified_nonbusiness_income_excluded,ae,individual,final,individual_specified_nonbusiness_income_excluded,yes,bool,ae.cabinet49.2023.natural-persons.en#a2,"Article (2)
+ 
+Categories of Businesses or Business Activities Conducted by a Natural Person 
+that are Subject to Corporate Tax
+ 
+1. For the purposes of Clause (6) of Article (11) of the Corporate Tax Law, Businesses or 
+Business Activities, conducted by a resident or non-resident natural person, shall be 
+subject to Corporate Tax only where the total Turnover derived from such Businesses 
+
+or Business Activities exceeds AED 1,000,000 (one million United Arab Emirates 
+dirhams) within a Gregorian calendar year. 
+2. Notwithstanding Clause (1) of this Article, activities that give rise to Turnover from the 
+following sources shall not be considered as Businesses or Business Activities 
+conducted by a resident or non-resident natural person subject to Corporate Tax, 
+regardless of the amount of Turnover derived from such activities: 
+a. Wage. 
+b. Personal Investment income. 
+c. Real Estate Investment income. 
+3. The natural person that is not conducting a Business or Business Activities subject to 
+Corporate Tax in accordance with this Article shall not be required to register for 
+Corporate Tax.",2024-01-01,,"Only Wage, Personal Investment income and Real Estate Investment income as defined in Article 1 are outside CT under Article 2(2), regardless of turnover. This is not a blanket exclusion for licensed/commercial investment businesses. The same categories are disregarded in the business-turnover threshold.",,
+ae.final.company_lower_taxable_income_band_rate,ae,company,final,company_lower_taxable_income_band_rate,0,%,ae.cabinet116.2022.taxable-threshold.en#a2,"Article 2 – Income Subject to Corporate Tax at 0% (Zero 
+Percent) 
+1. For the purposes of Paragraph (a) of Clause 1 of Article 3 of the Corporate Tax Law, 
+the portion of Taxable Income of the Taxable Person not exceeding (375,000) 
+three hundred seventy-five thousand dirhams shall be subject to Corporate Tax at 
+the rate of (0%) zero percent in the Tax Period irrespective of whether the Taxable 
+Person conducts multiple Businesses or Business Activity in that Tax Period. 
+2. Where it is established to the Authority that one or more Persons have artificially 
+separated their Business or Business Activity and the Taxable Income across their 
+entire Business or Business Activity was subject to Corporate Tax at (0%) zero 
+percent in the Tax Period on an amount exceeding (375,000) three hundred 
+seventy-five thousand dirhams, this would be considered an arrangement to 
+obtain a benefit in relation to Corporate Tax under Clause 1 of Article 50 of the 
+Corporate Tax Law. 
+3. For the purpose of verifying whether two or more Persons have artificially 
+separated their Business or Business Activity, the Authority shall consider whether 
+the arrangement was undertaken for a legitimate commercial purpose and 
+
+ 
+ 
+ 
+Cabinet Decision No. 116 of 2022 - Unofficial Translation 
+whether the Persons substantially carry on the same Business or Business Activity 
+taking into account all relevant facts and circumstances, including for example 
+without limitation their financial, economic and regulatory ties.",2023-06-01,,"Ordinary Article 3(1)(a) lower band on taxable income up to AED 375000 per tax period. Multiple businesses do not each receive a separate allowance; artificial separation is subject to anti-abuse review. This does not define the separate Qualifying Free Zone Person regime, and does not exempt covered MNE groups from DMTT.",,
+ae.final.in_scope_mne_dmtt_applies,ae,company,final,in_scope_mne_dmtt_applies,yes,bool,ae.cabinet142.2024.dmtt.en#p2,"1.1.1 This Decision shall apply to Constituent Entities that are members of an MNE Group that has annual
+revenue of EUR 750 million or more in the Consolidated Financial Statements of the Ultimate Parent
+Entity in at least two of the four Fiscal Years immediately preceding the tested Fiscal Year. Further
+rules are set out in Article 6.1 which modify the application of the consolidated revenue threshold in
+certain cases.",2025-01-01,,"Scope condition, not an amount payable: MNE group revenue at least EUR 750 million in at least two of the four prior fiscal years, with non-12-month adjustments and Article 6.1 modifications. Excluded Entities are outside Constituent Entities under annex 1.3.3; other exclusions, elections, transition relief and safe harbours must be assessed. Cabinet Decision Article Two applies to fiscal years beginning on or after 1 January 2025. No simple 15%-minus-9% calculation or universal 15% flat tax is inferred. Only selected annex excerpts have been image-reviewed; full annex transcription and computational rules remain pending. OCR text, to be checked against the original.",,
+kr.residence.individual_days_threshold,kr,individual,residence,individual_days_threshold,183,days,kr.income-tax-act.20260701.ko#1-2,"제1조의2(정의) ① 이 법에서 사용하는 용어의 뜻은 다음과 같다. <개정 2010. 12. 27., 2014. 12. 23., 2018. 12. 31.>
+1. “거주자”란 국내에 주소를 두거나 183일 이상의 거소(居所)를 둔 개인을 말한다.
+2. “비거주자”란 거주자가 아닌 개인을 말한다.
+3. “내국법인”이란 「법인세법」 제2조제1호에 따른 내국법인을 말한다.
+4. “외국법인”이란 「법인세법」 제2조제3호에 따른 외국법인을 말한다.
+5. “사업자”란 사업소득이 있는 거주자를 말한다.
+② 제1항에 따른 주소ㆍ거소와 거주자ㆍ비거주자의 구분은 대통령령으로 정한다.
+[본조신설 2009. 12. 31.]",,,"Current primary Article 1-2(1)(1): Korean domicile OR a place of residence for at least 183 days. Domicile, counting/deeming rules under the Enforcement Decree and treaty effects require separate assessment. Replaces the obsolete undated FAQ one-year parameter; no unsupported historical effective dates are invented. Reviewed against the 1 July 2026 consolidation; not a claim that the 183-day rule began in 2026.",,
+kr.final.company_verified_return_deadline_months,kr,company,final,company_verified_return_deadline_months,4,months,kr.corporate-tax-act.20260701.ko#60,"제60조(과세표준 등의 신고) ① 납세의무가 있는 내국법인은 각 사업연도의 종료일이 속하는 달의 말일부터 3개월(제
+60조의2제1항 본문에 따라 내국법인이 성실신고확인서를 제출하는 경우에는 4개월로 한다) 이내에 대통령령으로
+정하는 바에 따라 그 사업연도의 소득에 대한 법인세의 과세표준과 세액을 납세지 관할 세무서장에게 신고하여야
+한다. <개정 2018. 12. 24.>",,,Conditional four-month domestic-company filing deadline under Article 60(1) for submission of the good-faith verification certificate under Article 60-2(1). Measured from the end of the month containing business-year end; not a universal four-month extension.,,
+kr.inbound.short_term_foreign_resident_remittance_limitation,kr,individual,inbound,short_term_foreign_resident_remittance_limitation,yes,bool,kr.income-tax-act.20260701.ko#3,"제3조(과세소득의 범위) ① 거주자에게는 이 법에서 규정하는 모든 소득에 대해서 과세한다. 다만, 해당 과세기간 종료
+일 10년 전부터 국내에 주소나 거소를 둔 기간의 합계가 5년 이하인 외국인 거주자에게는 과세대상 소득 중 국외에
+서 발생한 소득의 경우 국내에서 지급되거나 국내로 송금된 소득에 대해서만 과세한다.
+② 비거주자에게는 제119조에 따른 국내원천소득에 대해서만과세한다.
+③ 제1항 및 제2항을 적용하는 경우 「조세특례제한법」 제100조의14제2호의 동업자에게는 같은 법 제100조의18제
+1항에 따라 배분받은 소득 및 같은 법 제100조의22제1항에 따라 분배받은 자산의 시가 중 분배일의 지분가액을 초
+과하여 발생하는 소득에 대하여 과세한다.
+[전문개정 2009. 12. 31.]",,,Foreign-national resident with aggregate Korean domicile/residence no more than five years over the statutory preceding ten-year period: foreign-source income is taxed only when paid in/remitted to Korea. This does not exempt Korean-source income or apply to every resident. Reviewed current consolidation; no invented commencement date.,,
+kr.final.company_cit_marginal_rate_band1,kr,company,final,company_cit_marginal_rate_band1,10,%,kr.corporate-tax-act.20260701.ko#a55.table1.row1,"2억원 이하
+과세표준의 100분의 10",2026-01-01,,"Ordinary domestic-company national CIT marginal band under Article 55(1)(1); excludes Article 60-2(1)(1) companies governed by the separate table. KRW taxable base lower bound 0 (exclusive except zero), upper bound 200000000 (inclusive). Tax is KRW 0 plus 10% of the excess above KRW 0; not a flat rate on the whole base. Excludes local income tax and separately applicable special taxes. Act 21217 supplementary Articles 1 and 5 apply the amended rates to business years beginning on/after 1 January 2026, not every return filed in 2026.",,
+kr.final.company_cit_marginal_rate_band2,kr,company,final,company_cit_marginal_rate_band2,20,%,kr.corporate-tax-act.20260701.ko#a55.table1.row2,"2억원 초과 200억원 이하
+2천만원 + (2억원을 초과하는 금액의 100분의 20)",2026-01-01,,"Ordinary domestic-company national CIT marginal band under Article 55(1)(1); excludes Article 60-2(1)(1) companies governed by the separate table. KRW taxable base lower bound 200000000 (exclusive except zero), upper bound 20000000000 (inclusive). Tax is KRW 20000000 plus 20% of the excess above KRW 200000000; not a flat rate on the whole base. Excludes local income tax and separately applicable special taxes. Act 21217 supplementary Articles 1 and 5 apply the amended rates to business years beginning on/after 1 January 2026, not every return filed in 2026.",,
+kr.final.company_cit_marginal_rate_band3,kr,company,final,company_cit_marginal_rate_band3,22,%,kr.corporate-tax-act.20260701.ko#a55.table1.row3,"200억원 초과 3천억원 이하
+39억8천만원 + (200억원을 초과하는 금액의 100분의 22)",2026-01-01,,"Ordinary domestic-company national CIT marginal band under Article 55(1)(1); excludes Article 60-2(1)(1) companies governed by the separate table. KRW taxable base lower bound 20000000000 (exclusive except zero), upper bound 300000000000 (inclusive). Tax is KRW 3980000000 plus 22% of the excess above KRW 20000000000; not a flat rate on the whole base. Excludes local income tax and separately applicable special taxes. Act 21217 supplementary Articles 1 and 5 apply the amended rates to business years beginning on/after 1 January 2026, not every return filed in 2026.",,
+kr.final.company_cit_marginal_rate_band4,kr,company,final,company_cit_marginal_rate_band4,25,%,kr.corporate-tax-act.20260701.ko#a55.table1.row4,"3천억원 초과
+655억8천만원 + (3천억원을 초과하는 금액의 100분의 25)",2026-01-01,,"Ordinary domestic-company national CIT marginal band under Article 55(1)(1); excludes Article 60-2(1)(1) companies governed by the separate table. KRW taxable base lower bound 300000000000 (exclusive except zero), upper bound unbounded (inclusive). Tax is KRW 65580000000 plus 25% of the excess above KRW 300000000000; not a flat rate on the whole base. Excludes local income tax and separately applicable special taxes. Act 21217 supplementary Articles 1 and 5 apply the amended rates to business years beginning on/after 1 January 2026, not every return filed in 2026.",,
+kr.final.individual_global_income_marginal_rate_band1,kr,individual,final,individual_global_income_marginal_rate_band1,6,%,kr.income-tax-act.20260701.ko#a55.table1.row1,"1,400만원 이하
+과세표준의 6퍼센트",,,"Resident comprehensive-income national tax marginal band under Article 55(1), reviewed in the July 2026 consolidation. KRW taxable base lower bound 0 (exclusive except zero), upper bound 14000000 (inclusive). Tax is KRW 0 plus 6% of the excess above KRW 0. Not a flat rate on total receipts, retirement/capital gains or every special regime. Local income tax, deductions, credits and special options are separate; this row does not claim the table was newly introduced in July 2026.",,
+kr.final.individual_global_income_marginal_rate_band2,kr,individual,final,individual_global_income_marginal_rate_band2,15,%,kr.income-tax-act.20260701.ko#a55.table1.row2,"1,400만원 초과 5,000만원 이하
+84만원 + (1,400만원을 초과하는 금액의 15퍼센트)",,,"Resident comprehensive-income national tax marginal band under Article 55(1), reviewed in the July 2026 consolidation. KRW taxable base lower bound 14000000 (exclusive except zero), upper bound 50000000 (inclusive). Tax is KRW 840000 plus 15% of the excess above KRW 14000000. Not a flat rate on total receipts, retirement/capital gains or every special regime. Local income tax, deductions, credits and special options are separate; this row does not claim the table was newly introduced in July 2026.",,
+kr.final.individual_global_income_marginal_rate_band3,kr,individual,final,individual_global_income_marginal_rate_band3,24,%,kr.income-tax-act.20260701.ko#a55.table1.row3,"5,000만원 초과 8,800만원 이하
+624만원 + (5,000만원을 초과하는 금액의 24퍼센트)",,,"Resident comprehensive-income national tax marginal band under Article 55(1), reviewed in the July 2026 consolidation. KRW taxable base lower bound 50000000 (exclusive except zero), upper bound 88000000 (inclusive). Tax is KRW 6240000 plus 24% of the excess above KRW 50000000. Not a flat rate on total receipts, retirement/capital gains or every special regime. Local income tax, deductions, credits and special options are separate; this row does not claim the table was newly introduced in July 2026.",,
+kr.final.individual_global_income_marginal_rate_band4,kr,individual,final,individual_global_income_marginal_rate_band4,35,%,kr.income-tax-act.20260701.ko#a55.table1.row4,"8,800만원 초과 1억5천만원 이하
+1,536만원 + (8,800만원을 초과하는 금액의 35퍼센트)",,,"Resident comprehensive-income national tax marginal band under Article 55(1), reviewed in the July 2026 consolidation. KRW taxable base lower bound 88000000 (exclusive except zero), upper bound 150000000 (inclusive). Tax is KRW 15360000 plus 35% of the excess above KRW 88000000. Not a flat rate on total receipts, retirement/capital gains or every special regime. Local income tax, deductions, credits and special options are separate; this row does not claim the table was newly introduced in July 2026.",,
+kr.final.individual_global_income_marginal_rate_band5,kr,individual,final,individual_global_income_marginal_rate_band5,38,%,kr.income-tax-act.20260701.ko#a55.table1.row5,"1억5천만원 초과 3억원 이하
+3,706만원 + (1억5천만원을 초과하는 금액의 38퍼센트)",,,"Resident comprehensive-income national tax marginal band under Article 55(1), reviewed in the July 2026 consolidation. KRW taxable base lower bound 150000000 (exclusive except zero), upper bound 300000000 (inclusive). Tax is KRW 37060000 plus 38% of the excess above KRW 150000000. Not a flat rate on total receipts, retirement/capital gains or every special regime. Local income tax, deductions, credits and special options are separate; this row does not claim the table was newly introduced in July 2026.",,
+kr.final.individual_global_income_marginal_rate_band6,kr,individual,final,individual_global_income_marginal_rate_band6,40,%,kr.income-tax-act.20260701.ko#a55.table1.row6,"3억원 초과 5억원 이하
+9,406만원 + (3억원을 초과하는 금액의 40퍼센트)",,,"Resident comprehensive-income national tax marginal band under Article 55(1), reviewed in the July 2026 consolidation. KRW taxable base lower bound 300000000 (exclusive except zero), upper bound 500000000 (inclusive). Tax is KRW 94060000 plus 40% of the excess above KRW 300000000. Not a flat rate on total receipts, retirement/capital gains or every special regime. Local income tax, deductions, credits and special options are separate; this row does not claim the table was newly introduced in July 2026.",,
+kr.final.individual_global_income_marginal_rate_band7,kr,individual,final,individual_global_income_marginal_rate_band7,42,%,kr.income-tax-act.20260701.ko#a55.table1.row7,"5억원 초과 10억원 이하
+1억7,406만원 + (5억원을 초과하는 금액의 42퍼센트)",,,"Resident comprehensive-income national tax marginal band under Article 55(1), reviewed in the July 2026 consolidation. KRW taxable base lower bound 500000000 (exclusive except zero), upper bound 1000000000 (inclusive). Tax is KRW 174060000 plus 42% of the excess above KRW 500000000. Not a flat rate on total receipts, retirement/capital gains or every special regime. Local income tax, deductions, credits and special options are separate; this row does not claim the table was newly introduced in July 2026.",,
+kr.final.individual_global_income_marginal_rate_band8,kr,individual,final,individual_global_income_marginal_rate_band8,45,%,kr.income-tax-act.20260701.ko#a55.table1.row8,"10억원 초과
+3억8,406만원 + (10억원을 초과하는 금액의 45퍼센트)",,,"Resident comprehensive-income national tax marginal band under Article 55(1), reviewed in the July 2026 consolidation. KRW taxable base lower bound 1000000000 (exclusive except zero), upper bound unbounded (inclusive). Tax is KRW 384060000 plus 45% of the excess above KRW 1000000000. Not a flat rate on total receipts, retirement/capital gains or every special regime. Local income tax, deductions, credits and special options are separate; this row does not claim the table was newly introduced in July 2026.",,
+kr.outbound_wht.nonresident_company_dividend_national_rate,kr,company,outbound_wht,nonresident_company_dividend_national_rate,20,%,kr.corporate-tax-act.20260701.ko#98.1,2. 제93조제2호에 따른 국내원천 배당소득: 지급금액의 100분의 20,,,"National withholding base rate on the specified Korean-source dividend payment to a foreign corporation/nonresident individual, subject to the parent article’s PE-attribution and payer exceptions, treaty relief/exemptions and procedures. Local income tax is separate. No universal combined 20% effective rate is inferred; reviewed current primary version, not a new commencement claim.",,
+kr.outbound_wht.nonresident_individual_dividend_national_rate,kr,individual,outbound_wht,nonresident_individual_dividend_national_rate,20,%,kr.income-tax-act.20260701.ko#156.1,2. 제119조제2호에 따른 국내원천 배당소득: 지급금액의 100분의 20,,,"National withholding base rate on the specified Korean-source dividend payment to a foreign corporation/nonresident individual, subject to the parent article’s PE-attribution and payer exceptions, treaty relief/exemptions and procedures. Local income tax is separate. No universal combined 20% effective rate is inferred; reviewed current primary version, not a new commencement claim.",,
+my.inbound.company_dividend_exemption_filing_obligations_preserved,my,company,inbound,company_dividend_exemption_filing_obligations_preserved,yes,bool,my.pua235.2022.foreign-dividends#s4(5),"(5)	 Nothing in subparagraph (1) shall absolve or be deemed to have 
+absolved a qualifying person from complying with any requirement to submit 
+any return or statement of accounts or to furnish any other information under 
+the provisions of the Act.",2024-01-01,2026-12-31,"The foreign-dividend exemption does not release statutory return, accounts or information obligations under paragraph 4(5). It is not a separate filing-deadline rule and does not establish obligations for every exempt/nonresident entity. Scoped to the reviewed period; not a new 2024 commencement claim.",,
+my.inbound.company_exempt_foreign_dividend_deductions_disregarded,my,company,inbound,company_exempt_foreign_dividend_deductions_disregarded,yes,bool,my.pua235.2022.foreign-dividends#s4(4),"(4)	 Any deduction in relation to the income exempted under this paragraph 
+shall be disregarded for the purpose of ascertaining the chargeable income of 
+the qualifying person.",2024-01-01,2026-12-31,"Where the reviewed foreign-dividend exemption applies, deductions in relation to exempt income are disregarded in ascertaining chargeable income under paragraph 4(4); exemption does not create a double benefit. Recipient/sector/condition limitations apply. This row is scoped to the reviewed current exemption period, not a claim paragraph 4(4) was introduced in 2024.",,
+my.inbound.company_foreign_dividend_conditional_exemption,my,company,inbound,company_foreign_dividend_conditional_exemption,yes,bool,my.pua235.2022.foreign-dividends#s4,"4.	 (1)	 The Minister exempts a qualifying person from the payment of income 
+tax in respect of the gross income of that qualifying person from dividend 
+income which is received in Malaysia from outside Malaysia in the basis 
+period for a year of assessment.",2024-01-01,2026-12-31,"Qualifying Malaysian resident/company categories and the current ministerial guidelines must be satisfied. Banking, insurance, sea transport and air transport businesses are excluded by paragraph 5. P.U.(A)157/2024 added a Labuan-company category with the specified section 3A election (eligibility change from YA2022) and changed exemption conditions from 1 January 2024. The 2024–2026 record is the period supported here; a company extension after 2026 is not certified by this review. Conditions are (subject-to-tax AND headline rate at least 15%) OR adequate Malaysia employees AND operating expenditure; not a requirement to satisfy both routes. The original 2022–2023 condition history is not certified here.",,
+my.inbound.foreign_dividend_economic_substance_alternative,my,company,inbound,foreign_dividend_economic_substance_alternative,yes,bool,my.pua157.2024.foreign-dividends-amendment#s3,"3.	 Paragraph 4 of the principal Order is amended—
+	
+(a)	 by substituting for subparagraph (2) the following subparagraph:
+  “(2)  For the purposes of exemption under subparagraph (1), the 
+qualifying person shall, in the basis period of a year of assessment, 
+comply with the conditions imposed by the Minister as specified in 
+the guidelines issued by the Director General under section 134a of 
+the Act, which shall include the following conditions:
+	
+(a)	 the dividend income exempted under subparagraph (1) shall—
+	
+(i)	 have been subjected to tax of a similar character to income 
+tax under the law of the territory which the income 
+arises; and
+
+Kertas Statut 231 Tahun 2024	
+	
+(ii)	 the highest rate of tax of a similar character to income tax 
+under the law of the territory which the income arises 
+at that time is not less than fifteen per cent; or
+	
+(b)	 the qualifying person shall—
+	
+(i)	 employ an adequate number of employees in Malaysia; 
+and
+	
+(ii)	 incur an adequate amount of operating expenditure in 
+Malaysia.”; and
+	
+(b)	 by deleting subparagraph (3).",2024-01-01,2026-12-31,"Alternative to the participation subject-to-tax/headline-rate route: adequate number of employees in Malaysia AND adequate operating expenditure in Malaysia, subject to the actual ministerial guidelines and recipient/sector conditions. No fixed employee count or spend minimum is inferred. Qualifying Malaysian resident/company categories and the current ministerial guidelines must be satisfied. Banking, insurance, sea transport and air transport businesses are excluded by paragraph 5. P.U.(A)157/2024 added a Labuan-company category with the specified section 3A election (eligibility change from YA2022) and changed exemption conditions from 1 January 2024. The 2024–2026 record is the period supported here; a company extension after 2026 is not certified by this review.",,
+my.inbound.individual_nonpartnership_fsi_exemption.2022_2026,my,individual,inbound,individual_nonpartnership_fsi_exemption,yes,bool,my.hasil.foreign-income-2024#para5.2,"5.2.2.1 
+All foreign income other than partnership income received 
+in Malaysia by a resident individual from 1 January 2022 
+until 31 December 2026 is exempt from tax provided the 
+income has been subjected to tax in the country of origin.",2022-01-01,2026-12-31,"Resident individual; all covered foreign-source income received in Malaysia except Malaysian partnership business income, subject to the origin-tax condition and its specified/deemed cases in guideline 5.2.2.2. This does not require a positive foreign tax payment in every accepted deemed case and is not unconditional worldwide-income exemption. Underlying P.U.(A)234/2022 official-original acquisition remains pending after its Parliament link failed; this record is supported by the official IRB guideline and the separately acquired amending order.",,
+my.inbound.individual_nonpartnership_fsi_exemption.2027_2036,my,individual,inbound,individual_nonpartnership_fsi_exemption,yes,bool,my.pua451.2024.individual-fsi-extension#s2,"2.	 The Income Tax (Exemption) (No. 5) Order 2022 [P.U. (A) 234/2022] 
+is amended in subparagraph 1(2) by substituting for the words “31 December 2026” 
+the words “31 December 2036”.",2027-01-01,2036-12-31,"Gazetted scheduled extension of P.U.(A)234/2022, commencing 1 January 2027 under paragraph 1(2), changes the end date to 31 December 2036. Resident-individual/non-partnership scope and existing qualifying/deemed-tax conditions remain; no new universal exemption is created. This future record must not be applied before its start date and remains subject to later amendments. Base-scope support: official IRB guideline paragraphs 1.4(b), 5.2.2.1–2; primary amending order supplies the extension date.",,
+my.inbound.individual_partnership_foreign_dividend_conditional_exemption,my,individual,inbound,individual_partnership_foreign_dividend_conditional_exemption,yes,bool,my.pua235.2022.foreign-dividends#s3,"(a)	 an individual who has dividend income received in Malaysia from 
+outside Malaysia in relation to a partnership business in Malaysia;",2024-01-01,2026-12-31,"Resident individual receiving foreign dividends in relation to a Malaysian partnership business is under P.U.(A)235/2022, not the separate general individual P.U.(A)234/2022 exemption. Apply the amended two alternative routes and excluded sectors in paragraphs 4/5 and P.U.(A)157/2024. This is not exemption for all partnership foreign income; post-2026 extension not certified here.",,
+my.inbound.participation_route_headline_rate_min,my,company,inbound,participation_route_headline_rate_min,15,%,my.pua157.2024.foreign-dividends-amendment#s3,"3.	 Paragraph 4 of the principal Order is amended—
+	
+(a)	 by substituting for subparagraph (2) the following subparagraph:
+  “(2)  For the purposes of exemption under subparagraph (1), the 
+qualifying person shall, in the basis period of a year of assessment, 
+comply with the conditions imposed by the Minister as specified in 
+the guidelines issued by the Director General under section 134a of 
+the Act, which shall include the following conditions:
+	
+(a)	 the dividend income exempted under subparagraph (1) shall—
+	
+(i)	 have been subjected to tax of a similar character to income 
+tax under the law of the territory which the income 
+arises; and
+
+Kertas Statut 231 Tahun 2024	
+	
+(ii)	 the highest rate of tax of a similar character to income tax 
+under the law of the territory which the income arises 
+at that time is not less than fifteen per cent; or
+	
+(b)	 the qualifying person shall—
+	
+(i)	 employ an adequate number of employees in Malaysia; 
+and
+	
+(ii)	 incur an adequate amount of operating expenditure in 
+Malaysia.”; and
+	
+(b)	 by deleting subparagraph (3).",2024-01-01,2026-12-31,"Only the participation route: foreign dividend subject to tax AND source-territory highest/headline rate at least 15%. It is not a universal condition where the alternative economic-substance route is met. Ministerial/deemed-tax rules must be assessed; no ownership percentage or actual effective-tax-rate threshold is inferred. Qualifying Malaysian resident/company categories and the current ministerial guidelines must be satisfied. Banking, insurance, sea transport and air transport businesses are excluded by paragraph 5. P.U.(A)157/2024 added a Labuan-company category with the specified section 3A election (eligibility change from YA2022) and changed exemption conditions from 1 January 2024. The 2024–2026 record is the period supported here; a company extension after 2026 is not certified by this review.",,
+my.inbound.foreign_income_taxable,my,all,inbound,foreign_income_taxable,yes,bool,my.hasil.foreign-income-2024#para5.1,"Effective from 1 January 2022, generally, all types of foreign income received in Malaysia by a resident is subject to tax.",2022-01-01,,"Resident foreign-income charging rule from 1 January 2022 BEFORE exemptions, not a statement of tax payable on every receipt. Apply the separate resident-individual non-partnership exemption, resident-company/partnership dividend exemption, sector exclusions and specified conditions. Current reviewed periods and the gazetted 2027-forward individual extension are separately parameterized; no general company exemption for all types of foreign income is inferred.",,
+my.inbound.ftc_method,my,all,inbound,ftc_method,bilateral_or_unilateral,text,my.hasil.foreign-income-2024#para5.1,"Foreign income received in Malaysia that has been taxed by other jurisdictions either through withholding tax or income tax, are eligible for bilateral or unilateral tax credit under the provisions of sections 132 and 133 of the ITA 1967.",,,Eligibility for a foreign tax credit under sections 132 and 133; the source sentence conditions it on foreign tax having been paid. Determine whether income is exempt before computing a credit; exemption subject-to-tax/deemed-tax conditions are not identical to actual eligible foreign tax paid for a credit. Statutory caps and income/source/treaty conditions still require assessment.,,
+my.final.individual_domestic_dividend_joint_aggregate_includes_spouse,my,individual,final,individual_domestic_dividend_joint_aggregate_includes_spouse,yes,bool,my.pua148.2025.dividend-income#s2(3),"(3)	 In the case of a combined assessment under subsection 45(2) of the 
+Act, the aggregate income referred to in subrule (1) or (2) shall include the 
+income from the wife or husband, as the case may be. 
+	
+",2025-01-01,,"From YA2025; date represents first individual basis-year start, not the gazette date. Combined assessment under section45(2): aggregate income B includes the spouse. Does not establish two deductions or a RM200,000 household threshold.",,
+my.final.individual_domestic_dividend_nonresident_allocation,my,individual,final,individual_domestic_dividend_nonresident_allocation,A/B*C,text,my.pua148.2025.dividend-income#s2(2),"(2)	 Where an individual not resident in Malaysia has income which consists 
+of dividend in excess of one hundred thousand ringgit and a source other 
+than dividend in the basis period for a year of assessment, the dividend is 
+deemed by virtue of section 14 of the Act to be derived from Malaysia and 
+the chargeable income of the individual in respect of that dividend which is 
+subject to tax under Part XXII of Schedule 1 to the Act shall be ascertained 
+in accordance with the following formula:
+A
+x  C
+B
+where
+A	
+is the statutory income in respect of dividend in the basis period 
+for that year of assessment; 
+B	
+is the aggregate income in the basis period for that year of 
+assessment; and
+C	
+is the chargeable income in the basis period for that year of 
+assessment which is subject to tax as specified in paragraph 1a 
+of Part I and Part XXII of Schedule 1 to the Act. 
+	
+",2025-01-01,,"From YA2025; date represents first individual basis-year start, not the gazette date. Nonresident with relevant dividends exceeding RM100,000 and other-source income: A=statutory dividend income, B=aggregate income, C=chargeable income subject to Schedule1 PartI para1a and PartXXII. Fraction checked on PDF p.4. Resident return guidance does not establish nonresident relief/treaty eligibility. Not asserted for dividend-only income.",,
+my.final.individual_domestic_dividend_remaining_income_ordinary_rates,my,individual,final,individual_domestic_dividend_remaining_income_ordinary_rates,yes,bool,my.pua148.2025.dividend-income#s2(4),"(4)	 Where chargeable income of the individual in respect of dividend 
+has been determined under subrule (1) or (2), any excess of the chargeable 
+income of that individual which is subject to tax shall be charged to income 
+tax for that year of assessment at the rate that would have been applicable 
+to his chargeable income pursuant to—
+	
+(a)	 paragraph 1 of Part I of Schedule 1 to the Act in relation to an 
+individual who is resident in Malaysia; or
+	
+(b)	 paragraph 1a of Part I of Schedule 1 to the Act in relation to an 
+individual who is not resident in Malaysia,
+as the case may be.
+
+	
+Kertas Statut 140 Tahun 2025	
+	",2025-01-01,,"From YA2025; date represents first individual basis-year start, not the gazette date. After allocation under rule2(1)/(2), remaining chargeable income retains the applicable resident PartI para1 or nonresident para1a rates. The separate dividend rate does not replace taxation of other sources.",,
+my.final.individual_marginal_band_9,my,individual,final,individual_marginal_band_9,28,%,my.ita1967.updated2026.en#sch1.partI.1,"For every ringgit of the next 
+1,400,000 
+28 per cent",,,Ordinary individual marginal band: lower boundary MYR600000; upper MYR2000000; rate applies only to the excess within this band. Cumulative tax at lower boundary MYR136400. Read full PartI1 exceptions and residency/special regimes; PartXXII dividends are computed separately. No relief eligibility or universal effective rate inferred. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.,,
+my.final.individual_domestic_dividend_resident_allocation,my,individual,final,individual_domestic_dividend_resident_allocation,A/B*C,text,my.pua148.2025.dividend-income#s2,"2.	 (1)	 Where an individual resident in Malaysia has income which consists 
+of dividend in excess of one hundred thousand ringgit and a source other 
+than dividend in the basis period for a year of assessment, the dividend is 
+deemed by virtue of section 14 of the Act to be derived from Malaysia and 
+the chargeable income of the individual in respect of that dividend which is 
+subject to tax under Part XXII of Schedule 1 to the Act shall be ascertained 
+in accordance with the following formula:
+A
+x  C
+B
+where
+A	
+is the statutory income in respect of dividend in the basis period 
+for that year of assessment; 
+
+Kertas Statut 140 Tahun 2025	
+B	
+is the aggregate income in the basis period for that year of 
+assessment; and
+C	
+is the chargeable income in the basis period for that year of 
+assessment which is subject to tax as specified in paragraph 1 
+of Part I and Part XXII of Schedule 1 to the Act. 
+	",2025-01-01,,"From YA2025; date represents first individual basis-year start, not the gazette date. Resident with relevant dividends exceeding RM100,000 and other-source income: A=statutory dividend income, B=aggregate income, C=chargeable income subject to Schedule1 PartI para1 and PartXXII. Fraction checked visually on PDF pp.3-4. Do not substitute gross amounts for statutory/aggregate amounts. Not asserted for dividend-only income.",,
+my.final.company_single_tier_domestic_dividend_exempt,my,company,final,company_single_tier_domestic_dividend_exempt,yes,bool,my.ita1967.updated2026.en#sch6.partI.12B,"12B. (1) Any dividend paid, credited or distributed to any person other than an 
+individual where the company paying such dividend is not entitled to deduct tax 
+under this Act and any deductions in relation to such dividend shall be disregarded 
+for the purpose of ascertaining the chargeable income of the person. 
+ 
+(2) Any dividend paid, credited or distributed to an individual, whether in 
+monetary form or otherwise, amounting to one hundred thousand ringgit or less 
+where the company paying such dividend is not entitled to deduct tax under this Act 
+and any deduction in relation to such dividend shall be disregarded for the purpose 
+of ascertaining the chargeable income of the individual. 
+ 
+",2025-01-01,,"Schedule6 para12B(1), read as the preserved base text narrowed by Act862 section17(a)/(b), covers recipients other than individuals, including companies. Condition retained from the base paragraph: payer is not entitled to deduct tax under the Act; related deductions are disregarded. This is not an exemption for every payment called a dividend or for every foreign receipt. Section3(1) applies this amendment from YA2025; not a claim that the underlying corporate exemption first began in2025. Full current condition text confirmed in Schedule6para12B of official updated2026text; Act862sections3/17 remain the enacted amendment/application evidence.",,
+my.final.individual_top_rate,my,individual,final,individual_top_rate,30,%,my.ita1967.updated2026.en#sch1.partI.1,"For every ringgit exceeding 
+2,000,000 
+30 per cent",,,General Schedule 1 Part I top marginal rate; the Schedule has stated exceptions and preferential regimes. Qualifying domestic company dividends from YA2025 have a separate Schedule1 PartXXII computation; see individual_domestic_dividend parameters. This general 30% marginal rate does not override it. Proposition rechecked in the official updated text as at1January2026. This snapshot date is not a new commencement date; existing value and supported effective dates preserved.,,
+my.final.individual_domestic_dividend_rate,my,individual,final,individual_domestic_dividend_rate,2,%,my.finance-act862.2024#s16,"Amendment of Schedule 1
+16.	 Schedule 1 to the principal Act is amended by inserting after 
+Part XXI the following part:
+“Part XXII
+	
+1.	
+Notwithstanding Part I, income tax shall be charged upon the income 
+of an individual which consists of dividend paid, credited or 
+distributed, whether in monetary form or otherwise, by a company, 
+and the dividend is deemed by virtue of section 14 to be derived 
+from Malaysia, in excess of one hundred thousand ringgit at 
+the rate of 2 per cent on every ringgit of the chargeable income 
+in respect of such dividend.
+	
+2.	
+In this Part, where the individual has income from a source other 
+than dividend referred to in paragraph 1, the chargeable income 
+of the individual referred to in that paragraph, shall be as prescribed 
+by the Minister.”.
+",2025-01-01,,"Primary enacted Schedule1 PartXXII insertion by Act862 section16; section3(1) establishes YA2025 and subsequent YAs. Qualifying individual company dividends deemed Malaysia-derived under section14, exceeding RM100,000: 2% of the chargeable amount related to those dividends, not a flat gross-dividend tax or payer withholding rate. Use gazetted allocation rules when there is other-source income; applicable exemptions/source classification still matter. Official BE2025 B16 corroborates the rate.",,
+my.final.individual_domestic_dividend_scope,my,individual,final,individual_domestic_dividend_scope,cash_or_non_cash_company_dividends_including_nominee_holdings,text,my.finance-act862.2024#s4,"Amendment of section 6
+4.	 The Income Tax Act 1967, which is referred to as the 
+“principal Act” in this Chapter, is amended in subsection 6(1)—
+	
+(a)	 in paragraph (q), by substituting for the full stop at the 
+end of the paragraph a semicolon; and
+	
+(b)	 by inserting after paragraph (q) the following paragraph:
+	
+“(r)	 notwithstanding anything contrary to this Act 
+or any other written law, income tax shall be 
+charged for each year of assessment upon the 
+income of an individual, who is a shareholder 
+of a company, either through direct shareholding 
+or a nominee, which consists of dividend paid, 
+credited or distributed, whether in monetary form 
+or otherwise, by the company, and the dividend 
+is deemed by virtue of section 14 to be derived 
+from Malaysia, at the appropriate rate as specified 
+under Part XXII of Schedule 1.”.
+
+Finance",2025-01-01,,"Act862 section4 inserts section6(1)(r); section3(1) applies from YA2025. Individual shareholders include direct/nominee holdings, monetary/other forms, paid/credited/distributed dividends deemed Malaysia-derived under section14. This is not automatic classification of foreign dividends, cooperatives, unit trusts or LLP partner profits. Gazetted rule2(5) corroborates recipient/payment definitions.",,
+my.final.individual_domestic_dividend_statutory_deduction,my,individual,final,individual_domestic_dividend_statutory_deduction,100000,MYR,my.hasil.be2025.explanatory#p5,"The dividend income received by Mr. Razif is subject to Dividend Tax because 
+it exceeds the RM100,000 threshold set.  The amount of RM100,000 should 
+be deducted from the dividend statutory income. 
+Therefore, the dividend statutory income to be reported by Mr. Razif for the 
+year of assessment 2025 is RM2,400,000. 
+
+ ",2025-01-01,,"From YA2025; date represents first individual basis-year start, not the gazette date. B2 resident YA2025 example deducts RM100,000: dividend statutory income RM2,500,000 becomes RM2,400,000 before chargeable-income allocation. Administrative evidence, not the original amending Act. Do not deduct twice when A is already net, multiply the deduction per payer, or assume the statutory amount necessarily equals final chargeable dividend income. Act862 section17 supplies the enacted low-amount exemption, with section3(1) establishing YA2025 application; the numerical subtraction for income above the threshold remains supported by the cited official B2 example, rather than an invented quotation from section17.",,
+my.final.individual_domestic_dividend_threshold,my,individual,final,individual_domestic_dividend_threshold,100000,MYR,my.finance-act862.2024#s16,"Amendment of Schedule 1
+16.	 Schedule 1 to the principal Act is amended by inserting after 
+Part XXI the following part:
+“Part XXII
+	
+1.	
+Notwithstanding Part I, income tax shall be charged upon the income 
+of an individual which consists of dividend paid, credited or 
+distributed, whether in monetary form or otherwise, by a company, 
+and the dividend is deemed by virtue of section 14 to be derived 
+from Malaysia, in excess of one hundred thousand ringgit at 
+the rate of 2 per cent on every ringgit of the chargeable income 
+in respect of such dividend.
+	
+2.	
+In this Part, where the individual has income from a source other 
+than dividend referred to in paragraph 1, the chargeable income 
+of the individual referred to in that paragraph, shall be as prescribed 
+by the Minister.”.
+",2025-01-01,,"Primary Schedule1 PartXXII threshold inserted by Act862 section16; section3(1) gives YA2025 application. In excess of RM100,000 for the relevant individual dividends, not a per-company/per-voucher threshold. Rules148/2025 prescribe allocations for residents/nonresidents with other-source income. Separate Schedule6 para12B(2) exemption and B2 deduction treatment must be considered.",,
+my.final.company_small_business_marginal_band_1,my,company,final,company_small_business_marginal_band_1,15,%,my.ita1967.updated2026.en#sch1.partI.2A,"For every ringgit of the first  
+150,000 
+15 per cent",,,"Conditional company marginal band: MYR0 to 150000. Requires Malaysia resident/incorporated company, ordinary paid-up capital <=MYR2.5million at basis-period start and business gross income <=MYR50million. Subject to paragraphs2B/2C/3, including related-company >50%ownership exclusions and >20%ownership by foreign-incorporated companies or non-Malaysian-citizen individuals. Not a flat SME rate or automatic eligibility from turnover alone. Rate/row source is my.ita1967.updated2026.en#sch1.partI.2A_2C; apply the full conditions/definitions. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.",,
+my.final.company_small_business_marginal_band_2,my,company,final,company_small_business_marginal_band_2,17,%,my.ita1967.updated2026.en#sch1.partI.2A,"For every ringgit of the next 
+450,000 
+17 per cent",,,"Conditional company marginal band: MYR150000 to 600000. Requires Malaysia resident/incorporated company, ordinary paid-up capital <=MYR2.5million at basis-period start and business gross income <=MYR50million. Subject to paragraphs2B/2C/3, including related-company >50%ownership exclusions and >20%ownership by foreign-incorporated companies or non-Malaysian-citizen individuals. Not a flat SME rate or automatic eligibility from turnover alone. Rate/row source is my.ita1967.updated2026.en#sch1.partI.2A_2C; apply the full conditions/definitions. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.",,
+my.final.company_small_business_marginal_band_3,my,company,final,company_small_business_marginal_band_3,24,%,my.ita1967.updated2026.en#sch1.partI.2A,"For every ringgit exceeding 
+600,000 
+24 per cent",,,"Conditional company marginal band: MYR600000 to unbounded. Requires Malaysia resident/incorporated company, ordinary paid-up capital <=MYR2.5million at basis-period start and business gross income <=MYR50million. Subject to paragraphs2B/2C/3, including related-company >50%ownership exclusions and >20%ownership by foreign-incorporated companies or non-Malaysian-citizen individuals. Not a flat SME rate or automatic eligibility from turnover alone. Rate/row source is my.ita1967.updated2026.en#sch1.partI.2A_2C; apply the full conditions/definitions. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.",,
+my.final.individual_marginal_band_1,my,individual,final,individual_marginal_band_1,0,%,my.ita1967.updated2026.en#sch1.partI.1,"For every ringgit of the first 
+5,000 
+0 per cent",,,Ordinary individual marginal band: lower boundary MYR0; upper MYR5000; rate applies only to the excess within this band. Cumulative tax at lower boundary MYR0. Read full PartI1 exceptions and residency/special regimes; PartXXII dividends are computed separately. No relief eligibility or universal effective rate inferred. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.,,
+my.final.individual_marginal_band_10,my,individual,final,individual_marginal_band_10,30,%,my.ita1967.updated2026.en#sch1.partI.1,"For every ringgit exceeding 
+2,000,000 
+30 per cent",,,Ordinary individual marginal band: lower boundary MYR2000000; upper unbounded; rate applies only to the excess within this band. Cumulative tax at lower boundary MYR528400. Read full PartI1 exceptions and residency/special regimes; PartXXII dividends are computed separately. No relief eligibility or universal effective rate inferred. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.,,
+my.final.individual_marginal_band_2,my,individual,final,individual_marginal_band_2,1,%,my.ita1967.updated2026.en#sch1.partI.1,"For every ringgit of the next
+15,000
+1 per cent",,,Ordinary individual marginal band: lower boundary MYR5000; upper MYR20000; rate applies only to the excess within this band. Cumulative tax at lower boundary MYR0. Read full PartI1 exceptions and residency/special regimes; PartXXII dividends are computed separately. No relief eligibility or universal effective rate inferred. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.,,
+my.final.individual_marginal_band_3,my,individual,final,individual_marginal_band_3,3,%,my.ita1967.updated2026.en#sch1.partI.1,"For every ringgit of the next 
+ 
+15,000 
+3 per cent",,,Ordinary individual marginal band: lower boundary MYR20000; upper MYR35000; rate applies only to the excess within this band. Cumulative tax at lower boundary MYR150. Read full PartI1 exceptions and residency/special regimes; PartXXII dividends are computed separately. No relief eligibility or universal effective rate inferred. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.,,
+my.final.individual_marginal_band_4,my,individual,final,individual_marginal_band_4,6,%,my.ita1967.updated2026.en#sch1.partI.1,"For every ringgit of the next 
+15,000 
+6 per cent",,,Ordinary individual marginal band: lower boundary MYR35000; upper MYR50000; rate applies only to the excess within this band. Cumulative tax at lower boundary MYR600. Read full PartI1 exceptions and residency/special regimes; PartXXII dividends are computed separately. No relief eligibility or universal effective rate inferred. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.,,
+my.final.individual_marginal_band_5,my,individual,final,individual_marginal_band_5,11,%,my.ita1967.updated2026.en#sch1.partI.1,"For every ringgit of the next 
+20,000 
+11 per cent",,,Ordinary individual marginal band: lower boundary MYR50000; upper MYR70000; rate applies only to the excess within this band. Cumulative tax at lower boundary MYR1500. Read full PartI1 exceptions and residency/special regimes; PartXXII dividends are computed separately. No relief eligibility or universal effective rate inferred. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.,,
+my.final.individual_marginal_band_6,my,individual,final,individual_marginal_band_6,19,%,my.ita1967.updated2026.en#sch1.partI.1,"For every ringgit of the next 
+30,000 
+19 per cent",,,Ordinary individual marginal band: lower boundary MYR70000; upper MYR100000; rate applies only to the excess within this band. Cumulative tax at lower boundary MYR3700. Read full PartI1 exceptions and residency/special regimes; PartXXII dividends are computed separately. No relief eligibility or universal effective rate inferred. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.,,
+my.final.individual_marginal_band_7,my,individual,final,individual_marginal_band_7,25,%,my.ita1967.updated2026.en#sch1.partI.1,"For every ringgit of the next 
+300,000 
+25 per cent",,,Ordinary individual marginal band: lower boundary MYR100000; upper MYR400000; rate applies only to the excess within this band. Cumulative tax at lower boundary MYR9400. Read full PartI1 exceptions and residency/special regimes; PartXXII dividends are computed separately. No relief eligibility or universal effective rate inferred. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.,,
+my.final.individual_marginal_band_8,my,individual,final,individual_marginal_band_8,26,%,my.ita1967.updated2026.en#sch1.partI.1,"For every ringgit of the next 
+200,000 
+26 per cent",,,Ordinary individual marginal band: lower boundary MYR400000; upper MYR600000; rate applies only to the excess within this band. Cumulative tax at lower boundary MYR84400. Read full PartI1 exceptions and residency/special regimes; PartXXII dividends are computed separately. No relief eligibility or universal effective rate inferred. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.,,
+my.final.individual_nonresident_general_rate,my,individual,final,individual_nonresident_general_rate,30,%,my.ita1967.updated2026.en#sch1.partI.1A,"1A. Except where paragraph 2 provides otherwise, income tax shall be charged for 
+a year of assessment on the chargeable income of a person (other than a company) 
+not resident for the basis year for that year of assessment at the rate of 30 per cent on 
+every ringgit of the chargeable income. 
+ 
+",,,"Schedule1PartI1A ordinary nonresident noncompany chargeable-income rate, except paragraph2 and other applicable special statutory/treaty regimes. Not applied to every gross payment; PartXXII qualifying individual dividends have a separate computation. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.",,
+my.outbound_wht.dividend_payer_tax_deduction_prohibited,my,all,outbound_wht,dividend_payer_tax_deduction_prohibited,yes,bool,my.ita1967.updated2026.en#s108,"Non-deduction of tax from dividend 
+ 
+*108. (1) Where a dividend is paid or credited by a company to any 
+of its shareholders in the basis period for a year of assessment, the 
+company shall not be entitled to deduct tax from such dividend paid or 
+credited. 
+ 
+",,,"Section108(1): company is not entitled to deduct tax from dividends paid/credited to shareholders in the basis period. This is a payer deduction rule, not a blanket shareholder exemption; YA2025 individual dividend assessment under section6(1)(r)/Schedule1PartXXII remains separate. Preserve statutory saving/transitional rules. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.",,
+my.residence.company_nonbusiness_management_control,my,company,residence,company_nonbusiness_management_control,management_and_control_of_affairs_in_malaysia,text,my.ita1967.updated2026.en#s8,"(c) any other company or body of persons (not being a Hindu 
+joint family) is resident in Malaysia for the basis year for a 
+year of assessment if at any time during that basis year the 
+management and control of its affairs are exercised in 
+Malaysia by its directors or other controlling authority. 
+ 
+",,,"Section8(1)(c) other-company route: at any time in the basis year, management/control of affairs exercised in Malaysia by directors/other controlling authority. Distinct from business-management route8(1)(b); incorporation alone is not substituted for either test. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.",,
+my.residence.individual_90day_three_of_four_years,my,individual,residence,individual_90day_three_of_four_years,90,days,my.ita1967.updated2026.en#s7(1),"(c) he is in Malaysia in that basis year for a period or periods 
+amounting in all to ninety days or more, having been with 
+respect to each of any three of the basis years for the four 
+
+Income Tax 
+ 
+ 
+years of assessment immediately preceding that particular 
+year of assessment either— 
+ 
+(i) resident in Malaysia within the meaning of this Act 
+for the basis year in question; or 
+ 
+(ii) in Malaysia for a period or periods amounting in all 
+to ninety days or more in the basis year in question; 
+or 
+ ",,,"Section7(1)(c): current-year presence at least90days plus, in each of any three of the preceding four basis years, either residence under the Act or at least90days presence. The90day number is conditional, not a standalone replacement for the182day route. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.",,
+my.residence.individual_linked_182day_period,my,individual,residence,individual_linked_182day_period,yes,bool,my.ita1967.updated2026.en#s7,"(b) he is in Malaysia in that basis year for a period of less  
+than one hundred and eighty-two days and that period is 
+linked by or to another period of one hundred and  
+eighty-two or more consecutive days (hereinafter referred 
+to in this paragraph as such period) throughout which he is 
+in Malaysia in the basis year for the year of assessment 
+immediately preceding that particular year of assessment or 
+in that basis year for the year of assessment immediately 
+following that particular year of assessment: 
+ 
+Provided that any temporary absence from Malaysia— 
+ 
+(i) connected with his service in Malaysia and owing to 
+service matters or attending conferences or seminars 
+or study abroad; 
+ 
+(ii) owing to ill-health involving himself or a member of 
+his immediate family; and  
+ 
+(iii) in respect of social visits not exceeding fourteen days 
+in the aggregate,  
+ 
+shall be taken to form part of such period or that period, as 
+the case may be, if he is in Malaysia immediately prior to 
+and after that temporary absence; 
+ 
+",,,"Section7(1)(b) alternative: current period under182days linked to at least182consecutive days in the immediately prior/following basis year. Only the specified temporary absences count, with presence immediately before/after; social visits aggregate at most14days. Not a general permission to count all travel absences. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.",,
+my.residence.individual_part_day_presence_counts,my,individual,residence,individual_part_day_presence_counts,yes,bool,my.ita1967.updated2026.en#s7,"(1A) For the purposes of subsection (1), an individual shall be 
+deemed to be in Malaysia for a day if he is present in Malaysia for part 
+of that day and in ascertaining the period for which he is in Malaysia 
+during any year, any day (within paragraphs 1(a) and (c) for which he 
+is in Malaysia shall be taken into account whether or not that day forms 
+part of a continuous period of days during which he is in Malaysia. 
+ 
+",,,Section7(1A) part-day presence counts as a day; specified paragraph1(a)/(c) days need not form a continuous stay. Not residence merely from any one-day presence. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.,,
+my.residence.individual_public_service_citizen_deemed_resident,my,individual,residence,individual_public_service_citizen_deemed_resident,yes,bool,my.ita1967.updated2026.en#s7(1),"(1B) Notwithstanding subsection (1), where a person who is a 
+citizen and— 
+ 
+(a) is employed in the public services or service of a statutory 
+authority; and 
+ 
+(b) is not in Malaysia at any day in the basis year for that 
+particular year of assessment by reason of— 
+ 
+(i) having and exercising his employment outside 
+Malaysia; or 
+ 
+(ii) attending any course of study in any institution or 
+professional body outside Malaysia which is fully-
+sponsored by the employer, 
+ 
+
+Laws of Malaysia 
+ACT 53 
+ 
+ 
+he is deemed to be a resident for the basis year for that 
+particular year of assessment and for any subsequent basis 
+years when he is not in Malaysia. 
+ ",,,Section7(1B) specific citizen/public-service-or-statutory-authority employment exception for overseas employment or fully employer-sponsored study. Does not deem all citizens working abroad resident. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.,,
+my.residence.individual_three_prior_and_following_year,my,individual,residence,individual_three_prior_and_following_year,yes,bool,my.ita1967.updated2026.en#s7,"(d) he is resident in Malaysia within the meaning of this Act for 
+the basis year for the year of assessment following that 
+particular year of assessment, having been so resident for 
+each of the basis years for the three years of assessment 
+immediately preceding that particular year of assessment. 
+ 
+",,,Section7(1)(d): resident in the following year and each of the three immediately preceding years; preserve both sides of the test. Verified in the official1January2026updated text; no original commencement date inferred from the snapshot.,,
+my.anti_abuse.gaar_adjustment_power,my,all,anti_abuse,gaar_adjustment_power,yes,bool,my.ita1967.updated2026.en#s140,"may, without prejudice to such validity as it may have in any other 
+respect or for any other purpose, disregard or vary the transaction and 
+make such adjustments as he thinks fit with a view to counteracting the 
+whole or any part of any such direct or indirect effect of the transaction.",,,"Section 140 power follows specified tax-altering, relieving, evading/avoiding, or hindering effects. Proposition rechecked in the official updated text as at1January2026. This snapshot date is not a new commencement date; existing value and supported effective dates preserved.",,
+my.final.cit_rate,my,company,final,cit_rate,24,%,my.ita1967.updated2026.en#sch1.partI.2,"at the rate of 25 per cent for the year of assessment 2015 and 24 per cent for the 
+subsequent years of assessment on every ringgit of  the chargeable income.",2016-01-01,,"General company rate in the cited Schedule; the Act provides separate rates and eligibility rules for certain entities. Proposition rechecked in the official updated text as at1January2026. This snapshot date is not a new commencement date; existing value and supported effective dates preserved. Eligible smaller resident/incorporated companies have separate Schedule1PartI2A bands and2B/2C exclusions; YA2022 paragraph2(2) is a historical special case, not a current flat33%rate.",,
+my.final.individual_domestic_dividend_certificate_required,my,individual,final,individual_domestic_dividend_certificate_required,yes,bool,my.ita1967.updated2026.en#s108,"Non-deduction of tax from dividend 
+ 
+*108. (1) Where a dividend is paid or credited by a company to any 
+of its shareholders in the basis period for a year of assessment, the 
+company shall not be entitled to deduct tax from such dividend paid or 
+credited. 
+ 
+(2) Where a dividend is paid, credited or distributed, whether in 
+monetary form or otherwise, by a company to any of its shareholders 
+which is an individual, either through direct shareholding or a 
+nominee, and the dividend is deemed by virtue of section 14 to be 
+derived from Malaysia, the company shall, upon paying, crediting or 
+distributing the dividend, furnish the shareholders with a certificate 
+setting forth in respect of the dividend— 
+ 
+(a) the gross amount; and 
+ 
+(b) the amount paid or credited or where the dividend consists 
+of property other than money, the amount of the market 
+value of that property at the time of the distribution of the 
+dividend. 
+ 
+*NOTE—see sections 30 to 32 of the Finance Act 2015 [Act 773] for explanations on saving and 
+transitional provisions relating to the 108 balance. 
+
+Laws of Malaysia 
+ACT 53 
+ 
+ ",2025-01-01,,"Act862 section15 adds section108(2). The paying company must furnish its individual shareholder, direct or nominee, with a certificate upon paying/crediting/distributing relevant Malaysia-derived dividends; gross amount and paid/credited amount or distribution-date property market value are required. Subject identifies the recipient; obligation is on payer. Section3(1) applies from YA2025. No RM100,000 certificate-issuance threshold or withholding collection mechanism inferred. Consolidated section108(2) confirms the complete certificate contents; section108(1) separately prohibits payer deduction. Act862sections3/15 retain the enacted commencement trail.",,
+my.final.individual_domestic_dividend_low_amount_exempt,my,individual,final,individual_domestic_dividend_low_amount_exempt,yes,bool,my.ita1967.updated2026.en#sch6.partI.12B,"12B. (1) Any dividend paid, credited or distributed to any person other than an 
+individual where the company paying such dividend is not entitled to deduct tax 
+under this Act and any deductions in relation to such dividend shall be disregarded 
+for the purpose of ascertaining the chargeable income of the person. 
+ 
+(2) Any dividend paid, credited or distributed to an individual, whether in 
+monetary form or otherwise, amounting to one hundred thousand ringgit or less 
+where the company paying such dividend is not entitled to deduct tax under this Act 
+and any deduction in relation to such dividend shall be disregarded for the purpose 
+of ascertaining the chargeable income of the individual. 
+ 
+",2025-01-01,,"Act862 section17(c) adds Schedule6 para12B(2): relevant individual dividends amounting to RM100,000 or less, where payer is not entitled to deduct tax; related deductions disregarded. Section3(1) establishes YA2025 application. Not a separate exemption for each payer, a double household allowance, or certification of every other statutory exemption. Full current condition text confirmed in Schedule6para12B of official updated2026text; Act862sections3/17 remain the enacted amendment/application evidence.",,
+my.outbound_wht.interest_royalty_withholding,my,all,outbound_wht,interest_royalty_withholding,yes,bool,my.ita1967.updated2026.en#s109,"Where any person (in this section referred to as the payer) is 
+liable to pay interest or royalty derived from Malaysia to any other 
+person not known to him to be resident in Malaysia",,,"Section 109 obligation for the stated Malaysia-derived interest or royalty payments, subject to statutory exclusions; rate is not recorded here. Proposition rechecked in the official updated text as at1January2026. This snapshot date is not a new commencement date; existing value and supported effective dates preserved.",,
+my.residence.residence_test,my,company,residence,residence_test,management_and_control_in_malaysia,text,my.ita1967.updated2026.en#s8,"a company or a body of persons (not being a Hindu joint 
+family) carrying on a business is resident in Malaysia for 
+the basis year for a year of assessment if at any time during 
+that basis year the management and control of its business 
+or of any one of its businesses, as the case may be, are 
+exercised in Malaysia",,,The cited statutory test is for a company or body carrying on a business. Proposition rechecked in the official updated text as at1January2026. This snapshot date is not a new commencement date; existing value and supported effective dates preserved.,,
+my.residence.residence_days_threshold,my,individual,residence,residence_days_threshold,182,days,my.ita1967.updated2026.en#s7,"he is in Malaysia in that basis year for a period or periods 
+amounting in all to one hundred and eighty two days or 
+more;",,,One statutory residence test. The same section contains linked-period and multi-year alternative tests. Proposition rechecked in the official updated text as at1January2026. This snapshot date is not a new commencement date; existing value and supported effective dates preserved.,,
+my-th.anti_abuse.ppt_applies,my-th,all,anti_abuse,ppt_applies,yes,bool,intl.oecd.mli.en#7.1,"1.
+Notwithstanding any provisions of a Covered Tax Agreement, a benefit under the Covered Tax
+Agreement shall not be granted in respect of an item of income or capital if it is reasonable to conclude,
+having regard to all relevant facts and circumstances, that obtaining that benefit was one of the principal
+purposes of any arrangement or transaction that resulted directly or indirectly in that benefit, unless it is
+established that granting that benefit in these circumstances would be in accordance with the object and
+purpose of the relevant provisions of the Covered Tax Agreement.",2023-01-01,,"WHT-specific effect date, not universal other-taxes commencement. Default7(1)PPTis not displaced by either finalposition; existing-provision notification tables are not the entire list of covered treaties. MLI applies from2023-01-01for withholding-tax events(computed35(1)(a), corroborated th.rd.mli-effect-dates.2026#wht.my). Reciprocal CTArows intl.mli.positions.my.2022.en#cta.th(65) and intl.mli.positions.th.en#cta.my(32). Partyforce dates in intl.oecd.mli.parties.20260915.en#party.my/#party.th:2021-06-01/2022-07-01. Article7PPTmatching reviewed; entireArticle8reserved.35(6)reservations concern35(4), not35(7)delays. Other-tax periods computed starting2023-01-01bothsides. Existing26-page original already includes1995protocol#protocol.1-7; applicationyear1992confirmed in#protocol.7. ProtocolEiFsource conflict MY11June1996vsTH12June1996unresolved; no exactprotocolEiF fabricated. OfficialHASiLsynthesised-text cell To be updated; mli_doc_idempty, authenticMLIcitedunder spec4.2(4). Selectedcoverage/PPT/Article8/dates/dividendreview, not every optional MLImodification.",,
+my-th.outbound_wht.my_source_dividend_additional_tax_exempt,my-th,all,outbound_wht,my_source_dividend_additional_tax_exempt,yes,bool,treaty.my-th.1982.en#10,"(b)  dividends paid by a company which is a resident of Malaysia to a 
+resident of Thailand who is the beneficial owner thereof shall be exempt 
+from any tax in Malaysia which is chargeable on dividends in addition to 
+the tax chargeable in respect of the income of the company. Nothing in 
+this subparagraph shall affect the provisions of the Malaysian laws under 
+which the tax in respect of a dividend paid by a company which is a 
+resident of Malaysia from which Malaysian tax has been, or has been 
+deemed to be, deducted may be adjusted by reference to the rate of tax 
+appropriate to the Malaysian year of assessment immediately following 
+that in which the dividend was paid. 
+ 
+",1983-01-01,,"Article10(2)(b): Malaysia payer to Thailand-resident beneficial owner, no additional Malaysian dividend tax beyond company-income tax, with express legacy adjustment saving. Effectively-connected PE exception and PPTapply; not a blanket exemption for any recipient.",,
+my-th.outbound_wht.th_source_dividend_cap_industrial,my-th,company,outbound_wht,th_source_dividend_cap_industrial,15,%,treaty.my-th.1982.en#10,15 per cent of the gross amount of the dividends if the company,1983-01-01,,"Treaty ceiling, not the domestic tax actually charged. Thailand payer to Malaysia-resident company owning at least15%of voting shares; Article10(3)effectively-connected PE exception applies. Industrial undertaking uses full Article10(6)definition. Apply residence/entitlement/other treaty conditions and PPT; domestic law may impose less. All three positions reserve entire MLIArticle8, so no365-day condition is invented. Base income-year application follows Article28from1983. Industrial payer band only.",,
+my-th.outbound_wht.th_source_dividend_cap_other_qualifying_company,my-th,company,outbound_wht,th_source_dividend_cap_other_qualifying_company,20,%,treaty.my-th.1982.en#10,20 per cent of the gross amount of the dividends in other cases;,1983-01-01,,"Treaty ceiling, not the domestic tax actually charged. Thailand payer to Malaysia-resident company owning at least15%of voting shares; Article10(3)effectively-connected PE exception applies. Industrial undertaking uses full Article10(6)definition. Apply residence/entitlement/other treaty conditions and PPT; domestic law may impose less. All three positions reserve entire MLIArticle8, so no365-day condition is invented. Base income-year application follows Article28from1983. Other cases still requires the qualifying company/15%voting-share conditions; not all shareholders.",,
+my-th.outbound_wht.th_source_voting_share_threshold,my-th,company,outbound_wht,th_source_voting_share_threshold,15,%,treaty.my-th.1982.en#10,"15 per cent of the voting shares of the company paying the dividends,",1983-01-01,,"Treaty ceiling, not the domestic tax actually charged. Thailand payer to Malaysia-resident company owning at least15%of voting shares; Article10(3)effectively-connected PE exception applies. Industrial undertaking uses full Article10(6)definition. Apply residence/entitlement/other treaty conditions and PPT; domestic law may impose less. All three positions reserve entire MLIArticle8, so no365-day condition is invented. Base income-year application follows Article28from1983. Voting shares, not generic capital; no minimum holding period stated here.",,
