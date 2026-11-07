@@ -1,0 +1,4120 @@
+#ocr sha256=082b157c6a2a5c3ae21e7e724b2f74bddf5ad3d1a7a0720e4859588b9641b5c5 model=Qwen/Qwen3-VL-4B-Instruct date=2026-11-07
+○所得に対する租税に関する二重課税の回避及び脱税の防止のための日本
+国政府とインド共和国政府との間の条約
+（略称）インドとの租税（所得）条約
+前
+目
+次
+第一条 人的範囲…………………………………………………………………………………八六七
+第二条 適用される租税………………………………………………………………………八六七
+第三条 定義……………………………………………………………………………………八六八
+第四条 一方の締約国の居住者………………………………………………………………八七〇
+第五条 恒久的施設……………………………………………………………………………八七一
+第六条 不動産に係る所得……………………………………………………………………八七四
+第七条 企業又は恒久的施設の利得…………………………………………………………八七五
+インドとの租税（所得）条約
+平成
+元年三月
+七日
+ニューデリーで署名
+平成
+元年十一月
+十日
+国会承認
+平成
+元年十一月
+二十八日
+批准の関議決定
+平成
+元年十一月
+二十九日
+東京で批准書交換
+平成
+元年十二月
+四日
+公布及び告示
+平成
+元年十二月
+二十九日
+効力発生
+（条約第八号及び外務省告示第六〇号）インドとの租税（所得）条約
+八六四
+第八条 航空機に係る所得
+第九条 特殊関係企業に係る利益
+第十条 配当
+第十一条 利子
+第十二条 使用料
+第十三条 論渡収益
+第十四条 自由職業の所得
+第十五条 勤務に対する報酬
+第十六条 役員の報酬
+第十七条 芸能人の所得
+第十八条 退職年金
+第十九条 公務遂行に係る報酬
+第二十条 学生、事業修習者等への給付金
+第二十一条 教授、教員等の所得
+第二十二条 その他の所得
+第二十三条 二重課税の排除方法
+第二十四条 内国民待遇
+第二十五条 不服申立及び両国当局間の協議
+第二十六条 情報の交換
+第二十七条 外交官又は領事官の特権との関係
+第二十八条 批准、効力発生及び適用の開始時期
+第二十九条 条約の終了及び適用の終了時期
+末
+九〇〇
+八九九
+八九九
+八九八
+八九七
+八九五
+八九三
+八九二
+八九一
+八九〇
+八八九
+八八八
+八八七
+八八六
+八八五
+八八四
+八八三
+八八二
+八八一
+八八〇
+八七九
+八七八
+八七七
+八七六インドの経済開発を促進するための特別の奨励措置に関する交換公文
+インド側書簡…………………………………………………………………………………九〇二
+日本側書簡…………………………………………………………………………………九〇五
+所得に対する租税に関する二重課税の回避及び脱税の防止のための日本国政府とインド共和国政府との
+間の条約に関する交換公文
+日本側書簡…………………………………………………………………………………九〇六
+インド側書簡…………………………………………………………………………………九一六
+九一一
+八六五
+インドとの租税（所得）条約前文
+所得に対する租税に関する二重課税の回避及び脱税の防止のための日本国政府とインド共和国政府との間の条約
+日本国政府及びインド共和国政府は、
+所得に対する租税に関し、二重課税を回避し及び脱税を防止するための新たな条約を締結することを希望して、
+次のとおり協定した。
+第一条
+この条約は、一方又は双方の締約国の居住者である者に適用する。
+第二条
+1 この条約の対象である租税は、次のものとする。
+(a) 日本国においては、
+(i) 所得税
+(ii) 法人税
+(以下「日本国の租税」という。)
+(b) インドにおいては、
+インドとの租税（所得）条約
+適用される租税
+人的範囲
+八六七
+CONVENTION
+BETWEEN THE GOVERNMENT OF JAPAN
+AND THE GOVERNMENT OF THE REPUBLIC OF INDIA
+FOR THE PREVENTION OF DOUBLE TAXATION
+AND THE PREVENTION OF FISCAL EVASION
+WITH RESPECT TO TAXES ON INCOME
+The Government of Japan and the Government
+of the Republic of India,
+Desiring to conclude a new Convention for
+the avoidance of double taxation and the
+prevention of fiscal evasion with respect to
+taxes on income,
+Have agreed as follows:
+Article 1
+This Convention shall apply to persons who
+are residents of one or both of the Contracting
+States.
+Article 2
+1. The taxes which are the subject of this
+Convention are:
+(a) In Japan:
+(i) the income tax; and
+(ii) the corporation tax
+(b) In India:
+thereafter referred to as "Japanese
+tax".インドとの租税（所得）条約
+
+八六八
+
+定義
+
+第三条
+
+1 この条約の適用上、文脈により別に解釈すべき場合を除くほか、
+
+(a) 「日本国」とは、地理的意味で用いる場合に、日本国の租税に関する法令が施行されているすべての領域（領海を含む）及びその領域の外側に位置する水域（領海を含む）に、日本国が施行されているすべての水域（海底及びその下を含む）を含む。及びその領域の外側に位置する水域（領海を含む）に、日本国が施行されているすべての水域（海底及びその下を含む）を含む。
+
+(b) 「インド」とは、インドの領域（領海を含む）。その他インドが国際法及びインドの国内法に基づき主権の権利を有する水域をいう。
+
+(c) 「二方の締約国」及び「他方の締約国」とは、文脈により
+
+2 この条約は、1に掲げる租税に加えて又はこれに代わって租税と同一であるものの又は実質的に類似するものについても、適用する。両締約国の権限のある当局は、それぞれの国の税法について行われた実質的な改正を、その改正後の妥当な期間内に、相互に通知する。
+
+（以下）「インドの租税」という。
+
+the income-tax including any surcharge
+thereon
+(hereinafter referred to as "Indian
+tax").
+
+2. This Convention shall also apply to any
+convention or substantially similar taxes which
+are imposed after the date or in signature of
+this Convention, in addition to or in place of,
+those referred to in paragraph 1. The
+states shall notify each other of any
+substantial changes which have been made
+in their respective taxes within a
+reasonable period of time after such changes.
+
+Article 3
+
+1. For the purposes of this Convention, unless
+the context otherwise requires:
+
+(a) the term "Japan", when used in a geo-
+graphical sense, means all the territory of
+Japan, including its territorial sea, in
+which the laws relating to Japanese tax are
+in force, and all the area beyond its
+territorial sea, including the sea and
+subsoil thereof, over which Japan has
+jurisdiction in accordance with
+international law and in which the laws
+relating to Japanese tax are in force;
+
+(b) the term "India" means the territory of
+India including the territorial sea and any
+other maritime zone in which India has
+sovereign rights according to the Indian
+law and in accordance with international
+law;
+
+(c) the terms "a Contracting State" and "the(i)
+(ii)
+(ba)
+(bb)
+インドとの租税（所得条約）
+八六九
+(i)
+(ii)
+(a)
+(b)
+(c)
+(d)
+(e)
+(f)
+(g)
+(h)
+(i)
+(j)
+(k)
+(l)
+(m)
+(n)
+(o)
+(p)
+(q)
+(r)
+(s)
+(t)
+(u)
+(v)
+(w)
+(x)
+(y)
+(z)
+(aa)
+(bb)
+(cc)
+(dd)
+(ee)
+(ff)
+(gg)
+(hh)
+(ii)
+(iii)
+(iv)
+(v)
+(vi)
+(vii)
+(viii)
+(ix)
+(x)
+(xi)
+(xii)
+(xiii)
+(xiv)
+(xv)
+(xvi)
+(xvii)
+(xviii)
+(xix)
+(xx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxiv)
+(xxv)
+(xxvi)
+(xxvii)
+(xxviii)
+(xxix)
+(xxx)
+(xxi)
+(xxii)
+(xxiii)
+(xxインドとの租税（所得）条約
+
+八〇
+
+第四条
+
+1 この条約の適用上、一方の締約国の居住者（は、当該
+一方の締約国の法令の下において、住所、居所、本店又は主
+たる事務所の所在地その他これらに類する基準により当該
+一方の締約国において課税を受けるべきものとされる者を
+いう。
+2 1の規定により双方の締約国の居住者に該当する者につい
+ては、両締約国の権限のある当局は、合意により、この条約
+の適用上その者が居住者であるとみなされる締約国を決定
+する。
+
+2 一方の締約国によるこの条約の適用上、この条約において
+定義されていない用語は、文脈により別に解釈すべき場合を
+除くほか、この条約の適用を受ける租税に関する当該一方の
+締約国の法令における当該用語の意義を有するものとする。
+
+(ii) インドについて、中央政府大蔵省歳入局又は権限を
+与えられたその代理人をいう。
+(i) 日本国については、大蔵大臣又は権限を与えられたそ
+の代理人をいう。
+(j) 「権限のある当局」とは、
+そのみ運用される船舶又は航空機による運送を除く。）
+という。
+
+Article 4
+
+1. For the purposes of this Convention, the
+term "resident of a Contracting State", means
+any person who, under the laws of that
+Contracting State, is liable to tax, place of
+residence or main office or any other criterion of a
+similar nature.
+
+2. Where by a reason of the provisions of
+this Convention, a person is a resident of
+both Contracting States, then the competent
+authorities of the Contracting States shall
+determine by mutual agreement the State
+of which person shall be deemed to
+be a resident for the purposes of this
+Convention.
+2. As regards the application of this
+Convention by a Contracting State, any term not
+defined therein shall, unless the context
+otherwise requires, have the meaning which it
+has under the laws of that Contracting State
+concerning the taxes to which this Convention
+applies.
+
+(iii) in India, the Central Government in the
+Ministry of Finance, Department of
+Revenue, or their authorized
+representative.
+
+(i) in Japan, the Minister of Finance or
+his authorized representative;
+
+(iii) the term "competent authority" means:
+an enterprise of a Contracting State,
+operated when the ship or aircraft is
+contracted solely between places in the
+other Contracting State, and
+contracting States.設
+恒久的施
+第五条
+Article 5
+Convention.
+1. For the purposes of this Convention, the
+term "permanent establishment" means a fixed
+place of business through which the business of
+an enterprise is wholly or partly carried on.
+2. The term "permanent establishment" includes
+especially:
+(a) a place of management;
+(b) a branch;
+(c) an office;
+(d) a factory;
+(e) a workshop;
+(f) a mine, an oil or gas well, a quarry or any
+other place of extraction of natural
+resources;
+(g) a warehouse in relation to a person;
+(h) a farm, plantation or other place where
+agriculture, forestry, plantation or
+related activities are carried on;
+(i) a store or other sales outlet; and
+(j) an installation of natural resource used
+if so used for a period of more than six
+months.
+3. A building site or construction project
+constitutes a permanent establishment only if it lasts more
+than six months.
+1
+この条約の適用上、「恒久的施設」とは、事業を行う一定
+場所をいう。
+「恒久的施設」には、特に、次のものを含む。
+2
+事業の管理の場所
+支店
+事務所
+工場
+作業場
+鉱山、石油又は天然ガスの坑井、採石場その他天然資源
+を採取する場所
+保管のための施設を他の者に提供する者に係る倉庫
+農業、林業、栽培又はこれらに関連した活動を行う農場、
+栽培場その他の場所
+店舗その他の販売所
+天然資源の探査のために使用する設備又は構築物（六箇
+月を超える期間使用する場合に限る。）
+建築工事現場又は建設、据付若しくは組立工事は、六箇月
+を超える期間存続する場合に限り、「恒久的施設」とする。
+八七
+インドとの租税（所得）条約インドとの租税（所得）条約
+
+ハ七二
+
+4 企業が一方の締約国内における建築工事現場又は建設、
+付若しくは組立工事に関連して、六箇月を超える期間、当該
+一方の締約国内において監督活動を行う場合に、当該「恒
+久的施設」を通過して事業を行うものとされる。
+
+5 3及び4の規定にかかわらず、企業が一方の締約国内にお
+ける石油の探査、開発又は採取に関連して、六箇月を超える
+期間、当該一方の締約国内において施設を提供する
+場合には、当該「恒久的施設」を通過して事業を行うものとされ
+る。
+
+6 1から5までの規定にかかわらず、「恒久的施設」には、
+次のことは、含まれないものとする。
+
+(a) 企業に属する物品又は商品の保管又は展示のためにみ
+施設を使用すること。
+
+(b) 企業に属する物品又は商品の在庫を保管又は展示のため
+にのみ保有すること。
+
+(c) 企業に属する物品又は商品の在庫を他の企業による加工
+のためにのみ保有すること。
+
+(d) 企業のために物品若しくは商品を購入し又は情報を収集
+すること。
+
+4. An enterprise shall be deemed to have a
+permanent establishment in a contracting state
+and to carry on business through a permanent
+establishment if it carries on supervisory
+activities in that contracting state for more
+than six months in connection with building
+project or construction, installation or assembly
+Contracting State.
+
+5. Notwithstanding the provisions of paragraphs
+3 and 4 an enterprise shall be deemed to have a
+permanent establishment in a contracting state
+and to carry on business through a contracting
+state if it provides through services for more
+than six months in connection with the
+mineral oils in that Contracting State.
+
+6. Notwithstanding the provisions of
+preceding paragraphs of this Article, the term
+“permanent establishment” shall be deemed not
+to include:
+
+(a) the use of facilities solely for the
+merchandise storage or display of goods or
+the maintenance of a stock of goods or
+merchandise belonging to the enterprise
+solely for the purpose of storage or
+display;
+
+(b) the maintenance of a stock of goods or
+merchandise belonging to the enterprise
+solely for the purpose of processing by
+another enterprise;
+
+(c) the maintenance solely for the purpose of
+purchasing goods or merchandise for the
+enterprise;8
+企業は、通常の方法でその業務を行う仲介人、間屋その他の独立の地位を有する代理人を通じて一方の締約国内で事業
+インドとの租税（所得）条約
+7
+1及び2の規定にかかわらず、一方の締約国内において他方の締約国の企業に代わって行動する者（8の規定が適用される独立の地位を有する代理人を除く）が次のいずれかの活動を行う場合には、当該企業は、当該一方の締約国内に「恒久的施設」を有するものとされる。
+(a) 当該一方の締約国内で、当該企業に代わって契約を締結する権限を有し、かつ、この権限を反復して行使すること。
+ただし、その活動が6に掲げる活動（事業を行う一定の場所で行われたとしても、6の規定により当該一定の場所が「恒久的施設」とされない活動）のみである場合は、この限りでない。
+(b) その権限は有しないが、当該一方の締約国内で、物品又は商品の在庫を反復して保有し、かつ、当該在庫により当該企業に代わって物品又は商品を規則的に引き渡すこと。
+(c) 当該一方の締約国内で、専ら又は主として当該企業自体のため又は当該企業及び当該企業を支配し、当該企業により支配される若しくは同一の共通の支配下に当該企業と共に置かれている他の企業のため、反復して注文を取得すること。
+(e) 企業のためにその他の準備的又は補助的な性格の活動を行うことののみを目的として、事業を行う一定の場所を保有すること。
+7. Notwithstanding the provisions of paragraphs
+1 and 2, where a person - other than an agent
+or independent contractor - who is acting in a Contracting State on
+behalf of an enterprise in another Contracting State shall be
+deemed to have a permanent establishment in that
+Contracting State, if
+(a) he has and habitually exercises in that
+Contracting State an authority to conclude
+contracts on behalf of the enterprise, those
+unrestricted activities are limited to those
+exercised in paragraph 6 which, if
+business, would not make this fixed place
+of business a permanent establishment under
+the provisions of that paragraph;
+(b) he has no such authority, but habitually
+maintains in the first-mentioned
+Contracting State a stock of goods or
+merchandise from which he regularly
+delivers goods or merchandise on behalf of
+the enterprise; or
+(c) he habitually secures in the
+first-mentioned Contracting State, wholly
+or almost wholly, for the enterprise itself
+or for the enterprise and other enterprise
+controlling, controlled by, or subject to
+the same common control as, that enterprise.
+8. An enterprise shall not be deemed to have a
+permanent establishment in a Contracting State
+merely because it carries on business in that
+八七三不動産に
+保る所得
+
+第八条
+
+インドとの租税（所得）条約
+
+八七四
+
+Contracting State through a broker, general
+commission agent or any other agent of an
+independent status, provided that such persons
+are acting in the ordinary course of their
+business.
+
+9. The fact that a company which is a resident
+of a Contracting State controls or is
+controlled by a company which is a resident of
+another Contracting State, or which carries on
+business in that other State, or which carries
+on business through a permanent establishment
+or otherwise, shall not of itself constitute
+either company a permanent establishment of the
+other.
+
+Article 6
+
+1. Income derived by a resident of a
+Contracting State from immovable property
+situated in the other Contracting State may be
+taxed in that other Contracting State.
+
+2. The term "immovable property" shall have
+the meaning given to it under the laws of
+the Contracting State in which the property in
+question is situated. The term shall include
+any agricultural, livestock and accessory
+property, and forestry rights used in
+provisions of general law respecting immovable
+property, rights to use, natural or fixed
+pavings, as well as rights to use mineral
+resources, mineral deposits, and sources and the
+right to work, natural resources, ships, aircraft
+and other.
+3. The provisions of Paragraph 1 shall apply to
+be regarded as immovable property.
+
+1
+
+一方の締約国の居住者が他方の締約国内に存在する不動産
+から取得する所得に対しては、当該他方の締約国において租
+税を課することができる。当該財産が存在する締約国の法令に
+おける「不動産」の用語は、当該財産が存在する締約国の法令に
+ある場合にも、意義を有するものとする。不動産には、いか
+なる場合にも、これに附属する財産、農業又は林業に用い
+れている家畜類及び設備、不動産に関する一般法の規定の適
+用がある権利、不動産利用益並びに鉱石、水その他の天然資
+源の採取又は採取の対価を受領する料金（金額が確定して
+いるかainaは採取わない）を受領する権利を含む。船舶
+及び航空機は、不動産とはみなさない。
+
+1の規定は、不動産の直接使用、賃貸その他のすべての形
+
+2
+
+9
+
+一方の締約国の居住者である法人が、他方の締約国の居住
+者である法人若しくは他方の締約国内において事業（恒久
+の施設）を運営して行われるもののであるかを問わない。
+実のみによっては、いずれの一方の法人も、他方の法人の「恒
+久の施設」とはされない。
+
+活動を行っているという理由のみで、当該一方の締約国内
+に「恒久の施設」を有するものとされない。企業又は
+恒久的施設
+の利得
+
+第七条
+
+1 一方の締約国の企業の利得に対しては、その企業が他方の
+締約国内にある恒久的施設を通じて当該他方の締約国内にお
+いて事業を行うか否かに応じ、当該一方の締約国の企業が他方の締約
+国内にある恒久的施設を通じて当該他方の締約国内において
+事業を行う場合に、その企業の利得のうち当該恒久的施設
+に直接又は間接に帰せられる部分に対してのみ、当該他方の
+締約国において租税を課すことができる。
+2 3の規定に従うことを条件として、一方の締約国の企業が
+他方の締約国内にある恒久的施設を通じて当該他方の締約国
+内において事業を行う場合に、当該恒久的施設が、同一又
+は類似の条件下で同一又は類似の活動を行い、かつ当該恒久
+的施設を有する企業と全く独立の立場で行う別個のか
+つ分離した企業であるとしたならば当該恒久的施設が取し
+せとみられる利得が、各締約国において当該恒久的施設に帰
+せられるものとする。
+3 恒久的施設の利得を決定するに当たっては、経営費及び一
+インドとの租税（所得）条約
+
+Article 7
+
+1. The profits of an enterprise of a Contracting
+State shall be taxable only in that Contracting
+State if the enterprise carries on business
+in the other Contracting State through a
+permanent establishment situated therein. If
+the enterprise of the contracting State carries
+on business through a permanent establishment
+situated therein, there shall be attributed to
+each Contracting State the profits to which it
+might be expected to make if it were a distinct
+or similar enterprise engaged in the same or
+similar activities under the same or similar
+conditions and dealing wholly independently
+with the enterprises of which it is a permanent
+establishment, there shall be allowed as
+
+4 1及び3の規定は、企業の不動産から生ずる所得及び独立
+の人的役務を提供するために使用される不動産から生ずる所
+得についても、適用する。
+income derived from the direct use, letting, or
+use in any other form of immovable property,
+also apply to the income from immovable
+property of an enterprise and to income from
+independent personal services.航空機に
+
+八七六
+
+インドとの租税（所得）条約
+
+般管理費を含む費用で当該恒久的施設のために生じたものは、当該恒久的施設が存在する締約国内において生じたものであるか他の場所において生じたものであるかを問わず、損金に算入することを認められる。
+
+2の規定は、恒久的施設に帰せられるべき利益を企業の利得の総額の当該企業の各構成部分への配分によって決定する慣行が一方の締約国にある場合に、租税を課されるべき利益をその慣行とされている配分の方法によって当該一方の締約国が決定することを妨げるものではない。ただし、用いられる配分の方法は、当該配分の方法によって得る結果がこの条に定める原則に適合するようなものでなければならない。
+
+恒久的施設が企業のために物品又は商品の単なる購入を行ったこととは理由として、いかなる利益も、当該恒久的施設に帰せられることはない。
+
+1から5までの規定の適用上、恒久的施設に帰せられる利益は、毎年同一の方法によって決定する。ただし、別の方法を用いることににつき正当な理由がある場合は、この限りではない。
+
+他の条で別個に取り扱われている種類の所得が企業の利得に含まれる場合には、当該他の条の規定は、この条の規定にあって影響されない。
+
+第八条
+
+一方の締約国の企業が航空機を国際運輸に運用することに
+
+Article 8
+
+1. profits from the operation of aircraft in
+
+deductions expenses which are incurred for the purposes of the permanent establishment, including the permanent establishment expenses so incurred, whether in the contracting state in which the permanent establishment is situated or elsewhere.
+
+4. Insofar as it has been customary in a contracting state to determine the profits on the basis of an apportionment of the total profits of an enterprise to its various parts, contracting state 2 shall precede that to be taxed by such an apportionment as may be customary; however, be such that the result shall be in this Article.
+
+5. No profits shall be attributed to a permanent establishment by reason of the mere purchase by that permanent establishment of goods or merchandise for the enterprise.
+
+6. For the purposes of the provisions of this Article, the profits to be attributed to the permanent establishment shall be determined by the same sufficient reason to the contrary.
+
+7. Where profits include items of income which are dealt with separately in other Articles of this Convention, then the provisions of those Articles shall not be affected by the provisions of this Article.係る所得
+
+第九条
+
+インドとの租税（所得）条約
+
+八七七
+
+Article 9
+
+international traffic carried on by an
+
+enterprise only in a contracting state shall be
+
+exempted from the operation of ships in
+
+international traffic carried on by an
+
+enterprise only in that contracting state.
+
+2. Profits from the operation of ships in
+
+international traffic carried on by an
+
+enterprise of a contracting state shall be
+
+exempted only in that contracting state.
+
+3. Notwithstanding the provisions of Paragraph
+
+2, such profits may be taxed in the other
+
+contracting state from which they are derived
+
+during a period of first five years, as the case may be,
+
+for which the tax so charged shall not exceed:
+
+(a) during the first five years, 50 per
+
+cent,
+
+(b) during the remaining five years, 25 per
+
+cent,
+
+4. The provisions of the preceding paragraphs
+
+of this Article shall also apply to profits
+
+from this particular in a pool, to joint
+
+business or an international operating agency.
+
+5. The provisions of this Article shall,
+
+notwithstanding the provisions of Article 2,
+
+also apply to the enterprise tax in Japan and
+
+if any tax similar to the said enterprise tax
+
+is imposed in India.
+
+2 一方の締約国の企業が船舶を国際運輸に運用することによって取得する利益に対しては、当該一方の締約国において
+
+その租税を課すことができる。
+
+3 2の規定にかかわらず、この条約が適用される最初の十課
+
+税年度又は「前年度」の期間他方の締約国において生じ
+
+た2の利益に対しては、当該他方の締約国において租税を課
+
+することことができる。ただし、その租税の額は、当該他方の締
+
+約国の税法によれば課されることとなる租税の額の
+
+最初の五課税年度又は五「前年度」に関しては、五十パ
+
+セント
+
+(b) 残りの五課税年度又は五「前年度」に関しては、二十五
+
+パーセント
+
+を越えないものとする。
+
+4 1から3までの規定は、共同計算、共同経営又は国際経営
+
+共同体に参加していることによって取得する利益について
+
+も、適用する。
+
+5 この条の規定は、第二条の規定にかかわらず、日本国にお
+
+いては事業税にも、インドにおいては日本国における事業税
+
+と類似する税が課される場合に、はそのような税にも、適用す
+
+る。特例関係
+企業に係る利益
+八七八
+
+1 (a)
+一方の締約国の企業が他方の締約国の企業の経営、支配
+若しくは資本に直接若しくは間接に参加している場合又は
+(b) 同一の者が一方の締約国の企業及び他方の締約国の企業
+の経営、支配若しくは資本に直接若しくは間接に参加して
+いる場合
+であって、そのいずれの場合においても、商業上又は資金上
+の関係において、双方の企業の間において、独立の企業の間には
+設けられる条件が異なる条件が設けられれば又は課されているとき
+は、その条件がないとしたならば、一方の企業の利益となった
+利得となるなかったものに対しては、これを当該一方の企業の
+利得に算入して租税を課することができる。
+2
+一方の締約国において租税を課される当該一方の締約国の
+企業の利益を他方の締約国が当該他方の締約国の企業の利得
+に算入して租税を課する場合において、両締約国の権限のあ
+る当局が、協議の上、その算入された利得の全部又は一部が、
+双方の企業の間に設けられた条件が独立の企業の間に設けら
+れたであろう条件であったとみなしたならば、当該他方の締約国の
+企業の利得となったとみられる利得であることに合意すると
+該一方の締約国において課された租税の額につき適当な調整
+を行う。この調整に当たっては、この条約の他の規定に妥当
+な考慮を払う。
+
+1.
+where
+(a) an enterprise of a Contracting State in the
+participates directly or indirectly of an
+enterprise, control or capital of an
+enterprise of the other Contracting State,
+or
+(b) the same persons participate directly or
+indirectly in the management, control or
+capital of an enterprise of a contracting
+State and an enterprise of the other
+Contracting State,
+and in either case enterprises are made or
+commercial or financial relations which differ
+from those which would be made between
+enterprises, then any profits which
+would, but for those conditions, have accrued
+to one of the enterprises, but, by reason of
+those conditions, have not accrued, may be
+included in the profits of that enterprise and
+taxed accordingly.
+2.
+Where a contracting State includes in the
+profits of an enterprise that contracts in
+the State - and taxes accordingly - profits on
+which an enterprise charged to tax in that
+contracting State and where the competent
+authorities of the contracting States agree,
+upon consultation, that all or parts of the
+profits so included, the profits of which would
+have accrued to the enterprise if the
+first-mentioned Contracting State had
+conditions which would have been made between
+those enterprises, then that other
+Contracting State shall make an appropriate
+adjustment to the amount of the tax charged
+thereon on those agreed profits.配当
+
+第十条
+
+Article 10
+
+determining such adjustment, due regard shall be had to the other provisions of this Convention.
+
+1. Dividends paid by a company which is a resident of a Contracting State to a resident of the other Contracting State may be taxed in the other Contracting State.
+
+2. However, such dividends may also be taxed in the Contracting State of which the company paying the dividends is a resident, and according to the laws of that Contracting State, but if the recipient is the beneficial owner of the dividends, the tax so charged shall not exceed 15 per cent of the gross amount of the dividends.
+
+The provisions of this paragraph shall not affect the taxation of the dividends in respect of the profits out of which the dividends are paid.
+
+3. The term "dividends" as used in this Article means income from shares or other rights, not being debentures, participations in profits, as well as income from other corporate rights which is subject to the same taxation laws of the Contracting State by which the company making the distribution is a resident.
+
+4. The provisions of paragraphs 1 and 2 shall not apply, if the beneficial owner of the Contracting State, being a resident of a Contracting State, carries on business in the other Contracting State, through a permanent establishment situated therein, or
+
+1 一方の締約国の居住者である、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方の締約国の居住者に支払う配当に対しては、当該他の法人が他方のインドとの租税（所得）条約
+
+ハハ〇
+
+利子
+
+第十一條
+
+1 一方の締約国内において生じ、他方の締約国の居住者に支払われる利子に対しては、当該他方の締約国において租税を課することができる。
+
+2 1の利子に対しては、当該利子が生じた締約国においても、当該締約国の法令に従って租税を課することができる。その租税の額は、当該利子の受領者が当該利子の受益者である場
+
+5 一方の締約国の居住者である法人が他方の締約国から利得又は所得を得る場合に、当該他方の締約国は、当該法人の支払う配当及び当該法人の留保所得については、これらのおいて生じた利得又は所得から一部が当該他方の締約国内に当（当該他方の締約国の居住者に支払われる配当及び配当の支払の基因となった株式その他の持分がある恒久的施設又は固定的施設と実質的な関連を有する場合の配当を除く。）に対していかなる租税も課すことができない。また、当該留保所得に対して租税を課することができない。
+
+第十四条の規定を適用する。
+
+当該恒久的施設又は当該固定的施設と実質的な関連を有するものであるときは、適用しない。この場合には、第七条又は第十四条の規定を適用する。
+
+Article 11
+
+1. Interest arising in a Contracting State and paid to a resident of the other Contracting State may be taxed in that other Contracting State.
+
+2. However, such interest may also be taxed in the Contracting State in which it arises, and accordingly, if the laws of that Contracting State so provide, the tax charged shall be paid by the recipient of the interest.合には、次の額を超えないものとする。
+(a) 当該受益者が銀行である場合には、当該利子の額の十
+パーセント
+(b) その他のすべての場合には、当該利子の額の十五パーセ
+ント
+3
+2の規定にかかわらず、一方の締約国内において生ずる利
+子であって、他方の締約国の政府、当該他方の締約国の中央銀行又
+政府若しくは地方公共団体、当該他方の締約国の金融機関が取得するも
+は当該他方の締約国の政府、当該他方の締約国の中央銀行若し
+は当該他方の地方公共団体、当該他方の締約国の金融機関によりって保
+証された債権又はこれらによる間接融資に係る債権に関して当
+該他方の締約国の居住者が取得するものについては、当該一
+方の締約国において租税を免除する。
+4
+3の規定の適用上、「中央銀行」及び「政府の所有する金
+融関」とは、次のものをいう。
+(a) 日本銀行
+(i) 日本輸出入銀行
+(ii) 海外経済協力基金
+(iii) 国際協力事業団
+(iv) 日本国政府が資本の全部を所有するその他の金融機関
+で両締約国の政府が隨時合意するもの
+インドとの租税（所得）条約
+八八一
+not exceed:
+(a) 10 per cent of the gross amount of the
+interest if the beneficial owner is a bank;
+(b) 15 per cent of the gross amount of the
+interest in all other cases.
+3. Notwithstanding the provisions of Paragraph
+2, interest arising in a contracting State and
+contracted by the government of a contracting State and
+a local authority, a political subdivision of
+that other contracting State, the Central Bank of
+that other contracting State, or any financial
+institution wholly owned by that government, or
+by any resident of the other contracting State
+with respect to debt-claims guaranteed or
+otherwise financed by the Government of that
+other contracting State, a political subdivision
+of that other contracting State, or any
+Central Bank of that other contracting State or
+any financial institution wholly owned by that
+government shall be exempt from tax in the
+First-mentioned Contracting State.
+4. For the purposes of Paragraph 3, the terms
+“Central Bank” and “financial institution
+wholly owned by the Government” mean:
+(a) in the case of Japan:
+(i) the Bank of Japan;
+(ii) the Export-Import Bank of Japan;
+(iii) the Overseas Economic Cooperation Fund;
+(iv) the Japan International Cooperation
+Agency; and
+(v) such other financial institution the
+Government of Japan as may be agreedインドとの租税（所得税）条約
+
+八二
+
+UPON FROM TIME TO TIME BETWEEN THE GOVERNMENTS OF THE TWO CONTRACTING STATES;
+
+(b) in the case of India:
+
+(i) Reserve Bank of India;
+
+(ii) Export-Import Bank of India;
+
+(iii) such other financial institution the capital of which is wholly owned by the Government of India as may be agreed upon from time to time between the Governments of the two Contracting States.
+
+5. The term "interest" as used in this Article means income from debt-claims or every kind, whether not secured by mortgage or any other form of security, and in particular, income from Government profits, securities and income from bonds or debentures, including premiums, bonds or debentures.
+
+6. The provisions of paragraphs 1, 2 and 3 shall apply, if the resident of a Contracting State, being a beneficiary of a Contracting State, carries on business in the other Contracting State, or performs services contracted through a permanent establishment situated in that State, or performs services from a fixed base situated therein, and the debt is effectively connected with such permanent establishment or fixed base. In such case, the provisions of Article 7 shall apply.
+
+7. Interest shall be deemed to arise in a Contracting State when the payer is that
+
+(b) インドについてには、
+
+(i) インド準備銀行
+
+(ii) インド輸出入銀行
+
+(iii) インド政府が資本の全部を所有するその他の金融機関
+
+で両締約国の政府が隨時合意するもの
+
+この条において、「利子」とは、すべての種類の信用に係る債権（担保の有無及び債務者の利益の分配を受ける権利の有無を問わない）から生じた所得（公債、債券又は社債から生じた所得（公債、債券又は社債の割増金及び賞金を含む））をいう。
+
+6 1から3までの規定は、一方の締約国の居住者である利子の受益者が、当該利子の生じた他方の締約国において当該他方の締約国内にある恒久的施設を通じて事業を行っている又は当該他方の締約国内において当該他方の締約国を通じて独立の人的役務を提供する場合において、当該利子の支払の基因となった債権が当該恒久的施設又は当該固定的施設と実質的な関連を有するものであるときは、適用しない。
+
+この場合には、第七条又は第十四条の規定を適用しない。
+
+7 利子は、その支払者のが一方の締約国又は当該一方の締約国の地方政府、地方公共団体若しくは居住者である場合には、使用料
+
+第十二条
+
+1 一方の締約国内において生じ、他方の締約国の居住者に支払われる使用料及び技術上の役務に対する料金に対しては、
+当該他の締約国において租税を課すことができる。
+1の使用料及び技術上の役務に対する料金に対しては、これらが生じた締約国においても、当該締約国の法令に従って
+
+8
+当該一方の締約国内において生じたものとする。ただし、
+利子の支払者（締約国の居住者であるか否かを問わない。）が一方の締約国内に恒久的施設又は固定的施設を有する場合において、当該利子の支払の基因となった債務が当該恒久的施設又は固定的施設について生じ、かつ、当該利子が当該恒久的施設又は固定的施設によって負担されるものであるときは、当該利子は、当該恒久的施設又は固定的施設の存在する
+利子の支払の基因となった債権について考慮した場合において、利子の支払者と受益者と、利子の額が、その関係がないと
+たならば支払者及び受益者が合意したとみられる額を超える
+ときは、この条の規定は、その合意したとみられる額につい
+てのみ適用する。この場合に、支払われた額のうち当該超
+過分に対し、この条約の他の規定に妥当な考慮を払った上、
+各締約国の法令に従って租税を課すことができる。
+
+インドとの租税（所得）条約
+
+ハハ三
+
+Article 12
+
+1. Royalties and fees for technical services
+arising in a Contracting State and paid to a
+resident of the other Contracting State may be
+taxed in that other Contracting State.
+2. However, such royalties and fees for
+technical services may also be taxed in the
+Contracting State in which they arise and
+being of each Contracting State, due regard
+to the other provisions of this
+Convention.インドとの租税（所得）条約
+
+八八四
+
+according to the Laws of that Contracting States, but if the recipient is the beneficial owner of the royalties or fees for technical services, the tax so charged or fees shall not exceed 20 per cent of the gross amount of the royalties or fees for technical services.
+
+3. The term "royalties" as used in this Article means payments for any kind received as a right to use, any copyright of the use of, or the right to use, any literary, artistic or scientific work including literary films or films, or any film or television films, or any patent, trade mark, design or model, or the right to use, process, or for commercial or scientific industrial, or for scientific experience.
+
+4. The term "Fees for technical services" as used in this Article means payments of any amount to any person other than payments of any employee of a person making payments to any individual for independent personal services for the services of a manager, technical services, or other services of a technical nature, including the provision of services of technical, or other personnel.
+
+5. The provisions of paragraphs 1 and 2 shall not apply if the benefit of technical services, being the services of a Contracting State, carries on business in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in the other or contracting State, in該使用料又は技術上の役務に対する料金の支払の基因となつ
+た権利、財産又は契約が当該恒久的施設又は当該固定的施設
+と実質的な関連を有するものであるときは、適用しない。こ
+の場合には、第七条又は第十四条の規定を適用する。
+6 使用料及び技術上の役務に対する料金は、その支払者が一
+方の締約国又は当該一方の締約国の地方公共団体
+若しくは居住者である場合には、当該一方の締約国内におい
+て生じたものとされる。ただし、使用料又は技術上の役務に
+対する料金の支払者（締約国の居住者であるか否かを問わ
+ない）が一方の締約国内に恒久的施設又は固定的施設を有
+する場合において、当該使用料又は技術上の役務に対する料
+金を支払う債務が当該恒久的施設又は固定的施設について生
+じ、かつ、当該使用料又は技術上の役務に対する料金が当該
+恒久的施設又は固定的施設によって負担されるものであると
+きは、当該使用料又は技術上の役務に対する料金は、当該恒
+久的施設又は固定的施設の存在する当該一方の締約国内にお
+いて生じたものとされる。
+7 使用料又は技術上の役務に対する料金の支払の基因となつ
+た使用、権利又は情勢に従って考慮した場合において、使用
+料若しくは技術上の役務に対する料金の支払者と受益者との
+間又はその双方と第三者との間の特別の関係により、使用料
+又は技術上の役務に対する料金の額が、その関係がないとし
+たならば、支払者及び受益者が合意したとみられる額を超える
+ときは、この条の規定は、その合意したとみられる額をつい
+てのみ適用する。この場合には、支払われた額のうち当該超
+インドとの租税（所得）条約
+八八五
+therein, and the right, property or fees for contract in
+technical services are paid effectively for
+technical services, with such permanent establishment or
+fixed base. In such cases, the provisions of
+Article 7 or Article 14, as the case may be,
+shall apply.
+6. Shall be deemed to arise in a Contracting State
+when the political or sub-contracting State
+authority thereof or a resident of that
+Contracting State, where fees for technical
+services, whether he is a resident of a Contracting
+State or not, has in a Contracting State
+establishment or fixed base, a permanent
+establishment or fixed base, or a permanent
+establishment or fixed base, or a permanent
+establishment or fixed base, or a permanent
+establishment or fixed議渡収益
+
+八八六
+
+インドとの租税（所得）条約
+
+第十三条
+
+過分に対し、この条約の他の規定に妥当な考慮を払った上、
+各締約国の法令に従って租税を課すことができる。
+
+1 一方の締約国の居住者が第六条に規定する不動産で他方の
+締約国内に存在するものの譲渡によって取得する収益に対しては、
+当該他方の締約国において租税を課すことができる。
+
+2 一方の締約国の企業が他方の締約国内に有する恒久的施設
+の事業用資産の一部を成す財産（不動産を除く）の譲渡又
+は一方の締約国の居住者が独りの人的役務を提供するため他
+方の締約国内において使用するこのものである固定的施設（単独に係
+る財産（不動産を除く）の譲渡から生ずる収益（単独に若
+しくは企業全体として行われる当該恒久的施設の譲渡又は当
+該固定施設の譲渡から生ずる収益を含む）に対しては、
+当該他方の締約国において租税を課すことができる。
+
+3 2の規定が適用される場合を除くほか、一方の締約国の居
+住者が他方の締約国の居住者である法人の株式の譲渡によっ
+て取得する収益に対しては、当該他方の締約国において租税
+を課することができる。
+
+4 一方の締約国の居住者が国際運輸に運用する船舶又は航空
+機及びこれらの船舶又は航空機の運用に係る財産（不動産を
+除く）の譲渡によって取得する収益に対しては、当該一方
+
+Article 13
+
+taxable according to the Laws of each
+Contracting State, due regard being had to
+the
+other provisions of this Convention.
+
+1. Gains derived by a resident of a Contracting
+State from the alienation of immovable property,
+referred to in Article 6 and situated in the
+other Contracting State, may be taxed in that
+other Contracting State.
+
+2. Gains from the alienation of any property,
+other than immovable property, forming part of
+a business property of a permanent enterprise,
+which has an enterprise, other than immovable
+property, of any property, other than immovable
+property, of any property, other than immovable
+property, of any property, other than immovable
+property, of any property,自由職業
+の所得
+
+第十四条
+
+1 一方の締約国の居住者が自由職業その他の独立的性質を有
+する活動について取得する所得に対しては、その者が自己の
+活動を行うために通常使用する場合には、その者の締約国内に
+滞在しない限り、当該一方の締約国において他の締約国又は
+前年度一を通じ合計八十三日を超える期間当該地方の締約国
+内に滞在しなければならない。その者がそのような固定的施設を
+課することができる。その者がそのような固定的施設を有す
+る場合又は前記の期間当該他の締約国内に滞在する場合に
+は、当該所得に対しては、当該固定の締約国内に帰せられる部分
+又は前記の期間を通じ当該他の締約国内において租税を課す
+ことができる。
+
+2 『自由職業』には、特に、学術上、文学上、美術上及び教
+育上の独立的活動並びに医師、弁護士、技術士、建築士、歯
+科医師及び公認会計士の独立的活動を含む。
+
+第十五条
+
+インドとの租税（所得）条約
+
+Article 14
+
+1. Income derived by a resident of a Contracting State in respect of professional
+services or other activities of an independent
+contractor shall be taxable only in that
+Contracting State unless he has a fixed
+base regularly available for the purpose of performing
+his activities or for his presence in that other
+Contracting State for a period of periods in
+exceeding in the aggregate 183 days during any
+taxable year or previous year, as the case
+may be. If he has such a fixed base or remains
+in that other Contracting State for the
+periods in that other Contracting State but only
+so much or as it is attributable to that fixed
+base during the aforesaid period or periods.
+
+5. Gains derived by a resident of a Contracting
+State from the alienation of any property other
+than that referred to in paragraphs 1 to 4,
+shall be taxable only in that Contracting State.
+
+Article 15
+
+887
+
+2. The term "professional services" includes
+especially independent scientific, literary,
+artistic, educational or teaching activities as
+well as the independent activities of physicians,
+surgeons, lawyers, engineers, architects,
+dentists and accountants.勤務に対する報酬
+八八
+インドとの租税（所得）条約
+1. 次条及び第十八条から第二十一条までの規定が適用される
+場合を除くほか、一方の締約国の居住者がその勤務について
+取得する給料、賃金その他のこれらに類する報酬に対しては、
+締約国におけるみ租税を課すことはできない。勤務が他方の
+締約国内において行われる場合にあっては、当該勤務から生ずる
+報酬に対しては、当該他方の締約国において租税を課すこ
+とができる。
+2. 1の規定にかかわらず、一方の締約国の居住者が他方の締
+約国内において行う勤務について取得する報酬に対しては、
+次の(a)から(c)までに掲げる条件を満たして、当該一方の締
+約国においてのみ租税を課すことができる。
+(a) 報酬の受領者が当該課税年度又は「前年度」を通じて合
+計百八十三日を超えない期間当該他方の締約国内に滞在す
+ること。
+(b) 報酬が当該他方の締約国の居住者でない雇用者又はこれ
+に代わる者から支払われるものであること。
+(c) 報酬が雇用者の当該他方の締約国内に有する恒久的施設
+又は固定的施設によつて負担されること。
+3. 1及び2の規定にかかわらず、一方の締約国の企業が国際
+運輸に運用する船舶又は航空機内において行われる勤務に係
+る報酬に対しては、当該一方の締約国において租税を課す
+ことができる。
+1. Subject to the provisions of Articles 16,
+18, 19, 20 and 21, salaries, wages and other
+similar remuneration derived by an resident of a
+Contracting State in respect of an employee of
+another Contracting State shall be taxable only in
+that Contracting State. If the employment in the
+other Contracting State is derived from a Contracting
+State, such remuneration may be taxed in that other
+Contracting State.
+2. Notwithstanding the provisions of paragraph
+1, remuneration derived by a resident of a
+Contracting State in respect of an employee of
+another Contracting State shall be taxable only in
+the first-mentioned Contracting State, if:
+(a) the recipient is present in that other
+Contracting State for a period or periods
+not exceeding in the aggregate 183 days,
+as the case may be; and
+(b) the remuneration is paid by, or on behalf
+of, an employer who is not a resident of
+that other Contracting State; and
+(c) the remuneration is not borne by a
+permanent establishment or a fixed base
+contracting State.
+3. Notwithstanding the provisions of paragraphs
+1 and 2, remuneration in respect of an
+employee exercised aboard a ship or aircraft
+operated in an international traffic by an
+enterprise in a Contracting State may be taxed
+in that Contracting State.役員の報
+酬
+芸能人等
+の所得
+第十六条
+一方の締約国の居住者が他方の締約国の居住者である法人の
+役員の資格で取得する役員報酬その他これに類する支払金に対
+しては、当該他方の締約国において租税を課すことができる。
+第十七条
+1 第十四条及び第十五条の規定にかかわらず、一方の締約国
+の居住者である個人が演劇、映画、ラジオ若しくはテレビジ
+ョンの俳優、音楽家その他の芸能人又は運動家として他方の
+締約国内で行う個人の活動によって取得する所得に対して
+は、当該他方の締約国において租税を課することができる。
+もつともの、そのような活動が両締約国の政府間で合意され
+た文化交流のための特別の計画に基づき当該一方の締約国の
+居住者である個人により行われる場合には、当該所得につい
+ては、当該他方の締約国において租税を免除する。
+2 一方の締約国内で行う芸能人又は運動家としての個人の活
+動に関する所得が当該芸能人又は運動家以外の他方の締約国
+の居住者である者が帰属する場合には、当該所得に対しては、
+第七条、第十四条及び第十五条の規定にかかわらず、当該一
+方の締約国において租税を課することができる。
+もつともの、そのような活動が両締約国の政府間で合意され
+インドとの租税（所得）条約
+八八九
+Article 16
+Directors' fees and other similar payments
+derived by a resident of a Contracting State in
+his capacity as a member of the board of
+directors of a company which is a resident of
+another Contracting State, may be taxed in
+that other Contracting State.
+Article 17
+1. Notwithstanding the provisions of Articles
+14 and 15, income derived by an individual
+who is a resident of a Contracting State as an
+entertainer, such as a theatre, motion picture,
+radio or television artist, or a musician, or
+such an athlete, from his personal, and
+such activities in the other Contracting State,
+may be taxed in that other Contracting State,
+except where such income shall, however, be
+taxed in that other Contracting State if such
+activities are exercised by an individual
+who is a resident of the first-mentioned
+Contracting State pursuant to a special
+arrangement for cultural exchange between
+the Governments of the two Contracting
+States.
+2. Where income in respect of personal
+activities exercised in a Contracting State by
+an entertainer or an athlete in his capacity as
+such, accruing to another person who is a resident
+of the other Contracting State, that income
+may, notwithstanding the provisions of Articles
+7, 14 and 15, be taxed in the first-mentioned
+Contracting State, however, be exempt fromインドとの租税（所得）条約
+
+八九〇
+
+退職年金
+
+公務遂行
+
+に係る報
+
+第十八条
+
+た文化交流のための特別の計画に基づいて行われる場合に
+
+は、当該所得については、そのような活動が行われた締約国
+
+において租税を免除する。
+
+次条２の規定が適用される場合を除くほか、過去の勤務につ
+
+き一方の締約国の居住者に支払われる退職年金その他これに類
+
+する報酬に対しては、当該一方の締約国においてのみ租税を課
+
+することができる。
+
+第十九条
+
+政府の職務の遂行として一方の締約国又は当該一方の締
+
+約国の地方政府若しくは地方公共団体に対し提供される役
+
+務につき、個人に対し当該一方の締約国又は当該一方の締
+
+約国の地方政府若しくは地方公共団体により支払われる
+
+報酬（退職年金を除く）に対しては、当該一方の締約国
+
+においてのみ租税を課すことができる。
+
+(b) もっとも当該役務が他方の締約国内において提供され、
+
+かつ、(a)の個人が次の(ii)又は(iii)に該当する当該地方の締約
+
+国の居住者である場合に、(i)は、その報酬に対しては、当該他
+
+方の締約国における当該他の締約国の国民
+
+(i) 当該他の締約国の国民
+
+(ii) 専ら当該役務を提供するため当該他の締約国の居住
+
+Article 18
+
+Subject to the provisions of paragraph 2 of
+
+Article 19, pensions and other similar
+
+remuneration paid to a resident of a
+
+contracting state in a consideration of a
+
+past employment shall be taxable only in that
+
+Contracting State.
+
+Article 19
+
+1. (a) Remuneration, other than a pension, paid
+
+by a Contracting State, or a political
+
+subdivision or a local authority thereof, to
+
+an individual in respect of services rendered
+
+to that subdivision or a local authority, or a
+
+political subdivision of a local authority, or
+
+a political subdivision of a local authority,
+
+in the discharge of a function of a governmental
+
+nature, shall be taxable only in that
+
+Contracting State.
+
+(b) However, such remuneration shall be
+
+taxable only in the other Contracting State if
+
+the services are rendered in that other
+
+Contracting State by an individual who is a
+
+resident of that other Contracting State, or
+
+(i) is a national of that other Contracting
+
+State, or
+
+(ii) did not become a resident of that other学生、
+等に修習者
+付金
+の給
+者となった者でないもの
+2 a
+一方の締約国又は当該一方の締約国の地方政府若しくは
+当該一方の締約国に対し提供される役務につき、個人に対し
+しくは地方公共団体によって支払われる、又は当該地方政府若
+約国若しくは当該一方の締約国の地方政府若是当地方締
+共同体が拠出した基金から支払われる退職年金に対して
+は、当該一方の締約国におけるそのみ租税を課することがで
+きる。
+(b) もっとも、(a)の個人が他方の締約国の居住者であり、か
+つ、当該他方の締約国の国民である場合には、その退職年
+金に対しては、当該他方の締約国においてのみ租税を課す
+ることことができる。
+一方の締約国又は当該一方の締約国の地方政府若しくは地
+方公共団体の行う事業に関連して提供される役務につき支払
+われる報酬及び退職年金については、第十五条から前条まで
+の規定を適用する。
+第二十条
+専ら教育又は訓練を受けたため一方の締約国内に滞在する学
+生又は事業修習者であって、現に他方の締約国の居住者である
+ものがその生計、教育又は訓練のために受ける給付について、
+当該一方の締約国の租税を免除する。ただし、当該給付が当該
+インドとの租税（所得）条約
+八九一
+Contracting State solely for the purpose
+of performing the services.
+2. (a) Any pension paid by, or made out of funds to
+which contributions are made by, a
+Contracting State, or a political
+sub-division or a local
+authority thereof, to an individual in respect of
+services rendered to a Contracting State, or a
+political sub-division or a local
+authority thereof, shall be
+taxable only in that Contracting State.
+(b) However, such pension shall be taxable
+only in the other Contracting State if
+the individual is a resident of, and a
+national of, that other Contracting
+State.
+3. The Provisions of Articles 15, 16, 17 and 18
+shall apply to remuneration and pensions in
+respect of services rendered by a Contracting
+State, or a political sub-division or a local
+authority thereof.
+Article 20
+Payments which a student or business
+apprentice who is or was immediately before
+the first-mentioning Contracting State who is resident of
+the other Contracting State, and who is present in
+the first-mentioning Contracting State solely for
+the purpose of his education or training,インドとの租税（所得）条約
+
+八九二
+
+一方の締約国外から支払われるものである場合に限る。
+
+第二十一条
+
+教援、教員等の所得
+
+1 大学、学校その他の公認された教育機関において教育又は研究を行うため一方の締約国を訪れ、二年を超えない期間一時的に滞在する教育又は教員であって、現に他方の締約国の居住者であるものは、その教育又は研究に係る報酬につき、当該他方の締約国においてそのみ租税を課すことができる。この条の規定は、公的な利益のために行わる研究から生ずる所得については、適用しない。
+
+第二十二条
+
+その他の
+
+1 一方の締約国の居住者の所得（源泉地を問わない。）で前各条に規定がないものに対しては、当該一方の締約国においてのみ租税を課すことができる。
+
+2 1の規定は、一方の締約国の居住者である所得（第六条2に規定する不動産から生ずる所得を除く。）の受領者が、他方の締約国において当該他方の締約国内にある恒久的施設を通じて事業を行い又は当該他方の締約国において当該他方の
+
+Article 21
+
+1. A professor or teacher who makes a temporary visit to a Contracting State for a period not exceeding two years for the purpose of teaching or conducting research at a university, college, school or other accredited educational institution, and who is, or immediately before such visit was, a resident of the other Contracting State shall be taxable only in that other Contracting State with respect to income from such teaching or research. This Article shall not apply to income from public interest but primarily for private benefit of a specific person or persons.
+
+Article 22
+
+1. Items of income of a resident of a Contracting State, wherever arising, not dealt with in the foregoing Articles of this Convention shall be taxable only in that Contracting State.
+
+2. The provisions of paragraph 1 shall not apply to income, as other defined income from Article 6, if the recipient of such income, being a resident of a Contracting State, carries on business in the other Contracting State.二重課税
+法の排除方
+第二十三条
+1
+いずれかの締約国において施行されている法令は、この条
+約において反対の規定が特に設けられている場合を除き、当
+該締約国において、引き続き所得の課税を規律するものとす
+る。
+2
+インドにおいては、二重課税は、次の方法により回避され
+る。
+(a) インドの居住者がこの条約の規定に従って日本国におい
+て租税を課される所得を取得する場合には、インドは、日
+本国において直接に又は源泉徴収により納付される租税の
+額を当該居住者の所得に対する租税の額から控除する。た
+だし、控除の額は、当該控除が行われる前に算定された
+所得に対する租税の額のうち日本国において租税を課され
+る当該所得に対応する部分を超えないものとする。また、
+インドとの租税（所得）条約
+八九三
+Article 23
+1. The laws in force in either of the
+Contracting States shall continue to govern
+the taxation of income in the respective
+Contracting State except where express
+provisions to the contrary are made in this
+Convention.
+2. Double taxation shall be avoided in the case
+of India as follows:
+(a) Where a resident of India derives income
+from this Convention, may be taxed in
+Japan, the India shall allow as a deduction
+tax paid in amount equal to the Japanese
+tax deduction. Such deduction in either
+case shall not, however, exceed that
+part of the income tax (as computed
+before the deduction is given) which is
+sated through a permanent establishment
+in that other Contracting State.
+Contracted therein, or performs in that other
+Contracting State, independent personal services
+from a fixed base situated therein, and the
+income is paid in respect of which the
+such case, the provisions of Article 7 or
+Article 14, as the case may be, shall apply.
+3. Notwithstanding the provisions of paragraphs
+1 and 2, items of income of a resident of a
+Contracting State not dealt with in the
+foregoing Articles of this Convention and
+taxed in that other Contracting State may be
+3
+1及び2の規定にかかわらず、一方の締約国の居住者の所
+得のうち、他方の締約国内において生ずるものであって前各
+条に規定のないものに対しては、当該他方の締約国において
+租税を課することができる。
+この場合には、第七条又は第十四条については、適用しない。
+締約国内にある固定的施設を通じて独立の人的役務を提供す
+る場合において、当該所得の支払の基因となった権利又は財
+産が当該恒久的施設又は当該固定的施設と実質的な関連を有
+するものであるときは、当該所得については、適用しない。インドとの租税（所得 条約
+
+八九四
+
+当該居住者がインドにおいて超過利潤税を課される法人で
+ある場合には、日本において納付される所得に対する租
+税の額は、まず、インドにおいて当該法人に課される所得
+税の額から控除し、なお残額があるときは、インドにおい
+て当該法人に課される超過利潤税の額から控除する。
+
+(b) インドの居住者がこの条約の規定に従って日本において
+当該所得をインドの租税を課得する場合に、インドは、
+得る。ただし、所得に対する租税の課税標準に含めることがで
+きる当該所得に対応する租税の額から日本において取
+得する当該所得に対応する部分を控除する。
+
+3. 日本国以外の国において納付される租税を日本国の租税か
+ら控除することに関す日本国の法令に従い、
+(a) 日本国の居住者がこの条約の規定に従ってインドにおい
+て租税を課される所得をインドにおいて取得する場合に
+は、当該所得につれて納付されるインドの租税の額は、当
+該居住者に対して課される日本の国の租税の額から控除す
+る。ただし、控除の額は、日本の国の租税の額のうち当該所
+得に対応する部分を超えないものとする。
+
+(b) インドにおいて取得される所得が、インドの居住者であ
+る法人によりその議決権のある株式又はその発行済株式の
+少なくとも二十五パーセントを所有する日本国の居住者で
+ある法人に対して支払われる配当である場合には、日本国
+
+3. Subject to the laws of Japan regarding the
+tax payable in any country other than Japan:
+(a) Where a resident of Japan derives income
+from India which may be taxed in India
+in accordance with the provisions of
+this Convention, the amount of income
+tax payable in respect of that income
+shall be allowed as a credit against
+the Japanese tax imposed, however, the
+amount that part of the Japanese tax
+not
+exempted from the Japanese tax shall be
+divided by a company which is a
+resident of India to a company which is
+not
+a resident of India and which owns
+less than 25 per cent either of the
+voting shares of the company paying the
+dividend, or of the total shares issued
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be
+allowed in the first instance from
+the balance of the income, if any,
+from surtax payable by it in India.
+(b) Where a resident of India derives income
+from surtax payable by it in India,
+income-tax payable by the company, if any,
+in India, or as payable by the company in
+India, the deduction in respect of
+income paid in India shall be遇内国民待
+
+八九五
+
+第二十四条
+
+1 一方の締約国の国民は、他方の締約国において、同様の状
+況にある当該他方の締約国の国民に課されており、課
+税若しくはこれに関連する要件又はこれに関連する要件以外の租
+税若しくはこれに関連する要件は、この1の規定は、こ
+れに関連する要件を課されることはない。この1の規定は、
+第一条の規定にかかわらず、締約国の居住者でない者にも、
+適用する。
+
+2 一方の締約国の企業が他方の締約国内に有する恒久的施設
+
+インドとの租税（所得）条約
+
+(c) 入れるものとする。
+
+(a) 及び (b) に規定する控除の適用上、インドの経済開発を
+促進するために特別の奨励措置であってこの条約の署名の
+日に実施されているもの又はその修正若しくは追加として
+インドの租税に関するもの又はその後に導入されることはあ
+るものの従ってインドの租税の軽減又は免除が行われるなか
+つたとしたら、インドの租税の法令に基づき及びこの条約の規
+定に従ってインドの租税として納付されたであろう額は、
+国の政府によって納付されたものとみなす。ただし、両締約
+国について合意を行うことを条件とする。
+
+Article 24
+
+1. Nationals of a Contracting State shall not
+be subjected in the other Contracting State to
+any taxation or any requirement connected
+with the taxation of any other or more burdensome
+taxation which is connected with some
+other Contracting State to which the same
+circumstances are or may be
+substantiated. This provision shall
+also apply to persons who are not residents of
+one or both of the Contracting States.
+
+2. The taxation on a permanent establishment
+by that company, the Indian credit tax payable by
+the company paying the dividend in
+respect of its income.
+
+(c) For the purposes of the credit referred
+to in sub-paragraphs (a) and (b) above,
+there shall be deemed (a) and (b) above
+by the taxpayer the amount which would
+have been paid as Indian tax under the
+laws of India and in accordance with the
+accordance with the Indian tax had
+not been reduced if the Indian tax
+had been reduced with the special incentive
+measure designed to promote economic
+development in India, effective on the
+date of signature of this Convention or
+Indian tax laws in modified form or in
+addition to the existing measures,
+between the two Governments in respect
+of the scope by the benefit measures
+accorded to
+the taxpayer.インドとの租税（所得）条約
+
+八九六
+
+in the other Contracting State shall not be
+less favourable than in the taxation levied on
+enterprises of the same other Contracting State,
+this provision shall not be construed as
+obligating a Contracting State to grant to any
+residents of the other Contracting State any
+taxation allowances, reliefs and reduction
+for family purposes on account of civil status or
+own residents.
+3. Except where the provisions of Article 9,
+Article 12, or Article 11, or paragraph 7 of
+other disbursements paid by an enterprise and
+contracting state to a resident of the other
+contracting state for the purpose of
+enterprising, the deductible profits of the
+residents of the first-mentioned Contracting
+State.
+4. Enterprises of a Contracting State, the
+capital of which is wholly or partly owned or
+controlled by one or more residents of the other
+Contracting State, shall not be subject to any
+taxation which is more burdensome than the
+taxation which is
+connected requirements to which taxation and
+similar taxes are or may be subjected.
+5. In this Article, the term "taxation" means
+taxes which are the subject of this Convention.
+
+に対する租税は、当該他方の締約国において、同様の活動
+利に課されることはない。
+この２の規定は、一方の締約国に対し、家族の状況又は家
+族を扶養するための負担を理由として自国の居住者に認める
+租税上の人の控除、救済及び軽減を他方の締約国の居住者に
+認めることを義務付けるものと解してはならない。
+第九条、第十一條又は第十二条７の規定が適用される場
+合を除くほか、一方の締約国の企業が他方の締約国の居住者
+に支払った利息、使用料その他の支払金については、当該企
+業の課税対象利得の決定に当たって、当該一方の締約国の居
+住者に支払われたとした場合における条件と同様の条件で控
+除するものとする。
+一方の締約国の企業であってその資本の全部又は一部が他
+方の締約国の一又は二以上の居住者により直接又は間接に所
+有され又は支配されているものは、当該一方の締約国におい
+て、当該一方の締約国の類似の他の企業に課されており若し
+くは課されることがある租税若しくはこれに関連する要件以
+外の租税若しくはこれに関連する要件又はより重い租税若し
+くはこれに関連する要件を課される場合には、この条において、「租税」とは、この条約の対象である租
+税をいう。不當申立
+国及び両
+の協議
+第二十五条
+Article 25
+1. Where a person considers that the actions of
+one or both of the Contracting States result of
+contravention, with the provisions of this
+Convention, he may, by the respective of the
+Contracting States, present his case to the
+contracting authority, if his case comes
+under Paragraph 1 of Article 24, to that of
+the case must be presented within three years
+from the first notification of the case.
+2. The competent authority shall endeavour, if
+it is not itself able to arrive at a
+satisfactory solution, to resolve the case by
+mutual agreement with the competent authority
+of the other Contracting State, with a view to
+the avoidance of taxation not in accordance
+with the provisions of this Convention. Any
+agreement reached shall be implemented.
+3. The competent authorities of the Contracting
+States shall endeavour to resolve by mutual
+agreement any difficulties or disputes arising
+as to the interpretation or application of this
+Convention. They may also consult together for
+the elimination of any double taxation in cases not
+provided for in this Convention.
+4. The competent authorities of the Contracting
+States may communicate with each other directly
+1
+いずれか一方の又は双方の締約国の措置によりこの条約
+の規定に適合しない課税を受けた又は受けることになると認
+める者は、当該事案について、当該いずれか一方の又は双方
+の締約国の法令に定める救済手段とは別に、自己が居住者で
+ある締約国の権限にある当局に対して又は当該事案が前条1
+の規定の適用に関するものである場合に、自己が国民である
+締約国の権限のある当局に対して、申立をすることができる。
+当該申立では、この条約の規定に適合しない課税に係る
+当該措置の最初の通知の日から三年以内に、しなければなら
+ない。
+2
+権限のある当局は、1の申立を正当と認めるが、満足す
+べき解決を与えることができない場合には、この条約の規定
+に適合しない課税を回避するために、他方の締約国の権限のあ
+る当局との合意によって当該事案を解決するよう努める。成
+立したすべての合意は、両締約国の法令上のいかなる期間制
+限にもかかわらず、実施されなければならない。
+3
+両締約国の権限のある当局は、この条約の解釈又は適用に
+関して生ずる困難又は疑義を合意によって解決するよう努め
+る。両締約国の権限のある当局は、また、この条約に定めの
+ない場合における二重課税を除去するため、相互に協議する
+ことができる。
+4
+両締約国の権限のある当局は、2及び3の合意に達するた
+インドとの租税（所得）条約
+八九七換報の交
+
+八九八
+
+第二十六条
+
+め、直接相互に通信することができる。
+
+インドとの租税（所得）条約
+
+1 両締約国の権限のある当局は、この条約が適用される租税に関する両締約国の法令若しくはこの条約に基づく課税がこの条約の規定に反しない場合に限る。を実施するため、又はこれらの租税に関する脱税を防止するために必要な情報を交換する。交換された情報は、秘密として取り扱うものとし、この条約が適用される租税の賦課若しくは徴収、これらの租税に関する執行若しくは訴追又はこれらの租税に関す不服申立てについての決定に関与する者又は当局（裁判所を含む）に対してものみ開示することができる。
+
+2 1の規定は、いかなる場合にも、一方の締約国に対し、次のことを行う義務を課するものと解してはならない。
+
+(a) 当該一方の締約国又は他方の締約国の法令及び行政上の慣行に抵触する行政上の措置をとること。
+
+(b) 当該一方の締約国又は他方の締約国の法令の下において又は行政の通常の運営において入手することができない情報を提供すること。
+
+(c) 営業上、事業上、産業上、商業上若しくは職業上の秘密若しくは取引の過程を明らかにするような情報又は公開す
+
+Article 26
+
+For the purpose of reaching an agreement in the sense of the preceding paragraphs of this Article.
+
+1. The competent authorities of the Contracting States shall exchange such information as is necessary for carrying out the provisions of this Convention concerning the domestic laws of the Contracting States of the taxation covered by this Convention, not contrary to the provision of this Convention, or for the prevention of taxes. Any information or fraud so exchanged shall be treated as secret and shall be disclosed only to persons involved in the assessment, the collection, or the enforcement of the taxes covered by this Convention in respect of the determination of appeals in relation thereto.
+
+2. In no case shall the provisions of paragraph 1 be construed so as to impose on a Contracting State the obligation to:
+
+(a) to carry out administrative measures at variance with the laws and the other contracting State;
+
+(b) to supply information which is not obtainable under the laws or in the normal course of the administration of that or of the other Contracting State;
+
+(c) to supply information which would disclose any trade, business, industrial, commercial or professional第2十七条
+この条約のいかなる規定も、国際法の一般原則又は特別の協定に基づく外交官又は領事官の租税上の特権に影響を及ぼすものではない。
+第2十八条
+1 この条約は、批准されなければならない。批准書は、できる限り速やかに東京で交換されるものとする。批准書は、でき
+る限り速やかに東京で交換されるものとする。批准書は、でき
+る限り速やかに東京で交換されるものとする。批准書は、でき
+る限り速やかに東京で交換されるものとする。批准書は、でき
+る限り速やインドとの租税（所得）条約
+
+第二十九条
+
+この条約は、無期限に効力を有する。ただし、いずれの一方の締約国も、この条約の効力発生の日から五年の期間が満了した後に関始する各年の六月三十日以前に、外交上の経路を通じて他方の締約国に対し書面による終了の通告を行うことができる。この場合には、この条約は、次のもののについて効力を失う。
+
+(a) 日本国においては、終了の通告が行われた年の翌年の一月一日以後に開始する各課税年度の所得
+
+(b) インドにおいては、終了の通告が行われた年の翌年の四月一日以後に開始する各「前年度」の所得
+
+以上の証拠として、下名は、各自の政府から正当に委任を受けてこの条約に署名した。
+
+千九百八十九年三月七日にニューデリーで、ひとしく正文
+
+九〇〇
+
+Article 29
+
+This Convention shall continue in effect indefinitely but either contracting state may, on or before the thirtieth day of June of any calendar year beginning after the date of its entry into force, give notice of termination through diplomatic channels, written notice of termination and, in such event, this Convention shall cease to have effect:
+
+(a) in Japan:
+
+as regards income for any taxable year beginning on or after the first day of January of the calendar year next following that in which the notice of termination is given; and
+
+(b) in India:
+
+as regards income for any "previous year" beginning on or after the first day of April of the calendar year next following that in which the notice of termination is given.
+
+IN WITNESS WHEREOF the undersigned, being duly authorized thereto by their respective Governments, have signed this Convention.
+
+DONE at New Delhi in duplicate on this seventh day of March, 1989.解釈に相違がある場合には、英語の本文による。
+である日本語、ヒンディー語及び英語により本書二通を作成した。
+日本政府のために
+野田英二郎
+インド共和国政府のために
+G・N・グプタ
+インドとの租税（所得）条約
+九〇一
+For the Government
+of Japan:
+Eijiro Noda
+For the Government
+of the Republic of India:
+G.N. Gupta
+Japanese, Hindi and English languages, all the
+three texts being equally authentic. In case
+of any divergence of interpretation, the
+English text shall prevail.111
+তার প্রতি সম্মান ও প্রেম প্রকাশ করা হয়।
+প্রতিবেদন প্রকাশ করা হয়।
+প্রতিবেদন প্রকাশ করা হয়।
+প্রতিবেদন প্রকাশ করা হয়।
+প্রত川Ⅱ 七
+রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত)
+১. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+২. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+৩. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+৪. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+৫. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+৬. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+৭. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+৮. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+৯. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+১০. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+১১. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+১২. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+১৩. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+১৪. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+১৫. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+১৬. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রাজ্যের সংক্ষিপ্ত বিবরণ হিসাবে ব্যবহার করা হয়।
+১৭. রাজ্য সংক্ষিপ্ত বিবরণ (সংক্ষিপ্ত) হল রাজ্যের সংক্ষিপ্ত বিবরণ যা রা�図1-2
+(検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (検査) (�九十一
+  租税（所得）条約
+  第1条 本条約は、1972年10月15日付で、日本国とアメリカ合衆国との間において締結されたものである。
+  第2条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第3条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第4条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第5条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第6条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第7条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第8条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第9条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第10条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第11条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第12条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第13条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第14条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第15条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第16条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第17条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第18条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第19条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第20条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第21条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第22条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第23条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第24条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第25条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第26条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第27条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第28条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第29条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第30条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第31条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第32条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第33条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第34条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第35条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第36条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第37条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第38条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第39条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第40条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第41条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第42条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第43条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第44条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第45条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第46条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第47条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第48条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第49条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第50条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第51条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第52条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第53条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第54条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第55条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第56条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第57条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第58条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第59条 本条約は、日本国とアメリカ合衆国との間において締結されたものである。
+  第60条 本条বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয1.  প্রিয় স্বীকৃতি প্রাপ্ত ব্যক্তি বা তার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই সংস্থার প্রতিনিধি হিসেবে কাজ করে থাকা সময়ে এই স�イノシシの租税(所得)条約
+九／八
+১. সংক্ষেপে বলতে হয় যে, এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+২. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৩. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৪. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৫. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৬. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৭. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৮. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৯. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+১০. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+১১. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+১২. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+১৩. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+১৪. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+১৫. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+১৬. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+১৭. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+১৮. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+১৯. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+২০. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+২১. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+২২. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+২৩. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+২৪. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+২৫. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+২৬. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+২৭. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+২৮. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+২৯. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৩০. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৩১. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৩২. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৩৩. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৩৪. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৩৫. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৩৬. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব হয় না।
+৩৭. এই সংঘটন প্রতিষ্ঠানের কাছে থাকা সম্ভব১০
+প্রতিবেদন
+১. প্রতিবেদন এবং প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+২. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+৩. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+৪. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+৫. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+৬. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+৭. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+৮. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+৯. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+১০. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+১১. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+১২. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+১৩. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+১৪. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+১৫. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+১৬. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+১৭. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+১৮. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+১৯. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+২০. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+২১. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+২২. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+২৩. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+২৪. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+২৫. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+২৬. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+২৭. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+২৮. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+২৯. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+৩০. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করা হয় না।
+৩১. প্রতিবেদন প্রকাশ করা হয় না। প্রতিবেদন প্রকাশ করাインターン税（所得）条約
+11
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+18.
+19.
+20.
+21.
+22.
+23.
+24.
+25.
+26.
+27.
+28.
+29.
+30.
+31.
+32.
+33.
+34.
+35.
+36.
+37.
+38.
+39.
+40.
+41.
+42.
+43.
+44.
+45.
+46.
+47.
+48.
+49.
+50.
+51.
+52.
+53.
+54.
+55.
+56.
+57.
+58.
+59.
+60.
+61.
+62.
+63.
+64.
+65.
+66.
+67.
+68.
+69.
+70.
+71.
+72.
+73.
+74.
+75.
+76.
+77.
+78.
+79.
+80.
+81.
+82.
+83.
+84.
+85.
+86.
+87.
+88.
+89.
+90.
+91.
+92.
+93.
+94.
+95.
+96.
+97.
+98.
+99.
+100.
+101.
+102.
+103.
+104.
+105.
+106.
+107.
+108.
+109.
+110.
+111.
+112.
+113.
+114.
+115.
+116.
+117.
+118.
+119.
+120.
+121.
+122.
+123.
+124.
+125.
+126.
+127.
+128.
+129.
+130.
+131.
+132.
+133.
+134.
+135.
+136.
+137.
+138.
+139.
+140.
+141.
+142.
+143.
+144.
+145.
+146.
+147.
+148.
+149.
+150.
+151.
+152.
+153.
+154.
+155.
+156.
+157.
+158.
+159.
+160.
+161.
+162.
+163.
+164.
+165.
+166.
+167.
+168.
+169.
+170.
+171.
+172.
+173.
+174.
+175.
+176.
+177.
+178.
+179.
+180.
+181.
+182.
+183.
+184.
+185.
+186.
+187.
+188.
+189.
+190.
+191.
+192.
+193.
+194.
+195.
+196.
+197.
+198.
+199.
+200.
+201.
+202.
+203.
+204.
+205.
+206.
+207.
+208.
+209.
+210.
+211.
+212.
+213.
+214.
+215.
+216.
+217.
+218.
+219.
+220.
+221.
+222.
+223.
+224.
+225.
+226.
+227.
+228.
+229.
+230.
+231.
+232.
+233.
+234.
+235.
+236.
+237.
+238.
+239.
+240.
+241.
+242.
+243.
+244.
+245.
+246.
+247.
+248.
+249.
+250.
+251.
+252.
+253.
+254.
+255.
+256.
+257.
+258.
+259.
+260.
+261.
+262.
+263.
+264.
+265.
+266.
+267.
+268.
+269.
+270.
+271.
+272.
+273.
+274.
+275.
+276.
+277.
+278.
+279.
+280.
+281.
+282.
+283.
+284.
+285.
+286.
+287.
+288.
+289.
+290.
+291.
+292.
+293.
+294.
+295.
+296.
+297.
+298.
+299.
+300.
+301.
+302.
+303.
+304.
+305.
+306.
+307.
+308.
+309.
+310.
+311.
+312.
+313.
+314.
+315.
+316.
+317.
+318.
+319.
+320.
+321.
+322.
+323.
+324.
+325.
+326.
+327.
+328.
+329.
+330.
+331.
+332.
+333.
+334.
+335.
+336.
+337.
+338.
+339.
+340.
+341.
+342.
+343.
+344.
+345.
+346.
+347.
+348.
+349.
+350.
+351.
+352.
+353.
+354.
+355.
+356.
+357.
+358.
+359.
+360.
+361.
+362.
+363.
+364.
+365.
+366.
+367.
+368.
+369.
+370.
+371.
+372.
+373.
+374.
+375.
+376.
+377.
+378.
+379.
+380.
+381.
+382.
+383.
+384.
+385.
+386.
+387.
+388.
+389.
+390.
+391.
+392.
+393.
+394.
+395.
+396.
+397.
+398.
+399.
+400.
+401.
+402.
+403.
+404.
+405.
+406.
+407.
+408.
+409.
+410.
+411.
+412.
+413.
+414.
+415.
+416.
+417.
+418.
+419.
+420.
+421.
+422.
+423.
+424.
+425.
+426.
+427.
+428.
+429.
+430.
+431.
+432.
+433.
+434.
+435.
+436.
+437.
+438.
+439.
+440.
+441.
+442.
+443.
+444.
+445.
+446.
+447.
+448.
+449.
+450.
+451.
+452.
+453.
+454.
+455.
+456.
+457.
+458.
+459.
+460.
+461.
+462.
+463.
+464.
+465.
+466.
+467.
+468.
+469.
+470.
+471.
+472.
+473.
+474.
+475.
+476.
+477.
+478.
+479.
+480.
+481.
+482.
+483.
+484.
+485.
+486.
+487.
+488.
+489.
+490.
+491.
+492.
+493.
+494.
+495.
+496.
+497.
+498.
+499.
+500.
+501.
+502.
+503.
+504.
+505.
+506.
+507.
+508.
+509.
+510.
+511.
+512.
+513.
+514.
+515.
+516.
+517.
+518.
+519.
+520.
+521.
+522.
+523.
+524.
+525.
+526.
+527.
+528.
+529.
+530.
+531.
+532.
+533.
+534.
+535.
+536111-2
+111-2
+111-2
+113.  আপনি বিশ্ববিদ্যালয়ের প্রতিষ্ঠান বা সংস্থার কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোন কোন কাজের জন্য কোবিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য বিভিন্ন পদ্ধতি ব্যবহার করা হয়, যেমন প্রায় সমস্ত বিশ্ববিদ্যালয়ে বিকল্প নির্ধারণের জন্য ব図11九
+インテグレータ（所得）税務署
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+18.
+19.
+20.
+21.
+22.
+23.
+24.
+25.
+26.
+27.
+28.
+29.
+30.
+31.
+32.
+33.
+34.
+35.
+36.
+37.
+38.
+39.
+40.
+41.
+42.
+43.
+44.
+45.
+46.
+47.
+48.
+49.
+50.
+51.
+52.
+53.
+54.
+55.
+56.
+57.
+58.
+59.
+60.
+61.
+62.
+63.
+64.
+65.
+66.
+67.
+68.
+69.
+70.
+71.
+72.
+73.
+74.
+75.
+76.
+77.
+78.
+79.
+80.
+81.
+82.
+83.
+84.
+85.
+86.
+87.
+88.
+89.
+90.
+91.
+92.
+93.
+94.
+95.
+96.
+97.
+98.
+99.
+100.
+101.
+102.
+103.
+104.
+105.
+106.
+107.
+108.
+109.
+110.
+111.
+112.
+113.
+114.
+115.
+116.
+117.
+118.
+119.
+120.
+121.
+122.
+123.
+124.
+125.
+126.
+127.
+128.
+129.
+130.
+131.
+132.
+133.
+134.
+135.
+136.
+137.
+138.
+139.
+140.
+141.
+142.
+143.
+144.
+145.
+146.
+147.
+148.
+149.
+150.
+151.
+152.
+153.
+154.
+155.
+156.
+157.
+158.
+159.
+160.
+161.
+162.
+163.
+164.
+165.
+166.
+167.
+168.
+169.
+170.
+171.
+172.
+173.
+174.
+175.
+176.
+177.
+178.
+179.
+180.
+181.
+182.
+183.
+184.
+185.
+186.
+187.
+188.
+189.
+190.
+191.
+192.
+193.
+194.
+195.
+196.
+197.
+198.
+199.
+200.
+201.
+202.
+203.
+204.
+205.
+206.
+207.
+208.
+209.
+210.
+211.
+212.
+213.
+214.
+215.
+216.
+217.
+218.
+219.
+220.
+221.
+222.
+223.
+224.
+225.
+226.
+227.
+228.
+229.
+230.
+231.
+232.
+233.
+234.
+235.
+236.
+237.
+238.
+239.
+240.
+241.
+242.
+243.
+244.
+245.
+246.
+247.
+248.
+249.
+250.
+251.
+252.
+253.
+254.
+255.
+256.
+257.
+258.
+259.
+260.
+261.
+262.
+263.
+264.
+265.
+266.
+267.
+268.
+269.
+270.
+271.
+272.
+273.
+274.
+275.
+276.
+277.
+278.
+279.
+280.
+281.
+282.
+283.
+284.
+285.
+286.
+287.
+288.
+289.
+290.
+291.
+292.
+293.
+294.
+295.
+296.
+297.
+298.
+299.
+300.
+301.
+302.
+303.
+304.
+305.
+306.
+307.
+308.
+309.
+310.
+311.
+312.
+313.
+314.
+315.
+316.
+317.
+318.
+319.
+320.
+321.
+322.
+323.
+324.
+325.
+326.
+327.
+328.
+329.
+330.
+331.
+332.
+333.
+334.
+335.
+336.
+337.
+338.
+339.
+340.
+341.
+342.
+343.
+344.
+345.
+346.
+347.
+348.
+349.
+350.
+351.
+352.
+353.
+354.
+355.
+356.
+357.
+358.
+359.
+360.
+361.
+362.
+363.
+364.
+365.
+366.
+367.
+368.
+369.
+370.
+371.
+372.
+373.
+374.
+375.
+376.
+377.
+378.
+379.
+380.
+381.
+382.
+383.
+384.
+385.
+386.
+387.
+388.
+389.
+390.
+391.
+392.
+393.
+394.
+395.
+396.
+397.
+398.
+399.
+400.
+401.
+402.
+403.
+404.
+405.
+406.
+407.
+408.
+409.
+410.
+411.
+412.
+413.
+414.
+415.
+416.
+417.
+418.
+419.
+420.
+421.
+422.
+423.
+424.
+425.
+426.
+427.
+428.
+429.
+430.
+431.
+432.
+433.
+434.
+435.
+436.
+437.
+438.
+439.
+440.
+441.
+442.
+443.
+444.
+445.
+446.
+447.
+448.
+449.
+450.
+451.
+452.
+453.
+454.
+455.
+456.
+457.
+458.
+459.
+460.
+461.
+462.
+463.
+464.
+465.
+466.
+467.
+468.
+469.
+470.
+471.
+472.
+473.
+474.
+475.
+476.
+477.
+478.
+479.
+480.
+481.
+482.
+483.
+484.
+485.
+486.
+487.
+488.
+489.
+490.
+491.
+492.
+493.
+494.
+495.
+496.
+497.
+498.
+499.
+500.
+501.
+502.
+503.
+504.
+505.
+506.
+507.
+508.
+509.
+510.
+511.
+512.
+513.
+514.
+515.
+516.
+517.
+518.
+519.
+520.
+521.
+522.
+523.
+524.
+525.
+526.
+527.
+528.
+529.
+530.
+531.
+532.
+533.
+534.
+531. 1997 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12イングランドの租税（所得）条約
+
+21
+
+1. 本条約の規定は、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日から起算して、本条約の締結日প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থার প্রতিনিধি করে বলা হয়েছে যে এই সংস্থা�বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেয়ে বড় প্রাণী হিসেবে বিশ্বের সবচেযব্যবস্থাপনা ১
+৩. অবশ্যই ০ টি বাজেট, ব্যবস্থাপনা ১১ টি কর্তৃপক্ষ ও অবশ্যই
+অবশ্যই ১২ টি কর্তৃপক্ষ ৭ টি বাজেট এবং অবশ্যই ১২ টি কর্তৃপক্ষ এবং
+অবশ্যই ১২ টি কর্তৃপক্ষ ৭ টি বাজেট এবং অবশ্যই ১২ টি কর্তৃপক্ষ এবং
+অবশ্যই ১২ টি কর্তৃপক্ষ ৭ টি বাজেট এবং অবশ্যই ১২ টি কর্তৃপক্ষ এবং
+অবশ্যই ১২ টি কর্তৃপক্ষ ৭ টি বাজেট এবং অবOIII-2
+OIII-2
+OIII-2
+OIII-三九
+  Ⅰ．租借のための租税（所得）条約
+  第29条
+  1．租税の対象となる所得は、租税法第2条第1項に規定する所得と、租税法第2条第2項に規定する所得とをいう。ただし、租税法第2条第2項に規定する所得は、租税法第2条第1項に規定する所得に含まれるものとする。
+  2．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  3．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  4．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  5．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  6．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  7．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  8．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  9．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  10．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  11．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  12．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  13．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  14．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  15．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  16．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  17．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  18．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  19．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  20．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  21．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  22．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  23．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  24．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  25．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  26．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  27．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  28．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  29．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  30．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  31．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  32．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  33．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  34．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  35．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  36．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  37．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  38．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  39．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  40．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  41．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  42．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  43．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  44．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  45．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  46．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得に含まれるものとする。
+  47．租税法第2条第1項に規定する所得は、租税法第2条第2項に規定する所得にインダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）条約
+第1条
+インダとの租税（所得）（参考）
+この条約は、我が国とインドとの間で所得に対する租税に関する二重課税の回避及び脱税の防止
+のために締結されたものである。
+インドとの租税（所得）条約
+九三三

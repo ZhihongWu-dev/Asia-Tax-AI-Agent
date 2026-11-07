@@ -186,6 +186,30 @@ def pdf_pages(path):
 
 
 OCR_PAGE_MIN = 50                     # a PDF page with fewer characters in its text layer is a scan (tools/ocr.py reads it)
+OCR_IMAGE_MIN = (100, 30)             # points: an image this large on a page with text may hold a table (ocr.py --images)
+IMAGES_MARK, IMAGE_SEP = "#images\n", "\n#image\n"   # an ocr/ page entry holding the readings of the page's images
+
+
+def page_images(page):
+    """The boxes of the images on a PDF page large enough to hold a table, top to bottom."""
+    boxes = [b["bbox"] for b in page.get_text("dict")["blocks"] if b["type"] == 1
+             and b["bbox"][2] - b["bbox"][0] >= OCR_IMAGE_MIN[0] and b["bbox"][3] - b["bbox"][1] >= OCR_IMAGE_MIN[1]]
+    return sorted(boxes, key=lambda r: (r[1], r[0]))
+
+
+def with_images(page, texts):
+    """The text layer of a page with the reading of each image put where the image stands: after the last text block,
+    in reading order, whose bottom is above the image's top (a page footer may come first in that order, as on the
+    law.go.kr prints). The text layer itself is unchanged (it is the join of the text blocks)."""
+    blocks = [b for b in page.get_text("blocks") if b[6] == 0]
+    after = {}                                           # block index -> readings that follow it (-1: before all)
+    for box, t in zip(page_images(page), texts):
+        i = max((n for n, b in enumerate(blocks) if b[3] <= box[1] + 2), default=-1)
+        after.setdefault(i, []).append(t.strip() + "\n")
+    out = after.get(-1, [])
+    for n, b in enumerate(blocks):
+        out += [b[4]] + after.get(n, [])
+    return "".join(out)
 
 
 def ocr_pages(row):
@@ -252,8 +276,14 @@ def to_text(row, kind, conv):
                 t = xfa_text(path)
                 return (t, None, "xfa_template") if t else (text, pages, "xfa_form_no_text")
             ocr = ocr_pages(row)
-            if ocr and len(ocr) == len(pages):                   # pages without a text layer take their OCR text
-                merged = [p if len(p.strip()) >= OCR_PAGE_MIN else o for p, o in zip(pages, ocr)]
+            if ocr and len(ocr) == len(pages):                   # pages without a text layer take their OCR text,
+                merged = []                                      # images read by ocr.py --images go where they stand
+                with fitz.open(path) as doc:
+                    for p, o, pg in zip(pages, ocr, doc):
+                        if o.startswith(IMAGES_MARK):
+                            merged.append(with_images(pg, o[len(IMAGES_MARK):].split(IMAGE_SEP)))
+                        else:
+                            merged.append(p if len(p.strip()) >= OCR_PAGE_MIN else o)
                 if merged != pages:
                     return "\n".join(merged), merged, "ocr"
             return text, pages, "ok" if len(text.strip()) > 200 else "scanned_or_empty"
@@ -1411,7 +1441,7 @@ def slice_kr_pdf(doc_id, text):
     """Korean acts printed from law.go.kr as PDF: the same ids as the XML slicer (제98조의2 → #98-2, ① → #98-2.1 when the
     article has more than one paragraph); the page header ('법제처 N' and the act's name on the next line) is left out,
     deleted articles ('제5조 삭제') are dropped, the addenda (부칙) are not sliced, numbers never go back. Tables of the
-    print have no text layer (the rate tables of 소득세법 §55, 법인세법 §55 are not in the text). Written on 소득세법 and
+    print are images (the rate tables of 소득세법 §55, 법인세법 §55): ocr.py --images reads them into their article. Written on 소득세법 and
     법인세법 as at 2026-07-01 (kr.income-tax-act.20260701.ko, kr.corporate-tax-act.20260701.ko, 2026-11-07):
     법인세법 gives 181 articles and 642 paragraphs, the same as the XML slicer on the act's XML."""
     lines, skip = [], False

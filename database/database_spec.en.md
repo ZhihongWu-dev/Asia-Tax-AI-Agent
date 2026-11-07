@@ -19,7 +19,7 @@ Before you start, read the task sheet (`采集任务单.md`, English copy `colle
 | 2026-10-31 | new slot restructure; category 9 widened to the tax burden of share transfers | restructure for companies and individuals |
 | 2026-11-02 to 11-04 | new exit slot for individuals (deemed transfer on departure) | exit for individuals |
 | 2026-11-04 | exit widened to a company moving out (deemed liquidation) | exit for companies |
-| 2026-11-07 | after merging the remote library: OCR of scans (§4.1); errors on law pages that are shells, warnings on whole-text citations of laws (§4.1, §4.3, §5); bilingual gazettes, several laws in one gazette issue (§4.2); slicing of Malaysian schedules, headings before the number, Korean law PDFs (§4.3); quotes taken from find.py, the subject suffix of parameter ids (§4.4); tools for merging and repointing, the owner of intl documents, the remote meta table, uploading superseded.csv and `ocr/` (§3, §4.5); §6 widening the income tax scope (draft, not in force) | no new cells |
+| 2026-11-07 | after merging the remote library: OCR of scans and of tables printed as images (§4.1); errors on law pages that are shells, warnings on whole-text citations of laws (§4.1, §4.3, §5); bilingual gazettes, several laws in one gazette issue (§4.2); slicing of Malaysian schedules, headings before the number, Korean law PDFs (§4.3); quotes taken from find.py, the subject suffix of parameter ids (§4.4); tools for merging and repointing, the owner of intl documents, the remote meta table, uploading superseded.csv and `ocr/` (§3, §4.5); §6 widening the income tax scope (draft, not in force) | no new cells |
 
 ## 1. Minimal workflow
 
@@ -218,9 +218,10 @@ When the content of a list page is loaded by a script and only an empty shell is
 
 ```bash
 python database/tools/ocr.py <doc_id> [<doc_id> ...]     # or --scans: every PDF with at least half of its pages scanned
+python database/tools/ocr.py --images <doc_id>           # also read the images on pages with a text layer (tables printed as images)
 ```
 
-It uses the local Qwen3-VL (`agent/tools/doc_parse.py`, page by page, greedy decoding, so the same page always gives the same text; no Baidu components), reads only the pages without a text layer and writes `ocr/<doc_id>.txt`, whose first line records the sha256 of the original, the model and the date; an interrupted run resumes. The build gives these pages their OCR text and the other pages their text layer, and the text column of STATUS.md says `ocr`. When the original changes (its sha256 changes), the OCR text no longer counts and is made again. OCR text is a reading of the scan, not the original itself: quotes are copied from it as usual (§4.4), and parameters citing it say "OCR text, to be checked against the original" in their note. Pages OCR cannot read either (handwriting, heavy blur) go to a person (§4.8 H3).
+It uses the local Qwen3-VL (`agent/tools/doc_parse.py`, page by page, greedy decoding, so the same page always gives the same text; no Baidu components), reads only the pages without a text layer and writes `ocr/<doc_id>.txt`, whose first line records the sha256 of the original, the model and the date; an interrupted run resumes. The build gives these pages their OCR text and the other pages their text layer, and the text column of STATUS.md says `ocr`. When the original changes (its sha256 changes), the OCR text no longer counts and is made again. OCR text is a reading of the scan, not the original itself: quotes are copied from it as usual (§4.4), and parameters citing it say "OCR text, to be checked against the original" in their note. When a table is printed as an image and is missing from the text layer (such as the rate tables of the Korean law PDFs printed from law.go.kr), add `--images`: only the images of at least `OCR_IMAGE_MIN` on those pages are read, the build puts each reading where its image stands, and the rest of the page keeps its text layer. Pages OCR cannot read either (handwriting, heavy blur) go to a person (§4.8 H3).
 
 ### 4.2 Download and registration (steps A, B)
 
@@ -266,7 +267,7 @@ Slicing is done automatically by build.py; for a new format or a bad slicing, co
 | Vietnamese laws and decrees | `Điều 4. title`; clauses `1.`; in a gazette issue printing several laws, only the law whose number the title gives (§4.2) | `<doc>#4.1` | checked (67/2025/QH15, 20 articles; 109/2025/QH15 in gazette issue 37, 140 clauses) |
 | Japanese laws (e-Gov XML) | sliced by the XML structure; `第四条の二` → `4-2` | `<doc>#4-2.2` | checked (Corporation Tax Act, 252 articles) |
 | Korean laws (law.go.kr XML) | sliced by the XML structure; `제98조의2` → `98-2`, ① → `.1` | `<doc>#98-2.1` | checked (법인세법, 181 articles) |
-| Korean laws (PDF printed from law.go.kr) | `제4조(소득의 구분)`, `제5조 삭제`; paragraphs from ①; the page header "법제처 N" and the law's name on the next line are left out, 부칙 is not cut | as the XML: `<doc>#98-2.1` | checked (소득세법, 법인세법 as at 2026-07-01); tables of the PDF have no text layer (such as the rate table of Article 55): register the XML when the figures of a table are needed |
+| Korean laws (PDF printed from law.go.kr) | `제4조(소득의 구분)`, `제5조 삭제`; paragraphs from ①; the page header "법제처 N" and the law's name on the next line are left out, 부칙 is not cut | as the XML: `<doc>#98-2.1` | checked (소득세법, 법인세법 as at 2026-07-01); tables (such as the rate table of Article 55) are embedded images, read with `ocr.py --images` (§4.1) |
 | Indian laws | `195. Other sums.—(1)` (the 1961 Act); `393.<tab>(1)` (the 2025 Act, whose section title printed on the line before the number joins the section) | `<doc>#s195(1)` | checked (the 2025 Act as amended by the Finance Act 2026, 537 sections; the 1961 Act, 688 sections) |
 | Guidance, web pages | numbered paragraphs `5.12` | `<doc>#para5.12` | checked |
 | Fallback | by page / whole | `<doc>#p3` / `<doc>#all` | — |

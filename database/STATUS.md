@@ -5,13 +5,13 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | What | Count |
 |---|---|
 | Documents | 285 |
-| Clauses | 36522 |
+| Clauses | 36843 |
 | Clauses left out (superseded.csv) | 217 |
 | Repealed-provision stubs left out | 50 |
 | Parameters | 572 |
 | Treaty rows | 55 |
 | Absence records | 45 |
-| Errors / warnings | 20 / 117 |
+| Errors / warnings | 5 / 117 |
 | Gaps: (jurisdiction, category) / (jurisdiction, subject, slot) / pairs without a treaty row / unresolved downloads | 6 / 36 / 0 / 2 |
 
 ## Documents
@@ -130,8 +130,8 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | jp.nta.tsutatsu.ita.02 | jp | guidance | 6 | html | ok | html_section | 6 | 所得税基本通達 法第2条《定義》関係（住所の意義ほか） |
 | jp.recon | jp | law | 1;2 | xml | ok | jp_article | 303 | 東日本大震災からの復興のための施策を実施するために必要な財源の確保に関する特別措置法（平成23年法律第117号） |
 | jp.sma | jp | law | 2;3;9 | xml | ok | jp_article | 3788 | 租税特別措置法（昭和32年法律第26号） |
-| kr.corporate-tax-act.20260701.ko | kr | law | 1;3;4;6;9 | pdf | ok | kr_pdf_article | 823 | 법인세법 |
-| kr.income-tax-act.20260701.ko | kr | law | 2;3;4;6;9 | pdf | ok | kr_pdf_article | 1148 | 소득세법 |
+| kr.corporate-tax-act.20260701.ko | kr | law | 1;3;4;6;9 | pdf | ocr | kr_pdf_article | 823 | 법인세법 |
+| kr.income-tax-act.20260701.ko | kr | law | 2;3;4;6;9 | pdf | ocr | kr_pdf_article | 1148 | 소득세법 |
 | kr.itca.enforcement-decree | kr | regulation | 3;4 | pdf | ok | page | 163 | ENFORCEMENT DECREE OF THE ADJUSTMENT OF INTERNATIONAL TAXES  |
 | kr.nts.corporate-rate-2026 | kr | guidance | 1;page_rates | html | ok | html_section | 3 | 법인세 세율 (2026년 이후) |
 | kr.nts.corporate-tax-overview | kr | guidance | 1 | html | ok | html_section | 7 | 법인세 개요 |
@@ -255,7 +255,7 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | treaty.id-sg.2020.en | id-sg | treaty |  | html | ok | en_article | 34 | Indonesia–Singapore Agreement for the Elimination of Double  |
 | treaty.id-th.2012.mli.en | id-th | treaty |  | html | ok | en_article | 41 | Synthesised text of the Indonesia–Thailand Double Taxation A |
 | treaty.id-vn.1997.mli.en | id-vn | treaty |  | pdf | ok | en_article | 128 | Synthesised text of the Indonesia–Vietnam Double Taxation Ag |
-| treaty.in-jp.1989.en | in-jp | treaty |  | pdf | scanned_or_empty | page | 0 | Convention between the Government of Japan and the Governmen |
+| treaty.in-jp.1989.en | in-jp | treaty |  | pdf | ocr | en_article | 192 | Convention between the Government of Japan and the Governmen |
 | treaty.in-jp.1989.mli.en | in-jp | treaty |  | pdf | ok | en_article | 134 | Synthesised Text of the MLI and the Convention between Japan |
 | treaty.in-jp.2006.protocol.en | in-jp | treaty |  | pdf | ok | page | 3 | Protocol Amending the Convention between Japan and India for |
 | treaty.in-jp.2015.protocol.en | in-jp | treaty |  | pdf | ok | en_article | 22 | Protocol Amending the Convention between Japan and India for |
@@ -277,7 +277,7 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | treaty.kr-my.1982.hasil | kr-my | treaty |  | pdf | ok | en_article | 126 | Double Taxation Avoidance Agreement between Malaysia and the |
 | treaty.kr-my.1982.mli.hasil | kr-my | treaty |  | pdf | ok | en_article | 127 | Synthesised Text: Malaysia-Korea Double Taxation Avoidance A |
 | treaty.kr-sg.2019.iras | kr-sg | treaty |  | pdf | ok | en_article | 248 | Agreement between Singapore and the Republic of Korea for th |
-| treaty.kr-th.2006.rd | kr-th | treaty |  | pdf | scanned_or_empty | page | 0 | Convention between Thailand and the Republic of Korea for th |
+| treaty.kr-th.2006.rd | kr-th | treaty |  | pdf | ocr | en_article | 129 | Convention between Thailand and the Republic of Korea for th |
 | treaty.kr-vn.1994.mofa | kr-vn | treaty |  | html | ok | whole | 1 | Agreement between Viet Nam and the Republic of Korea for the |
 | treaty.kr-vn.1994.mofa.text | kr-vn | treaty |  | pdf | scanned_or_empty | page | 0 | Agreement between Viet Nam and the Republic of Korea for the |
 | treaty.kr-vn.2019.protocol.mofa | kr-vn | treaty |  | html | ok | whole | 1 | Second Protocol amending the Viet Nam-Korea Double Taxation  |
@@ -307,25 +307,10 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 ## Errors
 
 - doc treaty.ae-in.1992.mli.en: no text (scanned_or_empty)
-- doc treaty.in-jp.1989.en: no text (scanned_or_empty)
 - doc treaty.in-vn.1994.mofa.text: no text (scanned_or_empty)
-- doc treaty.kr-th.2006.rd: no text (scanned_or_empty)
 - doc treaty.kr-vn.1994.mofa.text: no text (scanned_or_empty)
 - doc treaty.kr-vn.2019.protocol.mofa.text: no text (scanned_or_empty)
 - doc vn.btc.tax-administration.14-vbhn-2026: no text (scanned_or_empty)
-- param kr.final.company_cit_marginal_rate_band1: cite_id not found: kr.corporate-tax-act.20260701.ko#a55.table1.row1
-- param kr.final.company_cit_marginal_rate_band2: cite_id not found: kr.corporate-tax-act.20260701.ko#a55.table1.row2
-- param kr.final.company_cit_marginal_rate_band3: cite_id not found: kr.corporate-tax-act.20260701.ko#a55.table1.row3
-- param kr.final.company_cit_marginal_rate_band4: cite_id not found: kr.corporate-tax-act.20260701.ko#a55.table1.row4
-- param kr.final.individual_global_income_marginal_rate_band1: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row1
-- param kr.final.individual_global_income_marginal_rate_band2: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row2
-- param kr.final.individual_global_income_marginal_rate_band3: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row3
-- param kr.final.individual_global_income_marginal_rate_band4: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row4
-- param kr.final.individual_global_income_marginal_rate_band5: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row5
-- param kr.final.individual_global_income_marginal_rate_band6: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row6
-- param kr.final.individual_global_income_marginal_rate_band7: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row7
-- param kr.final.individual_global_income_marginal_rate_band8: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row8
-- decision ae.absent.cfc: quote not found verbatim in ae.mof.top-up-tax#all (copy it from: python database/tools/find.py --cite ae.mof.top-up-tax#all)
 
 ## Warnings
 
