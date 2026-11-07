@@ -3,11 +3,15 @@ page, greedy decoding, so the same page gives the same text. No Baidu components
 
   python database/tools/ocr.py <doc_id> [<doc_id> ...]
   python database/tools/ocr.py --scans            # every PDF in doc.csv with at least half of its pages scanned
+  python database/tools/ocr.py --images <doc_id>  # also read the images on pages with text (tables printed as images)
 
 Only pages whose text layer is (nearly) empty are read (fewer than build.OCR_PAGE_MIN characters); the others are left
 empty in the file. Writes ocr/<doc_id>.txt: a first line "#ocr sha256=<sha256 of the original> model=<model>
 date=<YYYY-MM-DD>", then the pages separated by form feeds. When the sha256 matches the original, build.py gives each
-scanned page its OCR text and keeps the text layer of the others (text_status "ocr"). Pages are kept one by one under ocr/.parts/<doc_id>/ while running, so an interrupted run resumes.
+scanned page its OCR text and keeps the text layer of the others (text_status "ocr"). With --images, a page with a
+text layer that carries images of at least build.OCR_IMAGE_MIN (tables, such as the rate tables of the Korean acts) gets
+the entry "#images" + the reading of each image, top to bottom; build.py puts each reading where its image stands and
+leaves the text layer of the page as it is. Pages are kept one by one under ocr/.parts/<doc_id>/ while running, so an interrupted run resumes.
 OCR text is a reading of the scan, not the original: quotes are copied from it as from any text, and the note of a
 parameter citing it says "OCR text, to be checked against the original".
 """
@@ -39,7 +43,14 @@ def tidy(text):
     return "\n".join(out)
 
 
-def ocr_doc(row):
+def image_of(page, box):
+    import fitz
+    from PIL import Image
+    pix = page.get_pixmap(dpi=200, clip=fitz.Rect(box))
+    return Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
+
+
+def ocr_doc(row, images=False):
     import fitz
     import doc_parse
     import build
@@ -59,7 +70,11 @@ def ocr_doc(row):
             if f.exists():
                 continue
             if len(page.get_text("text").strip()) >= build.OCR_PAGE_MIN:
-                f.write_text("", encoding="utf-8")         # the text layer serves for this page
+                boxes = build.page_images(page) if images else []
+                texts = [tidy(doc_parse.plain_text(doc_parse.ocr_image(image_of(page, b)))) for b in boxes]
+                f.write_text(build.IMAGES_MARK + build.IMAGE_SEP.join(texts) if texts else "", encoding="utf-8")
+                if texts:                                  # else the text layer serves for this page
+                    print("%s: page %d/%d, %d images" % (row["id"], i + 1, n, len(texts)), flush=True)
                 continue
             f.write_text(tidy(doc_parse.plain_text(doc_parse.ocr_image(page_image(page)))), encoding="utf-8")
             print("%s: page %d/%d" % (row["id"], i + 1, n), flush=True)
@@ -75,6 +90,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("ids", nargs="*")
     ap.add_argument("--scans", action="store_true", help="every PDF of doc.csv whose text layer is empty")
+    ap.add_argument("--images", action="store_true", help="also read the images on pages with a text layer")
     args = ap.parse_args()
     docs = {r["id"]: r for r in build.read_csv(ROOT / "doc.csv")}
     ids = list(args.ids)
@@ -89,7 +105,7 @@ def main():
         if i not in docs:
             print("! %s: not in doc.csv" % i)
             continue
-        ocr_doc(docs[i])
+        ocr_doc(docs[i], args.images)
     return 0
 
 
