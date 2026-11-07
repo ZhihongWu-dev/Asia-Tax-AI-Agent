@@ -5,20 +5,27 @@
 
 The jurisdictions that pass the acceptance (§5; every jurisdiction of jurisdiction.csv when no --jur is given; with
 --partial also those with gaps but no error) are uploaded, and the remote is replaced by exactly that data:
-  1. files: every raw/ and text/ file of those jurisdictions, and the spec and task sheet in Chinese and English (DOCS,
-     under docs/), are written to the bucket (a path already there is overwritten); then every other object is deleted;
-  2. tables: in one transaction the schema is dropped and created again with the seven tables and their rows, so a
-     failure leaves the previous tables as they were.
-Nothing is compared and nothing is checked afterwards. Upload from the folder that holds everyone's data: what is not
-in it is gone from the remote afterwards.
---dry-run     print what would be uploaded; write nothing
+  1. files: every raw/, ocr/ and text/ file of those jurisdictions, superseded.csv (the rows of their documents), and the
+     spec and task sheet in Chinese and English (DOCS, under docs/), are written to the bucket (a path already there is
+     overwritten); then every other object is deleted;
+  2. tables: in one transaction the schema is dropped and created again with the seven tables and their rows and the
+     table meta (key, value: spec_version, the sha256 of build.py and upload.py, the git commit of the tools, who
+     uploaded and when, the acceptance line of each jurisdiction), so a failure leaves the previous tables as they were.
+Before writing, the remote meta is read: a remote written under a newer specification (spec_version later than
+build.SPEC_VERSION) is not overwritten; update the tools first. Nothing else is compared. Upload from the folder that
+holds everyone's data: what is not in it is gone from the remote afterwards.
+--dry-run     print what would be uploaded and the remote meta; write nothing
 Credentials (never printed) come from the environment or the .env next to or above database/: database_url for
-Postgres, supabase_url and supabase_key for the bucket. The tools and samples/ are not uploaded. The bucket has a standing rule that lets the publishable key
-(role anon) read and write it, so a publishable key is enough. Uploaded: the seven tables, raw/, text/ and the four docs.
+Postgres, supabase_url and supabase_key for the bucket. The tools and samples/ are not uploaded (their commit is in meta).
+The bucket has a standing rule that lets the publishable key (role anon) read and write it, so a publishable key is
+enough. Uploaded: the seven tables and meta, raw/, ocr/, text/, superseded.csv and the four docs.
 Exit code 0 when the upload went through, 1 otherwise.
 """
 import argparse
 import csv
+import datetime
+import getpass
+import hashlib
 import io
 import re
 import subprocess
@@ -95,8 +102,37 @@ class Bucket:
                 raise RuntimeError("deleting old files failed: HTTP %s %s" % (r.status_code, r.text[:120]))
 
 
-def replace_tables(con, schema, rows):
-    """Drop the schema and create it again with the seven tables and their rows, in one transaction."""
+def tools_meta(accepted_lines):
+    """The meta rows of this upload: who, when, with which specification and which tools."""
+    def sha(name):
+        return hashlib.sha256((TOOLS / name).read_bytes()).hexdigest()
+    git = subprocess.run(["git", "-C", str(TOOLS), "rev-parse", "HEAD"], capture_output=True, text=True)
+    dirty = subprocess.run(["git", "-C", str(TOOLS), "status", "--porcelain", "--", "."], capture_output=True, text=True)
+    commit = git.stdout.strip() if git.returncode == 0 else "not a git checkout"
+    if git.returncode == 0 and dirty.stdout.strip():
+        commit += " (tools changed since)"
+    meta = {"spec_version": build.SPEC_VERSION, "build_py_sha256": sha("build.py"), "upload_py_sha256": sha("upload.py"),
+            "tools_commit": commit, "uploaded_by": getpass.getuser(),
+            "uploaded_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
+    for line in accepted_lines:
+        m = re.match(r"acceptance (\S+): (.*)$", line)
+        if m:
+            meta["acceptance_" + m.group(1)] = m.group(2)
+    return meta
+
+
+def remote_meta(con, schema):
+    """The meta table of the remote as {key: value}; empty when the remote has none (written before 2026-11-07)."""
+    with con.cursor() as cur:
+        cur.execute("SELECT 1 FROM information_schema.tables WHERE table_schema = %s AND table_name = 'meta'", (schema,))
+        if not cur.fetchone():
+            return {}
+        cur.execute('SELECT key, value FROM "%s"."meta"' % schema)
+        return dict(cur.fetchall())
+
+
+def replace_tables(con, schema, rows, meta):
+    """Drop the schema and create it again with the seven tables, their rows and meta, in one transaction."""
     with con.cursor() as cur:
         cur.execute('DROP SCHEMA IF EXISTS "%s" CASCADE' % schema)
         cur.execute('CREATE SCHEMA "%s"' % schema)
@@ -107,6 +143,10 @@ def replace_tables(con, schema, rows):
             with cur.copy('COPY "%s"."%s" (%s) FROM STDIN' % (schema, name, ", ".join('"%s"' % c for c in cols))) as cp:
                 for r in rows[name].values():
                     cp.write_row([str(r.get(c) or "") for c in cols])
+        cur.execute('CREATE TABLE "%s"."meta" ("key" TEXT PRIMARY KEY, "value" TEXT)' % schema)
+        with cur.copy('COPY "%s"."meta" ("key", "value") FROM STDIN' % schema) as cp:
+            for k, v in meta.items():
+                cp.write_row([k, v])
     con.commit()
 
 
@@ -141,8 +181,9 @@ def plan_rows(jurs):
     paths = set()
     for d in rows["doc"].values():
         paths.add(d["file"])
-        if (ROOT / "text" / (d["id"] + ".txt")).exists():
-            paths.add("text/%s.txt" % d["id"])
+        for folder in ("text", "ocr"):
+            if (ROOT / folder / (d["id"] + ".txt")).exists():
+                paths.add("%s/%s.txt" % (folder, d["id"]))
     for f in build.read_csv(ROOT / "files.csv"):
         if f["path"] in paths:
             rows["files"][f["path"]] = f
@@ -169,12 +210,13 @@ def main():
     # 1. a full build, then the acceptance of each jurisdiction
     subprocess.run([sys.executable, str(TOOLS / "build.py"), "--root", str(ROOT)], capture_output=True)
     jurs = args.jur or [j["code"] for j in build.read_csv(ROOT / "jurisdiction.csv")]
-    ok_jurs = []
+    ok_jurs, lines = [], []
     for jur in jurs:
         ok, line = accepted(jur, args.partial)
         print(("  upload  " if ok else "  refused ") + line)
         if ok:
             ok_jurs.append(jur)
+            lines.append(line)
     if not ok_jurs:
         print("! nothing to upload: no jurisdiction passed (use --partial for one with gaps but no error)")
         return 1
@@ -183,22 +225,39 @@ def main():
     if bad:
         print("! file paths must be ASCII letters, digits, . _ - /: %s" % ", ".join(bad[:5]))
         return 1
-    print("  plan    %d rows in %d tables, %d files; they replace the remote schema %s and bucket %s" % (
-        sum(len(v) for v in rows.values()), len(ORDER), len(paths), args.schema, args.bucket))
-    if args.dry_run:
-        print("dry run: nothing written")
-        return 0
+    doc_ids = set(rows["doc"])
+    superseded = [r for r in build.read_csv(ROOT / "superseded.csv") if r["doc_id"] in doc_ids]
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=build.SUPERSEDED, extrasaction="ignore", lineterminator="\n")
+    w.writeheader()
+    w.writerows(superseded)
+    meta = tools_meta(lines)
+    print("  plan    %d rows in %d tables + meta, %d files, superseded.csv %d rows; they replace the remote schema %s and bucket %s" % (
+        sum(len(v) for v in rows.values()), len(ORDER), len(paths), len(superseded), args.schema, args.bucket))
 
-    # 2. files, then tables
+    # 2. the remote meta, then files, then tables
     dsn = fetch.secret("database_url").replace("postgresql+psycopg://", "postgresql://")
     url, key = fetch.secret("supabase_url"), fetch.secret("supabase_key")
     secrets = [dsn, key]
     try:
         import psycopg
         con = psycopg.connect(dsn, connect_timeout=30)
+        old = remote_meta(con, args.schema)
+        con.commit()
     except Exception as e:                                     # noqa: BLE001
         print("! database not reachable: %s: %s" % (type(e).__name__, clean(str(e), secrets)[:200]))
         return 1
+    print("  remote  " + (", ".join("%s=%s" % (k, old[k]) for k in ("spec_version", "tools_commit", "uploaded_by", "uploaded_at") if k in old)
+                          or "no meta table: written before 2026-11-07 or by older tools"))
+    if old.get("spec_version", "") > build.SPEC_VERSION:
+        print("! the remote was written under the specification of %s, these tools follow %s: update the tools first"
+              % (old["spec_version"], build.SPEC_VERSION))
+        con.close()
+        return 1
+    if args.dry_run:
+        print("dry run: nothing written")
+        con.close()
+        return 0
     try:
         bucket = Bucket(url, key, args.bucket)
         bucket.ensure()
@@ -209,6 +268,8 @@ def main():
         docs = {remote: ROOT / local for local, remote in DOCS.items() if (ROOT / local).exists()}
         for remote, local in docs.items():
             bucket.put(remote, local.read_bytes(), "text/markdown; charset=utf-8")
+        bucket.put("superseded.csv", buf.getvalue().encode("utf-8-sig"), "text/csv; charset=utf-8")
+        docs["superseded.csv"] = None
         print("  docs    %d written (%s)" % (len(docs), ", ".join(sorted(docs))))
         with con.cursor() as cur:
             cur.execute("SELECT name FROM storage.objects WHERE bucket_id = %s", (args.bucket,))
@@ -221,7 +282,7 @@ def main():
         con.close()
         return 1
     try:
-        replace_tables(con, args.schema, rows)
+        replace_tables(con, args.schema, rows, meta)
     except Exception as e:                                     # noqa: BLE001
         con.rollback()
         print("! tables not replaced: %s: %s; the previous tables are unchanged" % (type(e).__name__, clean(str(e), secrets)[:300]))

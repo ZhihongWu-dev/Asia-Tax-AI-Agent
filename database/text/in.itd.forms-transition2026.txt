@@ -1,0 +1,100 @@
+1. I want to apply for a new Permanent Account Number after 1st April, 2026.Which form should I use?
+The applications for allotment of a new permanent account Number on or after 01.04.2026 should be filed in the new Forms as prescribed under Income Tax Rules, 2026.
+2. What will happen to PAN applications pending as on 31.03.2026? Will they become invalid on 01.04.2026? Is a fresh application required under the new Act?
+PAN allotment applications that are pending as on 31.03.2026 will continue to remain valid. There is no requirement to submit a fresh application under the new Act.
+3. Are existing PAN/TAN numbers affected by the new forms?
+No. Existing PAN/TAN numbers remain valid and continue under the Income Tax Act, 2025. The new forms ( 93, 94, 95, 96, 134 and 135 ) are only for fresh applications to be filed on or after 01.04.2026.
+4. Under the Income Tax Act 1961, quoting of PAN is mandatory at the time of undertaking certain specified transaction. However, if an individual does not have PAN number, he can undertake such transactions by filing form No. 60. Does a similar mechanism available in the Income Tax Act, 2025?
+Yes. Under the Income Tax Act, 2025 persons who do not possess PAN number may enter into a transaction specified in Rule 159 (2) of the Income Tax Rules 2026 upon filing a declaration in Form No. 97. Thus, the Form No. 97 under the new Act replaces the earlier form number No. 60. However, there is some change in the scope of transactions mentioned in the new Rule 159(2) as against transactions mentioned in Rule 114B and 114BA of IT Rules, 1962.
+5. Under the Income Tax Act 1961, every person who has received declaration in form No. 60 was required to file a half yearly statement to the Income Tax Department in form No. 61. Does this requirement continue under the Income Tax Act 2025?
+Yes. Under the Income Tax Rule 2026, every person receiving declaration in form No.97 is required to file half yearly statement in Form No. 98 to the Income Tax Department.
+6. What is the purpose of a lower/nil withholding certificate and what is its corresponding provision under the Income Tax Act, 2025?
+A lower/nil withholding certificate enables a taxpayer to have TDS deducted at a rate lower than the prescribed/ Nil rate, where the taxpayer’s estimated total income justifies this. Under the Income Tax Act, 1961, this provision was contained in Section 197. Under the Income Tax Act, 2025, the corresponding provisions are contained in Section 395(1). The substantive provisions remain the same — the payee applies to the Assessing Officer, who, on being satisfied that the total income justifies the lower rate, issues a certificate accordingly.
+7. Will a lower/nil withholding certificate issued under Section 197 of the old Act remain valid for payments/credits made on or after 1st April, 2026?
+Yes. A certificate issued under Section 197 of the Income Tax Act, 1961 shall remain valid for payments/credits made on or after 1st April, 2026 provided that it is issued for lower/Nil deduction of tax in respect of projected receivable for tax year 2026-27
+8. What is the process for obtaining a lower/nil withholding certificate under the new Act for Tax Year 2026 -27?
+The payee must make an application in form No. 128 as prescribed in the Income Tax Rules 2026. The Assessing Officer, on being satisfied that the total income of the payee justifies a lower rate or no deduction, will issue a certificate specifying the rate and its period of validity. The application process will be available through the TRACES portal or the e -filing portal, similar to the existing process.
+9. What is the underlying purpose of Form 15G and Form 15H being filed under the 1961 Act?
+Under the statutory framework of 1961 Act, Form 15G and Form 15H are self -declarations submitted by eligible taxpayers to the payer (such as a bank or financial institution) requesting non -deduction of TDS .
+10. Which statutory provisions governed Forms 15G and 15H under the Income Tax Act, 1961, and what is the corresponding provision under the Income Tax Act, 2025?
+Under the Income Tax Act, 1961, Forms 15G and 15H were governed by Section 197A. Under the Income Tax Act, 2025, the corresponding provision is Section 393(6), which permits a recipient of income to furnish a written declaration that tax on his estimated total income of the tax year will be nil.
+11. In what format should Form 15G/15H be submitted for Tax Year 2026 -27?
+For a tax year beginning on or after 01.04.2026, such declaration must be furnished in Form No. 121 as prescribed under the Income Tax Rules, 2026
+12. Who are eligible to furnish Form 15G and Form 15H under the old statutory framework and is there any change in the eligibility criteria under the 2025 Act?
+Form 15G may be furnished by a resident individual below 60 years of age or other eligible persons (excluding companies and firms), subject to prescribed income thresholds. Form 15H may be furnished by a resident individual aged 60 years or more. The eligibility criteria continue to be same under Section 393(6) of the 2025 Act.
+13. What difficulties were being faced under the earlier system of allotting separate UIN for each Form 15G/15H, and how has the revised framework addressed this issue?
+Under the earlier system, each payer or deductor was required to generate a separate Unique Identification Number (UIN) for every Form 15G/15H received, even if the declarant’s PAN and the tax year were the same. This resulted in duplication and practical difficulties in reconciliation.
+Under the revised framework, a single UIN will be allotted by the department for each PAN for a given tax year. All declarations furnished by the same taxpayer to different payers will be linked to this one UIN, thereby ensuring consolidation, streamlined tracking, and elimination of duplication. A facility will be provided to payers to fetch the relevant UIN from the departmental portal.
+14. In the earlier framework, taxpayers often faced confusion in determining whether to file Form 15G or Form 15H. How has this issue been resolved in the new system?
+Previously, taxpayers had to determine eligibility and furnish either Form 15G or Form 15H, which sometimes created uncertainty. The revised framework merges both forms into a single unified Form 121, thereby eliminating ambiguity and simplifying
+compliance for taxpayers as well as payers.
+15. Which form is required to be filed in order to claim relief for mitigating the higher tax liability arising from receipt of salary in arrears or advance under the Income Tax Act, 2025?
+Section 157 of the Income Tax Act, 2025 provides relief to a taxpayer where salary is being received in advance or arrears or receipt of gratuity or retrenchment compensation or commutation of pension. The purpose is to neutralise the higher tax burden from bunching of income in a single year. Under the Income Tax Act, 1961, the assessee was required to file Form 10E in order to claim such relief, however, under the Income Tax Act, 2025, the assessee is required to file Form No. 39, on or before the due date specified under section 263(1)(c) of the Act for claiming this relief.
+16. What is the structure of Form 39 required to be filed under the Income Tax Act, 2025?
+The Form 39 comprises two parts:
+(i) Part A — Basic details of the taxpayer and the Tax Year for which relief is claimed;
+(ii) Part B — Details of receipts (additional salary, gratuity, retrenchment compensation, commutation of pension) with uniform computation tables and auto-populated relief;
+17. How the Form No. 39 has been improved as compared to earlier Form No. 10E?
+Earlier, Form No. 10E required taxpayers to repeatedly enter the same personal and financial details, increasing compliance burden, consuming time, and leading to errors. Form 39 addresses these issues through a smart, technology -driven interface featuring auto-population of data, real -time validations, standardized input tools (drop -downs and date pickers), database integration, checkbox -based verification, etc. These improvements reduce duplication, enhance accuracy, and simplify compliance.
+18. What are other improvements made in the Form No. 39 as compared to the earlier Form No. 10E?
+The earlier Form did not contain structured computation tables to calculate total
+income and tax relief under Section 89(1) of the 1961 Act. This lack of clarity often
+caused confusion for taxpayers while determining eligible relief amounts.
+However, Form No. 39 now includes uniform computation tables for each category of
+receipt, such as Additional salary, Gratuity, Pension and Other eligible arrears/receipts. These tables clearly depict formulas and structured calculations, simplifying taxpayer inputs and enabling system -based validation. This brings greater clarity, transparency, and ease of filing.
+19. Which Form should I use to claim relief in AY 2026 -27 for which return is to be filed by 31st July 2026?
+The taxability of income for AY 2026 -27 will be governed by the Income Tax Act, 1961, therefore, for claiming any relief under section 89 of the old Act, the assessee will be required to file Form 10E only. The new Form no. 39 shall be applicable only for the relief claimed under the Income Tax act, 2025 and shall be applicable w.e.f. Tax Year 2026 -27.
+20. What is the purpose of Form 15CA and Form 15CB under the Income Tax Act, 1961 and what are the corresponding provisions in the Income Tax Act, 2025?
+Form 15CA is a declaration by the remitter (person making a payment to a non resident) for furnishing information regarding the nature of remittance and applicable TDS. Form 15CB is a certificate from a Chartered Accountant certifying the nature of remittance, the applicable DTAA provisions, and the TDS rate. Under the old Act, these were governed by Section 195(6) of the Income Tax Act, 1961.
+Under the Income Tax Act, 2025, the corresponding provision are contained in Section 397(3)(d) . The corresponding Forms under the new Act are Form No. 145 (equivalent to old Form 15CA) and Form No. 146 (equivalent to old Form No. 15CB).
+21. Will Form 15CA/15CB submitted for remittances made before 31st March, 2026 remain valid after the new Act commences?
+Yes — Form 15CA/15CB already submitted for remittances made before 31 March 2026 will continue to remain valid even after the new Income Tax Act comes into effect from 1 April 2026, provided the remittance actually took place on or before the date mentioned in the form. Under current practice, these forms are valid up to the proposed date of remittance specified in the filed Form 15CA/15CB. If for any reason the remittance was not completed within that period, the taxpayer would need to file fresh forms again before processing the payment.
+22. For remittances made on or after 1st April, 2026, which forms and provisions will apply?
+For remittances made on or after 1st April, 2026, the provisions of the Income Tax Act, 2025 will apply. The prescribed forms (Form No. 145 and 146) under the Income Tax Rules, 2026 are required to be used. The substantive requirements —furnishing information about the remittance, obtaining CA certificate for amounts exceeding the prescribed threshold, ensuring TDS compliance — remain the same.
+23. Are there any changes in the threshold for filing Form 15CA/15CB under the new Act?
+The thresholds for filing the information form in Form No. 145 (Form 15CA equivalent) and the CA certificate in Form No. 146 (Form 15CB equivalent) are prescribed under the Rule 220 of Income Tax Rules, 2026. The Income Tax Rules, 2026 retain similar thresholds as under the old Rules.
+24. If a remittance is made in April 2026 for a liability accrued in February 2026, then the TDS rates and reporting formats would be governed by which statute (IT ACT 1961 or 2025)?
+The procedural requirement (Form 15CA/CB) follows the law in force on the date of remittance (2025 Act). However, the taxability of the underlying income is governed by the Act applicable to the year of accrual (1961 Act).
+25. What is the structure of Form 145 under the Income Tax Rules, 2026 and how does it benefit remitters?
+The Form No. 145 has four parts:
+(i) Part A — To be filed if remittance is taxable under the Act or aggregate does not exceed Rs. 5 lakh during the year;
+(ii) Part B — To be filed if remittance is taxable under the Act and remittance exceeds Rs. 5 lakh and certificate has been obtained from the Assessing Officer u/s 395(1)/395(2);
+(iii) Part C — To be filed if remittance is taxable under the Act and the remittance exceeds Rs. 5 lakh and a CA certificate ( Form No. 146 ) has been obtained;
+(iv) Part D — To be filed if the remittance is not taxable under the Act {Other than payments referred to in Rule 220(3).
+Key benefit: Under the New Framework, in Form 145 where Part B is furnished (AO
+certificate obtained), Part C is NOT required. This eliminates the duplication that
+existed under the old system .
+26. What is the UDIN feature introduced in Form 146?
+The UDIN (Unique Document Identification Number) has been introduced for real-time verification through the ICAI API. This ensures authenticity of the CA’s certificate and prevents fraud. Only genuine Form 1 46 submissions are accepted, benefiting both taxpayers and the Department.
+27. Is a certificate from a Chartered Accountant (Form 146) still required if the remitter has an AO certificate?
+No. Taxpayers filing Part B of Form 145 (with AO certificate) are not required to obtain Form 146 from a Chartered Accountant. This is a significant reduction in compliance burden and cost for remitters.
+28. What is the requirement for tax audit under the Income Tax Act, 2025, and has the threshold changed?
+Section 63 of the Income Tax Act, 2025 (corresponding to Section 44AB of the old Act) prescribes the requirement of audit of accounts. The thresholds for tax audit remain the same as w ere in the old Act:
+(i)Business: Total sales, turnover, or gross receipts exceed Rs. 1 crore (Rs. 10 crore where cash transactions do not exceed 5% of total receipts and 5% of total payments);
+(ii)Profession: Gross receipts exceed Rs. 50 lakhs;
+(iii)Persons opting out of presumptive taxation and declaring income below the prescribed threshold.
+29. Which form should be used for the tax audit for FY 2025 -26 (AY 2026 -27)?
+For FY 2025 -26 (AY 2026 -27), the tax audit report must be filed using the existing forms prescribed under the Income Tax Act, 1961 — Form 3CA (for persons audited under another law), Form 3CB (for all others), and Form 3CD (statement of particulars under section 44AB of the 1961 Act). The due date for filing the tax audit report for AY 2026 -27 is 30th September, 2026.
+30. What form will be used for tax audit for Tax Year 2026 -27 under the Income Tax Act, 2025?
+For Tax Year 2026 -27, the tax audit report must be filed using the Form No. 26 as prescribed under the Income Tax Rules 2026. Form No. 26 merges erstwhil e Form No. 3CA, Form 3CB and Form 3CD. The due date for filing the tax audit report for Tax Year 2026 -27 shall be 30th September, 2027.
+31. What are the key features of new Form no. 26 (Tax Audit Report) as prescribed under the Income Tax Rules, 2026?
+The key features of the new Form no. 26 are summarized as under:
+(i) All three erstwhile audit forms (Form No. 3CA, Form No. 3CB and Form No. 3CD) have been consolidated into a single smart, unified form with structured and standardised reporting.
+(ii) Audit clauses and disclosures have been rationalised and aligned with the ITR framework to ensure consistency between audit report and return of income.
+(iii) Clause relating to disallowable expenditure has been streamlined into a single consolidated disclosure instead of detailed item -wise reporting.
+(iv) Separate Schedules format such as Schedule - Losses, Depreciation and Deductions, Schedule - Prior Period, Schedule - Computation of receipt/income, Schedule - Computation of expenses has been inserted for more transparency.
+(v) Mandatory disclosure of auditor’s membership number, firm registration number,
+and UDIN has been introduced. Dedicated fields have been introduced for reporting capital receipts and deemed incomes not routed through the Profit & Loss Accounts .
+32. Is the provisional approval granted to a charitable institution under the Income Tax Act 1961 valid after 01.04.2026?
+As per provisions of sections 536 (2) (j) of the Income Tax Act 2025 , any approval given or recognition granted under any provision of the Income Tax Act 1961 shall, so far as it not inconsistent with the corresponding provisions of 2025 Act, shall continue to be in force. Thus, a provisional approval granted to a charitable organisation under the old Act shall not be invalid merely because the new Act commences on 01.04.2026.
+33. If a charitable organization wants to apply for provisional registration after 01.04.2026, in which form it should file the application?
+All applications freshly filed on or after 01.04.2026 shall be governed by the Income Tax 2025. Therefore, after 01.04.2026, any charitable organisation should file its application in Form No. 104 (corresponding to earlier form No. 10A).
+34. What will happen to the registration applications filed during F.Y. 2025 -26 and remained pending as on 31.03.2026?
+As per the provisions of section 536(2)(e), all such applications shall be disposed of under the provisions of Income Tax Act, 1961. Therefore, there is no need to file fresh application merely because the new Act commences on 01.04.2026.
+35. What are the key features of new Form No. 104 as prescribed under the Income Tax Rules 2026?
+The key features of new Form No. 104 are summarized as under:
+(i) The overall Form No. 104 has been substantially simplified and its length significantly reduced .
+(ii) Details of assets and liabilities have been removed from the main form and are now required only to be uploaded where the applicant has not filed the return of income.
+(iii) Requirement to provide break -up of total income and details of religious expenditure for past three tax years has been completely removed from the form.
+36. Will e -filing utilities on the portal support both old and new form versions simultaneously?
+Yes. The Government is taking appropriate measures to ensure that the e -filing portal supports both old forms (for AY 2026 -27 and earlier) and new forms (for Tax Year 2026 -27 onwards) simultaneously during the transition period. Taxpayers should ensure they select the correct year (AY or TY) and the portal will guide them to the appropriate form.

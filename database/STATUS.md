@@ -4,20 +4,35 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 
 | What | Count |
 |---|---|
-| Documents | 159 |
-| Clauses | 18430 |
-| Clauses left out (superseded.csv) | 214 |
+| Documents | 285 |
+| Clauses | 36522 |
+| Clauses left out (superseded.csv) | 217 |
 | Repealed-provision stubs left out | 50 |
-| Parameters | 371 |
-| Treaty rows | 25 |
-| Absence records | 34 |
-| Errors / warnings | 0 / 0 |
-| Gaps: (jurisdiction, category) / (jurisdiction, subject, slot) / pairs without a treaty row / unresolved downloads | 78 / 108 / 30 / 2 |
+| Parameters | 572 |
+| Treaty rows | 55 |
+| Absence records | 45 |
+| Errors / warnings | 20 / 117 |
+| Gaps: (jurisdiction, category) / (jurisdiction, subject, slot) / pairs without a treaty row / unresolved downloads | 6 / 36 / 0 / 2 |
 
 ## Documents
 
 | id | jur | type | category | format | text | slicing | clauses | title |
 |---|---|---|---|---|---|---|---|---|
+| ae.cabinet116.2022.taxable-threshold.en | ae | regulation | 1;2 | pdf | ok | ae_article | 8 | Cabinet Decision 116 of 2022 on the Taxable Income Threshold |
+| ae.cabinet142.2024.dmtt.en | ae | regulation | 1;3 | pdf | ocr | page | 74 | Cabinet Decision 142 of 2024: Top-up Tax on Multinational En |
+| ae.cabinet49.2023.natural-persons.en | ae | regulation | 2 | pdf | ok | ae_article | 9 | Cabinet Decision 49 of 2023 on Businesses or Business Activi |
+| ae.fta.corporate-tax-faq | ae | guidance | 1;3;4;5;6;9 | html | ok | whole | 1 | Federal Tax Authority Corporate Tax FAQ |
+| ae.fta.corporate-tax-registration | ae | page | page_deadlines | html | ok | whole | 1 | Corporate Tax Registration |
+| ae.fta.foreign-source-income | ae | guidance | 4;5;6 | pdf | ok | numbered_para | 10 | Corporate Tax Guide: Taxation of Foreign Source Income |
+| ae.fta.general-corporate-tax | ae | guidance | 1;2;3;4;5;6;7;9;page_rates | pdf | ok | numbered_para | 12 | Corporate Tax – General |
+| ae.fta.natural-persons-2023 | ae | guidance | 2;page_rates | pdf | ok | page | 45 | Corporate Tax Guide: Taxation of Natural Persons |
+| ae.fta.tax-resident-certificate-2024 | ae | guidance | 6;8 | pdf | ok | page | 67 | Tax Resident and Tax Residency Certificate |
+| ae.fta.withholding-faq | ae | guidance | 7 | html | ok | whole | 1 | Federal Tax Authority FAQ: UAE Corporate Tax withholding tax |
+| ae.law.corporate-tax.fta2022.en | ae | law | 1;4;9 | pdf | ok | ae_article | 330 | Taxation of Corporations and Businesses |
+| ae.law.corporate-tax.legislation1582.en | ae | law | 1;4;9 | pdf | ok | ae_article | 323 | Federal Decree-Law No. (47) of 2022 On Corporate and Busines |
+| ae.law.corporate-tax.mof2022.en | ae | law | 1;4;9 | pdf | ok | ae_article | 332 | Federal Decree-Law No. 47 of 2022 on the Taxation of Corpora |
+| ae.mof.dta-index | ae | page | page_treaties | pdf | ok | page | 6 | Avoidance of Double Taxation Agreements |
+| ae.mof.top-up-tax | ae | page | 3 | html | ok | whole | 1 | Top-up Tax |
 | cn.cs.2009-125 | cn | guidance | 1 | html | ok | cn_item | 16 | 财政部 国家税务总局关于企业境外所得税收抵免有关问题的通知 |
 | cn.cs.2009-59 | cn | guidance | 9 | html | ok | cn_item | 13 | 财政部 国家税务总局关于企业重组业务企业所得税处理若干问题的通知 |
 | cn.cs.2009-60 | cn | guidance | 9 | html | ok | cn_item | 6 | 财政部 国家税务总局关于企业清算业务企业所得税处理若干问题的通知 |
@@ -62,11 +77,40 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | hk.ird.cor.faq | hk | guidance | 6;8 | html | ok | html_faq | 26 | IRD FAQ: Certificate of Resident Status |
 | hk.ird.dta-list | hk | page | page_treaties | html | ok | whole | 1 | IRD: Comprehensive Double Taxation Agreements concluded |
 | hk.ird.dta-rates | hk | page | page_rates | html | ok | whole | 1 | IRD: Tax Rates for Dividends, Interest, Royalties and Techni |
+| id.dgt.article23 | id | page | 1;page_deadlines | html | ok | whole | 1 | Article 23 Income Tax |
+| id.dgt.article26 | id | page | 1;7;page_deadlines | html | ok | whole | 1 | Income Tax - Article 26 (Income Tax for Foreign Taxpayers) |
+| id.dgt.ease-taxation | id | page | 1;4;page_rates | html | ok | html_section | 7 | Ease of Doing Business in Taxation Cluster |
+| id.dgt.individual-calculation | id | page | 2 | html | ok | html_section | 7 | Income Tax Calculation Mechanism Individual |
+| id.dgt.residence-registration | id | regulation | 6 | html | ok | id_pasal | 465 | Petunjuk Pelaksanaan Administrasi Nomor Pokok Wajib Pajak, P |
+| id.dgt.skd-spdn | id | guidance | 8 | html | ok | html_section | 3 | Surat Keterangan Domisili Subjek Pajak Dalam Negeri |
+| id.dgt.treaty-index | id | page | page_treaties | html | ok | whole | 1 | Tax Treaty |
+| id.per25-2018.treaty-procedure | id | regulation | 5;7 | pdf | ok | page | 17 | Regulation of the Director General of Taxes Number PER-25/PJ |
+| id.tax-law-compilation-2022 | id | law | 1;2;3;4;9 | pdf | ok | page | 352 | Compilation Into Single Document Of Taxation Laws |
+| in.itd.act2025-scope | in | guidance | 1;2 | html | ok | html_section | 40 | Objective and scope of the New Act |
+| in.itd.beneficial-owner-guide-2026 | in | guidance | 5 | pdf | ok | page | 4 | Step by Step Guide: Schedule FA and Schedule FSI |
+| in.itd.domestic-company-2026 | in | guidance | 1 | html | ok | html_section | 4 | Domestic Company for AY 2026-27 |
+| in.itd.dtaa-directory.20261031 | in | page | page_treaties | html | ok | whole | 1 | Treaties With Other Countries |
+| in.itd.foreign-assets-2026 | in | guidance | 2;6 | pdf | ocr | page | 4 | Who should Disclose Foreign Asset/Income? |
+| in.itd.foreign-income-guide.2018 | in | guidance | 1;2;6 | pdf | ok | numbered_para | 23 | Tax Treatment of Foreign Income of Persons Resident in India |
+| in.itd.form15ca | in | form | 1 | html | ok | html_section | 7 | Form 15CA FAQs |
+| in.itd.form41-dtaa | in | guidance | 7 | html | ok | html_section | 8 | Form 41 User Manual |
+| in.itd.form42-trc | in | guidance | 8 | html | ok | html_section | 6 | Form 42 User Manual |
+| in.itd.form67 | in | form | 1 | html | ok | html_section | 7 | Form 67 User Manual |
+| in.itd.forms-transition2026 | in | guidance | 7 | html | ok | html_section | 39 | Income Tax Forms FAQs: transition to the Income-tax Act 2025 |
+| in.itd.individual-rates-2026 | in | guidance | 2;page_rates | html | ok | html_section | 20 | Individual having Income from Business / Profession for AY 2 |
+| in.itd.nonresident-faq | in | guidance | 6 | html | ok | html_section | 28 | Non Resident FAQs |
+| in.itd.tax-calendar | in | page | page_deadlines | html | ok | html_section | 9 | Income Tax Department Tax Calendar |
+| in.itd.tds-transition2026 | in | guidance | 1;7 | html | ok | html_section | 30 | Tax Payments FAQ: Income-tax Act 2025 transition |
+| in.law.finance2026.gazette.en | in | law | 1;3 | pdf | ok | in_section | 213 | Finance Act 2026 (No. 4 of 2026): official Gazette |
+| in.law.ita2025.fa2026.en | in | law | 1;2;3;4;9 | pdf | ok | in_section | 2807 | INCOME-TAX ACT, 2025 [AS AMENDED BY FINANCE ACT, 2026] |
+| in.rules2026 | in | regulation | 4;7;9 | pdf | ok | in_section | 1574 | Income-tax Rules, 2026 |
 | intl.mli.notification-35-7b.hk.en | intl | treaty |  | pdf | ok | page | 4 | Hong Kong SAR (submitted by China): notifications under MLI  |
 | intl.mli.positions.cn.en | intl | treaty |  | pdf | ok | page | 37 | The Full List of the Final Reservations and Notifications of |
+| intl.mli.positions.my.2022.en | intl | treaty |  | pdf | ok | page | 47 | Malaysia: Status of List of Reservations and Notifications |
 | intl.mli.positions.th.en | intl | treaty |  | pdf | ok | page | 33 | Kingdom of Thailand: MLI reservations and notifications upon |
 | intl.mli.positions.vn.en | intl | treaty |  | pdf | ok | page | 44 | Socialist Republic of Viet Nam: MLI reservations and notific |
 | intl.oecd.mli.en | intl | treaty |  | pdf | ok | en_article | 214 | Multilateral Convention to Implement Tax Treaty Related Meas |
+| intl.oecd.mli.parties.20260915.en | intl | treaty |  | pdf | ok | page | 6 | Signatories and Parties to the Multilateral Convention to Im |
 | intl.oecd.mtc2017.full | intl | guidance | 11 | pdf | ok | numbered_para | 217 | OECD Model Tax Convention on Income and on Capital 2017 (Ful |
 | jp.cta | jp | law | 1;4;9 | xml | ok | jp_article | 1128 | 法人税法（昭和40年法律第34号） |
 | jp.cta.order | jp | law | 1;3 | xml | ok | jp_article | 1882 | 法人税法施行令（昭和40年政令第97号） |
@@ -86,6 +130,32 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | jp.nta.tsutatsu.ita.02 | jp | guidance | 6 | html | ok | html_section | 6 | 所得税基本通達 法第2条《定義》関係（住所の意義ほか） |
 | jp.recon | jp | law | 1;2 | xml | ok | jp_article | 303 | 東日本大震災からの復興のための施策を実施するために必要な財源の確保に関する特別措置法（平成23年法律第117号） |
 | jp.sma | jp | law | 2;3;9 | xml | ok | jp_article | 3788 | 租税特別措置法（昭和32年法律第26号） |
+| kr.corporate-tax-act.20260701.ko | kr | law | 1;3;4;6;9 | pdf | ok | kr_pdf_article | 823 | 법인세법 |
+| kr.income-tax-act.20260701.ko | kr | law | 2;3;4;6;9 | pdf | ok | kr_pdf_article | 1148 | 소득세법 |
+| kr.itca.enforcement-decree | kr | regulation | 3;4 | pdf | ok | page | 163 | ENFORCEMENT DECREE OF THE ADJUSTMENT OF INTERNATIONAL TAXES  |
+| kr.nts.corporate-rate-2026 | kr | guidance | 1;page_rates | html | ok | html_section | 3 | 법인세 세율 (2026년 이후) |
+| kr.nts.corporate-tax-overview | kr | guidance | 1 | html | ok | html_section | 7 | 법인세 개요 |
+| kr.nts.filing-returns | kr | page | page_deadlines | html | ok | html_section | 3 | Filing returns |
+| kr.nts.forms | kr | page | 8 | html | ok | html_section | 8 | Application Forms and English Certificates |
+| kr.nts.global-income-faq | kr | guidance | 2 | html | ok | whole | 1 | Global income tax guidance |
+| kr.nts.nonresident-wht | kr | guidance | 1 | html | ok | html_section | 3 | 비거주자 원천징수 |
+| kr.nts.nonresident-wht-agent | kr | guidance | 1 | html | ok | html_section | 3 | 원천징수의무자 |
+| kr.nts.nonresident-wht-rate | kr | guidance | 1 | html | ok | html_section | 3 | 원천징수세율 |
+| kr.nts.tax-treaty-application | kr | form | 7 | pdf | ok | page | 13 | Application for Non-Taxation and Tax Exemption under the Tax |
+| kr.nts.tax-treaty-index | kr | page | page_treaties | html | ok | whole | 1 | Tax Treaty |
+| my.finance-act862.2024 | my | law | 1;2;8 | pdf | ok | my_section | 50 | Finance Act 2024 (Act 862) |
+| my.hasil.be2025.explanatory | my | guidance | 1;2;8 | pdf | ok | page | 36 | HASiL Form BE explanatory notes for Year of Assessment 2025 |
+| my.hasil.dta-index | my | page | page_treaties | html | ok | whole | 1 | PPPDK Menyeluruh |
+| my.hasil.e-residence | my | guidance | 6;7;8 | html | ok | html_section | 8 | Sijil Taraf Mastautin / e-Residence |
+| my.hasil.foreign-income-2024 | my | guidance | 1 | pdf | ok | numbered_para | 21 | Guidelines on Tax Treatment in Relation to Income Received f |
+| my.hasil.wht | my | page | page_deadlines | html | ok | html_section | 3 | Cukai Pegangan |
+| my.hasil.wht-rates | my | page | page_rates | html | ok | whole | 1 | Kadar Cukai Pegangan PPPDK |
+| my.ita1967 | my | law | 1;2;4;9 | pdf | ok | my_section | 2355 | Income Tax Act 1967 (Act 53) |
+| my.ita1967.updated2026.en | my | law | 1;2;4;8;9 | pdf | ok | my_section | 2387 | Income Tax Act 1967 (Act 53), online updated text as at 1 Ja |
+| my.pua148.2025.dividend-income | my | regulation | 1;2 | pdf | ok | my_section | 18 | Income Tax (Determination of Chargeable Income of an Individ |
+| my.pua157.2024.foreign-dividends-amendment | my | regulation | 1;2 | pdf | ok | my_section | 12 | Income Tax (Exemption) (No. 6) Order 2022 (Amendment) Order  |
+| my.pua235.2022.foreign-dividends | my | regulation | 1;2 | pdf | ok | my_section | 24 | Income Tax (Exemption) (No. 6) Order 2022, P.U.(A)235/2022 |
+| my.pua451.2024.individual-fsi-extension | my | regulation | 2 | pdf | ok | my_section | 8 | Income Tax (Exemption) (No. 5) Order 2022 (Amendment) Order  |
 | sg.iras.cor | sg | guidance | 6;8 | html | ok | html_section | 6 | IRAS: Tax residency of a company / Certificate of Residence |
 | sg.iras.cor.apply | sg | guidance | 8 | html | ok | html_section | 12 | IRAS: Applying for a Certificate of Residence / Tax Reclaim  |
 | sg.iras.dta-list | sg | page | page_treaties | html | ok | whole | 1 | IRAS: List of DTAs, Limited DTAs and EOI Arrangements |
@@ -111,6 +181,22 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | th.rd.ruling.0811-6620 | th | guidance | 11 | html | ok | whole | 1 | หนังสือตอบข้อหารือ กค 0811/6620 (เงินเพิ่มตามมาตรา 27) |
 | th.rd10.en | th | regulation | 1 | pdf | ok | th_section | 61 | Royal Decree issued under the Revenue Code Governing Exempti |
 | th.rd442.th | th | regulation | 1 | html | ok | th_section | 7 | พระราชกฤษฎีกาออกตามความในประมวลรัษฎากร ว่าด้วยการยกเว้นรัษฎา |
+| treaty.ae-cn.1993.en | ae-cn | treaty |  | pdf | ok | en_article | 118 | Agreement between China and the United Arab Emirates for the |
+| treaty.ae-cn.1993.mli.en | ae-cn | treaty |  | pdf | ok | en_article | 123 | Synthesised text of the MLI and the China–United Arab Emirat |
+| treaty.ae-hk.2014.en | ae-hk | treaty |  | pdf | ok | page | 1 | Agreement between Hong Kong and the United Arab Emirates for |
+| treaty.ae-hk.2014.mli.en | ae-hk | treaty |  | pdf | ok | en_article | 118 | Synthesised text of the MLI and the Hong Kong–United Arab Em |
+| treaty.ae-id.2019.en | ae-id | treaty |  | pdf | ocr | en_article | 147 | Agreement between Indonesia and the United Arab Emirates for |
+| treaty.ae-in.1992.mli.en | ae-in | treaty |  | pdf | scanned_or_empty | page | 0 | India–United Arab Emirates Double Taxation Agreement |
+| treaty.ae-in.1992.p1.en | ae-in | treaty |  | pdf | ok | en_article | 6 | First Protocol to the India–United Arab Emirates Double Taxa |
+| treaty.ae-in.1992.p2.en | ae-in | treaty |  | pdf | ocr | page | 4 | Second Protocol to the India–United Arab Emirates Double Tax |
+| treaty.ae-jp.2013.convention.mof.en | ae-jp | treaty |  | pdf | ok | en_article | 126 | CONVENTION BETWEEN JAPAN AND THE UNITED ARAB EMIRATES FOR TH |
+| treaty.ae-jp.2013.mli.en | ae-jp | treaty |  | htm | ok | whole | 1 | Application of the MLI to the Tax Treaty between Japan and t |
+| treaty.ae-jp.2013.summary.en | ae-jp | treaty |  | htm | ok | whole | 1 | Key Points of the Tax Convention with the United Arab Emirat |
+| treaty.ae-kr.2019.en | ae-kr | treaty |  | html | ok | en_article | 136 | Convention between the Republic of Korea and the United Arab |
+| treaty.ae-my.1995.en | ae-my | treaty |  | pdf | ocr | en_article | 117 | United Arab Emirates–Malaysia Double Taxation Agreement |
+| treaty.ae-sg.1995.mli.en | ae-sg | treaty |  | pdf | ok | en_article | 171 | Singapore–United Arab Emirates Double Taxation Agreement, as |
+| treaty.ae-th.2000.en | ae-th | treaty |  | pdf | ocr | en_article | 119 | Agreement between the Kingdom of Thailand and the United Ara |
+| treaty.ae-vn.2009.en | ae-vn | treaty |  | pdf | ok | en_article | 124 | Agreement between the United Arab Emirates and the Socialist |
 | treaty.cn-hk.2006.p2.zh | cn-hk | treaty |  | pdf | ok | cn_article | 6 | 内地和香港特别行政区关于对所得避免双重征税和防止偷漏税的安排第二议定书 |
 | treaty.cn-hk.2006.p3.zh | cn-hk | treaty |  | pdf | ok | page | 3 | 《内地和香港特别行政区关于对所得避免双重征税和防止偷漏税的安排》第三议定书 |
 | treaty.cn-hk.2006.p4.zh | cn-hk | treaty |  | pdf | ok | cn_article | 6 | 《内地和香港特别行政区关于对所得避免双重征税和防止偷漏税的安排》第四议定书 |
@@ -162,6 +248,25 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | treaty.hk-th.2005.mli.en | hk-th | treaty |  | pdf | ok | en_article | 124 | Synthesised text of the MLI and the Hong Kong-Thailand DTA ( |
 | treaty.hk-th.2005.notes.en | hk-th | treaty |  | pdf | ok | page | 1 | Note from the Government of Hong Kong to the Government of T |
 | treaty.hk-vn.2008.en | hk-vn | treaty |  | rtf | ok | en_article | 128 | Hong Kong-Viet Nam comprehensive DTA and its 2014 Protocol,  |
+| treaty.id-in.2012.mli.en | id-in | treaty |  | pdf | ok | en_article | 156 | Synthesised text of the Indonesia–India Double Taxation Agre |
+| treaty.id-jp.1982.mli.en | id-jp | treaty |  | pdf | ok | en_article | 126 | Synthesised text of the Indonesia–Japan Double Taxation Agre |
+| treaty.id-kr.1988.mli.en | id-kr | treaty |  | pdf | ok | en_article | 35 | Synthesised text of the Indonesia–Republic of Korea Double T |
+| treaty.id-my.1991.mli.en | id-my | treaty |  | pdf | ok | en_article | 140 | Synthesised text of the Indonesia–Malaysia Double Taxation A |
+| treaty.id-sg.2020.en | id-sg | treaty |  | html | ok | en_article | 34 | Indonesia–Singapore Agreement for the Elimination of Double  |
+| treaty.id-th.2012.mli.en | id-th | treaty |  | html | ok | en_article | 41 | Synthesised text of the Indonesia–Thailand Double Taxation A |
+| treaty.id-vn.1997.mli.en | id-vn | treaty |  | pdf | ok | en_article | 128 | Synthesised text of the Indonesia–Vietnam Double Taxation Ag |
+| treaty.in-jp.1989.en | in-jp | treaty |  | pdf | scanned_or_empty | page | 0 | Convention between the Government of Japan and the Governmen |
+| treaty.in-jp.1989.mli.en | in-jp | treaty |  | pdf | ok | en_article | 134 | Synthesised Text of the MLI and the Convention between Japan |
+| treaty.in-jp.2006.protocol.en | in-jp | treaty |  | pdf | ok | page | 3 | Protocol Amending the Convention between Japan and India for |
+| treaty.in-jp.2015.protocol.en | in-jp | treaty |  | pdf | ok | en_article | 22 | Protocol Amending the Convention between Japan and India for |
+| treaty.in-kr.2015.law | in-kr | treaty |  | html | ok | whole | 1 | Agreement between the Republic of Korea and the Republic of  |
+| treaty.in-my.2012.hasil | in-my | treaty |  | pdf | ok | en_article | 147 | Double Taxation Avoidance Agreement between Malaysia and the |
+| treaty.in-my.2012.mli.hasil | in-my | treaty |  | pdf | ok | en_article | 155 | Synthesised Text: Malaysia-India Double Taxation Avoidance A |
+| treaty.in-sg.1994.en | in-sg | treaty |  | pdf | ok | en_article | 241 | Agreement between the Government of the Republic of Singapor |
+| treaty.in-th.2015.en | in-th | treaty |  | pdf | ocr | en_article | 122 | Convention between the Kingdom of Thailand and the Republic  |
+| treaty.in-th.2015.protocol.en | in-th | treaty |  | pdf | ocr | page | 1 | Protocol to the Convention between the Kingdom of Thailand a |
+| treaty.in-vn.1994.mofa | in-vn | treaty |  | html | ok | whole | 1 | Agreement between Viet Nam and India for the Avoidance of Do |
+| treaty.in-vn.1994.mofa.text | in-vn | treaty |  | pdf | scanned_or_empty | page | 0 | Agreement between Viet Nam and India for the Avoidance of Do |
 | treaty.jp-kr.1998.mli.en | jp-kr | treaty |  | pdf | ok | en_article | 128 | Synthesised text of the MLI and the Japan-Korea convention |
 | treaty.jp-my.1999.mli.en | jp-my | treaty |  | pdf | ok | en_article | 126 | Synthesised text of the MLI and the Japan-Malaysia agreement |
 | treaty.jp-sg.1994.mli.en | jp-sg | treaty |  | pdf | ok | en_article | 134 | Synthesised text of the MLI and the Japan-Singapore agreemen |
@@ -169,6 +274,17 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | treaty.jp-th.1990.mli.en | jp-th | treaty |  | pdf | ok | en_article | 124 | Synthesised text of the MLI and the Japan-Thailand conventio |
 | treaty.jp-vn.1995.mli.en | jp-vn | treaty |  | pdf | ok | en_article | 128 | Synthesised text of the MLI and the Japan-Viet Nam agreement |
 | treaty.jp-vn.1995.notes.en | jp-vn | treaty |  | pdf | ok | page | 5 | Japan-Viet Nam exchange of notes (2014), Japanese and Englis |
+| treaty.kr-my.1982.hasil | kr-my | treaty |  | pdf | ok | en_article | 126 | Double Taxation Avoidance Agreement between Malaysia and the |
+| treaty.kr-my.1982.mli.hasil | kr-my | treaty |  | pdf | ok | en_article | 127 | Synthesised Text: Malaysia-Korea Double Taxation Avoidance A |
+| treaty.kr-sg.2019.iras | kr-sg | treaty |  | pdf | ok | en_article | 248 | Agreement between Singapore and the Republic of Korea for th |
+| treaty.kr-th.2006.rd | kr-th | treaty |  | pdf | scanned_or_empty | page | 0 | Convention between Thailand and the Republic of Korea for th |
+| treaty.kr-vn.1994.mofa | kr-vn | treaty |  | html | ok | whole | 1 | Agreement between Viet Nam and the Republic of Korea for the |
+| treaty.kr-vn.1994.mofa.text | kr-vn | treaty |  | pdf | scanned_or_empty | page | 0 | Agreement between Viet Nam and the Republic of Korea for the |
+| treaty.kr-vn.2019.protocol.mofa | kr-vn | treaty |  | html | ok | whole | 1 | Second Protocol amending the Viet Nam-Korea Double Taxation  |
+| treaty.kr-vn.2019.protocol.mofa.text | kr-vn | treaty |  | pdf | scanned_or_empty | page | 0 | Second Protocol amending the Viet Nam-Korea Double Taxation  |
+| treaty.my-sg.2004.en | my-sg | treaty | 1;2;3;4 | pdf | ok | en_article | 130 | Agreement between the Government of Malaysia and the Governm |
+| treaty.my-th.1982.en | my-th | treaty | 1;2;3;4 | pdf | ok | en_article | 136 | Agreement between the Government of Malaysia and the Governm |
+| treaty.my-vn.1995.en | my-vn | treaty | 1;2;3;4 | pdf | ok | en_article | 123 | Agreement between the Government of Malaysia and the Governm |
 | treaty.sg-th.2015.en | sg-th | treaty |  | pdf | ok | en_article | 235 | Agreement between Singapore and Thailand for the Avoidance o |
 | treaty.sg-vn.1994.en | sg-vn | treaty |  | pdf | ok | en_article | 149 | Agreement between Singapore and Vietnam for the Avoidance of |
 | treaty.th-vn.1992.art01-05.en | th-vn | treaty |  | html | ok | en_article | 20 | Agreement between Thailand and Viet Nam for the Avoidance of |
@@ -177,241 +293,213 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | treaty.th-vn.1992.art16-20.en | th-vn | treaty |  | html | ok | en_article | 11 | Agreement between Thailand and Viet Nam for the Avoidance of |
 | treaty.th-vn.1992.art21-25.en | th-vn | treaty |  | html | ok | en_article | 16 | Agreement between Thailand and Viet Nam for the Avoidance of |
 | treaty.th-vn.1992.art26-28.en | th-vn | treaty |  | html | ok | en_article | 5 | Agreement between Thailand and Viet Nam for the Avoidance of |
+| vn.btc.tax-administration.14-vbhn-2026 | vn | regulation | 7 | pdf | scanned_or_empty | page | 1 | Consolidated Circular 80/2021/TT-BTC on Tax Administration ( |
+| vn.btc.treaty-procedure | vn | regulation | 7;8 | pdf | ok | page | 94 | Văn bản hợp nhất Thông tư hướng dẫn thực hiện Hiệp định thuế |
+| vn.gov.beneficial-owner-criteria | vn | guidance | 5 | htm | ok | html_section | 140 | Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp |
+| vn.gov.pit-withholding-rates | vn | page | 6;page_rates | htm | ok | html_section | 10 | Quy định mới về khấu trừ thuế thu nhập cá nhân |
+| vn.gov.related-party-tax-avoidance | vn | guidance | 4 | htm | ok | html_section | 13 | Tăng cường công tác nghiệp vụ phát hiện, điều tra, xử lý ngh |
+| vn.gov.tax-filing-deadlines | vn | page | page_deadlines | htm | ok | html_section | 10 | Quy định thời hạn nộp hồ sơ khai thuế |
+| vn.law.cit2025.en | vn | law | 1;4;9 | htm | ok | whole | 1 | Law on Corporate Income Tax |
+| vn.law.pit.consolidation112.2026.vi | vn | law | 2 | pdf | ocr | page | 15 | Luật Thuế thu nhập cá nhân — 112/VBHN-VPQH |
+| vn.law.pit2026.vi | vn | law | 2 | pdf | ok | vn_article | 140 | Luật Thuế thu nhập cá nhân số 109/2025/QH15 |
+| vn.mofa.treaty-index | vn | page | page_treaties | html | ok | whole | 1 | Cơ sở dữ liệu Điều ước quốc tế |
 
 ## Errors
 
-None.
+- doc treaty.ae-in.1992.mli.en: no text (scanned_or_empty)
+- doc treaty.in-jp.1989.en: no text (scanned_or_empty)
+- doc treaty.in-vn.1994.mofa.text: no text (scanned_or_empty)
+- doc treaty.kr-th.2006.rd: no text (scanned_or_empty)
+- doc treaty.kr-vn.1994.mofa.text: no text (scanned_or_empty)
+- doc treaty.kr-vn.2019.protocol.mofa.text: no text (scanned_or_empty)
+- doc vn.btc.tax-administration.14-vbhn-2026: no text (scanned_or_empty)
+- param kr.final.company_cit_marginal_rate_band1: cite_id not found: kr.corporate-tax-act.20260701.ko#a55.table1.row1
+- param kr.final.company_cit_marginal_rate_band2: cite_id not found: kr.corporate-tax-act.20260701.ko#a55.table1.row2
+- param kr.final.company_cit_marginal_rate_band3: cite_id not found: kr.corporate-tax-act.20260701.ko#a55.table1.row3
+- param kr.final.company_cit_marginal_rate_band4: cite_id not found: kr.corporate-tax-act.20260701.ko#a55.table1.row4
+- param kr.final.individual_global_income_marginal_rate_band1: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row1
+- param kr.final.individual_global_income_marginal_rate_band2: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row2
+- param kr.final.individual_global_income_marginal_rate_band3: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row3
+- param kr.final.individual_global_income_marginal_rate_band4: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row4
+- param kr.final.individual_global_income_marginal_rate_band5: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row5
+- param kr.final.individual_global_income_marginal_rate_band6: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row6
+- param kr.final.individual_global_income_marginal_rate_band7: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row7
+- param kr.final.individual_global_income_marginal_rate_band8: cite_id not found: kr.income-tax-act.20260701.ko#a55.table1.row8
+- decision ae.absent.cfc: quote not found verbatim in ae.mof.top-up-tax#all (copy it from: python database/tools/find.py --cite ae.mof.top-up-tax#all)
 
 ## Warnings
 
-None.
+- clause kr.income-tax-act.20260701.ko#17.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#17.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#17.4: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#17.5: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#17.6: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#21.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#21.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#21.4: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#21.5: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#37.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#37.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#37.4: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#70.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#70.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#70.4: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#70.5: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#70.6: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#89.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#89.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#95.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#95.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#95.4: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#95.5: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#95.6: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#95.7: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-9.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-10.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-10.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-10.4: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-10.5: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-10.6: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-12.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-13.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-13.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-14.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-14.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-15.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-15.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-15.4: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-15.5: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-15.6: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-16.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-16.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-16.4: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-16.5: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-17.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-17.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-17.4: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#118-18.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#126.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#126.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#126.4: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#126.5: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#126.6: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#127.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#127.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#127.4: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#127.5: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#127.6: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#127.7: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#127.8: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.2: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.3: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.4: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.5: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.6: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.7: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.8: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.9: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.10: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.11: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.12: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.13: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.14: duplicate cite_id, later one dropped
+- clause kr.income-tax-act.20260701.ko#156.15: duplicate cite_id, later one dropped
+- th.outbound_wht.dividend_wht_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.cit_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.progressive_bracket_1_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.progressive_bracket_1_upper cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.progressive_bracket_2_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.progressive_bracket_2_upper cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.progressive_bracket_3_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.progressive_bracket_3_upper cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.progressive_bracket_4_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.progressive_bracket_4_upper cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.progressive_bracket_5_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.progressive_bracket_5_upper cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.progressive_bracket_6_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.progressive_bracket_6_upper cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.final.progressive_bracket_7_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.restructure.gain_tax_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.restructure.resident_gain_tax_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
+- th.restructure.stamp_rate cites th.rc6.stamp.th#all: a law is cited by provision; fix the slicer or record 'th.rc6.stamp.th sliced as whole/page' in session_log.md (§4.3)
+- th.restructure.stamp_base cites th.rc6.stamp.th#all: a law is cited by provision; fix the slicer or record 'th.rc6.stamp.th sliced as whole/page' in session_log.md (§4.3)
+- id.final.cit_rate cites id.tax-law-compilation-2022#p184: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.inbound.foreign_dividend_exempt_if_invested cites id.tax-law-compilation-2022#p133: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- vn.final.cit_rate cites vn.law.cit2025.en#all: a law is cited by provision; fix the slicer or record 'vn.law.cit2025.en sliced as whole/page' in session_log.md (§4.3)
+- vn.inbound.foreign_income_taxable cites vn.law.cit2025.en#all: a law is cited by provision; fix the slicer or record 'vn.law.cit2025.en sliced as whole/page' in session_log.md (§4.3)
+- vn.inbound.foreign_tax_credit_cap cites vn.law.cit2025.en#all: a law is cited by provision; fix the slicer or record 'vn.law.cit2025.en sliced as whole/page' in session_log.md (§4.3)
+- vn.residence.worldwide_tax_scope cites vn.law.cit2025.en#all: a law is cited by provision; fix the slicer or record 'vn.law.cit2025.en sliced as whole/page' in session_log.md (§4.3)
+- ae-jp.outbound_wht.dividend_rate_parent cites treaty.ae-jp.2013.summary.en#all: a treaty is cited by provision; fix the slicer or record 'treaty.ae-jp.2013.summary.en sliced as whole/page' in session_log.md (§4.3)
+- ae-jp.outbound_wht.dividend_rate_other cites treaty.ae-jp.2013.summary.en#all: a treaty is cited by provision; fix the slicer or record 'treaty.ae-jp.2013.summary.en sliced as whole/page' in session_log.md (§4.3)
+- ae-jp.outbound_wht.interest_rate_government cites treaty.ae-jp.2013.summary.en#all: a treaty is cited by provision; fix the slicer or record 'treaty.ae-jp.2013.summary.en sliced as whole/page' in session_log.md (§4.3)
+- ae-jp.outbound_wht.interest_rate cites treaty.ae-jp.2013.summary.en#all: a treaty is cited by provision; fix the slicer or record 'treaty.ae-jp.2013.summary.en sliced as whole/page' in session_log.md (§4.3)
+- ae-jp.outbound_wht.royalty_rate cites treaty.ae-jp.2013.summary.en#all: a treaty is cited by provision; fix the slicer or record 'treaty.ae-jp.2013.summary.en sliced as whole/page' in session_log.md (§4.3)
+- ae-jp.anti_abuse.ppt_applies cites treaty.ae-jp.2013.mli.en#all: a treaty is cited by provision; fix the slicer or record 'treaty.ae-jp.2013.mli.en sliced as whole/page' in session_log.md (§4.3)
+- id.residence.residence_days_threshold cites id.tax-law-compilation-2022#p121: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.residence.residence_test cites id.tax-law-compilation-2022#p121: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.final.individual_top_rate cites id.tax-law-compilation-2022#p184: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.cfc.overseas_dividend_receipt_time cites id.tax-law-compilation-2022#p187: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.anti_abuse.substance_over_form cites id.tax-law-compilation-2022#p189: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- kr.cfc.cfc_reporting_required cites kr.itca.enforcement-decree#p59: a regulation is cited by provision; fix the slicer or record 'kr.itca.enforcement-decree sliced as whole/page' in session_log.md (§4.3)
+- kr.anti_abuse.substance_over_form_principle cites kr.itca.enforcement-decree#p4: a regulation is cited by provision; fix the slicer or record 'kr.itca.enforcement-decree sliced as whole/page' in session_log.md (§4.3)
+- ae.final.in_scope_mne_dmtt_applies cites ae.cabinet142.2024.dmtt.en#p2: a regulation is cited by provision; fix the slicer or record 'ae.cabinet142.2024.dmtt.en sliced as whole/page' in session_log.md (§4.3)
+- vn.absent.3 cites vn.law.cit2025.en#all: a law is cited by provision; fix the slicer or record 'vn.law.cit2025.en sliced as whole/page' in session_log.md (§4.3)
+- vn.absent.cfc cites vn.law.cit2025.en#all: a law is cited by provision; fix the slicer or record 'vn.law.cit2025.en sliced as whole/page' in session_log.md (§4.3)
+- vn.absent.company.outbound_wht cites vn.law.cit2025.en#all: a law is cited by provision; fix the slicer or record 'vn.law.cit2025.en sliced as whole/page' in session_log.md (§4.3)
 
 ## Gaps
 
 Cells of jurisdiction | category with neither a document nor an absence record:
 
-- id|1
-- id|2
-- id|3
-- id|4
-- id|5
-- id|6
-- id|7
-- id|8
-- id|9
 - id|10
-- id|page_treaties
-- id|page_rates
-- id|page_deadlines
-- vn|1
-- vn|2
-- vn|3
-- vn|4
-- vn|5
-- vn|6
-- vn|7
-- vn|8
-- vn|9
 - vn|10
-- vn|page_treaties
-- vn|page_rates
-- vn|page_deadlines
-- my|1
-- my|2
-- my|3
-- my|4
-- my|5
-- my|6
-- my|7
-- my|8
-- my|9
 - my|10
-- my|page_treaties
-- my|page_rates
-- my|page_deadlines
-- ae|1
-- ae|2
-- ae|3
-- ae|4
-- ae|5
-- ae|6
-- ae|7
-- ae|8
-- ae|9
 - ae|10
-- ae|page_treaties
-- ae|page_rates
-- ae|page_deadlines
-- kr|1
-- kr|2
-- kr|3
-- kr|4
-- kr|5
-- kr|6
-- kr|7
-- kr|8
-- kr|9
 - kr|10
-- kr|page_treaties
-- kr|page_rates
-- kr|page_deadlines
-- in|1
-- in|2
-- in|3
-- in|4
-- in|5
-- in|6
-- in|7
-- in|8
-- in|9
 - in|10
-- in|page_treaties
-- in|page_rates
-- in|page_deadlines
 
 Cells of jurisdiction | subject | slot with neither a parameter nor an absence record:
 
-- id|company|outbound_wht
-- id|company|inbound
-- id|company|final
-- id|company|residence
-- id|company|cfc
-- id|company|anti_abuse
 - id|company|penalty
 - id|company|restructure
 - id|company|exit
-- id|individual|outbound_wht
-- id|individual|inbound
-- id|individual|final
-- id|individual|residence
-- id|individual|cfc
-- id|individual|anti_abuse
 - id|individual|penalty
 - id|individual|restructure
 - id|individual|exit
-- vn|company|outbound_wht
-- vn|company|inbound
-- vn|company|final
-- vn|company|residence
-- vn|company|cfc
-- vn|company|anti_abuse
 - vn|company|penalty
 - vn|company|restructure
 - vn|company|exit
-- vn|individual|outbound_wht
-- vn|individual|inbound
-- vn|individual|final
-- vn|individual|residence
-- vn|individual|cfc
-- vn|individual|anti_abuse
 - vn|individual|penalty
 - vn|individual|restructure
 - vn|individual|exit
-- my|company|outbound_wht
-- my|company|inbound
-- my|company|final
-- my|company|residence
-- my|company|cfc
-- my|company|anti_abuse
 - my|company|penalty
 - my|company|restructure
 - my|company|exit
-- my|individual|outbound_wht
-- my|individual|inbound
-- my|individual|final
-- my|individual|residence
-- my|individual|cfc
-- my|individual|anti_abuse
 - my|individual|penalty
 - my|individual|restructure
 - my|individual|exit
-- ae|company|outbound_wht
-- ae|company|inbound
-- ae|company|final
-- ae|company|residence
-- ae|company|cfc
-- ae|company|anti_abuse
 - ae|company|penalty
 - ae|company|restructure
 - ae|company|exit
-- ae|individual|outbound_wht
-- ae|individual|inbound
-- ae|individual|final
-- ae|individual|residence
-- ae|individual|cfc
-- ae|individual|anti_abuse
 - ae|individual|penalty
 - ae|individual|restructure
 - ae|individual|exit
-- kr|company|outbound_wht
-- kr|company|inbound
-- kr|company|final
-- kr|company|residence
-- kr|company|cfc
-- kr|company|anti_abuse
 - kr|company|penalty
 - kr|company|restructure
 - kr|company|exit
-- kr|individual|outbound_wht
-- kr|individual|inbound
-- kr|individual|final
-- kr|individual|residence
-- kr|individual|cfc
-- kr|individual|anti_abuse
 - kr|individual|penalty
 - kr|individual|restructure
 - kr|individual|exit
-- in|company|outbound_wht
-- in|company|inbound
-- in|company|final
-- in|company|residence
-- in|company|cfc
-- in|company|anti_abuse
 - in|company|penalty
 - in|company|restructure
 - in|company|exit
-- in|individual|outbound_wht
-- in|individual|inbound
-- in|individual|final
-- in|individual|residence
-- in|individual|cfc
-- in|individual|anti_abuse
 - in|individual|penalty
 - in|individual|restructure
 - in|individual|exit
 
 Pairs without a treaty row (a row with empty doc_id records "no treaty"):
 
-- ae-cn
-- ae-hk
-- ae-id
-- ae-in
-- ae-jp
-- ae-kr
-- ae-my
-- ae-sg
-- ae-th
-- ae-vn
-- id-in
-- id-jp
-- id-kr
-- id-my
-- id-sg
-- id-th
-- id-vn
-- in-jp
-- in-kr
-- in-my
-- in-sg
-- in-th
-- in-vn
-- kr-my
-- kr-sg
-- kr-th
-- kr-vn
-- my-sg
-- my-th
-- my-vn
+None.
 
 Downloads in blocked.csv not yet in doc.csv:
 

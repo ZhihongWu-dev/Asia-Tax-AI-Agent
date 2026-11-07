@@ -9,7 +9,7 @@ Written by `rule/tools/build.py` at every build; do not edit.
 | Interpretation decisions (rows) | 27 |
 | Golden tests (passed / total) | 532 / 532 |
 | Errors | 0 |
-| Coverage gaps (jurisdiction, subject, slot) | 102 |
+| Coverage gaps (jurisdiction, subject, slot) | 92 |
 | Conditioned rules without a T, F and U test | 0 |
 
 ## Rules by jurisdiction
@@ -57,11 +57,9 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - id|individual|penalty
 - id|individual|restructure
 - id|individual|exit
-- vn|company|outbound_wht
 - vn|company|inbound
 - vn|company|final
 - vn|company|residence
-- vn|company|cfc
 - vn|company|anti_abuse
 - vn|company|penalty
 - vn|company|restructure
@@ -69,8 +67,6 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - vn|individual|inbound
 - vn|individual|final
 - vn|individual|residence
-- vn|individual|cfc
-- vn|individual|anti_abuse
 - vn|individual|penalty
 - vn|individual|restructure
 - vn|individual|exit
@@ -78,7 +74,6 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - my|company|inbound
 - my|company|final
 - my|company|residence
-- my|company|cfc
 - my|company|anti_abuse
 - my|company|penalty
 - my|company|restructure
@@ -86,7 +81,6 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - my|individual|inbound
 - my|individual|final
 - my|individual|residence
-- my|individual|cfc
 - my|individual|anti_abuse
 - my|individual|penalty
 - my|individual|restructure
@@ -95,7 +89,6 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - ae|company|inbound
 - ae|company|final
 - ae|company|residence
-- ae|company|cfc
 - ae|company|anti_abuse
 - ae|company|penalty
 - ae|company|restructure
@@ -103,7 +96,6 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - ae|individual|inbound
 - ae|individual|final
 - ae|individual|residence
-- ae|individual|cfc
 - ae|individual|anti_abuse
 - ae|individual|penalty
 - ae|individual|restructure
@@ -129,7 +121,6 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - in|company|inbound
 - in|company|final
 - in|company|residence
-- in|company|cfc
 - in|company|anti_abuse
 - in|company|penalty
 - in|company|restructure
@@ -137,7 +128,6 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - in|individual|inbound
 - in|individual|final
 - in|individual|residence
-- in|individual|cfc
 - in|individual|anti_abuse
 - in|individual|penalty
 - in|individual|restructure

@@ -1,0 +1,3175 @@
+- 1 - 
+ 
+ 
+ 
+                                                         
+ADDITIONS / AMENDMENTS 
+Item 
+Subject 
+Page 
+B2 
+Statutory income from dividends 
+5 
+B11a 
+Statutory income from dividends reported by husband/wife 
+8 
+B11b 
+Aggregate income reported by husband/wife 
+8 
+G2 
+Expenses for parents or grandparents  
+17 
+G4 
+Disabled individual 
+17 
+G7(i) 
+Complete medical examination or payment of fees for disease 
+detection test for self, spouse or child  
+19 
+G7(ii) 
+Purchase of self-testing medical device registered under the 
+Medical Device Act 2012 for self, spouse or child 
+20 
+G10 
+Lifestyle - Additional expenses for the use / benefit of self, 
+spouse or child or parent 
+22 
+G15 
+Disabled husband / wife 
+26 
+G16c 
+Child - Disabled child 
+27 
+G21 
+Purchase of a food waste composting machine for household use 
+31 
+G22 
+Interest expended for the purchase of the first residential property 
+31 
+
+- 2 - 
+ 
+   
+BASIC PARTICULARS 
+1 - 4 
+Fill in relevant information only.   
+For the item ‘Tax Identification Number (TIN)’, enter TIN in the box provided. 
+ 
+Example:    For example TIN IG 102345670800 
+ 
+Tax Identification No. (TIN)  
+ 
+For the item ‘Identification no.’, enter the MyKad / new identity card / police / army number. 
+5 
+Passport no. registered 
+with LHDNM 
+Enter the last passport number filed with LHDNM prior to the current passport. 
+ 
+PART A: 
+PARTICULARS OF INDIVIDUAL 
+A1 
+ 
+Citizen                         
+Enter ‘MYS’ for citizen of Malaysia. If not a citizen of Malaysia, please refer to 
+the country code provided on page 36 of this explanatory notes or Appendix E. 
+A2 
+Gender  
+Enter ‘1’ for male or ‘2’ for female. 
+A3 
+Date of birth 
+Enter the date of birth according to the sequence: day, month and year. 
+A4 
+ 
+Status as at                   
+31-12-2025 
+Enter ‘1’ for single; ‘2’ for married; ‘3’ for divorcee / widow / widower or ‘4’ for 
+deceased. 
+A5 
+Date of marriage / 
+divorce / demise 
+If the marriage / separation in accordance with any law or demise occurred in 
+the current year, enter the date according to the sequence: day, month and 
+year. 
+This Explanatory Notes is provided to assist an individual who is resident in Malaysia in accordance with the 
+provision of section 7 of Income Tax Act 1967 (ITA 1967) or deemed to be resident under subsection 7(1B) 
+of the same Act, in completing the Form BE for Year of Assessment 2025. Please read this with care so that 
+the return form and declarations made therein for Year of Assessment 2025 are true, complete and correct.  
+In the case of a married individual who elects for joint assessment either in the name of husband or wife, and 
+has total income to be aggregated, both the husband and wife are each required to fill out separately whether: 
+(a) Form B ( resident individual who carries on business); or 
+(b) Form BT (resident individual who approved by the Minister as a knowledge worker / expert worker / non-
+citizen worker holding key position); or 
+(c) Form BE (resident individual who does not carry on business)  
+Working sheets, appendices and other information to complete Form BE are available at the LHDNM Official 
+Portal: https://www.hasil.gov.my > Forms > Download Forms > Individual > Computation Guide & Other 
+Information. 
+All records, working sheets and documents need not be enclosed when submitting the Form BE EXCEPT for 
+the purpose of tax refund, in which case the following working sheet(s) is / are required to be submitted: 
+(i) 
+Working Sheet HK-6 pertaining to the claim for section 110 tax deduction (others); and 
+(ii) 
+Working Sheet HK-8 / HK-9 (if relevant) relating to the tax deducted in the foreign country. 
+All records, documents and working sheets used in the computation must be kept for a period of seven (7) 
+years after the end of the year in which the return form is furnished to the Director General of Inland Revenue, 
+for future reference and inspection if required. 
+Please complete all relevant items in BLOCK LETTERS and use black ink pen. Leave the item(s) blank if not 
+applicable.  
+IG 102345670800 
+
+- 3 - 
+ 
+A6 
+Type of assessment 
+Enter:  
+(i) ‘1’ if the wife elects for joint assessment to be raised in the name of the 
+husband. She does not have to fill in items B11 to B28 and Part G of her 
+Form BE; or 
+(ii) ‘2’ if the husband elects for joint assessment to be raised in the name of 
+his wife. He does not have to fill in items B11 to B28 and Part G of his 
+Form BE; or 
+(iii) ‘3’ if the individual and spouse elect for separate assessment; or 
+(iv) ‘4’ if the individual is married with a spouse who has no income or no 
+source of income or has income which is tax exempt.  
+(v) ‘5’ if the individual is single / a divorcee / a widow / a widower / a deceased 
+person. 
+Note: 
+Conditions on eligibility to elect for joint assessment: 
+(i) The husband and wife were living together in the basis year for a year of 
+assessment and did not in that basis year cease to live together; 
+(ii) Has total income to be aggregated with the total income of the spouse; 
+(iii) The husband / wife who elects for joint assessment must be a Malaysian 
+citizen, if not resident in Malaysia; 
+(iv) The aggregation of total income can be made with one wife only.  
+ 
+PART BA: 
+COMPUTATION OF CHARGEABLE INCOME 
+B1 
+Statutory income from sources of employment in Malaysia 
+B1a 
+Number of 
+employments 
+This item has to be completed if there is statutory income from sources of 
+employment in Malaysia. 
+ 
+ 
+ 
+No. 
+Example 
+Number of 
+Employment(s) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1. 
+Mr. Adi received payment of director’s fees from Mas 
+Sdn. Bhd. and Dinar Sdn. Bhd. in the year 2025. 
+2 
+ 
+ 
+ 
+ 
+2. 
+Mr. Sami worked for the following employers during 
+the year 2025:- 
+(i) GHI Sdn. Bhd. : January 2025 – April 2025 
+(ii) HIL Sdn. Bhd.  : May 2025 – November 2025 
+(iii) GHI Sdn. Bhd. : December 2025 
+3 
+ 
+ 
+ 
+ 
+3. 
+Mrs. Edith who works for  MDP Holdings Bhd., was 
+seconded to MDP Technology Sdn. Bhd. (within the 
+same group of companies) from 1 June 2025 until 30 
+September 2025. Her salary from June until 
+September 2025 was paid by  MDP Holdings Bhd. 
+(i) MDP Holdings Bhd. : January 2025 – May 2025 
+(ii) MDP Technology Sdn. Bhd. : June 2025 – 
+September 2025 
+(iii) MDP Holdings Bhd. : October 2025 – December 
+2025 
+1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 4 - 
+ 
+Salary, bonus, director’s fee, commission and any perquisite [such as share option scheme (Public Ruling No. 
+11/2012) [Original and amended], insurance premium / school and tuition fee paid by the employer] have to be 
+declared. Entertainment and travelling expenditure incurred in the production of gross employment income and 
+discharge of official duties are allowable deductions. Deduction of entertainment expenditure is restricted to the 
+amount of entertainment allowance included as gross income from employment. However, reimbursements by 
+the employer in respect of both types of expenditure are neither deductible nor liable to tax.  
+Amount N4 from Working Sheet HK-2. 
+Note: 
+With effect from the Year of Assessment 2016, where gross income from an employment is receivable in respect 
+of any particular period, it shall, when received, be taxed in the year in which it is received [Subsection 25(1) of 
+ITA 1967]. 
+Tax exempt allowances / perquisites / gifts / benefits: 
+Reference:   Public Ruling No. 5/2019 (Perquisites From Employment); and 
+Public Ruling No. 11/2019 (Benefits-In-Kind) 
+ 
+Gratuity (Reference: Public Ruling No. 9/2016) 
+This refers to a sum received upon retirement / termination of a contract of employment and considered as a 
+gift for past service. Refer to Working Sheet HK-2.2 and Appendix B1 for computation. 
+1. The following gratuity is exempted from income tax: 
+(i) 
+Retirement gratuity 
+(a) The Director General is satisfied that the retirement is due to ill-health; or 
+(b) The retirement takes place on or after reaching the age of 55, or on reaching the compulsory age of 
+retirement from employment and the individual has worked 10 years continuous employment with 
+the same employer or companies within the same group; or 
+(c) The retirement takes place on reaching the compulsory age of retirement pursuant to a contract of 
+employment or collective agreement at the age of 50 but before 55 and that employment has lasted 
+for 10 years with the same employer or with companies in the same group. 
+(ii) Gratuity paid out of public funds – Gratuity paid to an employee out of public funds on his retirement 
+from an employment under any written law. 
+(iii) Gratuity paid to a contract officer – Gratuity paid out of public funds to a contract officer on termination 
+of a contract of employment regardless of whether the contract is renewed or not. 
+(iv)  Death gratuity – Sums received by way of death gratuity. 
+2. Partial exemption on gratuity 
+With effect from the Year of Assessment 2016, an employee who receives sums by way of gratuity: 
+(i) on retirement from an employment; or 
+(ii) upon termination of a contract of employment 
+other than gratuity qualified for exemption under paragraph 1 above, is eligible for an exemption of RM1,000 
+for each completed year of service. However, for the purpose of computing partial exemption, the period 
+of employment with other companies within the same group is NOT REGARDED as a period of employment 
+with the same employer.  
+Tax Allowance  
+The income tax of an employee borne by his employer is Tax Allowance which is chargeable to tax under the 
+provision paragraph 13(1)(a) of ITA 1967. Refer to the Working Sheet HK-2.3 and Appendix B2, as well as 
+Public Ruling No. 3/2024 regarding computation. 
+
+- 5 - 
+ 
+Subscriptions To Professional Bodies – Membership subscription paid to professional bodies to ensure 
+the continuance of a professional standing for practice such as medical or legal professional fees, can be 
+claimed as a deduction. 
+Benefits In Kind (BIK)  
+Annual value of the benefits in kind provided by the employer such as motorcars, petrol, driver, household 
+furnishings, apparatus and appliances, hand phones, asset(s) provided for the purpose of entertainment and 
+recreation.  
+Refer to the Working Sheet HK-2.4 and Appendix B3, and Public Ruling No. 11/2019 on computation. 
+Value Of Living Accommodation  
+Value of living accommodation provided in Malaysia by the employer. Working Sheet HK-2.5 and Appendix B4, 
+as well as Public Ruling No. 3/2005 (Original and Addendum) regarding computation. 
+Refund From Unapproved Pension Or Provident Fund, Scheme Or Society  
+Contributions made by an employer to an unapproved pension or provident fund from which payment is made 
+to his employee before or after the cessation of his employment. Refer to the Working Sheet HK-2.6 on 
+computation.  
+Compensation For Loss Of Employment  
+Payment made by an employer to his employee as compensation for loss of employment or other reason. Refer 
+to the Working Sheet HK-2.7 and Appendix B5, and Public Ruling No. 1/2012 regarding computation.  
+Full or partial exemption on compensation for loss of employment: 
+(i) Full exemption – If the Director General is satisfied that the payment is made on account of loss of 
+employment due to ill health; or 
+(ii) Partial exemption – For termination of employment on or after 1 July 2008, compensation other than 
+paragraph (i) above is eligible for exemption of RM10,000 for each completed year of service with the 
+same employer or companies within the same group.  
+B2 
+Statutory income from 
+sources of dividends in 
+Malaysia 
+The imposition of this tax is known as Dividend Tax. The scope of the 
+imposition of Dividend Tax is as follows: 
+(i) 
+Dividend income received by individual shareholders from income paid, 
+credited or distributed from company profits covering listed shares and 
+unlisted shares in Malaysia. Dividend income includes payments in 
+monetary or other forms;  
+(ii) 
+Individual shareholders consist of resident and non-resident individuals; 
+and  
+(iii) 
+Individuals who hold shares through nomination. The imposition of tax 
+on individuals for dividend income exceeding RM100,000 is at a rate of 
+2% on taxable income related to dividend income under Part XXII 
+Schedule 1 of the ITA. 
+The determination of the taxable income of this dividend is based on the 
+Income Tax Rules (Determination of Individual Taxable Income Regarding 
+Dividends) 2025 [P.U. (A) 148/2025] which was gazetted on 7 May 2025.   
+Example: 
+Mr. Razif, a resident in Malaysia, received a dividend distribution from his 
+shareholding in Syarikat Harmoni Sdn Bhd, a controlled company, amounting 
+to RM2,500,000 in the year 2025. 
+The dividend income received by Mr. Razif is subject to Dividend Tax because 
+it exceeds the RM100,000 threshold set.  The amount of RM100,000 should 
+be deducted from the dividend statutory income. 
+Therefore, the dividend statutory income to be reported by Mr. Razif for the 
+year of assessment 2025 is RM2,400,000. 
+
+- 6 - 
+ 
+B3 
+Rents from sources in 
+Malaysia 
+Rental received in respect of houses, shop houses, land, plant, machines, 
+furniture and other similar assets.  
+B4 
+Interest from sources 
+in Malaysia 
+Income in respect of interest received by individual’s resident in Malaysia from 
+money deposited with the following institutions is tax exempt: 
+(i) A bank or a finance company licensed or deemed to be licensed under 
+the Financial Services Act 2013; 
+(ii) A bank licensed under the Islamic Financial Services Act 2013; 
+(iii) A development financial institution prescribed under the Development 
+Financial Institutions Act 2002; 
+(iv) The Lembaga Tabung Haji established under the Tabung Haji Act 1995; 
+(v) The Malaysia Building Society Berhad incorporated under the Companies 
+Act 2016; 
+(vi) The Borneo Housing Finance Berhad incorporated under the Companies 
+Act 2016; and 
+(vii) Co-operative societies registered under the Co-operative Societies Act 
+1993. 
+ 
+Discounts from 
+sources in Malaysia 
+Earnings from discounting transactions involving treasury bills, bills of 
+exchange or promissory notes.  
+ 
+Royalties from sources 
+in Malaysia 
+Royalties received in respect of the use of copyrights / patents are taxable if 
+they exceed the following exemption limits: 
+No. Type of Royalty 
+Exemption (RM) 
+(i) 
+Publication of artistic works / recording discs / tapes 
+10,000 
+(ii) 
+Translation of books / literary works  
+12,000 
+(iii) 
+Publication of literary works / original paintings / 
+musical compositions 
+20,000 
+Amount H from Working Sheet HK-5. 
+Pensions from sources 
+in Malaysia 
+ 
+(i) Pension derived from Malaysia and paid by the Government or from an 
+approved pension scheme to a person on reaching the age of 55 years or 
+compulsory age of retirement under any written law or if the retirement is 
+due to ill-health, are exempt from tax. 
+(ii) Where a person is paid more than one pension, only the higher or highest 
+pension is exempt from tax. Other pensions have to be reported. 
+Annuities from sources 
+in Malaysia 
+ 
+These are sums of money received in accordance with a will or an investment 
+of money entitling the annuitants or investors to a series of annual payments, 
+whether or not received regularly or for a limited period only.  
+ 
+Periodical payments 
+from sources in 
+Malaysia 
+These refer to recurring payments received at fixed times. 
+ 
+ 
+Other gains or profits 
+from sources in 
+Malaysia 
+Other income such as payments received for part-time / occasional 
+broadcasting, lecturing, writing and so forth.  
+
+- 7 - 
+ 
+ 
+Additions pursuant to 
+paragraph 43(1)(c) 
+from sources in 
+Malaysia 
+ 
+The following earnings / proceeds are deemed income and must be 
+considered as aggregate income.  
+(i) Earnings / proceeds in relation to expenditure on prospecting operations 
+under Schedule 4 of ITA 1967. 
+(ii) These earnings / proceeds are considered in the tax computation if claims 
+for such expenditure have previously been made. 
+(iii) Refer to paragraph 43(1)(c) and paragraph 16 Schedule 4 of ITA 1967 for 
+computing the amount of income to be included as aggregate income. 
+(iv) Computations must be properly kept for examination. 
+B5 
+Aggregate of other 
+statutory income from 
+sources outside 
+Malaysia  
+This item has to be completed by individual resident that received  other 
+statutory income from sources outside Malaysia received in Malaysia that 
+including employment, dividend, interest, discount, rent, royalty, premium 
+and other income. 
+Please fill in the necessary information required in Part E 
+B7 
+Approved investment 
+under angel investor 
+tax incentive 
+(i) Angel Investor 
+A tax incentive for investment made by a qualified angel investor in a 
+qualified investee company. The amount of aggregate income exempted 
+is an amount equal to the amount of investment made by the angel 
+investor in the investee company. The exemption is granted subject to the 
+conditions specified by the Minister in the approval letter for the 
+investment, which include the following: 
+ 
+(a) the investment must not be disposed of (fully or in part) within two (2) 
+years from the date the investment is made; and 
+(b) the amount of investment made per annum must not be less than 
+RM5,000 and not more than RM500,000. 
+Application to make an investment in an investee company is made on or 
+after 1 January 2013 but not later than 31 December 2023 for the approval 
+of the Minister of Finance. 
+Refer to the Income Tax (Exemption) (No. 3) 2014 [P.U. (A) 167/2014], 
+Income Tax (Exemption) (Amendment) 2019 [P.U. (A) 399/2019] and 
+Public Ruling No. 12/2020 for further information. 
+Amount in B7 is restricted to the amount in B6 (restricted to RM500,000). 
+If the amount in B7 exceeds the amount in B6, enter the amount as per B6 
+in this item. 
+ 
+OR  
+ 
+(ii) Equity Crowdfunding 
+Tax incentive for an investment made by an individual resident in an 
+investee company on or after 1 January 2021 but not later than 31 
+December 2026 and made an investment in the form of holding shares 
+which are paid in cash to the investee company through an equity 
+crowdfunding platform or through nominee limited liability partnership or 
+nominee company.  The exemption granted is subject to terms that stated 
+in  P.U.(A)367/2024 which includes the following: 
+
+- 8 - 
+ 
+ 
+ 
+ 
+(a) The investment is not disposed of (in full or in part) within two (2) years 
+from the date the investment is made; and 
+(b) an amount equal to fifty per cent of the amount of investment made 
+by the qualifying individual and shall not exceed fifty thousand ringgit 
+for each year of assessment; and  
+(c) limited to ten per cent of the aggregate income of the qualifying 
+individual in the basis period for a year of assessment in which the 
+exemption is granted.  
+Refer to the Income Tax (Exemption) (No. 4) 2022 [P.U. (A) 142/2022], 
+Income Tax (Exemption) (No. 4) 2022 (Amendment) 2024 [P.U. (A) 
+367/2024] and Public Ruling No. 12/2020 for further information. 
+Amount in B7 is restricted to 50% of the amount of investment (Not exceed 
+RM50,000) and 10% of  B6. 
+B9 
+Approved donations / 
+gifts / contributions  
+Transfer the amount from item F8, if any. 
+Refer to Public Ruling No. 7/2025. 
+Receipts and supporting documents must be kept for a period of seven (7) 
+years after the end of the year in which the return form is furnished to LHDNM, 
+for future reference and inspection if required. 
+B11 
+TOTAL INCOME 
+TRANSFERRED 
+FROM HUSBAND / 
+WIFE* FOR JOINT 
+ASSESSMENT 
+* Type of income 
+transferred from 
+HUSBAND / WIFE 
+ITEMS B11 AND B12 ARE ONLY TO BE FILLED IN BY THE INDIVIDUAL IN 
+WHOSE NAME THE JOINT ASSESSMENT IS TO BE RAISED. 
+Transfer the total income of the spouse to be aggregated with the total income 
+of the individual to this item.  
+Note:  Enter ‘1’ if the income transferred from the spouse includes income 
+carries on business or ‘2’ if, does not carry on business. 
+Items B11 and B12 NEED NOT be filled if: 
+(i) 
+the individual’s status is single / a divorcee / a widow / a widower 
+(ii) the spouse of the individual has no income, no source of income or has 
+income which is tax exempt  
+(iii) the individual elects for separate assessment 
+(iv) the individual elects for joint assessment to be raised in the name of his 
+/ her spouse 
+B11a 
+Statutory income from 
+sources of dividends 
+in Malaysia reported 
+by husband / wife 
+For the purpose of calculating Dividend Tax, enter the statutory income from 
+sources of dividends in Malaysia reported by the husband / wife in the related 
+return form for joint assessment 
+B11b 
+Aggregate income 
+reported by husband / 
+wife 
+For the purposes of calculating Dividend Tax, enter the aggregate income 
+reported by the husband / wife in the related return form for joint assessment 
+B13 
+Total relief 
+Transfer the amount from item G22. 
+B14 
+CHARGEABLE 
+INCOME 
+Amount (B10 minus B13) or (B12 minus B13). 
+ 
+ 
+ 
+ 
+
+- 9 - 
+ 
+PART BB 
+COMPUTATION OF INCOME TAX 
+B15 
+Chargeable Income is 
+subject to Part XXII of 
+Schedule 1 
+Where an individual resident has income other than dividends in the basis 
+period, an adjustment must be made to separate the total chargeable income 
+from dividends and chargeable income from other sources based on the 
+following formula:   
+   
+A Statutory Income in respect of dividend in the basis period for year of  
+assessment 2025  
+B Aggregate income in the basis period for Year of Assessment 2025 
+C   Chargeable income in the basis year for Year of Assessment 2025 
+which is subject to tax as specified in the paragraph 1 of Part I and Part 
+XXII of Schedule 1 
+B16 
+Income tax computation 
+in respect of Chargeable 
+Income subject to Part 
+XXII of Schedule 1 
+Chargeable income in B15 will be taxed at a rate of 2% 
+B17 
+Income tax computation 
+in respect of Chargeable 
+Income subject to Part I 
+of Schedule 1 
+Amount B14 minus B15 
+B17a 
+Tax on the first 
+Match the chargeable income from item B17 with the range of chargeable 
+income in the Tax Schedule on page 36 of this explanatory note. 
+B17b 
+Tax on the balance 
+B18 
+Income Tax 
+Example: 
+Chargeable income in B17     
+ 
+Tax on the first RM35,000   
+Tax on the balance RM10,500 @ 6%                                
+Total income tax                                         
+45,500 
+ 
+600.00 
+630.00 
+1,230.00 
+ 
+Enter in items B17a dan B17b of the Form BE as shown below: 
+  
+  
+ 
+B17a Tax on the first 
+35,000 .00 
+ 
+B17a 
+600 .00 
+B17b Tax on the balance 
+10,500 .00 
+At rate 
+6 
+% 
+B17b 
+630 .00 
+B18 Income Tax ( B17a + B17b ) 
+B18 
+1,230 .00 
+B19 
+TOTAL INCOME TAX 
+Amount B16 plus B18 
+ 
+PART BC 
+COMPUTATION OF TAX PAYABLE / REPAYABLE 
+B21 
+Total rebate 
+ 
+ 
+ 
+Self 
+A rebate of RM400 is granted to an individual whose chargeable income 
+does not exceed RM35,000.  
+Paragraph 6A(2)(a) of ITA 1967. 
+ 
+Husband and wife 
+ 
+A rebate of RM400 is granted to an individual whose chargeable income 
+does not exceed RM35,000 and where he / she has been allowed a 
+deduction of RM4,000 for the spouse.  
+Paragraph 6A(2)(b) / Paragraph 6A(2)(c) of ITA 1967. 
+Use Category D 
+of Tax Schedule 
+to compute 
+
+- 10 - 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Departure levy for 
+umrah travel / religious 
+travel for other religions 
+This tax rebate is granted to any individual who leaves Malaysia by air for 
+the purpose of performing umrah or other religious pilgrimage but NOT for 
+the purpose of performing hajj. 
+The rebate granted is equivalent to the amount of departure levy paid but 
+the claim is limited to two (2) trips in a lifetime. 
+Eligibility to claim shall be evidenced by the following documents: 
+(i) the boarding pass; and 
+(ii) in the case of: 
+• 
+umrah - a copy of the visa issued by the embassy of the Kingdom of 
+Saudi Arabia 
+• 
+any other religious pilgrimage - A written verification by a religious 
+body recognised by the Committee for the Promotion of Inter 
+Religious 
+Understanding 
+and 
+Harmony 
+Among 
+Adherents, 
+Department of National Unity and Integration in the Prime Minister’s 
+Department. 
+ 
+ 
+ 
+Country / Class 
+ASEAN countries 
+Other than  
+ASEAN countries 
+Economy 
+class 
+Other than 
+economy class 
+Economy 
+class 
+Other than 
+economy class 
+Rate of depature levy 
+RM8 
+RM50 
+RM20 
+RM150 
+Note: ‘ASEAN countries’ means Brunei Darussalam, the Kingdom of Cambodia, 
+Republic of Indonesia, Lao People’s Democratic Republic, Union of Myanmar, 
+Republic of the Philippines, Republic of Singapore, Kingdom of Thailand or 
+Socialist Republic of Vietnam. 
+ 
+Departure Levy (Rate of Departure Levy) Order 2019 [P.U. (A) 213/2019] 
+and subsection 6A(2A) of ITA 1967. 
+ 
+For the following types of assessment: 
+a) joint assessment; 
+b) separate assessment; or 
+c) assessment on self whose spouse has no income, no source of 
+income or no total income 
+The individual in whose name the assessment is raised, is: 
+• eligible to claim for the amount of departure levy paid on own self travel. 
+• NOT eligible to claim if the depature levy is paid for the behalf of spouse, 
+family member or other party. 
+• NOT eligible to claim if the depature levy for own travel is paid by other 
+party. 
+  
+ 
+Zakat and fitrah 
+Payment of obligatory zakat and fitrah in the basis year.  
+Subsection 6A(3) of ITA 1967. 
+ 
+B23 
+ 
+ 
+ 
+ 
+Tax deduction under 
+section 110 (others) 
+ 
+Compute the tax deducted under section 110 by using Working Sheet HK-6 
+in respect of other income such as interest, royalties, section 4A income and 
+income from a trust.  
+Section 110 tax deduction (others) does NOT include withholding tax 
+payment pursuant to Section 107A of ITA 1967. 
+Please submit Working Sheet HK-6 if entitled to a tax refund.  
+Amount B from Working Sheet HK-6. 
+
+- 11 - 
+ 
+B24 
+Section 132 tax relief 
+ 
+Tax relief in respect of income as follows: 
+(i) Income from sources in Malaysia brought into Malaysia  
+(ii) Income from sources outside Malaysia received in Malaysia by resident 
+and the income has been taxed in the country of origin that entered into 
+Avoidance of Double Taxation Agreements (DTA) with Malaysia.  
+Refer to Appendix F for the list of countries which have DTA with Malaysia. 
+Refer to the provisions of Schedule 7 of ITA 1967, Public Ruling No. 11/2021 
+and Guidelines On Tax Treatment In Relation To Income Received From 
+Abroad (Amendment) [LHDN.AG.600-1/7/3]. 
+Use Working Sheet HK-8 to compute the amount of credit. 
+If the tax credit claimed for a year of assessment exceeds the Malaysian tax 
+payable on income from outside Malaysia received in Malaysia, the excess 
+tax credit shall be disregarded. 
+ 
+Section 133 tax relief 
+ 
+Tax relief in respect of income as follows: 
+(i) Income from sources in Malaysia brought into Malaysia  
+(ii) Income from sources outside Malaysia received in Malaysia by resident 
+and the income has been taxed in the country of origin which does NOT have 
+Avoidance of Double Taxation Agreements (DTA) with Malaysia. 
+Refer to the provisions of Schedule 7 of ITA 1967, Public Ruling No. 11/2021 
+and Guidelines On Tax Treatment In Relation To Income Received From 
+Abroad (Amendment) [LHDN.AG.600-1/7/3]. 
+Use Working Sheet HK-9 to compute the amount of credit. 
+If the tax credit claimed for a year of assessment exceeds the Malaysian tax 
+payable on income from outside Malaysia received in Malaysia, the excess 
+tax credit shall be disregarded. 
+B25 
+TAX PAYABLE 
+ 
+B22 minus total amount of B23 plus B24.  
+If the total amount of B23 plus B24 exceeds the amount in B22, enter ‘0’ in this 
+box. 
+B26 
+TAX REPAYABLE 
+Total amount of B23 plus B24 minus B22. 
+B27 
+Payment made for 2025 
+income – SELF and 
+HUSBAND / WIFE for 
+joint assessment  
+Monthly Tax Deductions (MTD) 
+Enter the deductions amount made by the employer in the year 2025 in 
+respect of the following income in this item: 
+(i) 
+Income for the year 2025;  
+(ii) Employment income of preceding years (including bonus, director’s fee, 
+arrears, etc.) paid in the year 2025; and 
+(iii) Employment income in respect of other year(s) paid in advance in the 
+year 2025. 
+Example: Salary for the month of January 2026 paid in December 2025  
+                 and MTD is paid on or before 15 January 2026.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Section 107D  
+Enter the total amount of the tax deduction of 2% made by the payer 
+company for each cash payment to agents, dealers or distributors for the 
+year 2025 in this item.  
+
+- 12 - 
+ 
+ 
+ 
+Refer LHDNM Official Portal, https://www.hasil.gov.my > Legislation > 
+Budget > 2022 > Soalan Lazim Berkaitan Potongan Cukai 2% Terhadap 
+Pembayaran Oleh Syarikat Pembayar Kepada Ejen, Pengedar atau 
+Pengagih. 
+Refer to the Media Statement dated 27 June 2023 on LHNDM Official Portal, 
+https://www.hasil.gov.my/kenyataatan-media/ 
+ 
+Self-Instalments / CP500  
+Enter the amount of self-payment / instalments of CP500 (Notice of 
+Installment Payment Under Section 107B Income Tax Act 1967) that has 
+been made by the taxpayer for the year of assessment 2025 only into this 
+item. 
+This does not include payments made in respect of outstanding tax for 
+previous years of assessment. 
+Use Working Sheet HK-10 for computation. Transfer amount E of Working 
+Sheet HK-10 to this item. 
+For joint assessment – Total up the MTD or self-payment / installment of 
+CP500 paid by the husband / wife for entry in this item. 
+B28 
+ 
+ 
+Balance of tax payable  
+B25 minus B27. 
+The balance of tax payable must be paid within the stipulated period.  
+(i) LHDNM has switched to using the Bill Number as the mandatory 
+reference number for payment of tax or balance of tax payable. The Bill 
+Number can be obtained through the following methods: 
+(a) E-Filing Acknowledgement Receipt for submission via e-Filing. 
+(b) Display Tax Bill and Payment Slip or scan the QR code on the 
+payment slip on the MyTax portal at https://mytax.hasil.gov.my > 
+ezHasil Services > e-Billing 
+(c) Printed on Notice of Assessment and letter of demands from 
+LHDNM 
+(ii) Payment using Bill Number can be made as follows: 
+(a) ByrHASiL service at https://byrhasil.hasil.gov.my 
+(b) Appointed commercial banks by LHDNM – Information is available 
+at https://www.hasil.gov.my. 
+(c) Virtual Account number (VA) generated through e-TT at 
+https://ett.hasil.gov.my. 
+(d) Using debit or credit cards at the counter of the Kuala Lumpur 
+Revenue Management Centre. This service only involves credit 
+cards / debit cards issued in Malaysia only. 
+(e) Pos Malaysia Berhad counter 
+(iii) Please make sure the correct bill number is used. 
+Tax paid in excess 
+B27 minus B25. 
+Enter ‘X’ in the box provided for tax paid in excess. 
+PART C: 
+PARTICULARS OF HUSBAND / WIFE 
+C1  
+  – 
+C4 
+Fill in relevant information only. Where there is more than one wife, please furnish the information as 
+per format C1 to C4 by using attachment(s) and submit together with the Form BE. 
+ 
+ 
+
+- 13 - 
+ 
+PART D: 
+OTHER PARTICULARS 
+D1 
+Telephone no. 
+ 
+Telephone number of office / tax agent’s firm / residence. Please ensure that 
+the information is correct and accurate. This information is for the official use 
+of LHDNM. 
+Handphone no. 
+Please ensure that the information is correct and accurate. This information 
+is for the official use of LHDNM only.  
+D2 
+ 
+E-mail 
+Please ensure that the information is correct and accurate. This information 
+is for the official use of LHDNM only.  
+Note: 
+E-mail (D2) information is compulsorily to be furnished during submission 
+via e-Filing. 
+D3 
+Employer’s TIN.  
+Enter the latest employer’s E reference number and also complete item D4 
+D4 
+Tax borne by employer 
+Income tax liability of an employee is paid by the employer which this benefit 
+falls within the definition of a perquisite (tax allowance).  Perquisite is part of 
+the gross income from employment under paragraph 13(1)(a) of the ITA 
+1967. Refer to Public Ruling No. 3/2024 
+Enter ‘1’ for ‘Yes’ if tax borne by employer or ‘2’ for ‘No’ if tax not borne by 
+employer. 
+D5 
+Has financial 
+account(s) at financial 
+institution(s) outside 
+Malaysia 
+Enter ‘1’ if there is / are financial account(s) at a financial institution(s) 
+outside Malaysia or ‘2’ if there is none / not relevant. Refer to the following 
+information before make an option:  
+This declaration is a counter check measure to ensure compliance of the 
+Malaysian tax law, in line with Malaysia’s commitment to the Automatic 
+Exchange of Financial Account Information with other tax jurisdictions. 
+Under this commitment, Malaysia will also be receiving information on 
+financial accounts kept at overseas by Malaysian tax resident.  
+However, please note that having a financial account(s) in overseas is not 
+an indication that a tax non-compliance has occurred. 
+“Financial Account” refers to a financial account maintained by a financial 
+institution outside Malaysia which includes:  
+(i) Depository Accounts  
+• Savings account, current account and other deposit accounts.  
+(ii) Custodial Accounts  
+• An account (other than an Insurance Contract or Annuity Contract) 
+for the benefit of another person that holds any financial instrument 
+or contract held for investment.  
+(iii) Cash Value Insurance Contracts  
+• An insurance contract where the policyholder is entitled to receive 
+payment on surrender or termination of the contract. An insurance 
+contract will also be a Cash Value Insurance Contract where the 
+policyholder can borrow against the contract. It is an investment 
+product that has an element of life insurance attached to it. The life 
+insurance element usually is small compared to the investment 
+element. 
+ 
+
+- 14 - 
+ 
+(iv) Annuity Contracts  
+A contract:  
+• Under which the issuer agrees to make payments for a period of time 
+determined in whole or in part by reference to the life expectancy of 
+one or more individuals; or  
+• That is considered to be an annuity contract in accordance with the 
+law, regulation or practice of Malaysia in which the contract was 
+issued and under which the issuer agrees to make payments for a 
+term of years.  
+(v) 
+Equity and Debt Interests in Investment Entities. 
+Further details on Automatic Exchange of Financial Account Information are 
+available at the LHDNM Official Portal, https://www.hasil.gov.my > 
+International > Automatic Exchange of Information (AEOI) > Common 
+Reporting Standard (CRS). 
+D6 
+Methods of payment for 
+tax refund  
+Enter ‘1’ for payment via bank account, and also complete item D7 or ‘2’ for 
+payment via “DuitNow”, and also complete item D8. 
+D7 
+Details of bank account 
+If D6 =1 Enter the bank name information (D7a) and bank account number 
+(D7b) for the purpose of electronic income tax refund. Ensure the bank 
+account entered is active and opened under own name to avoid payment 
+issues. 
+D8 
+Information of DuitNow  
+If D6 = 2, tax refund will be made using the DuitNow ID registered at the 
+bank of choice. "DuitNow" is a service provided that allows instant money 
+transfer using the recipient's DuitNow ID.  
+For the purpose of repayment through DuitNow, the individual’s DuitNow 
+registration with the bank of choice must use identification card number or 
+passport number. Ensure that the identification number registered at the 
+bank of choice is the same as the identification number in the LHDNM record 
+as per item 3 of Basic Particulars. 
+D8a 
+Identification type (self) 
+Enter ‘1’ for ‘Identification card’ or “2” for ‘Passport’.  
+D8b 
+Passport no. 
+Enter passport number if D8a is “2” 
+D9a 
+ 
+ 
+Disposal of asset under 
+the Real Property 
+Gains Tax Act 1976 
+Refers to chargeable asset under the Real Property Gains Tax Act 1976. 
+Enter ‘1’ for ‘Yes’ if there is disposal of asset, and also complete item D9b.  
+Enter ‘2’ for ‘No’ if not applicable.  
+D9b 
+Disposal declared to 
+LHDNM  
+Enter ‘1’ (‘Yes’) if the disposal has been declared to LHDNM or ‘2’ (‘No’) if 
+not. 
+If not yet declared, contact the LHDNM branch which handles the income 
+tax file of the disposer. Further details are available from the LHDNM Official 
+Portal, https://www.hasil.gov.my. 
+D10 
+Correspondence 
+Address 
+Address used when dealing with LHDNM. 
+ 
+ 
+ 
+ 
+
+- 15 - 
+ 
+PART E: 
+OTHER STATUTORY INCOME OUTSIDE MALAYSIA RECEIVED IN 
+MALAYSIA 
+Effective from 1 January 2022, all type of income from sources outside Malaysia received in Malaysia by a 
+resident is subject to tax. Refer  Guidelines On Tax Treatment In Relation To Income Received From Abroad 
+(Amendment) [LHDN.AG.600-1/7/3]. 
+Income from outside Malaysia received in Malaysia which has been taxed either with withholding tax or income 
+tax outside Malaysia is entitled to claim a bilateral or unilateral tax credit under the provisions of sections 132 
+and 133 of the ITA 1967. Original documents regarding the income and tax deducted in the country of origin 
+must be properly kept for the purpose of examination. 
+This item to be filled in by individual residents that received other statutory income sources outside Malaysia 
+received in Malaysia including employment, dividends, interest, discounts, rents, royalties, premiums and other 
+income. 
+Country 
+Refer Appendix E for the country code. 
+Types of Income  
+ 
+ 
+a) 
+Employment  
+b) 
+Dividends 
+c) 
+Interest 
+d) 
+Discounts 
+e) 
+Rents  
+f) 
+Royalties 
+g) 
+Premiums 
+h) 
+Other Income 
+Tax paid in the country of origin 
+Fill in the amount of tax charged in the country of origin where the income is 
+derived. Individual resident must keep income-related documents, notices of 
+assessment or other documents that show the income has been taxed 
+outside Malaysia. 
+Foreign tax for the purpose of tax credit relief (unilateral or bilateral) is the 
+tax charged on income by the country in which the income arose or derived 
+in relation to the portion of the income remitted to Malaysia.  
+Use the foreign currency exchange rate based on the date of remittance of 
+income to fill in this item. 
+Statutory Income 
+Determine the amount of other statutory income outside Malaysia remitted 
+to Malaysia.  
+Use the foreign currency exchange rate based on the date of remittance of 
+income to fill in this item. 
+ 
+PART F: 
+DONATIONS / GIFTS / CONTRIBUTIONS 
+Gift of money to the Government / State Government / local authority 
+Subsection 44(6) of ITA 1967. 
+Gift of money to approved institutions / organizations / funds 
+Gift of money to institutions / organizations / funds approved by the Director General 
+of Inland Revenue. Subsection 44(6) and proviso, ITA 1967.  
+Gift of money for any sports activity approved by the Minister of Finance 
+Subsection 44(11B) and proviso, ITA 1967. 
+Gift of money or cost of contribution in kind for any project of national interest 
+approved by the Minister of Finance 
+Subsection 44(11C) and proviso, ITA 1967. 
+Gift of money in the form of wakaf to any religious authority / religious body / 
+public university or gift of money in the form of endowment to a public 
+university 
+Gift of money in the form of: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Restricted to 
+10% of item B6 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 16 - 
+ 
+a) wakaf made to any appropriate religious authority established under any written law, 
+body established by that appropriate religious authority or public university allowed 
+by that appropriate religious authority to receive wakaf; or 
+b) endowment made to a public university. 
+The wakaf or endowment must be made for the purpose of achieving the objective of 
+establishment of the appropriate religious authority, body or public university. 
+Subsection 44(11D), ITA 1967. 
+ 
+ 
+ 
+Restricted to 
+10% of item B6 
+Gift of artefacts / manuscripts / paintings to the Government or State Government   
+Gift of artefacts, manuscripts or paintings to the Government will be based on the value determined by the 
+Department of Museums Malaysia or the National Archives.  
+Subsection 44(6A) of ITA 1967. 
+Gift of money for the provision of library facilities or to libraries 
+Gift of money not exceeding RM20,000 for the provision of library facilities to public libraries and libraries of 
+schools and institutions of higher education provided that a claim for the same expenses is not made under 
+paragraph 34(6)(g) of ITA 1967 in computing the adjusted income from business.  
+Subsection 44(8) of ITA 1967. 
+Gift of money or contribution in kind for the provision of facilities in public places for the benefit of 
+disabled persons 
+Gift of money or contribution in kind (the value to be determined by the relevant local authority) for the provision 
+of public facilities for the benefit of disabled persons.  
+Subsection 44(9) of ITA 1967. 
+Gift of money / cost / value of gift of medical equipment to any healthcare facility approved by the 
+Ministry of Health 
+Gift of money or the cost or value (as certified by the Ministry of Health) of any gift of medical equipment not 
+exceeding RM20,000 to any healthcare facility approved by the Ministry of Health.  
+Subsection 44(10) of ITA 1967. 
+Gift of paintings to the National Art Gallery or any state art gallery 
+The value of any gift of painting to be determined by the National Art Gallery or any state art gallery.  
+Subsection 44(11) of ITA 1967. 
+ 
+PART G: 
+RELIEF 
+Receipts and supporting documents must be kept for a period of seven (7) years after the end of the year in 
+which the return form is furnished to LHDNM, for future reference and inspection if required. 
+Reference: 
+Taxation Of A Resident Individual 
+• Part I - Gifts Or Contributions And Allowable Deductions (Public Ruling No. 4/2024) 
+• Part II - Computation Of Total Income And Chargeable Income (Public Ruling No. 5/2018 and Public Ruling 
+No. 5/2022 ) and  
+• Part III - Computation Of Income Tax And Tax Payable (Public Ruling No. 3/2023) 
+G1 
+ 
+Individual and 
+dependent relatives  
+Relief of RM9,000 for an individual in respect of himself and his dependent 
+relatives is granted automatically.  
+Paragraph 46(1)(a) of ITA 1967. 
+
+- 17 - 
+ 
+G2 
+Expenses for parents or 
+grandparents  
+ 
+Medical treatment, dental treatment, complete medical examination, special 
+needs or carer expenses incurred on parents or grandparents are allowed 
+as a deduction up to RM8,000.  
+Complete medical examination expenses include any vaccination are 
+allowed as a deduction up to RM1,000. 
+Parents refer to natural parents or foster parents where the individual is an 
+adopted child. Grandparents refer to the parents of an individual’s parents. 
+The parents or grandparents must be resident in Malaysia 
+Expenses on medical treatment for parents which qualify for deduction 
+include: 
+(i) Medical treatment, complete medical examination or special needs - 
+must be evidenced by a medical practitioner registered with Malaysian 
+Medical Council (MMC) certifying that the medical condition of parents or 
+grandparents requires medical treatment, complete medical examination 
+or special needs and is supported by an official receipt. Medical treatment 
+and complete medical examination must be provided in Malaysia. 
+Complete medical examination shall include any vaccination. 
+(ii) Carer - must be evidenced by a medical practitioner registered with 
+Malaysian Medical Council (MMC) certifying that the medical condition of 
+parents or grandparents requires a carer. For carer, it must be proven with 
+a receipt or a written certification by the carer or a copy of the carer's work 
+permit. 'Guardian' does not include individuals, spouses, or children of the 
+individual concerned. Care services must be provided in Malaysia. 
+(iii) Dental treatment - must be evidenced by a medical practitioner 
+registered with Malaysian Dental Council (MDC) certifying that the 
+medical condition of parents or grandparents requires dental treatment 
+and is supported by an official receipt. Dental treatment must be provided 
+in Malaysia. 
+Paragraph 46(1)(c) of ITA 1967. 
+G3 
+Basic supporting 
+equipment for disabled 
+self, spouse, child or 
+parent 
+ 
+Expenditure incurred for the purchase of any necessary basic supporting 
+equipment is allowed as a deduction up to RM6,000 for the use by: 
+(i) the individual, if he / she is a disabled person; or 
+(ii) the spouse, if he / she is a disabled person; or 
+(iii) his / her child, if the child is a disabled person; or 
+(iv) his / her parent, who is a disabled person. 
+ 
+ 
+This deduction will NOT be allowed if the disabled individual for whom the 
+basic supporting equipment is purchased, is not registered with the 
+Department of Social Welfare (DSW) as a disabled person. 
+Basic supporting equipment includes hemodialysis machine, wheel chair, 
+artificial leg and hearing aids but excludes spectacles and optical lenses.  
+Paragraph 46(1)(d) of ITA 1967. 
+G4 
+Disabled individual 
+ 
+A further deduction of RM7,000 is allowed if the individual is a disabled 
+person.  
+An individual is eligible to claim this deduction if he is certified in writing by 
+the Department of Social Welfare (DSW) as a disabled person. 
+Paragraph 46(1)(e) of ITA 1967. 
+
+- 18 - 
+ 
+G5 
+Education fees (Self) 
+ 
+A deduction up to RM7,000 can be claimed on fees expended for any of the 
+following courses of study: -  
+(i) Other than a degree at Masters or Doctorate level 
+Any course of study up to tertiary level undertaken for the purpose of 
+acquiring law, accounting, Islamic finance approved by Bank Negara 
+Malaysia or Securities Commission, technical, vocational, industrial, 
+scientific or technological skills or qualifications undertaken in any 
+institution or professional body in Malaysia recognized by the Malaysian 
+Government or approved by the Minister of Finance: 
+(ii) Degree at Masters or Doctorate level 
+Any course of study undertaken for the purpose of acquiring any skill or 
+qualification undertaken in any institution or professional body in 
+Malaysia recognized by the Malaysian Government or approved by the 
+Minister of Finance: 
+Refer to the list of recognized local institutions or approved professional 
+bodies in Malaysia at the official portal of the Ministry of Higher Education 
+Malaysia at https://www.mohe.gov.my for deduction of G5(i) and G5(ii) 
+(iii) Course of study undertaken for the purpose of up-skilling or self-
+enhancement  
+A deduction up to RM2,000 can be claimed on any skill area recognized 
+by Director General of Skills Development under National Skills 
+Development Act 2006 [Act 652]. Deduction is allowed for year of 
+assessment 2024 to 2026. 
+Paragraph 46(1)(f) of ITA 1967. 
+G6 
+Medical expenses on: 
+G6(i) 
+Serious diseases for 
+self, spouse or child 
+ 
+Medical expenses on serious diseases include the 
+treatment of Acquired Immune Deficiency Syndrome 
+(AIDS), Parkinson’s disease, cancer, renal failure, 
+leukemia and other similar diseases. “Other Similar 
+Diseases” in relation to serious diseases include heart 
+attack, pulmonary hypertension, chronic liver disease, 
+fulminant 
+viral 
+hepatitis, 
+head 
+trauma 
+with 
+neurological deficit, tumor in brain or vascular 
+malformation, major burns, major organ transplant 
+and major amputation of limbs.  
+Amount expended on own self, husband / wife or child 
+is deductible up to a maximum of RM10,000.  
+Receipt of the treatment and a certification issued by 
+a medical practitioner registered with the Malaysian 
+Medical Council (MMC) must be kept for future 
+reference and inspection, if required. 
+Paragraph 46(1)(g)(i) of ITA 1967. 
+ 
+Total deduction 
+for  G6(i), G6(ii), 
+G6(iii), G6(iv), G7 
+and G8 restricted 
+to RM10,000 
+G6(ii)  Fertility treatment for 
+self or spouse 
+Expenses for fertility treatment include Intrauterine 
+Insemination (IUI) treatment, In vitro fertilization (IVF) 
+or any other fertility treatments including consultation 
+fees and medicines on yourself or your spouse. Claim 
+conditions are: 
+(i) the claim for medical expenses has to be 
+evidenced by a receipt and certification issued by 
+a medical practitioner registered with the 
+Malaysian Medical Council (MMC) that the 
+serious disease treatment was provided to that 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 19 - 
+ 
+individual, spouse or child; or fertility treatment 
+was provided to the individual or the spouse; and 
+(ii) married individual. 
+Deductions of up to RM10,000 are allowed on the 
+amount expended or deemed to be expended on 
+fertility treatment for yourself or your spouse.  
+Receipt of the treatment and a certification issued by 
+a medical practitioner registered with the MMC must 
+be kept for future reference and inspection, if 
+required. 
+If the husband or wife chooses Joint Assessment, the 
+allowable deduction for expenses incurred by the 
+spouse will be deemed to be spent by the husband / 
+wife whose assessment is raised in his name is limited 
+to RM10,000. 
+Paragraph 46(1)(g)(ii) of ITA 1967. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Total deduction 
+for  G6(i), G6(ii), 
+G6(iii), G6(iv), G7 
+and G8 restricted 
+to RM10,000 
+G6(iii) 
+Vaccination for self, 
+spouse and child 
+Vaccination expenses include the following: 
+(i) Pneumococcal; 
+(ii) Human papillomavirus (HPV); 
+(iii) Influenza; 
+(iv) Rotavirus; 
+(v) Varicella; 
+(vi) Meningococcal; 
+(vii) Combination 
+of 
+tetanus-diphtheria-acellular-
+pertussis (Tdap); and 
+(viii) Coronavirus Disease 2019 (COVID-19) 
+ 
+Deduction up to RM1,000 are allowed on the amount 
+expended on vaccination for own self, spouse or child.  
+ 
+Paragraph 46(1)(g)(ii) of ITA 1967. 
+G6(iv) Dental examination and 
+treatment for self, 
+spouse or child 
+Dental examination and treatment expenses are 
+limited to a maximum of RM1,000. 
+Receipt of the treatment and a certification issued by 
+a medical practitioner registered with the Malaysian 
+Dental Council, must be kept for future reference and 
+inspection, if required. 
+Paragraph 46(1)(g)(iv) ACP 1967 
+ 
+ 
+G7 
+Expenses (Restricted to 1,000) on: 
+G7(i) 
+Complete medical 
+examination or 
+payment of fees for 
+disease detection test 
+for self, spouse or child 
+Complete medical examination 
+or fees for disease screening 
+tests 
+such as blood 
+tests, 
+ultrasound, mammogram and 
+pap smear, including screening 
+tests for diseases such as 
+COVID‑19 and influenza. 
+The 
+examination 
+must 
+be 
+conducted at a hospital or by a 
+medical practitioner registered 
+with 
+the 
+Malaysian 
+Medical 
+Council, and must be supported 
+ 
+ 
+ 
+Total deduction 
+for G7 
+restricted to 
+RM1,000 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 20 - 
+ 
+by a receipt issued by the 
+hospital 
+or 
+the 
+medical 
+practitioner concerned. 
+ 
+Paragraph 46(1)(h)(i) of ITA 
+1967. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Total deduction 
+for G7 
+restricted to 
+RM1,000 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Total deduction 
+for  G6(i), G6(ii), 
+G6(iii), G6(iv), G7 
+and G8 restricted 
+to RM10,000 
+G7(ii) 
+Purchase of self-testing 
+medical device 
+registered under the 
+Medical Device Act 
+2012 for self, spouse or 
+child 
+Purchase of self-testing medical 
+device such as pulse oximeters, 
+blood 
+pressure 
+monitors, 
+thermometers, including self‑test 
+kits for COVID‑19 and influenza. 
+The purchase of such equipment 
+must be supported by a receipt 
+and must not be used for the 
+purpose 
+of 
+the 
+individual’s 
+business.. 
+Paragraph 46(1)(h)(ii) of ITA 
+1967. 
+ 
+G7(iii) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Mental health 
+examination or 
+consultation  for 
+himself, husband/wife 
+or child  
+Mental health examination or 
+consultation  as evidenced by 
+receipts iisued by the following : 
+(i) Psychiatrist 
+within 
+the 
+meaning of section  2 of  
+Mental Health Act 2001 [Act 
+615]; 
+(ii) Clinical 
+psychologist 
+registered 
+with 
+Malaysia 
+Allied Health Professions 
+Council under the Allied 
+Health Professions Act 2016 
+[Act 774]; or 
+(iii) Kaunselor 
+Counsellor 
+registered woith Board of 
+Counsellors 
+under 
+the 
+Counsellors Act 1998 [Act 
+580].  
+Paragraph 46(1)(h)(iii) ITA 1967. 
+ 
+ 
+
+- 21 - 
+ 
+G8 
+Expenses (Restricted to 6,000) on child of the age of 18 years and below, in 
+respect of: 
+ 
+ 
+G8(i) 
+Assessment for the 
+purposes of diagnosis 
+of learning disability 
+The claim is evidenced by: 
+(i) Receipt issued by a medical 
+practitioner registered with the 
+Malaysian Medical Council (MPM) 
+for 
+initial 
+examination 
+for 
+diagnosis purposes; 
+(ii) Receipts issued by allied health 
+practitioners registered with the 
+Malaysian 
+Allied 
+Health 
+Professions Council under the 
+Allied Health Professions Act 
+2016 
+for 
+early 
+intervention 
+programs 
+or 
+rehabilitation 
+treatment; 
+(iii) Expenses qualified as deductions 
+for (i) and (ii) are for the following 
+categories: 
+(a) Autism Spectrum Disorder; 
+(b) Attention Deficit Hyperactivity 
+Disorder (ADHD); 
+(c) Global Developmental Delay 
+(GDD); 
+(d) Intellectual Disability, 
+(e) Down Syndrome; and 
+(f) Specific Learning Disabilities. 
+(iv) Assessment for the purpose of 
+diagnosis, 
+early 
+intervention 
+programme 
+and 
+rehabilitation 
+treatment should be carried out in 
+Malaysia. 
+(v) The individual must be a parent of 
+a child who has been certified by 
+a medical practitioner registered 
+with 
+the 
+Malaysian 
+Medical 
+Council as having a learning 
+disability and is aged 18 years and 
+below. 
+Paragraph 46(1)(ha) ITA 1967. 
+Total 
+deduction for 
+G8 restricted 
+to RM6,000 
+Total deduction 
+for  G6(i), G6(ii), 
+G6(iii), G6(iv), 
+G7 and G8 
+restricted to 
+RM10,000 
+G8(ii) 
+Early intervention 
+programme or 
+rehabilitation 
+treatment for learning 
+disability 
+G9 
+Lifestyle - Expenses for the use / benefit of self, spouse or child in respect of: 
+G9(i) 
+Purchase or 
+subscription of books / 
+journals / magazines / 
+newspapers / other 
+similar publications  
+Expenditure for the purchase or subscription of books, 
+journals, magazines, newspapers and other similar 
+publications (in the form of hardcopy or electronic but 
+EXCLUDING banned reading materials such as 
+morally offensive magazines) for the use by own self, 
+spouse or child.  
+Subparagraph 46(1)(p)(i) of ITA 1967. 
+ 
+ 
+Total deduction 
+for G9 
+restricted to 
+RM2,500 
+ 
+ 
+ 
+
+- 22 - 
+ 
+G9(ii) 
+Purchase of personal 
+computer, smartphone 
+or tablet  
+Expenditure for the purchase of personal computer, 
+smartphone or tablet [Does NOT include additional 
+charge for warranty] for own use or for the use by own 
+husband / wife or child, and NOT being used for the 
+purpose of own business.  
+Subparagraph 46(1)(p)(ii) of ITA 1967. 
+ 
+G9(iii) Payment of monthly 
+bill for internet 
+subscription  
+Payment of monthly bill for internet subscription 
+registered under own name for the use by own self, 
+spouse or child. 
+Subparagraph 46(1)(p)(iv) of ITA 1967. 
+ 
+ 
+Total 
+deduction for 
+G9 restricted 
+to RM2,500 
+G9(iv) Payment of any course 
+for the purpose of 
+upskilling 
+or 
+self-
+enhancement  
+[other than courses in 
+item G5(iii)] 
+Payment for upskilling or self-enhancement course fees 
+other than those subject to section 46(1)(f)(iii) ACP 1967. 
+The course does not need to be registered or recognized 
+by any government body.  
+Adequate expenses are proven with receipts issued by 
+the course provider. The course in question is one that 
+encourages taxpayers to learn skills unrelated to their 
+jobs, such as courses related to hobbies, religion, or 
+languages. 
+Subparagraph 46(1)(p)(iv) ACP 1967. 
+G10 
+Lifestyle - Additional expenses for the use / benefit of self, spouse, child or parent (The parent must 
+be resident in Malaysia) in respect of: 
+G10(i) 
+Purchase of sports 
+equipment for sports 
+activity defined under 
+the Sports 
+Development Act 1997 
+ 
+Expenditure for the purchase of sports equipment for any 
+sports activity listed under the Sports Development Act 
+1997 (EXCLUDING motorized two-wheel bicycles) for 
+the use by own self, spouse, child or parents. 
+Paragraph 46(1)(p)(iii) and Subparagraph 46(1)(u)(i) of 
+ITA 1967 
+ 
+ 
+ 
+ 
+Total deduction 
+for G10 
+restricted to 
+RM1,000 
+ 
+ 
+ 
+ 
+G10(ii) Payment of rental or 
+entrance fee to any 
+sports facility 
+Expenditure for rental or entrance fee to any sports 
+facility for the use by own self, spouse, child or parents.  
+The amount of this deduction is in addition to the lifestyle 
+relief under G9(iii). 
+Paragraph 46(1)(p)(iii) and Subparagraph 46(1)(u)(ii) of 
+ITA 1967 
+G10(iii) Payment of 
+registration fee for any 
+sports competition 
+where the organizer is 
+approved and licensed 
+by the Commissioner 
+of Sports under the 
+Sport Development 
+Act 1997 
+Expenditure for payments of registration fee for any 
+sports competition where the organizer is approved and 
+licensed by the Commissioner of Sports under the Sport 
+Development Act 1997 for the use by own self, spouse 
+or child. 
+Subparagraph 46(1)(u)(iii) of ITA 1967 
+G10(iv) Payment of fees for 
+gym membership or 
+sports training which is 
+provided by a sports 
+club / societies / 
+companies for carrying 
+out  sports activities 
+listed under the Sports 
+Development Act 1997 
+Expenses for gym membership fees or sports training 
+fees provided by sports associations or clubs registered 
+with the Commissioner of Sports or companies 
+incorporated under the Companies Act 2016 [Act 777] to 
+carrying out sports activities listed under the Sports 
+Development Act 1997 [Act 576]. 
+ 
+Subparagraph 46(1)(u)(iv) ACP 1967 
+ 
+ 
+
+- 23 - 
+ 
+G11 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Purchase of 
+breastfeeding 
+equipment for own use 
+for a child aged 2 
+years and below 
+(a) This deduction is allowed exclusively for women taxpayers,  provided that 
+the individual: 
+(i) is a breastfeeding mother; 
+(ii) has incurred expenditure for the purchase of breastfeeding equipment 
+for her own use to breastfeed her own child aged 2 years and below; 
+and  
+(iii) makes a claim that is evidenced by receipts issued in respect of the 
+purchase. 
+(b) Breastfeeding equipment which qualifies are: 
+(i) breast pump kit and ice pack; 
+(ii) breast milk collection and storage equipment; and 
+(iii) cooler set or cooler bag. 
+(c) The amount of deduction is limited to RM1,000 although the individual 
+has more than one child. 
+(d) This deduction is only allowed ONCE in every two (2) years of 
+assessment. 
+(e) In the case of a Combined Assessment, this deduction is only 
+allowed if the assessment is made in the name of the wife. 
+Example 1:  Joint Assessment in the Wife’s Name  
+Madam Arina has given birth to a child in the year 2025 and has purchased 
+breastfeeding equipment at the cost of RM1,700. Her husband who is a non-
+resident Malaysian citizen has elected for joint assessment in the name of 
+his wife.  
+Madam Arina is entitled to claim this deduction but limited to RM1,000. 
+Example 2:  Joint Assessment in the Husband’s Name 
+Madam Sally has given birth to a child in the year 2025 and has purchased 
+breastfeeding equipment at the cost of RM1,300. Madam Sally has elected 
+for joint assessment in the name of her husband.  
+The claim for this deduction is NOT allowed because the joint assessment is 
+made in the name of Madam Sally’s husband. 
+Paragraph 46(1)(q) of ITA 1967  
+G12 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Child care fees to a 
+registered child care 
+centre / kindergarten 
+for a child aged 6 
+years and below 
+This deduction is allowed in respect of child care fees for a child aged 6 
+years and below paid to a:  
+(i) child care centre registered with the Department of Social Welfare 
+(DSW) pursuant to the Child Care Centre Act 1984 (Act 308) under the 
+Ministry of Women, Family and Community Development; or  
+(ii) kindergarten registered with the Ministry of Education Malaysia pursuant 
+to the Education Act 1996 (Act 550).  
+This deduction is restricted to RM3,000 even though the number of children 
+who fulfills the mentioned conditions exceeds one.  If the amount of claim is 
+less than RM3,000, the amount of deduction allowed is limited to the amount 
+paid only.  
+Where a husband and a wife are assessed separately, the tax deduction 
+under this paragraph can only be claimed either by the husband OR the wife 
+who incurs the expenses.  
+Where a husband and wife are divorced, the tax deduction can be claimed by 
+the former husband and the former wife provided that they both made 
+payment for the fees of the child and that child is not the same child.  
+The claim for deduction is allowed for the years of assessment 2025 to 2027 
+and must be evidenced by the: 
+• 
+birth document of the child (MyKid or birth certificate); and 
+• 
+receipts for the monthly fees issued by the child care centre or 
+kindergarden. 
+Paragraph 46(1)(r) of ITA 1967  
+
+- 24 - 
+ 
+Example 1: Husband and wife (living together) 
+Scenario No. of 
+Child 
+Expenditure on child  
+(RM) 
+Type of 
+assessment 
+Who is entitled to 
+claim & amount  
+(RM) 
+Notes 
+a 
+1 
+Husband 
+Wife 
+1,600 
+1,500 
+Separate 
+Husband - 1,600 
+OR 
+Wife - 1,500 
+Only one person is entitled to claim 
+(restricted to the amount expended) 
+b 
+2 
+Husband 
+Wife 
+3,200 (child no. 1) 
+3,400 (child no. 2) 
+Separate 
+Husband - 3,000 
+OR 
+Wife - 3,000 
+Only one person is entitled to claim 
+(restricted to the amount RM3,000) 
+c 
+2 
+Husband 3,500 (child no. 1 & 2) 
+Separate 
+Husband - 3,000 Restricted to the amount RM3,000 
+d 
+3 
+Husband 
+Wife 
+5,200 (child no. 1 & 2) 
+3,100 (child no. 3) 
+Separate 
+Husband - 3,000 
+OR 
+Wife - 3,000 
+Only one person is entitled to claim 
+(restricted to the amount RM3,000) 
+e 
+2 
+Husband 
+Wife 
+1,900 (child no. 1) 
+1,100 (child no. 2) 
+Separate 
+ 
+Husband - 1,900 
+OR 
+Wife - 1,100 
+Only one person is entitled to claim  
+based on the amount expended or 
+restricted to the amount RM3,000 
+f 
+1 
+Husband 
+Wife 
+1,200 
+1,200 
+Joint 
+Husband - 2,400 
+OR 
+Wife - 2,400 
+Expenditure 
+incurred 
+by 
+the 
+spouse is deemed expended by 
+the husband / wife in whose name 
+the 
+assessment 
+is 
+raised 
+(restricted 
+to 
+the 
+amount 
+expended) 
+g 
+2 
+Husband 
+Wife 
+1,600 (child no. 1) 
+1,500 (child no. 2) 
+Joint 
+Husband - 3,000 
+OR 
+Wife - 3,000 
+Expenditure 
+incurred 
+by 
+the 
+spouse is deemed expended by 
+the husband / wife in whose name 
+the 
+assessment 
+is 
+raised  
+(restricted to the amount RM3,000) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Example 2: Divorced husband and wife 
+Scenario No. of 
+child 
+Expenditure on child 
+(RM) 
+Who is entitled to 
+claim & amount (RM) 
+Notes 
+a 
+1 
+Former husband 1,800 
+Former husband - 1,800 Only entitled to claim RM1,800 
+(restricted to the amount expended) 
+b 
+1 
+Former husband 
+Former wife 
+3,400 
+3,200 
+Former husband - 3,000 
+OR 
+Former wife - 3,000 
+Only one person is entitled to claim 
+(restricted to the amount RM3,000) 
+c 
+2 
+Former husband 
+Former wife 
+3,400 (child no. 1) 
+3,200 (child no. 2) 
+Former husband - 3,000 
+AND 
+Former wife - 3,000 
+- Former husband claims RM3,000 
+- Former wife claims RM3,000 
+(provided that the claim is made on 
+different child) 
+d 
+3 
+Former husband 
+Former wife  
+3,200 (child no. 1) 
+1,800 (child no. 2) 
+& 1,600 (child no. 
+3) 
+Former husband - 3,000 
+AND 
+Former wife - 3,000 
+- Former husband claims RM3,000 
+- Former wife claims RM3,000 
+(provided that the claim is made on 
+different child) 
+. 
+ 
+
+- 25 - 
+ 
+G13 
+Net deposit in Skim 
+Simpanan Pendidikan 
+Nasional (SSPN)  
+ 
+ 
+ 
+This relief is extended and shall take effect for the years of assessment 2025 
+to 2027. 
+Amount deposited in SSPN by an individual for the purpose of financing their 
+children’s education are allowable as a deduction, limited to RM8,000, 
+subject to the following conditions: 
+(i) The allowable deduction is limited to the net amount deposited in that 
+basis year only. 
+ 
+Example 1:    SSPN account position for the year 2025 
+Item 
+RM 
+Balance as at 1.1.2025 
+25,500 
+Savings during the year 2025 
+8,500 
+Withdrawal (university registration fees) * 
+(3,000) 
+Withdrawal (wife’s medical expenses 
+(2,000) 
+Balance as at 31.12.2025 
+29,000 
+ 
+Allowable deduction is RM6,500 (RM8,500 – RM2,000). 
+The balance of RM25,500 as at 1.1.2025 is not taken into computation in 
+determining the net savings for that basis year. 
+(ii) For a husband or wife who is assessed separately for a year of 
+assessment, the deduction may only be claimed by either the husband or 
+the wife who made the SSPN savings. Refer to Example 2. 
+(iii) The allowable maximum claim is RM8,000 even if the number of children 
+exceeds one. 
+Paragraph 46(1)(k) of ITA 1967. 
+Example 2: Husband or Wife elects for separate assessment or joint assessment 
+No. of 
+Children 
+Expenditure on Children 
+(RM) 
+Type of 
+Assessment 
+Who is entitled to 
+claim & amount 
+(RM) 
+Notes 
+1 
+Husband 
+Wife 
+5,500 
+4,000 
+Separate 
+Separate 
+Husband – 5,500 
+OR 
+Wife – 4,000 
+Only one person is eligible to 
+claim (limited to the amount 
+spent) 
+2 
+Husband 
+8,500 (child 1 
+dan 2) 
+Separate 
+Husband – 8,000 
+Limited to RM8,000 
+ 
+3 
+Husband 
+Wife 
+8.200 (child 1 & 2) 
+8,100 (child 3) 
+Separate 
+Separate 
+Husband – 8,000 
+OR 
+Wife – 8,000 
+Only one person is eligible to 
+claim (limited to RM8,000) 
+2 
+Husband 
+Wife 
+5,500 (child 1) 
+4,000 (child 2) 
+Separate 
+Separate 
+ 
+Husband – 5,500 
+OR 
+Wife – 4,000 
+Only one person is eligible to 
+claim (limited to the amount 
+spent) 
+2 
+Husband 
+Wife 
+5,500 (child 1) 
+2,000 (child 2) 
+Joint 
+In the name of 
+husband – 7,500 
+OR 
+In the name of Wife 
+– 7,500 
+Expenditure incurred by the 
+spouse is deemed expended 
+by the husband / wife in whose 
+name the assessment is raised 
+(restricted 
+to 
+the 
+amount 
+expended) 
+2 
+Husband 
+Wife 
+6,500 (child 1) 
+2,000 (child 2) 
+Joint 
+In the name of 
+husband – 8,000 
+OR 
+In the name of Wife 
+– 8,000 
+Expenditure incurred by the 
+spouse is deemed expended 
+by the husband / wife in whose 
+name the assessment is raised 
+(restricted 
+to 
+the 
+amount 
+expended) 
+1 
+Divorced 
+husband 
+and wife 
+10,000 (former 
+husband) 
+5,000 (former 
+wife) 
+Separate 
+Former husband – 
+8,000 
+AND 
+Former wife – 5,000 
+Both eligible to claim based on 
+the amount spent (limited to 
+RM8,000) 
+
+- 26 - 
+ 
+G14 
+Husband / wife / 
+payment of alimony to 
+former wife  
+ 
+(i) A deduction for husband of RM4,000 is given to the wife if the husband 
+has no source of income / no total income or the husband has elected for 
+joint assessment in the name of his wife. Only one wife is eligible to claim 
+this deduction although the husband has more than one wife. 
+Section 45A(1) of ITA 1967. 
+With effect from Year of Assessment 2017, the deduction for 
+husband is NOT allowed if the husband (not a husband who is a 
+disabled person) has gross income exceeding RM4,000 derived from 
+sources outside Malaysia. 
+Subsection 45A(2) of ITA 1967. 
+(ii) A deduction for wife of RM4,000 is given to the husband who has a wife 
+living together with him in the basis year, and the wife has no source of 
+income / no total income or the wife has elected for joint assessment in 
+the name of her husband.  
+Paragraph 47(1)(a) and subsection 47(5) of ITA 1967. 
+With effect from Year of Assessment 2017, the deduction for wife is 
+NOT allowed if the wife (not a wife who is a disabled person) has 
+gross income exceeding RM4,000 derived from sources outside 
+Malaysia. 
+Subsection 47(6) of ITA 1967. 
+ 
+(iii) Deduction for payment of alimony to a former wife is limited to RM4,000 
+or the actual amount paid if the amount of alimony paid is less than the 
+allowable deduction. The total deduction for a wife living together and 
+alimony payments to the former wife is restricted to RM4,000.  
+Voluntary alimony payments under a mutual agreement but without any 
+formal agreement do not qualify for deduction. 
+Subsection 47(2) and 47(3) of ITA 1967. 
+G15 
+Disabled husband / 
+wife 
+A further deduction of RM6,000 is given in respect of a disabled husband / wife.  
+Section 45A and Paragraph 47(1)(b) and of ITA 1967. 
+G16 
+Child 
+• Name 
+• Identification no./ 
+passport 
+• 100% Eligibility 
+• 50% Eligibility 
+ 
+Refer to Working Sheet HK-17. 
+Name 
+Enter the name of children as it appears on identification documents such as 
+an identity card or passport. 
+Identification no. / passport 
+Enter the identification number based on identification documents such as an 
+identity card or passport. If unavailable, the child’s identification document 
+from the country of origin may be submitted 
+100% Eligibility 
+This item is to be completed by an individual entitled to claim full child relief. 
+50% Eligibility 
+This item is only relevant where two or more individuals (not husband and wife 
+living together) are each entitled to claim a deduction for payment made in 
+respect of the same child, and each of those individuals is entitled to claim 
+50% of the allowable relief as a deduction. For example, when divorce occurs 
+and there are two or more individuals entitled to claim a deduction on the same 
+child. 
+For separate assessment, the individual and his spouse are required to select 
+the relief in respect of each child on whom to claim respectively. 
+
+- 27 - 
+ 
+Example: Ali has five (5) children and elected for separate assessment. The 
+number of children on whom relief may be claimed by Ali and his 
+wife is: 
+ 
+Ali 
+Wife 
+ 
+Ali 
+Wife 
+(i) 
+5 
+0 
+(iv) 
+2 
+3 
+(ii) 
+4 
+1 
+(v) 
+1 
+4 
+(iii) 
+3 
+2 
+(vi) 
+0 
+5 
+The deduction for child is not allowed if the child is in receipt of his own income 
+whereby his total income exceeds the amount of deduction otherwise due. 
+However, the following receipts are not treated as income of a child: 
+• 
+Amount received as scholarship, grant or allowance of a similar nature 
+(paragraph 24 Schedule 6 of ITA 1967); and 
+• 
+Payments received by a child who is serving an employer under articles 
+or indentures. 
+Subsection 48(5) of ITA 1967. 
+G16a 
+Child - Under the age  
+of 18 years 
+A deduction of RM2,000 per child is allowed if the child is unmarried and who 
+at any time in the basis year is below the age 18 years. Paragraph 48(1)(a) 
+and 48(2)(a) of ITA 1967. 
+G16b 
+Child - 18 years and 
+above and studying 
+ 
+(i) A deduction of RM2,000 per child is allowed if the child is unmarried, 18 
+years of age and above, and receiving full-time instruction.  
+Paragraph 48(1)(b) & (c) and 48(2)(a) of ITA 1967 
+OR 
+(ii) A deduction of RM8,000 is allowed if the child is unmarried, 18 years of 
+age and above, and satisfies the following conditions: 
+• receiving full-time instruction (excluding matriculation course / pre 
+degree / A-Level) at a university, college or other similar educational 
+establishment in Malaysia; or 
+• serving under articles or indentures with a view to qualify in a trade or 
+profession in Malaysia; or 
+• receiving full-time instruction outside Malaysia in respect of a degree 
+(including a degree at Master or Doctorate level) or the equivalent of a 
+degree.  
+Paragraph 48(3)(a) of ITA 1967. 
+G16c 
+Child - Disabled child 
+ 
+(i) Relief allowed for a disabled child who is unmarried is RM8,000.  
+(ii) An additional relief of RM8,000 is allowed if the disabled child is unmarried, 
+18 years of age and above, and satisfies the following conditions: 
+• receiving full-time instruction (excluding matriculation course / pre 
+degree / A-Level) at a university, college or other similar educational 
+establishment in Malaysia; or 
+• serving under articles or indentures with a view to qualify in a trade or 
+profession in Malaysia; or 
+• receiving full-time instruction outside Malaysia in respect of a degree 
+(including a degree at Master or Doctorate level) or the equivalent of a 
+degree. 
+An individual is entitled to a child relief of RM16,000 if the above conditions 
+are complied with. 
+Paragraph 48(1)(d), 48(3)(a) and 48(2)(b) of ITA 1967. 
+
+- 28 - 
+ 
+G17 
+Life insurance and EPF 
+Working sheet, HK-14 can be used for the purpose of computation and record. 
+(i) Payment of life insurance premiums or takaful contribution on life insurance policy contracted on 
+the life of the individual  husband or wife / wives or additional voluntary contribution to EPF is 
+deductable.  
+ * Deduction is NOT allowed on premiums paid for life insurance policy contracted on the life of the 
+child. 
+(ii) Contribution to an approved scheme or voluntary contribution to EPF (other than private retirement 
+scheme) or contribution under any written law. Example of an approved scheme is the Employees 
+Provident Fund (EPF). 
+(iii) Voluntary contribution that allowed for deductions are contribution to: 
+(a) Self-employed under the definition of Employees Provident Fund Act 1991 (Act 452)  
+(b) Pensionable officers under definition of section 2 of Pension Act 1980 (Act 227) 
+(c) Employees other than (a) and (b) above. 
+(iv) Allowable deduction commencing from year of assessment 2023: 
+No. 
+Type of Contribution 
+Total Relief 
+i. 
+Life insurance premium payments and takaful contributions or additional 
+voluntary contribution to EPF [paragraph 49(1)(a)] 
+RM3,000 (Restricted) 
+ii. 
+Contribution to an approved scheme or voluntary contribution to EPF 
+(NOT including private retirement scheme) or contribution under any 
+written law related to widowers, widows, and orphans under any 
+approved scheme [Paragraph 49(1)(b) and Paragraph 49(1)(c)] 
+RM4,000 (Restricted) 
+ 
+RM7,000 (Restricted) 
+Example 1: 
+Madam Sally is a public servant who has chosen a pension scheme. She has also contributed to the 
+EPF voluntarily. In 2025 she has made contributions to the EPF and life insurance premium payments 
+as follows: 
+ 
+Amount (RM) 
+Voluntary contribution to EPF for self 
+6,000 
+Life insurance premium payments for self 
+1,800 
+ 
+For year of assessment 2025, Madam Sally is eligible to claim relief for voluntary EPF contributions and 
+insurance premium payments as follows: 
+ 
+Amount 
+Contribution / 
+Payment (RM) 
+Deduction 
+Allowed (RM) 
+Voluntary contribution to EPF [Paragraph 49(1)(b)] 
+4,000 
+4,000 (restricted) 
+Additional voluntary contribution to EPF [Paragraph 49(1)(a)] 
+2,000 
+1,200 (restricted)  
+or 2,000 
+Life insurance premium payments [Paragraph 49(1)(a)] 
+1,800 
+1,800 or 
+1,000 (restricted) 
+TOTAL: 
+7,800 
+7,000 (restricted) 
+ 
+ 
+ 
+
+- 29 - 
+ 
+ 
+Example 2: 
+Mr. Manaf works with a private sector. In 2025, he made contributions to the EPF and family takaful 
+contributions as follows: 
+ 
+Amount (RM) 
+Compulsory contribution to EPF 
+36,000 
+Voluntary contribution to EPF 
+6,000 
+Family takaful contributions 
+3,600 
+ 
+The allowable deduction for the year of assessment 2025 is as follows: 
+ 
+ 
+Amount 
+Contribution / 
+Payment(RM)  
+Deduction 
+Allowed (RM) 
+Compulsory contribution to EPF [Paragraph 49(1)(b)] 
+36,000 
+4,000 (restricted)  
+Family takaful contributions [Paragraph 49(1)(a)] 
+3,600 
+3,000 (restricted) 
+Voluntary contribution to EPF [Paragraph 49(1)(a)] 
+6,000 
+Not entitled 
+TOTAL: 
+45,600 
+7,000 (restricted) 
+ 
+Example 3:  
+Madam Charlene is an independent consultant who makes voluntary EPF contributions. For 2025, her 
+total contribution is RM12,000. She did not make any life insurance premium payments. 
+For year of assessment 2025, Madam Charlene is eligible to claim RM7,000 for voluntary contributions 
+to the EPF as provided as follows: 
+ 
+Amount 
+Contribution / 
+Payment (RM)  
+Deduction 
+Allowed (RM) 
+Voluntary contribution to EPF [Paragraph 49(1)(b)] 
+12,000 
+4,000 (restricted) 
+Additional voluntary contribution to EPF [Paragraph 49(1)(a)] 
+3,000 (restricted) 
+TOTAL: 
+12,000 
+7,000 (restricted) 
+ 
+Example 4:  
+Saiful is a public servant who has chosen a pension scheme. For 2025, he has made an insurance 
+premium payment of RM10,000. He did not make any contribution to the EPF. 
+ 
+Amount 
+Contribution / 
+Payment (RM)  
+Deduction 
+Allowed (RM) 
+Contribution to EPF [Paragraph 49(1)(b)] 
+No contribution 
+No contribution  
+Life insurance premium payments [Paragraph 49(1)(a)] 
+10,000 
+3,000 (restricted)* 
+TOTAL: 
+10,000 
+3,000 (restricted) 
+ 
+* With the cancellation of paragraph 49(1A)(c) from year of assessment 2023, pension scheme public 
+servants are only eligible to claim tax relief of RM3,000 for life insurance premium payments or family 
+takaful contributions under paragraph 49(1)(a). 
+G18 
+Private retirement scheme and deferred annuity   
+(i) This deduction is effective from the Year of Assessment 2025 until 2030.  
+(ii) The deduction allowed shall not exceed RM3,000 in respect of contributions made to a Private 
+Retirement Scheme (PRS) approved by the Securities Commission and paid premiums for deferred 
+annuity.  
+(iii) The total deduction for PRS contributions and deferred annuity premiums is restricted to RM3,000 
+for an individual and RM3,000 for the spouse who has source of income. If the husband or wife 
+elects for joint assessment, the deduction allowed for the aggregate amount of PRS contributions 
+and deferred annuity premiums is restricted to RM3,000.  
+
+- 30 - 
+ 
+(iv) Refer to Working Sheet HK-14.  
+(v) Reference:  Public Ruling No. 4/2014 (Deferred Annuity); and  
+                    Public Ruling No. 9/2021 (Private Retirement Scheme). 
+Subsections 49(1D), 49(1E), 49(3), 50(2) and 50(3) of ITA 1967. 
+G19 
+Education and  
+medical insurance for 
+self, spouse or child 
+A deduction not exceeding RM4,000 is available on insurance premiums in 
+respect of education or medical benefits for an individual, husband, wife, or 
+child.  
+An education policy must satisfy the following criteria:  
+(i) the policy must be contracted by the individual for himself or herself, his 
+or her spouse or child; 
+(ii) the beneficiary should be the child; 
+(iii) where the insured is the parent, the child must be the nominee; 
+(iv) where the child is the insured:- 
+• 
+it is compulsory that the life of the person paying the premium 
+(parent) must be covered (payor benefit rider);  
+• 
+the rider must also have the same duration as the basic policy;  
+• 
+where the rider is packaged together with the basic policy in a single 
+premium, the whole premium paid will qualify for deduction; and  
+• 
+where the parent does not qualify for payor benefit rider, the 
+premium paid for the basic policy will not qualify for deduction;  
+(v) in respect of a takaful policy, the participant is the parent and proceeds 
+of the policy must be made “hibah” (gift) to the child;  
+(vi) the maturity amount in respect of both conventional or takaful policy 
+must be scheduled to be payable when the child is between the ages of 
+13 and 25. 
+A medical policy must satisfy the following criteria:  
+(i) the expenses should be related to the medical treatment resulting from 
+a disease or an accident or a disability;  
+(ii) the policy coverage should be for a period of 12 months or more;  
+(iii) the policy can be a stand-alone policy or as a rider to a life insurance or  
+family takaful policy. If it is a rider, only the rider premium/contribution 
+can qualify for deduction;  
+(iv) where a dreadful disease cover is attached to a basic policy, the whole 
+amount of the rider premium/contribution paid is allowed as a deduction;  
+(v) where a dreadful disease cover is packaged together with a term 
+life/personal accident cover, 60% of the package premium/contribution 
+is allowed as a deduction;  
+(vi) group 
+medical 
+policy 
+where 
+the 
+employee 
+pays 
+the 
+premium/contribution for the medical benefit also qualifies for deduction; 
+and 
+(vii) premium/contribution for waiver benefit rider and travel and medical 
+expenses insurance are not allowable as a deduction. 
+The total deduction in respect of premiums paid for insurance on education 
+and medical benefits is restricted to RM4,000 for an individual and 
+RM4,000 for the wife who has source of income. If the husband or wife 
+elects for joint assessment, the deduction allowed for the total of premiums 
+paid for insurance on education and medical benefits is restricted to 
+RM4,000.  
+Refer to Working Sheet HK-14.  
+Subsections 49(1B), 49(4) and 50(2) of ITA 1967. 
+
+- 31 - 
+ 
+G20 
+Contribution to the 
+Social Security 
+Organization (SOCSO) 
+according to Employees 
+Social Security Act 1969 
+or Employment 
+Insurance System Act 
+2017 
+A deduction not exceeding RM350 is allowed in respect of contribution to 
+the Social Security Organization (SOCSO) made or incurred by the 
+individual in the basis year that contribution in accordance to the following 
+act: 
+(i) Employees Social Security Act 1969 
+(ii) Employment Insurance System Act 2017 for Employment Insurance 
+System (EIS) 
+ Paragraph 46(1)(n) of ITA 1967. 
+G21(i) Payment of installation, 
+rental, purchase 
+including hire-purchase 
+of equipment or 
+subscription for use of 
+electric vehicle charging 
+facility for his own 
+vehicle (Not for business 
+use) 
+A deduction limited to a maximum of RM2,500 expended 
+for the electric vehicle charging facility as follows: 
+(i) 
+Cost of installation of electric vehicle charging; 
+(ii) 
+Purchase including hire-purchase of electric vehicle 
+charging; 
+(iii) 
+Rental of electric vehicle charging; or  
+(iv) 
+Subscription for use of electric vehicle charging 
+facility 
+The allowable deduction is a effective for the Year of 
+Assessment 2024 and 2027. 
+Paragraph 46(1)(v)(i) of the ITA 1967. 
+ 
+ 
+ 
+ 
+ 
+Total 
+deduction 
+for G21 
+restricted 
+to RM2,500 
+G21(ii) Purchase of food waste 
+compost machine for the 
+household purpose 
+ 
+This deduction is allowed once in every three (3) years 
+from the years of assessment 2025 to 2027. 
+Paragraph 46(1)(v)(ii) ITA 1967 
+G22 
+Interest expended for the purchase of the first residential property to be occupied as place of residence 
+and limited to only one unit. 
+(Sale and Purchase Agreement to be executed within 1 January 2025 until 31 December 2027) 
+G22(i) Price of residential 
+property is not more 
+than RM500,000 
+(Restricted to 7,000) 
+To qualify an individual to claim this deduction, the following 
+conditions must be fulfilled: 
+(i) The residential property is the first residential property 
+purchased by the individual to be occupied as his place 
+of residence and limited to only one unit; 
+(ii) The Sale and Purchase Agreement for the purchase is 
+executed on or after 1 January 2025 but not later than 
+31 December 2027; and 
+(iii) The individual shall not derive any income in respect of 
+that residential property. 
+The amount of individual tax deduction on the allowable 
+interest paid is for three (3) consecutive years of 
+assessment beginning from the year in which the interest is 
+first expended, and the individual is not allowed to choose 
+the preferred year of assessment for claiming the deduction. 
+Example 1 
+Ms. Darlyna purchased her first residential home priced at 
+RM480,000 and the Sale and Purchase Agreement was 
+completed on 1 March 2026. Interest payments on the loan 
+commenced on 1 November 2028. Ms. Darlyna claims the 
+tax deduction on the housing loan interest beginning from 
+the Year of Assessment 2029 until 2031. 
+ 
+ 
+ 
+ 
+ 
+ 
+Total 
+deduction 
+for G22 
+restricted to 
+G22(i) or 
+G22(ii) 
+G22(ii) Price of residential 
+property is more than 
+RM500,000 but not 
+more than RM750,000) 
+(Restricted to 5,000) 
+
+- 32 - 
+ 
+ 
+Year of 
+Assessment 
+ 
+Amount 
+of Interest 
+Paid (RM) 
+Amount of 
+Interest 
+Claimed (RM) 
+Amount of 
+Interest 
+Allowed (RM) 
+2028 
+1,900 
+None 
+ 
+2029 
+12,000 
+12,000 
+7,000 
+2030 
+12,000 
+12,000 
+7,000 
+2031 
+12,000 
+12,000 
+Not Eligible 
+ 
+Ms. Darlyna is not eligible to claim a tax deduction on the 
+housing loan interest for the Year of Assessment 2031, as 
+the determination of the three (3) consecutive years of 
+assessment based on the year in which the interest 
+payment first commenced begins from the Year of 
+Assessment 2028. 
+ 
+Where two or more individuals are entitled to claim a 
+deduction in respect of the same residential property, and 
+the total amount of interest expended by those individuals 
+exceeds the allowable amount for that particular year, each 
+individual shall be entitled to a deduction calculated in 
+accordance with the following formula: 
+ 
+ 
+ 
+When a wife or husband elects for joint assessment under 
+subsection 45(2), the interest expended by the wife or the 
+husband shall be deemed to have been expended by: 
+(i) the husband, if the wife elects to be assessed in the 
+husband’s name; or 
+(ii) the wife, if the husband elects to be assessed in the 
+wife’s name.” 
+In the event that the wife or husband has no total income 
+and elects to be assessed under joint assessment, the 
+interest expended by the husband or the wife shall be 
+deemed to have been paid by the respective husband or 
+wife. 
+G23 
+Total relief 
+Sum of amounts from items G1 to G22.  
+Transfer this amount to item B13. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 33 - 
+ 
+ 
+PART H: 
+INCENTIVE CLAIM 
+H1 
+Claim Incentive(s) 
+under paragraph 
+127(3)(b) of Income Tax 
+Act 1967 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Paragraph 127(3)(b) of ITA 1967 
+Exemption given by the Minister of Finance to any specific person from 
+complying with any provision of the ITA 1967, either generally or in respect 
+of any income. 
+Enter the Serial Number of the Approval Letter issued by the Ministry of 
+Finance and the amount. 
+The Minister's Approval Letter, computation of incentive and supporting 
+documents should be kept for future reference / examination by LHDNM, if 
+required. 
+Refer to Appendix D - Incentive Claim Code to review the list of incentives 
+and report tax-exempt income received during the year of assessment. 
+ 
+Example 1: 
+Mr. Alex is a professional athlete and also salary earner from employement. 
+In 2025, Alex received a prize money of RM30,000 from sports tournaments 
+he participated throughout the year. 
+Refer to Appendix D, receipt of the winning prize is tax exempt under claim 
+code 601 and must be reported in this column. 
+Code 
+Subject 
+Amount 
+601 
+Prize money received by professional athletes from 
+participating sports tournaments 
+30,000 
+Complete item H1 as follow: 
+Claim Code 
+Balance Brought 
+Forward 
+Amount 
+Claimed 
+Amount 
+Absorbed 
+Balance Carried 
+Forward 
+601 
+0 
+30,000 
+0 
+0 
+H2 
+Claim for incentive(s) 
+under subsection 
+127(3A) of Income Tax 
+Act 1967 
+Subsection 127(3A) ACP 1967 
+Refers to exemption specifically given by the Minister. 
+Enter the Serial Number of the Approval Letter issued by the Ministry of 
+Finance and the amount. 
+The Minister's Approval Letter, computation of incentive and supporting 
+documents should be kept for future reference / examination by LHDNM, if 
+required. 
+Example: 
+Enter the Serial Number of the Approval Letter issued by the Ministry of 
+Finance and the amount of tax exempt income. 
+Incentive 
+Approval No. 
+Balance Brought 
+Forward 
+Amount 
+Claimed 
+Amount 
+Absorbed 
+Balance Carried 
+Forward 
+CP1234/2025 
+0 
+45,000 
+45,000 
+0 
+ 
+ 
+PART J: 
+NON-EMPLOYMENT INCOME OF PRECEDING YEARS NOT DECLARED 
+J1  
+–  
+J2 
+Income OTHER THAN from employment received in respect of preceding year(s) not previously 
+declared.  
+Example: Income from rents or interest 
+Please use attachment in case of insufficient writing space.   
+
+- 34 - 
+ 
+ 
+PART K: 
+TAX EXEMPT INCOME FROM SOURCES OUTSIDE MALAYSIA 
+RECEIVED IN MALAYSIA 
+Effective from 1 January 2022, all type of income from sources outside Malaysia received in Malaysia by a 
+resident is subject to tax.  
+Income from sources outside Malaysia received in Malaysia by individual residents which is exempted from tax 
+from 1 January 2022 until 31 December 2026 are as follows:  
+Taxpayer’s Category 
+Types of Tax-Exempt 
+Income  
+Qualifying Conditions 
+Individual partner in relation 
+to a partnership business in 
+Malaysia 
+Dividend 
+(i) The dividend income has been subjected to 
+tax in the country of origin; 
+(ii) The highest tax rate (headline tax) in the 
+country of origin is not less than 15%; and  
+(iii) Comply with the economic substance 
+requirements  
+Individual  
+All types of income other 
+than partnership income. 
+The income has been subjected to tax in the 
+country of origin. 
+Refer  Guidelines  on Tax Treatment In Relation To Income Received From Abroad (Amendment) 
+[LHDNM.AG.600-1/7/3], Income Tax (Exemption) Order (No. 5) 2022 [P.U.(A) 234/2022]; and Income Tax 
+(Exemption) Order (No. 6) 2022 [P.U.(A) 235/2022]. 
+This item to be filled in  by  individual residents that received income from outside Malaysia received in Malaysia 
+which is exempted from tax from 1 January 2025 to 31 December 2025. 
+ 
+Country 
+Refer Appendix E for country codes. 
+Types of Income  
+ 
+a) Employment 
+b) Dividends 
+c) 
+Interest 
+d) Discounts 
+e) Rents 
+f) 
+Royalties 
+g) Premiums 
+j) 
+Other income 
+Tax paid In The Country Of 
+Origin 
+Enter ‘1’ for ‘Yes’ if tax paid in the Country of Origin or  ‘2’  for “if no”. 
+In determining whether foreign incomes that received in Malaysia have been 
+subjected to tax in the country of origin, the conditions are as follows: 
+(i) Tax paid or payable in the country of origin is income tax or withholding 
+tax; or 
+(ii) Tax is not imposed in the country of origin due to certain reasons as 
+follows: 
+(a) Foreign income received in Malaysia is not subject to tax in the 
+country of origin due to the country's taxation system. 
+(b) Foreign income received in Malaysia is not subject to tax in the 
+country of origin because the individual's income does not reach 
+the taxability amount in the country of origin. 
+(c) Income is given an exemption through a tax incentive 
+(d) Foreign dividend income received has been subjected to 
+underlying tax 
+(e) Foreign dividend income is paid from underlying profits arising out 
+of operating profits which has not been subjected to tax due to: 
+• 
+Unabsorbed losses or capital allowances; 
+• 
+Arising from capital gains; 
+• 
+Enjoyed tax incentives in compliance with substantive 
+requirements in the country; or 
+• 
+Tax regulations under the tax consolidation regime in the 
+country of origin 
+
+- 35 - 
+ 
+Headline Tax Rate In The 
+Country Of Origin 
+Enter the required  information for dividend income only. 
+Headline tax rate in the country of origin refers to the highest corporate tax 
+rate in the country of origin in a year in which the foreign dividend is received 
+in Malaysia The headline tax rate must be at least 15% to qualify for  dividend 
+income exemption. 
+Amount Of Tax Charged In The 
+Country Of Origin 
+Fill in the amount of tax charged in the country of origin where the income is 
+derived. Individual resident must keep income-related documents, notices of 
+assessment or other documents that show the income has been taxed 
+outside Malaysia. 
+Foreign tax for the purpose of tax credit relief (unilateral or bilateral) is the 
+tax charged on income by the country in which the income arose or derived 
+in relation to the portion of the income remitted to Malaysia.  
+Use the foreign currency exchange rate based on the date of remittance of 
+income is made to fill in this item. 
+Amount of  Income Remitted   
+Total amount of income from sources outside Malaysia received in Malaysia 
+according to  types of income.   
+Use the foreign currency exchange rate based on the date of remittance of 
+income to fill in this item. 
+ 
+ 
+PART L: 
+PARTICULARS OF TAX AGENT WHO COMPLETES THIS RETURN 
+FORM 
+L1  
+– 
+L9 
+• Tax Agent’s Approval No. is the approval number given to tax agent’s approved under subsection 
+153(3) of ITA 1967.  
+• This section has to be completed and duly signed by the tax agent who completes this return form. 
+DECLARATION 
+A return form which is not duly signed, shall be deemed incomplete and will not be processed and a Notification 
+of Incomplete Return Form will be issued to inform you. The use of signature stamp is not allowed. Penalty will 
+be imposed in case of late resubmission of the return form to LHDNM. 
+
+- 36 - 
+ 
+TAX SCHEDULE FOR YEAR OF ASSESSMENT 2025 
+CATEGORY 
+RANGE OF 
+ CHARGEABLE INCOME 
+ (a) 
+COMPUTATION 
+RM 
+(b) 
+RATE 
+%  
+(c) 
+TAX 
+RM  
+(d) 
+A 
+0 
+- 
+       5,000 
+          First   
+     5,000 
+0 
+0 
+B 
+5,001 
+- 
+     20,000 
+First 
+Next  
+     5,000 
+   15,000 
+ 
+1 
+0 
+150 
+C 
+20,001 
+- 
+     35,000 
+          First 
+          Next  
+   20,000 
+   15,000 
+ 
+3 
+150 
+450 
+D 
+35,001 
+- 
+     50,000 
+          First 
+          Next  
+   35,000 
+   15,000 
+ 
+6 
+600 
+900 
+E 
+50,001 
+- 
+  70,000 
+          First 
+          Next  
+   50,000 
+   20,000 
+ 
+11 
+1,500 
+2,200 
+F 
+70,001 
+- 
+100,000 
+          First 
+          Next  
+70,000 
+    30,000 
+ 
+19 
+3,700 
+5,700 
+G 
+100,001 
+- 
+  
+400,000 
+          First 
+          Next  
+   100,000 
+  300,000 
+ 
+25 
+9,400 
+75,000 
+H 
+400,001 
+- 
+  
+600,000 
+          First 
+          Next  
+  400,000 
+  200,000 
+ 
+26 
+84,400 
+52,000 
+I 
+    600,001 - 
+  
+2,000,000 
+          First 
+          Next  
+  600,000 
+1,400,000 
+28 
+136,400 
+392,000 
+ 
+ 
+ 
+ 
+First 
+ 
+2,000,000 
+ 
+528,400 
+J 
+Exceeding 2,000,000 
+For every next ringgit 
+30 
+............... 
+ 
+COUNTRY  CODES 
+The following are some of the country codes for selection. Please refer to Appendix E for the full list. 
+Country 
+Code 
+Country 
+Code 
+Country 
+Code 
+Australia 
+AUS 
+Iran (Islamic R.O.) 
+IRN 
+Philippines 
+PHL 
+Bangladesh 
+BGD 
+Iraq 
+IRQ 
+Saudi Arabia 
+SAU 
+Brunei Darussalam 
+BRN 
+Japan  
+ 
+JPN 
+Singapore 
+SGP 
+Cambodia 
+KHM 
+Korea, D.P.R. 
+PRK 
+South Africa 
+ZAF 
+Canada 
+CAN 
+Korea, R.O. 
+KOR 
+Sri Lanka 
+LKA 
+China 
+CHN 
+Laos, D.P.R. 
+LAO 
+Taiwan 
+TWN 
+Denmark 
+DNK 
+Malaysia 
+MYS 
+Thailand 
+THA 
+Hong Kong 
+HKG 
+Myanmar 
+MMR 
+United Kingdom 
+GBR 
+India 
+IND 
+New Zealand 
+NZL 
+United States 
+USA 
+Indonesia 
+IDN 
+Pakistan 
+PAK 
+Vietnam 
+VNM 
+Note:   R.O. = Republic of; 
+ 
+ 
+D.P.R. = Democratic People’s Republic of 
+ 
+ 

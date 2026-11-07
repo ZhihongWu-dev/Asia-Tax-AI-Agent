@@ -41,6 +41,7 @@ DOC_TYPES = ("law", "regulation", "guidance", "treaty", "form", "page", "attachm
 CATEGORIES = ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "page_treaties", "page_rates", "page_deadlines")   # 数据库规范.md §2
 OFFICIAL = ("gov.cn", "gov.hk", "gov.sg", "go.id", "gov.vn", "gov.my", "go.th", "gov.ae", "go.jp", "go.kr",
             "chinhphu.vn", "vbpl.vn", "quochoi.vn",   # Vietnam: Government portal and gazette, legal database, National Assembly
+            "baochinhphu.vn",        # Vietnam: the Government's online newspaper (Government Office); its English law pages are translations
             "klri.re.kr",            # Korea Legislation Research Institute: the official English translations of Korean acts
             "gov.in", "nic.in",      # incometaxindia.gov.in, egazette.gov.in, indiacode.nic.in
             "oecd.org")              # MLI texts and positions

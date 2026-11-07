@@ -42,6 +42,8 @@ ROOT = Path(__file__).resolve().parents[1]          # database/; --root points e
 ENC = "utf-8-sig"
 SOFFICE = r"C:\Program Files\LibreOffice\program\soffice.exe"
 
+SPEC_VERSION = "2026-11-07"          # the last entry of the change record at the head of 数据库规范.md; upload.py writes it to meta
+
 # ---------------------------------------------------------------- tables (数据库规范.md §3)
 TABLES = {                                           # name -> columns; the order is the csv and sqlite column order
     "jurisdiction": ["code", "name", "currency", "company_in_scope", "individual_in_scope"],
@@ -123,10 +125,33 @@ def real_kind(path, ext):
         return "xls" if ext in ("xls", "et") else ("ppt" if ext in ("ppt", "pps") else "doc")
     if head.startswith(b"PK"):
         return "xlsx" if ext in ("xlsx", "xls") else ("pptx" if ext == "pptx" else "docx")
+    if ext in ("do", "aspx", "jsp", "php", "asp"):     # a page saved under its server-side name (law.go.kr .do, FTA .aspx)
+        start = path.read_bytes()[:512].lstrip(b"\xef\xbb\xbf \t\r\n").lower()
+        if start.startswith((b"<!doctype html", b"<html")):
+            return "html"
     return ext
 
 
 PAGE_CHROME = ("【打印】", "网站纠错", "纠错或建议")
+
+
+def main_node(body, blocks):
+    """The smallest container holding most of the text in the given block tags (the page without its menus)."""
+    total = sum(len(p.get_text(strip=True)) for p in body.find_all(blocks))
+    node = body
+    if total > 400:
+        while True:
+            best = None
+            for child in node.find_all(recursive=False):
+                if child.name in blocks:
+                    continue
+                share = sum(len(p.get_text(strip=True)) for p in child.find_all(blocks))
+                if share >= 0.7 * total:
+                    best = child
+            if best is None:
+                break
+            node = best
+    return node
 
 
 def html_text(raw):
@@ -138,22 +163,9 @@ def html_text(raw):
         if len(t.get_text(strip=True)) < 0.9 * whole:  # Judiciary's LRS wraps a whole judgment in one <form>)
             t.decompose()
     body = soup.body or soup
-    ps = body.find_all("p")
-    total = sum(len(p.get_text(strip=True)) for p in ps)
-    node = body
-    if total > 400:                                   # descend to the smallest container holding most <p> text
-        while True:
-            best = None
-            for child in node.find_all(recursive=False):
-                if child.name == "p":
-                    continue
-                share = sum(len(p.get_text(strip=True)) for p in child.find_all("p"))
-                if share >= 0.7 * total:
-                    best = child
-            if best is None:
-                break
-            node = best
-    text = node.get_text("\n")
+    # the container is found by its <p> text; a page holding its rules in a list (id.dgt.article26) is found by <p> and
+    # <li> text; the longer of the two is the page's text, since menus are lists too (th.rc3.rates.th)
+    text = max((main_node(body, b).get_text("\n") for b in (["p"], ["p", "li"])), key=lambda x: len(re.sub(r"\s", "", x)))
     lines = [re.sub(r"[ \t\u00a0\u3000]+", " ", ln).strip() for ln in text.splitlines()]
     lines = [ln for ln in lines if ln]
     # page chrome of the STA sites printed after the text when it is not in <p> (cn.cs.2009-59 on fgk.chinatax.gov.cn,
@@ -171,6 +183,19 @@ def html_text(raw):
 def pdf_pages(path):
     with fitz.open(path) as doc:
         return [page.get_text("text") for page in doc]
+
+
+OCR_PAGE_MIN = 50                     # a PDF page with fewer characters in its text layer is a scan (tools/ocr.py reads it)
+
+
+def ocr_pages(row):
+    """The pages of ocr/<doc_id>.txt (tools/ocr.py, Qwen3-VL) when it was made from these very bytes, else None."""
+    f = ROOT / "ocr" / (row["id"] + ".txt")
+    if not f.exists():
+        return None
+    head, _, body = f.read_text(encoding="utf-8").partition("\n")
+    sha = hashlib.sha256((ROOT / row["file"]).read_bytes()).hexdigest()
+    return body.split("\f") if head.startswith("#ocr sha256=%s " % sha) else None
 
 
 def docx_text(path):
@@ -226,6 +251,11 @@ def to_text(row, kind, conv):
             if len(text) < 3000 and ("Please wait" in text or is_xfa(path)):
                 t = xfa_text(path)
                 return (t, None, "xfa_template") if t else (text, pages, "xfa_form_no_text")
+            ocr = ocr_pages(row)
+            if ocr and len(ocr) == len(pages):                   # pages without a text layer take their OCR text
+                merged = [p if len(p.strip()) >= OCR_PAGE_MIN else o for p, o in zip(pages, ocr)]
+                if merged != pages:
+                    return "\n".join(merged), merged, "ocr"
             return text, pages, "ok" if len(text.strip()) > 200 else "scanned_or_empty"
         if kind == "docx":
             return docx_text(path), None, "ok"
@@ -838,7 +868,7 @@ def section_suffix(raw):
     return raw.upper(), raw.upper()
 
 
-def slice_sections(doc_id, text, regex, prefix, label_fmt, mode, sub_regex=RE_SUBSEC, max_jump=None):
+def slice_sections(doc_id, text, regex, prefix, label_fmt, mode, sub_regex=RE_SUBSEC, max_jump=None, heading_before=None, min_run=3):
     """English or Thai acts numbered "109.", "109B.", "Section 70 bis", "Article (45)": headings at the start of a line,
     numbers non-decreasing (a letter or bis/ter suffix after the same number), a drop in the number opening a new run
     (a table of contents comes first). The first run of at least three headings whose blocks hold real text is taken.
@@ -874,7 +904,7 @@ def slice_sections(doc_id, text, regex, prefix, label_fmt, mode, sub_regex=RE_SU
         cur.append(h)
         last = key
     runs.append(cur)
-    runs = [r for r in runs if len(r) >= 3]
+    runs = [r for r in runs if len(r) >= min_run]
     if not runs:
         return [], "none"
     ends = [r[0][0] for r in runs[1:]] + [len(lines)]
@@ -889,16 +919,19 @@ def slice_sections(doc_id, text, regex, prefix, label_fmt, mode, sub_regex=RE_SU
     again = [i for i, base in skipped if i > run[-1][0] and base == run[0][1]]
     if again:                                                # the same numbering starts over (a page that prints the part twice)
         end = min(end, again[0])
+    starts = [i - 1 if heading_before and i - 1 > (run[k - 1][0] if k else -1) and heading_before(lines[i - 1]) else i
+              for k, (i, _, _, _, _) in enumerate(run)]          # heading_before(line): a marginal heading printed above the number
     out = []
     for k, (i, base, suffix, no, rest) in enumerate(run):
-        stop = run[k + 1][0] if k + 1 < len(run) else end
-        block = lines[i:stop]
+        stop = starts[k + 1] if k + 1 < len(run) else end
+        block = lines[starts[k]:stop]
+        j = i - starts[k]                                      # the number line inside the block
         if sub_regex.match(rest or ""):                        # "109. (1) Where ..." : the first sub-section sits on the heading line
-            block = [block[0][:len(block[0]) - len(rest)].rstrip(), rest] + block[1:]
+            block = block[:j] + [block[j][:len(block[j]) - len(rest)].rstrip(), rest] + block[j + 1:]
         cid = "%s#%s%s" % (doc_id, prefix, no)
         out.append({"cite_id": cid, "doc_id": doc_id, "kind": "section", "label": label_fmt % no, "parent": "", "text": "\n".join(block)})
         sub, buf, seen = None, [], set()
-        for ln in block[1:]:
+        for ln in block[j + 1:]:
             m = sub_regex.match(ln)
             if m and re.fullmatch(r"\d{1,2}[A-Za-z]?", m.group(1)) and m.group(1) not in seen:
                 if sub is not None:
@@ -945,7 +978,94 @@ def slice_act(doc_id, text, jur):
     regex, prefix, fmt, mode, sub = {"my": (RE_SEC_EN, "s", "Section %s", "my_section", RE_SUBSEC),
                                      "th": (RE_SEC_TH, "s", "Section %s", "th_section", RE_SUBSEC),
                                      "ae": (RE_ART_AE, "a", "Article %s", "ae_article", RE_SUBSEC_AE)}[jur]
+    if jur == "my":
+        return slice_my(doc_id, text)
     return slice_sections(doc_id, text, regex, prefix, fmt, mode, sub)
+
+
+RE_MY_BILINGUAL = ("Nama dan permulaan kuat kuasa", "Citation and commencement")   # the first heading of each half
+RE_MY_MARGINAL = re.compile(r"^[A-Z][^.;:,—]{2,89}$")                                     # "Non-deduction of tax from dividend"
+
+
+def my_marginal(line):
+    """A section's marginal heading printed on the line before its number: short, no full stop, not upper case only."""
+    return bool(RE_MY_MARGINAL.match(line)) and not line.isupper() and not RE_SEC_EN.match(line) and not RE_SUBSEC.match(line)
+
+
+def slice_my(doc_id, text):
+    """Malaysian acts and orders. A bilingual order prints the Malay text, then the English one, each numbered from 1;
+    the half in the language of the document (lang en in doc.csv) gives <doc>#s4(1), the Malay half <doc>#ms.s4(1).
+    Sections, then the schedules after the last section (my_schedules). Checked (2026-11-07) on P.U. (A) 235/2022,
+    157/2024, 148/2025, 451/2024 and the Income Tax Act 1967 (as at 1 January 2026; the sample reprint as at 1 January 2019)."""
+    lines = text.splitlines()
+    starts = [next((i for i, ln in enumerate(lines) if ln.strip() == h), None) for h in RE_MY_BILINGUAL]
+    if None not in starts and starts[0] < starts[1]:
+        halves = [("ms.s", "\n".join(lines[:starts[1]]), "my_section_ms"), ("s", "\n".join(lines[starts[1]:]), "my_section")]
+    else:
+        halves = [("s", text, "my_section")]
+    out, mode = [], "none"
+    for prefix, part, m in halves:
+        got, gm = slice_sections(doc_id, part, RE_SEC_EN, prefix, "Section %s", m, RE_SUBSEC, heading_before=my_marginal,
+                                 min_run=2 if len(halves) == 2 else 3)   # a bilingual order may have two paragraphs only
+        if prefix == "s":
+            out, mode = got + out, gm
+            sch = my_schedules(doc_id, part)
+            if got and sch:
+                for c in got[-6:]:                           # the last section ran on into the first schedule's heading
+                    hit = RE_MY_SCH_START.search(c["text"])
+                    if hit:
+                        c["text"] = c["text"][:hit.start()].rstrip()
+                out += sch
+        else:
+            for c in got:
+                c["label"] = "Malay text " + c["label"]
+            out += got
+    return out, mode
+
+
+RE_MY_SCH = re.compile(r"^SCHEDULE\s+(\d{1,2}[A-Z]?)$")
+RE_MY_SCH_START = re.compile(r"\nSCHEDULE\s+\d{1,2}[A-Z]?\n\[Sections?\b")
+RE_MY_PART = re.compile(r"^PART\s+([IVXL]+)$")
+
+
+def my_schedules(doc_id, text):
+    """Schedules after the last section of a Malaysian act: a body heading 'SCHEDULE 1' is followed within three lines by
+    '[Section 6]' (the table of contents lists the headings alone); each schedule is split at 'PART I', 'PART II', and a
+    part (or a schedule without parts) into its numbered paragraphs '1.', '1A.', '12B. (1)' as sections are. The list of
+    amendments after the schedules is left out. Gives <doc>#sch1, <doc>#sch1.partI, <doc>#sch1.partI.2A(1),
+    <doc>#sch6.partI.12B. Checked (2026-11-07) on the Income Tax Act 1967 as at 1 January 2026 (my.ita1967.updated2026.en:
+    schedules 1-9 with 4A-4C and 7A-7B, 14 schedules, 777 clauses; the sample reprint as at 1 January 2019, 678)."""
+    lines = clean_lines(text)
+    heads = [i for i, ln in enumerate(lines) if RE_MY_SCH.match(ln) and any(x.startswith("[Section") for x in lines[i + 1:i + 4])]
+    if not heads:
+        return []
+    end = next((i for i in range(heads[-1], len(lines)) if lines[i].startswith("LIST OF AMENDMENTS")), len(lines))
+    end = next((i for i in range(end - 1, max(end - 15, heads[-1]), -1) if lines[i].startswith("LAWS OF MALAYSIA")), end)
+    out = []
+    for k, i in enumerate(heads):
+        no = RE_MY_SCH.match(lines[i]).group(1)
+        block = lines[i:heads[k + 1] if k + 1 < len(heads) else end]
+        sid = "%s#sch%s" % (doc_id, no)
+        out.append({"cite_id": sid, "doc_id": doc_id, "kind": "schedule", "label": "Schedule %s" % no, "parent": "", "text": "\n".join(block)})
+        parts, seen = [], set()
+        for j, ln in enumerate(block):                       # a part number seen again is a cross-reference line, not a heading
+            m = RE_MY_PART.match(ln)
+            if m and m.group(1) not in seen:
+                parts.append(j)
+                seen.add(m.group(1))
+        segments = [(RE_MY_PART.match(block[j]).group(1), block[j:parts[n + 1] if n + 1 < len(parts) else len(block)])
+                    for n, j in enumerate(parts)] or [("", block)]
+        for part, seg in segments:
+            pid = "sch%s.part%s" % (no, part) if part else "sch%s" % no
+            if part:
+                out.append({"cite_id": "%s#%s" % (doc_id, pid), "doc_id": doc_id, "kind": "part",
+                            "label": "Schedule %s Part %s" % (no, part), "parent": sid, "text": "\n".join(seg)})
+            paras, _ = slice_sections(doc_id, "\n".join(seg), RE_SEC_EN, pid + ".", "Schedule %s%s paragraph %%s" % (no, " Part " + part if part else ""), "my_schedule")
+            for c in paras:
+                c["parent"] = c["parent"] or "%s#%s" % (doc_id, pid)
+                c["kind"] = "schedule_" + c["kind"]          # not counted as sections of the act
+            out += paras
+    return out
 
 
 RE_SEC_ID = re.compile(r"^Pasal\s+(\d{1,3})([A-Z]{0,2})()$")       # Indonesian acts: "Pasal 26" alone on a line; "Pasal 26 ayat (1)" inside a sentence is a reference
@@ -971,6 +1091,24 @@ def slice_id(doc_id, text):
 RE_VN_ART = re.compile(r"^Điều\s+(\d{1,3})\s*\.\s*(.*)$")                                # Vietnamese laws and decrees: "Điều 4. Thu nhập được miễn thuế"
 RE_VN_HEAD = re.compile(r"^(Chương|Mục)\s+([IVXLC]+|\d+)\s*$")                                  # chapter / section headings between articles
 RE_VN_END = re.compile(r"^(Luật này được Quốc hội|Nơi nhận\s*:)")                                # the closing formula: signatures follow
+
+
+RE_VN_LAW_NO = re.compile(r"\b(\d{1,4}/\d{4}/[A-ZĐ0-9-]+)\b")
+
+
+def vn_one_law(text, title):
+    """A gazette issue (Công báo) prints several laws: keep the law whose number the title gives, from its line
+    'Luật số: 109/2025/QH15' to the next 'Luật số:' line. A file holding one law is returned as it is."""
+    m = RE_VN_LAW_NO.search(title)
+    lines = text.splitlines()
+    starts = [i for i, ln in enumerate(lines) if re.match(r"^\s*(Luật|Nghị quyết|Nghị định)\s+số\s*:", ln.strip())]
+    if not m or len(starts) < 2:
+        return text
+    mine = [i for i in starts if m.group(1) in lines[i]]
+    if not mine:
+        return text
+    nxt = [i for i in starts if i > mine[0]]
+    return "\n".join(lines[mine[0]:nxt[0] if nxt else len(lines)])
 
 
 def slice_vn(doc_id, text):
@@ -1039,7 +1177,16 @@ def slice_in(doc_id, text):
     regex = RE_SEC_IN_TAB if sum(1 for ln in lines if RE_IN_TAB_STYLE.match(ln)) > 50 else RE_SEC_IN   # the 2025 typesetting
     if regex is RE_SEC_IN_TAB:
         lines = promote_in_headings(lines)
-    return slice_sections(doc_id, "\n".join(lines), regex, "s", "Section %s", "in_section", RE_SUBSEC_IN, max_jump=30)
+    return slice_sections(doc_id, "\n".join(lines), regex, "s", "Section %s", "in_section", RE_SUBSEC_IN, max_jump=30,
+                          heading_before=in_title if regex is RE_SEC_IN_TAB else None)
+
+
+RE_IN_TITLE = re.compile(r"^[A-Z][^\t.;:]{2,150}\.$")                  # "Tax on income of certain domestic companies."
+
+
+def in_title(line):
+    """2025 typesetting: the section's title on the line before its number joins that section, not the one before."""
+    return bool(RE_IN_TITLE.match(line)) and not RE_SEC_IN_TAB.match(line)
 
 
 JP_BLOCKS = {"Paragraph", "Item", "Subitem1", "Subitem2", "Subitem3", "TableRow", "ListSentence", "Sublist1Sentence", "Sublist2Sentence"}
@@ -1254,6 +1401,61 @@ def slice_kr(doc_id, raw):
     return out, "kr_article" if out else "none"
 
 
+RE_KR_PDF_ART = re.compile(r"^제(\d+)조(?:의(\d+))?(\(|\s+삭제)")      # "제4조(소득의 구분) ① ...", "제5조 삭제 <2010. 12. 27.>"
+RE_KR_PDF_PARA = re.compile(r"^([①-⑳])")
+RE_KR_PDF_HEAD = re.compile(r"^법제처\s+\d+\s*$")                          # the print's page header: "법제처   12", then the act's name
+RE_KR_PDF_END = re.compile(r"^\s*부칙\s*(<|$)")                            # addenda: numbering starts again
+
+
+def slice_kr_pdf(doc_id, text):
+    """Korean acts printed from law.go.kr as PDF: the same ids as the XML slicer (제98조의2 → #98-2, ① → #98-2.1 when the
+    article has more than one paragraph); the page header ('법제처 N' and the act's name on the next line) is left out,
+    deleted articles ('제5조 삭제') are dropped, the addenda (부칙) are not sliced, numbers never go back. Tables of the
+    print have no text layer (the rate tables of 소득세법 §55, 법인세법 §55 are not in the text). Written on 소득세법 and
+    법인세법 as at 2026-07-01 (kr.income-tax-act.20260701.ko, kr.corporate-tax-act.20260701.ko, 2026-11-07):
+    법인세법 gives 181 articles and 642 paragraphs, the same as the XML slicer on the act's XML."""
+    lines, skip = [], False
+    for ln in text.splitlines():
+        s = ln.strip()
+        if skip:
+            skip = False
+            continue
+        if RE_KR_PDF_HEAD.match(s):
+            skip = True
+            continue
+        if RE_KR_PDF_END.match(s):
+            break
+        if s:
+            lines.append(s)
+    heads, last = [], (0, 0)
+    for i, s in enumerate(lines):
+        m = RE_KR_PDF_ART.match(s)
+        if m and (int(m.group(1)), int(m.group(2) or 0)) > last:
+            last = (int(m.group(1)), int(m.group(2) or 0))
+            heads.append((i, "%s%s" % (m.group(1), "-" + m.group(2) if m.group(2) else ""), m.group(3).strip() == "삭제"))
+    out = []
+    for k, (i, key, deleted) in enumerate(heads):
+        block = lines[i:heads[k + 1][0] if k + 1 < len(heads) else len(lines)]
+        if deleted:
+            continue
+        label = "제%s조" % key.replace("-", "조의") if "-" in key else "제%s조" % key
+        cid = "%s#%s" % (doc_id, key)
+        out.append({"cite_id": cid, "doc_id": doc_id, "kind": "article", "label": label, "parent": "", "text": "\n".join(block)})
+        paras, cur = [], None
+        for ln in block:
+            m = RE_KR_PDF_PARA.match(ln) or (RE_KR_PDF_PARA.match(ln.split(")", 1)[1].strip()) if ln is block[0] and ")" in ln else None)
+            if m:
+                cur = [ln if ln is not block[0] else ln.split(")", 1)[1].strip()]
+                paras.append((ord(m.group(1)) - ord("①") + 1, cur))
+            elif cur is not None:
+                cur.append(ln)
+        if len(paras) > 1:
+            for n, pl in paras:
+                out.append({"cite_id": "%s.%d" % (cid, n), "doc_id": doc_id, "kind": "paragraph", "label": "%s제%d항" % (label, n),
+                            "parent": cid, "text": "\n".join(pl)})
+    return out, "kr_pdf_article" if len(heads) >= 3 else "none"
+
+
 def xml_text(row):
     """Text layer of an XML document: the sliced article text for e-Gov (jp.) and law.go.kr (kr.) files, all text otherwise."""
     raw = (ROOT / row["file"]).read_bytes()
@@ -1375,6 +1577,10 @@ def slice_doc(row, text, pages):
         out, mode = slice_kr(doc_id, raw)
         if out:
             return out, mode
+    if jur == "kr" and kind == "pdf" and statute:                                      # law.go.kr act printed as PDF
+        out, mode = slice_kr_pdf(doc_id, text)
+        if mode != "none":
+            return out, mode
     if jur == "jp" and kind in ("html", "htm"):                                        # NTA circulars
         out, mode = slice_jp_tsutatsu(doc_id, text)
         if out:
@@ -1384,7 +1590,7 @@ def slice_doc(row, text, pages):
         if out:
             return out, mode
     if jur == "vn" and statute:                                                        # Vietnamese laws and decrees by Điều
-        out, mode = slice_vn(doc_id, text)
+        out, mode = slice_vn(doc_id, vn_one_law(text, row.get("title") or ""))
         if out:
             return out, mode
     if jur == "in" and statute:                                                        # Indian acts by section
@@ -1507,6 +1713,22 @@ def check_docs(docs, codes, errors, warnings):
             by_hash[sha] = rid
 
 
+SHELL_CHARS = 300                     # a law or regulation page with fewer characters of text is a script-filled shell
+
+
+def check_whole_citations(rows, docs, warnings):
+    """A law, regulation or treaty is cited by provision: a citation of the whole text (#all) or of a page (#p3) is
+    listed, unless session_log.md records '<doc_id> sliced as whole' or '... as page' (§4.3)."""
+    log = (ROOT / "session_log.md").read_text(encoding="utf-8") if (ROOT / "session_log.md").exists() else ""
+    types = {d["id"]: d["type"] for d in docs}
+    for r in rows:
+        doc, _, part = (r.get("cite_id") or "").partition("#")
+        if types.get(doc) in ("law", "regulation", "treaty") and re.fullmatch(r"all|p\d+", part) \
+                and not re.search(re.escape(doc) + r" sliced as (whole|page)", log):
+            warnings.append("%s cites %s#%s: a %s is cited by provision; fix the slicer or record '%s sliced as whole/page' "
+                            "in session_log.md (§4.3)" % (r.get("param_id") or r.get("id"), doc, part, types[doc], doc))
+
+
 def check_quotes(kind, rows, id_key, clause_text, errors):
     for p in rows:
         cid = p.get("cite_id", "")
@@ -1515,7 +1737,8 @@ def check_quotes(kind, rows, id_key, clause_text, errors):
         elif not (p.get("quote") or "").strip():
             errors.append("%s %s: quote empty" % (kind, p.get(id_key)))
         elif norm(p["quote"]) not in norm(clause_text[cid]):
-            errors.append("%s %s: quote not found verbatim in %s" % (kind, p.get(id_key), cid))
+            errors.append("%s %s: quote not found verbatim in %s (copy it from: python database/tools/find.py --cite %s)"
+                          % (kind, p.get(id_key), cid, cid))
 
 
 def check_params(params, codes, currencies, clause_text, errors, docs=()):
@@ -1696,8 +1919,11 @@ def slice_all(docs, errors, warnings, write_text):
         for r in live:
             text, pages, status = to_text(r, r["real_kind"], conv)
             r["text_status"] = status
-            if status not in ("ok", "xfa_template"):
+            if status not in ("ok", "xfa_template", "ocr"):
                 errors.append("doc %s: no text (%s)" % (r["id"], status))
+            elif r["real_kind"] in ("html", "htm") and r["type"] in ("law", "regulation") and len(re.sub(r"\s", "", text)) < SHELL_CHARS:
+                errors.append("doc %s: the page holds %d characters only, a shell a script fills in the browser; register the "
+                              "law itself (an official PDF or XML interface, §4.1)" % (r["id"], len(re.sub(r"\s", "", text))))
             if text and arabic_garbled(text):
                 errors.append("doc %s: Arabic text layer garbled (letters reversed or missing); register the page of "
                               "uaelegislation.gov.ae or another source whose text copies correctly" % r["id"])
@@ -1775,6 +2001,7 @@ def main():
     check_params(t["param"], codes, {j["currency"] for j in all_juris if j.get("currency")}, clause_text, errors, t["doc"])
     check_decisions(t["decision"], codes, clause_text, errors)
     check_treaties(t["treaty"], codes, all_doc_ids, errors)
+    check_whole_citations(t["param"] + t["decision"], docs, warnings)
     cat_gaps = coverage_categories(docs, t["decision"], t["jurisdiction"])
     slot_gaps = coverage_slots(t["param"], t["decision"], t["jurisdiction"])
     missing_pairs = [p for p in missing_pairs_of(t["treaty"], all_juris)
@@ -1795,9 +2022,9 @@ def main():
 
     write_csv(ROOT / "clause.csv", TABLES["clause"], clauses)
     files = []
-    for folder in ("raw", "text"):
+    for folder in ("raw", "ocr", "text"):
         for f in sorted((ROOT / folder).rglob("*")) if (ROOT / folder).exists() else []:
-            if f.is_file():
+            if f.is_file() and not any(x.startswith(".") for x in f.relative_to(ROOT).parts):   # ocr/.parts: a run in progress
                 b = f.read_bytes()
                 files.append({"path": f.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(b).hexdigest(), "bytes": len(b)})
     write_csv(ROOT / "files.csv", TABLES["files"], files)
