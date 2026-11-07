@@ -173,3 +173,12 @@ cases/<case_id>/
 ## 8. 不做
 
 不做读（宿主 Read / Glob / Grep）；不做日志（宿主钩子）；不做搜索与联网；不做税务判断；不改另外三层的任何文件；不替 Agent 合并底稿；不给客户直接访问（客户界面是 UI 层的事）。
+
+## 变更（2026-11-06）：取消润色环节
+
+- `write_review`：`which` 为 intake、draft、legal_draft；draft 和 legal_draft 的通过记号改为 `DELIVERABLE`（旧的 `POLISHABLE` 仍按通过读）；`final`、`legal_final` 只为旧案卷保留。REVISE 必须有至少一条写明问题的条目；再核时只引用未改动行且上次未退回的 REVISE 被拒收。核对单可带 ```replacements 块（JSON 列表 `[{"old", "new"}]`），由程序 `apply_replacements` 改进草稿，这类核对单判 DELIVERABLE。
+- `render_pdf`：分析身份和程序可调；从 `briefing.md` 生成客户副本（展开 `{{block:...}}`，删去含案号或 run_id 的行，写成 `briefing.polished.md`）并排版；`report_check(target=draft, text_only=true)` 有问题时拒绝排版。
+- `report_check(target=draft)`：加查流程图块、口语标签、优化层用语、长句、PDF 是否最新与正文页数（5 到 10 页）。
+- `bug_append`：`affects_result=true` 必须带 `effect`（本案哪个数或排名从什么变成什么），否则拒收；本案结果不变的建模缺口标 false。
+- 程序专用：`apply_replacements(case_id, run_id)`、`autofix_draft(case_id, run_id)`、`client_copy(rd, case_id, run_id)`。
+- 状态：`polished` 不再出现；`delivered` = 复核两线通过且 `briefing.pdf` 比草稿和核对单都新。

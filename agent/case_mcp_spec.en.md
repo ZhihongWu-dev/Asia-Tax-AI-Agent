@@ -175,3 +175,12 @@ Read isolation (analysis does not read old rounds, review does not read analysis
 ## 8. Not done
 
 No reading (host Read / Glob / Grep); no logging (host hook); no search or internet access; no tax judgments; no changes to any file of the other three layers; no merging of working papers on the agents' behalf; no direct client access (the client interface is the UI layer's business).
+
+## Change (2026-11-06): no polish stage
+
+- `write_review`: `which` is intake, draft or legal_draft; the pass token of draft and legal_draft is `DELIVERABLE` (the old `POLISHABLE` is still read as a pass); `final` and `legal_final` remain for old cases only. A REVISE needs at least one Problem entry that states a problem; on a re-check a REVISE citing only unchanged lines that the previous checklist did not raise is refused. A checklist may carry a ```replacements block (a JSON list `[{"old", "new"}]`), which the program applies to the draft with `apply_replacements`; such a checklist says DELIVERABLE.
+- `render_pdf`: open to the analysis identity and the program; builds the client copy from `briefing.md` (markers `{{block:...}}` expanded, lines carrying the case id or run id removed, written as `briefing.polished.md`) and typesets it; refused while `report_check(target=draft, text_only=true)` reports problems.
+- `report_check(target=draft)`: also tests the flow block, spoken lead-ins, the optimizer's vocabulary, long sentences, and a current PDF with a body of 5 to 10 pages.
+- `bug_append`: `affects_result=true` requires `effect` (which figure or ranking of this case changes, from what to what), else refused; a modelling gap that leaves this case's figures as they are is false.
+- Program only: `apply_replacements(case_id, run_id)`, `autofix_draft(case_id, run_id)`, `client_copy(rd, case_id, run_id)`.
+- Status: `polished` no longer occurs; `delivered` = both review lanes passed and `briefing.pdf` newer than the draft and the checklists.

@@ -45,19 +45,17 @@ AGENTS_JSON = PROJECT / ".claude" / "agents.json"
 MCP_DIR = PROJECT / ".claude" / "mcp"
 BASE_URL = "https://token-plan.cn-beijing.maas.aliyuncs.com/apps/anthropic"
 FAST_MODEL = "qwen3.8-flash"
-MODELS = {"front": "qwen3.8-flash", "analysis": "qwen3.8-flash", "polish": "qwen3.8-flash", "review": "qwen3.8-flash"}   # 2026-11-03: all on flash (quick comparison)
-MAX_TURNS = {"analysis": 150, "polish": 90, "review": 80}
-NODE_LIMIT = 4                                         # runs of one node inside one `run`
+MODELS = {"front": "qwen3.8-flash", "analysis": "qwen3.8-flash", "review": "qwen3.8-flash"}   # 2026-11-03: all on flash; 2026-11-06: no polish agent
+MAX_TURNS = {"analysis": 150, "review": 80}
+NODE_LIMIT = 6                                         # runs of one node inside one `run` (2026-11-05: 4 stopped a trial one wording fix short; a run past the limit is resumed by a person)
 NODE_TIMEOUT = 10800                                   # seconds; a guard against a hang, since a full analysis can take over an hour
 RECURSION_LIMIT = 60
 STREAM_FLAGS = ["--output-format", "stream-json", "--verbose", "--include-partial-messages"]
-NODE_AGENT = {"review_intake": "review", "analysis": "analysis", "review_draft": "review", "polish": "polish", "review_final": "review"}
+NODE_AGENT = {"review_intake": "review", "analysis": "analysis", "review_draft": "review"}   # 2026-11-06: the reviewed draft is the client report; the program renders it
 TASKS = {
     "review_intake": "Check the intake package of case {case_id}.",
-    "analysis": "Write the briefing draft for case {case_id}, run {run_id}.",
+    "analysis": "Write the client report (the briefing) for case {case_id}, run {run_id}, and render its PDF.",
     "review_draft": "Check the briefing draft of case {case_id}, run {run_id}.",
-    "polish": "Polish the reviewed draft of case {case_id}, run {run_id} and produce the PDF.",
-    "review_final": "Compare the polished report with the draft of case {case_id}, run {run_id}.",
 }
 REVISE_TASKS = {
     "analysis": " Mode: revise against run {base}; see {case_id}/report/{run_id}/impact.json. Start from report/{base}/briefing.md and briefing.sources.json, "
@@ -67,19 +65,16 @@ REVISE_TASKS = {
     "review_draft": " Mode: revised edition against run {base}; see {case_id}/report/{run_id}/impact.json. Check the sections and stale sentences it lists, the "
                     "changes note and every figure; read the carried parts only for contradictions with the changes. If the edition cannot stand as a revision, "
                     "write REWRITE: full on the line before RETURN: analysis.",
-    "polish": " Mode: revised edition against run {base}. Sections of the draft that are unchanged from report/{base}/briefing.md keep their wording from "
-              "report/{base}/briefing.polished.md verbatim; polish only the other sections.",
-    "review_final": " Mode: revised edition against run {base}. Compare only the sections that changed from the last edition; the others must be word for word "
-                    "those of report/{base}/briefing.polished.md.",
 }
-LANES = {"review_draft": ("review_legal", "legal_draft", "draft"), "review_final": ("review_final_legal", "legal_final", "polished")}
+LANES = {"review_draft": ("review_legal", "legal_draft", "draft")}
 LANE_AGENT = {lane: "review" for lane, _, _ in LANES.values()}       # the legal-reasoning lane: the review identity with its own stage
 LANE_TASK = ("Check the legal reasoning of the {what} of case {case_id}, run {run_id}. The program's extract is {extract}: {n} sentences that state "
              "a legal reason, each with the sources rows, provisions, rules, parameters and decisions it rests on. Save your checklist with "
              "write_review(which={which}).")
 LANE_RECHECK = (" This is a re-check: the extract holds only the sentences on lines changed since your last checklist ({last}); check those and "
                 "whether the items you sent back are fixed.")
-LANE_FINAL = " The extract holds only the sentences of the polished report that are not word for word in the draft: check that polish kept each reason intact."
+FINDING_LABEL = re.compile(r"(?i)^\s*(?:[-*]\s*)?(?:\d+\.\s*)?\**\s*(location|category|problem|evidence|suggestion|位置|类别|问题|证据|建议)\s*\**\s*[:：]")
+FINDINGS_CAP = 6000                                     # characters of checklist findings carried into a return task
 REWRITE = re.compile(r"(?m)^\s*REWRITE:\s*full\s*$")
 SECTIONED = False                                      # the analysis node drafts in parts (spec §10); False = one agent writes the whole draft
 WORKER_TASK = ("Write {parts} of the briefing draft for case {case_id}, run {run_id}. You are one of several section writers working at the same time: "
@@ -103,13 +98,12 @@ INTEGRATOR_REVISE = (" This is a revised edition against run {base}: the program
                      "impact.json and the intake only; check the carried parts against this run's products and correct with edit_section what no "
                      "longer holds. If the carried text cannot be reconciled with the new facts, record the line REWRITE: full with notes_append and stop.")
 LEGAL = {
-    "dispatch": ("review_intake", "run", "analysis", "review_draft", "polish", "review_final"),
+    "dispatch": ("review_intake", "run", "analysis", "review_draft", "render"),
     "review_intake": ("run",),
     "run": ("analysis",),
     "analysis": ("analysis", "review_draft"),
-    "review_draft": ("analysis", "polish"),
-    "polish": ("analysis", "polish", "review_final"),
-    "review_final": ("analysis", "polish"),
+    "review_draft": ("analysis", "render"),
+    "render": ("analysis",),                           # the program's render step: replacements applied, PDF made, delivered; a failed check goes back
 }
 RATE_LIMIT = re.compile(r"(?i)\b429\b|rate.?limit|too many requests|usage limit|quota")
 NETWORK = re.compile(r"(?i)ECONNRESET|ETIMEDOUT|ENOTFOUND|socket hang up|fetch failed|connection error|\b50[234]\b")
@@ -349,7 +343,24 @@ def info(case_id):
 
 
 def self_check(case_id, run_id, target):
+    if target == "draft":                                  # 2026-11-06: what the program can settle itself is not sent back
+        fixes = case().autofix_draft(case_id, run_id).get("fixes") or []
+        for f in fixes:
+            say("%s: autofix: %s" % (case_id, f))
     return case().report_check(case_id, run_id, target).get("problems", [])
+
+
+def checklist_findings(paths):
+    """The findings of the checklists (location, problem, evidence, suggestion lines), for the author's return task."""
+    out = []
+    for p in paths:
+        if not Path(p).exists():
+            continue
+        lines = [l.rstrip() for l in Path(p).read_text(encoding="utf-8", errors="replace").splitlines() if FINDING_LABEL.match(l)]
+        if lines:
+            out.append("%s:\n%s" % (Path(p).name, "\n".join(lines)))
+    text = "\n".join(out)
+    return text[:FINDINGS_CAP] + ("\n..." if len(text) > FINDINGS_CAP else "")
 
 
 def intake_gate(case_id):
@@ -370,9 +381,7 @@ def outputs(node, case_id, run_id):
     rd = CASES / case_id / "report" / str(run_id)
     return {"review_intake": [CASES / case_id / "intake" / "review_intake.md"],
             "analysis": list(draft_files(rd)),
-            "review_draft": [rd / "review.md"],
-            "polish": list(report_files(rd)),
-            "review_final": [rd / "review_final.md"]}[node]
+            "review_draft": [rd / "review.md"]}[node]
 
 
 def reviewed_files(node, case_id, run_id):
@@ -435,10 +444,6 @@ def light_intake(case_id, cur):
 
 def stamps(paths):
     return [p.stat().st_mtime if p.exists() else 0 for p in paths]
-
-
-def issues_file(case_id, cur):
-    return CASES / case_id / "notes" / "polish" / ("round-%s" % cur["round"]) / "issues.md"
 
 
 def log_row(case_id, **row):
@@ -542,10 +547,6 @@ READ_NOTE = (" Before anything else read the prefetch pack %s: it holds what thi
              "get, expand) rather than reading whole product files. The case's files: %s.")
 
 
-POLISH_NOTE = (" Before anything else read the prefetch pack %s: the files you work from, the program tables the draft's markers stand for, "
-               "what report_check tests and the diagram format. You need nothing else from the system: do not read its code or specifications.")
-
-
 def read_hint(case_id, node):
     """The pack of `node` and the case's file list, for the task text."""
     agent = NODE_AGENT.get(node, "analysis")
@@ -554,8 +555,7 @@ def read_hint(case_id, node):
         made = r.pack(case_id, node)
         if made.get("error"):
             raise RuntimeError(made["detail"])
-        note = (POLISH_NOTE % relative(made["path"]) if node == "polish" else
-                READ_NOTE % (relative(made["path"]), pack_mod.inventory(r, case_id)))
+        note = READ_NOTE % (relative(made["path"]), pack_mod.inventory(r, case_id))
         rnd = info(case_id).get("round")
         books = sorted((CASES / case_id / "notes" / agent / ("round-%s" % rnd)).glob("*.md"))
         if books:                                               # what this round's notebooks already hold, so they are not reread whole
@@ -573,36 +573,27 @@ def lane_prepare(node, case_id, cur):
     run_id = cur.get("run_id")
     rd = CASES / case_id / "report" / str(run_id)
     (rd / ".lanes").touch()
-    md = rd / ("briefing.md" if target == "draft" else "briefing.polished.md")
-    last = rd / ("review_legal.md" if which == "legal_draft" else "review_final_legal.md")
+    md = rd / "briefing.md"
+    last = rd / "review_legal.md"
     lines, recheck = None, False
-    if target == "draft":
-        snap = CASES / case_id / "log" / "reviewed" / "review_draft"
-        mark = snap / "round.txt"
-        same_run = (snap / "run.txt").exists() and (snap / "run.txt").read_text(encoding="utf-8") == str(run_id)
-        if last.exists() and same_run and mark.exists() and mark.read_text(encoding="utf-8") == str(cur.get("round")) and (snap / "briefing.md").exists():
-            lines = reasons_mod.changed_lines((snap / "briefing.md").read_text(encoding="utf-8"), md.read_text(encoding="utf-8"))
-            recheck = True
-    else:
-        text = md.read_text(encoding="utf-8")
-        same = reasons_mod.unchanged_from((rd / "briefing.md").read_text(encoding="utf-8"), text)
-        lines = set(range(1, len(text.splitlines()) + 1)) - same
+    snap = CASES / case_id / "log" / "reviewed" / "review_draft"
+    mark = snap / "round.txt"
+    same_run = (snap / "run.txt").exists() and (snap / "run.txt").read_text(encoding="utf-8") == str(run_id)
+    if last.exists() and same_run and mark.exists() and mark.read_text(encoding="utf-8") == str(cur.get("round")) and (snap / "briefing.md").exists():
+        lines = reasons_mod.changed_lines((snap / "briefing.md").read_text(encoding="utf-8"), md.read_text(encoding="utf-8"))
+        recheck = True
     path, n = reasons_mod.build(case_id, run_id, target, lines, cases_root=CASES)
     if n == 0 and (not recheck or case_mod_passed(last, which)):
-        why = ("no sentence stating a legal reason changed" if recheck else "no sentence of the draft states a legal reason" if target == "draft"
-               else "no sentence of the report states a legal reason the draft did not already state")
-        content = ("# Legal-reasoning check (carried by the program)\n\n%s since %s; nothing to check.\n\n%s\n" %
-                   (why[0].upper() + why[1:], "the last passed checklist" if recheck else "the draft review", "POLISHABLE" if which == "legal_draft" else "DELIVERABLE"))
+        why = "no sentence stating a legal reason changed" if recheck else "no sentence of the draft states a legal reason"
+        content = ("# Legal-reasoning check (carried by the program)\n\n%s since %s; nothing to check.\n\nDELIVERABLE\n" %
+                   (why[0].upper() + why[1:], "the last passed checklist" if recheck else "the draft review"))
         if last.exists():
             shutil.copyfile(last, last.with_name(last.name + ".prev"))
         last.write_text(content, encoding="utf-8")
         return None, why
-    task = LANE_TASK.format(what="briefing draft" if target == "draft" else "polished report", case_id=case_id, run_id=run_id,
-                            extract=relative(path), n=n, which=which)
+    task = LANE_TASK.format(what="briefing draft", case_id=case_id, run_id=run_id, extract=relative(path), n=n, which=which)
     if recheck:
         task += LANE_RECHECK.format(last=relative(last))
-    elif target == "polished":
-        task += LANE_FINAL
     return task, lane
 
 
@@ -669,11 +660,10 @@ def decide(state):
     elif st == "ran":
         node = "analysis"
     elif st == "reviewed":
-        node = "polish"
+        node = "render"
     else:
-        target, author, reviewer = ("draft", "analysis", "review_draft") if st == "drafted" else ("polished", "polish", "review_final")
-        problems = self_check(case_id, run_id, target)
-        node, reason = (author, "self-check problems: " + "; ".join(problems)) if problems else (reviewer, "")
+        problems = self_check(case_id, run_id, "draft")
+        node, reason = ("analysis", "self-check problems: " + "; ".join(problems)) if problems else ("review_draft", "")
     if (state.get("counts") or {}).get(node, 0) >= NODE_LIMIT:
         return {"next": "end", "stop": "revision_limit", "detail": "%s has run %d times; last reason: %s" % (node, NODE_LIMIT, reason)}
     return {"next": node, "reason": reason, "redo": ""}
@@ -705,14 +695,17 @@ def agent_node(node):
         cur = info(case_id)
         files = outputs(node, case_id, cur.get("run_id"))
         before = stamps(files)
-        issues = issues_file(case_id, cur)
-        issues_before = issues.stat().st_size if issues.exists() else 0
         task = TASKS[node].format(case_id=case_id, run_id=cur.get("run_id"))
         mode = mode_of(case_id, cur.get("run_id")) if node != "review_intake" else {"level": "full"}
         if mode["level"] == "revise" and node in REVISE_TASKS:
             task += REVISE_TASKS[node].format(case_id=case_id, run_id=cur.get("run_id"), base=mode["base"])
         if state.get("reason"):
             task += " Revision %s. Reason: %s" % (cur.get("revision", 0), state["reason"])
+            if node == "analysis" and "self-check" not in state["reason"]:      # the findings themselves, so the author applies rather than re-derives
+                rd = CASES / case_id / "report" / str(cur.get("run_id"))
+                found = checklist_findings([rd / "review.md", rd / "review_legal.md"])
+                if found:
+                    task += " The findings, each with its location and the suggested wording; change those sentences and nothing else:\n" + found
         changes = changes_since_review(node, case_id, cur) if node in ("review_intake", "review_draft") else None
         if changes:
             task += " This is a re-check: %s holds the difference from what you last checked. Check those changes and the items you sent back; do not reopen what has not changed." % changes
@@ -727,8 +720,7 @@ def agent_node(node):
                 run_input(case_id)                              # the program's input file follows the package the review reads
             except (OSError, ValueError) as e:
                 say("%s: run_input not refreshed: %s" % (case_id, e))
-        if node in ("review_intake", "analysis", "review_draft", "review_final", "polish"):
-            task += read_hint(case_id, node)
+        task += read_hint(case_id, node)
         step = bump(state, node)
         attempt = step["counts"][node]
         say("%s: %s, attempt %d" % (case_id, node, attempt))
@@ -770,13 +762,9 @@ def agent_node(node):
                     result = {**result, "failure": "agent_failed", "detail": "%s finished without updating %s" % (LANES[node][0], lane_file.name)}
         row.update(session_id=result.get("session_id"), turns=result.get("turns"), seconds=round(time.time() - began))
         state = {**state, **step, "reason": "", "redo": ""}
-        grew = issues.exists() and issues.stat().st_size > issues_before
         if result["failure"] in ("rate_limited", "network", "agent_failed"):
             stop = "agent_failed" if result["failure"] == "network" else result["failure"]
             state.update(stop=stop, detail="%s: %s" % (node, result["detail"]))
-        elif node == "polish" and grew and stamps(files)[2] == before[2]:
-            text = issues.read_text(encoding="utf-8", errors="replace")
-            state.update(redo="analysis", reason="polish issues: " + text[issues_before:].strip())
         elif stamps(files) == before and case().open_defects(case_id):          # it found a defect below it and stopped, as it should
             state.update(stop="system_defect", detail="open bugs that affect the result: " + ", ".join(case().open_defects(case_id)))
         elif stamps(files) == before:
@@ -816,11 +804,44 @@ def run_node(state):
     return state
 
 
+def render_node(state):
+    """The program's last step (2026-11-06): the reviewers' replacements applied, the client copy rendered to PDF, the draft checked once
+    more with the fresh PDF; a check that fails sends the author the problems, a render that fails stops the run."""
+    case_id = state["case_id"]
+    cur = info(case_id)
+    run_id = cur.get("run_id")
+    say("%s: render" % case_id)
+    row = dict(node="render", agent="program", round=cur.get("round"), revision=cur.get("revision", 0), status_before=cur.get("status"))
+    log_row(case_id, event="start", **row)
+    began = time.time()
+    state = {**state, **bump(state, "render"), "reason": "", "redo": ""}
+    done = case().apply_replacements(case_id, run_id)
+    if done.get("applied"):
+        say("%s: %d replacement(s) applied from the checklists" % (case_id, done["applied"]))
+    if done.get("failed"):
+        state.update(redo="analysis", reason="replacements the program could not apply (sentence not found once): " + "; ".join(done["failed"][:6]))
+    else:
+        made = case().render_pdf(case_id, run_id)
+        if made.get("error") == "conflict":                # the text fails a check (a replacement can leave a long sentence): the author fixes it
+            state.update(redo="analysis", reason="self-check problems after the reviewers' replacements: " + str(made.get("detail")).replace("fix the text first, nothing was rendered: ", ""))
+        elif made.get("error"):
+            state.update(stop="agent_failed", detail="render: %s" % made.get("detail"))
+        else:
+            problems = self_check(case_id, run_id, "draft")
+            if problems:
+                state.update(redo="analysis", reason="self-check problems: " + "; ".join(problems))
+    state = advance(state, "render")
+    row.update(seconds=round(time.time() - began), applied=done.get("applied", 0), status_after=info(case_id).get("status"), stop=state.get("stop", ""))
+    log_row(case_id, event="end", **row)
+    return state
+
+
 def build_graph():
     from langgraph.graph import END, START, StateGraph
     g = StateGraph(Flow)
     g.add_node("dispatch", dispatch_node)
     g.add_node("run", run_node)
+    g.add_node("render", render_node)
     for node in NODE_AGENT:
         g.add_node(node, agent_node(node))
     g.add_edge(START, "dispatch")

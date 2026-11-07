@@ -15,6 +15,7 @@ import os
 import re
 import shutil
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -31,10 +32,15 @@ INTAKE_NAMES = ("facts", "sources", "answers", "notes", "constraints", "handoff"
 INTAKE_FILES = {"facts": "facts.json", "sources": "sources.json", "answers": "answers.json", "notes": "notes.md",
                 "constraints": "constraints.json", "handoff": "handoff.md"}
 DIRTY_NAMES = ("facts", "sources", "answers", "notes", "constraints")   # everything stage 1 reviews; the handoff is not reviewed
-VERDICTS = {"intake": ("RUNNABLE", "REVISE"), "draft": ("POLISHABLE", "REVISE"), "final": ("DELIVERABLE", "REVISE"),
-            "legal_draft": ("POLISHABLE", "REVISE"), "legal_final": ("DELIVERABLE", "REVISE")}   # legal_*: the legal-reasoning lane (orchestration spec §12)
-RETURNS = {"draft": ("analysis", "front"), "final": ("polish", "analysis", "front"),
-           "legal_draft": ("analysis",), "legal_final": ("polish", "analysis")}   # who a REVISE checklist may send the case back to
+VERDICTS = {"intake": ("RUNNABLE", "REVISE"), "draft": ("DELIVERABLE", "REVISE"), "legal_draft": ("DELIVERABLE", "REVISE"),
+            "final": ("DELIVERABLE", "REVISE"), "legal_final": ("DELIVERABLE", "REVISE")}   # legal_*: the legal-reasoning lane; final/legal_final: the polish stage, removed 2026-11-06 (old cases only)
+LEGACY_PASS = {"draft": "POLISHABLE", "legal_draft": "POLISHABLE"}        # the pass token of draft checklists written before 2026-11-06
+RETURNS = {"draft": ("analysis", "front"), "legal_draft": ("analysis",),
+           "final": ("polish", "analysis", "front"), "legal_final": ("polish", "analysis")}   # who a REVISE checklist may send the case back to
+REPLACEMENTS = re.compile(r"```replacements\s*\n(.*?)\n```", re.S)        # a reviewer's fix-to-order list: [{"old": ..., "new": ...}]
+PROBLEM_LINE = re.compile(r"(?im)^\s*(?:[-*]\s*)?\**\s*(?:problem|问题)\s*\**\s*[:：]\s*\**\s*(.*)$")
+NO_PROBLEM = re.compile(r"(?i)^(none|no\b|nothing|not found|n/a|无|没有|未发现|-\s*$)")
+LINE_REF = re.compile(r"(?i)\blines?\s+(\d+)|第\s*(\d+)\s*行")
 CHECKLISTS = {"draft": "review.md", "final": "review_final.md", "legal_draft": "review_legal.md", "legal_final": "review_final_legal.md"}
 PARTS = (("策略思路", "strategy"), ("现状", "current state"), ("备选方案", "alternatives"),
          ("最优方案", "optimal"), ("税负比较", "tax comparison"), ("条件与要求", "requirements"), ("执行", "implementation"))
@@ -89,7 +95,34 @@ def verdict_of(text, which):
     for v in VERDICTS[which]:
         if line.upper().endswith(v):
             return v
+    if which in LEGACY_PASS and line.upper().endswith(LEGACY_PASS[which]):
+        return VERDICTS[which][0]
     return None
+
+
+def replacements_of(text):
+    """The fix-to-order list of a checklist (a ```replacements block holding [{"old", "new"}]), or []; malformed -> None."""
+    m = REPLACEMENTS.search(text or "")
+    if not m:
+        return []
+    try:
+        rows = json.loads(m.group(1))
+    except ValueError:
+        return None
+    if not isinstance(rows, list) or any(not isinstance(r, dict) or not r.get("old") or "new" not in r for r in rows):
+        return None
+    return rows
+
+
+def findings_of(text):
+    """(line numbers referred to, problem statements that are not 'none') of a checklist."""
+    lines, problems = set(), []
+    for m in PROBLEM_LINE.finditer(text or ""):
+        if not NO_PROBLEM.match(m.group(1).strip()):
+            problems.append(m.group(1).strip())
+    for m in LINE_REF.finditer(text or ""):
+        lines.add(int(m.group(1) or m.group(2)))
+    return lines, problems
 
 
 def return_of(text):
@@ -221,12 +254,19 @@ def report_date(text):
     m = DATE_LINE.search(text)
     if not m:
         return None
+    stated = m.group(1).strip().rstrip(".。")             # the header line may end its sentence with a full stop
     for fmt in DATE_FORMATS:
         try:
-            return datetime.strptime(m.group(1), fmt).strftime("%Y-%m-%d")
+            return datetime.strptime(stated, fmt).strftime("%Y-%m-%d")
         except ValueError:
             continue
-    return m.group(1)
+    iso = re.search(r"\d{4}-\d{2}-\d{2}", stated)         # "26 March 2026 (2026-03-26)": the date with a gloss (2026-11-06)
+    if iso:
+        try:
+            return datetime.strptime(iso.group(0), "%Y-%m-%d").strftime("%Y-%m-%d")
+        except ValueError:
+            pass
+    return stated
 
 
 def long_sentences(text):
@@ -239,6 +279,40 @@ def long_sentences(text):
             if len(s.split()) > LONG_SENTENCE:
                 out.append("%d words: %s..." % (len(s.split()), " ".join(s.split()[:8])))
     return out
+
+
+def outline(text):
+    """The parts of a briefing with their line ranges (1-based, inclusive): head (title, date, opening declaration), 1-7, A, B.
+    Agents read a part with Read offset/limit instead of the whole report."""
+    lines = text.splitlines()
+    marks = []
+    for i, line in enumerate(lines):
+        m = re.match(r"^#{1,3}\s+(.+)$", line)
+        if not m:
+            continue
+        h = m.group(1).strip()
+        ap = re.match(r"^(?:附录|Appendix)\s*([AB])\b", h)
+        num = re.match(r"^(?:Part\s+)?([1-7])[.、:：\s]", h)
+        key = ap.group(1) if ap else num.group(1) if num else next(
+            (str(k + 1) for k, (cn, en) in enumerate(PARTS) if cn in h or h.lower().startswith(en)), None)
+        if key and key not in [k for k, _, _ in marks]:
+            marks.append((key, i + 1, h))
+    out = []
+    if marks and marks[0][1] > 1:
+        out.append({"part": "head", "title": "title, date and opening declaration", "lines": [1, marks[0][1] - 1]})
+    for j, (key, start, h) in enumerate(marks):
+        end = marks[j + 1][1] - 1 if j + 1 < len(marks) else len(lines)
+        out.append({"part": key, "title": h, "lines": [start, end]})
+    return out
+
+
+def part_text(text, part):
+    """The text of one part (see outline), or None when the report has no such part."""
+    hit = next((o for o in outline(text) if o["part"] == str(part)), None)
+    if hit is None:
+        return None
+    a, b = hit["lines"]
+    return "\n".join(text.splitlines()[a - 1:b])
 
 
 def flatten(obj, prefix=""):
@@ -314,11 +388,16 @@ class Case:
             legal = rd / CHECKLISTS["legal_draft"]
             if not passed(review, "draft", newest(*draft)) or (lanes and not passed(legal, "legal_draft", newest(*draft))):
                 return "drafted"
-            if not pol.exists() or pol.stat().st_mtime < max(review.stat().st_mtime, legal.stat().st_mtime if lanes else 0):
-                return "reviewed"
-            since = newest(*report_files(rd))
-            final_ok = passed(rd / "review_final.md", "final", since) and (not lanes or passed(rd / CHECKLISTS["legal_final"], "legal_final", since))
-            return "delivered" if final_ok else "polished"
+            # 2026-11-06: the reviewed draft is the client report; the program renders it, and the PDF newer than draft and checklists means delivered
+            pdf = rd / "briefing.pdf"
+            checked = max(review.stat().st_mtime, legal.stat().st_mtime if lanes else 0)
+            if pdf.exists() and pdf.stat().st_mtime >= max(newest(*draft), checked):
+                return "delivered"
+            if pol.exists() and pol.stat().st_mtime >= checked:                 # old cases (polish stage): their final checklists decide
+                since = newest(*report_files(rd))
+                if passed(rd / "review_final.md", "final", since) and (not lanes or passed(rd / CHECKLISTS["legal_final"], "legal_final", since)):
+                    return "delivered"
+            return "reviewed"
         if ri.exists() and verdict_of(ri.read_text(encoding="utf-8"), "intake") == "RUNNABLE":
             last_write = cur.get("last_intake_write") or ""
             reviewed = cur.get("review_intake_written") or ""
@@ -336,13 +415,10 @@ class Case:
             if p.exists() and reviewed > (cur.get("last_intake_write") or "") and verdict_of(p.read_text(encoding="utf-8"), "intake") == "REVISE":
                 return {"which": "intake", "to": "front", "path": str(p)}
             return None
-        if st not in ("drafted", "polished"):
+        if st != "drafted":
             return None
         rd = cd / "report" / cur["run_id"]
-        if st == "drafted":
-            stage, since, default = ("draft", "legal_draft"), newest(*draft_files(rd)), "analysis"
-        else:
-            stage, since, default = ("final", "legal_final"), newest(*report_files(rd)), "polish"
+        stage, since, default = ("draft", "legal_draft"), newest(*draft_files(rd)), "analysis"
         found = []                                             # every REVISE of the stage: the main review and the legal lane
         for which in stage:
             p = rd / CHECKLISTS[which]
@@ -798,23 +874,50 @@ class Case:
                 merged = self.merged_rows(rd / "briefing.polished.sources.json", merged)
             content = json.dumps(merged, ensure_ascii=False, indent=1)
         path = rd / ("briefing.polished.md" if name == "polished" else "briefing.polished.sources.json")
+        if name == "polished" and mode == "append" and path.exists():          # written part by part: the next part goes at the end
+            content = path.read_text(encoding="utf-8").rstrip() + "\n\n" + content.strip() + "\n"
         self.write_with_prev(path, content)
         return {"case_id": case_id, "run_id": run_id, "written": str(path), "prev": path.with_name(path.name + ".prev").exists(),
                 "version": SERVER_VERSION}
 
+    def client_copy(self, rd, case_id, run_id):
+        """The client copy of the draft (2026-11-06, no polish stage): {{block:<name>}} markers expanded from frame/blocks, the
+        internal reference line and any line carrying the case or run id removed. Written as briefing.polished.md for the renderer
+        and the web host; the sources table is copied beside it."""
+        text = (rd / "briefing.md").read_text(encoding="utf-8")
+        fb = rd / "frame" / "blocks"
+        if fb.exists():
+            text = re.sub(r"\{\{block:([a-z_]+)\}\}", lambda m: (fb / ("%s.md" % m.group(1))).read_text(encoding="utf-8").strip()
+                          if (fb / ("%s.md" % m.group(1))).exists() else m.group(0), text)
+        kept = [l for l in text.splitlines() if case_id not in l and run_id not in l]
+        text = "\n".join(kept).rstrip() + "\n"
+        (rd / "briefing.polished.md").write_text(text, encoding="utf-8")
+        sj = rd / "briefing.sources.json"
+        if sj.exists():
+            (rd / "briefing.polished.sources.json").write_text(sj.read_text(encoding="utf-8"), encoding="utf-8")
+        return rd / "briefing.polished.md"
+
     def render_pdf(self, case_id, run_id):
-        if (e := self.need("polish")):
-            return e
+        if self.agent not in ("analysis", "polish", "front"):   # front is also the program's identity (the orchestrator's render step)
+            return err("forbidden", "render_pdf belongs to the analysis agent and the program")
         cd, ledger, e = self.opened(case_id)
         if e:
             return e
         rd = cd / "report" / run_id
-        src = rd / "briefing.polished.md"
-        if not src.exists():
-            return err("not_found", "no briefing.polished.md to render; write the polished report first")
-        text_problems = self.report_check(case_id, run_id, "polished", text_only=True).get("problems", [])
+        if self.agent == "polish":                             # old flow: the polish agent's own report
+            src = rd / "briefing.polished.md"
+            if not src.exists():
+                return err("not_found", "no briefing.polished.md to render; write the polished report first")
+            text_problems = self.report_check(case_id, run_id, "polished", text_only=True).get("problems", [])
+        else:
+            if not (rd / "briefing.md").exists():
+                return err("not_found", "no briefing.md to render; write the draft first")
+            text_problems = self.report_check(case_id, run_id, "draft", text_only=True).get("problems", [])
+            src = None
         if text_problems:                                      # a render takes a minute: settle the text first
             return err("conflict", "fix the text first, nothing was rendered: " + "; ".join(text_problems[:8]))
+        if src is None:
+            src = self.client_copy(rd, case_id, run_id)
         out = rd / "briefing.pdf"
         script = HERE / "render_pdf.py"
         try:
@@ -852,6 +955,12 @@ class Case:
             return err("invalid", "last line must end with one of %s" % " / ".join(VERDICTS[which]), last_line=last_line(content))
         if which != "intake" and v == "REVISE" and return_of(content) not in RETURNS[which]:
             return err("invalid", "a REVISE checklist needs the line RETURN: <%s> just before the verdict" % " | ".join(RETURNS[which]))
+        reps = replacements_of(content)
+        if reps is None:
+            return err("invalid", "the ```replacements block must hold a JSON list of {old, new}: the exact sentence of the draft and its replacement")
+        refs, problems = findings_of(content)
+        if which != "intake" and v == "REVISE" and not problems and not reps:   # 2026-11-06: a verdict must follow from the entries
+            return err("invalid", "a REVISE checklist needs at least one Problem entry that states a problem; when every item is 'none', the verdict is %s" % VERDICTS[which][0])
         cur = self.current(ledger)
         if which == "intake":
             path = cd / "intake" / "review_intake.md"
@@ -866,6 +975,12 @@ class Case:
             if not subject.exists():
                 return err("conflict", "there is no %s to review yet" % subject.name)
             path = rd / CHECKLISTS[which]
+            if v == "REVISE" and refs and which in ("draft", "legal_draft") and not reps:   # a re-check reopens nothing that did not change
+                stale = self.unchanged_lines(cd, cur["run_id"], refs, path)
+                if stale is not None and stale == refs:
+                    return err("invalid", "every line your findings refer to (%s) is unchanged since your last checklist and was not among its findings: "
+                                          "a re-check checks the changed lines and whether the items you sent back are fixed; record anything else as a doubt, "
+                                          "or give the fix as a replacements block" % ", ".join(str(n) for n in sorted(refs)))
         self.write_with_prev(path, content)
         if which == "intake":
             cur["review_intake_written"] = now()
@@ -873,6 +988,78 @@ class Case:
             self.save_ledger(cd, ledger)
         return {"case_id": case_id, "which": which, "verdict": v, "written": str(path), "status": self.status(cd, ledger),
                 "version": SERVER_VERSION}
+
+    def unchanged_lines(self, cd, run_id, refs, checklist):
+        """The subset of `refs` (line numbers of briefing.md) that neither changed since the last reviewed snapshot nor appeared in the
+        previous checklist; None when there is no snapshot of this run."""
+        snap = cd / "log" / "reviewed" / "review_draft"
+        if not (snap / "briefing.md").exists() or not (snap / "run.txt").exists() or (snap / "run.txt").read_text(encoding="utf-8") != str(run_id):
+            return None
+        import difflib
+        old = (snap / "briefing.md").read_text(encoding="utf-8").splitlines()
+        new = (cd / "report" / run_id / "briefing.md").read_text(encoding="utf-8").splitlines()
+        changed = set()
+        for tag, _, _, j1, j2 in difflib.SequenceMatcher(None, old, new, autojunk=False).get_opcodes():
+            if tag != "equal":
+                changed.update(range(j1 + 1, max(j2, j1 + 1) + 1))
+        before = checklist.read_text(encoding="utf-8") if checklist.exists() else ""
+        cited, _ = findings_of(before)
+        return {n for n in refs if n not in changed and n not in cited}
+
+    def apply_replacements(self, case_id, run_id):
+        """Program step (2026-11-06): the reviewers' fix-to-order replacements, applied to briefing.md without a model; the checklists are
+        re-stamped so the review still postdates the draft. Returns {applied, failed}; a failed replacement names the sentence not found."""
+        cd, ledger, e = self.opened(case_id)
+        if e:
+            return e
+        rd = cd / "report" / run_id
+        path = rd / "briefing.md"
+        text = path.read_text(encoding="utf-8")
+        applied, already, failed, stamps = 0, 0, [], []
+        for which in ("draft", "legal_draft"):
+            p = rd / CHECKLISTS[which]
+            if not p.exists():
+                continue
+            stamps.append(p)
+            for r in replacements_of(p.read_text(encoding="utf-8")) or []:
+                if text.count(r["old"]) == 1:
+                    text = text.replace(r["old"], r["new"])
+                    applied += 1
+                elif r["old"] not in text and r["new"] and r["new"] in text:      # applied on an earlier pass of the same checklist
+                    already += 1
+                else:
+                    failed.append("%s: %s" % (which, r["old"][:80]))
+        if applied:
+            self.write_with_prev(path, text)
+            t = max(path.stat().st_mtime, time.time())          # the checklists postdate the draft again, and nothing written later is older
+            for p in stamps:
+                os.utime(p, (t, t))
+        return {"case_id": case_id, "run_id": run_id, "applied": applied, "already": already, "failed": failed}
+
+    def autofix_draft(self, case_id, run_id):
+        """Program step (2026-11-06): what the self-check would send back but the program can settle itself: sources rows whose ref
+        points at a notebook or bug file (not a record) are dropped. Returns the list of fixes made."""
+        cd, ledger, e = self.opened(case_id)
+        if e:
+            return e
+        sj = cd / "report" / run_id / "briefing.sources.json"
+        if not sj.exists():
+            return {"fixes": []}
+        try:
+            data = json.loads(sj.read_text(encoding="utf-8"))
+        except ValueError:
+            return {"fixes": []}
+        rows = data if isinstance(data, list) else data.get("sources", [])
+        keep, fixes = [], []
+        for r in rows:
+            ref = str(r.get("ref", ""))
+            if re.match(r"^file:[^ ]*/(bugs|notes)/", ref):
+                fixes.append("dropped sources row %s: ref %s is not a record" % (r.get("id"), ref))
+            else:
+                keep.append(r)
+        if fixes:
+            self.write_with_prev(sj, json.dumps(keep if isinstance(data, list) else {**data, "sources": keep}, ensure_ascii=False, indent=1))
+        return {"fixes": fixes}
 
     def notes_append(self, case_id, book, text):
         cd, ledger, e = self.opened(case_id)
@@ -914,12 +1101,15 @@ class Case:
         self.append(cd / "bugs" / "cleared.md", name)
         return {"case_id": case_id, "cleared": name, "open": self.open_defects(case_id)}
 
-    def bug_append(self, case_id, layer, symptom, expected, repro, workaround, affects_result=False):
+    def bug_append(self, case_id, layer, symptom, expected, repro, workaround, affects_result=False, effect=""):
         cd, ledger, e = self.opened(case_id)
         if e:
             return e
         if not (layer and symptom):
             return err("invalid", "layer and symptom are required")
+        if affects_result and not (effect or "").strip():         # 2026-11-06: a defect holds the run only when it changes a figure of this case
+            return err("invalid", "affects_result=true needs effect: which figure or ranking of this case changes, and from what to what; "
+                                  "a modelling gap that leaves this case's figures as they are is affects_result=false")
         tag, _ = self.round_tag(ledger)
         path = cd / "bugs" / (self.agent + ".md")
         text = path.read_text(encoding="utf-8") if path.exists() else ""
@@ -934,7 +1124,7 @@ class Case:
         body = ("### B-%d | %s | %s\n- layer: %s\n- symptom: %s\n- expected: %s\n- repro: %s\n- workaround: %s"
                 % (n, today(), tag, layer, symptom.strip(), (expected or "-").strip(), (repro or "-").strip(), (workaround or "blocked").strip()))
         if affects_result:
-            body += "\n- affects_result: yes"
+            body += "\n- affects_result: yes\n- effect: %s" % effect.strip()
         self.append(path, body)
         return {"case_id": case_id, "entry": "B-%d" % n, "path": str(path), "version": SERVER_VERSION}
 
@@ -1031,10 +1221,64 @@ class Case:
             self._db = dbm.Library(PROJECT / "database")
         return self._db
 
-    def report_check(self, case_id, run_id, target="auto", text_only=False):
+    def part_check(self, cd, case_id, run_id, part, which="polished"):
+        """report_check of one part of the polished report while it is written part by part: numbers the draft does not
+        have, system identifiers, the optimizer's vocabulary, spoken lead-ins and over-long sentences, in that part only.
+        The whole-report checks (parts present, sources, where fragments, PDF) run once all parts are written.
+        On the draft (which=draft, 2026-11-05: analysis also writes part by part) only the identifier and vocabulary
+        checks apply; figures and sources are checked by the whole-draft report_check."""
+        rd = cd / "report" / run_id
+        pol, draft = rd / "briefing.polished.md", rd / "briefing.md"
+        if not draft.exists() or (which == "polished" and not pol.exists()):
+            return err("not_found", "the %s of run %s is missing" % ("polished report" if draft.exists() else "draft", run_id))
+        text = (pol if which == "polished" else draft).read_text(encoding="utf-8")
+        piece = part_text(text, part)
+        if piece is None:
+            return err("not_found", "no part %s in the %s yet; parts present: %s" % (part, which, ", ".join(o["part"] for o in outline(text))))
+        if which == "draft":
+            problems = []
+            leaks = sorted({m.group(0) for pat in LEAKS for m in re.finditer(pat, piece)})
+            if leaks:
+                problems.append("system identifiers: %s" % ", ".join(leaks[:12]))
+            if part not in ("A", "B"):
+                jargon = sorted({m.group(0).lower() for m in re.finditer(JARGON, piece)})
+                if jargon:
+                    problems.append("the optimizer's vocabulary, say it as an adviser would: " + ", ".join(jargon))
+            return {"case_id": case_id, "run_id": run_id, "target": "draft", "part": part, "problems": problems,
+                    "parts_present": [o["part"] for o in outline(text)], "version": SERVER_VERSION}
+        draft_text = draft.read_text(encoding="utf-8")
+        fb = rd / "frame" / "blocks"
+        if fb.exists():
+            draft_text = re.sub(r"\{\{block:([a-z_]+)\}\}", lambda m: (fb / ("%s.md" % m.group(1))).read_text(encoding="utf-8")
+                                if (fb / ("%s.md" % m.group(1))).exists() else m.group(0), draft_text)
+        problems = []
+        drift = sorted(numbers_in(piece) - numbers_in(draft_text))
+        if drift:
+            problems.append("numbers in this part that are not in the draft: " + ", ".join(drift[:12]))
+        if case_id in piece or run_id in piece:
+            problems.append("the client report carries the case id or run id")
+        leaks = sorted({m.group(0) for pat in LEAKS for m in re.finditer(pat, piece)})
+        if leaks:
+            problems.append("system identifiers: %s" % ", ".join(leaks[:12]))
+        spoken = sorted(set(re.findall(SPOKEN, piece)))
+        if spoken:
+            problems.append("spoken lead-ins, use the register of a written opinion: " + ", ".join(spoken))
+        if part not in ("A", "B"):
+            jargon = sorted({m.group(0).lower() for m in re.finditer(JARGON, piece)})
+            if jargon:
+                problems.append("the optimizer's vocabulary, say it as an adviser would: " + ", ".join(jargon))
+            for s in long_sentences(piece)[:5]:
+                problems.append("sentence too long, split it: " + s)
+        return {"case_id": case_id, "run_id": run_id, "target": "polished", "part": part, "problems": problems, "number_drift": drift,
+                "version": SERVER_VERSION}
+
+    def report_check(self, case_id, run_id, target="auto", text_only=False, part=""):
         cd, ledger, e = self.opened(case_id)
         if e:
             return e
+        if part:
+            polished_exists = (cd / "report" / run_id / "briefing.polished.md").exists()
+            return self.part_check(cd, case_id, run_id, str(part), "draft" if target == "draft" or (target == "auto" and not polished_exists) else "polished")
         rd = cd / "report" / run_id
         problems = []
         pol, pol_sj = rd / "briefing.polished.md", rd / "briefing.polished.sources.json"
@@ -1104,8 +1348,8 @@ class Case:
                 problems.append("source %s lacks where" % r.get("id"))
             kind, ref = r.get("kind"), str(r.get("ref", ""))
             if kind == "product":
-                if re.match(r"^\d{8}-[0-9a-f]{8}:[a-z_]+:", ref):
-                    continue                                    # a record id of the retrieval layer: cite_check below resolves it
+                if re.match(r"^(\d{8}-[0-9a-f]{8}|CASE-\d{8}-[0-9a-f]{6}):[a-z_]+:", ref):
+                    continue                                    # a record id of the retrieval layer (products or case file): cite_check below resolves it
                 p = (cd / ref) if not Path(ref).is_absolute() else Path(ref)
                 if not p.exists() and not (self.root / ref).exists():
                     problems.append("source %s: product path not found: %s" % (r.get("id"), ref))
@@ -1155,6 +1399,32 @@ class Case:
                                     "; ".join('%s in "%s"' % (u["figure"], u["line"][:70]) for u in cc["uncovered_figures"][:10]))
         # polish may cut but not change: a number new to the report is a problem, a number left out is only listed for review
         drift, omitted, changed, cut, unlocated, pdf_pages, body_pages = [], [], [], [], [], None, None
+        if which == "draft":                                   # 2026-11-06: the draft is the client report, so it meets the client's standard too
+            if not re.search(r"^```flow\s*$", text, re.M):
+                problems.append("no ```flow block (the restructuring diagram, JSON as in agent/templates/flowchart.example.json) in Part 1")
+            spoken = sorted(set(re.findall(SPOKEN, text)))
+            if spoken:
+                problems.append("spoken lead-ins, use the register of a written opinion: " + ", ".join(spoken))
+            jargon = sorted({m.group(0).lower() for m in re.finditer(JARGON, text[:body_end])})
+            if jargon:
+                problems.append("the optimizer's vocabulary in the body, say it as an adviser would: " + ", ".join(jargon))
+            for s in long_sentences(text[:body_end])[:5]:
+                problems.append("sentence too long, split it: " + s)
+            pdf = rd / "briefing.pdf"
+            if text_only:
+                pass
+            elif not pdf.exists() or pdf.stat().st_mtime < md.stat().st_mtime:
+                problems.append("briefing.pdf is missing or older than the draft: call render_pdf")
+            else:
+                if str(HERE) not in sys.path:
+                    sys.path.insert(0, str(HERE))
+                from render_pdf import layout
+                shape = layout(pdf, (rd / "briefing.polished.md").read_text(encoding="utf-8") if (rd / "briefing.polished.md").exists() else text)
+                pdf_pages, body_pages = shape["pages"], shape["body_pages"]
+                if body_pages > BODY_LIMIT:
+                    problems.append("the body has %d pages before the appendices, limit %d: cut" % (body_pages, BODY_LIMIT))
+                elif body_pages < BODY_FLOOR:
+                    problems.append("the body has %d pages before the appendices, floor %d" % (body_pages, BODY_FLOOR))
         if which == "polished" and draft.exists():
             draft_text = draft.read_text(encoding="utf-8")
             fb = rd / "frame" / "blocks"                     # a whole draft keeps {{block:<name>}} markers: count the figures of the tables they stand for
@@ -1283,6 +1553,11 @@ def build_server(root, agent):
             """Change sentences of briefing.md: edits = [{old, new}], each old text must occur exactly once, all or none."""
             return case.edit_report(case_id, run_id, edits)
 
+        @s.tool()
+        def render_pdf(case_id: str, run_id: str) -> dict:
+            """Typeset the client copy of briefing.md (program tables expanded in place of the {{block:...}} markers, the internal reference line removed) into report/<run_id>/briefing.pdf; refuses while report_check(target=draft, text_only=true) reports problems. Returns the page counts, the page of each section and of the flowchart, and how full each page is."""
+            return case.render_pdf(case_id, run_id)
+
     if agent == "polish":
         @s.tool()
         def edit_polished(case_id: str, run_id: str, edits: list[dict]) -> dict:
@@ -1291,7 +1566,7 @@ def build_server(root, agent):
 
         @s.tool()
         def write_polished(case_id: str, run_id: str, name: str, content: str, mode: str = "replace") -> dict:
-            """Write report/<run_id>/briefing.polished.md (name=polished), or the sources of the entries you kept (name=sources, a JSON list of {id, where}; claim, kind and ref are copied from the draft)."""
+            """Write report/<run_id>/briefing.polished.md (name=polished; mode=append adds the next part at the end), or the sources of the entries you kept (name=sources, a JSON list of {id, where}; claim, kind and ref are copied from the draft; mode=append adds or replaces rows)."""
             return case.write_polished(case_id, run_id, name, content, mode)
 
         @s.tool()
@@ -1302,7 +1577,7 @@ def build_server(root, agent):
     if agent == "review":
         @s.tool()
         def write_review(case_id: str, which: str, content: str, run_id: str = "") -> dict:
-            """Write intake/review_intake.md (which=intake, RUNNABLE / REVISE), report/<run_id>/review.md (which=draft, POLISHABLE / REVISE), report/<run_id>/review_final.md (which=final, DELIVERABLE / REVISE), or the legal-reasoning lane's review_legal.md (which=legal_draft, POLISHABLE / REVISE) and review_final_legal.md (which=legal_final, DELIVERABLE / REVISE). The last line is the verdict; a REVISE other than intake has RETURN: analysis, polish or front on the line before it."""
+            """Write intake/review_intake.md (which=intake, RUNNABLE / REVISE), report/<run_id>/review.md (which=draft, DELIVERABLE / REVISE) or the legal-reasoning lane's review_legal.md (which=legal_draft, DELIVERABLE / REVISE). The last line is the verdict; a REVISE other than intake has RETURN: analysis or front on the line before it, and needs at least one Problem entry that states a problem. Wording-only fixes go in a ```replacements block: a JSON list of {old, new} with the exact draft sentence and its replacement; the program applies them and they do not need a REVISE."""
             return case.write_review(case_id, which, content, run_id)
 
     # ---- own notebooks and bug log (every identity)
@@ -1312,10 +1587,10 @@ def build_server(root, agent):
         return case.notes_append(case_id, book, text)
 
     @s.tool()
-    def bug_append(case_id: str, layer: str, symptom: str, expected: str = "", repro: str = "", workaround: str = "", affects_result: bool = False) -> dict:
+    def bug_append(case_id: str, layer: str, symptom: str, expected: str = "", repro: str = "", workaround: str = "", affects_result: bool = False, effect: str = "") -> dict:
         """Append a bug report to this agent's bugs file (layer: database / rule / optimization / tool / web / spec); duplicates get a recurrence line.
-        affects_result = true when the defect can change a figure or the ranking in the report: the run then stops until the bug is fixed and cleared."""
-        return case.bug_append(case_id, layer, symptom, expected, repro, workaround, affects_result)
+        affects_result = true only when the defect changes a figure or the ranking of THIS case, and then effect must say which figure changes from what to what: the run then stops until the bug is fixed and cleared. A modelling gap that leaves this case's figures as they are is affects_result = false."""
+        return case.bug_append(case_id, layer, symptom, expected, repro, workaround, affects_result, effect)
 
     # ---- status and self-checks (every identity)
     @s.tool()
@@ -1334,9 +1609,9 @@ def build_server(root, agent):
         return case.intake_check(case_id)
 
     @s.tool()
-    def report_check(case_id: str, run_id: str, target: str = "auto", text_only: bool = False) -> dict:
-        """Read-only self-check of a briefing (target: auto / draft / polished; auto = polished when it exists): internal reference line, parts 1-7, appendices A/B, no system identifiers, sources entries with where and resolvable refs; for the polished report also new numbers, changed claims, unlocated where fragments, spoken lead-ins and the PDF page limit, and it lists what was cut for review."""
-        return case.report_check(case_id, run_id, target, text_only)
+    def report_check(case_id: str, run_id: str, target: str = "auto", text_only: bool = False, part: str = "") -> dict:
+        """Read-only self-check of a briefing (target: draft = the report you write; polished = the old polish stage): internal reference line, parts 1-7, appendices A/B, a flow block, no system identifiers or optimizer vocabulary in the body, no spoken lead-ins, no sentence over 55 words, sources entries with where and resolvable refs, every figure covered by a source row, and (unless text_only) a current briefing.pdf whose body runs to 5-10 pages. part (head, 1-7, A, B): check only that part while you write part by part."""
+        return case.report_check(case_id, run_id, target, text_only, part)
 
     return s, case
 

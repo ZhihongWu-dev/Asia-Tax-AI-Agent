@@ -76,7 +76,7 @@
 |---|---|---|
 | `delivered` | 成稿可交付 | 前台交给客户 |
 | `need_front` | 交接包或事实要改 | 前台读核对单，改交接包，必要时问客户，再 `run` |
-| `revision_limit` | 同一节点在一次 `run` 内已跑 4 次 | 人 |
+| `revision_limit` | 同一节点在一次 `run` 内已跑 6 次（2026-11-05 由 4 提高：试验中差一处措辞就停；超过由人恢复） | 人 |
 | `agent_failed` | 进程失败、超时、超轮次，或跑完文件没更新 | 人 |
 | `system_defect` | 本轮有未清除的 `affects_result` 缺陷 | 人，修好后 `orchestrate.py clear <case_id> <agent/B-n>`，再继续 |
 | `rate_limited` | 网关限流 | 人，额度恢复后再 `run` |
@@ -404,3 +404,24 @@ review_draft 和 review_final 各自同时跑两个复核 agent：主复核（�
 再核范围：只有上一张核对单是本轮同一个 run 的（`log/reviewed/<节点>/run.txt`），且差异不到文件的 60%，复核节点才会被告知"这是再核"；否则按新稿初核。（第 3 轮的第一次草稿复核拿到的是对另一个 run 草稿的 64,000 字符差异，把新稿当成了再核。）
 
 润色预取包：润色开始前，程序写 `pack/polish.md`：它要用的文件、草稿里 `{{block:<名>}}` 标记所代表的程序表格、report_check 对润色稿检什么、流程图的格式，免得润色去读系统代码（第 3 轮：19 次 Read、16 次 Grep，大多读的是 case_server.py 和 render_pdf.py）。report_check 比较润色稿和草稿的数字前，先把标记展开。
+
+润色增量（2026-11-05）：润色节点成功后，程序把它所依据的草稿和出处表存进 `log/polished/`（带 `run.txt`）。同一 run 的草稿之后又被分析改过时，下一次润色的任务附上差异文件 `log/polish_changes.md`，润色只用 `edit_polished` 把改动搬进成稿，改过的出处行用 append 发，不重写全文；没有同一 run 的成稿、草稿没变（终审退回润色）、或差异超过文件的 60% 时照常润色。原因：试验案卷 CASE-20261104-7e57a1 的 run 20261104-d2239ced 中，分析只改了一句，润色仍按节重写全文，用了 6.2 分钟；终审退回润色那一次只用 edit_polished，1.2 分钟。
+
+## 13. 取消润色与终审（2026-11-06）
+
+试验（CASE-20261105-a7e298 GPT 端到端、CASE-20261106-3694b3 qwen 端到端）表明润色和终审占了交付时间的一半（81 + 71 分钟），而终审退回的都是润色自己删坏的内容。改为：
+
+| 环节 | 现在 |
+|---|---|
+| 图 | `review_intake → run → analysis → review_draft（+ review_legal）→ render → delivered`；`polish`、`review_final`、`review_final_legal` 节点取消，`LEGAL` 相应缩减 |
+| 分析 | 直接写交给客户的报告（规范 §3、§5 第 11 条）；写完自己调 `render_pdf`（分析身份可用）看页数 |
+| 自检 | `self_check` 先调 `autofix_draft`：指向 bug 或底稿文件的出处行由程序丢弃并记日志；`report_check(target=draft)` 加查流程图块、口语标签、优化层用语、长句、以及 PDF 是否最新和正文页数 |
+| 复核 | 草稿核对加第八类"客户可读"；法律线只有草稿一路；核对单通过记号 `DELIVERABLE`（旧的 `POLISHABLE` 仍按通过读） |
+| 照单改 | 核对单可带 ```replacements 块（`[{"old", "new"}]`）；`render` 节点先由程序 `apply_replacements` 改进草稿并重盖核对单时间，再排版；改不上的（原句找不到或不唯一）退回分析 |
+| 程序把关 | `write_review` 拒收：没有任何问题条目的 REVISE；再核时只引用未改动行且上次未退回的 REVISE；`replacements` 块不是合法 JSON 列表。`bug_append` 的 `affects_result=true` 必须带 `effect`（本案哪个数从多少变成多少） |
+| 退回任务 | 分析的退回任务里附上核对单的逐条位置、问题、证据、建议（上限 6,000 字符），照改即可 |
+| render 节点 | 程序步：应用替换 → `client_copy`（展开 `{{block:...}}`、删去含案号或 run_id 的行，写成 `briefing.polished.md` 供宿主与旧读者）→ `render_pdf` → 带新 PDF 再 `report_check`；排版失败停 `agent_failed`，检查失败退回分析 |
+| 状态 | `reviewed`：复核两线通过；`delivered`：`briefing.pdf` 比草稿和核对单都新。`polished` 状态不再出现；旧案卷按原规则读 |
+| 宿主 | 进度面板的节点表改为 `intake、review_intake、run、analysis、review_draft、render`；交付后的转述仍读 `briefing.polished.md` 的第 1 部分 |
+
+`make_agents.py` 不再生成润色 agent；复核的 prompt 由三段组成（交接包、草稿、法律线）。
