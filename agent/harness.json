@@ -1,0 +1,16 @@
+{
+ "default": {"backend": "codex"},
+ "codex": {"model": "qwen3.8-flash", "reasoning": "medium", "timeout": 10800,
+           "provider": {"base_url": "https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1", "wire_api": "responses",
+                        "env_key": "QWEN_API_KEY", "key_from": "qwen_key"}},
+ "nodes": {
+  "front": {"reasoning": "medium"},
+  "analysis": {"reasoning": "high"},
+  "review_intake": {"reasoning": "high"},
+  "review_draft": {"reasoning": "high"},
+  "review_final": {"reasoning": "high"},
+  "review_legal": {"reasoning": "xhigh"},
+  "review_final_legal": {"reasoning": "xhigh"},
+  "polish": {"reasoning": "medium"}
+ }
+}

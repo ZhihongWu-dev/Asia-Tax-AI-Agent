@@ -425,3 +425,7 @@ review_draft 和 review_final 各自同时跑两个复核 agent：主复核（�
 | 宿主 | 进度面板的节点表改为 `intake、review_intake、run、analysis、review_draft、render`；交付后的转述仍读 `briefing.polished.md` 的第 1 部分 |
 
 `make_agents.py` 不再生成润色 agent；复核的 prompt 由三段组成（交接包、草稿、法律线）。
+
+## 14. 执行框架：默认 Codex + qwen（2026-11-07）
+
+图、路由、程序步和核对规则不变，换的是执行 agent 的命令行。默认用 Codex CLI 驱动 qwen3.8-flash（Token Plan 的 OpenAI 兼容接口，Responses API），入口 `agent/tools/orchestrate_codex.py`，配置 `agent/harness.json`（各节点的模型和思考档位；`agent/harness.gpt-luna.json` 是 GPT 备选）。网页宿主默认走这条路，设 `TAX_HARNESS=claude` 回到 Claude Code（`orchestrate.py`）。每次调用一个新会话、独立的 `CODEX_HOME`，只拿到本 provider 的密钥；MCP 服务器与 Claude 路径相同，另加受控读文件的 `tax-files`。原因：同一输入下，Codex + qwen 的分析节点 23.6 分钟，Claude Code + qwen 30 到 49 分钟，且 Claude Code 与 Token Plan 的流出现过一小时只出几千 token 的卡顿。说明见 `.codex/README.md`。

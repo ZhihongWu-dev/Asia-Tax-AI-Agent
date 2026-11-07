@@ -36,6 +36,10 @@ DIST = ROOT / "apps" / "web" / "dist"
 USER = {"id": "local", "email": "local@taxrora.dev"}
 FRONT_TURNS = 120
 AUTO_RESTARTS = 3
+HARNESS = os.environ.get("TAX_HARNESS", "codex")                    # 2026-11-07: Codex CLI + qwen by default (agent/harness.json); "claude" for the old path
+HARNESS_CONFIG = os.environ.get("TAX_HARNESS_CONFIG", "")           # a harness.json for that; empty = agent/harness.json
+CODEX_WEB_NOTE = ("\nEach client message starts a fresh session with no memory of earlier turns: begin by reading intake/dialogue.md and the "
+                  "intake files of the case to recover what was said and recorded, then continue from there.")
 ATTACHMENT = "\n\n[Taxrora attachment]\n"
 START = "[[START_RUN]]"
 FRONT_JARGON = re.compile(r"(?i)\b(?:intake package|handoff(?: file)?|return list|preview run|open items?|changes_rank|ranked recommendation|ranking|orchestrator|judgment points?|run_id|intake_check|facts\.json|answers\.json|unknown_not_asked)\b")
@@ -127,7 +131,64 @@ def message(role, text, **extra):
 
 
 # ------------------------------------------------------------ one turn of the front agent
-class Turn:
+def Turn(case_id, prompt, label):
+    """A headless front turn on the harness this host was started with."""
+    return CodexTurn(case_id, prompt, label) if HARNESS == "codex" else ClaudeTurn(case_id, prompt, label)
+
+
+class CodexTurn:
+    """The same turn on the native Codex CLI (agent/tools/codex_adapter.py): a fresh session each time, the dialogue file carries the context."""
+
+    def __init__(self, case_id, prompt, label):
+        import codex_adapter
+        import harness
+        self.case_id, self.began = case_id, time.time()
+        folder = CASES / case_id / "log" / "runs"
+        folder.mkdir(parents=True, exist_ok=True)
+        stem = folder / ("%03d-%s" % (orch.next_output_number(folder), label))
+        self.out, self.err = stem.with_suffix(".jsonl"), stem.with_suffix(".err")
+        chosen = harness.selection(harness.settings(HARNESS_CONFIG or None, []), "front", "front")
+        chosen.setdefault("backend", "codex")
+        self.home, work, env = codex_adapter.prepare("front", case_id, chosen, WEB_NOTE + CODEX_WEB_NOTE)
+        with open(self.out, "wb") as out, open(self.err, "wb") as err:
+            self.proc = subprocess.Popen(codex_adapter.command(work), cwd=str(work), env=env, stdin=subprocess.PIPE, stdout=out, stderr=err)
+        try:
+            self.proc.stdin.write(prompt.encode("utf-8"))
+            self.proc.stdin.close()
+        except OSError:
+            pass
+        self.tail = Tail(self.out)
+
+    def poll(self):
+        if time.time() - self.began > orch.NODE_TIMEOUT:
+            self.stop()
+        return self.tail.read()
+
+    @property
+    def done(self):
+        return self.proc.poll() is not None
+
+    def stop(self):
+        if not self.done:
+            orch.stop_tree(self.proc)
+
+    def outcome(self):
+        import codex_adapter
+        import harness
+        self.tail.read()
+        for path in (self.out, self.err):
+            path.write_text(harness.redact(path.read_text(encoding="utf-8", errors="replace")), encoding="utf-8")
+        payload = codex_adapter.parse_output(self.out.read_text(encoding="utf-8"))
+        stderr = self.err.read_text(encoding="utf-8", errors="replace")
+        code = orch.classify(self.proc.returncode, False, payload, stderr)
+        reply = (payload.get("result") or "").strip()
+        orch.log_row(self.case_id, event="harness", node=self.out.stem.split("-", 1)[1], agent="front", backend="codex",
+                     model=payload.get("model", ""), turns=payload.get("num_turns"), session_id=payload.get("session_id"),
+                     failure=code, usage=payload.get("usage", {}))
+        return reply, code or (None if reply else "agent_failed")
+
+
+class ClaudeTurn:
     """A headless front turn. The stream goes to a file like every other agent's, so all of them are read the same way."""
 
     def __init__(self, case_id, prompt, label):
@@ -344,8 +405,11 @@ def start_run(case_id):
     # its own hidden console: neither Ctrl+C nor closing this server's window reaches the run
     flags = subprocess.CREATE_NEW_PROCESS_GROUP | subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0
     with open(log / "orchestrate.out", "ab") as out, open(log / "orchestrate.err", "ab") as err:
-        proc = subprocess.Popen([sys.executable, str(ROOT / "agent" / "tools" / "orchestrate.py"), "run", case_id], cwd=str(ROOT),
-                                stdin=subprocess.DEVNULL, stdout=out, stderr=err, creationflags=flags)
+        cmd = [sys.executable, str(ROOT / "agent" / "tools" / "orchestrate.py"), "run", case_id]
+        if HARNESS == "codex":
+            cmd = [sys.executable, str(ROOT / "agent" / "tools" / "orchestrate_codex.py"), "run", case_id, "--harness", "codex"]
+            cmd += ["--config", HARNESS_CONFIG] if HARNESS_CONFIG else []
+        proc = subprocess.Popen(cmd, cwd=str(ROOT), stdin=subprocess.DEVNULL, stdout=out, stderr=err, creationflags=flags)
 
     def watch():
         proc.wait()
