@@ -128,3 +128,16 @@ One section per session, appended at the end (format: 采集任务单.md, part 4
 - Handoff to a person: none
 - Tool changes: build.py (1) INDIVIDUAL_ONLY emptied: the company exit slot now counts for coverage — a change of the coverage rule, made at the user's instruction (the user is the person of H7 here); (2) html_text cuts the STA sites' page chrome (PAGE_CHROME: 【打印】, 网站纠错, 纠错或建议) at its first line in the second half of the page. Checks of §4.9: (1) clause_diff --save before; (2) run_slicers: same output with and without the change (the India 1961 paragraph count 2,163 against 2,162 in the README and the NTA circular counts differ from the README table already without it); (3) full build errors=0; (4) clause_diff: 8 documents changed, cited ids lost 0; the six earlier pages lost only the ~480-character footer, no item marker in the cut text; (5) acceptance: cn, hk, jp, th PASSED; sg NOT PASSED only on the download sg.sda1929 blocked since 2026-10-31; (6) no new format.
 - Acceptance: cn PASSED, hk PASSED, jp PASSED, th PASSED; sg NOT PASSED (gap: download not resolved sg.sda1929, unchanged). Full build docs=159 params=369 absence_records=34 errors=0. Not uploaded.
+
+## 2026-11-04 sg (s13W amended for disposals from 2026)
+- Found by the draft review of a trial run (bug B-1 of CASE-20261104-7e57a1): the two s13W parameters quoted subsection (1), which since Act 25 of 2025 (wef 08/12/2025) covers only disposals from 1 June 2012 to 31 December 2025; disposals on or after 1 January 2026 fall under subsection (1A).
+- Registered: none (the library text of sg.ita1947#s13W already carries (1A) and (1B)).
+- Download failures: none
+- Parameters changed: 2, per §3 (param): sg.restructure.safe_harbour_holding_pct_min and sg.restructure.safe_harbour_holding_months_min get effective_to 2025-12-31 and superseded_by; new rows sg.restructure.safe_harbour_holding_pct_min.2026 and sg.restructure.safe_harbour_holding_months_min.2026 (same values 20% and 24 months, quotes from (1A), effective_from 2026-01-01, changed_on 2026-11-04). The (1A)(b)(ii) value limb (shares worth at least 20% of the paid-up share capital) is noted, not modelled.
+- Absence records added: none
+- Slicing problems: none
+- Rate-table mismatches: none
+- Handoff to a person: none
+- Tool changes: none
+- Rule layer (not this library): rule sg.restructure.safe_harbour now ends 2025-12-31; new rule sg.restructure.safe_harbour_2026 on the .2026 parameters; its three tests copied to 2026-04-30, the old three moved to 2025-06-01. Rule build: rules=201 tests=532 failed=0 errors=0.
+- Acceptance: not re-run (data only, quotes checked by the full build). Full build docs=159 params=371 absence_records=34 errors=0. Not uploaded.
