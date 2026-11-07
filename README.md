@@ -1,13 +1,13 @@
 # Taxrora
 
-Cross-border dividend tax planning. A client states the background in a chat; four agents and an optimizer produce a recommendation report. Everything runs on this machine.
+Cross-border dividend tax planning. A client states the background in a chat; three agents and an optimizer produce a recommendation report. Everything runs on this machine.
 
 | Folder | What it is |
 |---|---|
 | `database/` | Income-tax law of CN, HK, SG, JP and TH, with the MCP server `tax-db` |
 | `rule/` | Structured rules and evaluation, with `tax-rule` |
 | `optimization/` | Candidate structures, tax table and ranking, with `tax-opt` |
-| `agent/` | The four agents, the case server `tax-case` and the LangGraph orchestrator |
+| `agent/` | The three agents (front, analysis, review), the case server `tax-case`, the LangGraph orchestrator and the Codex harness that runs the agents |
 | `apps/api/` | The web host |
 | `apps/web/` | The chat interface and the progress panel |
 | `case_end2end/` | A fictitious test case |
@@ -15,7 +15,7 @@ Cross-border dividend tax planning. A client states the background in a chat; fo
 
 ## Run
 
-Requirements: the conda environment `tax`, Claude Code, xelatex, Node.js 20.19+ or 22.12+, and a `.env` in the project root holding `qwen_key`.
+Requirements: the conda environment `tax`, the Codex CLI (the agents' executor, driving qwen3.8-flash; see `.codex/README.md`), xelatex, Node.js 20.19+ or 22.12+, and a `.env` in the project root holding `qwen_key`. Claude Code is needed only to run the earlier path (`TAX_HARNESS=claude`).
 
 ```sh
 cd apps/web
@@ -49,7 +49,7 @@ The full product runs locally only. The cloud deployment (Render) runs a light e
 | Long runs | keep going when the page is closed | the free plan sleeps after 15 minutes without requests: keep the page open during a run |
 | Sign-in | one local user | Supabase email accounts, cases kept per user |
 
-The tax computation (library, rules, optimizer) and the four agents are the same in both. The full product on the cloud
+The tax computation (library, rules, optimizer) and the three agents are the same in both; both run the agents on the Codex CLI with qwen, which on the cloud means a Linux Codex CLI installed by the build (`merge_guide.en.md`, step 4). The full product on the cloud
 needs a larger Render plan.
 
 ## API
