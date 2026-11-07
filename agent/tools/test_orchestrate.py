@@ -4,7 +4,8 @@
   python agent/tools/test_orchestrate.py
 
 A scripted stand-in replaces call_agent and writes through the real case server, so routing, status and limits run for
-real against a temporary case. run_process is checked with real child processes.
+real against a temporary case. The render step is replaced by a stand-in that writes the PDF file. run_process is checked
+with real child processes.
 """
 import io
 import json
@@ -34,13 +35,13 @@ def check(name, ok, detail=""):
 class Script:
     """Plays the agents. `verdicts` holds the checklists each review node writes, in order; the last one repeats."""
 
-    def __init__(self, root, case_id, intake=("RUNNABLE",), draft=("POLISHABLE",), final=("DELIVERABLE",), legal=("POLISHABLE",), legal_final=("DELIVERABLE",), reason=""):
-        self.ids = {a: Case(root, a) for a in ("front", "analysis", "polish", "review")}
+    def __init__(self, root, case_id, intake=("RUNNABLE",), draft=("DELIVERABLE",), legal=("DELIVERABLE",), reason="", replacements=None):
+        self.ids = {a: Case(root, a) for a in ("front", "analysis", "review")}
         self.case_id, self.tasks, self.nodes = case_id, [], []
-        self.verdicts = {"review_intake": list(intake), "review_draft": list(draft), "review_final": list(final),
-                         "review_legal": list(legal), "review_final_legal": list(legal_final)}
+        self.verdicts = {"review_intake": list(intake), "review_draft": list(draft), "review_legal": list(legal)}
         self.reason = reason                                # a sentence stating a legal reason, written into every draft
-        self.fail_at, self.silent_at, self.issue_at = {}, set(), set()
+        self.replacements = replacements                    # a fix-to-order list the draft review adds to its checklist
+        self.fail_at, self.silent_at = {}, set()
 
     def __call__(self, agent, task, case_id, label):
         self.tasks.append(task)
@@ -54,23 +55,18 @@ class Script:
         c, cur = self.case_id, self.ids["front"].round_current(self.case_id)
         run_id = cur.get("run_id")
         if label == "analysis":
-            self.ids["analysis"].write_report(c, run_id, "briefing", "draft %d\n\n%s" % (len(self.nodes), self.reason))
+            self.ids["analysis"].write_report(c, run_id, "briefing", "draft %d\n\nThe old sentence.\n\n%s" % (len(self.nodes), self.reason))
             self.ids["analysis"].write_report(c, run_id, "sources", "[]")
-        elif label == "polish":
-            if label in self.issue_at:
-                self.issue_at.discard(label)
-                self.ids["polish"].notes_append(c, "issues", "the draft cites the wrong article")
-            else:
-                self.ids["polish"].write_polished(c, run_id, "polished", "report %d" % len(self.nodes))
-                pdf = orch.CASES / c / "report" / run_id / "briefing.pdf"
-                pdf.write_bytes(b"pdf")
         else:
             v = self.verdicts[label]
             verdict = v.pop(0) if len(v) > 1 else v[0]
-            which = {"review_intake": "intake", "review_draft": "draft", "review_final": "final", "review_legal": "legal_draft", "review_final_legal": "legal_final"}[label]
+            which = {"review_intake": "intake", "review_draft": "draft", "review_legal": "legal_draft"}[label]
             back, word = verdict.split(":") if ":" in verdict else ("", verdict)
-            body = "Finding.\n" + ("RETURN: %s\n" % back if back else "") + "Verdict: %s" % word
-            result = self.ids["review"].write_review(c, which, body)
+            body = ("Problem: a scripted finding.\n" if word == "REVISE" else "Problem: none.\n") + ("RETURN: %s\n" % back if back else "")
+            if label == "review_draft" and self.replacements:
+                body += "```replacements\n%s\n```\n" % json.dumps(self.replacements)
+                self.replacements = None                    # given once; a real author acts on a return, the stand-in cannot
+            result = self.ids["review"].write_review(c, which, body + "Verdict: %s" % word)
             assert "error" not in result, result
         return {"turns": 3, "session_id": "s", "failure": None, "detail": ""}
 
@@ -93,6 +89,15 @@ def fake_optimizer(case_id):
     return run_id, None, "" if "error" not in orch.case().round_set_run(case_id, run_id) else "set_run failed"
 
 
+def fake_render(case_id, run_id):
+    """The render step without xelatex: the client copy and a PDF file, newer than the draft and the checklists."""
+    rd = orch.CASES / case_id / "report" / run_id
+    time.sleep(0.02)
+    orch.case().client_copy(rd, case_id, run_id)
+    (rd / "briefing.pdf").write_bytes(b"pdf")
+    return {"written": str(rd / "briefing.pdf")}
+
+
 def main():
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     root = Path(tempfile.mkdtemp(prefix="taxorch-")) / "cases"
@@ -101,11 +106,13 @@ def main():
     orch.intake_gate = lambda case_id: []
     orch.optimizer_run = fake_optimizer
     orch.self_check = lambda case_id, run_id, target: []
-    happy = ["review_intake", "run", "analysis", "review_draft", "polish", "review_final"]
+    orch.case().render_pdf = fake_render
+    happy = ["review_intake", "run", "analysis", "review_draft", "render"]
 
     s = fresh(root, "C1")
     r = orch.run_case("C1")
     check("the whole flow runs in the agreed order", r["nodes"] == happy and r["stop"] == "delivered" and r["status"] == "delivered", r)
+    check("the render step wrote the client copy and the PDF", (root / "C1" / "report" / r["run_id"] / "briefing.polished.md").exists() and (root / "C1" / "report" / r["run_id"] / "briefing.pdf").exists())
     r = orch.run_case("C1")
     check("a delivered case does nothing", r["nodes"] == [] and r["stop"] == "delivered", r)
     rows = [json.loads(x) for x in (root / "C1" / "log" / "runs.jsonl").read_text(encoding="utf-8").splitlines()]
@@ -114,19 +121,20 @@ def main():
     check("task text is the English sentence of the spec", s.tasks[0].startswith("Check the intake package of case C1."), s.tasks[0])
     check("the task names the prefetch pack and the case's files", "prefetch pack" in s.tasks[0] and "intake/index/pack/review_intake.md" in s.tasks[0].replace("\\", "/"), s.tasks[0][:300])
 
-    s = fresh(root, "C2", draft=("analysis:REVISE", "POLISHABLE"))
+    s = fresh(root, "C2", draft=("analysis:REVISE", "DELIVERABLE"))
     r = orch.run_case("C2")
-    check("stage 2 REVISE goes back to analysis and review again", r["nodes"] == happy[:4] + ["analysis", "review_draft", "polish", "review_final"] and r["stop"] == "delivered", r)
-    check("the repeat carries revision and reason", "Revision 1. Reason: see " in s.tasks[3] and "review.md" in s.tasks[3], s.tasks[3])
+    check("stage 2 REVISE goes back to analysis and review again", r["nodes"] == happy[:4] + ["analysis", "review_draft", "render"] and r["stop"] == "delivered", r)
+    check("the repeat carries revision, reason and the findings", "Revision 1. Reason: see " in s.tasks[3] and "review.md" in s.tasks[3] and "Problem: a scripted finding." in s.tasks[3], s.tasks[3])
     check("the revision number moved", orch.info("C2")["revision"] == 1, orch.info("C2"))
 
-    s = fresh(root, "C3", final=("polish:REVISE", "DELIVERABLE"))
+    s = fresh(root, "C3", replacements=[{"old": "The old sentence.", "new": "The new sentence."}])
     r = orch.run_case("C3")
-    check("stage 3 RETURN polish reruns polish and stage 3 only", r["nodes"] == happy + ["polish", "review_final"] and r["stop"] == "delivered", r)
+    text = (root / "C3" / "report" / r["run_id"] / "briefing.md").read_text(encoding="utf-8")
+    check("a reviewer's replacement is applied by the program, no return", r["nodes"] == happy and r["stop"] == "delivered" and "The new sentence." in text, (r, text))
 
-    s = fresh(root, "C4", final=("analysis:REVISE", "DELIVERABLE"))
+    s = fresh(root, "C4", replacements=[{"old": "A sentence that is not there.", "new": "x"}])
     r = orch.run_case("C4")
-    check("stage 3 RETURN analysis walks review and polish again", r["nodes"] == happy + ["analysis", "review_draft", "polish", "review_final"] and r["stop"] == "delivered", r)
+    check("a replacement the program cannot place goes back to the author", r["nodes"] == happy + ["analysis", "review_draft", "render"] and "could not apply" in s.tasks[3], (r, s.tasks[3][:200]))
 
     s = fresh(root, "C5", intake=("REVISE",))
     r = orch.run_case("C5")
@@ -143,7 +151,7 @@ def main():
     check("stage 2 RETURN front stops", r["stop"] == "need_front" and r["status"] == "drafted", r)
     n = Case(root, "front").round_new("C6")
     check("RETURN front lets the front open a new round", n.get("round") == 2, n)
-    s.verdicts["review_draft"] = ["POLISHABLE"]
+    s.verdicts["review_draft"] = ["DELIVERABLE"]
     Case(root, "front").write_intake("C6", "facts", '{"fixed": true}')
     r = orch.run_case("C6")
     check("the new round runs under a new run_id", r["stop"] == "delivered" and r["run_id"].endswith("-2") and r["nodes"] == happy, r)
@@ -161,16 +169,31 @@ def main():
     orch.self_check = lambda case_id, run_id, target: []
 
     s = fresh(root, "C8")
-    s.issue_at.add("polish")
+    orch.case().render_pdf = lambda case_id, run_id: {"error": "internal", "detail": "xelatex failed"}
     r = orch.run_case("C8")
-    check("polish issues without a PDF go to analysis with the text", r["nodes"] == happy[:5] + ["analysis", "review_draft", "polish", "review_final"] and "polish issues:" in s.tasks[4] and "wrong article" in s.tasks[4], (r, s.tasks[4:5]))
+    check("a failed render stops the run at reviewed", r["stop"] == "agent_failed" and "render" in r["detail"] and r["status"] == "reviewed", r)
+    orch.case().render_pdf = fake_render
+    r = orch.run_case("C8")
+    check("the next run resumes at render", r["nodes"] == ["render"] and r["stop"] == "delivered", r)
+
+    s = fresh(root, "C8b")
+    renders = []
+
+    def render_text_problem_once(case_id, run_id):
+        renders.append(1)
+        return {"error": "conflict", "detail": "fix the text first, nothing was rendered: sentence too long, split it: 58 words: x"} if len(renders) == 1 else fake_render(case_id, run_id)
+
+    orch.case().render_pdf = render_text_problem_once
+    r = orch.run_case("C8b")
+    check("a text problem found at render goes back to the author, not to a stop", r["nodes"] == happy + ["analysis", "review_draft", "render"] and r["stop"] == "delivered" and "sentence too long" in s.tasks[3], (r, s.tasks[3][:200]))
+    orch.case().render_pdf = fake_render
 
     s = fresh(root, "C9")
-    s.fail_at["polish"] = ["rate_limited"]
+    s.fail_at["review_draft"] = ["rate_limited"]
     r = orch.run_case("C9")
-    check("a rate limit stops the run", r["stop"] == "rate_limited" and r["status"] == "reviewed", r)
+    check("a rate limit stops the run", r["stop"] == "rate_limited" and r["status"] == "drafted", r)
     r = orch.run_case("C9")
-    check("the next run resumes at polish", r["nodes"] == ["polish", "review_final"] and r["stop"] == "delivered", r)
+    check("the next run resumes at the review", r["nodes"] == ["review_draft", "render"] and r["stop"] == "delivered", r)
 
     s = fresh(root, "C10")
     s.silent_at.add("analysis")
@@ -193,14 +216,13 @@ def main():
     st = orch.status_of("C12")
     check("status reports the next step and the last stop", st["next"] == "analysis" and st["last_stop"]["stop"] == "revision_limit", st)
 
-    s = fresh(root, "C14", legal=("analysis:REVISE", "POLISHABLE"), reason="The exemption applies because section 13 requires a headline rate of at least 15%.")
+    s = fresh(root, "C14", legal=("analysis:REVISE", "DELIVERABLE"), reason="The exemption applies because section 13 requires a headline rate of at least 15%.")
     r = orch.run_case("C14")
     check("the legal lane runs beside the draft review", "review_legal" in s.nodes and s.nodes.index("review_legal") > s.nodes.index("review_draft") - 2, s.nodes)
-    check("a lane REVISE sends the draft back although the main review passed", r["nodes"] == happy[:4] + ["analysis", "review_draft", "polish", "review_final"] and r["stop"] == "delivered", r)
+    check("a lane REVISE sends the draft back although the main review passed", r["nodes"] == happy[:4] + ["analysis", "review_draft", "render"] and r["stop"] == "delivered", r)
     check("the author is pointed at the lane's checklist", "review_legal.md" in s.tasks[s.nodes.index("analysis", 3)], s.tasks)
-    check("a polished report without new legal sentences carries the final lane", "review_final_legal" not in s.nodes and (root / "C14" / "report" / r["run_id"] / "review_final_legal.md").exists(), s.nodes)
 
-    s = fresh(root, "C15", draft=("analysis:REVISE", "POLISHABLE"), legal=("analysis:REVISE", "POLISHABLE"), reason="Section 13 requires at least 15%.")
+    s = fresh(root, "C15", draft=("analysis:REVISE", "DELIVERABLE"), legal=("analysis:REVISE", "DELIVERABLE"), reason="Section 13 requires at least 15%.")
     r = orch.run_case("C15")
     check("both reviews sending it back give the author both checklists", "review.md and " in s.tasks[s.nodes.index("analysis", 3)] and "review_legal.md" in s.tasks[s.nodes.index("analysis", 3)], s.tasks)
 
@@ -227,12 +249,12 @@ def main():
     check("classify: timeout", orch.classify(1, True, {}, "") == "agent_failed")
     check("parse_output takes the result event of a list", orch.parse_output('[{"type":"system"},{"type":"result","num_turns":5}]').get("num_turns") == 5)
 
-    env = orch.claude_env("polish")
-    check("env carries the polish model and the gateway settings", env["ANTHROPIC_MODEL"] == orch.MODELS["polish"] and env["ENABLE_TOOL_SEARCH"] == "false" and env["LANGSMITH_TRACING"] == "false" and env["CLAUDE_AGENT_NAME"] == "polish")
+    env = orch.claude_env("analysis")
+    check("env carries the analysis model and the gateway settings", env["ANTHROPIC_MODEL"] == orch.MODELS["analysis"] and env["ENABLE_TOOL_SEARCH"] == "false" and env["LANGSMITH_TRACING"] == "false" and env["CLAUDE_AGENT_NAME"] == "analysis")
 
-    flags = orch.agent_flags("polish")
+    flags = orch.agent_flags("analysis")
     servers = json.loads(Path(flags[flags.index("--mcp-config") + 1]).read_text(encoding="utf-8"))["mcpServers"]
-    check("each agent connects only its own servers", set(servers) == {"tax-case-polish", "tax-db"} and "--strict-mcp-config" in flags, sorted(servers))
+    check("each agent connects only its own servers", set(servers) == {"tax-case-analysis", "tax-read-analysis", "tax-rule", "tax-opt-calc"} and "--strict-mcp-config" in flags, sorted(servers))
 
     work = root.parent / "proc"
     work.mkdir()

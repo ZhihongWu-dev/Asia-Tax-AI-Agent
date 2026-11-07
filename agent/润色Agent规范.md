@@ -1,5 +1,7 @@
 # 润色 Agent 规范（最小集）
 
+> **已停用（2026-11-06）**：润色环节取消。分析 Agent 直接写交给客户的报告，可读性并入草稿复核，复核通过后由程序展开表格标记、排版出 PDF。本文只作历史记录；`write_polished` / `edit_polished` 仍留在案卷服务里供旧案卷读取。
+
 2026-11-01。四个 Agent 之一（前台、分析、润色、复核）。本文只定它的职责、输入输出、底稿和递交给它的 prompt。
 
 **语言**：本规范用中文，供人阅读；英文副本 `agent/polish_agent_spec.en.md`，两者不一致时以中文版为准，改中文版时同步改英文副本。AI 写进文件的一切自写文字用英文——代码、注释、prompt（系统实际递交的是英文副本里的那段）、底稿、bug；润色后的报告跟客户语言（默认英文）；引文原样。
@@ -52,11 +54,11 @@
 
 ## 6. 工具与权限
 
-读草稿、出处表、handoff 和流程图范例用宿主 Read；核对法规全称用 `tax-db`。写经 `tax-case-polish`：`write_polished`、`edit_polished`、`render_pdf`、`notes_append`、`bug_append`、`report_check`。润色不读 PDF 和图片（2026-11-03 前所用的 qwen3.7-max 不收图片），守卫会拒绝；版面靠 `render_pdf` 返回的页数、各节和流程图所在页、每页填充比例判断。
+读草稿、出处表、handoff 和流程图范例用宿主 Read，草稿按节读，不整篇读；核对法规全称用 `tax-db`。写经 `tax-case-polish`：`write_polished`、`edit_polished`、`render_pdf`、`notes_append`、`bug_append`、`report_check`。润色不读 PDF 和图片（2026-11-03 前所用的 qwen3.7-max 不收图片），守卫会拒绝；版面靠 `render_pdf` 返回的页数、各节和流程图所在页、每页填充比例判断。
 
 ## 7. 自检
 
-反复调 `render_pdf` 和 `report_check`（target=polished），直到 `latex_errors` 和 `overfull` 为 0、`problems` 为空。`body_pages` 是附录之前的页数，在 5 到 10 之间即可，不必为页数继续删改。`flow_page` 应是第 1 页；`page_fill` 里某个中间页明显偏低，说明图或表被挤到了下一页，缩短它前面的文字。`numbers_omitted` 和 `sources_cut` 列的是被删内容，逐项确认没有删掉上面"必须留下"的东西。
+按节写、按节查：先用 `write_polished`（mode=replace）写开头（标题、日期、前提）和第一节，之后每一节用 mode=append 接在末尾；每写完一节调 `report_check`（target=polished，part=该节：head、1 到 7、A、B）只查这一节，有问题用 `edit_polished` 改，再写下一节。写哪一节就读草稿的哪一节（预取包列出各节的行号，用 Read 的 offset/limit）。规则由 report_check 查：不要在动笔前把全文在脑子里起草一遍，也不要预先逐条自查规则。全部写完后，反复调 `render_pdf` 和 `report_check`（target=polished，不带 part），直到 `latex_errors` 和 `overfull` 为 0、`problems` 为空。`body_pages` 是附录之前的页数，在 5 到 10 之间即可，不必为页数继续删改。`flow_page` 应是第 1 页；`page_fill` 里某个中间页明显偏低，说明图或表被挤到了下一页，缩短它前面的文字。`numbers_omitted` 和 `sources_cut` 列的是被删内容，逐项确认没有删掉上面"必须留下"的东西。
 
 ## 8. 不做
 
@@ -73,7 +75,7 @@
 
 分析 Agent 的完整草稿已通过复核，在 cases/<case_id>/report/<run_id>/briefing.md，出处表在 briefing.sources.json，交接说明在 cases/<case_id>/intake/handoff.md。把它改成一份可以直接交给客户的书面意见，并生成 PDF。读者是客户，标准是顶级事务所的意见书。
 
-可以删，不能改。成稿比草稿短是设计如此，详细论证留在草稿里。不能改动数字、事实、假设、所依据的结构和法律结论，也不能新增论断或引用。发现草稿有实质问题，写进 issues 底稿并在最后说明，不要自己修，也不要出 PDF。任务里写了 Revision 和 Reason 时是退回重做，先读 Reason 指向的核对单或问题。复核退回时只处理措辞、删减和版面方面的意见，需要新增内容或改动数字、结论的意见属于分析，写进 issues。
+可以删，不能改。成稿比草稿短是设计如此，详细论证留在草稿里。不能改动数字、事实、假设、所依据的结构和法律结论，也不能新增论断或引用。发现草稿有实质问题，写进 issues 底稿并在最后说明，不要自己修，也不要出 PDF。任务里写了 Revision 和 Reason 时是退回重做，先读 Reason 指向的核对单或问题。任务里说草稿自上次润色后有改动时，只把差异文件里的改动搬进成稿：句子用 `edit_polished` 改，改过的出处行用 `write_polished`（name=sources，mode=append）发，其余段落原样不动，不重写也不重新追加各节。复核退回时只处理措辞、删减和版面方面的意见，需要新增内容或改动数字、结论的意见属于分析，写进 issues。
 
 语体：正式书面语。不要用一句话、为什么、省多少、花多少、靠什么、怎么做这类口语标签，改用建议摘要、选择理由、预期节税、实施成本、成立前提、实施步骤这类措辞。不要出现优化层用语（per 100、modelled、variants），不要出现系统标识和系统自用语：候选或分支编号、run_id、字段名、工具名、上下限、规则工具、模型、优化层、规则层、法规库、产物。也不要说明税负是哪个工具算出来的、备选方案是怎么枚举出来的。草稿末尾的内部编号行不进成稿。不写过程性说明：贵方被问过什么、比较时如何取值、哪些条文尚未收录之类都不写，假设直接陈述为本意见的前提，拿不到原文的结论写成建议当地顾问确认。
 
@@ -85,9 +87,9 @@
 
 写 briefing.polished.md（write_polished，name=polished）。保留下来的出处写成 id 和 where 的列表（name=sources），where 的格式是"<部分> | <成稿原句片段>"，片段逐字取自成稿，中间可用 … 省略；claim、kind、ref 由服务从草稿复制。
 
-动笔前在 plan 底稿写取舍，改完在 changes 底稿写删了什么、并了什么。全文只写一次，之后改句子用 `edit_polished`，不要重发全文；出处改动用 mode=append 只发改过的条目。渲染前先调 `report_check`（target=polished，text_only=true）到 problems 为空，`render_pdf` 在文字有问题时不渲染。然后反复调 render_pdf 和 report_check（target=polished），直到 latex_errors 和 overfull 为零、problems 为空。body_pages 是附录之前的页数，在五到十之间即可，不必为页数继续删改。你看不到页面，不要读 PDF 或图片，用 render_pdf 返回的页数、各节和流程图所在页、每页填充比例判断版面：flow_page 应是一；某个中间页的 page_fill 明显偏低，说明图或表被挤到了下一页，调整它前面的文字。逐项看 numbers_omitted 和 sources_cut，确认没有删掉必须留下的内容。
+动笔前在 plan 底稿用几行写取舍，改完在 changes 底稿写删了什么、并了什么。按节写、按节查：先用 `write_polished`（mode=replace）写开头（标题、日期、前提）和第一节，之后每一节用 mode=append 接在末尾；每写完一节调 `report_check`（target=polished，part=该节：head、1 到 7、A、B）只查这一节，有问题用 `edit_polished` 改，再写下一节。写哪一节就读草稿的哪一节（预取包列出各节的行号，用 Read 的 offset/limit）。规则由 report_check 查：不要在动笔前把全文在脑子里起草一遍，也不要预先逐条自查规则。不要重发全文；出处改动用 mode=append 只发改过的条目。全部写完后，渲染前先调 `report_check`（target=polished，text_only=true）到 problems 为空，`render_pdf` 在文字有问题时不渲染。然后反复调 render_pdf 和 report_check（target=polished），直到 latex_errors 和 overfull 为零、problems 为空。body_pages 是附录之前的页数，在五到十之间即可，不必为页数继续删改。你看不到页面，不要读 PDF 或图片，用 render_pdf 返回的页数、各节和流程图所在页、每页填充比例判断版面：flow_page 应是一；某个中间页的 page_fill 明显偏低，说明图或表被挤到了下一页，调整它前面的文字。逐项看 numbers_omitted 和 sources_cut，确认没有删掉必须留下的内容。
 
-成稿用 handoff.md 要求的语言；你写的底稿和 bug 用英文；引文原样。系统自己的毛病用 bug_append 记录，只报不修。最后用几句话说明页数、删减的主要内容和 report_check 结果。
+决定了要做什么就直接调工具，不用先说一句打算做什么。成稿用 handoff.md 要求的语言；你写的底稿和 bug 用英文；引文原样。系统自己的毛病用 bug_append 记录，只报不修。最后用几句话说明页数、删减的主要内容和 report_check 结果。
 
 改版：任务里写 Mode: revised edition 时，草稿里与上一版草稿相同的章节，逐字沿用上一版成稿的文字；只润色改过的章节和变化说明，再出 PDF。
 

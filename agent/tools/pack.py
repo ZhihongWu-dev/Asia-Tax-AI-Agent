@@ -10,6 +10,32 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 CASES = HERE.parents[1] / "cases"
 LIMIT = 36000                     # characters, about 9,000 tokens
+LIMITS = {"analysis": 100000, "review_draft": 100000}   # 2026-11-04: the nodes that write or check the draft get every structure compared at once
+
+
+def outline_section(cd, rel_paths):
+    """Line ranges of the parts of the report files that exist, so that an agent reads one part (Read offset/limit) at a time."""
+    import case_server as cs
+    rows = []
+    for rel in rel_paths:
+        p = cd / rel
+        if p.exists():
+            parts = cs.outline(p.read_text(encoding="utf-8"))
+            rows.append("%s: %s" % (rel, "; ".join("%s lines %d-%d" % (o["part"], o["lines"][0], o["lines"][1]) for o in parts)))
+    return "\n".join("- " + r for r in rows)
+
+
+def compact_requirement(full):
+    """A requirement record without its long quotations: the slot, the favourable rules (id, effect, condition, cites) and the
+    parameters they read (id = value unit, cite)."""
+    out = {"slot_key": full.get("slot_key"), "edge_id": full.get("edge_id"), "rules": [], "params": []}
+    for fr in full.get("favourable_rules") or []:
+        for r in fr.get("rules") or []:
+            if isinstance(r, dict):
+                out["rules"].append({k: r.get(k) for k in ("rule_id", "effect", "condition", "cite_ids", "decision_ids", "procedure") if r.get(k)})
+    for p in full.get("reference_params") or []:
+        out["params"].append("%s = %s %s (%s)" % (p.get("param_id"), p.get("value"), p.get("unit"), p.get("cite_id")))
+    return json.dumps(out, ensure_ascii=False)
 
 
 def cards(con, sql, args=()):
@@ -40,12 +66,15 @@ def build(reader, case_id, node):
         if body and body.strip():
             sections.append((title, body.strip(), []))
 
-    if node == "polish":
-        return polish_pack(case_id, rnd, run, out_dir)
-    reading = node in ("analysis", "review_draft", "review_final")
+    reading = node in ("analysis", "review_draft")
     m = reader.map(case_id)
     text("Files of the case (what map returns; read them through tax-read, not Glob)",
          "\n".join("- %s/: %s" % (f["path"].split("/", 2)[2], ", ".join(x["name"] for x in f["files"])) for f in m.get("folders", [])))
+    if run and reading:
+        text("Parts of the report and their lines (read one part at a time with Read offset/limit, not the whole file)",
+             outline_section(cd, ["report/%s/briefing.md" % run]))
+    if run and node == "analysis":
+        text("The client's standard (what report_check(target=draft) tests, and the diagram)", client_standard(cd / "report" / run))
     ccon, _ = reader.casefile(case_id)
     if ccon:
         keys = ("amount", "currency", "date", "instructed_on", "payer.", "payee.", "payment.", "entities.", "destinations", "valuation.", "past_payments")
@@ -78,7 +107,21 @@ def build(reader, case_id, node):
                 names = json.loads((cd / "report" / run / "frame" / "names.json").read_text(encoding="utf-8"))
                 items("Structure ids by name", [("%s:structure:%s" % (run, cid), "%s: %s" % (n["name"], n["signature"])) for cid, n in names.items()])
             except Exception as ex:                          # noqa: BLE001  (the pack still carries the rest)
+                names = {}
                 text("Structure names", "not available: %s" % ex)
+            if node in LIMITS:                               # every structure the report compares, so that no branch is fetched one by one
+                rows = []
+                for cid, n in names.items():
+                    st = pcon.execute("SELECT id, card, full FROM record WHERE type = 'structure' AND cand = ?", (cid,)).fetchone()
+                    if not st:
+                        continue
+                    rows.append((st["id"], "%s: %s" % (n["name"], st["card"])))
+                    fb_c = ((json.loads(st["full"]).get("brief") or {}).get("all_favourable") or {}).get("branch_id")
+                    if fb_c:
+                        rows += cards(pcon, "SELECT id, card FROM record WHERE type IN ('branch', 'delta') AND branch = ? ORDER BY type DESC", (fb_c,))
+                    rows += cards(pcon, "SELECT id, card FROM record WHERE type = 'transfer' AND cand = ? ORDER BY rowid", (cid,))
+                items("Every structure the report compares: the structure, its all-favourable branch, that branch's delta (saving per payment, "
+                      "payback, one-off cost) and its transfers", rows)
             brief = pcon.execute("SELECT full FROM record WHERE type = 'brief'").fetchone()
             best = json.loads(brief["full"]).get("best", {}).get("cand_id") if brief else None
             if best:
@@ -125,93 +168,93 @@ def build(reader, case_id, node):
             for r in pcon.execute("SELECT id, full FROM record WHERE type = 'point' ORDER BY rowid"):
                 jp = json.loads(r["full"])
                 f, u = jp.get("first_if_favourable") or {}, jp.get("first_if_unfavourable") or {}
+                if node in LIMITS:                           # the whole record: it is short
+                    pts.append((r["id"], json.dumps(jp, ensure_ascii=False)))
+                    continue
                 pts.append((r["id"], json.dumps({"changes_rank": jp.get("changes_rank"), "at_stake": jp.get("value_at_stake"),
                                                  "first_if_favourable": [f.get("cand_id"), f.get("amount")], "first_if_unfavourable": [u.get("cand_id"), u.get("amount")],
                                                  "question": (jp.get("question") or "")[:140]}, ensure_ascii=False)))
-            items("Judgment points: first structure and its tax under either answer (get(id) for the full question)", pts)
+            items("Judgment points: first structure and its tax under either answer%s" % ("" if node in LIMITS else " (get(id) for the full question)"), pts)
             ois = []
-            for r in pcon.execute("SELECT id, full FROM record WHERE type = 'open_item' ORDER BY rowid"):
+            for r in pcon.execute("SELECT id, card, full FROM record WHERE type = 'open_item' ORDER BY rowid"):
                 it = json.loads(r["full"])
-                if it.get("changes_rank") or it.get("client_supplies"):
+                if node in LIMITS:
+                    ois.append((r["id"], r["card"]))
+                elif it.get("changes_rank") or it.get("client_supplies"):
                     ois.append((r["id"], json.dumps({"changes_rank": it.get("changes_rank"), "client_supplies": it.get("client_supplies"),
                                                      "question": (it.get("question") or "")[:160]}, ensure_ascii=False)))
-            items("Open items that change the ranking or that the client can supply", ois)
+            items("Open items%s" % (" (all)" if node in LIMITS else " that change the ranking or that the client can supply"), ois)
             items("Decision gaps", cards(pcon, "SELECT id, card FROM record WHERE type = 'gap' ORDER BY rowid"))
+            if node in LIMITS:
+                items("Penalties if a treatment taken is later denied", cards(pcon, "SELECT id, card FROM record WHERE type = 'penalty' ORDER BY rowid"))
             if best:
-                items("Requirements of the first structure", cards(pcon, "SELECT id, card FROM record WHERE type = 'requirement' AND cand = ? ORDER BY rowid", (best,)))
-                items("Transfers of the first structure", cards(pcon, "SELECT id, card FROM record WHERE type = 'transfer' AND cand = ? ORDER BY rowid", (best,)))
+                if node in LIMITS:
+                    items("Requirements of the first structure, per hop: the favourable rules (condition, cites) and the parameters they read "
+                          "(get(id) for the verbatim quotations)",
+                          [(r["id"], compact_requirement(json.loads(r["full"])))
+                           for r in pcon.execute("SELECT id, full FROM record WHERE type = 'requirement' AND cand = ? ORDER BY rowid", (best,))])
+                    items("Transfers of the first structure (whole records)",
+                          [(r["id"], r["full"]) for r in pcon.execute("SELECT id, full FROM record WHERE type = 'transfer' AND cand = ? ORDER BY rowid", (best,))])
+                else:
+                    items("Requirements of the first structure", cards(pcon, "SELECT id, card FROM record WHERE type = 'requirement' AND cand = ? ORDER BY rowid", (best,)))
+                    items("Transfers of the first structure", cards(pcon, "SELECT id, card FROM record WHERE type = 'transfer' AND cand = ? ORDER BY rowid", (best,)))
             items("Difference from the previous run", cards(pcon, "SELECT id, card FROM record WHERE type = 'diff'"))
             items("Scenarios (who comes first and second; get(id) for the amounts)",
                   [(i, json.dumps({k: loads(c).get(k) for k in ("against", "first", "second")}, ensure_ascii=False))
                    for i, c in cards(pcon, "SELECT id, card FROM record WHERE type = 'scenario' ORDER BY rowid")])
-    if node in ("review_draft", "review_final") and run:
-        cc = reader.cite_check(case_id, run, "draft" if node == "review_draft" else "polished")
+    if node == "review_draft" and run:
+        cc = reader.cite_check(case_id, run, "draft")
         if "error" not in cc:
             sections.insert(1, ("Provenance check of the %s (cite_check)" % cc["target"],
                                 "unresolved refs: %s\n\nfigures no source row states: %s" % (json.dumps(cc["unresolved_refs"], ensure_ascii=False),
                                                                                            json.dumps(cc["uncovered_figures"], ensure_ascii=False)), []))
-    if node in ("review_intake", "front") and ccon:
+    if node in ("review_intake", "front") + tuple(LIMITS) and ccon:
         items("Sources recorded (intake/sources.json)", cards(ccon, "SELECT id, card FROM record WHERE type = 'source' ORDER BY rowid"))
+    if node in ("review_intake", "front") and ccon:
         items("Documents and how they were read", cards(ccon, "SELECT id, card FROM record WHERE type = 'document' ORDER BY id"))
     head = ("# Prefetch pack: %s, case %s, round %s, run %s\n\nWritten by the program. Each item starts with its id; cite that id as the "
             "ref of the sources table. For more, use tax-read: search (several questions at once), list(kind), get(id), expand(id). "
             "Paths are relative to cases/%s.\n" % (node, case_id, rnd, run or "-", case_id))
     out, ids, left = [head], [], []
-    used = len(head)
+    used, limit = len(head), LIMITS.get(node, LIMIT)
     for title, body, sids in sections:
         block = "\n## %s\n\n%s\n" % (title, body)
-        if used + len(block) > LIMIT:
+        if used + len(block) > limit:
             left.append(title)
             continue
         out.append(block)
         ids += sids
         used += len(block)
     if left:
-        out.append("\n## Left out (the pack is capped at %d characters; fetch these with tax-read)\n\n%s\n" % (LIMIT, "\n".join("- " + t for t in left)))
+        out.append("\n## Left out (the pack is capped at %d characters; fetch these with tax-read)\n\n%s\n" % (limit, "\n".join("- " + t for t in left)))
     path = out_dir / ("%s.md" % node)
     path.write_text("".join(out), encoding="utf-8")
     return path, ids
 
 
-def polish_pack(case_id, rnd, run, out_dir):
-    """What polish otherwise digs out of the system's code: the tables the draft's markers stand for, what report_check tests,
-    and the diagram format (polish_agent_spec.en.md §6)."""
+def client_standard(rd):
+    """What the analysis agent otherwise digs out of the system's code (2026-11-06, the draft is the client report): what report_check tests,
+    how the program tables and the diagram work."""
     import case_server as cs
-    cd = CASES / case_id
-    rd = cd / "report" / run
-    draft = (rd / "briefing.md").read_text(encoding="utf-8") if (rd / "briefing.md").exists() else ""
-    rel = lambda p: p.relative_to(cd).as_posix()                                        # noqa: E731
-    files = [rel(p) for p in (rd / "briefing.md", rd / "briefing.sources.json", rd / "review.md", rd / "review_legal.md", cd / "intake" / "handoff.md") if p.exists()]
-    out = ["# Prefetch pack: polish, case %s, round %s, run %s\n\nWritten by the program. Paths are relative to cases/%s. You need nothing "
-           "else from the system: do not read its code or specifications.\n" % (case_id, rnd, run, case_id),
-           "## Files\n\n" + "\n".join("- " + f for f in files) + "\n"]
-    marks = list(dict.fromkeys(re.findall(r"\{\{block:([a-z_]+)\}\}", draft)))
-    fb = rd / "frame" / "blocks"
-    if marks:
-        out.append("## Program tables the draft's markers stand for\n\nA line {{block:<name>}} in the draft stands for the table below, which the "
-                   "program generated from the products. In the polished report write the table itself in place of the marker (you may cut a "
-                   "table that the body already states in prose, or drop a column; do not change a cell). report_check counts the figures of "
-                   "these tables as figures of the draft.\n")
-        for name in marks:
-            p = fb / ("%s.md" % name)
-            out.append("### %s\n\n%s\n" % (name, p.read_text(encoding="utf-8").strip() if p.exists() else "(no such block in frame/blocks)"))
-    out.append("## What report_check(target=polished) tests\n\n" + "\n".join("- " + x for x in (
-        "every number of the polished report is a number of the draft (thousands separators and units ignored): number_drift must be empty",
-        "every sources row keeps the draft's claim, kind and ref (claims_changed empty); a row may be dropped with its sentence (sources_cut lists it)",
-        "every row's where fragment is verbatim in the polished body (where_unlocated empty): when you reword a sentence, update the fragment",
-        "parts 1 to 7 and Appendices A and B present, a Date line, no internal-reference line and no system identifiers in the body",
-        "the body before the appendices runs to %d to %d PDF pages (render_pdf first; report_check reads briefing.pdf)" % (cs.BODY_FLOOR, cs.BODY_LIMIT),
-        "no sentence of the body prose over %d words; tables and the diagram block do not count" % cs.LONG_SENTENCE,
-        "no spoken lead-ins in bold (In one sentence, Why, How much it saves, ...) and none of the optimizer's words: per 100, modelled, variant, "
-        "judgment world, ranked N-th, the library",
-        "it lists numbers_omitted and sources_cut for the final review: cutting is allowed, but nothing the polish spec says must stay")) + "\n")
+    out = ["The report you write is handed to the client as it stands: the program only expands the table markers, drops the internal reference "
+           "line and typesets it. report_check(target=draft) tests:",
+           "\n".join("- " + x for x in (
+               "the internal reference line with the case id and run id at the very end (the program removes it from the client copy); nowhere else "
+               "a case id, run id, candidate or branch id, field name, tool name, floor/ceiling or any other system identifier",
+               "parts 1 to 7 and Appendices A and B present, a Date line that is the instruction date",
+               "a ```flow block in Part 1: the restructuring diagram as JSON (shape below); render_pdf draws it",
+               "every figure of the body occurs in the record its sources row cites (cite_check), every sources row has a where fragment and a resolvable ref",
+               "none of the optimizer's words (per 100, modelled, variant, judgment world, ranked N-th, the library) and no spoken lead-ins in bold "
+               "(In one sentence, Why, How much it saves, ...)",
+               "no sentence of the body prose over %d words; tables and the diagram block do not count" % cs.LONG_SENTENCE,
+               "a current briefing.pdf (call render_pdf when the text is settled) whose body before the appendices runs to %d to %d pages"
+               % (cs.BODY_FLOOR, cs.BODY_LIMIT))),
+           "A line {{block:<name>}} on its own stands for a program table from report/<run>/frame/frame.md; keep the marker, the program expands it "
+           "in the client copy and report_check counts the table's figures as yours."]
     tpl = HERE.parent / "templates" / "flowchart.example.json"
     if tpl.exists():
-        out.append("## The diagram\n\nThe restructuring diagram is a fenced block ```flow holding JSON of this shape (render_pdf draws it; keep it "
-                   "to the facts of the report):\n\n```json\n%s\n```\n" % tpl.read_text(encoding="utf-8").strip())
-    path = out_dir / "polish.md"
-    path.write_text("\n".join(out), encoding="utf-8")
-    return path, []
+        out.append("The diagram block:\n\n```json\n%s\n```" % tpl.read_text(encoding="utf-8").strip())
+    return "\n\n".join(out)
 
 
 def inventory(reader, case_id):

@@ -45,7 +45,7 @@ UPLOAD_TYPES = {".pdf": "pdf", ".doc": "word", ".docx": "word", ".xls": "excel",
 UPLOAD_LIMIT = 10 * 1024 * 1024
 RESUMABLE = ("rate_limited", "agent_failed", "revision_limit", "stopped", "system_defect")
 PIPELINE = (("intake", "front"), ("review_intake", "review"), ("run", "program"), ("analysis", "analysis"),
-            ("review_draft", "review"), ("polish", "polish"), ("review_final", "review"))
+            ("review_draft", "review"), ("render", "program"))                     # 2026-11-06: no polish stage; the program renders the reviewed draft
 WEB_NOTE = """You are running behind the web interface; these points replace the Bash step of your procedure.
 The client reads your replies in a chat window. The case already exists and its id is in the first message, so do not call case_new. Uploaded documents are already in intake/documents/. The host has already written each client message to dialogue.md word for word: do not append client entries, and never write words for the client.
 Starting the orchestrator is the host's job, so never run orchestrate.py yourself. When step 4 is ready (handoff.md written, intake_check clean), tell the client in one or two sentences that the analysis is starting, and end your reply with the line [[START_RUN]]. The host then runs it and shows the progress beside the chat.

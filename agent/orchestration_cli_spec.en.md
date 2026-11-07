@@ -78,7 +78,7 @@ On every `REVISE` return the program first calls `round_revise`, which adds one 
 |---|---|---|
 | `delivered` | The report can be delivered | The front hands it to the client |
 | `need_front` | The intake package or the facts must change | The front reads the checklist, fixes the package, asks the client if needed and calls `run` again |
-| `revision_limit` | One node has run 4 times in one `run` | A person |
+| `revision_limit` | One node has run 6 times in one `run` (raised from 4 on 2026-11-05: a trial stopped one wording fix short; past the limit a person resumes it) | A person |
 | `agent_failed` | Process failure, timeout, turn limit, or no file updated | A person |
 | `system_defect` | An `affects_result` bug of this round is not cleared | A person: after the fix, `orchestrate.py clear <case_id> <agent/B-n>`, then continue |
 | `rate_limited` | The gateway is rate limiting | A person, who calls `run` again when quota returns |
@@ -406,3 +406,24 @@ review_draft and review_final each run two review agents at the same time: the m
 Re-check scope: a review node is told "this is a re-check" only when its last checklist was of the same run of the same round (`log/reviewed/<node>/run.txt`), and only when the difference is under 60% of the files; otherwise it checks the draft as new. (The first draft review of round 3 was handed a 64,000-character diff against another run's draft and treated a new draft as a re-check.)
 
 Polish pack: before polish the program writes `pack/polish.md`: the files it works from, the program tables that the draft's `{{block:<name>}}` markers stand for, what report_check tests on the polished report, and the diagram format, so polish does not read the system's code (round 3: 19 Reads, 16 Greps, mostly of case_server.py and render_pdf.py). report_check expands the markers before comparing the polished report's figures with the draft's.
+
+Incremental polish (2026-11-05): when a polish node succeeds, the program keeps the draft and sources table it worked from in `log/polished/` (with `run.txt`). When analysis later changes the draft of the same run, the next polish task names the difference file `log/polish_changes.md`; polish carries those changes into the polished report with `edit_polished` and sends changed sources rows with append, without rewriting the whole. With no polished report of the same run, an unchanged draft (a return from the final review) or a difference over 60% of the files, polish runs as before. Reason: in trial case CASE-20261104-7e57a1, run 20261104-d2239ced, analysis changed one sentence and polish still rewrote every part (6.2 minutes); the return from the final review, done with edit_polished only, took 1.2 minutes.
+
+## 13. No polish and no final comparison (2026-11-06)
+
+The end-to-end trials (CASE-20261105-a7e298 on GPT, CASE-20261106-3694b3 on qwen) showed polish and the final comparison taking half the delivery time (81 + 71 minutes), with every final-review return caused by polish's own cuts. Changed to:
+
+| Part | Now |
+|---|---|
+| Graph | `review_intake → run → analysis → review_draft (+ review_legal) → render → delivered`; the `polish`, `review_final` and `review_final_legal` nodes are gone and `LEGAL` is reduced accordingly |
+| Analysis | writes the client report itself (spec §3, §5 rule 11); calls `render_pdf` (open to the analysis identity) when done, for the page count |
+| Self-check | `self_check` first calls `autofix_draft`: sources rows pointing at a bug or notebook file are dropped by the program and logged; `report_check(target=draft)` also tests the flow block, spoken lead-ins, the optimizer's vocabulary, long sentences, and a current PDF with the body page count |
+| Review | the draft check gains an eighth category, readable for the client; the legal lane has the draft lane only; the pass token is `DELIVERABLE` (the old `POLISHABLE` is still read as a pass) |
+| Fix to order | a checklist may carry a ```replacements block (`[{"old", "new"}]`); the `render` node has the program `apply_replacements` them to the draft and re-stamp the checklists before typesetting; one that cannot be placed (sentence missing or not unique) goes back to analysis |
+| Program gates | `write_review` refuses: a REVISE with no problem entry; on a re-check, a REVISE citing only unchanged lines that the previous checklist did not raise; a `replacements` block that is not a JSON list. `bug_append` with `affects_result=true` requires `effect` (which figure of this case changes, from what to what) |
+| Return task | the analysis return task carries the checklists' findings (location, problem, evidence, suggestion; capped at 6,000 characters), to be applied as given |
+| render node | program step: apply replacements → `client_copy` (markers expanded, lines carrying the case id or run id removed, written as `briefing.polished.md` for the host and old readers) → `render_pdf` → `report_check` again with the fresh PDF; a failed render stops with `agent_failed`, a failed check returns to analysis |
+| Status | `reviewed`: both review lanes passed; `delivered`: `briefing.pdf` newer than the draft and the checklists. `polished` no longer occurs; old cases are read by the old rule |
+| Host | the progress panel's node table is `intake, review_intake, run, analysis, review_draft, render`; the relay after delivery still reads Part 1 of `briefing.polished.md` |
+
+`make_agents.py` no longer generates a polish agent; the review prompt has three stages (intake package, draft, legal lane).
