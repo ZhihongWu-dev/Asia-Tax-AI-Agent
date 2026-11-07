@@ -37,6 +37,16 @@ def items_of(event):
         blocks = (event.get("message") or {}).get("content") or []
         return [{"kind": "tool", "name": tool_label(b.get("name", "")), "detail": tool_detail(b.get("input") or {})}
                 for b in blocks if isinstance(b, dict) and b.get("type") == "tool_use"]
+    if kind in ("item.started", "item.completed"):                 # the native Codex CLI's event stream (2026-11-05)
+        item = event.get("item") or {}
+        what = item.get("type")
+        if what == "mcp_tool_call" and kind == "item.started":
+            return [{"kind": "tool", "name": "%s · %s" % (item.get("server", ""), item.get("tool", "")), "detail": tool_detail(item.get("arguments") or {})}]
+        if what == "agent_message" and kind == "item.completed":
+            return [{"kind": "text", "text": item.get("text", ""), "start": True}]
+        if what == "reasoning" and kind == "item.completed":
+            text = item.get("text") or " ".join(s.get("text", "") for s in item.get("summary", []) if isinstance(s, dict))
+            return [{"kind": "thinking", "text": text, "start": True}] if text else []
     return []
 
 
@@ -65,9 +75,9 @@ class Tail:
                 event = json.loads(line)
             except ValueError:
                 continue
-            if event.get("type") == "result":
+            if event.get("type") in ("result", "turn.completed"):
                 self.result = event
-            self.session_id = event.get("session_id") or self.session_id
+            self.session_id = event.get("session_id") or event.get("thread_id") or self.session_id
             fresh.extend(items_of(event))
         self.items.extend(fresh)
         return fresh

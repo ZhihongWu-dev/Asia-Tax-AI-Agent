@@ -427,3 +427,7 @@ The end-to-end trials (CASE-20261105-a7e298 on GPT, CASE-20261106-3694b3 on qwen
 | Host | the progress panel's node table is `intake, review_intake, run, analysis, review_draft, render`; the relay after delivery still reads Part 1 of `briefing.polished.md` |
 
 `make_agents.py` no longer generates a polish agent; the review prompt has three stages (intake package, draft, legal lane).
+
+## 14. Executor: Codex + qwen by default (2026-11-07)
+
+The graph, routing, program steps and review rules are unchanged; what changes is the command line that runs the agents. By default the Codex CLI drives qwen3.8-flash (Token Plan's OpenAI-compatible endpoint, Responses API), entry point `agent/tools/orchestrate_codex.py`, configuration `agent/harness.json` (model and reasoning level per node; `agent/harness.gpt-luna.json` is the GPT alternative). The web host takes this path by default; `TAX_HARNESS=claude` goes back to Claude Code (`orchestrate.py`). Each call is a fresh session with its own `CODEX_HOME` and only its provider's key; the MCP servers are those of the Claude path plus `tax-files` for controlled file reads. Reason: on the same input the analysis node took 23.6 minutes on Codex + qwen against 30 to 49 on Claude Code + qwen, and the Claude Code stream from Token Plan once stalled at a few thousand tokens an hour. See `.codex/README.md`.

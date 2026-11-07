@@ -37,7 +37,7 @@ and the agents write, review and polish a report. The project goals are in `goal
 ## Environment
 
 - Python 3.11 (conda env `tax`): `pip install -r requirements.txt`. Node.js for `apps/web`.
-- Outside Python: xelatex with ctex (report PDF), Claude Code CLI (runs the agents; `CLAUDE_BIN` or `claude` on PATH), LibreOffice (old Office originals in `database/` only).
+- Outside Python: xelatex with ctex (report PDF), Codex CLI (runs the agents by default since 2026-11-07, driving qwen3.8-flash through Token Plan's OpenAI-compatible endpoint; `TAX_CODEX_BIN` or the app-bundled `codex.exe`; config `agent/harness.json`, see `.codex/README.md`), Claude Code CLI (the earlier path, `agent/tools/orchestrate.py`; `CLAUDE_BIN` or `claude` on PATH), LibreOffice (old Office originals in `database/` only).
 - Keys are committed on purpose (a group assignment, the owner's decision): `.env` at the root, read by the code, and `key.md` as the owner's list. Keep them in git; do not print a value in logs or reports.
 
 ## Checks
