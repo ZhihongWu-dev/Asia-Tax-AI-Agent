@@ -4,10 +4,10 @@ Written by `rule/tools/build.py` at every build; do not edit.
 
 | What | Count |
 |---|---|
-| Rules | 200 |
+| Rules | 201 |
 | Variables / predicates | 60 / 10 |
 | Interpretation decisions (rows) | 27 |
-| Golden tests (passed / total) | 529 / 529 |
+| Golden tests (passed / total) | 532 / 532 |
 | Errors | 0 |
 | Coverage gaps (jurisdiction, subject, slot) | 102 |
 | Conditioned rules without a T, F and U test | 0 |
@@ -18,7 +18,7 @@ Written by `rule/tools/build.py` at every build; do not edit.
 |---|---|
 | cn | 68 |
 | hk | 16 |
-| sg | 18 |
+| sg | 19 |
 | id | 0 |
 | vn | 0 |
 | my | 0 |
