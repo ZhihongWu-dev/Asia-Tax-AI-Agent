@@ -134,6 +134,8 @@ def remote_meta(con, schema):
 def replace_tables(con, schema, rows, meta):
     """Drop the schema and create it again with the seven tables, their rows and meta, in one transaction."""
     with con.cursor() as cur:
+        # the COPY of clause (about 40 MB) runs past Supabase's default statement timeout on a slow uplink
+        cur.execute("SET LOCAL statement_timeout = 0")
         cur.execute('DROP SCHEMA IF EXISTS "%s" CASCADE' % schema)
         cur.execute('CREATE SCHEMA "%s"' % schema)
         for name in ORDER:
