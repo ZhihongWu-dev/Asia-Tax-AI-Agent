@@ -5,13 +5,13 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | What | Count |
 |---|---|
 | Documents | 285 |
-| Clauses | 36843 |
+| Clauses | 37627 |
 | Clauses left out (superseded.csv) | 217 |
 | Repealed-provision stubs left out | 50 |
 | Parameters | 572 |
 | Treaty rows | 55 |
 | Absence records | 45 |
-| Errors / warnings | 5 / 117 |
+| Errors / warnings | 0 / 117 |
 | Gaps: (jurisdiction, category) / (jurisdiction, subject, slot) / pairs without a treaty row / unresolved downloads | 6 / 36 / 0 / 2 |
 
 ## Documents
@@ -186,7 +186,7 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | treaty.ae-hk.2014.en | ae-hk | treaty |  | pdf | ok | page | 1 | Agreement between Hong Kong and the United Arab Emirates for |
 | treaty.ae-hk.2014.mli.en | ae-hk | treaty |  | pdf | ok | en_article | 118 | Synthesised text of the MLI and the Hong Kong–United Arab Em |
 | treaty.ae-id.2019.en | ae-id | treaty |  | pdf | ocr | en_article | 147 | Agreement between Indonesia and the United Arab Emirates for |
-| treaty.ae-in.1992.mli.en | ae-in | treaty |  | pdf | scanned_or_empty | page | 0 | India–United Arab Emirates Double Taxation Agreement |
+| treaty.ae-in.1992.mli.en | ae-in | treaty |  | pdf | ocr | en_article | 137 | India–United Arab Emirates Double Taxation Agreement |
 | treaty.ae-in.1992.p1.en | ae-in | treaty |  | pdf | ok | en_article | 6 | First Protocol to the India–United Arab Emirates Double Taxa |
 | treaty.ae-in.1992.p2.en | ae-in | treaty |  | pdf | ocr | page | 4 | Second Protocol to the India–United Arab Emirates Double Tax |
 | treaty.ae-jp.2013.convention.mof.en | ae-jp | treaty |  | pdf | ok | en_article | 126 | CONVENTION BETWEEN JAPAN AND THE UNITED ARAB EMIRATES FOR TH |
@@ -266,7 +266,7 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | treaty.in-th.2015.en | in-th | treaty |  | pdf | ocr | en_article | 122 | Convention between the Kingdom of Thailand and the Republic  |
 | treaty.in-th.2015.protocol.en | in-th | treaty |  | pdf | ocr | page | 1 | Protocol to the Convention between the Kingdom of Thailand a |
 | treaty.in-vn.1994.mofa | in-vn | treaty |  | html | ok | whole | 1 | Agreement between Viet Nam and India for the Avoidance of Do |
-| treaty.in-vn.1994.mofa.text | in-vn | treaty |  | pdf | scanned_or_empty | page | 0 | Agreement between Viet Nam and India for the Avoidance of Do |
+| treaty.in-vn.1994.mofa.text | in-vn | treaty |  | pdf | ocr | en_article | 130 | Agreement between Viet Nam and India for the Avoidance of Do |
 | treaty.jp-kr.1998.mli.en | jp-kr | treaty |  | pdf | ok | en_article | 128 | Synthesised text of the MLI and the Japan-Korea convention |
 | treaty.jp-my.1999.mli.en | jp-my | treaty |  | pdf | ok | en_article | 126 | Synthesised text of the MLI and the Japan-Malaysia agreement |
 | treaty.jp-sg.1994.mli.en | jp-sg | treaty |  | pdf | ok | en_article | 134 | Synthesised text of the MLI and the Japan-Singapore agreemen |
@@ -279,9 +279,9 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | treaty.kr-sg.2019.iras | kr-sg | treaty |  | pdf | ok | en_article | 248 | Agreement between Singapore and the Republic of Korea for th |
 | treaty.kr-th.2006.rd | kr-th | treaty |  | pdf | ocr | en_article | 129 | Convention between Thailand and the Republic of Korea for th |
 | treaty.kr-vn.1994.mofa | kr-vn | treaty |  | html | ok | whole | 1 | Agreement between Viet Nam and the Republic of Korea for the |
-| treaty.kr-vn.1994.mofa.text | kr-vn | treaty |  | pdf | scanned_or_empty | page | 0 | Agreement between Viet Nam and the Republic of Korea for the |
+| treaty.kr-vn.1994.mofa.text | kr-vn | treaty |  | pdf | ocr | en_article | 121 | Agreement between Viet Nam and the Republic of Korea for the |
 | treaty.kr-vn.2019.protocol.mofa | kr-vn | treaty |  | html | ok | whole | 1 | Second Protocol amending the Viet Nam-Korea Double Taxation  |
-| treaty.kr-vn.2019.protocol.mofa.text | kr-vn | treaty |  | pdf | scanned_or_empty | page | 0 | Second Protocol amending the Viet Nam-Korea Double Taxation  |
+| treaty.kr-vn.2019.protocol.mofa.text | kr-vn | treaty |  | pdf | ocr | page | 42 | Second Protocol amending the Viet Nam-Korea Double Taxation  |
 | treaty.my-sg.2004.en | my-sg | treaty | 1;2;3;4 | pdf | ok | en_article | 130 | Agreement between the Government of Malaysia and the Governm |
 | treaty.my-th.1982.en | my-th | treaty | 1;2;3;4 | pdf | ok | en_article | 136 | Agreement between the Government of Malaysia and the Governm |
 | treaty.my-vn.1995.en | my-vn | treaty | 1;2;3;4 | pdf | ok | en_article | 123 | Agreement between the Government of Malaysia and the Governm |
@@ -293,7 +293,7 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | treaty.th-vn.1992.art16-20.en | th-vn | treaty |  | html | ok | en_article | 11 | Agreement between Thailand and Viet Nam for the Avoidance of |
 | treaty.th-vn.1992.art21-25.en | th-vn | treaty |  | html | ok | en_article | 16 | Agreement between Thailand and Viet Nam for the Avoidance of |
 | treaty.th-vn.1992.art26-28.en | th-vn | treaty |  | html | ok | en_article | 5 | Agreement between Thailand and Viet Nam for the Avoidance of |
-| vn.btc.tax-administration.14-vbhn-2026 | vn | regulation | 7 | pdf | scanned_or_empty | page | 1 | Consolidated Circular 80/2021/TT-BTC on Tax Administration ( |
+| vn.btc.tax-administration.14-vbhn-2026 | vn | regulation | 7 | pdf | ocr | vn_article | 355 | Consolidated Circular 80/2021/TT-BTC on Tax Administration ( |
 | vn.btc.treaty-procedure | vn | regulation | 7;8 | pdf | ok | page | 94 | Văn bản hợp nhất Thông tư hướng dẫn thực hiện Hiệp định thuế |
 | vn.gov.beneficial-owner-criteria | vn | guidance | 5 | htm | ok | html_section | 140 | Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp |
 | vn.gov.pit-withholding-rates | vn | page | 6;page_rates | htm | ok | html_section | 10 | Quy định mới về khấu trừ thuế thu nhập cá nhân |
@@ -306,11 +306,7 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 
 ## Errors
 
-- doc treaty.ae-in.1992.mli.en: no text (scanned_or_empty)
-- doc treaty.in-vn.1994.mofa.text: no text (scanned_or_empty)
-- doc treaty.kr-vn.1994.mofa.text: no text (scanned_or_empty)
-- doc treaty.kr-vn.2019.protocol.mofa.text: no text (scanned_or_empty)
-- doc vn.btc.tax-administration.14-vbhn-2026: no text (scanned_or_empty)
+None.
 
 ## Warnings
 

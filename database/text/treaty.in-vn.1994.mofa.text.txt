@@ -1,82 +1,1519 @@
+HIỆP ĐỊNH
 
+GIỮA
 
+NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
 
+VÀ
 
+NƯỚC CỘNG HÒA ẨN ĐỘ
 
+VỀ
 
+TRÁNH DÁNH THUẾ HAI LẦN VÀ NGĂN NGỪA VIỆC
 
+TRỐN LẬU THUẾ ĐỐI VỚI THUẾ DÁNH VÀO THU NHẬP
+2
 
+CHÍNH PHỦ NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM,
 
+VÀ
 
+CHÍNH PHỦ NƯỚC CỘNG HÒA ẨN ĐỘ
 
+Mong muốn ký kết một Hiệp định về việc tránh đánh thuế hai lần và ngăn ngừa việc trốn lậu thuế đối với các loại thuế đánh vào thu nhập,
 
+Đã thỏa thuận dưới đây:
+3
+ĐIỀU 1
+PHẠM VI ÁP DỤNG
+Hiệp định này được áp dụng cho các đối tượng là những đối tượng cư trú của
+một hoặc của cả hai Nước ký kết.
+4
 
+ĐIỀU 2
 
+CÁC LOẠI THUẾ BAO GỒM TRONG HIỆP ĐỊNH
 
+1/ Hiệp định này áp dụng đối với các loại thuế do một Nước ký kết hoặc các cơ quan chính quyền có sở hoặc chính quyền địa phương của Nước đó, đánh vào thu nhập, bất kể hình thức áp dụng của các loại thuế đó như thế nào.
 
+2/ Tất cả các loại thuế thu trên tổng thu nhập, hoặc những phần của thu nhập, bao gồm các khoản thuế đối với lợi tức từ việc chuyển nhượng động sản hoặc bất động sản, thuế đánh vào tổng số tiền lương hoặc tiền công do xí nghiệp trả, đều được coi là thuế đánh vào thu nhập.
 
+3/ Những loại thuế hiện hành được áp dụng trong Hiệp định này là:
 
+a. tại Việt nam:
 
+(i) thuế thu nhập cá nhân;
 
+(ii) thuế lợi tức; và
 
+(iii) thuế chuyển lợi nhuận ra nước ngoài;
 
+(dưới đây được gọi là "thuế Việt nam");
 
+b. tại Ấn độ:
 
+thuế thu nhập; bao gồm bất kỳ khoản thuế phụ thu tính trên thuế thu nhập;
 
+(dưới đây được gọi là "thuế Ấn độ").
+5
 
+4/ Hiệp định này cũng sẽ được áp dụng cho các loại thuế có tính chất tương tự hay về cản bản giống như các loại thuế trên được ban hành sau ngày ký kết Hiệp định này để bổ sung, hoặc thay thế các loại thuế hiện hành. Các nhà chức trách có thẩm quyền của các Nước ký kết sẽ thông báo cho nhau biết những thay đổi quan trọng trong luật thuế của từng Nước.
+6
 
+ĐIỀU 3
 
+CÁC ĐỊNH NGHĨA CHUNG
 
+1/ Theo Hiệp định này, trừ trường hợp ngụ cảnh đời hỏi một sự giải thích khác:
 
+a. từ "Việt nam" có nghĩa là nước Cộng hòa Xã hội Chủ nghĩa Việt nam; khi dùng theo nghĩa địa lý, từ đó bao gồm toàn bộ lãnh thổ quốc gia Việt nam, kể cả lãnh hải Việt nam, và mọi vùng ở ngoài và đi liền với lãnh hải Việt nam mà theo luật pháp tại Việt nam và phù hợp với luật pháp quốc tế, Việt nam có quyền chủ quyền đối với việc thăm dò và khai thác tài nguyên thiên nhiên của đáy biển, lòng đất dưới đáy biển và khơi nước ở trên;
 
+b. từ "Ấn độ" có nghĩa là lãnh thổ Ấn độ và bao gồm cả lãnh hải và vùng trời trên vùng lãnh hải, cùng như vùng biển khác mà Ấn độ có các quyền chủ quyền, các quyền khác và các quyền tài phân cần cứ theo luật Ấn độ và phù hợp với luật pháp quốc tế hay Công ước Liên hiệp Quốc về Luật Biển;
 
+c. thuật ngữ "Nước ký kết" và "Nước ký kết kia" có nghĩa là Việt nam hay Ấn độ tùy theo ngữ cảnh đời hỏi;
 
+d. thuật ngữ "công ty" để chỉ các tổ chức công ty hoặc bất kỳ một thực thể nào được coi là công ty hay tổ chức công ty theo các luật thuế có hiệu lực tại từng Nước ký kết;
 
+e. thuật ngữ "nhà chức trách có thẩm quyền" có nghĩa:
 
+(i) trong trường hợp đối với Việt nam, là Bộ trưởng Bộ Tài chính hoặc người đại diện được ủy quyền của Bộ trưởng; và
 
+(ii) trong trường hợp đối với Ấn độ, cơ quan Trung ương tại Bộ Tài chính (Cục thu) hoặc người đại diện được ủy quyền của các cơ quan trên;
+f. thuật ngữ "xí nghiệp của nước ký kết" và "xí nghiệp của nước ký kết kia" có nghĩa là một xí nghiệp được điều hành bởi đối tượng cư trú của một nước ký kết và một xí nghiệp được điều hành bởi đối tượng cư trú của nước ký kết kia;
 
+g. thuật ngữ "năm tài chính" có nghĩa:
 
+(i) trong trường hợp đối với Việt nam, năm kế toán bao gồm giai đoạn 12 tháng;
 
+(ii) trong trường hợp đối với Ấn độ "năm trước" được định nghĩa tại Điều 3 Đạo luật thuế thu nhập, 1961;
 
+i. thuật ngữ "đối tượng mang quốc tịch" có nghĩa bất kỳ cá nhân nào mang quốc tịch của một nước ký kết và bất kỳ pháp nhân, tổ chức hùn vốn và hiệp hội nào có tư cách được chấp nhận theo các luật có hiệu lực tại một nước ký kết;
 
+j. thuật ngữ "đối tượng" bao gồm một cá nhân, một công ty, một tổ chức nhiều đối tượng và bất kỳ thực thể nào khác được coi là đối tượng chịu thuế theo các luật thuế có hiệu lực tại từng nước ký kết;
 
+h. thuật ngữ "vận tải quốc tế" có nghĩa là bất cứ sự vận chuyển nào bằng tàu thủy hoặc máy bay được thực hiện bởi một xí nghiệp của một nước ký kết, trừ trường hợp khi chiếc tàu thủy hoặc máy bay đó chỉ hoạt động giữa những địa điểm trong nước ký kết kia;
 
+k. thuật ngữ "thuế" có nghĩa là thuế Việt nam hay Ấn độ thuế tùy ngữ cảnh đời hỏi, nhưng sẽ không bao gồm bất kỳ khoản tiền phải nộp do vi phạm hay số suất liên quan đến các loại thuế mà Hiệp định áp dụng hay số tiền có tính chất tiền phạt áp dụng liên quan đến các loại thuế đó.
 
+2/ Trong khi một nước ký kết áp dụng Hiệp định này, mọi thuật ngữ chưa được định nghĩa trong Hiệp định này sẽ có nghĩa theo như định nghĩa trong luật của nước đó đối với các loại thuế mà Hiệp định này áp dụng, trừ trường hợp ngữ cảnh đời hỏi có sự giải thích khác.
+8
+ĐIỀU 4
+ĐỐI TƯỢNG CƯ TRÚ
 
+1/ Theo nghĩa trong Hiệp định này, thuật ngữ "đối tượng cư trú của một
+Nước ký kết" có nghĩa là bất cứ đối tượng nào, mà theo các luật của Nước đó, là đối
+tượng chịu thuế cần cư vào nhà ở, nơi cư trú, trụ sở điều hành, trụ sở đăng ký.
+hoặc các tiêu chuẩn khác có tính chất tương tự.
 
+2/ Trường hợp theo những quy định tại khoản 1 khi một cá nhân là đối
+tượng cư trú của cả hai Nước ký kết, thì thân phận cư trú của cá nhân đó sẽ được
+xác định như sau:
 
+a. cá nhân đó sẽ được coi là đối tượng cư trú của Nước mà tại đó cá nhân đó
+có nhà ở thường trú; nếu cá nhân đó có nhà ở thường trú ở cả hai Nước thì cá nhân
+đó sẽ được coi là đối tượng cư trú của Nước mà cá nhân đó có các quan hệ cá nhân
+và kinh tế chặt chẽ hơn (trung tâm của các quyền lợi chủ yếu);
 
+b. nếu như không thể xác định được Nước nơi cá nhân đó có trung tâm các
+quyền lợi chủ yếu, hoặc nếu cá nhân đó không có nhà ở thường trú ở cả hai Nước,
+thì cá nhân đó được coi là đối tượng cư trú của Nước mà cá nhân đó thường sống;
 
+c. nếu cá nhân đó thường sống tại cả hai Nước hay không thường sống tại
+Nước nào, thì cá nhân đó sẽ được coi là đối tượng cư trú của Nước nơi cá nhân đó
+mang quốc tịch;
 
+d. nếu cá nhân đó là đối tượng mang quốc tịch của cả hai Nước, hay không
+mang quốc tịch của Nước nào, thì các nhà chức trách có thẩm quyền của hai Nước
+ký kết sẽ giải quyết vấn đề đó bằng thỏa thuận chung.
 
+3/ Trường hợp do những quy định tại khoản 1, khi một đối tượng không
+phải là cá nhân, là đối tượng cư trú của cả hai Nước ký kết, lúc đó, đối tượng trên
+sẽ được coi là đối tượng cư trú của Nước nơi đồng trụ sở điều hành thực tế của đối
+tượng đó.
+9
 
+ĐIỀU 5
 
+CƠ SỞ THƯỜNG TRÚ
 
+1/ Theo Hiệp định này, thuật ngữ "cơ sở thường trú" có nghĩa là một cơ sở kinh doanh cố định mà qua đó xí nghiệp thực hiện toàn bộ hay một phần hoạt động kinh doanh của mình.
 
+2/ Thuật ngữ "cơ sở thường trú" chủ yếu bao gồm:
+
+a. trụ sở điều hành;
 
+b. chi nhánh;
+
+c. văn phòng;
+
+d. nhà máy;
+
+e. xưởng;
+
+f. mỏ, giếng dầu hoặc khí, mỏ đá hoặc bất kỳ địa điểm khai thác tài nguyên thiên nhiên nào khác;
+
+g. kho hàng liên quan đến đối tượng cung cấp phương tiện lưu kho cho đối tượng khác; và
 
+h. một địa điểm xây dựng, công trình xây dựng hoặc lắp ráp hay các hoạt động giám sát liên quan đến địa điểm hay công trình đó, nhưng chỉ khi địa điểm hay công trình hay hoạt động đó kéo dài trong một giai đoạn hơn 6 tháng.
 
+3/ Mặc dù có những quy định trên của Điều này, thuật ngữ "cơ sở thường trú" sẽ được coi là không bao gồm:
+a. việc sử dụng các phương tiện riêng chỉ với mục đích lưu kho, trung bày
+hoặc không thường xuyên giao hàng hóa hay tài sản của xí nghiệp;
+b. việc duy trì kho hàng hóa hoặc tài sản của xí nghiệp chỉ với mục đích lưu
+kho, trung bày hoặc không thường xuyên giao hàng;
+c. việc duy trì kho hàng hóa hoặc tài sản của xí nghiệp với mục đích chỉ để
+cho xí nghiệp khác gia công;
+d. việc duy trì một cơ sở kinh doanh cố định nhằm mục đích mua hàng hóa
+hoặc tài sản hay để thu thập thông tin cho xí nghiệp đó; và
+e. việc duy trì một cơ sở kinh doanh cố định chỉ với mục đích tiến hành bất
+kỳ hoạt động nào khác có tính chất phụ trợ hoặc chuẩn bị cho xí nghiệp.
 
+4/ Mặc dù có những quy định tại khoản 1 và 2, trường hợp một đối tượng -
+trừ đại lý có tư cách độc lập được điều chỉnh bởi khoản 5 - hoạt động tại một Nước
+ký kết thay mặt cho một xí nghiệp của Nước ký kết kia, thì xí nghiệp đó sẽ được
+coi là cơ sở thương trú tại Nước ký kết thứ nhất đối với các hoạt động mà đối
+tượng này thực hiện cho xí nghiệp, nếu đối tượng đó:
+a. có và thường xuyên thực hiện tại Nước thứ nhất thẩm quyền ký kết các
+hợp đồng đứng tên xí nghiệp, trừ khi các hoạt động của đối tượng này chỉ giới hạn
+trong phạm vi các hoạt động nếu tại khoản 3 mà nếu có hoạt động đó được thực
+hiện thông qua một cơ sở kinh doanh cố định sẽ không làm cho cơ sở kinh doanh
+cố định đó trở thành một cơ sở thương trú theo những quy định tại khoản đó; hay
+b. không có thẩm quyền trên, nhưng thường xuyên duy trì tại Nước thứ
+nhất một kho hàng hóa hay tài sản, từ đó đối tượng trên thường xuyên thực hiện
+việc giao hàng hóa hoặc tài sản đại diện cho xí nghiệp.
 
+5/ Một xí nghiệp của một Nước ký kết sẽ không được coi là cơ sở thương
+trú ở Nước ký kết kia nếu xí nghiệp đó chỉ thực hiện hoạt động kinh doanh tại
+Nước kia thông qua một đại lý mới giới, một đại lý hoa hồng hoặc bất kỳ một đại lý
+nào khác có tư cách độc lập, với điều kiện những đối tượng này hoạt động trong
+khung khổ kinh doanh thông thường của họ. Tuy nhiên, khi các hoạt động của đối
+tượng trên được giành toàn bộ hay hầu như toàn bộ cho hoạt động đại diện cho xí
+nghiệp, thì đối tượng đó sẽ không được coi là đại lý có tư cách độc lập theo nghĩa
+của khoản này.
+11
 
+6/ Việc một công ty là đối tượng cư trú của một Nước ký kết kiểm soát hoặc chịu sự kiểm soát bởi một công ty là đối tượng cư trú của Nước ký kết kia hoặc tiến hành hoạt động kinh doanh tại Nước kia (có thể thông qua một cơ sở thương trú hay dưới hình thức khác), sẽ không làm cho bất kỳ công ty nào trở thành cơ sở thương trú của công ty kia.
+12
 
+ĐIỀU 6
 
+THU NHẬP TỪ BẤT ĐỘNG SẢN
 
+1/ Thu nhập mà một đối tượng cư trú của một Nước ký kết thu được từ bất động sản (kể cả thu nhập từ nông nghiệp hoặc làm nghiệp) nằm tại Nước ký kết kia thì có thể bị đánh thuế tại Nước kia.
 
+2/ Thuật ngữ "bất động sản" sẽ có nghĩa theo nhu luật của Nước ký kết nơi có bất động sản. Trong mọi trường hợp, thuật ngữ này sẽ bao gồm cả những phần tài sản phụ kèm theo bất động sản, dân gia sức và thiết bị sử dụng trong nông nghiệp và làm nghiệp, các quyền lợi được áp dụng theo những quy định tại luật chung về diện sản, quyền sử dụng bất động sản, và các quyền được hưởng các khoản thanh toán cố định hoặc thay đổi dưới dạng tiền công trả cho việc khai thác hoặc quyền khai thác mỏ, nguồn khoáng sản và các tài nguyên thiên nhiên khác. Các tàu thủy, thuyền và máy bay sẽ không được coi là bất động sản.
 
+3/ Những quy định tại khoản 1 cũng sẽ áp dụng đối với thu nhập phát sinh từ việc trực tiếp sử dụng, cho thuê hay sử dụng các loại bất động sản dưới bất kỳ hình thức nào khác.
 
+4/ Những quy định tại khoản 1 và 3 cũng sẽ áp dụng cho thu nhập từ bất động sản của một xí nghiệp và đối với thu nhập từ bất động sản được sử dụng để thực hiện các hoạt động dịch vụ cá nhân độc lập.
+13
 
+ĐIỀU 7
 
+LỢI TÚC DOANH NGHIỆP
 
+1/ Lợi tức của xí nghiệp của một Nước ký kết sẽ chỉ bị đánh thuế tại
+Nước đó, trừ trường hợp xí nghiệp có tiến hành hoạt động kinh doanh tại Nước ký
+kết kia thông qua một cơ sở thương trú tại Nước kia. Nếu xí nghiệp hoạt động
+kinh doanh theo cách trên, thì các khoản lợi tức của xí nghiệp có thể bị đánh thuế
+tại Nước kia, nhưng chỉ trên phần lợi tức phân bổ trực tiếp hay gián tiếp cho cơ sở
+thương trú đó.
 
+Từ "trực tiếp hay gián tiếp" theo nội dung Điều này, có nghĩa là khi một cơ
+sở thương trú giữ vai trò chủ động trong việc đảm phân, ký kết hay hoàn thành
+các hợp đồng do xí nghiệp ký kết, lúc đó mặc dù các phần bổ khác của xí nghiệp
+cùng tham gia vào các công việc trên, cơ sở thương trú đó sẽ được phân bổ lợi tức
+của xí nghiệp phát sinh từ các hợp đồng trên cơ sở phân đồng góp của cơ sở thương
+trú vào việc đảm phân, ký kết và hoàn thành các hợp đồng trong toàn bộ công việc
+của xí nghiệp.
 
+2/ Thế theo các quy định tại khoản 3, khi một xí nghiệp của một Nước ký
+kết tiến hành hoạt động kinh doanh tại Nước ký kết kia thông qua một cơ sở
+thương trú tại Nước kia thì tại mỗi Nước ký kết sẽ có những khoản lợi tức được
+phân bổ cho cơ sở thương trú nói trên mà cơ sở đó có thể thu được, nếu nó là một xí
+nghiệp riêng, tách biệt cùng tham gia vào các hoạt động như nhau hay tương tự
+trong cùng những điều kiện như nhau hay tương tự và có quan hệ hoàn toàn độc
+lập với xí nghiệp mà cơ sở đó được coi là cơ sở thương trú.
 
+3/ Trong khi xác định lợi tức của một cơ sở thương trú, cơ sở này sẽ được
+phép khấu trừ các khoản chi phí phát sinh phục vụ cho hoạt động của cơ sở
+thương trú này, bao gồm cả chi phí điều hành và chi quản lý chung, mặc dù
+chi phí đó phát sinh tại Nước nơi cơ sở thương trú đó đóng hoặc ở bất kỳ nơi nào
+khác theo các quy định và tuân theo các giới hạn trong các luật thuế của Nước đó.
 
+4/ Không có nội dung nào tại Điều này sẽ ảnh hưởng đến việc áp dụng luật
+của một Nước ký kết liên quan đến việc xác định nghĩa vụ nộp thuế của một đối
+tượng trong các trường hợp nhà chức trách có thẩm quyền của Nước đó không có
+thông tin để xác định lợi tức phân bổ cho cơ sở thương trú, với điều kiện luật đó
+được áp dụng phù hợp với các nguyên tắc nêu tại Điều này.
+14
 
+5/ Trường hợp tại một Nước ký kết vẫn thường xác định lợi tức phân bổ cho một cơ sở thường trú trên cơ sở phân chia tổng số lợi tức của xí nghiệp thành các phần khác nhau, không có nội dung nào tại khoản 2 ngăn cản Nước ký kết đó xác định lợi tức chịu thuế theo cách phân chia theo thông lệ nói trên. Tuy nhiên phương pháp phân chia được áp dụng sẽ có kết quả phù hợp với nguyên tắc nêu tại Điều này.
 
+6/ Không một khoản lợi tức nào được phân bổ cho một cơ sở thường trú nếu cơ sở thường trú đó chỉ đơn thuần mua hàng hóa hoặc tài sản cho xí nghiệp.
 
+7/ Theo nội dung những khoản trên, các khoản lợi tức được phân bổ cho cơ sở thường trú sẽ được xác định theo cùng một phương pháp qua các năm trừ khi có đủ lý do chính đáng để thay đổi phương pháp tính.
 
+8/ Khi lợi tức bao gồm các khoản thu nhập được đề cập riêng tại các Điều khác của Hiệp định này, thì các quy định của các Điều đó không bị ảnh hưởng bởi những quy định tại Điều này.
+15
 
+ĐIỀU 8
 
+VẬN TẢI BIỂN VÀ VẬN TẢI HÀNG KHÔNG
 
+1/ Lợi tức do một xí nghiệp của một Nước ký kết thu được từ hoạt động của
+tàu thủy hoặc máy bay trong vận tải quốc tế sẽ chỉ bị đánh thuế tại Nước đó.
 
+2/ Theo nội dung của Điều này lợi tức từ hoạt động của tàu thủy hoặc máy
+bay trong vận tải quốc tế sẽ bao gồm cả:
+
+a. thu nhập từ việc cho thuê tàu thủy hay máy bay; và
+
+b. lợi tức từ việc sử dụng, bảo dưỡng hoặc cho thuê các công-ten-no (kể cả
+khoang moóc và thiết bị kèm theo phục vụ cho việc vận chuyển công-ten-no);
+
+khi việc cho thuê hay sử dụng, bảo dưỡng hay cho thuê trên tùy từng trường hợp,
+có tính chất phụ kèm theo hoạt động của tàu thủy hay máy bay trong vận tải quốc
+tế.
+
+3/ Những quy định tại khoản 1 cũng sẽ áp dụng cho các khoản lợi tức thu
+được từ việc tham gia vào một tổ hợp, một liên doanh hay một hãng hoạt động
+quốc tế.
+
+4/ Theo nội dung Điều này, tiền lãi phát sinh từ các quy liên quan đến hoạt
+động của tàu thủy hoặc máy bay trong vận tải quốc tế dành để trả cho tất cả các
+khoản tiền lương, tiền bảo dưỡng tàu thủy hay máy bay và sinh hoạt của thủy thủ
+đoàn và phi hành đoàn sẽ được coi là thu nhập hay lợi tức thu được từ hoạt động
+của tàu thủy hay máy bay đó và những quy định của Điều 11 sẽ không áp dụng
+đối với số tiền gửi đó.
+16
+
+ĐIỀU 9
+
+NHỮNG XÍ NGHIỆP LIÊN KẾT
+
+Khi
+
+a) một xí nghiệp của một Nước ký kết tham gia trực tiếp hoặc gián tiếp vào việc điều hành, kiểm soát hoặc góp vốn vào một xí nghiệp của Nước ký kết kia,
+
+hoặc
+
+b) các đối tượng cùng tham gia trực tiếp hoặc gián tiếp vào việc điều hành, kiểm soát hoặc góp vốn vào một xí nghiệp của một Nước ký kết và vào một xí nghiệp của Nước ký kết kia,
+
+và trong cả hai trường hợp, trong mỗi quan hệ tài chính và thương mại giữa hai xí nghiệp trên có những điều kiện được đưa ra hoặc áp đặt khác với điều kiện được đưa ra giữa các xí nghiệp độc lập, lúc đó mọi khoản lợi tức mà một xí nghiệp có thể thu được nếu không có những điều kiện trên nhưng nay vì những điều kiện này mà xí nghiệp đó không thu được, sẽ vẫn bị một Nước ký kết tính vào các khoản lợi tức của xí nghiệp đó và bị đánh thuế tương ứng.
+17
+
+ĐIỀU 10
+
+TIỀN LÃI CỔ PHẦN
+
+1/ Tiền lãi cổ phần do một công ty là đối tượng cư trú của một Nước ký kết trả cho một đối tượng cư trú của Nước ký kết kia có thể bị đánh thuế tại Nước kia.
+
+2/ Tuy nhiên, những khoản tiền lãi cổ phần đó cũng có thể bị đánh thuế tại Nước ký kết nơi công ty trả tiền lãi cổ phần là đối tượng cư trú và theo các luật của Nước đó, nhưng nếu đối tượng nhận là đối tượng thực hưởng tiền lãi cổ phần thì thuế được tính khi đó sẽ không vượt quá 10 phần trăm tổng số tiền lãi cổ phần.
+
+Khoản này sẽ không ảnh hưởng tới việc đánh thuế công ty đối với các khoản lợi tức được dùng để chia tiền lãi cổ phần.
+
+3/ Thuật ngữ "tiền lãi cổ phần" được sử dụng trong Điều này có nghĩa là thu nhập từ cổ phần hoặc các quyền lợi khác, không kể các khoản nợ, được hưởng lợi tức, cũng như thu nhập từ các quyền lợi công ty khác cũng chịu sự điều chỉnh của chính sách thuế đối với thu nhập từ cổ phần theo các luật của Nước nơi công ty chia lãi cổ phần là đối tượng cư trú.
+
+4/ Những quy định tại khoản 1 và 2 sẽ không áp dụng trong trường hợp đối tượng thực hưởng các khoản tiền lãi cổ phần là đối tượng cư trú của một Nước ký kết có tiến hành hoạt động kinh doanh tại Nước ký kết kia, nơi công ty trả tiền lãi cổ phần là đối tượng cư trú thông qua một cơ sở thường trú nằm tại Nước đó, hay tiến hành tại Nước kia các hoạt động dịch vụ cá nhân độc lập thông qua một cơ sở cố định nằm tại Nước kia, và quyền nắm giữ các cổ phần được hưởng tiền lãi cổ phần, có sự liên hệ thực tế với cơ sở thường trú hoặc cơ sở cố định nói trên. Trong trường hợp như trên, các quy định tại Điều 7 hoặc Điều 15, tùy từng trường hợp, sẽ được áp dụng.
+18
+
+5/ Khi một công ty là đối tượng cư trú của một Nước ký kết có lợi tức hay thu nhập phát sinh từ Nước ký kết kia thì Nước kia có thể không đánh thuế đối với những khoản tiền lãi cổ phần do công ty này trả, trừ trường hợp những khoản tiền lãi cổ phần này được trả cho đối tượng cư trú của Nước ký kết kia hoặc quyền nắm giữ cổ phần có các khoản tiền lãi cổ phần được trả có sự liên hệ thực tế với một cơ sở thường trú hay một cơ sở cố định tại Nước ký kết kia, đồng thời Nước ký kết kia cũng không buộc các khoản lợi tức không chia của công ty trên phải chịu thuế đối với những khoản lợi tức không chia của công ty, cho dù những khoản tiền lãi cổ phần được chia hoặc các khoản lợi tức không chia bao gồm toàn bộ hay một phần các khoản lợi tức hoặc thu nhập phát sinh tại Nước kia.
+19
+
+ĐIỀU 11
+
+LÃI TÌNH CHO VAY
+
+1/ Lãi từ tiền cho vay phát sinh tại một Nước ký kết và được trả cho đối tượng cư trú của Nước ký kết kia có thể bị đánh thuế tại Nước kia.
+
+2/ Tuy nhiên, khoản tiền lãi này cũng có thể bị đánh thuế ở Nước ký kết nơi phát sinh lãi và theo các luật của Nước đó, nhưng nếu đối tượng nhận là đối tượng thực hưởng các khoản tiền lãi này thì mức thuế được tính khi đó sẽ không vượt quá 10 phần trăm của tổng số khoản lãi tiền cho vay.
+
+3/ Mặc dù đã có những quy định tại khoản 2,
+
+a. lãi từ tiền cho vay phát sinh tại một Nước ký kết sẽ được miễn thuế tại Nước đó với điều kiện:
+
+(i) tiền lãi do do Chính phủ, một cơ quan hay chính quyền địa phương của Nước ký kết kia nhận được và thực hưởng; hay
+
+(ii) tiền lãi do do Ngân hàng Trung ương của Nước ký kết kia nhận được và thực hưởng;
+
+b. lãi từ tiền cho vay phát sinh tại một Nước ký kết sẽ được miễn thuế tại Nước ký kết đó trong phạm vi được Chính phủ của Nước đó cho phép nếu tiền lãi đó do bất kỳ đối tượng nào (trừ đối tượng nếu tại điểm (a)) là đối tượng cư trú của Nước ký kết kia nhận được và thực hưởng với điều kiện nghiệp vụ kinh doanh có khoản nợ phát sinh được Chính phủ của Nước thứ nhất cho phép.
+
+4/ Thuật ngữ "lãi từ tiền cho vay" được dùng ở Điều này có nghĩa là thu nhập từ các khoản cho vay dưới bất kỳ dạng nào, có hay không được đảm bảo bằng các chấp và có hoặc không có quyền được hưởng lợi tức của người đi vay, và đặc biệt là khoản thu nhập từ chứng khoán chính phủ và thu nhập từ trái phiếu hoặc trái phiếu thông thường, bao gồm cả tiền thưởng và giải thưởng đi liền với các chứng khoán, trái phiếu hoặc trái phiếu thông thường đó. Tiền phạt thanh toán chậm sẽ không được coi là lãi từ tiền cho vay theo nội dung của Điều này.
+5/Những quy định tại khoản 1 và 2 sẽ không được áp dụng nếu đối tượng
+thực hiện hoạt động kinh doanh tại Việt Nam có phát sinh các khoản tài
+tiền cho hoạt động kinh doanh tại Việt Nam, trừ trường hợp các khoản tài
+tiền cho hoạt động kinh doanh tại Việt Nam không phải là tiền gửi hoặc tiền
+gửi tại các tổ chức tài chính, tổ chức tín dụng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân
+hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ
+chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài
+chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi
+ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng,
+tổ chức tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức
+tài chính phi ngân hàng, tổ chức tài chính phi ngân hàng, tổ chức tài chính
+phi ngân hàng,
+21
+
+ĐIỀU 12
+
+TIỀN BẢN QUYỀN
+
+1/ Tiền bản quyền phát sinh tại một Nước ký kết và được trả cho đối tượng cư trú của Nước ký kết kia có thể bị đánh thuế tại Nước kia.
+
+2/ Tuy nhiên, những khoản tiền bản quyền đó cũng có thể bị đánh thuế tại Nước ký kết nơi phát sinh, và theo các luật của Nước này, nhưng nếu đối tượng nhận là đối tượng thực hưởng tiền bản quyền, thì mức thuế được tính sẽ không vượt quá 10 phần trăm tổng số tiền bản quyền.
+
+3/ Thuật ngữ "tiền bản quyền" được sử dụng trong Điều này có nghĩa là các khoản thanh toán ở bất kỳ dạng nào được trả cho việc sử dụng, hoặc quyền sử dụng, bản quyền tác giả của một tác phẩm văn học, nghệ thuật hay khoa học, kể cả phim, điện ảnh hoặc các phim hay các loại bảng dùng trong phát thanh và truyền hình, bảng phát minh, nhãn hiệu thương mại, thiết kế hoặc mẫu, đồ án, công thức hoặc quy trình bí mật, hay trả cho việc sử dụng, hay quyền sử dụng thiết bị công nghiệp, thương mại hoặc khoa học, hay trả cho thông tin liên quan đến kinh nghiệm công nghiệp, thương mại hoặc khoa học.
+
+4/ Những quy định tại khoản 1 và 2 sẽ không áp dụng nếu đối tượng thực hưởng các khoản tiền bản quyền, là đối tượng cư trú của một Nước ký kết, tiến hành hoạt động kinh doanh ở Nước ký kết kia nơi có khoản tiền bản quyền phát sinh, thông qua một cơ sở thương trú nằm tại Nước kia, hoặc tiến hành tại Nước kia các hoạt động dịch vụ cá nhân độc lập thông qua một cơ sở cố định nằm tại Nước kia, và quyền hay tài sản có các khoản tiền bản quyền được trả có sự liên hệ thực tế với cơ sở thương trú hoặc cơ sở cố định. Trong trường hợp này, các quy định của Điều 7 hoặc Điều 15, tùy theo từng trường hợp, sẽ được áp dụng.
+
+5/ Tiền bản quyền sẽ được coi là phát sinh tại một Nước ký kết khi đối tượng trả tiền bản quyền chính là Nhà nước đó, cơ quan chính quyền cơ sở, chính quyền địa phương hoặc là đối tượng cư trú của Nước đó. Tuy nhiên, khi một đối tượng trả tiền bản quyền, là hay không là đối tượng cư trú của một Nước ký kết, có ở một Nước ký kết một cơ sở thương trú hay cơ sở cố định liên quan đến trách nhiệm trả tiền bản quyền đã phát sinh và tiền bản quyền đó do cơ sở thương trú hoặc cơ sở cố định đó chịu, thì khoản tiền bản quyền này sẽ vẫn được coi là phát sinh ở Nước nơi cơ sở thương trú hay cơ sở cố định đó đóng.
+22
+
+6/ Trường hợp vi mối quan hệ đặc biệt giữa đối tượng trả và đối tượng thực
+hưởng hoặc giữa cả hai đối tượng trên với các đối tượng khác khoản tiền bản
+quyền được trả cho việc sử dụng, quyền hoặc thông tin vượt quá khoản tiền được
+thỏa thuận giữa đối tượng trả và đối tượng thực hưởng khi không có mối quan hệ
+đặc biệt này, thì các quy định của Điều này sẽ áp dụng đối với khoản tiền thanh
+toán khi không có mối quan hệ trên. Trong trường hợp này, phần thanh toán vượt
+sẽ bị đánh thuế theo các luật của từng Nước ký kết có xem xét thích đáng đến các
+quy định khác của Hiệp định này.
+23
+
+ĐIỀU 13
+
+TIỀN DỊCH VỤ KỸ THUẬT
+
+1/ Tiền dịch vụ kỹ thuật phát sinh tại một Nước ký kết do một đối tượng cư trú của Nước ký kết kia nhận được có thể bị đánh thuế tại Nước kia.
+
+2/ Tuy nhiên, tiền dịch vụ kỹ thuật đó cũng có thể bị đánh thuế tại Nước ký kết nơi phát sinh, và theo các luật của Nước này; nhưng nếu đối tượng nhận là đối tượng thực hưởng tiền dịch vụ kỹ thuật, mức thuế được tính sẽ không vượt quá 10 phần trăm tổng số tiền dịch vụ kỹ thuật.
+
+3/ Thuật ngữ "tiền dịch vụ kỹ thuật" được sử dụng trong Điều này có nghĩa là các khoản thanh toán dưới bất kỳ hình thức nào trả cho bất kỳ đối tượng nào, trừ khi trả cho đối tượng làm công của đối tượng trả tiền dịch vụ kỹ thuật đối với bất kỳ loại dịch vụ nào có tính chất kỹ thuật, quản lý hay tư vấn.
+
+4/ Những quy định tại khoản 1 và 2 sẽ không áp dụng nếu đối tượng thực hưởng tiền dịch vụ kỹ thuật là đối tượng cư trú của một Nước ký kết tiến hành hoạt động kinh doanh tại Nước ký kết kia nơi phát sinh tiền dịch vụ kỹ thuật thông qua một cơ sở thương trù nằm tại Nước ký kết, hay một đối tượng thực hiện tại Nước kia các hoạt động dịch vụ cá nhân độc lập và các khoản tiền dịch vụ kỹ thuật có sự liên hệ thực tế với cơ sở thương trù hay các dịch vụ đó. Trong trường hợp đó, các quy định tại Điều 7 hoặc Điều 15 tùy từng trường hợp sẽ được áp dụng.
+
+5/ Tiền dịch vụ kỹ thuật sẽ được coi là phát sinh tại một Nước ký kết khi đối tượng trả là Nhà nước đó, một cơ quan chính quyền có sở, chính quyền địa phương hay một cơ quan hợp pháp của Nước đó, hay một đối tượng cư trú của Nước đó. Tuy nhiên, khi một đối tượng trả tiền dịch vụ kỹ thuật, là hay không là đối tượng cư trú của Nước ký kết, có ở một Nước ký kết một cơ sở thương trù liên quan đến nghĩa vụ phải trả tiền dịch vụ kỹ thuật, và tiền dịch vụ kỹ thuật đó do cơ sở thương trù đó chịu, thì khoản tiền dịch vụ kỹ thuật đó sẽ được coi là phát sinh tại Nước ký kết nơi cơ sở thương trù đó đóng.
+24
+
+6/ Trường hợp, vi mối quan hệ đặc biệt giữa đối tượng trả và đối tượng nhận hoặc giữa cả hai đối tượng trên với các đối tượng khác, khoản tiền dịch vụ ký thuật được trả vì bất kỳ lý do nào vượt quá khoản tiền được thỏa thuận giữa đối tượng trả và đối tượng thực hưởng khi không có mối quan hệ đặc biệt trên, thì các quy định của Điều này sẽ chỉ áp dụng đối với khoản tiền thanh toán khi không có mối quan hệ trên. Trong trường hợp này, phần thanh toán vượt sẽ bị đánh thuế theo luật của từng Nước ký kết có xem xét thích đáng đến các quy định khác của Hiệp định này.
+25
+
+ĐIỀU 14
+
+LỢI TÚC TỪ CHUYỂN NHƯỢNG TÀI SẢN
+
+1/ Lợi tức do một đối tượng cư trú của một Nước ký kết thu được từ việc chuyển nhượng bất động sản được nêu tại Điều 6 và bất động sản đó nằm tại Nước ký kết kia có thể bị đánh thuế tại Nước kia.
+
+2/ Những khoản lợi tức từ việc chuyển nhượng động sản là một phần của tài sản kinh doanh của một cơ sở thương trù mà một xí nghiệp của một Nước ký kết có tại Nước ký kết kia hoặc động sản thuộc một cơ sở định của một đối tượng cư trú của một Nước ký kết có ở Nước ký kết kia để tiến hành các hoạt động dịch vụ cá nhân độc lập kể cả lợi tức từ việc chuyển nhượng cơ sở thương trù đó (riêng cơ sở thương trù đó hoặc cùng với toàn bộ xí nghiệp) hoặc cơ sở cố định đó có thể bị đánh thuế tại Nước kia.
+
+3/ Lợi tức thu được từ việc chuyển nhượng tàu thủy hoặc máy bay hoạt động trong vận tải quốc tế hay từ chuyển nhượng động sản gắn liền với hoạt động của tàu thủy hay máy bay đó, sẽ chỉ bị đánh thuế tại Nước ký kết nơi đối tượng chuyển nhượng là đối tượng cư trú.
+
+4/ Lợi tức từ việc chuyển nhượng các cổ phiếu trong vốn cổ phần của một công ty có tài sản bao gồm trực tiếp hay gián tiếp chủ yếu là bất động sản nằm tại một Nước ký kết có thể bị đánh thuế tại Nước đó.
+
+5/ Lợi tức từ việc chuyển nhượng cổ phiếu khác với cổ phiếu nếu tại khoản 4 của một công ty là đối tượng cư trú của một Nước ký kết có thể bị đánh thuế tại Nước đó.
+
+6/ Lợi tức thu được từ việc chuyển nhượng bất kỳ tài sản nào khác với tài sản nếu tại khoản 1, 2, 3, 4 và 5 sẽ chỉ bị đánh thuế tại Nước ký kết nơi đối tượng chuyển nhượng là đối tượng cư trú.
+26
+
+ĐIỀU 15
+
+HOẠT ĐỘNG DỊCH VỤ CÁ NHÂN ĐỘC LẬP
+
+1/ Thu nhập do một đối tượng cư trú của một Nước ký kết thu được từ các hoạt động dịch vụ ngành nghề hay các hoạt động độc lập khác có tính chất tương tự sẽ chỉ bị đánh thuế tại Nước đó trừ các trường hợp sau thu nhập đó cũng có thể bị đánh thuế tại Nước ký kết kia:
+
+a. nếu đối tượng đó thường xuyên có tại Nước ký kết kia một cơ sở cố định để thực hiện các hoạt động của mình; trong trường hợp đó, chỉ phần thu nhập phân bổ cho cơ sở cố định đó thể bị đánh thuế tại Nước ký kết kia; hay
+
+b. nếu đối tượng đó có mặt tại Nước ký kết kia trong một thời gian hay nhiều khoảng thời gian góp lại đến và vượt quá 183 ngày trong năm tài chính liên quan; trong trường hợp đó, chỉ phần thu nhập thu được từ các hoạt động thực hiện tại Nước kia có thể bị đánh thuế tại Nước kia.
+
+2/ Thuật ngữ "dịch vụ ngành nghề" bao gồm những hoạt động khoa học, văn học, nghệ thuật, giáo dục hay giảng dạy mang tính chất độc lập cũng như các hoạt động độc lập của các thầy thuốc, bác sĩ phẫu thuật, luật sư, kiến trúc sư, nhà si và kế toán viên.
+27
+
+ĐIỀU 16
+
+HOẠT ĐỘNG DỊCH VỤ CÁ NHÂN PHỤ THUỘC
+
+1/ Thế theo các quy định tại Điều 17, 18, 19, 20, 21 và 22 các khoản tiền lương, tiền công, và các khoản tiền thù lao tương tự khác do một đối tượng cư trú của một Nước ký kết thu được từ lao động làm công sẽ chỉ bị đánh thuế tại Nước đó, trừ khi công việc của đối tượng đó được thực hiện tại Nước ký kết kia. Nếu công việc lao động được thực hiện như vậy, số tiền công trả cho lao động đó có thể bị đánh thuế tại Nước kia.
+
+2/ Mặc dù có những quy định tại khoản 1, tiền công do một đối tượng cư trú của một Nước ký kết thu được từ lao động làm công tại Nước ký kết kia sẽ chỉ bị đánh thuế tại Nước thứ nhất nếu:
+
+a. người nhận tiền công có mặt tại Nước kia trong một thời gian hoặc nhiều thời gian gộp lại không quá 183 ngày trong năm tài chính liên quan; và
+
+b. chủ lao động hay đối tượng đại diện chủ lao động trả tiền công lao động không phải là đối tượng cư trú của Nước kia; và
+
+c. số tiền thù lao không phải do một cơ sở thường trú hoặc một cơ sở cố định mà đối tượng chủ lao động có tại Nước kia trả.
+
+3/ Mặc dù có những quy định trên của Điều này, tiền công từ lao động làm trên tàu thủy hoặc máy bay do một xí nghiệp của một Nước ký kết điều hành trong vận tải quốc tế sẽ chỉ bị đánh thuế tại Nước đó.
+28
+
+ĐIỀU 17
+
+THỦ LAO CHO GIÁM ĐỐC
+
+Các khoản thù lao cho giám đốc và các khoản thanh toán tương tự khác do một đối tượng cư trú của một Nước ký kết nhận được với tư cách là thành viên của ban giám đốc hoặc bất kỳ tổ chức tương tự nào của một công ty là đối tượng cư trú của Nước ký kết kia có thể bị đánh thuế ở Nước kia.
+29
+
+ĐIỀU 18
+
+THU NHẬP CỦA NGHỆ SĨ VÀ VẬN ĐỘNG VIÊN
+
+1/ Mặc dù có những quy định tại Điều 15 và 16, thu nhập của một đối tượng cư trú của một Nước ký kết thu được với tư cách người biểu diễn như diễn viên sân khấu, điện ảnh, phát thanh hay truyền hình, hoặc nhạc công, hoặc với tư cách là vận động viên, từ những hoạt động cá nhân của mình thực hiện tại Nước ký kết kia, có thể bị đánh thuế ở Nước kia.
+
+2/ Trường hợp thu nhập liên quan đến các hoạt động trình diễn cá nhân của người biểu diễn hoặc vận động viên nhưng không được trả cho bản thân người biểu diễn hoặc vận động viên, mà trả cho một đối tượng khác thì thu nhập này có thể phải chịu thuế tại Nước ký kết nơi diễn ra những hoạt động trình diễn của người biểu diễn hoặc vận động viên, mặc dù có những quy định tại Điều 7, 15 và 16.
+
+3/ Mặc dù đã có những quy định tại khoản 1 và 2, thu nhập do một diễn viên hay vận động viên là đối tượng cư trú của một Nước ký kết thu được từ các hoạt động trình diễn cá nhân tại Nước ký kết kia sẽ chỉ bị đánh thuế tại Nước ký kết thứ nhất nếu các hoạt động trình diễn tại Nước ký kết kia hầu hết hay chủ yếu được tài trợ từ các quỹ công của Nước ký kết thứ nhất, bao gồm bất kỳ cơ quan chính quyền cơ sở hay chính quyền địa phương của Nước đó.
+
+4/ Mặc dù đã có những quy định tại khoản 2 và Điều 7, 15 và 16, trường hợp thu nhập từ các hoạt động trình diễn cá nhân do người biểu diễn hay vận động viên thực hiện tại một Nước ký kết không được trả cho bản thân người biểu diễn hoặc vận động viên mà trả cho một đối tượng khác thì thu nhập này sẽ chỉ bị đánh thuế tại Nước ký kết kia, nếu đối tượng khác đó hầu hết hay chủ yếu được tài trợ từ các quỹ công của Nước kia, bao gồm bất kỳ cơ quan chính quyền cơ sở hay chính quyền địa phương của Nước đó.
+30
+
+ĐIỀU 19
+
+TIỀN CÔNG VÀ TIỀN LƯƠNG HUȚU
+
+PHỤC VỤ CHÍNH PHỦ
+
+1/a. Tiền công lao động, trừ tiền lương hưu, do một Nước ký kết hoặc một cơ quan chính quyền cơ sở, chính quyền địa phương của Nước đó trả cho một cá nhân đối với các công việc phục vụ cho Nhà nước hoặc một cơ quan chính quyền cơ sở, chính quyền địa phương đó sẽ chỉ bị đánh thuế ở Nước đó.
+
+b. Tuy nhiên, khoản tiền công lao động này sẽ chỉ bị đánh thuế ở Nước ký kết kia nếu việc phục vụ này được thực hiện tại Nước kia và nếu cá nhân này là đối tượng cư trú của Nước kia, đồng thời:
+
+(i) là đối tượng mang quốc tịch của Nước kia; hoặc
+
+(ii) không trở thành đối tượng cư trú của Nước kia chỉ đơn thuần vì thực hiện những công việc trên.
+
+2/a. Bất kỳ khoản tiền lương hưu nào do một Nước ký kết, một cơ quan chính quyền cơ sở hoặc chính quyền địa phương của Nước đó hoặc do các quy của những cơ quan này lập ra trả cho một cá nhân đối với các công việc phục vụ cho Nhà nước hoặc các cơ quan chính quyền cơ sở hay chính quyền địa phương tại Nước đó sẽ chỉ bị đánh thuế ở Nước đó.
+
+b. Tuy nhiên, những khoản tiền lương hưu này sẽ chỉ bị đánh thuế ở Nước ký kết kia nếu cá nhân này là đối tượng cư trú và là đối tượng mang quốc tịch của Nước kia.
+
+3/ Các quy định của Điều 16, 17 và 20 sẽ áp dụng đối với những khoản tiền công lao động và lương hưu đối với các công việc liên quan đến một hoạt động kinh doanh được tiến hành bởi một Nước ký kết hoặc cơ quan chính quyền cơ sở, hoặc chính quyền địa phương của Nước đó.
+31
+
+ĐIỀU 20
+
+TIỀN LƯƠNG HUU VÀ TIỀN BẢO HIỂM HUU
+
+PHI CHÍNH PHỦ
+
+1/ Bất kỳ khoản tiền lương huu nào, trừ tiền lương huu nếu tại Điều 19, hay bất kỳ khoản tiền bảo hiểm huu hàng năm do một đối tượng cư trú của một Nước ký kết thu được từ các nguồn tại Nước ký kết kia sẽ chỉ bị đánh thuế tại Nước ký kết thứ nhất.
+
+2/ Thuật ngữ "tiền lương huu" có nghĩa là khoản tiền thanh toán định kỳ trả cho các công việc phục vụ trước đây hay dưới hình thức tiền bồi thường thương tật nhận được trong quá trình thực hiện các công việc.
+
+3/ Thuật ngữ "tiền bảo hiểm huu hàng năm" có nghĩa là khoản tiền nhất định thanh toán định kỳ vào những thời điểm nhất định trong thời gian sống hay trong giai đoạn thời gian được quy định hoặc cam kết thể theo nghĩa vụ đóng góp để nhận lại được số tiền hay trị giá bằng tiền toàn bộ và tương ứng.
+32
+
+ĐIỀU 21
+
+THU NHẬP CỦA SINH VIÊN VÀ THỰC TẬP SINH
+
+1/ Một sinh viên hay một thực tập sinh hiện tại hay trước kia là đối tượng cư trú của một Nước ký kết ngay trước khi đến Nước ký kết kia và hiện đang có mặt tại Nước kia chỉ với mục đích học tập hay đào tạo sẽ được miễn thuế tại Nước kia đối với:
+
+a. các khoản tiền do các đối tượng cư trú ngoài Nước kia trả cho sinh viên hay thực tập sinh đó để phục vụ cho sinh hoạt, học tập hay đào tạo của sinh viên hay thực tập sinh đó; và
+
+b. tiền từ việc làm công tại Nước kia, trong phạm vi số tiền không vượt quá 2.000 đôla Mỹ hay khoản tiền tương ứng tính theo các đồng tiền khác trong bất kỳ năm tài chính nào tùy từng trường hợp, với điều kiện việc làm công đó có liên quan trực tiếp đến việc học tập của sinh viên hay thực tập sinh đó và được thực hiện để đảm bảo sinh hoạt của sinh viên hay thực tập sinh đó.
+
+2/ Quy định ưu đãi tại Điều này sẽ chỉ được áp dụng trong khoảng thời gian hợp lý hay theo thông lệ cần thiết để hoàn thành việc học tập hay đào tạo, nhưng không có trường hợp nào một cá nhân được hưởng các ưu đãi quy định tại Điều này quá 5 năm liên tục kể từ ngày đầu tiên cá nhân đó đến Nước ký kết kia.
+33
+
+ĐIỀU 22
+
+THU NHẬP CỦA GIÁO VIÊN, GIÁO SƯ VÀ
+
+NHÀ NGHIÊN CỨU
+
+1/ Môi giáo sư hay giáo viên hiện tại hay trước kia là một đối tượng cư trú
+
+của một Nước ký kết ngay trước khi sang Nước ký kết kia với mục đích giảng dạy
+
+hay tham gia nghiên cứu hay cả hai mục đích giảng dạy và nghiên cứu tại một
+
+trường đại học, trường cao đẳng, trường học hay một tổ chức được chấp nhận tại
+
+Nước ký kết kia sẽ được miễn thuế tại Nước kia đối với khoản tiền công trả cho
+
+việc giảng dạy hay nghiên cứu trong khoảng thời gian không quá 2 năm kể từ
+
+ngày đối tượng đó đến Nước kia.
+
+2/ Điều này sẽ không áp dụng đối với thu nhập từ việc nghiên cứu nếu việc
+
+nghiên cứu này ngay từ khi khởi đầu nhằm phục vụ cho lợi ích riêng của một hay
+
+nhiều đối tượng nhất định.
+
+3/ Theo nội dung khoản 1, “tổ chức được chấp nhận” có nghĩa là một cơ sở
+
+được nhà chức trách có thẩm quyền của Nước ký kết liên quan chấp nhận.
+34
+
+ĐIỀU 23
+
+THU NHẬP KHÁC
+
+1/ Thế theo những quy định tại khoản 2, những khoản thu nhập của một đối tượng cư trú của một Nước ký kết, dù phát sinh ở đâu, chưa được đề cập tại các Điều trên của Hiệp định này sẽ chỉ bị đánh thuế tại Nước ký kết đó.
+
+2/ Những quy định tại khoản 1 sẽ không áp dụng đối với thu nhập, trừ thu nhập từ bất động sản như được định nghĩa tại khoản 2 Điều 6, nếu đối tượng nhận thu nhập là đối tượng cư trú của một Nước ký kết, có tiến hành hoạt động kinh doanh tại Nước ký kết kia thông qua một cơ sở thương trú nằm tại Nước đó, hay thực hiện tại Nước kia các hoạt động dịch vụ cá nhân độc lập thông qua một cơ sở cố định nằm tại Nước đó, và quyền hay tài sản liên quan đến thu nhập chỉ trả có sự liên hệ thực tế với cơ sở thương trú hay cơ sở cố định đó. Trong trường hợp đó những quy định tại Điều 7 hoặc Điều 15, tùy từng trường hợp, sẽ được áp dụng.
+
+3/ Mặc dù đã có những quy định tại khoản 1 và 2, các khoản thu nhập của một đối tượng cư trú của một Nước ký kết chưa được đề cập tại các Điều trên của Hiệp định này và phát sinh tại Nước ký kết kia cũng có thể bị đánh thuế tại Nước kia.
+35
+
+ĐIỀU 24
+
+TRÁNH ĐÁNH THUẾ HAI LẦN
+
+1/ Các luật có hiệu lực tại từng Nước ký kết sẽ tiếp tục điều chỉnh thuế thu nhập tại từng Nước ký kết trừ trường hợp có những quy định trái với Hiệp định này.
+
+2/ Trường hợp một đối tượng cư trú của một Nước ký kết nhận được thu nhập mà theo các quy định của Hiệp định này có thể bị đánh thuế tại Nước ký kết kia, Nước ký kết thứ nhất sẽ cho phép khấu trừ vào số thuế tính trên thu nhập của đối tượng cư trú đó một khoản tiền bằng số thuế thu nhập đã nộp tại Nước ký kết kia cho dù nộp trực tiếp hay bằng hình thức khấu trừ. Tuy nhiên, phần thuế được khấu trừ sẽ không vượt quá phần thuế thu nhập (được tính trước khi cho phép khấu trừ) tại Nước ký kết thứ nhất được phân bổ cho khoản thu nhập có thể bị đánh thuế tại Nước ký kết kia.
+
+3/ Thuế đã nộp tại Nước ký kết kia được đề cập tại khoản 2 của Điều này sẽ được coi là bao gồm số thuế lệ ra phải nộp nếu không áp dụng các quy định ưu đãi theo các luật của Nước ký kết kia và những ưu đãi đó được xây dựng nhằm khuyến khích phát triển kinh tế.
+36
+
+ĐIỀU 25
+
+KHÔNG PHÂN BIỆT ĐỐI XỬ
+
+1/ Những đối tượng mang quốc tịch của một Nước ký kết sẽ không phải chịu
+
+tại Nước ký kết kia bất kỳ hình thức thuế nào hay bất kỳ yêu cầu nào liên quan
+
+đến hình thức thuế đó khác với hay nặng hơn hình thức thuế và các yêu cầu liên
+
+quan hiện đang và có thể áp dụng cho đối tượng mang quốc tịch của Nước ký
+
+kết kia trong cùng những hoàn cảnh như nhau.
+
+2/ Hình thức thuế áp dụng đối với một cơ sở thương trú của một xí nghiệp
+
+của một Nước ký kết đặt tại Nước ký kết kia sẽ không kém thuận lợi hơn tại Nước
+
+kia so với hình thức thuế áp dụng cho các xí nghiệp tại Nước kia cùng tiến hành
+
+các hoạt động tương tự trong những hoàn cảnh như nhau. Quy định này sẽ
+
+không được giải thích là ngăn cản một Nước ký kết đánh thuế các khoản lợi tức
+
+của cơ sở thương trú mà một xí nghiệp của Nước ký kết đặt tại các khoản lợi tức
+
+với cơ sở thương trú cao hơn thuế suất áp dụng đối với các khoản lợi tức của một xí
+
+nghiệp tương tự của Nước ký kết thứ nhất, hay cũng không được giải thích là trái
+
+với những quy định tại khoản 3 Điều 7 của Hiệp định này.
+
+3/ Không có nội dung nào của Điều này sẽ được giải thích là buộc một Nước
+
+ký kết cho các đối tượng không phải là đối tượng cư trú của Nước đó được hưởng
+
+bất kỳ khoản miễn thu cá nhân, miễn thuế và giảm thuế trong khi tính thuế mà
+
+theo luật chỉ dành cho các cá nhân cư trú tại Nước đó được hưởng.
+
+4/ Các xí nghiệp của một Nước ký kết có toàn bộ hay một phần vốn do một
+
+hay nhiều đối tượng cư trú của Nước ký kết kia kiểm soát hay sở hữu trực tiếp hay
+
+gián tiếp, sẽ không phải chịu tại Nước thứ nhất bất kỳ hình thức thuế hay yêu cầu
+
+liên quan đến hình thức thuế đó khác với hay nặng hơn hình thức thuế và những
+
+yêu cầu liên quan được áp dụng hay có thể được áp dụng cho các xí nghiệp tương
+
+tự của Nước ký kết thứ nhất trong cùng những hoàn cảnh như nhau.
+
+5/ Các quy định tại khoản 2 và 4 Điều này sẽ không áp dụng đối với thuế
+
+chuyển lợi nhuận ra nước ngoài của Việt nam mà trong mọi trường hợp không
+
+vượt quá 10 phần trăm tổng số lợi tức chuyển ra nước ngoài và chính sách thuế
+
+Việt nam đối với các hoạt động sản xuất nông nghiệp.
+
+6/ Trong Điều này, từ "hình thức thuế" có nghĩa là các loại thuế chịu sự
+
+điều chỉnh của Hiệp định này
+37
+
+ĐIỀU 26
+
+CÁC THỨ TỰ THỎA THUẬN SONG PHƯƠNG
+
+1/ Trường hợp một đối tượng cư trú của một Nước ký kết nhận thấy rằng việc giải quyết của một hay cả hai Nước ký kết làm cho hay sẽ làm cho đối tượng đó phải nộp thuế không đúng với Hiệp định này, lúc đó đối tượng này có thể giải trình trường hợp của mình với nhà chức trách có thẩm quyền của Nước ký kết nơi đối tượng đó là đối tượng cư trú, mặc dù luật trong nước của hai Nước ký kết đã quy định những chế độ xử lý khiếu nại. Trưởng hợp họ đó phải được giải trình trong vòng 3 năm kể từ lần thông báo về việc giải quyết dẫn đến hình thức thuế áp dụng không đúng với những quy định tại Hiệp định.
+
+2/ Nhà chức trách có thẩm quyền sẽ cố gắng, nếu như việc khiếu nại là hợp lý và nếu bản thân nhà chức trách đó không thể đi đến một giải pháp thỏa đáng, phối hợp với nhà chức trách có thẩm quyền của Nước ký kết kia để cùng giải quyết trường hợp khiếu nại bằng thỏa thuận chung, nhằm mục đích tránh đánh thuế không phù hợp với nội dung của Hiệp định này. Mọi thỏa thuận đạt được sẽ được thực hiện không cần cứ với những giới hạn thời gian trong các luật trong nước của hai Nước ký kết.
+
+3/ Nhà chức trách có thẩm quyền của hai Nước ký kết sẽ cùng cố gắng giải quyết bằng thỏa thuận chung mọi khán hay vướng mắc này sinh trong quá trình giải thích hay áp dụng Hiệp định này. Nhà chức trách có thẩm quyền cũng có thể trao đổi với nhau nhằm xóa bỏ việc đánh thuế hai lần trong những trường hợp chưa được quy định trong Hiệp định này.
+
+4/ Nhà chức trách có thẩm quyền của hai Nước ký kết có thể trực tiếp thông báo cho nhau với mục đích nhằm đạt được một thỏa thuận theo nội dung của những khoản trên đây. Khi thấy cần thiết phải đối thoại trao đổi quan điểm để đạt được thỏa thuận thì có thể tổ chức trao đổi ý kiến thông qua một Ủy ban gồm các đại diện cho các nhà chức trách có thẩm quyền của hai Nước ký kết.
+38
+ĐIỀU 27
+TRAO ĐỔI THÔNG TIN
+
+1/ Nhà chức trách có thẩm quyền của hai Nước ký kết sẽ trao đổi với nhau
+những thông tin (kể cả các văn bản) cần thiết cho việc triển khai thực hiện những
+quy định của Hiệp định hay của các luật trong nước của hai Nước ký kết liên quan
+đến các loại thuế mà Hiệp định này áp dụng sao cho việc đánh thuế theo các luật
+trong nước sẽ không trái với Hiệp định này và đặc biệt là nhằm ngăn chặn các
+trường hợp trốn thuế và lậu thuế. Mọi thông tin do một Nước ký kết nhận được sẽ
+được giữ bí mật giống như thông tin thu nhận theo các luật trong nước của Nước
+này. Tuy nhiên, nếu ngay từ đầu thông tin đó được coi là bí mật tại Nước gửi
+thông tin, thông tin đó sẽ chỉ được cung cấp cho các đối tượng hay các cơ quan
+chức trách (bao gồm cả tòa án và các cơ quan hành chính) có liên quan đến việc
+tính toán, thu, cưỡng chế hay truy tố hoặc xác định các khiếu nại về các loại thuế
+mà Hiệp định này áp dụng. Các đối tượng hoặc các cơ quan đó sẽ chỉ sử dụng các
+thông tin đó vào các mục đích nên trên những cung cấp thông tin này
+trong quá trình tố tụng công khai của tòa án hay trong các quyết định của tòa án.
+Các nhà chức trách có thẩm quyền sẽ thông qua trao đổi ý kiến xây dựng các điều
+kiện, biện pháp và các kỹ thuật thích ứng liên quan đến các vấn đề cần phải trao
+đổi thông tin kể cả việc trao đổi thông tin liên quan đến trường hợp tránh thuế khi
+cần thiết.
+
+2/ Việc trao đổi thông tin hay văn bản sẽ được thực hiện thường xuyên hoặc
+theo yêu cầu đối với các trường hợp cụ thể hay dưới cả hai hình thức. Các nhà
+chức trách có thẩm quyền của hai Nước ký kết trong từng kỳ thời gian sẽ thỏa
+thuận danh mục thông tin hay các văn bản sẽ được cung cấp thường xuyên.
+
+3/ Không có trường hợp nào những quy định tại khoản 1 Điều này được giải
+thích là buộc một Nước ký kết có nghĩa vụ:
+
+a. thực hiện các biện pháp hành chính khác với luật pháp hay thông lệ về
+quản lý hành chính của Nước ký kết đó hay của Nước ký kết kia;
+
+b. cung cấp những thông tin không thể tiết lộ được theo các luật hay theo
+như quá trình quản lý hành chính thông thường của Nước ký kết đó hay của
+Nước ký kết kia;
+39
+
+c. cung cấp những thông tin có thể làm tiết lộ bí mật về mậu dịch, kinh
+doanh, công nghiệp, thương mại hay bí mật nghề nghiệp hoặc các phương thức
+kinh doanh, hoặc cung cấp những thông tin mà việc tiết lộ chúng có thể trái với
+chính sách nhà nước.
+40
+
+ĐIỀU 28
+
+CÁC VIÊN CHỨC NGOẠI GIAO VÀ LÃNH SỰ
+
+Không nội dung nào trong Hiệp định này sẽ ảnh hưởng đến những ưu đãi
+về thuê được dành cho các viên chức ngoại giao hoặc các viên chức lãnh sự theo
+những nguyên tắc chung của luật pháp quốc tế hay những quy định trong các
+hiệp định đặc biệt.
+41
+
+ĐIỀU 29
+
+HIỆU LỰC
+
+Từng Nước ký kết sẽ thông báo cho Nước ký kết kia việc hoàn thành các thủ
+tục cần thiết theo luật của Nước mình để đưa Hiệp định này vào hiệu lực. Hiệp
+định này sẽ có hiệu lực kể từ ngày thông báo sau cùng và sẽ có hiệu lực thi hành:
+
+a. tại Việt nam:
+
+(i) đối với các loại thuế khấu trừ tại gốc, thu trên các khoản thu nhập chịu
+thuế được chi trả kể từ ngày 1 tháng 1 tiếp sau năm dương lịch Hiệp định có hiệu
+lực;
+
+(ii) đối với các loại thuế Việt nam khác thu trên thu nhập, lợi tức hay lợi tức
+chuyển nhượng tài sản phát sinh trong năm dương lịch tiếp sau năm Hiệp định
+này có hiệu lực và các năm dương lịch tiếp theo;
+
+b. tại Ấn độ, đối với thu nhập phát sinh trong bất kỳ năm trước nào bắt đầu
+từ ngày 1 tháng 4 tiếp sau năm dương lịch gửi thông báo sau cùng.
+42
+
+ĐIỀU 30
+
+KẾT THÚC HIỆP ĐỊNH
+
+Hiệp định này sẽ có hiệu lực vô thời hạn, nhưng từng Nước ký kết, vào ngày
+hoặc trước ngày 30 tháng 6 trong bất kỳ năm dương lịch nào bắt đầu sau thời hạn
+5 năm kể từ ngày Hiệp định có hiệu lực, có thể gửi qua các đường ngoại giao cho
+Nước ký kết kia văn bản thông báo kết thúc Hiệp định và trong trường hợp đó
+Hiệp định này sẽ chấm dứt hiệu lực thi hành:
+
+a. tại Việt nam:
+
+(i) đối với các loại thuế khấu trừ tại gốc, thu trên các khoản thu nhập chịu
+thuế chỉ trả kể từ ngày 1 tháng 1 tiếp sau năm dương lịch gửi thông báo kết thúc;
+
+(ii) đối với các loại thuế Việt nam khác thu trên thu nhập, lợi tức hay lợi
+tức chuyển nhượng tài sản phát sinh trong năm dương lịch tiếp sau năm dương
+lịch gửi thông báo kết thúc và các năm dương lịch tiếp theo;
+
+b. tại Ấn độ, đối với thu nhập phát sinh trong bất kỳ năm trước nào bắt đầu
+từ ngày 1 tháng 4 tiếp sau năm dương lịch gửi thông báo kết thúc.
+43
+
+Để làm bằng, những người được ủy quyền dưới đây của từng Chính phủ đã ký vào Hiệp định này.
+
+Hiệp định làm thành hai bản tại Hà nội ngày 07 tháng 9 năm một ngàn chín trăm chín mươi tư mỗi bản gồm các thứ tiếng Việt nam, tiếng Hin-di và tiếng Anh. Trường hợp có sự khác nhau trong quá trình giải thích, bản tiếng Anh sẽ có giá trị quyết định.
+
+THAY MẶT CHÍNH PHỦ
+NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA
+VIỆT NAM
+
+THAY MẶT CHÍNH PHỦ
+NƯỚC
+CỘNG HÒA ẤN ĐỘ
+
+Ngài HỒ TẾ
+Bộ Trưởng Bộ Tài chính
+
+Ngài BIJUVNESH CHATURVEDI
+Quốc vụ khanh
+Văn Phòng Thứ tướng
+AGREEMENT
+BETWEEN
+THE SOCIALIST REPUBLIC OF VIETNAM
+AND
+THE REPUBLIC OF INDIA
+FOR THE AVOIDANCE OF DOUBLE TAXATION
+AND
+THE PREVENTION OF FISCAL EVASION
+WITH RESPECT TO TAXES ON INCOME
+2
+
+The Government of the Socialist Republic of Vietnam
+and
+the Government of the Republic of India,
+
+Desiring to conclude an Agreement for the avoidance of double taxation and the
+prevention of fiscal evasion with respect to taxes on income,
+
+Have agreed as follows:
+3
+
+ARTICLE 1
+
+Personal Scope
+
+This Agreement shall apply to persons who are residents of one or both of the
+Contracting States.
+4
+
+ARTICLE 2
+
+Taxes Covered
+
+1. This Agreement shall apply to taxes on income imposed on behalf of a Contracting State or of its political subdivisions or local authorities, irrespective of the manner in which they are levied.
+
+2. There shall be regarded as taxes on income all taxes imposed on total income or on elements of income, including taxes on gains from the alienation of movable or immovable property, taxes on the total amounts of wages or salaries paid by enterprises.
+
+3. The existing taxes to which the Agreement shall apply are:
+
+(a) in Vietnam:
+
+(i) the personal income tax;
+
+(ii) the profit tax; and
+
+(iii) the profit remittance tax;
+
+(hereinafter referred to as "Vietnamese tax");
+
+(b) in India:
+
+the income tax including any surcharge thereon;
+
+(hereinafter referred to as "Indian tax").
+
+4. The Agreement shall also apply to any identical or substantially similar taxes which are imposed after the date of signature of this Agreement in addition to, or in place of, the existing taxes. The competent authorities of the Contracting States shall notify each other of substantial changes which have been made in their respective taxation laws.
+5
+
+ARTICLE 3
+
+General Definitions
+
+1. In this Agreement, unless the context otherwise requires:
+
+(a) the term "Vietnam" means the Socialist Republic of Vietnam; when used in a geographical sense, it means all its national territory, including its territorial sea and any area beyond and adjacent to its territorial sea, within which Vietnam, by Vietnamese legislation and in accordance with international law, has sovereign rights of exploration for and exploitation of natural resources of the sea bed and its sub-soil and superjacent watermass;
+
+(b) the term "India" means the territory of India and includes the territorial sea and airspace above it, as well as any other maritime zone in which India has sovereign rights, other rights and jurisdictions, according to the Indian law and in accordance with international law or the U.N. Convention on the Law of the Sea;
+
+(c) the terms "a Contracting State" and "the other Contracting State" mean Vietnam or India as the context requires;
+
+(d) the-term "company" means any body corporate or any entity which is treated as a company or body corporate under the taxation law in force in the respective Contracting States;
+
+(e) the term "competent authority" means:
+
+(i) in the case of Vietnam, the Minister of Finance or his authorized representative; and
+
+(ii) in the case of India, the Central Government in the Ministry of Finance (Department of Revenue) or their authorized representative;
+
+(f) the terms "enterprise of a Contracting State" and "enterprise of the other Contracting State" mean respectively an enterprise carried on by a resident of a Contracting State and an enterprise carried on by a resident of the other Contracting State;
+(g) the term "fiscal year" means:
+(i) in the case of Vietnam, the accounting year comprising of a twelve-month period;
+and
+(ii) in the case of India, "previous year" as defined under section 3 of the Income-tax
+Act, 1961;
+(h) the term "international traffic" means any transport by a ship or aircraft
+operated by an enterprise of a Contracting State, except when the ship or aircraft is
+operated solely between places in the other Contracting State;
+(i) the term "national" means any individual, possessing the nationality of a
+Contracting State and any legal person, partnership or association deriving its status from
+the laws in force in the Contracting State;
+(j) the term "person" includes an individual, a company, a body of persons and
+any other entity which is treated as a taxable unit under the taxation laws in force in the
+respective Contracting States;
+(k) the term "tax" means Vietnamese tax or India tax, as the context requires,
+but shall not include any amount which is payable in respect of any default or omission in
+relation to the taxes to which this Agreement applies or which represents a penalty
+imposed relating to those taxes.
+
+2. As regards the application of the Agreement by a Contracting State, any
+term not defined therein shall, unless the context otherwise requires, have the meaning
+which it has under the law of that State concerning the taxes to which the Agreement
+applies.
+7
+
+ARTICLE 4
+
+Resident
+
+1. For the purposes of this Agreement, the term "resident of a Contracting State" means any person who, under the laws of that State, is liable to tax therein by reason of his domicile, residence, place of management, place of registration or any other criterion of a similar nature:
+
+2. Where by reason of the provisions of paragraph 1, an individual is a resident of both Contracting States, then his status shall be determined as follows:
+
+(a) he shall be deemed to be a resident of the State in which he has a permanent home available to him; if he has a permanent home available to him in both States, he shall be deemed to be a resident of the State with which his personal and economic relations are closer (centre of vital interests);
+
+(b) if the State in which he has his centre of vital interests cannot be determined, or if he has no permanent home available to him in either State, he shall be deemed to be a resident of the State in which he has an habitual abode;
+
+(c) if he has an habitual abode in both States or in neither of them, he shall be deemed to be a resident of the State of which he is a national;
+
+(d) if he is a national of both States or of neither of them, the competent authorities of the Contracting States shall settle the question by mutual agreement.
+
+3. Where by reason of the provisions of paragraph 1, a person other than an individual is a resident of both Contracting States, then it shall be deemed to be a resident of the State in which its place of effective management is situated.
+8
+
+ARTICLE 5
+
+Permanent Establishment
+
+1. For the purposes of this Agreement, the term "permanent establishment" means a fixed place of business through which the business of the enterprise is wholly or partly carried on.
+
+2. The term "permanent establishment" includes especially:
+
+(a) a place of management;
+
+(b) a branch;
+
+(c) an office;
+
+(d) a factory;
+
+(e) a workshop;
+
+(f) a mine, an oil or gas well, a quarry or any other place of extraction of natural resources;
+
+(g) a warehouse, in relation to a person providing storage facilities for others; and
+
+(h) a building site or construction or assembly project or supervisory activities in connection therewith; but only where such site, project or activity continues for a period of more than six months.
+
+3. Notwithstanding the preceding provisions of this Article, the term "permanent establishment" shall be deemed not to include:
+
+(a) the use of facilities solely for the purpose of storage, display or occasional delivery of goods or merchandise belonging to the enterprise;
+
+(b) the maintenance of a stock of goods or merchandise belonging to the enterprise solely for the purpose of storage, display or occasional delivery;
+(c) the maintenance of a stock of goods or merchandise belonging to the enterprise solely for the purpose of processing by another enterprise;
+(d) the maintenance of a fixed place of business solely for the purpose of purchasing goods or merchandise or of collecting information for the enterprise;
+(e) the maintenance of a fixed place of business solely for the purpose of carrying on, for the enterprise, any other activity of a preparatory or auxiliary character.
+
+4. Notwithstanding the provisions of paragraphs 1 and 2, where a person - other than an agent of an independent status to whom paragraph 5 applies - is acting in a Contracting State on behalf of an enterprise of the other Contracting State, that enterprise shall be deemed to have a permanent establishment in the first-mentioned Contracting State in respect of any activities which that person undertakes for the enterprise, if such a person:
+(a) has and habitually exercises in that State an authority to conclude contracts in the name of the enterprise, unless the activities of such person are limited to those mentioned in paragraph 3 which, if exercised through a fixed place of business, would not make this fixed place of business a permanent establishment under the provisions of that paragraph; or
+(b) has no such authority, but habitually maintains in the first-mentioned State a stock of goods or merchandise from which he regularly delivers goods or merchandise on behalf of the enterprise.
+
+5. An enterprise of a Contracting State shall not be deemed to have a permanent establishment in the other Contracting State merely because it carries on business in that State through a broker, general commission agent or any other agent of an independent status, provided that such persons are acting in the ordinary course of their business. However, when the activities of such an agent are devoted wholly or almost wholly on behalf of that enterprise, he will not be considered an agent of an independent status within the meaning of this paragraph.
+
+6. The fact that a company which is a resident of a Contracting State controls or is controlled by a company which is a resident of the other Contracting State, or which carries on business in that other State (whether through a permanent establishment or otherwise), shall not of itself constitute either company a permanent establishment of the other.
+10
+
+ARTICLE 6
+
+Income from Immovable Property
+
+1. Income derived by a resident of a Contracting State from immovable property (including income from agriculture or forestry) situated in the other Contracting State may be taxed in that other State.
+
+2. The term "immovable property" shall have the meaning which it has under the law of the Contracting State in which the property in question is situated. The term shall in any case include property accessory to immovable property, livestock and equipment used in agriculture and forestry, rights to which the provisions of general law respecting landed property apply, usufruct of immovable property and rights to variable or fixed payments as consideration for the working of, or the right to work, mineral deposits, sources and other natural resources. Ships, boats and aircraft shall not be regarded as immovable property.
+
+3. The provisions of paragraph 1 shall also apply to income derived from the direct use, letting, or use in any other form of immovable property.
+
+4. The provisions of paragraphs 1 and 3 shall also apply to the income from immovable property of an enterprise and to income from immovable property used for the performance of independent personal services.
+11
+
+ARTICLE 7
+
+Business Profits
+
+1. The profits of an enterprise of a Contracting State shall be taxable only in that State unless the enterprise carries on business in the other Contracting State through a permanent establishment situated therein. If the enterprise carries on business as aforesaid, the profits of the enterprise may also be taxed in the other State but only so much of them as is attributable directly or indirectly to that permanent establishment.
+
+The words "directly or indirectly" mean, for the purposes of this Article, that where a permanent establishment takes an active part in negotiating, concluding or fulfilling contracts entered into by the enterprise, then notwithstanding that other parts of the enterprise have also participated in those transactions, there shall be attributed to the permanent establishment that proportion of profits of the enterprise arising out of those contracts as the contribution of the permanent establishment to those transactions bears to that of the enterprise as a whole.
+
+2. Subject to the provisions of paragraph 3, where an enterprise of a Contracting State carries on business in the other Contracting State through a permanent establishment situated therein, there shall in each Contracting State be attributed to that permanent establishment the profits which it might be expected to make if it were a distinct and separate enterprise engaged in the same or similar activities under the same or similar conditions and dealing wholly independently with the enterprise of which it is a permanent establishment.
+
+3. In determining the profits of a permanent establishment, there shall be allowed as deductions expenses which are incurred for the purposes of the business of the permanent establishment, including executive and general administrative expenses so incurred, whether in the State in which the permanent establishment is situated or elsewhere in accordance with the provisions of and subject to the limitations of the tax laws of that State.
+
+4. Nothing in this Article shall affect the application of any law of a Contracting State relating to the determination of the tax liability of a person in cases where information is not available to the competent authority of that State in order to determine the profits to be attributed to a permanent establishment, provided that law shall be applied consistently with the principles of this Article.
+5. In so far as it has been customary in a Contracting State to determine the profits to be attributed to a permanent establishment on the basis of an apportionment of the total profits of the enterprise to its various parts, nothing in paragraph 2 shall preclude that Contracting State from determining the profits to be taxed by such an apportionment as may be customary. The method of apportionment adopted shall, however, be such that the result shall be in accordance with the principles contained in this Article.
+
+6. No profits shall be attributed to a permanent establishment by reason of the mere purchase by that permanent establishment of goods or merchandise for the enterprise.
+
+7. For the purposes of the preceding paragraphs, the profits to be attributed to the permanent establishment shall be determined by the same method year by year unless there is good and sufficient reason to the contrary.
+
+8. Where profits include items of income which are dealt with separately in other Articles of this Agreement, then the provisions of those Articles shall not be affected by the provisions of this Article.
+13
+
+ARTICLE 8
+
+Shipping and Air Transport
+
+1. Profits derived by an enterprise of a Contracting State from the operation of ships or aircraft in international traffic shall be taxable only in that State.
+
+2. For the purposes of this Article, profits from the operation of ships or aircraft in international traffic include:
+
+(a) income from the lease of ships or aircraft; and
+
+(b) profits from the use, maintenance or rental of containers (including trailers and related equipment for the transport of containers);
+
+Where such lease or such use, maintenance or rental, as the case may be, is incidental to the operation of ships or aircraft in international traffic.
+
+3. The provisions of paragraph 1 shall also apply to profits from the participation in a pool, a joint business or an international operating agency.
+
+4. For the purposes of this Article, interest on funds connected with the operation of ships or aircraft in international traffic earmarked for the purpose of payments of all kinds of wages and maintenance of ships or aircraft and their crew shall be regarded as income or profits derived from the operation of such ships or aircraft and the provisions of Article 11 shall not apply in relation to such interest.
+14
+
+ARTICLE 9
+
+Associated Enterprises
+
+Where
+
+(a) an enterprise of a Contracting State participates directly or indirectly in the management, control or capital of an enterprise of the other Contracting State, or
+
+(b) the same persons participate directly or indirectly in the management, control or capital of an enterprise of a Contracting State and an enterprise of the other Contracting State,
+
+and in either case conditions are made or imposed between the two enterprises in their commercial or financial relations which differ from those which would be made between independent enterprises, then any profits which would, but for those conditions, have accrued to one of the enterprises, but, by the reason of those conditions, have not so accrued, may be included in the profits of that enterprise and taxed accordingly.
+15
+
+ARTICLE 10
+
+Dividends
+
+1. Dividends paid by a company which is a resident of a Contracting State to a
+resident of the other Contracting State may be taxed in that other State.
+
+2. However, such dividends may also be taxed in the Contracting State of
+which the company paying the dividends is a resident and according to the laws of that
+State, but if the recipient is the beneficial owner of the dividends, the tax so charged shall
+not exceed 10 per cent of the gross amount of the dividends.
+
+This paragraph shall not affect the taxation of the company in respect of the profits
+out of which the dividends are paid.
+
+3. The term "dividends" as used in this Article means income from shares or
+other rights, not being debt-claims, participating in profits, as well as income from other
+corporate rights which is subjected to the same taxation treatment as income from shares
+by the laws of the State of which the company making the distribution is a resident.
+
+4. The provisions of paragraphs 1 and 2 shall not apply if the beneficial owner
+of the dividends, being a resident of a Contracting State, carries on business in the other
+Contracting State of which the company paying the dividends is a resident through a
+permanent establishment situated therein, or performs in that other State independent
+personal services from a fixed base situated therein, and the holding in respect of which
+the dividends are paid is effectively connected with such permanent establishment or
+fixed base. In such case, the provisions of Article 7 or Article 15, as the case may be,
+shall apply.
+
+5. Where a company which is a resident of a Contracting State derives profits
+or income from the other Contracting State, that other State may not impose any tax on
+the dividends paid by the company, except insofar as such dividends are paid to a resident
+of that other Contracting State or insofar as the holding in respect of which the dividends
+are paid is effectively connected with a permanent establishment or a fixed base situated
+in that other State, nor subject the company's undistributed profits to a tax on the
+company's undistributed profits, even if the dividends paid or the undistributed profits
+consist wholly or partly of profits or income arising in such other State.
+16
+
+ARTICLE 11
+
+Interest
+
+1. Interest arising in a Contracting State and paid to a resident of the other Contracting State may be taxed in that other State.
+
+2. However, such interest may also be taxed in the Contracting State in which it arises and according to the laws of that State, but if the recipient is the beneficial owner of such interest the tax so charged shall not exceed 10 per cent of the gross amount of the interest.
+
+3. Notwithstanding the provisions of paragraph 2,
+
+(a) interest arising in a Contracting State shall be exempt from tax in that State provided it is derived and beneficially owned by:
+
+(i) the Government, a political sub-division or a local authority of the other Contracting State; or
+
+(ii) the Central Bank of the other Contracting State;
+
+(b) interest arising in a Contracting State shall be exempt from tax in that Contracting State to the extent approved by the Government of that State if it is derived and beneficially owned by any person (other than a person referred to in sub-paragraph (a)) who is a resident of the other Contracting State provided that the transaction giving rise to the debt-claim has been approved in this regard by the Government of the first-mentioned Contracting State.
+
+4. The term "interest" as used in this Article means income from debt-claims of every kind, whether or not secured by mortgage and whether or not carrying a right to participate in the debtor's profits, and in particular, income from government securities and income from bonds or debentures, including premiums and prizes attaching to such securities, bonds or debentures. Penalty charges for late payment shall not be regarded as interest for the purpose of this Article.
+5. The provisions of paragraphs 1 and 2 shall not apply if the beneficial owner of the interest, being a resident of a Contracting State, carries on business in the other Contracting State in which the interest arises, through a permanent establishment situated therein, or performs in that other State independent personal services from a fixed base situated therein and the debt-claim in respect of which the interest is paid is effectively connected with such permanent establishment or fixed base. In such case, the provisions of Article 7 or Article 15, as the case may be, shall apply.
+
+6. Interest shall be deemed to arise in a Contracting State when the payer is that Contracting State itself, a political sub-division, a local authority or a resident of that State. Where, however, the person paying the interest, whether he is a resident of a Contracting State or not, has in a Contracting State a permanent establishment or a fixed base in connection with which the indebtedness on which the interest is paid was incurred, and such interest is borne by such permanent establishment or fixed base, then such interest shall be deemed to arise in the State in which the permanent establishment or fixed base is situated.
+
+7. Where, by reason of a special relationship between the payer and the beneficial owner or between both of them and some other person, the amount of the interest, having regard to the debt-claim for which it is paid, exceeds the amount which would have been agreed upon by the payer and the beneficial owner in the absence of such relationship, the provisions of this Article shall apply only to the last-mentioned amount. In such case, the excess part of the payments shall remain taxable according to the laws of each Contracting State, due regard being had to the other provisions of this Agreement.
+18
+
+ARTICLE 12
+
+Royalties
+
+1. Royalties arising in a Contracting State and paid to a resident of the other Contracting State may be taxed in that other State.
+
+2. However, such royalties may also be taxed in the Contracting State in which they arise and according to the laws of that State, but if the recipient is the beneficial owner of the royalties, the tax so charged shall not exceed 10 per cent of the gross amount of the royalties.
+
+3. The term "royalties" as used in this Article means payments of any kind received as a consideration for the use of, or the right to use, any copyright of literary, artistic or scientific work including cinematograph films, or films or tapes used for radio or television broadcasting, any patent, trade mark, design or model, plan, secret formula or process, or for the use of, or the right to use, industrial, commercial or scientific equipment, or for information concerning industrial, commercial or scientific experience.
+
+4. The provisions of paragraphs 1 and 2 shall not apply if the beneficial owner of the royalties, being a resident of a Contracting State, carries on business in the other Contracting State in which the royalties arise, through a permanent establishment situated therein, or performs in that other State independent personal services from a fixed base situated therein, and the right or property in respect of which the royalties are paid is effectively connected with such permanent establishment or fixed base. In such case, the provisions of Article 7 or Article 15, as the case may be, shall apply.
+
+5. Royalties shall be deemed to arise in a Contracting State when the payer is that State itself, a political subdivision, a local authority or a resident of that State. Where, however, the person paying the royalties, whether he is a resident of a Contracting State or not, has in a Contracting State a permanent establishment or a fixed base in connection with which the liability to pay the royalties was incurred, and such royalties are borne by such permanent establishment or fixed base, then such royalties shall be deemed to arise in the State in which the permanent establishment or fixed base is situated.
+19
+
+6. Where, by reason of a special relationship between the payer and the beneficial owner or between both of them and some other person, the amount of the royalties, having regard to the use, right or information for which they are paid, exceeds the amount which would have been agreed upon by the payer and the beneficial owner in the absence of such relationship, the provisions of this Article shall apply only to the last-mentioned amount. In such case, the excess part of the payments shall remain taxable according to the laws of each Contracting State, due regard being had to the other provisions of this Agreement.
+20
+
+ARTICLE 13
+
+Technical Fees
+
+1. Technical fees arising in a Contracting State which are derived by a resident of the other Contracting State may be taxed in that other State.
+
+2. However, such technical fees may also be taxed in the Contracting State in which they arise, and according to the laws of that State; but if the recipient is the beneficial owner of the technical fees, the tax so charged shall not exceed 10 per cent of the gross amount of the technical fees.
+
+3. The term "technical fees" as used in this Article means payments of any kind to any person, other than to an employee of the person making the payments, in consideration for any services of a technical, managerial or consultancy nature.
+
+4. The provisions of paragraphs 1 and 2 shall not apply if the beneficial owner of the technical fees, being a resident of a Contracting State carries on business in the other Contracting State in which the technical fees arise through a permanent establishment situated therein, or performs in that other State independent personal services, and the technical fees are effectively connected with such permanent establishment or such services. In such case, the provisions of Article 7 or Article 15, as the case may be, shall apply.
+
+5. Technical fees shall be deemed to arise in a Contracting State when the payer is that State itself, a political subdivision, a local authority or a statutory body thereof, or a resident of that State. Where, however, the person paying the technical fees, whether he is a resident of a Contracting State or not, has in a Contracting State a permanent establishment in connection with which the obligation to pay the technical fees was incurred, and such technical fees are borne by that permanent establishment, then such technical fees shall be deemed to arise in the Contracting State in which the permanent establishment is situated.
+
+6. Where, by reason of a special relationship between the payer and the recipient or between both of them and some other person, the amount of the technical fees paid, exceeds for whatever reason, the amount which would have been agreed upon by the payer and the beneficial owner in the absence of such relationship, the provisions of this Article shall apply only to the last-mentioned amount. In such case, the excess part of the payments shall remain taxable according to the law of each Contracting State due regard being had to the other provisions of this Agreement.
+21
+
+ARTICLE 14
+
+Capital Gains
+
+1. Gains derived by a resident of a Contracting State from the alienation of immovable property, referred to in Article 6, and situated in the other Contracting State may be taxed in that other State.
+
+2. Gains from the alienation of movable property forming part of the business property of a permanent establishment which an enterprise of a Contracting State has in the other Contracting State or of movable property pertaining to a fixed base available to a resident of a Contracting State in the other Contracting State for the purpose of performing independent personal services, including such gains from the alienation of such a permanent establishment (alone or together with the whole enterprise) or of such fixed base, may be taxed in that other State.
+
+3. Gains from the alienation of ships or aircraft operated in international traffic or movable property pertaining to the operation of such ships or aircraft shall be taxable only in the Contracting State of which the alienator is a resident.
+
+4. Gains from the alienation of share of the capital stock of a company the property of which consists directly or indirectly principally of immovable property situated in a Contracting State may be taxed in that State.
+
+5. Gains from the alienation of shares other than those mentioned in paragraph 4 in a company which is a resident of a Contracting State may be taxed in that State.
+
+6. Gains from the alienation of any property other than that mentioned in paragraphs 1, 2, 3, 4 and 5 shall be taxable only in the Contracting State of which the alienator is a resident.
+22
+
+ARTICLE 15
+
+Independent Personal Services
+
+1. Income derived by a resident of a Contracting State in respect of professional services or other independent activities of a similar character shall be taxable only in that State except in the following circumstances when such income may also be taxed in the other Contracting State:
+
+(a) if he has a fixed base regularly available to him in the other Contracting State for the purpose of performing this activities; in that case, only so much of the income as is attributable to that fixed base may be taxed in that other Contracting State; or
+
+(b) if his stay in the other Contracting State is for a period or periods amounting to or exceeding in the aggregate 183 days in the relevant fiscal year concerned; in that case, only so much of the income as is derived from his activities performed in that other State may be taxed in that other State.
+
+2. The term "professional services" includes independent scientific, literary, artistic, educational or teaching activities, as well as the independent activities of physicians, surgeons, lawyers, engineers, architects, dentists and accountants.
+23
+
+ARTICLE 16
+
+Dependent Personal Services
+
+1. Subject to the provisions of Articles 17, 18, 19, 20, 21 and 22, salaries, wages and other similar remuneration derived by a resident of a Contracting State in respect of an employment shall be taxable only in that State unless the employment is exercised in the other Contracting State. If the employment is so exercised, such remuneration as is derived therefrom may be taxed in that other State.
+
+2. Notwithstanding the provisions of paragraph 1, remuneration derived by a resident of a Contracting State in respect of an employment exercised in the other Contracting State shall be taxable only in the first-mentioned State if:
+
+(a) the recipient is present in the other State for a period or periods not exceeding in the aggregate 183 days in the relevant fiscal year; and
+
+(b) the remuneration is paid by, or on behalf of, an employer who is not a resident of the other State; and
+
+(c) the remuneration is not borne by a permanent establishment or a fixed base which the employer has in the other State.
+
+3. Notwithstanding the preceding provisions of this Article, remuneration derived in respect of an employment exercised aboard a ship or aircraft operated in international traffic by an enterprise of a Contracting State shall be taxable only in that State.
+24
+
+ARTICLE 17
+
+Directors' Fees
+
+Directors' fees and similar payments derived by a resident of a Contracting State in
+his capacity as a member of the Board of Directors of a company which is a resident of
+the other Contracting State may be taxed in that other State.
+25
+
+ARTICLE 18
+
+Income Earned by Entertainers and Athletes
+
+1. Notwithstanding the provisions of Articles 15 and 16, income derived by a resident of a Contracting State as an entertainer such as a theater, motion picture, radio or television artists, or a musician, or as an athlete, from his personal activities as such exercised in the other Contracting State may be taxed in that other State.
+
+2. While income in respect of personal activities exercised by an entertainer or an athlete in his capacity as such accrues not to the entertainer or athlete himself but to another person, that income may, notwithstanding the provisions of Articles 7, 15 and 16, be taxed in the Contracting State in which the activities of the entertainer or athlete are exercised.
+
+3. Notwithstanding the provisions of paragraph 1, income derived by an entertainer or an athlete who is a resident of a Contracting State from his personal activities as such exercised in the other Contracting State, shall be taxable only in the first-mentioned Contracting State, if the activities in the other Contracting State are supported wholly or substantially from the public funds of the first-mentioned Contracting State, including any of its political subdivisions or local authorities.
+
+4. Notwithstanding the provisions of paragraph 2 and Articles 7, 15 and 16, where income in respect of personal activities exercised by an entertainer or an athlete in his capacity as such in a Contracting State accrues not to the entertainer or athlete himself but to another person, that income shall be taxable only in the other Contracting State, if that other person is supported wholly or substantially from the public funds of the other State, including any of its political subdivisions or local authorities.
+26
+
+ARTICLE 19
+
+Remuneration and Pensions in respect of
+
+Government Service
+
+1. (a) Remuneration, other than a pension, paid by a Contracting State or a
+
+political subdivision or a local authority thereof to an individual in respect of services
+
+rendered to that State or subdivision or authority shall be taxable only in that State.
+
+(b) However, such remuneration shall be taxable only in the other
+
+Contracting State if the services are rendered in that other State and the individual is a
+
+resident of that State who:
+
+(i) is a national of that State; or
+
+(ii) did not become a resident of that State solely for the purpose of rendering
+
+the services.
+
+2. (a) Any pension paid by, or out of funds created by a Contracting State
+
+or a political subdivision or a local authority thereof to an individual in respect of services
+
+rendered to that State or subdivision or authority shall be taxable only in that State.
+
+(b) However, such pension shall be taxable only in the other Contracting
+
+State if the individual is a resident of, and a national of that other State.
+
+3. The provisions of Articles 16, 17 and 20 shall apply to remuneration and
+
+pensions in respect of services rendered in connection with a business carried on by a
+
+Contracting State or a political subdivision or a local authority thereof.
+27
+
+ARTICLE 20
+
+Non-government Pensions and Annuities
+
+1. Any pension, other than a pension referred to in Article 19, or any annuity
+derived by a resident of a Contracting State from sources within the other Contracting
+State shall be taxed only in the first-mentioned Contracting State.
+
+2. The term "pension" means a periodic payment made in consideration of
+past services or by way of compensation for injuries received in the course of
+performance of services.
+
+3. The term "annuity" means a stated sum payable periodically at stated times
+during life or during a specified or ascertainable period of time, under an obligation to
+make the payments in return for adequate and full consideration in money's worth.
+28
+
+ARTICLE 21
+
+Payments Received by Students and Apprentices
+
+1. A student or business apprentice who is or was a resident of one of the Contracting States immediately before visiting the other Contracting State and who is present in that other State solely for the purpose of his education or training, shall be exempt from tax in that other State on:
+
+(a) payments made to him by persons residing outside that other State for the purposes of his maintenance, education or training; and
+
+(b) remuneration from employment in that other State, in an amount not exceeding US $2000 or its equivalent in respective currencies during any fiscal year, as the case may be, provided that such employment is directly related to his studies or is undertaken for the purpose of his maintenance.
+
+2. The benefits of this Article shall extend only for such period of time as may be reasonable or customarily required to complete the education or training undertaken, but in no event shall any individual have the benefits of this Article for more than five consecutive years from the date of his first arrival in that other Contracting State.
+29
+
+ARTICLE 22
+
+Payments received by Professors, Teachers and
+
+Research Scholars
+
+1. A professor or teacher who who is or was a resident of one of the Contracting
+
+States immediately before visiting the other Contracting State for the purpose of teaching
+
+or engaging in research, or both, at a university, college, school or other approved
+
+institution in that other Contracting State shall be exempt from tax in that other State on
+
+any remuneration for such teaching or research for a period not exceeding two years from
+
+the date of his arrival in that other State.
+
+2. This Article shall not apply to income from research if such research is
+
+undertaken primarily for the private benefit of a specific person or persons.
+
+3. For the purposes of paragraph 1, "approved institution" means an institution
+
+which has been approved in this regard by the competent authority of the concerned
+
+Contracting State.
+30
+
+ARTICLE 23
+
+Other Income
+
+1. Subject to the provisions of paragraph 2, items of income of a resident of a Contracting State, wherever arising, which are not expressly dealt with in the foregoing Articles of this Agreement, shall be taxable only in that Contracting State.
+
+2. The provisions of paragraph 1 shall not apply to the income, other than income from immovable property as defined in paragraph 2 of Article 6, if the recipient of such income, being a resident of a Contracting State, carries on business in the other Contracting State through a permanent establishment situated therein, or performs in that other State independent personal services from a fixed base situated therein, and the right or property in respect of which the income is paid is effectively connected with such permanent establishment or fixed base. In such case, the provisions of Article 7 or Article 15, as the case may be, shall apply.
+
+3. Notwithstanding the provisions of paragraphs 1 and 2, items of income of a resident of a Contracting State not dealt with in the foregoing Articles of this Agreement and arising in other Contracting State may also be taxed in that other State.
+31
+
+ARTICLE 24
+
+Avoidance of Double Taxation
+
+1. The laws in force in either of the Contracting States will continue to govern the taxation of income in the respective Contracting States except where provisions to the contrary are made in this Agreement.
+
+2. Where a resident of a Contracting State derives income which, in accordance with the provisions of this Agreement, may be taxed in the other Contracting State, the first-mentioned Contracting State shall allow as a deduction from the tax on the income of that resident an amount equal to the income tax paid in the other Contracting State whether directly or by deduction. Such deduction shall not, however, exceed that part of the income tax (as computed before the deduction is given) in the first-mentioned Contracting State which is attributable to the income which may be taxed in the other Contracting State.
+
+3. The tax paid in the other Contracting State mentioned in paragraph 2 of this Article shall be deemed to include the tax which would have been payable but for the tax incentives granted under the laws of that Contracting State and which are designed to promote economic development.
+32
+
+ARTICLE 25
+
+Non-discrimination
+
+1. Nationals of a Contracting State shall not be subjected in the other Contracting State to any taxation or any requirement connected therewith which is other or more burdensome than the taxation and connected requirements to which nationals of that other State in the same circumstances are or may be subjected.
+
+2. The taxation on a permanent establishment which an enterprise of a Contracting State has in the other Contracting State shall not be less favorably levied in that other State than the taxation levied on enterprises of that other State carrying on the same activities in the same circumstances. This provision shall not be construed as preventing a Contracting State from charging the profits of a permanent establishment which an enterprise of the other Contracting State has in a permanent establishment rate higher than that imposed on the profits of a similar enterprise of the first-mentioned Contracting State, nor as being in conflict with the provisions of paragraph 3 of Article 7 of this Agreement.
+
+3. Nothing contained in this Article shall be construed as obliging a Contracting State to grant to persons not resident in that State any personal allowances, reliefs, reductions and deductions for taxation purposes which are by law available only to persons who are so resident.
+
+4. Enterprises of a Contracting State, the capital of which is wholly or partly owned or controlled, directly or indirectly by one or more residents of the other Contracting State, shall not be subjected in the first-mentioned Contracting State to any taxation or any requirement connected therewith which is other or more burdensome than the taxation and connected requirements to which other similar enterprises of that first-mentioned State are or may be subjected in the same circumstances.
+
+5. The provisions of paragraphs 2 and 4 of this Article shall not apply to the Vietnamese profit remittance tax, which in any case shall not exceed 10 per cent of the gross amount of profits remitted, and the Vietnamese taxation in respect of agricultural production activities.
+
+6. In this Article, the term "taxation" means taxes which are the subject of this Agreement.
+33
+
+ARTICLE 26
+
+Mutual Agreement Procedure
+
+1. Where a resident of a Contracting State considers that the actions of one or both of the Contracting States result or will result for him in taxation not in accordance with this Agreement, he may, notwithstanding the remedies provided by the national laws of those States, present his case to the competent authority of the Contracting State of which he is a resident. This case must be presented within three years of the date of receipt of notice of the action which gives rise to taxation not in accordance with the Agreement.
+
+2. The competent authority shall endeavour, if the objection appears to it to be justified and if it is not itself able to arrive at a satisfactory solution, to resolve the case by mutual agreement with the competent authority of the other Contracting State, with a view to the avoidance of taxation not in accordance with the Agreement. Any agreement reached shall be implemented notwithstanding any time limits in the national laws of the Contracting States.
+
+3. The competent authorities of the Contracting States shall endeavour to resolve by mutual agreement any difficulties or doubts arising as to the interpretation or application of the Agreement. They may also consult together for the elimination of double taxation in cases not provided for in the Agreement.
+
+4. The competent authorities of the Contracting States may communicate with each other directly for the purpose of reaching an agreement in the sense of the preceding paragraphs. When it seems advisable in order to reach agreement to have an oral exchange of opinions, such exchange may take place through a Commission consisting of representative of the competent authorities of the Contracting State.
+34
+
+ARTICLE 27
+
+Exchange of Information
+
+1. The competent authorities of the Contracting States shall exchange such information (including documents) as is necessary for carrying out the provisions of the Agreement or of the domestic laws of the Contracting States concerning taxes covered by the Agreement, in so far as the taxation thereunder is not contrary to the Agreement, in particular for the prevention of fraud or evasion of such taxes. Any information received by a Contracting State shall be treated as secret in the same manner as information obtained under the domestic laws of the State. However, if the information is originally regarded as secret in the transmitting State, it shall be disclosed only to persons or authorities (including courts and administrative bodies) involved in the assessment or collection of, the enforcement or prosecution in respect of, or the determination of appeals in relation to, the taxes which are the subject of the Agreement. Such persons or authorities shall use the information only for such purposes but may disclose the information in public court proceedings or in judicial decisions. The competent authorities shall, through consultation, develop appropriate conditions, methods and techniques concerning the matters in respect of which such exchange of information shall be made, including, where appropriate, exchange of information regarding tax avoidance.
+
+2. The exchange of information or documents shall be either on a routine basis or on request with reference to particular cases or both. The competent authorities of the Contracting States shall agree from time to time on the list of the information or documents which shall be furnished on a routine basis.
+
+3. In no case shall the provisions of paragraph 1 be construed so as to impose on a Contracting State the obligation:
+
+(a) to carry out administrative measures at variance with the laws or administrative practice of that or of the other Contracting State;
+
+(b) to supply information or documents which are not obtainable under the laws or in the normal course of the administration of that or of the other Contracting State;
+
+(c) to supply information or documents which would disclose any trade, business, industrial, commercial or professional secret or trade process or information the disclosure of which would be contrary to public policy.
+35
+
+ARTICLE 28
+
+Diplomatic Agents and Consular Officers
+
+Nothing in this Agreement shall affect the fiscal privileges of diplomatic or
+consular officers under the general rules of international law or under the provisions of
+special agreements.
+36
+
+ARTICLE 29
+
+Entry into Force
+
+Each of the Contracting States shall notify to the other the completion of the procedures required by its law for the bringing into force of this Agreement. This Agreement shall enter into force on the date of the latter of these notifications and shall thereupon have effect:
+
+(a) in Vietnam:
+
+(i) in respect of taxes withheld at source, in relation to taxable amount paid on or after 1 January following the calendar year in which the Agreement enters into force;
+
+(ii) in respect of other Vietnamese taxes, in relation to income, profits or gains arising in the calendar year following the calendar year in which the Agreement enters into force, and in subsequent calendar years;
+
+(b) in India, in respect of income arising in any previous year beginning on or after the first day of April next following the calendar year in which the latter of the notifications is given.
+37
+
+ARTICLE 30
+
+Termination
+
+This Agreement shall remain in force indefinitely but either of the Contracting
+States may, on or before the thirtieth day of June in any calendar year beginning after the
+expiration of a period of five years from the date of its entry into force, give the other
+Contracting State through diplomatic channels, written notice of termination and, in such
+event, this Agreement shall cease to have effect:
+
+(a) in Vietnam:
+
+(i) in respect of taxes withheld at source, in relation to taxable amount paid on
+or after 1 January following the calendar year in which the notice of
+termination is given;
+
+(ii) in respect of other Vietnamese taxes, in relation to income, profits or gains
+arising in the calendar year following the calendar year in which the notice
+of termination is given, and in subsequent calendar years;
+
+(b) in India, in respect of income arising in any previous year beginning on or after the
+first day of April next following the calendar year in which the notice is given.
+38
+
+IN WITNESS WHEREOF the undersigned, being duly authorized thereto by
+their respective Governments, have signed the present Agreement.
+
+DONE in duplicate at Hanoi this 7th day of September one thousand nine hundred
+and ninety four in Vietnamese, Hindi and English languages. In case of divergence of
+interpretation, the English text shall prevail.
+
+FOR THE GOVERNMENT OF
+THE SOCIALIST REPUBLIC OF
+VIETNAM
+
+FOR THE GOVERNMENT OF
+THE REPUBLIC OF
+INDIA
+
+H.E. Mr. Ho Te
+MINISTER OF FINANCE
+
+H.E. Mr. Bhuvnesh Chaturvedi
+MINISTER OF STATE
+PRIME MINISTER'S OFFICE
+BỘ NGOẠI GIAO
+Số: 24/LPQT
+SAO Y BẢN CHÍNH
+(Để thực hiện)
+Hà Nội, ngày 12 tháng 04 năm 2000
+TL. BỘ TRƯỞNG BỘ NGOẠI GIAO
+KT. Vụ trưởng Vụ Luật pháp và Điều ước quốc tế
+Phó Vụ trưởng
+Nguyễn Duy Chiến
+Nơi nhận :
+- Văn phòng Chính phủ (để báo cáo),
+- Bộ Kế hoạch và Đầu tư,
+- Bộ Tài chính,
+- Bộ Thương mại,
+- Bộ Tư pháp,
+- Ngân hàng Nhà nước Việt Nam,
+- Tổng cục Hải quan,
+- Đại sứ quán Việt Nam tại Ấn Độ,
+- Vụ Châu Á II,
+- Vụ LPQT,
+- Lưu trữ.
+Hiệp định giữa nước Cộng hoà Xã hội chủ nghĩa Việt nam và nước Cộng
+hoà Ấn Độ về tránh đánh thuế hai lần và ngăn ngừa việc trốn liệu thuế đối
+với thuế đánh vào thu nhập đã có hiệu lực.
+11
+1973
+1973
+1973
