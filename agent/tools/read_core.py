@@ -15,6 +15,8 @@ HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 import access  # noqa: E402
+sys.path.append(str(PROJECT / "database" / "tools"))
+import dbsource  # noqa: E402  the library read from the folder or, with tax_db=supabase, from the remote
 import textutil as T  # noqa: E402
 
 csv.field_size_limit(2 ** 31 - 1)
@@ -137,7 +139,8 @@ class Reader:
     def lib(self):
         """The small library tables (documents, parameters, decisions, treaties, jurisdictions, blocked, superseded)."""
         if self._lib is None:
-            L = {n: read_csv(self.db / ("%s.csv" % n)) for n in ("doc", "param", "decision", "treaty", "jurisdiction", "blocked", "superseded")}
+            table = dbsource.remote().rows if dbsource.online(self.db) else (lambda n: read_csv(self.db / ("%s.csv" % n)))
+            L = {n: table(n) for n in ("doc", "param", "decision", "treaty", "jurisdiction", "blocked", "superseded")}
             L["docs"] = {d["id"]: d for d in L["doc"]}
             L["params"] = {p["param_id"]: p for p in L["param"]}
             self._lib = L

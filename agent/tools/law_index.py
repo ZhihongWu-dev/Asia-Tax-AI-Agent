@@ -3,7 +3,8 @@
 
   python agent/tools/law_index.py [--dense] [--force]
 
-Reads database/ (doc.csv, clause.csv, param.csv, decision.csv) and rule/rule.csv; writes database/index/law.sqlite:
+Reads database/ (doc.csv, clause.csv, param.csv, decision.csv; the remote's tables with tax_db=supabase, dbsource.py) and
+rule/rule.csv; writes database/index/law.sqlite (an index made from the library, kept on this machine):
 retrieval units with their verbatim spans and a matching-only header (act title, article label), an FTS5 index over
 CJK/Thai bigrams and words, clause metadata (jurisdiction, language, validity of the document), and explicit edges only:
 contains (article -> its paragraphs), same_provision (the same fragment of one work in two documents, e.g. a treaty and its
@@ -26,6 +27,8 @@ DB = PROJECT / "database"
 OUT = DB / "index"
 sys.path.insert(0, str(HERE))
 from textutil import cn2int, fts_tokens, split_units  # noqa: E402
+sys.path.append(str(DB / "tools"))
+import dbsource  # noqa: E402
 
 csv.field_size_limit(2 ** 31 - 1)
 INDEX_VERSION = "3"
@@ -55,6 +58,8 @@ EN_ART = re.compile(r"\bparagraph\s(?P<para>\d+)\sof\sArticle\s(?P<art>\d+[A-Z]?
 
 
 def read_csv(name, root=DB):
+    if root == DB and dbsource.online(DB):
+        return dbsource.remote().clauses() if name == "clause.csv" else dbsource.remote().rows(name[:-4])
     with (root / name).open(encoding="utf-8-sig", newline="") as f:
         return list(csv.DictReader(f))
 
@@ -181,7 +186,11 @@ class Resolver:
 
 def fingerprint():
     h = hashlib.sha256(INDEX_VERSION.encode())
-    for p in [DB / n for n in ("doc.csv", "clause.csv", "param.csv", "decision.csv")] + [PROJECT / "rule" / "rule.csv"]:
+    names = ("doc.csv", "clause.csv", "param.csv", "decision.csv")
+    if dbsource.online(DB):                        # the remote's own hashes: the clause texts are not downloaded for this
+        h.update("".join(dbsource.remote().digest(n[:-4]) for n in names).encode())
+        names = ()
+    for p in [DB / n for n in names] + [PROJECT / "rule" / "rule.csv"]:
         h.update(hashlib.sha256(p.read_bytes()).digest() if p.exists() else b"-")
     return h.hexdigest()[:16]
 

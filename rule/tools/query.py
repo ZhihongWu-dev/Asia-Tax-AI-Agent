@@ -57,7 +57,9 @@ class Query:
                      "decisions": len(read_csv(self.root / "decision.csv")), "tests": len(read_csv(self.root / "rule_test.csv")),
                      "rule_csv_sha256": sha(self.root / "rule.csv")},
             "database": {"jurisdictions": len(self.lib.juris), "docs": len(self.lib.docs), "params": len(self.lib.params),
-                         "param_csv_sha256": sha(self.db / "param.csv"), "doc_csv_sha256": sha(self.db / "doc.csv")},
+                         **({"param_csv_sha256": self.lib.remote.digest("param"), "doc_csv_sha256": self.lib.remote.digest("doc"),
+                             **self.lib.remote.version()} if self.lib.remote else
+                            {"param_csv_sha256": sha(self.db / "param.csv"), "doc_csv_sha256": sha(self.db / "doc.csv")})},
             "generated_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         }
 

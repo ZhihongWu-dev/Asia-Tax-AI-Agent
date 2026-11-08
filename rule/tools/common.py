@@ -1,14 +1,18 @@
 """Shared pieces of the rule-layer tools (rule/规则层规范（最小集）.md): table layouts, the vocabulary of effects,
 csv access, the condition parser and the loader of the library tables that the rule layer reads.
 
-Python 3.11, standard library only. Imported by build.py and eval.py; not run directly.
+Python 3.11, standard library only (psycopg and requests when the library is read from the remote, tax_db=supabase).
+Imported by build.py and eval.py; not run directly.
 """
 import csv
 import re
+import sys
 from pathlib import Path
 
 csv.field_size_limit(10 ** 9)
 ENC = "utf-8-sig"
+sys.path.append(str(Path(__file__).resolve().parents[2] / "database" / "tools"))
+import dbsource  # noqa: E402  the library read from the folder or, with tax_db=supabase, from the remote
 
 # ---------------------------------------------------------------- tables (spec §2): authored columns only
 TABLES = {
@@ -328,27 +332,33 @@ class Library:
 
     def __init__(self, db, with_clauses=False):
         self.db = Path(db)
-        self.juris = read_csv(self.db / "jurisdiction.csv")
+        self.remote = dbsource.remote() if dbsource.online(db) else None
+        table = self.remote.rows if self.remote else (lambda name: read_csv(self.db / (name + ".csv")))
+        self.juris = table("jurisdiction")
         self.codes = {j["code"] for j in self.juris}
-        self.docs = {r["id"]: r for r in read_csv(self.db / "doc.csv")}
-        self.params = {r["param_id"]: r for r in read_csv(self.db / "param.csv")}
+        self.docs = {r["id"]: r for r in table("doc")}
+        self.params = {r["param_id"]: r for r in table("param")}
         self.treaties = {}
-        for r in read_csv(self.db / "treaty.csv"):
+        for r in table("treaty"):
             a, _, b = r["pair"].partition("-")
             self.treaties[frozenset((a, b))] = r
-        self.absences = read_csv(self.db / "decision.csv")
+        self.absences = table("decision")
         self.clause_text = {}
         self._con = None
         if with_clauses:
-            self.clause_text = {c["cite_id"]: c["text"] for c in read_csv(self.db / "clause.csv")}
+            rows = self.remote.clauses() if self.remote else read_csv(self.db / "clause.csv")
+            self.clause_text = {c["cite_id"]: c["text"] for c in rows}
 
     def clause(self, cite_id):
         """Text of one clause, or None. Uses database.sqlite when it exists (built by database/tools/build.py),
-        otherwise the clause.csv loaded with with_clauses=True."""
+        otherwise the clause.csv loaded with with_clauses=True; read from the remote when tax_db=supabase."""
         if cite_id in self.clause_text:
             return self.clause_text[cite_id]
         if self.clause_text:
             return None
+        if self.remote:
+            c = self.remote.clause(cite_id)
+            return c["text"] if c else None
         if self._con is None:
             import sqlite3
             path = self.db / "database.sqlite"
@@ -360,6 +370,9 @@ class Library:
         return row[0] if row else None
 
     def clause_label(self, cite_id):
+        if self.remote:
+            c = self.remote.clause(cite_id)
+            return c["label"] if c else ""
         if self._con is not None:
             row = self._con.execute("SELECT label FROM clause WHERE cite_id = ?", (cite_id,)).fetchone()
             return row[0] if row else ""

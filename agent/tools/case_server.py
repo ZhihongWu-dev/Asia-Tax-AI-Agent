@@ -1219,6 +1219,7 @@ class Case:
             sys.path.insert(0, str(PROJECT / "database" / "tools"))
             import mcp_server as dbm  # noqa: E402
             self._db = dbm.Library(PROJECT / "database")
+        self._db.ready.wait()                                            # the clause texts (read in the background from the remote)
         return self._db
 
     def part_check(self, cd, case_id, run_id, part, which="polished"):

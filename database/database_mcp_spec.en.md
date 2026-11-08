@@ -54,6 +54,7 @@ No write tools, no distinction of identity, one process shared by the three agen
 ```
 
 - At startup the eight tables are read into memory; restart the service after the library is rebuilt. No incremental updates, no processing beyond indexing.
+- With `tax_db=supabase` it reads the remote directly (database spec §4.5, `dbsource.py`): the small tables at start-up, the clause table in the background (some 20 s), and find, clause and doc answer once it is read; blocked is empty, and the STATUS summary of `version` comes from the meta table and the remote's row counts; restart the service after the remote is uploaded again.
 
 **Build record (2026-11-01)**: `database/tools/mcp_server.py` and `test_mcp_server.py` are built, 18 checks pass (the chained param_history item is skipped because the library has no superseded parameter yet). stdio handshake, tools/list and tools/call tested and passed.
 

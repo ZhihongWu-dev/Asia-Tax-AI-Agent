@@ -123,7 +123,10 @@ class State:
             return err("not_found", "no input file %s" % rel, input=rel)
         raw = p.read_bytes()
         # the run id names the input and the code that computes it: the optimizer, the rules and the parameters
-        code = b"".join(q.read_bytes() for q in (Path(op.__file__), Path(self.rule) / "rule.csv", Path(self.db) / "param.csv") if q.exists())
+        code = b"".join(q.read_bytes() for q in (Path(op.__file__), Path(self.rule) / "rule.csv", Path(self.db) / "param.csv")
+                        if q.exists() and not (q.name == "param.csv" and fxmod.dbsource.online(self.db)))
+        if fxmod.dbsource.online(self.db):
+            code += fxmod.dbsource.remote().digest("param").encode()
         run_id = "%s-%s" % (datetime.now(timezone.utc).strftime("%Y%m%d"), hashlib.sha256(raw + code).hexdigest()[:8])
         out = self.products_root / case_id / "intake" / "products" / run_id
         if out.exists():

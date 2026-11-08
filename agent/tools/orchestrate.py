@@ -874,6 +874,13 @@ def take_lock(case_id):
     return path
 
 
+def library_stamp():
+    """Which library the run reads: "folder", or the upload time of the remote (tax_db=supabase), read afresh."""
+    if not read_core.dbsource.online(PROJECT / "database"):
+        return "folder"
+    return read_core.dbsource.Remote().meta().get("uploaded_at", "")
+
+
 def run_case(case_id):
     if not (CASES / case_id / "rounds.json").exists():
         return {"case_id": case_id, "status": None, "stop": "agent_failed", "detail": "no such case", "run_id": None, "nodes": []}
@@ -882,13 +889,20 @@ def run_case(case_id):
         return {"case_id": case_id, "status": info(case_id).get("status"), "stop": "busy", "detail": "another run holds this case",
                 "run_id": info(case_id).get("run_id"), "nodes": []}
     try:
+        library = library_stamp()
         end = build_graph().invoke({"case_id": case_id, "counts": {}, "nodes": []}, {"recursion_limit": RECURSION_LIMIT})
     finally:
         lock.unlink(missing_ok=True)
     cur = info(case_id)
     result = {"case_id": case_id, "status": cur.get("status"), "stop": end.get("stop"), "detail": end.get("detail", ""),
               "run_id": cur.get("run_id"), "nodes": end.get("nodes", [])}
-    log_row(case_id, event="stop", stop=result["stop"], detail=result["detail"], status=result["status"], nodes=result["nodes"])
+    try:
+        after = library_stamp()
+    except RuntimeError as e:
+        after = str(e)
+    if after != library:                             # the servers of one run may have read two uploads
+        result["detail"] = (result["detail"] + "; " if result["detail"] else "") +             "the remote library changed during the run (uploaded %s, then %s): run again for one library" % (library, after)
+    log_row(case_id, event="stop", stop=result["stop"], detail=result["detail"], status=result["status"], nodes=result["nodes"], library=library)
     return result
 
 

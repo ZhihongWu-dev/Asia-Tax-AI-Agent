@@ -4,7 +4,8 @@
   python database/tools/mcp_server.py --root database
 
 Reads doc, clause, param, treaty, jurisdiction, superseded, decision and blocked plus STATUS.md once at start-up; restart
-after a rebuild. Every answer carries `version`; errors come back as {"error": kind, "detail": text}. Nothing is written.
+after a rebuild. With tax_db=supabase (dbsource.py) it reads the shared remote instead: the small tables at start-up, the
+clause texts in the background (find, clause and doc wait for them); blocked is empty and the status comes from meta. Every answer carries `version`; errors come back as {"error": kind, "detail": text}. Nothing is written.
 Python 3.11; depends on the `mcp` package (2.x: mcp.server.mcpserver.MCPServer) and the standard library.
 """
 import argparse
@@ -13,11 +14,13 @@ import json
 import hashlib
 import re
 import sys
+import threading
 from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from find import search, sentence, squash  # noqa: E402
+import dbsource  # noqa: E402
 
 csv.field_size_limit(10 ** 9)
 ENC = "utf-8-sig"
@@ -44,30 +47,46 @@ def err(kind, detail, **extra):
 class Library:
     def __init__(self, root):
         self.root = Path(root)
-        self.docs = {r["id"]: r for r in read_csv(self.root / "doc.csv")}
-        self.clauses = read_csv(self.root / "clause.csv")
+        self.remote = dbsource.remote() if dbsource.online(root) else None
+        table = self.remote.rows if self.remote else (lambda name: read_csv(self.root / (name + ".csv")))
+        self.docs = {r["id"]: r for r in table("doc")}
         self.bodies = {}
+        self.params = {r["param_id"]: r for r in table("param")}
+        self.treaties = table("treaty")
+        self.juris = table("jurisdiction")
+        self.superseded = table("superseded")
+        self.decisions = table("decision")
+        self.blocked = table("blocked")
+        self.status = self.remote.status() if self.remote else self._status()
+        if self.remote:
+            digest = {"doc_csv_sha256": self.remote.digest("doc"), "param_csv_sha256": self.remote.digest("param"),
+                      "clause_csv_sha256": self.remote.digest("clause"), **self.remote.version()}
+            n_clauses = self.remote.count("clause")
+        else:
+            digest = {"doc_csv_sha256": sha16(self.root / "doc.csv"), "param_csv_sha256": sha16(self.root / "param.csv"),
+                      "clause_csv_sha256": sha16(self.root / "clause.csv")}
+        self.ready = threading.Event()
+        if self.remote:                                        # about 20 s: the server answers meanwhile
+            threading.Thread(target=self._load_clauses, daemon=True).start()
+        else:
+            self._load_clauses()
+            n_clauses = len(self.clauses)
+        self.version = {
+            "database": {
+                "docs": len(self.docs), "clauses": n_clauses, "params": len(self.params),
+                "treaty_rows": len(self.treaties), "absence_records": sum(1 for d in self.decisions if ".absent." in d["id"]),
+                **digest, "status_written": self.status.get("written", ""),
+            },
+            "server": SERVER_VERSION,
+        }
+
+    def _load_clauses(self):
+        self.clauses = self.remote.clauses() if self.remote else read_csv(self.root / "clause.csv")
         self.by_cite = {c["cite_id"]: c for c in self.clauses}
         self.order = {}                                        # doc_id -> [cite_id ...] in file order
         for c in self.clauses:
             self.order.setdefault(c["doc_id"], []).append(c["cite_id"])
-        self.params = {r["param_id"]: r for r in read_csv(self.root / "param.csv")}
-        self.treaties = read_csv(self.root / "treaty.csv")
-        self.juris = read_csv(self.root / "jurisdiction.csv")
-        self.superseded = read_csv(self.root / "superseded.csv")
-        self.decisions = read_csv(self.root / "decision.csv")
-        self.blocked = read_csv(self.root / "blocked.csv")
-        self.status = self._status()
-        self.version = {
-            "database": {
-                "docs": len(self.docs), "clauses": len(self.clauses), "params": len(self.params),
-                "treaty_rows": len(self.treaties), "absence_records": sum(1 for d in self.decisions if ".absent." in d["id"]),
-                "doc_csv_sha256": sha16(self.root / "doc.csv"), "param_csv_sha256": sha16(self.root / "param.csv"),
-                "clause_csv_sha256": sha16(self.root / "clause.csv"),
-                "status_written": self.status.get("written", ""),
-            },
-            "server": SERVER_VERSION,
-        }
+        self.ready.set()
 
     def _status(self):
         p = self.root / "STATUS.md"
@@ -90,6 +109,7 @@ class Library:
         words = [w for w in (words or []) if w and w.strip()]
         if not words:
             return err("invalid", "give one or more words")
+        self.ready.wait()
         scope = [c for c in self.clauses if (not doc or c["doc_id"] == doc) and (not jur or self.docs.get(c["doc_id"], {}).get("jur") == jur)]
         hits, relaxed = search(scope, words, self.body)
         self.log_find(words, jur, doc, len(hits), relaxed)
@@ -112,6 +132,7 @@ class Library:
                 f.write(json.dumps(row, ensure_ascii=False) + "\n")
 
     def clause(self, cite_id, offset=0, max_chars=0):
+        self.ready.wait()
         c = self.by_cite.get(cite_id)
         if c is None:
             return err("not_found", "no clause %s" % cite_id, cite_id=cite_id)
@@ -131,6 +152,7 @@ class Library:
         d = self.docs.get(doc_id)
         if d is None:
             return err("not_found", "no document %s" % doc_id, doc_id=doc_id)
+        self.ready.wait()
         out = dict(d)
         out["clauses"] = len(self.order.get(doc_id, []))
         return self.stamp(out)

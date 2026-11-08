@@ -52,6 +52,7 @@ Agent 发现库里缺的或过时的法规不经这里，走案卷服务的 `to_
 ```
 
 - 启动时把八张表读进内存；库重建后重启服务。不做增量、不做索引以外的加工。
+- 设 `tax_db=supabase` 时直接读远端（数据库规范第 4.5 节，`dbsource.py`）：小表在启动时读，clause 表在后台读（约 20 秒），find、clause、doc 等它读完再答；blocked 为空，`version` 的 STATUS 摘要由 meta 表和远端行数给出；远端重新上传后重启服务。
 
 **构建记录（2026-11-01）**：`database/tools/mcp_server.py` 与 `test_mcp_server.py` 已建，18 项检查通过（param_history 的链式一项因库里尚无 superseded 参数而跳过）。stdio 握手、tools/list、tools/call 实测通过。
 

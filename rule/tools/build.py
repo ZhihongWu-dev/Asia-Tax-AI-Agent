@@ -25,6 +25,7 @@ from common import (AUTHORITATIVE_DOC_TYPES, DATE, EFFECTS, GENERATED, SCHEDULE_
                     VAR_KINDS, VAR_TYPES, WILDCARDS, CondError, leaves, listed_prefixes, param_type,
                     parse_condition, parse_effect, parse_slot_key, read_csv, read_header, split_list, write_csv)
 import eval as ev  # noqa: E402
+import dbsource  # noqa: E402  (database/tools, put on the path by common)
 
 ROOT = Path(__file__).resolve().parents[1]
 DB = ROOT.parent / "database"
@@ -428,7 +429,7 @@ def main():
     args = ap.parse_args()
     root = Path(args.root).resolve() if args.root else ROOT
     db = Path(args.db).resolve() if args.db else DB
-    if not (db / "clause.csv").exists():
+    if not dbsource.online(db) and not (db / "clause.csv").exists():
         print("! %s has no clause.csv: run database/tools/build.py first" % db)
         return 1
     init_csvs(root)

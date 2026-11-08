@@ -88,7 +88,7 @@ class State:
         # MCP runs each tool call in a worker thread; Library's lazy sqlite connection is thread-bound, so open it here
         # for every thread (read-only use) before the first call.
         sqlite_path = self.db / "database.sqlite"
-        if sqlite_path.exists():
+        if sqlite_path.exists() and not self.q.lib.remote:
             import sqlite3
             for lib in {id(self.q.lib): self.q.lib, id(self.tracer.lib): self.tracer.lib}.values():
                 lib._con = sqlite3.connect(str(sqlite_path), check_same_thread=False)

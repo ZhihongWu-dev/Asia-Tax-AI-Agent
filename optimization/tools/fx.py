@@ -41,6 +41,8 @@ if __name__ == "__main__":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.append(str(ROOT / "database" / "tools"))
+import dbsource  # noqa: E402  the library read from the folder or, with tax_db=supabase, from the remote
 TIMEOUT = 30
 UA = {"User-Agent": "Mozilla/5.0 tax-graph-fx/1.1"}
 OPEN_ER = "https://open.er-api.com/v6/latest/%s"
@@ -63,12 +65,18 @@ def get_json(url, data=None, headers=None):
     return json.loads(http(url, data, headers).decode("utf-8"))
 
 
-def library_currencies(db=ROOT / "database"):
-    path = db / "jurisdiction.csv"
+def library_rows(db, name):
+    if dbsource.online(db):
+        return dbsource.remote().rows(name)
+    path = Path(db) / (name + ".csv")
     if not path.exists():
         return []
     with path.open(encoding="utf-8-sig", newline="") as f:
-        return sorted({r["currency"] for r in csv.DictReader(f) if r.get("currency")})
+        return list(csv.DictReader(f))
+
+
+def library_currencies(db=ROOT / "database"):
+    return sorted({r["currency"] for r in library_rows(db, "jurisdiction") if r.get("currency")})
 
 
 def env_value(name, env=ROOT / ".env"):
@@ -86,10 +94,9 @@ def fx_rule(jur, role, subject, db=ROOT / "database"):
     """Parameters <jur>.<slot>.fx_rate_* of the slot that fits the role, with their citations."""
     slot = "outbound_wht" if role == "outbound" else "inbound"
     out = []
-    with (db / "param.csv").open(encoding="utf-8-sig", newline="") as f:
-        for p in csv.DictReader(f):
-            if p["scope"] == jur and p["slot"] == slot and p["name"].startswith("fx_rate_") and p["subject"] in (subject, "all"):
-                out.append({k: p[k] for k in ("param_id", "subject", "value", "cite_id", "quote", "note")})
+    for p in library_rows(db, "param"):
+        if p["scope"] == jur and p["slot"] == slot and p["name"].startswith("fx_rate_") and p["subject"] in (subject, "all"):
+            out.append({k: p[k] for k in ("param_id", "subject", "value", "cite_id", "quote", "note")})
     return out
 
 

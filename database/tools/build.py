@@ -42,7 +42,7 @@ ROOT = Path(__file__).resolve().parents[1]          # database/; --root points e
 ENC = "utf-8-sig"
 SOFFICE = r"C:\Program Files\LibreOffice\program\soffice.exe"
 
-SPEC_VERSION = "2026-11-07"          # the last entry of the change record at the head of 数据库规范.md; upload.py writes it to meta
+SPEC_VERSION = "2026-11-08"          # the last entry of the change record at the head of 数据库规范.md; upload.py writes it to meta
 
 # ---------------------------------------------------------------- tables (数据库规范.md §3)
 TABLES = {                                           # name -> columns; the order is the csv and sqlite column order
