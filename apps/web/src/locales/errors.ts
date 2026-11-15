@@ -6,6 +6,7 @@ export const errors: Record<string, [string, string]> = {
   "error:revision_conflict": ["案件已在别处更新，已载入最新版本。请重新核对后操作。","The case changed elsewhere. The latest version is loaded; review it before proceeding."],
   "error:case_limit": ["此案件已达到容量限制，请新建对话。","This case reached its capacity limit. Start a new chat."],
   "error:case_not_found": ["未找到当前案件，请刷新页面。","Case not found. Reload the page."],
+  "error:document_not_found": ["这份文件已不在案卷里，页面已刷新。","This document is no longer in the case. The page has been refreshed."],
   "error:run_active": ["系统正在处理此案件，完成后再发送。","The system is working on this case. Send your message when it finishes."],
   "error:rate_limited": ["模型额度已用尽，请稍后重试。","The model usage limit was reached. Please retry later."],
   "error:agent_failed": ["这一轮未能完成，请重试。","This turn did not complete. Please retry."],

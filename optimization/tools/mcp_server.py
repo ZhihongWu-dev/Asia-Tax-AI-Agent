@@ -75,6 +75,23 @@ class State:
                 rel = str(hits[0].relative_to(self.products_root)).replace("\\", "/")
         return rel
 
+    def input_path(self, rel, case_id=""):
+        """An input file written from the cases folder (<case>/intake/facts.json), from the project root (cases/<case>/...),
+        as an absolute path inside the cases folder, or, with the case named, from the case folder (intake/facts.json)."""
+        rel = str(rel or "").strip()
+        if rel and Path(rel).is_absolute():
+            try:
+                rel = str(Path(rel).resolve().relative_to(self.products_root))
+            except ValueError:
+                return None
+        rel = rel.replace("\\", "/").strip("/")
+        head = self.products_root.name + "/"
+        if rel.startswith(head):
+            rel = rel[len(head):]
+        if case_id and rel.split("/", 1)[0] != case_id and not (self.products_root / rel).exists():
+            rel = "%s/%s" % (case_id, rel)
+        return self.inside(rel)
+
     def products_dir(self, rel):
         rel = self.normalise(rel)
         p = self.inside(rel)
@@ -98,11 +115,11 @@ class State:
 
     # ------------------------------------------------------------ run / validate / evaluate / diff
     def validate_input(self, rel):
-        p = self.inside(rel)
+        p = self.input_path(rel)
         if p is None:
             return err("forbidden", "input path must be relative to the products root and stay inside it", input=rel)
         if not p.exists():
-            return err("not_found", "no input file %s" % rel, input=rel)
+            return err("not_found", "no input file %s; the path is relative to the cases folder: <case_id>/intake/facts.json" % rel, input=rel)
         try:
             inp = op.jload(p)
             o = self.optimizer(inp)
@@ -116,11 +133,11 @@ class State:
     def run(self, case_id, rel):
         if not case_id or "/" in case_id or "\\" in case_id or case_id.startswith("."):
             return err("invalid", "case_id must be a plain directory name", case_id=case_id)
-        p = self.inside(rel)
+        p = self.input_path(rel, case_id)
         if p is None:
             return err("forbidden", "input path must be relative to the products root and stay inside it", input=rel)
         if not p.exists():
-            return err("not_found", "no input file %s" % rel, input=rel)
+            return err("not_found", "no input file %s; the path is relative to the cases folder: <case_id>/intake/facts.json" % rel, input=rel)
         raw = p.read_bytes()
         # the run id names the input and the code that computes it: the optimizer, the rules and the parameters
         code = b"".join(q.read_bytes() for q in (Path(op.__file__), Path(self.rule) / "rule.csv", Path(self.db) / "param.csv")

@@ -53,6 +53,12 @@ MURC_TODAY = "https://www.murc-kawasesouba.jp/fx/index.php"
 BOT_API = "https://apigw1.bot.or.th/bot/public/Stat-ExchangeRate/v2/DAILY_AVG_EXG_RATE/?start_period=%s&end_period=%s&currency=%s"
 JUR_CCY = {"cn": "CNY", "hk": "HKD", "sg": "SGD", "jp": "JPY", "th": "THB", "id": "IDR", "vn": "VND", "my": "MYR",
            "ae": "AED", "kr": "KRW", "in": "INR"}
+ALIAS = {"RMB": "CNY"}     # the name a client writes -> the ISO 4217 code the sources and database/jurisdiction.csv use
+
+
+def iso(code):
+    code = (code or "").strip().upper()
+    return ALIAS.get(code, code)
 
 
 def http(url, data=None, headers=None):
@@ -216,6 +222,7 @@ def market(base, symbols, d):
 
 # ---------------------------------------------------------------- assembly
 def fetch(base, symbols, d=None, jur=None, role="outbound", subject="company"):
+    base, symbols = iso(base), [iso(s) for s in symbols]
     out = {"base": base, "date": d.isoformat() if d else "latest", "jur": jur or "", "role": role if jur else "",
            "retrieved_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "rule": [], "rates": {}, "sources": [], "missing": []}
     want = [s for s in symbols if s != base]

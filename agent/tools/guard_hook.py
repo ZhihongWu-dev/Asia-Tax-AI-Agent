@@ -4,8 +4,8 @@
 Only acts when the hook input carries agent_type front / analysis / polish / review (i.e. the call happens inside one of
 the four agents' `claude --agent` sessions). Denies, with a reason:
   - any Edit / Write under cases/ (writes go through the tax-case server);
-  - Read / Grep / Glob of another agent's notes or bugs, of one's own notes of an earlier round, of the call log
-    (review only after its review.md exists), and, for analysis, of an earlier run's report/ or products/;
+  - Read / Grep / Glob of anything in a case folder that access.py does not list for the agent (an allowlist since 2026-11-12);
+  - Read / Grep / Glob outside cases/ (code, configuration and specifications are not the agents' to read);
   - Grep / Glob without a path, or with a path at or above cases/ (it would sweep other agents' notes).
 Anything else passes silently (exit 0, no output). Never raises.
 """
@@ -21,6 +21,7 @@ import access  # noqa: E402
 AGENTS = ("front", "analysis", "polish", "review")
 WRITE_TOOLS = ("Edit", "Write", "MultiEdit", "NotebookEdit")
 READ_TOOLS = ("Read", "Grep", "Glob")
+OUTSIDE = "read the case's files (cases/<case_id>/...); the library and the products are read through tax-read"
 
 
 def deny(reason):
@@ -76,9 +77,9 @@ def main():
                     cases_root.relative_to(target.resolve())
                     return deny("search inside one sub-folder of the case, not a folder that contains cases/")
                 except ValueError:
-                    return 0
-        if rel is None:
-            return 0
+                    return deny(OUTSIDE)
+        if rel is None:                                        # 2026-11-12: code, configuration and specifications are not read
+            return deny(OUTSIDE)
         reason = access.denied(agent, rel, cases_root)
         return deny(reason) if reason else 0
     except Exception:  # noqa: BLE001

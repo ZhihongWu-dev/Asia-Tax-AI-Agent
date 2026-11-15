@@ -1,5 +1,6 @@
 import { MAX_ATTACHMENTS, uploadAttachment, imageThumbnail, pdfErrors, splitAttachments, type Attachment } from '../attachments';
 import HintButton from "./HintButton";
+import FileWindow from "./FileWindow";
 import { useEffect, useState, useRef } from "react";
 import { ArrowUp, Square, Paperclip, X } from "lucide-react";
 import { useLocale } from "../locale";
@@ -68,13 +69,13 @@ export default function Composer({
       <input ref={input} type="file" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.webp" hidden onChange={e => { void select(Array.from(e.target.files || [])); e.target.value = ''; }} />
       {reading && <p role="status">{say('正在上传附件', 'Uploading attachments')} {reading}</p>}
       {error && <p role="alert">{failed && `${failed}: `}{error === 'too_many' ? say(`一条消息最多 ${MAX_ATTACHMENTS} 个附件。`, `A message can carry up to ${MAX_ATTACHMENTS} attachments.`) : pdfErrors[error]?.[locale === 'zh' ? 0 : 1] || say('上传失败，请重试。', 'Upload failed. Please try again.')}</p>}
-      {files.length > 0 && <div className="attachment-strip">
+      {files.length > 0 && <FileWindow count={files.length} listClass="attachment-strip">
         {files.map((file, index) => <div className="attachment-chip" key={`${file.name}-${index}`}>
           <>{imageThumbnail(file) ? <img className="attachment-thumbnail" src={imageThumbnail(file)} alt={file.name} /> : <Paperclip size={15} aria-hidden="true" />}</>
           <span className="attachment-name" title={file.name}>{file.name}</span>
           <button type="button" className="attachment-remove" disabled={busy} aria-label={say('移除附件', 'Remove attachment')} onClick={() => setFiles(current => current.filter((_, at) => at !== index))}><X size={14} /></button>
         </div>)}
-      </div>}
+      </FileWindow>}
       <textarea
         aria-label={t("描述交易背景")}
         placeholder={t("描述交易背景，并附上相关文件")}

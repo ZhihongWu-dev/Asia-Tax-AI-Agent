@@ -31,6 +31,7 @@ the official host before any parameter cites them.
 | `in.itr2026.pdf` | Income-tax Rules, 2026 (G.S.R. 198(E), Hindi and English) | https://a2ztaxcorp.net/wp-content/uploads/2026/03/Income-tax-Rules-2026.pdf (third-party copy of the Gazette; the official host answers 403 here) | complete, 977 pages |
 | `kr.cita.20260701.pdf` | 법인세법 as at 2026-07-01, printed from law.go.kr as PDF (registered as kr.corporate-tax-act.20260701.ko) | https://www.law.go.kr/LSW/lsInfoP.do?lsId=001563 (official) | complete; its tables have no text layer |
 | `my.pua235.2022.pdf` | P.U. (A) 235/2022, Income Tax (Exemption) (No. 6) Order 2022, Malay and English in one file (registered as my.pua235.2022.foreign-dividends) | official Parliament statutory paper, see doc.csv | complete |
+| `kr.itca.html` | 국제조세조정에 관한 법률 as at 2026-01-02 (Act No. 21215), the body of the law.go.kr page (registered as kr.itca) | https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=280389&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0 (official) | complete; formulas are images with their text in the alt attribute |
 
 `run_slicers.py` runs the slicers on these files (all countries, or the codes given) and prints counts, first and last
 ids, number gaps and sample clauses:
@@ -56,6 +57,7 @@ Results on 2026-10-23:
 | Treaties (English, Japanese MoF) | `slice_en_treaty` | 28, 27, 29, 30 | 88, 88, 94, 85 | none; MLI boxes cut as `<art>.mli<N>` (9, 8, 11, 10 boxes; a header broken before "4 of the MLI" counts since 2026-10-23) |
 | Japan, NTA circulars | `slice_jp_tsutatsu` | 6 and 20 items | - | none; captions kept with their item |
 | Korea, law.go.kr PDF (2026-11-07) | `slice_kr_pdf` | 181 (1-124), the same as the XML of the act | 642, the same as the XML | the same as the XML: all `삭제` |
+| Korea, law.go.kr page (2026-11-10) | `slice_kr_lawpage` | 100 (1-91) | 333 | none; branch articles 34-2, 51-2, 73-2 to 73-7, 77-2; formula alt texts kept (27.1, 28, 30.1, 30.2, 32.2) |
 | Korea, administrative rule | `slice_kr` (AdmRulService) | 152 (1-128) | 180 | none |
 | Thailand, ministerial regulation | `slice_act(..., "th")` falls back to ข้อ | 3 | 2 | none |
 | India, Income-tax Rules 2026 | `slice_in` | 333 | 1,241 | none; the Hindi half is skipped |

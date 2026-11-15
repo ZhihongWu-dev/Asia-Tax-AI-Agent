@@ -22,7 +22,7 @@ PROJECT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 from textutil import fts_tokens  # noqa: E402
 
-INDEX_VERSION = "4"
+INDEX_VERSION = "5"                               # 5: the case index holds the report's provenance rows (report_source)
 CARD_MAX = 600
 VERBAL_MAX = 300
 SCHEMA = """
@@ -157,7 +157,7 @@ def rules_table():
 
 
 def product_files(pd):
-    names = ["paths.json", "ranking.json", "brief.json", "tax.json", "branches.json", "scenarios.json", "open_items.json", "deltas.json",
+    names = ["paths.json", "ranking.json", "brief.json", "tax.json", "branches.json", "scenarios.json", "open_items.json", "deltas.json", "variants.json",
              "past_payments.json", "diff.json", "gap.json", "input.json", "version.json"]
     files = [pd / n for n in names]
     for sub in ("hops", "requirements", "transfers", "penalty"):
@@ -366,9 +366,12 @@ def build_products(pd, force=False):
             bid, cid, span((d.get("vs_as_is") or {}).get("amount")), span((d.get("vs_best") or {}).get("amount")),
             span((d.get("vs_best_no_restructure") or {}).get("saving_per_payment")), span(d.get("saving_per_payment")), d.get("baseline_branch"), json.dumps(d.get("payback_payments")), span(oo.get("total")),
             span(ex.get("total")), span(ex.get("tax")), span(ex.get("interest")), span(ex.get("fine")))
+        for x in d.get("if_move_not_kept") or []:
+            verbal += "; if %s on %s is not kept (%s): tax %s, %s more" % (x["move"], ">".join(x["hop"]), x.get("instead") or "dropped", span(x.get("amount")), span((x.get("delta") or {}).get("amount")))
         cardo = {"branch": bid, "cand": cid, "vs_as_is": d.get("vs_as_is"), "vs_best": d.get("vs_best"), "saving_per_payment": d.get("saving_per_payment"), "payback_payments": d.get("payback_payments"),
                  "one_off_total": oo.get("total"), "one_off_flags": oo.get("flags"),
-                 "exposure_total": ex.get("total"), "exposure_tax": ex.get("tax"), "exposure_interest": ex.get("interest"), "exposure_fine": ex.get("fine")}
+                 "exposure_total": ex.get("total"), "exposure_tax": ex.get("tax"), "exposure_interest": ex.get("interest"), "exposure_fine": ex.get("fine"),
+                 "if_move_not_kept": d.get("if_move_not_kept")}
         w.add(R("delta", bid), "delta", bid, verbal, cardo, d, "deltas.json", cand=cid, branch=bid)
         w.edge(R("branch", bid), R("delta", bid), "delta")
 
@@ -439,13 +442,24 @@ def build_products(pd, force=False):
 
 
 # ------------------------------------------------------------ case file
+def report_sources(cd):
+    """The provenance tables of the current round's report (draft and polished), which reviewers look rows up in."""
+    import access
+    try:
+        run = access.current_round(cd.parent, cd.name)[1]
+    except Exception:  # noqa: BLE001  (no ledger yet)
+        run = None
+    rd = cd / "report" / run if run else None
+    return [p for p in ((rd / "briefing.sources.json", rd / "briefing.polished.sources.json") if rd else ()) if p.exists()]
+
+
 def case_files(cd):
     intake = cd / "intake"
     files = [intake / n for n in ("facts.json", "sources.json", "answers.json", "constraints.json", "dialogue.md", "notes.md", "handoff.md", "to_collect.md")]
     docs = intake / "documents"
     files += sorted(docs.iterdir()) if docs.is_dir() else []
     files += sorted((intake / "index" / "parsed").glob("*.json")) if (intake / "index" / "parsed").is_dir() else []
-    return files
+    return files + report_sources(cd)
 
 
 def flatten(obj, prefix=""):
@@ -509,6 +523,17 @@ def build_case(cd, force=False, ocr=False):
                 key = "%s.%d" % (no, j)
                 w.add(R("dialogue", key), "dialogue", key, "dialogue #%s %s: %s" % (no, head, p), {"entry": no, "head": head.strip(" |"), "text": short(p, 500)},
                       {"entry": no, "head": head, "text": p}, "intake/dialogue.md", extra=p)
+    for p in report_sources(cd):                          # the report's provenance rows (2026-11-11, bug B-12): list / search type report_source
+        data = jload(p)
+        which = "polished" if "polished" in p.name else "draft"
+        for r in (data if isinstance(data, list) else data.get("sources", [])):
+            if not isinstance(r, dict) or not r.get("id"):
+                continue
+            key = "%s:%s" % (which, r["id"])
+            verbal = "report source %s (%s, %s): where %s; claim %s; ref %s" % (r["id"], r.get("kind"), which, r.get("where", ""), r.get("claim", ""), r.get("ref", ""))
+            w.add(R("report_source", key), "report_source", key, verbal,
+                  {"id": r["id"], "report": which, "kind": r.get("kind"), "where": short(r.get("where"), 300), "claim": short(r.get("claim"), 300), "ref": r.get("ref")},
+                  r, str(p.relative_to(cd)).replace("\\", "/"), extra=" ".join(str(r.get(k, "")) for k in ("where", "claim", "ref")))
     for name, typ in (("notes.md", "note"), ("to_collect.md", "to_collect"), ("handoff.md", "handoff")):
         p = intake / name
         if not p.exists():

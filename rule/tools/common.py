@@ -19,7 +19,7 @@ TABLES = {
     "rule": ["rule_id", "slot_key", "condition", "effect", "overrides", "procedure", "cite_ids", "decision_ids",
              "effective_from", "effective_to", "note"],
     "variable": ["name", "kind", "type", "allowed_values", "inputs", "question", "meaning"],
-    "predicate": ["key", "question", "factors_cite", "factor_vars", "favourable"],
+    "predicate": ["key", "question", "factors_cite", "factor_vars", "favourable", "factor_favourable"],
     "decision": ["id", "statement", "cite_id", "quote"],
     "rule_test": ["test_id", "slot_key", "date", "facts", "answers", "expect", "source"],
 }
@@ -38,7 +38,7 @@ DATE = re.compile(r"\d{4}-\d{2}-\d{2}$")
 EFFECTS = {
     "resident": (("residence",), False, "unfav"),
     "rate": (("outbound_wht", "final", "restructure", "cfc", "exit"), True, "unfav"),
-    "surtax": (("outbound_wht", "final", "cfc", "exit"), True, "unfav"),
+    "surtax": (("outbound_wht", "final", "restructure", "cfc", "exit"), True, "unfav"),   # restructure: Japan's reconstruction surtax on share gains (2026-11-12)
     "cap": (("outbound_wht",), True, "fav"),
     "exempt": (("outbound_wht", "inbound", "final", "restructure"), False, "fav"),
     "taxable": (("inbound",), False, "unfav"),

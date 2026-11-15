@@ -52,6 +52,7 @@ export type Case = {
   title: string;
   revision: number;
   messages: Message[];
+  documents?: string[];
   archived?: boolean;
   created_at?: string;
   updated_at?: string;
@@ -66,3 +67,32 @@ export function addItem(list: ActivityItem[], item: ActivityItem): ActivityItem[
 export function caseTitle(current: Case, t: (text: string) => string): string {
   return current.title || t("新对话");
 }
+
+export type SearchCandidate = {
+  cand_id: string;
+  path: string[];
+  moves: string[];
+  restructure: string[];
+  as_is: boolean;
+  requested?: boolean;
+};
+export type SearchRow = { cand_id: string; branch_id: string; rank: number | null; dominated: number; per_100: number | null; amount: number | null };
+/** The optimizer's label-setting search, replayed by the search view (GET /api/cases/{id}/search). */
+export type SearchState = {
+  ready: boolean;
+  run_id?: string;
+  approximate?: boolean;
+  source?: string;
+  destinations?: string[];
+  nodes?: string[];
+  edge_count?: number;
+  edges?: Record<string, [string, string, string[]]>;
+  events?: (string | number | null)[][];
+  frontier?: string[];
+  candidates?: SearchCandidate[];
+  branches?: Record<string, number>;
+  ranking?: SearchRow[];
+  best?: string;
+  currency?: string;
+  amount?: number;
+};

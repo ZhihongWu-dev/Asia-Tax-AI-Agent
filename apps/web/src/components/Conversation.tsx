@@ -1,7 +1,8 @@
 import { splitAttachments, imageThumbnail } from "../attachments";
 import HintButton from "./HintButton";
+import FileWindow from "./FileWindow";
 import { useEffect, useRef, useState } from "react";
-import { ArrowDown, Paperclip } from "lucide-react";
+import { ArrowDown, Paperclip, X } from "lucide-react";
 import AnswerText from "./AnswerText";
 import type { ActivityItem, Case, Message, RunBlock } from "../workspace";
 import { useLocale } from "../locale";
@@ -18,6 +19,7 @@ export default function Conversation({
   process = [],
   blocks = [],
   working = false,
+  onRemove,
 }: {
   current: Case;
   busy: boolean;
@@ -25,8 +27,11 @@ export default function Conversation({
   process?: ActivityItem[];
   blocks?: RunBlock[];
   working?: boolean;
+  onRemove?: (name: string) => Promise<boolean>;
 }) {
   const { t } = useLocale();
+  const [confirming, setConfirming] = useState("");
+  const inCase = new Set(current.documents || []);
   const bottom = useRef<HTMLDivElement>(null);
   const following = useRef(true);
   const [away, setAway] = useState(false);
@@ -69,12 +74,25 @@ export default function Conversation({
           <div key={message.id} className={`message ${message.role}`}>
             {message.role === "user" ? (
               <div className="user-message-content">
-                {files.map((file, index) => <div className="sent-attachment" key={`${file.name}-${index}`}>
-                  {imageThumbnail(file)
-                    ? <img className="sent-image-thumbnail" src={imageThumbnail(file)} alt={file.name} />
-                    : <Paperclip size={16} aria-hidden="true" />}
-                  <span title={file.name}>{file.name}</span>
-                </div>)}
+                {files.length > 0 && <FileWindow count={files.length} listClass="sent-attachments">{files.map((file, index) => {
+                  const sent = !message.delivery && Boolean(current.documents);
+                  const removed = sent && !inCase.has(file.name);
+                  const key = `${message.id}/${file.name}`;
+                  return <div className={`sent-attachment ${removed ? "is-removed" : ""}`} key={`${file.name}-${index}`}>
+                    {imageThumbnail(file)
+                      ? <img className="sent-image-thumbnail" src={imageThumbnail(file)} alt={file.name} />
+                      : <Paperclip size={16} aria-hidden="true" />}
+                    <span title={file.name}>{file.name}</span>
+                    {removed && <small className="attachment-state">{t("已移出案卷")}</small>}
+                    {sent && !removed && onRemove && (confirming === key
+                      ? <span className="attachment-confirm">
+                          <HintButton type="button" disabled={busy || working} onClick={() => { setConfirming(""); void onRemove(file.name); }}>{t("移出案卷")}</HintButton>
+                          <HintButton type="button" onClick={() => setConfirming("")}>{t("取消")}</HintButton>
+                        </span>
+                      : <HintButton type="button" className="attachment-remove" disabled={busy || working} aria-label={t("把这份文件移出案卷")}
+                          title={t("传错了？把这份文件移出案卷")} onClick={() => setConfirming(key)}><X size={14} /></HintButton>)}
+                  </div>;
+                })}</FileWindow>}
                 <p>{text}</p>
                 {message.delivery === "failed" && (
                   <small className="delivery-failed">{t("发送未完成，可重试")}</small>

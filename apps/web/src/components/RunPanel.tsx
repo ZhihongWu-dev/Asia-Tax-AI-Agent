@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { Activity, Check, CircleAlert, Download, Pause, Play, X } from "lucide-react";
+import { Activity, Check, CircleAlert, Download, List, Pause, Play, Route, Workflow, X } from "lucide-react";
 import HintButton from "./HintButton";
+import RunGraph from "./RunGraph";
+import SearchView from "./SearchView";
 import { useLocale } from "../locale";
 import type { RunView } from "../hooks/useRun";
 import type { RunStep } from "../workspace";
@@ -11,6 +13,7 @@ export const STEP_LABEL: Record<string, string> = {
   run: "优化计算",
   analysis: "撰写简报",
   review_draft: "简报复核",
+  render: "排版出具 PDF",
   polish: "润色与出具 PDF",
   review_final: "终稿比对",
   review_legal: "法律理由复核",
@@ -24,6 +27,8 @@ export const AGENT_LABEL: Record<string, string> = {
   polish: "润色 Agent",
   program: "优化程序",
 };
+export const PROGRAM_LABEL: Record<string, string> = { run: "优化程序", render: "排版程序" };
+export const whoRuns = (step: RunStep) => step.agent === "program" ? PROGRAM_LABEL[step.id] ?? AGENT_LABEL.program : AGENT_LABEL[step.agent];
 const STOP_NOTE: Record<string, string> = {
   delivered: "报告已交付。",
   need_front: "需要你补充信息，请在对话中回复。",
@@ -42,6 +47,16 @@ export function duration(seconds: number) {
   return `${Math.floor(minutes / 60)}h ${minutes % 60}m`;
 }
 
+type View = "graph" | "list";
+
+function savedView(): View {
+  try {
+    return localStorage.getItem("run-view") === "list" ? "list" : "graph";
+  } catch {
+    return "graph";
+  }
+}
+
 function spent(step: RunStep, clock: number) {
   const live = step.state === "running" && step.started ? (clock - Date.parse(step.started)) / 1000 : 0;
   return step.seconds + live;
@@ -54,7 +69,8 @@ function Marker({ state }: { state: RunStep["state"] }) {
   return <span className={`run-marker ${state}`} />;
 }
 
-export default function RunPanel({ run, onResume, onHalt, onClose }: {
+export default function RunPanel({ caseId, run, onResume, onHalt, onClose }: {
+  caseId?: string;
   run: RunView;
   onResume: () => void;
   onHalt: () => void;
@@ -67,6 +83,16 @@ export default function RunPanel({ run, onResume, onHalt, onClose }: {
     const timer = setInterval(() => setClock(Date.now()), 1000);
     return () => clearInterval(timer);
   }, [run.active]);
+  const [view, setView] = useState<View>(savedView);
+  const [searching, setSearching] = useState(false);
+  const pick = (next: View) => {
+    setView(next);
+    try {
+      localStorage.setItem("run-view", next);
+    } catch {
+      // the choice is a convenience only
+    }
+  };
   const steps = run.steps.filter((step) => step.id !== "intake" || step.state !== "pending");
   const current = run.steps.find((step) => step.state === "running");
   const total = run.steps.reduce((sum, step) => sum + spent(step, clock), 0);
@@ -93,6 +119,18 @@ export default function RunPanel({ run, onResume, onHalt, onClose }: {
         <strong aria-live="polite">{headline}</strong>
         <span>{duration(total)}</span>
       </div>
+      <div className="run-views" role="tablist" aria-label={t("视图")}>
+        <button type="button" role="tab" aria-selected={view === "graph"} className={view === "graph" ? "active" : ""} onClick={() => pick("graph")}>
+          <Workflow size={14} />{t("流程图")}
+        </button>
+        <button type="button" role="tab" aria-selected={view === "list"} className={view === "list" ? "active" : ""} onClick={() => pick("list")}>
+          <List size={14} />{t("步骤")}
+        </button>
+      </div>
+      {view === "graph" ? (
+        <RunGraph steps={run.steps} spent={(step) => spent(step, clock)} finished={finished} tool={lastTool}
+          onSearch={caseId ? () => setSearching(true) : undefined} />
+      ) : (<>
       <div className="run-track" aria-hidden="true">
         {run.steps.map((step) => <i key={step.id} className={step.state} />)}
       </div>
@@ -106,9 +144,12 @@ export default function RunPanel({ run, onResume, onHalt, onClose }: {
                 {step.runs > 1 && <em title={step.reason}>{t("第")} {step.runs} {t("次")}</em>}
                 {(step.runs > 0 || step.state === "running") && <time>{duration(spent(step, clock))}</time>}
               </div>
-              <small>{t(AGENT_LABEL[step.agent])}{step.model ? ` · ${step.model}` : ""}</small>
+              <small>{t(whoRuns(step))}{step.model ? ` · ${step.model}` : ""}</small>
               {step.state === "running" && lastTool && (
                 <p className="run-now" title={lastTool.detail}>{lastTool.name}</p>
+              )}
+              {step.id === "run" && caseId && (step.runs > 0 || step.state === "running") && (
+                <button type="button" className="g-search" onClick={() => setSearching(true)}><Route size={14} />{t("查看搜索过程")}</button>
               )}
             </div>
           </li>
@@ -120,6 +161,7 @@ export default function RunPanel({ run, onResume, onHalt, onClose }: {
           </div>
         </li>
       </ol>
+      </>)}
       <footer className="run-foot">
         {note && (
           <div className={`run-note ${problem ? "is-problem" : ""}`} role="status">
@@ -131,6 +173,9 @@ export default function RunPanel({ run, onResume, onHalt, onClose }: {
         {run.can_resume && <button type="button" className="run-action primary" onClick={onResume}><Play size={14} />{t("继续运行")}</button>}
         {run.active && <button type="button" className="run-action" onClick={onHalt}><Pause size={14} />{t("停止运行")}</button>}
       </footer>
+      {searching && caseId && (
+        <SearchView caseId={caseId} running={run.steps.some((s) => s.id === "run" && s.state === "running")} onClose={() => setSearching(false)} />
+      )}
     </aside>
   );
 }

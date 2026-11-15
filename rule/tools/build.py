@@ -152,6 +152,10 @@ def check_predicates(predicates, clause_ids, variables, errors):
         for v in split_list(p.get("factor_vars")):
             if v not in variables:
                 errors.append("predicate %s: factor_vars %s is not a variable" % (k, v))
+        for part in split_list(p.get("factor_favourable")):     # the side of each factor the favourable answer leans on
+            m = re.fullmatch(r"\s*(\w+)\s*(>=|<=|!=|=|>|<)\s*(\S+)\s*", part)
+            if not m or m.group(1) not in split_list(p.get("factor_vars")):
+                errors.append("predicate %s: factor_favourable '%s' is not '<factor_var> <op> <value>'" % (k, part))
 
 
 def check_decisions(decisions, lib, errors):

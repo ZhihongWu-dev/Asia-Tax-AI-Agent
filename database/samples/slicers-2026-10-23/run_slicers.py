@@ -55,6 +55,9 @@ if "kr" in which:
     text = chr(10).join(build.pdf_pages(D / "kr.cita.20260701.pdf"))      # the same act printed from law.go.kr as PDF (2026-11-07)
     out, mode = build.slice_kr_pdf("kr.cita.pdf", text)
     report("KR 법인세법, law.go.kr PDF as at 2026-07-01", out, mode, ("kr.cita.pdf#98", "kr.cita.pdf#98.1"))
+    raw = (D / "kr.itca.html").read_bytes()                              # an act as the law.go.kr page, formulas kept (2026-11-10)
+    out, mode = build.slice_kr_lawpage("kr.itca", raw)
+    report("KR 국제조세조정에 관한 법률, law.go.kr page as at 2026-01-02", out, mode, ("kr.itca#27.1", "kr.itca#27.2"))
 if "in" in which:
     p = D / "in.ita1961.pdf"
     if p.exists():

@@ -155,6 +155,18 @@ export function useWorkspace() {
       }
     }, id);
   }
+  function removeDocument(name: string) {
+    const doc = storedCurrent;
+    if (!doc) return Promise.resolve(false);
+    return perform(async () => {
+      try {
+        update(await api.removeDocument(doc.id, name));
+      } catch (e) {
+        if (e instanceof ApiError && e.code === "document_not_found") update(await api.get(doc.id));
+        throw e;
+      }
+    }, doc.id);
+  }
   function reload(id: string) {
     api.get(id).then(update).catch(() => {});
   }
@@ -182,6 +194,7 @@ export function useWorkspace() {
     drafts,
     changeDraft,
     send,
+    removeDocument,
     newCase,
     retry,
   };

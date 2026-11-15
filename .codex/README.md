@@ -1,11 +1,23 @@
 # Native Codex harness (the default since 2026-11-07)
 
-The agents run on the native Codex CLI. By default it drives qwen3.8-flash through Token Plan's OpenAI-compatible
+The agents run on the native Codex CLI. By default it drives qwen3.8-flash (the analysis node qwen3.8-max since 2026-11-08, the legal-reasoning review lane since 2026-11-12) through Token Plan's OpenAI-compatible
 endpoint (`agent/harness.json`: base `https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1`,
 `wire_api = responses`, key `qwen_key` from `.env`); `agent/harness.gpt-luna.json` is the GPT alternative (key in the
 ignored `.env.codex`). The web host starts on this harness unless `TAX_HARNESS=claude`. The Claude Code path
 (`agent/tools/orchestrate.py`) still works on its own. The harness was built in a separate worktree on branch
 `codex/native-harness` and merged here on 2026-11-07.
+
+## Model catalog and compaction (2026-11-13)
+
+Codex does not know qwen's window by itself. Every generated `config.toml` therefore carries
+`model_catalog_json` pointing at `agent/codex_model_catalog.json`, the entries for qwen3.8-max and qwen3.8-flash as
+Alibaba Cloud's page "Codex 接入 Token Plan" gives them (https://help.aliyun.com/zh/model-studio/codex-token-plan):
+`context_window` 983,616 (the thinking-mode maximum input of the model pages), `effective_context_window_percent` 95,
+reasoning levels low / medium / xhigh. It also carries `model_auto_compact_token_limit = 840000` (harness.json
+`auto_compact_token_limit`): the model pages give a context of 1,000,000 and a maximum output of 131,072, so the history
+may reach 868,928 before a full-length answer no longer fits; 840,000 leaves room for one more turn's input, and lies below
+the catalog's usable window (983,616 x 95% = 934,435). Checked with Codex 0.167.0-alpha under `--strict-config`: both keys
+are read (a missing catalog is an error), and the reasoning level `high` the harness uses for some nodes still runs.
 
 ## Run
 
@@ -77,6 +89,11 @@ per thread and do not mutate the shared model dictionary.
 
 Native JSONL stays in `cases/<case>/log/runs/`; `runs.jsonl` includes backend,
 model, session and usage metadata. Server audit records are in `log/codex-tools/`.
+Each MCP server's stderr goes to `.codex/runtime/<case>/mcp-stderr/<role>-<server>-<pid>.log`
+(UTF-8), never to the CLI's pipe: when the CLI stopped reading that pipe, a write failed
+with OSError or, the pipe full, blocked the call until the 1200 s tool timeout
+(2026-11-11). `tax-files` takes typed paging arguments and paths relative to the
+project or to the cases root, and `search` takes a file as well as a folder.
 Logs are redacted after each process exits. Codex currently records the completed
 CLI turn count; it is not comparable to Claude's internal `num_turns`.
 Codex has no equivalent `--max-turns` flag in this build. The supervisor enforces

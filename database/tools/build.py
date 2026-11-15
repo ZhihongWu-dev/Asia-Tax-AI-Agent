@@ -42,7 +42,7 @@ ROOT = Path(__file__).resolve().parents[1]          # database/; --root points e
 ENC = "utf-8-sig"
 SOFFICE = r"C:\Program Files\LibreOffice\program\soffice.exe"
 
-SPEC_VERSION = "2026-11-08"          # the last entry of the change record at the head of 数据库规范.md; upload.py writes it to meta
+SPEC_VERSION = "2026-11-10"          # the last entry of the change record at the head of 数据库规范.md; upload.py writes it to meta
 
 # ---------------------------------------------------------------- tables (数据库规范.md §3)
 TABLES = {                                           # name -> columns; the order is the csv and sqlite column order
@@ -268,7 +268,8 @@ def to_text(row, kind, conv):
     key = row["sha256"][:16] or row["id"]
     try:
         if kind in ("html", "htm"):
-            return html_text(path.read_bytes()), None, "ok"
+            raw = path.read_bytes()
+            return (kr_lawpage_text(raw) if is_kr_lawpage(raw) else html_text(raw)), None, "ok"
         if kind == "pdf":
             pages = pdf_pages(path)
             text = "\n".join(pages)
@@ -1486,6 +1487,40 @@ def slice_kr_pdf(doc_id, text):
     return out, "kr_pdf_article" if len(heads) >= 3 else "none"
 
 
+def is_kr_lawpage(raw):
+    """The body of a law.go.kr act page (LSW/lsInfoR.do): one <div class="lawcon"> per article."""
+    return b'class="lawcon"' in raw and b"joNoList" in raw
+
+
+def kr_lawpage_text(raw):
+    """Text of a law.go.kr act page: one line per <p> of each article, articles separated by a blank line; chapter
+    headings and the addenda (부칙, outside the articles) are left out. A formula is printed as an image whose alt text
+    is the formula written out by the site (@@LATEX@@ ... @@/LATEX@@, e.g. ITCA art. 27(1)(i)); that alt text is kept
+    in place, verbatim, since the article's words are incomplete without it."""
+    soup = BeautifulSoup(raw, "lxml")
+    arts = []
+    for con in soup.select("div.lawcon"):
+        for img in con.find_all("img"):
+            alt = img.get("alt") or ""
+            img.replace_with(" %s " % alt if "@@LATEX@@" in alt else "")
+        for t in con.select("div.rule_area"):                          # the button that opens delegated rules
+            t.decompose()
+        lines = [re.sub(r"\s+", " ", p.get_text()).strip() for p in con.find_all("p")]
+        lines = [ln for ln in lines if ln]
+        if lines:
+            arts.append("\n".join(lines))
+    return "\n\n".join(arts)
+
+
+def slice_kr_lawpage(doc_id, raw):
+    """Korean acts as a law.go.kr page (LSW/lsInfoR.do, saved as HTML): the text of kr_lawpage_text cut by slice_kr_pdf,
+    so the ids are those of the XML and the PDF (제27조 → #27, ② → #27.2). Written on 국제조세조정에 관한 법률 as at
+    2026-01-02 (kr.itca, lsiSeq 280389, 2026-11-10): 100 articles (1-91, with 34-2, 51-2, 73-2 to 73-7, 77-2) and
+    333 paragraphs."""
+    out, mode = slice_kr_pdf(doc_id, kr_lawpage_text(raw))
+    return out, "kr_page_article" if mode != "none" else "none"
+
+
 def xml_text(row):
     """Text layer of an XML document: the sliced article text for e-Gov (jp.) and law.go.kr (kr.) files, all text otherwise."""
     raw = (ROOT / row["file"]).read_bytes()
@@ -1609,6 +1644,10 @@ def slice_doc(row, text, pages):
             return out, mode
     if jur == "kr" and kind == "pdf" and statute:                                      # law.go.kr act printed as PDF
         out, mode = slice_kr_pdf(doc_id, text)
+        if mode != "none":
+            return out, mode
+    if jur == "kr" and kind in ("html", "htm") and statute and is_kr_lawpage(raw):     # law.go.kr act page
+        out, mode = slice_kr_lawpage(doc_id, raw)
         if mode != "none":
             return out, mode
     if jur == "jp" and kind in ("html", "htm"):                                        # NTA circulars

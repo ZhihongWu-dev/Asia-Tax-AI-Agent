@@ -31,7 +31,7 @@ export default function App() {
     send,
     newCase: createCase,
     retry,
-    organize, partial, process, reload, canStop, stop,
+    organize, partial, process, reload, canStop, stop, removeDocument,
   } = useWorkspace();
   const { run, resume, halt } = useRun(current?.id, current?.revision, reload);
   const working = run.active || run.turning;
@@ -152,7 +152,7 @@ export default function App() {
             {empty ? (
               <Welcome />
             ) : (
-              <Conversation current={current} busy={currentBusy} partial={partial} process={process} blocks={run.blocks} working={working} />
+              <Conversation current={current} busy={currentBusy} partial={partial} process={process} blocks={run.blocks} working={working} onRemove={removeDocument} />
             )}
           </div>
           <div className="composer-area">
@@ -189,7 +189,7 @@ export default function App() {
       )}
       {runOpen && started && !panel && (
         <div className="run-slot">
-          <RunPanel run={run} onResume={() => void resume()} onHalt={() => void halt()} onClose={() => setRunOpen(false)} />
+          <RunPanel caseId={current?.id} run={run} onResume={() => void resume()} onHalt={() => void halt()} onClose={() => setRunOpen(false)} />
         </div>
       )}
       {panel && (

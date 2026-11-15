@@ -100,7 +100,7 @@ def build(reader, case_id, node):
                 last = impact.baseline(case_id)
                 secm.build_frame(case_id, run, (last or {}).get("run_id"))
                 frame = (cd / "report" / run / "frame" / "frame.md").read_text(encoding="utf-8")
-                frame = frame.split("\n", 2)[2].replace("## Tables (markers)", "#### Tables").replace("## Structure names", "#### Structure names")
+                frame = re.sub(r"(?m)^## ", "#### ", frame.split("\n", 2)[2].replace("## Tables (markers)", "## Tables"))   # every frame section under the pack's heading
                 frame = re.sub(r"(?s)### \{\{block:(assumptions_table|gaps_list)\}\}.*?(?=### \{\{block:|\Z)", "", frame)   # the sections below carry them
                 frame = frame.replace("### {{block:", "##### ").replace("}}", "")
                 text("Structure names and the program's tables (report/%s/frame/frame.md)" % run, frame)
@@ -233,27 +233,20 @@ def build(reader, case_id, node):
 
 
 def client_standard(rd):
-    """What the analysis agent otherwise digs out of the system's code (2026-11-06, the draft is the client report): what report_check tests,
-    how the program tables and the diagram work."""
-    import case_server as cs
-    out = ["The report you write is handed to the client as it stands: the program only expands the table markers, drops the internal reference "
-           "line and typesets it. report_check(target=draft) tests:",
+    """What the analysis agent needs about the client copy and report_check (2026-11-12: what the template fixes, the heading,
+    date, tables, diagram, Appendix B and layout, is not described; no limits are named)."""
+    out = ["The report you write is handed to the client as it stands. Write the prose of the parts: the heading and date, the tables, "
+           "the diagram and Appendix B are the program's and are added to the client copy.",
+           "Cite a provision as {{cite:<cite_id>|<the provision as the client reads it>}}, for example "
+           "{{cite:cn.sta.2019-35#10|Article 10 of the Administrative Measures}}; the client copy shows the words after the bar.",
+           "report_check(target=draft) tests:",
            "\n".join("- " + x for x in (
-               "the internal reference line with the case id and run id at the very end (the program removes it from the client copy); nowhere else "
-               "a case id, run id, candidate or branch id, field name, tool name, floor/ceiling or any other system identifier",
-               "parts 1 to 7 and Appendices A and B present, a Date line that is the instruction date",
-               "a ```flow block in Part 1: the restructuring diagram as JSON (shape below); render_pdf draws it",
+               "parts 1 to 7 and Appendix A present",
+               "no case id, run id, candidate or branch id, field name, tool name, floor/ceiling or any other system identifier",
+               "every citation names a provision of the library",
                "every figure of the body occurs in the record its sources row cites (cite_check), every sources row has a where fragment and a resolvable ref",
                "none of the optimizer's words (per 100, modelled, variant, judgment world, ranked N-th, the library) and no spoken lead-ins in bold "
-               "(In one sentence, Why, How much it saves, ...)",
-               "no sentence of the body prose over %d words; tables and the diagram block do not count" % cs.LONG_SENTENCE,
-               "a current briefing.pdf (call render_pdf when the text is settled) whose body before the appendices runs to %d to %d pages"
-               % (cs.BODY_FLOOR, cs.BODY_LIMIT))),
-           "A line {{block:<name>}} on its own stands for a program table from report/<run>/frame/frame.md; keep the marker, the program expands it "
-           "in the client copy and report_check counts the table's figures as yours."]
-    tpl = HERE.parent / "templates" / "flowchart.example.json"
-    if tpl.exists():
-        out.append("The diagram block:\n\n```json\n%s\n```" % tpl.read_text(encoding="utf-8").strip())
+               "(In one sentence, Why, How much it saves, ...)"))]
     return "\n\n".join(out)
 
 

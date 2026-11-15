@@ -45,7 +45,8 @@ def build_server(root, db, rule, agent):
         """Cards of one kind of record, paged with cursor. Library: params (jur, slot, subject), absences (jur, slot), treaties
         (jur, jur_b), jurisdictions, blocked, decisions, docs. Products (case_id or run_id): structures, branches, hops, cells,
         rules, points, scenarios, open_items, requirements, transfers, exposures, penalties, past_payments, gaps, brief, diff,
-        input. Case file (case_id): facts, sources, dialogue, answers, notes, documents, pages, handoff, to_collect, constraints."""
+        input. Case file (case_id): facts, sources, dialogue, answers, notes, documents, pages, handoff, to_collect, constraints,
+        report_sources (the rows of the current report's provenance table)."""
         return r.list(kind, filters or {}, k, cursor)
 
     @s.tool(name="get")

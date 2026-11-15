@@ -62,7 +62,24 @@ def parse_output(text):
     return result
 
 
-def prepare(role, case_id, chosen, instructions=""):
+def model_metadata(chosen):
+    """config.toml lines that tell Codex what the model is (2026-11-13): the official model catalog of Alibaba Cloud's 'Codex
+    接入 Token Plan' page (context window 983,616 for qwen3.8-max and qwen3.8-flash, 95% usable), and the history size at
+    which Codex compacts it. Without the catalog Codex does not know qwen's window and cannot compact in time. The limit:
+    context 1,000,000 less the maximum output 131,072 = 868,928, less room for one more turn's input = 840,000 (harness.json)."""
+    catalog = chosen.get("model_catalog")
+    if not catalog:
+        return []
+    path = (PROJECT / catalog).resolve()
+    slugs = {m.get("slug") for m in json.loads(path.read_text(encoding="utf-8")).get("models", [])}
+    out = ['model_catalog_json = ' + json.dumps(str(path))]
+    limit = (chosen.get("auto_compact_token_limit") or {}).get(chosen.get("model"))
+    if chosen.get("model") in slugs and limit:
+        out.append('model_auto_compact_token_limit = %d' % int(limit))
+    return out
+
+
+def prepare(role, case_id, chosen, instructions="", node=""):
     from codex_files import Files
     Files(role, case_id)
     folder = PROJECT / ".codex" / "runtime" / case_id / (role + "-" + uuid.uuid4().hex)
@@ -82,6 +99,7 @@ def prepare(role, case_id, chosen, instructions=""):
         'forced_login_method = "api"', 'approval_policy = "never"',
         'sandbox_mode = "read-only"', 'project_doc_max_bytes = 0',
         'developer_instructions = ' + q(prompt.read_text(encoding="utf-8")),
+        *model_metadata(chosen),
         'web_search = ' + q("disabled" if role == "polish" else "live"),
         '[features]', 'shell_tool = false', 'view_image = false',
         'multi_agent = false', 'apps = false', 'plugins = false', 'remote_plugin = false', 'shell_snapshot = false',
@@ -96,9 +114,9 @@ def prepare(role, case_id, chosen, instructions=""):
         config += ['[mcp_servers.' + q(server) + ']',
                    'command = ' + q(sys.executable),
                    'args = ' + json.dumps([str(PROJECT / "agent" / "tools" / "codex_mcp.py"),
-                                          "--role", role, "--case", case_id, "--server", server]),
+                                          "--role", role, "--case", case_id, "--server", server, "--node", node]),
                    'cwd = ' + q(PROJECT), 'required = true',
-                   'startup_timeout_sec = 120', 'tool_timeout_sec = 1200']
+                   'startup_timeout_sec = 600', 'tool_timeout_sec = 1200']   # the remote library loads slowly over a thin link
         for name in tool_names(server):
             config += ['[mcp_servers.' + q(server) + '.tools.' + q(name) + ']', 'approval_mode = "approve"']
     (folder / "config.toml").write_text("\n".join(config) + "\n", encoding="utf-8")
@@ -124,7 +142,7 @@ def call_agent(role, task, case_id, label, chosen, orch):
         stem = folder / ("%03d-%s" % (orch.next_output_number(folder), label))
         stem.with_suffix(".jsonl").touch()
     out, err = stem.with_suffix(".jsonl"), stem.with_suffix(".err")
-    home, work, env = prepare(role, case_id, chosen)
+    home, work, env = prepare(role, case_id, chosen, node=label)
     with out.open("wb") as stdout, err.open("wb") as stderr:
         proc = subprocess.Popen(command(work), cwd=work, env=env, stdin=subprocess.PIPE, stdout=stdout, stderr=stderr)
         timed_out = False

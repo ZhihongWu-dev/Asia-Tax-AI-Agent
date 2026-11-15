@@ -283,10 +283,15 @@ def main():
         print("! file step stopped: %s: %s; the tables were not touched" % (type(e).__name__, clean(str(e), secrets)[:300]))
         con.close()
         return 1
+    con.close()                                                # idle through the file step; the server may have dropped it
     try:
+        con = psycopg.connect(dsn, connect_timeout=30)
         replace_tables(con, args.schema, rows, meta)
     except Exception as e:                                     # noqa: BLE001
-        con.rollback()
+        try:
+            con.rollback()
+        except Exception:                                      # noqa: BLE001  a lost connection rolls back on the server
+            pass
         print("! tables not replaced: %s: %s; the previous tables are unchanged" % (type(e).__name__, clean(str(e), secrets)[:300]))
         return 1
     finally:

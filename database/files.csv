@@ -207,6 +207,7 @@ raw/jp-vn/treaty.jp-vn.1995.notes.en.pdf,69ab367f8666948128969093dba962af52a0ab0
 raw/kr/kr.corporate-tax-act.20260701.ko.pdf,257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599,555061
 raw/kr/kr.income-tax-act.20260701.ko.pdf,53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a,811099
 raw/kr/kr.itca.enforcement-decree.pdf,186cb47334d8b9ab32c846c6045d9ffc7565364a7cfbbe56d01643b9b29ab1c1,497698
+raw/kr/kr.itca.html,e71fd3461dd1f028f45ae80ca65a4d4194d014f47a2dace9d8157c6a48d05ae2,477657
 raw/kr/kr.nts.corporate-rate-2026.do,5918af6d200ebfc1c4a408033eb87ea867f6f4c6107beedfd15bce36893b9832,198891
 raw/kr/kr.nts.corporate-tax-overview.do,0a35d8a90777bf0ea77f0e535b9588e4e9ae9cda29cacabd5d3d6464b759a528,206779
 raw/kr/kr.nts.filing-returns.do,e2921c2dc6f1f4dc2de81b48edf207e9392cbb82d575e2bf87c6742f21ab3d8e,36633
@@ -281,6 +282,7 @@ raw/vn/vn.gov.pit-withholding-rates.htm,70530e955d24b5fd1157e9d9254f06e57ad961e8
 raw/vn/vn.gov.related-party-tax-avoidance.htm,494085b3b80a2d9b7f78ba25318ef840e654428b58e64b5061a0aeb5df176b80,514928
 raw/vn/vn.gov.tax-filing-deadlines.htm,9614288d9986d022ba2a33b1c6d673c99c81af33943e8d43693b1dd7bfbde4cd,502762
 raw/vn/vn.law.cit2025.en.htm,c69f5b6cae5dded40adb2ffe7774f718d8bf1e8c88da5de58df272a05cf77237,111572
+raw/vn/vn.law.pit.consolidation103.2025.vi.doc,d200d4d4dac6773173fb49af9744ea13c4b6b9286368d82c97fa6c7370be7494,698880
 raw/vn/vn.law.pit.consolidation112.2026.vi.pdf,7be8f6acc114eade6952cbbdfb33e3b6c6574ee819722509b91c5cb2b160d0a7,6836177
 raw/vn/vn.law.pit2026.vi.pdf,6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685,1655150
 raw/vn/vn.mofa.treaty-index.html,9ddfedc6e862deba0a4394b5c7a6758cfc3827e71a24cdc79a2bc685ae33ff8c,62081
@@ -417,6 +419,7 @@ text/jp.sma.txt,c82c780607c77246addd3aed8165d381c9ab6a0bfd9de1c0d8d391f4b227053f
 text/kr.corporate-tax-act.20260701.ko.txt,cd462b6a51d3cc2256063d0eb42cfc9f1f446af23591bf096f378316cdbb4ad1,403868
 text/kr.income-tax-act.20260701.ko.txt,4bc71ab5ff5f32594620d52c6e3a21aa3116b15c43e160b5133f671375b56c62,608757
 text/kr.itca.enforcement-decree.txt,070029f70b2ee6ee6f9f2a54a20ff865b5e45a34e2bd88c53e0f90411a0facb9,426532
+text/kr.itca.txt,d4e2b789dcf4561da96f6d87bcc1a5ba401dfe32960353612f67a4855e0632a0,181397
 text/kr.nts.corporate-rate-2026.txt,1843e698704493fb2e03a508d5c08f44e118fb004165c5fcaae63adab70f4315,2763
 text/kr.nts.corporate-tax-overview.txt,97d5d6e15f7ddde9bc16a55efd0c154560a81fa9a9abc9ce86499171e7d01ef9,9705
 text/kr.nts.filing-returns.txt,06484ad7dabc0a7a890ce1cf9b7d75b3ee6d166e9a3ddec8b1537e49b3c959be,2560
@@ -584,6 +587,7 @@ text/vn.gov.pit-withholding-rates.txt,04a8b6a582f4178db40f8b982c9ebbd139079e1ccc
 text/vn.gov.related-party-tax-avoidance.txt,c1bc64576a9fa4ef04afa66e52e4d6d6f68f8ee50684d6c47e368cbebef6f9d3,12244
 text/vn.gov.tax-filing-deadlines.txt,dfc7c08edd3baef143d39993a8acb681efe02b7eb1297b2290b6647a558f8ee2,6427
 text/vn.law.cit2025.en.txt,d5a57501d94771e099af59a65aec2675fb2e86da52a155c84dcaa70aeb8ee024,48437
+text/vn.law.pit.consolidation103.2025.vi.txt,c36d29406909eddd8dbfe9b6daaee086b5aadb1a6dd3e7bbe4945ffc215dc633,37591
 text/vn.law.pit.consolidation112.2026.vi.txt,c5cafe8ba6d25bd90d361c1fb18eab2543e6c1bba616b79729e06d40239ebffb,42828
 text/vn.law.pit2026.vi.txt,be71cf8892e48e772801bc6e99c20da88c426e20a9dcc25746a873d72e563c85,315790
 text/vn.mofa.treaty-index.txt,395c05ead92caeb30030329c40da8c9b5504c3dbb6728917849ef03a9d7e1a6d,6406

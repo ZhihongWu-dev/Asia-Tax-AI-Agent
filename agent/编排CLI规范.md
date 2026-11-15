@@ -27,7 +27,7 @@
 | 节点 | 执行者 | 进入状态 | 做什么 | 完成判定 |
 |---|---|---|---|---|
 | `review_intake` | 复核 | intake | 先过程序关：`intake_check` 无问题，`handoff.md` 已写，否则 `need_front`；再核交接包 | `review_intake.md` 已更新，末句合法 |
-| `run` | 程序 | intake_ok | 由 facts.json 加 `closing_answers(answers.json)` 和 constraints.json 里的约束（exclude、consider、allow_restructure、payback_max、allowed_subjects）生成 `intake/run_input.json`，再 `validate_input`、优化层 `run`、`round_set_run`；有上一轮时再做 `diff` | 账本登记了 run_id |
+| `run` | 程序 | intake_ok | 由 facts.json 加 `closing_answers(answers.json)` 和 constraints.json 里的约束（exclude、consider、allow_restructure、payback_max、allowed_subjects）生成 `intake/run_input.json`；facts.json 没给 `fx` 时，用优化层 `tools/fx.py` 取付款日（`date`）从付款币种到库里各法域币种的汇率表，存 `intake/fx.json`（同一案卷、币种、日期只取一次，之后复用），整表内嵌进 run_input.json 的 `fx`，run_id 因此也覆盖汇率；一个汇率都取不到时不内嵌，产物照旧标 `fx_missing`（2026-11-11）。再 `validate_input`、优化层 `run`、`round_set_run`；有上一轮时再做 `diff` | 账本登记了 run_id |
 | `analysis` | 分析 | ran | 写草稿和出处表 | 草稿或出处表已更新，`report_check(draft)` 无问题 |
 | `review_draft` | 复核 | drafted | 核草稿的实质 | `review.md` 新于草稿，末句合法 |
 | `polish` | 润色 | reviewed | 改写成稿，出 PDF | 成稿文件已更新，`report_check(polished)` 无问题 |
@@ -185,7 +185,9 @@ claude -p "<task>" --agents .claude/agents.json --agent <name> --mcp-config .cla
 - 网页模式用 `--append-system-prompt` 追加一段说明，替换前台第 4 步的 Bash：前台不自己跑 `orchestrate.py`，准备好后在回复末尾写 `[[START_RUN]]`。宿主去掉这个标记，再把编排器作为独立进程启动，所以服务重启或页面刷新都不中断运行。
 - 运行结束后：`delivered` 和 `need_front` 由宿主发一条 `[Host]` 消息给前台，前台用自己的话告诉客户，`delivered` 时宿主附上 PDF 下载链接；`rate_limited`、`agent_failed`、`revision_limit` 不调模型，宿主直接发固定文字。没有客户发言时最多自动重跑 3 次，到上限就停下并告诉客户，避免循环。
 - 进度从文件读，不从进程读。`GET /api/cases/{id}/run?after=<cursor>` 返回节点状态（`runs.jsonl`、`run.lock`、`round_current`）和各 Agent 事件流里新增的条目。修订时阶段回退，后面的节点回到待运行，并保留运行次数。
-- `POST /api/cases/{id}/run` 从当前状态继续，`POST /api/cases/{id}/run/stop` 结束整棵进程树并记一行 `stopped`。
+- `POST /api/cases/{id}/run` 从当前状态继续，`POST /api/cases/{id}/run/stop` 结束整棵进程树并记一行 `stopped`；编排器还没写下 `run.lock` 时，宿主按自己启动的进程结束。前台回合进行中不给继续按钮。
+- 客户停掉前台回复（或回合失败）：这条消息不进 `chat.json`，它带进案卷的单据退出案卷（移到 `intake/withdrawn/`，被它覆盖的同名单据恢复原样），页面把附件放回输入框。`dialogue.md` 里已逐字记下客户的话，所以下一个前台回合开头附一条 `[Host]` 说明：上一条已撤回、哪些单据退出了、那个回合写下的内容要对照现有单据复查。
+- 客户传错了单据：已发出的附件旁有"移出案卷"，`DELETE /api/cases/{id}/documents/{name}` 调案卷服务的 `remove_document`（运行中或前台回合中 409）。单据移到 `intake/withdrawn/` 留档，交接包算作改过，下一次运行从资料复核重新开始；`intake_check` 列出仍引用它的出处行，所以引用没改掉时运行停在 `need_front`。下一个前台回合（客户消息或运行结束的转告）开头附一条 `[Host]` 说明移出了哪份、哪些事实还引用它。客户在对话里说传错了时，前台自己调 `remove_document`。
 - 读日志时也要去掉密钥：事件流是运行中读的，`scrub` 要到节点结束才执行。
 
 限制：一条消息最多 30 个附件；单用户，没有登录；运行需要本机的 Claude Code、xelatex 和持久磁盘，不能放在无状态托管上。
@@ -417,7 +419,7 @@ review_draft 和 review_final 各自同时跑两个复核 agent：主复核（�
 | 分析 | 直接写交给客户的报告（规范 §3、§5 第 11 条）；写完自己调 `render_pdf`（分析身份可用）看页数 |
 | 自检 | `self_check` 先调 `autofix_draft`：指向 bug 或底稿文件的出处行由程序丢弃并记日志；`report_check(target=draft)` 加查流程图块、口语标签、优化层用语、长句、以及 PDF 是否最新和正文页数 |
 | 复核 | 草稿核对加第八类"客户可读"；法律线只有草稿一路；核对单通过记号 `DELIVERABLE`（旧的 `POLISHABLE` 仍按通过读） |
-| 照单改 | 核对单可带 ```replacements 块（`[{"old", "new"}]`）；`render` 节点先由程序 `apply_replacements` 改进草稿并重盖核对单时间，再排版；改不上的（原句找不到或不唯一）退回分析 |
+| 照单改 | 核对单可带 ```replacements 块（`[{"old", "new"}]`）；`render` 节点先由程序 `apply_replacements` 改进草稿并重盖核对单时间，再排版；改不上的（原句找不到或不唯一）退回分析。两条复核线改同一处时先套法律复核线的，另一条的那处记“已被取代”，不算改不上、不退回（2026-11-11） |
 | 程序把关 | `write_review` 拒收：没有任何问题条目的 REVISE；再核时只引用未改动行且上次未退回的 REVISE；`replacements` 块不是合法 JSON 列表。`bug_append` 的 `affects_result=true` 必须带 `effect`（本案哪个数从多少变成多少） |
 | 退回任务 | 分析的退回任务里附上核对单的逐条位置、问题、证据、建议（上限 6,000 字符），照改即可 |
 | render 节点 | 程序步：应用替换 → `client_copy`（展开 `{{block:...}}`、删去含案号或 run_id 的行，写成 `briefing.polished.md` 供宿主与旧读者）→ `render_pdf` → 带新 PDF 再 `report_check`；排版失败停 `agent_failed`，检查失败退回分析 |
@@ -428,4 +430,20 @@ review_draft 和 review_final 各自同时跑两个复核 agent：主复核（�
 
 ## 14. 执行框架：默认 Codex + qwen（2026-11-07）
 
-图、路由、程序步和核对规则不变，换的是执行 agent 的命令行。默认用 Codex CLI 驱动 qwen3.8-flash（Token Plan 的 OpenAI 兼容接口，Responses API），入口 `agent/tools/orchestrate_codex.py`，配置 `agent/harness.json`（各节点的模型和思考档位；`agent/harness.gpt-luna.json` 是 GPT 备选）。网页宿主默认走这条路，设 `TAX_HARNESS=claude` 回到 Claude Code（`orchestrate.py`）。每次调用一个新会话、独立的 `CODEX_HOME`，只拿到本 provider 的密钥；MCP 服务器与 Claude 路径相同，另加受控读文件的 `tax-files`。原因：同一输入下，Codex + qwen 的分析节点 23.6 分钟，Claude Code + qwen 30 到 49 分钟，且 Claude Code 与 Token Plan 的流出现过一小时只出几千 token 的卡顿。说明见 `.codex/README.md`。
+图、路由、程序步和核对规则不变，换的是执行 agent 的命令行。默认用 Codex CLI 驱动 qwen3.8-flash（分析节点自 2026-11-08 起、法律论证复核线 `review_legal` 自 2026-11-12 起用 qwen3.8-max；Token Plan 的 OpenAI 兼容接口，Responses API），入口 `agent/tools/orchestrate_codex.py`，配置 `agent/harness.json`（各节点的模型和思考档位；`agent/harness.gpt-luna.json` 是 GPT 备选）。网页宿主默认走这条路，设 `TAX_HARNESS=claude` 回到 Claude Code（`orchestrate.py`）。每次调用一个新会话、独立的 `CODEX_HOME`，只拿到本 provider 的密钥；MCP 服务器与 Claude 路径相同，另加受控读文件的 `tax-files`。每份生成的配置都指向官方的千问模型元数据（`agent/codex_model_catalog.json`，窗口 983,616），对话历史到 840,000 token 时自动压缩（2026-11-13，见 `.codex/README.md`）。原因：同一输入下，Codex + qwen 的分析节点 23.6 分钟，Claude Code + qwen 30 到 49 分钟，且 Claude Code 与 Token Plan 的流出现过一小时只出几千 token 的卡顿。说明见 `.codex/README.md`。
+
+## 15. 报告版式归程序、词数上限、读权限白名单（2026-11-12）
+
+端到端的报告写得太长，流程图挤在一起，分析又因为句子长度被反复退回。改为：
+
+| 部分 | 现在 |
+|---|---|
+| 分析 | 只写各部分的正文；不再调 `render_pdf`，提示词里不写页数范围、句子长度，也不写任何数字。预判本和"每件事只论证一次"的守则删去。引用写成标记 `{{cite:<cite_id>|<显示文字>}}` |
+| 词数上限 | 按部分，基数加每个结构（第 3 部分）或每个假设（附录 A）的额度，写在 `agent/tools/report_limits.json`；`part_check` 和 `report_check` 只报超限的部分（"Part N: X words, limit Y. Cut it."）；各部分词数写进 `log/word_counts.jsonl`。全篇不设上限 |
+| 框架 | `build_frame` 另写 `frame/blocks/flow.json`：按产物生成的流程图（`sections.flow_spec`：现状和推荐两条持股链，前台在 facts.json `names` 里记了法定名称的就用它，每栏写股息和这笔股息的税，中间是调整动作：持有人的变化和数字所依赖的做法，没有就写"持股结构不变"） |
+| 排版节点 | 套用替换句 → `report_form.client_text`（标题和日期取自 facts.json，第 1 部分末尾放流程图，第 5 部分标题下放税负表，附录 A 放假设表和事实缺口，附录 B 按引用标记和出处表生成，标记只印显示文字，不留案卷号和 run_id；写成 `briefing.polished.md`）→ `render_pdf`（字号和版式在模板里定；排版报告给出 `flow_overlaps`，记日志）→ `report_check`。不查页数 |
+| 读权限 | 按身份和节点列的白名单（`agent/tools/access.py`）；`prepare` 启动每个 MCP 服务时传入节点名（`codex_mcp.py --node`，设为 `TAX_NODE`），所以交接包、草稿、法律论证三路复核读的文件不同，底稿和 bug 文件也分开 |
+| 替换句与词数上限 | 复核看不到词数上限，它们给的替换句会加词；所以排版时 `render_pdf` 的文字关和最后一次自检对超限放行（`report_form.OVERRUN`），其他问题照样退回。作者自己的文字在分析节点结束时已经按上限查过。替换句里引用标记的显示文字只写条文简称，解释放在标记之后（复核提示词），因为太长的显示文字会被退回（CASE-20261112-af3581：12 条替换句加了约 140 词，还有一个 19 词的显示文字，多出一轮分析和再核） |
+| 自家仓库 | Codex 的联网搜索只支持域名白名单（`tools.web_search.allowed_domains`），`experimental_network.denied_domains` 管的是沙箱命令的托管代理，而本框架不跑命令；所以 `ZhihongWu-dev/Asia-Tax-AI-Agent` 在 `github.com` 和 `raw.githubusercontent.com` 上的路径（规范和标准答案都在里面）没法事先屏蔽。每个 Agent 节点结束后由 `flag_repo` 扫新的节点日志，碰到就在 `runs.jsonl` 写一行 `repo_hit`。仓库是否设为私有由团队商量 |
+| 宿主 | 交付说明和预览卡说明的提示里写明最多 200 词（2026-11-12 用户定）；宿主只数交付说明和预览卡说明的词数（其他转述不数），超过 200 就让它重写，最多两次（2026-11-13：一份 213 词的说明重写后变成 227 词而被换掉；现在只有数字不对时才附第 1 部分，长度超限时附了它，模型会多写）（"Your note has N words, limit 200. Shorten it."；2026-11-12 由 120 改为 200，148 词的重写稿内容完整却被兜底替换），还超就换成平实的兜底说明。每次重写（长度、数字、系统名称）都把要改的那段原文带上，交付时再带上第 1 部分：Codex 每次都是新会话，曾经重写了一段它根本没见过的说明（CASE-20261112-af3581） |
+| 策略深度（2026-11-12） | run_input 把客户的行为条件（`receive_at_destination`、`this_payment_can_wait`、`declared_to_payee`）连同其他硬约束传给优化层；优化层对客户没说而第一名依赖的行为条件再跑一遍（products/<run_id>/conduct/<键>/），并写 sequence.json、premises.json 和 brief 的 conduct / sequence / diagnosis / must_state（优化层规范 §4.7a）；框架据此写"The group's own choices"等几节和选择表、"数字靠什么"表，客户副本把前者放在第 1 部分流程图之后、后者放在第 5 部分税负表之后；第 1 部分的词数上限按选择表的行数加额；report_check 核 must_state 的数字。优化层一次运行因此约多一倍时间（本案约 5 分钟） |

@@ -12,7 +12,7 @@ English copy of `agent/润色Agent规范.md`; when the two differ the Chinese ve
 
 ## 1. Role
 
-**The system in one sentence**: a client (a company or an individual) holds shares across Mainland China, Hong Kong, Singapore, Japan and Thailand and receives dividends, or transfers shares for that purpose; the system compares the tax on both sides of different holding structures and payment routes, finds the structure with the lowest tax whose legal conditions can be met, and explains what is wrong with the current structure and how it can be changed. The library holds only the income-tax law of these five jurisdictions.
+**The system in one sentence**: a client (a company or an individual) holds shares across Mainland China, Hong Kong, Singapore, Japan, Thailand, Vietnam, Malaysia, the United Arab Emirates, Indonesia, India and Korea and receives dividends, or transfers shares for that purpose; the system compares the tax on both sides of different holding structures and payment routes, finds the structure with the lowest tax whose legal conditions can be met, and explains what is wrong with the current structure and how it can be changed. The library holds only the income-tax law of these jurisdictions.
 
 The polish agent works after review has passed the draft, and review then compares the report with the draft. Analysis writes a complete draft that is thorough but long. Polish turns it into a written opinion ready to hand to the client: the body before the appendices runs to 5 to 10 pages, and the appendices do not count. The draft stays as it is and keeps the detailed reasoning.
 
@@ -73,7 +73,7 @@ Defects of the system go through `bug_append` into `cases/<case_id>/bugs/polish.
 ## 10. The prompt handed over (English version)
 
 ```text
-You are the polish agent of the cross-border dividend tax planning system. The system compares the tax on both sides of a client's holding structures and payment routes across Mainland China, Hong Kong, Singapore, Japan and Thailand, and finds the structure with the lowest tax whose legal conditions can be met.
+You are the polish agent of the cross-border dividend tax planning system. The system compares the tax on both sides of a client's holding structures and payment routes across Mainland China, Hong Kong, Singapore, Japan, Thailand, Vietnam, Malaysia, the United Arab Emirates, Indonesia, India and Korea, and finds the structure with the lowest tax whose legal conditions can be met.
 
 The analysis agent's complete draft has passed review and is at cases/<case_id>/report/<run_id>/briefing.md, its sources table at briefing.sources.json and the handoff at cases/<case_id>/intake/handoff.md. Turn it into a written opinion ready to hand to the client, and produce the PDF. The reader is the client; the standard is a top firm's opinion.
 

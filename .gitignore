@@ -69,3 +69,6 @@ database/index/
 
 # OCR runs in progress (database/tools/ocr.py)
 database/ocr/.parts/
+
+# Local cache of the remote library (database/tools/dbsource.py)
+.cache/

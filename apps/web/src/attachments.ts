@@ -13,8 +13,9 @@ export function splitAttachments(text: string): { text: string; files: Attachmen
   try {
     const parsed = JSON.parse(text.slice(index + delimiter.length));
     const files: Attachment[] = Array.isArray(parsed) ? parsed : [parsed];                       // messages stored before several files were allowed
-    if (!files.every(file => typeof file.name === 'string' && Array.isArray(file.pages) && file.pages.every((p: { page: unknown; text: unknown }) => typeof p?.page === 'number' && typeof p?.text === 'string'))) return { text, files: [] };
-    return { text: text.slice(0, index), files };
+    // a file needs its name; pages, where given, must be well formed (a message sent by a script carries only id and name)
+    if (!files.every(file => typeof file?.name === 'string' && (file.pages === undefined || (Array.isArray(file.pages) && file.pages.every((p: { page: unknown; text: unknown }) => typeof p?.page === 'number' && typeof p?.text === 'string'))))) return { text, files: [] };
+    return { text: text.slice(0, index), files: files.map(file => ({ ...file, pages: file.pages ?? [], page_count: file.page_count ?? 0, empty_pages: file.empty_pages ?? [] })) };
   } catch { return { text, files: [] }; }
 }
 export async function uploadAttachment(file: File, signal: AbortSignal): Promise<Attachment> {

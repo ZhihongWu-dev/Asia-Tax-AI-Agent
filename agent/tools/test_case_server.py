@@ -94,6 +94,20 @@ def main():
         probs = r.get("problems", [])
         check("intake_check runs and flags the quote not in dialogue", any("ppt" in p and "dialogue" in p for p in probs), probs)
         check("intake_check: optimizer accepts the example facts", not any("rejected by the optimizer" in p for p in probs), probs)
+        prev = root / C / "intake" / "products" / "20261101-preview1"           # a preview whose first structure turns on a choice (§4.7a)
+        prev.mkdir(parents=True, exist_ok=True)
+        (prev / "brief.json").write_text(json.dumps({"conduct": [{"key": "receive_at_destination", "stated": None, "changes_rank": True,
+                                                                 "question": "Must the money be brought in?"}]}), encoding="utf-8")
+        probs = (await call(front, "intake_check", {"case_id": C})).get("problems", [])
+        check("intake_check asks for a choice the preview shows to change the plan", any("receive_at_destination" in p and "not been asked" in p for p in probs), probs)
+        await call(front, "write_intake", {"case_id": C, "name": "constraints", "content": json.dumps({"receive_at_destination": "unknown"})})
+        probs = (await call(front, "intake_check", {"case_id": C})).get("problems", [])
+        check("\"unknown\" records that the client was asked", not any("receive_at_destination" in p for p in probs), probs)
+        await call(front, "write_intake", {"case_id": C, "name": "constraints", "content": json.dumps({"receive_at_destination": "maybe"})})
+        probs = (await call(front, "intake_check", {"case_id": C})).get("problems", [])
+        check("a conduct value other than true, false or \"unknown\" is reported", any("receive_at_destination is true, false" in p for p in probs), probs)
+        shutil.rmtree(prev)
+        (root / C / "intake" / "constraints.json").unlink()
 
         # review of the intake: verdict rules and status derivation
         r = await call(review, "write_review", {"case_id": C, "which": "intake", "content": "All fine.\n\nVerdict: maybe"})
@@ -150,7 +164,7 @@ def main():
         r = await call(review, "report_check", {"case_id": C, "run_id": "20261101-abcdef12", "target": "draft", "text_only": True})
         probs = r.get("problems", [])
         check("report_check(draft): structure passes, bad cite flagged", any("no.such#1" in p for p in probs) and not any("part missing" in p or "lacks the part" in p or "appendix" in p or "identifiers" in p for p in probs), probs)
-        check("report_check(draft) asks for the diagram block", any("flow" in p for p in probs), probs)
+        check("report_check(draft) no longer asks for a diagram block (the program draws it)", not any("flow" in p for p in probs), probs)
         doctored = briefing.replace("推荐由新加坡母公司直接持有深圳公司", "**一句话：** 推荐由新加坡母公司直接持有深圳公司，规则工具如此显示")
         await call(analysis, "write_report", {"case_id": C, "run_id": "20261101-abcdef12", "name": "briefing", "content": doctored})
         r = await call(review, "report_check", {"case_id": C, "run_id": "20261101-abcdef12", "target": "draft", "text_only": True})
@@ -215,7 +229,13 @@ def main():
         await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Problem: none.\nVerdict: DELIVERABLE"})
         copy = Case(root, "front").client_copy(rd, C, R).read_text(encoding="utf-8")
         check("the client copy expands the table marker and drops the internal line", "| 1 | 2 |" in copy and "{{block" not in copy and R not in copy, copy[-200:])
-        r = await call(analysis, "render_pdf", {"case_id": C, "run_id": R})
+        try:
+            await call(analysis, "render_pdf", {"case_id": C, "run_id": R})
+            listed = True
+        except Exception:                                        # noqa: BLE001 - an unknown tool raises
+            listed = False
+        check("render_pdf is not an analysis tool (2026-11-12: the program typesets)", not listed)
+        r = Case(root, "front").render_pdf(C, R)
         check("render refuses while the text has problems", r.get("error") == "conflict", r)
         time.sleep(0.05)
         (rd / "briefing.pdf").write_bytes(b"pdf")
@@ -232,20 +252,37 @@ def main():
         check("round_new -> round 2 intake", r.get("round") == 2 and (root / C / "notes" / "analysis" / "round-2").is_dir(), r)
 
         # notebooks, bugs
-        r1 = await call(analysis, "notes_append", {"case_id": C, "book": "precommit", "text": "我凭差额判第一名。"})
-        r2 = await call(analysis, "notes_append", {"case_id": C, "book": "precommit", "text": "实际：c1。中。"})
-        nb = (root / C / "notes" / "analysis" / "round-2" / "precommit.md").read_text(encoding="utf-8")
-        check("notes_append numbers entries in round-2", r1.get("entry") == "precommit-1" and r2.get("entry") == "precommit-2" and "round 2.0" in nb, nb)
-        r = await call(review, "notes_append", {"case_id": C, "book": "precommit", "text": "x"})
+        r1 = await call(analysis, "notes_append", {"case_id": C, "book": "products", "text": "第一名每跳的税来自 tax.json。"})
+        r2 = await call(analysis, "notes_append", {"case_id": C, "book": "products", "text": "差额来自 deltas.json。"})
+        nb = (root / C / "notes" / "analysis" / "round-2" / "products.md").read_text(encoding="utf-8")
+        check("notes_append numbers entries in round-2", r1.get("entry") == "products-1" and r2.get("entry") == "products-2" and "round 2.0" in nb, nb)
+        r = await call(review, "notes_append", {"case_id": C, "book": "products", "text": "x"})
         check("review cannot write analysis' book", r.get("error") == "invalid")
+        r = await call(analysis, "notes_append", {"case_id": C, "book": "precommit", "text": "x"})
+        check("the pre-commitment notebook is gone (2026-11-12)", r.get("error") == "invalid", r)
         b1 = await call(front, "bug_append", {"case_id": C, "layer": "工具", "symptom": "fx timed out", "expected": "rates returned", "repro": "fx --base CNY", "workaround": "used last month"})
         b2 = await call(front, "bug_append", {"case_id": C, "layer": "工具", "symptom": "fx  timed out", "expected": "", "repro": "", "workaround": ""})
-        check("bug dedupe by symptom", b1.get("entry") == "B-1" and b2.get("duplicate_of") == "B-1", (b1, b2))
+        check("bug dedupe by symptom, one-sentence answers without a path", b1.get("entry") == "B-1" and b2.get("duplicate_of") == "B-1" and "path" not in b1 and b2.get("note"), (b1, b2))
+        os.environ["TAX_NODE"] = "review_legal"
+        try:
+            b5 = await call(review, "bug_append", {"case_id": C, "layer": "tool", "symptom": "extract cut a clause short", "expected": "", "repro": "", "workaround": ""})
+        finally:
+            os.environ.pop("TAX_NODE", None)
+        check("the legal lane writes its own bug file", b5.get("entry") == "B-1" and (root / C / "bugs" / "review_legal.md").exists() and not (root / C / "bugs" / "review.md").exists(), b5)
         b3 = await call(analysis, "bug_append", {"case_id": C, "layer": "rule", "symptom": "one holding percentage only", "affects_result": True})
         check("affects_result without the case effect -> invalid", b3.get("error") == "invalid", b3)
         b4 = await call(analysis, "bug_append", {"case_id": C, "layer": "rule", "symptom": "one holding percentage only", "affects_result": True, "effect": "Plan A tax 700,000 -> 1,400,000"})
         bugs = (root / C / "bugs" / "analysis.md").read_text(encoding="utf-8")
         check("affects_result with the effect is recorded", b4.get("entry") == "B-1" and "- affects_result: yes" in bugs and "- effect: Plan A" in bugs, bugs[-200:])
+        os.environ["TAX_NODE"] = "review_legal"
+        try:
+            await call(review, "bug_append", {"case_id": C, "layer": "rule", "symptom": "transfer cell lacks the surtax", "affects_result": True,
+                                              "effect": "one-off 270,000,000 -> 275,670,000"})
+        finally:
+            os.environ.pop("TAX_NODE", None)
+        import case_server as csm  # noqa: E402
+        held = csm.Case(root, "front").open_defects(C)
+        check("a defect from the legal lane holds the run too (2026-11-12)", "review_legal/B-2" in held and "analysis/B-1" in held, held)
         r = await call(analysis, "to_collect_append", {"case_id": C, "law": "印花税法", "jur": "sg", "url": "", "why": "0.2% 只作参数"})
         check("analysis to_collect ok", "path" in r, r)
 
@@ -253,7 +290,7 @@ def main():
 
     # log hook inference
     hook_in = {"session_id": "s1", "cwd": str(root.parent), "tool_name": "mcp__tax-case-analysis__notes_append",
-               "tool_input": {"case_id": C, "book": "precommit", "text": "secret body"}}
+               "tool_input": {"case_id": C, "book": "products", "text": "secret body"}}
     p = subprocess.run([PY, str(HERE / "log_hook.py")], input=json.dumps(hook_in), capture_output=True, text=True, encoding="utf-8")
     logp = root / C / "log" / "calls.jsonl"
     line = json.loads(logp.read_text(encoding="utf-8").splitlines()[-1]) if logp.exists() else {}
@@ -285,9 +322,34 @@ def main():
     check("report_check catches an English spoken lead-in", any("spoken" in p for p in probs), probs)
     check("report_check catches English process wording", any("not on file" in p for p in probs), probs)
 
+    # citation markers and the hidden word limits per part (2026-11-12)
+    marked = english.replace("go direct.", "go direct under {{cite:no.such#9|Article 10}} and "
+                             "{{cite:cn.reg.eit#91|This article says the dividend is exempt when a resident holds the shares for twelve months}}.")
+    marked = marked.replace("## 2. Current State\nx", "## 2. Current State\n" + " ".join(["word"] * 600))
+
+    async def run_marked():
+        (root / C2 / "report" / "r1" / "briefing.md").write_text(marked, encoding="utf-8")
+        whole = await call(review, "report_check", {"case_id": C2, "run_id": "r1", "target": "draft"})
+        one = await call(review, "report_check", {"case_id": C2, "run_id": "r1", "target": "draft", "part": "2"})
+        return whole, one
+
+    whole, one = asyncio.run(run_marked())
+    probs = whole.get("problems", [])
+    check("a cite_id the library lacks is reported", any("no.such#9" in p and "not a provision" in p for p in probs), probs)
+    check("a label written as a sentence is reported", any("label is a sentence" in p for p in probs), probs)
+    check("a part over its limit is reported with the count and the limit only", "Part 2: 600 words, limit 500. Cut it." in probs, probs)
+    check("the part check reports the same overrun", "Part 2: 600 words, limit 500. Cut it." in one.get("problems", []), one)
+    check("no part within its limit is mentioned and no page counts are returned",
+          not any("Part 1:" in p or "Part 3:" in p for p in probs) and "body_pages" not in whole and "pdf_pages" not in whole, whole)
+    counts = root / C2 / "log" / "word_counts.jsonl"
+    check("the counts of all parts go to the developer log", counts.exists() and '"2"' in counts.read_text(encoding="utf-8"), counts)
+
     # PDF template: flowchart from a dot block, numbered list, table, plain fenced block
     sample = root / "sample.md"
-    flow = (PROJECT / "agent" / "templates" / "flowchart.example.json").read_text(encoding="utf-8")
+    side = {"chain": [{"name": "Brightpeak Asia Pte. Ltd.", "note": "Singapore company"}, {"name": "Shenzhen Chenguang Co., Ltd.", "note": "Mainland China company"}],
+            "holds": ["holds 100%"], "dividend_to": 0, "dividend_label": "Dividend RMB 14,000,000", "result": "Tax on this dividend: RMB 700,000"}
+    flow = json.dumps({"current": dict(side, title="Current structure"), "target": dict(side, title="Recommended structure: Plan A"),
+                       "steps_title": "From the current to the recommended structure", "steps": ["Holdings unchanged"]}, ensure_ascii=False)
     sample.write_text("# 标题\n\n**致：** 甲公司\n**日期：** 2026-11-01\n\n## 1. 策略思路\n\n1. 第一项\n2. 第二项\n\n```flow\n" + flow + "\n```\n\n"
                       "| 方案 | 税负 |\n|---|---|\n| A | 10% |\n\n```\nraw   text   keeps   spaces\n```\n", encoding="utf-8")
     out = root / "sample.pdf"

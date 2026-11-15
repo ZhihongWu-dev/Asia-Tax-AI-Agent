@@ -30,6 +30,18 @@ class AdapterTests(unittest.TestCase):
         self.assertTrue(codex_adapter.parse_output("\n".join(map(json.dumps, lines)))["is_error"])
         self.assertTrue(codex_adapter.parse_output("")["is_error"])
 
+    def test_model_catalog_and_compaction(self):
+        data = harness.settings()
+        for role, node in (("front", "front"), ("analysis", "analysis"), ("review", "review_legal")):
+            lines = codex_adapter.model_metadata(harness.selection(data, role, node))
+            self.assertTrue(any(l.startswith("model_catalog_json = ") and "codex_model_catalog.json" in l for l in lines), lines)
+            self.assertIn("model_auto_compact_token_limit = 840000", lines)
+        other = dict(harness.selection(data, "analysis", "analysis"), model="gpt-6-luna")
+        self.assertFalse(any(l.startswith("model_auto_compact_token_limit") for l in codex_adapter.model_metadata(other)))
+        catalog = json.loads((harness.PROJECT / "agent" / "codex_model_catalog.json").read_text(encoding="utf-8"))
+        windows = {m["slug"]: m["context_window"] for m in catalog["models"]}
+        self.assertEqual(windows, {"qwen3.8-max": 983616, "qwen3.8-flash": 983616})   # the official catalog's values
+
     def test_node_over_role_over_default(self):
         data = {"default": {"backend": "claude"}, "codex": {"model": "gpt-6-luna"},
                 "nodes": {"review": {"backend": "codex"}, "review_final": {"backend": "claude"}}}

@@ -55,7 +55,7 @@ cases/<case_id>/
 | 路径 | front | analysis | polish | review |
 |---|---|---|---|---|
 | `intake/` 的 facts、sources、answers、notes、constraints、handoff | 写（留 .prev） | — | — | — |
-| `intake/documents/`、`prompt.md` | 放入（首轮） | — | — | — |
+| `intake/documents/`、`prompt.md` | 放入（首轮；网页对话进来的案卷，prompt.md 由主机记客户第一条消息时原样写好） | — | — | — |
 | `intake/dialogue.md` | 追加 | — | — | — |
 | `intake/to_collect.md` | 追加 | 追加 | — | — |
 | `intake/review_intake.md` | — | — | — | 写（留 .prev） |
@@ -76,8 +76,8 @@ cases/<case_id>/
 | `intake/`、`report/`、`rounds.json` | 可 | 可（旧 run 的 `report/`、`intake/products/` 拒绝；新旧差别只读当前产物的 diff.json） | 可（旧 run 的 `report/`、`intake/products/` 拒绝；润色只读本轮草稿、出处表、handoff，不读产物） | 可 |
 | `notes/<own>/round-<当前>/` | 可 | 可 | 可 | 可 |
 | `notes/<own>/round-<旧>/`、`notes/<other>/` | 拒绝 | 拒绝 | 拒绝 | `notes/analysis/round-<当前>/` 在本轮 review.md 写出后可读（时间先后靠复核规范约束）；其余拒绝 |
-| `bugs/<own>.md` | 可 | 可 | 可 | 可 |
-| `log/calls.jsonl` | — | — | — | 本轮 review.md 写出后可读 |
+| `bugs/<own>.md` | 拒绝（2026-11-12 起只写不读） | 拒绝 | 拒绝 | 拒绝 |
+| `log/` | — | — | — | 只有 `log/review_changes-*.md`（2026-11-12 起） |
 
 守卫钩子从 `rounds.json` 读当前 round 与 run_id 判"旧轮"、"旧 run"，从 `report/<run>/review.md` 是否存在判复核是否已出单。宿主的 `permissions.deny` 是会话级的，不按子 Agent 分，所以不用它。
 
@@ -91,6 +91,7 @@ cases/<case_id>/
 |---|---|---|
 | `write_intake` | front | case_id, name ∈ {facts, sources, answers, notes, constraints, handoff}, content → 覆盖写，留 .prev；facts / sources / answers / constraints 必须是合法 JSON，sources 每条必含 key, doc, page, quote；写 handoff 以外的文件后账本 intake_dirty = true |
 | `put_document` | front | case_id, name, bytes → 放进 `intake/documents/`；`name = prompt` 写 `intake/prompt.md` |
+| `remove_document` | front | case_id, name → 客户说传错的单据从 `intake/documents/` 移到 `intake/withdrawn/` 留档（同名已在则加时间戳）；账本 intake_dirty = true 并记 last_intake_write；返回仍引用它的出处键 cited_by |
 | `dialogue_append` | front | case_id, speaker ∈ {client, front}, text → 追加 `### 日期 \| round N.k \| speaker`，返回条目号 |
 | `to_collect_append` | front, analysis | case_id, law, jur, url, why → 追加一条 |
 | `write_report` | analysis | case_id, run_id, name ∈ {briefing, sources}, content, mode? → 写 `briefing.md` / `briefing.sources.json`；run_id 必须是本轮账本里的；mode=append 给草稿追加一节，或给出处表按 id 增改 |
@@ -116,8 +117,8 @@ cases/<case_id>/
 |---|---|
 | `round_current` | case_id → 账本当前条目加推出的状态（§2 表）和 `return_to` |
 | `review_status` | case_id, which ∈ {intake, draft, final} → 对应核对单的总判断、退回去向与写入时间；不存在返回 `none` |
-| `intake_check` | case_id → 列表：facts.json 能被优化层读入（调 `tax-opt` 的 `validate_input`）；不带 answers，有 instructed_on，past_payments 是顶层列表且每行有 date、payee_share；写了 destinations；payer、payee、entities、destinations 的地区都在规则层范围内；payer、payee、payment、entities 的事实键都是规则层变量；收款方的上层（parent_jur）在 entities 里；constraints.json 只有 consider、exclude、allow_restructure、payback_max、allowed_subjects；answers.json 的键都是谓词；sources 覆盖 facts 每个键且每条有 doc + page + quote；answers 的 yes / no / unknown_asked 都有原话且原话在 dialogue.md 里；confirmed_by_client 为真的有 confirmed_note；推出的状态是否 intake_ok |
-| `report_check` | case_id, run_id, target ∈ {auto, draft, polished}（auto = 有润色稿就核润色稿）→ 列表：抬头日期等于 instructed_on；past_payments 的可退金额和对不上的数字在报告里；润色稿正文没有优化层用语、没有超过 55 词的句子；报告头、一到七节、附录 A / B 都在；无系统标识；出处表每条有 where、ref 存在（产物路径可打开；cite_id 用 `tax-db` 的 `clause` 查）；核润色稿时额外报：`number_drift`（润色稿里草稿没有的数字）、`claims_changed`、`where_unlocated`、口语标签、案号或 run_id 留在成稿里、PDF 过期或正文不在 5 到 10 页之间；`numbers_omitted` 和 `sources_cut` 只列出被删内容，不算问题 |
+| `intake_check` | case_id → 列表：facts.json 能被优化层读入（调 `tax-opt` 的 `validate_input`）；最近一次预跑的 brief.conduct 显示会改变方案的集团选择，在 constraints.json 里有记录（true、false，或客户说不上来时 "unknown"；2026-11-12）；不带 answers，有 instructed_on，past_payments 是顶层列表且每行有 date、payee_share；写了 destinations；payer、payee、entities、destinations 的地区都在规则层范围内（有规则，且六个股息槽位在 `rule/STATUS.md` 里没有覆盖缺口：缺一格优化层就不把它放进搜索）；payer、payee、payment、entities 的事实键都是规则层变量；收款方的上层（parent_jur）在 entities 里；constraints.json 只有 consider、exclude、allow_restructure、payback_max、allowed_subjects；answers.json 的键都是谓词；sources 覆盖 facts 每个键且每条有 doc + page + quote，且不引用已移出案卷（`intake/withdrawn/`）的单据；answers 的 yes / no / unknown_asked 都有原话且原话在 dialogue.md 里；confirmed_by_client 为真的有 confirmed_note；推出的状态是否 intake_ok |
+| `report_check` | case_id, run_id, target ∈ {auto, draft, polished}（auto = 有润色稿就核润色稿）→ 列表：抬头日期等于 instructed_on；past_payments 的可退金额和对不上的数字在报告里（有 readings 时每种口径的基数和可退金额）；brief 的 must_state 里的每个数字在报告里（优化层规范 §4.7a）；润色稿正文没有优化层用语、没有超过 55 词的句子；报告头、一到七节、附录 A / B 都在；无系统标识；出处表每条有 where、ref 存在（产物路径可打开；cite_id 用 `tax-db` 的 `clause` 查）；核润色稿时额外报：`number_drift`（润色稿里草稿没有的数字）、`claims_changed`、`where_unlocated`、口语标签、案号或 run_id 留在成稿里、PDF 过期或正文不在 5 到 10 页之间；`numbers_omitted` 和 `sources_cut` 只列出被删内容，不算问题 |
 
 自检只报不改，结果是列表，Agent 自己决定怎么办；复核仍按自己的规范逐条核，不以自检通过为准。两个自检是服务里唯一调用另两个服务的地方（import 它们的读函数，不经 MCP）。
 
@@ -182,3 +183,11 @@ cases/<case_id>/
 - `bug_append`：`affects_result=true` 必须带 `effect`（本案哪个数或排名从什么变成什么），否则拒收；本案结果不变的建模缺口标 false。
 - 程序专用：`apply_replacements(case_id, run_id)`、`autofix_draft(case_id, run_id)`、`client_copy(rd, case_id, run_id)`。
 - 状态：`polished` 不再出现；`delivered` = 复核两线通过且 `briefing.pdf` 比草稿和核对单都新。
+
+## 变更（2026-11-12）：读权限白名单、报告版式归程序、隐藏的词数上限
+
+- **读权限是白名单**（`agent/tools/access.py`，守卫钩子、Codex 文件服务 `tax-files` 和 tax-read 共用）：每个身份只能读给它列出的；复核再按节点分（`TAX_NODE`，由 Codex 服务包装按 `--node` 设置；交接包、草稿、法律论证三路各不相同）；其余一律拒绝，包括 `cases/` 以外的一切（规范、代码、配置）、`bugs/`、`chat.json`、`rounds.json`、`.prev` 文件、原始记录索引、其他节点的预取包、搜索视图的文件和 `log/`（复核只读编排器写的 `log/review_changes-*.md`）。新功能加的文件，列进来之前都读不到。上面 §3 的读表以此为准。
+- **bug 只写不读**：没有身份读 `bugs/`；`bug_append` 自己判重（现象相同就在原条下记一行 `recurrence round N`），只回一句话（`entry` 或 `duplicate_of` 加 `note`，不给路径）。法律论证那一路写 `bugs/review_legal.md`，复核的其他节点写 `bugs/review.md`，因为两路同时跑。
+- **`render_pdf` 是程序的步骤**：分析身份调用一律拒绝；编排的排版节点在 `apply_replacements` 之后调用。它用 `report_form.client_text` 组出客户副本（标题和日期取自 facts.json，第 1 部分末尾放按 `frame/blocks/flow.json` 画的流程图，第 5 部分标题下放税负表，附录 A 放假设表和事实缺口，附录 B 按引用标记和出处表生成，引用标记只印显示文字，带案卷号或 run_id 的行不出现）再排版；返回 `written`、`latex_errors`、`overfull`、`flow_overlaps` 和版本号，不返回页数。
+- **`report_check(target=draft)` 和 `part_check`**：不再查抬头日期、内部编号行、流程图块、长句和页数；新增 `bad_cites`（`{{cite:<cite_id>|<显示文字>}}` 的 cite_id 不是库里的条文，或显示文字是一句话）和按部分的词数上限（`agent/tools/report_limits.json`，Agent 读不到）：某部分超限时报一句 "Part N: X words, limit Y. Cut it."，计数的其余内容都不返回，各部分词数写进 `log/word_counts.jsonl`。草稿要有一到七部分和附录 A；附录 B 归程序。
+- `apply_replacements` 在草稿原文里找复核给的原句，找不到再按客户读到的文字（标记换成显示文字）找，碰到的标记整个覆盖。

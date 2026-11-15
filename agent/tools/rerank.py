@@ -31,8 +31,9 @@ def _load():
     return _m
 
 
-def order(query, docs, material="law", batch=8):
-    """Indices of docs, most relevant first."""
+def order(query, docs, material="law", batch=2):
+    """Indices of docs, most relevant first. Batches of 2: the peak memory of a forward pass grows with the batch (about
+    0.9 GB per 2048-token document on the GPU) while the time per document does not, and two review lanes rerank at once."""
     if len(docs) <= 1:
         return list(range(len(docs)))
     import torch
@@ -47,7 +48,7 @@ def order(query, docs, material="law", batch=8):
         enc = tok.pad(enc, padding=True, return_tensors="pt", max_length=MAX_LEN)
         enc = {k: v.to(m["dev"]) for k, v in enc.items()}
         with torch.no_grad():
-            logits = model(**enc).logits[:, -1, :]
+            logits = model(**enc, logits_to_keep=1).logits[:, -1, :]      # the last position only, not all 2048 x vocabulary
         pair = torch.stack([logits[:, m["no"]], logits[:, m["yes"]]], dim=1).float()
         probs += torch.nn.functional.log_softmax(pair, dim=1)[:, 1].exp().tolist()
     return sorted(range(len(docs)), key=lambda i: (-probs[i], i))

@@ -4,14 +4,14 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 
 | What | Count |
 |---|---|
-| Documents | 285 |
-| Clauses | 37627 |
+| Documents | 287 |
+| Clauses | 38152 |
 | Clauses left out (superseded.csv) | 217 |
 | Repealed-provision stubs left out | 50 |
-| Parameters | 572 |
+| Parameters | 760 |
 | Treaty rows | 55 |
-| Absence records | 45 |
-| Errors / warnings | 0 / 117 |
+| Absence records | 46 |
+| Errors / warnings | 0 / 133 |
 | Gaps: (jurisdiction, category) / (jurisdiction, subject, slot) / pairs without a treaty row / unresolved downloads | 6 / 36 / 0 / 2 |
 
 ## Documents
@@ -132,6 +132,7 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | jp.sma | jp | law | 2;3;9 | xml | ok | jp_article | 3788 | 租税特別措置法（昭和32年法律第26号） |
 | kr.corporate-tax-act.20260701.ko | kr | law | 1;3;4;6;9 | pdf | ocr | kr_pdf_article | 823 | 법인세법 |
 | kr.income-tax-act.20260701.ko | kr | law | 2;3;4;6;9 | pdf | ocr | kr_pdf_article | 1148 | 소득세법 |
+| kr.itca | kr | law | 3;4 | html | ok | kr_page_article | 433 | 국제조세조정에 관한 법률 |
 | kr.itca.enforcement-decree | kr | regulation | 3;4 | pdf | ok | page | 163 | ENFORCEMENT DECREE OF THE ADJUSTMENT OF INTERNATIONAL TAXES  |
 | kr.nts.corporate-rate-2026 | kr | guidance | 1;page_rates | html | ok | html_section | 3 | 법인세 세율 (2026년 이후) |
 | kr.nts.corporate-tax-overview | kr | guidance | 1 | html | ok | html_section | 7 | 법인세 개요 |
@@ -300,6 +301,7 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | vn.gov.related-party-tax-avoidance | vn | guidance | 4 | htm | ok | html_section | 13 | Tăng cường công tác nghiệp vụ phát hiện, điều tra, xử lý ngh |
 | vn.gov.tax-filing-deadlines | vn | page | page_deadlines | htm | ok | html_section | 10 | Quy định thời hạn nộp hồ sơ khai thuế |
 | vn.law.cit2025.en | vn | law | 1;4;9 | htm | ok | whole | 1 | Law on Corporate Income Tax |
+| vn.law.pit.consolidation103.2025.vi | vn | law | 2 | doc | ok | vn_article | 92 | Luật Thuế thu nhập cá nhân — 103/VBHN-VPQH |
 | vn.law.pit.consolidation112.2026.vi | vn | law | 2 | pdf | ocr | page | 15 | Luật Thuế thu nhập cá nhân — 112/VBHN-VPQH |
 | vn.law.pit2026.vi | vn | law | 2 | pdf | ok | vn_article | 140 | Luật Thuế thu nhập cá nhân số 109/2025/QH15 |
 | vn.mofa.treaty-index | vn | page | page_treaties | html | ok | whole | 1 | Cơ sở dữ liệu Điều ước quốc tế |
@@ -421,12 +423,28 @@ None.
 - id.final.individual_top_rate cites id.tax-law-compilation-2022#p184: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
 - id.cfc.overseas_dividend_receipt_time cites id.tax-law-compilation-2022#p187: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
 - id.anti_abuse.substance_over_form cites id.tax-law-compilation-2022#p189: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
-- kr.cfc.cfc_reporting_required cites kr.itca.enforcement-decree#p59: a regulation is cited by provision; fix the slicer or record 'kr.itca.enforcement-decree sliced as whole/page' in session_log.md (§4.3)
-- kr.anti_abuse.substance_over_form_principle cites kr.itca.enforcement-decree#p4: a regulation is cited by provision; fix the slicer or record 'kr.itca.enforcement-decree sliced as whole/page' in session_log.md (§4.3)
 - ae.final.in_scope_mne_dmtt_applies cites ae.cabinet142.2024.dmtt.en#p2: a regulation is cited by provision; fix the slicer or record 'ae.cabinet142.2024.dmtt.en sliced as whole/page' in session_log.md (§4.3)
+- id.cfc.control_pct_min cites id.tax-law-compilation-2022#p188: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.cfc.control_pct_min.joint cites id.tax-law-compilation-2022#p188: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.cfc.inclusion_rate cites id.tax-law-compilation-2022#p184: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.cfc.invested_profit_share_min cites id.tax-law-compilation-2022#p133: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.final.progressive_bracket_1_rate cites id.tax-law-compilation-2022#p184: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.final.progressive_bracket_1_upper cites id.tax-law-compilation-2022#p184: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.final.progressive_bracket_2_rate cites id.tax-law-compilation-2022#p184: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.final.progressive_bracket_2_upper cites id.tax-law-compilation-2022#p184: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.final.progressive_bracket_3_rate cites id.tax-law-compilation-2022#p184: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.final.progressive_bracket_3_upper cites id.tax-law-compilation-2022#p184: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.final.progressive_bracket_4_rate cites id.tax-law-compilation-2022#p184: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.final.progressive_bracket_4_upper cites id.tax-law-compilation-2022#p184: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.final.progressive_bracket_5_rate cites id.tax-law-compilation-2022#p184: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- id.final.dividend_tax_rate cites id.tax-law-compilation-2022#p185: a law is cited by provision; fix the slicer or record 'id.tax-law-compilation-2022 sliced as whole/page' in session_log.md (§4.3)
+- kr-vn.anti_abuse.lob_main_purpose_applies cites treaty.kr-vn.2019.protocol.mofa.text#p22: a treaty is cited by provision; fix the slicer or record 'treaty.kr-vn.2019.protocol.mofa.text sliced as whole/page' in session_log.md (§4.3)
+- kr-vn.anti_abuse.lob_control_applies cites treaty.kr-vn.2019.protocol.mofa.text#p22: a treaty is cited by provision; fix the slicer or record 'treaty.kr-vn.2019.protocol.mofa.text sliced as whole/page' in session_log.md (§4.3)
+- kr-vn.anti_abuse.ppt_applies cites treaty.kr-vn.2019.protocol.mofa.text#p22: a treaty is cited by provision; fix the slicer or record 'treaty.kr-vn.2019.protocol.mofa.text sliced as whole/page' in session_log.md (§4.3)
 - vn.absent.3 cites vn.law.cit2025.en#all: a law is cited by provision; fix the slicer or record 'vn.law.cit2025.en sliced as whole/page' in session_log.md (§4.3)
 - vn.absent.cfc cites vn.law.cit2025.en#all: a law is cited by provision; fix the slicer or record 'vn.law.cit2025.en sliced as whole/page' in session_log.md (§4.3)
 - vn.absent.company.outbound_wht cites vn.law.cit2025.en#all: a law is cited by provision; fix the slicer or record 'vn.law.cit2025.en sliced as whole/page' in session_log.md (§4.3)
+- vn.absent.company.anti_abuse cites vn.law.cit2025.en#all: a law is cited by provision; fix the slicer or record 'vn.law.cit2025.en sliced as whole/page' in session_log.md (§4.3)
 
 ## Gaps
 

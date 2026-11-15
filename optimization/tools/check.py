@@ -43,6 +43,7 @@ class Checker:
         self.tax = op.jload(self.P / "tax.json")["taxes"]
         self.ranking = op.jload(self.P / "ranking.json")
         self.deltas = op.jload(self.P / "deltas.json")["deltas"]
+        self.variants = op.jload(self.P / "variants.json") if (self.P / "variants.json").exists() else {"variants": [], "taxes": []}
         self.open_items = op.jload(self.P / "open_items.json")["open_items"]
         self.version = op.jload(self.P / "version.json")
         self.fails = []
@@ -122,9 +123,9 @@ class Checker:
         dest = set(self.graph["destinations"])
         found = []
 
-        def dfs(node, w_f, w_c, needs, hops, restr, moves, path, transfers=frozenset(), last=None):
+        def dfs(node, w_f, w_c, needs, hops, restr, moves, path, transfers=frozenset(), last=None, new=0):
             if node in dest and hops > 0:
-                found.append({"node": node, "w": {"floor": round(w_f, 6), "ceiling": round(w_c, 6)}, "needs": needs, "hops": hops, "restructure": restr, "path": path, "transfers": transfers})
+                found.append({"node": node, "w": {"floor": round(w_f, 6), "ceiling": round(w_c, 6)}, "needs": needs, "hops": hops, "restructure": restr, "path": path, "transfers": transfers, "new": new})
             if hops >= lim["max_hops"]:
                 return
             for e in edges_out.get(node, []):
@@ -138,34 +139,37 @@ class Checker:
                     if ew is None:
                         continue
                 dfs(e["head"], round(w_f + ew["floor"], 6), round(w_c + ew["ceiling"], 6), needs | {tuple(n) for n in e["needs"]}, hops + 1,   # same rounding as the labels
-                    restr + len(e["restructure"]), moves + len(e["moves"]), path + [e["edge_id"]], transfers | frozenset(self.opt.transfer_tags(e)), (e["edge_id"], ew))
+                    restr + len(e["restructure"]), moves + len(e["moves"]), path + [e["edge_id"]], transfers | frozenset(self.opt.transfer_tags(e)), (e["edge_id"], ew),
+                    new + self.opt.is_new(e["head"]))
 
         dfs(self.graph["source"], 0.0, 0.0, frozenset(), 0, 0, 0, [])
 
         def dom(a, b):
             return (a.get("node") == b.get("node") and a["w"]["floor"] <= b["w"]["floor"] + EPS and a["w"]["ceiling"] <= b["w"]["ceiling"] + EPS and a["needs"] <= b["needs"]
                     and a["hops"] <= b["hops"] and a["restructure"] <= b["restructure"] and frozenset(a.get("transfers", ())) <= frozenset(b.get("transfers", ()))
-                    and (a["w"] != b["w"] or a["needs"] != b["needs"] or a["hops"] != b["hops"] or a["restructure"] != b["restructure"] or frozenset(a.get("transfers", ())) != frozenset(b.get("transfers", ()))))
+                    and a.get("new", 0) <= b.get("new", 0)
+                    and (a["w"] != b["w"] or a["needs"] != b["needs"] or a["hops"] != b["hops"] or a["restructure"] != b["restructure"]
+                         or frozenset(a.get("transfers", ())) != frozenset(b.get("transfers", ())) or a.get("new", 0) != b.get("new", 0)))
 
         nd = [f for f in found if not any(dom(g, f) for g in found if g is not f)]
-        key = lambda x: (x["node"], x["w"]["floor"], x["w"]["ceiling"], tuple(sorted(x["needs"])), x["hops"], x["restructure"], tuple(sorted(x.get("transfers", ()))))
+        key = lambda x: (x["node"], x["w"]["floor"], x["w"]["ceiling"], tuple(sorted(x["needs"])), x["hops"], x["restructure"], tuple(sorted(x.get("transfers", ()))), x.get("new", 0))
         base_keys = {key(f) for f in nd}
         allab = {L["label_id"]: L for bucket in self.labels["labels"].values() for L in bucket}
         fr = []
         for lid in self.labels["frontier"]:
             L = allab[lid]
-            fr.append({"node": L["node"], "w": L["w"], "needs": frozenset(tuple(n) for n in L["needs"]), "hops": L["hops"], "restructure": L["restructure"], "transfers": frozenset(L.get("transfers", []))})
+            fr.append({"node": L["node"], "w": L["w"], "needs": frozenset(tuple(n) for n in L["needs"]), "hops": L["hops"], "restructure": L["restructure"], "transfers": frozenset(L.get("transfers", [])), "new": L.get("new", 0)})
         front_keys = {key(f) for f in fr}
         if self.labels.get("truncated"):
             if not front_keys <= base_keys:
                 self.fail("4: frontier not a subset of the exhaustive non-dominated set (truncated)")
         elif front_keys != base_keys:
             self.fail("4: frontier != exhaustive non-dominated set: only in frontier %d, only in baseline %d" % (len(front_keys - base_keys), len(base_keys - front_keys)))
+        reach = self.opt.prior_reach(self.graph)                    # the search's own dominance (§4.3), not the baseline's
         for n, bucket in self.labels["labels"].items():
             for a in bucket:
                 for b in bucket:
-                    if a is not b and dom({"node": n, "w": a["w"], "needs": frozenset(map(tuple, a["needs"])), "hops": a["hops"], "restructure": a["restructure"], "transfers": frozenset(a.get("transfers", []))},
-                                          {"node": n, "w": b["w"], "needs": frozenset(map(tuple, b["needs"])), "hops": b["hops"], "restructure": b["restructure"], "transfers": frozenset(b.get("transfers", []))}):
+                    if a is not b and op.dominates_label(dict(a, node=n), dict(b, node=n), reach, lim["max_hops"]):
                         self.fail("4: label %s dominates %s in the same bucket" % (a["label_id"], b["label_id"]))
 
     @staticmethod
@@ -186,7 +190,7 @@ class Checker:
                 keep = 1.0
                 for items, h in zip(hops, t["hops"]):                # each hop with the tax borne before it, as stored
                     keep *= 1 - self.opt.hop_tax(items, h.get("prior"), bool(h.get("retention")), h.get("prior_own"))[side]["t"]
-                if not close(100 * (1 - keep), t["per_100"][side]):
+                if not close(op.r6(100 * (1 - keep)), t["per_100"][side]):
                     self.fail("5: %s %s per_100 %s != recomputed %s" % (t["branch_id"], side, t["per_100"][side], 100 * (1 - keep)))
         ranked = [r for r in self.ranking["ranking"] if r["rank"] is not None]
         keys = [(r.get("answers_against", 0),) + tuple(r["keys"]) for r in ranked]      # answers against the client first, then the keys
@@ -219,6 +223,22 @@ class Checker:
                     tot = sum((tr.get("in_payment_currency") or {}).get(s, 0.0) for tr in oo["transfers"] if tr.get("in_payment_currency"))
                     if not close(tot, oo["total"][s]):
                         self.fail("8: one_off %s total %s != sum of transfers" % (d["branch_id"], s))
+        by_v = {t["branch_id"]: t for t in self.variants["taxes"]}
+        for t in self.variants["taxes"]:                      # a move not kept: the variant's tax from its hops, and its delta
+            hops = op.jload(self.P / "hops" / ("%s.json" % t["branch_id"]))["items"]
+            for side in ("floor", "ceiling"):
+                keep = 1.0
+                for items, h in zip(hops, t["hops"]):
+                    keep *= 1 - self.opt.hop_tax(items, h.get("prior"), bool(h.get("retention")), h.get("prior_own"))[side]["t"]
+                if not close(op.r6(100 * (1 - keep)), t["per_100"][side]):
+                    self.fail("5: variant %s %s per_100 %s != recomputed %s" % (t["branch_id"], side, t["per_100"][side], 100 * (1 - keep)))
+        for d in self.deltas:
+            for x in d.get("if_move_not_kept") or []:
+                u, t = by_v.get(x["branch_id"]), by_b[d["branch_id"]]
+                if u and x["delta"]:
+                    for s in ("floor", "ceiling"):
+                        if not close(x["delta"]["amount"][s], u["amount"][s] - t["amount"][s]):
+                            self.fail("5: delta %s if_move_not_kept %s %s" % (d["branch_id"], x["move"], s))
         for d in self.deltas:                                 # payback in payments = one-off (floor) / saving per payment (floor side)
             pb, sv, oo = d.get("payback_payments"), (d.get("saving_per_payment") or {}).get("floor"), ((d.get("one_off_cost") or {}).get("total") or {}).get("floor")
             if pb is not None and oo and sv and abs(pb - oo / sv) > 1e-5:
@@ -271,7 +291,9 @@ class Checker:
 
 # ---------------------------------------------------------------- golden tests (§7 item 10)
 def run_tests(path, products_root):
-    """optimization_test.csv: test_id, input, expect. expect: `best <path> <floor> <ceiling>` | `open <key,key>` | `candidates <n>`."""
+    """optimization_test.csv: test_id, input, expect. expect: `best <path> <floor> <ceiling>` | `open <key,key>` | `candidates <n>`
+    | `not_kept <path> <move> <floor> <ceiling>` (the extra tax, in the payment currency, when that move is not kept)
+    | `conduct <key> <first path> <saving>` | `sequence <this payment's path> <later payments' path>` (§4.7a)."""
     fails = []
     for t in read_csv(path):
         inp = op.jload(op.ROOT / t["input"])
@@ -296,6 +318,25 @@ def run_tests(path, products_root):
             missing = [k for k in words[1].split(",") if k not in keys]
             if missing:
                 fails.append("%s: open items missing %s" % (t["test_id"], missing))
+        elif words[0] == "not_kept":                                 # the best-ranked branch of that path, one move not kept
+            deltas = {d["branch_id"]: d for d in op.jload(out / "deltas.json")["deltas"]}
+            row = next((r for r in ranking if r["rank"] and "->".join(cands[r["cand_id"]]["path"]) == words[1]), None)
+            x = next((x for x in (deltas.get(row["branch_id"]) or {}).get("if_move_not_kept", []) if x["move"] == words[2]), None) if row else None
+            got = (x or {}).get("delta") or {}
+            if not got or not close(got["amount"]["floor"], float(words[3])) or not close(got["amount"]["ceiling"], float(words[4])):
+                fails.append("%s: expected %s not kept on %s to cost %s %s, got %s" % (t["test_id"], words[2], words[1], words[3], words[4], got.get("amount")))
+        elif words[0] == "conduct":                                  # §4.7a: who comes first with the client's conduct the other way
+            brief = op.jload(out / "brief.json")
+            row = next((c for c in brief.get("conduct") or [] if c["key"] == words[1] and c.get("stated") is None), None)
+            first = "->".join(((row or {}).get("first_if_not_kept") or {}).get("path") or [])
+            saving = ((row or {}).get("saving_of_switching") or {}).get("floor")
+            if first != words[2] or saving is None or not close(saving, float(words[3])):
+                fails.append("%s: expected conduct %s -> %s saving %s, got %s %s" % (t["test_id"], words[1], words[2], words[3], first, saving))
+        elif words[0] == "sequence":                                 # §4.7a: this payment's structure, then later payments'
+            s = op.jload(out / "sequence.json")
+            got = ["->".join((s.get(k) or {}).get("path") or []) for k in ("this_payment", "later")]
+            if got != words[1:3]:
+                fails.append("%s: expected sequence %s then %s, got %s" % (t["test_id"], words[1], words[2], got))
         elif words[0] == "candidates":
             if len(cands) != int(words[1]):
                 fails.append("%s: %d candidates, expected %s" % (t["test_id"], len(cands), words[1]))

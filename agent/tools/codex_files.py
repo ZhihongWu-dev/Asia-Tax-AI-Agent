@@ -14,6 +14,11 @@ class Files:
         self.cases = self.project / "cases"
 
     def path(self, raw):
+        raw = str(raw).strip().replace("\\", "/")
+        if raw in ("", ".", "./"):
+            raw = "cases/" + self.case_id                        # the session's own case
+        elif raw.split("/", 1)[0] == self.case_id:
+            raw = "cases/" + raw                                  # relative to the cases root, as the other tools take it
         p = (self.project / raw).resolve()
         rel = p.relative_to(self.project)
         parts = rel.parts
@@ -26,27 +31,26 @@ class Files:
             if why:
                 raise PermissionError(why)
             return p
-        # The library is available through retrieval tools. Only business specs are
-        # needed outside the case; credentials and implementation code never are.
-        if len(parts) == 2 and parts[0] == "agent" and p.name.endswith(".en.md"):
-            return p
-        raise PermissionError("read case files or an English business specification; use retrieval for the library")
+        # 2026-11-12: nothing outside the case: the library and products come through retrieval, and the specifications,
+        # code and configuration are not the agents' to read (their prompt carries what they need)
+        raise PermissionError("read the case's files (cases/<case_id>/...); the library and the products are read through tax-read")
 
-    def read_file(self, path, offset=0, max_chars=16000):
+    # Typed parameters: without them the tool schema has no types, and a model sends the numbers as strings.
+    def read_file(self, path: str, offset: int = 0, max_chars: int = 16000) -> dict:
         p = self.path(path)
         if p.suffix.lower() not in (".md", ".txt", ".json", ".jsonl", ".csv", ".mmd"):
             raise PermissionError("use parsed document pages or read_image for binary files")
         text = p.read_text(encoding="utf-8-sig")
-        offset, size = max(0, offset), min(max(1, max_chars), 32000)
+        offset, size = max(0, int(offset or 0)), min(max(1, int(max_chars or 16000)), 32000)
         return {"text": text[offset:offset + size], "offset": offset, "next_offset": offset + size if len(text) > offset + size else None}
 
-    def list_files(self, path, pattern="*", limit=100):
+    def list_files(self, path: str, pattern: str = "*", limit: int = 100) -> dict:
         folder = self.path(path)
         if any(x in pattern for x in ("..", "/", "\\")):
             raise PermissionError("pattern must match file names, not paths")
         result = []
         for p in sorted(folder.rglob(pattern)):
-            if len(result) >= min(max(limit, 1), 300):
+            if len(result) >= min(max(int(limit or 100), 1), 300):
                 break
             try:
                 self.path(p)
@@ -56,20 +60,23 @@ class Files:
                 result.append(p.relative_to(self.project).as_posix())
         return {"files": result}
 
-    def search(self, path, query, limit=30):
-        hits = []
-        for name in self.list_files(path, limit=300)["files"]:
+    def search(self, path: str, query: str, limit: int = 30) -> dict:
+        """Lines containing query (case-insensitive) in one file or in the files under a folder."""
+        target = self.path(path)
+        names = [target.relative_to(self.project).as_posix()] if target.is_file() else self.list_files(path, limit=300)["files"]
+        hits, cap = [], min(max(int(limit or 30), 1), 100)
+        for name in names:
             p = self.path(name)
-            if p.suffix.lower() not in (".md", ".txt", ".csv", ".json"):
+            if p.suffix.lower() not in (".md", ".txt", ".csv", ".json", ".jsonl", ".mmd"):
                 continue
             for number, line in enumerate(p.read_text(encoding="utf-8-sig").splitlines(), 1):
                 if query.casefold() in line.casefold():
                     hits.append({"path": name, "line": number, "text": line[:1000]})
-                if len(hits) >= min(max(limit, 1), 100):
+                if len(hits) >= cap:
                     return {"hits": hits}
         return {"hits": hits}
 
-    def read_image(self, path):
+    def read_image(self, path: str):
         if self.role == "polish":
             raise PermissionError("polish reads the render_pdf layout report")
         p = self.path(path)

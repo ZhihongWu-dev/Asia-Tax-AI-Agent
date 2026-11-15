@@ -30,13 +30,13 @@ SERVERS = {
 }
 DESC = {
     "front": "Front agent of the cross-border dividend tax planning system: talks to the client, extracts facts, starts the orchestrator and hands the report over",
-    "analysis": "Analysis agent: reads the intake package and the optimizer products, writes the client report (the briefing) and renders its PDF; started by the orchestrator at status ran",
+    "analysis": "Analysis agent: reads the intake package and the optimizer products, writes the client report (the briefing); started by the orchestrator at status ran",
     "review": "Review agent: checks the intake package and the briefing (main check and legal-reasoning lane), writes only checklists; started by the orchestrator",
 }
 STAGES = ("intake package", "briefing draft", "legal-reasoning lane")
 SAVE_TOOLS = {
-    "front": "write_intake for the intake package, put_document for documents, dialogue_append for the client's words, to_collect_append for collection requests",
-    "analysis": "write_section for one part of a draft built from parts and edit_section to change its sentences; for a draft without parts, write_report (mode=append adds a part or rows) and edit_report; render_pdf for the PDF",
+    "front": "write_intake for the intake package, put_document for documents (remove_document for one the client says is wrong), dialogue_append for the client's words, to_collect_append for collection requests",
+    "analysis": "write_section for one part of a draft built from parts and edit_section to change its sentences; for a draft without parts, write_report (mode=append adds a part or rows) and edit_report",
     "review": "write_review for the checklist (which = intake, draft or legal_draft, matching your stage)",
 }
 SAVING = ("How files are saved: you have no Write or Edit tool. Every file named above is saved by calling a tool of your tax-case server: %s, "

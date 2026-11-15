@@ -22,11 +22,18 @@ HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parents[1]
 LIMIT = 80000                                  # characters of the extract; provision texts are shortened first when it would pass
 LAWREF = re.compile(r"(?i)\b(article|art\.|section|s\.?\s?\d|sections|paragraph|para\.?|item|schedule|chapter|announcement|circular|guoshuihan|caishui|"
-                    r"law|ordinance|act\b|regulations?|rules?\b|arrangement|treaty|convention|protocol|e-tax guide|mli|cap\.?\s?\d)")
-REASON = re.compile(r"(?i)\b(because|since|unless|provided|only if|only where|on condition|condition|requires?|required|at least|not less than|"
+                    r"law|ordinance|act\b|regulations?|rules?\b|arrangement|treaty|convention|protocol|e-tax guide|guidance|mli|cap\.?\s?\d)")
+# 2026-11-11 (bug B-7): also the consequences a law attaches (levies, charged, payable, refundable, binds) and procedure (ruling,
+# must, declare, examine), which state a legal reason as much as a condition does
+REASON = re.compile(r"(?i)\b(because|since|unless|provided|only if|only where|on condition|condition\w*|requires?|required|at least|not less than|"
                     r"no less than|below|above|exceed\w*|threshold|exempt\w*|taxable|deemed|treated as|applies|apply|available|denied|fails?|"
-                    r"qualif\w*|entitled|eligible|cap[sp]?\b|capped|limit\w*|within|rate)\b")
-TAXWORD = re.compile(r"(?i)\b(tax\w*|withh\w*|treaty|exempt\w*|beneficial|rate|duty|deduct\w*|credit|resident\w*|dividend|gain|penalt\w*|interest|anti-avoidance|GAAR|PPT)\b")
+                    r"qualif\w*|entitled|eligible|cap[sp]?\b|capped|limit\w*|within|rate|levy|levies|levied|charges?|charged|charging|"
+                    r"payable|refundable|recoverable|liable|liability|binds?|binding|ruling|must|may not|cannot|obliged|obligation|"
+                    r"declare[sd]?|examine[sd]?|verif\w*|deadline|per cent|subject to|turns? on|rests? on|depends? on|neither|"
+                    r"treats?|recover\w*|requirements?)\b")
+TAXWORD = re.compile(r"(?i)\b(tax\w*|withh\w*|treaty|exempt\w*|beneficial|rate|duty|deduct\w*|credit|resident\w*|dividends?|gain|penalt\w*|interest|"
+                     r"anti-avoidance|GAAR|PPT|authorit(?:y|ies)|Comptroller|Commissioner|claims?|income|profits?|remit\w*|receipt|received|"
+                     r"refund\w*|levy|levies|levied|charged)\b")
 ABBR = re.compile(r"(?i)(?:\b(?:no|art|arts|para|paras|s|ss|cap|sch|e\.g|i\.e|cf|ltd|pte|co|inc|mr|mrs|ms|dr|st|vs|etc|sec|reg|regs|p|pp|vol)|\b[A-Z])\.$")
 RULE_TOKEN = re.compile(r"\b[a-z]{2}\.[a-z_]+(?:\.[a-z0-9_]+)+\b")
 
@@ -236,15 +243,20 @@ def build(case_id, run_id, target="draft", lines=None, cases_root=None, reader=N
 
     items, provisions, rule_ids, record_cards = [], {}, [], {}
     ctx, ctx_line = {}, None
-    for no, s in sentences(text):
+    import report_form
+    for no, raw in sentences(text):
         if lines is not None and no not in lines:
             continue
-        if not is_reason(s):
+        marked = [cid for cid, _ in report_form.cites(raw)]          # a citation marker names its provision exactly (2026-11-12)
+        s = report_form.plain(raw)
+        if not (is_reason(s) or marked):
             continue
         q = squeeze(s)
         hit = [row for row in rows if row.get("kind") in ("cite", "product", "url", "document")
-               and any(p in q or q in p for p in fragments(row.get("where")))]
-        refs = []
+               and any(p in q or q in p for p in fragments(report_form.plain(row.get("where"))))]
+        refs = ["%s → %s (marked)" % (cid, cid) for cid in marked]
+        for cid in marked:
+            take_cite(cid)
         for row in hit:
             ref = str(row.get("ref", "")).strip()
             refs.append("%s → %s (%s)" % (row.get("id"), ref, row.get("kind")))

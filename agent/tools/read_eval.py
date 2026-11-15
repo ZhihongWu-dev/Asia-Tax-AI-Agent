@@ -99,7 +99,7 @@ def product_sets(reader, case_id):
         f = json.loads(r["full"])
         c = f["path"]
         path = " to ".join(plain_node(n) for n in c["path"])
-        moves = " with a wait of twelve months" if c.get("moves") else ""
+        moves = " with a wait of twelve months" if any(m.startswith("wait_months") for m in c.get("moves") or []) else ""
         restr = " after a share transfer" if c.get("restructure") else " without restructuring"
         rows.append({"q": "tax of the route %s%s%s" % (path, restr, moves), "gold": {R("structure", r["key"])}})
         fav = ((f.get("brief") or {}).get("all_favourable") or {}).get("branch_id")

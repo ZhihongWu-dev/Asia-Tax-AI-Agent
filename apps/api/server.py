@@ -9,9 +9,11 @@ server loses nothing and a run keeps going without it.
 """
 import asyncio
 import json
+import math
 import os
 import re
 import secrets
+import shutil
 import subprocess
 import sys
 import threading
@@ -51,17 +53,22 @@ RESUMABLE = ("rate_limited", "agent_failed", "revision_limit", "stopped", "syste
 PIPELINE = (("intake", "front"), ("review_intake", "review"), ("run", "program"), ("analysis", "analysis"),
             ("review_draft", "review"), ("render", "program"))                     # 2026-11-06: no polish stage; the program renders the reviewed draft
 WEB_NOTE = """You are running behind the web interface; these points replace the Bash step of your procedure.
-The client reads your replies in a chat window. The case already exists and its id is in the first message, so do not call case_new. Uploaded documents are already in intake/documents/. The host has already written each client message to dialogue.md word for word: do not append client entries, and never write words for the client.
+The client reads your replies in a chat window. The case already exists and its id is in the first message, so do not call case_new. Uploaded documents are already in intake/documents/. When the client says an uploaded document was wrong or is not part of the case, call remove_document for it, then correct every fact, source and answer that came from it. The host has already written each client message to dialogue.md word for word: do not append client entries, and never write words for the client.
 Starting the orchestrator is the host's job, so never run orchestrate.py yourself. When step 4 is ready (handoff.md written, intake_check clean), tell the client in one or two sentences that the analysis is starting, and end your reply with the line [[START_RUN]]. The host then runs it and shows the progress beside the chat.
 When it ends, the host sends you a message beginning [Host] with the stop, the detail and the status. Act on it as steps 4 and 5 say. When the case must run again, end your reply with [[START_RUN]] again. On delivered the host adds the report download link to your reply, so your reply is a short cover note on Part 1 of the polished report, never a report of its own. The client never sees the file system: write no file paths, case ids or run ids, and no Sources section.
 After a report has been delivered, a client message that brings back a point does not start a run: record it, say in one sentence that you have recorded it, and stop; the host then re-runs the computation and asks you to relay the preliminary result. End a reply with [[START_RUN]] after a delivered report only when the client asks for a revised report or says they need a formal document to act on."""
-DELIVERED_NOTE = "The report is the deliverable. Its Part 1 (Strategy) follows between the <<< >>> lines; it is this run's report, and what you told the client about earlier runs no longer holds. Tell the client, in at most 120 words and without tables: the recommended plan, its expected tax and the range over all outcomes, any recovery or deadline Part 1 names, and the one or two points the client should confirm. Use only what Part 1 says, in its figures; add no analysis of your own and do not reproduce the report."
+DELIVERED_NOTE = "The report is the deliverable. Its Part 1 (Strategy) follows between the <<< >>> lines; it is this run's report, and what you told the client about earlier runs no longer holds. Tell the client, without tables: the recommended plan, its expected tax and the range over all outcomes, any recovery or deadline Part 1 names, and the one or two points the client should confirm. Use only what Part 1 says, in its figures; add no analysis of your own and do not reproduce the report. Write at most 200 words."
 NUMBER = re.compile(r"\d[\d,]*(?:\.\d+)?%?")
 NUMBER_FIX = "These figures in your note are not in this run's report: %s; use the figures of the Part 1 text you were given only."
 RELAY_FIX = "[Host] Rewrite your last note to the client. %s Call no tools. Output only the note%s."
+QUOTED = "\nYour last note, between the <<< >>> lines:\n<<<\n%s\n>>>\n"          # a Codex turn is a fresh session: it must be given the text
+PART1 = "Part 1 of the report, the only source of figures, between the <<< >>> lines:\n<<<\n%s\n>>>\n"
+RELAY_REWRITES = 2                                     # rewrites of a faulty note before the fallback (2026-11-13: 213 words, then 227)
+NOTE_WORDS = 200                                       # the host checks a cover note's length; the prompts state it (2026-11-12)
+WORD = re.compile(r"[A-Za-z0-9][\w'’.,%-]*|[㐀-鿿]")
 RELAY_FALLBACK = {"delivered": "The analysis is complete and the report is ready.", "need_front": "The system needs another look at this case.",
                   "no_change": "We have recorded this. It does not change the conclusions of your report, which stands as delivered."}
-CARD_NOTE = """[Host] The client's message changed the case after the last report. The program re-ran the computation on what is recorded now; its preliminary result follows as JSON between <<< >>>. Tell the client in at most 120 words, without tables: whether the recommended structure of the last report still comes first (use the plan names of that report where the JSON gives them), its tax now, and which points are still open. Say that this is a preliminary result before our review and that the report is the formal conclusion. %s Use only the figures in the JSON. Call no tools.
+CARD_NOTE = """[Host] The client's message changed the case after the last report. The program re-ran the computation on what is recorded now; its preliminary result follows as JSON between <<< >>>. Tell the client, without tables: whether the recommended structure of the last report still comes first (use the plan names of that report where the JSON gives them), its tax now, and which points are still open. Say that this is a preliminary result before our review and that the report is the formal conclusion. %s Use only the figures in the JSON. Write at most 200 words. Call no tools.
 <<<
 %s
 >>>"""
@@ -78,7 +85,7 @@ app = FastAPI(title="Taxrora planning host")
 app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost"])
 guard = threading.RLock()
 signed_in = True
-starting, turning, tails = set(), {}, {}
+starting, turning, tails, launched = set(), {}, {}, {}
 
 
 @app.middleware("http")
@@ -123,7 +130,14 @@ def save(doc, touch=True):
 
 
 def public(doc):
-    return {k: v for k, v in doc.items() if k not in ("session_id", "settled", "restarts", "held")}
+    folder = CASES / doc["id"] / "intake" / "documents"
+    names = sorted(f.name for f in folder.iterdir() if f.is_file()) if folder.is_dir() else []
+    return {**{k: v for k, v in doc.items() if k not in ("session_id", "settled", "restarts", "held", "notices")}, "documents": names}
+
+
+def notices(doc):
+    """What happened to the case between front turns (a stopped reply, a document the client removed), for the next turn."""
+    return "".join(n + "\n" for n in doc.get("notices", []))
 
 
 def message(role, text, **extra):
@@ -268,6 +282,17 @@ def numbers(text):
     return out
 
 
+def note_words(text):
+    """Words of a note: a CJK character counts as half a word, as in the report's part limits."""
+    found = WORD.findall(text)
+    return round(sum(0.5 if len(w) == 1 and "㐀" <= w <= "鿿" else 1 for w in found))
+
+
+def too_long(text):
+    n = note_words(text)
+    return ["Your note has %d words, limit %d. Shorten it." % (n, NOTE_WORDS)] if n > NOTE_WORDS else []
+
+
 def unsupported(note, report):
     """The figures of a cover note the report does not state."""
     return sorted(("%g%%" % v if k == "%" else "{:,.0f}".format(v)) for k, v in numbers(note) - numbers(report))
@@ -277,7 +302,7 @@ def relay(case_id, stop):
     """A background front turn: the client hears the end of the run in the agent's own words."""
     detail = "the report is ready" if stop["stop"] == "delivered" else stop.get("detail", "")     # the model repeats whatever path it is given
     report, part1 = polished(case_id, orch.info(case_id).get("run_id")) if stop["stop"] == "delivered" else ("", "")
-    prompt = ("[Host] The orchestrator ended.\nstop: %s\ndetail: %s\nstatus: %s\n" % (stop["stop"], detail, stop.get("status"))
+    prompt = (notices(load(case_id)) + "[Host] The orchestrator ended.\nstop: %s\ndetail: %s\nstatus: %s\n" % (stop["stop"], detail, stop.get("status"))
               + (DELIVERED_NOTE + "\n<<<\n" + part1 + "\n>>>\n" if stop["stop"] == "delivered" else "")
               + "What you write next goes to the client: no file paths, case ids, run ids or system names.")
     turn = turning[case_id] = Turn(case_id, prompt, "front-relay")
@@ -300,17 +325,27 @@ def relay(case_id, stop):
             hits = sorted({m.group(0).lower() for m in FRONT_JARGON.finditer(text)})
             if hits:
                 out.append("It names system parts the client does not know (%s); say the same in plain words." % ", ".join(hits))
-            return out
+            return out + (too_long(text) if stop["stop"] == "delivered" else [])     # the cover note's length; other relays are free
         found = faults(reply) if not code else []
-        if found:                                                        # one rewrite; a note still at fault is replaced by the plain fallback
-            fix = turning[case_id] = Turn(case_id, RELAY_FIX % (" ".join(found), ""), "front-relay-fix")
+        for attempt in range(RELAY_REWRITES):                            # rewrites; a note still at fault is replaced by the plain fallback
+            if not found:
+                break
+            figures = stop["stop"] == "delivered" and any(f.startswith(NUMBER_FIX.split("%")[0]) for f in found)
+            # Part 1 goes with a rewrite only when a figure is wrong: given Part 1 for a length fault, the model wrote more of it
+            fix = turning[case_id] = Turn(case_id, RELAY_FIX % (" ".join(found), "") + QUOTED % reply
+                                          + (PART1 % part1 if figures else ""), "front-relay-fix")
             try:
                 fix.proc.wait(timeout=orch.NODE_TIMEOUT)
             except subprocess.TimeoutExpired:
                 fix.stop()
             again, code2 = fix.outcome()
             again = client_text(again.replace(START, "")) if again and not code2 else ""
-            reply = again if again and not faults(again) else RELAY_FALLBACK[stop["stop"]]
+            if not again:
+                reply, found = RELAY_FALLBACK[stop["stop"]], []
+                break
+            reply, found = again, faults(again)
+        if found:
+            reply = RELAY_FALLBACK[stop["stop"]]
         if stop["stop"] == "delivered":
             url = report_url(case_id, orch.info(case_id).get("run_id"))
             reply += "\n\n[Download the report (PDF)](%s)" % url if url else ""
@@ -321,6 +356,8 @@ def relay(case_id, stop):
                 restart = False
                 reply += "\n\nThe system has sent this case back %d times without a client message, so it stopped here. Resume it from the progress panel, or send more information." % AUTO_RESTARTS
             doc["messages"].append(message("assistant", reply))
+            if not code:
+                doc.pop("notices", None)
             doc["restarts"] = doc.get("restarts", 0) + 1 if restart else doc.get("restarts", 0)
             doc["held"] = held
             save(doc)
@@ -377,8 +414,22 @@ async def card_turn(case_id, card):
     start = bool(due) or (START in (reply or ""))
     reply = client_text((reply or "").replace(START, "")) if not code else ""
     allowed = {round(v, 2) for v in orch.imp().card_figures(card)}
-    wrong = sorted(n for k, n in numbers(reply) if k == "n" and round(n, 2) not in allowed and n >= 1000)
-    if not reply or wrong or FRONT_JARGON.search(reply):
+
+    def wrong_of(text):
+        return sorted(n for k, n in numbers(text) if k == "n" and round(n, 2) not in allowed and n >= 1000)
+    wrong = wrong_of(reply)
+    if reply and not wrong and not FRONT_JARGON.search(reply) and too_long(reply):   # one rewrite for length only
+        fix = turning[case_id] = Turn(case_id, RELAY_FIX % (" ".join(too_long(reply)), "") + QUOTED % reply, "front-card-fix")
+        try:
+            while not fix.done:
+                fix.poll()
+                await asyncio.sleep(0.3)
+            again, code2 = fix.outcome()
+        finally:
+            turning.pop(case_id, None)
+        reply = client_text((again or "").replace(START, "")) if again and not code2 else ""
+        wrong = wrong_of(reply)
+    if not reply or wrong or FRONT_JARGON.search(reply) or too_long(reply):
         reply = ("We have recorded this and re-ran the computation. The structure we recommended %s; we will confirm it in the report."
                  % ("still comes first" if not card["first_changed"] else "is no longer the first choice"))
     with guard:
@@ -410,10 +461,13 @@ def start_run(case_id):
             cmd = [sys.executable, str(ROOT / "agent" / "tools" / "orchestrate_codex.py"), "run", case_id, "--harness", "codex"]
             cmd += ["--config", HARNESS_CONFIG] if HARNESS_CONFIG else []
         proc = subprocess.Popen(cmd, cwd=str(ROOT), stdin=subprocess.DEVNULL, stdout=out, stderr=err, creationflags=flags)
+    launched[case_id] = proc
 
     def watch():
         proc.wait()
         starting.discard(case_id)
+        if launched.get(case_id) is proc:
+            launched.pop(case_id, None)
         settle(case_id)
 
     threading.Thread(target=watch, daemon=True).start()
@@ -432,21 +486,58 @@ def log_rows(case_id):
     return rows
 
 
-def steps_of(cur, rows, active):
-    """Every graph node with its state. A revision moves the stage back, so a later node returns to pending and keeps its history."""
+INTAKE_TURNS = ("front", "front-wording")              # the front turns that build the intake; the relay and cards come after a run
+
+
+def intake_of(case_id, cur, rows):
+    """The front agent's intake turns of this round, from their stream files: the turns write no start or end rows.
+    The round begins after the last row of an earlier round."""
+    since = max((parse_stamp(r["time"]) for r in rows if r.get("round") not in (None, cur.get("round")) and r.get("time")), default=0)
+    turn = turning.get(case_id)
+    live = getattr(turn, "out", None) if turn else None
+    runs, seconds, started = 0, 0, None
+    folder = CASES / case_id / "log" / "runs"
+    for path in sorted(folder.glob("*.jsonl")) if folder.exists() else []:
+        label = path.stem.split("-", 1)[1]
+        info = path.stat()
+        if label not in INTAKE_TURNS or info.st_ctime < since:
+            continue
+        if live and path == live:
+            started = stamp(turn.began)
+            runs += label == "front"
+        else:
+            seconds += max(0, info.st_mtime - info.st_ctime)
+    runs += sum(1 for r in rows if r.get("event") == "harness" and r.get("node") == "front" and not r.get("failure")   # a turn that failed to start is not one
+                and r.get("time") and parse_stamp(r["time"]) >= since)
+    return {"runs": runs, "seconds": round(seconds), "started": started}
+
+
+def parse_stamp(text):
+    return datetime.strptime(text, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc).timestamp()
+
+
+def steps_of(cur, rows, active, intake=None):
+    """Every graph node with its state. A revision moves the stage back, so a later node returns to pending and keeps its history.
+    runs counts the versions a node made (its revisions); a retry after a failure is the same version."""
     steps = [{"id": node, "agent": agent, "state": "pending", "runs": 0, "seconds": 0, "model": None, "started": None,
-              "reason": "", "open": False, "failed": False} for node, agent in PIPELINE]
+              "reason": "", "open": False, "failed": False, "versions": set()} for node, agent in PIPELINE]
     index = {s["id"]: i for i, s in enumerate(steps)}
     position = 0
+    if intake and intake["runs"]:
+        steps[0].update(runs=intake["runs"], seconds=intake["seconds"], open=bool(intake["started"]), started=intake["started"])
     for row in rows:
         if row.get("round") != cur.get("round") or row.get("node") not in index:
             continue
         step = steps[index[row["node"]]]
         if row["event"] == "start":
             position = index[row["node"]]
-            step.update(runs=step["runs"] + 1, started=row["time"], open=True, failed=False, model=row.get("model"), reason=row.get("reason", ""))
+            step["versions"].add(row.get("revision", 0))
+            step.update(runs=len(step["versions"]), started=row["time"], open=True, failed=False, model=row.get("model"), reason=row.get("reason", ""))
         elif row["event"] == "end":
             step.update(open=False, seconds=step["seconds"] + (row.get("seconds") or 0), failed=row.get("stop") in ("rate_limited", "agent_failed"))
+    if steps[0]["open"]:                                  # the client's turn is being worked on: the round is back at intake
+        position = 0
+        active = True
     delivered = cur.get("status") == "delivered"
     for i, step in enumerate(steps):
         if delivered or i < position:
@@ -458,7 +549,7 @@ def steps_of(cur, rows, active):
                 step["state"] = "failed"
             elif step["runs"]:
                 step["state"] = "done"
-        del step["open"], step["failed"]
+        del step["open"], step["failed"], step["versions"]
     return steps
 
 
@@ -496,11 +587,11 @@ def snapshot(case_id, after):
     stop = {k: last.get(k) for k in ("stop", "detail", "time")} if last.get("event") == "stop" else None
     if stop:
         stop["detail"] = client_text(stop.get("detail") or "")
-    steps = steps_of(cur, rows, active)
+    steps = steps_of(cur, rows, active, intake_of(case_id, cur, rows))
     doc = load(case_id)
     interrupted = not active and (doc.get("held") or any(s["state"] == "stopped" for s in steps))
     return {"active": active, "turning": case_id in turning, "status": cur.get("status"), "round": cur.get("round"), "revision": cur.get("revision", 0),
-            "steps": steps, "stop": stop, "can_resume": interrupted or bool(not active and stop and stop["stop"] in RESUMABLE),
+            "steps": steps, "stop": stop, "can_resume": case_id not in turning and (interrupted or bool(not active and stop and stop["stop"] in RESUMABLE)),
             "report": report_url(case_id, cur.get("run_id")) if cur.get("status") == "delivered" else None,
             "chat_revision": doc["revision"], "blocks": blocks, "items": items, "cursor": cursor}
 
@@ -563,9 +654,10 @@ async def organize(case_id, request: Request):
 
 
 def client_prompt(case_id, doc, text):
-    """The words for the agent; an attachment goes into the case first."""
+    """The words for the agent; an attachment goes into the case first. What it put there is returned with the copy of
+    any document it overwrote, so that a turn the client stops can be taken back (withdraw)."""
     words, _, raw = text.partition(ATTACHMENT)
-    note = ""
+    note, put = "", []
     if raw:
         try:
             files = json.loads(raw)
@@ -574,11 +666,45 @@ def client_prompt(case_id, doc, text):
         except (ValueError, KeyError, TypeError, AttributeError):
             raise failure("attachment_invalid")
         for source in sources:
+            dest, backup = CASES / case_id / "intake" / "documents" / source.name, None
+            if dest.is_file():
+                backup = CASES / case_id / "log" / "replaced" / ("%s-%s" % (secrets.token_hex(4), source.name))
+                backup.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(dest, backup)
             if orch.case().put_document(case_id, source.name, src_path=str(source)).get("error"):
+                withdraw(case_id, put + [(source.name, backup)])
                 raise failure("attachment_invalid")
+            put.append((source.name, backup))
         note = "\n\n[The client attached %s; they are in cases/%s/intake/documents/.]" % (", ".join(s.name for s in sources), case_id)
     head = "" if doc.get("session_id") else "Case id: %s.\n" % case_id
-    return "%sThe client says:\n%s%s" % (head, words, note), words
+    return "%s%sThe client says:\n%s%s" % (head, notices(doc), words, note), words, put
+
+
+def withdraw(case_id, put):
+    """Leave the case as a stopped turn found it: a document the turn brought in goes to intake/withdrawn/ (a source that
+    cites it then fails the intake check), one it overwrote comes back. Returns the names withdrawn."""
+    gone = []
+    for name, backup in put:
+        dest = CASES / case_id / "intake" / "documents" / name
+        if backup and backup.is_file():
+            shutil.copyfile(backup, dest)
+            backup.unlink()
+        elif dest.is_file() and not orch.case().remove_document(case_id, name).get("error"):
+            gone.append(name)
+    return gone
+
+
+def stopped_turn(case_id, put):
+    """The client stopped a reply (or it failed): its message is not kept, so neither are its documents; the next front
+    turn hears what happened, since dialogue.md already holds the client's words."""
+    gone = withdraw(case_id, put)
+    with guard:
+        doc = load(case_id)
+        doc.setdefault("notices", []).append(
+            "[Host] The client stopped your previous reply before it finished, so that message is withdrawn%s. Anything you wrote in that "
+            "turn may rest on it: check facts, sources and answers against the documents now in intake/documents/ before you go on."
+            % (" and the documents it brought (%s) were taken out of the case" % ", ".join(gone) if gone else ""))
+        save(doc, touch=False)
 
 
 def sse(**event):
@@ -594,7 +720,7 @@ async def send_message(case_id, request: Request):
         raise failure("revision_conflict", 409)
     if case_id in turning or run_active(case_id):
         raise failure("run_active", 409)
-    prompt, words = client_prompt(case_id, doc, text)
+    prompt, words, put = client_prompt(case_id, doc, text)
     orch.case().client_said(case_id, words)
     turn = turning[case_id] = Turn(case_id, prompt, "front")
 
@@ -625,6 +751,7 @@ async def send_message(case_id, request: Request):
                 await asyncio.sleep(0.15)
             reply, code = turn.outcome()
             if code:
+                stopped_turn(case_id, put)
                 turning.pop(case_id, None)
                 closed = True
                 yield sse(type="error", code=code)
@@ -633,7 +760,8 @@ async def send_message(case_id, request: Request):
             reply = client_text(reply.replace(START, "")) or "Noted."
             hits = sorted({m.group(0).lower() for m in FRONT_JARGON.finditer(reply)})
             if hits:                                                      # one rewrite in the same session; the client keeps the plain one
-                fix = turning[case_id] = Turn(case_id, REWRITE % (", ".join(hits), ", ending with the line %s as before" % START if start else ""), "front-wording")
+                fix = turning[case_id] = Turn(case_id, REWRITE % (", ".join(hits), ", ending with the line %s as before" % START if start else "")
+                                              + (QUOTED % reply).replace("Your last note", "Your last reply", 1), "front-wording")
                 while not fix.done:
                     fix.poll()
                     await asyncio.sleep(0.3)
@@ -647,6 +775,10 @@ async def send_message(case_id, request: Request):
                 fresh = load(case_id)
                 fresh["title"] = fresh["title"] or " ".join(re.sub(r"[*_#`>]", "", words).split())[:40]
                 fresh["restarts"], fresh["held"] = 0, False
+                fresh.pop("notices", None)
+                for name, backup in put:                                  # the overwritten copies are not needed once the turn stands
+                    if backup:
+                        backup.unlink(missing_ok=True)
                 fresh["messages"].append(message("user", text))
                 fresh["messages"].append(message("assistant", reply, activity=merged(process), seconds=round(time.time() - turn.began)))
                 save(fresh)
@@ -662,6 +794,7 @@ async def send_message(case_id, request: Request):
         finally:
             if not closed:                                                # the client pressed stop or left
                 turn.stop()
+                stopped_turn(case_id, put)
                 turning.pop(case_id, None)
 
     return StreamingResponse(events(), media_type="text/event-stream", headers={"Cache-Control": "no-cache"})
@@ -687,6 +820,49 @@ def run_state(case_id, after: int = 0):
     return snapshot(valid_case(case_id), max(0, after))
 
 
+def search_of(case_id):
+    """The optimizer's search of the current run, for the search view: the label-setting events (search.json) on the
+    nodes and edges they touch, then the candidates, their branches and the ranking. A run from before search.json
+    is replayed from labels.json in creation order (kept labels only, marked approximate)."""
+    cur = orch.info(case_id)
+    run_id = cur.get("run_id")
+    folder = CASES / case_id / "intake" / "products" / (run_id or "-")
+    if not run_id or not (folder / "paths.json").exists():
+        return {"ready": False, "run_id": run_id}
+    read = lambda name: json.loads((folder / name).read_text(encoding="utf-8")) if (folder / name).exists() else {}
+    graph, labels = read("graph.json"), read("labels.json")
+    tax = lambda w: round((1 - math.exp(-float(w))) * 100, 2)
+    approximate = not (folder / "search.json").exists()
+    if approximate:
+        kept = sorted((m for bucket in labels.get("labels", {}).values() for m in bucket if m["edge"]), key=lambda m: int(m["label_id"][1:]))
+        events = [["label", m["label_id"], m["pred_label"], m["edge"], m["node"], tax(m["w"]["floor"])] for m in kept]
+    else:
+        events = []
+        for e in read("search.json")["events"]:
+            if e[0] in ("label", "dominated"):
+                e = e[:5] + [tax(e[5])] + e[6:]
+            events.append(e)
+    used = {e[3] for e in events if e[0] in ("label", "dominated")}
+    edges = {e["edge_id"]: [e["tail"], e["head"], e["moves"]] for e in graph.get("edges", []) if e["edge_id"] in used}
+    taxes = {t["branch_id"]: t for t in read("tax.json").get("taxes", [])}
+    branches = {}
+    for b in read("branches.json").get("branches", []):
+        branches[b["cand_id"]] = branches.get(b["cand_id"], 0) + 1
+    ranking = [{"cand_id": r["cand_id"], "branch_id": r["branch_id"], "rank": r["rank"], "dominated": len(r.get("dominated_by") or []),
+                "per_100": (taxes.get(r["branch_id"], {}).get("per_100") or {}).get("floor"),
+                "amount": (taxes.get(r["branch_id"], {}).get("amount") or {}).get("floor")} for r in read("ranking.json").get("ranking", [])]
+    best = read("brief.json").get("best") or {}
+    return {"ready": True, "run_id": run_id, "approximate": approximate, "source": graph.get("source"), "destinations": graph.get("destinations", []),
+            "nodes": [n["node_id"] for n in graph.get("nodes", [])], "edge_count": len(graph.get("edges", [])), "edges": edges, "events": events,
+            "frontier": labels.get("frontier", []), "candidates": read("paths.json").get("candidates", []), "branches": branches,
+            "ranking": ranking, "best": best.get("cand_id"), "currency": read("tax.json").get("currency"), "amount": read("tax.json").get("amount")}
+
+
+@app.get("/api/cases/{case_id}/search")
+def search_state(case_id):
+    return search_of(valid_case(case_id))
+
+
 @app.post("/api/cases/{case_id}/run")
 def resume_run(case_id):
     valid_case(case_id)
@@ -699,15 +875,41 @@ def resume_run(case_id):
 @app.post("/api/cases/{case_id}/run/stop")
 def stop_run(case_id):
     valid_case(case_id)
-    pid = lock_pid(case_id)
+    pid, proc = lock_pid(case_id), launched.get(case_id)
     if pid:
         if os.name == "nt":
             subprocess.run(["taskkill", "/PID", str(pid), "/T", "/F"], capture_output=True)
         else:
             os.kill(pid, 15)
+    alive = bool(proc and proc.poll() is None)
+    if alive:                                                         # also when pressed before the orchestrator wrote its lock
+        orch.stop_tree(proc)
+    stopped = bool(pid) or alive
+    if stopped:
         (CASES / case_id / "log" / "run.lock").unlink(missing_ok=True)
         orch.log_row(case_id, event="stop", stop="stopped", detail="stopped from the web page", status=orch.info(case_id).get("status"), nodes=[])
-    return {"stopped": bool(pid)}
+    return {"stopped": stopped}
+
+
+@app.delete("/api/cases/{case_id}/documents/{name}")
+def remove_document(case_id, name):
+    """The client takes a wrong upload out of the case. It is kept in intake/withdrawn/; the intake counts as changed,
+    so the next run checks it again, and the next front turn is told which facts still cite it."""
+    valid_case(case_id)
+    if case_id in turning or run_active(case_id):
+        raise failure("run_active", 409)
+    out = orch.case().remove_document(case_id, Path(name.replace("\\", "/")).name)
+    if out.get("error"):
+        raise failure("document_not_found", 404)
+    cited = [k for k in out.get("cited_by", []) if k]
+    with guard:
+        doc = load(case_id)
+        doc.setdefault("notices", []).append(
+            "[Host] The client removed the document %s from the case in the chat window. %s" % (out["removed"],
+            "These facts still cite it: %s. Take each from another document, ask the client, or drop it, before the case runs again." % ", ".join(cited)
+            if cited else "No source cites it."))
+        save(doc)
+    return public(doc)
 
 
 @app.get("/api/cases/{case_id}/report/{run_id}/briefing.pdf")

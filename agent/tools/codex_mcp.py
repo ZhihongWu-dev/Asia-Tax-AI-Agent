@@ -15,6 +15,39 @@ from harness import PROJECT, redact
 from make_agents import SERVERS
 
 
+FILE_KEYS = ("input", "products", "against", "items", "file_path", "src_path")
+CASE_PARTS = ("intake", "report", "notes", "log", "bugs")
+
+
+def normalise_paths(arguments, case_id):
+    """File arguments as agents write them (an absolute path inside the case, cases/<case>/..., or intake/... from the
+    case folder) become <case>/... relative to the cases folder before the binding check; anything else is left as given
+    for check_arguments to judge."""
+    cases = (PROJECT / "cases").resolve()
+
+    def fix(key, value):
+        if key not in FILE_KEYS or not isinstance(value, str) or not value.strip():
+            return value
+        text = value.strip()
+        if Path(text).is_absolute():
+            try:
+                return Path(text).resolve().relative_to(cases).as_posix()
+            except ValueError:
+                return value
+        text = text.replace("\\", "/")
+        if text.split("/", 1)[0] in CASE_PARTS:
+            return "%s/%s" % (case_id, text)
+        return text
+
+    def walk(value, key=""):
+        if isinstance(value, dict):
+            return {name: walk(item, name) for name, item in value.items()}
+        if isinstance(value, list):
+            return [walk(item, key) for item in value]
+        return fix(key, value)
+    return walk(arguments)
+
+
 def check_arguments(arguments, case_id):
     def walk(value, key=""):
         if isinstance(value, dict):
@@ -38,16 +71,30 @@ def check_arguments(arguments, case_id):
     walk(arguments)
 
 
+def stderr_to_file(path):
+    """The server's stderr goes to a UTF-8 file, never to the CLI's pipe: once the CLI stopped reading that pipe, a write
+    failed with OSError or, the pipe full, blocked the tool call until the CLI's 1200 s timeout (2026-11-11). File
+    descriptor 2 is redirected too, for what native code writes."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    f = open(path, "a", encoding="utf-8", errors="replace", buffering=1)
+    os.dup2(f.fileno(), 2)
+    sys.stderr = f
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--role", required=True, choices=SERVERS)
     ap.add_argument("--case", required=True)
     ap.add_argument("--server", required=True)
+    ap.add_argument("--node", default="")                 # the node the session works as: the read allowlist differs per node
     a = ap.parse_args()
+    os.environ["TAX_NODE"] = a.node
     from codex_files import Files, build_server
     Files(a.role, a.case)  # Validate before making any audit directory.
     if a.server not in (*SERVERS[a.role], "tax-files"):
         ap.error("server is not available to this role")
+    # outside the case folder, which case_new must still find absent; .codex/runtime is the CLI's own, git-ignored area
+    stderr_to_file(PROJECT / ".codex" / "runtime" / a.case / "mcp-stderr" / ("%s-%s-%s.log" % (a.role, a.server, os.getpid())))
     # MCP processes do not need either provider credential.
     for name in list(os.environ):
         if name.startswith(("OPENAI_", "ANTHROPIC_", "QWEN_")):
@@ -57,6 +104,7 @@ def main():
 
     async def guarded(server, name, arguments, context=None):
         try:
+            arguments = normalise_paths(arguments, a.case)
             check_arguments(arguments, a.case)
             if a.server.startswith("tax-read-") and name in ("search", "list"):
                 arguments = {**arguments, "filters": {**(arguments.get("filters") or {}), "case_id": a.case}}

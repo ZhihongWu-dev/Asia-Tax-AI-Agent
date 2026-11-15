@@ -1,0 +1,22 @@
+{
+  "case": "CASE-JP-SG: Hanazono Seimitsu K.K. (Japan) -> Ms LIM Mei Ling (Singapore resident individual)",
+  "note": "Fictitious ground truth for the simulated client's answers in the second end-to-end case (2026-11-12, optimization spec §4.7a). The client answers only what is written here; anything else is 'I cannot say'. No documents.",
+  "transaction_status": "planned: the interim dividend is to be declared by the board on 2026-12-10 and paid on 2026-12-25; not yet declared on 2026-11-12",
+  "flow": {"payer_jur": "jp", "payee_jur": "sg", "subject": "individual", "date": "2026-12-25", "amount": 200000000, "currency": "JPY"},
+  "payment": {"holding_pct": 100, "holding_months": 105, "payer_listed": false, "payer_tax_rate": 23.2, "payer_income_taxed": true},
+  "payer": {"incorporated_in": "jp", "managed_in": "jp", "name": "Hanazono Seimitsu K.K.", "capital_jpy": 100000000,
+            "net_assets_2026_03_31_jpy": 2400000000, "taxable_income_fy2025_jpy": 900000000},
+  "payee": {"name": "LIM Mei Ling", "domicile_in": "sg", "ordinarily_resides": true, "citizenship": "sg", "resident_since": 2015,
+            "cost_of_shares_jpy": 600000000, "acquired": "2018-03"},
+  "known_entity": {"node": "sg:company", "name": "Lim Family Holdings Pte. Ltd.", "incorporated": 2020, "held_by": "sg:individual 100%",
+                   "employees_in_jurisdiction": 2, "premises_in_jurisdiction": true, "substantive_business": true,
+                   "passes_on_within_12m": "no obligation or practice; whether it would pay dividends on to Ms Lim is her decision"},
+  "conduct": {
+    "receive_at_destination": "true: the money is to reach Ms Lim's account in Singapore",
+    "this_payment_can_wait": "false: the December 2026 interim dividend is needed in December; later dividends can follow whatever timing the plan needs",
+    "declared_to_payee": "false: not yet declared (board meeting 2026-12-10)"
+  },
+  "history": {"dividend_2026_06": {"gross": 300000000, "payee_share": 300000000, "withheld": 45000000, "rate": 15, "treaty_claimed": true,
+                                   "received_in_sg": true}},
+  "other": {"other_taxable_income_sgd": "not relevant: she has employment income she prefers not to state", "voluntary_payment": "cannot say"}
+}

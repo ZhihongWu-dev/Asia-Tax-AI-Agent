@@ -45,7 +45,8 @@ WHAT = {
     "ranking.json": "every candidate's rank", "paths.json": "candidate structures: path, moves, restructuring",
     "tax.json": "tax of every branch, per hop", "branches.json": "branches and their assumed answers",
     "scenarios.json": "the scenario table", "open_items.json": "judgment points and fact gaps with their effect",
-    "deltas.json": "savings, one-off cost, payback and exposure per branch", "requirements/": "condition trees per structure",
+    "deltas.json": "savings, one-off cost, payback, exposure and the cost of a move not kept per branch",
+    "variants.json": "each structure with one move not kept (e.g. the dividend received after all): evaluated, not ranked", "requirements/": "condition trees per structure",
     "transfers/": "share-transfer evaluations per structure", "hops/": "cell evaluations per branch", "penalty/": "penalty rules per jurisdiction",
     "past_payments.json": "earlier dividends: refundable tax and conflicts", "diff.json": "changes against the previous run",
     "edges/": "every edge of the full graph (large; use search / expand)", "graph.json": "the full graph (large; use search / expand)",
@@ -118,6 +119,13 @@ class Reader:
     def denied(self, rel):
         return access.denied(self.agent, rel, self.cases)
 
+    def file_denied(self, material, case_id, run_id, file):
+        """The allowlist applied to the file a record comes from: a record is read only where its file may be (2026-11-12)."""
+        if not file:
+            return None
+        rel = ("%s/intake/products/%s/%s" % (case_id, run_id, file)) if material == "products" else "%s/%s" % (case_id, file)
+        return self.denied(rel)
+
     def mark(self, hit, full):
         """Session de-duplication: a record already returned in this session comes back as its id only."""
         hid = hit.get("id")
@@ -141,6 +149,10 @@ class Reader:
         if self._lib is None:
             table = dbsource.remote().rows if dbsource.online(self.db) else (lambda n: read_csv(self.db / ("%s.csv" % n)))
             L = {n: table(n) for n in ("doc", "param", "decision", "treaty", "jurisdiction", "blocked", "superseded")}
+            # the library's decision table holds the absence records; the rule layer's readings of the law (D-<jur>-<n>) are in
+            # rule/decision.csv, and the packs and rule_tool print their ids, so get/list/expand resolve them too
+            L["decision"] = list(L["decision"]) + [dict(d, jur=d["id"].split("-")[1] if d["id"].count("-") >= 2 else "", category="rule decision")
+                                                   for d in read_csv(self.rule / "decision.csv")]
             L["docs"] = {d["id"]: d for d in L["doc"]}
             L["params"] = {p["param_id"]: p for p in L["param"]}
             self._lib = L
@@ -204,7 +216,7 @@ class Reader:
         rnd, run = self.current(case_id)
         folders = []
         for sub in ("intake", "intake/documents", "report/%s" % run if run else None, "intake/products/%s" % run if run else None,
-                    "notes/%s/round-%s" % (self.agent, rnd) if self.agent else None, "bugs"):
+                    "notes/%s/round-%s" % (self.agent, rnd) if self.agent else None):
             if not sub:
                 continue
             d = cd / sub
@@ -282,7 +294,7 @@ class Reader:
                 con, e = self.products(case_id, run_id)
                 if e:
                     return e
-                out["hits"] += self.rec_search(con, q, filters, k, "products")
+                out["hits"] += self.rec_search(con, q, filters, k, "products", lambda f, c=case_id, r=run_id: self.file_denied("products", c, r, f))
             elif scope == "products":
                 return err("invalid", "products search needs case_id or run_id in filters")
         if scope in ("case", "all"):
@@ -291,7 +303,7 @@ class Reader:
                 con, e = self.casefile(case_id)
                 if e:
                     return e
-                out["hits"] += self.rec_search(con, q, filters, k, "case")
+                out["hits"] += self.rec_search(con, q, filters, k, "case", lambda f, c=case_id: self.file_denied("case", c, None, f))
             elif scope == "case":
                 return err("invalid", "case search needs case_id in filters")
         if scope == "all":
@@ -315,10 +327,13 @@ class Reader:
 
     def rec_where(self, filters, alias="r"):
         cond, args = [], []
+        kinds = {**self.PRODUCT_KINDS, **self.CASE_KINDS}           # a list kind (sources, report_sources) stands for its record type
         for f in self.REC_FILTERS:
             v = filters.get(f)
             if v not in (None, ""):
                 vals = v if isinstance(v, list) else [v]
+                if f == "type":
+                    vals = [kinds.get(x, x) for x in vals]
                 cond.append("%s.%s IN (%s)" % (alias, f, ",".join("?" * len(vals))))
                 args += [str(x) if f != "page" else int(x) for x in vals]
         return (" AND " + " AND ".join(cond)) if cond else "", args
@@ -326,7 +341,7 @@ class Reader:
     def rec_hit(self, row, scope, rank, by):
         return {"id": row["id"], "scope": scope, "type": row["type"], "card": row["card"], "rank": rank, "found_by": by, "_verbal": row["verbal"]}
 
-    def rec_search(self, con, q, filters, k, material):
+    def rec_search(self, con, q, filters, k, material, deny=None):
         where, args = self.rec_where(filters)
         found, by = [], {}
         toks = {t for t in re.findall(r"[\w.@:\-/|]+", q) if re.search(r"[a-z]", t, re.I) and re.search(r"\d|@|:|\|", t)}
@@ -350,6 +365,8 @@ class Reader:
                 if row["id"] not in by:
                     found.append(row)
                     by[row["id"]] = ["bm25"]
+        if deny:
+            found = [row for row in found if not deny(row["file"])]
         if self.cfg.get(material, {}).get("rerank") and len(found) > 2:
             import rerank
             exact = [r for r in found if by[r["id"]] == ["exact"]]
@@ -461,7 +478,8 @@ class Reader:
                 m.half()
             self._dense = m
         ids, mat = self._vec
-        qv = self._dense.encode([q], normalize_embeddings=True)[0].astype("float32")
+        # no progress bar: a bar per query on stderr blocked the server once the host stopped reading its stderr (2026-11-11)
+        qv = self._dense.encode([q], normalize_embeddings=True, show_progress_bar=False)[0].astype("float32")
         scores = np.empty(len(ids), dtype="float32")
         step = 20000
         for i in range(0, len(ids), step):
@@ -592,7 +610,8 @@ class Reader:
                      "exposures": "delta", "deltas": "delta", "penalties": "penalty", "past_payments": "past_payment", "gaps": "gap",
                      "brief": "brief", "diff": "diff", "input": "input", "basis": "basis"}
     CASE_KINDS = {"facts": "fact", "sources": "source", "dialogue": "dialogue", "answers": "answer", "notes": "note", "documents": "document",
-                  "pages": "page", "cells_case": "cell", "handoff": "handoff", "to_collect": "to_collect", "constraints": "constraints"}
+                  "pages": "page", "cells_case": "cell", "handoff": "handoff", "to_collect": "to_collect", "constraints": "constraints",
+                  "report_sources": "report_source"}
 
     def list(self, kind, filters=None, k=20, cursor=0, max_chars=BUDGET):
         filters = dict(filters or {})
@@ -610,7 +629,8 @@ class Reader:
             where, args = self.rec_where({k2: v for k2, v in filters.items() if k2 != "type"})
             order = "r.rank IS NULL, r.rank, r.rowid" if kind == "structures" else "r.rowid"
             rows = [{"id": r["id"], "card": r["card"]} for r in con.execute(
-                "SELECT r.id, r.card FROM record r WHERE r.type = ?%s ORDER BY %s" % (where, order), [self.PRODUCT_KINDS[kind]] + args)]
+                "SELECT r.id, r.card, r.file FROM record r WHERE r.type = ?%s ORDER BY %s" % (where, order), [self.PRODUCT_KINDS[kind]] + args)
+                if not self.file_denied("products", case_id, run_id, r["file"])]
         elif kind in self.CASE_KINDS or kind == "cells" and filters.get("doc"):
             case_id = filters.get("case_id")
             if not case_id:
@@ -620,7 +640,8 @@ class Reader:
                 return e
             where, args = self.rec_where({k2: v for k2, v in filters.items() if k2 != "type"})
             rows = [{"id": r["id"], "card": r["card"]} for r in con.execute(
-                "SELECT r.id, r.card FROM record r WHERE r.type = ?%s ORDER BY r.rowid" % where, [self.CASE_KINDS.get(kind, "cell")] + args)]
+                "SELECT r.id, r.card, r.file FROM record r WHERE r.type = ?%s ORDER BY r.rowid" % where, [self.CASE_KINDS.get(kind, "cell")] + args)
+                if not self.file_denied("case", case_id, None, r["file"])]
         else:
             return err("invalid", "kind is one of %s" % ", ".join(list(self.LAW_KINDS) + list(self.PRODUCT_KINDS) + list(self.CASE_KINDS)))
         page, used = [], 0
@@ -717,7 +738,7 @@ class Reader:
             n = self.law().execute("SELECT count(*) FROM clause WHERE doc_id = ?", (id[4:],)).fetchone()[0]
             return self.tick("get", {"id": id}, {"id": id, "doc": dict(d), "clauses": n})
         if id.startswith("decision:"):
-            rows = [dict(d) for d in L["decision"] if d["id"] == id[9:]]
+            rows = [dict(d) for d in L["decision"] if d["id"].lower() == id[9:].lower()]
             return self.tick("get", {"id": id}, {"id": id, "decision": rows}) if rows else err("not_found", "no decision %s" % id[9:])
         if id.startswith("rule:"):
             r = self.rules().get(id[5:])
@@ -765,6 +786,9 @@ class Reader:
             if not r:
                 near = [x["id"] for x in con.execute("SELECT id FROM record WHERE id LIKE ? LIMIT 8", (id.rsplit(":", 1)[0] + ":%",))]
                 return err("not_found", "no record %s" % id, similar=near)
+            why = self.file_denied(scope, case_id, run_id, r["file"])
+            if why:
+                return err("forbidden", why)
             out = {"id": id, "scope": scope, "type": r["type"], "file": r["file"]}
             out.update(self.page(r["full"], offset, max_chars))
             return self.tick("get", {"id": id}, out)
@@ -947,6 +971,11 @@ class Reader:
         except ValueError as e:
             return err("invalid", "sources table is not JSON: %s" % e)
         rows = data if isinstance(data, list) else data.get("sources", [])
+        text = md.read_text(encoding="utf-8")
+        if target == "draft":                                    # citation markers are provenance rows of their own (2026-11-12)
+            import report_form
+            rows = list(rows) + [{"id": "cite:%s" % cid, "kind": "cite", "ref": cid} for cid, _ in report_form.cites(text)]
+            text = report_form.plain(text)
         unresolved, covered, external = [], set(), 0
         for r in rows:
             ok, nums, _ = self.ref_texts(case_id, r)
@@ -956,7 +985,6 @@ class Reader:
                 unresolved.append({"id": r.get("id"), "ref": str(r.get("ref"))[:120]})
             covered |= nums
             covered |= T.numbers(str(r.get("claim", "")))
-        text = md.read_text(encoding="utf-8")
         body = re.split(r"(?m)^#{1,3}\s+(?:附录\s*B|Appendix\s*B)\b", text)[0]
         figures = []
         for line in body.splitlines():
@@ -966,7 +994,8 @@ class Reader:
                 raw = m.group(0)
                 if m.group(1) and re.fullmatch(r"(19|20)\d\d", m.group(1)):
                     continue                                     # a year
-                val = float((m.group(1) or m.group(2)).replace(",", ""))
+                whole = re.match(r"[\d,]+(?:\.\d+)?", raw.strip()).group(0) if m.group(1) else m.group(2)
+                val = float(whole.replace(",", ""))                  # with its decimals: 48,602,117.44 is not 48,602,117 (2026-11-12)
                 scaled = {val, val * 1e6} if re.match(r"\s?(million|m\b)", line[m.end():m.end() + 9], re.I) else {val}
                 if not scaled & covered:
                     figures.append({"figure": raw.strip(), "line": line.strip()[:160]})

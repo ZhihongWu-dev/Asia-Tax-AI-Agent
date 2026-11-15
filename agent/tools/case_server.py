@@ -23,9 +23,8 @@ HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parents[1]
 SERVER_VERSION = "0.1"
 AGENTS = ("front", "analysis", "polish", "review")
-BODY_FLOOR, BODY_LIMIT = 5, 10                         # pages before the appendices; the appendices do not count
 BOOKS = {"front": ("reading", "construal", "ask", "rounds"),
-         "analysis": ("precommit", "products", "law", "paths", "flags"),
+         "analysis": ("products", "law", "paths", "flags"),
          "polish": ("plan", "changes", "issues"),
          "review": ("expect", "recalc", "checks", "legal")}
 INTAKE_NAMES = ("facts", "sources", "answers", "notes", "constraints", "handoff")
@@ -49,9 +48,6 @@ LEAKS = (r"\d{8}-[0-9a-f]{8}:[a-z_]+:", r"CASE-\d{8}-[0-9a-f]{6}:[a-z_]+:", r"
          r"规则工具", r"规则层", r"优化层", r"法规库", r"模型", r"产物", r"未收录", r"补录", r"(?i)\brule (tool|layer)\b", r"(?i)\boptimi[sz](er|ation layer)\b",
          r"(?i)\bnot (yet )?(on file|in the library)\b")
 JARGON = r"(?i)\bper 100\b|\bmodell?ed\b|\bvariants?\b|\bjudgment worlds?\b|\branked \d+(?:st|nd|rd|th)\b|\b(?:law|the) library\b"       # the optimizer's vocabulary, not a client's
-LONG_SENTENCE = 55                                     # words; a longer sentence in the client report is sent back
-DATE_LINE = re.compile(r"^\*\*(?:Date|日期)\s*[:：]?\*\*\s*[:：]?\s*(.+?)\s*$", re.M)
-DATE_FORMATS = ("%Y-%m-%d", "%d %B %Y", "%B %d, %Y", "%Y年%m月%d日")
 SPOKEN = (r"(?im)^\*\*(一句话|为什么|省多少|花多少|靠什么|怎么做|in a sentence|in one sentence|why|how much it saves|"
           r"how much it costs|what it depends on|how to do it)[^*]{0,12}\*\*")     # spoken lead-ins are not the register of an opinion
 
@@ -72,6 +68,12 @@ def now():
 
 def today():
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+
+def case_doc_id(name):
+    """The id a document file has in the case index and in sources.json (read_index.build_case): S06_..._p1.png -> S06_p1."""
+    page = re.search(r"_(p\d+)$", Path(name).stem)
+    return name.split("_")[0] + ("_" + page.group(1) if page else "")
 
 
 def err(kind, detail, **extra):
@@ -152,17 +154,25 @@ def passed(path, which, since):
 
 
 FACT_KEYS = ("date", "mode", "amount", "currency", "payer", "payee", "payment", "assume", "entities", "destinations", "valuation",
-             "as_of", "fx", "limits", "constraints", "case", "note", "instructed_on", "past_payments", "answers")
+             "as_of", "fx", "limits", "constraints", "case", "note", "instructed_on", "past_payments", "answers",
+             "names")                                          # names: legal names for the report diagram, never computed
 
 
-CONSTRAINT_KEYS = ("consider", "exclude", "allow_restructure", "payback_max", "allowed_subjects")
+CONDUCT = ("receive_at_destination", "this_payment_can_wait", "declared_to_payee")
+CONSTRAINT_KEYS = ("consider", "exclude", "allow_restructure", "payback_max", "allowed_subjects",
+                   "receive_at_destination", "this_payment_can_wait", "declared_to_payee")      # the last three: the client's own conduct (2026-11-12)
 FACT_EXTRA = ("listed", "exit_assets_cost")              # read by the optimizer beyond rule/variable.csv
+DIVIDEND_SLOTS = ("outbound_wht", "inbound", "final", "residence", "cfc", "anti_abuse")   # optimize.SIX: a node needs all six covered
 
 
 def rule_jurisdictions():
-    """The jurisdictions the rule layer has rules for: the system's scope."""
+    """The system's scope: the jurisdictions the rule layer has rules for, less those with an uncovered dividend slot in
+    rule/STATUS.md (the optimizer leaves such a jurisdiction out of every search, so a case on it cannot be computed)."""
     with open(PROJECT / "rule" / "rule.csv", encoding="utf-8-sig") as f:
-        return {r["rule_id"].split(".")[0] for r in csv.DictReader(f) if r.get("rule_id") and "-" not in r["rule_id"].split(".")[0]}   # pair prefixes are treaty rules
+        ruled = {r["rule_id"].split(".")[0] for r in csv.DictReader(f) if r.get("rule_id") and "-" not in r["rule_id"].split(".")[0]}   # pair prefixes are treaty rules
+    status = PROJECT / "rule" / "STATUS.md"
+    gaps = re.findall(r"(?m)^- (\w+)\|\w+\|(\w+)$", status.read_text(encoding="utf-8")) if status.exists() else []
+    return ruled - {jur for jur, slot in gaps if slot in DIVIDEND_SLOTS}
 
 
 def variable_names():
@@ -212,7 +222,7 @@ def shape_problems(facts):
     named += [("constraints.consider", j) for j in ((facts.get("constraints") or {}).get("consider") or [])] if isinstance(facts.get("constraints"), dict) else []
     outside = sorted({"%s %s" % (where, str(j).upper()) for where, j in named if j and str(j).lower() not in scope})
     if outside:
-        out.append("facts.json names jurisdictions the system has no rules for (%s); the scope is %s. Tell the client in plain words that these are outside what the system covers; "
+        out.append("facts.json names jurisdictions the system has no complete rules for (%s); the scope is %s. Tell the client in plain words that these are outside what the system covers; "
                    "keep only a case whose payer, payee and destinations are inside the scope" % (", ".join(outside), ", ".join(sorted(s.upper() for s in scope))))
     for node, v in obj(facts.get("valuation")).items():                # keys the optimizer does not read are silently lost
         odd = sorted(k for k in obj(v) if k not in VALUATION_KEYS)
@@ -230,6 +240,15 @@ def shape_problems(facts):
     parent = obj(payee.get("facts")).get("parent_jur")
     if parent and not any(str(n).split(":")[0].lower() == str(parent).lower() for n in entities):
         out.append("facts.json: the payee's parent (parent_jur %s) is not in entities: every known company or person above the payee goes into entities with holds, holding_pct and holding_months" % parent)
+    for n, e in entities.items():                                       # 2026-11-12, B-1 of CASE-20261112-8823a7
+        e = obj(e)
+        if e.get("holds") and e.get("holding_pct") in (0, 0.0, "0"):
+            out.append("facts.json: entities.%s holds %s at 0%%: a holding of 0 is none; drop holds and holding_pct there (moving the shares into it is the "
+                       "optimizer's move, not a fact)" % (n, e["holds"]))
+        held = any(obj(o).get("holds") == n for o in entities.values())
+        if not held and str(n).endswith(":company") and n not in (payer_node, payee_node):    # a person at the top has no holder
+            out.append("facts.json: entities.%s has no holder on file: record who holds it as an entity entry of the holder, with holds \"%s\", holding_pct "
+                       "and holding_months (the payee too, under its own node, when the payee owns it)" % (n, n))
     return out
 
 
@@ -250,35 +269,12 @@ def closing_answers(answers):
     return closed
 
 
-def report_date(text):
-    m = DATE_LINE.search(text)
-    if not m:
-        return None
-    stated = m.group(1).strip().rstrip(".。")             # the header line may end its sentence with a full stop
-    for fmt in DATE_FORMATS:
-        try:
-            return datetime.strptime(stated, fmt).strftime("%Y-%m-%d")
-        except ValueError:
-            continue
-    iso = re.search(r"\d{4}-\d{2}-\d{2}", stated)         # "26 March 2026 (2026-03-26)": the date with a gloss (2026-11-06)
-    if iso:
-        try:
-            return datetime.strptime(iso.group(0), "%Y-%m-%d").strftime("%Y-%m-%d")
-        except ValueError:
-            pass
-    return stated
-
-
-def long_sentences(text):
-    """Sentences over the limit in the prose of the body, tables and the flowchart aside."""
-    out = []
-    for line in re.sub(r"```.*?```", "", text, flags=re.S).splitlines():
-        if line.lstrip().startswith(("|", "#")):
-            continue
-        for s in re.split(r"(?<=[.;?!])\s+", line):
-            if len(s.split()) > LONG_SENTENCE:
-                out.append("%d words: %s..." % (len(s.split()), " ".join(s.split()[:8])))
-    return out
+def form():
+    """report_form: the template side of the briefing (client copy, citations, word limits), imported when first needed."""
+    if str(HERE) not in sys.path:
+        sys.path.insert(0, str(HERE))
+    import report_form
+    return report_form
 
 
 def outline(text):
@@ -611,6 +607,39 @@ class Case:
             return err("invalid", "give src_path or content_base64")
         return {"case_id": case_id, "written": str(dest), "bytes": dest.stat().st_size, "version": SERVER_VERSION}
 
+    def remove_document(self, case_id, name):
+        """Take a document the client says is wrong out of intake/documents/. It is kept in intake/withdrawn/ for the
+        record, and the intake counts as changed: the intake check then names every source that still cites it."""
+        if (e := self.need("front")):
+            return e
+        cd, ledger, e = self.opened(case_id)
+        if e:
+            return e
+        src = cd / "intake" / "documents" / (name or "")
+        if not re.fullmatch(r"[^/\\]+", name or "") or not src.is_file():
+            return err("not_found", "no document %s in intake/documents/" % name)
+        dest = cd / "intake" / "withdrawn" / name
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if dest.exists():
+            dest = dest.with_name("%s.%s%s" % (dest.stem, now().replace(":", ""), dest.suffix))
+        shutil.move(str(src), str(dest))
+        cur = self.current(ledger)
+        cur["intake_dirty"] = True
+        cur["last_intake_write"] = now()
+        self.save_ledger(cd, ledger)
+        doc = case_doc_id(name)
+        rows = self.source_rows(cd)
+        return {"case_id": case_id, "removed": name, "kept_at": str(dest), "doc": doc,
+                "cited_by": [r.get("key") for r in rows if r.get("doc") == doc], "version": SERVER_VERSION}
+
+    def source_rows(self, cd):
+        try:
+            data = json.loads((cd / "intake" / "sources.json").read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return []
+        rows = data if isinstance(data, list) else data.get("sources", []) if isinstance(data, dict) else []
+        return [r for r in rows if isinstance(r, dict)]
+
     def dialogue_append(self, case_id, speaker, text):
         if (e := self.need("front")):
             return e
@@ -638,8 +667,13 @@ class Case:
         marked = cd / "log" / "hosted"
         marked.parent.mkdir(parents=True, exist_ok=True)
         marked.unlink(missing_ok=True)                         # the refusal is for the agent, not for the host
+        dl, page = cd / "intake" / "dialogue.md", cd / "intake" / "prompt.md"
+        first = not (dl.exists() and "| client | #" in dl.read_text(encoding="utf-8"))
         out = self.dialogue_append(case_id, "client", text)
         marked.write_text("1", encoding="utf-8")
+        if first and not page.exists() and not out.get("error"):
+            # the client's first message is the intake page: kept verbatim where review reopens it (2026-11-11, bug B-2)
+            page.write_text(text.strip() + "\n", encoding="utf-8")
         return out
 
     def to_collect_append(self, case_id, law, jur, url, why):
@@ -661,6 +695,16 @@ class Case:
         old = data if isinstance(data, list) else data.get("sources", [])
         fresh = {r["id"]: r for r in rows}
         return [fresh.pop(r["id"], r) for r in old] + list(fresh.values())
+
+    @staticmethod
+    def row_counts(path, rows, merged):
+        """What an append did, said back to the writer: a row whose id is already there replaces it in place, so the
+        table neither grows nor changes its last row (bug B-5, 2026-11-11)."""
+        data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+        before = {r.get("id") for r in (data if isinstance(data, list) else data.get("sources", []))}
+        replaced = sorted({r["id"] for r in rows if r["id"] in before})
+        return {"rows_added": len({r["id"] for r in rows}) - len(replaced), "rows_replaced": len(replaced),
+                "replaced_ids": replaced[:20], "rows_total": len(merged)}
 
     def apply_edits(self, path, edits, case_id, run_id):
         """Replace sentences in place: each old text must occur exactly once; all or none."""
@@ -808,9 +852,11 @@ class Case:
             rows = data if isinstance(data, list) else data.get("sources") if isinstance(data, dict) else None
             if not isinstance(rows, list) or any(not isinstance(r, dict) or "id" not in r for r in rows):
                 return err("invalid", "sources must be a list of {id, where, claim, kind, ref}")
-            sp.write_text(json.dumps(self.merged_rows(sp, rows), ensure_ascii=False, indent=1), encoding="utf-8")
+            merged = self.merged_rows(sp, rows)
+            counts = self.row_counts(sp, rows, merged)
+            sp.write_text(json.dumps(merged, ensure_ascii=False, indent=1), encoding="utf-8")
             self.reassemble(cd, case_id, run_id)
-            return {"case_id": case_id, "run_id": run_id, "written": str(sp), "version": SERVER_VERSION}
+            return {"case_id": case_id, "run_id": run_id, "written": str(sp), **counts, "version": SERVER_VERSION}
         if mode not in ("replace", "append"):
             return err("invalid", "mode must be replace or append")
         path = cd / "report" / run_id / ("briefing.md" if name == "briefing" else "briefing.sources.json")
@@ -828,12 +874,14 @@ class Case:
                     return err("invalid", "sources[%d] lacks %s" % (i, ", ".join(missing)))
                 if r["kind"] not in ("product", "tool", "cite", "url", "document", "name"):
                     return err("invalid", "sources[%d].kind must be product | tool | cite | url | document | name" % i)
-            content = json.dumps(self.merged_rows(path, rows) if mode == "append" else data, ensure_ascii=False, indent=1)
+            merged = self.merged_rows(path, rows) if mode == "append" else rows
+            counts = self.row_counts(path, rows, merged) if mode == "append" else {"rows_total": len(rows)}
+            content = json.dumps(merged if mode == "append" else data, ensure_ascii=False, indent=1)
         elif mode == "append" and path.exists():
             content = path.read_text(encoding="utf-8").rstrip() + "\n\n" + content.strip() + "\n"
         self.write_with_prev(path, content)
         return {"case_id": case_id, "run_id": run_id, "written": str(path), "prev": path.with_name(path.name + ".prev").exists(),
-                "version": SERVER_VERSION}
+                **(counts if name == "sources" else {}), "version": SERVER_VERSION}
 
     def write_polished(self, case_id, run_id, name, content, mode="replace"):
         if (e := self.need("polish")):
@@ -881,25 +929,26 @@ class Case:
                 "version": SERVER_VERSION}
 
     def client_copy(self, rd, case_id, run_id):
-        """The client copy of the draft (2026-11-06, no polish stage): {{block:<name>}} markers expanded from frame/blocks, the
-        internal reference line and any line carrying the case or run id removed. Written as briefing.polished.md for the renderer
-        and the web host; the sources table is copied beside it."""
-        text = (rd / "briefing.md").read_text(encoding="utf-8")
-        fb = rd / "frame" / "blocks"
-        if fb.exists():
-            text = re.sub(r"\{\{block:([a-z_]+)\}\}", lambda m: (fb / ("%s.md" % m.group(1))).read_text(encoding="utf-8").strip()
-                          if (fb / ("%s.md" % m.group(1))).exists() else m.group(0), text)
-        kept = [l for l in text.splitlines() if case_id not in l and run_id not in l]
-        text = "\n".join(kept).rstrip() + "\n"
-        (rd / "briefing.polished.md").write_text(text, encoding="utf-8")
+        """The client copy of the draft (2026-11-12): the template's heading, flowchart, tables and Appendix B, citations set as
+        plain references, no internal ids (report_form.client_text). Written as briefing.polished.md for the renderer and the
+        web host; the sources table is copied beside it."""
+        fp = self.root / case_id / "intake" / "facts.json"
+        facts = json.loads(fp.read_text(encoding="utf-8")) if fp.exists() else {}
         sj = rd / "briefing.sources.json"
+        try:
+            data = json.loads(sj.read_text(encoding="utf-8")) if sj.exists() else []
+        except ValueError:
+            data = []
+        rows = data if isinstance(data, list) else data.get("sources", [])
+        text = form().client_text((rd / "briefing.md").read_text(encoding="utf-8"), rd, case_id, run_id, facts, rows)
+        (rd / "briefing.polished.md").write_text(text, encoding="utf-8")
         if sj.exists():
             (rd / "briefing.polished.sources.json").write_text(sj.read_text(encoding="utf-8"), encoding="utf-8")
         return rd / "briefing.polished.md"
 
     def render_pdf(self, case_id, run_id):
-        if self.agent not in ("analysis", "polish", "front"):   # front is also the program's identity (the orchestrator's render step)
-            return err("forbidden", "render_pdf belongs to the analysis agent and the program")
+        if self.agent not in ("polish", "front"):             # front is also the program's identity (the orchestrator's render step)
+            return err("forbidden", "render_pdf is the program's step")
         cd, ledger, e = self.opened(case_id)
         if e:
             return e
@@ -913,6 +962,8 @@ class Case:
             if not (rd / "briefing.md").exists():
                 return err("not_found", "no briefing.md to render; write the draft first")
             text_problems = self.report_check(case_id, run_id, "draft", text_only=True).get("problems", [])
+            # 2026-11-12: words the reviewers' approved replacements add are typeset; the author's own text met the limits before review
+            text_problems = [x for x in text_problems if not form().OVERRUN.search(x)]
             src = None
         if text_problems:                                      # a render takes a minute: settle the text first
             return err("conflict", "fix the text first, nothing was rendered: " + "; ".join(text_problems[:8]))
@@ -932,15 +983,8 @@ class Case:
         pages, errors, overfull = (int(x) for x in m.groups()) if m else (None, None, None)
         line = next((l for l in r.stdout.splitlines() if l.startswith("layout=")), "layout={}")
         layout = json.loads(line[len("layout="):])
-        advice = ""
-        body = layout.get("body_pages")
-        if body and body > BODY_LIMIT:
-            advice = "%d body pages, the limit is %d: cut text and rerender" % (body, BODY_LIMIT)
-        elif body and body < BODY_FLOOR:
-            advice = "%d body pages, the floor is %d: restore reasoning from the draft and rerender" % (body, BODY_FLOOR)
-        return {"case_id": case_id, "run_id": run_id, "written": str(out), "pages": pages, "body_pages": layout.get("body_pages"), "body_floor": BODY_FLOOR, "body_limit": BODY_LIMIT,
-                "advice": advice, "latex_errors": errors, "overfull": overfull,
-                "layout": layout, "version": SERVER_VERSION}
+        return {"case_id": case_id, "run_id": run_id, "written": str(out), "latex_errors": errors, "overfull": overfull,
+                "flow_overlaps": layout.get("flow_overlaps", 0), "version": SERVER_VERSION}
 
     def write_review(self, case_id, which, content, run_id=""):
         if (e := self.need("review")):
@@ -1015,18 +1059,35 @@ class Case:
         rd = cd / "report" / run_id
         path = rd / "briefing.md"
         text = path.read_text(encoding="utf-8")
-        applied, already, failed, stamps = 0, 0, [], []
-        for which in ("draft", "legal_draft"):
+        original = text
+        applied, already, failed, superseded, stamps, taken = 0, 0, [], [], [], []
+        lanes = []
+        # the legal lane first: where both lanes rewrite the same sentence, the law in it is that lane's to state (2026-11-11, bug B-6)
+        for which in ("legal_draft", "draft"):
             p = rd / CHECKLISTS[which]
-            if not p.exists():
-                continue
-            stamps.append(p)
-            for r in replacements_of(p.read_text(encoding="utf-8")) or []:
-                if text.count(r["old"]) == 1:
-                    text = text.replace(r["old"], r["new"])
+            if p.exists():
+                stamps.append(p)
+                lanes.append((which, replacements_of(p.read_text(encoding="utf-8")) or []))
+        news = {}                                                 # old text -> the new texts the lanes give for it
+        for which, reps in lanes:
+            for r in reps:
+                news.setdefault(r["old"], []).append((which, r["new"]))
+        for which, reps in lanes:
+            for r in reps:
+                span = form().locate(original, r["old"])         # quoted with or without its citation markers (2026-11-12)
+                clash = next((w for w, (a, b) in taken if span and span[0] < b and a < span[1] and w != which), None)
+                here = form().locate(text, r["old"])
+                if clash:                                         # the other lane already rewrote this sentence
+                    superseded.append("%s: %s (the %s replacement of the same text was applied)" % (which, r["old"][:80], clash))
+                elif here:
+                    text = text[:here[0]] + r["new"] + text[here[1]:]
                     applied += 1
+                    if span:
+                        taken.append((which, span))
                 elif r["old"] not in text and r["new"] and r["new"] in text:      # applied on an earlier pass of the same checklist
                     already += 1
+                elif r["old"] not in text and any(w != which and n and n in text for w, n in news[r["old"]]):
+                    superseded.append("%s: %s (the other lane's replacement of the same text is in place)" % (which, r["old"][:80]))
                 else:
                     failed.append("%s: %s" % (which, r["old"][:80]))
         if applied:
@@ -1034,7 +1095,7 @@ class Case:
             t = max(path.stat().st_mtime, time.time())          # the checklists postdate the draft again, and nothing written later is older
             for p in stamps:
                 os.utime(p, (t, t))
-        return {"case_id": case_id, "run_id": run_id, "applied": applied, "already": already, "failed": failed}
+        return {"case_id": case_id, "run_id": run_id, "applied": applied, "already": already, "superseded": superseded, "failed": failed}
 
     def autofix_draft(self, case_id, run_id):
         """Program step (2026-11-06): what the self-check would send back but the program can settle itself: sources rows whose ref
@@ -1085,7 +1146,7 @@ class Case:
         done = set(cleared.read_text(encoding="utf-8").split()) if cleared.exists() else set()
         out = []
         for path in sorted((cd / "bugs").glob("*.md")):
-            if path.stem not in ("analysis", "review"):        # the agents that see the figures
+            if path.stem not in ("analysis", "review", "review_legal"):   # the agents that see the figures; the legal lane's file since 2026-11-12
                 continue
             for bid, tag, body in re.findall(r"^### (B-\d+) \| [^|]*\| round (\d+)[^\n]*\n(.*?)(?=^### B-|\Z)", path.read_text(encoding="utf-8"), re.S | re.M):
                 name = "%s/%s" % (path.stem, bid)
@@ -1111,7 +1172,8 @@ class Case:
             return err("invalid", "affects_result=true needs effect: which figure or ranking of this case changes, and from what to what; "
                                   "a modelling gap that leaves this case's figures as they are is affects_result=false")
         tag, _ = self.round_tag(ledger)
-        path = cd / "bugs" / (self.agent + ".md")
+        lane = self.agent == "review" and os.environ.get("TAX_NODE") == "review_legal"    # the two review lanes run at once: one file each
+        path = cd / "bugs" / ((self.agent + "_legal" if lane else self.agent) + ".md")
         text = path.read_text(encoding="utf-8") if path.exists() else ""
         entries = re.findall(r"^### (B-\d+) \|.*?\n(.*?)(?=^### B-|\Z)", text, re.S | re.M)
         key = squash(symptom)
@@ -1119,14 +1181,14 @@ class Case:
             m = re.search(r"^- symptom: (.*?)(?=^- |\Z)", body, re.S | re.M)
             if m and squash(m.group(1)) == key:
                 self.append(path, "- recurrence %s | %s | %s" % (tag, today(), bid))
-                return {"case_id": case_id, "duplicate_of": bid, "path": str(path), "version": SERVER_VERSION}
+                return {"case_id": case_id, "duplicate_of": bid, "note": "already reported; the recurrence is recorded", "version": SERVER_VERSION}
         n = len(entries) + 1
         body = ("### B-%d | %s | %s\n- layer: %s\n- symptom: %s\n- expected: %s\n- repro: %s\n- workaround: %s"
                 % (n, today(), tag, layer, symptom.strip(), (expected or "-").strip(), (repro or "-").strip(), (workaround or "blocked").strip()))
         if affects_result:
             body += "\n- affects_result: yes\n- effect: %s" % effect.strip()
         self.append(path, body)
-        return {"case_id": case_id, "entry": "B-%d" % n, "path": str(path), "version": SERVER_VERSION}
+        return {"case_id": case_id, "entry": "B-%d" % n, "note": "recorded", "version": SERVER_VERSION}
 
     # ------------------------------------------------------------ self-checks (any, read-only)
     def intake_check(self, case_id):
@@ -1158,7 +1220,7 @@ class Case:
                 os.chdir(PROJECT)                          # relative paths in facts.json (e.g. fx) resolve against the project root (bug B-2)
                 op.Optimizer(facts)
             except Exception as ex:  # noqa: BLE001
-                problems.append("facts.json rejected by the optimizer: %s: %s" % (type(ex).__name__, str(ex)[:200]))
+                problems.append("facts.json rejected by the optimizer: %s: %s" % (type(ex).__name__, str(ex)[:500]))
             finally:
                 os.chdir(cwd)
         cons_path = it / "constraints.json"
@@ -1170,6 +1232,30 @@ class Case:
                     problems.append("constraints.json keys the optimizer does not read: %s (allowed: %s); other notes go into handoff.md" % (", ".join(odd), ", ".join(CONSTRAINT_KEYS)))
             except ValueError as ex:
                 problems.append("constraints.json is not valid JSON: %s" % ex)
+                cons = {}
+        else:
+            cons = {}
+        cons = cons if isinstance(cons, dict) else {}
+        for k in CONDUCT:
+            if k in cons and cons[k] not in (True, False, "unknown"):
+                problems.append("constraints.json %s is true, false, or \"unknown\" when the client was asked and cannot say" % k)
+        previews = sorted((p for p in (it / "products").glob("*/brief.json")), key=lambda p: p.stat().st_mtime) if (it / "products").is_dir() else []
+        if previews:                                           # the group's own choices the last preview found to change the plan (§4.7a)
+            try:
+                rows = json.loads(previews[-1].read_text(encoding="utf-8")).get("conduct") or []
+            except ValueError:
+                rows = []
+            for c in rows:
+                if c.get("stated") is None and c.get("changes_rank") and c.get("key") not in cons:
+                    problems.append("the preview shows that the group's own choice changes the plan and the client has not been asked: \"%s\" "
+                                    "Ask it and record %s in constraints.json: true or false, or \"unknown\" when the client cannot say"
+                                    % (c.get("question"), c.get("key")))
+        if isinstance(sources, (list, dict)):
+            docs = lambda sub: {case_doc_id(f.name) for f in (it / sub).iterdir() if f.is_file()} if (it / sub).is_dir() else set()
+            gone = docs("withdrawn") - docs("documents")
+            for i, r in enumerate(sources if isinstance(sources, list) else sources.get("sources", [])):
+                if isinstance(r, dict) and r.get("doc") in gone:
+                    problems.append("sources[%d] (%s) cites %s, which was withdrawn from the case: take the fact from another document or drop it" % (i, r.get("key"), r["doc"]))
         if facts is not None and sources is not None:
             rows = sources if isinstance(sources, list) else sources.get("sources", [])
             keys = {r.get("key") for r in rows}
@@ -1189,8 +1275,9 @@ class Case:
             if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(facts.get("instructed_on") or "")):
                 problems.append("facts.json lacks instructed_on: the date the client gave the instruction, YYYY-MM-DD")
             for i, row in enumerate(facts.get("past_payments") or []):
-                if not (isinstance(row, dict) and row.get("date") and row.get("payee_share")):
-                    problems.append("past_payments[%d] needs date and payee_share; its other fields are gross, withheld, net_received, treaty_claimed, source" % i)
+                if not (isinstance(row, dict) and row.get("date") and (row.get("payee_share") or row.get("readings"))):
+                    problems.append("past_payments[%d] needs date and payee_share (or readings when the documents and the client state "
+                                    "the base differently); its other fields are gross, withheld, net_received, treaty_claimed, tax_settled, source" % i)
         dialogue = (it / "dialogue.md").read_text(encoding="utf-8") if (it / "dialogue.md").exists() else ""
         dq = squash(dialogue)
         known = predicates()
@@ -1238,13 +1325,15 @@ class Case:
             return err("not_found", "no part %s in the %s yet; parts present: %s" % (part, which, ", ".join(o["part"] for o in outline(text))))
         if which == "draft":
             problems = []
-            leaks = sorted({m.group(0) for pat in LEAKS for m in re.finditer(pat, piece)})
+            leaks = sorted({m.group(0) for pat in LEAKS for m in re.finditer(pat, form().plain(piece))})
             if leaks:
                 problems.append("system identifiers: %s" % ", ".join(leaks[:12]))
             if part not in ("A", "B"):
                 jargon = sorted({m.group(0).lower() for m in re.finditer(JARGON, piece)})
                 if jargon:
                     problems.append("the optimizer's vocabulary, say it as an adviser would: " + ", ".join(jargon))
+            problems += form().bad_cites(piece, self._lib().by_cite)
+            problems += form().overruns({str(part): piece}, rd / "frame", cd / "log" / "word_counts.jsonl")
             return {"case_id": case_id, "run_id": run_id, "target": "draft", "part": part, "problems": problems,
                     "parts_present": [o["part"] for o in outline(text)], "version": SERVER_VERSION}
         draft_text = draft.read_text(encoding="utf-8")
@@ -1268,8 +1357,6 @@ class Case:
             jargon = sorted({m.group(0).lower() for m in re.finditer(JARGON, piece)})
             if jargon:
                 problems.append("the optimizer's vocabulary, say it as an adviser would: " + ", ".join(jargon))
-            for s in long_sentences(piece)[:5]:
-                problems.append("sentence too long, split it: " + s)
         return {"case_id": case_id, "run_id": run_id, "target": "polished", "part": part, "problems": problems, "number_drift": drift,
                 "version": SERVER_VERSION}
 
@@ -1292,8 +1379,6 @@ class Case:
             return err("not_found", "no %s report for run %s" % (which, run_id))
         br = md
         text = br.read_text(encoding="utf-8")
-        if which == "draft" and (case_id not in text or run_id not in text):
-            problems.append("internal reference line lacks case_id or run_id")
         if which == "polished" and (case_id in text or run_id in text):
             problems.append("the client report carries the case id or run id: remove the internal reference line")
         heads = [(m.start(), m.group(1)) for m in re.finditer(r"^#{1,3}\s+(.+)$", text, re.M)]
@@ -1309,27 +1394,29 @@ class Case:
                 problems.append("part missing: %s" % cn)
             else:
                 pos[cn] = hit[0]
-        for ap in ("A", "B"):
+        for ap in (("A",) if which == "draft" else ("A", "B")):      # Appendix B of a draft is the program's
             if not re.search(r"^#{1,3}\s+(附录|Appendix)\s*%s\b" % ap, text, re.M):
                 problems.append("appendix %s missing" % ap)
         body_end = min([p for p, h in heads if re.match(r"^(附录|Appendix)", h)] or [len(text)])
         body = text if which == "polished" else text[:body_end]
-        leaks = sorted({m.group(0) for pat in LEAKS for m in re.finditer(pat, body)})
+        leaks = sorted({m.group(0) for pat in LEAKS for m in re.finditer(pat, form().plain(body))})
         if leaks:
             problems.append("system identifiers in the body: %s" % ", ".join(leaks[:12]))
-        facts_path = cd / "intake" / "facts.json"
-        instructed = json.loads(facts_path.read_text(encoding="utf-8")).get("instructed_on") if facts_path.exists() else None
-        stated = report_date(text)
-        if instructed and stated != instructed:
-            problems.append("the heading date is %s, the client instructed on %s: the report speaks as of the instruction" % (stated, instructed))
         past = cd / "intake" / "products" / run_id / "past_payments.json"
         for row in (json.loads(past.read_text(encoding="utf-8"))["past_payments"] if past.exists() else []):
             must = [row["refundable_if_qualified"]] if row.get("refundable_if_qualified") else []
             if row.get("conflicts"):
                 must += [row.get("withheld_stated"), row.get("payee_share")]
+            for r in row.get("readings") or []:                # each reading's base and refund: the report gives both
+                must += [r.get("payee_share"), r.get("refundable_if_qualified")]
             for figure in must:
                 if figure is not None and "{:,.0f}".format(float(figure)) not in text:
                     problems.append("past payment of %s: the report lacks the figure %s" % (row["date"], "{:,.0f}".format(float(figure))))
+        brief_p = cd / "intake" / "products" / run_id / "brief.json"
+        for x in (json.loads(brief_p.read_text(encoding="utf-8")).get("must_state") or [] if brief_p.exists() else []):
+            figure = "{:,.0f}".format(float(x["figure"]))            # the strategy's figures (optimization spec §4.7a)
+            if figure not in text:
+                problems.append("the report lacks the figure %s (%s)" % (figure, x.get("why")))
 
         def load(path, label):
             if not path.exists():
@@ -1399,33 +1486,17 @@ class Case:
                     problems.append("figures that no source row states (cite the record or clause that gives them, or take the figure from it): " +
                                     "; ".join('%s in "%s"' % (u["figure"], u["line"][:70]) for u in cc["uncovered_figures"][:10]))
         # polish may cut but not change: a number new to the report is a problem, a number left out is only listed for review
-        drift, omitted, changed, cut, unlocated, pdf_pages, body_pages = [], [], [], [], [], None, None
+        drift, omitted, changed, cut, unlocated = [], [], [], [], []
         if which == "draft":                                   # 2026-11-06: the draft is the client report, so it meets the client's standard too
-            if not re.search(r"^```flow\s*$", text, re.M):
-                problems.append("no ```flow block (the restructuring diagram, JSON as in agent/templates/flowchart.example.json) in Part 1")
+            problems += form().bad_cites(text, self._lib().by_cite)
+            parts = {o["part"]: part_text(text, o["part"]) for o in outline(text) if o["part"] != "B"}
+            problems += form().overruns(parts, rd / "frame", cd / "log" / "word_counts.jsonl")
             spoken = sorted(set(re.findall(SPOKEN, text)))
             if spoken:
                 problems.append("spoken lead-ins, use the register of a written opinion: " + ", ".join(spoken))
             jargon = sorted({m.group(0).lower() for m in re.finditer(JARGON, text[:body_end])})
             if jargon:
                 problems.append("the optimizer's vocabulary in the body, say it as an adviser would: " + ", ".join(jargon))
-            for s in long_sentences(text[:body_end])[:5]:
-                problems.append("sentence too long, split it: " + s)
-            pdf = rd / "briefing.pdf"
-            if text_only:
-                pass
-            elif not pdf.exists() or pdf.stat().st_mtime < md.stat().st_mtime:
-                problems.append("briefing.pdf is missing or older than the draft: call render_pdf")
-            else:
-                if str(HERE) not in sys.path:
-                    sys.path.insert(0, str(HERE))
-                from render_pdf import layout
-                shape = layout(pdf, (rd / "briefing.polished.md").read_text(encoding="utf-8") if (rd / "briefing.polished.md").exists() else text)
-                pdf_pages, body_pages = shape["pages"], shape["body_pages"]
-                if body_pages > BODY_LIMIT:
-                    problems.append("the body has %d pages before the appendices, limit %d: cut" % (body_pages, BODY_LIMIT))
-                elif body_pages < BODY_FLOOR:
-                    problems.append("the body has %d pages before the appendices, floor %d" % (body_pages, BODY_FLOOR))
         if which == "polished" and draft.exists():
             draft_text = draft.read_text(encoding="utf-8")
             fb = rd / "frame" / "blocks"                     # a whole draft keeps {{block:<name>}} markers: count the figures of the tables they stand for
@@ -1448,7 +1519,7 @@ class Case:
             body_text = squeeze(text)
             for r in rows:
                 w = str(r.get("where") or "")
-                frag = w.split("|", 1)[1] if "|" in w else w
+                frag = form().plain(w.split("|", 1)[1] if "|" in w else w)
                 pieces = [squeeze(p) for p in re.split(r"…|\.\.\.", frag) if squeeze(p)]
                 if not pieces or not all(p in body_text for p in pieces):
                     unlocated.append(str(r.get("id")))
@@ -1460,24 +1531,7 @@ class Case:
             jargon = sorted({m.group(0).lower() for m in re.finditer(JARGON, text[:body_end])})
             if jargon:
                 problems.append("the optimizer's vocabulary in the body, say it as an adviser would: " + ", ".join(jargon))
-            for s in long_sentences(text[:body_end])[:5]:
-                problems.append("sentence too long, split it: " + s)
-            pdf = rd / "briefing.pdf"
-            if text_only:
-                pass
-            elif not pdf.exists() or pdf.stat().st_mtime < md.stat().st_mtime:
-                problems.append("briefing.pdf is missing or older than the polished report: call render_pdf")
-            else:
-                if str(HERE) not in sys.path:
-                    sys.path.insert(0, str(HERE))
-                from render_pdf import layout
-                shape = layout(pdf, text)
-                pdf_pages, body_pages = shape["pages"], shape["body_pages"]
-                if body_pages > BODY_LIMIT:
-                    problems.append("the body has %d pages before the appendices, limit %d" % (body_pages, BODY_LIMIT))
-                elif body_pages < BODY_FLOOR:
-                    problems.append("the body has %d pages before the appendices, floor %d: too much was cut" % (body_pages, BODY_FLOOR))
-        return {"case_id": case_id, "run_id": run_id, "target": which, "problems": problems, "sources": len(rows), "pdf_pages": pdf_pages, "body_pages": body_pages,
+        return {"case_id": case_id, "run_id": run_id, "target": which, "problems": problems, "sources": len(rows),
                 "number_drift": drift, "claims_changed": changed, "where_unlocated": unlocated,
                 "numbers_omitted": omitted, "sources_cut": cut, "version": SERVER_VERSION}
 
@@ -1520,6 +1574,11 @@ def build_server(root, agent):
             return case.put_document(case_id, name, src_path, content_base64)
 
         @s.tool()
+        def remove_document(case_id: str, name: str) -> dict:
+            """Withdraw a document the client says is wrong: moved from intake/documents/ to intake/withdrawn/, the intake counts as changed, and the result names the source keys that still cite it."""
+            return case.remove_document(case_id, name)
+
+        @s.tool()
         def dialogue_append(case_id: str, speaker: str, text: str) -> dict:
             """Append one utterance (client or front) verbatim to intake/dialogue.md with date, round and entry number."""
             return case.dialogue_append(case_id, speaker, text)
@@ -1540,8 +1599,8 @@ def build_server(root, agent):
         @s.tool()
         def write_section(case_id: str, run_id: str, section: str, content: str, sources: str = "") -> dict:
             """Write one part of a sectioned draft (section = head | 1 | 2 | 3 | 4 | 5 | 6 | 7 | A) with the sources of that part (a JSON list of
-            {id, where, claim, kind, ref}). A part starts with its heading line; {{block:<name>}} on a line of its own inserts a program table from
-            report/<run_id>/frame/frame.md together with its sources. Writing a part again replaces that part only; its sources are added or replaced by id."""
+            {id, where, claim, kind, ref}). A part starts with its heading line. Writing a part again replaces that part only; its sources are
+            added or replaced by id."""
             return case.write_section(case_id, run_id, section, content, sources)
 
         @s.tool()
@@ -1553,11 +1612,6 @@ def build_server(root, agent):
         def edit_report(case_id: str, run_id: str, edits: list[dict]) -> dict:
             """Change sentences of briefing.md: edits = [{old, new}], each old text must occur exactly once, all or none."""
             return case.edit_report(case_id, run_id, edits)
-
-        @s.tool()
-        def render_pdf(case_id: str, run_id: str) -> dict:
-            """Typeset the client copy of briefing.md (program tables expanded in place of the {{block:...}} markers, the internal reference line removed) into report/<run_id>/briefing.pdf; refuses while report_check(target=draft, text_only=true) reports problems. Returns the page counts, the page of each section and of the flowchart, and how full each page is."""
-            return case.render_pdf(case_id, run_id)
 
     if agent == "polish":
         @s.tool()
@@ -1611,7 +1665,7 @@ def build_server(root, agent):
 
     @s.tool()
     def report_check(case_id: str, run_id: str, target: str = "auto", text_only: bool = False, part: str = "") -> dict:
-        """Read-only self-check of a briefing (target: draft = the report you write; polished = the old polish stage): internal reference line, parts 1-7, appendices A/B, a flow block, no system identifiers or optimizer vocabulary in the body, no spoken lead-ins, no sentence over 55 words, sources entries with where and resolvable refs, every figure covered by a source row, and (unless text_only) a current briefing.pdf whose body runs to 5-10 pages. part (head, 1-7, A, B): check only that part while you write part by part."""
+        """Read-only self-check of a briefing (target: draft = the report you write; polished = the old polish stage): the parts and Appendix A present, no system identifiers or optimizer vocabulary in the body, no spoken lead-ins, citations well formed, sources entries with where and resolvable refs, every figure covered by a source row. part (head, 1-7, A): check only that part while you write part by part. Returns the problems to fix."""
         return case.report_check(case_id, run_id, target, text_only, part)
 
     return s, case

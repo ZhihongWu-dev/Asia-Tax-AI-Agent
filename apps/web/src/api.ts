@@ -1,4 +1,4 @@
-import type { ActivityItem, Case, RunState } from "./workspace";
+import type { ActivityItem, Case, RunState, SearchState } from "./workspace";
 
 export class ApiError extends Error {
   constructor(public code: string) {
@@ -82,7 +82,9 @@ export const api = {
   get: (id: string) => request<Case>(`/cases/${id}`),
   run: (id: string, after: number) => request<RunState>(`/cases/${id}/run?after=${after}`),
   resumeRun: (id: string) => request(`/cases/${id}/run`, "POST"),
+  search: (id: string) => request<SearchState>(`/cases/${id}/search`),
   stopRun: (id: string) => request(`/cases/${id}/run/stop`, "POST"),
+  removeDocument: (id: string, name: string) => request<Case>(`/cases/${id}/documents/${encodeURIComponent(name)}`, "DELETE"),
   organize: (doc: Case, changes: { title?: string; archived?: boolean }) =>
     request<Case>(`/cases/${doc.id}/organization`, "PATCH",
       { revision: doc.revision, request_id: crypto.randomUUID(), ...changes }),
