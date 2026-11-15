@@ -1,0 +1,43 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	dispatch(dispatch)
+	run(run)
+	review_intake(review_intake)
+	analysis(analysis)
+	review_draft(review_draft)
+	polish(polish)
+	review_final(review_final)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> dispatch;
+	analysis -. &nbsp;end&nbsp; .-> __end__;
+	analysis -.-> review_draft;
+	dispatch -. &nbsp;end&nbsp; .-> __end__;
+	dispatch -.-> analysis;
+	dispatch -.-> polish;
+	dispatch -.-> review_draft;
+	dispatch -.-> review_final;
+	dispatch -.-> review_intake;
+	dispatch -.-> run;
+	polish -. &nbsp;end&nbsp; .-> __end__;
+	polish -.-> analysis;
+	polish -.-> review_final;
+	review_draft -. &nbsp;end&nbsp; .-> __end__;
+	review_draft -.-> analysis;
+	review_draft -.-> polish;
+	review_final -. &nbsp;end&nbsp; .-> __end__;
+	review_final -.-> analysis;
+	review_final -.-> polish;
+	review_intake -. &nbsp;end&nbsp; .-> __end__;
+	review_intake -.-> run;
+	run -. &nbsp;end&nbsp; .-> __end__;
+	run -.-> analysis;
+	analysis -.-> analysis;
+	polish -.-> polish;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

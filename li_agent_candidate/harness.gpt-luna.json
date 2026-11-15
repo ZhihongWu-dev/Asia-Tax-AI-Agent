@@ -1,0 +1,14 @@
+{
+ "default": {"backend": "codex"},
+ "codex": {"model": "gpt-6-luna", "reasoning": "medium", "timeout": 10800},
+ "nodes": {
+  "front": {"reasoning": "medium"},
+  "analysis": {"reasoning": "high"},
+  "review_intake": {"reasoning": "high"},
+  "review_draft": {"reasoning": "high"},
+  "review_final": {"reasoning": "high"},
+  "review_legal": {"reasoning": "xhigh"},
+  "review_final_legal": {"reasoning": "xhigh"},
+  "polish": {"reasoning": "medium"}
+ }
+}

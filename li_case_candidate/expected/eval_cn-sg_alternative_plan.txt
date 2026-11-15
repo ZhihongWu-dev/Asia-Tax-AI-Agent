@@ -1,0 +1,49 @@
+cn|company|residence|*  status=T  floor=yes  ceiling=yes  kind=conditional
+   floor    cn.residence.company
+   ceiling  cn.residence.company
+   cond     cn.residence.company                     T 
+   cite     cn.law.eit#2
+sg|company|residence|*  status=T  floor=yes  ceiling=yes  kind=conditional
+   floor    sg.residence.company
+   ceiling  sg.residence.company
+   cond     sg.residence.company                     T 
+   cite     sg.ita1947#s2
+cn|company|outbound_wht|sg  status=U  floor=5  ceiling=10  kind=statutory
+   floor    cn-sg.outbound_wht.cap_10, cn-sg.outbound_wht.cap_5, cn.outbound_wht.statutory
+   ceiling  cn.outbound_wht.statutory
+   cond     cn.outbound_wht.statutory                T 
+   cond     cn-sg.outbound_wht.cap_5                 U DISCRETION:bo
+   cond     cn-sg.outbound_wht.cap_10                U DISCRETION:bo
+   pending  cn-sg.outbound_wht.cap_5 -> DISCRETION:bo; cn-sg.anti_abuse.ppt -> DISCRETION:ppt
+   cite     cn.law.eit#3, cn.law.eit#4, cn.reg.eit#91, cn.sta.2018-09#i2, cn.sta.2018-09#i3, cn.sta.2018-09#i4, treaty.cn-sg.2007.mli.en#10.2
+   decision D-cn-5
+cn|company|anti_abuse|sg  status=U  floor=no  ceiling=yes  kind=conditional
+   floor    -
+   ceiling  cn-sg.anti_abuse.ppt
+   cond     cn.anti_abuse.gaar                       F 
+   cond     cn-sg.anti_abuse.ppt                     U DISCRETION:ppt
+   pending  cn-sg.anti_abuse.ppt -> DISCRETION:ppt
+   cite     treaty.cn-sg.2007.mli.en#27.mli7
+sg|company|inbound|cn  status=T  floor=0  ceiling=0  kind=conditional
+   floor    sg.inbound.credit, sg.inbound.exemption
+   ceiling  sg.inbound.credit, sg.inbound.exemption, sg.inbound.taxable
+   cond     sg.inbound.taxable                       U PLAN:received_in_jurisdiction
+   cond     sg.inbound.exemption                     T 
+   cond     sg.inbound.credit                        T 
+   cite     sg.ita1947#s10, sg.ita1947#s13, sg.ita1947#s50A
+   decision D-sg-1
+sg|company|anti_abuse|cn  status=T  floor=no  ceiling=no  kind=none
+   floor    -
+   ceiling  -
+   cond     sg.anti_abuse.gaar                       F 
+   cite     -
+sg|company|final|*  status=T  floor=17  ceiling=17  kind=statutory
+   floor    sg.final.cit
+   ceiling  sg.final.cit
+   cond     sg.final.cit                             T 
+   cond     sg.final.domestic_exempt                 F 
+   cite     sg.ita1947#s43
+sg|company|cfc|*  status=absent  floor=no  ceiling=no  kind=none
+   floor    -
+   ceiling  -
+   cite     -

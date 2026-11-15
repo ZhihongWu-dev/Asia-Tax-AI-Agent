@@ -1,0 +1,7 @@
+move_id,kind,sets,arg_domain,precondition,restructure,note
+via,path,incorporated_in=<arg>;managed_in=<arg>,jur,,transfer,"Insert a holding company in <arg> between the payer and the current holder; the as-is holder transfers its shares to it (a transfer in the restructure slot). Not a row-level move: every edge into a new node is a via."
+direct,path,,,,transfer,"Remove the intermediate holder: the shares are transferred up the chain (a transfer in the restructure slot). Expressed by a path that skips the as-is payee."
+holding_pct,fact,holding_pct=<arg>,pct:25;50;100,holding_pct < <arg>,acquire,"Increase the holding in the paying company to <arg>% by buying shares from third parties; only the buyer-side stamp duty is a one-off cost."
+wait_months,fact,holding_months=<arg>,months:12;24,,no,"Defer the payment until the holding period reaches <arg> months (treaty / exemption holding conditions)."
+remit,fact,received_in_jurisdiction=<arg>,bool,,no,"Whether the dividend is received in / remitted to the recipient's jurisdiction (remittance-based regimes)."
+payee_type,entity,,company;individual,,no,"The recipient's subject type: a node attribute, not an edge variant."

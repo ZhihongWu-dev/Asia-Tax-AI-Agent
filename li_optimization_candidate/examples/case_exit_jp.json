@@ -1,0 +1,52 @@
+{
+ "case": "EX-EXIT-JP",
+ "note": "Fictitious. A Japanese resident individual owns a Japanese company and could receive the dividend after moving to Singapore. Japan's exit tax (ITA 60-2) is the one-off cost of the move.",
+ "date": "2026-04-30",
+ "mode": "record",
+ "amount": 50000000,
+ "currency": "JPY",
+ "payer": {
+  "jur": "jp",
+  "facts": {
+   "incorporated_in": "jp",
+   "managed_in": "jp",
+   "listed": false
+  }
+ },
+ "payee": {
+  "jur": "jp",
+  "subject": "individual",
+  "facts": {
+   "domicile_in": "jp",
+   "listed": false,
+   "other_taxable_income": 20000000,
+   "exit_assets_value": 300000000,
+   "exit_assets_cost": 100000000,
+   "years_resident_last_10": 10
+  }
+ },
+ "payment": {
+  "holding_pct": 100,
+  "holding_months": 60,
+  "payer_listed": false,
+  "payer_tax_rate": 23.2,
+  "payer_income_taxed": true,
+  "payer_jur": "jp"
+ },
+ "answers": {
+  "bo": "yes",
+  "ppt": "no",
+  "gaar": "no"
+ },
+ "assume": [],
+ "destinations": [
+  [
+   "jp",
+   "individual"
+  ],
+  [
+   "sg",
+   "individual"
+  ]
+ ]
+}

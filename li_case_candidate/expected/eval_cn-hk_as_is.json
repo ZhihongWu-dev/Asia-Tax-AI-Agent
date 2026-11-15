@@ -1,0 +1,507 @@
+[
+ {
+  "slot_key": "cn|company|residence|*",
+  "jur": "cn",
+  "subject": "company",
+  "slot": "residence",
+  "counterparty": "*",
+  "date": "2026-04-30",
+  "status": "T",
+  "value_kind": "conditional",
+  "assumptions": [],
+  "floor": {
+   "value": true,
+   "rules": [
+    "cn.residence.company"
+   ]
+  },
+  "ceiling": {
+   "value": true,
+   "rules": [
+    "cn.residence.company"
+   ]
+  },
+  "rules_applied": {
+   "floor": [
+    "cn.residence.company"
+   ],
+   "ceiling": [
+    "cn.residence.company"
+   ]
+  },
+  "conditions": {
+   "cn.residence.company": [
+    "T",
+    []
+   ]
+  },
+  "pending": [],
+  "needs": [],
+  "cite_ids": [
+   "cn.law.eit#2"
+  ],
+  "decision_ids": []
+ },
+ {
+  "slot_key": "hk|company|residence|*",
+  "jur": "hk",
+  "subject": "company",
+  "slot": "residence",
+  "counterparty": "*",
+  "date": "2026-04-30",
+  "status": "T",
+  "value_kind": "conditional",
+  "assumptions": [],
+  "floor": {
+   "value": true,
+   "rules": [
+    "hk.residence.company"
+   ]
+  },
+  "ceiling": {
+   "value": true,
+   "rules": [
+    "hk.residence.company"
+   ]
+  },
+  "rules_applied": {
+   "floor": [
+    "hk.residence.company"
+   ],
+   "ceiling": [
+    "hk.residence.company"
+   ]
+  },
+  "conditions": {
+   "hk.residence.company": [
+    "T",
+    []
+   ]
+  },
+  "pending": [],
+  "needs": [],
+  "cite_ids": [
+   "hk.cap112#s50AAC"
+  ],
+  "decision_ids": []
+ },
+ {
+  "slot_key": "cn|company|outbound_wht|hk",
+  "jur": "cn",
+  "subject": "company",
+  "slot": "outbound_wht",
+  "counterparty": "hk",
+  "date": "2026-04-30",
+  "status": "U",
+  "value_kind": "statutory",
+  "assumptions": [],
+  "floor": {
+   "value": 5.0,
+   "rules": [
+    "cn-hk.outbound_wht.cap_10",
+    "cn-hk.outbound_wht.cap_5",
+    "cn.outbound_wht.statutory"
+   ]
+  },
+  "ceiling": {
+   "value": 10.0,
+   "rules": [
+    "cn.outbound_wht.statutory"
+   ]
+  },
+  "rules_applied": {
+   "floor": [
+    "cn-hk.outbound_wht.cap_10",
+    "cn-hk.outbound_wht.cap_5",
+    "cn.outbound_wht.statutory"
+   ],
+   "ceiling": [
+    "cn.outbound_wht.statutory"
+   ]
+  },
+  "conditions": {
+   "cn.outbound_wht.statutory": [
+    "T",
+    []
+   ],
+   "cn-hk.outbound_wht.cap_5": [
+    "U",
+    [
+     [
+      "DISCRETION",
+      "bo"
+     ],
+     [
+      "DISCRETION",
+      "parent_bo"
+     ]
+    ]
+   ],
+   "cn-hk.outbound_wht.cap_10": [
+    "U",
+    [
+     [
+      "DISCRETION",
+      "bo"
+     ],
+     [
+      "DISCRETION",
+      "parent_bo"
+     ]
+    ]
+   ]
+  },
+  "pending": [
+   {
+    "rule_id": "cn-hk.outbound_wht.cap_5",
+    "needs": [
+     [
+      "DISCRETION",
+      "bo"
+     ],
+     [
+      "DISCRETION",
+      "parent_bo"
+     ]
+    ]
+   },
+   {
+    "rule_id": "cn-hk.anti_abuse.ppt",
+    "needs": [
+     [
+      "DISCRETION",
+      "ppt"
+     ]
+    ]
+   }
+  ],
+  "needs": [
+   [
+    "DISCRETION",
+    "bo"
+   ],
+   [
+    "DISCRETION",
+    "parent_bo"
+   ],
+   [
+    "DISCRETION",
+    "ppt"
+   ]
+  ],
+  "cite_ids": [
+   "cn.law.eit#3",
+   "cn.law.eit#4",
+   "cn.reg.eit#91",
+   "cn.sta.2018-09#i2",
+   "cn.sta.2018-09#i3",
+   "cn.sta.2018-09#i4",
+   "treaty.cn-hk.2006.zh#10.2"
+  ],
+  "decision_ids": [
+   "D-cn-5"
+  ],
+  "denied_by": {
+   "floor": [],
+   "ceiling": [
+    "cn-hk.anti_abuse.ppt"
+   ]
+  }
+ },
+ {
+  "slot_key": "cn|company|anti_abuse|hk",
+  "jur": "cn",
+  "subject": "company",
+  "slot": "anti_abuse",
+  "counterparty": "hk",
+  "date": "2026-04-30",
+  "status": "U",
+  "value_kind": "conditional",
+  "assumptions": [],
+  "floor": {
+   "value": false,
+   "rules": [],
+   "overrides": []
+  },
+  "ceiling": {
+   "value": true,
+   "rules": [
+    "cn-hk.anti_abuse.ppt"
+   ],
+   "overrides": [
+    "cap:*"
+   ]
+  },
+  "rules_applied": {
+   "floor": [],
+   "ceiling": [
+    "cn-hk.anti_abuse.ppt"
+   ]
+  },
+  "conditions": {
+   "cn.anti_abuse.gaar": [
+    "F",
+    []
+   ],
+   "cn-hk.anti_abuse.ppt": [
+    "U",
+    [
+     [
+      "DISCRETION",
+      "ppt"
+     ]
+    ]
+   ]
+  },
+  "pending": [
+   {
+    "rule_id": "cn-hk.anti_abuse.ppt",
+    "needs": [
+     [
+      "DISCRETION",
+      "ppt"
+     ]
+    ]
+   }
+  ],
+  "needs": [
+   [
+    "DISCRETION",
+    "ppt"
+   ]
+  ],
+  "cite_ids": [
+   "treaty.cn-hk.2006.p5.zh#6"
+  ],
+  "decision_ids": []
+ },
+ {
+  "slot_key": "hk|company|inbound|cn",
+  "jur": "hk",
+  "subject": "company",
+  "slot": "inbound",
+  "counterparty": "cn",
+  "date": "2026-04-30",
+  "status": "T",
+  "value_kind": "conditional",
+  "assumptions": [],
+  "floor": {
+   "value": 0.0,
+   "rules": [
+    "hk.inbound.credit",
+    "hk.inbound.credit_underlying",
+    "hk.inbound.fsie_taxable",
+    "hk.inbound.participation_exemption"
+   ],
+   "credit": true
+  },
+  "ceiling": {
+   "value": 0.0,
+   "rules": [
+    "hk.inbound.credit",
+    "hk.inbound.credit_underlying",
+    "hk.inbound.fsie_taxable",
+    "hk.inbound.participation_exemption"
+   ],
+   "credit": true
+  },
+  "rules_applied": {
+   "floor": [
+    "hk.inbound.credit",
+    "hk.inbound.credit_underlying",
+    "hk.inbound.fsie_taxable",
+    "hk.inbound.participation_exemption"
+   ],
+   "ceiling": [
+    "hk.inbound.credit",
+    "hk.inbound.credit_underlying",
+    "hk.inbound.fsie_taxable",
+    "hk.inbound.participation_exemption"
+   ]
+  },
+  "conditions": {
+   "hk.inbound.fsie_taxable": [
+    "T",
+    []
+   ],
+   "hk.inbound.participation_exemption": [
+    "T",
+    []
+   ],
+   "hk.inbound.substance_exemption": [
+    "F",
+    []
+   ],
+   "hk.inbound.credit": [
+    "T",
+    []
+   ],
+   "hk.inbound.credit_underlying": [
+    "T",
+    []
+   ]
+  },
+  "pending": [],
+  "needs": [],
+  "cite_ids": [
+   "hk.cap112#s15H",
+   "hk.cap112#s15I",
+   "hk.cap112#s15M",
+   "hk.cap112#s15N",
+   "hk.cap112#s50AAAC"
+  ],
+  "decision_ids": [
+   "D-hk-1"
+  ],
+  "denied_by": {
+   "floor": [],
+   "ceiling": []
+  }
+ },
+ {
+  "slot_key": "hk|company|anti_abuse|cn",
+  "jur": "hk",
+  "subject": "company",
+  "slot": "anti_abuse",
+  "counterparty": "cn",
+  "date": "2026-04-30",
+  "status": "T",
+  "value_kind": "none",
+  "assumptions": [],
+  "floor": {
+   "value": false,
+   "rules": [],
+   "overrides": []
+  },
+  "ceiling": {
+   "value": false,
+   "rules": [],
+   "overrides": []
+  },
+  "rules_applied": {
+   "floor": [],
+   "ceiling": []
+  },
+  "conditions": {
+   "hk.anti_abuse.gaar": [
+    "F",
+    []
+   ],
+   "hk.anti_abuse.fsie_main_purpose": [
+    "F",
+    []
+   ]
+  },
+  "pending": [],
+  "needs": [],
+  "cite_ids": [],
+  "decision_ids": []
+ },
+ {
+  "slot_key": "hk|company|final|*",
+  "jur": "hk",
+  "subject": "company",
+  "slot": "final",
+  "counterparty": "*",
+  "date": "2026-04-30",
+  "status": "U",
+  "value_kind": "statutory",
+  "assumptions": [],
+  "floor": {
+   "value": 8.25,
+   "rules": [
+    "hk.final.cit_lower_tier"
+   ],
+   "included": 100.0
+  },
+  "ceiling": {
+   "value": 16.5,
+   "rules": [
+    "hk.final.cit"
+   ],
+   "included": 100.0
+  },
+  "rules_applied": {
+   "floor": [
+    "hk.final.cit_lower_tier"
+   ],
+   "ceiling": [
+    "hk.final.cit"
+   ]
+  },
+  "conditions": {
+   "hk.final.cit": [
+    "T",
+    []
+   ],
+   "hk.final.cit_lower_tier": [
+    "U",
+    [
+     [
+      "MISSING",
+      "assessable_profits"
+     ]
+    ]
+   ],
+   "hk.final.domestic_exempt": [
+    "F",
+    []
+   ]
+  },
+  "pending": [
+   {
+    "rule_id": "hk.final.cit_lower_tier",
+    "needs": [
+     [
+      "MISSING",
+      "assessable_profits"
+     ]
+    ]
+   }
+  ],
+  "needs": [
+   [
+    "MISSING",
+    "assessable_profits"
+   ]
+  ],
+  "cite_ids": [
+   "hk.cap112#sch8B"
+  ],
+  "decision_ids": [
+   "D-hk-2"
+  ],
+  "denied_by": {
+   "floor": [],
+   "ceiling": []
+  }
+ },
+ {
+  "slot_key": "hk|company|cfc|*",
+  "jur": "hk",
+  "subject": "company",
+  "slot": "cfc",
+  "counterparty": "*",
+  "date": "2026-04-30",
+  "status": "absent",
+  "value_kind": "none",
+  "assumptions": [],
+  "floor": {
+   "value": false,
+   "rules": []
+  },
+  "ceiling": {
+   "value": false,
+   "rules": []
+  },
+  "rules_applied": {
+   "floor": [],
+   "ceiling": []
+  },
+  "conditions": {},
+  "pending": [],
+  "needs": [],
+  "cite_ids": [],
+  "decision_ids": []
+ }
+]

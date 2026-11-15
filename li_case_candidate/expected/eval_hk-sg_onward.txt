@@ -1,0 +1,42 @@
+hk|company|residence|*  status=T  floor=yes  ceiling=yes  kind=conditional
+   floor    hk.residence.company
+   ceiling  hk.residence.company
+   cond     hk.residence.company                     T 
+   cite     hk.cap112#s50AAC
+sg|company|residence|*  status=T  floor=yes  ceiling=yes  kind=conditional
+   floor    sg.residence.company
+   ceiling  sg.residence.company
+   cond     sg.residence.company                     T 
+   cite     sg.ita1947#s2
+hk|company|outbound_wht|sg  status=absent  floor=-  ceiling=-  kind=none
+   floor    -
+   ceiling  -
+   cite     -
+hk|company|anti_abuse|sg  status=T  floor=no  ceiling=yes  kind=conditional
+   floor    -
+   ceiling  hk.anti_abuse.fsie_main_purpose
+   cond     hk.anti_abuse.gaar                       F 
+   cond     hk.anti_abuse.fsie_main_purpose          U DISCRETION:fsie_mpr
+   cite     hk.cap112#s15N
+sg|company|inbound|hk  status=T  floor=100  ceiling=100  kind=conditional
+   floor    sg.inbound.credit, sg.inbound.taxable
+   ceiling  sg.inbound.credit, sg.inbound.taxable
+   cond     sg.inbound.taxable                       T 
+   cond     sg.inbound.exemption                     F 
+   cond     sg.inbound.credit                        T 
+   cite     sg.ita1947#s10, sg.ita1947#s50A
+sg|company|anti_abuse|hk  status=T  floor=no  ceiling=no  kind=none
+   floor    -
+   ceiling  -
+   cond     sg.anti_abuse.gaar                       F 
+   cite     -
+sg|company|final|*  status=T  floor=17  ceiling=17  kind=statutory
+   floor    sg.final.cit
+   ceiling  sg.final.cit
+   cond     sg.final.cit                             T 
+   cond     sg.final.domestic_exempt                 F 
+   cite     sg.ita1947#s43
+sg|company|cfc|*  status=absent  floor=no  ceiling=no  kind=none
+   floor    -
+   ceiling  -
+   cite     -
