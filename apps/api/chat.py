@@ -384,3 +384,22 @@ def final_review(case_id: UUID, report_id: UUID, body: FinalReview,
                  user=Depends(required_user), service: ChatService = Depends(get_service)):
     return call(service.review, 'user:' + user['id'], str(case_id), body.revision,
                 str(body.request_id), str(report_id), body.report_hash, user['id'], body.decision, body.note)
+
+
+from packages.contracts.income_tax import IncomeTaxCase
+
+
+class IncomeTaxEdit(Mutation):
+    inputs: IncomeTaxCase
+
+
+@router.get("/cases/{case_id}/income-tax")
+def income_tax_get(case_id: UUID, workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
+    from packages.chat.income_tax import view
+    return view(call(service.store.get, workspace, str(case_id)))
+
+
+@router.put("/cases/{case_id}/income-tax")
+def income_tax_save(case_id: UUID, body: IncomeTaxEdit, workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
+    from packages.chat.income_tax import save_case
+    return call(save_case, service.store, workspace, str(case_id), body.revision, str(body.request_id), body.inputs)
