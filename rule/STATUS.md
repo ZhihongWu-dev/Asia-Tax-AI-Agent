@@ -4,29 +4,29 @@ Written by `rule/tools/build.py` at every build; do not edit.
 
 | What | Count |
 |---|---|
-| Rules | 191 |
-| Variables / predicates | 56 / 10 |
-| Interpretation decisions (rows) | 21 |
-| Golden tests (passed / total) | 503 / 503 |
+| Rules | 451 |
+| Variables / predicates | 94 / 11 |
+| Interpretation decisions (rows) | 203 |
+| Golden tests (passed / total) | 1362 / 1362 |
 | Errors | 0 |
-| Coverage gaps (jurisdiction, subject, slot) | 96 |
+| Coverage gaps (jurisdiction, subject, slot) | 30 |
 | Conditioned rules without a T, F and U test | 0 |
 
 ## Rules by jurisdiction
 
 | Jurisdiction | Rules |
 |---|---|
-| cn | 65 |
+| cn | 71 |
 | hk | 16 |
-| sg | 18 |
-| id | 0 |
-| vn | 0 |
-| my | 0 |
-| th | 35 |
-| ae | 0 |
-| jp | 57 |
-| kr | 0 |
-| in | 0 |
+| sg | 22 |
+| id | 41 |
+| vn | 46 |
+| my | 43 |
+| th | 44 |
+| ae | 14 |
+| jp | 72 |
+| kr | 51 |
+| in | 31 |
 
 ## Errors
 
@@ -40,102 +40,36 @@ All passed.
 
 Cells jurisdiction | subject | slot with neither a rule nor an absence record in database/decision.csv:
 
-- id|company|outbound_wht
-- id|company|inbound
-- id|company|final
-- id|company|residence
-- id|company|cfc
-- id|company|anti_abuse
 - id|company|penalty
 - id|company|restructure
-- id|individual|outbound_wht
-- id|individual|inbound
-- id|individual|final
-- id|individual|residence
-- id|individual|cfc
-- id|individual|anti_abuse
 - id|individual|penalty
 - id|individual|restructure
-- vn|company|outbound_wht
-- vn|company|inbound
-- vn|company|final
-- vn|company|residence
-- vn|company|cfc
-- vn|company|anti_abuse
+- id|individual|exit
 - vn|company|penalty
 - vn|company|restructure
-- vn|individual|outbound_wht
-- vn|individual|inbound
-- vn|individual|final
-- vn|individual|residence
-- vn|individual|cfc
-- vn|individual|anti_abuse
 - vn|individual|penalty
 - vn|individual|restructure
-- my|company|outbound_wht
-- my|company|inbound
-- my|company|final
-- my|company|residence
-- my|company|cfc
-- my|company|anti_abuse
+- vn|individual|exit
 - my|company|penalty
 - my|company|restructure
-- my|individual|outbound_wht
-- my|individual|inbound
-- my|individual|final
-- my|individual|residence
-- my|individual|cfc
-- my|individual|anti_abuse
 - my|individual|penalty
 - my|individual|restructure
-- ae|company|outbound_wht
-- ae|company|inbound
-- ae|company|final
-- ae|company|residence
-- ae|company|cfc
-- ae|company|anti_abuse
+- my|individual|exit
 - ae|company|penalty
 - ae|company|restructure
-- ae|individual|outbound_wht
-- ae|individual|inbound
-- ae|individual|final
-- ae|individual|residence
-- ae|individual|cfc
-- ae|individual|anti_abuse
 - ae|individual|penalty
 - ae|individual|restructure
-- kr|company|outbound_wht
-- kr|company|inbound
-- kr|company|final
-- kr|company|residence
-- kr|company|cfc
-- kr|company|anti_abuse
+- ae|individual|exit
 - kr|company|penalty
 - kr|company|restructure
-- kr|individual|outbound_wht
-- kr|individual|inbound
-- kr|individual|final
-- kr|individual|residence
-- kr|individual|cfc
-- kr|individual|anti_abuse
 - kr|individual|penalty
 - kr|individual|restructure
-- in|company|outbound_wht
-- in|company|inbound
-- in|company|final
-- in|company|residence
-- in|company|cfc
-- in|company|anti_abuse
+- kr|individual|exit
 - in|company|penalty
 - in|company|restructure
-- in|individual|outbound_wht
-- in|individual|inbound
-- in|individual|final
-- in|individual|residence
-- in|individual|cfc
-- in|individual|anti_abuse
 - in|individual|penalty
 - in|individual|restructure
+- in|individual|exit
 
 ## Conditioned rules without a T, F and U test
 

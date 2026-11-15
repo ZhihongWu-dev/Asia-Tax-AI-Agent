@@ -1,4 +1,13 @@
 test_id,input,expect
-case001.best,optimization/examples/case001.json,best cn:company->sg:company 5 5
+case001.best,optimization/examples/case001.json,best cn:company->hk:company->sg:individual 5 5
 case001.open,optimization/examples/case001.json,"open bo,parent_bo,ppt"
-case001.valued.best,optimization/examples/case001_valued.json,best cn:company->sg:company 5 5
+case001.valued.best,optimization/examples/case001_valued.json,best cn:company->hk:company->sg:individual 5 5
+cfc_jp.best,optimization/examples/case_cfc_jp.json,best cn:company->sg:company->jp:company 6.102 23.200005
+cfc_jp.open,optimization/examples/case_cfc_jp.json,"open payer_etr,valuation_missing"
+exit_jp.best,optimization/examples/case_exit_jp.json,best jp:company->sg:company->sg:individual 5 5
+remit_sg.not_kept,optimization/examples/case_remit_sg.json,not_kept cn:company->hk:company->sg:company remit(false) 2261000 2261000
+remit_sg_open.conduct,optimization/examples/case_remit_sg_open.json,conduct receive_at_destination cn:company->sg:company 2261000
+remit_sg_received.best,optimization/examples/case_remit_sg_received.json,best cn:company->sg:company 5 17
+remit_sg_received.sequence,optimization/examples/case_remit_sg_received.json,sequence cn:company->hk:company->sg:company cn:company->sg:company
+jp_sg_individual.best,optimization/examples/case_jp_sg_individual.json,best jp:company->sg:company->sg:individual 5 5
+jp_sg_individual.sequence,optimization/examples/case_jp_sg_individual.json,sequence jp:company->sg:individual jp:company->sg:company->sg:individual

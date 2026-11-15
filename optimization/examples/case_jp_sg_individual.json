@@ -1,0 +1,71 @@
+{
+ "note": "case_end2end_jp (fictitious, 2026-11-12, optimization spec §4.7a): a Japanese company paying its Singapore-resident owner; the owner's existing Singapore company as the holding route; this payment cannot wait, so it goes as things stand and later payments through the Singapore company.",
+ "date": "2026-12-25",
+ "mode": "plan",
+ "amount": 200000000,
+ "currency": "JPY",
+ "payer": {
+  "jur": "jp",
+  "facts": {
+   "incorporated_in": "jp",
+   "managed_in": "jp",
+   "payer_listed": false
+  }
+ },
+ "payee": {
+  "jur": "sg",
+  "subject": "individual",
+  "facts": {
+   "domicile_in": "sg",
+   "ordinarily_resides": true
+  }
+ },
+ "payment": {
+  "holding_pct": 100,
+  "holding_months": 105,
+  "payer_tax_rate": 23.2,
+  "payer_income_taxed": true
+ },
+ "entities": {
+  "sg:company": {
+   "facts": {
+    "incorporated_in": "sg",
+    "managed_in": "sg",
+    "employees_in_jurisdiction": 2,
+    "premises_in_jurisdiction": true,
+    "substantive_business": true,
+    "passes_on_within_12m": false,
+    "payee_listed_in_partner": false,
+    "payee_is_government": false
+   }
+  },
+  "sg:individual": {
+   "facts": {
+    "domicile_in": "sg",
+    "ordinarily_resides": true
+   },
+   "holds": "sg:company",
+   "holding_pct": 100,
+   "holding_months": 70
+  }
+ },
+ "valuation": {
+  "jp:company": {
+   "net_assets": 2400000000,
+   "cost_base": 600000000,
+   "currency": "JPY"
+  }
+ },
+ "destinations": [
+  [
+   "sg",
+   "individual"
+  ]
+ ],
+ "constraints": {
+  "allow_restructure": true,
+  "receive_at_destination": true,
+  "this_payment_can_wait": false,
+  "declared_to_payee": false
+ }
+}

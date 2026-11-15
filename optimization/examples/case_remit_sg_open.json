@@ -1,0 +1,101 @@
+{
+ "note": "case_remit_sg.json with the Singapore company as the only destination and the client's conduct not stated (2026-11-12, optimization spec §4.7a): the conduct run shows who comes first if the money must be received in Singapore.",
+ "amount": 14000000,
+ "answers": {},
+ "constraints": {
+  "consider": [],
+  "exclude": []
+ },
+ "currency": "RMB",
+ "date": "2026-04-30",
+ "destinations": [
+  [
+   "sg",
+   "company"
+  ]
+ ],
+ "entities": {
+  "cn:company": {
+   "facts": {
+    "incorporated_in": "cn",
+    "managed_in": "cn",
+    "payer_listed": false
+   },
+   "name": "Shenzhen Chenguang Precision Manufacturing Co., Ltd.",
+   "note": "paid_up_capital 50000000; registered_capital 50000000; uscc 91440300MA5FQ2X7K9"
+  },
+  "cn:partnership": {
+   "facts": {
+    "incorporated_in": "cn"
+   },
+   "holding_pct": 30,
+   "name": "Shenzhen Chenhui Investment Partnership (Limited Partnership) (深圳晨辉投资合伙企业（有限合伙）)",
+   "note": "uscc 91440300MA5DLK3M2A"
+  },
+  "hk:company": {
+   "facts": {
+    "incorporated_in": "hk",
+    "managed_in": "hk"
+   },
+   "name": "Brightpeak Holdings (HK) Limited",
+   "note": "company_no 2831146; employees 0"
+  },
+  "sg:company": {
+   "facts": {
+    "incorporated_in": "sg",
+    "managed_in": "sg",
+    "parent_holding_pct": 100,
+    "parent_jur": "sg"
+   },
+   "name": "Brightpeak Asia Pte. Ltd.",
+   "note": "employees 3; tax_resident sg; uen 201912345K"
+  },
+  "sg:individual": {
+   "facts": {
+    "domicile_in": "sg"
+   },
+   "name": "Mr. TAN Wei Liang (陈伟良)",
+   "note": "nationality sg; tax_resident sg"
+  }
+ },
+ "payee": {
+  "facts": {
+   "employees_in_jurisdiction": 0,
+   "incorporated_in": "hk",
+   "managed_in": "hk",
+   "parent_holding_pct": 100,
+   "parent_jur": "sg",
+   "passes_on_within_12m": false,
+   "premises_in_jurisdiction": false
+  },
+  "jur": "hk",
+  "subject": "company"
+ },
+ "payer": {
+  "facts": {
+   "incorporated_in": "cn",
+   "managed_in": "cn",
+   "payer_listed": false
+  },
+  "jur": "cn"
+ },
+ "payment": {
+  "claim_reported": true,
+  "holding_months": 82,
+  "holding_pct": 70,
+  "voluntary_payment": true
+ },
+ "valuation": {
+  "cn:company": {
+   "cost_base": 35000000,
+   "cost_currency": "RMB"
+  },
+  "hk:company": {
+   "as_of": "2025-12-31",
+   "cost_base": 10000,
+   "cost_currency": "HKD",
+   "currency": "HKD",
+   "net_assets": 48285330
+  }
+ }
+}

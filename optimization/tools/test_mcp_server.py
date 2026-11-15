@@ -13,6 +13,7 @@ import json
 import re
 import shutil
 import sys
+import tempfile
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -21,7 +22,6 @@ from mcp_server import build_server  # noqa: E402
 import optimize as op  # noqa: E402
 
 PROJECT = HERE.parents[1]
-DEFAULT_WORK = Path(r"C:/Users/L8770/AppData/Local/Temp/claude/c--Coding-Projects-TUM-project-study-self/7d2d869a-7976-44b2-8fc2-389dd64ca44a/scratchpad/optmcp")
 
 
 async def call(server, name, args):
@@ -32,11 +32,14 @@ async def call(server, name, args):
 def main():
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser()
-    ap.add_argument("--work", default=str(DEFAULT_WORK))
+    ap.add_argument("--work", help="Existing parent directory for a fresh isolated test workspace")
     a = ap.parse_args()
-    work = Path(a.work)
-    if work.exists():
-        shutil.rmtree(work)
+    # Never remove the caller's directory; each invocation owns a new child.
+    parent = Path(a.work).resolve() if a.work else None
+    if parent is not None:
+        parent.mkdir(parents=True, exist_ok=True)
+    workspace = tempfile.TemporaryDirectory(prefix="tax-opt-test-", dir=parent)
+    work = Path(workspace.name)
     (work / "CASE-T" / "intake").mkdir(parents=True)
     shutil.copy(PROJECT / "optimization" / "examples" / "case001.json", work / "CASE-T" / "intake" / "facts.json")
     bad = json.loads((PROJECT / "optimization" / "examples" / "case001.json").read_text(encoding="utf-8"))

@@ -3,12 +3,13 @@
 
   python agent/tools/render_pdf.py <briefing.md> <out.pdf> [--preview <dir>]
 
-Layout rules live here, not in the agent's prompt: 10 pt body, green headings with a hairline, horizontal-rule tables with a
-shaded header and ragged cells, appendices in smaller type, the sources appendix in two columns, page x / y in the footer.
+Layout rules live here, not in the agent's prompt: 11 pt body, 13 pt part headings and 11.5 pt sub-headings in green with a
+hairline, horizontal-rule tables with a shaded header and ragged cells (10 pt, 9 pt from six columns), the flowchart at 9 pt,
+nothing below 8 pt (the footer and the internal reference), the sources appendix in two columns, page x / y in the footer.
 
 Markdown handled: title (#), sections (## / ###), **bold**, `code`, bullet and numbered lists, pipe tables (they break across
 pages between rows), ```flow blocks (a JSON description of the current structure, the moves and the target structure, drawn
-by this template with a fixed layout, see agent/templates/flowchart.example.json), and other fenced blocks (verbatim). Every
+by this template; the program writes it from the products, frame/blocks/flow.json), and other fenced blocks (verbatim). Every
 source line is its own paragraph, because the reports write one paragraph per line. Horizontal rules in the source are ignored: headings already
 carry a rule. A closing line wrapped in single asterisks is set small and grey (the internal reference).
 
@@ -19,7 +20,6 @@ writes one PNG per page for people and for models that read images. Needs xelate
 import argparse
 import io
 import json
-import math
 import re
 import shutil
 import subprocess
@@ -55,82 +55,80 @@ def esc(s):
     s = re.sub(r"\*\*(.+?)\*\*", r"\\textbf{\1}", s)
     s = re.sub(r"`([^`]+?)`", r"\\texttt{\1}", s)
     s = quotes(s)
+    if not CJK.search(s):                                 # xeCJK sets U+2014 as a CJK glyph and swallows the spaces around it
+        s = s.replace("—", "---").replace("–", "--")
     for a, b in (("→", r"$\rightarrow$"), ("←", r"$\leftarrow$"), ("►", r"$\blacktriangleright$"),
                  ("≥", r"$\geq$"), ("≤", r"$\leq$"), ("×", r"$\times$")):
         s = s.replace(a, b)
     return s
 
 
-FLOW_STEP = 2.05                                       # cm between two tiers: a box of three lines, then room for a two-line holding label
-FLOW_HEAD = 0.72
-FLOW_TITLE_LINE = 0.42
-FLOW_RESULT_TOP = -0.78
-FLOW_RESULT_LINE = 0.33
+PANEL_W = 7.65                                         # cm: a holding label, the box, the dividend's rail and its label
+BOX_W = 3.55
+LABEL_W = 1.8
+GAP = 0.75                                             # between the two panels, where the move arrow sits
 
 
-def lines_of(text, width, per_cm):
-    """Lines a text takes in a box of that width (cm), estimated: TikZ cannot size the frame around a node it has not set."""
-    return sum(max(1, math.ceil(len(part) / (width * per_cm))) for part in str(text).split("\n"))
-
-
-def panel(side, x, width, top, bottom, title_lines, emphasised):
-    """One structure: an ownership chain from the top holder down to the paying company, with its tax result underneath."""
+def panel(side, tag, x0, emphasised):
+    """One structure: the holding chain from the top holder down to the paying company, the dividend's route on it and the tax
+    underneath. Every box sits below the one before at its real height (positioning), so nothing is estimated or overlaps."""
     chain, holds = side["chain"], side.get("holds", [])
     if len(chain) < 2:
         raise RuntimeError("flow block: a chain needs at least two entities")
-    step = top / (len(chain) - 1)
-    frame = "emphasis" if emphasised else "plain"
-    centre = x + width * 0.355
-    box = min(3.8, width - 2.3)
-    rail = centre + box / 2 + 0.42                             # the dividend's dashed line, right of the boxes and of the holding labels
-    out = [r"\draw[%s] (%.2f,%.2f) rectangle (%.2f,%.2f);" % (frame, x, bottom, x + width, top + FLOW_HEAD + title_lines * FLOW_TITLE_LINE),
-           r"\node[paneltitle,text width=%.2fcm,align=center,anchor=south] at (%.2f,%.2f) {%s};" % (width - 0.3, x + width / 2, top + FLOW_HEAD - 0.1, esc(side.get("title", "")))]
+    cx = x0 + LABEL_W + 0.15 + BOX_W / 2
+    out = [r"\coordinate (%sL) at (%.2f,0);" % (tag, x0), r"\coordinate (%sR) at (%.2f,0);" % (tag, x0 + PANEL_W),
+           r"\coordinate (%sC) at (%.2f,0);" % (tag, x0 + PANEL_W / 2)]
     for k, e in enumerate(chain):
-        y = top - k * step
-        note = (r"\\{\scriptsize %s}" % esc(e["note"])) if e.get("note") else ""
-        out.append(r"\node[entity,text width=%.2fcm] (n%d%d) at (%.2f,%.2f) {\textbf{%s}%s};" % (box, int(x), k, centre, y, esc(e["name"]), note))
+        note = (r"\\ %s" % esc(e["note"])) if e.get("note") else ""
+        where = "at (%.2f,0)" % cx if k == 0 else ""
+        place = "" if k == 0 else ",below=9mm of %s%d" % (tag, k - 1)
+        out.append(r"\node[entity,text width=%.2fcm%s] (%s%d) %s {\textbf{%s}%s};" % (BOX_W, place, tag, k, where, esc(e["name"]), note))
     for k in range(len(chain) - 1):
         pct = esc(holds[k]) if k < len(holds) else ""
-        out.append(r"\draw[hold] (n%d%d) -- node[holdlabel,text width=%.2fcm] {%s} (n%d%d);" % (int(x), k, rail - centre - 0.12, pct, int(x), k + 1))
+        out.append(r"\draw[hold] (%s%d.south) -- node[holdlabel,text width=%.2fcm] {%s} (%s%d.north);" % (tag, k, LABEL_W, pct, tag, k + 1))
+    n = len(chain) - 1
     target = side.get("dividend_to")
     if target is not None:
-        if not 0 <= int(target) < len(chain) - 1:
+        if not 0 <= int(target) < n:
             raise RuntimeError("flow block: dividend_to must point at an entity above the paying company")
-        out.append(r"\draw[dividend] (n%d%d.east) -- (%.2f,%.2f) |- node[divlabel,pos=0.25,text width=%.2fcm] {\hyphenpenalty=10000\relax %s} (n%d%d.east);"
-                   % (int(x), len(chain) - 1, rail, top - (len(chain) - 1) * step, x + width - rail - 0.15, esc(side.get("dividend_label", "")), int(x), int(target)))
-    out.append(r"\node[result,text width=%.2fcm,anchor=north] at (%.2f,%.2f) {%s};" % (width - 0.4, x + width / 2, FLOW_RESULT_TOP, esc(side.get("result", "")).replace("\n", r"\\")))
+        out.append(r"\draw[dividend] (%s%d.east) -- ++(0.45,0) coordinate (%srail) |- node[divlabel,pos=0.25,text width=%.2fcm] {%s} (%s%d.east);"
+                   % (tag, n, tag, PANEL_W - LABEL_W - 0.15 - BOX_W - 0.7, esc(side.get("dividend_label", "")), tag, int(target)))
+    out.append(r"\node[result,text width=%.2fcm,anchor=north] (%sres) at ($(%sC |- %s%d.south)+(0,-0.45)$) {%s};"
+               % (PANEL_W - 0.4, tag, tag, tag, n, esc(side.get("result", "")).replace("\n", r"\\")))
+    out.append(r"\node[paneltitle,text width=%.2fcm,anchor=south] (%stitle) at ($(%sC |- %s0.north)+(0,0.35)$) {%s};"
+               % (PANEL_W - 0.3, tag, tag, tag, esc(side.get("title", ""))))
+    out.append(r"\begin{scope}[on background layer]\node[%s,fit=(%stitle)(%sres)(%sL)(%sR),inner sep=5pt] (%sframe) {};\end{scope}"
+               % ("emphasis" if emphasised else "plain", tag, tag, tag, tag, tag))
     return out
 
 
 def flow_tex(raw):
+    """The flowchart the program writes into Part 1 (frame/blocks/flow.json): two panels side by side, the moves underneath.
+    Type is never below 9 pt."""
     try:
         spec = json.loads(raw)
         current, target = spec["current"], spec["target"]
     except (ValueError, KeyError) as ex:
         raise RuntimeError("flow block is not valid: %s" % ex)
-    steps = spec.get("steps", [])
-    width = 5.5 if steps else 8.2                              # without steps the two panels take the whole line
-    right = 11.5 if steps else 8.8
-    top = (max(len(current["chain"]), len(target["chain"])) - 1) * FLOW_STEP
-    title_lines = max(lines_of(p.get("title", ""), width - 0.3, 5.2) for p in (current, target))
-    bottom = FLOW_RESULT_TOP - 0.25 - max(lines_of(p.get("result", ""), width - 0.4, 7.6) for p in (current, target)) * FLOW_RESULT_LINE
-    body = r"\\[2pt]".join(r"%d.\ %s" % (n + 1, esc(t)) for n, t in enumerate(steps))
-    out = [r"\begin{center}\begin{tikzpicture}[x=0.985cm,y=1cm,font=\footnotesize,"
+    right = PANEL_W + GAP
+    out = [r"\begin{center}\begin{tikzpicture}[font=\fontsize{9}{11}\selectfont,"
            r"plain/.style={draw=rule,rounded corners=3pt},emphasis/.style={draw=ink,line width=0.9pt,rounded corners=3pt,fill=band!45},"
-           r"paneltitle/.style={font=\sffamily\bfseries\small,text=ink,inner sep=1pt},"
-           r"entity/.style={draw=ink!70,fill=white,rounded corners=2pt,align=flush center,minimum height=0.74cm,inner sep=2.5pt},"
-           r"hold/.style={-{Stealth[length=5pt]},draw=ink!75},holdlabel/.style={right,font=\scriptsize,align=left,inner sep=2pt,text=ink!85!black},"
+           r"paneltitle/.style={font=\sffamily\bfseries\fontsize{9.5}{11.5}\selectfont,text=ink,inner sep=1pt,align=center},"
+           r"entity/.style={draw=ink!70,fill=white,rounded corners=2pt,align=flush center,minimum height=0.8cm,inner sep=3pt},"
+           r"hold/.style={-{Stealth[length=5pt]},draw=ink!75},holdlabel/.style={left,align=right,inner sep=2pt,text=ink!85!black},"
            r"dividend/.style={-{Stealth[length=6pt]},draw=accent,dashed,line width=0.8pt},"
-           r"divlabel/.style={right,font=\scriptsize,text=accent,align=left,inner sep=2pt},"
-           r"result/.style={align=flush center,font=\scriptsize,inner sep=1pt},"
+           r"divlabel/.style={right,text=accent,align=left,inner sep=2pt},"
+           r"result/.style={align=flush center,inner sep=1pt},"
            r"movearrow/.style={-{Stealth[length=9pt,width=9pt]},draw=ink,line width=1.6pt}]"]
-    out += panel(current, 0.0, width, top, bottom, title_lines, False)
-    if steps:
-        out.append(r"\node[paneltitle] at (8.5,%.2f) {%s};" % (top + FLOW_HEAD + 0.1, esc(spec.get("steps_title", ""))))
-        out.append(r"\node[anchor=north,text width=4.7cm,align=left,font=\scriptsize,inner sep=0pt] at (8.5,%.2f) {%s};" % (top + 0.5, body))
-        out.append(r"\draw[movearrow] (5.72,%.2f) -- (11.28,%.2f);" % (bottom + 0.6, bottom + 0.6))
-    out += panel(target, right, width, top, bottom, title_lines, True)
+    out += panel(current, "P", 0.0, False)
+    out += panel(target, "Q", right, True)
+    out.append(r"\draw[movearrow] ($(Pframe.east)+(0.1,0)$) -- ($(Pframe.east -| Qframe.west)+(-0.1,0)$);")
     out.append(r"\end{tikzpicture}\end{center}")
+    steps = spec.get("steps", [])
+    if steps:
+        moves = [s.rstrip(".") for s in steps]
+        moves = moves[:1] + [m[:1].lower() + m[1:] for m in moves[1:]]
+        out.append(r"\par{\small\textbf{%s:} %s.\par}" % (esc(spec.get("steps_title", "Moves")), "; ".join(esc(m) for m in moves)))
     return out
 
 
@@ -138,6 +136,24 @@ def table(rows, size):
     n = max(len(r) for r in rows)
     rows = [r + [""] * (n - len(r)) for r in rows]
     weights = [max(max(len(r[c]) for r in rows), 3) ** 0.55 for c in range(n)]
+    longest = [max(len(w) for r in rows for w in (r[c].split() or [""])) for c in range(n)]
+    per_line = 100 if n >= 6 else 90                   # characters across the text width at the table's size
+    floor = [(k + 2) / per_line for k in longest]      # no column narrower than its longest word ("Payback" overflowed)
+    share = [w / sum(weights) for w in weights]
+    for _ in range(n if sum(floor) < 1 else 0):
+        short = [c for c in range(n) if share[c] < floor[c] - 1e-9]
+        if not short:
+            break
+        free = [c for c in range(n) if c not in short and share[c] > floor[c]]
+        need = sum(floor[c] - share[c] for c in short)
+        room = sum(share[c] - floor[c] for c in free) or 1
+        for c in short:
+            share[c] = floor[c]
+        for c in free:
+            share[c] -= need * (share[c] - floor[c]) / room
+    weights = share
+    if size is None:
+        size = r"\footnotesize" if n >= 6 else r"\small"
     spec = "".join(r">{\raggedright\arraybackslash}p{\dimexpr%.4f\textwidth-2\tabcolsep\relax}" % (w / sum(weights)) for w in weights)
     out = ["{%s\\needspace{5\\baselineskip}\\begin{longtable}{%s}" % (size, spec), r"\toprule\rowcolor{band}"]
     out.append(" & ".join(r"\textbf{%s}" % esc(c) for c in rows[0]) + r" \\ \midrule\endhead")
@@ -196,7 +212,7 @@ def to_tex(md):
                 if not re.match(r"^\|[\s\-:|]+\|$", lines[i]):
                     rows.append([c.strip() for c in lines[i].strip().strip("|").split("|")])
                 i += 1
-            body.extend(table(rows, r"\scriptsize" if in_appendix else r"\footnotesize"))
+            body.extend(table(rows, None))                         # 10 pt, 9 pt from six columns, body and appendices alike
             continue
         bullet = re.match(r"^\s*[-*]\s+(.*)$", l)
         numbered = re.match(r"^\s*(\d+)[.、]\s+(.*)$", l)
@@ -211,7 +227,7 @@ def to_tex(md):
             title = l[3:]
             appendix = re.match(r"^(附录|Appendix)", title)
             if appendix and not in_appendix:
-                body.append(r"\begingroup\footnotesize")
+                body.append(r"\begingroup\small")
                 in_appendix = True
             body.append(r"\needspace{6\baselineskip}\section*{%s}\nopagebreak\vspace{-3pt}{\color{rule}\hrule height 0.4pt}\nopagebreak\vspace{3pt}" % esc(title))
             rest = lines[i + 1:]
@@ -227,7 +243,7 @@ def to_tex(md):
             body.append(r"\item " + esc(bullet.group(1)) if bullet else r"\item[%s.] %s" % (numbered.group(1), esc(numbered.group(2))))
         elif reference:
             close_columns()
-            body.append(r"\par\vspace{4pt}{\tiny\color{gray}%s\par}" % esc(reference.group(1)))
+            body.append(r"\par\vspace{4pt}{\scriptsize\color{gray}%s\par}" % esc(reference.group(1)))
         elif l.strip() and l.strip() not in ("---", "***", "___"):
             body.append(esc(l) + "\n")
         i += 1
@@ -239,24 +255,24 @@ def to_tex(md):
     return "\n".join(body)
 
 
-TEMPLATE = r"""\documentclass[10pt,a4paper,linespread=1.2]{ctexart}
-\usepackage[top=1.8cm,bottom=1.7cm,left=2.0cm,right=2.0cm,footskip=0.7cm]{geometry}
+TEMPLATE = r"""\documentclass[11pt,a4paper,linespread=1.2]{ctexart}
+\usepackage[top=2.0cm,bottom=1.9cm,left=2.2cm,right=2.2cm,footskip=0.8cm]{geometry}
 \usepackage{array,longtable,booktabs,fancyvrb,amssymb,fancyhdr,xcolor,colortbl,multicol,lastpage,needspace,enumitem,tikz}
-\usetikzlibrary{arrows.meta}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
 \definecolor{ink}{HTML}{1E6B4F}\definecolor{rule}{HTML}{AECBBC}\definecolor{band}{HTML}{E8F3ED}\definecolor{accent}{HTML}{B5651D}
 \IfFontExistsTF{Cambria}{\setmainfont{Cambria}}{}
 \IfFontExistsTF{Calibri}{\setsansfont{Calibri}}{}
 \IfFontExistsTF{Consolas}{\setmonofont[Scale=0.88]{Consolas}}{}
 \IfFontExistsTF{Microsoft YaHei}{\setCJKsansfont{Microsoft YaHei}}{}
-\ctexset{section={format=\sffamily\bfseries\normalsize\color{ink}\raggedright,beforeskip=8pt plus 2pt,afterskip=3pt},
-         subsection={format=\sffamily\bfseries\small\color{ink}\raggedright,beforeskip=5pt,afterskip=2pt}}
+\ctexset{section={format=\sffamily\bfseries\fontsize{13}{16}\selectfont\color{ink}\raggedright,beforeskip=10pt plus 2pt,afterskip=3pt},
+         subsection={format=\sffamily\bfseries\fontsize{11.5}{14}\selectfont\color{ink}\raggedright,beforeskip=6pt,afterskip=2pt}}
 \setlength{\parindent}{0pt}\setlength{\parskip}{3pt plus 1pt}
 \setlength{\tabcolsep}{3.5pt}\setlength{\LTpre}{2pt}\setlength{\LTpost}{3pt}\setlength{\LTleft}{0pt}\setlength{\LTright}{0pt}
 \setlength{\aboverulesep}{1.2pt}\setlength{\belowrulesep}{1.2pt}\setlength{\columnsep}{14pt}
 \renewcommand{\arraystretch}{1.08}\arrayrulecolor{rule}
 \setlist[itemize]{leftmargin=1.5em,topsep=1pt,itemsep=0.5pt,parsep=0pt,partopsep=0pt}
 \pagestyle{fancy}\fancyhf{}\renewcommand{\headrulewidth}{0pt}
-\rfoot{\scriptsize\color{gray}\thepage\ / \pageref*{LastPage}}
+\rfoot{\fontsize{8}{10}\selectfont\color{gray}\thepage\ / \pageref*{LastPage}}
 \begin{document}
 %s
 \end{document}
@@ -287,7 +303,23 @@ def layout(pdf, md):
     flow_page = next((i + 1 for i, t in enumerate(texts) if key and key in t), None)
     first_appendix = next((s["page"] for s in sections if s["page"] and re.match(r"(附录|Appendix)", s["section"])), None)
     return {"pages": len(doc), "body_pages": first_appendix or len(doc), "sections": sections, "flow_page": flow_page,
-            "page_fill": fill, "last_page_fill": fill[-1]}
+            "flow_overlaps": overlaps(doc[flow_page - 1]) if flow_page else 0, "page_fill": fill, "last_page_fill": fill[-1]}
+
+
+def overlaps(page):
+    """Pairs of text lines on a page whose boxes overlap: the check that the flowchart's layout held (a program defect if not)."""
+    boxes = []
+    for b in page.get_text("dict")["blocks"]:
+        for l in b.get("lines", []):
+            if "".join(s["text"] for s in l["spans"]).strip():
+                x0, y0, x1, y1 = l["bbox"]
+                boxes.append((x0 + 0.5, y0 + 1.0, x1 - 0.5, y1 - 1.0))       # a little slack: touching lines are not overlapping
+    n = 0
+    for i, a in enumerate(boxes):
+        for b in boxes[i + 1:]:
+            if a[0] < b[2] and b[0] < a[2] and a[1] < b[3] and b[1] < a[3]:
+                n += 1
+    return n
 
 
 def previews(pdf, folder):

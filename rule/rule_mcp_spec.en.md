@@ -21,7 +21,7 @@ All three agents mount it: the front agent mainly uses variables / predicates / 
 | `version` | query.py | none → rule layer build number, counts of rules / variables / predicates / readings / golden tests |
 | `cells_for_flow` | query.py | payer_jur, payee_jur, subject → the cells this flow passes through (list of slot_key) |
 | `judgment_points` | query.py | flow{payer_jur, payee_jur, subject} or slot, date, facts{}, answers{}, mode → the blocked predicates, question wording, factor variables, consequences of answering either way |
-| `requirements` | query.py | slot or rule, date → conditions for applying, documents to file, deadlines, years to prove, reference_params |
+| `requirements` | query.py | slot or rule, date, brief (default true) → conditions for applying, documents to file, deadlines, years to prove, reference_params. With brief each rule keeps its id, effect, direction, condition (first 200 characters), variables, predicates and cite_ids, and each reference parameter its id, value, unit and cite_id; brief=false gives everything (added 2026-11-03: the full output reached 40 thousand characters a call) |
 | `options` | query.py | flow, date, facts{} → the available treatments and their respective conditions |
 | `what_if` | query.py | flow, date, facts{}, answers{}, set{}, answer_set{}, mode → before/after comparison |
 | `gap` | query.py | flow, date, facts{}, answers{} → the facts and predicates still missing |

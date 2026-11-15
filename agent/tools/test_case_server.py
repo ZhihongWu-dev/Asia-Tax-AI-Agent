@@ -12,12 +12,13 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
-from case_server import build_server  # noqa: E402
+from case_server import Case, build_server  # noqa: E402
 
 PY = sys.executable
 
@@ -93,6 +94,20 @@ def main():
         probs = r.get("problems", [])
         check("intake_check runs and flags the quote not in dialogue", any("ppt" in p and "dialogue" in p for p in probs), probs)
         check("intake_check: optimizer accepts the example facts", not any("rejected by the optimizer" in p for p in probs), probs)
+        prev = root / C / "intake" / "products" / "20261101-preview1"           # a preview whose first structure turns on a choice (§4.7a)
+        prev.mkdir(parents=True, exist_ok=True)
+        (prev / "brief.json").write_text(json.dumps({"conduct": [{"key": "receive_at_destination", "stated": None, "changes_rank": True,
+                                                                 "question": "Must the money be brought in?"}]}), encoding="utf-8")
+        probs = (await call(front, "intake_check", {"case_id": C})).get("problems", [])
+        check("intake_check asks for a choice the preview shows to change the plan", any("receive_at_destination" in p and "not been asked" in p for p in probs), probs)
+        await call(front, "write_intake", {"case_id": C, "name": "constraints", "content": json.dumps({"receive_at_destination": "unknown"})})
+        probs = (await call(front, "intake_check", {"case_id": C})).get("problems", [])
+        check("\"unknown\" records that the client was asked", not any("receive_at_destination" in p for p in probs), probs)
+        await call(front, "write_intake", {"case_id": C, "name": "constraints", "content": json.dumps({"receive_at_destination": "maybe"})})
+        probs = (await call(front, "intake_check", {"case_id": C})).get("problems", [])
+        check("a conduct value other than true, false or \"unknown\" is reported", any("receive_at_destination is true, false" in p for p in probs), probs)
+        shutil.rmtree(prev)
+        (root / C / "intake" / "constraints.json").unlink()
 
         # review of the intake: verdict rules and status derivation
         r = await call(review, "write_review", {"case_id": C, "which": "intake", "content": "All fine.\n\nVerdict: maybe"})
@@ -144,96 +159,130 @@ def main():
         check("write sources ok", "written" in r, r)
         r = await call(front, "round_current", {"case_id": C})
         check("status drafted after the analysis briefing", r.get("status") == "drafted", r)
-        r = await call(polish, "write_polished", {"case_id": C, "run_id": "20261101-abcdef12", "name": "polished", "content": "x"})
-        check("polish before the draft passed review -> conflict", r.get("error") == "conflict", r)
         r = await call(review, "write_review", {"case_id": C, "which": "final", "content": "x\nVerdict: DELIVERABLE"})
-        check("final review before a report exists -> conflict", r.get("error") == "conflict", r)
-        r = await call(review, "report_check", {"case_id": C, "run_id": "20261101-abcdef12", "target": "draft"})
+        check("the old final stage is refused without a polished report", r.get("error") == "conflict", r)
+        r = await call(review, "report_check", {"case_id": C, "run_id": "20261101-abcdef12", "target": "draft", "text_only": True})
         probs = r.get("problems", [])
         check("report_check(draft): structure passes, bad cite flagged", any("no.such#1" in p for p in probs) and not any("part missing" in p or "lacks the part" in p or "appendix" in p or "identifiers" in p for p in probs), probs)
+        check("report_check(draft) no longer asks for a diagram block (the program draws it)", not any("flow" in p for p in probs), probs)
+        doctored = briefing.replace("推荐由新加坡母公司直接持有深圳公司", "**一句话：** 推荐由新加坡母公司直接持有深圳公司，规则工具如此显示")
+        await call(analysis, "write_report", {"case_id": C, "run_id": "20261101-abcdef12", "name": "briefing", "content": doctored})
+        r = await call(review, "report_check", {"case_id": C, "run_id": "20261101-abcdef12", "target": "draft", "text_only": True})
+        check("report_check(draft) catches system vocabulary and a spoken lead-in", any("规则工具" in p for p in r.get("problems", [])) and any("spoken" in p for p in r.get("problems", [])), r)
+        await call(analysis, "write_report", {"case_id": C, "run_id": "20261101-abcdef12", "name": "briefing", "content": briefing})
 
-        # stage 2: the substance is settled on the draft before polish starts
+        # stage 2: the reviewed draft is the client report (2026-11-06)
         R = "20261101-abcdef12"
-        r = await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Finding.\nVerdict: REVISE"})
+        r = await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Problem: wrong article.\nVerdict: REVISE"})
         check("REVISE without a RETURN line -> invalid", r.get("error") == "invalid", r)
-        r = await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Finding.\nRETURN: polish\nVerdict: REVISE"})
+        r = await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Problem: wrong article.\nRETURN: polish\nVerdict: REVISE"})
         check("stage 2 cannot return to polish", r.get("error") == "invalid", r)
-        r = await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Finding.\nRETURN: analysis\nVerdict: REVISE"})
+        r = await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Problem: none found.\nRETURN: analysis\nVerdict: REVISE"})
+        check("a REVISE with no problem stated -> invalid", r.get("error") == "invalid", r)
+        r = await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Problem: wording.\n```replacements\nnot json\n```\nRETURN: analysis\nVerdict: REVISE"})
+        check("a malformed replacements block -> invalid", r.get("error") == "invalid", r)
+        r = await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Problem: wrong article.\nRETURN: analysis\nVerdict: REVISE"})
         s1 = await call(front, "round_current", {"case_id": C})
         check("stage 2 REVISE keeps drafted and names analysis", s1.get("status") == "drafted" and s1["return_to"]["to"] == "analysis" and s1["return_to"]["which"] == "draft", s1)
         r = await call(analysis, "write_report", {"case_id": C, "run_id": R, "name": "briefing", "content": briefing})
         s1 = await call(front, "round_current", {"case_id": C})
         check("a rewritten draft closes the return", s1.get("status") == "drafted" and s1.get("return_to") is None, s1)
-        await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Finding.\nRETURN: front\nVerdict: REVISE"})
+        await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Problem: a fact is wrong.\nRETURN: front\nVerdict: REVISE"})
         s1 = await call(front, "round_current", {"case_id": C})
         check("stage 2 can return to the front", s1["return_to"]["to"] == "front", s1)
         await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Checked.\nVerdict: POLISHABLE"})
         s1 = await call(front, "round_current", {"case_id": C})
-        check("POLISHABLE -> reviewed", s1.get("status") == "reviewed" and s1.get("return_to") is None, s1)
+        check("the old pass token still counts, DELIVERABLE -> reviewed", s1.get("status") == "reviewed" and s1.get("return_to") is None, s1)
         v = await call(review, "review_status", {"case_id": C, "which": "draft"})
-        check("review_status reads the draft checklist", v.get("verdict") == "POLISHABLE", v)
+        check("review_status reads the draft checklist", v.get("verdict") == "DELIVERABLE", v)
 
-        # polish rewrites, keeps briefing.md, writes polished + sources, renders the PDF
-        draft_text, briefing = briefing, briefing.replace("\n内部编号：CASE-T / 20261101-abcdef12\n", "\n")
-        r = await call(polish, "write_polished", {"case_id": C, "run_id": R, "name": "polished", "content": draft_text})
-        r = await call(review, "report_check", {"case_id": C, "run_id": R})
-        check("the client report may not carry the case or run id", any("case id or run id" in p for p in r.get("problems", [])), r)
-        r = await call(polish, "write_polished", {"case_id": C, "run_id": R, "name": "polished", "content": briefing})
-        check("polish writes polished, draft kept", "written" in r and (root / C / "report" / R / "briefing.md").exists() and (root / C / "report" / R / "briefing.polished.md").exists(), r)
-        r = await call(polish, "write_polished", {"case_id": C, "run_id": R, "name": "sources", "content": json.dumps([{"id": "S1", "where": "一、策略思路 | 推荐由新加坡母公司直接持有深圳公司"}, {"id": "S2", "where": "一、策略思路 | 第十条第二款"}])})
-        check("polish writes kept sources by id and where", "written" in r, r)
-        rows = json.loads((root / C / "report" / R / "briefing.polished.sources.json").read_text(encoding="utf-8"))
-        check("claim, kind and ref are copied from the draft", rows[0]["kind"] == "product" and rows[0]["ref"].endswith("ranking.json"), rows)
-        r = await call(polish, "write_polished", {"case_id": C, "run_id": R, "name": "sources", "content": json.dumps([{"id": "NEW", "where": "x"}])})
-        check("polish cannot add a source", r.get("error") == "invalid", r)
-        r = await call(front, "round_current", {"case_id": C})
-        check("status polished after polish", r.get("status") == "polished", r)
-        r = await call(review, "report_check", {"case_id": C, "run_id": R})
-        check("report_check lists the cut entry without calling it a problem", r.get("target") == "polished" and r.get("sources_cut") == ["S3"] and not r.get("claims_changed"), r)
-        check("report_check requires a current PDF", any("briefing.pdf" in p for p in r.get("problems", [])), r)
-        doctored = briefing.replace("推荐由新加坡母公司直接持有深圳公司", "**一句话：** 推荐由新加坡母公司直接持有深圳公司，节省 91 万元，规则工具如此显示").replace("第十条第二款", "第十条")
-        await call(polish, "write_polished", {"case_id": C, "run_id": R, "name": "polished", "content": doctored})
-        r = await call(review, "report_check", {"case_id": C, "run_id": R})
-        check("report_check catches a number new to the report", "91" in r.get("number_drift", []), r)
-        check("report_check catches system vocabulary", any("规则工具" in p for p in r.get("problems", [])), r)
-        check("report_check catches a spoken lead-in", any("spoken" in p for p in r.get("problems", [])), r)
-        check("report_check catches a where fragment missing from the report", "S2" in r.get("where_unlocated", []), r)
-        short = briefing.replace("2026-11-01", "")
-        await call(polish, "write_polished", {"case_id": C, "run_id": R, "name": "polished", "content": short})
-        r = await call(review, "report_check", {"case_id": C, "run_id": R})
-        check("a number left out is listed, not a drift", "11" in r.get("numbers_omitted", []) and not r.get("number_drift"), r)
-        tampered = root / C / "report" / R / "briefing.polished.sources.json"
-        t = json.loads(tampered.read_text(encoding="utf-8")); t[0]["ref"] = "changed"; tampered.write_text(json.dumps(t), encoding="utf-8")
-        r = await call(review, "report_check", {"case_id": C, "run_id": R})
-        check("report_check catches a changed claim row", "S1" in r.get("claims_changed", []), r)
-        await call(polish, "write_polished", {"case_id": C, "run_id": R, "name": "polished", "content": briefing})
+        # a re-check may not reopen lines that did not change
+        snap = root / C / "log" / "reviewed" / "review_draft"
+        snap.mkdir(parents=True, exist_ok=True)
+        (snap / "briefing.md").write_text(briefing, encoding="utf-8")
+        (snap / "run.txt").write_text(R, encoding="utf-8")
+        r = await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Problem: line 6 cites the wrong article.\nRETURN: analysis\nVerdict: REVISE"})
+        check("a re-check finding on an unchanged line -> invalid", r.get("error") == "invalid", r)
+        changed = briefing.replace("推荐由新加坡母公司直接持有深圳公司", "推荐由新加坡母公司持有深圳公司")
+        await call(analysis, "write_report", {"case_id": C, "run_id": R, "name": "briefing", "content": changed})
+        r = await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Problem: line 6 cites the wrong article.\nRETURN: analysis\nVerdict: REVISE"})
+        check("a re-check finding on a changed line is accepted", "written" in r, r)
+        shutil.rmtree(snap)
 
-        # stage 3: the report against the draft, delivered, next round
-        r = await call(review, "write_review", {"case_id": C, "which": "final", "content": "Checked.\nVerdict: REVISE"})
-        check("stage 3 REVISE without RETURN -> invalid", r.get("error") == "invalid", r)
-        r = await call(review, "write_review", {"case_id": C, "which": "final", "content": "Checked.\n**RETURN: polish**\nVerdict: REVISE"})
+        # fix to order: a replacements block the program applies, no return
+        await call(analysis, "write_report", {"case_id": C, "run_id": R, "name": "briefing", "content": briefing})
+        rep = json.dumps([{"old": "推荐由新加坡母公司直接持有深圳公司", "new": "建议由新加坡母公司直接持有深圳公司"}], ensure_ascii=False)
+        r = await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Problem: wording only.\n```replacements\n%s\n```\nVerdict: DELIVERABLE" % rep})
+        check("a DELIVERABLE with a replacements block is accepted", "written" in r, r)
+        done = Case(root, "front").apply_replacements(C, R)
+        text = (root / C / "report" / R / "briefing.md").read_text(encoding="utf-8")
         s1 = await call(front, "round_current", {"case_id": C})
-        r = await call(review, "write_review", {"case_id": C, "which": "final", "content": "Re-checked after the fixes.\nVerdict: deliverable."})
+        check("the program applies the replacement and the review still stands", done.get("applied") == 1 and "建议由新加坡母公司" in text and s1.get("status") == "reviewed", (done, s1))
+        done = Case(root, "front").apply_replacements(C, R)
+        check("a replacement already applied is counted as done, not as a failure", done.get("applied") == 0 and done.get("already") == 1 and not done.get("failed"), done)
+
+        # the client copy and the PDF decide delivered
+        rd = root / C / "report" / R
+        (rd / "frame" / "blocks").mkdir(parents=True, exist_ok=True)
+        (rd / "frame" / "blocks" / "tax_table.md").write_text("| a | b |\n|---|---|\n| 1 | 2 |", encoding="utf-8")
+        await call(analysis, "write_report", {"case_id": C, "run_id": R, "name": "briefing", "content": briefing.replace("## 六、税负比较\n", "## 六、税负比较\n{{block:tax_table}}\n")})
+        await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Problem: none.\nVerdict: DELIVERABLE"})
+        copy = Case(root, "front").client_copy(rd, C, R).read_text(encoding="utf-8")
+        check("the client copy expands the table marker and drops the internal line", "| 1 | 2 |" in copy and "{{block" not in copy and R not in copy, copy[-200:])
+        try:
+            await call(analysis, "render_pdf", {"case_id": C, "run_id": R})
+            listed = True
+        except Exception:                                        # noqa: BLE001 - an unknown tool raises
+            listed = False
+        check("render_pdf is not an analysis tool (2026-11-12: the program typesets)", not listed)
+        r = Case(root, "front").render_pdf(C, R)
+        check("render refuses while the text has problems", r.get("error") == "conflict", r)
+        time.sleep(0.05)
+        (rd / "briefing.pdf").write_bytes(b"pdf")
         s2 = await call(front, "round_current", {"case_id": C})
-        check("REVISE keeps polished, DELIVERABLE -> delivered", s1.get("status") == "polished" and s1["return_to"]["to"] == "polish" and s2.get("status") == "delivered", (s1, s2))
-        check("review_final.md.prev kept", (root / C / "report" / R / "review_final.md.prev").exists())
-        await call(polish, "write_polished", {"case_id": C, "run_id": R, "name": "polished", "content": briefing + "\n"})
+        check("a PDF newer than draft and checklist -> delivered", s2.get("status") == "delivered", s2)
+        time.sleep(0.05)
+        await call(analysis, "write_report", {"case_id": C, "run_id": R, "name": "briefing", "content": briefing + "\n"})
         s3 = await call(front, "round_current", {"case_id": C})
-        check("a changed report drops delivered back to polished", s3.get("status") == "polished" and s3.get("return_to") is None, s3)
-        await call(review, "write_review", {"case_id": C, "which": "final", "content": "Checked.\nVerdict: DELIVERABLE"})
+        check("a changed draft drops delivered back to drafted", s3.get("status") == "drafted" and s3.get("return_to") is None, s3)
+        await call(review, "write_review", {"case_id": C, "which": "draft", "content": "Problem: none.\nVerdict: DELIVERABLE"})
+        time.sleep(0.05)
+        (rd / "briefing.pdf").write_bytes(b"pdf")
         r = await call(front, "round_new", {"case_id": C})
-        check("round_new -> round 2 intake", r.get("round") == 2 and (root / C / "notes" / "analysis" / "round-2").is_dir() and (root / C / "notes" / "polish" / "round-2").is_dir(), r)
+        check("round_new -> round 2 intake", r.get("round") == 2 and (root / C / "notes" / "analysis" / "round-2").is_dir(), r)
 
         # notebooks, bugs
-        r1 = await call(analysis, "notes_append", {"case_id": C, "book": "precommit", "text": "我凭差额判第一名。"})
-        r2 = await call(analysis, "notes_append", {"case_id": C, "book": "precommit", "text": "实际：c1。中。"})
-        nb = (root / C / "notes" / "analysis" / "round-2" / "precommit.md").read_text(encoding="utf-8")
-        check("notes_append numbers entries in round-2", r1.get("entry") == "precommit-1" and r2.get("entry") == "precommit-2" and "round 2.0" in nb, nb)
-        r = await call(review, "notes_append", {"case_id": C, "book": "precommit", "text": "x"})
+        r1 = await call(analysis, "notes_append", {"case_id": C, "book": "products", "text": "第一名每跳的税来自 tax.json。"})
+        r2 = await call(analysis, "notes_append", {"case_id": C, "book": "products", "text": "差额来自 deltas.json。"})
+        nb = (root / C / "notes" / "analysis" / "round-2" / "products.md").read_text(encoding="utf-8")
+        check("notes_append numbers entries in round-2", r1.get("entry") == "products-1" and r2.get("entry") == "products-2" and "round 2.0" in nb, nb)
+        r = await call(review, "notes_append", {"case_id": C, "book": "products", "text": "x"})
         check("review cannot write analysis' book", r.get("error") == "invalid")
+        r = await call(analysis, "notes_append", {"case_id": C, "book": "precommit", "text": "x"})
+        check("the pre-commitment notebook is gone (2026-11-12)", r.get("error") == "invalid", r)
         b1 = await call(front, "bug_append", {"case_id": C, "layer": "工具", "symptom": "fx timed out", "expected": "rates returned", "repro": "fx --base CNY", "workaround": "used last month"})
         b2 = await call(front, "bug_append", {"case_id": C, "layer": "工具", "symptom": "fx  timed out", "expected": "", "repro": "", "workaround": ""})
-        check("bug dedupe by symptom", b1.get("entry") == "B-1" and b2.get("duplicate_of") == "B-1", (b1, b2))
+        check("bug dedupe by symptom, one-sentence answers without a path", b1.get("entry") == "B-1" and b2.get("duplicate_of") == "B-1" and "path" not in b1 and b2.get("note"), (b1, b2))
+        os.environ["TAX_NODE"] = "review_legal"
+        try:
+            b5 = await call(review, "bug_append", {"case_id": C, "layer": "tool", "symptom": "extract cut a clause short", "expected": "", "repro": "", "workaround": ""})
+        finally:
+            os.environ.pop("TAX_NODE", None)
+        check("the legal lane writes its own bug file", b5.get("entry") == "B-1" and (root / C / "bugs" / "review_legal.md").exists() and not (root / C / "bugs" / "review.md").exists(), b5)
+        b3 = await call(analysis, "bug_append", {"case_id": C, "layer": "rule", "symptom": "one holding percentage only", "affects_result": True})
+        check("affects_result without the case effect -> invalid", b3.get("error") == "invalid", b3)
+        b4 = await call(analysis, "bug_append", {"case_id": C, "layer": "rule", "symptom": "one holding percentage only", "affects_result": True, "effect": "Plan A tax 700,000 -> 1,400,000"})
+        bugs = (root / C / "bugs" / "analysis.md").read_text(encoding="utf-8")
+        check("affects_result with the effect is recorded", b4.get("entry") == "B-1" and "- affects_result: yes" in bugs and "- effect: Plan A" in bugs, bugs[-200:])
+        os.environ["TAX_NODE"] = "review_legal"
+        try:
+            await call(review, "bug_append", {"case_id": C, "layer": "rule", "symptom": "transfer cell lacks the surtax", "affects_result": True,
+                                              "effect": "one-off 270,000,000 -> 275,670,000"})
+        finally:
+            os.environ.pop("TAX_NODE", None)
+        import case_server as csm  # noqa: E402
+        held = csm.Case(root, "front").open_defects(C)
+        check("a defect from the legal lane holds the run too (2026-11-12)", "review_legal/B-2" in held and "analysis/B-1" in held, held)
         r = await call(analysis, "to_collect_append", {"case_id": C, "law": "印花税法", "jur": "sg", "url": "", "why": "0.2% 只作参数"})
         check("analysis to_collect ok", "path" in r, r)
 
@@ -241,7 +290,7 @@ def main():
 
     # log hook inference
     hook_in = {"session_id": "s1", "cwd": str(root.parent), "tool_name": "mcp__tax-case-analysis__notes_append",
-               "tool_input": {"case_id": C, "book": "precommit", "text": "secret body"}}
+               "tool_input": {"case_id": C, "book": "products", "text": "secret body"}}
     p = subprocess.run([PY, str(HERE / "log_hook.py")], input=json.dumps(hook_in), capture_output=True, text=True, encoding="utf-8")
     logp = root / C / "log" / "calls.jsonl"
     line = json.loads(logp.read_text(encoding="utf-8").splitlines()[-1]) if logp.exists() else {}
@@ -273,9 +322,34 @@ def main():
     check("report_check catches an English spoken lead-in", any("spoken" in p for p in probs), probs)
     check("report_check catches English process wording", any("not on file" in p for p in probs), probs)
 
+    # citation markers and the hidden word limits per part (2026-11-12)
+    marked = english.replace("go direct.", "go direct under {{cite:no.such#9|Article 10}} and "
+                             "{{cite:cn.reg.eit#91|This article says the dividend is exempt when a resident holds the shares for twelve months}}.")
+    marked = marked.replace("## 2. Current State\nx", "## 2. Current State\n" + " ".join(["word"] * 600))
+
+    async def run_marked():
+        (root / C2 / "report" / "r1" / "briefing.md").write_text(marked, encoding="utf-8")
+        whole = await call(review, "report_check", {"case_id": C2, "run_id": "r1", "target": "draft"})
+        one = await call(review, "report_check", {"case_id": C2, "run_id": "r1", "target": "draft", "part": "2"})
+        return whole, one
+
+    whole, one = asyncio.run(run_marked())
+    probs = whole.get("problems", [])
+    check("a cite_id the library lacks is reported", any("no.such#9" in p and "not a provision" in p for p in probs), probs)
+    check("a label written as a sentence is reported", any("label is a sentence" in p for p in probs), probs)
+    check("a part over its limit is reported with the count and the limit only", "Part 2: 600 words, limit 500. Cut it." in probs, probs)
+    check("the part check reports the same overrun", "Part 2: 600 words, limit 500. Cut it." in one.get("problems", []), one)
+    check("no part within its limit is mentioned and no page counts are returned",
+          not any("Part 1:" in p or "Part 3:" in p for p in probs) and "body_pages" not in whole and "pdf_pages" not in whole, whole)
+    counts = root / C2 / "log" / "word_counts.jsonl"
+    check("the counts of all parts go to the developer log", counts.exists() and '"2"' in counts.read_text(encoding="utf-8"), counts)
+
     # PDF template: flowchart from a dot block, numbered list, table, plain fenced block
     sample = root / "sample.md"
-    flow = (PROJECT / "agent" / "templates" / "flowchart.example.json").read_text(encoding="utf-8")
+    side = {"chain": [{"name": "Brightpeak Asia Pte. Ltd.", "note": "Singapore company"}, {"name": "Shenzhen Chenguang Co., Ltd.", "note": "Mainland China company"}],
+            "holds": ["holds 100%"], "dividend_to": 0, "dividend_label": "Dividend RMB 14,000,000", "result": "Tax on this dividend: RMB 700,000"}
+    flow = json.dumps({"current": dict(side, title="Current structure"), "target": dict(side, title="Recommended structure: Plan A"),
+                       "steps_title": "From the current to the recommended structure", "steps": ["Holdings unchanged"]}, ensure_ascii=False)
     sample.write_text("# 标题\n\n**致：** 甲公司\n**日期：** 2026-11-01\n\n## 1. 策略思路\n\n1. 第一项\n2. 第二项\n\n```flow\n" + flow + "\n```\n\n"
                       "| 方案 | 税负 |\n|---|---|\n| A | 10% |\n\n```\nraw   text   keeps   spaces\n```\n", encoding="utf-8")
     out = root / "sample.pdf"

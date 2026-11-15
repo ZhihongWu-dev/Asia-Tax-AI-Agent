@@ -25,6 +25,7 @@ from common import (AUTHORITATIVE_DOC_TYPES, DATE, EFFECTS, GENERATED, SCHEDULE_
                     VAR_KINDS, VAR_TYPES, WILDCARDS, CondError, leaves, listed_prefixes, param_type,
                     parse_condition, parse_effect, parse_slot_key, read_csv, read_header, split_list, write_csv)
 import eval as ev  # noqa: E402
+import dbsource  # noqa: E402  (database/tools, put on the path by common)
 
 ROOT = Path(__file__).resolve().parents[1]
 DB = ROOT.parent / "database"
@@ -151,6 +152,10 @@ def check_predicates(predicates, clause_ids, variables, errors):
         for v in split_list(p.get("factor_vars")):
             if v not in variables:
                 errors.append("predicate %s: factor_vars %s is not a variable" % (k, v))
+        for part in split_list(p.get("factor_favourable")):     # the side of each factor the favourable answer leans on
+            m = re.fullmatch(r"\s*(\w+)\s*(>=|<=|!=|=|>|<)\s*(\S+)\s*", part)
+            if not m or m.group(1) not in split_list(p.get("factor_vars")):
+                errors.append("predicate %s: factor_favourable '%s' is not '<factor_var> <op> <value>'" % (k, part))
 
 
 def check_decisions(decisions, lib, errors):
@@ -363,6 +368,8 @@ def coverage(by_id, lib):
             if (j.get(col) or "yes").lower() not in ("yes", "y", "1", "true"):
                 continue
             for slot in SLOTS:
+                if slot == "exit" and s == "company":           # an individual leaving; relocating companies is out of scope
+                    continue
                 if (j["code"], s, slot) not in covered:
                     gaps.append("%s|%s|%s" % (j["code"], s, slot))
     return gaps
@@ -426,7 +433,7 @@ def main():
     args = ap.parse_args()
     root = Path(args.root).resolve() if args.root else ROOT
     db = Path(args.db).resolve() if args.db else DB
-    if not (db / "clause.csv").exists():
+    if not dbsource.online(db) and not (db / "clause.csv").exists():
         print("! %s has no clause.csv: run database/tools/build.py first" % db)
         return 1
     init_csvs(root)

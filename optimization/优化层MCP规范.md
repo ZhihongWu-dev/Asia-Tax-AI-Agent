@@ -22,6 +22,7 @@
 | `fx` | base, date, jur?, role, subject, symbols? → 汇率与法定口径（fx.py `fetch`），不写文件 | 读（联网） |
 | `ranking` | products → ranking.json | 读 |
 | `deltas` | products, cand_id? / branch_id? → 只回该候选 / 分支的完整 deltas 条目；都不给时每分支一行摘要 | 读 |
+| `scenarios` | products, changes_first? → scenarios.json：所有结构在同一组判断答案下的税、每个情景的第一名和第二名、结构名次；changes_first 只留第一名与全有利不同的情景 | 读 |
 | `open_items` | products, changes_rank? → 过滤后的 open_items | 读 |
 | `paths` | products, cand_id? → 候选的 path、moves、restructure、dominated_by | 读 |
 | `tax` | products, branch_id? → 该分支每跳的税额分量（floor / ceiling） | 读 |

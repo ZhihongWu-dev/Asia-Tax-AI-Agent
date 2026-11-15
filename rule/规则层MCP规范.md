@@ -19,7 +19,7 @@
 | `version` | query.py | 无 → 规则层构建号、规则 / 变量 / 谓词 / 口径 / 金标数 |
 | `cells_for_flow` | query.py | payer_jur, payee_jur, subject → 该流经过的格（slot_key 列表） |
 | `judgment_points` | query.py | flow{payer_jur, payee_jur, subject} 或 slot, date, facts{}, answers{}, mode → 卡住的谓词、问法、因素变量、答成哪边的后果 |
-| `requirements` | query.py | slot 或 rule, date → 成立条件、要交的文件、期限、证明年度、reference_params |
+| `requirements` | query.py | slot 或 rule, date, brief（默认真）→ 成立条件、要交的文件、期限、证明年度、reference_params。brief 时每条规则只留编号、效果、方向、条件（前 200 字符）、变量、谓词、cite_ids，参考参数只留编号、值、单位、cite_id；brief=false 给全部（2026-11-03 加：全量输出一次可达 4 万字符） |
 | `options` | query.py | flow, date, facts{} → 可选待遇与各自条件 |
 | `what_if` | query.py | flow, date, facts{}, answers{}, set{}, answer_set{}, mode → 改前改后对照 |
 | `gap` | query.py | flow, date, facts{}, answers{} → 还缺的事实与谓词 |
