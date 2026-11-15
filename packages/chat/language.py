@@ -12,6 +12,10 @@ def reply_language(doc, text, interface='zh'):
         directives += [(m.start(), locale) for m in re.finditer(pattern, text, re.I)]
     if directives:
         return max(directives)[1]
+    # English UI is an explicit language preference, including for questions
+    # pasted in Chinese. A per-message instruction above may still override it.
+    if interface == 'en':
+        return 'en'
     # Quoted source text is not a request to change the answer language.
     prose = re.sub(r'```[\s\S]*?```|"[^"\n]*"|“[^”]*”', '', text)
     chinese = len(re.findall(r'[\u3400-\u9fff]', prose))
