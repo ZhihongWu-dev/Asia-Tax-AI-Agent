@@ -63,7 +63,8 @@ def append(kind, record):
                         source.replace(target)
             fd = os.open(path, os.O_CREAT | os.O_WRONLY | os.O_APPEND, 0o600)
             with os.fdopen(fd, 'w', encoding='utf-8') as stream:
-                os.fchmod(stream.fileno(), 0o600)
+                if hasattr(os, 'fchmod'):
+                    os.fchmod(stream.fileno(), 0o600)
                 stream.write(data)
     except (OSError, ValueError, TypeError) as exc:
         logging.getLogger(__name__).warning('Agent logging unavailable: %s', type(exc).__name__)
