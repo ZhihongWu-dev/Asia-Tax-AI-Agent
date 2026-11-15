@@ -7,6 +7,7 @@ from __future__ import annotations
 
 from functools import lru_cache
 from hashlib import sha256
+import re
 
 from sqlalchemy import create_engine, text
 
@@ -33,6 +34,17 @@ def search_library(query: str, jurisdiction: str, limit: int = 6) -> dict:
     if not 1 <= limit <= 10:
         raise ValueError("invalid_library_limit")
 
+    # A full conversational question rarely occurs verbatim in a statute. Keep
+    # the exact locator path, otherwise reduce it to a small set of tax terms.
+    exact_locator = bool(re.fullmatch(r"[a-z0-9_.-]+#[a-z0-9_.()/-]+", query, re.I))
+    terms = [] if exact_locator else [term for term in (
+        "企业所得税", "个人所得税", "增值税", "股息", "红利", "扣除", "税率",
+        "税收居民", "非居民", "预提所得税", "所得税", "发票",
+    ) if term in query]
+    if not terms and not exact_locator:
+        terms = [query]
+    terms = terms[:4]
+
     with _engine().connect() as connection, connection.begin():
         connection.execute(text("SET TRANSACTION ISOLATION LEVEL REPEATABLE READ READ ONLY"))
         version = dict(connection.execute(text(
@@ -46,16 +58,25 @@ def search_library(query: str, jurisdiction: str, limit: int = 6) -> dict:
             JOIN database.doc AS d ON d.id = c.doc_id
             WHERE d.jur = :jurisdiction
               AND (c.cite_id = :query
-                   OR position(lower(:query) in lower(c.text)) > 0
-                   OR position(lower(:query) in lower(d.title)) > 0)
-            ORDER BY CASE WHEN c.cite_id = :query THEN 0 ELSE 1 END, c.cite_id
+                   OR (:exact_locator = false AND (
+                       position(lower(:term0) in lower(c.text)) > 0
+                       OR position(lower(:term0) in lower(d.title)) > 0)))
+            ORDER BY CASE WHEN c.cite_id = :query THEN 0 ELSE 1 END,
+                     CASE WHEN position(lower(:term0) in lower(d.title)) > 0 THEN 0 ELSE 1 END,
+                     CASE WHEN position(lower(:term1) in lower(c.text)) > 0 THEN 0 ELSE 1 END,
+                     CASE WHEN position(lower(:term2) in lower(c.text)) > 0 THEN 0 ELSE 1 END,
+                     c.cite_id
             LIMIT :limit
-        """), {"query": query, "jurisdiction": jurisdiction, "limit": limit}).mappings().all()
+        """), {"query": query, "jurisdiction": jurisdiction, "limit": limit,
+               "exact_locator": exact_locator, "term0": terms[0] if terms else query,
+               "term1": terms[1] if len(terms) > 1 else terms[0] if terms else query,
+               "term2": terms[2] if len(terms) > 2 else terms[0] if terms else query}).mappings().all()
 
     return {
         "status": "available" if rows else "no_matching_units",
         "library_version": version,
         "jurisdiction": jurisdiction,
+        "query": query,
         "passages": [
             {**dict(row), "passage_sha256": sha256(row["passage"].encode("utf-8")).hexdigest()}
             for row in rows

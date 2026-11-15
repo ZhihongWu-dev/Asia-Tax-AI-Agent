@@ -405,6 +405,12 @@ class ChatService(DomainCoordinator):
                             for m in doc.get('messages', [])],
                '_ui_locale': locale, '_guard_extraction': self.turner is plan_turn and self.extractor is None}
         if entry_hint in ('auto', 'reference_lookup') and not reply_to_question_id:
+            from packages.chat import library_research
+            if library_research.should_handle(doc, text):
+                from packages.agent.tracing import emit
+
+                emit('graph.dispatch', destination='library_cn_research', summary_source='server_rule')
+                return library_research.prepare(doc, text, locale)
             from packages.chat import expenses
             if expenses.should_handle(doc, text):
                 from packages.agent.tracing import emit
@@ -466,6 +472,8 @@ class ChatService(DomainCoordinator):
                     doc[key] = deepcopy(value)
         if 'expense_context' in prepared:
             doc['expense_context'] = prepared['expense_context']
+        if 'library_context' in prepared:
+            doc['library_context'] = prepared['library_context']
         if patch:
             doc['state'] = state_for(doc)
         research = prepared['research']
