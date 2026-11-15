@@ -1,0 +1,20 @@
+{
+  "policy_version": "sg-ya2026-2026-11-16",
+  "assessment_year": 2026,
+  "sources": [
+    {
+      "doc_id": "sg.iras.cit-rates-20261116",
+      "url": "https://www.iras.gov.sg/quick-links/tax-rates/corporate-income-tax-rates",
+      "sha256": "eac7ed5619e2d30caf41f45443772d036a50e3c31db676c26a285b766c4293b3",
+      "retrieved_at": "2026-11-15T17:30:11.236525+00:00",
+      "file": "raw/sg/sg.iras.cit-rates-20261116.html"
+    },
+    {
+      "doc_id": "sg.iras.pit-rates-20261116",
+      "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates",
+      "sha256": "fd1ca66256803ef457d05b34a2baf1cb1f4e006b3c94a7febedfdd5085cb9dbe",
+      "retrieved_at": "2026-11-15T17:30:12.296280+00:00",
+      "file": "raw/sg/sg.iras.pit-rates-20261116.html"
+    }
+  ]
+}

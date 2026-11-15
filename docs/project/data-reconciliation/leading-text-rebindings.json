@@ -1,0 +1,32 @@
+{
+  "parameter_renames": {},
+  "exact_quote_rebindings": [
+    {
+      "table": "param",
+      "id": "th.final.cit_return_days",
+      "old_cite_id": "th.rd.cit#all",
+      "matches": [
+        "th.rd.cit#lead"
+      ]
+    },
+    {
+      "table": "param",
+      "id": "th.outbound_wht.foreign_company_return_days",
+      "old_cite_id": "th.rd.cit#all",
+      "matches": [
+        "th.rd.cit#lead"
+      ]
+    },
+    {
+      "table": "decision",
+      "id": "th.absent.company.cfc",
+      "old_cite_id": "th.rd.cit#all",
+      "matches": [
+        "th.rd.cit#lead"
+      ]
+    }
+  ],
+  "unresolved_citations": [],
+  "applied": true,
+  "legal_review": "not_established_by_structural_migration"
+}
