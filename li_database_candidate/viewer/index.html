@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Library Map</title>
+<style>
+:root{--bg:#f7f7f5;--panel:#ffffff;--ink:#1d1d1f;--muted:#6b6b70;--line:#d9d9de;--land:#e6e6e1;--landline:#cfcfc8;
+--treaty:#3d6fb6;--mli:#c2571b;--none:#9a9aa2;--list:#2f8f5b;--node:#1d1d1f;--empty:#b9b9c0;--hl:#fff3c4}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--panel:#1d1d20;--ink:#ececef;--muted:#9a9aa3;--line:#34343a;--land:#26262b;
+--landline:#3a3a41;--treaty:#7da7e6;--mli:#f0915a;--none:#6d6d76;--list:#5fc28d;--node:#ececef;--empty:#55555d;--hl:#4a4320}}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);
+font:14px/1.45 system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+header{display:flex;gap:12px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+header h1{font-size:16px;margin:0 8px 0 0}
+#q{flex:1;min-width:180px;max-width:360px;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink)}
+button{padding:5px 10px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);cursor:pointer}
+.legend{display:flex;gap:12px;color:var(--muted);font-size:12px;flex-wrap:wrap}
+.legend i{display:inline-block;width:22px;height:0;border-top:2px solid;vertical-align:middle;margin-right:4px}
+main{display:flex;height:calc(100% - 54px)}
+#mapwrap{flex:1;min-width:0;position:relative}
+svg{width:100%;height:100%;display:block}
+.land{fill:var(--land);stroke:var(--landline);stroke-width:.6}
+.edge{fill:none;stroke-width:2}.edge.treaty{stroke:var(--treaty)}.edge.mli{stroke:var(--mli);stroke-width:2.6}
+.edge.none{stroke:var(--none);stroke-dasharray:5 5}.edge.list{stroke:var(--list);stroke-dasharray:2 4;stroke-width:1.6}
+.hit{fill:none;stroke:transparent;stroke-width:12;cursor:pointer}
+.edge.sel{stroke-width:4}
+.node circle{fill:var(--node);stroke:var(--bg);stroke-width:2;cursor:pointer}.node.empty circle{fill:var(--empty)}
+.node.sel circle{stroke:var(--mli);stroke-width:3}
+.node text{font-size:12px;fill:var(--ink);paint-order:stroke;stroke:var(--bg);stroke-width:3px;pointer-events:none}
+#note{position:absolute;left:12px;bottom:10px;color:var(--muted);font-size:12px}
+aside{width:min(520px,46vw);border-left:1px solid var(--line);background:var(--panel);overflow:auto;padding:14px 16px}
+aside h2{font-size:17px;margin:0 0 4px}aside h3{font-size:13px;margin:16px 0 6px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.muted{color:var(--muted)}.small{font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{text-align:left;vertical-align:top;padding:4px 6px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600}
+a,.link{color:var(--treaty);cursor:pointer;text-decoration:none}a:hover,.link:hover{text-decoration:underline}
+.quote{color:var(--muted);font-size:12px}
+.chip{display:inline-block;padding:1px 7px;border-radius:10px;border:1px solid var(--line);font-size:11px;margin-right:4px}
+#clause{position:sticky;bottom:0;background:var(--panel);border-top:2px solid var(--mli);margin:16px -16px -14px;padding:10px 16px;display:none;max-height:45%;overflow:auto}
+#clause pre{white-space:pre-wrap;font:13px/1.5 inherit;margin:6px 0 0}
+mark{background:var(--hl);color:inherit}
+@media (max-width:820px){main{flex-direction:column;height:auto}#mapwrap{height:60vh}aside{width:100%;border-left:0;border-top:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<header>
+  <h1 data-t="title"></h1>
+  <input id="q" type="search">
+  <div class="legend">
+    <span><i style="border-color:var(--mli)"></i><span data-t="lg_mli"></span></span>
+    <span><i style="border-color:var(--treaty)"></i><span data-t="lg_treaty"></span></span>
+    <span><i style="border-color:var(--none);border-top-style:dashed"></i><span data-t="lg_none"></span></span>
+    <span><i style="border-color:var(--list);border-top-style:dotted"></i><span data-t="lg_list"></span></span>
+  </div>
+  <button id="lang">中文</button>
+</header>
+<main>
+  <div id="mapwrap"><svg id="map" viewBox="0 0 1100 650" preserveAspectRatio="xMidYMid meet">
+    <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--list)"></path></marker></defs>
+    <g id="landg"></g><g id="edgeg"></g><g id="nodeg"></g></svg>
+    <div id="note"></div>
+  </div>
+  <aside id="panel"><div id="body"></div><div id="clause"></div></aside>
+</main>
+<script>
+const T = {
+  en:{title:"Library map",search:"Search parameters, documents, absence records…",lg_mli:"treaty, MLI applies",lg_treaty:"treaty",lg_none:"no treaty",
+      lg_list:"one-way list (e.g. CFC white list)",intro:"Click a jurisdiction for its documents and parameters, an edge for the treaty between two jurisdictions, any cite id for the clause text. The map is read from the library on every load.",
+      docs:"Documents",params:"Parameters",absent:"Absence records",pairs:"Treaty pairs",lists_out:"Lists naming other jurisdictions",lists_in:"Named in lists of",
+      treaty:"Treaty",superseded:"Replaced clauses",slot:"Slot",subject:"Subject",name:"Name",value:"Value",cite:"Cite",from:"From",
+      none:"none",noTreaty:"No treaty recorded for this pair yet.",offline:"Map outline not loaded (offline); nodes and edges are drawn without it.",
+      clause:"Clause",close:"close",results:"Search results",inforce:"In force from",mli:"MLI text",open:"open",cat:"Category",
+      cats:{"1":"1 Income tax law (dividends, foreign income, residence, credit)","2":"2 Individual income tax","3":"3 CFC","4":"4 Anti-abuse",
+        "5":"5 Beneficial owner","6":"6 Residence guidance","7":"7 Treaty benefit procedure","8":"8 Residence certificate","9":"9 Share transfers",
+        page_treaties:"Treaty list page",page_rates:"Rate table page",page_deadlines:"Withholding deadlines page","":"Treaty documents"},
+      stats:(n,e,r,o)=>`${n} jurisdictions · ${e} edges · ${r} of ${o} pairs recorded`},
+  zh:{title:"数据库地图",search:"搜索参数、文件、缺项记录…",lg_mli:"协定，MLI 适用",lg_treaty:"协定",lg_none:"无协定",
+      lg_list:"单向名单（如 CFC 白名单）",intro:"点地区看它的文件和参数，点边看两地之间的协定，点任一 cite id 看条文原文。每次打开都直接读取数据库。",
+      docs:"文件",params:"参数",absent:"缺项记录",pairs:"协定地区对",lists_out:"本地区名单里列出的地区",lists_in:"被以下地区的名单列出",
+      treaty:"协定",superseded:"被替换的条款",slot:"槽位",subject:"主体",name:"名称",value:"值",cite:"出处",from:"起",
+      none:"无",noTreaty:"这一对还没有登记协定行。",offline:"地图底图没有加载（离线），节点和边照常显示。",
+      clause:"条文",close:"关闭",results:"搜索结果",inforce:"生效",mli:"MLI 文本",open:"打开",cat:"类别",
+      cats:{"1":"1 所得税法（股息、境外所得、居民、抵免）","2":"2 个人所得税","3":"3 CFC","4":"4 反滥用","5":"5 受益所有人","6":"6 居民判定指引",
+        "7":"7 协定待遇程序","8":"8 居民身份证明","9":"9 股权转让",page_treaties:"协定清单页",page_rates:"税率表页",page_deadlines:"预提税申报期限页","":"协定文件"},
+      stats:(n,e,r,o)=>`${n} 个地区 · ${e} 条边 · 已登记 ${r}/${o} 个地区对`}
+};
+let lang = (()=>{try{return localStorage.getItem("libmap-lang")||"en"}catch(e){return "en"}})();
+const t = k => T[lang][k];
+const POS = {cn:[116.4,39.9],hk:[114.17,22.32],sg:[103.82,1.35],id:[106.85,-6.21],vn:[105.85,21.03],my:[101.69,3.14],
+             th:[100.5,13.75],ae:[54.37,24.45],jp:[139.69,35.69],kr:[126.98,37.57],in:[77.21,28.61]};
+const LON0=40, LAT0=50, K=10;
+const xy = (lon,lat) => [(lon-LON0)*K, (LAT0-lat)*K];
+const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const $ = id => document.getElementById(id);
+const api = p => fetch(p).then(r => r.json());
+let G = null, view = null;
+
+function applyLang(){
+  document.querySelectorAll("[data-t]").forEach(e => e.textContent = t(e.dataset.t));
+  $("q").placeholder = t("search"); $("lang").textContent = lang === "en" ? "中文" : "English";
+  document.documentElement.lang = lang === "en" ? "en" : "zh";
+  if (G) drawStats();
+  if (view) view(); else intro();
+}
+$("lang").onclick = () => { lang = lang === "en" ? "zh" : "en"; try{localStorage.setItem("libmap-lang", lang)}catch(e){} applyLang(); };
+
+function place(code, i){ return POS[code] ? xy(...POS[code]) : [40 + i * 60, 630]; }
+
+async function drawLand(){
+  try{
+    await new Promise((ok, bad) => { const s = document.createElement("script");
+      s.src = "https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"; s.onload = ok; s.onerror = bad; document.head.appendChild(s); });
+    const topo = await (await fetch("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json")).json();
+    const fc = topojson.feature(topo, topo.objects.countries);
+    let d = "";
+    const ring = r => { let s = "", prev = null;
+      for (const [lon, lat] of r){ const [x, y] = xy(lon, lat);
+        s += (prev === null || Math.abs(lon - prev) > 180 ? "M" : "L") + x.toFixed(1) + "," + y.toFixed(1); prev = lon; }
+      return s + "Z"; };
+    for (const f of fc.features){ const g = f.geometry; if (!g) continue;
+      const polys = g.type === "Polygon" ? [g.coordinates] : g.coordinates;
+      for (const p of polys) for (const r of p) d += ring(r); }
+    $("landg").innerHTML = `<path class="land" d="${d}"></path>`;
+  }catch(e){ $("note").textContent = t("offline"); }
+}
+
+function drawStats(){
+  const recorded = G.edges.filter(e => e.type !== "list").length;
+  $("note").textContent = T[lang].stats(G.nodes.length, G.edges.length, G.pairs_recorded, G.pairs_owned);
+}
+
+function drawGraph(){
+  const P = {}; G.nodes.forEach((n, i) => P[n.code] = place(n.code, i));
+  let eh = "";
+  G.edges.forEach((e, i) => {
+    const a = P[e.a], b = P[e.b]; if (!a || !b) return;
+    let d;
+    if (e.type === "list"){ const mx = (a[0]+b[0])/2, my = (a[1]+b[1])/2, dx = b[0]-a[0], dy = b[1]-a[1];
+      d = `M${a[0]},${a[1]} Q${mx - dy*0.18},${my + dx*0.18} ${b[0]},${b[1]}`; }
+    else d = `M${a[0]},${a[1]} L${b[0]},${b[1]}`;
+    const cls = e.type === "list" ? "list" : e.type === "none" ? "none" : e.mli === "applies" ? "treaty mli" : "treaty";
+    const key = e.type === "list" ? e.param_id : e.pair;
+    eh += `<path class="edge ${cls}" d="${d}" data-k="${esc(key)}" ${e.type === "list" ? 'marker-end="url(#arrow)"' : ""}></path>`;
+    eh += `<path class="hit" d="${d}" data-i="${i}"><title>${esc(e.type === "list" ? e.param_id : e.pair)}</title></path>`;
+  });
+  $("edgeg").innerHTML = eh;
+  let nh = "";
+  G.nodes.forEach(n => { const [x, y] = P[n.code]; const r = 6 + Math.sqrt(n.docs) * 1.6;
+    nh += `<g class="node ${n.docs ? "" : "empty"}" data-c="${n.code}" transform="translate(${x},${y})">
+      <circle r="${r.toFixed(1)}"><title>${esc(n.name)}: ${n.docs} docs, ${n.params} params</title></circle>
+      <text x="${r + 4}" y="4">${esc(n.name)} (${n.code})</text></g>`; });
+  $("nodeg").innerHTML = nh;
+  document.querySelectorAll(".node").forEach(g => g.onclick = () => openJur(g.dataset.c));
+  document.querySelectorAll(".hit").forEach(h => h.onclick = () => { const e = G.edges[+h.dataset.i];
+    e.type === "list" ? openJur(e.a) : openPair(e.pair); });
+  drawStats();
+}
+
+function select(nodeCode, edgeKey){
+  document.querySelectorAll(".node").forEach(g => g.classList.toggle("sel", g.dataset.c === nodeCode));
+  document.querySelectorAll(".edge").forEach(p => p.classList.toggle("sel", p.dataset.k === edgeKey));
+}
+
+function intro(){ view = null; select(null, null);
+  $("body").innerHTML = `<h2>${esc(t("title"))}</h2><p class="muted">${esc(t("intro"))}</p>`; }
+
+const cite = c => c ? `<span class="link" data-cite="${esc(c)}">${esc(c)}</span>` : "";
+function wireCites(){ document.querySelectorAll("[data-cite]").forEach(e => e.onclick = () => openClause(e.dataset.cite));
+  document.querySelectorAll("[data-jur]").forEach(e => e.onclick = () => openJur(e.dataset.jur));
+  document.querySelectorAll("[data-pair]").forEach(e => e.onclick = () => openPair(e.dataset.pair)); }
+
+function docsByCategory(docs){
+  const groups = {};
+  for (const d of docs) for (const c of (d.category || "").split(";").map(s => s.trim()).filter((v, i, a) => v || a.length === 1)) (groups[c] ||= []).push(d);
+  const order = ["1","2","3","4","5","6","7","8","9","page_treaties","page_rates","page_deadlines",""];
+  return Object.keys(groups).sort((a, b) => order.indexOf(a) - order.indexOf(b)).map(c =>
+    `<div class="small" style="margin-top:8px"><b>${esc(T[lang].cats[c] ?? c)}</b></div>` +
+    groups[c].map(d => `<div>• <a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title || d.id)}</a>
+       <span class="muted small">${esc(d.id)} · ${esc(d.type)} · ${esc(d.lang)}${d.effective_from ? " · " + esc(d.effective_from) : ""}</span></div>`).join("")).join("");
+}
+
+function paramTable(ps){
+  if (!ps.length) return `<p class="muted">${esc(t("none"))}</p>`;
+  const rows = [...ps].sort((a, b) => (a.slot + a.subject + a.param_id).localeCompare(b.slot + b.subject + b.param_id)).map(p =>
+    `<tr><td>${esc(p.slot)}<br><span class="muted small">${esc(p.subject)}</span></td>
+     <td>${esc(p.name)}<div class="quote">${esc(p.quote)}</div>${p.note ? `<div class="quote">${esc(p.note)}</div>` : ""}</td>
+     <td><b>${esc(p.value)}</b> ${esc(p.unit)}</td><td class="small">${cite(p.cite_id)}<br><span class="muted">${esc(p.effective_from)}</span></td></tr>`).join("");
+  return `<table><tr><th>${t("slot")}</th><th>${t("name")}</th><th>${t("value")}</th><th>${t("cite")}</th></tr>${rows}</table>`;
+}
+
+async function openJur(code){
+  const d = await api("/api/jur/" + encodeURIComponent(code)); if (d.error) return;
+  view = () => renderJur(d); renderJur(d);
+}
+function renderJur(d){
+  const j = d.jurisdiction; select(j.code, null);
+  const absent = d.absent.map(x => `<div style="margin-bottom:6px">• <span class="chip">${esc(x.category || (x.subject + " · " + x.slot))}</span>${esc(x.statement)}
+      ${x.cite_id ? `<div class="small">${cite(x.cite_id)}</div>` : ""}</div>`).join("") || `<p class="muted">${t("none")}</p>`;
+  const pairs = d.pairs.map(p => `<span class="chip link" data-pair="${esc(p.pair)}">${esc(p.pair)}${p.doc_id ? "" : " ∅"}</span>`).join("") || t("none");
+  const lo = d.lists_out.map(e => `<div>• ${esc(e.list)} → <span class="link" data-jur="${e.b}">${e.b}</span> <span class="muted small">${esc(e.param_id)}</span></div>`).join("");
+  const li = d.lists_in.map(e => `<div>• <span class="link" data-jur="${e.a}">${e.a}</span>: ${esc(e.list)}</div>`).join("");
+  $("body").innerHTML = `<h2>${esc(j.name)} <span class="muted">(${esc(j.code)}, ${esc(j.currency)})</span></h2>
+    <h3>${t("docs")} (${d.docs.length})</h3>${docsByCategory(d.docs) || `<p class="muted">${t("none")}</p>`}
+    <h3>${t("params")} (${d.params.length})</h3>${paramTable(d.params)}
+    <h3>${t("absent")} (${d.absent.length})</h3>${absent}
+    <h3>${t("pairs")}</h3><div>${pairs}</div>
+    ${lo ? `<h3>${t("lists_out")}</h3>${lo}` : ""}${li ? `<h3>${t("lists_in")}</h3>${li}` : ""}`;
+  wireCites();
+}
+
+async function openPair(name){
+  const d = await api("/api/pair/" + encodeURIComponent(name));
+  view = () => renderPair(d); renderPair(d);
+}
+function renderPair(d){
+  select(null, d.pair); const tr = d.treaty; const [a, b] = d.pair.split("-");
+  const head = tr ? `<p>${tr.doc_id ? `${t("treaty")}: <b>${esc(tr.doc_id)}</b> · ${t("inforce")} ${esc(tr.in_force_from)}` : `<b>${esc(t("lg_none"))}</b>`}
+      ${tr.mli_doc_id ? `<br>${t("mli")}: ${esc(tr.mli_doc_id)}` : ""}</p><p class="small muted">${esc(tr.note)}</p>` : `<p class="muted">${t("noTreaty")}</p>`;
+  const sup = d.superseded.map(s => `<tr><td class="small">${esc(s.doc_id)}#${esc(s.clause)}</td><td class="small">${cite(s.by)}<br><span class="muted">${esc(s.since)}</span></td><td class="small">${esc(s.note)}</td></tr>`).join("");
+  const lists = d.lists.map(e => `<div>• ${e.a} → ${e.b}: ${esc(e.list)} ${cite("")}<span class="muted small">${esc(e.param_id)}</span></div>`).join("");
+  $("body").innerHTML = `<h2><span class="link" data-jur="${a}">${a}</span> – <span class="link" data-jur="${b}">${b}</span></h2>${head}
+    <h3>${t("params")} (${d.params.length})</h3>${paramTable(d.params)}
+    <h3>${t("docs")} (${d.docs.length})</h3>${docsByCategory(d.docs) || `<p class="muted">${t("none")}</p>`}
+    ${sup ? `<h3>${t("superseded")} (${d.superseded.length})</h3><table>${sup}</table>` : ""}
+    ${lists ? `<h3>${t("lg_list")}</h3>${lists}` : ""}`;
+  wireCites();
+}
+
+async function openClause(id){
+  const c = await api("/api/clause/" + encodeURIComponent(id)); const box = $("clause");
+  box.style.display = "block";
+  box.innerHTML = c.error ? `<b>${esc(id)}</b> <span class="muted">${esc(c.error)}</span> <span class="link" id="cx">${t("close")}</span>`
+    : `<b>${esc(c.cite_id)}</b> <span class="muted small">${esc(c.label)}</span> · <a href="${esc(c.doc.url)}" target="_blank" rel="noopener">${esc(c.doc.title)}</a>
+       <span class="link" id="cx" style="float:right">${t("close")}</span><pre>${esc(c.text)}</pre>`;
+  $("cx").onclick = () => box.style.display = "none";
+}
+
+$("q").addEventListener("keydown", async ev => { if (ev.key !== "Enter") return;
+  const r = await api("/api/search?q=" + encodeURIComponent($("q").value)); const q = r.q;
+  const mk = s => esc(s).replace(new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "ig"), m => `<mark>${m}</mark>`);
+  const show = () => { select(null, null);
+    $("body").innerHTML = `<h2>${t("results")} <span class="muted">(${r.hits.length})</span></h2>` + (r.hits.map(h =>
+      `<div style="margin-bottom:6px"><span class="chip">${h.kind}</span>${h.jur.includes("-") ? `<span class="link" data-pair="${esc(h.jur)}">${esc(h.jur)}</span>` : `<span class="link" data-jur="${esc(h.jur)}">${esc(h.jur)}</span>`}
+       · ${mk(h.id)} <span class="muted">${mk(h.text)}</span> ${h.cite_id ? cite(h.cite_id) : ""}</div>`).join("") || `<p class="muted">${t("none")}</p>`);
+    wireCites(); };
+  view = show; show(); });
+
+(async () => { applyLang(); drawLand(); G = await api("/api/graph"); drawGraph(); })();
+</script>
+</body>
+</html>

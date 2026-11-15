@@ -1,0 +1,3407 @@
+TAX TREATMENT OF
+FOREIGN INCOME OF 
+PERSONS RESIDENT 
+Income Tax Department
+www.incometaxindia.gov.in
+@incomeTaxindia
+2018
+Capital Gains
+Technical Service
+Royalty
+Income from 
+other sources
+Double Taxation 
+Avoidance agreements
+16
+Business connection
+in India
+Income from 
+house property
+Tax liability
+TPI 
+Series 
+extent of exemption
+Indian
+Resident
+
+Tax Payers Information Series – 16
+TAX TREATMENT OF FOREIGN 
+INCOME OF PERSONS  
+RESIDENT IN INDIA
+DIRECTORATE OF INCOME TAX
+Directorate of Income Tax (PR,P&P)
+6th Floor, Mayur Bhawan, 
+Connaught Circus, 
+New Delhi-110001
+
+Disclaimer: 
+The purpose of this booklet is to inform the 
+taxpayers about the broad tax treatment of 
+foreign income of persons resident in India. 
+It, however, does not have any statutory 
+authority and cannot be cited in a Court 
+of Law. In case of any doubt, taxpayers are 
+advised to make reference to the relevant 
+statutory provisions, as laid down in the 
+Income Tax Act, 1961, Income tax Rules, 
+1962 and circulars/ instructions issued by 
+the CBDT from time to time and the web-
+site https://www.incometaxindia.gov.in. 
+
+iii
+PREFACE
+	
+The Directorate of Income Tax(PR,P&P) is making 
+continuous endeavors to increase the awareness of 
+various categories of tax laws and the steps taken by the 
+government to reduce the complexities of tax laws and 
+improve Tax Payer Service. In a liberalized economy, more 
+and more citizen of the country are travelling to work and 
+earn income in foreign countries. Often these taxpayers are 
+not adeuately equipped to understand the taxability of their 
+foreign income. This booklet is written keeping in view the 
+fact that the segment of global tax payers earning income 
+from more than one country is growing.
+Smt. Vatsala Jha, CIT(Transfer Pricing) has taken great 
+pains to update the booklet which was last written by Shri 
+Sanjay Puri (Presently PCIT, Udaipur) in the year 2009. 
+The present edition incorporates the amendments in law 
+made upto the Finance Act, 2017. The Booklet has also 
+been vetted by Shri Kamlesh Varshney, CIT(International 
+Taxation), New Delhi with all updates. We thank both Smt. 
+Vatsala Jha and Shri Kamlesh Varshney for their efforts.
+We are hopeful that readers will find this publication quite 
+useful. This Directorate always welcomes suggestion for 
+further improvement.
+	
+(Debjyoti Das)
+New Delhi
+Addl.Director General(PR,PP&OL)
+Date : June, 2018	
+  Central Board of Direct Taxes
+
+iv
+
+v
+TABLE OF CONTENTS
+Page Number 
+1.
+Basis for tax liability
+1
+2.
+Who is a resident?
+1
+3.
+Who is a non-resident?
+2
+4.
+Categories of residents
+3
+5.
+Who is a resident but not  ordinarily 
+resident?
+3
+6.
+Extent of tax liability
+4
+7.
+Tax liability of a resident on his foreign 
+income
+5
+8.
+Tax liability on foreign Income of a person 
+not ordinarily resident
+6
+9.
+Business Connection
+10
+10.
+Royalty
+18
+11.
+Fees for Technical Services
+19
+12.
+Tax reliefs on the foreign income of the 
+residents
+19
+13.
+Salaries
+20
+14.
+Exemption on the allowances Paid by 
+the government [section 10(7)]
+20
+15.
+Exemption of foreign income of 
+persons assigned to duties in India 
+under cooperative technical assistance 
+programmes [section 10(8) and 10 (8B)]
+20 
+
+vi
+16.
+Exemption under the United Nations 
+(Privileges and Immunities) Act 1947
+22
+17.
+Specialised agencies of United Nations
+23
+18.
+Other International Organisations
+24
+19.
+Profit and gains of business or 
+profession
+25
+20.
+Income from House Property and Capital 
+Gains.
+25
+21.
+Income from Other Sources
+26
+22.
+Double taxation relief
+27
+23.
+Double taxation avoidance agreements
+27
+24.
+Unilateral relief from double taxation
+30
+25.
+Bar on recovery
+32
+26.
+Rate of exchange for conversion into 
+rupees of income expressed in foreign 
+currency
+32
+27.
+Annexure ‘A’
+35
+28.
+Annexure ‘B’
+39
+29.
+Annexure ‘C’
+40
+
+1
+TAX TREATMENT OF  
+FOREIGN INCOME OF PERSONS 
+RESIDENT IN INDIA
+Basis for tax liability in India
+1. 	
+The tax liability of a person under the Income-tax 
+Act depends upon his residential status in the financial 
+year in which the income accrues or arises to him or 
+is received by him. Financial year means the period of 
+twelve months commencing on the Ist day of April every 
+year. The test of determining residential status of a 
+person is laid down in section 6 of the Income-tax Act.
+Who is a resident?
+2.1 An individual is said to be resident in India in any 
+financial year if he has been in India during that year:
+•	
+for a period or periods of 182 days or more; or
+•	
+for a period or periods of 60 days or more 
+and has also been in India within the 
+preceding four years for a period or periods 
+of 365 days or more.
+	
+However, the period of 60 days is increased to 
+182 days (i) in the case of a citizen of India or a person 
+of Indian origin who has been outside India and comes 
+on a visit to India, and (ii) in a case when a citizen of 
+
+2
+India leaves India for purposes of employment outside 
+India or as a member of the crew of an Indian ship.
+	
+A person of Indian origin is one if he, or either 
+of his parents or any of his grand parents, was born in 
+undivided India.
+Thus, the residential status of an individual 
+generally depends on his physical presence or 
+period of stay in India and not on his nationality or 
+domicile.
+2.2	
+A Hindu undivided family or a firm or all 
+association of persons is said to be resident in India 
+in every case except where the control and management 
+of its affairs is situated wholly outside India, during the 
+financial year. Thus, where the control and management 
+of its affairs is situated even partly in India, a firm, etc., 
+becomes a resident in India.
+2.3	
+A company is said to be resident in India if it is 
+an Indian company Or its place of effective management 
+(POEM), in that year, is in India during the financial 
+year. “Place of effective management” means a place 
+where key management and commercial decisions that 
+are necessary for the conduct of business of entity as a 
+whole are, in substance made. 
+Who is a non-resident?
+2.4	
+A person who is not resident in India as above, is 
+a non-resident.
+
+3
+Categories of residents
+2.5	
+Residents are divided into two categories (a) 
+resident and ordinarily resident, and (b) resident but 
+not ordinarily resident. The status of ‘resident but not 
+ordinarily resident’ is available only to the individuals 
+and Hindu undivided families.
+Who is a resident but not ordinarily resident?
+2.6	
+An individual is said to be a “not ordinarily 
+resident” in India in any financial year if :
+(a)	
+he has been a non-resident in India in nine out of 
+ten financial years preceding that year; or
+(b)	
+he has been in India for a period of 729 days or less 
+during the seven financial years preceding   that 
+year.
+	
+Thus an individual would be a “not ordinarily 
+resident” (NOR) if he fulfils either of the aforesaid tests.
+	
+“One implication is that a newcomer to India 
+would remain NOR for the first two financial years at least 
+of his stay in India. Similarly, where a person who is a 
+resident in India goes abroad and remains non-resident 
+for at least nine out of the next ten financial years, he 
+would on his return be treated as NOR for at least the 
+two financial years (the financial year of returning to 
+India and the immediately subsequent financial year).
+
+4
+	
+Another implication is that a person may have 
+been a resident or a non resident in India during the 
+seven preceding financial years but if he was in India for 
+729 days or less during those seven preceding financial 
+years, he will then be treated as NOR.”
+2.7 	
+A Hindu undivided family is said to be ‘not 
+ordinarily resident’ in India if its manager is ‘not ordinarily 
+resident’ in India. For the purpose of calculating the 
+length of the manager’s stay in India, the periods of stay 
+in India of the successive managers of a Hindu undivided 
+family during its continued existence have to be added 
+up.
+Extent of tax liability
+3.1 	
+The provisions regarding scope of total income 
+which is liable to income-tax in India are contained in 
+section 5 of the Income tax Act.
+3.2 	
+In the case of a person who is resident, the total 
+income of any financial year includes all income from 
+whatever source derived which:
+(a)	
+is received or is deemed to be received in India in 
+such year by him or on his behalf, or
+(b)	
+accrues or arises to him or is deemed to accrue or 
+arise to him in India during such year, or
+(c)	
+accrues or arises to him outside India during such 
+year.
+
+5
+3.3 	
+However, in the case of a person not ordinarily 
+resident in India, the income which accrues or arises 
+to him outside India is not to be included in his total 
+income unless it is derived from a business controlled in 
+or a profession set up in India
+3.4 	
+The expressions “accrues” and “received” are to 
+be understood in their plain general meaning, as there 
+is no particular definition thereof in the Income-tax 
+Act. The expressions “accrues” and “arises” are used 
+in contradistinction to the expression “received” and 
+indicate a right to receive income.
+Tax liability of a resident on his foreign income
+3.5 	
+The total world income of a resident is liable to 
+income tax in India. The foreign income i.e. income 
+accruing or arising outside India in any financial year is 
+liable to income-tax in that year even if it is not received 
+or brought into India. There is no escape from liability to 
+income-tax even if the remittance of income is restricted 
+by the foreign country. However, in the case of income 
+arising in a foreign country the laws of which prohibit 
+or restrict the remittance of money to India, proceedings 
+cannot be taken against the assessee for recovery of the 
+tax assessed and due in respect of such foreign income 
+until the prohibition or restriction is removed.
+3.6 	
+Income which has been included in the total 
+income of a resident on the basis that it has accrued or 
+arisen to him outside India, is not to be so included again 
+
+6
+on the basis that it is received or deemed to be received in 
+India.
+Tax liability on foreign income of a person 
+not ordinarily resident
+3.7 	
+In the case of a person resident but not ordinarily 
+resident, income accruing or arising to him outside India 
+in any financial year is not liable to income-tax in India 
+only if :
+(i)	
+it is not derived from a business controlled in or a 
+profession set up in India;
+(ii)	
+it is not received or deemed to be received in India 
+in such year by him or on his behalf; and
+(iii)	
+it is not deemed to accrue or arise to him in India 
+during such year.
+	
+Thus, the income-tax exemption on foreign 
+income is confined to cases where income not only 
+accrues or arises abroad but is also received abroad 
+and is neither deemed to accrue or arise nor deemed to 
+be received in India under the provisions of the Income-
+tax Act. But the income-tax exemption would not be lost 
+merely because the foreign income received abroad is 
+subsequently brought into India.
+3.8 	
+The expression “business controlled in India” 
+means that the “head and brain” of the trading adventure 
+should be situated in India and should direct the business 
+
+7
+activities from India. Like income derived from a business 
+controlled in India, income derived from a profession set 
+up in India is also excluded from the scope of the foreign 
+income. The expression “profession” includes vocation 
+as well. A profession established abroad and afterwards 
+established and continued in India would fall within the 
+category of a profession set up in India.
+	
+The law specifically provides that income accruing or 
+arising outside India is not to be deemed to be received 
+in India by reason only of the fact that it is taken into 
+account in a balance sheet prepared in India. Thus, no 
+amount of book-keeping or entries in the accounts kept 
+in India would be equivalent to receipt of income from 
+abroad.
+3.9 	
+Section 9 of the Income-tax Act contains provisions 
+in respect of income deemed to accrue or arise in India. 
+These are:
+(i) 	
+All income accruing or arising, whether directly 
+or indirectly: 
+(a) 	
+through or from any business connection in 
+India;
+(b) 	
+through or from any property in India;
+(c)	
+through or from any asset or source of 
+income in India;
+(d)	
+through the transfer of a capital asset 
+situated in India.
+
+8
+	
+However, in the case of a business of which all the 
+operations are not carried out in India, the income of the 
+business deemed to accrue or arise in India is to be only 
+such part of the income as is reasonably attributable to 
+the operations carried out in India.
+The expression “through” means “by means of”, “in 
+consequence of” or “by reason of”.  The Finance Act 2012 
+inserted clarificatory amendments with retrospective effect 
+from Assessment Year 1962-63 to clarify that an asset or 
+capital asset, being any share or interest in a company 
+or entity registered or incorporated outside India shall 
+be deemed to be situated in India if the share or interest 
+derives, directly or indirectly, its value substantially from 
+the assets located in India.
+(ii)	
+Income which falls under the head “Salaries”, if 
+it is earned in India. Salary payable for services 
+rendered in India is regarded as income earned 
+in India, even though the employment contract 
+is executed outside India and the salary is also 
+payable outside India.
+(iii) 	
+Income chargeable under the head “Salaries” 
+payable by the Government to a citizen of India 
+for service outside India.
+(iv)	
+A dividend paid by an Indian company outside 
+India.
+(v)	
+Interest income if it is payable by :
+(a)	
+the Central Government or any State 
+Government;
+
+9
+(b)	
+a resident, except where the interest is 
+payable in respect of any debt incurred 
+or any moneys borrowed and used for 
+the purposes of a business or profession 
+carried on by him outside India or for the 
+purposes of making or earning any income 
+from any source outside India; and
+(c)	
+a non-resident in respect of any debt 
+incurred or any moneys borrowed and 
+used for the purpose of a business or 
+profession carried on by him in India.
+(vi)	
+Royalty if it is payable by :
+(a)	
+the Central Government or any State 
+Government;
+(b)	
+a resident, except where the royalty is 
+payable in respect of any right, property 
+or information used or services utilised for 
+the purposes of a business or profession 
+carried on by him outside India or for the 
+purposes of making or earning any income 
+from any source outside India; and
+(c)	
+a non-resident, where the royalty is 
+payable in respect of any right, property 
+or information used or services utilised for 
+the purposes of a business or profession 
+carried on by such person in India or for 
+the purposes of making or earning any 
+income from any source in India.
+
+10
+(vii)	
+Income by way of fees for technical services if it is 
+payable by :
+(a)	
+the Central Government or any State 
+Government;
+(b)	
+a resident, except where the fees are 
+payable in respect of services utilised in 
+a business or profession carried on by 
+him outside India or for the purposes of 
+making or earning any income from any 
+source outside India; and
+(c)	
+a non-resident, where the fees are payable 
+in respect of services utilised in a business 
+or profession carried on by such person 
+in India or for the purposes of making or 
+earning any income from any source in 
+India.
+Business Connection
+3.10.1 The expression “business connection”, used in 
+section 9 of the Income-tax Act, has a wide meaning. It 
+is not defined; In fact, it admits of no precise definition. 
+Whether there is a “business connection” or not, depends 
+upon the particular facts of each case. The courts have 
+held that “business connection” involves a relationship 
+between a business carried on outside India, which 
+yields profits or gains and some activity in India which 
+in turn contributes to the earning of these profits or 
+gains. It postulates a real and intimate relationship 
+between trading activity carried on outside India and 
+trading activity within India, the relationship between 
+
+11
+the two contributing to the earning of the income by the 
+non-resident or ‘not ordinarily resident’ in his trading 
+activity. It is necessary that some of the operations are 
+carried out in India in respect of which the income is 
+sought to be assessed.
+3.10.2 In the context of “business connection”, the 
+Central Board of Direct Taxes (hereinafter referred to 
+as the Board) had issued circular No. 23, dated 23rd 
+January, 1969, explaining its concept.  The Board 
+has vide Circular no. 7/2009 dated October 22, 2009 
+withdrawn Circular no. 23/1969 dated 23rd July, 1969. 
+The Circular No. 7/2009 dated 22.10.2009 is reproduced 
+as under:
+Circular No. 7/2009 [F. No. 500/135/2007-FTD-I], 
+dated 22-10-2009
+The Central Board of Direct Taxes had issued Circular No. 
+23 (hereinafter called “the Circular”) on 23rd July 1969 
+regarding taxability of income accruing or arising through, 
+or from, business connection in India to a non-resident, 
+under section 9 of the Income-tax Act, 1961.
+2.	
+It is noticed that interpretation of the Circular 
+by some of the taxpayers to claim relief is not in 
+accordance with the provisions of section 9 of the 
+Income-tax Act, 1961 or the intention behind the 
+issuance of the Circular.
+3.	
+Accordingly, the Central Board of Direct Taxes 
+withdraws Circular No 23 dated 23rd  July, 1969 
+with immediate effect.
+
+12
+4.	
+Even when the Circular was in force, the Income-tax 
+Department has argued in appeals, references and 
+petitions that :
+(i) 	
+the Circular does not actually apply to a 
+particular case, or
+(ii) 	
+that the Circular cannot be interpreted to 
+allow relief to the taxpayer which is not in 
+accordance with the provisions of section 9 
+of the Income-tax Act or with the intention 
+behind the issue of the Circular.
+It is clarified that the withdrawal of the Circular will in no 
+way prejudice the aforesaid arguments which the Income-
+tax Department has taken, or may take, in any appeal, 
+reference or petition.
+5.   	
+The Central Board of Direct Taxes also withdraws 
+Circulars No. 163 dated 29th May, 1975 and No. 
+786 dated 7th  February, 2000 which provided 
+clarification in respect of certain provisions of 
+Circular No 23 dated 23rd July, 1969.
+3.10.3 The term “business connection” also includes 
+any business activity carried out through a person who, 
+acting on behalf of the non-resident :
+(a)	
+has and habitually exercises in India, an 
+authority to conclude contracts on behalf of the 
+non-resident, unless his activities are limited to 
+the purchase of goods or merchandise for the 
+non-resident; or
+
+13
+(b)	
+has no such authority, but habitually maintains 
+in India a stock of goods or merchandise from 
+which he regularly delivers goods or merchandise 
+on behalf of the non-resident; or
+(c)	
+habitually secures orders in India, mainly or 
+wholly for the non-resident or for that non-
+resident and other non-residents controlling, 
+controlled by, or subject to the same common 
+control, as that non-resident.
+	
+But, that such business connection shall not 
+include any business activity carried out through a 
+broker, general commission agent or any other agent 
+having an independent status if such broker, general 
+commission agent or any other agent having an 
+Independent Status, if such broker, general commission 
+agent or any other agent having an Independent Status 
+is acting in the ordinary course of his business.
+	
+Also, where such broker, general commission 
+agent or any other agent works mainly or wholly on behalf 
+of a non-resident (hereafter in this proviso referred to 
+as the principal non-resident) or on behalf of such non-
+resident and other non-residents which are controlled 
+by the principal non-resident and or have a controlling 
+interest in the principal non-resident or are subject to the 
+same common control as the principal non-resident, he 
+shall not be deemed to be a broker, general commission 
+agent or an agent of an independent status.
+
+14
+	
+Moreover, where a business is carried on in India 
+through a person referred to in clause (a) or clause (b) or 
+clause (c) mentioned above, only so much of income as 
+is attributable to the operations carried out in India shall 
+be deemed to accrue or arise in India.
+3.10.4 From Assessment Year 2019-20 (FY 2018-19) and 
+onwards; “business connection”  shall also include any 
+business activities carried through a person who, acting 
+on behalf of the non-resident, habitually concludes 
+contracts or habitually plays the principal role leading to 
+conclusion of contracts by the non-resident . However, 
+the contracts should be :
+(i) 	
+in the name of the non-resident; or
+(ii) 	
+for the transfer of the ownership of, or for the 
+granting of the right to use, property owned by 
+that non-resident or that the non-resident has 
+the right to use; or
+(iii) 	
+for the provision of services by that non-resident.
+3.10.5	 From Assessment Year 2019-20 (FY 2018-19) 
+and onwards, “significant economic presence” in India 
+shall also constitute “business connection”.  Further, 
+“significant economic presence” for this purpose, shall 
+mean : 
+(i) 	
+any transaction in respect of any goods, services 
+or property carried out by a non-resident in 
+India including provision of download of data or 
+software in India if the aggregate of payments 
+
+15
+arising from such transaction or transactions 
+during the previous year exceeds the amount as 
+may be prescribed; or
+(ii) 	
+systematic and continuous soliciting of its 
+business activities or engaging in interaction with 
+such number of users as may be prescribed, in 
+India through digital means.
+	
+However, only so much of income as is attributable 
+to such transactions or activities shall be deemed to 
+accrue or arise in India. The transactions or activities 
+shall constitute significant economic presence in India, 
+whether or not the non-resident has a residence or place 
+of business in India or renders services in India.
+3.10.6	 Some of the instances of “business connection” 
+are :
+(i)	
+maintaining in India of a branch office for the 
+purchase or sale of goods or for transacting 
+other business;
+(ii)	
+erecting a factory in India where the raw 
+produce purhased locally is worked into a 
+form suitable for export abroad;
+(iii)	
+appointing an agent in India for the systematic 
+and regular purchase of raw materials or 
+other commodities, or for the sale of goods 
+or for other business purposes;
+(iv)	
+close financial association with a resident, 
+etc.
+
+16
+3.10.7	Operations not taken as business connection : 
+The following operations do not amount to business 
+connections : 
+(i)	
+Where all operations are not carried out 
+in India [Explanation 1(a) to Sec.9(1)(i) of 
+the Act].- if all business operations are 
+not  carried out in India, the income of 
+the business deemed to accrue or arise in 
+India shall be only such part of income as 
+is reasonably attributable to the operations 
+carried out in India.
+(ii)	
+Purchase of goods for exports [Explanation 
+1(b) to Sec.9(1)(i)] – In the case of a non-
+resident no income shall be deemed to 
+accrue or arise in India to him through or 
+from operations which are confined to the 
+purchase of goods in India for the purpose 
+of exports.
+(iii)	
+Collection of news and views [Explanation 
+1(c) to Sec. 9(1)(i)]- No income shall be 
+deemed to accrue or arise in the case of 
+a non-resident engaged in the business 
+of running a news agency or of pubishing 
+newspapers, magazines or journals from 
+activities confined to the collection of news 
+and views in India for transmission out of 
+India.
+
+17
+(iv)	
+Shooting of cinematograph film in India 
+[Explanation 1(d) to Sec. 9(1)(i)] – In the 
+case of a non-resident no income shall be 
+deemed to accrue or arise in India through 
+or from operations which are confined to the 
+shooting of any cinematograph film in India, 
+if such a non-resident is either an individual 
+who is not a citizen of India, or a firm which 
+does not have any partner who is a citizen of 
+India or is a resident in India. 
+(v)	
+Display of uncut and unassorted diamond 
+in a notified special zone [Explanation 
+1(e) to Sec. 9(1)(i)] – In case of a foreign 
+company engaged in the business of 
+mining of diamonds, no income shall be 
+deemed to accrue or arise in India through 
+or from the activities which are confined 
+to the display of  uncut and unassorted 
+diamond in any special zone notified by 
+the Central Government in the Official 
+Gazette in this behalf (applicable from the 
+Assessment Year 2016-17).
+(vi)	
+Section 9A – In the case of an “eligible 
+investment fund”, the fund management 
+activity carried out through an “eligible fund 
+manager” acting on behalf of such fund 
+shall not constitute business connection 
+in India of the said fund (applicable from 
+Assessment Year 2016-17).
+
+18
+3.11 	Royalty
+	
+The definition of “royalty” as given in the 
+Explanation to Section 9(1)(vi) of the Act, is wide enough 
+to cover industrial; commercial copyright and equipment 
+royalties. Further, the definition specifically excludes 
+income which would be chargeable to tax under the head 
+“Capital Gains” and accordingly, such income is to be 
+charged to tax as capital gains on a net basis (i.e. after 
+deduction of related expenses) under the provisions of 
+the Income-tax Act. Royalty for this purpose includes 
+consideration for the transfer of any right in respect 
+of a patent, invention, model, design, secret formula, 
+or process or trademark or similar property.  Royalty 
+also includes consideration for the use of any patent, 
+invention, model, design, secret formula, or process or 
+trademark or similar property. The provision has been 
+amended by the Finance Act, 2012, with retrospective 
+effect from 01.06.1976 to include the following:
+(i)	
+Transfer of all or any right for use (or right to 
+use) a computer software (including granting of 
+licence) irrespective of the medium through which 
+such right is transferred.
+(ii)	
+Any consideration in respect of any right, property 
+or information, whether or not :
+(a)	
+The possession or control of such right, 
+property or information is with the payer;
+(b)	
+Such right, property or information is used 
+directly by the payer;
+
+19
+(c)	
+The location of such right, property or 
+information is in India.
+(iii)	
+The expression “process” includes transmission 
+by satellite (including up-linking, amplification, 
+conversion for down-linking of any signal), cable, 
+optic fibre or by any other similar technology, 
+whether or not such process is secret. 
+3.12 	Fees for Technical Services
+The expression “fees for technical services” has been 
+defined to mean any consideration, including a lump 
+sum consideration, for the rendering of managerial, 
+technical or consultancy services, including the provision 
+of services of technical or other personnel. It, however, 
+does not include salary income or a consideration 
+received for any construction, assembly, mining or like 
+project undertaken by the recipient.
+Tax reliefs on the foreign income of the 
+residents
+4.1 	
+The Income-tax Act provides a number of reliefs, 
+either by way of complete exemption or by way of 
+deduction from the gross total income, in respect of 
+the foreign income of the residents. Further, income-tax 
+exemption is provided under the United Nations (Privileges 
+and Immunities) Act, 1947 on the salaries of the officers 
+of the United Nations, its specialised agencies and certain 
+other international organisations notified by the Central 
+Government.
+
+20
+4.1.2 These reliefs, ‘head of income-wise’, are as under:
+Salaries
+4.2.1 ‘Salary’ means all remuneration paid or due 
+under an express or implied contract of employment 
+except that received by a partner of a firm from the firm. 
+It includes wages, annuity or pension, gratuity, fees, 
+commission, perquisites or profits in lieu of or in addition 
+to any salary or wages or any advance of salary or leave 
+salary encashment.
+4.2.2 The exemptions and deductions available in the 
+Income-tax Act on the foreign income by way of salaries are 
+indicated in following paragraphs.
+Exemption 
+on 
+the 
+allowances 
+paid 
+by 
+Government
+4.2.3 Any allowance or perquisite paid or allowed as 
+such outside India by the Central Government or a State 
+Government to a citizen of India for rendering service 
+outside India, is exempt from income-tax. The relevant 
+provisions are contained in section 10(7) of the Income 
+tax Act.
+Exemption of foreign income of persons 
+assigned to duties in India under cooperative 
+technical assistance programmes
+4.2.4 In the case of individuals who are assigned to duties 
+in India in connection with any cooperative technical 
+assistance programmes and projects, in accordance with 
+
+21
+an agreement between the Central Government and the 
+Government of a foreign State, their foreign income is 
+exempt from income-tax if they pay any income or social 
+security tax on such income to the foreign State. To 
+qualify for the exemption, such income should not be 
+deemed to have accrued or arisen in India. Further, the 
+terms of the agreement between the two governments must 
+provide for such exemption. The relevant provisions 
+of this exemption are contained in section 10(8) of the 
+Income-tax Act.
+4.2.5 Income-tax exemption on the aforesaid lines has 
+also been provided on the foreign income of an individual 
+who is assigned to duties in India in connection with 
+any technical assistance programme and project in 
+accordance with an agreement entered into by the 
+Central Government and an international organisation. 
+The exemption is available only if the following conditions 
+are satisfied, namely:
+(a) 	
+the individual is an employee of the consultant 
+referred to in section 10 (8A) which provides that 
+a consultant means a person engaged by an 
+international organisation in connection with 
+any 
+technical 
+assistance 
+programme 
+in 
+accordance with an agreement between that 
+organisation and the Central Government;
+(b)	
+he is either not a citizen of India or being a citizen 
+of India, is not ordinarily resident in India; and
+
+22
+(c)	
+the contract of service of the individual is 
+approved by the Additional Secretary, 
+Department of Economic Affairs, in the Ministry 
+of Finance, Government of India in concurrence 
+with Member (Income-tax) of the Board.
+The relevant provisions of this exemption are contained 
+in Section 10(8B) of the Income-tax Act.
+Exemption 
+under 
+the 
+United 
+Nations 
+(Privileges and Immunities) Act, 1947
+4.2.6	 The United Nations (Privileges and Immunities) 
+Act, 1947, provides exemption from income-tax on 
+the salaries and emoluments paid by the United Nations 
+to its officials. Thus, the individuals who are resident in 
+India in any financial year and are in receipt of income 
+by way of salaries and emoluments from the United 
+Nations as officials thereof, are exempt from income-
+tax on such income. As the expression “salaries” under 
+the Income-tax Act includes pension also, the pension 
+received from the United Nations by its former officials, 
+is also exempt from income-tax.
+4.2.7	 Under section 3 of the United Nations (Privileges 
+and Immunities) Act, 1947, the Central Government 
+has the power to extend the benefit of the income-
+tax exemption to the officers of other international 
+organisations on the lines of such exemption to U.N. 
+Officials. The benefit of Income-tax exemption has been 
+extended to the representatives and officers of the 
+following specialised agencies of the United Nations or 
+other international organisations.
+
+23
+Specialised agencies of United Nations
+(i)	
+International Civil Aviation Organisation;
+(ii)	
+World Health Organisation;
+(iii)	
+International Labour Organisation;
+(iv)	
+Food and Agriculture Organisation of the United 
+Nations;
+(v)	
+United 
+Nations 
+Educational, 
+Scientific 
+and 
+Cultural Organisation;
+(vi)	
+International Monetary Fund;
+(vii)	 International Bank for Reconstruction & 
+Development (World Bank);
+(viii)	
+Universal Postal Union;
+(ix)	
+International Atomic Energy Agency;
+(x)	
+International Telecommunication Union;
+(xi)	
+World Meteorological Organisation;
+(xii)	
+Inter-Governmental Maritime Consultative 
+Organisation;
+(xiii)	
+United 
+Nations 
+Industrial 
+Development 
+Organisation;
+(xiv)	 United Nations Conference on Trade and 
+Development;
+
+24
+Other International Organisations
+(i)	
+League of Arab States;
+(ii)	
+Asian African Legal Consultative Committee;
+(iii)	
+Afro-Asian Rural Reconstruction Organisation;
+(iv)	
+Commonwealth Secretariat (applicable to non-
+Indian nationals who are visiting India and to 
+Indian nationals who are on assignment outside 
+India with the Common wealth Secretariat or 
+other bodies constituted by it for furtherance of 
+its objectives);
+(v)	
+Asian Development Bank (applicable to the 
+Indian Executive Directors, Alternate Executive 
+Directors, officials and experts who are posted 
+outside India);
+(vi)	
+International 
+Jute 
+Organisation, 
+Dhaka 
+(applicable to the Indian nationals only);
+(vii)	
+African National Congress Mission;
+(viii)	
+International Court of Justice;
+(ix)	
+Palestinean Liberation Organisation;
+(x)	
+Customs Cooperative Council;
+(xi)	
+International Committee of Red Cross.
+
+25
+4.2.8	 The Ministry of External Affairs has also clarified 
+that the United Nations officials and the technical assistance 
+experts may be treated at par. Moreover, the procedural 
+distinction in the matter of extending privileges between 
+officials and experts on mission has been dispensed with. 
+As a result, experts on mission are also entitled to the same 
+privileges and immunities as are enjoyed by the officials 
+of the United Nations.
+4.2.9	 The administration of the United Nations (Privileges 
+and Immunities) Act vests in the Ministry of External 
+Affairs (U.N. Division).
+Profits and gains of business or profession
+4.3.1	 Income from business or profession is computed 
+in accordance with the provisions of sections 28 to 
+44DB of the Income-tax Act. The expression ‘business or 
+profession’ includes any trade, commerce, manufacture 
+or vocation.
+4.3.2	 The deductions available in the Income-tax Act 
+on the foreign income by way of profits and gains of 
+business or profession are indicated in the subsequent 
+paragraphs.
+Income from house property and capital gains
+4.4.1.1 Income from house property is computed in 
+accordance with the provisions of sections 22 to 27 of the 
+Income-tax Act. It is determined with reference to its annual 
+value i.e., the sum for which the property might reasonably 
+
+26
+be expected to be let from year to year. However, where 
+any property is tenanted and the annual rent received or 
+receivable by the owner is in excess of the sum for which 
+the property might reasonably be expected to be let from 
+year to year, the actual rent received or receivable is taken 
+as the annual value of the property.
+4.4.1.2 Sections 45 to 55A of the Income-tax Act deal with 
+the provisions relating to computation of income from 
+capital gains and the various exemptions and deductions 
+allowable in respect of the same.
+4.4.2 There is no specific tax relief provided in respect 
+of the foreign income of the residents falling under the 
+aforesaid two sources of income (except for income from 
+business/profession of a Resident but Not Ordinarily 
+Resident where the business is controlled outside India 
+or the profession is set up outside India)
+Income from  Other sources:
+4.5.1.1 Sections 56 to 59 of the Income-tax Act deal with 
+the provisions for computation of income under the head 
+‘Income from other sources’. This is a residuary head 
+covering all incomes which do not fall under any of the 
+heads of income mentioned specifically in the Income-
+tax Act, i.e., (i) salaries, (ii) income from house property, 
+(iii) profits and gains of business or profession, and (iv) 
+capital gains.
+4.5.1.2 There is no specific deduction available for 
+foreign income of the resident falling under this head.
+
+27
+Double taxation relief
+5.1	
+The foreign income of the residents i.e. the 
+income accruing or arising outside India generally 
+becomes liable to tax in India as well as in the country 
+in which the income accrues or arises or is received. The 
+double taxation of such income is avoided by means of 
+double taxation avoidance agreements entered into by 
+the Government of India with the Governments of other 
+countries. Where the income accrues or arises in a 
+country with which no agreement exists, unilateral tax 
+relief is provided to the doubly taxed income under the 
+provisions of section 91 of the Income-tax Act.
+Double taxation avoidance agreements
+5.2	
+The Government of India has entered into 
+comprehensive agreements for avoidance of double 
+taxation with 93 countries. The list of such countries 
+and certain details of the agreements including the 
+assessment year from which they take effect, are available 
+at the official website of the department incometaxindia.
+gov.in. Besides, the Government of India has also entered 
+into agreements which cover limited areas of activity like 
+aircraft and shipping business.   For sake of convenience, 
+the list of countries with which India has comprehensive 
+agreements and limited agreements are provided below 
+as Annexure ‘A’ & Annexure ‘B’ respectively.
+5.3.1 There are two methods of granting relief under the 
+double taxation avoidance agreements :
+
+28
+(i)	
+Method of exemption :
+	
+Under this, the income which according to the 
+source rule arises in one country is not taxed in the 
+other country, though it can be taken into account 
+for purpose of determining the rates of tax.
+(ii)	
+Method of tax credit :
+	
+Under this, the income is taxed in both the countries 
+in accordance with their respective tax laws read with 
+the bilateral double taxation avoidance agreements. 
+However, the country of residence of the taxpayer 
+allows him credit for the tax charged there on in 
+the country of source against the tax charged on 
+such income in the country of residence. Credit is 
+also to be given for the tax that would have been 
+paid but for certain tax incentives, if the bilateral 
+tax agreements so provide.
+5.3.2 	Essentially, the difference between the exemption 
+method and the credit method is that the former looks at 
+income and the latter looks at tax on income.
+5.3.3. To see whether exemption income is to be allowed 
+or credit system, one must look at the particular DTAA 
+involved. If the DTAA says that a particular income 
+shall be taxed only in source/resident country, it means 
+that the income cannot be taxed by the other country. 
+However, if the DTAA says that the income may be 
+taxed in source country, it means that both source 
+and resident country have the right to tax that income. 
+
+29
+However, resident country would then relieve double 
+taxation in accordance with the provision in the DTAA 
+concerning this. In most of our treaty India has provided 
+that it would eliminate double taxation in such situation 
+by following credit method. That means it would allow 
+credit of tax paid in source country by the Indian resident 
+while taxing that income in India..
+5.4	
+So far as taxation of business profits is concerned, 
+these agreements generally provide that the profits would 
+the taxed only in the country of residence of the taxpayer 
+unless the taxpayer has a permanent establishment in 
+the country in which the profits arise. The expression 
+‘permanent establishment’ normally means a fixed 
+place of business and includes certain activities which 
+are specified in the tax agreements. Where there is 
+a permanent establishment, the business profits of 
+the taxpayer arising in the country of source may be 
+taxed there. The incomes such as royalties, fees for 
+technical services, dividends and interest are generally 
+taxed in both the countries and for taxing them in the 
+source country there is no requirement of permanent 
+establishment. But in the country in which the income 
+arises according to the source rule, these incomes are to 
+be taxed at a fixed rate on gross basis. The rates of tax on 
+such incomes specified in India’s bilateral tax agreements 
+are given at Annexure ‘C’. Capital gains are generally 
+taxed according to the respective laws of the countries. 
+However, in certain tax agreements, it has been provided 
+that the capital gains accruing to the taxpayer in the 
+country of source from alienation of certain properties 
+will be taxed only in the country of residence.
+
+30
+Unilateral relief from double taxation
+5.5.1	 Section 91 of the Income-tax Act contains 
+provisions for the grant of unilateral relief in the case 
+of resident taxpayers on incomes which have suffered 
+tax both in India and in the country with which there is 
+no agreement for the avoidance of double taxation. The 
+relief is worked out as follows:
+(i) 	
+The amount of doubly taxed income is first 
+ascertained. This consists of such income as has 
+accrued or arisen to the taxpayer in a foreign 
+country and has been subjected to income-tax in 
+that country as well as in India. It does not include 
+income which is deemed to have accrued or arisen 
+to the taxpayer in India even though it has been 
+charged to income-tax in a foreign country.
+(ii) 	
+On the amount of the doubly taxed income so 
+ascertained, the income-tax is calculated at:
+(a)	
+the Indian rate of tax; and
+(b)	
+the rate of tax of the foreign country.
+(iii) 	
+Relief is granted by allowing to the taxpayer a 
+deduction from the tax chargeable on his total 
+income of an amount equal to the tax calculated 
+at the Indian rate of tax or the amount of tax 
+calculated at the rate of tax of the other country 
+on the doubly taxed income, whichever is lower. 
+Such tax relief is deducted from the total amount 
+of tax payable by the assessee and the balance 
+alone is to be recovered from him. If the assessee 
+
+31
+has already paid the tax, he becomes entitled to a 
+corresponding refund.
+5.5.2 	The Indian rate of tax means the rate determined 
+by dividing the amount of Indian income-tax after 
+deduction of any relief due under the provisions of 
+the Income-tax Act but before deduction of any relief 
+due under sections 90 and 91, by the total income. 
+For example, if deduction under section 8ORRA of the 
+Income-tax Act has been allowed in computing the 
+total income, the assessee will be entitled to the double 
+taxation relief, under section 91, only on the amount 
+of the tax paid on 25% of the remuneration received in 
+foreign currency from an employer.
+5.5.3 The rate of tax of the foreign country means 
+income-tax and super tax actually paid in that country 
+in accordance with the corresponding laws in force there 
+after deduction of all relief due, but before deduction of 
+any relief due in the said country in respect of double 
+taxation, divided by the whole amount of the income as 
+assessed in that country.
+5.6 	
+The doubly taxed income means the foreign 
+income which is again subjected to tax by its inclusion 
+in the computation of income under the Income-tax Act. 
+Its scope is not to be restricted to income under the 
+same head. For example, an assessee has an income of 
+Rs. 2,00,000 from money-lending business in Malaysia 
+and in India, he has a business loss of Rs. 60,000 and 
+income from other sources of Rs. 40,000. The double 
+taxation relief will be available on the total income of Rs. 
+1,80,000 (Rs. 2,40,000 minus Rs. 60,000). The relief will 
+
+32
+not be restricted to Rs. 1,40,000 (Rs. 2,00,000 minus 
+Rs. 60,000), i.e. the income under the head ‘Profits and 
+gains of business or profession’.
+5.7 	
+Payment of income-tax by the assessee in the 
+foreign country in respect of foreign income is a pre-
+requisite for the grant of unilateral relief from double 
+taxation. Since the firm and its partners are separate 
+taxable entities under the Income-tax Act, a partner is 
+not entitled to relief in respect of his proportionate share 
+of the income-tax paid by the firm in a foreign country on 
+the income arising to it in such country.
+Bar on recovery
+5.8	
+In the case of income arising in a foreign country 
+the laws of which prohibit or restrict the remittance of 
+money to India, proceedings cannot be taken against 
+the assessee for recovery of the tax assessed and due in 
+respect of such foreign income until the prohibition or 
+restriction is removed.
+Rate of exchange for conversion into rupees of 
+income expressed in foreign currency
+6.1	
+Rule 115 of the Income-tax Rules prescribes 
+the rate of exchange for the conversion of the value in 
+rupees, of any income accruing or arising to or received 
+or deemed to be received by an assessee or on his behalf 
+in any foreign currency. The rate of exchange is to be the 
+telegraphic transfer buying rate of the foreign currency, 
+as on a specified date, which is adopted by the State 
+Bank of India. Item (2) to the Explanation to the rule 
+
+33
+115 defines the expression ‘specified date’ for different 
+types of income in respect of which the conversion, in 
+rupees, is required to be made. Rule 115, however, does 
+not apply in respect of the income chargeable under the 
+head ‘Income from house property’, ‘Profits and gains of 
+business or profession’ and `Income from other sources’ 
+(not being dividends and interest on securities), where 
+such income is received in, or brought into, India by an 
+assessee or on his behalf before the specified date in 
+accordance with the provisions of the Foreign Exchange 
+Regulation Act, 1973.
+6.2 	
+The specified date for different sources of income 
+has been prescribed in rule 115 as under:
+(i)	
+Salaries: In respect of income chargeable under 
+the head ‘salaries’, it is the last day of the month 
+immediately proceedings the month in which the 
+salary is due or is paid in advance or in arrears. 
+For example, if the salary of US $ 10,000 for 
+February, 2006 due on 28th February, is paid on 
+7th March, 2006, together with arrears of salary 
+for the months of October, 2005 to January, 
+2006, of US $ 2,000, the conversion rate for $ 
+10,000 would be the TT buying rate of U.S. dollars 
+on 31st January, 2006 while for the arrears of 
+U.S. $ 2,000, it would be that of 28th February, 
+2006, except if the arrears of salary have already 
+suffered tax on ‘due’ basis.
+(ii)	
+In respect of income by way of ‘interest on 
+securities’, it is the last day of the month 
+immediately preceding the month in which the 
+
+34
+income is due. For example, if the due date for 
+payment of interest on debentures, etc., is 7th 
+May, 2006, the TT buying rate for conversion into 
+Indian rupees would be of 30th April, 2006.
+(iii)	
+‘Income from house property’, ‘Profits and gains 
+of business or profession’ and ‘Income from other 
+sources’ (not being dividends and interest on 
+securities): In respect of income chargeable under 
+these heads of income, it is the last day of the 
+previous year of the assessee. This is subject to 
+the exception mentioned in paragraph 6.1.
+(iv)	
+In respect of income by way of dividends, it is 
+the last day of the month immediately preceding 
+the month in which the dividend is declared, 
+distributed or paid by the company.
+(v)	
+Capital gains: In respect of income chargeable 
+under the head ‘Capital gains’, it is the last day 
+of the month immediately preceding the month 
+in which the capital asset is transferred. For 
+example, if the asset is transferred on 31st July, 
+2006, the TT buying rate would be of the last day 
+of the preceding month i.e. 30th June, 2006.
+6.3 	
+Rule 115 is applicable even if the foreign 
+country where the income accrues or arises, has placed 
+restrictions on the remittance of funds. This is because 
+the accrual of income is the relevant factor for the 
+applicability of the rule and not its remittance into India.
+
+35
+Annexure-A
+COMPREHENSIVE AGREEMENTS - WITH RESPECT 
+TO TAXES ON INCOME
+List of Countries having Double Taxation Trea-
+ty with India
+The following are the list of countries having Double 
+Taxation Treaty with India:
+1.	
+Argentina
+2.	
+Albania
+3.	
+Armenia
+4.	
+Australia
+5.	
+Austria
+6.	
+Bangladesh
+7.	
+Belarus
+8.	
+Belgium
+9.	
+Bhutan
+10.	
+Botswana
+11.	
+Brazil
+12.	
+Bulgaria
+13.	
+Canada
+14.	
+China
+15.	
+Colombia
+
+36
+16.	
+Croatia
+17.	
+Cyprus
+18.	
+Czech Republic
+19.	
+Denmark
+20.	
+Estonia
+21.	
+Ethiopia
+22.	
+Finland
+23.	
+Fiji
+24.	
+France
+25.	
+Georgia
+26.	
+Germany
+27.	
+Greece
+28.	
+Hashemite kingdom of Jordan
+29.	
+Hungary
+30.	
+Iceland
+31.	
+Indonesia
+32.	
+Ireland
+33.	
+Israel
+34.	
+Italy
+35.	
+Japan
+36.	
+Kazakastan
+37.	
+Kenya
+38.	
+Korea
+39.	
+Kuwait
+40.	
+Kyrgyz Republic
+41.	
+Latvia
+
+37
+42.	
+Libya
+43.	
+Lithuania
+44.	
+Luxembourg
+45.	
+Macedonia
+46.	
+Malaysia
+47.	
+Malta
+48.	
+Mauritius
+49.	
+Mongolia
+50.	
+Montenegro
+51.	
+Morocco
+52.	
+Mozambique
+53.	
+Myanmar
+54.	
+Namibia
+55.	
+Nepal
+56.	
+Netherlands
+57.	
+New Zealand
+58.	
+Norway
+59.	
+Oman
+60.	
+Philippines
+61.	
+Poland
+62.	
+Portuguese Republic
+63.	
+Qatar
+64.	
+Romania
+65.	
+Russia
+66.	
+Saudi Arabia
+67.	
+Serbia
+
+38
+68.	
+Singapore
+69.	
+Slovenia
+70.	
+Slovak Republic
+71.	
+South Africa
+72.	
+Spain
+73.	
+Sri Lanka
+74.	
+Sudan
+75.	
+Sweden
+76.	
+Swiss Confederation
+77.	
+Syrian Arab Republic
+78.	
+Tajikistan
+79.	
+Tanzania
+80.	
+Thailand
+81.	
+Trinidad and Tobago
+82.	
+Turkey
+83.	
+Turkemistan
+84.	
+UAE
+85.	
+UAR (Egypt)
+86.	
+UGANDA
+87.	
+United Kingdom
+88.	
+Ukraine
+89.	
+United Mexican States
+90.	
+United States of America
+91.	
+Uzbekistan
+92.	
+Vietnam
+93.	
+Zambia
+
+39
+Annexure-B
+LIMITED AGREEMENTS – WITH RESPECT TO 
+INCOME OF AIRLINES/MERCHANT SHIPPING
+1.	 Afghanistan
+2.	 Bulgaria
+3.	 Czechoslovakia
+4.	 Ethiopia
+5.	 Iran
+6.	 Kuwait
+7.	 Lebanon
+8.	 Oman
+9.	 Pakistan
+10.	Russian Federation
+11.	Suadi Arabia
+12.	Switzerland
+13.	UAE
+14.	Yemen Arab Republic
+15.	People’s Democratic Republic of Yemen
+
+40
+Annexure-C
+WITHHOLDING TAX RATES
+[Tax rates applicable in India under DTA Agreement]
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Albania
+Both
+10%
+Both
+10%
+Both
+10%
+Both
+10%
+Armenia
+Both
+10%
+Both
+10%
+Both
+10%
+Both
+10%
+Australia
+Both
+15%
+Both
+15%
+Both
+[Note 2]
+Both
+[Note 2]
+Austria
+Both
+10%
+Both
+10%
+Both
+10%
+Both
+10%
+Bangladesh
+Both
+(a)10%(if at 
+least 10% of 
+the capital of 
+the company 
+paying the 
+dividend is 
+held by the 
+recipient)
+(b) 15% in 
+all other 
+cases
+Both
+10%
+(Note 1)
+Both
+10%
+No 
+separate 
+provision
+No 
+separate 
+provision
+
+41
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Belarus
+Both
+10% if 
+paid to a 
+company 
+holding 
+25% shares; 
+otherwise 
+15%
+Both
+10%
+(Note 1)
+Both
+15%
+Both
+15%
+Belgium
+Both
+15%
+Both
+15% (10% 
+if loan is 
+granted by 
+a bank)
+Both
+10%
+Both
+10%
+Botswana
+(a) 7.5%, if 
+shareholder 
+is a 
+company 
+and holds 
+atleast 25% 
+shares in 
+the investee 
+company
+(b) 10% in 
+all other 
+cases
+10% (Note 
+1)
+10%
+10%
+
+42
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Brazil
+Both
+15%
+Both
+15% (Note 
+1)
+Both
+25% for use of 
+trademark; 15% 
+for others
+Both
+No 
+separate 
+provision
+Bulgaria
+Both
+15%
+Both
+15% (Note 
+1)
+Both
+15% of royalty 
+relating to 
+literary, artistic, 
+scientific works 
+other than 
+films or tapes 
+used for radio 
+or television 
+broadcasting 
+20% in other 
+cases.
+Both
+20%
+
+43
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Canada
+Both
+(a) 15%, if 
+atleast 10% 
+of the voting 
+powers 
+in the 
+company, 
+paying the 
+dividends, is 
+controlled by 
+the recipient 
+company
+(b)25% in 
+other cases
+Both
+15% (Note 
+1)
+Both
+10%-20%
+Both
+10%-15%
+China
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+
+44
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Cyprus
+Both
+(a) 10%, 
+if atleast 
+10% of the 
+capital of the 
+company, 
+paying the 
+dividend, is 
+held by the 
+recipient 
+company
+(b)15% in 
+other cases
+Both
+10% (Note 
+1)
+Both
+15%
+Both
+15%/ 
+10%
+Czech Re-
+public
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+
+45
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Denmark
+Both
+(a) 15%, 
+if atleast 
+25% of the 
+shares of the 
+company, 
+paying the 
+dividend is 
+held by the 
+recipient 
+company
+(b)25% in 
+other cases
+Both
+10% if 
+loan is 
+granted 
+by bank, 
+otherwise 
+15%
+Both
+20%
+Both
+20%
+Estonia
+Both
+10%
+Both
+10% 
+(Note 1)
+Both
+10%
+Both
+10%
+Ethiopia
+Both
+7.5%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Finland
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Fiji
+Both
+5%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+France
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+
+46
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Greece
+Source
+20%
+Source
+20%
+Source
+30%
+No 
+separate 
+provision
+Georgia
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Germany
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Hungary
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Indonesia
+Both
+(a) 10%, 
+if atleast 
+25% of the 
+shares of the 
+company, 
+paying the 
+dividend is 
+held by the 
+recipient 
+company
+(b)15% in 
+other cases
+Both
+10% (Note 
+1)
+Both
+15%
+No separate 
+provision
+Iceland
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+
+47
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Ireland
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Israel
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Italy
+Both
+15%, if 
+atleast 
+10% of the 
+shares of 
+the company 
+paying the 
+dividend is 
+beneficially 
+owned by 
+the recipient 
+company;
+25% in other 
+cases
+Both
+15% (Note 
+1)
+Both
+20%
+Both
+20%
+Japan
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Jordan
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+20%
+Both
+20%
+Kazakhstan
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+
+48
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Kenya
+Both
+15%
+Both
+15% (Note 
+1)
+Both
+20%
+Both
+17.5%
+Korea
+Both
+(a) 15%, 
+if atleast 
+25% of the 
+capital of 
+the company 
+paying the 
+dividend is 
+held by the 
+recipient 
+company
+(b)20% in 
+other cases
+Both
+(a) 10%, 
+if interest 
+is paid to 
+a bank; 
+(b) 15% 
+for others 
+[Note1]
+Both
+15%
+Both
+15%
+Kuwait
+Both
+10%
+(Note 1)
+Both
+10%
+Both
+10%
+Both
+10%
+Kyrgyz Re-
+public
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+15%
+Both
+15%
+Libyan Arab 
+Jamahiriya
+Source
+20%
+Source
+20%
+Source
+30%
+No 
+separate 
+provision
+Latvia
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+
+49
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Lithuania
+Both
+5%, 15%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Luxembourg
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Malaysia
+Both
+5%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Malta
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Mongolia
+Both
+15%
+Both
+15% (Note 
+1)
+Both
+15%
+Both
+15%
+Mauritius
+Both
+(a) 5%, 
+if atleast 
+10% of the 
+capital of 
+the company 
+paying the 
+dividend is 
+held by the 
+recipient 
+company
+(b)15% in 
+other cases
+Both
+No rates 
+specified
+Both
+15%
+No separate 
+provision
+
+50
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Montenegro
+Both
+5% (in some 
+cases 15%)
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Myanmar
+Both
+5%
+Both
+10% (Note 
+1)
+Both
+10%
+No separate 
+provision
+Morocco
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Mozambique
+Both
+7.5%
+Both
+10% (Note 
+1)
+Both
+10%
+No separate 
+provision
+Namibia
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Nepal
+Both
+5%., 10%
+Both
+10% (Note 
+1)
+Both
+15%
+Netherlands
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+New Zealand
+Both
+15%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Norway
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+
+51
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Oman
+Both
+(a) 10%, 
+if atleast 
+10% of the 
+Shares of 
+the company 
+paying the 
+dividend is 
+held by the 
+recipient 
+company
+(b)12.5% in 
+other cases
+Both
+10% (Note 
+1)
+Both
+15%
+Both
+15%
+Philippines
+Both
+(a) 15%, 
+if atleast 
+10% of the 
+shares of 
+the company 
+paying the 
+dividend is 
+held by the 
+recipient 
+company
+(b)20% in 
+other cases
+Both
+(a) 10% , 
+if interest 
+is received 
+by a 
+financial 
+institution 
+or 
+insurance 
+company
+(b) 15% 
+in other 
+cases
+Both
+15% if it is 
+payable in 
+pursuance of 
+any collaboration 
+agreement 
+approved by the 
+Govt. of India
+--
+--
+
+52
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Poland
+Both
+15%
+Both
+15% (Note 
+1)
+Both
+22.5%
+Both
+22.5%
+Portuguese 
+Republic
+Both
+10%/15%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Qatar
+Both
+(a) 5%, 
+if atleast 
+10% of the 
+shares of 
+the company 
+paying the 
+dividend is 
+held by the 
+recipient 
+company
+(b)10% in 
+other cases
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Romania
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Russian 
+Federation
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Saudi Arabia
+Both
+5%
+Both
+10% (Note 
+1)
+Both
+10%
+No separate 
+provision
+
+53
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Serbia
+Both
+(a) 5%, if  
+recipient is 
+company 
+and holds 
+25% shares
+(b)15% in 
+other cases
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Singapore
+Both
+(a) 10%, 
+if atleast 
+25% of the 
+shares of 
+the company 
+paying the 
+dividend is 
+held by the 
+recipient 
+company
+(b)15% in 
+other cases
+Both
+(a)10%, 
+if loan is 
+granted 
+by a bank 
+or similar 
+institute 
+including 
+an 
+insurance 
+company
+(b) 15% in 
+all other 
+cases
+Both
+10%
+Both
+10%
+
+54
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Slovenia
+Both
+(a) 5%, 
+if atleast 
+10% of the 
+shares of 
+the company 
+paying the 
+dividend is 
+held by the 
+recipient 
+company
+(b)15% in 
+other cases
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+South Africa
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Spain 
+Both
+15%
+Both
+15% (Note 
+1)
+Both
+10%/20% [Note 
+3]
+Both
+20% 
+[Note 3]
+Sri lanka
+Both
+7.5%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Sudan
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Sweden
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+
+55
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Swiss Con-
+federation
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Syrian Arab 
+Republic
+Both
+(a) 5%, 
+if atleast 
+10% of the 
+shares of 
+the company 
+paying the 
+dividend is 
+held by the 
+recipient 
+company
+(b)10% in 
+other cases
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+No 
+separate 
+provision
+
+56
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Tajikistan
+Both
+(a) 5%, 
+if atleast 
+25% of the 
+shares of 
+the company 
+paying the 
+dividend is 
+held by the 
+recipient 
+company
+(b)10% in 
+other cases
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+No 
+separate 
+provision
+Tanzania
+Both
+5% ,10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+No 
+separate 
+provision
+
+57
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Thailand
+Both
+(a) 15%, if 
+dividend is 
+paid by an 
+industrial 
+company 
+and atleast 
+10% of 
+the capital 
+of such 
+company  is 
+held by the 
+recipient 
+company
+(b)20% in 
+other cases
+Both
+(a)10% if it 
+is received 
+by  a 
+financial 
+institution 
+or 
+insurance 
+company
+(b)25% for 
+others
+Both
+15%
+Both
+No 
+separate 
+provision
+Trinidad and 
+Tobago
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Turkey
+Both
+15%
+Both
+(a)10% 
+if loan is 
+granted 
+by a bank 
+etc.
+(b)15% 
+in other 
+cases
+Both
+15%
+Both
+15%
+
+58
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Turkmeni-
+stan
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Uganda
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Ukraine
+Both
+(a) 10%, 
+if atleast 
+25% of the 
+shares of 
+the company 
+paying the 
+dividend is 
+held by the 
+recipient 
+company
+(b)15% in 
+other cases
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+
+59
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+United Arab 
+Emirates
+Both
+10%
+Both
+(a)5% if 
+loan is 
+granted by 
+a bank/
+similar 
+financial 
+institution 
+including 
+insurance 
+company
+(b) 12.5% 
+in other 
+cases
+Both
+10%
+No separate 
+provision
+United Arab 
+Republic
+Source
+20%
+Source
+20%
+Source
+30%
+No separate 
+provision
+United Mexi-
+can States
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+United King-
+dom
+Both
+15%/10%
+[Note 4]
+Both
+(a)10% if 
+interest is 
+paid to a 
+bank.
+(b)15% 
+in other 
+cases
+Both
+10%/15%
+[Note 2]
+Both
+10%/ 
+15%
+
+60
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+United 
+States
+Both
+(a) 15%, if 
+atleast 10% 
+of the voting 
+stock of the 
+company 
+paying the 
+dividend is 
+held by the 
+recipient 
+company
+(b)25% in 
+other cases
+Both
+(a)10% 
+if loan is 
+granted by 
+a bank/
+similar 
+institute 
+including 
+insurance 
+company.
+(b)15% 
+in other 
+cases
+Source
+10%/15%
+[Note2]
+Source
+10%/ 
+15%
+Uruguay
+Both
+5%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Uzbekistan
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+Vietnam
+Both
+10%
+Both
+10% (Note 
+1)
+Both
+10%
+Both
+10%
+
+61
+Country
+Dividend [not being 
+covered by Section 115-O]
+Interest
+Royalty
+Fee for technical 
+services
+Right 
+of 
+State 
+to tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Right of 
+State to 
+tax
+Tax rate
+Zambia
+Both
+(a) 5%, 
+if atleast 
+25% of the 
+shares of 
+the company 
+paying the 
+dividend is 
+held by the 
+recipient 
+company 
+for a period 
+of atleast 
+6 months 
+prior to 
+the date of 
+payment of 
+the dividend.
+(b)15% in 
+other cases
+Both
+10% (Note 
+1)
+Both
+10%
+No separate 
+provision
+Note:
+1.	
+Dividend/interest earned by the Government and certain specified institutions, 
+inter alia, Reserve Bank of India is exempt from taxation in the country of 
+source.
+
+62
+2.	
+Royalties and fees for technical services would 
+be taxable in the country of source at the rates 
+prescribed for different categories of royalties 
+and fees for technical services.  These rates shall 
+be subject to various conditions and nature of 
+services/royalty for which payment is made. 
+For detailed conditions refer to relevant Double 
+Taxation Avoidance Agreements.
+3.	
+Royalties and fees for technical services would be 
+taxable in the country of source at the following 
+rates:
+(a)	
+10% in case of royalties relating to the 
+payments for the use of, of or the right to 
+use, industrial, commercial or scientific 
+equipment;
+(b)	
+20% in case of fees for technical services 
+and other royalties.
+4.	
+(a) 15% of the gross amount of the dividends 
+where those dividends are paid out of income 
+(including gains) derived directly or indirectly from 
+immovable property within the meaning of Article 
+6 by an investment vehicle which distributes 
+most of this income annually and whose income 
+from such immovable property is exempted from 
+tax;
+	
+(b) 10% of the gross amount of the dividends, in 
+all other cases.

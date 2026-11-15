@@ -1,0 +1,438 @@
+Section 65
+Taxable income under this Part is net profit which is calculated by deducting income from business or income arising from business carried on in an accounting period with expenses in accordance with conditions prescribed in Sections 65 Bis and 65 Ter. An accounting period shall be twelve months except in the following cases where it may be less than twelve months:
+1. a newly incorporated company or juristic partnership may elect to use the period from its incorporation date to any one date as the first accounting period.
+2. a company or juristic partnership may file a request to the Director-General to change the last day of an accounting period. In such a case, the Director-General shall have the power to grant approval as he deems appropriate. Such an order shall be notified to the company or juristic partnership who files the request within a reasonable period of time and in the case where the Director-General grants the permission, the company or juristic partnership shall comply to the accounting period as prescribed by the Director-General.
+The calculation of income and expenses in paragraph 1 shall use an accrual basis. Income arising in an accounting period, even though it is not yet received in such accounting period, shall be included as income for that accounting period. All expenses relating to such income, even though they are not yet paid, shall be included as expenses for such accounting period.
+In a necessary case, a taxpayer may file a request to the Director-General to change the accrual basis and accounting method for the calculation of income and expenses under paragraph 2. And when approved by the Director-General, he shall comply to the accounting period as prescribed by the Director-General.
+1
+1
+N.RD. Re: Computation of Net Profits and Net Loss of Companies or Juristic Partnerships that are Granted Investment Promotion.
+R.CT.No.8/2528 No.16/2530 No.35/2540
+Section 65 Bis
+The calculation of net profit and net loss under this Part shall follow the following conditions:
+(1) Items specified in Section 65 Ter shall not be deductible as expense.
+(2) Depreciation and depletion of assets shall be deductible under the rules, procedures, conditions and rates specified by a Royal Decree.
+2
+2
+R.D.No.145
+N.DG.IT.No.51
+The depreciation and depletion of assets shall be deductible in proportion to the period from the acquisition of such assets.
+(3) Value of assets other than (6) shall use the normal purchase price of such asset and in the case of appreciation in the value of the asset, such appreciation shall not be included in the calculation of net profit or net loss. If any item of assets is entitled to depreciation or depletion, depreciation and depletion shall be deductible in the calculation of net profit or net loss in accordance with the rules, procedures, conditions and previous rates applicable before the appreciation in the value of assets by deducting and only the remaining period and remaining cost of capital of the assets shall be deducted.
+(4) In the case of transfer of assets, provision of service or lending of money without remuneration, fee or interest; or with remuneration, fee or interest that is lower than the market price without reasonable cause, an assessment official shall have the power to assess such remuneration, fee or interest in accordance with the market price on the date of transfer, provision or lending.
+(5) Money, asset or liability having value or price in foreign currency on the last day of an accounting period, shall be converted into value or price in Thai currency as follows:
+(a) in the case of a company or juristic partnership other than (b), the value or price of money or assets shall be converted to Thai currency using the average buying rate of commercial banks that is calculated by the Bank of Thailand. The value or price of liability shall be converted to Thai currency using the average selling rate of commercial banks that is calculated by the Bank of Thailand.
+(b) In case of a commercial bank, or other financial institution as prescribed by the Minister, the value or price of money, assets or liability shall be converted to Thai currency using the average buying and selling rates of commercial banks that are calculated by the Bank of Thailand.
+Money, assets or liability having value or price in foreign currency that is received or paid during an accounting period shall be converted into value or price in Thai currency using the market price on the day of such receipt or payment.
+(6) Value of stock on the last day of an accounting period shall be calculated in accordance with the cost or market price, whichever is lower, and such value shall be deemed to be the value of stock carried forward into the new accounting period.
+Once the calculation of cost in Paragraph 1 is calculated in accordance with an accounting rule, such rule shall continue to be used in the future unless the Director General grants approval to change the rule.
+(7) In calculating the cost of goods imported from abroad, the assessment official shall have the power to assess by comparing with the cost of the same type and kind of goods imported into other countries.
+(8) If the cost of goods is in foreign currency, it shall be converted into Thai currency using the market exchange rate on the day of the acquisition of the goods unless such foreign currency is convertible under official rate, then it shall be converted into Thai currency using that official rate.
+(9) Writing off bad debts from debtors account shall be done only if it follows rules, procedures and conditions prescribed by a Ministerial Regulation, however, if debt payment is received in any accounting period, it shall be included as income for that accounting period.
+3
+3
+M.R.No.186
+If any bad debt that is included as income is paid afterwards, it shall no longer be included as income again.
+(10) For a limited company incorporated under Thai laws, dividends received from a company incorporated under Thai laws, mutual fund or financial institution incorporated under the specific Thai laws for the purpose of lending to promote agriculture, commerce or industry and share of profits derived from a joint venture shall be included as income, but only half of the amount received. However, the following limited companies incorporated under Thai laws shall not include as income the dividends received from a company incorporated under Thai laws, mutual fund or financial institution incorporated under the specific Thai laws for the purpose of lending to promote agriculture, commerce or industry and share of profits from a joint venture as income;
+4
+4
+R.D.No.263
+(a) listed company
+(b) limited company other than (a) which hold shares in a limited company paying dividends at least 25 % of voting shares and the limited company paying the dividends does not hold shares in the limited company receiving the dividends, whether directly or indirectly.
+Paragraph 1 shall not apply in a case where a limited company or a listed company deriving income which is the said dividend or share of profits by holding shares or investment units which incur the dividends or share of profits less than 3 months as from the date of acquisition of the shares or the investment units to the date in which such income arises, or by transferring shares or investment units 3 months from the date in which such income arises.
+Dividends from the investment of provident funds under Section 65 Ter (2) shall not be deemed to be dividends or share of profits under Paragraph 2.
+5
+5
+R.D.No.10 Section 5 Bis
+(11) Interest on loan which is subject to withholding tax under the law governing Petroleum Income Tax shall be included in the calculation of income, but only the amount remaining after the tax is withheld under the above law.
+(12) Dividends or share of profits which is subject to withholding tax under the law governing Petroleum Income Tax, shall be included in the calculation of income, but only the amount remaining after the tax is withheld under the above law, and if the recipient is a listed company or is a company incorporated under Thai laws and not falling under Section 75, the provisions in (10) shall apply mutatis mutandis.
+6
+6
+R.D.No.10 Section 5 Novem
+(13) A foundation or association which carries on business that produces revenue shall not include registration fees or maintenance fees from members, or cash or assets received as donations or gifts, whichever the case may be, in the calculation of his income.
+(14) An output tax received or receivable by a company or juristic partnership which is a VAT registrant, and the value added tax which is not a tax under Section 82/16 and refunded under Chapter 4 shall not be included as income.
+Section 65 Ter
+The following items shall not be allowed as expenses in the calculation of net profits:
+(1) Reserves except:
+(a) Insurance premium reserves for life insurance set aside before calculation of profit, but only the amount not exceeding 65% of the amount of insurance premiums received in an accounting period after deducting premiums for re-insurance.
+In a case where money is paid out on an amount insured on any life insurance policy whether in full or in part, only the paid amount which does not exceed the reserves under Paragraph 1 for such policy shall not be allowed as expense.
+In a case where any life insurance policy contract is terminated, the amount of remaining reserve under Paragraph 1 for such policy shall be calculated in the calculation of income in the accounting period in which the contract is terminated.
+(b) Insurance premium reserves for any other insurance set aside before the calculation of profit, but only the amount not exceeding 40% of the amount of insurance premiums received in an accounting period after deducting premiums for re-insurance and this amount of reserves set aside shall be income in the calculation of net profit for tax purposes in the following accounting period.
+(c) A reserve set aside for bad debts or suspected bad debts from liability arising from the provision of credit which a commercial bank, finance company, securities company or credit foncier company sets aside under the laws governing commercial banks or laws governing the finance business, securities business and credit foncier business, as the case may be; but only the amount set aside which increases from such type of reserve appearing in the balance sheet of the previous accounting period.
+For the increased reserve set aside under paragraph 1 and treated as expense for the purpose of calculating net profit or net loss in any accounting period, if afterwards, there is a reduction of such reserve, such reduced reserve which was already used as expense shall be included as income in the accounting period in which the reserve is reduced.
+(2) Fund except provident fund under the rules, procedures and conditions prescribed by a Ministerial regulations.
+7
+7
+M.R.No.183
+(3) Expense for personal, gift, or charitable purpose except expense for public charity, or for public benefit as the Director-General prescribes with the approval of the Minister, shall be deductible in an amount not exceeding 2% of net profit. Expense for education or sports as the Director-General prescribes with the approval of the Minister shall also be deductible in an amount not exceeding 2% of net profit.
+8
+8
+N.DG.ITNo.44
+(4) Entertainment or service fees that are not in accordance with the rules prescribed by a Ministerial Regulation.
+7
+9
+M.R.No.143
+(5) Capital expense or expense for the addition, change, expansion or improvement of an asset but not for repair in order to maintain its present condition.
+(6) Fine and/or surcharge, criminal fine, income tax of a company or juristic partnership.
+8
+10
+R.CT.No.10/2528
+(6 Bis) Value added tax paid or payable and input tax of a company or juristic partnership which is a VAT registrant except value added tax and input tax of a registrant paid under Section 82/16, input tax not deductible in the calculation of value added tax under Section 82/5(4) or other input tax as prescribed by a Royal Decree.
+11
+11
+R.D.No.243
+(7) The withdrawal of money without remuneration of a partner in a juristic partnership
+(8) The part of salary of a shareholder or partner which is paid in excess of appropriate amount.
+(9) Expense which is not actually incurred or expense which should have been paid in another accounting period except in the case where it cannot be entered in any accounting period, then it may be entered in the following accounting period.
+(10) Remuneration for assets which a company or juristic partnership owns and uses.
+(11) Interest paid to equity, reserves or funds of the company or juristic partnership itself.
+(12) Damages claimable from an insurance or other protection contracts or loss from previous accounting periods except net loss carried forward for five years up to the present accounting period.
+12
+12
+N.RD. Re: Computation of Net Profits and Net Loss of Companies or Juristic Partnerships that are Granted Investment Promotion.
+R.CT.No.35/2540
+(13) Expense which is not for the purpose of making profits or for the business.
+(14) Expense which is not for the purpose of business in Thailand.
+13
+13
+R.CT.No.13/2529
+(15) Cost of purchase of asset and expense related to the purchase or sale of asset, but only the amount in excess of normal cost and expense without reasonable cause.
+(16) Value of lost or depleted natural resources due to the carrying on of business.
+(17) Value of assets apart from devalued assets subject to Section 65 Bis
+(18) Expense which a payer cannot identify the recipient.
+(19) Any expense payable from profits received after the end of an accounting period.
+(20) Expense similar to those specified in (1) to (19) as will be prescribed by a Royal Decree.
+14
+14
+R.D.No.315
+Section 65 Quarter
+A government enterprise shall pay income tax on behalf of the seller of goods being a company or juristic partnership which purchases goods from a government enterprise under procedures, rates and type of goods prescribed by a Ministerial Regulations, but only on the income from the sale of such goods.
+15
+15
+M.R.No.158
+The tax paid on behalf the taxpayer under paragraph 1 shall be treated as credit of the taxpayer in tax calculation.
+Section 66
+A company or juristic partnership incorporated under Thai laws or incorporated under foreign laws and carrying on business in Thailand shall pay tax in accordance with the provisions in this Part.
+A company or juristic partnership incorporated under foreign laws and carrying on business in other places including Thailand shall pay tax on the net profits from the business or related to the business carried on in Thailand in an accounting period and the calculation shall follow Section 65 and Section 65 Bis. However, if the above net profits cannot be calculated, the provisions regarding the assessment of taxes under Section 71 (1) shall be applied mutatis mutandis.
+Section 67
+The payment of tax under this Part shall be in accordance with the rates specified in the table of Income Tax rates attached to this Part. Except in the case of a company or juristic partnership under paragraph 2 of Section 66 carrying on international transportation business , it shall pay tax on the transportation business under the following rules:
+(1) In case of carriage of passengers, it shall pay tax at the rate of 3% of fares, fees and other benefits chargeable in Thailand before deducting any expense from such carriage of passengers.
+(2) In case of carriage of goods, it shall pay tax at the rate of 3% of freight charges, fees and other benefits, whether chargeable in Thailand or not, before deducting any expense from such carriage of goods.
+Section 67 Bis
+For the purpose of collecting tax prior to the time limit under Section 68, a company or juristic partnership shall file a tax return in the form prescribed by the Director-General together with tax payment at the local Amphur office within 2 months from the last day of a six-month period from the first day of an accounting period as follows:
+(1) In the case of a company or juristic partnership other than described in (2), it shall estimate net profit or net loss from the business or relating to the business which is already carried on or is going to be carried on in an accounting period and shall calculate and pay tax in an amount of one half of the estimated profit in such accounting period.
+(2) In the case of a listed company, a commercial bank under the laws governing commercial banks, or a finance company, securities company or credit foncier company under the laws governing the finance business, securities business and credit foncier business, or a company or juristic partnership under the rules, procedures and conditions prescribed by the Director-General, it shall calculate and pay tax from net profit of a six-month period from the first day of an accounting period under conditions specified in Section 65 Bis and Section 65 Ter.
+16
+16
+N.DG.IT.No.43 No.107
+The tax paid on behalf the taxpayer under paragraph 1 shall be treated as credit of the taxpayer in tax calculation.
+Paragraph 1 shall not apply to a company or juristic partnership whose first or final accounting period is less than 12 months.
+17
+17
+N.DG.IT.No.16
+Section 67 Ter
+In the case where a company or juristic partnership does not file a tax return and pay tax under Section 67 Bis (1) or filed a return and paid tax under Section 67 Bis (1) by underestimating net profits exceeding twenty five per cent of the net profits deriving from the business or relating to the business carried on in an accounting period without reasonable cause, such company or juristic company shall pay surcharge of twenty per cent of the amount of tax payable under Section 67 Bis (1) or half of the amount of tax payable in that accounting period or of tax which should have been paid as the case may be.
+In the case where a company or juristic partnership does not file a tax return and pay tax under Section 67 Bis (2) or incorrectly filed a tax return and paid tax under Section 67 Bis (2) without reasonable cause resulting in an amount of the underpaid tax, such company or juristic company shall pay surcharge of twenty per cent of the amount of tax payable under Section 67 Bis (2) or of tax which should have been paid as the case may be.
+Surcharge under paragraphs 1 and 2 shall be deemed tax and may be reduced in accordance with regulations prescribed by the Director-General with the approval of the Minister.
+Section 68
+Within 150 days from the last day of an accounting period, a company or a juristic partnership shall file a tax return showing items necessary for tax calculation in an accounting period in the form prescribed by the Director-General together with tax payment at the Amphur office.
+18
+18
+N.DG.IT.No.16 No.96
+Section 68 Bis
+For the purpose of tax calculation, a company or juristic partnership should keep a balance sheet, an operating account and a profit and loss account in an accounting period in accordance with Section 65.
+A company or juristic partnership under Paragraph 2 of Section 66 which carries on international transportation business shall keep an account of gross income before deduction of expenses regarding passenger fees, freight fees, other taxable benefits instead of a balance sheet, an operating account and a profit and loss account in the accounting period specifically for such transportation business.
+Section 69
+Within 150 days from the last day of an accounting period, a company or juristic partnership shall file a tax return showing items necessary for tax calculation in accordance with Sections 65, 65 Bis, 66 and 67 regarding income, expenses, net profits and other information to an assessment official in the form prescribed by the Director-General together with a balance sheet, an operating account and a profit and loss account, income account, expenditure or gross income account which a person under Section 3 Septem examines and certifies for the above accounting period, as the case may be.
+19
+19
+N.DG.IT.No.16
+Section 69 Bis
+Subject to Section 70, if the Government, a government enterprise, Tessabarn, Sukapibarn or other local government agency is the payer of assessable income under Section 40 to any company or juristic partnership, it shall withhold income tax at the rate of 1 per cent. The tax withheld shall be treated as a credit in income tax calculation of the company or juristic partnership for the accounting period within which the tax was withheld. For this purpose, Sections 52, 53, 54, 58 and 59 shall apply mutatis mutandis.
+20
+20
+N.DG.IT.No.16 No.111
+R.CT.No.4/2526
+Section 69 Ter
+A person, partnership, company, association or a body of persons pays assessable income under Section 40(8) to a company or juristic partnership which sells immovable property shall withhold income tax at the rate of 1 per cent and remit it to an official responsible for registration of rights and juristic acts at the time of registration and provisions of Paragraphs 2 and 3 of Section 52 shall apply mutatis mutandis.
+Tax withheld and remitted under Paragraph 1 shall be treated as a credit in income tax calculation of the company or juristic partnership which tax was withheld for the accounting period in which the tax was withheld.
+Section 70
+A company or juristic partnership incorporated under foreign laws and not carrying on business in Thailand but receiving assessable income under Section 40 (2)(3)(4)(5) or (6) which is paid from or in Thailand, shall be liable to pay tax. The payer of income shall deduct corporate income tax from such assessable income at the corporate income tax rate and remit it to the local Amphur office together with the filing of a tax return in the form prescribed by the Director General within 7 days from the last day of the month in which such income is paid. Section 54 shall also apply mutatis mutandis.
+21
+21
+R.D.No.10 No.299
+N.DG.IT.No.16 No.95
+The provisions of Paragraph 1 shall not apply in the case where a company or juristic partnership incorporated under foreign laws receives assessable income being interest from the Government or a financial institution incorporated under the specific Thai laws for the purpose of lending to promote agriculture, commerce or industry.
+22
+22
+R.D.No.308
+N.DG.IT.No.16 No.95
+N.MF. Re: Extension of Timeframes for Remittance of Withholding Income Taxes, Remittance of Income Taxes, Remittance of Value Added Taxes and Filing of Returns.
+Section 70 Bis
+A company or juristic partnership disposing its profits or other type of money that is set aside from profits or is deemed to be profits from Thailand shall pay income tax by deducting from such disposed amount of money in accordance with the corporate income tax rate for the company and juristic partnership and shall remit it to the local Amphur office together with the filing of a tax return in the form prescribed by the Director-General within 7 days from the date of disposal.
+Disposal of profits under Paragraph 1 shall include
+(1) Disposal of profits or other type of money that is set aside from profits or is deemed to be profits from profit and loss account or other book of account in order to settle debt or to set off against liability or to enter as a credit in an account of any person abroad; or
+(2) in the case where there does not appear the fact in (1) there is a request to purchase and transfer foreign currency which is profit or other money that is set aside from profits or is deemed to be profits disposed abroad; or
+(3) any other action which results in (1) or (2).
+Section 70 Ter
+For any company or juristic partnership sending goods abroad to or under an order of a head office, branch, associated company or juristic partnership, principal, agent, employer or employee, such sending of goods shall be deemed to be also a sale in Thailand and the market price of goods on the sending date shall be deemed to be the income for the accounting period in which the goods are sent.
+The provisions in Paragraph 1 shall not apply if such goods
+(1) are samples or for research purpose
+(2) are transit goods
+(3) are goods imported into Thailand and re-exported to the sender within one year from the date that such goods is imported into Thailand
+(4) are goods exported out of Thailand and returned to the sender in Thailand within one year from the date in which such goods is exported out Thailand.
+23
+23
+N.RD. Re: Income Tax and Business Tax for Representative Offices of Juristic Persons Incorporated under the Laws of Foreign Country Which Conduct Business in Thailand.
+N.RD.Re: Income Tax and Value Added Tax for Regional Offices of Multinational Companies Which Conduct Business in Thailand.
+Section 71
+In the case where:
+(1) a company or juristic partnership does not file particulars necessary for tax calculation under the provisions of this Part or does not keep a book of account or does not follow requirements prescribed under Sections 17 and 68 Bis or does not bring books of account, documents or other evidence to an assessment official for interrogation under Section 19 or Section 23, the assessment official shall have the power to assess tax at the rate of 5 per cent of gross income before deduction of any expenses or gross sales before deduction of expenses of the accounting period, whichever is higher. If gross income before deduction of expenses or gross sales before deduction of expenses cannot be determined, the assessment official shall have the power to assess by comparing with the gross amount of the previous accounting period. If the amount of the previous accounting period cannot be determined, he shall assess as he deems appropriate.
+(2) If any company or juristic partnership does not record particulars or records incompletely or does not record accurately within an account as prescribed under Sections 17 and 68 Bis resulting in paying no tax or less tax, an assessment official shall have the power to assess missing tax at the rate specified in Section 67 and may order that person to pay surcharge of two times of the amount of missing tax.
+(3) If any company or juristic partnership does not comply with the Director-Generals order which is exercised under Section 17, an assessment official shall have the power to order that company or juristic partnership to comply with the Director-Generals order within thirty days from the date of receiving the order of such assessment official or he may order it to provide a person to comply with the Director-Generals order at the office of the assessment official within the above time period. If the company or juristic partnership does not comply or complies incompletely, the assessment official shall have the power to assess tax at the rate and procedures as mentioned in (1).
+The provisions of this Section does not prevent the rights of an assessment official to assess tax payment under the provisions of other Sections.
+The assessment under the provisions of this Section may be appealed.
+Section 72
+In the case where a company or juristic partnership dissolves, an account liquidator and a manager shall jointly notify an assessment official about the dissolvement of that company or juristic partnership within 15 days from the date that an official registers the dissolvement. If such person does not comply, the assessment official may order that company or juristic partnership to pay additional tax of one time of the amount of tax payable. This additional amount is deemed to be a tax.
+In a case where such company or juristic partnership is already dissolved, for the purpose of tax calculation, the date that the official registers the dissolvement is deemed to be the last day of the accounting period. An account liquidator and a manager shall have the duty and joint liability in filing a tax return and pay tax in the form and within the time limit prescribed under Sections 68 and 69 mutatis mutandis.
+If an account liquidator and a manager cannot file a tax return and pay tax within the time limit prescribed in paragraph 1 and files a request to the Director-General within thirty days from the date the official registers the dissolvement, the Director-General may order the extension of the time limit, if he deems appropriate. In a case where there is an account liquidation, the Director-General may also order the extension of the accounting period.
+In a case where a juristic partnership dissolves without an account liquidation, a manager of that juristic partnership shall have the same duty and liability as those of an account liquidator and jointly with a partner who has the management power in a partnership as provided in Paragraphs 1 to 3.
+Section 73
+In a case where a company or juristic partnership merges with another company or juristic partnership, for the purpose of tax calculation, each company or juristic partnership shall be deemed to be dissolved and the new merged company or juristic partnership shall have the duty and liability in filing a tax return and paying tax for each company or juristic partnership which is deemed dissolved. In this case, the provisions of Section 72 shall apply mutatis mutandis, and for a juristic company, a director of the new juristic company shall have the same duty and liability as those of an account liquidator as provided under Section 72.
+Section 74
+In a case where a company or juristic partnership dissolves or merges with another company or juristic partnership, the calculation of net profits for tax purpose shall be in accordance with procedures under Sections 65, 65 Bis and 66 except
+(1) an evaluation of assets
+(a) In the case of dissolvement of a company or juristic partnership, the evaluation shall be made by applying the market price on the date of dissolvement.
+(b) In the case where a company or juristic partnership merges together, the evaluation shall be made by applying the market price on the date of merger but such price shall not be deemed to be income or expense in the calculation of net profit or net loss of the former company or juristic partnership and the newly merged company or juristic partnership shall evaluate the value of assets on the basis if the price which appears in the account of the former company or juristic partnership on the date of merger for the purpose of calculation of net profits or net loss until such assets are alienated. Any assets entitled to depreciation and depletion, shall be depreciated for the purpose of calculating net profit or net loss under the rules, procedures, conditions and rates which the former company or juristic partnership applied only during the remaining life and value of that asset. The net loss of the former company or juristic partnership shall not be claimed as expense in the calculation of net profit or net loss.
+(c) In a case where there is a transfer of business between a company or juristic partnership whereby the transferor must register the dissolvement and an account liquidation is made in an accounting period in which the business transfer occurs, the evaluation shall be made by applying the market price on the date of registration for dissolvement and the provisions of (b) shall apply mutatis mutandis.
+(2) Reserve or profits carried forward from previous accounting periods, but only the part that has not paid tax, shall be included as income the last accounting period.
+(3) In a case where a company or juristic partnership carries on insurance business, it shall include reserves that are set aside in the previous accounting periods under Section 65 Ter (1) in the calculation of income, but only the part that has not been previously included as income.
+The provisions of this Section shall not apply to a company or juristic partnership under Paragraph 2 of Section 66 which carries on international transportation business through other countries.
+Section 75
+(Repealed by an Act Amending Revenue Code (No. 26) B.E. 2525)
+Section 76
+(Repealed by an Act Amending Revenue Code (N0. 26) B.E. 2525)
+Section 76 Bis
+For a company or juristic partnership incorporated under foreign laws which has an employee, an agent or a go-between for carrying on business in Thailand and as a result receives income or profits in Thailand, such company or juristic partnership shall be deemed to be carrying on business in Thailand and the person who acts as an employee, an agent or a go-between for the business, whether he is an individual or a juristic person, shall be deemed to be the representative of the company or juristic partnership incorporated under foreign laws and shall have the duty and liability to file a tax return and tax payment in accordance with the provisions of this Part, with respect to only the above mentioned income or profits.
+In the case mentioned in paragraph 1, if a person who has the duty and liability to file a tax return and tax payment cannot calculate net profits for tax purposes under the provisions of this Part, the provisions regarding tax assessment under Section 71 (1) shall apply mutatis mutandis.
+The assessment under this Section may be appealed.
+Section 76 Ter
+(Repealed by an Act Amending Revenue Code (No. 16) B.E. 2502)
+Section 65
+Taxable income under this Part is net profit which is calculated by deducting income from business or income arising from business carried on in an accounting period with expenses in accordance with conditions prescribed in Sections 65 Bis and 65 Ter. An accounting period shall be twelve months except in the following cases where it may be less than twelve months:
+1. a newly incorporated company or juristic partnership may elect to use the period from its incorporation date to any one date as the first accounting period.
+2. a company or juristic partnership may file a request to the Director-General to change the last day of an accounting period. In such a case, the Director-General shall have the power to grant approval as he deems appropriate. Such an order shall be notified to the company or juristic partnership who files the request within a reasonable period of time and in the case where the Director-General grants the permission, the company or juristic partnership shall comply to the accounting period as prescribed by the Director-General.
+The calculation of income and expenses in paragraph 1 shall use an accrual basis. Income arising in an accounting period, even though it is not yet received in such accounting period, shall be included as income for that accounting period. All expenses relating to such income, even though they are not yet paid, shall be included as expenses for such accounting period.
+In a necessary case, a taxpayer may file a request to the Director-General to change the accrual basis and accounting method for the calculation of income and expenses under paragraph 2. And when approved by the Director-General, he shall comply to the accounting period as prescribed by the Director-General.
+1
+1
+N.RD. Re: Computation of Net Profits and Net Loss of Companies or Juristic Partnerships that are Granted Investment Promotion.
+R.CT.No.8/2528 No.16/2530 No.35/2540
+Section 65 Bis
+The calculation of net profit and net loss under this Part shall follow the following conditions:
+(1) Items specified in Section 65 Ter shall not be deductible as expense.
+(2) Depreciation and depletion of assets shall be deductible under the rules, procedures, conditions and rates specified by a Royal Decree.
+2
+2
+R.D.No.145
+N.DG.IT.No.51
+The depreciation and depletion of assets shall be deductible in proportion to the period from the acquisition of such assets.
+(3) Value of assets other than (6) shall use the normal purchase price of such asset and in the case of appreciation in the value of the asset, such appreciation shall not be included in the calculation of net profit or net loss. If any item of assets is entitled to depreciation or depletion, depreciation and depletion shall be deductible in the calculation of net profit or net loss in accordance with the rules, procedures, conditions and previous rates applicable before the appreciation in the value of assets by deducting and only the remaining period and remaining cost of capital of the assets shall be deducted.
+(4) In the case of transfer of assets, provision of service or lending of money without remuneration, fee or interest; or with remuneration, fee or interest that is lower than the market price without reasonable cause, an assessment official shall have the power to assess such remuneration, fee or interest in accordance with the market price on the date of transfer, provision or lending.
+(5) Money, asset or liability having value or price in foreign currency on the last day of an accounting period, shall be converted into value or price in Thai currency as follows:
+(a) in the case of a company or juristic partnership other than (b), the value or price of money or assets shall be converted to Thai currency using the average buying rate of commercial banks that is calculated by the Bank of Thailand. The value or price of liability shall be converted to Thai currency using the average selling rate of commercial banks that is calculated by the Bank of Thailand.
+(b) In case of a commercial bank, or other financial institution as prescribed by the Minister, the value or price of money, assets or liability shall be converted to Thai currency using the average buying and selling rates of commercial banks that are calculated by the Bank of Thailand.
+Money, assets or liability having value or price in foreign currency that is received or paid during an accounting period shall be converted into value or price in Thai currency using the market price on the day of such receipt or payment.
+(6) Value of stock on the last day of an accounting period shall be calculated in accordance with the cost or market price, whichever is lower, and such value shall be deemed to be the value of stock carried forward into the new accounting period.
+Once the calculation of cost in Paragraph 1 is calculated in accordance with an accounting rule, such rule shall continue to be used in the future unless the Director General grants approval to change the rule.
+(7) In calculating the cost of goods imported from abroad, the assessment official shall have the power to assess by comparing with the cost of the same type and kind of goods imported into other countries.
+(8) If the cost of goods is in foreign currency, it shall be converted into Thai currency using the market exchange rate on the day of the acquisition of the goods unless such foreign currency is convertible under official rate, then it shall be converted into Thai currency using that official rate.
+(9) Writing off bad debts from debtors account shall be done only if it follows rules, procedures and conditions prescribed by a Ministerial Regulation, however, if debt payment is received in any accounting period, it shall be included as income for that accounting period.
+3
+3
+M.R.No.186
+If any bad debt that is included as income is paid afterwards, it shall no longer be included as income again.
+(10) For a limited company incorporated under Thai laws, dividends received from a company incorporated under Thai laws, mutual fund or financial institution incorporated under the specific Thai laws for the purpose of lending to promote agriculture, commerce or industry and share of profits derived from a joint venture shall be included as income, but only half of the amount received. However, the following limited companies incorporated under Thai laws shall not include as income the dividends received from a company incorporated under Thai laws, mutual fund or financial institution incorporated under the specific Thai laws for the purpose of lending to promote agriculture, commerce or industry and share of profits from a joint venture as income;
+4
+4
+R.D.No.263
+(a) listed company
+(b) limited company other than (a) which hold shares in a limited company paying dividends at least 25 % of voting shares and the limited company paying the dividends does not hold shares in the limited company receiving the dividends, whether directly or indirectly.
+Paragraph 1 shall not apply in a case where a limited company or a listed company deriving income which is the said dividend or share of profits by holding shares or investment units which incur the dividends or share of profits less than 3 months as from the date of acquisition of the shares or the investment units to the date in which such income arises, or by transferring shares or investment units 3 months from the date in which such income arises.
+Dividends from the investment of provident funds under Section 65 Ter (2) shall not be deemed to be dividends or share of profits under Paragraph 2.
+5
+5
+R.D.No.10 Section 5 Bis
+(11) Interest on loan which is subject to withholding tax under the law governing Petroleum Income Tax shall be included in the calculation of income, but only the amount remaining after the tax is withheld under the above law.
+(12) Dividends or share of profits which is subject to withholding tax under the law governing Petroleum Income Tax, shall be included in the calculation of income, but only the amount remaining after the tax is withheld under the above law, and if the recipient is a listed company or is a company incorporated under Thai laws and not falling under Section 75, the provisions in (10) shall apply mutatis mutandis.
+6
+6
+R.D.No.10 Section 5 Novem
+(13) A foundation or association which carries on business that produces revenue shall not include registration fees or maintenance fees from members, or cash or assets received as donations or gifts, whichever the case may be, in the calculation of his income.
+(14) An output tax received or receivable by a company or juristic partnership which is a VAT registrant, and the value added tax which is not a tax under Section 82/16 and refunded under Chapter 4 shall not be included as income.
+Section 65 Ter
+The following items shall not be allowed as expenses in the calculation of net profits:
+(1) Reserves except:
+(a) Insurance premium reserves for life insurance set aside before calculation of profit, but only the amount not exceeding 65% of the amount of insurance premiums received in an accounting period after deducting premiums for re-insurance.
+In a case where money is paid out on an amount insured on any life insurance policy whether in full or in part, only the paid amount which does not exceed the reserves under Paragraph 1 for such policy shall not be allowed as expense.
+In a case where any life insurance policy contract is terminated, the amount of remaining reserve under Paragraph 1 for such policy shall be calculated in the calculation of income in the accounting period in which the contract is terminated.
+(b) Insurance premium reserves for any other insurance set aside before the calculation of profit, but only the amount not exceeding 40% of the amount of insurance premiums received in an accounting period after deducting premiums for re-insurance and this amount of reserves set aside shall be income in the calculation of net profit for tax purposes in the following accounting period.
+(c) A reserve set aside for bad debts or suspected bad debts from liability arising from the provision of credit which a commercial bank, finance company, securities company or credit foncier company sets aside under the laws governing commercial banks or laws governing the finance business, securities business and credit foncier business, as the case may be; but only the amount set aside which increases from such type of reserve appearing in the balance sheet of the previous accounting period.
+For the increased reserve set aside under paragraph 1 and treated as expense for the purpose of calculating net profit or net loss in any accounting period, if afterwards, there is a reduction of such reserve, such reduced reserve which was already used as expense shall be included as income in the accounting period in which the reserve is reduced.
+(2) Fund except provident fund under the rules, procedures and conditions prescribed by a Ministerial regulations.
+7
+7
+M.R.No.183
+(3) Expense for personal, gift, or charitable purpose except expense for public charity, or for public benefit as the Director-General prescribes with the approval of the Minister, shall be deductible in an amount not exceeding 2% of net profit. Expense for education or sports as the Director-General prescribes with the approval of the Minister shall also be deductible in an amount not exceeding 2% of net profit.
+8
+8
+N.DG.ITNo.44
+(4) Entertainment or service fees that are not in accordance with the rules prescribed by a Ministerial Regulation.
+7
+9
+M.R.No.143
+(5) Capital expense or expense for the addition, change, expansion or improvement of an asset but not for repair in order to maintain its present condition.
+(6) Fine and/or surcharge, criminal fine, income tax of a company or juristic partnership.
+8
+10
+R.CT.No.10/2528
+(6 Bis) Value added tax paid or payable and input tax of a company or juristic partnership which is a VAT registrant except value added tax and input tax of a registrant paid under Section 82/16, input tax not deductible in the calculation of value added tax under Section 82/5(4) or other input tax as prescribed by a Royal Decree.
+11
+11
+R.D.No.243
+(7) The withdrawal of money without remuneration of a partner in a juristic partnership
+(8) The part of salary of a shareholder or partner which is paid in excess of appropriate amount.
+(9) Expense which is not actually incurred or expense which should have been paid in another accounting period except in the case where it cannot be entered in any accounting period, then it may be entered in the following accounting period.
+(10) Remuneration for assets which a company or juristic partnership owns and uses.
+(11) Interest paid to equity, reserves or funds of the company or juristic partnership itself.
+(12) Damages claimable from an insurance or other protection contracts or loss from previous accounting periods except net loss carried forward for five years up to the present accounting period.
+12
+12
+N.RD. Re: Computation of Net Profits and Net Loss of Companies or Juristic Partnerships that are Granted Investment Promotion.
+R.CT.No.35/2540
+(13) Expense which is not for the purpose of making profits or for the business.
+(14) Expense which is not for the purpose of business in Thailand.
+13
+13
+R.CT.No.13/2529
+(15) Cost of purchase of asset and expense related to the purchase or sale of asset, but only the amount in excess of normal cost and expense without reasonable cause.
+(16) Value of lost or depleted natural resources due to the carrying on of business.
+(17) Value of assets apart from devalued assets subject to Section 65 Bis
+(18) Expense which a payer cannot identify the recipient.
+(19) Any expense payable from profits received after the end of an accounting period.
+(20) Expense similar to those specified in (1) to (19) as will be prescribed by a Royal Decree.
+14
+14
+R.D.No.315
+Section 65 Quarter
+A government enterprise shall pay income tax on behalf of the seller of goods being a company or juristic partnership which purchases goods from a government enterprise under procedures, rates and type of goods prescribed by a Ministerial Regulations, but only on the income from the sale of such goods.
+15
+15
+M.R.No.158
+The tax paid on behalf the taxpayer under paragraph 1 shall be treated as credit of the taxpayer in tax calculation.
+Section 66
+A company or juristic partnership incorporated under Thai laws or incorporated under foreign laws and carrying on business in Thailand shall pay tax in accordance with the provisions in this Part.
+A company or juristic partnership incorporated under foreign laws and carrying on business in other places including Thailand shall pay tax on the net profits from the business or related to the business carried on in Thailand in an accounting period and the calculation shall follow Section 65 and Section 65 Bis. However, if the above net profits cannot be calculated, the provisions regarding the assessment of taxes under Section 71 (1) shall be applied mutatis mutandis.
+Section 67
+The payment of tax under this Part shall be in accordance with the rates specified in the table of Income Tax rates attached to this Part. Except in the case of a company or juristic partnership under paragraph 2 of Section 66 carrying on international transportation business , it shall pay tax on the transportation business under the following rules:
+(1) In case of carriage of passengers, it shall pay tax at the rate of 3% of fares, fees and other benefits chargeable in Thailand before deducting any expense from such carriage of passengers.
+(2) In case of carriage of goods, it shall pay tax at the rate of 3% of freight charges, fees and other benefits, whether chargeable in Thailand or not, before deducting any expense from such carriage of goods.
+Section 67 Bis
+For the purpose of collecting tax prior to the time limit under Section 68, a company or juristic partnership shall file a tax return in the form prescribed by the Director-General together with tax payment at the local Amphur office within 2 months from the last day of a six-month period from the first day of an accounting period as follows:
+(1) In the case of a company or juristic partnership other than described in (2), it shall estimate net profit or net loss from the business or relating to the business which is already carried on or is going to be carried on in an accounting period and shall calculate and pay tax in an amount of one half of the estimated profit in such accounting period.
+(2) In the case of a listed company, a commercial bank under the laws governing commercial banks, or a finance company, securities company or credit foncier company under the laws governing the finance business, securities business and credit foncier business, or a company or juristic partnership under the rules, procedures and conditions prescribed by the Director-General, it shall calculate and pay tax from net profit of a six-month period from the first day of an accounting period under conditions specified in Section 65 Bis and Section 65 Ter.
+16
+16
+N.DG.IT.No.43 No.107
+The tax paid on behalf the taxpayer under paragraph 1 shall be treated as credit of the taxpayer in tax calculation.
+Paragraph 1 shall not apply to a company or juristic partnership whose first or final accounting period is less than 12 months.
+17
+17
+N.DG.IT.No.16
+Section 67 Ter
+In the case where a company or juristic partnership does not file a tax return and pay tax under Section 67 Bis (1) or filed a return and paid tax under Section 67 Bis (1) by underestimating net profits exceeding twenty five per cent of the net profits deriving from the business or relating to the business carried on in an accounting period without reasonable cause, such company or juristic company shall pay surcharge of twenty per cent of the amount of tax payable under Section 67 Bis (1) or half of the amount of tax payable in that accounting period or of tax which should have been paid as the case may be.
+In the case where a company or juristic partnership does not file a tax return and pay tax under Section 67 Bis (2) or incorrectly filed a tax return and paid tax under Section 67 Bis (2) without reasonable cause resulting in an amount of the underpaid tax, such company or juristic company shall pay surcharge of twenty per cent of the amount of tax payable under Section 67 Bis (2) or of tax which should have been paid as the case may be.
+Surcharge under paragraphs 1 and 2 shall be deemed tax and may be reduced in accordance with regulations prescribed by the Director-General with the approval of the Minister.
+Section 68
+Within 150 days from the last day of an accounting period, a company or a juristic partnership shall file a tax return showing items necessary for tax calculation in an accounting period in the form prescribed by the Director-General together with tax payment at the Amphur office.
+18
+18
+N.DG.IT.No.16 No.96
+Section 68 Bis
+For the purpose of tax calculation, a company or juristic partnership should keep a balance sheet, an operating account and a profit and loss account in an accounting period in accordance with Section 65.
+A company or juristic partnership under Paragraph 2 of Section 66 which carries on international transportation business shall keep an account of gross income before deduction of expenses regarding passenger fees, freight fees, other taxable benefits instead of a balance sheet, an operating account and a profit and loss account in the accounting period specifically for such transportation business.
+Section 69
+Within 150 days from the last day of an accounting period, a company or juristic partnership shall file a tax return showing items necessary for tax calculation in accordance with Sections 65, 65 Bis, 66 and 67 regarding income, expenses, net profits and other information to an assessment official in the form prescribed by the Director-General together with a balance sheet, an operating account and a profit and loss account, income account, expenditure or gross income account which a person under Section 3 Septem examines and certifies for the above accounting period, as the case may be.
+19
+19
+N.DG.IT.No.16
+Section 69 Bis
+Subject to Section 70, if the Government, a government enterprise, Tessabarn, Sukapibarn or other local government agency is the payer of assessable income under Section 40 to any company or juristic partnership, it shall withhold income tax at the rate of 1 per cent. The tax withheld shall be treated as a credit in income tax calculation of the company or juristic partnership for the accounting period within which the tax was withheld. For this purpose, Sections 52, 53, 54, 58 and 59 shall apply mutatis mutandis.
+20
+20
+N.DG.IT.No.16 No.111
+R.CT.No.4/2526
+Section 69 Ter
+A person, partnership, company, association or a body of persons pays assessable income under Section 40(8) to a company or juristic partnership which sells immovable property shall withhold income tax at the rate of 1 per cent and remit it to an official responsible for registration of rights and juristic acts at the time of registration and provisions of Paragraphs 2 and 3 of Section 52 shall apply mutatis mutandis.
+Tax withheld and remitted under Paragraph 1 shall be treated as a credit in income tax calculation of the company or juristic partnership which tax was withheld for the accounting period in which the tax was withheld.
+Section 70
+A company or juristic partnership incorporated under foreign laws and not carrying on business in Thailand but receiving assessable income under Section 40 (2)(3)(4)(5) or (6) which is paid from or in Thailand, shall be liable to pay tax. The payer of income shall deduct corporate income tax from such assessable income at the corporate income tax rate and remit it to the local Amphur office together with the filing of a tax return in the form prescribed by the Director General within 7 days from the last day of the month in which such income is paid. Section 54 shall also apply mutatis mutandis.
+21
+21
+R.D.No.10 No.299
+N.DG.IT.No.16 No.95
+The provisions of Paragraph 1 shall not apply in the case where a company or juristic partnership incorporated under foreign laws receives assessable income being interest from the Government or a financial institution incorporated under the specific Thai laws for the purpose of lending to promote agriculture, commerce or industry.
+22
+22
+R.D.No.308
+N.DG.IT.No.16 No.95
+N.MF. Re: Extension of Timeframes for Remittance of Withholding Income Taxes, Remittance of Income Taxes, Remittance of Value Added Taxes and Filing of Returns.
+Section 70 Bis
+A company or juristic partnership disposing its profits or other type of money that is set aside from profits or is deemed to be profits from Thailand shall pay income tax by deducting from such disposed amount of money in accordance with the corporate income tax rate for the company and juristic partnership and shall remit it to the local Amphur office together with the filing of a tax return in the form prescribed by the Director-General within 7 days from the date of disposal.
+Disposal of profits under Paragraph 1 shall include
+(1) Disposal of profits or other type of money that is set aside from profits or is deemed to be profits from profit and loss account or other book of account in order to settle debt or to set off against liability or to enter as a credit in an account of any person abroad; or
+(2) in the case where there does not appear the fact in (1) there is a request to purchase and transfer foreign currency which is profit or other money that is set aside from profits or is deemed to be profits disposed abroad; or
+(3) any other action which results in (1) or (2).
+Section 70 Ter
+For any company or juristic partnership sending goods abroad to or under an order of a head office, branch, associated company or juristic partnership, principal, agent, employer or employee, such sending of goods shall be deemed to be also a sale in Thailand and the market price of goods on the sending date shall be deemed to be the income for the accounting period in which the goods are sent.
+The provisions in Paragraph 1 shall not apply if such goods
+(1) are samples or for research purpose
+(2) are transit goods
+(3) are goods imported into Thailand and re-exported to the sender within one year from the date that such goods is imported into Thailand
+(4) are goods exported out of Thailand and returned to the sender in Thailand within one year from the date in which such goods is exported out Thailand.
+23
+23
+N.RD. Re: Income Tax and Business Tax for Representative Offices of Juristic Persons Incorporated under the Laws of Foreign Country Which Conduct Business in Thailand.
+N.RD.Re: Income Tax and Value Added Tax for Regional Offices of Multinational Companies Which Conduct Business in Thailand.
+Section 71
+In the case where:
+(1) a company or juristic partnership does not file particulars necessary for tax calculation under the provisions of this Part or does not keep a book of account or does not follow requirements prescribed under Sections 17 and 68 Bis or does not bring books of account, documents or other evidence to an assessment official for interrogation under Section 19 or Section 23, the assessment official shall have the power to assess tax at the rate of 5 per cent of gross income before deduction of any expenses or gross sales before deduction of expenses of the accounting period, whichever is higher. If gross income before deduction of expenses or gross sales before deduction of expenses cannot be determined, the assessment official shall have the power to assess by comparing with the gross amount of the previous accounting period. If the amount of the previous accounting period cannot be determined, he shall assess as he deems appropriate.
+(2) If any company or juristic partnership does not record particulars or records incompletely or does not record accurately within an account as prescribed under Sections 17 and 68 Bis resulting in paying no tax or less tax, an assessment official shall have the power to assess missing tax at the rate specified in Section 67 and may order that person to pay surcharge of two times of the amount of missing tax.
+(3) If any company or juristic partnership does not comply with the Director-Generals order which is exercised under Section 17, an assessment official shall have the power to order that company or juristic partnership to comply with the Director-Generals order within thirty days from the date of receiving the order of such assessment official or he may order it to provide a person to comply with the Director-Generals order at the office of the assessment official within the above time period. If the company or juristic partnership does not comply or complies incompletely, the assessment official shall have the power to assess tax at the rate and procedures as mentioned in (1).
+The provisions of this Section does not prevent the rights of an assessment official to assess tax payment under the provisions of other Sections.
+The assessment under the provisions of this Section may be appealed.
+Section 72
+In the case where a company or juristic partnership dissolves, an account liquidator and a manager shall jointly notify an assessment official about the dissolvement of that company or juristic partnership within 15 days from the date that an official registers the dissolvement. If such person does not comply, the assessment official may order that company or juristic partnership to pay additional tax of one time of the amount of tax payable. This additional amount is deemed to be a tax.
+In a case where such company or juristic partnership is already dissolved, for the purpose of tax calculation, the date that the official registers the dissolvement is deemed to be the last day of the accounting period. An account liquidator and a manager shall have the duty and joint liability in filing a tax return and pay tax in the form and within the time limit prescribed under Sections 68 and 69 mutatis mutandis.
+If an account liquidator and a manager cannot file a tax return and pay tax within the time limit prescribed in paragraph 1 and files a request to the Director-General within thirty days from the date the official registers the dissolvement, the Director-General may order the extension of the time limit, if he deems appropriate. In a case where there is an account liquidation, the Director-General may also order the extension of the accounting period.
+In a case where a juristic partnership dissolves without an account liquidation, a manager of that juristic partnership shall have the same duty and liability as those of an account liquidator and jointly with a partner who has the management power in a partnership as provided in Paragraphs 1 to 3.
+Section 73
+In a case where a company or juristic partnership merges with another company or juristic partnership, for the purpose of tax calculation, each company or juristic partnership shall be deemed to be dissolved and the new merged company or juristic partnership shall have the duty and liability in filing a tax return and paying tax for each company or juristic partnership which is deemed dissolved. In this case, the provisions of Section 72 shall apply mutatis mutandis, and for a juristic company, a director of the new juristic company shall have the same duty and liability as those of an account liquidator as provided under Section 72.
+Section 74
+In a case where a company or juristic partnership dissolves or merges with another company or juristic partnership, the calculation of net profits for tax purpose shall be in accordance with procedures under Sections 65, 65 Bis and 66 except
+(1) an evaluation of assets
+(a) In the case of dissolvement of a company or juristic partnership, the evaluation shall be made by applying the market price on the date of dissolvement.
+(b) In the case where a company or juristic partnership merges together, the evaluation shall be made by applying the market price on the date of merger but such price shall not be deemed to be income or expense in the calculation of net profit or net loss of the former company or juristic partnership and the newly merged company or juristic partnership shall evaluate the value of assets on the basis if the price which appears in the account of the former company or juristic partnership on the date of merger for the purpose of calculation of net profits or net loss until such assets are alienated. Any assets entitled to depreciation and depletion, shall be depreciated for the purpose of calculating net profit or net loss under the rules, procedures, conditions and rates which the former company or juristic partnership applied only during the remaining life and value of that asset. The net loss of the former company or juristic partnership shall not be claimed as expense in the calculation of net profit or net loss.
+(c) In a case where there is a transfer of business between a company or juristic partnership whereby the transferor must register the dissolvement and an account liquidation is made in an accounting period in which the business transfer occurs, the evaluation shall be made by applying the market price on the date of registration for dissolvement and the provisions of (b) shall apply mutatis mutandis.
+(2) Reserve or profits carried forward from previous accounting periods, but only the part that has not paid tax, shall be included as income the last accounting period.
+(3) In a case where a company or juristic partnership carries on insurance business, it shall include reserves that are set aside in the previous accounting periods under Section 65 Ter (1) in the calculation of income, but only the part that has not been previously included as income.
+The provisions of this Section shall not apply to a company or juristic partnership under Paragraph 2 of Section 66 which carries on international transportation business through other countries.
+Section 75
+(Repealed by an Act Amending Revenue Code (No. 26) B.E. 2525)
+Section 76
+(Repealed by an Act Amending Revenue Code (N0. 26) B.E. 2525)
+Section 76 Bis
+For a company or juristic partnership incorporated under foreign laws which has an employee, an agent or a go-between for carrying on business in Thailand and as a result receives income or profits in Thailand, such company or juristic partnership shall be deemed to be carrying on business in Thailand and the person who acts as an employee, an agent or a go-between for the business, whether he is an individual or a juristic person, shall be deemed to be the representative of the company or juristic partnership incorporated under foreign laws and shall have the duty and liability to file a tax return and tax payment in accordance with the provisions of this Part, with respect to only the above mentioned income or profits.
+In the case mentioned in paragraph 1, if a person who has the duty and liability to file a tax return and tax payment cannot calculate net profits for tax purposes under the provisions of this Part, the provisions regarding tax assessment under Section 71 (1) shall apply mutatis mutandis.
+The assessment under this Section may be appealed.
+Section 76 Ter
+(Repealed by an Act Amending Revenue Code (No. 16) B.E. 2502)

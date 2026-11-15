@@ -1,0 +1,1735 @@
+ 
+ 
+1
+SYNTHESISED TEXT 
+OF THE MULTILATERAL CONVENTION TO IMPLEMENT TAX TREATY  
+RELATED MEASURES TO PREVENT BASE EROSION AND PROFIT SHIFTING  
+AND THE AGREEMENT BETWEEN THE GOVERNMENT OF THE HONG KONG 
+SPECIAL ADMINISTRATIVE REGION OF THE PEOPLE’S REPUBLIC OF CHINA  
+AND THE GOVERNMENT OF MALAYSIA  
+FOR THE AVOIDANCE OF DOUBLE TAXATION AND THE PREVENTION OF 
+FISCAL EVASION WITH RESPECT TO TAXES ON INCOME 
+ 
+ 
+General disclaimer on the synthesised text document 
+This document presents the synthesised text for the application of the Agreement between 
+the Government of the Hong Kong Special Administrative Region of the People’s Republic 
+of China and the Government of Malaysia for the Avoidance of Double Taxation and the 
+Prevention of Fiscal Evasion with respect to Taxes on Income signed on 25 April 2012 (the 
+“Agreement”), as modified by the Multilateral Convention to Implement Tax Treaty Related 
+Measures to Prevent Base Erosion and Profit Shifting signed by the People’s Republic of 
+China on 7 June 2017 and by Malaysia on 24 January 2018 (the “MLI”). 
+ 
+This document was prepared on the basis of the reservations and notifications submitted to 
+the Depositary by the People’s Republic of China on behalf of the Hong Kong Special 
+Administrative Region of the People’s Republic of China (the “HKSAR”) on 25 May 2022 
+and 21 February 2023 and by Malaysia on 18 February 2021.  These reservations and 
+notifications are subject to modifications as provided in the MLI.  Modifications made to 
+reservations and notifications could modify the effects of the MLI on the Agreement. 
+ 
+The sole purpose of this document is to facilitate the understanding of the application of the 
+MLI to the Agreement and the document does not constitute a source of law.  The authentic 
+legal texts of the Agreement and the MLI remain the only legal texts applicable. 
+ 
+The provisions of the MLI that are applicable with respect to the provisions of the Agreement 
+are included in boxes throughout the text of this document in the context of the relevant 
+provisions of the Agreement.  The boxes containing the provisions of the MLI have generally 
+been inserted in accordance with the ordering of the provisions of the 2017 Organisation for 
+Economic Co-operation and Development (OECD) Model Tax Convention on Income and 
+on Capital. 
+ 
+In this document, changes to the text of the provisions of the MLI have been made to 
+conform the terminology used in the MLI to the terminology used in the Agreement (such as 
+
+ 
+ 
+2
+changes from “Covered Tax Agreement” to “Agreement” and changes from “Contracting 
+Jurisdictions” to “Contracting Parties”), to ease the comprehension of the provisions of the 
+MLI.  The changes in terminology are intended to increase the readability of the document 
+and are not intended to change the substance of the provisions of the MLI.  Similarly, 
+changes have been made to parts of provisions of the MLI that describe existing provisions 
+of the Agreement.  Descriptive language has been replaced by legal references of the existing 
+provisions to ease the readability. 
+ 
+In all cases, references made to the provisions of the Agreement or to the Agreement must be 
+understood as referring to the Agreement as modified by the provisions of the MLI, provided 
+such provisions of the MLI have taken effect. 
+ 
+References 
+ 
+The legal texts of the MLI and the Agreement are available via the following links: 
+ 
+The MLI:  
+https://www.oecd.org/tax/treaties/multilateral-convention-to-implement-tax-treaty-related-
+measures-to-prevent-BEPS.pdf  
+ 
+In the HKSAR: 
+https://www.ird.gov.hk/eng/tax/dta_inc.htm  
+ 
+The reservations and notifications submitted to the Depositary by the People’s Republic of 
+China on behalf of the HKSAR on 25 May 2022 and 21 February 2023 and by Malaysia on 
+18 February 2021 are available via the MLI Depositary (OECD) webpage at the following 
+link: 
+https://www.oecd.org/tax/treaties/beps-mli-signatories-and-parties.pdf 
+ 
+ 
+ 
+Disclaimer on the entry into effect of the provisions of the MLI 
+The provisions of the MLI applicable to the Agreement do not take effect on the same dates 
+as the original provisions of the Agreement.  Each of the provisions of the MLI could take 
+effect on different dates, depending on the types of taxes involved (taxes withheld at source 
+or other taxes levied) and on the choices made by the People’s Republic of China on behalf 
+of the HKSAR and Malaysia in their reservations and notifications submitted to the 
+Depositary. 
+ 
+ 
+
+ 
+ 
+3
+Entry into force of the MLI: 
+ 1 September 2022 for the People’s Republic of China (including the HKSAR) 
+ 1 June 2021 for Malaysia 
+ 
+Date of receipt by the Depositary of the notification made by the People’s Republic of China 
+on behalf of the HKSAR confirming the completion of the HKSAR’s internal procedures for 
+the entry into effect of the provisions of the MLI with respect to the Agreement:  
+ 21 February 2023 
+ 
+The provisions of the MLI shall have effect with respect to the Agreement: 
+ 
+(a) in the HKSAR: 
+ 
+(i) 
+with respect to taxes withheld at source on amounts paid or credited to 
+non-residents, where the event giving rise to such taxes occurs on or after 
+1 April 2023; and 
+ 
+(ii) with respect to all other taxes levied by the HKSAR, for taxes levied with 
+respect to years of assessment beginning on or after 1 April 2024; and 
+ 
+(b) in Malaysia: 
+ 
+(i) 
+with respect to taxes withheld at source on amounts paid or credited to 
+non-residents, where the event giving rise to such taxes occurs on or after 
+1 January 2024; and 
+ 
+(ii) with respect to all other taxes levied by Malaysia, for taxes levied with respect 
+to taxable periods beginning on or after 23 September 2023. 
+ 
+ 
+ 
+
+ 
+ 
+4
+AGREEMENT BETWEEN THE GOVERNMENT OF THE HONG 
+KONG SPECIAL ADMINISTRATIVE REGION OF THE PEOPLE’S 
+REPUBLIC OF CHINA AND THE GOVERNMENT OF MALAYSIA 
+FOR THE AVOIDANCE OF DOUBLE TAXATION AND THE 
+PREVENTION OF FISCAL EVASION WITH RESPECT TO TAXES 
+ON INCOME 
+ 
+ 
+ 
+THE GOVERNMENT OF THE HONG KONG SPECIAL 
+ADMINISTRATIVE REGION OF THE PEOPLE’S REPUBLIC  
+OF CHINA  
+ 
+AND  
+ 
+THE GOVERNMENT OF MALAYSIA 
+ 
+[REPLACED by paragraph 1 of Article 6 of the MLI] [Desiring to 
+conclude an Agreement for the avoidance of double taxation and the 
+prevention of fiscal evasion with respect to taxes on income,] 
+ 
+The following paragraph 1 of Article 6 of the MLI replaces the text referring 
+to an intent to eliminate double taxation in the preamble of this Agreement: 
+ARTICLE 6 OF THE MLI – PURPOSE OF A COVERED TAX AGREEMENT 
+Intending to eliminate double taxation with respect to the taxes covered by this 
+Agreement without creating opportunities for non-taxation or reduced 
+taxation through tax evasion or avoidance (including through treaty-shopping 
+arrangements aimed at obtaining reliefs provided in this Agreement for the 
+indirect benefit of residents of third jurisdictions), 
+ 
+Have agreed as follows: 
+ 
+
+ 
+ 
+5
+Article 1 
+Persons Covered 
+ 
+This Agreement shall apply to persons who are residents of one or both of the 
+Contracting Parties. 
+ 
+ 
+Article 2 
+Taxes Covered 
+ 
+1. 
+This Agreement shall apply to taxes on income imposed on behalf of a 
+Contracting Party, irrespective of the manner in which they are levied. 
+ 
+2. 
+There shall be regarded as taxes on income all taxes imposed on total 
+income, or on elements of income, including taxes on gains from the 
+alienation of movable or immovable property, taxes on the total 
+amounts of wages or salaries paid by enterprises, as well as taxes on 
+capital appreciation. 
+ 
+3. 
+The existing taxes which are the subject of this Agreement are: 
+ 
+(a) 
+in the case of the Hong Kong Special Administrative Region, 
+ 
+(i) 
+profits tax; 
+ 
+(ii) 
+salaries tax; and 
+ 
+(iii) 
+property tax; 
+ 
+whether or not charged under personal assessment; 
+ 
+(b) 
+in the case of Malaysia, 
+ 
+(i) 
+the income tax; and 
+ 
+(ii) 
+the petroleum income tax. 
+ 
+
+ 
+ 
+6
+4. 
+This Agreement shall apply also to any identical or substantially similar 
+taxes that are imposed after the date of signature of this Agreement in 
+addition to, or in place of, the existing taxes, as well as any other taxes 
+falling within paragraphs 1 and 2 which a Contracting Party may 
+impose in future.  The competent authorities of the Contracting Parties 
+shall notify each other of any significant changes that have been made 
+in their taxation laws. 
+ 
+5. 
+The existing taxes, together with the taxes imposed after the signature 
+of this Agreement, are hereinafter referred to as “Hong Kong Special 
+Administrative Region tax” or “Malaysian tax”, as the context requires. 
+ 
+ 
+Article 3 
+General Definitions 
+ 
+1. 
+For the purposes of this Agreement, unless the context otherwise 
+requires: 
+ 
+(a) 
+(i) 
+the term “Hong Kong Special Administrative Region”, 
+when used in a geographical sense, means the land and sea 
+comprised within the boundary of the Hong Kong Special 
+Administrative Region of the People’s Republic of China, 
+including Hong Kong Island, Kowloon, the New 
+Territories and the waters of Hong Kong, and any other 
+place where the tax laws of the Hong Kong Special 
+Administrative Region of the People’s Republic of China 
+apply;  
+ 
+ (ii) 
+the term “Malaysia” means the territories of the Federation 
+of Malaysia, the territorial waters of Malaysia and the 
+sea-bed and subsoil of the territorial waters, and the 
+airspace above such areas, and includes any area extending 
+beyond the limits of the territorial waters of Malaysia, and 
+the sea-bed and subsoil of any such area, which has been or 
+may hereafter be designated under the laws of Malaysia 
+and in accordance with international law as an area over 
+which Malaysia has sovereign rights or jurisdiction for the 
+purposes of exploring and exploiting the natural resources, 
+whether living or non-living; 
+
+ 
+ 
+7
+ 
+(b) 
+the term “company” means any body corporate or any entity that 
+is treated as a body corporate for tax purposes; 
+ 
+(c) 
+the term “competent authority” means: 
+ 
+(i) 
+in the case of the Hong Kong Special Administrative 
+Region, the Commissioner of Inland Revenue or his 
+authorised representative; 
+ 
+(ii) 
+in the case of Malaysia, the Minister of Finance or his 
+authorised representative; 
+ 
+(d) 
+the term “Contracting Party” or “the other Contracting Party” 
+means the Hong Kong Special Administrative Region or 
+Malaysia, as the context requires; 
+ 
+(e) 
+the terms “enterprise of a Contracting Party” and “enterprise of 
+the other Contracting Party” mean respectively an enterprise 
+carried on by a resident of a Contracting Party and an enterprise 
+carried on by a resident of the other Contracting Party; 
+ 
+(f) 
+the term “international traffic” means any transport by a ship or 
+aircraft operated by an enterprise of a Contracting Party, except 
+when the ship or aircraft is operated solely between places in the 
+other Contracting Party; 
+ 
+(g) 
+the term “national”, in relation to Malaysia means: 
+ 
+(i) 
+any individual possessing the nationality or citizenship of 
+Malaysia; and 
+ 
+(ii) 
+any legal person, partnership or association deriving its 
+status as such from the laws in force in Malaysia; 
+ 
+(h) 
+the term “person” includes an individual, a company and any 
+other body of persons. 
+ 
+2. 
+In this Agreement, the terms “Hong Kong Special Administrative 
+Region tax” and “Malaysian tax” do not include any penalty or fine 
+imposed under the laws of either Contracting Party. 
+
+ 
+ 
+8
+ 
+3. 
+As regards the application of this Agreement at any time by a 
+Contracting Party, any term not defined therein shall, unless the context 
+otherwise requires, have the meaning that it has at that time under the 
+law of that Party for the purposes of the taxes to which this Agreement 
+applies, any meaning under the applicable tax laws of that Party 
+prevailing over a meaning given to the term under other laws of that 
+Party. 
+ 
+ 
+Article 4 
+Resident 
+ 
+1. 
+For the purposes of this Agreement, the term “resident of a Contracting 
+Party” means: 
+ 
+(a) 
+in the case of the Hong Kong Special Administrative Region, 
+ 
+(i) 
+any individual who ordinarily resides in the Hong Kong 
+Special Administrative Region; 
+ 
+(ii) 
+any individual who stays in the Hong Kong Special 
+Administrative Region for more than 180 days during a 
+year of assessment or for more than 300 days in two 
+consecutive years of assessment one of which is the 
+relevant year of assessment; 
+ 
+(iii) 
+a company incorporated in the Hong Kong Special 
+Administrative Region or, if incorporated outside the 
+Hong Kong Special Administrative Region, being 
+normally managed or controlled in the Hong Kong Special 
+Administrative Region; 
+ 
+(iv) 
+any other person constituted under the laws of the Hong 
+Kong Special Administrative Region or, if constituted 
+outside the Hong Kong Special Administrative Region, 
+being normally managed or controlled in the Hong Kong 
+Special Administrative Region; and 
+ 
+
+ 
+ 
+9
+(v) 
+the Government of the Hong Kong Special Administrative 
+Region; 
+ 
+(b) 
+in the case of Malaysia, any person who, under the laws of 
+Malaysia, is a resident by reason of his domicile, residence, place 
+of management and control, place of incorporation or any other 
+criterion of a similar nature, and also includes the Government of 
+Malaysia, any political subdivision, local authority or statutory 
+body thereof. 
+ 
+2. 
+Where by reason of the provisions of paragraph 1 an individual is a 
+resident of both Contracting Parties, then his status shall be determined 
+as follows: 
+ 
+(a) 
+he shall be deemed to be a resident only of the Party in which he 
+has a permanent home available to him; if he has a permanent 
+home available to him in both Parties, he shall be deemed to be a 
+resident only of the Party with which his personal and economic 
+relations are closer (centre of vital interests); 
+ 
+(b) 
+if the Party in which he has his centre of vital interests cannot be 
+determined, or if he has not a permanent home available to him in 
+either Party, he shall be deemed to be a resident only of the Party 
+in which he has an habitual abode; 
+ 
+(c) 
+if he has an habitual abode in both Parties or in neither of them, 
+he shall be deemed to be a resident only of the Party in which he 
+has the right of abode (in the case of the Hong Kong Special 
+Administrative Region) or of which he is a national (in the case 
+of Malaysia); 
+ 
+(d) 
+if he has the right of abode in the Hong Kong Special 
+Administrative Region and is also a national of Malaysia, or if he 
+does not have the right of abode in the Hong Kong Special 
+Administrative Region nor is he a national of Malaysia, the 
+competent authorities of the Contracting Parties shall settle the 
+question by mutual agreement. 
+ 
+
+ 
+ 
+10
+3. 
+Where by reason of the provisions of paragraph 1 a person other than an 
+individual is a resident of both Contracting Parties, then it shall be 
+deemed to be a resident only of the Party in which its place of effective 
+management is situated. 
+ 
+ 
+Article 5 
+Permanent Establishment 
+ 
+1. 
+For the purposes of this Agreement, the term “permanent 
+establishment” means a fixed place of business through which the 
+business of an enterprise is wholly or partly carried on. 
+ 
+2. 
+The term “permanent establishment” includes especially: 
+ 
+(a) 
+a place of management; 
+ 
+(b) 
+a branch; 
+ 
+(c) 
+an office; 
+ 
+(d) 
+a factory; 
+ 
+(e) 
+a workshop; and 
+ 
+(f) 
+a mine, an oil or gas well, a quarry or any other place of 
+extraction of natural resources. 
+ 
+3. 
+The term “permanent establishment” also encompasses: 
+ 
+(a) 
+a building site, a construction, installation or assembly project or 
+supervisory activities in connection therewith, but only if such 
+site, project or activities last more than nine (9) months; 
+ 
+(b) 
+the furnishing of services, including consultancy services, by an 
+enterprise through employees or other personnel engaged by the 
+enterprise for such purpose, but only if activities of that nature 
+continue (for the same or a connected project) within a 
+Contracting Party for a period or periods aggregating more than 
+183 days within any twelve-month period. 
+
+ 
+ 
+11
+ 
+4. 
+Notwithstanding the preceding provisions of this Article, the term 
+“permanent establishment” shall be deemed not to include: 
+ 
+(a) 
+the use of facilities solely for the purpose of storage or display of 
+goods or merchandise belonging to the enterprise; 
+ 
+(b) 
+the maintenance of a stock of goods or merchandise belonging to 
+the enterprise solely for the purpose of storage or display; 
+ 
+(c) 
+the maintenance of a stock of goods or merchandise belonging to 
+the enterprise solely for the purpose of processing by another 
+enterprise; 
+ 
+(d) 
+the maintenance of a fixed place of business solely for the 
+purpose of purchasing goods or merchandise or of collecting 
+information, for the enterprise; 
+ 
+(e) 
+the maintenance of a fixed place of business solely for the 
+purpose of carrying on, for the enterprise, any other activity of a 
+preparatory or auxiliary character; 
+ 
+(f) 
+the maintenance of a fixed place of business solely for any 
+combination of activities mentioned in sub-paragraphs (a) to (e), 
+provided that the overall activity of the fixed place of business 
+resulting from this combination is of a preparatory or auxiliary 
+character. 
+ 
+5. 
+Notwithstanding the provisions of paragraphs 1 and 2, where a person - 
+other than an agent of an independent status to whom paragraph 6 
+applies - is acting in a Contracting Party on behalf of an enterprise of the 
+other Contracting Party, that enterprise shall be deemed to have a 
+permanent establishment in the first-mentioned Contracting Party in 
+respect of any activities which that person undertakes for the enterprise, 
+if such a person: 
+ 
+(a) 
+has and habitually exercises in that Party an authority to conclude 
+contracts in the name of the enterprise, unless the activities of 
+such person are limited to those mentioned in paragraph 4 which, 
+if exercised through a fixed place of business, would not make 
+
+ 
+ 
+12
+this fixed place of business a permanent establishment under the 
+provisions of that paragraph; or 
+ 
+(b) 
+has no such authority, but habitually maintains in the 
+first-mentioned Party a stock of goods or merchandise from 
+which he regularly delivers goods or merchandise on behalf of 
+the enterprise. 
+ 
+6. 
+An enterprise shall not be deemed to have a permanent establishment in 
+a Contracting Party merely because it carries on business in that Party 
+through a broker, general commission agent or any other agent of an 
+independent status, provided that such persons are acting in the 
+ordinary course of their business. 
+ 
+7. 
+The fact that a company which is a resident of a Contracting Party 
+controls or is controlled by a company which is a resident of the other 
+Contracting Party, or which carries on business in that other Party 
+(whether through a permanent establishment or otherwise), shall not of 
+itself constitute either company a permanent establishment of the other. 
+ 
+ 
+Article 6 
+Income from Immovable Property 
+ 
+1. 
+Income derived by a resident of a Contracting Party from immovable 
+property (including income from agriculture or forestry) situated in the 
+other Contracting Party may be taxed in that other Party. 
+ 
+2. 
+The term “immovable property” shall have the meaning which it has 
+under the law of the Contracting Party in which the property in question 
+is situated.  The term shall in any case include property accessory to 
+immovable property, livestock and equipment used in agriculture and 
+forestry, rights to which the provisions of general law respecting landed 
+property apply, usufruct of immovable property and rights to variable or 
+fixed payments as consideration for the working of, or the right to work, 
+mineral deposits, quarries, sources and other natural resources; ships, 
+boats and aircraft shall not be regarded as immovable property. 
+ 
+3. 
+The provisions of paragraph 1 shall apply to income derived from the 
+direct use, letting, or use in any other form of immovable property. 
+
+ 
+ 
+13
+ 
+4. 
+The provisions of paragraphs 1 and 3 shall also apply to the income 
+from immovable property of an enterprise and to income from 
+immovable property used for the performance of independent personal 
+services. 
+ 
+ 
+Article 7 
+Business Profits 
+ 
+1. 
+The profits of an enterprise of a Contracting Party shall be taxable only 
+in that Party unless the enterprise carries on business in the other 
+Contracting Party through a permanent establishment situated therein.  
+If the enterprise carries on business as aforesaid, the profits of the 
+enterprise may be taxed in the other Party but only so much of them as 
+is attributable to that permanent establishment. 
+ 
+2. 
+Subject to the provisions of paragraph 3, where an enterprise of a 
+Contracting Party carries on business in the other Contracting Party 
+through a permanent establishment situated therein, there shall in each 
+Contracting Party be attributed to that permanent establishment the 
+profits which it might be expected to make if it were a distinct and 
+separate enterprise engaged in the same or similar activities under the 
+same or similar conditions and dealing wholly independently with the 
+enterprise of which it is a permanent establishment. 
+ 
+3. 
+In determining the profits of a permanent establishment, there shall be 
+allowed as deductions expenses which are incurred for the purposes of 
+the permanent establishment, including executive and general 
+administrative expenses so incurred, whether in the Party in which the 
+permanent establishment is situated or elsewhere. 
+ 
+4. 
+Insofar as it has been customary in a Contracting Party to determine the 
+profits to be attributed to a permanent establishment on the basis of an 
+apportionment of the total profits of the enterprise to its various parts, or 
+on the basis of such other method as may be prescribed by the laws of 
+that Party, nothing in paragraph 2 shall preclude that Contracting Party 
+from determining the profits to be taxed by such an apportionment or 
+other method; the method adopted shall, however, be such that the 
+
+ 
+ 
+14
+result shall be in accordance with the principles contained in this 
+Article. 
+ 
+5. 
+If the information available to the competent authority is inadequate to 
+determine the profits to be attributed to the permanent establishment of 
+an enterprise, nothing in this Article shall affect the application of any 
+law of that Party relating to the determination of the tax liability of a 
+person by the making of an estimate by the competent authority, 
+provided that the law shall be applied, so far as the information 
+available to the competent authority permits, in accordance with the 
+principles contained in this Article. 
+ 
+6. 
+No profits shall be attributed to a permanent establishment by reason of 
+the mere purchase by that permanent establishment of goods or 
+merchandise for the enterprise. 
+ 
+7. 
+For the purposes of the preceding paragraphs, the profits to be attributed 
+to the permanent establishment shall be determined by the same method 
+year by year unless there is good and sufficient reason to the contrary. 
+ 
+8. 
+Where profits include items of income which are dealt with separately 
+in other Articles of this Agreement, then the provisions of those Articles 
+shall not be affected by the provisions of this Article. 
+ 
+ 
+Article 8 
+Shipping and Air Transport 
+ 
+1. 
+Profits of an enterprise of a Contracting Party from the operation of 
+ships or aircraft in international traffic shall be taxable only in that 
+Party. 
+ 
+2. 
+The provisions of paragraph 1 shall also apply to the share of the profits 
+from the operation of ships or aircraft derived by an enterprise of a 
+Contracting Party through participation in a pool, a joint business or an 
+international operating agency. 
+ 
+ 
+
+ 
+ 
+15
+Article 9 
+Associated Enterprises 
+ 
+1. 
+Where - 
+ 
+(a) 
+an enterprise of a Contracting Party participates directly or 
+indirectly in the management, control or capital of an enterprise 
+of the other Contracting Party, or 
+ 
+(b) 
+the same persons participate directly or indirectly in the 
+management, control or capital of an enterprise of a Contracting 
+Party and an enterprise of the other Contracting Party, 
+ 
+and in either case conditions are made or imposed between the two 
+enterprises in their commercial or financial relations which differ from 
+those which would be made between independent enterprises, then any 
+profits which would, but for those conditions, have accrued to one of 
+the enterprises, but, by reason of those conditions, have not so accrued, 
+may be included in the profits of that enterprise and taxed accordingly. 
+ 
+2. 
+Where a Contracting Party includes in the profits of an enterprise of that 
+Party - and taxes accordingly - profits on which an enterprise of the 
+other Contracting Party has been charged to tax in that other Party and 
+the profits so included are profits which would have accrued to the 
+enterprise of the first-mentioned Party if the conditions made between 
+the two enterprises had been those which would have been made 
+between independent enterprises, then that other Party shall make an 
+appropriate adjustment to the amount of the tax charged therein on 
+those profits where that other Party considers the adjustment justified.  
+In determining such adjustment, due regard shall be had to the other 
+provisions of this Agreement and for this purpose the competent 
+authorities of the Contracting Parties shall if necessary consult each 
+other. 
+ 
+ 
+
+ 
+ 
+16
+Article 10 
+Dividends 
+ 
+1. 
+Dividends paid by a company which is a resident of a Contracting Party 
+to a resident of the other Contracting Party may be taxed in that other 
+Party. 
+ 
+2. 
+However, such dividends may also be taxed in the Contracting Party of 
+which the company paying the dividends is a resident and according to 
+the laws of that Party, but if the beneficial owner of the dividends is a 
+resident of the other Contracting Party, the tax so charged shall not 
+exceed: 
+ 
+(a) 
+five (5) per cent of the gross amount of the dividends if the 
+beneficial owner is a company (other than a partnership) which 
+holds directly or indirectly at least ten (10) per cent of the capital 
+of the company paying the dividends; 
+ 
+(b) 
+ten (10) per cent of the gross amount of the dividends in all other 
+cases. 
+ 
+This paragraph shall not affect the taxation of the company in respect of 
+the profits out of which the dividends are paid. 
+ 
+3. 
+The term “dividends” as used in this Article means income from shares 
+or other rights, not being debt-claims, participating in profits, as well as 
+income from other corporate rights which is subjected to the same 
+taxation treatment as income from shares by the laws of the Party of 
+which the company making the distribution is a resident. 
+ 
+4. 
+The provisions of paragraphs 1 and 2 shall not apply if the beneficial 
+owner of the dividends, being a resident of a Contracting Party, carries 
+on business in the other Contracting Party of which the company paying 
+the dividends is a resident through a permanent establishment situated 
+therein, or performs in that other Party independent personal services 
+from a fixed base situated therein, and the holding in respect of which 
+the dividends are paid is effectively connected with such permanent 
+establishment or fixed base.  In such case the provisions of Article 7 or 
+Article 15, as the case may be, shall apply. 
+ 
+
+ 
+ 
+17
+5. 
+Where a company which is a resident of a Contracting Party derives 
+profits or income from the other Contracting Party, that other Party may 
+not impose any tax on the dividends paid by the company, except 
+insofar as such dividends are paid to a resident of that other Party or 
+insofar as the holding in respect of which the dividends are paid is 
+effectively connected with a permanent establishment or a fixed base 
+situated in that other Party, nor subject the company’s undistributed 
+profits to a tax on the company’s undistributed profits, even if the 
+dividends paid or the undistributed profits consist wholly or partly of 
+profits or income arising in such other Party. 
+ 
+ 
+Article 11 
+Interest 
+ 
+1. 
+Interest arising in a Contracting Party and paid to a resident of the other 
+Contracting Party may be taxed in that other Party. 
+ 
+2. 
+However, such interest may also be taxed in the Contracting Party in 
+which it arises and according to the laws of that Party, but if the 
+beneficial owner of the interest is a resident of the other Contracting 
+Party, the tax so charged shall not exceed ten (10) per cent of the gross 
+amount of the interest. 
+ 
+3. 
+Notwithstanding the provisions of paragraph 2, interest arising in a 
+Contracting Party is exempt from tax in that Party, if it is paid or 
+credited to: 
+ 
+(a) 
+in the case of the Hong Kong Special Administrative Region, 
+ 
+(i) 
+the Government of the Hong Kong Special Administrative 
+Region; 
+ 
+(ii) 
+the Hong Kong Monetary Authority; and 
+ 
+(iii) 
+such other institutions established by the Government of 
+the Hong Kong Special Administrative Region, for the 
+discharge of functions of a public purpose normally carried 
+out by a government, as may be agreed upon from time to 
+
+ 
+ 
+18
+time between the competent authorities of the two 
+Contracting Parties; 
+ 
+(b) 
+in the case of Malaysia, 
+ 
+(i) 
+the Government of Malaysia; 
+  
+(ii) 
+the Governments of the States in Malaysia; 
+ 
+(iii) 
+the local authorities; 
+ 
+(iv) 
+the Bank Negara Malaysia;  
+ 
+(v) 
+the Export-Import Bank of Malaysia Berhad (EXIM 
+Bank); and 
+ 
+(vi)  such other institutions established by the Government of 
+Malaysia or the Governments of the States in Malaysia, for 
+the discharge of functions of a public purpose normally 
+carried out by a government, as may be agreed upon from 
+time to time between the competent authorities of the two 
+Contracting Parties. 
+ 
+4. 
+The term “interest” as used in this Article means income from 
+debt-claims of every kind, whether or not secured by mortgage and 
+whether or not carrying a right to participate in the debtor’s profits, and 
+in particular, income from government securities and income from 
+bonds or debentures, including premiums and prizes attaching to such 
+securities, bonds or debentures.  Penalty charges for late payment shall 
+not be regarded as interest for the purpose of this Article. 
+ 
+5. 
+The provisions of paragraphs 1, 2 and 3 shall not apply if the beneficial 
+owner of the interest, being a resident of a Contracting Party, carries on 
+business in the other Contracting Party in which the interest arises 
+through a permanent establishment situated therein, or performs in that 
+other Party independent personal services from a fixed base situated 
+therein, and the debt-claim in respect of which the interest is paid is 
+effectively connected with such permanent establishment or fixed base.  
+In such case the provisions of Article 7 or Article 15, as the case may be, 
+shall apply. 
+ 
+
+ 
+ 
+19
+6. 
+Interest shall be deemed to arise in a Contracting Party when the payer 
+is a resident of that Party.  Where, however, the person paying the 
+interest, whether he is a resident of a Contracting Party or not, has in a 
+Contracting Party a permanent establishment or a fixed base in 
+connection with which the indebtedness on which the interest is paid 
+was incurred, and such interest is borne by such permanent 
+establishment or fixed base, then such interest shall be deemed to arise 
+in the Party in which the permanent establishment or fixed base is 
+situated. 
+ 
+7. 
+Where, by reason of a special relationship between the payer and the 
+beneficial owner or between both of them and some other person, the 
+amount of the interest exceeds, for whatever reasons, the amount which 
+would have been agreed upon by the payer and the beneficial owner in 
+the absence of such relationship, the provisions of this Article shall 
+apply only to the last-mentioned amount.  In such case, the excess part 
+of the payments shall remain taxable according to the laws of each 
+Contracting Party, due regard being had to the other provisions of this 
+Agreement. 
+ 
+ 
+Article 12 
+Royalties 
+ 
+1. 
+Royalties arising in a Contracting Party and paid to a resident of the 
+other Contracting Party may be taxed in that other Party. 
+ 
+2. 
+However, such royalties may also be taxed in the Contracting Party in 
+which they arise and according to the laws of that Party, but if the 
+beneficial owner of the royalties is a resident of the other Contracting 
+Party, the tax so charged shall not exceed eight (8) per cent of the gross 
+amount of the royalties. 
+ 
+3. 
+The term “royalties” as used in this Article means payments of any kind 
+received as a consideration for the use of, or the right to use, any 
+copyright of literary, artistic or scientific work including cinematograph 
+films, or films or tapes used for radio or television broadcasting, any 
+patent, trade mark, design or model, plan, secret formula or process, or 
+for the use of, or the right to use, industrial, commercial or scientific 
+
+ 
+ 
+20
+equipment, know-how or for information concerning industrial, 
+commercial or scientific experience. 
+ 
+4. 
+The provisions of paragraphs 1 and 2 shall not apply if the beneficial 
+owner of the royalties, being a resident of a Contracting Party, carries 
+on business in the other Contracting Party in which the royalties arise 
+through a permanent establishment situated therein, or performs in that 
+other Party independent personal services from a fixed base situated 
+therein, and the right or property in respect of which the royalties are 
+paid is effectively connected with such permanent establishment or 
+fixed base.  In such case the provisions of Article 7 or Article 15, as the 
+case may be, shall apply. 
+ 
+5. 
+Royalties shall be deemed to arise in a Contracting Party when the payer 
+is a resident of that Party.  Where, however, the person paying the 
+royalties, whether he is a resident of a Contracting Party or not, has in a 
+Contracting Party a permanent establishment or a fixed base in 
+connection with which the obligation to pay the royalties was incurred, 
+and such royalties are borne by such permanent establishment or fixed 
+base, then such royalties shall be deemed to arise in the Party in which 
+the permanent establishment or fixed base is situated. 
+ 
+6. 
+Where, by reason of a special relationship between the payer and the 
+beneficial owner or between both of them and some other person, the 
+amount of the royalties exceeds, for whatever reasons, the amount 
+which would have been agreed upon by the payer and the beneficial 
+owner in the absence of such relationship, the provisions of this Article 
+shall apply only to the last-mentioned amount.  In such case, the excess 
+part of the payments shall remain taxable according to the laws of each 
+Contracting Party, due regard being had to the other provisions of this 
+Agreement. 
+ 
+ 
+Article 13 
+Fees for Technical Services 
+ 
+1. 
+Fees for technical services arising in a Contracting Party and paid to a 
+resident of the other Contracting Party may be taxed in that other Party. 
+ 
+
+ 
+ 
+21
+2. 
+However, such fees for technical services may also be taxed in the 
+Contracting Party in which they arise and according to the laws of that 
+Party, but if the beneficial owner of the fees for technical services is a 
+resident of the other Contracting Party, the tax so charged shall not 
+exceed five (5) per cent of the gross amount of the fees for technical 
+services. 
+ 
+3. 
+The term “fees for technical services” as used in this Article means 
+payments of any kind to any person, other than to an employee of the 
+person making the payments, in consideration for any services of a 
+technical, managerial or consultancy nature. 
+ 
+4. 
+The provisions of paragraphs 1 and 2 shall not apply if the beneficial 
+owner of the fees for technical services, being a resident of a 
+Contracting Party, carries on business in the other Contracting Party in 
+which the fees for technical services arise through a permanent 
+establishment situated therein, or performs in that other Party 
+independent personal services from a fixed base situated therein, and 
+the fees for technical services are effectively connected with such 
+permanent establishment or fixed base.  In such case the provisions of 
+Article 7 or Article 15, as the case may be, shall apply. 
+ 
+5. 
+Fees for technical services shall be deemed to arise in a Contracting 
+Party when the payer is a resident of that Party.  Where, however, the 
+person paying the fees for technical services, whether he is a resident of 
+a Contracting Party or not, has in a Contracting Party a permanent 
+establishment or a fixed base in connection with which the obligation to 
+pay the fees for technical services was incurred, and such fees for 
+technical services are borne by such permanent establishment or fixed 
+base, then such fees for technical services shall be deemed to arise in the 
+Party in which the permanent establishment or fixed base is situated. 
+ 
+6. 
+Where, by reason of a special relationship between the payer and the 
+beneficial owner or between both of them and some other person, the 
+amount of the fees for technical services paid exceeds, for whatever 
+reasons, the amount which would have been agreed upon by the payer 
+and the beneficial owner in the absence of such relationship, the 
+provisions of this Article shall apply to the last-mentioned amount.  In 
+such case, the excess part of the payments shall remain taxable 
+according to the laws of each Contracting Party, due regard being had to 
+the other provisions of this Agreement. 
+
+ 
+ 
+22
+ 
+ 
+Article 14 
+Capital Gains 
+ 
+1. 
+Gains derived by a resident of a Contracting Party from the alienation of 
+immovable property referred to in Article 6 and situated in the other 
+Contracting Party may be taxed in that other Party. 
+ 
+2. 
+Gains from the alienation of movable property forming part of the 
+business property of a permanent establishment which an enterprise of a 
+Contracting Party has in the other Contracting Party or of movable 
+property pertaining to a fixed base available to a resident of a 
+Contracting Party in the other Contracting Party for the purpose of 
+performing independent personal services, including such gains from 
+the alienation of such a permanent establishment (alone or with the 
+whole enterprise) or of such fixed base, may be taxed in that other Party. 
+ 
+3. 
+Gains derived by an enterprise of a Contracting Party from the 
+alienation of ships or aircraft operated in international traffic or 
+movable property pertaining to the operation of such ships or aircraft 
+shall be taxable only in that Party. 
+ 
+4. 
+Gains derived by a resident of a Contracting Party from the alienation of 
+shares of a company deriving more than fifty (50) per cent of its asset 
+value directly or indirectly from immovable property situated in the 
+other Contracting Party may be taxed in that other Party.  However, this 
+paragraph does not apply to gains derived from the alienation of shares: 
+ 
+(a) 
+quoted on such stock exchange as may be agreed between the 
+Parties; or 
+ 
+(b) 
+alienated or exchanged in the framework of a reorganisation of a 
+company, a merger, a scission or a similar operation; or 
+ 
+(c) 
+in a company deriving more than fifty (50) per cent of its asset 
+value from immovable property in which it carries on its 
+business. 
+ 
+
+ 
+ 
+23
+5. 
+Gains from the alienation of any property, other than that referred to in 
+paragraphs 1, 2, 3 and 4, shall be taxable only in the Contracting Party 
+of which the alienator is a resident. 
+ 
+ 
+Article 15 
+Independent Personal Services 
+ 
+1. 
+Subject to the provisions of Article 13, income derived by a resident of 
+a Contracting Party in respect of professional services or other activities 
+of an independent character shall be taxable only in that Party except in 
+the following circumstances, when such income may also be taxed in 
+the other Contracting Party: 
+ 
+(a) 
+if he has a fixed base regularly available to him in the other 
+Contracting Party for the purpose of performing his activities; in 
+that case, only so much of the income as is attributable to that 
+fixed base may be taxed in that other Contracting Party; or 
+ 
+(b) 
+if his stay in the other Contracting Party is for a period or periods 
+amounting to or exceeding in the aggregate 183 days in any 
+twelve-month period commencing or ending in the taxable period 
+concerned; in that case, only so much of the income as is derived 
+from his activities performed in that other Party may be taxed in 
+that other Party. 
+ 
+2. 
+The term “professional services” includes especially independent 
+scientific, literary, artistic, educational or teaching activities as well as 
+the independent activities of physicians, lawyers, engineers, architects, 
+dentists and accountants. 
+ 
+ 
+Article 16 
+Dependent Personal Services 
+ 
+1. 
+Subject to the provisions of Articles 17, 19 and 20, salaries, wages and 
+other similar remuneration derived by a resident of a Contracting Party 
+in respect of an employment shall be taxable only in that Party unless 
+the employment is exercised in the other Contracting Party.  If the 
+
+ 
+ 
+24
+employment is so exercised, such remuneration as is derived therefrom 
+may be taxed in that other Party. 
+ 
+2. 
+Notwithstanding the provisions of paragraph 1, remuneration derived 
+by a resident of a Contracting Party in respect of an employment 
+exercised in the other Contracting Party shall be taxable only in the 
+first-mentioned Party if: 
+ 
+(a) 
+the recipient is present in the other Party for a period or periods 
+not exceeding in the aggregate 183 days in any twelve-month 
+period commencing or ending in the taxable period concerned; 
+and 
+ 
+(b) 
+the remuneration is paid by, or on behalf of, an employer who is 
+not a resident of the other Party; and 
+ 
+(c) 
+the remuneration is not borne by a permanent establishment or a 
+fixed base which the employer has in the other Party. 
+ 
+3. 
+Notwithstanding the preceding provisions of this Article, remuneration 
+derived in respect of an employment exercised aboard a ship or aircraft 
+operated in international traffic by an enterprise of a Contracting Party 
+shall be taxable only in that Party. 
+ 
+ 
+Article 17 
+Directors’ Fees 
+ 
+Directors’ fees and other similar payments derived by a resident of a 
+Contracting Party in his capacity as a member of the board of directors of a 
+company which is a resident of the other Contracting Party may be taxed in 
+that other Party. 
+ 
+ 
+Article 18 
+Artistes and Sportspersons 
+ 
+1. 
+Notwithstanding the provisions of Articles 15 and 16, income derived 
+by a resident of a Contracting Party as an entertainer, such as a theatre, 
+motion picture, radio or television artiste, or a musician, or as a 
+
+ 
+ 
+25
+sportsperson, from that person’s personal activities as such exercised in 
+the other Contracting Party, may be taxed in that other Party. 
+ 
+2. 
+Where income in respect of personal activities exercised by an 
+entertainer or a sportsperson in that person’s capacity as such accrues 
+not to the entertainer or sportsperson but to another person, that income 
+may, notwithstanding the provisions of Articles 7, 15 and 16, be taxed 
+in the Contracting Party in which the activities of the entertainer or 
+sportsperson are exercised. 
+ 
+3. 
+The provisions of paragraphs 1 and 2 shall not apply to remuneration or 
+profits derived from activities exercised in a Contracting Party if the 
+visit to that Party is wholly or mainly supported by public funds of the 
+other Contracting Party, a political subdivision or a local authority 
+thereof.  In such case, the remuneration or profits is taxable only in the 
+Contracting Party in which the artiste or the sportsperson is a resident. 
+ 
+ 
+Article 19 
+Pensions 
+ 
+1. 
+Subject to the provisions of paragraph 2 of Article 20, pensions and 
+other similar remuneration (including a lump sum payment) paid to a 
+resident of a Contracting Party in consideration of past employment or 
+self-employment shall be taxable only in that Party. 
+ 
+2. 
+Notwithstanding the provisions of paragraph 1, pensions and other 
+similar remuneration (including a lump sum payment) made under a 
+pension or retirement scheme which is: 
+ 
+(a) 
+a public scheme that is part of the social security system of a 
+Contracting Party; or 
+ 
+(b) 
+a scheme in which individuals may participate to secure 
+retirement benefits and which is recognised for tax purposes in a 
+Contracting Party, 
+ 
+shall be taxable only in that Contracting Party. 
+ 
+ 
+
+ 
+ 
+26
+Article 20 
+Government Service 
+ 
+1. 
+(a) 
+Salaries, wages and other similar remuneration, other than 
+pensions, paid by the Government of a Contracting Party or a 
+political subdivision or a local authority thereof to an individual 
+in respect of services rendered to that Party or political 
+subdivision or local authority shall be taxable only in that Party. 
+ 
+(b) 
+However, such salaries, wages and other similar remuneration 
+shall be taxable only in the other Contracting Party if the services 
+are rendered in that other Party and the individual is a resident of 
+that other Party who: 
+ 
+(i) 
+in the case of the Hong Kong Special Administrative 
+Region, has the right of abode therein and in the case of 
+Malaysia, is a national thereof; or 
+ 
+(ii) 
+did not become a resident of that other Party solely for the 
+purpose of rendering the services. 
+ 
+2. 
+(a) 
+Any pension (including a lump sum payment) paid by, or paid out 
+of funds created or contributed by, the Government of a 
+Contracting Party or a political subdivision or a local authority 
+thereof to an individual in respect of services rendered to that 
+Party or political subdivision or local authority shall be taxable 
+only in that Party. 
+ 
+(b) 
+However, if the individual who rendered the services is a resident 
+of the other Contracting Party and the case falls within 
+subparagraph (b) of paragraph 1, any corresponding pension 
+(whether a payment in lump sum or by instalments) shall be 
+taxable only in that other Contracting Party. 
+ 
+3. 
+The provisions of Articles 16, 17, 18 and 19 shall apply to salaries, 
+wages, pensions (including a lump sum payment), and other similar 
+remuneration in respect of services rendered in connection with a 
+business carried on by the Government of a Contracting Party or a 
+political subdivision or a local authority thereof. 
+ 
+
+ 
+ 
+27
+ 
+Article 21 
+Students 
+ 
+An individual who is a resident of a Contracting Party immediately before 
+making a visit to the other Contracting Party and is temporarily present in the 
+other Party solely: 
+ 
+(a) 
+as a student at a recognised university, college, school or other 
+similar recognised educational institution in that other Party; or 
+ 
+(b) 
+as a recipient of a grant, allowance or award for the primary 
+purpose of study, research or training from the Government of 
+either Party or from a scientific, educational, religious or 
+charitable organisation or under a technical assistance 
+programme entered into by the Government of either Party,  
+ 
+shall be exempted from tax in that other Party on: 
+ 
+(i) 
+all remittances from abroad for the purposes of his maintenance, 
+education, study, research or training; and 
+ 
+(ii) 
+the amount of such grant, allowance or award. 
+ 
+ 
+Article 22 
+Other Income 
+ 
+1. 
+Items of income of a resident of a Contracting Party, wherever arising, 
+not dealt with in the foregoing Articles of this Agreement shall be 
+taxable only in that Party. 
+ 
+2. 
+The provisions of paragraph 1 shall not apply to income, other than 
+income from immovable property as defined in paragraph 2 of Article 6, 
+if the recipient of such income, being a resident of a Contracting Party, 
+carries on business in the other Contracting Party through a permanent 
+establishment situated therein, or performs in that other Party 
+independent personal services from a fixed base situated therein, and 
+the right or property in respect of which the income is paid is effectively 
+connected with such permanent establishment or fixed base.  In such 
+
+ 
+ 
+28
+case the provisions of Article 7 or Article 15, as the case may be, shall 
+apply. 
+ 
+3. 
+Notwithstanding the provisions of paragraphs 1 and 2, items of income 
+of a resident of a Contracting Party not dealt with in the foregoing 
+Articles of this Agreement and arising in the other Contracting Party 
+may also be taxed in that other Party. 
+ 
+ 
+Article 23 
+Elimination of Double Taxation 
+ 
+1. 
+In the Hong Kong Special Administrative Region, double taxation shall 
+be eliminated as follows: 
+ 
+Subject to the provisions of the laws of the Hong Kong Special 
+Administrative Region relating to the allowance of a credit against 
+Hong Kong Special Administrative Region tax of tax paid in a 
+jurisdiction outside the Hong Kong Special Administrative Region 
+(which shall not affect the general principle of this Article), Malaysian 
+tax paid under the laws of Malaysia and in accordance with this 
+Agreement, whether directly or by deduction, in respect of income 
+derived by a person who is a resident of the Hong Kong Special 
+Administrative Region from sources in Malaysia, shall be allowed as a 
+credit against Hong Kong Special Administrative Region tax payable in 
+respect of that income, provided that the credit so allowed does not 
+exceed the amount of Hong Kong Special Administrative Region tax 
+computed in respect of that income in accordance with the tax laws of 
+the Hong Kong Special Administrative Region. 
+ 
+2. 
+In Malaysia, double taxation shall be eliminated as follows: 
+ 
+Subject to the laws of Malaysia regarding the allowance as a credit 
+against Malaysian tax of tax payable in any country other than Malaysia 
+(which shall not affect the general principle of this Article), the Hong 
+Kong Special Administrative Region tax payable under the laws of the 
+Hong Kong Special Administrative Region and in accordance with this 
+Agreement by a resident of Malaysia in respect of income derived from 
+the Hong Kong Special Administrative Region shall be allowed as a 
+credit against Malaysian tax payable in respect of that income.  The 
+
+ 
+ 
+29
+credit shall not, however, exceed that part of the Malaysian tax, as 
+computed before the credit is given, which is appropriate to such item of 
+income. 
+ 
+3. 
+For the purpose of allowance as a credit in a Contracting Party, the tax 
+paid in the other Contracting Party shall be deemed to include the tax 
+which is otherwise payable in that other Contracting Party but which 
+has been reduced or exempted in accordance with special incentive 
+laws designed to promote economic development in that other 
+Contracting Party. 
+ 
+4. 
+The provisions of paragraph 3 shall cease to have effect after ten (10) 
+years from the year of assessment beginning on the first day of January 
+of the calendar year immediately following that in which this 
+Agreement enters into force.  The competent authorities of the 
+Contracting Parties may consult each other to determine whether this 
+period shall be extended. 
+ 
+ 
+Article 24 
+Non-Discrimination 
+ 
+1. 
+Persons who, in the case of the Hong Kong Special Administrative 
+Region, have the right of abode or are incorporated or otherwise 
+constituted therein, and, in the case of Malaysia, are nationals, shall not 
+be subjected in the other Contracting Party to any taxation or any 
+requirement connected therewith, which is other or more burdensome 
+than the taxation and connected requirements to which persons who 
+have the right of abode or are incorporated or otherwise constituted in 
+that other Party (where that other Party is the Hong Kong Special 
+Administrative Region) or nationals of that other Party (where that 
+other Party is Malaysia) in the same circumstances, in particular with 
+respect to residence, are or may be subjected. 
+ 
+2. 
+The taxation on a permanent establishment which an enterprise of a 
+Contracting Party has in the other Contracting Party shall not be less 
+favourably levied in that other Party than the taxation levied on 
+enterprises of that other Party carrying on the same activities.  This 
+provision shall not be construed as obliging a Contracting Party to grant 
+to residents of the other Contracting Party any personal allowances, 
+
+ 
+ 
+30
+reliefs and reductions for taxation purposes on account of civil status or 
+family responsibilities which it grants to its own residents. 
+ 
+3. 
+Except where the provisions of paragraph 1 of Article 9, paragraph 7 of 
+Article 11, paragraph 6 of Article 12 or paragraph 6 of Article 13 apply, 
+interest, royalties, fees for technical services and other disbursements 
+paid by an enterprise of a Contracting Party to a resident of the other 
+Contracting Party shall, for the purpose of determining the taxable 
+profits of such enterprise, be deductible under the same conditions as if 
+they had been paid to a resident of the first-mentioned Party provided 
+that the provisions of the domestic laws of that Contracting Party have 
+been compiled with in respect of withholding tax. 
+ 
+4. 
+Enterprises of a Contracting Party, the capital of which is wholly or 
+partly owned or controlled, directly or indirectly, by one or more 
+residents of the other Contracting Party, shall not be subjected in the 
+first-mentioned Party to any taxation or any requirement connected 
+therewith which is other or more burdensome than the taxation and 
+connected requirements to which other similar enterprises of the 
+first-mentioned Party are or may be subjected. 
+ 
+5. 
+In this Article, the term “taxation” means taxes to which this Agreement 
+applies. 
+ 
+ 
+Article 25 
+Mutual Agreement Procedure 
+ 
+1. 
+[The first sentence of paragraph 1 of Article 25 of this Agreement is 
+REPLACED by the first sentence of paragraph 1 of Article 16 of 
+the MLI] [Where a resident of a Contracting Party considers that the 
+actions of one or both of the Contracting Parties result or will result for 
+him in taxation not in accordance with the provisions of this 
+Agreement, he may, irrespective of the remedies provided by the 
+domestic laws of those Parties, present his case to the competent 
+authority of the Contracting Party of which he is a resident or, if his case 
+comes under paragraph 1 of Article 24, to that of the Contracting Party 
+in which he has the right of abode or is incorporated or otherwise 
+constituted (in the case of the Hong Kong Special Administrative 
+Region) or of which he is a national (in the case of Malaysia).]  The case 
+
+ 
+ 
+31
+must be presented within three (3) years from the first notification of the 
+action resulting in taxation not in accordance with the provisions of this 
+Agreement. 
+ 
+The following first sentence of paragraph 1 of Article 16 of the MLI replaces 
+the first sentence of paragraph 1 of Article 25 of this Agreement: 
+ARTICLE 16 OF THE MLI – MUTUAL AGREEMENT PROCEDURE 
+Where a person considers that the actions of one or both of the Contracting 
+Parties result or will result for that person in taxation not in accordance with 
+the provisions of this Agreement, that person may, irrespective of the remedies 
+provided by the domestic law of those Contracting Parties, present the case to 
+the competent authority of either Contracting Party. 
+ 
+2. 
+The competent authority shall endeavour, if the objection appears to it 
+to be justified and if it is not itself able to arrive at an appropriate 
+solution, to resolve the case by mutual agreement with the competent 
+authority of the other Contracting Party, with a view to the avoidance of 
+taxation which is not in accordance with this Agreement.  Any 
+agreement reached shall be implemented notwithstanding any time 
+limits in the domestic laws of the Contracting Parties. 
+ 
+3. 
+The competent authorities of the Contracting Parties shall endeavour to 
+resolve by mutual agreement any difficulties or doubts arising as to the 
+interpretation or application of this Agreement.  They may also consult 
+together for the elimination of double taxation in cases not provided for 
+in this Agreement. 
+ 
+4. 
+The competent authorities of the Contracting Parties may communicate 
+with each other for the purpose of reaching an agreement in the 
+preceding paragraphs. 
+ 
+ 
+
+ 
+ 
+32
+Article 26 
+Exchange of Information 
+ 
+1. 
+The competent authorities of the Contracting Parties shall exchange 
+such information as is foreseeably relevant for carrying out the 
+provisions of this Agreement or to the administration or enforcement of 
+the domestic laws of the Contracting Parties concerning taxes covered 
+by this Agreement, insofar as the taxation thereunder is not contrary to 
+the Agreement.  The exchange of information is not restricted by 
+Article 1. 
+ 
+2. 
+Any information received under paragraph 1 by a Contracting Party 
+shall be treated as secret in the same manner as information obtained 
+under the domestic laws of that Party and shall be disclosed only to 
+persons or authorities (including courts and administrative bodies) 
+concerned with the assessment or collection of, the enforcement or 
+prosecution in respect of, or the determination of appeals in relation to 
+the taxes referred to in paragraph 1.  Such persons or authorities shall 
+use the information only for such purposes.  They may disclose the 
+information in public court proceedings or in judicial decisions.  
+Information shall not be disclosed to any third jurisdiction for any 
+purpose. 
+ 
+3. 
+In no case shall the provisions of paragraphs 1 and 2 be construed so as 
+to impose on a Contracting Party the obligation: 
+ 
+(a) 
+to carry out administrative measures at variance with the laws 
+and administrative practice of that or of the other Contracting 
+Party; 
+ 
+(b) 
+to supply information which is not obtainable under the laws or in 
+the normal course of the administration of that or of the other 
+Contracting Party; 
+ 
+(c) 
+to supply information which would disclose any trade, business, 
+industrial, commercial or professional secret or trade process, or 
+information the disclosure of which would be contrary to public 
+policy. 
+ 
+
+ 
+ 
+33
+4. 
+If information is requested by a Contracting Party in accordance with 
+this Article, the other Contracting Party shall use its information 
+gathering measures to obtain the requested information, even though 
+that other Party may not need such information for its own tax purposes.  
+The obligation contained in the preceding sentence is subject to the 
+limitations of paragraph 3 but in no case shall such limitations be 
+construed to permit a Contracting Party to decline to supply information 
+solely because it has no domestic interest in such information. 
+ 
+5. 
+In no case shall the provisions of paragraph 3 be construed to permit a 
+Contracting Party to decline to supply information solely because the 
+information is held by a bank, other financial institution, nominee or 
+person acting in an agency or a fiduciary capacity or because it relates to 
+ownership interests in a person. 
+ 
+ 
+Article 27 
+Fiscal Privileges 
+ 
+Nothing in this Agreement shall affect the fiscal privileges, including those of 
+members of consular posts, under the general rules of international law or 
+under the provisions of special agreements. 
+ 
+ 
+The following paragraph 1 of Article 7 of the MLI applies and supersedes the 
+provisions of this Agreement: 
+ARTICLE 7 OF THE MLI – PREVENTION OF TREATY ABUSE 
+(Principal purposes test provision) 
+Notwithstanding any provisions of this Agreement, a benefit under this 
+Agreement shall not be granted in respect of an item of income if it is 
+reasonable to conclude, having regard to all relevant facts and circumstances, 
+that obtaining that benefit was one of the principal purposes of any 
+arrangement or transaction that resulted directly or indirectly in that benefit, 
+unless it is established that granting that benefit in these circumstances would 
+be in accordance with the object and purpose of the relevant provisions of this 
+Agreement. 
+ 
+
+ 
+ 
+34
+ 
+Article 28 
+Entry into Force 
+ 
+1. 
+Each of the Contracting Parties shall notify the other in writing of the 
+completion of the procedures required by its law for the bringing into 
+force of this Agreement.  This Agreement shall enter into force on the 
+date of the later of these notifications. 
+ 
+2. 
+The provisions of this Agreement shall thereupon have effect: 
+ 
+(a) 
+in the Hong Kong Special Administrative Region, 
+ 
+in respect of Hong Kong Special Administrative Region tax, for 
+any year of assessment beginning on or after the first day of April 
+in the calendar year following the year in which this Agreement 
+enters into force; 
+ 
+(b) 
+in Malaysia, 
+ 
+in respect of Malaysian tax, to tax chargeable for any year of 
+assessment beginning on or after the first day of January in the 
+calendar year following the year in which this Agreement enters 
+into force. 
+ 
+ 
+Article 29 
+Termination 
+ 
+This Agreement shall remain in effect indefinitely, but either Contracting 
+Party may terminate this Agreement by giving the other Contracting Party 
+written notice of termination on or before June 30th in any calendar year after 
+the period of five (5) years from the date on which this Agreement enters into 
+force.  In such event, this Agreement shall cease to have effect: 
+ 
+(a) 
+in the Hong Kong Special Administrative Region, 
+ 
+in respect of Hong Kong Special Administrative Region tax, for 
+any year of assessment beginning on or after the first day of April 
+
+ 
+ 
+35
+in the calendar year following the year in which the notice is 
+given; 
+ 
+(b) 
+in Malaysia, 
+ 
+in respect of Malaysian tax, to tax chargeable for any year of 
+assessment beginning on or after the first day of January in the 
+calendar year following the year in which the notice is given. 
+ 
+ 
+IN WITNESS WHEREOF the undersigned, duly authorised thereto, have 
+signed this Agreement. 
+ 
+DONE in duplicate at Putrajaya this 25th day of April 2012, each in the 
+Chinese, Malay, and English language, the three texts being equally authentic. 
+In case of any divergence in the interpretation and the application of this 
+Agreement, the English text shall prevail. 
+ 
+ 
+[SIGNED] 
+ 
+ 
+
+ 
+ 
+36
+PROTOCOL 
+ 
+At the time of signing of the Agreement between the Government of the Hong 
+Kong Special Administrative Region of the People’s Republic of China and 
+the Government of Malaysia for the Avoidance of Double Taxation and the 
+Prevention of Fiscal Evasion with respect to Taxes on Income (the 
+“Agreement”) the Governments of the Contracting Parties have agreed upon 
+the following provisions which shall form an integral part of the Agreement. 
+ 
+1. 
+With reference to Article 11 
+ 
+In relation to sub-paragraph (b)(vi) of paragraph 3 of this Article, such 
+would include all statutory bodies in Malaysia at the time of formal 
+signing of the Agreement. 
+ 
+2. 
+With reference to Article 18 
+ 
+It is understood that paragraph 3 of this Article also applies to funds 
+provided by institutions established by the respective Government of 
+the Contracting Parties (including in the case of Malaysia, the 
+Governments of the States in Malaysia) for the discharge of functions of 
+a public purpose normally carried out by a government. 
+ 
+3. 
+With reference to Article 20 
+ 
+It is understood that the provisions of this Article also apply to salaries, 
+wages and other similar remuneration, and to pensions, paid by any 
+institution set up by the Government of Malaysia or the Governments of 
+the States in Malaysia for the discharge of functions of a public purpose 
+normally carried out by a government. 
+ 
+4. 
+With reference to Article 26 
+ 
+It is understood that this Article only obliges the Contracting Parties to 
+exchange information upon request and a Contracting Party shall only 
+request information relating to taxable periods for which the provisions 
+of the Agreement have effect for that Party.  
+ 
+ 
+ 
+
+ 
+ 
+37
+IN WITNESS WHEREOF the undersigned, duly authorised thereto, have 
+signed this Protocol. 
+ 
+ 
+DONE in duplicate at Putrajaya this 25th day of April 2012, each in the 
+Chinese, Malay, and English language, the three texts being equally authentic.  
+In case of any divergence in the interpretation and the application of this 
+Protocol, the English text shall prevail. 
+ 
+ 
+[SIGNED] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

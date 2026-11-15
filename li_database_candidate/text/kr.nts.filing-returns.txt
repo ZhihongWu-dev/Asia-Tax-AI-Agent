@@ -1,0 +1,97 @@
+Go to Main Menu
+Go to main text
+Filing returns
+HOME
+About NTS
+NTS Taxpayer Service center (Inside Incheon International Airport)
+Filing returns
+Share
+Facebook
+Twitter
+Kakaostory
+Print
+Returns you may file at the Center
+1
+VAT
+2
+Comprehensive Income Tax
+3
+Corporate Income Tax
+4
+Capital Gains Tax
+5
+Inheritance & Gift Tax
+6
+All other tax returns that can be filed at a tax office
+7
+Claim for reassessment, including filing past due returns
+Filing deadlines
+VAT
+VAT - Tax Period, Taxable Period (MM/DD), Filing/Payment Deadline (MM/DD), Taxpayer
+Tax Period
+Taxable Period (MM/DD)
+Filing/Payment Deadline (MM/DD)
+Taxpayer
+H1
+Preliminary
+1/1~3/31
+4/25
+Corporate
+Final
+1/1~6/30
+7/25
+Corporate, Individual
+H2
+Preliminary
+7/1~9/30
+10/25
+Corporate
+Final
+7/1~12/31
+1/25 following year
+Corporate, Individual
+-
+Final
+1/1~12/31
+1/25 following year
+Simplified
+Global Income Tax
+Global Income Tax - Taxable Period(MM/DD), Filing/Payment Deadline (MM/DD), Taxpayer
+Taxable Period(MM/DD)
+Filing/Payment Deadline (MM/DD)
+Taxpayer
+1/1~12/31
+5/1~5/31 following year
+Taxpayers with an ‘aggregate income’
+(business, wage & salary, interest, dividend, annuity and other income aggregated)
+1/1~12/31
+5/1~6/30 following year
+Taxpayers with obligation to undergo tax return review by professional tax service providers prior to filing
+Corporate Income Tax
+Corporate Income Tax - Taxable Period, Filing/Payment Deadline
+Taxable Period
+Filing/Payment Deadline
+Business Year
+No later than 3 months from the last day of the month in which the business year ends
+Capital Gains Tax
+Capital Gains Tax - Filing, Filing/Payment Deadline (MM/DD), Taxpayer
+Filing
+Filing/Payment Deadline (MM/DD)
+Taxpayer
+Preliminary Return
+No later than 2 months from the last day of the month in which the asset was sold
+Taxpayer subject to capital gains tax
+Final Return
+5/1~5/31
+Taxpayer who has sold his/her property at least twice in the same year and has not filed an aggregate tax return
+Taxpayer who has made capital gains from derivatives trading
+Inheritance & Gift Tax
+Inheritance & Gift Tax - Tax, Filing/Payment Deadline
+Tax
+Filing/Payment Deadline
+Inheritance
+No later than 6 months from the last day of the month in which the inheritance is received(No later than 9 months if the inheritee or the inheritor is domiciled in a foreign country)
+Gift
+No later than 3 months from the last day of the month in which the gift was received
+Content satisfaction survey
+How satisfied are you with our website?

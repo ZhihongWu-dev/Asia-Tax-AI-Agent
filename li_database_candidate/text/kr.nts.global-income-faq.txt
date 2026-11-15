@@ -1,0 +1,52 @@
+Do I have to file a return?
+Principally, a resident is any individual who has his/her domicile in Korea or a place of residence for 1 year or more in Korea. The domicile shall be judged by the objective facts of living relationship, such as the existence of a family living together in Korea and of the property located in Korea. And, the 'place of residence' means the place where a person has dwelt for a long time besides his address, and in which no close general living relationship is formed as the domicile.
+A taxpayer who falls within the following cases is deemed to have a domicile in Korea.
+ⅰ) Who has an occupation which would require him to reside in Korea for 1 year or more; or
+ⅱ) Who has his family in Korea and is likely to reside in Korea for 1 year or more based on his occupation or assets held in Korea.
+How do I know if I am a Korean resident?
+If you are a foreigner resident for the entire year, you have to file a final tax return in the same way as a Korean resident does. Four major types of individual income consisting of global income, retirement income, capital gains and timber income are all taxable.
+Furthermore, if you maintain a business place(usually termed as a “permanent establishment” in tax conventions) in Korea or have only real estate income arising from Korean sources without maintaining PE, you must also file a tax return even though your status is considered to be non-resident.
+When do I have to file?
+The regular return period for the income accruing for the tax year concerned begins on May 1 and ends on May 31 of the next year. For tax purposes, individual taxpayers must use a calendar year as their taxable year. When the due date for filing a return and paying tax falls on Sunday or a legal holiday, the next business day is the due date
+Where do I file and pay?
+You have to file your return to the district tax office(DTO) having jurisdiction over your domicile. But your tax return filed at an unqualified DTO will be automatically transferred to the relevant DTO that has jurisdiction on your current domicile. And then, you can pay your tax at any bank or post offices by May 31. You may also use electronic payment system by phone (phone banking; ARS) or internet (internet banking; refer to National Tax Electronic Payment banner on www.nts.go.kr) at your home.
+Could you explain the income tax rates in Korea? (in the case of business income earner)
+The amount of income tax on global income is calculated by applying increasing marginal tax rates to respective tax base, and may be determined by using the following table.
+The taxable income is the total amount of wage and salary income remaining after the deduction of the following amount (₩80,000 per day for a daily worker)
+Tax Base of Global Income
+Tax Rates
+Less than ₩10,000,000
+8% of tax rate
+₩10,000,000 ~ ₩40,000,000
+₩800,000 + 17% of the amount over ₩10,000,000
+₩40,000,000 ~ ₩80,000,000
+₩5,900,000 + 26% of the amount over ₩40,000,000
+Over ₩80,000,000
+₩16,300,000 + 35% of the amount over ₩80,000,000
+What is the scope of persons eligible for Personal Exemptions for the income tax purpose?
+Persons eligible for spousal exemption, dependent exemption, or exemption for handicapped or aged persons must be (i) a spouse and/or unmarried lineal descendant and (ii) family members who are listed on the registration card of the resident actually living at the domicile or residence.
+A person who has temporarily left the taxpayer's domicile or residence for reasons of schooling, medical treatment, business, or work may still be entitled to an exemption. The determination of eligibility shall be made based on the existing conditions at the closing date of the tax period concerned.
+Do I have to report foreign income?
+If you are a Korean resident, you have to report your income from all sources, both inside and outside Korea. You also should report foreign income in Korean Won and use the exchange rate that was in effect on the day you received the income.
+Generally, when you report such foreign income on your return, you can take either a deduction or a credit for income taxes imposed on the income by a foreign country. Tax treaties with other countries may affect whether you are eligible for this credit.
+How much tax do I have to pay on income earned from a foreign company located overseas?
+Your income earned from a foreign company is not treated differently from the Korean sourced income. However, you may take either a deduction or a credit for income taxes imposed on you by the foreign government when you file a final tax return on your global income.
+Is there any credit for tax paid in foreign countries?
+Where a resident has paid or is to pay income tax in a foreign country, the tax amount paid or payable is deducted from the amount of Korean income tax accrued with a limit. This limit is an amount equivalent to that of the income tax owed without the application of this credit, multiplied by the ratio of income from foreign sources to total taxable income. If the foreign tax amount paid or payable exceeds this limit, the excess portion may be carried over for 5 years.
+When can I expect my refund?
+When you complete your tax return, you get to know if you already paid more income tax than you have to. If so, you can get a refund of the amount you overpaid. Normally, the refund process for the returns filed takes at least 4 weeks and can be done during June.
+Can the tax losses be carried forward to offset future profits?
+The amount of losses incurred during each business year within the five year prior to the first day of the current business year which were not thereafter deducted in the calculation of the basis for assessment of taxes shall be deducted from the income of a domestic corporation for business year. The amount of losses of a domestic corporation for each business year shall be the total amount of earning during the business year deducted from the total amount of losses incurred during the business year.
+Which form should I use?
+There are 2 forms you can choose when you file your final tax return: Form 40-1 and Form 40-4. You should use Form 40-4 if you have only either business income or real estate income. For details, refer to the information on the first page of Form 40-4. You should use Form 40-1 otherwise.
+Also, where a corporation has failed to submit a payment statement or where the details of transactions submitted by the company are found to be unclear, an amount equivalent to 2% of the amount of the transactions in the reports not submitted or unclear is assessed as penalty tax.
+What happens after I file?
+When we receive your return, we usually review it based on the information you provided. However, we may select your return for a more detailed review before we assess it. If so, and we ask you to give us documents to verify the deductions or credits you claimed, your assessment may be delayed. We also review some returns after we have assessed them, to verify the income reported or the deductions or credits claimed.
+What records should I keep?
+You must keep records so that you can prepare a complete and accurate income tax return. The law does not require any special form of records. However, you should keep all receipts, cancelled checks or other proofs of payments, and any other records to support any deductions or credits you claim. For assessment of tax you owe, generally you should keep these records for 5 years from the date you filed the return.
+What penalties do I pay?
+The penalty for both failure-to-return and failure-to-pay is assessed if a return or payment is not accomplished by the due date.
+Penalty on Failure to File Returns
+If a resident either fails to file a tax return or under-reports the relevant income, an amount equivalent to 20% of the income unreported or under-reported will be included in the calculation of tax amount as follows:
+Penalty on Non-payment or Underpayment of Tax
+When the income tax payable is not paid properly, a penalty in the amount of 0.03% of the amount shall be added to the amount of tax due, for each day the amount remains unpaid.
