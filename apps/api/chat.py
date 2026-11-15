@@ -146,6 +146,21 @@ def knowledge_search(q: str = Query(min_length=2, max_length=500),
     return result
 
 
+@router.get('/library/search')
+def library_search(q: str = Query(min_length=2, max_length=120),
+                   jurisdiction: str = Query(min_length=2, max_length=2),
+                   workspace: str = Depends(owner)):
+    """Authenticated, read-only lookup in the separately uploaded law library."""
+    from packages.chat.library_cloud import search_library
+
+    try:
+        return search_library(q, jurisdiction)
+    except ValueError:
+        raise HTTPException(422, 'invalid_library_query') from None
+    except SQLAlchemyError:
+        raise HTTPException(503, 'library_unavailable') from None
+
+
 @router.get("/cases")
 def cases(workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
     return [public(doc) for doc in call(service.store.list, workspace)]
