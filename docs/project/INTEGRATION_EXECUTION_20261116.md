@@ -32,3 +32,13 @@ Imported latest agent, rule and optimization sources and library tools. Preserve
 5. Implement corporate and personal income-tax workflows and supported calculations with jurisdiction-specific official evidence, dates, deductions, losses, credits and filing requirements.
 6. Run business cases for every jurisdiction and subject, missing-information cases, date boundaries, isolation and original dividend regressions. Missing coverage is not success.
 7. Verify deployability and live end-to-end behavior, then commit and push all deliverables to Zhihong-Wu. No completion or production readiness is claimed by this checkpoint.
+
+
+## Validation checkpoint — both income-tax subjects confirmed
+
+The user explicitly requires both corporate and personal income tax; corporate remains first priority. Delivery remains the existing Zhihong-Wu branch.
+
+- Income-tax contract, persistence and authenticated API suite: 30 passed (2026-11-16). Includes owner isolation, CSRF header, stale revision and incomplete-information status.
+- Full application regression: 683 passed, 36 skipped, 11 deselected, 14 failed and 2 errors. Failures include language preference expectations, UTF-8 reading, Windows permission assertions, tracing and attachment workers. These are unresolved, not waived.
+- Merged library rebuild is not accepted: legacy parameter identifiers violate the new naming convention and some legacy citation identifiers remain unresolved. Preserve source records while reconciling references; do not disable validation.
+- Corporate/personal tax calculation, complete jurisdiction-specific acceptance and final remote delivery remain unfinished.
