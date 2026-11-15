@@ -1,446 +1,305 @@
-"""Synchronise the local database package to Supabase.
+#!/usr/bin/env python
+"""Upload the library to the shared remote by overwriting it (数据库规范.md §4.5).
 
-Only the ``database`` schema and the Storage bucket of the same name are in
-scope. Tables load into a same-structure staging schema and swap in one
-PostgreSQL transaction, so a failed table load leaves the old schema intact.
+  python database/tools/upload.py [--jur cn ...] [--partial] [--dry-run] [--schema database] [--bucket database]
+
+The jurisdictions that pass the acceptance (§5; every jurisdiction of jurisdiction.csv when no --jur is given; with
+--partial also those with gaps but no error) are uploaded, and the remote is replaced by exactly that data:
+  1. files: every raw/, ocr/ and text/ file of those jurisdictions, superseded.csv (the rows of their documents), and the
+     spec and task sheet in Chinese and English (DOCS, under docs/), are written to the bucket (a path already there is
+     overwritten); then every other object is deleted;
+  2. tables: in one transaction the schema is dropped and created again with the seven tables and their rows and the
+     table meta (key, value: spec_version, the sha256 of build.py and upload.py, the git commit of the tools, who
+     uploaded and when, the acceptance line of each jurisdiction), so a failure leaves the previous tables as they were.
+Before writing, the remote meta is read: a remote written under a newer specification (spec_version later than
+build.SPEC_VERSION) is not overwritten; update the tools first. Nothing else is compared. Upload from the folder that
+holds everyone's data: what is not in it is gone from the remote afterwards.
+--dry-run     print what would be uploaded and the remote meta; write nothing
+Credentials (never printed) come from the environment or the .env next to or above database/: database_url for
+Postgres, supabase_url and supabase_key for the bucket. The tools and samples/ are not uploaded (their commit is in meta).
+The bucket has a standing rule that lets the publishable key (role anon) read and write it, so a publishable key is
+enough. Uploaded: the seven tables and meta, raw/, ocr/, text/, superseded.csv and the four docs.
+Exit code 0 when the upload went through, 1 otherwise.
 """
-from __future__ import annotations
-
 import argparse
 import csv
+import datetime
+import getpass
+import hashlib
 import io
-import json
-import os
+import re
 import subprocess
-import tempfile
+import sys
 from pathlib import Path
 from urllib.parse import quote
 
-import psycopg
-import requests
-from psycopg import sql
+if __name__ == "__main__":
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace", line_buffering=True)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import build                               # noqa: E402  tables, subset of one jurisdiction
+import fetch                               # noqa: E402  secrets from the environment or .env
 
-from build import audit
-from common import DATA, TABLES, rows
-
-DOCS = ('docs/spec.zh.md', 'docs/spec.en.md', 'docs/task_sheet.zh.md', 'docs/task_sheet.en.md')
-REMOTE_SCHEMA = 'database'
-BUCKET = 'database'
-STAGING_SCHEMA = 'database_upload_stage'
-COPY_BATCH_ROWS = 250
-PRIMARY_KEYS = {
-    'jurisdiction': 'code', 'doc': 'id', 'files': 'path', 'clause': 'cite_id',
-    'param': 'param_id', 'decision': 'id', 'treaty': 'pair',
-}
-
-
-def env_values() -> dict[str, str]:
-    """Read local configuration without displaying secret values."""
-    values: dict[str, str] = {}
-    for location in (DATA.parent / '.env', DATA / '.env'):
-        if not location.exists():
-            continue
-        for line in location.read_text(encoding='utf-8').splitlines():
-            key, separator, value = line.partition('=')
-            if separator and key.strip() and not key.lstrip().startswith('#'):
-                values[key.strip()] = value.strip().strip('"').strip("'")
-    return values
+csv.field_size_limit(10 ** 9)
+TOOLS = Path(__file__).resolve().parent
+ROOT = TOOLS.parent
+KEY = {"jurisdiction": "code", "treaty": "pair", "doc": "id", "clause": "cite_id", "param": "param_id",
+       "files": "path", "decision": "id"}
+ORDER = ["jurisdiction", "doc", "clause", "param", "treaty", "decision", "files"]
+SAFE_PATH = re.compile(r"^[A-Za-z0-9._/-]+$")
+SAFE_NAME = re.compile(r"^[a-z0-9_-]{1,63}$")
+DOCS = {"数据库规范.md": "docs/spec.zh.md", "database_spec.en.md": "docs/spec.en.md",      # local file -> bucket path;
+        "采集任务单.md": "docs/task_sheet.zh.md", "collection_task_sheet.en.md": "docs/task_sheet.en.md"}   # uploaded each time
 
 
-def configured(values: dict[str, str], *names: str) -> str:
-    for name in names:
-        if values.get(name):
-            return values[name]
-        if os.environ.get(name):
-            return os.environ[name]
-    return ''
+def clean(msg, secrets):
+    for s in secrets:
+        if s:
+            msg = msg.replace(s, "***")
+    return re.sub(r"postgres(?:ql)?(?:[+]psycopg)?://[^ ]+", "<database_url>", msg)
 
 
-def configuration() -> tuple[str, str, str]:
-    values = env_values()
-    database_url = configured(values, 'database_url', 'DATABASE_URL', 'FSIE_DATABASE_URL')
-    supabase_url = configured(values, 'supabase_url', 'SUPABASE_URL', 'FSIE_AUTH_SUPABASE_URL')
-    supabase_key = configured(values, 'supabase_key', 'SUPABASE_KEY', 'FSIE_AUTH_PUBLISHABLE_KEY')
-    missing = [label for label, value in (
-        ('database URL', database_url), ('Supabase URL', supabase_url), ('Supabase key', supabase_key),
-    ) if not value]
-    if missing:
-        raise ValueError('Missing ' + ', '.join(missing) + ' in .env')
-    # SQLAlchemy URLs are common in application .env files but psycopg takes
-    # a PostgreSQL URI. Some prior local configuration also used a bare
-    # ``?sslmode`` flag; make its intended secure value explicit.
-    if database_url.startswith('postgresql+psycopg://'):
-        database_url = 'postgresql://' + database_url.removeprefix('postgresql+psycopg://')
-    if database_url.endswith('?sslmode'):
-        database_url += '=require'
-    elif '&sslmode' in database_url and ('&sslmode=' not in database_url):
-        database_url = database_url.replace('&sslmode', '&sslmode=require')
-    return database_url, supabase_url.rstrip('/'), supabase_key
+# ---------------------------------------------------------------- remote
+class Bucket:
+    def __init__(self, url, key, name):
+        import requests
+        self.http, self.base, self.name = requests.Session(), url.rstrip("/") + "/storage/v1", name
+        self.http.headers.update({"apikey": key})
+        if key.startswith("eyJ"):                         # a legacy service_role JWT also goes in Authorization
+            self.http.headers["Authorization"] = "Bearer " + key
 
-
-def local_objects() -> list[str]:
-    names = [item['path'] for item in rows('files')] + list(DOCS)
-    missing = [name for name in names if not (DATA / name).is_file()]
-    if missing:
-        raise ValueError('Local upload object is missing: ' + ', '.join(missing))
-    return sorted(set(names))
-
-
-def storage_headers(key: str) -> dict[str, str]:
-    return {'apikey': key, 'Authorization': f'Bearer {key}'}
-
-
-def curl_storage_list(url: str, key: str, prefix: str) -> list[dict]:
-    """List Storage objects with curl only after requests has a TLS transport error.
-
-    The Supabase key is written to a 0600 temporary curl configuration file,
-    never passed in command arguments or printed in diagnostics.
-    """
-    request_body = json.dumps({'prefix': prefix, 'limit': 1000, 'offset': 0,
-                               'sortBy': {'column': 'name', 'order': 'asc'}})
-    def quoted(value: str) -> str:
-        return value.replace('\\', '\\\\').replace('"', '\\"')
-    with tempfile.NamedTemporaryFile('w', encoding='utf-8', prefix='database-storage-', delete=False) as config:
-        config.write(f'header = "apikey: {quoted(key)}"\n')
-        config.write(f'header = "Authorization: Bearer {quoted(key)}"\n')
-        config.write('header = "Content-Type: application/json"\n')
-        config.write(f'data = "{quoted(request_body)}"\n')
-        config_path = Path(config.name)
-    try:
-        config_path.chmod(0o600)
-        completed = subprocess.run(
-            ['curl', '--silent', '--show-error', '--fail', '--connect-timeout', '10', '--max-time', '20',
-             '--config', str(config_path),
-             f'{url}/storage/v1/object/list/{BUCKET}'], text=True, capture_output=True,
-        )
-        if completed.returncode:
-            raise ValueError(f'Storage list curl fallback failed: {completed.stderr.strip()}')
-        payload = json.loads(completed.stdout)
-        if not isinstance(payload, list):
-            raise ValueError('Storage list curl fallback returned a non-list response')
-        return payload
-    finally:
-        config_path.unlink(missing_ok=True)
-
-
-def remote_objects_http(url: str, key: str, prefix: str = '') -> set[str]:
-    """Recursively list objects in exactly the selected bucket.
-
-    The Supabase Storage list endpoint is reliable through curl in this
-    environment, while the Python TLS transport can stall before it reports a
-    retryable error. Prefer the supported curl path and retain requests as a
-    fallback for installations where curl itself is unavailable.
-    """
-    try:
-        entries = curl_storage_list(url, key, prefix)
-    except ValueError:
-        response = requests.post(
-            f'{url}/storage/v1/object/list/{BUCKET}', headers=storage_headers(key),
-            json={'prefix': prefix, 'limit': 1000, 'offset': 0, 'sortBy': {'column': 'name', 'order': 'asc'}},
-            timeout=15,
-        )
-        response.raise_for_status()
-        entries = response.json()
-    result: set[str] = set()
-    for entry in entries:
-        name = entry.get('name', '')
-        if not name:
-            continue
-        relative = f'{prefix}/{name}'.strip('/')
-        if entry.get('id') is None and entry.get('metadata') is None:
-            result |= remote_objects_http(url, key, relative)
-        else:
-            result.add(relative)
-    return result
-
-
-def remote_objects(database_url: str, supabase_url: str, supabase_key: str) -> set[str]:
-    """List exactly the target bucket's object names without recursive HTTP calls.
-
-    The configured PostgreSQL connection is already required for the atomic
-    schema replacement.  Querying `storage.objects` through that same channel
-    avoids one Storage REST request per folder during preflight and verification.
-    Retain the REST implementation as a fallback for deployments whose database
-    role cannot read the Storage metadata table.
-    """
-    try:
-        with psycopg.connect(database_url) as connection:
-            with connection.cursor() as cursor:
-                cursor.execute('SELECT name FROM storage.objects WHERE bucket_id = %s', (BUCKET,))
-                return {row[0] for row in cursor.fetchall()}
-    except psycopg.Error:
-        return remote_objects_http(supabase_url, supabase_key)
-
-
-def upload_object(url: str, key: str, name: str) -> None:
-    destination = f'{url}/storage/v1/object/{BUCKET}/{quote(name, safe="/")}'
-    try:
-        with (DATA / name).open('rb') as payload:
-            response = requests.post(
-                destination,
-                headers={**storage_headers(key), 'x-upsert': 'true', 'Content-Type': 'application/octet-stream'},
-                data=payload, timeout=300,
-            )
-    except requests.RequestException as error:
-        # The Python TLS transport can fail for a single large object in this
-        # environment although curl reaches the same configured endpoint. Keep
-        # the key in a 0600 config file, as in curl_storage_list, and use the
-        # same explicit object destination rather than broadening its scope.
-        escaped_key = key.replace('\\', '\\\\').replace('"', '\\"')
-        with tempfile.NamedTemporaryFile('w', encoding='utf-8', prefix='database-storage-', delete=False) as config:
-            config.write(f'header = "apikey: {escaped_key}"\n')
-            config.write(f'header = "Authorization: Bearer {escaped_key}"\n')
-            config.write('header = "x-upsert: true"\n')
-            config.write('header = "Content-Type: application/octet-stream"\n')
-            config_path = Path(config.name)
-        try:
-            config_path.chmod(0o600)
-            completed = subprocess.run(
-                ['curl', '--silent', '--show-error', '--fail', '--connect-timeout', '10', '--max-time', '300',
-                 '--config', str(config_path), '--request', 'POST', '--data-binary', '@' + str(DATA / name), destination],
-                text=True, capture_output=True,
-            )
-            if completed.returncode:
-                raise ValueError(f'Storage upload fallback failed for {name}: {completed.stderr.strip()}') from error
+    def ensure(self):
+        if self.http.get("%s/bucket/%s" % (self.base, self.name), timeout=60).status_code == 200:
             return
-        finally:
-            config_path.unlink(missing_ok=True)
-    if not response.ok:
-        raise ValueError(f'Storage upload failed for {name}: HTTP {response.status_code}')
+        r = self.http.post("%s/bucket" % self.base, json={"id": self.name, "name": self.name, "public": False}, timeout=60)
+        if r.status_code not in (200, 201):
+            raise RuntimeError("cannot see or create bucket %s: HTTP %s %s" % (self.name, r.status_code, r.text[:120]))
+
+    def put(self, path, data, ctype="application/octet-stream"):
+        """Write one object; a server error (5xx, e.g. Cloudflare 520) or a dropped connection is tried again twice."""
+        import time
+        import requests
+        for attempt in range(3):
+            try:
+                r = self.http.post("%s/object/%s/%s" % (self.base, self.name, quote(path)), data=data, timeout=600,
+                                   headers={"Content-Type": ctype, "x-upsert": "true"})
+            except requests.RequestException as e:
+                if attempt == 2:
+                    raise RuntimeError("upload of %s failed: %s" % (path, type(e).__name__))
+                time.sleep(5 * (attempt + 1))
+                continue
+            if r.status_code in (200, 201):
+                return
+            if r.status_code < 500 or attempt == 2:
+                hint = (" (with a publishable key the bucket needs its standing rule for role anon, 数据库规范.md 4.5)"
+                        if r.status_code in (400, 401, 403) else "")
+                raise RuntimeError("upload of %s failed: HTTP %s %s%s" % (path, r.status_code, " ".join(r.text[:120].split()), hint))
+            time.sleep(5 * (attempt + 1))
+
+    def delete(self, paths):
+        for i in range(0, len(paths), 100):
+            r = self.http.delete("%s/object/%s" % (self.base, self.name), json={"prefixes": paths[i:i + 100]}, timeout=120)
+            if r.status_code != 200:
+                raise RuntimeError("deleting old files failed: HTTP %s %s" % (r.status_code, r.text[:120]))
 
 
-def delete_object(url: str, key: str, name: str) -> None:
-    response = requests.delete(
-        f'{url}/storage/v1/object/{BUCKET}/{quote(name, safe="/")}',
-        headers=storage_headers(key), timeout=60,
-    )
-    if not response.ok:
-        raise ValueError(f'Storage deletion failed for {name}: HTTP {response.status_code}')
+def tools_meta(accepted_lines):
+    """The meta rows of this upload: who, when, with which specification and which tools."""
+    def sha(name):
+        return hashlib.sha256((TOOLS / name).read_bytes()).hexdigest()
+    git = subprocess.run(["git", "-C", str(TOOLS), "rev-parse", "HEAD"], capture_output=True, text=True)
+    dirty = subprocess.run(["git", "-C", str(TOOLS), "status", "--porcelain", "--", "."], capture_output=True, text=True)
+    commit = git.stdout.strip() if git.returncode == 0 else "not a git checkout"
+    if git.returncode == 0 and dirty.stdout.strip():
+        commit += " (tools changed since)"
+    meta = {"spec_version": build.SPEC_VERSION, "build_py_sha256": sha("build.py"), "upload_py_sha256": sha("upload.py"),
+            "tools_commit": commit, "uploaded_by": getpass.getuser(),
+            "uploaded_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
+    for line in accepted_lines:
+        m = re.match(r"acceptance (\S+): (.*)$", line)
+        if m:
+            meta["acceptance_" + m.group(1)] = m.group(2)
+    return meta
 
 
-def replace_tables(database_url: str) -> None:
-    with psycopg.connect(database_url) as connection:
-        with connection.cursor() as cursor:
-            print('Table sync: checking target schema.', flush=True)
-            cursor.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = %s AND table_type = 'BASE TABLE'", (REMOTE_SCHEMA,))
-            present = {row[0] for row in cursor.fetchall()}
-            absent = set(TABLES) - present
-            if absent:
-                raise ValueError('Remote schema is missing expected tables: ' + ', '.join(sorted(absent)))
-            print('Table sync: creating staging schema.', flush=True)
-            cursor.execute(f'DROP SCHEMA IF EXISTS {STAGING_SCHEMA} CASCADE')
-            cursor.execute(f'CREATE SCHEMA {STAGING_SCHEMA}')
-            for table, fields in TABLES.items():
-                try:
-                    print(f'Table sync: staging {table} ({len(rows(table))} rows).', flush=True)
-                    cursor.execute(f'CREATE TABLE {STAGING_SCHEMA}.{table} (LIKE {REMOTE_SCHEMA}.{table} INCLUDING ALL)')
-                    if rows(table):
-                        # A whole clause.csv COPY can exceed the managed
-                        # database's statement timeout.  Keep all batches in
-                        # this one transaction and staging schema, while
-                        # making each COPY independently short enough to
-                        # complete.  Any failed batch still rolls back the
-                        # entire transaction before the schema swap.
-                        with (DATA / f'{table}.csv').open('r', encoding='utf-8-sig', newline='') as source:
-                            reader = csv.DictReader(source)
-                            while batch := [next(reader, None) for _ in range(COPY_BATCH_ROWS)]:
-                                batch = [record for record in batch if record is not None]
-                                if not batch:
-                                    break
-                                payload = io.StringIO(newline='')
-                                writer = csv.DictWriter(payload, fieldnames=fields)
-                                writer.writeheader()
-                                writer.writerows(batch)
-                                with cursor.copy(f'COPY {STAGING_SCHEMA}.{table} ({", ".join(fields)}) FROM STDIN WITH (FORMAT CSV, HEADER TRUE)') as copy:
-                                    copy.write(payload.getvalue())
-                except psycopg.Error as error:
-                    # COPY errors identify a bad local value, not credentials.
-                    # Keep the database URI out of diagnostics while preserving
-                    # enough context to repair a failed staged upload.
-                    state = getattr(error, 'sqlstate', None)
-                    detail = str(error).splitlines()[0]
-                    suffix = f' [{state}]' if state else ''
-                    raise ValueError(f'Unable to stage table {table}{suffix}: {detail}') from error
-            print('Table sync: replacing target schema.', flush=True)
-            cursor.execute(f'DROP SCHEMA {REMOTE_SCHEMA} CASCADE')
-            cursor.execute(f'ALTER SCHEMA {STAGING_SCHEMA} RENAME TO {REMOTE_SCHEMA}')
-        print('Table sync: committing replacement.', flush=True)
-        connection.commit()
+def remote_meta(con, schema):
+    """The meta table of the remote as {key: value}; empty when the remote has none (written before 2026-11-07)."""
+    with con.cursor() as cur:
+        cur.execute("SELECT 1 FROM information_schema.tables WHERE table_schema = %s AND table_name = 'meta'", (schema,))
+        if not cur.fetchone():
+            return {}
+        cur.execute('SELECT key, value FROM "%s"."meta"' % schema)
+        return dict(cur.fetchall())
 
 
-def reconcile_missing_rows(database_url: str) -> None:
-    """Reconcile local rows by primary key, within one transaction.
-
-    This is deliberately narrower than a schema replacement. Local data is
-    authoritative: a remote-only key is an unexpected divergence and stops
-    the operation before any write. Existing keys are updated only when one
-    or more stored fields differ, which supports a replacement original under
-    an existing document identifier.
-    """
-    with psycopg.connect(database_url) as connection:
-        with connection.cursor() as cursor:
-            for table, fields in TABLES.items():
-                key = PRIMARY_KEYS[table]
-                local = {record[key]: record for record in rows(table)}
-                cursor.execute(
-                    sql.SQL('SELECT {} FROM {}.{}').format(
-                        sql.SQL(', ').join(sql.Identifier(field) for field in fields),
-                        sql.Identifier(REMOTE_SCHEMA), sql.Identifier(table),
-                    )
-                )
-                remote_records = {record[fields.index(key)]: record for record in cursor.fetchall()}
-                remote_keys = set(remote_records)
-                unexpected = remote_keys - set(local)
-                if unexpected:
-                    raise ValueError(
-                        f'Reconciliation refused for {table}: remote-only primary keys are present.'
-                    )
-                missing = [local[record_key] for record_key in sorted(set(local) - remote_keys)]
-                changed = [
-                    local[record_key] for record_key in sorted(set(local) & remote_keys)
-                    if tuple(local[record_key][field] or None for field in fields) != remote_records[record_key]
-                ]
-                if not missing and not changed:
-                    print(f'Table reconciliation: {table} already matches.', flush=True)
-                    continue
-                if missing:
-                    print(f'Table reconciliation: inserting {len(missing)} missing {table} rows.', flush=True)
-                if changed:
-                    print(f'Table reconciliation: updating {len(changed)} changed {table} rows.', flush=True)
-                statement = sql.SQL('INSERT INTO {}.{} ({}) VALUES ({}) ON CONFLICT ({}) DO UPDATE SET {}').format(
-                    sql.Identifier(REMOTE_SCHEMA), sql.Identifier(table),
-                    sql.SQL(', ').join(sql.Identifier(field) for field in fields),
-                    sql.SQL(', ').join(sql.Placeholder() for _ in fields),
-                    sql.Identifier(key),
-                    sql.SQL(', ').join(
-                        sql.SQL('{} = EXCLUDED.{}').format(sql.Identifier(field), sql.Identifier(field))
-                        for field in fields if field != key
-                    ),
-                )
-                cursor.executemany(
-                    statement,
-                    [tuple(record[field] or None for field in fields) for record in missing + changed],
-                )
-        print('Table reconciliation: committing reconciled changes.', flush=True)
-        connection.commit()
+def replace_tables(con, schema, rows, meta):
+    """Drop the schema and create it again with the seven tables, their rows and meta, in one transaction."""
+    with con.cursor() as cur:
+        # the COPY of clause (about 40 MB) runs past Supabase's default statement timeout on a slow uplink
+        cur.execute("SET LOCAL statement_timeout = 0")
+        cur.execute('DROP SCHEMA IF EXISTS "%s" CASCADE' % schema)
+        cur.execute('CREATE SCHEMA "%s"' % schema)
+        for name in ORDER:
+            cols = build.TABLES[name]
+            cur.execute('CREATE TABLE "%s"."%s" (%s, PRIMARY KEY ("%s"))' % (
+                schema, name, ", ".join('"%s" TEXT' % c for c in cols), KEY[name]))
+            with cur.copy('COPY "%s"."%s" (%s) FROM STDIN' % (schema, name, ", ".join('"%s"' % c for c in cols))) as cp:
+                for r in rows[name].values():
+                    cp.write_row([str(r.get(c) or "") for c in cols])
+        cur.execute('CREATE TABLE "%s"."meta" ("key" TEXT PRIMARY KEY, "value" TEXT)' % schema)
+        with cur.copy('COPY "%s"."meta" ("key", "value") FROM STDIN' % schema) as cp:
+            for k, v in meta.items():
+                cp.write_row([k, v])
+    con.commit()
 
 
-def preflight_remote(database_url: str, supabase_url: str, supabase_key: str) -> int:
-    """Confirm the intended schema and bucket are reachable without mutation."""
-    remote = remote_objects(database_url, supabase_url, supabase_key)
-    with psycopg.connect(database_url) as connection:
-        with connection.cursor() as cursor:
-            cursor.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = %s AND table_type = 'BASE TABLE'", (REMOTE_SCHEMA,))
-            present = {row[0] for row in cursor.fetchall()}
-    absent = set(TABLES) - present
-    if absent:
-        raise ValueError('Remote schema is missing expected tables: ' + ', '.join(sorted(absent)))
-    return len(remote)
+# ---------------------------------------------------------------- plan
+def accepted(jur, partial):
+    """Runs build.py --jur; returns (ok, the acceptance line)."""
+    p = subprocess.run([sys.executable, str(TOOLS / "build.py"), "--root", str(ROOT), "--jur", jur],
+                       capture_output=True, text=True, encoding="utf-8", errors="replace")
+    line = next((ln for ln in p.stdout.splitlines() if ln.startswith("acceptance")), p.stdout.strip()[-200:])
+    if p.returncode == 0:
+        return True, line
+    m = re.search(r"errors=(\d+)", line)
+    return bool(partial and m and m.group(1) == "0"), line
 
 
-def verify_remote(database_url: str, supabase_url: str, supabase_key: str, objects: list[str]) -> None:
-    """Compare remote object names and table row counts without mutation."""
-    remote = remote_objects(database_url, supabase_url, supabase_key)
-    wanted = set(objects)
-    with psycopg.connect(database_url) as connection:
-        with connection.cursor() as cursor:
-            for table in TABLES:
-                fields = TABLES[table]
-                key = PRIMARY_KEYS[table]
-                cursor.execute(f'SELECT count(*) FROM {REMOTE_SCHEMA}.{table}')
-                actual = cursor.fetchone()[0]
-                expected = len(rows(table))
-                if actual != expected:
-                    raise ValueError(f'Remote row count differs for {table}: expected {expected}, found {actual}')
-                cursor.execute(
-                    sql.SQL('SELECT {} FROM {}.{}').format(
-                        sql.SQL(', ').join(sql.Identifier(field) for field in fields),
-                        sql.Identifier(REMOTE_SCHEMA), sql.Identifier(table),
-                    )
-                )
-                remote_rows = {record[fields.index(key)]: record for record in cursor.fetchall()}
-                local_rows = {
-                    record[key]: tuple(record[field] or None for field in fields)
-                    for record in rows(table)
-                }
-                if remote_rows != local_rows:
-                    raise ValueError(f'Remote row values differ from local data for {table}')
-    if remote != wanted:
-        raise ValueError('Remote Storage object names differ from the local upload set')
-    print(f'Remote verification passed: {len(wanted)} objects and exact values in {len(TABLES)} tables match local data.', flush=True)
+def plan_rows(jurs):
+    """Rows and files of the given jurisdictions, as the acceptance sees them (build.subset)."""
+    t = {name: build.read_csv(ROOT / (name + ".csv")) for name in build.FILLED}
+    codes = {j["code"] for j in t["jurisdiction"]}
+    rows = {name: {} for name in ORDER}
+    for j in t["jurisdiction"]:
+        rows["jurisdiction"][j["code"]] = j
+    for jur in jurs:
+        sub = build.subset(t, jur, codes)
+        for name in ("doc", "param", "decision", "treaty"):
+            for r in sub[name]:
+                rows[name][r[KEY[name]]] = r
+    doc_ids = set(rows["doc"])
+    for c in build.read_csv(ROOT / "clause.csv"):
+        if c["doc_id"] in doc_ids:
+            rows["clause"][c["cite_id"]] = c
+    paths = set()
+    for d in rows["doc"].values():
+        paths.add(d["file"])
+        for folder in ("text", "ocr"):
+            if (ROOT / folder / (d["id"] + ".txt")).exists():
+                paths.add("%s/%s.txt" % (folder, d["id"]))
+    for f in build.read_csv(ROOT / "files.csv"):
+        if f["path"] in paths:
+            rows["files"][f["path"]] = f
+    return rows, sorted(paths)
 
 
-def remote_status(database_url: str, supabase_url: str, supabase_key: str, objects: list[str]) -> None:
-    """Display counts and object-set differences without mutating remote state."""
-    remote = remote_objects(database_url, supabase_url, supabase_key)
-    wanted = set(objects)
-    with psycopg.connect(database_url) as connection:
-        with connection.cursor() as cursor:
-            for table in TABLES:
-                cursor.execute(f'SELECT count(*) FROM {REMOTE_SCHEMA}.{table}')
-                print(f'  remote {table}: {cursor.fetchone()[0]} rows')
-    print(f'Remote objects: {len(remote)}; local-only: {len(wanted - remote)}; remote-only: {len(remote - wanted)}', flush=True)
+def main():
+    global ROOT
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--jur", action="append", default=[], help="jurisdiction to upload (repeatable; default: all that pass)")
+    ap.add_argument("--partial", action="store_true", help="also upload a jurisdiction with gaps but no error")
+    ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--schema", default="database")
+    ap.add_argument("--bucket", default="database")
+    ap.add_argument("--root", default="", help="library folder (default: database/)")
+    args = ap.parse_args()
+    if args.root:
+        ROOT = Path(args.root).resolve()
+    build.ROOT = fetch.ROOT = ROOT
+    if not SAFE_NAME.match(args.schema) or not SAFE_NAME.match(args.bucket):
+        print("! schema and bucket names: only a-z 0-9 _ -")
+        return 1
 
+    # 1. a full build, then the acceptance of each jurisdiction
+    subprocess.run([sys.executable, str(TOOLS / "build.py"), "--root", str(ROOT)], capture_output=True)
+    jurs = args.jur or [j["code"] for j in build.read_csv(ROOT / "jurisdiction.csv")]
+    ok_jurs, lines = [], []
+    for jur in jurs:
+        ok, line = accepted(jur, args.partial)
+        print(("  upload  " if ok else "  refused ") + line)
+        if ok:
+            ok_jurs.append(jur)
+            lines.append(line)
+    if not ok_jurs:
+        print("! nothing to upload: no jurisdiction passed (use --partial for one with gaps but no error)")
+        return 1
+    rows, paths = plan_rows(ok_jurs)
+    bad = [p for p in paths if not SAFE_PATH.match(p)]
+    if bad:
+        print("! file paths must be ASCII letters, digits, . _ - /: %s" % ", ".join(bad[:5]))
+        return 1
+    doc_ids = set(rows["doc"])
+    superseded = [r for r in build.read_csv(ROOT / "superseded.csv") if r["doc_id"] in doc_ids]
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=build.SUPERSEDED, extrasaction="ignore", lineterminator="\n")
+    w.writeheader()
+    w.writerows(superseded)
+    meta = tools_meta(lines)
+    print("  plan    %d rows in %d tables + meta, %d files, superseded.csv %d rows; they replace the remote schema %s and bucket %s" % (
+        sum(len(v) for v in rows.values()), len(ORDER), len(paths), len(superseded), args.schema, args.bucket))
 
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--dry-run', action='store_true')
-    parser.add_argument('--preflight', action='store_true', help='read-only check of the target schema and bucket')
-    parser.add_argument('--verify', action='store_true', help='read-only comparison of remote rows and object names')
-    parser.add_argument('--status', action='store_true', help='read-only remote row and object-count report')
-    parser.add_argument('--resume', action='store_true', help='upload only local objects absent from the selected bucket')
-    parser.add_argument('--partial', action='store_true', help='allow coverage gaps when explicitly authorised')
-    parser.add_argument('--reconcile', action='store_true', help='insert only local rows missing by primary key; refuse remote-only rows')
-    args = parser.parse_args()
-    errors, gaps, warnings = audit()
-    if errors:
-        raise SystemExit(f'Upload blocked: {len(errors)} data errors.')
-    if gaps and not args.partial:
-        raise SystemExit(f'Upload blocked: {len(gaps)} coverage gaps. Use --partial only with explicit approval.')
-    objects = local_objects()
-    print(f'Validation: {len(errors)} errors, {len(gaps)} gaps, {len(warnings)} warnings.', flush=True)
-    print(f'Objects: {len(objects)} (including {len(DOCS)} documentation files)', flush=True)
-    for table in TABLES:
-        print(f'  {table}: {len(rows(table))} rows', flush=True)
-    if args.dry_run:
-        print('Dry run only. No credential was used and no remote write was performed.', flush=True)
-        return
-    database_url, supabase_url, supabase_key = configuration()
-    if args.preflight:
-        print(f'Remote preflight passed: {preflight_remote(database_url, supabase_url, supabase_key)} existing bucket objects; expected schema tables are present.', flush=True)
-        return
-    if args.verify:
-        verify_remote(database_url, supabase_url, supabase_key, objects)
-        return
-    if args.status:
-        remote_status(database_url, supabase_url, supabase_key, objects)
-        return
-    remote = remote_objects(database_url, supabase_url, supabase_key)
-    wanted = set(objects)
-    upload_names = sorted(wanted - remote) if args.resume else objects
-    print(f'Uploading {len(upload_names)} objects; deleting {len(remote - wanted)} obsolete bucket objects.', flush=True)
-    for name in upload_names:
-        upload_object(supabase_url, supabase_key, name)
-    for name in sorted(remote - wanted):
-        delete_object(supabase_url, supabase_key, name)
-    if args.reconcile:
-        reconcile_missing_rows(database_url)
-        print('Upload complete: Storage bucket and missing database rows were reconciled.', flush=True)
-    else:
-        replace_tables(database_url)
-        print('Upload complete: Storage bucket and database schema were replaced.', flush=True)
-
-
-if __name__ == '__main__':
+    # 2. the remote meta, then files, then tables
+    dsn = fetch.secret("database_url").replace("postgresql+psycopg://", "postgresql://")
+    url, key = fetch.secret("supabase_url"), fetch.secret("supabase_key")
+    secrets = [dsn, key]
     try:
-        main()
-    except (psycopg.Error, requests.RequestException) as error:
-        # Connection exceptions can contain a full URI. Keep diagnostics useful
-        # without exposing configured database URLs or credentials.
-        status = getattr(getattr(error, 'response', None), 'status_code', None)
-        detail = f' HTTP {status}' if status is not None else ''
-        print(f'Upload failed during a remote operation ({type(error).__name__}{detail}); no database schema replacement was committed.', flush=True)
-        raise SystemExit(1)
-    except ValueError as error:
-        print(f'Upload validation failed: {error}', flush=True)
-        raise SystemExit(1)
+        import psycopg
+        con = psycopg.connect(dsn, connect_timeout=30)
+        old = remote_meta(con, args.schema)
+        con.commit()
+    except Exception as e:                                     # noqa: BLE001
+        print("! database not reachable: %s: %s" % (type(e).__name__, clean(str(e), secrets)[:200]))
+        return 1
+    print("  remote  " + (", ".join("%s=%s" % (k, old[k]) for k in ("spec_version", "tools_commit", "uploaded_by", "uploaded_at") if k in old)
+                          or "no meta table: written before 2026-11-07 or by older tools"))
+    if old.get("spec_version", "") > build.SPEC_VERSION:
+        print("! the remote was written under the specification of %s, these tools follow %s: update the tools first"
+              % (old["spec_version"], build.SPEC_VERSION))
+        con.close()
+        return 1
+    if args.dry_run:
+        print("dry run: nothing written")
+        con.close()
+        return 0
+    try:
+        bucket = Bucket(url, key, args.bucket)
+        bucket.ensure()
+        for k, p in enumerate(paths, 1):
+            bucket.put(p, (ROOT / p).read_bytes())
+            if k % 25 == 0 or k == len(paths):
+                print("  files   %d/%d written" % (k, len(paths)))
+        docs = {remote: ROOT / local for local, remote in DOCS.items() if (ROOT / local).exists()}
+        for remote, local in docs.items():
+            bucket.put(remote, local.read_bytes(), "text/markdown; charset=utf-8")
+        bucket.put("superseded.csv", buf.getvalue().encode("utf-8-sig"), "text/csv; charset=utf-8")
+        docs["superseded.csv"] = None
+        print("  docs    %d written (%s)" % (len(docs), ", ".join(sorted(docs))))
+        with con.cursor() as cur:
+            cur.execute("SELECT name FROM storage.objects WHERE bucket_id = %s", (args.bucket,))
+            stale = sorted({r[0] for r in cur.fetchall()} - set(paths) - set(docs))
+        con.commit()
+        bucket.delete(stale)
+        print("  files   %d old files deleted" % len(stale))
+    except Exception as e:                                     # noqa: BLE001
+        print("! file step stopped: %s: %s; the tables were not touched" % (type(e).__name__, clean(str(e), secrets)[:300]))
+        con.close()
+        return 1
+    con.close()                                                # idle through the file step; the server may have dropped it
+    try:
+        con = psycopg.connect(dsn, connect_timeout=30)
+        replace_tables(con, args.schema, rows, meta)
+    except Exception as e:                                     # noqa: BLE001
+        try:
+            con.rollback()
+        except Exception:                                      # noqa: BLE001  a lost connection rolls back on the server
+            pass
+        print("! tables not replaced: %s: %s; the previous tables are unchanged" % (type(e).__name__, clean(str(e), secrets)[:300]))
+        return 1
+    finally:
+        con.close()
+    print("uploaded: %d rows, %d files; remote schema %s and bucket %s replaced" % (
+        sum(len(v) for v in rows.values()), len(paths), args.schema, args.bucket))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

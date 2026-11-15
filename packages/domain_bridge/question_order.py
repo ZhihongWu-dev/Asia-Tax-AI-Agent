@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 import re
 
-CATALOG = json.loads(Path(__file__).with_name('interview_catalog.json').read_text())
+CATALOG = json.loads(Path(__file__).with_name('interview_catalog.json').read_text(encoding='utf-8'))
 POLICY_VERSION = 'interview-2026-10-22-v4'
 REINVESTMENT_DETAILS = frozenset({'reinvestment_from_distributed_profit', 'reinvestment_form',
                                 'direct_payment', 'investee_encouraged_industry', 'planned_holding_months'})

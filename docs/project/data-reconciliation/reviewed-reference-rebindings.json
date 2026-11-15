@@ -1,0 +1,66 @@
+[
+  {
+    "id": "jp.outbound_wht.nonresident_payment_withholding",
+    "old_cite_id": "jp.nta.nonresident-withholding#all",
+    "new_cite_id": "jp.nta.2884#h1",
+    "source_sha256": "c0dc53b18325d84479fb4ef7ed9c76ff17d4d845f1c44114e42ce8bdb2767ac4",
+    "reason": "Byte-identical official source alias",
+    "quote": "非居住者 または外国法人（以下「非居住者等」といいます。）に対して、日本国内で源泉徴収の対象となる 国内源泉所得 の支払をする者は、その支払の際、原則として、所得税および復興特別所得税（令和9年分以後は所得税、防衛特別所得税および復興特別所得税）を源泉徴収しなければなりません。"
+  },
+  {
+    "id": "my.residence.residence_test.legacy_57da735f4ffd",
+    "old_cite_id": "my.ita1967#all",
+    "new_cite_id": "my.ita1967#s8(1)",
+    "source_sha256": "771ced020407dd6686fc493d6f9c1940bc29296fed0072422fb881c42737c49e",
+    "reason": "Reviewed nested provision",
+    "quote": "a company or a body of persons (not being a Hindu joint family) carrying on a business is resident in Malaysia for the basis year for a year of assessment if at any time during that basis year the management and control of its business or of any one of its businesses, as the case may be, are exercised in Malaysia"
+  },
+  {
+    "id": "my.residence.residence_days_threshold.legacy_812b87364f29",
+    "old_cite_id": "my.ita1967#all",
+    "new_cite_id": "my.ita1967#s7(1)",
+    "source_sha256": "771ced020407dd6686fc493d6f9c1940bc29296fed0072422fb881c42737c49e",
+    "reason": "Reviewed nested provision",
+    "quote": "he is in Malaysia in that basis year for a period or periods amounting in all to one hundred and eighty two days or more;"
+  },
+  {
+    "id": "th.inbound.foreign_company_thailand_income_taxable",
+    "old_cite_id": "th.rd.foreign-company-guide#all",
+    "new_cite_id": "th.rd.foreign-company#all",
+    "source_sha256": "adae356490422661aa8123ca6b513f1e2560514efc22011013c5b0e563ee86d2",
+    "reason": "Byte-identical official source alias",
+    "quote": "A foreign company that does not carry on business in Thailand will be subject to withholding tax on certain categories of income derived from Thailand."
+  },
+  {
+    "id": "th.residence.company_incorporated_under_thai_law",
+    "old_cite_id": "th.rd.foreign-company-guide#all",
+    "new_cite_id": "th.rd.foreign-company#all",
+    "source_sha256": "adae356490422661aa8123ca6b513f1e2560514efc22011013c5b0e563ee86d2",
+    "reason": "Byte-identical official source alias",
+    "quote": "A company registered under Thai law."
+  },
+  {
+    "id": "vn.final.dividend_tax_rate.legacy_3b6e5e65daea",
+    "old_cite_id": "vn.law.pit2026.vi#all",
+    "new_cite_id": "vn.law.pit2026.vi#12.1",
+    "source_sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+    "reason": "Reviewed nested provision",
+    "quote": "Thuế đối với thu nhập từ đầu tư vốn của cá nhân cư trú được xác định bằng thu nhập tính thuế nhân (x) với thuế suất 5%."
+  },
+  {
+    "id": "vn.inbound.foreign_income_taxable.legacy_c1362b4ab902",
+    "old_cite_id": "vn.law.pit2026.vi#all",
+    "new_cite_id": "vn.law.pit2026.vi#2.1",
+    "source_sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+    "reason": "Reviewed nested provision",
+    "quote": "Người nộp thuế thu nhập cá nhân là cá nhân cư trú có thu nhập chịu thuế quy định tại Điều 3 của Luật này phát sinh trong và ngoài lãnh thổ Việt Nam"
+  },
+  {
+    "id": "vn.residence.residence_days_min.legacy_fc1d30e02b4d",
+    "old_cite_id": "vn.law.pit2026.vi#all",
+    "new_cite_id": "vn.law.pit2026.vi#2.2",
+    "source_sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+    "reason": "Reviewed nested provision",
+    "quote": "Có mặt tại Việt Nam từ 183 ngày trở lên tính trong 01 năm dương lịch hoặc tính theo 12 tháng liên tục kể từ ngày đầu tiên có mặt tại Việt Nam"
+  }
+]

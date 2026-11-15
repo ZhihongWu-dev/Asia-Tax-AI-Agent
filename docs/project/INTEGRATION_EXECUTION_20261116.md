@@ -42,3 +42,12 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - Full application regression: 683 passed, 36 skipped, 11 deselected, 14 failed and 2 errors. Failures include language preference expectations, UTF-8 reading, Windows permission assertions, tracing and attachment workers. These are unresolved, not waived.
 - Merged library rebuild is not accepted: legacy parameter identifiers violate the new naming convention and some legacy citation identifiers remain unresolved. Preserve source records while reconciling references; do not disable validation.
 - Corporate/personal tax calculation, complete jurisdiction-specific acceptance and final remote delivery remain unfinished.
+
+
+## Structural reconciliation checkpoint
+
+- Migrated 37 legacy parameter IDs to the current naming convention with deterministic suffixes; original-to-new mappings are preserved in data-reconciliation/structural-migration-20261116.json. No application, rule, agent or optimizer references to the old IDs were found. Tax values, dates, names and quoted evidence remain unchanged.
+- Rebound 13 unique same-document exact quotes automatically and 8 reviewed citations to nested provisions or byte-identical registered sources. Source hashes and quote checks are retained in reviewed-reference-rebindings.json.
+- Fixed HTML section slicing that discarded leading text and short sections. Existing hN IDs remain stable; added lead/short IDs preserve previously lost text, including Thai corporate filing obligations.
+- Database publication now requires zero validation errors and uses atomic replacement; validation or write failures preserve the prior SQLite file.
+- Database migration/slicing/publication tests: 8 passed with the isolated database environment. Full source rebuild is still in progress; it started before the atomic-publication edit, so its output must not be treated as approved.
