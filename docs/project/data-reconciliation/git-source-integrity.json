@@ -1,5 +1,5 @@
 {
-  "documents": 318,
+  "documents": 321,
   "working_mismatches": 0,
   "uncommitted_sources": 0,
   "committed_mismatches": 0,
@@ -2863,6 +2863,33 @@
       "expected": "1e32d17b3a5e74b793fa12ead7c74a4937ed64d84a26d7b1fc498d060b87fc56",
       "working_sha256": "1e32d17b3a5e74b793fa12ead7c74a4937ed64d84a26d7b1fc498d060b87fc56",
       "git_sha256": "1e32d17b3a5e74b793fa12ead7c74a4937ed64d84a26d7b1fc498d060b87fc56",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd470.th",
+      "file": "database/raw/th/th.rd470.th.html",
+      "expected": "bbda893d31dd320f36c0b61bb0c06434a8be52cc4815085d0080fa9f2761e287",
+      "working_sha256": "bbda893d31dd320f36c0b61bb0c06434a8be52cc4815085d0080fa9f2761e287",
+      "git_sha256": "bbda893d31dd320f36c0b61bb0c06434a8be52cc4815085d0080fa9f2761e287",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd480.th",
+      "file": "database/raw/th/th.rd480.th.html",
+      "expected": "db91e60b958825d35e574e2bc71126ac44a6c2964becc391bc69bafc3289ce9b",
+      "working_sha256": "db91e60b958825d35e574e2bc71126ac44a6c2964becc391bc69bafc3289ce9b",
+      "git_sha256": "db91e60b958825d35e574e2bc71126ac44a6c2964becc391bc69bafc3289ce9b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd530.consolidated.th",
+      "file": "database/raw/th/th.rd530.consolidated.th.html",
+      "expected": "bd350a9c9a3bd6946b5542e1004304bd606063bc85faac71b29f01945735fef0",
+      "working_sha256": "bd350a9c9a3bd6946b5542e1004304bd606063bc85faac71b29f01945735fef0",
+      "git_sha256": "bd350a9c9a3bd6946b5542e1004304bd606063bc85faac71b29f01945735fef0",
       "working_matches": true,
       "committed_matches": true
     }
