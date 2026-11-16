@@ -1,3 +1,4 @@
+import type { IncomeTaxInput } from "./income-tax";
 import manifest from "../../../knowledge/hong_kong/fsie/source_manifest.json";
 import expensesManifest from "../../../knowledge/hong_kong/profits_tax_deductions/source_manifest.json";
 
@@ -134,6 +135,9 @@ export type Analysis = {
   passages: Passage[];
 };
 export type Case = {
+  income_tax?: IncomeTaxInput | null;
+  income_tax_status?: string;
+  income_tax_missing?: string[];
   reply_locale?: "zh" | "en";
   schema_version?: string;
   legacy_bindings?: Record<string, string>;

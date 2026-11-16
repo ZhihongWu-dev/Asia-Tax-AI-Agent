@@ -32,6 +32,11 @@ def test_income_api_uses_existing_auth_and_owner_boundary(tmp_path):
         assert bob.get(url).status_code == 404
         assert bob.put(url, json=payload, headers=HEADERS).status_code == 404
         assert alice.get(url).json()["income_tax"]["subject"] == "individual"
+        full_case = alice.get(f"/api/cases/{case_id}").json()
+        assert full_case["income_tax"]["subject"] == "individual"
+        assert full_case["income_tax_status"] == "needs_information"
+        assert "income_tax_receipts" not in full_case
+        assert "income_tax_history" not in full_case
         payload["request_id"] = str(uuid4())
         assert alice.put(url, json=payload, headers=HEADERS).status_code == 409
     store.engine.dispose()

@@ -1,3 +1,4 @@
+import type { IncomeTaxInput, IncomeTaxView } from "./income-tax";
 import type { Case, FieldSpec, FactValue, KnowledgeResult, EntryHint } from "./workspace";
 
 export class ApiError extends Error {
@@ -48,6 +49,8 @@ export async function request<T>(
   }
 }
 export const api = {
+  saveIncomeTax: (caseId: string, revision: number, inputs: IncomeTaxInput, requestId: string) =>
+    request<IncomeTaxView>(`/cases/${caseId}/income-tax`, "PUT", { revision, request_id: requestId, inputs }),
   stream: async (doc: Case, text: string, approved: boolean, requestId: string, signal: AbortSignal, delta: (text: string, reset?: boolean) => void,
                  entryHint: EntryHint = "auto", replyToQuestionId: string | null = null, locale: "zh" | "en" = "zh"): Promise<Case> => {
     const response = await fetch(`/api/cases/${doc.id}/messages`, {

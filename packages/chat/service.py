@@ -288,7 +288,7 @@ def public(doc: dict) -> dict:
         message.get('workflow', {}).pop('execution_trace', None)
     ensure(doc)
     sync(doc)
-    result = {k: v for k, v in doc.items() if k not in ("receipts", "domain_payloads", "message_payloads", "domain_chat_payloads")}
+    result = {k: v for k, v in doc.items() if k not in ("receipts", "domain_payloads", "message_payloads", "domain_chat_payloads", "income_tax_receipts", "income_tax_history")}
     result['title'] = (result.get('title') or '').split('\n\n[Taxrora attachment]')[0].split('\n\n[Taxrora PDF attachment]')[0]
     result["questions"] = questions(doc)
     result['identification'] = identification(doc)

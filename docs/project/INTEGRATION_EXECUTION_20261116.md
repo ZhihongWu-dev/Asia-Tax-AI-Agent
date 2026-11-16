@@ -62,3 +62,13 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - Income-tax tests: 69 passed, including published cumulative personal-tax examples, every marginal threshold, corporate rebate examples, exemption caps, invalid inputs, unverified-year rejection and registered-source hashes.
 - Design research: https://github.com/openfisca/openfisca-core (AGPL-3.0; no code copied or dependency added). Its open issues concerning top tax-band and period handling informed boundary/date testing. Official sources: https://www.iras.gov.sg/quick-links/tax-rates/corporate-income-tax-rates and https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates .
 - Remaining scope is unchanged: all 11 jurisdictions, both subjects, complete intake/eligibility/calculation/report workflow, source and temporal review, existing application regression, durable integration and final delivery to Zhihong-Wu.
+
+
+## Existing-workspace income-tax intake checkpoint
+
+- Added corporate/personal income-tax intake inside the existing Case details panel for all 11 jurisdictions. It reuses the authenticated owner-scoped API and case list. Supports multiple income items, reporting period, residency, source jurisdiction, local currency, deductions, losses and explicit fact confirmation.
+- Unknown amounts remain null; entered zero is preserved. Editing revokes confirmation. Changing jurisdiction with entered money is blocked rather than silently relabeling currency. Optimistic revision conflicts preserve the draft and offer an explicit discard-and-reload action.
+- Saved income-tax facts are restored through the ordinary case endpoint; internal receipt/history records are excluded from the public case payload. Missing information is presented with readable field labels. No unverified income-tax liability is displayed.
+- Validation: TypeScript build and Vite production build passed; 69 backend income-tax tests passed; 8 browser tests passed together on installed Edge (five new income-tax tests plus three existing case-fact regressions). Desktop and 390px phone screenshots were inspected. An earlier run timed out during browser setup with an anomalous 11.5-hour elapsed time; the fresh full eight-test run completed successfully in 37.5 seconds.
+- Playwright supports optional PLAYWRIGHT_EXECUTABLE_PATH for an existing browser; no new runtime dependency was added. Vite still reports its existing large-main-chunk warning.
+- End-to-end income-tax rule selection, calculation/report integration and country coverage beyond the initial Singapore arithmetic remain unfinished.

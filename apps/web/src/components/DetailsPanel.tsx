@@ -1,3 +1,4 @@
+import IncomeTaxFacts from "./IncomeTaxFacts";
 import HintButton from "./HintButton";
 import CalculationFacts from "./CalculationFacts";
 import FactEditor from "./FactEditor";
@@ -95,6 +96,7 @@ export default function DetailsPanel({
         )}
         {panel === "facts" && (
           <>
+          <IncomeTaxFacts key={current.id} current={current} busy={busy} onUpdate={onDomainUpdate} />
           {current.domain_outcome && <CalculationFacts key={`${current.id}-${current.revision}`} current={current} busy={busy} onUpdate={onDomainUpdate} />}
           <details open={!current.domain_outcome}>
           <summary>{locale === "en" ? "Recorded case facts" : "已记录的案例事实"}</summary>

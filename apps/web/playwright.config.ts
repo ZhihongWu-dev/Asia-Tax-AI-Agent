@@ -15,6 +15,7 @@ export default defineConfig({
       use: {
         ...devices["Desktop Chrome"],
         channel: process.env.PLAYWRIGHT_CHANNEL || undefined,
+        launchOptions: { executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH || undefined },
       },
     },
   ],
