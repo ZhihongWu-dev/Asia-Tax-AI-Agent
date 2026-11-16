@@ -1,0 +1,109 @@
+{
+  "status": "provision_verified_amendment_review_pending",
+  "reviewed_on": "2026-11-16",
+  "parameter": "id.outbound_wht.payment_deadline",
+  "existing_value": "10",
+  "existing_citation": "id.dgt.article26#all",
+  "findings": [
+    "PMK 81/2024 Article 94(2), including item g for Article 26 income tax, specifies the fifteenth day of the following month after the tax period ends.",
+    "Article 100 permits payment on the next working day when the due date is a specified holiday, including Saturdays, Sundays, national holidays, election holidays and nationally designated collective leave.",
+    "The original regulation states commencement on 1 January 2025. Historical tax periods require separate applicability checks.",
+    "DGT Coretax guidance updated 17 September 2025 corroborates the general fifteenth-day payment and twentieth-day reporting deadlines, while explicitly warning of exceptions.",
+    "Text searches of PMK 1/2026 found no exact Article 94 or Article 100 references; this is not sufficient to establish the complete amendment chain."
+  ],
+  "sources": [
+    {
+      "url": "https://jdih.kemenkeu.go.id/api/download/637047be-3dba-4347-aba1-98fa7fd5ab3f/2024pmkeuangan081.pdf",
+      "locators": [
+        "PDF page 78: Article 94(2)",
+        "PDF page 83: Article 100",
+        "PDF page 341: commencement"
+      ]
+    },
+    {
+      "url": "https://pajak.go.id/coretaxpedia/batas-waktu-pelaporan-pembayaran",
+      "updated_on": "2025-09-17"
+    },
+    {
+      "url": "https://jdih.kemenkeu.go.id/api/download/b5f99bff-f689-4e4f-ae3a-7c6a9a4cfe8a/2026pmkeuangan001.pdf",
+      "review_scope": "initial provision-reference search only"
+    }
+  ],
+  "remaining": [
+    "Check the complete amendment chain, including PMK 54/2025 and earlier amendments, and relevant transition provisions.",
+    "Register and hash authoritative originals and create precise clause citations before changing the parameter.",
+    "Represent the deadline as a calendar day in the following month, rather than an elapsed-day duration; verify all parameter consumers.",
+    "Preserve historical applicability and test month/year rollover and holiday handling without inventing an unverified holiday calendar."
+  ],
+  "mutations": "No parameter, rule, source text or cloud review status changed. Full optimizer baseline regression is still running against unchanged inputs.",
+  "amendment_review": {
+    "2025-11": {
+      "changes_to_pmk81": [
+        313,
+        324,
+        343,
+        354
+      ],
+      "locator": "Article 20, PDF pages 24-26"
+    },
+    "2025-53": {
+      "changes_to_pmk81": [
+        313,
+        324,
+        343,
+        354
+      ],
+      "locator": "Article I replacing PMK 11/2025 Article 20, PDF pages 2-4; 343 and 354 deleted"
+    },
+    "2025-54": {
+      "scope": "Article 1 definitions; Chapter VI sections and articles 217-225, 340-342, 344-353, 355-369; Articles 465,467,469,471 and related annexes",
+      "locator": "Article I amendment list; no amendment to Chapter V Articles 94 or 100 found"
+    },
+    "2026-1": {
+      "changes_to_pmk81": [
+        1,
+        392,
+        393,
+        394,
+        405
+      ],
+      "locator": "Article I items 1-5, official PDF pages 3,25,28,30,31; web-readable original, local download retry pending"
+    }
+  },
+  "code_inspection": {
+    "direct_parameter_consumers": "No literal reference found in rule, optimization, packages, tests or agent code. Generic reader and reporting paths expose parameter value/unit/citation.",
+    "generic_paths": [
+      "rule/tools/common.py::typed_param_value",
+      "rule/tools/query.py",
+      "agent/tools/read_core.py",
+      "agent/tools/pack.py"
+    ],
+    "limitation": "This establishes absence of an identified dedicated date calculator, not absence of every dynamic consumer."
+  },
+  "visual_verification": [
+    "Original PDF page 78: Article 94(2)(g) and fifteenth-day rule visually checked.",
+    "Original PDF page 83: Article 100 holiday categories and next-working-day rule visually checked."
+  ],
+  "downloaded_originals": [
+    {
+      "file": "2024pmkeuangan081.pdf",
+      "sha256": "b8f385dee2a8684c24f718c5b2413910760d7273236f9d0d27d2da4cf2892574",
+      "bytes": 7584351
+    },
+    {
+      "file": "2025pmkeuangan011.pdf",
+      "sha256": "373a13e091cc697145b6624aa450c3dc60c8594501e900685964584152b35b6c",
+      "bytes": 914438
+    },
+    {
+      "file": "2025pmkeuangan053.pdf",
+      "sha256": "8e01b291898f145c1b87649b9dbf53308a8e3cb75537eb954202c4afde1ebce5",
+      "bytes": 1375136
+    },
+    {
+      "file": "2025pmkeuangan054.pdf",
+      "sha256": "77857b932602e5c46431155b82d3ebcfc3111e9289927b218f4316445a09b3f0",
+      "bytes": 1460736
+    }
+  ]
+}
