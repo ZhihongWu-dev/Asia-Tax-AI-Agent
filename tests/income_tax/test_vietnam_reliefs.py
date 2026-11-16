@@ -2,13 +2,14 @@ from decimal import localcontext
 import pytest
 from packages.income_tax.vietnam_reliefs import company_small_revenue_exemption
 from packages.income_tax.vietnam_reliefs import company_2026_2027_reduction, resident_business_2026_2027_reduction
+from packages.income_tax.vietnam_reliefs import company_ordinary_rate
 
 
 def eligibility(**changes):
     facts = dict(tax_year=2026, vietnam_established=True, new_in_current_period=False,
                  previous_period_revenue='1000000000', previous_active_months=12,
                  current_period_actual_revenue=None, related_enterprise_disqualified=False,
-                 statutory_revenue_scope_confirmed=True)
+                 statutory_revenue_scope_confirmed=True, income_scope_eligible_confirmed=True)
     facts.update(changes)
     return company_small_revenue_exemption(**facts)
 
@@ -46,6 +47,7 @@ def test_new_enterprise_requires_actual_current_revenue():
 @pytest.mark.parametrize('changes', [
     {'tax_year': 2025}, {'tax_year': True}, {'vietnam_established': None},
     {'related_enterprise_disqualified': None}, {'statutory_revenue_scope_confirmed': False},
+    {'income_scope_eligible_confirmed': False}, {'income_scope_eligible_confirmed': None},
     {'previous_active_months': 0}, {'previous_active_months': True},
     {'previous_active_months': 13}, {'previous_period_revenue': None},
     {'previous_period_revenue': 1.0}, {'new_in_current_period': True},
@@ -116,3 +118,40 @@ def test_company_reduction_rejects_unverified_or_inconsistent_facts(changes):
     {'annual_actual_business_revenue': None}, {'business_income_tax': 1.0}])
 def test_personal_reduction_requires_resident_business_scope(changes):
     with pytest.raises(ValueError): personal_reduction(**changes)
+
+
+def rate(**changes):
+    facts = dict(tax_year=2026, new_in_current_period=False,
+        previous_period_revenue='3000000000', previous_active_months=12,
+        current_period_actual_revenue=None, related_enterprise_disqualified=False,
+        income_excluded_from_reduced_rates=False, statutory_revenue_scope_confirmed=True,
+        ordinary_rate_regime_confirmed=True)
+    facts.update(changes)
+    return company_ordinary_rate(**facts)['rate']
+
+
+@pytest.mark.parametrize('revenue,months,expected', [
+    ('3000000000', 12, '.15'), ('3000000001', 12, '.17'),
+    ('50000000000', 12, '.17'), ('50000000001', 12, '.20'),
+    ('1500000000', 6, '.15'), ('1500000001', 6, '.17'),
+    ('25000000000', 6, '.17'), ('25000000001', 6, '.20')])
+def test_ordinary_rate_boundaries(revenue, months, expected):
+    from decimal import Decimal
+    assert rate(previous_period_revenue=revenue, previous_active_months=months) == Decimal(expected)
+
+
+def test_rate_relationship_and_income_exclusions():
+    from decimal import Decimal
+    assert rate(related_enterprise_disqualified=True) == Decimal('.20')
+    assert rate(income_excluded_from_reduced_rates=True) == Decimal('.20')
+    assert rate(new_in_current_period=True, previous_period_revenue=None,
+                previous_active_months=None, current_period_actual_revenue='4000000000') == Decimal('.17')
+
+
+@pytest.mark.parametrize('changes', [
+    {'ordinary_rate_regime_confirmed': False}, {'income_excluded_from_reduced_rates': None},
+    {'related_enterprise_disqualified': None}, {'previous_active_months': True},
+    {'previous_active_months': 0}, {'tax_year': 2025}, {'new_in_current_period': True},
+    {'statutory_revenue_scope_confirmed': False}, {'previous_period_revenue': None}])
+def test_unknown_or_special_rate_regime_not_guessed(changes):
+    with pytest.raises(ValueError): rate(**changes)

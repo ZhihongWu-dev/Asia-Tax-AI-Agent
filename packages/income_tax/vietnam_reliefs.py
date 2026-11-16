@@ -78,7 +78,7 @@ def resident_business_2026_2027_reduction(business_income_tax, *, tax_year,
 def company_small_revenue_exemption(*, tax_year, vietnam_established,
         new_in_current_period, previous_period_revenue, previous_active_months,
         current_period_actual_revenue, related_enterprise_disqualified,
-        statutory_revenue_scope_confirmed):
+        statutory_revenue_scope_confirmed, income_scope_eligible_confirmed):
     """Determine calendar-2026 eligibility from confirmed statutory revenue.
 
     Prior-period revenue includes sales/services before revenue deductions,
@@ -97,6 +97,8 @@ def company_small_revenue_exemption(*, tax_year, vietnam_established,
         raise ValueError('Establishment and relationship facts must be explicit')
     if statutory_revenue_scope_confirmed is not True:
         raise ValueError('Statutory revenue scope must be confirmed')
+    if income_scope_eligible_confirmed is not True:
+        raise ValueError('Income must be verified outside Article 23(9) exclusions')
     if new_in_current_period:
         if previous_period_revenue is not None or previous_active_months is not None:
             raise ValueError('New enterprise cannot have a previous operating period')
@@ -122,3 +124,44 @@ def company_small_revenue_exemption(*, tax_year, vietnam_established,
                 threshold=LIMIT, within_revenue_threshold=below_limit,
                 vietnam_established=vietnam_established,
                 related_enterprise_disqualified=related_enterprise_disqualified)
+
+
+def company_ordinary_rate(*, tax_year, new_in_current_period,
+        previous_period_revenue, previous_active_months, current_period_actual_revenue,
+        related_enterprise_disqualified, income_excluded_from_reduced_rates,
+        statutory_revenue_scope_confirmed, ordinary_rate_regime_confirmed):
+    """Decree320 Article11 ordinary income rate, before exemptions/reductions.
+
+    The 15/17 percent relationship test is distinct from the VND1bn exemption
+    relationship test. Article23(9) excluded income gets the ordinary20 percent
+    rate only where the caller confirms no oil/gas, resources, preferential,
+    revenue-method or other special rate regime applies.
+    """
+    if type(tax_year) is not int or tax_year != 2026:
+        raise ValueError('Ordinary rate verified for calendar 2026 only')
+    if any(type(v) is not bool for v in (new_in_current_period,
+            related_enterprise_disqualified, income_excluded_from_reduced_rates)):
+        raise ValueError('Rate eligibility facts must be explicit')
+    if statutory_revenue_scope_confirmed is not True or ordinary_rate_regime_confirmed is not True:
+        raise ValueError('Statutory revenue and ordinary rate regime must be confirmed')
+    if new_in_current_period:
+        if previous_period_revenue is not None or previous_active_months is not None:
+            raise ValueError('New enterprise cannot have a previous operating period')
+        revenue, months = amount(current_period_actual_revenue), 12
+    else:
+        if current_period_actual_revenue is not None:
+            raise ValueError('Existing enterprise uses previous-period revenue')
+        if type(previous_active_months) is not int or not 1 <= previous_active_months <= 12:
+            raise ValueError('Previous active months must be between 1 and 12')
+        revenue, months = amount(previous_period_revenue), previous_active_months
+    rate = Decimal('.20')
+    with localcontext() as ctx:
+        ctx.prec = 40
+        if not related_enterprise_disqualified and not income_excluded_from_reduced_rates:
+            if revenue * 12 <= Decimal('3000000000') * months:
+                rate = Decimal('.15')
+            elif revenue * 12 <= Decimal('50000000000') * months:
+                rate = Decimal('.17')
+    return dict(tax_year=tax_year, rate=rate, revenue=revenue, active_months=months,
+                related_enterprise_disqualified=related_enterprise_disqualified,
+                income_excluded_from_reduced_rates=income_excluded_from_reduced_rates)

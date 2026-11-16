@@ -30,6 +30,13 @@
       "sha256": "fa9a7c47b637f47528225d9cdd03dbde1032607ec8c39648071178ce4091413f",
       "bytes": 262358,
       "native_text_status": "Scanned original; pages 2-3 visually reviewed, not indexed as a full transcription."
+    },
+    {
+      "proposed_doc_id": "vn.decree320.2025.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/12/320-ndcp.signed.pdf",
+      "sha256": "4a426bbe928511d278aa23318156d27747c45669e8ee9002fb7a635794f51e06",
+      "bytes": 3728566,
+      "native_text_status": "Scanned original; pages41 and72 visually reviewed. Not registered as full verified transcription."
     }
   ],
   "findings": [
@@ -64,6 +71,14 @@
         2
       ],
       "verified": "Original pages visually reviewed. Article2 applies to resident individual business-income tax for2026/2027, irrespective of tax method, using complete statutory business revenue under Decree68 Articles4-5 as amended by Decree141. Year-end actual revenue above VND10 billion removes relief; provisional withholding and subsequent adjustment rules are separate from final annual relief."
+    },
+    {
+      "source": "vn.decree320.2025.vi",
+      "pages": [
+        41,
+        72
+      ],
+      "verified": "Article11 ordinary20%, reduced15% at annual revenue<=VND3bn and17% above3bn through50bn; prior-period statutory revenue annualized for short periods, separate new-enterprise actual revenue rule and related-enterprise exclusion. Article23(9) excludes specified income from15/17% and Article4 incentives, including foreign business and specified transfers/resources/excise/other income. Ordinary-rate selection must not override special industry rates."
     }
   ],
   "implementation_requirements": [
@@ -86,5 +101,5 @@
     "Parameter/rule updates, calculators, API/UI and business tests"
   ],
   "mutations": "No cloud review approval, parameter/rule change or production enablement. Originals retained in audit directory while the unchanged optimizer golden suite remains live.",
-  "implementation_progress": "Calendar2026 company small-revenue exemption eligibility and Decree398 company/resident-business annual30% reduction helpers implemented.44 tests pass. Company relief uses tax after other incentives, confirmed complete current-year statutory revenue/period and aggregate revenue for post-resolution splits. Personal relief requires business-only tax and actual complete annual revenue. Not yet a complete tax assessment or API/UI integration; assessment rounding, provisional adjustments and late-payment treatment remain pending."
+  "implementation_progress": "Added calendar2026 ordinary-rate selection and required explicit income-scope eligibility for small-revenue exemption after checking Article23(9). Distinct exemption and reduced-rate relationship tests remain separate. Full assessment/API/UI and complete amendment/implementing-source registration remain pending."
 }
