@@ -16,7 +16,15 @@ REDUCTION_LIMIT = Decimal('10000000000')
 def _reduction(tax, revenue, eligible, tax_year):
     if type(tax_year) is not int or tax_year not in (2026, 2027):
         raise ValueError('Decree 398 reduction applies to 2026 and 2027 only')
-    tax, revenue = amount(tax), amount(revenue)
+    # The composed calculator can produce eight fractional places from a
+    # six-place base times a two-place rate. Preserve that exact intermediate;
+    # external strings still use the normal six-place amount validation.
+    if isinstance(tax, Decimal) and tax.is_finite() and tax.as_tuple().exponent >= -8:
+        if not 0 <= tax <= Decimal('1e18'):
+            raise ValueError('Invalid derived tax amount')
+    else:
+        tax = amount(tax)
+    revenue = amount(revenue)
     eligible = eligible and revenue <= REDUCTION_LIMIT
     with localcontext() as ctx:
         ctx.prec = 40
