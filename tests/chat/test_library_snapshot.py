@@ -75,6 +75,31 @@ def test_standalone_snapshot_matches_search_and_is_fresh(monkeypatch):
         library_cloud.current_library_snapshot(expected_version=first)
 
 
+@pytest.mark.parametrize('pair', ['ae-jp', 'JP-AE'])
+def test_treaty_pair_search_uses_canonical_bound_parameter(monkeypatch, pair):
+    class TreatyConnection(Connection):
+        def execute(self, statement, params=None):
+            if 'FROM database.clause' in str(statement):
+                self.statements.append((str(statement), params))
+                assert params['jurisdiction'] == 'ae-jp'
+                assert params['query'] == 'treaty.ae-jp.2013.mli.en#all'
+                assert 'NOT EXISTS' in str(statement)
+                return Result([])
+            return super().execute(statement, params)
+    connection = TreatyConnection()
+    monkeypatch.setattr(library_cloud, '_engine', lambda: SimpleNamespace(connect=lambda: connection))
+    result = library_cloud.search_library('treaty.ae-jp.2013.mli.en#all', pair)
+    assert result['jurisdiction'] == 'ae-jp'
+    assert any('FROM database.clause' in sql for sql, _ in connection.statements)
+
+
+@pytest.mark.parametrize('jurisdiction', ['jp-jp', 'ae-jp-cn', 'ae--jp', 'ae-jp OR true', '中国', 'jp/ae'])
+def test_invalid_treaty_pair_is_rejected_before_database(monkeypatch, jurisdiction):
+    monkeypatch.setattr(library_cloud, '_engine', lambda: pytest.fail('must not access database'))
+    with pytest.raises(ValueError, match='invalid_library_query'):
+        library_cloud.search_library('treaty.ae-jp.2013.mli.en#all', jurisdiction)
+
+
 def test_followup_keeps_pin_and_never_calls_model_after_version_change(monkeypatch):
     expected=library_cloud._snapshot(VERSION,[REVIEW],None)
     doc={'library_context':{'jurisdiction':'cn','anchor':'所得税','library_version':expected}}

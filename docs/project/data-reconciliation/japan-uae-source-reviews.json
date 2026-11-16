@@ -1,0 +1,37 @@
+{
+  "review_date": "2026-11-16",
+  "base_uploaded_at": "2026-11-13T03:39:52Z",
+  "decision": "retain_cloud_base_reject_replacement_candidates",
+  "items": [
+    {
+      "cite_id": "treaty.ae-jp.2013.mli.en#all",
+      "url": "https://www.mof.go.jp/english/policy/tax_policy/tax_conventions/mli_uae.htm",
+      "original_sha256": "aef14035617d3781ac217d1ecbf8294c77541731eefbc16ceb1765beafe9d9c1",
+      "cloud_text_sha256": "f2b9ee9c13d863101f319239f16cb24ac214f383c7dd541bc1bf370942fdf678",
+      "normalized_body_sha256": "5d80abdbf1816c94b1ac101898e4d68743863d0659ae932ac07744a9ce3544f1",
+      "main_characters": 4408,
+      "li_characters": 2563,
+      "verification": "Main and Li operative bodies are identical after whitespace normalization, from the MLI entry-into-force paragraph through the final MAP proviso before HOME. Local Li text hash equals cloud; local original hash independently matches registered/cloud original. Current Japan MOF page was checked separately.",
+      "scope": "Preserves MLI Article7(1) applicability and the separate effect dates for withholding, other taxes and MAP. The directly referenced dividend-withholding PPT rule starts2020-01-01, consistent with the source. This does not certify all treaty eligibility or anti-abuse facts."
+    },
+    {
+      "cite_id": "treaty.ae-jp.2013.summary.en#all",
+      "url": "https://www.mof.go.jp/english/policy/tax_policy/tax_conventions/press_release/20130502ae_pt.htm",
+      "original_sha256": "e74a22613abb733292b2768bf0663e571fa4fe2a7bbb946a4ac504adfe323a6b",
+      "cloud_text_sha256": "0d36468dde7176ea2ef3a91b8841b6996402fa312ce1aaa5c9dc3926c99e06d5",
+      "normalized_body_sha256": "fcc00cead42a8e767de640e7f5c7a4d98f517f655391d35d6f455d49569f094e",
+      "main_characters": 3220,
+      "li_characters": 1433,
+      "verification": "Main and Li bodies are identical after whitespace normalization from Provisional translation through the final anti-abuse item before HOME. The current MOF HTML table confirms the associations of dividend, interest and royalty figures. Local Li text hash equals cloud; local original hash matches registered/cloud original.",
+      "scope": "Retain as an expressly provisional explanatory summary, not an authentic consolidated treaty. It supports the directly referenced general dividend cap, but does not supply every parent-company holding-period condition; the base convention and applicable MLI materials remain necessary."
+    }
+  ],
+  "preservation": "Removed material consists of navigation, page-title repetition, footer and formatting; document titles remain in document metadata. No operative body text, original file, rule or parameter is deleted or replaced.",
+  "cloud_update": "applied_2026-11-16T15:48:07.993667Z",
+  "application_verification": {
+    "old_snapshot_rejected": true,
+    "both_sources_available": true,
+    "original_and_full_passage_hashes_verified": true,
+    "reverse_pair_canonicalized": true
+  }
+}

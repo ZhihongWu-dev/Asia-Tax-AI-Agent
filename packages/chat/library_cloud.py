@@ -78,11 +78,16 @@ def current_library_snapshot(*, expected_version: dict | None = None) -> dict:
 
 
 def search_library(query: str, jurisdiction: str, limit: int = 6, *, expected_version: dict | None = None) -> dict:
-    """Search a named jurisdiction without exposing the private schema to clients."""
+    """Search a jurisdiction or canonical treaty pair through the reviewed boundary."""
     query = query.strip()
     jurisdiction = jurisdiction.strip().lower()
-    if not 2 <= len(query) <= 120 or not jurisdiction.isascii() or not jurisdiction.isalpha() or len(jurisdiction) != 2:
+    if not 2 <= len(query) <= 120 or not re.fullmatch(r'[a-z]{2}(?:-[a-z]{2})?', jurisdiction):
         raise ValueError("invalid_library_query")
+    if '-' in jurisdiction:
+        parties = jurisdiction.split('-')
+        if parties[0] == parties[1]:
+            raise ValueError("invalid_library_query")
+        jurisdiction = '-'.join(sorted(parties))
     if not 1 <= limit <= 10:
         raise ValueError("invalid_library_limit")
 
