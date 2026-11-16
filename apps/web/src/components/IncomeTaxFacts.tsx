@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { api, ApiError } from "../api";
 import { useLocale } from "../locale";
 import type { Case } from "../workspace";
+import IncomeTaxAssessment from './IncomeTaxAssessment';
 import { blankIncome, blankIncomeTax, incomeCategories, taxJurisdictions,
   type IncomeTaxInput, type TaxJurisdiction } from "../income-tax";
 
@@ -118,5 +119,8 @@ export default function IncomeTaxFacts({ current, busy, onUpdate }: {
       </div>}
       {current.income_tax_status === "awaiting_rule_validation" && <p>{say("基础资料已齐，税务处理和计算规则仍待核实。", "Basic details are complete. Tax treatment and calculation rules still require validation.")}</p>}
     </form>
+    <IncomeTaxAssessment key={current.id + ':' + JSON.stringify(current.income_tax)} current={current}
+      disabled={busy || saving || current.revision !== revision || JSON.stringify(form) !== JSON.stringify(current.income_tax)}
+      onUpdate={next => { onUpdate(next); setRevision(next.revision); setForm(structuredClone(next.income_tax || blankIncomeTax())); }} />
   </details>;
 }

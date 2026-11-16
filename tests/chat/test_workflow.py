@@ -168,9 +168,19 @@ def test_persistence_after_store_reopen(tmp_path):
     reopened.engine.dispose()
 
 
-def test_health_contains_no_connection_string(setup):
+def test_health_contains_no_connection_string(setup, monkeypatch):
     client, _ = setup
-    assert client.get('/health').json() == {'status': 'ok', 'release_level': 'L0'}
+    marker = 'postgresql://health-test:never-public@example.invalid/private'
+    monkeypatch.setenv('FSIE_WEB_DATABASE_URL', marker)
+    monkeypatch.setenv('RENDER_GIT_COMMIT', 'a' * 40)
+    response = client.get('/health')
+    assert response.status_code == 200
+    payload = response.json()
+    assert set(payload) == {'status', 'release_level', 'revision', 'runtime'}
+    assert payload['status'] == 'ok' and payload['release_level'] == 'L0'
+    assert payload['revision'] == 'a' * 40
+    assert set(payload['runtime']) == {'orchestration', 'provider', 'dynamic_planner', 'harness_mode', 'knowledge_ready'}
+    assert marker not in response.text
     assert client.get('/api/session').headers['cache-control'] == 'no-store'
 
 

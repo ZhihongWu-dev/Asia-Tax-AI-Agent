@@ -135,6 +135,7 @@ export type Analysis = {
   passages: Passage[];
 };
 export type Case = {
+  income_tax_result?: import('./income-assessment').IncomeRun | null;
   income_tax?: IncomeTaxInput | null;
   income_tax_status?: string;
   income_tax_missing?: string[];

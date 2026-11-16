@@ -403,3 +403,25 @@ def income_tax_get(case_id: UUID, workspace: str = Depends(owner), service: Chat
 def income_tax_save(case_id: UUID, body: IncomeTaxEdit, workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
     from packages.chat.income_tax import save_case
     return call(save_case, service.store, workspace, str(case_id), body.revision, str(body.request_id), body.inputs)
+
+
+from packages.contracts.income_assessment import Assessment
+
+
+class IncomeTaxAssessment(Mutation):
+    basis: Assessment
+
+
+@router.post('/cases/{case_id}/income-tax/runs')
+def income_tax_calculate(case_id: UUID, body: IncomeTaxAssessment, workspace: str = Depends(owner),
+                         service: ChatService = Depends(get_service)):
+    from packages.chat.income_tax import assessment_run
+    return call(assessment_run, service.store, workspace, str(case_id), body.revision,
+                str(body.request_id), body.basis)
+
+
+@router.get('/cases/{case_id}/income-tax/runs/{run_id}')
+def income_tax_run_get(case_id: UUID, run_id: UUID, workspace: str = Depends(owner),
+                      service: ChatService = Depends(get_service)):
+    from packages.chat.income_tax import get_assessment_run
+    return call(get_assessment_run, service.store, workspace, str(case_id), str(run_id))

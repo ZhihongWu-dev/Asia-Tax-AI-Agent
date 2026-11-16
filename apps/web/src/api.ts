@@ -1,4 +1,5 @@
 import type { IncomeTaxInput, IncomeTaxView } from "./income-tax";
+import type { IncomeRun } from "./income-assessment";
 import type { Case, FieldSpec, FactValue, KnowledgeResult, EntryHint } from "./workspace";
 
 export class ApiError extends Error {
@@ -49,6 +50,8 @@ export async function request<T>(
   }
 }
 export const api = {
+  calculateIncomeTax: (caseId: string, revision: number, basis: Record<string, unknown>, requestId: string) =>
+    request<IncomeRun>(`/cases/${caseId}/income-tax/runs`, "POST", {revision, request_id: requestId, basis}),
   saveIncomeTax: (caseId: string, revision: number, inputs: IncomeTaxInput, requestId: string) =>
     request<IncomeTaxView>(`/cases/${caseId}/income-tax`, "PUT", { revision, request_id: requestId, inputs }),
   stream: async (doc: Case, text: string, approved: boolean, requestId: string, signal: AbortSignal, delta: (text: string, reset?: boolean) => void,

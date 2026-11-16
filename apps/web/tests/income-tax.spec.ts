@@ -92,7 +92,7 @@ test('company intake saves confirmed zero deductions without inventing a tax res
   expect(result.income_tax.claimed_deductions).toBe('0');
   expect(result.income_tax_status).toBe('awaiting_rule_validation');
   expect(result.missing_fields).toEqual([]);
-  expect(result.income_tax_result).toBeUndefined();
+  expect(result.income_tax_result).toBeNull();
   await expect(form.getByRole('status')).toHaveText('Income-tax details saved.');
 });
 
@@ -111,4 +111,62 @@ test('income details remain usable in a phone viewport', async ({ page }) => {
   await expect(form.getByLabel('Gross income', { exact: true })).toHaveValue('100000');
   await form.locator('summary').scrollIntoViewIfNeeded();
   await page.screenshot({ path: 'test-results/income-tax-mobile.png', fullPage: true });
+});
+
+test('corporate calculation saves a sourced result and amendments invalidate it', async ({page}) => {
+  let form = await openIncome(page);
+  await form.getByLabel('Period start', {exact:true}).fill('2026-01-01');
+  await form.getByLabel('Period end', {exact:true}).fill('2026-12-31');
+  await form.getByRole('combobox',{name:'Tax residency',exact:true}).selectOption('resident');
+  await form.getByLabel('Gross income',{exact:true}).fill('1000000');
+  await form.getByLabel('Income description',{exact:true}).fill('Domestic business revenue');
+  await form.getByLabel('Claimed deductions (blank if unknown)',{exact:true}).fill('0');
+  await form.getByLabel('Carried losses (blank if unknown)',{exact:true}).fill('0');
+  await form.getByRole('checkbox').check();
+  await form.getByRole('button',{name:'Save income-tax details'}).click();
+  const calculation=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await calculation.getByLabel('Applicable regime').selectOption('cn_company_2026');
+  await calculation.getByLabel('Established taxable income',{exact:true}).fill('1000000');
+  await calculation.getByLabel('Normal rate eligibility checked').selectOption('true');
+  await calculation.getByLabel('Allowed tax credits',{exact:true}).fill('0');
+  await calculation.getByLabel('Prepaid tax for this period',{exact:true}).fill('1000');
+  await calculation.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Domestic ordinary company, no adjustments or incentives; prepayment confirmed.');
+  await calculation.getByRole('checkbox').check();
+  const response=page.waitForResponse(r=>r.url().endsWith('/income-tax/runs') && r.request().method()==='POST');
+  await calculation.getByRole('button',{name:'Calculate and save result'}).click();
+  expect((await response).status()).toBe(200);
+  const report=page.getByRole('article',{name:'Saved calculation result'});
+  await expect(report).toContainText('249000');
+  await expect(report.getByRole('link')).toHaveCount(1);
+  await page.screenshot({path:'test-results/income-tax-calculation.png',fullPage:true});
+  form=await openIncome(page);
+  await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('249000');
+  await form.getByLabel('Gross income',{exact:true}).fill('2000000');
+  await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('excludes unsaved changes');
+  await form.getByRole('button',{name:'Save income-tax details'}).click();
+  await expect(page.getByRole('article',{name:'Saved calculation result'})).toHaveCount(0);
+});
+
+test('resident personal rate calculation uses the saved basis period', async ({page})=>{
+  const form=await openIncome(page);
+  await form.getByRole('combobox',{name:'Taxpayer',exact:true}).selectOption('individual');
+  await form.getByRole('combobox',{name:'Filing jurisdiction',exact:true}).selectOption('sg');
+  await form.getByLabel('Period start',{exact:true}).fill('2025-01-01');
+  await form.getByLabel('Period end',{exact:true}).fill('2025-12-31');
+  await form.getByRole('combobox',{name:'Tax residency',exact:true}).selectOption('resident');
+  await form.getByRole('combobox',{name:'Income category',exact:true}).selectOption('employment');
+  await form.getByLabel('Gross income',{exact:true}).fill('80000');
+  await form.getByLabel('Income description',{exact:true}).fill('Employment income for basis year 2025');
+  await form.getByLabel('Claimed deductions (blank if unknown)',{exact:true}).fill('0');
+  await form.getByLabel('Carried losses (blank if unknown)',{exact:true}).fill('0');
+  await form.getByRole('checkbox').check();
+  await form.getByRole('button',{name:'Save income-tax details'}).click();
+  const calculation=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await calculation.getByLabel('Applicable regime').selectOption('sg_resident_ya2026');
+  await calculation.getByLabel('Established chargeable income',{exact:true}).fill('80000');
+  await calculation.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Chargeable income verified after applicable deductions and reliefs.');
+  await calculation.getByRole('checkbox').check();
+  await calculation.getByRole('button',{name:'Calculate and save result'}).click();
+  await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('3350');
+  await expect(calculation).toContainText('before credits, prepayments and assessment rounding');
 });
