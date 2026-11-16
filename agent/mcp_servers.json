@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "tax-case-front": {"command":"python","args":["agent/tools/case_server.py","--root","cases","--agent","front"]},
+    "tax-case-analysis": {"command":"python","args":["agent/tools/case_server.py","--root","cases","--agent","analysis"]},
+    "tax-case-review": {"command":"python","args":["agent/tools/case_server.py","--root","cases","--agent","review"]},
+    "tax-read-front": {"command":"python","args":["agent/tools/read_server.py","--root","cases","--db","database","--rule","rule","--agent","front"]},
+    "tax-read-analysis": {"command":"python","args":["agent/tools/read_server.py","--root","cases","--db","database","--rule","rule","--agent","analysis"]},
+    "tax-read-review": {"command":"python","args":["agent/tools/read_server.py","--root","cases","--db","database","--rule","rule","--agent","review"]},
+    "tax-rule": {"command":"python","args":["rule/tools/mcp_server.py","--root","rule","--db","database","--cases","cases"]},
+    "tax-opt-front": {"command":"python","args":["optimization/tools/mcp_server.py","--root","optimization","--rule","rule","--db","database","--products-root","cases","--role","front"]},
+    "tax-opt-calc": {"command":"python","args":["optimization/tools/mcp_server.py","--root","optimization","--rule","rule","--db","database","--products-root","cases","--role","reader","--only","evaluate,fx"]}
+  }
+}

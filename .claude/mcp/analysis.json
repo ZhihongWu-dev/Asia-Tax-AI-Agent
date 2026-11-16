@@ -1,7 +1,7 @@
 {
  "mcpServers": {
   "tax-case-analysis": {
-   "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+   "command": "python",
    "args": [
     "agent/tools/case_server.py",
     "--root",
@@ -10,16 +10,22 @@
     "analysis"
    ]
   },
-  "tax-db": {
-   "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+  "tax-read-analysis": {
+   "command": "python",
    "args": [
-    "database/tools/mcp_server.py",
+    "agent/tools/read_server.py",
     "--root",
-    "database"
+    "cases",
+    "--db",
+    "database",
+    "--rule",
+    "rule",
+    "--agent",
+    "analysis"
    ]
   },
   "tax-rule": {
-   "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+   "command": "python",
    "args": [
     "rule/tools/mcp_server.py",
     "--root",
@@ -30,8 +36,8 @@
     "cases"
    ]
   },
-  "tax-opt": {
-   "command": "C:/Coding/Anaconda/envs/tax/python.exe",
+  "tax-opt-calc": {
+   "command": "python",
    "args": [
     "optimization/tools/mcp_server.py",
     "--root",
@@ -43,7 +49,9 @@
     "--products-root",
     "cases",
     "--role",
-    "reader"
+    "reader",
+    "--only",
+    "evaluate,fx"
    ]
   }
  }

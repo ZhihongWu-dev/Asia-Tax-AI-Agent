@@ -91,6 +91,8 @@ The installation must include `official/labels/*.csv`, which is required for rul
 
 ## 5. Configuration and startup
 
+The integrated Li CLI tools use the declared MCP 2.3.0 dependency. From the project root with the Python environment activated, run `python agent/tools/make_agents.py` to regenerate role definitions and MCP configurations. A local `.mcp.json` overrides the portable `agent/mcp_servers.json` manifest; incomplete overrides fail before existing generated files are replaced. Use `--python /absolute/path/to/python` only for machine-local configurations, and do not commit those paths. `python agent/tools/test_orchestrate.py` runs scripted routing and child-process checks without calling a model. These local checks do not establish cloud deployment or account isolation.
+
 Fill in the existing environment details in `.env`; do not commit keys or send them in group chats:
 
 ```dotenv

@@ -128,7 +128,7 @@ claude -p "<task>" --agents .claude/agents.json --agent <name> --mcp-config .cla
 - 可执行文件按顺序找：环境变量 `CLAUDE_BIN`、PATH 上的 `claude`、VS Code 扩展目录里最新版本的 `claude.exe`。
 - `make_agents.py` 除 `.claude/agents/*.md` 外，再生成 `.claude/agents.json`，因为无头模式的 `--agent` 不认项目级定义。`--allowedTools` 取同一张工具表。
 - `make_agents.py` 在每个 Agent 的提示词后追加一段存盘说明（`SAVE_TOOLS`）：Agent 没有 `Write` 工具，文件都经案卷服务写。实跑中复核 Agent 找不到 `Write`，就把核对单写在回复里，节点因没有落盘而失败。
-- `make_agents.py` 还从 `.mcp.json` 生成 `.claude/mcp/<name>.json`，每个 Agent 只连自己的服务。CLI 按批连接 MCP，第一轮模型调用不等全部连完；八个服务全连时，排在后面的 Agent 开局看不到自己的工具，不会报错，只会说工具不可用。
+- `make_agents.py` 从本地 `.mcp.json` 覆盖配置生成 `.claude/mcp/<name>.json`；新检出没有该文件时使用版本化的 `agent/mcp_servers.json`。写入前检查全部必需角色服务和提示词。启动前激活项目 Python 环境；也可用 `--python <解释器>` 生成仅用于本机的解释器路径。每个 Agent 只连自己的服务。CLI 按批连接 MCP，第一轮模型调用不等全部连完；八个服务全连时，排在后面的 Agent 开局看不到自己的工具，不会报错，只会说工具不可用。
 
 **任务说明**：prompt 在 Agent 规范里，编排器只递一句英文短任务，下表是原文。
 

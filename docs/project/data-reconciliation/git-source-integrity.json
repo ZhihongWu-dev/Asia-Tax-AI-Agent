@@ -1,5 +1,5 @@
 {
-  "documents": 321,
+  "documents": 327,
   "working_mismatches": 0,
   "uncommitted_sources": 0,
   "committed_mismatches": 0,
@@ -2890,6 +2890,60 @@
       "expected": "bd350a9c9a3bd6946b5542e1004304bd606063bc85faac71b29f01945735fef0",
       "working_sha256": "bd350a9c9a3bd6946b5542e1004304bd606063bc85faac71b29f01945735fef0",
       "git_sha256": "bd350a9c9a3bd6946b5542e1004304bd606063bc85faac71b29f01945735fef0",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.uu7.2021.id",
+      "file": "database/raw/id/id.uu7.2021.id.pdf",
+      "expected": "4e4be3e276bf327e6e9e8a4a031838f572feb4014c2476f6cea0d9a54dd38d5b",
+      "working_sha256": "4e4be3e276bf327e6e9e8a4a031838f572feb4014c2476f6cea0d9a54dd38d5b",
+      "git_sha256": "4e4be3e276bf327e6e9e8a4a031838f572feb4014c2476f6cea0d9a54dd38d5b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.pp20.2026.id",
+      "file": "database/raw/id/id.pp20.2026.id.pdf",
+      "expected": "3aadd85768e7dc3dd5f8431178ee0dd1d03d631835a493288563692de7cf8520",
+      "working_sha256": "3aadd85768e7dc3dd5f8431178ee0dd1d03d631835a493288563692de7cf8520",
+      "git_sha256": "3aadd85768e7dc3dd5f8431178ee0dd1d03d631835a493288563692de7cf8520",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.dgt.company-calculation.id",
+      "file": "database/raw/id/id.dgt.company-calculation.id.html",
+      "expected": "797e292a6ed8698a2366de691032967e7764b3cf1b0b8a48df4b7c367a26f679",
+      "working_sha256": "797e292a6ed8698a2366de691032967e7764b3cf1b0b8a48df4b7c367a26f679",
+      "git_sha256": "797e292a6ed8698a2366de691032967e7764b3cf1b0b8a48df4b7c367a26f679",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.dgt.personal-calculation.id",
+      "file": "database/raw/id/id.dgt.personal-calculation.id.html",
+      "expected": "1b34aae90f12476d335507763bda82859b8d5144ff97f35dd377b77bc6514842",
+      "working_sha256": "1b34aae90f12476d335507763bda82859b8d5144ff97f35dd377b77bc6514842",
+      "git_sha256": "1b34aae90f12476d335507763bda82859b8d5144ff97f35dd377b77bc6514842",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.per12.2026.annex.id",
+      "file": "database/raw/id/id.per12.2026.annex.id.pdf",
+      "expected": "472c3fb0b42c74d25b702f165d9ccd9234ae257b2b28e1509e36593ee0c1be43",
+      "working_sha256": "472c3fb0b42c74d25b702f165d9ccd9234ae257b2b28e1509e36593ee0c1be43",
+      "git_sha256": "472c3fb0b42c74d25b702f165d9ccd9234ae257b2b28e1509e36593ee0c1be43",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.per12.2026.id",
+      "file": "database/raw/id/id.per12.2026.id.html",
+      "expected": "92d8a41d868e80306e7e472fe899edee10e0d02407a68cb8ab381235b7670ec4",
+      "working_sha256": "92d8a41d868e80306e7e472fe899edee10e0d02407a68cb8ab381235b7670ec4",
+      "git_sha256": "92d8a41d868e80306e7e472fe899edee10e0d02407a68cb8ab381235b7670ec4",
       "working_matches": true,
       "committed_matches": true
     }

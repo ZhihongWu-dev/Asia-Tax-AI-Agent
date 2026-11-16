@@ -79,3 +79,16 @@ six==1.17.0
 tqdm==4.70.1
 flatbuffers==25.12.19
 protobuf==7.36.2
+
+# Li MCP stdio runtime additions, validated on Windows/Python 3.11, 2026-11-16.
+attrs==26.1.0
+jsonschema-specifications==2025.9.1
+jsonschema==4.26.0
+mcp-types==2.3.0
+mcp==2.3.0
+PyJWT==2.15.1
+python-multipart==0.0.34
+pywin32==312 ; sys_platform == "win32"
+referencing==0.37.0
+rpds-py==2026.9.1
+sse-starlette==3.7.0
