@@ -23,6 +23,13 @@
       "sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
       "bytes": 4170011,
       "native_text_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text."
+    },
+    {
+      "proposed_doc_id": "vn.decree141.2026.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/141-ndcp.signed.pdf",
+      "sha256": "fa9a7c47b637f47528225d9cdd03dbde1032607ec8c39648071178ce4091413f",
+      "bytes": 262358,
+      "native_text_status": "Scanned original; pages 2-3 visually reviewed, not indexed as a full transcription."
     }
   ],
   "findings": [
@@ -41,6 +48,14 @@
         4
       ],
       "verified": "Original pages visually reviewed. Article 3 grants a 30% CIT reduction for 2026/2027 to qualifying Vietnam-established entities with annual revenue not exceeding VND 10 billion (inclusive). Reduction follows other incentives; revenue includes sales/services without revenue deductions, financial revenue and other income. Dependent units and split-entity aggregation conditions apply. Article 4 states commencement 29 October 2026 and application to 2026/2027 tax periods."
+    },
+    {
+      "source": "vn.decree141.2026.vi",
+      "pages": [
+        2,
+        3
+      ],
+      "verified": "Article 2 adds Decree 320/2025 Article 4(15): inclusive VND 1 billion threshold uses preceding tax-period statutory revenue; periods under 12 months annualize actual revenue by active months times 12, with specified partial establishment/reorganization months counted in full. New current-period enterprises use separate provisional/year-end actual rules. Subsidiary/linked-company exclusion applies where a related enterprise fails exemption eligibility. Article 3 commences 1 January 2026; Article 4(3) has a separate allocation for a 2025 tax year ending in 2026."
     }
   ],
   "implementation_requirements": [
@@ -52,10 +67,6 @@
   ],
   "remaining_sources": [
     {
-      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/141-ndcp.signed.pdf",
-      "purpose": "Article 2 adds Decree 320/2025 Article 4(15); verify VND 1 billion exemption eligibility and transition rules from original."
-    },
-    {
       "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/3/61-vbhn-vpqh.pdf",
       "purpose": "Consolidation lists pre-April 2026 amendments; web fetch exceeded size limit. Download and inspect amendment footnotes; not a complete current-law substitute."
     }
@@ -66,5 +77,6 @@
     "Current PIT implementation rules and business-income eligibility",
     "Parameter/rule updates, calculators, API/UI and business tests"
   ],
-  "mutations": "No cloud review approval, parameter/rule change or production enablement. Originals retained in audit directory while the unchanged optimizer golden suite remains live."
+  "mutations": "No cloud review approval, parameter/rule change or production enablement. Originals retained in audit directory while the unchanged optimizer golden suite remains live.",
+  "implementation_progress": "Added calendar-2026 company exemption eligibility helper with exact annualization comparison and explicit establishment/relationship facts. Not yet wired to assessment API/UI or a complete Vietnam calculator. Non-calendar transition allocation remains pending."
 }
