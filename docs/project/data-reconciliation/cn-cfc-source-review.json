@@ -1,0 +1,24 @@
+{
+  "cite_id": "cn.gsh.2009-37#all",
+  "base_uploaded_at": "2026-11-13T03:39:52Z",
+  "review_date": "2026-11-16",
+  "decision": "retain_cloud_base_reject_replacement_candidate",
+  "review_status": "rejected",
+  "source_url": "https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194013/content.html",
+  "original_sha256": "8655c7c5d74638d47a40a69870f578916bb6fa21762bf60461c6289b02805ea3",
+  "cloud_text_sha256": "4ef35058b6d5325ba23fa92469e123f598fa0d1b115a1e1cd85d37e4f75084fa",
+  "evidence": [
+    "The registered main candidate and current cloud document identify the same government URL and original-file SHA-256; the local original file was independently hashed.",
+    "The complete cloud text was read directly through the Supabase connector. It preserves the notice identity, issue date, legal basis, evidentiary condition, twelve named jurisdictions and consequence for Chinese resident enterprises.",
+    "The current State Taxation Administration page was independently opened on the review date, labels the notice fully effective, and contains the same complete operative paragraph.",
+    "All twelve whitelist parameter countries match the operative paragraph. The direct rule reference is cn.cfc.include; the reference is retained without changing any rate, condition or rule.",
+    "Follow-up recovered the cached main extraction and compared it with the already extracted Li source. Main has1021 characters and Li has543; the entire difference is removal of the footer after the operative paragraph (print/download/login/navigation/contact links). The Li text SHA-256 exactly matches the cloud text hash above."
+  ],
+  "limitations": [
+    "This approves retention of the existing source text, not all CFC conclusions or taxpayer evidence. The notice requires supporting materials and its stated inclusion consequence concerns Chinese resident-enterprise income.",
+    "The initial retention review used direct verification of the complete authoritative operative text while Git lazy retrieval stalled. The subsequent cached-main/local-Li diff independently confirmed footer-only removal; no statutory words were removed.",
+    "The original and candidate audit records are preserved. No law text, parameter, rule or original document is replaced or deleted."
+  ],
+  "cloud_update": "applied_and_application_reader_verified",
+  "verification": {"old_snapshot_rejected": true, "source_status": "available", "source_count": 1}
+}
