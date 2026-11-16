@@ -16,6 +16,8 @@ import io
 import json
 import re
 import sqlite3
+import os
+import tempfile
 import sys
 from collections import Counter
 from pathlib import Path
@@ -377,27 +379,37 @@ def coverage(by_id, lib):
 
 # ---------------------------------------------------------------- outputs
 def write_sqlite(root, tables):
+    """Publish a complete read-only artifact without destroying the last good one."""
     db = root / "rule.sqlite"
-    if db.exists():
-        db.unlink()
-    con = sqlite3.connect(str(db))
-    for name, cols in TABLES.items():
-        allcols = cols + GENERATED.get(name, [])
-        con.execute("CREATE TABLE %s (%s)" % (name, ", ".join('"%s" TEXT' % c for c in allcols)))
-        data = []
-        for r in tables[name]:
-            vals = []
-            for c in allcols:
-                v = r.get(c, "")
-                if name == "rule" and c in ("requires", "predicates", "cite_ids", "decision_ids", "overrides"):
-                    v = json.dumps(split_list(v), ensure_ascii=False)       # JSON arrays: json_each() finds rules by variable
-                vals.append(str(v if v is not None else ""))
-            data.append(vals)
-        con.executemany("INSERT INTO %s VALUES (%s)" % (name, ",".join("?" * len(allcols))), data)
-    con.execute("CREATE INDEX ix_rule_slot_key ON rule(slot_key)")
-    con.execute("CREATE INDEX ix_test_rule ON rule_test(test_id)")
-    con.commit()
-    con.close()
+    fd, temporary = tempfile.mkstemp(dir=root, prefix=".rule-", suffix=".sqlite")
+    os.close(fd)
+    con = None
+    try:
+        con = sqlite3.connect(temporary)
+        for name, cols in TABLES.items():
+            allcols = cols + GENERATED.get(name, [])
+            con.execute("CREATE TABLE %s (%s)" % (name, ", ".join('"%s" TEXT' % c for c in allcols)))
+            data = []
+            for r in tables[name]:
+                vals = []
+                for c in allcols:
+                    v = r.get(c, "")
+                    if name == "rule" and c in ("requires", "predicates", "cite_ids", "decision_ids", "overrides"):
+                        v = json.dumps(split_list(v), ensure_ascii=False)       # JSON arrays: json_each() finds rules by variable
+                    vals.append(str(v if v is not None else ""))
+                data.append(vals)
+            con.executemany("INSERT INTO %s VALUES (%s)" % (name, ",".join("?" * len(allcols))), data)
+        con.execute("CREATE INDEX ix_rule_slot_key ON rule(slot_key)")
+        con.execute("CREATE INDEX ix_test_rule ON rule_test(test_id)")
+        con.commit()
+    
+        con.close()
+        con = None
+        os.replace(temporary, db)
+    finally:
+        if con is not None:
+            con.close()
+        Path(temporary).unlink(missing_ok=True)
 
 
 def write_status(root, tables, errors, gaps, untested, test_failures, lib):
@@ -483,7 +495,8 @@ def main():
     errors += ["rule %s has no complete golden test set" % x for x in untested]
     gaps = coverage(by_id, lib)
 
-    write_sqlite(root, tables)
+    if not errors:
+        write_sqlite(root, tables)
     write_status(root, tables, errors, gaps, untested, test_failures, lib)
     print("rules=%d variables=%d predicates=%d decisions=%d tests=%d failed=%d errors=%d coverage_gaps=%d" % (
         len(tables["rule"]), len(tables["variable"]), len(tables["predicate"]), len(tables["decision"]),
