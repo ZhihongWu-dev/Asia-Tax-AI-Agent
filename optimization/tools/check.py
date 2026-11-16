@@ -260,6 +260,9 @@ class Checker:
     # 7 ----------------------------------------------------------
     def version_hash(self):
         v = self.opt.version()
+        for key in ("version_schema", "rule_version", "database_version", "engine_sha256"):
+            if v.get(key) != self.version.get(key):
+                self.fail("7: %s differs from the current runtime; regenerate products" % key)
         if v["inputs_sha256"] != self.version["inputs_sha256"]:
             self.fail("7: version hash %s != recomputed %s" % (self.version["inputs_sha256"], v["inputs_sha256"]))
         for f in ("graph", "paths", "tax", "ranking", "deltas", "open_items"):

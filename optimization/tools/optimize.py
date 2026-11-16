@@ -2326,13 +2326,19 @@ class Optimizer:
                 "notes": self.notes}
 
     def version(self):
-        parts = {"facts": sha({"payer": self.payer, "payee": self.payee, "payment": self.payment, "answers": self.answers, "entities": self.entities}),
+        # Bind every supplied field, including amount/currency and historical
+        # payments. Derived fields below also bind resolved file-based FX inputs.
+        snapshot = hashlib.sha256(json.dumps(self.inp, ensure_ascii=False, sort_keys=True,
+                                            separators=(",", ":"), allow_nan=False).encode("utf-8")).hexdigest()
+        parts = {"input_snapshot": snapshot,
+                 "facts": sha({"payer": self.payer, "payee": self.payee, "payment": self.payment, "answers": self.answers, "entities": self.entities}),
                  "destinations": sha(self.destinations), "move_csv": hashlib.sha256((HERE.parent / "move.csv").read_bytes()).hexdigest()[:16],
                  "limits": sha(self.limits), "constraints": sha(self.constraints), "fx": sha(self.fx) if self.fx else "",
                  "as_of": sha(self.as_of), "valuation": sha(self.valuation) if self.valuation else "",
                  "date_mode": sha([self.date, self.mode, self.assume])}
         v = self.q.version()
-        return {"inputs_sha256": sha(parts), "inputs": parts, "rule_version": v["rule"], "database_version": v["database"],
+        return {"version_schema": 2, "inputs_sha256": hashlib.sha256(json.dumps(parts, sort_keys=True).encode("utf-8")).hexdigest(),
+                "inputs": parts, "rule_version": v["rule"], "database_version": v["database"],
                 "engine_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest()[:16], "generated_at": v["generated_at"], "limits": self.limits}
 
     # ------------------------------------------------------------ run everything

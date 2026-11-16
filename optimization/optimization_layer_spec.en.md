@@ -322,6 +322,8 @@ Three on-demand read-only functions; none changes the search, they are only call
 
 All JSON, UTF-8, English key names. Each file carries `version` in its header (the same hash as version.json); products of different runs are not mixed.
 
+Version schema 2 additionally hashes the complete supplied input as sorted-key UTF-8 JSON, including amount, currency and historical payments; resolved FX data remains separately bound. `inputs_sha256` is a full SHA-256 digest. The product checker rejects earlier schemas and changed recorded rule, database or optimizer versions, requiring regeneration. This check is not a substitute for the application's cloud snapshot and source-admission gate.
+
 - `graph.json`, `labels.json`, `paths.json`: structure of §2; hop_facts saved as-is (incl. the provenance fields given by the caller, which the optimization layer does not alter).
 - `hops/<cand_id>.json`: rule-layer output items as-is (eight items per hop); items recomputed by branches go to `hops/<branch_id>.json`.
 - `transfers/<cand_id>.json`: the `eval_transfer` output items of each holding change, as-is; `penalty/<jur>.json`: the output items of the penalty cells used, as-is. `items_ref` in deltas points to these two places.
