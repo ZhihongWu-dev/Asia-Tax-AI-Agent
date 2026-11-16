@@ -13,6 +13,7 @@ import re
 from sqlalchemy import create_engine, text
 
 from packages.persistence.config import get_settings
+from packages.chat.library_overlay import load_candidates, admitted_rows, matching_rows
 
 
 class LibraryVersionChanged(ValueError):
@@ -64,6 +65,7 @@ def search_library(query: str, jurisdiction: str, limit: int = 6, *, expected_ve
     if not terms and not exact_locator:
         terms = [query]
     terms = terms[:4]
+    source_commit, candidates, overlay_hash = load_candidates()
 
     with _engine().connect() as connection, connection.begin():
         connection.execute(text("SET TRANSACTION ISOLATION LEVEL REPEATABLE READ READ ONLY"))
@@ -73,13 +75,21 @@ def search_library(query: str, jurisdiction: str, limit: int = 6, *, expected_ve
         reviews = [dict(row) for row in connection.execute(text(
             'SELECT * FROM database_integration.source_review ORDER BY cite_id'
         )).mappings().all()]
+        version['overlay_bundle_sha256'] = overlay_hash
         version = _snapshot(version, reviews, expected_version)
+        overlay = admitted_rows(source_commit, candidates, reviews)
+        if overlay and connection.execute(text(
+                'SELECT cite_id FROM database.clause WHERE cite_id = ANY(:ids) LIMIT 1'
+        ), {'ids': [row['cite_id'] for row in overlay]}).all():
+            raise LibraryVersionChanged('overlay_base_collision')
         # An accepted replacement is not usable until the overlay text and
         # applicability metadata are published. Rejected candidates retain the
         # base only after an explicit completed review.
         blocked = {row['cite_id'] for row in reviews
                    if row['difference'] == 'different_text'
                    and not (row['review_status'] == 'rejected' and row['reviewed_at'] is not None)}
+        blocked.update(row['cite_id'] for row in reviews if row['difference']=='main_only'
+                       and row['review_status']=='candidate')
         rows = connection.execute(text("""
             SELECT c.cite_id, c.label, left(c.text, 5000) AS passage,
                    d.id AS document_id, d.title, d.url, d.sha256 AS document_sha256,
@@ -107,14 +117,25 @@ def search_library(query: str, jurisdiction: str, limit: int = 6, *, expected_ve
                "term1": terms[1] if len(terms) > 1 else terms[0] if terms else query,
                "term2": terms[2] if len(terms) > 2 else terms[0] if terms else query}).mappings().all()
 
+    overlay_matches = matching_rows(overlay, query, jurisdiction, terms, exact_locator)
+    combined = [dict(row) for row in rows] + overlay_matches
+    # An admitted main-only ID must not collide with a newly appeared base row.
+    if len({row['cite_id'] for row in combined}) != len(combined):
+        raise LibraryVersionChanged('overlay_base_collision')
+    def rank(row):
+        primary = terms[0] if terms else query
+        return (row['cite_id'] != query, primary.lower() not in row['title'].lower(),
+                (terms[1] if len(terms)>1 else primary).lower() not in row['passage'].lower(),
+                (terms[2] if len(terms)>2 else primary).lower() not in row['passage'].lower(), row['cite_id'])
+    combined = (sorted(combined,key=rank) if overlay_matches else combined)[:limit]
     return {
-        "status": "review_required" if exact_locator and query in blocked else "available" if rows else "no_matching_units",
+        "status": "review_required" if exact_locator and query in blocked else "available" if combined else "no_matching_units",
         "library_version": version,
         "jurisdiction": jurisdiction,
         "query": query,
         "blocked_citations": [query] if exact_locator and query in blocked else [],
         "passages": [
-            {**dict(row), "passage_sha256": sha256(row["passage"].encode("utf-8")).hexdigest()}
-            for row in rows
+            {**{key: value for key,value in row.items() if key != '_search_text'}, "passage_sha256": sha256(row["passage"].encode("utf-8")).hexdigest()}
+            for row in combined
         ],
     }
