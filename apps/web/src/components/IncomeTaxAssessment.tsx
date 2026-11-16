@@ -22,7 +22,16 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
   async function calculate(event: React.FormEvent) {
     event.preventDefault(); if (!policy) return;
     const basis: Record<string,unknown> = {policy:policy.id,basis_confirmed:confirmed,basis_explanation:explanation};
-    for (const field of policy.fields) basis[field.key] = field.boolean ? values[field.key] === 'true' : values[field.key];
+    for (const field of policy.fields) {
+      if (field.monthsList) {
+        const raw = values[field.key] || '';
+        const months = raw.split(',').map(v=>Number(v.trim()));
+        if (!/^\s*\d+\s*(,\s*\d+\s*)*$/.test(raw) || months.length>200 || months.some(v=>!Number.isInteger(v) || v<0 || v>12)) {
+          setError(say('每名受抚养人的月份须为0至12的整数，用逗号分隔。','Enter comma-separated whole months from 0 to 12 for each dependent.')); return;
+        }
+        basis[field.key] = months;
+      } else basis[field.key] = field.boolean ? values[field.key] === 'true' : values[field.key];
+    }
     const payload = JSON.stringify([current.revision,basis]);
     if (retry.current.payload !== payload) retry.current={payload,id:crypto.randomUUID()};
     setSaving(true);setError('');
@@ -55,7 +64,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
             {field.boolean || field.options ? <select required value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)}>
               <option value="">{say('待确认','Not confirmed')}</option>
               {field.boolean ? <><option value="true">{say('是','Yes')}</option><option value="false">{say('否','No')}</option></> : field.options!.map(([value,label])=><option key={value} value={value}>{label[index]}</option>)}
-            </select> : <input required type="number" min="0" step="any" value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)} />}
+            </select> : <input required type={field.monthsList ? 'text' : 'number'} min="0" step="any" value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)} />}
           </label>)}</div>
           <label>{say('税基调整和资格依据说明','Tax-basis adjustments and eligibility explanation')}<textarea required minLength={20} maxLength={4000} value={explanation} onChange={e=>{setExplanation(e.target.value);setConfirmed(false);}} /></label>
           <label className="income-tax-confirm"><input type="checkbox" required checked={confirmed} onChange={e=>setConfirmed(e.target.checked)} />{say('我已核对所选税制、计税基础及其与已保存资料的关系。','I have checked the regime, tax basis and reconciliation to the saved facts.')}</label>
@@ -77,7 +86,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
       <p>{say('适用规则版本：','Policy version: ')}{String(result.result.policy_version)}</p>
       <p>{say('官方依据：','Official sources:')}</p>
-      <ul>{((result.result.sources || (result.result.source ? [result.result.source] : [])) as {url:string;title:string;sha256:string}[]).map(source=><li key={source.sha256}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>)}</ul>
+      <ul>{((result.result.sources || (result.result.source ? [result.result.source] : [])) as {url:string;title?:string;doc_id?:string;sha256:string}[]).map(source=><li key={source.sha256}><a href={source.url} target="_blank" rel="noreferrer">{source.title || source.doc_id || say('官方原文','Official original')}</a></li>)}</ul>
     </article>}
   </section>;
 }

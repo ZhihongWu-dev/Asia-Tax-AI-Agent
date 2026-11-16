@@ -5,7 +5,7 @@ export type IncomeRun = {
   result: Record<string, unknown>;
 };
 type Label = [string, string];
-export type BasisField = { key: string; label: Label; options?: [string, Label][]; boolean?: boolean };
+export type BasisField = { key: string; label: Label; options?: [string, Label][]; boolean?: boolean; monthsList?: boolean };
 const money = (key: string, zh: string, en: string): BasisField => ({key, label:[zh,en]});
 const confirm = (key: string, zh: string, en: string): BasisField => ({key,label:[zh,en],boolean:true});
 const prepaid = money('prepaid_tax','归属本期的预缴税额','Prepaid tax for this period');
@@ -16,6 +16,16 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if (input.jurisdiction === 'vn' && !company && input.residency === 'resident' && period === '2026-01-01/2026-12-31') {
+    return [{id:'vn_employment_2026',label:['越南居民工资薪金（2026）','Vietnam resident employment (2026)'],
+      notice:['仅限全年居民境内工资薪金。输入已剔除免税收入、尚未扣除个人扣除的应税工资；保险及第11条扣除须已核实限额和凭证。系统扣除本人全年1.86亿越南盾及每名受抚养人每月620万；同一受抚养月份不得重复申报。不适用经营所得减税，不含境外抵免、非居民或特殊减免。结果尚未进行申报取整。',
+        'Full-calendar-year resident domestic employment only. Enter chargeable pay after exemptions, before personal deductions. Verify insurance and article 11 deduction limits and evidence. The calculation deducts VND 186m for the taxpayer and VND 6.2m per eligible dependent-month; do not duplicate claims. Business-income relief does not apply. Foreign credits, nonresidents and special relief need separate treatment. Result is before return rounding.'],
+      fields:[money('chargeable_employment_income','个人扣除前应税工资','Chargeable pay before personal deductions'),
+        {key:'dependent_months',label:['每名受抚养人的合资格月份（逗号分隔，无则填0）','Eligible months per dependent (comma-separated; enter 0 for none)'],monthsList:true},
+        money('deductible_insurance','核定可扣除保险','Verified deductible insurance'),money('article11_deductions','核定第11条扣除','Verified article 11 deductions'),prepaid,
+        confirm('full_calendar_year_confirmed','已核实全年居民年度评税资格','Full calendar-year resident assessment verified'),
+        confirm('income_and_deductions_verified','已核实工资分类、扣除资格及受抚养月份无重复申报','Pay classification, deductions and nonduplicated dependent-month claims verified')]}];
+  }
   if (input.jurisdiction === 'id' && period === '2026-01-01/2026-12-31') {
     const common = [confirm('ordinary_annual_treatment_confirmed','已核对全年居民普通税制及最终税制等排除条件','Full-year resident ordinary treatment and final/special-regime exclusions checked'),
       money('prepaid_tax','核定本期扣缴及预缴税款','Verified withholding and instalments for this period')];
@@ -102,6 +112,8 @@ export function policies(input: IncomeTaxInput): IncomePolicy[] {
 }
 
 export const resultLabels: Record<string, Label> = {
+  personal_deduction:['本人扣除额','Personal deduction'],dependent_deduction:['受抚养人扣除额','Dependent deduction'],
+  deductible_insurance:['可扣除保险','Deductible insurance'],article11_deductions:['第11条扣除','Article 11 deductions'],
   taxable_income_before_rounding:['千元取整前应税所得','Taxable income before thousand rounding'],
   net_income_before_ptkp:['PTKP前净所得','Net income before PTKP'],ptkp_allowance:['核定PTKP免税额','Verified PTKP allowance'],
   article31e_gross_receipts:['第31E条收入总额','Article 31E gross receipts'],
