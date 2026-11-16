@@ -24,7 +24,16 @@ class PlanningExecutionError(Exception):
         super().__init__(code)
 
 
-async def run_once(store, execute, verify_snapshot, *, lease_seconds=60,
+async def verify_cloud_snapshot(job):
+    """Use the same live base/review/overlay boundary as authenticated research."""
+    from packages.chat.library_cloud import current_library_snapshot, LibraryVersionChanged
+    try:
+        return await asyncio.to_thread(current_library_snapshot, expected_version=job['library_snapshot'])
+    except LibraryVersionChanged:
+        raise PlanningExecutionError('library_version_changed') from None
+
+
+async def run_once(store, execute, verify_snapshot=verify_cloud_snapshot, *, lease_seconds=60,
                    wall_seconds=1800, max_attempts=3):
     """Claim at most one job; return its ID, or None when no job was claimed.
 

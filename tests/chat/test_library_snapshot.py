@@ -62,6 +62,19 @@ def test_changed_pin_prevents_clause_query(monkeypatch):
     assert not any('FROM database.clause' in sql for sql,_ in connection.statements)
 
 
+def test_standalone_snapshot_matches_search_and_is_fresh(monkeypatch):
+    connection = Connection()
+    monkeypatch.setattr(library_cloud, '_engine', lambda: SimpleNamespace(connect=lambda: connection))
+    first = library_cloud.current_library_snapshot()
+    assert connection.statements[0][0] == 'SET TRANSACTION ISOLATION LEVEL REPEATABLE READ READ ONLY'
+    assert not any('FROM database.clause' in sql for sql, _ in connection.statements)
+    assert library_cloud.search_library('cn.test#1', 'cn')['library_version'] == first
+    monkeypatch.setitem(VERSION, 'tools_commit', 'changed-runtime')
+    assert library_cloud.current_library_snapshot() != first
+    with pytest.raises(library_cloud.LibraryVersionChanged):
+        library_cloud.current_library_snapshot(expected_version=first)
+
+
 def test_followup_keeps_pin_and_never_calls_model_after_version_change(monkeypatch):
     expected=library_cloud._snapshot(VERSION,[REVIEW],None)
     doc={'library_context':{'jurisdiction':'cn','anchor':'所得税','library_version':expected}}

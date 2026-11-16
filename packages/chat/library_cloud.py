@@ -46,6 +46,37 @@ def _engine():
     )
 
 
+def _read_library_state(connection, expected_version=None):
+    """Read version and admission metadata inside the caller's read-only snapshot."""
+    source_commit, candidates, overlay_hash = load_candidates()
+    version = dict(connection.execute(text(
+        "SELECT key, value FROM database.meta WHERE key IN ('uploaded_at', 'spec_version', 'tools_commit')"
+    )).all())
+    reviews = [dict(row) for row in connection.execute(text(
+        'SELECT * FROM database_integration.source_review ORDER BY cite_id'
+    )).mappings().all()]
+    version['overlay_bundle_sha256'] = overlay_hash
+    version = _snapshot(version, reviews, expected_version)
+    overlay = admitted_rows(source_commit, candidates, reviews)
+    if overlay and connection.execute(text(
+            'SELECT cite_id FROM database.clause WHERE cite_id = ANY(:ids) LIMIT 1'
+    ), {'ids': [row['cite_id'] for row in overlay]}).all():
+        raise LibraryVersionChanged('overlay_base_collision')
+    return version, reviews, overlay
+
+
+def current_library_snapshot(*, expected_version: dict | None = None) -> dict:
+    """Fresh version/admission check without running a legal-text search.
+
+    A matching version does not establish that every rule citation is admitted;
+    planner reads must still use the same reviewed source boundary.
+    """
+    with _engine().connect() as connection, connection.begin():
+        connection.execute(text("SET TRANSACTION ISOLATION LEVEL REPEATABLE READ READ ONLY"))
+        version, _, _ = _read_library_state(connection, expected_version)
+        return version
+
+
 def search_library(query: str, jurisdiction: str, limit: int = 6, *, expected_version: dict | None = None) -> dict:
     """Search a named jurisdiction without exposing the private schema to clients."""
     query = query.strip()
@@ -65,23 +96,9 @@ def search_library(query: str, jurisdiction: str, limit: int = 6, *, expected_ve
     if not terms and not exact_locator:
         terms = [query]
     terms = terms[:4]
-    source_commit, candidates, overlay_hash = load_candidates()
-
     with _engine().connect() as connection, connection.begin():
         connection.execute(text("SET TRANSACTION ISOLATION LEVEL REPEATABLE READ READ ONLY"))
-        version = dict(connection.execute(text(
-            "SELECT key, value FROM database.meta WHERE key IN ('uploaded_at', 'spec_version', 'tools_commit')"
-        )).all())
-        reviews = [dict(row) for row in connection.execute(text(
-            'SELECT * FROM database_integration.source_review ORDER BY cite_id'
-        )).mappings().all()]
-        version['overlay_bundle_sha256'] = overlay_hash
-        version = _snapshot(version, reviews, expected_version)
-        overlay = admitted_rows(source_commit, candidates, reviews)
-        if overlay and connection.execute(text(
-                'SELECT cite_id FROM database.clause WHERE cite_id = ANY(:ids) LIMIT 1'
-        ), {'ids': [row['cite_id'] for row in overlay]}).all():
-            raise LibraryVersionChanged('overlay_base_collision')
+        version, reviews, overlay = _read_library_state(connection, expected_version)
         # An accepted replacement is not usable until the overlay text and
         # applicability metadata are published. Rejected candidates retain the
         # base only after an explicit completed review.

@@ -158,3 +158,26 @@ def test_unexpected_error_does_not_persist_sensitive_details(setup):
     saved = jobs.get('alice', job['id'])
     assert saved['error'] == 'planning_execution_failed'
     assert 'private' not in str(saved['events'])
+
+
+def test_default_verifier_uses_pinned_cloud_snapshot(setup, monkeypatch):
+    from packages.chat import library_cloud
+    jobs, job = setup
+    reads = []
+
+    def read(*, expected_version):
+        reads.append(expected_version)
+        if len(reads) == 2:
+            raise library_cloud.LibraryVersionChanged('library_review_base_changed')
+        return dict(expected_version)
+
+    monkeypatch.setattr(library_cloud, 'current_library_snapshot', read)
+
+    async def execute(row):
+        return {'report':'discard after source change'}
+
+    asyncio.run(run_once(jobs, execute))
+    assert reads == [{'version':'one'}, {'version':'one'}]
+    saved = jobs.get('alice', job['id'])
+    assert saved['error'] == 'library_version_changed'
+    assert saved['result'] is None
