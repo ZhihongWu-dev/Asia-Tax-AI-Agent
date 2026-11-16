@@ -16,6 +16,20 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if (input.jurisdiction === 'my' && period === '2026-01-01/2026-12-31') {
+    const fields = [money('chargeable_income','核定应课税收入','Established chargeable income'),
+      confirm('ordinary_treatment_confirmed','已核对普通税制及排除条件','Ordinary treatment and exclusions checked'),
+      money('allowed_rebates','核定可用税额回扣','Allowed tax rebates'),
+      money('allowed_tax_credits','核定可抵免税额','Allowed tax credits'),prepaid];
+    return company ? [{id:'my_company_2026',label:['马来西亚企业（2026）','Malaysia company (2026)'],
+      notice:['仅限普通公司；不含纳闽、再保险、特殊优惠或最低补足税。小企业税率须符合马来西亚注册及居民身份、期初普通股实缴资本不超过250万、营业总收入不超过5000万令吉，并核对关联公司及超过20%境外公司或非公民持股的排除条件。',
+        'Ordinary companies only; excludes Labuan, reinsurance, special incentives and minimum top-up tax. SME rates require Malaysian incorporation/residence, ordinary paid-up capital up to MYR 2.5m and business gross income up to MYR 50m. Check related-company exclusions and the exclusion for more than 20% foreign-company or non-citizen ownership.'],
+      fields:[...fields,{key:'scheme',label:['企业税率制度','Company rate scheme'],options:[['ordinary',['普通24%税率','Ordinary 24% rate']],['sme',['符合条件的小企业分级税率','Eligible SME tiered rates']]]},
+        confirm('sme_eligibility_confirmed','已核实符合全部小企业税率条件','All SME rate conditions verified')]}]
+      : [{id:'my_individual_2026',label:['马来西亚个人（2026）','Malaysia individual (2026)'],
+        notice:['按已保存居民身份适用普通累进或非居民30%税率。须先核定可扣除项目及减免，不含个人股息单独税制、资本利得、合并评税或特殊收入税率；非居民不得使用居民税额回扣。',
+          'Uses saved residency for ordinary progressive rates or the non-resident 30% rate. Establish deductions and reliefs first. Excludes separate dividend taxation, capital gains, joint assessment and special-rate income. Non-residents cannot use resident rebates.'],fields}];
+  }
   if (input.jurisdiction === 'cn' && period === '2026-01-01/2026-12-31') {
     return company ? [{id:'cn_company_2026',label:['中国企业普通税率（2026）','China ordinary company tax (2026)'],
       notice:['仅限境内普通25%税率；排除优惠税制、非居民扣缴及境外所得处理。计税基础须已完成纳税调整和亏损抵扣。',
@@ -58,6 +72,7 @@ export function policies(input: IncomeTaxInput): IncomePolicy[] {
 }
 
 export const resultLabels: Record<string, Label> = {
+  allowed_rebates:['核定税额回扣','Allowed tax rebates'],allowed_tax_credits:['核定抵免税额','Allowed tax credits'],
   gross_tax:['减免和抵免前税额','Tax before reductions and credits'], annual_liability:['本期税额','Annual liability'],
   final_tax:['本期税额','Tax for this assessment'], net_tax:['减免后税额','Tax after relief'],balance_due:['尚应缴金额（负数表示多缴）','Balance due (negative means overpaid)'],
   taxable_income:['应纳税所得额','Taxable income'],chargeable_income:['应课税收入','Chargeable income'],

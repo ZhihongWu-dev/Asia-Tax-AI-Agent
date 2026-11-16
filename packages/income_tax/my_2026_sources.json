@@ -1,0 +1,14 @@
+{
+  "assessment_year": 2026,
+  "sources": [
+    {
+      "doc_id": "my.ita1967.updated2026.en",
+      "title": "Income Tax Act 1967 (Act 53), online updated text as at 1 January 2026",
+      "url": "https://lom.agc.gov.my/ilims/upload/portal/akta/outputaktap/3345910_BI/Act%2053%20%28Online%202026%29.pdf",
+      "file": "database/raw/my/my.ita1967.updated2026.en.pdf",
+      "sha256": "a5686ae61b81ce55ef36054149b98ccd1b04f73b937f5e44db8926484795416a",
+      "locator": "Schedule 1 Part I paragraphs 1, 1A, 2, 2A-2C; sections 6A and 6D",
+      "note": "Official updated text, not an authentic reprint. Source date is not blanket commencement."
+    }
+  ]
+}

@@ -76,5 +76,24 @@ class AEOrdinary(Basis):
     natural_person_activity_classification_confirmed: StrictBool = False
 
 
+class MYBasis(Basis):
+    chargeable_income: Money
+    ordinary_treatment_confirmed: StrictBool
+    allowed_rebates: Money
+    allowed_tax_credits: Money
+    prepaid_tax: Money
+
+
+class MYCompany(MYBasis):
+    policy: Literal['my_company_2026']
+    scheme: Literal['ordinary', 'sme']
+    sme_eligibility_confirmed: StrictBool
+
+
+class MYIndividual(MYBasis):
+    policy: Literal['my_individual_2026']
+
+
 Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual |
-                       HKProfits | HKSalaries | AEOrdinary, Field(discriminator='policy')]
+                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual,
+                       Field(discriminator='policy')]
