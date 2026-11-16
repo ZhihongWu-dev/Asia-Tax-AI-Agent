@@ -111,7 +111,7 @@ def main():
             records=[dict(cite_id=row['cite_id'],clause=main_rows[row['cite_id']],
                           document=docs[row['doc_id']],text_sha256=row['main_text_sha256']) for row in rows])
         args.bundle.parent.mkdir(parents=True,exist_ok=True)
-        args.bundle.write_text(json.dumps(bundle,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        args.bundle.write_bytes((json.dumps(bundle,ensure_ascii=False,indent=2)+'\n').encode('utf-8'))
     print(json.dumps(report['counts']))
 
 
