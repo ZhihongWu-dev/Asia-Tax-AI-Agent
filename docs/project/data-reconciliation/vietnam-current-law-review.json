@@ -1,0 +1,70 @@
+{
+  "reviewed_on": "2026-11-17",
+  "status": "current_law_gaps_confirmed_not_approved",
+  "existing_citation": "vn.law.cit2025.en#all",
+  "originals": [
+    {
+      "proposed_doc_id": "vn.law.cit67.2025.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/67qh.signed.pdf",
+      "sha256": "ae706468190afe8d111dd0fccf240e7a980eb002c5d0b5cb1cfe127d92f9c1cd",
+      "bytes": 1009447,
+      "native_text_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text."
+    },
+    {
+      "proposed_doc_id": "vn.law09.2026.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/5/09-qh.signed.pdf",
+      "sha256": "d9207c14c9af462454dd7ce9ef5b23c8a22dfea8d3462438be9ffd3897a1f94e",
+      "bytes": 176913,
+      "native_text_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text."
+    },
+    {
+      "proposed_doc_id": "vn.decree398.2026.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/11/398_2026_nd-cp_29102026-signed.signed.pdf",
+      "sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
+      "bytes": 4170011,
+      "native_text_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text."
+    }
+  ],
+  "findings": [
+    {
+      "source": "vn.law09.2026.vi",
+      "pages": [
+        1,
+        2
+      ],
+      "verified": "Both original pages visually reviewed. Article 3 adds CIT Article 4(14a), exempting income of Vietnam-established enterprises/organizations with revenue at or below a government-set threshold. Article 5(2) applies Articles 1-3 from 1 January 2026, distinct from the general approval-date commencement."
+    },
+    {
+      "source": "vn.decree398.2026.vi",
+      "pages": [
+        3,
+        4
+      ],
+      "verified": "Original pages visually reviewed. Article 3 grants a 30% CIT reduction for 2026/2027 to qualifying Vietnam-established entities with annual revenue not exceeding VND 10 billion (inclusive). Reduction follows other incentives; revenue includes sales/services without revenue deductions, financial revenue and other income. Dependent units and split-entity aggregation conditions apply. Article 4 states commencement 29 October 2026 and application to 2026/2027 tax periods."
+    }
+  ],
+  "implementation_requirements": [
+    "Do not infer eligibility from a single generic turnover value. Capture the legally specified revenue base, relevant tax year, dependent units and post-resolution splitting facts.",
+    "Test exactly VND 10 billion and one dong above; the English news summary says less than but the original is inclusive.",
+    "Calculate the 30% reduction after other eligible tax incentives; do not subtract 30 percentage points from the headline tax rate.",
+    "Keep resident individual business-income relief distinct from employment income and nonresident taxation.",
+    "Apply the separate small-revenue exemption and its eligibility conditions before computing remaining tax and relief."
+  ],
+  "remaining_sources": [
+    {
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/141-ndcp.signed.pdf",
+      "purpose": "Article 2 adds Decree 320/2025 Article 4(15); verify VND 1 billion exemption eligibility and transition rules from original."
+    },
+    {
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/3/61-vbhn-vpqh.pdf",
+      "purpose": "Consolidation lists pre-April 2026 amendments; web fetch exceeded size limit. Download and inspect amendment footnotes; not a complete current-law substitute."
+    }
+  ],
+  "not_yet_done": [
+    "Full source registration and verified extraction",
+    "Complete CIT amendment chain and implementing decree comparison",
+    "Current PIT implementation rules and business-income eligibility",
+    "Parameter/rule updates, calculators, API/UI and business tests"
+  ],
+  "mutations": "No cloud review approval, parameter/rule change or production enablement. Originals retained in audit directory while the unchanged optimizer golden suite remains live."
+}
