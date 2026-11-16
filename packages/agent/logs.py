@@ -7,6 +7,7 @@ from math import ceil
 import os
 from pathlib import Path
 from threading import Lock
+from packages.agent.private_files import make_private
 
 ROOT = Path(__file__).resolve().parents[2]
 MAX_BYTES = 5_000_000
@@ -29,6 +30,7 @@ def writer_lock(directory):
     # Threads share the process lock; Unix workers also share an advisory file lock.
     with _lock:
         directory.mkdir(parents=True, exist_ok=True, mode=0o700)
+        make_private(directory, directory=True)
         fd = os.open(directory / '.writer.lock', os.O_CREAT | os.O_RDWR, 0o600)
         try:
             try:
@@ -60,11 +62,11 @@ def append(kind, record):
                     target = directory / f'{kind}.{index}.jsonl'
                     source = path if index == 1 else directory / f'{kind}.{index-1}.jsonl'
                     if source.exists():
+                        make_private(source)
                         source.replace(target)
             fd = os.open(path, os.O_CREAT | os.O_WRONLY | os.O_APPEND, 0o600)
             with os.fdopen(fd, 'w', encoding='utf-8') as stream:
-                if hasattr(os, 'fchmod'):
-                    os.fchmod(stream.fileno(), 0o600)
+                make_private(path)
                 stream.write(data)
     except (OSError, ValueError, TypeError) as exc:
         logging.getLogger(__name__).warning('Agent logging unavailable: %s', type(exc).__name__)

@@ -1,3 +1,4 @@
+from tests.agent.private_file_assertions import assert_private
 from concurrent.futures import ThreadPoolExecutor
 import json
 
@@ -34,7 +35,7 @@ def test_rotation_and_concurrent_writes_leave_valid_private_jsonl(tmp_path, monk
     files = list(tmp_path.glob('events*.jsonl'))
     assert len(files) == logs.BACKUPS + 1
     for path in files:
-        assert path.stat().st_mode & 0o077 == 0
+        assert_private(path)
         assert all(json.loads(line)['trace_id'] for line in path.read_text().splitlines())
     retained = list(logs.records(tmp_path, 'events'))
     assert 0 < len(retained) < 60
@@ -77,3 +78,26 @@ def test_reader_and_cli_filter_timeline_errors_and_compute_statistics(tmp_path, 
     assert result['reported_token_usage']['total_tokens'] == 40
     assert result['rejection_counts'] == {'tool_scope_rejected': 1}
     assert result['node_mean_ms'] == {'node.route': 4}
+
+
+def test_logging_does_not_write_record_when_permissions_cannot_be_set(tmp_path, monkeypatch):
+    monkeypatch.setattr(logs, 'log_dir', lambda: tmp_path)
+    real = logs.make_private
+    def fail_for_file(path, *, directory=False):
+        if not directory:
+            raise OSError('permission unavailable')
+        return real(path, directory=True)
+    monkeypatch.setattr(logs, 'make_private', fail_for_file)
+    logs.append('events', {'trace_id': 'must-not-be-written'})
+    path=tmp_path/'events.jsonl'
+    assert not path.exists() or path.read_text(encoding='utf-8')==''
+
+
+def test_existing_log_and_directory_are_secured_before_append(tmp_path, monkeypatch):
+    monkeypatch.setattr(logs, 'log_dir', lambda: tmp_path)
+    path=tmp_path/'events.jsonl'
+    path.write_text('{"trace_id":"old"}\n',encoding='utf-8')
+    logs.append('events', {'trace_id': 'new'})
+    assert_private(path)
+    assert_private(tmp_path)
+    assert [r['trace_id'] for r in logs.records(tmp_path,'events')]==['old','new']

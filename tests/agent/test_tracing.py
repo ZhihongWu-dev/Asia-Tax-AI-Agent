@@ -1,3 +1,4 @@
+from tests.agent.private_file_assertions import assert_private
 from concurrent.futures import ThreadPoolExecutor
 import json
 from pathlib import Path
@@ -129,6 +130,7 @@ def test_failed_turn_is_exported_without_partial_fact_commit(tmp_path, monkeypat
         events = list(logs.records(directory, 'events'))
         assert events[-1]['status'] == 'error'
         assert store.get('owner', case['id'])['messages'] == []
-        assert all((directory / name).stat().st_mode & 0o077 == 0 for name in ('events.jsonl', 'runs.jsonl'))
+        for name in ('events.jsonl', 'runs.jsonl'):
+            assert_private(directory / name)
     finally:
         store.engine.dispose()

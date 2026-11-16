@@ -104,3 +104,9 @@ The user explicitly requires both corporate and personal income tax; corporate r
 
 - Application suite initially failed collection because the new income test shared the basename test_api.py with tests/agent. Renamed it test_income_api.py; restarted only after the failed process exited.
 - Reconciled two stale language assertions against the pre-existing LI_MAIN_INTEGRATION_STATUS.md rule (English UI preference, overridden by explicit message language directives). No runtime language behavior changed; 33 answer-quality tests pass. Full regression is still running.
+
+### Application regression and Windows log privacy
+
+- Latest completed broad regression: 796 passed, 2 failed, 36 skipped, 11 deselected. Both failures concerned POSIX permission assertions on Windows logs; implemented real protected Windows DACLs for owner/LocalSystem before log writes and rotation. Permission setup failure prevents record writing. Updated tests query actual Windows ACLs; 11 log/tracing tests pass, including existing-file hardening and failure behavior. No business-state behavior changed.
+- Research: Microsoft's GitHub security-descriptor API documentation and Windows classic samples compatibility notes informed native API usage; no external source code/package adopted.
+- Started fresh broad regression after permission fix. Located the existing pinned engine in the original checkout and started verified copy installation into this worktree, to execute currently skipped integration tests. This legacy engine is still only the older three-jurisdiction bridge, not proof of full latest-Li/11-jurisdiction acceptance.
