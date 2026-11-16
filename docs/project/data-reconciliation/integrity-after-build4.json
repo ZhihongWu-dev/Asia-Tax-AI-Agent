@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "doc": 318,
+    "clause": 38837,
+    "param": 808,
+    "decision": 51
+  },
+  "errors": [],
+  "legal_review": "not_established_by_this_check"
+}

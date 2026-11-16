@@ -1,0 +1,33 @@
+{
+  "tax_year": 2026,
+  "sources": [
+    {
+      "doc_id": "ae.cabinet116.2022.taxable-threshold.en",
+      "url": "https://tax.gov.ae/Datafolder/Files/Legislation/Corporate%20Tax/Cabinet%20Decision%20No.%20116%20of%202022%20-%20for%20publishing.pdf",
+      "file": "database/raw/ae/ae.cabinet116.2022.taxable-threshold.en.pdf",
+      "sha256": "6c830b72ad61feb3cf55d1bdc11272306f3f27d809e201cf9d2d3a483817d415",
+      "title": "Cabinet Decision 116 of 2022 on the Taxable Income Threshold"
+    },
+    {
+      "doc_id": "ae.cabinet49.2023.natural-persons.en",
+      "url": "https://mof.gov.ae/wp-content/uploads/2023/05/Cabinet-Decision-No.-49-of-2023.pdf",
+      "file": "database/raw/ae/ae.cabinet49.2023.natural-persons.en.pdf",
+      "sha256": "8ceb036169a612fe5542c7e60cba20464b90fbd5f0ceee35047cf9c5257c921f",
+      "title": "Cabinet Decision 49 of 2023 on Businesses or Business Activities Conducted by Natural Persons"
+    },
+    {
+      "doc_id": "ae.fta.natural-persons-2023",
+      "url": "https://tax.gov.ae/Datafolder/Files/Guides/CT/Taxation%20of%20natural%20persons%20-%2025%2011%202023.pdf",
+      "file": "database/raw/ae/ae.fta.natural-persons-2023.pdf",
+      "sha256": "a365c742ebcc2277067cb3b7416b7960f42390dea3c3b21c982daaf67a48b9ef",
+      "title": "Corporate Tax Guide: Taxation of Natural Persons"
+    },
+    {
+      "doc_id": "ae.fta.general-corporate-tax",
+      "url": "https://tax.gov.ae/DataFolder/Files/Guides/CT/CT%20General%20Guide%20-%20EN%20-%2010%2009%202023.pdf",
+      "file": "database/raw/ae/ae.fta.general-corporate-tax.pdf",
+      "sha256": "b837af15aaab96e65a149538cbbcda5482e4c96a1ddf2b4d383fd86774063e7f",
+      "title": "Corporate Tax \u2013 General"
+    }
+  ]
+}
