@@ -1,0 +1,23 @@
+{
+  "verified_for_tax_year": 2026,
+  "sources": [
+    {
+      "doc_id": "cn.law.eit",
+      "url": "http://www.npc.gov.cn/zgrdw/npc/xinwen/2019-01/07/content_2070260.htm",
+      "file": "database/raw/cn/cn.law.eit.html",
+      "sha256": "ce155d4c61c537da01dd89b0e4b3660d8d253674df67392fc95d7f599f39e900"
+    },
+    {
+      "doc_id": "cn.law.iit",
+      "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5193028/content.html",
+      "file": "database/raw/cn/cn.law.iit.html",
+      "sha256": "442006d0f1157e381eb044c60a4cafad7bae30f5dcf3592d1bdf72d99a798cb7"
+    },
+    {
+      "doc_id": "cn.iit.comprehensive-rate-table",
+      "url": "https://www.gov.cn/zhengce/zhengceku/202402/P020240204617705894863.pdf",
+      "file": "database/raw/cn/cn.iit.comprehensive-rate-table.pdf",
+      "sha256": "84204e1b17778943909e217eadd5cf4bc8d54901bc1e822c21b5408760d2059f"
+    }
+  ]
+}
