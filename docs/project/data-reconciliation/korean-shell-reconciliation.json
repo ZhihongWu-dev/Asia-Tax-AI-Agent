@@ -1,0 +1,76 @@
+[
+  {
+    "id": "kr.corporate-tax-act-2026",
+    "before": {
+      "id": "kr.corporate-tax-act-2026",
+      "jur": "kr",
+      "type": "law",
+      "category": "1;3;4;6;9",
+      "title": "법인세법 (Corporate Tax Act)",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsId=001563",
+      "file": "raw/kr/kr.corporate-tax-act-2026.do",
+      "sha256": "8e3a9826cc806771c6518e2a7623ef94b3a1b4664339a35c7ec866ac383868b9",
+      "lang": "ko",
+      "effective_from": "2026-07-01",
+      "effective_to": "",
+      "note": "Current Korean National Law Information Center Corporate Tax Act, effective 1 July 2026. downloaded with requests 2026-10-26T12:44:45Z"
+    },
+    "after": {
+      "id": "kr.corporate-tax-act-2026",
+      "jur": "kr",
+      "type": "law",
+      "category": "1;3;4;6;9",
+      "title": "법인세법 (Corporate Tax Act)",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=280349",
+      "file": "raw/kr/kr.corporate-tax-act.20260701.ko.pdf",
+      "sha256": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+      "lang": "ko",
+      "effective_from": "2026-07-01",
+      "effective_to": "",
+      "note": "Legacy ID retained; replaced JavaScript-only shell with the existing official PDF of the same Act No. 21217, consolidated 2026-07-01. Shell heading and PDF first page agree. Original shell retained at raw/kr/kr.corporate-tax-act-2026.do. Prior metadata preserved in korean-shell-reconciliation.json. Consolidation date does not establish commencement of each provision; image-table/full segmentation review limitations in kr.corporate-tax-act.20260701.ko also apply."
+    },
+    "evidence": {
+      "shell_heading": "[시행 2026. 7. 1.] [법률 제21217호",
+      "lsiSeq": "280349",
+      "matching_pdf": "kr.corporate-tax-act.20260701.ko",
+      "review": "Verified original saved HTML heading, official live page heading and PDF first page; script efYd is not the displayed legal edition."
+    }
+  },
+  {
+    "id": "kr.income-tax-act-2026",
+    "before": {
+      "id": "kr.income-tax-act-2026",
+      "jur": "kr",
+      "type": "law",
+      "category": "2;3;4;6;9",
+      "title": "소득세법 (Income Tax Act)",
+      "url": "https://www.law.go.kr/lsInfoP.do?ancYnChk=0&lsId=001565",
+      "file": "raw/kr/kr.income-tax-act-2026.do",
+      "sha256": "406c3763d199fe3730ee2c560164bb4d57e6bd0478718681755e4185991a4556",
+      "lang": "ko",
+      "effective_from": "2026-01-01",
+      "effective_to": "",
+      "note": "Current Korean National Law Information Center Income Tax Act, effective 1 January 2026. downloaded with requests 2026-10-26T12:45:02Z"
+    },
+    "after": {
+      "id": "kr.income-tax-act-2026",
+      "jur": "kr",
+      "type": "law",
+      "category": "2;3;4;6;9",
+      "title": "소득세법 (Income Tax Act)",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=280405",
+      "file": "raw/kr/kr.income-tax-act.20260701.ko.pdf",
+      "sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+      "lang": "ko",
+      "effective_from": "2026-07-01",
+      "effective_to": "",
+      "note": "Legacy ID retained; replaced JavaScript-only shell with the existing official PDF of the same Act No. 21221, consolidated 2026-07-01. Shell heading and PDF first page agree. Original shell retained at raw/kr/kr.income-tax-act-2026.do. Prior metadata preserved in korean-shell-reconciliation.json. Consolidation date does not establish commencement of each provision; image-table/full segmentation review limitations in kr.income-tax-act.20260701.ko also apply."
+    },
+    "evidence": {
+      "shell_heading": "[시행 2026. 7. 1.] [법률 제21221호",
+      "lsiSeq": "280405",
+      "matching_pdf": "kr.income-tax-act.20260701.ko",
+      "review": "Verified original saved HTML heading, official live page heading and PDF first page; script efYd is not the displayed legal edition."
+    }
+  }
+]
