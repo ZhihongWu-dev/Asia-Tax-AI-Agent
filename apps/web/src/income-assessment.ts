@@ -16,6 +16,21 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if (input.jurisdiction === 'th' && period === '2026-01-01/2026-12-31') {
+    const shared = [confirm('ordinary_treatment_confirmed','已核对普通年度税制及排除条件','Ordinary annual treatment and exclusions checked'),
+      money('allowed_tax_credits','核定可抵免税额','Allowed tax credits'),prepaid];
+    return company ? [{id:'th_company_2026',label:['泰国企业（2026）','Thailand company (2026)'],
+      notice:['以已完成纳税调整的净利润为基础。普通税率20%；小企业须核实期末实缴资本不超过500万泰铢、销售及服务收入不超过3000万泰铢，并满足法令规定的连续期间条件。不含投资促进优惠、石油、收入总额计税及最低补足税。',
+        'Use net profit after verified tax adjustments. Ordinary rate: 20%. SME rates require period-end paid-up capital up to THB 5m, sales/service revenue up to THB 30m and the decree’s continuous-period conditions. Excludes investment incentives, petroleum, gross-receipt and top-up tax regimes.'],
+      fields:[money('net_taxable_profit','核定应税净利润','Established net taxable profit'),...shared,
+        {key:'scheme',label:['企业税率制度','Company rate scheme'],options:[['ordinary',['普通20%税率','Ordinary 20% rate']],['sme',['符合条件的小企业分级税率','Eligible SME tiered rates']]]},
+        confirm('sme_eligibility_confirmed','已核实全部小企业条件及连续期间资格','All SME and continuous-period conditions verified')]}]
+      : [{id:'th_resident_2026',label:['泰国居民个人（2026）','Thailand resident individual (2026)'],
+        notice:['仅限境内普通年度合并计税收入。净应税所得须先核定费用及扣除；非工资应税总收入从已保存明细汇总。比较累进税额与0.5%最低税额，最低税额不超过5000泰铢时豁免该方法。不含境外所得、股息利息单独税制、终止雇佣一次性收入、不动产处置及联合评税。',
+          'Domestic ordinary annual income only. Establish expenses and allowances before entering net taxable income. Saved non-employment gross income determines the 0.5% minimum-tax comparison; that method is exempt when its tax does not exceed THB 5,000. Excludes foreign income, separate dividend/interest regimes, termination lump sums, property disposals and joint assessment.'],
+        fields:[money('net_taxable_income','核定净应税所得','Established net taxable income'),...shared,
+          confirm('assessable_income_classification_confirmed','已按第40条核实工资及非工资收入分类','Section 40 employment and non-employment classification verified')]}];
+  }
   if (input.jurisdiction === 'my' && period === '2026-01-01/2026-12-31') {
     const fields = [money('chargeable_income','核定应课税收入','Established chargeable income'),
       confirm('ordinary_treatment_confirmed','已核对普通税制及排除条件','Ordinary treatment and exclusions checked'),
@@ -72,6 +87,10 @@ export function policies(input: IncomeTaxInput): IncomePolicy[] {
 }
 
 export const resultLabels: Record<string, Label> = {
+  net_taxable_profit:['应税净利润','Net taxable profit'],net_taxable_income:['净应税所得','Net taxable income'],
+  nonemployment_assessable_gross:['非工资应税总收入','Non-employment assessable gross income'],
+  progressive_tax:['累进税额','Progressive tax'],minimum_tax_before_exemption:['豁免前最低税额','Minimum tax before exemption'],
+  minimum_tax:['适用最低税额','Applicable minimum tax'],
   allowed_rebates:['核定税额回扣','Allowed tax rebates'],allowed_tax_credits:['核定抵免税额','Allowed tax credits'],
   gross_tax:['减免和抵免前税额','Tax before reductions and credits'], annual_liability:['本期税额','Annual liability'],
   final_tax:['本期税额','Tax for this assessment'], net_tax:['减免后税额','Tax after relief'],balance_due:['尚应缴金额（负数表示多缴）','Balance due (negative means overpaid)'],

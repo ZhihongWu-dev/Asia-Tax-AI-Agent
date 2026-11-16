@@ -94,6 +94,25 @@ class MYIndividual(MYBasis):
     policy: Literal['my_individual_2026']
 
 
+class THBasis(Basis):
+    ordinary_treatment_confirmed: StrictBool
+    allowed_tax_credits: Money
+    prepaid_tax: Money
+
+
+class THCompany(THBasis):
+    policy: Literal['th_company_2026']
+    net_taxable_profit: Money
+    scheme: Literal['ordinary','sme']
+    sme_eligibility_confirmed: StrictBool
+
+
+class THIndividual(THBasis):
+    policy: Literal['th_resident_2026']
+    net_taxable_income: Money
+    assessable_income_classification_confirmed: StrictBool
+
+
 Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual |
-                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual,
+                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual,
                        Field(discriminator='policy')]

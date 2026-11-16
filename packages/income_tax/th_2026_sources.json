@@ -1,0 +1,40 @@
+{
+  "tax_year": 2026,
+  "sources": [
+    {
+      "doc_id": "th.rc3.rates.th",
+      "title": "\u0e1b\u0e23\u0e30\u0e21\u0e27\u0e25\u0e23\u0e31\u0e29\u0e0e\u0e32\u0e01\u0e23 \u0e1a\u0e31\u0e0d\u0e0a\u0e35\u0e2d\u0e31\u0e15\u0e23\u0e32\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49 (\u0e17\u0e49\u0e32\u0e22\u0e2b\u0e21\u0e27\u0e14 3)",
+      "url": "https://www.rd.go.th/5938.html",
+      "file": "database/raw/th/th.rc3.rates.th.html",
+      "sha256": "5ec38d0dbbb7ee5d226ad1a7422aa14ff603dcf29dfc566e47e48bd04bc0a3b4"
+    },
+    {
+      "doc_id": "th.rc3a.th",
+      "title": "\u0e1b\u0e23\u0e30\u0e21\u0e27\u0e25\u0e23\u0e31\u0e29\u0e0e\u0e32\u0e01\u0e23 \u0e2b\u0e21\u0e27\u0e14 3 \u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49 \u0e21\u0e32\u0e15\u0e23\u0e32 38-64",
+      "url": "https://www.rd.go.th/5937.html",
+      "file": "database/raw/th/th.rc3a.th.html",
+      "sha256": "3050f0a13b298f027d5451fb8b3dfb8ec77658db1fbbd72eaa507abf0c3ed428"
+    },
+    {
+      "doc_id": "th.rd470.th",
+      "title": "Royal Decree 470: first THB150,000 net-income exemption",
+      "url": "https://www.rd.go.th/33893.html",
+      "file": "database/raw/th/th.rd470.th.html",
+      "sha256": "bbda893d31dd320f36c0b61bb0c06434a8be52cc4815085d0080fa9f2761e287"
+    },
+    {
+      "doc_id": "th.rd480.th",
+      "title": "Royal Decree 480: section48(2) tax not exceeding THB5,000 exemption",
+      "url": "https://rd.go.th/40819.html",
+      "file": "database/raw/th/th.rd480.th.html",
+      "sha256": "db91e60b958825d35e574e2bc71126ac44a6c2964becc391bc69bafc3289ce9b"
+    },
+    {
+      "doc_id": "th.rd530.consolidated.th",
+      "title": "Royal Decree 530 with amendments: SME corporate rates",
+      "url": "https://www.rd.go.th/28271.html",
+      "file": "database/raw/th/th.rd530.consolidated.th.html",
+      "sha256": "bd350a9c9a3bd6946b5542e1004304bd606063bc85faac71b29f01945735fef0"
+    }
+  ]
+}

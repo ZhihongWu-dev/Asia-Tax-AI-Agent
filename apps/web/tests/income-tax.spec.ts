@@ -172,6 +172,43 @@ test('resident personal rate calculation uses the saved basis period', async ({p
 });
 
 for (const subject of ['company','individual'] as const) {
+  test(`Thailand ${subject} calculation persists the applicable tax comparison`, async ({page})=>{
+    const form=await openIncome(page);
+    await form.getByRole('combobox',{name:'Taxpayer',exact:true}).selectOption(subject);
+    await form.getByRole('combobox',{name:'Filing jurisdiction',exact:true}).selectOption('th');
+    await form.getByLabel('Period start',{exact:true}).fill('2026-01-01');
+    await form.getByLabel('Period end',{exact:true}).fill('2026-12-31');
+    await form.getByRole('combobox',{name:'Tax residency',exact:true}).selectOption('resident');
+    await form.getByRole('combobox',{name:'Income category',exact:true}).selectOption('business');
+    await form.getByLabel('Gross income',{exact:true}).fill('4000000');
+    await form.getByLabel('Income description',{exact:true}).fill('Domestic ordinary business income');
+    await form.getByLabel('Claimed deductions (blank if unknown)',{exact:true}).fill('0');
+    await form.getByLabel('Carried losses (blank if unknown)',{exact:true}).fill('0');
+    await form.getByRole('checkbox').check();
+    await form.getByRole('button',{name:'Save income-tax details'}).click();
+    const calculation=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+    await calculation.getByLabel('Applicable regime').selectOption(subject==='company'?'th_company_2026':'th_resident_2026');
+    await calculation.getByLabel(subject==='company'?'Established net taxable profit':'Established net taxable income',{exact:true}).fill(subject==='company'?'4000000':'150000');
+    await calculation.getByLabel('Ordinary annual treatment and exclusions checked').selectOption('true');
+    await calculation.getByLabel('Allowed tax credits',{exact:true}).fill('0');
+    await calculation.getByLabel('Prepaid tax for this period',{exact:true}).fill('0');
+    if(subject==='company') {
+      await calculation.getByLabel('Company rate scheme').selectOption('sme');
+      await calculation.getByLabel('All SME and continuous-period conditions verified').selectOption('true');
+    } else await calculation.getByLabel('Section 40 employment and non-employment classification verified').selectOption('true');
+    await calculation.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Annual basis reconciled with verified allowable expenses and allowances; ordinary regime and applicable SME qualification checked.');
+    await calculation.getByRole('checkbox').check();
+    await calculation.getByRole('button',{name:'Calculate and save result'}).click();
+    const report=page.getByRole('article',{name:'Saved calculation result'});
+    await expect(report).toContainText(subject==='company'?'605000':'20000');
+    await expect(report.getByRole('link')).toHaveCount(subject==='company'?2:4);
+    if(subject==='individual') {
+      await expect(report).toContainText('Minimum tax before exemption');
+      await page.screenshot({path:'test-results/income-tax-thailand-individual.png',fullPage:true});
+    }
+    await openIncome(page);
+    await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(subject==='company'?'605000':'20000');
+  });
   test(`Malaysia ${subject} calculation is saved with official evidence`, async ({page})=>{
     const form=await openIncome(page);
     await form.getByRole('combobox',{name:'Taxpayer',exact:true}).selectOption(subject);
