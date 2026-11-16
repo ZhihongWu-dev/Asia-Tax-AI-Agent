@@ -1,2 +1,3 @@
 # Preserve original source bytes: registered SHA-256 values cover downloaded artifacts.
 /database/raw/** -text
+/database/ocr/** -text

@@ -1,0 +1,2870 @@
+{
+  "documents": 318,
+  "working_mismatches": 0,
+  "uncommitted_sources": 0,
+  "committed_mismatches": 0,
+  "records": [
+    {
+      "doc_id": "cn.law.eit",
+      "file": "database/raw/cn/cn.law.eit.html",
+      "expected": "ce155d4c61c537da01dd89b0e4b3660d8d253674df67392fc95d7f599f39e900",
+      "working_sha256": "ce155d4c61c537da01dd89b0e4b3660d8d253674df67392fc95d7f599f39e900",
+      "git_sha256": "ce155d4c61c537da01dd89b0e4b3660d8d253674df67392fc95d7f599f39e900",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.reg.eit",
+      "file": "database/raw/cn/cn.reg.eit.html",
+      "expected": "795c5b9c964eeb280138a7ca25091228be48e1204c55b6b7229085e85e3d1f53",
+      "working_sha256": "795c5b9c964eeb280138a7ca25091228be48e1204c55b6b7229085e85e3d1f53",
+      "git_sha256": "795c5b9c964eeb280138a7ca25091228be48e1204c55b6b7229085e85e3d1f53",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.law.iit",
+      "file": "database/raw/cn/cn.law.iit.html",
+      "expected": "442006d0f1157e381eb044c60a4cafad7bae30f5dcf3592d1bdf72d99a798cb7",
+      "working_sha256": "442006d0f1157e381eb044c60a4cafad7bae30f5dcf3592d1bdf72d99a798cb7",
+      "git_sha256": "442006d0f1157e381eb044c60a4cafad7bae30f5dcf3592d1bdf72d99a798cb7",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.reg.iit",
+      "file": "database/raw/cn/cn.reg.iit.html",
+      "expected": "e5f3ca819c7638df993babe537b9c91907b87bf5ae8f0213c8fa9fef4019a221",
+      "working_sha256": "e5f3ca819c7638df993babe537b9c91907b87bf5ae8f0213c8fa9fef4019a221",
+      "git_sha256": "e5f3ca819c7638df993babe537b9c91907b87bf5ae8f0213c8fa9fef4019a221",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.cs.2009-125",
+      "file": "database/raw/cn/cn.cs.2009-125.html",
+      "expected": "ba5b09a72ae33414c331267b540af0bf77db3cb061cad6b57b2172039916700c",
+      "working_sha256": "ba5b09a72ae33414c331267b540af0bf77db3cb061cad6b57b2172039916700c",
+      "git_sha256": "ba5b09a72ae33414c331267b540af0bf77db3cb061cad6b57b2172039916700c",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.cs.2017-84",
+      "file": "database/raw/cn/cn.cs.2017-84.html",
+      "expected": "cc499bb5edd4d57e6b9b0b2345c6fc0b725f5aecfbeb32fe49ac1d4609c3c17b",
+      "working_sha256": "cc499bb5edd4d57e6b9b0b2345c6fc0b725f5aecfbeb32fe49ac1d4609c3c17b",
+      "git_sha256": "cc499bb5edd4d57e6b9b0b2345c6fc0b725f5aecfbeb32fe49ac1d4609c3c17b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.cs.2020-03",
+      "file": "database/raw/cn/cn.cs.2020-03.html",
+      "expected": "7006ad16125446a9cc977d87335034bef4386c4d2475f644cbd351d50d9a2df4",
+      "working_sha256": "7006ad16125446a9cc977d87335034bef4386c4d2475f644cbd351d50d9a2df4",
+      "git_sha256": "7006ad16125446a9cc977d87335034bef4386c4d2475f644cbd351d50d9a2df4",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.gsf.2009-02",
+      "file": "database/raw/cn/cn.gsf.2009-02.html",
+      "expected": "ce6c25ee670402af26720cc9a46791b3a10a680a9e7220f2dcb18740b1965ae9",
+      "working_sha256": "ce6c25ee670402af26720cc9a46791b3a10a680a9e7220f2dcb18740b1965ae9",
+      "git_sha256": "ce6c25ee670402af26720cc9a46791b3a10a680a9e7220f2dcb18740b1965ae9",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.order.32",
+      "file": "database/raw/cn/cn.order.32.html",
+      "expected": "a5c86149f3c0a24a803ca5a927590b4f95a42dd7ada91c9e324da54e67476e51",
+      "working_sha256": "a5c86149f3c0a24a803ca5a927590b4f95a42dd7ada91c9e324da54e67476e51",
+      "git_sha256": "a5c86149f3c0a24a803ca5a927590b4f95a42dd7ada91c9e324da54e67476e51",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.2018-09",
+      "file": "database/raw/cn/cn.sta.2018-09.html",
+      "expected": "258333c80afca37b9f2594ea328ab50a81bf517a2af1de776bcd579b1392b309",
+      "working_sha256": "258333c80afca37b9f2594ea328ab50a81bf517a2af1de776bcd579b1392b309",
+      "git_sha256": "258333c80afca37b9f2594ea328ab50a81bf517a2af1de776bcd579b1392b309",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.gsf.2009-82",
+      "file": "database/raw/cn/cn.gsf.2009-82.html",
+      "expected": "9e6dee91bc2b40db5124fc6f9004cdf8d866b08ab954d6f15203d00fdd6b47df",
+      "working_sha256": "9e6dee91bc2b40db5124fc6f9004cdf8d866b08ab954d6f15203d00fdd6b47df",
+      "git_sha256": "9e6dee91bc2b40db5124fc6f9004cdf8d866b08ab954d6f15203d00fdd6b47df",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.2014-09",
+      "file": "database/raw/cn/cn.sta.2014-09.html",
+      "expected": "c0ede28778e3e55780a4d08da97097eb3c113aacac6f14b148f0b8c67a466f1e",
+      "working_sha256": "c0ede28778e3e55780a4d08da97097eb3c113aacac6f14b148f0b8c67a466f1e",
+      "git_sha256": "c0ede28778e3e55780a4d08da97097eb3c113aacac6f14b148f0b8c67a466f1e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.cs.2019-34",
+      "file": "database/raw/cn/cn.cs.2019-34.html",
+      "expected": "91a9f82126ad7febd388019a0c93f70b571e4e53e1648ce93a1494e5f30136b1",
+      "working_sha256": "91a9f82126ad7febd388019a0c93f70b571e4e53e1648ce93a1494e5f30136b1",
+      "git_sha256": "91a9f82126ad7febd388019a0c93f70b571e4e53e1648ce93a1494e5f30136b1",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.2019-35",
+      "file": "database/raw/cn/cn.sta.2019-35.html",
+      "expected": "a028eb91e1c4ed6929dc79ba98fc93cb00a1c4587681c33ecdc9a19e186fda2f",
+      "working_sha256": "a028eb91e1c4ed6929dc79ba98fc93cb00a1c4587681c33ecdc9a19e186fda2f",
+      "git_sha256": "a028eb91e1c4ed6929dc79ba98fc93cb00a1c4587681c33ecdc9a19e186fda2f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.2019-35.a01",
+      "file": "database/raw/cn/cn.sta.2019-35.a01.xls",
+      "expected": "363b13d51718d60fbd2d2964f7fec483aee2ca61a49c03acedf2412a32ce3881",
+      "working_sha256": "363b13d51718d60fbd2d2964f7fec483aee2ca61a49c03acedf2412a32ce3881",
+      "git_sha256": "363b13d51718d60fbd2d2964f7fec483aee2ca61a49c03acedf2412a32ce3881",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.2025-04",
+      "file": "database/raw/cn/cn.sta.2025-04.html",
+      "expected": "5573f46499af36a40348819ae7263c6e0fef41be1d2b1d8c151fd2f13cdaf7bd",
+      "working_sha256": "5573f46499af36a40348819ae7263c6e0fef41be1d2b1d8c151fd2f13cdaf7bd",
+      "git_sha256": "5573f46499af36a40348819ae7263c6e0fef41be1d2b1d8c151fd2f13cdaf7bd",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.2025-04.a01",
+      "file": "database/raw/cn/cn.sta.2025-04.a01.pdf",
+      "expected": "659ceafc7b046cf252e027a576c74fdb3071ed3bf49601a0ed1c8caafdbe7559",
+      "working_sha256": "659ceafc7b046cf252e027a576c74fdb3071ed3bf49601a0ed1c8caafdbe7559",
+      "git_sha256": "659ceafc7b046cf252e027a576c74fdb3071ed3bf49601a0ed1c8caafdbe7559",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.2025-04.a02",
+      "file": "database/raw/cn/cn.sta.2025-04.a02.pdf",
+      "expected": "2292355a01154b7877649ad1beb1ad32a9f9649e3d74a36d38590f4d6c01bc59",
+      "working_sha256": "2292355a01154b7877649ad1beb1ad32a9f9649e3d74a36d38590f4d6c01bc59",
+      "git_sha256": "2292355a01154b7877649ad1beb1ad32a9f9649e3d74a36d38590f4d6c01bc59",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.2015-07",
+      "file": "database/raw/cn/cn.sta.2015-07.html",
+      "expected": "22048d111aa4567f939c7032355cc664a8f3a125f259b3208626f1a87cf9dfdc",
+      "working_sha256": "22048d111aa4567f939c7032355cc664a8f3a125f259b3208626f1a87cf9dfdc",
+      "git_sha256": "22048d111aa4567f939c7032355cc664a8f3a125f259b3208626f1a87cf9dfdc",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.2017-37",
+      "file": "database/raw/cn/cn.sta.2017-37.html",
+      "expected": "ca6605033b6a75029152e7a71fe94f33fd7c91222e7af9b3007579fa750b7166",
+      "working_sha256": "ca6605033b6a75029152e7a71fe94f33fd7c91222e7af9b3007579fa750b7166",
+      "git_sha256": "ca6605033b6a75029152e7a71fe94f33fd7c91222e7af9b3007579fa750b7166",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.ssty",
+      "file": "database/raw/cn/cn.sta.ssty.html",
+      "expected": "07dfed9dcd45d80a77ae1f318ceec2cda972b918af5301263747879119e9d24e",
+      "working_sha256": "07dfed9dcd45d80a77ae1f318ceec2cda972b918af5301263747879119e9d24e",
+      "git_sha256": "07dfed9dcd45d80a77ae1f318ceec2cda972b918af5301263747879119e9d24e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.2008-112",
+      "file": "database/raw/cn/cn.sta.2008-112.html",
+      "expected": "67900dca7a249082641bb3fa4a9b9c8cbbc543c1c6cf20296d77e0b03ea9064b",
+      "working_sha256": "67900dca7a249082641bb3fa4a9b9c8cbbc543c1c6cf20296d77e0b03ea9064b",
+      "git_sha256": "67900dca7a249082641bb3fa4a9b9c8cbbc543c1c6cf20296d77e0b03ea9064b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-hk.2006.zh",
+      "file": "database/raw/cn-hk/treaty.cn-hk.2006.zh.pdf",
+      "expected": "42c1f0b5c90a7f656ed1f9ec73f4747c67dd1ff72e816dc1630e94ffbb008c8b",
+      "working_sha256": "42c1f0b5c90a7f656ed1f9ec73f4747c67dd1ff72e816dc1630e94ffbb008c8b",
+      "git_sha256": "42c1f0b5c90a7f656ed1f9ec73f4747c67dd1ff72e816dc1630e94ffbb008c8b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-hk.2006.p2.zh",
+      "file": "database/raw/cn-hk/treaty.cn-hk.2006.p2.zh.pdf",
+      "expected": "251c6d1ecfee96fe6f4cb985317bb73275b37e34723690c8e86450362f528a8f",
+      "working_sha256": "251c6d1ecfee96fe6f4cb985317bb73275b37e34723690c8e86450362f528a8f",
+      "git_sha256": "251c6d1ecfee96fe6f4cb985317bb73275b37e34723690c8e86450362f528a8f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-hk.2006.p3.zh",
+      "file": "database/raw/cn-hk/treaty.cn-hk.2006.p3.zh.pdf",
+      "expected": "2e7be7c6233b537c595e2e00866d2b961bff4d7d3bec1f5c13846248e5c5658e",
+      "working_sha256": "2e7be7c6233b537c595e2e00866d2b961bff4d7d3bec1f5c13846248e5c5658e",
+      "git_sha256": "2e7be7c6233b537c595e2e00866d2b961bff4d7d3bec1f5c13846248e5c5658e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-hk.2006.p4.zh",
+      "file": "database/raw/cn-hk/treaty.cn-hk.2006.p4.zh.pdf",
+      "expected": "5240afdf2e62da5622e360d45e319e6f663e88ff726b7d7e2182cdc06cb196b1",
+      "working_sha256": "5240afdf2e62da5622e360d45e319e6f663e88ff726b7d7e2182cdc06cb196b1",
+      "git_sha256": "5240afdf2e62da5622e360d45e319e6f663e88ff726b7d7e2182cdc06cb196b1",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-hk.2006.p5.zh",
+      "file": "database/raw/cn-hk/treaty.cn-hk.2006.p5.zh.pdf",
+      "expected": "d6f1e32ebfcd827d490874d935b0dc2f079a193d1c58c0c4f69564d8baa54e8a",
+      "working_sha256": "d6f1e32ebfcd827d490874d935b0dc2f079a193d1c58c0c4f69564d8baa54e8a",
+      "git_sha256": "d6f1e32ebfcd827d490874d935b0dc2f079a193d1c58c0c4f69564d8baa54e8a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-id.2001.en",
+      "file": "database/raw/cn-id/treaty.cn-id.2001.en.pdf",
+      "expected": "455ac7edae37c905f6393e2d599527ee7e06ef2a700c189a16c02088ec5437e8",
+      "working_sha256": "455ac7edae37c905f6393e2d599527ee7e06ef2a700c189a16c02088ec5437e8",
+      "git_sha256": "455ac7edae37c905f6393e2d599527ee7e06ef2a700c189a16c02088ec5437e8",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-id.2001.p1.en",
+      "file": "database/raw/cn-id/treaty.cn-id.2001.p1.en.pdf",
+      "expected": "9e6576edad49b2ab5da864fdc1b466ecfeffd09facb49878ae4dc6e8bbf19922",
+      "working_sha256": "9e6576edad49b2ab5da864fdc1b466ecfeffd09facb49878ae4dc6e8bbf19922",
+      "git_sha256": "9e6576edad49b2ab5da864fdc1b466ecfeffd09facb49878ae4dc6e8bbf19922",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-id.2001.mou.en",
+      "file": "database/raw/cn-id/treaty.cn-id.2001.mou.en.pdf",
+      "expected": "6a1bf6730593fe40f5ff0cb2782200b7d984cda61ef51ab53505cb995eddcbf6",
+      "working_sha256": "6a1bf6730593fe40f5ff0cb2782200b7d984cda61ef51ab53505cb995eddcbf6",
+      "git_sha256": "6a1bf6730593fe40f5ff0cb2782200b7d984cda61ef51ab53505cb995eddcbf6",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-id.2001.mli.en",
+      "file": "database/raw/cn-id/treaty.cn-id.2001.mli.en.pdf",
+      "expected": "407195492437074c958154dadfa93d3d83f7f9f8f10c9d0b78e6be1c9f0e870c",
+      "working_sha256": "407195492437074c958154dadfa93d3d83f7f9f8f10c9d0b78e6be1c9f0e870c",
+      "git_sha256": "407195492437074c958154dadfa93d3d83f7f9f8f10c9d0b78e6be1c9f0e870c",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-in.1994.en",
+      "file": "database/raw/cn-in/treaty.cn-in.1994.en.pdf",
+      "expected": "73343d958ebd556356411ff082e70e122630df9bf067c6cf6dc361b28f3410ea",
+      "working_sha256": "73343d958ebd556356411ff082e70e122630df9bf067c6cf6dc361b28f3410ea",
+      "git_sha256": "73343d958ebd556356411ff082e70e122630df9bf067c6cf6dc361b28f3410ea",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-in.1994.p1.en",
+      "file": "database/raw/cn-in/treaty.cn-in.1994.p1.en.pdf",
+      "expected": "a7ccf7ecabcc396e3fbd04ffc274daefa4d49a64957368d0ce731cf4f947e2fd",
+      "working_sha256": "a7ccf7ecabcc396e3fbd04ffc274daefa4d49a64957368d0ce731cf4f947e2fd",
+      "git_sha256": "a7ccf7ecabcc396e3fbd04ffc274daefa4d49a64957368d0ce731cf4f947e2fd",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-in.1994.p2.en",
+      "file": "database/raw/cn-in/treaty.cn-in.1994.p2.en.pdf",
+      "expected": "b50a6b409bf13fa318d84833239f51211056ff24284c4515196b2852f0d851bf",
+      "working_sha256": "b50a6b409bf13fa318d84833239f51211056ff24284c4515196b2852f0d851bf",
+      "git_sha256": "b50a6b409bf13fa318d84833239f51211056ff24284c4515196b2852f0d851bf",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-jp.1983.en",
+      "file": "database/raw/cn-jp/treaty.cn-jp.1983.en.pdf",
+      "expected": "296d8c4cc86752a926977d1850e53852d0f5b3302a46f5991d7d46f69136fdc2",
+      "working_sha256": "296d8c4cc86752a926977d1850e53852d0f5b3302a46f5991d7d46f69136fdc2",
+      "git_sha256": "296d8c4cc86752a926977d1850e53852d0f5b3302a46f5991d7d46f69136fdc2",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-jp.1983.p1.en",
+      "file": "database/raw/cn-jp/treaty.cn-jp.1983.p1.en.pdf",
+      "expected": "ed61c0e5fcdeee8fe6ac614f3c516d4f9936540fff2885a6b7db262fe940d99a",
+      "working_sha256": "ed61c0e5fcdeee8fe6ac614f3c516d4f9936540fff2885a6b7db262fe940d99a",
+      "git_sha256": "ed61c0e5fcdeee8fe6ac614f3c516d4f9936540fff2885a6b7db262fe940d99a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-jp.1983.notes.en",
+      "file": "database/raw/cn-jp/treaty.cn-jp.1983.notes.en.pdf",
+      "expected": "39789ec066b092482d5dbe5d35e94471281ad09ae333603aee105098d0ea4898",
+      "working_sha256": "39789ec066b092482d5dbe5d35e94471281ad09ae333603aee105098d0ea4898",
+      "git_sha256": "39789ec066b092482d5dbe5d35e94471281ad09ae333603aee105098d0ea4898",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-jp.1983.mli.en",
+      "file": "database/raw/cn-jp/treaty.cn-jp.1983.mli.en.pdf",
+      "expected": "41ba57b2c39082f8ed6f1ec674623c8c1e1ff847aba7de97b21134046ffbf3e9",
+      "working_sha256": "41ba57b2c39082f8ed6f1ec674623c8c1e1ff847aba7de97b21134046ffbf3e9",
+      "git_sha256": "41ba57b2c39082f8ed6f1ec674623c8c1e1ff847aba7de97b21134046ffbf3e9",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-kr.1994.en",
+      "file": "database/raw/cn-kr/treaty.cn-kr.1994.en.pdf",
+      "expected": "8a90a80f2287821e5684a1478e7955f861428c7b7c56ce105397633b3d59f14c",
+      "working_sha256": "8a90a80f2287821e5684a1478e7955f861428c7b7c56ce105397633b3d59f14c",
+      "git_sha256": "8a90a80f2287821e5684a1478e7955f861428c7b7c56ce105397633b3d59f14c",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-kr.1994.p1.en",
+      "file": "database/raw/cn-kr/treaty.cn-kr.1994.p1.en.pdf",
+      "expected": "a1b2e7fa14cbdd396679221f0c28803dae9c4a3565ea532c4b535f52af62fb0e",
+      "working_sha256": "a1b2e7fa14cbdd396679221f0c28803dae9c4a3565ea532c4b535f52af62fb0e",
+      "git_sha256": "a1b2e7fa14cbdd396679221f0c28803dae9c4a3565ea532c4b535f52af62fb0e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-kr.1994.mou1.en",
+      "file": "database/raw/cn-kr/treaty.cn-kr.1994.mou1.en.pdf",
+      "expected": "85092fd125c7142ef22e716e2ab26dcbbadf8781baf844e4ac857816605081e3",
+      "working_sha256": "85092fd125c7142ef22e716e2ab26dcbbadf8781baf844e4ac857816605081e3",
+      "git_sha256": "85092fd125c7142ef22e716e2ab26dcbbadf8781baf844e4ac857816605081e3",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-kr.1994.p2.en",
+      "file": "database/raw/cn-kr/treaty.cn-kr.1994.p2.en.pdf",
+      "expected": "f705e78bf8a57bb94d8a8db10d006434e947d5db750d8d200bd6c40a703c0ac9",
+      "working_sha256": "f705e78bf8a57bb94d8a8db10d006434e947d5db750d8d200bd6c40a703c0ac9",
+      "git_sha256": "f705e78bf8a57bb94d8a8db10d006434e947d5db750d8d200bd6c40a703c0ac9",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-kr.1994.mou2.en",
+      "file": "database/raw/cn-kr/treaty.cn-kr.1994.mou2.en.pdf",
+      "expected": "b398931992f356960d3d9922cef13f2cba823c74e20c3b0f932beea83c472596",
+      "working_sha256": "b398931992f356960d3d9922cef13f2cba823c74e20c3b0f932beea83c472596",
+      "git_sha256": "b398931992f356960d3d9922cef13f2cba823c74e20c3b0f932beea83c472596",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-kr.1994.mli.en",
+      "file": "database/raw/cn-kr/treaty.cn-kr.1994.mli.en.pdf",
+      "expected": "2efb74821ecf3d6e827fc3342ac13ec96e3efbc9e210f27dd11bdcd9e6ac68c4",
+      "working_sha256": "2efb74821ecf3d6e827fc3342ac13ec96e3efbc9e210f27dd11bdcd9e6ac68c4",
+      "git_sha256": "2efb74821ecf3d6e827fc3342ac13ec96e3efbc9e210f27dd11bdcd9e6ac68c4",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-my.1985.en",
+      "file": "database/raw/cn-my/treaty.cn-my.1985.en.pdf",
+      "expected": "2be5956889b35de6257b4095638120d6e892c8f18dc957ff8084728cb5c9797f",
+      "working_sha256": "2be5956889b35de6257b4095638120d6e892c8f18dc957ff8084728cb5c9797f",
+      "git_sha256": "2be5956889b35de6257b4095638120d6e892c8f18dc957ff8084728cb5c9797f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-my.1985.p1.en",
+      "file": "database/raw/cn-my/treaty.cn-my.1985.p1.en.pdf",
+      "expected": "eb34ba11cb565e17ec019326a2903c3ac7a91cce183cff1f8fbcef95cf3fcd7d",
+      "working_sha256": "eb34ba11cb565e17ec019326a2903c3ac7a91cce183cff1f8fbcef95cf3fcd7d",
+      "git_sha256": "eb34ba11cb565e17ec019326a2903c3ac7a91cce183cff1f8fbcef95cf3fcd7d",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-my.1985.notes.en",
+      "file": "database/raw/cn-my/treaty.cn-my.1985.notes.en.pdf",
+      "expected": "27d633130ec8facd4b46f676e9ecf1a5c0d0e922d98aa4a8dba996077310ed6a",
+      "working_sha256": "27d633130ec8facd4b46f676e9ecf1a5c0d0e922d98aa4a8dba996077310ed6a",
+      "git_sha256": "27d633130ec8facd4b46f676e9ecf1a5c0d0e922d98aa4a8dba996077310ed6a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-my.1985.mli.en",
+      "file": "database/raw/cn-my/treaty.cn-my.1985.mli.en.pdf",
+      "expected": "69b33ab79280a4595ca5da708b6a5776c4a61f199c5b32ed46188d8ae26c897d",
+      "working_sha256": "69b33ab79280a4595ca5da708b6a5776c4a61f199c5b32ed46188d8ae26c897d",
+      "git_sha256": "69b33ab79280a4595ca5da708b6a5776c4a61f199c5b32ed46188d8ae26c897d",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-sg.2007.en",
+      "file": "database/raw/cn-sg/treaty.cn-sg.2007.en.pdf",
+      "expected": "25c5c6ef1e2a65f0e7b0294e8f9b0bf71e23a153ba5fe6d4bf699f42bb76c330",
+      "working_sha256": "25c5c6ef1e2a65f0e7b0294e8f9b0bf71e23a153ba5fe6d4bf699f42bb76c330",
+      "git_sha256": "25c5c6ef1e2a65f0e7b0294e8f9b0bf71e23a153ba5fe6d4bf699f42bb76c330",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-sg.2007.p2.en",
+      "file": "database/raw/cn-sg/treaty.cn-sg.2007.p2.en.pdf",
+      "expected": "0d683bdd917351d29652036c0db680db4da75efd02bd6876fe48944c2d1391b0",
+      "working_sha256": "0d683bdd917351d29652036c0db680db4da75efd02bd6876fe48944c2d1391b0",
+      "git_sha256": "0d683bdd917351d29652036c0db680db4da75efd02bd6876fe48944c2d1391b0",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-sg.2007.p3.en",
+      "file": "database/raw/cn-sg/treaty.cn-sg.2007.p3.en.pdf",
+      "expected": "057cd3428a803cce9836b7fabcf466d2dd0fce4bc909da0bee36e13f615140aa",
+      "working_sha256": "057cd3428a803cce9836b7fabcf466d2dd0fce4bc909da0bee36e13f615140aa",
+      "git_sha256": "057cd3428a803cce9836b7fabcf466d2dd0fce4bc909da0bee36e13f615140aa",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-sg.2007.mli.en",
+      "file": "database/raw/cn-sg/treaty.cn-sg.2007.mli.en.pdf",
+      "expected": "06c98cb98d665e9f5cdedcaa3bb7b14e560ef303125951ed38f3d9e042f5e2ea",
+      "working_sha256": "06c98cb98d665e9f5cdedcaa3bb7b14e560ef303125951ed38f3d9e042f5e2ea",
+      "git_sha256": "06c98cb98d665e9f5cdedcaa3bb7b14e560ef303125951ed38f3d9e042f5e2ea",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-th.1986.en",
+      "file": "database/raw/cn-th/treaty.cn-th.1986.en.pdf",
+      "expected": "c62fa55742206838d840f9293e320e4b2b15877cfb892243f9fb6c1ab81071c1",
+      "working_sha256": "c62fa55742206838d840f9293e320e4b2b15877cfb892243f9fb6c1ab81071c1",
+      "git_sha256": "c62fa55742206838d840f9293e320e4b2b15877cfb892243f9fb6c1ab81071c1",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-th.1986.mli.en",
+      "file": "database/raw/cn-th/treaty.cn-th.1986.mli.en.pdf",
+      "expected": "ea1815119fac04b40c86d58d001895190150a5fc327c0705c80487a517d73f01",
+      "working_sha256": "ea1815119fac04b40c86d58d001895190150a5fc327c0705c80487a517d73f01",
+      "git_sha256": "ea1815119fac04b40c86d58d001895190150a5fc327c0705c80487a517d73f01",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-vn.1995.en",
+      "file": "database/raw/cn-vn/treaty.cn-vn.1995.en.pdf",
+      "expected": "0f48e1443a7959a6882fac317757eb2d18082b1d544ff595fce1ede6b25e0dad",
+      "working_sha256": "0f48e1443a7959a6882fac317757eb2d18082b1d544ff595fce1ede6b25e0dad",
+      "git_sha256": "0f48e1443a7959a6882fac317757eb2d18082b1d544ff595fce1ede6b25e0dad",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-vn.1995.p1.en",
+      "file": "database/raw/cn-vn/treaty.cn-vn.1995.p1.en.pdf",
+      "expected": "7f31130de9a2532b0f85fdf144708b811a0e78e77a8d369f7a3fdebd325683c2",
+      "working_sha256": "7f31130de9a2532b0f85fdf144708b811a0e78e77a8d369f7a3fdebd325683c2",
+      "git_sha256": "7f31130de9a2532b0f85fdf144708b811a0e78e77a8d369f7a3fdebd325683c2",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-vn.1995.notes.en",
+      "file": "database/raw/cn-vn/treaty.cn-vn.1995.notes.en.pdf",
+      "expected": "339fbad633f48556a96f64129edbc9a1bd45e8a370faf1555ad7580b04f55a4f",
+      "working_sha256": "339fbad633f48556a96f64129edbc9a1bd45e8a370faf1555ad7580b04f55a4f",
+      "git_sha256": "339fbad633f48556a96f64129edbc9a1bd45e8a370faf1555ad7580b04f55a4f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.cn-vn.1995.mli.en",
+      "file": "database/raw/cn-vn/treaty.cn-vn.1995.mli.en.pdf",
+      "expected": "52b6acc8fe22096ddd1da98102a8154dca532f5bd347a48e306b061257eb8532",
+      "working_sha256": "52b6acc8fe22096ddd1da98102a8154dca532f5bd347a48e306b061257eb8532",
+      "git_sha256": "52b6acc8fe22096ddd1da98102a8154dca532f5bd347a48e306b061257eb8532",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.gsh.2009-37",
+      "file": "database/raw/cn/cn.gsh.2009-37.html",
+      "expected": "8655c7c5d74638d47a40a69870f578916bb6fa21762bf60461c6289b02805ea3",
+      "working_sha256": "8655c7c5d74638d47a40a69870f578916bb6fa21762bf60461c6289b02805ea3",
+      "git_sha256": "8655c7c5d74638d47a40a69870f578916bb6fa21762bf60461c6289b02805ea3",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.cs.2026-27",
+      "file": "database/raw/cn/cn.cs.2026-27.html",
+      "expected": "cf9cd12fc6ddc8dc9ed379e9e37f99a9a15b11158f9c84ce63393cc8747189d0",
+      "working_sha256": "cf9cd12fc6ddc8dc9ed379e9e37f99a9a15b11158f9c84ce63393cc8747189d0",
+      "git_sha256": "cf9cd12fc6ddc8dc9ed379e9e37f99a9a15b11158f9c84ce63393cc8747189d0",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "intl.mli.positions.cn.en",
+      "file": "database/raw/intl/intl.mli.positions.cn.en.pdf",
+      "expected": "47cdf107c8a4aae39d6cf060c055f9143be3a4fb623c3f377326ff799be5fd3f",
+      "working_sha256": "47cdf107c8a4aae39d6cf060c055f9143be3a4fb623c3f377326ff799be5fd3f",
+      "git_sha256": "47cdf107c8a4aae39d6cf060c055f9143be3a4fb623c3f377326ff799be5fd3f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.cap112",
+      "file": "database/raw/hk/hk.cap112.rtf",
+      "expected": "e28849ff385862416718714208c9fa05d27b022ca475b687c6f1c4591a100134",
+      "working_sha256": "e28849ff385862416718714208c9fa05d27b022ca475b687c6f1c4591a100134",
+      "git_sha256": "e28849ff385862416718714208c9fa05d27b022ca475b687c6f1c4591a100134",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-id.2010.en",
+      "file": "database/raw/hk-id/treaty.hk-id.2010.en.rtf",
+      "expected": "e932a9e4c0f56d0189bd877254a6c4f795c872c95a1e8b34d2aa2abd99386d08",
+      "working_sha256": "e932a9e4c0f56d0189bd877254a6c4f795c872c95a1e8b34d2aa2abd99386d08",
+      "git_sha256": "e932a9e4c0f56d0189bd877254a6c4f795c872c95a1e8b34d2aa2abd99386d08",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-id.2010.mli.en",
+      "file": "database/raw/hk-id/treaty.hk-id.2010.mli.en.pdf",
+      "expected": "4ad893e3ba9a0f4bff78d7c26e9dce0602452bc5d41b7024744af6d05b84764b",
+      "working_sha256": "4ad893e3ba9a0f4bff78d7c26e9dce0602452bc5d41b7024744af6d05b84764b",
+      "git_sha256": "4ad893e3ba9a0f4bff78d7c26e9dce0602452bc5d41b7024744af6d05b84764b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-in.2018.en",
+      "file": "database/raw/hk-in/treaty.hk-in.2018.en.rtf",
+      "expected": "11a9dc4d72e3149ca374e25f671d3372dba6b888a1a07c564d6456f827c0d2e0",
+      "working_sha256": "11a9dc4d72e3149ca374e25f671d3372dba6b888a1a07c564d6456f827c0d2e0",
+      "git_sha256": "11a9dc4d72e3149ca374e25f671d3372dba6b888a1a07c564d6456f827c0d2e0",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-in.2018.mli.en",
+      "file": "database/raw/hk-in/treaty.hk-in.2018.mli.en.pdf",
+      "expected": "c8f173fd0b96381a48a83f2657369be9767f99fcf896be64de4b1a6fa6cae87f",
+      "working_sha256": "c8f173fd0b96381a48a83f2657369be9767f99fcf896be64de4b1a6fa6cae87f",
+      "git_sha256": "c8f173fd0b96381a48a83f2657369be9767f99fcf896be64de4b1a6fa6cae87f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-jp.2010.en",
+      "file": "database/raw/hk-jp/treaty.hk-jp.2010.en.rtf",
+      "expected": "12613b25c5f20b47576cc61b02193933516ed430130b74a6604b2fdae190d986",
+      "working_sha256": "12613b25c5f20b47576cc61b02193933516ed430130b74a6604b2fdae190d986",
+      "git_sha256": "12613b25c5f20b47576cc61b02193933516ed430130b74a6604b2fdae190d986",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-jp.2010.notes.en",
+      "file": "database/raw/hk-jp/treaty.hk-jp.2010.notes.en.pdf",
+      "expected": "a55de38aecf5810fb6e6ccf1ba1c1f518802284e0efebc4868d70dcd8839d4f1",
+      "working_sha256": "a55de38aecf5810fb6e6ccf1ba1c1f518802284e0efebc4868d70dcd8839d4f1",
+      "git_sha256": "a55de38aecf5810fb6e6ccf1ba1c1f518802284e0efebc4868d70dcd8839d4f1",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-jp.2010.mli.en",
+      "file": "database/raw/hk-jp/treaty.hk-jp.2010.mli.en.pdf",
+      "expected": "fc3253a9853b9360c8b4bc55561450152224a02d00fb1c8d9046584fbf728df8",
+      "working_sha256": "fc3253a9853b9360c8b4bc55561450152224a02d00fb1c8d9046584fbf728df8",
+      "git_sha256": "fc3253a9853b9360c8b4bc55561450152224a02d00fb1c8d9046584fbf728df8",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-kr.2014.en",
+      "file": "database/raw/hk-kr/treaty.hk-kr.2014.en.rtf",
+      "expected": "88c47a6c12f2b478ca188267226e752272432ad0a91cd3205d8b148a8aa7adc1",
+      "working_sha256": "88c47a6c12f2b478ca188267226e752272432ad0a91cd3205d8b148a8aa7adc1",
+      "git_sha256": "88c47a6c12f2b478ca188267226e752272432ad0a91cd3205d8b148a8aa7adc1",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-kr.2014.mli.en",
+      "file": "database/raw/hk-kr/treaty.hk-kr.2014.mli.en.pdf",
+      "expected": "4775bce7560deae8b65845749505a6d940ac02d64f1c5e865e3965612b904165",
+      "working_sha256": "4775bce7560deae8b65845749505a6d940ac02d64f1c5e865e3965612b904165",
+      "git_sha256": "4775bce7560deae8b65845749505a6d940ac02d64f1c5e865e3965612b904165",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-my.2012.en",
+      "file": "database/raw/hk-my/treaty.hk-my.2012.en.rtf",
+      "expected": "4342e18002f152268455f6b691a9489f699f5e7b2217ce2c8ae8fe33b60d1a6a",
+      "working_sha256": "4342e18002f152268455f6b691a9489f699f5e7b2217ce2c8ae8fe33b60d1a6a",
+      "git_sha256": "4342e18002f152268455f6b691a9489f699f5e7b2217ce2c8ae8fe33b60d1a6a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-my.2012.mli.en",
+      "file": "database/raw/hk-my/treaty.hk-my.2012.mli.en.pdf",
+      "expected": "513c437760fd992d1329e970b36fd05e8de7d16115fe9beafaa3f7c8f26b818d",
+      "working_sha256": "513c437760fd992d1329e970b36fd05e8de7d16115fe9beafaa3f7c8f26b818d",
+      "git_sha256": "513c437760fd992d1329e970b36fd05e8de7d16115fe9beafaa3f7c8f26b818d",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-th.2005.en",
+      "file": "database/raw/hk-th/treaty.hk-th.2005.en.rtf",
+      "expected": "abf3e3ecd402bdfc76d9bebcfbb0d3ee517f2ac583dc547eec49de6016c82d99",
+      "working_sha256": "abf3e3ecd402bdfc76d9bebcfbb0d3ee517f2ac583dc547eec49de6016c82d99",
+      "git_sha256": "abf3e3ecd402bdfc76d9bebcfbb0d3ee517f2ac583dc547eec49de6016c82d99",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-th.2005.notes.en",
+      "file": "database/raw/hk-th/treaty.hk-th.2005.notes.en.pdf",
+      "expected": "ce19588a93c0fd297f303ffa38f1f689e5372d7a67ff5f5b6c883ffd7c46f7a9",
+      "working_sha256": "ce19588a93c0fd297f303ffa38f1f689e5372d7a67ff5f5b6c883ffd7c46f7a9",
+      "git_sha256": "ce19588a93c0fd297f303ffa38f1f689e5372d7a67ff5f5b6c883ffd7c46f7a9",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-th.2005.mli.en",
+      "file": "database/raw/hk-th/treaty.hk-th.2005.mli.en.pdf",
+      "expected": "856a91066866630b53fcabc5b937bfea6fd37116c7d0e623066942d8bfbc017d",
+      "working_sha256": "856a91066866630b53fcabc5b937bfea6fd37116c7d0e623066942d8bfbc017d",
+      "git_sha256": "856a91066866630b53fcabc5b937bfea6fd37116c7d0e623066942d8bfbc017d",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.hk-vn.2008.en",
+      "file": "database/raw/hk-vn/treaty.hk-vn.2008.en.rtf",
+      "expected": "7801d330c0454a2c836604b30cd9d30d0f71e1c9ed08bd1a480680342d05dcd7",
+      "working_sha256": "7801d330c0454a2c836604b30cd9d30d0f71e1c9ed08bd1a480680342d05dcd7",
+      "git_sha256": "7801d330c0454a2c836604b30cd9d30d0f71e1c9ed08bd1a480680342d05dcd7",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "intl.oecd.mli.en",
+      "file": "database/raw/intl/intl.oecd.mli.en.pdf",
+      "expected": "f863f260005376b11f4677b60d6e5b51ac2947e582d2defc26170db42020c691",
+      "working_sha256": "f863f260005376b11f4677b60d6e5b51ac2947e582d2defc26170db42020c691",
+      "git_sha256": "f863f260005376b11f4677b60d6e5b51ac2947e582d2defc26170db42020c691",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.ird.cor",
+      "file": "database/raw/hk/hk.ird.cor.html",
+      "expected": "99e8c99a1c0022b2cd4876d36184599f8eeac094022391219b1b369950efd323",
+      "working_sha256": "99e8c99a1c0022b2cd4876d36184599f8eeac094022391219b1b369950efd323",
+      "git_sha256": "99e8c99a1c0022b2cd4876d36184599f8eeac094022391219b1b369950efd323",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.ird.cor.faq",
+      "file": "database/raw/hk/hk.ird.cor.faq.html",
+      "expected": "dbf4a240ce242f86783086002a5969c67f8dbd5cfa9e240a780930c3e5757eb3",
+      "working_sha256": "dbf4a240ce242f86783086002a5969c67f8dbd5cfa9e240a780930c3e5757eb3",
+      "git_sha256": "dbf4a240ce242f86783086002a5969c67f8dbd5cfa9e240a780930c3e5757eb3",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.form.ir1313a",
+      "file": "database/raw/hk/hk.form.ir1313a.pdf",
+      "expected": "04d7c98e34659492a0a6635434aa0c339e2839cb4daad7bd26d87f7ab0066f8e",
+      "working_sha256": "04d7c98e34659492a0a6635434aa0c339e2839cb4daad7bd26d87f7ab0066f8e",
+      "git_sha256": "04d7c98e34659492a0a6635434aa0c339e2839cb4daad7bd26d87f7ab0066f8e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.form.ir1313b",
+      "file": "database/raw/hk/hk.form.ir1313b.pdf",
+      "expected": "de71a50a48a7ad3af67edcd382e3ea4197549816e9a4baa04c2728db878909b4",
+      "working_sha256": "de71a50a48a7ad3af67edcd382e3ea4197549816e9a4baa04c2728db878909b4",
+      "git_sha256": "de71a50a48a7ad3af67edcd382e3ea4197549816e9a4baa04c2728db878909b4",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.form.ir1314a",
+      "file": "database/raw/hk/hk.form.ir1314a.pdf",
+      "expected": "e5e05877e8d7ead1722724081814366d300992e7eaeb7d1071dd4dc3ab7c0c5c",
+      "working_sha256": "e5e05877e8d7ead1722724081814366d300992e7eaeb7d1071dd4dc3ab7c0c5c",
+      "git_sha256": "e5e05877e8d7ead1722724081814366d300992e7eaeb7d1071dd4dc3ab7c0c5c",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.form.ir1314b",
+      "file": "database/raw/hk/hk.form.ir1314b.pdf",
+      "expected": "61a2f9d7ec46767522e72d7828e86f4c117797045d21ecb942f1975611d67246",
+      "working_sha256": "61a2f9d7ec46767522e72d7828e86f4c117797045d21ecb942f1975611d67246",
+      "git_sha256": "61a2f9d7ec46767522e72d7828e86f4c117797045d21ecb942f1975611d67246",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.ird.dta-list",
+      "file": "database/raw/hk/hk.ird.dta-list.html",
+      "expected": "367c3813447a15653fbb931740a02c610bf213cc067e915b814a6a6de86c3a4e",
+      "working_sha256": "367c3813447a15653fbb931740a02c610bf213cc067e915b814a6a6de86c3a4e",
+      "git_sha256": "367c3813447a15653fbb931740a02c610bf213cc067e915b814a6a6de86c3a4e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.ird.dta-rates",
+      "file": "database/raw/hk/hk.ird.dta-rates.html",
+      "expected": "49d50b2a5b0c3689a6f9013c266a7c09338ee76c5295d9c28fba9cd9376f5ff9",
+      "working_sha256": "49d50b2a5b0c3689a6f9013c266a7c09338ee76c5295d9c28fba9cd9376f5ff9",
+      "git_sha256": "49d50b2a5b0c3689a6f9013c266a7c09338ee76c5295d9c28fba9cd9376f5ff9",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.dipn.44",
+      "file": "database/raw/hk/hk.dipn.44.pdf",
+      "expected": "b894ef31bbeb34e597b0c5d12004dde45718638e5e841c14b1510d02bb705c43",
+      "working_sha256": "b894ef31bbeb34e597b0c5d12004dde45718638e5e841c14b1510d02bb705c43",
+      "git_sha256": "b894ef31bbeb34e597b0c5d12004dde45718638e5e841c14b1510d02bb705c43",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "intl.mli.notification-35-7b.hk.en",
+      "file": "database/raw/intl/intl.mli.notification-35-7b.hk.en.pdf",
+      "expected": "3b717267695dda157905325ff5ed269d15f77d997d3c5b9d204debded3212fec",
+      "working_sha256": "3b717267695dda157905325ff5ed269d15f77d997d3c5b9d204debded3212fec",
+      "git_sha256": "3b717267695dda157905325ff5ed269d15f77d997d3c5b9d204debded3212fec",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.sg-th.2015.en",
+      "file": "database/raw/sg-th/treaty.sg-th.2015.en.pdf",
+      "expected": "b0d6ec054ad3062887d5a72c30ea5e1f3234e673d119c1a170c5ec000d9474e1",
+      "working_sha256": "b0d6ec054ad3062887d5a72c30ea5e1f3234e673d119c1a170c5ec000d9474e1",
+      "git_sha256": "b0d6ec054ad3062887d5a72c30ea5e1f3234e673d119c1a170c5ec000d9474e1",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.sg-vn.1994.en",
+      "file": "database/raw/sg-vn/treaty.sg-vn.1994.en.pdf",
+      "expected": "948b2597f2996af06d048be2eb1a74ca1772e7d110b31a969985fa3dbdeca503",
+      "working_sha256": "948b2597f2996af06d048be2eb1a74ca1772e7d110b31a969985fa3dbdeca503",
+      "git_sha256": "948b2597f2996af06d048be2eb1a74ca1772e7d110b31a969985fa3dbdeca503",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "sg.iras.dta-list",
+      "file": "database/raw/sg/sg.iras.dta-list.html",
+      "expected": "fa19a8ee4f22cac4c584d3f1687bedd270333f57cc20a8eb5234d12bb7036a73",
+      "working_sha256": "fa19a8ee4f22cac4c584d3f1687bedd270333f57cc20a8eb5234d12bb7036a73",
+      "git_sha256": "fa19a8ee4f22cac4c584d3f1687bedd270333f57cc20a8eb5234d12bb7036a73",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "sg.iras.wht-rates",
+      "file": "database/raw/sg/sg.iras.wht-rates.html",
+      "expected": "646153fcab4d9cf6715da682af82c459b0e09c7b227278bff9c3c27d09e014a9",
+      "working_sha256": "646153fcab4d9cf6715da682af82c459b0e09c7b227278bff9c3c27d09e014a9",
+      "git_sha256": "646153fcab4d9cf6715da682af82c459b0e09c7b227278bff9c3c27d09e014a9",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "sg.iras.cor",
+      "file": "database/raw/sg/sg.iras.cor.html",
+      "expected": "7b367b79b714e829bc284806c1033b060f0da0ae67b6acb61143964b1c191ee2",
+      "working_sha256": "7b367b79b714e829bc284806c1033b060f0da0ae67b6acb61143964b1c191ee2",
+      "git_sha256": "7b367b79b714e829bc284806c1033b060f0da0ae67b6acb61143964b1c191ee2",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "sg.iras.cor.apply",
+      "file": "database/raw/sg/sg.iras.cor.apply.html",
+      "expected": "146886aee8f6c0fd1c86b6864a9c8b8dbef83a1757a1f37a1ba627cd70b19602",
+      "working_sha256": "146886aee8f6c0fd1c86b6864a9c8b8dbef83a1757a1f37a1ba627cd70b19602",
+      "git_sha256": "146886aee8f6c0fd1c86b6864a9c8b8dbef83a1757a1f37a1ba627cd70b19602",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "sg.ita1947",
+      "file": "database/raw/sg/sg.ita1947.html",
+      "expected": "0f391fcc85017d7998a2cf376e4df68de13f4c497a24cb497b1d419951439758",
+      "working_sha256": "0f391fcc85017d7998a2cf376e4df68de13f4c497a24cb497b1d419951439758",
+      "git_sha256": "0f391fcc85017d7998a2cf376e4df68de13f4c497a24cb497b1d419951439758",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.cta",
+      "file": "database/raw/jp/jp.cta.xml",
+      "expected": "b3adc0eabf98a8210ec465d6ded837fb0fadf65d4cfcb3e3bc2b7e43ca27212a",
+      "working_sha256": "b3adc0eabf98a8210ec465d6ded837fb0fadf65d4cfcb3e3bc2b7e43ca27212a",
+      "git_sha256": "b3adc0eabf98a8210ec465d6ded837fb0fadf65d4cfcb3e3bc2b7e43ca27212a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.cta.order",
+      "file": "database/raw/jp/jp.cta.order.xml",
+      "expected": "e2654ef6523c2fb501331747c0ee2855bc7d4c942d061b1ea7caa26d5d86108a",
+      "working_sha256": "e2654ef6523c2fb501331747c0ee2855bc7d4c942d061b1ea7caa26d5d86108a",
+      "git_sha256": "e2654ef6523c2fb501331747c0ee2855bc7d4c942d061b1ea7caa26d5d86108a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.ita",
+      "file": "database/raw/jp/jp.ita.xml",
+      "expected": "4e5d010f6717eb59427d3cc786c544292a07d80a2aadef012e06014265743bad",
+      "working_sha256": "4e5d010f6717eb59427d3cc786c544292a07d80a2aadef012e06014265743bad",
+      "git_sha256": "4e5d010f6717eb59427d3cc786c544292a07d80a2aadef012e06014265743bad",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.sma",
+      "file": "database/raw/jp/jp.sma.xml",
+      "expected": "c28aeae57b80ae45942c7ec08086a5a4a4804467ee44e43046be9460a42aec71",
+      "working_sha256": "c28aeae57b80ae45942c7ec08086a5a4a4804467ee44e43046be9460a42aec71",
+      "git_sha256": "c28aeae57b80ae45942c7ec08086a5a4a4804467ee44e43046be9460a42aec71",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.recon",
+      "file": "database/raw/jp/jp.recon.xml",
+      "expected": "87144bb14d6ee8bced76cf6181b639bec4a22bc8b440c41c0e2a0cc8d2ed078c",
+      "working_sha256": "87144bb14d6ee8bced76cf6181b639bec4a22bc8b440c41c0e2a0cc8d2ed078c",
+      "git_sha256": "87144bb14d6ee8bced76cf6181b639bec4a22bc8b440c41c0e2a0cc8d2ed078c",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.tsutatsu.ita.02",
+      "file": "database/raw/jp/jp.nta.tsutatsu.ita.02.html",
+      "expected": "6d7d6ba43294e00afd3b42b9202138232b93cfa521a4af171dfbf7e2e946a0bd",
+      "working_sha256": "6d7d6ba43294e00afd3b42b9202138232b93cfa521a4af171dfbf7e2e946a0bd",
+      "git_sha256": "6d7d6ba43294e00afd3b42b9202138232b93cfa521a4af171dfbf7e2e946a0bd",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.2888",
+      "file": "database/raw/jp/jp.nta.2888.html",
+      "expected": "df3ffab6928afbcfaa2ab2782503e7c05a1ecda26774e7169dac4a9aacb0e79e",
+      "working_sha256": "df3ffab6928afbcfaa2ab2782503e7c05a1ecda26774e7169dac4a9aacb0e79e",
+      "git_sha256": "df3ffab6928afbcfaa2ab2782503e7c05a1ecda26774e7169dac4a9aacb0e79e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.joyaku.form1",
+      "file": "database/raw/jp/jp.nta.joyaku.form1.html",
+      "expected": "ca96aa74d48b387160a5ae9557e9388cd2e6a9c9f5561d467fb8f9de893163d5",
+      "working_sha256": "ca96aa74d48b387160a5ae9557e9388cd2e6a9c9f5561d467fb8f9de893163d5",
+      "git_sha256": "ca96aa74d48b387160a5ae9557e9388cd2e6a9c9f5561d467fb8f9de893163d5",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.9210",
+      "file": "database/raw/jp/jp.nta.9210.html",
+      "expected": "f1b60ea17c72f59f9cc3e3b2e4d0efebb8ddbceaa3412e646a6e3a1220277aa8",
+      "working_sha256": "f1b60ea17c72f59f9cc3e3b2e4d0efebb8ddbceaa3412e646a6e3a1220277aa8",
+      "git_sha256": "f1b60ea17c72f59f9cc3e3b2e4d0efebb8ddbceaa3412e646a6e3a1220277aa8",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.2505",
+      "file": "database/raw/jp/jp.nta.2505.html",
+      "expected": "c6d5502daa7650c331cf8a54586efd747c51df65beb86e0ab0e7e55ba1b3f0f9",
+      "working_sha256": "c6d5502daa7650c331cf8a54586efd747c51df65beb86e0ab0e7e55ba1b3f0f9",
+      "git_sha256": "c6d5502daa7650c331cf8a54586efd747c51df65beb86e0ab0e7e55ba1b3f0f9",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.mof.treaty-list",
+      "file": "database/raw/jp/jp.mof.treaty-list.html",
+      "expected": "be93bf2b681c1950127ab76410c64ce947cf5c2ffdbfd3a7a0f667d26bda7d60",
+      "working_sha256": "be93bf2b681c1950127ab76410c64ce947cf5c2ffdbfd3a7a0f667d26bda7d60",
+      "git_sha256": "be93bf2b681c1950127ab76410c64ce947cf5c2ffdbfd3a7a0f667d26bda7d60",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.jp-kr.1998.mli.en",
+      "file": "database/raw/jp-kr/treaty.jp-kr.1998.mli.en.pdf",
+      "expected": "8e1ae36becc3c90b2fb93b0a449a206eda82e45ce1a06a32e5b22f058ed04076",
+      "working_sha256": "8e1ae36becc3c90b2fb93b0a449a206eda82e45ce1a06a32e5b22f058ed04076",
+      "git_sha256": "8e1ae36becc3c90b2fb93b0a449a206eda82e45ce1a06a32e5b22f058ed04076",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.jp-my.1999.mli.en",
+      "file": "database/raw/jp-my/treaty.jp-my.1999.mli.en.pdf",
+      "expected": "a3af739fde5525c007ecaf017c31a2e31480dae3e2eee920c9429b143d1d709b",
+      "working_sha256": "a3af739fde5525c007ecaf017c31a2e31480dae3e2eee920c9429b143d1d709b",
+      "git_sha256": "a3af739fde5525c007ecaf017c31a2e31480dae3e2eee920c9429b143d1d709b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.jp-sg.1994.p1.en",
+      "file": "database/raw/jp-sg/treaty.jp-sg.1994.p1.en.pdf",
+      "expected": "5a70a9952291130a9994bd03227727d01f981aa81d87a165fb4292dec17558f6",
+      "working_sha256": "5a70a9952291130a9994bd03227727d01f981aa81d87a165fb4292dec17558f6",
+      "git_sha256": "5a70a9952291130a9994bd03227727d01f981aa81d87a165fb4292dec17558f6",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.jp-sg.1994.mli.en",
+      "file": "database/raw/jp-sg/treaty.jp-sg.1994.mli.en.pdf",
+      "expected": "d9308cd2759e8078e83b726372eba0960136a9510aa0966506d8b40a2ad3f725",
+      "working_sha256": "d9308cd2759e8078e83b726372eba0960136a9510aa0966506d8b40a2ad3f725",
+      "git_sha256": "d9308cd2759e8078e83b726372eba0960136a9510aa0966506d8b40a2ad3f725",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.jp-th.1990.mli.en",
+      "file": "database/raw/jp-th/treaty.jp-th.1990.mli.en.pdf",
+      "expected": "d0bb198aa25958ff95bb96f4031be5fa3a570350d6d1388945b845f9780e8e18",
+      "working_sha256": "d0bb198aa25958ff95bb96f4031be5fa3a570350d6d1388945b845f9780e8e18",
+      "git_sha256": "d0bb198aa25958ff95bb96f4031be5fa3a570350d6d1388945b845f9780e8e18",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.jp-vn.1995.notes.en",
+      "file": "database/raw/jp-vn/treaty.jp-vn.1995.notes.en.pdf",
+      "expected": "69ab367f8666948128969093dba962af52a0ab0315ade48914410980cb23ffdc",
+      "working_sha256": "69ab367f8666948128969093dba962af52a0ab0315ade48914410980cb23ffdc",
+      "git_sha256": "69ab367f8666948128969093dba962af52a0ab0315ade48914410980cb23ffdc",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.jp-vn.1995.mli.en",
+      "file": "database/raw/jp-vn/treaty.jp-vn.1995.mli.en.pdf",
+      "expected": "227b947116e618f77a635cd4858abec16cc4a218bc3857605202a4c122ea647c",
+      "working_sha256": "227b947116e618f77a635cd4858abec16cc4a218bc3857605202a4c122ea647c",
+      "git_sha256": "227b947116e618f77a635cd4858abec16cc4a218bc3857605202a4c122ea647c",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rc3a.th",
+      "file": "database/raw/th/th.rc3a.th.html",
+      "expected": "3050f0a13b298f027d5451fb8b3dfb8ec77658db1fbbd72eaa507abf0c3ed428",
+      "working_sha256": "3050f0a13b298f027d5451fb8b3dfb8ec77658db1fbbd72eaa507abf0c3ed428",
+      "git_sha256": "3050f0a13b298f027d5451fb8b3dfb8ec77658db1fbbd72eaa507abf0c3ed428",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rc3b.th",
+      "file": "database/raw/th/th.rc3b.th.html",
+      "expected": "fc901d8b1a0a8a6bb25b1509effdc5d5e6257f1963c87dbcbc6ab08a4a216d4a",
+      "working_sha256": "fc901d8b1a0a8a6bb25b1509effdc5d5e6257f1963c87dbcbc6ab08a4a216d4a",
+      "git_sha256": "fc901d8b1a0a8a6bb25b1509effdc5d5e6257f1963c87dbcbc6ab08a4a216d4a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rc3a.en",
+      "file": "database/raw/th/th.rc3a.en.html",
+      "expected": "53127280e14bd5daac507bb6cd0aa316505e2f2749a1c89922b37999420b6cba",
+      "working_sha256": "53127280e14bd5daac507bb6cd0aa316505e2f2749a1c89922b37999420b6cba",
+      "git_sha256": "53127280e14bd5daac507bb6cd0aa316505e2f2749a1c89922b37999420b6cba",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rc3b.en",
+      "file": "database/raw/th/th.rc3b.en.html",
+      "expected": "62860343635da0b3024e893487bc881ecb0977b24a0ba99c09c86c77d6348b95",
+      "working_sha256": "62860343635da0b3024e893487bc881ecb0977b24a0ba99c09c86c77d6348b95",
+      "git_sha256": "62860343635da0b3024e893487bc881ecb0977b24a0ba99c09c86c77d6348b95",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd.foreign-company",
+      "file": "database/raw/th/th.rd.foreign-company.html",
+      "expected": "adae356490422661aa8123ca6b513f1e2560514efc22011013c5b0e563ee86d2",
+      "working_sha256": "adae356490422661aa8123ca6b513f1e2560514efc22011013c5b0e563ee86d2",
+      "git_sha256": "adae356490422661aa8123ca6b513f1e2560514efc22011013c5b0e563ee86d2",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "intl.mli.positions.th.en",
+      "file": "database/raw/intl/intl.mli.positions.th.en.pdf",
+      "expected": "672fcdb08eeb62978d41842bcd9e9060c89dd553e9a0fdc65093e32a0ef9d6b1",
+      "working_sha256": "672fcdb08eeb62978d41842bcd9e9060c89dd553e9a0fdc65093e32a0ef9d6b1",
+      "git_sha256": "672fcdb08eeb62978d41842bcd9e9060c89dd553e9a0fdc65093e32a0ef9d6b1",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "intl.mli.positions.vn.en",
+      "file": "database/raw/intl/intl.mli.positions.vn.en.pdf",
+      "expected": "2c7f91965a8cf09164068388a468e0b40ac85703f567198bb9e218d002f1f5a8",
+      "working_sha256": "2c7f91965a8cf09164068388a468e0b40ac85703f567198bb9e218d002f1f5a8",
+      "git_sha256": "2c7f91965a8cf09164068388a468e0b40ac85703f567198bb9e218d002f1f5a8",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd.dta-list",
+      "file": "database/raw/th/th.rd.dta-list.html",
+      "expected": "d15bbb4c546eb225942471343995a1e63b1f6feafe3d3460ca003d8192cf2928",
+      "working_sha256": "d15bbb4c546eb225942471343995a1e63b1f6feafe3d3460ca003d8192cf2928",
+      "git_sha256": "d15bbb4c546eb225942471343995a1e63b1f6feafe3d3460ca003d8192cf2928",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.th-vn.1992.art01-05.en",
+      "file": "database/raw/th-vn/treaty.th-vn.1992.art01-05.en.html",
+      "expected": "18c27dd3f77404a2e0ab4fc03461e801acb9f129ceab35a5a5d6e02662bd6ad0",
+      "working_sha256": "18c27dd3f77404a2e0ab4fc03461e801acb9f129ceab35a5a5d6e02662bd6ad0",
+      "git_sha256": "18c27dd3f77404a2e0ab4fc03461e801acb9f129ceab35a5a5d6e02662bd6ad0",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.th-vn.1992.art06-10.en",
+      "file": "database/raw/th-vn/treaty.th-vn.1992.art06-10.en.html",
+      "expected": "bf1e2c4bbe37fd6b3ef65a606850fcf071441e840c43ca6a01b9cf4fd8b253bc",
+      "working_sha256": "bf1e2c4bbe37fd6b3ef65a606850fcf071441e840c43ca6a01b9cf4fd8b253bc",
+      "git_sha256": "bf1e2c4bbe37fd6b3ef65a606850fcf071441e840c43ca6a01b9cf4fd8b253bc",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.th-vn.1992.art11-15.en",
+      "file": "database/raw/th-vn/treaty.th-vn.1992.art11-15.en.html",
+      "expected": "b6c23818446b8b7c848bac603aa431f37855f09a0cfb8a4260e202320f43e4c1",
+      "working_sha256": "b6c23818446b8b7c848bac603aa431f37855f09a0cfb8a4260e202320f43e4c1",
+      "git_sha256": "b6c23818446b8b7c848bac603aa431f37855f09a0cfb8a4260e202320f43e4c1",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.th-vn.1992.art16-20.en",
+      "file": "database/raw/th-vn/treaty.th-vn.1992.art16-20.en.html",
+      "expected": "afe8e95d19c444ed4b95d5b5c273ecd951d8ceb2ef96e765664695159ab87212",
+      "working_sha256": "afe8e95d19c444ed4b95d5b5c273ecd951d8ceb2ef96e765664695159ab87212",
+      "git_sha256": "afe8e95d19c444ed4b95d5b5c273ecd951d8ceb2ef96e765664695159ab87212",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.th-vn.1992.art21-25.en",
+      "file": "database/raw/th-vn/treaty.th-vn.1992.art21-25.en.html",
+      "expected": "ad8d05fc4f055b1aea76da4edf4b0986f0576eceaba3014d9eeca406e6b405d9",
+      "working_sha256": "ad8d05fc4f055b1aea76da4edf4b0986f0576eceaba3014d9eeca406e6b405d9",
+      "git_sha256": "ad8d05fc4f055b1aea76da4edf4b0986f0576eceaba3014d9eeca406e6b405d9",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.th-vn.1992.art26-28.en",
+      "file": "database/raw/th-vn/treaty.th-vn.1992.art26-28.en.html",
+      "expected": "6febfc40fa80699de0f1b46443a9ea7a0d626719ea471340e424c454b5053672",
+      "working_sha256": "6febfc40fa80699de0f1b46443a9ea7a0d626719ea471340e424c454b5053672",
+      "git_sha256": "6febfc40fa80699de0f1b46443a9ea7a0d626719ea471340e424c454b5053672",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rc3.rates.th",
+      "file": "database/raw/th/th.rc3.rates.th.html",
+      "expected": "5ec38d0dbbb7ee5d226ad1a7422aa14ff603dcf29dfc566e47e48bd04bc0a3b4",
+      "working_sha256": "5ec38d0dbbb7ee5d226ad1a7422aa14ff603dcf29dfc566e47e48bd04bc0a3b4",
+      "git_sha256": "5ec38d0dbbb7ee5d226ad1a7422aa14ff603dcf29dfc566e47e48bd04bc0a3b4",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd442.th",
+      "file": "database/raw/th/th.rd442.th.html",
+      "expected": "0bd44d410c0434ab07f1420911665cb98e3e337842ea27e7e75c61c80e34e4d6",
+      "working_sha256": "0bd44d410c0434ab07f1420911665cb98e3e337842ea27e7e75c61c80e34e4d6",
+      "git_sha256": "0bd44d410c0434ab07f1420911665cb98e3e337842ea27e7e75c61c80e34e4d6",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd10.en",
+      "file": "database/raw/th/th.rd10.en.pdf",
+      "expected": "b6fa428b181a3502bd2e9b559209d4b280f5fc37e6af1fba30bf659b1330c38d",
+      "working_sha256": "b6fa428b181a3502bd2e9b559209d4b280f5fc37e6af1fba30bf659b1330c38d",
+      "git_sha256": "b6fa428b181a3502bd2e9b559209d4b280f5fc37e6af1fba30bf659b1330c38d",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.2884",
+      "file": "database/raw/jp/jp.nta.2884.html",
+      "expected": "c0dc53b18325d84479fb4ef7ed9c76ff17d4d845f1c44114e42ce8bdb2767ac4",
+      "working_sha256": "c0dc53b18325d84479fb4ef7ed9c76ff17d4d845f1c44114e42ce8bdb2767ac4",
+      "git_sha256": "c0dc53b18325d84479fb4ef7ed9c76ff17d4d845f1c44114e42ce8bdb2767ac4",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd.cor-individual",
+      "file": "database/raw/th/th.rd.cor-individual.html",
+      "expected": "3e7e69e6e0c6f4b913d177a7a83107033cbecc7af476ce28be12fb13a6348e1f",
+      "working_sha256": "3e7e69e6e0c6f4b913d177a7a83107033cbecc7af476ce28be12fb13a6348e1f",
+      "git_sha256": "3e7e69e6e0c6f4b913d177a7a83107033cbecc7af476ce28be12fb13a6348e1f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd.cor-company",
+      "file": "database/raw/th/th.rd.cor-company.html",
+      "expected": "d5aa8404350fdbb5de2639d58649d0a7a51357c0f0e6fc9364fec35b09a0d89f",
+      "working_sha256": "d5aa8404350fdbb5de2639d58649d0a7a51357c0f0e6fc9364fec35b09a0d89f",
+      "git_sha256": "d5aa8404350fdbb5de2639d58649d0a7a51357c0f0e6fc9364fec35b09a0d89f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.gta",
+      "file": "database/raw/jp/jp.gta.xml",
+      "expected": "8ceddf52c6585b28e6a36b5388b20a4efa2a61d6aa2f9283b12eed8100d80087",
+      "working_sha256": "8ceddf52c6585b28e6a36b5388b20a4efa2a61d6aa2f9283b12eed8100d80087",
+      "git_sha256": "8ceddf52c6585b28e6a36b5388b20a4efa2a61d6aa2f9283b12eed8100d80087",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rc2.th",
+      "file": "database/raw/th/th.rc2.th.html",
+      "expected": "fa7b04e3413778b58395a0c99eb11159f3566a668bd985fe032534c8e4b7d7cb",
+      "working_sha256": "fa7b04e3413778b58395a0c99eb11159f3566a668bd985fe032534c8e4b7d7cb",
+      "git_sha256": "fa7b04e3413778b58395a0c99eb11159f3566a668bd985fe032534c8e4b7d7cb",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.law.tca",
+      "file": "database/raw/cn/cn.law.tca.html",
+      "expected": "bd421ac52b532c784066b377b7c926f3ed4252dc3df791699621dc305bb0f85b",
+      "working_sha256": "bd421ac52b532c784066b377b7c926f3ed4252dc3df791699621dc305bb0f85b",
+      "git_sha256": "bd421ac52b532c784066b377b7c926f3ed4252dc3df791699621dc305bb0f85b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.entai_wariai",
+      "file": "database/raw/jp/jp.nta.entai_wariai.html",
+      "expected": "60dc70298b0bc2ffdbfb48a0386183a032905c50ba9724add49760f1c391a186",
+      "working_sha256": "60dc70298b0bc2ffdbfb48a0386183a032905c50ba9724add49760f1c391a186",
+      "git_sha256": "60dc70298b0bc2ffdbfb48a0386183a032905c50ba9724add49760f1c391a186",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.2018-09.interp",
+      "file": "database/raw/cn/cn.sta.2018-09.interp.html",
+      "expected": "57b1a02d21393805597370cd3a4ca97bcb34017f38e45b9024ad210fa3c27d43",
+      "working_sha256": "57b1a02d21393805597370cd3a4ca97bcb34017f38e45b9024ad210fa3c27d43",
+      "git_sha256": "57b1a02d21393805597370cd3a4ca97bcb34017f38e45b9024ad210fa3c27d43",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "sg.iras.etax.dta",
+      "file": "database/raw/sg/sg.iras.etax.dta.pdf",
+      "expected": "fc10df168530d894cc0808e2592e33ba20b03c0c6730962aacfa32be19e504b6",
+      "working_sha256": "fc10df168530d894cc0808e2592e33ba20b03c0c6730962aacfa32be19e504b6",
+      "git_sha256": "fc10df168530d894cc0808e2592e33ba20b03c0c6730962aacfa32be19e504b6",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.ird.ar72",
+      "file": "database/raw/hk/hk.ird.ar72.html",
+      "expected": "3852e762a97889df5177d2f95918789c6de93986f8edf287fdc42195fa6c0b54",
+      "working_sha256": "3852e762a97889df5177d2f95918789c6de93986f8edf287fdc42195fa6c0b54",
+      "git_sha256": "3852e762a97889df5177d2f95918789c6de93986f8edf287fdc42195fa6c0b54",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd.ruling.0811-6620",
+      "file": "database/raw/th/th.rd.ruling.0811-6620.html",
+      "expected": "6c915500eb6a3b0dc9c2a46c642c8a3e72614f92c3426a3e0741a770d635486c",
+      "working_sha256": "6c915500eb6a3b0dc9c2a46c642c8a3e72614f92c3426a3e0741a770d635486c",
+      "git_sha256": "6c915500eb6a3b0dc9c2a46c642c8a3e72614f92c3426a3e0741a770d635486c",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "intl.oecd.mtc2017.full",
+      "file": "database/raw/intl/intl.oecd.mtc2017.full.pdf",
+      "expected": "ca2491fe4e8001abf5c1070d1598d8fe0bc9fb0f0b2c0a9c303ae417157d6968",
+      "working_sha256": "ca2491fe4e8001abf5c1070d1598d8fe0bc9fb0f0b2c0a9c303ae417157d6968",
+      "git_sha256": "ca2491fe4e8001abf5c1070d1598d8fe0bc9fb0f0b2c0a9c303ae417157d6968",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.9205",
+      "file": "database/raw/jp/jp.nta.9205.html",
+      "expected": "fc97af295d1979a74f00d654b65d202c28d6a83b34cc7cea136cd3db26e62816",
+      "working_sha256": "fc97af295d1979a74f00d654b65d202c28d6a83b34cc7cea136cd3db26e62816",
+      "git_sha256": "fc97af295d1979a74f00d654b65d202c28d6a83b34cc7cea136cd3db26e62816",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.tsutatsu.cta.13-2-1",
+      "file": "database/raw/jp/jp.nta.tsutatsu.cta.13-2-1.html",
+      "expected": "38a76ff917692afb1cd76bc1d85d8f50faf168e14b24047694b07283e668f207",
+      "working_sha256": "38a76ff917692afb1cd76bc1d85d8f50faf168e14b24047694b07283e668f207",
+      "git_sha256": "38a76ff917692afb1cd76bc1d85d8f50faf168e14b24047694b07283e668f207",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rc1.th",
+      "file": "database/raw/th/th.rc1.th.html",
+      "expected": "d05aaacfc7a69d9b22b1c5fa5404c8e1ccf92b683a6394d33006c8855462ee72",
+      "working_sha256": "d05aaacfc7a69d9b22b1c5fa5404c8e1ccf92b683a6394d33006c8855462ee72",
+      "git_sha256": "d05aaacfc7a69d9b22b1c5fa5404c8e1ccf92b683a6394d33006c8855462ee72",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd.p132-2548",
+      "file": "database/raw/th/th.rd.p132-2548.html",
+      "expected": "d6cb85f9a16d22d9dba742dfdaeb1bf1a72c95b3ac9685db075018d250c39d81",
+      "working_sha256": "d6cb85f9a16d22d9dba742dfdaeb1bf1a72c95b3ac9685db075018d250c39d81",
+      "git_sha256": "d6cb85f9a16d22d9dba742dfdaeb1bf1a72c95b3ac9685db075018d250c39d81",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.2014-67",
+      "file": "database/raw/cn/cn.sta.2014-67.html",
+      "expected": "552a9ad1a7d600e495453a685685e44df5206a83fd5ab01dadfda8d001052f30",
+      "working_sha256": "552a9ad1a7d600e495453a685685e44df5206a83fd5ab01dadfda8d001052f30",
+      "git_sha256": "552a9ad1a7d600e495453a685685e44df5206a83fd5ab01dadfda8d001052f30",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.cap117",
+      "file": "database/raw/hk/hk.cap117.rtf",
+      "expected": "6f93c0a0d5d6dbdbc77b6c0fad06628a9768d7fff64351d77318a59d3d54def5",
+      "working_sha256": "6f93c0a0d5d6dbdbc77b6c0fad06628a9768d7fff64351d77318a59d3d54def5",
+      "git_sha256": "6f93c0a0d5d6dbdbc77b6c0fad06628a9768d7fff64351d77318a59d3d54def5",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rc6.stamp.th",
+      "file": "database/raw/th/th.rc6.stamp.th.html",
+      "expected": "44dc484569f088a4386e5e8976e36d50d51bda6cfc7be82284cf814ce1cb5ac1",
+      "working_sha256": "44dc484569f088a4386e5e8976e36d50d51bda6cfc7be82284cf814ce1cb5ac1",
+      "git_sha256": "44dc484569f088a4386e5e8976e36d50d51bda6cfc7be82284cf814ce1cb5ac1",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.tsutatsu.cta.9-1-3",
+      "file": "database/raw/jp/jp.nta.tsutatsu.cta.9-1-3.html",
+      "expected": "5ebad01682b0f7a936357d57f305c23c77023072a8e31565e2dbebe2189ebf07",
+      "working_sha256": "5ebad01682b0f7a936357d57f305c23c77023072a8e31565e2dbebe2189ebf07",
+      "git_sha256": "5ebad01682b0f7a936357d57f305c23c77023072a8e31565e2dbebe2189ebf07",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.law.stamp",
+      "file": "database/raw/cn/cn.law.stamp.html",
+      "expected": "ada63544d044dc7de91393f3b0ac7bdee7dc517abcb76dc830c82dc3897bbb47",
+      "working_sha256": "ada63544d044dc7de91393f3b0ac7bdee7dc517abcb76dc830c82dc3897bbb47",
+      "git_sha256": "ada63544d044dc7de91393f3b0ac7bdee7dc517abcb76dc830c82dc3897bbb47",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "sg.iras.stamp.shares",
+      "file": "database/raw/sg/sg.iras.stamp.shares.html",
+      "expected": "9adea86f29fd41a708138676a5f892f76e3710703eac391cbb923f5212c4d256",
+      "working_sha256": "9adea86f29fd41a708138676a5f892f76e3710703eac391cbb923f5212c4d256",
+      "git_sha256": "9adea86f29fd41a708138676a5f892f76e3710703eac391cbb923f5212c4d256",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.law.stamp.a01",
+      "file": "database/raw/cn/cn.law.stamp.a01.pdf",
+      "expected": "6ad099955f54f21fdc1443b339f000e5aa1f6f8fd33f9d70bfc0bcf3d0a9af72",
+      "working_sha256": "6ad099955f54f21fdc1443b339f000e5aa1f6f8fd33f9d70bfc0bcf3d0a9af72",
+      "git_sha256": "6ad099955f54f21fdc1443b339f000e5aa1f6f8fd33f9d70bfc0bcf3d0a9af72",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "sg.iras.etax.fsi",
+      "file": "database/raw/sg/sg.iras.etax.fsi.pdf",
+      "expected": "70b8da4df78433f15b17f468812345f3836218def63036213eb5ab273a39c6ad",
+      "working_sha256": "70b8da4df78433f15b17f468812345f3836218def63036213eb5ab273a39c6ad",
+      "git_sha256": "70b8da4df78433f15b17f468812345f3836218def63036213eb5ab273a39c6ad",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.ita.order",
+      "file": "database/raw/jp/jp.ita.order.xml",
+      "expected": "032bd67656c847f386810fde04f2f3dff7b3a62b1210a2edf45a331339122d77",
+      "working_sha256": "032bd67656c847f386810fde04f2f3dff7b3a62b1210a2edf45a331339122d77",
+      "git_sha256": "032bd67656c847f386810fde04f2f3dff7b3a62b1210a2edf45a331339122d77",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.mof.fx.2548",
+      "file": "database/raw/th/th.mof.fx.2548.html",
+      "expected": "e8fceed7dd00f51c1d287c2c1660bb5250930c65e136f24003c6fe326e08f8e6",
+      "working_sha256": "e8fceed7dd00f51c1d287c2c1660bb5250930c65e136f24003c6fe326e08f8e6",
+      "git_sha256": "e8fceed7dd00f51c1d287c2c1660bb5250930c65e136f24003c6fe326e08f8e6",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.sta.2009-81",
+      "file": "database/raw/cn/cn.sta.2009-81.html",
+      "expected": "f581a447943479a2c7a80c1fff77c26bf42e94e29b2a587390208a8ef8b782ec",
+      "working_sha256": "f581a447943479a2c7a80c1fff77c26bf42e94e29b2a587390208a8ef8b782ec",
+      "git_sha256": "f581a447943479a2c7a80c1fff77c26bf42e94e29b2a587390208a8ef8b782ec",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.cs.2009-59",
+      "file": "database/raw/cn/cn.cs.2009-59.html",
+      "expected": "076d7a5976b29fdc62e1bd9e093af0ec0a10813c5974bae160a12fcf6cbffd49",
+      "working_sha256": "076d7a5976b29fdc62e1bd9e093af0ec0a10813c5974bae160a12fcf6cbffd49",
+      "git_sha256": "076d7a5976b29fdc62e1bd9e093af0ec0a10813c5974bae160a12fcf6cbffd49",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.cs.2009-60",
+      "file": "database/raw/cn/cn.cs.2009-60.html",
+      "expected": "4527d863e496dc5e6ba2906bc922b511cd4b168c915180b1743298fe48d0b5f0",
+      "working_sha256": "4527d863e496dc5e6ba2906bc922b511cd4b168c915180b1743298fe48d0b5f0",
+      "git_sha256": "4527d863e496dc5e6ba2906bc922b511cd4b168c915180b1743298fe48d0b5f0",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "vn.law.cit2025.en",
+      "file": "database/raw/vn/vn.law.cit2025.en.htm",
+      "expected": "c69f5b6cae5dded40adb2ffe7774f718d8bf1e8c88da5de58df272a05cf77237",
+      "working_sha256": "c69f5b6cae5dded40adb2ffe7774f718d8bf1e8c88da5de58df272a05cf77237",
+      "git_sha256": "c69f5b6cae5dded40adb2ffe7774f718d8bf1e8c88da5de58df272a05cf77237",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.dgt.ease-taxation",
+      "file": "database/raw/id/id.dgt.ease-taxation.html",
+      "expected": "f16476c935674d76ee2e1c932365938962be3ede2091cb0fef82ff8990008337",
+      "working_sha256": "f16476c935674d76ee2e1c932365938962be3ede2091cb0fef82ff8990008337",
+      "git_sha256": "f16476c935674d76ee2e1c932365938962be3ede2091cb0fef82ff8990008337",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.tax-law-compilation-2022",
+      "file": "database/raw/id/id.tax-law-compilation-2022.pdf",
+      "expected": "f8871ea2b0395367d878b8abadf7a09c691e270f55679a8c8cbcf346006f8d43",
+      "working_sha256": "f8871ea2b0395367d878b8abadf7a09c691e270f55679a8c8cbcf346006f8d43",
+      "git_sha256": "f8871ea2b0395367d878b8abadf7a09c691e270f55679a8c8cbcf346006f8d43",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "my.hasil.dta-index",
+      "file": "database/raw/my/my.hasil.dta-index.html",
+      "expected": "0db1a2928ded1889e6fd3f12159e1e0bba3390d3205e6b4a49bd085377452491",
+      "working_sha256": "0db1a2928ded1889e6fd3f12159e1e0bba3390d3205e6b4a49bd085377452491",
+      "git_sha256": "0db1a2928ded1889e6fd3f12159e1e0bba3390d3205e6b4a49bd085377452491",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "my.hasil.wht-rates",
+      "file": "database/raw/my/my.hasil.wht-rates.html",
+      "expected": "c9485df1ac6dd95bc2fbee1b682d551fdf6f7da249e91fb2b1157c871588a6a9",
+      "working_sha256": "c9485df1ac6dd95bc2fbee1b682d551fdf6f7da249e91fb2b1157c871588a6a9",
+      "git_sha256": "c9485df1ac6dd95bc2fbee1b682d551fdf6f7da249e91fb2b1157c871588a6a9",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "my.hasil.wht",
+      "file": "database/raw/my/my.hasil.wht.html",
+      "expected": "e458384d124dd73d28527e2099acde49dbe7ec7528d65491d613b1c52e28dd7a",
+      "working_sha256": "e458384d124dd73d28527e2099acde49dbe7ec7528d65491d613b1c52e28dd7a",
+      "git_sha256": "e458384d124dd73d28527e2099acde49dbe7ec7528d65491d613b1c52e28dd7a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.dgt.article23",
+      "file": "database/raw/id/id.dgt.article23.html",
+      "expected": "1e82e95bc48f036f2e881350f89c23e8f4b12c30375d0d888806323854c5e96a",
+      "working_sha256": "1e82e95bc48f036f2e881350f89c23e8f4b12c30375d0d888806323854c5e96a",
+      "git_sha256": "1e82e95bc48f036f2e881350f89c23e8f4b12c30375d0d888806323854c5e96a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.dgt.individual-calculation",
+      "file": "database/raw/id/id.dgt.individual-calculation.html",
+      "expected": "b62e86c079d1aafc71991514e1936a356909949ecf5f6a3824cf5633fe457d4c",
+      "working_sha256": "b62e86c079d1aafc71991514e1936a356909949ecf5f6a3824cf5633fe457d4c",
+      "git_sha256": "b62e86c079d1aafc71991514e1936a356909949ecf5f6a3824cf5633fe457d4c",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.dgt.article26",
+      "file": "database/raw/id/id.dgt.article26.html",
+      "expected": "3bf18d5161b8ab32c100678507ce216048179f35ea3f498fd821d60333c0a959",
+      "working_sha256": "3bf18d5161b8ab32c100678507ce216048179f35ea3f498fd821d60333c0a959",
+      "git_sha256": "3bf18d5161b8ab32c100678507ce216048179f35ea3f498fd821d60333c0a959",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.my-sg.2004.en",
+      "file": "database/raw/my-sg/treaty.my-sg.2004.en.pdf",
+      "expected": "1fbffdca682b60399ec0e9399d29168b913e7a4f5977906ca897595434b4b48e",
+      "working_sha256": "1fbffdca682b60399ec0e9399d29168b913e7a4f5977906ca897595434b4b48e",
+      "git_sha256": "1fbffdca682b60399ec0e9399d29168b913e7a4f5977906ca897595434b4b48e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.my-vn.1995.en",
+      "file": "database/raw/my-vn/treaty.my-vn.1995.en.pdf",
+      "expected": "1068cbfd7c9000f9ba32485ff484636ea809d449db9f3d8455ae31e553729447",
+      "working_sha256": "1068cbfd7c9000f9ba32485ff484636ea809d449db9f3d8455ae31e553729447",
+      "git_sha256": "1068cbfd7c9000f9ba32485ff484636ea809d449db9f3d8455ae31e553729447",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.individual-rates-2026",
+      "file": "database/raw/in/in.itd.individual-rates-2026.html",
+      "expected": "f077f8f2c9c8b33f40c810c6d8b364cdd13e8d23e9a46327a0403a88264b9e81",
+      "working_sha256": "f077f8f2c9c8b33f40c810c6d8b364cdd13e8d23e9a46327a0403a88264b9e81",
+      "git_sha256": "f077f8f2c9c8b33f40c810c6d8b364cdd13e8d23e9a46327a0403a88264b9e81",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.foreign-assets-2026",
+      "file": "database/raw/in/in.itd.foreign-assets-2026.pdf",
+      "expected": "3415822da7b23b8cc1b8dbf44cfc5247d670f2ac08234a7a67fd02230283556d",
+      "working_sha256": "3415822da7b23b8cc1b8dbf44cfc5247d670f2ac08234a7a67fd02230283556d",
+      "git_sha256": "3415822da7b23b8cc1b8dbf44cfc5247d670f2ac08234a7a67fd02230283556d",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.nonresident-faq",
+      "file": "database/raw/in/in.itd.nonresident-faq.html",
+      "expected": "db10f29261e2e7a3d307ab0797c04af20c8757eb65beced3103e2c7cdfdc97d0",
+      "working_sha256": "db10f29261e2e7a3d307ab0797c04af20c8757eb65beced3103e2c7cdfdc97d0",
+      "git_sha256": "db10f29261e2e7a3d307ab0797c04af20c8757eb65beced3103e2c7cdfdc97d0",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.fta.natural-persons-2023",
+      "file": "database/raw/ae/ae.fta.natural-persons-2023.pdf",
+      "expected": "a365c742ebcc2277067cb3b7416b7960f42390dea3c3b21c982daaf67a48b9ef",
+      "working_sha256": "a365c742ebcc2277067cb3b7416b7960f42390dea3c3b21c982daaf67a48b9ef",
+      "git_sha256": "a365c742ebcc2277067cb3b7416b7960f42390dea3c3b21c982daaf67a48b9ef",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.fta.withholding-faq",
+      "file": "database/raw/ae/ae.fta.withholding-faq.aspx",
+      "expected": "38cfe69e098e561b8231b5ee25090cf2b7536751cc15460cdf1271d76cd01414",
+      "working_sha256": "38cfe69e098e561b8231b5ee25090cf2b7536751cc15460cdf1271d76cd01414",
+      "git_sha256": "38cfe69e098e561b8231b5ee25090cf2b7536751cc15460cdf1271d76cd01414",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.fta.corporate-tax-faq",
+      "file": "database/raw/ae/ae.fta.corporate-tax-faq.aspx",
+      "expected": "d12506d97d679477b24ba7f73a2236bf6418e0322984cbb5b2c1f05671df9ff4",
+      "working_sha256": "d12506d97d679477b24ba7f73a2236bf6418e0322984cbb5b2c1f05671df9ff4",
+      "git_sha256": "d12506d97d679477b24ba7f73a2236bf6418e0322984cbb5b2c1f05671df9ff4",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.fta.general-corporate-tax",
+      "file": "database/raw/ae/ae.fta.general-corporate-tax.pdf",
+      "expected": "b837af15aaab96e65a149538cbbcda5482e4c96a1ddf2b4d383fd86774063e7f",
+      "working_sha256": "b837af15aaab96e65a149538cbbcda5482e4c96a1ddf2b4d383fd86774063e7f",
+      "git_sha256": "b837af15aaab96e65a149538cbbcda5482e4c96a1ddf2b4d383fd86774063e7f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.fta.foreign-source-income",
+      "file": "database/raw/ae/ae.fta.foreign-source-income.pdf",
+      "expected": "9ae54fc778564a275b0c4a1e7bd4fe7d94481e9aa17c305a4b9a3a0209070cd0",
+      "working_sha256": "9ae54fc778564a275b0c4a1e7bd4fe7d94481e9aa17c305a4b9a3a0209070cd0",
+      "git_sha256": "9ae54fc778564a275b0c4a1e7bd4fe7d94481e9aa17c305a4b9a3a0209070cd0",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.mof.dta-index",
+      "file": "database/raw/ae/ae.mof.dta-index.pdf",
+      "expected": "8f7bdd16ccc5ded839b9cb893be9628f4ffff7fd9096028cb1101f738ae0696a",
+      "working_sha256": "8f7bdd16ccc5ded839b9cb893be9628f4ffff7fd9096028cb1101f738ae0696a",
+      "git_sha256": "8f7bdd16ccc5ded839b9cb893be9628f4ffff7fd9096028cb1101f738ae0696a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.fta.corporate-tax-registration",
+      "file": "database/raw/ae/ae.fta.corporate-tax-registration.aspx",
+      "expected": "201f73bbb676cfb82db99384358bb933e90838ac59827aec7193f5e9bdccfce8",
+      "working_sha256": "201f73bbb676cfb82db99384358bb933e90838ac59827aec7193f5e9bdccfce8",
+      "git_sha256": "201f73bbb676cfb82db99384358bb933e90838ac59827aec7193f5e9bdccfce8",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.fta.tax-resident-certificate-2024",
+      "file": "database/raw/ae/ae.fta.tax-resident-certificate-2024.pdf",
+      "expected": "5b4678c79286a66b503ef329c88d3892819eaa2323b53c23a0933fc08c1ba463",
+      "working_sha256": "5b4678c79286a66b503ef329c88d3892819eaa2323b53c23a0933fc08c1ba463",
+      "git_sha256": "5b4678c79286a66b503ef329c88d3892819eaa2323b53c23a0933fc08c1ba463",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-cn.1993.en",
+      "file": "database/raw/ae-cn/treaty.ae-cn.1993.en.pdf",
+      "expected": "df52787cd31844a29e3e1c459600c2f9d8e73d4b1d199052d17c1973962ccd23",
+      "working_sha256": "df52787cd31844a29e3e1c459600c2f9d8e73d4b1d199052d17c1973962ccd23",
+      "git_sha256": "df52787cd31844a29e3e1c459600c2f9d8e73d4b1d199052d17c1973962ccd23",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-cn.1993.mli.en",
+      "file": "database/raw/ae-cn/treaty.ae-cn.1993.mli.en.pdf",
+      "expected": "90fcb5104351e7fc6ae4f381477b61be8620d9060a9faec49dab098593e10db7",
+      "working_sha256": "90fcb5104351e7fc6ae4f381477b61be8620d9060a9faec49dab098593e10db7",
+      "git_sha256": "90fcb5104351e7fc6ae4f381477b61be8620d9060a9faec49dab098593e10db7",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-hk.2014.en",
+      "file": "database/raw/ae-hk/treaty.ae-hk.2014.en.pdf",
+      "expected": "87de806f8dc5ebe0dc43ffe523c27ad1513c1d31102c0e2e2677f95129b41a2f",
+      "working_sha256": "87de806f8dc5ebe0dc43ffe523c27ad1513c1d31102c0e2e2677f95129b41a2f",
+      "git_sha256": "87de806f8dc5ebe0dc43ffe523c27ad1513c1d31102c0e2e2677f95129b41a2f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-hk.2014.mli.en",
+      "file": "database/raw/ae-hk/treaty.ae-hk.2014.mli.en.pdf",
+      "expected": "8c3af70fe23fc020a457961ac762409eb614afe8378543561e174e1a4c8980ec",
+      "working_sha256": "8c3af70fe23fc020a457961ac762409eb614afe8378543561e174e1a4c8980ec",
+      "git_sha256": "8c3af70fe23fc020a457961ac762409eb614afe8378543561e174e1a4c8980ec",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-id.2019.en",
+      "file": "database/raw/ae-id/treaty.ae-id.2019.en.pdf",
+      "expected": "6c0d724f82ec9d01032a2eed7259013a2b94388023803f4f9ea087952e9a32d1",
+      "working_sha256": "6c0d724f82ec9d01032a2eed7259013a2b94388023803f4f9ea087952e9a32d1",
+      "git_sha256": "6c0d724f82ec9d01032a2eed7259013a2b94388023803f4f9ea087952e9a32d1",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-jp.2013.mli.en",
+      "file": "database/raw/ae-jp/treaty.ae-jp.2013.mli.en.htm",
+      "expected": "aef14035617d3781ac217d1ecbf8294c77541731eefbc16ceb1765beafe9d9c1",
+      "working_sha256": "aef14035617d3781ac217d1ecbf8294c77541731eefbc16ceb1765beafe9d9c1",
+      "git_sha256": "aef14035617d3781ac217d1ecbf8294c77541731eefbc16ceb1765beafe9d9c1",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-jp.2013.summary.en",
+      "file": "database/raw/ae-jp/treaty.ae-jp.2013.summary.en.htm",
+      "expected": "e74a22613abb733292b2768bf0663e571fa4fe2a7bbb946a4ac504adfe323a6b",
+      "working_sha256": "e74a22613abb733292b2768bf0663e571fa4fe2a7bbb946a4ac504adfe323a6b",
+      "git_sha256": "e74a22613abb733292b2768bf0663e571fa4fe2a7bbb946a4ac504adfe323a6b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-kr.2019.en",
+      "file": "database/raw/ae-kr/treaty.ae-kr.2019.en.do",
+      "expected": "b815d5fc57f66aeccffbc866b75c939e72a05c7028f6757c44ef27c61f61c3a8",
+      "working_sha256": "b815d5fc57f66aeccffbc866b75c939e72a05c7028f6757c44ef27c61f61c3a8",
+      "git_sha256": "b815d5fc57f66aeccffbc866b75c939e72a05c7028f6757c44ef27c61f61c3a8",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-sg.1995.mli.en",
+      "file": "database/raw/ae-sg/treaty.ae-sg.1995.mli.en.pdf",
+      "expected": "e2605345ebfa9dda1d49fb09987bb289d0ed2440b1988875522392256f348e30",
+      "working_sha256": "e2605345ebfa9dda1d49fb09987bb289d0ed2440b1988875522392256f348e30",
+      "git_sha256": "e2605345ebfa9dda1d49fb09987bb289d0ed2440b1988875522392256f348e30",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-th.2000.en",
+      "file": "database/raw/ae-th/treaty.ae-th.2000.en.pdf",
+      "expected": "a5c4d0c51c8826aeaf8749358a4a0ec70fe50d6350d59bc5fd9b42adeab2b772",
+      "working_sha256": "a5c4d0c51c8826aeaf8749358a4a0ec70fe50d6350d59bc5fd9b42adeab2b772",
+      "git_sha256": "a5c4d0c51c8826aeaf8749358a4a0ec70fe50d6350d59bc5fd9b42adeab2b772",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-vn.2009.en",
+      "file": "database/raw/ae-vn/treaty.ae-vn.2009.en.pdf",
+      "expected": "438a32f85f95dce51ee5b6af6be7023888f84c9e594f1a9574b3bc1aafef111f",
+      "working_sha256": "438a32f85f95dce51ee5b6af6be7023888f84c9e594f1a9574b3bc1aafef111f",
+      "git_sha256": "438a32f85f95dce51ee5b6af6be7023888f84c9e594f1a9574b3bc1aafef111f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-in.1992.mli.en",
+      "file": "database/raw/ae-in/treaty.ae-in.1992.mli.en.pdf",
+      "expected": "0fc86c0b2dc0563bb3120692198a92eafa58425e27075d790713e7ad15d46a92",
+      "working_sha256": "0fc86c0b2dc0563bb3120692198a92eafa58425e27075d790713e7ad15d46a92",
+      "git_sha256": "0fc86c0b2dc0563bb3120692198a92eafa58425e27075d790713e7ad15d46a92",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-my.1995.en",
+      "file": "database/raw/ae-my/treaty.ae-my.1995.en.pdf",
+      "expected": "8f281ef51f01d0a401c9184f0599d3746c34e3ba5b3d1627f721c93bbdbf4ebd",
+      "working_sha256": "8f281ef51f01d0a401c9184f0599d3746c34e3ba5b3d1627f721c93bbdbf4ebd",
+      "git_sha256": "8f281ef51f01d0a401c9184f0599d3746c34e3ba5b3d1627f721c93bbdbf4ebd",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-in.1992.p1.en",
+      "file": "database/raw/ae-in/treaty.ae-in.1992.p1.en.pdf",
+      "expected": "25687c0ab141f102379c4990c66802ddce418c6f61ecdd6078439fec21a9d137",
+      "working_sha256": "25687c0ab141f102379c4990c66802ddce418c6f61ecdd6078439fec21a9d137",
+      "git_sha256": "25687c0ab141f102379c4990c66802ddce418c6f61ecdd6078439fec21a9d137",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-in.1992.p2.en",
+      "file": "database/raw/ae-in/treaty.ae-in.1992.p2.en.pdf",
+      "expected": "46a600041ab741a456c59689ee5c4a5f83df750803fa8bd139e7891cc2a087bc",
+      "working_sha256": "46a600041ab741a456c59689ee5c4a5f83df750803fa8bd139e7891cc2a087bc",
+      "git_sha256": "46a600041ab741a456c59689ee5c4a5f83df750803fa8bd139e7891cc2a087bc",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.mof.top-up-tax",
+      "file": "database/raw/ae/ae.mof.top-up-tax.html",
+      "expected": "95a4b615c4bffa600c39cf0e51060d34b34dd7c059ef1b0cfd0acac06d2c0b7a",
+      "working_sha256": "95a4b615c4bffa600c39cf0e51060d34b34dd7c059ef1b0cfd0acac06d2c0b7a",
+      "git_sha256": "95a4b615c4bffa600c39cf0e51060d34b34dd7c059ef1b0cfd0acac06d2c0b7a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.id-in.2012.mli.en",
+      "file": "database/raw/id-in/treaty.id-in.2012.mli.en.pdf",
+      "expected": "361764c7f918f3a3ca6df85b24c853865754fd0dbff0b2b5305cc130226b4218",
+      "working_sha256": "361764c7f918f3a3ca6df85b24c853865754fd0dbff0b2b5305cc130226b4218",
+      "git_sha256": "361764c7f918f3a3ca6df85b24c853865754fd0dbff0b2b5305cc130226b4218",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.id-jp.1982.mli.en",
+      "file": "database/raw/id-jp/treaty.id-jp.1982.mli.en.pdf",
+      "expected": "e84bece4e281a1198af8966e0b22c204c147fdbe38f9612a0555251600500d4d",
+      "working_sha256": "e84bece4e281a1198af8966e0b22c204c147fdbe38f9612a0555251600500d4d",
+      "git_sha256": "e84bece4e281a1198af8966e0b22c204c147fdbe38f9612a0555251600500d4d",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.id-kr.1988.mli.en",
+      "file": "database/raw/id-kr/treaty.id-kr.1988.mli.en.pdf",
+      "expected": "8215b07cf0645498353b542c8832032ea03714cbea40b5d45d930a801a626a44",
+      "working_sha256": "8215b07cf0645498353b542c8832032ea03714cbea40b5d45d930a801a626a44",
+      "git_sha256": "8215b07cf0645498353b542c8832032ea03714cbea40b5d45d930a801a626a44",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.id-my.1991.mli.en",
+      "file": "database/raw/id-my/treaty.id-my.1991.mli.en.pdf",
+      "expected": "4c88d918378d953be1003ee3b14d96fbd9e948de66bb073d985d3b5db8411b3f",
+      "working_sha256": "4c88d918378d953be1003ee3b14d96fbd9e948de66bb073d985d3b5db8411b3f",
+      "git_sha256": "4c88d918378d953be1003ee3b14d96fbd9e948de66bb073d985d3b5db8411b3f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.id-th.2012.mli.en",
+      "file": "database/raw/id-th/treaty.id-th.2012.mli.en.html",
+      "expected": "8dcdd4351399ded4b47f17887471996645e5da4a6e381d1579257f72ca7bdf78",
+      "working_sha256": "8dcdd4351399ded4b47f17887471996645e5da4a6e381d1579257f72ca7bdf78",
+      "git_sha256": "8dcdd4351399ded4b47f17887471996645e5da4a6e381d1579257f72ca7bdf78",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.id-sg.2020.en",
+      "file": "database/raw/id-sg/treaty.id-sg.2020.en.html",
+      "expected": "cb6691ab2dc7884b5b04b954e6a7f8d127e4eeb40f54e2994540655079f53a6b",
+      "working_sha256": "cb6691ab2dc7884b5b04b954e6a7f8d127e4eeb40f54e2994540655079f53a6b",
+      "git_sha256": "cb6691ab2dc7884b5b04b954e6a7f8d127e4eeb40f54e2994540655079f53a6b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.id-vn.1997.mli.en",
+      "file": "database/raw/id-vn/treaty.id-vn.1997.mli.en.pdf",
+      "expected": "3cf902e31e8dd36ee977e44f2b1ff306cd99bcf6e6a7f115f28e90d669448226",
+      "working_sha256": "3cf902e31e8dd36ee977e44f2b1ff306cd99bcf6e6a7f115f28e90d669448226",
+      "git_sha256": "3cf902e31e8dd36ee977e44f2b1ff306cd99bcf6e6a7f115f28e90d669448226",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.dgt.treaty-index",
+      "file": "database/raw/id/id.dgt.treaty-index.html",
+      "expected": "6ded8e132e8e470697e44d2a4657ed8623bee39263f3a539fa8339e7a05d7fed",
+      "working_sha256": "6ded8e132e8e470697e44d2a4657ed8623bee39263f3a539fa8339e7a05d7fed",
+      "git_sha256": "6ded8e132e8e470697e44d2a4657ed8623bee39263f3a539fa8339e7a05d7fed",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.per25-2018.treaty-procedure",
+      "file": "database/raw/id/id.per25-2018.treaty-procedure.pdf",
+      "expected": "2d20fe361d08091606c51fd43828efd4b091911332e081708db871b6f84d6a18",
+      "working_sha256": "2d20fe361d08091606c51fd43828efd4b091911332e081708db871b6f84d6a18",
+      "git_sha256": "2d20fe361d08091606c51fd43828efd4b091911332e081708db871b6f84d6a18",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.dgt.residence-registration",
+      "file": "database/raw/id/id.dgt.residence-registration.html",
+      "expected": "d1c6018f23c7586de0698806b3e476f98fa082dd31f22647d5f160e8b555e9b5",
+      "working_sha256": "d1c6018f23c7586de0698806b3e476f98fa082dd31f22647d5f160e8b555e9b5",
+      "git_sha256": "d1c6018f23c7586de0698806b3e476f98fa082dd31f22647d5f160e8b555e9b5",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "id.dgt.skd-spdn",
+      "file": "database/raw/id/id.dgt.skd-spdn.html",
+      "expected": "bff4362ac2d5dce18393bb87055e28518be20c0f5d8939740e9b6f495d93a32d",
+      "working_sha256": "bff4362ac2d5dce18393bb87055e28518be20c0f5d8939740e9b6f495d93a32d",
+      "git_sha256": "bff4362ac2d5dce18393bb87055e28518be20c0f5d8939740e9b6f495d93a32d",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.rules2026",
+      "file": "database/raw/in/in.rules2026.pdf",
+      "expected": "30bc85bf9d3ff23f378d5ddd2ca1d2e3d223134471fc8163aa5e2feecacb7e51",
+      "working_sha256": "30bc85bf9d3ff23f378d5ddd2ca1d2e3d223134471fc8163aa5e2feecacb7e51",
+      "git_sha256": "30bc85bf9d3ff23f378d5ddd2ca1d2e3d223134471fc8163aa5e2feecacb7e51",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.form41-dtaa",
+      "file": "database/raw/in/in.itd.form41-dtaa.html",
+      "expected": "ab751e45ea2770cd4711406446fb24071f42b7fe8a54f5bc4b2c65d0594bf914",
+      "working_sha256": "ab751e45ea2770cd4711406446fb24071f42b7fe8a54f5bc4b2c65d0594bf914",
+      "git_sha256": "ab751e45ea2770cd4711406446fb24071f42b7fe8a54f5bc4b2c65d0594bf914",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.form42-trc",
+      "file": "database/raw/in/in.itd.form42-trc.html",
+      "expected": "34234c20b8c6937cfd6883eb598c3eec0dc3b86936a831da27b556287ba26004",
+      "working_sha256": "34234c20b8c6937cfd6883eb598c3eec0dc3b86936a831da27b556287ba26004",
+      "git_sha256": "34234c20b8c6937cfd6883eb598c3eec0dc3b86936a831da27b556287ba26004",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.tax-calendar",
+      "file": "database/raw/in/in.itd.tax-calendar.html",
+      "expected": "c75386b82c38dd2243d79bea562c0610bd1131e21bd1c254d143d5e3e7950834",
+      "working_sha256": "c75386b82c38dd2243d79bea562c0610bd1131e21bd1c254d143d5e3e7950834",
+      "git_sha256": "c75386b82c38dd2243d79bea562c0610bd1131e21bd1c254d143d5e3e7950834",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.in-th.2015.en",
+      "file": "database/raw/in-th/treaty.in-th.2015.en.pdf",
+      "expected": "dc271b365ac3aa4dabcb5a5b2bf5bde89603b773ba5f12d98d8aeaa740a4ac53",
+      "working_sha256": "dc271b365ac3aa4dabcb5a5b2bf5bde89603b773ba5f12d98d8aeaa740a4ac53",
+      "git_sha256": "dc271b365ac3aa4dabcb5a5b2bf5bde89603b773ba5f12d98d8aeaa740a4ac53",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.in-th.2015.protocol.en",
+      "file": "database/raw/in-th/treaty.in-th.2015.protocol.en.pdf",
+      "expected": "4e55b402f7b209ee661294f2a0a2052837b693f7d8f561a93443d96afdb32bd7",
+      "working_sha256": "4e55b402f7b209ee661294f2a0a2052837b693f7d8f561a93443d96afdb32bd7",
+      "git_sha256": "4e55b402f7b209ee661294f2a0a2052837b693f7d8f561a93443d96afdb32bd7",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.in-jp.1989.en",
+      "file": "database/raw/in-jp/treaty.in-jp.1989.en.pdf",
+      "expected": "082b157c6a2a5c3ae21e7e724b2f74bddf5ad3d1a7a0720e4859588b9641b5c5",
+      "working_sha256": "082b157c6a2a5c3ae21e7e724b2f74bddf5ad3d1a7a0720e4859588b9641b5c5",
+      "git_sha256": "082b157c6a2a5c3ae21e7e724b2f74bddf5ad3d1a7a0720e4859588b9641b5c5",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.in-jp.2006.protocol.en",
+      "file": "database/raw/in-jp/treaty.in-jp.2006.protocol.en.pdf",
+      "expected": "9594b275f955c9f28d6e4c2de4f6f2364ab60b29566b8851f9a1c0774ec99b7a",
+      "working_sha256": "9594b275f955c9f28d6e4c2de4f6f2364ab60b29566b8851f9a1c0774ec99b7a",
+      "git_sha256": "9594b275f955c9f28d6e4c2de4f6f2364ab60b29566b8851f9a1c0774ec99b7a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.in-jp.2015.protocol.en",
+      "file": "database/raw/in-jp/treaty.in-jp.2015.protocol.en.pdf",
+      "expected": "a8909338a3d6689cba0aeb9f2f31e36dbdbebe342ae57154e86f1848df1a65ee",
+      "working_sha256": "a8909338a3d6689cba0aeb9f2f31e36dbdbebe342ae57154e86f1848df1a65ee",
+      "git_sha256": "a8909338a3d6689cba0aeb9f2f31e36dbdbebe342ae57154e86f1848df1a65ee",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.in-jp.1989.mli.en",
+      "file": "database/raw/in-jp/treaty.in-jp.1989.mli.en.pdf",
+      "expected": "1eaf84a0b35639f4c6334ccbcb3d3fee6717b8ace1700a89f3a5fc12399bd440",
+      "working_sha256": "1eaf84a0b35639f4c6334ccbcb3d3fee6717b8ace1700a89f3a5fc12399bd440",
+      "git_sha256": "1eaf84a0b35639f4c6334ccbcb3d3fee6717b8ace1700a89f3a5fc12399bd440",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.in-sg.1994.en",
+      "file": "database/raw/in-sg/treaty.in-sg.1994.en.pdf",
+      "expected": "29e352cbf6e26e408a8b8fe2a59b95616f9fb5b76daf8bd3a5183eb722991867",
+      "working_sha256": "29e352cbf6e26e408a8b8fe2a59b95616f9fb5b76daf8bd3a5183eb722991867",
+      "git_sha256": "29e352cbf6e26e408a8b8fe2a59b95616f9fb5b76daf8bd3a5183eb722991867",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.domestic-company-2026",
+      "file": "database/raw/in/in.itd.domestic-company-2026.html",
+      "expected": "2e60a6393a72422b293c37c431c06291c4ec5883fbde87f1b399ceac071fc875",
+      "working_sha256": "2e60a6393a72422b293c37c431c06291c4ec5883fbde87f1b399ceac071fc875",
+      "git_sha256": "2e60a6393a72422b293c37c431c06291c4ec5883fbde87f1b399ceac071fc875",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.form67",
+      "file": "database/raw/in/in.itd.form67.html",
+      "expected": "10173493451a932df54a4cc482941aaf8cdfca8358525b539eda88bc5f17a40b",
+      "working_sha256": "10173493451a932df54a4cc482941aaf8cdfca8358525b539eda88bc5f17a40b",
+      "git_sha256": "10173493451a932df54a4cc482941aaf8cdfca8358525b539eda88bc5f17a40b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.form15ca",
+      "file": "database/raw/in/in.itd.form15ca.html",
+      "expected": "a2fb81d44ec8394f1d597a1a0967ea28a3cbc9e7e9623b3ce194b2756726610e",
+      "working_sha256": "a2fb81d44ec8394f1d597a1a0967ea28a3cbc9e7e9623b3ce194b2756726610e",
+      "git_sha256": "a2fb81d44ec8394f1d597a1a0967ea28a3cbc9e7e9623b3ce194b2756726610e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.beneficial-owner-guide-2026",
+      "file": "database/raw/in/in.itd.beneficial-owner-guide-2026.pdf",
+      "expected": "e1f22372e2bdf894574de46a76fe625e6a3a3a5edf18dad87af922b605598892",
+      "working_sha256": "e1f22372e2bdf894574de46a76fe625e6a3a3a5edf18dad87af922b605598892",
+      "git_sha256": "e1f22372e2bdf894574de46a76fe625e6a3a3a5edf18dad87af922b605598892",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "my.hasil.e-residence",
+      "file": "database/raw/my/my.hasil.e-residence.html",
+      "expected": "638115a3a71f133ebbc200d3f5bd253b2a74c019dcc0edd1e83da8d2aa0a24b4",
+      "working_sha256": "638115a3a71f133ebbc200d3f5bd253b2a74c019dcc0edd1e83da8d2aa0a24b4",
+      "git_sha256": "638115a3a71f133ebbc200d3f5bd253b2a74c019dcc0edd1e83da8d2aa0a24b4",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.act2025-scope",
+      "file": "database/raw/in/in.itd.act2025-scope.html",
+      "expected": "338b457f248f037ce62af0a943929c91b5d747caae8acf73991efbf923a00c58",
+      "working_sha256": "338b457f248f037ce62af0a943929c91b5d747caae8acf73991efbf923a00c58",
+      "git_sha256": "338b457f248f037ce62af0a943929c91b5d747caae8acf73991efbf923a00c58",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.nts.corporate-tax-overview",
+      "file": "database/raw/kr/kr.nts.corporate-tax-overview.do",
+      "expected": "0a35d8a90777bf0ea77f0e535b9588e4e9ae9cda29cacabd5d3d6464b759a528",
+      "working_sha256": "0a35d8a90777bf0ea77f0e535b9588e4e9ae9cda29cacabd5d3d6464b759a528",
+      "git_sha256": "0a35d8a90777bf0ea77f0e535b9588e4e9ae9cda29cacabd5d3d6464b759a528",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.nts.tax-treaty-application",
+      "file": "database/raw/kr/kr.nts.tax-treaty-application.do",
+      "expected": "e753de3cf59a84293a6fe146cbf1de53c47a85d233c47e7de2ee55bb0650a270",
+      "working_sha256": "e753de3cf59a84293a6fe146cbf1de53c47a85d233c47e7de2ee55bb0650a270",
+      "git_sha256": "e753de3cf59a84293a6fe146cbf1de53c47a85d233c47e7de2ee55bb0650a270",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.nts.global-income-faq",
+      "file": "database/raw/kr/kr.nts.global-income-faq.do",
+      "expected": "a3a5f6a6fb887353129814eadf5adb9a40a10aecec681c052440ccda79c6f810",
+      "working_sha256": "a3a5f6a6fb887353129814eadf5adb9a40a10aecec681c052440ccda79c6f810",
+      "git_sha256": "a3a5f6a6fb887353129814eadf5adb9a40a10aecec681c052440ccda79c6f810",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.nts.corporate-rate-2026",
+      "file": "database/raw/kr/kr.nts.corporate-rate-2026.do",
+      "expected": "5918af6d200ebfc1c4a408033eb87ea867f6f4c6107beedfd15bce36893b9832",
+      "working_sha256": "5918af6d200ebfc1c4a408033eb87ea867f6f4c6107beedfd15bce36893b9832",
+      "git_sha256": "5918af6d200ebfc1c4a408033eb87ea867f6f4c6107beedfd15bce36893b9832",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.nts.filing-returns",
+      "file": "database/raw/kr/kr.nts.filing-returns.do",
+      "expected": "e2921c2dc6f1f4dc2de81b48edf207e9392cbb82d575e2bf87c6742f21ab3d8e",
+      "working_sha256": "e2921c2dc6f1f4dc2de81b48edf207e9392cbb82d575e2bf87c6742f21ab3d8e",
+      "git_sha256": "e2921c2dc6f1f4dc2de81b48edf207e9392cbb82d575e2bf87c6742f21ab3d8e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.nts.forms",
+      "file": "database/raw/kr/kr.nts.forms.do",
+      "expected": "0105b611a099b5a08905af1f35c38a47a376405f70b6986bf41599b905d3cbdd",
+      "working_sha256": "0105b611a099b5a08905af1f35c38a47a376405f70b6986bf41599b905d3cbdd",
+      "git_sha256": "0105b611a099b5a08905af1f35c38a47a376405f70b6986bf41599b905d3cbdd",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.nts.tax-treaty-index",
+      "file": "database/raw/kr/kr.nts.tax-treaty-index.do",
+      "expected": "f0e827350fb67fa7ea593d199ba3c0f030806e41e9bf847e083d4b618f844d59",
+      "working_sha256": "f0e827350fb67fa7ea593d199ba3c0f030806e41e9bf847e083d4b618f844d59",
+      "git_sha256": "f0e827350fb67fa7ea593d199ba3c0f030806e41e9bf847e083d4b618f844d59",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.in-my.2012.hasil",
+      "file": "database/raw/in-my/treaty.in-my.2012.hasil.pdf",
+      "expected": "761bb9b41e718435b6f1c2027f9ab664d31f88838176249aca9c7000d514140f",
+      "working_sha256": "761bb9b41e718435b6f1c2027f9ab664d31f88838176249aca9c7000d514140f",
+      "git_sha256": "761bb9b41e718435b6f1c2027f9ab664d31f88838176249aca9c7000d514140f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.in-my.2012.mli.hasil",
+      "file": "database/raw/in-my/treaty.in-my.2012.mli.hasil.pdf",
+      "expected": "6976fed180c61f402f5497d9f173022c792189946ad44e60a48751d51604468f",
+      "working_sha256": "6976fed180c61f402f5497d9f173022c792189946ad44e60a48751d51604468f",
+      "git_sha256": "6976fed180c61f402f5497d9f173022c792189946ad44e60a48751d51604468f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.in-kr.2015.law",
+      "file": "database/raw/in-kr/treaty.in-kr.2015.law.do",
+      "expected": "8d664465c248ca4ac866d53eba2f7b0cd3cfa6bce182c03d6cba95089a854afb",
+      "working_sha256": "8d664465c248ca4ac866d53eba2f7b0cd3cfa6bce182c03d6cba95089a854afb",
+      "git_sha256": "8d664465c248ca4ac866d53eba2f7b0cd3cfa6bce182c03d6cba95089a854afb",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.in-vn.1994.mofa",
+      "file": "database/raw/in-vn/treaty.in-vn.1994.mofa.html",
+      "expected": "97906a6ded4e1abb3e61b47ed1fb7bdbe186f9bfe1c46667917ecdcf65a8c867",
+      "working_sha256": "97906a6ded4e1abb3e61b47ed1fb7bdbe186f9bfe1c46667917ecdcf65a8c867",
+      "git_sha256": "97906a6ded4e1abb3e61b47ed1fb7bdbe186f9bfe1c46667917ecdcf65a8c867",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.in-vn.1994.mofa.text",
+      "file": "database/raw/in-vn/treaty.in-vn.1994.mofa.text.html",
+      "expected": "1901252da513bf4d2f4d7003268d79744a8f27d0960dbe37f15908e2d78a6f70",
+      "working_sha256": "1901252da513bf4d2f4d7003268d79744a8f27d0960dbe37f15908e2d78a6f70",
+      "git_sha256": "1901252da513bf4d2f4d7003268d79744a8f27d0960dbe37f15908e2d78a6f70",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.kr-my.1982.hasil",
+      "file": "database/raw/kr-my/treaty.kr-my.1982.hasil.pdf",
+      "expected": "a3405beedef10de991d74576ba34dc0a1cf106ff9b8a4942d35f3a2a1e0aa5f4",
+      "working_sha256": "a3405beedef10de991d74576ba34dc0a1cf106ff9b8a4942d35f3a2a1e0aa5f4",
+      "git_sha256": "a3405beedef10de991d74576ba34dc0a1cf106ff9b8a4942d35f3a2a1e0aa5f4",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.kr-my.1982.mli.hasil",
+      "file": "database/raw/kr-my/treaty.kr-my.1982.mli.hasil.pdf",
+      "expected": "0b0e5db0732bd8ee1f43b8ce595ab5554f4425d0c6721d8e4f1c649ea3263d3e",
+      "working_sha256": "0b0e5db0732bd8ee1f43b8ce595ab5554f4425d0c6721d8e4f1c649ea3263d3e",
+      "git_sha256": "0b0e5db0732bd8ee1f43b8ce595ab5554f4425d0c6721d8e4f1c649ea3263d3e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.kr-sg.2019.iras",
+      "file": "database/raw/kr-sg/treaty.kr-sg.2019.iras.pdf",
+      "expected": "bb77da4b82f83b988a2d90dc0fcb558e261d7a8e5dadaaea18de1f7e3a88bbba",
+      "working_sha256": "bb77da4b82f83b988a2d90dc0fcb558e261d7a8e5dadaaea18de1f7e3a88bbba",
+      "git_sha256": "bb77da4b82f83b988a2d90dc0fcb558e261d7a8e5dadaaea18de1f7e3a88bbba",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.kr-th.2006.rd",
+      "file": "database/raw/kr-th/treaty.kr-th.2006.rd.pdf",
+      "expected": "e36cce7c7770666459337abb136aca6904bb6fa7a5da3f74852846d2cbaef177",
+      "working_sha256": "e36cce7c7770666459337abb136aca6904bb6fa7a5da3f74852846d2cbaef177",
+      "git_sha256": "e36cce7c7770666459337abb136aca6904bb6fa7a5da3f74852846d2cbaef177",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.kr-vn.1994.mofa",
+      "file": "database/raw/kr-vn/treaty.kr-vn.1994.mofa.html",
+      "expected": "aa561c615aae21e5866f914dfea2a8d78d585f7e3dfb5315d1ef425308b852ce",
+      "working_sha256": "aa561c615aae21e5866f914dfea2a8d78d585f7e3dfb5315d1ef425308b852ce",
+      "git_sha256": "aa561c615aae21e5866f914dfea2a8d78d585f7e3dfb5315d1ef425308b852ce",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.kr-vn.1994.mofa.text",
+      "file": "database/raw/kr-vn/treaty.kr-vn.1994.mofa.text.html",
+      "expected": "0c77906238b64b1819cd5dfe6c5e9fcabada5fa6b0b8425569879e09738b3f9b",
+      "working_sha256": "0c77906238b64b1819cd5dfe6c5e9fcabada5fa6b0b8425569879e09738b3f9b",
+      "git_sha256": "0c77906238b64b1819cd5dfe6c5e9fcabada5fa6b0b8425569879e09738b3f9b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.kr-vn.2019.protocol.mofa",
+      "file": "database/raw/kr-vn/treaty.kr-vn.2019.protocol.mofa.html",
+      "expected": "826e445da1de0464bbabe5d7cc1d43f5058672414d773200686ca2b0c9b075fa",
+      "working_sha256": "826e445da1de0464bbabe5d7cc1d43f5058672414d773200686ca2b0c9b075fa",
+      "git_sha256": "826e445da1de0464bbabe5d7cc1d43f5058672414d773200686ca2b0c9b075fa",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.kr-vn.2019.protocol.mofa.text",
+      "file": "database/raw/kr-vn/treaty.kr-vn.2019.protocol.mofa.text.html",
+      "expected": "129847e1cc696ec581218a8925b605e66dc81363395ad7a602d0e93ba00cbad7",
+      "working_sha256": "129847e1cc696ec581218a8925b605e66dc81363395ad7a602d0e93ba00cbad7",
+      "git_sha256": "129847e1cc696ec581218a8925b605e66dc81363395ad7a602d0e93ba00cbad7",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.itca.enforcement-decree",
+      "file": "database/raw/kr/kr.itca.enforcement-decree.pdf",
+      "expected": "186cb47334d8b9ab32c846c6045d9ffc7565364a7cfbbe56d01643b9b29ab1c1",
+      "working_sha256": "186cb47334d8b9ab32c846c6045d9ffc7565364a7cfbbe56d01643b9b29ab1c1",
+      "git_sha256": "186cb47334d8b9ab32c846c6045d9ffc7565364a7cfbbe56d01643b9b29ab1c1",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "vn.mofa.treaty-index",
+      "file": "database/raw/vn/vn.mofa.treaty-index.html",
+      "expected": "9ddfedc6e862deba0a4394b5c7a6758cfc3827e71a24cdc79a2bc685ae33ff8c",
+      "working_sha256": "9ddfedc6e862deba0a4394b5c7a6758cfc3827e71a24cdc79a2bc685ae33ff8c",
+      "git_sha256": "9ddfedc6e862deba0a4394b5c7a6758cfc3827e71a24cdc79a2bc685ae33ff8c",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.nts.nonresident-wht",
+      "file": "database/raw/kr/kr.nts.nonresident-wht.do",
+      "expected": "89136cb2fccd902c131aa76e8ca384475dc4cae007af89cba64a11734d2447b3",
+      "working_sha256": "89136cb2fccd902c131aa76e8ca384475dc4cae007af89cba64a11734d2447b3",
+      "git_sha256": "89136cb2fccd902c131aa76e8ca384475dc4cae007af89cba64a11734d2447b3",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.nts.nonresident-wht-agent",
+      "file": "database/raw/kr/kr.nts.nonresident-wht-agent.do",
+      "expected": "9b8b0f132b9ec202c8d26dca9829cf607ed51172fa846fcea3dbcb068d559978",
+      "working_sha256": "9b8b0f132b9ec202c8d26dca9829cf607ed51172fa846fcea3dbcb068d559978",
+      "git_sha256": "9b8b0f132b9ec202c8d26dca9829cf607ed51172fa846fcea3dbcb068d559978",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.nts.nonresident-wht-rate",
+      "file": "database/raw/kr/kr.nts.nonresident-wht-rate.do",
+      "expected": "533337ca4728d6f8f78016b4cf0c4d9af10d24c894a2e6a2e5aa8ea1932aa2bf",
+      "working_sha256": "533337ca4728d6f8f78016b4cf0c4d9af10d24c894a2e6a2e5aa8ea1932aa2bf",
+      "git_sha256": "533337ca4728d6f8f78016b4cf0c4d9af10d24c894a2e6a2e5aa8ea1932aa2bf",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "vn.btc.treaty-procedure",
+      "file": "database/raw/vn/vn.btc.treaty-procedure.pdf",
+      "expected": "60a72b78abb7090fc76a3bc90a9fe7866e04ef2063417d0503532c9904d51057",
+      "working_sha256": "60a72b78abb7090fc76a3bc90a9fe7866e04ef2063417d0503532c9904d51057",
+      "git_sha256": "60a72b78abb7090fc76a3bc90a9fe7866e04ef2063417d0503532c9904d51057",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "vn.gov.tax-filing-deadlines",
+      "file": "database/raw/vn/vn.gov.tax-filing-deadlines.htm",
+      "expected": "9614288d9986d022ba2a33b1c6d673c99c81af33943e8d43693b1dd7bfbde4cd",
+      "working_sha256": "9614288d9986d022ba2a33b1c6d673c99c81af33943e8d43693b1dd7bfbde4cd",
+      "git_sha256": "9614288d9986d022ba2a33b1c6d673c99c81af33943e8d43693b1dd7bfbde4cd",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "vn.gov.pit-withholding-rates",
+      "file": "database/raw/vn/vn.gov.pit-withholding-rates.htm",
+      "expected": "70530e955d24b5fd1157e9d9254f06e57ad961e87960e1215765af7c3afbb21e",
+      "working_sha256": "70530e955d24b5fd1157e9d9254f06e57ad961e87960e1215765af7c3afbb21e",
+      "git_sha256": "70530e955d24b5fd1157e9d9254f06e57ad961e87960e1215765af7c3afbb21e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "vn.law.pit2026.vi",
+      "file": "database/raw/vn/vn.law.pit2026.vi.pdf",
+      "expected": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+      "working_sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+      "git_sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "vn.gov.related-party-tax-avoidance",
+      "file": "database/raw/vn/vn.gov.related-party-tax-avoidance.htm",
+      "expected": "494085b3b80a2d9b7f78ba25318ef840e654428b58e64b5061a0aeb5df176b80",
+      "working_sha256": "494085b3b80a2d9b7f78ba25318ef840e654428b58e64b5061a0aeb5df176b80",
+      "git_sha256": "494085b3b80a2d9b7f78ba25318ef840e654428b58e64b5061a0aeb5df176b80",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "vn.gov.beneficial-owner-criteria",
+      "file": "database/raw/vn/vn.gov.beneficial-owner-criteria.htm",
+      "expected": "f0bf5043d3fbbd2b58bf952d2de6204bb71c588bac9ae8153cb4f4bf431206b3",
+      "working_sha256": "f0bf5043d3fbbd2b58bf952d2de6204bb71c588bac9ae8153cb4f4bf431206b3",
+      "git_sha256": "f0bf5043d3fbbd2b58bf952d2de6204bb71c588bac9ae8153cb4f4bf431206b3",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.foreign-income-guide.2018",
+      "file": "database/raw/in/in.itd.foreign-income-guide.2018.pdf",
+      "expected": "98d068aeecddb2d887161963ac88dcf094790eb66c0ff4eff030de155e2ba730",
+      "working_sha256": "98d068aeecddb2d887161963ac88dcf094790eb66c0ff4eff030de155e2ba730",
+      "git_sha256": "98d068aeecddb2d887161963ac88dcf094790eb66c0ff4eff030de155e2ba730",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.law.corporate-tax.legislation1582.en",
+      "file": "database/raw/ae/ae.law.corporate-tax.legislation1582.en.pdf",
+      "expected": "e849694a17162e34e78f7b357eaa0f42080918db264b52dc68d1f34ad2840d37",
+      "working_sha256": "e849694a17162e34e78f7b357eaa0f42080918db264b52dc68d1f34ad2840d37",
+      "git_sha256": "e849694a17162e34e78f7b357eaa0f42080918db264b52dc68d1f34ad2840d37",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.law.ita2025.fa2026.en",
+      "file": "database/raw/in/in.law.ita2025.fa2026.en.pdf",
+      "expected": "d54a0ed6a91673d1a4fbcef9b5e472c3efe441139fae38f85a5a0c5b2cfc998b",
+      "working_sha256": "d54a0ed6a91673d1a4fbcef9b5e472c3efe441139fae38f85a5a0c5b2cfc998b",
+      "git_sha256": "d54a0ed6a91673d1a4fbcef9b5e472c3efe441139fae38f85a5a0c5b2cfc998b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.corporate-tax-act.20260701.ko",
+      "file": "database/raw/kr/kr.corporate-tax-act.20260701.ko.pdf",
+      "expected": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+      "working_sha256": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+      "git_sha256": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.income-tax-act.20260701.ko",
+      "file": "database/raw/kr/kr.income-tax-act.20260701.ko.pdf",
+      "expected": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+      "working_sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+      "git_sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.law.corporate-tax.mof2022.en",
+      "file": "database/raw/ae/ae.law.corporate-tax.mof2022.en.pdf",
+      "expected": "29ef89bf3cfbff21d34a911af6ec7a9de6dc1af7a445b965ca4b9c6dfdb16f8a",
+      "working_sha256": "29ef89bf3cfbff21d34a911af6ec7a9de6dc1af7a445b965ca4b9c6dfdb16f8a",
+      "git_sha256": "29ef89bf3cfbff21d34a911af6ec7a9de6dc1af7a445b965ca4b9c6dfdb16f8a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.law.corporate-tax.fta2022.en",
+      "file": "database/raw/ae/ae.law.corporate-tax.fta2022.en.pdf",
+      "expected": "a45eb6271da5a1d054989ca765608be3e9544bd85d23d42a4c18e83280198b5d",
+      "working_sha256": "a45eb6271da5a1d054989ca765608be3e9544bd85d23d42a4c18e83280198b5d",
+      "git_sha256": "a45eb6271da5a1d054989ca765608be3e9544bd85d23d42a4c18e83280198b5d",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.ae-jp.2013.convention.mof.en",
+      "file": "database/raw/ae-jp/treaty.ae-jp.2013.convention.mof.en.pdf",
+      "expected": "011d9c7caea060fae175208520be3f54f47ff6ada37a280581384e19033873e9",
+      "working_sha256": "011d9c7caea060fae175208520be3f54f47ff6ada37a280581384e19033873e9",
+      "git_sha256": "011d9c7caea060fae175208520be3f54f47ff6ada37a280581384e19033873e9",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "vn.btc.tax-administration.14-vbhn-2026",
+      "file": "database/raw/vn/vn.btc.tax-administration.14-vbhn-2026.pdf",
+      "expected": "0cae81492f8c3af94639d5370469a31860bc81e72e0d07c706a9efbeec13cfa5",
+      "working_sha256": "0cae81492f8c3af94639d5370469a31860bc81e72e0d07c706a9efbeec13cfa5",
+      "git_sha256": "0cae81492f8c3af94639d5370469a31860bc81e72e0d07c706a9efbeec13cfa5",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.dtaa-directory.20261031",
+      "file": "database/raw/in/in.itd.dtaa-directory.20261031.html",
+      "expected": "accf997733691d6fdaaf7f2b8a859df1cdc850f591c02d9beeeb9da2b96c02f3",
+      "working_sha256": "accf997733691d6fdaaf7f2b8a859df1cdc850f591c02d9beeeb9da2b96c02f3",
+      "git_sha256": "accf997733691d6fdaaf7f2b8a859df1cdc850f591c02d9beeeb9da2b96c02f3",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "vn.law.pit.consolidation112.2026.vi",
+      "file": "database/raw/vn/vn.law.pit.consolidation112.2026.vi.pdf",
+      "expected": "7be8f6acc114eade6952cbbdfb33e3b6c6574ee819722509b91c5cb2b160d0a7",
+      "working_sha256": "7be8f6acc114eade6952cbbdfb33e3b6c6574ee819722509b91c5cb2b160d0a7",
+      "git_sha256": "7be8f6acc114eade6952cbbdfb33e3b6c6574ee819722509b91c5cb2b160d0a7",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.forms-transition2026",
+      "file": "database/raw/in/in.itd.forms-transition2026.html",
+      "expected": "583178e2f89227f8d36694be6306e63f11174e0143fa4dbf387828fd860f7255",
+      "working_sha256": "583178e2f89227f8d36694be6306e63f11174e0143fa4dbf387828fd860f7255",
+      "git_sha256": "583178e2f89227f8d36694be6306e63f11174e0143fa4dbf387828fd860f7255",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.itd.tds-transition2026",
+      "file": "database/raw/in/in.itd.tds-transition2026.html",
+      "expected": "30f6717929c0c887ce2bc55bf79eb4a266b44882baea222a372687ac4c3079a0",
+      "working_sha256": "30f6717929c0c887ce2bc55bf79eb4a266b44882baea222a372687ac4c3079a0",
+      "git_sha256": "30f6717929c0c887ce2bc55bf79eb4a266b44882baea222a372687ac4c3079a0",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "in.law.finance2026.gazette.en",
+      "file": "database/raw/in/in.law.finance2026.gazette.en.pdf",
+      "expected": "f01136356e61b2534328153941a68f13afd06fe8587d347757c89101d9cc564f",
+      "working_sha256": "f01136356e61b2534328153941a68f13afd06fe8587d347757c89101d9cc564f",
+      "git_sha256": "f01136356e61b2534328153941a68f13afd06fe8587d347757c89101d9cc564f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.cabinet116.2022.taxable-threshold.en",
+      "file": "database/raw/ae/ae.cabinet116.2022.taxable-threshold.en.pdf",
+      "expected": "6c830b72ad61feb3cf55d1bdc11272306f3f27d809e201cf9d2d3a483817d415",
+      "working_sha256": "6c830b72ad61feb3cf55d1bdc11272306f3f27d809e201cf9d2d3a483817d415",
+      "git_sha256": "6c830b72ad61feb3cf55d1bdc11272306f3f27d809e201cf9d2d3a483817d415",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.cabinet49.2023.natural-persons.en",
+      "file": "database/raw/ae/ae.cabinet49.2023.natural-persons.en.pdf",
+      "expected": "8ceb036169a612fe5542c7e60cba20464b90fbd5f0ceee35047cf9c5257c921f",
+      "working_sha256": "8ceb036169a612fe5542c7e60cba20464b90fbd5f0ceee35047cf9c5257c921f",
+      "git_sha256": "8ceb036169a612fe5542c7e60cba20464b90fbd5f0ceee35047cf9c5257c921f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "ae.cabinet142.2024.dmtt.en",
+      "file": "database/raw/ae/ae.cabinet142.2024.dmtt.en.pdf",
+      "expected": "84dce5266b43c038eb32ee8cbbbdf67916dee306ede982bbce64ca47bdb163e6",
+      "working_sha256": "84dce5266b43c038eb32ee8cbbbdf67916dee306ede982bbce64ca47bdb163e6",
+      "git_sha256": "84dce5266b43c038eb32ee8cbbbdf67916dee306ede982bbce64ca47bdb163e6",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "my.pua157.2024.foreign-dividends-amendment",
+      "file": "database/raw/my/my.pua157.2024.foreign-dividends-amendment.pdf",
+      "expected": "c5af1e6de86a58d585844ad06a64569d6b7df65fa1652b2d442e6b227072780c",
+      "working_sha256": "c5af1e6de86a58d585844ad06a64569d6b7df65fa1652b2d442e6b227072780c",
+      "git_sha256": "c5af1e6de86a58d585844ad06a64569d6b7df65fa1652b2d442e6b227072780c",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "my.pua235.2022.foreign-dividends",
+      "file": "database/raw/my/my.pua235.2022.foreign-dividends.pdf",
+      "expected": "7bcd59eb3cc85ce8be98495fea789a7bf8f66ad658e02cee96554ca3b44b06cf",
+      "working_sha256": "7bcd59eb3cc85ce8be98495fea789a7bf8f66ad658e02cee96554ca3b44b06cf",
+      "git_sha256": "7bcd59eb3cc85ce8be98495fea789a7bf8f66ad658e02cee96554ca3b44b06cf",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "my.pua451.2024.individual-fsi-extension",
+      "file": "database/raw/my/my.pua451.2024.individual-fsi-extension.pdf",
+      "expected": "9744faae89e02e5b69328ef696edff3236e15cc2e266709b2be7e368f5e47a44",
+      "working_sha256": "9744faae89e02e5b69328ef696edff3236e15cc2e266709b2be7e368f5e47a44",
+      "git_sha256": "9744faae89e02e5b69328ef696edff3236e15cc2e266709b2be7e368f5e47a44",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "my.hasil.foreign-income-2024",
+      "file": "database/raw/my/my.hasil.foreign-income-2024.pdf",
+      "expected": "c410d16dc3c4e7e1eee3fb4c6bbd4648b2d188ba12b79eb70477db991096cdaf",
+      "working_sha256": "c410d16dc3c4e7e1eee3fb4c6bbd4648b2d188ba12b79eb70477db991096cdaf",
+      "git_sha256": "c410d16dc3c4e7e1eee3fb4c6bbd4648b2d188ba12b79eb70477db991096cdaf",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "my.hasil.be2025.explanatory",
+      "file": "database/raw/my/my.hasil.be2025.explanatory.pdf",
+      "expected": "587421c806cb9b62ba9789627dadf7c85cc9b314ea99971935cb4e105c347222",
+      "working_sha256": "587421c806cb9b62ba9789627dadf7c85cc9b314ea99971935cb4e105c347222",
+      "git_sha256": "587421c806cb9b62ba9789627dadf7c85cc9b314ea99971935cb4e105c347222",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "my.pua148.2025.dividend-income",
+      "file": "database/raw/my/my.pua148.2025.dividend-income.pdf",
+      "expected": "fd85095d1bb8b841997447558c8af7ca09a1a6695b6a2e3c44f7fca4e334059a",
+      "working_sha256": "fd85095d1bb8b841997447558c8af7ca09a1a6695b6a2e3c44f7fca4e334059a",
+      "git_sha256": "fd85095d1bb8b841997447558c8af7ca09a1a6695b6a2e3c44f7fca4e334059a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "my.finance-act862.2024",
+      "file": "database/raw/my/my.finance-act862.2024.pdf",
+      "expected": "a52823c029a9bde5b304f62c78c1dd36e159ded43535d6fee3207578bbe59718",
+      "working_sha256": "a52823c029a9bde5b304f62c78c1dd36e159ded43535d6fee3207578bbe59718",
+      "git_sha256": "a52823c029a9bde5b304f62c78c1dd36e159ded43535d6fee3207578bbe59718",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "my.ita1967.updated2026.en",
+      "file": "database/raw/my/my.ita1967.updated2026.en.pdf",
+      "expected": "a5686ae61b81ce55ef36054149b98ccd1b04f73b937f5e44db8926484795416a",
+      "working_sha256": "a5686ae61b81ce55ef36054149b98ccd1b04f73b937f5e44db8926484795416a",
+      "git_sha256": "a5686ae61b81ce55ef36054149b98ccd1b04f73b937f5e44db8926484795416a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "my.ita1967",
+      "file": "database/raw/my/my.ita1967.pdf",
+      "expected": "771ced020407dd6686fc493d6f9c1940bc29296fed0072422fb881c42737c49e",
+      "working_sha256": "771ced020407dd6686fc493d6f9c1940bc29296fed0072422fb881c42737c49e",
+      "git_sha256": "771ced020407dd6686fc493d6f9c1940bc29296fed0072422fb881c42737c49e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.my-th.1982.en",
+      "file": "database/raw/my-th/treaty.my-th.1982.en.pdf",
+      "expected": "5e86c4d17b69778e28d019722e570c2a89f7dba90cc4ee9346875ffa3399b8cd",
+      "working_sha256": "5e86c4d17b69778e28d019722e570c2a89f7dba90cc4ee9346875ffa3399b8cd",
+      "git_sha256": "5e86c4d17b69778e28d019722e570c2a89f7dba90cc4ee9346875ffa3399b8cd",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "intl.mli.positions.my.2022.en",
+      "file": "database/raw/intl/intl.mli.positions.my.2022.en.pdf",
+      "expected": "e5d7f0ec5176e7b8cb919de9391b0d74b6b608287974671e4288e3a5bd4ac723",
+      "working_sha256": "e5d7f0ec5176e7b8cb919de9391b0d74b6b608287974671e4288e3a5bd4ac723",
+      "git_sha256": "e5d7f0ec5176e7b8cb919de9391b0d74b6b608287974671e4288e3a5bd4ac723",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "intl.oecd.mli.parties.20260915.en",
+      "file": "database/raw/intl/intl.oecd.mli.parties.20260915.en.pdf",
+      "expected": "522f7a9c9b93ec9570dbe68a5e62dea5232a6ffe72d23dc67d6408987fc6c60a",
+      "working_sha256": "522f7a9c9b93ec9570dbe68a5e62dea5232a6ffe72d23dc67d6408987fc6c60a",
+      "git_sha256": "522f7a9c9b93ec9570dbe68a5e62dea5232a6ffe72d23dc67d6408987fc6c60a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.itca",
+      "file": "database/raw/kr/kr.itca.html",
+      "expected": "e71fd3461dd1f028f45ae80ca65a4d4194d014f47a2dace9d8157c6a48d05ae2",
+      "working_sha256": "e71fd3461dd1f028f45ae80ca65a4d4194d014f47a2dace9d8157c6a48d05ae2",
+      "git_sha256": "e71fd3461dd1f028f45ae80ca65a4d4194d014f47a2dace9d8157c6a48d05ae2",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "vn.law.pit.consolidation103.2025.vi",
+      "file": "database/raw/vn/vn.law.pit.consolidation103.2025.vi.doc",
+      "expected": "d200d4d4dac6773173fb49af9744ea13c4b6b9286368d82c97fa6c7370be7494",
+      "working_sha256": "d200d4d4dac6773173fb49af9744ea13c4b6b9286368d82c97fa6c7370be7494",
+      "git_sha256": "d200d4d4dac6773173fb49af9744ea13c4b6b9286368d82c97fa6c7370be7494",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.mof.cfc-overview",
+      "file": "database/raw/jp/jp.mof.cfc-overview.htm",
+      "expected": "4d66ef028063f6a5f6aedafdb19b985a8298c53fe2f7c6364bc849e072e0d5f1",
+      "working_sha256": "4d66ef028063f6a5f6aedafdb19b985a8298c53fe2f7c6364bc849e072e0d5f1",
+      "git_sha256": "4d66ef028063f6a5f6aedafdb19b985a8298c53fe2f7c6364bc849e072e0d5f1",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.mof.excessive-interest-antiavoidance",
+      "file": "database/raw/jp/jp.mof.excessive-interest-antiavoidance.htm",
+      "expected": "675aa3c22fae07dec186c18aab3fb4cad6287ae0e8e365fb99cd355ace61d6a2",
+      "working_sha256": "675aa3c22fae07dec186c18aab3fb4cad6287ae0e8e365fb99cd355ace61d6a2",
+      "git_sha256": "675aa3c22fae07dec186c18aab3fb4cad6287ae0e8e365fb99cd355ace61d6a2",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.certificate-of-residence-application",
+      "file": "database/raw/jp/jp.nta.certificate-of-residence-application.pdf",
+      "expected": "9fe09c62453b9cccbac1e78e04f28626a0354ffb9d4785527f0222486b8285b4",
+      "working_sha256": "9fe09c62453b9cccbac1e78e04f28626a0354ffb9d4785527f0222486b8285b4",
+      "git_sha256": "9fe09c62453b9cccbac1e78e04f28626a0354ffb9d4785527f0222486b8285b4",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.consolidated-tax-avoidance-denial",
+      "file": "database/raw/jp/jp.nta.consolidated-tax-avoidance-denial.htm",
+      "expected": "845c02a14b204b68a7c175d273dcdb61c0ebce428758e1887a617446121136ec",
+      "working_sha256": "845c02a14b204b68a7c175d273dcdb61c0ebce428758e1887a617446121136ec",
+      "git_sha256": "845c02a14b204b68a7c175d273dcdb61c0ebce428758e1887a617446121136ec",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.corporate-rate-2026",
+      "file": "database/raw/jp/jp.nta.corporate-rate-2026.htm",
+      "expected": "240bbf0e09c1414db40562127a08928fd0997779f97289d697ef29f18a362704",
+      "working_sha256": "240bbf0e09c1414db40562127a08928fd0997779f97289d697ef29f18a362704",
+      "git_sha256": "240bbf0e09c1414db40562127a08928fd0997779f97289d697ef29f18a362704",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.income-rate-2026",
+      "file": "database/raw/jp/jp.nta.income-rate-2026.htm",
+      "expected": "638f0d78c9624168d94f6dc9b5280070d85374648736d556689d4146c4fff171",
+      "working_sha256": "638f0d78c9624168d94f6dc9b5280070d85374648736d556689d4146c4fff171",
+      "git_sha256": "638f0d78c9624168d94f6dc9b5280070d85374648736d556689d4146c4fff171",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.international-taxation-basics",
+      "file": "database/raw/jp/jp.nta.international-taxation-basics.pdf",
+      "expected": "8365bf85820e84074feba4b1416dee6c4cd538ef7b9f4547e898dac02be0254b",
+      "working_sha256": "8365bf85820e84074feba4b1416dee6c4cd538ef7b9f4547e898dac02be0254b",
+      "git_sha256": "8365bf85820e84074feba4b1416dee6c4cd538ef7b9f4547e898dac02be0254b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.nonresident-share-transfer",
+      "file": "database/raw/jp/jp.nta.nonresident-share-transfer.htm",
+      "expected": "e14cc9e653477849b3a516d5929ab6f232a547804e16e02b716037dd36518339",
+      "working_sha256": "e14cc9e653477849b3a516d5929ab6f232a547804e16e02b716037dd36518339",
+      "git_sha256": "e14cc9e653477849b3a516d5929ab6f232a547804e16e02b716037dd36518339",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.nonresident-withholding",
+      "file": "database/raw/jp/jp.nta.nonresident-withholding.htm",
+      "expected": "c0dc53b18325d84479fb4ef7ed9c76ff17d4d845f1c44114e42ce8bdb2767ac4",
+      "working_sha256": "c0dc53b18325d84479fb4ef7ed9c76ff17d4d845f1c44114e42ce8bdb2767ac4",
+      "git_sha256": "c0dc53b18325d84479fb4ef7ed9c76ff17d4d845f1c44114e42ce8bdb2767ac4",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.resident-nonresident-classification",
+      "file": "database/raw/jp/jp.nta.resident-nonresident-classification.htm",
+      "expected": "665db9f5b1b0ce869004088366018390c1d3bd8bbbf56e299b19e2a1bbc2aba4",
+      "working_sha256": "665db9f5b1b0ce869004088366018390c1d3bd8bbbf56e299b19e2a1bbc2aba4",
+      "git_sha256": "665db9f5b1b0ce869004088366018390c1d3bd8bbbf56e299b19e2a1bbc2aba4",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.tax-conventions-index",
+      "file": "database/raw/jp/jp.nta.tax-conventions-index.htm",
+      "expected": "3d59c0fb98ef4adbaad55b8b1264aac30842baab879c04b60768b0f5ffb05d29",
+      "working_sha256": "3d59c0fb98ef4adbaad55b8b1264aac30842baab879c04b60768b0f5ffb05d29",
+      "git_sha256": "3d59c0fb98ef4adbaad55b8b1264aac30842baab879c04b60768b0f5ffb05d29",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "jp.nta.tax-shelter-countermeasures",
+      "file": "database/raw/jp/jp.nta.tax-shelter-countermeasures.htm",
+      "expected": "7f45a120db02457e08f843a2192f523076c89c5008cf58fe21f82f1657b8b3f2",
+      "working_sha256": "7f45a120db02457e08f843a2192f523076c89c5008cf58fe21f82f1657b8b3f2",
+      "git_sha256": "7f45a120db02457e08f843a2192f523076c89c5008cf58fe21f82f1657b8b3f2",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.corporate-tax-act-2026",
+      "file": "database/raw/kr/kr.corporate-tax-act.20260701.ko.pdf",
+      "expected": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+      "working_sha256": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+      "git_sha256": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "kr.income-tax-act-2026",
+      "file": "database/raw/kr/kr.income-tax-act.20260701.ko.pdf",
+      "expected": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+      "working_sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+      "git_sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd.cit",
+      "file": "database/raw/th/th.rd.cit.html",
+      "expected": "deaca8b638a5fda03bc86c0b3b66fe5359c9d0842ad57a2d4bc2a3d201b8f61e",
+      "working_sha256": "deaca8b638a5fda03bc86c0b3b66fe5359c9d0842ad57a2d4bc2a3d201b8f61e",
+      "git_sha256": "deaca8b638a5fda03bc86c0b3b66fe5359c9d0842ad57a2d4bc2a3d201b8f61e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd.dta-index",
+      "file": "database/raw/th/th.rd.dta-index.html",
+      "expected": "d15bbb4c546eb225942471343995a1e63b1f6feafe3d3460ca003d8192cf2928",
+      "working_sha256": "d15bbb4c546eb225942471343995a1e63b1f6feafe3d3460ca003d8192cf2928",
+      "git_sha256": "d15bbb4c546eb225942471343995a1e63b1f6feafe3d3460ca003d8192cf2928",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd.foreign-company-guide",
+      "file": "database/raw/th/th.rd.foreign-company-guide.html",
+      "expected": "adae356490422661aa8123ca6b513f1e2560514efc22011013c5b0e563ee86d2",
+      "working_sha256": "adae356490422661aa8123ca6b513f1e2560514efc22011013c5b0e563ee86d2",
+      "git_sha256": "adae356490422661aa8123ca6b513f1e2560514efc22011013c5b0e563ee86d2",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd.pit",
+      "file": "database/raw/th/th.rd.pit.html",
+      "expected": "6137b1406349349fb8d8ed90467ab97d7fe960ee5295e378beffcc69fcd5d53a",
+      "working_sha256": "6137b1406349349fb8d8ed90467ab97d7fe960ee5295e378beffcc69fcd5d53a",
+      "git_sha256": "6137b1406349349fb8d8ed90467ab97d7fe960ee5295e378beffcc69fcd5d53a",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "th.rd.transfer-pricing-legislation",
+      "file": "database/raw/th/th.rd.transfer-pricing-legislation.html",
+      "expected": "9c7dbf0968ea48d28571aeec6a83486d2625f785a057dbad432266fad1eb937b",
+      "working_sha256": "9c7dbf0968ea48d28571aeec6a83486d2625f785a057dbad432266fad1eb937b",
+      "git_sha256": "9c7dbf0968ea48d28571aeec6a83486d2625f785a057dbad432266fad1eb937b",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.jp-kr.1998.mof",
+      "file": "database/raw/jp-kr/treaty.jp-kr.1998.mof.pdf",
+      "expected": "4118c1fc32cae772aaa3c750e3814f990cbaaf1a6516ca86de2d3345fbd35c3c",
+      "working_sha256": "4118c1fc32cae772aaa3c750e3814f990cbaaf1a6516ca86de2d3345fbd35c3c",
+      "git_sha256": "4118c1fc32cae772aaa3c750e3814f990cbaaf1a6516ca86de2d3345fbd35c3c",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.jp-my.1999.mof",
+      "file": "database/raw/jp-my/treaty.jp-my.1999.mof.pdf",
+      "expected": "cb8a222e95f763a008fbc1035b000b06bb02dce8e07155bcbcaa269b5c507476",
+      "working_sha256": "cb8a222e95f763a008fbc1035b000b06bb02dce8e07155bcbcaa269b5c507476",
+      "git_sha256": "cb8a222e95f763a008fbc1035b000b06bb02dce8e07155bcbcaa269b5c507476",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.jp-sg.1994.mof",
+      "file": "database/raw/jp-sg/treaty.jp-sg.1994.mof.pdf",
+      "expected": "ffb953d68a0fefaeb5c68be1ff74098877c791b43981c2974a693c5bab5b93e8",
+      "working_sha256": "ffb953d68a0fefaeb5c68be1ff74098877c791b43981c2974a693c5bab5b93e8",
+      "git_sha256": "ffb953d68a0fefaeb5c68be1ff74098877c791b43981c2974a693c5bab5b93e8",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.jp-th.1990.mof",
+      "file": "database/raw/jp-th/treaty.jp-th.1990.mof.pdf",
+      "expected": "c8b2a4e080c5df0fecc635ba7bdc14c28341f08722071fa19fb69053a69c9b27",
+      "working_sha256": "c8b2a4e080c5df0fecc635ba7bdc14c28341f08722071fa19fb69053a69c9b27",
+      "git_sha256": "c8b2a4e080c5df0fecc635ba7bdc14c28341f08722071fa19fb69053a69c9b27",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.jp-vn.1995.mof",
+      "file": "database/raw/jp-vn/treaty.jp-vn.1995.mof.pdf",
+      "expected": "5c19ce87ef721f46fa20600e0aa3ebc81ea40b079b3341424f1a4725b7eff2ac",
+      "working_sha256": "5c19ce87ef721f46fa20600e0aa3ebc81ea40b079b3341424f1a4725b7eff2ac",
+      "git_sha256": "5c19ce87ef721f46fa20600e0aa3ebc81ea40b079b3341424f1a4725b7eff2ac",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "treaty.th-vn.1992.en",
+      "file": "database/raw/th-vn/treaty.th-vn.1992.en.pdf",
+      "expected": "f98b8ddbdee8fd1f413de14bdfd49a56da7bf5c2996fade454e16a0cc5ff242e",
+      "working_sha256": "f98b8ddbdee8fd1f413de14bdfd49a56da7bf5c2996fade454e16a0cc5ff242e",
+      "git_sha256": "f98b8ddbdee8fd1f413de14bdfd49a56da7bf5c2996fade454e16a0cc5ff242e",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "sg.iras.cit-rates-20261116",
+      "file": "database/raw/sg/sg.iras.cit-rates-20261116.html",
+      "expected": "eac7ed5619e2d30caf41f45443772d036a50e3c31db676c26a285b766c4293b3",
+      "working_sha256": "eac7ed5619e2d30caf41f45443772d036a50e3c31db676c26a285b766c4293b3",
+      "git_sha256": "eac7ed5619e2d30caf41f45443772d036a50e3c31db676c26a285b766c4293b3",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "sg.iras.pit-rates-20261116",
+      "file": "database/raw/sg/sg.iras.pit-rates-20261116.html",
+      "expected": "fd1ca66256803ef457d05b34a2baf1cb1f4e006b3c94a7febedfdd5085cb9dbe",
+      "working_sha256": "fd1ca66256803ef457d05b34a2baf1cb1f4e006b3c94a7febedfdd5085cb9dbe",
+      "git_sha256": "fd1ca66256803ef457d05b34a2baf1cb1f4e006b3c94a7febedfdd5085cb9dbe",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "cn.iit.comprehensive-rate-table",
+      "file": "database/raw/cn/cn.iit.comprehensive-rate-table.pdf",
+      "expected": "84204e1b17778943909e217eadd5cf4bc8d54901bc1e822c21b5408760d2059f",
+      "working_sha256": "84204e1b17778943909e217eadd5cf4bc8d54901bc1e822c21b5408760d2059f",
+      "git_sha256": "84204e1b17778943909e217eadd5cf4bc8d54901bc1e822c21b5408760d2059f",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.gov.salaries-rates-20261116",
+      "file": "database/raw/hk/hk.gov.salaries-rates-20261116.html",
+      "expected": "baabce21ed541a686f1060ec60e992a02f5819417fdf8854d82415a882c8eeeb",
+      "working_sha256": "baabce21ed541a686f1060ec60e992a02f5819417fdf8854d82415a882c8eeeb",
+      "git_sha256": "baabce21ed541a686f1060ec60e992a02f5819417fdf8854d82415a882c8eeeb",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.ird.two-tier-rates-20261116",
+      "file": "database/raw/hk/hk.ird.two-tier-rates-20261116.html",
+      "expected": "3d8d10abc9f80b31cb17ba56178c075c93d4c6c279f43fb5ec4d0d55e046df58",
+      "working_sha256": "3d8d10abc9f80b31cb17ba56178c075c93d4c6c279f43fb5ec4d0d55e046df58",
+      "git_sha256": "3d8d10abc9f80b31cb17ba56178c075c93d4c6c279f43fb5ec4d0d55e046df58",
+      "working_matches": true,
+      "committed_matches": true
+    },
+    {
+      "doc_id": "hk.ird.tax-concessions-enacted-2026",
+      "file": "database/raw/hk/hk.ird.tax-concessions-enacted-2026.html",
+      "expected": "1e32d17b3a5e74b793fa12ead7c74a4937ed64d84a26d7b1fc498d060b87fc56",
+      "working_sha256": "1e32d17b3a5e74b793fa12ead7c74a4937ed64d84a26d7b1fc498d060b87fc56",
+      "git_sha256": "1e32d17b3a5e74b793fa12ead7c74a4937ed64d84a26d7b1fc498d060b87fc56",
+      "working_matches": true,
+      "committed_matches": true
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "doc_id": "treaty.th-vn.1992.en",
+  "source_sha256": "f98b8ddbdee8fd1f413de14bdfd49a56da7bf5c2996fade454e16a0cc5ff242e",
+  "profile": "b7a01d182c36299422b1b774519352e9856ad170328c341e10b3e4f5f7609da4",
+  "config": {
+    "language": "eng",
+    "rotation": 0,
+    "clip_top": 0,
+    "skip_pages": [],
+    "scope": "Full English-language scanned treaty; transcription requires original comparison",
+    "dpi": 300,
+    "pymupdf": "2.0",
+    "mupdf": "1.28.5"
+  },
+  "model_sha256": {
+    "eng": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+  },
+  "created_at": "2026-11-16T05:22:05.047179+00:00",
+  "review_status": "pending_original_comparison",
+  "pages": [
+    {
+      "page": 1,
+      "status": "ocr_pending_review",
+      "characters": 513,
+      "sha256": "2e84111f3fc30f9a09f03e574813ced44b842b412a29037bcce678cd37f6cd04"
+    },
+    {
+      "page": 2,
+      "status": "ocr_pending_review",
+      "characters": 832,
+      "sha256": "6460994bb3430300544d1675e935f674a86fce98952771a9b9d5b4a2b40b55ab"
+    },
+    {
+      "page": 3,
+      "status": "ocr_pending_review",
+      "characters": 908,
+      "sha256": "a6f78e3ff47c343271bd379d9304bbc82b130cf9bc2b2cdfa6098787b8761ad3"
+    },
+    {
+      "page": 4,
+      "status": "ocr_pending_review",
+      "characters": 1021,
+      "sha256": "fd40383679cd296b405bcee6ff951a8375d80a4a7555a8f124f067478b1850ee"
+    },
+    {
+      "page": 5,
+      "status": "ocr_pending_review",
+      "characters": 999,
+      "sha256": "98278986e0914e72feabe7dafa8f6a951cbab8a3a8bd41013e1427724774033c"
+    },
+    {
+      "page": 6,
+      "status": "ocr_pending_review",
+      "characters": 1052,
+      "sha256": "3efdc47bdd824c72748d5badef7beea304c9d125ee1e2d9f590df7af321bc1b6"
+    },
+    {
+      "page": 7,
+      "status": "ocr_pending_review",
+      "characters": 955,
+      "sha256": "0ef539c923804c845f37561eba6e29cbb8dddc3d5a5ef4696d9f72075defc74e"
+    },
+    {
+      "page": 8,
+      "status": "ocr_pending_review",
+      "characters": 849,
+      "sha256": "ea419f2e5e28837c6e791cee45f59cbeaa93c84c20c5ddf937808b3692c1f2e2"
+    },
+    {
+      "page": 9,
+      "status": "ocr_pending_review",
+      "characters": 849,
+      "sha256": "a18a6a87b40c527b714c5759f398f6fc591ac42d532ed5f4c56c4a4fb9419929"
+    },
+    {
+      "page": 10,
+      "status": "ocr_pending_review",
+      "characters": 1417,
+      "sha256": "ccdc25f7035224cd2903ffe2d3535c9282516a263bd7bbe5f0ee80a4779e1187"
+    },
+    {
+      "page": 11,
+      "status": "ocr_pending_review",
+      "characters": 1310,
+      "sha256": "b5c120882a0ae3ba09d0b19b8d778e186f1fd87fe2567fe4a8f0acc5a3604f57"
+    },
+    {
+      "page": 12,
+      "status": "ocr_pending_review",
+      "characters": 1159,
+      "sha256": "3f590327ed2eaff9e40df9e8109aef808246361fd497506f929f2395113a6d68"
+    },
+    {
+      "page": 13,
+      "status": "ocr_pending_review",
+      "characters": 1393,
+      "sha256": "9abd28a5ba094ab538b77a3524d07e1ef78e7df3d99d199f8d94eb822030ab80"
+    },
+    {
+      "page": 14,
+      "status": "ocr_pending_review",
+      "characters": 1125,
+      "sha256": "57e014c1fccbff71442cafe6078ff2250fd888843cf61af72df3c5a1bd53f8d1"
+    },
+    {
+      "page": 15,
+      "status": "ocr_pending_review",
+      "characters": 890,
+      "sha256": "2744096501987e7fa0edcd37c0086c972814e1c9df787f7985d31b4bb542edc3"
+    },
+    {
+      "page": 16,
+      "status": "ocr_pending_review",
+      "characters": 1292,
+      "sha256": "ed401c7382d14b1329e2e49fe43d0d83a1ecc90b73abb99d371778e8bcf7f0ba"
+    },
+    {
+      "page": 17,
+      "status": "ocr_pending_review",
+      "characters": 1369,
+      "sha256": "4650c1fc70b81e3b6c89178552fc9e3593ec5ba06c3fe9eac36fd21dc0ca048d"
+    },
+    {
+      "page": 18,
+      "status": "ocr_pending_review",
+      "characters": 987,
+      "sha256": "f02c7d51d952212ecc8dc22aaa942d1a3fcf865ba33198f9357cd0e5ee67b285"
+    },
+    {
+      "page": 19,
+      "status": "ocr_pending_review",
+      "characters": 954,
+      "sha256": "20142cf8840a4e0bb8bf6e3bda7138b24c029e63c90ecf77d19410ec56979fd5"
+    },
+    {
+      "page": 20,
+      "status": "ocr_pending_review",
+      "characters": 1418,
+      "sha256": "b9f1950015350119efb8ff35ca255910404fa10f592ecc7ed1d68f3fe892e3a9"
+    },
+    {
+      "page": 21,
+      "status": "ocr_pending_review",
+      "characters": 897,
+      "sha256": "f1fef05ccfb016053da135f7bc16282dca488f23a28ad0762c139273b2884cc6"
+    },
+    {
+      "page": 22,
+      "status": "ocr_pending_review",
+      "characters": 1334,
+      "sha256": "dd361ca4e75e993ed48a055b478f7272530cd932cd27f7df7fe281cc3bd09e16"
+    },
+    {
+      "page": 23,
+      "status": "ocr_pending_review",
+      "characters": 1571,
+      "sha256": "302a8770da614b10d4e8a3df9cd9d3167cc06ecc60dfc7215230e90dec3e7139"
+    },
+    {
+      "page": 24,
+      "status": "ocr_pending_review",
+      "characters": 1266,
+      "sha256": "25c7738054e02a1a371133c00641d2881e1433659f331eab1755d325a6ca1861"
+    },
+    {
+      "page": 25,
+      "status": "ocr_pending_review",
+      "characters": 1050,
+      "sha256": "9eb8952be88c0d47740e0f58ade5b278e4623002c8ac3deced16e40a028957bd"
+    },
+    {
+      "page": 26,
+      "status": "ocr_pending_review",
+      "characters": 1087,
+      "sha256": "6c6359497b5946bafc3a5d9173662fa788b58be14c49010f66226f048d9d5589"
+    },
+    {
+      "page": 27,
+      "status": "ocr_pending_review",
+      "characters": 910,
+      "sha256": "dbdd6f545cf47b852c312abb3b78132d4bb7dfd414172a087c3889ae2c99dfd8"
+    },
+    {
+      "page": 28,
+      "status": "ocr_pending_review",
+      "characters": 967,
+      "sha256": "60017e97de4ed6f86d64a15338d9b973d9aa3832fd8f9746c8adaa9b37d87350"
+    },
+    {
+      "page": 29,
+      "status": "ocr_pending_review",
+      "characters": 1034,
+      "sha256": "5c3d2862105243a55da703b3a2aca381e6d16c811d95cf9bfb03ca18847dfe50"
+    },
+    {
+      "page": 30,
+      "status": "ocr_pending_review",
+      "characters": 976,
+      "sha256": "d9f614ebc3ed5dbe645cdcba177de942df439e03f79876ccb3b9ffb69035f341"
+    },
+    {
+      "page": 31,
+      "status": "ocr_pending_review",
+      "characters": 792,
+      "sha256": "d3eba1e168c59a9558f79d7016b6761507448c4839e2cb77cecf15fc6ae16deb"
+    },
+    {
+      "page": 32,
+      "status": "ocr_pending_review",
+      "characters": 1166,
+      "sha256": "79e49275c80f0b89d2a4c48d922c2b4ed32c01a623b679024c5da50612d6846e"
+    },
+    {
+      "page": 33,
+      "status": "ocr_pending_review",
+      "characters": 1008,
+      "sha256": "58a01c2958fa4e4e1fdf190f6cdee008d1cb720c7b16d2c72f598b6129e1730e"
+    },
+    {
+      "page": 34,
+      "status": "ocr_pending_review",
+      "characters": 863,
+      "sha256": "2599ceb335ce905908523a114adb803ed663c93ab87c8b2ae2b541318f16619b"
+    },
+    {
+      "page": 35,
+      "status": "ocr_pending_review",
+      "characters": 1321,
+      "sha256": "ab4c0707611482cfa889fe3482c4e1c502a23446aa3a6059582a9e5b8550c349"
+    },
+    {
+      "page": 36,
+      "status": "ocr_pending_review",
+      "characters": 1226,
+      "sha256": "a303b901df0e43397de88c824e6edc4ca2643845154ee85e26af14a85ab8cc0e"
+    },
+    {
+      "page": 37,
+      "status": "ocr_pending_review",
+      "characters": 904,
+      "sha256": "9064df1a076e169ad0043349da6ce273ad442121573cb943a354eafb17d30ab5"
+    },
+    {
+      "page": 38,
+      "status": "ocr_pending_review",
+      "characters": 1090,
+      "sha256": "e713231a4eac76b727d9709da77153067c88dd10c0c77629789341d71fa78663"
+    },
+    {
+      "page": 39,
+      "status": "ocr_pending_review",
+      "characters": 1050,
+      "sha256": "7db286d414e2c7e58f41546ba8aea39dbca57a3978929585a78dd6822739862e"
+    }
+  ]
+}

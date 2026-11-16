@@ -54,3 +54,6 @@ evals/b_workflow/runs/model_e2e_quota_*.json
 
 # Local legacy document reader installed during deployment
 .tools/
+
+# Resumable OCR page caches are local; final transcriptions and scope sidecars are versioned.
+/database/ocr/.parts/

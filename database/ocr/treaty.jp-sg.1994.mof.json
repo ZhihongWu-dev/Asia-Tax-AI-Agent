@@ -1,0 +1,200 @@
+{
+  "doc_id": "treaty.jp-sg.1994.mof",
+  "source_sha256": "ffb953d68a0fefaeb5c68be1ff74098877c791b43981c2974a693c5bab5b93e8",
+  "profile": "7dd1d473a6523b824b85d300318f3478e1174e2e891e53ed00bf63dbeccc3604",
+  "config": {
+    "language": "eng",
+    "rotation": 270,
+    "clip_top": 0.52,
+    "skip_pages": [
+      1,
+      2,
+      3
+    ],
+    "scope": "English body in lower region of bilingual scan; Japanese text and Japanese-only contents pages excluded; transcription requires original comparison",
+    "dpi": 300,
+    "pymupdf": "2.0",
+    "mupdf": "1.28.5"
+  },
+  "model_sha256": {
+    "eng": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+  },
+  "created_at": "2026-11-16T05:23:48.366015+00:00",
+  "review_status": "pending_original_comparison",
+  "pages": [
+    {
+      "page": 1,
+      "status": "excluded_by_explicit_scope",
+      "characters": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "page": 2,
+      "status": "excluded_by_explicit_scope",
+      "characters": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "page": 3,
+      "status": "excluded_by_explicit_scope",
+      "characters": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "page": 4,
+      "status": "ocr_pending_review",
+      "characters": 1305,
+      "sha256": "e1b8a5b2efd3d1adbdc9906927273619eb31e0382959a0b902f35410b3ddbd29"
+    },
+    {
+      "page": 5,
+      "status": "ocr_pending_review",
+      "characters": 1847,
+      "sha256": "9c5b4c8287d9cc64990c091c1062b44d0fefdef467310a180260926a858e63f8"
+    },
+    {
+      "page": 6,
+      "status": "ocr_pending_review",
+      "characters": 1884,
+      "sha256": "b1f790d1513eb0f2abb8a9b5fbe4162402d2f6915f7f2605d9b4a04ee8b11668"
+    },
+    {
+      "page": 7,
+      "status": "ocr_pending_review",
+      "characters": 1554,
+      "sha256": "18be6fa539276883eeab915584263ebb9bc9a76d7de1fe79224dfbb4f711248c"
+    },
+    {
+      "page": 8,
+      "status": "ocr_pending_review",
+      "characters": 2388,
+      "sha256": "a4cb9da32a9e926a74f3f5be07e1630e18142387aac57b708023c4e02dca284c"
+    },
+    {
+      "page": 9,
+      "status": "ocr_pending_review",
+      "characters": 2301,
+      "sha256": "7e752cca012fa230d529b962e252561e56ce69662f90ad590c55169e53922ea5"
+    },
+    {
+      "page": 10,
+      "status": "ocr_pending_review",
+      "characters": 2030,
+      "sha256": "b3d2a34d23fb88a8c08dc825b4fa6c55ced8c232b6272fa59967ef4f5e29ab5a"
+    },
+    {
+      "page": 11,
+      "status": "ocr_pending_review",
+      "characters": 2283,
+      "sha256": "5fac92929ab5a259c2e32209ebcdb2ea387da8db866db20f43f8b2354d9899c4"
+    },
+    {
+      "page": 12,
+      "status": "ocr_pending_review",
+      "characters": 2534,
+      "sha256": "29bef559186a65c415391789930e079c0c1ae58e625279e5a26287672c060ac9"
+    },
+    {
+      "page": 13,
+      "status": "ocr_pending_review",
+      "characters": 1891,
+      "sha256": "4755e923dd5dd63c57b2bd27c68581c3132bddb31ae6f3f28e08217f4c5415d1"
+    },
+    {
+      "page": 14,
+      "status": "ocr_pending_review",
+      "characters": 2552,
+      "sha256": "078b9c67b19854b0d9224da1b5a4b561c6970ea31014c3efb91889f93db6a3f0"
+    },
+    {
+      "page": 15,
+      "status": "ocr_pending_review",
+      "characters": 2698,
+      "sha256": "2d418dea27657d695ad9901f917bbf3c60242fe0d3ed5bf034267246ae576445"
+    },
+    {
+      "page": 16,
+      "status": "ocr_pending_review",
+      "characters": 2252,
+      "sha256": "e462f6b072168f2dfefda981be2caac5729a05e2d16ff3cb16e43e53b4564d5c"
+    },
+    {
+      "page": 17,
+      "status": "ocr_pending_review",
+      "characters": 2070,
+      "sha256": "93ecd98bea054a5e833dd82476f67744d9fdbb948bd9b8072525792a3b0d81aa"
+    },
+    {
+      "page": 18,
+      "status": "ocr_pending_review",
+      "characters": 2144,
+      "sha256": "9cc3e2be383cf564245515a1df8010b28230dc1f3102fc17bd18b99ab6413f85"
+    },
+    {
+      "page": 19,
+      "status": "ocr_pending_review",
+      "characters": 1914,
+      "sha256": "414f48501d23c3669a3d8cb50aa99843cfc4ec97d4ac6b2eafb585e85ac51831"
+    },
+    {
+      "page": 20,
+      "status": "ocr_pending_review",
+      "characters": 2372,
+      "sha256": "ac3e46e3b8dbff1685f038b581cf4044584a2945260d8306d391f892191be6a9"
+    },
+    {
+      "page": 21,
+      "status": "ocr_pending_review",
+      "characters": 2332,
+      "sha256": "c32de04a3bbb9e64dac5cb18d7c1e0903d87287f64563a81da636aac9b115dc6"
+    },
+    {
+      "page": 22,
+      "status": "ocr_pending_review",
+      "characters": 2614,
+      "sha256": "b6bdaf79dec73597548e6d79aa21b75591245940e39aacb44d6000f981aab936"
+    },
+    {
+      "page": 23,
+      "status": "ocr_pending_review",
+      "characters": 2266,
+      "sha256": "2db8a71ae48000451dc511f5451fc155d5640683ad65bfb8d152ce051f3909ce"
+    },
+    {
+      "page": 24,
+      "status": "ocr_pending_review",
+      "characters": 2247,
+      "sha256": "893caab542819a4bedde2ed164b9b5fa28e3d6169c035cb7e6a7e4794daa3ab9"
+    },
+    {
+      "page": 25,
+      "status": "ocr_pending_review",
+      "characters": 1838,
+      "sha256": "3b00a278b6cb1b312558e1a7bd9215ca2fae0b271e579ef81498fe33ee2f8c36"
+    },
+    {
+      "page": 26,
+      "status": "ocr_pending_review",
+      "characters": 1130,
+      "sha256": "22b5bd7a2f72b3ae60c746e2f4c4058d4473441c61908ff39db210c362b98dd0"
+    },
+    {
+      "page": 27,
+      "status": "ocr_pending_review",
+      "characters": 1822,
+      "sha256": "3501fa7a2c5035eec48ec587b5ab950f0f899dcb4cffc32b0a9028c5077a9376"
+    },
+    {
+      "page": 28,
+      "status": "ocr_pending_review",
+      "characters": 1254,
+      "sha256": "0b18106dbdb5bb06d1a83fb6c25acdc63958a22fcacf74f248c9f103c6abb129"
+    },
+    {
+      "page": 29,
+      "status": "ocr_pending_review",
+      "characters": 38,
+      "sha256": "98447a7c994e9f970324e50e66a242e5f56c826b6efcd1352d5d20059c500387"
+    }
+  ]
+}

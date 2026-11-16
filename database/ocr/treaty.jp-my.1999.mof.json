@@ -1,0 +1,205 @@
+{
+  "doc_id": "treaty.jp-my.1999.mof",
+  "source_sha256": "cb8a222e95f763a008fbc1035b000b06bb02dce8e07155bcbcaa269b5c507476",
+  "profile": "bb79b916adbb26d4aeb4ff22a7fe9bb4a0ded3930fa5b81b65f9af2d9b8e076f",
+  "config": {
+    "language": "eng",
+    "rotation": 270,
+    "clip_top": 0.52,
+    "skip_pages": [
+      1,
+      2
+    ],
+    "scope": "English body in lower region of bilingual scan; Japanese text and Japanese-only contents pages excluded; transcription requires original comparison",
+    "dpi": 300,
+    "pymupdf": "2.0",
+    "mupdf": "1.28.5"
+  },
+  "model_sha256": {
+    "eng": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+  },
+  "created_at": "2026-11-16T05:22:50.979082+00:00",
+  "review_status": "pending_original_comparison",
+  "pages": [
+    {
+      "page": 1,
+      "status": "excluded_by_explicit_scope",
+      "characters": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "page": 2,
+      "status": "excluded_by_explicit_scope",
+      "characters": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "page": 3,
+      "status": "ocr_pending_review",
+      "characters": 1014,
+      "sha256": "378f01e57dae12f121171ea81220d58fc221be913a04c7eaf31bbac0352189cc"
+    },
+    {
+      "page": 4,
+      "status": "ocr_pending_review",
+      "characters": 1809,
+      "sha256": "bace1c735e170172099eb6d2deacf9cb04c27753dbced2f126a1225a6a46fa22"
+    },
+    {
+      "page": 5,
+      "status": "ocr_pending_review",
+      "characters": 1747,
+      "sha256": "bbcd550bc0955b8b651f7428b05170d3e6c19f7d863daba6862bd8776ac2e658"
+    },
+    {
+      "page": 6,
+      "status": "ocr_pending_review",
+      "characters": 1867,
+      "sha256": "dc7c48aef57ac8b80850cbea7d7873aeb303811f26d5d7a754ecd00f666371fc"
+    },
+    {
+      "page": 7,
+      "status": "ocr_pending_review",
+      "characters": 1452,
+      "sha256": "ff48f3023dbedef2cf25d996e6279325b82d7880c94491ff0b22778ffe34f5f7"
+    },
+    {
+      "page": 8,
+      "status": "ocr_pending_review",
+      "characters": 2077,
+      "sha256": "4f85f02e577c65dedc8cdc19f2cf13a5e3e8fcf95982479da8d4ca2c3b3d01f6"
+    },
+    {
+      "page": 9,
+      "status": "ocr_pending_review",
+      "characters": 2230,
+      "sha256": "6f0f250c8fce8d174be81c32726c93d16c4675c8103d2d821bc46f26b5909e05"
+    },
+    {
+      "page": 10,
+      "status": "ocr_pending_review",
+      "characters": 2116,
+      "sha256": "699e4b53b527de4531251ab0e87c6376f337d81218847739b8317e439badff40"
+    },
+    {
+      "page": 11,
+      "status": "ocr_pending_review",
+      "characters": 2188,
+      "sha256": "c060b943dd6fbf786639477f8ffe276c5551859b2f196ed042812beaad2e053d"
+    },
+    {
+      "page": 12,
+      "status": "ocr_pending_review",
+      "characters": 2125,
+      "sha256": "795cfa925449b2d0d0a43f2a770518025f46d3a022c0f5049133015bb1d4c3c0"
+    },
+    {
+      "page": 13,
+      "status": "ocr_pending_review",
+      "characters": 2328,
+      "sha256": "cc3d1a3d190a429c3ff8ecf6c7775d3dea9043bb570027fccc3f09ec755f4bef"
+    },
+    {
+      "page": 14,
+      "status": "ocr_pending_review",
+      "characters": 1773,
+      "sha256": "ff1ba40b700a0e69f17ac36268d36566c42ee985f6cdd6efc90e6fb19ef26bc8"
+    },
+    {
+      "page": 15,
+      "status": "ocr_pending_review",
+      "characters": 2438,
+      "sha256": "41caf1060cf5980c7ee7565b0cb6a41edaf005d86fe78fb56b714de5b1c0b174"
+    },
+    {
+      "page": 16,
+      "status": "ocr_pending_review",
+      "characters": 2451,
+      "sha256": "0fc13cb33673366b9fe882689d1bbebdd4f4a12f83051c1eda7694cb1adf0da8"
+    },
+    {
+      "page": 17,
+      "status": "ocr_pending_review",
+      "characters": 1929,
+      "sha256": "cf971a9ad8cc837fd6dd6f558faf5eff3d587f60934e0b8916faecc7627b5c37"
+    },
+    {
+      "page": 18,
+      "status": "ocr_pending_review",
+      "characters": 1912,
+      "sha256": "c76480ad7ccaef71d9f4f77f135b35df45531cd5ce75b4522c8c4883a56c8ef9"
+    },
+    {
+      "page": 19,
+      "status": "ocr_pending_review",
+      "characters": 2062,
+      "sha256": "85d85afa945a4100b2169371180b648e0c69656a0a576db03f74fde4ee580627"
+    },
+    {
+      "page": 20,
+      "status": "ocr_pending_review",
+      "characters": 1964,
+      "sha256": "c639c889946e93598851eef46af68882d4fe614510036d042daf0c8d05a4085e"
+    },
+    {
+      "page": 21,
+      "status": "ocr_pending_review",
+      "characters": 2172,
+      "sha256": "830b024345d9e8929a10cf3e57f7d0a3e27d28dd9650841ed6f84b70856b90ce"
+    },
+    {
+      "page": 22,
+      "status": "ocr_pending_review",
+      "characters": 2253,
+      "sha256": "bb0b198c8c552aa25ec7e4eb1d3aee662315e7c12139615c9759bfe63043f928"
+    },
+    {
+      "page": 23,
+      "status": "ocr_pending_review",
+      "characters": 2301,
+      "sha256": "a4c4cda3c53e3af9e247d1e93dacdbcfdb42d967cf0482d4c9c482a4cc29b53e"
+    },
+    {
+      "page": 24,
+      "status": "ocr_pending_review",
+      "characters": 2423,
+      "sha256": "7b370a2044bd997cc9c3541eeb552978f5fbe25279e2e8bade277a9806ba5fb0"
+    },
+    {
+      "page": 25,
+      "status": "ocr_pending_review",
+      "characters": 1581,
+      "sha256": "c5a19c865258ad3fdbac9c62ae3f2a5b564060a6474a0ed5184c39ef0900f68b"
+    },
+    {
+      "page": 26,
+      "status": "ocr_pending_review",
+      "characters": 1737,
+      "sha256": "3eca4a7f7d8b53dbec7207df764ea813afeda93827dd91df8581da5464000d17"
+    },
+    {
+      "page": 27,
+      "status": "ocr_pending_review",
+      "characters": 843,
+      "sha256": "0364d6c2130f1648b9eef1197803658ab7b2698176462f64864ff160ff71f60e"
+    },
+    {
+      "page": 28,
+      "status": "ocr_pending_review",
+      "characters": 1722,
+      "sha256": "8b271fffd5c1fb547269abddbb6d83cbdb4db6bb69a365ccf18325f778bda067"
+    },
+    {
+      "page": 29,
+      "status": "ocr_pending_review",
+      "characters": 915,
+      "sha256": "f3a4f855ef93e32b3a79fc9dc26f29907ba14bedafcda8536a7434a0229750d4"
+    },
+    {
+      "page": 30,
+      "status": "ocr_pending_review",
+      "characters": 21,
+      "sha256": "8ea6c5e029414c994adbbb4c27ae8613e993bbbef5160d97972d69545baf04cd"
+    }
+  ]
+}
