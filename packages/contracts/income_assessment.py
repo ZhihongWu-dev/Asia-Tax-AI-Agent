@@ -113,6 +113,17 @@ class THIndividual(THBasis):
     assessable_income_classification_confirmed: StrictBool
 
 
+class VNEmployment(Basis):
+    policy: Literal['vn_employment_2026']
+    chargeable_employment_income: Money
+    full_calendar_year_confirmed: StrictBool
+    dependent_months: list[Annotated[int, Field(strict=True, ge=0, le=12)]] = Field(max_length=200)
+    deductible_insurance: Money
+    article11_deductions: Money
+    prepaid_tax: Money
+    income_and_deductions_verified: StrictBool
+
+
 class IDBasis(Basis):
     ordinary_annual_treatment_confirmed: StrictBool
     prepaid_tax: Money
@@ -132,5 +143,5 @@ class IDIndividual(IDBasis):
 
 
 Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual |
-                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual,
+                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment,
                        Field(discriminator='policy')]
