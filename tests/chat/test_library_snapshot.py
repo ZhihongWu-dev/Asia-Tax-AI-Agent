@@ -1,0 +1,93 @@
+from contextlib import nullcontext
+from types import SimpleNamespace
+import pytest
+from packages.chat import library_cloud, library_research
+from packages.chat.service import WorkflowError
+
+VERSION = {'uploaded_at':'2026-11-13T03:39:52Z','spec_version':'2026-11-10','tools_commit':'release'}
+REVIEW = dict(cite_id='cn.test#1',difference='different_text',review_status='candidate',
+              base_uploaded_at=VERSION['uploaded_at'],reviewed_at=None)
+
+
+def test_pin_includes_review_contents_and_fails_on_base_change():
+    expected = library_cloud._snapshot(VERSION,[REVIEW],None)
+    assert len(expected['review_sha256'])==64
+    assert library_cloud._snapshot(dict(VERSION),[dict(REVIEW)],expected)==expected
+    for version, reviews in [({**VERSION,'uploaded_at':'new'},[REVIEW]),
+                             (VERSION,[{**REVIEW,'review_note':'changed'}]),
+                             ({},[]), (VERSION,[{**REVIEW,'base_uploaded_at':'old'}])]:
+        with pytest.raises(library_cloud.LibraryVersionChanged):
+            library_cloud._snapshot(version,reviews,expected)
+
+
+class Result:
+    def __init__(self, rows): self.rows=rows
+    def mappings(self): return self
+    def all(self): return self.rows
+
+
+class Connection:
+    def __init__(self): self.statements=[]
+    def __enter__(self): return self
+    def __exit__(self,*args): pass
+    def begin(self): return nullcontext()
+    def execute(self, statement, params=None):
+        sql=str(statement);self.statements.append((sql,params))
+        if 'SELECT key, value' in sql: return Result(list(VERSION.items()))
+        if 'SELECT * FROM database_integration' in sql: return Result([dict(REVIEW)])
+        if 'FROM database.clause' in sql:
+            # Candidate exclusion is executed in SQL, before LIMIT.
+            assert 'NOT EXISTS' in sql and 'r.reviewed_at IS NOT NULL' in sql
+            assert params['query']=='cn.test#1'
+            return Result([])
+        return Result([])
+
+
+def test_conflict_is_explicit_and_transaction_is_read_only(monkeypatch):
+    connection=Connection()
+    monkeypatch.setattr(library_cloud,'_engine',lambda:SimpleNamespace(connect=lambda:connection))
+    result=library_cloud.search_library('cn.test#1','cn')
+    assert result['status']=='review_required'
+    assert result['passages']==[] and result['blocked_citations']==['cn.test#1']
+    assert connection.statements[0][0]=='SET TRANSACTION ISOLATION LEVEL REPEATABLE READ READ ONLY'
+    answer=library_research._answer('question',result,'en')
+    assert answer['citations']==[] and 'unresolved' in answer['text']
+
+
+def test_changed_pin_prevents_clause_query(monkeypatch):
+    connection=Connection()
+    monkeypatch.setattr(library_cloud,'_engine',lambda:SimpleNamespace(connect=lambda:connection))
+    with pytest.raises(library_cloud.LibraryVersionChanged):
+        library_cloud.search_library('cn.test#1','cn',expected_version={'uploaded_at':'old'})
+    assert not any('FROM database.clause' in sql for sql,_ in connection.statements)
+
+
+def test_followup_keeps_pin_and_never_calls_model_after_version_change(monkeypatch):
+    expected=library_cloud._snapshot(VERSION,[REVIEW],None)
+    doc={'library_context':{'jurisdiction':'cn','anchor':'所得税','library_version':expected}}
+    def changed(query,jurisdiction,**kwargs):
+        assert kwargs['expected_version']==expected
+        raise library_cloud.LibraryVersionChanged()
+    monkeypatch.setattr(library_research,'search_library',changed)
+    monkeypatch.setattr(library_research,'_answer',lambda *args:pytest.fail('must not generate an answer'))
+    with pytest.raises(WorkflowError) as caught:
+        library_research.prepare(doc,'税率','zh')
+    assert caught.value.code=='knowledge_version_changed'
+
+
+def test_first_research_turn_saves_the_library_pin(monkeypatch):
+    snapshot=library_cloud._snapshot(VERSION,[REVIEW],None)
+    research={'status':'no_matching_units','library_version':snapshot,'passages':[]}
+    monkeypatch.setattr(library_research,'search_library',lambda *args,**kwargs:research)
+    result=library_research.prepare({},'中国内地所得税','zh')
+    assert result['library_context']['library_version']==snapshot
+    assert result['workflow']['library_version']==snapshot
+
+
+def test_version_failure_is_a_visible_service_error():
+    from fastapi import HTTPException
+    from apps.api.chat import call
+    def fail(): raise WorkflowError('knowledge_version_changed')
+    with pytest.raises(HTTPException) as caught: call(fail)
+    assert caught.value.status_code==503
+    assert caught.value.detail=='knowledge_version_changed'

@@ -7,7 +7,7 @@ import re
 from urllib.parse import urlsplit
 from uuid import uuid4
 
-from packages.chat.library_cloud import search_library
+from packages.chat.library_cloud import search_library, LibraryVersionChanged
 
 MAINLAND = re.compile(r"中国内地|中国大陆|内地|大陆|mainland china|\bPRC\b", re.I)
 TAX_TOPIC = re.compile(r"税|所得|股息|红利|扣除|发票|tax|dividend|deduct|withholding|invoice", re.I)
@@ -37,6 +37,10 @@ def _official(url: str) -> bool:
 
 def _answer(question: str, research: dict, locale: str) -> dict:
     en = locale == "en"
+    if research.get('status') == 'review_required':
+        return {'text': 'This citation has unresolved source differences and cannot yet support an answer.' if en else
+                '此条引用存在尚未解决的原文差异，暂不能据此生成税务回答。',
+                'citations': [], 'answer_status': 'insufficient_evidence'}
     units = {}
     for passage in research["passages"]:
         if not _official(passage.get("url") or ""):
@@ -106,7 +110,11 @@ def _answer(question: str, research: dict, locale: str) -> dict:
 def prepare(doc: dict, text: str, locale: str) -> dict:
     context = doc.get("library_context") or {}
     query = text if MAINLAND.search(text) else (context.get("anchor", "") + " " + text).strip()
-    research = search_library(query[:120], "cn")
+    try:
+        research = search_library(query[:120], "cn", expected_version=context.get('library_version'))
+    except LibraryVersionChanged:
+        from packages.chat.service import WorkflowError
+        raise WorkflowError('knowledge_version_changed') from None
     response = _answer(text, research, locale)
     return {
         "turn": {"intent": "research", "facts": {}, "query": query, "reply": response["text"]},
@@ -117,5 +125,5 @@ def prepare(doc: dict, text: str, locale: str) -> dict:
                      "reason_code": "evidence_available" if research["passages"] else "evidence_insufficient",
                      "library_version": research["library_version"]},
         "dialogue": doc.get("dialogue", {}), "question": None,
-        "library_context": {"jurisdiction": "cn", "anchor": query[:100]},
+        "library_context": {"jurisdiction": "cn", "anchor": query[:100], 'library_version': research['library_version']},
     }

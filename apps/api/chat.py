@@ -81,7 +81,7 @@ def call(action, *args):
         if exc.code in ('request_payload_conflict', 'question_changed'):
             raise HTTPException(409, exc.code) from None
         raise HTTPException(503 if exc.code.startswith("model_") or exc.code in (
-            'knowledge_unavailable', 'execution_budget_exhausted', 'tool_failed',
+            'knowledge_unavailable', 'knowledge_version_changed', 'execution_budget_exhausted', 'tool_failed',
             'domain_unavailable', 'domain_timeout', 'domain_execution_failed') else 422, exc.code) from None
     except (ValueError, TypeError):
         raise HTTPException(422, "invalid_facts") from None

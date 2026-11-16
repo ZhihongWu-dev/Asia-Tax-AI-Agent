@@ -1,0 +1,31 @@
+{
+  "checked_on": "2026-11-16",
+  "base_version": {
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)"
+  },
+  "candidate_main_only": 107,
+  "candidate_different_text": 25,
+  "live_sql": {
+    "transaction_read_only": "on",
+    "transaction_isolation": "repeatable read",
+    "blocked_existing_rows": 25,
+    "unresolved_exact_matches": 0
+  },
+  "live_application": {
+    "exact_query": "cn.cs.2026-27#i3",
+    "status": "review_required",
+    "passage_count": 0,
+    "ordinary_search_passages": 2,
+    "same_pin": true,
+    "mismatched_pin_rejected": true,
+    "review_sha256": "966f3fb4a19df9d408d3e0a96ca18c27fe5caa69f5839e7e29e217c6f86fd9fd"
+  },
+  "limitations": [
+    "No candidate accepted or published",
+    "Main-only overlay publication remains outstanding",
+    "Dedicated least-privilege connection role remains outstanding",
+    "No cloud schema or source content was modified"
+  ]
+}

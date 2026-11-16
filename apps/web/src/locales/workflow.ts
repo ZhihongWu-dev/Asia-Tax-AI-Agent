@@ -19,6 +19,10 @@ export const workflow: Record<string, [string, string]> = {
     "部分条文未检索到",
     "Some legal references could not be retrieved",
   ],
+  "error:knowledge_version_changed": [
+    "资料库或差异审查版本已变化。本次未生成回答，请在新案例中重新核对依据。",
+    "The library or source-review version changed. No answer was generated. Start a new case to recheck the sources.",
+  ],
   "error:knowledge_unavailable": [
     "暂时无法读取云端资料，请稍后重试。",
     "Cloud sources are temporarily unavailable. Please retry.",

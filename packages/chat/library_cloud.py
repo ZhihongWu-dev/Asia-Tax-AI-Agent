@@ -7,11 +7,31 @@ from __future__ import annotations
 
 from functools import lru_cache
 from hashlib import sha256
+import json
 import re
 
 from sqlalchemy import create_engine, text
 
 from packages.persistence.config import get_settings
+
+
+class LibraryVersionChanged(ValueError):
+    """A caller's pinned base/review snapshot no longer matches the library."""
+
+
+def _snapshot(version, reviews, expected_version):
+    if not version.get('uploaded_at'):
+        raise LibraryVersionChanged('library_version_missing')
+    # Include review contents, not just status/count: a source replacement or
+    # changed review decision must invalidate an already pinned read.
+    digest = sha256(json.dumps(reviews, sort_keys=True, separators=(',', ':'),
+                               default=str).encode('utf-8')).hexdigest()
+    snapshot = {**version, 'review_sha256': digest}
+    if any(row['base_uploaded_at'] != version['uploaded_at'] for row in reviews):
+        raise LibraryVersionChanged('library_review_base_changed')
+    if expected_version is not None and snapshot != expected_version:
+        raise LibraryVersionChanged('library_version_changed')
+    return snapshot
 
 
 @lru_cache(maxsize=1)
@@ -25,7 +45,7 @@ def _engine():
     )
 
 
-def search_library(query: str, jurisdiction: str, limit: int = 6) -> dict:
+def search_library(query: str, jurisdiction: str, limit: int = 6, *, expected_version: dict | None = None) -> dict:
     """Search a named jurisdiction without exposing the private schema to clients."""
     query = query.strip()
     jurisdiction = jurisdiction.strip().lower()
@@ -50,6 +70,16 @@ def search_library(query: str, jurisdiction: str, limit: int = 6) -> dict:
         version = dict(connection.execute(text(
             "SELECT key, value FROM database.meta WHERE key IN ('uploaded_at', 'spec_version', 'tools_commit')"
         )).all())
+        reviews = [dict(row) for row in connection.execute(text(
+            'SELECT * FROM database_integration.source_review ORDER BY cite_id'
+        )).mappings().all()]
+        version = _snapshot(version, reviews, expected_version)
+        # An accepted replacement is not usable until the overlay text and
+        # applicability metadata are published. Rejected candidates retain the
+        # base only after an explicit completed review.
+        blocked = {row['cite_id'] for row in reviews
+                   if row['difference'] == 'different_text'
+                   and not (row['review_status'] == 'rejected' and row['reviewed_at'] is not None)}
         rows = connection.execute(text("""
             SELECT c.cite_id, c.label, left(c.text, 5000) AS passage,
                    d.id AS document_id, d.title, d.url, d.sha256 AS document_sha256,
@@ -57,6 +87,11 @@ def search_library(query: str, jurisdiction: str, limit: int = 6) -> dict:
             FROM database.clause AS c
             JOIN database.doc AS d ON d.id = c.doc_id
             WHERE d.jur = :jurisdiction
+              AND NOT EXISTS (
+                  SELECT 1 FROM database_integration.source_review AS r
+                  WHERE r.cite_id = c.cite_id AND r.difference = 'different_text'
+                    AND NOT (r.review_status = 'rejected' AND r.reviewed_at IS NOT NULL)
+              )
               AND (c.cite_id = :query
                    OR (:exact_locator = false AND (
                        position(lower(:term0) in lower(c.text)) > 0
@@ -73,10 +108,11 @@ def search_library(query: str, jurisdiction: str, limit: int = 6) -> dict:
                "term2": terms[2] if len(terms) > 2 else terms[0] if terms else query}).mappings().all()
 
     return {
-        "status": "available" if rows else "no_matching_units",
+        "status": "review_required" if exact_locator and query in blocked else "available" if rows else "no_matching_units",
         "library_version": version,
         "jurisdiction": jurisdiction,
         "query": query,
+        "blocked_citations": [query] if exact_locator and query in blocked else [],
         "passages": [
             {**dict(row), "passage_sha256": sha256(row["passage"].encode("utf-8")).hexdigest()}
             for row in rows
