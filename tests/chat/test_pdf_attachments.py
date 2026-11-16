@@ -41,7 +41,7 @@ def test_extract_and_worker_keep_page_references():
     (b'not a pdf', 'pdf_invalid'), (b'%PDF-' + b'x' * MAX_BYTES, 'pdf_too_large'),
     (pdf(blank=True), 'pdf_no_text'), (pdf(encrypted=True), 'pdf_encrypted'),
     (pdf(count=51), 'pdf_too_many_pages'), (pdf(text='A' * 20001), 'pdf_too_much_text'),
-])
+], ids=['invalid', 'oversized', 'blank', 'encrypted', 'too-many-pages', 'too-much-text'])
 def test_rejects_unreadable_or_excessive_documents(data, error):
     with pytest.raises(ValueError, match=error): extract_pdf(data)
 

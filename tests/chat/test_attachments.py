@@ -70,7 +70,7 @@ def test_sheet_and_expanded_zip_limits():
         for i in range(2001): z.writestr(str(i), '')
     with pytest.raises(ValueError, match='attachment_expanded_limit'): extract_document(out.getvalue(), '.docx')
 
-@pytest.mark.parametrize('name,data', [('case.docx', docx()), ('case.xlsx', xlsx()), ('case.xls', (FIXTURES/'attachment.xls').read_bytes())])
+@pytest.mark.parametrize('name,data', [('case.docx', docx()), ('case.xlsx', xlsx()), ('case.xls', (FIXTURES/'attachment.xls').read_bytes())], ids=['docx', 'xlsx', 'xls'])
 def test_attachment_api_accepts_office_documents(name, data):
     from fastapi.testclient import TestClient
     from apps.api.main import app

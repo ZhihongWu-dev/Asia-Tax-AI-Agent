@@ -211,7 +211,7 @@ def extract_document(data, extension):
 
 
 async def read_document(data, extension):
-    proc = await asyncio.create_subprocess_exec(sys.executable, '-m', 'packages.chat.attachments', extension,
+    proc = await asyncio.create_subprocess_exec(sys.executable, '-X', 'utf8', '-m', 'packages.chat.attachments', extension,
         cwd=str(ROOT), start_new_session=True, stdin=asyncio.subprocess.PIPE,
         stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.DEVNULL)
     try:
@@ -224,19 +224,16 @@ async def read_document(data, extension):
         raise ValueError('pdf_timeout') from None
     finally:
         if proc.returncode is None:
-            import signal
-            try: os.killpg(proc.pid, signal.SIGKILL)
-            except ProcessLookupError: pass
-            await proc.wait()
+            from packages.chat.worker_limits import terminate_worker
+            await terminate_worker(proc, process_group=True)
 
 
 if __name__ == '__main__':
-    import resource
+    from packages.chat.worker_limits import apply_worker_limits
     os.environ['OMP_NUM_THREADS'] = '1'
     os.environ['OPENBLAS_NUM_THREADS'] = '1'
     image_input = sys.argv[1] in ('.png', '.jpg', '.jpeg', '.webp')
-    resource.setrlimit(resource.RLIMIT_CPU, (35, 35) if image_input else (15, 15))
-    if sys.platform == 'linux': resource.setrlimit(resource.RLIMIT_AS, ((1536 if image_input else 384) * 1024 * 1024,) * 2)
+    apply_worker_limits(35 if image_input else 15, 1536 if image_input else 384)
     try: payload = extract_document(sys.stdin.buffer.read(MAX_BYTES + 1), sys.argv[1])
     except Exception as exc: payload = {'error': str(exc) if str(exc).startswith(('pdf_', 'attachment_')) else 'attachment_invalid'}
     print(json.dumps(payload, ensure_ascii=False))

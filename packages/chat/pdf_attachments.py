@@ -47,7 +47,7 @@ def extract_pdf(data: bytes) -> dict:
 # A killable worker bounds CPU and expanded PDF data independently of the API.
 async def read_pdf(data: bytes) -> dict:
     proc = await asyncio.create_subprocess_exec(
-        sys.executable, '-m', 'packages.chat.pdf_attachments',
+        sys.executable, '-X', 'utf8', '-m', 'packages.chat.pdf_attachments',
         cwd=str(Path(__file__).resolve().parents[2]),
         stdin=asyncio.subprocess.PIPE, stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.DEVNULL)
@@ -63,15 +63,13 @@ async def read_pdf(data: bytes) -> dict:
         raise ValueError('pdf_timeout') from exc
     finally:
         if proc.returncode is None:
-            proc.kill()
-            await proc.wait()
+            from packages.chat.worker_limits import terminate_worker
+            await terminate_worker(proc)
 
 
 if __name__ == '__main__':
-    import resource
-    resource.setrlimit(resource.RLIMIT_CPU, (15, 15))
-    if sys.platform == 'linux':
-        resource.setrlimit(resource.RLIMIT_AS, (384 * 1024 * 1024,) * 2)
+    from packages.chat.worker_limits import apply_worker_limits
+    apply_worker_limits(15, 384)
     try:
         result = extract_pdf(sys.stdin.buffer.read(MAX_BYTES + 1))
     except Exception as exc:
