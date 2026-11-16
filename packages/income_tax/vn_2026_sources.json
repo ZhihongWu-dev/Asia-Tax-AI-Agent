@@ -1,0 +1,69 @@
+{
+  "tax_year": 2026,
+  "reviewed_on": "2026-11-17",
+  "readiness": "partial_review_not_production_approved",
+  "company": [
+    {
+      "doc_id": "vn.law.cit67.2025.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/67qh.signed.pdf",
+      "sha256": "ae706468190afe8d111dd0fccf240e7a980eb002c5d0b5cb1cfe127d92f9c1cd",
+      "provisions": [
+        "Articles 4, 10"
+      ],
+      "registration_status": "pending",
+      "review_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text."
+    },
+    {
+      "doc_id": "vn.law09.2026.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/5/09-qh.signed.pdf",
+      "sha256": "d9207c14c9af462454dd7ce9ef5b23c8a22dfea8d3462438be9ffd3897a1f94e",
+      "provisions": [
+        "Articles 3, 5(2)"
+      ],
+      "registration_status": "pending",
+      "review_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text."
+    },
+    {
+      "doc_id": "vn.decree398.2026.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/11/398_2026_nd-cp_29102026-signed.signed.pdf",
+      "sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
+      "provisions": [
+        "Articles 3, 4"
+      ],
+      "registration_status": "pending",
+      "review_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text."
+    },
+    {
+      "doc_id": "vn.decree141.2026.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/141-ndcp.signed.pdf",
+      "sha256": "fa9a7c47b637f47528225d9cdd03dbde1032607ec8c39648071178ce4091413f",
+      "provisions": [
+        "Articles 2, 3"
+      ],
+      "registration_status": "pending",
+      "review_status": "Scanned original; pages 2-3 visually reviewed, not indexed as a full transcription."
+    },
+    {
+      "doc_id": "vn.decree320.2025.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/12/320-ndcp.signed.pdf",
+      "sha256": "4a426bbe928511d278aa23318156d27747c45669e8ee9002fb7a635794f51e06",
+      "provisions": [
+        "Articles 4(15) as amended, 11, 23(9)"
+      ],
+      "registration_status": "pending",
+      "review_status": "Scanned original; pages41 and72 visually reviewed. Not registered as full verified transcription."
+    }
+  ],
+  "employment": [
+    {
+      "doc_id": "vn.law.pit2026.vi",
+      "url": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/1/24/cong-bao-so-37-ngay-22-01-46935signed-1769240208670776195144.pdf",
+      "sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+      "provisions": [
+        "Articles 8, 9, 10, 11, 29(2)"
+      ],
+      "registration_status": "registered",
+      "review_status": "Selected provisions verified; full implementing conditions remain pending"
+    }
+  ]
+}

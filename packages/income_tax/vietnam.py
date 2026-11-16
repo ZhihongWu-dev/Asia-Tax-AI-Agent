@@ -8,6 +8,7 @@ and non-calendar periods need separate calculations.
 from decimal import localcontext
 
 from .arithmetic import amount, ZERO
+from .vietnam_sources import sources_for
 from .vietnam_reliefs import (company_small_revenue_exemption,
     company_ordinary_rate, company_2026_2027_reduction)
 
@@ -72,4 +73,5 @@ def company_tax(taxable_income, *, tax_year, vietnam_established, new_in_current
             exemption_eligibility=exemption, gross_tax=gross, exempt_tax=exempt_tax,
             other_incentive_reduction=incentive, annual_reduction=relief['reduction'],
             annual_reduction_eligibility=relief, final_tax=liability, prepaid_tax=prepaid,
-            balance_due=liability-prepaid, stage='ordinary_company_before_assessment_rounding')
+            balance_due=liability-prepaid, sources=sources_for('company'),
+            stage='ordinary_company_before_assessment_rounding')

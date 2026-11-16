@@ -40,6 +40,14 @@ def test_fraction_above_boundary():
     assert compute(chargeable_employment_income='306000000.000001')['final_tax'] == Decimal('6000000.0000001')
 
 
+def test_employment_provenance_excludes_company_reliefs_and_is_isolated():
+    sources = compute()['sources']
+    assert [s['doc_id'] for s in sources] == ['vn.law.pit2026.vi']
+    assert sources[0]['sha256'] == '6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685'
+    sources[0]['provisions'].clear()
+    assert compute()['sources'][0]['provisions']
+
+
 @pytest.mark.parametrize('changes', [dict(tax_year=2025), dict(tax_year=True),
     dict(resident=False), dict(full_calendar_year_confirmed=False),
     dict(income_and_deductions_verified=False), dict(dependent_months=[13]),

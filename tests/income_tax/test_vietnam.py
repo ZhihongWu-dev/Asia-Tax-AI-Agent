@@ -26,6 +26,17 @@ def test_company_sequence_and_prepayment_not_in_relief_base():
     assert compute(prepaid_tax='0')['final_tax'] == r['final_tax']
 
 
+def test_company_provenance_includes_amendments_without_claiming_registration():
+    sources = compute()['sources']
+    assert {s['doc_id'] for s in sources} == {'vn.law.cit67.2025.vi',
+        'vn.law09.2026.vi', 'vn.decree320.2025.vi', 'vn.decree141.2026.vi',
+        'vn.decree398.2026.vi'}
+    assert all(s['registration_status'] == 'pending' for s in sources)
+    assert all(len(s['sha256']) == 64 and s['url'].startswith('https://') for s in sources)
+    sources[0]['provisions'].clear()
+    assert compute()['sources'][0]['provisions']
+
+
 def test_fractional_base_preserves_intermediate_tax_without_rounding():
     r = compute(taxable_income='123456789.123456', other_incentive_reduction='0', prepaid_tax='0')
     assert r['gross_tax'] == Decimal('20987654.15098752')

@@ -7,6 +7,7 @@ API enablement, special exemptions and foreign tax credits remain separate work.
 from decimal import Decimal, localcontext
 
 from .arithmetic import Band, ZERO, amount, marginal_tax
+from .vietnam_sources import sources_for
 
 
 SCHEDULE = tuple(Band(None if cap is None else Decimal(cap), Decimal(rate))
@@ -48,5 +49,6 @@ No automatic 30% business-income relief applies to employment income.
             total_deductions=deductions, taxable_income=base, bands=bands,
             final_tax=liability, prepaid_tax=prepaid, balance_due=liability-prepaid,
             calculation_stage='before_assessment_rounding',
+            sources=sources_for('employment'),
             legal_basis=('vn.law.pit2026.vi Articles 8-11',
                          'vn.law.pit2026.vi Article 29(2)'))
