@@ -1,4 +1,4 @@
-"""One answer language per turn, independent of the interface setting."""
+"""One answer language per turn: explicit instruction overrides English UI preference."""
 import re
 from copy import deepcopy
 

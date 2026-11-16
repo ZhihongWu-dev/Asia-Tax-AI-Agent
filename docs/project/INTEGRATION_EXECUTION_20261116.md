@@ -72,3 +72,35 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - Validation: TypeScript build and Vite production build passed; 69 backend income-tax tests passed; 8 browser tests passed together on installed Edge (five new income-tax tests plus three existing case-fact regressions). Desktop and 390px phone screenshots were inspected. An earlier run timed out during browser setup with an anomalous 11.5-hour elapsed time; the fresh full eight-test run completed successfully in 37.5 seconds.
 - Playwright supports optional PLAYWRIGHT_EXECUTABLE_PATH for an existing browser; no new runtime dependency was added. Vite still reports its existing large-main-chunk warning.
 - End-to-end income-tax rule selection, calculation/report integration and country coverage beyond the initial Singapore arithmetic remain unfinished.
+
+### Local OCR and Korean source correction checkpoint
+
+- Completed six treaty scan transcriptions with local Tesseract and pinned tessdata_fast models. Original PDFs remain unchanged. Five bilingual Japan treaty PDFs use explicitly scoped, rotated lower English regions; skipped Japanese contents pages and all excluded regions are recorded in sidecars. Thai–Vietnam uses full pages. Transcriptions remain pending original comparison; successful OCR is not legal acceptance.
+- Added source/model/config fingerprints for resumable OCR and source-hash/path checks. Blank cached pages retain an explicit review warning. Database regression: 12 passed.
+- Both saved Korean shell headings and the official sequence-specific pages identify July 2026 consolidations (Acts 21217 and 21221). Corrected the legacy personal law's erroneous January date and mapped both shell IDs to existing same-edition official PDFs. Original shells and complete before/after metadata remain available in data-reconciliation/korean-shell-reconciliation.json. Per-provision commencement and image-table limitations remain unresolved.
+- Started a fresh full merged-library build after these fixes; its result is not yet accepted. Country coverage, rule semantics, and complete corporate/personal workflow remain outstanding.
+
+### Windows attachment worker checkpoint
+
+- Fixed unconditional Unix resource imports by sharing platform-specific worker limits. Windows uses an unnamed, non-inheritable Job Object with job-wide CPU/memory bounds and kill-on-close; assignment failure stops the worker before parsing. POSIX CPU limits and Linux address-space limits remain. Worker subprocesses explicitly use UTF-8 for JSON output.
+- GitHub research: pywin32 win32job interface and Microsoft Win32 Job Object documentation informed the API mapping; no external implementation or new runtime dependency was copied into this change.
+- Three real Windows subprocess tests passed: oversized allocation rejected, busy worker terminated on CPU budget, and descendant terminated when parent is killed. Attachment suite before installing the missing declared OCR runtime: 25 passed, one failed (missing numpy/RapidOCR), one skipped (legacy .doc converter absent). Missing xlrd was installed from the project's existing declared range. OCR dependency installation is still running; full attachment result remains pending.
+- Short parameter IDs prevent pytest from injecting multi-megabyte fixture bytes into Windows subprocess environment variables.
+
+- Follow-up: declared OCR runtime installation completed. Attachment and OS-limit regression now 27 passed, 1 skipped (legacy .doc converter). Full merged database build 3 exited 0; inspect STATUS and coverage gaps before any business-acceptance claim.
+
+### China income-tax calculation checkpoint
+
+- Identified image-only comprehensive/business rate schedules in the existing IIT law snapshot. Downloaded the government's text-layer comprehensive-income schedule PDF, visually verified seven bands/quick deductions, registered cn.iit.comprehensive-rate-table and pinned its SHA-256 alongside existing law snapshots. Two alternative official downloads returned 403; no bypass used. The business-income image schedule is still unresolved.
+- Added China 2026 domestic resident comprehensive-income calculation with separate wages/service/author/royalty inputs, statutory income conversions, annual basic deduction, explicit allowed deductions/reductions, and prepaid-tax reconciliation. Added explicitly confirmed normal corporate 25% calculation on established taxable income. Both return source hashes and policy versions.
+- China plus Singapore calculation tests: 64 passed, including quick-deduction equivalence, threshold marginal changes, category conversions, refunds, input confirmation and source hashes. No claim of complete country workflow: preferential regimes, nonresident/foreign-source treatment, business-income schedule, legal entitlement validation, and UI integration remain outstanding.
+
+### Income classification and precision checkpoint
+
+- China jurisdiction library validation completed: PASSED, errors=0, gaps=0. This is structural library acceptance only; income-tax business acceptance remains open.
+- Added separate personal service/author remuneration categories in the existing frontend and backend intake. Company inputs reject these personal categories alongside wages; company service revenue remains business income.
+- Unified every intake amount with the Decimal calculation boundary: finite nonnegative amounts up to 1e18, at most six decimal places, no float/bool coercion. Confirmation now requires a JSON boolean. Unknown deductions/foreign tax still remain null.
+- Income-tax tests: 126 passed; TypeScript build passed. Additional API checks prove rejected amounts leave case revision unchanged. Started application regression excluding live-database integration tests and the separately executed database-tool suite; result pending.
+
+- Application suite initially failed collection because the new income test shared the basename test_api.py with tests/agent. Renamed it test_income_api.py; restarted only after the failed process exited.
+- Reconciled two stale language assertions against the pre-existing LI_MAIN_INTEGRATION_STATUS.md rule (English UI preference, overridden by explicit message language directives). No runtime language behavior changed; 33 answer-quality tests pass. Full regression is still running.

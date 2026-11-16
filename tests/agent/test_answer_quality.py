@@ -17,15 +17,15 @@ from packages.chat.store import ChatStore
 @pytest.mark.parametrize('text,previous,interface,expected', [
     ('What is Hong Kong FSIE?', None, 'zh', 'en'),
     ('Please explain 香港 FSIE rules.', None, 'zh', 'en'),
-    ('请说明香港FSIE。', None, 'en', 'zh'),
+    ('请说明香港FSIE。', None, 'en', 'en'),
     ('请用英语说明香港FSIE。', None, 'zh', 'en'),
     ('Please explain FSIE. Reply in Chinese.', None, 'en', 'zh'),
     ('3%', 'en', 'zh', 'en'),
-    ('OK', 'zh', 'en', 'zh'),
+    ('OK', 'zh', 'en', 'en'),
     ('Why?', 'zh', 'zh', 'en'),
     ('How so?', 'zh', 'zh', 'en'),
 ])
-def test_answer_language_follows_user_not_interface(text, previous, interface, expected):
+def test_answer_language_honors_explicit_directive_then_english_ui(text, previous, interface, expected):
     assert reply_language({'reply_locale': previous}, text, interface) == expected
 
 
