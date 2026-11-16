@@ -1,0 +1,26 @@
+{
+  "assessment_year": "2025/26",
+  "sources": [
+    {
+      "doc_id": "hk.gov.salaries-rates-20261116",
+      "url": "https://www.gov.hk/en/residents/taxes/taxfiling/taxrates/salariesrates.htm",
+      "file": "database/raw/hk/hk.gov.salaries-rates-20261116.html",
+      "sha256": "baabce21ed541a686f1060ec60e992a02f5819417fdf8854d82415a882c8eeeb",
+      "title": "Salaries tax and personal assessment rates"
+    },
+    {
+      "doc_id": "hk.ird.two-tier-rates-20261116",
+      "url": "https://www.ird.gov.hk/eng/faq/2tr.htm",
+      "file": "database/raw/hk/hk.ird.two-tier-rates-20261116.html",
+      "sha256": "3d8d10abc9f80b31cb17ba56178c075c93d4c6c279f43fb5ec4d0d55e046df58",
+      "title": "Two-tiered profits tax rates FAQ"
+    },
+    {
+      "doc_id": "hk.ird.tax-concessions-enacted-2026",
+      "url": "https://www.ird.gov.hk/eng/ppr/archives/26051303.htm",
+      "file": "database/raw/hk/hk.ird.tax-concessions-enacted-2026.html",
+      "sha256": "1e32d17b3a5e74b793fa12ead7c74a4937ed64d84a26d7b1fc498d060b87fc56",
+      "title": "Passage of 2026 tax concessions legislation"
+    }
+  ]
+}
