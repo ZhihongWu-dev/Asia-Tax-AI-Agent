@@ -1,0 +1,206 @@
+{
+  "snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "ca5f72ed8286e43576ce09e91afba09f4985d357dd17fe4eef0297a1d563842f",
+    "review_sha256": "966f3fb4a19df9d408d3e0a96ca18c27fe5caa69f5839e7e29e217c6f86fd9fd"
+  },
+  "scope": "all current local rule/predicate/decision/parameter citation references; not date-filtered",
+  "counts": {
+    "referenced_citations": 620,
+    "cloud_clauses": 38152,
+    "admitted_overlay": 0,
+    "missing_citations": 11,
+    "review_blocked_citations": 9,
+    "local_only_parameters": 48,
+    "shared_parameter_differences": 0,
+    "cloud_only_parameters": 0
+  },
+  "missing": {
+    "jp.mof.cfc-overview#all": [
+      "database/param.csv:jp.cfc.foreign_subsidiary_income_attributed"
+    ],
+    "jp.nta.consolidated-tax-avoidance-denial#h2": [
+      "database/param.csv:jp.anti_abuse.consolidated_corporation_unreasonable_tax_reduction_denial.legacy_60062fc21261"
+    ],
+    "jp.nta.income-rate-2026#h2": [
+      "database/param.csv:jp.final.individual_top_rate"
+    ],
+    "jp.nta.international-taxation-basics#p55": [
+      "database/param.csv:jp.inbound.domestic_corporation_foreign_income_taxable.legacy_ac5a019fdc95",
+      "database/param.csv:jp.inbound.foreign_income_taxable_for_nonpermanent_excluded_resident.legacy_66f01bf210ad"
+    ],
+    "jp.nta.resident-nonresident-classification#h1": [
+      "database/param.csv:jp.residence.corporation_classified_by_head_or_principal_office.legacy_7316e34c2095",
+      "database/param.csv:jp.residence.individual_resident_domicile_or_one_year_residence.legacy_f75ee95bbf33"
+    ],
+    "jp.nta.tax-shelter-countermeasures#h2": [
+      "database/decision.csv:jp.absent.individual.anti_abuse"
+    ],
+    "th.rd.cit#lead": [
+      "database/decision.csv:th.absent.company.cfc",
+      "database/param.csv:th.final.cit_return_days",
+      "database/param.csv:th.outbound_wht.foreign_company_return_days"
+    ],
+    "th.rd.pit#h1": [
+      "database/decision.csv:th.absent.individual.cfc",
+      "database/param.csv:th.inbound.foreign_income_taxable_on_remittance",
+      "database/param.csv:th.residence.residence_days_threshold.legacy_3dd29d5165f5"
+    ],
+    "th.rd.pit#h12": [
+      "database/param.csv:th.final.individual_return_deadline",
+      "database/param.csv:th.outbound_wht.payer_withholding_required"
+    ],
+    "th.rd.pit#h6": [
+      "database/param.csv:th.final.dividend_tax_credit_fraction.legacy_17d33c3c7596"
+    ],
+    "th.rd.transfer-pricing-legislation#all": [
+      "database/decision.csv:th.absent.individual.anti_abuse",
+      "database/param.csv:th.anti_abuse.transfer_pricing_market_price_adjustment"
+    ]
+  },
+  "review_blocked": {
+    "ae.fta.corporate-tax-faq#all": [
+      "database/param.csv:ae.anti_abuse.transfer_pricing_applies_to_related_parties.legacy_03670a518456",
+      "database/param.csv:ae.residence.residence_test.legacy_09239f63cd95"
+    ],
+    "cn.gsh.2009-37#all": [
+      "database/param.csv:cn.cfc.cfc_whitelist_au",
+      "database/param.csv:cn.cfc.cfc_whitelist_ca",
+      "database/param.csv:cn.cfc.cfc_whitelist_de",
+      "database/param.csv:cn.cfc.cfc_whitelist_fr",
+      "database/param.csv:cn.cfc.cfc_whitelist_gb",
+      "database/param.csv:cn.cfc.cfc_whitelist_in",
+      "database/param.csv:cn.cfc.cfc_whitelist_it",
+      "database/param.csv:cn.cfc.cfc_whitelist_jp",
+      "database/param.csv:cn.cfc.cfc_whitelist_no",
+      "database/param.csv:cn.cfc.cfc_whitelist_nz",
+      "database/param.csv:cn.cfc.cfc_whitelist_us",
+      "database/param.csv:cn.cfc.cfc_whitelist_za",
+      "rule/rule.csv:cn.cfc.include"
+    ],
+    "id.dgt.article26#all": [
+      "database/param.csv:id.outbound_wht.default_nonresident_rate",
+      "database/param.csv:id.outbound_wht.payment_deadline",
+      "database/param.csv:id.outbound_wht.treaty_rate_available",
+      "rule/rule.csv:id.outbound_wht.statutory"
+    ],
+    "jp.mof.cfc-overview#all": [
+      "database/param.csv:jp.cfc.foreign_subsidiary_income_attributed"
+    ],
+    "kr.nts.global-income-faq#all": [
+      "database/param.csv:kr.final.global_income_taxable.legacy_ff9c51667058",
+      "database/param.csv:kr.inbound.worldwide_income_reportable.legacy_55f79a66d148",
+      "database/param.csv:kr.residence.residence_years_min.legacy_04bb728aea1c"
+    ],
+    "th.rd.transfer-pricing-legislation#all": [
+      "database/decision.csv:th.absent.individual.anti_abuse",
+      "database/param.csv:th.anti_abuse.transfer_pricing_market_price_adjustment"
+    ],
+    "treaty.ae-jp.2013.mli.en#all": [
+      "database/param.csv:ae-jp.anti_abuse.ppt_applies",
+      "rule/rule.csv:jp-ae.anti_abuse.ppt"
+    ],
+    "treaty.ae-jp.2013.summary.en#all": [
+      "database/param.csv:ae-jp.outbound_wht.dividend_rate_other",
+      "database/param.csv:ae-jp.outbound_wht.dividend_rate_parent",
+      "database/param.csv:ae-jp.outbound_wht.interest_rate",
+      "database/param.csv:ae-jp.outbound_wht.interest_rate_government",
+      "database/param.csv:ae-jp.outbound_wht.royalty_rate",
+      "rule/rule.csv:jp-ae.outbound_wht.cap_10"
+    ],
+    "vn.law.cit2025.en#all": [
+      "database/decision.csv:vn.absent.3",
+      "database/decision.csv:vn.absent.cfc",
+      "database/decision.csv:vn.absent.company.anti_abuse",
+      "database/decision.csv:vn.absent.company.outbound_wht",
+      "database/param.csv:vn.final.cit_rate",
+      "database/param.csv:vn.inbound.foreign_income_taxable",
+      "database/param.csv:vn.inbound.foreign_tax_credit_cap",
+      "database/param.csv:vn.residence.worldwide_tax_scope",
+      "database/param.csv:vn.residence.worldwide_tax_scope.legacy_ebbee7602af2",
+      "rule/decision.csv:D-vn-1",
+      "rule/decision.csv:D-vn-2",
+      "rule/decision.csv:D-vn-3",
+      "rule/rule.csv:vn.final.cit",
+      "rule/rule.csv:vn.final.domestic_exempt",
+      "rule/rule.csv:vn.inbound.credit",
+      "rule/rule.csv:vn.inbound.taxable",
+      "rule/rule.csv:vn.residence.company"
+    ]
+  },
+  "local_only_parameters": [
+    "ae.anti_abuse.gaar_allows_tax_advantage_adjustment.legacy_9347aa2863fc",
+    "ae.anti_abuse.transfer_pricing_applies_to_related_parties.legacy_03670a518456",
+    "ae.final.cit_rate.legacy_0a693d0fef56",
+    "ae.final.cit_rate.legacy_e0a38222b90b",
+    "ae.inbound.foreign_income_taxable_for_resident_juridical_person.legacy_5a4e9dbc5d2c",
+    "ae.inbound.foreign_income_taxable_if_related_to_uae_business.legacy_2b61513707ec",
+    "ae.residence.conditional_residence_days_min.legacy_1a9c43feb1fa",
+    "ae.residence.residence_days_min.legacy_78a82a6783b0",
+    "ae.residence.residence_test.legacy_09239f63cd95",
+    "ae.residence.residence_test.legacy_9fd40ff5e896",
+    "id.residence.residence_days_threshold.legacy_5eb51c824306",
+    "id.residence.residence_test.legacy_e213405bb96c",
+    "in.final.individual_top_rate.legacy_e23948f10c26",
+    "in.residence.residence_days_threshold.legacy_e9f9702f0cb8",
+    "in.residence.residence_test.legacy_6d96c44e527d",
+    "jp.anti_abuse.consolidated_corporation_unreasonable_tax_reduction_denial.legacy_60062fc21261",
+    "jp.cfc.foreign_subsidiary_income_attributed",
+    "jp.final.individual_top_rate",
+    "jp.inbound.domestic_corporation_foreign_income_taxable.legacy_ac5a019fdc95",
+    "jp.inbound.foreign_income_taxable_for_nonpermanent_excluded_resident.legacy_66f01bf210ad",
+    "jp.outbound_wht.nonresident_payment_withholding",
+    "jp.residence.corporation_classified_by_head_or_principal_office.legacy_7316e34c2095",
+    "jp.residence.individual_resident_domicile_or_one_year_residence.legacy_f75ee95bbf33",
+    "kr.cfc.cfc_reporting_required.legacy_d9ac55af47bd",
+    "kr.final.cit_return_deadline.legacy_052439c710e0",
+    "kr.final.global_income_taxable.legacy_ff9c51667058",
+    "kr.inbound.worldwide_income_reportable.legacy_55f79a66d148",
+    "kr.inbound.worldwide_income_taxable.legacy_640729ac5434",
+    "kr.residence.management_place_in_korea.legacy_d191084397c9",
+    "kr.residence.residence_years_min.legacy_04bb728aea1c",
+    "my.residence.residence_days_threshold.legacy_812b87364f29",
+    "my.residence.residence_test.legacy_57da735f4ffd",
+    "th.anti_abuse.transfer_pricing_market_price_adjustment",
+    "th.final.cit_return_days",
+    "th.final.dividend_tax_credit_fraction.legacy_17d33c3c7596",
+    "th.final.individual_return_deadline",
+    "th.inbound.foreign_company_thailand_income_taxable",
+    "th.inbound.foreign_income_taxable_on_remittance",
+    "th.outbound_wht.foreign_company_return_days",
+    "th.outbound_wht.payer_withholding_required",
+    "th.residence.company_incorporated_under_thai_law",
+    "th.residence.residence_days_threshold.legacy_3dd29d5165f5",
+    "vn.anti_abuse.related_party_non_arm_length_reassessment.legacy_bd309d0b7936",
+    "vn.final.dividend_tax_rate.legacy_3b6e5e65daea",
+    "vn.inbound.foreign_income_taxable.legacy_c1362b4ab902",
+    "vn.outbound_wht.dividend_wht_rate.legacy_3ae53a4b4020",
+    "vn.residence.residence_days_min.legacy_fc1d30e02b4d",
+    "vn.residence.worldwide_tax_scope.legacy_ebbee7602af2"
+  ],
+  "shared_parameter_differences": {},
+  "direct_rule_missing": {},
+  "direct_rule_blocked": {
+    "cn.gsh.2009-37#all": [
+      "rule/rule.csv:cn.cfc.include"
+    ],
+    "id.dgt.article26#all": [
+      "rule/rule.csv:id.outbound_wht.statutory"
+    ],
+    "treaty.ae-jp.2013.mli.en#all": [
+      "rule/rule.csv:jp-ae.anti_abuse.ppt"
+    ],
+    "treaty.ae-jp.2013.summary.en#all": [
+      "rule/rule.csv:jp-ae.outbound_wht.cap_10"
+    ],
+    "vn.law.cit2025.en#all": [
+      "rule/rule.csv:vn.final.cit",
+      "rule/rule.csv:vn.final.domestic_exempt",
+      "rule/rule.csv:vn.inbound.credit",
+      "rule/rule.csv:vn.inbound.taxable",
+      "rule/rule.csv:vn.residence.company"
+    ]
+  }
+}
