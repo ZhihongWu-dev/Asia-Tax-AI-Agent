@@ -10,7 +10,7 @@ from packages.domain_bridge import planning_sources as sources
 PIN = {'uploaded_at': 'pinned', 'review_sha256': 'review'}
 
 
-def fixture_reader(monkeypatch, *, rows=(), reviews=(), overlay=()):
+def fixture_reader(monkeypatch, *, rows=(), reviews=(), overlay=(), tables=None):
     statements = []
     class Connection:
         def __enter__(self): return self
@@ -18,7 +18,11 @@ def fixture_reader(monkeypatch, *, rows=(), reviews=(), overlay=()):
         def begin(self): return nullcontext()
         def execute(self, statement, params=None):
             statements.append((str(statement), params))
-            return SimpleNamespace(mappings=lambda: SimpleNamespace(all=lambda: rows))
+            selected = rows
+            if tables is not None and str(statement).startswith('SELECT * FROM database.'):
+                name = str(statement).split('database.')[1].split()[0]
+                selected = tables.get(name, [])
+            return SimpleNamespace(mappings=lambda: SimpleNamespace(all=lambda: selected))
     monkeypatch.setattr(sources.library_cloud, '_engine',
                         lambda: SimpleNamespace(connect=Connection))
     def state(connection, expected):
@@ -80,3 +84,37 @@ def test_changed_pin_prevents_source_read(monkeypatch):
 def test_invalid_request_never_accesses_database(monkeypatch, citations, pin):
     monkeypatch.setattr(sources.library_cloud, '_engine', lambda: pytest.fail('unexpected DB'))
     with pytest.raises(ValueError): sources.read_sources(citations, expected_version=pin)
+
+
+def test_bundle_includes_catalog_dependencies_in_same_transaction(monkeypatch):
+    tables = {'param': [{'param_id': 'rate', 'value': '20', 'cite_id': 'cn.rate#1',
+                         'effective_to': None}],
+              'decision': [{'id': 'absence', 'cite_id': 'cn.absence#1'}]}
+    rows = [{'cite_id': c, 'passage': c} for c in ['cn.rule#1', 'cn.rate#1', 'cn.absence#1']]
+    statements = fixture_reader(monkeypatch, rows=rows, tables=tables)
+    first = sources.read_planning_bundle(['cn.rule#1'], expected_version=PIN)
+    assert set(first['sources']) == {'cn.rule#1', 'cn.rate#1', 'cn.absence#1'}
+    assert first['tables']['param'][0]['effective_to'] == ''
+    assert len(first['table_sha256']) == 5 and len(first['bundle_sha256']) == 64
+    assert sum('SET TRANSACTION' in sql for sql, _ in statements) == 1
+    assert statements[-1][1]['ids'] == ['cn.absence#1', 'cn.rate#1', 'cn.rule#1']
+    assert sources.read_planning_bundle(['cn.rule#1'], expected_version=PIN) == first
+    tables['param'][0]['value'] = '21'
+    changed = sources.read_planning_bundle(['cn.rule#1'], expected_version=PIN)
+    assert changed['table_sha256']['param'] != first['table_sha256']['param']
+    assert changed['bundle_sha256'] != first['bundle_sha256']
+
+
+def test_bundle_cannot_skip_blocked_parameter_source(monkeypatch):
+    fixture_reader(monkeypatch, tables={'param': [{'param_id': 'rate', 'cite_id': 'cn.blocked#1'}]},
+        reviews=[{'cite_id': 'cn.blocked#1', 'difference': 'different_text',
+                  'review_status': 'candidate', 'reviewed_at': None}])
+    with pytest.raises(sources.PlanningSourcesUnavailable) as exc:
+        sources.read_planning_bundle(['cn.rule#1'], expected_version=PIN)
+    assert exc.value.blocked == ('cn.blocked#1',)
+
+
+def test_duplicate_catalog_key_is_not_silently_overwritten(monkeypatch):
+    fixture_reader(monkeypatch, tables={'param': [{'param_id': 'rate'}, {'param_id': 'rate'}]})
+    with pytest.raises(ValueError, match='planning_catalog_duplicate'):
+        sources.read_planning_bundle(['cn.rule#1'], expected_version=PIN)
