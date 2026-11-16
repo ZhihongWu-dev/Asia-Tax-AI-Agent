@@ -113,6 +113,24 @@ class THIndividual(THBasis):
     assessable_income_classification_confirmed: StrictBool
 
 
+class IDBasis(Basis):
+    ordinary_annual_treatment_confirmed: StrictBool
+    prepaid_tax: Money
+
+
+class IDCompany(IDBasis):
+    policy: Literal['id_company_2026']
+    taxable_income_before_rounding: Money
+    gross_receipts_scope_confirmed: StrictBool
+
+
+class IDIndividual(IDBasis):
+    policy: Literal['id_resident_2026']
+    net_income_before_ptkp: Money
+    ptkp_status: Literal['TK/0','TK/1','TK/2','TK/3','K/0','K/1','K/2','K/3']
+    ptkp_entitlement_confirmed: StrictBool
+
+
 Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual |
-                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual,
+                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual,
                        Field(discriminator='policy')]

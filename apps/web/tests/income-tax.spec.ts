@@ -172,6 +172,44 @@ test('resident personal rate calculation uses the saved basis period', async ({p
 });
 
 for (const subject of ['company','individual'] as const) {
+  test(`Indonesia ${subject} annual computation reconciles sources and persists`, async ({page})=>{
+    const form=await openIncome(page);
+    await form.getByRole('combobox',{name:'Taxpayer',exact:true}).selectOption(subject);
+    await form.getByRole('combobox',{name:'Filing jurisdiction',exact:true}).selectOption('id');
+    await form.getByLabel('Period start',{exact:true}).fill('2026-01-01');
+    await form.getByLabel('Period end',{exact:true}).fill('2026-12-31');
+    await form.getByRole('combobox',{name:'Tax residency',exact:true}).selectOption('resident');
+    await form.getByRole('combobox',{name:'Income category',exact:true}).selectOption(subject==='company'?'business':'employment');
+    await form.getByLabel('Gross income',{exact:true}).fill(subject==='company'?'6000000000':'300000000');
+    await form.getByLabel('Income description',{exact:true}).fill('All domestic ordinary receipts; final and exempt regimes excluded');
+    await form.getByLabel('Claimed deductions (blank if unknown)',{exact:true}).fill('0');
+    await form.getByLabel('Carried losses (blank if unknown)',{exact:true}).fill('0');
+    await form.getByRole('checkbox').check();
+    await form.getByRole('button',{name:'Save income-tax details'}).click();
+    const calculation=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+    await calculation.getByLabel('Applicable regime').selectOption(subject==='company'?'id_company_2026':'id_resident_2026');
+    await calculation.getByLabel('Full-year resident ordinary treatment and final/special-regime exclusions checked').selectOption('true');
+    await calculation.getByLabel('Verified withholding and instalments for this period').fill(subject==='company'?'130000000':'15550000');
+    if(subject==='company') {
+      await calculation.getByLabel('Established taxable income before thousand rounding').fill('610000000');
+      await calculation.getByLabel('Complete article 31E receipts checked, with no omitted final or exempt receipts').selectOption('true');
+    } else {
+      await calculation.getByLabel('Established net income before PTKP').fill('300000000');
+      await calculation.getByLabel('Verified PTKP entitlement code').selectOption('K/1');
+      await calculation.getByLabel('Start-of-year PTKP and dependent entitlement verified').selectOption('true');
+    }
+    await calculation.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified full-year ordinary regime, complete receipts and adjustments, confirmed start-of-year entitlement and period withholding.');
+    await calculation.getByRole('checkbox').check();
+    await calculation.getByRole('button',{name:'Calculate and save result'}).click();
+    const report=page.getByRole('article',{name:'Saved calculation result'});
+    await expect(report).toContainText(subject==='company'?'-49480000':'14000000');
+    await expect(report.getByRole('link')).toHaveCount(subject==='company'?6:5);
+    if(subject==='company') await expect(report).toContainText('488000000');
+    else await expect(report).toContainText('63000000');
+    await page.screenshot({path:`test-results/income-tax-indonesia-${subject}.png`,fullPage:true});
+    await openIncome(page);
+    await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(subject==='company'?'-49480000':'14000000');
+  });
   test(`Thailand ${subject} calculation persists the applicable tax comparison`, async ({page})=>{
     const form=await openIncome(page);
     await form.getByRole('combobox',{name:'Taxpayer',exact:true}).selectOption(subject);

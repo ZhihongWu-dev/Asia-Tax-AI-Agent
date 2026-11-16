@@ -16,6 +16,21 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if (input.jurisdiction === 'id' && period === '2026-01-01/2026-12-31') {
+    const common = [confirm('ordinary_annual_treatment_confirmed','已核对全年居民普通税制及最终税制等排除条件','Full-year resident ordinary treatment and final/special-regime exclusions checked'),
+      money('prepaid_tax','核定本期扣缴及预缴税款','Verified withholding and instalments for this period')];
+    return company ? [{id:'id_company_2026',label:['印尼居民企业（2026）','Indonesia resident company (2026)'],
+      notice:['仅限以印尼盾申报的境内普通收入，不含上市公司优惠、最终税制、免税收入、境外收入和其他特殊优惠。已核定应税所得按千印尼盾向下取整；第31E条收入总额从已保存明细汇总。全年总额不超过500亿时，自动对归属48亿收入部分的税基适用11%，其余22%。须确认收入完整、已扣退货及销售折扣，未扣费用。',
+        'Domestic ordinary income in IDR only; excludes listed-company concessions, final/exempt/foreign income and other special incentives. Established taxable income is rounded down to thousands of rupiah. Saved gross receipts determine article 31E: at total receipts up to IDR 50bn, the rounded base attributable to the first IDR 4.8bn uses 11%; the remainder uses 22%. Confirm all receipts after returns and sales discounts, before expenses.'],
+      fields:[money('taxable_income_before_rounding','核定应税所得（千元取整前）','Established taxable income before thousand rounding'),...common,
+        confirm('gross_receipts_scope_confirmed','已核实第31E条全部收入范围，且无遗漏的最终计税或免税收入','Complete article 31E receipts checked, with no omitted final or exempt receipts')]}]
+      : [{id:'id_resident_2026',label:['印尼居民个人（2026）','Indonesia resident individual (2026)'],
+        notice:['仅限全年居民境内普通收入。净所得须已扣核准费用、亏损及宗教捐款；系统扣除按年初资格核定的PTKP，再按千印尼盾向下取整。TK/K表示是否有权使用婚姻附加免税额，0至3表示合资格受抚养人数；不得仅按婚姻登记推定资格。不含夫妻所得合并或分摊、部分年度、最终计税、免税或境外收入；须核对PP20/2026过渡规则。',
+          'Full-year resident domestic ordinary income only. Net income must already reflect verified expenses, losses and religious gifts. The system deducts confirmed start-of-year PTKP, then rounds down to thousands of rupiah. TK/K indicates entitlement to the marriage allowance; 0–3 is the qualifying dependent count. Do not infer entitlement from marital registration alone. Excludes combined/spouse allocation, part-year, final, exempt and foreign income; check PP20/2026 transitions.'],
+        fields:[money('net_income_before_ptkp','核定净所得（PTKP前）','Established net income before PTKP'),
+          {key:'ptkp_status',label:['核定PTKP资格代码','Verified PTKP entitlement code'],options:(['TK/0','TK/1','TK/2','TK/3','K/0','K/1','K/2','K/3'] as const).map(code=>[code,[code,code]])},
+          confirm('ptkp_entitlement_confirmed','已核实年初PTKP及受抚养资格','Start-of-year PTKP and dependent entitlement verified'),...common]}];
+  }
   if (input.jurisdiction === 'th' && period === '2026-01-01/2026-12-31') {
     const shared = [confirm('ordinary_treatment_confirmed','已核对普通年度税制及排除条件','Ordinary annual treatment and exclusions checked'),
       money('allowed_tax_credits','核定可抵免税额','Allowed tax credits'),prepaid];
@@ -87,6 +102,11 @@ export function policies(input: IncomeTaxInput): IncomePolicy[] {
 }
 
 export const resultLabels: Record<string, Label> = {
+  taxable_income_before_rounding:['千元取整前应税所得','Taxable income before thousand rounding'],
+  net_income_before_ptkp:['PTKP前净所得','Net income before PTKP'],ptkp_allowance:['核定PTKP免税额','Verified PTKP allowance'],
+  article31e_gross_receipts:['第31E条收入总额','Article 31E gross receipts'],
+  article31e_eligible_base:['第31E条优惠税基','Article 31E reduced-rate base'],article31e_other_base:['普通税率税基','Ordinary-rate base'],
+  article31e_reduced_tax:['优惠税率税额','Reduced-rate tax'],ordinary_rate_tax:['普通税率税额','Ordinary-rate tax'],
   net_taxable_profit:['应税净利润','Net taxable profit'],net_taxable_income:['净应税所得','Net taxable income'],
   nonemployment_assessable_gross:['非工资应税总收入','Non-employment assessable gross income'],
   progressive_tax:['累进税额','Progressive tax'],minimum_tax_before_exemption:['豁免前最低税额','Minimum tax before exemption'],

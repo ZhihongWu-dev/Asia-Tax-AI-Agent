@@ -40,7 +40,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
   if (!current.income_tax) return null;
   return <section className="income-tax-assessment" aria-label={say('所得税计算','Income-tax calculation')}>
     <h3>{say('核对计税基础并计算','Review the tax basis and calculate')}</h3>
-    <p>{say('按所选税制计算已核对的计税基础。结果保留原始资料和依据，尚不代表完成申报或专业审核；金额尚未作评税舍入。','Calculate a checked tax basis under the selected regime. The result retains the facts and sources. It is not a completed return or professional approval; assessment rounding has not been applied.')}</p>
+    <p>{say('按所选税制计算已核对的计税基础。结果保留原始资料和依据，尚不代表完成申报或专业审核；取整处理以所选税制说明为准。','Calculate a checked tax basis under the selected regime. The result retains the facts and sources. It is not a completed return or professional approval; rounding follows the selected regime’s stated treatment.')}</p>
     {disabled && <p>{say('请先保存当前资料，再进行计算。','Save the current details before calculating.')}</p>}
     {!options.length ? <p>{say('此税区、主体或期间的计算流程尚待接入，资料仍可保存。','The calculation workflow for this jurisdiction, taxpayer or period is not yet available. Details can still be saved.')}</p> :
     <form onSubmit={calculate}>

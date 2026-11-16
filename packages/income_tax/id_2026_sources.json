@@ -1,0 +1,47 @@
+{
+  "tax_year": 2026,
+  "sources": [
+    {
+      "doc_id": "id.uu7.2021.id",
+      "title": "Law 7 of 2021: Harmonisation of Tax Regulations",
+      "url": "https://jdih.kemenkeu.go.id/api/download/a9faab97-aca7-4f87-9fdc-faa8123d1454/7TAHUN2021UU.pdf",
+      "file": "database/raw/id/id.uu7.2021.id.pdf",
+      "sha256": "4e4be3e276bf327e6e9e8a4a031838f572feb4014c2476f6cea0d9a54dd38d5b"
+    },
+    {
+      "doc_id": "id.pp20.2026.id",
+      "title": "Government Regulation 20 of 2026 amending PP55/2022",
+      "url": "https://jdih.kemenkeu.go.id/api/download/d057ff82-50e7-4127-b66b-f704a36f071d/2026pp020.pdf",
+      "file": "database/raw/id/id.pp20.2026.id.pdf",
+      "sha256": "3aadd85768e7dc3dd5f8431178ee0dd1d03d631835a493288563692de7cf8520"
+    },
+    {
+      "doc_id": "id.per12.2026.annex.id",
+      "title": "PER-12/PJ/2026 annex: amended annual return forms and instructions",
+      "url": "https://www.pajak.go.id/sites/default/files/lampiran/Lampiran_PER12PJ2026.pdf",
+      "file": "database/raw/id/id.per12.2026.annex.id.pdf",
+      "sha256": "472c3fb0b42c74d25b702f165d9ccd9234ae257b2b28e1509e36593ee0c1be43"
+    },
+    {
+      "doc_id": "id.dgt.company-calculation.id",
+      "title": "DGT ordinary company computation and article31E example",
+      "url": "https://pajak.go.id/id/mekanisme-penghitungan-pajak-penghasilan-badan",
+      "file": "database/raw/id/id.dgt.company-calculation.id.html",
+      "sha256": "797e292a6ed8698a2366de691032967e7764b3cf1b0b8a48df4b7c367a26f679"
+    },
+    {
+      "doc_id": "id.dgt.personal-calculation.id",
+      "title": "DGT individual computation and PTKP example",
+      "url": "https://www.pajak.go.id/id/mekanisme-penghitungan-pajak-penghasilan-orang-pribadi",
+      "file": "database/raw/id/id.dgt.personal-calculation.id.html",
+      "sha256": "1b34aae90f12476d335507763bda82859b8d5144ff97f35dd377b77bc6514842"
+    },
+    {
+      "doc_id": "id.per12.2026.id",
+      "title": "PER-12/PJ/2026: reporting amendments effective 1 October 2026",
+      "url": "https://www.pajak.go.id/id/peraturan/perubahan-atas-peraturan-direktur-jenderal-pajak-nomor-11pj2025-tentang-ketentuan",
+      "file": "database/raw/id/id.per12.2026.id.html",
+      "sha256": "92d8a41d868e80306e7e472fe899edee10e0d02407a68cb8ab381235b7670ec4"
+    }
+  ]
+}

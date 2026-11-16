@@ -2,7 +2,7 @@
 from decimal import Decimal, localcontext
 from pydantic import TypeAdapter
 from packages.contracts.income_tax import IncomeTaxCase
-from . import china, singapore, hong_kong, united_arab_emirates, malaysia, thailand
+from . import china, singapore, hong_kong, united_arab_emirates, malaysia, thailand, indonesia
 
 
 def calculate(case: IncomeTaxCase, basis):
@@ -16,7 +16,8 @@ def calculate(case: IncomeTaxCase, basis):
     # Non-calendar company basis periods need their own period adapter.
     periods = {'cn': ('2026-01-01', '2026-12-31'), 'ae': ('2026-01-01', '2026-12-31'),
                'sg': ('2025-01-01', '2025-12-31'), 'hk': ('2025-04-01', '2026-03-31'),
-               'my': ('2026-01-01', '2026-12-31'), 'th': ('2026-01-01', '2026-12-31')}
+               'my': ('2026-01-01', '2026-12-31'), 'th': ('2026-01-01', '2026-12-31'),
+               'id': ('2026-01-01', '2026-12-31')}
     if (case.period_start.isoformat(), case.period_end.isoformat()) != periods[jur]:
         raise ValueError('Saved basis period is not supported by this policy')
     expected = {'cn_company_2026': 'company', 'cn_comprehensive_2026': 'individual',
@@ -27,7 +28,9 @@ def calculate(case: IncomeTaxCase, basis):
         expected[policy] = 'company' if basis.business_form == 'corporation' else 'individual'
     if policy in expected and case.subject != expected[policy]:
         raise ValueError('Policy subject differs from the saved case')
-    if policy in ('cn_comprehensive_2026', 'sg_resident_ya2026', 'th_resident_2026') and case.residency != 'resident':
+    if policy in ('id_company_2026','id_resident_2026') and case.subject != ('company' if policy=='id_company_2026' else 'individual'):
+        raise ValueError('Policy subject differs from the saved case')
+    if policy in ('cn_comprehensive_2026', 'sg_resident_ya2026', 'th_resident_2026','id_company_2026','id_resident_2026') and case.residency != 'resident':
         raise ValueError('This policy requires resident status')
     args = basis.model_dump(exclude={'policy', 'basis_explanation', 'basis_confirmed'})
     if policy == 'cn_company_2026':
@@ -77,6 +80,19 @@ def calculate(case: IncomeTaxCase, basis):
             result=malaysia.company_tax(assessment_year=2026,**args)
         else:
             result=malaysia.individual_tax(assessment_year=2026,residency=case.residency,**args)
+    elif policy in ('id_company_2026','id_resident_2026'):
+        allowed={'business','employment','service_remuneration','author_remuneration','royalty'}
+        if any(i.source_jurisdiction!='id' or i.category not in allowed for i in case.incomes):
+            raise ValueError('Foreign, final, exempt or special-rate income requires a separate Indonesian workflow')
+        with localcontext() as ctx:
+            ctx.prec=40
+            gross=sum((i.gross_amount for i in case.incomes),Decimal('0'))
+        if policy=='id_company_2026':
+            result=indonesia.company_tax(tax_year=2026,article31e_gross_receipts=gross,**args)
+        else:
+            if basis.net_income_before_ptkp>gross:
+                raise ValueError('Net income exceeds saved gross income')
+            result=indonesia.resident_individual_tax(tax_year=2026,**args)
     elif policy=='th_company_2026':
         result=thailand.company_tax(tax_year=2026,**args)
     elif policy=='th_resident_2026':
