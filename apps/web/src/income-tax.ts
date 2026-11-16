@@ -8,6 +8,7 @@ export const taxJurisdictions = {
 export type TaxJurisdiction = keyof typeof taxJurisdictions;
 export const incomeCategories = {
   business: ["经营收入", "Business"], employment: ["工资薪金", "Employment"], dividend: ["股息", "Dividends"],
+  service_remuneration: ["个人劳务报酬", "Personal service remuneration"], author_remuneration: ["个人稿酬", "Author remuneration"],
   interest: ["利息", "Interest"], rental: ["租金", "Rent"], royalty: ["特许权使用费", "Royalties"],
   capital_gain: ["资本利得", "Capital gains"], other: ["其他", "Other"],
 } as const;

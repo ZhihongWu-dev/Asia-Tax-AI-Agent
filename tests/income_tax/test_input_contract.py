@@ -30,3 +30,32 @@ def test_reversed_period_and_wrong_currency_are_rejected():
     for field, value in [("period_end", "2025-12-31"), ("currency", "USD")]:
         data=example();data[field]=value
         with pytest.raises(ValidationError): IncomeTaxCase(**data)
+
+
+@pytest.mark.parametrize('category', ['employment', 'service_remuneration', 'author_remuneration'])
+def test_personal_income_categories_are_preserved_and_rejected_for_companies(category):
+    data=example();data['subject']='individual';data['incomes'][0]['category']=category
+    assert IncomeTaxCase(**data).incomes[0].category==category
+    data['subject']='company'
+    with pytest.raises(ValidationError): IncomeTaxCase(**data)
+
+
+@pytest.mark.parametrize('value', [True, 1.2, '0.0000001', '1000000000000000001', 'Infinity', '-0.01'])
+@pytest.mark.parametrize('field', ['gross_amount', 'foreign_tax_paid', 'claimed_deductions', 'carried_losses'])
+def test_every_amount_uses_the_same_exact_calculation_contract(field,value):
+    data=example()
+    target=data['incomes'][0] if field in ('gross_amount','foreign_tax_paid') else data
+    target[field]=value
+    with pytest.raises(ValidationError): IncomeTaxCase(**data)
+
+
+@pytest.mark.parametrize('value', ['true', 'false', 1, 0])
+def test_confirmation_cannot_be_coerced(value):
+    data=example();data['facts_confirmed']=value
+    with pytest.raises(ValidationError): IncomeTaxCase(**data)
+
+
+def test_decimal_strings_round_trip_without_float_conversion():
+    data=example();data['incomes'][0]['gross_amount']='123456789012345678.123456'
+    result=IncomeTaxCase(**data).model_dump(mode='json')
+    assert result['incomes'][0]['gross_amount']=='123456789012345678.123456'

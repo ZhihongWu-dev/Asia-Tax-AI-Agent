@@ -32,8 +32,8 @@ export default function IncomeTaxFacts({ current, busy, onUpdate }: {
   async function save(event: React.FormEvent) {
     event.preventDefault(); setError(""); setSaved(false);
     if (form.period_end < form.period_start) { setError(say("结束日期不能早于开始日期。", "End date must not precede start date.")); return; }
-    if (form.subject === "company" && form.incomes.some(item => item.category === "employment")) {
-      setError(say("企业收入不能归类为工资薪金，请核对收入类别。", "A company's income cannot be classified as employment income.")); return;
+    if (form.subject === "company" && form.incomes.some(item => ["employment", "service_remuneration", "author_remuneration"].includes(item.category))) {
+      setError(say("企业收入不能归类为个人工资、劳务报酬或稿酬，请核对收入类别。", "A company's income cannot be classified as personal employment, service or author remuneration.")); return;
     }
     const payload = JSON.stringify([revision, form]);
     if (retry.current.payload !== payload) retry.current = { payload, id: crypto.randomUUID() };

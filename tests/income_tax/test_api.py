@@ -37,6 +37,14 @@ def test_income_api_uses_existing_auth_and_owner_boundary(tmp_path):
         assert full_case["income_tax_status"] == "needs_information"
         assert "income_tax_receipts" not in full_case
         assert "income_tax_history" not in full_case
+        # Rejected inputs must not mutate the saved case or consume its revision.
+        import copy
+        for value in [0.1, True, "0.0000001", "1000000000000000001"]:
+            invalid=copy.deepcopy(payload)
+            invalid.update(revision=1, request_id=str(uuid4()))
+            invalid["inputs"]["incomes"][0]["gross_amount"]=value
+            assert alice.put(url, json=invalid, headers=HEADERS).status_code == 422
+            assert alice.get(url).json()["revision"] == 1
         payload["request_id"] = str(uuid4())
         assert alice.put(url, json=payload, headers=HEADERS).status_code == 409
     store.engine.dispose()
