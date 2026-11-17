@@ -1,0 +1,68 @@
+{
+  "status": "isolated_rule_regression_passed_with_coverage_gaps",
+  "rules": 451,
+  "variables": 94,
+  "predicates": 11,
+  "decisions": 203,
+  "tests": 1362,
+  "failed": 0,
+  "errors": 0,
+  "coverage_gaps": 30,
+  "thai_residence_boundaries": [
+    {
+      "days": 179,
+      "status": "T",
+      "floor": {
+        "value": false,
+        "rules": []
+      },
+      "ceiling": {
+        "value": false,
+        "rules": []
+      }
+    },
+    {
+      "days": 180,
+      "status": "T",
+      "floor": {
+        "value": true,
+        "rules": [
+          "th.residence.individual"
+        ]
+      },
+      "ceiling": {
+        "value": true,
+        "rules": [
+          "th.residence.individual"
+        ]
+      }
+    },
+    {
+      "days": 181,
+      "status": "T",
+      "floor": {
+        "value": true,
+        "rules": [
+          "th.residence.individual"
+        ]
+      },
+      "ceiling": {
+        "value": true,
+        "rules": [
+          "th.residence.individual"
+        ]
+      }
+    }
+  ],
+  "original_rule_tables_unchanged": true,
+  "rule_input_sha256": {
+    "rule.csv": "87dfba901e043ecc68d94bd7b3e2ca7aba9389a62154bc1c7f126760a87077ba",
+    "variable.csv": "c7a5681c39ed601e649fac0317710a76878b83e643957830581e0254dae3de82",
+    "predicate.csv": "47d2915fe435bea1b37cffa80416d36b08fb0475a2e0e0dcd49e531f60886c63",
+    "decision.csv": "362ffc3bd112b775428fe211bc6f90039e9f7b15270fbe1bbd9ac8578c5f4cc8",
+    "rule_test.csv": "61b9650d55b5989398286a2628673dafb41bde7a5d48e452e352ceccf5641851"
+  },
+  "rule_sqlite_sha256": "62ce064763dcd878e1a910e54fcca926dd8b5b779bf1343c661d06cefb79da7e",
+  "database_rebuild_evidence": "current-parameter-rebuild-20261118.json",
+  "runtime_promoted": false
+}
