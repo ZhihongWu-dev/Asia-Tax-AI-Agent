@@ -3,13 +3,13 @@
     "spec_version": "2026-11-10",
     "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
     "uploaded_at": "2026-11-13T03:39:52Z",
-    "overlay_bundle_sha256": "cc1a583377fba5427813bb53117e1e3bbcaccf5bb4da903555dc6d7c559e83fd",
-    "review_sha256": "3f7b0e613fbfbbbccc0508100b4e809f25cfa79437946fbc4d5bf95eca8813ec"
+    "overlay_bundle_sha256": "22d488e35da36073d6437f9c1b47d787aafef627e1afac193d999329dc42462a",
+    "review_sha256": "00b534c191e34be182c1ce015a1e9056ad9add5f4b7e8cb225a64b9ec08ad127"
   },
   "scope": "Current local rule, predicate, decision and parameter sources including factors; not date-filtered. Uses the production blocked_citations function and dedicated read-only role.",
   "counts": {
     "references": 625,
-    "missing": 9,
+    "missing": 8,
     "blocked": 6,
     "local_only_parameters": 55
   },
@@ -19,10 +19,6 @@
     ],
     "jp.nta.consolidated-tax-avoidance-denial#h2": [
       "database/param.csv:jp.anti_abuse.consolidated_corporation_unreasonable_tax_reduction_denial.legacy_60062fc21261"
-    ],
-    "jp.nta.international-taxation-basics#p55": [
-      "database/param.csv:jp.inbound.domestic_corporation_foreign_income_taxable.legacy_ac5a019fdc95",
-      "database/param.csv:jp.inbound.foreign_income_taxable_for_nonpermanent_excluded_resident.legacy_66f01bf210ad"
     ],
     "jp.nta.tax-shelter-countermeasures#h2": [
       "database/decision.csv:jp.absent.individual.anti_abuse"
