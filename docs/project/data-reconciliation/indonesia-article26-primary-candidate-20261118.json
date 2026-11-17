@@ -12,5 +12,15 @@
     "Article 26(1b) permits reduced interest rates by Government Regulation.",
     "Treaty entitlement remains conditional; PMK112/2025 migration is separate.",
     "2022 compilation requires subsequent-amendment verification before current-law approval."
-  ]
+  ],
+  "later_official_consolidation": {
+    "url": "https://jdih.kemenkeu.go.id/api/download/50e4f976-7d46-4bbc-9230-e213a1674197/SDSN%20Pajak.pdf",
+    "file": "database/raw/id/id.tax-law-consolidation-2023.id.pdf",
+    "sha256": "45716e25368d0218b53857841a22decd123897902e6fe24b71a25b17f4336dfc",
+    "pages": 426,
+    "reviewed_pdf_page": 242,
+    "printed_page": 237,
+    "visual_findings": "Article26(1) baseline20 percent gross for listed payments to nonresident non-PE recipients; Article26(1a) beneficial-owner residence; Article26(1b) reduced interest rate possible by Government Regulation; Article26(2) uses deemed net rather than gross. Footer identifies amendment references through Law6/2023.",
+    "status": "archived_and_relevant_page_visually_reviewed_pending_registration_and_later_amendment_check"
+  }
 }
