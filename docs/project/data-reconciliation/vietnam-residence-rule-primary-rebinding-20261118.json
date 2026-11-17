@@ -1,0 +1,72 @@
+{
+  "status": "isolated_primary_rebinding_verified",
+  "changes": [
+    {
+      "table": "rule/decision.csv",
+      "before": {
+        "id": "D-vn-1",
+        "statement": "The Law on Corporate Income Tax has no residence concept: an enterprise established under Vietnamese law is taxed on its income arising in and outside Viet Nam (art. 2(2)(a)); a foreign enterprise only on income arising in Viet Nam or connected with its permanent establishment (art. 2(2)(b)-(d)). The residence rule reads 'established under Vietnamese law' as incorporated_in = 'vn'. The Law has no place-of-effective-management test, so managed_in is not read. Treaty residence for Viet Nam follows from this liability to tax (e.g. hk-vn art. 4(1)(b)); the treaty tie-breakers are not modelled.",
+        "cite_id": "vn.law.cit2025.en#all",
+        "quote": "Enterprises established under the provisions of Vietnamese law shall pay tax on taxable income arising in Viet Nam and taxable income arising outside Viet Nam;"
+      },
+      "after": {
+        "id": "D-vn-1",
+        "statement": "Article2(2)(a) subjects enterprises established under Vietnamese law to tax on taxable domestic and foreign income. The domestic residence rule uses incorporated_in=vn as this inclusion proxy. It does not decide residence under every treaty, effective-management conflicts or tie-breakers; those require the applicable treaty and facts. This decision makes no exhaustive claim that other residence criteria cannot apply under other instruments.",
+        "cite_id": "vn.law.cit67.2025.gazette.vi#2.2",
+        "quote": "a) Doanh nghiệp được thành lập theo quy định của pháp luật Việt Nam nộp\nthuế đối với thu nhập chịu thuế phát sinh tại Việt Nam và thu nhập chịu thuế phát\nsinh ngoài Việt Nam;"
+      }
+    },
+    {
+      "table": "rule/decision.csv",
+      "before": {
+        "id": "D-vn-1",
+        "statement": "Treaty definition of a Vietnamese resident (the same wording appears in Viet Nam's other treaties).",
+        "cite_id": "treaty.hk-vn.2008.en#4.1",
+        "quote": "in the case of Vietnam, any person who, under the laws of Vietnam, is liable to tax therein by reason of his domicile, residence, place of incorporation, place of registration, place of management or any other criterion of a similar nature."
+      },
+      "after": {
+        "id": "D-vn-1",
+        "statement": "Hong Kong-Vietnam treaty Article4(1) residence definition, retained as a treaty-specific reference. Do not extrapolate identical wording or tie-breakers to other treaties.",
+        "cite_id": "treaty.hk-vn.2008.en#4.1",
+        "quote": "in the case of Vietnam, any person who, under the laws of Vietnam, is liable to tax therein by reason of his domicile, residence, place of incorporation, place of registration, place of management or any other criterion of a similar nature."
+      }
+    },
+    {
+      "table": "rule/rule.csv",
+      "before": {
+        "rule_id": "vn.residence.company",
+        "slot_key": "vn|company|residence|*",
+        "condition": "$vn.residence.worldwide_tax_scope = true and incorporated_in = 'vn'",
+        "effect": "resident",
+        "overrides": "",
+        "procedure": "",
+        "cite_ids": "vn.law.cit2025.en#all",
+        "decision_ids": "D-vn-1",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "An enterprise established under Vietnamese law is taxed on its income arising in and outside Viet Nam (art. 2(2)(a)); the Law has no place-of-management test."
+      },
+      "after": {
+        "rule_id": "vn.residence.company",
+        "slot_key": "vn|company|residence|*",
+        "condition": "$vn.residence.worldwide_tax_scope = true and incorporated_in = 'vn'",
+        "effect": "resident",
+        "overrides": "",
+        "procedure": "",
+        "cite_ids": "vn.law.cit67.2025.gazette.vi#2.2",
+        "decision_ids": "D-vn-1",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Article2(2)(a): Vietnamese-law enterprises are subject to tax on taxable domestic and foreign income. This incorporation-based domestic inclusion proxy does not establish complete treaty residence or resolve dual residence."
+      }
+    }
+  ],
+  "scope": "Primary citation and interpretation-scope correction; rule predicate and tax effects unchanged. Original optimizer inputs remain frozen.",
+  "validation": {
+    "rules": 452,
+    "tests": 1368,
+    "failed": 0,
+    "errors": 0,
+    "coverage_gaps": 30
+  }
+}
