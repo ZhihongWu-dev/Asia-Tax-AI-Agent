@@ -1,6 +1,7 @@
 import type { IncomeTaxInput } from './income-tax';
 import { koreaPolicy } from './korea-assessment';
 import { koreaSalaryPolicy } from './korea-salary-assessment';
+import { thaiDividendPolicy } from './thailand-dividend-assessment';
 
 export type IncomeRun = {
   id: string; input_revision: number; created_at: string; status: string; snapshot_hash: string;
@@ -18,6 +19,7 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput, values:Record<string,string>={}): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if(input.jurisdiction==='th' && !company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.some(i=>i.category==='dividend') && input.incomes.every(i=>i.source_jurisdiction==='th'&&['dividend','employment','business','service_remuneration','author_remuneration','royalty','rental'].includes(i.category)))return [thaiDividendPolicy(input,values)];
   if(input.jurisdiction==='kr' && !company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.every(i=>i.source_jurisdiction==='kr'&&i.category==='employment'))return [koreaSalaryPolicy(values)];
   if(input.jurisdiction==='kr' && company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.every(i=>i.source_jurisdiction==='kr'&&['business','interest','rental','royalty'].includes(i.category))) return [koreaPolicy(values)];
   if(input.jurisdiction==='in' && input.residency==='resident' && period==='2026-04-01/2027-03-31' && input.incomes.every(i=>i.source_jurisdiction==='in'&&['business','employment','service_remuneration','author_remuneration','interest','rental','royalty'].includes(i.category))) {
@@ -243,6 +245,10 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
 }
 
 export const resultLabels: Record<string, Label> = {
+  dividend_credit:['股息抵免额','Dividend tax credit'],
+  refundable_dividend_credit:['超过年度税额的可退股息抵免','Refundable dividend credit exceeding annual tax'],
+  separate_final_dividend_tax:['单独结清的股息最终税款','Separate final dividend tax'],
+  annual_assessable_income:['年度应税总收入（含适用股息还原）','Annual assessable income including applicable dividend gross-up'],
   preferential_taxable_income:['优惠计入应税所得额','Taxable income after preferential inclusion'],
   small_company_tax_reduction:['小型微利企业优惠减免税额','Small-low-profit company tax reduction'],
   half_relief_eligible_base:['个体工商户减半优惠适用所得额','Income eligible for individual-operator half relief'],

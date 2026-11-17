@@ -7,6 +7,7 @@ import { koreaBasis } from '../korea-assessment';
 import KoreaCompanyResult from './KoreaCompanyResult';
 import { koreaSalaryBasis } from '../korea-salary-assessment';
 import KoreaSalaryResult from './KoreaSalaryResult';
+import { thaiDividendBasis } from '../thailand-dividend-assessment';
 
 export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
   current: Case; disabled: boolean; onUpdate: (doc: Case) => void;
@@ -50,6 +51,9 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       try {basis=koreaBasis(basis);} catch {setError(say('地方申报单位名称须非空且不能重复。','Local filing names must be nonempty and unique.'));return;}
     }
     if(policy.id==='kr_salary_standard_payroll_2026')basis=koreaSalaryBasis(basis);
+    if(policy.id==='th_dividend_2026') {
+      try {basis=thaiDividendBasis(basis,current.income_tax!);} catch {setError(say('请核对股息分笔数（每项1至100笔，合计不超过1000笔）。','Check dividend tranche counts (1–100 per income, at most1000 total).'));return;}
+    }
     const payload = JSON.stringify([current.revision,basis]);
     if (retry.current.payload !== payload) retry.current={payload,id:crypto.randomUUID()};
     setSaving(true);setError('');

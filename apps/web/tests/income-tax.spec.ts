@@ -1,5 +1,33 @@
 import { test, expect } from '@playwright/test';
 
+for(const election of ['aggregate','final_withholding'])test(`Thailand dividends save and reopen ${election}`,async({page})=>{
+  const form=await openIncome(page);
+  for(const [name,value] of [['Taxpayer','individual'],['Filing jurisdiction','th'],['Tax residency','resident'],['Income category','dividend'],['Income source jurisdiction','th']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Gross income','80000'],['Income description','Two certified dividend tranches'],['Claimed deductions (blank if unknown)','60000'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+  await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+  const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await calc.getByLabel('Applicable regime').selectOption('th_dividend_2026');
+  await calc.getByRole('combobox',{name:'Dividend election',exact:true}).selectOption(election);
+  await calc.getByLabel('Verified expenses and allowances (must match saved amount)',{exact:true}).fill('60000');
+  await calc.getByLabel('Other income prepayments (exclude dividend withholding)',{exact:true}).fill('0');
+  await calc.getByLabel('Income 1: certificate tranche count',{exact:true}).fill('2');
+  for(const n of [1,2]) {
+    await calc.getByLabel(`Income 1, tranche ${n}: dividend before withholding`,{exact:true}).fill('40000');
+    await calc.getByRole('combobox',{name:`Income 1, tranche ${n}: eligible for dividend credit`,exact:true}).selectOption('true');
+    await calc.getByLabel(`Income 1, tranche ${n}: certified corporate rate (%)`,{exact:true}).fill('20');
+    await calc.getByLabel(`Income 1, tranche ${n}: dividend tax withheld`,{exact:true}).fill('4000');
+  }
+  await calc.getByRole('combobox',{name:'Income 1, tranche 2: eligible for dividend credit',exact:true}).selectOption('false');
+  await expect(calc.getByLabel('Income 1, tranche 2: certified corporate rate (%)',{exact:true})).toHaveCount(0);
+  for(const name of ['All certificates, tranche corporate rates and withholding verified','Recipient credit eligibility verified','All taxable domestic dividends and creditable payers included; exempt, foreign and special dividends excluded','Other income and deductions verified under ordinary annual treatment'])await calc.getByRole('combobox',{name:name,exact:true}).selectOption('true');
+  await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified all domestic dividend payers, certificates, election and allowances.');
+  await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
+  const report=page.getByRole('article',{name:'Saved calculation result'});
+  await expect(report.locator('dl > div').filter({hasText:'Calculated refund due'}).locator('dd')).toHaveText(election==='aggregate'?/^18000(?:\.0+)?$/:/^0(?:\.0+)?$/);
+  await expect(report.locator('dl > div').filter({hasText:'Separate final dividend tax'}).locator('dd')).toHaveText(election==='aggregate'?/^0(?:\.0+)?$/:/^8000(?:\.0+)?$/);
+  await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('th-dividend-annual-2026');
+});
+
 for(const birth of ['2016-12-31','2017-01-01'])test(`Korea salary uses child transition ${birth} and saves separate balances`,async({page})=>{
   const form=await openIncome(page);
   for(const [name,value] of [['Taxpayer','individual'],['Filing jurisdiction','kr'],['Tax residency','resident'],['Income category','employment'],['Income source jurisdiction','kr']])

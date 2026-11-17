@@ -63,8 +63,11 @@ The final integration has not been pushed or merged to `main`. The historical
   Case contracts and the calculation adapter now reconcile every dividend
   against indexed certificate tranches and saved deductions, rejecting missing,
   duplicate, foreign or unsupported income. The full income suite passed1082.
-  UI integration and browser acceptance remain required before claiming a usable
-  dividend workflow. The existing
+  The bilingual UI now accepts indexed certificate tranches, clears hidden rates
+  for non-creditable dividends and displays refundable credit and final dividend
+  tax separately. TypeScript checking and two Edge save/reopen scenarios passed
+  (aggregation and final withholding,28.2seconds). Production identity/provider
+  acceptance and return rounding remain separate gates. The existing
   ordinary individual adapter continues to reject dividend income.
 - The original twelve-row optimizer regression is still running. As of the latest
   process check, PID16760 is live and the log reports three successful checks:
