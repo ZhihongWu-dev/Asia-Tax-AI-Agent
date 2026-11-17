@@ -343,5 +343,456 @@
     ],
     "assessment": "Old record contains only navigation chrome; the rebuilt document now has section-level source content. No param/decision/rule references the removed ID in local CSVs. Cloud reviewed replacement remains separate."
   },
-  "runtime_promoted": false
+  "runtime_promoted": false,
+  "indonesia_character_preservation": [
+    {
+      "cite_id": "id.per12.2026.id#17",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": true,
+      "inserted_characters": 2,
+      "inserted_text": "10"
+    },
+    {
+      "cite_id": "id.per12.2026.id#17(5)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": true,
+      "inserted_characters": 2,
+      "inserted_text": "10"
+    },
+    {
+      "cite_id": "id.pp20.2026.id#56",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 6,
+      "inserted_text": "-4--5-"
+    },
+    {
+      "cite_id": "id.pp20.2026.id#56(3)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 3,
+      "inserted_text": "-4-"
+    },
+    {
+      "cite_id": "id.pp20.2026.id#56(4)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 3,
+      "inserted_text": "-5-"
+    },
+    {
+      "cite_id": "id.pp20.2026.id#57",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 14,
+      "inserted_text": "11717-6-947578"
+    },
+    {
+      "cite_id": "id.pp20.2026.id#57(1)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 11,
+      "inserted_text": "17-6-947578"
+    },
+    {
+      "cite_id": "id.pp20.2026.id#57(2)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": true,
+      "inserted_characters": 2,
+      "inserted_text": "17"
+    },
+    {
+      "cite_id": "id.pp20.2026.id#58",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 56,
+      "inserted_text": "-7--8-55155-9-5555-10-555555-11--2--3--4--5--6--7--8--9-"
+    },
+    {
+      "cite_id": "id.pp20.2026.id#58(1)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 3,
+      "inserted_text": "-7-"
+    },
+    {
+      "cite_id": "id.pp20.2026.id#58(3)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 53,
+      "inserted_text": "-8-55155-9-5555-10-555555-11--2--3--4--5--6--7--8--9-"
+    },
+    {
+      "cite_id": "id.pp20.2026.id#59",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 12,
+      "inserted_text": "-10--11--12-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#1",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 3,
+      "inserted_text": "-5-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#1(3)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 3,
+      "inserted_text": "-5-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#13",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": true,
+      "inserted_characters": 1,
+      "inserted_text": "4"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#13(3c)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": true,
+      "inserted_characters": 1,
+      "inserted_text": "4"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#14",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 10,
+      "inserted_text": "-15-56-18-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#14(1)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-15-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#14(6)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 6,
+      "inserted_text": "56-18-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#2",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 11,
+      "inserted_text": "1-6--7-2-8-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#2(3)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 3,
+      "inserted_text": "-7-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#2(8)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "2-8-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#25",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 5,
+      "inserted_text": "7-20-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#25(8)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 5,
+      "inserted_text": "7-20-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#27",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 5,
+      "inserted_text": "8-22-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#27(5e)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 5,
+      "inserted_text": "8-22-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#27C",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 5,
+      "inserted_text": "9-24-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#27C(4)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 5,
+      "inserted_text": "9-24-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#32",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-25-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#32(3)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-25-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#32A",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-26-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#32A(5)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-26-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#34",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-27-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#34(2)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-27-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#40",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-28-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#408",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 32,
+      "inserted_text": "2-99-3-100--101--103--104--2--3-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#408(2)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": true,
+      "inserted_characters": 1,
+      "inserted_text": "2"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#408(3)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-99-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#408(6)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 6,
+      "inserted_text": "3-100-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#408(9)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 21,
+      "inserted_text": "-101--103--104--2--3-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-30-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44(1)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-30-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44A",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-3-1"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44B",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-32-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44B(2a)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-32-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44D",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-33-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 236,
+      "inserted_text": "-34--35--36--37--38--39-23-42-45-43-678-44--45-12-47-3-48-4-50-5-51--52-6-53--54-7-55--56--57-8-58--59--60-9-6-1-62--63--64--66--67-23-68-4-72--74-5-76-6-77-78-80--81--8-2-83--84--85--86--87--88--89--90--91--92--93--94--95--96--97--98-1"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(10)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 17,
+      "inserted_text": "-54-7-55--56--57-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(14)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 84,
+      "inserted_text": "5-76-6-77-78-80--81--8-2-83--84--85--86--87--88--89--90--91--92--93--94--95--96--97-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(16)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 5,
+      "inserted_text": "-98-1"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(1a)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-38-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(1c)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-39-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(2)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 16,
+      "inserted_text": "-34--35--36--37-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(2a)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 14,
+      "inserted_text": "4-50-5-51--52-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(3)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 34,
+      "inserted_text": "23-42-45-43-678-44--45-12-47-3-48-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(3e)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 39,
+      "inserted_text": "-59--60-9-6-1-62--63--64--66--67-23-68-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(6a)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 5,
+      "inserted_text": "6-53-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(6b)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-72-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(7)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 5,
+      "inserted_text": "8-58-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(7a)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": true,
+      "inserted_characters": 1,
+      "inserted_text": "4"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#44E(7b)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-74-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#8",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 4,
+      "inserted_text": "-9-3"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#8(3a)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": false,
+      "inserted_characters": 3,
+      "inserted_text": "-9-"
+    },
+    {
+      "cite_id": "id.uu7.2021.id#8(6)",
+      "old_text_preserved_as_subsequence": true,
+      "insertions_are_digits_only": true,
+      "inserted_characters": 1,
+      "inserted_text": "3"
+    }
+  ],
+  "indonesia_review_limits": "All 64 changed clauses preserve old non-whitespace characters as an ordered subsequence. Additions include legal numbers and page labels; this proves conservation, not legal accuracy or clean pagination. OCR errors and nested amendment article boundaries require separate review."
 }
