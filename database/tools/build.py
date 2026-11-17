@@ -1060,13 +1060,13 @@ def section_suffix(raw):
     return raw.upper(), raw.upper()
 
 
-def slice_sections(doc_id, text, regex, prefix, label_fmt, mode, sub_regex=RE_SUBSEC, max_jump=None, heading_before=None, min_run=3):
+def slice_sections(doc_id, text, regex, prefix, label_fmt, mode, sub_regex=RE_SUBSEC, max_jump=None, heading_before=None, min_run=3, remove_page_numbers=True):
     """English or Thai acts numbered "109.", "109B.", "Section 70 bis", "Article (45)": headings at the start of a line,
     numbers non-decreasing (a letter or bis/ter suffix after the same number), a drop in the number opening a new run
     (a table of contents comes first). The first run of at least three headings whose blocks hold real text is taken.
     Sub-sections "(1)", "(2)" become paragraphs. Checked on real texts (2026-10-23): Revenue Code ch. 3 (rd.go.th),
     Federal Decree-Law 47/2022 (mof.gov.ae)."""
-    lines = clean_lines(text)
+    lines = clean_lines(text, remove_page_numbers=remove_page_numbers)
     heads = []                                               # (line index, base number, suffix order, display number, rest)
     for i, ln in enumerate(lines):
         m = regex.match(ln)
@@ -1277,7 +1277,10 @@ def slice_id(doc_id, text):
     An amending act (UU 36/2008) quotes each replaced article in full under 'Pasal I', so the same slicer yields the
     new wording; 'Pasal I' / 'Pasal II' (the amending frame, roman) and in-sentence references do not match.
     Written on UU 36/2008 (jdih.kemenkeu.go.id HTML, 2026-10-23): 25 articles, Pasal 2 to Pasal 35, 122 ayat."""
-    return slice_sections(doc_id, text, RE_SEC_ID, "", "Pasal %s", "id_pasal", RE_SUBSEC_ID)
+    # Bare numbers can be wrapped statutory references or amounts. Without page
+    # coordinates they cannot safely be classified as pagination.
+    return slice_sections(doc_id, text, RE_SEC_ID, "", "Pasal %s", "id_pasal", RE_SUBSEC_ID,
+                          remove_page_numbers=False)
 
 
 RE_VN_ART = re.compile(r"^Điều\s+(\d{1,3})\s*\.\s*(.*)$")                                # Vietnamese laws and decrees: "Điều 4. Thu nhập được miễn thuế"

@@ -1,0 +1,85 @@
+{
+  "existing_indonesia_statutes": [
+    {
+      "id": "id.tax-law-compilation-2022",
+      "old_mode": "none",
+      "new_mode": "none",
+      "old_count": 0,
+      "new_count": 0,
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_texts": 0
+    },
+    {
+      "id": "id.per25-2018.treaty-procedure",
+      "old_mode": "none",
+      "new_mode": "none",
+      "old_count": 0,
+      "new_count": 0,
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_texts": 0
+    },
+    {
+      "id": "id.dgt.residence-registration",
+      "old_mode": "id_pasal",
+      "new_mode": "id_pasal",
+      "old_count": 465,
+      "new_count": 465,
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_texts": 0
+    },
+    {
+      "id": "id.uu7.2021.id",
+      "old_mode": "id_pasal",
+      "new_mode": "id_pasal",
+      "old_count": 163,
+      "new_count": 163,
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_texts": 52
+    },
+    {
+      "id": "id.pp20.2026.id",
+      "old_mode": "id_pasal",
+      "new_mode": "id_pasal",
+      "old_count": 17,
+      "new_count": 17,
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_texts": 10
+    },
+    {
+      "id": "id.per12.2026.annex.id",
+      "old_mode": "none",
+      "new_mode": "none",
+      "old_count": 0,
+      "new_count": 0,
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_texts": 0
+    },
+    {
+      "id": "id.per12.2026.id",
+      "old_mode": "id_pasal",
+      "new_mode": "id_pasal",
+      "old_count": 85,
+      "new_count": 85,
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_texts": 2
+    }
+  ],
+  "pmk81": {
+    "old_clauses": 2100,
+    "new_clauses": 2100,
+    "citation_ids_unchanged": true,
+    "article94_reference22_restored": true
+  },
+  "generated_inputs_changed": false,
+  "validation": "69 database tests passed. Real PMK81/2024 Article94 now retains wrapped statutory reference22; all2100 extracted citation IDs unchanged.",
+  "limitation": "Indonesian slicing now retains potential standalone page numbers as well as legal values. Plain text has no page coordinates to distinguish them safely. PDF page furniture removal and the large final-article annex remain separate review items; this does not approve all2100 clauses.",
+  "research": "https://github.com/pymupdf/PyMuPDF/discussions/3992: page coordinates are needed to exclude likely page numbers safely. Existing dependency unchanged; no external code copied.",
+  "publication_status": "parser_only_generated_rebuild_pending"
+}
