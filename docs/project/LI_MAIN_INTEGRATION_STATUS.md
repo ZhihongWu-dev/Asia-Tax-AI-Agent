@@ -22,7 +22,7 @@ The final integration has not been pushed or merged to `main`. The historical
   -m pytest tests -m 'not integration' --ignore=tests/database -q` returned
   2068 passed, 1 skipped and 11 deselected in 454.46 seconds. The skip is the unavailable legacy attachment converter; the
   deselections are live-database integration tests. Database extraction tests
-  passed71 separately. These results do not establish live account isolation,
+  passed 76 separately in 12.16 seconds after the Indonesian compilation parser repair. These results do not establish live account isolation,
   provider availability or hosted-worker acceptance.
 - After Thai dividend integration, the complete `apps/web/tests/income-tax.spec.ts`
   browser file passed35 scenarios in2.2minutes using Edge and local fixtures.
@@ -160,9 +160,11 @@ cloud parameter parity, runtime promotion or final business acceptance.
 
 The conditional Vietnam distribution exemption has 1,375 passing isolated rule
 tests and 30 remaining coverage gaps. Explicit probes verify that unknown
-qualification does not produce a definite zero-tax result. Its removal of the
-unconditional outbound-withholding absence record requires a fresh isolated
-SQLite build, which is in progress. The original optimizer remains running with
+qualification does not produce a definite zero-tax result. The fresh isolated SQLite build and all seven CSV tables now match exactly,
+with 355 documents, 45,295 clauses, 811 parameters and 43 absence records.
+The build has zero errors, 87 warnings, 5 category gaps, 36 slot gaps and 2
+blocked downloads. The 1,375 rule tests also passed against this fresh build.
+See [parity evidence](data-reconciliation/isolated-vietnam-distribution-build-parity-20261118.json). The original optimizer remains running with
 four completed cases and no checker failures in those four; its full result is
 still pending.
 

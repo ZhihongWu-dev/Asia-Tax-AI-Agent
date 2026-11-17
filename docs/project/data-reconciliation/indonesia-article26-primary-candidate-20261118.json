@@ -37,5 +37,13 @@
     "preserve_original_2022_document": true,
     "effective_date_policy": "Do not give entire consolidated book one inferred enactment date; statute amendments and per-parameter applicability require independent dates.",
     "current_build": "Do not modify staged inputs while id-treaty-full-rebuild runs."
+  },
+  "parser_review": {
+    "observed_failure": "Generic single-act slicer produced only 40 article groups from the multi-act book and did not provide the reviewed uppercase PASAL 26 page locator.",
+    "repair": "Document-specific original page slicing; 426 original pages, 425 nonempty page citations with blank-page numbering preserved.",
+    "verified_locator": "id.tax-law-consolidation-2023.id#p242",
+    "validation": "All nonempty extracted page texts match their original page exactly after outer whitespace trimming. All 76 database tests passed in 12.16 seconds.",
+    "scope": "Parser prepared; document catalog registration and primary-law parameter migration still pending. No current-law approval inferred.",
+    "reference": "https://github.com/pymupdf/PyMuPDF/blob/main/docs/tutorial.rst"
   }
 }

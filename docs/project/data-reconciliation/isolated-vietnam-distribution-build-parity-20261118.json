@@ -1,0 +1,50 @@
+{
+  "status": "seven_tables_exact_parity_verified",
+  "integrity_check": "ok",
+  "tables": [
+    {
+      "table": "jurisdiction",
+      "csv_rows": 11,
+      "sqlite_rows": 11,
+      "all_fields_equal": true
+    },
+    {
+      "table": "treaty",
+      "csv_rows": 55,
+      "sqlite_rows": 55,
+      "all_fields_equal": true
+    },
+    {
+      "table": "doc",
+      "csv_rows": 355,
+      "sqlite_rows": 355,
+      "all_fields_equal": true
+    },
+    {
+      "table": "clause",
+      "csv_rows": 45295,
+      "sqlite_rows": 45295,
+      "all_fields_equal": true
+    },
+    {
+      "table": "param",
+      "csv_rows": 811,
+      "sqlite_rows": 811,
+      "all_fields_equal": true
+    },
+    {
+      "table": "files",
+      "csv_rows": 754,
+      "sqlite_rows": 754,
+      "all_fields_equal": true
+    },
+    {
+      "table": "decision",
+      "csv_rows": 43,
+      "sqlite_rows": 43,
+      "all_fields_equal": true
+    }
+  ],
+  "sqlite_sha256": "244feaf99b7086ac99706f8f7fd804044d6a638ab5158c20846856b64ca1c3e4",
+  "scope": "Isolated build after conditional Vietnam distributions; not runtime promotion or full business acceptance."
+}

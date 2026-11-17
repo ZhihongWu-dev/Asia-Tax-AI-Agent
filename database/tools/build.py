@@ -1920,6 +1920,13 @@ def slice_doc(row, text, pages):
     """Pick the slicer by jurisdiction, type and format; the first one that cuts the text wins."""
     doc_id, typ, jur, kind = row["id"], row["type"], row["jur"], row["real_kind"]
     raw = (ROOT / row["file"]).read_bytes() if kind in ("html", "htm", "xml") else b""
+    if doc_id == "id.tax-law-consolidation-2023.id":
+        # This official compilation contains several acts with reused article
+        # numbers and mixed PASAL/Pasal headings. A single-act parser silently
+        # selects only some headings and combines unrelated legislation.
+        if kind != "pdf" or not pages:
+            raise ValueError("Indonesian 2023 compilation requires original PDF pages")
+        return slice_pages(doc_id, pages)
     if row.get("text_status") == "xfa_template":
         return slice_xfa(doc_id, text)
     if kind in ("html", "htm") and RE_SSO_PAGE.search(raw):                           # Singapore Statutes Online
