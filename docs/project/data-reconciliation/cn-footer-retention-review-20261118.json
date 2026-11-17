@@ -1,0 +1,67 @@
+{
+  "review_date": "2026-11-18",
+  "decision": "retain_existing_cloud_base_reject_footer_only_replacements",
+  "base_uploaded_at": "2026-11-13T03:39:52Z",
+  "main_clause_blob": "2899e45a62f2a59231f7e568ca33e87821cf9d12",
+  "main_document_blob": "75f89e6e85ac04e873a023fe57c2c22fc03f4638",
+  "before_review_sha256": "26900630d18ef4ef62dcda13fb41d0207769e7cb1a8d065b79e5c20336f048d9",
+  "verification": "For every item, the cloud text is an exact character-for-character prefix of the pinned main clause. The entire removed suffix was inspected and contains only printing/download/login/navigation/footer material. Local original bytes independently match both main and cloud document hashes. No operative clause or attachment content is removed.",
+  "items": [
+    {
+      "cite_id": "cn.cs.2009-125#i16",
+      "url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203574/content.html",
+      "original_sha256": "ba5b09a72ae33414c331267b540af0bf77db3cb061cad6b57b2172039916700c",
+      "cloud_text_sha256": "5e47eccfeb993290380b2be04de5ebd3d26a4109f59fa9e1d390a45366531993",
+      "main_text_sha256": "892d736a2b48c8ebeddba82e9268b2ffb359132942c3f70de9a5da3e1e7b7617",
+      "scope": "Retain original commencement clause, signing date and the complete fifteen-country attachment. Current STA page confirms these contents. This does not approve every foreign-tax-credit rule or imply the document has no later amendments."
+    },
+    {
+      "cite_id": "cn.gsf.2009-82#i9",
+      "url": "https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194043/content.html",
+      "original_sha256": "9e6dee91bc2b40db5124fc6f9004cdf8d866b08ab954d6f15203d00fdd6b47df",
+      "cloud_text_sha256": "935a11551eaba042d261cbb8d20add60f144fe04636bf72457d8de98f38d68dd",
+      "main_text_sha256": "fbc29dec4a45d7cda275240828e38e555d30c252b359bf532e915d0668b5fc71",
+      "scope": "Retain only the original commencement/signature clause. Direct page opening timed out twice; current indexed STA content confirms this clause and expressly marks the document amended, including repeal of specified Article7(1) wording from2017-12-29. No approval of the historical Article7 procedure is implied."
+    },
+    {
+      "cite_id": "cn.sta.2014-09#i5",
+      "url": "https://fgk.chinatax.gov.cn/zcfgk/c100012/c5199475/content.html",
+      "original_sha256": "c0ede28778e3e55780a4d08da97097eb3c113aacac6f14b148f0b8c67a466f1e",
+      "cloud_text_sha256": "9a4e88e317d075e05180c793de908104347c66c0ea6141caab7dbd17317dad6f",
+      "main_text_sha256": "6519cd2f61f6cb5f1aa376879405a2f2e2d61346d535f107e4e9501cc7cf5724",
+      "scope": "Retain applicability to2013 and subsequent tax-year returns, closing declaration and signature. Current STA page matches the clause and labels the notice fully effective. This is source retention, not taxpayer residency determination."
+    }
+  ],
+  "preservation": "Only source_review decisions change. Existing clause text, document metadata, originals, rules and parameters remain unchanged; candidate/main originals remain available for audit.",
+  "cloud_update": "applied_2026-11-17T17:16:19.553570Z",
+  "application_verification": {
+    "old_pin_rejected": true,
+    "chat_exact_sources_verified": 3,
+    "planning_complete_sources_verified": 3,
+    "source_bytes_unchanged": true,
+    "after_snapshot": {
+      "spec_version": "2026-11-10",
+      "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+      "uploaded_at": "2026-11-13T03:39:52Z",
+      "overlay_bundle_sha256": "ca5f72ed8286e43576ce09e91afba09f4985d357dd17fe4eef0297a1d563842f",
+      "review_sha256": "848048e4079dbc875c4e229715253af1b21801f22f75d2e9c5bd5bfdbc33a90e"
+    },
+    "review_counts": [
+      {
+        "difference": "different_text",
+        "review_status": "candidate",
+        "count": 19
+      },
+      {
+        "difference": "different_text",
+        "review_status": "rejected",
+        "count": 6
+      },
+      {
+        "difference": "main_only",
+        "review_status": "candidate",
+        "count": 107
+      }
+    ]
+  }
+}
