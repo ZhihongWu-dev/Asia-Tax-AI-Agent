@@ -5,8 +5,13 @@ municipal treatment, rounding and special income still need assessment logic.
 No API policy is enabled by this module.
 """
 from decimal import Decimal
+from copy import deepcopy
+import json
+from pathlib import Path
 
 from .arithmetic import Band, marginal_tax
+
+_SOURCES = json.loads(Path(__file__).with_name('kr_2026_sources.json').read_text(encoding='utf-8'))
 
 
 def _schedule(rows):
@@ -54,6 +59,7 @@ Personal inputs are comprehensive-income bases, not retirement/capital gains.
     national_tax, national_bands = marginal_tax(national_taxable_base,national)
     local_tax, local_bands = marginal_tax(local_taxable_base,local)
     return dict(currency='KRW',tax_year=tax_year,subject=subject,
+        sources=deepcopy(_SOURCES[subject]),
         national_gross_tax=national_tax,local_gross_tax=local_tax,
         national_bands=national_bands,local_bands=local_bands,
         stage='gross_schedules_before_credits_minimum_additional_tax_and_rounding')

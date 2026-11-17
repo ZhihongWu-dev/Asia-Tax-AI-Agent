@@ -1,0 +1,70 @@
+{
+  "company": [
+    {
+      "doc_id": "kr.corporate-tax-act.20260701.ko",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsId=001563",
+      "sha256": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+      "provisions": [
+        "Article55; Act21217 supplementary Articles1,5"
+      ]
+    },
+    {
+      "doc_id": "kr.local-tax.article103-20.2026",
+      "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1031177407",
+      "sha256": "69a26326504eb7dd9c952c39f1d567fa1ef886fa77a75104995bfb5319623fda",
+      "provisions": [
+        "Article103-20"
+      ]
+    },
+    {
+      "doc_id": "kr.local-tax.amendment21308.2025",
+      "url": "https://law.go.kr/LSW/lsRvsDocListP.do?chrClsCd=010202&lsId=001649&lsRvsGubun=all",
+      "sha256": "ae2d538485753342358dc8c5cef661dd7385aabc2b42df8143bf5ff9dc071136",
+      "provisions": [
+        "Act21308 supplementary Articles1,10,11,12"
+      ]
+    },
+    {
+      "doc_id": "kr.local-tax.table.company-ordinary",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=160224293",
+      "sha256": "4856297a4fc5feaba4cd39a2c84e40edfb8016a98d60f7cf2d1e8393549b8363",
+      "provisions": [
+        "Official embedded rate-table image"
+      ]
+    },
+    {
+      "doc_id": "kr.local-tax.table.company-special",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=160224329",
+      "sha256": "c37647980d0ab7165a607de6d4db5dd328da15aead226ab6358dc88aba0d06c6",
+      "provisions": [
+        "Official embedded rate-table image"
+      ]
+    }
+  ],
+  "individual": [
+    {
+      "doc_id": "kr.income-tax-act.20260701.ko",
+      "url": "https://www.law.go.kr/lsInfoP.do?ancYnChk=0&lsId=001565",
+      "sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+      "provisions": [
+        "Article55(1)"
+      ]
+    },
+    {
+      "doc_id": "kr.local-tax.article92.2026",
+      "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1026500915",
+      "sha256": "5f5ebe93c293d98d55a08fa561b6f1336a5dbfda98696f9119ee10ade27a9978",
+      "provisions": [
+        "Article92(1)"
+      ]
+    },
+    {
+      "doc_id": "kr.local-tax.table.personal",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=125883797",
+      "sha256": "0bc147fb6a8670707ffb97584c7f308766de31cb2dfca5aa4bf66665ba4874b7",
+      "provisions": [
+        "Official embedded rate-table image"
+      ]
+    }
+  ]
+}

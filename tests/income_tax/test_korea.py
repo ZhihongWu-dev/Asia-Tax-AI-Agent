@@ -46,6 +46,17 @@ def test_local_base_is_independent():
     assert 'final_tax' not in r
 
 
+def test_provenance_preserves_commencement_and_original_table_versions():
+    sources=compute('1')['sources']
+    assert any(s['doc_id']=='kr.local-tax.amendment21308.2025' for s in sources)
+    assert any(s['sha256']=='4856297a4fc5feaba4cd39a2c84e40edfb8016a98d60f7cf2d1e8393549b8363' for s in sources)
+    sources[0]['provisions'].clear()
+    assert compute('1')['sources'][0]['provisions']
+    personal=compute('1',subject='individual',article60_2_1_1_company=None)['sources']
+    assert not any('corporate' in s['doc_id'] for s in personal)
+    assert any(s['doc_id']=='kr.local-tax.table.personal' for s in personal)
+
+
 @pytest.mark.parametrize('changes',[dict(tax_year=2025),dict(tax_year=True),
     dict(subject='other'),dict(article60_2_1_1_company=1),
     dict(article60_2_1_1_company=None),dict(annual_standard_schedule_confirmed=False),

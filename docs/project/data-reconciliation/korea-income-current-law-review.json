@@ -42,6 +42,15 @@
       "sha256": "5f5ebe93c293d98d55a08fa561b6f1336a5dbfda98696f9119ee10ade27a9978",
       "bytes": 14996,
       "status": "downloaded_html_image_tables_require_separate_review"
+    },
+    {
+      "doc_id": "kr.local-tax.amendment21308.2025",
+      "url": "https://law.go.kr/LSW/lsRvsDocListP.do?chrClsCd=010202&lsId=001649&lsRvsGubun=all",
+      "sha256": "ae2d538485753342358dc8c5cef661dd7385aabc2b42df8143bf5ff9dc071136",
+      "provisions": [
+        "Act21308 supplementary Articles1,10,11,12"
+      ],
+      "status": "reviewed_selected_amendment_not_full_history"
     }
   ],
   "findings": [
@@ -50,10 +59,11 @@
     "Resident comprehensive personal Article55 national bands:14m6%,50m15%,88m24%,150m35%,300m38%,500m40%,1bn42%,excess45%. Established tax base is not gross pay; financial-income comparison and special categories remain separate.",
     "Local Tax Act103-20 has independent corporate standard schedules1/2/2.2/2.5%, with special corporations starting2%. Article103-19 foreign-tax adjustments can change local base. Do not multiply net national liability by10%.",
     "Local Tax Act92 has independent personal standard schedule0.6/1.5/2.4/3.5/3.8/4/4.2/4.5%. Local credits, base, municipal rules and effective dates require further verification.",
-    "Visually reviewed all three local-tax table images from the official article HTML. Ordinary/specified company schedules and all eight personal brackets agree with their table amounts. Gross schedule helpers now calculate national/local tax from separate bases; no final assessment/API enablement."
+    "Visually reviewed all three local-tax table images from the official article HTML. Ordinary/specified company schedules and all eight personal brackets agree with their table amounts. Gross schedule helpers now calculate national/local tax from separate bases; no final assessment/API enablement.",
+    "Act21308 supplementary Articles1/11 apply amended corporate local rates to business years beginning on/after2026-01-01. Article10 instead applies Article103-19(3)-(5) base amendments to returns filed after commencement; Article12 applies revised filing rule to business years starting after commencement. These triggers must remain distinct."
   ],
   "pending": [
-    "Review full local commencement provisions, municipal applicability and remaining amendment chain (rate-table image review complete)",
+    "Review remaining amendment chain, local credits and municipal applicability; corporate rate commencement and rate images verified",
     "Review current amendment chain and Article60-2 classification",
     "Review national/local deductions, credits, minimum tax and rounding separately",
     "Implement both national/local calculations and business acceptance cases",
