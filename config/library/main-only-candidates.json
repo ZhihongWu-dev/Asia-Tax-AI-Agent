@@ -2829,6 +2829,36 @@
         "evidence_file": "docs/project/data-reconciliation/japan-guidance-section-review-20261118.json",
         "source_raw_blob": "84d13dc8dc240f54ad18ada8ca061595eafbc1de"
       }
+    },
+    {
+      "cite_id": "jp.nta.international-taxation-basics#p55",
+      "clause": {
+        "cite_id": "jp.nta.international-taxation-basics#p55",
+        "doc_id": "jp.nta.international-taxation-basics",
+        "label": "p.55",
+        "text": "第５章 国 際 課 税 \n－44－ \n第５章 国際課税 \n \n第１節 国際課税の概要 \n 現在、我が国には多くの外国人が居住し、多くの外国企業が事業活動を行っており、\n反対に多くの日本人が国外で就業し、日本企業が国外で事業を展開している。これに対\nし、我が国又は諸外国がどのように課税するかは、それらの個人、企業の活動の成果が\nどちらの国の歳入に寄与するかという点と、場合によっては二重課税となるおそれがあ\nるという点で重要な問題である。また、所得に対する課税の在り方は、人の交流や資本\nの国際的な展開に影響を与えることになる。このような、国際的な経済活動に対する課\n税を国際課税という。 \n 本章では、非居住者・外国法人に対する課税についての我が国の所得税法と法人税法の原則的な制\n度、租税条約、外国税額控除、外国子会社合算税制、移転価格税制、過少資本税制、過大支払利子税\n制及び外国子会社配当益金不算入制度について概説する。 \n第２節 非居住者・外国法人 \n１ 非居住者 \n所得税の個人の納税義務者は、居住者と非居住者に区分される。居住者とは、国内に住所を有し、\n又は現在まで引き続いて１年以上居所を有する個人であり、非居住者とは、居住者以外の個人であ\nる。居住者であるか否かについて、国籍は直接的には関係しない。 \n 非永住者を除く居住者は、外国で得た所得を含む全ての所得が課税所得となり、非居住者は、我\nが国の国内に所得の発生源泉地がある国内源泉所得が課税所得となる。 \n 非居住者に対する課税は、非居住者の態様により、課税所得となる国内源泉所得の範囲と課税方\n式を異にしている。すなわち、非居住者が国内に恒久的施設を有し、その恒久的施設に帰せられる\nべき所得を有する場合には、その所得は国内源泉所得として居住者と同様に総合課税の規定による\n課税が行われ、恒久的施設に帰せられるべき所得以外の国内源泉所得がある場合には、その国内源\n泉所得を課税所得として、所得の種類に応じた課税が行われる。 \n 恒久的施設を有しない非居住者は、恒久的施設に帰せられるべき所得等以外の国内源泉所得が課\n税所得になり、所得の種類に応じた課税が行われる。 \n２ 外国法人 \n法人税の納税義務者は、内国法人と外国法人に区分される。内国法人とは、国内に本店又は主たる\n事務所を有する法人であり、外国法人とは、内国法人以外の法人である。株主又は出資者が外国法人\n又は非居住者であるか否かは、内国法人であるか否かと関係しない。 \n 内国法人は、外国で得た所得を含む全ての所得が課税対象となり、外国法人は、我が国の国内に所\n得の源泉がある国内源泉所得が課税対象となる。 \n持出可"
+      },
+      "document": {
+        "id": "jp.nta.international-taxation-basics",
+        "jur": "jp",
+        "type": "guidance",
+        "category": "1;2",
+        "title": "税法入門（令和8年度版）第5章 国際課税",
+        "url": "https://www.nta.go.jp/about/organization/ntc/kohon/nyuumon/pdf/all.pdf",
+        "file": "raw/jp/jp.nta.international-taxation-basics.pdf",
+        "sha256": "8365bf85820e84074feba4b1416dee6c4cd538ef7b9f4547e898dac02be0254b",
+        "lang": "ja",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "downloaded with requests 2026-10-28T08:01:12Z; precise PDF page55 (printed44) in the2026 Tax Law Introduction textbook; source edition is not a statutory commencement date."
+      },
+      "text_sha256": "d17291ef00dae1cbd161556c3853078b7dab10d72a1e14971f82cba9a1e379f0",
+      "source_commit": "0f25ad7be9c88aae5643a6099245ec7040781f76",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence_file": "docs/project/data-reconciliation/japan-international-scope-source-20261118.json",
+        "source_raw_blob": "9c77264fd1a117a9d310a8c30744d37b4585981b"
+      }
     }
   ]
 }
