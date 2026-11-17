@@ -1,5 +1,5 @@
 {
-  "status": "isolated_source_registration_scoped_validation_passed",
+  "status": "scoped_parameter_applied_pending_validation",
   "reviewed_on": "2026-11-18",
   "sources": [
     {
@@ -51,5 +51,38 @@
     "gaps": 0,
     "log": "isolated-rebuild-20261118/th-remittance-check.log"
   },
-  "limitation": "Scoped checks do not promote full generated CSV/SQLite or connect the remittance component to the business workflow."
+  "limitation": "Scoped checks do not promote full generated CSV/SQLite or connect the remittance component to the business workflow.",
+  "retired_overview_parameter": {
+    "param_id": "th.inbound.foreign_income_taxable_on_remittance",
+    "scope": "th",
+    "subject": "individual",
+    "slot": "inbound",
+    "name": "foreign_income_taxable_on_remittance",
+    "value": "yes",
+    "unit": "bool",
+    "cite_id": "th.rd.pit#h1",
+    "quote": "A resident of Thailand is liable to pay tax on income from sources in Thailand as well as on the portion of income from foreign sources that is brought into Thailand.",
+    "effective_from": "",
+    "effective_to": "",
+    "note": "This official overview frames the rule as taxation of the portion of foreign-source income brought into Thailand.",
+    "changed_on": "",
+    "superseded_by": ""
+  },
+  "replacement_parameter": {
+    "param_id": "th.inbound.foreign_remittance_scope",
+    "scope": "th",
+    "subject": "individual",
+    "slot": "inbound",
+    "name": "foreign_remittance_scope",
+    "value": "Foreign employment/business/property income arising from2024-01-01 in a Thai-resident income year is included in the year remitted to Thailand, subject to applicable reliefs.",
+    "unit": "text",
+    "cite_id": "th.rd.p161-2566#c1",
+    "quote": "ข้อ 1  บุคคลซึ่งเป็นผู้อยู่ในประเทศไทยตามมาตรา 41 วรรคสาม แห่งประมวลรัษฎากร\nที่มีเงินได้พึงประเมินเนื่องจากหน้าที่งานหรือกิจการที่ทำในต่างประเทศ หรือเนื่องจากทรัพย์สินที่อยู่ใน\nต่างประเทศ ตามมาตรา 41 วรรคสอง แห่งประมวลรัษฎากร ในปีภาษีดังกล่าว และได้นำเงินได้พึงประเมินนั้น\nเข้ามาในประเทศไทยในปีภาษีใดก็ตาม ให้บุคคลนั้นมีหน้าที่ต้องนำเงินได้พึงประเมินนั้นมารวมคำนวณ\nเพื่อเสียภาษีเงินได้ ตามมาตรา 48 แห่งประมวลรัษฎากร ในปีภาษีที่ได้นำเงินได้พึงประเมินนั้นเข้ามา\nในประเทศไทย\n“ความในวรรคหนึ่งมิให้ใช้บังคับสำหรับเงินได้พึงประเมินที่เกิดขึ้นก่อนวันที่ ๑ มกราคม\nพ.ศ. ๒๕๖๗”\n(แก้ไขเพิ่มเติมโดยคำสั่งกรมสรรพากร ที่ ป.๑๖๒/๒๕๖๖ สั่ง ณ วันที่  ๒๐  พฤศจิกายน  พ.ศ.  ๒๕๖๖)",
+    "effective_from": "2024-01-01",
+    "effective_to": "",
+    "note": "P161 clause1 as amended by P162. Income-year residence uses Section41(3), at least180days; pre2024 income excluded from this interpretation. Clause3 commences remittance treatment from2024-01-01. Trace income separately from capital; treaty/exemption/foreign-credit eligibility is separate. Historical pre2024 treatment is not determined by this parameter.",
+    "changed_on": "2026-11-18",
+    "superseded_by": ""
+  },
+  "retirement_reason": "An undated boolean cannot express income-year residence, income vintage and remittance-year applicability. Preserve original here without treating it as an approved historical rule."
 }
