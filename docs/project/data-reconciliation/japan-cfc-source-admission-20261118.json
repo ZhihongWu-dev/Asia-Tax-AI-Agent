@@ -1,0 +1,29 @@
+{
+  "status": "cloud_admitted_and_exact_read_verified",
+  "cite_id": "jp.mof.cfc-overview#all",
+  "source_commit": "78a037f522d1636541c2e5fcdd1145e735f18124",
+  "before_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "73cf9e9f8191dd1e9cb9e2befb26a2e26de6aff5c96037b30f0ac88ef76e0a2f",
+    "review_sha256": "df050ff61f8e6178f1d925bb0a484ff39ff2696a6efeb2b658b8c95e063e80a1"
+  },
+  "archive_sha256": "4d66ef028063f6a5f6aedafdb19b985a8298c53fe2f7c6364bc849e072e0d5f1",
+  "current_download_sha256": "65f9c0ff3d3cf895eba24883df48f177103d6041d1cdb3e07b8c15c1680072f5",
+  "text_sha256": "c25a3fc5676658c399925f710249604e9d9c128f12a9bb33ce7c9415002c0285",
+  "candidate_sha256": "27eb8d9a8e97abe643db59a2f6d3c4bffa407a60af1cfd7cbafde61878d537b6",
+  "candidate_reconstructs_archive_ignoring_whitespace": true,
+  "current_full_page_text_matches_archive_ignoring_whitespace": true,
+  "scope": "Current MOF overview only: company-level and passive-income inclusion, economic activity criteria and27%/20% exemption ratios retained. Not a complete CFC calculation, ownership determination, statutory effective-period review or approval of all associated parameter/rule interpretations.",
+  "raw_difference": "Fresh HTML bytes differ, but complete BeautifulSoup text matches archived HTML ignoring whitespace. The candidate retains the archived source hash and complete text.",
+  "after_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "73cf9e9f8191dd1e9cb9e2befb26a2e26de6aff5c96037b30f0ac88ef76e0a2f",
+    "review_sha256": "383edd2aeb93146677a0fcda91638a12dc5bd1fc27a0495b5d8be06fc926bbec"
+  },
+  "exact_complete_text_verified": true,
+  "old_pin_rejected": true
+}

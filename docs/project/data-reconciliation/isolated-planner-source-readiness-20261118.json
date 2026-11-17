@@ -1,37 +1,26 @@
 {
-  "scope": "Prospective isolated CSV parameters/decisions plus unchanged runtime rule/predicate sources; no runtime promotion. Refreshed after Indonesian source admission.",
+  "scope": "Prospective isolated CSV parameters/decisions and unchanged runtime rule/predicate sources, after Thai parameter rebindings and Japanese CFC overview admission; not runtime promotion.",
   "snapshot": {
     "spec_version": "2026-11-10",
     "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
     "uploaded_at": "2026-11-13T03:39:52Z",
-    "overlay_bundle_sha256": "e8392430ca3348b1d09d680cfb3de03e4ba5e21ffcd4a0f0c574a911c4bb5049",
-    "review_sha256": "3b2e71d35e189de2cd39b8d6d90669dd4fb90cc98b5a9756be700db5b271ae7d"
+    "overlay_bundle_sha256": "73cf9e9f8191dd1e9cb9e2befb26a2e26de6aff5c96037b30f0ac88ef76e0a2f",
+    "review_sha256": "383edd2aeb93146677a0fcda91638a12dc5bd1fc27a0495b5d8be06fc926bbec"
   },
   "counts": {
-    "references": 626,
-    "missing": 5,
-    "blocked": 6
+    "references": 630,
+    "missing": 3,
+    "blocked": 5
   },
   "missing": {
-    "jp.mof.cfc-overview#all": [
-      "param.csv:jp.cfc.foreign_subsidiary_income_attributed"
-    ],
     "th.rd.cit#lead": [
-      "decision.csv:th.absent.company.cfc",
-      "param.csv:th.final.cit_return_days",
-      "param.csv:th.outbound_wht.foreign_company_return_days"
+      "decision.csv:th.absent.company.cfc"
     ],
     "th.rd.pit#h1": [
-      "decision.csv:th.absent.individual.cfc",
-      "param.csv:th.inbound.foreign_income_taxable_on_remittance"
-    ],
-    "th.rd.pit#h12": [
-      "param.csv:th.final.individual_return_deadline",
-      "param.csv:th.outbound_wht.payer_withholding_required"
+      "decision.csv:th.absent.individual.cfc"
     ],
     "th.rd.transfer-pricing-legislation#all": [
-      "decision.csv:th.absent.individual.anti_abuse",
-      "param.csv:th.anti_abuse.transfer_pricing_market_price_adjustment"
+      "decision.csv:th.absent.individual.anti_abuse"
     ]
   },
   "blocked": {
@@ -45,17 +34,13 @@
       "param.csv:id.outbound_wht.treaty_rate_available",
       "rule.csv:id.outbound_wht.statutory"
     ],
-    "jp.mof.cfc-overview#all": [
-      "param.csv:jp.cfc.foreign_subsidiary_income_attributed"
-    ],
     "kr.nts.global-income-faq#all": [
       "param.csv:kr.final.global_income_taxable.legacy_ff9c51667058",
       "param.csv:kr.inbound.worldwide_income_reportable.legacy_55f79a66d148",
       "param.csv:kr.residence.residence_years_min.legacy_04bb728aea1c"
     ],
     "th.rd.transfer-pricing-legislation#all": [
-      "decision.csv:th.absent.individual.anti_abuse",
-      "param.csv:th.anti_abuse.transfer_pricing_market_price_adjustment"
+      "decision.csv:th.absent.individual.anti_abuse"
     ],
     "vn.law.cit2025.en#all": [
       "decision.csv:D-vn-1",
