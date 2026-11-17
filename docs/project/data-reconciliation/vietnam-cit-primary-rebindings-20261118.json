@@ -1,0 +1,184 @@
+{
+  "status": "isolated_parameter_rebindings_applied_pending_scoped_validation",
+  "changes": [
+    {
+      "before": {
+        "param_id": "vn.final.cit_rate",
+        "scope": "vn",
+        "subject": "company",
+        "slot": "final",
+        "name": "cit_rate",
+        "value": "20",
+        "unit": "%",
+        "cite_id": "vn.law.cit2025.en#all",
+        "quote": "The standard corporate income tax rate is 20 percent, except for cases specified in Clauses 2, 3, and 4 of this Article and targets enjoying tax rate incentives specified in Article 13 of this Law.",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Standard company rate, subject to the listed statutory exceptions and incentives. The law applies from the 2025 corporate income tax period.",
+        "changed_on": "",
+        "superseded_by": ""
+      },
+      "after": {
+        "param_id": "vn.final.cit_rate",
+        "scope": "vn",
+        "subject": "company",
+        "slot": "final",
+        "name": "cit_rate",
+        "value": "20",
+        "unit": "%",
+        "cite_id": "vn.law.cit67.2025.gazette.vi#10.1",
+        "quote": "1. Thuế suất thuế thu nhập doanh nghiệp là 20%, trừ trường hợp quy định tại\ncác khoản 2, 3 và 4 Điều này và đối tượng được ưu đãi về thuế suất quy định tại\nĐiều 13 của Luật này.",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Standard company rate, subject to the listed statutory exceptions and incentives. The law applies from the 2025 corporate income tax period. Authentic original Law67, Official Gazette965-966; Article19(1) distinguishes general commencement2025-10-01 from application from the2025 CIT period. Existing effective_from denotes tax-period applicability, not enactment date. Later exemptions/incentives must be checked separately.",
+        "changed_on": "2026-11-18",
+        "superseded_by": ""
+      }
+    },
+    {
+      "before": {
+        "param_id": "vn.inbound.foreign_income_taxable",
+        "scope": "vn",
+        "subject": "company",
+        "slot": "inbound",
+        "name": "foreign_income_taxable",
+        "value": "yes",
+        "unit": "bool",
+        "cite_id": "vn.law.cit2025.en#all",
+        "quote": "Enterprises established under the provisions of Vietnamese law shall pay tax on taxable income arising in Viet Nam and taxable income arising outside Viet Nam;",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Worldwide taxable-income rule for enterprises established under Vietnamese law.",
+        "changed_on": "",
+        "superseded_by": ""
+      },
+      "after": {
+        "param_id": "vn.inbound.foreign_income_taxable",
+        "scope": "vn",
+        "subject": "company",
+        "slot": "inbound",
+        "name": "foreign_income_taxable",
+        "value": "yes",
+        "unit": "bool",
+        "cite_id": "vn.law.cit67.2025.gazette.vi#2.2",
+        "quote": "a) Doanh nghiệp được thành lập theo quy định của pháp luật Việt Nam nộp\nthuế đối với thu nhập chịu thuế phát sinh tại Việt Nam và thu nhập chịu thuế phát\nsinh ngoài Việt Nam;",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Worldwide taxable-income rule for enterprises established under Vietnamese law. Authentic original Law67, Official Gazette965-966; Article19(1) distinguishes general commencement2025-10-01 from application from the2025 CIT period. Existing effective_from denotes tax-period applicability, not enactment date. Later exemptions/incentives must be checked separately.",
+        "changed_on": "2026-11-18",
+        "superseded_by": ""
+      }
+    },
+    {
+      "before": {
+        "param_id": "vn.inbound.foreign_tax_credit_cap",
+        "scope": "vn",
+        "subject": "company",
+        "slot": "inbound",
+        "name": "foreign_tax_credit_cap",
+        "value": "vietnamese_cit_on_same_income",
+        "unit": "text",
+        "cite_id": "vn.law.cit2025.en#all",
+        "quote": "Vietnamese enterprises investing abroad that earn income from overseas production and business activities in a tax period shall have the corporate income tax paid under the laws of the recipient country deducted from corporate income tax payable in Viet Nam, provided that the deduction does not exceed corporate income tax calculated under Viet Nam's corporate income legislation.",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Foreign corporate tax credit for the stated overseas activities, capped at the Vietnamese corporate tax calculated on that income.",
+        "changed_on": "",
+        "superseded_by": ""
+      },
+      "after": {
+        "param_id": "vn.inbound.foreign_tax_credit_cap",
+        "scope": "vn",
+        "subject": "company",
+        "slot": "inbound",
+        "name": "foreign_tax_credit_cap",
+        "value": "vietnamese_cit_on_same_income",
+        "unit": "text",
+        "cite_id": "vn.law.cit67.2025.gazette.vi#3.4",
+        "quote": "4. Doanh nghiệp Việt Nam đầu tư ở nước ngoài có phát sinh thu nhập từ hoạt\nđộng sản xuất, kinh doanh tại nước ngoài trong kỳ tính thuế được trừ số thuế thu\nnhập doanh nghiệp phải nộp theo quy định của nước tiếp nhận đầu tư vào số thuế\nthu nhập doanh nghiệp phải nộp ở Việt Nam, nhưng không được vượt quá số thuế\nthu nhập doanh nghiệp tính theo quy định của pháp luật về thuế thu nhập doanh\nnghiệp của Việt Nam.",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Foreign corporate tax credit for the stated overseas activities, capped at the Vietnamese corporate tax calculated on that income. Authentic original Law67, Official Gazette965-966; Article19(1) distinguishes general commencement2025-10-01 from application from the2025 CIT period. Existing effective_from denotes tax-period applicability, not enactment date. Later exemptions/incentives must be checked separately. Original text refers to foreign CIT payable (phải nộp), not a standalone proof that any claimed foreign payment is creditable; documentation and implementing rules remain necessary.",
+        "changed_on": "2026-11-18",
+        "superseded_by": ""
+      }
+    },
+    {
+      "before": {
+        "param_id": "vn.residence.worldwide_tax_scope",
+        "scope": "vn",
+        "subject": "company",
+        "slot": "residence",
+        "name": "worldwide_tax_scope",
+        "value": "yes",
+        "unit": "bool",
+        "cite_id": "vn.law.cit2025.en#all",
+        "quote": "Enterprises established under the provisions of Vietnamese law shall pay tax on taxable income arising in Viet Nam and taxable income arising outside Viet Nam;",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Records the statutory tax scope for Vietnamese-law enterprises; it is not a complete treaty-residence tie-breaker test.",
+        "changed_on": "",
+        "superseded_by": ""
+      },
+      "after": {
+        "param_id": "vn.residence.worldwide_tax_scope",
+        "scope": "vn",
+        "subject": "company",
+        "slot": "residence",
+        "name": "worldwide_tax_scope",
+        "value": "yes",
+        "unit": "bool",
+        "cite_id": "vn.law.cit67.2025.gazette.vi#2.2",
+        "quote": "a) Doanh nghiệp được thành lập theo quy định của pháp luật Việt Nam nộp\nthuế đối với thu nhập chịu thuế phát sinh tại Việt Nam và thu nhập chịu thuế phát\nsinh ngoài Việt Nam;",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Records the statutory tax scope for Vietnamese-law enterprises; it is not a complete treaty-residence tie-breaker test. Authentic original Law67, Official Gazette965-966; Article19(1) distinguishes general commencement2025-10-01 from application from the2025 CIT period. Existing effective_from denotes tax-period applicability, not enactment date. Later exemptions/incentives must be checked separately.",
+        "changed_on": "2026-11-18",
+        "superseded_by": ""
+      }
+    },
+    {
+      "before": {
+        "param_id": "vn.residence.worldwide_tax_scope.legacy_ebbee7602af2",
+        "scope": "vn",
+        "subject": "company",
+        "slot": "residence",
+        "name": "worldwide_tax_scope",
+        "value": "yes",
+        "unit": "bool",
+        "cite_id": "vn.law.cit2025.en#all",
+        "quote": "Enterprises established under the provisions of Vietnamese law shall pay tax on taxable income arising in Viet Nam and taxable income arising outside Viet Nam;",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Records the statutory tax scope for Vietnamese-law enterprises; it is not a complete treaty-residence tie-breaker test.",
+        "changed_on": "",
+        "superseded_by": ""
+      },
+      "after": {
+        "param_id": "vn.residence.worldwide_tax_scope.legacy_ebbee7602af2",
+        "scope": "vn",
+        "subject": "company",
+        "slot": "residence",
+        "name": "worldwide_tax_scope",
+        "value": "yes",
+        "unit": "bool",
+        "cite_id": "vn.law.cit67.2025.gazette.vi#2.2",
+        "quote": "a) Doanh nghiệp được thành lập theo quy định của pháp luật Việt Nam nộp\nthuế đối với thu nhập chịu thuế phát sinh tại Việt Nam và thu nhập chịu thuế phát\nsinh ngoài Việt Nam;",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Records the statutory tax scope for Vietnamese-law enterprises; it is not a complete treaty-residence tie-breaker test. Authentic original Law67, Official Gazette965-966; Article19(1) distinguishes general commencement2025-10-01 from application from the2025 CIT period. Existing effective_from denotes tax-period applicability, not enactment date. Later exemptions/incentives must be checked separately.",
+        "changed_on": "2026-11-18",
+        "superseded_by": ""
+      }
+    }
+  ],
+  "visual_review_pdf_pages": [
+    1,
+    3,
+    4,
+    10,
+    22
+  ],
+  "raw_sha256": "2035cacf3a1dfa98f7f317e537768a25f0569e6d7169638133aaf35fd561d3d8",
+  "scope": "Replace English overview references with authentic original clauses; values and tax-period applicability unchanged. No complete amendment-chain approval; no frozen rule mutation, cloud admission or runtime promotion."
+}
