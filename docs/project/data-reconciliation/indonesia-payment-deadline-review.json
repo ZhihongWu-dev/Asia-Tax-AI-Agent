@@ -113,7 +113,7 @@
     }
   ],
   "isolated_repair": {
-    "status": "jurisdiction_check_zero_errors_seven_existing_gaps",
+    "status": "rebuilt_and_verified_not_promoted",
     "doc": {
       "id": "id.pmk81-2024",
       "jur": "id",
@@ -223,6 +223,7 @@
       "individual restructure",
       "individual exit"
     ],
-    "parameter_boundary_checks": "passed: old valid through2024-12-31; new valid from2025-01-01"
+    "parameter_boundary_checks": "passed: old valid through2024-12-31; new valid from2025-01-01",
+    "latest_rebuild_evidence": "current-parameter-rebuild-20261118.json"
   }
 }

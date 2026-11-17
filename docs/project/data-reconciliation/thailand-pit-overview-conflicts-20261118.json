@@ -91,7 +91,7 @@
     "Rebuild catalog and rerun dependency closure and business tests"
   ],
   "isolated_repair": {
-    "status": "incorrect_undated_legacy_parameters_quarantined_pending_rebuild",
+    "status": "rebuilt_and_verified_not_promoted",
     "retired_parameters": [
       {
         "param_id": "th.final.dividend_tax_credit_fraction.legacy_17d33c3c7596",
@@ -144,6 +144,7 @@
     },
     "dividend_runtime_replacement": "packages/income_tax/thailand_dividends.py",
     "runtime_promoted": false,
-    "historical_originals_preserved": true
+    "historical_originals_preserved": true,
+    "latest_rebuild_evidence": "current-parameter-rebuild-20261118.json"
   }
 }

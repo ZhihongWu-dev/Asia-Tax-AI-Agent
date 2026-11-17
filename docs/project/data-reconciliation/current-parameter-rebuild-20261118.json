@@ -1,0 +1,59 @@
+{
+  "status": "isolated_rebuild_verified_not_promoted",
+  "build_exit_code": 0,
+  "tables": {
+    "doc": {
+      "rows": 350,
+      "all_cell_values_equal": true,
+      "csv_sha256": "bd51633dc87b433308400c5ceaa6786e35ffe2a6e23b99392d36872a2a4df582"
+    },
+    "clause": {
+      "rows": 44886,
+      "all_cell_values_equal": true,
+      "csv_sha256": "8d42ba562e1a42adc4d704b43adaddb6a8a09b0d5cabfbc2abfc69bd281fe9fe"
+    },
+    "param": {
+      "rows": 816,
+      "all_cell_values_equal": true,
+      "csv_sha256": "7640173b654a5feee7c41c4651c1493478582f03c3135ad11c56d219ba37a219"
+    },
+    "decision": {
+      "rows": 50,
+      "all_cell_values_equal": true,
+      "csv_sha256": "15c589778d0ca080f1c928e90c81d4b4b520421ca0dccf6952f0d25380806d7e"
+    },
+    "treaty": {
+      "rows": 55,
+      "all_cell_values_equal": true,
+      "csv_sha256": "da0e0f916773a994009313e78cda4e2b42da23f1599a5f391f99a2863f31149c"
+    },
+    "jurisdiction": {
+      "rows": 11,
+      "all_cell_values_equal": true,
+      "csv_sha256": "ea00efb65070e9b0daa1563dcb949d58aab46581a0f0f31e5636d2dac1c293d5"
+    },
+    "files": {
+      "rows": 744,
+      "all_cell_values_equal": true,
+      "csv_sha256": "9fac0b99d0ca26c3e564126ed69516e97aca27a9cc3ce266363eedc956e0df7d"
+    }
+  },
+  "integrity": {
+    "counts": {
+      "doc": 350,
+      "clause": 44886,
+      "param": 816,
+      "decision": 50
+    },
+    "errors": [],
+    "legal_review": "not_established_by_this_check"
+  },
+  "sqlite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "remaining_gaps": {
+    "categories": 5,
+    "slots": 33,
+    "downloads": 2
+  },
+  "runtime_promoted": false
+}

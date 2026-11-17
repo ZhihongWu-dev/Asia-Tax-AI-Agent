@@ -110,16 +110,28 @@ The final integration has not been pushed or merged to `main`. The historical
   anti-abuse parameter remains. Source hashes were unchanged after copying;
   no rebuilt files have been promoted into live optimizer inputs. See
   [snapshot provenance](data-reconciliation/isolated-rebuild-20261118.json).
-- The next isolated rebuild is running with the official PMK81/2024 original,
+- The next isolated rebuild passed with the official PMK81/2024 original,
   three Indonesian current deadline/holiday parameters, historical tenth-day
   parameter expiry, corrected Chinese document exclusive-end date, and quarantine
-  of two conflicting Thai legacy parameters. The Indonesia-only check had zero
+  of two conflicting Thai legacy parameters. Its350documents,44886clauses,
+  816parameters and50decisions passed citation/hash checks; every cell of seven
+  CSV tables matches SQLite, whose integrity and foreign-key checks passed.
+  These outputs remain isolated and unpromoted. See
+  [rebuild evidence](data-reconciliation/current-parameter-rebuild-20261118.json).
+  The Indonesia-only check had zero
   errors but seven existing category/subject-slot gaps, so country acceptance
   did not pass. MLI applicability, source admission and final citation closure
   remain outstanding.
 - Legacy live persistence tests include unqualified table deletion fixtures.
   They must run against an isolated disposable database, never the current
   cloud case store. No such destructive test was executed against the cloud.
+- A separate real PostgreSQL test used a unique disposable schema and explicit
+  SQLAlchemy schema translation, without production table initialization. It
+  passed enqueue idempotency, owner-filter rejection, reconnect persistence,
+  expired-lease recovery, stale-worker fencing and persisted result retrieval.
+  Cleanup completed. This verifies storage behavior across new connections,
+  not real JWT/account isolation or a deployed worker restart. See
+  [PostgreSQL evidence](data-reconciliation/planning-schema-acceptance-20261118.json).
 
 ## Remaining delivery gates
 
