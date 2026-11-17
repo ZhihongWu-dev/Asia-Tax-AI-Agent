@@ -1,0 +1,19 @@
+{
+  "cite_id": "cn.sta.2008-112#i3",
+  "review_status": "candidate_not_admitted",
+  "official_url": "https://www.chinatax.gov.cn/chinatax/n810341/n810765/n812171/200802/c1192516/content.html",
+  "raw_sha256": "67900dca7a249082641bb3fa4a9b9c8cbbc543c1c6cf20296d77e0b03ea9064b",
+  "findings": [
+    "Cloud extraction drops standalone 200 and 10 before amounts in EUR ten-thousands; current Chinese inline-preservation parser restores them.",
+    "Archived table has two HTML rows: headers and two long cells. Each body cell has 26 paragraphs, but rates and jurisdictions do not align by paragraph index. Plain text separates the complete rate list from the jurisdiction list.",
+    "Removing website correction footer alone does not establish a correct source. Current bilateral treaty versions must govern current rates; this notice is dated 2008."
+  ],
+  "table_rows": 2,
+  "body_column_paragraphs": [
+    26,
+    26
+  ],
+  "next_action": "Obtain an official structured or rendered historical table to verify rate-country associations before repairing/admitting this citation. Do not infer associations by paragraph index or approve existing cloud text.",
+  "cloud_changes": false,
+  "generated_database_changes": false
+}
