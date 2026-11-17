@@ -10,8 +10,11 @@ The final integration has not been pushed or merged to `main`. The historical
   income tax across cn, hk, sg, id, vn, my, th, ae, jp, kr and in. Passing ordinary
   calculations does not complete special regimes or production acceptance.
 - Saved income facts, explicit calculation bases, revision-bound results and
-  bilingual forms are implemented. The latest income suite passed 1133 tests
-  in19.23seconds after Malaysia dividend integration.
+  bilingual forms are implemented. The latest complete `tests/income_tax` suite passed 1159 tests
+  in 16.65 seconds, including Thai remittance validation and domestic assessment
+  reconciliation. The log is `integration-audit-20261116/income-tax-regression-20261118-latest.log`.
+  Thai remittance preparation is not yet connected to the public assessment/UI
+  or complete foreign-credit/treaty settlement.
   Singapore employment settlement additionally passed three browser scenarios
   (two save/reopen cases and the existing rate-only entry). These use local
   fixtures, not production identity/provider acceptance.
@@ -33,6 +36,16 @@ The final integration has not been pushed or merged to `main`. The historical
   Joint assessment, automatic entitlement determination, special/foreign regimes
   and assessment rounding are still incomplete. See
   [workflow evidence](data-reconciliation/malaysia-dividend-workflow-20261118.json).
+- Isolated database rebuild before the five UAE/Korean legacy retirements completed
+  with 353 documents, 44995 clauses, 816 parameters and 44 absence records;
+  errors=0, warnings=88, category gaps=5, slot gaps=35, blocked downloads=2.
+  Five superseded overview parameters were then retired with full before-row
+  archives and retained-primary comparisons (811 parameters). A subsequent
+  rebuild is still running; zero build errors do not resolve coverage gaps.
+- Indonesian PMK112/2025 original and DGT transitional guidance are archived.
+  The signed original establishes commencement on 2025-12-31; a conditional
+  primary-law parameter migration is prepared, not applied. Earlier valid
+  certificate formats must retain the documented transitional treatment.
 - Planning runs are connected to the signed-in case API and UI, with a durable
   queue, worker leases, cancellation and pinned artifacts. The hosted worker
   has not been provisioned or accepted. A manual-deploy worker definition is
@@ -41,7 +54,8 @@ The final integration has not been pushed or merged to `main`. The historical
   See [worker deployment](PLANNING_WORKER_DEPLOYMENT.md).
 - A dedicated cloud law-library reader has verified read-only grants and cannot
   access private cases/jobs. Its deployment secret still needs installation.
-- Cloud source review queried on 2026-11-18: different-text records have 2 accepted
+- Earlier point-in-time cloud source review on 2026-11-18 (superseded by
+  subsequent admissions; these are not current totals): different-text records have 2 accepted
   replacements, 16 candidates and 7 rejected decisions; main-only records have
   7 accepted sources, 104 candidates and 3 rejected decisions. Total is 139. A rejected
   different-text candidate normally retains the base; explicit exclusions are
@@ -59,11 +73,12 @@ The final integration has not been pushed or merged to `main`. The historical
   reader. Their whole-page candidates remain unapproved; this does not approve
   treaty residence decisions or pending catalog parameters. See
   [section evidence](data-reconciliation/japan-guidance-section-review-20261118.json).
-- A fresh dedicated-reader audit includes625 current local citation dependencies,
+- An earlier dedicated-reader audit included625 local citation dependencies,
   including factor citations:8 are missing from cloud admission,6 are blocked
   (some overlap), and55 local parameters are absent from the cloud catalog. See
   [dependency evidence](data-reconciliation/planner-source-readiness-20261118.json).
-  These counts replace the older audit that reconstructed admission rules itself.
+  These counts predate subsequent admissions and isolated-stage changes;
+  refresh source readiness before deployment rather than treating them as current.
 - Japan's2026 Tax Law Introduction page55 (printed44) is admitted after a fresh
   official download matched the archived PDF hash, exact page reconstruction,
   dedicated-reader verification and stale-snapshot rejection. General foreign
