@@ -15,7 +15,8 @@ from packages.domain_bridge.planning_store import LeaseLost
 class PlanningExecutionError(Exception):
     """A known, non-sensitive failure suitable for a persisted run status."""
     CODES = frozenset({'library_version_changed', 'planning_execution_failed',
-                       'planning_output_invalid', 'planning_resource_limit'})
+                       'planning_output_invalid', 'planning_resource_limit',
+                       'planning_sources_unavailable', 'planning_runtime_changed'})
 
     def __init__(self, code):
         if code not in self.CODES:

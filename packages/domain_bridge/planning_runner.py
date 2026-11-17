@@ -11,12 +11,13 @@ from pathlib import Path
 import sys
 
 from packages.domain_bridge.planning_library import PlanningLibrary
+from packages.domain_bridge.planning_runtime import capture_runtime
 
 
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def run(inputs, bundle, *, expected_version, output):
+def run(inputs, bundle, *, expected_version, output, expected_runtime=None):
     """Execute in a fresh, parent-owned directory; reject reusable output paths."""
     if not isinstance(inputs, dict):
         raise ValueError('planning_input_invalid')
@@ -27,6 +28,9 @@ def run(inputs, bundle, *, expected_version, output):
     output = Path(output)
     if output.exists():
         raise ValueError('planning_output_already_exists')
+    runtime = capture_runtime()
+    if expected_runtime is not None and runtime != expected_runtime:
+        raise ValueError('planning_runtime_changed')
     library = PlanningLibrary(bundle, expected_version=expected_version)
     sys.path.insert(0, str(ROOT / 'optimization' / 'tools'))
     import optimize
@@ -57,7 +61,9 @@ def run(inputs, bundle, *, expected_version, output):
             raise ValueError('planning_artifact_limit')
         artifacts[path.relative_to(output).as_posix()] = {
             'bytes': size, 'sha256': sha256(path.read_bytes()).hexdigest()}
-    return {'version': checker.version, 'artifacts': artifacts,
+    if capture_runtime() != runtime:
+        raise ValueError('planning_runtime_changed')
+    return {'version': checker.version, 'runtime': runtime, 'artifacts': artifacts,
             'checks': {'status': 'passed', 'scope': 'li_checker_run_all'}}
 
 
@@ -68,7 +74,8 @@ def main():
     request_path, output, response = map(Path, sys.argv[1:])
     request = json.loads(request_path.read_text(encoding='utf-8'))
     result = run(request['input'], request['bundle'],
-                 expected_version=request['library_snapshot'], output=output)
+                 expected_version=request['library_snapshot'], output=output,
+                 expected_runtime=request['runtime_snapshot'])
     response.write_text(json.dumps(result, ensure_ascii=False, allow_nan=False), encoding='utf-8')
 
 
