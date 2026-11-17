@@ -1,5 +1,5 @@
 {
-  "status": "candidate_text_visually_verified_pending_cloud_admission",
+  "status": "cloud_admitted_and_exact_read_verified",
   "source_commit": "b07d0d6f2d117342ce2a571b3ce57ac71e9c6cb7",
   "citations": [
     {
@@ -25,5 +25,28 @@
     21,
     22
   ],
-  "scope": "Original Law67 classification, domestic distribution exemption and incentive exclusions; source text only, not current consolidated law or automatic exemption eligibility."
+  "scope": "Original Law67 classification, domestic distribution exemption and incentive exclusions; source text only, not current consolidated law or automatic exemption eligibility.",
+  "before_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "3cef1527fab0b3614069fa179165b2ea05258e41c5a58956f48fff234fffa350",
+    "review_sha256": "33ba4e0139554a7f277d33f8e60bbe9861fdfa016cd48ea60b43025711a07cc8"
+  },
+  "after_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "3cef1527fab0b3614069fa179165b2ea05258e41c5a58956f48fff234fffa350",
+    "review_sha256": "1689ea109d0e911ed66ba1bb7c5154b8be55c0cee9e87fd6d680713ae950827b"
+  },
+  "old_pin_rejected": true,
+  "exact_complete_text_verified": true,
+  "reader": "dedicated_read_only_role",
+  "base_counts": {
+    "doc": 287,
+    "clause": 38152
+  },
+  "cloud_base_mutated": false,
+  "overlay_tests_passed": 27
 }
