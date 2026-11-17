@@ -18,5 +18,29 @@
     "Corporate transfer and emigration rules",
     "API/workflow calculations for personal transfer income",
     "Full library rebuild after parameter additions"
+  ],
+  "implementing_source": {
+    "doc_id": "vn.decree253.2026.vi",
+    "sha256": "91242e366d3c3a4e874314534b100a0d1c077e21b0a9244243f5a187d4b56412",
+    "pages": 61,
+    "clauses": 307,
+    "status": "ok",
+    "verified_citations": [
+      "vn.decree253.2026.vi#10.2",
+      "vn.decree253.2026.vi#10.5",
+      "vn.decree253.2026.vi#53.1",
+      "vn.decree253.2026.vi#53.2",
+      "vn.decree253.2026.vi#53.6",
+      "vn.decree253.2026.vi#54.2",
+      "vn.decree253.2026.vi#54.4"
+    ]
+  },
+  "implementation_requirements": [
+    "Article10(2): personal joint-stock-company shares are securities; unlisted status alone does not turn them into non-security capital interests. Do not copy March draft or corporate classification.",
+    "Article10(5): whole sole-proprietor/single-owner company transfers linked to real estate follow real-estate income rules.",
+    "Article53(2): exclude installment interest from capital price and assess that interest as investment income; apply assessed market price when required.",
+    "Article53(3)-(4): documented cumulative capital basis and reasonable actual costs; foreign cost documents require certification and Vietnamese translation.",
+    "Article53(6)/54(4): contributions defer tax until transfer, withdrawal or dissolution; track deferred base and subsequent event tax separately.",
+    "Article54(2)-(3): listed and other securities have distinct price and recognition-time rules."
   ]
 }
