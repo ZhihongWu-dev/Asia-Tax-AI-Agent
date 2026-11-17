@@ -1,0 +1,94 @@
+{
+  "html_documents": 146,
+  "changes": [
+    {
+      "id": "ae.mof.top-up-tax",
+      "old_chars": 20,
+      "new_chars": 4739,
+      "old_mode": "none",
+      "new_mode": "html_section",
+      "old_sections": 0,
+      "new_sections": 11,
+      "removed_ids": []
+    }
+  ],
+  "generated_files_written": false,
+  "additional_detected_html": [
+    {
+      "id": "ae.fta.withholding-faq",
+      "changed": false
+    },
+    {
+      "id": "ae.fta.corporate-tax-faq",
+      "changed": false
+    },
+    {
+      "id": "ae.fta.corporate-tax-registration",
+      "changed": false
+    },
+    {
+      "id": "treaty.ae-kr.2019.en",
+      "changed": false
+    },
+    {
+      "id": "kr.nts.corporate-tax-overview",
+      "changed": false
+    },
+    {
+      "id": "kr.nts.global-income-faq",
+      "changed": false
+    },
+    {
+      "id": "kr.nts.corporate-rate-2026",
+      "changed": false
+    },
+    {
+      "id": "kr.nts.filing-returns",
+      "changed": false
+    },
+    {
+      "id": "kr.nts.forms",
+      "changed": false
+    },
+    {
+      "id": "kr.nts.tax-treaty-index",
+      "changed": false
+    },
+    {
+      "id": "treaty.in-kr.2015.law",
+      "changed": false
+    },
+    {
+      "id": "kr.nts.nonresident-wht",
+      "changed": false
+    },
+    {
+      "id": "kr.nts.nonresident-wht-agent",
+      "changed": false
+    },
+    {
+      "id": "kr.nts.nonresident-wht-rate",
+      "changed": false
+    }
+  ],
+  "total_html_documents": 160,
+  "cite_id": "ae.mof.top-up-tax#all",
+  "url": "https://mof.gov.ae/en/public-finance/tax/top-up-tax/",
+  "original_sha256": "95a4b615c4bffa600c39cf0e51060d34b34dd7c059ef1b0cfd0acac06d2c0b7a",
+  "repaired_text_sha256": "141bd457d6a938497fc8ac88ac137a46a8ffb6b367748db26a6703c1c192e49c",
+  "finding": "Archived HTML nests explicit main inside header. Removing the header deleted all substantive policy text. Unwrap chrome containers containing main before removing ordinary chrome.",
+  "validation": {
+    "database_tests": 67,
+    "result": "passed",
+    "command": "pytest tests/database -q"
+  },
+  "publication_status": "not_published",
+  "citation_migration": "HTML section extraction now yields 11 sections; retain existing #all identifier in any reviewed cloud replacement. Generated CSV/SQLite rebuild and citation closure remain pending optimizer completion.",
+  "research": {
+    "references": [
+      "https://github.com/adbar/trafilatura/blob/master/docs/evaluation.rst",
+      "https://github.com/adbar/trafilatura/blob/master/trafilatura/core.py"
+    ],
+    "decision": "Malformed markup extraction evidence; retain existing BeautifulSoup dependency. No external code copied."
+  }
+}

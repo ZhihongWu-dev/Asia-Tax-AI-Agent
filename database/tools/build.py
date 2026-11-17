@@ -156,10 +156,18 @@ def main_node(body, blocks):
     return node
 
 
+def remove_html_chrome(soup, tags):
+    """Keep an explicit main document even inside a malformed chrome wrapper."""
+    for tag in soup(tags):
+        if tag.name in ('header', 'footer', 'nav') and tag.find('main') is not None:
+            tag.unwrap()
+        else:
+            tag.decompose()
+
+
 def html_text(raw, *, preserve_inline=False):
     soup = BeautifulSoup(raw, "lxml")
-    for t in soup(["script", "style", "noscript", "header", "footer", "nav", "iframe"]):
-        t.decompose()
+    remove_html_chrome(soup, ["script", "style", "noscript", "header", "footer", "nav", "iframe"])
     whole = len((soup.body or soup).get_text(strip=True))
     for t in soup("form"):                            # page chrome — unless the form is the document itself (the
         if len(t.get_text(strip=True)) < 0.9 * whole:  # Judiciary's LRS wraps a whole judgment in one <form>)
@@ -879,8 +887,7 @@ def slice_numbered_paras(doc_id, text):
 def slice_html_sections(doc_id, raw):
     """Web pages: one clause per heading (h1-h4) inside the main container."""
     soup = BeautifulSoup(raw, "lxml")
-    for t in soup(["script", "style", "noscript", "header", "footer", "nav", "form", "iframe"]):
-        t.decompose()
+    remove_html_chrome(soup, ["script", "style", "noscript", "header", "footer", "nav", "form", "iframe"])
     body = soup.body or soup
 
     def flat(node):
