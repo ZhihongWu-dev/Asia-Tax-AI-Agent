@@ -1,6 +1,6 @@
 {
   "cite_id": "cn.sta.2008-112#i3",
-  "review_status": "candidate_not_admitted",
+  "review_status": "exclude_from_current_library",
   "official_url": "https://www.chinatax.gov.cn/chinatax/n810341/n810765/n812171/200802/c1192516/content.html",
   "raw_sha256": "67900dca7a249082641bb3fa4a9b9c8cbbc543c1c6cf20296d77e0b03ea9064b",
   "findings": [
@@ -13,7 +13,33 @@
     26,
     26
   ],
-  "next_action": "Obtain an official structured or rendered historical table to verify rate-country associations before repairing/admitting this citation. Do not infer associations by paragraph index or approve existing cloud text.",
-  "cloud_changes": false,
-  "generated_database_changes": false
+  "next_action": "Exclude all three citations from current business retrieval. After optimizer finishes, register repeal in local document/supersession metadata and rebuild; preserve historical original. Historical table reconstruction is not a substitute for current bilateral treaty data.",
+  "cloud_changes": true,
+  "generated_database_changes": false,
+  "repealed_from": "2023-05-26",
+  "repeal_authority": "State Taxation Administration Announcement 2023 No.8, annex item48",
+  "repeal_sources": [
+    "https://fgk.chinatax.gov.cn/zcfgk/c100012/c5193938/content.html",
+    "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/zhsszc/202306/t467288.html"
+  ],
+  "repeal_archive_sha256": "720630145355b8307c9945e77a3100fd32f952d011601eebb76324be72714128",
+  "excluded_citations": [
+    "cn.sta.2008-112#i1",
+    "cn.sta.2008-112#i2",
+    "cn.sta.2008-112#i3"
+  ],
+  "cloud_review_status": "rejected_with_explicit_exclusions",
+  "live_validation": {
+    "reader": "dedicated_read_only_role",
+    "all_three_exact_searches_empty": true,
+    "planner_blocks_all_three": true,
+    "snapshot": {
+      "spec_version": "2026-11-10",
+      "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+      "uploaded_at": "2026-11-13T03:39:52Z",
+      "overlay_bundle_sha256": "11a0428cc601bd3d21a445d25ba12a3b4c6a62211848ac6fd76bf95e372a9d29",
+      "review_sha256": "5683fa6819d8843f0c8b5415903684716fb185fbcd2cabde77499e706ce154bb"
+    }
+  },
+  "local_rebuild_pending": true
 }
