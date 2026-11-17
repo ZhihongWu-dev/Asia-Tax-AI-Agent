@@ -1,65 +1,34 @@
 {
-  "scope": "Prospective isolated CSV parameters/decisions and unchanged runtime rule/predicate sources, after Thai parameter rebindings and Japanese CFC overview admission; not runtime promotion.",
+  "scope": "Prospective isolated database and rule CSVs including VN late-interest rule, retired unsupported absence rows and Indonesian primary treaty parameter; not runtime promotion or cloud catalog migration.",
   "snapshot": {
     "spec_version": "2026-11-10",
     "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
     "uploaded_at": "2026-11-13T03:39:52Z",
-    "overlay_bundle_sha256": "73cf9e9f8191dd1e9cb9e2befb26a2e26de6aff5c96037b30f0ac88ef76e0a2f",
-    "review_sha256": "383edd2aeb93146677a0fcda91638a12dc5bd1fc27a0495b5d8be06fc926bbec"
+    "overlay_bundle_sha256": "578439bd71f8bcef31349bffee911f18392506f9c087399ed98b4d0a951d3738",
+    "review_sha256": "33ba4e0139554a7f277d33f8e60bbe9861fdfa016cd48ea60b43025711a07cc8"
   },
   "counts": {
-    "references": 630,
-    "missing": 3,
-    "blocked": 5
+    "references": 631,
+    "missing": 0,
+    "blocked": 2
   },
-  "missing": {
-    "th.rd.cit#lead": [
-      "decision.csv:th.absent.company.cfc"
-    ],
-    "th.rd.pit#h1": [
-      "decision.csv:th.absent.individual.cfc"
-    ],
-    "th.rd.transfer-pricing-legislation#all": [
-      "decision.csv:th.absent.individual.anti_abuse"
-    ]
-  },
+  "missing": {},
   "blocked": {
-    "ae.fta.corporate-tax-faq#all": [
-      "param.csv:ae.anti_abuse.transfer_pricing_applies_to_related_parties.legacy_03670a518456",
-      "param.csv:ae.residence.residence_test.legacy_09239f63cd95"
-    ],
     "id.dgt.article26#all": [
-      "param.csv:id.outbound_wht.default_nonresident_rate",
-      "param.csv:id.outbound_wht.payment_deadline",
-      "param.csv:id.outbound_wht.treaty_rate_available",
-      "rule.csv:id.outbound_wht.statutory"
-    ],
-    "kr.nts.global-income-faq#all": [
-      "param.csv:kr.final.global_income_taxable.legacy_ff9c51667058",
-      "param.csv:kr.inbound.worldwide_income_reportable.legacy_55f79a66d148",
-      "param.csv:kr.residence.residence_years_min.legacy_04bb728aea1c"
-    ],
-    "th.rd.transfer-pricing-legislation#all": [
-      "decision.csv:th.absent.individual.anti_abuse"
+      "database/param.csv:id.outbound_wht.default_nonresident_rate",
+      "database/param.csv:id.outbound_wht.payment_deadline",
+      "rule/rule.csv:id.outbound_wht.statutory"
     ],
     "vn.law.cit2025.en#all": [
-      "decision.csv:D-vn-1",
-      "decision.csv:D-vn-2",
-      "decision.csv:D-vn-3",
-      "decision.csv:vn.absent.3",
-      "decision.csv:vn.absent.cfc",
-      "decision.csv:vn.absent.company.anti_abuse",
-      "decision.csv:vn.absent.company.outbound_wht",
-      "param.csv:vn.final.cit_rate",
-      "param.csv:vn.inbound.foreign_income_taxable",
-      "param.csv:vn.inbound.foreign_tax_credit_cap",
-      "param.csv:vn.residence.worldwide_tax_scope",
-      "param.csv:vn.residence.worldwide_tax_scope.legacy_ebbee7602af2",
-      "rule.csv:vn.final.cit",
-      "rule.csv:vn.final.domestic_exempt",
-      "rule.csv:vn.inbound.credit",
-      "rule.csv:vn.inbound.taxable",
-      "rule.csv:vn.residence.company"
+      "database/decision.csv:vn.absent.company.outbound_wht",
+      "rule/decision.csv:D-vn-1",
+      "rule/decision.csv:D-vn-2",
+      "rule/decision.csv:D-vn-3",
+      "rule/rule.csv:vn.final.cit",
+      "rule/rule.csv:vn.final.domestic_exempt",
+      "rule/rule.csv:vn.inbound.credit",
+      "rule/rule.csv:vn.inbound.taxable",
+      "rule/rule.csv:vn.residence.company"
     ]
   }
 }
