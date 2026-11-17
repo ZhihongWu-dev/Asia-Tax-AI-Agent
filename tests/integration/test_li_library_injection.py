@@ -114,6 +114,16 @@ result=run(inp,bundle,expected_version=pin,output=Path(sys.argv[1])/'runner-prod
 assert result['checks']['status']=='passed'
 assert result['artifacts']['tax.json']['bytes'] > 0
 assert result['version']['database_version']['bundle_sha256']==bundle['bundle_sha256']
+import asyncio
+from packages.domain_bridge.planning_process import execute_bundle
+persistable=asyncio.run(execute_bundle(inp,bundle,expected_version=pin))
+assert persistable['checks']['status']=='passed'
+import base64,gzip,json
+contents=json.loads(gzip.decompress(base64.b64decode(persistable['artifact_payload']['data'])))
+assert 'tax.json' in contents
+for name,content in contents.items():
+    assert sha256(content.encode('utf-8')).hexdigest()==persistable['artifacts'][name]['sha256']
+assert persistable['version']['database_version']['bundle_sha256']==bundle['bundle_sha256']
 '''
     r=subprocess.run([sys.executable,'-X','utf8','-c',script,str(tmp_path)],
                      cwd=Path(__file__).resolve().parents[2],capture_output=True,text=True,timeout=180)
