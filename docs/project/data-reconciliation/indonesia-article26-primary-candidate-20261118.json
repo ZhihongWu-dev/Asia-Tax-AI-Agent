@@ -1,0 +1,16 @@
+{
+  "status": "primary_candidate_located_pending_current_amendment_and_original_page_review",
+  "candidate": {
+    "cite_id": "id.tax-law-compilation-2022#p210",
+    "doc_id": "id.tax-law-compilation-2022",
+    "label": "p.210",
+    "text": "COMPILATION INTO SINGLE DOCUMENT  \nOf Law On General Provisions and Procedures of Taxation \n \n \n*) \n: \nFirst Amendment (Law Number 9 of 1994) \n**) \n: \nSecond Amendment (Law Number 16 of 2000) \n***) \n: \nThird Amendment (Law Number 28 of 2007) \n****) \n: \nFourth Amendment (Law Number 16 of 2009) \n*****) \n: \nFifth Amendment (Law Number 11 of 2020) \n******) \n: \nSixth Amendment (Law Number 7 of 2021) \n205 \n \n \n \nwww.pajak.go.id \n \nTaxpayers who have 1 (one) or more place of business, the maximum \namount of tax installment is 0.75% (zero point seventy five percent) of \nthe gross turnover. \nParagraph (8) \n \nSelf-explanatory. \nParagraph (8a) \n \nSelf-explanatory. \nParagraph (9) \n \nSelf-explanatory. \n \nArticle 26 \n \n(1) \nFor the incomes specified hereunder, in name and any form of \nwhatsoever, which are paid, made available to be paid, or have been due \nfor payment by a government agency, resident tax subject, activity \norganizer, \npermanent \nestablishment, \nor \nother \nforeign \ncompany \nrepresentatives to a non-resident Taxpayer other than a permanent \nestablishment in Indonesia is subject to withholding tax at 20% (twenty \npercent) of the gross amount by the party who shall be obliged to pay: \na. \ndividends; \nb. \ninterests, including premiums, discounts, and compensations in \nrelation to debt repayment guarantees; \nc. \nroyalties, rents, and other incomes in relation to the use of assets; \nd. \ncompensations in relation to services, works, and activities; \ne. \nprizes and awards; \nf. \npensions and other periodic payments; \ng. \nswap premiums and other hedging transactions; and/or \nh. \nbenefits from debt easement. ****) \n(1a) Domicile country of a non-resident Taxpayer other than those who run \nbusiness or carry out business activity through a permanent establishment \nin Indonesia as referred to in paragraph (1) is the country of residence or \ndomicile of the non-resident Taxpayer who actually receives the benefits \nfrom the income (beneficial owner). ****) \n(1b) A rate of 20% (twenty percent) of the gross amount by the party who \nshall be obliged to pay interests including premiums, discounts, and \ncompensations in relation to the debt repayment guarantee as referred to \nin paragraph (1) letter b can be reduced by a Government Regulation."
+  },
+  "intended_use": "Replace FAQ-backed Article 26 baseline rate evidence, with covered-income and non-PE scope preserved.",
+  "limits": [
+    "20 percent is a statutory baseline, not every outbound payment effective rate.",
+    "Article 26(1b) permits reduced interest rates by Government Regulation.",
+    "Treaty entitlement remains conditional; PMK112/2025 migration is separate.",
+    "2022 compilation requires subsequent-amendment verification before current-law approval."
+  ]
+}

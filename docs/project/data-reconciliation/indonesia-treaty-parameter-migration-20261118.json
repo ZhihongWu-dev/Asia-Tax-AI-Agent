@@ -1,5 +1,5 @@
 {
-  "status": "applied_to_isolated_stage_pending_validation",
+  "status": "applied_to_isolated_stage_zero_errors_seven_unresolved_coverage_gaps",
   "before": {
     "param_id": "id.outbound_wht.treaty_rate_available",
     "scope": "id",
@@ -75,5 +75,12 @@
     "effective_to": "",
     "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
   },
-  "stage_param_count": 811
+  "stage_param_count": 811,
+  "validation": {
+    "command": "database/tools/build.py --root isolated-rebuild-20261118/database --jur id",
+    "exit_code": 1,
+    "errors": 0,
+    "gaps": 7,
+    "output": "acceptance id: NOT PASSED (errors=0 gaps=7)\n  ! gap: category id|10\n  ! gap: slot id|company|penalty without a parameter\n  ! gap: slot id|company|restructure without a parameter\n  ! gap: slot id|company|exit without a parameter\n  ! gap: slot id|individual|penalty without a parameter\n  ! gap: slot id|individual|restructure without a parameter\n  ! gap: slot id|individual|exit without a parameter\n"
+  }
 }
