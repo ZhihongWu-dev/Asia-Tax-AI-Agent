@@ -794,5 +794,35 @@
       "inserted_text": "3"
     }
   ],
-  "indonesia_review_limits": "All 64 changed clauses preserve old non-whitespace characters as an ordered subsequence. Additions include legal numbers and page labels; this proves conservation, not legal accuracy or clean pagination. OCR errors and nested amendment article boundaries require separate review."
+  "indonesia_review_limits": "All 64 changed clauses preserve old non-whitespace characters as an ordered subsequence. Additions include legal numbers and page labels; this proves conservation, not legal accuracy or clean pagination. OCR errors and nested amendment article boundaries require separate review.",
+  "china_nonwhitespace_changes_review": [
+    {
+      "doc_id": "cn.cs.2026-27",
+      "source_url": "https://szs.mof.gov.cn/zhengcefabu/202609/t20260901_3996442.htm",
+      "raw_sha256": "cf9cd12fc6ddc8dc9ed379e9e37f99a9a15b11158f9c84ce63393cc8747189d0",
+      "verified_raw_fragments": [
+        "2026年9月1日"
+      ],
+      "assessment": "Restored split-inline signature date; effective date was already present. Remaining footer chrome is not legal content."
+    },
+    {
+      "doc_id": "cn.sta.2008-112",
+      "source_url": "https://www.chinatax.gov.cn/chinatax/n810341/n810765/n812171/200802/c1192516/content.html",
+      "raw_sha256": "67900dca7a249082641bb3fa4a9b9c8cbbc543c1c6cf20296d77e0b03ea9064b",
+      "verified_raw_fragments": [
+        "200万欧元",
+        "10万欧元"
+      ],
+      "assessment": "Restored numeric amounts present in archived source; historical notice is repealed and must remain excluded from current-law use."
+    },
+    {
+      "doc_id": "cn.reg.eit",
+      "source_url": "https://fgk.chinatax.gov.cn/zcfgk/c100010/c5194417/content.html",
+      "raw_sha256": "795c5b9c964eeb280138a7ca25091228be48e1204c55b6b7229085e85e3d1f53",
+      "verified_raw_fragments": [
+        "第一节一般规定"
+      ],
+      "assessment": "Removed orphan character from the following section heading, not article 8 legal text."
+    }
+  ]
 }
