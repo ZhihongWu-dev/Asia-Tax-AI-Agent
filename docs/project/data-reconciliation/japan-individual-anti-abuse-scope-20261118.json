@@ -1,0 +1,30 @@
+{
+  "review_date": "2026-11-18",
+  "status": "redundant_absence_record_requires_scoped_replacement",
+  "decision": {
+    "id": "jp.absent.individual.anti_abuse",
+    "jur": "jp",
+    "category": "",
+    "subject": "individual",
+    "slot": "anti_abuse",
+    "statement": "No official anti-abuse rule applying a general test to an individual dividend recipient was identified in the checked core materials. The National Tax Agency material describes Japanese countermeasures as provisions such as denial of acts or calculations by family companies; it is therefore not overstated as an individual rule.",
+    "cite_id": "jp.nta.tax-shelter-countermeasures#h2",
+    "quote": "諸外国においては、すべての取引を対象として一般的租税回避否認規定を適用しているが、わが国には「同族会社等の行為又は計算の否認」等の規定があり、これらとの関係で、その適用範囲として次の2つのケースが考えられる。"
+  },
+  "statutory_citation": "jp.ita#157.1",
+  "statutory_text_sha256": "bffcf3150a4c8572436469f0714ec9eee71983a8ee0d8eca05a2a936b12a9bb9",
+  "raw_source_sha256": "4e5d010f6717eb59427d3cc786c544292a07d80a2aadef012e06014265743bad",
+  "raw_source_verified": true,
+  "existing_parameter": "jp.anti_abuse.family_company_denial.individual",
+  "existing_rule": "jp.anti_abuse.family_company.individual",
+  "official_case_index": "https://www.kfs.go.jp/service/MP/02/1001000000.html",
+  "finding": "The library already includes an individual-specific family-company denial parameter and rule under Income Tax Act article 157(1). The legacy absence record is carefully limited to a general test, but its individual/anti_abuse slot is broader than its claim and cites historical policy research. It must not be used as evidence that individual anti-abuse provisions are absent.",
+  "required_changes": [
+    "Retire the generic individual/anti_abuse absence slot while retaining research provenance.",
+    "Preserve the existing article 157(1) parameter and rule; do not replace with universal GAAR.",
+    "Review related-resident and reorganization scope under article 157(1) and (4) separately; a family_company boolean alone does not establish all statutory conditions.",
+    "Recompute planner source dependencies after retirement; do not admit historical research solely to eliminate a missing citation."
+  ],
+  "runtime_modified": false,
+  "cloud_admitted": false
+}
