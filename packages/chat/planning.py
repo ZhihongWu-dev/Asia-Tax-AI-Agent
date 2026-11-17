@@ -5,6 +5,7 @@ import json
 
 from packages.chat.store import RevisionConflict
 from packages.contracts.planning import PlanningInput
+from packages.domain_bridge.planning_store import PlanningConflict
 
 
 def view(doc):
@@ -20,7 +21,7 @@ def save_case(store, owner, case_id, revision, request_id, inputs: PlanningInput
     receipts = doc.setdefault('planning_receipts', {})
     if request_id in receipts:
         if receipts[request_id] != signature:
-            raise ValueError('request_payload_conflict')
+            raise PlanningConflict('request_payload_conflict')
         return view(doc)
     if doc['revision'] != revision:
         raise RevisionConflict()
@@ -38,9 +39,38 @@ def save_case(store, owner, case_id, revision, request_id, inputs: PlanningInput
 
 def enqueue_saved(store, jobs, owner, case_id, revision, request_id, library_snapshot):
     doc = store.get(owner, case_id)
+    receipt = jobs.find_request(owner, request_id)
+    if receipt is not None:
+        if (receipt['case_id'] != case_id or receipt['case_revision'] != revision or
+                receipt['library_snapshot'] != library_snapshot):
+            raise PlanningConflict('request_payload_conflict')
+        return receipt
     if doc['revision'] != revision:
         raise RevisionConflict()
     inputs = PlanningInput.model_validate(doc.get('planning_input'))
     # enqueue's INSERT SELECT rechecks owner/revision atomically; a concurrent
     # edit after this read cannot bind these inputs to the newer case snapshot.
     return jobs.enqueue(owner, case_id, revision, request_id, inputs.engine_input(), library_snapshot)
+
+
+def enqueue_current(store, jobs, owner, case_id, revision, request_id):
+    from packages.chat.library_cloud import current_library_snapshot
+    doc = store.get(owner, case_id)
+    receipt = jobs.find_request(owner, request_id)
+    if receipt is not None:
+        if receipt['case_id'] != case_id or receipt['case_revision'] != revision:
+            raise PlanningConflict('request_payload_conflict')
+        return receipt
+    if doc['revision'] != revision:
+        raise RevisionConflict()
+    PlanningInput.model_validate(doc.get('planning_input'))
+    return enqueue_saved(store, jobs, owner, case_id, revision, request_id, current_library_snapshot())
+
+
+def get_run(store, jobs, owner, case_id, run_id):
+    from packages.chat.store import CaseNotFound
+    store.get(owner, case_id)
+    run = jobs.get(owner, run_id)
+    if run['case_id'] != case_id:
+        raise CaseNotFound()
+    return run

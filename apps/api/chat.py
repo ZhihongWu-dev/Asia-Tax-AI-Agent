@@ -20,6 +20,7 @@ from packages.chat.facts import catalog
 from packages.chat.service import ChatService, WorkflowError, public, current_model_config
 from packages.chat.store import CaseNotFound, ChatStore, RevisionConflict
 from packages.persistence.config import get_settings
+from packages.domain_bridge.planning_store import PlanningConflict, PlanningStore
 
 ROOT = Path(__file__).resolve().parents[2]
 router = APIRouter(prefix="/api")
@@ -75,6 +76,8 @@ def call(action, *args):
         raise HTTPException(404, "case_not_found") from None
     except RevisionConflict:
         raise HTTPException(409, "revision_conflict") from None
+    except PlanningConflict:
+        raise HTTPException(409, "request_payload_conflict") from None
     except WorkflowError as exc:
         if exc.code == "review_forbidden":
             raise HTTPException(403, exc.code) from None
@@ -425,3 +428,38 @@ def income_tax_run_get(case_id: UUID, run_id: UUID, workspace: str = Depends(own
                       service: ChatService = Depends(get_service)):
     from packages.chat.income_tax import get_assessment_run
     return call(get_assessment_run, service.store, workspace, str(case_id), str(run_id))
+
+
+from packages.contracts.planning import PlanningInput
+
+
+class PlanningEdit(Mutation):
+    inputs: PlanningInput
+
+
+@router.get('/cases/{case_id}/planning-input')
+def planning_input_get(case_id: UUID, workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
+    from packages.chat.planning import view
+    return view(call(service.store.get, workspace, str(case_id)))
+
+
+@router.put('/cases/{case_id}/planning-input')
+def planning_input_save(case_id: UUID, body: PlanningEdit, workspace: str = Depends(owner),
+                        service: ChatService = Depends(get_service)):
+    from packages.chat.planning import save_case
+    return call(save_case, service.store, workspace, str(case_id), body.revision, str(body.request_id), body.inputs)
+
+
+@router.post('/cases/{case_id}/planning-runs', status_code=202)
+def planning_submit(case_id: UUID, body: Mutation, workspace: str = Depends(owner),
+                    service: ChatService = Depends(get_service)):
+    from packages.chat.planning import enqueue_current
+    return call(enqueue_current, service.store, PlanningStore(service.store.engine), workspace,
+                str(case_id), body.revision, str(body.request_id))
+
+
+@router.get('/cases/{case_id}/planning-runs/{run_id}')
+def planning_run_get(case_id: UUID, run_id: UUID, workspace: str = Depends(owner),
+                     service: ChatService = Depends(get_service)):
+    from packages.chat.planning import get_run
+    return call(get_run, service.store, PlanningStore(service.store.engine), workspace, str(case_id), str(run_id))

@@ -132,6 +132,13 @@ class PlanningStore:
             raise CaseNotFound()
         return _public(row)
 
+    def find_request(self, owner, request_id):
+        """Owner-scoped receipt lookup, including terminal and historical runs."""
+        with self.engine.connect() as c:
+            row = c.execute(select(runs).where(runs.c.owner == owner,
+                                               runs.c.request_id == request_id)).mappings().one_or_none()
+        return _public(row) if row is not None else None
+
     def claim(self, lease_seconds=60, max_attempts=3):
         if type(lease_seconds) is not int or type(max_attempts) is not int or not 5 <= lease_seconds <= 3600 or not 1 <= max_attempts <= 10:
             raise ValueError('invalid_lease_policy')

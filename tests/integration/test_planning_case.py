@@ -7,6 +7,7 @@ from packages.chat.planning import save_case, enqueue_saved
 from packages.chat.store import ChatStore, CaseNotFound, RevisionConflict
 from packages.contracts.planning import PlanningInput
 from packages.domain_bridge.planning_store import PlanningStore, metadata
+from packages.domain_bridge.planning_store import PlanningConflict
 
 
 def test_saved_input_is_bound_to_revision_and_survives_edits(tmp_path):
@@ -31,6 +32,19 @@ def test_saved_input_is_bound_to_revision_and_survives_edits(tmp_path):
     assert jobs.get('alice', run['id'])['input']['amount'] == 200000000
     assert chat.get('alice', doc['id'])['planning_history'][0]['input']['amount'] == 200000000
     chat.engine.dispose()
+    restarted = ChatStore('sqlite:///' + (tmp_path/'cases.sqlite').as_posix())
+    restarted_jobs = PlanningStore(restarted.engine)
+    replay = enqueue_saved(restarted, restarted_jobs, 'alice', doc['id'], 1, 'run', {'pin':'one'})
+    assert replay['id'] == run['id']
+    assert replay['input']['amount'] == 200000000
+    for revision, pin in [(2, {'pin':'one'}), (1, {'pin':'changed'})]:
+        with pytest.raises(PlanningConflict):
+            enqueue_saved(restarted, restarted_jobs, 'alice', doc['id'], revision, 'run', pin)
+    other = restarted.create('alice')
+    with pytest.raises(PlanningConflict):
+        enqueue_saved(restarted, restarted_jobs, 'alice', other['id'], 1, 'run', {'pin':'one'})
+    assert restarted_jobs.find_request('bob', 'run') is None
+    restarted.engine.dispose()
 
 
 def test_concurrent_edit_between_projection_and_enqueue_rejected(tmp_path, monkeypatch):
