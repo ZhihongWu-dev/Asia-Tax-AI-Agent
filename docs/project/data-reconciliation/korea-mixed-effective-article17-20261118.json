@@ -1,0 +1,11 @@
+{
+  "status": "unresolved_source_slicing_issue",
+  "cite_id": "kr.income-tax-act.20260701.ko#17",
+  "text_sha256": "fb4851b4124c3e8778464b580b180d2b22a268ca00c2117b45609451627042cb",
+  "article_heading_count": 2,
+  "paragraph2_count": 2,
+  "commencement_markers": [
+    "[시행일: 2027. 1. 1.] 제17조제3항"
+  ],
+  "impact": "Article mixes repeated editions, while duplicate paragraph IDs are discarded. Needs effective-date-aware extraction and original comparison before source admission. Existing gross rate calculator is not evidence of source-wide acceptance."
+}
