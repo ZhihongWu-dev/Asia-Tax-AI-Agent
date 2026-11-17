@@ -3,7 +3,7 @@ from decimal import Decimal, localcontext
 from pydantic import TypeAdapter
 from packages.contracts.income_tax import IncomeTaxCase
 from . import china, singapore, hong_kong, united_arab_emirates, malaysia, thailand, indonesia
-from . import vietnam, vietnam_employment
+from . import vietnam, vietnam_employment, vietnam_transfer
 
 
 def calculate(case: IncomeTaxCase, basis):
@@ -25,7 +25,7 @@ def calculate(case: IncomeTaxCase, basis):
                 'sg_company_ya2026': 'company', 'sg_resident_ya2026': 'individual',
                 'hk_salaries_2025_26': 'individual', 'my_company_2026': 'company',
                 'my_individual_2026': 'individual', 'th_company_2026':'company', 'th_resident_2026':'individual',
-                'vn_employment_2026': 'individual', 'vn_company_2026': 'company'}
+                'vn_personal_transfer_2026': 'individual', 'vn_employment_2026': 'individual', 'vn_company_2026': 'company'}
     if policy == 'hk_profits_2025_26':
         expected[policy] = 'company' if basis.business_form == 'corporation' else 'individual'
     if policy in expected and case.subject != expected[policy]:
@@ -95,6 +95,35 @@ def calculate(case: IncomeTaxCase, basis):
             if basis.net_income_before_ptkp>gross:
                 raise ValueError('Net income exceeds saved gross income')
             result=indonesia.resident_individual_tax(tax_year=2026,**args)
+    elif policy=='vn_personal_transfer_2026':
+        if any(i.category != 'capital_gain' or i.source_jurisdiction != 'vn' or
+               i.foreign_tax_paid not in (None, 0) for i in case.incomes):
+            raise ValueError('Transfer policy requires domestic transfer proceeds without foreign credits')
+        if case.carried_losses != 0:
+            raise ValueError('Per-transfer calculation cannot consume carried losses')
+        indices = [line.income_index for line in basis.transfers]
+        if sorted(indices) != list(range(len(case.incomes))):
+            raise ValueError('Each saved transfer must have exactly one calculation basis')
+        with localcontext() as ctx:
+            ctx.prec = 40
+            deductions = sum(((line.purchase_cost or Decimal('0')) +
+                (line.transfer_costs or Decimal('0')) for line in basis.transfers), Decimal('0'))
+            if deductions != case.claimed_deductions:
+                raise ValueError('Transfer costs must reconcile to saved claimed deductions')
+            results = []
+            for line in sorted(basis.transfers, key=lambda x: x.income_index):
+                values = line.model_dump(exclude={'income_index'})
+                item = vietnam_transfer.personal_transfer_tax(
+                    case.incomes[line.income_index].gross_amount,
+                    resident=case.residency == 'resident', **values)
+                item['income_index'] = line.income_index
+                results.append(item)
+            tax = sum((item['final_tax'] for item in results), Decimal('0'))
+            prepaid = sum((item['prepaid_tax'] for item in results), Decimal('0'))
+            result = dict(policy_version='vn-personal-transfer-case-2026-2026-11-17',
+                currency='VND', transfers=results, final_tax=tax, prepaid_tax=prepaid,
+                balance_due=tax-prepaid, sources=results[0]['sources'],
+                calculation_stage='per_transaction_before_assessment_rounding')
     elif policy=='vn_company_2026':
         allowed = {'business', 'interest', 'rental', 'royalty', 'other'}
         if any(i.category not in allowed or i.source_jurisdiction != 'vn' for i in case.incomes):

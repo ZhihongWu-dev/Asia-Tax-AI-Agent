@@ -3,6 +3,7 @@
 These are user attestations, not an assertion of professional review by Taxrora.
 The saved income facts remain separate from the established calculation basis.
 """
+from datetime import date
 from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from .income_tax import Money
@@ -142,6 +143,24 @@ class VNEmployment(Basis):
     income_and_deductions_verified: StrictBool
 
 
+class VNTransferLine(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    income_index: Annotated[int, Field(strict=True, ge=0, le=199)]
+    recognition_date: date
+    asset_kind: Literal['capital_interest', 'security']
+    purchase_cost: Money | None
+    transfer_costs: Money | None
+    cost_basis_established: StrictBool
+    ordinary_sale_confirmed: StrictBool
+    classification_valuation_and_scope_verified: StrictBool
+    prepaid_tax: Money
+
+
+class VNPersonalTransfer(Basis):
+    policy: Literal['vn_personal_transfer_2026']
+    transfers: list[VNTransferLine] = Field(min_length=1, max_length=200)
+
+
 class IDBasis(Basis):
     ordinary_annual_treatment_confirmed: StrictBool
     prepaid_tax: Money
@@ -161,5 +180,5 @@ class IDIndividual(IDBasis):
 
 
 Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual |
-                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment | VNCompany,
+                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
                        Field(discriminator='policy')]
