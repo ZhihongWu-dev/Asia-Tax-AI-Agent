@@ -37,5 +37,26 @@
   "targeted_parser_tests": {
     "passed": 3,
     "seconds": 4.87
+  },
+  "extraction": {
+    "clauses": 165,
+    "credit_clause": "vn.decree320.2025.gazette.vi#12.2",
+    "credit_clause_characters": 4224,
+    "artifact": "integration-audit-20261116/vn-decree320-clauses.json"
+  },
+  "engine_review": {
+    "files": [
+      "rule/tools/eval.py",
+      "optimization/tools/optimize.py"
+    ],
+    "current_mechanism": "Credit is represented by direct and underlying boolean effects; dividend path computes min(home tax, source withholding plus permitted underlying tax).",
+    "covered_treaty_rules": "Ten Vietnam incoming treaty-credit rules exist for the other ten covered jurisdictions; underlying-credit rules exist for Hong Kong and Singapore. They must be reviewed individually, not replaced by the non-treaty paragraph.",
+    "unrepresented_requirements": [
+      "Foreign payment and supplemental-filing timing",
+      "Non-treaty specified exempted/reduced tax credit",
+      "Allocated top-up-tax combined cap and timing",
+      "Per-foreign-project recognition and domestic-loss separation"
+    ],
+    "decision": "Do not flip credit_underlying globally or treat source rebinding as full credit repair. Update treaty and non-treaty eligibility separately and extend calculation inputs where existing booleans cannot represent the law."
   }
 }
