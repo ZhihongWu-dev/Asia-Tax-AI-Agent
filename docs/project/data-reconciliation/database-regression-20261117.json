@@ -6,6 +6,46 @@
   "elapsed_seconds": 9.72,
   "scope": "Existing database regression suite; independent of full-library coverage acceptance",
   "build_session": 41466,
-  "build_status": "running_last_poll_confirmed_live",
-  "backup_directory": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/before-vietnam-index-20261117"
+  "build_status": "completed_exit_0",
+  "backup_directory": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/before-vietnam-index-20261117",
+  "build_result": {
+    "documents": 334,
+    "clauses": 41139,
+    "parameters": 809,
+    "errors": 0,
+    "warnings": 141,
+    "category_gaps": 5,
+    "slot_gaps": 34,
+    "missing_pairs": 0,
+    "unresolved_downloads": 2
+  },
+  "post_build_verification": {
+    "counts": {
+      "jurisdiction": 11,
+      "treaty": 55,
+      "doc": 334,
+      "clause": 41139,
+      "param": 809,
+      "files": 711,
+      "decision": 51
+    },
+    "sqlite_integrity": "ok",
+    "csv_sqlite_all_rows_equal": true,
+    "all_registered_file_hashes_verified": true,
+    "verified_citations": [
+      "vn.decree398.2026.vi#3.1",
+      "vn.decree398.2026.vi#3.2",
+      "vn.decree398.2026.vi#3.3",
+      "vn.decree398.2026.vi#3.4",
+      "vn.law.tax-administration108.2025.vi#16.2",
+      "vn.decree252.2026.vi#26.1"
+    ],
+    "database_sha256": "0bf4ede77a7385a0f61ec9888ed95ad0fe17ea3d3a521e001ea83035bee827d7"
+  },
+  "vietnam_remaining_slots": [
+    "company|restructure",
+    "company|exit",
+    "individual|restructure",
+    "individual|exit"
+  ]
 }

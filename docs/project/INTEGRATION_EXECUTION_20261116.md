@@ -416,3 +416,9 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - Full database regression suite completed exit0:35 tests passed in9.72s against4de76cf. This verifies implemented extraction/reconciliation behavior, not full legal coverage.
 - Full rebuild session41466 remains live. Legacy Office conversion completed and generated text files advanced through multiple jurisdictions; CPU usage increased. Do not start a duplicate build. Prior SQLite/clause/files/status outputs are backed up in before-vietnam-index-20261117 under the external audit folder.
 - Final rebuild counts and SQLite integrity/source closure remain unverified until the existing process exits. No generated outputs staged and no remote push.
+
+### Full local rebuild and index consistency verified
+
+- Existing build session41466 completed exit0:334 documents,41139 clauses,809 parameters,51 absence records, zero errors,141 warnings. Remaining global gaps:5 categories,34 subject slots,2 unresolved downloads; no missing treaty pair rows. Vietnamese gaps are now company/individual restructure and exit (four), not seven.
+- Independently opened resulting SQLite read-only: PRAGMA integrity_check returned ok; all rows/columns of seven CSV tables matched SQLite; all711 registered files matched size/SHA256. Confirmed restored Decree398 #3.1-#3.4, Law108 #16.2, Decree252 #26.1, and0.03 daily percentage parameter in this database version.
+- Database SHA256 0bf4ede77a7385a0f61ec9888ed95ad0fe17ea3d3a521e001ea83035bee827d7. Evidence saved in database-regression-20261117.json; independent verification script/result remain in external audit directory. Generated outputs remain unstaged pending the larger reconciliation review. No remote upload/push or claim of legal/business completeness.
