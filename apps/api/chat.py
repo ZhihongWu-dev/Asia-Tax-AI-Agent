@@ -463,3 +463,12 @@ def planning_run_get(case_id: UUID, run_id: UUID, workspace: str = Depends(owner
                      service: ChatService = Depends(get_service)):
     from packages.chat.planning import get_run
     return call(get_run, service.store, PlanningStore(service.store.engine), workspace, str(case_id), str(run_id))
+
+
+@router.get('/cases/{case_id}/planning-runs')
+def planning_runs_list(case_id: UUID, limit: int = Query(default=25, ge=1, le=100),
+                       before: UUID | None = None, workspace: str = Depends(owner),
+                       service: ChatService = Depends(get_service)):
+    from packages.chat.planning import list_runs
+    return call(list_runs, service.store, PlanningStore(service.store.engine), workspace,
+                str(case_id), limit, str(before) if before is not None else None)

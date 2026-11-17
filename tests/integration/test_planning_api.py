@@ -34,6 +34,11 @@ def test_save_queue_read_and_retry_are_owner_and_revision_scoped(tmp_path, monke
         assert 'lease_token' not in run and 'owner' not in run
         url = prefix+'/planning-runs/'+run['id']
         assert client.get(url).json()['id'] == run['id']
+        listing = client.get(prefix+'/planning-runs?limit=1')
+        assert listing.status_code == 200
+        assert listing.json()['items'][0]['id'] == run['id']
+        assert 'result' not in listing.json()['items'][0]
+        assert client.get(prefix+'/planning-runs?limit=101').status_code == 422
         current = store.get('alice', case['id'])
         store.save('alice', current, 1)
         monkeypatch.setattr(library_cloud, 'current_library_snapshot', lambda: (_ for _ in ()).throw(AssertionError('retry read cloud')))
@@ -43,6 +48,7 @@ def test_save_queue_read_and_retry_are_owner_and_revision_scoped(tmp_path, monke
         other = store.create('alice')
         assert client.get('/api/cases/'+other['id']+'/planning-runs/'+run['id']).status_code == 404
         app.dependency_overrides[owner] = lambda: 'bob'
+        assert client.get(prefix+'/planning-runs').status_code == 404
         assert client.get(url).status_code == 404
         assert client.post(prefix+'/planning-runs', json=request).status_code == 404
         del app.dependency_overrides[owner]

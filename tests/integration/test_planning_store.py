@@ -23,6 +23,30 @@ def enqueue(chat, jobs, request='request', owner='alice'):
     return case, run
 
 
+def test_case_pages_handle_ties_new_rows_and_foreign_cursors(setup):
+    chat, jobs, clock, _ = setup
+    case = chat.create('alice')
+    rows = [jobs.enqueue('alice', case['id'], 0, str(n), {}, {'pin':'one'}) for n in range(5)]
+    expected = sorted((row['id'] for row in rows), reverse=True)
+    first = jobs.list_case('alice', case['id'], 2)
+    assert [row['id'] for row in first['items']] == expected[:2]
+    assert not {'input','case_snapshot','result','lease_token','owner'} & first['items'][0].keys()
+    clock[0] += 1
+    jobs.enqueue('alice', case['id'], 0, 'new', {}, {'pin':'one'})
+    second = jobs.list_case('alice', case['id'], 2, first['next_before'])
+    third = jobs.list_case('alice', case['id'], 2, second['next_before'])
+    assert [row['id'] for row in second['items'] + third['items']] == expected[2:]
+    assert third['next_before'] is None
+    other, foreign = enqueue(chat, jobs, 'other', 'bob')
+    with pytest.raises(CaseNotFound):
+        jobs.list_case('alice', case['id'], 2, foreign['id'])
+    with pytest.raises(CaseNotFound):
+        jobs.list_case('alice', other['id'], 2, first['items'][0]['id'])
+    for invalid in (0,101,True):
+        with pytest.raises(ValueError):
+            jobs.list_case('alice', case['id'], invalid)
+
+
 def test_owner_revision_and_immutable_snapshot(setup):
     chat, jobs, _, _ = setup
     case, run = enqueue(chat, jobs)

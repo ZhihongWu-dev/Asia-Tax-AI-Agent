@@ -74,3 +74,8 @@ def get_run(store, jobs, owner, case_id, run_id):
     if run['case_id'] != case_id:
         raise CaseNotFound()
     return run
+
+
+def list_runs(store, jobs, owner, case_id, limit=25, before=None):
+    store.get(owner, case_id)
+    return jobs.list_case(owner, case_id, limit, before)
