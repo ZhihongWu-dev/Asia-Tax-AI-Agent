@@ -19,6 +19,18 @@ GRANT USAGE ON SCHEMA database, database_integration TO taxrora_library_reader;
 GRANT SELECT ON database.meta, database.doc, database.clause,
     database.param, database.jurisdiction, database.treaty, database.decision,
     database_integration.source_review TO taxrora_library_reader;
+-- Legacy official-source retrieval uses these two public-schema corpus tables.
+-- Keep RLS enabled and restrict these read policies to the dedicated login.
+GRANT USAGE ON SCHEMA public TO taxrora_library_reader;
+GRANT SELECT ON public.sources, public.legal_units TO taxrora_library_reader;
+ALTER TABLE public.sources ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.legal_units ENABLE ROW LEVEL SECURITY;
+DROP POLICY IF EXISTS taxrora_library_reader_select ON public.sources;
+CREATE POLICY taxrora_library_reader_select ON public.sources
+    FOR SELECT TO taxrora_library_reader USING (true);
+DROP POLICY IF EXISTS taxrora_library_reader_select ON public.legal_units;
+CREATE POLICY taxrora_library_reader_select ON public.legal_units
+    FOR SELECT TO taxrora_library_reader USING (true);
 ALTER ROLE taxrora_library_reader SET default_transaction_read_only = on;
 ALTER ROLE taxrora_library_reader SET statement_timeout = '5s';
 COMMIT;

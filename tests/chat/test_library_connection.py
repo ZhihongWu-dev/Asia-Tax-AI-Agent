@@ -2,7 +2,7 @@ from types import SimpleNamespace
 
 import pytest
 
-from packages.chat import library_cloud
+from packages.chat import library_cloud, knowledge
 from packages.persistence.config import Settings
 
 
@@ -39,3 +39,25 @@ def test_library_engine_uses_reader_only_with_bounded_pool_and_timeout(monkeypat
         assert seen[0][1]['connect_args']['connect_timeout'] == 3
     finally:
         library_cloud._engine.cache_clear()
+
+
+@pytest.mark.parametrize('url', ['', 'postgresql://reader@host/db'])
+def test_legacy_official_corpus_also_requires_reader(monkeypatch, url):
+    knowledge.knowledge_engine.cache_clear()
+    monkeypatch.setattr(knowledge, 'get_settings', lambda: SimpleNamespace(
+        database_url='postgresql://writer@host/db', library_database_url=url))
+    seen = []
+    def create(actual, **options):
+        seen.append(actual)
+        return object()
+    monkeypatch.setattr(knowledge, 'create_engine', create)
+    try:
+        if url:
+            knowledge.knowledge_engine()
+            assert seen == [url]
+        else:
+            with pytest.raises(ValueError, match='FSIE_LIBRARY_DATABASE_URL'):
+                knowledge.knowledge_engine()
+            assert seen == []
+    finally:
+        knowledge.knowledge_engine.cache_clear()

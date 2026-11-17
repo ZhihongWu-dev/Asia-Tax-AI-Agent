@@ -73,7 +73,10 @@ def catalog() -> dict:
 
 @lru_cache(maxsize=1)
 def knowledge_engine():
-    return create_engine(get_settings().database_url, connect_args={
+    url = get_settings().library_database_url
+    if not url:
+        raise ValueError('FSIE_LIBRARY_DATABASE_URL must configure the dedicated library reader')
+    return create_engine(url, connect_args={
         'connect_timeout': 2, 'options': '-c statement_timeout=1000',
     }, pool_pre_ping=True, pool_size=3, max_overflow=2)
 
