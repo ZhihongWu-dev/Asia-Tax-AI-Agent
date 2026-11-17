@@ -31,10 +31,10 @@ def close(a, b):
 
 
 class Checker:
-    def __init__(self, products):
+    def __init__(self, products, *, lib=None):
         self.P = Path(products)
         self.inp = op.jload(self.P / "input.json")
-        self.opt = op.Optimizer(self.inp)
+        self.opt = op.Optimizer(self.inp, lib=lib)
         self.graph = op.jload(self.P / "graph.json")
         self.opt.graph = self.graph
         self.labels = op.jload(self.P / "labels.json")

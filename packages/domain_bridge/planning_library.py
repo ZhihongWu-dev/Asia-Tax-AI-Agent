@@ -5,6 +5,7 @@ the trusted planning source reader may be supplied; the worker verifies the live
 library version before and after execution.
 """
 from copy import deepcopy
+from collections.abc import Mapping
 from hashlib import sha256
 import json
 
@@ -14,6 +15,22 @@ from packages.domain_bridge.planning_sources import PlanningSourcesUnavailable
 def digest(value):
     return sha256(json.dumps(value, sort_keys=True, separators=(',', ':'),
                             ensure_ascii=False, allow_nan=False).encode('utf-8')).hexdigest()
+
+
+class _DetachedRows(Mapping):
+    """Copy the requested row, not the whole catalog on every parameter lookup."""
+
+    def __init__(self, rows):
+        self._rows = rows
+
+    def __getitem__(self, key):
+        return deepcopy(self._rows[key])
+
+    def __iter__(self):
+        return iter(self._rows)
+
+    def __len__(self):
+        return len(self._rows)
 
 
 class PlanningLibrary:
@@ -49,6 +66,7 @@ class PlanningLibrary:
         self._tables = tables
         self._sources = sources
         self._params = {row['param_id']: row for row in tables['param']}
+        self._docs = {row['id']: row for row in tables['doc']}
         self._treaties = {}
         for row in tables['treaty']:
             pair = row['pair'].split('-')
@@ -71,15 +89,15 @@ class PlanningLibrary:
 
     @property
     def docs(self):
-        return {row['id']: deepcopy(row) for row in self._tables['doc']}
+        return _DetachedRows(self._docs)
 
     @property
     def params(self):
-        return deepcopy(self._params)
+        return _DetachedRows(self._params)
 
     @property
     def treaties(self):
-        return deepcopy(self._treaties)
+        return _DetachedRows(self._treaties)
 
     @property
     def absences(self):
