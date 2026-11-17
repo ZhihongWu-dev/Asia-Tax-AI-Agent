@@ -12,8 +12,8 @@
   "source_unchanged_after_copy": true,
   "copied_files": 1134,
   "purpose": "Validate committed parser repairs without mutating live optimizer inputs. Not promoted to runtime.",
-  "status": "second_attempt_failed_additional_layout_repaired",
-  "tool_session": 90451,
+  "status": "third_attempt_running",
+  "tool_session": 57992,
   "source_commit": "a20dbf3dad319941b367194ac17eb63d08d6c5d9",
   "build_script_sha256": "78ec2dc6ffb88fd241b7b301ec79d86806acde2885293400798acbe6ea69f8c4",
   "live_optimizer_pid": 16760,
@@ -27,8 +27,8 @@
     "all_nonwhitespace_source_characters_preserved": true
   },
   "database_tests": {
-    "passed": 70,
-    "seconds": 9.61
+    "passed": 71,
+    "seconds": 9.35
   },
   "second_attempt_exit_code": 1,
   "second_attempt_error": "Unrecognized bilingual treaty schedule boundaries: treaty.hk-vn.2008.en",
@@ -40,5 +40,25 @@
     "new_clauses": 135,
     "all_125_old_ids_preserved": true,
     "all_nonwhitespace_source_characters_preserved": true
+  },
+  "current_attempt_builder_commit": "724d409",
+  "isolated_builder_matches_worktree": true,
+  "pre_promotion_integrity": {
+    "counts": {
+      "doc": 349,
+      "clause": 42616,
+      "param": 815,
+      "decision": 51
+    },
+    "errors": [],
+    "legal_review": "not_established_by_this_check"
+  },
+  "source_hashes_still_match": {
+    "doc.csv": true,
+    "param.csv": true,
+    "clause.csv": true,
+    "database.sqlite": true,
+    "superseded.csv": true,
+    "decision.csv": true
   }
 }
