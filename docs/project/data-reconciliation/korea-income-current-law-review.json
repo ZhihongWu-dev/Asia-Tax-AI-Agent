@@ -49,13 +49,34 @@
     "Act21217 supplementary Articles1 and5: new Article55 rates apply to business years beginning on/after1January2026. July consolidation date is not rate commencement. Short years require Article55(2) annualization and month rules.",
     "Resident comprehensive personal Article55 national bands:14m6%,50m15%,88m24%,150m35%,300m38%,500m40%,1bn42%,excess45%. Established tax base is not gross pay; financial-income comparison and special categories remain separate.",
     "Local Tax Act103-20 has independent corporate standard schedules1/2/2.2/2.5%, with special corporations starting2%. Article103-19 foreign-tax adjustments can change local base. Do not multiply net national liability by10%.",
-    "Local Tax Act92 has independent personal standard schedule0.6/1.5/2.4/3.5/3.8/4/4.2/4.5%. Local credits, base, municipal rules and effective dates require further verification."
+    "Local Tax Act92 has independent personal standard schedule0.6/1.5/2.4/3.5/3.8/4/4.2/4.5%. Local credits, base, municipal rules and effective dates require further verification.",
+    "Visually reviewed all three local-tax table images from the official article HTML. Ordinary/specified company schedules and all eight personal brackets agree with their table amounts. Gross schedule helpers now calculate national/local tax from separate bases; no final assessment/API enablement."
   ],
   "pending": [
-    "Download/review local rate-table image originals and full commencement provisions",
+    "Review full local commencement provisions, municipal applicability and remaining amendment chain (rate-table image review complete)",
     "Review current amendment chain and Article60-2 classification",
     "Review national/local deductions, credits, minimum tax and rounding separately",
     "Implement both national/local calculations and business acceptance cases",
     "Register new sources after ongoing optimizer regression completes; integrate existing API/UI"
+  ],
+  "reviewed_rate_images": [
+    {
+      "name": "company-ordinary",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=160224293",
+      "sha256": "4856297a4fc5feaba4cd39a2c84e40edfb8016a98d60f7cf2d1e8393549b8363",
+      "bytes": 10532
+    },
+    {
+      "name": "company-special",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=160224329",
+      "sha256": "c37647980d0ab7165a607de6d4db5dd328da15aead226ab6358dc88aba0d06c6",
+      "bytes": 7948
+    },
+    {
+      "name": "personal",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=125883797",
+      "sha256": "0bc147fb6a8670707ffb97584c7f308766de31cb2dfca5aa4bf66665ba4874b7",
+      "bytes": 21045
+    }
   ]
 }
