@@ -36,7 +36,12 @@
     "effective_date": "2026-07-01",
     "ordinary_form43_bylSeq": "18191439",
     "allocation_form44_6_bylSeq": "18191477",
-    "retrieval_route": "Resolve official /법령별표서식/(지방세법 시행규칙,20260701,서식43), then lsBylInfoR.do; current appendix selector confirmed, actual current form content still pending",
+    "retrieval_route": "Resolved current appendix selector then observed official byl.js call to lsBylContentsInfoR.do with bylSeq/lsId/bylNo/bylBrNo/bylClsCd/bylEfYd; hidden pdfFlSeq provided actual downloads",
+    "current_form43": {"url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=164921007", "sha256": "363ae8f389af98b9d48a5ae0d753cb2eda6beee83b8ff1db9f03d9278a4b3051", "pages": 2, "front_visually_verified": true, "ratio_field": "8 decimal places", "instructions19_20": "Ratio between0 and1; multiply standard gross tax by that ratio"},
+    "current_form44_6": {"url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=164921181", "sha256": "2064e228efc09d8030f284891efd0ddc0bd5550b4acda14cf1853d78a06e337a", "pages": 4, "ratio_instructions": "6 decimal places, truncate7th, remainder to headquarters"},
+    "precision_followup": "Current ordinary form43 also shows8 places; discrepancy is not limited to nonprofit form. Keep form44-6 routine scoped to that schedule; do not automatically treat its output as definitive form43 assessment ratio. Final withholding allocation accepts separately verified final filing ratios.",
+    "withholding_instruction24": "At or below total burden, allocate withholding proportionally. Above total burden, each branch receives credit equal to its burden and HQ receives remainder. Amended returns with unchanged total withholding retain original allocation.",
+    "withholding_implementation": "allocate_withholding implements initial-return instruction24 using verified final filing groups and ratios; 25 local tests passed in0.58s. Tests cover excess refunds concentrated at HQ, zero burden, exact8-decimal ratios, group mismatch and missing confirmations. No final local cash or API policy enabled.",
     "excluded_reference": {
       "url": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=110202&flSeq=151415211&gubun=",
       "sha256": "568df81a94833bc7d5b39cc651561c1cbb48813362791f4db679e01100931c87",

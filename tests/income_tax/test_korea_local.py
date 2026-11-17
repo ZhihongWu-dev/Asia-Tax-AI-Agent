@@ -2,7 +2,7 @@ from decimal import Decimal, localcontext
 
 import pytest
 
-from packages.income_tax.korea_local import MunicipalityBasis as B, allocation_ratios
+from packages.income_tax.korea_local import MunicipalityBasis as B, allocation_ratios, allocate_withholding
 
 
 def compute(rows, head='hq', **kwargs):
@@ -45,3 +45,42 @@ def test_invalid_and_unresolved_cases_rejected(rows):
 def test_missing_head_office_and_unverified_totals_rejected():
     with pytest.raises(ValueError): compute([B('branch', 1, 1)])
     with pytest.raises(ValueError): compute([B('hq', 1, 1)], verified=False)
+
+
+def withholding(total, burdens=None, ratios=None, **changes):
+    args = dict(head_office='hq', initial_return_and_filing_groups_verified=True)
+    args.update(changes)
+    return allocate_withholding(total, burdens or {'hq': 600, 'branch': 400},
+        ratios or {'hq': '.6', 'branch': '.4'}, **args)
+
+
+def test_withholding_below_or_equal_burden_uses_verified_ratios():
+    assert withholding(500)['credits'] == {'hq': 300, 'branch': 200}
+    assert withholding(1000)['allocation_mode'] == 'proportional'
+
+
+def test_excess_withholding_is_refunded_at_head_office_not_all_branches():
+    result = withholding(1500)
+    assert result['credits'] == {'hq': 1100, 'branch': 400}
+    assert result['allocation_mode'] == 'branch_burden_then_head_office_remainder'
+    assert sum(result['credits'].values()) == 1500
+
+
+def test_zero_burden_assigns_all_withholding_to_head_office():
+    assert withholding(20, burdens={'hq': 0, 'branch': 0})['credits'] == {'hq': 20, 'branch': 0}
+
+
+def test_eight_decimal_ratios_and_low_context_preserve_total():
+    with localcontext() as context:
+        context.prec = 3
+        result = withholding('999.999999', ratios={'hq': '.33333333', 'branch': '.66666667'})
+    assert sum(result['credits'].values()) == Decimal('999.999999')
+
+
+@pytest.mark.parametrize('changes', [dict(head_office='missing'),
+    dict(initial_return_and_filing_groups_verified=False),
+    dict(ratios={'hq': '.5'}), dict(ratios={'hq': '.5', 'branch': '.4'}),
+    dict(ratios={'hq': True, 'branch': 0}), dict(ratios={'hq': 'NaN', 'branch': 0}),
+    dict(burdens={'hq': '-1', 'branch': 400})])
+def test_unverified_or_inconsistent_withholding_allocation_rejected(changes):
+    with pytest.raises(ValueError): withholding(100, **changes)
