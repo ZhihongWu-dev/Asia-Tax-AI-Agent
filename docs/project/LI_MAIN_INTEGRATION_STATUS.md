@@ -20,6 +20,11 @@ The final integration has not been pushed or merged to `main`. The historical
   deselections are live-database integration tests. Database extraction tests
   passed69 separately. These results do not establish live account isolation,
   provider availability or hosted-worker acceptance.
+- After Thai dividend integration, the complete `apps/web/tests/income-tax.spec.ts`
+  browser file passed35 scenarios in2.2minutes using Edge and local fixtures.
+  This covers the existing case save/reopen, revision conflict, phone viewport
+  and country calculations in that file; it is not the entire frontend suite or
+  deployed-account acceptance.
 - Planning runs are connected to the signed-in case API and UI, with a durable
   queue, worker leases, cancellation and pinned artifacts. The hosted worker
   has not been provisioned or accepted. A manual-deploy worker definition is
@@ -51,6 +56,12 @@ The final integration has not been pushed or merged to `main`. The historical
   (some overlap), and55 local parameters are absent from the cloud catalog. See
   [dependency evidence](data-reconciliation/planner-source-readiness-20261118.json).
   These counts replace the older audit that reconstructed admission rules itself.
+- The missing Japanese consolidated-tax research citation has an exact quote,
+  but describes the former regime. Current article132-3 uses group-tax-sharing
+  corporations and includes acts of other group corporations. Its undated legacy
+  parameter requires historical quarantine and current statutory rebinding,
+  rather than automatic source admission. See
+  [scope review](data-reconciliation/japan-group-tax-scope-review-20261118.json).
 - Thai PIT overview review found conflicting legacy parameters: its residence
   wording excludes day180, while Revenue Code section41 includes it; its fixed
   dividend credit3/7 omits section47bis's distributing-company rate dependency.

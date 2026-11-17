@@ -1,0 +1,34 @@
+{
+  "review_date": "2026-11-18",
+  "status": "historical_scope_conflict_not_admitted",
+  "legacy_parameter": "jp.anti_abuse.consolidated_corporation_unreasonable_tax_reduction_denial.legacy_60062fc21261",
+  "legacy_citation": "jp.nta.consolidated-tax-avoidance-denial#h2",
+  "exact_quote_match": true,
+  "sources": [
+    {
+      "doc_id": "jp.cta",
+      "url": "https://laws.e-gov.go.jp/api/1/lawdata/340AC0000000034",
+      "sha256": "b3adc0eabf98a8210ec465d6ded837fb0fadf65d4cfcb3e3bc2b7e43ca27212a",
+      "raw_verified": true
+    },
+    {
+      "doc_id": "jp.nta.consolidated-tax-avoidance-denial",
+      "url": "https://www.nta.go.jp/about/organization/ntc/kenkyu/ronsou/89/01/index.htm",
+      "sha256": "845c02a14b204b68a7c175d273dcdb61c0ebce428758e1887a617446121136ec",
+      "raw_verified": true
+    }
+  ],
+  "current_statutory_citation": "jp.cta#132-3",
+  "current_statutory_text_sha256": "ec1179c7a6eab7e823299d47a5bd3786c773dc2c976331164b87e5e4be210aa8",
+  "transition_source": "https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/hojin/group_tsusan/index.htm",
+  "transition": "Group tax sharing applies to business years beginning on or after2022-04-01. The archived article discusses the former consolidated-tax system.",
+  "scope_difference": "Current article132-3 refers to an act/calculation of the group-sharing corporation OR another group-sharing corporation. The legacy research quote limits its discussion to the former consolidated-corporation formulation.",
+  "required_changes": [
+    "Keep historical research provenance, but quarantine the undated legacy parameter from current catalog use.",
+    "Bind a separately named current group-tax-sharing anti-abuse parameter to article132-3, with verified commencement and transitional scope.",
+    "Do not infer a universal company GAAR or admit the missing research citation merely to satisfy dependency closure.",
+    "Review authoritative current article and commencement before frozen catalog rebuild; rerun citation and business tests."
+  ],
+  "generated_data_modified": false,
+  "cloud_admitted": false
+}
