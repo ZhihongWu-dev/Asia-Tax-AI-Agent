@@ -380,3 +380,9 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - OCR session96212 completed with exit0. All five registered originals now have full-page transcriptions: Law09 (2), Decree141 (4), Decree398 (10), Law67 (21), and Decree320 (76), totaling113 pages.
 - Independently revalidated original source/model profile, ordered page hashes/counts and whole-transcription hashes against vietnam-ocr-progress.json. All five passed. Trial slicing produced247 clauses; this count is extraction evidence, not proof of legally complete or correct provisions.
 - Preserved the remaining three transcripts and provenance metadata. All remain pending_original_comparison; original comparison, corrections and full indexing are pending. No cloud approval, remote push or full business acceptance claimed. Both corporate and personal income-tax coverage remain required across all11 dividend jurisdictions.
+
+### Vietnamese citation segmentation review
+
+- Visually compared Decree398 original page3 with OCR. Article3 paragraph1 was misrecognized as `1,`, so consecutive paragraph slicing omitted all four paragraph-level citations while retaining their text inside Article3.
+- Recorded an exact source/transcription-hash-bound correction, preserving raw OCR. In-memory trial correction restores #3.1 through #3.4 and increases this document from11 to15 clauses. Correction application in the build remains pending; this is not approval of the remaining transcription.
+- Consulted official PyMuPDF GitHub OCR documentation for extraction scope; no dependency or external code adopted. Evidence: vietnam-ocr-reviewed-corrections.json.
