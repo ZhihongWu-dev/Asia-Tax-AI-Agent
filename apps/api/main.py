@@ -67,13 +67,13 @@ async def private_responses(request: Request, call_next):
 
 
 @app.get("/health")
-def health():
+def health(request: Request):
     result = {"status": "ok", "release_level": "L0"}
     # Public Git revision only; never expose the rest of the runtime environment.
     revision = os.environ.get("RENDER_GIT_COMMIT", "")
     if re.fullmatch(r"[0-9a-f]{40}", revision):
         result["revision"] = revision
-    runtime = getattr(app.state, 'runtime', None)
+    runtime = getattr(request.app.state, 'runtime', None)
     if runtime is not None:
         result['runtime'] = runtime.public()
         if runtime.provider == 'combined' and not result['runtime']['knowledge_ready']:

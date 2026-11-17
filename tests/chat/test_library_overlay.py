@@ -1,6 +1,50 @@
 import json
+from hashlib import sha256
 import pytest
 from packages.chat.library_overlay import load_candidates, admitted_rows, matching_rows
+from packages.chat.library_overlay import validate_base_rows, blocked_citations
+
+
+def replacement_fixture():
+    commit, records, review = accepted_fixture()
+    cite = review['cite_id']
+    baseline = dict(uploaded_at='base', text_sha256=sha256(b'old extraction').hexdigest(),
+                    document_sha256=review['document_sha256'])
+    records[cite] = {**records[cite], 'replaces': baseline}
+    review = {**review, 'difference': 'different_text', 'base_uploaded_at': 'base'}
+    base = dict(cite_id=cite, doc_id=review['doc_id'], text='old extraction',
+                document_sha256=review['document_sha256'])
+    return commit, records, review, base
+
+
+def test_replacement_requires_approval_and_exact_baseline():
+    commit, records, review, base = replacement_fixture()
+    assert admitted_rows(commit, records, [{**review, 'review_status': 'candidate'}]) == []
+    assert blocked_citations([review], []) == {review['cite_id']}
+    overlay = admitted_rows(commit, records, [review])
+    validate_base_rows(overlay, records, [base])
+    assert overlay[0]['origin'] == 'reviewed_main_replacement'
+    assert blocked_citations([review], overlay) == set()
+    for changed in ([], [{**base, 'text': 'changed'}],
+                    [{**base, 'document_sha256': '0' * 64}], [{**base, 'doc_id': 'other'}]):
+        with pytest.raises(ValueError, match='overlay_replacement_base_changed'):
+            validate_base_rows(overlay, records, changed)
+
+
+@pytest.mark.parametrize('baseline', [None, {}, {'uploaded_at': 'wrong'},
+    {'uploaded_at': 'base', 'text_sha256': 'x' * 64, 'document_sha256': '0' * 64}])
+def test_replacement_without_bound_baseline_is_not_admitted(baseline):
+    commit, records, review, _ = replacement_fixture()
+    records[review['cite_id']]['replaces'] = baseline or {}
+    with pytest.raises(ValueError, match='overlay_replacement_baseline_missing'):
+        admitted_rows(commit, records, [review])
+
+
+def test_main_only_collision_still_fails():
+    commit, records, review = accepted_fixture()
+    overlay = admitted_rows(commit, records, [review])
+    with pytest.raises(ValueError, match='overlay_base_collision'):
+        validate_base_rows(overlay, records, [{'cite_id': review['cite_id']}])
 
 
 def test_real_candidate_bundle_preserves_all_107_without_approving_them():

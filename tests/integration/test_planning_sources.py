@@ -10,6 +10,20 @@ from packages.domain_bridge import planning_sources as sources
 PIN = {'uploaded_at': 'pinned', 'review_sha256': 'review'}
 
 
+def test_reviewed_replacement_returns_complete_new_text_once(monkeypatch):
+    body = 'correct full source ' * 1000
+    fixture_reader(monkeypatch,
+        rows=[dict(cite_id='cn.law#1', passage='broken extraction')],
+        reviews=[dict(cite_id='cn.law#1', difference='different_text',
+                      review_status='accepted', reviewed_at='date')],
+        overlay=[dict(cite_id='cn.law#1', passage=body[:5000], _search_text=body,
+                      origin='reviewed_main_replacement')])
+    result = sources.read_sources(['cn.law#1'], expected_version=PIN)
+    assert list(result['sources']) == ['cn.law#1']
+    assert result['sources']['cn.law#1']['passage'] == body
+    assert result['sources']['cn.law#1']['passage_sha256'] == sha256(body.encode()).hexdigest()
+
+
 def fixture_reader(monkeypatch, *, rows=(), reviews=(), overlay=(), tables=None):
     statements = []
     class Connection:

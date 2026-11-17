@@ -10,6 +10,7 @@ import re
 from sqlalchemy import text
 
 from packages.chat import library_cloud
+from packages.chat.library_overlay import blocked_citations
 
 
 class PlanningSourcesUnavailable(ValueError):
@@ -69,11 +70,7 @@ def _read(citations, *, expected_version, include_catalog):
                     requested.update(c.strip() for c in row.get(field, '').split(';') if c.strip())
             if len(requested) > 1000:
                 raise ValueError('planning_dependency_limit')
-        blocked = {r['cite_id'] for r in reviews
-                   if r['difference'] == 'different_text'
-                   and not (r['review_status'] == 'rejected' and r['reviewed_at'] is not None)}
-        blocked.update(r['cite_id'] for r in reviews
-                       if r['difference'] == 'main_only' and r['review_status'] == 'candidate')
+        blocked = blocked_citations(reviews, overlay)
         if requested & blocked:
             raise PlanningSourcesUnavailable(blocked=requested & blocked)
         rows = [dict(r) for r in connection.execute(text('''
@@ -85,6 +82,8 @@ def _read(citations, *, expected_version, include_catalog):
             WHERE c.cite_id = ANY(:ids)
             ORDER BY c.cite_id
         '''), {'ids': sorted(requested)}).mappings().all()]
+        replacements = {r['cite_id'] for r in overlay if r['origin'] == 'reviewed_main_replacement'}
+        rows = [r for r in rows if r['cite_id'] not in replacements]
         rows.extend({**{k: v for k, v in r.items() if k != '_search_text'},
                      'passage': r['_search_text']} for r in overlay if r['cite_id'] in requested)
         if len({r['cite_id'] for r in rows}) != len(rows):

@@ -13,7 +13,8 @@ import re
 from sqlalchemy import create_engine, text
 
 from packages.persistence.config import get_settings
-from packages.chat.library_overlay import load_candidates, admitted_rows, matching_rows
+from packages.chat.library_overlay import (load_candidates, admitted_rows, matching_rows,
+                                         validate_base_rows, blocked_citations)
 
 
 class LibraryVersionChanged(ValueError):
@@ -58,10 +59,16 @@ def _read_library_state(connection, expected_version=None):
     version['overlay_bundle_sha256'] = overlay_hash
     version = _snapshot(version, reviews, expected_version)
     overlay = admitted_rows(source_commit, candidates, reviews)
-    if overlay and connection.execute(text(
-            'SELECT cite_id FROM database.clause WHERE cite_id = ANY(:ids) LIMIT 1'
-    ), {'ids': [row['cite_id'] for row in overlay]}).all():
-        raise LibraryVersionChanged('overlay_base_collision')
+    if overlay:
+        bases = [dict(r) for r in connection.execute(text('''
+            SELECT c.cite_id, c.doc_id, c.text, d.sha256 AS document_sha256
+            FROM database.clause c JOIN database.doc d ON d.id = c.doc_id
+            WHERE c.cite_id = ANY(:ids)
+        '''), {'ids': [row['cite_id'] for row in overlay]}).mappings().all()]
+        try:
+            validate_base_rows(overlay, candidates, bases)
+        except ValueError as exc:
+            raise LibraryVersionChanged(str(exc)) from exc
     return version, reviews, overlay
 
 
@@ -107,11 +114,7 @@ def search_library(query: str, jurisdiction: str, limit: int = 6, *, expected_ve
         # An accepted replacement is not usable until the overlay text and
         # applicability metadata are published. Rejected candidates retain the
         # base only after an explicit completed review.
-        blocked = {row['cite_id'] for row in reviews
-                   if row['difference'] == 'different_text'
-                   and not (row['review_status'] == 'rejected' and row['reviewed_at'] is not None)}
-        blocked.update(row['cite_id'] for row in reviews if row['difference']=='main_only'
-                       and row['review_status']=='candidate')
+        blocked = blocked_citations(reviews, overlay)
         rows = connection.execute(text("""
             SELECT c.cite_id, c.label, left(c.text, 5000) AS passage,
                    d.id AS document_id, d.title, d.url, d.sha256 AS document_sha256,

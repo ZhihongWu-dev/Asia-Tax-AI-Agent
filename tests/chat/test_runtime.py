@@ -67,7 +67,7 @@ def test_health_fails_when_managed_library_exits(monkeypatch):
     state = runtime.Runtime('hybrid', 'combined', True, 'tools',
                             SimpleNamespace(poll=lambda: 1))
     monkeypatch.setattr(main.app.state, 'runtime', state, raising=False)
-    response = main.health()
+    response = main.health(SimpleNamespace(app=main.app))
     assert response.status_code == 503
     data = json.loads(response.body)
     assert data['status'] == 'unavailable'

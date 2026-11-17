@@ -1,4 +1,4 @@
-"""Small immutable main-only source bundle, gated by the private review table."""
+"""Immutable main source candidates, gated by the private review table."""
 from hashlib import sha256
 import json
 from pathlib import Path
@@ -26,12 +26,23 @@ def admitted_rows(source_commit, records, reviews):
     """No review status is inferred from an exact text match or a source hash."""
     admitted = []
     for review in reviews:
-        if review['difference'] != 'main_only' or review['review_status'] != 'accepted':
+        if review['difference'] not in ('main_only', 'different_text') or review['review_status'] != 'accepted':
             continue
         row = records.get(review['cite_id'])
         if row is None or not review['reviewed_at'] or not (review.get('review_note') or '').strip():
             raise ValueError('overlay_review_incomplete')
         doc, clause = row['document'], row['clause']
+        replacement = review['difference'] == 'different_text'
+        if replacement:
+            baseline = row.get('replaces', {})
+            if (not isinstance(baseline, dict) or not baseline.get('uploaded_at')
+                    or baseline['uploaded_at'] != review.get('base_uploaded_at')
+                    or any(not isinstance(baseline.get(key), str) or len(baseline[key]) != 64
+                           or any(c not in '0123456789abcdef' for c in baseline[key])
+                           for key in ('text_sha256', 'document_sha256'))):
+                raise ValueError('overlay_replacement_baseline_missing')
+        elif row.get('replaces'):
+            raise ValueError('overlay_review_difference_mismatch')
         if (review['source_commit'] != source_commit or review['doc_id'] != doc['id']
                 or review['document_sha256'] != doc['sha256']
                 or review['document_url'] != doc['url']):
@@ -39,8 +50,37 @@ def admitted_rows(source_commit, records, reviews):
         admitted.append(dict(cite_id=clause['cite_id'],label=clause['label'],passage=clause['text'][:5000],
             document_id=doc['id'],title=doc['title'],url=doc['url'],document_sha256=doc['sha256'],
             lang=doc['lang'],effective_from=doc.get('effective_from',''),effective_to=doc.get('effective_to',''),
-            jurisdiction=doc['jur'],origin='reviewed_main_overlay',_search_text=clause['text']))
+            jurisdiction=doc['jur'],origin='reviewed_main_replacement' if replacement else 'reviewed_main_overlay',
+            _search_text=clause['text']))
     return admitted
+
+
+def validate_base_rows(overlay, candidates, base_rows):
+    """A replacement is valid only for the exact reviewed base extraction."""
+    bases = {r['cite_id']: r for r in base_rows}
+    if len(bases) != len(base_rows):
+        raise ValueError('overlay_base_collision')
+    for row in overlay:
+        base = bases.get(row['cite_id'])
+        if row['origin'] != 'reviewed_main_replacement':
+            if base is not None:
+                raise ValueError('overlay_base_collision')
+            continue
+        expected = candidates[row['cite_id']]['replaces']
+        if (base is None or base['doc_id'] != row['document_id']
+                or base['document_sha256'] != expected['document_sha256']
+                or sha256(base['text'].encode('utf-8')).hexdigest() != expected['text_sha256']):
+            raise ValueError('overlay_replacement_base_changed')
+
+
+def blocked_citations(reviews, overlay):
+    replacements = {r['cite_id'] for r in overlay if r['origin'] == 'reviewed_main_replacement'}
+    blocked = {r['cite_id'] for r in reviews if r['difference'] == 'different_text'
+               and not (r['review_status'] == 'rejected' and r['reviewed_at'] is not None)
+               and r['cite_id'] not in replacements}
+    blocked.update(r['cite_id'] for r in reviews
+                   if r['difference'] == 'main_only' and r['review_status'] == 'candidate')
+    return blocked
 
 
 def matching_rows(rows, query, jurisdiction, terms, exact):

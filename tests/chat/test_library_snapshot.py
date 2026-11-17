@@ -1,5 +1,6 @@
 from contextlib import nullcontext
 from types import SimpleNamespace
+from hashlib import sha256
 import pytest
 from packages.chat import library_cloud, library_research
 from packages.chat.service import WorkflowError
@@ -7,6 +8,44 @@ from packages.chat.service import WorkflowError
 VERSION = {'uploaded_at':'2026-11-13T03:39:52Z','spec_version':'2026-11-10','tools_commit':'release'}
 REVIEW = dict(cite_id='cn.test#1',difference='different_text',review_status='candidate',
               base_uploaded_at=VERSION['uploaded_at'],reviewed_at=None)
+
+
+def test_search_replacement_checks_live_base_and_invalidates_old_pin(monkeypatch):
+    body = 'corrected legal text'
+    doc = dict(id='cn.test', title='law', url='https://example.invalid/law',
+               sha256='a' * 64, lang='zh', jur='cn')
+    candidate = dict(document=doc, clause=dict(cite_id='cn.test#1', doc_id='cn.test',
+                     label='1', text=body), replaces=dict(uploaded_at=VERSION['uploaded_at'],
+                     document_sha256='a' * 64, text_sha256=sha256(b'broken').hexdigest()))
+    review = {**REVIEW, 'review_status': 'accepted', 'reviewed_at': 'date',
+              'review_note': 'test only', 'source_commit': 'commit', 'doc_id': 'cn.test',
+              'document_sha256': doc['sha256'], 'document_url': doc['url']}
+    base = dict(cite_id='cn.test#1', doc_id='cn.test', text='broken', document_sha256='a' * 64)
+    monkeypatch.setattr(library_cloud, 'load_candidates',
+                        lambda: ('commit', {'cn.test#1': candidate}, 'bundle-hash'))
+    class ReplacementConnection(Connection):
+        def execute(self, statement, params=None):
+            sql = str(statement)
+            if 'SELECT * FROM database_integration' in sql:
+                return Result([review])
+            if 'FROM database.clause c JOIN' in sql:
+                assert params == {'ids': ['cn.test#1']}
+                return Result([base])
+            return super().execute(statement, params)
+    monkeypatch.setattr(library_cloud, '_engine',
+                        lambda: SimpleNamespace(connect=ReplacementConnection))
+    result = library_cloud.search_library('cn.test#1', 'cn')
+    assert result['status'] == 'available' and result['blocked_citations'] == []
+    assert len(result['passages']) == 1
+    assert result['passages'][0]['passage'] == body
+    assert result['passages'][0]['origin'] == 'reviewed_main_replacement'
+    pin = result['library_version']
+    review['review_note'] = 'changed decision'
+    with pytest.raises(library_cloud.LibraryVersionChanged, match='library_version_changed'):
+        library_cloud.search_library('cn.test#1', 'cn', expected_version=pin)
+    base['text'] = 'unexpected upstream change'
+    with pytest.raises(library_cloud.LibraryVersionChanged, match='overlay_replacement_base_changed'):
+        library_cloud.search_library('cn.test#1', 'cn')
 
 
 def test_pin_includes_review_contents_and_fails_on_base_change():
