@@ -243,7 +243,15 @@ class Optimizer:
         self.rs, self.lib, self.tool = self.q.rs, self.q.lib, self.q.tool
         self.date = inp["date"]
         self.mode = inp.get("mode", "record")
-        self.amount = float(inp.get("amount") or 100.0)
+        amount = inp.get("amount", 100.0)
+        if isinstance(amount, bool) or not isinstance(amount, (int, float)):
+            raise ValueError("amount must be a finite nonnegative number")
+        try:
+            self.amount = float(amount)
+        except OverflowError:
+            raise ValueError("amount must be a finite nonnegative number") from None
+        if not math.isfinite(self.amount) or self.amount < 0:
+            raise ValueError("amount must be a finite nonnegative number")
         self.currency = inp.get("currency") or ""
         self.answers = {k: (v["answer"] if isinstance(v, dict) else v) for k, v in (inp.get("answers") or {}).items()}
         self.assume = list(inp.get("assume") or [])
