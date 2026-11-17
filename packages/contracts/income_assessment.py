@@ -129,6 +129,20 @@ class MYIndividual(MYBasis):
     policy: Literal['my_individual_2026']
 
 
+class MYDividends(Basis):
+    policy: Literal['my_dividend_2026']
+    dividend_statutory_before_threshold: Money
+    ordinary_statutory_income: Money
+    chargeable_income: Money
+    allowed_rebates: Money
+    allowed_tax_credits: Money
+    prepaid_tax: Money
+    separate_domestic_assessment_verified: StrictBool
+    dividend_scope_verified: StrictBool
+    bases_verified: StrictBool
+    settlement_inputs_verified: StrictBool
+
+
 class THBasis(Basis):
     ordinary_treatment_confirmed: StrictBool
     allowed_tax_credits: Money
@@ -387,5 +401,5 @@ class KRSalary(Basis):
 
 
 Assessment = Annotated[CNCompany | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
-                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
+                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
                        Field(discriminator='policy')]

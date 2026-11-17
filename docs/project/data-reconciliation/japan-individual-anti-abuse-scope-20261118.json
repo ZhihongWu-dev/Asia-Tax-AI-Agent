@@ -28,10 +28,22 @@
   "runtime_modified": false,
   "cloud_admitted": false,
   "isolated_repair": {
-    "status": "absence_row_retired_pending_rebuild",
+    "status": "rebuilt_and_verified",
     "retired_rows": 1,
     "historical_record_preserved_in_this_audit": true,
     "existing_statutory_parameter_preserved": true,
-    "runtime_promoted": false
+    "runtime_promoted": false,
+    "build_exit_code": 0,
+    "sqlite_integrity": "ok",
+    "citation_integrity": {
+      "counts": {
+        "doc": 349,
+        "clause": 42786,
+        "param": 815,
+        "decision": 50
+      },
+      "errors": [],
+      "legal_review": "not_established_by_this_check"
+    }
   }
 }

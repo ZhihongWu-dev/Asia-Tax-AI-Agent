@@ -9,6 +9,7 @@ from . import korea_salary
 from . import china_business
 from . import singapore_employment
 from . import thailand_dividends
+from . import malaysia_dividends
 from .korea_children import ChildCreditFacts
 from .korea_personal_deductions import PersonalDeductionPerson
 
@@ -34,7 +35,7 @@ def calculate(case: IncomeTaxCase, basis):
     expected = {'cn_company_2026': 'company', 'cn_small_company_2026': 'company', 'cn_comprehensive_2026': 'individual', 'cn_business_2026': 'individual',
                 'sg_company_ya2026': 'company', 'sg_resident_ya2026': 'individual',
                 'hk_salaries_2025_26': 'individual', 'my_company_2026': 'company',
-                'my_individual_2026': 'individual', 'th_company_2026':'company', 'th_resident_2026':'individual', 'th_dividend_2026':'individual',
+                'my_individual_2026': 'individual', 'my_dividend_2026': 'individual', 'th_company_2026':'company', 'th_resident_2026':'individual', 'th_dividend_2026':'individual',
                 'vn_personal_transfer_2026': 'individual', 'vn_employment_2026': 'individual', 'vn_company_2026': 'company',
                 'jp_resident_ordinary_2026': 'individual', 'jp_company_starting_2026':'company',
                 'in_personal_new_ty2026_27':'individual', 'in_personal_old_ty2026_27':'individual', 'in_company_section200_ty2026_27':'company',
@@ -190,6 +191,41 @@ def calculate(case: IncomeTaxCase, basis):
             if turnover != args['natural_person_business_turnover']:
                 raise ValueError('Business turnover must reconcile to saved business income')
         result = united_arab_emirates.ordinary_corporate_tax(tax_year=2026, subject_type=case.subject, **args)
+    elif policy == 'my_dividend_2026':
+        if args.pop('separate_domestic_assessment_verified') is not True:
+            raise ValueError('Separate domestic ordinary and dividend assessment must be verified')
+        allowed = {'dividend', 'employment', 'business', 'rental', 'interest',
+                   'royalty', 'service_remuneration', 'author_remuneration'}
+        if case.carried_losses != 0 or any(i.category not in allowed or
+                i.source_jurisdiction != 'my' or i.foreign_tax_paid not in (None, 0)
+                for i in case.incomes):
+            raise ValueError('Foreign, special-rate income and carried losses need a separate Malaysia workflow')
+        if not any(i.category == 'dividend' for i in case.incomes):
+            raise ValueError('Dividend assessment requires saved dividend income')
+        before = args.pop('dividend_statutory_before_threshold')
+        ordinary = args.pop('ordinary_statutory_income')
+        dividend = malaysia_dividends.dividend_statutory_income(before,
+            scope_verified=args.pop('dividend_scope_verified'))
+        with localcontext() as ctx:
+            ctx.prec = 40
+            gross_dividends = sum((i.gross_amount for i in case.incomes if i.category == 'dividend'), Decimal('0'))
+            gross_ordinary = sum((i.gross_amount for i in case.incomes if i.category != 'dividend'), Decimal('0'))
+            if before > gross_dividends or ordinary > gross_ordinary:
+                raise ValueError('Established statutory income exceeds the corresponding saved gross income')
+            aggregate = dividend + ordinary
+            if basis.chargeable_income > aggregate:
+                raise ValueError('Chargeable income exceeds aggregate income after the dividend threshold')
+            # Saved deductions include verified expenses, exclusions and reliefs,
+            # but exclude the automatic annual dividend threshold.
+            deductions = gross_dividends-before + gross_ordinary-ordinary + aggregate-basis.chargeable_income
+            if case.claimed_deductions != deductions:
+                raise ValueError('Malaysia dividend bases must reconcile to saved income and deductions, excluding the automatic threshold')
+        result = malaysia_dividends.annual_dividend_assessment(assessment_year=2026,
+            residency=case.residency, dividend_statutory_income=dividend,
+            aggregate_income=aggregate, **args)
+        result.update(dividend_statutory_before_threshold=before,
+                      dividend_threshold_used=before-dividend,
+                      ordinary_statutory_income=ordinary, reconciled_deductions=deductions)
     elif policy in ('my_company_2026','my_individual_2026'):
         if any(i.category in ('dividend','capital_gain') for i in case.incomes):
             raise ValueError('Dividend and capital-gains treatment requires a separate workflow')

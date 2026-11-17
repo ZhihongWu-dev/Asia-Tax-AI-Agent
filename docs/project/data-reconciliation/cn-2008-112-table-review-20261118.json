@@ -43,7 +43,7 @@
   },
   "local_rebuild_pending": true,
   "isolated_repair": {
-    "status": "applied_pending_rebuild",
+    "status": "rebuilt_and_verified",
     "doc_before": {
       "id": "cn.sta.2008-112",
       "jur": "cn",
@@ -80,6 +80,18 @@
       "note": "Fully repealed by STA Announcement 2023 No.8 annex item48. Retain historical raw source; exclude every clause from the current library.",
       "phrase": ""
     },
-    "runtime_promoted": false
+    "runtime_promoted": false,
+    "build_exit_code": 0,
+    "sqlite_integrity": "ok",
+    "citation_integrity": {
+      "counts": {
+        "doc": 349,
+        "clause": 42786,
+        "param": 815,
+        "decision": 50
+      },
+      "errors": [],
+      "legal_review": "not_established_by_this_check"
+    }
   }
 }
