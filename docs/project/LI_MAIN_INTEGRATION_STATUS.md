@@ -60,9 +60,11 @@ The final integration has not been pushed or merged to `main`. The historical
   preserves non-creditable tranches. Annual settlement now supports aggregation
   with refundable dividend credit and a separate fully-withheld10% election,
   preserving minimum-tax gross-up and requiring complete election-scope review.
-  The Thai module tests passed58. It is not
-  yet connected to case contracts or the UI; those
-  remain required before claiming a usable dividend workflow. The existing
+  Case contracts and the calculation adapter now reconcile every dividend
+  against indexed certificate tranches and saved deductions, rejecting missing,
+  duplicate, foreign or unsupported income. The full income suite passed1082.
+  UI integration and browser acceptance remain required before claiming a usable
+  dividend workflow. The existing
   ordinary individual adapter continues to reject dividend income.
 - The original twelve-row optimizer regression is still running. As of the latest
   process check, PID16760 is live and the log reports three successful checks:

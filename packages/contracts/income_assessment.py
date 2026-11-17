@@ -148,6 +148,27 @@ class THIndividual(THBasis):
     assessable_income_classification_confirmed: StrictBool
 
 
+class THDividendLine(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    income_index: Annotated[int, Field(strict=True, ge=0, le=199)]
+    gross_dividend: Money
+    corporate_rate_percent: Money | None
+    withholding_tax: Money
+    credit_eligible: StrictBool
+
+
+class THDividends(Basis):
+    policy: Literal['th_dividend_2026']
+    election: Literal['aggregate', 'final_withholding']
+    tranches: list[THDividendLine] = Field(min_length=1, max_length=1000)
+    allowed_expenses_and_allowances: Money
+    other_prepaid_tax: Money
+    certificates_verified: StrictBool
+    recipient_eligibility_verified: StrictBool
+    election_scope_verified: StrictBool
+    ordinary_income_classification_verified: StrictBool
+
+
 class VNCompany(Basis):
     policy: Literal['vn_company_2026']
     taxable_income: Money
@@ -366,5 +387,5 @@ class KRSalary(Basis):
 
 
 Assessment = Annotated[CNCompany | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
-                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
+                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
                        Field(discriminator='policy')]
