@@ -1380,6 +1380,16 @@ def slice_vn(doc_id, text):
     dropped; a table of contents before the body restarts the numbering and is passed over. A reference such as
     'Điều 3 của Luật này' alone on a line has no dot after the number and is not a heading.
     Written on Luật Thuế thu nhập doanh nghiệp 67/2025/QH15 (2026-10-23): 20 articles."""
+    if doc_id == 'vn.law.cit67.2025.gazette.vi':
+        # Verified furniture in Gazette965-966, not legal text. Limit this
+        # cleanup to the reviewed rendition so previously admitted laws retain
+        # their text hashes. PDF signature metadata follows the first page body.
+        text = re.sub(r'(?m)^\s*CÔNG BÁO/Số 965 \+ 966/Ngày 24-7-2025\s*$', '', text)
+        text = re.sub(
+            r'(?m)^Người ký: CỔNG THÔNG TIN ĐIỆN TỬ CHÍNH PHỦ\s*\n'
+            r'Email: thongtinchinhphu@chinhphu\.vn\s*\n'
+            r'Cơ quan: VĂN PHÒNG CHÍNH PHỦ\s*\n'
+            r'Thời gian ký: 28\.07\.2025 10:19:28 \+07:00\s*$', '', text)
     kept, title_next = [], False
     for ln in text.splitlines():
         s = ln.strip()

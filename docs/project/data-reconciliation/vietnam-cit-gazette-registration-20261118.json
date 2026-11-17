@@ -1,5 +1,5 @@
 {
-  "status": "official_native_text_archived_registered_and_extracted_pending_full_validation",
+  "status": "native_text_extracted_furniture_cleaned_coverage_incomplete",
   "document": {
     "id": "vn.law.cit67.2025.gazette.vi",
     "jur": "vn",
@@ -28,5 +28,19 @@
   "articles1_to20_present": true,
   "visual_check": "First and final legal pages inspected; title, law number and adoption signature match. Not every clause visually verified.",
   "transport": "Downloaded from official index CDN link with Windows system certificate validation; Python CA validation failed. TLS verification was not disabled.",
-  "scope": "Original Law67 only; amendment reconciliation and primary-source rebinding pending. No cloud admission or runtime promotion."
+  "scope": "Original Law67 only; amendment reconciliation and primary-source rebinding pending. No cloud admission or runtime promotion.",
+  "parser_verification": {
+    "database_tests_passed": 72,
+    "clauses": 105,
+    "body_preservation": "All105 clauses retain identical non-whitespace body characters after removal of exact verified header/signature strings."
+  },
+  "scoped_validation_before_cleanup": {
+    "exit_code": 1,
+    "errors": 0,
+    "gaps": [
+      "company.restructure",
+      "company.exit",
+      "individual.exit"
+    ]
+  }
 }
