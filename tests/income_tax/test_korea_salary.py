@@ -5,7 +5,7 @@ import pytest
 
 from packages.income_tax.korea_children import ChildCreditFacts
 from packages.income_tax.korea_personal_deductions import PersonalDeductionPerson
-from packages.income_tax.korea_salary import standard_salary_annual, standard_salary_national_return
+from packages.income_tax.korea_salary import standard_salary_annual, standard_salary_national_return, standard_salary_return
 
 
 SELF=PersonalDeductionPerson('self','self',True,False,False)
@@ -118,3 +118,17 @@ def test_complete_national_return_separates_decision_and_cash_truncation():
     cash=result['national_settlement']['settlement']
     assert cash['refundable']==12490
     assert cash['balance_before_cash_rounding']==-12499
+
+
+def test_combined_payroll_never_nets_national_refund_against_local_payment():
+    result=standard_salary_return(50000009,(SELF,),(),tax_year=2026,
+        female_taxpayer=False,has_spouse=False,household_head=False,public_pension_paid=0,
+        ordinary_salary_and_standard_credit_verified=True,
+        family_eligibility_and_allocation_verified=True,pension_eligibility_verified=True,
+        current_employer_withheld=3400000,former_employer_settled_tax=0,
+        decision_and_employer_records_verified=True,installment=False,
+        local_current_employer_withheld=300000,local_former_employer_settled_tax=0,
+        employer_special_collection_verified=True)
+    assert result['total_refundable']==12490
+    assert result['total_payable']==38750
+    assert result['local_settlement']['local_decision_tax']==338750

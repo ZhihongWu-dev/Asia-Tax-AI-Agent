@@ -22,8 +22,14 @@
     "verification": "34 salary annual/settlement tests passed in 0.85s. Gross salary KRW50,000,009 produces decision KRW3,387,501; credits paid KRW3,400,000 produce balance -12,499 and cash refund12,490. Salary-cap phaseout test independently reconciles KRW33,000,001 salary to decision1,065,001."
   },
   "research_reference": "Previously reviewed MIT Korean tax reference repository rounding.py and salary audit notes; external behavior not adopted as proof of legal form-level rounding.",
+  "combined_payroll": {
+    "implementation": "standard_salary_return now combines national form24 decision/settlement with Article103-15 employer local settlement. Local decision is national decision times10%, truncated to whole won under form24, before deducting independently verified local current/former-employer tax. Cash balances remain separate by authority.",
+    "notice_distinction": "Current Article103-60 expressly measures KRW2,000 per assessment notice. This implementation is employer special collection, not a municipality-issued notice; it does not apply that notice threshold or copy the national KRW1,000 waiver to local balances. Based on current Articles103-13/103-15/103-60 in the archived original. Broader municipal notice workflows remain separate.",
+    "verification": "42 annual/settlement tests passed in0.81s. National decision3,387,501 produces local decision338,750 before local payment subtraction. With local payments340,000 refund is1,250, not1,240 from incorrectly subtracting before form truncation. Combined scenario retains national refund12,490 and local payable38,750 separately.",
+    "supporting_material_limit": "Indexed Gyeonggi education-office guide says local special collection has no small-balance exemption, but the original PDF download returned404; it was not archived or treated as the decisive authority."
+  },
   "unresolved": [
-    "Local small-amount noncollection interaction and current electronic-filing checks",
+    "Current electronic-filing validation and municipal notice workflows outside employer payroll",
     "Hometax 2026 electronic submission instructions: official NTS search locates the Hometax materials entry but actual current file not yet retrieved",
     "Complete personal API/UI and business acceptance"
   ],

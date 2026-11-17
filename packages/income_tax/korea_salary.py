@@ -113,3 +113,26 @@ def standard_salary_national_return(gross_salary, people, children, *,
         tax_year=annual['tax_year'],tax_scope='ordinary_salary_national_return_only',
         annual=annual,national_settlement=balance,sources=sources,
         stage='national_salary_return_before_installments_and_local_settlement')
+
+
+def standard_salary_return(gross_salary, people, children, *,
+        local_current_employer_withheld, local_former_employer_settled_tax,
+        employer_special_collection_verified, **national_inputs):
+    """Ordinary employer year-end national/local settlement, separate balances."""
+    from .korea_salary_settlement import local_salary_balance
+    national=standard_salary_national_return(gross_salary,people,children,**national_inputs)
+    local=local_salary_balance(national['annual']['decision_tax'],
+        local_current_employer_withheld,local_former_employer_settled_tax,
+        tax_year=national['tax_year'],employer_special_collection_verified=employer_special_collection_verified,
+        installment=national_inputs['installment'])
+    with localcontext() as context:
+        context.prec=40
+        cash=national['national_settlement']['settlement']
+        payable=cash['payable']+local['settlement']['payable']
+        refundable=cash['refundable']+local['settlement']['refundable']
+    return dict(policy_version='kr-salary-standard-payroll-2026-2026-11-18',currency='KRW',
+        tax_year=national['tax_year'],tax_scope='ordinary_salary_employer_national_and_local_settlement',
+        annual=national['annual'],national_settlement=national['national_settlement'],
+        local_settlement=local,total_payable=payable,total_refundable=refundable,
+        sources=national['sources']+local['sources'],
+        stage='separate_national_local_salary_balances_before_installments')

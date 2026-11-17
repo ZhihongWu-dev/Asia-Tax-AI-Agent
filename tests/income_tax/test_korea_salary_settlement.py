@@ -1,6 +1,6 @@
 import pytest
 
-from packages.income_tax.korea_salary_settlement import national_salary_balance
+from packages.income_tax.korea_salary_settlement import national_salary_balance, local_salary_balance
 
 
 def run(decision=2000000,current=0,former=0,**changes):
@@ -35,3 +35,20 @@ def test_former_settled_tax_and_current_withholding_reconcile():
     dict(current=True),dict(former=-1)])
 def test_unverified_and_invalid_receipt_inputs_rejected(changes):
     with pytest.raises(ValueError):run(**changes)
+
+
+@pytest.mark.parametrize('national,current,former,payable,refund',[
+    (999,0,0,90,0),(1000,0,0,100,0),(19999,0,0,1990,0),
+    (20000,0,0,2000,0),(3387501,300000,40000,0,1250),
+    (10000,2000,500,0,1500)])
+def test_local_salary_uses_decision_and_own_payments(national,current,former,payable,refund):
+    result=local_salary_balance(national,current,former,tax_year=2026,
+        employer_special_collection_verified=True,installment=False)
+    assert result['settlement']['payable']==payable
+    assert result['settlement']['refundable']==refund
+
+
+def test_local_employer_mode_cannot_be_assumed_for_assessment_notice():
+    with pytest.raises(ValueError):
+        local_salary_balance(1000,0,0,tax_year=2026,
+            employer_special_collection_verified=False,installment=False)
