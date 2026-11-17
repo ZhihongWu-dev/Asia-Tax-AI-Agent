@@ -13,8 +13,9 @@ the servers of one machine download each table once per upload; one process down
 A new upload has a new uploaded_at, so a stale table is never read; older folders are deleted. tax_db_cache=off turns it
 off. Single clauses asked by cite_id are not cached; they come from the cached clause table once it exists.
 
-Read-only: the session is opened with default_transaction_read_only. Not on the remote: blocked.csv, STATUS.md and
-session_log.md (rows("blocked") is empty; status() is made from meta). Credentials (never printed): database_url,
+Read-only: the session is opened with default_transaction_read_only. blocked.csv, STATUS.md and session_log.md are in the
+bucket since 2026-11-17 (rows("blocked") reads blocked.csv, empty for an older upload; status() is still made from meta).
+Credentials (never printed): database_url,
 supabase_url and supabase_key, as for upload.py.
 """
 import csv
@@ -95,8 +96,11 @@ class Remote:
                 elif name == "superseded":
                     self.tables[name] = self.cached(name, lambda: list(csv.DictReader(io.StringIO(
                         self.object("superseded.csv").decode("utf-8-sig")))))
-                elif name == "blocked":
-                    self.tables[name] = []
+                elif name == "blocked":                # in the bucket since 2026-11-17; empty for an older upload. Not cached:
+                    try:                               # it is small, and upload.py --notes-only rewrites it without a new uploaded_at
+                        self.tables[name] = list(csv.DictReader(io.StringIO(self.object("blocked.csv").decode("utf-8-sig"))))
+                    except RuntimeError:
+                        self.tables[name] = []
                 else:
                     raise ValueError("no table %s" % name)
             return self.tables[name]

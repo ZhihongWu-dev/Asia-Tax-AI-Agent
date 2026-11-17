@@ -1,4 +1,4 @@
-# Merge guide: make `main` the new model and deploy it
+# Deploy guide: make `main` the new model and deploy it
 
 You are integrating this repository on your own machine. The project owner has decided that the new model on branch
 `LiZiheng` replaces the old Taxrora application on `main`. Your job: set up the environment, make `main` one product

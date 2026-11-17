@@ -5,6 +5,10 @@
 #   conda activate tax
 #   pip install -r requirements.txt
 #
+# Keys: they live in .env at the project root (qwen_key is read only from there; the library settings are read from the
+# process environment first, then .env). You can set your own: copy .env.example to .env and fill in your values
+# (qwen_key is the only one required; the Supabase entries only for tax_db=supabase). README.md, "Keys and .env", lists every entry and the service it is for.
+#
 # Outside Python:
 #   - LibreOffice, only for .doc / .rtf / .xls / .ppt originals in database/ (SOFFICE at the top of database/tools/build.py)
 #   - xelatex with ctex (TeX Live or MiKTeX), for the client PDF (agent/tools/render_pdf.py)

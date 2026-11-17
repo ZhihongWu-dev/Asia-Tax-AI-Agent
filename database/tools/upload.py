@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 """Upload the library to the shared remote by overwriting it (数据库规范.md §4.5).
 
-  python database/tools/upload.py [--jur cn ...] [--partial] [--dry-run] [--schema database] [--bucket database]
+  python database/tools/upload.py [--jur cn ...] [--partial] [--dry-run] [--notes-only] [--schema database] [--bucket database]
 
 The jurisdictions that pass the acceptance (§5; every jurisdiction of jurisdiction.csv when no --jur is given; with
 --partial also those with gaps but no error) are uploaded, and the remote is replaced by exactly that data:
-  1. files: every raw/, ocr/ and text/ file of those jurisdictions, superseded.csv (the rows of their documents), and the
-     spec and task sheet in Chinese and English (DOCS, under docs/), are written to the bucket (a path already there is
-     overwritten); then every other object is deleted;
+  1. files: every raw/, ocr/ and text/ file of those jurisdictions, superseded.csv and blocked.csv (the rows of their
+     documents / jurisdictions), STATUS.md and session_log.md, and the spec and task sheet in Chinese and English (DOCS,
+     under docs/), are written to the bucket (a path already there is overwritten); then every other object is deleted;
   2. tables: in one transaction the schema is dropped and created again with the seven tables and their rows and the
      table meta (key, value: spec_version, the sha256 of build.py and upload.py, the git commit of the tools, who
      uploaded and when, the acceptance line of each jurisdiction), so a failure leaves the previous tables as they were.
@@ -15,10 +15,13 @@ Before writing, the remote meta is read: a remote written under a newer specific
 build.SPEC_VERSION) is not overwritten; update the tools first. Nothing else is compared. Upload from the folder that
 holds everyone's data: what is not in it is gone from the remote afterwards.
 --dry-run     print what would be uploaded and the remote meta; write nothing
+--notes-only  write only blocked.csv, STATUS.md, session_log.md and the docs to the bucket; the tables, raw/, ocr/ and
+              text/ on the remote are not touched and nothing is deleted
 Credentials (never printed) come from the environment or the .env next to or above database/: database_url for
 Postgres, supabase_url and supabase_key for the bucket. The tools and samples/ are not uploaded (their commit is in meta).
 The bucket has a standing rule that lets the publishable key (role anon) read and write it, so a publishable key is
-enough. Uploaded: the seven tables and meta, raw/, ocr/, text/, superseded.csv and the four docs.
+enough. Uploaded: the seven tables and meta, raw/, ocr/, text/, superseded.csv, blocked.csv, STATUS.md, session_log.md
+and the four docs.
 Exit code 0 when the upload went through, 1 otherwise.
 """
 import argparse
@@ -49,6 +52,7 @@ SAFE_PATH = re.compile(r"^[A-Za-z0-9._/-]+$")
 SAFE_NAME = re.compile(r"^[a-z0-9_-]{1,63}$")
 DOCS = {"数据库规范.md": "docs/spec.zh.md", "database_spec.en.md": "docs/spec.en.md",      # local file -> bucket path;
         "采集任务单.md": "docs/task_sheet.zh.md", "collection_task_sheet.en.md": "docs/task_sheet.en.md"}   # uploaded each time
+NOTES = ("STATUS.md", "session_log.md")    # the folder's status and session record, under the same names in the bucket
 
 
 def clean(msg, secrets):
@@ -198,6 +202,7 @@ def main():
     ap.add_argument("--jur", action="append", default=[], help="jurisdiction to upload (repeatable; default: all that pass)")
     ap.add_argument("--partial", action="store_true", help="also upload a jurisdiction with gaps but no error")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--notes-only", action="store_true", help="write only blocked.csv, STATUS.md, session_log.md and the docs")
     ap.add_argument("--schema", default="database")
     ap.add_argument("--bucket", default="database")
     ap.add_argument("--root", default="", help="library folder (default: database/)")
@@ -233,9 +238,20 @@ def main():
     w = csv.DictWriter(buf, fieldnames=build.SUPERSEDED, extrasaction="ignore", lineterminator="\n")
     w.writeheader()
     w.writerows(superseded)
+    blocked_rows = build.read_csv(ROOT / "blocked.csv") if (ROOT / "blocked.csv").exists() else []
+    blocked = [r for r in blocked_rows if set(r["jur"].split("-")) & set(ok_jurs)]     # a pair row goes with either side
+    bbuf = io.StringIO()
+    w = csv.DictWriter(bbuf, fieldnames=list(blocked_rows[0]) if blocked_rows else ["id", "jur"], extrasaction="ignore",
+                       lineterminator="\n")
+    w.writeheader()
+    w.writerows(blocked)
     meta = tools_meta(lines)
-    print("  plan    %d rows in %d tables + meta, %d files, superseded.csv %d rows; they replace the remote schema %s and bucket %s" % (
-        sum(len(v) for v in rows.values()), len(ORDER), len(paths), len(superseded), args.schema, args.bucket))
+    if args.notes_only:
+        print("  plan    blocked.csv %d rows, %s and the docs; the remote tables and other files stay as they are" % (
+            len(blocked), ", ".join(NOTES)))
+    else:
+        print("  plan    %d rows in %d tables + meta, %d files, superseded.csv %d rows, blocked.csv %d rows; they replace the remote schema %s and bucket %s" % (
+            sum(len(v) for v in rows.values()), len(ORDER), len(paths), len(superseded), len(blocked), args.schema, args.bucket))
 
     # 2. the remote meta, then files, then tables
     dsn = fetch.secret("database_url").replace("postgresql+psycopg://", "postgresql://")
@@ -263,16 +279,24 @@ def main():
     try:
         bucket = Bucket(url, key, args.bucket)
         bucket.ensure()
-        for k, p in enumerate(paths, 1):
+        for k, p in enumerate([] if args.notes_only else paths, 1):
             bucket.put(p, (ROOT / p).read_bytes())
             if k % 25 == 0 or k == len(paths):
                 print("  files   %d/%d written" % (k, len(paths)))
         docs = {remote: ROOT / local for local, remote in DOCS.items() if (ROOT / local).exists()}
+        docs.update({name: ROOT / name for name in NOTES if (ROOT / name).exists()})
         for remote, local in docs.items():
             bucket.put(remote, local.read_bytes(), "text/markdown; charset=utf-8")
-        bucket.put("superseded.csv", buf.getvalue().encode("utf-8-sig"), "text/csv; charset=utf-8")
-        docs["superseded.csv"] = None
+        if not args.notes_only:
+            bucket.put("superseded.csv", buf.getvalue().encode("utf-8-sig"), "text/csv; charset=utf-8")
+            docs["superseded.csv"] = None
+        bucket.put("blocked.csv", bbuf.getvalue().encode("utf-8-sig"), "text/csv; charset=utf-8")
+        docs["blocked.csv"] = None
         print("  docs    %d written (%s)" % (len(docs), ", ".join(sorted(docs))))
+        if args.notes_only:
+            con.close()
+            print("notes only: the remote tables and the other files were not touched")
+            return 0
         with con.cursor() as cur:
             cur.execute("SELECT name FROM storage.objects WHERE bucket_id = %s", (args.bucket,))
             stale = sorted({r[0] for r in cur.fetchall()} - set(paths) - set(docs))
