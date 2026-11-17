@@ -11,10 +11,11 @@ sys.path.insert(0, str(ROOT))
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--once', action='store_true')
+    parser.add_argument('--check', action='store_true', help='Check queue schema and library reader without claiming jobs')
     args = parser.parse_args()
     try:
         from packages.domain_bridge.planning_daemon import start
-        start(once=args.once)
+        start(once=args.once, check_only=args.check)
     except (KeyboardInterrupt, asyncio.CancelledError):
         return 130
     except Exception:

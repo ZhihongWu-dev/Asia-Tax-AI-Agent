@@ -10,6 +10,7 @@ from sqlalchemy import create_engine, select
 from packages.domain_bridge.planning_executor import execute_job
 from packages.domain_bridge.planning_store import PlanningStore, LeaseLost, runs
 from packages.domain_bridge.planning_worker import run_once
+from packages.chat.library_cloud import current_library_snapshot
 
 
 class WorkerSettings(BaseSettings):
@@ -48,7 +49,7 @@ async def with_shutdown(store, settings, *, once=False):
         signal.signal(signal.SIGTERM, previous)
 
 
-def start(*, once=False):
+def start(*, once=False, check_only=False):
     settings = WorkerSettings()
     url = settings.web_database_url or settings.database_url
     if not url:
@@ -61,6 +62,11 @@ def start(*, once=False):
         # SELECT every column so a stale/missing deployment fails before polling.
         with engine.connect() as connection:
             connection.execute(select(runs).limit(0))
+        # Fail before claiming jobs if the dedicated reader is absent, denied,
+        # or unable to load the pinned library/review metadata.
+        current_library_snapshot()
+        if check_only:
+            return
         asyncio.run(with_shutdown(PlanningStore(engine), settings, once=once))
     finally:
         engine.dispose()
