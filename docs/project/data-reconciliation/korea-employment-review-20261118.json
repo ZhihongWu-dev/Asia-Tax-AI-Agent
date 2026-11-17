@@ -1,0 +1,27 @@
+{
+  "scope": "2026 ordinary employment deduction and employment-attributable tax-credit reference; not a complete personal assessment",
+  "research": {
+    "github_reference": "https://github.com/UpstageAI/korean-tax-calc-mcp",
+    "reviewed_commit": "0f86d40b0334b6c1366518d0c36d244d210f1504",
+    "license": "MIT",
+    "maintenance": "Previously inspected 2026-11-17 commit and open issues; engine/calc_income.py reviewed for salary aggregation, credit caps and distinction between ordinary credit and special employment reductions. No code copied or dependency adopted.",
+    "official_deduction": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1026637559",
+    "official_credit": "https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1032884481",
+    "original_sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a"
+  },
+  "decisions": [
+    "Article47 requires aggregation across employers before the deduction schedule, with KRW20m cap. Exempt and daily-worker pay require separate classification.",
+    "Article59 credit depends on tax attributable to employment and statutory salary cap phaseouts. Mixed-income total tax cannot simply replace employment-attributable tax.",
+    "Keep exact decimal component results. The reference implementation floors components to won, but its behavior alone does not establish the legally required return-level rounding order.",
+    "Special employment reductions require additional interaction rules; explicit scope verification prevents treating an unadjusted reference as final credit.",
+    "Current Article59-2 text shows age13 after the April2026 amendment while NTS/explanatory materials include age8. Review supplementary applicability before implementing child eligibility; do not assume current consolidated text applies to the entire 2026 assessment."
+  ],
+  "verification": "34 tests passed: deduction thresholds/cap, employer aggregation, all credit cap phaseouts, credit threshold, fractional preservation under low ambient precision, invalid money and scope rejection.",
+  "remaining": [
+    "Personal/basic/additional deductions and child-credit transitional applicability",
+    "Special credits and relief ordering, mixed income and minimum-tax interactions",
+    "National/local settlement and exact return-level rounding",
+    "Personal saved-case API, frontend and business acceptance"
+  ],
+  "completion_claim": false
+}
