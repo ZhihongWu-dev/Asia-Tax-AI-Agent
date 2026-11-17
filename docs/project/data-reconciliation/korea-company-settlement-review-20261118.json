@@ -1,0 +1,73 @@
+{
+  "reviewed_on": "2026-11-18",
+  "status": "scoped_settlement_research_not_enabled_assessment",
+  "originals": [
+    {
+      "name": "national-treasury-article47",
+      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1031453583",
+      "sha256": "e219a858f303c94d114495ffc0105b5fef7e7622b85a7f064c5e5f9c35a6b665",
+      "bytes": 15087
+    },
+    {
+      "name": "local-accounting-article55",
+      "url": "https://law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=1013787769",
+      "sha256": "48056edd75ef03b4d94bfbe86c10072e2d95db2dab3ef6ff655b2607f333623b",
+      "bytes": 4385
+    },
+    {
+      "name": "corporate-guide2026",
+      "url": "https://www.nts.go.kr/comm/nttFileDownload.do?fileKey=e309f999984fe8bd6ac676b30de21519",
+      "bytes": 18882845,
+      "sha256": "d3002c90324245469cc044f01190c92b80ae3ad37965219bc9a364fcd771ac22"
+    },
+    {
+      "name": "corporate-return-form1",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=110202&flSeq=160257499&gubun=",
+      "bytes": 115774,
+      "sha256": "26b584bec4d744ec65a6c79bf0773c5ee57a1418eac7de0360166585d40cb499"
+    }
+  ],
+  "guide_scope": {
+    "total_pages": 751,
+    "reviewed_pages": [
+      6,
+      678,
+      679,
+      680,
+      681
+    ],
+    "visually_checked_pages": [
+      6,
+      680,
+      681
+    ],
+    "sample_tax_year": 2025,
+    "not_authority_for_2026_rate_selection": true
+  },
+  "findings": [
+    "Guide page6 separates gross tax, minimum-tax-limited relief, other credits, penalties, prior payments and relief recapture; a single final-tax multiplier is insufficient.",
+    "Corporate Tax Act64 lists relief/credits, interim tax, occasional assessments and withholding (penalties excluded from the listed offsets); installment rules are separate.",
+    "National Treasury Act47 distinguishes fractional-won tax base from sub-KRW10 receipts/disbursements; decree exceptions still require review.",
+    "Local Accounting Act55 permits sub-KRW10 treatment rather than establishing a universal mandatory local-tax rule."
+  ],
+  "sample_consistency": {
+    "taxable_base": 207671000,
+    "gross_tax": 19457490,
+    "relief": 250000,
+    "penalty": 90000,
+    "prior_payments": 18000000,
+    "arithmetic_balance_from_listed_inputs": 1297490,
+    "page680_printed_balance": 1457490,
+    "page681_printed_balance": 1290490,
+    "page680_difference": 160000,
+    "page681_difference": -7000,
+    "decision": "Do not use either printed balance as a golden expected result. Apparent internal inconsistency confirmed on original images; this arithmetic reconciliation is not a full legal assessment."
+  },
+  "pending": [
+    "Obtain current official form3 instructions and verify fraction/rounding order including refunds and installments.",
+    "Verify minimum-tax relief ordering, local jurisdiction allocation, local credits and local rounding.",
+    "Complete corporate and individual API/UI integration and actual business cases.",
+    "Register reviewed originals only after the live golden regression finishes; no database/runtime input changes during that run."
+  ],
+  "original_storage": "External integration audit directory korea-rounding-20261118; not yet admitted to the application source library."
+}
