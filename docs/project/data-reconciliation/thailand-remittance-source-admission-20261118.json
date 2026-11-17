@@ -1,5 +1,5 @@
 {
-  "status": "candidates_prepared_not_cloud_admitted",
+  "status": "cloud_admitted_and_exact_read_verified",
   "source_commit": "c1fd45a55093e7402ff61b1749ac6c13fd19ca19",
   "before_snapshot": {
     "spec_version": "2026-11-10",
@@ -28,5 +28,20 @@
       "characters": 886
     }
   ],
-  "scope": "P161 clause1 amended by P162, P161 commencement clause3 and complete one-page P162. Administrative remittance applicability; no treaty/exemption/foreign-credit approval inferred."
+  "scope": "P161 clause1 amended by P162, P161 commencement clause3 and complete one-page P162. Administrative remittance applicability; no treaty/exemption/foreign-credit approval inferred.",
+  "after_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "73cf9e9f8191dd1e9cb9e2befb26a2e26de6aff5c96037b30f0ac88ef76e0a2f",
+    "review_sha256": "df050ff61f8e6178f1d925bb0a484ff39ff2696a6efeb2b658b8c95e063e80a1"
+  },
+  "exact_complete_text_verified": true,
+  "old_pin_rejected": true,
+  "reader": "dedicated_read_only_role",
+  "cloud_base_mutated": false,
+  "base_counts": {
+    "doc": 287,
+    "clause": 38152
+  }
 }
