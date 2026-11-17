@@ -22,5 +22,21 @@
     "Verify commencement in signed legal instrument.",
     "Register clauses and replace current FAQ-backed treaty parameter with dated, qualified primary-law evidence.",
     "Preserve transitional certificate validity and test applicable scenarios."
-  ]
+  ],
+  "extraction_review": {
+    "mode": "id_pasal",
+    "clause_count": 135,
+    "artifact": "integration-audit-20261116/indonesia-treaty-procedure-20261118/clauses.json",
+    "status": "extracted_pending_full_clause_review"
+  },
+  "commencement_review": {
+    "article": "29",
+    "rule": "Commences on promulgation date",
+    "dgt_html_body_promulgation": "2025-12-31",
+    "dgt_html_body_signed": "2025-12-30",
+    "dgt_header_date": "2025-12-29",
+    "official_pdf": "https://jdih.kemenkeu.go.id/api/download/8830a44a-12f5-4717-84c0-fed0e6239bdf/2025pmkeuangan112.pdf",
+    "pdf_page_25_extraction": "Promulgation date is an unreadable glyph in extracted PDF text; visual confirmation or official gazette required before effective-date migration.",
+    "decision": "Do not infer commencement from page metadata or signature date. Stage database untouched while rebuild runs."
+  }
 }
