@@ -109,6 +109,11 @@ checker.version_hash()
 assert not checker.fails,checker.fails
 assert checker.version['database_version']['bundle_sha256']==bundle['bundle_sha256']
 assert checker.version['database_version']['library_version']==pin
+from packages.domain_bridge.planning_runner import run
+result=run(inp,bundle,expected_version=pin,output=Path(sys.argv[1])/'runner-products')
+assert result['checks']['status']=='passed'
+assert result['artifacts']['tax.json']['bytes'] > 0
+assert result['version']['database_version']['bundle_sha256']==bundle['bundle_sha256']
 '''
     r=subprocess.run([sys.executable,'-X','utf8','-c',script,str(tmp_path)],
                      cwd=Path(__file__).resolve().parents[2],capture_output=True,text=True,timeout=180)
