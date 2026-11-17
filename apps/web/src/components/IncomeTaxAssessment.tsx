@@ -3,14 +3,16 @@ import { api, ApiError } from '../api';
 import { useLocale } from '../locale';
 import type { Case } from '../workspace';
 import { policies, resultLabels } from '../income-assessment';
+import { koreaBasis } from '../korea-assessment';
+import KoreaCompanyResult from './KoreaCompanyResult';
 
 export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
   current: Case; disabled: boolean; onUpdate: (doc: Case) => void;
 }) {
   const {locale} = useLocale(), index = locale === 'en' ? 1 : 0;
   const say = (zh: string, en: string) => index ? en : zh;
-  const options = current.income_tax ? policies(current.income_tax) : [];
   const [selected,setSelected] = useState(''), [values,setValues] = useState<Record<string,string>>({});
+  const options = current.income_tax ? policies(current.income_tax,values) : [];
   const [explanation,setExplanation] = useState(''), [confirmed,setConfirmed] = useState(false);
   const [saving,setSaving] = useState(false), [error,setError] = useState('');
   const [conflict,setConflict] = useState(false);
@@ -21,7 +23,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
   function edit(key: string, value: string) {setValues(v=>({...v,[key]:value}));setConfirmed(false);setError('');}
   async function calculate(event: React.FormEvent) {
     event.preventDefault(); if (!policy) return;
-    const basis: Record<string,unknown> = {policy:policy.id,basis_confirmed:confirmed,basis_explanation:explanation};
+    let basis: Record<string,unknown> = {policy:policy.id,basis_confirmed:confirmed,basis_explanation:explanation};
     for (const field of policy.fields) {
       if (field.showWhen && values[field.showWhen[0]] !== field.showWhen[1]) {basis[field.key]=field.boolean?false:null;continue;}
       if (field.monthsList) {
@@ -41,6 +43,9 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
         return line;
       });
       for(const key of Object.keys(basis)) if(key.startsWith('transfer_')) delete basis[key];
+    }
+    if(policy.id==='kr_company_ordinary_2026') {
+      try {basis=koreaBasis(basis);} catch {setError(say('地方申报单位名称须非空且不能重复。','Local filing names must be nonempty and unique.'));return;}
     }
     const payload = JSON.stringify([current.revision,basis]);
     if (retry.current.payload !== payload) retry.current={payload,id:crypto.randomUUID()};
@@ -74,7 +79,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
             {field.boolean || field.options ? <select required value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)}>
               <option value="">{say('待确认','Not confirmed')}</option>
               {field.boolean ? <><option value="true">{say('是','Yes')}</option><option value="false">{say('否','No')}</option></> : field.options!.map(([value,label])=><option key={value} value={value}>{label[index]}</option>)}
-            </select> : <input required type={field.date ? 'date' : field.monthsList ? 'text' : 'number'} min={field.date ? '2026-07-01' : '0'} max={field.date ? '2026-12-31' : undefined} step="any" value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)} />}
+            </select> : <input required type={field.date ? 'date' : field.monthsList || field.text ? 'text' : 'number'} min={field.date ? '2026-07-01' : field.min ?? 0} max={field.date ? '2026-12-31' : field.max} step={field.integer ? '1' : 'any'} value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)} />}
           </label>)}</div>
           <label>{say('税基调整和资格依据说明','Tax-basis adjustments and eligibility explanation')}<textarea required minLength={20} maxLength={4000} value={explanation} onChange={e=>{setExplanation(e.target.value);setConfirmed(false);}} /></label>
           <label className="income-tax-confirm"><input type="checkbox" required checked={confirmed} onChange={e=>setConfirmed(e.target.checked)} />{say('我已核对所选税制、计税基础及其与已保存资料的关系。','I have checked the regime, tax basis and reconciliation to the saved facts.')}</label>
@@ -93,6 +98,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       <h4>{say('已保存计算结果','Saved calculation result')}</h4>
       {disabled && <p>{say('此结果对应上次保存的资料，不包含当前未保存的修改。','This result uses the last saved facts and excludes unsaved changes.')}</p>}
       <p>{new Date(result.created_at).toLocaleString()} · {String(result.result.currency)}</p>
+      {result.result.tax_scope==='ordinary_national_and_local_corporate_income_tax'&&<KoreaCompanyResult result={result.result} index={index} />}
       {result.result.regime==='company_normal'&&<p>{say('印度普通企业税制：已比较普通税与14% MAT，采用','India ordinary company regime: compared normal tax with 14% MAT; applied ')}{result.result.mat_applies?say('MAT。','MAT.'):say('普通税。','normal tax.')}{say(' 本期不使用历史MAT抵免，也不新增MAT抵免；账面利润调整须已核定。',' No legacy MAT credit used or new MAT credit generated; book-profit adjustments must be established.')}</p>}
       {result.result.regime==='personal_old_resident'&&<p>{say('印度居民个人旧税制；本税年最高年龄档：','India resident old regime; highest tax-year age band: ')}{result.result.resident_age_band==='under60'?say('未满60岁','Under 60'):result.result.resident_age_band==='60_to79'?say('60至79岁','60 to 79'):say('80岁及以上','80 or above')}{say('。本结果以有效税制选择、不适用AMT且无AMT结转抵免为前提。','; requires a valid election, AMT non-applicability and no carried AMT credit.')}</p>}
       {result.result.tax_scope==='india_ordinary_settlement_ty2026_27'&&<p>{say('印度TY 2026–27（2026年4月至2027年3月），不是AY 2026–27。本次补退额使用已核验的本期已缴款及累计利息、费用；利息和费用并非系统按日期自动核算。负数表示预计应退，不代表已获批准。不含退税利息、先前退税调整、更新申报、罚款、额外追缴或跨年度抵扣。','India TY 2026–27 (April 2026–March 2027), not AY 2026–27. Return balance uses verified period payments and cumulative interest/fees; interest and fees are not automatically computed from dates. A negative balance is a calculated refund, not approval. Excludes refund interest, prior-refund adjustments, updated returns, penalties, additional demands and cross-year offsets.')}</p>}

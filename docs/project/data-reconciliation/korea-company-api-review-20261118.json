@@ -12,10 +12,12 @@
     "income_tax_suite": "796 passed in 12.67s",
     "business_case": "KRW100m national base gives KRW10m gross national tax; KRW11m national prepayments produce KRW1m refundable. Independent KRW200m local base gives KRW2m payable across two local filing authorities. The API retains both totals without cross-authority netting.",
     "persistence": "Successful result survives store restart and idempotent request replay; unverified scope is rejected before a successful run.",
-    "input_boundaries": "Saved subject, residency, year, deductions, confirmation and unsupported foreign/special income tested; ratio float and excessive precision rejected."
+    "input_boundaries": "Saved subject, residency, year, deductions, confirmation and unsupported foreign/special income tested; ratio float and excessive precision rejected.",
+    "frontend": "TypeScript and Vite production build passed; existing bundle-size warning remains. Two Edge/Playwright company workflows passed in 34.0s, with and without minimum-tax-exempt national credit, two local authorities, duplicate-name rejection, removed relief entry exclusion, official source link and reopening saved result. Result screenshot visually inspected.",
+    "frontend_design": "Existing bilingual assessment form reused. Dynamic relief and local filing rows serialize decimal strings into nested API inputs; names are required and unique. National and per-local-authority settlement amounts are displayed independently."
   },
   "remaining": [
-    "Corporate frontend and browser acceptance",
+    "Additional corporate business cases and production browser acceptance",
     "Individual assessment and frontend integration",
     "Special regimes, foreign income, amended returns and installments",
     "Resolve final form43/form44-6 ratio precision for automatic allocation; current API accepts explicitly verified final ratios",
