@@ -8,35 +8,45 @@
       "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/67qh.signed.pdf",
       "sha256": "ae706468190afe8d111dd0fccf240e7a980eb002c5d0b5cb1cfe127d92f9c1cd",
       "bytes": 1009447,
-      "native_text_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text."
+      "native_text_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text.",
+      "registration_status": "registered_original_only",
+      "registered_file": "database/raw/vn/vn.law.cit67.2025.vi.pdf"
     },
     {
       "proposed_doc_id": "vn.law09.2026.vi",
       "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/5/09-qh.signed.pdf",
       "sha256": "d9207c14c9af462454dd7ce9ef5b23c8a22dfea8d3462438be9ffd3897a1f94e",
       "bytes": 176913,
-      "native_text_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text."
+      "native_text_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text.",
+      "registration_status": "registered_original_only",
+      "registered_file": "database/raw/vn/vn.law09.2026.vi.pdf"
     },
     {
       "proposed_doc_id": "vn.decree398.2026.vi",
       "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/11/398_2026_nd-cp_29102026-signed.signed.pdf",
       "sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
       "bytes": 4170011,
-      "native_text_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text."
+      "native_text_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text.",
+      "registration_status": "registered_original_only",
+      "registered_file": "database/raw/vn/vn.decree398.2026.vi.pdf"
     },
     {
       "proposed_doc_id": "vn.decree141.2026.vi",
       "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/141-ndcp.signed.pdf",
       "sha256": "fa9a7c47b637f47528225d9cdd03dbde1032607ec8c39648071178ce4091413f",
       "bytes": 262358,
-      "native_text_status": "Scanned original; pages 2-3 visually reviewed, not indexed as a full transcription."
+      "native_text_status": "Scanned original; pages 2-3 visually reviewed, not indexed as a full transcription.",
+      "registration_status": "registered_original_only",
+      "registered_file": "database/raw/vn/vn.decree141.2026.vi.pdf"
     },
     {
       "proposed_doc_id": "vn.decree320.2025.vi",
       "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/12/320-ndcp.signed.pdf",
       "sha256": "4a426bbe928511d278aa23318156d27747c45669e8ee9002fb7a635794f51e06",
       "bytes": 3728566,
-      "native_text_status": "Scanned original; pages41 and72 visually reviewed. Not registered as full verified transcription."
+      "native_text_status": "Scanned original; pages41 and72 visually reviewed. Not registered as full verified transcription.",
+      "registration_status": "registered_original_only",
+      "registered_file": "database/raw/vn/vn.decree320.2025.vi.pdf"
     }
   ],
   "findings": [
@@ -79,7 +89,8 @@
         72
       ],
       "verified": "Article11 ordinary20%, reduced15% at annual revenue<=VND3bn and17% above3bn through50bn; prior-period statutory revenue annualized for short periods, separate new-enterprise actual revenue rule and related-enterprise exclusion. Article23(9) excludes specified income from15/17% and Article4 incentives, including foreign business and specified transfers/resources/excise/other income. Ordinary-rate selection must not override special industry rates."
-    }
+    },
+    "Five official originals registered after optimizer golden completion. All327 pre-existing doc records unchanged; all five original hashes reverified. Full OCR/clause indexing pending; signature-only native text must not be treated as complete legal body. Law09 general commencement24April2026 differs from Articles1-3 retroactive1January2026 application."
   ],
   "implementation_requirements": [
     "Do not infer eligibility from a single generic turnover value. Capture the legally specified revenue base, relevant tax year, dependent units and post-resolution splitting facts.",

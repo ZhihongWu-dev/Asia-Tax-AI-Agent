@@ -10,8 +10,9 @@
       "provisions": [
         "Articles 4, 10"
       ],
-      "registration_status": "pending",
-      "review_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text."
+      "registration_status": "registered_original_only",
+      "review_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text.",
+      "file": "database/raw/vn/vn.law.cit67.2025.vi.pdf"
     },
     {
       "doc_id": "vn.law09.2026.vi",
@@ -20,8 +21,9 @@
       "provisions": [
         "Articles 3, 5(2)"
       ],
-      "registration_status": "pending",
-      "review_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text."
+      "registration_status": "registered_original_only",
+      "review_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text.",
+      "file": "database/raw/vn/vn.law09.2026.vi.pdf"
     },
     {
       "doc_id": "vn.decree398.2026.vi",
@@ -30,8 +32,9 @@
       "provisions": [
         "Articles 3, 4"
       ],
-      "registration_status": "pending",
-      "review_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text."
+      "registration_status": "registered_original_only",
+      "review_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text.",
+      "file": "database/raw/vn/vn.decree398.2026.vi.pdf"
     },
     {
       "doc_id": "vn.decree141.2026.vi",
@@ -40,8 +43,9 @@
       "provisions": [
         "Articles 2, 3"
       ],
-      "registration_status": "pending",
-      "review_status": "Scanned original; pages 2-3 visually reviewed, not indexed as a full transcription."
+      "registration_status": "registered_original_only",
+      "review_status": "Scanned original; pages 2-3 visually reviewed, not indexed as a full transcription.",
+      "file": "database/raw/vn/vn.decree141.2026.vi.pdf"
     },
     {
       "doc_id": "vn.decree320.2025.vi",
@@ -50,8 +54,9 @@
       "provisions": [
         "Articles 4(15) as amended, 11, 23(9)"
       ],
-      "registration_status": "pending",
-      "review_status": "Scanned original; pages41 and72 visually reviewed. Not registered as full verified transcription."
+      "registration_status": "registered_original_only",
+      "review_status": "Scanned original; pages41 and72 visually reviewed. Not registered as full verified transcription.",
+      "file": "database/raw/vn/vn.decree320.2025.vi.pdf"
     }
   ],
   "employment": [
