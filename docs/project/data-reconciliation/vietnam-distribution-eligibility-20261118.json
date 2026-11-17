@@ -1,0 +1,173 @@
+{
+  "status": "isolated_rule_verified_pending_database_rebuild",
+  "changes": [
+    {
+      "table": "rule/decision.csv",
+      "before": {
+        "id": "D-vn-3",
+        "statement": "Art. 4(7) exempts the profits a Vietnamese enterprise receives on capital contributed to, or shares bought in, a domestic enterprise 'after corporate income tax has been paid'. The phrase is read as describing what is distributed (the paying enterprise's after-tax profit), not as a further fact to establish: the clause itself keeps the exemption where the payer enjoys incentives and may have paid little or no tax. The rule therefore needs only that the payer is a Vietnamese enterprise (payer_resident, D-vn-1). Art. 4(7) is also the basis of the library's absence record vn.absent.company.outbound_wht (no tax on dividends paid to a foreign company).",
+        "cite_id": "vn.law.cit2025.en#all",
+        "quote": "Distributed profits from capital contribution, purchase of shares, joint ventures, and partnership with domestic enterprises, after corporate income tax has been paid in accordance with this Law, including cases where the capital-receiving party, share-issuing party, joint venture, or associate party enjoyr corporate income tax incentives."
+      },
+      "after": {
+        "id": "D-vn-3",
+        "statement": "Article4(7) exempts qualifying distributed profits from capital contribution, shares, joint venture or association with domestic enterprises after CIT treatment, expressly including payer incentive cases. Require verified distribution character and statutory payer tax treatment, not merely payer residence and not a strictly positive cash tax payment. This scoped exemption does not establish zero withholding for every payment to a foreign company.",
+        "cite_id": "vn.law.cit67.2025.gazette.vi#4.7",
+        "quote": "7. Thu nhập được chia từ hoạt động góp vốn, mua cổ phần, liên doanh, liên kết\nvới doanh nghiệp trong nước, sau khi đã nộp thuế thu nhập doanh nghiệp theo quy\nđịnh của Luật này, kể cả trường hợp bên nhận góp vốn, phát hành cổ phiếu, bên\nliên doanh, liên kết được hưởng ưu đãi thuế thu nhập doanh nghiệp."
+      }
+    },
+    {
+      "table": "rule/rule.csv",
+      "before": {
+        "rule_id": "vn.final.domestic_exempt",
+        "slot_key": "vn|company|final|*",
+        "condition": "payer_resident = true",
+        "effect": "exempt",
+        "overrides": "",
+        "procedure": "",
+        "cite_ids": "vn.law.cit2025.en#all",
+        "decision_ids": "D-vn-3",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Art. 4(7): profits distributed by a domestic enterprise after its corporate income tax are exempt, also where the payer enjoys incentives. From the 2025 tax period."
+      },
+      "after": {
+        "rule_id": "vn.final.domestic_exempt",
+        "slot_key": "vn|company|final|*",
+        "condition": "payer_resident = true and vn_qualifying_profit_distribution = true",
+        "effect": "exempt",
+        "overrides": "",
+        "procedure": "",
+        "cite_ids": "vn.law.cit67.2025.gazette.vi#4.7",
+        "decision_ids": "D-vn-3",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Verified Article4(7) profit distribution from a domestic enterprise; payer statutory incentives are included. Payer residence alone does not establish the exemption."
+      }
+    }
+  ],
+  "variable": {
+    "name": "vn_qualifying_profit_distribution",
+    "kind": "client_fact",
+    "type": "bool",
+    "allowed_values": "",
+    "inputs": "",
+    "question": "Is this a qualifying distribution of after-tax profits from capital contribution, shares, joint venture or association with a Vietnamese domestic enterprise under Article4(7), including statutory incentive cases?",
+    "meaning": "Verify distribution character and the domestic paying enterprise tax treatment. Actual positive cash corporate tax is not required where statutory incentives apply. A payer residence flag alone does not establish that a payment is a qualifying distribution; loans, capital repayments and other payments require separate classification."
+  },
+  "new_rule": {
+    "rule_id": "vn.outbound_wht.corporate_distribution_exempt",
+    "slot_key": "vn|company|outbound_wht|*",
+    "condition": "vn_qualifying_profit_distribution = true",
+    "effect": "exempt",
+    "overrides": "",
+    "procedure": "",
+    "cite_ids": "vn.law.cit67.2025.gazette.vi#4.7",
+    "decision_ids": "D-vn-3",
+    "effective_from": "2025-01-01",
+    "effective_to": "",
+    "note": "Conditional Article4(7) treatment for qualifying distributed profits to a corporate recipient. No automatic zero withholding for other payments or unverified facts."
+  },
+  "retired_unconditional_absence": {
+    "id": "vn.absent.company.outbound_wht",
+    "jur": "vn",
+    "category": "",
+    "subject": "company",
+    "slot": "outbound_wht",
+    "statement": "No additional corporate-income-tax withholding applies to a dividend paid by a Vietnamese enterprise to a foreign corporate investor where the underlying profit has borne Vietnamese corporate income tax: Article 4(7) exempts distributed profits from capital contribution or share purchases in domestic enterprises after corporate income tax has been paid. This entry is limited to that statutory condition and does not cover a payment that is not a distributed profit or a source-specific tax outside the Law on Corporate Income Tax.",
+    "cite_id": "vn.law.cit2025.en#all",
+    "quote": "Distributed profits from capital contribution, purchase of shares, joint ventures, and partnership with domestic enterprises, after corporate income tax has been paid in accordance with this Law, including cases where the capital-receiving party, share-issuing party, joint venture, or associate party enjoyr corporate income tax incentives."
+  },
+  "added_tests": [
+    {
+      "test_id": "vn.final.domestic_exempt.unqualified",
+      "slot_key": "vn|company|final|*",
+      "date": "2026-01-01",
+      "facts": "payer_resident=true;vn_qualifying_profit_distribution=false",
+      "answers": "",
+      "expect": "exempt 20 F",
+      "source": "authored"
+    },
+    {
+      "test_id": "vn.final.domestic_exempt.unverified",
+      "slot_key": "vn|company|final|*",
+      "date": "2026-01-01",
+      "facts": "payer_resident=true",
+      "answers": "",
+      "expect": "exempt 20 U:vn_qualifying_profit_distribution",
+      "source": "authored"
+    },
+    {
+      "test_id": "vn.outbound_wht.corporate_distribution_exempt.true",
+      "slot_key": "vn|company|outbound_wht|*",
+      "date": "2026-01-01",
+      "facts": "vn_qualifying_profit_distribution=true",
+      "answers": "",
+      "expect": "exempt 0 T",
+      "source": "authored"
+    },
+    {
+      "test_id": "vn.outbound_wht.corporate_distribution_exempt.false",
+      "slot_key": "vn|company|outbound_wht|*",
+      "date": "2026-01-01",
+      "facts": "vn_qualifying_profit_distribution=false",
+      "answers": "",
+      "expect": "exempt - F",
+      "source": "authored"
+    },
+    {
+      "test_id": "vn.outbound_wht.corporate_distribution_exempt.unknown",
+      "slot_key": "vn|company|outbound_wht|*",
+      "date": "2026-01-01",
+      "facts": "",
+      "answers": "",
+      "expect": "exempt - U:vn_qualifying_profit_distribution",
+      "source": "authored"
+    }
+  ],
+  "scope": "Conditional distribution exemption only. Nonqualifying payment tax treatment and full legal/business acceptance remain open; original runtime inputs unchanged.",
+  "validation": {
+    "tests": 1375,
+    "failed": 0,
+    "errors": 0,
+    "coverage_gaps": 30,
+    "explicit_bounds": [
+      {
+        "slot": "final",
+        "case": "verified",
+        "floor": 0.0,
+        "ceiling": 0.0
+      },
+      {
+        "slot": "final",
+        "case": "unqualified",
+        "floor": 20.0,
+        "ceiling": 20.0
+      },
+      {
+        "slot": "final",
+        "case": "unknown",
+        "floor": 0.0,
+        "ceiling": 20.0
+      },
+      {
+        "slot": "outbound_wht",
+        "case": "verified",
+        "floor": 0.0,
+        "ceiling": 0.0
+      },
+      {
+        "slot": "outbound_wht",
+        "case": "unqualified",
+        "floor": null,
+        "ceiling": null
+      },
+      {
+        "slot": "outbound_wht",
+        "case": "unknown",
+        "floor": 0.0,
+        "ceiling": null
+      }
+    ]
+  }
+}
