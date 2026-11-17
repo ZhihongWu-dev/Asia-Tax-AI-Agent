@@ -1,0 +1,32 @@
+{
+  "status": "official_native_text_archived_registered_and_extracted_pending_full_validation",
+  "document": {
+    "id": "vn.law.cit67.2025.gazette.vi",
+    "jur": "vn",
+    "type": "law",
+    "category": "1;3;4;9",
+    "title": "Law67/2025/QH15 corporate income tax: Official Gazette965-966",
+    "url": "https://congbao.chinhphu.vn/van-ban/luat-so-67-2025-qh15-45557/57755.htm",
+    "file": "raw/vn/vn.law.cit67.2025.gazette.vi.pdf",
+    "sha256": "2035cacf3a1dfa98f7f317e537768a25f0569e6d7169638133aaf35fd561d3d8",
+    "lang": "vi",
+    "effective_from": "2025-10-01",
+    "effective_to": "",
+    "note": "Official Gazette native-text rendition, printed pages71-93 plus publisher page. Original law, not consolidated amendments. Article19 applies from2025 corporate tax period; Law09/2026 and other amendments require provision-specific review. Original signed scan retained separately. Source: congbao.chinhphu.vn."
+  },
+  "pages": 24,
+  "legal_body_pdf_pages": [
+    1,
+    23
+  ],
+  "printed_legal_pages": [
+    71,
+    93
+  ],
+  "characters": 49566,
+  "clauses": 105,
+  "articles1_to20_present": true,
+  "visual_check": "First and final legal pages inspected; title, law number and adoption signature match. Not every clause visually verified.",
+  "transport": "Downloaded from official index CDN link with Windows system certificate validation; Python CA validation failed. TLS verification was not disabled.",
+  "scope": "Original Law67 only; amendment reconciliation and primary-source rebinding pending. No cloud admission or runtime promotion."
+}
