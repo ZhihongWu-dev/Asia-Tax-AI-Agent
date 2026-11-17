@@ -15,12 +15,14 @@
     "Keep exact decimal component results. The reference implementation floors components to won, but its behavior alone does not establish the legally required return-level rounding order.",
     "Special employment reductions require additional interaction rules; explicit scope verification prevents treating an unadjusted reference as final credit.",
     "Resolved Article59-2 discrepancy against Act21548 supplementary Article2: 2026 transition is age9, but the entire 2017 birth cohort is excluded from that transition and retains the general age13 requirement. Do not apply either age8 or age13 universally to 2026.",
-    "Child-credit references now derive regular credit from qualifying records, preserve the 2017 exception, and separately compute verified current-year birth/adoption credits. Basic deduction eligibility and claimant allocation remain explicit verified inputs; no automatic refund or final credit utilization is claimed."
+    "Child-credit references now derive regular credit from qualifying records, preserve the 2017 exception, and separately compute verified current-year birth/adoption credits. Basic deduction eligibility and claimant allocation remain explicit verified inputs; no automatic refund or final credit utilization is claimed.",
+    "Articles50/51 personal deduction arithmetic now consumes verified per-person eligibility and statutory-date senior/disability status. Single-parent replaces female deduction; female classification uses comprehensive income up to KRW30m and marital/household conditions. Combined personal deductions cannot exceed comprehensive income. Article54(2) missing-document mode restricts personal deductions to taxpayer basic only."
   ],
   "verification": "65 employment and child tests passed in 0.86s: salary thresholds/caps and aggregation, credit phaseouts, exact fractional results, 2016/2017/2018 birth boundaries, regular count bands, ineligible children, verified disabled-adult eligibility, child/adopted/foster/grandchild relationships, birth-order rates, adoption overlap, invalid records and duplicate claims.",
   "child_transition_authority": "https://law.go.kr/LSW/lsRvsDocListP.do?lsId=001565 — Act21548 supplementary Article2(1)-(3), independently matched to the stored original income-tax law PDF text.",
+  "personal_deduction_verification": "24 tests passed in 0.56s: mutual exclusion, eligible senior/disability stacking, comprehensive-income boundary, ineligible spouse distinction, unmarried household-head condition, foster-child distinction, omitted documents, income cap, precision, duplicate identities and contradictory facts. Official Article51 checked against https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031622827 and stored original Articles50/51/53/54. Existing reference repository personal_deduction implementation inspected; no code copied.",
   "remaining": [
-    "Personal/basic/additional deductions and complete child eligibility evidence workflow",
+    "Complete personal and child eligibility evidence workflow, pension/special/other deductions",
     "Special credits and relief ordering, mixed income and minimum-tax interactions",
     "National/local settlement and exact return-level rounding",
     "Personal saved-case API, frontend and business acceptance"
