@@ -1,0 +1,61 @@
+{
+  "reviewed_on": "2026-11-17",
+  "status": "partial_review_not_production_approved",
+  "registered_originals": [
+    {
+      "doc_id": "kr.nts.corporate-rate-2026",
+      "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7746&mi=2372",
+      "sha256": "5918af6d200ebfc1c4a408033eb87ea867f6f4c6107beedfd15bce36893b9832",
+      "file": "raw/kr/kr.nts.corporate-rate-2026.do"
+    },
+    {
+      "doc_id": "kr.corporate-tax-act.20260701.ko",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsId=001563",
+      "sha256": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+      "file": "raw/kr/kr.corporate-tax-act.20260701.ko.pdf"
+    },
+    {
+      "doc_id": "kr.income-tax-act.20260701.ko",
+      "url": "https://www.law.go.kr/lsInfoP.do?ancYnChk=0&lsId=001565",
+      "sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+      "file": "raw/kr/kr.income-tax-act.20260701.ko.pdf"
+    }
+  ],
+  "new_originals": [
+    {
+      "doc_id": "kr.local-tax.article103-20.2026",
+      "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1031177407",
+      "sha256": "69a26326504eb7dd9c952c39f1d567fa1ef886fa77a75104995bfb5319623fda",
+      "bytes": 16162,
+      "status": "downloaded_html_image_tables_require_separate_review"
+    },
+    {
+      "doc_id": "kr.local-tax.article103-19.2026",
+      "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031177413",
+      "sha256": "c8000fadf75a8921c1a31df1bc0e1a45845e9ec4c12ad868438c8796ba2a1a13",
+      "bytes": 18893,
+      "status": "downloaded_html_image_tables_require_separate_review"
+    },
+    {
+      "doc_id": "kr.local-tax.article92.2026",
+      "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1026500915",
+      "sha256": "5f5ebe93c293d98d55a08fa561b6f1336a5dbfda98696f9119ee10ade27a9978",
+      "bytes": 14996,
+      "status": "downloaded_html_image_tables_require_separate_review"
+    }
+  ],
+  "findings": [
+    "Corporate Tax Act Article55 ordinary bands: KRW200m at10%, then to20bn20%, to300bn22%, above25%. Article60-2(1)(1) specified corporations instead start20% up to20bn; must classify separately.",
+    "Act21217 supplementary Articles1 and5: new Article55 rates apply to business years beginning on/after1January2026. July consolidation date is not rate commencement. Short years require Article55(2) annualization and month rules.",
+    "Resident comprehensive personal Article55 national bands:14m6%,50m15%,88m24%,150m35%,300m38%,500m40%,1bn42%,excess45%. Established tax base is not gross pay; financial-income comparison and special categories remain separate.",
+    "Local Tax Act103-20 has independent corporate standard schedules1/2/2.2/2.5%, with special corporations starting2%. Article103-19 foreign-tax adjustments can change local base. Do not multiply net national liability by10%.",
+    "Local Tax Act92 has independent personal standard schedule0.6/1.5/2.4/3.5/3.8/4/4.2/4.5%. Local credits, base, municipal rules and effective dates require further verification."
+  ],
+  "pending": [
+    "Download/review local rate-table image originals and full commencement provisions",
+    "Review current amendment chain and Article60-2 classification",
+    "Review national/local deductions, credits, minimum tax and rounding separately",
+    "Implement both national/local calculations and business acceptance cases",
+    "Register new sources after ongoing optimizer regression completes; integrate existing API/UI"
+  ]
+}
