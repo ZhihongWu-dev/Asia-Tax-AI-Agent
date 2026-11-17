@@ -1,0 +1,22 @@
+{
+  "source": "vn.law.pit2026.vi",
+  "source_sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+  "verified_on": "2026-11-17",
+  "parameter_ids": [
+    "vn.restructure.resident_capital_gain_tax_pct.20260701",
+    "vn.restructure.resident_capital_proceeds_unknown_cost_tax_pct.20260701",
+    "vn.restructure.resident_securities_proceeds_tax_pct.20260701",
+    "vn.restructure.nonresident_capital_gain_tax_pct.20260701",
+    "vn.restructure.nonresident_capital_proceeds_unknown_cost_tax_pct.20260701",
+    "vn.restructure.nonresident_securities_proceeds_tax_pct.20260701"
+  ],
+  "validation": "Exact citation/quote and schema checks passed for all six parameters",
+  "commencement_cite": "vn.law.pit2026.vi#29.1",
+  "not_employment_retroactivity": "vn.law.pit2026.vi#29.2",
+  "remaining": [
+    "Implementing-law asset classification and exemptions",
+    "Corporate transfer and emigration rules",
+    "API/workflow calculations for personal transfer income",
+    "Full library rebuild after parameter additions"
+  ]
+}
