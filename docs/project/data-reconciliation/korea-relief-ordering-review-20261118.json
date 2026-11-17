@@ -1,0 +1,31 @@
+{
+  "status": "allocation_engine_implemented_pending_assessment_integration",
+  "reviewed_on": "2026-11-18",
+  "official_sources": [
+    {
+      "url": "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1017633999",
+      "provision": "Corporate Tax Act59(1), effective2026-07-01",
+      "finding": "Absent specific exceptions, reductions then noncarry credits then carry credits then Article58-3 credits; carried credits before current-year credits. Relief cannot create an excess ordinary-tax refund."
+    },
+    {
+      "url": "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1000890962",
+      "provision": "Special Tax Treatment Control Act132(1),(3), effective2026-09-18",
+      "finding": "Minimum tax restricts covered incentives; covered incentives applied before exempt incentives. It is not an independent unconditional tax uplift. Base-changing incentives need restoration and recalculation."
+    }
+  ],
+  "github_reference": {
+    "repository": "https://github.com/UpstageAI/korean-tax-calc-mcp",
+    "commit": "0f86d40b0334b6c1366518d0c36d244d210f1504",
+    "path": "korean_tax_calc_mcp/engine/calc_cit.py",
+    "license": "MIT",
+    "influence": "Reviewed apply_min_tax and full credit/base-restoration allocation to distinguish relief limitation from independent minimum-tax uplift. Independently implemented Decimal allocation after checking official law; no code or dependency copied."
+  },
+  "implementation": {
+    "module": "packages/income_tax/korea_reliefs.py",
+    "inputs": "Individually verified eligible relief lots, statutory caps and expiry, explicit minimum-tax classification, origin years and categories",
+    "validation": "Reject duplicate identifiers, malformed lots, prior-year noncarry relief, future origins, unverified eligibility and base-changing incentives",
+    "result": "Used/unused per lot and national tax after reliefs; unused amounts are not automatically declared eligible carryforwards",
+    "tests": "88 Korean tests passed in1.32s",
+    "remaining": ["Integrate with established gross tax and minimum reference", "Implement base-changing incentives and specific relief eligibility/caps", "Additional taxes, penalties, prior payments, local assessment and installments", "Corporate and personal API/UI and actual business acceptance"]
+  }
+}
