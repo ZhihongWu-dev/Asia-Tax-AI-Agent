@@ -1,0 +1,23 @@
+{
+  "status": "official_gazette_archived_credit_provision_visually_reviewed_pending_registration_and_rule_correction",
+  "file": "database/raw/vn/vn.gazette1737-1738.2025.vi.pdf",
+  "sha256": "0f5db5c51b79643276e5d5eb03fd636fbdac8ea043018f79cf50ba9d8d6d8de6",
+  "url": "https://congbao.cdnchinhphu.vn/CongBaoCP/CongBao/2025/12/46840/60373-1-1737-1738.pdf",
+  "document_scope": "Entire92-page gazette issue; contains Decree320 and other instruments. Do not index all issue text as Decree320.",
+  "reviewed_pages": [
+    47,
+    48
+  ],
+  "findings": [
+    "Article12(2)(a) directs treaty-country investments to the applicable treaty.",
+    "Article12(2)(b) addresses non-treaty-country investments: b2 includes tax paid abroad or paid on behalf, and specified exempted/reduced foreign tax; not merely an unconditional direct withholding credit.",
+    "b3 requires supplemental filing after later foreign tax payment; b5 specifies recognition period and prohibits offsetting foreign project losses/profits against domestic profits/losses.",
+    "Article12(2)(c) contains separate allocated top-up-tax credit provisions with a combined cap."
+  ],
+  "affected_legacy": [
+    "D-vn-2",
+    "vn.inbound.credit"
+  ],
+  "required_correction": "Replace claim that implementing decree is absent and direct-credit-only assumption. Model treaty route, actual payment/timing and applicable relief separately; source admission alone is insufficient.",
+  "limitations": "Review of selected original provisions, not all later corrigenda/amendments or a completed credit calculator."
+}
