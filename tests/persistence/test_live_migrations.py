@@ -30,6 +30,7 @@ from packages.persistence import models  # noqa: F401  (register every table)
 from packages.persistence.base import Base
 from packages.persistence.config import get_settings
 from packages.chat.store import metadata as chat_metadata
+from packages.domain_bridge.planning_store import metadata as planning_metadata
 
 pytestmark = [
     pytest.mark.integration,
@@ -42,7 +43,7 @@ pytestmark = [
 REPO_ROOT = Path(__file__).resolve().parents[2]
 # ChatStore uses separate portable metadata; both are part of the migrated DB.
 EXPECTED_METADATA = MetaData()
-for table in [*Base.metadata.tables.values(), *chat_metadata.tables.values()]:
+for table in [*Base.metadata.tables.values(), *chat_metadata.tables.values(), *planning_metadata.tables.values()]:
     table.to_metadata(EXPECTED_METADATA)
 
 
@@ -105,10 +106,11 @@ def test_downgrade_base_then_upgrade_head_round_trips(fresh_database_url):
             VALUES ('synthetic-migration', 'user:migration', 5,
                     '{"synthetic": true, "revision": 5}')"""))
     _alembic(fresh_database_url, "downgrade", "base")
-    # 0004 deliberately preserves chat records and deny-by-default RLS.
-    assert _user_tables(fresh_database_url) == {'chat_cases'}
+    # 0004/0006 preserve private cases and planning evidence on downgrade.
+    assert _user_tables(fresh_database_url) == {'chat_cases', 'planning_runs'}
     with engine.connect() as connection:
         assert connection.execute(text("SELECT relrowsecurity FROM pg_class WHERE oid = 'chat_cases'::regclass")).scalar() is True
+        assert connection.execute(text("SELECT relrowsecurity FROM pg_class WHERE oid = 'planning_runs'::regclass")).scalar() is True
         assert connection.execute(text("SELECT revision FROM chat_cases WHERE id = 'synthetic-migration'")).scalar() == 5
     _alembic(fresh_database_url, "upgrade", "head")
     with engine.connect() as connection:
