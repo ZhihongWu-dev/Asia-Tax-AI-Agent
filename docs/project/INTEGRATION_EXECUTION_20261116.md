@@ -368,3 +368,9 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - Researched official Tesseract tessdata_fast documentation/license; added Vietnamese model at existing pinned revision87416418657359cb625c412a48b6e1d6d41c29bd to external audit tessdata cache, retaining Apache2 license and SHA256. Reused resumable local OCR at300dpi, all pages, no clipping/skips.
 - Session96212 remains active across five originals. Completed Law09 two pages and Decree141 four pages; verified source hashes, page counts and every transcription page hash. Outputs explicitly pending original comparison. Sampling shows spacing/diacritic/stamp errors; small-component OCR warnings also occur. No legal approval or full indexing claimed.
 - Identified build merge defect: signature-only native text exceeding50characters can override the full OCR page. Do not rebuild/index these originals until explicit full-page OCR handling is fixed and tested. Remaining OCR continues from fingerprinted page cache; no remote push.
+
+### Full-page OCR merge integrity
+
+- Fixed build extraction so fingerprinted full-page local OCR can replace a native signature-only text layer. Validates original hash, source/config/model profile, page sequence/count and every page content hash; incomplete pages fail. Clipped/skipped scopes and legacy image OCR retain their separate merge behavior. Integrity validation does not grant legal-text approval.
+- GitHub research: official PyMuPDF full/partial OCR documentation and example informed the scope distinction; no external code or dependency adopted. Verification:12 focused extraction/OCR tests passed. Real Law09 and Decree141 extraction now returns1885/1961 first-page characters including operative articles rather than signature metadata. Whole library rebuild remains pending original comparison.
+- OCR session96212 continues with the remaining Vietnamese originals; preserve its resumable page cache. No remote push.

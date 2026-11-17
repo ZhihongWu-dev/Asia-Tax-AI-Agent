@@ -17,6 +17,7 @@ import argparse
 import csv
 import hashlib
 import io
+import json
 import os
 import re
 import shutil
@@ -223,6 +224,34 @@ def ocr_pages(row):
     return body.split("\f") if head.startswith("#ocr sha256=%s " % sha) else None
 
 
+def full_page_ocr(row, pages):
+    """Recognize fingerprinted full-page local OCR, never infer scope from length.
+
+This verifies transcription integrity, not legal accuracy or review approval.
+Legacy/image-only OCR keeps the existing native-text merge behavior.
+"""
+    path = ROOT / 'ocr' / (row['id'] + '.json')
+    if not path.exists():
+        return False
+    metadata = json.loads(path.read_text(encoding='utf-8'))
+    config = metadata.get('config', {})
+    if config.get('clip_top') != 0 or config.get('skip_pages') != []:
+        return False
+    sha = hashlib.sha256((ROOT / row['file']).read_bytes()).hexdigest()
+    profile = hashlib.sha256(json.dumps({'source': sha, 'config': config,
+        'models': metadata.get('model_sha256')}, sort_keys=True,
+        separators=(',', ':')).encode()).hexdigest()
+    records = metadata.get('pages', [])
+    if metadata.get('source_sha256') != sha or metadata.get('profile') != profile or len(records) != len(pages):
+        raise ValueError('Full-page OCR provenance mismatch')
+    for index, (text, record) in enumerate(zip(pages, records), 1):
+        if record.get('page') != index or record.get('sha256') != hashlib.sha256(text.encode()).hexdigest():
+            raise ValueError('Full-page OCR page fingerprint mismatch')
+        if not text.strip() or record.get('status') != 'ocr_pending_review':
+            raise ValueError('Full-page OCR contains incomplete pages')
+    return True
+
+
 def docx_text(path):
     with zipfile.ZipFile(path) as z:
         xml = z.read("word/document.xml").decode("utf-8", "replace")
@@ -281,6 +310,8 @@ def to_text(row, kind, conv):
                 return (t, None, "xfa_template") if t else (text, pages, "xfa_form_no_text")
             ocr = ocr_pages(row)
             if ocr and len(ocr) == len(pages):                   # pages without a text layer take their OCR text,
+                if full_page_ocr(row, ocr):
+                    return "\n".join(ocr), ocr, "ocr"
                 merged = []                                      # images read by ocr.py --images go where they stand
                 with fitz.open(path) as doc:
                     for p, o, pg in zip(pages, ocr, doc):
