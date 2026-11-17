@@ -99,7 +99,7 @@ def test_replacement_requires_structured_content_bound_approval(note):
 def test_real_candidate_bundle_preserves_all_107_without_approving_them():
     commit,rows,digest=load_candidates()
     assert commit=='78a037f522d1636541c2e5fcdd1145e735f18124'
-    assert len(rows)==113 and len(digest)==64
+    assert len(rows)==115 and len(digest)==64
     assert sum(row.get('source_commit', commit) == commit for row in rows.values()) == 107
     for suffix in ('16', '16.2', '52', '53'):
         source = rows['vn.law.tax-administration108.2025.vi#' + suffix]

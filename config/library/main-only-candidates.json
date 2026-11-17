@@ -2769,6 +2769,66 @@
         "evidence_file": "docs/project/data-reconciliation/vietnam-tax-administration-review.json",
         "source_raw_blob": "4bfd499e03a8cdb20080c07623ef67b788ef48d8"
       }
+    },
+    {
+      "cite_id": "jp.nta.income-rate-2026#h2",
+      "clause": {
+        "cite_id": "jp.nta.income-rate-2026#h2",
+        "doc_id": "jp.nta.income-rate-2026",
+        "label": "計算方法・計算式",
+        "text": "計算方法・計算式\n課税される所得金額（1,000円未満の端数金額を切り捨てた後の金額です。）に対する所得税の金額は、次の「所得税の速算表」を使用すると簡単に求められます。\n課税される所得金額\n税率\n控除額\n1,000円 から 1,949,000円まで\n5％\n0円\n1,950,000円 から 3,299,000円まで\n10％\n97,500円\n3,300,000円 から 6,949,000円まで\n20％\n427,500円\n6,950,000円 から 8,999,000円まで\n23％\n636,000円\n9,000,000円 から 17,999,000円まで\n33％\n1,536,000円\n18,000,000円 から 39,999,000円まで\n40％\n2,796,000円\n40,000,000円 以上\n45％\n4,796,000円\n※1 令和7年分からは、基準所得金額（確定申告を要しない配当所得等を含めるなどした一定の所得金額）が3億3,000万円を超える場合で、その超える部分の金額の22.5％相当額が、その年分の通常の所得税および復興特別所得税を上回るときは、その上回る部分の所得税額が加算されます。\n詳しくは、\nコード2270「特定の基準所得金額の課税の特例」\nを参照してください。\n※2 平成25年から令和29年までの各年分の確定申告においては、所得税と復興特別所得税（原則としてその年分の基準所得税額の2.1パーセント）を併せて申告・納付することとなります。\n※3 令和8年度税制改正により、防衛特別所得税の創設ならびに復興特別所得税の税率の引下げおよび課税期間の延長が行われ、令和9年以後に適用されます（改正前と改正後とで、防衛特別所得税及び復興特別所得税の合計税率に変更はありません。）。"
+      },
+      "document": {
+        "id": "jp.nta.income-rate-2026",
+        "jur": "jp",
+        "type": "guidance",
+        "category": "2;page_rates",
+        "title": "No.2260 所得税の税率",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+        "file": "raw/jp/jp.nta.income-rate-2026.htm",
+        "sha256": "638f0d78c9624168d94f6dc9b5280070d85374648736d556689d4146c4fff171",
+        "lang": "ja",
+        "effective_from": "2026-04-01",
+        "effective_to": "",
+        "note": "National Tax Agency current individual-income-tax-rate guidance, stated as current 1 April 2026. downloaded with requests 2026-10-26T12:56:32Z"
+      },
+      "text_sha256": "4b2222cf4684e1b6d42f66d263fe9b7c734f45f6ed1b0913afc50fe8527c61a5",
+      "source_commit": "bc2cf73f874c3a9348421075196da314b349b819",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence_file": "docs/project/data-reconciliation/japan-guidance-section-review-20261118.json",
+        "source_raw_blob": "2bd47c83d32329fd7aa6a11c512574b511bc2b22"
+      }
+    },
+    {
+      "cite_id": "jp.nta.resident-nonresident-classification#h1",
+      "clause": {
+        "cite_id": "jp.nta.resident-nonresident-classification#h1",
+        "doc_id": "jp.nta.resident-nonresident-classification",
+        "label": "国内法による取扱い",
+        "text": "国内法による取扱い\n我が国の所得税法では、「居住者」とは、国内に「住所」を有し、または、現在まで引き続き1年以上「居所」を有する個人をいい、「居住者」以外の個人を「非居住者」と規定しています。\n「住所」は、「個人の生活の本拠」をいい、「生活の本拠」かどうかは「客観的事実によって判定する」ことになります。\nしたがって、「住所」は、その人の生活の中心がどこかで判定されます。\nなお、一定の場合には、その人の住所がどこにあるかを判定するため、職業などを基に「住所の推定」を行うことになります。詳しくは「\n別紙 住所の推定\n」を参照してください。\n「居所」は、「その人の生活の本拠ではないが、その人が現実に居住している場所」とされています。\n法人については、本店または主たる事務所の所在地により内国法人または外国法人の判定が行われますが、その判定に当たっては、登記や定款等の定めなどによることになります（これを一般に「本店所在地主義」といいます。）。"
+      },
+      "document": {
+        "id": "jp.nta.resident-nonresident-classification",
+        "jur": "jp",
+        "type": "guidance",
+        "category": "6",
+        "title": "No.2875 居住者と非居住者の区分",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/gensen/2875.htm",
+        "file": "raw/jp/jp.nta.resident-nonresident-classification.htm",
+        "sha256": "665db9f5b1b0ce869004088366018390c1d3bd8bbbf56e299b19e2a1bbc2aba4",
+        "lang": "ja",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "downloaded with requests 2026-10-28T07:46:36Z"
+      },
+      "text_sha256": "096103d08066a0822bf1f92fc9f2880dec085b84c713ee08da7c870b6524942d",
+      "source_commit": "bc2cf73f874c3a9348421075196da314b349b819",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence_file": "docs/project/data-reconciliation/japan-guidance-section-review-20261118.json",
+        "source_raw_blob": "84d13dc8dc240f54ad18ada8ca061595eafbc1de"
+      }
     }
   ]
 }

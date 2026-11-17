@@ -1,0 +1,38 @@
+{
+  "review_date": "2026-11-18",
+  "status": "reconstructed_candidates_not_admitted",
+  "sources": [
+    {
+      "cite_id": "jp.nta.income-rate-2026#h2",
+      "raw_sha256": "638f0d78c9624168d94f6dc9b5280070d85374648736d556689d4146c4fff171",
+      "text_sha256": "4b2222cf4684e1b6d42f66d263fe9b7c734f45f6ed1b0913afc50fe8527c61a5",
+      "source_raw_blob": "2bd47c83d32329fd7aa6a11c512574b511bc2b22",
+      "source_commit": "bc2cf73f874c3a9348421075196da314b349b819",
+      "mode": "html_section",
+      "reconstructed_exactly": true,
+      "characters": 754,
+      "official_url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm"
+    },
+    {
+      "cite_id": "jp.nta.resident-nonresident-classification#h1",
+      "raw_sha256": "665db9f5b1b0ce869004088366018390c1d3bd8bbbf56e299b19e2a1bbc2aba4",
+      "text_sha256": "096103d08066a0822bf1f92fc9f2880dec085b84c713ee08da7c870b6524942d",
+      "source_raw_blob": "84d13dc8dc240f54ad18ada8ca061595eafbc1de",
+      "source_commit": "bc2cf73f874c3a9348421075196da314b349b819",
+      "mode": "html_section",
+      "reconstructed_exactly": true,
+      "characters": 422,
+      "official_url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/gensen/2875.htm"
+    }
+  ],
+  "review": [
+    "No2260 h2 retains all seven rate bands, deductions, taxable-income rounding, high-income additional-tax note and 2027 defence/reconstruction-tax change note. It supports the ordinary national top rate, not a universal total effective tax rate.",
+    "No2875 h1 preserves individual domicile/continuous one-year abode and corporate head/principal-office classifications; treaty residence remains separately governed by h2 and the applicable treaty.",
+    "Existing whole-page candidates remain unapproved. No generated CSV/SQLite or frozen optimizer input was changed."
+  ],
+  "remaining": [
+    "Cloud admission and pinned-reader verification",
+    "Catalog parameter admission and historical applicability review",
+    "Legacy consolidated-tax research paper is not automatically admitted as current binding law."
+  ]
+}
