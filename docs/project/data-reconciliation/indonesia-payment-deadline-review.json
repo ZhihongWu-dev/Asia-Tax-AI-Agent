@@ -113,7 +113,7 @@
     }
   ],
   "isolated_repair": {
-    "status": "registered_pending_rebuild",
+    "status": "jurisdiction_check_zero_errors_seven_existing_gaps",
     "doc": {
       "id": "id.pmk81-2024",
       "jur": "id",
@@ -174,7 +174,7 @@
         "effective_from": "2025-01-01",
         "effective_to": "",
         "note": "Calendar day15 of the month following the tax period, not an elapsed15-day duration. Article94(2)(g) covers Article26 income tax. Apply Article100 holiday adjustment. Historical periods and exceptional relief require separate review.",
-        "changed_on": "",
+        "changed_on": "2026-11-18",
         "superseded_by": ""
       },
       {
@@ -190,7 +190,7 @@
         "effective_from": "2025-01-01",
         "effective_to": "",
         "note": "When the Article94 due date is a holiday, payment is due no later than the next working day. Use a verified applicable calendar, not weekends alone.",
-        "changed_on": "",
+        "changed_on": "2026-11-18",
         "superseded_by": ""
       },
       {
@@ -206,11 +206,23 @@
         "effective_from": "2025-01-01",
         "effective_to": "",
         "note": "Statutory holiday categories. An authoritative year-specific holiday calendar is required for an actual deadline calculation.",
-        "changed_on": "",
+        "changed_on": "2026-11-18",
         "superseded_by": ""
       }
     ],
     "runtime_promoted": false,
-    "calendar_calculator_implemented": false
+    "calendar_calculator_implemented": false,
+    "jurisdiction_check_exit_code": 1,
+    "errors": 0,
+    "gaps": [
+      "category id|10",
+      "company penalty",
+      "company restructure",
+      "company exit",
+      "individual penalty",
+      "individual restructure",
+      "individual exit"
+    ],
+    "parameter_boundary_checks": "passed: old valid through2024-12-31; new valid from2025-01-01"
   }
 }

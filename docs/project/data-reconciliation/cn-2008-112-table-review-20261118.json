@@ -43,7 +43,7 @@
   },
   "local_rebuild_pending": true,
   "isolated_repair": {
-    "status": "rebuilt_and_verified",
+    "status": "document_exclusive_end_corrected_pending_rebuild",
     "doc_before": {
       "id": "cn.sta.2008-112",
       "jur": "cn",
@@ -69,8 +69,8 @@
       "sha256": "67900dca7a249082641bb3fa4a9b9c8cbbc543c1c6cf20296d77e0b03ea9064b",
       "lang": "zh",
       "effective_from": "",
-      "effective_to": "2023-05-25",
-      "note": "downloaded with curl 2026-10-23T19:59:09Z Historical only: fully repealed from 2023-05-26 by STA Announcement 2023 No.8, annex item48; effective_to records the last valid calendar day. Official repeal annotation: https://fgk.chinatax.gov.cn/zcfgk/c100012/c5193938/content.html"
+      "effective_to": "2023-05-26",
+      "note": "downloaded with curl 2026-10-23T19:59:09Z Historical only: fully repealed from 2023-05-26 by STA Announcement 2023 No.8, annex item48; effective_to records the first invalid date, matching the document reader exclusive-end filter. Official repeal annotation: https://fgk.chinatax.gov.cn/zcfgk/c100012/c5193938/content.html"
     },
     "superseded_entry": {
       "doc_id": "cn.sta.2008-112",
@@ -92,6 +92,7 @@
       },
       "errors": [],
       "legal_review": "not_established_by_this_check"
-    }
+    },
+    "date_semantics": "agent/tools/law_index.py copies doc.effective_to into valid_to; read_core.py law_keep excludes valid_to <= as_of. Repeal starts2023-05-26, so last valid date is2023-05-25."
   }
 }

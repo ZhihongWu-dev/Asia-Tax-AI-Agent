@@ -89,5 +89,61 @@
     "Resolve foreign-income timing under ordersP161/P162 and any subsequent amendments",
     "Verify domestic dividend eligibility, allocation and election business cases",
     "Rebuild catalog and rerun dependency closure and business tests"
-  ]
+  ],
+  "isolated_repair": {
+    "status": "incorrect_undated_legacy_parameters_quarantined_pending_rebuild",
+    "retired_parameters": [
+      {
+        "param_id": "th.final.dividend_tax_credit_fraction.legacy_17d33c3c7596",
+        "scope": "th",
+        "subject": "individual",
+        "slot": "final",
+        "name": "dividend_tax_credit_fraction",
+        "value": "3/7",
+        "unit": "text",
+        "cite_id": "th.rd.pit#h6",
+        "quote": "Any taxpayer who domiciles in Thailand and receives dividends from a juristic company or partnership incorporated in Thailand is entitled to a tax credit of 3/7 of the amount of dividends received.",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Applies to the stated domestic-company dividend situation.",
+        "changed_on": "",
+        "superseded_by": ""
+      },
+      {
+        "param_id": "th.residence.residence_days_threshold.legacy_3dd29d5165f5",
+        "scope": "th",
+        "subject": "individual",
+        "slot": "residence",
+        "name": "residence_days_threshold",
+        "value": "180",
+        "unit": "days",
+        "cite_id": "th.rd.pit#h1",
+        "quote": "“Resident” means any person residing in Thailand for a period or periods aggregating more than 180 days in any tax (calendar) year.",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "The legal test is more than 180 days, not 180 days or more.",
+        "changed_on": "",
+        "superseded_by": ""
+      }
+    ],
+    "preserved_residence_parameter": {
+      "param_id": "th.residence.residence_days_min",
+      "scope": "th",
+      "subject": "individual",
+      "slot": "residence",
+      "name": "residence_days_min",
+      "value": "180",
+      "unit": "days",
+      "cite_id": "th.rc3a.th#s41",
+      "quote": "ผู้ใดอยู่ในประเทศไทยชั่วระยะเวลาหนึ่งหรือหลายระยะรวมเวลาทั้งหมดถึงหนึ่งร้อยแปดสิบวันในปีภาษีปีใด ให้ถือว่าผู้นั้นเป็นผู้อยู่ในประเทศไทย",
+      "effective_from": "",
+      "effective_to": "",
+      "note": "180 days or more in the aggregate in a tax year (calendar year).",
+      "changed_on": "",
+      "superseded_by": ""
+    },
+    "dividend_runtime_replacement": "packages/income_tax/thailand_dividends.py",
+    "runtime_promoted": false,
+    "historical_originals_preserved": true
+  }
 }
