@@ -1,5 +1,5 @@
 {
-  "status": "isolated_parameter_rebindings_applied_pending_scoped_validation",
+  "status": "source_rebindings_validated_business_coverage_incomplete",
   "changes": [
     {
       "before": {
@@ -180,5 +180,15 @@
     22
   ],
   "raw_sha256": "2035cacf3a1dfa98f7f317e537768a25f0569e6d7169638133aaf35fd561d3d8",
-  "scope": "Replace English overview references with authentic original clauses; values and tax-period applicability unchanged. No complete amendment-chain approval; no frozen rule mutation, cloud admission or runtime promotion."
+  "scope": "Replace English overview references with authentic original clauses; values and tax-period applicability unchanged. No complete amendment-chain approval; no frozen rule mutation, cloud admission or runtime promotion.",
+  "scoped_validation": {
+    "exit_code": 1,
+    "errors": 0,
+    "gaps": [
+      "company.restructure",
+      "company.exit",
+      "individual.exit"
+    ],
+    "before_absence_withdrawals": true
+  }
 }

@@ -1,0 +1,101 @@
+{
+  "status": "isolated_absence_records_withdrawn_pending_rebuild",
+  "retired": [
+    {
+      "record": {
+        "id": "vn.absent.3",
+        "jur": "vn",
+        "category": "3",
+        "subject": "",
+        "slot": "",
+        "statement": "No ordinary CFC regime was identified in the current Law on Corporate Income Tax. The law's CFC-adjacent mechanism is a qualified domestic minimum top-up tax under the Income Inclusion Rule, which is a Pillar Two minimum-tax rule and is not recorded as attribution of a foreign subsidiary's undistributed income to a Vietnamese shareholder.",
+        "cite_id": "vn.law.cit2025.en#all",
+        "quote": "Where an enterprise is required to pay qualified domestic minimum top-up tax under the Income Inclusion Rule (IIR) in accordance with the law, the additional corporate income tax payable shall be deducted from corporate income tax payable in Viet Nam as prescribed by this Law."
+      },
+      "reason": "English wording conflates IIR with qualified domestic minimum top-up tax. Original Article3(5) refers to IIR; neither establishes absence of ordinary CFC law."
+    },
+    {
+      "record": {
+        "id": "vn.absent.cfc",
+        "jur": "vn",
+        "category": "",
+        "subject": "all",
+        "slot": "cfc",
+        "statement": "No ordinary CFC rule in the current corporate-income-tax law attributes a foreign subsidiary's undistributed income to a Vietnamese company or individual shareholder. The law's stated Income Inclusion Rule item is a qualified domestic minimum top-up-tax mechanism, not an ordinary CFC regime.",
+        "cite_id": "vn.law.cit2025.en#all",
+        "quote": "Where an enterprise is required to pay qualified domestic minimum top-up tax under the Income Inclusion Rule (IIR) in accordance with the law, the additional corporate income tax payable shall be deducted from corporate income tax payable in Viet Nam as prescribed by this Law."
+      },
+      "reason": "Same IIR/QDMTT translation problem; company-law scope does not establish absence for both companies and individuals."
+    },
+    {
+      "record": {
+        "id": "vn.absent.company.anti_abuse",
+        "jur": "vn",
+        "category": "",
+        "subject": "company",
+        "slot": "anti_abuse",
+        "statement": "No general anti-avoidance rule and no domestic limit on treaty benefits that would deny a Vietnamese company's dividend exemption (art. 4(7)) or foreign tax credit (art. 3(4)) was identified in the Law on Corporate Income Tax, whose scope covers taxpayers, taxable and exempt income, tax bases, calculation methods and incentives only, nor in the consolidated tax-administration Circulars registered (vn.btc.treaty-procedure, vn.btc.tax-administration.14-vbhn-2026). The related-party rule reported on the Government portal (vn.gov.related-party-tax-avoidance, Decree 255/2026/ND-CP) re-determines tax where related-party prices or terms are not at arm's length; it adjusts profits, not the treatment of a dividend. Treaty principal purposes tests are recorded as pair parameters (<pair>.anti_abuse.ppt_applies). The Law on Tax Administration 108/2025/QH15 and Decree 255/2026/ND-CP are not registered; revisit this record when they are.",
+        "cite_id": "vn.law.cit2025.en#all",
+        "quote": "This Law provides for taxpayers, taxable income, tax-exempt income, tax bases, tax calculation methods, and corporate income tax incentives."
+      },
+      "reason": "Record relies on absence of registered Law108, which is now registered, and on silence of a scope clause; its negative conclusion requires renewed substantive review."
+    },
+    {
+      "record": {
+        "id": "th.absent.company.cfc",
+        "jur": "th",
+        "category": "",
+        "subject": "company",
+        "slot": "cfc",
+        "statement": "No CFC rule was found that attributes the undistributed profits of a foreign subsidiary to a Thai company shareholder. The official corporate-income-tax overview taxes a juristic company or partnership on its own Thai business or Thai-derived income; checked the Revenue Code corporate-income-tax and international-tax materials.",
+        "cite_id": "th.rd.cit#lead",
+        "quote": "Corporate Income Tax (CIT) is a direct tax levied on a juristic company or partnership carrying on business in Thailand or not carrying on business in Thailand but deriving certain types of income from Thailand."
+      },
+      "reason": "A corporate income overview describes positive tax scope but does not establish absence of CFC provisions across the legal framework."
+    },
+    {
+      "record": {
+        "id": "th.absent.individual.anti_abuse",
+        "jur": "th",
+        "category": "",
+        "subject": "individual",
+        "slot": "anti_abuse",
+        "statement": "No individual anti-abuse rule relevant to dividend receipt was found in the Revenue Department materials checked. The official anti-avoidance material addresses manipulated transfer pricing within MNEs and the company or juristic-partnership corporate-income-tax calculation; it is not extended here to an individual recipient.",
+        "cite_id": "th.rd.transfer-pricing-legislation#all",
+        "quote": "In order to prevent the evasion of taxation caused by manipulated transfer pricing within the MNEs, tax authorities can price goods and services by applying the provisions of Section 65 bis (4) (7), Section 65 ter, and Section 70 ter under the Revenue Code, Double Tax Agreements between Thailand and other countries, as well as Standard Accounting No. 37 and 47."
+      },
+      "reason": "Company transfer-pricing guidance does not establish absence of other individual anti-abuse provisions."
+    },
+    {
+      "record": {
+        "id": "th.absent.individual.cfc",
+        "jur": "th",
+        "category": "",
+        "subject": "individual",
+        "slot": "cfc",
+        "statement": "No CFC rule was found that attributes the undistributed profits of a foreign subsidiary to a Thai individual shareholder. The official personal-income-tax overview taxes a resident on Thai-source income and foreign-source income brought into Thailand; checked the Revenue Code personal-income-tax and international-tax materials.",
+        "cite_id": "th.rd.pit#h1",
+        "quote": "A resident of Thailand is liable to pay tax on income from sources in Thailand as well as on the portion of income from foreign sources that is brought into Thailand."
+      },
+      "reason": "The PIT overview cannot establish absence of CFC law and contains an incorrect resident-day threshold elsewhere."
+    }
+  ],
+  "before_count": 50,
+  "after_count": 44,
+  "rule_decision_change": {
+    "before": {
+      "id": "D-vn-10",
+      "statement": "No domestic rule that denies a dividend benefit to a company was found. The library's parameter vn.anti_abuse.related_party_non_arm_length_reassessment (from a Government news page) lets the tax authority re-determine the tax where related-party prices or terms are not at arm's length; that is an adjustment of the enterprise's profit, not a denial of the art. 4(7) exemption or of a credit, and the library has no law or regulation clause for it. It is not written as a deny rule. Round 2 stages the absence record vn.absent.company.anti_abuse (vn/lib/decision_add.csv), which covers the cell for the domestic law. The treaty principal purposes tests (vn-<partner>.anti_abuse.ppt) stay subject all, as in the other jurisdictions' treaty rules, because MLI art. 7(1) and the treaty clauses apply to any person; in Viet Nam as the source state they deny nothing for a company, which bears no tax on dividends (vn.absent.company.outbound_wht).",
+      "cite_id": "vn.gov.related-party-tax-avoidance#h4",
+      "quote": "Trường hợp doanh nghiệp lợi dụng quan hệ liên kết để xác lập giá mua, giá bán, chi phí, doanh thu hoặc các điều kiện giao dịch không phù hợp với giao dịch độc lập, qua đó làm giảm nghĩa vụ thuế tại Việt Nam, dịch chuyển lợi nhuận sang pháp nhân khác hoặc sang quốc gia, vùng lãnh thổ có mức thuế thấp thì cơ quan quản lý thuế có quyền xác định lại nghĩa vụ thuế theo quy định."
+    },
+    "after": {
+      "id": "D-vn-10",
+      "statement": "The registered government guidance describes reassessment where related-party prices or conditions reduce Vietnamese tax or shift profits. It does not establish the absence of domestic provisions denying dividend exemptions or foreign-tax credits. The earlier library absence record vn.absent.company.anti_abuse is withdrawn pending review of Law108/2025 and implementing regulations. Existing treaty principal-purpose tests remain subject to their own conditions; no conclusion of no company exposure is inferred here.",
+      "cite_id": "vn.gov.related-party-tax-avoidance#h4",
+      "quote": "Trường hợp doanh nghiệp lợi dụng quan hệ liên kết để xác lập giá mua, giá bán, chi phí, doanh thu hoặc các điều kiện giao dịch không phù hợp với giao dịch độc lập, qua đó làm giảm nghĩa vụ thuế tại Việt Nam, dịch chuyển lợi nhuận sang pháp nhân khác hoặc sang quốc gia, vùng lãnh thổ có mức thuế thấp thì cơ quan quản lý thuế có quyền xác định lại nghĩa vụ thuế theo quy định."
+    }
+  },
+  "consumer_evidence": "rule/tools/query.py::gap treats matching library absence records as covered; unsupported negative findings therefore suppress real evidence gaps.",
+  "scope": "Withdrawal means unresolved, not proof that such a tax rule exists. Full original optimizer inputs remain unchanged. Isolated rule metadata and library require rebuilding before promotion."
+}
