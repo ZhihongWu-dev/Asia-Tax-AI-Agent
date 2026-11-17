@@ -30,5 +30,44 @@
     "Review authoritative current article and commencement before frozen catalog rebuild; rerun citation and business tests."
   ],
   "generated_data_modified": false,
-  "cloud_admitted": false
+  "cloud_admitted": false,
+  "isolated_repair": {
+    "status": "primary_law_scope_rebound_pending_rebuild",
+    "retired_legacy_parameter": {
+      "param_id": "jp.anti_abuse.consolidated_corporation_unreasonable_tax_reduction_denial.legacy_60062fc21261",
+      "scope": "jp",
+      "subject": "company",
+      "slot": "anti_abuse",
+      "name": "consolidated_corporation_unreasonable_tax_reduction_denial",
+      "value": "yes",
+      "unit": "bool",
+      "cite_id": "jp.nta.consolidated-tax-avoidance-denial#h2",
+      "quote": "法人税法132条の3の規定は、「その連結法人の行為又は計算」により税負担の不当減少が生ずる場合に、その行為又は計算を否認することができることとされており、同規定は、行為者を「連結法人」に限定した規定であることから、連結納税制度に係る租税回避否認の検討に当たっては、法人税法132条の3だけで対処することは不十分であり、同法132条又は132条の2の適用の有無の検討が必要となる場面もあると考えられる。",
+      "effective_from": "",
+      "effective_to": "",
+      "note": "Official NTA research material describing the statutory denial rule. This parameter is deliberately limited to consolidated corporations and does not assert a universal company GAAR.",
+      "changed_on": "",
+      "superseded_by": ""
+    },
+    "new_parameter": {
+      "param_id": "jp.anti_abuse.group_tax_sharing_denial_scope",
+      "scope": "jp",
+      "subject": "company",
+      "slot": "anti_abuse",
+      "name": "group_tax_sharing_denial_scope",
+      "value": "Acts or calculations of the assessed group-tax-sharing corporation or another group-tax-sharing corporation that unduly reduce corporation tax; applies only within the statutory group regime.",
+      "unit": "text",
+      "cite_id": "jp.cta#132-3",
+      "quote": "（通算法人に係る行為又は計算の否認）\n第百三十二条の三　税務署長は、通算法人の各事業年度の所得に対する法人税につき更正又は決定をする場合において、当該通算法人又は他の通算法人の行為又は計算で、これを容認した場合には、当該各事業年度の所得の金額から控除する金額の増加、法人税の額から控除する金額の増加、他の通算法人に対する資産の譲渡に係る利益の額の減少又は損失の額の増加その他の事由により法人税の負担を不当に減少させる結果となると認められるものがあるときは、その行為又は計算にかかわらず、税務署長の認めるところにより、当該通算法人に係る法人税の課税標準若しくは欠損金額又は法人税の額を計算することができる。",
+      "effective_from": "2022-04-01",
+      "effective_to": "",
+      "note": "Regime applies to business years BEGINNING on or after2022-04-01, not merely transactions occurring after that date. Establish group-tax-sharing status and statutory unreasonable-tax-reduction conditions. Not a universal company GAAR or an automatic denial rule. Transition: https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/hojin/group_tsusan/index.htm",
+      "changed_on": "2026-11-18",
+      "superseded_by": ""
+    },
+    "family_company_note_before": "Japan has no general anti-avoidance rule: s132 lets the district director disregard acts or calculations of family companies (同族会社) that unduly reduce corporation tax (similar rules for reorganisations s132-2 and group relief s132-3, not collected). Treaty PPT: pair parameters.",
+    "family_company_note_after": "Section132 permits disregard of acts or calculations of qualifying family companies that unduly reduce corporation tax. Reorganization section132-2 and group-tax-sharing section132-3 have separate scopes; this parameter does not establish a universal GAAR or the absence of other anti-abuse provisions. Treaty PPT uses pair-specific parameters.",
+    "runtime_promoted": false,
+    "automated_group_eligibility_not_implemented": true
+  }
 }
