@@ -93,6 +93,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       <h4>{say('已保存计算结果','Saved calculation result')}</h4>
       {disabled && <p>{say('此结果对应上次保存的资料，不包含当前未保存的修改。','This result uses the last saved facts and excludes unsaved changes.')}</p>}
       <p>{new Date(result.created_at).toLocaleString()} · {String(result.result.currency)}</p>
+      {result.result.tax_scope==='india_ordinary_annual_ty2026_27'&&<p>{say('印度TY 2026–27（2026年4月至2027年3月），不是AY 2026–27。此结果为普通所得年度税额，尚未扣除已缴款，也不含利息或罚款；不含特殊税率所得、境外所得或其他税额调整。','India TY 2026–27 (April 2026–March 2027), not AY 2026–27. Ordinary annual liability before payment credits, interest and penalties; excludes special-rate income, foreign income and other tax adjustments.')}</p>}
       {result.result.tax_scope==='japan_three_national_company_taxes_only'&&<>
         <p>{say('此结果仅包含日本企业的三项国税，不含地方住民税、事业税或最低补足税。中间申告应纳义务不代表已缴清；各税种补退分别处理，不能自动互抵。','This result covers the three Japanese national company taxes only, excluding prefectural/municipal inhabitant, enterprise and minimum top-up taxes. Interim-return liabilities do not mean payment; settle each tax separately without automatic offsets.')}</p>
         <p>{say('防卫特别法人税申报：','Defence tax return: ')}{result.result.defence_return_required?say('需要，包括零税额申报。','Required, including zero-tax returns.'):say('本会计年度开始日尚不适用。','Not applicable for this accounting-period start date.')}</p>

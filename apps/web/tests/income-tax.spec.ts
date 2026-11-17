@@ -91,6 +91,38 @@ for (const scenario of [
   await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(scenario.balance);
 });
 
+for(const subject of ['individual','company']) test(`India ${subject} TY2026 annual liability persists`,async({page})=>{
+  const form=await openIncome(page);
+  await form.getByRole('combobox',{name:'Taxpayer',exact:true}).selectOption(subject);
+  await form.getByRole('combobox',{name:'Filing jurisdiction',exact:true}).selectOption('in');
+  await form.getByLabel('Period start',{exact:true}).fill('2026-04-01');
+  await form.getByLabel('Period end',{exact:true}).fill('2027-03-31');
+  await form.getByRole('combobox',{name:'Tax residency',exact:true}).selectOption('resident');
+  await form.getByRole('combobox',{name:'Income category',exact:true}).selectOption('business');
+  await form.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption('in');
+  await form.getByLabel('Gross income',{exact:true}).fill('1700000');
+  await form.getByLabel('Income description',{exact:true}).fill('Domestic ordinary business income');
+  await form.getByLabel('Claimed deductions (blank if unknown)',{exact:true}).fill('100000');
+  await form.getByLabel('Carried losses (blank if unknown)',{exact:true}).fill('0');
+  await form.getByRole('checkbox').check();
+  await form.getByRole('button',{name:'Save income-tax details'}).click();
+  await expect(form.getByRole('status')).toHaveText('Income-tax details saved.');
+  const assessment=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await assessment.getByRole('combobox',{name:'Applicable regime',exact:true}).selectOption(subject==='individual'?'in_personal_new_ty2026_27':'in_company_section200_ty2026_27');
+  await assessment.getByLabel('Established taxable income before rounding',{exact:true}).fill('1600000');
+  for(const name of ['Regime election, eligibility, deductions and loss restrictions verified','Ordinary domestic income and all exclusions verified'])
+    await assessment.getByRole('combobox',{name,exact:true}).selectOption('true');
+  await assessment.getByLabel('Tax-basis adjustments and eligibility explanation',{exact:true}).fill('Ordinary domestic income and eligible deductions reconciled; statutory regime conditions checked.');
+  await assessment.getByRole('checkbox').check();
+  await assessment.getByRole('button',{name:'Calculate and save result'}).click();
+  const result=assessment.getByRole('article',{name:'Saved calculation result'});
+  await expect(result).toContainText(subject==='individual'?'124800':'402690');
+  await expect(result).toContainText('before payment credits, interest and penalties');
+  await expect(result.getByRole('link')).toHaveCount(2);
+  await openIncome(page);
+  await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('not AY 2026');
+});
+
 async function openIncome(page: import('@playwright/test').Page) {
   await page.goto('/');
   await expect(page.getByRole('button', { name: /Switch to English|切换为中文/ })).toBeVisible();

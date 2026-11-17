@@ -201,6 +201,20 @@ class JPCompany(Basis):
     local_corporation_interim_liability: Money
 
 
-Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual | JPCompany |
+class INIndividual(Basis):
+    policy: Literal['in_personal_new_ty2026_27']
+    taxable_income_before_rounding: Money
+    regime_and_base_verified: StrictBool
+    ordinary_domestic_scope_confirmed: StrictBool
+
+
+class INCompany(Basis):
+    policy: Literal['in_company_section200_ty2026_27']
+    taxable_income_before_rounding: Money
+    regime_and_base_verified: StrictBool
+    ordinary_domestic_scope_confirmed: StrictBool
+
+
+Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual | JPCompany | INIndividual | INCompany |
                        HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
                        Field(discriminator='policy')]

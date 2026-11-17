@@ -16,6 +16,15 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if(input.jurisdiction==='in' && input.residency==='resident' && period==='2026-04-01/2027-03-31' && input.incomes.every(i=>i.source_jurisdiction==='in'&&['business','employment','service_remuneration','author_remuneration','interest','rental','royalty'].includes(i.category))) {
+    return [{id:company?'in_company_section200_ty2026_27':'in_personal_new_ty2026_27',
+      label:company?['印度境内企业第200条税制（TY 2026–27）','India domestic company section 200 (TY 2026–27)']:['印度居民个人新税制（TY 2026–27）','India resident individual new regime (TY 2026–27)'],
+      notice:['适用于2026年4月1日至2027年3月31日的Tax Year，不是AY 2026–27。计算年度税额、附加税及健康教育费，不是扣除已缴款后的补退金额，不含利息或罚款。个人须适用第202条新税制；企业须已按时有效选择第200条并核实扣除、亏损及折旧限制。输入税基须与保存的收入减去核定扣除及可抵扣亏损一致；工资标准扣除等须已核定计入保存扣除，不自动另算。不含特殊税率所得、股息、资本利得、农业所得合并、境外所得或抵免、IFSC优惠及其他税额调整。',
+        'Uses Tax Year 1 April 2026–31 March 2027, not AY 2026–27. Calculates annual liability including surcharge and health/education cess, before payment credits, interest and penalties. Individuals must use section 202; domestic companies require a valid timely section 200 option and verified deduction, loss and depreciation restrictions. The established base must equal saved income less verified deductions and eligible losses. Include verified salary standard deductions in saved deductions; they are not calculated again. Excludes special-rate income, dividends, capital gains, agricultural aggregation, foreign income or relief, IFSC concessions and other tax adjustments.'],
+      fields:[money('taxable_income_before_rounding','核定取整前应税所得','Established taxable income before rounding'),
+        confirm('regime_and_base_verified','已核实税制选择、资格、扣除及亏损限制','Regime election, eligibility, deductions and loss restrictions verified'),
+        confirm('ordinary_domestic_scope_confirmed','已核实境内普通所得及全部排除条件','Ordinary domestic income and all exclusions verified')]}];
+  }
   if (input.jurisdiction==='jp' && company && input.residency==='resident' && /^2026-\d{2}-\d{2}$/.test(input.period_start)) {
     const [,month,day]=input.period_start.split('-').map(Number);
     const annualEnd=new Date(Date.UTC(2027,month-1,day)-86400000).toISOString().slice(0,10);
@@ -196,7 +205,14 @@ export const resultLabels: Record<string, Label> = {
   other_incentive_reduction:['其他税额优惠','Other incentive reduction'],annual_reduction:['年度减税额','Annual tax reduction'],
   personal_deduction:['本人扣除额','Personal deduction'],dependent_deduction:['受抚养人扣除额','Dependent deduction'],
   deductible_insurance:['可扣除保险','Deductible insurance'],article11_deductions:['第11条扣除','Article 11 deductions'],
-  taxable_income_before_rounding:['千元取整前应税所得','Taxable income before thousand rounding'],
+  taxable_income_before_rounding:['取整前应税所得','Taxable income before rounding'],
+  gross_income_tax:['减免前所得税','Income tax before relief'],
+  resident_rebate:['居民个人税额退抵','Resident individual rebate'],
+  income_tax_after_rebate:['退抵后所得税','Income tax after rebate'],
+  gross_surcharge:['减免前附加税','Surcharge before relief'],
+  surcharge_marginal_relief:['附加税边界减免','Surcharge marginal relief'],
+  surcharge:['减免后附加税','Surcharge after relief'],
+  health_education_cess:['健康教育费','Health and education cess'],
   net_income_before_ptkp:['PTKP前净所得','Net income before PTKP'],ptkp_allowance:['核定PTKP免税额','Verified PTKP allowance'],
   article31e_gross_receipts:['第31E条收入总额','Article 31E gross receipts'],
   article31e_eligible_base:['第31E条优惠税基','Article 31E reduced-rate base'],article31e_other_base:['普通税率税基','Ordinary-rate base'],
