@@ -1,0 +1,26 @@
+{
+  "status": "official_sources_archived_pending_clause_registration_and_parameter_migration",
+  "sources": [
+    {
+      "file": "database/raw/id/id.pmk112-2025.html",
+      "url": "https://pajak.go.id/en/node/119084",
+      "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+      "bytes": 255825
+    },
+    {
+      "file": "database/raw/id/id.dgt.pmk112-transition-2026.html",
+      "url": "https://www.pajak.go.id/index.php/id/pengumuman/pelaksanaan-peraturan-menteri-keuangan-nomor-112-tahun-2025-tentang-tata-cara-penerapan",
+      "sha256": "981cdba4f34f3e8b4d4da3cf2919c0552254d80393d7f2474e3ce413e8d4782f",
+      "bytes": 68426
+    }
+  ],
+  "findings": [
+    "DGT official PMK 112/2025 text governs treaty application for individuals and entities; eligibility must be checked, not inferred from a boolean treaty flag.",
+    "DGT implementation announcement preserves pre-promulgation PER-25/PJ/2018-format certificates for their stated validity period; do not invalidate all old forms automatically."
+  ],
+  "next_steps": [
+    "Verify commencement in signed legal instrument.",
+    "Register clauses and replace current FAQ-backed treaty parameter with dated, qualified primary-law evidence.",
+    "Preserve transitional certificate validity and test applicable scenarios."
+  ]
+}
