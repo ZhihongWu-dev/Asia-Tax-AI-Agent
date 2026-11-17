@@ -12,6 +12,12 @@
       "url": "https://www.pajak.go.id/index.php/id/pengumuman/pelaksanaan-peraturan-menteri-keuangan-nomor-112-tahun-2025-tentang-tata-cara-penerapan",
       "sha256": "981cdba4f34f3e8b4d4da3cf2919c0552254d80393d7f2474e3ce413e8d4782f",
       "bytes": 68426
+    },
+    {
+      "file": "database/raw/id/id.pmk112-2025.signed.pdf",
+      "url": "https://jdih.kemenkeu.go.id/api/download/8830a44a-12f5-4717-84c0-fed0e6239bdf/2025pmkeuangan112.pdf",
+      "sha256": "551d2a9ac214e79d21abbb4c891906262df0eeb6097d8c1e15723437a2250728",
+      "bytes": 2548150
     }
   ],
   "findings": [
@@ -19,7 +25,7 @@
     "DGT implementation announcement preserves pre-promulgation PER-25/PJ/2018-format certificates for their stated validity period; do not invalidate all old forms automatically."
   ],
   "next_steps": [
-    "Verify commencement in signed legal instrument.",
+    "Register dated clauses using visually verified 2025-12-31 commencement.",
     "Register clauses and replace current FAQ-backed treaty parameter with dated, qualified primary-law evidence.",
     "Preserve transitional certificate validity and test applicable scenarios."
   ],
@@ -37,6 +43,9 @@
     "dgt_header_date": "2025-12-29",
     "official_pdf": "https://jdih.kemenkeu.go.id/api/download/8830a44a-12f5-4717-84c0-fed0e6239bdf/2025pmkeuangan112.pdf",
     "pdf_page_25_extraction": "Promulgation date is an unreadable glyph in extracted PDF text; visual confirmation or official gazette required before effective-date migration.",
-    "decision": "Do not infer commencement from page metadata or signature date. Stage database untouched while rebuild runs."
+    "decision": "Use 2025-12-31 as commencement under Article 29; do not use website header or signature date.",
+    "status": "signature_page_visually_verified",
+    "effective_from": "2025-12-31",
+    "visual_evidence": "Official PDF page 25: promulgated 31 Desember 2025; signed 30 Desember 2025; Berita Negara 2025 number 1205."
   }
 }
