@@ -1,0 +1,437 @@
+{
+  "cite_id": "cn.cs.2026-27#i3",
+  "url": "https://szs.mof.gov.cn/zhengcefabu/202609/t20260901_3996442.htm",
+  "original_sha256": "cf9cd12fc6ddc8dc9ed379e9e37f99a9a15b11158f9c84ce63393cc8747189d0",
+  "old_main_sha256": "4a57a12586e12ba3f920405c5de26a2154447ebeefd36834f772803b8ccbbd3d",
+  "old_cloud_sha256": "92cb847cc7647b686b24b7d502ed094a6a630d23f0320a12394692f209644395",
+  "repaired_sha256": "d3b534b92908b3b692e41bd6ac3ad4eeb13759344bb962c74a3b2029f98601e1",
+  "repaired_clause": {
+    "cite_id": "cn.cs.2026-27#i3",
+    "doc_id": "cn.cs.2026-27",
+    "kind": "item",
+    "label": "第3项",
+    "parent": "",
+    "text": "三、本公告自2026年9月1日起执行，《财政部 国家税务总局关于个人所得税若干政策问题的通知》（财税字〔1994〕20号）第二条第（八）项同时废止。\n特此公告。\n财政部 税务总局\n2026年9月1日\n附件下载：\n相关文章：\n发布日期：2026年09月01日\n分享到微信朋友圈\nx\n打开微信，点击底部的“发现”，\n使用“扫一扫”即可将网页分享至朋友圈。\n【 大 中 小 】\n【打印此页】\n【关闭窗口】\n网站地图\n联系我们\n主办单位：中华人民共和国财政部\n网站标识码：bm14000001 京ICP备05002860号\n京公网安备11010202000006号\n技术支持：财政部信息网络中心\n中华人民共和国财政部 版权所有，如需转载，请注明来源"
+  },
+  "publication_status": "not_published",
+  "finding": "Raw signing-date digits are split into span nodes; newline extraction plus PDF page-number filtering removed 202,6,9,1. Preserve inline adjacency and disable PDF page filtering for Chinese HTML/XML.",
+  "validation": "51 database tests passed;157 HTML documents compared against parser234f87e: no non-whitespace extraction changes, no changed slicing modes, no removed citation IDs. No-write reconstruction of28 Chinese HTML documents/710 clauses plus815 parameter and51 decision validation: zero errors/warnings.",
+  "differential_audit": {
+    "documents": 157,
+    "nonspace_changes": [],
+    "changed_modes": [],
+    "removed_citations": {},
+    "changed_clauses": 212,
+    "changed_documents": [
+      {
+        "id": "cn.law.eit",
+        "original_sha256": "ce155d4c61c537da01dd89b0e4b3660d8d253674df67392fc95d7f599f39e900",
+        "old_text_sha256": "b75549b99b190e4c58fdfbed103175596644253c3a76af89b2a49270e336985f",
+        "new_text_sha256": "75d5252d97f943b1c4b910dc72ffcda6bd4ed31cd3a0afa5ac004c80c1c001f2",
+        "changed_citations": [
+          "cn.law.eit#5",
+          "cn.law.eit#25",
+          "cn.law.eit#35",
+          "cn.law.eit#17",
+          "cn.law.eit#1",
+          "cn.law.eit#39",
+          "cn.law.eit#4",
+          "cn.law.eit#55",
+          "cn.law.eit#12",
+          "cn.law.eit#54",
+          "cn.law.eit#18",
+          "cn.law.eit#36",
+          "cn.law.eit#14",
+          "cn.law.eit#51",
+          "cn.law.eit#33",
+          "cn.law.eit#8",
+          "cn.law.eit#49",
+          "cn.law.eit#21",
+          "cn.law.eit#6",
+          "cn.law.eit#28",
+          "cn.law.eit#58",
+          "cn.law.eit#19",
+          "cn.law.eit#41",
+          "cn.law.eit#3",
+          "cn.law.eit#46",
+          "cn.law.eit#45",
+          "cn.law.eit#60",
+          "cn.law.eit#7",
+          "cn.law.eit#22",
+          "cn.law.eit#29",
+          "cn.law.eit#50",
+          "cn.law.eit#56",
+          "cn.law.eit#16",
+          "cn.law.eit#30",
+          "cn.law.eit#11",
+          "cn.law.eit#9",
+          "cn.law.eit#34",
+          "cn.law.eit#31",
+          "cn.law.eit#27",
+          "cn.law.eit#37",
+          "cn.law.eit#38",
+          "cn.law.eit#40",
+          "cn.law.eit#43",
+          "cn.law.eit#57",
+          "cn.law.eit#13",
+          "cn.law.eit#42",
+          "cn.law.eit#53",
+          "cn.law.eit#59",
+          "cn.law.eit#48",
+          "cn.law.eit#47",
+          "cn.law.eit#10",
+          "cn.law.eit#24",
+          "cn.law.eit#52",
+          "cn.law.eit#44",
+          "cn.law.eit#2",
+          "cn.law.eit#20",
+          "cn.law.eit#23",
+          "cn.law.eit#15",
+          "cn.law.eit#26",
+          "cn.law.eit#32"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.reg.eit",
+        "original_sha256": "795c5b9c964eeb280138a7ca25091228be48e1204c55b6b7229085e85e3d1f53",
+        "old_text_sha256": "79aee1eca66c292be18cd669292112e5b284167e3329f96a11cc014482db80f2",
+        "new_text_sha256": "b51df97a90450ecd2e9a9fd351fb45330d25fa69e512ed98c1134993595a0d08",
+        "changed_citations": [
+          "cn.reg.eit#1",
+          "cn.reg.eit#31",
+          "cn.reg.eit#8",
+          "cn.reg.eit#108",
+          "cn.reg.eit#32",
+          "cn.reg.eit#96"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.law.iit",
+        "original_sha256": "442006d0f1157e381eb044c60a4cafad7bae30f5dcf3592d1bdf72d99a798cb7",
+        "old_text_sha256": "e51ebc0af431bd4c9ed148e8ab7231810a769859348ac932cfa6d1b360ec780c",
+        "new_text_sha256": "4f922d8d45b34704b4edc2e86497147633d5321e65133fab5838d28ca387dad8",
+        "changed_citations": [
+          "cn.law.iit#7",
+          "cn.law.iit#14",
+          "cn.law.iit#21",
+          "cn.law.iit#1",
+          "cn.law.iit#16",
+          "cn.law.iit#17",
+          "cn.law.iit#10",
+          "cn.law.iit#12",
+          "cn.law.iit#8",
+          "cn.law.iit#2",
+          "cn.law.iit#15",
+          "cn.law.iit#20",
+          "cn.law.iit#4",
+          "cn.law.iit#5",
+          "cn.law.iit#3",
+          "cn.law.iit#6",
+          "cn.law.iit#22",
+          "cn.law.iit#13",
+          "cn.law.iit#18",
+          "cn.law.iit#19",
+          "cn.law.iit#11",
+          "cn.law.iit#9"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.reg.iit",
+        "original_sha256": "e5f3ca819c7638df993babe537b9c91907b87bf5ae8f0213c8fa9fef4019a221",
+        "old_text_sha256": "c6e5bfd14d9dd61c6566307bd3e0788512158b8491454225905dc07c0880c30c",
+        "new_text_sha256": "a2aba8e4ed56818284730feb915507a803b6749c3de1d7656bf196848e22cd22",
+        "changed_citations": [
+          "cn.reg.iit#27",
+          "cn.reg.iit#25",
+          "cn.reg.iit#1",
+          "cn.reg.iit#14",
+          "cn.reg.iit#21",
+          "cn.reg.iit#4",
+          "cn.reg.iit#24",
+          "cn.reg.iit#35",
+          "cn.reg.iit#7",
+          "cn.reg.iit#34",
+          "cn.reg.iit#15",
+          "cn.reg.iit#5",
+          "cn.reg.iit#20",
+          "cn.reg.iit#3",
+          "cn.reg.iit#2",
+          "cn.reg.iit#13",
+          "cn.reg.iit#9",
+          "cn.reg.iit#12",
+          "cn.reg.iit#22",
+          "cn.reg.iit#8",
+          "cn.reg.iit#17",
+          "cn.reg.iit#10",
+          "cn.reg.iit#11",
+          "cn.reg.iit#36",
+          "cn.reg.iit#6",
+          "cn.reg.iit#23",
+          "cn.reg.iit#19",
+          "cn.reg.iit#18",
+          "cn.reg.iit#26",
+          "cn.reg.iit#28",
+          "cn.reg.iit#31",
+          "cn.reg.iit#33",
+          "cn.reg.iit#32",
+          "cn.reg.iit#29",
+          "cn.reg.iit#30",
+          "cn.reg.iit#16"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.cs.2009-125",
+        "original_sha256": "ba5b09a72ae33414c331267b540af0bf77db3cb061cad6b57b2172039916700c",
+        "old_text_sha256": "76f8ec11dc0992923aba0153fdccbf7afe1775ec08f1feba8a24f1c544652401",
+        "new_text_sha256": "e3909fa2300abb68a0da886737db04cc09fbf6ec01bea3fcebec4ca786475921",
+        "changed_citations": [
+          "cn.cs.2009-125#i10"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.cs.2020-03",
+        "original_sha256": "7006ad16125446a9cc977d87335034bef4386c4d2475f644cbd351d50d9a2df4",
+        "old_text_sha256": "3488f21d7770394dd67655c1d67b1497abb0bdb335327d71a31907091aa2082b",
+        "new_text_sha256": "8994d61759eef34082832999e5e5dcb95133c97ab218733002c38e66d1ac0ff3",
+        "changed_citations": [
+          "cn.cs.2020-03#i14",
+          "cn.cs.2020-03#i13"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.gsf.2009-02",
+        "original_sha256": "ce6c25ee670402af26720cc9a46791b3a10a680a9e7220f2dcb18740b1965ae9",
+        "old_text_sha256": "d784aec2c90a7a0ae805c20a6e29eaabea78ab5c87e36c7383fa3ad3a9a7fa19",
+        "new_text_sha256": "4b7c55f791de57225d8cf1e4c384fd887c437b6158c182835a4f7bbeede7ca6e",
+        "changed_citations": [
+          "cn.gsf.2009-02#1",
+          "cn.gsf.2009-02#85"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.order.32",
+        "original_sha256": "a5c86149f3c0a24a803ca5a927590b4f95a42dd7ada91c9e324da54e67476e51",
+        "old_text_sha256": "05fa84030d86e0af3c01d009bbac5a94fc4709e357933a4d81860d63006521f5",
+        "new_text_sha256": "27df276bd8bb322275afa8ef32ab82dcc88ceaa49b4812e4ee7dbd90fae7a114",
+        "changed_citations": [
+          "cn.order.32#12",
+          "cn.order.32#14",
+          "cn.order.32#5",
+          "cn.order.32#20",
+          "cn.order.32#16",
+          "cn.order.32#9",
+          "cn.order.32#18",
+          "cn.order.32#4",
+          "cn.order.32#21",
+          "cn.order.32#8",
+          "cn.order.32#15",
+          "cn.order.32#19",
+          "cn.order.32#2",
+          "cn.order.32#10",
+          "cn.order.32#13",
+          "cn.order.32#1",
+          "cn.order.32#7",
+          "cn.order.32#11",
+          "cn.order.32#22",
+          "cn.order.32#6",
+          "cn.order.32#17",
+          "cn.order.32#3"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.sta.2018-09",
+        "original_sha256": "258333c80afca37b9f2594ea328ab50a81bf517a2af1de776bcd579b1392b309",
+        "old_text_sha256": "9e149743e34b3305e9489ad0f7138b3e5f8698f3768d9742071a7f3ab0e60e62",
+        "new_text_sha256": "71a491f50731f1d86ad03c7a9d7a08754cc64683a9bce6e1ad252e7f6ec24c67",
+        "changed_citations": [
+          "cn.sta.2018-09#i8",
+          "cn.sta.2018-09#i11",
+          "cn.sta.2018-09#i12"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.gsf.2009-82",
+        "original_sha256": "9e6dee91bc2b40db5124fc6f9004cdf8d866b08ab954d6f15203d00fdd6b47df",
+        "old_text_sha256": "2cb0b881d01bc5baa82565f585092ec3ad5b3c0c62b79e5ebc94c79bf6347da4",
+        "new_text_sha256": "f8a1c0017fce7d6ad318f70415025660d69744aa4f854649c6b3c1ce677004ff",
+        "changed_citations": [
+          "cn.gsf.2009-82#i7"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.sta.2014-09",
+        "original_sha256": "c0ede28778e3e55780a4d08da97097eb3c113aacac6f14b148f0b8c67a466f1e",
+        "old_text_sha256": "b18c12b8697ba6c3136f4bbdd977809b70b1a93ca03e51b2cb4d7a5b769c068e",
+        "new_text_sha256": "dee1a43e842c79bfa1d4a0cbc181c6837ba401b37af33450de8230252f34c394",
+        "changed_citations": [
+          "cn.sta.2014-09#i3"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.sta.2019-35",
+        "original_sha256": "a028eb91e1c4ed6929dc79ba98fc93cb00a1c4587681c33ecdc9a19e186fda2f",
+        "old_text_sha256": "533b833fa9e3ee456b165f7ea53d019955222eb972c33d70f87b603e4603c786",
+        "new_text_sha256": "7a1b6fc67bbf732c436f8a60c94bd48547349ca60502035efea479ca58703f1c",
+        "changed_citations": [
+          "cn.sta.2019-35#13",
+          "cn.sta.2019-35#19",
+          "cn.sta.2019-35#4",
+          "cn.sta.2019-35#11",
+          "cn.sta.2019-35#22",
+          "cn.sta.2019-35#8",
+          "cn.sta.2019-35#15",
+          "cn.sta.2019-35#5",
+          "cn.sta.2019-35#7",
+          "cn.sta.2019-35#1",
+          "cn.sta.2019-35#25",
+          "cn.sta.2019-35#24",
+          "cn.sta.2019-35#6",
+          "cn.sta.2019-35#20",
+          "cn.sta.2019-35#23",
+          "cn.sta.2019-35#21",
+          "cn.sta.2019-35#3",
+          "cn.sta.2019-35#2",
+          "cn.sta.2019-35#10",
+          "cn.sta.2019-35#17",
+          "cn.sta.2019-35#16",
+          "cn.sta.2019-35#14",
+          "cn.sta.2019-35#18",
+          "cn.sta.2019-35#9",
+          "cn.sta.2019-35#12"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.sta.2025-04",
+        "original_sha256": "5573f46499af36a40348819ae7263c6e0fef41be1d2b1d8c151fd2f13cdaf7bd",
+        "old_text_sha256": "3624d4654bc935b4d639f6617e4e57bad0bc3a5784e5b9c226cc7c52a04effff",
+        "new_text_sha256": "955dc364dc6fc3008d27fc8b7b477f2b294200ab431d8096fb58e19ca326f9ec",
+        "changed_citations": [
+          "cn.sta.2025-04#i8"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.sta.2015-07",
+        "original_sha256": "22048d111aa4567f939c7032355cc664a8f3a125f259b3208626f1a87cf9dfdc",
+        "old_text_sha256": "ab0574cdc9ca4ceba629b44d25a11ae96030ea1760037bbed09f2969820dd9a2",
+        "new_text_sha256": "e8b6b13552daaef30de001bdf5d4e2eca3d588e95c24412999916ca70481eddb",
+        "changed_citations": [
+          "cn.sta.2015-07#i19"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.sta.2017-37",
+        "original_sha256": "ca6605033b6a75029152e7a71fe94f33fd7c91222e7af9b3007579fa750b7166",
+        "old_text_sha256": "e089dfaa4966c17f43f5ffcfe7f98a5c234f3f9728e28d7541a08ee2d2076f1f",
+        "new_text_sha256": "2c2b47ccbe9dad968e839151b165bf40fddb7db296b2d3d3690de9c387af20eb",
+        "changed_citations": [
+          "cn.sta.2017-37#i17",
+          "cn.sta.2017-37#i12"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.sta.2008-112",
+        "original_sha256": "67900dca7a249082641bb3fa4a9b9c8cbbc543c1c6cf20296d77e0b03ea9064b",
+        "old_text_sha256": "6eac0aaf5d295290237d3db39e7e896b66f41b77bdbe36706a2e9c272a3dd5df",
+        "new_text_sha256": "aa43f0df14ffa225874cc5e4eede72117cbae83eb563c3a82e45902c362e21ab",
+        "changed_citations": [
+          "cn.sta.2008-112#i3"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.gsh.2009-37",
+        "original_sha256": "8655c7c5d74638d47a40a69870f578916bb6fa21762bf60461c6289b02805ea3",
+        "old_text_sha256": "4ef35058b6d5325ba23fa92469e123f598fa0d1b115a1e1cd85d37e4f75084fa",
+        "new_text_sha256": "ea376b1e159e9263dd027d3a86c547f6e4d9390676711dc9e46a3f3eec31a14f",
+        "changed_citations": [
+          "cn.gsh.2009-37#all"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.cs.2026-27",
+        "original_sha256": "cf9cd12fc6ddc8dc9ed379e9e37f99a9a15b11158f9c84ce63393cc8747189d0",
+        "old_text_sha256": "6911ccbf772b9cac5a69fa7db011ff94ec3ec735bbb0837ba472f0694174a2bd",
+        "new_text_sha256": "68c75838c3762099cf63ff05fc831b7698e2b80966ad7625b2f2434f7f70ddbd",
+        "changed_citations": [
+          "cn.cs.2026-27#i3",
+          "cn.cs.2026-27#i2"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.sta.2014-67",
+        "original_sha256": "552a9ad1a7d600e495453a685685e44df5206a83fd5ab01dadfda8d001052f30",
+        "old_text_sha256": "22ffdf49e1aff800b7553128ecb222913dc6d89349d721db443537434099a744",
+        "new_text_sha256": "2cc700348dcbe34779f7a2756ed6a1dfcd1ec986dd78064ef2d8d8df11f098ab",
+        "changed_citations": [
+          "cn.sta.2014-67#1",
+          "cn.sta.2014-67#31"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.law.stamp",
+        "original_sha256": "ada63544d044dc7de91393f3b0ac7bdee7dc517abcb76dc830c82dc3897bbb47",
+        "old_text_sha256": "ccd99541b8e9b934cdeaed86a232bd081043412aab5d6a56ffb2790107dc7027",
+        "new_text_sha256": "ebeba772e949a7e554461e68d079cf74ef449c91cf2e528cc6d7a9490de223be",
+        "changed_citations": [
+          "cn.law.stamp#9",
+          "cn.law.stamp#7",
+          "cn.law.stamp#6",
+          "cn.law.stamp#5",
+          "cn.law.stamp#11",
+          "cn.law.stamp#18",
+          "cn.law.stamp#15",
+          "cn.law.stamp#12",
+          "cn.law.stamp#17",
+          "cn.law.stamp#13",
+          "cn.law.stamp#19",
+          "cn.law.stamp#3",
+          "cn.law.stamp#16",
+          "cn.law.stamp#2",
+          "cn.law.stamp#8",
+          "cn.law.stamp#14",
+          "cn.law.stamp#20",
+          "cn.law.stamp#1",
+          "cn.law.stamp#4",
+          "cn.law.stamp#10"
+        ],
+        "added_citations": []
+      },
+      {
+        "id": "cn.cs.2009-59",
+        "original_sha256": "076d7a5976b29fdc62e1bd9e093af0ec0a10813c5974bae160a12fcf6cbffd49",
+        "old_text_sha256": "04762c6f0606dc9f2ef49d9ff937bcd55961d1852d9c3fd4e6d4e49ec2b3f2e4",
+        "new_text_sha256": "39816b0a844824676a70bab86838bd0a6f44ab0ddaffc505b1efc41006b9c898",
+        "changed_citations": [
+          "cn.cs.2009-59#i6"
+        ],
+        "added_citations": []
+      }
+    ]
+  },
+  "quote_validation": {
+    "documents": 28,
+    "clauses": 710,
+    "parameters": 815,
+    "decisions": 51,
+    "errors": [],
+    "warnings": []
+  }
+}

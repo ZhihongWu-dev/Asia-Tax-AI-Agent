@@ -156,7 +156,7 @@ def main_node(body, blocks):
     return node
 
 
-def html_text(raw):
+def html_text(raw, *, preserve_inline=False):
     soup = BeautifulSoup(raw, "lxml")
     for t in soup(["script", "style", "noscript", "header", "footer", "nav", "iframe"]):
         t.decompose()
@@ -165,6 +165,13 @@ def html_text(raw):
         if len(t.get_text(strip=True)) < 0.9 * whole:  # Judiciary's LRS wraps a whole judgment in one <form>)
             t.decompose()
     body = soup.body or soup
+    # Inline markup must not manufacture line breaks inside dates, amounts or
+    # words. Keep real block/BR boundaries and the whitespace in the source.
+    if preserve_inline:
+        for tag in body.find_all(['span', 'font', 'b', 'strong', 'i', 'em', 'u', 'a', 'small']):
+            if not re.search(r'display\s*:\s*(?:block|table|flex|grid)', tag.get('style', ''), re.I):
+                tag.unwrap()
+        body.smooth()
     # the container is found by its <p> text; a page holding its rules in a list (id.dgt.article26) is found by <p> and
     # <li> text; the longer of the two is the page's text, since menus are lists too (th.rc3.rates.th)
     text = max((main_node(body, b).get_text("\n") for b in (["p"], ["p", "li"])), key=lambda x: len(re.sub(r"\s", "", x)))
@@ -334,7 +341,8 @@ def to_text(row, kind, conv):
     try:
         if kind in ("html", "htm"):
             raw = path.read_bytes()
-            return (kr_lawpage_text(raw) if is_kr_lawpage(raw) else html_text(raw)), None, "ok"
+            return (kr_lawpage_text(raw) if is_kr_lawpage(raw) else
+                    html_text(raw, preserve_inline=row.get('jur') == 'cn')), None, "ok"
         if kind == "pdf":
             pages = pdf_pages(path)
             text = "\n".join(pages)
@@ -393,8 +401,9 @@ RE_SPLIT_HEAD = re.compile(r"^第[一二三四五六七八九十百零〇两]*$"
 RE_SPLIT_TAIL = re.compile(r"^[一二三四五六七八九十百零〇两]*[条條]")
 
 
-def clean_lines(text):
-    lines = [ln.strip() for ln in text.splitlines() if ln.strip() and not RE_PAGENO.match(ln.strip())]
+def clean_lines(text, *, remove_page_numbers=True):
+    lines = [ln.strip() for ln in text.splitlines() if ln.strip()
+             and not (remove_page_numbers and RE_PAGENO.match(ln.strip()))]
     lines = [ln for ln in lines if not RE_CHAPTER.match(ln)]
     out, i = [], 0
     while i < len(lines):                              # "第" + "二十三条 ..." were split by an inline tag
@@ -523,8 +532,9 @@ def annex_clauses(doc_id, lines):
     return out
 
 
-def slice_articles(doc_id, text, regex, number, para_regex, para_number, fmt_art, fmt_para, mode):
-    lines = clean_lines(text)
+def slice_articles(doc_id, text, regex, number, para_regex, para_number, fmt_art, fmt_para, mode,
+                   *, remove_page_numbers=True):
+    lines = clean_lines(text, remove_page_numbers=remove_page_numbers)
     run, end = pick_run(lines, regex, number)
     out = []
     if len(run) < 3:
@@ -552,13 +562,14 @@ def slice_articles(doc_id, text, regex, number, para_regex, para_number, fmt_art
     return out, mode
 
 
-def slice_cn(doc_id, text):
+def slice_cn(doc_id, text, *, remove_page_numbers=True):
     """Chinese legal text. Article mode (第X条) if present, else top-level item mode (一、二、)."""
     out, mode = slice_articles(doc_id, text, RE_CN_ART, cn2int, RE_CN_ITEM, cn2int,
-                               "第%s条", "第%s条第%s款", "cn_article")
+                               "第%s条", "第%s条第%s款", "cn_article",
+                               remove_page_numbers=remove_page_numbers)
     if out:
         return out, mode
-    for n, buf in split_paras(clean_lines(text), RE_CN_ITEM, cn2int):
+    for n, buf in split_paras(clean_lines(text, remove_page_numbers=remove_page_numbers), RE_CN_ITEM, cn2int):
         out.append({"cite_id": "%s#i%s" % (doc_id, n), "doc_id": doc_id, "kind": "item", "label": "第%s项" % n,
                     "parent": "", "text": "\n".join(buf)})
     return out, "cn_item" if out else "none"
@@ -1790,7 +1801,7 @@ def slice_doc(row, text, pages):
     attached_text = typ == "attachment" and re.search(r"办法|规定|指南|细则|条例|准则|公约|协定", row["title"] or "") and "表" not in (row["title"] or "")
     legal = typ in ("law", "regulation", "guidance") or is_treaty or bool(attached_text)   # an attached 办法 slices like its parent
     if cn and legal:
-        out, mode = slice_cn(doc_id, text)
+        out, mode = slice_cn(doc_id, text, remove_page_numbers=kind not in ('html', 'htm', 'xml'))
         if len(out) >= 3:
             return out, mode
     if not cn and is_treaty:
