@@ -29,7 +29,7 @@ def calculate(case: IncomeTaxCase, basis):
         japan_company.annual_period(case.period_start,case.period_end)
     elif (case.period_start.isoformat(), case.period_end.isoformat()) != periods[jur]:
         raise ValueError('Saved basis period is not supported by this policy')
-    expected = {'cn_company_2026': 'company', 'cn_comprehensive_2026': 'individual', 'cn_business_2026': 'individual',
+    expected = {'cn_company_2026': 'company', 'cn_small_company_2026': 'company', 'cn_comprehensive_2026': 'individual', 'cn_business_2026': 'individual',
                 'sg_company_ya2026': 'company', 'sg_resident_ya2026': 'individual',
                 'hk_salaries_2025_26': 'individual', 'my_company_2026': 'company',
                 'my_individual_2026': 'individual', 'th_company_2026':'company', 'th_resident_2026':'individual',
@@ -103,6 +103,17 @@ def calculate(case: IncomeTaxCase, basis):
                 i.foreign_tax_paid not in (None,0) or i.category not in ('business','rental','royalty','other') for i in case.incomes):
             raise ValueError('Ordinary Japanese resident domestic company income without withholding/foreign-credit adjustments required')
         result=japan_company.company_tax(period_start=case.period_start,period_end=case.period_end,**args)
+    elif policy == 'cn_small_company_2026':
+        if case.residency != 'resident' or any(item.source_jurisdiction != 'cn' or
+                item.foreign_tax_paid not in (None, 0) for item in case.incomes):
+            raise ValueError('Small-company workflow requires domestic resident income without foreign tax credits')
+        with localcontext() as ctx:
+            ctx.prec = 40
+            base = max(Decimal('0'), sum((item.gross_amount for item in case.incomes), Decimal('0'))
+                - case.claimed_deductions - case.carried_losses)
+        if basis.taxable_income != base:
+            raise ValueError('Small-company tax base must reconcile to saved income, established deductions and eligible losses')
+        result = china.small_low_profit_company_tax(tax_year=2026, **args)
     elif policy == 'cn_company_2026':
         if any(i.source_jurisdiction != 'cn' for i in case.incomes):
             raise ValueError('Foreign-source corporate workflow is not verified by this policy')

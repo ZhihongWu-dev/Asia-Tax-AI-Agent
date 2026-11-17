@@ -183,7 +183,16 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
     return company ? [{id:'cn_company_2026',label:['中国企业普通税率（2026）','China ordinary company tax (2026)'],
       notice:['仅限境内普通25%税率；排除优惠税制、非居民扣缴及境外所得处理。计税基础须已完成纳税调整和亏损抵扣。',
         'Domestic ordinary 25% regime only. Excludes concessions, non-resident withholding and foreign-income treatment. Establish the tax base after adjustments and allowable losses.'],
-      fields:[money('taxable_income','核定应纳税所得额','Established taxable income'),confirm('normal_rate_confirmed','已核对普通税率适用条件','Normal rate eligibility checked'),money('allowed_tax_credits','核定可抵免税额','Allowed tax credits'),prepaid]}]
+      fields:[money('taxable_income','核定应纳税所得额','Established taxable income'),confirm('normal_rate_confirmed','已核对普通税率适用条件','Normal rate eligibility checked'),money('allowed_tax_credits','核定可抵免税额','Allowed tax credits'),prepaid]},
+      {id:'cn_small_company_2026',label:['中国小型微利企业（2026）','China small-low-profit company (2026)'],
+      notice:['境内居民企业须从事国家非限制和禁止行业，全年应纳税所得额不超过300万元、从业人数不超过300人、资产不超过5000万元，三项须同时满足。人数含劳务派遣；人数及资产填法定全年季度平均值，不能填年末值。季度平均为季初、季末之和除2，全年取四季平均；年中开业或终止须按实际经营期核定。应税所得须与保存的收入减核定扣除和可用亏损一致。按25%计入税基、适用20%税率，未计抵免前实际税负5%。不含境外所得及其他特殊优惠叠加。',
+        'Domestic resident enterprise in a non-restricted, non-prohibited industry. Annual taxable income must not exceed CNY3m, employees300 and assets CNY50m; all conditions must hold. Include dispatched workers. Enter verified statutory annual quarterly averages, not year-end figures: each quarter averages opening and closing values, then average all four quarters; verify actual operating-period rules for opening/closing mid-year. Taxable income must reconcile to saved income less established deductions and eligible losses. Include25% of income at a20% rate (5% before credits). Excludes foreign income and other special preference combinations.'],
+      fields:[money('taxable_income','核定应纳税所得额','Established taxable income'),
+        money('annual_average_employees','法定全年季度平均从业人数','Statutory annual quarterly-average employees'),
+        money('annual_average_assets','法定全年季度平均资产总额（元）','Statutory annual quarterly-average assets (CNY)'),
+        confirm('unrestricted_industry_confirmed','已核实属于非限制和非禁止行业','Non-restricted and non-prohibited industry verified'),
+        confirm('statutory_averages_and_eligibility_verified','已核实法定平均值、居民资格和优惠适用条件','Statutory averages, residence and preference eligibility verified'),
+        money('allowed_tax_credits','核定可抵免税额','Allowed tax credits'),prepaid]}]
     : [{id:'cn_comprehensive_2026',label:['中国居民综合所得（2026）','China resident comprehensive income (2026)'],
       notice:['仅限境内工资、劳务报酬、稿酬及特许权使用费，收入总额取自已保存资料。已保存扣除总额须等于下方专项、专项附加、其他及捐赠扣除之和；不要重复计入系统自动处理的6万元基本减除费用和收入类别费用减除。不含单独计税奖金、股权激励或其他所得；本流程不抵扣结转亏损或境外税款。',
         'Domestic wages, services, author remuneration and royalties only; gross amounts come from saved facts. Saved deductions must equal special, additional, other and donation deductions below. Do not include the automatic CNY 60,000 basic deduction or income-category expense reductions. Separate bonuses, equity schemes and other income are excluded; this workflow cannot consume carried losses or foreign tax credits.'],
@@ -221,6 +230,8 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
 }
 
 export const resultLabels: Record<string, Label> = {
+  preferential_taxable_income:['优惠计入应税所得额','Taxable income after preferential inclusion'],
+  small_company_tax_reduction:['小型微利企业优惠减免税额','Small-low-profit company tax reduction'],
   half_relief_eligible_base:['个体工商户减半优惠适用所得额','Income eligible for individual-operator half relief'],
   allowed_other_tax_reductions:['其他政策减免税额','Other policy tax reductions'],
   individual_operator_half_reduction:['个体工商户减半政策减免税额','Individual-operator half-relief amount'],

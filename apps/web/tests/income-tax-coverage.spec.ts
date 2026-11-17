@@ -14,6 +14,10 @@ async function open(page:Page) {
 type Scenario={name:string;country:string;subject:string;category:string;start:string;end:string;
   gross:string;policy:string;deductions?:string;money:[string,string][];choices:[string,string][];resultLabel:string;expected:string};
 const scenarios:Scenario[]=[
+  {name:'China small-low-profit company at all thresholds',country:'cn',subject:'company',category:'business',start:'2026-01-01',end:'2026-12-31',gross:'4000000',policy:'cn_small_company_2026',deductions:'1000000',
+    money:[['Established taxable income','3000000'],['Statutory annual quarterly-average employees','300'],['Statutory annual quarterly-average assets (CNY)','50000000'],['Allowed tax credits','10000'],['Prepaid tax for this period','200000']],
+    choices:[['Non-restricted and non-prohibited industry verified','true'],['Statutory averages, residence and preference eligibility verified','true']],
+    resultLabel:'Annual liability',expected:'140000'},
   ...(['individual_operator','other_business'] as const).map(kind=>({name:`China business ${kind}`,country:'cn',subject:'individual',category:'business',start:'2026-01-01',end:'2026-12-31',gross:'3000000',policy:'cn_business_2026',deductions:'600000',
     money:[['Established taxable income','2400000'],['Allowed other tax reductions','6000'],['Prepaid tax for this period','500000']] as [string,string][],
     choices:[['Verified business classification',kind],['Annual business aggregation and classification verified','true'],['Deductions, losses and no duplicate claims verified','true']] as [string,string][],

@@ -23,6 +23,17 @@ class CNCompany(Basis):
     prepaid_tax: Money
 
 
+class CNSmallCompany(Basis):
+    policy: Literal['cn_small_company_2026']
+    taxable_income: Money
+    annual_average_employees: Money
+    annual_average_assets: Money
+    unrestricted_industry_confirmed: StrictBool
+    statutory_averages_and_eligibility_verified: StrictBool
+    allowed_tax_credits: Money
+    prepaid_tax: Money
+
+
 class CNIndividual(Basis):
     policy: Literal['cn_comprehensive_2026']
     allowed_special_deductions: Money
@@ -341,6 +352,6 @@ class KRSalary(Basis):
     installment: StrictBool
 
 
-Assessment = Annotated[CNCompany | CNIndividual | CNBusiness | SGCompany | SGIndividual | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
+Assessment = Annotated[CNCompany | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGIndividual | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
                        HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
                        Field(discriminator='policy')]

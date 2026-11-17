@@ -1,0 +1,30 @@
+{
+  "checked_on": "2026-11-18",
+  "scope": "2026 domestic resident small-low-profit company annual calculation on verified statutory averages and established income/deduction/loss inputs.",
+  "legal_source": {
+    "url": "https://tianjin.chinatax.gov.cn/11253000000/0100/010003/p20230816143619913.shtml",
+    "document": "MOF/STA2023 announcement12, paragraphs3 and5",
+    "sha256": "554ad85277cd70fb619359eca0070a14984f0e1efa7b3308a4d33f5a5f80bc9a",
+    "bytes": 18078,
+    "archive": "External integration-audit-20261116/china-business-20261118/mof-sta-2023-12.html; generated database/cloud admission unchanged during optimizer freeze."
+  },
+  "rules": "Annual taxable income<=CNY3m, statutory annual quarterly-average employees<=300 including dispatched workers, assets<=CNY50m and unrestricted industry must all hold. Include25% of the established income at20%, giving5% before credits. This is not the expired separate below/aboveCNY1m treatment. Threshold excess rejects this policy rather than guessing another applicable concession.",
+  "workflow": "Separate policy alongside existing ordinary25% company route; strict company/resident/domestic boundary; established taxable base reconciles to saved gross income less deductions and eligible losses. Verified credit is capped at tax after preference. Preserve prepayment overpayment as refund. Bilingual explanation distinguishes statutory averages from year-end figures and notes actual operating-period rules.",
+  "research": {
+    "reference": "https://github.com/wfpet169/tax-burden-calculator",
+    "assessment": "Previously inspected public company-versus-individual comparison scope. Additional rules-directory fetch failed; no upstream implementation, code or dependency adopted. License/maintenance/security suitability not established for adoption. Existing exact Decimal calculation framework retained; current official announcement is authoritative."
+  },
+  "verification": {
+    "targeted": "21 passed in4.36s",
+    "income_suite": "1005 passed in14.14s",
+    "typescript": "tsc --noEmit passed",
+    "browser": "Two Edge workflows passed in28.1s: new SME case exactly at all thresholds saves and reopens annual liabilityCNY140000 afterCNY10000 credit; existing ordinary corporate save/amend invalidation flow remains passing."
+  },
+  "limits": [
+    "Statutory annual averages, deductible amounts and eligibility require verified inputs; automatic quarterly ledger construction remains to be added.",
+    "Current saved-case adapter accepts full2026 period only; short operating-year cases and foreign income remain separate work.",
+    "Other preference combinations and form-specific rounding are not established by this feature.",
+    "Source cloud admission, production acceptance and final branch delivery remain incomplete."
+  ],
+  "completion_claim": false
+}

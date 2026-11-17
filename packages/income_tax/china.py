@@ -85,3 +85,38 @@ not an established taxable-income basis.
                 'source_ids': ['cn.law.eit#4', 'cn.law.eit#5'],
                 'sources': deepcopy([SOURCE_BY_ID['cn.law.eit']]),
                 'stage': 'normal_corporate_rate_before_assessment_rounding'}
+
+
+def small_low_profit_company_tax(taxable_income, *, tax_year, annual_average_employees,
+                                annual_average_assets, unrestricted_industry_confirmed,
+                                statutory_averages_and_eligibility_verified,
+                                allowed_tax_credits, prepaid_tax):
+    """2026 annual SME regime on verified tax base and statutory quarter averages."""
+    check_year(tax_year)
+    if unrestricted_industry_confirmed is not True or statutory_averages_and_eligibility_verified is not True:
+        raise ValueError('Unrestricted industry, statutory quarterly averages and eligibility must be verified')
+    base, employees, assets, credits, prepaid = map(amount, (taxable_income,
+        annual_average_employees, annual_average_assets, allowed_tax_credits, prepaid_tax))
+    if base > 3000000 or employees > 300 or assets > 50000000:
+        raise ValueError('Small-low-profit enterprise threshold exceeded; establish the applicable alternative regime')
+    with localcontext() as ctx:
+        ctx.prec = 40
+        reduced_base = base * Decimal('.25')
+        gross = reduced_base * Decimal('.20')
+        if credits > gross:
+            raise ValueError('Allowed credits exceed tax after the small-low-profit preference')
+        liability = gross - credits
+        balance = liability - prepaid
+        return dict(policy_version='cn-small-company-2026-2026-11-18', tax_year=tax_year,
+            currency='CNY', taxable_income=base, annual_average_employees=employees,
+            annual_average_assets=assets, preferential_taxable_income=reduced_base,
+            income_inclusion_fraction=Decimal('.25'), rate=Decimal('.20'),
+            effective_rate_before_credits=Decimal('.05'), gross_tax=gross,
+            small_company_tax_reduction=base * Decimal('.25') - gross,
+            allowed_tax_credits=credits, annual_liability=liability, prepaid_tax=prepaid,
+            balance_due=balance, payable=max(ZERO, balance), refundable=max(ZERO, -balance),
+            sources=[dict(
+                doc_id='cn.mof.sta.2023-12',
+                url='https://tianjin.chinatax.gov.cn/11253000000/0100/010003/p20230816143619913.shtml'),
+                deepcopy(SOURCE_BY_ID['cn.law.eit'])],
+            stage='annual_small_low_profit_company_before_assessment_rounding')
