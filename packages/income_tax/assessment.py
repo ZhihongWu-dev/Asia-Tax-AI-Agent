@@ -3,7 +3,7 @@ from decimal import Decimal, localcontext
 from pydantic import TypeAdapter
 from packages.contracts.income_tax import IncomeTaxCase
 from . import china, singapore, hong_kong, united_arab_emirates, malaysia, thailand, indonesia
-from . import vietnam, vietnam_employment, vietnam_transfer, japan
+from . import vietnam, vietnam_employment, vietnam_transfer, japan, japan_company
 
 
 def calculate(case: IncomeTaxCase, basis):
@@ -13,21 +13,23 @@ def calculate(case: IncomeTaxCase, basis):
     jur = policy[:2]
     if jur != case.jurisdiction:
         raise ValueError('Policy jurisdiction differs from the saved case')
-    # Current policies are annual calendar bases, except HK's stated year of assessment.
-    # Non-calendar company basis periods need their own period adapter.
+    # Japan company uses its explicit full-year period adapter; other policies
+    # retain the reviewed calendar / stated year-of-assessment periods below.
     periods = {'cn': ('2026-01-01', '2026-12-31'), 'ae': ('2026-01-01', '2026-12-31'),
                'sg': ('2025-01-01', '2025-12-31'), 'hk': ('2025-04-01', '2026-03-31'),
                'my': ('2026-01-01', '2026-12-31'), 'th': ('2026-01-01', '2026-12-31'),
                'id': ('2026-01-01', '2026-12-31'), 'vn': ('2026-01-01', '2026-12-31'),
                'jp': ('2026-01-01', '2026-12-31')}
-    if (case.period_start.isoformat(), case.period_end.isoformat()) != periods[jur]:
+    if policy=='jp_company_starting_2026':
+        japan_company.annual_period(case.period_start,case.period_end)
+    elif (case.period_start.isoformat(), case.period_end.isoformat()) != periods[jur]:
         raise ValueError('Saved basis period is not supported by this policy')
     expected = {'cn_company_2026': 'company', 'cn_comprehensive_2026': 'individual',
                 'sg_company_ya2026': 'company', 'sg_resident_ya2026': 'individual',
                 'hk_salaries_2025_26': 'individual', 'my_company_2026': 'company',
                 'my_individual_2026': 'individual', 'th_company_2026':'company', 'th_resident_2026':'individual',
                 'vn_personal_transfer_2026': 'individual', 'vn_employment_2026': 'individual', 'vn_company_2026': 'company',
-                'jp_resident_ordinary_2026': 'individual'}
+                'jp_resident_ordinary_2026': 'individual', 'jp_company_starting_2026':'company'}
     if policy == 'hk_profits_2025_26':
         expected[policy] = 'company' if basis.business_form == 'corporation' else 'individual'
     if policy in expected and case.subject != expected[policy]:
@@ -37,7 +39,12 @@ def calculate(case: IncomeTaxCase, basis):
     if policy in ('cn_comprehensive_2026', 'sg_resident_ya2026', 'th_resident_2026','id_company_2026','id_resident_2026','vn_employment_2026','vn_company_2026','jp_resident_ordinary_2026') and case.residency != 'resident':
         raise ValueError('This policy requires resident status')
     args = basis.model_dump(exclude={'policy', 'basis_explanation', 'basis_confirmed'})
-    if policy == 'cn_company_2026':
+    if policy=='jp_company_starting_2026':
+        if case.residency!='resident' or any(i.source_jurisdiction!='jp' or
+                i.foreign_tax_paid not in (None,0) or i.category not in ('business','rental','royalty','other') for i in case.incomes):
+            raise ValueError('Ordinary Japanese resident domestic company income without withholding/foreign-credit adjustments required')
+        result=japan_company.company_tax(period_start=case.period_start,period_end=case.period_end,**args)
+    elif policy == 'cn_company_2026':
         if any(i.source_jurisdiction != 'cn' for i in case.incomes):
             raise ValueError('Foreign-source corporate workflow is not verified by this policy')
         result = china.normal_company_tax(tax_year=2026, **args)

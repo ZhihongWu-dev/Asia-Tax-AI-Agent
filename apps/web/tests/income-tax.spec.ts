@@ -1,5 +1,48 @@
 import { test, expect } from '@playwright/test';
 
+for(const scenario of [
+  {start:'2026-01-01',end:'2026-12-31',tax:'25589600',notice:'Not applicable for this accounting-period start date.'},
+  {start:'2026-04-01',end:'2027-03-31',tax:'26317600',notice:'Required, including zero-tax returns.'},
+])test(`Japan company national taxes use period start ${scenario.start}`,async({page})=>{
+  const form=await openIncome(page);
+  await form.getByRole('combobox',{name:'Filing jurisdiction',exact:true}).selectOption('jp');
+  await form.getByLabel('Period start',{exact:true}).fill(scenario.start);
+  await form.getByLabel('Period end',{exact:true}).fill(scenario.end);
+  await form.getByRole('combobox',{name:'Tax residency',exact:true}).selectOption('resident');
+  await form.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption('jp');
+  await form.getByLabel('Gross income',{exact:true}).fill('200000000');
+  await form.getByLabel('Income description',{exact:true}).fill('Ordinary domestic business revenue for the full accounting year');
+  await form.getByLabel('Claimed deductions (blank if unknown)',{exact:true}).fill('100000000');
+  await form.getByLabel('Carried losses (blank if unknown)',{exact:true}).fill('0');
+  await form.getByRole('checkbox').check();
+  await form.getByRole('button',{name:'Save income-tax details'}).click();
+  await expect(form.getByRole('status')).toHaveText('Income-tax details saved.');
+  const assessment=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await assessment.getByRole('combobox',{name:'Applicable regime',exact:true}).selectOption('jp_company_starting_2026');
+  await assessment.getByLabel('Established taxable income before JPY 1,000 truncation',{exact:true}).fill('100000000');
+  await assessment.getByRole('combobox',{name:'Verified corporation-rate classification',exact:true}).selectOption('ordinary');
+  await assessment.getByLabel('Corporation interim-return liability',{exact:true}).fill('24000000');
+  await assessment.getByLabel('Local corporation interim-return liability',{exact:true}).fill('1000000');
+  for(const label of ['Capital, control exclusions and excluded-business classification verified','Ordinary domestic tax base verified; no credits, additions, retained-profit surtax or group regime'])
+    await assessment.getByRole('combobox',{name:label,exact:true}).selectOption('true');
+  await assessment.getByLabel('Tax-basis adjustments and eligibility explanation',{exact:true}).fill('Full-year ordinary domestic taxable income reconciled with books; exclusions and interim liabilities checked.');
+  await assessment.getByRole('checkbox').check();
+  await assessment.getByRole('button',{name:'Calculate and save result'}).click();
+  const result=assessment.getByRole('article',{name:'Saved calculation result'});
+  await expect(result).toContainText(scenario.tax);
+  await expect(result).toContainText(scenario.notice);
+  await expect(result).toContainText('without automatic offsets');
+  await expect(result).toContainText('-800000');
+  await expect(result).toContainText('1389600');
+  await expect(result.getByRole('link')).toHaveCount(8);
+  if(scenario.start==='2026-04-01'){
+    await result.locator('h4').scrollIntoViewIfNeeded();
+    await page.screenshot({path:'test-results/japan-company-result.png',fullPage:true});
+  }
+  await openIncome(page);
+  await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(scenario.notice);
+});
+
 for (const scenario of [
   {name:'salary refund',category:'employment',gross:'6000000',expenses:'0',other:'960000',deductions:'960000',withheld:'176100',balance:'-34692'},
   {name:'business payment',category:'business',gross:'10000000',expenses:'7000000',other:'720000',deductions:'7720000',withheld:'0',balance:'63300'},

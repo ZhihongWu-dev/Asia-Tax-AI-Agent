@@ -191,6 +191,16 @@ class JPIndividual(Basis):
     deductions_and_credits_verified: StrictBool
 
 
-Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual |
+class JPCompany(Basis):
+    policy: Literal['jp_company_starting_2026']
+    taxable_income_before_rounding: Money
+    rate_regime: Literal['ordinary','sme_reduced','sme_excluded']
+    rate_classification_verified: StrictBool
+    ordinary_no_adjustments_confirmed: StrictBool
+    corporation_interim_liability: Money
+    local_corporation_interim_liability: Money
+
+
+Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual | JPCompany |
                        HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
                        Field(discriminator='policy')]

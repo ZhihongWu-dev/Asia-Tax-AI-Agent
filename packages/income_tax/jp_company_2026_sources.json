@@ -1,0 +1,68 @@
+{
+  "sources": [
+    {
+      "doc_id": "jp.corporate-rates.20261117",
+      "title": "NTA5759 ordinary corporation rates",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/hojin/5759.htm",
+      "file": "database/raw/jp/jp.corporate-rates.20261117.html",
+      "sha256": "240bbf0e09c1414db40562127a08928fd0997779f97289d697ef29f18a362704",
+      "review_status": "scoped_national_ordinary_company_review"
+    },
+    {
+      "doc_id": "jp.defence-corporate.20261117",
+      "title": "NTA defence special corporation tax, June2026 revision",
+      "url": "https://www.nta.go.jp/publication/pamph/pdf/0025004-109_1.pdf",
+      "file": "database/raw/jp/jp.defence-corporate.20261117.pdf",
+      "sha256": "19b0cbd242bcc12b2dd40cc2f866d866c8aa0254958fd1f4f313480047dba980",
+      "review_status": "scoped_national_ordinary_company_review"
+    },
+    {
+      "doc_id": "jp.local-corporate-act.20261117",
+      "title": "Local Corporation Tax Act, Articles6/9/10",
+      "url": "https://laws.e-gov.go.jp/api/1/lawdata/426AC0000000011",
+      "file": "database/raw/jp/jp.local-corporate-act.20261117.xml",
+      "sha256": "6d371bf30cd5d730340d97a7c4d60a81374a5fe62838c2c2dd6b29a6a51011e7",
+      "review_status": "scoped_national_ordinary_company_review"
+    },
+    {
+      "doc_id": "jp.sme-classification.20261117",
+      "title": "NTA5432 SME and excluded-business classification",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/hojin/5432.htm",
+      "file": "database/raw/jp/jp.sme-classification.20261117.html",
+      "sha256": "79e6230110ae68d83cfdb6aaef2f832efada5a936a5223bd3c478ceccdcebb99",
+      "review_status": "scoped_national_ordinary_company_review"
+    },
+    {
+      "doc_id": "jp.corporate-return-guide.20261117",
+      "title": "NTA2026 corporate return guide, forms and rounding",
+      "url": "https://www.nta.go.jp/publication/pamph/hojin/aramashi2026/pdf/02.pdf",
+      "file": "database/raw/jp/jp.corporate-return-guide.20261117.pdf",
+      "sha256": "13d2c3598b1651f302e6ab48c87d10e9a4bfa08d66846df295fcae82ecf66f72",
+      "review_status": "scoped_national_ordinary_company_review"
+    },
+    {
+      "doc_id": "jp.general-tax-act.20261117",
+      "title": "General Act on National Taxes, Articles118/119",
+      "url": "https://laws.e-gov.go.jp/api/1/lawdata/337AC0000000066",
+      "file": "database/raw/jp/jp.general-tax-act.20261117.xml",
+      "sha256": "84701c9cecc1f5d05aa1c01c91e279eaef1630f4bbceacb78f393f040f134e5e",
+      "review_status": "scoped_national_ordinary_company_review"
+    },
+    {
+      "doc_id": "jp.cta",
+      "title": "法人税法（昭和40年法律第34号）",
+      "url": "https://laws.e-gov.go.jp/api/1/lawdata/340AC0000000034",
+      "file": "database/raw/jp/jp.cta.xml",
+      "sha256": "b3adc0eabf98a8210ec465d6ded837fb0fadf65d4cfcb3e3bc2b7e43ca27212a",
+      "review_status": "corporate_rate_and_sme_provisions_only"
+    },
+    {
+      "doc_id": "jp.sma",
+      "title": "租税特別措置法（昭和32年法律第26号）",
+      "url": "https://laws.e-gov.go.jp/api/1/lawdata/332AC0000000026",
+      "file": "database/raw/jp/jp.sma.xml",
+      "sha256": "c28aeae57b80ae45942c7ec08086a5a4a4804467ee44e43046be9460a42aec71",
+      "review_status": "corporate_rate_and_sme_provisions_only"
+    }
+  ]
+}

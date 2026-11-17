@@ -16,6 +16,20 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if (input.jurisdiction==='jp' && company && input.residency==='resident' && /^2026-\d{2}-\d{2}$/.test(input.period_start)) {
+    const [,month,day]=input.period_start.split('-').map(Number);
+    const annualEnd=new Date(Date.UTC(2027,month-1,day)-86400000).toISOString().slice(0,10);
+    if(input.period_end===annualEnd)return [{id:'jp_company_starting_2026',label:['日本普通企业国家税（2026年开始的完整年度）','Japan ordinary company national taxes (full year starting 2026)'],
+      notice:['分别计算法人税、地方法人税（国税）及适用时的防卫特别法人税，不含地方住民税、事业税或最低补足税。税基须已完成纳税调整及亏损处理。仅限无税额抵免、扣缴抵免、税额加算或留保金附加税的境内普通企业，不含通算集团及特殊主体。小企业须核对期末资本和大法人控制等排除条件；适用除外事业者须核对前三年法定年均所得超过15亿日元等调整。符合特例时，年所得超过10亿日元时首800万部分适用17%；超过门槛但千日元取整后未超过的情形须人工复核。防卫税按开始日判断，4月1日起即使税额为0也须申报。中间申告金额填应纳义务，不论实缴；各税种补退分别处理，不自动互抵。',
+        'Separately calculates corporation tax, local corporation tax (a national tax) and applicable defence tax; excludes prefectural/municipal inhabitant, enterprise and minimum top-up taxes. Establish taxable income after adjustments and losses. Ordinary domestic companies without tax credits, withholding credits, tax additions or retained-profit surtax only; no tax groups or special entities. Verify SME year-end capital and large-company control exclusions. Excluded-business classification uses the statutory prior-three-year average above JPY 1.5bn and its adjustments. Eligible reduced-rate companies with current income above JPY 1bn use 17% on the first JPY 8m; cases above the threshold only before JPY 1,000 truncation require manual review. Defence tax applies by start date from 1 April, including zero-tax returns. Interim amounts are liabilities regardless of payment; settle each tax separately without automatic offsets.'],
+      fields:[money('taxable_income_before_rounding','已核定千日元取整前应税所得','Established taxable income before JPY 1,000 truncation'),
+        {key:'rate_regime',label:['已核实的法人税率分类','Verified corporation-rate classification'],options:[
+          ['ordinary',['普通23.2%','Ordinary 23.2%']],['sme_reduced',['小企业15%／17%特例','SME 15% / 17% special rate']],['sme_excluded',['小企业适用除外事业者19%','SME excluded business: 19%']]]},
+        money('corporation_interim_liability','法人税中间申告应纳义务','Corporation interim-return liability'),
+        money('local_corporation_interim_liability','地方法人税中间申告应纳义务','Local corporation interim-return liability'),
+        confirm('rate_classification_verified','已核实资本、控制关系及适用除外事业者分类','Capital, control exclusions and excluded-business classification verified'),
+        confirm('ordinary_no_adjustments_confirmed','已核实普通境内企业税基，无抵免、加算、留保金附加税或集团税制','Ordinary domestic tax base verified; no credits, additions, retained-profit surtax or group regime')]}];
+  }
   if (input.jurisdiction === 'jp' && !company && input.residency === 'resident' && period === '2026-01-01/2026-12-31' && input.incomes.every(i=>i.source_jurisdiction==='jp'&&['employment','business'].includes(i.category))) {
     return [{id:'jp_resident_ordinary_2026',label:['日本居民普通所得国家税（2026）','Japan resident ordinary national tax (2026)'],
       notice:['计算2026全年境内工资及无亏损普通经营所得的国家所得税和复兴特别所得税，不含住民税、事业税。使用12月1日起适用的年度扣除，不用于此前预扣、死亡或出境提前申报，也不是雇主年末调整。已保存扣除额应为经营费用与其他所得扣除之和；工资扣除、符合条件的工资所得调整扣除和基本扣除由系统另算。不得重复计入，不含特定支出、青色申告优惠、年金、境外所得、分离课税、结转亏损或超过3.3亿日元的高所得最低税。抵免须先核定限额，不含境外抵免。予定纳税额填有效通知核定金额（扣除已批准减额），并非实际缴款；未缴欠税仍需另行处理。',
@@ -163,6 +177,12 @@ export function policies(input: IncomeTaxInput): IncomePolicy[] {
 }
 
 export const resultLabels: Record<string, Label> = {
+  corporation_tax:['法人税','Corporation tax'],local_corporation_tax:['地方法人税（国税）','Local corporation tax (national)'],
+  defence_tax:['防卫特别法人税','Defence special corporation tax'],
+  corporation_interim_liability:['法人税中间申告义务','Corporation interim-return liability'],
+  local_corporation_interim_liability:['地方法人税中间申告义务','Local corporation interim-return liability'],
+  corporation_balance_due:['法人税单独补／退额','Separate corporation tax balance'],
+  local_corporation_balance_due:['地方法人税单独补／退额','Separate local corporation tax balance'],
   salary_income_before_adjustment:['工资所得调整前金额','Salary income before adjustment'],
   salary_income_adjustment:['工资所得调整扣除','Salary income adjustment deduction'],
   net_business_income:['经营净所得','Net business income'],total_income:['合计净所得','Total net income'],
