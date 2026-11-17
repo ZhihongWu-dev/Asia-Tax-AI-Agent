@@ -57,8 +57,11 @@ The final integration has not been pushed or merged to `main`. The historical
   See [conflict evidence](data-reconciliation/thailand-pit-overview-conflicts-20261118.json).
 - A Thai section47bis dividend-component calculator now computes each certified
   tranche's own corporate-rate gross-up, separates shareholder withholding and
-  preserves non-creditable tranches. The Thai module tests passed48. It is not
-  yet connected to case contracts, annual election/settlement or the UI; those
+  preserves non-creditable tranches. Annual settlement now supports aggregation
+  with refundable dividend credit and a separate fully-withheld10% election,
+  preserving minimum-tax gross-up and requiring complete election-scope review.
+  The Thai module tests passed58. It is not
+  yet connected to case contracts or the UI; those
   remain required before claiming a usable dividend workflow. The existing
   ordinary individual adapter continues to reject dividend income.
 - The original twelve-row optimizer regression is still running. As of the latest
