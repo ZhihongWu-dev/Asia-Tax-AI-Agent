@@ -1,0 +1,50 @@
+{
+  "status": "seven_tables_exact_parity_verified",
+  "integrity_check": "ok",
+  "tables": [
+    {
+      "table": "jurisdiction",
+      "csv_rows": 11,
+      "sqlite_rows": 11,
+      "all_fields_equal": true
+    },
+    {
+      "table": "treaty",
+      "csv_rows": 55,
+      "sqlite_rows": 55,
+      "all_fields_equal": true
+    },
+    {
+      "table": "doc",
+      "csv_rows": 354,
+      "sqlite_rows": 354,
+      "all_fields_equal": true
+    },
+    {
+      "table": "clause",
+      "csv_rows": 45130,
+      "sqlite_rows": 45130,
+      "all_fields_equal": true
+    },
+    {
+      "table": "param",
+      "csv_rows": 811,
+      "sqlite_rows": 811,
+      "all_fields_equal": true
+    },
+    {
+      "table": "files",
+      "csv_rows": 752,
+      "sqlite_rows": 752,
+      "all_fields_equal": true
+    },
+    {
+      "table": "decision",
+      "csv_rows": 44,
+      "sqlite_rows": 44,
+      "all_fields_equal": true
+    }
+  ],
+  "sqlite_sha256": "9cf629d9582f3941509e8c4e459966ec254f0cd10ce95cfa4d97311bbddeb720",
+  "scope": "Current isolated build only; unresolved legal coverage gaps remain."
+}
