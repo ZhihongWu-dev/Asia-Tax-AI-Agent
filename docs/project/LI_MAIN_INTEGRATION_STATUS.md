@@ -27,7 +27,7 @@ The final integration has not been pushed or merged to `main`. The historical
   access private cases/jobs. Its deployment secret still needs installation.
 - Cloud source review queried on 2026-11-18: different-text records have 2 accepted
   replacements, 16 candidates and 7 rejected decisions; main-only records have
-  4 accepted sources, 104 candidates and 3 rejected decisions. Total is 136. A rejected
+  6 accepted sources, 104 candidates and 3 rejected decisions. Total is 138. A rejected
   different-text candidate normally retains the base; explicit exclusions are
   essential for sources that are obsolete or corrupt. The repealed CN2008-112
   notice is explicitly excluded in both search and planning readers.
@@ -38,8 +38,13 @@ The final integration has not been pushed or merged to `main`. The historical
   through the dedicated reader; the previous snapshot was rejected. This admits
   source text, not a complete penalty calculator or the pending catalog parameter.
   See [admission evidence](data-reconciliation/vietnam-tax-administration-overlay-20261118.json).
+- Japan NTA No2260 tax-rate section and No2875 domestic residence section are
+  admitted with complete-text and stale-snapshot checks through the dedicated
+  reader. Their whole-page candidates remain unapproved; this does not approve
+  treaty residence decisions or pending catalog parameters. See
+  [section evidence](data-reconciliation/japan-guidance-section-review-20261118.json).
 - A fresh dedicated-reader audit includes625 current local citation dependencies,
-  including factor citations:11 are missing from cloud admission,6 are blocked
+  including factor citations:9 are missing from cloud admission,6 are blocked
   (some overlap), and55 local parameters are absent from the cloud catalog. See
   [dependency evidence](data-reconciliation/planner-source-readiness-20261118.json).
   These counts replace the older audit that reconstructed admission rules itself.

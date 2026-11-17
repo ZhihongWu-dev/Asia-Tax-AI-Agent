@@ -1,6 +1,6 @@
 {
   "review_date": "2026-11-18",
-  "status": "reconstructed_candidates_not_admitted",
+  "status": "cloud_source_admission_verified",
   "sources": [
     {
       "cite_id": "jp.nta.income-rate-2026#h2",
@@ -31,8 +31,25 @@
     "Existing whole-page candidates remain unapproved. No generated CSV/SQLite or frozen optimizer input was changed."
   ],
   "remaining": [
-    "Cloud admission and pinned-reader verification",
     "Catalog parameter admission and historical applicability review",
     "Legacy consolidated-tax research paper is not automatically admitted as current binding law."
-  ]
+  ],
+  "reader": "dedicated_read_only_role",
+  "exact_complete_text_verified": true,
+  "old_pin_rejected": true,
+  "before_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "cc1a583377fba5427813bb53117e1e3bbcaccf5bb4da903555dc6d7c559e83fd",
+    "review_sha256": "f45a5fdc914f8a36e6cf7db5c582170163b3d817a0d4966ad0cb26e0bf941729"
+  },
+  "after_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "cc1a583377fba5427813bb53117e1e3bbcaccf5bb4da903555dc6d7c559e83fd",
+    "review_sha256": "3f7b0e613fbfbbbccc0508100b4e809f25cfa79437946fbc4d5bf95eca8813ec"
+  },
+  "cloud_base_mutated": false
 }
