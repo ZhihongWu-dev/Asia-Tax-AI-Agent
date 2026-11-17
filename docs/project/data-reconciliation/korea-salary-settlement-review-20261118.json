@@ -1,0 +1,25 @@
+{
+  "national": {
+    "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1029626675",
+    "sha256": "1379b2007ad1257c376db1ed88ec7f2b0570ad7be08fbc57f6ea3d7a25d2037b",
+    "effective_date": "2026-07-01",
+    "findings": "Article137 subtracts credited tax amounts from gross assessment and refunds excess; Article137(4) permits separate installment withholding above KRW100,000. Article86(1) noncollection below KRW1,000 concerns positive withholding, not refunds. Original stored complete law also reviewed for Articles137-2 and138."
+  },
+  "local": {
+    "url": "https://law.go.kr/lsLinkCommonInfo.do?lspttninfSeq=173607",
+    "sha256": "527e8177958baa2eae6a272f60d3c02116e719fb08043b94e2e25b2a8651c053",
+    "effective_date": "2026-07-01",
+    "findings": "Article103-15 uses 10% of the national decision tax for employer year-end local settlement, then deducts already remitted special-withholding local tax. This specific payroll rule must not be replaced by the independent company-local-base pathway or generalized to all personal annual returns."
+  },
+  "implemented": "National salary cash balance from an explicitly established whole-won decision amount and reconciled current-employer withholding/former-employer settled tax receipts. Positive below-KRW1,000 balances are waived; refunds remain eligible, then ordinary Treasury47 cash truncation applies. No installments, amended settlements, deferrals or penalties.",
+  "verification": "18 tests passed in 0.57s, including 999/1000/1009 payable boundaries, negative refund boundaries, employer reconciliation and invalid/unverified inputs.",
+  "research_reference": "Previously reviewed MIT Korean tax reference repository rounding.py and salary audit notes; external behavior not adopted as proof of legal form-level rounding.",
+  "unresolved": [
+    "Current payroll-form instructions for intermediate fractional-won truncation and final decision tax; annual calculation is not yet automatically linked to cash settlement",
+    "Local small-amount noncollection interaction and current electronic-filing checks",
+    "Hometax 2026 electronic submission instructions: official NTS search locates the Hometax materials entry but actual current file not yet retrieved",
+    "Complete personal API/UI and business acceptance"
+  ],
+  "storage": "Original HTML, extracted text and manifest staged in external korea-rounding-20261118 audit directory. Frozen database/runtime inputs unchanged.",
+  "completion_claim": false
+}
