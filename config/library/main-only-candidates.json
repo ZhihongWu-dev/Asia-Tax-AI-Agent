@@ -2949,6 +2949,99 @@
         "evidence_file": "docs/project/data-reconciliation/indonesia-payment-deadline-review.json",
         "source_raw_blob": "eab6bcd625ee6985ced2c5160461c882604f5ea1"
       }
+    },
+    {
+      "cite_id": "th.rd.p161-2566#c1",
+      "document": {
+        "id": "th.rd.p161-2566",
+        "jur": "th",
+        "type": "guidance",
+        "category": "2;3",
+        "title": "Revenue Department Order P161/2566: Section41 foreign-income remittances",
+        "url": "https://www.rd.go.th/fileadmin/user_upload/kormor/newlaw/dn161A.pdf",
+        "file": "raw/th/th.rd.p161-2566.pdf",
+        "sha256": "51bd23778016359216b0695519f12f9c731eb92d0e47d5a226f06923a81cf075",
+        "lang": "th",
+        "effective_from": "2024-01-01",
+        "effective_to": "",
+        "note": "Administrative interpretation of Section41. Applies to remittances from1January2024; P162 excludes income arising before1January2024 from P161 clause1. Income-year residence and income tracing required. Official PDF incorporates P162 amendment; not unamended original."
+      },
+      "clause": {
+        "cite_id": "th.rd.p161-2566#c1",
+        "doc_id": "th.rd.p161-2566",
+        "kind": "section",
+        "label": "ข้อ 1",
+        "parent": "",
+        "text": "ข้อ 1  บุคคลซึ่งเป็นผู้อยู่ในประเทศไทยตามมาตรา 41 วรรคสาม แห่งประมวลรัษฎากร\nที่มีเงินได้พึงประเมินเนื่องจากหน้าที่งานหรือกิจการที่ทำในต่างประเทศ หรือเนื่องจากทรัพย์สินที่อยู่ใน\nต่างประเทศ ตามมาตรา 41 วรรคสอง แห่งประมวลรัษฎากร ในปีภาษีดังกล่าว และได้นำเงินได้พึงประเมินนั้น\nเข้ามาในประเทศไทยในปีภาษีใดก็ตาม ให้บุคคลนั้นมีหน้าที่ต้องนำเงินได้พึงประเมินนั้นมารวมคำนวณ\nเพื่อเสียภาษีเงินได้ ตามมาตรา 48 แห่งประมวลรัษฎากร ในปีภาษีที่ได้นำเงินได้พึงประเมินนั้นเข้ามา\nในประเทศไทย\n“ความในวรรคหนึ่งมิให้ใช้บังคับสำหรับเงินได้พึงประเมินที่เกิดขึ้นก่อนวันที่ ๑ มกราคม\nพ.ศ. ๒๕๖๗”\n(แก้ไขเพิ่มเติมโดยคำสั่งกรมสรรพากร ที่ ป.๑๖๒/๒๕๖๖ สั่ง ณ วันที่  ๒๐  พฤศจิกายน  พ.ศ.  ๒๕๖๖)"
+      },
+      "text_sha256": "24cebf495da7ff5a972dcb4d5013d75a817b2c0b9ed029e5b58d073c35e73894",
+      "source_commit": "c1fd45a55093e7402ff61b1749ac6c13fd19ca19",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/thailand-foreign-remittance-scope-20261118.json"
+      }
+    },
+    {
+      "cite_id": "th.rd.p161-2566#c3",
+      "document": {
+        "id": "th.rd.p161-2566",
+        "jur": "th",
+        "type": "guidance",
+        "category": "2;3",
+        "title": "Revenue Department Order P161/2566: Section41 foreign-income remittances",
+        "url": "https://www.rd.go.th/fileadmin/user_upload/kormor/newlaw/dn161A.pdf",
+        "file": "raw/th/th.rd.p161-2566.pdf",
+        "sha256": "51bd23778016359216b0695519f12f9c731eb92d0e47d5a226f06923a81cf075",
+        "lang": "th",
+        "effective_from": "2024-01-01",
+        "effective_to": "",
+        "note": "Administrative interpretation of Section41. Applies to remittances from1January2024; P162 excludes income arising before1January2024 from P161 clause1. Income-year residence and income tracing required. Official PDF incorporates P162 amendment; not unamended original."
+      },
+      "clause": {
+        "cite_id": "th.rd.p161-2566#c3",
+        "doc_id": "th.rd.p161-2566",
+        "kind": "section",
+        "label": "ข้อ 3",
+        "parent": "",
+        "text": "ข้อ 3  คำสั่งนี้ให้เริ่มใช้บังคับสำหรับเงินได้พึงประเมินที่นำเข้ามาในประเทศไทยตั้งแต่วันที่\n1 มกราคม พ.ศ. 2567 เป็นต้นไป\nสั่ง  ณ  วันที่  15  กันยายน  พ.ศ.  ๒๕66\nลวรณ แสงสนิท\n(นายลวรณ แสงสนิท)\nอธิบดีกรมสรรพากร"
+      },
+      "text_sha256": "b3e724ceaacd41e64211088303a01e1b645234122b9ec1fb949cf76f4e063f59",
+      "source_commit": "c1fd45a55093e7402ff61b1749ac6c13fd19ca19",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/thailand-foreign-remittance-scope-20261118.json"
+      }
+    },
+    {
+      "cite_id": "th.rd.p162-2566#p1",
+      "document": {
+        "id": "th.rd.p162-2566",
+        "jur": "th",
+        "type": "guidance",
+        "category": "2;3",
+        "title": "Revenue Department Order P162/2566: Section41 foreign-income remittances",
+        "url": "https://www.rd.go.th/fileadmin/user_upload/kormor/newlaw/dn162A.pdf",
+        "file": "raw/th/th.rd.p162-2566.pdf",
+        "sha256": "a235ebf4e384bf08ab8a491cda9b67625f95d559049b689cbaeff28c07493af4",
+        "lang": "th",
+        "effective_from": "2024-01-01",
+        "effective_to": "",
+        "note": "Administrative interpretation of Section41. Applies to remittances from1January2024; P162 excludes income arising before1January2024 from P161 clause1. Income-year residence and income tracing required. Amends P161 clause1 by adding pre2024-income exclusion."
+      },
+      "clause": {
+        "cite_id": "th.rd.p162-2566#p1",
+        "doc_id": "th.rd.p162-2566",
+        "kind": "page",
+        "label": "p.1",
+        "parent": "",
+        "text": "คำสั่งกรมสรรพากร  \nที่ ป.๑๖๒/๒๕๖๖ \nเรื่อง  การเสียภาษีเงินได้ตามมาตรา ๔๑ วรรคสอง แห่งประมวลรัษฎากร \n \n \nเพื่อให้เจ้าพนักงานสรรพากรถือเป็นแนวทางปฏิบัติในการตรวจและแนะนําผู้อยู่ในประเทศไทย\nซึ่งมีเงินได้พึงประเมินตามมาตรา ๔๐ แห่งประมวลรัษฎากร ในปีภาษีที่ล่วงมาแล้ว เนื่องจากหน้าที่งาน \nหรือกิจการที่ทำในต่างประเทศ หรือเนื่องจากทรัพย์สินที่อยู่ในต่างประเทศ ตามมาตรา ๔๑ วรรคสอง  \nแห่งประมวลรัษฎากร กรมสรรพากรจึงมีคำสั่ง ดังต่อไปนี้ \nให้เพิ่มความต่อไปนี้เป็นวรรคสองของข้อ ๑ ของคำสั่งกรมสรรพากรที่ ป.๑๖๑/๒๕๖๖ เรื่อง  \nการเสียภาษีเงินได้ตามมาตรา ๔๑ วรรคสอง แห่งประมวลรัษฎากร ลงวันที่ ๑๕ กันยายน พ.ศ. ๒๕๖๖ \n“ความในวรรคหนึ่งมิให้ใช้บังคับสำหรับเงินได้พึงประเมินที่เกิดขึ้นก่อนวันที่ ๑ มกราคม พ.ศ. ๒๕๖๗” \n \n \nสั่ง  ณ  วันที่  ๒๐  พฤศจิกายน  พ.ศ.  ๒๕๖๖   \n \n \n                                           กุลยา ตันติเตมิท \n(นางสาวกุลยา ตันติเตมิท) \nอธิบดีกรมบัญชีกลาง รักษาราชการแทน \nอธิบดีกรมสรรพากร"
+      },
+      "text_sha256": "5d7908d63ec3c74336ee20e99c667c747ce155d65475beec7df284a3323b7018",
+      "source_commit": "c1fd45a55093e7402ff61b1749ac6c13fd19ca19",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/thailand-foreign-remittance-scope-20261118.json"
+      }
     }
   ]
 }

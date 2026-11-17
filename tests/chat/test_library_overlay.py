@@ -99,8 +99,11 @@ def test_replacement_requires_structured_content_bound_approval(note):
 def test_real_candidate_bundle_preserves_all_107_without_approving_them():
     commit,rows,digest=load_candidates()
     assert commit=='78a037f522d1636541c2e5fcdd1145e735f18124'
-    assert len(rows)==119 and len(digest)==64
+    assert len(rows)==122 and len(digest)==64
     assert sum(row.get('source_commit', commit) == commit for row in rows.values()) == 107
+    for cite in ('th.rd.p161-2566#c1','th.rd.p161-2566#c3','th.rd.p162-2566#p1'):
+        assert rows[cite]['document']['effective_from']=='2024-01-01'
+        assert rows[cite]['provenance']['kind']=='reviewed_local_source_candidate'
     for suffix in ('94(2)', '100(1)', '100(2)'):
         source = rows['id.pmk81-2024#' + suffix]
         assert source['source_commit'] == 'ac04cf8c546f6159bfb3264f9e07a97a18d208ad'
