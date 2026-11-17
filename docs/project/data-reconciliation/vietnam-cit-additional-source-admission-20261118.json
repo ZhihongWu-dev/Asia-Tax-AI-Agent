@@ -1,0 +1,29 @@
+{
+  "status": "candidate_text_visually_verified_pending_cloud_admission",
+  "source_commit": "b07d0d6f2d117342ce2a571b3ce57ac71e9c6cb7",
+  "citations": [
+    {
+      "cite_id": "vn.law.cit67.2025.gazette.vi#3.2",
+      "text_sha256": "648cba3a85e29830fffb0f8a2debde1e162a333d81f374d0da33841d065d14df",
+      "characters": 1717
+    },
+    {
+      "cite_id": "vn.law.cit67.2025.gazette.vi#4.7",
+      "text_sha256": "62d5c41c19f9b14b8510a38fe18bf0ef322b1f4123fd3384957ae2ce70a34be0",
+      "characters": 302
+    },
+    {
+      "cite_id": "vn.law.cit67.2025.gazette.vi#18.3",
+      "text_sha256": "76836f3fdb279bcd0a5d11d88befcfa75b95484aeb81b32e4935a972e284dc80",
+      "characters": 1107
+    }
+  ],
+  "visual_review_pdf_pages": [
+    2,
+    3,
+    5,
+    21,
+    22
+  ],
+  "scope": "Original Law67 classification, domestic distribution exemption and incentive exclusions; source text only, not current consolidated law or automatic exemption eligibility."
+}
