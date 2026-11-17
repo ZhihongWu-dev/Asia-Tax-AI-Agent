@@ -4,6 +4,7 @@ import { useLocale } from '../locale';
 import { taxJurisdictions } from '../income-tax';
 import type { Case } from '../workspace';
 import './planning-panel.css';
+import PlanningResult from './PlanningResult';
 
 type Input = {date:string; mode:string; amount:number; currency:string;
   payer:{jur:string; facts?:Record<string,unknown>}; payee:{jur:string; subject?:string; facts?:Record<string,unknown>};
@@ -20,6 +21,7 @@ export default function PlanningPanel({current,onUpdate}:{current:Case;onUpdate:
   const [ready,setReady]=useState(false),[pending,setPending]=useState(false),[dirty,setDirty]=useState(false);
   const [error,setError]=useState(''),[notice,setNotice]=useState(''),[historyError,setHistoryError]=useState(false);
   const [history,setHistory]=useState<Page>({items:[],next_before:null});
+  const [selected,setSelected]=useState<Run|null>(null);
   const alive=useRef(true),receipt=useRef({signature:'',id:''}),submission=useRef({revision:-1,id:''});
   const loadingHistory=useRef(false);
   const prefix=`/cases/${current.id}`;
@@ -101,7 +103,9 @@ export default function PlanningPanel({current,onUpdate}:{current:Case;onUpdate:
     {historyError&&<p role="alert">{say('无法载入历史任务，请刷新重试。','Could not load task history. Refresh to retry.')}</p>}
     {!historyError&&history.items.length===0&&<p>{say('暂无规划任务。','No planning tasks yet.')}</p>}
     <ul>{history.items.map(run=><li key={run.id}>{new Date(run.created_at*1000).toLocaleString(en?'en':'zh-CN')} · {say('案件版本','Case revision')} {run.case_revision} · {states[run.status]||run.status}
+      {run.status==='succeeded'&&<button type="button" onClick={()=>setSelected(run)}>{say('查看结果','View results')}</button>}
       {run.error&&<p>{run.error==='planning_sources_unavailable'?say('法规依据缺失或仍待审核。','Legal sources are missing or awaiting review.'):say('任务未完成，请核对资料或联系维护人员。','The task did not complete. Check the details or contact support.')}</p>}</li>)}</ul>
     {history.next_before&&<button type="button" onClick={()=>void refresh(history.next_before!)}>{say('更早的任务','Earlier tasks')}</button>}
+    {selected&&<><button type="button" onClick={()=>setSelected(null)}>{say('关闭结果','Close results')}</button><PlanningResult key={selected.id} caseId={current.id} runId={selected.id} revision={selected.case_revision}/></>}
   </details>;
 }

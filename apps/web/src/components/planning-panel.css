@@ -7,3 +7,6 @@
 .planning-panel button { margin: .3rem .5rem .3rem 0; padding: .6rem .8rem; border: 1px solid #bdc9c2; border-radius: 7px; cursor: pointer; }
 .planning-panel button:disabled { opacity: .5; cursor: default; }
 .planning-panel li { margin: .8rem 0; line-height: 1.6; }
+.planning-result { border-top: 1px solid #bdc9c2; margin-top: 1rem; overflow-wrap: anywhere; }
+.planning-option { margin: .7rem 0; padding: .7rem; border: 1px solid #dce3df; border-radius: 7px; }
+.planning-result pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .8rem; }
