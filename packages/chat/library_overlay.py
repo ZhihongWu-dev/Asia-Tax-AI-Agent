@@ -6,6 +6,12 @@ from pathlib import Path
 DEFAULT_BUNDLE = Path(__file__).resolve().parents[2] / 'config/library/main-only-candidates.json'
 
 
+def candidate_digest(row):
+    """Bind the approval to text, applicability, provenance and expected base."""
+    return sha256(json.dumps(row, sort_keys=True, separators=(',', ':'),
+                             ensure_ascii=False, allow_nan=False).encode('utf-8')).hexdigest()
+
+
 def load_candidates(path=DEFAULT_BUNDLE):
     raw = path.read_bytes()
     payload = json.loads(raw)
@@ -17,6 +23,10 @@ def load_candidates(path=DEFAULT_BUNDLE):
         if (cite in records or row['clause']['cite_id'] != cite
                 or row['clause']['doc_id'] != row['document']['id']
                 or sha256(row['clause']['text'].encode()).hexdigest() != row['text_sha256']):
+            raise ValueError('invalid_overlay_record')
+        if 'source_commit' in row and (not isinstance(row['source_commit'], str)
+                or len(row['source_commit']) != 40
+                or any(c not in '0123456789abcdef' for c in row['source_commit'])):
             raise ValueError('invalid_overlay_record')
         records[cite] = row
     return payload['source_commit'], records, sha256(raw).hexdigest()
@@ -41,9 +51,17 @@ def admitted_rows(source_commit, records, reviews):
                            or any(c not in '0123456789abcdef' for c in baseline[key])
                            for key in ('text_sha256', 'document_sha256'))):
                 raise ValueError('overlay_replacement_baseline_missing')
+            try:
+                approval = json.loads(review['review_note'])
+            except (TypeError, ValueError) as exc:
+                raise ValueError('overlay_replacement_approval_missing') from exc
+            if (not isinstance(approval, dict) or not isinstance(approval.get('reason'), str)
+                    or not approval['reason'].strip()
+                    or approval.get('candidate_sha256') != candidate_digest(row)):
+                raise ValueError('overlay_replacement_approval_mismatch')
         elif row.get('replaces'):
             raise ValueError('overlay_review_difference_mismatch')
-        if (review['source_commit'] != source_commit or review['doc_id'] != doc['id']
+        if (review['source_commit'] != row.get('source_commit', source_commit) or review['doc_id'] != doc['id']
                 or review['document_sha256'] != doc['sha256']
                 or review['document_url'] != doc['url']):
             raise ValueError('overlay_review_source_mismatch')

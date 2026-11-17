@@ -1,0 +1,51 @@
+{
+  "cite_id": "cn.cs.2026-27#i3",
+  "publication": "private_review_applied_local_readers_verified_not_deployed",
+  "candidate_sha256": "1abae6b8d47f5a82acf52cdc51ce1107f7b712d0a68d5c7291cb7f8e43ea479d",
+  "replacement_text_sha256": "d3b534b92908b3b692e41bd6ac3ad4eeb13759344bb962c74a3b2029f98601e1",
+  "source_commit": "975d4570a5cf79e651c72a6db963fca20c6a1871",
+  "reviewed_at": "2026-11-17 17:48:47.457557+00:00",
+  "before_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "ca5f72ed8286e43576ce09e91afba09f4985d357dd17fe4eef0297a1d563842f",
+    "review_sha256": "848048e4079dbc875c4e229715253af1b21801f22f75d2e9c5bd5bfdbc33a90e"
+  },
+  "after_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "6d984c6ba4b42e86484ac6f890f6c59c015dd37be6cb3e49fe4c2754bec4655c",
+    "review_sha256": "371fe254e1af835dc0350286ab2814247913ef93ec0235d9c61052e7473434de"
+  },
+  "verification": {
+    "old_pin_rejected": true,
+    "chat_exact_replacement": true,
+    "planning_full_replacement": true,
+    "base_text_unchanged": true,
+    "unreviewed_conflict_still_blocked": true
+  },
+  "review_counts": [
+    {
+      "difference": "different_text",
+      "review_status": "accepted",
+      "count": 1
+    },
+    {
+      "difference": "different_text",
+      "review_status": "candidate",
+      "count": 18
+    },
+    {
+      "difference": "different_text",
+      "review_status": "rejected",
+      "count": 6
+    },
+    {
+      "difference": "main_only",
+      "review_status": "candidate",
+      "count": 107
+    }
+  ]
+}

@@ -1,8 +1,10 @@
 from contextlib import nullcontext
 from types import SimpleNamespace
 from hashlib import sha256
+import json
 import pytest
 from packages.chat import library_cloud, library_research
+from packages.chat.library_overlay import candidate_digest
 from packages.chat.service import WorkflowError
 
 VERSION = {'uploaded_at':'2026-11-13T03:39:52Z','spec_version':'2026-11-10','tools_commit':'release'}
@@ -20,6 +22,7 @@ def test_search_replacement_checks_live_base_and_invalidates_old_pin(monkeypatch
     review = {**REVIEW, 'review_status': 'accepted', 'reviewed_at': 'date',
               'review_note': 'test only', 'source_commit': 'commit', 'doc_id': 'cn.test',
               'document_sha256': doc['sha256'], 'document_url': doc['url']}
+    review['review_note'] = json.dumps(dict(reason='Test only', candidate_sha256=candidate_digest(candidate)))
     base = dict(cite_id='cn.test#1', doc_id='cn.test', text='broken', document_sha256='a' * 64)
     monkeypatch.setattr(library_cloud, 'load_candidates',
                         lambda: ('commit', {'cn.test#1': candidate}, 'bundle-hash'))
@@ -40,7 +43,7 @@ def test_search_replacement_checks_live_base_and_invalidates_old_pin(monkeypatch
     assert result['passages'][0]['passage'] == body
     assert result['passages'][0]['origin'] == 'reviewed_main_replacement'
     pin = result['library_version']
-    review['review_note'] = 'changed decision'
+    review['review_note'] = json.dumps(dict(reason='changed decision', candidate_sha256=candidate_digest(candidate)))
     with pytest.raises(library_cloud.LibraryVersionChanged, match='library_version_changed'):
         library_cloud.search_library('cn.test#1', 'cn', expected_version=pin)
     base['text'] = 'unexpected upstream change'

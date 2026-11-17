@@ -2575,6 +2575,44 @@
         "note": "Official Government Gazette issue 37, which publishes the current Personal Income Tax Law No. 109/2025/QH15, effective 1 July 2026. downloaded with curl 2026-10-29T09:04:22Z"
       },
       "text_sha256": "14ac9d0b939521414d6cc000d96026ed01990973ecc6edaf1ef5bab5a1e53b5d"
+    },
+    {
+      "cite_id": "cn.cs.2026-27#i3",
+      "clause": {
+        "cite_id": "cn.cs.2026-27#i3",
+        "doc_id": "cn.cs.2026-27",
+        "kind": "item",
+        "label": "第3项",
+        "parent": "",
+        "text": "三、本公告自2026年9月1日起执行，《财政部 国家税务总局关于个人所得税若干政策问题的通知》（财税字〔1994〕20号）第二条第（八）项同时废止。\n特此公告。\n财政部 税务总局\n2026年9月1日\n附件下载：\n相关文章：\n发布日期：2026年09月01日\n分享到微信朋友圈\nx\n打开微信，点击底部的“发现”，\n使用“扫一扫”即可将网页分享至朋友圈。\n【 大 中 小 】\n【打印此页】\n【关闭窗口】\n网站地图\n联系我们\n主办单位：中华人民共和国财政部\n网站标识码：bm14000001 京ICP备05002860号\n京公网安备11010202000006号\n技术支持：财政部信息网络中心\n中华人民共和国财政部 版权所有，如需转载，请注明来源"
+      },
+      "document": {
+        "id": "cn.cs.2026-27",
+        "jur": "cn",
+        "type": "guidance",
+        "category": "2",
+        "title": "关于外籍个人股息红利个人所得税政策有关事项的公告（财政部 税务总局公告2026年第27号）",
+        "url": "https://szs.mof.gov.cn/zhengcefabu/202609/t20260901_3996442.htm",
+        "file": "raw/cn/cn.cs.2026-27.html",
+        "sha256": "cf9cd12fc6ddc8dc9ed379e9e37f99a9a15b11158f9c84ce63393cc8747189d0",
+        "lang": "zh",
+        "effective_from": "2026-09-01",
+        "effective_to": "",
+        "note": "Item 3 repeals item 2(8) of Caishuizi [1994] No. 20 from 2026-09-01.; downloaded with curl 2026-10-23T20:21:24Z"
+      },
+      "text_sha256": "d3b534b92908b3b692e41bd6ac3ad4eeb13759344bb962c74a3b2029f98601e1",
+      "source_commit": "975d4570a5cf79e651c72a6db963fca20c6a1871",
+      "provenance": {
+        "kind": "extraction_repair",
+        "evidence_file": "docs/project/data-reconciliation/cn-2026-27-extraction-repair-20261118.json",
+        "evidence_blob": "44018d369c9bbaf7a831f030482d697220e4f99b",
+        "parser_blob": "e640425185870047a6a16ad92db6ba16daf443ad"
+      },
+      "replaces": {
+        "uploaded_at": "2026-11-13T03:39:52Z",
+        "text_sha256": "92cb847cc7647b686b24b7d502ed094a6a630d23f0320a12394692f209644395",
+        "document_sha256": "cf9cd12fc6ddc8dc9ed379e9e37f99a9a15b11158f9c84ce63393cc8747189d0"
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@ import json
 from hashlib import sha256
 import pytest
 from packages.chat.library_overlay import load_candidates, admitted_rows, matching_rows
-from packages.chat.library_overlay import validate_base_rows, blocked_citations
+from packages.chat.library_overlay import validate_base_rows, blocked_citations, candidate_digest
 
 
 def replacement_fixture():
@@ -12,6 +12,7 @@ def replacement_fixture():
                     document_sha256=review['document_sha256'])
     records[cite] = {**records[cite], 'replaces': baseline}
     review = {**review, 'difference': 'different_text', 'base_uploaded_at': 'base'}
+    review['review_note'] = json.dumps(dict(reason='Test only', candidate_sha256=candidate_digest(records[cite])))
     base = dict(cite_id=cite, doc_id=review['doc_id'], text='old extraction',
                 document_sha256=review['document_sha256'])
     return commit, records, review, base
@@ -47,10 +48,45 @@ def test_main_only_collision_still_fails():
         validate_base_rows(overlay, records, [{'cite_id': review['cite_id']}])
 
 
+@pytest.mark.parametrize('field', ['text', 'effective_from', 'source_commit', 'base_text'])
+def test_old_approval_cannot_admit_changed_replacement(field):
+    commit, records, review, _ = replacement_fixture()
+    row = records[review['cite_id']]
+    if field == 'text': row['clause']['text'] += ' changed'
+    elif field == 'effective_from': row['document']['effective_from'] = '2099-01-01'
+    elif field == 'source_commit': row['source_commit'] = 'b' * 40
+    else: row['replaces']['text_sha256'] = '0' * 64
+    with pytest.raises(ValueError, match='overlay_replacement_approval_mismatch'):
+        admitted_rows(commit, records, [review])
+
+
+def test_repaired_source_has_independent_commit_and_exact_review():
+    commit, records, review, _ = replacement_fixture()
+    row = records[review['cite_id']]
+    row['source_commit'] = 'b' * 40
+    review['review_note'] = json.dumps(dict(reason='Test only', candidate_sha256=candidate_digest(row)))
+    with pytest.raises(ValueError, match='overlay_review_source_mismatch'):
+        admitted_rows(commit, records, [review])
+    review['source_commit'] = row['source_commit']
+    assert len(admitted_rows(commit, records, [review])) == 1
+
+
+@pytest.mark.parametrize('note', ['plain approval', 'null', '[]', '{}', '{"reason":42}'])
+def test_replacement_requires_structured_content_bound_approval(note):
+    commit, records, review, _ = replacement_fixture()
+    review['review_note'] = note
+    with pytest.raises(ValueError, match='overlay_replacement_approval_'):
+        admitted_rows(commit, records, [review])
+
+
 def test_real_candidate_bundle_preserves_all_107_without_approving_them():
     commit,rows,digest=load_candidates()
     assert commit=='78a037f522d1636541c2e5fcdd1145e735f18124'
-    assert len(rows)==107 and len(digest)==64
+    assert len(rows)==108 and len(digest)==64
+    assert sum(not row.get('replaces') for row in rows.values()) == 107
+    repaired = rows['cn.cs.2026-27#i3']
+    assert repaired['source_commit'] == '975d4570a5cf79e651c72a6db963fca20c6a1871'
+    assert '2026年9月1日' in repaired['clause']['text'].splitlines()
     assert admitted_rows(commit,rows,[])==[]
     reviews=[dict(cite_id=cite,difference='main_only',review_status='candidate') for cite in rows]
     assert admitted_rows(commit,rows,reviews)==[]
