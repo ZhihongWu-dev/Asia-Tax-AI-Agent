@@ -1,0 +1,47 @@
+{
+  "status": "candidates_prepared_not_cloud_admitted",
+  "before_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "22d488e35da36073d6437f9c1b47d787aafef627e1afac193d999329dc42462a",
+    "review_sha256": "00b534c191e34be182c1ce015a1e9056ad9add5f4b7e8cb225a64b9ec08ad127"
+  },
+  "source_commit": "ac04cf8c546f6159bfb3264f9e07a97a18d208ad",
+  "source_raw_blob": "eab6bcd625ee6985ced2c5160461c882604f5ea1",
+  "document": {
+    "id": "id.pmk81-2024",
+    "jur": "id",
+    "type": "regulation",
+    "category": "9;page_deadlines",
+    "title": "PMK 81/2024: Coretax tax administration provisions",
+    "url": "https://jdih.kemenkeu.go.id/api/download/637047be-3dba-4347-aba1-98fa7fd5ab3f/2024pmkeuangan081.pdf",
+    "file": "raw/id/id.pmk81-2024.pdf",
+    "sha256": "b8f385dee2a8684c24f718c5b2413910760d7273236f9d0d27d2da4cf2892574",
+    "lang": "id",
+    "effective_from": "2025-01-01",
+    "effective_to": "",
+    "note": "Original instrument; later amendments apply by provision. Articles94 and100 checked against PMK11/2025,53/2025,54/2025 and1/2026 in indonesia-payment-deadline-review.json. Other provisions are not certified as consolidated current law."
+  },
+  "citations": [
+    {
+      "cite_id": "id.pmk81-2024#94(2)",
+      "text_sha256": "e7e486bc06ff74d505cf4f9da3ba02ba67b552e94da34c34606372f72c15f9e4",
+      "candidate_sha256": "43f7465905d4270f4fbc89404756657b45aba72a66095baae0415c6f75a3d28c",
+      "characters": 920
+    },
+    {
+      "cite_id": "id.pmk81-2024#100(1)",
+      "text_sha256": "5ef1718c0a53359ec91437a6b3e038c48f64163b020aee9669b97fb63e44d109",
+      "candidate_sha256": "5405844c09dcbbbf5d23d771205c07eb90f596cafea855883e2381085c4b4f12",
+      "characters": 223
+    },
+    {
+      "cite_id": "id.pmk81-2024#100(2)",
+      "text_sha256": "01a5c298aae8dda325d2047b4a63df8fedea63ead1346b1f4eb90cf75a3e37d9",
+      "candidate_sha256": "ceaf067938f918255b9ef609431e100eeef44cac3bd7dcef21d9507a6816b51b",
+      "characters": 224
+    }
+  ],
+  "scope": "Only Articles94(2),100(1),100(2); review of listed amendments found no change to these provisions. Original is not a consolidated approval of all PMK81 provisions. No holiday calendar approved."
+}

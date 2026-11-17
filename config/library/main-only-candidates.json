@@ -2859,6 +2859,96 @@
         "evidence_file": "docs/project/data-reconciliation/japan-international-scope-source-20261118.json",
         "source_raw_blob": "9c77264fd1a117a9d310a8c30744d37b4585981b"
       }
+    },
+    {
+      "cite_id": "id.pmk81-2024#94(2)",
+      "document": {
+        "id": "id.pmk81-2024",
+        "jur": "id",
+        "type": "regulation",
+        "category": "9;page_deadlines",
+        "title": "PMK 81/2024: Coretax tax administration provisions",
+        "url": "https://jdih.kemenkeu.go.id/api/download/637047be-3dba-4347-aba1-98fa7fd5ab3f/2024pmkeuangan081.pdf",
+        "file": "raw/id/id.pmk81-2024.pdf",
+        "sha256": "b8f385dee2a8684c24f718c5b2413910760d7273236f9d0d27d2da4cf2892574",
+        "lang": "id",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Original instrument; later amendments apply by provision. Articles94 and100 checked against PMK11/2025,53/2025,54/2025 and1/2026 in indonesia-payment-deadline-review.json. Other provisions are not certified as consolidated current law."
+      },
+      "clause": {
+        "cite_id": "id.pmk81-2024#94(2)",
+        "doc_id": "id.pmk81-2024",
+        "label": "Pasal 94(2)",
+        "text": "(2)\nPembayaran\ndan penyetoran\nsebagaimana\ndimaksud\npada ayat (1) wajib dilakukan\npaling lambat tanggal 15\n(lima belas)\nbulan\nberikutnya\nsetelah\nMasa\nPajak\nberakhir meliputi:\na.\nPajak Penghasilan\nPasal 4 ayat (2);\nb.\nPajak Penghasilan\nPasal 15;\nc.\nPajak Penghasilan\nPasal 21;\nd.\nPajak Penghasilan\nPasal 22;\ne.\nPajak Penghasilan\nPasal 23;\nf.\nPajak Penghasilan\nPasal 25;\ng.\nPajak Penghasilan\nPasal 26;\nh.\nPajak\nPenghasilan\nminyak\nbumi\ndan/atau\ngas\nbumi\ndari kegiatan\nusaha\nhulu\nminyak\nbumi\ndan/ atau gas bumi yang dibayarkan\nsetiap Masa\nPajak;\ni.\nPajak\nPertambahan\nNilai yang\nterutang\natas\npemanfaatan\nBarang Kena Pajak tidak berwujud\ndan/atau\nJasa\nKena\nPajak\ndari\nluar\nDaerah\nPabean;\nJ.\nPajak\nPertambahan\nNilai yang\nterutang\natas\nkegiatan membangun\nsendiri;\njdih.kemenkeu.go.id\n- 79 -\nk.\nBea Meterai yang dipungut\noleh pemungut\nBea\nMeterai;\n1.\nPajak Penjualan;\ndan\nm.\nPajak Karbon yang dipungut oleh pemungut\nPajak\nKarbon."
+      },
+      "text_sha256": "e7e486bc06ff74d505cf4f9da3ba02ba67b552e94da34c34606372f72c15f9e4",
+      "source_commit": "ac04cf8c546f6159bfb3264f9e07a97a18d208ad",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence_file": "docs/project/data-reconciliation/indonesia-payment-deadline-review.json",
+        "source_raw_blob": "eab6bcd625ee6985ced2c5160461c882604f5ea1"
+      }
+    },
+    {
+      "cite_id": "id.pmk81-2024#100(1)",
+      "document": {
+        "id": "id.pmk81-2024",
+        "jur": "id",
+        "type": "regulation",
+        "category": "9;page_deadlines",
+        "title": "PMK 81/2024: Coretax tax administration provisions",
+        "url": "https://jdih.kemenkeu.go.id/api/download/637047be-3dba-4347-aba1-98fa7fd5ab3f/2024pmkeuangan081.pdf",
+        "file": "raw/id/id.pmk81-2024.pdf",
+        "sha256": "b8f385dee2a8684c24f718c5b2413910760d7273236f9d0d27d2da4cf2892574",
+        "lang": "id",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Original instrument; later amendments apply by provision. Articles94 and100 checked against PMK11/2025,53/2025,54/2025 and1/2026 in indonesia-payment-deadline-review.json. Other provisions are not certified as consolidated current law."
+      },
+      "clause": {
+        "cite_id": "id.pmk81-2024#100(1)",
+        "doc_id": "id.pmk81-2024",
+        "label": "Pasal 100(1)",
+        "text": "(1)\nDalam\nhal\ntanggal\njatuh\ntempo\npembayaran\natau\npenyetoran\npajak sebagaimana\ndimaksud\ndalam Pasal\n94 bertepatan\ndengan\nhari libur,\npembayaran\natau\npenyetoran\npajak dapat dilakukan\npaling lambat pada\nhari kerja berikutnya."
+      },
+      "text_sha256": "5ef1718c0a53359ec91437a6b3e038c48f64163b020aee9669b97fb63e44d109",
+      "source_commit": "ac04cf8c546f6159bfb3264f9e07a97a18d208ad",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence_file": "docs/project/data-reconciliation/indonesia-payment-deadline-review.json",
+        "source_raw_blob": "eab6bcd625ee6985ced2c5160461c882604f5ea1"
+      }
+    },
+    {
+      "cite_id": "id.pmk81-2024#100(2)",
+      "document": {
+        "id": "id.pmk81-2024",
+        "jur": "id",
+        "type": "regulation",
+        "category": "9;page_deadlines",
+        "title": "PMK 81/2024: Coretax tax administration provisions",
+        "url": "https://jdih.kemenkeu.go.id/api/download/637047be-3dba-4347-aba1-98fa7fd5ab3f/2024pmkeuangan081.pdf",
+        "file": "raw/id/id.pmk81-2024.pdf",
+        "sha256": "b8f385dee2a8684c24f718c5b2413910760d7273236f9d0d27d2da4cf2892574",
+        "lang": "id",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Original instrument; later amendments apply by provision. Articles94 and100 checked against PMK11/2025,53/2025,54/2025 and1/2026 in indonesia-payment-deadline-review.json. Other provisions are not certified as consolidated current law."
+      },
+      "clause": {
+        "cite_id": "id.pmk81-2024#100(2)",
+        "doc_id": "id.pmk81-2024",
+        "label": "Pasal 100(2)",
+        "text": "(2)\nHari libur sebagaimana\ndimaksud\npada ayat (1) yaitu\nhari Sabtu, hari Minggu, hari libur nasional,\nhari yang\ndiliburkan\nuntuk\npenyelenggaraan\npemilihan\numum,\natau hari yang ditetapkan\nsebagai cuti bersama\nsecara\nnasional."
+      },
+      "text_sha256": "01a5c298aae8dda325d2047b4a63df8fedea63ead1346b1f4eb90cf75a3e37d9",
+      "source_commit": "ac04cf8c546f6159bfb3264f9e07a97a18d208ad",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence_file": "docs/project/data-reconciliation/indonesia-payment-deadline-review.json",
+        "source_raw_blob": "eab6bcd625ee6985ced2c5160461c882604f5ea1"
+      }
     }
   ]
 }
