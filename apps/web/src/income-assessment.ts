@@ -159,6 +159,21 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
           confirm('assessable_income_classification_confirmed','已按第40条核实工资及非工资收入分类','Section 40 employment and non-employment classification verified')]}];
   }
   if (input.jurisdiction === 'my' && period === '2026-01-01/2026-12-31') {
+    if(!company && input.incomes.some(i=>i.category==='dividend')) {
+      if(!input.incomes.every(i=>i.source_jurisdiction==='my' && ['dividend','employment','business','rental','interest','royalty','service_remuneration','author_remuneration'].includes(i.category)))return [];
+      return [{id:'my_dividend_2026',label:['马来西亚个人股息及普通所得（2026）','Malaysia individual dividends and ordinary income (2026)'],
+        notice:['适用于单独评税的境内股息及普通所得。先核定股息与其他所得各自的法定收入、费用和免税项目；股息全年10万令吉门槛由系统合计扣除一次，不要提前扣除，也不要计入案件的扣除额。应课税收入须已扣除该门槛及核定减免；案件扣除额包括费用、排除额与减免。股息计税所得按比例分配并适用2%，其余适用居民累进或非居民30%税率。需核实抵减资格及限额；非居民不得使用居民回扣。联合评税、境外所得、结转亏损和特殊税率收入另行处理。结果为申报取整前金额。',
+          'Separate assessment of domestic dividends and ordinary income. Establish statutory income, expenses and exemptions for each source first. The annual MYR100,000 dividend threshold is deducted once automatically: do not subtract it from the dividend input or include it in saved deductions. Chargeable income must reflect that threshold and established reliefs; saved deductions include expenses, exclusions and reliefs. Dividend chargeable income is allocated proportionately and taxed at 2%; the remainder uses resident bands or the nonresident 30% rate. Verify rebate/credit eligibility and caps; no resident rebates for nonresidents. Joint assessment, foreign income, carried losses and special-rate income need separate treatment. Results precede assessment rounding.'],
+        fields:[money('dividend_statutory_before_threshold','股息法定收入（未减年度10万门槛）','Dividend statutory income before annual MYR100,000 threshold'),
+          money('ordinary_statutory_income','其他普通所得的法定收入','Other ordinary statutory income'),
+          money('chargeable_income','扣除门槛及减免后的应课税收入','Chargeable income after threshold and reliefs'),
+          money('allowed_rebates','核定可用税额回扣','Allowed tax rebates'),
+          money('allowed_tax_credits','核定可抵免税额','Allowed tax credits'),prepaid,
+          confirm('separate_domestic_assessment_verified','已核实单独评税、境内普通所得及排除条件','Separate domestic assessment and ordinary-income exclusions verified'),
+          confirm('dividend_scope_verified','已核实全年所有股息、费用和免税范围','All annual dividends, expenses and exemptions verified'),
+          confirm('bases_verified','已核实法定收入、扣除与减免资格及计税基础','Statutory income, deduction and relief eligibility, and tax bases verified'),
+          confirm('settlement_inputs_verified','已核实回扣、抵免限额及预缴归属','Rebate eligibility, credit limits and prepayments verified')]}];
+    }
     const fields = [money('chargeable_income','核定应课税收入','Established chargeable income'),
       confirm('ordinary_treatment_confirmed','已核对普通税制及排除条件','Ordinary treatment and exclusions checked'),
       money('allowed_rebates','核定可用税额回扣','Allowed tax rebates'),
@@ -245,6 +260,16 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
 }
 
 export const resultLabels: Record<string, Label> = {
+  dividend_statutory_before_threshold:['门槛扣除前股息法定收入','Dividend statutory income before threshold'],
+  dividend_statutory_income:['门槛扣除后股息法定收入','Dividend statutory income after threshold'],
+  dividend_threshold_used:['本次使用的年度股息门槛','Annual dividend threshold used'],
+  ordinary_statutory_income:['其他普通所得法定收入','Other ordinary statutory income'],
+  aggregate_income:['合计收入','Aggregate income'],
+  dividend_chargeable_income:['股息应课税收入','Dividend chargeable income'],
+  ordinary_chargeable_income:['普通所得应课税收入','Ordinary chargeable income'],
+  dividend_tax:['股息税额','Dividend tax'],
+  ordinary_tax:['普通所得税额','Ordinary income tax'],
+  reconciled_deductions:['与案件一致的扣除额','Deductions reconciled to case'],
   dividend_credit:['股息抵免额','Dividend tax credit'],
   refundable_dividend_credit:['超过年度税额的可退股息抵免','Refundable dividend credit exceeding annual tax'],
   separate_final_dividend_tax:['单独结清的股息最终税款','Separate final dividend tax'],

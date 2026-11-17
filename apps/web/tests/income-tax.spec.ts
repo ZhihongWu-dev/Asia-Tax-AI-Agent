@@ -1,5 +1,23 @@
 import { test, expect } from '@playwright/test';
 
+for(const residency of ['resident','nonresident'])test(`Malaysia dividends save and reopen ${residency}`,async({page})=>{
+  const form=await openIncome(page);
+  for(const [name,value] of [['Taxpayer','individual'],['Filing jurisdiction','my'],['Tax residency',residency],['Income category','dividend'],['Income source jurisdiction','my']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Gross income','150000'],['Income description','Annual domestic dividend income'],['Claimed deductions (blank if unknown)',residency==='resident'?'9000':'0'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+  await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+  const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await calc.getByLabel('Applicable regime').selectOption('my_dividend_2026');
+  for(const [name,value] of [['Dividend statutory income before annual MYR100,000 threshold','150000'],['Other ordinary statutory income','0'],['Chargeable income after threshold and reliefs',residency==='resident'?'41000':'50000'],['Allowed tax rebates','0'],['Allowed tax credits','0'],['Prepaid tax for this period',residency==='resident'?'1000':'0']])await calc.getByLabel(name,{exact:true}).fill(value);
+  for(const name of ['Separate domestic assessment and ordinary-income exclusions verified','All annual dividends, expenses and exemptions verified','Statutory income, deduction and relief eligibility, and tax bases verified','Rebate eligibility, credit limits and prepayments verified'])await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+  await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified all annual domestic dividends and separate assessment deductions and payments.');
+  await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
+  const report=page.getByRole('article',{name:'Saved calculation result'});
+  await expect(report.locator('dl > div').filter({hasText:/^Dividend tax/}).locator('dd')).toHaveText(residency==='resident'?/^820(?:\.0+)?$/:/^1000(?:\.0+)?$/);
+  await expect(report.locator('dl > div').filter({hasText:'Annual dividend threshold used'}).locator('dd')).toHaveText(/^100000(?:\.0+)?$/);
+  await expect(report.getByRole('link').filter({hasText:/my.pua148/})).toHaveAttribute('href',/parlimen.gov.my/);
+  await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('my-dividend-ya2026');
+});
+
 for(const election of ['aggregate','final_withholding'])test(`Thailand dividends save and reopen ${election}`,async({page})=>{
   const form=await openIncome(page);
   for(const [name,value] of [['Taxpayer','individual'],['Filing jurisdiction','th'],['Tax residency','resident'],['Income category','dividend'],['Income source jurisdiction','th']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);

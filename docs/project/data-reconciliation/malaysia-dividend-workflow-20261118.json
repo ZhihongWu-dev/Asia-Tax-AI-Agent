@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-18",
+  "policy": "my_dividend_2026",
+  "backend_income_suite": {
+    "passed": 1133,
+    "seconds": 19.23
+  },
+  "typescript_check": "passed",
+  "dividend_browser_cases": {
+    "passed": 2,
+    "seconds": 23.2,
+    "browser": "Microsoft Edge",
+    "covered": [
+      "resident annual threshold and separate dividend tax",
+      "nonresident dividend tax",
+      "official source links",
+      "save and reopen"
+    ]
+  },
+  "scope": "Separate domestic individual assessment from verified statutory and chargeable bases, annual threshold once, proportionate dividend allocation, ordinary resident/nonresident remainder and verified settlement.",
+  "remaining": [
+    "Assessment rounding",
+    "Joint-assessment facts and workflow",
+    "Automatic exemption, expense and relief eligibility determination",
+    "Foreign-income and special-rate regimes"
+  ],
+  "research": {
+    "reference": "https://github.com/openfisca/openfisca-core",
+    "license": "AGPL-3.0",
+    "last_pushed_at": "2026-11-17T13:11:49Z",
+    "open_issues_and_pull_requests": 116,
+    "reviewed_open_items": [
+      1420,
+      1419,
+      1409
+    ],
+    "decision": "Reference only for dated legal parameters and provenance. No code or dependency adopted. Existing Python Decimal implementation retained; open YAML/API security fixes reinforce avoiding unnecessary engine adoption."
+  },
+  "deployment": "not_pushed",
+  "existing_malaysia_browser_regression": {
+    "passed": 2,
+    "seconds": 21.9,
+    "covered": [
+      "ordinary company",
+      "ordinary individual"
+    ]
+  }
+}
