@@ -14,11 +14,13 @@
     "Article59 credit depends on tax attributable to employment and statutory salary cap phaseouts. Mixed-income total tax cannot simply replace employment-attributable tax.",
     "Keep exact decimal component results. The reference implementation floors components to won, but its behavior alone does not establish the legally required return-level rounding order.",
     "Special employment reductions require additional interaction rules; explicit scope verification prevents treating an unadjusted reference as final credit.",
-    "Current Article59-2 text shows age13 after the April2026 amendment while NTS/explanatory materials include age8. Review supplementary applicability before implementing child eligibility; do not assume current consolidated text applies to the entire 2026 assessment."
+    "Resolved Article59-2 discrepancy against Act21548 supplementary Article2: 2026 transition is age9, but the entire 2017 birth cohort is excluded from that transition and retains the general age13 requirement. Do not apply either age8 or age13 universally to 2026.",
+    "Child-credit references now derive regular credit from qualifying records, preserve the 2017 exception, and separately compute verified current-year birth/adoption credits. Basic deduction eligibility and claimant allocation remain explicit verified inputs; no automatic refund or final credit utilization is claimed."
   ],
-  "verification": "34 tests passed: deduction thresholds/cap, employer aggregation, all credit cap phaseouts, credit threshold, fractional preservation under low ambient precision, invalid money and scope rejection.",
+  "verification": "65 employment and child tests passed in 0.86s: salary thresholds/caps and aggregation, credit phaseouts, exact fractional results, 2016/2017/2018 birth boundaries, regular count bands, ineligible children, verified disabled-adult eligibility, child/adopted/foster/grandchild relationships, birth-order rates, adoption overlap, invalid records and duplicate claims.",
+  "child_transition_authority": "https://law.go.kr/LSW/lsRvsDocListP.do?lsId=001565 — Act21548 supplementary Article2(1)-(3), independently matched to the stored original income-tax law PDF text.",
   "remaining": [
-    "Personal/basic/additional deductions and child-credit transitional applicability",
+    "Personal/basic/additional deductions and complete child eligibility evidence workflow",
     "Special credits and relief ordering, mixed income and minimum-tax interactions",
     "National/local settlement and exact return-level rounding",
     "Personal saved-case API, frontend and business acceptance"
