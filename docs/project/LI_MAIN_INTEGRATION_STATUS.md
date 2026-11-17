@@ -10,7 +10,8 @@ The final integration has not been pushed or merged to `main`. The historical
   income tax across cn, hk, sg, id, vn, my, th, ae, jp, kr and in. Passing ordinary
   calculations does not complete special regimes or production acceptance.
 - Saved income facts, explicit calculation bases, revision-bound results and
-  bilingual forms are implemented. The latest income suite passed 1034 tests.
+  bilingual forms are implemented. The latest income suite passed 1133 tests
+  in19.23seconds after Malaysia dividend integration.
   Singapore employment settlement additionally passed three browser scenarios
   (two save/reopen cases and the existing rate-only entry). These use local
   fixtures, not production identity/provider acceptance.
@@ -18,13 +19,20 @@ The final integration has not been pushed or merged to `main`. The historical
   --ignore=tests/database -q` returned1943 passed,1 skipped and11 deselected in
   439.31seconds. The skip is the unavailable legacy attachment converter; the
   deselections are live-database integration tests. Database extraction tests
-  passed69 separately. These results do not establish live account isolation,
+  passed71 separately. These results do not establish live account isolation,
   provider availability or hosted-worker acceptance.
 - After Thai dividend integration, the complete `apps/web/tests/income-tax.spec.ts`
   browser file passed35 scenarios in2.2minutes using Edge and local fixtures.
   This covers the existing case save/reopen, revision conflict, phone viewport
   and country calculations in that file; it is not the entire frontend suite or
   deployed-account acceptance.
+- Malaysia individual domestic dividends now have annual threshold, proportional
+  chargeable-income allocation, ordinary-income remainder and settlement, with
+  saved-case reconciliation and bilingual UI. Two resident/nonresident save/reopen
+  browser cases and two existing company/individual browser regressions passed.
+  Joint assessment, automatic entitlement determination, special/foreign regimes
+  and assessment rounding are still incomplete. See
+  [workflow evidence](data-reconciliation/malaysia-dividend-workflow-20261118.json).
 - Planning runs are connected to the signed-in case API and UI, with a durable
   queue, worker leases, cancellation and pinned artifacts. The hosted worker
   has not been provisioned or accepted. A manual-deploy worker definition is
@@ -72,8 +80,9 @@ The final integration has not been pushed or merged to `main`. The historical
   wording excludes day180, while Revenue Code section41 includes it; its fixed
   dividend credit3/7 omits section47bis's distributing-company rate dependency.
   The active residence rule already uses the correct >=180 boundary. Legacy
-  catalog quarantine/rebinding and dividend-credit business acceptance remain
-  pending; the outdated overview has not been admitted to close missing sources.
+  catalog quarantine is now applied in the isolated copy and awaits the current
+  rebuild; runtime promotion and full business acceptance remain pending. The
+  outdated overview has not been admitted to close missing sources.
   See [conflict evidence](data-reconciliation/thailand-pit-overview-conflicts-20261118.json).
 - A Thai section47bis dividend-component calculator now computes each certified
   tranche's own corporate-rate gross-up, separates shareholder withholding and
@@ -93,15 +102,24 @@ The final integration has not been pushed or merged to `main`. The historical
   process check, PID16760 is live and the log reports three successful checks:
   case001.best, case001.open and case001.valued.best. This is not twelve-row
   completion. Generated CSV/SQLite and optimizer inputs remain frozen.
-- An independent physical data copy (1134 files) is now undergoing a full
-  rebuild under the audit directory using the committed parser repairs.
-  Source hashes were unchanged after copying. This isolates generated outputs
-  from the live optimizer; no rebuilt files have been promoted. See
+- The independent physical data copy completed parser and authentic HK-UAE
+  treaty rebuilds, with151 treaty clauses and zero citation-integrity errors.
+  A later rebuild verified removal of the repealed Chinese notice's three
+  clauses and the redundant Japanese individual anti-abuse absence record:
+  349documents,42786clauses,815parameters,50decisions. The Japanese statutory
+  anti-abuse parameter remains. Source hashes were unchanged after copying;
+  no rebuilt files have been promoted into live optimizer inputs. See
   [snapshot provenance](data-reconciliation/isolated-rebuild-20261118.json).
-- Parser fixes are committed but await generated-data rebuild: Chinese inline
-  numbers, malformed HTML main containers and Indonesian standalone legal
-  numbers. Pending data work includes HK-UAE originals/MLI applicability,
-  Indonesia's fifteenth-day payment deadline, source admission and citation closure.
+- The next isolated rebuild is running with the official PMK81/2024 original,
+  three Indonesian current deadline/holiday parameters, historical tenth-day
+  parameter expiry, corrected Chinese document exclusive-end date, and quarantine
+  of two conflicting Thai legacy parameters. The Indonesia-only check had zero
+  errors but seven existing category/subject-slot gaps, so country acceptance
+  did not pass. MLI applicability, source admission and final citation closure
+  remain outstanding.
+- Legacy live persistence tests include unqualified table deletion fixtures.
+  They must run against an isolated disposable database, never the current
+  cloud case store. No such destructive test was executed against the cloud.
 
 ## Remaining delivery gates
 
