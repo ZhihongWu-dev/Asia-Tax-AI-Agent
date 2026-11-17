@@ -1,0 +1,28 @@
+{
+  "verified_on": "2026-11-17",
+  "commit_under_test": "af7af9ec4e01f607370148e357f59d4aa43b0423",
+  "command": "python -m pytest tests/income_tax -q",
+  "python": "D:/VScode_workplace/Tax/Asia-Tax-AI-Agent/.venv/Scripts/python.exe",
+  "exit_code": 0,
+  "passed": 457,
+  "elapsed_seconds": 12.72,
+  "scope": "Existing income-tax unit and workflow suite, including Vietnamese company/employment and Korean gross/minimum reference calculations. Not proof of all11-country business completeness.",
+  "ocr_git_attribute": "database/ocr/** -text; verified index/worktree LF on corrected source",
+  "vietnam_library_acceptance": {
+    "command": "python database/tools/build.py --jur vn",
+    "session": 95600,
+    "status": "not_passed",
+    "writes_generated_library": false,
+    "exit_code": 1,
+    "errors": 0,
+    "gaps": [
+      "category vn|10",
+      "vn|company|penalty",
+      "vn|company|restructure",
+      "vn|company|exit",
+      "vn|individual|penalty",
+      "vn|individual|restructure",
+      "vn|individual|exit"
+    ]
+  }
+}

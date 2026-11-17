@@ -392,3 +392,9 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - Build now applies a separate exact-correction manifest after full-page OCR integrity verification. It checks document identity, review status, original and transcription SHA-256, input pages, exact page/unique text match and evidence. Raw OCR remains unchanged; output retains OCR status rather than claiming whole-text legal approval.
 - Applied the verified Decree398 Article3 paragraph marker correction. The real-source regression restores all four paragraph citations.21 extraction/correction tests passed, including stale hashes, unreviewed status, wrong/boolean page, missing/ambiguous targets and invalid replacements; scoped diff check passed.
 - GitHub research used CPython official hashlib implementation/tests; standard-library SHA-256 retained, no dependency or external code adopted. Full indexing and original comparison of remaining text remain pending; no remote push.
+
+### Income regression and Vietnamese coverage acceptance
+
+- Existing complete tests/income_tax suite passed457 tests in12.72s against af7af9e. This covers implemented behavior, not all-country business completeness. Evidence is income-regression-20261117.json.
+- Verified Git byte-preservation attributes for OCR artifacts. Existing slice_all propagates extraction errors into build errors and prevents SQLite publication when errors exist.
+- Vietnamese read-only acceptance session95600 finished exit1: zero errors, seven coverage gaps (category10 plus company/individual penalty, restructure and exit parameter slots). No generated library rewrite. These gaps must be resolved with applicable sources and rules, not hidden by claiming OCR completion is business acceptance.
