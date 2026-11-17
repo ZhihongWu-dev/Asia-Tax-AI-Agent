@@ -1,5 +1,5 @@
 {
-  "status": "runtime_candidates_added_and_overlay_tests_passed_pending_cloud_admission",
+  "status": "cloud_admitted_and_exact_read_verified",
   "source_commit": "f21535111fee64392eee536c28faf2e2206943d8",
   "signed_pdf_page": 4,
   "visual_review": true,
@@ -30,5 +30,27 @@
     "command": "pytest tests/chat/test_library_overlay.py -q",
     "passed": 27,
     "seconds": 5.5
-  }
+  },
+  "before_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "578439bd71f8bcef31349bffee911f18392506f9c087399ed98b4d0a951d3738",
+    "review_sha256": "460b4496ee8f842d808728a38e811b5c16667ec2180d5873077b02381a4a2eca"
+  },
+  "after_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "578439bd71f8bcef31349bffee911f18392506f9c087399ed98b4d0a951d3738",
+    "review_sha256": "33ba4e0139554a7f277d33f8e60bbe9861fdfa016cd48ea60b43025711a07cc8"
+  },
+  "old_pin_rejected": true,
+  "exact_complete_text_verified": true,
+  "reader": "dedicated_read_only_role",
+  "base_counts": {
+    "doc": 287,
+    "clause": 38152
+  },
+  "cloud_base_mutated": false
 }
