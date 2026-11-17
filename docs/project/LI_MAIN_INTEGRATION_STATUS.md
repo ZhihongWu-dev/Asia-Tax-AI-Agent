@@ -14,6 +14,12 @@ The final integration has not been pushed or merged to `main`. The historical
   Singapore employment settlement additionally passed three browser scenarios
   (two save/reopen cases and the existing rate-only entry). These use local
   fixtures, not production identity/provider acceptance.
+- Cross-module offline regression completed: `pytest tests -m 'not integration'
+  --ignore=tests/database -q` returned1943 passed,1 skipped and11 deselected in
+  439.31seconds. The skip is the unavailable legacy attachment converter; the
+  deselections are live-database integration tests. Database extraction tests
+  passed69 separately. These results do not establish live account isolation,
+  provider availability or hosted-worker acceptance.
 - Planning runs are connected to the signed-in case API and UI, with a durable
   queue, worker leases, cancellation and pinned artifacts. The hosted worker
   has not been provisioned or accepted. See [worker deployment](PLANNING_WORKER_DEPLOYMENT.md).
