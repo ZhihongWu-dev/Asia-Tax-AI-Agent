@@ -398,3 +398,9 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - Existing complete tests/income_tax suite passed457 tests in12.72s against af7af9e. This covers implemented behavior, not all-country business completeness. Evidence is income-regression-20261117.json.
 - Verified Git byte-preservation attributes for OCR artifacts. Existing slice_all propagates extraction errors into build errors and prevents SQLite publication when errors exist.
 - Vietnamese read-only acceptance session95600 finished exit1: zero errors, seven coverage gaps (category10 plus company/individual penalty, restructure and exit parameter slots). No generated library rewrite. These gaps must be resolved with applicable sources and rules, not hidden by claiming OCR completion is business acceptance.
+
+### Vietnamese tax-administration original acquired
+
+- Registered official Gazette38 containing Law108/2025/QH15, original SHA256 ce2ec36223b931f0754d15f23aecd83405b386f36fbd4cbd83d300b45b117662. Native text extraction succeeded; existing multi-law selection correctly isolated53 articles and330 clauses from the145-page issue.
+- Confirmed trial references16.2,17.2,52.1,53.2 and the statutory daily-rate text. Category10 now has an original source; no penalty parameter published until implementing legislation, exceptions and transition are checked. Article17 administrative debt settlement must not be substituted for restructuring capital-gains or emigration-tax rules.
+- General commencement is1July2026 with Article52 exceptions and Article53 transition. Full library rebuild and coverage recheck pending. Review evidence: vietnam-tax-administration-review.json. No remote push.

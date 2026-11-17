@@ -1,0 +1,15 @@
+{
+  "doc_id": "vn.law.tax-administration108.2025.vi",
+  "sha256": "ce2ec36223b931f0754d15f23aecd83405b386f36fbd4cbd83d300b45b117662",
+  "status": "registered_trial_slicing_verified",
+  "pages": 145,
+  "articles": 53,
+  "clauses": 330,
+  "slice_mode": "vn_article",
+  "remaining": [
+    "Decree252 and subsequent amendment review before publishing current penalty parameters",
+    "Article16 exceptions and Article53 transition",
+    "Administrative settlement is not restructuring-cost or emigration-tax coverage",
+    "Full library rebuild"
+  ]
+}
