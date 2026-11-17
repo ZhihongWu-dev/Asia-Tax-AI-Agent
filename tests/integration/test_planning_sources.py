@@ -1,6 +1,7 @@
 from contextlib import nullcontext
 from hashlib import sha256
 from types import SimpleNamespace
+import json
 
 import pytest
 
@@ -22,6 +23,16 @@ def test_reviewed_replacement_returns_complete_new_text_once(monkeypatch):
     assert list(result['sources']) == ['cn.law#1']
     assert result['sources']['cn.law#1']['passage'] == body
     assert result['sources']['cn.law#1']['passage_sha256'] == sha256(body.encode()).hexdigest()
+
+
+def test_rejected_document_alias_is_blocked_before_reading_base(monkeypatch):
+    statements = fixture_reader(monkeypatch,
+        rows=[dict(cite_id='cn.notice#p1', passage='not a law')],
+        reviews=[dict(cite_id='cn.notice#all', doc_id='cn.notice', difference='main_only',
+                      review_status='rejected', review_note=json.dumps(dict(excluded_citations=['cn.notice#p1'])))])
+    with pytest.raises(sources.PlanningSourcesUnavailable) as exc:
+        sources.read_sources(['cn.notice#p1'], expected_version=PIN)
+    assert exc.value.blocked == ('cn.notice#p1',) and len(statements) == 1
 
 
 def fixture_reader(monkeypatch, *, rows=(), reviews=(), overlay=(), tables=None):
@@ -67,7 +78,8 @@ def test_complete_base_and_overlay_passages_and_hashes(monkeypatch):
 
 @pytest.mark.parametrize('difference,status,reviewed', [
     ('different_text', 'candidate', None), ('different_text', 'accepted', 'date'),
-    ('different_text', 'rejected', None), ('main_only', 'candidate', None)])
+    ('different_text', 'rejected', None), ('main_only', 'candidate', None),
+    ('main_only', 'rejected', 'date'), ('main_only', 'accepted', 'date')])
 def test_blocked_dependency_stops_before_reading_text(monkeypatch, difference, status, reviewed):
     statements = fixture_reader(monkeypatch, reviews=[dict(cite_id='cn.law#1',
         difference=difference, review_status=status, reviewed_at=reviewed)])

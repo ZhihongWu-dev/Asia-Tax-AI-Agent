@@ -92,12 +92,24 @@ def validate_base_rows(overlay, candidates, base_rows):
 
 
 def blocked_citations(reviews, overlay):
+    admitted = {r['cite_id'] for r in overlay}
     replacements = {r['cite_id'] for r in overlay if r['origin'] == 'reviewed_main_replacement'}
     blocked = {r['cite_id'] for r in reviews if r['difference'] == 'different_text'
                and not (r['review_status'] == 'rejected' and r['reviewed_at'] is not None)
                and r['cite_id'] not in replacements}
     blocked.update(r['cite_id'] for r in reviews
-                   if r['difference'] == 'main_only' and r['review_status'] == 'candidate')
+                   if r['difference'] == 'main_only' and r['cite_id'] not in admitted)
+    for review in reviews:
+        note = review.get('review_note') or ''
+        if review['review_status'] != 'rejected' or not note.lstrip().startswith('{'):
+            continue
+        decision = json.loads(note)
+        aliases = decision.get('excluded_citations', [])
+        if (not isinstance(aliases, list) or any(not isinstance(c, str)
+                or not c.startswith((review.get('doc_id') or '') + '#')
+                or len(c) > 240 for c in aliases)):
+            raise ValueError('invalid_review_excluded_citations')
+        blocked.update(aliases)
     return blocked
 
 

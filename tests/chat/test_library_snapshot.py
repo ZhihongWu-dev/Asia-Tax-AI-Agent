@@ -96,6 +96,24 @@ def test_conflict_is_explicit_and_transaction_is_read_only(monkeypatch):
     assert answer['citations']==[] and 'unresolved' in answer['text']
 
 
+@pytest.mark.parametrize('status', ['candidate', 'rejected'])
+def test_main_only_source_stays_blocked_in_search(monkeypatch, status):
+    review = {**REVIEW, 'difference': 'main_only', 'review_status': status,
+              'reviewed_at': 'date' if status == 'rejected' else None}
+    class MainOnlyConnection(Connection):
+        def execute(self, statement, params=None):
+            if 'SELECT * FROM database_integration' in str(statement):
+                return Result([review])
+            if 'FROM database.clause' in str(statement):
+                # SQL excludes base fallthrough before LIMIT, including rejected imports.
+                assert "r.difference = 'main_only' OR" in str(statement)
+            return super().execute(statement, params)
+    monkeypatch.setattr(library_cloud, '_engine', lambda: SimpleNamespace(connect=MainOnlyConnection))
+    result = library_cloud.search_library('cn.test#1', 'cn')
+    assert result['status'] == 'review_required'
+    assert result['passages'] == [] and result['blocked_citations'] == ['cn.test#1']
+
+
 def test_changed_pin_prevents_clause_query(monkeypatch):
     connection=Connection()
     monkeypatch.setattr(library_cloud,'_engine',lambda:SimpleNamespace(connect=lambda:connection))

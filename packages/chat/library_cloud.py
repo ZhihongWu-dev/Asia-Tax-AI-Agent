@@ -122,10 +122,12 @@ def search_library(query: str, jurisdiction: str, limit: int = 6, *, expected_ve
             FROM database.clause AS c
             JOIN database.doc AS d ON d.id = c.doc_id
             WHERE d.jur = :jurisdiction
+              AND NOT (c.cite_id = ANY(:blocked))
               AND NOT EXISTS (
                   SELECT 1 FROM database_integration.source_review AS r
-                  WHERE r.cite_id = c.cite_id AND r.difference = 'different_text'
-                    AND NOT (r.review_status = 'rejected' AND r.reviewed_at IS NOT NULL)
+                  WHERE r.cite_id = c.cite_id AND (
+                    r.difference = 'main_only' OR (r.difference = 'different_text'
+                    AND NOT (r.review_status = 'rejected' AND r.reviewed_at IS NOT NULL)))
               )
               AND (c.cite_id = :query
                    OR (:exact_locator = false AND (
@@ -137,7 +139,7 @@ def search_library(query: str, jurisdiction: str, limit: int = 6, *, expected_ve
                      CASE WHEN position(lower(:term2) in lower(c.text)) > 0 THEN 0 ELSE 1 END,
                      c.cite_id
             LIMIT :limit
-        """), {"query": query, "jurisdiction": jurisdiction, "limit": limit,
+        """), {"query": query, "jurisdiction": jurisdiction, "limit": limit, "blocked": sorted(blocked),
                "exact_locator": exact_locator, "term0": terms[0] if terms else query,
                "term1": terms[1] if len(terms) > 1 else terms[0] if terms else query,
                "term2": terms[2] if len(terms) > 2 else terms[0] if terms else query}).mappings().all()

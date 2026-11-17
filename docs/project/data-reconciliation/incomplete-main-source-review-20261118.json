@@ -1,0 +1,150 @@
+{
+  "before_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "6d984c6ba4b42e86484ac6f890f6c59c015dd37be6cb3e49fe4c2754bec4655c",
+    "review_sha256": "371fe254e1af835dc0350286ab2814247913ef93ec0235d9c61052e7473434de"
+  },
+  "decision": "reject_incomplete_fulltext_candidates",
+  "status": "cloud_rejected_local_readers_verified_not_deployed",
+  "items": [
+    {
+      "cite_id": "kr.corporate-tax-act-2026#all",
+      "source_commit": "78a037f522d1636541c2e5fcdd1145e735f18124",
+      "document_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsId=001563",
+      "document_sha256": "8e3a9826cc806771c6518e2a7623ef94b3a1b4664339a35c7ec866ac383868b9",
+      "candidate_sha256": "e5b0cf8b21b38c9c4e306154bf653d15f5c32008997ccad014ceade9d81c51c9",
+      "text_sha256": "51cdff5c180307932565bbf5b6ba99d594ecd4f4001ba90e0586d038854f32fb",
+      "nonspace_characters": 1275,
+      "review_note": "Reject this main-only whole-law extraction: it contains JavaScript portal controls and no numbered statutory provisions. Original shell retained. Current local same-ID registry repair points to official consolidated PDF https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=280349 (SHA256 257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599). Cloud publication of that full source remains pending; rejecting this candidate does not approve the replacement or discard the original."
+    },
+    {
+      "cite_id": "kr.income-tax-act-2026#all",
+      "source_commit": "78a037f522d1636541c2e5fcdd1145e735f18124",
+      "document_url": "https://www.law.go.kr/lsInfoP.do?ancYnChk=0&lsId=001565",
+      "document_sha256": "406c3763d199fe3730ee2c560164bb4d57e6bd0478718681755e4185991a4556",
+      "candidate_sha256": "ec6546b3f325b6eba390c7aa7875eae1187f0fc1968111507c333d999b963731",
+      "text_sha256": "31486151ce7fad3bccb194f72de3adf60599bc3ea402c6a965876bd692086624",
+      "nonspace_characters": 1275,
+      "review_note": "Reject this main-only whole-law extraction: it contains JavaScript portal controls and no numbered statutory provisions. Original shell retained. Current local same-ID registry repair points to official consolidated PDF https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=280405 (SHA256 53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a). Cloud publication of that full source remains pending; rejecting this candidate does not approve the replacement or discard the original."
+    },
+    {
+      "cite_id": "treaty.ae-hk.2014.en#all",
+      "source_commit": "78a037f522d1636541c2e5fcdd1145e735f18124",
+      "document_url": "https://www.ird.gov.hk/eng/pdf/Agreement_United_Arab_Emirates_HongKong.pdf",
+      "document_sha256": "87de806f8dc5ebe0dc43ffe523c27ad1513c1d31102c0e2e2677f95129b41a2f",
+      "candidate_sha256": "4c648089e0da3833cf474a5f56593a8f01248aa741e2377a0a40bdc1733b9bc0",
+      "text_sha256": "6029d08af35fd9c4d6231f20c9df44cb94137376b3533c647df2932674be888a",
+      "nonspace_characters": 324,
+      "review_note": "Reject as treaty-fulltext candidate: official PDF is a one-page trilingual redirect notice, not the agreement and not an OCR failure. Visually reviewed original and followed IRD link to https://www.ird.gov.hk/eng/tax/dta_uae.htm then Cap112CN. Official full RTF downloaded from https://www.elegislation.gov.hk/hk/cap112CN!en.rtf SHA256 5d402a9af0a6c42d548fcf87bba1b5a177ae63c786f047b40dc60601b0a822f7; integration/segmentation pending. Keep notice archived, never treat it as operative treaty provisions."
+    }
+  ],
+  "treaty_full_source": {
+    "url": "https://www.elegislation.gov.hk/hk/cap112CN!en.rtf",
+    "sha256": "5d402a9af0a6c42d548fcf87bba1b5a177ae63c786f047b40dc60601b0a822f7",
+    "bytes": 371647,
+    "publication": "downloaded_to_external_audit_not_registered",
+    "extraction": "Windows RichTextBox RTF parser, audit only",
+    "extracted_characters": 67946,
+    "extracted_text_sha256": "40c9221bd2eb6b2f0d12e4518ed360d331ed4f6f222111a8b624cba2030a7d9d",
+    "english_article_headings": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "existing_synthesized_MLI_source": "treaty.ae-hk.2014.mli.en",
+    "limitation": "Original agreement/Protocol; do not ignore later MLI modifications. Registration and production segmentation pending. Direct !en.pdf URL returned non-PDF content; only RTF was downloaded successfully."
+  },
+  "after_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "6d984c6ba4b42e86484ac6f890f6c59c015dd37be6cb3e49fe4c2754bec4655c",
+    "review_sha256": "3cf54d6e11b4f2f0732ae208fbe584e2a8cc1d9cbb9e5cf9c9e0e3d2db32dcdf"
+  },
+  "application_verification": {
+    "old_pin_rejected": true,
+    "chat_blocked_citations": [
+      "kr.corporate-tax-act-2026#all",
+      "kr.income-tax-act-2026#all",
+      "treaty.ae-hk.2014.en#all",
+      "treaty.ae-hk.2014.en#p1"
+    ],
+    "planning_all_four_blocked": true,
+    "previous_repaired_source_still_available": true,
+    "base_notice_unchanged": true
+  },
+  "cloud_reviews": [
+    {
+      "cite_id": "kr.corporate-tax-act-2026#all",
+      "review_status": "rejected",
+      "reviewed_at": "2026-11-17 17:59:59.401863+00:00",
+      "review_note": "{\"reason\":\"Reject this main-only whole-law extraction: it contains JavaScript portal controls and no numbered statutory provisions. Original shell retained. Current local same-ID registry repair points to official consolidated PDF https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=280349 (SHA256 257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599). Cloud publication of that full source remains pending; rejecting this candidate does not approve the replacement or discard the original.\",\"candidate_sha256\":\"e5b0cf8b21b38c9c4e306154bf653d15f5c32008997ccad014ceade9d81c51c9\",\"text_sha256\":\"51cdff5c180307932565bbf5b6ba99d594ecd4f4001ba90e0586d038854f32fb\",\"disposition\":\"reject_incomplete_fulltext\"}"
+    },
+    {
+      "cite_id": "kr.income-tax-act-2026#all",
+      "review_status": "rejected",
+      "reviewed_at": "2026-11-17 17:59:59.409609+00:00",
+      "review_note": "{\"reason\":\"Reject this main-only whole-law extraction: it contains JavaScript portal controls and no numbered statutory provisions. Original shell retained. Current local same-ID registry repair points to official consolidated PDF https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=280405 (SHA256 53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a). Cloud publication of that full source remains pending; rejecting this candidate does not approve the replacement or discard the original.\",\"candidate_sha256\":\"ec6546b3f325b6eba390c7aa7875eae1187f0fc1968111507c333d999b963731\",\"text_sha256\":\"31486151ce7fad3bccb194f72de3adf60599bc3ea402c6a965876bd692086624\",\"disposition\":\"reject_incomplete_fulltext\"}"
+    },
+    {
+      "cite_id": "treaty.ae-hk.2014.en#all",
+      "review_status": "rejected",
+      "reviewed_at": "2026-11-17 18:02:47.270241+00:00",
+      "review_note": "{\"reason\":\"Reject as treaty-fulltext candidate: official PDF is a one-page trilingual redirect notice, not the agreement and not an OCR failure. Visually reviewed original and followed IRD link to https://www.ird.gov.hk/eng/tax/dta_uae.htm then Cap112CN. Official full RTF downloaded from https://www.elegislation.gov.hk/hk/cap112CN!en.rtf SHA256 5d402a9af0a6c42d548fcf87bba1b5a177ae63c786f047b40dc60601b0a822f7; integration/segmentation pending. Keep notice archived, never treat it as operative treaty provisions.\",\"candidate_sha256\":\"4c648089e0da3833cf474a5f56593a8f01248aa741e2377a0a40bdc1733b9bc0\",\"text_sha256\":\"6029d08af35fd9c4d6231f20c9df44cb94137376b3533c647df2932674be888a\",\"disposition\":\"reject_incomplete_fulltext\",\"excluded_citations\":[\"treaty.ae-hk.2014.en#p1\"]}"
+    }
+  ],
+  "review_counts": [
+    {
+      "difference": "different_text",
+      "review_status": "accepted",
+      "count": 1
+    },
+    {
+      "difference": "different_text",
+      "review_status": "candidate",
+      "count": 18
+    },
+    {
+      "difference": "different_text",
+      "review_status": "rejected",
+      "count": 6
+    },
+    {
+      "difference": "main_only",
+      "review_status": "candidate",
+      "count": 104
+    },
+    {
+      "difference": "main_only",
+      "review_status": "rejected",
+      "count": 3
+    }
+  ]
+}

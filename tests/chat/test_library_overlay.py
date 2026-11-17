@@ -48,6 +48,23 @@ def test_main_only_collision_still_fails():
         validate_base_rows(overlay, records, [{'cite_id': review['cite_id']}])
 
 
+def test_rejected_main_only_source_cannot_fall_through_to_base():
+    commit, records, review = accepted_fixture()
+    for status in ('candidate', 'rejected', 'accepted'):
+        decision = {**review, 'review_status': status}
+        assert blocked_citations([decision], []) == {review['cite_id']}
+    assert blocked_citations([review], admitted_rows(commit, records, [review])) == set()
+
+
+def test_rejected_source_blocks_explicit_same_document_legacy_alias():
+    review = dict(cite_id='cn.notice#all', doc_id='cn.notice', difference='main_only',
+                  review_status='rejected', review_note=json.dumps(dict(excluded_citations=['cn.notice#p1'])))
+    assert blocked_citations([review], []) == {'cn.notice#all', 'cn.notice#p1'}
+    review['review_note'] = json.dumps(dict(excluded_citations=['cn.other#1']))
+    with pytest.raises(ValueError, match='invalid_review_excluded_citations'):
+        blocked_citations([review], [])
+
+
 @pytest.mark.parametrize('field', ['text', 'effective_from', 'source_commit', 'base_text'])
 def test_old_approval_cannot_admit_changed_replacement(field):
     commit, records, review, _ = replacement_fixture()
