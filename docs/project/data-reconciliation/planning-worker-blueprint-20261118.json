@@ -1,0 +1,14 @@
+{
+  "schema_url": "https://render.com/schema/render.yaml.json",
+  "schema_sha256": "6c6721a602ef6d368d5c9384c473cefaae99980e43dd4b1adcf8a2f258fc54f4",
+  "blueprint_schema_valid": true,
+  "matching_web_worker_build_and_branch": true,
+  "worker_auto_deploy": "off",
+  "cloud_provisioned": false,
+  "remaining": [
+    "Coordinate identical deployed commits",
+    "Provision shared library-reader secret",
+    "Check live web database override before worker starts",
+    "Worker preflight and real job/restart/two-account acceptance"
+  ]
+}

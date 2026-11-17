@@ -1,8 +1,11 @@
 # Planning worker deployment
 
-The web service queues durable planning runs. A separate process must consume
-them; the current `render.yaml` defines only the web service. No hosted worker
-has been provisioned or accepted yet.
+The web service queues durable planning runs. `render.yaml` now defines a separate
+`taxrora-planning-worker` process with manual deployment, the same build command,
+Python version, region and target branch as the web service. No hosted worker
+has been provisioned or accepted yet. Applying this Blueprint creates a paid
+standard worker; preparing the file does not provision it. The standard plan is
+an initial capacity setting, not a demonstrated production sizing result.
 
 Use the same reviewed Git commit and installed tax-engine release for the web
 service and worker. Their captured rule/runtime fingerprints must match. Build
@@ -12,7 +15,10 @@ Linux deployment environment before starting either service.
 Configure these secrets through the hosting provider, never in Git:
 
 - `FSIE_WEB_DATABASE_URL`, if configured on the web service, must point the worker
-  at that same case/queue database. Otherwise both use `FSIE_DATABASE_URL`.
+  at that same case/queue database. The checked-in Blueprint shares
+  `FSIE_DATABASE_URL` from the web service and assumes no web-database override.
+  If the deployed web service has that override, also configure the identical
+  override on the worker before its first start; do not consume a different queue.
 - `FSIE_LIBRARY_DATABASE_URL` must use the dedicated `taxrora_library_reader`
   login. Provision its explicit grants using `scripts/library_reader_role.sql`,
   then set its password through secret provisioning. This login reads legal

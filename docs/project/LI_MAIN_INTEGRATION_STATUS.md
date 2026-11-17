@@ -22,7 +22,10 @@ The final integration has not been pushed or merged to `main`. The historical
   provider availability or hosted-worker acceptance.
 - Planning runs are connected to the signed-in case API and UI, with a durable
   queue, worker leases, cancellation and pinned artifacts. The hosted worker
-  has not been provisioned or accepted. See [worker deployment](PLANNING_WORKER_DEPLOYMENT.md).
+  has not been provisioned or accepted. A manual-deploy worker definition is
+  now prepared and validated against Render's published JSON Schema; actual
+  provisioning, shared secrets and matching deployed commits remain outstanding.
+  See [worker deployment](PLANNING_WORKER_DEPLOYMENT.md).
 - A dedicated cloud law-library reader has verified read-only grants and cannot
   access private cases/jobs. Its deployment secret still needs installation.
 - Cloud source review queried on 2026-11-18: different-text records have 2 accepted

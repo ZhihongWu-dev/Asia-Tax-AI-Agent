@@ -26,3 +26,35 @@ services:
         sync: false
       - key: FSIE_LIBRARY_DATABASE_URL
         sync: false
+  - type: worker
+    name: taxrora-planning-worker
+    runtime: python
+    plan: standard
+    region: singapore
+    branch: main
+    buildCommand: bash scripts/render_build.sh
+    startCommand: python scripts/run_planning_worker.py
+    # Coordinate deployment with the identical reviewed web-service commit.
+    autoDeployTrigger: "off"
+    maxShutdownDelaySeconds: 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.16
+      - key: FSIE_DATABASE_URL
+        fromService:
+          type: web
+          name: taxrora
+          envVarKey: FSIE_DATABASE_URL
+      - key: FSIE_LIBRARY_DATABASE_URL
+        fromService:
+          type: web
+          name: taxrora
+          envVarKey: FSIE_LIBRARY_DATABASE_URL
+      - key: FSIE_PLANNING_POLL_SECONDS
+        value: "2"
+      - key: FSIE_PLANNING_LEASE_SECONDS
+        value: "60"
+      - key: FSIE_PLANNING_WALL_SECONDS
+        value: "1800"
+      - key: FSIE_PLANNING_MAX_ATTEMPTS
+        value: "3"
