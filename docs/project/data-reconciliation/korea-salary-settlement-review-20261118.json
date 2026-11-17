@@ -13,9 +13,16 @@
   },
   "implemented": "National salary cash balance from an explicitly established whole-won decision amount and reconciled current-employer withholding/former-employer settled tax receipts. Positive below-KRW1,000 balances are waived; refunds remain eligible, then ordinary Treasury47 cash truncation applies. No installments, amended settlements, deferrals or penalties.",
   "verification": "18 tests passed in 0.57s, including 999/1000/1009 payable boundaries, negative refund boundaries, employer reconciliation and invalid/unverified inputs.",
+  "form24_resolution": {
+    "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=164443847",
+    "sha256": "844a53ae235b7039807ad8380306f08225eb757015a27c7c69c23928434ae685",
+    "registry": "Income Tax Enforcement Rule form24, bylSeq18161421, lsiSeq286379, effective20260701, law007507; current official registry located via form selector.",
+    "inspection": "28-page PDF downloaded; wage form instruction16 on PDFpage4 rendered and visually verified. All monetary fields discard fractional won; effective-rate display is the separate rounding exception. Instruction also explicitly directs zero for below-KRW1,000 small-balance noncollection.",
+    "implementation": "Annual form mode truncates employment deduction before computing employment income, gross tax before employment credit, and credit at the form field. Separate standard_salary_national_return binds this decision to the verified receipt settlement function. Existing pre-form component calculation remains explicitly labeled.",
+    "verification": "34 salary annual/settlement tests passed in 0.85s. Gross salary KRW50,000,009 produces decision KRW3,387,501; credits paid KRW3,400,000 produce balance -12,499 and cash refund12,490. Salary-cap phaseout test independently reconciles KRW33,000,001 salary to decision1,065,001."
+  },
   "research_reference": "Previously reviewed MIT Korean tax reference repository rounding.py and salary audit notes; external behavior not adopted as proof of legal form-level rounding.",
   "unresolved": [
-    "Current payroll-form instructions for intermediate fractional-won truncation and final decision tax; annual calculation is not yet automatically linked to cash settlement",
     "Local small-amount noncollection interaction and current electronic-filing checks",
     "Hometax 2026 electronic submission instructions: official NTS search locates the Hometax materials entry but actual current file not yet retrieved",
     "Complete personal API/UI and business acceptance"

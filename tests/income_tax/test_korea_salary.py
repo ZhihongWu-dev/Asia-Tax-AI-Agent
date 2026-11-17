@@ -5,7 +5,7 @@ import pytest
 
 from packages.income_tax.korea_children import ChildCreditFacts
 from packages.income_tax.korea_personal_deductions import PersonalDeductionPerson
-from packages.income_tax.korea_salary import standard_salary_annual
+from packages.income_tax.korea_salary import standard_salary_annual, standard_salary_national_return
 
 
 SELF=PersonalDeductionPerson('self','self',True,False,False)
@@ -88,3 +88,33 @@ def test_no_silent_scope_assumptions(flag):
 @pytest.mark.parametrize('changes',[dict(salary='10000000.000001'),dict(public_pension_paid='1.1')])
 def test_unestablished_fractional_cash_inputs_rejected(changes):
     with pytest.raises(ValueError,match='whole won'):run(**changes)
+
+
+def test_form24_rounds_deduction_before_income_and_tax_before_credit():
+    result=run(salary=50000009,form_rounding=True)
+    assert result['employment']['employment_deduction']==12250000
+    assert result['national_taxable_base']==36250009
+    assert result['gross_tax']==4177501
+    assert result['decision_tax']==3387501
+    assert 'annual_liability_before_return_rounding' not in result
+
+
+def test_form24_credit_rounding_changes_decision_at_phaseout():
+    result=run(salary=33000001,form_rounding=True)
+    assert result['employment_credit']['employment_credit_reference']==739999
+    # 33,000,001 - 10,200,000 - 1,500,000 = 21,300,001;
+    # gross tax truncates to 1,935,000, less 739,999 and 130,000.
+    assert result['decision_tax']==1065001
+
+
+def test_complete_national_return_separates_decision_and_cash_truncation():
+    result=standard_salary_national_return(50000009,(SELF,),(),tax_year=2026,
+        female_taxpayer=False,has_spouse=False,household_head=False,public_pension_paid=0,
+        ordinary_salary_and_standard_credit_verified=True,
+        family_eligibility_and_allocation_verified=True,pension_eligibility_verified=True,
+        current_employer_withheld=3000000,former_employer_settled_tax=400000,
+        decision_and_employer_records_verified=True,installment=False)
+    assert result['annual']['decision_tax']==3387501
+    cash=result['national_settlement']['settlement']
+    assert cash['refundable']==12490
+    assert cash['balance_before_cash_rounding']==-12499
