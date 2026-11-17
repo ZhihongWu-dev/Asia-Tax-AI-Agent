@@ -99,8 +99,12 @@ def test_replacement_requires_structured_content_bound_approval(note):
 def test_real_candidate_bundle_preserves_all_107_without_approving_them():
     commit,rows,digest=load_candidates()
     assert commit=='78a037f522d1636541c2e5fcdd1145e735f18124'
-    assert len(rows)==109 and len(digest)==64
-    assert sum(not row.get('replaces') for row in rows.values()) == 107
+    assert len(rows)==113 and len(digest)==64
+    assert sum(row.get('source_commit', commit) == commit for row in rows.values()) == 107
+    for suffix in ('16', '16.2', '52', '53'):
+        source = rows['vn.law.tax-administration108.2025.vi#' + suffix]
+        assert source['document']['effective_from'] == '2026-07-01'
+        assert source['provenance']['kind'] == 'reviewed_local_source_candidate'
     repaired = rows['cn.cs.2026-27#i3']
     assert repaired['source_commit'] == '975d4570a5cf79e651c72a6db963fca20c6a1871'
     assert '2026年9月1日' in repaired['clause']['text'].splitlines()
