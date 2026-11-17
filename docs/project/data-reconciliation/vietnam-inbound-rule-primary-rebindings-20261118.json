@@ -1,0 +1,115 @@
+{
+  "status": "isolated_rule_validation_passed_pending_additional_cloud_source_admission",
+  "changes": [
+    {
+      "table": "rule/decision.csv",
+      "before": {
+        "id": "D-vn-2",
+        "statement": "A dividend a Vietnamese enterprise receives from a foreign company is read as income from overseas production and business activities (art. 3(2)(m)): it is taxable (art. 2(2)(a)); the 15% / 17% small-enterprise rates and the incentives do not apply to it (art. 18(3)(a)), so the standard 20% is its only rate; and the corporate income tax paid under the law of the investee's country is deducted up to the Vietnamese tax on that income (art. 3(4)). The credit is read as direct: it covers the tax the foreign country charged on the dividend itself (withholding). Whether it also covers the corporate income tax the foreign company paid on the profits out of which the dividend is paid (underlying credit) the Law does not say, and the implementing decree is not in the library, so no credit_underlying rule is written under domestic law. The other reading, a foreign dividend as 'other income' under art. 3(2)(o), would leave it taxable without the art. 3(4) credit and would not exclude the 15% / 17% rates (the library has no parameter for those rates).",
+        "cite_id": "vn.law.cit2025.en#all",
+        "quote": "m) Income from overseas production and business activities;"
+      },
+      "after": {
+        "id": "D-vn-2",
+        "statement": "Article3(2)(m) identifies overseas production/business income; Article2(2)(a) establishes the domestic enterprise tax scope. Treatment of a particular foreign dividend as overseas investment income requires its facts and the implementing provisions. This interpretation is not a blanket approval of every foreign receipt or credit.",
+        "cite_id": "vn.law.cit67.2025.gazette.vi#3.2",
+        "quote": "m) Thu nhập từ hoạt động sản xuất, kinh doanh ở nước ngoài;"
+      }
+    },
+    {
+      "table": "rule/decision.csv",
+      "before": {
+        "id": "D-vn-2",
+        "statement": "Art. 3(4), the domestic foreign tax credit.",
+        "cite_id": "vn.law.cit2025.en#all",
+        "quote": "Vietnamese enterprises investing abroad that earn income from overseas production and business activities in a tax period shall have the corporate income tax paid under the laws of the recipient country deducted from corporate income tax payable in Viet Nam, provided that the deduction does not exceed corporate income tax calculated under Viet Nam's corporate income legislation."
+      },
+      "after": {
+        "id": "D-vn-2",
+        "statement": "Article3(4) establishes a Vietnamese-tax cap for qualifying foreign corporate tax. The prior direct-credit-only interpretation and claim that the implementing decree is absent are withdrawn. Decree320 Article12(2) distinguishes treaty routes, payment timing, taxes paid on behalf, specified exempted/reduced foreign tax and allocated top-up tax. D-vn-12 gates the limited direct-credit rule; other components require separate implementation and verification.",
+        "cite_id": "vn.law.cit67.2025.gazette.vi#3.4",
+        "quote": "4. Doanh nghiệp Việt Nam đầu tư ở nước ngoài có phát sinh thu nhập từ hoạt\nđộng sản xuất, kinh doanh tại nước ngoài trong kỳ tính thuế được trừ số thuế thu\nnhập doanh nghiệp phải nộp theo quy định của nước tiếp nhận đầu tư vào số thuế\nthu nhập doanh nghiệp phải nộp ở Việt Nam, nhưng không được vượt quá số thuế\nthu nhập doanh nghiệp tính theo quy định của pháp luật về thuế thu nhập doanh\nnghiệp của Việt Nam."
+      }
+    },
+    {
+      "table": "rule/decision.csv",
+      "before": {
+        "id": "D-vn-2",
+        "statement": "Art. 18(3)(a): the reduced rates and the incentives do not reach overseas income.",
+        "cite_id": "vn.law.cit2025.en#all",
+        "quote": "The tax rates of 15 percent and 17 under Clauses 2 and 3, Article 10 of this Law and tax incentives under Articles 4, 13, 14, and 15 of this Law shall not apply to:"
+      },
+      "after": {
+        "id": "D-vn-2",
+        "statement": "Original Law67 Article18(3) excludes specified income, including overseas production/business income, from the15/17 percent rates and listed incentives. This supports the standard-rate component for that scoped income, not automatic denial of every later statutory exemption or temporary relief. Subsequent amendments and applicable treaty rules require independent review.",
+        "cite_id": "vn.law.cit67.2025.gazette.vi#18.3",
+        "quote": "3. Thuế suất 15% và 17% quy định tại khoản 2, khoản 3 Điều 10 của Luật này\nvà quy định về ưu đãi thuế tại các điều 4, 13, 14 và 15 của Luật này không áp dụng\nđối với:\na) Thu nhập từ chuyển nhượng vốn, chuyển nhượng quyền góp vốn; thu nhập\ntừ chuyển nhượng bất động sản, trừ thu nhập từ đầu tư xây dựng nhà ở xã hội quy\nđịnh tại điểm s khoản 2 Điều 12 của Luật này; thu nhập từ chuyển nhượng dự án\nđầu tư (trừ chuyển nhượng dự án chế biến khoáng sản), chuyển nhượng quyền\ntham gia dự án đầu tư, chuyển nhượng quyền thăm dò, khai thác, chế biến khoáng\nsản; thu nhập từ hoạt động sản xuất, kinh doanh ở ngoài Việt Nam;\nb) Thu nhập từ hoạt động tìm kiếm, thăm dò và khai thác dầu khí, tài nguyên\nquý hiếm khác và thu nhập từ hoạt động thăm dò, khai thác khoáng sản;\nc) Thu nhập từ sản xuất, kinh doanh trò chơi điện tử trên mạng; thu nhập từ sản\nxuất, kinh doanh hàng hóa, dịch vụ thuộc đối tượng chịu thuế tiêu thụ đặc biệt theo\nquy định của Luật Thuế tiêu thụ đặc biệt, trừ dự án sản xuất, lắp ráp ô tô, máy bay,\ntrực thăng, tàu lượn, du thuyền, lọc hóa dầu;\nd) Trường hợp đặc thù theo quy định của Chính phủ."
+      }
+    },
+    {
+      "table": "rule/rule.csv",
+      "before": {
+        "rule_id": "vn.inbound.taxable",
+        "slot_key": "vn|company|inbound|*",
+        "condition": "$vn.inbound.foreign_income_taxable = true",
+        "effect": "taxable",
+        "overrides": "",
+        "procedure": "",
+        "cite_ids": "vn.law.cit2025.en#all",
+        "decision_ids": "D-vn-2",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "A dividend from a foreign company is income from overseas production and business activities (art. 3(2)(m)), taxable for an enterprise established under Vietnamese law (art. 2(2)(a))."
+      },
+      "after": {
+        "rule_id": "vn.inbound.taxable",
+        "slot_key": "vn|company|inbound|*",
+        "condition": "$vn.inbound.foreign_income_taxable = true",
+        "effect": "taxable",
+        "overrides": "",
+        "procedure": "",
+        "cite_ids": "vn.law.cit67.2025.gazette.vi#2.2;vn.law.cit67.2025.gazette.vi#3.2",
+        "decision_ids": "D-vn-2",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Domestic enterprise scope and overseas production/business income classification; particular foreign investment receipts and relief require separate review."
+      }
+    },
+    {
+      "table": "rule/rule.csv",
+      "before": {
+        "rule_id": "vn.final.cit",
+        "slot_key": "vn|company|final|*",
+        "condition": "true",
+        "effect": "rate:vn.final.cit_rate",
+        "overrides": "",
+        "procedure": "",
+        "cite_ids": "vn.law.cit2025.en#all",
+        "decision_ids": "D-vn-2",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Standard 20% (art. 10(1)); the 15% / 17% small-enterprise rates and the incentives do not apply to income from overseas production and business activities (art. 18(3)(a))."
+      },
+      "after": {
+        "rule_id": "vn.final.cit",
+        "slot_key": "vn|company|final|*",
+        "condition": "true",
+        "effect": "rate:vn.final.cit_rate",
+        "overrides": "",
+        "procedure": "",
+        "cite_ids": "vn.law.cit67.2025.gazette.vi#10.1;vn.law.cit67.2025.gazette.vi#18.3",
+        "decision_ids": "D-vn-2",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Standard20 percent component for scoped overseas production/business income under original Law67 Articles10(1),18(3). Does not decide later exemptions, temporary relief or treaty treatment."
+      }
+    }
+  ],
+  "scope": "Correct original-law citations and remove unsupported direct-credit-only explanation. Tax predicates and rate effects unchanged; full current-law calculations remain incomplete.",
+  "validation": {
+    "tests": 1370,
+    "failed": 0,
+    "errors": 0,
+    "coverage_gaps": 30
+  }
+}
