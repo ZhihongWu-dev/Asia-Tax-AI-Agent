@@ -1,0 +1,82 @@
+{
+  "doc_id": "vn.decree398.2026.vi",
+  "source_sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
+  "profile": "7d45a53f3d1f7bd49b5f5c8852d4c5995b045046b001adbfaec70f0f44c34202",
+  "config": {
+    "language": "vie",
+    "rotation": 0,
+    "clip_top": 0,
+    "skip_pages": [],
+    "scope": "All pages of Vietnamese official original; no pages or regions excluded; transcription requires original comparison",
+    "dpi": 300,
+    "pymupdf": "2.0",
+    "mupdf": "1.28.5"
+  },
+  "model_sha256": {
+    "vie": "79df64caf7bcfb2a27df5042ecb6121e196eada34da774956995747636d5bfa1"
+  },
+  "created_at": "2026-11-17T04:52:50.305028+00:00",
+  "review_status": "pending_original_comparison",
+  "pages": [
+    {
+      "page": 1,
+      "status": "ocr_pending_review",
+      "characters": 2093,
+      "sha256": "2391b74117726f94b8e7e5ff76f87c4c067fcf1e17a9dbca4a58986205174956"
+    },
+    {
+      "page": 2,
+      "status": "ocr_pending_review",
+      "characters": 2770,
+      "sha256": "4716af377174a5cf13e6cd79a0afecaada922724f7c4b820b990cf2c5f600d60"
+    },
+    {
+      "page": 3,
+      "status": "ocr_pending_review",
+      "characters": 2620,
+      "sha256": "27db3a937ebd4318521a16845ab3dd8c6bebf61fa60b472b6c89d2c1dd7d07df"
+    },
+    {
+      "page": 4,
+      "status": "ocr_pending_review",
+      "characters": 2616,
+      "sha256": "0b3a26c84b2f3d6c0bffdb4e1d6d3756f6ccb6dc5d0b8da698bd6612a2e4ce16"
+    },
+    {
+      "page": 5,
+      "status": "ocr_pending_review",
+      "characters": 1056,
+      "sha256": "6745b6462d9b73879770befb96f2e6f47e2b71867a1af79fafbecc08a62fdcde"
+    },
+    {
+      "page": 6,
+      "status": "ocr_pending_review",
+      "characters": 707,
+      "sha256": "910ca317788293bd8ebc6c2a1fad50808c111d1a616bc055f5626942fb0ba81d"
+    },
+    {
+      "page": 7,
+      "status": "ocr_pending_review",
+      "characters": 2239,
+      "sha256": "b353e2e92da19cdc9b091fd4405790e3459e0523b9c4a50420774ca075cac400"
+    },
+    {
+      "page": 8,
+      "status": "ocr_pending_review",
+      "characters": 1932,
+      "sha256": "8e136427c4c4641d7b82b86bde476d3f924c598d81b38ca6d5fb6da0b4cea7e5"
+    },
+    {
+      "page": 9,
+      "status": "ocr_pending_review",
+      "characters": 1688,
+      "sha256": "d27579c5f8c70cc1eaf07e4af40d148e1eb72acb86538593fd73e100306d1262"
+    },
+    {
+      "page": 10,
+      "status": "ocr_pending_review",
+      "characters": 898,
+      "sha256": "0a1affac6be0448d21b7c16725d38bcd16254fdf198a2ceeaa418caa99b1b659"
+    }
+  ]
+}

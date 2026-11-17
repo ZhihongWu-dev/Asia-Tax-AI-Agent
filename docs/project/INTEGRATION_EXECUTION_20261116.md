@@ -374,3 +374,9 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - Fixed build extraction so fingerprinted full-page local OCR can replace a native signature-only text layer. Validates original hash, source/config/model profile, page sequence/count and every page content hash; incomplete pages fail. Clipped/skipped scopes and legacy image OCR retain their separate merge behavior. Integrity validation does not grant legal-text approval.
 - GitHub research: official PyMuPDF full/partial OCR documentation and example informed the scope distinction; no external code or dependency adopted. Verification:12 focused extraction/OCR tests passed. Real Law09 and Decree141 extraction now returns1885/1961 first-page characters including operative articles rather than signature metadata. Whole library rebuild remains pending original comparison.
 - OCR session96212 continues with the remaining Vietnamese originals; preserve its resumable page cache. No remote push.
+
+### Vietnamese full-original OCR completed
+
+- OCR session96212 completed with exit0. All five registered originals now have full-page transcriptions: Law09 (2), Decree141 (4), Decree398 (10), Law67 (21), and Decree320 (76), totaling113 pages.
+- Independently revalidated original source/model profile, ordered page hashes/counts and whole-transcription hashes against vietnam-ocr-progress.json. All five passed. Trial slicing produced247 clauses; this count is extraction evidence, not proof of legally complete or correct provisions.
+- Preserved the remaining three transcripts and provenance metadata. All remain pending_original_comparison; original comparison, corrections and full indexing are pending. No cloud approval, remote push or full business acceptance claimed. Both corporate and personal income-tax coverage remain required across all11 dividend jurisdictions.

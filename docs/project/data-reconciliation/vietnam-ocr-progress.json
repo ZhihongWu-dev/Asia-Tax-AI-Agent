@@ -9,20 +9,121 @@
       "doc_id": "vn.law09.2026.vi",
       "pages": 2,
       "status": "pending_original_comparison",
-      "profile": "078c5b2b91c38fbc0bd525e7c7a096cf59c11789212e11336e14ffcc31100393"
+      "profile": "078c5b2b91c38fbc0bd525e7c7a096cf59c11789212e11336e14ffcc31100393",
+      "transcription_sha256": "6b4f3927b3aee3addfaa0b34e729517081022763a2f9e8c5b20dd6c1e446b8bf",
+      "slice_method": "vn_article",
+      "trial_clause_count": 7,
+      "trial_article_ids": [
+        "vn.law09.2026.vi#1",
+        "vn.law09.2026.vi#2",
+        "vn.law09.2026.vi#3",
+        "vn.law09.2026.vi#4",
+        "vn.law09.2026.vi#5"
+      ]
     },
     {
       "doc_id": "vn.decree141.2026.vi",
       "pages": 4,
       "status": "pending_original_comparison",
-      "profile": "dbe9b472f8323f98de2b0d7bf5e0139b4fe9dfdcd0ebe9f16f52c61b81e92277"
+      "profile": "dbe9b472f8323f98de2b0d7bf5e0139b4fe9dfdcd0ebe9f16f52c61b81e92277",
+      "transcription_sha256": "dcd482cdb41178a8e686ded1cff8d9e6634152f09aed118f697e0f7812a49920",
+      "slice_method": "vn_article",
+      "trial_clause_count": 10,
+      "trial_article_ids": [
+        "vn.decree141.2026.vi#1",
+        "vn.decree141.2026.vi#2",
+        "vn.decree141.2026.vi#3",
+        "vn.decree141.2026.vi#4",
+        "vn.decree141.2026.vi#5"
+      ]
+    },
+    {
+      "doc_id": "vn.decree398.2026.vi",
+      "pages": 10,
+      "status": "pending_original_comparison",
+      "profile": "7d45a53f3d1f7bd49b5f5c8852d4c5995b045046b001adbfaec70f0f44c34202",
+      "transcription_sha256": "9abb2c05b50cfb149a437ddf9fb57c9a1d54881792441ca268a82efea727bd5c",
+      "slice_method": "vn_article",
+      "trial_clause_count": 11,
+      "trial_article_ids": [
+        "vn.decree398.2026.vi#1",
+        "vn.decree398.2026.vi#2",
+        "vn.decree398.2026.vi#3",
+        "vn.decree398.2026.vi#4",
+        "vn.decree398.2026.vi#5"
+      ]
+    },
+    {
+      "doc_id": "vn.law.cit67.2025.vi",
+      "pages": 21,
+      "status": "pending_original_comparison",
+      "profile": "00cd0985899ff0072d501673445cf1f9302c70b356c450679ce13acfee9c88d1",
+      "transcription_sha256": "9443924e5604e60569d0b3fb62e313062c6d6fa780d0773705b989a15f2c395a",
+      "slice_method": "vn_article",
+      "trial_clause_count": 95,
+      "trial_article_ids": [
+        "vn.law.cit67.2025.vi#1",
+        "vn.law.cit67.2025.vi#2",
+        "vn.law.cit67.2025.vi#3",
+        "vn.law.cit67.2025.vi#4",
+        "vn.law.cit67.2025.vi#5",
+        "vn.law.cit67.2025.vi#6",
+        "vn.law.cit67.2025.vi#7",
+        "vn.law.cit67.2025.vi#8",
+        "vn.law.cit67.2025.vi#9",
+        "vn.law.cit67.2025.vi#10",
+        "vn.law.cit67.2025.vi#11",
+        "vn.law.cit67.2025.vi#12",
+        "vn.law.cit67.2025.vi#13",
+        "vn.law.cit67.2025.vi#14",
+        "vn.law.cit67.2025.vi#15",
+        "vn.law.cit67.2025.vi#16",
+        "vn.law.cit67.2025.vi#17",
+        "vn.law.cit67.2025.vi#18",
+        "vn.law.cit67.2025.vi#19",
+        "vn.law.cit67.2025.vi#20"
+      ]
+    },
+    {
+      "doc_id": "vn.decree320.2025.vi",
+      "pages": 76,
+      "status": "pending_original_comparison",
+      "profile": "a64a8722713cfd421cc786c6a8d85b30351d3c3c4d624c6dc018b5a047467cb0",
+      "transcription_sha256": "4fb33fa1485946327f38210f2fca7ce56b3c52523e01564f9afdec5d7e6cd58a",
+      "slice_method": "vn_article",
+      "trial_clause_count": 124,
+      "trial_article_ids": [
+        "vn.decree320.2025.vi#1",
+        "vn.decree320.2025.vi#2",
+        "vn.decree320.2025.vi#3",
+        "vn.decree320.2025.vi#4",
+        "vn.decree320.2025.vi#5",
+        "vn.decree320.2025.vi#6",
+        "vn.decree320.2025.vi#7",
+        "vn.decree320.2025.vi#8",
+        "vn.decree320.2025.vi#9",
+        "vn.decree320.2025.vi#10",
+        "vn.decree320.2025.vi#11",
+        "vn.decree320.2025.vi#12",
+        "vn.decree320.2025.vi#13",
+        "vn.decree320.2025.vi#14",
+        "vn.decree320.2025.vi#15",
+        "vn.decree320.2025.vi#16",
+        "vn.decree320.2025.vi#17",
+        "vn.decree320.2025.vi#18",
+        "vn.decree320.2025.vi#19",
+        "vn.decree320.2025.vi#20",
+        "vn.decree320.2025.vi#21",
+        "vn.decree320.2025.vi#22",
+        "vn.decree320.2025.vi#23",
+        "vn.decree320.2025.vi#24",
+        "vn.decree320.2025.vi#25",
+        "vn.decree320.2025.vi#26"
+      ]
     }
   ],
-  "remaining": [
-    "vn.decree398.2026.vi",
-    "vn.law.cit67.2025.vi",
-    "vn.decree320.2025.vi"
-  ],
+  "remaining": [],
   "session": 96212,
-  "build_issue": "Native signature text above OCR_PAGE_MIN can incorrectly override complete OCR page; fix and verify before rebuild."
+  "build_issue": "Fixed in a134c78; all five transcripts pass provenance and full-page extraction. Original comparison, OCR correction and full indexing remain pending.",
+  "session_status": "completed_exit_0"
 }

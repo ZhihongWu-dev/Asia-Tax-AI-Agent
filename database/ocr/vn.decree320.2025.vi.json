@@ -1,0 +1,478 @@
+{
+  "doc_id": "vn.decree320.2025.vi",
+  "source_sha256": "4a426bbe928511d278aa23318156d27747c45669e8ee9002fb7a635794f51e06",
+  "profile": "a64a8722713cfd421cc786c6a8d85b30351d3c3c4d624c6dc018b5a047467cb0",
+  "config": {
+    "language": "vie",
+    "rotation": 0,
+    "clip_top": 0,
+    "skip_pages": [],
+    "scope": "All pages of Vietnamese official original; no pages or regions excluded; transcription requires original comparison",
+    "dpi": 300,
+    "pymupdf": "2.0",
+    "mupdf": "1.28.5"
+  },
+  "model_sha256": {
+    "vie": "79df64caf7bcfb2a27df5042ecb6121e196eada34da774956995747636d5bfa1"
+  },
+  "created_at": "2026-11-17T04:57:02.927867+00:00",
+  "review_status": "pending_original_comparison",
+  "pages": [
+    {
+      "page": 1,
+      "status": "ocr_pending_review",
+      "characters": 1767,
+      "sha256": "d505c1e76975a212b9ad7c07526f2c993cc6b29abe175553b390cfb97e39239d"
+    },
+    {
+      "page": 2,
+      "status": "ocr_pending_review",
+      "characters": 2066,
+      "sha256": "21da1a8ff3904cec8a95d1576cdc24b0736bf16b08d6a97ede647b9f80b00e97"
+    },
+    {
+      "page": 3,
+      "status": "ocr_pending_review",
+      "characters": 2437,
+      "sha256": "e496bb6852d4126c01eed924ad1b3b869f4ebfe3ab3555370c14781941f8c4fc"
+    },
+    {
+      "page": 4,
+      "status": "ocr_pending_review",
+      "characters": 2164,
+      "sha256": "1f0d0e94b27588c52474aa82641dcf352b7a871a2c911928351b4bf04ba18021"
+    },
+    {
+      "page": 5,
+      "status": "ocr_pending_review",
+      "characters": 2434,
+      "sha256": "61f1a141598cb8e81d6d1778f475ec5eb09bda526ae5c7c34f8ec51943cc628b"
+    },
+    {
+      "page": 6,
+      "status": "ocr_pending_review",
+      "characters": 2521,
+      "sha256": "53e0677512c73f3a098b588580d6dbf1721807e67874965c432b6182a5b4e045"
+    },
+    {
+      "page": 7,
+      "status": "ocr_pending_review",
+      "characters": 2599,
+      "sha256": "95cbdb944968c200561ae204d9f87564b7e2a8b018a0a992ced4055b63072c3a"
+    },
+    {
+      "page": 8,
+      "status": "ocr_pending_review",
+      "characters": 2386,
+      "sha256": "d07f3edba25e10bf80d63f4bb064b438644f12691ed0071fca822e5d129bdbf9"
+    },
+    {
+      "page": 9,
+      "status": "ocr_pending_review",
+      "characters": 2506,
+      "sha256": "31c8a66beff9fc1b8eb26aae2d75a2fb88d0ce4c78eb6d57e4093e013136d1d2"
+    },
+    {
+      "page": 10,
+      "status": "ocr_pending_review",
+      "characters": 2390,
+      "sha256": "ae963547963034c85c98b63142240992731800b1702ce6c166a6d3ce4a21cffc"
+    },
+    {
+      "page": 11,
+      "status": "ocr_pending_review",
+      "characters": 2069,
+      "sha256": "2ed528884fd719c7c54d32a6dbc073830c6a214377b95381b06e3bee46000d03"
+    },
+    {
+      "page": 12,
+      "status": "ocr_pending_review",
+      "characters": 2394,
+      "sha256": "085f6b0240941f6d6fd47fb969d40bb52c9f213669174d4e1a107458bca8445e"
+    },
+    {
+      "page": 13,
+      "status": "ocr_pending_review",
+      "characters": 2160,
+      "sha256": "f95e3fa11e7720bdf90f91dca939a010c8c842fd53cf8675b97a2cb170fc93d3"
+    },
+    {
+      "page": 14,
+      "status": "ocr_pending_review",
+      "characters": 2534,
+      "sha256": "71783f1145783f919cb1120b0336c202ae5115c4ce231dfda1bdd44090f5ae71"
+    },
+    {
+      "page": 15,
+      "status": "ocr_pending_review",
+      "characters": 2017,
+      "sha256": "c4ac71a4142335faebba36c860016b873505c55d39d5433cdec8f59e955dc209"
+    },
+    {
+      "page": 16,
+      "status": "ocr_pending_review",
+      "characters": 2166,
+      "sha256": "c66992dcbfc71a8d4d0f76f0f9fb1ad95349053f3fc885542981a2bd13a2a614"
+    },
+    {
+      "page": 17,
+      "status": "ocr_pending_review",
+      "characters": 2356,
+      "sha256": "0e4be47fe70194eef0e1c1a2eafa7fabc7f85b46edaa5f39c4e67aea17341f57"
+    },
+    {
+      "page": 18,
+      "status": "ocr_pending_review",
+      "characters": 2027,
+      "sha256": "be7a55b40a9e284dbc8e1c21d34a4dd9118e907f9a35c386135a70d4b7bf9be0"
+    },
+    {
+      "page": 19,
+      "status": "ocr_pending_review",
+      "characters": 2410,
+      "sha256": "2fabc85b767561a063277dcce642920af676b91733813bfbf9a545ed031153ab"
+    },
+    {
+      "page": 20,
+      "status": "ocr_pending_review",
+      "characters": 2520,
+      "sha256": "82ee8106f4e00a55508da98a701238c1fbe85ba661fe475de00e581612e810f5"
+    },
+    {
+      "page": 21,
+      "status": "ocr_pending_review",
+      "characters": 2242,
+      "sha256": "d7f7338ac0d7fe18bed91552a9c8623e9258a4286b2edcb4624fb029507d1694"
+    },
+    {
+      "page": 22,
+      "status": "ocr_pending_review",
+      "characters": 2710,
+      "sha256": "60f9ac73ee64c72449c2f69f0727ae1d8d408afacd6073f31b10c133f2bcdd55"
+    },
+    {
+      "page": 23,
+      "status": "ocr_pending_review",
+      "characters": 2548,
+      "sha256": "abaa9f76ff0f39d20785588a1f6852024f415bbeb8eb2d1c980dd9c6c146277c"
+    },
+    {
+      "page": 24,
+      "status": "ocr_pending_review",
+      "characters": 2670,
+      "sha256": "7b891608348ecc7e11b896929be5877e8ba90955d0e7b47d5736b0ff7f69c90c"
+    },
+    {
+      "page": 25,
+      "status": "ocr_pending_review",
+      "characters": 2216,
+      "sha256": "8ea24687893df9fab5a4543cd4ffbcd9a20b0f0867d1d195e936969178d7a2f3"
+    },
+    {
+      "page": 26,
+      "status": "ocr_pending_review",
+      "characters": 2616,
+      "sha256": "3f6a2c5d55ce7e06f24c7e72bba48694ed771c4caa4d6ab3de2b16a2efc2bf0f"
+    },
+    {
+      "page": 27,
+      "status": "ocr_pending_review",
+      "characters": 2059,
+      "sha256": "25f0243541a36795a5325a8ce51bb5a63efbcbbcc2bdd70cfdfd90b93baff573"
+    },
+    {
+      "page": 28,
+      "status": "ocr_pending_review",
+      "characters": 2272,
+      "sha256": "e30b89678601b2753adff95fc90a8d42ba949c0a50bc4a06b4ad121b18cf7e91"
+    },
+    {
+      "page": 29,
+      "status": "ocr_pending_review",
+      "characters": 2568,
+      "sha256": "45b0a3a3220cabd128b8cb5d6d742b1da1eb916e83dc646843ca1ed9c3a746f9"
+    },
+    {
+      "page": 30,
+      "status": "ocr_pending_review",
+      "characters": 2336,
+      "sha256": "b5582293d1eb69a8f56fac0b2dc4bfdb2d16a2b45d2b0d76716b9ee2ae806be8"
+    },
+    {
+      "page": 31,
+      "status": "ocr_pending_review",
+      "characters": 2855,
+      "sha256": "257bfaf7d8f0d0bcde6b74feae5610ab2165223e822abf3995b5c7bda817f2c4"
+    },
+    {
+      "page": 32,
+      "status": "ocr_pending_review",
+      "characters": 2907,
+      "sha256": "40455de71a544e4c1ed0b1c8e6dfdc7f99c8e55833bbe73795c6d261cf608f36"
+    },
+    {
+      "page": 33,
+      "status": "ocr_pending_review",
+      "characters": 2519,
+      "sha256": "7fe9f15ab379d1d9c7d50bd4d04d7bf776175c1296f014626bd264fe72feb1d5"
+    },
+    {
+      "page": 34,
+      "status": "ocr_pending_review",
+      "characters": 2332,
+      "sha256": "67e7b5f7cdda5ccfe701ec17a554dd8c76b8466e40ea10be262577305c91623c"
+    },
+    {
+      "page": 35,
+      "status": "ocr_pending_review",
+      "characters": 2644,
+      "sha256": "b4ebb8bb44059fc571494402bf0718b4cbac5c05d6a74a18dd3791e77cee8bb2"
+    },
+    {
+      "page": 36,
+      "status": "ocr_pending_review",
+      "characters": 2397,
+      "sha256": "13461697caa7d795b258865349139ffb1ca9365e89614384fb46d91c1a13820b"
+    },
+    {
+      "page": 37,
+      "status": "ocr_pending_review",
+      "characters": 2400,
+      "sha256": "e135b3020a264ebca0e47231749349fffb9e7fb939081c75c43009e7b1c20393"
+    },
+    {
+      "page": 38,
+      "status": "ocr_pending_review",
+      "characters": 2524,
+      "sha256": "1c7522049db3f2e6ab1d35d7aa77122671b01a7b8b669dc2c6d236823ffbe231"
+    },
+    {
+      "page": 39,
+      "status": "ocr_pending_review",
+      "characters": 2415,
+      "sha256": "2db3c1665b5970cee98aa49a5b3e1c059bf424d7da1961f6788fed780973c7fb"
+    },
+    {
+      "page": 40,
+      "status": "ocr_pending_review",
+      "characters": 2275,
+      "sha256": "d773266c159fa6270cc6258faf8507cbb841e01e05ca6cabd8d1ebcb04b17cd3"
+    },
+    {
+      "page": 41,
+      "status": "ocr_pending_review",
+      "characters": 2421,
+      "sha256": "53e56cbb97bd4e363d0dd18f3247954d33af84abfc5c20b3989ebc9ed7ad2f80"
+    },
+    {
+      "page": 42,
+      "status": "ocr_pending_review",
+      "characters": 2371,
+      "sha256": "cfbdaa729af9004b8cad0bf159eb0b4d1dd3250c5a0e08e0efffb4f2a171c152"
+    },
+    {
+      "page": 43,
+      "status": "ocr_pending_review",
+      "characters": 2625,
+      "sha256": "0b7fa684903cfc778f7e7889b30eb3ee9d12e12be24ce43bd50017715ece4196"
+    },
+    {
+      "page": 44,
+      "status": "ocr_pending_review",
+      "characters": 2199,
+      "sha256": "6081e3b569a487db119bfed1f1e6ccbce07e0e2458b0cb9d64e82544905442a9"
+    },
+    {
+      "page": 45,
+      "status": "ocr_pending_review",
+      "characters": 1901,
+      "sha256": "df458304f53f707a0a454a467d9c7eca40458d634a607053bab61fe7e74c2c95"
+    },
+    {
+      "page": 46,
+      "status": "ocr_pending_review",
+      "characters": 2041,
+      "sha256": "ac71d03406b790948df94824da92c10fd7bee54ce57020325e74cbe01adea851"
+    },
+    {
+      "page": 47,
+      "status": "ocr_pending_review",
+      "characters": 2346,
+      "sha256": "1f2b0912fdaff7b4b491ada3220f27045b907ff7ed367f4c91edaadcda8a50b9"
+    },
+    {
+      "page": 48,
+      "status": "ocr_pending_review",
+      "characters": 2001,
+      "sha256": "334adbb048382620cf4b76d4a0f95d3284870be45d6190c4128abc93becad51b"
+    },
+    {
+      "page": 49,
+      "status": "ocr_pending_review",
+      "characters": 2019,
+      "sha256": "af2975cb6cbf287d65e864df5b5d9cc085e892977d0a6b5fb14a2e8660d4c914"
+    },
+    {
+      "page": 50,
+      "status": "ocr_pending_review",
+      "characters": 2177,
+      "sha256": "818c4c09e40a224d5fbaa3c003f20371dd55c7a1e03f6b368d982a3c2689bef9"
+    },
+    {
+      "page": 51,
+      "status": "ocr_pending_review",
+      "characters": 2472,
+      "sha256": "65acf4b0f6b6eb0517cf87eb34bd5311aa0cca8d54bc5ba813515c8cf19db70c"
+    },
+    {
+      "page": 52,
+      "status": "ocr_pending_review",
+      "characters": 2743,
+      "sha256": "8fa89d9ba572ce03590e70eaff32b064783e930b6a4f589fb03004722193fe84"
+    },
+    {
+      "page": 53,
+      "status": "ocr_pending_review",
+      "characters": 2405,
+      "sha256": "c857575a9d5c6ee400a957bb241735fe0560df53486c95990c5d548521da15e8"
+    },
+    {
+      "page": 54,
+      "status": "ocr_pending_review",
+      "characters": 2396,
+      "sha256": "bb63b3d9d1fa8bf5c87334ba3a6ca2fc74d0d528ea29303118bf2284299fc9b6"
+    },
+    {
+      "page": 55,
+      "status": "ocr_pending_review",
+      "characters": 2221,
+      "sha256": "76c11259321b4f73322ef224a62de83a847f96949a8634486b7303d9963a9b10"
+    },
+    {
+      "page": 56,
+      "status": "ocr_pending_review",
+      "characters": 2504,
+      "sha256": "b87a3e024aabbac4e231d782faafce32e4962cb14c188cfa3bf3f2a3a4ebcd32"
+    },
+    {
+      "page": 57,
+      "status": "ocr_pending_review",
+      "characters": 2422,
+      "sha256": "982a48bd547ae4fc5a0f7ff69d6e38282b67bb7f0bc88b6f08c553ade8fa721b"
+    },
+    {
+      "page": 58,
+      "status": "ocr_pending_review",
+      "characters": 1985,
+      "sha256": "38e7f58e833e3f5ac717b90d4ee17f43ddaada3b15ffb091061afb843f650c8f"
+    },
+    {
+      "page": 59,
+      "status": "ocr_pending_review",
+      "characters": 1972,
+      "sha256": "44441851d550155c133c946dfa10e746de6b74775143856a6552887018294b34"
+    },
+    {
+      "page": 60,
+      "status": "ocr_pending_review",
+      "characters": 2066,
+      "sha256": "5958cf3180124577c8c90e0969303f17313baf75a9629a44bd3ba334ef804026"
+    },
+    {
+      "page": 61,
+      "status": "ocr_pending_review",
+      "characters": 2197,
+      "sha256": "3be60cc26a652c6c23e4dc8e33d161d0c5be985e49197734c8c1c7a9f1716668"
+    },
+    {
+      "page": 62,
+      "status": "ocr_pending_review",
+      "characters": 2517,
+      "sha256": "17451cb5009922e6b1a52c1e1216c102f200fc2b511360f7ae209fb7086c0120"
+    },
+    {
+      "page": 63,
+      "status": "ocr_pending_review",
+      "characters": 2346,
+      "sha256": "4e918fbc2a0ac4643ed7f6d0b2103b237b24ff4bc9e0bad0f5ab69a84b8f7446"
+    },
+    {
+      "page": 64,
+      "status": "ocr_pending_review",
+      "characters": 2232,
+      "sha256": "8021e04d0883ba74ac39b002a2013b77ac4faba59b8241efdb9ef282ed2c7683"
+    },
+    {
+      "page": 65,
+      "status": "ocr_pending_review",
+      "characters": 2344,
+      "sha256": "a70ff3b654b0a217fef953d1963fd0625882608954b57e1c458046c8e2865dc8"
+    },
+    {
+      "page": 66,
+      "status": "ocr_pending_review",
+      "characters": 2299,
+      "sha256": "52374dab50d6f174a46b3a499f2e98525b8891e1ddb359b1c0c5e9d38ac2ff00"
+    },
+    {
+      "page": 67,
+      "status": "ocr_pending_review",
+      "characters": 2515,
+      "sha256": "7f153a4ee8de5d34e58666f37ad6edbe27c7e0c55e2466ee2ac8be85d40638ff"
+    },
+    {
+      "page": 68,
+      "status": "ocr_pending_review",
+      "characters": 2606,
+      "sha256": "2aa0d945dcfd61f0a16a5c1df07afbd695b8bf4d1fc5ddecfff3fd8080662b7a"
+    },
+    {
+      "page": 69,
+      "status": "ocr_pending_review",
+      "characters": 2748,
+      "sha256": "9349d580bbaaf0efde4bfddf1a0dbe6f5d8dae01324a2ac268bad78cb4497f3e"
+    },
+    {
+      "page": 70,
+      "status": "ocr_pending_review",
+      "characters": 2665,
+      "sha256": "9e50180dd07a23e2b18aecb5f966cdc2e6083faf11d5fec6f6c53babf336fffe"
+    },
+    {
+      "page": 71,
+      "status": "ocr_pending_review",
+      "characters": 2578,
+      "sha256": "e4fd7a9526dfd6b5ad41d39b30e5ecb9a7e23d36c52e3349c5635029340bdbbd"
+    },
+    {
+      "page": 72,
+      "status": "ocr_pending_review",
+      "characters": 2659,
+      "sha256": "6bcc57cc3364ab45bc8a9879873304fde5f9459dd9ea037101ba8a148337ab2e"
+    },
+    {
+      "page": 73,
+      "status": "ocr_pending_review",
+      "characters": 2278,
+      "sha256": "bfb27f1a3d7813177bb180a54deb854baabf4416bb7b65309784576bcb8de936"
+    },
+    {
+      "page": 74,
+      "status": "ocr_pending_review",
+      "characters": 2586,
+      "sha256": "58655a12e55c7e4dc725d94a78177c4cd066c73877fd788a0776f71eb186ede5"
+    },
+    {
+      "page": 75,
+      "status": "ocr_pending_review",
+      "characters": 2284,
+      "sha256": "db1651758f0cda315ba9cb62873f909e1b24b4884f779070a37541bfd5abdbe4"
+    },
+    {
+      "page": 76,
+      "status": "ocr_pending_review",
+      "characters": 1081,
+      "sha256": "0f8d814ca1312824f050552e6acfb38dacb2259625ee62b94e42021ac09903f1"
+    }
+  ]
+}
