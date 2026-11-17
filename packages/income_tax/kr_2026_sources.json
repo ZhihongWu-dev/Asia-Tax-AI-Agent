@@ -66,5 +66,15 @@
         "Official embedded rate-table image"
       ]
     }
+  ],
+  "corporate_minimum": [
+    {
+      "doc_id": "kr.special-tax-treatment.article132.2026",
+      "url": "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1000890962",
+      "sha256": "1bae488f4cb846831b4b7891f17cbaada52c38b9ddec68001ea39a010d7e8f0b",
+      "provisions": [
+        "Article132(1)"
+      ]
+    }
   ]
 }

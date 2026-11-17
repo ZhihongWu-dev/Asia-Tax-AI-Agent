@@ -2,7 +2,7 @@ from decimal import Decimal
 
 import pytest
 
-from packages.income_tax.korea import gross_taxes
+from packages.income_tax.korea import gross_taxes, company_minimum_reference
 
 
 def compute(base,local=None,**changes):
@@ -69,3 +69,27 @@ def test_unverified_schedule_rejected(changes):
 def test_invalid_bases_rejected_independently(value):
     with pytest.raises(ValueError):compute(value)
     with pytest.raises(ValueError):compute('1',local=value)
+
+
+@pytest.mark.parametrize('base,regime,expected',[(0,'general',0),
+    (10000000000,'general',1000000000),
+    (100000000000,'general',11800000000),
+    (100000000001,'general',Decimal('11800000000.17')),
+    (10000000000,'sme',700000000),
+    (10000000000,'graduated_first_three_years',800000000),
+    (10000000000,'graduated_next_two_years',900000000)])
+def test_minimum_reference_regimes_and_boundaries(base,regime,expected):
+    r=company_minimum_reference(base,tax_year=2026,regime=regime,
+        annual_applicability_and_restoration_confirmed=True)
+    assert r['minimum_reference_tax']==expected
+    assert r['sources'][0]['doc_id']=='kr.special-tax-treatment.article132.2026'
+    assert 'final_tax' not in r
+
+
+@pytest.mark.parametrize('change',[dict(tax_year=2025),dict(tax_year=True),
+    dict(regime='unknown'),dict(regime=None),dict(regime=[]),
+    dict(annual_applicability_and_restoration_confirmed=False)])
+def test_minimum_reference_requires_explicit_eligibility(change):
+    facts=dict(tax_year=2026,regime='general',annual_applicability_and_restoration_confirmed=True)
+    facts.update(change)
+    with pytest.raises(ValueError):company_minimum_reference('1',**facts)

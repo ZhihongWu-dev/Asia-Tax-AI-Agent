@@ -51,6 +51,14 @@
         "Act21308 supplementary Articles1,10,11,12"
       ],
       "status": "reviewed_selected_amendment_not_full_history"
+    },
+    {
+      "doc_id": "kr.special-tax-treatment.article132.2026",
+      "url": "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1000890962",
+      "sha256": "1bae488f4cb846831b4b7891f17cbaada52c38b9ddec68001ea39a010d7e8f0b",
+      "provisions": [
+        "Article132(1)"
+      ]
     }
   ],
   "findings": [
@@ -60,7 +68,8 @@
     "Local Tax Act103-20 has independent corporate standard schedules1/2/2.2/2.5%, with special corporations starting2%. Article103-19 foreign-tax adjustments can change local base. Do not multiply net national liability by10%.",
     "Local Tax Act92 has independent personal standard schedule0.6/1.5/2.4/3.5/3.8/4/4.2/4.5%. Local credits, base, municipal rules and effective dates require further verification.",
     "Visually reviewed all three local-tax table images from the official article HTML. Ordinary/specified company schedules and all eight personal brackets agree with their table amounts. Gross schedule helpers now calculate national/local tax from separate bases; no final assessment/API enablement.",
-    "Act21308 supplementary Articles1/11 apply amended corporate local rates to business years beginning on/after2026-01-01. Article10 instead applies Article103-19(3)-(5) base amendments to returns filed after commencement; Article12 applies revised filing rule to business years starting after commencement. These triggers must remain distinct."
+    "Act21308 supplementary Articles1/11 apply amended corporate local rates to business years beginning on/after2026-01-01. Article10 instead applies Article103-19(3)-(5) base amendments to returns filed after commencement; Article12 applies revised filing rule to business years starting after commencement. These triggers must remain distinct.",
+    "Special Tax Treatment Control Act132(1): national corporate minimum reference uses restored statutory base. General marginal bands10% toKRW10bn,12% to100bn,17% excess; verified SME7%, statutory graduation first3years8%, next2years9%. Excluded cooperatives and post-comparison credits require separate treatment. Reference helper added; final relief limitation not yet implemented."
   ],
   "pending": [
     "Review remaining amendment chain, local credits and municipal applicability; corporate rate commencement and rate images verified",

@@ -33,6 +33,34 @@ LOCAL_PERSONAL = _schedule([('14000000','.006'),('50000000','.015'),('88000000',
     ('1000000000','.042'),(None,'.045')])
 
 
+def company_minimum_reference(restored_taxable_base, *, tax_year, regime,
+        annual_applicability_and_restoration_confirmed):
+    """Article132(1) national reference amount, not final tax or a new tax base.
+
+The supplied base restores the specified deductions/exclusions under Article132.
+SME graduation categories require established statutory eligibility and dates;
+they are not inferred from company age. Excluded cooperatives and short periods
+need separate treatment. Relief limits and post-comparison credits follow later.
+"""
+    if type(tax_year) is not int or tax_year != 2026:
+        raise ValueError('Only 2026 has been reviewed')
+    if annual_applicability_and_restoration_confirmed is not True:
+        raise ValueError('Annual applicability and statutory base restoration must be verified')
+    flat_rates = {'sme': '.07', 'graduated_first_three_years': '.08',
+                  'graduated_next_two_years': '.09'}
+    if regime == 'general':
+        schedule = _schedule([('10000000000','.10'),('100000000000','.12'),(None,'.17')])
+    elif isinstance(regime,str) and regime in flat_rates:
+        schedule = _schedule([(None,flat_rates[regime])])
+    else:
+        raise ValueError('Verified statutory minimum-tax regime required')
+    reference,bands = marginal_tax(restored_taxable_base,schedule)
+    return dict(currency='KRW',tax_year=tax_year,regime=regime,
+        minimum_reference_tax=reference,bands=bands,
+        sources=deepcopy(_SOURCES['corporate_minimum']),
+        stage='national_minimum_reference_before_relief_limitation_and_excluded_credits')
+
+
 def gross_taxes(national_taxable_base, local_taxable_base, *, tax_year, subject,
         article60_2_1_1_company, annual_standard_schedule_confirmed):
     """Apply annual standard schedules to verified bases, before tax adjustments.
