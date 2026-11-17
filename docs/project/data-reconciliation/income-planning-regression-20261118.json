@@ -1,0 +1,23 @@
+{
+  "checked_on": "2026-11-18",
+  "baseline_commit": "c214261",
+  "passed": 718,
+  "failed": 0,
+  "skipped": 0,
+  "scope_counts": {
+    "income_tax": 587,
+    "planning_and_optimizer": 131
+  },
+  "post_fix_artifact_and_api_passed": 18,
+  "new_regressions": "Deep JSON in both compressed archive and individual artifact reproduced uncaught RecursionError, then passed after mapping to controlled InvalidPlanningArtifacts.",
+  "golden_suite": {
+    "session": 11211,
+    "status": "running_not_verified",
+    "rows": 12,
+    "checks_requested": "Original golden assertions plus Checker.run_all for every result; no rules/database/runtime mutations during run."
+  },
+  "limits": [
+    "Local integration tests use fixtures/mocks and do not establish live cloud-source admission, deployment or all-business tax correctness.",
+    "Final corporate/personal country coverage and Zhihong-Wu transfer remain incomplete."
+  ]
+}

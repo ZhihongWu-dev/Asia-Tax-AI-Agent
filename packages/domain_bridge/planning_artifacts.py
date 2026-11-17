@@ -56,7 +56,7 @@ def decode(result):
                     total > 50_000_000):
                 raise InvalidPlanningArtifacts('artifact_file_mismatch')
         return contents
-    except (KeyError, TypeError, ValueError, OSError, EOFError, zlib.error, binascii.Error) as exc:
+    except (KeyError, TypeError, ValueError, RecursionError, OSError, EOFError, zlib.error, binascii.Error) as exc:
         raise InvalidPlanningArtifacts('invalid_planning_artifacts') from exc
 
 
@@ -76,5 +76,5 @@ def read_json(run, name):
         if not isinstance(content, dict) or content.get('version') != result['version']['inputs_sha256']:
             raise InvalidPlanningArtifacts('planning_artifact_version_mismatch')
         return content
-    except (KeyError, TypeError, ValueError) as exc:
+    except (KeyError, TypeError, ValueError, RecursionError) as exc:
         raise InvalidPlanningArtifacts('invalid_planning_artifacts') from exc

@@ -3,6 +3,7 @@ from copy import deepcopy
 import gzip
 from hashlib import sha256
 import json
+import sys
 
 import pytest
 
@@ -60,3 +61,22 @@ def test_duplicate_archive_keys_are_rejected_even_with_valid_payload_hash():
     result['artifact_payload'].update(uncompressed_bytes=len(raw),sha256=sha256(raw).hexdigest(),
                                       data=base64.b64encode(gzip.compress(raw)).decode())
     with pytest.raises(InvalidPlanningArtifacts): decode(result)
+
+
+@pytest.mark.parametrize('layer', ['archive', 'artifact'])
+def test_deep_json_is_rejected_with_a_controlled_artifact_error(layer):
+    run = fixture_run()
+    result = run['result']
+    depth = sys.getrecursionlimit() + 100
+    nested = '[' * depth + '0' + ']' * depth
+    if layer == 'archive':
+        raw = ('{"tax.json":' + nested + '}').encode()
+    else:
+        text = '{"version":"input-pin","nested":' + nested + '}'
+        encoded = text.encode()
+        result['artifacts']['tax.json'] = {'bytes':len(encoded),'sha256':sha256(encoded).hexdigest()}
+        raw = json.dumps({'tax.json':text}).encode()
+    result['artifact_payload'].update(uncompressed_bytes=len(raw),sha256=sha256(raw).hexdigest(),
+                                      data=base64.b64encode(gzip.compress(raw)).decode())
+    with pytest.raises(InvalidPlanningArtifacts):
+        read_json(run, 'tax.json')
