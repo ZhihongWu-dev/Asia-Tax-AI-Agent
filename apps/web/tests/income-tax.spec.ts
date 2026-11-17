@@ -355,3 +355,26 @@ for (const isNew of [false,true]) test(`Vietnam company ${isNew?'new':'existing'
   await openIncome(page);
   await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(isNew?'150000000':'105000000');
 });
+
+test('Vietnam personal securities saves result',async({page})=>{
+  const form=await openIncome(page);
+  for(const [name,value] of [['Taxpayer','individual'],['Filing jurisdiction','vn'],['Tax residency','resident'],['Income category','capital_gain'],['Income source jurisdiction','vn']]) await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Gross income','1000000000'],['Income description','Ordinary share sale'],['Claimed deductions (blank if unknown)','0'],['Carried losses (blank if unknown)','0']]) await form.getByLabel(name,{exact:true}).fill(value);
+  await form.getByRole('checkbox').check(); await form.getByRole('button',{name:'Save income-tax details'}).click();
+  const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await calc.getByLabel('Applicable regime').selectOption('vn_personal_transfer_2026');
+  await calc.getByLabel('1. Statutory recognition date',{exact:true}).fill('2026-07-01');
+  await calc.getByRole('combobox',{name:'1. Verified asset and cost classification',exact:true}).selectOption('capital_known');
+  await calc.getByLabel('1. Acquisition cost',{exact:true}).fill('600000000');
+  await calc.getByLabel('1. Reasonable transfer costs',{exact:true}).fill('10000000');
+  await calc.getByRole('combobox',{name:'1. Verified asset and cost classification',exact:true}).selectOption('security');
+  await expect(calc.getByLabel('1. Acquisition cost',{exact:true})).toHaveCount(0);
+  await calc.getByLabel('1. Tax prepaid for this transaction',{exact:true}).fill('0');
+  for(const name of ['1. Ordinary taxable sale; no deferred contribution or property-linked whole-business sale','1. Classification, statutory price, territorial scope and absence of exemption/treaty relief verified']) await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+  await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified domestic share sale, statutory value and no relief.');
+  await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
+  const report=page.getByRole('article',{name:'Saved calculation result'});
+  await expect(report.locator('dl > div').filter({hasText:'Tax for this assessment'}).locator('dd')).toHaveText(/^1000000(?:\.0+)?$/);
+  await expect(report.getByRole('link')).toHaveCount(2);
+  await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('1000000');
+});

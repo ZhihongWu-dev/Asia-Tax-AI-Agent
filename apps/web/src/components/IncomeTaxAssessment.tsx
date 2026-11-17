@@ -33,6 +33,15 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
         basis[field.key] = months;
       } else basis[field.key] = field.boolean ? values[field.key] === 'true' : field.integer ? Number(values[field.key]) : values[field.key];
     }
+    if (policy.id==='vn_personal_transfer_2026') {
+      basis.transfers=current.income_tax!.incomes.map((_item,n)=>{
+        const prefix=`transfer_${n}_`, method=values[prefix+'method'];
+        const line: Record<string,unknown>={income_index:n,asset_kind:method==='security'?'security':'capital_interest',cost_basis_established:method==='capital_known'};
+        for(const key of ['recognition_date','purchase_cost','transfer_costs','prepaid_tax','ordinary_sale_confirmed','classification_valuation_and_scope_verified']) line[key]=basis[prefix+key];
+        return line;
+      });
+      for(const key of Object.keys(basis)) if(key.startsWith('transfer_')) delete basis[key];
+    }
     const payload = JSON.stringify([current.revision,basis]);
     if (retry.current.payload !== payload) retry.current={payload,id:crypto.randomUUID()};
     setSaving(true);setError('');
@@ -65,7 +74,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
             {field.boolean || field.options ? <select required value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)}>
               <option value="">{say('待确认','Not confirmed')}</option>
               {field.boolean ? <><option value="true">{say('是','Yes')}</option><option value="false">{say('否','No')}</option></> : field.options!.map(([value,label])=><option key={value} value={value}>{label[index]}</option>)}
-            </select> : <input required type={field.monthsList ? 'text' : 'number'} min="0" step="any" value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)} />}
+            </select> : <input required type={field.date ? 'date' : field.monthsList ? 'text' : 'number'} min={field.date ? '2026-07-01' : '0'} max={field.date ? '2026-12-31' : undefined} step="any" value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)} />}
           </label>)}</div>
           <label>{say('税基调整和资格依据说明','Tax-basis adjustments and eligibility explanation')}<textarea required minLength={20} maxLength={4000} value={explanation} onChange={e=>{setExplanation(e.target.value);setConfirmed(false);}} /></label>
           <label className="income-tax-confirm"><input type="checkbox" required checked={confirmed} onChange={e=>setConfirmed(e.target.checked)} />{say('我已核对所选税制、计税基础及其与已保存资料的关系。','I have checked the regime, tax basis and reconciliation to the saved facts.')}</label>

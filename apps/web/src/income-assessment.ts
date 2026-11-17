@@ -5,7 +5,7 @@ export type IncomeRun = {
   result: Record<string, unknown>;
 };
 type Label = [string, string];
-export type BasisField = { key: string; label: Label; options?: [string, Label][]; boolean?: boolean; monthsList?: boolean; integer?: boolean; showWhen?: [string,string] };
+export type BasisField = { key: string; label: Label; options?: [string, Label][]; boolean?: boolean; monthsList?: boolean; date?: boolean; integer?: boolean; showWhen?: [string,string] };
 const money = (key: string, zh: string, en: string): BasisField => ({key, label:[zh,en]});
 const confirm = (key: string, zh: string, en: string): BasisField => ({key,label:[zh,en],boolean:true});
 const prepaid = money('prepaid_tax','归属本期的预缴税额','Prepaid tax for this period');
@@ -16,6 +16,26 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if (input.jurisdiction === 'vn' && !company && input.residency !== 'undetermined' && period === '2026-01-01/2026-12-31' && input.incomes.length && input.incomes.every(i=>i.category==='capital_gain')) {
+    const fields: BasisField[] = input.incomes.flatMap((_item,n)=>{
+      const prefix=`transfer_${n}_`, label=(zh:string,en:string):Label=>[`${n+1}. ${zh}`,`${n+1}. ${en}`];
+      return [
+        {key:prefix+'recognition_date',label:label('法定收入确认日期','Statutory recognition date'),date:true},
+        {key:prefix+'method',label:label('核定资产与成本分类','Verified asset and cost classification'),options:[
+          ['capital_known',['资本权益：成本已核实','Capital interest: costs established']],
+          ['capital_unknown',['资本权益：无法确定成本','Capital interest: costs cannot be established']],
+          ['security',['证券（含未上市股份公司股票）','Securities (including unlisted joint-stock shares)']]]},
+        {...money(prefix+'purchase_cost',...label('取得成本','Acquisition cost')),showWhen:[prefix+'method','capital_known']},
+        {...money(prefix+'transfer_costs',...label('合理转让费用','Reasonable transfer costs')),showWhen:[prefix+'method','capital_known']},
+        money(prefix+'prepaid_tax',...label('此笔交易已缴税额','Tax prepaid for this transaction')),
+        confirm(prefix+'ordinary_sale_confirmed',...label('确认普通应税出售，不含出资递延或房地产关联整体出售','Ordinary taxable sale; no deferred contribution or property-linked whole-business sale')),
+        confirm(prefix+'classification_valuation_and_scope_verified',...label('已核对分类、法定价格、地域范围及无免税或协定优惠','Classification, statutory price, territorial scope and absence of exemption/treaty relief verified')),
+      ] as BasisField[];
+    });
+    return [{id:'vn_personal_transfer_2026',label:['越南个人转让所得（2026年7月至12月）','Vietnam personal transfers (July–December 2026)'],
+      notice:['逐笔使用已保存的转让价款，不是净收益。取得成本和转让费用合计必须等于已保存扣除额；各笔亏损不能互抵。先剔除分期利息，核对法定估价与确认日期。出资、撤资、解散、衍生品、房地产关联整体出售及优惠另行处理。',
+      'Each saved amount must be statutory transfer proceeds, not net gain. Total acquisition and transfer costs must match saved deductions; losses cannot offset other transactions. Exclude installment interest and verify statutory valuation and recognition dates. Contributions, withdrawals, dissolution, derivatives, property-linked whole-business sales and relief need separate treatment.'],fields}];
+  }
   if (input.jurisdiction === 'vn' && company && input.residency === 'resident' && period === '2026-01-01/2026-12-31') {
     return [{id:'vn_company_2026',label:['越南普通企业所得税（2026）','Vietnam ordinary company tax (2026)'],
       notice:['仅限越南设立企业的境内普通所得。须先核定税基、亏损及纳税调整，排除第23(9)条所得、特殊行业及优惠税率。已保存明细须覆盖未扣收入减项的销售服务、财务和其他法定收入。本期收入决定年度减税；上期收入及经营月份决定普通税率和小额收入免税，新设企业使用本期实际收入。两项关联企业排除条件须分别核对。其他优惠先扣，年度减税后扣，预缴税款最后抵减；结果尚未进行申报取整。',
