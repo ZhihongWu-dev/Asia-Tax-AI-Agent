@@ -410,3 +410,9 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - Registered official Decree252/2026 PDF from the government gazette attachment, SHA256 0ae4bf867af790bab3290df5c3b326a1070500c570a7a78f5cf152f1bf4da390. Native extraction/trial slicing produced428 clauses; reviewed Articles24,26,74,75 alongside Law108 Articles16,52,53.
 - Added the statutory0.03 percent/day parameter for both subjects from1July2026 with an exact Article16(2) quotation. Targeted check_params passed. Scope notes retain delegated adjustments, transition, ordinary day-after-due through day-before-payment, distinct clawback timing, offsets, suspensions and exceptions. No claim of complete penalty engine or administrative-fine coverage.
 - Official-source amendment search did not establish a later rate change; future-date evaluation still needs version review. Existing source parser reused; CPython GitHub date/Decimal references consulted for subsequent calculation design, no external code adopted. Full library/coverage rerun pending. No remote push.
+
+### Database regression during full local rebuild
+
+- Full database regression suite completed exit0:35 tests passed in9.72s against4de76cf. This verifies implemented extraction/reconciliation behavior, not full legal coverage.
+- Full rebuild session41466 remains live. Legacy Office conversion completed and generated text files advanced through multiple jurisdictions; CPU usage increased. Do not start a duplicate build. Prior SQLite/clause/files/status outputs are backed up in before-vietnam-index-20261117 under the external audit folder.
+- Final rebuild counts and SQLite integrity/source closure remain unverified until the existing process exits. No generated outputs staged and no remote push.

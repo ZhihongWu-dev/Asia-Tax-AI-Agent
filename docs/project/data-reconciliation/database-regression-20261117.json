@@ -1,0 +1,11 @@
+{
+  "commit_under_test": "4de76cf56b428c435ddba491f71dd0a9113c80db",
+  "command": "python -m pytest tests/database -q",
+  "exit_code": 0,
+  "passed": 35,
+  "elapsed_seconds": 9.72,
+  "scope": "Existing database regression suite; independent of full-library coverage acceptance",
+  "build_session": 41466,
+  "build_status": "running_last_poll_confirmed_live",
+  "backup_directory": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/before-vietnam-index-20261117"
+}
