@@ -31,7 +31,14 @@ export function policies(input: IncomeTaxInput): IncomePolicy[] {
         {...money('total_interest_due','核定累计应计利息（含已缴部分，无则填0）','Verified cumulative interest including amounts already paid (0 if none)'),showWhen:['settlement_requested','true']},
         {...money('total_fee_due','核定累计应计费用（含已缴部分，无则填0）','Verified cumulative fees including amounts already paid (0 if none)'),showWhen:['settlement_requested','true']},
         {...confirm('settlement_verified','已核对税款归属及凭证、累计利息费用和缴款抵扣顺序；无先前退税、更新申报、ESOP递延、罚款或额外追缴','Credits, evidence, cumulative interest/fees and payment allocation verified; no prior refunds, updated return, ESOP deferral, penalties or additional demands'),showWhen:['settlement_requested','true']}]};
-    if(company)return [primary];
+    if(company)return [primary,{...primary,id:'in_company_normal_ty2026_27',
+      label:['印度境内企业普通税制与MAT（TY 2026–27）','India domestic company normal tax and MAT (TY 2026–27)'],
+      notice:['适用于2026年4月至2027年3月、未选择第200／201条的境内普通企业。25%／30%税率依据2024–25年法定营业额／总收入是否超过40亿卢比判断，不使用当前收入。普通应税所得与第206条调整后账面利润须分别核定，不能直接以会计净利润代替MAT税基；无正账面利润填0。分别计算普通税与14% MAT的附加税、边界减免及健康教育费后取高。该普通税制不抵扣历史MAT抵免，2026年起缴纳MAT不新增抵免。不含IFSC、寿险、航运、特殊税率、境外所得或其他税额调整。历史期间不存在或资料未知时不能随意填0取得25%税率，须先核实分类。',
+        'Ordinary domestic companies outside sections 200/201 for April 2026–March 2027. The 25%/30% rate depends on statutory turnover/gross receipts in 2024–25 against INR4 billion, not current income. Establish ordinary taxable income and section 206 adjusted book profit separately; accounting net profit is not the MAT base. Enter 0 if there is no positive adjusted book profit. Compare normal tax and 14% MAT after their respective surcharge, marginal relief and cess. This ordinary regime does not use legacy MAT credit; MAT paid from April 2026 creates no new credit. Excludes IFSC, life insurance, shipping, special-rate/foreign income and other tax adjustments. An absent or unknown historical period must not be entered as zero to obtain 25%; verify classification first.'],
+      fields:[...primary.fields,
+        money('turnover_2024_25','核定2024–25年法定营业额／总收入','Verified statutory turnover/gross receipts for 2024–25'),
+        money('mat_book_profit_before_rounding','核定取整前MAT正账面利润（无则填0）','Verified positive MAT book profit before rounding (0 if none)'),
+        confirm('turnover_and_mat_adjustments_verified','已核实历史收入分类、MAT调整和普通税制适用条件','Historical turnover classification, MAT adjustments and ordinary regime verified')]}];
     return [primary,{...primary,id:'in_personal_old_ty2026_27',
       label:['印度居民个人旧税制（TY 2026–27）','India resident individual old regime (TY 2026–27)'],
       notice:['适用于2026年4月至2027年3月的居民个人普通所得。须核实第202(4)条旧税制选择有效，经营所得须核对选择期限、历史选择和撤回限制。年龄按本税年内达到的最高年龄档；不能把60岁与80岁档重叠使用。税基扣除须按旧税制重新核定并与保存资料一致，不能沿用新税制扣除。此入口要求已核实不适用第206(2)条AMT，且无AMT结转抵免。计算含附加税和健康教育费，结算须另选。不含特殊税率所得、农业合并、境外所得或抵免、IFSC、其他税额抵免及调整。',
@@ -235,6 +242,12 @@ export const resultLabels: Record<string, Label> = {
   total_fee_due:['累计应计费用','Cumulative fees due'],
   total_payments:['可用已缴款合计','Total credited payments'],
   refund_due:['预计应退金额','Calculated refund due'],
+  normal_company_rate:['普通企业税率','Normal company rate'],
+  mat_book_profit:['MAT调整后账面利润','Adjusted MAT book profit'],
+  normal_tax_including_surcharge_cess:['普通税额（含附加税与教育费）','Normal tax including surcharge and cess'],
+  mat_tax_including_surcharge_cess:['MAT税额（含附加税与教育费）','MAT including surcharge and cess'],
+  legacy_mat_credit_used:['使用历史MAT抵免','Legacy MAT credit used'],
+  new_mat_credit:['本期新增MAT抵免','New MAT credit'],
   net_income_before_ptkp:['PTKP前净所得','Net income before PTKP'],ptkp_allowance:['核定PTKP免税额','Verified PTKP allowance'],
   article31e_gross_receipts:['第31E条收入总额','Article 31E gross receipts'],
   article31e_eligible_base:['第31E条优惠税基','Article 31E reduced-rate base'],article31e_other_base:['普通税率税基','Ordinary-rate base'],

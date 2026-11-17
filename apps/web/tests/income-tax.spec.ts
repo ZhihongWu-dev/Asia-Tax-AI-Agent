@@ -91,8 +91,8 @@ for (const scenario of [
   await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(scenario.balance);
 });
 
-for(const kind of ['individual','company','individual_old']) for(const settlement of [false,true]) test(`India ${kind} TY2026 ${settlement?'settlement':'annual liability'} persists`,async({page})=>{
-  const old=kind==='individual_old',subject=old?'individual':kind;
+for(const kind of ['individual','company','individual_old','company_normal']) for(const settlement of [false,true]) test(`India ${kind} TY2026 ${settlement?'settlement':'annual liability'} persists`,async({page})=>{
+  const old=kind==='individual_old',normal=kind==='company_normal',subject=old?'individual':normal?'company':kind;
   const form=await openIncome(page);
   await form.getByRole('combobox',{name:'Taxpayer',exact:true}).selectOption(subject);
   await form.getByRole('combobox',{name:'Filing jurisdiction',exact:true}).selectOption('in');
@@ -109,7 +109,12 @@ for(const kind of ['individual','company','individual_old']) for(const settlemen
   await form.getByRole('button',{name:'Save income-tax details'}).click();
   await expect(form.getByRole('status')).toHaveText('Income-tax details saved.');
   const assessment=page.getByRole('region',{name:'Income-tax calculation',exact:true});
-  await assessment.getByRole('combobox',{name:'Applicable regime',exact:true}).selectOption(old?'in_personal_old_ty2026_27':subject==='individual'?'in_personal_new_ty2026_27':'in_company_section200_ty2026_27');
+  await assessment.getByRole('combobox',{name:'Applicable regime',exact:true}).selectOption(normal?'in_company_normal_ty2026_27':old?'in_personal_old_ty2026_27':subject==='individual'?'in_personal_new_ty2026_27':'in_company_section200_ty2026_27');
+  if(normal){
+    await assessment.getByLabel('Verified statutory turnover/gross receipts for 2024–25',{exact:true}).fill('4000000000');
+    await assessment.getByLabel('Verified positive MAT book profit before rounding (0 if none)',{exact:true}).fill('4000000');
+    await assessment.getByRole('combobox',{name:'Historical turnover classification, MAT adjustments and ordinary regime verified',exact:true}).selectOption('true');
+  }
   if(old){
     await assessment.getByRole('combobox',{name:'Highest age band attained during this tax year',exact:true}).selectOption('60_to79');
     await assessment.getByRole('combobox',{name:'AMT non-applicability and absence of carried AMT credit verified',exact:true}).selectOption('true');
@@ -128,9 +133,10 @@ for(const kind of ['individual','company','individual_old']) for(const settlemen
   await assessment.getByRole('checkbox').check();
   await assessment.getByRole('button',{name:'Calculate and save result'}).click();
   const result=assessment.getByRole('article',{name:'Saved calculation result'});
-  await expect(result).toContainText(old?'301600':subject==='individual'?'124800':'402690');
+  await expect(result).toContainText(normal?'582400':old?'301600':subject==='individual'?'124800':'402690');
+  if(normal)await expect(result).toContainText('applied MAT.');
   if(settlement){
-    await expect(result).toContainText(old?'-8400':subject==='individual'?'-5200':'-7310');
+    await expect(result).toContainText(normal?'172400':old?'-8400':subject==='individual'?'-5200':'-7310');
     await expect(result).toContainText('calculated refund, not approval');
   }else await expect(result).toContainText('before payment credits, interest and penalties');
   await expect(result.getByRole('link')).toHaveCount(2);

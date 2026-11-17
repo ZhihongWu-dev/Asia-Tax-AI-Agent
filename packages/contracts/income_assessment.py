@@ -228,6 +228,13 @@ class INCompany(INBasis):
     policy: Literal['in_company_section200_ty2026_27']
 
 
-Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany |
+class INNormalCompany(INBasis):
+    policy: Literal['in_company_normal_ty2026_27']
+    turnover_2024_25: Money
+    mat_book_profit_before_rounding: Money
+    turnover_and_mat_adjustments_verified: StrictBool
+
+
+Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany |
                        HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
                        Field(discriminator='policy')]
