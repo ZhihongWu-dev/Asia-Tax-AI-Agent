@@ -1,5 +1,5 @@
 {
-  "status": "registered_in_isolated_catalog_pending_scoped_extraction",
+  "status": "isolated_source_registration_scoped_validation_passed",
   "reviewed_on": "2026-11-18",
   "sources": [
     {
@@ -44,5 +44,12 @@
     "file": "packages/income_tax/thailand_remittances.py",
     "tests_passed": 18,
     "workflow_connected": false
-  }
+  },
+  "scoped_validation": {
+    "exit_code": 0,
+    "errors": 0,
+    "gaps": 0,
+    "log": "isolated-rebuild-20261118/th-remittance-check.log"
+  },
+  "limitation": "Scoped checks do not promote full generated CSV/SQLite or connect the remittance component to the business workflow."
 }

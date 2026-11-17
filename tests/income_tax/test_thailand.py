@@ -64,7 +64,7 @@ def test_original_source_hashes():
 
 def test_adapter_derives_gross_excluding_employment_and_rejects_unsupported_inputs():
     data=dict(subject='individual',jurisdiction='th',period_start='2026-01-01',period_end='2026-12-31',
-        currency='THB',residency='resident',claimed_deductions='0',carried_losses='0',facts_confirmed=True,
+        currency='THB',residency='resident',claimed_deductions='2850000',carried_losses='0',facts_confirmed=True,
         incomes=[dict(category='business',source_jurisdiction='th',gross_amount='1000000',description='Business receipts'),
                  dict(category='employment',source_jurisdiction='th',gross_amount='2000000',description='Employment receipts')])
     raw=dict(policy='th_resident_2026',net_taxable_income='150000',assessable_income_classification_confirmed=True,
@@ -75,10 +75,13 @@ def test_adapter_derives_gross_excluding_employment_and_rejects_unsupported_inpu
     assert Decimal(result['nonemployment_assessable_gross'])==1000000
     assert Decimal(result['final_tax'])==0
     data['incomes'][0]['gross_amount']='1000000.01'
+    data['claimed_deductions']='2850000.01'
     assert Decimal(calculate(IncomeTaxCase(**data),adapter.validate_python(raw))['final_tax'])==Decimal('5000.00005')
     for changes in [dict(assessable_income_classification_confirmed=False),dict(net_taxable_income='4000000')]:
         with pytest.raises(ValueError): calculate(IncomeTaxCase(**data),adapter.validate_python({**raw,**changes}))
     for changes in [dict(residency='nonresident'),dict(subject='company')]:
+        with pytest.raises(ValueError): calculate(IncomeTaxCase(**{**data,**changes}),adapter.validate_python(raw))
+    for changes in [dict(claimed_deductions='0'),dict(claimed_deductions='2849999'),dict(carried_losses='1')]:
         with pytest.raises(ValueError): calculate(IncomeTaxCase(**{**data,**changes}),adapter.validate_python(raw))
     for category,source in [('dividend','th'),('interest','th'),('business','sg')]:
         data['incomes'][0].update(category=category,source_jurisdiction=source)

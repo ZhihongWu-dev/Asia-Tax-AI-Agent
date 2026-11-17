@@ -505,7 +505,7 @@ for (const subject of ['company','individual'] as const) {
     await form.getByRole('combobox',{name:'Income category',exact:true}).selectOption('business');
     await form.getByLabel('Gross income',{exact:true}).fill('4000000');
     await form.getByLabel('Income description',{exact:true}).fill('Domestic ordinary business income');
-    await form.getByLabel('Claimed deductions (blank if unknown)',{exact:true}).fill('0');
+    await form.getByLabel('Claimed deductions (blank if unknown)',{exact:true}).fill(subject==='company'?'0':'3850000');
     await form.getByLabel('Carried losses (blank if unknown)',{exact:true}).fill('0');
     await form.getByRole('checkbox').check();
     await form.getByRole('button',{name:'Save income-tax details'}).click();

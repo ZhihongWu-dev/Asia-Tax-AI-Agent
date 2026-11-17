@@ -346,14 +346,18 @@ def calculate(case: IncomeTaxCase, basis):
         if args.pop('assessable_income_classification_confirmed') is not True:
             raise ValueError('Section40 assessable income classification must be confirmed')
         allowed={'employment','business','service_remuneration','author_remuneration','royalty','rental'}
-        if any(i.category not in allowed or i.source_jurisdiction!='th' for i in case.incomes):
+        if any(i.category not in allowed or i.source_jurisdiction!='th' or
+               i.foreign_tax_paid not in (None,0) for i in case.incomes):
             raise ValueError('Separate-rate or foreign-source income requires a separate workflow')
+        if case.carried_losses != 0:
+            raise ValueError('Thai ordinary personal policy does not establish carried-loss eligibility')
         with localcontext() as ctx:
             ctx.prec=40
             nonemployment=sum((i.gross_amount for i in case.incomes if i.category!='employment'),Decimal('0'))
             total=sum((i.gross_amount for i in case.incomes),Decimal('0'))
-        if basis.net_taxable_income>total:
-            raise ValueError('Net taxable income exceeds saved assessable gross income')
+            reconciled=max(Decimal('0'),total-case.claimed_deductions)
+        if basis.net_taxable_income!=reconciled:
+            raise ValueError('Thai net taxable income must reconcile to saved income and verified deductions')
         result=thailand.resident_individual_tax(tax_year=2026,nonemployment_assessable_gross=nonemployment,**args)
     else:
         raise ValueError('Unsupported policy')
