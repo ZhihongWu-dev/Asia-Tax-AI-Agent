@@ -677,6 +677,29 @@ def slice_hk_bilingual_treaty(doc_id, text):
     if not any(label == '(Chinese Translation)' for _, label in markers):
         return [], 'none'
     expected = ['Part 1', '(Chinese Translation)', 'Part 2', '(Chinese Translation)']
+    note_schedule = ['Part 1', 'Part 2', 'Part 1', '(Chinese Translation)',
+                     'Part 2', '(Chinese Translation)']
+    if [label for _, label in markers] == note_schedule:
+        # Some orders contain an English agreement/protocol followed by a
+        # separate bilingual exchange of notes, not a translated agreement.
+        positions = [i for i, _ in markers]
+        bounds = [0] + positions + [len(lines)]
+        names = ['order', 'agreement.en', 'protocol', 'note.en', 'note.zh',
+                 'reply.en', 'reply.zh']
+        blocks = ['\n'.join(lines[bounds[i]:bounds[i + 1]]).strip()
+                  for i in range(len(names))]
+        if ('Schedule 2' not in blocks[2] or 'Note Dated' not in blocks[3]
+                or 'Note Dated' not in blocks[5] or any(not block for block in blocks)):
+            raise ValueError('Unrecognized bilingual note schedule: ' + doc_id)
+        out = [dict(cite_id=doc_id + '#' + name, doc_id=doc_id, kind='section',
+                    label=name, parent='', text=block) for name, block in zip(names, blocks)]
+        children, _ = slice_en_treaty(doc_id, blocks[1])
+        if sum(c['kind'] == 'article' for c in children) < 3:
+            raise ValueError('Missing treaty articles before bilingual notes: ' + doc_id)
+        for child in children:
+            if not child['parent']:
+                child['parent'] = doc_id + '#agreement.en'
+        return out + children, 'hk_treaty_bilingual_notes'
     if [label for _, label in markers] != expected:
         raise ValueError('Unrecognized bilingual treaty schedule boundaries: ' + doc_id)
     positions = [i for i, _ in markers]

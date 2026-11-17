@@ -65,3 +65,32 @@ def test_ambiguous_or_mismatched_sections_fail_instead_of_merging(text):
 
 def test_ordinary_english_treaty_is_not_intercepted():
     assert build.slice_hk_bilingual_treaty('treaty.hk-example', TEXT.split('(Chinese Translation)')[0]) == ([], 'none')
+
+
+def test_english_agreement_with_separate_bilingual_notes_preserves_boundaries():
+    text = TEXT.split('(Chinese Translation)')[0] + '''Part 2
+Protocol provisions.
+Schedule 2
+Part 1
+Note Dated 10 December 2014 from Consul-General
+Exchange terms.
+(Chinese Translation)
+來照中文。
+Part 2
+Note Dated 10 December 2014 from Secretary
+Reply terms.
+(Chinese Translation)
+覆照中文。
+'''
+    row = dict(id='treaty.hk-jp.example', type='treaty', jur='hk-jp', real_kind='rtf')
+    clauses, mode = build.slice_doc(row, text, [])
+    assert mode == 'hk_treaty_bilingual_notes'
+    by_id = {c['cite_id'].split('#')[1]: c for c in clauses}
+    assert 'Protocol' not in by_id['3']['text']
+    assert 'Exchange terms' in by_id['note.en']['text']
+    assert 'Reply terms' in by_id['reply.en']['text']
+    sections = [c['text'] for c in clauses if c['kind'] == 'section']
+    assert ''.join(''.join(sections).split()) == ''.join(text.split())
+    assert len(by_id) == len(clauses)
+    with pytest.raises(ValueError, match='note schedule'):
+        build.slice_hk_bilingual_treaty(row['id'], text.replace('Schedule 2', 'Unknown appendix'))

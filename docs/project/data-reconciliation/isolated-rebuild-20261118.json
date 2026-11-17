@@ -12,10 +12,22 @@
   "source_unchanged_after_copy": true,
   "copied_files": 1134,
   "purpose": "Validate committed parser repairs without mutating live optimizer inputs. Not promoted to runtime.",
-  "status": "isolated_rebuild_running",
+  "status": "first_attempt_failed_parser_repaired_retry_pending",
   "tool_session": 90451,
   "source_commit": "a20dbf3dad319941b367194ac17eb63d08d6c5d9",
-  "build_script_sha256": "39d8b1c223630b88a2f0b5f633f4bf7ccff540250c33387c269b45930ace4c5f",
+  "build_script_sha256": "de9eb15ead33b7776c5faf2ad079850f249e7dbdf25ee8d800d4853850c89457",
   "live_optimizer_pid": 16760,
-  "live_optimizer_inputs_promoted": false
+  "live_optimizer_inputs_promoted": false,
+  "first_attempt_exit_code": 1,
+  "first_attempt_error": "Unrecognized bilingual treaty schedule boundaries: treaty.hk-jp.2010.en",
+  "repair": "Separate English agreement/protocol from a later bilingual exchange of notes.",
+  "real_source_verification": {
+    "clauses": 132,
+    "agreement_articles": 30,
+    "all_nonwhitespace_source_characters_preserved": true
+  },
+  "database_tests": {
+    "passed": 70,
+    "seconds": 9.61
+  }
 }
