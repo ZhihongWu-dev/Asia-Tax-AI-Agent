@@ -118,3 +118,26 @@ def test_duplicate_catalog_key_is_not_silently_overwritten(monkeypatch):
     fixture_reader(monkeypatch, tables={'param': [{'param_id': 'rate'}, {'param_id': 'rate'}]})
     with pytest.raises(ValueError, match='planning_catalog_duplicate'):
         sources.read_planning_bundle(['cn.rule#1'], expected_version=PIN)
+
+
+@pytest.mark.parametrize('table,key', [('param', 'param_id'), ('decision', 'id')])
+@pytest.mark.parametrize('state', ['present', 'missing', 'blocked'])
+def test_factor_dependencies_are_required(monkeypatch, table, key, state):
+    tables = {table: [{key: 'entry', 'cite_id': 'cn.rule#1',
+                       'factors_cite': ' cn.factor#1 ; cn.factor#1; '}]}
+    rows = [{'cite_id': 'cn.rule#1', 'passage': 'rule'}]
+    reviews = []
+    if state == 'present':
+        rows.append({'cite_id': 'cn.factor#1', 'passage': 'complete factor text'})
+    if state == 'blocked':
+        reviews.append(dict(cite_id='cn.factor#1', difference='different_text',
+                            review_status='candidate', reviewed_at=None))
+    statements = fixture_reader(monkeypatch, tables=tables, rows=rows, reviews=reviews)
+    if state == 'present':
+        bundle = sources.read_planning_bundle(['cn.rule#1'], expected_version=PIN)
+        assert bundle['sources']['cn.factor#1']['passage'] == 'complete factor text'
+        assert statements[-1][1]['ids'] == ['cn.factor#1', 'cn.rule#1']
+    else:
+        with pytest.raises(sources.PlanningSourcesUnavailable) as exc:
+            sources.read_planning_bundle(['cn.rule#1'], expected_version=PIN)
+        assert getattr(exc.value, state) == ('cn.factor#1',)

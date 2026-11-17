@@ -32,7 +32,7 @@ def read_planning_bundle(citations, *, expected_version):
     """Materialize the cloud catalog and its source closure in one transaction.
 
     ``citations`` supplies rule/predicate/decision references. Every parameter
-    and library-decision citation is included automatically, including legacy
+    and library-decision citation (including factor citations) is included automatically, including legacy
     rows; callers cannot silently omit a dependency by passing a shorter list.
     Catalog rows retain all columns. Sources include admitted main overlays;
     base catalog documents are not overwritten with overlay metadata.
@@ -65,7 +65,8 @@ def _read(citations, *, expected_version, include_catalog):
                     raise ValueError('planning_catalog_duplicate')
                 tables[name] = table
             for row in tables['param'] + tables['decision']:
-                requested.update(c.strip() for c in row.get('cite_id', '').split(';') if c.strip())
+                for field in ('cite_id', 'factors_cite'):
+                    requested.update(c.strip() for c in row.get(field, '').split(';') if c.strip())
             if len(requested) > 1000:
                 raise ValueError('planning_dependency_limit')
         blocked = {r['cite_id'] for r in reviews
