@@ -26,6 +26,14 @@
     "validation": "Reject duplicate identifiers, malformed lots, prior-year noncarry relief, future origins, unverified eligibility and base-changing incentives",
     "result": "Used/unused per lot and national tax after reliefs; unused amounts are not automatically declared eligible carryforwards",
     "tests": "88 Korean tests passed in1.32s",
-    "remaining": ["Integrate with established gross tax and minimum reference", "Implement base-changing incentives and specific relief eligibility/caps", "Additional taxes, penalties, prior payments, local assessment and installments", "Corporate and personal API/UI and actual business acceptance"]
+    "national_pipeline": {
+      "module": "packages/income_tax/korea_company.py",
+      "verification": "33 tests across national settlement and relief allocation passed in0.68s",
+      "behavior": "Connects rounded base, national gross schedule, minimum reference, relief ordering, verified penalties/recapture and the three Article64 payment credit categories, then final cash rounding. Does not label the national result as combined national/local final tax.",
+      "official_payment_basis": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032167815",
+      "local_payment_basis_reviewed": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1029491055",
+      "limitations": "Annual ordinary national base without base-changing incentives; independently verified eligibility/caps/expiry and additions/payment credits. No local assessment, other separately imposed taxes or installment allocation."
+    },
+    "remaining": ["Implement base-changing incentives and specific relief eligibility/caps", "Separately imposed taxes, local assessment and installments", "Corporate and personal API/UI and actual business acceptance"]
   }
 }
