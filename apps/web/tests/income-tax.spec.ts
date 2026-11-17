@@ -310,3 +310,48 @@ test('Vietnam employment saves dependent deductions and official source', async 
   await openIncome(page);
   await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('-49960000');
 });
+
+for (const isNew of [false,true]) test(`Vietnam company ${isNew?'new':'existing'} uses conditional revenue facts`, async ({page})=>{
+  const form=await openIncome(page);
+  for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','vn'],['Tax residency','resident'],['Income category','business']])
+    await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Gross income','10000000000'],['Income description','All ordinary domestic statutory revenue'],['Claimed deductions (blank if unknown)','9000000000'],['Carried losses (blank if unknown)','0']])
+    await form.getByLabel(name,{exact:true}).fill(value);
+  await form.getByRole('checkbox').check();
+  await form.getByRole('button',{name:'Save income-tax details'}).click();
+  const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await calc.getByLabel('Applicable regime').selectOption('vn_company_2026');
+  await calc.getByLabel('Established taxable income',{exact:true}).fill('1000000000');
+  await calc.getByRole('combobox',{name:'Enterprise established in Vietnam',exact:true}).selectOption('true');
+  const newField=calc.getByRole('combobox',{name:'Enterprise newly established in this period',exact:true});
+  await newField.selectOption('false');
+  await calc.getByLabel('Complete prior-period statutory revenue',{exact:true}).fill('4000000000');
+  await calc.getByRole('combobox',{name:'Prior-period statutory active months',exact:true}).selectOption('12');
+  if(isNew) {
+    await newField.selectOption('true');
+    await expect(calc.getByLabel('Complete prior-period statutory revenue',{exact:true})).toHaveCount(0);
+  }
+  await calc.getByRole('combobox',{name:'Related enterprise disqualifies small-revenue exemption',exact:true}).selectOption('false');
+  await calc.getByRole('combobox',{name:'Related enterprise disqualifies reduced rates',exact:true}).selectOption('false');
+  const split=calc.getByRole('combobox',{name:'Enterprise formed by a split after the resolution',exact:true});
+  await split.selectOption('true');
+  await calc.getByLabel('Combined statutory revenue of all split entities (including this enterprise)',{exact:true}).fill('11000000000');
+  if(!isNew) {
+    await split.selectOption('false');
+    await expect(calc.getByLabel('Combined statutory revenue of all split entities (including this enterprise)',{exact:true})).toHaveCount(0);
+  }
+  await calc.getByLabel('Verified other incentives before annual relief',{exact:true}).fill('20000000');
+  await calc.getByLabel('Prepaid tax for this period',{exact:true}).fill('150000000');
+  for(const name of ['Ordinary domestic income and all exclusions verified','Complete statutory revenue scope and periods verified','Other incentive amount and eligibility verified'])
+    await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+  await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified ordinary domestic scope, complete revenues, prior period, relationship exclusions and separately established incentives.');
+  await calc.getByRole('checkbox').check();
+  await calc.getByRole('button',{name:'Calculate and save result'}).click();
+  const report=page.getByRole('article',{name:'Saved calculation result'});
+  await expect(report.locator('dl > div').filter({hasText:'Tax for this assessment'}).locator('dd')).toHaveText(isNew ? /^150000000(?:\.0+)?$/ : /^105000000(?:\.0+)?$/);
+  if(!isNew) await expect(report).toContainText('-45000000');
+  await expect(report.getByRole('link')).toHaveCount(5);
+  await expect(report).toContainText('Annual tax reduction');
+  await openIncome(page);
+  await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(isNew?'150000000':'105000000');
+});

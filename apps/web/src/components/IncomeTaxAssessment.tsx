@@ -23,6 +23,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
     event.preventDefault(); if (!policy) return;
     const basis: Record<string,unknown> = {policy:policy.id,basis_confirmed:confirmed,basis_explanation:explanation};
     for (const field of policy.fields) {
+      if (field.showWhen && values[field.showWhen[0]] !== field.showWhen[1]) {basis[field.key]=null;continue;}
       if (field.monthsList) {
         const raw = values[field.key] || '';
         const months = raw.split(',').map(v=>Number(v.trim()));
@@ -30,7 +31,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
           setError(say('每名受抚养人的月份须为0至12的整数，用逗号分隔。','Enter comma-separated whole months from 0 to 12 for each dependent.')); return;
         }
         basis[field.key] = months;
-      } else basis[field.key] = field.boolean ? values[field.key] === 'true' : values[field.key];
+      } else basis[field.key] = field.boolean ? values[field.key] === 'true' : field.integer ? Number(values[field.key]) : values[field.key];
     }
     const payload = JSON.stringify([current.revision,basis]);
     if (retry.current.payload !== payload) retry.current={payload,id:crypto.randomUUID()};
@@ -60,7 +61,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
           {options.map(p=><option key={p.id} value={p.id}>{p.label[index]}</option>)}
         </select></label>
         {policy && <><p>{policy.notice[index]}</p><p>{say('金额币种：','Currency: ')}{current.income_tax.currency}</p>
-          <div className="facts-field-grid">{policy.fields.map(field=><label key={field.key}>{field.label[index]}
+          <div className="facts-field-grid">{policy.fields.filter(field=>!field.showWhen || values[field.showWhen[0]]===field.showWhen[1]).map(field=><label key={field.key}>{field.label[index]}
             {field.boolean || field.options ? <select required value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)}>
               <option value="">{say('待确认','Not confirmed')}</option>
               {field.boolean ? <><option value="true">{say('是','Yes')}</option><option value="false">{say('否','No')}</option></> : field.options!.map(([value,label])=><option key={value} value={value}>{label[index]}</option>)}

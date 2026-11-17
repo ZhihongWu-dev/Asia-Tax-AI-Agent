@@ -5,7 +5,7 @@ export type IncomeRun = {
   result: Record<string, unknown>;
 };
 type Label = [string, string];
-export type BasisField = { key: string; label: Label; options?: [string, Label][]; boolean?: boolean; monthsList?: boolean };
+export type BasisField = { key: string; label: Label; options?: [string, Label][]; boolean?: boolean; monthsList?: boolean; integer?: boolean; showWhen?: [string,string] };
 const money = (key: string, zh: string, en: string): BasisField => ({key, label:[zh,en]});
 const confirm = (key: string, zh: string, en: string): BasisField => ({key,label:[zh,en],boolean:true});
 const prepaid = money('prepaid_tax','归属本期的预缴税额','Prepaid tax for this period');
@@ -16,6 +16,24 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if (input.jurisdiction === 'vn' && company && input.residency === 'resident' && period === '2026-01-01/2026-12-31') {
+    return [{id:'vn_company_2026',label:['越南普通企业所得税（2026）','Vietnam ordinary company tax (2026)'],
+      notice:['仅限越南设立企业的境内普通所得。须先核定税基、亏损及纳税调整，排除第23(9)条所得、特殊行业及优惠税率。已保存明细须覆盖未扣收入减项的销售服务、财务和其他法定收入。本期收入决定年度减税；上期收入及经营月份决定普通税率和小额收入免税，新设企业使用本期实际收入。两项关联企业排除条件须分别核对。其他优惠先扣，年度减税后扣，预缴税款最后抵减；结果尚未进行申报取整。',
+        'Vietnam-established enterprises with ordinary domestic income only. Establish the tax base after losses and adjustments, excluding article 23(9) income, special industries and preferential rates. Saved receipts must include sales/services before revenue deductions, financial and other statutory revenue. Current revenue determines annual relief; prior revenue and active months determine ordinary rates and small-revenue exemption, except new enterprises use current actual revenue. Check the two related-enterprise exclusions separately. Other incentives precede annual relief; prepayments follow. Before return rounding.'],
+      fields:[money('taxable_income','核定应税所得额','Established taxable income'),
+        confirm('vietnam_established','企业在越南设立','Enterprise established in Vietnam'),
+        confirm('new_in_current_period','企业在本期新设立','Enterprise newly established in this period'),
+        {...money('previous_period_revenue','上期完整法定收入','Complete prior-period statutory revenue'),showWhen:['new_in_current_period','false']},
+        {key:'previous_active_months',label:['上期法定经营月份','Prior-period statutory active months'],integer:true,showWhen:['new_in_current_period','false'],options:Array.from({length:12},(_,i)=>[String(i+1),[String(i+1),String(i+1)]])},
+        confirm('exemption_related_enterprise_disqualified','存在不符合小额收入免税条件的关联企业','Related enterprise disqualifies small-revenue exemption'),
+        confirm('reduced_rate_related_enterprise_disqualified','存在不符合15%或17%税率条件的关联企业','Related enterprise disqualifies reduced rates'),
+        confirm('formed_by_split_after_resolution','属于决议后分拆设立的企业','Enterprise formed by a split after the resolution'),
+        {...money('all_split_entities_revenue','全部分拆企业合计法定收入（含本企业）','Combined statutory revenue of all split entities (including this enterprise)'),showWhen:['formed_by_split_after_resolution','true']},
+        money('other_incentive_reduction','核定其他税额优惠（年度减税前）','Verified other incentives before annual relief'),prepaid,
+        confirm('ordinary_domestic_income_confirmed','已核实境内普通所得及全部排除条件','Ordinary domestic income and all exclusions verified'),
+        confirm('statutory_revenue_scope_confirmed','已核实全部法定收入范围及期间','Complete statutory revenue scope and periods verified'),
+        confirm('other_incentives_verified','已核实其他优惠金额及适用资格','Other incentive amount and eligibility verified')]}];
+  }
   if (input.jurisdiction === 'vn' && !company && input.residency === 'resident' && period === '2026-01-01/2026-12-31') {
     return [{id:'vn_employment_2026',label:['越南居民工资薪金（2026）','Vietnam resident employment (2026)'],
       notice:['仅限全年居民境内工资薪金。输入已剔除免税收入、尚未扣除个人扣除的应税工资；保险及第11条扣除须已核实限额和凭证。系统扣除本人全年1.86亿越南盾及每名受抚养人每月620万；同一受抚养月份不得重复申报。不适用经营所得减税，不含境外抵免、非居民或特殊减免。结果尚未进行申报取整。',
@@ -112,6 +130,8 @@ export function policies(input: IncomeTaxInput): IncomePolicy[] {
 }
 
 export const resultLabels: Record<string, Label> = {
+  rate:['适用税率（小数）','Applicable rate (decimal)'],exempt_tax:['免征税额','Exempt tax'],
+  other_incentive_reduction:['其他税额优惠','Other incentive reduction'],annual_reduction:['年度减税额','Annual tax reduction'],
   personal_deduction:['本人扣除额','Personal deduction'],dependent_deduction:['受抚养人扣除额','Dependent deduction'],
   deductible_insurance:['可扣除保险','Deductible insurance'],article11_deductions:['第11条扣除','Article 11 deductions'],
   taxable_income_before_rounding:['千元取整前应税所得','Taxable income before thousand rounding'],
