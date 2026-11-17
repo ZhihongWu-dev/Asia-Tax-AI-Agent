@@ -70,5 +70,29 @@
       "registration_status": "registered",
       "review_status": "Selected provisions verified; full implementing conditions remain pending"
     }
+  ],
+  "personal_transfer": [
+    {
+      "doc_id": "vn.law.pit2026.vi",
+      "title": "Luật Thuế thu nhập cá nhân số 109/2025/QH15",
+      "url": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/1/24/cong-bao-so-37-ngay-22-01-46935signed-1769240208670776195144.pdf",
+      "sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+      "provisions": [
+        "13",
+        "23",
+        "29"
+      ]
+    },
+    {
+      "doc_id": "vn.decree253.2026.vi",
+      "title": "Decree 253/2026/ND-CP implementing Personal Income Tax Law",
+      "url": "https://congbao.chinhphu.vn/van-ban/nghi-dinh-so-253-2026-nd-cp-469959.htm",
+      "sha256": "91242e366d3c3a4e874314534b100a0d1c077e21b0a9244243f5a187d4b56412",
+      "provisions": [
+        "10",
+        "53",
+        "54"
+      ]
+    }
   ]
 }

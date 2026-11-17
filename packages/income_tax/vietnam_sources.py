@@ -8,7 +8,7 @@ _MANIFEST = json.loads(Path(__file__).with_name('vn_2026_sources.json').read_tex
 
 
 def sources_for(scope):
-    if scope not in ('company', 'employment'):
+    if scope not in ('company', 'employment', 'personal_transfer'):
         raise ValueError('Unknown Vietnam policy source scope')
     # Calculation consumers must not mutate provenance for future assessments.
     return deepcopy(_MANIFEST[scope])
