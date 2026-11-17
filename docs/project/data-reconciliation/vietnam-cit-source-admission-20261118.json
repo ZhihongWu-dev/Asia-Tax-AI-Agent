@@ -1,0 +1,52 @@
+{
+  "status": "candidates_prepared_not_cloud_admitted",
+  "source_commit": "b07d0d6f2d117342ce2a571b3ce57ac71e9c6cb7",
+  "document": {
+    "id": "vn.law.cit67.2025.gazette.vi",
+    "jur": "vn",
+    "type": "law",
+    "category": "1;3;4;9",
+    "title": "Law67/2025/QH15 corporate income tax: Official Gazette965-966",
+    "url": "https://congbao.chinhphu.vn/van-ban/luat-so-67-2025-qh15-45557/57755.htm",
+    "file": "raw/vn/vn.law.cit67.2025.gazette.vi.pdf",
+    "sha256": "2035cacf3a1dfa98f7f317e537768a25f0569e6d7169638133aaf35fd561d3d8",
+    "lang": "vi",
+    "effective_from": "2025-10-01",
+    "effective_to": "",
+    "note": "Official Gazette native-text rendition, printed pages71-93 plus publisher page. Original law, not consolidated amendments. Article19 applies from2025 corporate tax period; Law09/2026 and other amendments require provision-specific review. Original signed scan retained separately. Source: congbao.chinhphu.vn."
+  },
+  "citations": [
+    {
+      "cite_id": "vn.law.cit67.2025.gazette.vi#2.2",
+      "text_sha256": "1fa1f02d78fff6d58573b9af9bf48b3941ba5525af868e3d6666a30596209e53",
+      "candidate_sha256": "4c55d9646f25c62176dff6952a5a2b72734949e858a544301a5d7096d2f89d30",
+      "characters": 917
+    },
+    {
+      "cite_id": "vn.law.cit67.2025.gazette.vi#3.4",
+      "text_sha256": "976f417a7bb6050530284de36f9465c9a75f6fd54a22d0f97f868482a8eb2a20",
+      "candidate_sha256": "51ca831b3a0234547d9c05877491bf84cadd6cc94a2cb2575ec21816b1ef980f",
+      "characters": 410
+    },
+    {
+      "cite_id": "vn.law.cit67.2025.gazette.vi#10.1",
+      "text_sha256": "891d9a0a6d748db345289003402c1d0ff351b5c4872fbbb27d40774eb2429fd7",
+      "candidate_sha256": "01917666e04307f9c298d7a42d5290b74fcca27f88072153ee03c0563d110d3a",
+      "characters": 177
+    },
+    {
+      "cite_id": "vn.law.cit67.2025.gazette.vi#19.1",
+      "text_sha256": "d74e5fd0ad8e4d882c25d3f893da4ae831eb06098dea612abdd40c5ba0364fc0",
+      "candidate_sha256": "c9b09e918968fe8633d3f9e491e1c6bd1b7553bc1dd998551bda3653de29d7b1",
+      "characters": 120
+    }
+  ],
+  "before_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "73cf9e9f8191dd1e9cb9e2befb26a2e26de6aff5c96037b30f0ac88ef76e0a2f",
+    "review_sha256": "383edd2aeb93146677a0fcda91638a12dc5bd1fc27a0495b5d8be06fc926bbec"
+  },
+  "scope": "Original Law67 provisions2(2),3(4),10(1),19(1). Gazette source only, not consolidated2026 law or complete eligibility/credit policy approval. Tax-period applicability distinguished from general commencement."
+}

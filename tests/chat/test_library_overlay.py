@@ -99,8 +99,12 @@ def test_replacement_requires_structured_content_bound_approval(note):
 def test_real_candidate_bundle_preserves_all_107_without_approving_them():
     commit,rows,digest=load_candidates()
     assert commit=='78a037f522d1636541c2e5fcdd1145e735f18124'
-    assert len(rows)==122 and len(digest)==64
+    assert len(rows)==126 and len(digest)==64
     assert sum(row.get('source_commit', commit) == commit for row in rows.values()) == 107
+    for suffix in ('2.2','3.4','10.1','19.1'):
+        source=rows['vn.law.cit67.2025.gazette.vi#'+suffix]
+        assert source['document']['effective_from']=='2025-10-01'
+        assert 'CÔNG BÁO/' not in source['clause']['text']
     for cite in ('th.rd.p161-2566#c1','th.rd.p161-2566#c3','th.rd.p162-2566#p1'):
         assert rows[cite]['document']['effective_from']=='2024-01-01'
         assert rows[cite]['provenance']['kind']=='reviewed_local_source_candidate'

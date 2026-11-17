@@ -3042,6 +3042,130 @@
         "kind": "reviewed_local_source_candidate",
         "evidence": "docs/project/data-reconciliation/thailand-foreign-remittance-scope-20261118.json"
       }
+    },
+    {
+      "cite_id": "vn.law.cit67.2025.gazette.vi#2.2",
+      "document": {
+        "id": "vn.law.cit67.2025.gazette.vi",
+        "jur": "vn",
+        "type": "law",
+        "category": "1;3;4;9",
+        "title": "Law67/2025/QH15 corporate income tax: Official Gazette965-966",
+        "url": "https://congbao.chinhphu.vn/van-ban/luat-so-67-2025-qh15-45557/57755.htm",
+        "file": "raw/vn/vn.law.cit67.2025.gazette.vi.pdf",
+        "sha256": "2035cacf3a1dfa98f7f317e537768a25f0569e6d7169638133aaf35fd561d3d8",
+        "lang": "vi",
+        "effective_from": "2025-10-01",
+        "effective_to": "",
+        "note": "Official Gazette native-text rendition, printed pages71-93 plus publisher page. Original law, not consolidated amendments. Article19 applies from2025 corporate tax period; Law09/2026 and other amendments require provision-specific review. Original signed scan retained separately. Source: congbao.chinhphu.vn."
+      },
+      "clause": {
+        "cite_id": "vn.law.cit67.2025.gazette.vi#2.2",
+        "doc_id": "vn.law.cit67.2025.gazette.vi",
+        "kind": "paragraph",
+        "label": "Điều 2 khoản 2",
+        "parent": "vn.law.cit67.2025.gazette.vi#2",
+        "text": "2. Doanh nghiệp có thu nhập chịu thuế quy định tại Điều 3 của Luật này phải\nnộp thuế thu nhập doanh nghiệp như sau:\na) Doanh nghiệp được thành lập theo quy định của pháp luật Việt Nam nộp\nthuế đối với thu nhập chịu thuế phát sinh tại Việt Nam và thu nhập chịu thuế phát\nsinh ngoài Việt Nam;\nb) Doanh nghiệp nước ngoài có cơ sở thường trú tại Việt Nam nộp thuế đối với\nthu nhập chịu thuế phát sinh tại Việt Nam và thu nhập chịu thuế phát sinh ngoài\nViệt Nam liên quan đến hoạt động của cơ sở thường trú đó;\nc) Doanh nghiệp nước ngoài có cơ sở thường trú tại Việt Nam nộp thuế đối với\nthu nhập chịu thuế phát sinh tại Việt Nam mà khoản thu nhập này không liên quan\nđến hoạt động của cơ sở thường trú;\nd) Doanh nghiệp nước ngoài không có cơ sở thường trú tại Việt Nam, bao gồm\ncả các doanh nghiệp kinh doanh thương mại điện tử, kinh doanh dựa trên nền tảng\nsố, nộp thuế đối với thu nhập chịu thuế phát sinh tại Việt Nam."
+      },
+      "text_sha256": "1fa1f02d78fff6d58573b9af9bf48b3941ba5525af868e3d6666a30596209e53",
+      "source_commit": "b07d0d6f2d117342ce2a571b3ce57ac71e9c6cb7",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/vietnam-cit-primary-rebindings-20261118.json"
+      }
+    },
+    {
+      "cite_id": "vn.law.cit67.2025.gazette.vi#3.4",
+      "document": {
+        "id": "vn.law.cit67.2025.gazette.vi",
+        "jur": "vn",
+        "type": "law",
+        "category": "1;3;4;9",
+        "title": "Law67/2025/QH15 corporate income tax: Official Gazette965-966",
+        "url": "https://congbao.chinhphu.vn/van-ban/luat-so-67-2025-qh15-45557/57755.htm",
+        "file": "raw/vn/vn.law.cit67.2025.gazette.vi.pdf",
+        "sha256": "2035cacf3a1dfa98f7f317e537768a25f0569e6d7169638133aaf35fd561d3d8",
+        "lang": "vi",
+        "effective_from": "2025-10-01",
+        "effective_to": "",
+        "note": "Official Gazette native-text rendition, printed pages71-93 plus publisher page. Original law, not consolidated amendments. Article19 applies from2025 corporate tax period; Law09/2026 and other amendments require provision-specific review. Original signed scan retained separately. Source: congbao.chinhphu.vn."
+      },
+      "clause": {
+        "cite_id": "vn.law.cit67.2025.gazette.vi#3.4",
+        "doc_id": "vn.law.cit67.2025.gazette.vi",
+        "kind": "paragraph",
+        "label": "Điều 3 khoản 4",
+        "parent": "vn.law.cit67.2025.gazette.vi#3",
+        "text": "4. Doanh nghiệp Việt Nam đầu tư ở nước ngoài có phát sinh thu nhập từ hoạt\nđộng sản xuất, kinh doanh tại nước ngoài trong kỳ tính thuế được trừ số thuế thu\nnhập doanh nghiệp phải nộp theo quy định của nước tiếp nhận đầu tư vào số thuế\nthu nhập doanh nghiệp phải nộp ở Việt Nam, nhưng không được vượt quá số thuế\nthu nhập doanh nghiệp tính theo quy định của pháp luật về thuế thu nhập doanh\nnghiệp của Việt Nam."
+      },
+      "text_sha256": "976f417a7bb6050530284de36f9465c9a75f6fd54a22d0f97f868482a8eb2a20",
+      "source_commit": "b07d0d6f2d117342ce2a571b3ce57ac71e9c6cb7",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/vietnam-cit-primary-rebindings-20261118.json"
+      }
+    },
+    {
+      "cite_id": "vn.law.cit67.2025.gazette.vi#10.1",
+      "document": {
+        "id": "vn.law.cit67.2025.gazette.vi",
+        "jur": "vn",
+        "type": "law",
+        "category": "1;3;4;9",
+        "title": "Law67/2025/QH15 corporate income tax: Official Gazette965-966",
+        "url": "https://congbao.chinhphu.vn/van-ban/luat-so-67-2025-qh15-45557/57755.htm",
+        "file": "raw/vn/vn.law.cit67.2025.gazette.vi.pdf",
+        "sha256": "2035cacf3a1dfa98f7f317e537768a25f0569e6d7169638133aaf35fd561d3d8",
+        "lang": "vi",
+        "effective_from": "2025-10-01",
+        "effective_to": "",
+        "note": "Official Gazette native-text rendition, printed pages71-93 plus publisher page. Original law, not consolidated amendments. Article19 applies from2025 corporate tax period; Law09/2026 and other amendments require provision-specific review. Original signed scan retained separately. Source: congbao.chinhphu.vn."
+      },
+      "clause": {
+        "cite_id": "vn.law.cit67.2025.gazette.vi#10.1",
+        "doc_id": "vn.law.cit67.2025.gazette.vi",
+        "kind": "paragraph",
+        "label": "Điều 10 khoản 1",
+        "parent": "vn.law.cit67.2025.gazette.vi#10",
+        "text": "1. Thuế suất thuế thu nhập doanh nghiệp là 20%, trừ trường hợp quy định tại\ncác khoản 2, 3 và 4 Điều này và đối tượng được ưu đãi về thuế suất quy định tại\nĐiều 13 của Luật này."
+      },
+      "text_sha256": "891d9a0a6d748db345289003402c1d0ff351b5c4872fbbb27d40774eb2429fd7",
+      "source_commit": "b07d0d6f2d117342ce2a571b3ce57ac71e9c6cb7",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/vietnam-cit-primary-rebindings-20261118.json"
+      }
+    },
+    {
+      "cite_id": "vn.law.cit67.2025.gazette.vi#19.1",
+      "document": {
+        "id": "vn.law.cit67.2025.gazette.vi",
+        "jur": "vn",
+        "type": "law",
+        "category": "1;3;4;9",
+        "title": "Law67/2025/QH15 corporate income tax: Official Gazette965-966",
+        "url": "https://congbao.chinhphu.vn/van-ban/luat-so-67-2025-qh15-45557/57755.htm",
+        "file": "raw/vn/vn.law.cit67.2025.gazette.vi.pdf",
+        "sha256": "2035cacf3a1dfa98f7f317e537768a25f0569e6d7169638133aaf35fd561d3d8",
+        "lang": "vi",
+        "effective_from": "2025-10-01",
+        "effective_to": "",
+        "note": "Official Gazette native-text rendition, printed pages71-93 plus publisher page. Original law, not consolidated amendments. Article19 applies from2025 corporate tax period; Law09/2026 and other amendments require provision-specific review. Original signed scan retained separately. Source: congbao.chinhphu.vn."
+      },
+      "clause": {
+        "cite_id": "vn.law.cit67.2025.gazette.vi#19.1",
+        "doc_id": "vn.law.cit67.2025.gazette.vi",
+        "kind": "paragraph",
+        "label": "Điều 19 khoản 1",
+        "parent": "vn.law.cit67.2025.gazette.vi#19",
+        "text": "1. Luật này có hiệu lực thi hành từ ngày 01 tháng 10 năm 2025 và áp dụng từ\nkỳ tính thuế thu nhập doanh nghiệp năm 2025."
+      },
+      "text_sha256": "d74e5fd0ad8e4d882c25d3f893da4ae831eb06098dea612abdd40c5ba0364fc0",
+      "source_commit": "b07d0d6f2d117342ce2a571b3ce57ac71e9c6cb7",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/vietnam-cit-primary-rebindings-20261118.json"
+      }
     }
   ]
 }
