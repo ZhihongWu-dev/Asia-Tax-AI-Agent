@@ -452,3 +452,9 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - Added bilingual transfer policy for saved personal capital-gain records, with separate date, asset/cost method, costs, prepayment and applicability confirmations for each saved income index. Gross amounts remain in saved facts; conditional costs serialize as null when securities/unknown-cost methods are selected, even after entering costs under the known-cost method.
 - Existing saved-result and source rendering reused. TypeScript and production Vite build passed (existing >500KB chunk warning). Real Edge browser test passed after correcting an exact-label test locator to combobox role/name: enters costs, switches to securities, calculates1m tax on1bn proceeds, verifies two original links and reload persistence.
 - GitHub research: React official controlled-form examples informed reuse of state/confirmation handling; no dependency or external implementation copied. Multi-transaction visual detail, broader browser regression and special-event coverage remain pending. No remote push.
+
+### Per-transfer results and full income browser regression
+
+- Saved results now expose each transfer's persisted index, recognition date, method, proceeds, base, fractional rate, tax, prepayment and balance in bilingual details. Values come from the saved result, not current draft inputs.
+- TypeScript and scoped diff checks passed. Full income-tax Edge browser suite completed17/17 passed in1.0m, including saved/reloaded transfer detail, hidden-cost clearing, company/employment policies, other implemented country flows, conflict recovery, invalidation after edits and mobile intake.
+- GitHub research: React official list-rendering documentation informed stable saved-index keys. No dependency added. This is regression evidence for current implemented scenarios, not completion of all11 countries, special-event rules or Li planner integration. No remote push.

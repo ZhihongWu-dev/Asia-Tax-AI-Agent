@@ -94,6 +94,19 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       {disabled && <p>{say('此结果对应上次保存的资料，不包含当前未保存的修改。','This result uses the last saved facts and excludes unsaved changes.')}</p>}
       <p>{new Date(result.created_at).toLocaleString()} · {String(result.result.currency)}</p>
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
+      {Array.isArray(result.result.transfers) && <section aria-label={say('逐笔交易结果','Per-transfer results')}>
+        <h5>{say('逐笔交易结果','Per-transfer results')}</h5>
+        {(result.result.transfers as Record<string,unknown>[]).map(item=><section key={String(item.income_index)} aria-label={`${say('交易','Transfer')} ${Number(item.income_index)+1}`}>
+          <h6>{say('交易','Transfer')} {Number(item.income_index)+1}</h6>
+          <p>{say('收入确认日期：','Recognition date: ')}{String(item.recognition_date)}</p>
+          <p>{say('计税方式：','Method: ')}{item.method==='capital_gain' ? say('资本净收益','Net capital gain') : item.method==='securities_proceeds' ? say('证券转让价款','Securities proceeds') : say('成本无法确定的资本转让价款','Capital proceeds with unestablished costs')}</p>
+          <dl>{([
+            ['transfer_value',say('转让价款','Transfer proceeds')],['taxable_base',say('计税基础','Tax base')],
+            ['rate',say('适用税率（小数）','Tax rate (fraction)')],['final_tax',say('交易税额','Transaction tax')],
+            ['prepaid_tax',say('此笔预缴','Transaction prepayment')],['balance_due',say('此笔应补／退差额','Transaction balance')]
+          ] as [string,string][]).map(([key,label])=><div key={key}><dt>{label}</dt><dd>{String(item[key])}</dd></div>)}</dl>
+        </section>)}
+      </section>}
       <p>{say('适用规则版本：','Policy version: ')}{String(result.result.policy_version)}</p>
       <p>{say('官方依据：','Official sources:')}</p>
       <ul>{((result.result.sources || (result.result.source ? [result.result.source] : [])) as {url:string;title?:string;doc_id?:string;sha256:string}[]).map(source=><li key={source.sha256}><a href={source.url} target="_blank" rel="noreferrer">{source.title || source.doc_id || say('官方原文','Official original')}</a></li>)}</ul>

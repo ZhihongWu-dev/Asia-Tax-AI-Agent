@@ -376,5 +376,7 @@ test('Vietnam personal securities saves result',async({page})=>{
   const report=page.getByRole('article',{name:'Saved calculation result'});
   await expect(report.locator('dl > div').filter({hasText:'Tax for this assessment'}).locator('dd')).toHaveText(/^1000000(?:\.0+)?$/);
   await expect(report.getByRole('link')).toHaveCount(2);
+  await expect(report.getByRole('region',{name:'Transfer 1',exact:true})).toContainText('Securities proceeds');
+  await expect(report.getByRole('region',{name:'Transfer 1',exact:true})).toContainText('2026-07-01');
   await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('1000000');
 });
