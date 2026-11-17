@@ -1,6 +1,6 @@
 {
-  "status": "provision_verified_amendment_review_pending",
-  "reviewed_on": "2026-11-16",
+  "status": "listed_amendment_chain_reviewed_registration_pending",
+  "reviewed_on": "2026-11-18",
   "parameter": "id.outbound_wht.payment_deadline",
   "existing_value": "10",
   "existing_citation": "id.dgt.article26#all",
@@ -9,7 +9,7 @@
     "Article 100 permits payment on the next working day when the due date is a specified holiday, including Saturdays, Sundays, national holidays, election holidays and nationally designated collective leave.",
     "The original regulation states commencement on 1 January 2025. Historical tax periods require separate applicability checks.",
     "DGT Coretax guidance updated 17 September 2025 corroborates the general fifteenth-day payment and twentieth-day reporting deadlines, while explicitly warning of exceptions.",
-    "Text searches of PMK 1/2026 found no exact Article 94 or Article 100 references; this is not sufficient to establish the complete amendment chain."
+    "Full official DGT HTML of PMK 1/2026 reviewed: Article I changes Articles 1,392,393,394,405. Article II concerns book-value restructuring decisions/applications and commencement. The listed amendment chain does not change Articles 94 or 100."
   ],
   "sources": [
     {
@@ -30,7 +30,7 @@
     }
   ],
   "remaining": [
-    "Check the complete amendment chain, including PMK 54/2025 and earlier amendments, and relevant transition provisions.",
+    "After optimizer completion, migrate the obsolete tenth-day parameter using registered authoritative clause sources and validate citation closure.",
     "Register and hash authoritative originals and create precise clause citations before changing the parameter.",
     "Represent the deadline as a calendar day in the following month, rather than an elapsed-day duration; verify all parameter consumers.",
     "Preserve historical applicability and test month/year rollover and holiday handling without inventing an unverified holiday calendar."
@@ -67,7 +67,13 @@
         394,
         405
       ],
-      "locator": "Article I items 1-5, official PDF pages 3,25,28,30,31; web-readable original, local download retry pending"
+      "locator": "Official DGT full HTML: Article I items 1-5 and Article II",
+      "url": "https://www.pajak.go.id/index.php/id/peraturan/perubahan-keempat-atas-peraturan-menteri-keuangan-nomor-81-tahun-2024-tentang-ketentuan",
+      "archive_file": "2026pmkeuangan001-dgt.html",
+      "archive_sha256": "58634c6ca1f8c2c14f6321d3960e101c7aba8910482bbe8846cd5f265cfa4932",
+      "archive_bytes": 283046,
+      "transition": "Existing book-value decisions remain valid subject to conditions; pending book-value applications use the prior PMK54/2025 version. Commencement22January2026.",
+      "download_note": "JDIH PDF timeout and alternate official PDF TLS failure; complete official DGT HTML archived instead."
     }
   },
   "code_inspection": {
