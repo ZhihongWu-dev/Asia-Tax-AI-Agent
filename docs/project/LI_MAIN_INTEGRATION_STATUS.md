@@ -27,14 +27,19 @@ The final integration has not been pushed or merged to `main`. The historical
   access private cases/jobs. Its deployment secret still needs installation.
 - Cloud source review queried on 2026-11-18: different-text records have 2 accepted
   replacements, 16 candidates and 7 rejected decisions; main-only records have
-  104 candidates and 3 rejected decisions. Total remains132. A rejected
+  4 accepted sources, 104 candidates and 3 rejected decisions. Total is 136. A rejected
   different-text candidate normally retains the base; explicit exclusions are
   essential for sources that are obsolete or corrupt. The repealed CN2008-112
   notice is explicitly excluded in both search and planning readers.
 - The two accepted repairs are CN2026-27 item3 and the UAE top-up-tax whole-page
   citation. Both are hash-bound replacements; the base cloud text is unchanged.
+- Vietnam Law108 Articles16,16.2,52 and53 are admitted as reviewed source overlays.
+  All four texts were reconstructed exactly from the official gazette and read
+  through the dedicated reader; the previous snapshot was rejected. This admits
+  source text, not a complete penalty calculator or the pending catalog parameter.
+  See [admission evidence](data-reconciliation/vietnam-tax-administration-overlay-20261118.json).
 - A fresh dedicated-reader audit includes625 current local citation dependencies,
-  including factor citations:12 are missing from cloud admission,6 are blocked
+  including factor citations:11 are missing from cloud admission,6 are blocked
   (some overlap), and55 local parameters are absent from the cloud catalog. See
   [dependency evidence](data-reconciliation/planner-source-readiness-20261118.json).
   These counts replace the older audit that reconstructed admission rules itself.

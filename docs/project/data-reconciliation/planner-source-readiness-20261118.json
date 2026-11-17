@@ -3,13 +3,13 @@
     "spec_version": "2026-11-10",
     "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
     "uploaded_at": "2026-11-13T03:39:52Z",
-    "overlay_bundle_sha256": "11a0428cc601bd3d21a445d25ba12a3b4c6a62211848ac6fd76bf95e372a9d29",
-    "review_sha256": "5683fa6819d8843f0c8b5415903684716fb185fbcd2cabde77499e706ce154bb"
+    "overlay_bundle_sha256": "43edbc902c5a22eb83b28ec0ef93096b2e511193cb752c481918adaa9f4858ea",
+    "review_sha256": "f45a5fdc914f8a36e6cf7db5c582170163b3d817a0d4966ad0cb26e0bf941729"
   },
   "scope": "Current local rule, predicate, decision and parameter sources including factors; not date-filtered. Uses the production blocked_citations function and dedicated read-only role.",
   "counts": {
     "references": 625,
-    "missing": 12,
+    "missing": 11,
     "blocked": 6,
     "local_only_parameters": 55
   },
@@ -54,12 +54,9 @@
     "th.rd.transfer-pricing-legislation#all": [
       "database/decision.csv:th.absent.individual.anti_abuse",
       "database/param.csv:th.anti_abuse.transfer_pricing_market_price_adjustment"
-    ],
-    "vn.law.tax-administration108.2025.vi#16.2": [
-      "database/param.csv:vn.penalty.late_interest_pct_per_day.20260701"
     ]
   },
-  "blocked": {
+  "review_blocked": {
     "ae.fta.corporate-tax-faq#all": [
       "database/param.csv:ae.anti_abuse.transfer_pricing_applies_to_related_parties.legacy_03670a518456",
       "database/param.csv:ae.residence.residence_test.legacy_09239f63cd95"
