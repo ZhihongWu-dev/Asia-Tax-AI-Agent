@@ -16,6 +16,34 @@
     "tests": "14 passed in0.54s",
     "github_research": "Inspected previously pinned MIT UpstageAI/korean-tax-calc-mcp engine for local allocation counterparts; no suitable allocation implementation found. Implemented directly from verified official formula/form with standard-library Fraction; no external dependency or code adopted."
   },
+  "appendix4_review": {
+    "url": "https://www.law.go.kr/flDownload.do?bylClsCd=110201&flSeq=157508305&gubun=",
+    "sha256": "0a8e0b207abd094590daf3ab24badbead308b4f369c660ff5210865c3c5ea1a9",
+    "pages_visually_verified": [1, 2],
+    "governing_current_rule": "https://law.go.kr/LSW/lsLinkCommonInfo.do?lspttninfSeq=138312",
+    "findings": [
+      "Representative and domestic trainees included; overseas secondment/training excluded.",
+      "Personnel-only establishments assign employees to head or principal establishment.",
+      "Unstarted vacant premises excluded; temporarily unused previously occupied premises included.",
+      "Staff welfare facilities included; unsold developer property not directly used excluded.",
+      "Registered dwelling without actual separate business premises excluded from area.",
+      "Shared construction office uses contractual share if actual occupied area cannot be established."
+    ],
+    "zero_aggregate_rule": "Not established by this appendix; do not invent a denominator fallback."
+  },
+  "form_verification_followup": {
+    "current_regulation_lsiSeq": "287031",
+    "effective_date": "2026-07-01",
+    "ordinary_form43_bylSeq": "18191439",
+    "allocation_form44_6_bylSeq": "18191477",
+    "retrieval_route": "Resolve official /법령별표서식/(지방세법 시행규칙,20260701,서식43), then lsBylInfoR.do; current appendix selector confirmed, actual current form content still pending",
+    "excluded_reference": {
+      "url": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=110202&flSeq=151415211&gubun=",
+      "sha256": "568df81a94833bc7d5b39cc651561c1cbb48813362791f4db679e01100931c87",
+      "actual_title": "Form43-6: nonprofit corporation with only interest income",
+      "reason": "Search result is not ordinary form43. Its eight-place field cannot override reviewed form44-6 six-place instructions or establish ordinary assessment rounding."
+    }
+  },
   "pending": [
     "Zero aggregate employee/area criteria and appendix4 special facilities/boundary allocation",
     "City filing aggregation, municipal rate adjustments, per-authority withholding credits and settlement",
