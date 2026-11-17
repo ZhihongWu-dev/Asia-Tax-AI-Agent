@@ -1,0 +1,137 @@
+{
+  "korean_snapshot_clause_counts": {
+    "kr.income-tax-act.20260701.ko": 1070,
+    "kr.corporate-tax-act.20260701.ko": 823,
+    "kr.itca": 433
+  },
+  "required_citation_count": 428,
+  "missing_required_citations": [],
+  "new_japan_indexed_docs": [
+    {
+      "doc_id": "jp.nta.salary-table.20261117",
+      "indexed_doc_id": "jp.nta.salary-table.20261117",
+      "clauses": 8
+    },
+    {
+      "doc_id": "jp.nta.basic-table.20261117",
+      "indexed_doc_id": "jp.nta.basic-table.20261117",
+      "clauses": 2
+    },
+    {
+      "doc_id": "jp.nta.1410.20261117",
+      "indexed_doc_id": "jp.nta.1410.20261117",
+      "clauses": 26
+    },
+    {
+      "doc_id": "jp.nta.1411.20261117",
+      "indexed_doc_id": "jp.nta.1411.20261117",
+      "clauses": 18
+    },
+    {
+      "doc_id": "jp.nta.1199.20261117",
+      "indexed_doc_id": "jp.nta.1199.20261117",
+      "clauses": 15
+    },
+    {
+      "doc_id": "jp.nta.2260.20261117",
+      "indexed_doc_id": "jp.nta.2260.20261117",
+      "clauses": 16
+    },
+    {
+      "doc_id": "jp.nta.1000.20261117",
+      "indexed_doc_id": "jp.nta.1000.20261117",
+      "clauses": 29
+    },
+    {
+      "doc_id": "jp.nta.return-guide.2025",
+      "indexed_doc_id": "jp.nta.return-guide.2025",
+      "clauses": 48
+    },
+    {
+      "doc_id": "jp.ita",
+      "indexed_doc_id": "jp.ita",
+      "clauses": 1007
+    },
+    {
+      "doc_id": "jp.corporate-rates.20261117",
+      "indexed_doc_id": "jp.nta.corporate-rate-2026",
+      "clauses": 13
+    },
+    {
+      "doc_id": "jp.defence-corporate.20261117",
+      "indexed_doc_id": "jp.defence-corporate.20261117",
+      "clauses": 3
+    },
+    {
+      "doc_id": "jp.local-corporate-act.20261117",
+      "indexed_doc_id": "jp.local-corporate-act.20261117",
+      "clauses": 202
+    },
+    {
+      "doc_id": "jp.sme-classification.20261117",
+      "indexed_doc_id": "jp.sme-classification.20261117",
+      "clauses": 19
+    },
+    {
+      "doc_id": "jp.corporate-return-guide.20261117",
+      "indexed_doc_id": "jp.corporate-return-guide.20261117",
+      "clauses": 68
+    },
+    {
+      "doc_id": "jp.general-tax-act.20261117",
+      "indexed_doc_id": "jp.general-tax-act.20261117",
+      "clauses": 719
+    },
+    {
+      "doc_id": "jp.cta",
+      "indexed_doc_id": "jp.cta",
+      "clauses": 1128
+    },
+    {
+      "doc_id": "jp.sma",
+      "indexed_doc_id": "jp.sma",
+      "clauses": 3788
+    }
+  ],
+  "counts": {
+    "jurisdiction": 11,
+    "treaty": 55,
+    "doc": 349,
+    "clause": 42616,
+    "param": 815,
+    "files": 741,
+    "decision": 51
+  },
+  "sqlite_integrity": "ok",
+  "csv_sqlite_all_rows_equal": true,
+  "all_registered_file_hashes_verified": true,
+  "verified_citations": [
+    "vn.decree398.2026.vi#3.1",
+    "vn.decree398.2026.vi#3.2",
+    "vn.decree398.2026.vi#3.3",
+    "vn.decree398.2026.vi#3.4",
+    "vn.law.tax-administration108.2025.vi#16.2",
+    "vn.decree252.2026.vi#26.1"
+  ],
+  "database_sha256": "9539eca63b4e73d7b9f3729f176d0e5e0213a9e0eee767c766ceb60f7341ecfd",
+  "checked_on": "2026-11-18",
+  "build_commit": "de95326",
+  "build_exit_code": 0,
+  "build_errors": 0,
+  "build_warnings": 96,
+  "remaining_gaps": {
+    "category": 5,
+    "subject_slot": 33,
+    "downloads": 2
+  },
+  "future_replacements_excluded": 24,
+  "conditional_commencement_articles_retained_for_review": 5,
+  "parameter_decision_quote_errors": 0,
+  "foreign_key_check": "passed",
+  "status": "local_generated_indexes_verified_not_cloud_admission",
+  "limitations": [
+    "Legal applicability of five conditional/paragraph commencement provisions remains unreviewed.",
+    "Remaining96 warnings and coverage gaps prevent full library/business acceptance.",
+    "Generated artifacts remain unstaged pending broader source reconciliation; no cloud publication or remote Git push."
+  ]
+}
