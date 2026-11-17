@@ -13,7 +13,9 @@ async def execute_job(job):
     """No publication: the worker rechecks the live snapshot and lease afterward."""
     pin = deepcopy(job['library_snapshot'])
     inputs = deepcopy(job['input'])
-    runtime = capture_runtime()
+    runtime = deepcopy(job.get('runtime_snapshot'))
+    if not runtime or capture_runtime() != runtime:
+        raise PlanningExecutionError('planning_runtime_changed')
     try:
         bundle = await asyncio.to_thread(read_planning_bundle, runtime['citations'], expected_version=pin)
     except LibraryVersionChanged:

@@ -28,6 +28,20 @@ async def verified(job):
     return {'version':'one'}
 
 
+def test_changed_release_is_persisted_as_failure_before_source_read(setup, monkeypatch):
+    from packages.domain_bridge import planning_executor as executor
+    jobs, job = setup
+    monkeypatch.setattr(executor, 'capture_runtime', lambda: {'files': {'rule': 'changed'}})
+    monkeypatch.setattr(executor, 'read_planning_bundle',
+                        lambda *a, **k: pytest.fail('stale task accessed sources'))
+    assert asyncio.run(run_once(jobs, executor.execute_job, verified)) == job['id']
+    saved = jobs.get('alice', job['id'])
+    assert saved['status'] == 'failed'
+    assert saved['error'] == 'planning_runtime_changed'
+    assert saved['result'] is None
+    assert saved['runtime_snapshot'] == job['runtime_snapshot']
+
+
 def test_success_renews_and_verifies_before_and_after(setup, monkeypatch):
     jobs, job = setup
     renewals, checks = [], []

@@ -30,7 +30,8 @@ def test_admission_precedes_execution_and_failures_never_execute(monkeypatch, fa
     monkeypatch.setattr(executor, 'capture_runtime', capture)
     monkeypatch.setattr(executor, 'read_planning_bundle', read)
     monkeypatch.setattr(executor, 'execute_bundle', execute)
-    job = {'input': {'amount': 100}, 'library_snapshot': {'pin': 'one'}}
+    job = {'input': {'amount': 100}, 'library_snapshot': {'pin': 'one'},
+           'runtime_snapshot': runtime}
     if failure:
         with pytest.raises(PlanningExecutionError) as exc:
             asyncio.run(executor.execute_job(job))
@@ -41,3 +42,12 @@ def test_admission_precedes_execution_and_failures_never_execute(monkeypatch, fa
     else:
         assert asyncio.run(executor.execute_job(job)) == {'fixture': 'result'}
         assert calls == ['read', 'execute']
+
+
+@pytest.mark.parametrize('runtime', [None, {}, {'files': {'rule': 'old'}}])
+def test_stale_or_missing_queued_runtime_never_reads_cloud(monkeypatch, runtime):
+    monkeypatch.setattr(executor, 'capture_runtime', lambda: {'files': {'rule': 'new'}})
+    monkeypatch.setattr(executor, 'read_planning_bundle', lambda *a, **k: pytest.fail('cloud read'))
+    with pytest.raises(PlanningExecutionError, match='planning_runtime_changed'):
+        asyncio.run(executor.execute_job({'input': {}, 'library_snapshot': {'pin': 'one'},
+                                         'runtime_snapshot': runtime}))

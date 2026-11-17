@@ -14,6 +14,7 @@ from sqlalchemy import (JSON, CheckConstraint, Column, Float, Index, Integer, Me
                         Table, UniqueConstraint, and_, func, literal, or_, select, update)
 
 from packages.chat.store import CaseNotFound, RevisionConflict, conversations
+from packages.domain_bridge.planning_runtime import capture_runtime
 
 metadata = MetaData()
 runs = Table(
@@ -26,6 +27,7 @@ runs = Table(
     Column('request_hash', String(64), nullable=False),
     Column('input', JSON, nullable=False),
     Column('library_snapshot', JSON, nullable=False),
+    Column('runtime_snapshot', JSON, nullable=False),
     Column('case_snapshot', JSON, nullable=False),
     Column('status', String(16), nullable=False),
     Column('attempts', Integer, nullable=False),
@@ -86,7 +88,8 @@ class PlanningStore:
             raise ValueError('invalid_case_revision')
         if not isinstance(inputs, dict) or not isinstance(library_snapshot, dict) or not library_snapshot:
             raise ValueError('planning_snapshot_required')
-        payload = _json([case_id, revision, inputs, library_snapshot])
+        runtime_snapshot = capture_runtime()
+        payload = _json([case_id, revision, inputs, library_snapshot, runtime_snapshot])
         signature = sha256(payload.encode('utf-8')).hexdigest()
         with self.engine.begin() as c:
             stamp = _clock(c)
@@ -94,7 +97,8 @@ class PlanningStore:
             # actual persisted case document; no caller-supplied case snapshot.
             values = dict(id=str(uuid4()), owner=owner, case_id=case_id, case_revision=revision,
                           request_id=request_id, request_hash=signature, input=inputs,
-                          library_snapshot=library_snapshot, status='queued', attempts=0,
+                          library_snapshot=library_snapshot, runtime_snapshot=runtime_snapshot,
+                          status='queued', attempts=0,
                           created_at=stamp, updated_at=stamp, events=[{'status':'queued', 'at':stamp}])
             columns = list(values) + ['case_snapshot']
             source = select(*(literal(value, type_=runs.c[key].type) for key, value in values.items()),

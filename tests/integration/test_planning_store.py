@@ -131,3 +131,24 @@ def test_real_database_clock_and_completed_result_survive_reopen(tmp_path):
     restarted = ChatStore(url)
     assert PlanningStore(restarted.engine).get('alice', run['id'])['result'] == {'artifact_hash':'verified'}
     restarted.engine.dispose()
+
+
+def test_queued_runtime_survives_restart_and_cannot_be_silently_replaced(setup, monkeypatch):
+    chat, jobs, clock, url = setup
+    original = {'schema': 1, 'files': {'rule': 'original'}, 'citations': ['cn.rule#1']}
+    monkeypatch.setattr(module, 'capture_runtime', lambda: original)
+    case, run = enqueue(chat, jobs)
+    assert run['runtime_snapshot'] == original
+    first = jobs.claim(lease_seconds=5)
+    monkeypatch.setattr(module, 'capture_runtime', lambda: {'schema': 1, 'files': {'rule': 'new'}})
+    chat.engine.dispose()
+    restarted = ChatStore(url)
+    jobs = PlanningStore(restarted.engine)
+    clock[0] += 5
+    recovered = jobs.claim()
+    assert recovered['runtime_snapshot'] == original
+    assert recovered['lease_token'] != first['lease_token']
+    with pytest.raises(PlanningConflict):
+        jobs.enqueue('alice', case['id'], 0, 'request', {'amount':100},
+                     {'uploaded_at':'pinned', 'overlay':'rev1'})
+    restarted.engine.dispose()
