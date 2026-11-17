@@ -1,5 +1,5 @@
 {
-  "status": "prepared_pending_active_stage_rebuild_and_document_registration",
+  "status": "applied_to_isolated_stage_pending_validation",
   "before": {
     "param_id": "id.outbound_wht.treaty_rate_available",
     "scope": "id",
@@ -60,5 +60,20 @@
     }
   ],
   "commencement": "2025-12-31 verified from Article 29 and signed official PDF page 25",
-  "original_runtime": "unchanged"
+  "original_runtime": "unchanged",
+  "registered_document": {
+    "id": "id.pmk112-2025",
+    "jur": "id",
+    "type": "regulation",
+    "category": "5;6",
+    "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+    "url": "https://pajak.go.id/en/node/119084",
+    "file": "raw/id/id.pmk112-2025.html",
+    "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+    "lang": "id",
+    "effective_from": "2025-12-31",
+    "effective_to": "",
+    "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+  },
+  "stage_param_count": 811
 }
