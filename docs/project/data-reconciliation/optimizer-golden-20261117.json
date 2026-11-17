@@ -1,0 +1,93 @@
+{
+  "golden_session": 47029,
+  "golden_exit_code": 0,
+  "golden_failure_count": 0,
+  "golden_rows": 12,
+  "validation": "Original12-row golden assertions passed; additional current runtime/input/artifact version checks only, not Checker.run_all",
+  "tests": [
+    {
+      "test_id": "case001.best",
+      "expect": "best cn:company->hk:company->sg:individual 5 5",
+      "version_hash_failures": [],
+      "inputs_sha256": "34a566b01122f5e7f854c9c9f2469b0b3d24cad9b07eef5fec754e3149a84f7c",
+      "version_file_sha256": "4915ed1d8ac3d36aa8806a2f0c2f4d118c56c94d5d2958e3bb598d7000f67119"
+    },
+    {
+      "test_id": "case001.open",
+      "expect": "open bo,parent_bo,ppt",
+      "version_hash_failures": [],
+      "inputs_sha256": "34a566b01122f5e7f854c9c9f2469b0b3d24cad9b07eef5fec754e3149a84f7c",
+      "version_file_sha256": "25cd9e8f0beac5b29aeede1d4e27c3bb85a3cf6ae0eca719605f3003099456ee"
+    },
+    {
+      "test_id": "case001.valued.best",
+      "expect": "best cn:company->hk:company->sg:individual 5 5",
+      "version_hash_failures": [],
+      "inputs_sha256": "e696b917a6eabfb7472ace8e670dfdc2a37012c080b2156bbbb07294eafdaf43",
+      "version_file_sha256": "11d096a6202d9110f2903c37c84d3b8157de88b7586e487c6aa345d8ce7561a0"
+    },
+    {
+      "test_id": "cfc_jp.best",
+      "expect": "best cn:company->sg:company->jp:company 6.102 23.200005",
+      "version_hash_failures": [],
+      "inputs_sha256": "3020f5328a8356666faaec64b3e8617e5cf83c548c040be9cbb3cb3ee508bc1b",
+      "version_file_sha256": "861cb8492653612733cd7b20051058e7f36073d4eba4cc6a76c17f0778e52e80"
+    },
+    {
+      "test_id": "cfc_jp.open",
+      "expect": "open payer_etr,valuation_missing",
+      "version_hash_failures": [],
+      "inputs_sha256": "3020f5328a8356666faaec64b3e8617e5cf83c548c040be9cbb3cb3ee508bc1b",
+      "version_file_sha256": "1a1daff2f54784d72f9004aca90ac4f82f3aa54c77f8d3e7a012cca115776732"
+    },
+    {
+      "test_id": "exit_jp.best",
+      "expect": "best jp:company->sg:company->sg:individual 5 5",
+      "version_hash_failures": [],
+      "inputs_sha256": "5a2040275cc6d5d61216243bdf76b894264b286bd3bf26bd6940d947c7d20125",
+      "version_file_sha256": "7d5e80a9a66d925e684e45ded9c3683383e7dacafaaa1ae8efd059cb6d7f8b1b"
+    },
+    {
+      "test_id": "remit_sg.not_kept",
+      "expect": "not_kept cn:company->hk:company->sg:company remit(false) 2261000 2261000",
+      "version_hash_failures": [],
+      "inputs_sha256": "8ca713433d1fec9c2eb31518ac27d200a4bd11956bbb4ccaeb6419dbee33d361",
+      "version_file_sha256": "6057773b3a977c4663d53859906b6f96e1fbe12395368cc2f47f99e0bba2ad4e"
+    },
+    {
+      "test_id": "remit_sg_open.conduct",
+      "expect": "conduct receive_at_destination cn:company->sg:company 2261000",
+      "version_hash_failures": [],
+      "inputs_sha256": "c702204cecc3eb44d5aefebdb7a9dd8cef5306bfccc169d80d5bd6e37610963a",
+      "version_file_sha256": "6f3897926dbe3518a7d529872b61faf3da3cfcf3f4a9088cee2e7543ecb7eb4b"
+    },
+    {
+      "test_id": "remit_sg_received.best",
+      "expect": "best cn:company->sg:company 5 17",
+      "version_hash_failures": [],
+      "inputs_sha256": "3cf21f861e5adb5e0fda9883d1bc3cb51b87da4cd7dd85956614ad998ddebe31",
+      "version_file_sha256": "d96d5c6caf0d5a919ca1f609f66a06a2d1a35eb25da232f7636abf9d8e123c73"
+    },
+    {
+      "test_id": "remit_sg_received.sequence",
+      "expect": "sequence cn:company->hk:company->sg:company cn:company->sg:company",
+      "version_hash_failures": [],
+      "inputs_sha256": "3cf21f861e5adb5e0fda9883d1bc3cb51b87da4cd7dd85956614ad998ddebe31",
+      "version_file_sha256": "01ef8a93613246a22d8a6894213bad80a315d9527038556c52c7c3e7d2cc9ca1"
+    },
+    {
+      "test_id": "jp_sg_individual.best",
+      "expect": "best jp:company->sg:company->sg:individual 5 5",
+      "version_hash_failures": [],
+      "inputs_sha256": "fcc30560d1a9064e32f299201e530e012171bd7e1d9d79682379b6334af6e058",
+      "version_file_sha256": "005151f7ef74008d37afc6f123e2638ab3d3b310539d48ea59a1726d11e68fb9"
+    },
+    {
+      "test_id": "jp_sg_individual.sequence",
+      "expect": "sequence jp:company->sg:individual jp:company->sg:company->sg:individual",
+      "version_hash_failures": [],
+      "inputs_sha256": "fcc30560d1a9064e32f299201e530e012171bd7e1d9d79682379b6334af6e058",
+      "version_file_sha256": "8d36bb2c570ad7a47f7d86064711f4e8818c29926e730c85acda5b904fcf9cd7"
+    }
+  ]
+}
