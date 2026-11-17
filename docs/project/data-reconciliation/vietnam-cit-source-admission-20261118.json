@@ -1,5 +1,5 @@
 {
-  "status": "candidates_prepared_not_cloud_admitted",
+  "status": "cloud_admitted_and_exact_read_verified",
   "source_commit": "b07d0d6f2d117342ce2a571b3ce57ac71e9c6cb7",
   "document": {
     "id": "vn.law.cit67.2025.gazette.vi",
@@ -48,5 +48,16 @@
     "overlay_bundle_sha256": "73cf9e9f8191dd1e9cb9e2befb26a2e26de6aff5c96037b30f0ac88ef76e0a2f",
     "review_sha256": "383edd2aeb93146677a0fcda91638a12dc5bd1fc27a0495b5d8be06fc926bbec"
   },
-  "scope": "Original Law67 provisions2(2),3(4),10(1),19(1). Gazette source only, not consolidated2026 law or complete eligibility/credit policy approval. Tax-period applicability distinguished from general commencement."
+  "scope": "Original Law67 provisions2(2),3(4),10(1),19(1). Gazette source only, not consolidated2026 law or complete eligibility/credit policy approval. Tax-period applicability distinguished from general commencement.",
+  "after_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "c460242ec75b6c3a069f9b3a59924536840d9078523a39d4c02e12635c76d9d5",
+    "review_sha256": "460b4496ee8f842d808728a38e811b5c16667ec2180d5873077b02381a4a2eca"
+  },
+  "exact_complete_text_verified": true,
+  "old_pin_rejected": true,
+  "reader": "dedicated_read_only_role",
+  "base_version_unchanged": true
 }
