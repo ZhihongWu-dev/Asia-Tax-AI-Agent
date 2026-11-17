@@ -22,5 +22,20 @@
     "printed_page": 237,
     "visual_findings": "Article26(1) baseline20 percent gross for listed payments to nonresident non-PE recipients; Article26(1a) beneficial-owner residence; Article26(1b) reduced interest rate possible by Government Regulation; Article26(2) uses deemed net rather than gross. Footer identifies amendment references through Law6/2023.",
     "status": "archived_and_relevant_page_visually_reviewed_pending_registration_and_later_amendment_check"
+  },
+  "subsequent_instrument_review": {
+    "doc_id": "id.pp20.2026.id",
+    "sha256": "3aadd85768e7dc3dd5f8431178ee0dd1d03d631835a493288563692de7cf8520",
+    "official_index": "https://jdih.kemenkeu.go.id/dok/pp-20-tahun-2026",
+    "index_effective_date": "2026-04-22",
+    "finding": "PP20/2026 recitals still identify Income Tax Law last amended by Law6/2023; this instrument amends PP55/2022, including nondeductible bribery expenditures and small-turnover income rules. This supports using the 2023 consolidation as a later legislative source but does not independently certify every 2026 exception.",
+    "review_scope": "Read opening amendment frame and recitals, not a complete current-law approval."
+  },
+  "registration_plan": {
+    "doc_id": "id.tax-law-consolidation-2023.id",
+    "primary_article26_page": 242,
+    "preserve_original_2022_document": true,
+    "effective_date_policy": "Do not give entire consolidated book one inferred enactment date; statute amendments and per-parameter applicability require independent dates.",
+    "current_build": "Do not modify staged inputs while id-treaty-full-rebuild runs."
   }
 }
