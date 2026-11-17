@@ -113,6 +113,24 @@ class THIndividual(THBasis):
     assessable_income_classification_confirmed: StrictBool
 
 
+class VNCompany(Basis):
+    policy: Literal['vn_company_2026']
+    taxable_income: Money
+    vietnam_established: StrictBool
+    new_in_current_period: StrictBool
+    previous_period_revenue: Money | None
+    previous_active_months: Annotated[int, Field(strict=True, ge=1, le=12)] | None
+    exemption_related_enterprise_disqualified: StrictBool
+    reduced_rate_related_enterprise_disqualified: StrictBool
+    formed_by_split_after_resolution: StrictBool
+    all_split_entities_revenue: Money | None
+    other_incentive_reduction: Money
+    prepaid_tax: Money
+    ordinary_domestic_income_confirmed: StrictBool
+    statutory_revenue_scope_confirmed: StrictBool
+    other_incentives_verified: StrictBool
+
+
 class VNEmployment(Basis):
     policy: Literal['vn_employment_2026']
     chargeable_employment_income: Money
@@ -143,5 +161,5 @@ class IDIndividual(IDBasis):
 
 
 Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual |
-                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment,
+                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment | VNCompany,
                        Field(discriminator='policy')]

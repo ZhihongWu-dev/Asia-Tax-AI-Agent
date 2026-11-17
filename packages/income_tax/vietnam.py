@@ -1,7 +1,7 @@
 """Vietnam calendar2026 ordinary domestic company calculation.
 
-Combines verified eligibility helpers; API enablement and source indexing are
-still pending. Inputs are established tax bases, not raw accounting profit.
+Combines verified eligibility helpers; complete source indexing remains pending.
+Inputs are established tax bases, not raw accounting profit.
 Foreign income, excluded Article23(9) income, special rates, revenue methods
 and non-calendar periods need separate calculations.
 """
