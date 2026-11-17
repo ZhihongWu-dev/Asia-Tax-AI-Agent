@@ -7,8 +7,8 @@ foreign income, expenses and relief eligibility must be resolved upstream.
 from copy import deepcopy
 from decimal import Decimal, localcontext
 
-from .arithmetic import ZERO, amount
-from .malaysia import SOURCES
+from .arithmetic import BandResult, ZERO, amount
+from .malaysia import RESIDENT_BANDS, SOURCES, settlement
 
 THRESHOLD = Decimal('100000')
 RATE = Decimal('.02')
@@ -69,3 +69,49 @@ The ordinary remainder still needs the resident/nonresident Part I schedule.
                     dividend_tax=dividend_base*RATE, dividend_rate=RATE,
                     sources=deepcopy(DIVIDEND_SOURCES),
                     stage='dividend_allocation_before_ordinary_tax_settlement_and_rounding')
+
+
+def annual_dividend_assessment(*, assessment_year, residency,
+                               dividend_statutory_income, aggregate_income,
+                               chargeable_income, bases_verified,
+                               allowed_rebates, allowed_tax_credits, prepaid_tax,
+                               settlement_inputs_verified):
+    """Combine Part XXII dividend tax with the ordinary Part I remainder.
+
+Rebates and credits are independently verified allowable amounts after their
+eligibility, caps and ordering; prepaid tax is separate. Excluded special-rate
+income cannot be included in these bases. This does not determine deductions,
+joint-assessment eligibility or foreign-tax-credit allocation.
+"""
+    if settlement_inputs_verified is not True:
+        raise ValueError('Rebate, credit and prepaid tax treatment must be verified')
+    allocation = allocate_dividend_income(
+        assessment_year=assessment_year, residency=residency,
+        dividend_statutory_income=dividend_statutory_income,
+        aggregate_income=aggregate_income, chargeable_income=chargeable_income,
+        bases_verified=bases_verified)
+    if residency == 'nonresident' and amount(allowed_rebates) != ZERO:
+        raise ValueError('Resident rebates cannot be applied to a nonresident')
+    with localcontext() as context:
+        context.prec = 40
+        base = allocation['ordinary_chargeable_income']
+        ordinary_tax, lower, bands = ZERO, ZERO, []
+        if residency == 'resident':
+            # A/B*C can repeat. Preserve internal precision rather than passing
+            # the allocated amount through the six-decimal external input gate.
+            for band in RESIDENT_BANDS:
+                taxable = max(ZERO, (base if band.upper is None else min(base, band.upper))-lower)
+                tax = taxable * band.rate
+                bands.append(BandResult(lower, band.upper, taxable, band.rate, tax))
+                ordinary_tax += tax
+                if band.upper is not None:
+                    lower = band.upper
+        else:
+            ordinary_tax = base * Decimal('.30')
+            bands.append(BandResult(ZERO, None, base, Decimal('.30'), ordinary_tax))
+        settled = settlement(ordinary_tax + allocation['dividend_tax'],
+                             allowed_rebates, allowed_tax_credits, prepaid_tax)
+        return dict(allocation, ordinary_tax=ordinary_tax, bands=tuple(bands), **settled,
+                    amount_payable=max(ZERO, settled['balance_due']),
+                    refund_due=max(ZERO, -settled['balance_due']),
+                    stage='individual_dividend_annual_before_assessment_rounding')
