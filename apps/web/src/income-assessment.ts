@@ -1,12 +1,13 @@
 import type { IncomeTaxInput } from './income-tax';
 import { koreaPolicy } from './korea-assessment';
+import { koreaSalaryPolicy } from './korea-salary-assessment';
 
 export type IncomeRun = {
   id: string; input_revision: number; created_at: string; status: string; snapshot_hash: string;
   result: Record<string, unknown>;
 };
 type Label = [string, string];
-export type BasisField = { key: string; label: Label; options?: [string, Label][]; boolean?: boolean; monthsList?: boolean; text?: boolean; min?: number; max?: number; date?: boolean; integer?: boolean; showWhen?: [string,string] };
+export type BasisField = { key: string; label: Label; options?: [string, Label][]; boolean?: boolean; monthsList?: boolean; text?: boolean; min?: number; max?: number; date?: boolean; dateMin?: string; integer?: boolean; showWhen?: [string,string] };
 const money = (key: string, zh: string, en: string): BasisField => ({key, label:[zh,en]});
 const confirm = (key: string, zh: string, en: string): BasisField => ({key,label:[zh,en],boolean:true});
 const prepaid = money('prepaid_tax','归属本期的预缴税额','Prepaid tax for this period');
@@ -17,6 +18,7 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput, values:Record<string,string>={}): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if(input.jurisdiction==='kr' && !company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.every(i=>i.source_jurisdiction==='kr'&&i.category==='employment'))return [koreaSalaryPolicy(values)];
   if(input.jurisdiction==='kr' && company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.every(i=>i.source_jurisdiction==='kr'&&['business','interest','rental','royalty'].includes(i.category))) return [koreaPolicy(values)];
   if(input.jurisdiction==='in' && input.residency==='resident' && period==='2026-04-01/2027-03-31' && input.incomes.every(i=>i.source_jurisdiction==='in'&&['business','employment','service_remuneration','author_remuneration','interest','rental','royalty'].includes(i.category))) {
     const primary: IncomePolicy = {id:company?'in_company_section200_ty2026_27':'in_personal_new_ty2026_27',

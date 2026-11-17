@@ -31,7 +31,7 @@
   "unresolved": [
     "Current electronic-filing validation and municipal notice workflows outside employer payroll",
     "Hometax 2026 electronic submission instructions: official NTS search locates the Hometax materials entry but actual current file not yet retrieved",
-    "Personal frontend, additional income/regime coverage and business acceptance"
+    "Additional personal income/regime coverage and production business acceptance"
   ],
   "saved_case_api": {
     "policy": "kr_salary_standard_payroll_2026",
@@ -39,6 +39,11 @@
     "reconciliation": "Aggregates saved gross salary across employers. Saved claimed deductions equal paid public pension; automatic salary and family deductions are calculated separately to avoid double use. Rejects carried losses, foreign income/credits and non-employment income. Nested family/child contracts preserve strict booleans, decimal money and dates.",
     "verification": "17 contract/service/HTTP tests passed; complete income-tax suite944 passed in14.00s. Tests include pension reconciliation, birth2017 transition, two-employer aggregation, persisted result after restart, idempotent replay, stale revision and cross-account denial.",
     "research": "Continues the previously reviewed existing saved-case workflow and MIT Korean reference design; no new dependency or external code adopted."
+  },
+  "personal_frontend": {
+    "implementation": "Bilingual ordinary salary policy added to existing assessment UI. Family rows generate aligned child-credit records; conditional birth/adoption inputs omitted when inapplicable. Birth dates use an appropriate historical date range. Explicit ordinary/standard-credit, family, pension and employer confirmations retained. Report displays national/local decisions and separate payable/refundable amounts, sources and birth2017 exception.",
+    "verification": "TypeScript and Vite production build passed; existing bundle-size warning remains. Two Edge/Playwright workflows passed in38.5s for birth2016-12-31 versus2017-01-01, national decisions2,762,501 versus3,012,501, child credit250,000 versus0, and persisted results after reopening. Screenshot inspected: national refund387,490 and local payable1,250 are separately visible for the2017 case.",
+    "remaining": "Broader household/event combinations, additional regimes and production acceptance remain required; two browser cases do not establish full personal-tax business coverage."
   },
   "storage": "Original HTML, extracted text and manifest staged in external korea-rounding-20261118 audit directory. Frozen database/runtime inputs unchanged.",
   "completion_claim": false

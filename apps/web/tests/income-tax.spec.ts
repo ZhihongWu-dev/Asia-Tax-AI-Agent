@@ -1,5 +1,48 @@
 import { test, expect } from '@playwright/test';
 
+for(const birth of ['2016-12-31','2017-01-01'])test(`Korea salary uses child transition ${birth} and saves separate balances`,async({page})=>{
+  const form=await openIncome(page);
+  for(const [name,value] of [['Taxpayer','individual'],['Filing jurisdiction','kr'],['Tax residency','resident'],['Income category','employment'],['Income source jurisdiction','kr']])
+    await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Gross income','50000009'],['Income description','Ordinary domestic annual salary'],['Claimed deductions (blank if unknown)','0'],['Carried losses (blank if unknown)','0']])
+    await form.getByLabel(name,{exact:true}).fill(value);
+  await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+  const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await calc.getByLabel('Applicable regime').selectOption('kr_salary_standard_payroll_2026');
+  await calc.getByLabel('Number of people including taxpayer',{exact:true}).fill('2');
+  await calc.getByRole('combobox',{name:'Person 1: relationship',exact:true}).selectOption('self');
+  await calc.getByRole('combobox',{name:'Person 2: relationship',exact:true}).selectOption('descendant');
+  await calc.getByRole('combobox',{name:'Person 2: child-credit relationship',exact:true}).selectOption('child');
+  await calc.getByLabel('Person 2: birth date',{exact:true}).fill(birth);
+  for(const name of ['Taxpayer is female','Has spouse at statutory assessment date','Taxpayer is household head','Person 2: claim verified 2026 birth or registered adoption credit'])
+    await calc.getByRole('combobox',{name,exact:true}).selectOption('false');
+  for(const n of [1,2]) {
+    await calc.getByRole('combobox',{name:`Person ${n}: basic deduction eligible and allocated to this claimant`,exact:true}).selectOption('true');
+    for(const label of ['age 70 or above at statutory date','statutory disability'])
+      await calc.getByRole('combobox',{name:`Person ${n}: ${label}`,exact:true}).selectOption('false');
+  }
+  for(const [name,value] of [['Verified public pension paid','0'],['Current employer national withholding','3400000'],
+    ['Former employer settled national tax','0'],['Current employer local withholding','300000'],['Former employer settled local tax','0']])
+    await calc.getByLabel(name,{exact:true}).fill(value);
+  for(const name of ['Ordinary salary, standard-credit election and exclusions verified',
+    'Family income, support, age, statutory dates, unique claimant and submitted documents verified',
+    'Public pension deduction eligibility and receipts verified',
+    'Employer receipts reconciled; no unreflected refunds, deferrals, amended settlements or penalties',
+    'Employer year-end special collection verified; no municipal assessment notice or installments'])
+    await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+  await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified domestic salary, statutory family eligibility, birth evidence, standard credit and employer receipts.');
+  await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
+  const report=page.getByRole('article',{name:'Saved calculation result'});
+  const result=report.getByRole('region',{name:'Korean salary settlement',exact:true});
+  await expect(result.locator('dl > div').filter({hasText:'National decision tax'}).locator('dd')).toHaveText(birth.startsWith('2016')?'2762501':'3012501');
+  await expect(result.locator('dl > div').filter({hasText:'Regular child credit reference'}).locator('dd')).toHaveText(birth.startsWith('2016')?'250000':'0');
+  if(birth.startsWith('2017'))await expect(result).toContainText('2017 birth-cohort exception');
+  await result.getByRole('region',{name:'Local tax',exact:true}).scrollIntoViewIfNeeded();
+  await page.screenshot({path:`test-results/income-tax-korea-salary-${birth}.png`,fullPage:true});
+  await openIncome(page);
+  await expect(page.getByRole('region',{name:'Korean salary settlement',exact:true})).toContainText(birth.startsWith('2016')?'637490':'387490');
+});
+
 for(const withRelief of [false,true])test(`Korea company preserves separate authority refunds and dynamic filing rows relief=${withRelief}`,async({page})=>{
   const form=await openIncome(page);
   for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','kr'],['Tax residency','resident'],['Income category','business'],['Income source jurisdiction','kr']])
