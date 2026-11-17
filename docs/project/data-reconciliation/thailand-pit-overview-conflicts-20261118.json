@@ -1,0 +1,93 @@
+{
+  "review_date": "2026-11-18",
+  "status": "conflicts_confirmed_corrections_pending_frozen_rebuild",
+  "sources": [
+    {
+      "doc_id": "th.rc3a.th",
+      "url": "https://www.rd.go.th/5937.html",
+      "sha256": "3050f0a13b298f027d5451fb8b3dfb8ec77658db1fbbd72eaa507abf0c3ed428",
+      "raw_verified": true
+    },
+    {
+      "doc_id": "th.rc3a.en",
+      "url": "https://www.rd.go.th/english/37749.html",
+      "sha256": "53127280e14bd5daac507bb6cd0aa316505e2f2749a1c89922b37999420b6cba",
+      "raw_verified": true
+    },
+    {
+      "doc_id": "th.rd.pit",
+      "url": "https://www.rd.go.th/english/6045.html",
+      "sha256": "6137b1406349349fb8d8ed90467ab97d7fe960ee5295e378beffcc69fcd5d53a",
+      "raw_verified": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "resident_boundary",
+      "incorrect_parameter": "th.residence.residence_days_threshold.legacy_3dd29d5165f5",
+      "incorrect_citation": "th.rd.pit#h1",
+      "issue": "English overview and imported note incorrectly require more than180 days. Thai and English Revenue Code section41 require180 days or more.",
+      "authoritative_citations": [
+        "th.rc3a.th#s41",
+        "th.rc3a.en#s41"
+      ],
+      "existing_correct_parameter": "th.residence.residence_days_min",
+      "active_rule": "th.residence.individual",
+      "active_rule_expression": "days_present >= $th.residence.residence_days_min",
+      "required_change": "Quarantine or supersede erroneous legacy parameter; preserve provenance without exposing the contradictory note as an active parameter. Do not change the already-correct active residence rule.",
+      "required_acceptance": [
+        {
+          "days": 179,
+          "resident_by_days": false
+        },
+        {
+          "days": 180,
+          "resident_by_days": true
+        },
+        {
+          "days": 181,
+          "resident_by_days": true
+        }
+      ]
+    },
+    {
+      "id": "dividend_credit",
+      "incorrect_parameter": "th.final.dividend_tax_credit_fraction.legacy_17d33c3c7596",
+      "incorrect_citation": "th.rd.pit#h6",
+      "issue": "A universal3/7 credit assumes30 percent corporate tax. Section47bis instead uses the applicable distributing-company tax rate and requires certified allocation for multiple rates.",
+      "authoritative_citations": [
+        "th.rc3a.th#s47bis",
+        "th.rc3a.en#s47bis"
+      ],
+      "required_change": "Replace universal constant with eligibility-checked rate/(100-rate) calculation per certified dividend tranche; handle gross-up, individual aggregation election and withholding separately. Do not substitute universal1/4 either.",
+      "required_acceptance": [
+        {
+          "dividend": 100,
+          "corporate_rate_percent": 20,
+          "credit": 25
+        },
+        {
+          "dividend": 70,
+          "corporate_rate_percent": 30,
+          "credit": 30
+        }
+      ],
+      "runtime_search": "No direct use of legacy dividend_tax_credit_fraction found in rule/rule.csv or packages/income_tax; generic catalog exposure remains a risk."
+    },
+    {
+      "id": "mixed_outdated_page",
+      "citations": [
+        "th.rd.pit#h12",
+        "th.rd.pit#all"
+      ],
+      "issue": "Page combines potentially valid filing/election statements with historical5-37 percent withholding bands and2013-2014 rates. Last-updated label is not proof of current legal applicability.",
+      "required_change": "Rebind individual filing/withholding dependencies to specific current statutory provisions; do not admit the whole overview merely to close missing references."
+    }
+  ],
+  "freeze": "No generated CSV, SQLite, rule or optimizer inputs changed. Findings must be resolved after the live golden run terminates.",
+  "remaining": [
+    "Resolve foreign-income timing under ordersP161/P162 and any subsequent amendments",
+    "Verify domestic dividend eligibility, allocation and election business cases",
+    "Rebuild catalog and rerun dependency closure and business tests"
+  ]
+}

@@ -48,6 +48,13 @@ The final integration has not been pushed or merged to `main`. The historical
   (some overlap), and55 local parameters are absent from the cloud catalog. See
   [dependency evidence](data-reconciliation/planner-source-readiness-20261118.json).
   These counts replace the older audit that reconstructed admission rules itself.
+- Thai PIT overview review found conflicting legacy parameters: its residence
+  wording excludes day180, while Revenue Code section41 includes it; its fixed
+  dividend credit3/7 omits section47bis's distributing-company rate dependency.
+  The active residence rule already uses the correct >=180 boundary. Legacy
+  catalog quarantine/rebinding and dividend-credit business acceptance remain
+  pending; the outdated overview has not been admitted to close missing sources.
+  See [conflict evidence](data-reconciliation/thailand-pit-overview-conflicts-20261118.json).
 - The original twelve-row optimizer regression is still running. As of the latest
   process check, PID16760 is live and the log reports three successful checks:
   case001.best, case001.open and case001.valued.best. This is not twelve-row
