@@ -18,9 +18,9 @@ The final integration has not been pushed or merged to `main`. The historical
   Singapore employment settlement additionally passed three browser scenarios
   (two save/reopen cases and the existing rate-only entry). These use local
   fixtures, not production identity/provider acceptance.
-- Cross-module offline regression completed: `pytest tests -m 'not integration'
-  --ignore=tests/database -q` returned1943 passed,1 skipped and11 deselected in
-  439.31seconds. The skip is the unavailable legacy attachment converter; the
+- Cross-module offline regression completed with Python UTF-8 mode: `python -X utf8
+  -m pytest tests -m 'not integration' --ignore=tests/database -q` returned
+  2068 passed, 1 skipped and 11 deselected in 454.46 seconds. The skip is the unavailable legacy attachment converter; the
   deselections are live-database integration tests. Database extraction tests
   passed71 separately. These results do not establish live account isolation,
   provider availability or hosted-worker acceptance.
@@ -147,6 +147,24 @@ The final integration has not been pushed or merged to `main`. The historical
   Cleanup completed. This verifies storage behavior across new connections,
   not real JWT/account isolation or a deployed worker restart. See
   [PostgreSQL evidence](data-reconciliation/planning-schema-acceptance-20261118.json).
+
+## Latest isolated source verification
+
+The dedicated read-only cloud reader checked all 633 distinct citation dependencies
+in the isolated parameter, absence, rule, predicate and decision CSVs after the
+Vietnam distribution changes. None are missing; one remains blocked:
+`id.dgt.article26#all`, used by two catalog parameters and the statutory withholding
+rule. See [current source audit](data-reconciliation/isolated-planner-source-readiness-20261118.json).
+This verifies citation availability and admission only, not legal completeness,
+cloud parameter parity, runtime promotion or final business acceptance.
+
+The conditional Vietnam distribution exemption has 1,375 passing isolated rule
+tests and 30 remaining coverage gaps. Explicit probes verify that unknown
+qualification does not produce a definite zero-tax result. Its removal of the
+unconditional outbound-withholding absence record requires a fresh isolated
+SQLite build, which is in progress. The original optimizer remains running with
+four completed cases and no checker failures in those four; its full result is
+still pending.
 
 ## Remaining delivery gates
 

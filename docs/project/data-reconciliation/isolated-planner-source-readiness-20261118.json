@@ -1,16 +1,16 @@
 {
-  "scope": "Prospective isolated database and rule CSVs including VN late-interest rule, retired unsupported absence rows and Indonesian primary treaty parameter; not runtime promotion or cloud catalog migration.",
+  "scope": "Prospective isolated CSVs after conditional Vietnam distribution exemption; not runtime promotion or cloud catalog migration.",
   "snapshot": {
     "spec_version": "2026-11-10",
     "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
     "uploaded_at": "2026-11-13T03:39:52Z",
-    "overlay_bundle_sha256": "578439bd71f8bcef31349bffee911f18392506f9c087399ed98b4d0a951d3738",
-    "review_sha256": "33ba4e0139554a7f277d33f8e60bbe9861fdfa016cd48ea60b43025711a07cc8"
+    "overlay_bundle_sha256": "3cef1527fab0b3614069fa179165b2ea05258e41c5a58956f48fff234fffa350",
+    "review_sha256": "1689ea109d0e911ed66ba1bb7c5154b8be55c0cee9e87fd6d680713ae950827b"
   },
   "counts": {
-    "references": 631,
+    "references": 633,
     "missing": 0,
-    "blocked": 2
+    "blocked": 1
   },
   "missing": {},
   "blocked": {
@@ -18,17 +18,6 @@
       "database/param.csv:id.outbound_wht.default_nonresident_rate",
       "database/param.csv:id.outbound_wht.payment_deadline",
       "rule/rule.csv:id.outbound_wht.statutory"
-    ],
-    "vn.law.cit2025.en#all": [
-      "database/decision.csv:vn.absent.company.outbound_wht",
-      "rule/decision.csv:D-vn-1",
-      "rule/decision.csv:D-vn-2",
-      "rule/decision.csv:D-vn-3",
-      "rule/rule.csv:vn.final.cit",
-      "rule/rule.csv:vn.final.domestic_exempt",
-      "rule/rule.csv:vn.inbound.credit",
-      "rule/rule.csv:vn.inbound.taxable",
-      "rule/rule.csv:vn.residence.company"
     ]
   }
 }
