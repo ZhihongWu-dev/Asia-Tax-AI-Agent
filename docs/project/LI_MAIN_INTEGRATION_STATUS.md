@@ -1,4 +1,53 @@
-# Li/Main integration status (2026-11-15)
+# Li/Main integration status (2026-11-18)
+
+## Current delivery state
+
+Work is on `codex/li-corporate-integration`, tracking `origin/Zhihong-Wu`.
+The final integration has not been pushed or merged to `main`. The historical
+2026-11-15 record below is retained as baseline evidence, not current status.
+
+- Scope remains Li data/function integration plus both corporate and personal
+  income tax across cn, hk, sg, id, vn, my, th, ae, jp, kr and in. Passing ordinary
+  calculations does not complete special regimes or production acceptance.
+- Saved income facts, explicit calculation bases, revision-bound results and
+  bilingual forms are implemented. The latest income suite passed 1034 tests.
+  Singapore employment settlement additionally passed three browser scenarios
+  (two save/reopen cases and the existing rate-only entry). These use local
+  fixtures, not production identity/provider acceptance.
+- Planning runs are connected to the signed-in case API and UI, with a durable
+  queue, worker leases, cancellation and pinned artifacts. The hosted worker
+  has not been provisioned or accepted. See [worker deployment](PLANNING_WORKER_DEPLOYMENT.md).
+- A dedicated cloud law-library reader has verified read-only grants and cannot
+  access private cases/jobs. Its deployment secret still needs installation.
+- Cloud source review queried on 2026-11-18: different-text records have 2 accepted
+  replacements, 16 candidates and 7 rejected decisions; main-only records have
+  104 candidates and 3 rejected decisions. Total remains132. A rejected
+  different-text candidate normally retains the base; explicit exclusions are
+  essential for sources that are obsolete or corrupt. The repealed CN2008-112
+  notice is explicitly excluded in both search and planning readers.
+- The two accepted repairs are CN2026-27 item3 and the UAE top-up-tax whole-page
+  citation. Both are hash-bound replacements; the base cloud text is unchanged.
+- The original twelve-row optimizer regression is still running. As of the latest
+  process check, PID16760 is live and the log reports three successful checks:
+  case001.best, case001.open and case001.valued.best. This is not twelve-row
+  completion. Generated CSV/SQLite and optimizer inputs remain frozen.
+- Parser fixes are committed but await generated-data rebuild: Chinese inline
+  numbers, malformed HTML main containers and Indonesian standalone legal
+  numbers. Pending data work includes HK-UAE originals/MLI applicability,
+  Indonesia's fifteenth-day payment deadline, source admission and citation closure.
+
+## Remaining delivery gates
+
+1. Finish the live optimizer baseline, rebuild the frozen data with the reviewed
+   repairs, and validate source hashes, citation closure and CSV/SQLite parity.
+2. Resolve remaining source admission and temporal applicability; complete the
+   income business scenarios, including individual entitlement and special regimes.
+3. Run cross-module regression, deployed two-account isolation, worker recovery,
+   actual provider/report execution and end-to-end business acceptance.
+4. Deliver the finished integration to `Zhihong-Wu`, then merge reviewed changes
+   to `main` after acceptance. Do not equate local commits with remote delivery.
+
+## Historical baseline: 2026-11-15
 
 This is the trial integration on `Zhihong-Wu`. `main` has not been changed.
 

@@ -1,5 +1,15 @@
 # Li module merge status
 
+Updated2026-11-18: the standalone-module import described below is now connected
+to the signed-in application through persistent planning runs, a worker and
+pinned source/artifact readers. Production hosting and business acceptance are
+still incomplete. See [current integration status](LI_MAIN_INTEGRATION_STATUS.md)
+and [worker deployment](PLANNING_WORKER_DEPLOYMENT.md). The remainder of this
+file records the original import boundary and must not be read as current
+application connectivity.
+
+## Historical import record
+
 This merge preserves the existing Taxora web app, Supabase authentication, deployment configuration, and the newly merged tax database. It incorporates the standalone `.claude/`, `agent/`, `rule/`, `optimization/`, and `case_end2end/` modules from LiZiheng's safe code commit `0973ce1`.
 
 These modules are **not connected to the production chat API**. The rule snapshot covers fewer jurisdictions than the current database, and its generated SQLite/status files need to be rebuilt and revalidated against that database before use. The agent's Claude Code MCP configuration contains a machine-specific Python path and needs portable configuration before running on another machine. The end-to-end case uses fictional parties and amounts plus public official documents.
