@@ -1,0 +1,91 @@
+{
+  "scope": "Prospective isolated CSV parameters/decisions plus unchanged runtime rule/predicate sources; no cloud write and no runtime promotion. Japan pending scoped rebuild does not affect existing cited clause text.",
+  "snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "22d488e35da36073d6437f9c1b47d787aafef627e1afac193d999329dc42462a",
+    "review_sha256": "00b534c191e34be182c1ce015a1e9056ad9add5f4b7e8cb225a64b9ec08ad127"
+  },
+  "counts": {
+    "references": 626,
+    "missing": 8,
+    "blocked": 6
+  },
+  "missing": {
+    "id.pmk81-2024#100(1)": [
+      "param.csv:id.outbound_wht.payment_holiday_adjustment"
+    ],
+    "id.pmk81-2024#100(2)": [
+      "param.csv:id.outbound_wht.payment_holiday_scope"
+    ],
+    "id.pmk81-2024#94(2)": [
+      "param.csv:id.outbound_wht.payment_day_next_month"
+    ],
+    "jp.mof.cfc-overview#all": [
+      "param.csv:jp.cfc.foreign_subsidiary_income_attributed"
+    ],
+    "th.rd.cit#lead": [
+      "param.csv:th.final.cit_return_days",
+      "param.csv:th.outbound_wht.foreign_company_return_days",
+      "decision.csv:th.absent.company.cfc"
+    ],
+    "th.rd.pit#h1": [
+      "param.csv:th.inbound.foreign_income_taxable_on_remittance",
+      "decision.csv:th.absent.individual.cfc"
+    ],
+    "th.rd.pit#h12": [
+      "param.csv:th.final.individual_return_deadline",
+      "param.csv:th.outbound_wht.payer_withholding_required"
+    ],
+    "th.rd.transfer-pricing-legislation#all": [
+      "param.csv:th.anti_abuse.transfer_pricing_market_price_adjustment",
+      "decision.csv:th.absent.individual.anti_abuse"
+    ]
+  },
+  "blocked": {
+    "ae.fta.corporate-tax-faq#all": [
+      "param.csv:ae.anti_abuse.transfer_pricing_applies_to_related_parties.legacy_03670a518456",
+      "param.csv:ae.residence.residence_test.legacy_09239f63cd95"
+    ],
+    "id.dgt.article26#all": [
+      "param.csv:id.outbound_wht.default_nonresident_rate",
+      "param.csv:id.outbound_wht.treaty_rate_available",
+      "param.csv:id.outbound_wht.payment_deadline",
+      "rule.csv:id.outbound_wht.statutory"
+    ],
+    "jp.mof.cfc-overview#all": [
+      "param.csv:jp.cfc.foreign_subsidiary_income_attributed"
+    ],
+    "kr.nts.global-income-faq#all": [
+      "param.csv:kr.final.global_income_taxable.legacy_ff9c51667058",
+      "param.csv:kr.inbound.worldwide_income_reportable.legacy_55f79a66d148",
+      "param.csv:kr.residence.residence_years_min.legacy_04bb728aea1c"
+    ],
+    "th.rd.transfer-pricing-legislation#all": [
+      "param.csv:th.anti_abuse.transfer_pricing_market_price_adjustment",
+      "decision.csv:th.absent.individual.anti_abuse"
+    ],
+    "vn.law.cit2025.en#all": [
+      "param.csv:vn.final.cit_rate",
+      "param.csv:vn.inbound.foreign_income_taxable",
+      "param.csv:vn.inbound.foreign_tax_credit_cap",
+      "param.csv:vn.residence.worldwide_tax_scope",
+      "param.csv:vn.residence.worldwide_tax_scope.legacy_ebbee7602af2",
+      "decision.csv:vn.absent.3",
+      "decision.csv:vn.absent.cfc",
+      "decision.csv:vn.absent.company.outbound_wht",
+      "decision.csv:vn.absent.company.anti_abuse",
+      "rule.csv:vn.residence.company",
+      "rule.csv:vn.inbound.taxable",
+      "rule.csv:vn.inbound.credit",
+      "rule.csv:vn.final.cit",
+      "rule.csv:vn.final.domestic_exempt",
+      "decision.csv:D-vn-1",
+      "decision.csv:D-vn-2",
+      "decision.csv:D-vn-2",
+      "decision.csv:D-vn-2",
+      "decision.csv:D-vn-3"
+    ]
+  }
+}

@@ -32,7 +32,7 @@
   "generated_data_modified": false,
   "cloud_admitted": false,
   "isolated_repair": {
-    "status": "primary_law_scope_rebound_pending_rebuild",
+    "status": "jurisdiction_validation_passed_pending_full_rebuild",
     "retired_legacy_parameter": {
       "param_id": "jp.anti_abuse.consolidated_corporation_unreasonable_tax_reduction_denial.legacy_60062fc21261",
       "scope": "jp",
@@ -68,6 +68,11 @@
     "family_company_note_before": "Japan has no general anti-avoidance rule: s132 lets the district director disregard acts or calculations of family companies (同族会社) that unduly reduce corporation tax (similar rules for reorganisations s132-2 and group relief s132-3, not collected). Treaty PPT: pair parameters.",
     "family_company_note_after": "Section132 permits disregard of acts or calculations of qualifying family companies that unduly reduce corporation tax. Reorganization section132-2 and group-tax-sharing section132-3 have separate scopes; this parameter does not establish a universal GAAR or the absence of other anti-abuse provisions. Treaty PPT uses pair-specific parameters.",
     "runtime_promoted": false,
-    "automated_group_eligibility_not_implemented": true
+    "automated_group_eligibility_not_implemented": true,
+    "jurisdiction_check": {
+      "exit_code": 0,
+      "errors": 0,
+      "gaps": 0
+    }
   }
 }
