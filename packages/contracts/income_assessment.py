@@ -70,6 +70,19 @@ class SGIndividual(Basis):
     chargeable_income: Money
 
 
+class SGEmployment(Basis):
+    policy: Literal['sg_employment_ya2026']
+    birth_date: date
+    disability_relief_eligible: StrictBool
+    allowed_employment_expenses: Money
+    allowed_donation_deduction: Money
+    allowed_cpf_relief: Money
+    allowed_other_personal_reliefs: Money
+    available_parenthood_rebate: Money
+    prepaid_tax: Money
+    eligibility_and_allocations_verified: StrictBool
+
+
 class HKProfits(Basis):
     policy: Literal['hk_profits_2025_26']
     assessable_profits: Money
@@ -352,6 +365,6 @@ class KRSalary(Basis):
     installment: StrictBool
 
 
-Assessment = Annotated[CNCompany | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGIndividual | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
+Assessment = Annotated[CNCompany | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
                        HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
                        Field(discriminator='policy')]

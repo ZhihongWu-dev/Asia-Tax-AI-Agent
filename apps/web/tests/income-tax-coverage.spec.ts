@@ -14,6 +14,14 @@ async function open(page:Page) {
 type Scenario={name:string;country:string;subject:string;category:string;start:string;end:string;
   gross:string;policy:string;deductions?:string;money:[string,string][];choices:[string,string][];resultLabel:string;expected:string};
 const scenarios:Scenario[]=[
+  {name:'Singapore employment IRAS PTR carryforward',country:'sg',subject:'individual',category:'employment',start:'2025-01-01',end:'2025-12-31',gross:'80000',policy:'sg_employment_ya2026',deductions:'28000',
+    money:[['Date of birth','1990-01-01'],['Allowed employment expenses','0'],['Usable donation deduction after verified multiplier','0'],['Allowed employee CPF relief','16000'],['Other allowed personal reliefs excluding items above','12000'],['Verified available PTR balance','2500'],['Prepaid tax for this period','100']],
+    choices:[['Eligible for disability earned income relief','false'],['YA 2026 eligibility, individual limits, allocation and PTR balance verified','true']],
+    resultLabel:'PTR carried forward (not refundable)',expected:'1180'},
+  {name:'Singapore employment relief cap and donation',country:'sg',subject:'individual',category:'employment',start:'2025-01-01',end:'2025-12-31',gross:'150000',policy:'sg_employment_ya2026',deductions:'100400',
+    money:[['Date of birth','1990-01-01'],['Allowed employment expenses','0'],['Usable donation deduction after verified multiplier','10000'],['Allowed employee CPF relief','20400'],['Other allowed personal reliefs excluding items above','70000'],['Verified available PTR balance','0'],['Prepaid tax for this period','3000']],
+    choices:[['Eligible for disability earned income relief','false'],['YA 2026 eligibility, individual limits, allocation and PTR balance verified','true']],
+    resultLabel:'Annual liability',expected:'1950'},
   {name:'China small-low-profit company at all thresholds',country:'cn',subject:'company',category:'business',start:'2026-01-01',end:'2026-12-31',gross:'4000000',policy:'cn_small_company_2026',deductions:'1000000',
     money:[['Established taxable income','3000000'],['Statutory annual quarterly-average employees','300'],['Statutory annual quarterly-average assets (CNY)','50000000'],['Allowed tax credits','10000'],['Prepaid tax for this period','200000']],
     choices:[['Non-restricted and non-prohibited industry verified','true'],['Statutory averages, residence and preference eligibility verified','true']],

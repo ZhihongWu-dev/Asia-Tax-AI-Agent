@@ -199,16 +199,29 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
       fields:[money('allowed_special_deductions','核定专项扣除','Allowed special deductions'),money('allowed_additional_deductions','核定专项附加扣除','Allowed additional deductions'),money('allowed_other_deductions','核定其他扣除','Allowed other deductions'),money('allowed_donations','核定捐赠扣除','Allowed donations'),money('allowed_tax_reductions','核定减免税额','Allowed tax reductions'),prepaid,confirm('domestic_normal_treatment_confirmed','已核对境内居民综合所得普通处理','Domestic resident comprehensive treatment checked')]}];
   }
   if (input.jurisdiction === 'sg' && period === '2025-01-01/2025-12-31') {
+    const rateOnly: IncomePolicy = {id:'sg_resident_ya2026',label:['新加坡居民税率表核算（YA 2026）','Singapore resident rate schedule (YA 2026)'],
+      notice:['输入扣除及个人减免后核定的应课税收入。结果仅为居民税率表计算，尚未计入抵免、预缴或评税舍入。',
+        'Enter established chargeable income after deductions and personal reliefs. This is the resident rate calculation before credits, prepayments and assessment rounding.'],
+      fields:[money('chargeable_income','核定应课税收入','Established chargeable income')]};
+    if (!company && input.residency==='resident' && input.incomes.every(i=>i.category==='employment'&&i.source_jurisdiction==='sg')) return [{
+      id:'sg_employment_ya2026',label:['新加坡居民受雇所得结算（YA 2026）','Singapore resident employment settlement (YA 2026)'],
+      notice:['以已保存的2025年境内应税薪酬计算。已保存扣除额须等于费用、可用捐赠扣除、CPF及其他个人减免之和（总限额前）；不要重复计入自动计算的劳动所得减免。须核对每项资格、限额及家庭分配；其他减免不含已于YA 2026失效的课程费用减免。PTR填本人的核定可用余额，未用余额结转，不退款。仅普通受雇收入，不含税务清算、特殊股票计划、境外抵免或亏损；结果尚未作评税舍入。',
+        'Uses saved 2025 domestic taxable employment income. Saved deductions equal expenses, usable donation deduction, CPF and other personal relief claims before the overall cap; exclude automatic earned income relief. Verify each entitlement, limit and family allocation; other reliefs exclude course fees, lapsed from YA 2026. PTR is your verified available balance; unused PTR carries forward and is not refunded. Ordinary employment only, excluding tax clearance, special share schemes, foreign credits and losses; before assessment rounding.'],
+      fields:[{key:'birth_date',label:['出生日期','Date of birth'],date:true,dateMin:'1900-01-01'},
+        confirm('disability_relief_eligible','符合劳动所得残障减免条件','Eligible for disability earned income relief'),
+        money('allowed_employment_expenses','核定受雇费用扣除','Allowed employment expenses'),
+        money('allowed_donation_deduction','本期可用捐赠扣除额（已核定倍数）','Usable donation deduction after verified multiplier'),
+        money('allowed_cpf_relief','核定员工CPF减免','Allowed employee CPF relief'),
+        money('allowed_other_personal_reliefs','其他核定个人减免（不含上述项目）','Other allowed personal reliefs excluding items above'),
+        money('available_parenthood_rebate','本人核定可用PTR余额','Verified available PTR balance'),prepaid,
+        confirm('eligibility_and_allocations_verified','已核对YA 2026资格、单项限额、分配及PTR余额','YA 2026 eligibility, individual limits, allocation and PTR balance verified')]},rateOnly];
     return company ? [{id:'sg_company_ya2026',label:['新加坡企业（课税年2026）','Singapore company (YA 2026)'],
       notice:['仅限普通税率收入；须先核对税基、减免资格及可用抵免。现金补助单独列示，不重复扣税。',
         'Normal-rate income only. Establish the tax base, exemption eligibility and allowed credits first. The cash grant is separate from tax payable.'],
       fields:[money('normal_chargeable_income','普通税率应课税收入','Normal-rate chargeable income'),ordinary,
         {key:'exemption_scheme',label:['减免制度','Exemption scheme'],options:[['partial',['部分减免','Partial exemption']],['startup',['初创企业减免','Start-up exemption']],['none',['不适用减免','None']]]},
         confirm('startup_eligibility_confirmed','符合初创企业减免条件','Eligible for start-up exemption'),confirm('cash_grant_eligible','符合本课税年现金补助条件','Eligible for this YA cash grant'),money('allowed_tax_setoff','核定可抵免税额','Allowed tax set-off')]}]
-      : [{id:'sg_resident_ya2026',label:['新加坡居民个人（课税年2026）','Singapore resident individual (YA 2026)'],
-        notice:['输入扣除及个人减免后核定的应课税收入。结果仅为居民税率表计算，尚未计入抵免、预缴或评税舍入。',
-          'Enter established chargeable income after deductions and personal reliefs. This is the resident rate calculation before credits, prepayments and assessment rounding.'],
-        fields:[money('chargeable_income','核定应课税收入','Established chargeable income')]}];
+      : [rateOnly];
   }
   if (input.jurisdiction === 'hk' && period === '2025-04-01/2026-03-31') {
     const profits: IncomePolicy = {id:'hk_profits_2025_26',label:['香港利得税（2025/26）','Hong Kong profits tax (2025/26)'],
@@ -285,6 +298,9 @@ export const resultLabels: Record<string, Label> = {
   minimum_tax:['适用最低税额','Applicable minimum tax'],
   allowed_rebates:['核定税额回扣','Allowed tax rebates'],allowed_tax_credits:['核定抵免税额','Allowed tax credits'],
   gross_tax:['减免和抵免前税额','Tax before reductions and credits'], annual_liability:['本期税额','Annual liability'],
+  earned_income_relief:['劳动所得减免','Earned income relief'], personal_reliefs_before_cap:['限额前个人减免','Personal reliefs before cap'],
+  personal_reliefs_allowed:['限额后个人减免','Personal reliefs after cap'], personal_reliefs_disallowed_by_cap:['超过总限额的减免','Reliefs exceeding overall cap'],
+  parenthood_rebate_used:['本期使用PTR','PTR used this year'], parenthood_rebate_carried_forward:['结转PTR余额（不退款）','PTR carried forward (not refundable)'],
   final_tax:['本期税额','Tax for this assessment'], net_tax:['减免后税额','Tax after relief'],balance_due:['尚应缴金额（负数表示多缴）','Balance due (negative means overpaid)'],
   taxable_income:['应纳税所得额','Taxable income'],chargeable_income:['应课税收入','Chargeable income'],
   tax_reduction:['税额减免','Tax reduction'],cit_rebate:['企业税回扣','Corporate tax rebate'],cash_grant_separate:['单独列示的现金补助','Cash grant, separate from tax'],

@@ -1,0 +1,39 @@
+{
+  "policy": "sg_employment_ya2026",
+  "income_period": "2025-01-01/2025-12-31",
+  "scope": "Resident ordinary domestic employment: saved taxable gross income, verified expenses and usable donations, earned income relief, verified CPF/other personal reliefs with overall cap, allocated available PTR and period prepayments.",
+  "sources": [
+    "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs/earned-income-relief",
+    "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs",
+    "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs/parenthood-tax-rebate-(ptr)",
+    "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs/personal-income-tax-rebate"
+  ],
+  "official_example": {
+    "name": "IRAS YA2026 Mrs Chen",
+    "salary": "80000",
+    "earned_relief": "1000",
+    "cpf": "16000",
+    "qcr_and_wmcr_verified": "12000",
+    "chargeable_income": "51000",
+    "tax_before_ptr": "1320",
+    "allocated_ptr": "2500",
+    "ptr_used": "1320",
+    "unused_nonrefundable_ptr": "1180",
+    "annual_liability": "0"
+  },
+  "validation": {
+    "income_suite": "1034 passed",
+    "typescript": "passed",
+    "new_business_tests": "29: official example, age boundaries, disability, income limitation, overall cap, donation separation, refunds, invalid inputs, saved case reconciliation and scope rejection",
+    "browser": "Three Edge scenarios passed: PTR carry-forward save/reopen, relief-cap/donation save/reopen, original rate-table entry. Fixed the inherited date minimum and preserved the original rate-only option."
+  },
+  "research": {
+    "references": ["https://github.com/PolicyEngine/policyengine-sg", "https://github.com/ruchernchong/simplycpf"],
+    "decision": "Separate tax-base reliefs, CPF entitlements and PTR balances. No external code copied or dependency added. PolicyEngine is AGPLv3 and explicitly lists PTR balance tracking limits; its rates are not treated as authoritative for YA2026."
+  },
+  "remaining": [
+    "Automate individual CPF and family-relief entitlement determination instead of requiring verified amounts.",
+    "Add other income, special employment/tax-clearance and foreign-credit routes; do not treat ordinary employment completion as country-wide completion.",
+    "Verify assessment rounding and real production/provider acceptance. Results explicitly remain before assessment rounding."
+  ]
+}

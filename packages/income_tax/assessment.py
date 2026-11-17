@@ -7,6 +7,7 @@ from . import vietnam, vietnam_employment, vietnam_transfer, japan, japan_compan
 from . import korea_company
 from . import korea_salary
 from . import china_business
+from . import singapore_employment
 from .korea_children import ChildCreditFacts
 from .korea_personal_deductions import PersonalDeductionPerson
 
@@ -152,6 +153,19 @@ def calculate(case: IncomeTaxCase, basis):
                     raise ValueError('Only domestic comprehensive income is supported')
                 totals[categories[item.category]] += item.gross_amount
         result = china.resident_comprehensive_tax(tax_year=2026, **totals, **args)
+    elif policy == 'sg_employment_ya2026':
+        if case.subject != 'individual' or case.residency != 'resident' or case.carried_losses != 0 or any(
+                i.category != 'employment' or i.source_jurisdiction != 'sg' or
+                i.foreign_tax_paid not in (None, 0) for i in case.incomes):
+            raise ValueError('Singapore employment workflow requires resident domestic employment without losses or foreign credits')
+        with localcontext() as ctx:
+            ctx.prec = 40
+            gross = sum((i.gross_amount for i in case.incomes), Decimal('0'))
+            manual = sum((basis.allowed_employment_expenses, basis.allowed_donation_deduction,
+                          basis.allowed_cpf_relief, basis.allowed_other_personal_reliefs), Decimal('0'))
+        if case.claimed_deductions != manual:
+            raise ValueError('Saved deductions must equal expenses, donation deduction, CPF and other relief claims before the overall cap; exclude automatic earned income relief')
+        result = singapore_employment.resident_employment_tax(gross, assessment_year=2026, **args)
     elif policy == 'sg_company_ya2026':
         if args.pop('ordinary_regime_confirmed') is not True:
             raise ValueError('Ordinary Singapore regime must be confirmed')
