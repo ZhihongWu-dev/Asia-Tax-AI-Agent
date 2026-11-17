@@ -16,8 +16,10 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     # Deployment must explicitly configure its database; no local fallback.
     database_url: str = ""
+    # Separate login with SELECT-only grants; never fall back to the writer.
+    library_database_url: str = ""
 
-    @field_validator('database_url')
+    @field_validator('database_url', 'library_database_url')
     @classmethod
     def psycopg_url(cls, value: str) -> str:
         if value.startswith('postgresql://'):

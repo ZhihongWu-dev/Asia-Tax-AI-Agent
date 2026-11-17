@@ -1,0 +1,32 @@
+{
+  "checked_on": "2026-11-18",
+  "change": "Cloud law-library and planning-source reads now require FSIE_LIBRARY_DATABASE_URL and cannot fall back to FSIE_DATABASE_URL. Provisioned a dedicated login with no superuser, create-role, create-database, inheritance, replication or bypass-RLS capability. Only schema USAGE and SELECT on the explicit legal catalog/review tables were granted.",
+  "role": "taxrora_library_reader",
+  "grant_tables": ["database.meta", "database.doc", "database.clause", "database.param", "database.jurisdiction", "database.treaty", "database.decision", "database_integration.source_review"],
+  "credential_handling": "Cryptographically generated login password stored only in an external local secret env file with inherited ACLs removed and access limited to current Windows user and SYSTEM. No password or connection string committed or emitted. Existing writer credential unchanged.",
+  "verification": {
+    "local_tests": "46 passed in5.88s: no writer fallback, driver normalization, bounded reader pool, snapshot/review boundary and planning source tests.",
+    "live_login": "current_user=taxrora_library_reader; default_transaction_read_only=on;38152 clauses and132 review rows readable; application current_library_snapshot succeeds.",
+    "live_denials": "After explicitly SET TRANSACTION READ WRITE, UPDATE database.meta WHERE false, UPDATE source_review WHERE false and SELECT public.chat_cases WHERE false each fail with42501 insufficient privilege. No data rows modified.",
+    "live_search_and_planning": "Approved cn.cs.2026-27#i3 returns status available and one passage; pinned planning read_sources succeeds. Reader can load all required catalog tables:11 jurisdictions,287 documents,760 parameters,55 treaties,46 decisions.",
+    "role_attributes": "Verified login=true and superuser/createDB/createRole/bypassRLS/inherit=false. No SECURITY DEFINER functions exist in public/database/database_integration."
+  },
+  "research": [
+    "https://supabase.com/changelog.md",
+    "https://supabase.com/docs/guides/database/postgres/roles",
+    "https://github.com/supabase/agent-skills/blob/main/skills/supabase-postgres-best-practices/references/security-privileges.md"
+  ],
+  "advisors": {
+    "status": "Existing findings retained for deployment review; role change did not expose tables or add RLS bypass.",
+    "rls_no_policy": "17 INFO findings for intentionally closed public application tables; no broad read policy added to silence these.",
+    "vector_public": "Existing WARN; extension relocation is pending compatibility review. https://supabase.com/docs/guides/database/database-linter?lint=0014_extension_in_public",
+    "leaked_password_protection": "Existing Auth WARN; setting remains pending deployment review. https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+  },
+  "remaining": [
+    "Install the new reader secret in deployed web and worker environments before deploying this code; missing config intentionally disables cloud library reads rather than using the writer.",
+    "Legacy public.sources/legal_units retrieval still uses its existing connection; this change covers database law-library and planning readers only.",
+    "Main application writer least privilege, deployment, worker and real-account acceptance remain open.",
+    "Original optimizer remains live; frozen generated data/rules/runtime inputs were not changed."
+  ],
+  "completion_claim": false
+}

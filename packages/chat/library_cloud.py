@@ -38,8 +38,11 @@ def _snapshot(version, reviews, expected_version):
 
 @lru_cache(maxsize=1)
 def _engine():
+    url = get_settings().library_database_url
+    if not url:
+        raise ValueError('FSIE_LIBRARY_DATABASE_URL must configure the dedicated library reader')
     return create_engine(
-        get_settings().database_url,
+        url,
         pool_pre_ping=True,
         pool_size=2,
         max_overflow=0,

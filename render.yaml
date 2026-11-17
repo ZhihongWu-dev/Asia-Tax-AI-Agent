@@ -24,3 +24,5 @@ services:
         sync: false
       - key: FSIE_DATABASE_URL
         sync: false
+      - key: FSIE_LIBRARY_DATABASE_URL
+        sync: false
