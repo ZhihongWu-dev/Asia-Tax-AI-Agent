@@ -1,0 +1,98 @@
+{
+  "status": "isolated_rule_build_and_all_1368_golden_tests_passed",
+  "rule": {
+    "rule_id": "vn.penalty.late_interest.20260701",
+    "slot_key": "vn|all|penalty|*",
+    "condition": "vn_late_payment_interest_applicable = true",
+    "effect": "interest:vn.penalty.late_interest_pct_per_day.20260701",
+    "overrides": "",
+    "procedure": "",
+    "cite_ids": "vn.law.tax-administration108.2025.vi#16;vn.law.tax-administration108.2025.vi#16.2;vn.law.tax-administration108.2025.vi#53",
+    "decision_ids": "",
+    "effective_from": "2026-07-01",
+    "effective_to": "",
+    "note": "Conditional statutory reference: 0.03 percent per day of qualifying overdue tax, not an administrative fine or automatic assessment. Requires reviewed applicability, exemptions and transition; elapsed days, payments, offsets and suspensions are not computed by this rule."
+  },
+  "variable": {
+    "name": "vn_late_payment_interest_applicable",
+    "kind": "client_fact",
+    "type": "bool",
+    "allowed_values": "",
+    "inputs": "",
+    "question": "Has a tax reviewer confirmed this overdue liability is subject to Vietnam Law108 Article16 daily interest, after applicable exemptions, suspensions, offsets and Article53 transition?",
+    "meaning": "True only after the relevant tax obligation, due/extended due date, payment dates, Article16 exceptions and Decree252/2026 Article26 treatment have been reviewed. False means this specific daily-interest rule does not apply; unknown must not be treated as zero liability. This selects a reference rate, not a complete penalty amount."
+  },
+  "tests": [
+    {
+      "test_id": "vn.penalty.late_interest.20260701.true",
+      "slot_key": "vn|all|penalty|*",
+      "date": "2026-07-01",
+      "facts": "vn_late_payment_interest_applicable=true",
+      "answers": "",
+      "expect": "interest 0.03 T",
+      "source": "authored"
+    },
+    {
+      "test_id": "vn.penalty.late_interest.20260701.false",
+      "slot_key": "vn|all|penalty|*",
+      "date": "2026-07-01",
+      "facts": "vn_late_payment_interest_applicable=false",
+      "answers": "",
+      "expect": "interest - F",
+      "source": "authored"
+    },
+    {
+      "test_id": "vn.penalty.late_interest.20260701.unknown",
+      "slot_key": "vn|all|penalty|*",
+      "date": "2026-07-01",
+      "facts": "",
+      "answers": "",
+      "expect": "interest 0.03 U:vn_late_payment_interest_applicable",
+      "source": "authored"
+    },
+    {
+      "test_id": "vn.penalty.late_interest.20260701.before",
+      "slot_key": "vn|all|penalty|*",
+      "date": "2026-06-30",
+      "facts": "vn_late_payment_interest_applicable=true",
+      "answers": "",
+      "expect": "interest - -",
+      "source": "authored"
+    },
+    {
+      "test_id": "vn.penalty.late_interest.20260701.company",
+      "slot_key": "vn|company|penalty|*",
+      "date": "2026-07-01",
+      "facts": "vn_late_payment_interest_applicable=true",
+      "answers": "",
+      "expect": "interest 0.03 T",
+      "source": "authored"
+    },
+    {
+      "test_id": "vn.penalty.late_interest.20260701.individual",
+      "slot_key": "vn|individual|penalty|*",
+      "date": "2026-07-01",
+      "facts": "vn_late_payment_interest_applicable=true",
+      "answers": "",
+      "expect": "interest 0.03 T",
+      "source": "authored"
+    }
+  ],
+  "scope": "Dated conditional reference rate only; not full penalty calculation or complete business acceptance.",
+  "original_runtime": "unchanged",
+  "validation": {
+    "rules": 452,
+    "tests": 1368,
+    "failed": 0,
+    "errors": 0,
+    "coverage_gaps": 30,
+    "new_cases": [
+      "true",
+      "false",
+      "unknown",
+      "before",
+      "company",
+      "individual"
+    ]
+  }
+}
