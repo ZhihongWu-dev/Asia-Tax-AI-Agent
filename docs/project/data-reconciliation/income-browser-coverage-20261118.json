@@ -1,0 +1,33 @@
+{
+  "checked_on": "2026-11-18",
+  "baseline_commit": "91af741",
+  "browser": "Microsoft Edge via Playwright chromium project, one worker, zero retries",
+  "runs": [
+    {"file": "apps/web/tests/income-tax.spec.ts", "passed": 33, "failed": 0, "duration": "3.5m"},
+    {"file": "apps/web/tests/income-tax-coverage.spec.ts", "passed": 7, "failed": 0, "duration": "53.0s"}
+  ],
+  "added_cases": [
+    "China resident comprehensive individual income",
+    "Singapore company partial exemption YA2026",
+    "Hong Kong corporate profits 2025/26",
+    "Hong Kong sole-proprietor profits 2025/26",
+    "Hong Kong salaries with final-tax prepayment 2025/26",
+    "UAE ordinary company business",
+    "UAE natural-person business"
+  ],
+  "assertions": "Confirmed case inputs, applicable policy, exact expected amount allowing insignificant trailing decimal zeroes, HTTPS source link, and same exact amount after page reload.",
+  "first_run_failure": "Six passed; Singapore failed solely because the new assertion rejected 4037.500000 for expected 4037.5. Corrected decimal-pattern suffix without changing expected tax or application code. All seven passed on rerun.",
+  "research": {
+    "reference": "https://github.com/microsoft/playwright/blob/main/packages/playwright/src/matchers/matchers.ts",
+    "use": "Confirmed existing toHaveText RegExp assertion API; no external implementation copied or dependency added."
+  },
+  "coverage": "The two files exercise at least one ordinary company and individual route for each of cn, hk, sg, id, vn, my, th, ae, jp, kr, in. Additional cases cover regime variants and case editing. This is not exhaustive income-category or statutory-regime coverage.",
+  "environment_limits": [
+    "Real local API, income calculators and SQLite persistence; fixture authentication and deterministic model boundary.",
+    "Source hyperlink presence does not establish cloud-source admission or independently validate legal content.",
+    "No production deployment, real-account isolation, live provider acceptance or actual filing sign-off established by these runs.",
+    "Original twelve-row optimizer suite remains running; only case001.best and case001.open report zero checker failures so far.",
+    "Remaining tax regimes, data reconciliation, deployed worker acceptance and final Zhihong-Wu branch delivery remain open."
+  ],
+  "completion_claim": false
+}
