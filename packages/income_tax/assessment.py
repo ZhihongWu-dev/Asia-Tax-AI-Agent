@@ -41,6 +41,12 @@ def calculate(case: IncomeTaxCase, basis):
         raise ValueError('This policy requires resident status')
     args = basis.model_dump(exclude={'policy', 'basis_explanation', 'basis_confirmed'})
     if policy in ('in_personal_new_ty2026_27','in_company_section200_ty2026_27'):
+        settlement_requested=args.pop('settlement_requested')
+        settlement={key:args.pop(key) for key in ('tds_tcs_credit','advance_tax_paid',
+            'self_assessment_paid','total_interest_due','total_fee_due','settlement_verified')}
+        if not settlement_requested and (settlement['settlement_verified'] or
+                any(value is not None for key,value in settlement.items() if key!='settlement_verified')):
+            raise ValueError('Settlement values require an explicit settlement request')
         allowed={'business','employment','service_remuneration','author_remuneration','interest','rental','royalty'}
         if case.residency!='resident' or any(i.source_jurisdiction!='in' or
                 i.foreign_tax_paid not in (None,0) or i.category not in allowed for i in case.incomes):
@@ -53,6 +59,8 @@ def calculate(case: IncomeTaxCase, basis):
             raise ValueError('India established taxable base must reconcile to saved income, deductions and eligible losses')
         result=india.annual_tax(period_start=case.period_start.isoformat(),period_end=case.period_end.isoformat(),
             regime='personal_new_resident' if case.subject=='individual' else 'company_section200',**args)
+        if settlement_requested:
+            result=india.settle(result,**settlement)
     elif policy=='jp_company_starting_2026':
         if case.residency!='resident' or any(i.source_jurisdiction!='jp' or
                 i.foreign_tax_paid not in (None,0) or i.category not in ('business','rental','royalty','other') for i in case.incomes):

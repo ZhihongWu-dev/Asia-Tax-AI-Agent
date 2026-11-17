@@ -23,7 +23,14 @@ export function policies(input: IncomeTaxInput): IncomePolicy[] {
         'Uses Tax Year 1 April 2026–31 March 2027, not AY 2026–27. Calculates annual liability including surcharge and health/education cess, before payment credits, interest and penalties. Individuals must use section 202; domestic companies require a valid timely section 200 option and verified deduction, loss and depreciation restrictions. The established base must equal saved income less verified deductions and eligible losses. Include verified salary standard deductions in saved deductions; they are not calculated again. Excludes special-rate income, dividends, capital gains, agricultural aggregation, foreign income or relief, IFSC concessions and other tax adjustments.'],
       fields:[money('taxable_income_before_rounding','核定取整前应税所得','Established taxable income before rounding'),
         confirm('regime_and_base_verified','已核实税制选择、资格、扣除及亏损限制','Regime election, eligibility, deductions and loss restrictions verified'),
-        confirm('ordinary_domestic_scope_confirmed','已核实境内普通所得及全部排除条件','Ordinary domestic income and all exclusions verified')]}];
+        confirm('ordinary_domestic_scope_confirmed','已核实境内普通所得及全部排除条件','Ordinary domestic income and all exclusions verified'),
+        confirm('settlement_requested','另算本次普通申报补退税额','Also calculate the ordinary return balance'),
+        {...money('tds_tcs_credit','核定本期可用扣缴／代收税额','Verified current-period TDS/TCS credit'),showWhen:['settlement_requested','true']},
+        {...money('advance_tax_paid','本期实际已缴预缴税额','Advance tax actually paid for this period'),showWhen:['settlement_requested','true']},
+        {...money('self_assessment_paid','本期实际已缴自评税款总额（含已缴利息和费用）','Total self-assessment payments including paid interest and fees'),showWhen:['settlement_requested','true']},
+        {...money('total_interest_due','核定累计应计利息（含已缴部分，无则填0）','Verified cumulative interest including amounts already paid (0 if none)'),showWhen:['settlement_requested','true']},
+        {...money('total_fee_due','核定累计应计费用（含已缴部分，无则填0）','Verified cumulative fees including amounts already paid (0 if none)'),showWhen:['settlement_requested','true']},
+        {...confirm('settlement_verified','已核对税款归属及凭证、累计利息费用和缴款抵扣顺序；无先前退税、更新申报、ESOP递延、罚款或额外追缴','Credits, evidence, cumulative interest/fees and payment allocation verified; no prior refunds, updated return, ESOP deferral, penalties or additional demands'),showWhen:['settlement_requested','true']}]}];
   }
   if (input.jurisdiction==='jp' && company && input.residency==='resident' && /^2026-\d{2}-\d{2}$/.test(input.period_start)) {
     const [,month,day]=input.period_start.split('-').map(Number);
@@ -213,6 +220,13 @@ export const resultLabels: Record<string, Label> = {
   surcharge_marginal_relief:['附加税边界减免','Surcharge marginal relief'],
   surcharge:['减免后附加税','Surcharge after relief'],
   health_education_cess:['健康教育费','Health and education cess'],
+  tds_tcs_credit:['本期扣缴／代收税额','Current-period TDS/TCS credit'],
+  advance_tax_paid:['实缴预缴税款','Advance tax paid'],
+  self_assessment_paid:['实缴自评税款总额','Total self-assessment payments'],
+  total_interest_due:['累计应计利息','Cumulative interest due'],
+  total_fee_due:['累计应计费用','Cumulative fees due'],
+  total_payments:['可用已缴款合计','Total credited payments'],
+  refund_due:['预计应退金额','Calculated refund due'],
   net_income_before_ptkp:['PTKP前净所得','Net income before PTKP'],ptkp_allowance:['核定PTKP免税额','Verified PTKP allowance'],
   article31e_gross_receipts:['第31E条收入总额','Article 31E gross receipts'],
   article31e_eligible_base:['第31E条优惠税基','Article 31E reduced-rate base'],article31e_other_base:['普通税率税基','Ordinary-rate base'],

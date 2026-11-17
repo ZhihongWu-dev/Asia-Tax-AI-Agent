@@ -9,7 +9,7 @@ from packages.contracts.income_assessment import Assessment
 from packages.contracts.income_tax import IncomeTaxCase
 from packages.income_tax.assessment import calculate
 
-from packages.income_tax.india import annual_tax, round_rupees
+from packages.income_tax.india import annual_tax, round_rupees, settle
 
 
 def assess(base, **changes):
@@ -113,3 +113,57 @@ def test_saved_workflow(subject,expected):
 def test_saved_workflow_rejects_mismatches(changes):
     with pytest.raises(ValueError):
         calculate(*workflow(**changes))
+
+
+def payments(**changes):
+    values=dict(tds_tcs_credit='0', advance_tax_paid='0', self_assessment_paid='0',
+                total_interest_due='0', total_fee_due='0', settlement_verified=True)
+    values.update(changes)
+    return values
+
+
+@pytest.mark.parametrize('credit,net', [('6',124800),('124806',0),('124807',0),('124808',-10)])
+def test_settlement_rounds_net_not_previously_rounded_annual_tax(credit,net):
+    annual=assess('1600010')
+    assert annual['annual_tax_before_rounding']==Decimal('124802.080')
+    result=settle(annual,**payments(tds_tcs_credit=credit))
+    assert result['balance_due']==net
+    assert result['tax_payable']==max(net,0)
+    assert result['refund_due']==max(-net,0)
+    assert 'balance_due' not in annual
+
+
+def test_settlement_includes_all_payments_and_cumulative_interest_fees():
+    result=settle(assess('1600000'),**payments(tds_tcs_credit='100000',
+        advance_tax_paid='20000',self_assessment_paid='1000',total_interest_due='1200',total_fee_due='5000'))
+    assert result['total_payments']==121000
+    assert result['balance_due']==10000
+    assert result['refund_interest_calculated'] is False
+
+
+@pytest.mark.parametrize('changes',[{'settlement_verified':1},{'tds_tcs_credit':None},
+    {'advance_tax_paid':-1},{'total_interest_due':'NaN'},{'self_assessment_paid':True}])
+def test_settlement_rejects_unknown_unverified_and_invalid(changes):
+    with pytest.raises(ValueError):
+        settle(assess('1600000'),**payments(**changes))
+
+
+def test_saved_settlement_explicit_and_backward_compatible():
+    case,basis=workflow()
+    assert 'balance_due' not in calculate(case,basis)
+    values=basis.model_dump()
+    values.update(payments(tds_tcs_credit='130000'),settlement_requested=True)
+    result=calculate(case,TypeAdapter(Assessment).validate_python(values))
+    assert Decimal(result['balance_due'])==-5200
+    values['settlement_requested']=False
+    with pytest.raises(ValueError,match='explicit settlement'):
+        calculate(case,TypeAdapter(Assessment).validate_python(values))
+
+
+def test_missing_payment_is_not_assumed_zero():
+    case,basis=workflow()
+    values=basis.model_dump()
+    values.update(payments(),settlement_requested=True)
+    del values['advance_tax_paid']
+    with pytest.raises(ValueError):
+        calculate(case,TypeAdapter(Assessment).validate_python(values))

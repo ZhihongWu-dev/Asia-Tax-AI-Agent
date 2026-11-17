@@ -91,7 +91,7 @@ for (const scenario of [
   await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(scenario.balance);
 });
 
-for(const subject of ['individual','company']) test(`India ${subject} TY2026 annual liability persists`,async({page})=>{
+for(const subject of ['individual','company']) for(const settlement of [false,true]) test(`India ${subject} TY2026 ${settlement?'settlement':'annual liability'} persists`,async({page})=>{
   const form=await openIncome(page);
   await form.getByRole('combobox',{name:'Taxpayer',exact:true}).selectOption(subject);
   await form.getByRole('combobox',{name:'Filing jurisdiction',exact:true}).selectOption('in');
@@ -112,12 +112,22 @@ for(const subject of ['individual','company']) test(`India ${subject} TY2026 ann
   await assessment.getByLabel('Established taxable income before rounding',{exact:true}).fill('1600000');
   for(const name of ['Regime election, eligibility, deductions and loss restrictions verified','Ordinary domestic income and all exclusions verified'])
     await assessment.getByRole('combobox',{name,exact:true}).selectOption('true');
+  await assessment.getByRole('combobox',{name:'Also calculate the ordinary return balance',exact:true}).selectOption(String(settlement));
+  if(settlement){
+    await assessment.getByLabel('Verified current-period TDS/TCS credit',{exact:true}).fill(subject==='individual'?'130000':'410000');
+    for(const name of ['Advance tax actually paid for this period','Total self-assessment payments including paid interest and fees','Verified cumulative interest including amounts already paid (0 if none)','Verified cumulative fees including amounts already paid (0 if none)'])
+      await assessment.getByLabel(name,{exact:true}).fill('0');
+    await assessment.getByRole('combobox',{name:'Credits, evidence, cumulative interest/fees and payment allocation verified; no prior refunds, updated return, ESOP deferral, penalties or additional demands',exact:true}).selectOption('true');
+  }
   await assessment.getByLabel('Tax-basis adjustments and eligibility explanation',{exact:true}).fill('Ordinary domestic income and eligible deductions reconciled; statutory regime conditions checked.');
   await assessment.getByRole('checkbox').check();
   await assessment.getByRole('button',{name:'Calculate and save result'}).click();
   const result=assessment.getByRole('article',{name:'Saved calculation result'});
   await expect(result).toContainText(subject==='individual'?'124800':'402690');
-  await expect(result).toContainText('before payment credits, interest and penalties');
+  if(settlement){
+    await expect(result).toContainText(subject==='individual'?'-5200':'-7310');
+    await expect(result).toContainText('calculated refund, not approval');
+  }else await expect(result).toContainText('before payment credits, interest and penalties');
   await expect(result.getByRole('link')).toHaveCount(2);
   await openIncome(page);
   await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('not AY 2026');

@@ -23,7 +23,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
     event.preventDefault(); if (!policy) return;
     const basis: Record<string,unknown> = {policy:policy.id,basis_confirmed:confirmed,basis_explanation:explanation};
     for (const field of policy.fields) {
-      if (field.showWhen && values[field.showWhen[0]] !== field.showWhen[1]) {basis[field.key]=null;continue;}
+      if (field.showWhen && values[field.showWhen[0]] !== field.showWhen[1]) {basis[field.key]=field.boolean?false:null;continue;}
       if (field.monthsList) {
         const raw = values[field.key] || '';
         const months = raw.split(',').map(v=>Number(v.trim()));
@@ -93,6 +93,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       <h4>{say('已保存计算结果','Saved calculation result')}</h4>
       {disabled && <p>{say('此结果对应上次保存的资料，不包含当前未保存的修改。','This result uses the last saved facts and excludes unsaved changes.')}</p>}
       <p>{new Date(result.created_at).toLocaleString()} · {String(result.result.currency)}</p>
+      {result.result.tax_scope==='india_ordinary_settlement_ty2026_27'&&<p>{say('印度TY 2026–27（2026年4月至2027年3月），不是AY 2026–27。本次补退额使用已核验的本期已缴款及累计利息、费用；利息和费用并非系统按日期自动核算。负数表示预计应退，不代表已获批准。不含退税利息、先前退税调整、更新申报、罚款、额外追缴或跨年度抵扣。','India TY 2026–27 (April 2026–March 2027), not AY 2026–27. Return balance uses verified period payments and cumulative interest/fees; interest and fees are not automatically computed from dates. A negative balance is a calculated refund, not approval. Excludes refund interest, prior-refund adjustments, updated returns, penalties, additional demands and cross-year offsets.')}</p>}
       {result.result.tax_scope==='india_ordinary_annual_ty2026_27'&&<p>{say('印度TY 2026–27（2026年4月至2027年3月），不是AY 2026–27。此结果为普通所得年度税额，尚未扣除已缴款，也不含利息或罚款；不含特殊税率所得、境外所得或其他税额调整。','India TY 2026–27 (April 2026–March 2027), not AY 2026–27. Ordinary annual liability before payment credits, interest and penalties; excludes special-rate income, foreign income and other tax adjustments.')}</p>}
       {result.result.tax_scope==='japan_three_national_company_taxes_only'&&<>
         <p>{say('此结果仅包含日本企业的三项国税，不含地方住民税、事业税或最低补足税。中间申告应纳义务不代表已缴清；各税种补退分别处理，不能自动互抵。','This result covers the three Japanese national company taxes only, excluding prefectural/municipal inhabitant, enterprise and minimum top-up taxes. Interim-return liabilities do not mean payment; settle each tax separately without automatic offsets.')}</p>

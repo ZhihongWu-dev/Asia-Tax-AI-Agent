@@ -201,18 +201,25 @@ class JPCompany(Basis):
     local_corporation_interim_liability: Money
 
 
-class INIndividual(Basis):
+class INBasis(Basis):
+    taxable_income_before_rounding: Money
+    regime_and_base_verified: StrictBool
+    ordinary_domestic_scope_confirmed: StrictBool
+    settlement_requested: StrictBool = False
+    tds_tcs_credit: Money | None = None
+    advance_tax_paid: Money | None = None
+    self_assessment_paid: Money | None = None
+    total_interest_due: Money | None = None
+    total_fee_due: Money | None = None
+    settlement_verified: StrictBool = False
+
+
+class INIndividual(INBasis):
     policy: Literal['in_personal_new_ty2026_27']
-    taxable_income_before_rounding: Money
-    regime_and_base_verified: StrictBool
-    ordinary_domestic_scope_confirmed: StrictBool
 
 
-class INCompany(Basis):
+class INCompany(INBasis):
     policy: Literal['in_company_section200_ty2026_27']
-    taxable_income_before_rounding: Money
-    regime_and_base_verified: StrictBool
-    ordinary_domestic_scope_confirmed: StrictBool
 
 
 Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual | JPCompany | INIndividual | INCompany |

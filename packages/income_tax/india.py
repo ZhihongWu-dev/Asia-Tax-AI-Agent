@@ -17,6 +17,43 @@ _PERSONAL = tuple(Band(None if cap is None else Decimal(cap), Decimal(rate))
                      ('1600000','.15'),('2000000','.20'),('2400000','.25'),(None,'.30')])
 
 
+def settle(annual_result, *, tds_tcs_credit, advance_tax_paid, self_assessment_paid,
+           total_interest_due, total_fee_due, settlement_verified):
+    """Aggregate ordinary return balance under ss266, 431 and 516.
+
+Credits must belong to this taxpayer/period and be reconciled to evidence.
+Interest and fees are cumulative assessed amounts, not remaining balances;
+their date-dependent computation and the s266(3) payment allocation must
+already have been verified. Prior refunds, updated returns, ESOP deferral,
+penalties and additional demands are not part of this ordinary settlement.
+No refund interest or cross-year offsets are calculated.
+"""
+    if settlement_verified is not True:
+        raise ValueError('Verify period credits, cumulative interest/fees, payment allocation and settlement exclusions')
+    if annual_result.get('tax_scope') != 'india_ordinary_annual_ty2026_27':
+        raise ValueError('India ordinary annual calculation required')
+    tds, advance, self_paid, interest, fee = map(amount, (
+        tds_tcs_credit, advance_tax_paid, self_assessment_paid, total_interest_due, total_fee_due))
+    with localcontext() as context:
+        context.prec = 40
+        paid = tds + advance + self_paid
+        # Use the unrounded annual reference; round the actual net payable or
+        # refundable once. Rounding annual liability first creates boundary errors.
+        total = annual_result['annual_tax_before_rounding'] + interest + fee
+        net = total - paid
+        magnitude = round_rupees(abs(net))
+        rounded = -magnitude if net < 0 and magnitude else magnitude
+        result = deepcopy(annual_result)
+        result.update(tax_scope='india_ordinary_settlement_ty2026_27',
+            stage='ordinary_return_balance_with_verified_interest_fees_and_payments',
+            tds_tcs_credit=tds, advance_tax_paid=advance, self_assessment_paid=self_paid,
+            total_interest_due=interest, total_fee_due=fee, total_payments=paid,
+            total_liability_before_rounding=total, balance_before_rounding=net,
+            balance_due=rounded, tax_payable=max(rounded, Decimal('0')),
+            refund_due=max(-rounded, Decimal('0')), refund_interest_calculated=False)
+        return result
+
+
 def round_rupees(value):
     """Section 516: discard paise, then round to nearest ten rupees."""
     value = amount(value)
