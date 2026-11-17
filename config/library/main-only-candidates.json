@@ -3166,6 +3166,99 @@
         "kind": "reviewed_local_source_candidate",
         "evidence": "docs/project/data-reconciliation/vietnam-cit-primary-rebindings-20261118.json"
       }
+    },
+    {
+      "cite_id": "id.pmk112-2025#2(3)",
+      "document": {
+        "id": "id.pmk112-2025",
+        "jur": "id",
+        "type": "regulation",
+        "category": "5;6",
+        "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+        "url": "https://pajak.go.id/en/node/119084",
+        "file": "raw/id/id.pmk112-2025.html",
+        "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+        "lang": "id",
+        "effective_from": "2025-12-31",
+        "effective_to": "",
+        "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+      },
+      "clause": {
+        "cite_id": "id.pmk112-2025#2(3)",
+        "doc_id": "id.pmk112-2025",
+        "kind": "paragraph",
+        "label": "Pasal 2(3)",
+        "parent": "id.pmk112-2025#2",
+        "text": "(3)\nPengenaan Pajak Penghasilan sesuai dengan ketentuan dalam Persetujuan Penghindaran Pajak Berganda sebagaimana dimaksud pada ayat (2) berlaku bagi orang pribadi atau badan yang merupakan:\na.\nWajib Pajak Dalam Negeri sebagaimana dimaksud pada ayat (1) huruf a; dan\nb.\nWajib Pajak Luar Negeri sebagaimana dimaksud pada ayat (1) huruf b yang merupakan penduduk Mitra Persetujuan Penghindaran Pajak Berganda untuk tujuan perpajakan, yang dibuktikan dengan Formulir DGT yang disahkan oleh Pejabat yang Berwenang."
+      },
+      "text_sha256": "51d178471bc8f12e23ad879eda67b3dc77cf1b7167f6dd30586df7183e2dfb32",
+      "source_commit": "f21535111fee64392eee536c28faf2e2206943d8",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-treaty-parameter-migration-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk112-2025#2(4)",
+      "document": {
+        "id": "id.pmk112-2025",
+        "jur": "id",
+        "type": "regulation",
+        "category": "5;6",
+        "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+        "url": "https://pajak.go.id/en/node/119084",
+        "file": "raw/id/id.pmk112-2025.html",
+        "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+        "lang": "id",
+        "effective_from": "2025-12-31",
+        "effective_to": "",
+        "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+      },
+      "clause": {
+        "cite_id": "id.pmk112-2025#2(4)",
+        "doc_id": "id.pmk112-2025",
+        "kind": "paragraph",
+        "label": "Pasal 2(4)",
+        "parent": "id.pmk112-2025#2",
+        "text": "(4)\nWajib Pajak Luar Negeri sebagaimana dimaksud pada ayat (3) huruf b berhak memperoleh manfaat Persetujuan Penghindaran Pajak Berganda dengan syarat Wajib Pajak Luar Negeri tersebut:\na.\nbukan subjek pajak dalam negeri Indonesia;\nb.\nmerupakan penduduk Mitra Persetujuan Penghindaran Pajak Berganda untuk tujuan perpajakan; dan\nc.\ntidak melakukan penyalahgunaan Persetujuan Penghindaran Pajak Berganda."
+      },
+      "text_sha256": "e7b09c3d392b33021b1a680b1cef663f3daaa3f1c204aefa29cc5a9b83a3de12",
+      "source_commit": "f21535111fee64392eee536c28faf2e2206943d8",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-treaty-parameter-migration-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk112-2025#2(5)",
+      "document": {
+        "id": "id.pmk112-2025",
+        "jur": "id",
+        "type": "regulation",
+        "category": "5;6",
+        "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+        "url": "https://pajak.go.id/en/node/119084",
+        "file": "raw/id/id.pmk112-2025.html",
+        "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+        "lang": "id",
+        "effective_from": "2025-12-31",
+        "effective_to": "",
+        "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+      },
+      "clause": {
+        "cite_id": "id.pmk112-2025#2(5)",
+        "doc_id": "id.pmk112-2025",
+        "kind": "paragraph",
+        "label": "Pasal 2(5)",
+        "parent": "id.pmk112-2025#2",
+        "text": "(5)\nDalam hal Wajib Pajak Luar Negeri memenuhi ketentuan sebagaimana dimaksud pada ayat (4), Pemotong atau Pemungut Pajak memotong atau memungut pajak atas penghasilan yang diterima atau diperoleh oleh Wajib Pajak Luar Negeri sebagaimana dimaksud pada ayat (3) huruf b sesuai dengan ketentuan dalam Persetujuan Penghindaran Pajak Berganda."
+      },
+      "text_sha256": "ef07a4d92cfc1ae7822235fc8e954c0715afd04de40ddf286537d383a67bba6f",
+      "source_commit": "f21535111fee64392eee536c28faf2e2206943d8",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-treaty-parameter-migration-20261118.json"
+      }
     }
   ]
 }

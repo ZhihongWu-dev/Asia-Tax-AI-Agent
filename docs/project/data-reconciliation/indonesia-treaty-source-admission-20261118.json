@@ -1,5 +1,5 @@
 {
-  "status": "candidate_text_verified_pending_runtime_bundle_promotion_and_cloud_admission",
+  "status": "runtime_candidates_added_and_overlay_tests_passed_pending_cloud_admission",
   "source_commit": "f21535111fee64392eee536c28faf2e2206943d8",
   "signed_pdf_page": 4,
   "visual_review": true,
@@ -24,5 +24,11 @@
       "candidate_sha256": "563608543696d2574e17b7f7b8c70002ffc9efac7d9373cfac98d67a1ac007d5"
     }
   ],
-  "limitations": "Source text verification only; no approval of taxpayer eligibility, treaty rate or complete anti-abuse analysis. Original runtime bundle unchanged while cross-module regression runs."
+  "limitations": "Candidate texts verified; cloud review not yet admitted. No taxpayer eligibility or complete anti-abuse approval.",
+  "candidate_bundle_count": 129,
+  "tests": {
+    "command": "pytest tests/chat/test_library_overlay.py -q",
+    "passed": 27,
+    "seconds": 5.5
+  }
 }

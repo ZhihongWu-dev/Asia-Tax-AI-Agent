@@ -99,8 +99,13 @@ def test_replacement_requires_structured_content_bound_approval(note):
 def test_real_candidate_bundle_preserves_all_107_without_approving_them():
     commit,rows,digest=load_candidates()
     assert commit=='78a037f522d1636541c2e5fcdd1145e735f18124'
-    assert len(rows)==126 and len(digest)==64
+    assert len(rows)==129 and len(digest)==64
     assert sum(row.get('source_commit', commit) == commit for row in rows.values()) == 107
+    for suffix in ('2(3)', '2(4)', '2(5)'):
+        source = rows['id.pmk112-2025#' + suffix]
+        assert source['document']['effective_from'] == '2025-12-31'
+        assert source['source_commit'] == 'f21535111fee64392eee536c28faf2e2206943d8'
+        assert source['document']['sha256'] == 'a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae'
     for suffix in ('2.2','3.4','10.1','19.1'):
         source=rows['vn.law.cit67.2025.gazette.vi#'+suffix]
         assert source['document']['effective_from']=='2025-10-01'
