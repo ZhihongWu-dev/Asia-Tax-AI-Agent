@@ -1,0 +1,124 @@
+{
+  "status": "reviewed_rebindings_prepared_pending_running_build",
+  "reviewed_on": "2026-11-18",
+  "changes": [
+    {
+      "before": {
+        "param_id": "th.final.cit_return_days",
+        "scope": "th",
+        "subject": "company",
+        "slot": "final",
+        "name": "cit_return_days",
+        "value": "150",
+        "unit": "days",
+        "cite_id": "th.rd.cit#lead",
+        "quote": "Thai and foreign companies carrying on business in Thailand are required to file their tax returns (Form CIT 50) within one hundred and fifty (150) days from the closing date of their accounting periods.",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Corporate return deadline stated on the official Revenue Department page.",
+        "changed_on": "",
+        "superseded_by": ""
+      },
+      "after": {
+        "param_id": "th.final.cit_return_days",
+        "scope": "th",
+        "subject": "company",
+        "slot": "final",
+        "name": "cit_return_days",
+        "value": "150",
+        "unit": "days",
+        "cite_id": "th.rc3b.th#s68",
+        "quote": "ภายในหนึ่งร้อยห้าสิบวันนับแต่วันสุดท้ายของรอบระยะเวลาบัญชี ให้บริษัทหรือห้างหุ้นส่วนนิติบุคคลยื่นรายการ ซึ่งจำเป็นต้องใช้ในการคำนวณภาษีในรอบระยะเวลาบัญชีตามแบบที่อธิบดีกำหนดพร้อมกับชำระภาษีต่ออำเภอ",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Statutory return and payment baseline: 150 days after accounting-period end. Filing-channel extensions and holidays require separate dated rules.",
+        "changed_on": "2026-11-18",
+        "superseded_by": ""
+      },
+      "source_url": "https://www.rd.go.th/5939.html",
+      "raw_sha256": "fc901d8b1a0a8a6bb25b1509effdc5d5e6257f1963c87dbcbc6ab08a4a216d4a",
+      "clause_sha256": "54f41376f927147d73c5d632871fe5c9b0086de0be428927f56b2c4722cab9f7"
+    },
+    {
+      "before": {
+        "param_id": "th.final.individual_return_deadline",
+        "scope": "th",
+        "subject": "individual",
+        "slot": "final",
+        "name": "individual_return_deadline",
+        "value": "last_day_march",
+        "unit": "text",
+        "cite_id": "th.rd.pit#h12",
+        "quote": "Taxpayer is liable to file Personal Income Tax return and make a payment to the Revenue Department within the last day of March following the taxable year.",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Annual individual return and payment deadline.",
+        "changed_on": "",
+        "superseded_by": ""
+      },
+      "after": {
+        "param_id": "th.final.individual_return_deadline",
+        "scope": "th",
+        "subject": "individual",
+        "slot": "final",
+        "name": "individual_return_deadline",
+        "value": "last_day_march",
+        "unit": "text",
+        "cite_id": "th.rc3a.th#s56",
+        "quote": "ให้บุคคลทุกคน เว้นแต่ผู้เยาว์ หรือผู้ที่ศาลสั่งให้เป็นคนไร้ความสามารถหรือเสมือนไร้ความสามารถ ยื่นรายการเกี่ยวกับเงินได้พึงประเมินที่ตนได้รับในระหว่างปีภาษีที่ล่วงมาแล้วพร้อมทั้งข้อความอื่น ๆ ภายในเดือนมีนาคม ทุก ๆ ปี ตามแบบที่อธิบดีกำหนดต่อเจ้าพนักงานซึ่งรัฐมนตรีแต่งตั้งถ้าบุคคลนั้น",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Statutory annual return baseline: March following the income year, subject to Section56 filing thresholds and exceptions. This citation alone does not establish payment or electronic-filing extensions.",
+        "changed_on": "2026-11-18",
+        "superseded_by": ""
+      },
+      "source_url": "https://www.rd.go.th/5937.html",
+      "raw_sha256": "3050f0a13b298f027d5451fb8b3dfb8ec77658db1fbbd72eaa507abf0c3ed428",
+      "clause_sha256": "0d88370c55341b14680150296ef900ea4efc18847a2f10b070d9ca402efd1d73"
+    },
+    {
+      "before": {
+        "param_id": "th.outbound_wht.foreign_company_return_days",
+        "scope": "th",
+        "subject": "company",
+        "slot": "outbound_wht",
+        "name": "foreign_company_return_days",
+        "value": "7",
+        "unit": "days",
+        "cite_id": "th.rd.cit#lead",
+        "quote": "As regards to income paid to foreign company not carrying on business in Thailand, the foreign company is subject to tax at a flat rate in which the payer shall withhold tax at source at the time of payment. The payer must file the return (Form CIT 54) and make the payment to the Revenue Department within seven days of the following month in which the payment is made.",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Deadline applies to the payer for the stated foreign-company situation.",
+        "changed_on": "",
+        "superseded_by": ""
+      },
+      "after": {
+        "param_id": "th.outbound_wht.foreign_company_return_days",
+        "scope": "th",
+        "subject": "company",
+        "slot": "outbound_wht",
+        "name": "foreign_company_return_days",
+        "value": "7",
+        "unit": "days",
+        "cite_id": "th.rc3b.th#s70",
+        "quote": "บริษัทหรือห้างหุ้นส่วนนิติบุคคลที่ตั้งขึ้นตามกฎหมายของต่างประเทศมิได้ประกอบกิจการในประเทศไทยแต่ได้รับเงินได้พึงประเมินตามมาตรา 40 (2)(3) (4) (5) หรือ (6) ที่จ่ายจากหรือในประเทศไทย ให้บริษัทหรือห้างหุ้นส่วนนิติบุคคลนั้นเสียภาษี โดยให้ผู้จ่ายหักภาษีจากเงินได้พึงประเมินที่จ่ายตามอัตราภาษีเงินได้สำหรับบริษัทหรือห้างหุ้นส่วนนิติบุคคล แล้วนำส่งอำเภอท้องที่พร้อมกับยื่นรายการตามแบบที่อธิบดีกำหนดภายในเจ็ดวันนับแต่วันสิ้นเดือนของเดือนที่จ่ายเงินได้พึงประเมินนั้น ทั้งนี้ ให้นำมาตรา 54 มาใช้บังคับโดยอนุโลม",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Statutory payer remittance baseline: within seven days after the end of the payment month, for the specified foreign companies and Section40 income. Not seven days after payment. Section70 exceptions, treaty relief and filing extensions require separate checks.",
+        "changed_on": "2026-11-18",
+        "superseded_by": ""
+      },
+      "source_url": "https://www.rd.go.th/5939.html",
+      "raw_sha256": "fc901d8b1a0a8a6bb25b1509effdc5d5e6257f1963c87dbcbc6ab08a4a216d4a",
+      "clause_sha256": "c87c8e2fdcb8c2f2666f035130d206bbf143ca8d10127ae9f6c3ccb2aaaee9b2"
+    }
+  ],
+  "verification": "Thai Revenue Department current statute pages5937 and5939 inspected; local registered raw hashes verified. Full clause conditions retained in referenced source. No CSV mutation while full isolated build is running.",
+  "remaining": [
+    "Apply only after running isolated build terminates, with exact-before-row guard.",
+    "Verify source quote closure, scoped rebuild and parameter regression.",
+    "Foreign-remittance overview needs Orders161/2566 and162/2566 scope review; do not approve obsolete overview resident wording.",
+    "No-CFC and no-individual-anti-abuse decisions cannot be inferred from silence in an overview."
+  ]
+}
