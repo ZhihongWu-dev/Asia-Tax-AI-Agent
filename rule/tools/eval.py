@@ -40,7 +40,7 @@ class Defect(Exception):
 class RuleSet:
     def __init__(self, root=ROOT, db=DB, lib=None):
         self.root = Path(root)
-        self.lib = lib or Library(db)
+        self.lib = Library(db) if lib is None else lib
         self.variables = {v["name"]: v for v in read_csv(self.root / "variable.csv")}
         self.predicates = {p["key"]: p for p in read_csv(self.root / "predicate.csv")}
         self.rules = []

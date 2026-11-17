@@ -458,3 +458,10 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - Saved results now expose each transfer's persisted index, recognition date, method, proceeds, base, fractional rate, tax, prepayment and balance in bilingual details. Values come from the saved result, not current draft inputs.
 - TypeScript and scoped diff checks passed. Full income-tax Edge browser suite completed17/17 passed in1.0m, including saved/reloaded transfer detail, hidden-cost clearing, company/employment policies, other implemented country flows, conflict recovery, invalidation after edits and mobile intake.
 - GitHub research: React official list-rendering documentation informed stable saved-index keys. No dependency added. This is regression evidence for current implemented scenarios, not completion of all11 countries, special-event rules or Li planner integration. No remote push.
+
+### Li optimizer explicit-library injection
+
+- Optimizer -> Query -> RuleTool -> RuleSet now accepts and reuses one explicit library object. Existing callers retain default local/remote behavior. Falsey injected libraries no longer trigger a hidden default Library allocation.
+- Injected libraries must provide nonempty version_metadata; Query refuses to label them with unrelated local CSV hashes. The concrete pinned-bundle adapter and executor remain pending; this change alone does not enable cloud planning.
+- Isolated integration test passed with default constructors forbidden, including falsey object identity across all layers and missing/empty-version rejection. Existing bounded optimizer input/version/stale-product regression passed (7.31s), confirming original local execution remains functional. Scoped diff check passed.
+- GitHub research reviewed CPython sqlite3 snapshot/backup documentation; retained explicit object injection as the bridge seam rather than adding another mutable database copy. No external code or new dependency adopted. No remote push.

@@ -31,9 +31,10 @@ DB = ROOT.parent / "database"
 
 
 class Query:
-    def __init__(self, root=ROOT, db=DB):
+    def __init__(self, root=ROOT, db=DB, *, lib=None):
         self.root, self.db = Path(root), Path(db)
-        self.tool = RuleTool(root, db)
+        self._injected_library = lib is not None
+        self.tool = RuleTool(root, db, lib=lib)
         self.rs, self.lib = self.tool.rs, self.tool.lib
 
     # ------------------------------------------------------------ field dictionary, version
@@ -52,14 +53,22 @@ class Query:
     def version(self):
         def sha(path):
             return hashlib.sha256(Path(path).read_bytes()).hexdigest()[:16] if Path(path).exists() else ""
+        injected_version = None
+        if self._injected_library:
+            provider = getattr(self.lib, 'version_metadata', None)
+            if not callable(provider):
+                raise ValueError('Injected planning library must supply version metadata')
+            injected_version = provider()
+            if not isinstance(injected_version, dict) or not injected_version:
+                raise ValueError('Injected planning library version metadata is empty')
         return {
             "rule": {"rules": len(self.rs.rules), "variables": len(self.rs.variables), "predicates": len(self.rs.predicates),
                      "decisions": len(read_csv(self.root / "decision.csv")), "tests": len(read_csv(self.root / "rule_test.csv")),
                      "rule_csv_sha256": sha(self.root / "rule.csv")},
             "database": {"jurisdictions": len(self.lib.juris), "docs": len(self.lib.docs), "params": len(self.lib.params),
-                         **({"param_csv_sha256": self.lib.remote.digest("param"), "doc_csv_sha256": self.lib.remote.digest("doc"),
+                         **(injected_version if injected_version is not None else ({"param_csv_sha256": self.lib.remote.digest("param"), "doc_csv_sha256": self.lib.remote.digest("doc"),
                              **self.lib.remote.version()} if self.lib.remote else
-                            {"param_csv_sha256": sha(self.db / "param.csv"), "doc_csv_sha256": sha(self.db / "doc.csv")})},
+                            {"param_csv_sha256": sha(self.db / "param.csv"), "doc_csv_sha256": sha(self.db / "doc.csv")}))},
             "generated_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         }
 

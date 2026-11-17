@@ -26,9 +26,9 @@ DB = ROOT.parent / "database"
 
 
 class RuleTool:
-    def __init__(self, root=ROOT, db=DB):
+    def __init__(self, root=ROOT, db=DB, *, lib=None):
         self.root = Path(root)
-        self.lib = Library(db)
+        self.lib = Library(db) if lib is None else lib
         self.rs = ev.RuleSet(root, db, lib=self.lib)
         self.decisions = {}
         for d in read_csv(self.root / "decision.csv"):

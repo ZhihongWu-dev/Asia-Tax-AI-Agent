@@ -237,9 +237,9 @@ def move_sets(move, arg):
 
 # ---------------------------------------------------------------- the optimizer
 class Optimizer:
-    def __init__(self, inp, root=RULE, db=DB):
+    def __init__(self, inp, root=RULE, db=DB, *, lib=None):
         self.inp = inp
-        self.q = Query(root, db)
+        self.q = Query(root, db, lib=lib)
         self.rs, self.lib, self.tool = self.q.rs, self.q.lib, self.q.tool
         self.date = inp["date"]
         self.mode = inp.get("mode", "record")
