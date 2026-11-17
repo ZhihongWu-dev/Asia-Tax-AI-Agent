@@ -1,5 +1,5 @@
 {
-  "status": "reviewed_rebindings_prepared_pending_running_build",
+  "status": "isolated_parameters_scoped_validation_passed",
   "reviewed_on": "2026-11-18",
   "changes": [
     {
@@ -120,5 +120,13 @@
     "Verify source quote closure, scoped rebuild and parameter regression.",
     "Foreign-remittance overview needs Orders161/2566 and162/2566 scope review; do not approve obsolete overview resident wording.",
     "No-CFC and no-individual-anti-abuse decisions cannot be inferred from silence in an overview."
-  ]
+  ],
+  "prior_full_build_exit_code": 0,
+  "scoped_validation": {
+    "command": "database/tools/build.py --root isolated/database --jur th",
+    "exit_code": 0,
+    "errors": 0,
+    "gaps": 0
+  },
+  "limitation": "Scoped validation does not update full CSV/SQLite outputs; final full rebuild still required."
 }

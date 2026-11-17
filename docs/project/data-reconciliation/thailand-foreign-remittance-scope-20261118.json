@@ -1,5 +1,5 @@
 {
-  "status": "official_originals_archived_pending_registration_and_rule_integration",
+  "status": "registered_in_isolated_catalog_pending_scoped_extraction",
   "reviewed_on": "2026-11-18",
   "sources": [
     {
@@ -39,5 +39,10 @@
     "Add assessment workflow inputs for earning-year residency, income date and remittance date with boundary tests.",
     "Reconcile foreign tax credit and income classification with existing assessment flow before enabling foreign-income calculations."
   ],
-  "runtime_mutated": false
+  "runtime_mutated": false,
+  "component": {
+    "file": "packages/income_tax/thailand_remittances.py",
+    "tests_passed": 18,
+    "workflow_connected": false
+  }
 }
