@@ -472,3 +472,12 @@ def planning_runs_list(case_id: UUID, limit: int = Query(default=25, ge=1, le=10
     from packages.chat.planning import list_runs
     return call(list_runs, service.store, PlanningStore(service.store.engine), workspace,
                 str(case_id), limit, str(before) if before is not None else None)
+
+
+@router.get('/cases/{case_id}/planning-runs/{run_id}/artifacts/{name}')
+def planning_artifact_get(case_id: UUID, run_id: UUID,
+                          name: Literal['tax.json','ranking.json','paths.json','open_items.json','branches.json','deltas.json'],
+                          workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
+    from packages.chat.planning import get_artifact
+    return call(get_artifact, service.store, PlanningStore(service.store.engine), workspace,
+                str(case_id), str(run_id), name)

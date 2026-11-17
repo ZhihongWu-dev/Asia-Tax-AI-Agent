@@ -124,6 +124,10 @@ assert 'tax.json' in contents
 for name,content in contents.items():
     assert sha256(content.encode('utf-8')).hexdigest()==persistable['artifacts'][name]['sha256']
 assert persistable['version']['database_version']['bundle_sha256']==bundle['bundle_sha256']
+from packages.domain_bridge.planning_artifacts import read_json
+saved={'status':'succeeded','library_snapshot':pin,'runtime_snapshot':persistable['runtime'],'result':persistable}
+assert read_json(saved,'tax.json')['amount']==inp['amount']
+assert read_json(saved,'ranking.json')['ranking']
 '''
     r=subprocess.run([sys.executable,'-X','utf8','-c',script,str(tmp_path)],
                      cwd=Path(__file__).resolve().parents[2],capture_output=True,text=True,timeout=180)

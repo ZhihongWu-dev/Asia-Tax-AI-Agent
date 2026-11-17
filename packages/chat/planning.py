@@ -79,3 +79,10 @@ def get_run(store, jobs, owner, case_id, run_id):
 def list_runs(store, jobs, owner, case_id, limit=25, before=None):
     store.get(owner, case_id)
     return jobs.list_case(owner, case_id, limit, before)
+
+
+def get_artifact(store, jobs, owner, case_id, run_id, name):
+    from packages.domain_bridge.planning_artifacts import read_json
+    run = get_run(store, jobs, owner, case_id, run_id)
+    return {'run_id': run['id'], 'case_revision': run['case_revision'],
+            'artifact': name, 'content': read_json(run, name)}

@@ -13,6 +13,7 @@ from tempfile import TemporaryDirectory
 from packages.chat.worker_limits import terminate_worker
 from packages.domain_bridge.planning_worker import PlanningExecutionError
 from packages.domain_bridge.planning_runtime import capture_runtime
+from packages.domain_bridge.planning_artifacts import MAX_EXPANDED_BYTES
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -68,6 +69,8 @@ def _collect(response, output, expected_version):
         contents[name] = raw.decode('utf-8')
     payload = json.dumps(contents, ensure_ascii=False, allow_nan=False,
                          separators=(',', ':')).encode('utf-8')
+    if len(payload) > MAX_EXPANDED_BYTES:
+        raise PlanningExecutionError('planning_resource_limit')
     result['artifact_payload'] = {'encoding': 'gzip+base64+json',
                                   'uncompressed_bytes': len(payload),
                                   'sha256': sha256(payload).hexdigest(),

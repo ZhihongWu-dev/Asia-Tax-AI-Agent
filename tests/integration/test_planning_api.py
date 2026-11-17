@@ -34,6 +34,8 @@ def test_save_queue_read_and_retry_are_owner_and_revision_scoped(tmp_path, monke
         assert 'lease_token' not in run and 'owner' not in run
         url = prefix+'/planning-runs/'+run['id']
         assert client.get(url).json()['id'] == run['id']
+        assert client.get(url+'/artifacts/tax.json').status_code == 422
+        assert client.get(url+'/artifacts/input.json').status_code == 422
         listing = client.get(prefix+'/planning-runs?limit=1')
         assert listing.status_code == 200
         assert listing.json()['items'][0]['id'] == run['id']
@@ -47,9 +49,22 @@ def test_save_queue_read_and_retry_are_owner_and_revision_scoped(tmp_path, monke
         assert client.post(prefix+'/planning-runs', json={'revision':1,'request_id':str(uuid4())}).status_code == 409
         other = store.create('alice')
         assert client.get('/api/cases/'+other['id']+'/planning-runs/'+run['id']).status_code == 404
+        from packages.domain_bridge.planning_store import PlanningStore
+        from tests.integration.test_planning_artifacts import fixture_run
+        jobs = PlanningStore(store.engine)
+        claim = jobs.claim()
+        result = fixture_run()['result']
+        result['version']['database_version']['library_version'] = claim['library_snapshot']
+        result['runtime'] = claim['runtime_snapshot']
+        jobs.finish(claim['id'], claim['lease_token'], result=result)
+        artifact = client.get(url+'/artifacts/tax.json')
+        assert artifact.status_code == 200, artifact.text
+        assert artifact.json()['content']['amount'] == 0
+        assert artifact.json()['case_revision'] == 1
         app.dependency_overrides[owner] = lambda: 'bob'
         assert client.get(prefix+'/planning-runs').status_code == 404
         assert client.get(url).status_code == 404
+        assert client.get(url+'/artifacts/tax.json').status_code == 404
         assert client.post(prefix+'/planning-runs', json=request).status_code == 404
         del app.dependency_overrides[owner]
         assert client.get(url).status_code == 401
