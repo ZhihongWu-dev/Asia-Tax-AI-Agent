@@ -1,0 +1,106 @@
+{
+  "status": "isolated_rule_verified_with_explicit_credit_flag_checks",
+  "before_rule": {
+    "rule_id": "vn.inbound.credit",
+    "slot_key": "vn|company|inbound|*",
+    "condition": "true",
+    "effect": "credit",
+    "overrides": "",
+    "procedure": "",
+    "cite_ids": "vn.law.cit2025.en#all",
+    "decision_ids": "D-vn-2",
+    "effective_from": "2025-01-01",
+    "effective_to": "",
+    "note": "Art. 3(4): the corporate income tax paid under the law of the investee's country is deducted, up to the Vietnamese tax on that income (vn.inbound.foreign_tax_credit_cap). Direct credit only (D-vn-2). From the 2025 tax period, the first the Law applies to."
+  },
+  "after_rule": {
+    "rule_id": "vn.inbound.credit",
+    "slot_key": "vn|company|inbound|*",
+    "condition": "vn_direct_credit_eligible = true",
+    "effect": "credit",
+    "overrides": "",
+    "procedure": "",
+    "cite_ids": "vn.law.cit67.2025.gazette.vi#3.4",
+    "decision_ids": "D-vn-12",
+    "effective_from": "2025-01-01",
+    "effective_to": "",
+    "note": "Conditional direct-credit selection only after entitlement, payment and assessment-period review. Cap remains the Vietnamese tax on the income. This rule does not implement all Article12(2) credit components or infer treaty relief. Applicable from the2025 tax period under Law67 Article19."
+  },
+  "variable": {
+    "name": "vn_direct_credit_eligible",
+    "kind": "client_fact",
+    "type": "bool",
+    "allowed_values": "",
+    "inputs": "",
+    "question": "Has the direct foreign-income-tax credit for this Vietnamese enterprise, income item and assessment period been verified, including applicable treaty, payment evidence, filing timing and the Vietnamese tax cap?",
+    "meaning": "This fact confirms only the direct credit represented by source withholding in the dividend model. It cannot confirm underlying credit, tax sparing, allocated top-up tax or supplemental-return amounts. Leave unknown until entitlement and timing are established; false means no direct credit under this domestic rule, not denial of all treaty relief."
+  },
+  "decision": {
+    "id": "D-vn-12",
+    "statement": "Article3(4) provides a capped foreign corporate-tax credit for qualifying Vietnamese enterprises investing abroad. This rule selects only an independently verified direct credit; the statute does not justify unconditional credit or a claim that direct credit exhausts all relief. Decree320 Article12(2) distinguishes treaty/non-treaty routes, payment and filing timing and other credit components, which need separate evaluation. Unknown eligibility remains unknown.",
+    "cite_id": "vn.law.cit67.2025.gazette.vi#3.4",
+    "quote": "4. Doanh nghiệp Việt Nam đầu tư ở nước ngoài có phát sinh thu nhập từ hoạt\nđộng sản xuất, kinh doanh tại nước ngoài trong kỳ tính thuế được trừ số thuế thu\nnhập doanh nghiệp phải nộp theo quy định của nước tiếp nhận đầu tư vào số thuế\nthu nhập doanh nghiệp phải nộp ở Việt Nam, nhưng không được vượt quá số thuế\nthu nhập doanh nghiệp tính theo quy định của pháp luật về thuế thu nhập doanh\nnghiệp của Việt Nam."
+  },
+  "before_test": {
+    "test_id": "vn.inbound.credit.1",
+    "slot_key": "vn|company|inbound|*",
+    "date": "2026-01-01",
+    "facts": "",
+    "answers": "",
+    "expect": "credit 100 T",
+    "source": "authored"
+  },
+  "after_tests": [
+    {
+      "test_id": "vn.inbound.credit.1",
+      "slot_key": "vn|company|inbound|*",
+      "date": "2026-01-01",
+      "facts": "vn_direct_credit_eligible=true",
+      "answers": "",
+      "expect": "credit 100 T",
+      "source": "authored"
+    },
+    {
+      "test_id": "vn.inbound.credit.false",
+      "slot_key": "vn|company|inbound|*",
+      "date": "2026-01-01",
+      "facts": "vn_direct_credit_eligible=false",
+      "answers": "",
+      "expect": "credit 100 F",
+      "source": "authored"
+    },
+    {
+      "test_id": "vn.inbound.credit.unknown",
+      "slot_key": "vn|company|inbound|*",
+      "date": "2026-01-01",
+      "facts": "",
+      "answers": "",
+      "expect": "credit 100 U:vn_direct_credit_eligible",
+      "source": "authored"
+    }
+  ],
+  "scope": "Remove unconditional direct-credit assumption. Further treaty, timing, tax-sparing and top-up calculations remain required; original runtime inputs unchanged.",
+  "validation": {
+    "tests": 1370,
+    "failed": 0,
+    "errors": 0,
+    "coverage_gaps": 30,
+    "credit_flag_checks": [
+      {
+        "case": "confirmed",
+        "floor": true,
+        "ceiling": true
+      },
+      {
+        "case": "denied",
+        "floor": false,
+        "ceiling": false
+      },
+      {
+        "case": "unknown",
+        "floor": true,
+        "ceiling": false
+      }
+    ]
+  }
+}
