@@ -1,0 +1,38 @@
+{
+  "status": "rounding_primitives_implemented_not_final_assessment",
+  "reviewed_on": "2026-11-18",
+  "official_sources": [
+    {
+      "provision": "National Treasury Management Act47(1)-(2), effective2026-01-02",
+      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1031453583",
+      "finding": "Discard fractional won in established national tax base; discard sub-KRW10 receipts/disbursements subject to decree exception"
+    },
+    {
+      "provision": "National Treasury Management Decree109-2(1), effective2026-01-02",
+      "url": "https://law.go.kr/lsLinkCommonInfo.do?lspttninfSeq=69259",
+      "finding": "Installment fractions/remainders may be aggregated into first receipt/payment; ordinary final-balance helper must not silently process installments"
+    },
+    {
+      "provision": "Local Tax Basic Act59, current2026-10-02 text",
+      "url": "https://www.law.go.kr/LSW/lsLinkProc.do?joLnkStr=%EC%A0%9C97%EC%A1%B0&lsNm=%EC%A7%80%EB%B0%A9%EC%84%B8%EA%B8%B0%EB%B3%B8%EB%B2%95&mode=11",
+      "finding": "Expressly applies Treasury Act47 to local collections; resolves earlier reliance on merely permissive Local Accounting Act55"
+    }
+  ],
+  "github_research": {
+    "repository": "https://github.com/UpstageAI/korean-tax-calc-mcp",
+    "commit": "0f86d40b0334b6c1366518d0c36d244d210f1504",
+    "commit_date": "2026-11-17",
+    "license": "MIT",
+    "version": "0.63.4",
+    "open_issues_in_inspected_page": 0,
+    "inspected": ["engine/rounding.py", "tests/test_rounding_ki04.py", "pyproject.toml", "LICENSE"],
+    "influence": "Located Local Tax Basic Act59 and installment exception, then independently checked official text. Separate cash amounts from intermediate assessment values.",
+    "adoption": "No external code or runtime dependency adopted. Python>=3.10 project includes MCP/pypdf/uvicorn/openpyxl dependencies; integration not required or security-certified."
+  },
+  "implementation": {
+    "module": "packages/income_tax/korea_rounding.py",
+    "arithmetic": "Validated Decimal amounts, explicit local precision, net before rounding toward zero, separate payable/refundable outputs",
+    "tests": "67 passed in0.95s across Korean schedules/minimum-reference and new rounding tests",
+    "limitations": ["Not wired into assessment API/UI yet", "Does not establish reliefs, minimum tax, penalties or refund eligibility", "Installment allocation remains pending", "National and local collecting authorities must be settled separately"]
+  }
+}
