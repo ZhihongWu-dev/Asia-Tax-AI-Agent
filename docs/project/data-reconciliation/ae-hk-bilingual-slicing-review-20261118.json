@@ -1,0 +1,42 @@
+{
+  "source_url": "https://www.elegislation.gov.hk/hk/cap112CN!en.rtf",
+  "source_sha256": "5d402a9af0a6c42d548fcf87bba1b5a177ae63c786f047b40dc60601b0a822f7",
+  "mode": "hk_bilingual_treaty",
+  "clauses": 151,
+  "unique_ids": 151,
+  "articles_per_language": {
+    "en": 28,
+    "zh": 28
+  },
+  "sections": [
+    {
+      "cite_id": "treaty.ae-hk.2014.cap112cn.en#order",
+      "characters": 1906,
+      "sha256": "09238d9d7757a2a9a690b1d3250166a8b3c7c0a59f0cef2710953837b0064dba"
+    },
+    {
+      "cite_id": "treaty.ae-hk.2014.cap112cn.en#agreement.en",
+      "characters": 49738,
+      "sha256": "6ec57c213cbf07ce77e5df52242afbf033bf6639eabf1e0c67e5f30bdce2abf3"
+    },
+    {
+      "cite_id": "treaty.ae-hk.2014.cap112cn.en#agreement.zh",
+      "characters": 14102,
+      "sha256": "11d03160a4453a90052aa3dab4aea56529d10faf7277b186777d9834036f0b6e"
+    },
+    {
+      "cite_id": "treaty.ae-hk.2014.cap112cn.en#protocol",
+      "characters": 1746,
+      "sha256": "780c984a3e4e55d1133d4410ae246570ba729334a1b98d61dd83ccf27efe7d03"
+    },
+    {
+      "cite_id": "treaty.ae-hk.2014.cap112cn.en#protocol.zh",
+      "characters": 444,
+      "sha256": "33ce1b7e93f93926e3508222bd24214fe772c5addd0bd7e0c1b0dafbc41f25d7"
+    }
+  ],
+  "complete_nonspace_source_retained": true,
+  "english_article28_characters": 1013,
+  "database_tests": "62 passed in 11.76s",
+  "publication_status": "staged_only; catalog registration and MLI applicability review pending"
+}

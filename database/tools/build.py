@@ -657,6 +657,55 @@ def later_instruments(doc_id, text):
     return out
 
 
+def slice_hk_bilingual_treaty(doc_id, text):
+    """Separate the parallel texts in a Hong Kong treaty order's two-part schedule.
+
+    Keep complete source blocks as parents so headings, enactment and protocol
+    wording survive even where no finer-grained parser is available.
+    """
+    lines = text.splitlines()
+    markers = [(i, line.strip()) for i, line in enumerate(lines)
+               if re.fullmatch(r'Part [12]|\(Chinese Translation\)', line.strip())]
+    if not any(label == '(Chinese Translation)' for _, label in markers):
+        return [], 'none'
+    expected = ['Part 1', '(Chinese Translation)', 'Part 2', '(Chinese Translation)']
+    if [label for _, label in markers] != expected:
+        raise ValueError('Unrecognized bilingual treaty schedule boundaries: ' + doc_id)
+    positions = [i for i, _ in markers]
+    bounds = [0] + positions + [len(lines)]
+    names = ['order', 'agreement.en', 'agreement.zh', 'protocol', 'protocol.zh']
+    labels = ['Enacting order', 'Agreement (English)', 'Agreement (Chinese translation)',
+              'Protocol (English)', 'Protocol (Chinese translation)']
+    out = []
+    articles = []
+    for index, (name, label) in enumerate(zip(names, labels)):
+        block = '\n'.join(lines[bounds[index]:bounds[index + 1]]).strip()
+        if not block:
+            raise ValueError('Empty bilingual treaty section: ' + doc_id)
+        parent = doc_id + '#' + name
+        out.append(dict(cite_id=parent, doc_id=doc_id, kind='section', label=label,
+                        parent='', text=block))
+        if name == 'agreement.en':
+            children, _ = slice_en_treaty(doc_id, block)
+        elif name == 'agreement.zh':
+            children, _ = slice_cn(doc_id, block, remove_page_numbers=False)
+            for child in children:
+                child['cite_id'] = child['cite_id'].replace(doc_id + '#', doc_id + '#zh.', 1)
+                child['parent'] = child['parent'].replace(doc_id + '#', doc_id + '#zh.', 1)
+        else:
+            continue
+        article_ids = [c['cite_id'].split('#', 1)[1].removeprefix('zh.')
+                       for c in children if c['kind'] == 'article']
+        articles.append(article_ids)
+        for child in children:
+            if not child['parent']:
+                child['parent'] = parent
+        out.extend(children)
+    if len(articles) != 2 or len(articles[0]) < 3 or articles[0] != articles[1]:
+        raise ValueError('Bilingual treaty article numbering does not match: ' + doc_id)
+    return out, 'hk_bilingual_treaty'
+
+
 def slice_en_treaty(doc_id, text):
     """English treaties by Article, paragraphs '1.'. In a synthesised text (treaty as modified by the MLI) each boxed
     MLI provision opens with a line such as 'The following paragraph 1 of Article 7 of the MLI applies to the
@@ -1770,6 +1819,10 @@ def slice_doc(row, text, pages):
         if out:
             return out, mode
     is_treaty = doc_id.startswith("treaty.") or (doc_id.startswith("intl.") and typ == "treaty")   # bilateral treaties by id (§4.2) and the MLI text; positions files fall back to pages
+    if is_treaty and 'hk' in jur.split('-') and kind == 'rtf':
+        out, mode = slice_hk_bilingual_treaty(doc_id, text)
+        if out:
+            return out, mode
     statute = typ in ("law", "regulation") and not is_treaty
     if jur == "hk" and statute:                                                        # e-Legislation chapters
         out, mode = slice_hk_ordinance(doc_id, text)
