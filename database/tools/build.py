@@ -252,6 +252,39 @@ Legacy/image-only OCR keeps the existing native-text merge behavior.
     return True
 
 
+
+def corrected_ocr_pages(row, pages):
+    """Apply separately reviewed, exact page edits without changing raw OCR."""
+    path = ROOT / 'ocr' / (row['id'] + '.corrections.json')
+    if not path.exists():
+        return pages
+    record = json.loads(path.read_text(encoding='utf-8'))
+    raw = (ROOT / 'ocr' / (row['id'] + '.txt')).read_bytes()
+    source = (ROOT / row['file']).read_bytes()
+    if (record.get('doc_id') != row['id'] or
+            record.get('status') != 'reviewed_exact_corrections' or
+            record.get('source_sha256') != hashlib.sha256(source).hexdigest() or
+            record.get('transcription_sha256') != hashlib.sha256(raw).hexdigest()):
+        raise ValueError('OCR correction provenance mismatch')
+    original_pages = raw.decode('utf-8').replace('\r\n', '\n').partition('\n')[2].split('\f')
+    if pages != original_pages:
+        raise ValueError('OCR correction input differs from raw transcription')
+    edits = record.get('corrections')
+    if not isinstance(edits, list) or not edits:
+        raise ValueError('OCR corrections must contain reviewed edits')
+    result = list(pages)
+    for edit in edits:
+        page, old, new = edit.get('page'), edit.get('original'), edit.get('replacement')
+        if (type(page) is not int or not 1 <= page <= len(result) or
+                not isinstance(old, str) or not old or not isinstance(new, str) or not new or
+                old == new or '\f' in old or '\f' in new or not edit.get('evidence')):
+            raise ValueError('Invalid reviewed OCR correction')
+        if result[page - 1].count(old) != 1:
+            raise ValueError('OCR correction target must occur exactly once on its page')
+        result[page - 1] = result[page - 1].replace(old, new, 1)
+    return result
+
+
 def docx_text(path):
     with zipfile.ZipFile(path) as z:
         xml = z.read("word/document.xml").decode("utf-8", "replace")
@@ -311,6 +344,7 @@ def to_text(row, kind, conv):
             ocr = ocr_pages(row)
             if ocr and len(ocr) == len(pages):                   # pages without a text layer take their OCR text,
                 if full_page_ocr(row, ocr):
+                    ocr = corrected_ocr_pages(row, ocr)
                     return "\n".join(ocr), ocr, "ocr"
                 merged = []                                      # images read by ocr.py --images go where they stand
                 with fitz.open(path) as doc:

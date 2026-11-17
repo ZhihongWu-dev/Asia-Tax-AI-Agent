@@ -1,0 +1,30 @@
+{
+  "doc_id": "vn.decree398.2026.vi",
+  "source_sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
+  "transcription_sha256": "9abb2c05b50cfb149a437ddf9fb57c9a1d54881792441ca268a82efea727bd5c",
+  "reviewed_on": "2026-11-17",
+  "status": "reviewed_exact_corrections",
+  "corrections": [
+    {
+      "page": 3,
+      "article": "3",
+      "paragraph": "1",
+      "original": "1, Việc giảm thuếthu nhập doanh nghiệp quy định tại Điều này áp dụng",
+      "replacement": "1. Việc giảm thuếthu nhập doanh nghiệp quy định tại Điều này áp dụng",
+      "evidence": "Original PDF page 3 visually inspected: paragraph marker is 1. rather than OCR 1,; only marker punctuation corrected."
+    }
+  ],
+  "trial_slicing": {
+    "before_clause_count": 11,
+    "after_clause_count": 15,
+    "restored_cite_ids": [
+      "vn.decree398.2026.vi#3.1",
+      "vn.decree398.2026.vi#3.2",
+      "vn.decree398.2026.vi#3.3",
+      "vn.decree398.2026.vi#3.4"
+    ]
+  },
+  "limitations": [
+    "Only listed exact edits reviewed; remaining OCR text is not approved."
+  ]
+}

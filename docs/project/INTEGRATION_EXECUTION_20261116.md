@@ -386,3 +386,9 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - Visually compared Decree398 original page3 with OCR. Article3 paragraph1 was misrecognized as `1,`, so consecutive paragraph slicing omitted all four paragraph-level citations while retaining their text inside Article3.
 - Recorded an exact source/transcription-hash-bound correction, preserving raw OCR. In-memory trial correction restores #3.1 through #3.4 and increases this document from11 to15 clauses. Correction application in the build remains pending; this is not approval of the remaining transcription.
 - Consulted official PyMuPDF GitHub OCR documentation for extraction scope; no dependency or external code adopted. Evidence: vietnam-ocr-reviewed-corrections.json.
+
+### Reviewed OCR correction build integration
+
+- Build now applies a separate exact-correction manifest after full-page OCR integrity verification. It checks document identity, review status, original and transcription SHA-256, input pages, exact page/unique text match and evidence. Raw OCR remains unchanged; output retains OCR status rather than claiming whole-text legal approval.
+- Applied the verified Decree398 Article3 paragraph marker correction. The real-source regression restores all four paragraph citations.21 extraction/correction tests passed, including stale hashes, unreviewed status, wrong/boolean page, missing/ambiguous targets and invalid replacements; scoped diff check passed.
+- GitHub research used CPython official hashlib implementation/tests; standard-library SHA-256 retained, no dependency or external code adopted. Full indexing and original comparison of remaining text remain pending; no remote push.

@@ -4,7 +4,7 @@
     "source_sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
     "transcription_sha256": "9abb2c05b50cfb149a437ddf9fb57c9a1d54881792441ca268a82efea727bd5c",
     "reviewed_on": "2026-11-17",
-    "status": "reviewed_correction_pending_index_application",
+    "status": "applied_by_build_pending_full_index",
     "corrections": [
       {
         "page": 3,
@@ -27,7 +27,8 @@
     },
     "limitations": [
       "Only this paragraph marker visually verified and corrected; no approval of remaining OCR text.",
-      "Raw OCR preserved unchanged. Correction not yet applied to database build or cloud."
-    ]
+      "Raw OCR preserved unchanged. Full database rebuild and cloud application remain pending."
+    ],
+    "correction_file": "database/ocr/vn.decree398.2026.vi.corrections.json"
   }
 ]
