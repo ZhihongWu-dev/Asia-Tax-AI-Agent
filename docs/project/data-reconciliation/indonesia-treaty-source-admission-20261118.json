@@ -1,0 +1,28 @@
+{
+  "status": "candidate_text_verified_pending_runtime_bundle_promotion_and_cloud_admission",
+  "source_commit": "f21535111fee64392eee536c28faf2e2206943d8",
+  "signed_pdf_page": 4,
+  "visual_review": true,
+  "signed_pdf_sha256": "551d2a9ac214e79d21abbb4c891906262df0eeb6097d8c1e15723437a2250728",
+  "citations": [
+    {
+      "cite_id": "id.pmk112-2025#2(3)",
+      "text_sha256": "51d178471bc8f12e23ad879eda67b3dc77cf1b7167f6dd30586df7183e2dfb32",
+      "signed_pdf_full_paragraph_matches_ignoring_whitespace": true,
+      "candidate_sha256": "ee45cecbb20ddd908407f4ef212c163dd596c1bf00a956d2c2c11a7e0f38a67a"
+    },
+    {
+      "cite_id": "id.pmk112-2025#2(4)",
+      "text_sha256": "e7b09c3d392b33021b1a680b1cef663f3daaa3f1c204aefa29cc5a9b83a3de12",
+      "signed_pdf_full_paragraph_matches_ignoring_whitespace": true,
+      "candidate_sha256": "c8acc1925ba947c57ebf3838a76c6c07605f9d6b9a3a6751ef556dd3c671ca37"
+    },
+    {
+      "cite_id": "id.pmk112-2025#2(5)",
+      "text_sha256": "ef07a4d92cfc1ae7822235fc8e954c0715afd04de40ddf286537d383a67bba6f",
+      "signed_pdf_full_paragraph_matches_ignoring_whitespace": true,
+      "candidate_sha256": "563608543696d2574e17b7f7b8c70002ffc9efac7d9373cfac98d67a1ac007d5"
+    }
+  ],
+  "limitations": "Source text verification only; no approval of taxpayer eligibility, treaty rate or complete anti-abuse analysis. Original runtime bundle unchanged while cross-module regression runs."
+}
