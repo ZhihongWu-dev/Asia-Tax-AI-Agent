@@ -49,6 +49,14 @@
       "reason": "Search result is not ordinary form43. Its eight-place field cannot override reviewed form44-6 six-place instructions or establish ordinary assessment rounding."
     }
   },
+  "local_return_settlement": {
+    "module": "packages/income_tax/korea_local.py:settle_local_return",
+    "basis": "Current form43 instructions20-27, Treasury Act47 and Local Tax Basic Act59",
+    "behavior": "Accept independently established local standard gross tax and verified final filing ratios/groups. Apply per-authority relief, penalties, additions, other payment credits and verified rate adjustment; allocate withholding under instruction24 and round each authority cash separately. National credits never inferred as local relief.",
+    "precision_fix": "Shared internal exact-balance cash rounding preserves products beyond six user-input decimal places; eight-place ratios can generate fourteen-place intermediate amounts without premature truncation.",
+    "tests": "77 passed in1.07s across local allocation/settlement, cash rounding and national company settlement",
+    "remaining": "Not yet wired into income assessment API/UI or combined with national result. Final-ratio provenance, local relief eligibility/rate adjustments and initial filing groups require explicit verification. Amendments and installments remain separate workflows."
+  },
   "pending": [
     "Zero aggregate employee/area criteria and appendix4 special facilities/boundary allocation",
     "City filing aggregation, municipal rate adjustments, per-authority withholding credits and settlement",

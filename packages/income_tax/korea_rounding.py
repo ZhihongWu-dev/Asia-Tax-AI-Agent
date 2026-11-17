@@ -15,6 +15,18 @@ def taxable_base_won(base):
     return amount(base).to_integral_value(rounding=ROUND_DOWN)
 
 
+def _cash_result(net):
+    """Round an internally computed exact balance, without input re-quantization."""
+    if not isinstance(net, Decimal) or not net.is_finite():
+        raise ValueError('Expected a finite exact balance')
+    with localcontext() as context:
+        context.prec = 40
+        cash = (net / Decimal('10')).to_integral_value(rounding=ROUND_DOWN) * 10
+        return {'currency': 'KRW', 'balance_before_cash_rounding': net,
+                'payable': max(Decimal('0'), cash), 'refundable': max(Decimal('0'), -cash),
+                'discarded_fraction': net-cash}
+
+
 def final_cash_balance(liability, prior_payments, *, installment):
     """Net verified amounts, then discard sub-KRW10 cash, including refunds.
 
@@ -27,11 +39,4 @@ def final_cash_balance(liability, prior_payments, *, installment):
     with localcontext() as context:
         context.prec = 40
         net = liability - prior_payments
-        cash = (net / Decimal('10')).to_integral_value(rounding=ROUND_DOWN) * 10
-        return {
-            'currency': 'KRW',
-            'balance_before_cash_rounding': net,
-            'payable': max(Decimal('0'), cash),
-            'refundable': max(Decimal('0'), -cash),
-            'discarded_fraction': net - cash,
-        }
+        return _cash_result(net)
