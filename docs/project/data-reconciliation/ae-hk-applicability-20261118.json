@@ -1,0 +1,37 @@
+{
+  "status": "reviewed_not_applied",
+  "original_source": {
+    "id": "treaty.ae-hk.2014.cap112cn.en",
+    "url": "https://www.elegislation.gov.hk/hk/cap112CN!en.rtf",
+    "sha256": "5d402a9af0a6c42d548fcf87bba1b5a177ae63c786f047b40dc60601b0a822f7",
+    "registration_pending": true,
+    "replaces_notice_as_treaty_reference": "treaty.ae-hk.2014.en",
+    "preserve_original_notice_and_blocked_citations": true
+  },
+  "mli_reference": {
+    "url": "https://www.ird.gov.hk/eng/pdf/Synthesised_Text_HKSAR_UAE.pdf",
+    "sha256": "8c3af70fe23fc020a457961ac762409eb614afe8378543561e174e1a4c8980ec",
+    "effect_dates_page": 3,
+    "visual_verified": true,
+    "legal_status": "Explanatory synthesized text; authentic agreement and MLI prevail",
+    "hk_withholding_event_from": "2023-04-01",
+    "hk_other_tax_assessment_year_start_from": "2024-04-01",
+    "ae_withholding_event_from": "2024-01-01",
+    "ae_other_tax_period_start_from": "2023-09-23"
+  },
+  "business_gap": {
+    "param_id": "ae-hk.anti_abuse.ppt_applies",
+    "effective_from": "",
+    "effective_to": "",
+    "runtime_filter": "rule/tools/common.py uses structured effective_from/effective_to, not prose note",
+    "consequence": "Historical date-window queries are not constrained by the four dates in the note",
+    "required_fix": "Model source jurisdiction, tax kind, event date or relevant period start; verify each boundary. A single pair-wide date is insufficient."
+  },
+  "pending": [
+    "End optimizer input freeze before catalog/data changes",
+    "Register original with hash verification; classify preserved redirect notice correctly",
+    "Retain MLI reference and reconcile authentic instruments/notifications",
+    "Implement temporal applicability with business boundary tests",
+    "Rebuild database, admit reviewed sources and verify actual workflows"
+  ]
+}
