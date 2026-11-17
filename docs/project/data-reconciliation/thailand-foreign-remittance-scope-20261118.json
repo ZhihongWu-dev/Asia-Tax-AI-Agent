@@ -1,0 +1,43 @@
+{
+  "status": "official_originals_archived_pending_registration_and_rule_integration",
+  "reviewed_on": "2026-11-18",
+  "sources": [
+    {
+      "order": "P161/2566",
+      "url": "https://www.rd.go.th/fileadmin/user_upload/kormor/newlaw/dn161A.pdf",
+      "file": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\thailand-remittance-originals\\dn161A.pdf",
+      "sha256": "51bd23778016359216b0695519f12f9c731eb92d0e47d5a226f06923a81cf075",
+      "pages": 1,
+      "text_characters": 1484,
+      "repository_file": "database/raw/th/th.rd.p161-2566.pdf"
+    },
+    {
+      "order": "P162/2566",
+      "url": "https://www.rd.go.th/fileadmin/user_upload/kormor/newlaw/dn162A.pdf",
+      "file": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\thailand-remittance-originals\\dn162A.pdf",
+      "sha256": "a235ebf4e384bf08ab8a491cda9b67625f95d559049b689cbaeff28c07493af4",
+      "pages": 1,
+      "text_characters": 890,
+      "repository_file": "database/raw/th/th.rd.p162-2566.pdf"
+    }
+  ],
+  "visual_check": "Both single-page official PDFs rendered and inspected. dn161A includes the paragraph inserted by P162, so archive is the amended text, not an unamended September2023 original.",
+  "findings": [
+    "P161 clause1 links Section41 resident status in the year foreign employment/business/property income arises to inclusion in the year the income is brought into Thailand.",
+    "P162 inserts exclusion for assessable income arising before1January2024.",
+    "P161 clause3 applies to remittances from1January2024 onward.",
+    "This is an administrative interpretation under Section41, not a universal tax on every remittance. Treaty relief, exemptions, foreign tax credit, income tracing and historical same-year rules require separate treatment."
+  ],
+  "current_defect": {
+    "parameter": "th.inbound.foreign_income_taxable_on_remittance",
+    "citation": "th.rd.pit#h1",
+    "issue": "Undated yes/no overview omits income-year residency and pre2024 boundary; overview also misstates resident threshold as more than180days."
+  },
+  "next_actions": [
+    "Register both documents and precise clause citations after the active isolated build completes.",
+    "Replace broad overview parameter with scoped dated applicability data and preserve historical evidence.",
+    "Add assessment workflow inputs for earning-year residency, income date and remittance date with boundary tests.",
+    "Reconcile foreign tax credit and income classification with existing assessment flow before enabling foreign-income calculations."
+  ],
+  "runtime_mutated": false
+}
