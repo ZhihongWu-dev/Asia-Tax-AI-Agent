@@ -1,0 +1,64 @@
+{
+  "status": "prepared_pending_active_stage_rebuild_and_document_registration",
+  "before": {
+    "param_id": "id.outbound_wht.treaty_rate_available",
+    "scope": "id",
+    "subject": "all",
+    "slot": "outbound_wht",
+    "name": "treaty_rate_available",
+    "value": "yes",
+    "unit": "bool",
+    "cite_id": "id.dgt.article26#all",
+    "quote": "Withhold Article 26 Income Tax using the Tax Treaty rate if they qualify under PER-25/PJ/2018 and generate a withholding Article 26 Income Tax receipt using Article 23/26 Income Tax e-Bupot application;",
+    "effective_from": "",
+    "effective_to": "",
+    "note": "The stated treaty-rate treatment is conditional on qualification under PER-25/PJ/2018.",
+    "changed_on": "",
+    "superseded_by": ""
+  },
+  "proposed_current": {
+    "param_id": "id.outbound_wht.treaty_rate_available",
+    "scope": "id",
+    "subject": "all",
+    "slot": "outbound_wht",
+    "name": "treaty_rate_available",
+    "value": "yes",
+    "unit": "bool",
+    "cite_id": "id.pmk112-2025#2(5)",
+    "quote": "(5)\nDalam hal Wajib Pajak Luar Negeri memenuhi ketentuan sebagaimana dimaksud pada ayat (4), Pemotong atau Pemungut Pajak memotong atau memungut pajak atas penghasilan yang diterima atau diperoleh oleh Wajib Pajak Luar Negeri sebagaimana dimaksud pada ayat (3) huruf b sesuai dengan ketentuan dalam Persetujuan Penghindaran Pajak Berganda.",
+    "effective_from": "2025-12-31",
+    "effective_to": "",
+    "note": "Conditional availability only, not taxpayer eligibility approval. Article 2(3)-(5) requires treaty residence evidenced by authorized DGT documentation, non-Indonesian residence and no treaty abuse; apply applicable treaty and anti-abuse provisions. DGT implementation announcement preserves qualifying pre-promulgation PER-25/PJ/2018-format certificates for their stated validity period. Specific rate, beneficial ownership and filing requirements require separate verification.",
+    "changed_on": "",
+    "superseded_by": ""
+  },
+  "historical_handling": "Archive the undated FAQ row in this reconciliation record; do not invent a historical effective-from date or assert all old certificates expired on commencement.",
+  "supporting_clauses": [
+    {
+      "cite_id": "id.pmk112-2025#2(3)",
+      "doc_id": "id.pmk112-2025",
+      "kind": "paragraph",
+      "label": "Pasal 2(3)",
+      "parent": "id.pmk112-2025#2",
+      "text": "(3)\nPengenaan Pajak Penghasilan sesuai dengan ketentuan dalam Persetujuan Penghindaran Pajak Berganda sebagaimana dimaksud pada ayat (2) berlaku bagi orang pribadi atau badan yang merupakan:\na.\nWajib Pajak Dalam Negeri sebagaimana dimaksud pada ayat (1) huruf a; dan\nb.\nWajib Pajak Luar Negeri sebagaimana dimaksud pada ayat (1) huruf b yang merupakan penduduk Mitra Persetujuan Penghindaran Pajak Berganda untuk tujuan perpajakan, yang dibuktikan dengan Formulir DGT yang disahkan oleh Pejabat yang Berwenang."
+    },
+    {
+      "cite_id": "id.pmk112-2025#2(4)",
+      "doc_id": "id.pmk112-2025",
+      "kind": "paragraph",
+      "label": "Pasal 2(4)",
+      "parent": "id.pmk112-2025#2",
+      "text": "(4)\nWajib Pajak Luar Negeri sebagaimana dimaksud pada ayat (3) huruf b berhak memperoleh manfaat Persetujuan Penghindaran Pajak Berganda dengan syarat Wajib Pajak Luar Negeri tersebut:\na.\nbukan subjek pajak dalam negeri Indonesia;\nb.\nmerupakan penduduk Mitra Persetujuan Penghindaran Pajak Berganda untuk tujuan perpajakan; dan\nc.\ntidak melakukan penyalahgunaan Persetujuan Penghindaran Pajak Berganda."
+    },
+    {
+      "cite_id": "id.pmk112-2025#2(5)",
+      "doc_id": "id.pmk112-2025",
+      "kind": "paragraph",
+      "label": "Pasal 2(5)",
+      "parent": "id.pmk112-2025#2",
+      "text": "(5)\nDalam hal Wajib Pajak Luar Negeri memenuhi ketentuan sebagaimana dimaksud pada ayat (4), Pemotong atau Pemungut Pajak memotong atau memungut pajak atas penghasilan yang diterima atau diperoleh oleh Wajib Pajak Luar Negeri sebagaimana dimaksud pada ayat (3) huruf b sesuai dengan ketentuan dalam Persetujuan Penghindaran Pajak Berganda."
+    }
+  ],
+  "commencement": "2025-12-31 verified from Article 29 and signed official PDF page 25",
+  "original_runtime": "unchanged"
+}
