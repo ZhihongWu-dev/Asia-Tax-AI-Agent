@@ -1,5 +1,5 @@
 {
-  "status": "scoped_parameter_applied_pending_validation",
+  "status": "scoped_parameter_validation_passed",
   "reviewed_on": "2026-11-18",
   "sources": [
     {
@@ -42,8 +42,9 @@
   "runtime_mutated": false,
   "component": {
     "file": "packages/income_tax/thailand_remittances.py",
-    "tests_passed": 18,
-    "workflow_connected": false
+    "tests_passed": 26,
+    "workflow_connected": false,
+    "saved_case_reconciliation": true
   },
   "scoped_validation": {
     "exit_code": 0,
@@ -84,5 +85,10 @@
     "changed_on": "2026-11-18",
     "superseded_by": ""
   },
-  "retirement_reason": "An undated boolean cannot express income-year residence, income vintage and remittance-year applicability. Preserve original here without treating it as an approved historical rule."
+  "retirement_reason": "An undated boolean cannot express income-year residence, income vintage and remittance-year applicability. Preserve original here without treating it as an approved historical rule.",
+  "scoped_parameter_validation": {
+    "exit_code": 0,
+    "errors": 0,
+    "gaps": 0
+  }
 }
