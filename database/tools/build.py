@@ -316,6 +316,10 @@ def soffice_convert(jobs, conv):
     """jobs: [(src_path, kind, key)]. Writer formats -> txt, calc formats -> xlsx, slides -> pdf, into the folder conv."""
     if jobs and not (Path(SOFFICE).is_file() or shutil.which(SOFFICE)):
         raise RuntimeError("LibreOffice is required for legacy Office sources; set SOFFICE or add soffice to PATH")
+    executable = SOFFICE
+    console = Path(SOFFICE).with_suffix('.com')
+    if os.name == 'nt' and Path(SOFFICE).name.lower() == 'soffice.exe' and console.is_file():
+        executable = str(console)
     tmp = conv / "in"
     for target, kinds in (("txt:Text (encoded):UTF8", ("doc", "rtf")), ("xlsx", ("xls",)), ("pdf", ("ppt", "pptx"))):
         todo = []
@@ -326,10 +330,22 @@ def soffice_convert(jobs, conv):
                 shutil.copyfile(str(src), str(dst))
                 todo.append(str(dst))
         for i in range(0, len(todo), 8):
-            profile = "file:///" + str(conv / "lo_profile").replace("\\", "/")
-            subprocess.run([SOFFICE, "--headless", "--norestore", "-env:UserInstallation=" + profile,
-                            "--convert-to", target, "--outdir", str(conv)] + todo[i:i + 8],
-                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=1800)
+            profile = (conv / 'lo_profile').resolve().as_uri()
+            # A fresh output directory prevents a previous successful conversion
+            # from masking a failed invocation that returns zero without output.
+            with tempfile.TemporaryDirectory(prefix='converted_', dir=conv) as output_dir:
+                result = subprocess.run([executable, "--headless", "--norestore", "-env:UserInstallation=" + profile,
+                                "--convert-to", target, "--outdir", output_dir] + todo[i:i + 8],
+                               stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=1800,
+                               creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
+                if result.returncode:
+                    raise RuntimeError('LibreOffice conversion failed (exit %s)' % result.returncode)
+                outputs = {Path(output_dir) / (Path(src).stem + '.' + target.split(':', 1)[0])
+                           for src in todo[i:i + 8]}
+                if any(not p.is_file() or p.stat().st_size == 0 for p in outputs):
+                    raise RuntimeError('LibreOffice did not create every expected output')
+                for output in outputs:
+                    os.replace(output, conv / output.name)
         if tmp.exists():
             shutil.rmtree(str(tmp), ignore_errors=True)
 

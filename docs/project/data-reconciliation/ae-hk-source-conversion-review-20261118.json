@@ -1,0 +1,51 @@
+{
+  "source_url": "https://www.elegislation.gov.hk/hk/cap112CN!en.rtf",
+  "source_sha256": "5d402a9af0a6c42d548fcf87bba1b5a177ae63c786f047b40dc60601b0a822f7",
+  "conversion": {
+    "original_builder": "returned_without_expected_output",
+    "repaired_builder": "success",
+    "console_entry": "soffice.com",
+    "profile_uri": "Path.resolve().as_uri()",
+    "text_characters": 67944,
+    "text_sha256": "bd3e79017f9ede3627f68258056f27ed9f29670c42644d16153c983703604b1c",
+    "independent_rtf_reader_nonspace_equal": true
+  },
+  "slicing": {
+    "mode": "en_article",
+    "clause_count": 125,
+    "english_articles": [
+      "treaty.ae-hk.2014.cap112cn.en#1",
+      "treaty.ae-hk.2014.cap112cn.en#2",
+      "treaty.ae-hk.2014.cap112cn.en#3",
+      "treaty.ae-hk.2014.cap112cn.en#4",
+      "treaty.ae-hk.2014.cap112cn.en#5",
+      "treaty.ae-hk.2014.cap112cn.en#6",
+      "treaty.ae-hk.2014.cap112cn.en#7",
+      "treaty.ae-hk.2014.cap112cn.en#8",
+      "treaty.ae-hk.2014.cap112cn.en#9",
+      "treaty.ae-hk.2014.cap112cn.en#10",
+      "treaty.ae-hk.2014.cap112cn.en#11",
+      "treaty.ae-hk.2014.cap112cn.en#12",
+      "treaty.ae-hk.2014.cap112cn.en#13",
+      "treaty.ae-hk.2014.cap112cn.en#14",
+      "treaty.ae-hk.2014.cap112cn.en#15",
+      "treaty.ae-hk.2014.cap112cn.en#16",
+      "treaty.ae-hk.2014.cap112cn.en#17",
+      "treaty.ae-hk.2014.cap112cn.en#18",
+      "treaty.ae-hk.2014.cap112cn.en#19",
+      "treaty.ae-hk.2014.cap112cn.en#20",
+      "treaty.ae-hk.2014.cap112cn.en#21",
+      "treaty.ae-hk.2014.cap112cn.en#22",
+      "treaty.ae-hk.2014.cap112cn.en#23",
+      "treaty.ae-hk.2014.cap112cn.en#24",
+      "treaty.ae-hk.2014.cap112cn.en#25",
+      "treaty.ae-hk.2014.cap112cn.en#26",
+      "treaty.ae-hk.2014.cap112cn.en#27",
+      "treaty.ae-hk.2014.cap112cn.en#28"
+    ],
+    "unresolved": "Chinese translation and protocol are attached to English Article28, with spurious numbered child paragraphs. Split parallel translations and protocol before admission.",
+    "last_article_characters": 16744
+  },
+  "publication_status": "not_registered_not_approved",
+  "database_tests": "56 passed in11.88s"
+}
