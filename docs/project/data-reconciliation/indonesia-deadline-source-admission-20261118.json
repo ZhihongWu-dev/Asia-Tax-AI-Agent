@@ -1,5 +1,5 @@
 {
-  "status": "candidates_prepared_not_cloud_admitted",
+  "status": "cloud_admitted_and_exact_read_verified",
   "before_snapshot": {
     "spec_version": "2026-11-10",
     "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
@@ -43,5 +43,20 @@
       "characters": 224
     }
   ],
-  "scope": "Only Articles94(2),100(1),100(2); review of listed amendments found no change to these provisions. Original is not a consolidated approval of all PMK81 provisions. No holiday calendar approved."
+  "scope": "Only Articles94(2),100(1),100(2); review of listed amendments found no change to these provisions. Original is not a consolidated approval of all PMK81 provisions. No holiday calendar approved.",
+  "after_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "e8392430ca3348b1d09d680cfb3de03e4ba5e21ffcd4a0f0c574a911c4bb5049",
+    "review_sha256": "3b2e71d35e189de2cd39b8d6d90669dd4fb90cc98b5a9756be700db5b271ae7d"
+  },
+  "exact_complete_text_verified": true,
+  "old_pin_rejected": true,
+  "reader": "dedicated_read_only_role",
+  "cloud_base_mutated": false,
+  "base_counts": {
+    "doc": 287,
+    "clause": 38152
+  }
 }

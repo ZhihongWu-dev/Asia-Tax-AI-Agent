@@ -99,8 +99,13 @@ def test_replacement_requires_structured_content_bound_approval(note):
 def test_real_candidate_bundle_preserves_all_107_without_approving_them():
     commit,rows,digest=load_candidates()
     assert commit=='78a037f522d1636541c2e5fcdd1145e735f18124'
-    assert len(rows)==116 and len(digest)==64
+    assert len(rows)==119 and len(digest)==64
     assert sum(row.get('source_commit', commit) == commit for row in rows.values()) == 107
+    for suffix in ('94(2)', '100(1)', '100(2)'):
+        source = rows['id.pmk81-2024#' + suffix]
+        assert source['source_commit'] == 'ac04cf8c546f6159bfb3264f9e07a97a18d208ad'
+        assert source['document']['effective_from'] == '2025-01-01'
+        assert source['document']['sha256'] == 'b8f385dee2a8684c24f718c5b2413910760d7273236f9d0d27d2da4cf2892574'
     for suffix in ('16', '16.2', '52', '53'):
         source = rows['vn.law.tax-administration108.2025.vi#' + suffix]
         assert source['document']['effective_from'] == '2026-07-01'
