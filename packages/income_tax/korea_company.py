@@ -9,6 +9,8 @@ from .arithmetic import amount
 from .korea import gross_taxes, company_minimum_reference
 from .korea_reliefs import allocate_company_reliefs
 from .korea_rounding import final_cash_balance
+from .korea_local import LocalFilingAdjustments, settle_local_return
+from .korea_reliefs import CompanyRelief
 
 
 def national_company_settlement(taxable_base, *, tax_year, minimum_regime,
@@ -64,3 +66,39 @@ def national_company_settlement(taxable_base, *, tax_year, minimum_regime,
         occasional_assessment_tax=occasional, withheld_tax=withheld,
         payment_credits=payments, settlement=cash, sources=sources,
         stage='national_settlement_before_installment_allocation')
+
+
+def company_tax(national_taxable_base, local_taxable_base, *, national_inputs,
+        local_inputs, ordinary_domestic_scope_confirmed):
+    """Combine separately established 2026 ordinary national/local assessments.
+
+    Scope confirmation covers ordinary domestic income and absence of separate
+    rural-special, land-transfer, retained-income or other special tax liabilities.
+    It does not turn missing local allocation evidence into a verified ratio.
+    """
+    if ordinary_domestic_scope_confirmed is not True:
+        raise ValueError('Verify ordinary domestic scope and absence of separate special-tax liabilities')
+    national_args, local_args = dict(national_inputs), dict(local_inputs)
+    national_args['reliefs'] = [CompanyRelief(**row) for row in national_args['reliefs']]
+    local_args['adjustments'] = {key: LocalFilingAdjustments(**row)
+        for key, row in local_args['adjustments'].items()}
+    national = national_company_settlement(national_taxable_base, tax_year=2026, **national_args)
+    gross = gross_taxes(national_taxable_base, local_taxable_base, tax_year=2026,
+        subject='company', article60_2_1_1_company=national_args['article60_2_1_1_company'],
+        annual_standard_schedule_confirmed=national_args['annual_standard_schedule_confirmed'])
+    local = settle_local_return(gross['local_gross_tax'], **local_args)
+    sources = national['sources'] + [s for s in gross['sources']
+        if s['doc_id'] not in {r['doc_id'] for r in national['sources']}]
+    sources.append(dict(doc_id='kr.local-tax.form43.20260701',
+        url='https://www.law.go.kr/LSW/flDownload.do?flSeq=164921007',
+        sha256='363ae8f389af98b9d48a5ae0d753cb2eda6beee83b8ff1db9f03d9278a4b3051',
+        provisions=['Instructions19-27']))
+    with localcontext() as context:
+        context.prec = 40
+        payable = national['settlement']['payable'] + local['total_payable']
+        refundable = national['settlement']['refundable'] + local['total_refundable']
+    return dict(policy_version='kr-company-ordinary-2026-2026-11-18', currency='KRW',
+        tax_year=2026, tax_scope='ordinary_national_and_local_corporate_income_tax',
+        national=national, local=local, local_taxable_base=gross['local_taxable_base'],
+        total_payable=payable, total_refundable=refundable, sources=sources,
+        stage='separate_authority_balances_before_installments')

@@ -4,6 +4,7 @@ from pydantic import TypeAdapter
 from packages.contracts.income_tax import IncomeTaxCase
 from . import china, singapore, hong_kong, united_arab_emirates, malaysia, thailand, indonesia
 from . import vietnam, vietnam_employment, vietnam_transfer, japan, japan_company, india, india_company
+from . import korea_company
 
 
 def calculate(case: IncomeTaxCase, basis):
@@ -19,7 +20,7 @@ def calculate(case: IncomeTaxCase, basis):
                'sg': ('2025-01-01', '2025-12-31'), 'hk': ('2025-04-01', '2026-03-31'),
                'my': ('2026-01-01', '2026-12-31'), 'th': ('2026-01-01', '2026-12-31'),
                'id': ('2026-01-01', '2026-12-31'), 'vn': ('2026-01-01', '2026-12-31'),
-               'jp': ('2026-01-01', '2026-12-31'), 'in': ('2026-04-01', '2027-03-31')}
+               'jp': ('2026-01-01', '2026-12-31'), 'kr': ('2026-01-01', '2026-12-31'), 'in': ('2026-04-01', '2027-03-31')}
     if policy=='jp_company_starting_2026':
         japan_company.annual_period(case.period_start,case.period_end)
     elif (case.period_start.isoformat(), case.period_end.isoformat()) != periods[jur]:
@@ -31,7 +32,7 @@ def calculate(case: IncomeTaxCase, basis):
                 'vn_personal_transfer_2026': 'individual', 'vn_employment_2026': 'individual', 'vn_company_2026': 'company',
                 'jp_resident_ordinary_2026': 'individual', 'jp_company_starting_2026':'company',
                 'in_personal_new_ty2026_27':'individual', 'in_personal_old_ty2026_27':'individual', 'in_company_section200_ty2026_27':'company',
-                'in_company_normal_ty2026_27':'company'}
+                'in_company_normal_ty2026_27':'company', 'kr_company_ordinary_2026':'company'}
     if policy == 'hk_profits_2025_26':
         expected[policy] = 'company' if basis.business_form == 'corporation' else 'individual'
     if policy in expected and case.subject != expected[policy]:
@@ -67,6 +68,18 @@ def calculate(case: IncomeTaxCase, basis):
                         'in_company_section200_ty2026_27':'company_section200'}[policy],**args)
         if settlement_requested:
             result=india.settle(result,**settlement)
+    elif policy=='kr_company_ordinary_2026':
+        if case.residency != 'resident' or any(i.source_jurisdiction != 'kr' or
+                i.foreign_tax_paid not in (None, 0) or i.category not in ('business', 'interest', 'rental', 'royalty')
+                for i in case.incomes):
+            raise ValueError('Korean ordinary domestic resident company income required; special and foreign income need separate treatment')
+        with localcontext() as context:
+            context.prec = 40
+            base = max(Decimal('0'), sum((i.gross_amount for i in case.incomes), Decimal('0'))
+                - case.claimed_deductions - case.carried_losses)
+        if basis.national_taxable_base != base:
+            raise ValueError('Korean national base must reconcile to saved income, deductions and eligible losses')
+        result = korea_company.company_tax(**args)
     elif policy=='jp_company_starting_2026':
         if case.residency!='resident' or any(i.source_jurisdiction!='jp' or
                 i.foreign_tax_paid not in (None,0) or i.category not in ('business','rental','royalty','other') for i in case.incomes):

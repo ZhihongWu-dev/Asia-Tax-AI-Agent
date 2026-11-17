@@ -1,0 +1,26 @@
+{
+  "scope": "2026 ordinary domestic resident Korean company, full calendar year, initial local return, no installments or separate special-tax liabilities",
+  "implementation": "Discriminated assessment contract and saved-case API combine independently established national and local bases, preserve authority-level payments and refunds, and reconcile the national base to saved gross income less established deductions and eligible losses.",
+  "reference_research": {
+    "repository": "https://github.com/UpstageAI/korean-tax-calc-mcp",
+    "reviewed_commit": "0f86d40b0334b6c1366518d0c36d244d210f1504",
+    "license": "MIT",
+    "use": "Previously reviewed rounding/minimum-tax design reference; no external code or dependency adopted. Legal evidence is recorded in companion Korean source reviews."
+  },
+  "verification": {
+    "targeted_workflow": "14 passed",
+    "income_tax_suite": "796 passed in 12.67s",
+    "business_case": "KRW100m national base gives KRW10m gross national tax; KRW11m national prepayments produce KRW1m refundable. Independent KRW200m local base gives KRW2m payable across two local filing authorities. The API retains both totals without cross-authority netting.",
+    "persistence": "Successful result survives store restart and idempotent request replay; unverified scope is rejected before a successful run.",
+    "input_boundaries": "Saved subject, residency, year, deductions, confirmation and unsupported foreign/special income tested; ratio float and excessive precision rejected."
+  },
+  "remaining": [
+    "Corporate frontend and browser acceptance",
+    "Individual assessment and frontend integration",
+    "Special regimes, foreign income, amended returns and installments",
+    "Resolve final form43/form44-6 ratio precision for automatic allocation; current API accepts explicitly verified final ratios",
+    "Admit reviewed sources after the live optimizer run ends",
+    "Production deployment and actual business acceptance"
+  ],
+  "completion_claim": false
+}

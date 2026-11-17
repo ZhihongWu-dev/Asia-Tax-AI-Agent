@@ -5,7 +5,7 @@ The saved income facts remain separate from the established calculation basis.
 """
 from datetime import date
 from typing import Annotated, Literal
-from pydantic import BaseModel, ConfigDict, Field, StrictBool
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from .income_tax import Money
 
 
@@ -235,6 +235,63 @@ class INNormalCompany(INBasis):
     turnover_and_mat_adjustments_verified: StrictBool
 
 
-Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany |
+class KRRelief(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    identifier: str = Field(min_length=1, max_length=120)
+    value: Money
+    category: Literal['reduction', 'noncarry_credit', 'carry_credit', 'article58_3_credit']
+    origin_year: StrictInt = Field(ge=1900, le=2026)
+    minimum_tax_subject: StrictBool
+
+
+class KRNationalInputs(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    minimum_regime: Literal['general', 'sme', 'graduated_first_three_years', 'graduated_next_two_years']
+    article60_2_1_1_company: StrictBool
+    reliefs: list[KRRelief] = Field(max_length=1000)
+    annual_standard_schedule_confirmed: StrictBool
+    minimum_regime_verified: StrictBool
+    eligibility_caps_and_expiry_verified: StrictBool
+    no_base_changing_incentives: StrictBool
+    additions_and_payments_verified: StrictBool
+    penalty_tax: Money
+    relief_recapture: Money
+    interim_tax: Money
+    occasional_assessment_tax: Money
+    withheld_tax: Money
+    installment: StrictBool
+
+
+class KRLocalAdjustment(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    relief: Money
+    penalty: Money
+    additional_tax: Money
+    other_payments: Money
+    rate_adjustment_increase: Money
+    rate_adjustment_decrease: Money
+
+
+class KRLocalInputs(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    total_withheld: Money
+    filing_ratios: dict[str, Annotated[str, Field(pattern=r'^(?:0(?:\.\d{1,8})?|1(?:\.0{1,8})?)$')]] = Field(min_length=1, max_length=1000)
+    adjustments: dict[str, KRLocalAdjustment] = Field(min_length=1, max_length=1000)
+    head_office: str = Field(min_length=1, max_length=120)
+    initial_return_and_filing_groups_verified: StrictBool
+    relief_caps_rate_adjustments_and_payments_verified: StrictBool
+    installment: StrictBool
+
+
+class KRCompany(Basis):
+    policy: Literal['kr_company_ordinary_2026']
+    national_taxable_base: Money
+    local_taxable_base: Money
+    national_inputs: KRNationalInputs
+    local_inputs: KRLocalInputs
+    ordinary_domestic_scope_confirmed: StrictBool
+
+
+Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany |
                        HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
                        Field(discriminator='policy')]
