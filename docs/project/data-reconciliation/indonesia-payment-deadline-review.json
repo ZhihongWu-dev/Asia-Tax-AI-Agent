@@ -111,5 +111,106 @@
       "sha256": "77857b932602e5c46431155b82d3ebcfc3111e9289927b218f4316445a09b3f0",
       "bytes": 1460736
     }
-  ]
+  ],
+  "isolated_repair": {
+    "status": "registered_pending_rebuild",
+    "doc": {
+      "id": "id.pmk81-2024",
+      "jur": "id",
+      "type": "regulation",
+      "category": "9;page_deadlines",
+      "title": "PMK 81/2024: Coretax tax administration provisions",
+      "url": "https://jdih.kemenkeu.go.id/api/download/637047be-3dba-4347-aba1-98fa7fd5ab3f/2024pmkeuangan081.pdf",
+      "file": "raw/id/id.pmk81-2024.pdf",
+      "sha256": "b8f385dee2a8684c24f718c5b2413910760d7273236f9d0d27d2da4cf2892574",
+      "lang": "id",
+      "effective_from": "2025-01-01",
+      "effective_to": "",
+      "note": "Original instrument; later amendments apply by provision. Articles94 and100 checked against PMK11/2025,53/2025,54/2025 and1/2026 in indonesia-payment-deadline-review.json. Other provisions are not certified as consolidated current law."
+    },
+    "historical_parameter_before": {
+      "param_id": "id.outbound_wht.payment_deadline",
+      "scope": "id",
+      "subject": "all",
+      "slot": "outbound_wht",
+      "name": "payment_deadline",
+      "value": "10",
+      "unit": "days",
+      "cite_id": "id.dgt.article26#all",
+      "quote": "Pay the Income Tax by first creating a billing code. The payment must be made no later than the 10th day of the following month to a Collecting Agent;",
+      "effective_from": "",
+      "effective_to": "",
+      "note": "Payment deadline for the described Article 26 withholding process.",
+      "changed_on": "",
+      "superseded_by": ""
+    },
+    "historical_parameter_after": {
+      "param_id": "id.outbound_wht.payment_deadline",
+      "scope": "id",
+      "subject": "all",
+      "slot": "outbound_wht",
+      "name": "payment_deadline",
+      "value": "10",
+      "unit": "days",
+      "cite_id": "id.dgt.article26#all",
+      "quote": "Pay the Income Tax by first creating a billing code. The payment must be made no later than the 10th day of the following month to a Collecting Agent;",
+      "effective_from": "",
+      "effective_to": "2024-12-31",
+      "note": "Payment deadline for the described Article 26 withholding process. Historical pre-Coretax guidance only; no current ten-day duration. Superseded from2025-01-01. Applicability of earlier periods requires historical review.",
+      "changed_on": "2025-01-01",
+      "superseded_by": "id.outbound_wht.payment_day_next_month"
+    },
+    "current_parameters": [
+      {
+        "param_id": "id.outbound_wht.payment_day_next_month",
+        "scope": "id",
+        "subject": "all",
+        "slot": "outbound_wht",
+        "name": "payment_day_next_month",
+        "value": "15",
+        "unit": "count",
+        "cite_id": "id.pmk81-2024#94(2)",
+        "quote": "(2)\nPembayaran\ndan penyetoran\nsebagaimana\ndimaksud\npada ayat (1) wajib dilakukan\npaling lambat tanggal 15\n(lima belas)\nbulan\nberikutnya\nsetelah\nMasa\nPajak\nberakhir meliputi:\na.\nPajak Penghasilan\nPasal 4 ayat (2);\nb.\nPajak Penghasilan\nPasal 15;\nc.\nPajak Penghasilan\nPasal 21;\nd.\nPajak Penghasilan\nPasal 22;\ne.\nPajak Penghasilan\nPasal 23;\nf.\nPajak Penghasilan\nPasal 25;\ng.\nPajak Penghasilan\nPasal 26;\nh.\nPajak\nPenghasilan\nminyak\nbumi\ndan/atau\ngas\nbumi\ndari kegiatan\nusaha\nhulu\nminyak\nbumi\ndan/ atau gas bumi yang dibayarkan\nsetiap Masa\nPajak;\ni.\nPajak\nPertambahan\nNilai yang\nterutang\natas\npemanfaatan\nBarang Kena Pajak tidak berwujud\ndan/atau\nJasa\nKena\nPajak\ndari\nluar\nDaerah\nPabean;\nJ.\nPajak\nPertambahan\nNilai yang\nterutang\natas\nkegiatan membangun\nsendiri;\njdih.kemenkeu.go.id\n- 79 -\nk.\nBea Meterai yang dipungut\noleh pemungut\nBea\nMeterai;\n1.\nPajak Penjualan;\ndan\nm.\nPajak Karbon yang dipungut oleh pemungut\nPajak\nKarbon.",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Calendar day15 of the month following the tax period, not an elapsed15-day duration. Article94(2)(g) covers Article26 income tax. Apply Article100 holiday adjustment. Historical periods and exceptional relief require separate review.",
+        "changed_on": "",
+        "superseded_by": ""
+      },
+      {
+        "param_id": "id.outbound_wht.payment_holiday_adjustment",
+        "scope": "id",
+        "subject": "all",
+        "slot": "outbound_wht",
+        "name": "payment_holiday_adjustment",
+        "value": "next_working_day",
+        "unit": "text",
+        "cite_id": "id.pmk81-2024#100(1)",
+        "quote": "(1)\nDalam\nhal\ntanggal\njatuh\ntempo\npembayaran\natau\npenyetoran\npajak sebagaimana\ndimaksud\ndalam Pasal\n94 bertepatan\ndengan\nhari libur,\npembayaran\natau\npenyetoran\npajak dapat dilakukan\npaling lambat pada\nhari kerja berikutnya.",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "When the Article94 due date is a holiday, payment is due no later than the next working day. Use a verified applicable calendar, not weekends alone.",
+        "changed_on": "",
+        "superseded_by": ""
+      },
+      {
+        "param_id": "id.outbound_wht.payment_holiday_scope",
+        "scope": "id",
+        "subject": "all",
+        "slot": "outbound_wht",
+        "name": "payment_holiday_scope",
+        "value": "Saturday;Sunday;national_holiday;election_holiday;national_collective_leave",
+        "unit": "text",
+        "cite_id": "id.pmk81-2024#100(2)",
+        "quote": "(2)\nHari libur sebagaimana\ndimaksud\npada ayat (1) yaitu\nhari Sabtu, hari Minggu, hari libur nasional,\nhari yang\ndiliburkan\nuntuk\npenyelenggaraan\npemilihan\numum,\natau hari yang ditetapkan\nsebagai cuti bersama\nsecara\nnasional.",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Statutory holiday categories. An authoritative year-specific holiday calendar is required for an actual deadline calculation.",
+        "changed_on": "",
+        "superseded_by": ""
+      }
+    ],
+    "runtime_promoted": false,
+    "calendar_calculator_implemented": false
+  }
 }
