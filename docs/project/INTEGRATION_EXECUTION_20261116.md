@@ -404,3 +404,9 @@ The user explicitly requires both corporate and personal income tax; corporate r
 - Registered official Gazette38 containing Law108/2025/QH15, original SHA256 ce2ec36223b931f0754d15f23aecd83405b386f36fbd4cbd83d300b45b117662. Native text extraction succeeded; existing multi-law selection correctly isolated53 articles and330 clauses from the145-page issue.
 - Confirmed trial references16.2,17.2,52.1,53.2 and the statutory daily-rate text. Category10 now has an original source; no penalty parameter published until implementing legislation, exceptions and transition are checked. Article17 administrative debt settlement must not be substituted for restructuring capital-gains or emigration-tax rules.
 - General commencement is1July2026 with Article52 exceptions and Article53 transition. Full library rebuild and coverage recheck pending. Review evidence: vietnam-tax-administration-review.json. No remote push.
+
+### Vietnamese statutory late-payment rate and implementation source
+
+- Registered official Decree252/2026 PDF from the government gazette attachment, SHA256 0ae4bf867af790bab3290df5c3b326a1070500c570a7a78f5cf152f1bf4da390. Native extraction/trial slicing produced428 clauses; reviewed Articles24,26,74,75 alongside Law108 Articles16,52,53.
+- Added the statutory0.03 percent/day parameter for both subjects from1July2026 with an exact Article16(2) quotation. Targeted check_params passed. Scope notes retain delegated adjustments, transition, ordinary day-after-due through day-before-payment, distinct clawback timing, offsets, suspensions and exceptions. No claim of complete penalty engine or administrative-fine coverage.
+- Official-source amendment search did not establish a later rate change; future-date evaluation still needs version review. Existing source parser reused; CPython GitHub date/Decimal references consulted for subsequent calculation design, no external code adopted. Full library/coverage rerun pending. No remote push.

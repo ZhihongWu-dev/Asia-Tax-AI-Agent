@@ -7,9 +7,20 @@
   "clauses": 330,
   "slice_mode": "vn_article",
   "remaining": [
-    "Decree252 and subsequent amendment review before publishing current penalty parameters",
-    "Article16 exceptions and Article53 transition",
-    "Administrative settlement is not restructuring-cost or emigration-tax coverage",
-    "Full library rebuild"
-  ]
+    "Full penalty assessment including fines, exclusions, offsets and transitional periods",
+    "Restructuring-cost and emigration-tax coverage",
+    "Full generated library rebuild and coverage rerun"
+  ],
+  "implementing_original": {
+    "doc_id": "vn.decree252.2026.vi",
+    "sha256": "0ae4bf867af790bab3290df5c3b326a1070500c570a7a78f5cf152f1bf4da390",
+    "reviewed_articles": [
+      "24",
+      "26",
+      "74",
+      "75"
+    ],
+    "registered": true
+  },
+  "parameter_added": "vn.penalty.late_interest_pct_per_day.20260701"
 }
