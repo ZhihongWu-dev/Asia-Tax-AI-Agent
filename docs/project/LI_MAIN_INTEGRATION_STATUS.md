@@ -55,6 +55,12 @@ The final integration has not been pushed or merged to `main`. The historical
   catalog quarantine/rebinding and dividend-credit business acceptance remain
   pending; the outdated overview has not been admitted to close missing sources.
   See [conflict evidence](data-reconciliation/thailand-pit-overview-conflicts-20261118.json).
+- A Thai section47bis dividend-component calculator now computes each certified
+  tranche's own corporate-rate gross-up, separates shareholder withholding and
+  preserves non-creditable tranches. The Thai module tests passed48. It is not
+  yet connected to case contracts, annual election/settlement or the UI; those
+  remain required before claiming a usable dividend workflow. The existing
+  ordinary individual adapter continues to reject dividend income.
 - The original twelve-row optimizer regression is still running. As of the latest
   process check, PID16760 is live and the log reports three successful checks:
   case001.best, case001.open and case001.valued.best. This is not twelve-row
