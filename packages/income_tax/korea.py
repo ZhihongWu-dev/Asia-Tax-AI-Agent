@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 
 from .arithmetic import Band, marginal_tax
+from .korea_rounding import taxable_base_won
 
 _SOURCES = json.loads(Path(__file__).with_name('kr_2026_sources.json').read_text(encoding='utf-8'))
 
@@ -54,10 +55,12 @@ need separate treatment. Relief limits and post-comparison credits follow later.
         schedule = _schedule([(None,flat_rates[regime])])
     else:
         raise ValueError('Verified statutory minimum-tax regime required')
+    restored_taxable_base = taxable_base_won(restored_taxable_base)
     reference,bands = marginal_tax(restored_taxable_base,schedule)
     return dict(currency='KRW',tax_year=tax_year,regime=regime,
+        restored_taxable_base=restored_taxable_base,
         minimum_reference_tax=reference,bands=bands,
-        sources=deepcopy(_SOURCES['corporate_minimum']),
+        sources=deepcopy(_SOURCES['corporate_minimum'] + _SOURCES['rounding'][:1]),
         stage='national_minimum_reference_before_relief_limitation_and_excluded_credits')
 
 
@@ -84,10 +87,13 @@ Personal inputs are comprehensive-income bases, not retirement/capital gains.
         national, local = PERSONAL, LOCAL_PERSONAL
     else:
         raise ValueError('Unknown taxpayer subject')
+    national_taxable_base = taxable_base_won(national_taxable_base)
+    local_taxable_base = taxable_base_won(local_taxable_base)
     national_tax, national_bands = marginal_tax(national_taxable_base,national)
     local_tax, local_bands = marginal_tax(local_taxable_base,local)
     return dict(currency='KRW',tax_year=tax_year,subject=subject,
-        sources=deepcopy(_SOURCES[subject]),
+        sources=deepcopy(_SOURCES[subject] + _SOURCES['rounding']),
+        national_taxable_base=national_taxable_base,local_taxable_base=local_taxable_base,
         national_gross_tax=national_tax,local_gross_tax=local_tax,
         national_bands=national_bands,local_bands=local_bands,
         stage='gross_schedules_before_credits_minimum_additional_tax_and_rounding')

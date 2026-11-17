@@ -67,6 +67,20 @@
       ]
     }
   ],
+  "rounding": [
+    {
+      "doc_id": "kr.national-treasury.article47.2026",
+      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1031453583",
+      "sha256": "e219a858f303c94d114495ffc0105b5fef7e7622b85a7f064c5e5f9c35a6b665",
+      "provisions": ["Article47(1)-(2)"]
+    },
+    {
+      "doc_id": "kr.local-tax-basic.article59.2026",
+      "url": "https://www.law.go.kr/LSW/lsLinkProc.do?joLnkStr=%EC%A0%9C97%EC%A1%B0&lsNm=%EC%A7%80%EB%B0%A9%EC%84%B8%EA%B8%B0%EB%B3%B8%EB%B2%95&mode=11",
+      "sha256": "1ed709aa892ade3bbc0950038efe2755046549aed809dc2332e89575051c0266",
+      "provisions": ["Article59"]
+    }
+  ],
   "corporate_minimum": [
     {
       "doc_id": "kr.special-tax-treatment.article132.2026",

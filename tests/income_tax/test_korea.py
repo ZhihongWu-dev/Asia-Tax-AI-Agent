@@ -46,6 +46,27 @@ def test_local_base_is_independent():
     assert 'final_tax' not in r
 
 
+@pytest.mark.parametrize('subject,base,local,expected_national,expected_local', [
+    ('company', '200000000.999999', '200000001.999999', '20000000', '2000000.02'),
+    ('individual', '14000000.999999', '14000001.999999', '840000', '84000.015'),
+])
+def test_fractional_tax_bases_are_discarded_before_selecting_rate_band(
+        subject, base, local, expected_national, expected_local):
+    result = compute(base, local=local, subject=subject,
+        article60_2_1_1_company=False if subject == 'company' else None)
+    assert result['national_gross_tax'] == Decimal(expected_national)
+    assert result['local_gross_tax'] == Decimal(expected_local)
+    assert result['national_taxable_base'] == Decimal(base).to_integral_value(rounding='ROUND_DOWN')
+    assert any(s['doc_id'] == 'kr.local-tax-basic.article59.2026' for s in result['sources'])
+
+
+def test_minimum_restored_base_is_rounded_before_reference_calculation():
+    result = company_minimum_reference('10000000000.999999', tax_year=2026,
+        regime='general', annual_applicability_and_restoration_confirmed=True)
+    assert result['restored_taxable_base'] == 10000000000
+    assert result['minimum_reference_tax'] == 1000000000
+
+
 def test_provenance_preserves_commencement_and_original_table_versions():
     sources=compute('1')['sources']
     assert any(s['doc_id']=='kr.local-tax.amendment21308.2025' for s in sources)

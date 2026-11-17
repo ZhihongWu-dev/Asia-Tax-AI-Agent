@@ -32,7 +32,9 @@
   "implementation": {
     "module": "packages/income_tax/korea_rounding.py",
     "arithmetic": "Validated Decimal amounts, explicit local precision, net before rounding toward zero, separate payable/refundable outputs",
-    "tests": "67 passed in0.95s across Korean schedules/minimum-reference and new rounding tests",
+    "tests": "Initial Korean tests67 passed in0.95s; after taxable-base integration full income-tax suite713 passed in20.05s",
+    "base_integration": "gross_taxes now truncates national and local bases independently before marginal bands; company_minimum_reference truncates restored taxable base. Returned bases and hash-pinned rounding sources expose the actual calculation inputs. Intermediate gross tax retains fractional won pending final assessment/settlement.",
+    "local_original": {"bytes": 285974, "sha256": "1ed709aa892ade3bbc0950038efe2755046549aed809dc2332e89575051c0266", "storage": "external audit korea-rounding-20261118/local-tax-basic-act59.html", "article59_body_verified": true},
     "limitations": ["Not wired into assessment API/UI yet", "Does not establish reliefs, minimum tax, penalties or refund eligibility", "Installment allocation remains pending", "National and local collecting authorities must be settled separately"]
   }
 }
