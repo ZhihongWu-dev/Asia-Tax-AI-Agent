@@ -1,0 +1,46 @@
+{
+  "doc_id": "vn.decree141.2026.vi",
+  "source_sha256": "fa9a7c47b637f47528225d9cdd03dbde1032607ec8c39648071178ce4091413f",
+  "profile": "dbe9b472f8323f98de2b0d7bf5e0139b4fe9dfdcd0ebe9f16f52c61b81e92277",
+  "config": {
+    "language": "vie",
+    "rotation": 0,
+    "clip_top": 0,
+    "skip_pages": [],
+    "scope": "All pages of Vietnamese official original; no pages or regions excluded; transcription requires original comparison",
+    "dpi": 300,
+    "pymupdf": "2.0",
+    "mupdf": "1.28.5"
+  },
+  "model_sha256": {
+    "vie": "79df64caf7bcfb2a27df5042ecb6121e196eada34da774956995747636d5bfa1"
+  },
+  "created_at": "2026-11-17T04:52:19.201246+00:00",
+  "review_status": "pending_original_comparison",
+  "pages": [
+    {
+      "page": 1,
+      "status": "ocr_pending_review",
+      "characters": 1961,
+      "sha256": "078a5fed16daf9857675bc1cf704b88dc432260af84ab5a70c0b68e5f71371c2"
+    },
+    {
+      "page": 2,
+      "status": "ocr_pending_review",
+      "characters": 2411,
+      "sha256": "be41ef616fb8e615ed863bb7e967f8c33afaff6b5e537f76c3e744255270c95a"
+    },
+    {
+      "page": 3,
+      "status": "ocr_pending_review",
+      "characters": 2447,
+      "sha256": "f73660cba1a5e7087bb5bbe31abc9d23001d401204b236c93b208b9a4b137d40"
+    },
+    {
+      "page": 4,
+      "status": "ocr_pending_review",
+      "characters": 1124,
+      "sha256": "d134347af9dbb33eb40e9e6058fb60a7dc1873b98e11715dda288626ae5edcd5"
+    }
+  ]
+}

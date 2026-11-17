@@ -1,0 +1,34 @@
+{
+  "doc_id": "vn.law09.2026.vi",
+  "source_sha256": "d9207c14c9af462454dd7ce9ef5b23c8a22dfea8d3462438be9ffd3897a1f94e",
+  "profile": "078c5b2b91c38fbc0bd525e7c7a096cf59c11789212e11336e14ffcc31100393",
+  "config": {
+    "language": "vie",
+    "rotation": 0,
+    "clip_top": 0,
+    "skip_pages": [],
+    "scope": "All pages of Vietnamese official original; no pages or regions excluded; transcription requires original comparison",
+    "dpi": 300,
+    "pymupdf": "2.0",
+    "mupdf": "1.28.5"
+  },
+  "model_sha256": {
+    "vie": "79df64caf7bcfb2a27df5042ecb6121e196eada34da774956995747636d5bfa1"
+  },
+  "created_at": "2026-11-17T04:52:09.661543+00:00",
+  "review_status": "pending_original_comparison",
+  "pages": [
+    {
+      "page": 1,
+      "status": "ocr_pending_review",
+      "characters": 1885,
+      "sha256": "70d27af340307931a3405ae8542df2da925b39a7be55e37b1e028504308cb74f"
+    },
+    {
+      "page": 2,
+      "status": "ocr_pending_review",
+      "characters": 1662,
+      "sha256": "de897f2dac95c9ce17239e7e84cc84e02ac424f26894f233512b367d7a71cbd2"
+    }
+  ]
+}
