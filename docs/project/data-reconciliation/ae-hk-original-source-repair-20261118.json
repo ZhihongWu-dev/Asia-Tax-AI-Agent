@@ -1,0 +1,36 @@
+{
+  "status": "isolated_source_repaired_pending_rebuild",
+  "date": "2026-11-18",
+  "before": {
+    "id": "treaty.ae-hk.2014.en",
+    "jur": "ae-hk",
+    "type": "treaty",
+    "category": "",
+    "title": "Agreement between Hong Kong and the United Arab Emirates for the Avoidance of Double Taxation",
+    "url": "https://www.ird.gov.hk/eng/pdf/Agreement_United_Arab_Emirates_HongKong.pdf",
+    "file": "raw/ae-hk/treaty.ae-hk.2014.en.pdf",
+    "sha256": "87de806f8dc5ebe0dc43ffe523c27ad1513c1d31102c0e2e2677f95129b41a2f",
+    "lang": "en",
+    "effective_from": "2015-12-10",
+    "effective_to": "",
+    "note": "Official English treaty text published by the Hong Kong Inland Revenue Department; signed 11 December 2014. downloaded with requests 2026-10-26T14:12:10Z"
+  },
+  "after": {
+    "id": "treaty.ae-hk.2014.en",
+    "jur": "ae-hk",
+    "type": "treaty",
+    "category": "",
+    "title": "Agreement between Hong Kong and the United Arab Emirates for the Avoidance of Double Taxation",
+    "url": "https://www.elegislation.gov.hk/hk/cap112CN!en.rtf",
+    "file": "raw/ae-hk/treaty.ae-hk.2014.cap112cn.en.rtf",
+    "sha256": "5d402a9af0a6c42d548fcf87bba1b5a177ae63c786f047b40dc60601b0a822f7",
+    "lang": "en|zh",
+    "effective_from": "2015-12-10",
+    "effective_to": "",
+    "note": "Hong Kong e-Legislation Cap. 112CN bilingual authentic agreement and protocol. Replaces the IRD redirect PDF, retained as an archived file. Signed 2014-12-11; entry into force 2015-12-10. MLI effects remain separately specified by tax type and jurisdiction. Source freshly hash-verified 2026-11-18."
+  },
+  "original_redirect_preserved": true,
+  "fresh_official_download_sha256": "5d402a9af0a6c42d548fcf87bba1b5a177ae63c786f047b40dc60601b0a822f7",
+  "runtime_promoted": false,
+  "cloud_admitted": false
+}
