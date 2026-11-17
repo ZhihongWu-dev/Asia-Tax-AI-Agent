@@ -1,0 +1,9 @@
+.planning-panel { margin-bottom: 1.5rem; padding: 1rem; border: 1px solid #dce3df; border-radius: 12px; }
+.planning-panel summary { cursor: pointer; font-weight: 600; }
+.planning-panel p { line-height: 1.6; overflow-wrap: anywhere; }
+.planning-panel fieldset { display: grid; gap: .9rem; border: 0; padding: 1rem 0; min-width: 0; }
+.planning-panel label { display: grid; gap: .35rem; }
+.planning-panel input, .planning-panel select { width: 100%; box-sizing: border-box; padding: .65rem; border: 1px solid #bdc9c2; border-radius: 7px; background: white; color: #203b2e; min-width: 0; }
+.planning-panel button { margin: .3rem .5rem .3rem 0; padding: .6rem .8rem; border: 1px solid #bdc9c2; border-radius: 7px; cursor: pointer; }
+.planning-panel button:disabled { opacity: .5; cursor: default; }
+.planning-panel li { margin: .8rem 0; line-height: 1.6; }

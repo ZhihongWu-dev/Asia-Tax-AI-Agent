@@ -1,4 +1,5 @@
 import IncomeTaxFacts from "./IncomeTaxFacts";
+import PlanningPanel from "./PlanningPanel";
 import HintButton from "./HintButton";
 import CalculationFacts from "./CalculationFacts";
 import FactEditor from "./FactEditor";
@@ -111,7 +112,7 @@ export default function DetailsPanel({
           </details>
           </>
         )}
-        {panel === "structure" && <StructurePanel current={current} onUpdate={onDomainUpdate} onEditFacts={onEditFacts} />}
+        {panel === "structure" && <><PlanningPanel key={current.id} current={current} onUpdate={onDomainUpdate}/><StructurePanel current={current} onUpdate={onDomainUpdate} onEditFacts={onEditFacts} /></>}
         {panel === "sources" && (
           <>
             <KnowledgeSearch />

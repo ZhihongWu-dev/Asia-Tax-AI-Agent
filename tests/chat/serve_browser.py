@@ -45,6 +45,10 @@ if __name__ == '__main__':
         # Optional persistent storage for manual local walkthroughs; automated tests stay isolated.
         database_path = Path(os.environ.get('FSIE_TEST_DATABASE_PATH', str(Path(directory) / 'cases.sqlite'))).resolve()
         store = ChatStore(f"sqlite:///{database_path.as_posix()}")
+        from packages.domain_bridge.planning_store import metadata as planning_metadata
+        from packages.chat import library_cloud
+        planning_metadata.create_all(store.engine)
+        library_cloud.current_library_snapshot = lambda **_: {'fixture': 'browser-planning-only'}
         analysis.retrieve_units = lambda _: ([], 'unavailable')
         analysis.related_rulings = lambda _: {'status': 'unavailable', 'passages': []}
         knowledge.read_documents = lambda **_: [{
