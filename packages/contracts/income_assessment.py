@@ -292,6 +292,45 @@ class KRCompany(Basis):
     ordinary_domestic_scope_confirmed: StrictBool
 
 
-Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany |
+class KRPersonalDeductionPerson(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    identifier: str = Field(min_length=1,max_length=120)
+    relationship: Literal['self','spouse','ascendant','descendant','adopted_child','sibling',
+        'welfare_recipient','foster_child','disabled_descendant_spouse']
+    basic_eligible: StrictBool
+    senior_70_at_statutory_date: StrictBool
+    statutory_disability: StrictBool
+
+
+class KRChildCreditFacts(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    identifier: str = Field(min_length=1,max_length=120)
+    birth_date: date = Field(le=date(2026,12,31))
+    relationship: Literal['child','adopted_child','foster_child','grandchild']
+    basic_deduction_eligible: StrictBool
+    current_year_birth_adoption_order: StrictInt | None = Field(default=None,ge=1,le=1000)
+
+
+class KRSalary(Basis):
+    policy: Literal['kr_salary_standard_payroll_2026']
+    people: list[KRPersonalDeductionPerson] = Field(min_length=1,max_length=1000)
+    children: list[KRChildCreditFacts] = Field(max_length=1000)
+    female_taxpayer: StrictBool
+    has_spouse: StrictBool
+    household_head: StrictBool
+    public_pension_paid: Money
+    ordinary_salary_and_standard_credit_verified: StrictBool
+    family_eligibility_and_allocation_verified: StrictBool
+    pension_eligibility_verified: StrictBool
+    current_employer_withheld: Money
+    former_employer_settled_tax: Money
+    decision_and_employer_records_verified: StrictBool
+    local_current_employer_withheld: Money
+    local_former_employer_settled_tax: Money
+    employer_special_collection_verified: StrictBool
+    installment: StrictBool
+
+
+Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
                        HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
                        Field(discriminator='policy')]

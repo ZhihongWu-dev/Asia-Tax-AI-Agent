@@ -5,6 +5,9 @@ from packages.contracts.income_tax import IncomeTaxCase
 from . import china, singapore, hong_kong, united_arab_emirates, malaysia, thailand, indonesia
 from . import vietnam, vietnam_employment, vietnam_transfer, japan, japan_company, india, india_company
 from . import korea_company
+from . import korea_salary
+from .korea_children import ChildCreditFacts
+from .korea_personal_deductions import PersonalDeductionPerson
 
 
 def calculate(case: IncomeTaxCase, basis):
@@ -32,7 +35,8 @@ def calculate(case: IncomeTaxCase, basis):
                 'vn_personal_transfer_2026': 'individual', 'vn_employment_2026': 'individual', 'vn_company_2026': 'company',
                 'jp_resident_ordinary_2026': 'individual', 'jp_company_starting_2026':'company',
                 'in_personal_new_ty2026_27':'individual', 'in_personal_old_ty2026_27':'individual', 'in_company_section200_ty2026_27':'company',
-                'in_company_normal_ty2026_27':'company', 'kr_company_ordinary_2026':'company'}
+                'in_company_normal_ty2026_27':'company', 'kr_company_ordinary_2026':'company',
+                'kr_salary_standard_payroll_2026':'individual'}
     if policy == 'hk_profits_2025_26':
         expected[policy] = 'company' if basis.business_form == 'corporation' else 'individual'
     if policy in expected and case.subject != expected[policy]:
@@ -68,6 +72,19 @@ def calculate(case: IncomeTaxCase, basis):
                         'in_company_section200_ty2026_27':'company_section200'}[policy],**args)
         if settlement_requested:
             result=india.settle(result,**settlement)
+    elif policy=='kr_salary_standard_payroll_2026':
+        if case.residency!='resident' or case.carried_losses!=0 or any(
+                i.source_jurisdiction!='kr' or i.category!='employment' or
+                i.foreign_tax_paid not in (None,0) for i in case.incomes):
+            raise ValueError('Korean payroll policy requires resident domestic ordinary salary without carried losses or foreign credits')
+        if case.claimed_deductions!=basis.public_pension_paid:
+            raise ValueError('Saved deductions must equal verified public pension contributions; automatic salary and family deductions are separate')
+        with localcontext() as context:
+            context.prec=40
+            salary=sum((i.gross_amount for i in case.incomes),Decimal(0))
+        args['people']=[PersonalDeductionPerson(**row) for row in args['people']]
+        args['children']=[ChildCreditFacts(**row) for row in args['children']]
+        result=korea_salary.standard_salary_return(salary,tax_year=2026,**args)
     elif policy=='kr_company_ordinary_2026':
         if case.residency != 'resident' or any(i.source_jurisdiction != 'kr' or
                 i.foreign_tax_paid not in (None, 0) or i.category not in ('business', 'interest', 'rental', 'royalty')
