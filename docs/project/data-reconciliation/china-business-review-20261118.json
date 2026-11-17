@@ -1,0 +1,27 @@
+{
+  "checked_on": "2026-11-18",
+  "scope": "2026 resident domestic annual personal business income on an established taxable base, with ordinary rates or eligible individual-operator half relief.",
+  "implementation": "Calculator, discriminated saved-case contract, deduction/loss reconciliation, bilingual policy inputs, separate relief display and persisted browser result. Full-year business receipts aggregate before applying the single CNY2m cap. Personal deductions are already included in the established saved deduction amount, not automatically deducted a second time.",
+  "legal_sources": [
+    {"url": "https://guangxi.chinatax.gov.cn/zcwj/zxwj/201809/t20180914_254766.html", "purpose": "IIT Law articles3/6 and business schedule", "archived_sha256": "bba26187c90f3626ad07d5e7d17362dee638d7041805a5e0e9c9685a30081edd"},
+    {"url": "https://fgk.chinatax.gov.cn/zcfgk/c100012/c5213596/content.html", "purpose": "2023 STA announcement12 annual aggregation and half-relief formula", "archive_status": "Browser search content reviewed; direct requests download returned403. Not admitted as an archived cloud source."},
+    {"url": "https://fgk.chinatax.gov.cn/zcfgk/c100015/c5213612/content.html", "purpose": "Official scope through2027 and examples:80000/2000 gives2250 additional relief;2400000/6000 gives314750 additional relief", "archive_status": "Browser search content reviewed; local archival remains pending."}
+  ],
+  "github_research": {
+    "references": ["https://github.com/XHJ2AIDEVS/aitaxs-assistant", "https://github.com/wfpet169/tax-burden-calculator"],
+    "assessment": "Compared publicly documented business-calculation and entity-comparison scope. Neither established a mature applicable annual aggregation/relief implementation for adoption. No external code, dependency or product design copied; license and maintenance suitability were not established for adoption. Existing Decimal marginal-band framework retained, with official examples as golden cases."
+  },
+  "verification": {
+    "targeted": "33 passed in4.57s including rates at and immediately above each band, official examples, zero-income refund, annual cap, invalid confirmations, saved-case aggregation, deductions/losses and domestic income boundary.",
+    "income_suite": "984 passed in14.41s",
+    "initial_browser": "Two Edge workflows passed in26.6s: eligible individual operator and other business, exact liability and persisted reload. Detected source-list React key warning; changed source key fallback to URL when archive hash is absent, following official React rendering-list guidance.",
+    "final_browser_and_build": "Two Edge workflows passed again in25.2s without source-list key warnings. TypeScript and Vite production build passed; existing chunk-size warning remains (667.35kB main JS)."
+  },
+  "remaining": [
+    "Mixed eligible/ineligible business-income allocation and large other-relief allocations outside reviewed formula capacity",
+    "Automated eligibility and cross-case shared personal-deduction allocation; current workflow requires verified amounts and no duplicate claims",
+    "Filing-specific rounding, foreign income/credits and nonresident business",
+    "Archive/admit new sources after database input freeze ends and complete live deployment acceptance"
+  ],
+  "completion_claim": false
+}

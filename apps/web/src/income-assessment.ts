@@ -171,6 +171,15 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
           'Uses saved residency for ordinary progressive rates or the non-resident 30% rate. Establish deductions and reliefs first. Excludes separate dividend taxation, capital gains, joint assessment and special-rate income. Non-residents cannot use resident rebates.'],fields}];
   }
   if (input.jurisdiction === 'cn' && period === '2026-01-01/2026-12-31') {
+    if(!company && input.incomes.every(item=>item.category==='business'))return [{id:'cn_business_2026',
+      label:['中国居民个人经营所得（2026）','China resident business income (2026)'],
+      notice:['按同一纳税人全年境内经营所得汇总计算。应税所得须与已保存收入减核定扣除、可用亏损一致。基本减除费用、专项等个人扣除如分配至经营所得，须已计入保存的扣除且不得在综合所得重复使用；系统不再自动扣6万元。个体工商户的200万元减半额度按年度合并，不按店铺重复计算；个人独资、合伙等其他经营主体不能直接选择个体工商户优惠。混合优惠资格所得须另行核定分配，本入口不处理。结果为申报取整前金额。',
+        'Aggregate the same taxpayer’s full-year domestic business income. Taxable income must reconcile to saved income less established deductions and eligible losses. Include any personal deductions allocated to business income in saved deductions without duplicating comprehensive-income claims; no automatic CNY60,000 deduction. The individual-operator CNY2m half-relief cap applies once across the year, not per shop. Sole proprietorships and partnerships do not automatically qualify as individual operators. Mixed eligible/ineligible income requires separate allocation. Results are before assessment rounding.'],
+      fields:[money('taxable_income','核定应纳税所得额','Established taxable income'),
+        {key:'business_form',label:['核实后的经营主体分类','Verified business classification'],options:[['individual_operator',['全部为符合条件的个体工商户经营所得','All income qualifies as individual-operator business']],['other_business',['其他经营所得（不适用个体工商户减半）','Other business income (no individual-operator half relief)']]]},
+        money('allowed_other_tax_reductions','其他政策核定减免税额','Allowed other tax reductions'),prepaid,
+        confirm('annual_aggregation_and_classification_verified','已核实全年多处经营汇总及主体资格','Annual business aggregation and classification verified'),
+        confirm('deductions_losses_and_no_double_claim_verified','已核实扣除、亏损资格且未重复扣除','Deductions, losses and no duplicate claims verified')]}];
     return company ? [{id:'cn_company_2026',label:['中国企业普通税率（2026）','China ordinary company tax (2026)'],
       notice:['仅限境内普通25%税率；排除优惠税制、非居民扣缴及境外所得处理。计税基础须已完成纳税调整和亏损抵扣。',
         'Domestic ordinary 25% regime only. Excludes concessions, non-resident withholding and foreign-income treatment. Establish the tax base after adjustments and allowable losses.'],
@@ -212,6 +221,9 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
 }
 
 export const resultLabels: Record<string, Label> = {
+  half_relief_eligible_base:['个体工商户减半优惠适用所得额','Income eligible for individual-operator half relief'],
+  allowed_other_tax_reductions:['其他政策减免税额','Other policy tax reductions'],
+  individual_operator_half_reduction:['个体工商户减半政策减免税额','Individual-operator half-relief amount'],
   corporation_tax:['法人税','Corporation tax'],local_corporation_tax:['地方法人税（国税）','Local corporation tax (national)'],
   defence_tax:['防卫特别法人税','Defence special corporation tax'],
   corporation_interim_liability:['法人税中间申告义务','Corporation interim-return liability'],

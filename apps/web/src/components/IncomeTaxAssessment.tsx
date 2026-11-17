@@ -128,7 +128,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       </section>}
       <p>{say('适用规则版本：','Policy version: ')}{String(result.result.policy_version)}</p>
       <p>{say('官方依据：','Official sources:')}</p>
-      <ul>{((result.result.sources || (result.result.source ? [result.result.source] : [])) as {url:string;title?:string;doc_id?:string;sha256:string}[]).map(source=><li key={source.sha256}><a href={source.url} target="_blank" rel="noreferrer">{source.title || source.doc_id || say('官方原文','Official original')}</a></li>)}</ul>
+      <ul>{((result.result.sources || (result.result.source ? [result.result.source] : [])) as {url:string;title?:string;doc_id?:string;sha256?:string}[]).map(source=><li key={source.sha256 || source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.title || source.doc_id || say('官方原文','Official original')}</a></li>)}</ul>
     </article>}
   </section>;
 }

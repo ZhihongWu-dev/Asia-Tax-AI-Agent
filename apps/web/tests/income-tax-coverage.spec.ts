@@ -14,6 +14,10 @@ async function open(page:Page) {
 type Scenario={name:string;country:string;subject:string;category:string;start:string;end:string;
   gross:string;policy:string;deductions?:string;money:[string,string][];choices:[string,string][];resultLabel:string;expected:string};
 const scenarios:Scenario[]=[
+  ...(['individual_operator','other_business'] as const).map(kind=>({name:`China business ${kind}`,country:'cn',subject:'individual',category:'business',start:'2026-01-01',end:'2026-12-31',gross:'3000000',policy:'cn_business_2026',deductions:'600000',
+    money:[['Established taxable income','2400000'],['Allowed other tax reductions','6000'],['Prepaid tax for this period','500000']] as [string,string][],
+    choices:[['Verified business classification',kind],['Annual business aggregation and classification verified','true'],['Deductions, losses and no duplicate claims verified','true']] as [string,string][],
+    resultLabel:'Annual liability',expected:kind==='individual_operator'?'453750':'768500'})),
   {name:'China comprehensive individual',country:'cn',subject:'individual',category:'employment',start:'2026-01-01',end:'2026-12-31',gross:'1000000',policy:'cn_comprehensive_2026',
     money:[['Allowed special deductions','0'],['Allowed additional deductions','0'],['Allowed other deductions','0'],['Allowed donations','0'],['Allowed tax reductions','0'],['Prepaid tax for this period','0']],
     choices:[['Domestic resident comprehensive treatment checked','true']],resultLabel:'Annual liability',expected:'243080'},

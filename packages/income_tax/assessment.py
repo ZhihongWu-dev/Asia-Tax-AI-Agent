@@ -6,6 +6,7 @@ from . import china, singapore, hong_kong, united_arab_emirates, malaysia, thail
 from . import vietnam, vietnam_employment, vietnam_transfer, japan, japan_company, india, india_company
 from . import korea_company
 from . import korea_salary
+from . import china_business
 from .korea_children import ChildCreditFacts
 from .korea_personal_deductions import PersonalDeductionPerson
 
@@ -28,7 +29,7 @@ def calculate(case: IncomeTaxCase, basis):
         japan_company.annual_period(case.period_start,case.period_end)
     elif (case.period_start.isoformat(), case.period_end.isoformat()) != periods[jur]:
         raise ValueError('Saved basis period is not supported by this policy')
-    expected = {'cn_company_2026': 'company', 'cn_comprehensive_2026': 'individual',
+    expected = {'cn_company_2026': 'company', 'cn_comprehensive_2026': 'individual', 'cn_business_2026': 'individual',
                 'sg_company_ya2026': 'company', 'sg_resident_ya2026': 'individual',
                 'hk_salaries_2025_26': 'individual', 'my_company_2026': 'company',
                 'my_individual_2026': 'individual', 'th_company_2026':'company', 'th_resident_2026':'individual',
@@ -106,6 +107,18 @@ def calculate(case: IncomeTaxCase, basis):
         if any(i.source_jurisdiction != 'cn' for i in case.incomes):
             raise ValueError('Foreign-source corporate workflow is not verified by this policy')
         result = china.normal_company_tax(tax_year=2026, **args)
+    elif policy == 'cn_business_2026':
+        if case.residency != 'resident' or any(item.category != 'business' or
+                item.source_jurisdiction != 'cn' or item.foreign_tax_paid not in (None, 0)
+                for item in case.incomes):
+            raise ValueError('China business workflow requires resident domestic business income without foreign tax credits')
+        with localcontext() as ctx:
+            ctx.prec = 40
+            base = max(Decimal('0'), sum((item.gross_amount for item in case.incomes), Decimal('0'))
+                - case.claimed_deductions - case.carried_losses)
+        if basis.taxable_income != base:
+            raise ValueError('Business taxable base must reconcile to saved income, established deductions and eligible losses')
+        result = china_business.annual_business_tax(tax_year=2026, **args)
     elif policy == 'cn_comprehensive_2026':
         if case.carried_losses != 0:
             raise ValueError('Comprehensive income cannot consume carried losses')
