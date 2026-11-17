@@ -93,7 +93,8 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       <h4>{say('已保存计算结果','Saved calculation result')}</h4>
       {disabled && <p>{say('此结果对应上次保存的资料，不包含当前未保存的修改。','This result uses the last saved facts and excludes unsaved changes.')}</p>}
       <p>{new Date(result.created_at).toLocaleString()} · {String(result.result.currency)}</p>
-      <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
+      {result.result.tax_scope==='national_income_and_reconstruction_tax_only'&&<p>{say('此结果仅为日本2026年度国家所得税及复兴特别所得税，不含住民税、事业税。扣除予定纳税通知金额不代表该税款已缴清，欠税另行处理。','This result covers Japan 2026 national income and reconstruction tax only, excluding local inhabitant and enterprise taxes. Deducting notified estimated tax does not mean it has been paid; arrears remain separate.')}</p>}
+      <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{key==='balance_due'&&result.result.tax_scope==='national_income_and_reconstruction_tax_only'?say('本次国家税应补／退额（予定纳税欠税另计）','National return balance (estimated-tax arrears separate)'):label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
       {Array.isArray(result.result.transfers) && <section aria-label={say('逐笔交易结果','Per-transfer results')}>
         <h5>{say('逐笔交易结果','Per-transfer results')}</h5>
         {(result.result.transfers as Record<string,unknown>[]).map(item=><section key={String(item.income_index)} aria-label={`${say('交易','Transfer')} ${Number(item.income_index)+1}`}>

@@ -1,0 +1,134 @@
+{
+  "reviewed_on": "2026-11-17",
+  "status": "scoped_review_not_full_japan_business_acceptance",
+  "sources": [
+    {
+      "doc_id": "jp.nta.salary-table.20261117",
+      "title": "NTA 2026 salary income table, printed pages 47-54",
+      "url": "https://www.nta.go.jp/publication/pamph/gensen/nencho2026/pdf/114.pdf",
+      "file": "database/raw/jp/jp.nta.salary-table.20261117.pdf",
+      "sha256": "3d06c41b675161d51cc59c89d6d129ce8ea204b5ccc986f5b30b1072a12a032c",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.basic-table.20261117",
+      "title": "NTA 2026 basic deduction and tax tables, printed pages 55-56",
+      "url": "https://www.nta.go.jp/publication/pamph/gensen/nencho2026/pdf/115.pdf",
+      "file": "database/raw/jp/jp.nta.basic-table.20261117.pdf",
+      "sha256": "d37a6a15b38929bc8e331c611ccc2ac0295ab12bfc39266e6634393882c36c2b",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.1410.20261117",
+      "title": "NTA No.1410 Salary income deduction (2026/2027)",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1410.htm",
+      "file": "database/raw/jp/jp.nta.1410.20261117.html",
+      "sha256": "df763b0259059e8810ffe27385cf2a326b0bee008b7a62f2a67b66b9500d9a41",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.1411.20261117",
+      "title": "NTA No.1411 Income amount adjustment deduction",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1411.htm",
+      "file": "database/raw/jp/jp.nta.1411.20261117.html",
+      "sha256": "67ede54d9ec7de574945e2047364e17448963c024d59c8a593aef7d8793df9b5",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.1199.20261117",
+      "title": "NTA No.1199 Basic deduction (2026 annual resident rules)",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1199.htm",
+      "file": "database/raw/jp/jp.nta.1199.20261117.html",
+      "sha256": "21507083e62c8014201736c5122cdf184515695aaaeb9c3fbb414b105a8ab5ac",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.2260.20261117",
+      "title": "NTA No.2260 National income-tax rates",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+      "file": "database/raw/jp/jp.nta.2260.20261117.html",
+      "sha256": "eefcf231ae9e5393dc6c975dcd79a0c482d9ddb0938df09f8eebba017c84a225",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.1000.20261117",
+      "title": "NTA No.1000 National income-tax calculation and 2026 examples",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1000.htm",
+      "file": "database/raw/jp/jp.nta.1000.20261117.html",
+      "sha256": "9e21d8bb0a2d209620d147c16db9349759a60ee67044bc34aed846dcd3843bd7",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.return-guide.2025",
+      "title": "NTA 2025 annual return guide, printed page 28: settlement rounding and estimated-tax notice",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/shinkoku/tebiki/2025/pdf/001.pdf",
+      "file": "database/raw/jp/jp.nta.return-guide.2025.pdf",
+      "sha256": "9691e822b247dd06925fc05f50b9734f1d2e70bd306ea62804835f7b7c6d2328",
+      "review_status": "procedural_rounding_only_confirmed_by_2026_examples_and_ITA104_120"
+    },
+    {
+      "doc_id": "jp.ita",
+      "title": "Japan Income Tax Act, Articles104 and120: estimated tax and return settlement",
+      "url": "https://laws.e-gov.go.jp/api/1/lawdata/340AC0000000033",
+      "file": "database/raw/jp/jp.ita.xml",
+      "sha256": "4e5d010f6717eb59427d3cc786c544292a07d80a2aadef012e06014265743bad",
+      "review_status": "articles104_120_only"
+    }
+  ],
+  "scope": "2026 full-year resident domestic salary and non-loss-making ordinary business national income/reconstruction tax only",
+  "confirmed": [
+    "Annual salary/basic deduction reform effective 2026-12-01, applicable to 2026 annual income; earlier withholding and early death/departure returns excluded.",
+    "Salary table: under741000 gives zero; 741000-2190999 subtract740000; three special intervals at2191000/2193000/2196000; from2200000 to6599999 use4000-yen gross steps with70%/80% less80000/440000; 6600000-8499999 use90% less1100000 and truncate fractions; above that subtract1950000.",
+    "Eligible child/special-disability salary adjustment: capped gross10000000 less8500000 times10%, round up to1yen; apply before total-income/basic-deduction test.",
+    "Resident basic deduction1040000 up to4890000 income,670000 up to6550000,620000 up to23500000, then480000/320000/160000 up to24000000/24500000/25000000; zero above.",
+    "Taxable income truncated to1000yen; ordinary national seven-band schedule; verified limited non-refundable income-tax credits precede2.1% reconstruction tax, truncated to1yen.",
+    "Withholding deducted before positive declared-tax truncation to100yen; negative refund keeps yen. Effective notified estimated-tax liability deducted afterward, irrespective of cash payment; arrears are separate.",
+    "NTA1000 official2026 business example: national tax63302, declared payment63300. Official salary example: salary income4360000, taxable2360000, income tax138500, reconstruction2908, refund34692."
+  ],
+  "extraction_notes": [
+    "NTA114 PDF contains obsolete/garbled hidden heading text; rendered first and last pages identify2026. Use visible current numeric table, not hidden2009 heading.",
+    "All1103 fixed-output intervals independently extracted from originalPDF; tests check both ends against calculator. Low-income linear and high-income formula regions separately tested.",
+    "NTA r08/zeigakuhyo.pdf is an estimated-tax-reduction reference retaining pre-December deduction table; it was not adopted as annual2026 deduction authority.",
+    "NTA2025 return guide used only for settlement procedure, corroborated by reviewed ITA104/120 and NTA1000 2026 examples; its annual deductions/rates not reused."
+  ],
+  "exclusions_and_remaining": [
+    "Japanese company income tax, local inhabitant/enterprise taxes, full foreign/dividend integration remain outstanding.",
+    "Pensions, special/separate-rate income, losses/carry-forwards, blue-return relief, specific employment expenses and high-income minimum-tax comparison are excluded from this adapter.",
+    "Deduction eligibility and credit caps must be established before using verified aggregate inputs; these entitlements are not automatically adjudicated.",
+    "No claim of full original-document review, cloud source admission, production deployment or final branch transfer.",
+    "New originals are registered in doc.csv; regenerated clause/files/SQLite indexes and cloud admission remain pending."
+  ],
+  "github_research": {
+    "reference": "https://github.com/python/cpython/blob/main/Lib/test/test_decimal.py",
+    "modified_date": "2026-11-06T07:55:26Z",
+    "license": "PSF-2.0; documentation examples additionally0BSD",
+    "compatibility": "Existing Python standard-library Decimal; no dependency or external code adopted",
+    "concern": "Reviewed explicit quantize/rounding semantics and issue128373; use Decimal strings and explicit DOWN/CEILING with local40-digit precision."
+  },
+  "visual_evidence": [
+    {
+      "file": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\japan-20261117\\salary-first.png",
+      "sha256": "9e388cc396c92473f93da005c010350993cb72a47a494a7521607e290bdb3a07"
+    },
+    {
+      "file": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\japan-20261117\\salary-last.png",
+      "sha256": "234b0f4ede60829b8df3cd8ae4cda0af3087eab861c58288fdbec7460842723e"
+    },
+    {
+      "file": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\japan-20261117\\basic.png",
+      "sha256": "367023537b0a8d80164a8a991ed32404f647d83bfed0cce164e9d94c58e10050"
+    },
+    {
+      "file": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\japan-20261117\\return-rounding.png",
+      "sha256": "e6757f1861099260f77d61ae44d3e9a6b06f6f0e6fcd5906bac068de1e495349"
+    }
+  ],
+  "verification": {
+    "income_suite": "557 passed",
+    "salary_table_intervals": 1103,
+    "browser_targeted": "2 passed",
+    "typescript": "passed",
+    "vite": "passed with existing chunk-size warning",
+    "browser_full": "22 passed (19 income and3 planning) in2.0minutes"
+  }
+}

@@ -16,6 +16,19 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if (input.jurisdiction === 'jp' && !company && input.residency === 'resident' && period === '2026-01-01/2026-12-31' && input.incomes.every(i=>i.source_jurisdiction==='jp'&&['employment','business'].includes(i.category))) {
+    return [{id:'jp_resident_ordinary_2026',label:['日本居民普通所得国家税（2026）','Japan resident ordinary national tax (2026)'],
+      notice:['计算2026全年境内工资及无亏损普通经营所得的国家所得税和复兴特别所得税，不含住民税、事业税。使用12月1日起适用的年度扣除，不用于此前预扣、死亡或出境提前申报，也不是雇主年末调整。已保存扣除额应为经营费用与其他所得扣除之和；工资扣除、符合条件的工资所得调整扣除和基本扣除由系统另算。不得重复计入，不含特定支出、青色申告优惠、年金、境外所得、分离课税、结转亏损或超过3.3亿日元的高所得最低税。抵免须先核定限额，不含境外抵免。予定纳税额填有效通知核定金额（扣除已批准减额），并非实际缴款；未缴欠税仍需另行处理。',
+        'Calculates 2026 domestic salary and non-loss-making ordinary business national income and reconstruction tax, excluding local inhabitant and enterprise taxes. Uses annual deductions effective 1 December; not earlier withholding, early death/departure returns or employer year-end adjustment. Saved deductions must equal business expenses plus other income deductions. Salary deductions, eligible salary adjustment and basic deduction are calculated separately; do not count them twice. Excludes specific employment expenses, blue-return relief, pensions, foreign or separate-rate income, carried losses and the high-income minimum tax above JPY 330m. Verify credit limits; foreign credits are excluded. Estimated tax is the effective notified liability after approved reductions, not actual payments; unpaid arrears remain separate.'],
+      fields:[money('business_expenses','核定经营费用（无则填0）','Verified business expenses (0 if none)'),
+        money('other_income_deductions','其他所得扣除（不含自动计算项目）','Other income deductions (excluding automatic deductions)'),
+        money('income_tax_credits','核定国家所得税抵免（限额内）','Verified national income-tax credits within limits'),
+        confirm('salary_adjustment_eligible','符合23岁以下受抚养人或特别障碍者等工资所得调整资格','Eligible for salary adjustment for under-23 dependents or special disability'),
+        money('withheld_tax','本年度源泉扣缴税额','Tax withheld for this year'),
+        money('estimated_tax','有效通知核定予定纳税额（不是实际缴款）','Effective notified estimated-tax liability (not cash paid)'),
+        confirm('annual_domestic_ordinary_scope_confirmed','已核实全年居民境内普通所得及排除条件，工资按源泉徴収票应税支払金额填报','Full-year resident domestic ordinary scope verified; salary uses taxable withholding-statement receipts'),
+        confirm('deductions_and_credits_verified','已核实扣除、调整资格、抵免限额及予定纳税通知','Deductions, adjustment eligibility, credit limits and estimated-tax notice verified')]}];
+  }
   if (input.jurisdiction === 'vn' && !company && input.residency !== 'undetermined' && period === '2026-01-01/2026-12-31' && input.incomes.length && input.incomes.every(i=>i.category==='capital_gain')) {
     const fields: BasisField[] = input.incomes.flatMap((_item,n)=>{
       const prefix=`transfer_${n}_`, label=(zh:string,en:string):Label=>[`${n+1}. ${zh}`,`${n+1}. ${en}`];
@@ -150,6 +163,15 @@ export function policies(input: IncomeTaxInput): IncomePolicy[] {
 }
 
 export const resultLabels: Record<string, Label> = {
+  salary_income_before_adjustment:['工资所得调整前金额','Salary income before adjustment'],
+  salary_income_adjustment:['工资所得调整扣除','Salary income adjustment deduction'],
+  net_business_income:['经营净所得','Net business income'],total_income:['合计净所得','Total net income'],
+  basic_deduction:['基本扣除','Basic deduction'],other_income_deductions:['其他所得扣除','Other income deductions'],
+  reconstruction_tax:['复兴特别所得税','Reconstruction special income tax'],
+  withheld_tax:['本年度源泉扣缴税额','Tax withheld for this year'],
+  estimated_tax:['有效通知核定予定纳税额','Effective notified estimated-tax liability'],
+  declared_tax_after_withholding:['扣缴后申告纳税额（正数取整至百日元）','Declared tax after withholding (positive amounts truncated to JPY 100)'],
+  return_rounding_adjustment:['申报取整调整','Return rounding adjustment'],
   rate:['适用税率（小数）','Applicable rate (decimal)'],exempt_tax:['免征税额','Exempt tax'],
   other_incentive_reduction:['其他税额优惠','Other incentive reduction'],annual_reduction:['年度减税额','Annual tax reduction'],
   personal_deduction:['本人扣除额','Personal deduction'],dependent_deduction:['受抚养人扣除额','Dependent deduction'],

@@ -1,0 +1,77 @@
+{
+  "tax_year": 2026,
+  "sources": [
+    {
+      "doc_id": "jp.nta.salary-table.20261117",
+      "title": "NTA 2026 salary income table, printed pages 47-54",
+      "url": "https://www.nta.go.jp/publication/pamph/gensen/nencho2026/pdf/114.pdf",
+      "file": "database/raw/jp/jp.nta.salary-table.20261117.pdf",
+      "sha256": "3d06c41b675161d51cc59c89d6d129ce8ea204b5ccc986f5b30b1072a12a032c",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.basic-table.20261117",
+      "title": "NTA 2026 basic deduction and tax tables, printed pages 55-56",
+      "url": "https://www.nta.go.jp/publication/pamph/gensen/nencho2026/pdf/115.pdf",
+      "file": "database/raw/jp/jp.nta.basic-table.20261117.pdf",
+      "sha256": "d37a6a15b38929bc8e331c611ccc2ac0295ab12bfc39266e6634393882c36c2b",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.1410.20261117",
+      "title": "NTA No.1410 Salary income deduction (2026/2027)",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1410.htm",
+      "file": "database/raw/jp/jp.nta.1410.20261117.html",
+      "sha256": "df763b0259059e8810ffe27385cf2a326b0bee008b7a62f2a67b66b9500d9a41",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.1411.20261117",
+      "title": "NTA No.1411 Income amount adjustment deduction",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1411.htm",
+      "file": "database/raw/jp/jp.nta.1411.20261117.html",
+      "sha256": "67ede54d9ec7de574945e2047364e17448963c024d59c8a593aef7d8793df9b5",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.1199.20261117",
+      "title": "NTA No.1199 Basic deduction (2026 annual resident rules)",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1199.htm",
+      "file": "database/raw/jp/jp.nta.1199.20261117.html",
+      "sha256": "21507083e62c8014201736c5122cdf184515695aaaeb9c3fbb414b105a8ab5ac",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.2260.20261117",
+      "title": "NTA No.2260 National income-tax rates",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+      "file": "database/raw/jp/jp.nta.2260.20261117.html",
+      "sha256": "eefcf231ae9e5393dc6c975dcd79a0c482d9ddb0938df09f8eebba017c84a225",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.1000.20261117",
+      "title": "NTA No.1000 National income-tax calculation and 2026 examples",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1000.htm",
+      "file": "database/raw/jp/jp.nta.1000.20261117.html",
+      "sha256": "9e21d8bb0a2d209620d147c16db9349759a60ee67044bc34aed846dcd3843bd7",
+      "review_status": "scoped_national_annual_2026_review"
+    },
+    {
+      "doc_id": "jp.nta.return-guide.2025",
+      "title": "NTA 2025 annual return guide, printed page 28: settlement rounding and estimated-tax notice",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/shinkoku/tebiki/2025/pdf/001.pdf",
+      "file": "database/raw/jp/jp.nta.return-guide.2025.pdf",
+      "sha256": "9691e822b247dd06925fc05f50b9734f1d2e70bd306ea62804835f7b7c6d2328",
+      "review_status": "procedural_rounding_only_confirmed_by_2026_examples_and_ITA104_120"
+    },
+    {
+      "doc_id": "jp.ita",
+      "title": "Japan Income Tax Act, Articles104 and120: estimated tax and return settlement",
+      "url": "https://laws.e-gov.go.jp/api/1/lawdata/340AC0000000033",
+      "file": "database/raw/jp/jp.ita.xml",
+      "sha256": "4e5d010f6717eb59427d3cc786c544292a07d80a2aadef012e06014265743bad",
+      "review_status": "articles104_120_only"
+    }
+  ]
+}

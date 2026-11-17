@@ -179,6 +179,18 @@ class IDIndividual(IDBasis):
     ptkp_entitlement_confirmed: StrictBool
 
 
-Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual |
+class JPIndividual(Basis):
+    policy: Literal['jp_resident_ordinary_2026']
+    business_expenses: Money
+    other_income_deductions: Money
+    income_tax_credits: Money
+    salary_adjustment_eligible: StrictBool
+    withheld_tax: Money
+    estimated_tax: Money
+    annual_domestic_ordinary_scope_confirmed: StrictBool
+    deductions_and_credits_verified: StrictBool
+
+
+Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual |
                        HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
                        Field(discriminator='policy')]
