@@ -12,11 +12,14 @@ async function open(page:Page) {
 }
 
 type Scenario={name:string;country:string;subject:string;category:string;start:string;end:string;
-  gross:string;policy:string;money:[string,string][];choices:[string,string][];resultLabel:string;expected:string};
+  gross:string;policy:string;deductions?:string;money:[string,string][];choices:[string,string][];resultLabel:string;expected:string};
 const scenarios:Scenario[]=[
   {name:'China comprehensive individual',country:'cn',subject:'individual',category:'employment',start:'2026-01-01',end:'2026-12-31',gross:'1000000',policy:'cn_comprehensive_2026',
     money:[['Allowed special deductions','0'],['Allowed additional deductions','0'],['Allowed other deductions','0'],['Allowed donations','0'],['Allowed tax reductions','0'],['Prepaid tax for this period','0']],
     choices:[['Domestic resident comprehensive treatment checked','true']],resultLabel:'Annual liability',expected:'243080'},
+  {name:'China comprehensive reconciled deductions',country:'cn',subject:'individual',category:'employment',start:'2026-01-01',end:'2026-12-31',gross:'1000000',policy:'cn_comprehensive_2026',deductions:'43000',
+    money:[['Allowed special deductions','20000'],['Allowed additional deductions','12000'],['Allowed other deductions','6000'],['Allowed donations','5000'],['Allowed tax reductions','1000'],['Prepaid tax for this period','200000']],
+    choices:[['Domestic resident comprehensive treatment checked','true']],resultLabel:'Annual liability',expected:'227030'},
   {name:'Singapore corporate partial exemption',country:'sg',subject:'company',category:'business',start:'2025-01-01',end:'2025-12-31',gross:'100000',policy:'sg_company_ya2026',
     money:[['Normal-rate chargeable income','100000'],['Allowed tax set-off','0']],choices:[['Ordinary regime and exclusions checked','true'],['Exemption scheme','partial'],['Eligible for start-up exemption','false'],['Eligible for this YA cash grant','false']],
     resultLabel:'Tax after relief',expected:'4037.5'},
@@ -39,7 +42,7 @@ for(const s of scenarios)test(`${s.name} saves and reopens a sourced result`,asy
   const form=await open(page);
   for(const [name,value] of [['Taxpayer',s.subject],['Filing jurisdiction',s.country],['Tax residency','resident'],['Income category',s.category],['Income source jurisdiction',s.country]])
     await form.getByRole('combobox',{name,exact:true}).selectOption(value);
-  for(const [name,value] of [['Period start',s.start],['Period end',s.end],['Gross income',s.gross],['Income description','Verified ordinary domestic income'],['Claimed deductions (blank if unknown)',s.country==='ae'&&s.subject==='individual'?'1800000':'0'],['Carried losses (blank if unknown)','0']])
+  for(const [name,value] of [['Period start',s.start],['Period end',s.end],['Gross income',s.gross],['Income description','Verified ordinary domestic income'],['Claimed deductions (blank if unknown)',s.deductions??(s.country==='ae'&&s.subject==='individual'?'1800000':'0')],['Carried losses (blank if unknown)','0']])
     await form.getByLabel(name,{exact:true}).fill(value);
   await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
   const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});

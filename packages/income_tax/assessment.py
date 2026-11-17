@@ -107,6 +107,17 @@ def calculate(case: IncomeTaxCase, basis):
             raise ValueError('Foreign-source corporate workflow is not verified by this policy')
         result = china.normal_company_tax(tax_year=2026, **args)
     elif policy == 'cn_comprehensive_2026':
+        if case.carried_losses != 0:
+            raise ValueError('Comprehensive income cannot consume carried losses')
+        if any(item.foreign_tax_paid not in (None, 0) for item in case.incomes):
+            raise ValueError('Domestic comprehensive policy cannot consume foreign tax credits')
+        with localcontext() as ctx:
+            ctx.prec = 40
+            manual_deductions = sum((basis.allowed_special_deductions,
+                basis.allowed_additional_deductions, basis.allowed_other_deductions,
+                basis.allowed_donations), Decimal('0'))
+        if case.claimed_deductions != manual_deductions:
+            raise ValueError('Saved deductions must reconcile to special, additional, other and donation deductions; automatic basic and income-category deductions are separate')
         categories = {'employment': 'wages', 'service_remuneration': 'service_remuneration',
                       'author_remuneration': 'author_remuneration', 'royalty': 'royalties'}
         totals = dict.fromkeys(categories.values(), Decimal('0'))

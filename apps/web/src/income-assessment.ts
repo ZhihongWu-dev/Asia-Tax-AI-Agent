@@ -176,8 +176,8 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
         'Domestic ordinary 25% regime only. Excludes concessions, non-resident withholding and foreign-income treatment. Establish the tax base after adjustments and allowable losses.'],
       fields:[money('taxable_income','核定应纳税所得额','Established taxable income'),confirm('normal_rate_confirmed','已核对普通税率适用条件','Normal rate eligibility checked'),money('allowed_tax_credits','核定可抵免税额','Allowed tax credits'),prepaid]}]
     : [{id:'cn_comprehensive_2026',label:['中国居民综合所得（2026）','China resident comprehensive income (2026)'],
-      notice:['仅限境内工资、劳务报酬、稿酬及特许权使用费，收入总额取自已保存资料。不含单独计税奖金、股权激励或其他所得。',
-        'Domestic wages, services, author remuneration and royalties only; gross amounts come from saved facts. Separate bonuses, equity schemes and other income are excluded.'],
+      notice:['仅限境内工资、劳务报酬、稿酬及特许权使用费，收入总额取自已保存资料。已保存扣除总额须等于下方专项、专项附加、其他及捐赠扣除之和；不要重复计入系统自动处理的6万元基本减除费用和收入类别费用减除。不含单独计税奖金、股权激励或其他所得；本流程不抵扣结转亏损或境外税款。',
+        'Domestic wages, services, author remuneration and royalties only; gross amounts come from saved facts. Saved deductions must equal special, additional, other and donation deductions below. Do not include the automatic CNY 60,000 basic deduction or income-category expense reductions. Separate bonuses, equity schemes and other income are excluded; this workflow cannot consume carried losses or foreign tax credits.'],
       fields:[money('allowed_special_deductions','核定专项扣除','Allowed special deductions'),money('allowed_additional_deductions','核定专项附加扣除','Allowed additional deductions'),money('allowed_other_deductions','核定其他扣除','Allowed other deductions'),money('allowed_donations','核定捐赠扣除','Allowed donations'),money('allowed_tax_reductions','核定减免税额','Allowed tax reductions'),prepaid,confirm('domestic_normal_treatment_confirmed','已核对境内居民综合所得普通处理','Domestic resident comprehensive treatment checked')]}];
   }
   if (input.jurisdiction === 'sg' && period === '2025-01-01/2025-12-31') {

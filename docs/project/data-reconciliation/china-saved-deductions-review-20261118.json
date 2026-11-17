@@ -1,0 +1,25 @@
+{
+  "checked_on": "2026-11-18",
+  "problem": "China comprehensive saved-case adapter previously ignored claimed_deductions, carried_losses and foreign_tax_paid while producing a successful domestic calculation.",
+  "change": "Require the saved manual deduction total to equal allowed special, additional, other and donation deductions. Automatic CNY60000 basic deduction and income-category expense reductions remain separate. Reject nonzero carried losses and foreign taxes in this domestic comprehensive policy rather than silently losing those facts. Explain the convention in both UI languages.",
+  "legal_reference": "https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html",
+  "legal_scope": "Article 6 separates basic, special, additional and other deductions, and qualifying donations. Exact equality between the two application inputs is an application consistency invariant, not an additional statutory deduction condition.",
+  "github_research": {
+    "repository": "https://github.com/aliasmee/tax-calculator",
+    "assessment": "Public practice project describes salary/social-insurance/deduction cumulative withholding. No code, dependency or approach adopted: this change concerns reconciliation of the existing annual saved-case workflow, not payroll withholding. License, maintenance and security suitability were not established for adoption."
+  },
+  "verification": {
+    "before_fix": "New regression file: 6 failed because no ValueError was raised; 1 valid case passed.",
+    "targeted": "22 passed in 5.02s, including existing assessment API ownership, restart, retry and revision tests.",
+    "full_income_tax": "951 passed in 19.86s",
+    "typescript": "tsc --noEmit passed",
+    "browser": "Two China comprehensive Edge workflows passed in 27.8s, including zero deductions and CNY43000 manual deductions, source link and exact amount after reload.",
+    "nonzero_case": "CNY1000000 wages, 43000 manual deductions, 60000 automatic basic deduction: taxable income897000; tax reduction1000 gives annual liability227030; prepaid200000 leaves27030."
+  },
+  "limits": [
+    "Does not add foreign-income relief, business-loss treatment, separate bonus or equity regimes.",
+    "Deduction eligibility and donation limits still require established allowed amounts; no new entitlement inference.",
+    "Local fixture-backed browser acceptance does not establish production or comprehensive business completion."
+  ],
+  "completion_claim": false
+}
