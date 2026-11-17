@@ -12,10 +12,10 @@
   "source_unchanged_after_copy": true,
   "copied_files": 1134,
   "purpose": "Validate committed parser repairs without mutating live optimizer inputs. Not promoted to runtime.",
-  "status": "first_attempt_failed_parser_repaired_retry_pending",
+  "status": "second_attempt_failed_additional_layout_repaired",
   "tool_session": 90451,
   "source_commit": "a20dbf3dad319941b367194ac17eb63d08d6c5d9",
-  "build_script_sha256": "de9eb15ead33b7776c5faf2ad079850f249e7dbdf25ee8d800d4853850c89457",
+  "build_script_sha256": "78ec2dc6ffb88fd241b7b301ec79d86806acde2885293400798acbe6ea69f8c4",
   "live_optimizer_pid": 16760,
   "live_optimizer_inputs_promoted": false,
   "first_attempt_exit_code": 1,
@@ -29,5 +29,16 @@
   "database_tests": {
     "passed": 70,
     "seconds": 9.61
+  },
+  "second_attempt_exit_code": 1,
+  "second_attempt_error": "Unrecognized bilingual treaty schedule boundaries: treaty.hk-vn.2008.en",
+  "hk_japan_verification": {
+    "new_clauses": 141,
+    "all_134_old_ids_preserved": true
+  },
+  "hk_vietnam_verification": {
+    "new_clauses": 135,
+    "all_125_old_ids_preserved": true,
+    "all_nonwhitespace_source_characters_preserved": true
   }
 }

@@ -67,9 +67,40 @@ def test_ordinary_english_treaty_is_not_intercepted():
     assert build.slice_hk_bilingual_treaty('treaty.hk-example', TEXT.split('(Chinese Translation)')[0]) == ([], 'none')
 
 
+def test_only_later_amending_protocol_is_bilingual():
+    text = TEXT.split('(Chinese Translation)')[0] + '''Part 2
+1. Original protocol meaning.
+Schedule 2
+Article 1
+New exchange of information.
+Article 2
+Commencement.
+Article 3
+Duration.
+(Chinese Translation)
+第一條
+交換資料。
+第二條
+生效。
+第三條
+有效期。
+'''
+    clauses, mode = build.slice_hk_bilingual_treaty('treaty.hk-vn.example', text)
+    by_id = {c['cite_id'].split('#')[1]: c for c in clauses}
+    assert len(by_id) == len(clauses)
+    assert mode == 'hk_treaty_bilingual_amendment'
+    assert 'Original protocol meaning' in by_id['protocol.1']['text']
+    assert 'Chinese Translation' not in by_id['sch2.3']['text']
+    assert by_id['sch2.zh.3']['parent'].endswith('#sch2.zh')
+    assert ''.join(''.join(c['text'] for c in clauses if c['kind']=='section').split()) == ''.join(text.split())
+    with pytest.raises(ValueError, match='numbering mismatch'):
+        build.slice_hk_bilingual_treaty('treaty.hk-vn.example', text.replace('第三條','第四條'))
+
+
 def test_english_agreement_with_separate_bilingual_notes_preserves_boundaries():
     text = TEXT.split('(Chinese Translation)')[0] + '''Part 2
-Protocol provisions.
+1. First protocol provision.
+2. Second protocol provision.
 Schedule 2
 Part 1
 Note Dated 10 December 2014 from Consul-General
@@ -89,6 +120,10 @@ Reply terms.
     assert 'Protocol' not in by_id['3']['text']
     assert 'Exchange terms' in by_id['note.en']['text']
     assert 'Reply terms' in by_id['reply.en']['text']
+    assert 'First protocol provision' in by_id['protocol.1']['text']
+    assert 'Second protocol provision' in by_id['protocol.2']['text']
+    assert 'Schedule 2' not in by_id['protocol.2']['text']
+    assert 'Exchange terms' in by_id['sch2']['text']
     sections = [c['text'] for c in clauses if c['kind'] == 'section']
     assert ''.join(''.join(sections).split()) == ''.join(text.split())
     assert len(by_id) == len(clauses)

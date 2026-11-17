@@ -677,6 +677,37 @@ def slice_hk_bilingual_treaty(doc_id, text):
     if not any(label == '(Chinese Translation)' for _, label in markers):
         return [], 'none'
     expected = ['Part 1', '(Chinese Translation)', 'Part 2', '(Chinese Translation)']
+    if [label for _, label in markers] == ['Part 1', 'Part 2', '(Chinese Translation)']:
+        first, second, translated = [i for i, _ in markers]
+        schedules = [i for i in range(second, translated) if lines[i].strip() == 'Schedule 2']
+        if len(schedules) != 1:
+            raise ValueError('Unrecognized bilingual amending protocol: ' + doc_id)
+        bounds = [0, first, second, schedules[0], translated, len(lines)]
+        names = ['order', 'agreement.en', 'protocol', 'sch2', 'sch2.zh']
+        blocks = ['\n'.join(lines[bounds[i]:bounds[i + 1]]).strip() for i in range(5)]
+        out = [dict(cite_id=doc_id + '#' + name, doc_id=doc_id, kind='section',
+                    label=name, parent='', text=block) for name, block in zip(names, blocks)]
+        numbering = []
+        for index, prefix in ((1, ''), (3, 'sch2.'), (4, 'sch2.zh.')):
+            children, _ = (slice_cn(doc_id, blocks[index], remove_page_numbers=False)
+                           if index == 4 else slice_en_treaty(doc_id, blocks[index]))
+            numbers = [c['cite_id'].split('#')[1] for c in children if c['kind'] == 'article']
+            if len(numbers) < 3:
+                raise ValueError('Missing bilingual protocol articles: ' + doc_id)
+            if index > 1:
+                numbering.append(numbers)
+            for child in children:
+                child['cite_id'] = child['cite_id'].replace(doc_id + '#', doc_id + '#' + prefix, 1)
+                child['parent'] = (child['parent'].replace(doc_id + '#', doc_id + '#' + prefix, 1)
+                                   if child['parent'] else doc_id + '#' + names[index])
+            out.extend(children)
+        if numbering[0] != numbering[1]:
+            raise ValueError('Bilingual amending protocol numbering mismatch: ' + doc_id)
+        for n, buf in split_paras(clean_lines(blocks[2]), RE_EN_PARA, int):
+            out.append(dict(cite_id='%s#protocol.%s' % (doc_id, n), doc_id=doc_id,
+                            kind='paragraph', label='Protocol (%s)' % n,
+                            parent=doc_id + '#protocol', text='\n'.join(buf)))
+        return out, 'hk_treaty_bilingual_amendment'
     note_schedule = ['Part 1', 'Part 2', 'Part 1', '(Chinese Translation)',
                      'Part 2', '(Chinese Translation)']
     if [label for _, label in markers] == note_schedule:
@@ -699,6 +730,20 @@ def slice_hk_bilingual_treaty(doc_id, text):
         for child in children:
             if not child['parent']:
                 child['parent'] = doc_id + '#agreement.en'
+        # Retain established protocol paragraph and schedule citations while
+        # keeping the exchange of notes out of the final protocol paragraph.
+        schedule_start = next((i for i in range(positions[1], positions[2])
+                               if lines[i].strip() == 'Schedule 2'), None)
+        if schedule_start is None:
+            raise ValueError('Missing second note schedule boundary: ' + doc_id)
+        protocol_lines = clean_lines('\n'.join(lines[positions[1]:schedule_start]))
+        for n, buf in split_paras(protocol_lines, RE_EN_PARA, int):
+            children.append(dict(cite_id='%s#protocol.%s' % (doc_id, n), doc_id=doc_id,
+                                 kind='paragraph', label='Protocol (%s)' % n,
+                                 parent=doc_id + '#protocol', text='\n'.join(buf)))
+        children.append(dict(cite_id=doc_id + '#sch2', doc_id=doc_id, kind='annex',
+                             label='Schedule 2', parent='',
+                             text='\n'.join(lines[schedule_start:]).strip()))
         return out + children, 'hk_treaty_bilingual_notes'
     if [label for _, label in markers] != expected:
         raise ValueError('Unrecognized bilingual treaty schedule boundaries: ' + doc_id)

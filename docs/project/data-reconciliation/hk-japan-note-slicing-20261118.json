@@ -1,0 +1,34 @@
+{
+  "doc_id": "treaty.hk-jp.2010.en",
+  "mode": "hk_treaty_bilingual_notes",
+  "old_clauses": 134,
+  "new_clauses": 141,
+  "removed_ids": [],
+  "changed_common_texts": 3,
+  "references": [
+    {
+      "consumer": "database/param.csv:hk-jp.restructure.property_rich_pct_min",
+      "cite_id": "treaty.hk-jp.2010.en#13.2",
+      "present": true
+    },
+    {
+      "consumer": "database/param.csv:hk-jp.restructure.residual_residence_only",
+      "cite_id": "treaty.hk-jp.2010.en#13.6",
+      "present": true
+    },
+    {
+      "consumer": "rule/rule.csv:hk-jp.restructure.treaty_exempt",
+      "cite_id": "treaty.hk-jp.2010.en#13.2",
+      "present": true
+    },
+    {
+      "consumer": "rule/rule.csv:hk-jp.restructure.treaty_exempt",
+      "cite_id": "treaty.hk-jp.2010.en#13.6",
+      "present": true
+    }
+  ],
+  "all_old_citation_ids_preserved": true,
+  "all_nonwhitespace_source_characters_preserved": true,
+  "protocol_items": 8,
+  "live_rebuild_copy_has_this_followup": false
+}
