@@ -3352,6 +3352,68 @@
         "kind": "reviewed_local_source_candidate",
         "evidence": "docs/project/data-reconciliation/vietnam-cit-additional-source-admission-20261118.json"
       }
+    },
+    {
+      "cite_id": "id.tax-law-consolidation-2023.id#p242",
+      "document": {
+        "id": "id.tax-law-consolidation-2023.id",
+        "jur": "id",
+        "type": "law",
+        "category": "1;2;3;4;9",
+        "title": "Susunan Dalam Satu Naskah Undang-Undang Perpajakan Edisi 2023",
+        "url": "https://jdih.kemenkeu.go.id/api/download/50e4f976-7d46-4bbc-9230-e213a1674197/SDSN%20Pajak.pdf",
+        "file": "raw/id/id.tax-law-consolidation-2023.id.pdf",
+        "sha256": "45716e25368d0218b53857841a22decd123897902e6fe24b71a25b17f4336dfc",
+        "lang": "id",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Official 2023 multi-act consolidation including amendments through Law6/2023. Original PDF page locators preserve separate acts and commentary; no single enactment date applies to the entire book. Article26(1) at PDF242 provides the listed nonresident non-PE payment baseline, not every effective outbound rate; later amendments, treaty entitlement and payment-specific exceptions require separate review."
+      },
+      "clause": {
+        "cite_id": "id.tax-law-consolidation-2023.id#p242",
+        "doc_id": "id.tax-law-consolidation-2023.id",
+        "kind": "page",
+        "label": "p.242",
+        "parent": "",
+        "text": "237 \nPASAL 26 *******) \n(1) Atas penghasilan tersebut di bawah ini, dengan nama dan dalam bentuk apa pun, yang\ndibayarkan, disediakan untuk dibayarkan, atau telah jatuh tempo pembayarannya oleh\nbadan pemerintah, subjek pajak dalam negeri, penyelenggara kegiatan, bentuk usaha\ntetap, atau perwakilan perusahaan luar negeri lainnya kepada Wajib Pajak luar negeri\nselain bentuk usaha tetap di Indonesia dipotong pajak sebesar 20% (dua puluh persen)\ndari jumlah bruto oleh pihak yang wajib membayarkan:\na.\ndividen;\nb.\nbunga termasuk premium, diskonto, dan imbalan sehubungan dengan jaminan\npengembalian utang;\nc.\nroyalti, sewa, dan penghasilan lain sehubungan dengan penggunaan harta;\nd.\nimbalan sehubungan dengan jasa, pekerjaan, dan kegiatan;\ne.\nhadiah dan penghargaan;\nf.\npensiun dan pembayaran berkala lainnya;\ng.\npremi swap dan transaksi lindung nilai lainnya; dan/atau\nh.\nkeuntungan karena pembebasan utang.\n(1a) Negara domisili dari Wajib Pajak luar negeri selain yang menjalankan usaha atau \nmelakukan kegiatan usaha melalui bentuk usaha tetap di Indonesia sebagaimana \ndimaksud pada ayat (1) adalah negara tempat tinggal atau tempat kedudukan Wajib Pajak \nluar negeri yang sebenarnya menerima manfaat dari penghasilan tersebut (beneficial \nowner). \n(1b) Tarif sebesar 20% (dua puluh persen) dari jumlah bruto oleh pihak yang wajib \nmembayarkan bunga termasuk premium, diskonto, dan imbalan sehubungan dengan \njaminan pengembalian utang sebagaimana dimaksud pada ayat (1) huruf b dapat \nditurunkan dengan Peraturan Pemerintah. \n(2) Atas penghasilan dari penjualan atau pengalihan harta di Indonesia, kecuali yang diatur\ndalam Pasal 4 ayat (2), yang diterima atau diperoleh Wajib Pajak luar negeri selain bentuk\nusaha tetap di Indonesia, dan premi asuransi yang dibayarkan kepada perusahaan\nasuransi luar negeri dipotong pajak 20% (dua puluh persen) dari perkiraan penghasilan\nneto.\n(2a) Atas penghasilan dari penjualan atau pengalihan saham sebagaimana dimaksud dalam \nAyat (8) i*****) \nCukup jelas. \nAyat (8a) i*****) \nCukup jelas. \nAyat (9) i*****) \nCukup jelas."
+      },
+      "text_sha256": "c4f4995aa2cc988d87918f5077f661b3214c9a4c0908a84c2e7583353b888f48",
+      "source_commit": "93d0d3869e05ec99fd4ee8b7e0a11b69e18922da",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-article26-primary-candidate-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.tax-law-consolidation-2023.id#p243",
+      "document": {
+        "id": "id.tax-law-consolidation-2023.id",
+        "jur": "id",
+        "type": "law",
+        "category": "1;2;3;4;9",
+        "title": "Susunan Dalam Satu Naskah Undang-Undang Perpajakan Edisi 2023",
+        "url": "https://jdih.kemenkeu.go.id/api/download/50e4f976-7d46-4bbc-9230-e213a1674197/SDSN%20Pajak.pdf",
+        "file": "raw/id/id.tax-law-consolidation-2023.id.pdf",
+        "sha256": "45716e25368d0218b53857841a22decd123897902e6fe24b71a25b17f4336dfc",
+        "lang": "id",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Official 2023 multi-act consolidation including amendments through Law6/2023. Original PDF page locators preserve separate acts and commentary; no single enactment date applies to the entire book. Article26(1) at PDF242 provides the listed nonresident non-PE payment baseline, not every effective outbound rate; later amendments, treaty entitlement and payment-specific exceptions require separate review."
+      },
+      "clause": {
+        "cite_id": "id.tax-law-consolidation-2023.id#p243",
+        "doc_id": "id.tax-law-consolidation-2023.id",
+        "kind": "page",
+        "label": "p.243",
+        "parent": "",
+        "text": "238 \nPenjelasan Pasal 26 *******) \nAtas penghasilan yang diterima atau diperoleh Wajib Pajak luar negeri dari Indonesia, \nUndang-Undang ini menganut 2 (dua) sistem pengenaan pajak, yaitu pemenuhan sendiri \nkewajiban perpajakannya bagi Wajib Pajak luar negeri yang menjalankan usaha atau \nmelakukan kegiatan melalui suatu bentuk usaha tetap di Indonesia dan pemotongan oleh \npihak yang wajib membayar bagi Wajib Pajak luar negeri lainnya.  \nKetentuan ini mengatur tentang pemotongan atas penghasilan yang bersumber di \nIndonesia yang diterima atau diperoleh Wajib Pajak luar negeri selain bentuk usaha tetap. \nPasal 18 ayat (3c) dipotong pajak sebesar 20% (dua puluh persen) dari perkiraan \npenghasilan neto. \n(3) Pelaksanaan ketentuan sebagaimana dimaksud pada ayat (2) dan ayat (2a) diatur\ndengan atau berdasarkan Peraturan Menteri Keuangan.\n(4) Penghasilan Kena Pajak sesudah dikurangi pajak dari suatu bentuk usaha tetap di\nIndonesia dikenai pajak sebesar 20% (dtua puluh persen), kecuali penghasilan tersebut\nditanamkan kembali di Indonesia, yang ketentuannya diatur lebih lanjut dengan atau\nberdasarkan Peraturan Menteri Keuangan.\n(5) Pemotongan pajak sebagaimana dimaksud pada ayat (1), ayat (2), ayat (2a), dan ayat (4)\nbersifat final, kecuali:\na.\npemotongan atas penghasilan sebagaimana dimaksud dalam Pasal 5 ayat (1) huruf\nb dan huruf c; dan\nb.\npemotongan atas penghasilan yang diterima atau diperoleh orang pribadi atau badan\nluar negeri yang berubah status menjadi Wajib Pajak dalam negeri atau bentuk\nusaha tetap."
+      },
+      "text_sha256": "1d4093c51a843d9e78f5951669850cda32b7e5849d3e292009aac1f764384c30",
+      "source_commit": "93d0d3869e05ec99fd4ee8b7e0a11b69e18922da",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-article26-primary-candidate-20261118.json"
+      }
     }
   ]
 }

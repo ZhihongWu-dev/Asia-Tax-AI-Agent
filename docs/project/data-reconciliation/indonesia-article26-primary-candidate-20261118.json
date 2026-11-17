@@ -1,5 +1,5 @@
 {
-  "status": "primary_candidate_located_pending_current_amendment_and_original_page_review",
+  "status": "isolated_catalog_validated_source_candidates_prepared_pending_cloud_admission_and_rule_migration",
   "candidate": {
     "cite_id": "id.tax-law-compilation-2022#p210",
     "doc_id": "id.tax-law-compilation-2022",
@@ -36,7 +36,7 @@
     "primary_article26_page": 242,
     "preserve_original_2022_document": true,
     "effective_date_policy": "Do not give entire consolidated book one inferred enactment date; statute amendments and per-parameter applicability require independent dates.",
-    "current_build": "Do not modify staged inputs while id-treaty-full-rebuild runs."
+    "current_build": "Vietnam distribution build completed and seven-table parity verified before this catalog registration."
   },
   "parser_review": {
     "observed_failure": "Generic single-act slicer produced only 40 article groups from the multi-act book and did not provide the reviewed uppercase PASAL 26 page locator.",
@@ -45,5 +45,37 @@
     "validation": "All nonempty extracted page texts match their original page exactly after outer whitespace trimming. All 76 database tests passed in 12.16 seconds.",
     "scope": "Parser prepared; document catalog registration and primary-law parameter migration still pending. No current-law approval inferred.",
     "reference": "https://github.com/pymupdf/PyMuPDF/blob/main/docs/tutorial.rst"
+  },
+  "registered_document": {
+    "id": "id.tax-law-consolidation-2023.id",
+    "jur": "id",
+    "type": "law",
+    "category": "1;2;3;4;9",
+    "title": "Susunan Dalam Satu Naskah Undang-Undang Perpajakan Edisi 2023",
+    "url": "https://jdih.kemenkeu.go.id/api/download/50e4f976-7d46-4bbc-9230-e213a1674197/SDSN%20Pajak.pdf",
+    "file": "raw/id/id.tax-law-consolidation-2023.id.pdf",
+    "sha256": "45716e25368d0218b53857841a22decd123897902e6fe24b71a25b17f4336dfc",
+    "lang": "id",
+    "effective_from": "",
+    "effective_to": "",
+    "note": "Official 2023 multi-act consolidation including amendments through Law6/2023. Original PDF page locators preserve separate acts and commentary; no single enactment date applies to the entire book. Article26(1) at PDF242 provides the listed nonresident non-PE payment baseline, not every effective outbound rate; later amendments, treaty entitlement and payment-specific exceptions require separate review."
+  },
+  "scoped_validation": {
+    "errors": 0,
+    "gaps": 7,
+    "passed": false,
+    "log": "isolated-rebuild-20261118/id-consolidation-scoped.log"
+  },
+  "source_candidate_review": {
+    "pdf_pages": [
+      242,
+      243
+    ],
+    "printed_pages": [
+      237,
+      238
+    ],
+    "visual_review": "Both original pages visually inspected. Page242 contains Article26(1),(1a),(1b),(2) and start of (2a), plus separate prior-article commentary. Page243 continues (2a), includes (3),(4),(5) and separately boxed Article26 explanation. Native extraction order differs from visual order; full page content and boundaries preserved.",
+    "scope": "Source text admission candidate only; no approval of every 2026 exception, treaty entitlement, or legacy final-tax generalization."
   }
 }

@@ -99,8 +99,15 @@ def test_replacement_requires_structured_content_bound_approval(note):
 def test_real_candidate_bundle_preserves_all_107_without_approving_them():
     commit,rows,digest=load_candidates()
     assert commit=='78a037f522d1636541c2e5fcdd1145e735f18124'
-    assert len(rows)==132 and len(digest)==64
+    assert len(rows)==134 and len(digest)==64
     assert sum(row.get('source_commit', commit) == commit for row in rows.values()) == 107
+    for page in (242, 243):
+        source = rows[f'id.tax-law-consolidation-2023.id#p{page}']
+        assert source['document']['effective_from'] == ''
+        assert source['source_commit'] == '93d0d3869e05ec99fd4ee8b7e0a11b69e18922da'
+        assert source['document']['sha256'] == '45716e25368d0218b53857841a22decd123897902e6fe24b71a25b17f4336dfc'
+    assert 'diturunkan dengan Peraturan Pemerintah' in rows['id.tax-law-consolidation-2023.id#p242']['clause']['text']
+    assert 'bersifat final, kecuali' in rows['id.tax-law-consolidation-2023.id#p243']['clause']['text']
     for suffix in ('2(3)', '2(4)', '2(5)'):
         source = rows['id.pmk112-2025#' + suffix]
         assert source['document']['effective_from'] == '2025-12-31'
