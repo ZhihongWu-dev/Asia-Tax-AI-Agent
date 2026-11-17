@@ -30,6 +30,7 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 ROOT = Path(__file__).resolve().parents[2]
 sys.path[:0] = [str(ROOT / "agent" / "tools"), str(Path(__file__).resolve().parent)]
 import orchestrate as orch  # noqa: E402
+import atlas  # noqa: E402
 from feed import LEAK, Tail, client_text, merged  # noqa: E402
 
 CASES = orch.CASES
@@ -638,6 +639,23 @@ def get_case(case_id):
     return public(load(valid_case(case_id)))
 
 
+@app.delete("/api/cases/{case_id}")
+def delete_case(case_id, revision: int):
+    with guard:
+        doc = load(valid_case(case_id))
+        if revision != doc["revision"]:
+            raise failure("revision_conflict", 409)
+        if case_id in turning or run_active(case_id):
+            raise failure("run_active", 409)
+        root = CASES.resolve()
+        folder = (CASES / case_id).resolve()
+        if folder.parent != root or folder.name != case_id:
+            raise failure("case_not_found", 404)
+        shutil.rmtree(folder)
+        tails.pop(case_id, None)
+    return {}
+
+
 @app.patch("/api/cases/{case_id}/organization")
 async def organize(case_id, request: Request):
     body = await request.json()
@@ -920,6 +938,43 @@ def report(case_id, run_id):
         raise failure("case_not_found", 404)
     return FileResponse(path, media_type="application/pdf", filename="briefing.pdf")
 
+
+# ---------------------------------------------------------------- tax graph (atlas.py: rule layer + library on Supabase)
+def atlas_call(fn, *args):
+    try:
+        out = fn(*args)
+    except Exception:                                     # noqa: BLE001 - the library or the rule layer is unreachable
+        raise failure("atlas_unavailable", 503)
+    if out is None:
+        raise failure("atlas_not_found", 404)
+    return out
+
+
+@app.get("/api/atlas/map")
+def atlas_map(date: str = ""):
+    return atlas_call(atlas.map_data, date)
+
+
+@app.get("/api/atlas/country/{code}")
+def atlas_country(code: str, date: str = ""):
+    if not re.fullmatch(r"[a-z]{2}", code):
+        raise failure("atlas_not_found", 404)
+    return atlas_call(atlas.country, code, date)
+
+
+@app.get("/api/atlas/glossary")
+def atlas_glossary():
+    return atlas_call(atlas.glossary)
+
+
+@app.get("/api/atlas/clause")
+def atlas_clause(cite_id: str):
+    if not re.fullmatch(r"[\w.\-#()\[\]/:]+", cite_id or ""):
+        raise failure("atlas_not_found", 404)
+    return atlas_call(atlas.clause, cite_id)
+
+
+atlas.warm()
 
 if DIST.exists():
     app.mount("/", StaticFiles(directory=DIST, html=True))

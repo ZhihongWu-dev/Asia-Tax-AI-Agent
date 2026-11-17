@@ -353,6 +353,15 @@ p {
   border-color: #91b19b;
   box-shadow: 0 0 0 3px #e9f0e730;
 }
+.composer.is-dragging {
+  border-color: #2f7d64;
+  box-shadow: 0 0 0 3px #dcece2;
+}
+.composer.is-dragging > p {
+  padding: 12px 22px 0;
+  color: #2f7d64;
+  font-size: 14px;
+}
 .composer textarea {
   display: block;
   width: 100%;

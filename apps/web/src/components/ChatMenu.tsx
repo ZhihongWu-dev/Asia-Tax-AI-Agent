@@ -1,10 +1,10 @@
 import { useId, useRef, useState } from "react";
-import { MoreHorizontal, Pencil, Archive, ArchiveRestore } from "lucide-react";
+import { MoreHorizontal, Pencil, Archive, ArchiveRestore, Trash2 } from "lucide-react";
 import HintButton from "./HintButton";
 import { useLocale } from "../locale";
 
-export default function ChatMenu({ title, archived, disabled, onRename, onArchive }: {
-  title: string; archived: boolean; disabled: boolean; onRename: () => void; onArchive: () => void;
+export default function ChatMenu({ title, archived, disabled, onRename, onArchive, onDelete }: {
+  title: string; archived: boolean; disabled: boolean; onRename: () => void; onArchive: () => void; onDelete: () => void;
 }) {
   const { locale } = useLocale();
   const en = locale === "en";
@@ -20,7 +20,7 @@ export default function ChatMenu({ title, archived, disabled, onRename, onArchiv
       aria-haspopup="menu" aria-expanded={open} aria-controls={id} disabled={disabled}
       onClick={event => {
         const r = event.currentTarget.getBoundingClientRect();
-        setPosition({ left:Math.max(8, Math.min(innerWidth - 192, r.right - 184)), top:Math.max(8, Math.min(innerHeight - 110, r.bottom + 5)) });
+        setPosition({ left:Math.max(8, Math.min(innerWidth - 192, r.right - 184)), top:Math.max(8, Math.min(innerHeight - 160, r.bottom + 5)) });
         menu.current?.togglePopover();
       }}><MoreHorizontal size={19} /></HintButton>
     <div ref={menu} id={id} popover="auto" role="menu" aria-label={more}
@@ -42,6 +42,7 @@ export default function ChatMenu({ title, archived, disabled, onRename, onArchiv
       }}>
       <button role="menuitem" disabled={disabled} onClick={() => close(onRename)}><Pencil size={16} />{rename}</button>
       <button role="menuitem" disabled={disabled} onClick={() => close(onArchive)}>{archived ? <ArchiveRestore size={16} /> : <Archive size={16} />}{archive}</button>
+      <button role="menuitem" disabled={disabled} onClick={() => close(onDelete)}><Trash2 size={16} />{en ? "Delete" : "删除"}</button>
     </div>
   </>;
 }

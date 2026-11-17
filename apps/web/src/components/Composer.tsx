@@ -31,7 +31,9 @@ export default function Composer({
   const [error, setError] = useState('');
   const [failed, setFailed] = useState('');
   const input = useRef<HTMLInputElement>(null);
+  const form = useRef<HTMLFormElement>(null);
   const upload = useRef<AbortController | null>(null);
+  const [dragging, setDragging] = useState(false);
   useEffect(() => () => upload.current?.abort(), []);
   async function select(selected: File[]) {
     if (!selected.length) return;
@@ -52,6 +54,52 @@ export default function Composer({
     }
     if (!controller.signal.aborted) setReading('');
   }
+  const selectRef = useRef(select);
+  selectRef.current = select;
+  useEffect(() => {
+    const area = form.current?.closest('.chat-body');
+    if (!area) return;
+    let depth = 0;
+    const hasFiles = (e: DragEvent) => Array.from(e.dataTransfer?.types || []).includes('Files');
+    const enter = (e: Event) => {
+      const event = e as DragEvent;
+      if (!hasFiles(event)) return;
+      event.preventDefault();
+      if (++depth === 1 && !busy && !reading) setDragging(true);
+    };
+    const over = (e: Event) => {
+      const event = e as DragEvent;
+      if (!hasFiles(event)) return;
+      event.preventDefault();
+      if (event.dataTransfer) event.dataTransfer.dropEffect = busy || reading ? 'none' : 'copy';
+    };
+    const leave = (e: Event) => {
+      if (!hasFiles(e as DragEvent)) return;
+      if (--depth <= 0) { depth = 0; setDragging(false); }
+    };
+    const drop = (e: Event) => {
+      const event = e as DragEvent;
+      if (!hasFiles(event)) return;
+      event.preventDefault();
+      depth = 0; setDragging(false);
+      if (!busy && !reading) void selectRef.current(Array.from(event.dataTransfer?.files || []));
+    };
+    const preventNavigation = (e: DragEvent) => { if (hasFiles(e)) e.preventDefault(); };
+    area.addEventListener('dragenter', enter);
+    area.addEventListener('dragover', over);
+    area.addEventListener('dragleave', leave);
+    area.addEventListener('drop', drop);
+    window.addEventListener('dragover', preventNavigation);
+    window.addEventListener('drop', preventNavigation);
+    return () => {
+      area.removeEventListener('dragenter', enter);
+      area.removeEventListener('dragover', over);
+      area.removeEventListener('dragleave', leave);
+      area.removeEventListener('drop', drop);
+      window.removeEventListener('dragover', preventNavigation);
+      window.removeEventListener('drop', preventNavigation);
+    };
+  }, [busy, reading]);
   const composing = useRef(false);
   async function send() {
     if (busy || reading || (!text.trim() && !files.length) || text.length > 4000) return;
@@ -60,13 +108,15 @@ export default function Composer({
   }
   return (
     <form
-      className="composer"
+      ref={form}
+      className={`composer${dragging ? ' is-dragging' : ''}`}
       onSubmit={(e) => {
         e.preventDefault();
         send();
       }}
     >
       <input ref={input} type="file" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.webp" hidden onChange={e => { void select(Array.from(e.target.files || [])); e.target.value = ''; }} />
+      {dragging && <p role="status">{say('松开以上传附件', 'Drop files to attach')}</p>}
       {reading && <p role="status">{say('正在上传附件', 'Uploading attachments')} {reading}</p>}
       {error && <p role="alert">{failed && `${failed}: `}{error === 'too_many' ? say(`一条消息最多 ${MAX_ATTACHMENTS} 个附件。`, `A message can carry up to ${MAX_ATTACHMENTS} attachments.`) : pdfErrors[error]?.[locale === 'zh' ? 0 : 1] || say('上传失败，请重试。', 'Upload failed. Please try again.')}</p>}
       {files.length > 0 && <FileWindow count={files.length} listClass="attachment-strip">

@@ -17,6 +17,7 @@ export function useRun(caseId: string | undefined, revision: number | undefined,
   useEffect(() => {
     setRun(idle);
     cursor.current = 0;
+    poke.current = () => {};
     if (!caseId) return;
     let live = true;
     let timer: ReturnType<typeof setTimeout>;

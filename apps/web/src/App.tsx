@@ -16,6 +16,7 @@ import Sidebar from "./components/Sidebar";
 import Welcome from "./components/Welcome";
 import Brand from "./components/Brand";
 import BrandLoader from "./components/BrandLoader";
+import TaxAtlas from "./components/TaxAtlas";
 
 export default function App() {
   const { t, locale, setLocale } = useLocale();
@@ -31,9 +32,9 @@ export default function App() {
     send,
     newCase: createCase,
     retry,
-    organize, partial, process, reload, canStop, stop, removeDocument,
+    organize, deleteCase, partial, process, reload, canStop, stop, removeDocument,
   } = useWorkspace();
-  const { run, resume, halt } = useRun(current?.id, current?.revision, reload);
+  const { run, resume, halt } = useRun(current?.id.startsWith("draft-") ? undefined : current?.id, current?.revision, reload);
   const working = run.active || run.turning;
   const started = run.steps.some((step) => step.runs > 0);
   const [runOpen, setRunOpen] = useState(false);
@@ -44,6 +45,12 @@ export default function App() {
   }, [run.active]);
   useEffect(() => setRunOpen(false), [current?.id]);
   const [panel, setPanel] = useState<Panel>(null);
+  const composerIdentity = useRef({ id: "", key: "" });
+  if (current && composerIdentity.current.id !== current.id) {
+    const previous = composerIdentity.current;
+    composerIdentity.current = { id: current.id, key: previous.id.startsWith("draft-") && busy ? previous.key : current.id };
+  }
+  const [atlas, setAtlas] = useState(false);
   const [mobileNav, setMobileNav] = useState(false);
   const [narrow, setNarrow] = useState(() => window.matchMedia("(max-width: 1100px)").matches);
   const panelRef = useRef<HTMLDivElement>(null),
@@ -67,7 +74,14 @@ export default function App() {
   function newCase() {
     setPanel(null);
     setMobileNav(false);
+    setAtlas(false);
     void createCase();
+  }
+  function openAtlas() {
+    setPanel(null);
+    setMobileNav(false);
+    setRunOpen(false);
+    setAtlas(true);
   }
   const sendMessage = (text: string, files: Attachment[]) => send(text, files);
   if (!current)
@@ -83,7 +97,7 @@ export default function App() {
       </main>
     );
   return (
-    <div className={`app-shell ${panel ? "panel-workspace" : ""} ${runOpen && started && !panel ? "run-open" : ""}`}>
+    <div className={`app-shell ${panel ? "panel-workspace" : ""} ${runOpen && started && !panel && !atlas ? "run-open" : ""}`}>
       <div
         ref={navRef}
         className={`sidebar-slot ${mobileNav ? "is-open" : ""}`}
@@ -96,18 +110,42 @@ export default function App() {
           cases={cases}
           busy={busy}
           onOrganize={organize}
+          onDelete={deleteCase}
           activeId={current.id}
           onNew={newCase}
+          atlasActive={atlas && !panel}
+          onAtlas={openAtlas}
           onClose={() => setMobileNav(false)}
           onPanel={openPanel}
           onSelect={(id) => {
             setActiveId(id);
             setPanel(null);
             setMobileNav(false);
+            setAtlas(false);
           }}
         />
       </div>
-      <main
+      {atlas ? (
+        <main className="main-workspace atlas-workspace" inert={mobileNav || Boolean(panel) ? true : undefined}>
+          <header className="topbar">
+            <div className="page-title">
+              <HintButton className="icon-button mobile-menu" aria-label={t("打开案例导航")}
+                onClick={() => { setPanel(null); setMobileNav(true); }}>
+                <Menu size={20} />
+              </HintButton>
+              <span>{t("税务地图")}</span>
+            </div>
+            <div className="topbar-actions">
+              <HintButton className="language-toggle" aria-label={locale === "zh" ? "Switch to English" : "切换为中文"}
+                onClick={() => setLocale(locale === "zh" ? "en" : "zh")}>
+                <Globe2 size={14} />
+                <span>{locale === "zh" ? "EN" : "中文"}</span>
+              </HintButton>
+            </div>
+          </header>
+          <TaxAtlas />
+        </main>
+      ) : <main
         className={`main-workspace ${empty ? "is-empty" : ""}`}
         inert={mobileNav || Boolean(panel) ? true : undefined}
       >
@@ -163,7 +201,7 @@ export default function App() {
               </div>
             )}
             <Composer
-              key={current.id}
+              key={composerIdentity.current.key}
               lastSentText={current.messages.filter(m => m.role === "user" && !m.delivery).at(-1)?.text}
               text={drafts[current.id] || ""}
               onChange={changeDraft}
@@ -176,7 +214,7 @@ export default function App() {
         <footer className="workspace-footer">
           {t("专业判断，请由税务顾问复核。")}
         </footer>
-      </main>
+      </main>}
       {mobileNav && (
         <div
           className="overlay-backdrop"
@@ -187,7 +225,7 @@ export default function App() {
           }}
         />
       )}
-      {runOpen && started && !panel && (
+      {runOpen && started && !panel && !atlas && (
         <div className="run-slot">
           <RunPanel caseId={current?.id} run={run} onResume={() => void resume()} onHalt={() => void halt()} onClose={() => setRunOpen(false)} />
         </div>

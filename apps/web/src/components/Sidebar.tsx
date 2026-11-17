@@ -1,6 +1,8 @@
 import HintButton from "./HintButton";
 import {
+  ChevronRight,
   CircleHelp,
+  Map as MapIcon,
   MessageSquare,
   Plus,
   Search,
@@ -22,15 +24,21 @@ export default function Sidebar({
   onPanel,
   onClose,
   onOrganize,
+  onDelete,
   busy,
+  atlasActive,
+  onAtlas,
 }: {
   cases: Case[];
+  atlasActive: boolean;
+  onAtlas: () => void;
   activeId: string;
   onSelect: (id: string) => void;
   onNew: () => void;
   onPanel: (panel: Panel) => void;
   onClose: () => void;
   onOrganize: (id: string, changes: { title?: string; archived?: boolean }) => Promise<boolean>;
+  onDelete: (id: string) => Promise<boolean>;
   busy: boolean;
 }) {
   const { t, locale } = useLocale();
@@ -44,7 +52,7 @@ export default function Sidebar({
   const [title, setTitle] = useState("");
   const [actionError, setActionError] = useState(false);
   const visible = cases.filter((c) =>
-    Boolean(c.archived) === archived && caseTitle(c, t).toLowerCase().includes(query.toLowerCase()),
+    c.messages.length > 0 && Boolean(c.archived) === archived && caseTitle(c, t).toLowerCase().includes(query.toLowerCase()),
   ).sort((a, b) => (b.updated_at || "").localeCompare(a.updated_at || ""));
   const today = new Date(); today.setHours(0, 0, 0, 0);
   const yesterday = new Date(today); yesterday.setDate(yesterday.getDate() - 1);
@@ -65,6 +73,14 @@ export default function Sidebar({
           <X size={18} />
         </HintButton>
       </div>
+      <button className={`atlas-entry ${atlasActive ? "active" : ""}`} aria-pressed={atlasActive} onClick={onAtlas}>
+        <span className="atlas-entry-icon"><MapIcon size={16} /></span>
+        <span className="atlas-entry-text">
+          <strong>{t("税务地图")}</strong>
+          <small>{t("各辖区股息税与税务词典")}</small>
+        </span>
+        <ChevronRight size={16} style={{ marginLeft: "auto", flexShrink: 0 }} />
+      </button>
       <HintButton
         className="new-case"
         disabled={busy}
@@ -98,15 +114,20 @@ export default function Sidebar({
             <HintButton disabled={busy || !title.trim()}>{say("保存", "Save")}</HintButton><HintButton type="button" disabled={busy} onClick={() => setEditing("")}>{say("取消", "Cancel")}</HintButton></form> : <div className={`history-row ${activeId === c.id ? "is-active" : ""}`}>
           <HintButton
             key={c.id}
-            className={`case-item ${activeId === c.id ? "active" : ""}`}
+            className={`case-item ${activeId === c.id && !atlasActive ? "active" : ""}`}
             onClick={() => onSelect(c.id)}
-            aria-current={activeId === c.id ? "page" : undefined}
+            aria-current={activeId === c.id && !atlasActive ? "page" : undefined}
           >
             <MessageSquare size={15} />
             <span>{caseTitle(c, t)}</span>
           </HintButton>
           <ChatMenu title={caseTitle(c, t)} archived={archived} disabled={busy}
             onRename={() => { setEditing(c.id); setTitle(caseTitle(c, t)); }}
+            onDelete={async () => {
+              if (!window.confirm(say("删除此对话及其案卷、附件和报告？此操作不可撤销。", "Delete this conversation and its case files, attachments and reports? This cannot be undone."))) return;
+              setActionError(false);
+              if (!await onDelete(c.id)) setActionError(true);
+            }}
             onArchive={async () => {
               setActionError(false);
               if (!await onOrganize(c.id, { archived: !archived })) setActionError(true);

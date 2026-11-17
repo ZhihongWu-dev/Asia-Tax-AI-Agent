@@ -1,5 +1,7 @@
 export const errors: Record<string, [string, string]> = {
   "error:auth_unavailable": ["认证服务暂不可用，请稍后重试。","The sign-in service is temporarily unavailable. Please retry."],
+  "error:atlas_unavailable": ["税务地图暂不可用：法律库或规则层无法读取，请稍后重试。","The tax graph is unavailable: the library or the rule layer cannot be read. Please retry."],
+  "error:atlas_not_found": ["没有找到这个辖区或条文。","This jurisdiction or provision was not found."],
   "error:network_error": ["连接中断或超时。请重试，系统会避免重复提交。","Connection interrupted or timed out. Retry safely without duplicating the operation."],
   "error:service_unavailable": ["服务暂不可用，请检查后端后重试。","Service unavailable. Check the backend and retry."],
   "error:storage_unavailable": ["案件存储暂不可用，请稍后重试。","Case storage is unavailable. Please retry later."],

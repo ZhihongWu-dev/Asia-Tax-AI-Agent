@@ -3,6 +3,10 @@ import { useEffect, useRef, useState } from "react";
 import { api, ApiError } from "../api";
 import { addItem, type ActivityItem, type Case, type Message } from "../workspace";
 
+function blankCase(): Case {
+  return { id: `draft-${crypto.randomUUID()}`, title: "", revision: 0, messages: [] };
+}
+
 export function useWorkspace() {
   const [cases, setCases] = useState<Case[]>([]);
   const [activeId, setActiveId] = useState(location.hash.slice(1));
@@ -29,7 +33,7 @@ export function useWorkspace() {
   const [drafts, setDrafts] = useState<Record<string, string>>({});
   async function initialize() {
     const list = await api.list();
-    return list.length ? list : [await api.create()];
+    return list.length ? list : [blankCase()];
   }
   useEffect(() => {
     let live = true;
@@ -46,7 +50,7 @@ export function useWorkspace() {
     };
   }, []);
   useEffect(() => {
-    if (current) history.replaceState(null, "", `#${current.id}`);
+    if (current) history.replaceState(null, "", current.id.startsWith("draft-") ? location.pathname + location.search : `#${current.id}`);
   }, [current?.id]);
   function update(next: Case) {
     setCases((all) => all.map((c) => (c.id === next.id ? next : c)));
@@ -75,9 +79,18 @@ export function useWorkspace() {
   function send(text: string, files: Attachment[] = []) {
     const messageText = withAttachments(text, files);
     let completed = false;
-    const doc = storedCurrent,
-      requestId = crypto.randomUUID();
+    let doc = storedCurrent;
+    const requestId = crypto.randomUUID();
     return perform(async () => {
+      if (doc.id.startsWith("draft-")) {
+        const temporaryId = doc.id;
+        doc = await api.create();
+        setCases((all) => all.map((c) => c.id === temporaryId ? doc : c));
+        setDrafts((all) => ({ ...all, [doc.id]: all[temporaryId] || "" }));
+        setActiveId(doc.id);
+        setWorkingCaseId(doc.id);
+        setErrorCaseId(doc.id);
+      }
       const localId = `pending-${requestId}`;
       setOutbox((all) => [
         ...all.filter(
@@ -134,11 +147,23 @@ export function useWorkspace() {
     }, doc.id).then((success) => success && completed);
   }
   function newCase() {
+    const next = blankCase();
+    setCases((all) => [next, ...all.filter((c) => !c.id.startsWith("draft-"))]);
+    setActiveId(next.id);
+  }
+  function deleteCase(id: string) {
+    const doc = cases.find((c) => c.id === id);
+    if (!doc) return Promise.resolve(false);
     return perform(async () => {
-      const next = await api.create();
-      setCases((all) => [next, ...all]);
-      setActiveId(next.id);
-    });
+      await api.deleteCase(doc);
+      const fallback = cases.find((c) => c.id !== id) || blankCase();
+      setCases((all) => {
+        const remaining = all.filter((c) => c.id !== id);
+        return remaining.length ? remaining : [fallback];
+      });
+      if (activeId === id) setActiveId(fallback.id);
+      setDrafts((all) => { const next = { ...all }; delete next[id]; return next; });
+    }, id);
   }
   function changeDraft(text: string) {
     setDrafts((all) => ({ ...all, [current.id]: text }));
@@ -186,6 +211,7 @@ export function useWorkspace() {
     canStop: Boolean(partial) && partial?.caseId === current?.id,
     stop: () => controller.current?.abort(),
     organize,
+    deleteCase,
     current,
     busy,
     currentBusy: busy && workingCaseId === current?.id,
