@@ -1,0 +1,24 @@
+{
+  "cite_id": "ae.mof.top-up-tax#all",
+  "reader": "dedicated_read_only_role",
+  "old_pin_rejected": true,
+  "exact_repaired_text_returned": true,
+  "characters": 4739,
+  "candidate_sha256": "68d6e6b4ba1672a98b0f2886bfa1711f41f86067b3aab1597239e2c1137dcd99",
+  "before_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "11a0428cc601bd3d21a445d25ba12a3b4c6a62211848ac6fd76bf95e372a9d29",
+    "review_sha256": "3cf54d6e11b4f2f0732ae208fbe584e2a8cc1d9cbb9e5cf9c9e0e3d2db32dcdf"
+  },
+  "after_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "11a0428cc601bd3d21a445d25ba12a3b4c6a62211848ac6fd76bf95e372a9d29",
+    "review_sha256": "228deee1a5c5197e986028baca9d996b9d283811b43ed8b1bc220e7f0deb1b5f"
+  },
+  "cloud_base_mutated": false,
+  "scope": "Archived source extraction admitted; DMTT calculator and current applicability not established."
+}
