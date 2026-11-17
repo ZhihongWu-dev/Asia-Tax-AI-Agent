@@ -1,0 +1,21 @@
+{
+  "source": "D:\\VScode_workplace\\Tax\\Asia-Tax-AI-Agent-corporate\\database",
+  "isolated_copy": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\isolated-rebuild-20261118\\database",
+  "source_hashes": {
+    "doc.csv": "4b188df0880729e53dc76031ecfc6b752d6e687a1d9e40fde7b2fae2089b919f",
+    "param.csv": "fce7aa847e68cea179eeefd1421398f5707ae9244933468f5330b2a84a76d6e8",
+    "clause.csv": "668cd122f12699d49cc16bbac0973bf9393e1a5756f16040a089e24cba7c9348",
+    "database.sqlite": "9539eca63b4e73d7b9f3729f176d0e5e0213a9e0eee767c766ceb60f7341ecfd",
+    "superseded.csv": "5a958b7e3053598e9ceaa35d07a61f475ac7c597eaa36f30e6ea01c2012bb495",
+    "decision.csv": "08d8ebddc9879807c6915b5e8f40f0df38e5b0d187b15c50b97ff6e247c2c12d"
+  },
+  "source_unchanged_after_copy": true,
+  "copied_files": 1134,
+  "purpose": "Validate committed parser repairs without mutating live optimizer inputs. Not promoted to runtime.",
+  "status": "isolated_rebuild_running",
+  "tool_session": 90451,
+  "source_commit": "a20dbf3dad319941b367194ac17eb63d08d6c5d9",
+  "build_script_sha256": "39d8b1c223630b88a2f0b5f633f4bf7ccff540250c33387c269b45930ace4c5f",
+  "live_optimizer_pid": 16760,
+  "live_optimizer_inputs_promoted": false
+}

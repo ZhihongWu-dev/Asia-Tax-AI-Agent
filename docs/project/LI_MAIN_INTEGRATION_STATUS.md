@@ -93,6 +93,11 @@ The final integration has not been pushed or merged to `main`. The historical
   process check, PID16760 is live and the log reports three successful checks:
   case001.best, case001.open and case001.valued.best. This is not twelve-row
   completion. Generated CSV/SQLite and optimizer inputs remain frozen.
+- An independent physical data copy (1134 files) is now undergoing a full
+  rebuild under the audit directory using the committed parser repairs.
+  Source hashes were unchanged after copying. This isolates generated outputs
+  from the live optimizer; no rebuilt files have been promoted. See
+  [snapshot provenance](data-reconciliation/isolated-rebuild-20261118.json).
 - Parser fixes are committed but await generated-data rebuild: Chinese inline
   numbers, malformed HTML main containers and Indonesian standalone legal
   numbers. Pending data work includes HK-UAE originals/MLI applicability,
