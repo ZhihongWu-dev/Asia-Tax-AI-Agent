@@ -167,3 +167,52 @@ def test_missing_payment_is_not_assumed_zero():
     del values['advance_tax_paid']
     with pytest.raises(ValueError):
         calculate(case,TypeAdapter(Assessment).validate_python(values))
+
+
+def old(base, age='under60', **changes):
+    args=dict(regime='personal_old_resident',resident_age_band=age,amt_not_applicable_verified=True)
+    args.update(changes)
+    return assess(base,**args)
+
+
+@pytest.mark.parametrize('age,base,tax',[
+    ('under60','500000',0),('60_to79','500000',0),('80_plus','500000',0),
+    ('under60','500010',13000),('60_to79','500010',10400),('80_plus','500010',0),
+    ('under60','1000000',117000),('60_to79','1000000',114400),('80_plus','1000000',104000),
+    ('under60','1600000',304200),('60_to79','1600000',301600),('80_plus','1600000',291200),
+    # (112500 + 59000000 * .30) * 1.37 * 1.04 = 25379250.
+    ('under60','60000000',25379250)])
+def test_old_resident_bands_and_no_rebate_marginal_relief(age,base,tax):
+    result=old(base,age)
+    assert result['final_tax']==tax
+    if Decimal(base)>500000:
+        assert result['resident_rebate']==0
+
+
+@pytest.mark.parametrize('base,previous_combined',[
+    ('5000010','1312500'),('10000010','3093750'),
+    ('20000010','6684375'),('50000010','18515625')])
+def test_old_surcharge_four_discontinuities(base,previous_combined):
+    result=old(base)
+    assert result['income_tax_after_rebate']+result['surcharge']==Decimal(previous_combined)+10
+    assert result['surcharge_marginal_relief']>0
+
+
+@pytest.mark.parametrize('changes',[{'resident_age_band':None},{'resident_age_band':'80'},
+    {'amt_not_applicable_verified':False},{'amt_not_applicable_verified':1}])
+def test_old_age_and_amt_must_be_explicit(changes):
+    with pytest.raises(ValueError):old('1600000',**changes)
+
+
+def test_old_workflow_settlement_and_subject_validation():
+    case,basis=workflow()
+    values=basis.model_dump()
+    values.update(policy='in_personal_old_ty2026_27',resident_age_band='60_to79',amt_not_applicable_verified=True,
+                  settlement_requested=True,**payments(tds_tcs_credit='310000'))
+    validated=TypeAdapter(Assessment).validate_python(values)
+    result=calculate(case,validated)
+    assert Decimal(result['final_tax'])==301600
+    assert Decimal(result['balance_due'])==-8400
+    case.subject='company'
+    with pytest.raises(ValueError,match='subject'):
+        calculate(case,validated)

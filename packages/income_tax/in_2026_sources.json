@@ -3,14 +3,14 @@
   "sources": [
     {
       "doc_id": "in.law.ita2025.fa2026.en",
-      "title": "Income-tax Act 2025 as amended by Finance Act 2026: sections 156, 200, 202, 206(1)(q), 266, 431, 516",
+      "title": "Income-tax Act 2025 as amended by Finance Act 2026: sections 156, 200, 202, 206(1)(q), 206(2), 266, 431, 516",
       "url": "https://www.incometaxindia.gov.in/documents/d/guest/income_tax_act_2025_as_amended_by_fa_act_2026-pdf",
       "file": "database/raw/in/in.law.ita2025.fa2026.en.pdf",
       "sha256": "d54a0ed6a91673d1a4fbcef9b5e472c3efe441139fae38f85a5a0c5b2cfc998b"
     },
     {
       "doc_id": "in.law.finance2026.gazette.en",
-      "title": "Finance Act 2026: section 3(4)(b) rows 9-10, 3(5) row 6, 3(15)",
+      "title": "Finance Act 2026: section 3(4)(b) rows 9-10, 3(5) row 6, 3(15); First Schedule Part I-B Paragraphs A and F",
       "url": "https://egazette.gov.in/WriteReadData/2026/271439.pdf",
       "file": "database/raw/in/in.law.finance2026.gazette.en.pdf",
       "sha256": "f01136356e61b2534328153941a68f13afd06fe8587d347757c89101d9cc564f"

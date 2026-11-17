@@ -64,11 +64,14 @@ def round_rupees(value):
 
 
 def annual_tax(taxable_income_before_rounding, *, period_start, period_end,
-               regime, regime_and_base_verified, ordinary_domestic_scope_confirmed):
+               regime, regime_and_base_verified, ordinary_domestic_scope_confirmed,
+               resident_age_band=None, amt_not_applicable_verified=None):
     """Compute annual liability; caller must establish elections and tax base.
 
 personal_new_resident requires a resident individual taxed under s202, without
-opting out. company_section200 requires a valid timely domestic-company option
+opting out. personal_old_resident requires a valid s202(4) election, the highest
+age band attained during the tax year, no s206(2) AMT and no carried AMT credit.
+company_section200 requires a valid timely domestic-company option
 and compliance with s200's deduction/loss restrictions. Neither flag is inferred
 from income size. No special-rate income, agricultural income, foreign relief,
 IFSC concessions, other credits or adjustments may be included in this scope.
@@ -77,28 +80,44 @@ IFSC concessions, other credits or adjustments may be included in this scope.
         raise ValueError('Only Tax Year 2026-27 (not Assessment Year 2026-27) is reviewed')
     if regime_and_base_verified is not True or ordinary_domestic_scope_confirmed is not True:
         raise ValueError('Verify regime eligibility, established base and ordinary domestic scope')
-    if regime not in ('personal_new_resident', 'company_section200'):
+    if regime not in ('personal_new_resident', 'personal_old_resident', 'company_section200'):
         raise ValueError('Unsupported India regime')
+    old = regime == 'personal_old_resident'
+    if old:
+        if resident_age_band not in ('under60','60_to79','80_plus') or amt_not_applicable_verified is not True:
+            raise ValueError('Old regime requires verified tax-year age band and AMT non-applicability')
+        exemption = {'under60':250000,'60_to79':300000,'80_plus':500000}[resident_age_band]
+        schedule = (Band(Decimal(exemption),Decimal('0')),)
+        if exemption < 500000:
+            schedule += (Band(Decimal('500000'),Decimal('.05')),)
+        schedule += (Band(Decimal('1000000'),Decimal('.20')),Band(None,Decimal('.30')))
+    else:
+        if resident_age_band is not None or amt_not_applicable_verified is not None:
+            raise ValueError('Age classification and AMT exclusion apply only to the old personal regime')
+        schedule = _PERSONAL
     income = amount(taxable_income_before_rounding)
     with localcontext() as context:
         context.prec = 40
         base = round_rupees(income)
         rebate = relief = Decimal('0')
-        if regime == 'personal_new_resident':
-            gross, bands = marginal_tax(base, _PERSONAL)
-            if base <= 1200000:
+        if regime in ('personal_new_resident','personal_old_resident'):
+            gross, bands = marginal_tax(base, schedule)
+            if old:
+                rebate = min(gross, Decimal('12500')) if base <= 500000 else Decimal('0')
+            elif base <= 1200000:
                 rebate = min(gross, Decimal('60000'))
             else:
                 rebate = max(Decimal('0'), gross - (base - 1200000))
             tax = gross - rebate
             threshold, previous_rate, rate = (
+                (50000000, Decimal('.25'), Decimal('.37')) if old and base > 50000000 else
                 (20000000, Decimal('.15'), Decimal('.25')) if base > 20000000 else
                 (10000000, Decimal('.10'), Decimal('.15')) if base > 10000000 else
                 (5000000, Decimal('0'), Decimal('.10')) if base > 5000000 else
                 (0, Decimal('0'), Decimal('0')))
             surcharge = tax * rate
             if threshold:
-                threshold_tax, _ = marginal_tax(threshold, _PERSONAL)
+                threshold_tax, _ = marginal_tax(threshold, schedule)
                 ceiling = threshold_tax * (1 + previous_rate) + base - threshold
                 relief = max(Decimal('0'), tax + surcharge - ceiling)
         else:
@@ -111,7 +130,8 @@ IFSC concessions, other credits or adjustments may be included in this scope.
         unrounded = tax + net_surcharge + cess
         return dict(policy_version='in-ordinary-ty2026-27-2026-11-18', currency='INR',
             period_start=period_start, period_end=period_end, tax_year='2026-27',
-            regime=regime, tax_scope='india_ordinary_annual_ty2026_27', taxable_income_before_rounding=income, taxable_income=base,
+            regime=regime, resident_age_band=resident_age_band,
+            tax_scope='india_ordinary_annual_ty2026_27', taxable_income_before_rounding=income, taxable_income=base,
             gross_income_tax=gross, bands=bands, resident_rebate=rebate,
             income_tax_after_rebate=tax, surcharge_rate=rate, gross_surcharge=surcharge,
             surcharge_marginal_relief=relief, surcharge=net_surcharge,

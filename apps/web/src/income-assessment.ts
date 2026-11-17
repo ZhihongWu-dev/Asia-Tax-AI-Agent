@@ -17,7 +17,7 @@ export function policies(input: IncomeTaxInput): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
   if(input.jurisdiction==='in' && input.residency==='resident' && period==='2026-04-01/2027-03-31' && input.incomes.every(i=>i.source_jurisdiction==='in'&&['business','employment','service_remuneration','author_remuneration','interest','rental','royalty'].includes(i.category))) {
-    return [{id:company?'in_company_section200_ty2026_27':'in_personal_new_ty2026_27',
+    const primary: IncomePolicy = {id:company?'in_company_section200_ty2026_27':'in_personal_new_ty2026_27',
       label:company?['印度境内企业第200条税制（TY 2026–27）','India domestic company section 200 (TY 2026–27)']:['印度居民个人新税制（TY 2026–27）','India resident individual new regime (TY 2026–27)'],
       notice:['适用于2026年4月1日至2027年3月31日的Tax Year，不是AY 2026–27。计算年度税额、附加税及健康教育费，不是扣除已缴款后的补退金额，不含利息或罚款。个人须适用第202条新税制；企业须已按时有效选择第200条并核实扣除、亏损及折旧限制。输入税基须与保存的收入减去核定扣除及可抵扣亏损一致；工资标准扣除等须已核定计入保存扣除，不自动另算。不含特殊税率所得、股息、资本利得、农业所得合并、境外所得或抵免、IFSC优惠及其他税额调整。',
         'Uses Tax Year 1 April 2026–31 March 2027, not AY 2026–27. Calculates annual liability including surcharge and health/education cess, before payment credits, interest and penalties. Individuals must use section 202; domestic companies require a valid timely section 200 option and verified deduction, loss and depreciation restrictions. The established base must equal saved income less verified deductions and eligible losses. Include verified salary standard deductions in saved deductions; they are not calculated again. Excludes special-rate income, dividends, capital gains, agricultural aggregation, foreign income or relief, IFSC concessions and other tax adjustments.'],
@@ -30,7 +30,15 @@ export function policies(input: IncomeTaxInput): IncomePolicy[] {
         {...money('self_assessment_paid','本期实际已缴自评税款总额（含已缴利息和费用）','Total self-assessment payments including paid interest and fees'),showWhen:['settlement_requested','true']},
         {...money('total_interest_due','核定累计应计利息（含已缴部分，无则填0）','Verified cumulative interest including amounts already paid (0 if none)'),showWhen:['settlement_requested','true']},
         {...money('total_fee_due','核定累计应计费用（含已缴部分，无则填0）','Verified cumulative fees including amounts already paid (0 if none)'),showWhen:['settlement_requested','true']},
-        {...confirm('settlement_verified','已核对税款归属及凭证、累计利息费用和缴款抵扣顺序；无先前退税、更新申报、ESOP递延、罚款或额外追缴','Credits, evidence, cumulative interest/fees and payment allocation verified; no prior refunds, updated return, ESOP deferral, penalties or additional demands'),showWhen:['settlement_requested','true']}]}];
+        {...confirm('settlement_verified','已核对税款归属及凭证、累计利息费用和缴款抵扣顺序；无先前退税、更新申报、ESOP递延、罚款或额外追缴','Credits, evidence, cumulative interest/fees and payment allocation verified; no prior refunds, updated return, ESOP deferral, penalties or additional demands'),showWhen:['settlement_requested','true']}]};
+    if(company)return [primary];
+    return [primary,{...primary,id:'in_personal_old_ty2026_27',
+      label:['印度居民个人旧税制（TY 2026–27）','India resident individual old regime (TY 2026–27)'],
+      notice:['适用于2026年4月至2027年3月的居民个人普通所得。须核实第202(4)条旧税制选择有效，经营所得须核对选择期限、历史选择和撤回限制。年龄按本税年内达到的最高年龄档；不能把60岁与80岁档重叠使用。税基扣除须按旧税制重新核定并与保存资料一致，不能沿用新税制扣除。此入口要求已核实不适用第206(2)条AMT，且无AMT结转抵免。计算含附加税和健康教育费，结算须另选。不含特殊税率所得、农业合并、境外所得或抵免、IFSC、其他税额抵免及调整。',
+        'Resident ordinary income for April 2026–March 2027. Verify a valid section 202(4) old-regime election, including business-income deadlines and prior election/withdrawal restrictions. Use the highest age band attained during the tax year. Re-establish old-regime deductions and reconcile saved facts; do not reuse new-regime deductions unchanged. Requires verified non-applicability of section 206(2) AMT and no carried AMT credit. Includes surcharge and cess; settlement is optional. Excludes special-rate income, agricultural aggregation, foreign income or relief, IFSC, other tax credits and adjustments.'],
+      fields:[...primary.fields,
+        {key:'resident_age_band',label:['本税年内达到的最高年龄档','Highest age band attained during this tax year'],options:[['under60',['未满60岁','Under 60']],['60_to79',['60至79岁','60 to 79']],['80_plus',['80岁及以上','80 or above']]]},
+        confirm('amt_not_applicable_verified','已核实不适用AMT，且无AMT结转抵免','AMT non-applicability and absence of carried AMT credit verified')]}];
   }
   if (input.jurisdiction==='jp' && company && input.residency==='resident' && /^2026-\d{2}-\d{2}$/.test(input.period_start)) {
     const [,month,day]=input.period_start.split('-').map(Number);

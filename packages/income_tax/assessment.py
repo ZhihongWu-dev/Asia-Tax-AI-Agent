@@ -30,7 +30,7 @@ def calculate(case: IncomeTaxCase, basis):
                 'my_individual_2026': 'individual', 'th_company_2026':'company', 'th_resident_2026':'individual',
                 'vn_personal_transfer_2026': 'individual', 'vn_employment_2026': 'individual', 'vn_company_2026': 'company',
                 'jp_resident_ordinary_2026': 'individual', 'jp_company_starting_2026':'company',
-                'in_personal_new_ty2026_27':'individual', 'in_company_section200_ty2026_27':'company'}
+                'in_personal_new_ty2026_27':'individual', 'in_personal_old_ty2026_27':'individual', 'in_company_section200_ty2026_27':'company'}
     if policy == 'hk_profits_2025_26':
         expected[policy] = 'company' if basis.business_form == 'corporation' else 'individual'
     if policy in expected and case.subject != expected[policy]:
@@ -40,7 +40,7 @@ def calculate(case: IncomeTaxCase, basis):
     if policy in ('cn_comprehensive_2026', 'sg_resident_ya2026', 'th_resident_2026','id_company_2026','id_resident_2026','vn_employment_2026','vn_company_2026','jp_resident_ordinary_2026') and case.residency != 'resident':
         raise ValueError('This policy requires resident status')
     args = basis.model_dump(exclude={'policy', 'basis_explanation', 'basis_confirmed'})
-    if policy in ('in_personal_new_ty2026_27','in_company_section200_ty2026_27'):
+    if policy in ('in_personal_new_ty2026_27','in_personal_old_ty2026_27','in_company_section200_ty2026_27'):
         settlement_requested=args.pop('settlement_requested')
         settlement={key:args.pop(key) for key in ('tds_tcs_credit','advance_tax_paid',
             'self_assessment_paid','total_interest_due','total_fee_due','settlement_verified')}
@@ -58,7 +58,9 @@ def calculate(case: IncomeTaxCase, basis):
         if basis.taxable_income_before_rounding!=reconciled:
             raise ValueError('India established taxable base must reconcile to saved income, deductions and eligible losses')
         result=india.annual_tax(period_start=case.period_start.isoformat(),period_end=case.period_end.isoformat(),
-            regime='personal_new_resident' if case.subject=='individual' else 'company_section200',**args)
+            regime={'in_personal_new_ty2026_27':'personal_new_resident',
+                    'in_personal_old_ty2026_27':'personal_old_resident',
+                    'in_company_section200_ty2026_27':'company_section200'}[policy],**args)
         if settlement_requested:
             result=india.settle(result,**settlement)
     elif policy=='jp_company_starting_2026':

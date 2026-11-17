@@ -218,10 +218,16 @@ class INIndividual(INBasis):
     policy: Literal['in_personal_new_ty2026_27']
 
 
+class INOldIndividual(INBasis):
+    policy: Literal['in_personal_old_ty2026_27']
+    resident_age_band: Literal['under60','60_to79','80_plus']
+    amt_not_applicable_verified: StrictBool
+
+
 class INCompany(INBasis):
     policy: Literal['in_company_section200_ty2026_27']
 
 
-Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual | JPCompany | INIndividual | INCompany |
+Assessment = Annotated[CNCompany | CNIndividual | SGCompany | SGIndividual | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany |
                        HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | THCompany | THIndividual | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
                        Field(discriminator='policy')]

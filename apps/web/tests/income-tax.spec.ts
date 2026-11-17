@@ -91,7 +91,8 @@ for (const scenario of [
   await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(scenario.balance);
 });
 
-for(const subject of ['individual','company']) for(const settlement of [false,true]) test(`India ${subject} TY2026 ${settlement?'settlement':'annual liability'} persists`,async({page})=>{
+for(const kind of ['individual','company','individual_old']) for(const settlement of [false,true]) test(`India ${kind} TY2026 ${settlement?'settlement':'annual liability'} persists`,async({page})=>{
+  const old=kind==='individual_old',subject=old?'individual':kind;
   const form=await openIncome(page);
   await form.getByRole('combobox',{name:'Taxpayer',exact:true}).selectOption(subject);
   await form.getByRole('combobox',{name:'Filing jurisdiction',exact:true}).selectOption('in');
@@ -108,13 +109,17 @@ for(const subject of ['individual','company']) for(const settlement of [false,tr
   await form.getByRole('button',{name:'Save income-tax details'}).click();
   await expect(form.getByRole('status')).toHaveText('Income-tax details saved.');
   const assessment=page.getByRole('region',{name:'Income-tax calculation',exact:true});
-  await assessment.getByRole('combobox',{name:'Applicable regime',exact:true}).selectOption(subject==='individual'?'in_personal_new_ty2026_27':'in_company_section200_ty2026_27');
+  await assessment.getByRole('combobox',{name:'Applicable regime',exact:true}).selectOption(old?'in_personal_old_ty2026_27':subject==='individual'?'in_personal_new_ty2026_27':'in_company_section200_ty2026_27');
+  if(old){
+    await assessment.getByRole('combobox',{name:'Highest age band attained during this tax year',exact:true}).selectOption('60_to79');
+    await assessment.getByRole('combobox',{name:'AMT non-applicability and absence of carried AMT credit verified',exact:true}).selectOption('true');
+  }
   await assessment.getByLabel('Established taxable income before rounding',{exact:true}).fill('1600000');
   for(const name of ['Regime election, eligibility, deductions and loss restrictions verified','Ordinary domestic income and all exclusions verified'])
     await assessment.getByRole('combobox',{name,exact:true}).selectOption('true');
   await assessment.getByRole('combobox',{name:'Also calculate the ordinary return balance',exact:true}).selectOption(String(settlement));
   if(settlement){
-    await assessment.getByLabel('Verified current-period TDS/TCS credit',{exact:true}).fill(subject==='individual'?'130000':'410000');
+    await assessment.getByLabel('Verified current-period TDS/TCS credit',{exact:true}).fill(old?'310000':subject==='individual'?'130000':'410000');
     for(const name of ['Advance tax actually paid for this period','Total self-assessment payments including paid interest and fees','Verified cumulative interest including amounts already paid (0 if none)','Verified cumulative fees including amounts already paid (0 if none)'])
       await assessment.getByLabel(name,{exact:true}).fill('0');
     await assessment.getByRole('combobox',{name:'Credits, evidence, cumulative interest/fees and payment allocation verified; no prior refunds, updated return, ESOP deferral, penalties or additional demands',exact:true}).selectOption('true');
@@ -123,9 +128,9 @@ for(const subject of ['individual','company']) for(const settlement of [false,tr
   await assessment.getByRole('checkbox').check();
   await assessment.getByRole('button',{name:'Calculate and save result'}).click();
   const result=assessment.getByRole('article',{name:'Saved calculation result'});
-  await expect(result).toContainText(subject==='individual'?'124800':'402690');
+  await expect(result).toContainText(old?'301600':subject==='individual'?'124800':'402690');
   if(settlement){
-    await expect(result).toContainText(subject==='individual'?'-5200':'-7310');
+    await expect(result).toContainText(old?'-8400':subject==='individual'?'-5200':'-7310');
     await expect(result).toContainText('calculated refund, not approval');
   }else await expect(result).toContainText('before payment credits, interest and penalties');
   await expect(result.getByRole('link')).toHaveCount(2);
