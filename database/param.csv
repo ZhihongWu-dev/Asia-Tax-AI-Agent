@@ -576,9 +576,6 @@ kr.inbound.worldwide_income_reportable,kr,individual,inbound,worldwide_income_re
 서 발생한 소득의 경우 국내에서 지급되거나 국내로 송금된 소득에 대해서만 과세한다.",,,"General resident-income tax scope, qualified by Article 3(1): a foreign-national resident whose aggregate Korean domicile/residence period is no more than five years during the ten years preceding the end of the tax period is taxed on foreign-source income only when paid in or remitted to Korea. Korean-source income and other conditions remain separately applicable. The old unrestricted English FAQ is not current authority.",,
 kr.final.global_income_taxable,kr,individual,final,global_income_taxable,yes,bool,kr.income-tax-act.20260701.ko#4,"제4조(소득의 구분) ① 거주자의 소득은 다음 각 호와 같이 구분한다. <개정 2013. 1. 1., 2020. 12. 29., 2024. 12. 31.>
 1. 종합소득
-
-법제처                                                            3                                                       국가법령정보센터
-소득세법
 　이 법에 따라 과세되는 모든 소득에서 제2호 및 제3호에 따른 소득을 제외한 소득으로서 다음 각 목의 소득을 합
 산한 것
 가. 이자소득
@@ -589,7 +586,7 @@ kr.final.global_income_taxable,kr,individual,final,global_income_taxable,yes,boo
 바. 기타소득
 2. 퇴직소득
 2의2. 삭제<2024. 12. 31.>
-3. 양도소득",,,"Current primary Article 4 categories: comprehensive income (interest, dividends, business, employment, pensions and other income), retirement income and capital gains, subject to applicable exemptions/special rules. The archived FAQ separate timber-income category is not retained as current classification. This is not a claim every receipt is taxable or every category uses one progressive table.",,
+3. 양도소득",,,"Current primary Article 4 categories: comprehensive income (interest, dividends, business, employment, pensions and other income), retirement income and capital gains, subject to applicable exemptions/special rules. The archived FAQ separate timber-income category is not retained as current classification. This is not a claim every receipt is taxable or every category uses one progressive table. 2026-11-18: removed PDF page-header metadata from quote; substantive wording unchanged.",2026-11-18,
 kr.final.cit_return_deadline,kr,company,final,cit_return_deadline,3,months,kr.corporate-tax-act.20260701.ko#60,"제60조(과세표준 등의 신고) ① 납세의무가 있는 내국법인은 각 사업연도의 종료일이 속하는 달의 말일부터 3개월(제
 60조의2제1항 본문에 따라 내국법인이 성실신고확인서를 제출하는 경우에는 4개월로 한다) 이내에 대통령령으로
 정하는 바에 따라 그 사업연도의 소득에 대한 법인세의 과세표준과 세액을 납세지 관할 세무서장에게 신고하여야

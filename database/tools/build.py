@@ -1512,17 +1512,22 @@ def slice_kr(doc_id, raw):
 
 RE_KR_PDF_ART = re.compile(r"^제(\d+)조(?:의(\d+))?(\(|\s+삭제)")      # "제4조(소득의 구분) ① ...", "제5조 삭제 <2010. 12. 27.>"
 RE_KR_PDF_PARA = re.compile(r"^([①-⑳])")
-RE_KR_PDF_HEAD = re.compile(r"^법제처\s+\d+\s*$")                          # the print's page header: "법제처   12", then the act's name
+RE_KR_PDF_HEAD = re.compile(r"^법제처\s+\d+(?:\s+국가법령정보센터)?\s*$")
 RE_KR_PDF_END = re.compile(r"^\s*부칙\s*(<|$)")                            # addenda: numbering starts again
+RE_KR_SNAPSHOT = re.compile(r"\[시행\s+(\d{4})\.\s*(\d{1,2})\.\s*(\d{1,2})\.\]")
+RE_KR_COMMENCEMENT = re.compile(r"\[시행일:\s*(\d{4})\.\s*(\d{1,2})\.\s*(\d{1,2})\.\]")
 
 
-def slice_kr_pdf(doc_id, text):
+def slice_kr_pdf(doc_id, text, *, excluded_versions=None, date_reviews=None):
     """Korean acts printed from law.go.kr as PDF: the same ids as the XML slicer (제98조의2 → #98-2, ① → #98-2.1 when the
     article has more than one paragraph); the page header ('법제처 N' and the act's name on the next line) is left out,
     deleted articles ('제5조 삭제') are dropped, the addenda (부칙) are not sliced, numbers never go back. Tables of the
     print are images (the rate tables of 소득세법 §55, 법인세법 §55): ocr.py --images reads them into their article. Written on 소득세법 and
     법인세법 as at 2026-07-01 (kr.income-tax-act.20260701.ko, kr.corporate-tax-act.20260701.ko, 2026-11-07):
-    법인세법 gives 181 articles and 642 paragraphs, the same as the XML slicer on the act's XML."""
+    법인세법 gives 181 articles and 642 paragraphs, the same as the XML slicer on the act's XML.
+    Repeated future replacements are separated using the printed snapshot and
+    explicit commencement markers. Single articles with conditional/paragraph
+    commencement remain verbatim for applicability review, not date filtering."""
     lines, skip = [], False
     for ln in text.splitlines():
         s = ln.strip()
@@ -1539,12 +1544,47 @@ def slice_kr_pdf(doc_id, text):
     heads, last = [], (0, 0)
     for i, s in enumerate(lines):
         m = RE_KR_PDF_ART.match(s)
-        if m and (int(m.group(1)), int(m.group(2) or 0)) > last:
+        if m and (int(m.group(1)), int(m.group(2) or 0)) >= last:
             last = (int(m.group(1)), int(m.group(2) or 0))
             heads.append((i, "%s%s" % (m.group(1), "-" + m.group(2) if m.group(2) else ""), m.group(3).strip() == "삭제"))
-    out = []
+    # A printed snapshot may show the current article followed by its future
+    # replacement. Split both before choosing a version; otherwise paragraphs
+    # from the future edition leak into the current article and duplicate IDs.
+    snapshot_match = RE_KR_SNAPSHOT.search(text[:5000])
+    snapshot = date(*map(int, snapshot_match.groups())) if snapshot_match else None
+    groups = {}
     for k, (i, key, deleted) in enumerate(heads):
         block = lines[i:heads[k + 1][0] if k + 1 < len(heads) else len(lines)]
+        dates = [date(*map(int, m.groups())) for m in RE_KR_COMMENCEMENT.finditer('\n'.join(block))]
+        groups.setdefault(key, []).append((block, deleted, dates))
+    out = []
+    for key, variants in groups.items():
+        if len(variants) > 1:
+            current = [v for v in variants if not v[2]]
+            future = [v for v in variants if v[2] and snapshot and all(d > snapshot for d in v[2])]
+            if len(current) != 1 or len(current) + len(future) != len(variants):
+                raise ValueError('Unresolved Korean article versions: %s#%s' % (doc_id, key))
+            article_ref = '제'+key.replace('-', '조의') if '-' in key else '제'+key+'조'
+            for future_block, _, _ in future:
+                for marker in RE_KR_COMMENCEMENT.finditer('\n'.join(future_block)):
+                    following = '\n'.join(future_block)[marker.end():].lstrip()
+                    reference = re.match(r'제\d+조(?:의\d+)?', following)
+                    if reference is None or reference.group() != article_ref:
+                        raise ValueError('Korean commencement marker refers to another article: %s#%s' % (doc_id, key))
+            block, deleted, _ = current[0]
+            if excluded_versions is not None:
+                for future_block, _, dates in future:
+                    excluded_versions.append(dict(cite_id=doc_id+'#'+key, snapshot=snapshot.isoformat(),
+                        effective_dates=sorted({d.isoformat() for d in dates}),
+                        text_sha256=hashlib.sha256('\n'.join(future_block).encode('utf-8')).hexdigest()))
+        else:
+            block, deleted, dates = variants[0]
+            if dates and (snapshot is None or any(d > snapshot for d in dates)):
+                # A single article may contain several paragraph-specific or
+                # conditional commencement dates. Preserve its exact text;
+                # dropping the whole article would also lose current rules.
+                if date_reviews is not None:
+                    date_reviews.append(doc_id+'#'+key)
         if deleted:
             continue
         label = "제%s조" % key.replace("-", "조의") if "-" in key else "제%s조" % key
@@ -1721,7 +1761,8 @@ def slice_doc(row, text, pages):
         if out:
             return out, mode
     if jur == "kr" and kind == "pdf" and statute:                                      # law.go.kr act printed as PDF
-        out, mode = slice_kr_pdf(doc_id, text)
+        out, mode = slice_kr_pdf(doc_id, text, excluded_versions=row.setdefault('_excluded_future_versions', []),
+                                 date_reviews=row.setdefault('_effective_date_reviews', []))
         if mode != "none":
             return out, mode
     if jur == "kr" and kind in ("html", "htm") and statute and is_kr_lawpage(raw):     # law.go.kr act page
@@ -2080,6 +2121,11 @@ def slice_all(docs, errors, warnings, write_text):
                 r["slice_mode"], r["n_clauses"] = "alias of " + r["_alias"], 0
                 continue
             cl, mode = slice_doc(r, text, pages) if text else ([], "none")
+            for excluded in r.get('_excluded_future_versions', []):
+                warnings.append('clause %s: future replacement excluded from snapshot %s (effective %s; text sha256 %s)' % (
+                    excluded['cite_id'], excluded['snapshot'], ','.join(excluded['effective_dates']), excluded['text_sha256']))
+            for cite in r.get('_effective_date_reviews', []):
+                warnings.append('clause %s: paragraph-specific future commencement retained verbatim; applicability requires review' % cite)
             r["slice_mode"], r["n_clauses"] = mode, len(cl)
             clauses.extend(cl)
     finally:

@@ -1,0 +1,253 @@
+{
+  "checked_on": "2026-11-18",
+  "status": "candidate_slices_verified_full_rebuild_pending",
+  "sources": [
+    {
+      "doc_id": "kr.corporate-tax-act.20260701.ko",
+      "source_sha256": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+      "clauses": 823,
+      "removed_ids": [],
+      "excluded": [],
+      "date_reviews": [
+        "kr.corporate-tax-act.20260701.ko#75-7"
+      ]
+    },
+    {
+      "doc_id": "kr.income-tax-act.20260701.ko",
+      "source_sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+      "clauses": 1070,
+      "removed_ids": [
+        "kr.income-tax-act.20260701.ko#37.5",
+        "kr.income-tax-act.20260701.ko#37.6",
+        "kr.income-tax-act.20260701.ko#37.7"
+      ],
+      "excluded": [
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#17",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "4743fdc8b32e6861624f5f7ad0053d372e88d520ebe5e646bb4eb4f547c1dbcf"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#21",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "d557d654009fc32780f77d8522509bb9b9e0752d3e0ec1948e29280eb71c7c37"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#37",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "d201721fb2760362606b8c00d1d22b5d28796faa449f372249e01f35daec208a"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#64-3",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "40c1961b3b0ba59f2d79accb54109234698875ab14ab670f7bfef8601ff64ebf"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#70",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "d6e29ec368245a6b856279ede6850cb0363d5fb4446670797e5e6d61b8976426"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#84",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "1c20eef6b3f269d127166c8a84772cd1f8c03ff2756d67bc98d191058d45e3f3"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#88",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-09-09"
+          ],
+          "text_sha256": "46f260881ee2be5b6c83804f83e9bb21f61a7a5ec0a26f8a2aa7d5b65fb5237e"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#89",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-09-09"
+          ],
+          "text_sha256": "3922d1a4b65546f2423c651699f87ee5c87fade46f56378df7cec8e6065a849c"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#95",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-09-09"
+          ],
+          "text_sha256": "9734109cd050778ed36f0b114955a5a7903fc30ea50ad6b57711b741013b8089"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#118-9",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "3187720a1d8b54172b8206496b1ed456f5811b61b8804d551b93013e26f84a59"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#118-10",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "6e309c62fe7cbd1e3f8fb7e0c56b6591d8ff36169958e1839c3274824d80c97c"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#118-11",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "7c9439f125c09c72083a9d0b526f8fed24362a81a1e44781d9e0ffccdf938daf"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#118-12",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "f78bf20a39c38c0d358aa59779bf58b7732007df5dfefb73c509a3e8491da1c7"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#118-13",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "357d5a3e17aeeab646b7092f1445b05a0322cac5a5ff28d1887a8311572aebbe"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#118-14",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "fe3b7e3840e15a732ad6ba5ea9fcbe58a3595c327363ed1182c1b1d385aa7ae5"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#118-15",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "5ed0b900461a742b27fa7cf229336e40d1bb038d63f2b6bb84ce4121606f5995"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#118-16",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "58b68899f4ae1c10c52596379fb0e4cbfaca8ac75f5c06e82a9d8d5a62ec100f"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#118-17",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "3255a581effad588f28e8f712855de163b7748a5a6155a7a5204ccf64bdf1d8b"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#118-18",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "272e16c4046bf001ff1065942319a4828cc0d67cd967315a4057105cf708910a"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#119",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "b3ce69a641358d5d3bd97ebfdb86d4744013c53f9bdd58c4bcb2f7a42f694315"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#126",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "918b16e4f36ae1b20d38a1669b385467a973dc80a39802a7f4592c69f3df14d9"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#127",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "328f9e328a418441369813af6365a7d1ef456e46b5751d730adb157a718820d1"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#156",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2027-01-01"
+          ],
+          "text_sha256": "0ac6a149026d0de925c1575dd3e20ce49ee12a10563b7207c24b9cbba07f8d02"
+        },
+        {
+          "cite_id": "kr.income-tax-act.20260701.ko#177",
+          "snapshot": "2026-07-01",
+          "effective_dates": [
+            "2028-01-01"
+          ],
+          "text_sha256": "f2d2c11ec90487cc9f2c990eeeb41390a2c14d45c9194016ac8653632575119e"
+        }
+      ],
+      "date_reviews": [
+        "kr.income-tax-act.20260701.ko#14",
+        "kr.income-tax-act.20260701.ko#81-11",
+        "kr.income-tax-act.20260701.ko#164-3",
+        "kr.income-tax-act.20260701.ko#164-4"
+      ]
+    },
+    {
+      "doc_id": "kr.itca",
+      "source_sha256": "e71fd3461dd1f028f45ae80ca65a4d4194d014f47a2dace9d8157c6a48d05ae2",
+      "clauses": 433,
+      "removed_ids": [],
+      "excluded": [],
+      "date_reviews": []
+    }
+  ],
+  "required_citations": 428,
+  "missing_citations": [],
+  "quote_errors": [],
+  "database_tests": 44,
+  "scope": "Duplicate-version separation only. Five single articles retain explicit paragraph-specific future commencement and need applicability review. No cloud source admission or full Korean business acceptance.",
+  "research": {
+    "references": [
+      "https://github.com/taxwoong/nts-tax-mcp",
+      "https://github.com/legalize-kr/cli-tools"
+    ],
+    "licenses": [
+      "MIT",
+      "Apache-2.0/MIT"
+    ],
+    "maintenance": "nts-tax-mcp changelog v5.9.0 dated2026-10-18",
+    "issues": "GitHub issue page timed out and public API returned403; not verified",
+    "approach": "Use explicit original commencement markers; preserve conditional paragraph dates. No external code or new dependency adopted."
+  },
+  "visual_evidence": "Official archived income-tax PDF page13 shows future Article17(3) and2027-01-01 commencement."
+}
