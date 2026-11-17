@@ -27,6 +27,11 @@ The final integration has not been pushed or merged to `main`. The historical
   notice is explicitly excluded in both search and planning readers.
 - The two accepted repairs are CN2026-27 item3 and the UAE top-up-tax whole-page
   citation. Both are hash-bound replacements; the base cloud text is unchanged.
+- A fresh dedicated-reader audit includes625 current local citation dependencies,
+  including factor citations:12 are missing from cloud admission,6 are blocked
+  (some overlap), and55 local parameters are absent from the cloud catalog. See
+  [dependency evidence](data-reconciliation/planner-source-readiness-20261118.json).
+  These counts replace the older audit that reconstructed admission rules itself.
 - The original twelve-row optimizer regression is still running. As of the latest
   process check, PID16760 is live and the log reports three successful checks:
   case001.best, case001.open and case001.valued.best. This is not twelve-row
