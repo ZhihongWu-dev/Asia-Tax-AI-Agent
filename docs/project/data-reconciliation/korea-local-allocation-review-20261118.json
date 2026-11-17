@@ -1,0 +1,26 @@
+{
+  "status": "ordinary_positive_criteria_ratios_implemented_not_final_local_assessment",
+  "sources": [
+    {"name": "Local Tax Decree88", "url": "https://www.law.go.kr/LSW/lsLinkProc.do?joLnkStr=%EC%A0%9C88%EC%A1%B0&lsNm=%EC%A7%80%EB%B0%A9%EC%84%B8%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9&mode=11", "sha256": "19785fe1ba6dfd70ce55e0cb9aaf914bf686d9886b2504213a9a1a0ae9253c6f"},
+    {"name": "Article88 embedded formula", "url": "https://www.law.go.kr/flDownload.do?flSeq=22921932", "sha256": "762e7b90c573e662172e47ee233f4257cba65b21172f121a9b349259ec7f9d63", "visually_verified": true},
+    {"name": "Official form44-6(A), amended2025-04-30", "url": "https://www.law.go.kr/flDownload.do?bylClsCd=110202&flSeq=151415325&gubun=", "sha256": "2db00b02346151fb1ce7d39a18e1d3d3369b529d04589697689ce92d4f6ad338", "instruction_page_visually_verified": 2}
+  ],
+  "findings": [
+    "Average each municipality's share of statutory year-end employees and qualifying floor area.",
+    "Form instructions require six-place truncation, with remaining ratio assigned to head office.",
+    "Article88(4) requires grouped filing within the same special/metropolitan city; form still requires municipality detail. Withholding credit appears at the principal filing establishment, not duplicated across branches."
+  ],
+  "implementation": {
+    "module": "packages/income_tax/korea_local.py",
+    "arithmetic": "Exact rational shares; integer millionths truncation; headquarters residual; Decimal outputs independent of ambient precision",
+    "tests": "14 passed in0.54s",
+    "github_research": "Inspected previously pinned MIT UpstageAI/korean-tax-calc-mcp engine for local allocation counterparts; no suitable allocation implementation found. Implemented directly from verified official formula/form with standard-library Fraction; no external dependency or code adopted."
+  },
+  "pending": [
+    "Zero aggregate employee/area criteria and appendix4 special facilities/boundary allocation",
+    "City filing aggregation, municipal rate adjustments, per-authority withholding credits and settlement",
+    "Verify current form version against current regulations before API admission",
+    "National/local combined workflow, corporate and individual API/UI business acceptance"
+  ],
+  "storage": "External integration audit korea-rounding-20261118; no frozen database/runtime changes or cloud admission"
+}
