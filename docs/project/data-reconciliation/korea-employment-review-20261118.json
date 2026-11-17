@@ -21,6 +21,13 @@
   "verification": "65 employment and child tests passed in 0.86s: salary thresholds/caps and aggregation, credit phaseouts, exact fractional results, 2016/2017/2018 birth boundaries, regular count bands, ineligible children, verified disabled-adult eligibility, child/adopted/foster/grandchild relationships, birth-order rates, adoption overlap, invalid records and duplicate claims.",
   "child_transition_authority": "https://law.go.kr/LSW/lsRvsDocListP.do?lsId=001565 — Act21548 supplementary Article2(1)-(3), independently matched to the stored original income-tax law PDF text.",
   "personal_deduction_verification": "24 tests passed in 0.56s: mutual exclusion, eligible senior/disability stacking, comprehensive-income boundary, ineligible spouse distinction, unmarried household-head condition, foster-child distinction, omitted documents, income cap, precision, duplicate identities and contradictory facts. Official Article51 checked against https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031622827 and stored original Articles50/51/53/54. Existing reference repository personal_deduction implementation inspected; no code copied.",
+  "annual_salary_integration": {
+    "scope": "2026 ordinary resident salary, standard-credit election, verified family documents and public pension; excludes other deductions/credits and special reductions. National annual liability before return rounding, payment credits and local tax; not yet an API policy.",
+    "reconciliation": "Child references must match family record identity, relationship and basic eligibility. Public pension deduction is capped after personal deductions; nonrefundable credits cannot exceed gross tax. Whole-won annual salary and paid-pension inputs required; internal fractional component arithmetic retained.",
+    "example": "KRW50m salary less KRW12.25m employment deduction, KRW1.5m self deduction and KRW2m public pension gives KRW34.25m base, KRW3,877,500 gross tax, KRW660,000 employment credit and KRW130,000 standard credit: KRW3,087,500 annual national liability before settlement.",
+    "authorities": ["Income Tax Act51-3,59-4(9)(1),60,61 in stored official original", "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1033409471", "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1032881003"],
+    "verification": "13 pipeline cases; complete income-tax suite 898 passed in 17.92s."
+  },
   "remaining": [
     "Complete personal and child eligibility evidence workflow, pension/special/other deductions",
     "Special credits and relief ordering, mixed income and minimum-tax interactions",
