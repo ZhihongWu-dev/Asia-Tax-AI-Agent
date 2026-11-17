@@ -26,5 +26,12 @@
     "Recompute planner source dependencies after retirement; do not admit historical research solely to eliminate a missing citation."
   ],
   "runtime_modified": false,
-  "cloud_admitted": false
+  "cloud_admitted": false,
+  "isolated_repair": {
+    "status": "absence_row_retired_pending_rebuild",
+    "retired_rows": 1,
+    "historical_record_preserved_in_this_audit": true,
+    "existing_statutory_parameter_preserved": true,
+    "runtime_promoted": false
+  }
 }

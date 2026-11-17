@@ -1,5 +1,5 @@
 {
-  "status": "isolated_source_repaired_pending_rebuild",
+  "status": "isolated_rebuild_and_integrity_verified",
   "date": "2026-11-18",
   "before": {
     "id": "treaty.ae-hk.2014.en",
@@ -32,5 +32,19 @@
   "original_redirect_preserved": true,
   "fresh_official_download_sha256": "5d402a9af0a6c42d548fcf87bba1b5a177ae63c786f047b40dc60601b0a822f7",
   "runtime_promoted": false,
-  "cloud_admitted": false
+  "cloud_admitted": false,
+  "builder_exit_code": 0,
+  "clauses": 151,
+  "english_articles": 28,
+  "sqlite_integrity": "ok",
+  "citation_audit": {
+    "counts": {
+      "doc": 349,
+      "clause": 42789,
+      "param": 815,
+      "decision": 51
+    },
+    "errors": [],
+    "legal_review": "not_established_by_this_check"
+  }
 }

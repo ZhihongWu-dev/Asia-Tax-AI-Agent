@@ -41,5 +41,45 @@
       "review_sha256": "5683fa6819d8843f0c8b5415903684716fb185fbcd2cabde77499e706ce154bb"
     }
   },
-  "local_rebuild_pending": true
+  "local_rebuild_pending": true,
+  "isolated_repair": {
+    "status": "applied_pending_rebuild",
+    "doc_before": {
+      "id": "cn.sta.2008-112",
+      "jur": "cn",
+      "type": "guidance",
+      "category": "page_rates",
+      "title": "国家税务总局关于下发协定股息税率情况一览表的通知",
+      "url": "https://www.chinatax.gov.cn/chinatax/n810341/n810765/n812171/200802/c1192516/content.html",
+      "file": "raw/cn/cn.sta.2008-112.html",
+      "sha256": "67900dca7a249082641bb3fa4a9b9c8cbbc543c1c6cf20296d77e0b03ea9064b",
+      "lang": "zh",
+      "effective_from": "",
+      "effective_to": "",
+      "note": "downloaded with curl 2026-10-23T19:59:09Z"
+    },
+    "doc_after": {
+      "id": "cn.sta.2008-112",
+      "jur": "cn",
+      "type": "guidance",
+      "category": "page_rates",
+      "title": "国家税务总局关于下发协定股息税率情况一览表的通知",
+      "url": "https://www.chinatax.gov.cn/chinatax/n810341/n810765/n812171/200802/c1192516/content.html",
+      "file": "raw/cn/cn.sta.2008-112.html",
+      "sha256": "67900dca7a249082641bb3fa4a9b9c8cbbc543c1c6cf20296d77e0b03ea9064b",
+      "lang": "zh",
+      "effective_from": "",
+      "effective_to": "2023-05-25",
+      "note": "downloaded with curl 2026-10-23T19:59:09Z Historical only: fully repealed from 2023-05-26 by STA Announcement 2023 No.8, annex item48; effective_to records the last valid calendar day. Official repeal annotation: https://fgk.chinatax.gov.cn/zcfgk/c100012/c5193938/content.html"
+    },
+    "superseded_entry": {
+      "doc_id": "cn.sta.2008-112",
+      "clause": "*",
+      "by": "https://fgk.chinatax.gov.cn/zcfgk/c100012/c5193938/content.html",
+      "since": "2023-05-26",
+      "note": "Fully repealed by STA Announcement 2023 No.8 annex item48. Retain historical raw source; exclude every clause from the current library.",
+      "phrase": ""
+    },
+    "runtime_promoted": false
+  }
 }
