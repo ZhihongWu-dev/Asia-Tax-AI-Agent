@@ -2613,6 +2613,42 @@
         "text_sha256": "92cb847cc7647b686b24b7d502ed094a6a630d23f0320a12394692f209644395",
         "document_sha256": "cf9cd12fc6ddc8dc9ed379e9e37f99a9a15b11158f9c84ce63393cc8747189d0"
       }
+    },
+    {
+      "cite_id": "ae.mof.top-up-tax#all",
+      "clause": {
+        "cite_id": "ae.mof.top-up-tax#all",
+        "doc_id": "ae.mof.top-up-tax",
+        "label": "全文",
+        "text": "Applying Top-up Tax in the UAE\nDomestic Minimum Top-up Tax in the UAE (the “UAE DMTT”) is applied to Constituent Entities that are members of Multinational Enterprises (“MNEs”) operating in the UAE with annual global revenues of €750 million or more in the Consolidated Financial Statements of the Ultimate Parent Entity in at least two out of the four financial years immediately preceding the financial year in which the UAE DMTT applies. The Domestic Top-up Tax was effective across the UAE for financial years starting on or after 1 January 2025.\nThe UAE DMTT is closely aligned with the GloBE Model Rules, Administrative Guidance and Commentary issued by the OECD. This strategic step reflects the UAE’s commitment to implementing the Organisation for Economic Co-operation and Development’s (“OECD”) Two-Pillar Solution, aimed at establishing a fair and transparent global taxation system aligned with international standards.\nOn this page\nTop-up Tax Rules\nIn order to achieve ‘Qualified’ status for the UAE DMTT rules, the rules must undergo a common peer review process by the members of the OECD Inclusive Framework. The peer review process starts with a transitional qualification mechanism, which is a short-term self-certification process developed for the swift recognition of the ‘Qualified’ status in the interim period prior to a full legislative review and the on-going monitoring process.\nBased on the process agreed by the Inclusive Framework members, the transitional qualified status is expected to be established within 12 months after the effective date of the legislation (i.e., before 1 January 2026) once the self-certification has been submitted within the agreed timelines. Once confirmed, the qualified status is expected to apply from the effective date of the legislation. The full legislative review is expected to start no later than two years after the effective date of the legislation and the transitional qualified status of an implementing jurisdiction’s legislation will end once the full legislative review is completed.\nThe purpose of this process is to achieve consistency and co-ordination in the application of the GloBE Rules across different jurisdictions. Given that the UAE DMTT rules are very closely aligned to the Global Anti-Base Erosion (GloBE) Model Rules (Pillar Two), the UAE is expected to achieve the ‘Qualified’ status within the above-mentioned timeframe.\nThe Income Inclusion Rule is Not Applied in the UAE\nAs the UAE corporate tax regime does not include a controlled foreign company regime, at this stage, the decision has been made to not implement the Income Inclusion Rule (IIR). The UAE DMTT rules ensure that the UAE’s domestic tax base is protected by preventing foreign jurisdictions from collecting top-up tax on UAE profits of UAE Constituent Entities that are in scope of the Pillar Two rules. The UAE will continue to monitor the implementation and effectiveness of the UAE DMTT and seek feedback from key stakeholders to assess whether an IIR should be introduced in the future.\nThe Variations of the UAE DMTT Rules\nThe UAE DMTT rules differ from those set out in the GloBE rules, such as the non-exclusion of non-wholly owned Constituent Entities. Most of the DMTT related provisions contained in the Commentary are consistent with the GloBE rules, in some cases the guidance requires or provides the option to jurisdictions to deviate from the GloBE Rules. Whilst such deviations do not result in compromising the ‘Qualified’ status of the rules, some of these preclude the DMTT from benefiting from the QDMTT Safe Harbour in other jurisdictions. For example, a QDMTT that excludes non-wholly owned Constituent Entities will not comply with the QDMTT Safe Harbour requirements.\nBased on the feedback received during the public consultation, the Ministry of Finance noted the significance of the ‘Safe Harbour’ status to businesses operating in the country. Accordingly, the UAE DMTT rules have been designed to include only deviations / variations that do not compromise the Safe Harbour status of the rules.\nVariations that Meet the Criteria\nThese variations ensure that the UAE QDMTT meets the safe harbour status while minimizing the administration compliance burden related to the GloBE Rules.\nThe variations that meet these criteria include:\nConstituent Entities that meet the requirements to be classified as an investment entity will not be subject to the UAE DMTT rules.\nMNE Groups in the initial phase of international activity are excluded from scope of the UAE DMTT where no Income Inclusion Rule is being applied to any Constituent Entity located in the UAE in the group structure.\nFor More Information\nRelevant legislation\nFrequently Asked Questions"
+      },
+      "document": {
+        "id": "ae.mof.top-up-tax",
+        "jur": "ae",
+        "type": "page",
+        "category": "3",
+        "title": "Top-up Tax",
+        "url": "https://mof.gov.ae/en/public-finance/tax/top-up-tax/",
+        "file": "raw/ae/ae.mof.top-up-tax.html",
+        "sha256": "95a4b615c4bffa600c39cf0e51060d34b34dd7c059ef1b0cfd0acac06d2c0b7a",
+        "lang": "en",
+        "effective_from": "2025-01-01",
+        "effective_to": "",
+        "note": "Official UAE Ministry of Finance page on the UAE domestic minimum top-up tax; it expressly states that the UAE corporate-tax regime does not include a controlled foreign company regime. downloaded with requests 2026-10-27T13:23:40Z"
+      },
+      "text_sha256": "141bd457d6a938497fc8ac88ac137a46a8ffb6b367748db26a6703c1c192e49c",
+      "source_commit": "e8f68f277ed975566f22627dba5da8ed58df1a88",
+      "provenance": {
+        "kind": "extraction_repair",
+        "evidence_file": "docs/project/data-reconciliation/uae-topup-extraction-repair-20261118.json",
+        "evidence_blob": "6282d23b9a52ce8ef6c6f0faeca74b5e05bafc3d",
+        "parser_blob": "277e521d92b7a768dc3616a0c1d418e3ee60b1a8"
+      },
+      "replaces": {
+        "uploaded_at": "2026-11-13T03:39:52Z",
+        "text_sha256": "c887f134c26ea8310e1fb4bd6fbab7b640393bd1b556e62691c7a442be92ec2a",
+        "document_sha256": "95a4b615c4bffa600c39cf0e51060d34b34dd7c059ef1b0cfd0acac06d2c0b7a"
+      }
     }
   ]
 }

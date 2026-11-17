@@ -99,11 +99,14 @@ def test_replacement_requires_structured_content_bound_approval(note):
 def test_real_candidate_bundle_preserves_all_107_without_approving_them():
     commit,rows,digest=load_candidates()
     assert commit=='78a037f522d1636541c2e5fcdd1145e735f18124'
-    assert len(rows)==108 and len(digest)==64
+    assert len(rows)==109 and len(digest)==64
     assert sum(not row.get('replaces') for row in rows.values()) == 107
     repaired = rows['cn.cs.2026-27#i3']
     assert repaired['source_commit'] == '975d4570a5cf79e651c72a6db963fca20c6a1871'
     assert '2026年9月1日' in repaired['clause']['text'].splitlines()
+    uae = rows['ae.mof.top-up-tax#all']
+    assert 'controlled foreign company regime' in uae['clause']['text']
+    assert uae['replaces']['text_sha256'] == sha256(b'Skip to main content').hexdigest()
     assert admitted_rows(commit,rows,[])==[]
     reviews=[dict(cite_id=cite,difference='main_only',review_status='candidate') for cite in rows]
     assert admitted_rows(commit,rows,reviews)==[]
