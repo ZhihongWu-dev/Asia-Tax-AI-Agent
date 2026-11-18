@@ -1,0 +1,190 @@
+{
+  "status": "candidate_coverage_gap_inventory_not_business_acceptance",
+  "source_commit": "edae3479acedf36f3e9cfc9d171e9e0c50942793",
+  "status_sha256": "2deb89ad7740e1055d5e2013f63ee9a4d6f8946a1a3478977cd83635ff888f9f",
+  "rule_build": {
+    "rules": 477,
+    "tests": 1452,
+    "test_failures": 0,
+    "errors": 0,
+    "coverage_gaps": 30
+  },
+  "gaps": [
+    {
+      "slot": "id|company|penalty",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "id|company|restructure",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "id|individual|penalty",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "id|individual|restructure",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "id|individual|exit",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "vn|company|cfc",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "vn|company|restructure",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "vn|individual|cfc",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "vn|individual|restructure",
+      "parameters": [
+        {
+          "param_id": "vn.restructure.resident_capital_gain_tax_pct.20260701",
+          "cite_id": "vn.law.pit2026.vi#13.1"
+        },
+        {
+          "param_id": "vn.restructure.resident_capital_proceeds_unknown_cost_tax_pct.20260701",
+          "cite_id": "vn.law.pit2026.vi#13.1"
+        },
+        {
+          "param_id": "vn.restructure.resident_securities_proceeds_tax_pct.20260701",
+          "cite_id": "vn.law.pit2026.vi#13.2"
+        },
+        {
+          "param_id": "vn.restructure.nonresident_capital_gain_tax_pct.20260701",
+          "cite_id": "vn.law.pit2026.vi#23.1"
+        },
+        {
+          "param_id": "vn.restructure.nonresident_capital_proceeds_unknown_cost_tax_pct.20260701",
+          "cite_id": "vn.law.pit2026.vi#23.1"
+        },
+        {
+          "param_id": "vn.restructure.nonresident_securities_proceeds_tax_pct.20260701",
+          "cite_id": "vn.law.pit2026.vi#23.2"
+        }
+      ],
+      "state": "parameter_exists_rule_missing"
+    },
+    {
+      "slot": "vn|individual|exit",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "my|company|penalty",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "my|company|restructure",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "my|individual|penalty",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "my|individual|restructure",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "my|individual|exit",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "ae|company|penalty",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "ae|company|restructure",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "ae|individual|penalty",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "ae|individual|restructure",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "ae|individual|exit",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "kr|company|penalty",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "kr|company|restructure",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "kr|individual|penalty",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "kr|individual|restructure",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "kr|individual|exit",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "in|company|penalty",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "in|company|restructure",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "in|individual|penalty",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "in|individual|restructure",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    },
+    {
+      "slot": "in|individual|exit",
+      "parameters": [],
+      "state": "parameter_and_rule_missing"
+    }
+  ],
+  "warning": "Candidate build only; exhaustive optimizer validation and final integration remain pending. Missing slots do not prove statutory absence. Existing income assessment adapters are separate from planner slot coverage."
+}
