@@ -160,5 +160,81 @@
       ],
       "review_status": "All 19 pages visually reviewed; thresholds applied with Decree141 amendment"
     }
+  ],
+  "property_rental": [
+    {
+      "doc_id": "vn.law.pit2026.vi",
+      "title": "Luật Thuế thu nhập cá nhân số 109/2025/QH15",
+      "url": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/1/24/cong-bao-so-37-ngay-22-01-46935signed-1769240208670776195144.pdf",
+      "sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+      "provisions": [
+        "7"
+      ],
+      "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded"
+    },
+    {
+      "doc_id": "vn.decree141.2026.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/141-ndcp.signed.pdf",
+      "sha256": "fa9a7c47b637f47528225d9cdd03dbde1032607ec8c39648071178ce4091413f",
+      "provisions": [
+        "1(1)",
+        "3"
+      ],
+      "registration_status": "registered_original_only",
+      "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded",
+      "file": "database/raw/vn/vn.decree141.2026.vi.pdf"
+    },
+    {
+      "doc_id": "vn.decree253.2026.vi",
+      "title": "Decree 253/2026/ND-CP implementing Personal Income Tax Law",
+      "url": "https://congbao.chinhphu.vn/van-ban/nghi-dinh-so-253-2026-nd-cp-469959.htm",
+      "sha256": "91242e366d3c3a4e874314534b100a0d1c077e21b0a9244243f5a187d4b56412",
+      "provisions": [
+        "45",
+        "68(3)",
+        "69(1)(a)",
+        "annex"
+      ],
+      "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded"
+    },
+    {
+      "doc_id": "vn.decree398.2026.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/11/398_2026_nd-cp_29102026-signed.signed.pdf",
+      "sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
+      "provisions": [
+        "2",
+        "4"
+      ],
+      "registration_status": "registered_original_only",
+      "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded",
+      "file": "database/raw/vn/vn.decree398.2026.vi.pdf"
+    },
+    {
+      "doc_id": "vn.decree68.2026.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/3/68-ndcp.signed.pdf",
+      "sha256": "8d5b8099009a0981baa14ed65d5906fc2adb3e774042397e7b33c233a9c3811a",
+      "file": "database/raw/vn/vn.decree68.2026.vi.pdf",
+      "provisions": [
+        "4",
+        "5",
+        "6",
+        "8",
+        "10",
+        "11",
+        "12",
+        "18"
+      ],
+      "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded"
+    },
+    {
+      "doc_id": "vn.vbhn25.2026.business.vi",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/8/25-vbhn-btc.signed.pdf",
+      "file": "database/raw/vn/vn.vbhn25.2026.business.vi.pdf",
+      "sha256": "f26a121b3f3c8d5e3c77563f83ba6bd658e6d243eea2de3a195b8b916878ba57",
+      "provisions": [
+        "4(4)"
+      ],
+      "review_status": "Physical pages 1, 3 and 4 visually reviewed"
+    }
   ]
 }

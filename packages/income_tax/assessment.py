@@ -5,7 +5,7 @@ from packages.contracts.income_tax import IncomeTaxCase
 from . import china, singapore, hong_kong, united_arab_emirates, malaysia, thailand, indonesia
 from . import vietnam, vietnam_employment, vietnam_transfer, japan, japan_company, india, india_company
 from . import korea_company
-from . import vietnam_business
+from . import vietnam_business, vietnam_rental
 from . import korea_salary
 from . import china_business
 from . import singapore_employment
@@ -38,7 +38,7 @@ def calculate(case: IncomeTaxCase, basis):
                 'sg_company_ya2026': 'company', 'sg_resident_ya2026': 'individual',
                 'hk_salaries_2025_26': 'individual', 'my_company_2026': 'company',
                 'my_individual_2026': 'individual', 'my_dividend_2026': 'individual', 'th_company_2026':'company', 'th_resident_2026':'individual', 'th_dividend_2026':'individual', 'th_foreign_income_2026':'individual',
-                'vn_personal_transfer_2026': 'individual', 'vn_employment_2026': 'individual', 'vn_company_2026': 'company', 'vn_business_2026': 'individual',
+                'vn_personal_transfer_2026': 'individual', 'vn_employment_2026': 'individual', 'vn_company_2026': 'company', 'vn_business_2026': 'individual', 'vn_property_rental_2026': 'individual',
                 'jp_resident_ordinary_2026': 'individual', 'jp_company_starting_2026':'company',
                 'in_personal_new_ty2026_27':'individual', 'in_personal_old_ty2026_27':'individual', 'in_company_section200_ty2026_27':'company',
                 'in_company_normal_ty2026_27':'company', 'kr_company_ordinary_2026':'company',
@@ -261,6 +261,29 @@ def calculate(case: IncomeTaxCase, basis):
             if basis.business_expenses + basis.other_income_deductions != case.claimed_deductions:
                 raise ValueError('Saved deductions must reconcile to business expenses plus other income deductions; automatic salary/basic deductions are separate')
         result = japan.resident_ordinary_tax(salary,business,tax_year=2026,**args)
+    elif policy=='vn_property_rental_2026':
+        if case.residency != 'resident' or case.carried_losses != 0 or any(
+                i.category != 'rental' or i.source_jurisdiction != 'vn' or
+                i.foreign_tax_paid not in (None, 0) for i in case.incomes):
+            raise ValueError('Requires resident domestic property rental only, without carried losses or foreign credits')
+        contract_basis = args.pop('contracts')
+        if sorted(c['income_index'] for c in contract_basis) != list(range(len(case.incomes))):
+            raise ValueError('Each saved rental income must have exactly one contract basis')
+        with localcontext() as ctx:
+            ctx.prec = 40
+            if sum((c['allocated_revenue_deduction'] for c in contract_basis), Decimal('0')) != case.claimed_deductions:
+                raise ValueError('Rental deductions must reconcile to saved deductions')
+            contracts = []
+            for contract in sorted(contract_basis, key=lambda c: c['income_index']):
+                contract = dict(contract)
+                index = contract.pop('income_index')
+                contract['revenue'] = case.incomes[index].gross_amount
+                contracts.append(contract)
+            annual = sum((i.gross_amount for i in case.incomes), Decimal('0'))
+        result = vietnam_rental.resident_property_rental_tax(tax_year=2026,
+            resident=True, contracts=contracts, all_annual_rental_revenue=annual, **args)
+        for index, contract in enumerate(result['contracts']):
+            contract['income_index'] = index
     elif policy=='vn_business_2026':
         if case.residency != 'resident' or any(
                 i.category != 'business' or i.source_jurisdiction != 'vn' or

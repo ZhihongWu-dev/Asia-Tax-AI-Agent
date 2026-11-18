@@ -254,6 +254,23 @@ class VNBusiness(Basis):
     revenue_method_started_within_limit: StrictBool
 
 
+class VNRentalContract(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    income_index: Annotated[int, Field(strict=True, ge=0, le=199)]
+    contract_id: str = Field(min_length=1, max_length=120)
+    allocated_revenue_deduction: Money
+    prepaid_tax: Money
+    tenant_files: StrictBool
+    filing_and_allocation_verified: StrictBool
+
+
+class VNRental(Basis):
+    policy: Literal['vn_property_rental_2026']
+    contracts: list[VNRentalContract] = Field(min_length=1, max_length=100)
+    rental_only_scope_verified: StrictBool
+    annual_recognition_and_all_contracts_verified: StrictBool
+
+
 class VNEmployment(Basis):
     policy: Literal['vn_employment_2026']
     chargeable_employment_income: Money
@@ -454,5 +471,5 @@ class KRSalary(Basis):
 
 
 Assessment = Annotated[CNCompany | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
-                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness,
+                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness | VNRental,
                        Field(discriminator='policy')]

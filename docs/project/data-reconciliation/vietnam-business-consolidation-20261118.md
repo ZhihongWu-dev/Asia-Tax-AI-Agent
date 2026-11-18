@@ -19,4 +19,28 @@ amounts, distinguish accommodation services, and reconcile all annual receipts.
 Mixed property/ordinary-business deduction interaction still needs explicit
 review; these pages alone are not recorded as resolving that interaction.
 The consolidation predates Decree 398, so annual relief still needs the later
-source. No calculation policy or active catalog was changed by this archive.
+source. No active catalog was changed by this archive.
+
+## Implementation and verification
+
+`vietnam_rental.resident_property_rental_tax` and the saved-case policy
+`vn_property_rental_2026` now handle annual resident domestic rental-only cases.
+Each saved income maps to exactly one unique contract. Revenue is derived from
+saved facts; allocated deductions reconcile to the saved total. Contract filing
+responsibility, contractual allocation and actual prepaid amounts require explicit
+verification. Per-contract and aggregate balances preserve overpayments.
+
+Thirty-two new tests cover threshold boundaries, shared allocations, payment
+balances, rejected inputs, case reconciliation and API persistence/replay after
+store restart. Editing facts invalidates the current result while retaining its
+historical snapshot. The full income-tax suite passed: 1,406 tests in 23.46 seconds.
+All six referenced original-file hashes were verified locally.
+
+Frontend intake remains pending. Mixed business/rental, accommodation, foreign
+income, VAT and filing/rounding procedures remain outside this component and
+remain outstanding toward the broader business objective.
+
+Development reference: https://github.com/openfisca/openfisca-core (AGPL-3.0;
+recent maintenance and open period/precision issues reviewed). Existing project
+Decimal arithmetic and immutable case snapshots were retained. No external code
+or dependency was adopted.
