@@ -118,3 +118,22 @@ A60000 gross rental fixture with6400 established deductions produces8560 tax;
 eligibility, property aggregation judgments and advance-rent allocation are not
 inferred. Rental API persistence/reopen/export acceptance, UI and readable
 monthly reports remain pending. This does not complete rental business coverage.
+
+
+## Persistence and readable export verification
+
+The mixed personal-income API test now includes an ordinary rental property.
+It saves facts, calculates, disposes/reopens the SQLite store, checks the exact
+saved run, exports both languages, and verifies all12 closing repair balances
+and the700 year-end carry in the readable section before the JSON appendix.
+Source hashes remain in the report; an invalid recalculation returns422 and
+leaves the saved state unchanged. The rental total remains8560 after reopen.
+
+Readable exports include monthly gross, taxes/fees, subrent, new repairs, repairs
+used, statutory expense base/deduction, donation, taxable income, gross tax,
+reduction and net tax, plus opening/closing repairs. Scope text no longer says
+rental is excluded for snapshots actually containing rental results; historical
+snapshots without rentals retain their prior wording. Markdown escaping is
+preserved.69 focused assessment/component/report tests passed in6.70s.
+Frontend entry and browser acceptance are still pending. Full business coverage
+and actual-case acceptance remain incomplete.

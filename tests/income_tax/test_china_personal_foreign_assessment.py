@@ -63,9 +63,17 @@ def test_inconsistent_saved_case_rejected(issue):
     with pytest.raises(ValueError):run(d,p)
 
 
-@pytest.mark.parametrize('with_transfers',[False,True])
+@pytest.mark.parametrize('with_transfers',[False,True,'rental'])
 def test_saved_api_restart_and_report_preserve_credit_pool(tmp_path,with_transfers):
     saved_facts,saved_basis=transfer_case() if with_transfers else (facts(),basis())
+    if with_transfers=='rental':
+        from tests.income_tax.test_china_personal_rental import rental_case_and_papers
+        rental_case,rentals=rental_case_and_papers()
+        saved_facts,saved_basis=facts(),basis()
+        saved_facts['incomes']+=rental_case.model_dump(mode='json')['incomes']
+        saved_facts['claimed_deductions']='6400'
+        rentals[0]['income_index']=4
+        saved_basis['workpaper']['rentals']=rentals
     url='sqlite:///'+str(tmp_path/'credit.sqlite');service=SimpleNamespace(store=ChatStore(url))
     app=FastAPI();app.include_router(auth.router);app.include_router(chat.router)
     app.dependency_overrides[auth.optional_user]=fixture_user
@@ -83,6 +91,16 @@ def test_saved_api_restart_and_report_preserve_credit_pool(tmp_path,with_transfe
         report=client.get(path+'/runs/'+record['id']+'/report?locale=en')
         assert report.status_code==200 and 'country_basis_reconciliation' in report.text
         for source in record['result']['sources']:assert source['sha256'] in report.text
+        if with_transfers=='rental':
+            for locale,heading,label in [('en','Monthly property rental details','Closing repair balance'),('zh','逐月财产租赁明细','期末修缮费余额')]:
+                body=client.get(path+'/runs/'+record['id']+'/report?locale='+locale).json()['markdown']
+                readable=body.split('```json')[0].replace('\\','')
+                assert heading in readable and label in readable
+                assert 'sg-property-1' in readable
+                balances=[Decimal(line.split('|')[2].strip()) for line in readable.splitlines() if line.startswith('| '+label+' |')]
+                assert len(balances)==12 and balances[-1]==700
+                assert 'Excludes rental' not in readable and '不含租赁' not in readable
+            assert Decimal(record['result']['property_rentals']['tax_after_reduction'])==8560
         before=client.get(path).json();invalid=deepcopy(saved_basis);invalid['workpaper']['countries'][1]['eligible_foreign_tax_paid']='2001'
         rejected=client.post(path+'/runs',headers=headers,json=dict(revision=before['revision'],request_id=str(uuid4()),basis=invalid))
         assert rejected.status_code==422 and client.get(path).json()==before

@@ -128,6 +128,37 @@ def render(run, locale='zh'):
                     ('taxable_income','应税所得','Taxable income'),('gross_tax','减免前税额','Tax before reduction'),
                     ('allowed_tax_reduction','核定减免税额','Allowed tax reduction'),('tax_after_reduction','减免后税额','Tax after reduction')]:
                 lines.append(f'| {_text(say(zh,en))} | {_text(row[key])} |')
+    if result.get('property_rentals'):
+        # Earlier personal summaries predate rental support; preserve them for
+        # historical snapshots while correcting the scope for rental results.
+        lines = [line.replace('不含租赁、特殊奖金股权', '另含已核定普通租赁；不含特殊奖金股权')
+                 .replace('Excludes rental, special bonuses/equity', 'Includes established ordinary rental. Excludes special bonuses/equity') for line in lines]
+        lines += ['', '## ' + say('逐月财产租赁明细', 'Monthly property rental details'), '',
+            say('按已确认的月份、来源地和普通20%税率计算。修缮费发生额与当期扣除额分别列示；未用余额不自动作为本期扣除。住房优惠、预收租金分摊和费用资格不自动推定。',
+                'Uses established monthly allocation, source and ordinary20% rate. Repairs incurred and deductions used are distinct; unused balances are not current deductions. Housing relief, advance-rent allocation and expense eligibility are not inferred.')]
+        for prop in result['property_rentals']['properties']:
+            lines += ['', '### ' + _text(prop['property_id']) + ' / ' + _text(prop['country'].upper()), '']
+            ledger = {r['month']: r for r in prop['repair_ledger']['months']}
+            for row in prop['months']:
+                lines += ['', '#### ' + say('月份 ', 'Month ') + str(row['month']), '',
+                    '| ' + say('项目 | 金额', 'Item | Amount') + ' |', '| --- | --- |']
+                for key, zh, en in [('gross_income','租赁收入','Rental income'),
+                        ('eligible_taxes_and_fees','核定税费扣除','Established taxes and fees'),
+                        ('eligible_sublease_rent','核定转租租金','Established sublease rent'),
+                        ('eligible_new_repairs','新增合格修缮费','New eligible repairs'),
+                        ('established_repair_deduction','本月修缮费扣除','Repair deduction used'),
+                        ('balance_before_statutory_expense','法定费用扣除前余额','Balance before statutory expense'),
+                        ('statutory_expense','法定费用扣除','Statutory expense'),
+                        ('allowed_donation','核定捐赠扣除','Allowed donation'),
+                        ('taxable_income','应税所得','Taxable income'),
+                        ('gross_tax','减免前税额','Tax before reduction'),
+                        ('allowed_tax_reduction','核定减免税额','Allowed tax reduction'),
+                        ('tax_after_reduction','减免后税额','Tax after reduction')]:
+                    lines.append(f'| {_text(say(zh,en))} | {_text(row[key])} |')
+                repair = ledger[row['month']]
+                for key, zh, en in [('opening_eligible_repairs','期初修缮费余额','Opening repair balance'),
+                        ('closing_eligible_repairs','期末修缮费余额','Closing repair balance')]:
+                    lines.append(f'| {_text(say(zh,en))} | {_text(repair[key])} |')
     lines += ['', '## ' + say('保存的官方来源', 'Saved official sources'), '']
     sources = result.get('sources') or ([result['source']] if result.get('source') else [])
     for source in sources:
