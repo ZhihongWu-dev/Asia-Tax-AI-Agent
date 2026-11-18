@@ -1,0 +1,415 @@
+{
+  "status": "reference_inventory_only_no_automatic_rebinding",
+  "legacy_document": "vn.btc.treaty-procedure",
+  "classification": "Catalog note identifies Circular80 consolidated procedure Articles62/70; do not label every reference as Circular205 substantive guidance. Circular89 and Circular95 have distinct replacement scopes.",
+  "sources": {
+    "root/rule/rule.csv": {
+      "sha256": "87dfba901e043ecc68d94bd7b3e2ca7aba9389a62154bc1c7f126760a87077ba",
+      "affected_rows": 31,
+      "rows": [
+        {
+          "id": "vn-cn.outbound_wht.cap_10.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-cn.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-hk.outbound_wht.cap_10.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-hk.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-sg.outbound_wht.cap_5.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-sg.outbound_wht.cap_7.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-sg.outbound_wht.cap_12_5.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-sg.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-jp.outbound_wht.cap_10.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-jp.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-th.outbound_wht.cap_15.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-th.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-ae.outbound_wht.cap_15.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-id.outbound_wht.cap_15.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-in.outbound_wht.cap_10.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-kr.outbound_wht.cap_10.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-kr.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-my.outbound_wht.cap_10.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-my.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-cn.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-hk.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-sg.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-jp.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-th.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-ae.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-id.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-in.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-kr.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-my.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-hk.inbound.credit_underlying",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-sg.inbound.credit_underlying",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        }
+      ]
+    },
+    "root/rule/decision.csv": {
+      "sha256": "362ffc3bd112b775428fe211bc6f90039e9f7b15270fbe1bbd9ac8578c5f4cc8",
+      "affected_rows": 1,
+      "rows": [
+        {
+          "id": "",
+          "references": {
+            "cite_id": "vn.btc.treaty-procedure#p60"
+          }
+        }
+      ]
+    },
+    "stage/rule/rule.csv": {
+      "sha256": "aeb784560a016bd419ac85b33e260d3969ec38ae317f1df43c43440a05c6626b",
+      "affected_rows": 31,
+      "rows": [
+        {
+          "id": "vn-cn.outbound_wht.cap_10.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-cn.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-hk.outbound_wht.cap_10.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-hk.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-sg.outbound_wht.cap_5.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-sg.outbound_wht.cap_7.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-sg.outbound_wht.cap_12_5.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-sg.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-jp.outbound_wht.cap_10.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-jp.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-th.outbound_wht.cap_15.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-th.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-ae.outbound_wht.cap_15.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-id.outbound_wht.cap_15.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-in.outbound_wht.cap_10.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-kr.outbound_wht.cap_10.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-kr.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-my.outbound_wht.cap_10.individual",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-my.anti_abuse.ppt",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure;vn.btc.treaty-procedure#p53;vn.btc.treaty-procedure#p54"
+          }
+        },
+        {
+          "id": "vn-cn.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-hk.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-sg.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-jp.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-th.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-ae.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-id.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-in.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-kr.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-my.inbound.credit",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-hk.inbound.credit_underlying",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        },
+        {
+          "id": "vn-sg.inbound.credit_underlying",
+          "references": {
+            "procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60"
+          }
+        }
+      ]
+    },
+    "stage/rule/decision.csv": {
+      "sha256": "6c031920fa30af228561fbb5767a20b1c1f8bb37e953b94ff27fab2a90d75211",
+      "affected_rows": 1,
+      "rows": [
+        {
+          "id": "",
+          "references": {
+            "cite_id": "vn.btc.treaty-procedure#p60"
+          }
+        }
+      ]
+    }
+  }
+}

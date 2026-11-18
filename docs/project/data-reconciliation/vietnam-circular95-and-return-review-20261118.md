@@ -25,3 +25,11 @@ Visual review of mirror pages1,29–31,49:
 - Article84: effective1July2026, replaces205/2013 and45/2021; treaty application procedures follow the Tax Administration Law and Circular89/2026. The existing Circular89 dossier inventory therefore remains the procedural reference, while the substantive legacy205 citations need replacement review.
 
 Next actions: acquire government-hosted95, review treaty priority and transition provisions, audit all legacy205 bindings, and integrate period/covered-tax/cap evidence in the combined assessment. No assumption that historical205 paragraph numbers can simply be relabelled51–53. Original optimizer remains running against unchanged frozen inputs; this source review does not satisfy full business acceptance.
+
+## Follow-up reference inventory: correction of scope
+
+Scanned root and isolated-stage rule/decision CSVs and current calculator packages. No explicit205/2013 identifier was found in those scanned rule/package/metadata locations. The existing `vn.btc.treaty-procedure` bindings instead identify the2024 consolidation15/VBHN-BTC of tax-administration rules. Its actual archived PDF first page says it consolidates guidance under the Tax Administration Law and Decree126/2020 and continues the prior Gazette issue; this95-page extract starts at Article34. The catalog title describing it simply as treaty guidance is misleading.
+
+The inventory `vietnam-legacy-procedure-bindings-20261118.json` records file hashes and exact references:31 rule rows and1 decision row in each root/stage. This corrects the earlier tentative instruction to audit them as205 bindings. Replace these procedural references against Circular89 according to provision and effective date; separately add Circular95 substantive guidance after review. Do not rename the old document to Circular95 or map its page anchors to the new article numbers. Frozen root inputs were not edited.
+
+Four conventional July government-file paths for Circular95 returned404; no government PDF was obtained or claimed. The mirrored signed-document artifact and official tax-office announcement remain separately identified. This is an evidence provenance limitation, not proof the regulation is absent.
