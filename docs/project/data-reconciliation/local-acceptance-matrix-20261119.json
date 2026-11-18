@@ -50,7 +50,8 @@
         "uae-basis-reconciliation-20261119.json",
         "malaysia-company-workpaper-20261119.json",
         "vietnam-company-reconciliation-20261119.json",
-        "hong-kong-salary-workpaper-20261119.json"
+        "hong-kong-salary-workpaper-20261119.json",
+        "vietnam-employment-reconciliation-20261119.json"
       ],
       "limits": "The static policy inventory is historical and narrower than current runtime; browser tests cover representative workflows, not every income type, residency, special regime or filing obligation."
     },
@@ -111,7 +112,8 @@
     "uae_basis": "1524 income/report regression plus26 final focused tests, TypeScript and2 browser cases passed",
     "malaysia_company": "1535 income/report tests, TypeScript and2 company/individual browser cases passed",
     "vietnam_company": "1541 income/report tests, TypeScript and2 browser cases passed",
-    "hong_kong_salary": "1552 income/report tests, TypeScript and1 browser case passed"
+    "hong_kong_salary": "1552 income/report tests, TypeScript and1 browser case passed",
+    "vietnam_employment": "1557 income/report tests;35 final workflow tests;TypeScript and1 final browser flow passed"
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

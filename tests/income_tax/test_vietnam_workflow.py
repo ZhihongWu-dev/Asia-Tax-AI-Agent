@@ -161,4 +161,54 @@ def test_api_persists_vietnam_provenance_and_result_after_restart(tmp_path,make_
         service.store.engine.dispose()
         service.store = ChatStore(url)
         assert client.get(path+'/runs/'+recorded['id']).json() == recorded
+        report = client.get(path+'/runs/'+recorded['id']+'/report?locale=en')
+        assert report.status_code == 200
+        if make_facts is facts:
+            assert 'employment_reconciliation' in report.text
+            assert source_hash in report.text
+            wrong_basis = make_basis()
+            wrong_basis['chargeable_employment_income'] = '700000000'
+            state_before = client.get(path).json()
+            rejected = client.post(path+'/runs', headers=headers, json=dict(revision=state_before['revision'],
+                request_id=str(uuid4()), basis=wrong_basis))
+            assert rejected.status_code == 422, rejected.text
+            assert client.get(path).json() == state_before
+            assert client.get(path+'/runs/'+recorded['id']).json() == recorded
     service.store.engine.dispose()
+
+
+@pytest.mark.parametrize('field,value', [('claimed_deductions', '0'), ('claimed_deductions', '186000001')])
+def test_employment_saved_deductions_must_reconcile(field, value):
+    data = facts(); data[field] = value
+    with pytest.raises(ValueError, match='deductions differ'):
+        run(data)
+
+
+def test_employment_lower_manual_pay_requires_explicit_exemption():
+    assertion = basis(); assertion['chargeable_employment_income'] = '700000000'
+    with pytest.raises(ValueError, match='saved gross income less'):
+        run(assertion=assertion)
+    assertion['exempt_employment_income'] = '86000000'
+    result = run(assertion=assertion)
+    assert result['employment_reconciliation']['chargeable_employment_income'] == '700000000'
+    assert result['taxable_income'] == '514000000'
+    assert Decimal(result['final_tax']) == Decimal('60800000')
+
+
+def test_employment_all_deductions_reconcile_once():
+    data = facts(); data['claimed_deductions'] = '288600000'
+    assertion = basis()
+    assertion.update(dependent_months=[12], deductible_insurance='24000000', article11_deductions='4200000')
+    result = run(data, assertion)
+    assert result['taxable_income'] == '497400000'
+    assert result['employment_reconciliation']['reconciled_total_deductions'] == '288600000'
+    data['claimed_deductions'] = '102600000'
+    with pytest.raises(ValueError, match='deductions differ'):
+        run(data, assertion)
+
+
+def test_employment_exemption_cannot_exceed_saved_gross():
+    assertion = basis()
+    assertion.update(chargeable_employment_income='0', exempt_employment_income='786000001')
+    with pytest.raises(ValueError, match='saved gross income less'):
+        run(assertion=assertion)

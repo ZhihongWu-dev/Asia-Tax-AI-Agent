@@ -1,0 +1,19 @@
+{
+  "scope": "Vietnam resident full-calendar-year domestic employment saved-basis reconciliation",
+  "changes": [
+    "Declare verified exempt employment pay separately; chargeable pay must equal saved gross less exemptions.",
+    "Saved claimed deductions must equal personal, dependent-month, insurance and article11 deductions exactly once.",
+    "Persist and render reconciliation; original source hashes and immutable reports retained. Invalid calculation leaves saved state and previous result unchanged."
+  ],
+  "validation": {
+    "income_and_reporting": "1557 passed in44.69s before final UI and expanded API assertions",
+    "final_workflow": "35 passed in7.74s including restart/report/source hash and rejected-input state preservation",
+    "typescript": "tsc -b exit0 after reconciliation UI",
+    "browser": "1 passed in28.9s; final reconciliation region, saved and reopened result"
+  },
+  "limits": [
+    "Existing scoped source review and eligibility requirements remain; this change does not determine exemption eligibility or expand foreign/mixed-income support.",
+    "Overall 11-country business acceptance remains incomplete."
+  ],
+  "delivery": "Local only; no remote push or main merge."
+}

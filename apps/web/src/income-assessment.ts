@@ -128,9 +128,9 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
   }
   if (input.jurisdiction === 'vn' && !company && input.residency === 'resident' && period === '2026-01-01/2026-12-31') {
     return [{id:'vn_employment_2026',label:['越南居民工资薪金（2026）','Vietnam resident employment (2026)'],
-      notice:['仅限全年居民境内工资薪金。输入已剔除免税收入、尚未扣除个人扣除的应税工资；保险及第11条扣除须已核实限额和凭证。系统扣除本人全年1.86亿越南盾及每名受抚养人每月620万；同一受抚养月份不得重复申报。不适用经营所得减税，不含境外抵免、非居民或特殊减免。结果尚未进行申报取整。',
-        'Full-calendar-year resident domestic employment only. Enter chargeable pay after exemptions, before personal deductions. Verify insurance and article 11 deduction limits and evidence. The calculation deducts VND 186m for the taxpayer and VND 6.2m per eligible dependent-month; do not duplicate claims. Business-income relief does not apply. Foreign credits, nonresidents and special relief need separate treatment. Result is before return rounding.'],
-      fields:[money('chargeable_employment_income','个人扣除前应税工资','Chargeable pay before personal deductions'),
+      notice:['仅限全年居民境内工资薪金。免税工资须单列，应税工资必须等于已保存工资减免税工资；已保存扣除总额必须包含本人、受抚养人、保险及第11条扣除各一次。输入尚未扣除个人扣除的应税工资；保险及第11条扣除须已核实限额和凭证。系统扣除本人全年1.86亿越南盾及每名受抚养人每月620万；同一受抚养月份不得重复申报。不适用经营所得减税，不含境外抵免、非居民或特殊减免。结果尚未进行申报取整。',
+        'Full-calendar-year resident domestic employment only. Declare exempt pay separately; chargeable pay must equal saved gross pay less exemptions. Saved deductions must include personal, dependent, insurance and article 11 deductions exactly once. Enter chargeable pay before personal deductions. Verify insurance and article 11 deduction limits and evidence. The calculation deducts VND 186m for the taxpayer and VND 6.2m per eligible dependent-month; do not duplicate claims. Business-income relief does not apply. Foreign credits, nonresidents and special relief need separate treatment. Result is before return rounding.'],
+      fields:[money('exempt_employment_income','核定免税工资（无则填0）','Verified exempt employment income (0 if none)'),money('chargeable_employment_income','个人扣除前应税工资','Chargeable pay before personal deductions'),
         {key:'dependent_months',label:['每名受抚养人的合资格月份（逗号分隔，无则填0）','Eligible months per dependent (comma-separated; enter 0 for none)'],monthsList:true},
         money('deductible_insurance','核定可扣除保险','Verified deductible insurance'),money('article11_deductions','核定第11条扣除','Verified article 11 deductions'),prepaid,
         confirm('full_calendar_year_confirmed','已核实全年居民年度评税资格','Full calendar-year resident assessment verified'),

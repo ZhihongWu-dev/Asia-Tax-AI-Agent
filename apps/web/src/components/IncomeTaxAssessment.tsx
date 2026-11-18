@@ -176,6 +176,17 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       </>}
       {result.result.tax_scope==='national_income_and_reconstruction_tax_only'&&<p>{say('此结果仅为日本2026年度国家所得税及复兴特别所得税，不含住民税、事业税。扣除予定纳税通知金额不代表该税款已缴清，欠税另行处理。','This result covers Japan 2026 national income and reconstruction tax only, excluding local inhabitant and enterprise taxes. Deducting notified estimated tax does not mean it has been paid; arrears remain separate.')}</p>}
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{key==='balance_due'&&result.result.tax_scope==='national_income_and_reconstruction_tax_only'?say('本次国家税应补／退额（予定纳税欠税另计）','National return balance (estimated-tax arrears separate)'):label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
+      {!!result.result.employment_reconciliation && <section aria-label={say('越南工资薪金核对','Vietnam employment reconciliation')}>
+        <h4>{say('越南工资薪金核对','Vietnam employment reconciliation')}</h4>
+        <dl>{([
+          ['saved_gross_income',say('已保存工资总额','Saved gross employment income')],
+          ['exempt_employment_income',say('核定免税工资','Verified exempt employment income')],
+          ['chargeable_employment_income',say('个人扣除前应税工资','Chargeable pay before personal deductions')],
+          ['saved_claimed_deductions',say('已保存扣除总额','Saved claimed deductions')],
+          ['reconciled_total_deductions',say('核对后扣除总额','Reconciled total deductions')],
+          ['taxable_income',say('扣除后应税所得','Taxable income after deductions')],
+        ] as const).map(([key,label])=><div key={key}><dt>{label}</dt><dd>{String((result.result.employment_reconciliation as Record<string,unknown>)[key])}</dd></div>)}</dl>
+      </section>}
       {!!result.result.salary_reconciliation && <section aria-label={say('香港薪俸税核对','Hong Kong salaries reconciliation')}>
         <h5>{say('香港薪俸税核对','Hong Kong salaries reconciliation')}</h5>
         <dl>{([

@@ -305,6 +305,7 @@ class VNRental(Basis):
 
 class VNEmployment(Basis):
     policy: Literal['vn_employment_2026']
+    exempt_employment_income: Money = Decimal('0')
     chargeable_employment_income: Money
     full_calendar_year_confirmed: StrictBool
     dependent_months: list[Annotated[int, Field(strict=True, ge=0, le=12)]] = Field(max_length=200)

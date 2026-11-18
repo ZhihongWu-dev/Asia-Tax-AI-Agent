@@ -754,7 +754,7 @@ test('Vietnam employment saves dependent deductions and official source', async 
   await form.getByRole('button',{name:'Save income-tax details'}).click();
   const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
   await calc.getByLabel('Applicable regime').selectOption('vn_employment_2026');
-  for(const [name,value] of [['Chargeable pay before personal deductions','786000000'],['Eligible months per dependent (comma-separated; enter 0 for none)','12,13'],['Verified deductible insurance','24000000'],['Verified article 11 deductions','4200000'],['Prepaid tax for this period','100000000']])
+  for(const [name,value] of [['Verified exempt employment income (0 if none)','0'],['Chargeable pay before personal deductions','786000000'],['Eligible months per dependent (comma-separated; enter 0 for none)','12,13'],['Verified deductible insurance','24000000'],['Verified article 11 deductions','4200000'],['Prepaid tax for this period','100000000']])
     await calc.getByLabel(name,{exact:true}).fill(value);
   await calc.getByLabel('Full calendar-year resident assessment verified').selectOption('true');
   await calc.getByLabel('Pay classification, deductions and nonduplicated dependent-month claims verified').selectOption('true');
@@ -767,6 +767,7 @@ test('Vietnam employment saves dependent deductions and official source', async 
   await calc.getByRole('button',{name:'Calculate and save result'}).click();
   const report=page.getByRole('article',{name:'Saved calculation result'});
   for(const value of ['50040000','-49960000','111600000']) await expect(report).toContainText(value);
+  await expect(report.getByRole('region',{name:'Vietnam employment reconciliation'})).toContainText('325800000');
   await expect(report.getByRole('link',{name:'vn.law.pit2026.vi',exact:true})).toHaveAttribute('href',/congbaocdn.chinhphu.vn/);
   await page.screenshot({path:'test-results/income-tax-vietnam-employment.png',fullPage:true});
   await openIncome(page);

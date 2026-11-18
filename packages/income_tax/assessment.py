@@ -428,9 +428,21 @@ def calculate(case: IncomeTaxCase, basis):
         with localcontext() as ctx:
             ctx.prec = 40
             gross = sum((i.gross_amount for i in case.incomes), Decimal('0'))
-        if basis.chargeable_employment_income > gross:
-            raise ValueError('Chargeable employment income exceeds saved gross income')
+        exempt = args.pop('exempt_employment_income')
+        with localcontext() as ctx:
+            ctx.prec = 40
+            expected_pay = gross - exempt
+        if exempt > gross or basis.chargeable_employment_income != expected_pay:
+            raise ValueError('Chargeable employment income must equal saved gross income less verified exempt employment income')
         result = vietnam_employment.resident_employment_tax(tax_year=2026, resident=True, **args)
+        if case.claimed_deductions != result['total_deductions']:
+            raise ValueError('Employment deductions differ from the saved case; include personal, dependent, insurance and article 11 deductions exactly once')
+        result['employment_reconciliation'] = dict(saved_gross_income=gross,
+            exempt_employment_income=exempt, chargeable_employment_income=expected_pay,
+            saved_claimed_deductions=case.claimed_deductions,
+            reconciled_total_deductions=result['total_deductions'],
+            taxable_income=result['taxable_income'])
+        result['policy_version'] += '-reconciled-20261119'
     elif policy=='th_dividend_2026':
         if args.pop('ordinary_income_classification_verified') is not True:
             raise ValueError('Ordinary domestic income classification must be verified')
