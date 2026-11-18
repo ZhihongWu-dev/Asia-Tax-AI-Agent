@@ -1,0 +1,17 @@
+{
+  "scope": "isolated candidate, not live admission",
+  "references": 662,
+  "missing": [],
+  "empty": [],
+  "blocked": [],
+  "review_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "edde47909d21fe68755b0eb06c712c8e951fe448ba24feb03aadb751189ef987",
+    "review_sha256": "13f50d553fd845dc59bd5ce72805f21db1452a77f25f9e10ab023728ad0d9e5e"
+  },
+  "expanded_rules": 477,
+  "bundle_sha256": "0b2cf1bd55c21171594a62d237b9d7ff9ca691178b9795973624a5a9b7989db5",
+  "status": "candidate_closure_present"
+}
