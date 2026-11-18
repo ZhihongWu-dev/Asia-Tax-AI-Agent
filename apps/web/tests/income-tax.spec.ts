@@ -651,7 +651,10 @@ for (const subject of ['company','individual'] as const) {
     await expect(report).toContainText(subject==='company'?'-49480000':'14000000');
     await expect(report.getByRole('link')).toHaveCount(subject==='company'?6:5);
     if(subject==='company') await expect(report).toContainText('488000000');
-    else await expect(report).toContainText('63000000');
+    else {
+      await expect(report).toContainText('63000000');
+      await expect(report.getByRole('region',{name:'Indonesia personal basis reconciliation'})).toContainText('300000000');
+    }
     await page.screenshot({path:`test-results/income-tax-indonesia-${subject}.png`,fullPage:true});
     await openIncome(page);
     await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(subject==='company'?'-49480000':'14000000');

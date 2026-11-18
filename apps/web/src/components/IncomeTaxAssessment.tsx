@@ -176,6 +176,18 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       </>}
       {result.result.tax_scope==='national_income_and_reconstruction_tax_only'&&<p>{say('此结果仅为日本2026年度国家所得税及复兴特别所得税，不含住民税、事业税。扣除予定纳税通知金额不代表该税款已缴清，欠税另行处理。','This result covers Japan 2026 national income and reconstruction tax only, excluding local inhabitant and enterprise taxes. Deducting notified estimated tax does not mean it has been paid; arrears remain separate.')}</p>}
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{key==='balance_due'&&result.result.tax_scope==='national_income_and_reconstruction_tax_only'?say('本次国家税应补／退额（予定纳税欠税另计）','National return balance (estimated-tax arrears separate)'):label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
+      {!!result.result.personal_basis_reconciliation && <section aria-label={say('印尼个人所得税税基核对','Indonesia personal basis reconciliation')}>
+        <h4>{say('印尼个人所得税税基核对','Indonesia personal basis reconciliation')}</h4>
+        <dl>{([
+          ['saved_gross_income',say('已保存收入','Saved income')],
+          ['verified_deductions',say('核定扣除（不含PTKP）','Verified deductions excluding PTKP')],
+          ['income_after_deductions',say('扣除后所得','Income after deductions')],
+          ['eligible_prior_losses',say('核定可用以前年度亏损','Verified eligible prior losses')],
+          ['prior_losses_used',say('本期使用以前年度亏损','Prior losses used')],
+          ['prior_losses_unused',say('未使用以前年度亏损','Prior losses unused')],
+          ['net_income_before_ptkp',say('PTKP前净所得','Net income before PTKP')],
+        ] as const).map(([key,label])=><div key={key}><dt>{label}</dt><dd>{String((result.result.personal_basis_reconciliation as Record<string,unknown>)[key])}</dd></div>)}</dl>
+      </section>}
       {!!result.result.employment_reconciliation && <section aria-label={say('越南工资薪金核对','Vietnam employment reconciliation')}>
         <h4>{say('越南工资薪金核对','Vietnam employment reconciliation')}</h4>
         <dl>{([

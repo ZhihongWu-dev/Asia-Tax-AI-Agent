@@ -315,9 +315,22 @@ def calculate(case: IncomeTaxCase, basis):
             result['basis_reconciliation'] = reconciliation
             result['policy_version'] += '-reconciled-20261119'
         else:
-            if basis.net_income_before_ptkp>gross:
-                raise ValueError('Net income exceeds saved gross income')
+            with localcontext() as ctx:
+                ctx.prec = 40
+                after_deductions = gross - case.claimed_deductions
+                available = max(Decimal('0'), after_deductions)
+                used_losses = min(available, case.carried_losses)
+                reconciled = available - used_losses
+            if basis.net_income_before_ptkp != reconciled:
+                raise ValueError('Indonesian personal net income must reconcile to saved income, verified deductions and eligible prior losses before PTKP')
             result=indonesia.resident_individual_tax(tax_year=2026,**args)
+            result['personal_basis_reconciliation'] = dict(saved_gross_income=gross,
+                verified_deductions=case.claimed_deductions,
+                income_after_deductions=after_deductions, eligible_prior_losses=case.carried_losses,
+                prior_losses_used=used_losses, prior_losses_unused=case.carried_losses-used_losses,
+                net_income_before_ptkp=reconciled,
+                scope='Established fiscal amounts only; no automatic deduction eligibility or future loss carryforward entitlement')
+            result['policy_version'] += '-reconciled-20261119'
     elif policy=='jp_resident_ordinary_2026':
         if any(i.category not in ('employment','business') or i.source_jurisdiction != 'jp' or
                i.foreign_tax_paid not in (None,0) for i in case.incomes) or case.carried_losses != 0:

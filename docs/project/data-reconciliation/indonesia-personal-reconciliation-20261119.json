@@ -1,0 +1,25 @@
+{
+  "scope": "Indonesia ordinary resident annual individual established-basis reconciliation",
+  "changes": [
+    "Reconcile saved fiscal income, verified deductions and eligible prior losses before PTKP and thousand-IDR truncation.",
+    "Show used/unused prior losses separately without automatic future carryforward approval or classifying excess deductions as carryforward losses.",
+    "Keep PTKP outside saved deductions; existing separate-assessment and ordinary-regime eligibility limits remain."
+  ],
+  "references": [
+    "https://github.com/openfisca/country-template",
+    "https://www.pajak.go.id/index.php/id/mekanisme-penghitungan-pajak-penghasilan-orang-pribadi",
+    "https://pajak.go.id/id/artikel/zakat-atau-sumbangan-keagamaan-dalam-spt-tahunan",
+    "packages/income_tax/id_2026_sources.json"
+  ],
+  "validation": {
+    "income_and_reporting": "1560 passed in33.86s;exit0",
+    "typescript": "tsc -b exit0",
+    "browser": "2 Indonesia company/individual scenarios passed; persistence and new personal reconciliation region asserted"
+  },
+  "limits": [
+    "Input eligibility, fiscal adjustments and eligible loss vintages must already be established.",
+    "No new NPPN, joint/spouse allocation, part-year, final or foreign-income coverage.",
+    "Overall business acceptance remains incomplete."
+  ],
+  "delivery": "Local only; no remote push or main merge."
+}

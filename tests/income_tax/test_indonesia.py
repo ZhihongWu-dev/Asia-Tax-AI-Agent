@@ -111,3 +111,24 @@ def test_adapter_uses_saved_gross_and_rejects_ineligible_cases():
         basis_confirmed=True,basis_explanation='Verified net income, start-of-year PTKP and withheld tax')
     assert Decimal(calculate(IncomeTaxCase(**data),adapter.validate_python(raw))['balance_due'])==14000000
     with pytest.raises(ValueError): calculate(IncomeTaxCase(**data),adapter.validate_python({**raw,'net_income_before_ptkp':'300000001'}))
+
+
+@pytest.mark.parametrize('deductions,losses,net,tax', [
+    ('10000000','20000000','270000000','25050000'),
+    ('10000000','400000000','0','0'),
+    ('310000000','0','0','0'),
+])
+def test_personal_saved_deductions_and_losses_reconcile_before_ptkp(deductions,losses,net,tax):
+    data=dict(subject='individual',jurisdiction='id',period_start='2026-01-01',period_end='2026-12-31',
+        currency='IDR',residency='resident',claimed_deductions=deductions,carried_losses=losses,facts_confirmed=True,
+        incomes=[dict(category='business',source_jurisdiction='id',gross_amount='300000000',description='Verified ordinary fiscal receipts')])
+    raw=dict(policy='id_resident_2026',net_income_before_ptkp=net,ptkp_status='K/1',
+        ptkp_entitlement_confirmed=True,ordinary_annual_treatment_confirmed=True,prepaid_tax='0',
+        basis_confirmed=True,basis_explanation='Established ordinary fiscal deductions and eligible prior loss vintages')
+    adapter=TypeAdapter(Assessment)
+    result=calculate(IncomeTaxCase(**data),adapter.validate_python(raw))
+    assert Decimal(result['final_tax'])==Decimal(tax)
+    assert result['personal_basis_reconciliation']['net_income_before_ptkp']==net
+    assert result['ptkp_allowance']=='63000000'
+    with pytest.raises(ValueError,match='must reconcile'):
+        calculate(IncomeTaxCase(**data),adapter.validate_python({**raw,'net_income_before_ptkp':'299999999'}))
