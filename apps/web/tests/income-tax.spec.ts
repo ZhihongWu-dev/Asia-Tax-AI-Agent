@@ -1,5 +1,46 @@
 import { test, expect } from '@playwright/test';
 
+test('Thailand multiple countries and pools reconcile split remittances',async({page})=>{
+  test.setTimeout(60000);
+  const form=await openIncome(page);
+  for(const [name,value] of [['Taxpayer','individual'],['Filing jurisdiction','th'],['Tax residency','resident']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Claimed deductions (blank if unknown)','160000'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+  await form.getByRole('button',{name:'Add income',exact:true}).click();
+  for(const [n,country,category,gross,tax] of [[0,'vn','employment','600000','120000'],[1,'cn','dividend','400000','40000']] as const) {
+    const row=form.getByRole('group',{name:`Income ${n+1}`,exact:true});
+    await row.getByRole('combobox',{name:'Income category',exact:true}).selectOption(category);
+    await row.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption(country);
+    for(const [name,value] of [['Gross income',gross],['Foreign tax paid (blank if unknown)',tax],['Income description','Original pool tax and current-year traced receipts']])await row.getByLabel(name,{exact:true}).fill(value);
+  }
+  await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+  const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await calc.getByLabel('Applicable regime').selectOption('th_foreign_income_2026');
+  for(const [name,value] of [['Verified net taxable income after excluded receipts and saved deductions','840000'],['Thai period prepayments (exclude foreign tax)','0'],['Income 1: original earnings pool count','2'],['Income 2: original earnings pool count','1']])await calc.getByLabel(name,{exact:true}).fill(value);
+  for(const [n,j,id,original,tax,receipts] of [[1,1,'VN-A','300000','60000',['150000','150000']],[1,2,'VN-B','300000','60000',['300000']],[2,1,'CN-A','800000','40000',['400000']]] as const) {
+    const prefix=`Income ${n}, pool ${j}: `;
+    for(const [name,value] of [['unique evidence / earnings pool ID',id],['total original foreign earnings',original],['foreign income tax paid on original earnings',tax],['tax eligible under verified treaty taxing rights and source caps',tax],['income remitted in prior years','0'],['treaty eligibility, tax evidence and consistent THB valuation basis (20+ characters)','Verified distinct source tax certificate, treaty rights and consistent THB valuation'],['current-year remittance count',String(receipts.length)]])await calc.getByLabel(prefix+name,{exact:true}).fill(value);
+    for(let k=0;k<receipts.length;k++)for(const [name,value] of [['income amount (exclude capital)',receipts[k]],['original earnings date','2024-06-01'],['remittance date',k===0?'2026-06-01':'2026-07-01'],['days in Thailand in the earnings year','180']])await calc.getByLabel(prefix+`remittance ${k+1}: `+name,{exact:true}).fill(value);
+  }
+  for(const name of ['Ordinary annual treatment and special-regime exclusions verified','Section40 income types, expenses and deductions verified','Disjoint pools, remittance tracing, FX and treaty credit eligibility verified','Saved foreign tax is the original pool tax before remittance apportionment'])await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+  await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified all country totals, distinct earnings pools, prior remittances and tax evidence.');
+  await calc.getByLabel('Income 1, pool 2: unique evidence / earnings pool ID',{exact:true}).fill('VN-A');
+  await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
+  await expect(calc.getByRole('alert')).toContainText('unique pool IDs');
+  await calc.getByLabel('Income 1, pool 2: unique evidence / earnings pool ID',{exact:true}).fill('VN-B');
+  await calc.getByRole('checkbox').check();
+  const response=page.waitForResponse(r=>r.url().includes('/income-tax/runs')&&r.request().method()==='POST');
+  await calc.getByRole('button',{name:'Calculate and save result'}).click();
+  const saved=await response;expect(saved.status()).toBe(200);
+  const payload=await saved.json();expect(payload.basis.pools).toHaveLength(3);expect(payload.basis.pools[0].remittances).toHaveLength(2);
+  const report=page.getByRole('article',{name:'Saved calculation result'});
+  await expect(report.locator('dl > div').filter({hasText:/^Allowed tax credits/}).locator('dd')).toHaveText(/^69800(?:\.0+)?$/);
+  await expect(report.locator('dl > div').filter({hasText:/^Tax for this assessment/}).locator('dd')).toHaveText(/^13200(?:\.0+)?$/);
+  await expect(report.getByRole('region',{name:'Source country VN',exact:true})).toContainText('49800');
+  await expect(report.getByRole('region',{name:'Source country CN',exact:true})).toContainText('20000');
+  await openIncome(page);
+  await expect(page.getByRole('region',{name:'Income pool VN-B',exact:true})).toBeVisible();
+});
+
 for(const earned of ['2024-06-01','2023-06-01'])test(`Thailand foreign remittance saves and reopens ${earned}`,async({page})=>{
   const form=await openIncome(page);
   for(const [name,value] of [['Taxpayer','individual'],['Filing jurisdiction','th'],['Tax residency','resident'],['Income category','employment'],['Income source jurisdiction','vn']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
