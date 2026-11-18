@@ -1,6 +1,7 @@
 # Vietnam resident business income: source review and implementation gap
 
-Status: calculation component and saved-case API implemented; UI integration pending.
+Status: calculation component, saved-case API and bilingual UI implemented;
+ordinary domestic business browser acceptance passed. Broader business scope remains open.
 
 Archived government original `database/raw/vn/vn.decree68.2026.vi.pdf`:
 https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/3/68-ndcp.signed.pdf
@@ -63,7 +64,24 @@ Revenue deductions or profit expenses must reconcile to saved deductions.
 Foreign income/credits, unsupported periods, residency, subject and carried
 losses are rejected. Thirteen additional contract/API tests passed, including
 result persistence after storage restart, request replay and invalidation after
-facts change (43 focused tests in total). Frontend intake remains pending.
+facts change (43 focused tests in total).
+
+The frontend now collects a classification for each saved income and either
+allocated revenue deductions or verified profit-method expenses. Changing the
+method clears confirmation and omits inapplicable fields from the API basis.
+The result displays activity amounts, annual relief, method-continuity notices
+and the five preserved source references. Two browser tests passed for mixed
+digital-content/goods income: revenue-method tax 3,500,000 VND and profit-method
+tax 105,000,000 VND, including save/reload and Chinese display. The production
+frontend build passed. Initial test failures were exact label locators for
+select elements; accessible-role locators resolved them without product changes.
+The combined income-tax browser regression then passed all 59 tests in 4.3
+minutes (`income-tax.spec.ts`, `income-tax-coverage.spec.ts`, and
+`vietnam-business.spec.ts`), using the local API, SQLite and fixture authentication.
+This is local integration evidence, not hosted two-account/provider acceptance.
+React's official preserving-and-resetting-state and thinking-in-react examples
+in https://github.com/reactjs/react.dev informed the existing controlled-form
+integration; no external code or dependency was adopted.
 
 Development reference: https://github.com/openfisca/openfisca-core (period-specific
 rules/tests; AGPL-3.0). No source code or new dependency was adopted; existing
@@ -71,8 +89,6 @@ project Decimal arithmetic and source snapshots were used.
 
 Required next work:
 
-- Add the personal-business frontend with classification and deduction fields,
-  method/evidence review and saved-result recovery, then run browser acceptance.
 - Add property-rental handling and reconcile mixed property/ordinary-business
   cases, special exemptions and foreign business separately; the component's
   explicit scope excludes these rather than assigning them ordinary rates.
@@ -80,4 +96,5 @@ Required next work:
   the calculation component requires verification but does not establish it.
 
 No active catalog or frozen planner input changed. The new API policy and
-calculation component do not complete business acceptance or frontend delivery.
+calculation component and UI do not complete broader business acceptance or
+hosted delivery.

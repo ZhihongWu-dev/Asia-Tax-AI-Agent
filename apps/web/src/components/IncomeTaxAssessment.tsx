@@ -10,6 +10,8 @@ import KoreaSalaryResult from './KoreaSalaryResult';
 import { thaiDividendBasis } from '../thailand-dividend-assessment';
 import { thaiForeignBasis } from '../thailand-foreign-assessment';
 import ThailandForeignResult from './ThailandForeignResult';
+import { vietnamBusinessBasis } from '../vietnam-business-assessment';
+import VietnamBusinessResult from './VietnamBusinessResult';
 
 export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
   current: Case; disabled: boolean; onUpdate: (doc: Case) => void;
@@ -40,6 +42,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
         basis[field.key] = months;
       } else basis[field.key] = field.boolean ? values[field.key] === 'true' : field.integer ? Number(values[field.key]) : values[field.key];
     }
+    if (policy.id==='vn_business_2026') basis=vietnamBusinessBasis(basis,current.income_tax!);
     if (policy.id==='vn_personal_transfer_2026') {
       basis.transfers=current.income_tax!.incomes.map((_item,n)=>{
         const prefix=`transfer_${n}_`, method=values[prefix+'method'];
@@ -110,6 +113,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       <h4>{say('已保存计算结果','Saved calculation result')}</h4>
       {disabled && <p>{say('此结果对应上次保存的资料，不包含当前未保存的修改。','This result uses the last saved facts and excludes unsaved changes.')}</p>}
       <p>{new Date(result.created_at).toLocaleString()} · {String(result.result.currency)}</p>
+      {result.result.policy_version==='vn-resident-business-2026-2026-11-18'&&<VietnamBusinessResult result={result.result} index={index} />}
       {result.result.stage==='resident_foreign_income_assessment_before_rounding'&&<ThailandForeignResult result={result.result} index={index} />}
       {result.result.tax_scope==='ordinary_national_and_local_corporate_income_tax'&&<KoreaCompanyResult result={result.result} index={index} />}
       {result.result.tax_scope==='ordinary_salary_employer_national_and_local_settlement'&&<KoreaSalaryResult result={result.result} index={index} />}
