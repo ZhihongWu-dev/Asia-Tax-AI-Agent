@@ -101,3 +101,37 @@ def test_full_relief_leaves_no_foreign_credit_capacity():
     r=calculate(p)
     assert r['current_credit_used']==0
     assert r['country_limits'][0]['current_excess']==17000
+
+
+def test_current_tax_first_then_oldest_valid_credit_without_cross_country_use():
+    p=paper();p['carryforward_history_verified']=True
+    p['countries'][2]['prior_excess']=[dict(origin_year=2025,amount='10000'),dict(origin_year=2020,amount='600'),dict(origin_year=2021,amount='9000')]
+    r=calculate(p);hk=r['country_limits'][1]
+    assert hk['current_credit_used']==500 and hk['prior_credit_used']==8500
+    assert hk['allowed_credit']==9000 and hk['remaining_credit_capacity']==0
+    expired,last,new=hk['carryforward_history']
+    assert expired['expired_amount']==600 and expired['credit_used']==0
+    assert last['credit_used']==8500 and last['expires_after_current_year']==500
+    assert last['next_year_carryforward']==0
+    assert new['credit_used']==0 and new['next_year_carryforward']==10000
+    assert r['allowed_credit']==26000
+
+
+@pytest.mark.parametrize('issue',['duplicate','current','future','unverified','domestic'])
+def test_invalid_credit_history_rejected(issue):
+    p=paper();p['carryforward_history_verified']=True
+    p['countries'][1]['prior_excess']=[dict(origin_year=2021,amount='1')]
+    if issue=='duplicate':p['countries'][1]['prior_excess']*=2
+    elif issue=='current':p['countries'][1]['prior_excess'][0]['origin_year']=2026
+    elif issue=='future':p['countries'][1]['prior_excess'][0]['origin_year']=2027
+    elif issue=='unverified':p['carryforward_history_verified']=False
+    else:p['countries'][0]['prior_excess']=p['countries'][1]['prior_excess']
+    with pytest.raises(ValueError):calculate(p)
+
+
+def test_country_with_no_current_income_keeps_unexpired_credit_without_using_it():
+    p=paper();p['carryforward_history_verified']=True
+    p['countries'].append(dict(country='kr',comprehensive_income_amount='0',business_taxable_income='0',other_category_chinese_tax='0',eligible_foreign_tax_paid='0',prior_excess=[dict(origin_year=2025,amount='300')]))
+    kr=calculate(p)['country_limits'][-1]
+    assert kr['allowed_credit']==0
+    assert kr['carryforward_history'][0]['next_year_carryforward']==300

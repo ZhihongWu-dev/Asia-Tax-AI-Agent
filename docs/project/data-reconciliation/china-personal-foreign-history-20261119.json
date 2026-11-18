@@ -1,0 +1,27 @@
+{
+  "status": "internal_credit_history_verified",
+  "validation": {
+    "passed": 35,
+    "seconds": 0.77,
+    "exit_code": 0
+  },
+  "rules": [
+    "Current eligible tax first; prior balances use remaining same-country cap",
+    "Prior balances allocated oldest eligible first, explicit allocation_order in output",
+    "Original years retained; no reset of five-year expiry",
+    "Expired before2026, expires at end2026, and next-year carryforward separately reported",
+    "Prior-only countries preserve unused eligible balances",
+    "Duplicate/current/future origin years and unverified history rejected"
+  ],
+  "sources": [
+    "cn.reg.iit Article21",
+    "cn.cs.2020-03 Article6",
+    "cn.personal-foreign-credit-form"
+  ],
+  "remaining": [
+    "Saved income and annual category tax reconciliation",
+    "API persistence and bilingual UI",
+    "Actual business acceptance"
+  ],
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}

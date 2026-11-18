@@ -153,7 +153,8 @@
     "nested_sources_current": "1696 income/report tests passed in38.69s;144 successful calculations across34 policies;111 distinct source records,0 missing files or hash mismatches. Includes China foreign direct-credit workflow.",
     "china_foreign_edits": "3 extended browser scenarios passed in56.2s and TypeScript passed. Duplicate prior countries rejected; removed country excluded from recalculation/export; method switch and renewed confirmation verified.",
     "china_personal_foreign_limits": "23 component tests passed; distinct comprehensive/business allocation denominators and per-country credit caps. Not connected to saved cases or UI; personal foreign-income workflow remains incomplete.",
-    "china_personal_foreign_reliefs": "28 component cases passed; official-form category reliefs are deducted before country allocation, excessive reliefs rejected. Workflow integration still pending."
+    "china_personal_foreign_reliefs": "28 component cases passed; official-form category reliefs are deducted before country allocation, excessive reliefs rejected. Workflow integration still pending.",
+    "china_personal_foreign_history": "35 component tests passed; current-year priority, same-country historical credits, original-year expiry and prior-only countries verified. Saved workflow/API/UI pending."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

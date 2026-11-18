@@ -13,6 +13,13 @@
       "url": "https://shanghai.chinatax.gov.cn/bsfw/xzzx/bgxz/sbzsl/202302/t466192.html",
       "file": "database/raw/cn/cn.personal-foreign-credit-form.html",
       "sha256": "cf56e293b064eb159512bec6ba9d700aca726d406493e888c19ca9c4d391fff7"
+    },
+    {
+      "doc_id": "cn.reg.iit",
+      "title": "中华人民共和国个人所得税法实施条例",
+      "url": "https://fgk.chinatax.gov.cn/zcfgk/c100010/c5194444/content.html",
+      "file": "database/raw/cn/cn.reg.iit.html",
+      "sha256": "e5f3ca819c7638df993babe537b9c91907b87bf5ae8f0213c8fa9fef4019a221"
     }
   ]
 }
