@@ -11,6 +11,7 @@ from .arithmetic import Band, ZERO, amount, marginal_tax
 
 POLICY_VERSION = 'hk-2025-26-2026-11-16'
 SOURCES = json.loads(Path(__file__).with_name('hk_2025_26_sources.json').read_text(encoding='utf-8'))['sources']
+PROFITS_BASIS_SOURCES = json.loads(Path(__file__).with_name('hk_profits_basis_sources.json').read_text(encoding='utf-8'))['sources']
 SALARIES_BANDS = tuple(Band(None if cap is None else Decimal(cap), Decimal(rate))
     for cap,rate in [('50000','.02'),('100000','.06'),('150000','.10'),('200000','.14'),(None,'.17')])
 

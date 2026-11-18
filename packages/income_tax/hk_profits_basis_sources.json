@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "doc_id": "hk.ird.corporation-notes.20261119",
+      "title": "Hong Kong corporation return notes: assessable profits before brought-forward losses",
+      "url": "https://www.ird.gov.hk/eng/tax/bir51e_notes.htm",
+      "file": "database/raw/hk/hk.ird.corporation-notes.20261119.html",
+      "sha256": "3ffc9155c08fa019a82c1a982eebbe23608d09caab41ad8198d6212add487a95"
+    },
+    {
+      "doc_id": "hk.ird.profits-overview.20261119",
+      "title": "Hong Kong profits tax: statutory deductions and treatment of losses",
+      "url": "https://www.ird.gov.hk/eng/tax/bus_pft.htm",
+      "file": "database/raw/hk/hk.ird.profits-overview.20261119.html",
+      "sha256": "813d308fed75d0cd75b5a151ddc459f5aa4abe62a479201adeb0563673444a91"
+    }
+  ]
+}

@@ -18,7 +18,8 @@
       "state": "local_regression_passed",
       "evidence": [
         "local-cross-module-regression-20261119.json",
-        "optimizer-final-validation-20261119.json"
+        "optimizer-final-validation-20261119.json",
+        "local-regression-after-reconciliation-20261119.json"
       ],
       "limits": "121 browser tests, complete v5 golden/checker suite and offline backend regression. Real hosted authentication/provider end-to-end acceptance is not established. Original/v4 comparison jobs remain live."
     },
@@ -44,7 +45,8 @@
         "thailand-company-reconciliation-20261119.json",
         "japan-company-reconciliation-20261119.json",
         "indonesia-company-reconciliation-20261119.json",
-        "singapore-company-reconciliation-20261119.json"
+        "singapore-company-reconciliation-20261119.json",
+        "hong-kong-profits-reconciliation-20261119.json"
       ],
       "limits": "The static policy inventory is historical and narrower than current runtime; browser tests cover representative workflows, not every income type, residency, special regime or filing obligation."
     },
@@ -87,8 +89,8 @@
     }
   ],
   "latest_checks": {
-    "backend": "2496 passed, 4 environment skips, 27 integration deselections; exit 0",
-    "browser": "121 passed, zero skips; exit 0",
+    "backend": "2534 passed, 4 environment skips, 27 integration deselections at runtime6570d92; exit0",
+    "browser": "119 passed plus 2 stale-title failures in full run; both fixed and targeted rerun passed; see separate evidence",
     "korean_archive": "1 targeted test passed after backend collection; 14 exact originals, 12 newly restored",
     "thai_source_snapshots": "20 focused tests and 1455 income-tax tests passed; four original hashes verified in persisted/report flow",
     "china_business_sources": "1466 income/report tests passed; final provenance metadata verified by40 focused tests",
@@ -100,7 +102,8 @@
     "thai_company_reconciliation": "1479 income/report tests;20 final focused;2 browser flows;TypeScript passed",
     "japan_company_reconciliation": "1486 regression tests;49 final focused;2 browser;TypeScript passed",
     "indonesia_company_reconciliation": "1494 income/report tests;2 browser flows;TypeScript passed",
-    "singapore_company_reconciliation": "1501 income/report tests;1 browser scenario;TypeScript passed"
+    "singapore_company_reconciliation": "1501 income/report tests;1 browser scenario;TypeScript passed",
+    "hong_kong_profits": "1515 income/report tests, TypeScript and 2 browser cases passed after basis reconciliation"
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

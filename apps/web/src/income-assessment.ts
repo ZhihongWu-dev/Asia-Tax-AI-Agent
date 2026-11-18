@@ -264,7 +264,7 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
     const profits: IncomePolicy = {id:'hk_profits_2025_26',label:['香港利得税（2025/26）','Hong Kong profits tax (2025/26)'],
       notice:['仅限普通公司或独资业务。须核对两级制资格、关联实体选择及排除条件；不包含合伙分配、个人入息课税或境外抵免。',
         'Ordinary corporation or sole proprietor only. Verify two-tier eligibility, connected-entity nomination and exclusions. Excludes partnerships, personal assessment and foreign credits.'],
-      fields:[money('assessable_profits','核定应评税利润','Established assessable profits'),{key:'business_form',label:['业务形式','Business form'],options: company ? [['corporation',['公司','Corporation']]] : [['sole_proprietor',['独资','Sole proprietor']]]},confirm('two_tier_eligible','符合两级制资格','Eligible for two-tier rates'),ordinary,hkPrepaid]};
+      fields:[money('assessable_profits','核定抵亏后计税净额','Established net taxable profits after loss relief'),money('taxable_additions','未计入已保存收入的应税调增','Taxable additions not included in saved income'),money('excluded_income','已计入收入的核定剔除金额','Established exclusions included in income'),{key:'business_form',label:['业务形式','Business form'],options: company ? [['corporation',['公司','Corporation']]] : [['sole_proprietor',['独资','Sole proprietor']]]},confirm('two_tier_eligible','符合两级制资格','Eligible for two-tier rates'),ordinary,hkPrepaid]};
     if (company) return [profits];
     if (input.incomes.every(i=>i.category==='rental' && i.source_jurisdiction==='hk')) return [{
       id:'hk_property_2025_26',label:['香港物业税（2025/26）','Hong Kong property tax (2025/26)'],

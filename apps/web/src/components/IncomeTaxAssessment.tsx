@@ -114,6 +114,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
         </select></label>
         {policy && <><p>{policy.notice[index]}</p><p>{say('金额币种：','Currency: ')}{current.income_tax.currency}</p>
           {['cn_company_2026','cn_small_company_2026'].includes(policy.id) && <p>{say('企业税基核对：保存的收入须为完成税务口径调整的收入总额，不是会计利润。不征税收入和免税收入须已包含在收入总额中、互不重叠，且不能再次计入扣除。保存的扣除及以前年度亏损须已核定资格、限额和年度。未用亏损不代表已获准结转；税基必须与这些资料计算的余额一致。','Company basis reconciliation: saved income is established statutory total income, not accounting profit. Non-taxable and exempt amounts must already be included, must not overlap, and must not also be claimed as deductions. Verify deduction eligibility, limits and loss vintages. Unused losses do not establish carryforward approval. The tax base must match the balance calculated from these facts.')}</p>}
+          {policy.id==='hk_profits_2025_26' && <p>{say('利得税核对：已保存收入加应税调增，减核定剔除和扣除，得到抵亏前应评税利润或经调整亏损；再抵扣核定可用的以前年度亏损。扣除须已完成捐款限额、折旧免税额及来源规则审核，不含会计折旧、不允许费用或已单列的亏损。剔除金额不能重复列入扣除。未用亏损不代表获准结转。','Profits reconciliation: saved income plus taxable additions, less established exclusions and deductions, gives assessable profits or adjusted loss before prior-loss set-off. Then apply verified eligible prior losses. Establish donation limits, statutory allowances and source rules first; saved deductions exclude accounting depreciation, disallowed costs and separately entered losses. Do not duplicate exclusions as deductions. Unused losses do not establish carryforward entitlement.')}</p>}
           {policy.id==='my_individual_2026' && current.income_tax.residency==='resident' && <p>{say('居民核对表：已保存的扣除总额须等于各来源费用扣除、资本免税额、总所得扣除及个人减免之和（不含以前年度亏损）。总所得扣除须先按法定顺序及限额核定；未使用余额不代表已获准结转。','Resident workpaper: saved claimed deductions must equal source deductions, statutory allowances, total-income deductions and personal reliefs, excluding prior losses. Establish total-income deductions in statutory order and within their limits first. Unused balances do not establish carryforward entitlement.')}</p>}
           <div className="facts-field-grid">{policy.fields.filter(field=>!field.showWhen || values[field.showWhen[0]]===field.showWhen[1]).map(field=><label key={field.key}>{field.label[index]}
             {field.boolean || field.options ? <select required value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)}>
@@ -165,6 +166,20 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       </>}
       {result.result.tax_scope==='national_income_and_reconstruction_tax_only'&&<p>{say('此结果仅为日本2026年度国家所得税及复兴特别所得税，不含住民税、事业税。扣除予定纳税通知金额不代表该税款已缴清，欠税另行处理。','This result covers Japan 2026 national income and reconstruction tax only, excluding local inhabitant and enterprise taxes. Deducting notified estimated tax does not mean it has been paid; arrears remain separate.')}</p>}
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{key==='balance_due'&&result.result.tax_scope==='national_income_and_reconstruction_tax_only'?say('本次国家税应补／退额（予定纳税欠税另计）','National return balance (estimated-tax arrears separate)'):label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
+      {!!result.result.hong_kong_profits_reconciliation && <section aria-label={say('香港利得税税基核对','Hong Kong profits basis reconciliation')}>
+        <h5>{say('香港利得税税基核对','Hong Kong profits basis reconciliation')}</h5>
+        <dl>{([
+          ['saved_receipts',say('已保存收入','Saved income')],
+          ['taxable_additions',say('应税调增','Taxable additions')],
+          ['excluded_income',say('核定剔除','Established exclusions')],
+          ['allowed_deductions',say('核定扣除','Established deductions')],
+          ['assessable_profits_before_losses',say('抵亏前应评税利润','Assessable profits before loss relief')],
+          ['adjusted_current_loss',say('本期经调整亏损','Current adjusted loss')],
+          ['prior_losses_used',say('实际抵扣以前年度亏损','Prior losses used')],
+          ['prior_losses_unused',say('未用以前年度亏损（非结转批准）','Unused prior losses (not carryforward approval)')],
+          ['net_taxable_profits',say('抵亏后计税净额','Net taxable profits after loss relief')],
+        ] as const).map(([key,label])=><div key={key}><dt>{label}</dt><dd>{String((result.result.hong_kong_profits_reconciliation as Record<string,unknown>)[key])}</dd></div>)}</dl>
+      </section>}
       {!!result.result.singapore_basis_reconciliation && <section aria-label={say('新加坡减免前税基核对','Singapore pre-exemption basis reconciliation')}>
         <h5>{say('新加坡减免前税基核对','Singapore pre-exemption basis reconciliation')}</h5>
         <dl>{([

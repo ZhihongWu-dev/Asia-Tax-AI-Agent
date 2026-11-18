@@ -1,0 +1,22 @@
+{
+  "scope": "Ordinary Hong Kong company and sole-proprietor profits basis reconciliation",
+  "behavior": [
+    "Saved receipts plus explicit taxable additions minus established exclusions and saved allowable deductions produces current assessable profits or adjusted loss before prior losses.",
+    "Eligible prior losses are separately limited to positive assessable profits. The resulting net taxable profits must equal the supplied rate base.",
+    "Current loss and unused prior loss remain separate; neither is a future carryforward award.",
+    "Persisted results include the reconciliation and two original IRD source snapshots; API rejects inconsistent bases without changing saved state."
+  ],
+  "compatibility": "Legacy input/result field assessable_profits remains the historical rate-base amount for snapshot/request compatibility. The UI explicitly labels this input net taxable profits after loss relief; hong_kong_profits_reconciliation provides legally distinct current assessable profits and net taxable profits. New optional adjustment fields default to zero. Existing saved snapshots are not rewritten.",
+  "validation": {
+    "income_and_report_tests": "1515 passed in 38.81s; exit 0",
+    "typescript": "tsc -b exit 0",
+    "browser": "2 passed in 30.1s; company and sole proprietor with 1.5m receipts and 0.5m deductions, saved result reopened",
+    "source_integrity": "Both archived SHA256 values verified in report persistence test",
+    "rejection": "Changed saved deduction/loss and invalid tax base rejected; API case revision/result preserved"
+  },
+  "limits": [
+    "Eligibility and limits for statutory allowances/donations, source/FSIE and loss relief still require established supporting schedules.",
+    "Does not add partnership allocation, personal assessment, foreign credits or provisional tax.",
+    "Other jurisdictions and full business acceptance remain incomplete."
+  ]
+}

@@ -42,8 +42,8 @@ const scenarios:Scenario[]=[
   {name:'Singapore corporate partial exemption',country:'sg',subject:'company',category:'business',start:'2025-01-01',end:'2025-12-31',gross:'1000000',deductions:'900000',policy:'sg_company_ya2026',
     money:[['Normal-rate chargeable income','100000'],['Allowed tax set-off','0']],choices:[['Ordinary regime and exclusions checked','true'],['Exemption scheme','partial'],['Eligible for start-up exemption','false'],['Eligible for this YA cash grant','false']],
     resultLabel:'Tax after relief',expected:'4037.5'},
-  ...(['company','individual'] as const).map(subject=>({name:`Hong Kong ${subject} profits`,country:'hk',subject,category:'business',start:'2025-04-01',end:'2026-03-31',gross:'1000000',policy:'hk_profits_2025_26',
-    money:[['Established assessable profits','1000000'],['Prepaid final tax for this assessment','0']] as [string,string][],
+  ...(['company','individual'] as const).map(subject=>({name:`Hong Kong ${subject} profits`,country:'hk',subject,category:'business',start:'2025-04-01',end:'2026-03-31',gross:'1500000',deductions:'500000',policy:'hk_profits_2025_26',
+    money:[['Established net taxable profits after loss relief','1000000'],['Taxable additions not included in saved income','0'],['Established exclusions included in income','0'],['Prepaid final tax for this assessment','0']] as [string,string][],
     choices:[['Business form',subject==='company'?'corporation':'sole_proprietor'],['Eligible for two-tier rates','true'],['Ordinary regime and exclusions checked','true']] as [string,string][],
     resultLabel:'Tax for this assessment',expected:subject==='company'?'79500':'72000'})),
   {name:'Hong Kong property separate assessment',country:'hk',subject:'individual',category:'rental',start:'2025-04-01',end:'2026-03-31',gross:'300000',policy:'hk_property_2025_26',deductions:'30000',
@@ -87,6 +87,7 @@ for(const s of scenarios)test(`${s.name} saves and reopens a sourced result`,asy
   const trailingZeros=s.expected.includes('.')?'0*':'(?:\\.0+)?';
   const expectedAmount=new RegExp(`^${s.expected.replace('.','\\.')}${trailingZeros}$`);
   await expect(amount).toHaveText(expectedAmount);
+  if(s.policy==='hk_profits_2025_26') await expect(report.getByRole('region',{name:'Hong Kong profits basis reconciliation'})).toContainText('1000000');
   if(s.policy==='sg_company_ya2026') await expect(report.getByRole('region',{name:'Singapore pre-exemption basis reconciliation'})).toContainText('900000');
   if(s.policy==='hk_property_2025_26') {
     await expect(report.getByRole('region',{name:'Per-property results'})).toContainText('216000');

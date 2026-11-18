@@ -91,7 +91,10 @@ class SGEmployment(Basis):
 
 class HKProfits(Basis):
     policy: Literal['hk_profits_2025_26']
+    # Legacy field name: the tax-rate base after loss relief.
     assessable_profits: Money
+    taxable_additions: Money = Decimal('0')
+    excluded_income: Money = Decimal('0')
     business_form: Literal['corporation', 'sole_proprietor']
     two_tier_eligible: StrictBool
     ordinary_regime_confirmed: StrictBool

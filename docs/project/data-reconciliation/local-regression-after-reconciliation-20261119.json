@@ -1,0 +1,35 @@
+{
+  "runtime_head": "6570d92",
+  "backend": {
+    "passed": 2534,
+    "skipped": 4,
+    "deselected": 27,
+    "exit_code": 0,
+    "seconds": 828.64,
+    "junit_file": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\local-regression-after-reconciliation-20261119.xml",
+    "junit_sha256": "e7c694b611066f1b6de2456467e1fe97d828f7287affdc9a4c14b6449bee07bc",
+    "junit_attributes": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "4",
+      "tests": "2538",
+      "time": "828.288",
+      "timestamp": "2026-11-19T03:56:18.129781+08:00",
+      "hostname": "Wuzhihong"
+    },
+    "skips": [
+      "Legacy attachment converter unavailable",
+      "Three PostgreSQL locking/transaction semantics checks require PostgreSQL"
+    ]
+  },
+  "browser": {
+    "passed": 119,
+    "failed": 2,
+    "exit_code": 1,
+    "reported_duration": "10.0m",
+    "resolution": "Both stale Thai citation-title assertions corrected and passed targeted rerun at e9c3b06; runtime unchanged",
+    "evidence": "thai-source-title-browser-recheck-20261119.json"
+  },
+  "limits": "Local fixture authentication/providers and pinned engine. Excludes cloud/live integrations and does not establish comprehensive business acceptance. Subsequent Hong Kong reconciliation changes require their own verification."
+}

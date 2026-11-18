@@ -1,4 +1,5 @@
 """Route explicit bases against a confirmed immutable case snapshot."""
+from copy import deepcopy
 from decimal import Decimal, localcontext
 from pydantic import TypeAdapter
 from packages.contracts.income_tax import IncomeTaxCase
@@ -190,7 +191,15 @@ def calculate(case: IncomeTaxCase, basis):
             raise ValueError('Profits policy cannot cover saved employment income; separate the tax schedules')
         if case.subject == 'individual' and any(i.category == 'rental' for i in case.incomes):
             raise ValueError('Individual rental income requires property assessment or verified business classification')
+        from .hong_kong_reconciliation import reconcile
+        reconciliation = reconcile(case, additions=args.pop('taxable_additions'),
+            excluded_income=args.pop('excluded_income'))
+        if basis.assessable_profits != reconciliation['net_taxable_profits']:
+            raise ValueError('Hong Kong net taxable profits must reconcile to saved income, tax adjustments, deductions and prior losses')
         result = hong_kong.profits_tax(assessment_year='2025/26', **args)
+        result['hong_kong_profits_reconciliation'] = reconciliation
+        result['policy_version'] += '-reconciled-20261119'
+        result['sources'].extend(deepcopy(hong_kong.PROFITS_BASIS_SOURCES))
     elif policy == 'hk_property_2025_26':
         result = hong_kong_property.property_tax(case, assessment_year='2025/26', **args)
     elif policy == 'hk_salaries_2025_26':
