@@ -22,7 +22,11 @@ promotion remain incomplete.
   two newly admitted overlay clauses in the base table. A revised 402-operation
   plan omits those duplicate inserts, preserves all other operations and passes
   fresh read-only before-state checks plus compatibility checks against all 44
-  admitted overlays. The old collision was reproduced explicitly. Subsequent
+  admitted overlays. The old collision was reproduced explicitly. The revised
+  full plan also passed isolated PostgreSQL commit and forced-postflight rollback
+  rehearsal; seven PostgreSQL executor/lock tests passed. This fixture is not a
+  clone of hosted constraints or roles, and no hosted catalog migration occurred.
+  Subsequent
   repaired-reference verification found neither old blocked citation among its
   662 dependencies. Twelve missing Indonesian procedure passages were reviewed
   and admitted through the private overlay. The dedicated reader now returns
@@ -46,6 +50,7 @@ Evidence: [rental implementation](data-reconciliation/vietnam-business-consolida
 [deployment preparation](RENDER_DEPLOYMENT.md),
 [current catalog plan](data-reconciliation/catalog-migration-plan-overlay-safe-20261118.json),
 [current catalog guards](data-reconciliation/catalog-overlay-safe-preflight-20261118.json),
+[PostgreSQL transaction rehearsal](data-reconciliation/catalog-overlay-safe-postgres-rehearsal-20261118.json),
 [earlier live source blockers](data-reconciliation/atlas-live-catalog-preflight-20261118.json),
 [repaired-source admission](data-reconciliation/indonesia-procedure-source-admission-20261118.json),
 [reviewed extraction differences](data-reconciliation/live-staged-source-comparison-20261118.json).

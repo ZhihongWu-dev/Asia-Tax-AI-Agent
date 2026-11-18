@@ -1,0 +1,17 @@
+{
+  "scope": "402-operation local PostgreSQL transaction rehearsal, not hosted migration or complete source acceptance",
+  "operation_count": 402,
+  "catalog_revision": "ae12ac1c79e22e80ec60f940a5e20a6b03a9df6408672447e6df0a0ca52b0195",
+  "postflight_failure_full_rollback": true,
+  "status": "local_commit_and_rollback_verified",
+  "committed_operations": 402,
+  "overlay_duplicate_clauses_absent": true,
+  "temporary_database_removed": true,
+  "postgres_executor_regression": {
+    "passed": 7,
+    "deselected": 7,
+    "seconds": 7.26,
+    "includes": "competing-writer lock exclusion, stale row/revision, preflight, constraint and postflight rollback"
+  },
+  "fixture_limits": "Isolated local database reconstructed from audited target rows, text columns and primary keys; not a full clone of hosted indexes, foreign keys, roles or source-review data. Hosted transaction guards and deployment acceptance remain required."
+}
