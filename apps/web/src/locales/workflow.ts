@@ -1,4 +1,6 @@
 export const workflow: Record<string, [string, string]> = {
+  "error:atlas_snapshot_changed": ["资料或规则版本已更新，请关闭地图后重新打开。", "Sources or rules have changed. Close and reopen the atlas."],
+  "error:atlas_unavailable": ["税务地图资料暂不可用，请稍后重试。", "Tax atlas sources are temporarily unavailable. Please retry."],
   "error:auth_unavailable": ["认证服务暂不可用，请稍后重试。", "The sign-in service is temporarily unavailable. Please retry."],
   "task:consultation": ["股息咨询", "Dividend consultation"],
   "task:fact_intake": ["梳理事实", "Organize facts"],

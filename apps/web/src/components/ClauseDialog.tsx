@@ -6,7 +6,7 @@ import { useLocale } from "../locale";
 import HintButton from "./HintButton";
 
 /** A provision verbatim, as the library on Supabase holds it. */
-export default function ClauseDialog({ citeId, onClose }: { citeId: string; onClose: () => void }) {
+export default function ClauseDialog({ snapshot, citeId, onClose }: { snapshot: string; citeId: string; onClose: () => void }) {
   const { t } = useLocale();
   const [clause, setClause] = useState<AtlasClause | null>(null);
   const [error, setError] = useState("");
@@ -14,9 +14,9 @@ export default function ClauseDialog({ citeId, onClose }: { citeId: string; onCl
   useEffect(() => {
     let live = true;
     setClause(null); setError("");
-    api.atlasClause(citeId).then((c) => live && setClause(c)).catch((e) => live && setError(e instanceof ApiError ? e.code : "network_error"));
+    api.atlasClause(citeId, snapshot).then((c) => live && setClause(c)).catch((e) => live && setError(e instanceof ApiError ? e.code : "network_error"));
     return () => { live = false; };
-  }, [citeId]);
+  }, [citeId, snapshot]);
   useEffect(() => {
     box.current?.focus();
     const key = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };

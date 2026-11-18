@@ -8,7 +8,9 @@ test('atlas renders rates, unknowns, country sources and complete clause', async
   const passage = 'Full original provision. '.repeat(300);
   await page.route('**/api/atlas/**', route => {
     const url = new URL(route.request().url());
-    const body = url.pathname.endsWith('/map') ? {date:'2026-11-18',version,facts:{},metrics:[],jurisdictions:[jur]} :
+    if (!url.pathname.endsWith('/map')) expect(url.searchParams.get('snapshot')).toBe('a'.repeat(64));
+    if (url.pathname.includes('/country/')) expect(url.searchParams.get('date')).toBe('2026-11-18');
+    const body = url.pathname.endsWith('/map') ? {snapshot_id:'a'.repeat(64),date:'2026-11-18',version,facts:{},metrics:[],jurisdictions:[jur]} :
       url.pathname.includes('/country/') ? {...jur,date:'2026-11-18',version,headline:{wht_company:cell,wht_individual:unknown},cit:null,partners:[],slots:[],params:[],absent:[],docs:[],terms:[]} :
       url.pathname.endsWith('/clause') ? {cite_id:'cn.law#1',doc_id:'cn.law',label:'Article 1',text:passage,total:passage.length,title:'Fixture law',url:'',lang:'en',jur:'cn'} :
       {version,slots:[],terms:[],jurisdictions:[jur]};
@@ -30,7 +32,7 @@ test('atlas renders rates, unknowns, country sources and complete clause', async
 });
 
 test('atlas navigation reports unavailable data and returns to saved workspace', async ({page}) => {
-  await page.route('**/api/atlas/map', route => route.fulfill({status:503,
+  await page.route('**/api/atlas/map*', route => route.fulfill({status:503,
     contentType:'application/json', body:JSON.stringify({detail:'atlas_unavailable'})}));
   await page.goto('/');
   await page.getByRole('button', {name:'税务地图', exact:true}).click();

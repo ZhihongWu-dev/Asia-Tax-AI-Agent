@@ -9,7 +9,7 @@ import { humanize, jurName } from "./atlasFormat";
 const KINDS: [string, string][] = [["", "全部"], ["client_fact", "客户事实"], ["structure", "结构事实"], ["derived", "推导事实"], ["judgment", "法律判断"]];
 
 /** The tax glossary: the tax areas, and every field and judgment point the rule layer reads, with where and why. */
-export default function Glossary({ onOpen, onClause }: { onOpen: (code: string) => void; onClause: (id: string) => void }) {
+export default function Glossary({ snapshot, onOpen, onClause }: { snapshot: string; onOpen: (code: string) => void; onClause: (id: string) => void }) {
   const { t, locale } = useLocale();
   const [data, setData] = useState<AtlasGlossary | null>(null);
   const [error, setError] = useState("");
@@ -18,9 +18,9 @@ export default function Glossary({ onOpen, onClause }: { onOpen: (code: string) 
   const [jur, setJur] = useState("");
   useEffect(() => {
     let live = true;
-    api.atlasGlossary().then(d => live && setData(d)).catch((e) => live && setError(e instanceof ApiError ? e.code : "network_error"));
+    api.atlasGlossary(snapshot).then(d => live && setData(d)).catch((e) => live && setError(e instanceof ApiError ? e.code : "network_error"));
     return () => { live = false; };
-  }, []);
+  }, [snapshot]);
   const jurs = useMemo(() => Object.fromEntries((data?.jurisdictions ?? []).map((j) => [j.code, j])), [data]);
   const terms = useMemo(() => {
     const q = query.trim().toLowerCase();

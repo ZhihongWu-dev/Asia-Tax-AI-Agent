@@ -51,9 +51,9 @@ export async function request<T>(
 }
 export const api = {
   atlasMap: () => request<AtlasMap>("/atlas/map"),
-  atlasCountry: (code: string) => request<AtlasCountry>(`/atlas/country/${code}`),
-  atlasGlossary: () => request<AtlasGlossary>("/atlas/glossary"),
-  atlasClause: (citeId: string) => request<AtlasClause>(`/atlas/clause?cite_id=${encodeURIComponent(citeId)}`),
+  atlasCountry: (code: string, snapshot: string, date: string) => request<AtlasCountry>(`/atlas/country/${code}?snapshot=${encodeURIComponent(snapshot)}&date=${date}`),
+  atlasGlossary: (snapshot: string) => request<AtlasGlossary>(`/atlas/glossary?snapshot=${encodeURIComponent(snapshot)}`),
+  atlasClause: (citeId: string, snapshot: string) => request<AtlasClause>(`/atlas/clause?cite_id=${encodeURIComponent(citeId)}&snapshot=${encodeURIComponent(snapshot)}`),
   calculateIncomeTax: (caseId: string, revision: number, basis: Record<string, unknown>, requestId: string) =>
     request<IncomeRun>(`/cases/${caseId}/income-tax/runs`, "POST", {revision, request_id: requestId, basis}),
   saveIncomeTax: (caseId: string, revision: number, inputs: IncomeTaxInput, requestId: string) =>
@@ -154,7 +154,7 @@ export type AtlasJurisdiction = {
   code: string; iso: string; name: string; name_zh: string; currency: string;
   wht_company: AtlasCell; wht_individual: AtlasCell;
 };
-export type AtlasMap = { date: string; version: AtlasVersion; metrics: string[]; facts: Record<string, unknown>; jurisdictions: AtlasJurisdiction[] };
+export type AtlasMap = { snapshot_id: string; date: string; version: AtlasVersion; metrics: string[]; facts: Record<string, unknown>; jurisdictions: AtlasJurisdiction[] };
 export type AtlasTreaty = { pair: string; doc_id: string; in_force_from: string; title: string; mli: boolean; url: string };
 export type AtlasPartner = {
   code: string; name: string; name_zh: string; treaty: AtlasTreaty[];

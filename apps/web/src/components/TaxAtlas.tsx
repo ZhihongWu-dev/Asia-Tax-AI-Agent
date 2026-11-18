@@ -54,13 +54,13 @@ export default function TaxAtlas() {
             </button>
           </div>
         </header>
-        {tab === "glossary" ? <Glossary onOpen={open} onClause={setClause} /> :
-          country ? <CountryPage code={country} onBack={() => setCountry(null)} onOpen={open} onClause={setClause} /> :
+        {data && tab === "glossary" ? <Glossary snapshot={data.snapshot_id} onOpen={open} onClause={setClause} /> :
+          data && country ? <CountryPage snapshot={data.snapshot_id} date={data.date} code={country} onBack={() => setCountry(null)} onOpen={open} onClause={setClause} /> :
             error ? <div className="atlas-error" role="alert">{t(`error:${error}`)} <button onClick={load}>{t("重试")}</button></div> :
               !data ? <BrandLoader label={t("正在载入…")} /> :
                 <MapHome data={data} metric={metric} setMetric={setMetric} onOpen={open} />}
       </div>
-      {clause && <ClauseDialog citeId={clause} onClose={() => setClause(null)} />}
+      {data && clause && <ClauseDialog snapshot={data.snapshot_id} citeId={clause} onClose={() => setClause(null)} />}
     </div>
   );
 }

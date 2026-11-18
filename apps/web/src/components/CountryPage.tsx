@@ -12,8 +12,8 @@ type Section = "dividend" | "provisions" | "glossary" | "sources";
 const SECTIONS: [Section, string][] = [["dividend", "股息税"], ["provisions", "全部条款"], ["glossary", "该辖区术语"], ["sources", "来源文件"]];
 
 /** One jurisdiction: its dividend withholding, treaty rates by recipient, every library parameter, terms and sources. */
-export default function CountryPage({ code, onBack, onOpen, onClause }: {
-  code: string; onBack: () => void; onOpen: (code: string) => void; onClause: (id: string) => void;
+export default function CountryPage({ snapshot, date, code, onBack, onOpen, onClause }: {
+  snapshot: string; date: string; code: string; onBack: () => void; onOpen: (code: string) => void; onClause: (id: string) => void;
 }) {
   const { t, locale } = useLocale();
   const [data, setData] = useState<AtlasCountry | null>(null);
@@ -22,9 +22,9 @@ export default function CountryPage({ code, onBack, onOpen, onClause }: {
   useEffect(() => {
     let live = true;
     setData(null); setError(""); setSection("dividend");
-    api.atlasCountry(code).then((d) => live && setData(d)).catch((e) => live && setError(e instanceof ApiError ? e.code : "network_error"));
+    api.atlasCountry(code, snapshot, date).then((d) => live && setData(d)).catch((e) => live && setError(e instanceof ApiError ? e.code : "network_error"));
     return () => { live = false; };
-  }, [code]);
+  }, [code, snapshot, date]);
   if (error) return <div className="atlas-error" role="alert">{t(`error:${error}`)} <button onClick={onBack}>{t("返回地图")}</button></div>;
   if (!data) return <BrandLoader label={t("正在载入…")} />;
   const treaties = data.partners.filter((p) => p.treaty.length).length;

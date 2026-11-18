@@ -13,7 +13,7 @@ from tests.chat.auth_support import fixture_user
 def test_routes_require_login_validate_selectors_and_hide_internal_errors(monkeypatch):
     calls = []
 
-    async def query(payload):
+    async def query(payload, *, expected_snapshot=None):
         calls.append(payload)
         if payload['operation'] == 'glossary':
             raise RuntimeError('private connection details')
@@ -70,3 +70,14 @@ def test_service_rechecks_snapshot_after_execution(monkeypatch):
     with pytest.raises(LibraryVersionChanged):
         asyncio.run(atlas_service.query({'operation': 'map'}))
     assert [item[0] for item in calls] == ['snapshot', 'read', 'execute', 'snapshot']
+
+
+def test_cross_view_snapshot_mismatch_stops_before_reading_sources(monkeypatch):
+    monkeypatch.setattr(atlas_service, 'current_library_snapshot', lambda: {'version': 'new'})
+    monkeypatch.setattr(atlas_service, 'capture_atlas_runtime', lambda: {'engine': {}})
+    def forbidden(*args, **kwargs):
+        pytest.fail('must not read sources for a stale page')
+    monkeypatch.setattr(atlas_service, 'read_planning_bundle', forbidden)
+    with pytest.raises(LibraryVersionChanged):
+        asyncio.run(atlas_service.query({'operation': 'country', 'code': 'cn'},
+                                        expected_snapshot='a' * 64))

@@ -46,3 +46,17 @@ atlas-npm-audit-after-20261118.json in the same external audit directory.
   glossary and citation browser flows; cross-view snapshot consistency; mobile
   layout and keyboard dialog review; dependency remediation; full regression.
 - No production deployment or final branch push performed for this change.
+
+## Cross-view consistency follow-up
+
+The map response now carries a digest of the reviewed library version plus the
+engine/atlas runtime. Country, glossary and clause requests carry that snapshot;
+country requests also retain the map date. A changed snapshot returns HTTP 409
+before loading sources. The UI explains that the atlas must be reopened.
+This token intentionally does not use the bundle hash: different citation
+requests can produce different bundles from the same reviewed library.
+
+Verification: production build passed; 22 atlas backend tests passed; two Edge
+browser tests passed, including assertions that subsequent requests preserve
+the snapshot and country date. Browser data is fixture data; real reviewed
+catalog execution and business acceptance remain outstanding.
