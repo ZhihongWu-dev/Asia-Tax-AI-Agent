@@ -1,0 +1,553 @@
+{
+  "status": "preservation_audit_not_legal_acceptance",
+  "removed_base_citations": 108,
+  "preserved_in_overlay_bundle": 105,
+  "not_in_overlay": [
+    "cn.sta.2008-112#i1",
+    "cn.sta.2008-112#i2",
+    "cn.sta.2008-112#i3"
+  ],
+  "records": [
+    {
+      "cite_id": "ae.fta.foreign-source-income#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "ae.fta.general-corporate-tax#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "ae.fta.natural-persons-2023#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "ae.fta.tax-resident-certificate-2024#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "ae.mof.dta-index#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "ae.mof.top-up-tax#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "uae-topup-cloud-admission-20261118.json"
+    },
+    {
+      "cite_id": "cn.sta.2008-112#i1",
+      "preserved_in_overlay_bundle": false,
+      "review_evidence": "cn-2008-112-table-review-20261118.json"
+    },
+    {
+      "cite_id": "cn.sta.2008-112#i2",
+      "preserved_in_overlay_bundle": false,
+      "review_evidence": "cn-2008-112-table-review-20261118.json"
+    },
+    {
+      "cite_id": "cn.sta.2008-112#i3",
+      "preserved_in_overlay_bundle": false,
+      "review_evidence": "cn-2008-112-table-review-20261118.json"
+    },
+    {
+      "cite_id": "id.dgt.ease-taxation#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "id.dgt.individual-calculation#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "id.dgt.residence-registration#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "id.dgt.skd-spdn#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "id.per25-2018.treaty-procedure#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "id.tax-law-compilation-2022#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "in.itd.act2025-scope#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "in.itd.beneficial-owner-guide-2026#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "in.itd.domestic-company-2026#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "in.itd.foreign-assets-2026#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "in.itd.form15ca#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "in.itd.form41-dtaa#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "in.itd.form42-trc#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "in.itd.form67#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "in.itd.individual-rates-2026#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "in.itd.nonresident-faq#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "in.itd.tax-calendar#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "in.rules2026#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "jp.nta.certificate-of-residence-application#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "jp.nta.consolidated-tax-avoidance-denial#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "jp.nta.corporate-rate-2026#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "jp.nta.income-rate-2026#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "jp.nta.international-taxation-basics#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "jp.nta.nonresident-share-transfer#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "jp.nta.nonresident-withholding#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "jp.nta.resident-nonresident-classification#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "jp.nta.tax-conventions-index#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "jp.nta.tax-shelter-countermeasures#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "kr.corporate-tax-act-2026#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "kr.income-tax-act-2026#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "kr.itca.enforcement-decree#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "kr.nts.corporate-rate-2026#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "kr.nts.corporate-tax-overview#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "kr.nts.filing-returns#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "kr.nts.forms#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "kr.nts.nonresident-wht#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "kr.nts.nonresident-wht-agent#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "kr.nts.nonresident-wht-rate#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "kr.nts.tax-treaty-application#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "my.hasil.e-residence#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "my.hasil.foreign-income-2024#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "my.hasil.wht#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "my.ita1967#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "th.rd.cit#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "th.rd.dta-index#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "th.rd.foreign-company-guide#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "th.rd.pit#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.ae-cn.1993.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.ae-cn.1993.mli.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.ae-hk.2014.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.ae-hk.2014.mli.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.ae-id.2019.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.ae-in.1992.mli.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.ae-in.1992.p1.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.ae-in.1992.p2.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.ae-kr.2019.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.ae-my.1995.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.ae-sg.1995.mli.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.ae-th.2000.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.ae-vn.2009.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.cn-kr.1994.mou1.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.id-in.2012.mli.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.id-jp.1982.mli.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.id-kr.1988.mli.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.id-my.1991.mli.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.id-sg.2020.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.id-th.2012.mli.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.id-vn.1997.mli.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.in-jp.1989.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.in-jp.1989.mli.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.in-jp.2006.protocol.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.in-jp.2015.protocol.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.in-my.2012.hasil#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.in-my.2012.mli.hasil#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.in-sg.1994.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.in-th.2015.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.in-th.2015.protocol.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.in-vn.1994.mofa.text#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.jp-kr.1998.mof#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.jp-my.1999.mof#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.jp-sg.1994.mof#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.jp-th.1990.mof#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.jp-vn.1995.mof#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.kr-my.1982.hasil#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.kr-my.1982.mli.hasil#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.kr-sg.2019.iras#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.kr-th.2006.rd#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.kr-vn.1994.mofa.text#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.kr-vn.2019.protocol.mofa.text#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.my-sg.2004.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.my-th.1982.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.my-vn.1995.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "treaty.th-vn.1992.en#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "vn.btc.treaty-procedure#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "vn.gov.beneficial-owner-criteria#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "vn.gov.pit-withholding-rates#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "vn.gov.related-party-tax-avoidance#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "vn.gov.tax-filing-deadlines#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    },
+    {
+      "cite_id": "vn.law.pit2026.vi#all",
+      "preserved_in_overlay_bundle": true,
+      "review_evidence": "main-only-source-audit.json"
+    }
+  ],
+  "note": "Overlay preservation does not imply approval. Historical exclusions and cloud review remain authoritative."
+}
