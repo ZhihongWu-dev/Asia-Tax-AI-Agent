@@ -21,13 +21,26 @@ and packaged dependency notices in public/atlas-licenses.txt.
 The npm audit returned five high-severity findings in the existing Vite toolchain
 (vite, picomatch, fdir, tinyglobby, source-map-js), not the new map packages.
 Raw report: integration-audit-20261116/atlas-npm-audit-20261118.json outside repo.
-These findings remain unresolved; do not interpret successful builds as security
-acceptance. Vite 8.3.8 is the audit's proposed compatible patched release.
+Follow-up: upgraded Vite from 8.3.1 to 8.3.8 and ran non-forced audit fix.
+The Vite-specific and source-map-js findings no longer appear. Full audit still
+reports five high entries, now all from picomatch and its dependent development
+packages (fdir, tinyglobby, Vite, plugin-react). GHSA-fc5q-39xc-vjpf lists no patched
+version as of this review; forcing npm's proposed downgrade to Vite 6.2.7 would
+cross major versions and is not an accepted fix. Production-only npm audit
+reports zero vulnerabilities. Render starts uvicorn and serves built static
+assets, not the Vite development server. Development dependency risk remains.
+
+References: https://github.com/vitejs/vite/releases and
+https://github.com/advisories/GHSA-fc5q-39xc-vjpf . Post-upgrade audit archived as
+atlas-npm-audit-after-20261118.json in the same external audit directory.
 
 ## Verification and remaining work
 
 - Production TypeScript/Vite build passed (existing >500 kB chunk warning).
 - Edge/Playwright: one navigation/unavailable-data/return-to-workspace test passed.
+- Added successful fixture-based browser coverage for rates, unknown values,
+  country detail, complete long clause text, Escape dismissal and glossary.
+  These fixtures verify presentation, not live catalog or tax-law correctness.
 - Backend atlas projection/process/API suite: 21 passed in the preceding change.
 - Still required: live reviewed-bundle map/country execution; successful map,
   glossary and citation browser flows; cross-view snapshot consistency; mobile
