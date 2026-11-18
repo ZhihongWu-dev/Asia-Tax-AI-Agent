@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "doc_id": "sg.iras.personal-reliefs",
+      "title": "IRAS personal income tax relief cap",
+      "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs",
+      "file": "database/raw/sg/sg.iras.personal-reliefs.20261119.html",
+      "sha256": "a63b84141eeda1c0e2ca84b89f1161198fb856bf4dfcabe2d698e44b32b9b892",
+      "retrieved_on": "2026-11-19"
+    },
+    {
+      "doc_id": "sg.iras.earned-income-relief",
+      "title": "IRAS Earned Income Relief",
+      "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs/earned-income-relief",
+      "file": "database/raw/sg/sg.iras.earned-income-relief.20261119.html",
+      "sha256": "c064b7a3152407dcdf589967cc2908db82c4d6e9ae7d2ad1c7796e722f05e0d9",
+      "retrieved_on": "2026-11-19"
+    },
+    {
+      "doc_id": "sg.iras.parenthood-tax-rebate",
+      "title": "IRAS Parenthood Tax Rebate",
+      "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs/parenthood-tax-rebate-(ptr)",
+      "file": "database/raw/sg/sg.iras.parenthood-tax-rebate.20261119.html",
+      "sha256": "d9c6c9d9fd5e80c5d51195c87440eb0452adba44aed6b58b8b269b29c5eab68f",
+      "retrieved_on": "2026-11-19"
+    }
+  ]
+}

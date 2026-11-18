@@ -6,13 +6,15 @@ it does not infer CPF eligibility, family allocation or tax-clearance treatment.
 """
 from datetime import date
 from decimal import Decimal, localcontext
+from copy import deepcopy
+import json
+from pathlib import Path
 
 from .arithmetic import ZERO, amount
 from .singapore import check_year, resident_individual_tax
 
-RELIEF_ROOT = 'https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs'
-SOURCES = [RELIEF_ROOT, RELIEF_ROOT + '/earned-income-relief',
-           RELIEF_ROOT + '/parenthood-tax-rebate-(ptr)']
+SOURCES = json.loads(Path(__file__).with_name(
+    'sg_employment_2026_sources.json').read_text(encoding='utf-8'))['sources']
 
 
 def resident_employment_tax(gross_employment_income, *, assessment_year, birth_date,
@@ -63,5 +65,5 @@ def resident_employment_tax(gross_employment_income, *, assessment_year, birth_d
                 'parenthood_rebate_used': ptr_used, 'parenthood_rebate_carried_forward': ptr - ptr_used,
                 'annual_liability': liability, 'prepaid_tax': prepaid, 'balance_due': balance,
                 'amount_payable': max(ZERO, balance), 'refund_due': max(ZERO, -balance),
-                'sources': [result['source'], *({'url': url} for url in SOURCES)],
+                'sources': [result['source'], *deepcopy(SOURCES)],
                 'stage': 'resident_employment_before_assessment_rounding'}

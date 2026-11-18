@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only; no cloud upload, remote push or main merge.",
+  "change": "Three complete IRAS pages archived with exact SHA256 and included in new saved employment assessments and exports. No arithmetic change.",
+  "manifest": "packages/income_tax/sg_employment_2026_sources.json",
+  "retrieval": "Previous urllib batch failed403. Ordinary requests GET succeeded for all three original official URLs; complete response bytes retained without normalization.",
+  "review": [
+    "Personal relief total cap80000",
+    "Earned relief age determined on31December income year; ordinary1000/6000/8000 and disability4000/10000/12000; limited to earned income after expenses",
+    "Official MrsChen YA2026 example: income80000, relief29000, chargeable51000, tax1320, PTR2500 allocation; unused1180 carried forward rather than refunded"
+  ],
+  "verification": {
+    "suite": "1467 income-tax/reporting tests passed in26.54s",
+    "archive": "Three original file SHA256 values checked by report persistence test",
+    "persistence": "Local authenticated API assessment stored in SQLite, reopened, exported; all three exact source records retained"
+  },
+  "reference": "https://github.com/python/cpython/blob/main/Doc/library/hashlib.rst",
+  "implementation": "Existing JSON manifest/deepcopy pattern and standard-library hashing; no external code copied or dependency introduced.",
+  "limits": [
+    "Deduction eligibility, CPF and family allocations remain user-verified facts",
+    "No historical assessment rewritten",
+    "Frozen catalog and optimizer inputs unchanged",
+    "Not overall business acceptance"
+  ]
+}
