@@ -15,6 +15,7 @@ from packages.chat.pdf_attachments import MAX_BYTES, MAX_TEXT, extract_pdf
 ROOT = Path(__file__).resolve().parents[2]
 EXTENSIONS = {'.pdf', '.doc', '.docx', '.xls', '.xlsx', '.png', '.jpg', '.jpeg', '.webp'}
 MARKER = '\n\n[Taxrora attachment]\n'
+MAX_ATTACHMENTS = 30
 
 
 def checked_zip(data):
@@ -191,7 +192,10 @@ def model_attachment_text(text):
     prefix, raw = text.split(MARKER, 1)
     try:
         payload = json.loads(raw)
-        payload.pop('thumbnail', None)
+        files = payload if isinstance(payload, list) else [payload]
+        for file in files:
+            if isinstance(file, dict):
+                file.pop('thumbnail', None)
         return prefix + MARKER + json.dumps(payload, ensure_ascii=False)
     except (ValueError, TypeError, AttributeError):
         return text
@@ -248,10 +252,20 @@ def attachment_source(text):
         prefix, raw = text.split(marker, 1)
         try:
             payload = json.loads(raw)
-            pages = payload['pages']
-            if not isinstance(pages, list) or not pages or not all(isinstance(p, dict) and isinstance(p.get('text'), str) for p in pages):
+            files = payload if isinstance(payload, list) else [payload]
+            if not 1 <= len(files) <= MAX_ATTACHMENTS:
                 return None
-            return prefix + '\n\n[User-provided attachment text; unverified]\n' + '\n\n'.join(p['text'] for p in pages)
+            sections = []
+            for file in files:
+                if not isinstance(file, dict):
+                    return None
+                pages = file['pages']
+                if not isinstance(pages, list) or not pages or not all(isinstance(p, dict) and isinstance(p.get('text'), str) for p in pages):
+                    return None
+                sections.append('\n\n'.join(p['text'] for p in pages))
+            # Keep file boundaries without treating filenames or other metadata
+            # as evidence. Reject an invalid member instead of silently omitting it.
+            return prefix + '\n\n[User-provided attachment text; unverified]\n' + '\n\n[Next attachment; unverified]\n'.join(sections)
         except (ValueError, TypeError, KeyError):
             return None
     return None

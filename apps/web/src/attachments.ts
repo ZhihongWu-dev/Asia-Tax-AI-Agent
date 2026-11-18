@@ -2,6 +2,23 @@ import { ApiError } from './api';
 export type Attachment = { name: string; kind?: 'pdf' | 'word' | 'excel' | 'image'; thumbnail?: string; warnings?: string[]; page_count: number; pages: { page: number; label?: string; text: string }[]; empty_pages: number[] };
 const marker = '\n\n[Taxrora attachment]\n';
 const legacyMarker = '\n\n[Taxrora PDF attachment]\n';
+export const MAX_ATTACHMENTS = 30;
+export function withAttachments(text: string, files: Attachment[]) {
+  return files.length ? text + marker + JSON.stringify(files) : text;
+}
+export function splitAttachments(text: string): {text: string; files: Attachment[]} {
+  const delimiter = text.includes(marker) ? marker : legacyMarker;
+  const index = text.indexOf(delimiter);
+  if (index < 0) return {text, files: []};
+  try {
+    const parsed = JSON.parse(text.slice(index + delimiter.length));
+    const files = Array.isArray(parsed) ? parsed : [parsed];
+    if (!files.length || files.length > MAX_ATTACHMENTS || !files.every(file =>
+      file && typeof file.name === 'string' && Array.isArray(file.pages) && file.pages.every(
+        (p: {page: unknown; text: unknown}) => typeof p?.page === 'number' && typeof p?.text === 'string'))) return {text, files: []};
+    return {text: text.slice(0, index), files};
+  } catch { return {text, files: []}; }
+}
 export function withAttachment(text: string, file?: Attachment) {
   return file ? text + marker + JSON.stringify(file) : text;
 }
@@ -28,6 +45,7 @@ export async function uploadAttachment(file: File, signal: AbortSignal): Promise
   return data;
 }
 export const pdfErrors: Record<string, [string, string]> = {
+  attachments_too_large: ['本条消息的附件内容过多，请分成多条消息发送。', 'These attachments exceed the message limit. Send them in separate messages.'],
   pdf_invalid: ['无法读取此 PDF，请检查文件是否损坏。', 'Unable to read this PDF. Check that the file is valid.'],
   pdf_too_large: ['附件不能超过 10 MB。', 'Attachments must be no larger than 10 MB.'],
   pdf_too_many_pages: ['每份 PDF 最多 50 页，请拆分后上传。', 'Please split this PDF into files of up to 50 pages.'],

@@ -76,13 +76,13 @@ export default function App() {
     setMobileNav(false);
     void createCase();
   }
-  async function sendMessage(text: string, file?: Attachment) {
+  async function sendMessage(text: string, files: Attachment[] = []) {
     if (!current.data_approved && !consent) {
       setShowConsent(true);
       return false;
     }
     setShowConsent(false);
-    return send(text, consent, file);
+    return send(text, consent, files);
   }
   const modalOpen = mobileNav;
   if (!current)

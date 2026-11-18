@@ -285,6 +285,12 @@ p {
 .language-toggle:hover {
   background: #eaf0e9;
 }
+.file-window { display: flex; flex-direction: column; gap: 4px; min-width: 0; max-width: 100%; }
+.file-window-head { color: #507064; font-size: 12px; font-weight: 600; }
+.file-window-list { min-width: 0; max-width: 100%; }
+.file-window:not(.open) .file-window-list { overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.composer .file-window:not(.open) .attachment-strip { max-height: 104px; }
+.file-window-toggle { align-self: center; display: grid; place-items: center; width: 34px; height: 24px; border: 1px solid #d6e2d5; border-radius: 10px; background: white; color: #285447; cursor: pointer; }
 .chat-body {
   display: flex;
   flex-direction: column;

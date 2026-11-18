@@ -1,4 +1,4 @@
-import { withAttachment, type Attachment } from '../attachments';
+import { withAttachments, type Attachment } from '../attachments';
 import { useEffect, useRef, useState } from "react";
 import { api, ApiError, type FactPatch } from "../api";
 import type { Case, FieldSpec, Message, EntryHint } from "../workspace";
@@ -120,8 +120,8 @@ export function useWorkspace() {
       throw e;
     }
   }
-  function send(text: string, approved: boolean, file?: Attachment) {
-    const messageText = withAttachment(text, file);
+  function send(text: string, approved: boolean, files: Attachment[] = []) {
+    const messageText = withAttachments(text, files);
     let completed = false;
     const doc = storedCurrent,
       requestId = crypto.randomUUID();
@@ -154,7 +154,7 @@ export function useWorkspace() {
         setPartial({ caseId: doc.id, text: "" });
         const next = await api.stream(doc, messageText, approved, requestId, abort.signal, (chunk, reset) =>
           setPartial(previous => previous?.caseId === doc.id ? { ...previous, text: reset ? "" : previous.text + chunk } : previous),
-          entryHint, file ? null : text.startsWith("结构答复：") ? doc.domain_workflow?.pending_question_id || null : pending?.id || null, replyLocale);
+          entryHint, files.length ? null : text.startsWith("结构答复：") ? doc.domain_workflow?.pending_question_id || null : pending?.id || null, replyLocale);
         update(next);
         completed = true;
         setEntrySelections(all => { const copy = { ...all }; delete copy[doc.id]; return copy; });

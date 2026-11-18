@@ -1,4 +1,4 @@
-import { splitAttachment, imageThumbnail } from '../attachments';
+import { splitAttachments, imageThumbnail } from '../attachments';
 import HintButton from "./HintButton";
 import { useEffect, useRef } from "react";
 import { FileText, Scale, ArrowDown, Paperclip } from "lucide-react";
@@ -228,13 +228,13 @@ export default function Conversation({
         >
           {message.role === "user" ? (
             <div className="user-message-content">
-              {splitAttachment(message.text || '').file && <div className="sent-attachment">
-                {imageThumbnail(splitAttachment(message.text || '').file)
-                  ? <img className="sent-image-thumbnail" src={imageThumbnail(splitAttachment(message.text || '').file)} alt={splitAttachment(message.text || '').file!.name} />
+              {splitAttachments(message.text || '').files.map((file, index) => <div className="sent-attachment" key={`${file.name}-${index}`}>
+                {imageThumbnail(file)
+                  ? <img className="sent-image-thumbnail" src={imageThumbnail(file)} alt={file.name} />
                   : <Paperclip size={16} aria-hidden="true" />}
-                <span title={splitAttachment(message.text || '').file!.name}>{splitAttachment(message.text || '').file!.name}</span>
-              </div>}
-              <p>{splitAttachment(message.text || '').text}</p>
+                <span title={file.name}>{file.name}</span>
+              </div>)}
+              <p>{splitAttachments(message.text || '').text}</p>
               {message.delivery === "failed" && (
                 <small className="delivery-failed">
                   {translate("发送未完成，可重试", message.reply_locale || locale)}

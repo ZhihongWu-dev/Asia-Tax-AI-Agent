@@ -1,10 +1,11 @@
 import { test, expect } from '@playwright/test';
 
-test('dropping a PDF uses the attachment upload and rejects multiple files without losing it', async ({page}) => {
+test('multiple dropped files can be removed, sent and reopened without losing attachments', async ({page}) => {
   let uploads = 0;
   await page.route('**/api/attachments?*', route => {
     uploads++;
-    return route.fulfill({json:{name:'drop.pdf',page_count:1,pages:[{page:1,text:'Dropped document'}],empty_pages:[]}});
+    const name = new URL(route.request().url()).searchParams.get('filename');
+    return route.fulfill({json:{name,page_count:1,pages:[{page:1,text:'Dropped document '+name}],empty_pages:[]}});
   });
   await page.goto('/');
   await page.getByRole('button', {name:'Switch to English'}).click();
@@ -24,9 +25,23 @@ test('dropping a PDF uses the attachment upload and rejects multiple files witho
     return data;
   });
   await page.locator('.chat-body').dispatchEvent('drop', {dataTransfer:multiple});
-  await expect(page.getByRole('alert')).toContainText('Attach one file per message');
-  await expect(page.locator('.composer .attachment-chip')).toContainText('drop.pdf');
-  expect(uploads).toBe(1);
+  await expect(page.locator('.composer .attachment-chip')).toHaveCount(3);
+  expect(uploads).toBe(3);
+  await page.locator('.composer .attachment-chip').filter({hasText:'a.pdf'}).getByRole('button', {name:'Remove attachment'}).click();
+  await expect(page.locator('.composer .attachment-chip')).toHaveCount(2);
+  await page.getByRole('textbox', {name:'Enter your tax question'}).fill('Compare the documents.');
+  await page.getByRole('button', {name:'Send message'}).click();
+  await page.getByRole('checkbox').check();
+  const sent = page.waitForRequest(r => r.url().endsWith('/messages') && r.method()==='POST');
+  await page.getByRole('button', {name:'Send message'}).click();
+  const message = (await sent).postDataJSON().text;
+  expect(message).toContain('drop.pdf'); expect(message).toContain('b.pdf'); expect(message).not.toContain('a.pdf');
+  // The user bubble is optimistic; clearing waits for the committed SSE case.
+  await expect(page.locator('.composer .attachment-chip')).toHaveCount(0, {timeout: 15000});
+  await page.reload();
+  await expect(page.locator('.message.user .sent-attachment')).toHaveCount(2);
+  await expect(page.locator('.message.user')).toContainText('drop.pdf');
+  await expect(page.locator('.message.user')).toContainText('b.pdf');
   await transfer.dispose(); await multiple.dispose();
 });
 
@@ -44,7 +59,8 @@ test('PDF chip, consent, message and reload retain the attachment', async ({ pag
   await page.getByRole('button', {name:'Send message'}).click();
   expect((await message).postDataJSON().text).toContain('2000000');
   await expect(page.locator('.message.user')).toContainText('case.pdf');
-  await expect(page.locator('.composer .attachment-chip')).toHaveCount(0);
+  // The user bubble is optimistic; clearing waits for the committed SSE case.
+  await expect(page.locator('.composer .attachment-chip')).toHaveCount(0, {timeout: 15000});
   await page.reload();
   await expect(page.locator('.message.user')).toContainText('case.pdf');
   await expect(page.locator('.message.user details, .message.user pre')).toHaveCount(0);
