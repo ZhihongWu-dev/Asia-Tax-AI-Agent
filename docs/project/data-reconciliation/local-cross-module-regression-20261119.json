@@ -23,7 +23,8 @@
     "verified_korean_archive_originals": 14,
     "staged_git_blob_sha256_matches": true,
     "targeted_test": "1 passed in 1.65 seconds",
-    "evidence": "income-source-archive-closure-20261119.json"
+    "evidence": "income-source-archive-closure-20261119.json",
+    "whitespace_check": "Original HTML contains trailing whitespace; preserved to retain pinned byte hashes. Code and metadata diff check excluding database/raw passed."
   },
   "limitations": [
     "Browser authentication/model boundaries use fixtures; not real-account or provider acceptance.",
