@@ -264,7 +264,16 @@ def calculate(case: IncomeTaxCase, basis):
         if policy=='my_company_2026':
             if basis.scheme=='sme' and case.residency!='resident':
                 raise ValueError('SME rates require Malaysian residence')
+            if args.pop('workpaper') is None:
+                raise ValueError('Company calculation requires a reconciled workpaper')
+            from .malaysia_reconciliation import reconcile_company
+            reconciliation = reconcile_company(case, basis.workpaper)
+            if basis.chargeable_income != reconciliation['chargeable_income']:
+                raise ValueError('Company chargeable income differs from the reconciled workpaper')
             result=malaysia.company_tax(assessment_year=2026,**args)
+            result['reconciliation'] = reconciliation
+            result['policy_version'] += '-reconciled-20261119'
+            result['sources'].extend(deepcopy(malaysia.COMPANY_BASIS_SOURCES))
         else:
             paper = args.pop('workpaper')
             reconciliation = None

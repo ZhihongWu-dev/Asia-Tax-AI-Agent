@@ -186,7 +186,7 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
       confirm('ordinary_treatment_confirmed','已核对普通税制及排除条件','Ordinary treatment and exclusions checked'),
       money('allowed_rebates','核定可用税额回扣','Allowed tax rebates'),
       money('allowed_tax_credits','核定可抵免税额','Allowed tax credits'),prepaid];
-    if (!company && input.residency==='resident') {
+    if (company || input.residency==='resident') {
       input.incomes.forEach((_item,n)=>{
         const prefix=`my_source_${n}_`;
         for (const [key,zh,label] of [['additions','核定加回','Verified additions'],['deductions','核定费用扣除','Allowed source deductions'],['statutory_charges','法定加计','Statutory charges'],['statutory_allowances','资本免税额','Statutory allowances']])
@@ -194,9 +194,9 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
       });
       fields.push(money('my_schedule4_additions','附表4加计','Schedule 4 additions'),
         money('my_total_deductions','按法定顺序核定的总所得扣除','Verified total-income deductions'),
-        money('my_personal_reliefs','核定个人减免','Allowed personal reliefs'),
+        ...(company?[]:[money('my_personal_reliefs','核定个人减免','Allowed personal reliefs')]),
         confirm('my_eligibility','已核验来源调整、亏损年度和扣除限额','Source adjustments and deduction eligibility verified'),
-        confirm('my_separate','已核验单独评税','Separate assessment verified'));
+        confirm('my_separate',company?'已核实普通独立公司及无集团减免':'已核验单独评税',company?'Standalone ordinary company without group relief verified':'Separate assessment verified'));
     }
     return company ? [{id:'my_company_2026',label:['马来西亚企业（2026）','Malaysia company (2026)'],
       notice:['仅限普通公司；不含纳闽、再保险、特殊优惠或最低补足税。小企业税率须符合马来西亚注册及居民身份、期初普通股实缴资本不超过250万、营业总收入不超过5000万令吉，并核对关联公司及超过20%境外公司或非公民持股的排除条件。',

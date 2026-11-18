@@ -8,7 +8,7 @@ from decimal import Decimal
 from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from .income_tax import Money
-from packages.income_tax.malaysia_reconciliation import IndividualWorkpaper
+from packages.income_tax.malaysia_reconciliation import IndividualWorkpaper, CompanyWorkpaper
 
 
 class Basis(BaseModel):
@@ -146,6 +146,7 @@ class MYBasis(Basis):
 
 
 class MYCompany(MYBasis):
+    workpaper: CompanyWorkpaper | None = None
     policy: Literal['my_company_2026']
     scheme: Literal['ordinary', 'sme']
     sme_eligibility_confirmed: StrictBool

@@ -1,0 +1,13 @@
+{
+  "sources": [
+    {
+      "doc_id": "my.hasil.form-c2026.sample.en",
+      "title": "Malaysia YA2026 company return sample: Part A computation",
+      "url": "https://www.hasil.gov.my/wp-content/uploads/Sample-Return-Form_C2026_2.pdf",
+      "file": "database/raw/my/my.hasil.form-c2026.sample.en.pdf",
+      "sha256": "57dd86427ec719fad2d8f2b25157ae7974ac66acdf584bb30e72ace351274f30",
+      "locator": "PDF page2, Part A A1-A18",
+      "note": "Official sample for reference and learning, not a return for submission. Applies alongside Act53."
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-"""Staged Malaysian individual basis workpaper, not eligibility adjudication.
+"""Staged Malaysian individual and company workpapers, not eligibility adjudication.
 
 Act 53 sections 42-45. Callers must establish source adjustments, allowable
 amounts, loss vintages and relief eligibility before using this workpaper.
@@ -30,6 +30,16 @@ class IndividualWorkpaper(BaseModel):
     separate_assessment_verified: StrictBool
 
 
+class CompanyWorkpaper(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    sources: list[SourceAdjustment] = Field(min_length=1, max_length=200)
+    eligible_prior_business_losses: Money
+    schedule4_additions: Money
+    allowed_total_income_deductions: list[Money] = Field(max_length=8)
+    eligibility_verified: StrictBool
+    standalone_ordinary_verified: StrictBool
+
+
 def reconcile(case: IncomeTaxCase, paper: IndividualWorkpaper):
     """Reconcile every saved source; never offset old business losses against wages."""
     if (case.jurisdiction != "my" or case.subject != "individual"
@@ -37,6 +47,18 @@ def reconcile(case: IncomeTaxCase, paper: IndividualWorkpaper):
         raise ValueError("Confirmed Malaysian resident individual facts required")
     if not paper.eligibility_verified or not paper.separate_assessment_verified:
         raise ValueError("Workpaper eligibility and separate assessment require verification")
+    return _reconcile_sources(case, paper, paper.allowed_personal_reliefs)
+
+
+def reconcile_company(case: IncomeTaxCase, paper: CompanyWorkpaper):
+    if (case.jurisdiction != "my" or case.subject != "company" or case.missing_for_calculation()):
+        raise ValueError("Confirmed Malaysian company facts required")
+    if not paper.eligibility_verified or not paper.standalone_ordinary_verified:
+        raise ValueError("Company workpaper eligibility and standalone ordinary scope require verification")
+    return _reconcile_sources(case, paper, Decimal(0))
+
+
+def _reconcile_sources(case, paper, personal_reliefs):
     if sorted(s.income_index for s in paper.sources) != list(range(len(case.incomes))):
         raise ValueError("Each saved income must appear exactly once in the workpaper")
     if any(i.source_jurisdiction != "my" or i.foreign_tax_paid not in (None, 0)
@@ -48,7 +70,7 @@ def reconcile(case: IncomeTaxCase, paper: IndividualWorkpaper):
         ctx.prec = 40
         claimed = (sum((s.deductions + s.statutory_allowances for s in paper.sources), Decimal(0))
                    + sum(paper.allowed_total_income_deductions, Decimal(0))
-                   + paper.allowed_personal_reliefs)
+                   + personal_reliefs)
         if claimed != case.claimed_deductions:
             raise ValueError('Saved claimed deductions differ from the workpaper deduction amounts')
         business = other = current_losses = Decimal(0)
@@ -81,7 +103,7 @@ def reconcile(case: IncomeTaxCase, paper: IndividualWorkpaper):
                 raise ValueError("Allowed total-income deduction exceeds remaining income")
             total -= deduction
             deduction_steps.append(dict(deduction=deduction, remaining=total))
-        chargeable = max(Decimal(0), total-paper.allowed_personal_reliefs)
+        chargeable = max(Decimal(0), total-personal_reliefs)
         return dict(sources=rows, business_statutory_income=business,
             reconciled_claimed_deductions=claimed,
             other_statutory_income=other, prior_losses_used=prior_used,

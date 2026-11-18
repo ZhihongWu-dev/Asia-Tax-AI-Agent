@@ -57,7 +57,8 @@ def test_case_adapter_rejects_mixed_dividends_and_nonresident_sme():
     data=dict(subject='company',jurisdiction='my',period_start='2026-01-01',period_end='2026-12-31',
               currency='MYR',residency='resident',claimed_deductions='0',carried_losses='0',facts_confirmed=True,
               incomes=[dict(category='business',source_jurisdiction='my',gross_amount='1000000',description='Business receipts')])
-    basis=TypeAdapter(Assessment).validate_python(dict(policy='my_company_2026',chargeable_income='1000000',
+    from tests.income_tax.test_malaysia_company_reconciliation import paper
+    basis=TypeAdapter(Assessment).validate_python(dict(workpaper=paper(),policy='my_company_2026',chargeable_income='1000000',
         scheme='sme',sme_eligibility_confirmed=True,basis_confirmed=True,basis_explanation='Verified chargeable basis and SME conditions',
         **{k:v for k,v in COMMON.items() if k!='assessment_year'}))
     assert Decimal(calculate(IncomeTaxCase(**data),basis)['final_tax'])==195000

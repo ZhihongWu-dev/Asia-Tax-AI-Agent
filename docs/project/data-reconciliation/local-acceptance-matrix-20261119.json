@@ -47,7 +47,8 @@
         "indonesia-company-reconciliation-20261119.json",
         "singapore-company-reconciliation-20261119.json",
         "hong-kong-profits-reconciliation-20261119.json",
-        "uae-basis-reconciliation-20261119.json"
+        "uae-basis-reconciliation-20261119.json",
+        "malaysia-company-workpaper-20261119.json"
       ],
       "limits": "The static policy inventory is historical and narrower than current runtime; browser tests cover representative workflows, not every income type, residency, special regime or filing obligation."
     },
@@ -105,7 +106,8 @@
     "indonesia_company_reconciliation": "1494 income/report tests;2 browser flows;TypeScript passed",
     "singapore_company_reconciliation": "1501 income/report tests;1 browser scenario;TypeScript passed",
     "hong_kong_profits": "1515 income/report tests, TypeScript and 2 browser cases passed after basis reconciliation",
-    "uae_basis": "1524 income/report regression plus26 final focused tests, TypeScript and2 browser cases passed"
+    "uae_basis": "1524 income/report regression plus26 final focused tests, TypeScript and2 browser cases passed",
+    "malaysia_company": "1535 income/report tests, TypeScript and2 company/individual browser cases passed"
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

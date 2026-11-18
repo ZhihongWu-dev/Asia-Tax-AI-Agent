@@ -1,0 +1,27 @@
+{
+  "scope": "Ordinary standalone Malaysian company domestic-income workpaper",
+  "changes": [
+    "Require per-source verified additions, deductions, statutory charges and allowances for every saved income exactly once.",
+    "Reuse reviewed staged computation with personal relief fixed to zero for companies; preserve individual computation behavior.",
+    "Prior business losses offset business statutory income only. Current adjusted business losses follow aggregation; unused capital allowances are separate from business losses.",
+    "Saved deduction summary and eligible prior losses must agree with workpaper, and chargeable income must match the derived amount.",
+    "API rejects an inconsistent manual chargeable base without changing case revision/result; accepted calculation and source snapshots survive restart/report export."
+  ],
+  "source": {
+    "manifest": "packages/income_tax/my_company_basis_sources.json",
+    "official_form": "YA2026 Form C sample PartA A1-A18",
+    "download_note": "Initial requests GET returned500; normal urllib request with User-Agent returned a valid PDF. Original bytes/hash retained. Sample is not a submission-ready return."
+  },
+  "validation": {
+    "income_and_report": "1535 passed in34.92s; exit0",
+    "typescript": "tsc -b exit0",
+    "browser": "2 passed in28.7s; company and resident individual saved/reopened",
+    "business_boundaries": "Prior loss versus nonbusiness interest; current loss; unused capital allowance; inconsistent/missing/unverified/duplicate workpapers; source SHA and persistence"
+  },
+  "compatibility": "New optional contract workpaper defaults to null for historical request replay; new company calculation requires it. Saved historical runs are not rewritten.",
+  "limits": [
+    "Only established allowable amounts; donation/zakat caps, loss vintages and ownership eligibility require supporting evidence.",
+    "Foreign income, group relief, incentives, Labuan and special regimes remain separate outstanding workflows.",
+    "No overall business-acceptance completion claim."
+  ]
+}

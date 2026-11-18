@@ -12,6 +12,7 @@ from .arithmetic import Band, ZERO, amount, marginal_tax
 
 POLICY_VERSION = 'my-ya2026-2026-11-16'
 SOURCES = json.loads(Path(__file__).with_name('my_2026_sources.json').read_text(encoding='utf-8'))['sources']
+COMPANY_BASIS_SOURCES = json.loads(Path(__file__).with_name('my_company_basis_sources.json').read_text(encoding='utf-8'))['sources']
 RESIDENT_BANDS = tuple(Band(None if cap is None else Decimal(cap), Decimal(rate))
     for cap,rate in [('5000','0'),('20000','.01'),('35000','.03'),('50000','.06'),
                      ('70000','.11'),('100000','.19'),('400000','.25'),('600000','.26'),
