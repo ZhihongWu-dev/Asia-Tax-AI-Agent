@@ -1,0 +1,50 @@
+{
+  "status": "historical_primary_source_archived_pending_amendment_review_and_registration",
+  "url": "https://jdih.kemenkeu.go.id/api/download/fulltext/2014/242~PMK.03~2014Per.htm",
+  "file": "database/raw/id/id.pmk242-2014.html",
+  "sha256": "5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404",
+  "slicing_mode": "id_pasal",
+  "clauses": 164,
+  "selected_clauses": [
+    {
+      "cite_id": "id.pmk242-2014#2(7)",
+      "doc_id": "id.pmk242-2014",
+      "kind": "paragraph",
+      "label": "Pasal 2(7)",
+      "parent": "id.pmk242-2014#2",
+      "text": "(7)\nPPh Pasal 23 dan PPh\nPasal 26 yang dipotong oleh Pemotong PPh harus disetor paling lama\ntanggal 10 (sepuluh) bulan berikutnya setelah Masa Pajak berakhir."
+    },
+    {
+      "cite_id": "id.pmk242-2014#9(1)",
+      "doc_id": "id.pmk242-2014",
+      "kind": "paragraph",
+      "label": "Pasal 9(1)",
+      "parent": "id.pmk242-2014#9",
+      "text": "(1)\nDalam hal tanggal\njatuh tempo pembayaran atau penyetoran pajak sebagaimana dimaksud dalam\nPasal 2 bertepatan dengan hari libur, pembayaran atau penyetoran pajak\ndapat dilakukan paling lambat pada hari kerja berikutnya."
+    },
+    {
+      "cite_id": "id.pmk242-2014#9(2)",
+      "doc_id": "id.pmk242-2014",
+      "kind": "paragraph",
+      "label": "Pasal 9(2)",
+      "parent": "id.pmk242-2014#9",
+      "text": "(2)\nHari libur sebagaimana\ndimaksud pada ayat (1) yaitu hari Sabtu, hari Minggu, hari libur\nnasional, hari yang diliburkan untuk penyelenggaraan Pemilihan Umum,\natau cuti bersama secara nasional.\nBAB III\nTATA CARA PEMBAYARAN DAN PENYETORAN PAJAK\nBagian Kesatu\nTempat dan Sarana Pembayaran dan Penyetoran Pajak"
+    },
+    {
+      "cite_id": "id.pmk242-2014#35",
+      "doc_id": "id.pmk242-2014",
+      "kind": "section",
+      "label": "Pasal 35",
+      "parent": "",
+      "text": "Pasal 35\nPeraturan Menteri ini mulai berlaku pada\ntanggal diundangkan.\nAgar setiap orang\nmengetahuinya, memerintahkan pengundangan Peraturan Menteri ini dengan\npenempatannya dalam Berita Negara Republik Indonesia.\nDitetapkan di Jakarta\npada tanggal 24 Desember 2014\nMENTERI KEUANGAN REPUBLIK INDONESIA,\nttd.\nBAMBANG P. S. BRODJONEGORO\nDiundangkan di Jakarta\npada tanggal 24 Desember 2014\nMENTERI HUKUM DAN HAK ASASI MANUSIA\nREPUBLIK INDONESIA,\nttd.\nYASONNA H. LAOLY\nBERITA NEGARA REPUBLIK INDONESIA TAHUN\n2014 NOMOR 1973"
+    }
+  ],
+  "temporal_review": {
+    "original_commencement": "2014-12-24",
+    "commencement_basis": "Article35 and promulgation date in original text",
+    "repeal_from": "2025-01-01",
+    "repeal_index": "https://jdih.kemenkeu.go.id/dok/242-pmk-03-2014",
+    "unresolved": "Review PMK18/2021 changes and holiday-adjustment provisions before migrating historical payment parameter; index header end date differs from explicit repeal timeline."
+  },
+  "scope": "Historical source only. The currently applicable PMK81/2024 payment deadline is separately sourced; this original regulation must not become a current ten-day deadline."
+}
