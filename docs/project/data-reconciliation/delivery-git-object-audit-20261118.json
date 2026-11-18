@@ -1,0 +1,32 @@
+{
+  "base_remote_branch_snapshot": "3dec54b2211fa2c23f18b01d0f47e262a6c474e0",
+  "head": "80399a50f4ce3c3150f3151e59b474fe2600182e",
+  "new_blob_count": 1468,
+  "uncompressed_new_blob_bytes": 625168405,
+  "large_blobs": [
+    {
+      "path": "database/database.sqlite",
+      "oid": "1c27c78e1e6f943be459b402c6bfdc2995ad1787",
+      "bytes": 90738688,
+      "over_100_mib": false
+    },
+    {
+      "path": "database/clause.csv",
+      "oid": "cf3f6975159aef0d781e4f21eec8df11f06e7e1c",
+      "bytes": 75015751,
+      "over_100_mib": false
+    }
+  ],
+  "over_100_mib_count": 0,
+  "scope": "Offline object size audit against last verified remote branch; not a push or current network verification.",
+  "official_references": [
+    "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github",
+    "https://docs.github.com/en/get-started/using-git/troubleshooting-the-2-gb-push-limit"
+  ],
+  "limits": {
+    "regular_blob_bytes": 104857600,
+    "warning_blob_bytes": 52428800,
+    "single_push_bytes": 2147483648
+  },
+  "claim": "No oversized new blob found; actual push pack and network/authentication not verified."
+}
