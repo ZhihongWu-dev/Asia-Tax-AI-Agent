@@ -132,6 +132,13 @@ def test_api_restart_export_and_rejected_scope_preserve_original(tmp_path):
         report=client.get(path+'/runs/'+record['id']+'/report?locale=en')
         assert report.status_code==200
         assert 'local_income_reconciliation' in report.text
+        assert 'Tokyo 23-ward local tax details' in report.text
+        assert 'totals above are national taxes' in report.text
+        assert '| Local annual tax total | 860400 |' in report.text
+        zh=client.get(path+'/runs/'+record['id']+'/report?locale=zh')
+        assert zh.status_code==200
+        assert '东京23区地方税明细' in zh.text
+        assert '| 地方税年度合计 | 860400 |' in zh.text
         for source in record['result']['sources']:assert source['sha256'] in report.text
         before=client.get(path).json();invalid=basis()
         invalid['tokyo_local']['size_based_exclusion_including_2025_2026_verified']=False

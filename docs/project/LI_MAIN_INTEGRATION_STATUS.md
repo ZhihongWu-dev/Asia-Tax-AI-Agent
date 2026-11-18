@@ -25,10 +25,12 @@ a single uninterrupted run. The separate database-tool environment passed all
 92 tests, and the full browser suite passed all 121 tests in 10.2 minutes.
 See [exact evidence](data-reconciliation/local-regression-personal-reconciliation-20261119.json).
 
-Five Japanese local-tax originals are now archived and hash-verified for
-continued implementation. Their review is incomplete and no local-tax workflow
-is enabled by this archival step. Actual business acceptance remains unproven;
-all delivery actions remain local-only.
+Subsequent commits through f979c2b enabled an optional Tokyo 23-ward local-tax
+workpaper for full-year ordinary domestic companies within its verified scope.
+The income/report suite passed 1,653 tests, and three targeted browser cases
+passed. Other Japanese local-tax situations and actual business acceptance
+remain unresolved; all delivery actions remain local-only. See
+[Tokyo evidence](data-reconciliation/japan-tokyo-ui-validation-20261119.json).
 
 ## Local income-tax reconciliation checkpoint (2026-11-19)
 
@@ -401,7 +403,7 @@ actual original dominance predicate, including epsilon boundaries and distinct
 obligations. A real-case isolated probe is still enumerating paths; no real-case
 speedup or full-check success is claimed yet. The frozen checker is unchanged.
 
-## Remaining delivery gates
+## Historical delivery gates (superseded by current local-only scope)
 
 1. Finish the live optimizer baseline, rebuild the frozen data with the reviewed
    repairs, and validate source hashes, citation closure and CSV/SQLite parity.
@@ -435,7 +437,7 @@ This is the trial integration on `Zhihong-Wu`. `main` has not been changed.
 - A local account-scoped FastAPI request created a case and posted the same question: HTTP 201 then 200, saved revision 1, answer status `source_grounded`, workflow `library-cn-0.1.0`. The streaming route also returned a `done` event and an English answer when `locale=en`.
 - Compile and staged diff checks passed. The full existing test suite, cloud account isolation, Li planner/report flow, rule evaluation, and Render deployment have not yet been verified.
 
-## Next gates
+## Historical next gates (2026-11-15; superseded delivery actions)
 
 1. Validate each missing/conflicting source against its official original and effective period, then publish accepted overlay data with an immutable text hash. Keep rejected candidates out of retrieval.
 2. Resolve Li's added and changed rule citations against the accepted source version; run its golden cases without replacing the existing HK workflow.

@@ -1,0 +1,31 @@
+{
+  "status": "scoped_report_and_toggle_verified",
+  "delivery": "Local only; no remote or main changes",
+  "changes": [
+    "Bilingual Tokyo report table separates four local taxes, interim liabilities and balances",
+    "Report and UI distinguish national payment/refund totals from local totals",
+    "Tokyo result retains defence-tax filing notice"
+  ],
+  "checks": {
+    "targeted_backend": {
+      "passed": 29,
+      "seconds": 8.18,
+      "exit_code": 0
+    },
+    "typescript": {
+      "exit_code": 0
+    },
+    "browser": {
+      "passed": 1,
+      "seconds": 30.8,
+      "exit_code": 0,
+      "covers": [
+        "Duplicate ward rejected before saving",
+        "Downloaded report includes local amounts payable488400 and refunds108000",
+        "Combined annual tax2815700 and archived source identifiers present in downloaded report",
+        "Disabling Tokyo removes local fields, saves national-only1835300 with8sources, and remains national-only on reopen"
+      ]
+    }
+  },
+  "limits": "Does not establish all Japanese local tax regimes or overall business acceptance."
+}

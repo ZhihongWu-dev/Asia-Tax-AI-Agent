@@ -55,6 +55,25 @@ def render(run, locale='zh'):
             ('local_corporation_balance_due','地方法人税补退余额','Local corporation-tax balance')]:
         if key in result:
             lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
+    if result.get('tokyo_local'):
+        local = result['tokyo_local']
+        lines += ['', '## ' + say('东京23区地方税明细', 'Tokyo 23-ward local tax details'), '',
+            say('仅限全年全部办公地点位于东京23区的普通内国法人。上表应缴及应退合计为国家税；地方税另列如下，各税种不自动互抵。',
+                'Ordinary domestic companies with all offices in Tokyo 23 wards throughout the full year only. Payable and refundable totals above are national taxes; local amounts are listed separately below, without automatic cross-tax offsets.'), '',
+            '| ' + say('税种 | 年度税额 | 中间申告义务 | 补退余额', 'Tax | Annual tax | Interim liability | Payment or refund balance') + ' |',
+            '| --- | --- | --- | --- |']
+        for key, zh, en in [('enterprise','事业税','Enterprise tax'),
+                ('special_enterprise','特别法人事业税','Special enterprise tax'),
+                ('inhabitant','住民税法人税割','Inhabitant levy'),
+                ('per_capita','住民税均等割','Per-capita levy')]:
+            values = [say(zh,en), local['local_tax_components'][key],
+                local['local_interim_liabilities'][key], local['local_balances'][key]]
+            lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
+        lines += ['', '| ' + say('项目 | 金额', 'Item | Amount') + ' |', '| --- | --- |']
+        for key, zh, en in [('local_final_tax','地方税年度合计','Local annual tax total'),
+                ('local_amounts_payable','地方税应补合计','Local amounts payable'),
+                ('local_refunds','地方税应退合计','Local refund amounts')]:
+            lines.append(f'| {_text(say(zh,en))} | {_text(local[key])} |')
     lines += ['', '## ' + say('保存的官方来源', 'Saved official sources'), '']
     sources = result.get('sources') or ([result['source']] if result.get('source') else [])
     for source in sources:

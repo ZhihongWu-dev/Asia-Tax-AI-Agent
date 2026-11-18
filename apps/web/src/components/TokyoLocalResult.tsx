@@ -8,6 +8,8 @@ export default function TokyoLocalResult({result,index}:{result:Record<string,un
  const names=[['enterprise','事业税','Enterprise tax'],['special_enterprise','特别法人事业税','Special enterprise tax'],['inhabitant','住民税法人税割','Inhabitant levy'],['per_capita','住民税均等割','Per-capita levy']] as const;
  return <section aria-label={say('东京地方税明细','Tokyo local tax details')}><h4>{say('东京地方税明细','Tokyo local tax details')}</h4>
  <p>{say('仅限全部办公地点全年位于东京23区的普通内国法人，各税种补退分别处理，不自动互抵；不含其他地区、外形标准课税或特殊税制。','Full-year ordinary domestic company with all offices in Tokyo 23 wards. Component balances remain separate without automatic offsets. Other locations, size-based and special regimes are excluded.')}</p>
+ <p>{say('上方应缴及应退合计仅为国家税，地方税补退另列如下。','Payable and refundable totals above cover national taxes only; local payments and refunds are listed separately below.')}</p>
+ <p>{say('防卫特别法人税申报：','Defence tax return: ')}{result.defence_return_required?say('需要，包括零税额申报。','Required, including zero-tax returns.'):say('本会计年度开始日尚不适用。','Not applicable for this accounting-period start date.')}</p>
  <dl><div><dt>{say('国家税合计','National tax total')}</dt><dd>{String(result.national_final_tax)}</dd></div><div><dt>{say('本场景国家税与地方税合计','National and local tax total for this scope')}</dt><dd>{String(result.final_tax)}</dd></div></dl>
  {names.map(([key,zh,en])=><section key={key} aria-label={say(zh,en)}><h5>{say(zh,en)}</h5><dl>
  <div><dt>{say('年度税额','Annual tax')}</dt><dd>{String(taxes[key])}</dd></div><div><dt>{say('中间申告义务','Interim liability')}</dt><dd>{String(interim[key])}</dd></div><div><dt>{say('应补／退额','Payment or refund balance')}</dt><dd>{String(balances[key])}</dd></div></dl></section>)}
