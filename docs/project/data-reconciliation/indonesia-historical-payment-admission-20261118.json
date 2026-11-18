@@ -1,0 +1,49 @@
+{
+  "status": "cloud_admitted_and_exact_read_verified",
+  "citations": [
+    {
+      "cite_id": "id.pmk242-2014#2(7)",
+      "characters": 158,
+      "text_sha256": "5ef1f2a9347a79c7abf998d905f70b2216ddf274f5cdf5db623842e6932f621e",
+      "exact_full_text": true
+    },
+    {
+      "cite_id": "id.pmk242-2014#9(1)",
+      "characters": 222,
+      "text_sha256": "471d1497fecd35b0df1ef388c5ed24bee41ce20efb8019cc51f4ab04a597fb12",
+      "exact_full_text": true
+    },
+    {
+      "cite_id": "id.pmk242-2014#9(2)",
+      "characters": 309,
+      "text_sha256": "168e9ef7e1bbfb3ad388a5dfd3f8edda4b2cebd5c4084064aa09d4c22583635b",
+      "exact_full_text": true
+    },
+    {
+      "cite_id": "id.pmk242-2014#35",
+      "characters": 520,
+      "text_sha256": "9b022e630daa9aa60f8f25a171b33ec7d0225ad889d8333f9aa053ef5b6be31a",
+      "exact_full_text": true
+    }
+  ],
+  "before_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "cfefc8eee8c12b272f015b6b3e95017127eae33f887e014792ce1c3e186ca940",
+    "review_sha256": "4d4499fe0b01f25e45f06abb5adbca40010d8c328fc16757f1e8ee76228c88f1"
+  },
+  "after_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "cfefc8eee8c12b272f015b6b3e95017127eae33f887e014792ce1c3e186ca940",
+    "review_sha256": "13f50d553fd845dc59bd5ce72805f21db1452a77f25f9e10ab023728ad0d9e5e"
+  },
+  "old_snapshot_rejected": true,
+  "base_counts_unchanged": {
+    "doc": 287,
+    "clause": 38152
+  },
+  "scope": "Historical source text only; runtime catalog promotion and complete transition handling remain pending."
+}

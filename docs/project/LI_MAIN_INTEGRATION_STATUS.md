@@ -152,9 +152,11 @@ The final integration has not been pushed or merged to `main`. The historical
 
 The dedicated read-only cloud reader checked all 635 distinct citation dependencies
 in the isolated parameter, absence, rule, predicate and decision CSVs after the
-Vietnam distribution and Indonesian statutory-source changes. None are missing; one remains blocked:
-`id.dgt.article26#all`, now used only by the historical payment-deadline
-parameter. The statutory-rate parameter and rule use admitted primary text. See [current source audit](data-reconciliation/isolated-planner-source-readiness-20261118.json).
+Vietnam distribution and Indonesian statutory/historical-payment source changes.
+None are missing or blocked. The statutory-rate and historical payment parameters
+now use admitted primary text; the latter retains its inclusive 2014-12-24 through
+2024-12-31 applicability window. Full historical penalty-transition handling is
+still incomplete. See [current source audit](data-reconciliation/isolated-planner-source-readiness-20261118.json).
 This verifies citation availability and admission only, not legal completeness,
 cloud parameter parity, runtime promotion or final business acceptance.
 

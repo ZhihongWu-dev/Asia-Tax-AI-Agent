@@ -1,21 +1,17 @@
 {
-  "scope": "Isolated CSVs after Indonesian statutory-rate primary rebinding; not runtime promotion or cloud catalog migration.",
+  "scope": "Isolated CSVs after historical payment primary rebinding; not runtime promotion or cloud catalog parity.",
   "snapshot": {
     "spec_version": "2026-11-10",
     "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
     "uploaded_at": "2026-11-13T03:39:52Z",
-    "overlay_bundle_sha256": "cd232c6bd73deb3adabdd833abef0c1c1a876972c110e33330e16ea5988ac6f7",
-    "review_sha256": "4d4499fe0b01f25e45f06abb5adbca40010d8c328fc16757f1e8ee76228c88f1"
+    "overlay_bundle_sha256": "cfefc8eee8c12b272f015b6b3e95017127eae33f887e014792ce1c3e186ca940",
+    "review_sha256": "13f50d553fd845dc59bd5ce72805f21db1452a77f25f9e10ab023728ad0d9e5e"
   },
   "counts": {
     "references": 635,
     "missing": 0,
-    "blocked": 1
+    "blocked": 0
   },
   "missing": {},
-  "blocked": {
-    "id.dgt.article26#all": [
-      "database/param.csv:id.outbound_wht.payment_deadline"
-    ]
-  }
+  "blocked": {}
 }

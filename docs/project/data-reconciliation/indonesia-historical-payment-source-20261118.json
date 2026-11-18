@@ -1,5 +1,5 @@
 {
-  "status": "historical_parameter_migrated_in_isolated_stage_pending_validation_and_source_admission",
+  "status": "historical_parameter_scoped_validated_and_sources_admitted_pending_full_rebuild_and_runtime_promotion",
   "url": "https://jdih.kemenkeu.go.id/api/download/fulltext/2014/242~PMK.03~2014Per.htm",
   "file": "database/raw/id/id.pmk242-2014.html",
   "sha256": "5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404",
@@ -143,5 +143,11 @@
     "current_day_next_month": "15",
     "current_active_on_2025_01_01": true,
     "scope": "Parameter applicability only; prior-period penalty transition under Article476 is not implemented by this boundary test."
-  }
+  },
+  "scoped_validation": {
+    "errors": 0,
+    "gaps": 7,
+    "passed": false
+  },
+  "admission_evidence": "indonesia-historical-payment-admission-20261118.json"
 }
