@@ -1,0 +1,35 @@
+{
+  "status": "source_review_complete_implementation_pending",
+  "sources": [
+    {
+      "doc_id": "hk.ird.corporation-notes.20261119",
+      "title": "Hong Kong corporation return notes: assessable profits before brought-forward losses",
+      "url": "https://www.ird.gov.hk/eng/tax/bir51e_notes.htm",
+      "file": "database/raw/hk/hk.ird.corporation-notes.20261119.html",
+      "sha256": "3ffc9155c08fa019a82c1a982eebbe23608d09caab41ad8198d6212add487a95"
+    },
+    {
+      "doc_id": "hk.ird.profits-overview.20261119",
+      "title": "Hong Kong profits tax: statutory deductions and treatment of losses",
+      "url": "https://www.ird.gov.hk/eng/tax/bus_pft.htm",
+      "file": "database/raw/hk/hk.ird.profits-overview.20261119.html",
+      "sha256": "813d308fed75d0cd75b5a151ddc459f5aa4abe62a479201adeb0563673444a91"
+    }
+  ],
+  "findings": [
+    "BIR51 assessable profits/adjusted loss are before brought-forward losses.",
+    "Accounting profits need statutory additions and deductions, including replacing accounting depreciation with eligible statutory allowances.",
+    "Approved donations have a limit before loss set-off.",
+    "Prior losses must remain separate from current-period assessable profits and the final net amount charged."
+  ],
+  "implementation_requirements": [
+    "Reconcile saved receipts and allowable deductions with separately recorded statutory adjustments/exclusions.",
+    "Show current assessable profits, actual loss relief and net taxable profits separately; preserve historical snapshots.",
+    "Do not infer donation, capital allowance, offshore/FSIE or loss eligibility from arithmetic alone."
+  ],
+  "validation_pending": [
+    "Adapter rejection of inconsistent saved deductions",
+    "Corporate and sole-proprietor tax cases with and without loss set-off",
+    "Persistence, restart, report and browser workflow"
+  ]
+}
