@@ -1,4 +1,4 @@
-﻿test_id,slot_key,date,facts,answers,expect,source
+test_id,slot_key,date,facts,answers,expect,source
 cn.residence.company.1,cn|company|residence|*,2026-01-01,incorporated_in=cn,,resident yes T,authored
 cn.residence.company.2,cn|company|residence|*,2026-01-01,incorporated_in=hk;managed_in=hk,,resident no F,authored
 cn.residence.company.3,cn|company|residence|*,2026-01-01,incorporated_in=hk,,resident yes U:managed_in,authored
@@ -1193,11 +1193,11 @@ vn.residence.company.1,vn|company|residence|*,2026-01-01,incorporated_in=vn,,res
 vn.residence.company.2,vn|company|residence|*,2026-01-01,incorporated_in=sg;managed_in=vn,,resident no F,authored
 vn.residence.company.3,vn|company|residence|*,2026-01-01,,,resident yes U:incorporated_in,authored
 vn.inbound.taxable.1,vn|company|inbound|*,2026-01-01,,,taxable 100 T,authored
-vn.inbound.credit.1,vn|company|inbound|*,2026-01-01,,,credit 100 T,authored
+vn.inbound.credit.1,vn|company|inbound|*,2026-01-01,vn_direct_credit_eligible=true,,credit 100 T,authored
 vn.final.cit.1,vn|company|final|*,2026-01-01,payer_resident=false,,rate 20 T,authored
-vn.final.domestic_exempt.1,vn|company|final|*,2026-01-01,payer_resident=true,,exempt 0 T,authored
-vn.final.domestic_exempt.2,vn|company|final|*,2026-01-01,payer_resident=false,,exempt 20 F,authored
-vn.final.domestic_exempt.3,vn|company|final|*,2026-01-01,,,"exempt 20 U:incorporated_in,managed_in",authored
+vn.final.domestic_exempt.1,vn|company|final|*,2026-01-01,payer_resident=true;vn_qualifying_profit_distribution=true,,exempt 0 T,authored
+vn.final.domestic_exempt.2,vn|company|final|*,2026-01-01,payer_resident=false;vn_qualifying_profit_distribution=true,,exempt 20 F,authored
+vn.final.domestic_exempt.3,vn|company|final|*,2026-01-01,vn_qualifying_profit_distribution=true,,"exempt 20 U:incorporated_in,managed_in",authored
 vn.residence.individual.1,vn|individual|residence|*,2026-08-01,days_present=200,,resident yes T,authored
 vn.residence.individual.2,vn|individual|residence|*,2026-08-01,days_present=100;days_present_12m_from_arrival=150;ordinarily_resides=false,,resident no F,authored
 vn.residence.individual.3,vn|individual|residence|*,2026-08-01,days_present=100,,"resident yes U:days_present_12m_from_arrival,ordinarily_resides",authored
@@ -1361,3 +1361,16 @@ sg-ae.inbound.credit_underlying.2,sg|company|inbound|ae,2026-01-01,received_in_j
 sg-ae.inbound.credit_underlying.3,sg|company|inbound|ae,2026-01-01,received_in_jurisdiction=true;payee_resident=true,,credit_underlying 100 U:tiers,authored
 jp.restructure.surtax.individual.1,jp|individual|restructure|*,2026-01-01,transferor_resident=true,,surtax 15.315 T,authored
 jp.restructure.surtax.individual.2,jp|individual|restructure|*,2026-01-01,target_in_jurisdiction=true;transferor_resident=false;holding_pct=100;transferred_pct=100,,surtax 15.315 T,authored
+vn.penalty.late_interest.20260701.true,vn|all|penalty|*,2026-07-01,vn_late_payment_interest_applicable=true,,interest 0.03 T,authored
+vn.penalty.late_interest.20260701.false,vn|all|penalty|*,2026-07-01,vn_late_payment_interest_applicable=false,,interest - F,authored
+vn.penalty.late_interest.20260701.unknown,vn|all|penalty|*,2026-07-01,,,interest 0.03 U:vn_late_payment_interest_applicable,authored
+vn.penalty.late_interest.20260701.before,vn|all|penalty|*,2026-06-30,vn_late_payment_interest_applicable=true,,interest - -,authored
+vn.penalty.late_interest.20260701.company,vn|company|penalty|*,2026-07-01,vn_late_payment_interest_applicable=true,,interest 0.03 T,authored
+vn.penalty.late_interest.20260701.individual,vn|individual|penalty|*,2026-07-01,vn_late_payment_interest_applicable=true,,interest 0.03 T,authored
+vn.inbound.credit.false,vn|company|inbound|*,2026-01-01,vn_direct_credit_eligible=false,,credit 100 F,authored
+vn.inbound.credit.unknown,vn|company|inbound|*,2026-01-01,,,credit 100 U:vn_direct_credit_eligible,authored
+vn.final.domestic_exempt.unqualified,vn|company|final|*,2026-01-01,payer_resident=true;vn_qualifying_profit_distribution=false,,exempt 20 F,authored
+vn.final.domestic_exempt.unverified,vn|company|final|*,2026-01-01,payer_resident=true,,exempt 20 U:vn_qualifying_profit_distribution,authored
+vn.outbound_wht.corporate_distribution_exempt.true,vn|company|outbound_wht|*,2026-01-01,vn_qualifying_profit_distribution=true,,exempt 0 T,authored
+vn.outbound_wht.corporate_distribution_exempt.false,vn|company|outbound_wht|*,2026-01-01,vn_qualifying_profit_distribution=false,,exempt - F,authored
+vn.outbound_wht.corporate_distribution_exempt.unknown,vn|company|outbound_wht|*,2026-01-01,,,exempt - U:vn_qualifying_profit_distribution,authored

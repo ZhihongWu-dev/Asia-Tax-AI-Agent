@@ -4,10 +4,10 @@ Written by `rule/tools/build.py` at every build; do not edit.
 
 | What | Count |
 |---|---|
-| Rules | 451 |
-| Variables / predicates | 94 / 11 |
-| Interpretation decisions (rows) | 203 |
-| Golden tests (passed / total) | 1362 / 1362 |
+| Rules | 453 |
+| Variables / predicates | 97 / 11 |
+| Interpretation decisions (rows) | 204 |
+| Golden tests (passed / total) | 1375 / 1375 |
 | Errors | 0 |
 | Coverage gaps (jurisdiction, subject, slot) | 30 |
 | Conditioned rules without a T, F and U test | 0 |
@@ -20,7 +20,7 @@ Written by `rule/tools/build.py` at every build; do not edit.
 | hk | 16 |
 | sg | 22 |
 | id | 41 |
-| vn | 46 |
+| vn | 48 |
 | my | 43 |
 | th | 44 |
 | ae | 14 |
@@ -45,9 +45,9 @@ Cells jurisdiction | subject | slot with neither a rule nor an absence record in
 - id|individual|penalty
 - id|individual|restructure
 - id|individual|exit
-- vn|company|penalty
+- vn|company|cfc
 - vn|company|restructure
-- vn|individual|penalty
+- vn|individual|cfc
 - vn|individual|restructure
 - vn|individual|exit
 - my|company|penalty
