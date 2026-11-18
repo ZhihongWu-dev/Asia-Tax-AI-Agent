@@ -189,3 +189,35 @@ def test_version_failure_is_a_visible_service_error():
     with pytest.raises(HTTPException) as caught: call(fail)
     assert caught.value.status_code==503
     assert caught.value.detail=='knowledge_version_changed'
+
+
+def test_catalog_migration_invalidates_old_pin_without_rebinding_source_reviews(monkeypatch):
+    metadata = dict(VERSION)
+
+    class CatalogConnection(Connection):
+        def execute(self, statement, params=None):
+            sql = str(statement)
+            if 'SELECT key, value' in sql:
+                self.statements.append((sql, params))
+                # Model the real WHERE IN selection: an unrequested revision
+                # must not appear just because our fake metadata contains it.
+                return Result([(k, v) for k, v in metadata.items() if "'" + k + "'" in sql])
+            return super().execute(statement, params)
+
+    connection = CatalogConnection()
+    monkeypatch.setattr(library_cloud, '_engine', lambda: SimpleNamespace(connect=lambda: connection))
+    before = library_cloud.current_library_snapshot()
+    assert 'catalog_revision' not in before  # Existing unversioned upload is readable.
+    metadata['catalog_revision'] = 'a' * 64
+    after = library_cloud.current_library_snapshot()
+    assert after['catalog_revision'] == 'a' * 64
+    assert after['uploaded_at'] == before['uploaded_at'] == REVIEW['base_uploaded_at']
+    assert after['review_sha256'] == before['review_sha256']
+    connection.statements.clear()
+    with pytest.raises(library_cloud.LibraryVersionChanged, match='library_version_changed'):
+        library_cloud.search_library('cn.test#1', 'cn', expected_version=before)
+    assert not any('FROM database.clause' in sql for sql, _ in connection.statements)
+    assert library_cloud.current_library_snapshot(expected_version=after) == after
+    metadata['catalog_revision'] = 'b' * 64
+    with pytest.raises(library_cloud.LibraryVersionChanged, match='library_version_changed'):
+        library_cloud.current_library_snapshot(expected_version=after)

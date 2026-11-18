@@ -170,6 +170,22 @@ See [current parity evidence](data-reconciliation/isolated-indonesia-primary-bui
 four completed cases and no checker failures in those four; its full result is
 still pending.
 
+## Cloud parameter catalog synchronization
+
+A fresh dedicated-reader comparison found 760 cloud parameters versus 811 in the
+isolated catalog: 51 additions, no removals, 641 identical rows and 119 changed
+rows. Of the changed rows, 110 differ only in quote whitespace; nine include
+source, scope-note or temporal metadata changes. This is a prepared diff, not an
+applied migration. See [exact before/after rows](data-reconciliation/isolated-cloud-parameter-diff-20261118.json).
+
+The local library reader now includes optional `database.meta.catalog_revision`
+in pinned snapshots. This preserves the source upload identity and accepted
+reviews while rejecting queued snapshots after a catalog revision changes.
+All catalog writers must update the revision atomically with their rows. The
+44 snapshot/planning-source tests passed; the reader change is not deployed,
+and no cloud parameter rows or catalog revision have been changed by this work.
+Deploy the revision-aware reader before applying a catalog migration.
+
 ## Remaining delivery gates
 
 1. Finish the live optimizer baseline, rebuild the frozen data with the reviewed

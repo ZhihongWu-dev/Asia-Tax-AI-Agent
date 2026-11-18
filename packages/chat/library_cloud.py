@@ -54,11 +54,13 @@ def _read_library_state(connection, expected_version=None):
     """Read version and admission metadata inside the caller's read-only snapshot."""
     source_commit, candidates, overlay_hash = load_candidates()
     version = dict(connection.execute(text(
-        "SELECT key, value FROM database.meta WHERE key IN ('uploaded_at', 'spec_version', 'tools_commit')"
+        "SELECT key, value FROM database.meta WHERE key IN ('uploaded_at', 'spec_version', 'tools_commit', 'catalog_revision')"
     )).all())
     reviews = [dict(row) for row in connection.execute(text(
         'SELECT * FROM database_integration.source_review ORDER BY cite_id'
     )).mappings().all()]
+    # Catalog migrations must change this revision atomically with their rows.
+    # Keep the source-upload identity stable so accepted reviews stay valid.
     version['overlay_bundle_sha256'] = overlay_hash
     version = _snapshot(version, reviews, expected_version)
     overlay = admitted_rows(source_commit, candidates, reviews)
