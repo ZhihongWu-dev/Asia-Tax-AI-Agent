@@ -1,6 +1,7 @@
 # China personal rental: calculation periods and integration evidence
 
-Status: implementation pending; this does not establish rental business acceptance.
+Status: monthly expense-base component implemented; annual workflow pending.
+This does not establish rental business acceptance.
 Delivery remains local only. Corporate and personal coverage of all eleven
 dividend jurisdictions remains the overall requirement.
 
@@ -41,12 +42,28 @@ processing and no cross-property or cross-country transfer inferred. Do not
 allow duplicate papers to multiply the monthly deduction. Annual balances need
 replayable evidence across years, not an unexplained annual deduction total.
 
-Before implementation, resolve the threshold basis after taxes/sublease rent and
-repairs, treatment of months with insufficient income, the aggregation of
+The threshold basis is now resolved by the national explanation reproduced at
+https://shanghai.chinatax.gov.cn/tax/zcfw/zcjd/200912/t291158.html:
+use the balance after taxes/sublease rent and repairs, then apply statutory
+expenses. The original HTML is archived and hashed in
+`cn_personal_rental_sources.json`. For example, gross 5,000 less established
+preceding deductions 1,200 leaves 3,800; the statutory expense is 800 and the
+remaining base is 3,000, not 3,040. At exactly 4,000, both formulas give 3,200.
+
+The internal `monthly_expense_base` component preserves this order and exact
+decimal precision, with 15 passing tests including threshold boundaries,
+annual/monthly counterexample, invalid inputs and archived source hashes.
+It does not determine eligibility of preceding deductions or calculate annual
+tax. Negative balances require separate eligibility/carry treatment and are
+rejected, rather than silently generating a loss deduction.
+
+Before annual integration, resolve treatment of months with insufficient income, the aggregation of
 multiple properties, and housing-rate eligibility for foreign property. Domestic
 housing FAQs mentioning 10% do not alone prove foreign housing eligibility.
-Archive and hash the applicable original deduction provisions before including
-them as calculation sources. Keep separate paid foreign income tax eligible for
+Direct downloads of the Shanxi 2009-639 original and national 1994-89 HTML
+returned HTTP403 during this pass; neither has been archived or added as a
+calculation source. Archive the repair entitlement provisions before adding
+automatic repair carry. Keep separate paid foreign income tax eligible for
 credit and rental expenses, so the same payment cannot silently count twice.
 
 Acceptance must include monthly versus annual counterexamples, threshold
