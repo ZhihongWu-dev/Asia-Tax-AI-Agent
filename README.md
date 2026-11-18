@@ -10,6 +10,20 @@ The repository has passed engineering acceptance for the L0 internal research pr
 
 ## Current delivery scope
 
+The active integration work extends the historical MVP below: Li's reviewed
+data and planning features are being integrated into this authenticated
+workspace, alongside both corporate and personal income tax for all eleven
+dividend jurisdictions (CN, HK, SG, ID, VN, MY, TH, AE, JP, KR and IN).
+This is the required delivery scope, not a claim that every jurisdiction or
+business scenario has passed acceptance. The delivery branch is `Zhihong-Wu`;
+promotion to `main` follows live acceptance. See the
+[integration design and acceptance requirements](docs/project/LI_MAIN_INTEGRATION_DESIGN.md),
+[worker deployment](docs/project/PLANNING_WORKER_DEPLOYMENT.md), and
+[latest workspace regression checkpoint](docs/project/data-reconciliation/workspace-full-regression-20261118.md).
+
+The following L0/L1/L2 descriptions record the earlier research baseline;
+they do not narrow the active corporate and personal income-tax work.
+
 - **L0 internal research prototype**: the default target for 2026, limited to controlled research and engineering validation.
 - **L1 closed advisor pilot**: requires Hong Kong tax expert validation and completion of security and operational gates.
 - **L2 production capabilities for clients**: outside the default scope for 2026.

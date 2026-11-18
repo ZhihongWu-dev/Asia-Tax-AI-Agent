@@ -1,5 +1,32 @@
 # Li upstream refresh
 
+## Deployment and configuration reconciliation
+
+Reviewed the key names and guide headings in upstream 140a9ef. Its
+`deploy_guide.en.md` replaces the application host and describes an overwrite
+workflow. That workflow is not adopted: the accepted integration design keeps
+the authenticated `apps/api/main.py` product and the current case store.
+The unified deployment guide now explicitly distinguishes Zhihong-Wu live
+acceptance from the existing main production deployment. README records both
+corporate and personal income tax across all eleven dividend jurisdictions as
+the active delivery requirement, while retaining historical MVP scope as history.
+
+Upstream's example keys are `qwen_key`, `tax_db`, `database_url`, `supabase_url`,
+`supabase_key` and `site_url`. They are not copied into the unified example:
+the existing application configures model credentials through `FSIE_MODEL_*`,
+case storage through `FSIE_DATABASE_URL` / `FSIE_WEB_DATABASE_URL`, a separate
+read-only legal library through `FSIE_LIBRARY_DATABASE_URL`, and authentication
+through `FSIE_AUTH_*`. These are separate responsibilities, not interchangeable
+credentials. No upstream secret values were imported. The upstream requirements
+change only adds key-setup comments, so no dependency addition is required by
+that commit. Database operational-note ports are recorded below.
+
+CI now installs the existing pinned, hash-verified engine before browser tests
+and exports its directory at job scope, preventing the three structure workflows
+from silently skipping for lack of a configured release. Two workers bound
+browser concurrency; the job limit is twenty minutes to include installation
+and the full suite. This does not establish a successful hosted run or deploy.
+
 ## Current integration checkpoint (after e2c0f4e)
 
 The sections below retain the original inspection chronology. Their statements
