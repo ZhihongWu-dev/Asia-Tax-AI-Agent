@@ -296,7 +296,7 @@ class Checker:
 
 
 # ---------------------------------------------------------------- golden tests (§7 item 10)
-def run_tests(path, products_root):
+def run_tests(path, products_root, *, lib=None):
     """optimization_test.csv: test_id, input, expect. expect: `best <path> <floor> <ceiling>` | `open <key,key>` | `candidates <n>`
     | `not_kept <path> <move> <floor> <ceiling>` (the extra tax, in the payment currency, when that move is not kept)
     | `conduct <key> <first path> <saving>` | `sequence <this payment's path> <later payments' path>` (§4.7a)."""
@@ -304,7 +304,7 @@ def run_tests(path, products_root):
     for t in read_csv(path):
         inp = op.jload(op.ROOT / t["input"])
         out = Path(products_root) / ("test-" + t["test_id"])
-        opt = op.Optimizer(inp)
+        opt = op.Optimizer(inp, lib=lib)
         opt.run(out)
         ranking = op.jload(out / "ranking.json")["ranking"]
         taxes = {x["branch_id"]: x for x in op.jload(out / "tax.json")["taxes"]}
