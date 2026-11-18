@@ -1,0 +1,61 @@
+{
+  "runtime_commit": "75df11cf76623eb29d89710c2d591d0136a3f791",
+  "command": "npm run build",
+  "exit_code": 0,
+  "modules": 2279,
+  "vite_seconds": 3.99,
+  "warning": "Minified main chunk exceeds 500 kB",
+  "delivery": "Local build only; no upload or deployment",
+  "artifacts": [
+    {
+      "file": "apps/web/dist/assets/countries-50m-BphFPm15.json",
+      "bytes": 756420,
+      "sha256": "04342cdc1e3016bcd7db1630de95684d67b79fe3c8c460321e87aef469502394"
+    },
+    {
+      "file": "apps/web/dist/assets/index-DgBCyq2i.js",
+      "bytes": 828655,
+      "sha256": "3c818e22a6b98a43ddefb899947bae9d4e2b0b39204ca9e63f0c43abae6fefd8"
+    },
+    {
+      "file": "apps/web/dist/assets/index-DxbvGyIM.css",
+      "bytes": 51660,
+      "sha256": "fc311ed5d990ca095aa56d28280334c28ef4f17443ba2811728c0252d70a77c4"
+    },
+    {
+      "file": "apps/web/dist/atlas-licenses.txt",
+      "bytes": 4943,
+      "sha256": "168e9c068a51240e2075996a2385ec10b12cf9702fa3e81b0fee82a625317dbe"
+    },
+    {
+      "file": "apps/web/dist/brand/apple-touch-icon.png",
+      "bytes": 2009,
+      "sha256": "4677fcd90034fd8db9a090c7e3f21d0f92680458d765c78e922e0ca08ccac329"
+    },
+    {
+      "file": "apps/web/dist/brand/favicon.svg",
+      "bytes": 392,
+      "sha256": "b310e5957f12f45e1b42c4dbfbc94fa0b47e4b9762a0d68055969639ee7c4b13"
+    },
+    {
+      "file": "apps/web/dist/brand/logo-mark-light.svg",
+      "bytes": 305,
+      "sha256": "a1f15918e1c6647ed80bc4e2e531f7c9dd699c1446f8be6b8a31927ce2bb0b54"
+    },
+    {
+      "file": "apps/web/dist/brand/logo-mark.svg",
+      "bytes": 305,
+      "sha256": "3475d9c5a618563526dbc751d4190d253e23ea65b2da005f759a980176096c3d"
+    },
+    {
+      "file": "apps/web/dist/index.html",
+      "bytes": 775,
+      "sha256": "e88f2202d83e4e001dc2d92c7c3ca84ee40c1167deedf1f6f4508e09441fd86c"
+    },
+    {
+      "file": "apps/web/dist/THIRD_PARTY_NOTICES.txt",
+      "bytes": 6696,
+      "sha256": "55625a930e1a88108558ebeda66b02922089bb9f4c378c5a12cbb8721e0e705f"
+    }
+  ]
+}
