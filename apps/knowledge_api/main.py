@@ -166,7 +166,8 @@ def search(body: SearchWire, request: Request):
                   (not hit.valid_to or when < hit.valid_to)]
     selected = []
     seen = set()
-    for hit in direct if navigation and direct else hits:
+    # Explicit navigation must not substitute keyword hits for absent or expired clauses.
+    for hit in direct if navigation else hits:
         key = (hit.cite_id, *hit.span)
         if key not in seen:
             selected.append(hit)

@@ -234,3 +234,22 @@ def test_combined_current_report_resolves_rule_ids_to_legal_text(real_release, t
             assert report['evidence_gate'] == 'insufficient' and report['is_synthetic']
         finally:
             store.engine.dispose()
+
+
+@pytest.mark.parametrize('include_known', [False, True])
+def test_exact_missing_reference_does_not_substitute_keyword_hits(real_release, include_known):
+    missing = 'hk.cap112.en#nonexistent-review-clause'
+    requested = [missing] + (['hk.cap112.en#s15H'] if include_known else [])
+    with TestClient(library_app) as client:
+        response = client.post('/search', json={'request': {
+            'request_id': 'exact-missing', 'trace_id': 'exact-missing',
+            'query': 'hk.cap112.en#s15H', 'kind': 'all', 'locators': requested},
+            'trusted_context': {'owner': 'user:test'}})
+    assert response.status_code == 200
+    result = response.json()
+    assert result['status'] == ('partial' if include_known else 'no_match')
+    assert result['coverage']['missing_requirements'] == ['未定位条款：' + missing]
+    locators = {span['locator'] for hit in result['evidence'] for span in hit['locator_spans']}
+    assert locators == ({'hk.cap112.en#s15H'} if include_known else set())
+    if not include_known:
+        assert not result['evidence']

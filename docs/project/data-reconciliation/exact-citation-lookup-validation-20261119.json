@@ -1,0 +1,18 @@
+{
+  "status": "verified",
+  "problem": "When all explicit citation lookups were absent or removed by the date filter, search fell back to keyword hits. Missing references remained marked, but unrelated passages could enter the report and consume evidence budget.",
+  "change": "When navigation is present, only direct citation matches are returned. Keyword search remains available for non-navigation requests.",
+  "validation": {
+    "real_engine_bridge": {
+      "passed": 9,
+      "seconds": 27.91,
+      "exit_code": 0
+    },
+    "new_cases": [
+      "Unknown exact citation with a query matching an existing clause returns no_match and no evidence",
+      "Known plus unknown exact citations return only the known clause and explicitly mark the missing one"
+    ]
+  },
+  "preserved": "Existing pinned engine report, HK navigation, replay hashes and model permissions passed the same suite.",
+  "delivery": "Local only"
+}
