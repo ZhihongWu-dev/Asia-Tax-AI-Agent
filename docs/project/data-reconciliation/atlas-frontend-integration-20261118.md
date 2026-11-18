@@ -80,3 +80,20 @@ Reviewing these actual outputs exposed that the frontend did not display the
 country projection's assumed legal judgments. Country pages now show the date,
 illustrative-scenario scope and an expandable list of those judgments. Browser
 coverage asserts this disclosure. No frozen optimizer inputs were changed.
+
+## Live read-only source preflight
+
+Queried the actual cloud catalog through the dedicated read-only reader. Current
+upload remains 2026-11-13T03:39:52Z and has no catalog_revision yet. The current
+485 authored references cannot be materialized: id.dgt.article26#all and
+vn.law.cit2025.en#all are blocked by source review. The empty missing list is not
+proof of complete source availability because admission stops the read early.
+Exact snapshot metadata is in atlas-live-catalog-preflight-20261118.json.
+
+Compared the isolated repaired rule tables with the current worktree: rule.csv
+has two additions and six changed rows; decision.csv has one addition and four
+changes; predicate.csv is unchanged. IDs are recorded in
+atlas-rule-promotion-diff-20261118.json. The catalog migration still contains399
+guarded operations. Promoting repaired rules and migrated catalog coherently is
+required before claiming live atlas/planner readiness. This preflight performs
+no writes and does not override source review or the original running optimizer.

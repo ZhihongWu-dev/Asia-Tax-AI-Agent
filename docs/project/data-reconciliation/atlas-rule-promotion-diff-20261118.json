@@ -1,0 +1,34 @@
+{
+  "rule.csv": {
+    "added": [
+      "vn.outbound_wht.corporate_distribution_exempt",
+      "vn.penalty.late_interest.20260701"
+    ],
+    "removed": [],
+    "changed": [
+      "id.outbound_wht.statutory",
+      "vn.final.cit",
+      "vn.final.domestic_exempt",
+      "vn.inbound.credit",
+      "vn.inbound.taxable",
+      "vn.residence.company"
+    ]
+  },
+  "predicate.csv": {
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  "decision.csv": {
+    "added": [
+      "D-vn-12"
+    ],
+    "removed": [],
+    "changed": [
+      "D-vn-1",
+      "D-vn-10",
+      "D-vn-2",
+      "D-vn-3"
+    ]
+  }
+}
