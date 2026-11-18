@@ -1,0 +1,2517 @@
+{
+  "observed_at": "2026-11-18T18:24:21.668Z",
+  "scope": "Actual frontend policy selection for 22 representative resident ordinary inputs; not proof of complete country coverage",
+  "rows": [
+    {
+      "country": "cn",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "cn",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "cn",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "cn_company_2026",
+          "label": [
+            "中国企业普通税率（2026）",
+            "China ordinary company tax (2026)"
+          ],
+          "notice": [
+            "仅限境内普通25%税率；排除优惠税制、非居民扣缴及境外所得处理。计税基础须已完成纳税调整和亏损抵扣。",
+            "Domestic ordinary 25% regime only. Excludes concessions, non-resident withholding and foreign-income treatment. Establish the tax base after adjustments and allowable losses."
+          ],
+          "required_fields": [
+            {
+              "key": "taxable_income",
+              "label": [
+                "核定应纳税所得额",
+                "Established taxable income"
+              ]
+            },
+            {
+              "key": "normal_rate_confirmed",
+              "label": [
+                "已核对普通税率适用条件",
+                "Normal rate eligibility checked"
+              ]
+            },
+            {
+              "key": "allowed_tax_credits",
+              "label": [
+                "核定可抵免税额",
+                "Allowed tax credits"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "归属本期的预缴税额",
+                "Prepaid tax for this period"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cn_small_company_2026",
+          "label": [
+            "中国小型微利企业（2026）",
+            "China small-low-profit company (2026)"
+          ],
+          "notice": [
+            "境内居民企业须从事国家非限制和禁止行业，全年应纳税所得额不超过300万元、从业人数不超过300人、资产不超过5000万元，三项须同时满足。人数含劳务派遣；人数及资产填法定全年季度平均值，不能填年末值。季度平均为季初、季末之和除2，全年取四季平均；年中开业或终止须按实际经营期核定。应税所得须与保存的收入减核定扣除和可用亏损一致。按25%计入税基、适用20%税率，未计抵免前实际税负5%。不含境外所得及其他特殊优惠叠加。",
+            "Domestic resident enterprise in a non-restricted, non-prohibited industry. Annual taxable income must not exceed CNY3m, employees300 and assets CNY50m; all conditions must hold. Include dispatched workers. Enter verified statutory annual quarterly averages, not year-end figures: each quarter averages opening and closing values, then average all four quarters; verify actual operating-period rules for opening/closing mid-year. Taxable income must reconcile to saved income less established deductions and eligible losses. Include25% of income at a20% rate (5% before credits). Excludes foreign income and other special preference combinations."
+          ],
+          "required_fields": [
+            {
+              "key": "taxable_income",
+              "label": [
+                "核定应纳税所得额",
+                "Established taxable income"
+              ]
+            },
+            {
+              "key": "annual_average_employees",
+              "label": [
+                "法定全年季度平均从业人数",
+                "Statutory annual quarterly-average employees"
+              ]
+            },
+            {
+              "key": "annual_average_assets",
+              "label": [
+                "法定全年季度平均资产总额（元）",
+                "Statutory annual quarterly-average assets (CNY)"
+              ]
+            },
+            {
+              "key": "unrestricted_industry_confirmed",
+              "label": [
+                "已核实属于非限制和非禁止行业",
+                "Non-restricted and non-prohibited industry verified"
+              ]
+            },
+            {
+              "key": "statutory_averages_and_eligibility_verified",
+              "label": [
+                "已核实法定平均值、居民资格和优惠适用条件",
+                "Statutory averages, residence and preference eligibility verified"
+              ]
+            },
+            {
+              "key": "allowed_tax_credits",
+              "label": [
+                "核定可抵免税额",
+                "Allowed tax credits"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "归属本期的预缴税额",
+                "Prepaid tax for this period"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "cn",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "cn",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "cn",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "cn_comprehensive_2026",
+          "label": [
+            "中国居民综合所得（2026）",
+            "China resident comprehensive income (2026)"
+          ],
+          "notice": [
+            "仅限境内工资、劳务报酬、稿酬及特许权使用费，收入总额取自已保存资料。已保存扣除总额须等于下方专项、专项附加、其他及捐赠扣除之和；不要重复计入系统自动处理的6万元基本减除费用和收入类别费用减除。不含单独计税奖金、股权激励或其他所得；本流程不抵扣结转亏损或境外税款。",
+            "Domestic wages, services, author remuneration and royalties only; gross amounts come from saved facts. Saved deductions must equal special, additional, other and donation deductions below. Do not include the automatic CNY 60,000 basic deduction or income-category expense reductions. Separate bonuses, equity schemes and other income are excluded; this workflow cannot consume carried losses or foreign tax credits."
+          ],
+          "required_fields": [
+            {
+              "key": "allowed_special_deductions",
+              "label": [
+                "核定专项扣除",
+                "Allowed special deductions"
+              ]
+            },
+            {
+              "key": "allowed_additional_deductions",
+              "label": [
+                "核定专项附加扣除",
+                "Allowed additional deductions"
+              ]
+            },
+            {
+              "key": "allowed_other_deductions",
+              "label": [
+                "核定其他扣除",
+                "Allowed other deductions"
+              ]
+            },
+            {
+              "key": "allowed_donations",
+              "label": [
+                "核定捐赠扣除",
+                "Allowed donations"
+              ]
+            },
+            {
+              "key": "allowed_tax_reductions",
+              "label": [
+                "核定减免税额",
+                "Allowed tax reductions"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "归属本期的预缴税额",
+                "Prepaid tax for this period"
+              ]
+            },
+            {
+              "key": "domestic_normal_treatment_confirmed",
+              "label": [
+                "已核对境内居民综合所得普通处理",
+                "Domestic resident comprehensive treatment checked"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "hk",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "hk",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2025-04-01",
+        "period_end": "2026-03-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "hk",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "hk_profits_2025_26",
+          "label": [
+            "香港利得税（2025/26）",
+            "Hong Kong profits tax (2025/26)"
+          ],
+          "notice": [
+            "仅限普通公司或独资业务。须核对两级制资格、关联实体选择及排除条件；不包含合伙分配、个人入息课税或境外抵免。",
+            "Ordinary corporation or sole proprietor only. Verify two-tier eligibility, connected-entity nomination and exclusions. Excludes partnerships, personal assessment and foreign credits."
+          ],
+          "required_fields": [
+            {
+              "key": "assessable_profits",
+              "label": [
+                "核定应评税利润",
+                "Established assessable profits"
+              ]
+            },
+            {
+              "key": "business_form",
+              "label": [
+                "业务形式",
+                "Business form"
+              ]
+            },
+            {
+              "key": "two_tier_eligible",
+              "label": [
+                "符合两级制资格",
+                "Eligible for two-tier rates"
+              ]
+            },
+            {
+              "key": "ordinary_regime_confirmed",
+              "label": [
+                "已核对适用普通税制及其排除条件",
+                "Ordinary regime and exclusions checked"
+              ]
+            },
+            {
+              "key": "prepaid_final_tax",
+              "label": [
+                "归属本期最终评税的已缴税额",
+                "Prepaid final tax for this assessment"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "hk",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "hk",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2025-04-01",
+        "period_end": "2026-03-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "hk",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "hk_salaries_2025_26",
+          "label": [
+            "香港薪俸税（2025/26）",
+            "Hong Kong salaries tax (2025/26)"
+          ],
+          "notice": [
+            "仅限单独评税的薪俸所得，不比较合并或个人入息课税。已缴税额须归属本期最终评税，不含下期暂缴税。",
+            "Separate salaries assessment only; joint and personal assessment are not compared. Prepayments must belong to this final assessment, not the next provisional assessment."
+          ],
+          "required_fields": [
+            {
+              "key": "net_income",
+              "label": [
+                "扣除后、免税额前的入息净额",
+                "Net income before allowances"
+              ]
+            },
+            {
+              "key": "allowed_allowances",
+              "label": [
+                "核定免税额",
+                "Allowed allowances"
+              ]
+            },
+            {
+              "key": "prepaid_final_tax",
+              "label": [
+                "归属本期最终评税的已缴税额",
+                "Prepaid final tax for this assessment"
+              ]
+            },
+            {
+              "key": "ordinary_separate_assessment_confirmed",
+              "label": [
+                "已核对普通单独薪俸评税适用条件",
+                "Ordinary separate salaries assessment checked"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hk_profits_2025_26",
+          "label": [
+            "香港利得税（2025/26）",
+            "Hong Kong profits tax (2025/26)"
+          ],
+          "notice": [
+            "仅限普通公司或独资业务。须核对两级制资格、关联实体选择及排除条件；不包含合伙分配、个人入息课税或境外抵免。",
+            "Ordinary corporation or sole proprietor only. Verify two-tier eligibility, connected-entity nomination and exclusions. Excludes partnerships, personal assessment and foreign credits."
+          ],
+          "required_fields": [
+            {
+              "key": "assessable_profits",
+              "label": [
+                "核定应评税利润",
+                "Established assessable profits"
+              ]
+            },
+            {
+              "key": "business_form",
+              "label": [
+                "业务形式",
+                "Business form"
+              ]
+            },
+            {
+              "key": "two_tier_eligible",
+              "label": [
+                "符合两级制资格",
+                "Eligible for two-tier rates"
+              ]
+            },
+            {
+              "key": "ordinary_regime_confirmed",
+              "label": [
+                "已核对适用普通税制及其排除条件",
+                "Ordinary regime and exclusions checked"
+              ]
+            },
+            {
+              "key": "prepaid_final_tax",
+              "label": [
+                "归属本期最终评税的已缴税额",
+                "Prepaid final tax for this assessment"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "sg",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "sg",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2025-01-01",
+        "period_end": "2025-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "sg",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "sg_company_ya2026",
+          "label": [
+            "新加坡企业（课税年2026）",
+            "Singapore company (YA 2026)"
+          ],
+          "notice": [
+            "仅限普通税率收入；须先核对税基、减免资格及可用抵免。现金补助单独列示，不重复扣税。",
+            "Normal-rate income only. Establish the tax base, exemption eligibility and allowed credits first. The cash grant is separate from tax payable."
+          ],
+          "required_fields": [
+            {
+              "key": "normal_chargeable_income",
+              "label": [
+                "普通税率应课税收入",
+                "Normal-rate chargeable income"
+              ]
+            },
+            {
+              "key": "ordinary_regime_confirmed",
+              "label": [
+                "已核对适用普通税制及其排除条件",
+                "Ordinary regime and exclusions checked"
+              ]
+            },
+            {
+              "key": "exemption_scheme",
+              "label": [
+                "减免制度",
+                "Exemption scheme"
+              ]
+            },
+            {
+              "key": "startup_eligibility_confirmed",
+              "label": [
+                "符合初创企业减免条件",
+                "Eligible for start-up exemption"
+              ]
+            },
+            {
+              "key": "cash_grant_eligible",
+              "label": [
+                "符合本课税年现金补助条件",
+                "Eligible for this YA cash grant"
+              ]
+            },
+            {
+              "key": "allowed_tax_setoff",
+              "label": [
+                "核定可抵免税额",
+                "Allowed tax set-off"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "sg",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "sg",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2025-01-01",
+        "period_end": "2025-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "sg",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "sg_employment_ya2026",
+          "label": [
+            "新加坡居民受雇所得结算（YA 2026）",
+            "Singapore resident employment settlement (YA 2026)"
+          ],
+          "notice": [
+            "以已保存的2025年境内应税薪酬计算。已保存扣除额须等于费用、可用捐赠扣除、CPF及其他个人减免之和（总限额前）；不要重复计入自动计算的劳动所得减免。须核对每项资格、限额及家庭分配；其他减免不含已于YA 2026失效的课程费用减免。PTR填本人的核定可用余额，未用余额结转，不退款。仅普通受雇收入，不含税务清算、特殊股票计划、境外抵免或亏损；结果尚未作评税舍入。",
+            "Uses saved 2025 domestic taxable employment income. Saved deductions equal expenses, usable donation deduction, CPF and other personal relief claims before the overall cap; exclude automatic earned income relief. Verify each entitlement, limit and family allocation; other reliefs exclude course fees, lapsed from YA 2026. PTR is your verified available balance; unused PTR carries forward and is not refunded. Ordinary employment only, excluding tax clearance, special share schemes, foreign credits and losses; before assessment rounding."
+          ],
+          "required_fields": [
+            {
+              "key": "birth_date",
+              "label": [
+                "出生日期",
+                "Date of birth"
+              ]
+            },
+            {
+              "key": "disability_relief_eligible",
+              "label": [
+                "符合劳动所得残障减免条件",
+                "Eligible for disability earned income relief"
+              ]
+            },
+            {
+              "key": "allowed_employment_expenses",
+              "label": [
+                "核定受雇费用扣除",
+                "Allowed employment expenses"
+              ]
+            },
+            {
+              "key": "allowed_donation_deduction",
+              "label": [
+                "本期可用捐赠扣除额（已核定倍数）",
+                "Usable donation deduction after verified multiplier"
+              ]
+            },
+            {
+              "key": "allowed_cpf_relief",
+              "label": [
+                "核定员工CPF减免",
+                "Allowed employee CPF relief"
+              ]
+            },
+            {
+              "key": "allowed_other_personal_reliefs",
+              "label": [
+                "其他核定个人减免（不含上述项目）",
+                "Other allowed personal reliefs excluding items above"
+              ]
+            },
+            {
+              "key": "available_parenthood_rebate",
+              "label": [
+                "本人核定可用PTR余额",
+                "Verified available PTR balance"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "归属本期的预缴税额",
+                "Prepaid tax for this period"
+              ]
+            },
+            {
+              "key": "eligibility_and_allocations_verified",
+              "label": [
+                "已核对YA 2026资格、单项限额、分配及PTR余额",
+                "YA 2026 eligibility, individual limits, allocation and PTR balance verified"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sg_resident_ya2026",
+          "label": [
+            "新加坡居民税率表核算（YA 2026）",
+            "Singapore resident rate schedule (YA 2026)"
+          ],
+          "notice": [
+            "输入扣除及个人减免后核定的应课税收入。结果仅为居民税率表计算，尚未计入抵免、预缴或评税舍入。",
+            "Enter established chargeable income after deductions and personal reliefs. This is the resident rate calculation before credits, prepayments and assessment rounding."
+          ],
+          "required_fields": [
+            {
+              "key": "chargeable_income",
+              "label": [
+                "核定应课税收入",
+                "Established chargeable income"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "id",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "id",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "id",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "id_company_2026",
+          "label": [
+            "印尼居民企业（2026）",
+            "Indonesia resident company (2026)"
+          ],
+          "notice": [
+            "仅限以印尼盾申报的境内普通收入，不含上市公司优惠、最终税制、免税收入、境外收入和其他特殊优惠。已核定应税所得按千印尼盾向下取整；第31E条收入总额从已保存明细汇总。全年总额不超过500亿时，自动对归属48亿收入部分的税基适用11%，其余22%。须确认收入完整、已扣退货及销售折扣，未扣费用。",
+            "Domestic ordinary income in IDR only; excludes listed-company concessions, final/exempt/foreign income and other special incentives. Established taxable income is rounded down to thousands of rupiah. Saved gross receipts determine article 31E: at total receipts up to IDR 50bn, the rounded base attributable to the first IDR 4.8bn uses 11%; the remainder uses 22%. Confirm all receipts after returns and sales discounts, before expenses."
+          ],
+          "required_fields": [
+            {
+              "key": "taxable_income_before_rounding",
+              "label": [
+                "核定应税所得（千元取整前）",
+                "Established taxable income before thousand rounding"
+              ]
+            },
+            {
+              "key": "ordinary_annual_treatment_confirmed",
+              "label": [
+                "已核对全年居民普通税制及最终税制等排除条件",
+                "Full-year resident ordinary treatment and final/special-regime exclusions checked"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "核定本期扣缴及预缴税款",
+                "Verified withholding and instalments for this period"
+              ]
+            },
+            {
+              "key": "gross_receipts_scope_confirmed",
+              "label": [
+                "已核实第31E条全部收入范围，且无遗漏的最终计税或免税收入",
+                "Complete article 31E receipts checked, with no omitted final or exempt receipts"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "id",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "id",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "id",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "id_resident_2026",
+          "label": [
+            "印尼居民个人（2026）",
+            "Indonesia resident individual (2026)"
+          ],
+          "notice": [
+            "仅限全年居民境内普通收入。净所得须已扣核准费用、亏损及宗教捐款；系统扣除按年初资格核定的PTKP，再按千印尼盾向下取整。TK/K表示是否有权使用婚姻附加免税额，0至3表示合资格受抚养人数；不得仅按婚姻登记推定资格。不含夫妻所得合并或分摊、部分年度、最终计税、免税或境外收入；须核对PP20/2026过渡规则。",
+            "Full-year resident domestic ordinary income only. Net income must already reflect verified expenses, losses and religious gifts. The system deducts confirmed start-of-year PTKP, then rounds down to thousands of rupiah. TK/K indicates entitlement to the marriage allowance; 0–3 is the qualifying dependent count. Do not infer entitlement from marital registration alone. Excludes combined/spouse allocation, part-year, final, exempt and foreign income; check PP20/2026 transitions."
+          ],
+          "required_fields": [
+            {
+              "key": "net_income_before_ptkp",
+              "label": [
+                "核定净所得（PTKP前）",
+                "Established net income before PTKP"
+              ]
+            },
+            {
+              "key": "ptkp_status",
+              "label": [
+                "核定PTKP资格代码",
+                "Verified PTKP entitlement code"
+              ]
+            },
+            {
+              "key": "ptkp_entitlement_confirmed",
+              "label": [
+                "已核实年初PTKP及受抚养资格",
+                "Start-of-year PTKP and dependent entitlement verified"
+              ]
+            },
+            {
+              "key": "ordinary_annual_treatment_confirmed",
+              "label": [
+                "已核对全年居民普通税制及最终税制等排除条件",
+                "Full-year resident ordinary treatment and final/special-regime exclusions checked"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "核定本期扣缴及预缴税款",
+                "Verified withholding and instalments for this period"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "vn",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "vn",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "vn",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "vn_company_2026",
+          "label": [
+            "越南普通企业所得税（2026）",
+            "Vietnam ordinary company tax (2026)"
+          ],
+          "notice": [
+            "仅限越南设立企业的境内普通所得。须先核定税基、亏损及纳税调整，排除第23(9)条所得、特殊行业及优惠税率。已保存明细须覆盖未扣收入减项的销售服务、财务和其他法定收入。本期收入决定年度减税；上期收入及经营月份决定普通税率和小额收入免税，新设企业使用本期实际收入。两项关联企业排除条件须分别核对。其他优惠先扣，年度减税后扣，预缴税款最后抵减；结果尚未进行申报取整。",
+            "Vietnam-established enterprises with ordinary domestic income only. Establish the tax base after losses and adjustments, excluding article 23(9) income, special industries and preferential rates. Saved receipts must include sales/services before revenue deductions, financial and other statutory revenue. Current revenue determines annual relief; prior revenue and active months determine ordinary rates and small-revenue exemption, except new enterprises use current actual revenue. Check the two related-enterprise exclusions separately. Other incentives precede annual relief; prepayments follow. Before return rounding."
+          ],
+          "required_fields": [
+            {
+              "key": "taxable_income",
+              "label": [
+                "核定应税所得额",
+                "Established taxable income"
+              ]
+            },
+            {
+              "key": "vietnam_established",
+              "label": [
+                "企业在越南设立",
+                "Enterprise established in Vietnam"
+              ]
+            },
+            {
+              "key": "new_in_current_period",
+              "label": [
+                "企业在本期新设立",
+                "Enterprise newly established in this period"
+              ]
+            },
+            {
+              "key": "previous_period_revenue",
+              "label": [
+                "上期完整法定收入",
+                "Complete prior-period statutory revenue"
+              ]
+            },
+            {
+              "key": "previous_active_months",
+              "label": [
+                "上期法定经营月份",
+                "Prior-period statutory active months"
+              ]
+            },
+            {
+              "key": "exemption_related_enterprise_disqualified",
+              "label": [
+                "存在不符合小额收入免税条件的关联企业",
+                "Related enterprise disqualifies small-revenue exemption"
+              ]
+            },
+            {
+              "key": "reduced_rate_related_enterprise_disqualified",
+              "label": [
+                "存在不符合15%或17%税率条件的关联企业",
+                "Related enterprise disqualifies reduced rates"
+              ]
+            },
+            {
+              "key": "formed_by_split_after_resolution",
+              "label": [
+                "属于决议后分拆设立的企业",
+                "Enterprise formed by a split after the resolution"
+              ]
+            },
+            {
+              "key": "all_split_entities_revenue",
+              "label": [
+                "全部分拆企业合计法定收入（含本企业）",
+                "Combined statutory revenue of all split entities (including this enterprise)"
+              ]
+            },
+            {
+              "key": "other_incentive_reduction",
+              "label": [
+                "核定其他税额优惠（年度减税前）",
+                "Verified other incentives before annual relief"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "归属本期的预缴税额",
+                "Prepaid tax for this period"
+              ]
+            },
+            {
+              "key": "ordinary_domestic_income_confirmed",
+              "label": [
+                "已核实境内普通所得及全部排除条件",
+                "Ordinary domestic income and all exclusions verified"
+              ]
+            },
+            {
+              "key": "statutory_revenue_scope_confirmed",
+              "label": [
+                "已核实全部法定收入范围及期间",
+                "Complete statutory revenue scope and periods verified"
+              ]
+            },
+            {
+              "key": "other_incentives_verified",
+              "label": [
+                "已核实其他优惠金额及适用资格",
+                "Other incentive amount and eligibility verified"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "vn",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "vn",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "vn",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "vn_employment_2026",
+          "label": [
+            "越南居民工资薪金（2026）",
+            "Vietnam resident employment (2026)"
+          ],
+          "notice": [
+            "仅限全年居民境内工资薪金。输入已剔除免税收入、尚未扣除个人扣除的应税工资；保险及第11条扣除须已核实限额和凭证。系统扣除本人全年1.86亿越南盾及每名受抚养人每月620万；同一受抚养月份不得重复申报。不适用经营所得减税，不含境外抵免、非居民或特殊减免。结果尚未进行申报取整。",
+            "Full-calendar-year resident domestic employment only. Enter chargeable pay after exemptions, before personal deductions. Verify insurance and article 11 deduction limits and evidence. The calculation deducts VND 186m for the taxpayer and VND 6.2m per eligible dependent-month; do not duplicate claims. Business-income relief does not apply. Foreign credits, nonresidents and special relief need separate treatment. Result is before return rounding."
+          ],
+          "required_fields": [
+            {
+              "key": "chargeable_employment_income",
+              "label": [
+                "个人扣除前应税工资",
+                "Chargeable pay before personal deductions"
+              ]
+            },
+            {
+              "key": "dependent_months",
+              "label": [
+                "每名受抚养人的合资格月份（逗号分隔，无则填0）",
+                "Eligible months per dependent (comma-separated; enter 0 for none)"
+              ]
+            },
+            {
+              "key": "deductible_insurance",
+              "label": [
+                "核定可扣除保险",
+                "Verified deductible insurance"
+              ]
+            },
+            {
+              "key": "article11_deductions",
+              "label": [
+                "核定第11条扣除",
+                "Verified article 11 deductions"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "归属本期的预缴税额",
+                "Prepaid tax for this period"
+              ]
+            },
+            {
+              "key": "full_calendar_year_confirmed",
+              "label": [
+                "已核实全年居民年度评税资格",
+                "Full calendar-year resident assessment verified"
+              ]
+            },
+            {
+              "key": "income_and_deductions_verified",
+              "label": [
+                "已核实工资分类、扣除资格及受抚养月份无重复申报",
+                "Pay classification, deductions and nonduplicated dependent-month claims verified"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "my",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "my",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "my",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "my_company_2026",
+          "label": [
+            "马来西亚企业（2026）",
+            "Malaysia company (2026)"
+          ],
+          "notice": [
+            "仅限普通公司；不含纳闽、再保险、特殊优惠或最低补足税。小企业税率须符合马来西亚注册及居民身份、期初普通股实缴资本不超过250万、营业总收入不超过5000万令吉，并核对关联公司及超过20%境外公司或非公民持股的排除条件。",
+            "Ordinary companies only; excludes Labuan, reinsurance, special incentives and minimum top-up tax. SME rates require Malaysian incorporation/residence, ordinary paid-up capital up to MYR 2.5m and business gross income up to MYR 50m. Check related-company exclusions and the exclusion for more than 20% foreign-company or non-citizen ownership."
+          ],
+          "required_fields": [
+            {
+              "key": "chargeable_income",
+              "label": [
+                "核定应课税收入",
+                "Established chargeable income"
+              ]
+            },
+            {
+              "key": "ordinary_treatment_confirmed",
+              "label": [
+                "已核对普通税制及排除条件",
+                "Ordinary treatment and exclusions checked"
+              ]
+            },
+            {
+              "key": "allowed_rebates",
+              "label": [
+                "核定可用税额回扣",
+                "Allowed tax rebates"
+              ]
+            },
+            {
+              "key": "allowed_tax_credits",
+              "label": [
+                "核定可抵免税额",
+                "Allowed tax credits"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "归属本期的预缴税额",
+                "Prepaid tax for this period"
+              ]
+            },
+            {
+              "key": "scheme",
+              "label": [
+                "企业税率制度",
+                "Company rate scheme"
+              ]
+            },
+            {
+              "key": "sme_eligibility_confirmed",
+              "label": [
+                "已核实符合全部小企业税率条件",
+                "All SME rate conditions verified"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "my",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "my",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "my",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "my_individual_2026",
+          "label": [
+            "马来西亚个人（2026）",
+            "Malaysia individual (2026)"
+          ],
+          "notice": [
+            "按已保存居民身份适用普通累进或非居民30%税率。须先核定可扣除项目及减免，不含个人股息单独税制、资本利得、合并评税或特殊收入税率；非居民不得使用居民税额回扣。",
+            "Uses saved residency for ordinary progressive rates or the non-resident 30% rate. Establish deductions and reliefs first. Excludes separate dividend taxation, capital gains, joint assessment and special-rate income. Non-residents cannot use resident rebates."
+          ],
+          "required_fields": [
+            {
+              "key": "chargeable_income",
+              "label": [
+                "核定应课税收入",
+                "Established chargeable income"
+              ]
+            },
+            {
+              "key": "ordinary_treatment_confirmed",
+              "label": [
+                "已核对普通税制及排除条件",
+                "Ordinary treatment and exclusions checked"
+              ]
+            },
+            {
+              "key": "allowed_rebates",
+              "label": [
+                "核定可用税额回扣",
+                "Allowed tax rebates"
+              ]
+            },
+            {
+              "key": "allowed_tax_credits",
+              "label": [
+                "核定可抵免税额",
+                "Allowed tax credits"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "归属本期的预缴税额",
+                "Prepaid tax for this period"
+              ]
+            },
+            {
+              "key": "my_source_0_additions",
+              "label": [
+                "收入1：核定加回",
+                "Source 1: Verified additions"
+              ]
+            },
+            {
+              "key": "my_source_0_deductions",
+              "label": [
+                "收入1：核定费用扣除",
+                "Source 1: Allowed source deductions"
+              ]
+            },
+            {
+              "key": "my_source_0_statutory_charges",
+              "label": [
+                "收入1：法定加计",
+                "Source 1: Statutory charges"
+              ]
+            },
+            {
+              "key": "my_source_0_statutory_allowances",
+              "label": [
+                "收入1：资本免税额",
+                "Source 1: Statutory allowances"
+              ]
+            },
+            {
+              "key": "my_schedule4_additions",
+              "label": [
+                "附表4加计",
+                "Schedule 4 additions"
+              ]
+            },
+            {
+              "key": "my_total_deductions",
+              "label": [
+                "按法定顺序核定的总所得扣除",
+                "Verified total-income deductions"
+              ]
+            },
+            {
+              "key": "my_personal_reliefs",
+              "label": [
+                "核定个人减免",
+                "Allowed personal reliefs"
+              ]
+            },
+            {
+              "key": "my_eligibility",
+              "label": [
+                "已核验来源调整、亏损年度和扣除限额",
+                "Source adjustments and deduction eligibility verified"
+              ]
+            },
+            {
+              "key": "my_separate",
+              "label": [
+                "已核验单独评税",
+                "Separate assessment verified"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "th",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "th",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "th",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "th_company_2026",
+          "label": [
+            "泰国企业（2026）",
+            "Thailand company (2026)"
+          ],
+          "notice": [
+            "以已完成纳税调整的净利润为基础。普通税率20%；小企业须核实期末实缴资本不超过500万泰铢、销售及服务收入不超过3000万泰铢，并满足法令规定的连续期间条件。不含投资促进优惠、石油、收入总额计税及最低补足税。",
+            "Use net profit after verified tax adjustments. Ordinary rate: 20%. SME rates require period-end paid-up capital up to THB 5m, sales/service revenue up to THB 30m and the decree’s continuous-period conditions. Excludes investment incentives, petroleum, gross-receipt and top-up tax regimes."
+          ],
+          "required_fields": [
+            {
+              "key": "net_taxable_profit",
+              "label": [
+                "核定应税净利润",
+                "Established net taxable profit"
+              ]
+            },
+            {
+              "key": "ordinary_treatment_confirmed",
+              "label": [
+                "已核对普通年度税制及排除条件",
+                "Ordinary annual treatment and exclusions checked"
+              ]
+            },
+            {
+              "key": "allowed_tax_credits",
+              "label": [
+                "核定可抵免税额",
+                "Allowed tax credits"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "归属本期的预缴税额",
+                "Prepaid tax for this period"
+              ]
+            },
+            {
+              "key": "scheme",
+              "label": [
+                "企业税率制度",
+                "Company rate scheme"
+              ]
+            },
+            {
+              "key": "sme_eligibility_confirmed",
+              "label": [
+                "已核实全部小企业条件及连续期间资格",
+                "All SME and continuous-period conditions verified"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "th",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "th",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "th",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "th_resident_2026",
+          "label": [
+            "泰国居民个人（2026）",
+            "Thailand resident individual (2026)"
+          ],
+          "notice": [
+            "仅限境内普通年度合并计税收入。净应税所得须先核定费用及扣除；非工资应税总收入从已保存明细汇总。比较累进税额与0.5%最低税额，最低税额不超过5000泰铢时豁免该方法。不含境外所得、股息利息单独税制、终止雇佣一次性收入、不动产处置及联合评税。",
+            "Domestic ordinary annual income only. Establish expenses and allowances before entering net taxable income. Saved non-employment gross income determines the 0.5% minimum-tax comparison; that method is exempt when its tax does not exceed THB 5,000. Excludes foreign income, separate dividend/interest regimes, termination lump sums, property disposals and joint assessment."
+          ],
+          "required_fields": [
+            {
+              "key": "net_taxable_income",
+              "label": [
+                "核定净应税所得",
+                "Established net taxable income"
+              ]
+            },
+            {
+              "key": "ordinary_treatment_confirmed",
+              "label": [
+                "已核对普通年度税制及排除条件",
+                "Ordinary annual treatment and exclusions checked"
+              ]
+            },
+            {
+              "key": "allowed_tax_credits",
+              "label": [
+                "核定可抵免税额",
+                "Allowed tax credits"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "归属本期的预缴税额",
+                "Prepaid tax for this period"
+              ]
+            },
+            {
+              "key": "assessable_income_classification_confirmed",
+              "label": [
+                "已按第40条核实工资及非工资收入分类",
+                "Section 40 employment and non-employment classification verified"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "ae",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "ae",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "ae",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "ae_ordinary_2026",
+          "label": [
+            "阿联酋普通企业税（2026）",
+            "UAE ordinary corporate tax (2026)"
+          ],
+          "notice": [
+            "核对普通独立纳税人身份，排除豁免、合资格自由区、税务集团和最低补足税。个人须合并全部适用经营营业额；工资和符合法定定义的个人投资收入另行排除。",
+            "Verify an ordinary standalone taxpayer outside exempt, qualifying free-zone, tax-group and minimum-top-up regimes. Individuals must aggregate all in-scope business turnover; statutory wage and personal-investment exclusions are separate."
+          ],
+          "required_fields": [
+            {
+              "key": "taxable_income",
+              "label": [
+                "核定应纳税所得额",
+                "Established taxable income"
+              ]
+            },
+            {
+              "key": "ordinary_regime_confirmed",
+              "label": [
+                "已核对适用普通税制及其排除条件",
+                "Ordinary regime and exclusions checked"
+              ]
+            },
+            {
+              "key": "no_relief_elected_confirmed",
+              "label": [
+                "已确认未选择小企业等税收减免",
+                "Confirmed no small-business or other relief election"
+              ]
+            },
+            {
+              "key": "allowed_foreign_tax_credit",
+              "label": [
+                "按来源核定的境外税抵免",
+                "Allowed foreign tax credit by source"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "归属本期的预缴税额",
+                "Prepaid tax for this period"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "ae",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "ae",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "ae",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "ae_ordinary_2026",
+          "label": [
+            "阿联酋普通企业税（2026）",
+            "UAE ordinary corporate tax (2026)"
+          ],
+          "notice": [
+            "核对普通独立纳税人身份，排除豁免、合资格自由区、税务集团和最低补足税。个人须合并全部适用经营营业额；工资和符合法定定义的个人投资收入另行排除。",
+            "Verify an ordinary standalone taxpayer outside exempt, qualifying free-zone, tax-group and minimum-top-up regimes. Individuals must aggregate all in-scope business turnover; statutory wage and personal-investment exclusions are separate."
+          ],
+          "required_fields": [
+            {
+              "key": "taxable_income",
+              "label": [
+                "核定应纳税所得额",
+                "Established taxable income"
+              ]
+            },
+            {
+              "key": "ordinary_regime_confirmed",
+              "label": [
+                "已核对适用普通税制及其排除条件",
+                "Ordinary regime and exclusions checked"
+              ]
+            },
+            {
+              "key": "no_relief_elected_confirmed",
+              "label": [
+                "已确认未选择小企业等税收减免",
+                "Confirmed no small-business or other relief election"
+              ]
+            },
+            {
+              "key": "allowed_foreign_tax_credit",
+              "label": [
+                "按来源核定的境外税抵免",
+                "Allowed foreign tax credit by source"
+              ]
+            },
+            {
+              "key": "prepaid_tax",
+              "label": [
+                "归属本期的预缴税额",
+                "Prepaid tax for this period"
+              ]
+            },
+            {
+              "key": "natural_person_business_turnover",
+              "label": [
+                "个人全部适用经营营业额",
+                "Total in-scope personal business turnover"
+              ]
+            },
+            {
+              "key": "natural_person_activity_classification_confirmed",
+              "label": [
+                "已依法核对经营和排除收入的分类",
+                "Statutory business and excluded-income classification checked"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "jp",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "jp",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "jp",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "jp_company_starting_2026",
+          "label": [
+            "日本普通企业国家税（2026年开始的完整年度）",
+            "Japan ordinary company national taxes (full year starting 2026)"
+          ],
+          "notice": [
+            "分别计算法人税、地方法人税（国税）及适用时的防卫特别法人税，不含地方住民税、事业税或最低补足税。税基须已完成纳税调整及亏损处理。仅限无税额抵免、扣缴抵免、税额加算或留保金附加税的境内普通企业，不含通算集团及特殊主体。小企业须核对期末资本和大法人控制等排除条件；适用除外事业者须核对前三年法定年均所得超过15亿日元等调整。符合特例时，年所得超过10亿日元时首800万部分适用17%；超过门槛但千日元取整后未超过的情形须人工复核。防卫税按开始日判断，4月1日起即使税额为0也须申报。中间申告金额填应纳义务，不论实缴；各税种补退分别处理，不自动互抵。",
+            "Separately calculates corporation tax, local corporation tax (a national tax) and applicable defence tax; excludes prefectural/municipal inhabitant, enterprise and minimum top-up taxes. Establish taxable income after adjustments and losses. Ordinary domestic companies without tax credits, withholding credits, tax additions or retained-profit surtax only; no tax groups or special entities. Verify SME year-end capital and large-company control exclusions. Excluded-business classification uses the statutory prior-three-year average above JPY 1.5bn and its adjustments. Eligible reduced-rate companies with current income above JPY 1bn use 17% on the first JPY 8m; cases above the threshold only before JPY 1,000 truncation require manual review. Defence tax applies by start date from 1 April, including zero-tax returns. Interim amounts are liabilities regardless of payment; settle each tax separately without automatic offsets."
+          ],
+          "required_fields": [
+            {
+              "key": "taxable_income_before_rounding",
+              "label": [
+                "已核定千日元取整前应税所得",
+                "Established taxable income before JPY 1,000 truncation"
+              ]
+            },
+            {
+              "key": "rate_regime",
+              "label": [
+                "已核实的法人税率分类",
+                "Verified corporation-rate classification"
+              ]
+            },
+            {
+              "key": "corporation_interim_liability",
+              "label": [
+                "法人税中间申告应纳义务",
+                "Corporation interim-return liability"
+              ]
+            },
+            {
+              "key": "local_corporation_interim_liability",
+              "label": [
+                "地方法人税中间申告应纳义务",
+                "Local corporation interim-return liability"
+              ]
+            },
+            {
+              "key": "rate_classification_verified",
+              "label": [
+                "已核实资本、控制关系及适用除外事业者分类",
+                "Capital, control exclusions and excluded-business classification verified"
+              ]
+            },
+            {
+              "key": "ordinary_no_adjustments_confirmed",
+              "label": [
+                "已核实普通境内企业税基，无抵免、加算、留保金附加税或集团税制",
+                "Ordinary domestic tax base verified; no credits, additions, retained-profit surtax or group regime"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "jp",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "jp",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "jp",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "jp_resident_ordinary_2026",
+          "label": [
+            "日本居民普通所得国家税（2026）",
+            "Japan resident ordinary national tax (2026)"
+          ],
+          "notice": [
+            "计算2026全年境内工资及无亏损普通经营所得的国家所得税和复兴特别所得税，不含住民税、事业税。使用12月1日起适用的年度扣除，不用于此前预扣、死亡或出境提前申报，也不是雇主年末调整。已保存扣除额应为经营费用与其他所得扣除之和；工资扣除、符合条件的工资所得调整扣除和基本扣除由系统另算。不得重复计入，不含特定支出、青色申告优惠、年金、境外所得、分离课税、结转亏损或超过3.3亿日元的高所得最低税。抵免须先核定限额，不含境外抵免。予定纳税额填有效通知核定金额（扣除已批准减额），并非实际缴款；未缴欠税仍需另行处理。",
+            "Calculates 2026 domestic salary and non-loss-making ordinary business national income and reconstruction tax, excluding local inhabitant and enterprise taxes. Uses annual deductions effective 1 December; not earlier withholding, early death/departure returns or employer year-end adjustment. Saved deductions must equal business expenses plus other income deductions. Salary deductions, eligible salary adjustment and basic deduction are calculated separately; do not count them twice. Excludes specific employment expenses, blue-return relief, pensions, foreign or separate-rate income, carried losses and the high-income minimum tax above JPY 330m. Verify credit limits; foreign credits are excluded. Estimated tax is the effective notified liability after approved reductions, not actual payments; unpaid arrears remain separate."
+          ],
+          "required_fields": [
+            {
+              "key": "business_expenses",
+              "label": [
+                "核定经营费用（无则填0）",
+                "Verified business expenses (0 if none)"
+              ]
+            },
+            {
+              "key": "other_income_deductions",
+              "label": [
+                "其他所得扣除（不含自动计算项目）",
+                "Other income deductions (excluding automatic deductions)"
+              ]
+            },
+            {
+              "key": "income_tax_credits",
+              "label": [
+                "核定国家所得税抵免（限额内）",
+                "Verified national income-tax credits within limits"
+              ]
+            },
+            {
+              "key": "salary_adjustment_eligible",
+              "label": [
+                "符合23岁以下受抚养人或特别障碍者等工资所得调整资格",
+                "Eligible for salary adjustment for under-23 dependents or special disability"
+              ]
+            },
+            {
+              "key": "withheld_tax",
+              "label": [
+                "本年度源泉扣缴税额",
+                "Tax withheld for this year"
+              ]
+            },
+            {
+              "key": "estimated_tax",
+              "label": [
+                "有效通知核定予定纳税额（不是实际缴款）",
+                "Effective notified estimated-tax liability (not cash paid)"
+              ]
+            },
+            {
+              "key": "annual_domestic_ordinary_scope_confirmed",
+              "label": [
+                "已核实全年居民境内普通所得及排除条件，工资按源泉徴収票应税支払金额填报",
+                "Full-year resident domestic ordinary scope verified; salary uses taxable withholding-statement receipts"
+              ]
+            },
+            {
+              "key": "deductions_and_credits_verified",
+              "label": [
+                "已核实扣除、调整资格、抵免限额及予定纳税通知",
+                "Deductions, adjustment eligibility, credit limits and estimated-tax notice verified"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "kr",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "kr",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "kr",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "kr_company_ordinary_2026",
+          "label": [
+            "韩国企业国税及地方税（2026）",
+            "Korea company national and local tax (2026)"
+          ],
+          "notice": [
+            "适用于2026完整历年境内普通居民企业。国税税基须与已保存收入、扣除及可抵扣亏损一致；地方税税基须独立核定。减免须按法定类别逐项录入。地方申报单位须先完成城市归并，录入经核定的最终比例（合计1），总部名称须与其中一项一致。金额无则明确填0。分别列示各机关应缴和应退，不自动互抵。尚不含境外所得、特殊税负、更正申报或分期缴纳。",
+            "For ordinary domestic resident companies for calendar 2026. Reconcile the national base to saved income, deductions and eligible losses; establish the local base independently. Enter each relief by statutory category. Establish city filing groups and verified final ratios totaling 1; the head-office name must match one group. Enter 0 explicitly for absent amounts. Payments and refunds remain separate by authority. Excludes foreign income, special taxes, amended returns and installments."
+          ],
+          "required_fields": [
+            {
+              "key": "national_taxable_base",
+              "label": [
+                "国税核定应税所得",
+                "Established national taxable base"
+              ]
+            },
+            {
+              "key": "local_taxable_base",
+              "label": [
+                "独立核定地方税税基",
+                "Independently established local taxable base"
+              ]
+            },
+            {
+              "key": "n_minimum_regime",
+              "label": [
+                "最低税分类",
+                "Minimum-tax classification"
+              ]
+            },
+            {
+              "key": "n_article60_2_1_1_company",
+              "label": [
+                "属于第60-2(1)(1)条特定企业",
+                "Company falls under article 60-2(1)(1)"
+              ]
+            },
+            {
+              "key": "n_annual_standard_schedule_confirmed",
+              "label": [
+                "已核实完整年度税率适用条件",
+                "Full-year schedule applicability verified"
+              ]
+            },
+            {
+              "key": "n_minimum_regime_verified",
+              "label": [
+                "已核实最低税分类",
+                "Minimum-tax classification verified"
+              ]
+            },
+            {
+              "key": "n_eligibility_caps_and_expiry_verified",
+              "label": [
+                "已核实各项减免资格、限额和到期年度",
+                "Relief eligibility, caps and expiry verified"
+              ]
+            },
+            {
+              "key": "n_no_base_changing_incentives",
+              "label": [
+                "无改变税基的优惠项目",
+                "No base-changing incentives"
+              ]
+            },
+            {
+              "key": "n_additions_and_payments_verified",
+              "label": [
+                "已核实国税加算及缴款凭证和归属",
+                "National additions and payment evidence verified"
+              ]
+            },
+            {
+              "key": "n_penalty_tax",
+              "label": [
+                "国税罚款",
+                "National penalty"
+              ]
+            },
+            {
+              "key": "n_relief_recapture",
+              "label": [
+                "国税优惠追缴",
+                "National relief recapture"
+              ]
+            },
+            {
+              "key": "n_interim_tax",
+              "label": [
+                "国税中期缴款",
+                "National interim payment"
+              ]
+            },
+            {
+              "key": "n_occasional_assessment_tax",
+              "label": [
+                "国税临时评税缴款",
+                "National occasional assessment payment"
+              ]
+            },
+            {
+              "key": "n_withheld_tax",
+              "label": [
+                "国税扣缴税款",
+                "National withholding"
+              ]
+            },
+            {
+              "key": "relief_count",
+              "label": [
+                "国税减免明细条数（无则填0）",
+                "Number of national relief entries (0 if none)"
+              ]
+            },
+            {
+              "key": "filing_count",
+              "label": [
+                "地方申报单位数量",
+                "Number of local filing authorities"
+              ]
+            },
+            {
+              "key": "head_office",
+              "label": [
+                "总部所属申报单位名称",
+                "Head-office filing authority name"
+              ]
+            },
+            {
+              "key": "l_total_withheld",
+              "label": [
+                "地方税扣缴总额",
+                "Total local withholding"
+              ]
+            },
+            {
+              "key": "l_initial_return_and_filing_groups_verified",
+              "label": [
+                "已核实初次申报、城市归并和最终分摊比例",
+                "Initial return, city grouping and final ratios verified"
+              ]
+            },
+            {
+              "key": "l_relief_caps_rate_adjustments_and_payments_verified",
+              "label": [
+                "已核实地方减免限额、税率调整及缴款",
+                "Local relief caps, rate adjustments and payments verified"
+              ]
+            },
+            {
+              "key": "f0_name",
+              "label": [
+                "地方 1：申报单位名称",
+                "Local 1: filing authority name"
+              ]
+            },
+            {
+              "key": "f0_ratio",
+              "label": [
+                "地方 1：核定最终分摊比例（0至1，最多8位小数）",
+                "Local 1: verified final ratio (0–1, up to 8 decimals)"
+              ]
+            },
+            {
+              "key": "f0_relief",
+              "label": [
+                "地方 1：减免税额",
+                "Local 1: Relief"
+              ]
+            },
+            {
+              "key": "f0_penalty",
+              "label": [
+                "地方 1：罚款",
+                "Local 1: Penalty"
+              ]
+            },
+            {
+              "key": "f0_additional_tax",
+              "label": [
+                "地方 1：加算税额",
+                "Local 1: Additional tax"
+              ]
+            },
+            {
+              "key": "f0_other_payments",
+              "label": [
+                "地方 1：其他已缴款",
+                "Local 1: Other payments"
+              ]
+            },
+            {
+              "key": "f0_rate_adjustment_increase",
+              "label": [
+                "地方 1：地方税率调增",
+                "Local 1: Municipal rate increase"
+              ]
+            },
+            {
+              "key": "f0_rate_adjustment_decrease",
+              "label": [
+                "地方 1：地方税率调减",
+                "Local 1: Municipal rate decrease"
+              ]
+            },
+            {
+              "key": "ordinary_domestic_scope_confirmed",
+              "label": [
+                "已核实境内普通企业，无农村特别税、土地转让税、留存所得特别税及其他单独税负；非更正申报或分期缴纳",
+                "Ordinary domestic company verified; no rural-special, land-transfer, retained-income or other separate taxes, amended return or installments"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "kr",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "kr",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "kr",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "kr_salary_standard_payroll_2026",
+          "label": [
+            "韩国居民工资年终结算（2026，标准抵免）",
+            "Korea resident salary year-end settlement (2026, standard credit)"
+          ],
+          "notice": [
+            "保存的收入须为各雇主合计普通境内工资，已排除免税工资和日薪所得。保存的扣除金额仅填核定公共养老金；工资及家庭扣除由系统另算。家庭名单包括且仅包括一个本人；核实收入限额、扶养、死亡／残疾恢复等法定日期和重复申报。子女抵免按出生日期及2026过渡条款判断，2017年出生者不享受过渡优惠。此入口选择标准抵免，不含特别扣除、租金抵免、养老金账户抵免、特殊就业减免、其他所得或优惠；不分期。前任雇主填写结算后的税额，不填退款前累计扣款。",
+            "Saved income must aggregate ordinary domestic salary from all employers, excluding exempt and daily-worker pay. Saved deductions contain only verified public pension; salary and family deductions are calculated separately. Include exactly one taxpayer and verify income limits, support, statutory dates including death/disability recovery, and duplicate claims. Child credit uses birth dates and the 2026 transition, excluding the 2017 birth cohort. Standard-credit election only: excludes special deductions, rent or pension-account credits, special employment reductions, other income and concessions; no installments. Former-employer amounts are settled taxes, not cumulative withholding before refunds."
+          ],
+          "required_fields": [
+            {
+              "key": "female_taxpayer",
+              "label": [
+                "纳税人为女性",
+                "Taxpayer is female"
+              ]
+            },
+            {
+              "key": "has_spouse",
+              "label": [
+                "法定判断日有配偶",
+                "Has spouse at statutory assessment date"
+              ]
+            },
+            {
+              "key": "household_head",
+              "label": [
+                "纳税人为户主",
+                "Taxpayer is household head"
+              ]
+            },
+            {
+              "key": "public_pension_paid",
+              "label": [
+                "核定公共养老金实缴金额",
+                "Verified public pension paid"
+              ]
+            },
+            {
+              "key": "person_count",
+              "label": [
+                "人员数量（包括本人）",
+                "Number of people including taxpayer"
+              ]
+            },
+            {
+              "key": "person_0_relationship",
+              "label": [
+                "人员 1：关系",
+                "Person 1: relationship"
+              ]
+            },
+            {
+              "key": "person_0_basic_eligible",
+              "label": [
+                "人员 1：符合基本扣除条件并归属本申报人",
+                "Person 1: basic deduction eligible and allocated to this claimant"
+              ]
+            },
+            {
+              "key": "person_0_senior_70_at_statutory_date",
+              "label": [
+                "人员 1：法定判断日已满70岁",
+                "Person 1: age 70 or above at statutory date"
+              ]
+            },
+            {
+              "key": "person_0_statutory_disability",
+              "label": [
+                "人员 1：符合税法残疾定义",
+                "Person 1: statutory disability"
+              ]
+            },
+            {
+              "key": "current_employer_withheld",
+              "label": [
+                "现任雇主已扣国税",
+                "Current employer national withholding"
+              ]
+            },
+            {
+              "key": "former_employer_settled_tax",
+              "label": [
+                "前任雇主国税结算税额",
+                "Former employer settled national tax"
+              ]
+            },
+            {
+              "key": "local_current_employer_withheld",
+              "label": [
+                "现任雇主已扣地方税",
+                "Current employer local withholding"
+              ]
+            },
+            {
+              "key": "local_former_employer_settled_tax",
+              "label": [
+                "前任雇主地方税结算税额",
+                "Former employer settled local tax"
+              ]
+            },
+            {
+              "key": "ordinary_salary_and_standard_credit_verified",
+              "label": [
+                "已核实普通工资、标准抵免选择及排除条件",
+                "Ordinary salary, standard-credit election and exclusions verified"
+              ]
+            },
+            {
+              "key": "family_eligibility_and_allocation_verified",
+              "label": [
+                "已核对家庭收入、扶养、年龄、法定日期和唯一申报人，已提交扣除资料",
+                "Family income, support, age, statutory dates, unique claimant and submitted documents verified"
+              ]
+            },
+            {
+              "key": "pension_eligibility_verified",
+              "label": [
+                "已核实公共养老金扣除资格和缴款凭证",
+                "Public pension deduction eligibility and receipts verified"
+              ]
+            },
+            {
+              "key": "decision_and_employer_records_verified",
+              "label": [
+                "已核对雇主结算凭证，无未反映退款、递延、更正或罚款",
+                "Employer receipts reconciled; no unreflected refunds, deferrals, amended settlements or penalties"
+              ]
+            },
+            {
+              "key": "employer_special_collection_verified",
+              "label": [
+                "已核实雇主年终特别征收，非税务机关通知书征收；不分期",
+                "Employer year-end special collection verified; no municipal assessment notice or installments"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "in",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "in",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-04-01",
+        "period_end": "2027-03-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "in",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "in_company_section200_ty2026_27",
+          "label": [
+            "印度境内企业第200条税制（TY 2026–27）",
+            "India domestic company section 200 (TY 2026–27)"
+          ],
+          "notice": [
+            "适用于2026年4月1日至2027年3月31日的Tax Year，不是AY 2026–27。计算年度税额、附加税及健康教育费，不是扣除已缴款后的补退金额，不含利息或罚款。个人须适用第202条新税制；企业须已按时有效选择第200条并核实扣除、亏损及折旧限制。输入税基须与保存的收入减去核定扣除及可抵扣亏损一致；工资标准扣除等须已核定计入保存扣除，不自动另算。不含特殊税率所得、股息、资本利得、农业所得合并、境外所得或抵免、IFSC优惠及其他税额调整。",
+            "Uses Tax Year 1 April 2026–31 March 2027, not AY 2026–27. Calculates annual liability including surcharge and health/education cess, before payment credits, interest and penalties. Individuals must use section 202; domestic companies require a valid timely section 200 option and verified deduction, loss and depreciation restrictions. The established base must equal saved income less verified deductions and eligible losses. Include verified salary standard deductions in saved deductions; they are not calculated again. Excludes special-rate income, dividends, capital gains, agricultural aggregation, foreign income or relief, IFSC concessions and other tax adjustments."
+          ],
+          "required_fields": [
+            {
+              "key": "taxable_income_before_rounding",
+              "label": [
+                "核定取整前应税所得",
+                "Established taxable income before rounding"
+              ]
+            },
+            {
+              "key": "regime_and_base_verified",
+              "label": [
+                "已核实税制选择、资格、扣除及亏损限制",
+                "Regime election, eligibility, deductions and loss restrictions verified"
+              ]
+            },
+            {
+              "key": "ordinary_domestic_scope_confirmed",
+              "label": [
+                "已核实境内普通所得及全部排除条件",
+                "Ordinary domestic income and all exclusions verified"
+              ]
+            },
+            {
+              "key": "settlement_requested",
+              "label": [
+                "另算本次普通申报补退税额",
+                "Also calculate the ordinary return balance"
+              ]
+            },
+            {
+              "key": "tds_tcs_credit",
+              "label": [
+                "核定本期可用扣缴／代收税额",
+                "Verified current-period TDS/TCS credit"
+              ]
+            },
+            {
+              "key": "advance_tax_paid",
+              "label": [
+                "本期实际已缴预缴税额",
+                "Advance tax actually paid for this period"
+              ]
+            },
+            {
+              "key": "self_assessment_paid",
+              "label": [
+                "本期实际已缴自评税款总额（含已缴利息和费用）",
+                "Total self-assessment payments including paid interest and fees"
+              ]
+            },
+            {
+              "key": "total_interest_due",
+              "label": [
+                "核定累计应计利息（含已缴部分，无则填0）",
+                "Verified cumulative interest including amounts already paid (0 if none)"
+              ]
+            },
+            {
+              "key": "total_fee_due",
+              "label": [
+                "核定累计应计费用（含已缴部分，无则填0）",
+                "Verified cumulative fees including amounts already paid (0 if none)"
+              ]
+            },
+            {
+              "key": "settlement_verified",
+              "label": [
+                "已核对税款归属及凭证、累计利息费用和缴款抵扣顺序；无先前退税、更新申报、ESOP递延、罚款或额外追缴",
+                "Credits, evidence, cumulative interest/fees and payment allocation verified; no prior refunds, updated return, ESOP deferral, penalties or additional demands"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "in_company_normal_ty2026_27",
+          "label": [
+            "印度境内企业普通税制与MAT（TY 2026–27）",
+            "India domestic company normal tax and MAT (TY 2026–27)"
+          ],
+          "notice": [
+            "适用于2026年4月至2027年3月、未选择第200／201条的境内普通企业。25%／30%税率依据2024–25年法定营业额／总收入是否超过40亿卢比判断，不使用当前收入。普通应税所得与第206条调整后账面利润须分别核定，不能直接以会计净利润代替MAT税基；无正账面利润填0。分别计算普通税与14% MAT的附加税、边界减免及健康教育费后取高。该普通税制不抵扣历史MAT抵免，2026年起缴纳MAT不新增抵免。不含IFSC、寿险、航运、特殊税率、境外所得或其他税额调整。历史期间不存在或资料未知时不能随意填0取得25%税率，须先核实分类。",
+            "Ordinary domestic companies outside sections 200/201 for April 2026–March 2027. The 25%/30% rate depends on statutory turnover/gross receipts in 2024–25 against INR4 billion, not current income. Establish ordinary taxable income and section 206 adjusted book profit separately; accounting net profit is not the MAT base. Enter 0 if there is no positive adjusted book profit. Compare normal tax and 14% MAT after their respective surcharge, marginal relief and cess. This ordinary regime does not use legacy MAT credit; MAT paid from April 2026 creates no new credit. Excludes IFSC, life insurance, shipping, special-rate/foreign income and other tax adjustments. An absent or unknown historical period must not be entered as zero to obtain 25%; verify classification first."
+          ],
+          "required_fields": [
+            {
+              "key": "taxable_income_before_rounding",
+              "label": [
+                "核定取整前应税所得",
+                "Established taxable income before rounding"
+              ]
+            },
+            {
+              "key": "regime_and_base_verified",
+              "label": [
+                "已核实税制选择、资格、扣除及亏损限制",
+                "Regime election, eligibility, deductions and loss restrictions verified"
+              ]
+            },
+            {
+              "key": "ordinary_domestic_scope_confirmed",
+              "label": [
+                "已核实境内普通所得及全部排除条件",
+                "Ordinary domestic income and all exclusions verified"
+              ]
+            },
+            {
+              "key": "settlement_requested",
+              "label": [
+                "另算本次普通申报补退税额",
+                "Also calculate the ordinary return balance"
+              ]
+            },
+            {
+              "key": "tds_tcs_credit",
+              "label": [
+                "核定本期可用扣缴／代收税额",
+                "Verified current-period TDS/TCS credit"
+              ]
+            },
+            {
+              "key": "advance_tax_paid",
+              "label": [
+                "本期实际已缴预缴税额",
+                "Advance tax actually paid for this period"
+              ]
+            },
+            {
+              "key": "self_assessment_paid",
+              "label": [
+                "本期实际已缴自评税款总额（含已缴利息和费用）",
+                "Total self-assessment payments including paid interest and fees"
+              ]
+            },
+            {
+              "key": "total_interest_due",
+              "label": [
+                "核定累计应计利息（含已缴部分，无则填0）",
+                "Verified cumulative interest including amounts already paid (0 if none)"
+              ]
+            },
+            {
+              "key": "total_fee_due",
+              "label": [
+                "核定累计应计费用（含已缴部分，无则填0）",
+                "Verified cumulative fees including amounts already paid (0 if none)"
+              ]
+            },
+            {
+              "key": "settlement_verified",
+              "label": [
+                "已核对税款归属及凭证、累计利息费用和缴款抵扣顺序；无先前退税、更新申报、ESOP递延、罚款或额外追缴",
+                "Credits, evidence, cumulative interest/fees and payment allocation verified; no prior refunds, updated return, ESOP deferral, penalties or additional demands"
+              ]
+            },
+            {
+              "key": "turnover_2024_25",
+              "label": [
+                "核定2024–25年法定营业额／总收入",
+                "Verified statutory turnover/gross receipts for 2024–25"
+              ]
+            },
+            {
+              "key": "mat_book_profit_before_rounding",
+              "label": [
+                "核定取整前MAT正账面利润（无则填0）",
+                "Verified positive MAT book profit before rounding (0 if none)"
+              ]
+            },
+            {
+              "key": "turnover_and_mat_adjustments_verified",
+              "label": [
+                "已核实历史收入分类、MAT调整和普通税制适用条件",
+                "Historical turnover classification, MAT adjustments and ordinary regime verified"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    },
+    {
+      "country": "in",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "in",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-04-01",
+        "period_end": "2027-03-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "in",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "available_policies": [
+        {
+          "id": "in_personal_new_ty2026_27",
+          "label": [
+            "印度居民个人新税制（TY 2026–27）",
+            "India resident individual new regime (TY 2026–27)"
+          ],
+          "notice": [
+            "适用于2026年4月1日至2027年3月31日的Tax Year，不是AY 2026–27。计算年度税额、附加税及健康教育费，不是扣除已缴款后的补退金额，不含利息或罚款。个人须适用第202条新税制；企业须已按时有效选择第200条并核实扣除、亏损及折旧限制。输入税基须与保存的收入减去核定扣除及可抵扣亏损一致；工资标准扣除等须已核定计入保存扣除，不自动另算。不含特殊税率所得、股息、资本利得、农业所得合并、境外所得或抵免、IFSC优惠及其他税额调整。",
+            "Uses Tax Year 1 April 2026–31 March 2027, not AY 2026–27. Calculates annual liability including surcharge and health/education cess, before payment credits, interest and penalties. Individuals must use section 202; domestic companies require a valid timely section 200 option and verified deduction, loss and depreciation restrictions. The established base must equal saved income less verified deductions and eligible losses. Include verified salary standard deductions in saved deductions; they are not calculated again. Excludes special-rate income, dividends, capital gains, agricultural aggregation, foreign income or relief, IFSC concessions and other tax adjustments."
+          ],
+          "required_fields": [
+            {
+              "key": "taxable_income_before_rounding",
+              "label": [
+                "核定取整前应税所得",
+                "Established taxable income before rounding"
+              ]
+            },
+            {
+              "key": "regime_and_base_verified",
+              "label": [
+                "已核实税制选择、资格、扣除及亏损限制",
+                "Regime election, eligibility, deductions and loss restrictions verified"
+              ]
+            },
+            {
+              "key": "ordinary_domestic_scope_confirmed",
+              "label": [
+                "已核实境内普通所得及全部排除条件",
+                "Ordinary domestic income and all exclusions verified"
+              ]
+            },
+            {
+              "key": "settlement_requested",
+              "label": [
+                "另算本次普通申报补退税额",
+                "Also calculate the ordinary return balance"
+              ]
+            },
+            {
+              "key": "tds_tcs_credit",
+              "label": [
+                "核定本期可用扣缴／代收税额",
+                "Verified current-period TDS/TCS credit"
+              ]
+            },
+            {
+              "key": "advance_tax_paid",
+              "label": [
+                "本期实际已缴预缴税额",
+                "Advance tax actually paid for this period"
+              ]
+            },
+            {
+              "key": "self_assessment_paid",
+              "label": [
+                "本期实际已缴自评税款总额（含已缴利息和费用）",
+                "Total self-assessment payments including paid interest and fees"
+              ]
+            },
+            {
+              "key": "total_interest_due",
+              "label": [
+                "核定累计应计利息（含已缴部分，无则填0）",
+                "Verified cumulative interest including amounts already paid (0 if none)"
+              ]
+            },
+            {
+              "key": "total_fee_due",
+              "label": [
+                "核定累计应计费用（含已缴部分，无则填0）",
+                "Verified cumulative fees including amounts already paid (0 if none)"
+              ]
+            },
+            {
+              "key": "settlement_verified",
+              "label": [
+                "已核对税款归属及凭证、累计利息费用和缴款抵扣顺序；无先前退税、更新申报、ESOP递延、罚款或额外追缴",
+                "Credits, evidence, cumulative interest/fees and payment allocation verified; no prior refunds, updated return, ESOP deferral, penalties or additional demands"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "in_personal_old_ty2026_27",
+          "label": [
+            "印度居民个人旧税制（TY 2026–27）",
+            "India resident individual old regime (TY 2026–27)"
+          ],
+          "notice": [
+            "适用于2026年4月至2027年3月的居民个人普通所得。须核实第202(4)条旧税制选择有效，经营所得须核对选择期限、历史选择和撤回限制。年龄按本税年内达到的最高年龄档；不能把60岁与80岁档重叠使用。税基扣除须按旧税制重新核定并与保存资料一致，不能沿用新税制扣除。此入口要求已核实不适用第206(2)条AMT，且无AMT结转抵免。计算含附加税和健康教育费，结算须另选。不含特殊税率所得、农业合并、境外所得或抵免、IFSC、其他税额抵免及调整。",
+            "Resident ordinary income for April 2026–March 2027. Verify a valid section 202(4) old-regime election, including business-income deadlines and prior election/withdrawal restrictions. Use the highest age band attained during the tax year. Re-establish old-regime deductions and reconcile saved facts; do not reuse new-regime deductions unchanged. Requires verified non-applicability of section 206(2) AMT and no carried AMT credit. Includes surcharge and cess; settlement is optional. Excludes special-rate income, agricultural aggregation, foreign income or relief, IFSC, other tax credits and adjustments."
+          ],
+          "required_fields": [
+            {
+              "key": "taxable_income_before_rounding",
+              "label": [
+                "核定取整前应税所得",
+                "Established taxable income before rounding"
+              ]
+            },
+            {
+              "key": "regime_and_base_verified",
+              "label": [
+                "已核实税制选择、资格、扣除及亏损限制",
+                "Regime election, eligibility, deductions and loss restrictions verified"
+              ]
+            },
+            {
+              "key": "ordinary_domestic_scope_confirmed",
+              "label": [
+                "已核实境内普通所得及全部排除条件",
+                "Ordinary domestic income and all exclusions verified"
+              ]
+            },
+            {
+              "key": "settlement_requested",
+              "label": [
+                "另算本次普通申报补退税额",
+                "Also calculate the ordinary return balance"
+              ]
+            },
+            {
+              "key": "tds_tcs_credit",
+              "label": [
+                "核定本期可用扣缴／代收税额",
+                "Verified current-period TDS/TCS credit"
+              ]
+            },
+            {
+              "key": "advance_tax_paid",
+              "label": [
+                "本期实际已缴预缴税额",
+                "Advance tax actually paid for this period"
+              ]
+            },
+            {
+              "key": "self_assessment_paid",
+              "label": [
+                "本期实际已缴自评税款总额（含已缴利息和费用）",
+                "Total self-assessment payments including paid interest and fees"
+              ]
+            },
+            {
+              "key": "total_interest_due",
+              "label": [
+                "核定累计应计利息（含已缴部分，无则填0）",
+                "Verified cumulative interest including amounts already paid (0 if none)"
+              ]
+            },
+            {
+              "key": "total_fee_due",
+              "label": [
+                "核定累计应计费用（含已缴部分，无则填0）",
+                "Verified cumulative fees including amounts already paid (0 if none)"
+              ]
+            },
+            {
+              "key": "settlement_verified",
+              "label": [
+                "已核对税款归属及凭证、累计利息费用和缴款抵扣顺序；无先前退税、更新申报、ESOP递延、罚款或额外追缴",
+                "Credits, evidence, cumulative interest/fees and payment allocation verified; no prior refunds, updated return, ESOP deferral, penalties or additional demands"
+              ]
+            },
+            {
+              "key": "resident_age_band",
+              "label": [
+                "本税年内达到的最高年龄档",
+                "Highest age band attained during this tax year"
+              ]
+            },
+            {
+              "key": "amt_not_applicable_verified",
+              "label": [
+                "已核实不适用AMT，且无AMT结转抵免",
+                "AMT non-applicability and absence of carried AMT credit verified"
+              ]
+            }
+          ]
+        }
+      ],
+      "acceptance": "Availability only; arithmetic, legal eligibility, filing completeness and actual user scenarios require separate evidence"
+    }
+  ],
+  "source_hashes": {
+    "apps/web/src/income-assessment.ts": "3afeaa004eb66a3f80bdc3aff5e7df5934096656a7370f2e442fb4eb470fb000",
+    "apps/web/src/korea-assessment.ts": "723af3cc51be3acf7a988463e559c4a9bfc886f13aadd06a38c853418baf825f",
+    "apps/web/src/korea-salary-assessment.ts": "7996344dd1bda666bfd3dc7f81802955267e668334a515d3058320fe72106972",
+    "apps/web/src/thailand-dividend-assessment.ts": "3d14e4480885b239b025df03f370313c22a49eaf9deb669c685dcf890dc9b37a",
+    "apps/web/src/thailand-foreign-assessment.ts": "99cb6c48b2ac73866f1165fc38e6b461708eceed96207fd4efc632106d674df3",
+    "apps/web/src/vietnam-business-assessment.ts": "b445e6a6040af0325698b560e53900a2178add1d44421ae88e0374be3a875a56",
+    "apps/web/src/vietnam-rental-assessment.ts": "2af30576a160a0b9ab026f971ff1b3e10e844cf3b754da4803c7ee78074b4548"
+  },
+  "verification": {
+    "representative_inputs": 22,
+    "inputs_with_at_least_one_policy": 22,
+    "scope": "Resident ordinary examples only; not all income categories, periods or residency combinations"
+  }
+}
