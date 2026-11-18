@@ -19,7 +19,15 @@
       8127,
       5227
     ],
-    "full_regression": "Still running at evidence creation; no overall passing claim"
+    "full_regression": {
+      "runtime_head": "6570d92",
+      "passed": 119,
+      "failed": 2,
+      "exit_code": 1,
+      "reported_duration": "10.0m",
+      "failures": "Only the two stale Thai source-title assertions documented above",
+      "interpretation": "119 passing cases plus two corrected targeted passes; not a single clean 121-case run. No runtime code changed during either run."
+    }
   },
   "reference": "https://github.com/microsoft/playwright/blob/main/docs/src/writing-tests-js.md"
 }
