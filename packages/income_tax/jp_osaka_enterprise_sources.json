@@ -1,0 +1,39 @@
+{
+  "sources": [
+    {
+      "doc_id": "jp.osaka-prefecture-corporate-rates",
+      "title": "大阪府 法人税率一覧",
+      "url": "https://www.pref.osaka.lg.jp/o050040/zei/alacarte/zeiritu.html",
+      "file": "database/raw/jp/jp.osaka-prefecture-corporate-rates.20261119.html",
+      "sha256": "3872f40b6a9889bea1342a655a52ed5ab5ce40ff59360a28ad47f543c4009dbc"
+    },
+    {
+      "doc_id": "jp.osaka-prefecture-surcharges",
+      "title": "jp.osaka-prefecture-surcharges.20261119.html",
+      "url": "https://www.pref.osaka.lg.jp/o050040/zei/alacarte/houjinnnizei_chouka.html",
+      "file": "database/raw/jp/jp.osaka-prefecture-surcharges.20261119.html",
+      "sha256": "f137960895f0e5e40e0e09db2548532b1af5a580adf2c92724b3257b5c3c3347"
+    },
+    {
+      "doc_id": "jp.osaka-enterprise-rates",
+      "title": "jp.osaka-enterprise-rates.20261119.png",
+      "url": "https://www.pref.osaka.lg.jp/images/18421/zeiritsuhyou.png",
+      "file": "database/raw/jp/jp.osaka-enterprise-rates.20261119.png",
+      "sha256": "4210d3c64f3f9b9a988aa79f0630be1de47bae03ae7fcbd9872635cbb4e3caba"
+    },
+    {
+      "doc_id": "jp.osaka-special-enterprise-rates",
+      "title": "jp.osaka-special-enterprise-rates.20261119.png",
+      "url": "https://www.pref.osaka.lg.jp/images/18421/zeirituhyou4.png",
+      "file": "database/raw/jp/jp.osaka-special-enterprise-rates.20261119.png",
+      "sha256": "436fb9bee4ae95baec265f0225427824d34379f05589a3ad40af9fecbd531ff5"
+    },
+    {
+      "doc_id": "jp.osaka-prefecture-return-instructions.202607",
+      "title": "jp.osaka-prefecture-return-instructions.202607.pdf",
+      "url": "https://www.pref.osaka.lg.jp/documents/525/s6tebiki0807.pdf",
+      "file": "database/raw/jp/jp.osaka-prefecture-return-instructions.202607.pdf",
+      "sha256": "c3048d627fabc9b6dd4ec3502384bc625de82d0309d85304c5fdb201d22cfed3"
+    }
+  ]
+}

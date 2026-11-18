@@ -89,5 +89,12 @@
     "threshold_distinction": "Enterprise uses preallocation income truncated belowJPY1000 against annualJPY50m (prorated for short years); prefectural corporation-tax levy uses preallocation national levy base against annualJPY20m. Capital and scope conditions remain separate.",
     "source_update": "Old s6tebiki.pdf returns404. Current official download page links s6tebiki0807.pdf (R8.7) and seigo0806.pdf correcting R8.4. Both archived. Errata affects several credit/difference line references; use current instructions.",
     "remaining": "Detailed current-return rounding and column mapping need review before calculation implementation. Image rate tables visually inspected; PDF text located but full visual/table review still pending."
+  },
+  "enterprise_component": {
+    "status": "internal_component_implemented_not_complete_assessment",
+    "visual_review": "Rendered R8.7 physical page7 and inspected band allocation before rounding, thousand-yen tax bases, hundred-yen band taxes.",
+    "implementation": "japan_osaka.ordinary_enterprise validates2026 start,1-12months, capital<=JPY100m and verified Osaka-only ordinary scope. Uses Osaka income thresholdJPY50m prorated by months after thousand-yen truncation. Reuses identical verified band arithmetic; outputs Osaka-only source records.",
+    "validation": "11 tests passed in0.57s: standard/special levies,50m threshold and truncation, short-period bands, ambient precision, source hashes and rejected scope.",
+    "limits": "No saved-case/API/UI integration. Prefectural/city inhabitant and capitation, local adjustments, interim balances, and broader special/multi-location regimes remain required."
   }
 }

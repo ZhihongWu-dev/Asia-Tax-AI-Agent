@@ -187,7 +187,8 @@
     "china_personal_rental_full_regression": "Runtime0c541cd:1813 income/report cases passed in50.74s;162 successful calls across35 policies,116 distinct source records,0 unresolved. Followup strengthened historical no-rentals replay:11 passed in7.25s. Tests/source integrity do not establish complete legal/business coverage.",
     "rental_production_build": "At11cb071 npm run build passed:TypeScript and Vite2279 modules,3.62s;10 local artifacts hashed. Main JS832.65kB warning remains. No deployment.",
     "japan_osaka_research": "3 official city/definitions/prefecture originals archived and hashes verified. City/prefecture separation, per-ward capitation and preallocation rate determination established. Prefectural2026 applicability, rounding and full saved workflow pending; no Osaka calculator enabled.",
-    "japan_osaka_current_instructions": "8 official originals hashed, including image rates,2026 surcharge periods, currentR8.7 return instructions andR8.4 errata. Ordinary enterprise/special rates visually checked. Superseded404 link avoided; rounding/column review and implementation pending."
+    "japan_osaka_current_instructions": "8 official originals hashed, including image rates,2026 surcharge periods, currentR8.7 return instructions andR8.4 errata. Ordinary enterprise/special rates visually checked. Superseded404 link avoided; rounding/column review and implementation pending.",
+    "japan_osaka_enterprise": "11 component tests passed in0.57s after visual review of current instructions p7. Osaka-specific surcharge gate and source records implemented; no complete local assessment/UI yet."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }
