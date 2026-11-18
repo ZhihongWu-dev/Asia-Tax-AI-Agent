@@ -279,7 +279,7 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
     const salaries: IncomePolicy = {id:'hk_salaries_2025_26',label:['香港薪俸税（2025/26）','Hong Kong salaries tax (2025/26)'],
       notice:['仅限单独评税的薪俸所得，不比较合并或个人入息课税。已缴税额须归属本期最终评税，不含下期暂缴税。',
         'Separate salaries assessment only; joint and personal assessment are not compared. Prepayments must belong to this final assessment, not the next provisional assessment.'],
-      fields:[money('net_income','扣除后、免税额前的入息净额','Net income before allowances'),money('allowed_allowances','核定免税额','Allowed allowances'),hkPrepaid,confirm('ordinary_separate_assessment_confirmed','已核对普通单独薪俸评税适用条件','Ordinary separate salaries assessment checked')]};
+      fields:[money('net_income','扣除后、免税额前的入息净额','Net income before allowances'),money('hks_balancing_charge','折旧结余课税','Machinery balancing charge'),money('hks_employment_expenses','核定受雇费用','Established employment expenses'),money('hks_machinery_allowances','核定机器折旧免税额','Established machinery allowances'),money('hks_self_education','核定个人进修扣除','Established self-education deduction'),money('hks_concessionary_deductions','核定第4A部扣除','Established Part 4A deductions'),confirm('hks_eligibility','已核实扣除限额及薪俸亏损资格','Deduction limits and salary-loss eligibility verified'),money('allowed_allowances','核定免税额','Allowed allowances'),hkPrepaid,confirm('ordinary_separate_assessment_confirmed','已核对普通单独薪俸评税适用条件','Ordinary separate salaries assessment checked')]};
     if (input.incomes.every(i=>i.category==='employment')) return [salaries];
     if (input.incomes.some(i=>i.category==='employment')) return [];
     return [profits];

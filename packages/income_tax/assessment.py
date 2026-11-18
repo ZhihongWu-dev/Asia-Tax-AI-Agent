@@ -205,7 +205,16 @@ def calculate(case: IncomeTaxCase, basis):
     elif policy == 'hk_salaries_2025_26':
         if any(i.category != 'employment' for i in case.incomes):
             raise ValueError('Salaries policy cannot cover other saved income categories')
+        if args.pop('workpaper') is None:
+            raise ValueError('Salaries calculation requires a reconciled workpaper')
+        from .hong_kong_salary_reconciliation import reconcile
+        reconciliation = reconcile(case,basis.workpaper)
+        if basis.net_income != reconciliation['net_income_before_allowances']:
+            raise ValueError('Salaries net income must reconcile to the saved income and deduction workpaper')
         result = hong_kong.salaries_tax(assessment_year='2025/26', **args)
+        result['salary_reconciliation'] = reconciliation
+        result['policy_version'] += '-reconciled-20261119'
+        result['sources'].extend(deepcopy(hong_kong.SALARY_BASIS_SOURCES))
     elif policy == 'ae_ordinary_2026':
         classified = args.pop('natural_person_activity_classification_confirmed')
         if case.subject == 'individual':

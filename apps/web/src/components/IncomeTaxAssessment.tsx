@@ -45,6 +45,12 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
         basis[field.key] = months;
       } else basis[field.key] = field.boolean ? values[field.key] === 'true' : field.integer ? Number(values[field.key]) : values[field.key];
     }
+    if (policy.id==='hk_salaries_2025_26') {
+      basis.workpaper={balancing_charge:basis.hks_balancing_charge,employment_expenses:basis.hks_employment_expenses,
+        machinery_allowances:basis.hks_machinery_allowances,self_education:basis.hks_self_education,
+        concessionary_deductions:basis.hks_concessionary_deductions,eligibility_and_salary_loss_verified:basis.hks_eligibility};
+      for(const key of Object.keys(basis))if(key.startsWith('hks_'))delete basis[key];
+    }
     if (policy.id==='hk_property_2025_26') {
       basis.properties=current.income_tax!.incomes.map((_item,n)=>({income_index:n,
         irrecoverable_rent:basis[`hk_property_${n}_irrecoverable_rent`],
@@ -116,6 +122,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
           {['cn_company_2026','cn_small_company_2026'].includes(policy.id) && <p>{say('企业税基核对：保存的收入须为完成税务口径调整的收入总额，不是会计利润。不征税收入和免税收入须已包含在收入总额中、互不重叠，且不能再次计入扣除。保存的扣除及以前年度亏损须已核定资格、限额和年度。未用亏损不代表已获准结转；税基必须与这些资料计算的余额一致。','Company basis reconciliation: saved income is established statutory total income, not accounting profit. Non-taxable and exempt amounts must already be included, must not overlap, and must not also be claimed as deductions. Verify deduction eligibility, limits and loss vintages. Unused losses do not establish carryforward approval. The tax base must match the balance calculated from these facts.')}</p>}
           {policy.id==='vn_company_2026' && <p>{say('越南企业核对：已保存收入须包含完整法定收入及普通其他所得；减核定费用、免税所得，再抵扣可用以前年度亏损。免税所得不得重复计入扣除。须逐年核实从亏损次年起连续不超过5年的抵扣资格；本期亏损与旧亏损分别记录，不自动批准未来结转。优惠收入门槛仍按完整法定收入判断。特殊活动、境外所得及优惠所得分池另行处理。','Vietnam company reconciliation: saved income includes complete statutory revenue and ordinary other income. Deduct verified expenses and exempt income, then usable prior losses. Do not duplicate exempt income as deductions. Verify each loss vintage within the continuous five-year window starting after the loss year; current and prior losses remain separate without automatic future carryforward approval. Revenue eligibility thresholds still use complete statutory revenue. Special activities, foreign income and incentive-income pools require separate calculations.')}</p>}
           {policy.id==='ae_ordinary_2026' && <p>{say('核对经营税基：收入加税务调增，减免税收入和已核定经营扣除，再抵扣以前年度自有亏损，抵扣上限为抵亏前应税所得的75%。扣除不得包含个人排除收入对应费用或重复包含免税收入、亏损。须先核实亏损年度、资格及所有权延续条件。个人所有应税经营收入应分类为经营；其余收入须已核实符合工资或个人投资法定排除。此核对不计算转入亏损或税务集团。','Reconcile business income plus tax additions, less exempt income and established business deductions. Eligible own prior losses are capped at 75% of income before loss relief. Deductions exclude costs of excluded personal income and must not duplicate exemptions or losses. Verify loss years, eligibility and ownership continuity first. Classify all in-scope personal business receipts as business; other receipts must qualify as statutory wages or personal-investment exclusions. Transferred losses and tax groups require separate calculations.')}</p>}
+          {policy.id==='hk_salaries_2025_26' && <p>{say('薪俸核对：已保存工资应为核定应评税入息，另列折旧结余课税。保存的扣除总额须等于受雇费用、机器免税额、个人进修及第4A部扣除之和，不含个人免税额或以前年度亏损。亏损栏只填按第12A条核定可用的薪俸亏损，不能填营业亏损。只有第12(1)(a)、(b)项超额单独记录为本期第12A条超额；进修及其他扣除不能自动结转。','Salaries workpaper: saved wages are established assessable income; enter machinery balancing charges separately. Saved deductions equal employment expenses, machinery allowances, self-education and Part 4A deductions, excluding personal allowances and prior losses. Prior losses must be eligible section12A salary losses, not business losses. Only excess section12(1)(a)/(b) amounts are recorded as current section12A excess; education and other deductions do not automatically carry forward.')}</p>}
           {policy.id==='hk_profits_2025_26' && <p>{say('利得税核对：已保存收入加应税调增，减核定剔除和扣除，得到抵亏前应评税利润或经调整亏损；再抵扣核定可用的以前年度亏损。扣除须已完成捐款限额、折旧免税额及来源规则审核，不含会计折旧、不允许费用或已单列的亏损。剔除金额不能重复列入扣除。未用亏损不代表获准结转。','Profits reconciliation: saved income plus taxable additions, less established exclusions and deductions, gives assessable profits or adjusted loss before prior-loss set-off. Then apply verified eligible prior losses. Establish donation limits, statutory allowances and source rules first; saved deductions exclude accounting depreciation, disallowed costs and separately entered losses. Do not duplicate exclusions as deductions. Unused losses do not establish carryforward entitlement.')}</p>}
           {policy.id==='my_company_2026' && <p>{say('公司核对表：逐来源核算调整收入、资本免税额和法定收入。以前年度营业亏损只能抵扣营业法定收入，本年营业亏损在汇总所得后扣除。保存的扣除总额须等于来源扣除、资本免税额和按法定顺序核定的总所得扣除，不含以前年度亏损。须先核实亏损期限、股权条件、捐款及其他限额；本表不计算境外收入、集团减免或优惠所得。','Company workpaper: reconcile adjusted income, capital allowances and statutory income by source. Prior business losses reduce business statutory income only; current business losses follow aggregation. Saved deductions must equal source deductions, statutory allowances and established total-income deductions, excluding prior losses. Verify loss vintages, ownership conditions, donation and other limits first. Foreign income, group relief and incentive income need separate calculations.')}</p>}
           {policy.id==='my_individual_2026' && current.income_tax.residency==='resident' && <p>{say('居民核对表：已保存的扣除总额须等于各来源费用扣除、资本免税额、总所得扣除及个人减免之和（不含以前年度亏损）。总所得扣除须先按法定顺序及限额核定；未使用余额不代表已获准结转。','Resident workpaper: saved claimed deductions must equal source deductions, statutory allowances, total-income deductions and personal reliefs, excluding prior losses. Establish total-income deductions in statutory order and within their limits first. Unused balances do not establish carryforward entitlement.')}</p>}
@@ -169,6 +176,21 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       </>}
       {result.result.tax_scope==='national_income_and_reconstruction_tax_only'&&<p>{say('此结果仅为日本2026年度国家所得税及复兴特别所得税，不含住民税、事业税。扣除予定纳税通知金额不代表该税款已缴清，欠税另行处理。','This result covers Japan 2026 national income and reconstruction tax only, excluding local inhabitant and enterprise taxes. Deducting notified estimated tax does not mean it has been paid; arrears remain separate.')}</p>}
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{key==='balance_due'&&result.result.tax_scope==='national_income_and_reconstruction_tax_only'?say('本次国家税应补／退额（予定纳税欠税另计）','National return balance (estimated-tax arrears separate)'):label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
+      {!!result.result.salary_reconciliation && <section aria-label={say('香港薪俸税核对','Hong Kong salaries reconciliation')}>
+        <h5>{say('香港薪俸税核对','Hong Kong salaries reconciliation')}</h5>
+        <dl>{([
+          ['saved_assessable_income',say('已保存应评税入息','Saved assessable income')],
+          ['balancing_charge',say('结余课税','Balancing charge')],
+          ['employment_expenses',say('受雇费用','Employment expenses')],
+          ['machinery_allowances',say('机器免税额','Machinery allowances')],
+          ['current_section12a_excess',say('本期第12A条超额（非结转批准）','Current section12A excess (not carryforward approval)')],
+          ['prior_salary_losses_used',say('已用以前年度薪俸亏损','Prior salary losses used')],
+          ['prior_salary_losses_unused',say('未用以前年度薪俸亏损','Unused prior salary losses')],
+          ['self_education',say('个人进修扣除','Self-education deduction')],
+          ['concessionary_deductions',say('第4A部扣除','Part 4A deductions')],
+          ['net_income_before_allowances',say('免税额前入息净额','Net income before allowances')],
+        ] as const).map(([key,label])=><div key={key}><dt>{label}</dt><dd>{String((result.result.salary_reconciliation as Record<string,unknown>)[key])}</dd></div>)}</dl>
+      </section>}
       {!!result.result.uae_basis_reconciliation && <section aria-label={say('阿联酋企业税税基核对','UAE corporate tax basis reconciliation')}>
         <h5>{say('阿联酋企业税税基核对','UAE corporate tax basis reconciliation')}</h5>
         <dl>{([

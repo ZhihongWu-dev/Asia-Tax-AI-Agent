@@ -1,0 +1,13 @@
+{
+  "sources": [
+    {
+      "doc_id": "hk.cap112",
+      "title": "Inland Revenue Ordinance: separate salaries basis and loss stages",
+      "url": "https://www.elegislation.gov.hk/hk/cap112!en.rtf",
+      "file": "database/raw/hk/hk.cap112.rtf",
+      "sha256": "e28849ff385862416718714208c9fa05d27b022ca475b687c6f1c4591a100134",
+      "locator": "Sections12(1),12(5),12A and12B",
+      "note": "Employment expenses and machinery allowances determine section12A excess; self-education and Part4A deductions do not automatically create that excess."
+    }
+  ]
+}

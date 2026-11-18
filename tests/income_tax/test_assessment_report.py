@@ -73,6 +73,7 @@ def test_snapshot_mismatch_rejected():
     ('ae', 'ae_basis_sources.json', 1),
     ('my_company', 'my_company_basis_sources.json', 1),
     ('vn_company', 'vn_2026_sources.json', 5),
+    ('hk_salary', 'hk_salary_basis_sources.json', 1),
 ])
 def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, manifest, count):
     from hashlib import file_digest
@@ -89,6 +90,7 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
     from tests.income_tax.test_uae_reconciliation import inputs as uae_inputs
     from tests.income_tax.test_malaysia_company_reconciliation import inputs as malaysia_company_inputs
     from tests.income_tax.test_vietnam_workflow import company_facts, company_basis
+    from tests.income_tax.test_hong_kong_salary_reconciliation import inputs as hk_salary_inputs
 
     root = Path(__file__).resolve().parents[2]
     sources = json.loads((root/'packages/income_tax'/manifest).read_text(
@@ -135,6 +137,8 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
             data, basis = malaysia_company_inputs()
         elif policy == 'vn_company':
             data, basis = company_facts(), company_basis()
+        elif policy == 'hk_salary':
+            data, basis = hk_salary_inputs()
         elif policy == 'th_company':
             data = facts()
             data.update(jurisdiction='th', currency='THB')
@@ -148,12 +152,13 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
         saved = client.put(path, headers=HEADERS, json=dict(
             revision=0, request_id=str(uuid4()), inputs=data))
         assert saved.status_code == 200, saved.text
-        if policy in ('th_company', 'jp_company', 'id_company', 'sg_company', 'hk_profits', 'ae', 'my_company', 'vn_company'):
+        if policy in ('th_company', 'jp_company', 'id_company', 'sg_company', 'hk_profits', 'ae', 'my_company', 'vn_company', 'hk_salary'):
             key = 'net_taxable_profit' if policy == 'th_company' else 'taxable_income_before_rounding'
             if policy == 'sg_company':key = 'normal_chargeable_income'
             if policy == 'hk_profits':key = 'assessable_profits'
             if policy in ('ae','vn_company'):key = 'taxable_income'
             if policy == 'my_company':key = 'chargeable_income'
+            if policy == 'hk_salary':key = 'net_income'
             rejected = client.post(path+'/runs', headers=HEADERS, json=dict(
                 revision=1, request_id=str(uuid4()),
                 basis={**basis, key: '1000001'}))

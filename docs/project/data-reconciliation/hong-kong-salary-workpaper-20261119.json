@@ -1,0 +1,23 @@
+{
+  "scope": "Hong Kong ordinary separate salaries assessment workpaper",
+  "source": {
+    "manifest": "packages/income_tax/hk_salary_basis_sources.json",
+    "reviewed": "IRO sections12(1),12(5),12A and12B; original RTF SHA checked against registered catalog; official IRD net-income formula crosschecked online"
+  },
+  "changes": [
+    "Reconcile saved assessable income plus machinery balancing charges with separate employment expenses, machinery allowances, prior section12A salary losses, self-education and Part4A deductions.",
+    "Only employment expenses and machinery allowances create current section12A excess; self-education/concessionary deductions are not automatically classified as carryforward loss.",
+    "Require saved deduction total and supplied net income to match workpaper. Personal allowances remain a later deduction used only in the progressive-rate comparison.",
+    "Preserve prior/current loss distinction and saved report provenance; invalid basis leaves case revision/result unchanged."
+  ],
+  "validation": {
+    "income_and_report": "1552 passed in33.25s; exit0",
+    "typescript": "tsc -b exit0",
+    "browser": "1 passed in27.3s;400000 saved assessable income,20000 deductions,380000 net before allowances; saved/reopened result and workpaper"
+  },
+  "limits": [
+    "Entitlement, statutory limits, source allocation and eligible prior salary losses must be established from supporting evidence.",
+    "No joint/personal-assessment election, cross-border sourcing determination or automatic legal carryforward approval.",
+    "This fixes the saved-basis workflow, not all Hong Kong personal tax obligations."
+  ]
+}

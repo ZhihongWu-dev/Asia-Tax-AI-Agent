@@ -53,6 +53,10 @@ COMPANY = dict(policy='cn_company_2026', taxable_income='1000000', normal_rate_c
 def test_supported_policies_through_saved_case_contract(jur, subject, basis, key, expected):
     data=facts(jur,subject)
     if basis['policy']=='sg_company_ya2026':data['claimed_deductions']='900000'
+    if basis['policy']=='hk_salaries_2025_26':
+        from tests.income_tax.test_hong_kong_salary_reconciliation import paper
+        data['incomes'][0]['gross_amount']='380000'
+        basis={**basis,'workpaper':paper()}
     result = calculate(IncomeTaxCase(**data), ADAPTER.validate_python({**COMMON, **basis}))
     assert isinstance(result[key], str)  # never serialize money as a binary float
     assert Decimal(result[key]) == Decimal(expected)

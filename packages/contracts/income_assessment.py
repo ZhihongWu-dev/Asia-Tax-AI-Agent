@@ -8,6 +8,7 @@ from decimal import Decimal
 from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from .income_tax import Money
+from packages.income_tax.hong_kong_salary_reconciliation import SalaryWorkpaper
 from packages.income_tax.malaysia_reconciliation import IndividualWorkpaper, CompanyWorkpaper
 
 
@@ -102,6 +103,7 @@ class HKProfits(Basis):
 
 
 class HKSalaries(Basis):
+    workpaper: SalaryWorkpaper | None = None
     policy: Literal['hk_salaries_2025_26']
     net_income: Money
     allowed_allowances: Money

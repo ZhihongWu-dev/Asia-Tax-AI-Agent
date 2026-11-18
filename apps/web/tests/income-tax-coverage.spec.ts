@@ -50,7 +50,7 @@ const scenarios:Scenario[]=[
     money:[['Property 1: irrecoverable rent after deposit offset','20000'],['Property 1: rates borne and paid by owner','10000'],['Prepaid final tax for this assessment','35000']],
     choices:[['Sole ownership and separate property assessment verified','true'],['Complete rental consideration and deduction evidence verified','true']],
     resultLabel:'Balance due (negative means overpaid)',expected:'-2600'},
-  {name:'Hong Kong salaries final prepayment',country:'hk',subject:'individual',category:'employment',start:'2025-04-01',end:'2026-03-31',gross:'380000',policy:'hk_salaries_2025_26',
+  {name:'Hong Kong salaries final prepayment',country:'hk',subject:'individual',category:'employment',start:'2025-04-01',end:'2026-03-31',gross:'400000',deductions:'20000',policy:'hk_salaries_2025_26',
     money:[['Net income before allowances','380000'],['Allowed allowances','132000'],['Prepaid final tax for this assessment','10000']],
     choices:[['Ordinary separate salaries assessment checked','true']],resultLabel:'Balance due (negative means overpaid)',expected:'11160'},
   ...(['company','individual'] as const).map(subject=>({name:`UAE ${subject} ordinary business`,country:'ae',subject,category:'business',start:'2026-01-01',end:'2026-12-31',gross:subject==='company'?'1000000':'3600000',policy:'ae_ordinary_2026',
@@ -78,6 +78,11 @@ for(const s of scenarios)test(`${s.name} saves and reopens a sourced result`,asy
     await calc.getByLabel('Established non-taxable income included in total income',{exact:true}).fill('0');
     await calc.getByLabel('Established exempt income included in total income',{exact:true}).fill('0');
   }
+  if(s.policy==='hk_salaries_2025_26') {
+    for(const label of ['Machinery balancing charge','Established employment expenses','Established machinery allowances','Established self-education deduction','Established Part 4A deductions'])
+      await calc.getByLabel(label,{exact:true}).fill(label==='Established Part 4A deductions'?'20000':'0');
+    await calc.getByRole('combobox',{name:'Deduction limits and salary-loss eligibility verified',exact:true}).selectOption('true');
+  }
   for(const [name,value] of s.money)await calc.getByLabel(name,{exact:true}).fill(value);
   for(const [name,value] of s.choices)await calc.getByRole('combobox',{name,exact:true}).selectOption(value);
   await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified applicable year, ordinary regime, tax basis, deductions and period payment evidence.');
@@ -87,6 +92,7 @@ for(const s of scenarios)test(`${s.name} saves and reopens a sourced result`,asy
   const trailingZeros=s.expected.includes('.')?'0*':'(?:\\.0+)?';
   const expectedAmount=new RegExp(`^${s.expected.replace('.','\\.')}${trailingZeros}$`);
   await expect(amount).toHaveText(expectedAmount);
+  if(s.policy==='hk_salaries_2025_26') await expect(report.getByRole('region',{name:'Hong Kong salaries reconciliation'})).toContainText('20000');
   if(s.policy==='ae_ordinary_2026') await expect(report.getByRole('region',{name:'UAE corporate tax basis reconciliation'})).toBeVisible();
   if(s.policy==='hk_profits_2025_26') await expect(report.getByRole('region',{name:'Hong Kong profits basis reconciliation'})).toContainText('1000000');
   if(s.policy==='sg_company_ya2026') await expect(report.getByRole('region',{name:'Singapore pre-exemption basis reconciliation'})).toContainText('900000');
