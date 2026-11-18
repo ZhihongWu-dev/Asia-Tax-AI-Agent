@@ -17,7 +17,7 @@ def main():
     from dotenv import dotenv_values
     from sqlalchemy import MetaData, create_engine, event
     from sqlalchemy.schema import CreateSchema, DropSchema
-    from packages.chat.store import ChatStore, CaseNotFound, conversations
+    from packages.chat.store import ChatStore, CaseNotFound, conversations, creations
     from packages.domain_bridge.planning_store import PlanningStore, LeaseLost, runs
 
     parser = argparse.ArgumentParser(description=__doc__)
@@ -32,7 +32,7 @@ def main():
     schema = 'fsie_planning_check_' + uuid4().hex
     admin = create_engine(url, connect_args={'connect_timeout': 10})
     metadata = MetaData()
-    for table in (conversations, runs):
+    for table in (conversations, creations, runs):
         table.to_metadata(metadata)
     engines = []
     created = False
@@ -45,7 +45,7 @@ def main():
         # Fail closed if any table-bearing SQL escapes explicit qualification.
         @event.listens_for(engine, 'before_cursor_execute')
         def guard(connection, cursor, statement, parameters, context, executemany):
-            for name in ('chat_cases', 'planning_runs'):
+            for name in ('chat_cases', 'chat_case_creations', 'planning_runs'):
                 if name in statement and schema + '.' + name not in statement:
                     raise RuntimeError('unqualified_test_table_sql')
             if 'public.' in statement:
@@ -62,7 +62,10 @@ def main():
         chat = object.__new__(ChatStore)
         chat.engine = engine
         jobs = PlanningStore(engine)
-        case = chat.create('synthetic-owner-a')
+        creation_request = str(uuid4())
+        case = chat.create('synthetic-owner-a', creation_request)
+        assert chat.create('synthetic-owner-a', creation_request) == case
+        report['checks']['idempotent_case_creation'] = 'passed'
         run = jobs.enqueue('synthetic-owner-a', case['id'], 0, 'request-one',
                            {'amount': 100}, {'version': 'synthetic'})
         assert jobs.enqueue('synthetic-owner-a', case['id'], 0, 'request-one',
@@ -98,6 +101,18 @@ def main():
         final = isolated_engine()
         assert PlanningStore(final).get('synthetic-owner-a', run['id'])['result'] == {'synthetic_verified': True}
         report['checks']['completed_result_survives_reconnect'] = 'passed'
+        final_chat = object.__new__(ChatStore)
+        final_chat.engine = final
+        assert final_chat.create('synthetic-owner-a', creation_request) == case
+        report['checks']['creation_receipt_survives_reconnect'] = 'passed'
+        final_chat.delete('synthetic-owner-a', case['id'], case['revision'])
+        assert PlanningStore(final).list_case('synthetic-owner-a', case['id'])['items'] == []
+        try:
+            final_chat.create('synthetic-owner-a', creation_request)
+        except CaseNotFound:
+            report['checks']['deleted_case_not_recreated'] = 'passed'
+        else:
+            raise AssertionError('deleted_case_recreated')
         report['status'] = 'passed'
     except Exception as exc:
         # Never emit driver exception text, which can contain credentials.

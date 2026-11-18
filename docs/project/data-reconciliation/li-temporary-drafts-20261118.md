@@ -49,3 +49,16 @@ identity behavior while preserving the current application's richer case shape.
 
 - https://react.dev/learn/preserving-and-resetting-state
 - https://github.com/reactjs/react.dev/blob/main/src/content/learn/preserving-and-resetting-state.md
+
+## Full migration contract follow-up
+
+The full downgrade test's retained-table expectation now includes creation
+receipts, and verifies the receipt data and RLS before and after re-upgrade.
+Both full migration tests collect successfully; the full empty-database
+upgrade/downgrade execution still requires the pgvector CI environment and was
+not run on the local plain PostgreSQL installation.
+
+The schema-isolated acceptance script now includes receipt creation/replay,
+reconnect preservation and deletion-aware replay rejection. It passed all eight
+checks on local PostgreSQL, dropped its disposable schema and made no production
+table changes. Evidence is in case-receipt-schema-acceptance-20261118.json.

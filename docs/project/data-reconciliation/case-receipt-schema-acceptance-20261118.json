@@ -1,0 +1,17 @@
+{
+  "schema": "fsie_planning_check_3d750e4f6999449a91228dd42da9e5b5",
+  "checks": {
+    "idempotent_case_creation": "passed",
+    "idempotent_enqueue": "passed",
+    "owner_filter": "passed",
+    "reconnect_preserves_active_lease": "passed",
+    "stale_worker_fenced": "passed",
+    "completed_result_survives_reconnect": "passed",
+    "creation_receipt_survives_reconnect": "passed",
+    "deleted_case_not_recreated": "passed"
+  },
+  "production_tables_mutated": false,
+  "scope": "real PostgreSQL store operations across connection recreation; not hosted API/auth acceptance",
+  "status": "passed",
+  "cleaned_up": true
+}
