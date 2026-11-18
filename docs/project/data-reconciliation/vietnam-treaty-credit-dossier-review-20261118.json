@@ -1,0 +1,108 @@
+{
+  "status": "targeted_visual_review_of_archived_consolidation",
+  "file": "database/raw/vn/vn.btc.tax-administration.14-vbhn-2026.pdf",
+  "sha256": "0cae81492f8c3af94639d5370469a31860bc81e72e0d07c706a9efbeec13cfa5",
+  "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/14-vbhn-btc.pdf",
+  "reviewed_pages": [
+    102,
+    103,
+    104,
+    298
+  ],
+  "provision": "Circular80/2021 Article62(3), consolidated14/VBHN-BTC2026",
+  "scope": "Vietnam resident organisations and individuals claiming treaty-country foreign tax credit, with tax compliant with foreign law and applicable treaty. Not a blanket entitlement determination.",
+  "common_documents": [
+    {
+      "id": "treaty_credit_application",
+      "form": "02/HTQT",
+      "reference": "62(3)(a.1)",
+      "description": "Application with treaty-covered transaction details."
+    }
+  ],
+  "credit_type_documents": {
+    "direct": [
+      {
+        "id": "foreign_income_tax_return",
+        "reference": "62(3)(a.2.1.1)",
+        "description": "Taxpayer-confirmed copy of foreign income tax return."
+      },
+      {
+        "id": "foreign_payment_receipt",
+        "reference": "62(3)(a.2.1.2)",
+        "description": "Taxpayer-confirmed copy of foreign tax payment document."
+      },
+      {
+        "id": "foreign_authority_paid_tax_confirmation",
+        "reference": "62(3)(a.2.1.3)",
+        "description": "Original confirmation from foreign tax authority of tax paid."
+      }
+    ],
+    "tax_sparing": [
+      {
+        "id": "foreign_income_tax_return",
+        "reference": "62(3)(a.2.2.1)",
+        "description": "Taxpayer-confirmed copy of foreign income tax return."
+      },
+      {
+        "id": "foreign_business_legal_evidence",
+        "reference": "62(3)(a.2.2.2)",
+        "description": "Taxpayer-confirmed business registration or legal evidence of foreign business activity."
+      },
+      {
+        "id": "foreign_authority_sparing_confirmation",
+        "reference": "62(3)(a.2.2.3)",
+        "description": "Foreign competent-authority letter confirming exempted/reduced tax and consistency of claimed sparing with treaty and foreign law."
+      }
+    ],
+    "indirect": [
+      {
+        "id": "ownership_legal_evidence",
+        "reference": "62(3)(a.2.3.1)",
+        "description": "Legal evidence of relationship and capital contribution percentage."
+      },
+      {
+        "id": "distributor_foreign_tax_return",
+        "reference": "62(3)(a.2.3.2)",
+        "description": "Taxpayer-confirmed foreign income tax return of dividend-distributing company."
+      },
+      {
+        "id": "dividend_withholding_return",
+        "reference": "62(3)(a.2.3.3)",
+        "description": "Taxpayer-confirmed dividend withholding tax return."
+      },
+      {
+        "id": "foreign_authority_underlying_tax_confirmation",
+        "reference": "62(3)(a.2.3.4)",
+        "description": "Foreign tax authority confirmation of dividend tax and corporate tax paid before dividend distribution."
+      }
+    ]
+  },
+  "conditional_documents": [
+    {
+      "id": "representative_authorisation",
+      "condition": "Taxpayer uses authorised legal representative",
+      "reference": "62(3)(a.3)"
+    }
+  ],
+  "review_outcome": "Tax authority examines application;10 working days from complete dossier excludes supplementation/explanation time under62(3)(b). Dossier completeness is not approval.",
+  "form_review": {
+    "physical_page": 298,
+    "form": "02/HTQT continuation",
+    "fields": [
+      "treaty application year",
+      "direct/sparing/indirect claim amounts",
+      "foreign income amount and type",
+      "income period",
+      "tax rate",
+      "foreign tax paid where applicable",
+      "transaction explanation",
+      "attached documents"
+    ]
+  },
+  "remaining_verification": [
+    "Subsequent amendments after May2026 consolidation",
+    "Annual corporate annex03-4/TNDN and its current replacement status",
+    "Legal entitlement and caps separately for every partner treaty"
+  ],
+  "ocr_policy": "OCR used only to locate pages. Findings checked against original scan; no unreviewed OCR admitted as authoritative text."
+}
