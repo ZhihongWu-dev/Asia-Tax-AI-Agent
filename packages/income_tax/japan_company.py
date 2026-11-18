@@ -31,6 +31,28 @@ def annual_period(period_start, period_end):
     return start,end
 
 
+def reconcile_company_basis(case, *, taxable_income_before_rounding):
+    """Article22 tax-basis amounts, with separately established usable losses.
+
+    Saved revenue and expense figures already reflect tax adjustments; carried
+    losses represent the verified current deduction, not an unrestricted pool.
+    """
+    with localcontext() as context:
+        context.prec = 40
+        total = sum((item.gross_amount for item in case.incomes), Decimal(0))
+        before_losses = total - case.claimed_deductions
+        available = max(Decimal(0), before_losses)
+        used = min(available, case.carried_losses)
+        base = available - used
+        if taxable_income_before_rounding != base:
+            raise ValueError('Japanese company taxable income must reconcile to saved statutory income, deductions and eligible losses before rounding')
+        return dict(total_income=total, non_taxable_income=Decimal(0), exempt_income=Decimal(0),
+            allowed_deductions=case.claimed_deductions, income_before_loss_relief=before_losses,
+            current_period_loss=max(Decimal(0), -before_losses), prior_losses_used=used,
+            prior_losses_unused=case.carried_losses-used, taxable_income=base,
+            scope='Established Article22 amounts before JPY1000 truncation; loss limits, eligibility and future carryforward not inferred')
+
+
 def company_tax(taxable_income_before_rounding, *, period_start, period_end,
         rate_regime, rate_classification_verified, ordinary_no_adjustments_confirmed,
         corporation_interim_liability, local_corporation_interim_liability):

@@ -113,7 +113,11 @@ def calculate(case: IncomeTaxCase, basis):
         if case.residency!='resident' or any(i.source_jurisdiction!='jp' or
                 i.foreign_tax_paid not in (None,0) or i.category not in ('business','rental','royalty','other') for i in case.incomes):
             raise ValueError('Ordinary Japanese resident domestic company income without withholding/foreign-credit adjustments required')
+        reconciliation = japan_company.reconcile_company_basis(case,
+            taxable_income_before_rounding=basis.taxable_income_before_rounding)
         result=japan_company.company_tax(period_start=case.period_start,period_end=case.period_end,**args)
+        result['basis_reconciliation'] = reconciliation
+        result['policy_version'] += '-reconciled-20261119'
     elif policy == 'cn_small_company_2026':
         if case.residency != 'resident' or any(item.source_jurisdiction != 'cn' or
                 item.foreign_tax_paid not in (None, 0) for item in case.incomes):

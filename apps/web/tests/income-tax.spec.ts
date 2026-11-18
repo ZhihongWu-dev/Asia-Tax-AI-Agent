@@ -319,6 +319,7 @@ for(const scenario of [
   await expect(result).toContainText('without automatic offsets');
   await expect(result).toContainText('-800000');
   await expect(result).toContainText('1389600');
+  await expect(result.getByRole('region',{name:'Company basis reconciliation'})).toContainText('100000000');
   await expect(result.getByRole('link')).toHaveCount(8);
   if(scenario.start==='2026-04-01'){
     await result.locator('h4').scrollIntoViewIfNeeded();

@@ -54,7 +54,7 @@
       "url": "https://laws.e-gov.go.jp/api/1/lawdata/340AC0000000034",
       "file": "database/raw/jp/jp.cta.xml",
       "sha256": "b3adc0eabf98a8210ec465d6ded837fb0fadf65d4cfcb3e3bc2b7e43ca27212a",
-      "review_status": "corporate_rate_and_sme_provisions_only"
+      "review_status": "corporate_rate_and_sme_provisions_plus_Article22_tax_basis_identity; loss eligibility and limits remain established inputs"
     },
     {
       "doc_id": "jp.sma",

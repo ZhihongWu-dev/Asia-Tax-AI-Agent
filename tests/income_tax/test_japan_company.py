@@ -122,3 +122,32 @@ def test_saved_case_allows_reviewed_non_calendar_period():
 def test_saved_case_scope_rejected(changes):
     data=facts();data.update(changes)
     with pytest.raises(ValueError):calculate(IncomeTaxCase(**data),TypeAdapter(Assessment).validate_python(basis()))
+
+
+@pytest.mark.parametrize('field,value', [('gross','100'), ('claimed_deductions','1'),
+    ('carried_losses','1')])
+def test_saved_case_tax_base_must_reconcile_before_rounding(field,value):
+    data=facts()
+    if field=='gross':data['incomes'][0]['gross_amount']=value
+    else:data[field]=value
+    with pytest.raises(ValueError,match='must reconcile'):
+        calculate(IncomeTaxCase(**data),TypeAdapter(Assessment).validate_python(basis()))
+
+
+@pytest.mark.parametrize('gross,deductions,losses,base,current,used,unused',[
+    ('200000000','90000000','10000000','100000000','0','10000000','0'),
+    ('100','200','50','0','100','0','50'),
+    ('100','0','150','0','0','100','50'),
+    ('10001999','0','0','10001999','0','0','0'),
+])
+def test_company_reconciliation_preserves_loss_and_rounding_stages(gross,deductions,losses,base,current,used,unused):
+    data=facts();data['incomes'][0]['gross_amount']=gross
+    data.update(claimed_deductions=deductions,carried_losses=losses)
+    params=basis();params['taxable_income_before_rounding']=base
+    result=calculate(IncomeTaxCase(**data),TypeAdapter(Assessment).validate_python(params))
+    rec=result['basis_reconciliation']
+    assert Decimal(rec['taxable_income'])==Decimal(base)
+    assert Decimal(rec['current_period_loss'])==Decimal(current)
+    assert Decimal(rec['prior_losses_used'])==Decimal(used)
+    assert Decimal(rec['prior_losses_unused'])==Decimal(unused)
+    if base=='10001999':assert Decimal(result['taxable_income'])==10001000

@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only; no cloud upload, push or main merge.",
+  "reproducer": "At01a45fb, changing saved company gross income to100 while retaining manual base100000000 still generated national taxes26317600. Executed prior runtime to confirm.",
+  "change": "Require unrounded company taxable income to reconcile saved statutory revenue less allowed deductions and separately established usable prior losses. Preserve current loss, prior losses used/unused and unrounded reconciled base. Existing statutory rounding follows reconciliation.",
+  "source": "Existing authentic e-Gov Corporate Tax Act XML Article22(1)-(3) inspected; same original hash and file retained, review scope extended to tax-basis identity.",
+  "implementation_reference": "https://github.com/openfisca/country-template",
+  "reference_use": "Independent staged arithmetic; AGPL code not copied, no dependency adopted. Repository and issues reviewed in the preceding enterprise-reconciliation work.",
+  "validation": {
+    "regression": "1486 income-tax/reporting tests passed in30.23s before final Japan report scenario added",
+    "final_focused": "49 tests passed in8.52s, including authenticated invalid-base422 without revision/result mutation, save/restart/report original-hash preservation",
+    "browser": "2 passed in28.7s: calendar-year and April-start company assessments, reconciliation displayed, retained on reopening",
+    "typescript": "tsc -b exit0",
+    "cases": "Saved amount mismatch, expense/loss mismatch, allowable losses, current losses without consuming old losses, unused old losses, pre-truncation reconciliation"
+  },
+  "limits": [
+    "National corporation/local corporation/defence taxes only; municipal/prefectural inhabitant and enterprise taxes remain unimplemented",
+    "Tax adjustments, loss eligibility, vintages and statutory deduction limits must already be established in supplied amounts",
+    "Not a complete company return or overall business acceptance",
+    "Existing saved records not recalculated"
+  ]
+}
