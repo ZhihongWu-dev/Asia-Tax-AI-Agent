@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-19",
+  "delivery_constraint": "Local work only. No cloud upload, remote push, deployment, or merge into main.",
+  "change": "Reject saved employment income under Hong Kong profits assessment; show salaries policy only for employment-only individual cases and profits policy for individual cases without employment.",
+  "validation": {
+    "backend": "36 passed: test_assessment_workflow.py and test_hong_kong_calculation.py",
+    "typescript": "tsc -b exited 0",
+    "browser": "3 Hong Kong coverage tests passed in 36.4 seconds; exit 0"
+  },
+  "limits": [
+    "Mixed employment and business income requires separate schedules; combined calculation and personal assessment comparison remain unsupported.",
+    "Browser authentication uses fixtures and does not establish real account acceptance.",
+    "The earlier income-workflow-availability-20261119.json inventory predates this change: employment-only Hong Kong individuals now have only the salaries option."
+  ],
+  "references": [
+    "https://www.ird.gov.hk/eng/tax/noc.htm",
+    "https://www.ird.gov.hk/eng/tax/bus_pft.htm",
+    "https://www.ird.gov.hk/eng/faq/ctr.htm"
+  ]
+}

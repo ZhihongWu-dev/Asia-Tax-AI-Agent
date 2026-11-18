@@ -43,6 +43,10 @@ const scenarios:Scenario[]=[
     money:[['Established assessable profits','1000000'],['Prepaid final tax for this assessment','0']] as [string,string][],
     choices:[['Business form',subject==='company'?'corporation':'sole_proprietor'],['Eligible for two-tier rates','true'],['Ordinary regime and exclusions checked','true']] as [string,string][],
     resultLabel:'Tax for this assessment',expected:subject==='company'?'79500':'72000'})),
+  {name:'Hong Kong property separate assessment',country:'hk',subject:'individual',category:'rental',start:'2025-04-01',end:'2026-03-31',gross:'300000',policy:'hk_property_2025_26',deductions:'30000',
+    money:[['Property 1: irrecoverable rent after deposit offset','20000'],['Property 1: rates borne and paid by owner','10000'],['Prepaid final tax for this assessment','35000']],
+    choices:[['Sole ownership and separate property assessment verified','true'],['Complete rental consideration and deduction evidence verified','true']],
+    resultLabel:'Balance due (negative means overpaid)',expected:'-2600'},
   {name:'Hong Kong salaries final prepayment',country:'hk',subject:'individual',category:'employment',start:'2025-04-01',end:'2026-03-31',gross:'380000',policy:'hk_salaries_2025_26',
     money:[['Net income before allowances','380000'],['Allowed allowances','132000'],['Prepaid final tax for this assessment','10000']],
     choices:[['Ordinary separate salaries assessment checked','true']],resultLabel:'Balance due (negative means overpaid)',expected:'11160'},
@@ -62,6 +66,10 @@ for(const s of scenarios)test(`${s.name} saves and reopens a sourced result`,asy
     await form.getByLabel(name,{exact:true}).fill(value);
   await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
   const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  if(s.country==='hk' && s.subject==='individual') {
+    const wrong=s.category==='employment'?'Hong Kong profits tax (2025/26)':'Hong Kong salaries tax (2025/26)';
+    await expect(calc.getByRole('option',{name:wrong,exact:true})).toHaveCount(0);
+  }
   await calc.getByRole('combobox',{name:'Applicable regime',exact:true}).selectOption(s.policy);
   for(const [name,value] of s.money)await calc.getByLabel(name,{exact:true}).fill(value);
   for(const [name,value] of s.choices)await calc.getByRole('combobox',{name,exact:true}).selectOption(value);
@@ -72,6 +80,10 @@ for(const s of scenarios)test(`${s.name} saves and reopens a sourced result`,asy
   const trailingZeros=s.expected.includes('.')?'0*':'(?:\\.0+)?';
   const expectedAmount=new RegExp(`^${s.expected.replace('.','\\.')}${trailingZeros}$`);
   await expect(amount).toHaveText(expectedAmount);
+  if(s.policy==='hk_property_2025_26') {
+    await expect(report.getByRole('region',{name:'Per-property results'})).toContainText('216000');
+    await expect(calc.getByRole('option',{name:'Hong Kong profits tax (2025/26)',exact:true})).toHaveCount(0);
+  }
   await expect(report.getByRole('link').first()).toHaveAttribute('href',/^https:\/\//);
   await open(page);
   await expect(amount).toHaveText(expectedAmount);

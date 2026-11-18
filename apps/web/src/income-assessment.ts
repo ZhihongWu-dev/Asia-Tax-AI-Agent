@@ -263,10 +263,24 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
       notice:['仅限普通公司或独资业务。须核对两级制资格、关联实体选择及排除条件；不包含合伙分配、个人入息课税或境外抵免。',
         'Ordinary corporation or sole proprietor only. Verify two-tier eligibility, connected-entity nomination and exclusions. Excludes partnerships, personal assessment and foreign credits.'],
       fields:[money('assessable_profits','核定应评税利润','Established assessable profits'),{key:'business_form',label:['业务形式','Business form'],options: company ? [['corporation',['公司','Corporation']]] : [['sole_proprietor',['独资','Sole proprietor']]]},confirm('two_tier_eligible','符合两级制资格','Eligible for two-tier rates'),ordinary,hkPrepaid]};
-    return company ? [profits] : [{id:'hk_salaries_2025_26',label:['香港薪俸税（2025/26）','Hong Kong salaries tax (2025/26)'],
+    if (company) return [profits];
+    if (input.incomes.every(i=>i.category==='rental' && i.source_jurisdiction==='hk')) return [{
+      id:'hk_property_2025_26',label:['香港物业税（2025/26）','Hong Kong property tax (2025/26)'],
+      notice:['每条租金收入对应一项单独拥有的香港物业，收入须包括应收租金、收回坏账及本期租赁溢价等应计代价。保存的扣除总额只填不可追回租金和业主已付差饷；20%法定扣除自动计算。差饷不含地租；不另扣管理费、修缮费或按揭利息。不含共同拥有、物业经营业务、个人入息课税、往年坏账追溯减免或下期暂缴税。',
+        'Each rental entry represents one solely owned Hong Kong property. Include receivable rent, recovered bad debts and allocated lease premiums in saved gross consideration. Saved deductions equal irrecoverable rent plus owner-paid rates; the 20% allowance is automatic. Rates exclude government rent; management, repair costs and mortgage interest are not additional deductions. Excludes joint ownership, property business, personal assessment, prior-year bad-debt relief and next-year provisional tax.'],
+      fields:[...input.incomes.flatMap((_item,n)=>[
+        money(`hk_property_${n}_irrecoverable_rent`,`物业${n+1}：不可追回租金（扣除押金抵销）`,`Property ${n+1}: irrecoverable rent after deposit offset`),
+        money(`hk_property_${n}_owner_rates_paid`,`物业${n+1}：业主承担且已付差饷`,`Property ${n+1}: rates borne and paid by owner`)]),
+        confirm('sole_ownership_and_separate_assessment_verified','已核实单独拥有及独立物业税评税','Sole ownership and separate property assessment verified'),
+        confirm('consideration_and_deductions_verified','已核实完整应计租赁代价及扣除证据','Complete rental consideration and deduction evidence verified'),hkPrepaid]}];
+    if (input.incomes.some(i=>i.category==='rental')) return [];
+    const salaries: IncomePolicy = {id:'hk_salaries_2025_26',label:['香港薪俸税（2025/26）','Hong Kong salaries tax (2025/26)'],
       notice:['仅限单独评税的薪俸所得，不比较合并或个人入息课税。已缴税额须归属本期最终评税，不含下期暂缴税。',
         'Separate salaries assessment only; joint and personal assessment are not compared. Prepayments must belong to this final assessment, not the next provisional assessment.'],
-      fields:[money('net_income','扣除后、免税额前的入息净额','Net income before allowances'),money('allowed_allowances','核定免税额','Allowed allowances'),hkPrepaid,confirm('ordinary_separate_assessment_confirmed','已核对普通单独薪俸评税适用条件','Ordinary separate salaries assessment checked')]},profits];
+      fields:[money('net_income','扣除后、免税额前的入息净额','Net income before allowances'),money('allowed_allowances','核定免税额','Allowed allowances'),hkPrepaid,confirm('ordinary_separate_assessment_confirmed','已核对普通单独薪俸评税适用条件','Ordinary separate salaries assessment checked')]};
+    if (input.incomes.every(i=>i.category==='employment')) return [salaries];
+    if (input.incomes.some(i=>i.category==='employment')) return [];
+    return [profits];
   }
   if (input.jurisdiction === 'ae' && period === '2026-01-01/2026-12-31') {
     return [{id:'ae_ordinary_2026',label:['阿联酋普通企业税（2026）','UAE ordinary corporate tax (2026)'],
@@ -351,6 +365,7 @@ export const resultLabels: Record<string, Label> = {
   personal_reliefs_allowed:['限额后个人减免','Personal reliefs after cap'], personal_reliefs_disallowed_by_cap:['超过总限额的减免','Reliefs exceeding overall cap'],
   parenthood_rebate_used:['本期使用PTR','PTR used this year'], parenthood_rebate_carried_forward:['结转PTR余额（不退款）','PTR carried forward (not refundable)'],
   final_tax:['本期税额','Tax for this assessment'], net_tax:['减免后税额','Tax after relief'],balance_due:['尚应缴金额（负数表示多缴）','Balance due (negative means overpaid)'],
+  net_assessable_value:['应评税净值','Net assessable value'],statutory_allowance:['法定扣除','Statutory allowance'],
   taxable_income:['应纳税所得额','Taxable income'],chargeable_income:['应课税收入','Chargeable income'],
   tax_reduction:['税额减免','Tax reduction'],cit_rebate:['企业税回扣','Corporate tax rebate'],cash_grant_separate:['单独列示的现金补助','Cash grant, separate from tax'],
   prepaid_tax:['本期预缴税额','Prepaid tax for this period'],prepaid_final_tax:['本期最终评税已缴税额','Prepaid final tax'],

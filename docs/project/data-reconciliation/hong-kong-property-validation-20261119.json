@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only; no cloud upload, remote push or main merge.",
+  "change": "Separate Hong Kong rental property assessment with per-income property deductions, automatic statutory allowance, saved-fact reconciliation, sourced result and reopen flow. Salary and rental schedules cannot be silently assessed as sole-proprietor profits.",
+  "checks": {
+    "income_tax_suite": {
+      "passed": 1433,
+      "seconds": 29.4,
+      "exit_code": 0
+    },
+    "hong_kong_browser": {
+      "passed": 4,
+      "seconds": 42.4,
+      "exit_code": 0
+    },
+    "typescript": "tsc -b exit 0",
+    "diff_check": "exit 0"
+  },
+  "reference": {
+    "url": "https://www.ird.gov.hk/eng/tax/bir57se_notes.htm",
+    "archived_file": "database/raw/hk/hk.ird.property-notes-20261119.html",
+    "sha256": "92f300993661847ab8a6d9ea12f8d14df8bd6240196294764638f0726c61bbb2"
+  },
+  "github_research": {
+    "repository": "https://github.com/openfisca/country-template",
+    "license": "AGPL-3.0",
+    "use": "Design reference for separation of policy formulas and regression tests; no copied code or dependency adoption.",
+    "review": "Issue page shows November 17, 2026 bootstrap problem and open Windows rename issue; security page has no published advisories and no SECURITY.md. Changelog inspected, subsequent date lookup timed out; no claim of audited dependency safety."
+  },
+  "limits": [
+    "Property entries require confirmed sole ownership and complete consideration; joint ownership, property business and personal assessment remain separate work.",
+    "Prior-year irrecoverable-rent relief is not calculated. Excess current-property deductions are rejected rather than offset against unrelated properties.",
+    "Property result excludes next-year provisional tax and is before assessment rounding.",
+    "Browser uses fixture authentication; actual business and real-account acceptance remain unproven.",
+    "The earlier 22-case availability inventory is historical and does not cover this newly added rental policy."
+  ],
+  "source_sha256": {
+    "packages/contracts/income_assessment.py": "2f66a154740e26220992aa7511b1812ef4a2604c0faa9a1e8f071483764d4073",
+    "packages/income_tax/assessment.py": "b4ffe829a62cb9a550413ce1a098924fbb9ad7db58f375ccc3dce731d500816f",
+    "packages/income_tax/hong_kong_property.py": "ab41fce2cea9a497eec3ec987bba799d3ca5815a2419b5e03593c48bcd8bc984",
+    "packages/income_tax/hk_2025_26_sources.json": "fbe1bd203a36412f0d24071e067509cc6e91178d2e96b402281390fa49301a4f",
+    "apps/web/src/income-assessment.ts": "5dc942b97deb5ca5f7c2a3d49783a84de37ad46c1f2e2e061cae7d5daad61bc4",
+    "apps/web/src/components/IncomeTaxAssessment.tsx": "2454a79ba74bb37ba4f3543ee67d98813eb295eb2b0ec2f1573aa449a4dd97c9",
+    "tests/income_tax/test_hong_kong_property.py": "e752841cb5a2d300d57e949b2e9412bec42412d915561b9cf7fa23a71883a60e",
+    "apps/web/tests/income-tax-coverage.spec.ts": "475be03da1ac4d3640737c0a06ad08c9550820899b8595a206259b15c0b6bff5"
+  }
+}

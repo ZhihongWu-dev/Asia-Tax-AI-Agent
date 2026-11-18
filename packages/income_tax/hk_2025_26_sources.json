@@ -21,6 +21,13 @@
       "file": "database/raw/hk/hk.ird.tax-concessions-enacted-2026.html",
       "sha256": "1e32d17b3a5e74b793fa12ead7c74a4937ed64d84a26d7b1fc498d060b87fc56",
       "title": "Passage of 2026 tax concessions legislation"
+    },
+    {
+      "doc_id": "hk.ird.property-notes-20261119",
+      "url": "https://www.ird.gov.hk/eng/tax/bir57se_notes.htm",
+      "file": "database/raw/hk/hk.ird.property-notes-20261119.html",
+      "sha256": "92f300993661847ab8a6d9ea12f8d14df8bd6240196294764638f0726c61bbb2",
+      "title": "Property tax return notes: rental consideration, deductions and 2025/26 rate"
     }
   ]
 }

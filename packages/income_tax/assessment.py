@@ -8,6 +8,7 @@ from . import korea_company
 from . import vietnam_business, vietnam_rental
 from . import korea_salary
 from . import china_business
+from . import hong_kong_property
 from . import singapore_employment
 from . import thailand_dividends
 from . import malaysia_dividends
@@ -177,7 +178,13 @@ def calculate(case: IncomeTaxCase, basis):
     elif policy == 'sg_resident_ya2026':
         result = singapore.resident_individual_tax(assessment_year=2026, **args)
     elif policy == 'hk_profits_2025_26':
+        if any(i.category == 'employment' for i in case.incomes):
+            raise ValueError('Profits policy cannot cover saved employment income; separate the tax schedules')
+        if case.subject == 'individual' and any(i.category == 'rental' for i in case.incomes):
+            raise ValueError('Individual rental income requires property assessment or verified business classification')
         result = hong_kong.profits_tax(assessment_year='2025/26', **args)
+    elif policy == 'hk_property_2025_26':
+        result = hong_kong_property.property_tax(case, assessment_year='2025/26', **args)
     elif policy == 'hk_salaries_2025_26':
         if any(i.category != 'employment' for i in case.incomes):
             raise ValueError('Salaries policy cannot cover other saved income categories')

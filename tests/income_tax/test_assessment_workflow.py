@@ -140,3 +140,20 @@ def test_runs_survive_restart_and_edit_with_owner_and_retry_boundaries(tmp_path)
         assert alice.get(path).json()['revision']==3
         assert 'income_tax_runs' not in alice.get(f'/api/cases/{case_id}').json()
     service.store.engine.dispose()
+
+
+@pytest.mark.parametrize('mixed', [False, True])
+def test_hong_kong_profits_does_not_absorb_employment_income(mixed):
+    data = facts('hk', 'individual')
+    if mixed:
+        data['incomes'].append(dict(category='business', source_jurisdiction='hk',
+            gross_amount='500000', description='Separate sole proprietor receipts'))
+    basis = ADAPTER.validate_python(dict(policy='hk_profits_2025_26',
+        assessable_profits='1000000', business_form='sole_proprietor',
+        two_tier_eligible=True, ordinary_regime_confirmed=True,
+        prepaid_final_tax='0', **COMMON))
+    with pytest.raises(ValueError, match='employment'):
+        calculate(IncomeTaxCase(**data), basis)
+    data['incomes'] = [dict(category='business', source_jurisdiction='hk',
+                           gross_amount='1000000', description='Sole proprietor business')]
+    assert Decimal(calculate(IncomeTaxCase(**data), basis)['final_tax']) == 72000

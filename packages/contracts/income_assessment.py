@@ -101,6 +101,21 @@ class HKSalaries(Basis):
     ordinary_separate_assessment_confirmed: StrictBool
 
 
+class HKPropertyLine(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    income_index: Annotated[StrictInt, Field(ge=0)]
+    irrecoverable_rent: Money
+    owner_rates_paid: Money
+
+
+class HKProperty(Basis):
+    policy: Literal['hk_property_2025_26']
+    properties: list[HKPropertyLine] = Field(min_length=1, max_length=200)
+    sole_ownership_and_separate_assessment_verified: StrictBool
+    consideration_and_deductions_verified: StrictBool
+    prepaid_final_tax: Money
+
+
 class AEOrdinary(Basis):
     policy: Literal['ae_ordinary_2026']
     taxable_income: Money
@@ -473,5 +488,5 @@ class KRSalary(Basis):
 
 
 Assessment = Annotated[CNCompany | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
-                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness | VNRental,
+                       HKProfits | HKSalaries | HKProperty | AEOrdinary | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness | VNRental,
                        Field(discriminator='policy')]

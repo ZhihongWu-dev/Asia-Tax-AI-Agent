@@ -44,6 +44,12 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
         basis[field.key] = months;
       } else basis[field.key] = field.boolean ? values[field.key] === 'true' : field.integer ? Number(values[field.key]) : values[field.key];
     }
+    if (policy.id==='hk_property_2025_26') {
+      basis.properties=current.income_tax!.incomes.map((_item,n)=>({income_index:n,
+        irrecoverable_rent:basis[`hk_property_${n}_irrecoverable_rent`],
+        owner_rates_paid:basis[`hk_property_${n}_owner_rates_paid`]}));
+      for (const key of Object.keys(basis)) if (key.startsWith('hk_property_')) delete basis[key];
+    }
     if (policy.id==='my_individual_2026' && current.income_tax!.residency==='resident') {
       basis.workpaper={sources:current.income_tax!.incomes.map((_item,n)=>({
         income_index:n, additions:basis[`my_source_${n}_additions`],
@@ -145,6 +151,20 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       </>}
       {result.result.tax_scope==='national_income_and_reconstruction_tax_only'&&<p>{say('此结果仅为日本2026年度国家所得税及复兴特别所得税，不含住民税、事业税。扣除予定纳税通知金额不代表该税款已缴清，欠税另行处理。','This result covers Japan 2026 national income and reconstruction tax only, excluding local inhabitant and enterprise taxes. Deducting notified estimated tax does not mean it has been paid; arrears remain separate.')}</p>}
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{key==='balance_due'&&result.result.tax_scope==='national_income_and_reconstruction_tax_only'?say('本次国家税应补／退额（予定纳税欠税另计）','National return balance (estimated-tax arrears separate)'):label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
+      {result.result.stage==='separate_property_before_assessment_rounding' && Array.isArray(result.result.properties) && <section aria-label={say('逐项物业结果','Per-property results')}>
+        <h5>{say('逐项物业结果','Per-property results')}</h5>
+        {(result.result.properties as Record<string,unknown>[]).map(item=><section key={String(item.income_index)}>
+          <h6>{say('物业','Property')} {Number(item.income_index)+1}</h6>
+          <dl>{([
+            ['gross_consideration',say('租赁总代价','Gross rental consideration')],
+            ['irrecoverable_rent',say('不可追回租金','Irrecoverable rent')],
+            ['owner_rates_paid',say('业主已付差饷','Owner rates paid')],
+            ['statutory_allowance',say('20%法定扣除','20% statutory allowance')],
+            ['net_assessable_value',say('应评税净值','Net assessable value')],
+            ['property_tax',say('物业税额','Property tax')],
+          ] as const).map(([key,label])=><div key={key}><dt>{label}</dt><dd>{String(item[key])}</dd></div>)}</dl>
+        </section>)}
+      </section>}
       {Array.isArray(result.result.transfers) && <section aria-label={say('逐笔交易结果','Per-transfer results')}>
         <h5>{say('逐笔交易结果','Per-transfer results')}</h5>
         {(result.result.transfers as Record<string,unknown>[]).map(item=><section key={String(item.income_index)} aria-label={`${say('交易','Transfer')} ${Number(item.income_index)+1}`}>
