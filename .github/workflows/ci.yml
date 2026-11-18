@@ -96,6 +96,36 @@ jobs:
       - name: Test source extraction and catalog tools
         run: python -m pytest tests/database -q
 
+  catalog-transactions:
+    name: Catalog PostgreSQL transaction checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: catalog_test
+          POSTGRES_PASSWORD: catalog_test
+          POSTGRES_DB: catalog_executor_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U catalog_test -d catalog_executor_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    env:
+      CATALOG_EXECUTOR_TEST_DATABASE_URL: postgresql+psycopg://catalog_test:catalog_test@localhost:5432/catalog_executor_test
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.11'
+      - name: Install project
+        run: python -m pip install -e ".[dev]"
+      - name: Verify atomic rollback and competing-writer exclusion
+        run: python -m pytest tests/integration/test_catalog_executor.py -m integration -q
+
   migrations:
     name: Fresh-database migrations
     runs-on: ubuntu-24.04
