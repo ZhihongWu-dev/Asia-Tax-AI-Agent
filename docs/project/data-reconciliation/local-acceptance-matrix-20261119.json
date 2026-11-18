@@ -24,7 +24,7 @@
         "local-domain-citation-filter-fix-20261119.json",
         "tokyo-full-browser-validation-20261119.json"
       ],
-      "limits": "121 browser tests, complete v5 golden/checker suite and offline backend regression. Real hosted authentication/provider end-to-end acceptance is not established. Original/v4 comparison jobs remain live."
+      "limits": "Offline backend regression and complete v5 golden/checker suite passed. Full126-case browser baseline plus later targeted transfer/rental cases are separate runs, not one current full suite. Hosted authentication/provider end-to-end acceptance is not established. Original/v4 comparison processes were verified live with increasing CPU; no cloud deployment is authorized."
     },
     {
       "requirement": "Corporate and personal income tax across all 11 dividend jurisdictions",
@@ -70,9 +70,10 @@
         "china-personal-foreign-ui-validation-20261119.json",
         "china-personal-transfer-api-20261119.json",
         "china-personal-transfer-ui-validation-20261119.json",
-        "china-personal-transfer-report-validation-20261119.json"
+        "china-personal-transfer-report-validation-20261119.json",
+        "china-personal-rental-research-20261119.md"
       ],
-      "limits": "Current frontend policy selection at7ad30f6 offers an assessment for all22 representative corporate/personal inputs across11jurisdictions. The complete122-case browser run covers representative workflows. Neither evidence establishes every income type, residency, special regime or filing obligation."
+      "limits": "All22 representative corporate/personal selections across11jurisdictions were previously verified. Full126-case browser baseline predates transfers/rentals; latest3-case browser regression at0c541cd covers plain personal foreign income, transfers and ordinary20percent rental including save/reopen/export. Neither evidence establishes every income type, residency, special regime or filing obligation."
     },
     {
       "requirement": "Preserve cases, ownership, calculations and reports across retries and restarts",
@@ -81,9 +82,10 @@
         "assessment-upgrade-replay-20261119.json",
         "income-report-export-20261119.json",
         "local-cross-module-regression-20261119.json",
-        "japan-tokyo-report-validation-20261119.json"
+        "japan-tokyo-report-validation-20261119.json",
+        "china-personal-rental-research-20261119.md"
       ],
-      "limits": "SQLite/fixture-auth and prior isolated PostgreSQL storage evidence do not establish real user sign-in acceptance."
+      "limits": "Latest rental SQLite restart/exact retrieval/bilingual export and11 upgrade replay cases passed, including omitted/empty rentals and transfers in historical personal requests. Fixture-auth and prior PostgreSQL evidence do not establish real sign-in acceptance."
     },
     {
       "requirement": "Source-version traceability for every substantive calculation",
@@ -103,9 +105,10 @@
         "nested-income-source-audit-20261119.json",
         "exact-citation-lookup-validation-20261119.json",
         "income-result-source-audit-current-20261119.json",
-        "income-source-audit-personal-foreign-20261119.json"
+        "income-source-audit-personal-foreign-20261119.json",
+        "income-source-audit-rental-20261119.json"
       ],
-      "limits": "Current recursive audit captured153 successful calculations across35 policies and verified114 distinct source dictionaries against local originals. Unexecuted variants, standalone helper outputs, substantive legal completeness and actual business acceptance remain unproven."
+      "limits": "Latest recursive audit at runtime0c541cd captured162 successful calculations across35 policies and verified116 distinct source records against local originals;1813 income/report tests passed. Unexecuted variants, substantive legal completeness and actual business acceptance remain unproven."
     },
     {
       "requirement": "Repeated validation until actual business requirements are met",
@@ -181,7 +184,8 @@
     "china_personal_rental_assessment": "67 focused tests passed in8.22s. Twelve-month rental papers reconcile saved annual gross and deductions; ordinary20percent monthly tax included in country foreign-credit cap. Historical replay passed. Rental API persistence acceptance, UI and readable reporting pending; business completeness unproven.",
     "china_personal_rental_persistence_reports": "69 focused tests passed in6.70s. Rental API save/restart/exact retrieval, bilingual readable12-month reports, source hashes and invalid recalculation state preservation verified. Frontend entry/browser and broader business coverage remain incomplete.",
     "china_personal_rental_ui": "TypeScript passed;3 browser cases passed in1.1m (plain, transfers, rental). Rental12-month entry, save, cap11152, tax8560, closing repairs700, total balance7040, report download and reopen verified. Wider rental regimes and overall business acceptance remain incomplete.",
-    "china_personal_rental_full_regression": "Runtime0c541cd:1813 income/report cases passed in50.74s;162 successful calls across35 policies,116 distinct source records,0 unresolved. Followup strengthened historical no-rentals replay:11 passed in7.25s. Tests/source integrity do not establish complete legal/business coverage."
+    "china_personal_rental_full_regression": "Runtime0c541cd:1813 income/report cases passed in50.74s;162 successful calls across35 policies,116 distinct source records,0 unresolved. Followup strengthened historical no-rentals replay:11 passed in7.25s. Tests/source integrity do not establish complete legal/business coverage.",
+    "rental_production_build": "At11cb071 npm run build passed:TypeScript and Vite2279 modules,3.62s;10 local artifacts hashed. Main JS832.65kB warning remains. No deployment."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

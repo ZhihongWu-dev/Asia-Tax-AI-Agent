@@ -23,5 +23,15 @@
   ],
   "decision": "Do not infer an ordering from return row order or silently activate foreign-income full settlement. Continue provision-specific official guidance research; preserve this as an explicit business acceptance gap.",
   "search_scope": "Official government/tax/ministry queries combining398/2026 and foreign tax credits; no directly resolving guidance found in this bounded search.",
-  "delivery": "Local only"
+  "delivery": "Local only",
+  "followup_20261119": {
+    "queries": [
+      "398/2026 thuế nước ngoài",
+      "398/2026/NĐ-CP giảm thuế",
+      "site.mof.gov.vn giảm thuế thu nhập doanh nghiệp đã nộp nước ngoài thứ tự"
+    ],
+    "official_publication": "https://chinhphu.vn/?docid=220138&pageid=27160&typegroupid=4",
+    "official_text": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-dinh-398-2026-nd-cp-ve-giam-thue-thu-nhap-ca-nhan-thue-thu-nhap-doanh-nghiep-doi-voi-ca-nhan-va-doanh-nghiep-119261031044659307.htm",
+    "result": "Official decree publication reconfirmed. Search results did not establish annual-relief/foreign-credit order. This is not evidence that no guidance exists; combined assessment remains unresolved."
+  }
 }
