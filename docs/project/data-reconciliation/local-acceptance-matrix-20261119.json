@@ -87,9 +87,10 @@
         "china-small-company-source-20261119.json",
         "source-url-reconciliation-20261119.json",
         "vietnam-treaty-source-snapshots-20261119.json",
-        "assessment-result-source-audit-20261119.json"
+        "assessment-result-source-audit-20261119.json",
+        "nested-income-source-audit-20261119.json"
       ],
-      "limits": "Current runtime audit executed all33 registered assessment policies and verified116 top-level source records against local original bytes.22 missing file pointers repaired across Korean, Malaysian and Vietnamese sources. This proves tested top-level result citations, not every nested helper citation, every policy variant, legal completeness or substantive business acceptance. Earlier archival and URL lookup failures described in historical evidence have been addressed for these tested references."
+      "limits": "Current recursive audit captured137 successful calculations across33 policies and verified109 distinct source dictionaries, including nested helper references, against local originals. Historical raw/ paths use database-relative resolution. Unexecuted variants, standalone helper outputs, substantive legal completeness and actual business acceptance remain unproven."
     },
     {
       "requirement": "Repeated validation until actual business requirements are met",
@@ -97,7 +98,8 @@
       "evidence": [
         "local-cross-module-regression-20261119.json",
         "income-business-scope-audit-20261119.json",
-        "japan-local-source-review-20261119.json"
+        "japan-local-source-review-20261119.json",
+        "vietnam-relief-credit-order-review-20261119.json"
       ],
       "limits": "Business cases/expected outcomes requested from user and pending. Known gaps include Japanese local taxes outside the implemented full-year ordinary Tokyo 23-ward company scope, mixed-income and special-regime coverage, and Vietnam combined foreign-credit/annual-relief ordering. Do not replace these gates with test counts."
     }
@@ -130,7 +132,8 @@
     "japan_inhabitant_component": "74 Japan local component tests and1634 income/report tests passed; full workflow still pending",
     "japan_tokyo_api": "1651 income/report tests plus19 final focused cases passed; Tokyo scoped backend workpaper saved/restarted/exported, UI pending",
     "japan_tokyo_ui": "1653 income/report cases passed at f979c2b; TypeScript and 3 targeted browser cases passed. Scoped Tokyo UI enabled; wider Japan local tax coverage remains incomplete.",
-    "japan_tokyo_report": "29 focused backend/report tests, TypeScript and browser download/duplicate-ward/toggle scenario passed."
+    "japan_tokyo_report": "29 focused backend/report tests, TypeScript and browser download/duplicate-ward/toggle scenario passed.",
+    "nested_sources": "1653 income/report tests passed;109 distinct source records verified recursively across33 observed policies;0 unresolved."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

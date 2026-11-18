@@ -1,0 +1,27 @@
+{
+  "status": "composition_still_unresolved",
+  "reviewed_source": {
+    "file": "database/raw/vn/vn.decree398.2026.vi.pdf",
+    "sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
+    "physical_pages": [
+      3,
+      4
+    ],
+    "method": "Rendered original pages visually reviewed"
+  },
+  "confirmed": [
+    "Article3(2) covers all annual-period enterprise income, expressly including CIT Law Article18(3) income; do not treat ordinary incentive exclusions as automatic exclusions from Decree398 annual relief.",
+    "The annual reduction follows existing tax incentives. Article3(3) revenue includes sales/services before deductions, financial revenue and other income."
+  ],
+  "unresolved": [
+    "These provisions do not expressly resolve allocation of annual reduction to foreign income for treaty credit caps, or distinguish the possible credit-before-reduction and reduction-before-credit compositions.",
+    "Current return C17 subtraction formula and annex credit columns reviewed in earlier evidence do not independently prove the combined legal sequence."
+  ],
+  "runtime_verified": [
+    "packages/income_tax/vietnam.py remains an ordinary domestic calculator",
+    "packages/income_tax/vietnam_credit_case.py remains a separate foreign-credit workpaper"
+  ],
+  "decision": "Do not infer an ordering from return row order or silently activate foreign-income full settlement. Continue provision-specific official guidance research; preserve this as an explicit business acceptance gap.",
+  "search_scope": "Official government/tax/ministry queries combining398/2026 and foreign tax credits; no directly resolving guidance found in this bounded search.",
+  "delivery": "Local only"
+}
