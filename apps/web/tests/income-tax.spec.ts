@@ -1,4 +1,4 @@
-import {transferAmounts,transferChecks} from '../src/china-personal-foreign-assessment';
+import {transferAmounts,transferChecks,rentalAmounts,rentalChecks} from '../src/china-personal-foreign-assessment';
 import {cnForeignChecks,cnForeignAmounts} from '../src/china-foreign-assessment';
 import {tokyoAmounts,tokyoChecks} from '../src/japan-tokyo-assessment';
 import { test, expect } from '@playwright/test';
@@ -1010,12 +1010,13 @@ for(const method of ['per_country','pooled','pooled_with_prior_country'])test(`C
   await expect(page.getByRole('region',{name:'Foreign credit details',exact:true})).toContainText('2021');
 });
 
-for(const withTransfers of [false,true])test(`China personal foreign mixed income transfers=${withTransfers} saves reopens and exports credit history`,async({page})=>{
-  test.setTimeout(60000);
+for(const variant of ['plain','transfers','rental'])test(`China personal foreign mixed income ${variant} saves reopens and exports credit history`,async({page})=>{
+  const withTransfers=variant==='transfers',withRentals=variant==='rental';
+  test.setTimeout(120000);
   const form=await openIncome(page);
   await form.getByRole('combobox',{name:'Taxpayer',exact:true}).selectOption('individual');
   await form.getByRole('combobox',{name:'Tax residency',exact:true}).selectOption('resident');
-  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Claimed deductions (blank if unknown)',withTransfers?'2600':'0'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Claimed deductions (blank if unknown)',withRentals?'6400':withTransfers?'2600':'0'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
   for(let i=0;i<3;i++)await form.getByRole('button',{name:'Add income',exact:true}).click();
   for(const [n,category,country,gross,tax] of [[0,'employment','cn','60000','0'],[1,'employment','sg','40000','1500'],[2,'interest','sg','10000','500'],[3,'business','hk','30000','500']] as const){
     const row=form.getByRole('group',{name:`Income ${n+1}`,exact:true});
@@ -1029,6 +1030,13 @@ for(const withTransfers of [false,true])test(`China personal foreign mixed incom
     await row.getByRole('combobox',{name:'Income category',exact:true}).selectOption('capital_gain');
     await row.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption('sg');
     for(const [name,value] of [['Gross income','1000'],['Foreign tax paid (blank if unknown)','0'],['Income description','One ordinary sale with verified source and gross proceeds']])await row.getByLabel(name,{exact:true}).fill(value);
+  }
+  if(withRentals){
+    await form.getByRole('button',{name:'Add income',exact:true}).click();
+    const row=form.getByRole('group',{name:'Income 5',exact:true});
+    await row.getByRole('combobox',{name:'Income category',exact:true}).selectOption('rental');
+    await row.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption('sg');
+    for(const [name,value] of [['Gross income','60000'],['Foreign tax paid (blank if unknown)','0'],['Income description','One ordinary non-housing rental property']])await row.getByLabel(name,{exact:true}).fill(value);
   }
   await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
   await expect(form.getByRole('status')).toHaveText('Income-tax details saved.');
@@ -1049,13 +1057,24 @@ for(const withTransfers of [false,true])test(`China personal foreign mixed incom
     for(const [key,,label] of transferAmounts)await calc.getByLabel(`Transfer income ${n+1}: ${label}`,{exact:true}).fill(key==='original_cost'?(n===4?'400':'2000'):key==='reasonable_transfer_expenses'?'100':'0');
     for(const [,,label] of transferChecks)await calc.getByRole('combobox',{name:`Transfer income ${n+1}: ${label}`,exact:true}).selectOption('true');
   }
+  if(withRentals){
+    await calc.getByLabel('Rental income 5: Property identifier',{exact:true}).fill('sg-property-1');
+    await calc.getByLabel('Rental income 5: Opening eligible repairs',{exact:true}).fill('300');
+    for(let month=1;month<=12;month++)for(const [key,,label] of rentalAmounts){
+      const value=key==='gross_income'?'5000':key==='eligible_taxes_and_fees'||key==='eligible_sublease_rent'?'200':key==='eligible_new_repairs'&&month===1?'2000':key==='established_repair_deduction'&&month<=2?'800':'0';
+      await calc.getByLabel(`Rental income 5, month ${month}: ${label}`,{exact:true}).fill(value);
+    }
+    for(const [,,label] of rentalChecks)await calc.getByRole('combobox',{name:`Rental income 5: ${label}`,exact:true}).selectOption('true');
+  }
   await calc.getByLabel('Prepaid tax for this period',{exact:true}).fill('3000');
   await calc.getByLabel('Tax-basis adjustments and eligibility explanation',{exact:true}).fill('Verified source allocations, ordinary category taxes and historical paid-tax records.');
   await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
   const result=calc.getByRole('article',{name:'Saved calculation result'});
-  await expect(result).toContainText('-1112');
+  await expect(result).toContainText(withRentals?'7040':'-1112');
   const detail=result.getByRole('region',{name:'Personal foreign credit details',exact:true});
-  await expect(detail).toContainText(withTransfers?'2692':'2592');await expect(detail).toContainText(withTransfers?'308':'408');
+  await expect(detail).toContainText(withRentals?'11152':withTransfers?'2692':'2592');
+  if(!withRentals)await expect(detail).toContainText(withTransfers?'308':'408');
+  if(withRentals){const rental=result.getByRole('region',{name:'Monthly property rental details',exact:true});await expect(rental).toContainText('8560');await expect(rental).toContainText('700');await rental.getByText('Month 1',{exact:true}).click();await expect(rental).toContainText('3000');}
   if(withTransfers){
     const transfers=result.getByRole('region',{name:'Property transfer details',exact:true});
     await expect(transfers).toContainText('1100');
@@ -1068,5 +1087,6 @@ for(const withTransfers of [false,true])test(`China personal foreign mixed incom
   expect(record).toContain('Personal foreign credit details');
   expect(record).toContain('not a B-form filing amount');
   if(withTransfers){expect(record).toContain('Property transfer transaction details');expect(record).toContain('Unoffset loss');}
-  await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('-1112');
+  if(withRentals){expect(record).toContain('Monthly property rental details');expect(record).toContain('Closing repair balance');}
+  await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(withRentals?'7040':'-1112');
 });

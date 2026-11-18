@@ -137,3 +137,23 @@ snapshots without rentals retain their prior wording. Markdown escaping is
 preserved.69 focused assessment/component/report tests passed in6.70s.
 Frontend entry and browser acceptance are still pending. Full business coverage
 and actual-case acceptance remain incomplete.
+
+
+## Frontend and browser integration
+
+The existing personal foreign policy now accepts rental facts, presents one
+property identifier/opening repair balance and12 months of gross/deductions,
+and sends the typed annual workpaper to the existing saved-run endpoint.
+It requires explicit zeros and eligibility confirmations. The result exposes
+monthly detail, annual rental tax and closing repair balance; full exports
+retain the bilingual monthly tables. Rental deductions are explained separately
+from statutory expenses and repairs incurred.
+
+TypeScript passed. Three browser cases passed in1.1m: existing plain income,
+existing transfers, and new rental. The rental case enters all12 months, saves,
+verifies country cap11152, rental tax8560, year-end repairs700 and total balance
+7040, downloads the readable report and reopens the saved result. Artifacts:
+`integration-audit-20261116/china-personal-rental-browser-20261119`.
+This proves the scoped ordinary20percent workflow, not housing concessions,
+negative-income months, automatic advance-rent allocation or full business
+coverage across all jurisdictions. The overall goal remains incomplete.
