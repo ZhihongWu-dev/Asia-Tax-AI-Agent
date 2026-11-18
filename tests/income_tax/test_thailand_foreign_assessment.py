@@ -1,4 +1,5 @@
 from decimal import Decimal
+from copy import deepcopy
 
 import pytest
 from pydantic import TypeAdapter
@@ -77,3 +78,33 @@ def test_repeating_attribution_is_not_rounded_or_rejected_between_stages():
     basis['pools'][0]['eligible_foreign_income_tax_paid']='10000'
     result=run(case,basis)
     assert Decimal(result['allowed_tax_credits']).quantize(Decimal('.01'))==Decimal('3333.33')
+
+
+def test_multi_country_multi_category_split_receipts_follow_official_formula():
+    case,basis=inputs()
+    template=deepcopy(basis['pools'][0])
+    for country,category,gross,original,paid,index in [
+        ('vn','dividend','250000','250000','75000',2),
+        ('cn','employment','200000','200000','20000',3),
+        ('cn','dividend','25000','50000','5000',4),
+    ]:
+        case['incomes'].append(dict(category=category,source_jurisdiction=country,
+            gross_amount=gross,foreign_tax_paid=paid,description='Traced foreign income for official example'))
+        pool=deepcopy(template)
+        pool.update(pool_id=f'{country}-{index}',income_index=index,total_foreign_income=original,
+                    foreign_income_tax_paid=paid,eligible_foreign_income_tax_paid=paid)
+        pool['remittances'][0].update(income_index=index,remitted_income=gross)
+        if index==4:
+            pool['remittances'][0]['remitted_income']='10000'
+            second=deepcopy(pool['remittances'][0]);second['remitted_income']='15000'
+            second['remittance_date']='2026-07-01';pool['remittances'].append(second)
+        basis['pools'].append(pool)
+    basis['net_taxable_income']='1815000'
+    result=run(case,basis)
+    assert Decimal(result['gross_tax'])==318750
+    countries={r['country']:r for r in result['foreign_credit']['countries']}
+    assert Decimal(countries['vn']['remitted_assessable_income'])==750000
+    assert Decimal(countries['cn']['eligible_attributable_tax'])==22500
+    assert Decimal(result['allowed_tax_credits']).quantize(Decimal('.01'))==Decimal('143544.30')
+    assert Decimal(result['final_tax']).quantize(Decimal('.01'))==Decimal('175205.70')
+    assert len(result['foreign_income_reconciliation']['pools'])==4

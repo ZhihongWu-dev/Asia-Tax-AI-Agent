@@ -11,10 +11,10 @@
   ],
   "open_issue": "Grouping clarified by Thai Part3 and multi-income example: retain income-type detail for source-tax attribution, then country totals for limitation. Treaty-specific entitlement and source-rate caps remain separate validation.",
   "next_steps": [
-    "Reconcile original earnings and remittance amounts in saved-case adapter",
-    "Verify DTA entitlement and source-country tax caps",
-    "Resolve credit-limit grouping with Thai original guide or official calculator",
-    "Integrate calculation basis, public assessment and UI with regression cases"
+    "Complete multi-pool/multi-country browser entry acceptance",
+    "Verify FX and treaty eligibility against case-specific documents; application currently requires explicit user-confirmed basis",
+    "Capital gains, Thai domestic dividends combined with foreign income, special regimes and nonresident-year assessments need further adapters",
+    "Deploy, cloud catalog migration, original optimizer completion and final target-branch delivery remain outstanding"
   ],
   "visual_reviewed_pdf_pages": [
     18,
@@ -23,7 +23,7 @@
   ],
   "implementation": "packages/income_tax/thailand_foreign_credit.py",
   "tests": "86 passed in 1.56s: attribution, country caps, remittance classification and ordinary Thai tax regressions",
-  "publication_status": "Attribution and country-limit components implemented; saved-case eligibility, FX verification and public assessment/UI integration remain incomplete",
+  "publication_status": "Unified assessment, authenticated HTTP persistence, bilingual pool-entry UI and detailed results implemented locally; not deployed or pushed.",
   "github_reference": {
     "url": "https://github.com/openfisca/country-template",
     "use": "Country-specific explicit policy inputs and isolated calculation tests; no code copied or dependency introduced",
@@ -49,5 +49,19 @@
     "sum_of_printed_country_credits": "143504.30",
     "formula_based_total_credit_rounded_for_comparison": "143544.30",
     "decision": "Use stated formula with Decimal precision40; no rounding inside calculation. Preserve original as evidence, do not use inconsistent printed totals as golden expected values."
-  }
+  },
+  "validation": {
+    "income_tax_regression": "1225 passed before latest detailed-result and multi-country tests",
+    "http_scope": "Owner isolation, CSRF, stale revision, idempotency, invalid basis rejection, immutable history and amendment invalidation passed",
+    "latest_focused_backend": "15 passed in 5.67s including multi-country/multi-category/split-remittance assessment",
+    "frontend_build": "Passed; existing bundle-size warning remains",
+    "browser_previous": "2 passed in 28.8s:2024 inclusion/2023 exclusion, saved result reopen and official source link",
+    "browser_detailed_results": "2 passed in 30.6s: country details, pool evidence, excluded-income amount and official links"
+  },
+  "remaining_scope": [
+    "Complete multi-pool/multi-country browser entry acceptance",
+    "Verify FX and treaty eligibility against case-specific documents; application currently requires explicit user-confirmed basis",
+    "Capital gains, Thai domestic dividends combined with foreign income, special regimes and nonresident-year assessments need further adapters",
+    "Deploy, cloud catalog migration, original optimizer completion and final target-branch delivery remain outstanding"
+  ]
 }

@@ -9,6 +9,7 @@ import { koreaSalaryBasis } from '../korea-salary-assessment';
 import KoreaSalaryResult from './KoreaSalaryResult';
 import { thaiDividendBasis } from '../thailand-dividend-assessment';
 import { thaiForeignBasis } from '../thailand-foreign-assessment';
+import ThailandForeignResult from './ThailandForeignResult';
 
 export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
   current: Case; disabled: boolean; onUpdate: (doc: Case) => void;
@@ -109,6 +110,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       <h4>{say('已保存计算结果','Saved calculation result')}</h4>
       {disabled && <p>{say('此结果对应上次保存的资料，不包含当前未保存的修改。','This result uses the last saved facts and excludes unsaved changes.')}</p>}
       <p>{new Date(result.created_at).toLocaleString()} · {String(result.result.currency)}</p>
+      {result.result.stage==='resident_foreign_income_assessment_before_rounding'&&<ThailandForeignResult result={result.result} index={index} />}
       {result.result.tax_scope==='ordinary_national_and_local_corporate_income_tax'&&<KoreaCompanyResult result={result.result} index={index} />}
       {result.result.tax_scope==='ordinary_salary_employer_national_and_local_settlement'&&<KoreaSalaryResult result={result.result} index={index} />}
       {result.result.regime==='company_normal'&&<p>{say('印度普通企业税制：已比较普通税与14% MAT，采用','India ordinary company regime: compared normal tax with 14% MAT; applied ')}{result.result.mat_applies?say('MAT。','MAT.'):say('普通税。','normal tax.')}{say(' 本期不使用历史MAT抵免，也不新增MAT抵免；账面利润调整须已核定。',' No legacy MAT credit used or new MAT credit generated; book-profit adjustments must be established.')}</p>}
