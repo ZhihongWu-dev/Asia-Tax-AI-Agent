@@ -1,0 +1,19 @@
+{
+  "status": "verified",
+  "runtime_commit": "f84084b",
+  "validation": {
+    "browser_passed": 3,
+    "seconds": 56.2,
+    "exit_code": 0,
+    "typescript_exit_code": 0
+  },
+  "verified": [
+    "Duplicate prior-only countries blocked before saving a result",
+    "Removing KR prior excess resets confirmation and changes pooled payment balance from -160 to -130",
+    "Switching pooled to per-country resets confirmation and changes balance to -100, current-year expired excess30",
+    "Revised downloaded snapshot omits removed KR country and preserves per-country method",
+    "Readable foreign-credit report section present; saved result reopens"
+  ],
+  "scope": "Fixture-auth local browser/API/storage; ordinary direct-credit scenario only. No full business acceptance claim.",
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}

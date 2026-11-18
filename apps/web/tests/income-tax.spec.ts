@@ -961,6 +961,15 @@ for(const method of ['per_country','pooled','pooled_with_prior_country'])test(`C
   for(const [,,label] of cnForeignChecks)await calc.getByRole('combobox',{name:label,exact:true}).selectOption('true');
   await calc.getByLabel('Prepaid tax for this period',{exact:true}).fill('500');
   await calc.getByLabel('Tax-basis adjustments and eligibility explanation',{exact:true}).fill('Verified direct taxes, gross CNY income, all source allocations and five-year method history.');
+  if(method==='pooled_with_prior_country'){
+    await calc.getByLabel('Additional countries with prior credits only',{exact:true}).fill('2');
+    await calc.getByRole('combobox',{name:'Prior-credit country 2',exact:true}).selectOption('kr');
+    await calc.getByRole('checkbox').check();
+    await calc.getByRole('button',{name:'Calculate and save result'}).click();
+    await expect(calc.getByRole('alert')).toHaveText('Prior-credit countries must be unique and additional to saved source countries.');
+    await expect(calc.getByRole('article',{name:'Saved calculation result'})).toHaveCount(0);
+    await calc.getByLabel('Additional countries with prior credits only',{exact:true}).fill('1');
+  }
   await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
   const result=calc.getByRole('article',{name:'Saved calculation result'});
   const detail=result.getByRole('region',{name:'Foreign credit details',exact:true});
@@ -975,6 +984,27 @@ for(const method of ['per_country','pooled','pooled_with_prior_country'])test(`C
   const record=await readFile((await (await downloading).path())!,'utf8');
   expect(record).toContain('next_year_carryforward');
   expect(record).toContain('cn.cs.2017-84');
+  expect(record).toContain('Direct foreign credit details');
+  if(method==='pooled_with_prior_country'){
+    await calc.getByLabel('Additional countries with prior credits only',{exact:true}).fill('0');
+    await expect(calc.getByLabel('South Korea: Excess 1 amount',{exact:true})).toHaveCount(0);
+    await expect(calc.getByRole('checkbox')).not.toBeChecked();
+    await calc.getByRole('checkbox').check();
+    await calc.getByRole('button',{name:'Calculate and save result'}).click();
+    await expect(result).toContainText('-130');
+    await expect(detail).not.toContainText('South Korea');
+    await calc.getByRole('combobox',{name:'Established credit method',exact:true}).selectOption('per_country');
+    await expect(calc.getByRole('checkbox')).not.toBeChecked();
+    await calc.getByRole('checkbox').check();
+    await calc.getByRole('button',{name:'Calculate and save result'}).click();
+    await expect(result).toContainText('-100');
+    await expect(detail.locator('dl > div').filter({hasText:'Expires after current year'}).first().locator('dd')).toHaveText(/^30(?:\.0+)?$/);
+    const revisedDownload=page.waitForEvent('download');
+    await result.getByRole('button',{name:'Download calculation record'}).click();
+    const revised=await readFile((await (await revisedDownload).path())!,'utf8');
+    expect(revised).not.toContain('"country": "kr"');
+    expect(revised).toContain('"method": "per_country"');
+  }
   await openIncome(page);
   await expect(page.getByRole('region',{name:'Foreign credit details',exact:true})).toContainText('2021');
 });

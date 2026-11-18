@@ -150,7 +150,8 @@
     "china_foreign_direct_api": "1692 income/report tests passed; direct-credit case reconciliation, persistence/restart/export verified. UI pending; no indirect/deemed or negative-base acceptance claimed.",
     "china_foreign_direct_ui": "TypeScript and3 browser scenarios passed (47.2s): per-country, pooled, additional prior-credit-only country; saved/reopened/exported expiry and carryforward balances verified. Scoped ordinary direct credit only.",
     "china_foreign_report": "38 focused report/API tests passed in11.59s; Chinese/English per-country and pooled summaries show original years, expiry, current use and next-year carryforward.",
-    "nested_sources_current": "1696 income/report tests passed in38.69s;144 successful calculations across34 policies;111 distinct source records,0 missing files or hash mismatches. Includes China foreign direct-credit workflow."
+    "nested_sources_current": "1696 income/report tests passed in38.69s;144 successful calculations across34 policies;111 distinct source records,0 missing files or hash mismatches. Includes China foreign direct-credit workflow.",
+    "china_foreign_edits": "3 extended browser scenarios passed in56.2s and TypeScript passed. Duplicate prior countries rejected; removed country excluded from recalculation/export; method switch and renewed confirmation verified."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }
