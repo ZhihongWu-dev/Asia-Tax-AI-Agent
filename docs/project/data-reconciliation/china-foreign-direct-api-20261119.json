@@ -1,0 +1,31 @@
+{
+  "status": "backend_saved_workflow_verified_ui_pending",
+  "policy": "cn_company_foreign_direct_2026",
+  "scope": "China resident ordinary25percent company, nonnegative reconciled country bases and direct eligible paid foreign tax; calendar2026",
+  "implemented": [
+    "Country income totals derive from saved gross income before withholding",
+    "Country deductions and eligible income-loss allocations must reconcile to saved totals",
+    "Current direct eligible credit cannot exceed saved foreign tax paid; missing tax differs from explicit zero",
+    "Prior-credit-only countries allowed without inventing current income",
+    "Separate country/pooled credit limits, annual liability and prepayment balance",
+    "Existing authenticated case API preserves immutable results over storage restart and report export; invalid recalculation leaves saved case unchanged",
+    "Three original sources attached including EIT law"
+  ],
+  "validation": {
+    "focused": {
+      "passed": 39,
+      "seconds": 6.68
+    },
+    "income_and_reporting_after_final_source_change": {
+      "passed": 1692,
+      "seconds": 41.57,
+      "exit_code": 0
+    }
+  },
+  "remaining": [
+    "Bilingual frontend workpaper and result display",
+    "Browser save/reload/download validation",
+    "Indirect and deemed credit calculation, negative income pools and special rates need additional workflows; not established by this direct-credit scope"
+  ],
+  "delivery": "Local only; no cloud or main changes"
+}

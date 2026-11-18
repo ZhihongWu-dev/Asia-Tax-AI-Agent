@@ -59,7 +59,10 @@ def calculate(case: IncomeTaxCase, basis):
         cn_reconciliation = china.reconcile_company_basis(case,
             taxable_income=basis.taxable_income,
             non_taxable_income=args.pop('non_taxable_income'), exempt_income=args.pop('exempt_income'))
-    if policy in ('in_personal_new_ty2026_27','in_personal_old_ty2026_27','in_company_section200_ty2026_27','in_company_normal_ty2026_27'):
+    if policy=='cn_company_foreign_direct_2026':
+        from .china_foreign_assessment import assess
+        result=assess(case,basis.workpaper,basis.prepaid_tax)
+    elif policy in ('in_personal_new_ty2026_27','in_personal_old_ty2026_27','in_company_section200_ty2026_27','in_company_normal_ty2026_27'):
         settlement_requested=args.pop('settlement_requested')
         settlement={key:args.pop(key) for key in ('tds_tcs_credit','advance_tax_paid',
             'self_assessment_paid','total_interest_due','total_fee_due','settlement_verified')}

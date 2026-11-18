@@ -62,7 +62,8 @@
         "japan-tokyo-api-workpaper-20261119.json",
         "japan-tokyo-ui-validation-20261119.json",
         "current-income-workflow-availability-20261119.json",
-        "china-foreign-credit-component-20261119.json"
+        "china-foreign-credit-component-20261119.json",
+        "china-foreign-direct-api-20261119.json"
       ],
       "limits": "Current frontend policy selection at7ad30f6 offers an assessment for all22 representative corporate/personal inputs across11jurisdictions. The complete122-case browser run covers representative workflows. Neither evidence establishes every income type, residency, special regime or filing obligation."
     },
@@ -142,7 +143,8 @@
     "domain_report_citations": "Real loopback/pinned engine report resolved8previously filtered guidance/treaty citations;0missing,24evidence reads.23 combined/gate tests passed. Strengthened real-engine bridge regression:7passed, exact complete reference coverage plus unchanged model permissions.",
     "workflow_availability": "Current frontend functions evaluated22representative saved inputs across11jurisdictions;22offer at least one assessment,0without a policy.",
     "exact_citations": "9 real engine bridge tests passed; missing explicit references no longer fall back to unrelated keyword hits. Broader retrieval/agent/release integrity regression:332passed in49.10s at49931db.",
-    "china_foreign_credit_component": "24 internal component cases passed; source originals verified. Saved-case/API/UI integration pending; no full foreign-income acceptance claimed."
+    "china_foreign_credit_component": "24 internal component cases passed; source originals verified. Saved-case/API/UI integration pending; no full foreign-income acceptance claimed.",
+    "china_foreign_direct_api": "1692 income/report tests passed; direct-credit case reconciliation, persistence/restart/export verified. UI pending; no indirect/deemed or negative-base acceptance claimed."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

@@ -8,6 +8,7 @@ from decimal import Decimal
 from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from .income_tax import Money
+from packages.income_tax.china_foreign_assessment import DirectWorkpaper
 from packages.income_tax.japan_tokyo import TokyoWorkpaper
 from packages.income_tax.hong_kong_salary_reconciliation import SalaryWorkpaper
 from packages.income_tax.malaysia_reconciliation import IndividualWorkpaper, CompanyWorkpaper
@@ -27,6 +28,12 @@ class CNCompany(Basis):
     prepaid_tax: Money
     non_taxable_income: Money = Decimal('0')
     exempt_income: Money = Decimal('0')
+
+
+class CNForeignCompany(Basis):
+    policy: Literal['cn_company_foreign_direct_2026']
+    workpaper: DirectWorkpaper
+    prepaid_tax: Money
 
 
 class CNSmallCompany(Basis):
@@ -505,6 +512,6 @@ class KRSalary(Basis):
     installment: StrictBool
 
 
-Assessment = Annotated[CNCompany | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
+Assessment = Annotated[CNCompany | CNForeignCompany | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
                        HKProfits | HKSalaries | HKProperty | AEOrdinary | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness | VNRental,
                        Field(discriminator='policy')]
