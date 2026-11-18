@@ -33,3 +33,13 @@ Scanned root and isolated-stage rule/decision CSVs and current calculator packag
 The inventory `vietnam-legacy-procedure-bindings-20261118.json` records file hashes and exact references:31 rule rows and1 decision row in each root/stage. This corrects the earlier tentative instruction to audit them as205 bindings. Replace these procedural references against Circular89 according to provision and effective date; separately add Circular95 substantive guidance after review. Do not rename the old document to Circular95 or map its page anchors to the new article numbers. Frozen root inputs were not edited.
 
 Four conventional July government-file paths for Circular95 returned404; no government PDF was obtained or claimed. The mirrored signed-document artifact and official tax-office announcement remain separately identified. This is an evidence provenance limitation, not proof the regulation is absent.
+
+## Government-hosted introduction acquired
+
+The later review acquired and visually checked all ten pages of official letter
+4736/CT-CS from the Lam Dong government portal. The archived document, hash,
+physical-page findings and unresolved scope are recorded in
+vietnam-circular95-official-introduction-20261118.json. This is an introduction
+to Circular95, not the full Circular95 original; neither the original-source
+gap nor the annual relief/credit ordering gap is marked complete. No frozen
+rule/catalog input or production calculation was changed.

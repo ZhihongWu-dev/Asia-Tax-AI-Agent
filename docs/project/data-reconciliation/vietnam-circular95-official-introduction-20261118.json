@@ -1,0 +1,27 @@
+{
+  "status": "government_hosted_introduction_reviewed_not_circular_original",
+  "document": "4736/CT-CS",
+  "issuer": "Vietnam Department of Taxation",
+  "issued_on": "2026-07-10",
+  "landing_page": "https://dalat-info.gov.vn/bai-viet/tuyen-truyen-pho-bien-cac-chinh-sach-thue-moi-va-ho-tro-nguoi-nop-thue-nam-2026",
+  "url": "https://dalat-info.gov.vn/storage/2026/10/08/36e24d868153a97bfebf170a5ed2f0ce1cab7528.pdf",
+  "file": "database/raw/vn/vn.ct4736.2026.circular95-introduction.vi.pdf",
+  "sha256": "ddcae0c7873f0de7a50fcd73904a2650f6f462279c4c9f794f62bebabaa93e89",
+  "bytes": 638726,
+  "physical_pages": 10,
+  "review": "All ten pages rendered with Poppler and visually inspected; visible stamps/signatures are not cryptographic signature verification.",
+  "findings": [
+    {"pages": [1, 10], "finding": "Confirms Circular95 effective 2026-07-01 and replacement of Circular205/2013 and Circular45/2021."},
+    {"pages": [3], "finding": "Article10 application date refers to submission of the complete Circular89 dossier; beneficial-ownership exclusions require separate review."},
+    {"pages": [4], "finding": "Article52 terminology clarifies treaty-committed credit for foreign incentive exemptions/reductions, distinct from domestic presumptive taxation."},
+    {"pages": [10], "finding": "Transition described here concerns pending unsigned APA applications whose requested period has not ended; do not generalize it to annual credit calculations."}
+  ],
+  "remaining": [
+    "Government-hosted full Circular95 original",
+    "Authoritative annual relief versus foreign-credit cap allocation/order",
+    "Applicable treaty, covered tax, period and dossier verification"
+  ],
+  "active_catalog_modified": false,
+  "frozen_runtime_modified": false,
+  "calculation_rule_changed": false
+}
