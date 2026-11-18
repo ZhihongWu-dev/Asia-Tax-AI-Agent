@@ -1,0 +1,41 @@
+{
+  "status": "cloud_admitted_and_exact_read_verified",
+  "citations": [
+    {
+      "cite_id": "id.tax-law-consolidation-2023.id#p242",
+      "characters": 2068,
+      "text_sha256": "c4f4995aa2cc988d87918f5077f661b3214c9a4c0908a84c2e7583353b888f48",
+      "exact_full_text": true
+    },
+    {
+      "cite_id": "id.tax-law-consolidation-2023.id#p243",
+      "characters": 1526,
+      "text_sha256": "1d4093c51a843d9e78f5951669850cda32b7e5849d3e292009aac1f764384c30",
+      "exact_full_text": true
+    }
+  ],
+  "before_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "cd232c6bd73deb3adabdd833abef0c1c1a876972c110e33330e16ea5988ac6f7",
+    "review_sha256": "1689ea109d0e911ed66ba1bb7c5154b8be55c0cee9e87fd6d680713ae950827b"
+  },
+  "after_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "cd232c6bd73deb3adabdd833abef0c1c1a876972c110e33330e16ea5988ac6f7",
+    "review_sha256": "4d4499fe0b01f25e45f06abb5adbca40010d8c328fc16757f1e8ee76228c88f1"
+  },
+  "old_snapshot_rejected": true,
+  "base_counts_unchanged": {
+    "doc": 287,
+    "clause": 38152
+  },
+  "visual_review_pdf_pages": [
+    242,
+    243
+  ],
+  "scope": "Full original consolidation pages as source overlays; no runtime catalog migration or blanket current-law approval."
+}
