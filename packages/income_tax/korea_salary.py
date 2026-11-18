@@ -14,6 +14,7 @@ from .korea_children import child_credit_reference
 
 FORM_SOURCE=dict(doc_id='kr.income-tax.form24.20260701',
     url='https://www.law.go.kr/LSW/flDownload.do?flSeq=164443847',
+    file='database/raw/kr/kr.income-tax.form24.20260701.pdf',
     sha256='844a53ae235b7039807ad8380306f08225eb757015a27c7c69c23928434ae685',
     provisions=['Form24(1), instructions16'])
 

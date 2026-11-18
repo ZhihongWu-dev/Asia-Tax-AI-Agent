@@ -91,6 +91,7 @@ def company_tax(national_taxable_base, local_taxable_base, *, national_inputs,
         if s['doc_id'] not in {r['doc_id'] for r in national['sources']}]
     sources.append(dict(doc_id='kr.local-tax.form43.20260701',
         url='https://www.law.go.kr/LSW/flDownload.do?flSeq=164921007',
+        file='database/raw/kr/kr.local-tax.form43.20260701.pdf',
         sha256='363ae8f389af98b9d48a5ae0d753cb2eda6beee83b8ff1db9f03d9278a4b3051',
         provisions=['Instructions19-27']))
     with localcontext() as context:

@@ -67,9 +67,10 @@
         "income-literal-url-audit-20261119.json",
         "china-small-company-source-20261119.json",
         "source-url-reconciliation-20261119.json",
-        "vietnam-treaty-source-snapshots-20261119.json"
+        "vietnam-treaty-source-snapshots-20261119.json",
+        "assessment-result-source-audit-20261119.json"
       ],
-      "limits": "Historical archive audit covered 74 manifest references and11 literal inline hashes. Subsequent Thai foreign-income, Chinese business-income and Singapore employment work adds10 exact source records preserved in saved results and exports. Singapore archival failure is resolved by ordinary requests GET of complete official pages. Remaining dynamic/URL-only citations have not yet received a comprehensive current-state audit; overall source-version traceability is still incomplete. Chinese SME source repaired after a25-literal-URL audit found7 unmatched occurrences; remaining lookup gaps include aliases and hash-only records and are not automatically missing originals. Four Korean/Vietnamese literal references resolved to exact existing source bytes; missing file pointers repaired. Thai P119 dividend election citation now archived and persisted. Indonesia landing URL and broader result-level citation coverage remain unresolved. Indonesia landing-page snapshot and HK/SG/ID treaty result references now versioned; this resolves those specific earlier lookup/result gaps without claiming a comprehensive result audit."
+      "limits": "Current runtime audit executed all33 registered assessment policies and verified116 top-level source records against local original bytes.22 missing file pointers repaired across Korean, Malaysian and Vietnamese sources. This proves tested top-level result citations, not every nested helper citation, every policy variant, legal completeness or substantive business acceptance. Earlier archival and URL lookup failures described in historical evidence have been addressed for these tested references."
     },
     {
       "requirement": "Repeated validation until actual business requirements are met",
@@ -90,7 +91,8 @@
     "singapore_employment_sources": "1467 income-tax/reporting tests passed; all three archived original hashes preserved in saved/exported assessment",
     "china_small_company_source": "1468 income/report tests passed in24.75s; SME original hash and persisted export verified",
     "thai_dividend_and_source_paths": "1469 income-tax/reporting tests passed in32.58s",
-    "vietnam_treaty_sources": "1469 income-tax/reporting tests passed in37.16s; persisted mixed-country workpaper source hashes verified"
+    "vietnam_treaty_sources": "1469 income-tax/reporting tests passed in37.16s; persisted mixed-country workpaper source hashes verified",
+    "runtime_source_audit": "1470 income/report tests passed;33 policies,116 verified top-level references,0 unresolved in observed results"
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

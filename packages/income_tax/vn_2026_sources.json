@@ -68,7 +68,8 @@
         "Articles 8, 9, 10, 11, 29(2)"
       ],
       "registration_status": "registered",
-      "review_status": "Selected provisions verified; full implementing conditions remain pending"
+      "review_status": "Selected provisions verified; full implementing conditions remain pending",
+      "file": "database/raw/vn/vn.law.pit2026.vi.pdf"
     }
   ],
   "personal_transfer": [
@@ -81,7 +82,8 @@
         "13",
         "23",
         "29"
-      ]
+      ],
+      "file": "database/raw/vn/vn.law.pit2026.vi.pdf"
     },
     {
       "doc_id": "vn.decree253.2026.vi",
@@ -92,7 +94,8 @@
         "10",
         "53",
         "54"
-      ]
+      ],
+      "file": "database/raw/vn/vn.decree253.2026.vi.pdf"
     }
   ],
   "business": [
@@ -104,7 +107,8 @@
       "provisions": [
         "7"
       ],
-      "review_status": "Selected business-income provisions reviewed against archived official pages; not full business acceptance"
+      "review_status": "Selected business-income provisions reviewed against archived official pages; not full business acceptance",
+      "file": "database/raw/vn/vn.law.pit2026.vi.pdf"
     },
     {
       "doc_id": "vn.decree141.2026.vi",
@@ -129,7 +133,8 @@
         "69(1)(a)",
         "annex"
       ],
-      "review_status": "Selected business-income provisions reviewed against archived official pages; not full business acceptance"
+      "review_status": "Selected business-income provisions reviewed against archived official pages; not full business acceptance",
+      "file": "database/raw/vn/vn.decree253.2026.vi.pdf"
     },
     {
       "doc_id": "vn.decree398.2026.vi",
@@ -170,7 +175,8 @@
       "provisions": [
         "7"
       ],
-      "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded"
+      "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded",
+      "file": "database/raw/vn/vn.law.pit2026.vi.pdf"
     },
     {
       "doc_id": "vn.decree141.2026.vi",
@@ -195,7 +201,8 @@
         "69(1)(a)",
         "annex"
       ],
-      "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded"
+      "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded",
+      "file": "database/raw/vn/vn.decree253.2026.vi.pdf"
     },
     {
       "doc_id": "vn.decree398.2026.vi",

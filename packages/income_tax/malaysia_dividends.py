@@ -16,11 +16,13 @@ POLICY_VERSION = 'my-dividend-ya2026-2026-11-18'
 DIVIDEND_SOURCES = [*SOURCES, {
     'doc_id': 'my.pua148.2025.dividend-income',
     'url': 'https://www.parlimen.gov.my/ipms/eps/2025-08-28/ST.140.2025%20-%20ST140.2025.pdf',
+    'file': 'database/raw/my/my.pua148.2025.dividend-income.pdf',
     'sha256': 'fd85095d1bb8b841997447558c8af7ca09a1a6695b6a2e3c44f7fca4e334059a',
     'locator': 'Rule 2(1)-(5)',
 }, {
     'doc_id': 'my.hasil.be2025.explanatory',
     'url': 'https://ef.hasil.gov.my/eBE2026/Pdf/Nota_BE_e.pdf',
+    'file': 'database/raw/my/my.hasil.be2025.explanatory.pdf',
     'sha256': '587421c806cb9b62ba9789627dadf7c85cc9b314ea99971935cb4e105c347222',
     'locator': 'B2 threshold example; B15-B19 allocation and tax',
     'note': 'YA2025 example supports threshold interpretation; statute and rules continue into YA2026.',

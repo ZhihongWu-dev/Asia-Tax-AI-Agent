@@ -11,6 +11,7 @@ from .korea_rounding import final_cash_balance
 
 LOCAL_SOURCE=dict(doc_id='kr.local-tax.salary-settlement.20260701',
     url='https://law.go.kr/lsLinkCommonInfo.do?lspttninfSeq=173607',
+    file='database/raw/kr/kr.local-tax.salary-settlement.20260701.html',
     sha256='527e8177958baa2eae6a272f60d3c02116e719fb08043b94e2e25b2a8651c053',
     provisions=['Article103-13','Article103-15','Article103-60'])
 
@@ -41,6 +42,7 @@ come from their own receipts and are not inferred from national payments.
         former_employer_settled_tax=former,total_payment_credits=paid,settlement=cash,
         sources=[dict(LOCAL_SOURCE),dict(doc_id='kr.local-tax-basic.article59.2026',
             url='https://www.law.go.kr/LSW/lsLinkProc.do?joLnkStr=%EC%A0%9C97%EC%A1%B0&lsNm=%EC%A7%80%EB%B0%A9%EC%84%B8%EA%B8%B0%EB%B3%B8%EB%B2%95&mode=11',
+            file='database/raw/kr/kr.local-tax-basic.article59.2026.html',
             sha256='1ed709aa892ade3bbc0950038efe2755046549aed809dc2332e89575051c0266',
             provisions=['Article59'])],
         stage='local_salary_employer_special_collection_before_installments')
@@ -79,6 +81,7 @@ refunds do not disappear under that threshold.
         sources=[dict(SOURCE,provisions=['Article86(1)','Article137','Article137-2','Article138']),
             dict(doc_id='kr.national-treasury.article47.2026',
                 url='https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1031453583',
+                file='database/raw/kr/kr.national-treasury.article47.2026.html',
                 sha256='e219a858f303c94d114495ffc0105b5fef7e7622b85a7f064c5e5f9c35a6b665',
                 provisions=['Article47'])],
         stage='national_salary_cash_from_established_decision_before_installments')

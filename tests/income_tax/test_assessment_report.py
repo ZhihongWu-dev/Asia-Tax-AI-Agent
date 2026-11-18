@@ -65,6 +65,7 @@ def test_snapshot_mismatch_rejected():
     ('sg', 'sg_employment_2026_sources.json', 3),
     ('cn_small', 'cn_2026_sources.json', 2),
     ('th_dividend', 'th_2026_sources.json', 1),
+    ('th_company', 'th_2026_sources.json', 2),
 ])
 def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, manifest, count):
     from hashlib import file_digest
@@ -82,6 +83,8 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
         sources = [s for s in sources if s['doc_id'] in ('cn.law.eit', 'cn.mof.sta.2023-12')]
     elif policy == 'th_dividend':
         sources = [s for s in sources if s['doc_id'] == 'th.rd.p119-2545']
+    elif policy == 'th_company':
+        sources = [sources[0], sources[4]]
     assert len(sources) == count
     for source in sources:
         with (root/source['file']).open('rb') as original:
@@ -102,6 +105,14 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
             data, basis = small_company_inputs()
         elif policy == 'th_dividend':
             data, basis = dividend_inputs()
+        elif policy == 'th_company':
+            data = facts()
+            data.update(jurisdiction='th', currency='THB')
+            data['incomes'][0]['source_jurisdiction'] = 'th'
+            basis = dict(policy='th_company_2026', net_taxable_profit='1000000',
+                scheme='ordinary', sme_eligibility_confirmed=False,
+                ordinary_treatment_confirmed=True, allowed_tax_credits='0', prepaid_tax='0',
+                basis_confirmed=True, basis_explanation='Verified ordinary Thai company profit basis.')
         else:
             data, basis = inputs() if policy == 'th' else saved_inputs()
         saved = client.put(path, headers=HEADERS, json=dict(
