@@ -1,5 +1,5 @@
 {
-  "status": "candidate_data_restored_targeted_pass_full_regression_pending",
+  "status": "candidate_data_restored_full_offline_regression_passed",
   "base_commit": "a24ebbb",
   "prior_clean_checkout_regression": {
     "passed": 2447,
@@ -58,5 +58,26 @@
     "restored_sha256": "5d402a9af0a6c42d548fcf87bba1b5a177ae63c786f047b40dc60601b0a822f7",
     "matched_after": 358,
     "original_redirect_preserved": true
+  },
+  "full_offline_regression": {
+    "passed": 2448,
+    "failed": 0,
+    "skipped": 4,
+    "deselected": 27,
+    "seconds": 518.57,
+    "exit_code": 0,
+    "command": "python -X utf8 -m pytest tests -m 'not integration' --ignore=tests/database -q",
+    "log": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/catalog-delivery-offline-regression-20261118.log",
+    "release_dependency": "Hash-verified pinned release 771e4524961bcc36718db1c9331e7a5f4cda0ce7 installed in corporate worktree",
+    "skip_reasons": [
+      "Legacy converter unavailable (1)",
+      "PostgreSQL semantics require PostgreSQL rather than SQLite (3)"
+    ]
+  },
+  "byte_preservation": {
+    "git_clean_filters_match_all_six_files": true,
+    "git_staged_blobs_match_all_six_files": true,
+    "core_autocrlf": "true",
+    "reference": "catalog-byte-preservation-20261118.json"
   }
 }

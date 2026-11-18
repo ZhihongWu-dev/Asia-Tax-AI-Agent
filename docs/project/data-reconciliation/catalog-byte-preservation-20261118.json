@@ -1,0 +1,36 @@
+{
+  "reference": "https://github.com/git/git/blob/master/Documentation/gitattributes.adoc",
+  "scope": "six catalog CSVs only; checked with core.autocrlf=true",
+  "files": {
+    "database/jurisdiction.csv": {
+      "raw_blob": "154aeb6fd3186926d647a6259ddd0c2b25d5c97c",
+      "filtered_blob": "154aeb6fd3186926d647a6259ddd0c2b25d5c97c",
+      "identical": true
+    },
+    "database/doc.csv": {
+      "raw_blob": "0bcf5ea2bc926fc4ab3c8337c6f25cee4be94d38",
+      "filtered_blob": "0bcf5ea2bc926fc4ab3c8337c6f25cee4be94d38",
+      "identical": true
+    },
+    "database/param.csv": {
+      "raw_blob": "160f3a8c8061d10c7bc3b562d8361026c6495b58",
+      "filtered_blob": "160f3a8c8061d10c7bc3b562d8361026c6495b58",
+      "identical": true
+    },
+    "database/treaty.csv": {
+      "raw_blob": "3b2f66d2cfeb91ded92e51ab4bfbc9ab15351750",
+      "filtered_blob": "3b2f66d2cfeb91ded92e51ab4bfbc9ab15351750",
+      "identical": true
+    },
+    "database/decision.csv": {
+      "raw_blob": "a239252cf8e4bc89ddb552f27d8da36d05949aa6",
+      "filtered_blob": "a239252cf8e4bc89ddb552f27d8da36d05949aa6",
+      "identical": true
+    },
+    "database/clause.csv": {
+      "raw_blob": "cf3f6975159aef0d781e4f21eec8df11f06e7e1c",
+      "filtered_blob": "cf3f6975159aef0d781e4f21eec8df11f06e7e1c",
+      "identical": true
+    }
+  }
+}

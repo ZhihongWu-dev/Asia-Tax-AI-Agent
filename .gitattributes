@@ -2,3 +2,10 @@
 /database/raw/** -text
 /database/ocr/** -text
 /config/library/** -text
+# Catalog snapshots contain multiline legal text and have byte-level fingerprints.
+/database/jurisdiction.csv -text
+/database/doc.csv -text
+/database/param.csv -text
+/database/treaty.csv -text
+/database/decision.csv -text
+/database/clause.csv -text

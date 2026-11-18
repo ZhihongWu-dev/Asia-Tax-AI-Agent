@@ -152,7 +152,7 @@ jp.cfc.tax_burden_exempt_min,jp,company,cfc,tax_burden_exempt_min,20,%,jp.sma#66
 jp.cfc.tax_burden_exempt_min.specified,jp,company,cfc,tax_burden_exempt_min,27,%,jp.sma#66-6.5,が百分の二十七以上である場合,,,"For specified foreign related companies (paper, cash-box and blacklisted companies) the threshold is 27%.",,
 jp.cfc.cfc_applies.individual,jp,individual,cfc,cfc_applies,yes,bool,jp.sma#40-4.1,その者の雑所得に係る収入金額とみなして,,,Included as miscellaneous income of the resident shareholder.,,
 jp.cfc.control_pct_min.individual,jp,individual,cfc,control_pct_min,10,%,jp.sma#40-4.1,次に掲げる割合のいずれかが百分の十以上である場合における当該居住者,,,,,
-jp.anti_abuse.family_company_denial,jp,company,anti_abuse,family_company_denial,yes,bool,jp.cta#132.1,その行為又は計算にかかわらず、税務署長の認めるところにより,,,"Japan has no general anti-avoidance rule: s132 lets the district director disregard acts or calculations of family companies (同族会社) that unduly reduce corporation tax (similar rules for reorganisations s132-2 and group relief s132-3, not collected). Treaty PPT: pair parameters.",,
+jp.anti_abuse.family_company_denial,jp,company,anti_abuse,family_company_denial,yes,bool,jp.cta#132.1,その行為又は計算にかかわらず、税務署長の認めるところにより,,,Section132 permits disregard of acts or calculations of qualifying family companies that unduly reduce corporation tax. Reorganization section132-2 and group-tax-sharing section132-3 have separate scopes; this parameter does not establish a universal GAAR or the absence of other anti-abuse provisions. Treaty PPT uses pair-specific parameters.,,
 jp.anti_abuse.family_company_denial.individual,jp,individual,anti_abuse,family_company_denial,yes,bool,jp.ita#157.1,その行為又は計算にかかわらず、税務署長の認めるところにより,,,Acts or calculations of family companies that unduly reduce the income tax of resident shareholders.,,
 jp-kr.outbound_wht.dividend_rate_reduced,jp-kr,company,outbound_wht,dividend_rate_reduced,5,%,treaty.jp-kr.1998.mli.en#10.2,5 per cent of the gross amount of the dividends if the beneficial owner is a company which owns at least 25 per cent of the voting shares issued by the company paying the dividends,,,Cited from the synthesised text.,,
 jp-kr.outbound_wht.holding_pct_min,jp-kr,company,outbound_wht,holding_pct_min,25,%,treaty.jp-kr.1998.mli.en#10.2,owns at least 25 per cent of the voting shares issued,,,Cited from the synthesised text.,,
@@ -373,10 +373,21 @@ cn.exit.shareholder_dividend_base,cn,company,exit,shareholder_dividend_base,shar
 cn.exit.shareholder_gain_base,cn,company,exit,shareholder_gain_base,"residual assets less the dividend part, above or below the shareholder's investment cost",text,cn.cs.2009-60#i5,剩余资产减除股息所得后的余额，超过或低于股东投资成本的部分，应确认为股东的投资转让所得或损失,2008-01-01,,"Shareholder level of the deemed liquidation: this part is a gain or loss on the investment (for a non-resident shareholder, the share-transfer rules of the restructure slot apply).",,
 id.final.cit_rate,id,company,final,cit_rate,22,%,id.tax-law-compilation-2022#p184,The Resident corporate Taxpayers and the permanent establishments is at 22% (twenty two percent) which comes to effect as of the fiscal year 2022.,2022-01-01,,"This official compilation identifies amendments through Law Number 7 of 2021. A separate, later official source is required before treating this as changed after that source date.",,
 id.inbound.foreign_dividend_exempt_if_invested,id,all,inbound,foreign_dividend_exempt_if_invested,yes,bool,id.tax-law-compilation-2022#p133,"dividends originating from abroad and income after tax from an overseas permanent establishment that are received or earned by resident corporate Taxpayers or resident individual Taxpayers, as long as they are invested or used to support other business activities in the territory of the Republic of Indonesia within a certain period of time",,,"The cited exemption condition has further statutory requirements, including investment amount or timing; use the source before applying it.",,
-vn.final.cit_rate,vn,company,final,cit_rate,20,%,vn.law.cit2025.en#all,"The standard corporate income tax rate is 20 percent, except for cases specified in Clauses 2, 3, and 4 of this Article and targets enjoying tax rate incentives specified in Article 13 of this Law.",2025-01-01,,"Standard company rate, subject to the listed statutory exceptions and incentives. The law applies from the 2025 corporate income tax period.",,
-vn.inbound.foreign_income_taxable,vn,company,inbound,foreign_income_taxable,yes,bool,vn.law.cit2025.en#all,Enterprises established under the provisions of Vietnamese law shall pay tax on taxable income arising in Viet Nam and taxable income arising outside Viet Nam;,2025-01-01,,Worldwide taxable-income rule for enterprises established under Vietnamese law.,,
-vn.inbound.foreign_tax_credit_cap,vn,company,inbound,foreign_tax_credit_cap,vietnamese_cit_on_same_income,text,vn.law.cit2025.en#all,"Vietnamese enterprises investing abroad that earn income from overseas production and business activities in a tax period shall have the corporate income tax paid under the laws of the recipient country deducted from corporate income tax payable in Viet Nam, provided that the deduction does not exceed corporate income tax calculated under Viet Nam's corporate income legislation.",2025-01-01,,"Foreign corporate tax credit for the stated overseas activities, capped at the Vietnamese corporate tax calculated on that income.",,
-vn.residence.worldwide_tax_scope,vn,company,residence,worldwide_tax_scope,yes,bool,vn.law.cit2025.en#all,Enterprises established under the provisions of Vietnamese law shall pay tax on taxable income arising in Viet Nam and taxable income arising outside Viet Nam;,2025-01-01,,Records the statutory tax scope for Vietnamese-law enterprises; it is not a complete treaty-residence tie-breaker test.,,
+vn.final.cit_rate,vn,company,final,cit_rate,20,%,vn.law.cit67.2025.gazette.vi#10.1,"1. Thuế suất thuế thu nhập doanh nghiệp là 20%, trừ trường hợp quy định tại
+các khoản 2, 3 và 4 Điều này và đối tượng được ưu đãi về thuế suất quy định tại
+Điều 13 của Luật này.",2025-01-01,,"Standard company rate, subject to the listed statutory exceptions and incentives. The law applies from the 2025 corporate income tax period. Authentic original Law67, Official Gazette965-966; Article19(1) distinguishes general commencement2025-10-01 from application from the2025 CIT period. Existing effective_from denotes tax-period applicability, not enactment date. Later exemptions/incentives must be checked separately.",2026-11-18,
+vn.inbound.foreign_income_taxable,vn,company,inbound,foreign_income_taxable,yes,bool,vn.law.cit67.2025.gazette.vi#2.2,"a) Doanh nghiệp được thành lập theo quy định của pháp luật Việt Nam nộp
+thuế đối với thu nhập chịu thuế phát sinh tại Việt Nam và thu nhập chịu thuế phát
+sinh ngoài Việt Nam;",2025-01-01,,"Worldwide taxable-income rule for enterprises established under Vietnamese law. Authentic original Law67, Official Gazette965-966; Article19(1) distinguishes general commencement2025-10-01 from application from the2025 CIT period. Existing effective_from denotes tax-period applicability, not enactment date. Later exemptions/incentives must be checked separately.",2026-11-18,
+vn.inbound.foreign_tax_credit_cap,vn,company,inbound,foreign_tax_credit_cap,vietnamese_cit_on_same_income,text,vn.law.cit67.2025.gazette.vi#3.4,"4. Doanh nghiệp Việt Nam đầu tư ở nước ngoài có phát sinh thu nhập từ hoạt
+động sản xuất, kinh doanh tại nước ngoài trong kỳ tính thuế được trừ số thuế thu
+nhập doanh nghiệp phải nộp theo quy định của nước tiếp nhận đầu tư vào số thuế
+thu nhập doanh nghiệp phải nộp ở Việt Nam, nhưng không được vượt quá số thuế
+thu nhập doanh nghiệp tính theo quy định của pháp luật về thuế thu nhập doanh
+nghiệp của Việt Nam.",2025-01-01,,"Foreign corporate tax credit for the stated overseas activities, capped at the Vietnamese corporate tax calculated on that income. Authentic original Law67, Official Gazette965-966; Article19(1) distinguishes general commencement2025-10-01 from application from the2025 CIT period. Existing effective_from denotes tax-period applicability, not enactment date. Later exemptions/incentives must be checked separately. Original text refers to foreign CIT payable (phải nộp), not a standalone proof that any claimed foreign payment is creditable; documentation and implementing rules remain necessary.",2026-11-18,
+vn.residence.worldwide_tax_scope,vn,company,residence,worldwide_tax_scope,yes,bool,vn.law.cit67.2025.gazette.vi#2.2,"a) Doanh nghiệp được thành lập theo quy định của pháp luật Việt Nam nộp
+thuế đối với thu nhập chịu thuế phát sinh tại Việt Nam và thu nhập chịu thuế phát
+sinh ngoài Việt Nam;",2025-01-01,,"Records the statutory tax scope for Vietnamese-law enterprises; it is not a complete treaty-residence tie-breaker test. Authentic original Law67, Official Gazette965-966; Article19(1) distinguishes general commencement2025-10-01 from application from the2025 CIT period. Existing effective_from denotes tax-period applicability, not enactment date. Later exemptions/incentives must be checked separately.",2026-11-18,
 in.final.individual_top_rate,in,individual,final,individual_top_rate,30,%,in.law.ita2025.fa2026.en#s202,"7.
 Above ` 2400000
 30%",2026-04-01,,"Primary section 202(1), default new regime for tax years beginning on or after 1 April 2026. The 30% is the top marginal ordinary-income slab only, on income above INR 2400000; not a flat rate on all income or the effective tax rate. Subject to the statutory income-computation rules, opt-out mechanism, special-rate provisions, rebate, surcharge and cess where applicable. Legacy AY 2026-27 page remains archived as a cross-check, not the authority for new-law TY 2026-27.",,
@@ -529,9 +540,35 @@ ae-vn.outbound_wht.dividend_rate_other,ae-vn,all,outbound_wht,dividend_rate_othe
 ae-vn.outbound_wht.dividend_rate_government,ae-vn,all,outbound_wht,dividend_rate_government,0,%,treaty.ae-vn.2009.en#10.3,shall be taxable only in that other Contracting State if the beneficial owner of the dividend is the Government of that other Contracting State or any of its institutions.,2010-04-12,,Article 10(3) exclusive residence-state rule for the stated government or government-owned beneficial owners.,,
 ae-vn.outbound_wht.interest_rate,ae-vn,all,outbound_wht,interest_rate,10,%,treaty.ae-vn.2009.en#11.2,the tax so charged shall not exceed 10 percent of the gross amount of the interest.,2010-04-12,,Article 11(2) general source-state interest cap for a beneficial owner; Article 11(3) separately exempts listed government and government-owned recipients.,,
 ae-vn.outbound_wht.royalty_rate,ae-vn,all,outbound_wht,royalty_rate,10,%,treaty.ae-vn.2009.en#12.2,the tax so charged shall not exceed 10 percent of the gross amount of such royalties.,2010-04-12,,Article 12(2) general source-state royalty cap for a beneficial owner.,,
-id.outbound_wht.default_nonresident_rate,id,all,outbound_wht,default_nonresident_rate,20,%,id.dgt.article26#all,"If they do not qualify for the Tax Treaty, the applicable Article 26 Income Tax rate is 20%;",,,Default Article 26 rate when the non-resident does not qualify for treaty treatment.,,
-id.outbound_wht.treaty_rate_available,id,all,outbound_wht,treaty_rate_available,yes,bool,id.dgt.article26#all,Withhold Article 26 Income Tax using the Tax Treaty rate if they qualify under PER-25/PJ/2018 and generate a withholding Article 26 Income Tax receipt using Article 23/26 Income Tax e-Bupot application;,,,The stated treaty-rate treatment is conditional on qualification under PER-25/PJ/2018.,,
-id.outbound_wht.payment_deadline,id,all,outbound_wht,payment_deadline,10,days,id.dgt.article26#all,Pay the Income Tax by first creating a billing code. The payment must be made no later than the 10th day of the following month to a Collecting Agent;,,,Payment deadline for the described Article 26 withholding process.,,
+id.outbound_wht.default_nonresident_rate,id,all,outbound_wht,default_nonresident_rate,20,%,id.tax-law-consolidation-2023.id#p242,"Atas penghasilan tersebut di bawah ini, dengan nama dan dalam bentuk apa pun, yang
+dibayarkan, disediakan untuk dibayarkan, atau telah jatuh tempo pembayarannya oleh
+badan pemerintah, subjek pajak dalam negeri, penyelenggara kegiatan, bentuk usaha
+tetap, atau perwakilan perusahaan luar negeri lainnya kepada Wajib Pajak luar negeri
+selain bentuk usaha tetap di Indonesia dipotong pajak sebesar 20% (dua puluh persen)
+dari jumlah bruto oleh pihak yang wajib membayarkan:
+a.
+dividen;
+b.
+bunga termasuk premium, diskonto, dan imbalan sehubungan dengan jaminan
+pengembalian utang;
+c.
+royalti, sewa, dan penghasilan lain sehubungan dengan penggunaan harta;
+d.
+imbalan sehubungan dengan jasa, pekerjaan, dan kegiatan;
+e.
+hadiah dan penghargaan;
+f.
+pensiun dan pembayaran berkala lainnya;
+g.
+premi swap dan transaksi lindung nilai lainnya; dan/atau
+h.
+keuntungan karena pembebasan utang.",,,"Article26(1) statutory 20% gross baseline for listed payments to nonresidents other than Indonesian permanent establishments; the dividend planner uses Article26(1)(a). Not the effective rate of every outbound payment: interest exceptions under Article26(1b), deemed-net bases under Article26(2), finality exceptions under Article26(5), and conditional treaty relief require separate rules. Rebinding evidence only; no inferred commencement date from this multi-act consolidation.",,
+id.outbound_wht.treaty_rate_available,id,all,outbound_wht,treaty_rate_available,yes,bool,id.pmk112-2025#2(5),"(5)
+Dalam hal Wajib Pajak Luar Negeri memenuhi ketentuan sebagaimana dimaksud pada ayat (4), Pemotong atau Pemungut Pajak memotong atau memungut pajak atas penghasilan yang diterima atau diperoleh oleh Wajib Pajak Luar Negeri sebagaimana dimaksud pada ayat (3) huruf b sesuai dengan ketentuan dalam Persetujuan Penghindaran Pajak Berganda.",2025-12-31,,"Conditional availability only, not taxpayer eligibility approval. Article 2(3)-(5) requires treaty residence evidenced by authorized DGT documentation, non-Indonesian residence and no treaty abuse; apply applicable treaty and anti-abuse provisions. DGT implementation announcement preserves qualifying pre-promulgation PER-25/PJ/2018-format certificates for their stated validity period. Specific rate, beneficial ownership and filing requirements require separate verification.",,
+id.outbound_wht.payment_deadline,id,all,outbound_wht,payment_deadline,10,count,id.pmk242-2014#2(7),"(7)
+PPh Pasal 23 dan PPh
+Pasal 26 yang dipotong oleh Pemotong PPh harus disetor paling lama
+tanggal 10 (sepuluh) bulan berikutnya setelah Masa Pajak berakhir.",2014-12-24,2024-12-31,"Historical day-of-month: tenth day of the following month after the tax period ends, not a ten-day duration. PMK242 Article9 moves a holiday due date to the next working day. PMK18/2021 Article103 does not amend Articles2(7) or9. Only historical periods within this inclusive window; PMK81 Article476 transition and current15th-day regime require separate handling. Not a standalone filing or penalty calculator.",2025-01-01,id.outbound_wht.payment_day_next_month
 id.residence.residence_days_threshold,id,individual,residence,residence_days_threshold,183,days,id.tax-law-compilation-2022#p121,are staying in Indonesia for more than 183 (one hundred and eighty-three) days within 12 (twelve) months period;,,,"One statutory resident-individual test. The text says more than 183 days, rather than 183 days or more.",,
 id.residence.residence_test,id,company,residence,residence_test,established_or_domiciled_in_indonesia,text,id.tax-law-compilation-2022#p121,"corporate established or having their domicile in Indonesia, except for certain units of government agencies that meet the following criteria:",,,"Statutory resident-corporate test, subject to the stated government-agency exception.",,
 id.final.individual_top_rate,id,individual,final,individual_top_rate,35,%,id.tax-law-compilation-2022#p184,"above Rp.  5.000.000.000,00 (five billion rupiah) 35%  (thirty five percent)",,,Top bracket of the stated resident-individual taxable-income table.,,
@@ -1580,13 +1617,11 @@ sg.final.progressive_bracket_12_rate,sg,individual,final,progressive_bracket_12_
 sg.final.progressive_bracket_12_upper,sg,individual,final,progressive_bracket_12_upper,1000000,SGD,sg.ita1947#sch2,"For every dollar of the next $500,000 23%",2023-01-01,,"Upper bound of bracket 12 (chargeable income, cumulative: the bands of Table 3 added up).",,
 sg.final.progressive_bracket_13_rate,sg,individual,final,progressive_bracket_13_rate,24,%,sg.ita1947#sch2,"For every dollar exceeding $1,000,000 24%.",2023-01-01,,"Second Schedule Part A Table 3 (s42(1)): rates on the chargeable income of a resident individual for the year of assessment 2024 and later years; the year of assessment 2024 taxes the income of 2023, so the row starts 2023-01-01. Table 2 (YA 2017-2023) is not entered. Bracket 13 of 13.",,
 sg.inbound.foreign_dividend_taxable.individual,sg,individual,inbound,foreign_dividend_taxable,yes,bool,sg.ita1947#s10,upon the income of any person accruing in or derived from Singapore or received in Singapore from outside Singapore,,,"s10(1): income of any person received in Singapore from outside Singapore is charged, and dividends are income under s10(1)(d); for an individual the s13(7A) exemption takes foreign-sourced income received in Singapore out again (sg.inbound.foreign_income_exempt). The charge matters only when the exemption is denied.",,
-ae.anti_abuse.transfer_pricing_applies_to_related_parties.legacy_03670a518456,ae,company,anti_abuse,transfer_pricing_applies_to_related_parties,yes,bool,ae.fta.corporate-tax-faq#all,"Yes. Transfer pricing rules apply to UAE businesses that have transactions with Related Parties and Connected Persons, irrespective of whether the Related Parties or Connected Persons are located in the UAE mainland, a Free Zone or in a foreign jurisdiction.",2023-06-01,,"Records transfer-pricing coverage, not a complete general anti-abuse rule.",,
 ae.anti_abuse.gaar_allows_tax_advantage_adjustment.legacy_9347aa2863fc,ae,all,anti_abuse,gaar_allows_tax_advantage_adjustment,yes,bool,ae.fta.general-corporate-tax#para10,The rule allows the FTA to counteract or adjust Corporate Tax advantages obtained,2023-06-01,,The guide identifies this as a general anti-abuse rule and describes its application to transactions or arrangements considered abusive after the stated test.,,
 ae.final.cit_rate.legacy_e0a38222b90b,ae,company,final,cit_rate,9,%,ae.fta.general-corporate-tax#para4,9% (nine percent) on the portion of the Taxable Income exceeding AED,2023-06-01,,"General rate for ordinary Taxable Persons. The first AED 375,000 is subject to 0%; qualifying Free Zone Persons have separate rules.",,
 ae.final.cit_rate.legacy_0a693d0fef56,ae,individual,final,cit_rate,9,%,ae.fta.natural-persons-2023#p26,"9% on the portion of the Taxable Income that exceeds AED 375,000.",2023-06-01,,"Applies to a natural person after the guide's AED 1 million UAE-business turnover threshold; 0% applies to the first AED 375,000 of taxable income.",,
 ae.inbound.foreign_income_taxable_for_resident_juridical_person.legacy_5a4e9dbc5d2c,ae,company,inbound,foreign_income_taxable_for_resident_juridical_person,yes,bool,ae.fta.foreign-source-income#para3,"subject to tax on its worldwide income. Hence, any foreign source income may be",2023-06-01,,Records the general worldwide-income rule for a resident juridical person. The source separately describes exemptions and foreign-tax credits that can change the result for particular income.,,
 ae.inbound.foreign_income_taxable_if_related_to_uae_business.legacy_2b61513707ec,ae,individual,inbound,foreign_income_taxable_if_related_to_uae_business,yes,bool,ae.fta.natural-persons-2023#p18,"if a natural person conducts a Business or Business Activity while being present in the UAE, their Taxable Income (if any) will include income derived from sources (for example, clients) located in the UAE and outside of the UAE, as long",2023-06-01,,The source conditions inclusion on the income being related to the UAE business or business activity; it is not an unrestricted worldwide-income rule.,,
-ae.residence.residence_test.legacy_09239f63cd95,ae,company,residence,residence_test,incorporated_or_effectively_managed_in_uae,text,ae.fta.corporate-tax-faq#all,"UAE CT applies to juridical persons incorporated in the UAE and juridical persons effectively managed and controlled in the UAE, as well as to foreign juridical persons that have a permanent establishment",2023-06-01,,Official FAQ scope statement; the quote is limited before the source's parenthetical cross-reference.,,
 ae.residence.conditional_residence_days_min.legacy_1a9c43feb1fa,ae,individual,residence,conditional_residence_days_min,90,days,ae.fta.tax-resident-certificate-2024#p39,Resident if they were present in the UAE for at least 90 days and also meet both of,2023-03-01,,"Alternative domestic-law test. It additionally requires UAE/GCC nationality or a valid UAE Residence Permit, plus a permanent place of residence in the UAE or UAE employment/business.",,
 ae.residence.residence_days_min.legacy_78a82a6783b0,ae,individual,residence,residence_days_min,183,days,ae.fta.tax-resident-certificate-2024#p38,If a natural person was physically present in the UAE for 183 days or more in the,2023-03-01,,"Domestic-law test measured within the relevant continuous 12-month period; any day or part of a day counts, subject to the guide's exceptional-circumstances rules.",,
 ae.residence.residence_test.legacy_9fd40ff5e896,ae,individual,residence,residence_test,conducting_uae_business,text,ae.fta.natural-persons-2023#p13,any natural person conducting Business or Business Activity in the UAE will be a Resident Person for purposes of the Corporate Tax Law.,2023-06-01,,"Corporate-tax resident-person rule, subject to an applicable Double Taxation Agreement as stated in the guide.",,
@@ -1595,7 +1630,6 @@ id.residence.residence_days_threshold.legacy_5eb51c824306,id,individual,residenc
 in.final.individual_top_rate.legacy_e23948f10c26,in,individual,final,individual_top_rate,30,%,in.itd.individual-rates-2026#h9,"₹ 3,00,000 + 30% above ₹ 24,00,000",2026-04-01,,Top marginal rate under the page's default tax regime under section 115BAC; the same page presents an alternative old regime.,,
 in.residence.residence_test.legacy_6d96c44e527d,in,company,residence,residence_test,indian_company_or_poem_in_india,text,in.itd.nonresident-faq#h9,a company is regarded as resident in India if it is an Indian company  or if its Place of Effective Management (POEM) during the relevant year is in India.,2026-04-01,,Company residence test stated by the official FAQ for both the 1961 and 2025 Acts.,,
 in.residence.residence_days_threshold.legacy_e9f9702f0cb8,in,individual,residence,residence_days_threshold,182,days,in.itd.nonresident-faq#h4,an individual continues to be treated as tax -resident if he stays in India for 182 days or more in the relevant tax year,2026-04-01,,One basic individual-residency condition under the Income Tax Act 2025; the cited FAQ also states an alternative 60-day plus 365-day test.,,
-jp.anti_abuse.consolidated_corporation_unreasonable_tax_reduction_denial.legacy_60062fc21261,jp,company,anti_abuse,consolidated_corporation_unreasonable_tax_reduction_denial,yes,bool,jp.nta.consolidated-tax-avoidance-denial#h2,法人税法132条の3の規定は、「その連結法人の行為又は計算」により税負担の不当減少が生ずる場合に、その行為又は計算を否認することができることとされており、同規定は、行為者を「連結法人」に限定した規定であることから、連結納税制度に係る租税回避否認の検討に当たっては、法人税法132条の3だけで対処することは不十分であり、同法132条又は132条の2の適用の有無の検討が必要となる場面もあると考えられる。,,,Official NTA research material describing the statutory denial rule. This parameter is deliberately limited to consolidated corporations and does not assert a universal company GAAR.,,
 jp.cfc.foreign_subsidiary_income_attributed,jp,all,cfc,foreign_subsidiary_income_attributed,yes,bool,jp.mof.cfc-overview#all,○　わが国の内国法人等が、実質的活動を伴わない外国子会社等を利用する等により、わが国の税負担を軽減・回避する行為に対処するため、外国子会社等がペーパー・カンパニー等である場合又は経済活動基準（注）のいずれかを満たさない場合には、その外国子会社等の所得に相当する金額について、内国法人等の所得とみなし、それを合算して課税（会社単位での合算課税）。,,,"Official Ministry of Finance CFC overview. The all-subject scope follows the summary's “domestic corporations, etc.” formulation; it records the stated income-attribution mechanism only, not an unstated ownership threshold or complete eligibility test.",,
 jp.final.individual_top_rate,jp,individual,final,individual_top_rate,45,%,jp.nta.income-rate-2026#h2,"40,000,000円 以上 45％",2026-04-01,,Top national income-tax bracket in the current NTA quick table; the page notes separate taxation and surtax rules.,,
 jp.inbound.domestic_corporation_foreign_income_taxable.legacy_ac5a019fdc95,jp,company,inbound,domestic_corporation_foreign_income_taxable,yes,bool,jp.nta.international-taxation-basics#p55,内国法人は、外国で得た所得を含む全ての所得が課税対象となり、外国法人は、我が国の国内に所得の源泉がある国内源泉所得が課税対象となる。,,,Official NTA international-taxation material. This records the stated worldwide-income rule for domestic corporations; specific statutory exemptions and foreign-tax-credit mechanics are not inferred here.,,
@@ -1605,28 +1639,24 @@ jp.residence.corporation_classified_by_head_or_principal_office.legacy_7316e34c2
 jp.residence.individual_resident_domicile_or_one_year_residence.legacy_f75ee95bbf33,jp,individual,residence,individual_resident_domicile_or_one_year_residence,yes,bool,jp.nta.resident-nonresident-classification#h1,我が国の所得税法では、「居住者」とは、国内に「住所」を有し、または、現在まで引き続き1年以上「居所」を有する個人をいい、「居住者」以外の個人を「非居住者」と規定しています。,,,Official NTA resident-classification guidance. It records the domestic individual-residence test only; treaty tie-breaker conditions remain treaty-specific.,,
 kr.cfc.cfc_reporting_required.legacy_d9ac55af47bd,kr,all,cfc,cfc_reporting_required,yes,bool,kr.itca.enforcement-decree#p59,"A Korean national subject to the application of Articles 27, 29 (excluding cases falling under the proviso, with the exception of the subparagraphs, of paragraph (1) of that Article), and 30 through 33 of the Act shall submit the following documents to the head of the tax office having jurisdiction over the place for tax payment pursuant to Article 34 of the Act:",2025-02-28,,"Article 70 requires CFC financial statements, a tax return and retained-earnings computation records from persons subject to the CFC provisions. The all-subject scope reflects the statute's Korean-national terminology and avoids inferring a separate threshold from this reporting provision.",,
 kr.final.cit_return_deadline.legacy_052439c710e0,kr,company,final,cit_return_deadline,3,months,kr.nts.filing-returns#h3,No later than 3 months from the last day of the month in which the business year ends,,,The NTS filing-deadline page states this corporate-income-tax filing and payment deadline.,,
-kr.final.global_income_taxable.legacy_ff9c51667058,kr,individual,final,global_income_taxable,yes,bool,kr.nts.global-income-faq#all,"Four major types of individual income consisting of global income, retirement income, capital gains and timber income are all taxable.",,,The NTS FAQ describes the stated individual income categories as taxable for a foreigner resident for the entire year.,,
 kr.inbound.worldwide_income_taxable.legacy_640729ac5434,kr,company,inbound,worldwide_income_taxable,yes,bool,kr.nts.corporate-tax-overview#h2,"본점, 주사무소 또는 사업의 실질적 관리장소가 국내에 있는 법인(내국법인)은 국내·외에서 발생하는 모든 소득에 대하여 법인세 납세의무가 있습니다.",,,The NTS overview states that a domestic corporation is liable for corporate tax on income arising both inside and outside Korea.,,
-kr.inbound.worldwide_income_reportable.legacy_55f79a66d148,kr,individual,inbound,worldwide_income_reportable,yes,bool,kr.nts.global-income-faq#all,"If you are a Korean resident, you have to report your income from all sources, both inside and outside Korea.",,,Applies to a Korean resident as stated by the NTS; no rule is inferred for a non-resident.,,
 kr.residence.management_place_in_korea.legacy_d191084397c9,kr,company,residence,management_place_in_korea,yes,bool,kr.nts.corporate-tax-overview#h2,"본점, 주사무소 또는 사업의 실질적 관리장소가 국내에 있는 법인(내국법인)은 국내·외에서 발생하는 모든 소득에 대하여 법인세 납세의무가 있습니다.",,,"A corporation with its head office, principal office or place of effective management in Korea is classified in the NTS overview as a domestic corporation. This is a domestic-law classification, not a treaty tie-breaker.",,
-kr.residence.residence_years_min.legacy_04bb728aea1c,kr,individual,residence,residence_years_min,1,years,kr.nts.global-income-faq#all,"Principally, a resident is any individual who has his/her domicile in Korea or a place of residence for 1 year or more in Korea.",,,One-year threshold applies to a place of residence; the alternative domicile test is preserved in the cited source.,,
 my.residence.residence_test.legacy_57da735f4ffd,my,company,residence,residence_test,management_and_control_in_malaysia,text,my.ita1967#s8(1),"a company or a body of persons (not being a Hindu joint family) carrying on a business is resident in Malaysia for the basis year for a year of assessment if at any time during that basis year the management and control of its business or of any one of its businesses, as the case may be, are exercised in Malaysia",,,The cited statutory test is for a company or body carrying on a business.,,
 my.residence.residence_days_threshold.legacy_812b87364f29,my,individual,residence,residence_days_threshold,182,days,my.ita1967#s7(1),he is in Malaysia in that basis year for a period or periods amounting in all to one hundred and eighty two days or more;,,,One statutory residence test. The same section contains linked-period and multi-year alternative tests.,,
-th.anti_abuse.transfer_pricing_market_price_adjustment,th,company,anti_abuse,transfer_pricing_market_price_adjustment,yes,bool,th.rd.transfer-pricing-legislation#all,"In order to prevent the evasion of taxation caused by manipulated transfer pricing within the MNEs, tax authorities can price goods and services by applying the provisions of Section 65 bis (4) (7), Section 65 ter, and Section 70 ter under the Revenue Code, Double Tax Agreements between Thailand and other countries, as well as Standard Accounting No. 37 and 47.",,,Corporate transfer-pricing anti-avoidance measure. The source separately identifies the market-price instruction for juristic partnerships or corporations.,,
-th.final.cit_return_days,th,company,final,cit_return_days,150,days,th.rd.cit#lead,Thai and foreign companies carrying on business in Thailand are required to file their tax returns (Form CIT 50) within one hundred and fifty (150) days from the closing date of their accounting periods.,,,Corporate return deadline stated on the official Revenue Department page.,,
-th.final.dividend_tax_credit_fraction.legacy_17d33c3c7596,th,individual,final,dividend_tax_credit_fraction,3/7,text,th.rd.pit#h6,Any taxpayer who domiciles in Thailand and receives dividends from a juristic company or partnership incorporated in Thailand is entitled to a tax credit of 3/7 of the amount of dividends received.,,,Applies to the stated domestic-company dividend situation.,,
-th.final.individual_return_deadline,th,individual,final,individual_return_deadline,last_day_march,text,th.rd.pit#h12,Taxpayer is liable to file Personal Income Tax return and make a payment to the Revenue Department within the last day of March following the taxable year.,,,Annual individual return and payment deadline.,,
+th.anti_abuse.transfer_pricing_market_price_adjustment,th,company,anti_abuse,transfer_pricing_market_price_adjustment,yes,bool,th.rc3b.th#s71bis,ในกรณีที่บริษัทหรือห้างหุ้นส่วนนิติบุคคลที่มีความสัมพันธ์กันมีข้อกำหนดทางด้านการพาณิชย์หรือการเงินระหว่างกันแตกต่างไปจากที่ควรได้กำหนด หากบริษัทหรือห้างหุ้นส่วนนิติบุคคลดังกล่าวได้ดำเนินการโดยอิสระในลักษณะที่เชื่อได้ว่ามีการถ่ายโอนกำไร เจ้าพนักงานประเมินมีอำนาจปรับปรุงรายได้และรายจ่ายของบริษัทหรือห้างหุ้นส่วนนิติบุคคลดังกล่าว ให้ได้จำนวนรายได้ที่พึงได้รับและรายจ่ายที่พึงได้จ่าย หากบริษัทหรือห้างหุ้นส่วนนิติบุคคลดังกล่าวได้ดำเนินการโดยอิสระเสมือนว่าบริษัทหรือห้างหุ้นส่วนนิติบุคคลดังกล่าวได้รับและได้จ่ายตามนั้นเพื่อใช้คำนวณกำไรสุทธิที่ต้องเสียภาษีตามมาตรา 65 หรือเงินได้พึงประเมินที่ต้องเสียภาษีตามมาตรา 70 หรือมาตรา 70 ทวิ ทั้งนี้ ตามหลักเกณฑ์ วิธีการ และเงื่อนไขที่กำหนดในกฎกระทรวง,,,Section71bis permits adjustment of income and expenses between related companies/juristic partnerships where commercial or financial terms differ from independent terms and profit transfer is believed to occur. Related-party definitions and implementing regulation369 apply. This is not a blanket individual anti-abuse rule or an automatic numerical adjustment.,2026-11-18,
+th.final.cit_return_days,th,company,final,cit_return_days,150,days,th.rc3b.th#s68,ภายในหนึ่งร้อยห้าสิบวันนับแต่วันสุดท้ายของรอบระยะเวลาบัญชี ให้บริษัทหรือห้างหุ้นส่วนนิติบุคคลยื่นรายการ ซึ่งจำเป็นต้องใช้ในการคำนวณภาษีในรอบระยะเวลาบัญชีตามแบบที่อธิบดีกำหนดพร้อมกับชำระภาษีต่ออำเภอ,,,Statutory return and payment baseline: 150 days after accounting-period end. Filing-channel extensions and holidays require separate dated rules.,2026-11-18,
+th.final.individual_return_deadline,th,individual,final,individual_return_deadline,last_day_march,text,th.rc3a.th#s56,ให้บุคคลทุกคน เว้นแต่ผู้เยาว์ หรือผู้ที่ศาลสั่งให้เป็นคนไร้ความสามารถหรือเสมือนไร้ความสามารถ ยื่นรายการเกี่ยวกับเงินได้พึงประเมินที่ตนได้รับในระหว่างปีภาษีที่ล่วงมาแล้วพร้อมทั้งข้อความอื่น ๆ ภายในเดือนมีนาคม ทุก ๆ ปี ตามแบบที่อธิบดีกำหนดต่อเจ้าพนักงานซึ่งรัฐมนตรีแต่งตั้งถ้าบุคคลนั้น,,,"Statutory annual return baseline: March following the income year, subject to Section56 filing thresholds and exceptions. This citation alone does not establish payment or electronic-filing extensions.",2026-11-18,
 th.inbound.foreign_company_thailand_income_taxable,th,company,inbound,foreign_company_thailand_income_taxable,yes,bool,th.rd.foreign-company#all,A foreign company that does not carry on business in Thailand will be subject to withholding tax on certain categories of income derived from Thailand.,,,Official guide describes Thai-source income taxation of a foreign company without Thai business operations; treaty relief may reduce or exempt the stated withholding.,,
-th.inbound.foreign_income_taxable_on_remittance,th,individual,inbound,foreign_income_taxable_on_remittance,yes,bool,th.rd.pit#h1,A resident of Thailand is liable to pay tax on income from sources in Thailand as well as on the portion of income from foreign sources that is brought into Thailand.,,,This official overview frames the rule as taxation of the portion of foreign-source income brought into Thailand.,,
-th.outbound_wht.foreign_company_return_days,th,company,outbound_wht,foreign_company_return_days,7,days,th.rd.cit#lead,"As regards to income paid to foreign company not carrying on business in Thailand, the foreign company is subject to tax at a flat rate in which the payer shall withhold tax at source at the time of payment. The payer must file the return (Form CIT 54) and make the payment to the Revenue Department within seven days of the following month in which the payment is made.",,,Deadline applies to the payer for the stated foreign-company situation.,,
-th.outbound_wht.payer_withholding_required,th,individual,outbound_wht,payer_withholding_required,yes,bool,th.rd.pit#h12,"For certain categories of income, the payer of income has to withhold tax at source, file tax return (Form PIT 1, 2 or 3 as the case may be) and submit the amount of tax withheld to the District Revenue Office.",,,The official PIT overview states a payer-side withholding obligation for specified income categories; the applicable rate depends on the listed category.,,
+th.outbound_wht.foreign_company_return_days,th,company,outbound_wht,foreign_company_return_days,7,days,th.rc3b.th#s70,บริษัทหรือห้างหุ้นส่วนนิติบุคคลที่ตั้งขึ้นตามกฎหมายของต่างประเทศมิได้ประกอบกิจการในประเทศไทยแต่ได้รับเงินได้พึงประเมินตามมาตรา 40 (2)(3) (4) (5) หรือ (6) ที่จ่ายจากหรือในประเทศไทย ให้บริษัทหรือห้างหุ้นส่วนนิติบุคคลนั้นเสียภาษี โดยให้ผู้จ่ายหักภาษีจากเงินได้พึงประเมินที่จ่ายตามอัตราภาษีเงินได้สำหรับบริษัทหรือห้างหุ้นส่วนนิติบุคคล แล้วนำส่งอำเภอท้องที่พร้อมกับยื่นรายการตามแบบที่อธิบดีกำหนดภายในเจ็ดวันนับแต่วันสิ้นเดือนของเดือนที่จ่ายเงินได้พึงประเมินนั้น ทั้งนี้ ให้นำมาตรา 54 มาใช้บังคับโดยอนุโลม,,,"Statutory payer remittance baseline: within seven days after the end of the payment month, for the specified foreign companies and Section40 income. Not seven days after payment. Section70 exceptions, treaty relief and filing extensions require separate checks.",2026-11-18,
+th.outbound_wht.payer_withholding_required,th,individual,outbound_wht,payer_withholding_required,yes,bool,th.rc3a.th#s50,ให้บุคคล ห้างหุ้นส่วน บริษัท สมาคม หรือคณะบุคคลผู้จ่ายเงินได้พึงประเมินตามมาตรา 40 หักภาษีเงินได้ไว้ทุกคราวที่จ่ายเงินได้พึงประเมินตามวิธีดังต่อไปนี้,,,"Section50 imposes payer withholding for the income categories and methods enumerated in that section. A yes value records existence of that obligation, not withholding on every payment or a universal rate. Section52 governs remittance separately.",2026-11-18,
 th.residence.company_incorporated_under_thai_law,th,company,residence,company_incorporated_under_thai_law,yes,bool,th.rd.foreign-company#all,A company registered under Thai law.,,,"Official guide's definition of a Thai company. It records an incorporation connection, not a treaty tie-breaker rule.",,
-th.residence.residence_days_threshold.legacy_3dd29d5165f5,th,individual,residence,residence_days_threshold,180,days,th.rd.pit#h1,“Resident” means any person residing in Thailand for a period or periods aggregating more than 180 days in any tax (calendar) year.,,,"The legal test is more than 180 days, not 180 days or more.",,
 vn.anti_abuse.related_party_non_arm_length_reassessment.legacy_bd309d0b7936,vn,company,anti_abuse,related_party_non_arm_length_reassessment,yes,bool,vn.gov.related-party-tax-avoidance#h4,"Trường hợp doanh nghiệp lợi dụng quan hệ liên kết để xác lập giá mua, giá bán, chi phí, doanh thu hoặc các điều kiện giao dịch không phù hợp với giao dịch độc lập, qua đó làm giảm nghĩa vụ thuế tại Việt Nam, dịch chuyển lợi nhuận sang pháp nhân khác hoặc sang quốc gia, vùng lãnh thổ có mức thuế thấp thì cơ quan quản lý thuế có quyền xác định lại nghĩa vụ thuế theo quy định.",2026-07-01,,Official guidance states that the tax authority may reassess liability where a company uses related-party terms that are not arm's length and thereby reduces Vietnamese tax or shifts profit.,,
 vn.final.dividend_tax_rate.legacy_3b6e5e65daea,vn,individual,final,dividend_tax_rate,5,%,vn.law.pit2026.vi#12.1,Thuế đối với thu nhập từ đầu tư vốn của cá nhân cư trú được xác định bằng thu nhập tính thuế nhân (x) với thuế suất 5%.,2026-07-01,,Article 3 expressly includes dividends within capital-investment income; Article 12 applies the 5% rate to a resident individual's capital-investment income.,,
 vn.inbound.foreign_income_taxable.legacy_c1362b4ab902,vn,individual,inbound,foreign_income_taxable,yes,bool,vn.law.pit2026.vi#2.1,Người nộp thuế thu nhập cá nhân là cá nhân cư trú có thu nhập chịu thuế quy định tại Điều 3 của Luật này phát sinh trong và ngoài lãnh thổ Việt Nam,2026-07-01,,Article 2 subjects a resident individual to the Law's taxable income arising both within and outside Viet Nam.,,
 vn.outbound_wht.dividend_wht_rate.legacy_3ae53a4b4020,vn,individual,outbound_wht,dividend_wht_rate,5,%,vn.law.pit2026.vi#22,"Thuế thu nhập cá nhân đối với thu nhập từ đầu tư vốn của cá nhân không cư trú được xác định bằng tổng số thu nhập mà cá nhân không cư trú nhận được từ việc đầu tư vốn vào tổ chức, cá nhân tại Việt Nam nhân (x) với thuế suất 5%.",2026-07-01,,Article 3 includes dividends within capital-investment income. Article 22 applies a 5% rate to a non-resident individual's capital-investment income from investment in a Vietnamese organisation or individual.,,
-vn.residence.worldwide_tax_scope.legacy_ebbee7602af2,vn,company,residence,worldwide_tax_scope,yes,bool,vn.law.cit2025.en#all,Enterprises established under the provisions of Vietnamese law shall pay tax on taxable income arising in Viet Nam and taxable income arising outside Viet Nam;,2025-01-01,,Records the statutory tax scope for Vietnamese-law enterprises; it is not a complete treaty-residence tie-breaker test.,,
+vn.residence.worldwide_tax_scope.legacy_ebbee7602af2,vn,company,residence,worldwide_tax_scope,yes,bool,vn.law.cit67.2025.gazette.vi#2.2,"a) Doanh nghiệp được thành lập theo quy định của pháp luật Việt Nam nộp
+thuế đối với thu nhập chịu thuế phát sinh tại Việt Nam và thu nhập chịu thuế phát
+sinh ngoài Việt Nam;",2025-01-01,,"Records the statutory tax scope for Vietnamese-law enterprises; it is not a complete treaty-residence tie-breaker test. Authentic original Law67, Official Gazette965-966; Article19(1) distinguishes general commencement2025-10-01 from application from the2025 CIT period. Existing effective_from denotes tax-period applicability, not enactment date. Later exemptions/incentives must be checked separately.",2026-11-18,
 vn.residence.residence_days_min.legacy_fc1d30e02b4d,vn,individual,residence,residence_days_min,183,days,vn.law.pit2026.vi#2.2,Có mặt tại Việt Nam từ 183 ngày trở lên tính trong 01 năm dương lịch hoặc tính theo 12 tháng liên tục kể từ ngày đầu tiên có mặt tại Việt Nam,2026-07-01,,One of Article 2's alternative residence conditions is presence in Viet Nam for at least 183 days in a calendar year or 12 consecutive months from first presence.,,
 vn.penalty.late_interest_pct_per_day.20260701,vn,all,penalty,late_interest_pct_per_day,0.03,%,vn.law.tax-administration108.2025.vi#16.2,"a) Mức tính tiền chậm nộp bằng 0,03%/ngày tính trên số tiền thuế, khoản
 thu khác chậm nộp do cơ quan thuế quản lý thu và 0,03%/ngày tính trên số tiền
@@ -1655,3 +1685,139 @@ nhượng phần vốn tại tổ chức, cá nhân Việt Nam nhân (x) với t
 vn.restructure.nonresident_securities_proceeds_tax_pct.20260701,vn,individual,restructure,nonresident_securities_proceeds_tax_pct,0.1,%,vn.law.pit2026.vi#23.2,"2. Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng chứng khoán
 của cá nhân không cư trú được xác định bằng giá chuyển nhượng nhân (x) với
 thuế suất 0,1%.",2026-07-01,,"Law109/2025 Article23; individual nonresident statutory securities_proceeds method. Capital-gain base is transfer price less purchase price and reasonable related costs; unknown-cost proceeds method is conditional, not an elective minimum. Securities use separate gross-proceeds method. Nonresident capital scope is interests in Vietnamese organisations/individuals irrespective of transaction location. General commencement Article29(1); resident employment/business retroactivity under29(2) does not cover these transfers. Confirm asset classification, territorial scope, exemptions, treaty and implementing rules before assessment. Not a corporate or emigration-tax rule.",,
+id.outbound_wht.payment_day_next_month,id,all,outbound_wht,payment_day_next_month,15,count,id.pmk81-2024#94(2),"(2)
+Pembayaran
+dan penyetoran
+sebagaimana
+dimaksud
+pada ayat (1) wajib dilakukan
+paling lambat tanggal 15
+(lima belas)
+bulan
+berikutnya
+setelah
+Masa
+Pajak
+berakhir meliputi:
+a.
+Pajak Penghasilan
+Pasal 4 ayat (2);
+b.
+Pajak Penghasilan
+Pasal 15;
+c.
+Pajak Penghasilan
+Pasal 21;
+d.
+Pajak Penghasilan
+Pasal 22;
+e.
+Pajak Penghasilan
+Pasal 23;
+f.
+Pajak Penghasilan
+Pasal 25;
+g.
+Pajak Penghasilan
+Pasal 26;
+h.
+Pajak
+Penghasilan
+minyak
+bumi
+dan/atau
+gas
+bumi
+dari kegiatan
+usaha
+hulu
+minyak
+bumi
+dan/ atau gas bumi yang dibayarkan
+setiap Masa
+Pajak;
+i.
+Pajak
+Pertambahan
+Nilai yang
+terutang
+atas
+pemanfaatan
+Barang Kena Pajak tidak berwujud
+dan/atau
+Jasa
+Kena
+Pajak
+dari
+luar
+Daerah
+Pabean;
+J.
+Pajak
+Pertambahan
+Nilai yang
+terutang
+atas
+kegiatan membangun
+sendiri;
+jdih.kemenkeu.go.id
+- 79 -
+k.
+Bea Meterai yang dipungut
+oleh pemungut
+Bea
+Meterai;
+1.
+Pajak Penjualan;
+dan
+m.
+Pajak Karbon yang dipungut oleh pemungut
+Pajak
+Karbon.",2025-01-01,,"Calendar day15 of the month following the tax period, not an elapsed15-day duration. Article94(2)(g) covers Article26 income tax. Apply Article100 holiday adjustment. Historical periods and exceptional relief require separate review.",2026-11-18,
+id.outbound_wht.payment_holiday_adjustment,id,all,outbound_wht,payment_holiday_adjustment,next_working_day,text,id.pmk81-2024#100(1),"(1)
+Dalam
+hal
+tanggal
+jatuh
+tempo
+pembayaran
+atau
+penyetoran
+pajak sebagaimana
+dimaksud
+dalam Pasal
+94 bertepatan
+dengan
+hari libur,
+pembayaran
+atau
+penyetoran
+pajak dapat dilakukan
+paling lambat pada
+hari kerja berikutnya.",2025-01-01,,"When the Article94 due date is a holiday, payment is due no later than the next working day. Use a verified applicable calendar, not weekends alone.",2026-11-18,
+id.outbound_wht.payment_holiday_scope,id,all,outbound_wht,payment_holiday_scope,Saturday;Sunday;national_holiday;election_holiday;national_collective_leave,text,id.pmk81-2024#100(2),"(2)
+Hari libur sebagaimana
+dimaksud
+pada ayat (1) yaitu
+hari Sabtu, hari Minggu, hari libur nasional,
+hari yang
+diliburkan
+untuk
+penyelenggaraan
+pemilihan
+umum,
+atau hari yang ditetapkan
+sebagai cuti bersama
+secara
+nasional.",2025-01-01,,Statutory holiday categories. An authoritative year-specific holiday calendar is required for an actual deadline calculation.,2026-11-18,
+jp.anti_abuse.group_tax_sharing_denial_scope,jp,company,anti_abuse,group_tax_sharing_denial_scope,Acts or calculations of the assessed group-tax-sharing corporation or another group-tax-sharing corporation that unduly reduce corporation tax; applies only within the statutory group regime.,text,jp.cta#132-3,"（通算法人に係る行為又は計算の否認）
+第百三十二条の三　税務署長は、通算法人の各事業年度の所得に対する法人税につき更正又は決定をする場合において、当該通算法人又は他の通算法人の行為又は計算で、これを容認した場合には、当該各事業年度の所得の金額から控除する金額の増加、法人税の額から控除する金額の増加、他の通算法人に対する資産の譲渡に係る利益の額の減少又は損失の額の増加その他の事由により法人税の負担を不当に減少させる結果となると認められるものがあるときは、その行為又は計算にかかわらず、税務署長の認めるところにより、当該通算法人に係る法人税の課税標準若しくは欠損金額又は法人税の額を計算することができる。",2022-04-01,,"Regime applies to business years BEGINNING on or after2022-04-01, not merely transactions occurring after that date. Establish group-tax-sharing status and statutory unreasonable-tax-reduction conditions. Not a universal company GAAR or an automatic denial rule. Transition: https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/hojin/group_tsusan/index.htm",2026-11-18,
+th.inbound.foreign_remittance_scope,th,individual,inbound,foreign_remittance_scope,"Foreign employment/business/property income arising from2024-01-01 in a Thai-resident income year is included in the year remitted to Thailand, subject to applicable reliefs.",text,th.rd.p161-2566#c1,"ข้อ 1  บุคคลซึ่งเป็นผู้อยู่ในประเทศไทยตามมาตรา 41 วรรคสาม แห่งประมวลรัษฎากร
+ที่มีเงินได้พึงประเมินเนื่องจากหน้าที่งานหรือกิจการที่ทำในต่างประเทศ หรือเนื่องจากทรัพย์สินที่อยู่ใน
+ต่างประเทศ ตามมาตรา 41 วรรคสอง แห่งประมวลรัษฎากร ในปีภาษีดังกล่าว และได้นำเงินได้พึงประเมินนั้น
+เข้ามาในประเทศไทยในปีภาษีใดก็ตาม ให้บุคคลนั้นมีหน้าที่ต้องนำเงินได้พึงประเมินนั้นมารวมคำนวณ
+เพื่อเสียภาษีเงินได้ ตามมาตรา 48 แห่งประมวลรัษฎากร ในปีภาษีที่ได้นำเงินได้พึงประเมินนั้นเข้ามา
+ในประเทศไทย
+“ความในวรรคหนึ่งมิให้ใช้บังคับสำหรับเงินได้พึงประเมินที่เกิดขึ้นก่อนวันที่ ๑ มกราคม
+พ.ศ. ๒๕๖๗”
+(แก้ไขเพิ่มเติมโดยคำสั่งกรมสรรพากร ที่ ป.๑๖๒/๒๕๖๖ สั่ง ณ วันที่  ๒๐  พฤศจิกายน  พ.ศ.  ๒๕๖๖)",2024-01-01,,"P161 clause1 as amended by P162. Income-year residence uses Section41(3), at least180days; pre2024 income excluded from this interpretation. Clause3 commences remittance treatment from2024-01-01. Trace income separately from capital; treaty/exemption/foreign-credit eligibility is separate. Historical pre2024 treatment is not determined by this parameter.",2026-11-18,
