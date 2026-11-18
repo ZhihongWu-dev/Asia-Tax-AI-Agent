@@ -30,5 +30,10 @@ def capture_runtime(root=ROOT):
                         ('rule/decision.csv', 'cite_id')):
         for row in csv.DictReader(io.StringIO(raw[name].decode('utf-8-sig'))):
             citations.update(c.strip() for c in row[field].split(';') if c.strip())
+            if name == 'rule/rule.csv':
+                # Procedure entries mix document IDs, absence IDs and clause IDs.
+                # Only clauses need passage materialization in the source bundle.
+                citations.update(c.strip() for c in row.get('procedure', '').split(';')
+                                 if '#' in c)
     return {'schema': 1, 'files': {name: sha256(body).hexdigest() for name, body in raw.items()},
             'citations': sorted(citations)}

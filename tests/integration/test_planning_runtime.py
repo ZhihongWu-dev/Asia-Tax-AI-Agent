@@ -39,3 +39,14 @@ def test_missing_file_is_not_an_empty_digest(release):
     (release / 'rule/variable.csv').unlink()
     with pytest.raises(FileNotFoundError):
         capture_runtime(release)
+
+
+def test_procedure_clauses_are_loaded_without_treating_documents_as_clauses(release):
+    (release / 'rule/rule.csv').write_text(
+        'cite_ids,procedure\ncn.law#1,cn.form; absence.procedure; cn.form#6 ; cn.form#7\n',
+        encoding='utf-8')
+    result = capture_runtime(release)
+    assert 'cn.form#6' in result['citations']
+    assert 'cn.form#7' in result['citations']
+    assert 'cn.form' not in result['citations']
+    assert 'absence.procedure' not in result['citations']
