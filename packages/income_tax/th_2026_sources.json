@@ -35,6 +35,14 @@
       "url": "https://www.rd.go.th/28271.html",
       "file": "database/raw/th/th.rd530.consolidated.th.html",
       "sha256": "bd350a9c9a3bd6946b5542e1004304bd606063bc85faac71b29f01945735fef0"
+    },
+    {
+      "doc_id": "th.rd.p119-2545",
+      "title": "Revenue Department Order P119/2545, clause19",
+      "url": "https://www.rd.go.th/11162.html",
+      "file": "database/raw/th/th.rd.p119-2545.html",
+      "sha256": "e83c3c360ad1a849ac02bc30840bc8ff42b5aa090afdfe5c338efb0ef0f38b2c",
+      "retrieved_on": "2026-11-19"
     }
   ]
 }

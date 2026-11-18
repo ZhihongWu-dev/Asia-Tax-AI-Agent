@@ -125,6 +125,6 @@ No additional foreign or other tax credits are accepted by this calculation.
                     separate_final_dividend_tax=dividend_final, prepaid_tax=annual_prepaid,
                     balance_due=balance, amount_payable=max(ZERO, balance),
                     refund_due=max(ZERO, -balance),
-                    sources=deepcopy(SOURCES[:4]) + [{'url':'https://www.rd.go.th/11162.html',
-                        'title':'Revenue Department OrderP119/2545, clause19'}],
+                    sources=deepcopy(SOURCES[:4] + [s for s in SOURCES
+                        if s['doc_id'] == 'th.rd.p119-2545']),
                     stage='resident_dividend_annual_before_assessment_rounding')

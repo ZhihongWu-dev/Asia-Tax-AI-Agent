@@ -12,6 +12,7 @@ _DEDUCTION = tuple(Band(None if cap is None else Decimal(cap), Decimal(rate))
     for cap, rate in [('5000000', '.70'), ('15000000', '.40'),
                       ('45000000', '.15'), ('100000000', '.05'), (None, '.02')])
 SOURCE = dict(doc_id='kr.income-tax-act.20260701.ko',
+    file='database/raw/kr/kr.income-tax-act.20260701.ko.pdf',
     url='https://www.law.go.kr/LSW/lsPdfPrint.do?ancYnChk=0&bylChaChk=N&efGubun=Y&efYd=20260701&joAllCheck=Y&joEfOutPutYn=on&lsiSeq=280405&mokChaChk=N',
     sha256='53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a')
 

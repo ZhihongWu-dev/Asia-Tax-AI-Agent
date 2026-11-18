@@ -112,6 +112,7 @@ def review_dossier(dossier):
         ],
         'sources': [{
             'title': 'Circular89/2026/TT-BTC Article34',
+            'file': 'database/raw/vn/vn.circular89.2026.vi.pdf',
             'url': 'https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/89-btc.signed.pdf',
             'pages': [76, 77, 78],
             'sha256': '952c45ffc0f10bfc176bd9ae6b3d204fd3a034294ee270278957b9c11e1471dc',

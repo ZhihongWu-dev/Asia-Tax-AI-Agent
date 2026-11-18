@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only",
+  "baseline_audit": "income-literal-url-audit-20261119.json",
+  "findings": [
+    {
+      "module": "korea_employment.py",
+      "kind": "URL alias and missing file pointer",
+      "sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+      "file": "database/raw/kr/kr.income-tax-act.20260701.ko.pdf"
+    },
+    {
+      "module": "vietnam_credit_dossier.py and vietnam_foreign_credit.py",
+      "kind": "Three literal references already hash-pinned; add file pointers",
+      "files": [
+        "database/raw/vn/vn.circular89.2026.vi.pdf",
+        "database/raw/vn/vn.gazette1737-1738.2025.vi.pdf"
+      ]
+    },
+    {
+      "module": "thailand_dividends.py",
+      "kind": "URL-only citation repaired",
+      "file": "database/raw/th/th.rd.p119-2545.html",
+      "sha256": "e83c3c360ad1a849ac02bc30840bc8ff42b5aa090afdfe5c338efb0ef0f38b2c",
+      "review": "Official complete Thai P119/2545 text includes clause19 dividend election and aggregation. Existing tax logic unchanged."
+    }
+  ],
+  "limits": [
+    "Remaining Indonesia treaty landing-page URL still lacks snapshot in result",
+    "Archive presence alone does not prove every result reference carries version metadata; broader result-level source audit remains",
+    "No frozen catalog changes, historical assessment rewrite or business-completion claim"
+  ],
+  "github_reference": "https://github.com/python/cpython/blob/main/Doc/library/hashlib.rst",
+  "verification": {
+    "suite": "1469 income-tax/reporting tests passed in32.58s",
+    "hashes": "Korean and both Vietnamese existing original bytes matched the hard-coded reviewed SHA256 values",
+    "thai_persistence": "Authenticated local assessment, SQLite restart and report export retain exact P119 file and hash",
+    "code_diff": "Whitespace check passed excluding original raw source bytes"
+  }
+}

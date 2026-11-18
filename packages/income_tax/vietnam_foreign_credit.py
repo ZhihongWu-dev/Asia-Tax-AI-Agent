@@ -190,11 +190,13 @@ def additional_top_up_credit(*, vietnam_tax_limit, established_ordinary_credit,
             'stage': 'established_basis_cap_before_assessment_rounding',
             'sources': [{
                 'title': 'Decree320/2025/ND-CP Article12(2)(c)',
+                'file': 'database/raw/vn/vn.gazette1737-1738.2025.vi.pdf',
                 'url': 'https://congbao.cdnchinhphu.vn/CongBaoCP/CongBao/2025/12/46840/60373-1-1737-1738.pdf',
                 'sha256': '0f5db5c51b79643276e5d5eb03fd636fbdac8ea043018f79cf50ba9d8d6d8de6',
                 'pages': [48],
             }, {
                 'title': 'Circular89/2026/TT-BTC annex03-4/TNDN sectionsA/B',
+                'file': 'database/raw/vn/vn.circular89.2026.vi.pdf',
                 'url': 'https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/89-btc.signed.pdf',
                 'sha256': '952c45ffc0f10bfc176bd9ae6b3d204fd3a034294ee270278957b9c11e1471dc',
                 'pages': [284, 285],
