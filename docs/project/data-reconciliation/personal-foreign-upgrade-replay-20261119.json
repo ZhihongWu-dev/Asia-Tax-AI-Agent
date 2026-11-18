@@ -1,0 +1,20 @@
+{
+  "status": "historical_shape_replay_verified",
+  "validation": {
+    "upgrade_tests_passed": 9,
+    "upgrade_seconds": 7.79,
+    "browser_passed": 2,
+    "browser_seconds": 36.5,
+    "exit_code": 0
+  },
+  "fixture": "Simulated historical personal foreign snapshot omits transfers default and exact-ratio metadata and retains earlier policy version and decimal representation. Not recovered customer data.",
+  "verified": [
+    "Omitted or explicit empty transfers replay identical historical result/hash",
+    "Monkeypatched calculator proves replay does not recalculate",
+    "Storage restart and intervening facts edit preserve old report and keep current result invalidated",
+    "Changed request conflicts; another owner cannot replay",
+    "Current exact-ratio UI with/without transfers saves reopens and downloads"
+  ],
+  "initial_test_issue": "Assertion assumed cleared result remained as explicit null; storage omits the field. Corrected test to accept the established absent-field representation. No product fix needed.",
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}

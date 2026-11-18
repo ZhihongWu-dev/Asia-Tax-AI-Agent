@@ -79,3 +79,39 @@ def test_compatibility_does_not_ignore_inconsistent_saved_request_hash(historica
     store.save('alice', doc, doc['revision'])
     with pytest.raises(WorkflowError, match='request_payload_conflict'):
         assessment_run(store, 'alice', case_id, 1, 'calculate', ADAPTER.validate_python(COMPANY))
+
+@pytest.mark.parametrize('explicit_transfers',[False,True])
+def test_personal_foreign_old_snapshot_replays_without_new_transfer_defaults_or_recalculation(tmp_path,monkeypatch,explicit_transfers):
+    from tests.income_tax.test_china_personal_foreign_assessment import facts as personal_facts, basis as personal_basis
+    from packages.reporting.income_tax import render
+    url='sqlite:///'+str(tmp_path/'personal.sqlite')
+    store=ChatStore(url);case_id=store.create('alice')['id']
+    save_case(store,'alice',case_id,0,'facts',IncomeTaxCase(**personal_facts()))
+    paper=personal_basis()
+    saved=assessment_run(store,'alice',case_id,1,'calculate',ADAPTER.validate_python(paper))
+    # Simulate the historical shape: no transfer field or rational-arithmetic metadata.
+    saved['basis']['workpaper'].pop('transfers')
+    saved['result'].pop('arithmetic')
+    saved['result']['policy_version']='cn-personal-foreign-credit-limits-2026-11-19'
+    saved['result']['allowed_credit']='3092.00'
+    saved['request_hash']=digest(dict(revision=1,basis=saved['basis']))
+    saved['snapshot_hash']=digest({k:saved[k] for k in ('inputs','basis','result')})
+    doc=store.get('alice',case_id);doc['income_tax_runs']=[deepcopy(saved)];doc['income_tax_result']=deepcopy(saved)
+    store.save('alice',doc,2)
+    old_report=render(saved,'en')
+    changed=personal_facts();changed['incomes'][0]['gross_amount']='2000000'
+    save_case(store,'alice',case_id,3,'edit',IncomeTaxCase(**changed))
+    store.engine.dispose();store=ChatStore(url)
+    try:
+        before=store.get('alice',case_id)
+        if explicit_transfers:paper['workpaper']['transfers']=[]
+        def unexpected(*args,**kwargs):pytest.fail('Historical personal result must not recalculate')
+        monkeypatch.setattr('packages.income_tax.assessment.calculate',unexpected)
+        replay=assessment_run(store,'alice',case_id,1,'calculate',ADAPTER.validate_python(paper))
+        assert replay==saved and render(replay,'en')==old_report
+        assert store.get('alice',case_id)==before and before.get('income_tax_result') is None
+        with pytest.raises(CaseNotFound):assessment_run(store,'bob',case_id,1,'calculate',ADAPTER.validate_python(paper))
+        paper['workpaper']['comprehensive_deductions']='1'
+        with pytest.raises(WorkflowError,match='request_payload_conflict'):
+            assessment_run(store,'alice',case_id,1,'calculate',ADAPTER.validate_python(paper))
+    finally:store.engine.dispose()
