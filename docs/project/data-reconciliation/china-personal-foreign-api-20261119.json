@@ -1,0 +1,26 @@
+{
+  "status": "backend_saved_workflow_verified_ui_pending",
+  "policy": "cn_personal_foreign_2026",
+  "validation": {
+    "focused_initial": 48,
+    "income_and_reporting_final": 1745,
+    "seconds": 44.17,
+    "exit_code": 0
+  },
+  "scope": [
+    "Resident calendar2026 ordinary comprehensive/business/dividend/interest",
+    "Saved gross income derives country comprehensive income amounts using statutory expense factors",
+    "Saved deductions and eligible business losses reconcile exactly",
+    "Ordinary progressive comprehensive/business tax calculated from derived bases",
+    "Ordinary dividend/interest20percent tax",
+    "Verified reductions before country caps; current and prior same-country credits",
+    "Authenticated local SQLite save/restart/report, sources preserved and invalid recalculation leaves saved case unchanged"
+  ],
+  "remaining": [
+    "Bilingual frontend and browser validation",
+    "Rental/transfers/special category workpapers",
+    "Negative business pools, incentive classification and deemed credits",
+    "Actual business acceptance"
+  ],
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}

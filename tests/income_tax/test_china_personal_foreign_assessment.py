@@ -1,0 +1,87 @@
+from types import SimpleNamespace
+from uuid import uuid4
+from fastapi import FastAPI
+from fastapi.testclient import TestClient
+from apps.api import auth, chat
+from packages.chat.store import ChatStore
+from tests.chat.auth_support import fixture_user
+from copy import deepcopy
+from decimal import Decimal
+import pytest
+from pydantic import TypeAdapter
+from packages.contracts.income_tax import IncomeTaxCase
+from packages.contracts.income_assessment import Assessment
+from packages.income_tax.assessment import calculate
+
+
+def facts():
+    return dict(subject='individual',jurisdiction='cn',currency='CNY',residency='resident',
+        period_start='2026-01-01',period_end='2026-12-31',facts_confirmed=True,claimed_deductions='0',carried_losses='0',
+        incomes=[dict(category=k,source_jurisdiction=c,gross_amount=a,foreign_tax_paid=t,description='Verified gross CNY ordinary income')
+        for k,c,a,t in [('employment','cn','60000','0'),('employment','sg','40000','1500'),('interest','sg','10000','500'),('business','hk','30000','500')]])
+
+
+def basis():
+    return dict(policy='cn_personal_foreign_2026',basis_confirmed=True,basis_explanation='Verified ordinary annual categories, country allocation and historical evidence.',prepaid_tax='3000',
+        workpaper=dict(comprehensive_deductions='0',comprehensive_tax_reductions='0',business_tax_reductions='0',
+            ordinary_categories_and_no_special_treatment_verified=True,source_fx_deductions_and_losses_verified=True,
+            paid_tax_evidence_and_history_verified=True,countries=[dict(country=c,business_deductions='0',business_prior_losses='0',eligible_foreign_tax_paid=t,
+            prior_excess=[dict(origin_year=2021,amount='1000')] if c=='sg' else []) for c,t in [('cn','0'),('sg','2000'),('hk','500')]]))
+
+
+def run(data=None,paper=None):
+    return calculate(IncomeTaxCase(**(data or facts())),TypeAdapter(Assessment).validate_python(paper or basis()))
+
+
+def test_mixed_saved_income_computes_bases_tax_and_country_credit():
+    r=run()
+    assert Decimal(r['comprehensive_taxable_income'])==40000
+    assert Decimal(r['business_taxable_income'])==30000
+    assert Decimal(r['tax_before_foreign_credit'])==4980
+    assert Decimal(r['allowed_credit'])==3092
+    assert Decimal(r['final_tax'])==1888 and Decimal(r['balance_due'])==-1112
+    sg=r['country_limits'][0]
+    assert Decimal(sg['credit_limit'])==2592
+    assert Decimal(sg['carryforward_history'][0]['expires_after_current_year'])==408
+
+
+@pytest.mark.parametrize('issue',['subject','resident','period','deduction','loss','missing_country','duplicate','missing_paid','excess_paid','negative_business','rental','unverified'])
+def test_inconsistent_saved_case_rejected(issue):
+    d,p=facts(),basis();rows=p['workpaper']['countries']
+    if issue=='subject':d['subject']='company';d['incomes']=[d['incomes'][-1]]
+    elif issue=='resident':d['residency']='nonresident'
+    elif issue=='period':d['period_start']='2025-01-01'
+    elif issue=='deduction':d['claimed_deductions']='1'
+    elif issue=='loss':d['carried_losses']='1'
+    elif issue=='missing_country':rows.pop()
+    elif issue=='duplicate':rows.append(deepcopy(rows[1]))
+    elif issue=='missing_paid':d['incomes'][1]['foreign_tax_paid']=None
+    elif issue=='excess_paid':rows[1]['eligible_foreign_tax_paid']='2001'
+    elif issue=='negative_business':rows[2]['business_deductions']='30001';d['claimed_deductions']='30001'
+    elif issue=='rental':d['incomes'][2]['category']='rental'
+    else:p['workpaper']['paid_tax_evidence_and_history_verified']=False
+    with pytest.raises(ValueError):run(d,p)
+
+
+def test_saved_api_restart_and_report_preserve_credit_pool(tmp_path):
+    url='sqlite:///'+str(tmp_path/'credit.sqlite');service=SimpleNamespace(store=ChatStore(url))
+    app=FastAPI();app.include_router(auth.router);app.include_router(chat.router)
+    app.dependency_overrides[auth.optional_user]=fixture_user
+    app.dependency_overrides[chat.get_service]=lambda:service
+    headers={'x-asiatax-request':'1'}
+    with TestClient(app) as client:
+        client.get('/api/auth/session');case=client.post('/api/cases',headers=headers).json()['id']
+        path=f'/api/cases/{case}/income-tax'
+        saved=client.put(path,headers=headers,json=dict(revision=0,request_id=str(uuid4()),inputs=facts()))
+        assert saved.status_code==200,saved.text
+        response=client.post(path+'/runs',headers=headers,json=dict(revision=1,request_id=str(uuid4()),basis=basis()))
+        assert response.status_code==200,response.text
+        record=response.json();service.store.engine.dispose();service.store=ChatStore(url)
+        assert client.get(path+'/runs/'+record['id']).json()==record
+        report=client.get(path+'/runs/'+record['id']+'/report?locale=en')
+        assert report.status_code==200 and 'country_basis_reconciliation' in report.text
+        for source in record['result']['sources']:assert source['sha256'] in report.text
+        before=client.get(path).json();invalid=basis();invalid['workpaper']['countries'][1]['eligible_foreign_tax_paid']='2001'
+        rejected=client.post(path+'/runs',headers=headers,json=dict(revision=before['revision'],request_id=str(uuid4()),basis=invalid))
+        assert rejected.status_code==422 and client.get(path).json()==before
+    service.store.engine.dispose()
