@@ -99,3 +99,22 @@ income reconciliation are not established by this ledger. Those remain required
 before opening the annual rental workflow.22 component tests passed in0.85s,
 including duplicate/missing months, borrowing future repairs, cap excess,
 reordered input, context independence and source hashes. No UI/API route enabled.
+
+
+## Saved-fact calculation integration
+
+RentalYear now links one property to one saved rental income, requires12 explicit
+months, reconciles gross totals, checks monthly deductions/donations/reductions,
+and calculates ordinary20percent tax per month. Property IDs and income indices
+cannot be duplicated. Repair cost incurred is distinct from deductions used.
+The personal foreign workpaper accepts optional rentals and includes each
+country's calculated rental tax in its other-category credit limit. Claimed
+case deductions reconcile to taxes/fees, subrent, repairs used and donations;
+statutory rental expense deductions are not counted twice.
+
+67 component, personal assessment and historical replay tests passed in8.22s.
+A60000 gross rental fixture with6400 established deductions produces8560 tax;
+10000 eligible foreign tax is capped at8560. Housing concessions, negative-month
+eligibility, property aggregation judgments and advance-rent allocation are not
+inferred. Rental API persistence/reopen/export acceptance, UI and readable
+monthly reports remain pending. This does not complete rental business coverage.
