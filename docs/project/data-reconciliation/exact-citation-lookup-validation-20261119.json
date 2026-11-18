@@ -11,7 +11,14 @@
     "new_cases": [
       "Unknown exact citation with a query matching an existing clause returns no_match and no evidence",
       "Known plus unknown exact citations return only the known clause and explicitly mark the missing one"
-    ]
+    ],
+    "retrieval_agent_release_regression": {
+      "runtime_commit": "49931db",
+      "passed": 332,
+      "seconds": 49.1,
+      "exit_code": 0,
+      "command": "pytest tests/agent tests/chat/test_knowledge.py tests/test_tax_engine_release_integrity.py -q"
+    }
   },
   "preserved": "Existing pinned engine report, HK navigation, replay hashes and model permissions passed the same suite.",
   "delivery": "Local only"

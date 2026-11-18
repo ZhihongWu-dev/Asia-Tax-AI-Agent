@@ -140,7 +140,7 @@
     "nested_sources": "1653 income/report tests passed;109 distinct source records verified recursively across33 observed policies;0 unresolved.",
     "domain_report_citations": "Real loopback/pinned engine report resolved8previously filtered guidance/treaty citations;0missing,24evidence reads.23 combined/gate tests passed. Strengthened real-engine bridge regression:7passed, exact complete reference coverage plus unchanged model permissions.",
     "workflow_availability": "Current frontend functions evaluated22representative saved inputs across11jurisdictions;22offer at least one assessment,0without a policy.",
-    "exact_citations": "9 real engine bridge tests passed; missing explicit references no longer fall back to unrelated keyword hits."
+    "exact_citations": "9 real engine bridge tests passed; missing explicit references no longer fall back to unrelated keyword hits. Broader retrieval/agent/release integrity regression:332passed in49.10s at49931db."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }
