@@ -1067,5 +1067,6 @@ for(const withTransfers of [false,true])test(`China personal foreign mixed incom
   expect(record).toContain('cn.cs.2020-03');expect(record).toContain('expires_after_current_year');
   expect(record).toContain('Personal foreign credit details');
   expect(record).toContain('not a B-form filing amount');
+  if(withTransfers){expect(record).toContain('Property transfer transaction details');expect(record).toContain('Unoffset loss');}
   await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('-1112');
 });

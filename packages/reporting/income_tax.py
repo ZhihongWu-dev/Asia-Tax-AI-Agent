@@ -115,6 +115,19 @@ def render(run, locale='zh'):
                 for row in pool['carryforward_history']:
                     values = [pool['country'].upper()] + [row[k] for k in ('origin_year','last_usable_year','opening_excess','credit_used','expired_amount','expires_after_current_year','next_year_carryforward')]
                     lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
+    if result.get('property_transfers'):
+        lines += ['', '## ' + say('逐笔财产转让明细', 'Property transfer transaction details'), '',
+            say('每笔收入为转让总收入，不是净收益；单笔未抵扣亏损不自动抵减其他交易。来源地、普通税率、原值和优惠资格以已确认工作表为准。',
+                'Each income is gross transfer proceeds, not net gain. Unoffset losses do not automatically reduce other transactions. Source classification, ordinary rate, cost and relief eligibility follow the confirmed workpaper.')]
+        for row in result['property_transfers']['transactions']:
+            lines += ['', '### ' + say('收入 ', 'Income ') + str(row['income_index']+1) + ' / ' + _text(row['country'].upper()), '',
+                '| ' + say('项目 | 金额', 'Item | Amount') + ' |', '| --- | --- |']
+            for key, zh, en in [('gross_proceeds','转让收入','Gross proceeds'),('original_cost','财产原值','Original cost'),
+                    ('reasonable_transfer_expenses','合理费用','Reasonable expenses'),('gain_before_donation','捐赠前损益','Gain before donation'),
+                    ('unoffset_loss','未抵扣亏损','Unoffset loss'),('allowed_donation','核定捐赠扣除','Allowed donation'),
+                    ('taxable_income','应税所得','Taxable income'),('gross_tax','减免前税额','Tax before reduction'),
+                    ('allowed_tax_reduction','核定减免税额','Allowed tax reduction'),('tax_after_reduction','减免后税额','Tax after reduction')]:
+                lines.append(f'| {_text(say(zh,en))} | {_text(row[key])} |')
     lines += ['', '## ' + say('保存的官方来源', 'Saved official sources'), '']
     sources = result.get('sources') or ([result['source']] if result.get('source') else [])
     for source in sources:

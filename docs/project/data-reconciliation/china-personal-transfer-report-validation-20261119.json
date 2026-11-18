@@ -1,0 +1,17 @@
+{
+  "status": "scoped_transaction_report_verified",
+  "validation": {
+    "backend_report_and_api_passed": 52,
+    "backend_seconds": 13.95,
+    "browser_passed": 2,
+    "browser_seconds": 38.1,
+    "exit_code": 0
+  },
+  "verified": [
+    "Chinese and English per-transaction income/cost/expense/donation/reduction/loss/tax tables",
+    "Profit and loss transaction values tested outside full JSON snapshot",
+    "Actual downloaded file includes readable transaction details",
+    "No-transfer report path retained"
+  ],
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}

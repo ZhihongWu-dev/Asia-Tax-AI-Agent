@@ -65,7 +65,12 @@
         "china-foreign-credit-component-20261119.json",
         "china-foreign-direct-api-20261119.json",
         "china-foreign-ui-validation-20261119.json",
-        "china-foreign-report-validation-20261119.json"
+        "china-foreign-report-validation-20261119.json",
+        "china-personal-foreign-api-20261119.json",
+        "china-personal-foreign-ui-validation-20261119.json",
+        "china-personal-transfer-api-20261119.json",
+        "china-personal-transfer-ui-validation-20261119.json",
+        "china-personal-transfer-report-validation-20261119.json"
       ],
       "limits": "Current frontend policy selection at7ad30f6 offers an assessment for all22 representative corporate/personal inputs across11jurisdictions. The complete122-case browser run covers representative workflows. Neither evidence establishes every income type, residency, special regime or filing obligation."
     },
@@ -165,7 +170,8 @@
     "production_build": "npm run build passed after personal foreign integration (tsc plus Vite2279modules). Local artifact hashes recorded; bundle-size warning remains; no deployment.",
     "china_personal_transfers": "10 internal component cases passed: per-transaction proceeds/costs/expenses, no ordinary loss netting, donations and reductions, source hashes. Annual workpaper and UI integration pending.",
     "china_personal_transfer_api": "60 focused component/API/report tests passed in21.03s; deductions reconcile, per-country cap includes separate transfer tax, save/restart/export verified. UI pending.",
-    "china_personal_transfer_ui": "TypeScript and2 browser cases passed in38.3s: transfer/no-transfer mixed income save/reopen/download, separate loss and positive transaction tax, country caps and historical expiry."
+    "china_personal_transfer_ui": "TypeScript and2 browser cases passed in38.3s: transfer/no-transfer mixed income save/reopen/download, separate loss and positive transaction tax, country caps and historical expiry.",
+    "china_personal_transfer_report": "52 focused API/report tests and2 browser cases passed. Bilingual per-transaction tables independently verify profit/loss and tax, including actual downloaded report."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

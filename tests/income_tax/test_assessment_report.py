@@ -249,3 +249,21 @@ def test_personal_foreign_report_exposes_country_caps_and_expiry(locale):
     assert ('| Country credit limit | 2592.00 |' if locale=='en' else '| 国别限额合计 | 2592.00 |') in clean
     assert ('| Comprehensive credit limit | 592.00 |' if locale=='en' else '| 综合所得限额 | 592.00 |') in clean
     assert '2031' in summary
+
+
+@pytest.mark.parametrize('locale', ['zh', 'en'])
+def test_transfer_report_keeps_each_transaction_and_loss_separate(locale):
+    from hashlib import sha256
+    from tests.income_tax.test_china_personal_foreign_assessment import transfer_case, run
+    data,paper=transfer_case()
+    snapshot=dict(inputs=data,basis=paper,result=run(data,paper))
+    digest=sha256(json.dumps(snapshot,sort_keys=True,separators=(',', ':')).encode()).hexdigest()
+    saved=dict(**snapshot,id='example',case_id='example',input_revision=1,
+        created_at='2026-11-19T00:00:00Z',status='calculated_basis',snapshot_hash=digest)
+    summary=render(saved,locale).split('## Complete inputs' if locale=='en' else '## 完整资料')[0].replace(chr(92),'')
+    assert ('Property transfer transaction details' if locale=='en' else '逐笔财产转让明细') in summary
+    first=summary.split('### Income 5 / SG' if locale=='en' else '### 收入 5 / SG')[1].split('### ')[0]
+    second=summary.split('### Income 6 / SG' if locale=='en' else '### 收入 6 / SG')[1]
+    assert ('| Tax after reduction | 100.0 |' if locale=='en' else '| 减免后税额 | 100.0 |') in first
+    assert ('| Unoffset loss | 1100 |' if locale=='en' else '| 未抵扣亏损 | 1100 |') in second
+    assert ('| Tax after reduction | 0.0 |' if locale=='en' else '| 减免后税额 | 0.0 |') in second
