@@ -29,6 +29,8 @@ export default function Composer({
   const [reading, setReading] = useState(false);
   const [error, setError] = useState('');
   const input = useRef<HTMLInputElement>(null);
+  const form = useRef<HTMLFormElement>(null);
+  const [dragging, setDragging] = useState(false);
   const upload = useRef<AbortController | null>(null);
   useEffect(() => () => upload.current?.abort(), []);
   async function select(selected?: File) {
@@ -41,6 +43,50 @@ export default function Composer({
     finally { if (!controller.signal.aborted) setReading(false); }
   }
   const composing = useRef(false);
+  const selectRef = useRef(select);
+  selectRef.current = select;
+  useEffect(() => {
+    const area = form.current?.closest('.chat-body');
+    if (!area) return;
+    let depth = 0;
+    const files = (event: DragEvent) => Array.from(event.dataTransfer?.types || []).includes('Files');
+    const enter = (event: Event) => {
+      if (!files(event as DragEvent)) return;
+      event.preventDefault();
+      if (++depth === 1 && !busy && !reading) setDragging(true);
+    };
+    const over = (event: Event) => {
+      const drag = event as DragEvent;
+      if (!files(drag)) return;
+      event.preventDefault();
+      if (drag.dataTransfer) drag.dataTransfer.dropEffect = busy || reading ? 'none' : 'copy';
+    };
+    const leave = (event: Event) => {
+      if (!files(event as DragEvent)) return;
+      if (--depth <= 0) { depth = 0; setDragging(false); }
+    };
+    const drop = (event: Event) => {
+      const drag = event as DragEvent;
+      if (!files(drag)) return;
+      event.preventDefault(); depth = 0; setDragging(false);
+      if (busy || reading) return;
+      const selected = Array.from(drag.dataTransfer?.files || []);
+      if (selected.length > 1) { setError('multiple_files'); return; }
+      void selectRef.current(selected[0]);
+    };
+    const preventNavigation = (event: DragEvent) => { if (files(event)) event.preventDefault(); };
+    area.addEventListener('dragenter', enter);
+    area.addEventListener('dragover', over);
+    area.addEventListener('dragleave', leave);
+    area.addEventListener('drop', drop);
+    window.addEventListener('dragover', preventNavigation);
+    window.addEventListener('drop', preventNavigation);
+    return () => {
+      area.removeEventListener('dragenter', enter); area.removeEventListener('dragover', over);
+      area.removeEventListener('dragleave', leave); area.removeEventListener('drop', drop);
+      window.removeEventListener('dragover', preventNavigation); window.removeEventListener('drop', preventNavigation);
+    };
+  }, [busy, reading]);
   async function send() {
     if (busy || reading || (!text.trim() && !file) || text.length > 4000) return;
     const question = text.trim() || say('请阅读附件，概括主要内容。', 'Please read the attachment and summarize it.');
@@ -48,6 +94,7 @@ export default function Composer({
   }
   return (
     <form
+      ref={form}
       className="composer"
       onSubmit={(e) => {
         e.preventDefault();
@@ -55,8 +102,9 @@ export default function Composer({
       }}
     >
       <input ref={input} type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.webp" hidden onChange={e => { void select(e.target.files?.[0]); e.target.value = ''; }} />
+      {dragging && <p role="status">{say('松开以上传附件', 'Drop files to attach')}</p>}
       {reading && <p role="status">{say('正在读取附件…', 'Reading attachment…')}</p>}
-      {error && <p role="alert">{pdfErrors[error]?.[locale === 'zh' ? 0 : 1] || say('上传失败，请重试。', 'Upload failed. Please try again.')}</p>}
+      {error && <p role="alert">{error === 'multiple_files' ? say('当前一条消息支持一个附件，请选择单个文件。', 'Attach one file per message.') : pdfErrors[error]?.[locale === 'zh' ? 0 : 1] || say('上传失败，请重试。', 'Upload failed. Please try again.')}</p>}
       {file && <div className="attachment-strip">
         <div className="attachment-chip">
           <>{imageThumbnail(file) ? <img className="attachment-thumbnail" src={imageThumbnail(file)} alt={file.name} /> : <Paperclip size={15} aria-hidden="true" />}</>

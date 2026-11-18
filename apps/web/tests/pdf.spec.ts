@@ -1,5 +1,35 @@
 import { test, expect } from '@playwright/test';
 
+test('dropping a PDF uses the attachment upload and rejects multiple files without losing it', async ({page}) => {
+  let uploads = 0;
+  await page.route('**/api/attachments?*', route => {
+    uploads++;
+    return route.fulfill({json:{name:'drop.pdf',page_count:1,pages:[{page:1,text:'Dropped document'}],empty_pages:[]}});
+  });
+  await page.goto('/');
+  await page.getByRole('button', {name:'Switch to English'}).click();
+  const transfer = await page.evaluateHandle(() => {
+    const data = new DataTransfer();
+    data.items.add(new File(['%PDF-fixture'], 'drop.pdf', {type:'application/pdf'}));
+    return data;
+  });
+  await page.locator('.chat-body').dispatchEvent('dragenter', {dataTransfer:transfer});
+  await expect(page.getByText('Drop files to attach', {exact:true})).toBeVisible();
+  await page.locator('.chat-body').dispatchEvent('drop', {dataTransfer:transfer});
+  await expect(page.locator('.composer .attachment-chip')).toContainText('drop.pdf');
+  await expect(page.getByText('Drop files to attach', {exact:true})).toHaveCount(0);
+  const multiple = await page.evaluateHandle(() => {
+    const data = new DataTransfer();
+    for (const name of ['a.pdf','b.pdf']) data.items.add(new File(['pdf'], name, {type:'application/pdf'}));
+    return data;
+  });
+  await page.locator('.chat-body').dispatchEvent('drop', {dataTransfer:multiple});
+  await expect(page.getByRole('alert')).toContainText('Attach one file per message');
+  await expect(page.locator('.composer .attachment-chip')).toContainText('drop.pdf');
+  expect(uploads).toBe(1);
+  await transfer.dispose(); await multiple.dispose();
+});
+
 test('PDF chip, consent, message and reload retain the attachment', async ({ page }) => {
   await page.route('**/api/attachments?*', route => route.fulfill({ json: {name:'case.pdf', page_count:2, pages:[{page:1,text:'Hong Kong company receives CNY 2000000.'}], empty_pages:[2]} }));
   await page.goto('/');
