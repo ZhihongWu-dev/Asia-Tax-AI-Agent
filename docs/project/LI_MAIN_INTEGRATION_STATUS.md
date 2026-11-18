@@ -18,8 +18,11 @@ promotion remain incomplete.
 - `render.acceptance.yaml` provides independent web/worker services targeting
   `Zhihong-Wu`, with automatic deployment disabled. Its structure passed the
   official schema validator. No cloud services were created by preparing it.
-- Catalog execution remains pending. The recorded 404-operation preflight
-  verifies before-state guards only; source admission is separate. Subsequent
+- Catalog execution remains pending. The older 404-operation plan would duplicate
+  two newly admitted overlay clauses in the base table. A revised 402-operation
+  plan omits those duplicate inserts, preserves all other operations and passes
+  fresh read-only before-state checks plus compatibility checks against all 44
+  admitted overlays. The old collision was reproduced explicitly. Subsequent
   repaired-reference verification found neither old blocked citation among its
   662 dependencies. Twelve missing Indonesian procedure passages were reviewed
   and admitted through the private overlay. The dedicated reader now returns
@@ -41,7 +44,8 @@ promotion remain incomplete.
 Evidence: [rental implementation](data-reconciliation/vietnam-business-consolidation-20261118.md),
 [business implementation](data-reconciliation/vietnam-business-individual-review-20261118.md),
 [deployment preparation](RENDER_DEPLOYMENT.md),
-[catalog guards](data-reconciliation/catalog-procedure-migration-preflight-20261118.json),
+[current catalog plan](data-reconciliation/catalog-migration-plan-overlay-safe-20261118.json),
+[current catalog guards](data-reconciliation/catalog-overlay-safe-preflight-20261118.json),
 [earlier live source blockers](data-reconciliation/atlas-live-catalog-preflight-20261118.json),
 [repaired-source admission](data-reconciliation/indonesia-procedure-source-admission-20261118.json),
 [reviewed extraction differences](data-reconciliation/live-staged-source-comparison-20261118.json).

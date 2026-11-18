@@ -1,0 +1,25 @@
+{
+  "verified_operations": 402,
+  "catalog_revision": "ae12ac1c79e22e80ec60f940a5e20a6b03a9df6408672447e6df0a0ca52b0195",
+  "scope": "operation_targets_only",
+  "status": "read_only_preflight_passed_not_applied",
+  "snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "14f051ed6c17a0ffe0902eb954f07f3869c9ad042a2436fa85e152345ea658b9",
+    "review_sha256": "82c4cf4e2aa4fe34ee1279ca82bb4acd84b8e5df603aa870ac346c41be6127ac"
+  },
+  "old_plan_reproduced_failure": "overlay_base_collision",
+  "accepted_overlay_count": 44,
+  "overlay_compatibility": "all admitted overlays checked against simulated target",
+  "source_scope": "Operation guards and admitted overlay compatibility only; full runtime/catalog acceptance remains separate",
+  "local_tool_regression": {
+    "passed": 33,
+    "skipped": 1,
+    "deselected": 7,
+    "seconds": 2.13,
+    "skip_reason": "PostgreSQL lock test requires PostgreSQL; this run used local SQLite",
+    "command": "pytest tests/integration/test_catalog_migration.py tests/integration/test_catalog_executor.py -m not-integration -q (marker expression: not integration)"
+  }
+}
