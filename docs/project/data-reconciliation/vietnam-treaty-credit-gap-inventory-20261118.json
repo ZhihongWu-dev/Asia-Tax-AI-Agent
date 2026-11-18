@@ -1,0 +1,145 @@
+{
+  "status": "gap_inventory_not_treaty_business_acceptance",
+  "rules_reviewed": [
+    {
+      "rule_id": "vn-cn.inbound.credit",
+      "condition": "payee_resident = true",
+      "effect": "credit",
+      "cite_ids": "treaty.cn-vn.1995.mli.en#23.1",
+      "current_procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60",
+      "clause_text_hashes": {
+        "treaty.cn-vn.1995.mli.en#23.1": "84ecca6b1774286b6813ff483b346865d5e7013f6b253b037637134122e7de9d"
+      }
+    },
+    {
+      "rule_id": "vn-hk.inbound.credit",
+      "condition": "payee_resident = true",
+      "effect": "credit",
+      "cite_ids": "treaty.hk-vn.2008.en#22.2",
+      "current_procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60",
+      "clause_text_hashes": {
+        "treaty.hk-vn.2008.en#22.2": "17774cb7cbf09718b323657776dc3d245040cbb659c7ecec0c1249d8b1afd79b"
+      }
+    },
+    {
+      "rule_id": "vn-sg.inbound.credit",
+      "condition": "payee_resident = true",
+      "effect": "credit",
+      "cite_ids": "treaty.sg-vn.1994.en#24.2",
+      "current_procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60",
+      "clause_text_hashes": {
+        "treaty.sg-vn.1994.en#24.2": "f58353efd1639e53e7a9708d9d2a188338c36dfc821e1e25f73be7b83a8e46fe"
+      }
+    },
+    {
+      "rule_id": "vn-jp.inbound.credit",
+      "condition": "payee_resident = true",
+      "effect": "credit",
+      "cite_ids": "treaty.jp-vn.1995.mli.en#22.1",
+      "current_procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60",
+      "clause_text_hashes": {
+        "treaty.jp-vn.1995.mli.en#22.1": "d455d87157191f3eabe79cd3f4a53de68521eafab3e9b409d066fef91819c2a5"
+      }
+    },
+    {
+      "rule_id": "vn-th.inbound.credit",
+      "condition": "payee_resident = true",
+      "effect": "credit",
+      "cite_ids": "treaty.th-vn.1992.art21-25.en#23.2",
+      "current_procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60",
+      "clause_text_hashes": {
+        "treaty.th-vn.1992.art21-25.en#23.2": "4921848ab446e04d1d077aba48fa6ef13a4fa44d033ad5777f1dabf155a68140"
+      }
+    },
+    {
+      "rule_id": "vn-ae.inbound.credit",
+      "condition": "payee_resident = true",
+      "effect": "credit",
+      "cite_ids": "treaty.ae-vn.2009.en#23.1",
+      "current_procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60",
+      "clause_text_hashes": {
+        "treaty.ae-vn.2009.en#23.1": "d5f7c9748de06a98884077484f5bbb60d952e8b1f26ff2fa9751616ba6d5cb33"
+      }
+    },
+    {
+      "rule_id": "vn-id.inbound.credit",
+      "condition": "payee_resident = true",
+      "effect": "credit",
+      "cite_ids": "treaty.id-vn.1997.mli.en#23.1",
+      "current_procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60",
+      "clause_text_hashes": {
+        "treaty.id-vn.1997.mli.en#23.1": "f00702d07bfa41266b8fb649720203048e782005006586befc2e26d402ffb088"
+      }
+    },
+    {
+      "rule_id": "vn-in.inbound.credit",
+      "condition": "payee_resident = true",
+      "effect": "credit",
+      "cite_ids": "treaty.in-vn.1994.mofa.text#24.2",
+      "current_procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60",
+      "clause_text_hashes": {
+        "treaty.in-vn.1994.mofa.text#24.2": "2b5c78e3d8d22800b0574ec4424bcb0ac480f60a943b6db6c7d8b70fd4da88ed"
+      }
+    },
+    {
+      "rule_id": "vn-kr.inbound.credit",
+      "condition": "payee_resident = true",
+      "effect": "credit",
+      "cite_ids": "treaty.kr-vn.1994.mofa.text#23.1",
+      "current_procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60",
+      "clause_text_hashes": {
+        "treaty.kr-vn.1994.mofa.text#23.1": "3b07d1df0ffb9a567566185d70d0150eea55046d0554085257e7e0795f8a48a1"
+      }
+    },
+    {
+      "rule_id": "vn-my.inbound.credit",
+      "condition": "payee_resident = true",
+      "effect": "credit",
+      "cite_ids": "treaty.my-vn.1995.en#24.2",
+      "current_procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60",
+      "clause_text_hashes": {
+        "treaty.my-vn.1995.en#24.2": "d932bab092f1d223899b116c4497deee476f7f96df63e88d34b9964542ef4332"
+      }
+    },
+    {
+      "rule_id": "vn-hk.inbound.credit_underlying",
+      "condition": "payee_resident = true and holding_pct >= $hk-vn.inbound.indirect_credit_holding_pct_min",
+      "effect": "credit_underlying",
+      "cite_ids": "treaty.hk-vn.2008.en#22.3",
+      "current_procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60",
+      "clause_text_hashes": {
+        "treaty.hk-vn.2008.en#22.3": "e82836bbf65758dfc5d896cf784c1691128e050bf9b585cb18e9741ca35a304f"
+      }
+    },
+    {
+      "rule_id": "vn-sg.inbound.credit_underlying",
+      "condition": "payee_resident = true and holding_pct >= $sg-vn.inbound.indirect_credit_holding_pct_min",
+      "effect": "credit_underlying",
+      "cite_ids": "treaty.sg-vn.1994.en#24.2",
+      "current_procedure": "vn.btc.treaty-procedure#p59;vn.btc.treaty-procedure#p60",
+      "clause_text_hashes": {
+        "treaty.sg-vn.1994.en#24.2": "f58353efd1639e53e7a9708d9d2a188338c36dfc821e1e25f73be7b83a8e46fe"
+      }
+    }
+  ],
+  "findings": [
+    "All12 Vietnam inbound credit rules still cite old procedural pages; current Circular89 Article34 must replace procedure references after source registration.",
+    "Current boolean credit effect does not encode tax-sparing or deemed-percentage credits.",
+    "Singapore24(2)(b) and24(4), Thailand23(2)(b), Malaysia24(3)/(6), Indonesia23(3)/(4) and India24(3) require separate relief-condition review.",
+    "Korea23(3)-(5) describe relief in Korea on Vietnamese income; they must not be reversed into Vietnam relief for Korean income.",
+    "Hong Kong22(3) and Singapore24(2)(a) include10-percent direct/indirect ownership requirements for corporate underlying credit."
+  ],
+  "indonesia_priority": {
+    "source_file": "database/raw/id-vn/treaty.id-vn.1997.mli.en.pdf",
+    "sha256": "3cf902e31e8dd36ee977e44f2b1ff306cd99bcf6e6a7f115f28e90d669448226",
+    "reviewed_native_page": 13,
+    "official_url": "https://www.pajak.go.id/sites/default/files/2025-06/Tax%20Treaty%20Vietnam%20%28Modified%20by%20MLI%29%20-%20EN.pdf",
+    "finding": "Article23(4) specifies15-percent deemed paid tax on dividends/interest/royalties within respective paragraph2 provisions. Existing actual-paid-only credit may understate relief.",
+    "source_caution": "Official synthesised PDF cover says Cambodia while operative introduction and definitions say Vietnam. Compare authenticated original agreement before admitting new numeric rule; URL/title alone insufficient."
+  },
+  "next_actions": [
+    "Verify each treaty original/protocol and temporal conditions for sparing/deemed credits.",
+    "Implement explicit credit basis distinct from source withholding; retain same-income cap.",
+    "Register current procedure and rebind staged rules; frozen root checker inputs remain unchanged."
+  ]
+}
