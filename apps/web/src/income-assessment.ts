@@ -112,7 +112,7 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
     return [{id:'vn_company_2026',label:['越南普通企业所得税（2026）','Vietnam ordinary company tax (2026)'],
       notice:['仅限越南设立企业的境内普通所得。须先核定税基、亏损及纳税调整，排除第23(9)条所得、特殊行业及优惠税率。已保存明细须覆盖未扣收入减项的销售服务、财务和其他法定收入。本期收入决定年度减税；上期收入及经营月份决定普通税率和小额收入免税，新设企业使用本期实际收入。两项关联企业排除条件须分别核对。其他优惠先扣，年度减税后扣，预缴税款最后抵减；结果尚未进行申报取整。',
         'Vietnam-established enterprises with ordinary domestic income only. Establish the tax base after losses and adjustments, excluding article 23(9) income, special industries and preferential rates. Saved receipts must include sales/services before revenue deductions, financial and other statutory revenue. Current revenue determines annual relief; prior revenue and active months determine ordinary rates and small-revenue exemption, except new enterprises use current actual revenue. Check the two related-enterprise exclusions separately. Other incentives precede annual relief; prepayments follow. Before return rounding.'],
-      fields:[money('taxable_income','核定应税所得额','Established taxable income'),
+      fields:[money('taxable_income','核定应税所得额','Established taxable income'),money('exempt_income','已包含在收入中的核定免税所得','Established exempt income included in saved income'),
         confirm('vietnam_established','企业在越南设立','Enterprise established in Vietnam'),
         confirm('new_in_current_period','企业在本期新设立','Enterprise newly established in this period'),
         {...money('previous_period_revenue','上期完整法定收入','Complete prior-period statutory revenue'),showWhen:['new_in_current_period','false']},

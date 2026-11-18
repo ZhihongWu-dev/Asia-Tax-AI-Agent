@@ -1,0 +1,39 @@
+{
+  "scope": "Vietnam ordinary domestic company saved-basis reconciliation",
+  "original_review": [
+    {
+      "doc_id": "vn.law.cit67.2025.vi",
+      "file": "database/raw/vn/vn.law.cit67.2025.vi.pdf",
+      "sha256": "ae706468190afe8d111dd0fccf240e7a980eb002c5d0b5cb1cfe127d92f9c1cd",
+      "visually_reviewed_pdf_pages": [
+        6
+      ]
+    },
+    {
+      "doc_id": "vn.decree320.2025.vi",
+      "file": "database/raw/vn/vn.decree320.2025.vi.pdf",
+      "sha256": "4a426bbe928511d278aa23318156d27747c45669e8ee9002fb7a635794f51e06",
+      "visually_reviewed_pdf_pages": [
+        16,
+        17,
+        18
+      ]
+    }
+  ],
+  "changes": [
+    "Require manual taxable income to equal complete saved ordinary income minus established deductible expenses, exempt income and usable prior losses.",
+    "Keep current loss and unused prior loss separate, and retain complete saved statutory revenue for existing exemption/rate/annual-reduction eligibility helpers.",
+    "Show reconciliation in saved results and reports; reject inconsistent requests before modifying saved revision/result.",
+    "Source review metadata now records selected verified formula/loss pages while preserving incomplete full-text review status."
+  ],
+  "validation": {
+    "income_and_report": "1541 passed in37.15s; exit0",
+    "typescript": "tsc -b exit0",
+    "browser": "2 passed in31.8s; existing/new company saved result, source links, reconciliation and reopening"
+  },
+  "limits": [
+    "Loss vintage/continuous five-year entitlement and deduction/exemption eligibility remain established inputs, not automatically adjudicated.",
+    "No new foreign-credit/annual-relief ordering resolution, special-activity allocation or full Vietnam legal coverage claimed.",
+    "Existing partial-review provenance and overall business acceptance remain incomplete."
+  ]
+}

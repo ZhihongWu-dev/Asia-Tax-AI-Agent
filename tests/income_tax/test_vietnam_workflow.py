@@ -102,6 +102,8 @@ def test_company_current_revenue_comes_from_all_saved_receipts():
     assert Decimal(result['balance_due']) == -45000000
     data['incomes'].append(dict(category='interest',source_jurisdiction='vn',
         gross_amount='1',description='Additional ordinary financial revenue'))
+    # Matching allowed cost keeps the profit base fixed while gross revenue crosses the relief threshold.
+    data['claimed_deductions']='9000000001'
     result = run(data,company_basis())
     assert Decimal(result['final_tax']) == 150000000
     assert Decimal(result['rate']) == Decimal('.17')

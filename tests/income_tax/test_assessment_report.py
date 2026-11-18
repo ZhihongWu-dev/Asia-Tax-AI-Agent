@@ -72,6 +72,7 @@ def test_snapshot_mismatch_rejected():
     ('hk_profits', 'hk_profits_basis_sources.json', 2),
     ('ae', 'ae_basis_sources.json', 1),
     ('my_company', 'my_company_basis_sources.json', 1),
+    ('vn_company', 'vn_2026_sources.json', 5),
 ])
 def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, manifest, count):
     from hashlib import file_digest
@@ -87,10 +88,11 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
     from tests.income_tax.test_hong_kong_reconciliation import inputs as hong_kong_inputs
     from tests.income_tax.test_uae_reconciliation import inputs as uae_inputs
     from tests.income_tax.test_malaysia_company_reconciliation import inputs as malaysia_company_inputs
+    from tests.income_tax.test_vietnam_workflow import company_facts, company_basis
 
     root = Path(__file__).resolve().parents[2]
     sources = json.loads((root/'packages/income_tax'/manifest).read_text(
-        encoding='utf-8'))['sources']
+        encoding='utf-8'))['company' if policy=='vn_company' else 'sources']
     if policy == 'cn_small':
         sources = [s for s in sources if s['doc_id'] in ('cn.law.eit', 'cn.mof.sta.2023-12')]
     elif policy == 'th_dividend':
@@ -131,6 +133,8 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
             data, basis = uae_inputs()
         elif policy == 'my_company':
             data, basis = malaysia_company_inputs()
+        elif policy == 'vn_company':
+            data, basis = company_facts(), company_basis()
         elif policy == 'th_company':
             data = facts()
             data.update(jurisdiction='th', currency='THB')
@@ -144,11 +148,11 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
         saved = client.put(path, headers=HEADERS, json=dict(
             revision=0, request_id=str(uuid4()), inputs=data))
         assert saved.status_code == 200, saved.text
-        if policy in ('th_company', 'jp_company', 'id_company', 'sg_company', 'hk_profits', 'ae', 'my_company'):
+        if policy in ('th_company', 'jp_company', 'id_company', 'sg_company', 'hk_profits', 'ae', 'my_company', 'vn_company'):
             key = 'net_taxable_profit' if policy == 'th_company' else 'taxable_income_before_rounding'
             if policy == 'sg_company':key = 'normal_chargeable_income'
             if policy == 'hk_profits':key = 'assessable_profits'
-            if policy == 'ae':key = 'taxable_income'
+            if policy in ('ae','vn_company'):key = 'taxable_income'
             if policy == 'my_company':key = 'chargeable_income'
             rejected = client.post(path+'/runs', headers=HEADERS, json=dict(
                 revision=1, request_id=str(uuid4()),

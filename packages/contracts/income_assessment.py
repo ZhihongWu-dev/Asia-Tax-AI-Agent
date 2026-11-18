@@ -247,6 +247,7 @@ class THDividends(Basis):
 class VNCompany(Basis):
     policy: Literal['vn_company_2026']
     taxable_income: Money
+    exempt_income: Money = Decimal('0')
     vietnam_established: StrictBool
     new_in_current_period: StrictBool
     previous_period_revenue: Money | None

@@ -8,10 +8,11 @@
       "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/67qh.signed.pdf",
       "sha256": "ae706468190afe8d111dd0fccf240e7a980eb002c5d0b5cb1cfe127d92f9c1cd",
       "provisions": [
-        "Articles 4, 10"
+        "Articles 4, 10",
+        "Article7(1)-(2), PDF page6"
       ],
       "registration_status": "registered_original_only",
-      "review_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text.",
+      "review_status": "Selected original page6 visually reviewed for taxable-income formula; other registered provisions retain their prior review limits. Not full verified transcription.",
       "file": "database/raw/vn/vn.law.cit67.2025.vi.pdf"
     },
     {
@@ -52,10 +53,11 @@
       "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/12/320-ndcp.signed.pdf",
       "sha256": "4a426bbe928511d278aa23318156d27747c45669e8ee9002fb7a635794f51e06",
       "provisions": [
-        "Articles 4(15) as amended, 11, 23(9)"
+        "Articles 4(15) as amended, 11, 23(9)",
+        "Articles6-8, PDF pages16-18"
       ],
       "registration_status": "registered_original_only",
-      "review_status": "Scanned original; pages41 and72 visually reviewed. Not registered as full verified transcription.",
+      "review_status": "Original pages16-18 visually reviewed for activity segregation, current/prior losses, five-year window and statutory revenue; prior pages41 and72 review retained. Not full verified transcription.",
       "file": "database/raw/vn/vn.decree320.2025.vi.pdf"
     }
   ],

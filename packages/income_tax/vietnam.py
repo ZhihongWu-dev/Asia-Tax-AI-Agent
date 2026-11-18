@@ -16,6 +16,33 @@ from .vietnam_reliefs import (company_small_revenue_exemption,
 POLICY_VERSION = 'vn-company-calendar2026-2026-11-17'
 
 
+def reconcile_company_basis(case, *, taxable_income, exempt_income):
+    """Law67 Article7 and Decree320 Article7; verified domestic ordinary amounts.
+
+    Saved income includes statutory revenue and other ordinary taxable receipts.
+    Deduction evidence and loss eligibility/vintages must be established first.
+    Exempt income is not also included in deductions. Special activity pools
+    remain outside the ordinary domestic adapter.
+    """
+    base,exempt=map(amount,(taxable_income,exempt_income))
+    with localcontext() as context:
+        context.prec=40
+        total=sum((item.gross_amount for item in case.incomes),ZERO)
+        if exempt>total:
+            raise ValueError('Exempt income exceeds saved ordinary income')
+        before=total-case.claimed_deductions-exempt
+        available=max(ZERO,before)
+        used=min(available,case.carried_losses)
+        net=available-used
+        if base!=net:
+            raise ValueError('Vietnam company taxable income must reconcile to saved income, deductions, exemption and eligible prior losses')
+        return dict(total_income=total,non_taxable_income=ZERO,exempt_income=exempt,
+            allowed_deductions=case.claimed_deductions,income_before_loss_relief=before,
+            current_period_loss=max(ZERO,-before),prior_losses_used=used,
+            prior_losses_unused=case.carried_losses-used,taxable_income=net,
+            scope='Established ordinary domestic amounts; verify continuous five-year loss window and special-activity exclusions. Unused/current losses are not future carryforward approval.')
+
+
 def company_tax(taxable_income, *, tax_year, vietnam_established, new_in_current_period,
         previous_period_revenue, previous_active_months, current_period_statutory_revenue,
         exemption_related_enterprise_disqualified, reduced_rate_related_enterprise_disqualified,

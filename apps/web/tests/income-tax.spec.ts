@@ -783,6 +783,7 @@ for (const isNew of [false,true]) test(`Vietnam company ${isNew?'new':'existing'
   await form.getByRole('button',{name:'Save income-tax details'}).click();
   const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
   await calc.getByLabel('Applicable regime').selectOption('vn_company_2026');
+  await calc.getByLabel('Established exempt income included in saved income',{exact:true}).fill('0');
   await calc.getByLabel('Established taxable income',{exact:true}).fill('1000000000');
   await calc.getByRole('combobox',{name:'Enterprise established in Vietnam',exact:true}).selectOption('true');
   const newField=calc.getByRole('combobox',{name:'Enterprise newly established in this period',exact:true});
@@ -813,6 +814,7 @@ for (const isNew of [false,true]) test(`Vietnam company ${isNew?'new':'existing'
   await expect(report.locator('dl > div').filter({hasText:'Tax for this assessment'}).locator('dd')).toHaveText(isNew ? /^150000000(?:\.0+)?$/ : /^105000000(?:\.0+)?$/);
   if(!isNew) await expect(report).toContainText('-45000000');
   await expect(report.getByRole('link')).toHaveCount(5);
+  await expect(report.getByRole('region',{name:'Company basis reconciliation',exact:true})).toContainText('9000000000');
   await expect(report).toContainText('Annual tax reduction');
   await openIncome(page);
   await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(isNew?'150000000':'105000000');

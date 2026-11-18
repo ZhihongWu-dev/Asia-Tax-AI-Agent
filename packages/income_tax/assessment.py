@@ -406,7 +406,11 @@ def calculate(case: IncomeTaxCase, basis):
         with localcontext() as ctx:
             ctx.prec = 40
             revenue = sum((i.gross_amount for i in case.incomes), Decimal('0'))
+        reconciliation = vietnam.reconcile_company_basis(case,
+            taxable_income=basis.taxable_income, exempt_income=args.pop('exempt_income'))
         result = vietnam.company_tax(tax_year=2026, current_period_statutory_revenue=revenue, **args)
+        result['basis_reconciliation'] = reconciliation
+        result['policy_version'] += '-reconciled-20261119'
     elif policy=='vn_employment_2026':
         if any(i.category != 'employment' or i.source_jurisdiction != 'vn' for i in case.incomes):
             raise ValueError('Other income and foreign employment require their separate Vietnam workflow')
