@@ -1,0 +1,367 @@
+{
+  "checks": [
+    {
+      "rule": "id-cn.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": "id-cn.outbound_wht.cap_10.pre_pmk112"
+    },
+    {
+      "rule": "id-cn.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": "id-cn.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-cn.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": "id-cn.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-cn.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": "id-cn.anti_abuse.ppt.pre_pmk112"
+    },
+    {
+      "rule": "id-cn.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": "id-cn.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-cn.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": "id-cn.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-hk.outbound_wht.cap_5",
+      "date": "2025-12-30",
+      "selected": "id-hk.outbound_wht.cap_5.pre_pmk112"
+    },
+    {
+      "rule": "id-hk.outbound_wht.cap_5",
+      "date": "2025-12-31",
+      "selected": "id-hk.outbound_wht.cap_5"
+    },
+    {
+      "rule": "id-hk.outbound_wht.cap_5",
+      "date": "2026-01-01",
+      "selected": "id-hk.outbound_wht.cap_5"
+    },
+    {
+      "rule": "id-hk.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": "id-hk.outbound_wht.cap_10.pre_pmk112"
+    },
+    {
+      "rule": "id-hk.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": "id-hk.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-hk.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": "id-hk.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-hk.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": "id-hk.anti_abuse.ppt.pre_pmk112"
+    },
+    {
+      "rule": "id-hk.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": "id-hk.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-hk.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": "id-hk.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-in.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": "id-in.outbound_wht.cap_10.pre_pmk112"
+    },
+    {
+      "rule": "id-in.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": "id-in.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-in.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": "id-in.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-in.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": "id-in.anti_abuse.ppt.pre_pmk112"
+    },
+    {
+      "rule": "id-in.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": "id-in.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-in.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": "id-in.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-jp.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": "id-jp.outbound_wht.cap_10.pre_pmk112"
+    },
+    {
+      "rule": "id-jp.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": "id-jp.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-jp.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": "id-jp.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-jp.outbound_wht.cap_15",
+      "date": "2025-12-30",
+      "selected": "id-jp.outbound_wht.cap_15.pre_pmk112"
+    },
+    {
+      "rule": "id-jp.outbound_wht.cap_15",
+      "date": "2025-12-31",
+      "selected": "id-jp.outbound_wht.cap_15"
+    },
+    {
+      "rule": "id-jp.outbound_wht.cap_15",
+      "date": "2026-01-01",
+      "selected": "id-jp.outbound_wht.cap_15"
+    },
+    {
+      "rule": "id-jp.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": "id-jp.anti_abuse.ppt.pre_pmk112"
+    },
+    {
+      "rule": "id-jp.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": "id-jp.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-jp.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": "id-jp.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-kr.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": "id-kr.outbound_wht.cap_10.pre_pmk112"
+    },
+    {
+      "rule": "id-kr.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": "id-kr.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-kr.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": "id-kr.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-kr.outbound_wht.cap_15",
+      "date": "2025-12-30",
+      "selected": "id-kr.outbound_wht.cap_15.pre_pmk112"
+    },
+    {
+      "rule": "id-kr.outbound_wht.cap_15",
+      "date": "2025-12-31",
+      "selected": "id-kr.outbound_wht.cap_15"
+    },
+    {
+      "rule": "id-kr.outbound_wht.cap_15",
+      "date": "2026-01-01",
+      "selected": "id-kr.outbound_wht.cap_15"
+    },
+    {
+      "rule": "id-kr.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": "id-kr.anti_abuse.ppt.pre_pmk112"
+    },
+    {
+      "rule": "id-kr.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": "id-kr.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-kr.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": "id-kr.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-my.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": "id-my.outbound_wht.cap_10.pre_pmk112"
+    },
+    {
+      "rule": "id-my.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": "id-my.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-my.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": "id-my.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-my.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": "id-my.anti_abuse.ppt.pre_pmk112"
+    },
+    {
+      "rule": "id-my.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": "id-my.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-my.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": "id-my.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-vn.outbound_wht.cap_15",
+      "date": "2025-12-30",
+      "selected": "id-vn.outbound_wht.cap_15.pre_pmk112"
+    },
+    {
+      "rule": "id-vn.outbound_wht.cap_15",
+      "date": "2025-12-31",
+      "selected": "id-vn.outbound_wht.cap_15"
+    },
+    {
+      "rule": "id-vn.outbound_wht.cap_15",
+      "date": "2026-01-01",
+      "selected": "id-vn.outbound_wht.cap_15"
+    },
+    {
+      "rule": "id-ae.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": "id-ae.outbound_wht.cap_10.pre_pmk112"
+    },
+    {
+      "rule": "id-ae.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": "id-ae.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-ae.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": "id-ae.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-ae.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": "id-ae.anti_abuse.ppt.pre_pmk112"
+    },
+    {
+      "rule": "id-ae.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": "id-ae.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-ae.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": "id-ae.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-sg.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": "id-sg.outbound_wht.cap_10.pre_pmk112"
+    },
+    {
+      "rule": "id-sg.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": "id-sg.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-sg.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": "id-sg.outbound_wht.cap_10"
+    },
+    {
+      "rule": "id-sg.outbound_wht.cap_15",
+      "date": "2025-12-30",
+      "selected": "id-sg.outbound_wht.cap_15.pre_pmk112"
+    },
+    {
+      "rule": "id-sg.outbound_wht.cap_15",
+      "date": "2025-12-31",
+      "selected": "id-sg.outbound_wht.cap_15"
+    },
+    {
+      "rule": "id-sg.outbound_wht.cap_15",
+      "date": "2026-01-01",
+      "selected": "id-sg.outbound_wht.cap_15"
+    },
+    {
+      "rule": "id-sg.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": "id-sg.anti_abuse.ppt.pre_pmk112"
+    },
+    {
+      "rule": "id-sg.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": "id-sg.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-sg.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": "id-sg.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-th.outbound_wht.cap_15",
+      "date": "2025-12-30",
+      "selected": "id-th.outbound_wht.cap_15.pre_pmk112"
+    },
+    {
+      "rule": "id-th.outbound_wht.cap_15",
+      "date": "2025-12-31",
+      "selected": "id-th.outbound_wht.cap_15"
+    },
+    {
+      "rule": "id-th.outbound_wht.cap_15",
+      "date": "2026-01-01",
+      "selected": "id-th.outbound_wht.cap_15"
+    },
+    {
+      "rule": "id-th.outbound_wht.cap_20",
+      "date": "2025-12-30",
+      "selected": "id-th.outbound_wht.cap_20.pre_pmk112"
+    },
+    {
+      "rule": "id-th.outbound_wht.cap_20",
+      "date": "2025-12-31",
+      "selected": "id-th.outbound_wht.cap_20"
+    },
+    {
+      "rule": "id-th.outbound_wht.cap_20",
+      "date": "2026-01-01",
+      "selected": "id-th.outbound_wht.cap_20"
+    },
+    {
+      "rule": "id-th.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": "id-th.anti_abuse.ppt.pre_pmk112"
+    },
+    {
+      "rule": "id-th.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": "id-th.anti_abuse.ppt"
+    },
+    {
+      "rule": "id-th.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": "id-th.anti_abuse.ppt"
+    }
+  ],
+  "passed": 72,
+  "overlaps": 0,
+  "gaps": 0
+}

@@ -1,0 +1,43 @@
+{
+  "status": "registered_candidate_pending_cloud_admission",
+  "doc": {
+    "id": "id.dgt.pmk112-transition-2026",
+    "jur": "id",
+    "type": "guidance",
+    "category": "5;6",
+    "title": "DGT implementation announcement for PMK 112/2025",
+    "url": "https://www.pajak.go.id/index.php/id/pengumuman/pelaksanaan-peraturan-menteri-keuangan-nomor-112-tahun-2025-tentang-tata-cara-penerapan",
+    "file": "raw/id/id.dgt.pmk112-transition-2026.html",
+    "sha256": "981cdba4f34f3e8b4d4da3cf2919c0552254d80393d7f2474e3ce413e8d4782f",
+    "lang": "id",
+    "effective_from": "",
+    "effective_to": "",
+    "note": "Clarifies PMK 112/2025 implementation and preserves pre-promulgation PER-25-format certificates for their stated period. Publication date not established from captured HTML; no date inferred from attachment directory."
+  },
+  "clauses": [
+    {
+      "cite_id": "id.dgt.pmk112-transition-2026#1",
+      "doc_id": "id.dgt.pmk112-transition-2026",
+      "label": "Announcement item 1",
+      "text": "Penerapan Persetujuan Penghindaran Pajak Berganda (P3B) oleh Wajib Pajak Luar Negeri (WPLN) menggunakan format Formulir DGT sebagaimana diatur dalam PMK-112/2025."
+    },
+    {
+      "cite_id": "id.dgt.pmk112-transition-2026#2",
+      "doc_id": "id.dgt.pmk112-transition-2026",
+      "label": "Announcement item 2",
+      "text": "SKD WPLN/Formulir DGT dengan format berdasarkan Peraturan Direktur Jenderal Pajak Nomor PER-25/PJ/2018 tentang Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda yang diterbitkan sebelum diundangkannya PMK-112/2025, masih tetap berlaku sesuai dengan periode yang tercantum dalam SKD WPLN/Formulir DGT tersebut."
+    },
+    {
+      "cite_id": "id.dgt.pmk112-transition-2026#3",
+      "doc_id": "id.dgt.pmk112-transition-2026",
+      "label": "Announcement item 3",
+      "text": "Penyampaian informasi dalam Formulir DGT dan pengunggahannya tetap dilakukan melalui Menu LA.03-03 Surat Keterangan Domisili Wajib Pajak Luar Negeri (SKD WPLN) yang telah tersedia di Coretax DJP."
+    },
+    {
+      "cite_id": "id.dgt.pmk112-transition-2026#4",
+      "doc_id": "id.dgt.pmk112-transition-2026",
+      "label": "Announcement item 4",
+      "text": "Sepanjang belum dilakukan penyesuaian format Surat Keterangan Domisili Subjek Pajak Dalam Negeri (SKD SPDN) sesuai dengan PMK-112/2025, dokumen SKD SPDN yang dihasilkan melalui Menu LA.03-01 Surat Keterangan Domisili Subjek Pajak Dalam Negeri (SKD SPDN) pada Coretax DJP tetap dapat digunakan untuk mendapatkan manfaat P3B di negara atau yurisdiksi mitra P3B."
+    }
+  ]
+}
