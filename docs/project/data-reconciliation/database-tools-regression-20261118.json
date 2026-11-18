@@ -1,0 +1,10 @@
+{
+  "checked_on": "2026-11-18",
+  "commit": "7d73d4c",
+  "command": "python -X utf8 -m pytest tests/database -q",
+  "environment": "Existing isolated database-tool test-env under the integration audit directory",
+  "result": {"passed": 92, "failed": 0, "seconds": 32.02, "exit_code": 0},
+  "initial_attempt": "Application virtual environment failed collection with 11 dependency import errors, including absent pymupdf. No tests executed in that attempt. Rerun used the existing tool-specific environment without modifying product code.",
+  "scope": "Database extraction and tooling regression; not hosted schema migration or full legal-data acceptance.",
+  "completion_claim": false
+}
