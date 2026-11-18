@@ -1,0 +1,14 @@
+{
+  "case": "cfc_jp.open",
+  "status": "isolated_baseline_checked",
+  "seconds": 3416.25,
+  "counts": {
+    "enumerated_paths": 346434,
+    "unique_states": 11356,
+    "frontier_states": 5
+  },
+  "failures": [],
+  "scope": "Original stored graph and frozen data; only exact state-key compression replaces duplicate comparisons. Original running checker unchanged.",
+  "verification_limit": "One isolated baseline case only. Original twelve-case checker still running; frozen checker not edited. This is not whole-suite acceptance.",
+  "helper_sha256": "48903052503c9597496f2a0d68d1f62600ef27221d931f5dc95fd2147ba464ed"
+}

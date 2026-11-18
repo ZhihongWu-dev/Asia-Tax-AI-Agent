@@ -64,5 +64,10 @@
     "decision": "517/QD-BTC dated2026-03-20",
     "article12_2_modified": false,
     "limits": "Other amendments and implementing rules still require review."
+  },
+  "subsequent_amendment_review": {
+    "artifact": "vietnam-decree141-credit-scope-20261118.json",
+    "decree141_article12_2_modified": false,
+    "remaining": "Circular20 implementing documentation, applicable treaty rules and subsequent amendments."
   }
 }

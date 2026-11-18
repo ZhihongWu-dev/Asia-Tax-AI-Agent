@@ -1,0 +1,24 @@
+{
+  "status": "targeted_amendment_scope_visually_verified",
+  "file": "database/raw/vn/vn.decree141.2026.vi.pdf",
+  "sha256": "fa9a7c47b637f47528225d9cdd03dbde1032607ec8c39648071178ce4091413f",
+  "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/141-ndcp.signed.pdf",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "issued_on": "2026-04-29",
+  "effective_from": "2026-01-01",
+  "findings": {
+    "article1": "Amends Decree68/2026 business-individual thresholds and electronic invoicing; its Article12 references are not Decree320 Article12.",
+    "article2": "Adds Article4(15) to Decree320/2025: revenue-based small-enterprise exemption and related-party exclusions.",
+    "article3": "Effective from 1 January 2026.",
+    "article4": "Transitional tax payment and non-calendar 2025 tax-period provisions.",
+    "article5": "Implementation responsibilities.",
+    "decree320_article12_2_modified": false
+  },
+  "scope_limit": "Confirms this four-page instrument does not amend foreign-project credit Article12(2); does not establish exemption eligibility for every foreign project or complete review of other implementing instruments.",
+  "next_review": "Circular20/2026 foreign-project filing documentation and applicable bilateral treaties."
+}
