@@ -1,14 +1,19 @@
 import { test, expect } from '@playwright/test';
 
-test('Vietnam saved credit history survives reload and marks changed income',async({page})=>{
+for(const route of [
+  {country:'id',category:'dividend',gross:'1000',tax:'50',credit:'150',underlying:false},
+  {country:'sg',category:'royalty',gross:'1000',tax:'50',credit:'100',underlying:false},
+  {country:'hk',category:'dividend',gross:'80',tax:'0',credit:'20',underlying:true},
+  {country:'sg',category:'dividend',gross:'80',tax:'0',credit:'20',underlying:true},
+]) test(`Vietnam saved credit history ${route.country} ${route.category} survives reload and marks changed income`,async({page})=>{
   test.setTimeout(60000);
   const form=await openIncome(page);
   for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','vn'],['Tax residency','resident']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
   for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Claimed deductions (blank if unknown)','0'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
   const income=form.getByRole('group',{name:'Income 1',exact:true});
-  await income.getByRole('combobox',{name:'Income category',exact:true}).selectOption('dividend');
-  await income.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption('id');
-  for(const [name,value] of [['Gross income','1000'],['Foreign tax paid (blank if unknown)','50'],['Income description','Reviewed Indonesian dividend']])await income.getByLabel(name,{exact:true}).fill(value);
+  await income.getByRole('combobox',{name:'Income category',exact:true}).selectOption(route.category);
+  await income.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption(route.country);
+  for(const [name,value] of [['Gross income',route.gross],['Foreign tax paid (blank if unknown)',route.tax],['Income description','Reviewed foreign income']])await income.getByLabel(name,{exact:true}).fill(value);
   await form.getByRole('checkbox').check();
   const saved=page.waitForResponse(r=>r.url().endsWith('/income-tax')&&r.request().method()==='PUT');
   await form.getByRole('button',{name:'Save income-tax details'}).click();
@@ -18,9 +23,25 @@ test('Vietnam saved credit history survives reload and marks changed income',asy
   await creditForm.getByLabel('Include in this workpaper',{exact:true}).check();
   await creditForm.getByLabel('Vietnam tax limit for this income',{exact:true}).fill('200');
   await creditForm.getByLabel('Treaty entitlement and limit explanation (20+ characters)',{exact:true}).fill('Verified treaty entitlement and same-income Vietnam tax basis.');
-  await creditForm.getByLabel('Treaty eligibility and same-income tax basis verified',{exact:true}).check();
-  await creditForm.getByLabel('Tax-sparing documents',{exact:true}).check();
+  const verified=creditForm.getByLabel('Treaty eligibility and same-income tax basis verified',{exact:true});
+  await verified.check();
+  await creditForm.getByLabel('Vietnam tax limit for this income',{exact:true}).fill('199');
+  await expect(verified).not.toBeChecked();
+  if(route.country==='sg'&&!route.underlying)await creditForm.getByLabel('Eligible Singapore tax paid',{exact:true}).fill('50');
+  if(route.underlying){
+    for(const [name,value] of [['Qualifying holding percentage','10'],['Distributing profit pool after tax','800'],['Corporate tax paid on the profit pool','200']])await creditForm.getByLabel(name,{exact:true}).fill(value);
+    const pool=creditForm.getByLabel('Corporate recipient and homogeneous profit pool verified',{exact:true});
+    await pool.check();
+    await creditForm.getByLabel('Vietnam tax limit for this income',{exact:true}).fill('200');
+    await expect(pool).not.toBeChecked();
+    await pool.check();
+  }
+  await verified.check();
+  await creditForm.getByLabel(route.underlying?'Indirect-credit documents':'Tax-sparing documents',{exact:true}).check();
   await creditForm.getByLabel('Treaty credit application',{exact:true}).fill('case-evidence/02-HTQT');
+  await creditForm.getByLabel('Treaty credit application: required form and content checked',{exact:true}).check();
+  await creditForm.getByLabel('Treaty credit application',{exact:true}).fill('case-evidence/02-HTQT-revised');
+  await expect(creditForm.getByLabel('Treaty credit application: required form and content checked',{exact:true})).not.toBeChecked();
   await creditForm.getByLabel('Treaty credit application: required form and content checked',{exact:true}).check();
   const posted=page.waitForResponse(r=>r.url().endsWith('/credit-workpapers')&&r.request().method()==='POST');
   await creditForm.getByRole('button',{name:'Calculate and save credit workpaper',exact:true}).click();
@@ -30,7 +51,7 @@ test('Vietnam saved credit history survives reload and marks changed income',asy
   const history=page.getByRole('region',{name:'Credit workpaper history',exact:true});
   await expect(history.getByText('Matches current saved income',{exact:true})).toBeVisible();
   await history.getByRole('button',{name:/View workpaper/}).click();
-  await expect(history.getByText(/^Reviewed credit subtotal: 150(?:\.0+)? VND$/)).toBeVisible();
+  await expect(history.getByText(new RegExp(`^Reviewed credit subtotal: ${route.credit}(?:\\.0+)? VND$`))).toBeVisible();
   await expect(history.getByText('Documents missing or unchecked',{exact:true})).toBeVisible();
   const current=await (await page.request.get(path)).json();
   current.income_tax.incomes[0].gross_amount='2000';
@@ -38,7 +59,7 @@ test('Vietnam saved credit history survives reload and marks changed income',asy
   await openIncome(page);
   await expect(history.getByText('Income facts changed: historical workpaper only',{exact:true})).toBeVisible();
   await history.getByRole('button',{name:/View workpaper/}).click();
-  await expect(history.getByText(/^Reviewed credit subtotal: 150(?:\.0+)? VND$/)).toBeVisible();
+  await expect(history.getByText(new RegExp(`^Reviewed credit subtotal: ${route.credit}(?:\\.0+)? VND$`))).toBeVisible();
 });
 
 test('Thailand multiple countries and pools reconcile split remittances',async({page})=>{

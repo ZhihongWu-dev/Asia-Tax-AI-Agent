@@ -30,7 +30,15 @@ export default function VietnamCreditForm({current,disabled,onUpdate}:{current:C
     item.source_jurisdiction==='sg'&&['interest','royalty'].includes(item.category)?'singapore_interest_royalty':
     ['hk','sg'].includes(item.source_jurisdiction)&&item.category==='dividend'&&item.foreign_tax_paid!==null&&/^0(?:\.0+)?$/.test(item.foreign_tax_paid)?'underlying_dividend':''}));
   if(!candidates.some(row=>row.method))return null;
-  const edit=(key:string,value:string)=>{setValues(v=>({...v,[key]:value}));setError('');};
+  const edit=(key:string,value:string)=>{setValues(v=>{
+    const next={...v,[key]:value};
+    const line=/^(\d+)_(.+)$/.exec(key);
+    if(line&&!['include','verified','pool'].includes(line[2])){
+      next[`${line[1]}_verified`]='false';next[`${line[1]}_pool`]='false';
+    }
+    if(documents.some(([kind])=>kind===key))next[`${key}_checked`]='false';
+    return next;
+  });setError('');};
   const check=(key:string,label:string)=><label><input type="checkbox" checked={values[key]==='true'} onChange={e=>edit(key,String(e.target.checked))}/>{label}</label>;
   const input=(key:string,label:string,required=true)=><label>{label}<input required={required} value={values[key]||''} onChange={e=>edit(key,e.target.value)}/></label>;
   async function save(event:React.FormEvent) {
