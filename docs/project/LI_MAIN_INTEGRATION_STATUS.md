@@ -19,9 +19,15 @@ promotion remain incomplete.
   `Zhihong-Wu`, with automatic deployment disabled. Its structure passed the
   official schema validator. No cloud services were created by preparing it.
 - Catalog execution remains pending. The recorded 404-operation preflight
-  verifies before-state guards only; source admission is separate. The latest
-  recorded live atlas preflight still blocks `id.dgt.article26#all` and
-  `vn.law.cit2025.en#all`. Candidate closure alone does not admit either source.
+  verifies before-state guards only; source admission is separate. Subsequent
+  repaired-reference verification found neither old blocked citation among its
+  662 dependencies. Twelve missing Indonesian procedure passages were reviewed
+  and admitted through the private overlay. The dedicated reader now returns
+  all 662 dependencies, verifies the twelve exact new passages and rejects the
+  old snapshot. However, 34 existing live passages differ byte-for-byte from the
+  staged optimizer passages; substantive/formatting comparison remains required.
+  The older runtime still references the two blocked sources until repaired-rule
+  integration. No base catalog tables were changed by this source admission.
 - Next delivery work is source admission/rebinding, completed optimizer
   acceptance and repair integration, then deployed migration, two-account,
   provider and worker-restart acceptance. Remaining income-tax eligibility,
@@ -32,7 +38,8 @@ Evidence: [rental implementation](data-reconciliation/vietnam-business-consolida
 [business implementation](data-reconciliation/vietnam-business-individual-review-20261118.md),
 [deployment preparation](RENDER_DEPLOYMENT.md),
 [catalog guards](data-reconciliation/catalog-procedure-migration-preflight-20261118.json),
-[live source blockers](data-reconciliation/atlas-live-catalog-preflight-20261118.json).
+[earlier live source blockers](data-reconciliation/atlas-live-catalog-preflight-20261118.json),
+[repaired-source admission and remaining mismatches](data-reconciliation/indonesia-procedure-source-admission-20261118.json).
 
 ## Earlier delivery checkpoints (superseded where noted above)
 

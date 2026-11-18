@@ -1,5 +1,5 @@
 {
-  "status": "reviewed_candidates_pending_cloud_admission",
+  "status": "cloud_admitted_and_exact_read_verified",
   "before_snapshot": {
     "spec_version": "2026-11-10",
     "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
@@ -72,5 +72,56 @@
   ],
   "review": "Read all twelve complete texts. PMK112 Articles2,8-14,16,18 cover conditional eligibility, DGT forms, alternative residence certificates, payer verification, public-body exceptions, filing, retention and anti-abuse review. DGT announcement items2-3 preserve qualifying older forms and identify Coretax submission. This admits source text, not taxpayer eligibility or every historical procedure.",
   "text_fidelity": "Preserved official HTML spelling, including Article10(3)(c) trailing da, and the following chapter heading at the end of Article2. No silent correction or annex-completeness claim.",
-  "runtime_inputs_changed": false
+  "runtime_inputs_changed": false,
+  "after_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "14f051ed6c17a0ffe0902eb954f07f3869c9ad042a2436fa85e152345ea658b9",
+    "review_sha256": "82c4cf4e2aa4fe34ee1279ca82bb4acd84b8e5df603aa870ac346c41be6127ac"
+  },
+  "exact_complete_text_verified": true,
+  "old_pin_rejected": true,
+  "reader": "dedicated_read_only_role",
+  "repaired_reference_count": 662,
+  "staged_passage_mismatches": [
+    "cn.gsh.2009-37#all",
+    "cn.law.eit#19",
+    "cn.law.eit#2",
+    "cn.law.eit#23",
+    "cn.law.eit#24",
+    "cn.law.eit#26",
+    "cn.law.eit#3",
+    "cn.law.eit#4",
+    "cn.law.eit#45",
+    "cn.law.eit#47",
+    "cn.law.iit#1",
+    "cn.law.iit#13",
+    "cn.law.iit#16",
+    "cn.law.iit#3",
+    "cn.law.iit#7",
+    "cn.law.iit#8",
+    "cn.law.stamp#1",
+    "cn.law.stamp#5",
+    "cn.order.32#2",
+    "cn.reg.iit#32",
+    "cn.sta.2019-35#16",
+    "cn.sta.2019-35#24",
+    "cn.sta.2019-35#6",
+    "cn.sta.2019-35#7",
+    "jp.mof.cfc-overview#all",
+    "kr.corporate-tax-act.20260701.ko#18-4.1",
+    "kr.corporate-tax-act.20260701.ko#2",
+    "kr.corporate-tax-act.20260701.ko#57.1",
+    "kr.corporate-tax-act.20260701.ko#60",
+    "kr.corporate-tax-act.20260701.ko#93",
+    "kr.income-tax-act.20260701.ko#129.1",
+    "kr.income-tax-act.20260701.ko#156.1",
+    "kr.income-tax-act.20260701.ko#4",
+    "kr.income-tax-act.20260701.ko#4.1"
+  ],
+  "base_tables_mutated": false,
+  "tests": {
+    "overlay_passed": 27
+  }
 }
