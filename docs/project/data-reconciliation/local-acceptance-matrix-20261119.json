@@ -171,7 +171,8 @@
     "china_personal_transfers": "10 internal component cases passed: per-transaction proceeds/costs/expenses, no ordinary loss netting, donations and reductions, source hashes. Annual workpaper and UI integration pending.",
     "china_personal_transfer_api": "60 focused component/API/report tests passed in21.03s; deductions reconcile, per-country cap includes separate transfer tax, save/restart/export verified. UI pending.",
     "china_personal_transfer_ui": "TypeScript and2 browser cases passed in38.3s: transfer/no-transfer mixed income save/reopen/download, separate loss and positive transaction tax, country caps and historical expiry.",
-    "china_personal_transfer_report": "52 focused API/report tests and2 browser cases passed. Bilingual per-transaction tables independently verify profit/loss and tax, including actual downloaded report."
+    "china_personal_transfer_report": "52 focused API/report tests and2 browser cases passed. Bilingual per-transaction tables independently verify profit/loss and tax, including actual downloaded report.",
+    "china_personal_exact_credit": "1777 income/report tests passed; final63 focused tests passed after policy-version update and actual zero-balance case. Exact rational allocation prevents aggregate credit residuals from creating tiny false tax/refund balances."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

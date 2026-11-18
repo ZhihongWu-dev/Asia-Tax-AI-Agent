@@ -135,3 +135,13 @@ def test_country_with_no_current_income_keeps_unexpired_credit_without_using_it(
     kr=calculate(p)['country_limits'][-1]
     assert kr['allowed_credit']==0
     assert kr['carryforward_history'][0]['next_year_carryforward']==300
+
+@pytest.mark.parametrize('parts,tax',[([8816,4787,4713,7495],'23.09'),([1,1,1],'1')])
+def test_exact_country_allocation_does_not_create_residual_tax_or_refund(parts,tax):
+    p=paper();p.update(worldwide_comprehensive_tax=tax,worldwide_business_tax='0')
+    p['countries']=[dict(country=c,comprehensive_income_amount=str(v),business_taxable_income='0',other_category_chinese_tax='0',eligible_foreign_tax_paid='100') for c,v in zip(['sg','hk','jp','kr'],parts)]
+    result=calculate(p)
+    assert result['allowed_credit']==Decimal(tax)
+    assert result['current_credit_used']==Decimal(tax)
+    p['countries'].reverse()
+    assert calculate(p)['allowed_credit']==Decimal(tax)

@@ -4,6 +4,7 @@ Internal component: does not establish annual tax bases, source-country eligibil
 deemed credits, filing rounding or final liability.
 """
 from copy import deepcopy
+from fractions import Fraction
 from decimal import Decimal, localcontext
 import json
 from pathlib import Path
@@ -15,6 +16,14 @@ ComputedMoney = Annotated[Decimal, BeforeValidator(computed_amount)]
 
 SOURCES = json.loads(Path(__file__).with_name('cn_personal_foreign_sources.json').read_text(encoding='utf-8'))['sources']
 ZERO = Decimal(0)
+
+
+def _decimal_result(value):
+    """Convert exact rationals only after credit allocation and aggregation."""
+    if isinstance(value,Fraction):return Decimal(value.numerator)/Decimal(value.denominator)
+    if isinstance(value,dict):return {k:_decimal_result(v) for k,v in value.items()}
+    if isinstance(value,list):return [_decimal_result(v) for v in value]
+    return value
 
 class Strict(BaseModel):
     model_config = ConfigDict(extra='forbid')
@@ -78,36 +87,36 @@ def calculate(workpaper):
         for r in p.countries:
             if r.country == 'cn':
                 continue
-            comp_limit = comprehensive_net * r.comprehensive_income_amount / comprehensive if comprehensive else ZERO
-            business_limit = business_net * r.business_taxable_income / business if business else ZERO
-            other_net = r.other_category_chinese_tax - r.other_category_tax_reductions
+            comp_limit = Fraction(comprehensive_net) * Fraction(r.comprehensive_income_amount) / Fraction(comprehensive) if comprehensive else Fraction(0)
+            business_limit = Fraction(business_net) * Fraction(r.business_taxable_income) / Fraction(business) if business else Fraction(0)
+            other_net = Fraction(r.other_category_chinese_tax - r.other_category_tax_reductions)
             limit = comp_limit + business_limit + other_net
-            used = min(r.eligible_foreign_tax_paid, limit)
+            used = min(Fraction(r.eligible_foreign_tax_paid), limit)
             capacity = limit - used
             history = []
             for old in sorted(r.prior_excess, key=lambda v: v.origin_year):
                 expired = old.origin_year + 5 < p.tax_year
-                applied = ZERO if expired else min(old.amount, capacity)
+                applied = Fraction(0) if expired else min(Fraction(old.amount), capacity)
                 capacity -= applied
-                balance = ZERO if expired else old.amount - applied
+                balance = Fraction(0) if expired else Fraction(old.amount) - applied
                 history.append(dict(origin_year=old.origin_year, last_usable_year=old.origin_year+5,
                     opening_excess=old.amount, credit_used=applied,
                     expired_amount=old.amount if expired else ZERO,
                     expires_after_current_year=balance if old.origin_year+5==p.tax_year else ZERO,
                     next_year_carryforward=balance if old.origin_year+5>p.tax_year else ZERO))
-            prior_used = sum((h['credit_used'] for h in history), ZERO)
+            prior_used = sum((h['credit_used'] for h in history), Fraction(0))
             rows.append(dict(country=r.country, comprehensive_credit_limit=comp_limit,
                 business_credit_limit=business_limit, other_category_credit_limit=other_net,
                 credit_limit=limit, eligible_current_tax=r.eligible_foreign_tax_paid,
-                current_credit_used=used, current_excess=r.eligible_foreign_tax_paid-used,
+                current_credit_used=used, current_excess=Fraction(r.eligible_foreign_tax_paid)-used,
                 current_excess_last_usable_year=p.tax_year+5, remaining_credit_capacity=capacity,
                 prior_credit_used=prior_used, allowed_credit=used+prior_used, carryforward_history=history))
-        return dict(policy_version='cn-personal-foreign-credit-limits-2026-11-19', tax_year=p.tax_year,
+        return _decimal_result(dict(policy_version='cn-personal-foreign-credit-limits-2026-11-19-exact-ratios', tax_year=p.tax_year,
             currency='CNY', method='per_country', comprehensive_income_denominator=comprehensive,
             business_taxable_income_denominator=business, country_limits=rows,
             comprehensive_tax_after_reductions=comprehensive_net, business_tax_after_reductions=business_net,
-            current_credit_used=sum((r['current_credit_used'] for r in rows), ZERO),
-            allowed_credit=sum((r['allowed_credit'] for r in rows), ZERO),
+            current_credit_used=sum((r['current_credit_used'] for r in rows), Fraction(0)),
+            allowed_credit=sum((r['allowed_credit'] for r in rows), Fraction(0)),
             allocation_order='current_year_then_oldest_eligible_prior_excess_within_same_country',
             stage='internal_credit_workpaper_before_final_assessment',
-            sources=deepcopy(SOURCES))
+            sources=deepcopy(SOURCES), arithmetic="exact rational allocation; decimal outputs use40 significant digits; no filing rounding"))

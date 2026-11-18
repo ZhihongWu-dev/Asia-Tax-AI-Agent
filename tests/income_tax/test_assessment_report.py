@@ -245,9 +245,9 @@ def test_personal_foreign_report_exposes_country_caps_and_expiry(locale):
     assert ('not a B-form filing amount' if locale=='en' else '不等同于B表申报金额') in summary
     # Check rendered values independently of the full JSON snapshot.
     clean=summary.replace(chr(92), '')
-    assert '| SG | 2021 | 2026 | 1000 | 592.00 | 0 | 408.00 | 0 |' in clean
-    assert ('| Country credit limit | 2592.00 |' if locale=='en' else '| 国别限额合计 | 2592.00 |') in clean
-    assert ('| Comprehensive credit limit | 592.00 |' if locale=='en' else '| 综合所得限额 | 592.00 |') in clean
+    assert '| SG | 2021 | 2026 | 1000 | 592 | 0 | 408 | 0 |' in clean
+    assert ('| Country credit limit | 2592 |' if locale=='en' else '| 国别限额合计 | 2592 |') in clean
+    assert ('| Comprehensive credit limit | 592 |' if locale=='en' else '| 综合所得限额 | 592 |') in clean
     assert '2031' in summary
 
 

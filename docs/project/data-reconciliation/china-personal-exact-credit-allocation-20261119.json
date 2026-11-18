@@ -1,0 +1,19 @@
+{
+  "status": "proportional_credit_residual_fixed",
+  "reproduced": "40-digit Decimal allocation of23.09 across income weights8816,4787,4713,7495 summed1E-38 above tax; equal thirds could leave1E-40 unpaid.",
+  "change": "Country limits, capacity, history application and aggregate credit use exact Fraction arithmetic before conversion to40-digit decimal output. Public monetary validation unchanged; policy version records exact-ratios.",
+  "validation": {
+    "income_and_report_passed": 1777,
+    "seconds": 39.21,
+    "final_focused_passed": 63,
+    "final_focused_seconds": 6.15,
+    "exit_code": 0
+  },
+  "new_evidence": [
+    "Country order does not change credit total",
+    "Over/under residual examples aggregate exactly",
+    "Actual saved-fact four-country wage calculation with net tax23.09 has exact zero final tax and balance"
+  ],
+  "limits": "Displayed recurring decimal lines remain approximations; aggregate computed before conversion. Filing rounding and substantive relief eligibility remain separate.",
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}

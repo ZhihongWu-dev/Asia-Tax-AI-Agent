@@ -136,3 +136,14 @@ def test_transfer_workpaper_must_reconcile_to_saved_income(issue):
     elif issue=='wrong_income':p['workpaper']['transfers'][0]['income_index']=0
     else:p['workpaper']['transfers'][0]['single_transaction_source_and_ordinary_rate_verified']=False
     with pytest.raises(ValueError):run(d,p)
+
+
+def test_fully_credited_multicountry_case_has_exact_zero_balance():
+    d,p=facts(),basis();countries=['sg','hk','jp','kr']
+    d['incomes']=[dict(category='employment',source_jurisdiction=c,gross_amount=str(v*3),foreign_tax_paid='100',description='Verified ordinary foreign employment income') for c,v in zip(countries,[8816,4787,4713,7495])]
+    p['prepaid_tax']='0';p['workpaper']['comprehensive_tax_reductions']='499.90'
+    p['workpaper']['countries']=[dict(country=c,business_deductions='0',business_prior_losses='0',eligible_foreign_tax_paid='100',prior_excess=[]) for c in countries]
+    r=run(d,p)
+    assert Decimal(r['tax_before_foreign_credit'])==Decimal('23.09')
+    assert Decimal(r['allowed_credit'])==Decimal('23.09')
+    assert Decimal(r['final_tax'])==0 and Decimal(r['balance_due'])==0
