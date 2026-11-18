@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203574/content.html",
+      "sha256": "ba5b09a72ae33414c331267b540af0bf77db3cb061cad6b57b2172039916700c",
+      "title": "财政部 国家税务总局关于企业境外所得税收抵免有关问题的通知",
+      "doc_id": "cn.cs.2009-125",
+      "file": "database/raw/cn/cn.cs.2009-125.html"
+    },
+    {
+      "url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5202488/content.html",
+      "sha256": "cc499bb5edd4d57e6b9b0b2345c6fc0b725f5aecfbeb32fe49ac1d4609c3c17b",
+      "title": "财政部 税务总局关于完善企业境外所得税收抵免政策问题的通知",
+      "doc_id": "cn.cs.2017-84",
+      "file": "database/raw/cn/cn.cs.2017-84.html"
+    }
+  ]
+}

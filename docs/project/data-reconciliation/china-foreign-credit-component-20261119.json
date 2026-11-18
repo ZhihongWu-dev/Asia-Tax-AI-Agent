@@ -1,0 +1,24 @@
+{
+  "status": "internal_component_implemented_workflow_pending",
+  "scope": "2026 resident company ordinary25percent, nonnegative established domestic and foreign taxable bases; all10other dividend jurisdictions allowed as foreign pools.",
+  "sources": "cn.cs.2009-125 ArticlesVIII,IX,XII and cn.cs.2017-84 ArticleI; existing archived original hashes verified; no frozen catalog changes.",
+  "implemented": [
+    "Explicit per-country or pooled election; never automatically choose a more beneficial method",
+    "Current eligible tax used first, followed by oldest unexpired prior excess",
+    "Original country and vintage preserved under pooled method",
+    "Expiry during2026 and next-year carryforward shown separately",
+    "40digit decimal context; source records copied per result"
+  ],
+  "validation": {
+    "passed": 24,
+    "seconds": 0.59,
+    "exit_code": 0
+  },
+  "remaining": [
+    "Bind verified foreign income and credit eligibility to saved case facts",
+    "API persistence, immutable replay/export and bilingual UI",
+    "Separate handling for foreign losses, preferential rates, indirect-tax derivation and treaty-specific deemed credits; no automatic entitlement from an entered tax amount"
+  ],
+  "design_reference": "https://github.com/openfisca/country-template (parameter/formula/test separation only; no imported dependency or copied code)",
+  "delivery": "Local only"
+}
