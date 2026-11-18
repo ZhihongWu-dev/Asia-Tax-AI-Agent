@@ -50,3 +50,30 @@ test('opening income facts materializes one case and preserves the unsent text',
   await expect(page.locator('.income-tax-facts')).toBeVisible();
   expect(await (await page.request.get('/api/cases')).json()).toHaveLength(1);
 });
+
+test('lost creation response retries the same server case', async ({page}) => {
+  let first = true;
+  await page.route('**/api/cases', async route => {
+    if (route.request().method() !== 'POST' || !first) return route.continue();
+    first = false;
+    const committed = await route.fetch();
+    expect(committed.status()).toBe(201);
+    await route.abort('failed');
+  });
+  await page.goto('/');
+  await page.getByRole('button', {name:'Switch to English'}).click();
+  const input = page.getByRole('textbox', {name:'Enter your tax question'});
+  await input.fill('Retain this after a lost response');
+  await page.getByRole('button', {name:'Send message'}).click();
+  await page.getByRole('checkbox').check();
+  await page.getByRole('button', {name:'Send message'}).click();
+  await expect(page.locator('.request-error')).toBeVisible();
+  await expect(input).toHaveValue('Retain this after a lost response');
+  const before = await (await page.request.get('/api/cases')).json();
+  expect(before).toHaveLength(1);
+  await page.locator('.request-error button').click();
+  await expect(page.locator('.message.assistant')).toHaveCount(1, {timeout:15000});
+  const after = await (await page.request.get('/api/cases')).json();
+  expect(after).toHaveLength(1);
+  expect(after[0].id).toBe(before[0].id);
+});

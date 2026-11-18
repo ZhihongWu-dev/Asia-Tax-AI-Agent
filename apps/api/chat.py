@@ -52,6 +52,10 @@ class Mutation(BaseModel):
     request_id: UUID
 
 
+class Creation(BaseModel):
+    request_id: UUID
+
+
 class Message(Mutation):
     text: str = Field(min_length=1, max_length=50000)
     data_approved: bool = False
@@ -170,8 +174,8 @@ def cases(workspace: str = Depends(owner), service: ChatService = Depends(get_se
 
 
 @router.post("/cases", status_code=201)
-def create(workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
-    return public(call(service.store.create, workspace))
+def create(body: Creation | None = None, workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
+    return public(call(service.store.create, workspace, str(body.request_id) if body else None))
 
 
 @router.get("/cases/{case_id}")

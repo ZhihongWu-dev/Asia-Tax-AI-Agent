@@ -102,3 +102,44 @@ def test_enqueue_delete_serialization_has_no_orphan_jobs(postgres, first):
 def test_postgres_deletion_invariants(postgres, probe):
     chat, jobs, _ = postgres
     probe((chat, jobs))
+
+
+def test_postgres_concurrent_creation_and_deleted_receipt(postgres):
+    chat, _, _ = postgres
+    request = str(uuid4())
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        docs = list(pool.map(lambda _: chat.create('alice', request), range(8)))
+    assert len({doc['id'] for doc in docs}) == 1
+    doc = docs[0]
+    doc['title'] = 'Retain updates'
+    saved = chat.save('alice', doc, 0)
+    assert chat.create('alice', request) == saved
+    assert chat.create('bob', request)['id'] != saved['id']
+    chat.delete('alice', saved['id'], saved['revision'])
+    with pytest.raises(CaseNotFound):
+        chat.create('alice', request)
+
+
+def test_creation_receipt_migration_preserves_records_and_rls(postgres):
+    import importlib.util
+    from pathlib import Path
+    from alembic.migration import MigrationContext
+    from alembic.operations import Operations
+    from packages.chat.store import creations
+    chat, _, _ = postgres
+    path = Path(__file__).resolve().parents[2] / 'alembic/versions/0007_chat_case_creations.py'
+    spec = importlib.util.spec_from_file_location('creation_migration', path)
+    migration = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(migration)
+    with chat.engine.begin() as connection:
+        creations.drop(connection)
+        with Operations.context(MigrationContext.configure(connection)):
+            migration.upgrade()
+    request = str(uuid4())
+    original = chat.create('alice', request)
+    with chat.engine.begin() as connection:
+        with Operations.context(MigrationContext.configure(connection)):
+            migration.downgrade()
+            migration.upgrade()
+        assert connection.execute(text("SELECT relrowsecurity FROM pg_class WHERE oid = 'chat_case_creations'::regclass")).scalar_one()
+    assert chat.create('alice', request) == original

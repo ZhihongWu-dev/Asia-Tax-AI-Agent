@@ -15,9 +15,25 @@ income and structure editors require a persisted UUID, so entering those panels
 materializes the case before rendering their forms. Source browsing does not.
 
 This is an in-memory unsent draft, not a durable browser-restart recovery
-feature. Server case creation itself still has the existing non-idempotent API:
-a connection loss after creation commits but before its response arrives can
-leave an empty server case. No stronger guarantee is claimed for that boundary.
+feature. The follow-up creation-receipt change closes the response-loss boundary:
+the temporary UUID is sent as an owner-scoped request ID, and retries reuse the
+stored case without resetting edits. Minimal creation receipts survive deletion
+so a delayed retry cannot recreate a removed case. Legacy clients omitting the
+request ID retain the original create-new behavior.
+
+Migration 0007 adds the backend-only receipt table and denies direct Data API
+access. Its downgrade preserves receipts and row-level security. It has not been
+applied to the hosted database. Seven real PostgreSQL tests passed locally in
+12.47 seconds, including both deletion/enqueue races, concurrent creation,
+owner isolation, deleted-case replay and upgrade/downgrade/adoption. Four browser
+draft tests passed in 30.7 seconds, including a committed creation whose HTTP
+response was deliberately discarded. Six focused creation/deletion tests passed
+in 7.23 seconds. Existing CI includes the new PostgreSQL checks.
+
+The follow-up research inspected CPython's uuid implementation/tests as an
+available standard-library reference. A stateless deterministic case ID alone
+was not adopted because it cannot distinguish a deleted case from an uncreated
+one. No dependency, external implementation or asset was added.
 
 Validation: 10 browser tests passed across draft startup/first-send failure,
 deletion and all attachment formats. Six follow-up browser tests passed,

@@ -89,7 +89,7 @@ export function useWorkspace() {
     if (!temporary(doc)) return doc;
     const cached = materialized.current.get(doc.id);
     if (cached) return cached;
-    const next = await api.create();
+    const next = await api.create(doc.id.slice('draft-'.length));
     materialized.current.set(doc.id, next);
     composerKeys.current.set(next.id, doc.id);
     setCases(all => all.map(item => item.id === doc.id ? next : item));

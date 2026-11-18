@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from pathlib import Path
-from uuid import uuid4
+from uuid import UUID, uuid4
 
 from sqlalchemy import JSON, Column, Integer, MetaData, String, Table, create_engine, select, update, text
 
@@ -18,6 +18,12 @@ conversations = Table(
     Column("owner", String(64), nullable=False, index=True),
     Column("revision", Integer, nullable=False),
     Column("document", JSON, nullable=False),
+)
+creations = Table(
+    "chat_case_creations", metadata,
+    Column("owner", String(64), primary_key=True),
+    Column("request_id", String(36), primary_key=True),
+    Column("case_id", String(36), nullable=False),
 )
 
 
@@ -46,13 +52,36 @@ class ChatStore:
             metadata.create_all(connection)
             if connection.dialect.name == 'postgresql':
                 connection.execute(text('ALTER TABLE chat_cases ENABLE ROW LEVEL SECURITY'))
+                connection.execute(text('ALTER TABLE chat_case_creations ENABLE ROW LEVEL SECURITY'))
 
-    def create(self, owner: str) -> dict:
+    def create(self, owner: str, request_id: str | None = None) -> dict:
+        if request_id is not None:
+            request_id = str(UUID(request_id))
         doc = {"id": str(uuid4()), "title": "", "revision": 0, "state": "collecting",
                "messages": [], "facts": {}, "fact_history": [], "analyses": [],
                "confirmed_revision": None, "confirmed_facts": None, "receipts": {},
                "created_at": now(), "updated_at": now(), "data_approved": False}
         with self.engine.begin() as c:
+            if request_id is not None:
+                if c.dialect.name == 'postgresql':
+                    from sqlalchemy.dialects.postgresql import insert
+                elif c.dialect.name == 'sqlite':
+                    from sqlalchemy.dialects.sqlite import insert
+                else:
+                    raise ValueError('unsupported_chat_database')
+                claimed = c.execute(insert(creations).values(owner=owner, request_id=request_id,
+                    case_id=doc['id']).on_conflict_do_nothing(index_elements=['owner', 'request_id'])
+                    .returning(creations.c.case_id)).scalar_one_or_none()
+                if claimed is None:
+                    original = c.execute(select(creations.c.case_id).where(
+                        creations.c.owner == owner, creations.c.request_id == request_id)).scalar_one()
+                    existing = c.execute(select(conversations.c.document).where(
+                        conversations.c.id == original, conversations.c.owner == owner)).scalar_one_or_none()
+                    # Retain only the creation receipt after deletion: delayed
+                    # retries must not resurrect an intentionally removed case.
+                    if existing is None:
+                        raise CaseNotFound()
+                    return existing
             c.execute(conversations.insert().values(id=doc["id"], owner=owner, revision=0, document=doc))
         return doc
 
