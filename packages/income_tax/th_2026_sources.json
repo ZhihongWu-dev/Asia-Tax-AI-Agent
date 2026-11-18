@@ -3,14 +3,14 @@
   "sources": [
     {
       "doc_id": "th.rc3.rates.th",
-      "title": "\u0e1b\u0e23\u0e30\u0e21\u0e27\u0e25\u0e23\u0e31\u0e29\u0e0e\u0e32\u0e01\u0e23 \u0e1a\u0e31\u0e0d\u0e0a\u0e35\u0e2d\u0e31\u0e15\u0e23\u0e32\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49 (\u0e17\u0e49\u0e32\u0e22\u0e2b\u0e21\u0e27\u0e14 3)",
+      "title": "ประมวลรัษฎากร บัญชีอัตราภาษีเงินได้ (ท้ายหมวด 3)",
       "url": "https://www.rd.go.th/5938.html",
       "file": "database/raw/th/th.rc3.rates.th.html",
       "sha256": "5ec38d0dbbb7ee5d226ad1a7422aa14ff603dcf29dfc566e47e48bd04bc0a3b4"
     },
     {
       "doc_id": "th.rc3a.th",
-      "title": "\u0e1b\u0e23\u0e30\u0e21\u0e27\u0e25\u0e23\u0e31\u0e29\u0e0e\u0e32\u0e01\u0e23 \u0e2b\u0e21\u0e27\u0e14 3 \u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49 \u0e21\u0e32\u0e15\u0e23\u0e32 38-64",
+      "title": "ประมวลรัษฎากร หมวด 3 ภาษีเงินได้ มาตรา 38-64",
       "url": "https://www.rd.go.th/5937.html",
       "file": "database/raw/th/th.rc3a.th.html",
       "sha256": "3050f0a13b298f027d5451fb8b3dfb8ec77658db1fbbd72eaa507abf0c3ed428"
@@ -43,6 +43,13 @@
       "file": "database/raw/th/th.rd.p119-2545.html",
       "sha256": "e83c3c360ad1a849ac02bc30840bc8ff42b5aa090afdfe5c338efb0ef0f38b2c",
       "retrieved_on": "2026-11-19"
+    },
+    {
+      "doc_id": "th.rc3b.th",
+      "title": "ประมวลรัษฎากร หมวด 3 ภาษีเงินได้ มาตรา 65-76",
+      "url": "https://www.rd.go.th/5939.html",
+      "file": "database/raw/th/th.rc3b.th.html",
+      "sha256": "fc901d8b1a0a8a6bb25b1509effdc5d5e6257f1963c87dbcbc6ab08a4a216d4a"
     }
   ]
 }

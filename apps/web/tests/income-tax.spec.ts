@@ -671,11 +671,12 @@ for (const subject of ['company','individual'] as const) {
     await form.getByRole('button',{name:'Save income-tax details'}).click();
     const calculation=page.getByRole('region',{name:'Income-tax calculation',exact:true});
     await calculation.getByLabel('Applicable regime').selectOption(subject==='company'?'th_company_2026':'th_resident_2026');
-    await calculation.getByLabel(subject==='company'?'Established net taxable profit':'Established net taxable income',{exact:true}).fill(subject==='company'?'4000000':'150000');
+    await calculation.getByLabel(subject==='company'?'Established net taxable profit':'Established net taxable income',{exact:true}).fill(subject==='company'?'3500000':'150000');
     await calculation.getByLabel('Ordinary annual treatment and exclusions checked').selectOption('true');
     await calculation.getByLabel('Allowed tax credits',{exact:true}).fill('0');
     await calculation.getByLabel('Prepaid tax for this period',{exact:true}).fill('0');
     if(subject==='company') {
+      await calculation.getByLabel('Verified exempt income included in saved income').fill('500000');
       await calculation.getByLabel('Company rate scheme').selectOption('sme');
       await calculation.getByLabel('All SME and continuous-period conditions verified').selectOption('true');
     } else await calculation.getByLabel('Section 40 employment and non-employment classification verified').selectOption('true');
@@ -683,14 +684,15 @@ for (const subject of ['company','individual'] as const) {
     await calculation.getByRole('checkbox').check();
     await calculation.getByRole('button',{name:'Calculate and save result'}).click();
     const report=page.getByRole('article',{name:'Saved calculation result'});
-    await expect(report).toContainText(subject==='company'?'605000':'20000');
-    await expect(report.getByRole('link')).toHaveCount(subject==='company'?2:4);
+    await expect(report).toContainText(subject==='company'?'505000':'20000');
+    await expect(report.getByRole('link')).toHaveCount(subject==='company'?3:4);
+    if(subject==='company') await expect(report.getByRole('region',{name:'Company basis reconciliation'})).toContainText('500000');
     if(subject==='individual') {
       await expect(report).toContainText('Minimum tax before exemption');
       await page.screenshot({path:'test-results/income-tax-thailand-individual.png',fullPage:true});
     }
     await openIncome(page);
-    await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(subject==='company'?'605000':'20000');
+    await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(subject==='company'?'505000':'20000');
   });
   test(`Malaysia ${subject} calculation is saved with official evidence`, async ({page})=>{
     const form=await openIncome(page);

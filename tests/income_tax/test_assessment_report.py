@@ -118,6 +118,14 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
         saved = client.put(path, headers=HEADERS, json=dict(
             revision=0, request_id=str(uuid4()), inputs=data))
         assert saved.status_code == 200, saved.text
+        if policy == 'th_company':
+            rejected = client.post(path+'/runs', headers=HEADERS, json=dict(
+                revision=1, request_id=str(uuid4()),
+                basis={**basis, 'net_taxable_profit': '1000001'}))
+            assert rejected.status_code == 422, rejected.text
+            unchanged = client.get(path).json()
+            assert unchanged['revision'] == 1
+            assert unchanged['income_tax_result'] is None
         response = client.post(path+'/runs', headers=HEADERS, json=dict(
             revision=1, request_id=str(uuid4()), basis=basis))
         assert response.status_code == 200, response.text

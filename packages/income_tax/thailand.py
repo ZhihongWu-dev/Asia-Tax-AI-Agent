@@ -29,6 +29,32 @@ def settle(gross,allowed_tax_credits,prepaid_tax):
                 prepaid_tax=prepaid,balance_due=final-prepaid)
 
 
+def reconcile_company_basis(case, *, net_taxable_profit, exempt_income):
+    """Reconcile established Section65 amounts; do not infer loss eligibility.
+
+    Saved income includes statutory valuation adjustments. Deductions contain
+    only allowed expenses; losses are the separately verified usable prior-year
+    amount. Exempt income must not also be counted in deductions.
+    """
+    exempt, base = map(amount, (exempt_income, net_taxable_profit))
+    with localcontext() as context:
+        context.prec = 40
+        total = sum((item.gross_amount for item in case.incomes), ZERO)
+        if exempt > total:
+            raise ValueError('Exempt income cannot exceed saved total income')
+        before_losses = total - exempt - case.claimed_deductions
+        available = max(ZERO, before_losses)
+        used = min(available, case.carried_losses)
+        reconciled = available - used
+        if base != reconciled:
+            raise ValueError('Thai company net profit must reconcile to saved income, exemption, deductions and eligible losses')
+        return dict(total_income=total, non_taxable_income=ZERO, exempt_income=exempt,
+            allowed_deductions=case.claimed_deductions, income_before_loss_relief=before_losses,
+            current_period_loss=max(ZERO, -before_losses), prior_losses_used=used,
+            prior_losses_unused=case.carried_losses-used, taxable_income=reconciled,
+            scope='Established Section65/65bis/65ter amounts; eligibility, loss vintages and future carryforward not inferred')
+
+
 def company_tax(net_taxable_profit,*,tax_year,scheme,sme_eligibility_confirmed,
                 ordinary_treatment_confirmed,allowed_tax_credits,prepaid_tax):
     """SME eligibility includes capital/revenue tests and continuous qualification.

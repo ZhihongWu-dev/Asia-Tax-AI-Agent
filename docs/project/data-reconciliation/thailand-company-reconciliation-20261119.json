@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only; no cloud upload, remote push or main merge.",
+  "problem": "At f8b49ac, historical assessment route accepted saved income100 and manual net taxable profit1000000, producing gross tax200000.00. Reproduced by executing HEAD assessment module with historical basis shape. First reproduction attempt failed on too-short explanation; corrected reproduction confirms defect.",
+  "change": "Reconcile saved statutory income less verified exempt income, allowed deductions and usable prior losses. Reject mismatched manual profit. Separate current-period loss, prior losses used and unused; do not imply future carryforward entitlement. New exempt_income defaults0; existing stored records unchanged.",
+  "sources": [
+    "https://www.rd.go.th/5939.html",
+    "https://www.rd.go.th/english/37764.html"
+  ],
+  "source_version": "Existing archived authentic Thai Sections65-76 file matched SHA256 and added to company result sources.",
+  "ui": "Bilingual statutory-income/deduction/loss instructions, exempt-income input and existing company reconciliation table.",
+  "validation": {
+    "income_and_reporting": "1479 passed in27.35s",
+    "final_focused": "20 passed in7.25s after HTTP rejection-state assertions",
+    "browser": "2 passed in30.8s: Thai company with exemption and Thai individual comparison; save/reopen verified",
+    "typescript": "tsc -b exit0",
+    "atomicity": "Invalid manual base returns422, revision unchanged and no result saved",
+    "cases": "Ordinary/SME rates, mismatched facts, excessive exemption, current loss without consuming old losses, excess prior losses retained separately"
+  },
+  "research": {
+    "reference": "https://github.com/openfisca/country-template",
+    "license": "AGPL-3.0; no code copied and no dependency adopted",
+    "review": "README, formula organization and issue listing reviewed; current bootstrap issue and Windows setup issue reinforce retaining existing runtime. Commit-history page unavailable; no maintenance claim used to justify adoption."
+  },
+  "limits": [
+    "Eligibility, allowable expenses, loss vintages and exemption qualification remain verified workpaper inputs",
+    "This does not calculate special regimes, foreign-credit eligibility or a complete tax return",
+    "Overall business acceptance remains incomplete"
+  ]
+}

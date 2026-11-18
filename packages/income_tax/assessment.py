@@ -415,7 +415,12 @@ def calculate(case: IncomeTaxCase, basis):
     elif policy=='th_foreign_income_2026':
         result=thailand_foreign_credit.assess_saved_case(case, **args)
     elif policy=='th_company_2026':
+        reconciliation = thailand.reconcile_company_basis(case,
+            net_taxable_profit=basis.net_taxable_profit, exempt_income=args.pop('exempt_income'))
         result=thailand.company_tax(tax_year=2026,**args)
+        result['basis_reconciliation'] = reconciliation
+        result['policy_version'] += '-reconciled-20261119'
+        result['sources'] += [s.copy() for s in thailand.SOURCES if s['doc_id'] == 'th.rc3b.th']
     elif policy=='th_resident_2026':
         if args.pop('assessable_income_classification_confirmed') is not True:
             raise ValueError('Section40 assessable income classification must be confirmed')

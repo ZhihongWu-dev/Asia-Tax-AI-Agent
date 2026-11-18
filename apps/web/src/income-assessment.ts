@@ -155,9 +155,9 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
     const shared = [confirm('ordinary_treatment_confirmed','已核对普通年度税制及排除条件','Ordinary annual treatment and exclusions checked'),
       money('allowed_tax_credits','核定可抵免税额','Allowed tax credits'),prepaid];
     return company ? [{id:'th_company_2026',label:['泰国企业（2026）','Thailand company (2026)'],
-      notice:['以已完成纳税调整的净利润为基础。普通税率20%；小企业须核实期末实缴资本不超过500万泰铢、销售及服务收入不超过3000万泰铢，并满足法令规定的连续期间条件。不含投资促进优惠、石油、收入总额计税及最低补足税。',
-        'Use net profit after verified tax adjustments. Ordinary rate: 20%. SME rates require period-end paid-up capital up to THB 5m, sales/service revenue up to THB 30m and the decree’s continuous-period conditions. Excludes investment incentives, petroleum, gross-receipt and top-up tax regimes.'],
-      fields:[money('net_taxable_profit','核定应税净利润','Established net taxable profit'),...shared,
+      notice:['保存收入须含法定估值调整；核定扣除仅填可扣费用，免税收入另填且不得重复扣除，以前年度亏损须先核实可用年度及金额。系统核对三者与净利润，未使用亏损不代表准予结转。普通税率20%；小企业须核实期末实缴资本不超过500万泰铢、销售及服务收入不超过3000万泰铢，并满足法令规定的连续期间条件。不含投资促进优惠、石油、收入总额计税及最低补足税。',
+        'Saved income must include statutory valuation adjustments. Enter only allowed expenses as deductions and exempt income separately without duplication. Verify prior-loss vintages and usable amounts first. The system reconciles net profit; unused losses do not establish carryforward entitlement. Ordinary rate: 20%. SME rates require period-end paid-up capital up to THB 5m, sales/service revenue up to THB 30m and the decree’s continuous-period conditions. Excludes investment incentives, petroleum, gross-receipt and top-up tax regimes.'],
+      fields:[money('net_taxable_profit','核定应税净利润','Established net taxable profit'),money('exempt_income','核定免税收入（已含于保存收入）','Verified exempt income included in saved income'),...shared,
         {key:'scheme',label:['企业税率制度','Company rate scheme'],options:[['ordinary',['普通20%税率','Ordinary 20% rate']],['sme',['符合条件的小企业分级税率','Eligible SME tiered rates']]]},
         confirm('sme_eligibility_confirmed','已核实全部小企业条件及连续期间资格','All SME and continuous-period conditions verified')]}]
       : [{id:'th_resident_2026',label:['泰国居民个人（2026）','Thailand resident individual (2026)'],

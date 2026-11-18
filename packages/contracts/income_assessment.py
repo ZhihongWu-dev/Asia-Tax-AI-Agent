@@ -174,6 +174,7 @@ class THBasis(Basis):
 class THCompany(THBasis):
     policy: Literal['th_company_2026']
     net_taxable_profit: Money
+    exempt_income: Money = Decimal('0')
     scheme: Literal['ordinary','sme']
     sme_eligibility_confirmed: StrictBool
 
