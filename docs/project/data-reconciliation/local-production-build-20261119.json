@@ -1,0 +1,62 @@
+{
+  "status": "local_production_build_passed",
+  "runtime_commit": "56cc674",
+  "command": "npm run build",
+  "exit_code": 0,
+  "transformed_modules": 2279,
+  "vite_build_seconds": 7.63,
+  "warning": "Main minified JS chunk exceeds500kB; build succeeds. No performance acceptance inferred.",
+  "artifacts": [
+    {
+      "file": "apps/web/dist/assets/countries-50m-BphFPm15.json",
+      "bytes": 756420,
+      "sha256": "04342cdc1e3016bcd7db1630de95684d67b79fe3c8c460321e87aef469502394"
+    },
+    {
+      "file": "apps/web/dist/assets/index-BNsF4PMd.js",
+      "bytes": 826318,
+      "sha256": "b1ee0016fe2a39fb2ce6eb6da3e62acb9d7095b1d125aeadb210db56d4098a1d"
+    },
+    {
+      "file": "apps/web/dist/assets/index-DxbvGyIM.css",
+      "bytes": 51660,
+      "sha256": "fc311ed5d990ca095aa56d28280334c28ef4f17443ba2811728c0252d70a77c4"
+    },
+    {
+      "file": "apps/web/dist/atlas-licenses.txt",
+      "bytes": 4943,
+      "sha256": "168e9c068a51240e2075996a2385ec10b12cf9702fa3e81b0fee82a625317dbe"
+    },
+    {
+      "file": "apps/web/dist/brand/apple-touch-icon.png",
+      "bytes": 2009,
+      "sha256": "4677fcd90034fd8db9a090c7e3f21d0f92680458d765c78e922e0ca08ccac329"
+    },
+    {
+      "file": "apps/web/dist/brand/favicon.svg",
+      "bytes": 392,
+      "sha256": "b310e5957f12f45e1b42c4dbfbc94fa0b47e4b9762a0d68055969639ee7c4b13"
+    },
+    {
+      "file": "apps/web/dist/brand/logo-mark-light.svg",
+      "bytes": 305,
+      "sha256": "a1f15918e1c6647ed80bc4e2e531f7c9dd699c1446f8be6b8a31927ce2bb0b54"
+    },
+    {
+      "file": "apps/web/dist/brand/logo-mark.svg",
+      "bytes": 305,
+      "sha256": "3475d9c5a618563526dbc751d4190d253e23ea65b2da005f759a980176096c3d"
+    },
+    {
+      "file": "apps/web/dist/index.html",
+      "bytes": 775,
+      "sha256": "5a5736a1c81f8c7a11dc8d46bdce95adbd791b4e4a539d810269929beaf0a521"
+    },
+    {
+      "file": "apps/web/dist/THIRD_PARTY_NOTICES.txt",
+      "bytes": 6696,
+      "sha256": "55625a930e1a88108558ebeda66b02922089bb9f4c378c5a12cbb8721e0e705f"
+    }
+  ],
+  "delivery": "Local build only; no cloud upload, deployment, remote push or main merge."
+}
