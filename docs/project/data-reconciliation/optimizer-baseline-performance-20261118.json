@@ -1,5 +1,5 @@
 {
-  "status": "live_nonblocking_stack_observed_not_fixed",
+  "status": "exact_compression_helper_tested_isolated_real_case_probe_running",
   "pid": 16760,
   "python": "3.11.5",
   "profiler": "py-spy0.4.3 installed only in external audit test-env",
@@ -7,5 +7,21 @@
   "stack_file": "integration-audit-20261116/optimizer-golden-20261118/stack-20261118.txt",
   "code_finding": "baseline enumerates found paths then compares each against found until a dominating state is found. Worst-case pairwise work is quadratic in enumerated paths. Final assertion compares a set of state keys and does not retain path identities.",
   "proposed_investigation": "Measure exact state-key duplicates in isolated artifacts; prove deduplication preserves original dominance relation and frontier before adopting any checker acceleration. Do not prune legal paths or weaken checks.",
-  "limits": "One stack observation identifies current work, not a complete profile or completion time. Original process and frozen checker unchanged; all twelve optimizer product directories exist but only four checker completion lines observed."
+  "limits": "One stack observation identifies current work, not a complete profile or completion time. Original process and frozen checker unchanged; all twelve optimizer product directories exist but only four checker completion lines observed.",
+  "helper": "optimization/tools/baseline_frontier.py",
+  "validation": {
+    "tests": 43,
+    "passed": 43,
+    "seconds": 2.64,
+    "oracle": "Actual dom predicate and state-key AST extracted from unchanged optimization/tools/check.py.",
+    "coverage": [
+      "40 seeded datasets with duplicate paths, set conditions, two destinations, costs, hop/restructure/new counts and epsilon-adjacent values",
+      "Permutation invariance",
+      "Nontransitive epsilon dominance retains all unique possible witnesses",
+      "5000 identical paths require only two comparisons with one distinct dominated state",
+      "Empty destination set"
+    ]
+  },
+  "equivalence_argument": "All fields read by dom occur in state_key. Exact equal keys cannot strictly dominate one another and have identical relations to every third state. Therefore replacing each key-equivalence class with one representative preserves the nondominated key set. Node partitioning omits only pairs rejected by the original node-equality condition. No transitivity or frontier-only pruning is used.",
+  "integration_status": "Helper not imported by original frozen checker. External probe patches only in-memory source and leaves running process/files unchanged. Full real-case result pending."
 }
