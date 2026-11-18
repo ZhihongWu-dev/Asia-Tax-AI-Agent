@@ -6,6 +6,10 @@ Implementation HEAD at this checkpoint: `c1f109a`, on
 `codex/li-corporate-integration`. Final `Zhihong-Wu` delivery and `main`
 promotion remain incomplete.
 
+- The complete offline application regression passed 2,436 tests in 507.02
+  seconds, with two skips (local legacy Word converter and PostgreSQL-specific
+  lock semantics) and 25 integration-marked tests deselected. The lock behavior
+  has separate PostgreSQL evidence below; hosted acceptance remains outstanding.
 - The income-tax suite now passes 1,406 tests (23.46 seconds). Vietnam ordinary
   business and property rental have saved-case APIs and bilingual intake/results.
   The 59-test income browser regression passed before rental UI integration;
@@ -52,6 +56,7 @@ promotion remain incomplete.
   such as VAT is not required merely because an income-tax component excludes it.
 
 Evidence: [rental implementation](data-reconciliation/vietnam-business-consolidation-20261118.md),
+[full offline regression](data-reconciliation/full-offline-regression-20261118.json),
 [business implementation](data-reconciliation/vietnam-business-individual-review-20261118.md),
 [deployment preparation](RENDER_DEPLOYMENT.md),
 [current catalog plan](data-reconciliation/catalog-migration-plan-overlay-safe-20261118.json),

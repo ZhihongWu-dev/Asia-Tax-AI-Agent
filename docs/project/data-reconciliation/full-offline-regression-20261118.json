@@ -1,0 +1,14 @@
+{
+  "checked_on": "2026-11-18",
+  "implementation_commit_at_start": "44e20ad",
+  "command": "python -X utf8 -m pytest tests -m 'not integration' --ignore=tests/database -q",
+  "result": {"passed": 2436, "skipped": 2, "deselected": 25, "seconds": 507.02, "exit_code": 0},
+  "skips": [
+    {"test": "tests/chat/test_attachments.py:51", "reason": "legacy converter not installed"},
+    {"test": "tests/integration/test_catalog_executor.py:99", "reason": "PostgreSQL lock semantics require PostgreSQL"}
+  ],
+  "separate_postgres_evidence": "catalog-overlay-safe-postgres-rehearsal-20261118.json",
+  "scope": "Local offline application regression, including income-tax calculators and saved-case flows. Database tooling suite is excluded explicitly; integration-marked tests are deselected.",
+  "limits": ["Not hosted authentication or model-provider acceptance", "Not the separate twelve-case exhaustive optimizer run", "Does not prove completion of remaining statutory/business coverage", "Does not execute hosted migration or remote branch delivery"],
+  "completion_claim": false
+}
