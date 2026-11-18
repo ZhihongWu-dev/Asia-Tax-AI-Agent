@@ -20,6 +20,6 @@
     "deselected": 7,
     "seconds": 2.13,
     "skip_reason": "PostgreSQL lock test requires PostgreSQL; this run used local SQLite",
-    "command": "pytest tests/integration/test_catalog_migration.py tests/integration/test_catalog_executor.py -m not-integration -q (marker expression: not integration)"
+    "command": "python -X utf8 -m pytest tests/integration/test_catalog_migration.py tests/integration/test_catalog_executor.py -m \"not integration\" -q"
   }
 }
