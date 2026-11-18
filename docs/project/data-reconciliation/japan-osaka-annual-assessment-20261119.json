@@ -1,0 +1,25 @@
+{
+  "status": "backend_integration_verified_delivery_incomplete",
+  "scope": "Ordinary domestic full-year Osaka-city-only company,2026 fiscal start",
+  "local_only": true,
+  "validation": {
+    "command": "pytest tests/income_tax/test_japan_osaka.py tests/income_tax/test_japan_osaka_assessment.py tests/income_tax/test_japan_tokyo.py -q",
+    "passed": 59,
+    "seconds": 7.68
+  },
+  "verified": [
+    "Six separate local tax liabilities and interim balances",
+    "No cross-tax refund offset",
+    "Independent enterprise income and loss reconciliation",
+    "Tokyo/Osaka exclusive scope rejection",
+    "National-only and Tokyo regression",
+    "Ambient decimal precision independence"
+  ],
+  "remaining": [
+    "API persistence and restart/export verification",
+    "User interface and bilingual report integration",
+    "Browser workflow verification",
+    "Wider Japanese locations and special regimes",
+    "Actual business acceptance"
+  ]
+}

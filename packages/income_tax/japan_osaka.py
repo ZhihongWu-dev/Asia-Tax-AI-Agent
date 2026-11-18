@@ -3,8 +3,9 @@ from copy import deepcopy
 from decimal import Decimal, localcontext
 import json
 from pathlib import Path
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 
+from packages.contracts.income_tax import Money
 from .japan import yen
 from .japan_local import ordinary_enterprise_levies
 
@@ -117,3 +118,73 @@ def ordinary_enterprise(income, *, fiscal_start_year, months, registered_capital
             scope='ordinary_domestic_osaka_only_income_based_company',
             sources=deepcopy(SOURCES))
         return result
+
+
+class OsakaWorkpaper(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    registered_capital: Money
+    capital_reserve: Money
+    adjusted_statutory_capital: Money
+    enterprise_income_additions: Money
+    enterprise_income_deductions: Money
+    eligible_enterprise_prior_losses: Money
+    enterprise_interim_liability: Money
+    special_enterprise_interim_liability: Money
+    prefectural_inhabitant_interim_liability: Money
+    city_inhabitant_interim_liability: Money
+    prefectural_capitation_interim_liability: Money
+    city_capitation_interim_liability: Money
+    wards: list[OsakaWard] = Field(min_length=1, max_length=24)
+    all_offices_in_wards_for_full_year_verified: StrictBool
+    ordinary_domestic_entity_verified: StrictBool
+    size_based_exclusion_including_2025_2026_verified: StrictBool
+    capital_employees_and_local_base_verified: StrictBool
+    no_local_tax_credits_or_treaty_amendments_verified: StrictBool
+    local_adjustments_explanation: str = Field(min_length=20, max_length=4000)
+
+
+def assess(national, reconciliation, paper):
+    for name in ('all_offices_in_wards_for_full_year_verified', 'ordinary_domestic_entity_verified',
+                 'size_based_exclusion_including_2025_2026_verified',
+                 'capital_employees_and_local_base_verified', 'no_local_tax_credits_or_treaty_amendments_verified'):
+        if getattr(paper, name) is not True:
+            raise ValueError('Osaka local workpaper requires verified scope: ' + name)
+    components = ('enterprise', 'special_enterprise', 'prefectural_inhabitant',
+                  'city_inhabitant', 'prefectural_capitation', 'city_capitation')
+    with localcontext() as ctx:
+        ctx.prec = 40
+        interim = {key: yen(getattr(paper, key + '_interim_liability')) for key in components}
+        if any(value % 100 for value in interim.values()):
+            raise ValueError('Local interim return liabilities must be whole hundreds of yen')
+        additions, deductions, losses = map(yen, (paper.enterprise_income_additions,
+            paper.enterprise_income_deductions, paper.eligible_enterprise_prior_losses))
+        before_losses = reconciliation['income_before_loss_relief'] + additions - deductions
+        available = max(Decimal(0), before_losses)
+        used = min(available, losses)
+        income = available - used
+        enterprise = ordinary_enterprise(income, fiscal_start_year=2026, months=12,
+            registered_capital=paper.registered_capital, ordinary_single_prefecture_scope_verified=True)
+        inhabitant = annual_inhabitant(national['corporation_tax_reference'], fiscal_start_year=2026,
+            registered_capital=paper.registered_capital, ordinary_osaka_city_only_no_credits_verified=True)
+        capitation = annual_capitation(fiscal_start_year=2026, registered_capital=paper.registered_capital,
+            capital_reserve=paper.capital_reserve, adjusted_statutory_capital=paper.adjusted_statutory_capital,
+            wards=paper.wards, full_year_osaka_city_scope_verified=True)
+        taxes = dict(enterprise=enterprise['enterprise_tax_before_credits'],
+            special_enterprise=enterprise['special_enterprise_tax_before_credits'],
+            prefectural_inhabitant=inhabitant['prefectural_levy'], city_inhabitant=inhabitant['city_levy'],
+            prefectural_capitation=capitation['prefectural_capitation'], city_capitation=capitation['city_capitation'])
+        balances = {key: value - interim[key] for key, value in taxes.items()}
+        sources = {s['doc_id']: s for part in (enterprise, inhabitant, capitation) for s in part['sources']}
+        return dict(scope='ordinary_domestic_full_year_osaka_city_only',
+            local_income_reconciliation=dict(national_income_before_losses=reconciliation['income_before_loss_relief'],
+                enterprise_additions=additions, enterprise_deductions=deductions,
+                enterprise_income_before_losses=before_losses, enterprise_prior_losses_used=used,
+                enterprise_prior_losses_unused=losses-used, enterprise_taxable_income=income,
+                capital_for_per_capita_band=capitation['capital_for_rate_band']),
+            enterprise=enterprise, inhabitant=inhabitant, capitation=capitation,
+            local_tax_components=taxes, local_final_tax=sum(taxes.values(), Decimal(0)),
+            local_interim_liabilities=interim, local_balances=balances,
+            local_amounts_payable=sum((max(Decimal(0), v) for v in balances.values()), Decimal(0)),
+            local_refunds=sum((max(Decimal(0), -v) for v in balances.values()), Decimal(0)),
+            sources=list(sources.values()),
+            scope_note='Separate component balances; no automatic cross-tax offset or other-municipality liability.')

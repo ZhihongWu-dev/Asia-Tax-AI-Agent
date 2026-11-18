@@ -11,6 +11,7 @@ from .income_tax import Money
 from packages.income_tax.china_foreign_assessment import DirectWorkpaper
 from packages.income_tax.china_personal_foreign_assessment import PersonalWorkpaper
 from packages.income_tax.japan_tokyo import TokyoWorkpaper
+from packages.income_tax.japan_osaka import OsakaWorkpaper
 from packages.income_tax.hong_kong_salary_reconciliation import SalaryWorkpaper
 from packages.income_tax.malaysia_reconciliation import IndividualWorkpaper, CompanyWorkpaper
 
@@ -381,6 +382,7 @@ class JPIndividual(Basis):
 class JPCompany(Basis):
     policy: Literal['jp_company_starting_2026']
     tokyo_local: TokyoWorkpaper | None = None
+    osaka_local: OsakaWorkpaper | None = None
     taxable_income_before_rounding: Money
     rate_regime: Literal['ordinary','sme_reduced','sme_excluded']
     rate_classification_verified: StrictBool

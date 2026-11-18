@@ -123,6 +123,9 @@ def calculate(case: IncomeTaxCase, basis):
         reconciliation = japan_company.reconcile_company_basis(case,
             taxable_income_before_rounding=basis.taxable_income_before_rounding)
         tokyo_paper = args.pop('tokyo_local')
+        osaka_paper = args.pop('osaka_local')
+        if tokyo_paper is not None and osaka_paper is not None:
+            raise ValueError('Tokyo-only and Osaka-only local workpapers cannot be combined')
         result=japan_company.company_tax(period_start=case.period_start,period_end=case.period_end,**args)
         result['basis_reconciliation'] = reconciliation
         result['policy_version'] += '-reconciled-20261119'
@@ -139,6 +142,18 @@ def calculate(case: IncomeTaxCase, basis):
             result['local_taxes_calculated'] = True
             result['policy_version'] += '-tokyo-local-20261119'
             result['sources'].extend(deepcopy([*tokyo_sources, *WORKPAPER_SOURCES]))
+        if osaka_paper is not None:
+            from .japan_osaka import assess as assess_osaka
+            local = assess_osaka(result, reconciliation, basis.osaka_local)
+            result['osaka_local'] = local
+            result['national_final_tax'] = result['final_tax']
+            with localcontext() as ctx:
+                ctx.prec = 40
+                result['final_tax'] += local['local_final_tax']
+            result['tax_scope'] = 'japan_national_and_ordinary_osaka_city_full_year'
+            result['local_taxes_calculated'] = True
+            result['policy_version'] += '-osaka-local-20261119'
+            result['sources'].extend(deepcopy(local['sources']))
     elif policy == 'cn_small_company_2026':
         if case.residency != 'resident' or any(item.source_jurisdiction != 'cn' or
                 item.foreign_tax_paid not in (None, 0) for item in case.incomes):
