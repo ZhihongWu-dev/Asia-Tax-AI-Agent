@@ -26,6 +26,8 @@ export default function App() {
   const { t, locale, setLocale } = useLocale();
   const {
     cases,
+    prepareCase,
+    composerKey,
     current,
     applyServerCase,
     fields,
@@ -66,8 +68,9 @@ export default function App() {
   }, []);
   useOverlayFocus(panelRef, Boolean(panel), false, () => setPanel(null));
   useOverlayFocus(navRef, mobileNav, true, () => setMobileNav(false));
-  function openPanel(next: Panel) {
+  async function openPanel(next: Panel) {
     setMobileNav(false);
+    if ((next === 'facts' || next === 'structure') && !await prepareCase()) return;
     setPanel(next);
   }
   function newCase() {
@@ -166,7 +169,8 @@ export default function App() {
               aria-label={panel === "facts" ? t("收起案例信息") : t("打开案例信息")}
               title={t("案例信息")}
               aria-expanded={panel === "facts"}
-              onClick={() => setPanel(panel === "facts" ? null : "facts")}
+              disabled={busy}
+              onClick={() => void openPanel(panel === "facts" ? null : "facts")}
             >
               {panel === "facts" ? (
                 <PanelRightClose size={19} />
@@ -224,7 +228,7 @@ export default function App() {
             )}
 
             <Composer
-              key={current.id}
+              key={composerKey}
               lastSentText={current.messages.filter(m => m.role === "user" && !m.delivery).at(-1)?.text}
               text={drafts[current.id] || ""}
               onChange={changeDraft}
@@ -281,7 +285,7 @@ export default function App() {
             onSave={save}
             onSelectSource={setSource}
             onDomainUpdate={applyServerCase}
-            onEditFacts={() => setPanel("facts")}
+            onEditFacts={() => void openPanel("facts")}
           />
         </div>
       )}

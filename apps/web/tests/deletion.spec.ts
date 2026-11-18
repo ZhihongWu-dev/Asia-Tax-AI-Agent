@@ -1,5 +1,10 @@
 import {test, expect} from '@playwright/test';
 
+test.beforeEach(async ({page}) => {
+  await page.request.get('/api/session');
+  await page.request.post('/api/cases', {headers: {'X-AsiaTax-Request':'1'}});
+});
+
 test('cancel preserves a chat; confirm deletes it and reload does not restore it', async ({page}) => {
   await page.goto('/');
   await page.getByRole('button', {name:'Switch to English'}).click();

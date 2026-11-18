@@ -4,6 +4,12 @@ import { api, ApiError, type FactPatch } from "../api";
 import type { Case, FieldSpec, Message, EntryHint } from "../workspace";
 import { useLocale, answerLanguage, type Locale } from "../locale";
 
+function blankCase(): Case {
+  return {id: `draft-${crypto.randomUUID()}`, title: '', revision: 0, state: 'collecting',
+    messages: [], facts: {}, questions: [], analyses: [], confirmed_revision: null, data_approved: false};
+}
+const temporary = (doc: Case) => doc.id.startsWith('draft-');
+
 export function useWorkspace() {
   const { locale } = useLocale();
   const [cases, setCases] = useState<Case[]>([]),
@@ -14,6 +20,8 @@ export function useWorkspace() {
   const [errorCaseId, setErrorCaseId] = useState("");
   const [errorLocale, setErrorLocale] = useState<Locale>(locale);
   const locked = useRef(false);
+  const materialized = useRef(new Map<string, Case>());
+  const composerKeys = useRef(new Map<string, string>());
   const controller = useRef<AbortController | null>(null);
   const [partial, setPartial] = useState<{ caseId: string; text: string } | null>(null);
   useEffect(() => () => controller.current?.abort(), []);
@@ -51,7 +59,7 @@ export function useWorkspace() {
     const list = await api.list();
     return {
       fields: session.fields,
-      cases: list.length ? list : [await api.create()],
+      cases: list.length ? list : [blankCase()],
     };
   }
   useEffect(() => {
@@ -72,10 +80,30 @@ export function useWorkspace() {
     };
   }, []);
   useEffect(() => {
-    if (current) history.replaceState(null, "", `#${current.id}`);
+    if (current) history.replaceState(null, "", temporary(current) ? location.pathname + location.search : `#${current.id}`);
   }, [current?.id]);
   function update(next: Case) {
     setCases((all) => all.map((c) => (c.id === next.id ? next : c)));
+  }
+  async function persist(doc: Case): Promise<Case> {
+    if (!temporary(doc)) return doc;
+    const cached = materialized.current.get(doc.id);
+    if (cached) return cached;
+    const next = await api.create();
+    materialized.current.set(doc.id, next);
+    composerKeys.current.set(next.id, doc.id);
+    setCases(all => all.map(item => item.id === doc.id ? next : item));
+    setDrafts(all => { const copy = {...all, [next.id]: all[doc.id] || ''}; delete copy[doc.id]; return copy; });
+    setEntrySelections(all => { const copy = {...all}; if (copy[doc.id]) copy[next.id] = copy[doc.id]; delete copy[doc.id]; return copy; });
+    setActiveId(id => !id || id === doc.id ? next.id : id);
+    setWorkingCaseId(next.id);
+    setErrorCaseId(next.id);
+    if (retryRef.current?.caseId === doc.id) retryRef.current.caseId = next.id;
+    return next;
+  }
+  function prepareCase() {
+    const doc = storedCurrent;
+    return perform(async () => { await persist(doc); }, doc.id);
   }
   async function perform(
     operation: () => Promise<void>,
@@ -123,12 +151,13 @@ export function useWorkspace() {
   function send(text: string, approved: boolean, files: Attachment[] = []) {
     const messageText = withAttachments(text, files);
     let completed = false;
-    const doc = storedCurrent,
-      requestId = crypto.randomUUID();
+    let doc = storedCurrent;
+    const requestId = crypto.randomUUID();
     const replyLocale = answerLanguage(text, doc.reply_locale, locale);
     const entryHint = entrySelections[doc.id]?.text.trim() === text ? entrySelections[doc.id].hint : "auto";
     const pending = doc.dialogue?.status === "active" ? doc.dialogue.pending : null;
     return perform(async () => {
+      doc = await persist(doc);
       const localId = `pending-${requestId}`;
       setOutbox((all) => [
         ...all.filter(
@@ -210,11 +239,11 @@ export function useWorkspace() {
     });
   }
   function newCase() {
-    return perform(async () => {
-      const next = await api.create();
-      setCases((all) => [next, ...all]);
-      setActiveId(next.id);
-    });
+    if (locked.current) return;
+    const existing = cases.find(temporary);
+    const next = existing || blankCase();
+    if (!existing) setCases(all => [next, ...all]);
+    setActiveId(next.id);
   }
   function changeDraft(text: string) {
     setDrafts((all) => ({ ...all, [current.id]: text }));
@@ -224,7 +253,7 @@ export function useWorkspace() {
     const doc = cases.find(c => c.id === id);
     if (!doc) return Promise.resolve(false);
     const requestId = crypto.randomUUID();
-    let deleted = false;
+    let deleted = temporary(doc);
     return perform(async () => {
       if (!deleted) {
         try { await api.deleteCase(doc, requestId); }
@@ -236,7 +265,7 @@ export function useWorkspace() {
         deleted = true;
       }
       const remaining = cases.filter(c => c.id !== id);
-      if (!remaining.length) remaining.push(await api.create());
+      if (!remaining.length) remaining.push(blankCase());
       setCases(remaining);
       if (current?.id === id) setActiveId(remaining[0].id);
       setDrafts(all => { const next = {...all}; delete next[id]; return next; });
@@ -248,7 +277,7 @@ export function useWorkspace() {
     const doc = cases.find(c => c.id === id);
     if (!doc) return Promise.resolve(false);
     const requestId = crypto.randomUUID();
-    return perform(async () => { await mutate(doc, "organization", changes, requestId); }, id);
+    return perform(async () => { await mutate(await persist(doc), "organization", changes, requestId); }, id);
   }
   function retry() {
     if (!current) {
@@ -261,6 +290,8 @@ export function useWorkspace() {
   }
   return {
     cases,
+    prepareCase,
+    composerKey: current ? composerKeys.current.get(current.id) || current.id : '',
     partial: partial && partial.caseId === current?.id ? partial.text : "",
     canStop: Boolean(partial) && partial?.caseId === current?.id,
     stop: () => controller.current?.abort(),
