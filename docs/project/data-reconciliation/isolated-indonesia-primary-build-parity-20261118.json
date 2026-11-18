@@ -1,0 +1,44 @@
+{
+  "status": "seven_tables_exact_parity_verified",
+  "publication": "Atomic SQLite publication from unchanged successful full extraction plus scoped-validated parameter rebinding.",
+  "tables": [
+    {
+      "table": "jurisdiction",
+      "rows": 11,
+      "all_fields_equal": true
+    },
+    {
+      "table": "treaty",
+      "rows": 55,
+      "all_fields_equal": true
+    },
+    {
+      "table": "doc",
+      "rows": 356,
+      "all_fields_equal": true
+    },
+    {
+      "table": "clause",
+      "rows": 45720,
+      "all_fields_equal": true
+    },
+    {
+      "table": "param",
+      "rows": 811,
+      "all_fields_equal": true
+    },
+    {
+      "table": "files",
+      "rows": 756,
+      "all_fields_equal": true
+    },
+    {
+      "table": "decision",
+      "rows": 43,
+      "all_fields_equal": true
+    }
+  ],
+  "integrity_check": "ok",
+  "sqlite_sha256": "8a27d4017d4ff383b21614aeda058a004821d62df9c91cfc6810bd6092463bc6",
+  "scope": "Isolated only; original frozen optimizer/runtime untouched."
+}

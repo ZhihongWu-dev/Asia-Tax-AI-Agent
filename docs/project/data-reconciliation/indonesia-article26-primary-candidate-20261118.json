@@ -1,5 +1,5 @@
 {
-  "status": "source_pages_cloud_admitted_pending_parameter_and_rule_migration",
+  "status": "source_pages_admitted_and_statutory_rate_rebound_in_isolated_stage",
   "candidate": {
     "cite_id": "id.tax-law-compilation-2022#p210",
     "doc_id": "id.tax-law-compilation-2022",
@@ -78,5 +78,6 @@
     "visual_review": "Both original pages visually inspected. Page242 contains Article26(1),(1a),(1b),(2) and start of (2a), plus separate prior-article commentary. Page243 continues (2a), includes (3),(4),(5) and separately boxed Article26 explanation. Native extraction order differs from visual order; full page content and boundaries preserved.",
     "scope": "Source text admission candidate only; no approval of every 2026 exception, treaty entitlement, or legacy final-tax generalization."
   },
-  "cloud_admission_evidence": "indonesia-article26-source-admission-20261118.json"
+  "cloud_admission_evidence": "indonesia-article26-source-admission-20261118.json",
+  "migration_evidence": "indonesia-article26-primary-migration-20261118.json"
 }

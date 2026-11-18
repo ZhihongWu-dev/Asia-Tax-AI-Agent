@@ -150,21 +150,21 @@ The final integration has not been pushed or merged to `main`. The historical
 
 ## Latest isolated source verification
 
-The dedicated read-only cloud reader checked all 633 distinct citation dependencies
+The dedicated read-only cloud reader checked all 635 distinct citation dependencies
 in the isolated parameter, absence, rule, predicate and decision CSVs after the
-Vietnam distribution changes. None are missing; one remains blocked:
-`id.dgt.article26#all`, used by two catalog parameters and the statutory withholding
-rule. See [current source audit](data-reconciliation/isolated-planner-source-readiness-20261118.json).
+Vietnam distribution and Indonesian statutory-source changes. None are missing; one remains blocked:
+`id.dgt.article26#all`, now used only by the historical payment-deadline
+parameter. The statutory-rate parameter and rule use admitted primary text. See [current source audit](data-reconciliation/isolated-planner-source-readiness-20261118.json).
 This verifies citation availability and admission only, not legal completeness,
 cloud parameter parity, runtime promotion or final business acceptance.
 
 The conditional Vietnam distribution exemption has 1,375 passing isolated rule
 tests and 30 remaining coverage gaps. Explicit probes verify that unknown
 qualification does not produce a definite zero-tax result. The fresh isolated SQLite build and all seven CSV tables now match exactly,
-with 355 documents, 45,295 clauses, 811 parameters and 43 absence records.
+with 356 documents, 45,720 clauses, 811 parameters and 43 absence records.
 The build has zero errors, 87 warnings, 5 category gaps, 36 slot gaps and 2
 blocked downloads. The 1,375 rule tests also passed against this fresh build.
-See [parity evidence](data-reconciliation/isolated-vietnam-distribution-build-parity-20261118.json). The original optimizer remains running with
+See [current parity evidence](data-reconciliation/isolated-indonesia-primary-build-parity-20261118.json). The original optimizer remains running with
 four completed cases and no checker failures in those four; its full result is
 still pending.
 
