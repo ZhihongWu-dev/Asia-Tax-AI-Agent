@@ -20,6 +20,7 @@ export default function Sidebar({
   activeId,
   onSelect,
   onNew,
+  onAtlas,
   onPanel,
   onClose,
   onOrganize,
@@ -29,6 +30,7 @@ export default function Sidebar({
   activeId: string;
   onSelect: (id: string) => void;
   onNew: () => void;
+  onAtlas: () => void;
   onPanel: (panel: Panel) => void;
   onClose: () => void;
   onOrganize: (id: string, changes: { title?: string; archived?: boolean }) => Promise<boolean>;
@@ -120,6 +122,7 @@ export default function Sidebar({
         )}
       </nav>
       <div className="sidebar-bottom">
+        <HintButton className="side-link" onClick={onAtlas}><BookOpen size={17} />{say("税务地图", "Tax atlas")}</HintButton>
         {user && <div className="account-row"><UserRound size={17} /><span title={user.email}>{user.email}</span><HintButton className="icon-button" disabled={signingOut} aria-label={t("退出登录")} title={t("退出登录")} onClick={async () => { setSigningOut(true); setLogoutError(false); try { await logout(); } catch { setLogoutError(true); } finally { setSigningOut(false); } }}><LogOut size={17} /></HintButton></div>}
         {logoutError && <p role="alert">{t("退出失败，请重试。")}</p>}
         <HintButton className="side-link" onClick={() => onPanel("sources")}>

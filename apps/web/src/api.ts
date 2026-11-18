@@ -50,6 +50,10 @@ export async function request<T>(
   }
 }
 export const api = {
+  atlasMap: () => request<AtlasMap>("/atlas/map"),
+  atlasCountry: (code: string) => request<AtlasCountry>(`/atlas/country/${code}`),
+  atlasGlossary: () => request<AtlasGlossary>("/atlas/glossary"),
+  atlasClause: (citeId: string) => request<AtlasClause>(`/atlas/clause?cite_id=${encodeURIComponent(citeId)}`),
   calculateIncomeTax: (caseId: string, revision: number, basis: Record<string, unknown>, requestId: string) =>
     request<IncomeRun>(`/cases/${caseId}/income-tax/runs`, "POST", {revision, request_id: requestId, basis}),
   saveIncomeTax: (caseId: string, revision: number, inputs: IncomeTaxInput, requestId: string) =>
@@ -139,3 +143,46 @@ export const api = {
     ),
 };
 export type FactPatch = Record<string, FactValue | null>;
+
+export type AtlasAbsent = { id: string; statement: string; cite_id: string; quote: string; subject: string };
+export type AtlasCell = {
+  floor: number | null; ceiling: number | null; status: string; value_kind: string;
+  needs: string[]; rules: string[]; cite_ids: string[]; absent?: AtlasAbsent[];
+};
+export type AtlasVersion = { library: string; source: string; rules: number; docs?: number; clauses?: number; params?: number };
+export type AtlasJurisdiction = {
+  code: string; iso: string; name: string; name_zh: string; currency: string;
+  wht_company: AtlasCell; wht_individual: AtlasCell;
+};
+export type AtlasMap = { date: string; version: AtlasVersion; metrics: string[]; facts: Record<string, unknown>; jurisdictions: AtlasJurisdiction[] };
+export type AtlasTreaty = { pair: string; doc_id: string; in_force_from: string; title: string; mli: boolean; url: string };
+export type AtlasPartner = {
+  code: string; name: string; name_zh: string; treaty: AtlasTreaty[];
+  qualifying: AtlasCell; portfolio: AtlasCell; individual: AtlasCell;
+  conditions: Record<string, { value: string; unit: string; cite_id: string; quote: string }>;
+};
+export type AtlasParam = {
+  param_id: string; scope: string; subject: string; slot: string; name: string; value: string; unit: string;
+  cite_id: string; quote: string; effective_from: string; effective_to: string; note: string; superseded_by: string;
+};
+export type AtlasTerm = {
+  key: string; kind: string; type: string; allowed: string; question: string; meaning: string;
+  jurisdictions: string[]; cite_ids: string[];
+};
+export type AtlasDoc = { id: string; title: string; type: string; url: string; lang: string; effective_from: string; effective_to: string };
+export type AtlasCountry = {
+  date: string; version: AtlasVersion; code: string; iso: string; name: string; name_zh: string; currency: string;
+  headline: { wht_company: AtlasCell; wht_individual: AtlasCell };
+  cit: { value: string; unit: string; cite_id: string } | null;
+  partners: AtlasPartner[]; slots: { slot: string; title: string; title_zh: string }[];
+  params: AtlasParam[]; absent: AtlasAbsent[]; docs: AtlasDoc[]; terms: AtlasTerm[];
+};
+export type AtlasGlossary = {
+  version: AtlasVersion;
+  slots: { slot: string; title: string; title_zh: string; text: string; text_zh: string }[];
+  terms: AtlasTerm[]; jurisdictions: { code: string; name: string; name_zh: string }[];
+};
+export type AtlasClause = {
+  cite_id: string; doc_id: string; label: string; text: string; total: number;
+  title: string; url: string; lang: string; jur: string;
+};

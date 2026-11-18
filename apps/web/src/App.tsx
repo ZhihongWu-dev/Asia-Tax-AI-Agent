@@ -1,3 +1,4 @@
+import TaxAtlas from "./components/TaxAtlas";
 import type { Attachment } from './attachments';
 import HintButton from "./components/HintButton";
 import { useEffect, useRef, useState } from "react";
@@ -46,6 +47,7 @@ export default function App() {
   } = useWorkspace();
   const [showConsent, setShowConsent] = useState(false);
   const [consent, setConsent] = useState(false);
+  const [atlasOpen, setAtlasOpen] = useState(false);
   const [panel, setPanel] = useState<Panel>(null);
   const [source, setSource] = useState(sourceInfo[0].id);
   const [mobileNav, setMobileNav] = useState(false);
@@ -69,6 +71,7 @@ export default function App() {
     setPanel(next);
   }
   function newCase() {
+    setAtlasOpen(false);
     setPanel(null);
     setMobileNav(false);
     void createCase();
@@ -110,16 +113,18 @@ export default function App() {
           onOrganize={organize}
           activeId={current.id}
           onNew={newCase}
+          onAtlas={() => { setAtlasOpen(true); setPanel(null); setMobileNav(false); }}
           onClose={() => setMobileNav(false)}
           onPanel={openPanel}
           onSelect={(id) => {
+            setAtlasOpen(false);
             setActiveId(id);
             setPanel(null);
             setMobileNav(false);
           }}
         />
       </div>
-      <main
+      {atlasOpen ? <main className="main-workspace"><header className="topbar"><HintButton onClick={() => setAtlasOpen(false)}>{locale === "en" ? "Back to workspace" : "返回工作空间"}</HintButton></header><TaxAtlas /></main> : <main
         className={`main-workspace ${empty ? "is-empty" : ""}`}
         inert={modalOpen || Boolean(panel) ? true : undefined}
       >
@@ -241,7 +246,7 @@ export default function App() {
         <footer className="workspace-footer">
           {t("专业判断，请由税务顾问复核。")}
         </footer>
-      </main>
+      </main>}
       {modalOpen && (
         <div
           className="overlay-backdrop"
