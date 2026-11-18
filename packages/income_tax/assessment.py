@@ -10,6 +10,7 @@ from . import china_business
 from . import singapore_employment
 from . import thailand_dividends
 from . import malaysia_dividends
+from . import thailand_foreign_credit
 from .korea_children import ChildCreditFacts
 from .korea_personal_deductions import PersonalDeductionPerson
 
@@ -35,7 +36,7 @@ def calculate(case: IncomeTaxCase, basis):
     expected = {'cn_company_2026': 'company', 'cn_small_company_2026': 'company', 'cn_comprehensive_2026': 'individual', 'cn_business_2026': 'individual',
                 'sg_company_ya2026': 'company', 'sg_resident_ya2026': 'individual',
                 'hk_salaries_2025_26': 'individual', 'my_company_2026': 'company',
-                'my_individual_2026': 'individual', 'my_dividend_2026': 'individual', 'th_company_2026':'company', 'th_resident_2026':'individual', 'th_dividend_2026':'individual',
+                'my_individual_2026': 'individual', 'my_dividend_2026': 'individual', 'th_company_2026':'company', 'th_resident_2026':'individual', 'th_dividend_2026':'individual', 'th_foreign_income_2026':'individual',
                 'vn_personal_transfer_2026': 'individual', 'vn_employment_2026': 'individual', 'vn_company_2026': 'company',
                 'jp_resident_ordinary_2026': 'individual', 'jp_company_starting_2026':'company',
                 'in_personal_new_ty2026_27':'individual', 'in_personal_old_ty2026_27':'individual', 'in_company_section200_ty2026_27':'company',
@@ -47,7 +48,7 @@ def calculate(case: IncomeTaxCase, basis):
         raise ValueError('Policy subject differs from the saved case')
     if policy in ('id_company_2026','id_resident_2026') and case.subject != ('company' if policy=='id_company_2026' else 'individual'):
         raise ValueError('Policy subject differs from the saved case')
-    if policy in ('cn_comprehensive_2026', 'sg_resident_ya2026', 'th_resident_2026','th_dividend_2026','id_company_2026','id_resident_2026','vn_employment_2026','vn_company_2026','jp_resident_ordinary_2026') and case.residency != 'resident':
+    if policy in ('cn_comprehensive_2026', 'sg_resident_ya2026', 'th_resident_2026','th_dividend_2026','th_foreign_income_2026','id_company_2026','id_resident_2026','vn_employment_2026','vn_company_2026','jp_resident_ordinary_2026') and case.residency != 'resident':
         raise ValueError('This policy requires resident status')
     args = basis.model_dump(exclude={'policy', 'basis_explanation', 'basis_confirmed'})
     if policy in ('in_personal_new_ty2026_27','in_personal_old_ty2026_27','in_company_section200_ty2026_27','in_company_normal_ty2026_27'):
@@ -340,6 +341,8 @@ def calculate(case: IncomeTaxCase, basis):
             employment_gross=employment, other_nonemployment_gross=other, **args)
         for output, saved in zip(result['dividend_components']['tranches'], basis.tranches):
             output['income_index'] = saved.income_index
+    elif policy=='th_foreign_income_2026':
+        result=thailand_foreign_credit.assess_saved_case(case, **args)
     elif policy=='th_company_2026':
         result=thailand.company_tax(tax_year=2026,**args)
     elif policy=='th_resident_2026':

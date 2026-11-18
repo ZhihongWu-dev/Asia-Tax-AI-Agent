@@ -151,7 +151,14 @@ def country_credit_limits(countries, *, domestic_assessable_income,
         if not isinstance(country, str) or not re.fullmatch('[a-z]{2}', country) or country == 'th' or country in seen:
             raise ValueError('Use distinct foreign-country codes')
         seen.add(country)
-        income, paid = map(amount, (row['remitted_assessable_income'], row['eligible_attributable_tax']))
+        income = amount(row['remitted_assessable_income'])
+        raw_paid = row['eligible_attributable_tax']
+        # An internally apportioned Decimal can have more than six places.
+        # Preserve it through the limit comparison; public inputs use Money.
+        if isinstance(raw_paid, Decimal) and raw_paid.is_finite() and 0 <= raw_paid <= Decimal('1e18'):
+            paid = raw_paid
+        else:
+            paid = amount(raw_paid)
         if income == 0 and paid != 0:
             raise ValueError('Credit requires attributable assessable income')
         inputs.append((country, income, paid))
@@ -173,3 +180,63 @@ def country_credit_limits(countries, *, domestic_assessable_income,
                     allowable_foreign_credit=sum((r['allowable_foreign_credit'] for r in output), amount(0)),
                     stage='reviewed_country_credit_limits_before_rounding_and_settlement',
                     sources=[SOURCE, 'https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_TH.pdf'])
+
+
+def assess_saved_case(case, *, pools, net_taxable_income, prepaid_tax,
+                      ordinary_treatment_confirmed, assessable_income_classification_confirmed,
+                      tracing_fx_and_entitlement_verified, saved_tax_represents_original_pool_tax):
+    """Combine reconciled remittances, annual tax and reviewed foreign credit."""
+    from .thailand_remittances import RemittanceTranche
+    from .thailand import resident_individual_tax
+    if (assessable_income_classification_confirmed is not True
+            or saved_tax_represents_original_pool_tax is not True):
+        raise ValueError('Confirm Section40 classification and original-pool tax meaning')
+    domestic_allowed = {'employment','business','service_remuneration','author_remuneration','royalty','rental'}
+    foreign_allowed = domestic_allowed | {'dividend','interest'}
+    if case.carried_losses != 0:
+        raise ValueError('Thai ordinary personal policy does not establish carried-loss eligibility')
+    for item in case.incomes:
+        allowed = domestic_allowed if item.source_jurisdiction == 'th' else foreign_allowed
+        if item.category not in allowed:
+            raise ValueError('Income requires separate-regime classification')
+        if item.source_jurisdiction == 'th' and item.foreign_tax_paid not in (None,0):
+            raise ValueError('Domestic income cannot carry foreign-pool tax')
+    converted, explanations = [], {}
+    for data in pools:
+        data = dict(data)
+        explanations[data['pool_id']] = data.pop('entitlement_and_fx_explanation')
+        data['remittances'] = tuple(RemittanceTranche(**r) for r in data['remittances'])
+        converted.append(ForeignIncomePool(**data))
+    prepared = prepare_case_foreign_tax(case, converted,
+        tracing_fx_and_entitlement_verified=tracing_fx_and_entitlement_verified)
+    with localcontext() as context:
+        context.prec = 40
+        domestic = sum((i.gross_amount for i in case.incomes if i.source_jurisdiction == 'th'), amount(0))
+        included = prepared['remittance_reconciliation']['included_before_relief']
+        if amount(net_taxable_income) != max(amount(0), domestic+included-case.claimed_deductions):
+            raise ValueError('Net taxable income must reconcile included receipts and saved deductions')
+        nonemployment = sum((i.gross_amount for i in case.incomes
+                             if i.source_jurisdiction == 'th' and i.category != 'employment'), amount(0))
+        nonemployment += sum((p['included_assessable_income'] for p in prepared['pools']
+                              if p['category'] != 'employment'), amount(0))
+        ordinary = resident_individual_tax(net_taxable_income, tax_year=2026,
+            nonemployment_assessable_gross=nonemployment,
+            ordinary_treatment_confirmed=ordinary_treatment_confirmed,
+            allowed_tax_credits=0, prepaid_tax=prepaid_tax)
+        countries = {}
+        for pool in prepared['pools']:
+            pool['entitlement_and_fx_explanation'] = explanations[pool['pool_id']]
+            row = countries.setdefault(pool['country'], dict(country=pool['country'],
+                remitted_assessable_income=amount(0), eligible_attributable_tax=amount(0)))
+            row['remitted_assessable_income'] += pool['included_assessable_income']
+            row['eligible_attributable_tax'] += pool['eligible_attributable_tax']
+        credits = country_credit_limits(list(countries.values()), domestic_assessable_income=domestic,
+            thai_tax_before_foreign_credit=ordinary['gross_tax'], tax_year=2026,
+            entitlement_and_basis_verified=tracing_fx_and_entitlement_verified)
+        credit = min(ordinary['gross_tax'], credits['allowable_foreign_credit'])
+        final = ordinary['gross_tax']-credit
+        return {**ordinary, 'allowed_tax_credits':credit, 'final_tax':final,
+                'balance_due':final-amount(prepaid_tax), 'foreign_credit':credits,
+                'foreign_income_reconciliation':prepared,
+                'stage':'resident_foreign_income_assessment_before_rounding',
+                'sources':ordinary['sources']+credits['sources']}

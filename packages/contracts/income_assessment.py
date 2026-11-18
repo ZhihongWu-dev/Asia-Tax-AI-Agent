@@ -162,6 +162,38 @@ class THIndividual(THBasis):
     assessable_income_classification_confirmed: StrictBool
 
 
+class THRemittanceLine(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    income_index: Annotated[int, Field(strict=True, ge=0, le=199)]
+    remitted_income: Money
+    income_date: date
+    remittance_date: date
+    days_in_thailand_in_income_year: Annotated[int, Field(strict=True, ge=0, le=366)]
+
+
+class THForeignPool(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    pool_id: str = Field(min_length=1, max_length=200)
+    income_index: Annotated[int, Field(strict=True, ge=0, le=199)]
+    total_foreign_income: Money
+    foreign_income_tax_paid: Money
+    eligible_foreign_income_tax_paid: Money
+    previously_remitted_income: Money
+    remittances: list[THRemittanceLine] = Field(min_length=1, max_length=1000)
+    entitlement_and_fx_explanation: str = Field(min_length=20, max_length=4000)
+
+
+class THForeignIncome(Basis):
+    policy: Literal['th_foreign_income_2026']
+    pools: list[THForeignPool] = Field(min_length=1, max_length=1000)
+    net_taxable_income: Money
+    prepaid_tax: Money
+    ordinary_treatment_confirmed: StrictBool
+    assessable_income_classification_confirmed: StrictBool
+    tracing_fx_and_entitlement_verified: StrictBool
+    saved_tax_represents_original_pool_tax: StrictBool
+
+
 class THDividendLine(BaseModel):
     model_config = ConfigDict(extra='forbid')
     income_index: Annotated[int, Field(strict=True, ge=0, le=199)]
@@ -401,5 +433,5 @@ class KRSalary(Basis):
 
 
 Assessment = Annotated[CNCompany | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
-                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
+                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
                        Field(discriminator='policy')]
