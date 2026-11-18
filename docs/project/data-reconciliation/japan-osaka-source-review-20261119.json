@@ -96,5 +96,11 @@
     "implementation": "japan_osaka.ordinary_enterprise validates2026 start,1-12months, capital<=JPY100m and verified Osaka-only ordinary scope. Uses Osaka income thresholdJPY50m prorated by months after thousand-yen truncation. Reuses identical verified band arithmetic; outputs Osaka-only source records.",
     "validation": "11 tests passed in0.57s: standard/special levies,50m threshold and truncation, short-period bands, ambient precision, source hashes and rejected scope.",
     "limits": "No saved-case/API/UI integration. Prefectural/city inhabitant and capitation, local adjustments, interim balances, and broader special/multi-location regimes remain required."
+  },
+  "capitation_component": {
+    "status": "internal_full_year_component_implemented",
+    "rules": "Capital band=max(adjusted statutory capital,registered capital+reserve). Prefecture charged once; city annual capitation per established Osaka ward. Employee boundary50, distinct prefectural surcharge bands.",
+    "validation": "25 Osaka tests passed in0.61s, including14 new capitation cases covering capital tiers, reserve floor, per-ward employees, duplicate/empty scope, exact context and source hashes.",
+    "limits": "Only verified full-year ordinary capital corporations in Osaka city; no short-year capitation, dormitory exemptions or other municipalities inferred. Inhabitant corporation-tax levies and complete saved workflow still pending."
   }
 }
