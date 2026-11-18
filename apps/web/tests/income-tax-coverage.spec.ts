@@ -54,7 +54,7 @@ const scenarios:Scenario[]=[
     money:[['Net income before allowances','380000'],['Allowed allowances','132000'],['Prepaid final tax for this assessment','10000']],
     choices:[['Ordinary separate salaries assessment checked','true']],resultLabel:'Balance due (negative means overpaid)',expected:'11160'},
   ...(['company','individual'] as const).map(subject=>({name:`UAE ${subject} ordinary business`,country:'ae',subject,category:'business',start:'2026-01-01',end:'2026-12-31',gross:subject==='company'?'1000000':'3600000',policy:'ae_ordinary_2026',
-    money:[['Established taxable income',subject==='company'?'1000000':'1800000'],['Allowed foreign tax credit by source','0'],['Prepaid tax for this period','0'],
+    money:[['Established taxable income',subject==='company'?'1000000':'1800000'],['Taxable additions not included in saved income','0'],['Established exempt income included in business income','0'],['Allowed foreign tax credit by source','0'],['Prepaid tax for this period','0'],
       ...(subject==='individual'?[['Total in-scope personal business turnover','3600000']]:[])] as [string,string][],
     choices:[['Ordinary regime and exclusions checked','true'],['Confirmed no small-business or other relief election','true'],
       ...(subject==='individual'?[['Statutory business and excluded-income classification checked','true']]:[])] as [string,string][],
@@ -87,6 +87,7 @@ for(const s of scenarios)test(`${s.name} saves and reopens a sourced result`,asy
   const trailingZeros=s.expected.includes('.')?'0*':'(?:\\.0+)?';
   const expectedAmount=new RegExp(`^${s.expected.replace('.','\\.')}${trailingZeros}$`);
   await expect(amount).toHaveText(expectedAmount);
+  if(s.policy==='ae_ordinary_2026') await expect(report.getByRole('region',{name:'UAE corporate tax basis reconciliation'})).toBeVisible();
   if(s.policy==='hk_profits_2025_26') await expect(report.getByRole('region',{name:'Hong Kong profits basis reconciliation'})).toContainText('1000000');
   if(s.policy==='sg_company_ya2026') await expect(report.getByRole('region',{name:'Singapore pre-exemption basis reconciliation'})).toContainText('900000');
   if(s.policy==='hk_property_2025_26') {

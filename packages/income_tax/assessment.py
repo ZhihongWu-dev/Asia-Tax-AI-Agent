@@ -216,7 +216,13 @@ def calculate(case: IncomeTaxCase, basis):
                 turnover = sum((i.gross_amount for i in case.incomes if i.category == 'business'), Decimal('0'))
             if turnover != args['natural_person_business_turnover']:
                 raise ValueError('Business turnover must reconcile to saved business income')
+        from .uae_reconciliation import reconcile
+        reconciliation = reconcile(case, taxable_income=basis.taxable_income,
+            additions=args.pop('taxable_additions'), exempt_income=args.pop('exempt_income'))
         result = united_arab_emirates.ordinary_corporate_tax(tax_year=2026, subject_type=case.subject, **args)
+        result['uae_basis_reconciliation'] = reconciliation
+        result['policy_version'] += '-reconciled-20261119'
+        result['sources'].extend(deepcopy(united_arab_emirates.BASIS_SOURCES))
     elif policy == 'my_dividend_2026':
         if args.pop('separate_domestic_assessment_verified') is not True:
             raise ValueError('Separate domestic ordinary and dividend assessment must be verified')

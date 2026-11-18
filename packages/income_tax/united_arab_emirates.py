@@ -12,6 +12,7 @@ from .arithmetic import ZERO, amount
 POLICY_VERSION = 'ae-calendar-2026-2026-11-16'
 SOURCES = json.loads(Path(__file__).with_name('ae_2026_sources.json').read_text(encoding='utf-8'))['sources']
 
+BASIS_SOURCES = json.loads(Path(__file__).with_name('ae_basis_sources.json').read_text(encoding='utf-8'))['sources']
 
 def _period(tax_year):
     if type(tax_year) is not int or tax_year != 2026:

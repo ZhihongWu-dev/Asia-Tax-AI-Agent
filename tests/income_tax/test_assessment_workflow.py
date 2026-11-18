@@ -88,6 +88,7 @@ def test_natural_person_turnover_reconciles_to_saved_income():
     data['incomes'][0].update(category='business',gross_amount='3600000')
     data['incomes'].append(dict(category='employment',source_jurisdiction='ae',
                                gross_amount='200000',description='Excluded wage'))
+    data['claimed_deductions']='1800000'
     basis = dict(policy='ae_ordinary_2026',taxable_income='1800000',ordinary_regime_confirmed=True,
                  no_relief_elected_confirmed=True,allowed_foreign_tax_credit='0',prepaid_tax='0',
                  natural_person_business_turnover='3600000',

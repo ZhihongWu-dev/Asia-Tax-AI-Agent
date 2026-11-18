@@ -1,0 +1,13 @@
+{
+  "sources": [
+    {
+      "url": "https://mof.gov.ae/wp-content/uploads/2026/01/Federal-Decree-Law-No.-47-of-2022-and-its-amendments-en-v13.1.26.pdf",
+      "file": "database/raw/ae/ae.law.corporate-tax.mof20260113.en.pdf",
+      "sha256": "d11bdd029c1b0ab6a73cadad734d6ba85b6f61fe5014fc7fdc73fb754a557c03",
+      "doc_id": "ae.law.corporate-tax.mof20260113.en",
+      "title": "UAE Corporate Tax Law consolidated January 2026: own-loss relief",
+      "locator": "Articles 37 and 39; PDF pages42-44",
+      "note": "MOF English translation; Arabic prevails. Own-loss ordinary 75% ceiling; eligibility must be established separately."
+    }
+  ]
+}

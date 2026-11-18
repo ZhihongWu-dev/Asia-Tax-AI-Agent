@@ -1,0 +1,27 @@
+{
+  "scope": "UAE ordinary standalone corporate tax for companies and in-scope natural-person businesses",
+  "changes": [
+    "Saved business income plus taxable additions minus exempt income and established business deductions reconciles to income before loss relief.",
+    "Own eligible prior losses are capped at 75% of positive income before loss relief; the AED375000 zero-rate band is applied afterwards.",
+    "Current losses, used prior losses and unused prior losses are separate. Personal excluded receipts do not enlarge business loss capacity.",
+    "Unclassified service/author/royalty/other personal receipts cannot silently disappear from the base; classification as in-scope business or verified statutory exclusion is required.",
+    "Supplied taxable base must match reconciliation; persisted results and reports retain original consolidated-law source hash."
+  ],
+  "source": {
+    "manifest": "packages/income_tax/ae_basis_sources.json",
+    "reviewed": "Articles37 and39 in MOF January2026 consolidated publication; Article37 PDFpage42; Arabic prevails",
+    "current_web_crosscheck": "FTA ordinary 75% loss FAQ and MOF law; legislation platform returned403"
+  },
+  "validation": {
+    "income_and_report_regression": "1524 passed in35.29s before final two additional tests",
+    "final_focused": "26 passed in18.87s, including adapter11250 tax example, invalid base rejection, original-source hash, saved restart/report",
+    "typescript": "tsc -b exit0",
+    "browser": "2 passed in34.6s: company and personal business saved/reopened with reconciliation"
+  },
+  "compatibility": "New adjustment amounts default to zero. Historical snapshots are not rewritten; new calculations reconcile saved deductions and losses.",
+  "limits": [
+    "Statutory deduction/exemption and prior-loss eligibility/ownership continuity require established evidence.",
+    "No transferred/group loss, free-zone, minimum top-up tax or relief-election calculations added.",
+    "This is a reconciliation repair, not completion of all UAE regimes or overall business acceptance."
+  ]
+}

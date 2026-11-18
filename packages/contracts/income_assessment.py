@@ -127,6 +127,8 @@ class HKProperty(Basis):
 class AEOrdinary(Basis):
     policy: Literal['ae_ordinary_2026']
     taxable_income: Money
+    taxable_additions: Money = Decimal('0')
+    exempt_income: Money = Decimal('0')
     ordinary_regime_confirmed: StrictBool
     no_relief_elected_confirmed: StrictBool
     allowed_foreign_tax_credit: Money
