@@ -25,7 +25,11 @@ promotion remain incomplete.
   and admitted through the private overlay. The dedicated reader now returns
   all 662 dependencies, verifies the twelve exact new passages and rejects the
   old snapshot. However, 34 existing live passages differ byte-for-byte from the
-  staged optimizer passages; substantive/formatting comparison remains required.
+  staged optimizer passages. Follow-up review classified all 34 as extraction
+  differences: 24 whitespace-only, nine Korean PDF page footers and one Japanese
+  navigation wrapper. The bounded legal-body comparisons and document hashes
+  match. Exact source bytes and version pins remain unchanged; no production
+  reader was taught to ignore mismatches.
   The older runtime still references the two blocked sources until repaired-rule
   integration. No base catalog tables were changed by this source admission.
 - Next delivery work is source admission/rebinding, completed optimizer
@@ -39,7 +43,8 @@ Evidence: [rental implementation](data-reconciliation/vietnam-business-consolida
 [deployment preparation](RENDER_DEPLOYMENT.md),
 [catalog guards](data-reconciliation/catalog-procedure-migration-preflight-20261118.json),
 [earlier live source blockers](data-reconciliation/atlas-live-catalog-preflight-20261118.json),
-[repaired-source admission and remaining mismatches](data-reconciliation/indonesia-procedure-source-admission-20261118.json).
+[repaired-source admission](data-reconciliation/indonesia-procedure-source-admission-20261118.json),
+[reviewed extraction differences](data-reconciliation/live-staged-source-comparison-20261118.json).
 
 ## Earlier delivery checkpoints (superseded where noted above)
 
