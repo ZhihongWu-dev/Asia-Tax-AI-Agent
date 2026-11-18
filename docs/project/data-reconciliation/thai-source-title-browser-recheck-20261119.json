@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-11-18T20:04:38.141889+00:00",
+  "runtime_head": "6570d92",
+  "scope": "Browser regression assertion repair only; runtime and tax calculations unchanged",
+  "original_failure": {
+    "tests": [
+      "Thailand foreign remittance saves and reopens 2024-06-01",
+      "Thailand foreign remittance saves and reopens 2023-06-01"
+    ],
+    "reason": "Expected old source title ending (Thai); rendered archived source title is (TH), November 2025. Both tax amount assertions passed before the missing-title failure."
+  },
+  "change": "Update exact accessible source-link title; retain exact official PDF URL and all tax, pool, exclusion and saved-result assertions",
+  "validation": {
+    "command": "playwright test tests/income-tax.spec.ts --grep 'Thailand foreign remittance saves' --workers=1",
+    "passed": 2,
+    "exit_code": 0,
+    "reported_duration": "1.5m",
+    "isolated_ports": [
+      8127,
+      5227
+    ],
+    "full_regression": "Still running at evidence creation; no overall passing claim"
+  },
+  "reference": "https://github.com/microsoft/playwright/blob/main/docs/src/writing-tests-js.md"
+}

@@ -136,7 +136,7 @@ for(const earned of ['2024-06-01','2023-06-01'])test(`Thailand foreign remittanc
   const report=page.getByRole('article',{name:'Saved calculation result'});
   await expect(report.locator('dl > div').filter({hasText:/^Tax before reductions and credits/}).locator('dd')).toHaveText(earned.startsWith('2024')?/^11500(?:\.0+)?$/:/^0(?:\.0+)?$/);
   await expect(report.locator('dl > div').filter({hasText:/^Allowed tax credits/}).locator('dd')).toHaveText(earned.startsWith('2024')?/^11500(?:\.0+)?$/:/^0(?:\.0+)?$/);
-  await expect(report.getByRole('link',{name:'Revenue Department foreign tax credit manual (Thai)',exact:true})).toHaveAttribute('href','https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_TH.pdf');
+  await expect(report.getByRole('link',{name:'Revenue Department foreign tax credit manual (TH), November 2025',exact:true})).toHaveAttribute('href','https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_TH.pdf');
   const breakdown=report.getByRole('region',{name:'Thai foreign income reconciliation',exact:true});
   await expect(breakdown.getByRole('region',{name:'Source country VN',exact:true})).toBeVisible();
   await expect(breakdown.getByRole('region',{name:'Income pool VN-salary-1',exact:true})).toContainText('Verified salary tax certificate');
