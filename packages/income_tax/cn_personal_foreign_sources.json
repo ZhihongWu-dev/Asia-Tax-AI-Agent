@@ -6,6 +6,13 @@
       "sha256": "7006ad16125446a9cc977d87335034bef4386c4d2475f644cbd351d50d9a2df4",
       "doc_id": "cn.cs.2020-03",
       "file": "database/raw/cn/cn.cs.2020-03.html"
+    },
+    {
+      "doc_id": "cn.personal-foreign-credit-form",
+      "title": "境外所得个人所得税抵免明细表填表说明",
+      "url": "https://shanghai.chinatax.gov.cn/bsfw/xzzx/bgxz/sbzsl/202302/t466192.html",
+      "file": "database/raw/cn/cn.personal-foreign-credit-form.html",
+      "sha256": "cf56e293b064eb159512bec6ba9d700aca726d406493e888c19ca9c4d391fff7"
     }
   ]
 }

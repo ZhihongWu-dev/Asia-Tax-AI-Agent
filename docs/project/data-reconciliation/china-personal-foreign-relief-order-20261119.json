@@ -1,0 +1,22 @@
+{
+  "status": "component_relief_order_verified",
+  "validation": {
+    "passed": 28,
+    "seconds": 0.91,
+    "exit_code": 0
+  },
+  "official_form": "https://shanghai.chinatax.gov.cn/bsfw/xzzx/bgxz/sbzsl/202302/t466192.html",
+  "finding": "Form rows11 and17 allocate tax after category reductions; other category limits also subtract reductions. Explicit reduction fields now prevent treating gross annual tax as net credit-limit tax.",
+  "verified": [
+    "Mixed comprehensive/business/other category reliefs",
+    "Reductions cannot exceed their own tax category",
+    "Full relief leaves zero credit capacity",
+    "Both original source files and hashes"
+  ],
+  "remaining": [
+    "Historical credit use and expiry",
+    "Saved facts and annual-tax reconciliation",
+    "API and frontend integration"
+  ],
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}

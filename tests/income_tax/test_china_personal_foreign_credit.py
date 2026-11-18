@@ -70,3 +70,34 @@ def test_decimal_context_and_original_source_are_preserved():
         assert sha256(Path(source['file']).read_bytes()).hexdigest()==source['sha256']
     expected['sources'][0]['title']='changed'
     assert calculate(paper())['sources'][0]['title']!='changed'
+
+
+def test_reliefs_reduce_each_category_before_country_allocation():
+    p=paper();p.update(comprehensive_tax_reductions='1000',business_tax_reductions='2000')
+    p['countries'][1]['other_category_tax_reductions']='500'
+    r=calculate(p);sg,hk=r['country_limits']
+    assert r['comprehensive_tax_after_reductions']==9000
+    assert r['business_tax_after_reductions']==18000
+    assert sg['comprehensive_credit_limit']==2700
+    assert sg['business_credit_limit']==10800
+    assert sg['other_category_credit_limit']==1500
+    assert sg['credit_limit']==15000 and sg['current_excess']==2000
+    assert hk['credit_limit']==8200
+    assert r['current_credit_used']==15500
+
+
+@pytest.mark.parametrize('category',['comprehensive','business','other'])
+def test_reductions_cannot_exceed_tax_in_their_own_category(category):
+    p=paper()
+    if category=='other':p['countries'][1]['other_category_tax_reductions']='2001'
+    elif category=='comprehensive':p['comprehensive_tax_reductions']='10001'
+    else:p['business_tax_reductions']='20001'
+    with pytest.raises(ValueError,match='reductions'):calculate(p)
+
+
+def test_full_relief_leaves_no_foreign_credit_capacity():
+    p=paper();p.update(comprehensive_tax_reductions='10000',business_tax_reductions='20000')
+    for row in p['countries']:row['other_category_tax_reductions']=row['other_category_chinese_tax']
+    r=calculate(p)
+    assert r['current_credit_used']==0
+    assert r['country_limits'][0]['current_excess']==17000

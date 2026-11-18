@@ -22,6 +22,7 @@ class Country(Strict):
     comprehensive_income_amount: Money
     business_taxable_income: Money
     other_category_chinese_tax: Money
+    other_category_tax_reductions: Money = Decimal(0)
     eligible_foreign_tax_paid: Money
 
 class Workpaper(Strict):
@@ -29,6 +30,8 @@ class Workpaper(Strict):
     countries: list[Country] = Field(min_length=1, max_length=11)
     worldwide_comprehensive_tax: Money
     worldwide_business_tax: Money
+    comprehensive_tax_reductions: Money = Decimal(0)
+    business_tax_reductions: Money = Decimal(0)
     resident_source_fx_and_category_bases_verified: StrictBool
     annual_category_taxes_and_reliefs_verified: StrictBool
     direct_paid_tax_eligibility_and_evidence_verified: StrictBool
@@ -51,22 +54,30 @@ def calculate(workpaper):
         business = sum((r.business_taxable_income for r in p.countries), ZERO)
         if (not comprehensive and p.worldwide_comprehensive_tax) or (not business and p.worldwide_business_tax):
             raise ValueError('Positive annual category tax requires a positive category allocation denominator')
+        if p.comprehensive_tax_reductions > p.worldwide_comprehensive_tax or p.business_tax_reductions > p.worldwide_business_tax:
+            raise ValueError('Category reductions cannot exceed corresponding annual tax')
+        if any(r.other_category_tax_reductions > r.other_category_chinese_tax for r in p.countries):
+            raise ValueError('Other category reductions cannot exceed corresponding country tax')
+        comprehensive_net = p.worldwide_comprehensive_tax - p.comprehensive_tax_reductions
+        business_net = p.worldwide_business_tax - p.business_tax_reductions
         rows = []
         for r in p.countries:
             if r.country == 'cn':
                 continue
-            comp_limit = p.worldwide_comprehensive_tax * r.comprehensive_income_amount / comprehensive if comprehensive else ZERO
-            business_limit = p.worldwide_business_tax * r.business_taxable_income / business if business else ZERO
-            limit = comp_limit + business_limit + r.other_category_chinese_tax
+            comp_limit = comprehensive_net * r.comprehensive_income_amount / comprehensive if comprehensive else ZERO
+            business_limit = business_net * r.business_taxable_income / business if business else ZERO
+            other_net = r.other_category_chinese_tax - r.other_category_tax_reductions
+            limit = comp_limit + business_limit + other_net
             used = min(r.eligible_foreign_tax_paid, limit)
             rows.append(dict(country=r.country, comprehensive_credit_limit=comp_limit,
-                business_credit_limit=business_limit, other_category_credit_limit=r.other_category_chinese_tax,
+                business_credit_limit=business_limit, other_category_credit_limit=other_net,
                 credit_limit=limit, eligible_current_tax=r.eligible_foreign_tax_paid,
                 current_credit_used=used, current_excess=r.eligible_foreign_tax_paid-used,
                 current_excess_last_usable_year=p.tax_year+5, remaining_credit_capacity=limit-used))
         return dict(policy_version='cn-personal-foreign-credit-limits-2026-11-19', tax_year=p.tax_year,
             currency='CNY', method='per_country', comprehensive_income_denominator=comprehensive,
             business_taxable_income_denominator=business, country_limits=rows,
+            comprehensive_tax_after_reductions=comprehensive_net, business_tax_after_reductions=business_net,
             current_credit_used=sum((r['current_credit_used'] for r in rows), ZERO),
             stage='internal_current_credit_limits_before_prior_credits_and_final_assessment',
             sources=deepcopy(SOURCES))
