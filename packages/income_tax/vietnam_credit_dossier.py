@@ -1,8 +1,8 @@
-"""Document inventory for Article62(3), not tax entitlement or filing approval.
+"""Document inventory for Circular89 Article34, not tax entitlement or approval.
 
-Based on visually reviewed pages102-104 of14/VBHN-BTC2026. Later amendments
-and the separate annual return must be reviewed before filing readiness is
-asserted. Evidence references are opaque case-local references, never fetched.
+Based on visually reviewed pages76-78 of Circular89/2026, effective2026-07-01.
+The separate annual return must be reviewed before filing readiness is asserted.
+Evidence references are opaque case-local references, never fetched.
 """
 from typing import Literal
 
@@ -48,6 +48,14 @@ class TreatyCreditDossier(BaseModel):
     credit_types: list[CreditType] = Field(min_length=1, max_length=3)
     represented: StrictBool
     documents: list[DossierDocument] = Field(max_length=11)
+    missing_document_explanations: dict[DocumentKind, str] = Field(default_factory=dict)
+
+    @field_validator('missing_document_explanations')
+    @classmethod
+    def meaningful_explanations(cls, value):
+        if any(not text.strip() or len(text) > 4000 for text in value.values()):
+            raise ValueError('Missing-document explanations require nonblank text up to4000 characters')
+        return {kind: text.strip() for kind, text in value.items()}
 
     @field_validator('credit_types')
     @classmethod
@@ -81,24 +89,31 @@ def review_dossier(dossier):
     missing = [kind for kind in required if kind not in supplied]
     unchecked = [kind for kind in required if kind in supplied
                  and not supplied[kind].required_form_and_content_checked]
+    if any(kind not in missing for kind in dossier.missing_document_explanations):
+        raise ValueError('Explanations must identify a missing required document')
     return {
-        'policy_version': 'vn-treaty-credit-dossier-2026-11-18',
+        'policy_version': 'vn-treaty-credit-dossier-circular89-2026-11-18',
         'required_documents': required,
         'missing_documents': missing,
         'unchecked_documents': unchecked,
+        'unexplained_missing_documents': [kind for kind in missing
+            if kind not in dossier.missing_document_explanations],
+        'missing_document_explanations': dict(dossier.missing_document_explanations),
         'document_inventory_complete': not missing and not unchecked,
+        'submission_context': 'With annual finalisation return, or the tax return where finalisation is not required (Article34(3)).',
+        'explanation_context': 'Missing information or documents must be specifically explained in02/HTQT underArticle34(2); explanation does not establish eligibility.',
         'basis': dossier.model_dump(mode='json'),
         'stage': 'document_inventory_only',
         'unresolved_checks': [
             'Treaty and foreign-law eligibility for each claimed credit type',
             'Tax-year, foreign-payment timing, credit cap and amount reconciliation',
-            'Subsequent amendments and current annual return requirements',
-            'Tax-authority examination of the submitted application',
+            'Current annual return requirements and any later applicable amendments',
+            'Substantive verification of the filed information and supporting evidence',
         ],
         'sources': [{
-            'title': 'Circular80 Article62(3), consolidated14/VBHN-BTC2026',
-            'url': 'https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/14-vbhn-btc.pdf',
-            'pages': [102, 103, 104],
-            'sha256': '0cae81492f8c3af94639d5370469a31860bc81e72e0d07c706a9efbeec13cfa5',
+            'title': 'Circular89/2026/TT-BTC Article34',
+            'url': 'https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/89-btc.signed.pdf',
+            'pages': [76, 77, 78],
+            'sha256': '952c45ffc0f10bfc176bd9ae6b3d204fd3a034294ee270278957b9c11e1471dc',
         }],
     }

@@ -80,4 +80,23 @@ def test_result_mutation_does_not_modify_later_reviews():
     result['required_documents'].clear()
     result['sources'][0]['pages'].clear()
     assert review()['required_documents']
-    assert review()['sources'][0]['pages'] == [102, 103, 104]
+    assert review()['sources'][0]['pages'] == [76, 77, 78]
+
+
+def test_missing_document_explanation_is_retained_without_implying_complete_inventory():
+    result = review_dossier(dict(credit_types=['direct'], documents=[], represented=False,
+        missing_document_explanations={'foreign_payment_receipt': 'Receipt requested from the foreign authority.'}))
+    assert 'foreign_payment_receipt' in result['missing_documents']
+    assert 'foreign_payment_receipt' not in result['unexplained_missing_documents']
+    assert not result['document_inventory_complete']
+
+
+@pytest.mark.parametrize('explanations', [
+    {'foreign_payment_receipt': '  '},
+    {'foreign_payment_receipt': 'a'*4001},
+    {'ownership_legal_evidence': 'Not applicable to this direct claim.'},
+])
+def test_blank_or_irrelevant_explanations_rejected(explanations):
+    with pytest.raises(ValueError):
+        review_dossier(dict(credit_types=['direct'], documents=[], represented=False,
+                            missing_document_explanations=explanations))

@@ -1,0 +1,54 @@
+{
+  "status": "targeted_visual_review_not_full_catalog_registration",
+  "sources": [
+    {
+      "file": "database/raw/vn/vn.circular89.2026.vi.pdf",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/89-btc.signed.pdf",
+      "pages": 839,
+      "sha256": "952c45ffc0f10bfc176bd9ae6b3d204fd3a034294ee270278957b9c11e1471dc"
+    },
+    {
+      "file": "database/raw/vn/vn.decision2551.2026.vi.pdf",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/9/dinh-chinh-tt-89-2026-btc.signed.pdf",
+      "pages": 2,
+      "sha256": "4f0c2c4f44783ead748b49786aecc5392936a9e4469acfc3e813387a601029d5"
+    }
+  ],
+  "circular89": {
+    "effective_from": "2026-07-01",
+    "effective_date_source": "https://vanban.chinhphu.vn/?docid=218974&pageid=27160",
+    "reviewed_pages": [
+      76,
+      77,
+      78
+    ],
+    "article": "34",
+    "findings": [
+      "Same three credit-document categories as earlier framework, but current formalities must be used.",
+      "Direct-credit foreign authority confirmation is a copy under34(1)(b.1.3), not the original required by old62(3).",
+      "Sparing confirmation is original or certified copy under34(1)(b.2.3).",
+      "Indirect foreign authority confirmation is a copy under34(1)(b.3.4); representative authorisation is certified copy under34(1)(c).",
+      "Missing information/documents must be specifically explained in02/HTQT under34(2). Explanation does not establish substantive entitlement.",
+      "Proof accompanies annual finalisation, or tax return where finalisation is not required, under34(3). Do not transfer old10-working-day application handling statement to this procedure."
+    ]
+  },
+  "decision2551": {
+    "issued_on": "2026-09-15",
+    "reviewed_pages": [
+      1,
+      2
+    ],
+    "scope": "Corrects Article99(5) replacement form identifiers for business individuals; does not alter Article34. Effective on signing."
+  },
+  "implementation": {
+    "module": "packages/income_tax/vietnam_credit_dossier.py",
+    "change": "Current Article34 provenance, missing-document explanations retained without treating inventory as complete, submission context corrected.",
+    "remaining": "Annual03-4/TNDN new form, treaty eligibility/calculation and user-flow integration."
+  },
+  "historical_form_review": {
+    "source": "vn.btc.tax-administration.14-vbhn-2026.pdf",
+    "page": 522,
+    "form": "03-4/TNDN",
+    "finding": "Historical form has income-plus-paid-tax gross-up columns and alternative payment proof. Do not use this historical form as current2026 template pending Circular89 annex review."
+  }
+}
