@@ -11,6 +11,42 @@ from decimal import Decimal, localcontext
 from .arithmetic import amount
 
 
+def singapore_interest_royalty_credit(gross_income, *, income_type,
+        eligible_singapore_tax_paid, vietnam_tax_limit,
+        article11_or12_and_treaty_entitlement_verified):
+    """Article24(4)(a) minimum deemed-tax measure for a Vietnam resident.
+
+    Applies only to Singapore-source Article11/12 income, not dividends. The
+    supplied tax must be independently eligible under Article24(2)(a), including
+    treaty source-tax limits. This does not determine Article24(2)(b) incentive
+    sparing or add a separate10% amount to paid tax.
+    """
+    if income_type not in ('interest', 'royalty'):
+        raise ValueError('Singapore Article24(4)(a) covers interest or royalty income only')
+    if article11_or12_and_treaty_entitlement_verified is not True:
+        raise ValueError('Article11/12 classification and treaty entitlement must be verified')
+    gross, paid, limit = map(amount, (gross_income, eligible_singapore_tax_paid, vietnam_tax_limit))
+    if gross == 0 and (paid != 0 or limit != 0):
+        raise ValueError('Zero income cannot have positive related tax or a tax limit')
+    with localcontext() as context:
+        context.prec = 40
+        deemed_floor = gross * Decimal('0.10')
+        credit_basis = max(paid, deemed_floor)
+        allowed = min(credit_basis, limit)
+        return dict(policy_version='vn-sg-interest-royalty-credit-2026-11-18',
+            residence_country='vn', source_country='sg', income_type=income_type,
+            gross_income=gross, eligible_singapore_tax_paid=paid,
+            deemed_tax_floor=deemed_floor, deemed_floor_applied=paid < deemed_floor,
+            credit_basis=credit_basis, vietnam_tax_limit=limit,
+            allowed_tax_credit=allowed, credit_basis_exceeding_limit=credit_basis-allowed,
+            vietnam_tax_after_credit=limit-allowed,
+            stage='treaty_credit_before_assessment_rounding',
+            sources=[dict(title='Singapore–Vietnam treaty Article24(2)(a)/(4)(a)',
+                url='https://www.iras.gov.sg/media/docs/default-source/dtas/singapore-vietnam-dta-(ratified)(mli)(01092023).pdf',
+                pages=[13, 14],
+                sha256='948b2597f2996af06d048be2eb1a74ca1772e7d110b31a969985fa3dbdeca503')])
+
+
 def indonesia_deemed_credit(gross_income, *, income_type, vietnam_tax_limit,
                             paragraph2_and_treaty_entitlement_verified):
     """Vietnam resident credit on Indonesian income under treaty Article23(4).

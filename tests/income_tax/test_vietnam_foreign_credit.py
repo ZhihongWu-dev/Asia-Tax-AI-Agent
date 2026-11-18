@@ -3,6 +3,7 @@ from decimal import Decimal, localcontext
 import pytest
 
 from packages.income_tax.vietnam_foreign_credit import additional_top_up_credit, indonesia_deemed_credit
+from packages.income_tax.vietnam_foreign_credit import singapore_interest_royalty_credit
 
 
 def calculate(**changes):
@@ -98,3 +99,39 @@ def test_indonesia_deemed_credit_rejects_other_routes_or_invalid_basis(changes):
     args.update(changes)
     with pytest.raises(ValueError):
         indonesia_deemed_credit(**args)
+
+
+@pytest.mark.parametrize('kind', ['interest', 'royalty'])
+@pytest.mark.parametrize('paid,expected,floor_applied', [
+    ('0', '100', True), ('50', '100', True), ('100', '100', False),
+])
+def test_singapore_deemed_floor_replaces_not_adds_to_paid_tax(kind, paid, expected, floor_applied):
+    result = singapore_interest_royalty_credit('1000', income_type=kind,
+        eligible_singapore_tax_paid=paid, vietnam_tax_limit='200',
+        article11_or12_and_treaty_entitlement_verified=True)
+    assert result['allowed_tax_credit'] == Decimal(expected)
+    assert result['deemed_floor_applied'] is floor_applied
+    assert result['vietnam_tax_after_credit'] == 100
+
+
+def test_singapore_credit_remains_capped_by_same_income_tax():
+    result = singapore_interest_royalty_credit('1000', income_type='royalty',
+        eligible_singapore_tax_paid='50', vietnam_tax_limit='70',
+        article11_or12_and_treaty_entitlement_verified=True)
+    assert result['allowed_tax_credit'] == 70
+    assert result['credit_basis_exceeding_limit'] == 30
+
+
+@pytest.mark.parametrize('changes', [
+    {'income_type': 'dividend'}, {'income_type': 'business'},
+    {'article11_or12_and_treaty_entitlement_verified': False},
+    {'article11_or12_and_treaty_entitlement_verified': 1},
+    {'eligible_singapore_tax_paid': 'NaN'}, {'eligible_singapore_tax_paid': -1},
+    {'gross_income': '0'}, {'vietnam_tax_limit': float('inf')},
+])
+def test_singapore_rejects_dividends_unverified_entitlement_and_bad_inputs(changes):
+    args = dict(gross_income='1000', income_type='interest', eligible_singapore_tax_paid='50',
+                vietnam_tax_limit='200', article11_or12_and_treaty_entitlement_verified=True)
+    args.update(changes)
+    with pytest.raises(ValueError):
+        singapore_interest_royalty_credit(**args)
