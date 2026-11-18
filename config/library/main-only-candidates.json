@@ -3414,6 +3414,130 @@
         "kind": "reviewed_local_source_candidate",
         "evidence": "docs/project/data-reconciliation/indonesia-article26-primary-candidate-20261118.json"
       }
+    },
+    {
+      "cite_id": "id.pmk242-2014#2(7)",
+      "document": {
+        "id": "id.pmk242-2014",
+        "jur": "id",
+        "type": "regulation",
+        "category": "9",
+        "title": "PMK242/PMK.03/2014 Tata Cara Pembayaran dan Penyetoran Pajak (original historical text)",
+        "url": "https://jdih.kemenkeu.go.id/api/download/fulltext/2014/242~PMK.03~2014Per.htm",
+        "file": "raw/id/id.pmk242-2014.html",
+        "sha256": "5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404",
+        "lang": "id",
+        "effective_from": "2014-12-24",
+        "effective_to": "2024-12-31",
+        "note": "Historical original, not consolidated amended text. PMK18/2021 Article103 changes Articles1,7,14,21,22,23,25,30 and AnnexIII, not Articles2(7) or9. PMK81/2024 repeal from2025-01-01; Article476 preserves specified prior-period procedures. End date here is last active day. Do not apply original amended provisions without separate review."
+      },
+      "clause": {
+        "cite_id": "id.pmk242-2014#2(7)",
+        "doc_id": "id.pmk242-2014",
+        "kind": "paragraph",
+        "label": "Pasal 2(7)",
+        "parent": "id.pmk242-2014#2",
+        "text": "(7)\nPPh Pasal 23 dan PPh\nPasal 26 yang dipotong oleh Pemotong PPh harus disetor paling lama\ntanggal 10 (sepuluh) bulan berikutnya setelah Masa Pajak berakhir."
+      },
+      "text_sha256": "5ef1f2a9347a79c7abf998d905f70b2216ddf274f5cdf5db623842e6932f621e",
+      "source_commit": "c8f5aeb4733db572c562bdf1fa30318fab98f053",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-historical-payment-source-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk242-2014#9(1)",
+      "document": {
+        "id": "id.pmk242-2014",
+        "jur": "id",
+        "type": "regulation",
+        "category": "9",
+        "title": "PMK242/PMK.03/2014 Tata Cara Pembayaran dan Penyetoran Pajak (original historical text)",
+        "url": "https://jdih.kemenkeu.go.id/api/download/fulltext/2014/242~PMK.03~2014Per.htm",
+        "file": "raw/id/id.pmk242-2014.html",
+        "sha256": "5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404",
+        "lang": "id",
+        "effective_from": "2014-12-24",
+        "effective_to": "2024-12-31",
+        "note": "Historical original, not consolidated amended text. PMK18/2021 Article103 changes Articles1,7,14,21,22,23,25,30 and AnnexIII, not Articles2(7) or9. PMK81/2024 repeal from2025-01-01; Article476 preserves specified prior-period procedures. End date here is last active day. Do not apply original amended provisions without separate review."
+      },
+      "clause": {
+        "cite_id": "id.pmk242-2014#9(1)",
+        "doc_id": "id.pmk242-2014",
+        "kind": "paragraph",
+        "label": "Pasal 9(1)",
+        "parent": "id.pmk242-2014#9",
+        "text": "(1)\nDalam hal tanggal\njatuh tempo pembayaran atau penyetoran pajak sebagaimana dimaksud dalam\nPasal 2 bertepatan dengan hari libur, pembayaran atau penyetoran pajak\ndapat dilakukan paling lambat pada hari kerja berikutnya."
+      },
+      "text_sha256": "471d1497fecd35b0df1ef388c5ed24bee41ce20efb8019cc51f4ab04a597fb12",
+      "source_commit": "c8f5aeb4733db572c562bdf1fa30318fab98f053",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-historical-payment-source-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk242-2014#9(2)",
+      "document": {
+        "id": "id.pmk242-2014",
+        "jur": "id",
+        "type": "regulation",
+        "category": "9",
+        "title": "PMK242/PMK.03/2014 Tata Cara Pembayaran dan Penyetoran Pajak (original historical text)",
+        "url": "https://jdih.kemenkeu.go.id/api/download/fulltext/2014/242~PMK.03~2014Per.htm",
+        "file": "raw/id/id.pmk242-2014.html",
+        "sha256": "5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404",
+        "lang": "id",
+        "effective_from": "2014-12-24",
+        "effective_to": "2024-12-31",
+        "note": "Historical original, not consolidated amended text. PMK18/2021 Article103 changes Articles1,7,14,21,22,23,25,30 and AnnexIII, not Articles2(7) or9. PMK81/2024 repeal from2025-01-01; Article476 preserves specified prior-period procedures. End date here is last active day. Do not apply original amended provisions without separate review."
+      },
+      "clause": {
+        "cite_id": "id.pmk242-2014#9(2)",
+        "doc_id": "id.pmk242-2014",
+        "kind": "paragraph",
+        "label": "Pasal 9(2)",
+        "parent": "id.pmk242-2014#9",
+        "text": "(2)\nHari libur sebagaimana\ndimaksud pada ayat (1) yaitu hari Sabtu, hari Minggu, hari libur\nnasional, hari yang diliburkan untuk penyelenggaraan Pemilihan Umum,\natau cuti bersama secara nasional.\nBAB III\nTATA CARA PEMBAYARAN DAN PENYETORAN PAJAK\nBagian Kesatu\nTempat dan Sarana Pembayaran dan Penyetoran Pajak"
+      },
+      "text_sha256": "168e9ef7e1bbfb3ad388a5dfd3f8edda4b2cebd5c4084064aa09d4c22583635b",
+      "source_commit": "c8f5aeb4733db572c562bdf1fa30318fab98f053",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-historical-payment-source-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk242-2014#35",
+      "document": {
+        "id": "id.pmk242-2014",
+        "jur": "id",
+        "type": "regulation",
+        "category": "9",
+        "title": "PMK242/PMK.03/2014 Tata Cara Pembayaran dan Penyetoran Pajak (original historical text)",
+        "url": "https://jdih.kemenkeu.go.id/api/download/fulltext/2014/242~PMK.03~2014Per.htm",
+        "file": "raw/id/id.pmk242-2014.html",
+        "sha256": "5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404",
+        "lang": "id",
+        "effective_from": "2014-12-24",
+        "effective_to": "2024-12-31",
+        "note": "Historical original, not consolidated amended text. PMK18/2021 Article103 changes Articles1,7,14,21,22,23,25,30 and AnnexIII, not Articles2(7) or9. PMK81/2024 repeal from2025-01-01; Article476 preserves specified prior-period procedures. End date here is last active day. Do not apply original amended provisions without separate review."
+      },
+      "clause": {
+        "cite_id": "id.pmk242-2014#35",
+        "doc_id": "id.pmk242-2014",
+        "kind": "section",
+        "label": "Pasal 35",
+        "parent": "",
+        "text": "Pasal 35\nPeraturan Menteri ini mulai berlaku pada\ntanggal diundangkan.\nAgar setiap orang\nmengetahuinya, memerintahkan pengundangan Peraturan Menteri ini dengan\npenempatannya dalam Berita Negara Republik Indonesia.\nDitetapkan di Jakarta\npada tanggal 24 Desember 2014\nMENTERI KEUANGAN REPUBLIK INDONESIA,\nttd.\nBAMBANG P. S. BRODJONEGORO\nDiundangkan di Jakarta\npada tanggal 24 Desember 2014\nMENTERI HUKUM DAN HAK ASASI MANUSIA\nREPUBLIK INDONESIA,\nttd.\nYASONNA H. LAOLY\nBERITA NEGARA REPUBLIK INDONESIA TAHUN\n2014 NOMOR 1973"
+      },
+      "text_sha256": "9b022e630daa9aa60f8f25a171b33ec7d0225ad889d8333f9aa053ef5b6be31a",
+      "source_commit": "c8f5aeb4733db572c562bdf1fa30318fab98f053",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-historical-payment-source-20261118.json"
+      }
     }
   ]
 }

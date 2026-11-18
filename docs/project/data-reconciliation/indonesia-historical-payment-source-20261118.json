@@ -1,5 +1,5 @@
 {
-  "status": "historical_primary_source_archived_pending_amendment_review_and_registration",
+  "status": "historical_parameter_migrated_in_isolated_stage_pending_validation_and_source_admission",
   "url": "https://jdih.kemenkeu.go.id/api/download/fulltext/2014/242~PMK.03~2014Per.htm",
   "file": "database/raw/id/id.pmk242-2014.html",
   "sha256": "5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404",
@@ -44,7 +44,104 @@
     "commencement_basis": "Article35 and promulgation date in original text",
     "repeal_from": "2025-01-01",
     "repeal_index": "https://jdih.kemenkeu.go.id/dok/242-pmk-03-2014",
-    "unresolved": "Review PMK18/2021 changes and holiday-adjustment provisions before migrating historical payment parameter; index header end date differs from explicit repeal timeline."
+    "unresolved": "Cloud admission and full business settlement remain pending; Article476 prior-period transition must be handled explicitly."
   },
-  "scope": "Historical source only. The currently applicable PMK81/2024 payment deadline is separately sourced; this original regulation must not become a current ten-day deadline."
+  "scope": "Historical source only. The currently applicable PMK81/2024 payment deadline is separately sourced; this original regulation must not become a current ten-day deadline.",
+  "registered_document": {
+    "id": "id.pmk242-2014",
+    "jur": "id",
+    "type": "regulation",
+    "category": "9",
+    "title": "PMK242/PMK.03/2014 Tata Cara Pembayaran dan Penyetoran Pajak (original historical text)",
+    "url": "https://jdih.kemenkeu.go.id/api/download/fulltext/2014/242~PMK.03~2014Per.htm",
+    "file": "raw/id/id.pmk242-2014.html",
+    "sha256": "5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404",
+    "lang": "id",
+    "effective_from": "2014-12-24",
+    "effective_to": "2024-12-31",
+    "note": "Historical original, not consolidated amended text. PMK18/2021 Article103 changes Articles1,7,14,21,22,23,25,30 and AnnexIII, not Articles2(7) or9. PMK81/2024 repeal from2025-01-01; Article476 preserves specified prior-period procedures. End date here is last active day. Do not apply original amended provisions without separate review."
+  },
+  "before_parameter": {
+    "param_id": "id.outbound_wht.payment_deadline",
+    "scope": "id",
+    "subject": "all",
+    "slot": "outbound_wht",
+    "name": "payment_deadline",
+    "value": "10",
+    "unit": "days",
+    "cite_id": "id.dgt.article26#all",
+    "quote": "Pay the Income Tax by first creating a billing code. The payment must be made no later than the 10th day of the following month to a Collecting Agent;",
+    "effective_from": "",
+    "effective_to": "2024-12-31",
+    "note": "Payment deadline for the described Article 26 withholding process. Historical pre-Coretax guidance only; no current ten-day duration. Superseded from2025-01-01. Applicability of earlier periods requires historical review.",
+    "changed_on": "2025-01-01",
+    "superseded_by": "id.outbound_wht.payment_day_next_month"
+  },
+  "after_parameter": {
+    "param_id": "id.outbound_wht.payment_deadline",
+    "scope": "id",
+    "subject": "all",
+    "slot": "outbound_wht",
+    "name": "payment_deadline",
+    "value": "10",
+    "unit": "count",
+    "cite_id": "id.pmk242-2014#2(7)",
+    "quote": "(7)\nPPh Pasal 23 dan PPh\nPasal 26 yang dipotong oleh Pemotong PPh harus disetor paling lama\ntanggal 10 (sepuluh) bulan berikutnya setelah Masa Pajak berakhir.",
+    "effective_from": "2014-12-24",
+    "effective_to": "2024-12-31",
+    "note": "Historical day-of-month: tenth day of the following month after the tax period ends, not a ten-day duration. PMK242 Article9 moves a holiday due date to the next working day. PMK18/2021 Article103 does not amend Articles2(7) or9. Only historical periods within this inclusive window; PMK81 Article476 transition and current15th-day regime require separate handling. Not a standalone filing or penalty calculator.",
+    "changed_on": "2025-01-01",
+    "superseded_by": "id.outbound_wht.payment_day_next_month"
+  },
+  "amendment_review": {
+    "file": "database/raw/id/id.pmk18-2021.pdf",
+    "sha256": "ed2892a5f93244aa4678a0f3756e40d8fea18cf6dc491354fa56756b4941b454",
+    "url": "https://jdih.kemenkeu.go.id/api/download/39fdb2fc-1736-4ebb-80f5-d257f75df0b5/18~PMK.03~2021Per.pdf",
+    "article": 103,
+    "pdf_pages": [
+      85,
+      98
+    ],
+    "next_article_page": 99,
+    "amended_articles": [
+      1,
+      7,
+      14,
+      21,
+      22,
+      23,
+      25,
+      30
+    ],
+    "annex": "III",
+    "finding": "Nine numbered amendment instructions do not amend Article2(7) or Article9."
+  },
+  "boundary_validation": {
+    "engine": "rule.tools.common.in_window",
+    "checks": [
+      {
+        "date": "2014-12-23",
+        "historical_active": false
+      },
+      {
+        "date": "2014-12-24",
+        "historical_active": true
+      },
+      {
+        "date": "2024-12-31",
+        "historical_active": true
+      },
+      {
+        "date": "2025-01-01",
+        "historical_active": false
+      },
+      {
+        "date": "2026-11-18",
+        "historical_active": false
+      }
+    ],
+    "current_day_next_month": "15",
+    "current_active_on_2025_01_01": true,
+    "scope": "Parameter applicability only; prior-period penalty transition under Article476 is not implemented by this boundary test."
+  }
 }

@@ -99,8 +99,14 @@ def test_replacement_requires_structured_content_bound_approval(note):
 def test_real_candidate_bundle_preserves_all_107_without_approving_them():
     commit,rows,digest=load_candidates()
     assert commit=='78a037f522d1636541c2e5fcdd1145e735f18124'
-    assert len(rows)==134 and len(digest)==64
+    assert len(rows)==138 and len(digest)==64
     assert sum(row.get('source_commit', commit) == commit for row in rows.values()) == 107
+    for suffix in ('2(7)', '9(1)', '9(2)', '35'):
+        source = rows['id.pmk242-2014#' + suffix]
+        assert source['document']['effective_from'] == '2014-12-24'
+        assert source['document']['effective_to'] == '2024-12-31'
+        assert source['document']['sha256'] == '5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404'
+    assert 'hari kerja berikutnya' in rows['id.pmk242-2014#9(1)']['clause']['text']
     for page in (242, 243):
         source = rows[f'id.tax-law-consolidation-2023.id#p{page}']
         assert source['document']['effective_from'] == ''
