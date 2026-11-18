@@ -1,0 +1,29 @@
+{
+  "status": "internal_component_verified_workflow_incomplete",
+  "validation": {
+    "passed": 23,
+    "seconds": 0.61,
+    "exit_code": 0
+  },
+  "source": {
+    "doc_id": "cn.cs.2020-03",
+    "url": "https://www.mof.gov.cn/zcsjtsgb/gfxwj/202001/t20200117_3583734.htm",
+    "archived_file": "database/raw/cn/cn.cs.2020-03.html",
+    "sha256": "7006ad16125446a9cc977d87335034bef4386c4d2475f644cbd351d50d9a2df4"
+  },
+  "implemented": [
+    "Article3 comprehensive income allocation by income amount",
+    "Business income allocation by taxable income",
+    "Country-specific other category Chinese tax added to country cap",
+    "No cross-country pooling",
+    "Current eligible paid-tax cap and new excess expiry year",
+    "All10 foreign dividend jurisdictions supported"
+  ],
+  "remaining": [
+    "Reconcile saved income and annual category taxes through a workpaper",
+    "Historical credit use and expiry",
+    "API persistence and bilingual frontend",
+    "Mixed-category end-to-end business cases"
+  ],
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}

@@ -1,0 +1,11 @@
+{
+  "sources": [
+    {
+      "title": "财政部 税务总局关于境外所得有关个人所得税政策的公告",
+      "url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5207136/content.html",
+      "sha256": "7006ad16125446a9cc977d87335034bef4386c4d2475f644cbd351d50d9a2df4",
+      "doc_id": "cn.cs.2020-03",
+      "file": "database/raw/cn/cn.cs.2020-03.html"
+    }
+  ]
+}
