@@ -55,6 +55,10 @@ promotion remain incomplete.
   navigation wrapper. The bounded legal-body comparisons and document hashes
   match. Exact source bytes and version pins remain unchanged; no production
   reader was taught to ignore mismatches.
+  Source closure can now be checked using the caller's uncommitted migration
+  transaction. The shared reader passed 43 focused tests; nine real local
+  PostgreSQL executor/source tests verified visibility, rejection and rollback.
+  This mechanism does not replace the outstanding deployment and legal gates.
   The older runtime still references the two blocked sources until repaired-rule
   integration. No base catalog tables were changed by this source admission.
 - Next delivery work is source admission/rebinding, completed optimizer
@@ -67,6 +71,7 @@ Evidence: [rental implementation](data-reconciliation/vietnam-business-consolida
 [full offline regression](data-reconciliation/full-offline-regression-20261118.json),
 [database-tool regression](data-reconciliation/database-tools-regression-20261118.json),
 [full browser run and failure reproduction](data-reconciliation/full-browser-regression-20261118.json),
+[transactional source validation](data-reconciliation/catalog-transaction-source-reader-20261118.md),
 [business implementation](data-reconciliation/vietnam-business-individual-review-20261118.md),
 [deployment preparation](RENDER_DEPLOYMENT.md),
 [current catalog plan](data-reconciliation/catalog-migration-plan-overlay-safe-20261118.json),

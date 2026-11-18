@@ -167,3 +167,46 @@ def test_factor_dependencies_are_required(monkeypatch, table, key, state):
         with pytest.raises(sources.PlanningSourcesUnavailable) as exc:
             sources.read_planning_bundle(['cn.rule#1'], expected_version=PIN)
         assert getattr(exc.value, state) == ('cn.factor#1',)
+
+
+@pytest.mark.parametrize('missing', [False, True])
+def test_migration_reader_uses_supplied_transaction_and_current_catalog(monkeypatch, missing):
+    tables = {'param': [{'param_id': 'new-rate', 'cite_id': 'cn.new#1'}]}
+    rows = [{'cite_id': 'cn.rule#1', 'passage': 'existing rule'}]
+    if not missing:
+        rows.append({'cite_id': 'cn.new#1', 'passage': 'new uncommitted source'})
+    statements = fixture_reader(monkeypatch, tables=tables, rows=rows)
+    connection = sources.library_cloud._engine().connect()
+    connection.dialect = SimpleNamespace(name='postgresql')
+    connection.in_transaction = lambda: True
+    connection.get_isolation_level = lambda: 'SERIALIZABLE'
+    connection.connection = SimpleNamespace(dbapi_connection=SimpleNamespace(autocommit=False))
+    connection.begin = lambda: pytest.fail('reader must not begin a transaction')
+    monkeypatch.setattr(sources.library_cloud, '_engine', lambda: pytest.fail('new connection'))
+    def state(actual_connection, expected):
+        assert actual_connection is connection and expected == PIN
+        return dict(PIN), [], []
+    monkeypatch.setattr(sources.library_cloud, '_read_library_state', state)
+    if missing:
+        with pytest.raises(sources.PlanningSourcesUnavailable) as exc:
+            sources.read_planning_bundle_in_transaction(connection, ['cn.rule#1'], expected_version=PIN)
+        assert exc.value.missing == ('cn.new#1',)
+    else:
+        bundle = sources.read_planning_bundle_in_transaction(connection, ['cn.rule#1'], expected_version=PIN)
+        assert bundle['sources']['cn.new#1']['passage'] == 'new uncommitted source'
+        assert bundle['tables']['param'] == tables['param']
+    assert all(sql.lstrip().startswith('SELECT') for sql, _ in statements)
+
+
+@pytest.mark.parametrize('dialect,active,isolation,autocommit', [
+    ('sqlite', True, 'SERIALIZABLE', False), ('postgresql', False, 'SERIALIZABLE', False),
+    ('postgresql', True, 'READ COMMITTED', False), ('postgresql', True, 'AUTOCOMMIT', True),
+    ('postgresql', True, 'SERIALIZABLE', True)])
+def test_migration_reader_rejects_nonconsistent_transaction(monkeypatch, dialect, active, isolation, autocommit):
+    connection = SimpleNamespace(dialect=SimpleNamespace(name=dialect),
+        in_transaction=lambda: active, get_isolation_level=lambda: isolation,
+        connection=SimpleNamespace(dbapi_connection=SimpleNamespace(autocommit=autocommit)))
+    monkeypatch.setattr(sources.library_cloud, '_read_library_state',
+                        lambda *args: pytest.fail('unexpected read'))
+    with pytest.raises(ValueError, match='planning_consistent_transaction_required'):
+        sources.read_planning_bundle_in_transaction(connection, ['cn.rule#1'], expected_version=PIN)

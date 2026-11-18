@@ -107,3 +107,44 @@ def test_postgres_excludes_concurrent_catalog_writer(catalog):
     result = execute_reviewed_plan(engine,plan,expected_catalog_revision=None,
         validate_before=before,validate_after=lambda c: True)
     assert result['status'] == 'committed'
+
+
+@pytest.mark.parametrize('missing_dependency', [False, True])
+def test_postgres_source_validation_reads_uncommitted_changes_without_committing(catalog, missing_dependency):
+    from packages.chat.library_cloud import _read_library_state
+    from packages.domain_bridge.planning_sources import (
+        PlanningSourcesUnavailable, read_planning_bundle_in_transaction)
+    engine, _ = catalog
+    if engine.dialect.name != 'postgresql':
+        pytest.skip('Uncommitted source validation requires PostgreSQL')
+    with engine.begin() as connection:
+        connection.exec_driver_sql('ALTER TABLE database_integration.source_review RENAME COLUMN id TO cite_id')
+        connection.exec_driver_sql('ALTER TABLE database.clause RENAME COLUMN id TO cite_id')
+        for name in ('doc_id', 'label', 'text'):
+            connection.exec_driver_sql(f'ALTER TABLE database.clause ADD COLUMN {name} TEXT')
+        for name in ('url', 'sha256', 'lang', 'jur', 'effective_from', 'effective_to'):
+            connection.exec_driver_sql(f'ALTER TABLE database.doc ADD COLUMN {name} TEXT')
+        connection.exec_driver_sql('ALTER TABLE database.param RENAME COLUMN id TO param_id')
+        connection.exec_driver_sql('ALTER TABLE database.param ADD COLUMN cite_id TEXT')
+        connection.exec_driver_sql('CREATE TABLE database.jurisdiction (code TEXT PRIMARY KEY)')
+        connection.exec_driver_sql('CREATE TABLE database.treaty (pair TEXT PRIMARY KEY)')
+    class RollbackProbe(Exception):
+        pass
+    expected_error = PlanningSourcesUnavailable if missing_dependency else RollbackProbe
+    with pytest.raises(expected_error):
+        with engine.connect().execution_options(isolation_level='SERIALIZABLE') as connection:
+            with connection.begin():
+                connection.exec_driver_sql("INSERT INTO database.clause VALUES ('cn.law#1','law','Article 1','Uncommitted complete source')")
+                if missing_dependency:
+                    connection.exec_driver_sql("INSERT INTO database.param VALUES ('rate','cn.missing#2')")
+                version, _, _ = _read_library_state(connection)
+                bundle = read_planning_bundle_in_transaction(connection, ['cn.law#1'], expected_version=version)
+                assert bundle['sources']['cn.law#1']['passage'] == 'Uncommitted complete source'
+                assert connection.in_transaction()
+                # Another connection cannot see the uncommitted source.
+                with engine.connect() as observer:
+                    assert observer.exec_driver_sql('SELECT count(*) FROM database.clause').scalar() == 0
+                raise RollbackProbe()
+    with engine.connect() as connection:
+        assert connection.exec_driver_sql('SELECT count(*) FROM database.clause').scalar() == 0
+        assert connection.exec_driver_sql('SELECT count(*) FROM database.param').scalar() == 0

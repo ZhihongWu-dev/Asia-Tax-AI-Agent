@@ -41,7 +41,24 @@ def read_planning_bundle(citations, *, expected_version):
     return _read(citations, expected_version=expected_version, include_catalog=True)
 
 
-def _read(citations, *, expected_version, include_catalog):
+def read_planning_bundle_in_transaction(connection, citations, *, expected_version):
+    """Read uncommitted catalog changes through the caller's consistent snapshot.
+
+    Intended for migration validation before commit. The caller owns transaction
+    lifecycle and locks; this function neither begins nor commits a transaction.
+    All admission, dependency, version and content checks are the ordinary
+    reader's checks. A returned bundle is not authorization to deploy or migrate.
+    """
+    _validate_request(citations, expected_version)
+    if (connection.dialect.name != 'postgresql' or not connection.in_transaction()
+            or connection.get_isolation_level() not in ('REPEATABLE READ', 'SERIALIZABLE')
+            or getattr(connection.connection.dbapi_connection, 'autocommit', True) is not False):
+        raise ValueError('planning_consistent_transaction_required')
+    return _read_connection(connection, citations, expected_version=expected_version,
+                            include_catalog=True)
+
+
+def _validate_request(citations, expected_version):
     if not isinstance(expected_version, dict) or not expected_version:
         raise ValueError('planning_snapshot_required')
     if not isinstance(citations, (list, tuple)) or not 1 <= len(citations) <= 1000:
@@ -49,57 +66,66 @@ def _read(citations, *, expected_version, include_catalog):
     if any(not isinstance(c, str) or len(c) > 240 or not re.fullmatch(
             r'[a-z0-9_.-]+#[a-z0-9_.()/-]+', c, re.I) for c in citations):
         raise ValueError('invalid_planning_citations')
-    requested = set(citations)
+
+
+def _read(citations, *, expected_version, include_catalog):
+    _validate_request(citations, expected_version)
     with library_cloud._engine().connect() as connection, connection.begin():
         connection.execute(text('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ READ ONLY'))
-        version, reviews, overlay = library_cloud._read_library_state(connection, expected_version)
-        tables = {}
-        if include_catalog:
-            # Identifiers are an internal allowlist, never request input.
-            for name, key in (('jurisdiction', 'code'), ('doc', 'id'),
-                              ('param', 'param_id'), ('treaty', 'pair'), ('decision', 'id')):
-                table = [{k: '' if v is None else v for k, v in dict(r).items()}
-                         for r in connection.execute(text(
-                             f'SELECT * FROM database.{name} ORDER BY {key}'
-                         )).mappings().all()]
-                if len({r[key] for r in table}) != len(table):
-                    raise ValueError('planning_catalog_duplicate')
-                tables[name] = table
-            for row in tables['param'] + tables['decision']:
-                for field in ('cite_id', 'factors_cite'):
-                    requested.update(c.strip() for c in row.get(field, '').split(';') if c.strip())
-            if len(requested) > 1000:
-                raise ValueError('planning_dependency_limit')
-        blocked = blocked_citations(reviews, overlay)
-        if requested & blocked:
-            raise PlanningSourcesUnavailable(blocked=requested & blocked)
-        rows = [dict(r) for r in connection.execute(text('''
-            SELECT c.cite_id, c.label, c.text AS passage,
-                   d.id AS document_id, d.title, d.url, d.sha256 AS document_sha256,
-                   d.lang, d.jur AS jurisdiction, d.effective_from, d.effective_to
-            FROM database.clause AS c
-            JOIN database.doc AS d ON d.id = c.doc_id
-            WHERE c.cite_id = ANY(:ids)
-            ORDER BY c.cite_id
-        '''), {'ids': sorted(requested)}).mappings().all()]
-        replacements = {r['cite_id'] for r in overlay if r['origin'] == 'reviewed_main_replacement'}
-        rows = [r for r in rows if r['cite_id'] not in replacements]
-        rows.extend({**{k: v for k, v in r.items() if k != '_search_text'},
-                     'passage': r['_search_text']} for r in overlay if r['cite_id'] in requested)
-        if len({r['cite_id'] for r in rows}) != len(rows):
-            raise library_cloud.LibraryVersionChanged('overlay_base_collision')
-        missing = requested - {r['cite_id'] for r in rows}
-        if missing:
-            raise PlanningSourcesUnavailable(missing=missing)
-        result = {'library_version': version, 'sources': {
-            r['cite_id']: {**r, 'passage_sha256': sha256(r['passage'].encode('utf-8')).hexdigest()}
-            for r in sorted(rows, key=lambda r: r['cite_id'])}}
-        if include_catalog:
-            result['tables'] = tables
-            result['table_sha256'] = {name: sha256(json.dumps(
-                table, sort_keys=True, separators=(',', ':'), ensure_ascii=False,
-                allow_nan=False).encode('utf-8')).hexdigest() for name, table in tables.items()}
-            result['bundle_sha256'] = sha256(json.dumps(
-                result, sort_keys=True, separators=(',', ':'), ensure_ascii=False,
-                allow_nan=False).encode('utf-8')).hexdigest()
-        return result
+        return _read_connection(connection, citations, expected_version=expected_version,
+                                include_catalog=include_catalog)
+
+
+def _read_connection(connection, citations, *, expected_version, include_catalog):
+    requested = set(citations)
+    version, reviews, overlay = library_cloud._read_library_state(connection, expected_version)
+    tables = {}
+    if include_catalog:
+        # Identifiers are an internal allowlist, never request input.
+        for name, key in (('jurisdiction', 'code'), ('doc', 'id'),
+                          ('param', 'param_id'), ('treaty', 'pair'), ('decision', 'id')):
+            table = [{k: '' if v is None else v for k, v in dict(r).items()}
+                     for r in connection.execute(text(
+                         f'SELECT * FROM database.{name} ORDER BY {key}'
+                     )).mappings().all()]
+            if len({r[key] for r in table}) != len(table):
+                raise ValueError('planning_catalog_duplicate')
+            tables[name] = table
+        for row in tables['param'] + tables['decision']:
+            for field in ('cite_id', 'factors_cite'):
+                requested.update(c.strip() for c in row.get(field, '').split(';') if c.strip())
+        if len(requested) > 1000:
+            raise ValueError('planning_dependency_limit')
+    blocked = blocked_citations(reviews, overlay)
+    if requested & blocked:
+        raise PlanningSourcesUnavailable(blocked=requested & blocked)
+    rows = [dict(r) for r in connection.execute(text('''
+        SELECT c.cite_id, c.label, c.text AS passage,
+               d.id AS document_id, d.title, d.url, d.sha256 AS document_sha256,
+               d.lang, d.jur AS jurisdiction, d.effective_from, d.effective_to
+        FROM database.clause AS c
+        JOIN database.doc AS d ON d.id = c.doc_id
+        WHERE c.cite_id = ANY(:ids)
+        ORDER BY c.cite_id
+    '''), {'ids': sorted(requested)}).mappings().all()]
+    replacements = {r['cite_id'] for r in overlay if r['origin'] == 'reviewed_main_replacement'}
+    rows = [r for r in rows if r['cite_id'] not in replacements]
+    rows.extend({**{k: v for k, v in r.items() if k != '_search_text'},
+                 'passage': r['_search_text']} for r in overlay if r['cite_id'] in requested)
+    if len({r['cite_id'] for r in rows}) != len(rows):
+        raise library_cloud.LibraryVersionChanged('overlay_base_collision')
+    missing = requested - {r['cite_id'] for r in rows}
+    if missing:
+        raise PlanningSourcesUnavailable(missing=missing)
+    result = {'library_version': version, 'sources': {
+        r['cite_id']: {**r, 'passage_sha256': sha256(r['passage'].encode('utf-8')).hexdigest()}
+        for r in sorted(rows, key=lambda r: r['cite_id'])}}
+    if include_catalog:
+        result['tables'] = tables
+        result['table_sha256'] = {name: sha256(json.dumps(
+            table, sort_keys=True, separators=(',', ':'), ensure_ascii=False,
+            allow_nan=False).encode('utf-8')).hexdigest() for name, table in tables.items()}
+        result['bundle_sha256'] = sha256(json.dumps(
+            result, sort_keys=True, separators=(',', ':'), ensure_ascii=False,
+            allow_nan=False).encode('utf-8')).hexdigest()
+    return result
