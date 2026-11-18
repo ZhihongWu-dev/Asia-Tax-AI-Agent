@@ -16,3 +16,11 @@ Integration requirements:
 5. Reconcile documentation/config examples without copying secret-bearing files or treating upstream documentation as user authorization to publish credentials.
 
 The original optimizer remains live on frozen inputs. No incoming engine/database mutation was applied during this inspection. This incoming feature set is not yet integrated, so final delivery remains incomplete.
+
+## Atlas projection port
+
+Adapted the upstream atlas projection code into `packages/domain_bridge/tax_atlas.py`. Removed implicit local/cloud source construction, background warming and singleton cache; the caller must supply a verified library/engine state from an isolated process. Adapted source, treaty and absence lookups to the existing immutable PlanningLibrary interface. Clause results preserve complete text, passage hash and bundle/review version. Invalid dates fail explicitly; missing rates stay unresolved. Country scenario output exposes the favourable judgment assumptions. Current headline/condition parameter selection excludes obsolete or out-of-period rows. Returned scenario constants are detached to prevent caller mutation affecting later requests.
+
+Validation:20 projection/library tests passed in1.54 seconds, including invalid calendar dates, missing-source rejection, exact passage/version retention, unknown rates and detached state. This module is not yet wired to an isolated executor, authenticated API or frontend; those remain required.
+
+Research: inspected upstream map dependencies against https://github.com/topojson/topojson-client and its ISC license, and https://github.com/topojson/world-atlas/blob/master/README.md for the Natural Earth50m geometry format. No new map dependency or third-party asset installed in this step. Dependency maintenance/security review and frontend license attribution remain pending before adoption.
