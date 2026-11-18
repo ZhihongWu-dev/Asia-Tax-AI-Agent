@@ -40,6 +40,17 @@
       "passed": 23,
       "seconds": 134.27,
       "exit_code": 0
+    },
+    "real_engine_bridge": {
+      "passed": 7,
+      "seconds": 24.88,
+      "exit_code": 0,
+      "assertions": [
+        "All planned references in the representative holding report are resolved",
+        "Specific administrative-guidance and treaty references are included",
+        "Cross-border passages retain hashes and model_use=denied",
+        "Existing pinned engine, case and knowledge-service tests pass"
+      ]
     }
   },
   "scope": "Synthetic holding scenario; real loopback knowledge HTTP, pinned engine and isolated SQLite. No model called. Fixture ruling reader does not prove hosted corpus availability. Source display/model permissions, date and hash checks unchanged.",

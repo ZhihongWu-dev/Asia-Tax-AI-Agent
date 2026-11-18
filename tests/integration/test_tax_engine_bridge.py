@@ -221,7 +221,15 @@ def test_combined_current_report_resolves_rule_ids_to_legal_text(real_release, t
             report = doc['analyses'][-1]
             assert report_hash(report) == report['report_hash']
             assert len({p['locator'] for p in report['fsie_assessment']['passages']}) == 21
-            assert len(report['domain_citation_coverage']['read']) > 7
+            assert not report['missing_locators']
+            assert set(report['domain_citation_coverage']['read']) == set(report['outcome']['citations'])
+            assert {'cn.sta.2018-09#i2', 'treaty.cn-hk.2006.zh#10.2'} <= set(report['domain_citation_coverage']['read'])
+            # Non-HK references are display evidence; resolving them must not
+            # silently expand the provider's permission to send text to a model.
+            cross_border = [p for p in report['passages'] if p['locator'] in
+                            ('cn.sta.2018-09#i2', 'treaty.cn-hk.2006.zh#10.2')]
+            assert len(cross_border) == 2
+            assert all(p['model_use'] == 'denied' and p['text_sha256'] for p in cross_border)
             assert report['budget']['evidence'] <= 35 and report['budget']['search'] <= 10
             assert report['evidence_gate'] == 'insufficient' and report['is_synthetic']
         finally:

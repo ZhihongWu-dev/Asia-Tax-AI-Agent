@@ -136,7 +136,7 @@
     "japan_tokyo_ui": "1653 income/report cases passed at f979c2b; TypeScript and 3 targeted browser cases passed. Scoped Tokyo UI enabled; wider Japan local tax coverage remains incomplete.",
     "japan_tokyo_report": "29 focused backend/report tests, TypeScript and browser download/duplicate-ward/toggle scenario passed.",
     "nested_sources": "1653 income/report tests passed;109 distinct source records verified recursively across33 observed policies;0 unresolved.",
-    "domain_report_citations": "Real loopback/pinned engine report resolved8previously filtered guidance/treaty citations;0missing,24evidence reads.23 combined/gate tests passed."
+    "domain_report_citations": "Real loopback/pinned engine report resolved8previously filtered guidance/treaty citations;0missing,24evidence reads.23 combined/gate tests passed. Strengthened real-engine bridge regression:7passed, exact complete reference coverage plus unchanged model permissions."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }
