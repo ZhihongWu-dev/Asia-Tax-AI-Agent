@@ -430,6 +430,28 @@ def income_tax_run_get(case_id: UUID, run_id: UUID, workspace: str = Depends(own
     return call(get_assessment_run, service.store, workspace, str(case_id), str(run_id))
 
 
+from packages.chat.income_credit import VietnamCreditBasis
+
+
+class VietnamCreditWorkpaper(Mutation):
+    basis: VietnamCreditBasis
+
+
+@router.post('/cases/{case_id}/income-tax/credit-workpapers')
+def income_credit_save(case_id: UUID, body: VietnamCreditWorkpaper,
+                       workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
+    from packages.chat.income_credit import save_workpaper
+    return call(save_workpaper, service.store, workspace, str(case_id), body.revision,
+                str(body.request_id), body.basis)
+
+
+@router.get('/cases/{case_id}/income-tax/credit-workpapers/{run_id}')
+def income_credit_get(case_id: UUID, run_id: UUID,
+                      workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
+    from packages.chat.income_credit import get_workpaper
+    return call(get_workpaper, service.store, workspace, str(case_id), str(run_id))
+
+
 from packages.contracts.planning import PlanningInput
 
 
