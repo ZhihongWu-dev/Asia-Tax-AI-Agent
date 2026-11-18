@@ -1,0 +1,35 @@
+{
+  "status": "internal_arithmetic_implemented_not_enabled_assessment",
+  "scope": "Ordinary income-based Tokyo enterprise levy and national special enterprise levy; fiscal years starting2026",
+  "implementation": [
+    "packages/income_tax/japan_local.py",
+    "packages/income_tax/jp_local_enterprise_sources.json"
+  ],
+  "source_review": "japan-local-source-review-20261119.json",
+  "validated_behaviors": [
+    "Official four-month allocation example from return instructions page15; per-band thousand-yen bases",
+    "Each band tax truncated below100yen after applying the appropriate rate",
+    "Special enterprise levy uses standard-rate enterprise tax, even when Tokyo surcharge applies",
+    "No-reduced-band branch, zero amounts, boundary rounding, strict inputs, Decimal context independence and immutable source metadata"
+  ],
+  "specialized_tests": {
+    "passed": 28,
+    "seconds": 0.66,
+    "exit_code": 0
+  },
+  "remaining_required_work": [
+    "Establish scope/eligibility and rate-selection from case facts, including expanded size-based rules",
+    "Local taxable-income reconciliation and multi-office allocation",
+    "Inhabitant corporation-tax levy and per-capita levy",
+    "Credits/prepayments and separate balances",
+    "Case contract, API persistence/report provenance, bilingual UI and browser acceptance",
+    "Other Japanese jurisdictions and personal local taxes"
+  ],
+  "limits": "This is a reusable calculation component, not a complete Japanese local assessment or business acceptance. It is not registered as a user-facing assessment policy.",
+  "delivery": "Local only",
+  "regression": {
+    "income_and_reporting_passed": 1588,
+    "seconds": 37.94,
+    "exit_code": 0
+  }
+}

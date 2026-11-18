@@ -1,0 +1,31 @@
+{
+  "sources": [
+    {
+      "url": "https://www.tax.metro.tokyo.lg.jp/kazei/work/houjinji",
+      "file": "database/raw/jp/jp.tokyo-corporate-tax.20261119.html",
+      "sha256": "54f8f822a4cc17a82f564972d17710630f557282e1acfa81ec305c3b0cb7f17e",
+      "bytes": 598987,
+      "registration_status": "archived_original",
+      "doc_id": "jp.tokyo-corporate-tax.20261119",
+      "review_scope": "Ordinary enterprise component only; rates and standard-rate special levy basis; return instructions pages12,15,17 for rounding. Not full legal transcription or business acceptance."
+    },
+    {
+      "url": "https://www.tax.metro.tokyo.lg.jp/kazei/work/tokubetsu_houjin",
+      "file": "database/raw/jp/jp.tokyo-special-enterprise-tax.20261119.html",
+      "sha256": "0c10dcaf7437b6770854796d3a67db25f201c10dad52ce2a98e6b902d5915464",
+      "bytes": 541709,
+      "registration_status": "archived_original",
+      "doc_id": "jp.tokyo-special-enterprise-tax.20261119",
+      "review_scope": "Ordinary enterprise component only; rates and standard-rate special levy basis; return instructions pages12,15,17 for rounding. Not full legal transcription or business acceptance."
+    },
+    {
+      "url": "https://www.tax.metro.tokyo.lg.jp/documents/d/tax/06_6-3-b",
+      "file": "database/raw/jp/jp.tokyo-corporate-return-instructions.20261119.pdf",
+      "sha256": "29eee2504021530c2d95c233e059d311941148966a9393dd35bec3c90808a99f",
+      "bytes": 1984278,
+      "registration_status": "archived_original",
+      "doc_id": "jp.tokyo-corporate-return-instructions.20261119",
+      "review_scope": "Ordinary enterprise component only; rates and standard-rate special levy basis; return instructions pages12,15,17 for rounding. Not full legal transcription or business acceptance."
+    }
+  ]
+}
