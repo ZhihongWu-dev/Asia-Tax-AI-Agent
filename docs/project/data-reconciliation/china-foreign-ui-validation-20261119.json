@@ -1,0 +1,34 @@
+{
+  "status": "scoped_workflow_verified",
+  "policy": "cn_company_foreign_direct_2026",
+  "validation": {
+    "typescript": {
+      "exit_code": 0
+    },
+    "browser": {
+      "passed": 3,
+      "seconds": 47.2,
+      "exit_code": 0,
+      "cases": [
+        "per-country with current-year expiry",
+        "pooled credit with historical excess",
+        "pooled credit including a prior-credit-only country"
+      ],
+      "checks": [
+        "save",
+        "reopen saved result",
+        "export record with source identifiers",
+        "expiry balance",
+        "next-year carryforward",
+        "prepayment balance"
+      ]
+    },
+    "initial_failure": "Expected 30 versus displayed 30.00; fixed numeric-format assertion and all three cases passed on rerun."
+  },
+  "delivery": "Local only; no cloud upload, remote push or main merge.",
+  "limitations": [
+    "Ordinary resident 25% company, direct credits and nonnegative country bases only",
+    "No indirect/deemed credits, special rates or negative country pools",
+    "Business acceptance remains incomplete"
+  ]
+}

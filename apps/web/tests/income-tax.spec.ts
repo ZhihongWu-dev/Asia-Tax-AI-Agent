@@ -1,3 +1,4 @@
+import {cnForeignChecks,cnForeignAmounts} from '../src/china-foreign-assessment';
 import {tokyoAmounts,tokyoChecks} from '../src/japan-tokyo-assessment';
 import { test, expect } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
@@ -920,4 +921,60 @@ test('Vietnam personal securities saves result',async({page})=>{
   await openIncome(page);
   await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('1835300');
   await expect(page.getByRole('region',{name:'Tokyo local tax details',exact:true})).toHaveCount(0);
+});
+
+
+for(const method of ['per_country','pooled','pooled_with_prior_country'])test(`China foreign direct credit ${method} saves and exports expiry balances`,async({page})=>{
+  test.setTimeout(60000);
+  const form=await openIncome(page);
+  await form.getByRole('combobox',{name:'Tax residency',exact:true}).selectOption('resident');
+  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Claimed deductions (blank if unknown)','0'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+  await form.getByRole('button',{name:'Add income',exact:true}).click();
+  await form.getByRole('button',{name:'Add income',exact:true}).click();
+  for(const [n,country,tax] of [[0,'cn','0'],[1,'sg','200'],[2,'hk','100']] as const){
+    const row=form.getByRole('group',{name:`Income ${n+1}`,exact:true});
+    await row.getByRole('combobox',{name:'Income category',exact:true}).selectOption(country==='cn'?'business':'dividend');
+    await row.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption(country);
+    for(const [name,value] of [['Gross income','1000'],['Foreign tax paid (blank if unknown)',tax],['Income description','Gross CNY income before withholding with verified direct tax']])await row.getByLabel(name,{exact:true}).fill(value);
+  }
+  await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+  await expect(form.getByRole('status')).toHaveText('Income-tax details saved.');
+  const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await calc.getByRole('combobox',{name:'Applicable regime',exact:true}).selectOption('cn_company_foreign_direct_2026');
+  await calc.getByRole('combobox',{name:'Established credit method',exact:true}).selectOption(method==='per_country'?'per_country':'pooled');
+  await calc.getByLabel('Additional countries with prior credits only',{exact:true}).fill(method==='pooled_with_prior_country'?'1':'0');
+  if(method==='pooled_with_prior_country'){
+    await calc.getByRole('combobox',{name:'Prior-credit country 1',exact:true}).selectOption('kr');
+    await calc.getByLabel('South Korea: Prior excess year count',{exact:true}).fill('1');
+    await calc.getByLabel('South Korea: Excess 1 origin year',{exact:true}).fill('2025');
+    await calc.getByLabel('South Korea: Excess 1 amount',{exact:true}).fill('30');
+  }
+  for(const [country,tax] of [['Mainland China','0'],['Singapore','200'],['Hong Kong','100']]){
+    for(const [key,,label] of cnForeignAmounts){
+      if(country==='Mainland China'&&key==='eligible_direct_tax')continue;
+      await calc.getByLabel(`${country}: ${label}`,{exact:true}).fill(key==='eligible_direct_tax'?tax:'0');
+    }
+    if(country!=='Mainland China')await calc.getByLabel(`${country}: Prior excess year count`,{exact:true}).fill(country==='Singapore'?'1':'0');
+  }
+  await calc.getByLabel('Singapore: Excess 1 origin year',{exact:true}).fill('2021');
+  await calc.getByLabel('Singapore: Excess 1 amount',{exact:true}).fill('80');
+  for(const [,,label] of cnForeignChecks)await calc.getByRole('combobox',{name:label,exact:true}).selectOption('true');
+  await calc.getByLabel('Prepaid tax for this period',{exact:true}).fill('500');
+  await calc.getByLabel('Tax-basis adjustments and eligibility explanation',{exact:true}).fill('Verified direct taxes, gross CNY income, all source allocations and five-year method history.');
+  await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
+  const result=calc.getByRole('article',{name:'Saved calculation result'});
+  const detail=result.getByRole('region',{name:'Foreign credit details',exact:true});
+  await expect(detail).toContainText('2021');
+  await expect(detail).not.toContainText('undefined');
+  await expect(result).toContainText(method==='per_country'?'-100':method==='pooled'?'-130':'-160');
+  await expect(detail.locator('dl > div').filter({hasText:'Expires after current year'}).first().locator('dd')).toHaveText(method==='per_country'?/^30(?:\.0+)?$/:/^0(?:\.0+)?$/);
+  await expect(detail.locator('dl > div').filter({hasText:'Next-year carryforward'}).first().locator('dd')).toHaveText('0');
+  await expect(result.getByRole('link')).toHaveCount(3);
+  const downloading=page.waitForEvent('download');
+  await result.getByRole('button',{name:'Download calculation record'}).click();
+  const record=await readFile((await (await downloading).path())!,'utf8');
+  expect(record).toContain('next_year_carryforward');
+  expect(record).toContain('cn.cs.2017-84');
+  await openIncome(page);
+  await expect(page.getByRole('region',{name:'Foreign credit details',exact:true})).toContainText('2021');
 });

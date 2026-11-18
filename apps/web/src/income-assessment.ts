@@ -1,3 +1,4 @@
+import { chinaForeignPolicy } from './china-foreign-assessment';
 import { tokyoFields } from './japan-tokyo-assessment';
 import type { IncomeTaxInput } from './income-tax';
 import { koreaPolicy } from './korea-assessment';
@@ -25,6 +26,7 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput, values:Record<string,string>={}): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if(input.jurisdiction==='cn'&&company&&input.residency==='resident'&&period==='2026-01-01/2026-12-31'&&input.incomes.some(i=>i.source_jurisdiction!=='cn'))return [chinaForeignPolicy(input,values)];
   if(input.jurisdiction==='vn' && !company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.length && input.incomes.every(i=>i.category==='rental'&&i.source_jurisdiction==='vn'))return [vietnamRentalPolicy(input)];
   if(input.jurisdiction==='vn' && !company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.length && input.incomes.every(i=>i.category==='business'&&i.source_jurisdiction==='vn'))return [vietnamBusinessPolicy(input)];
   if(input.jurisdiction==='th' && !company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.some(i=>i.source_jurisdiction!=='th') && input.incomes.every(i=>(i.source_jurisdiction==='th'?['employment','business','service_remuneration','author_remuneration','royalty','rental']:['employment','business','service_remuneration','author_remuneration','royalty','rental','dividend','interest']).includes(i.category)))return [thaiForeignPolicy(input,values)];
