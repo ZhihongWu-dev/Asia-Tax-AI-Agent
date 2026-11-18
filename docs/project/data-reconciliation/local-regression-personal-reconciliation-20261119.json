@@ -1,0 +1,76 @@
+{
+  "runtime_head": "4f5805d",
+  "delivery": "Local only; no cloud upload, remote push or main merge",
+  "application": {
+    "initial_passed": 2558,
+    "initial_skipped": 39,
+    "deselected": 27,
+    "pinned_engine_followup_passed": 58,
+    "recovered_skipped_cases": 35,
+    "unique_passed_after_followup": 2593,
+    "remaining_skipped": 4,
+    "evidence": [
+      {
+        "file": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\local-regression-personal-reconciliation-application-20261119.xml",
+        "sha256": "3926d8957edbb873ddfebdfbbac29bbb1407aa650e274396c4cfcf20e86fc74e",
+        "suite": {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "39",
+          "tests": "2597",
+          "time": "587.383",
+          "timestamp": "2026-11-19T04:50:41.762931+08:00",
+          "hostname": "Wuzhihong"
+        }
+      },
+      {
+        "file": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\local-regression-personal-reconciliation-pinned-engine-20261119.xml",
+        "sha256": "566dc7cd201880a18a51daae8e217bc1947d1e3d197aca313a65ed1fd85cd518",
+        "suite": {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "58",
+          "time": "261.096",
+          "timestamp": "2026-11-19T04:58:25.896736+08:00",
+          "hostname": "Wuzhihong"
+        }
+      }
+    ],
+    "remaining_skip_reasons": [
+      "Legacy attachment converter unavailable (1)",
+      "PostgreSQL locking/uncommitted transaction semantics (3)"
+    ],
+    "note": "Two runs combined by testcase classname/name; not a single uninterrupted 2593-pass run."
+  },
+  "database_tools": {
+    "passed": 92,
+    "exit_code": 0,
+    "evidence": {
+      "file": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\local-regression-personal-reconciliation-database-20261119.xml",
+      "sha256": "d2c6b45689345389b9be7d792fbcfa7e3a13df1c6985f6a499f0e62cfa8b8824",
+      "suite": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "92",
+        "time": "42.452",
+        "timestamp": "2026-11-19T04:50:50.047937+08:00",
+        "hostname": "Wuzhihong"
+      }
+    }
+  },
+  "browser": {
+    "passed": 121,
+    "failed": 0,
+    "exit_code": 0,
+    "duration": "10.2m",
+    "pinned_engine": "771e4524961bcc36718db1c9331e7a5f4cda0ce7",
+    "session": 10136
+  },
+  "initial_collection_failure": "Application environment lacks PyMuPDF. Database tests were then run in existing dedicated document-tool environment;92 passed.",
+  "limits": "Local fixture auth/providers and pinned engine; does not prove hosted integration or full tax/business acceptance. Japan local taxes, mixed/special regimes and Vietnam foreign-credit/annual-relief ordering remain open."
+}

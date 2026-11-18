@@ -1,0 +1,115 @@
+{
+  "review_date": "2026-11-19",
+  "scope": "Japan local corporate tax source review; Tokyo is an initial jurisdiction, not nationwide completion",
+  "sources": [
+    {
+      "url": "https://www.tax.metro.tokyo.lg.jp/kazei/work/houjinji",
+      "file": "database/raw/jp/jp.tokyo-corporate-tax.20261119.html",
+      "sha256": "54f8f822a4cc17a82f564972d17710630f557282e1acfa81ec305c3b0cb7f17e",
+      "bytes": 598987,
+      "registration_status": "research_original_only_not_enabled"
+    },
+    {
+      "url": "https://www.tax.metro.tokyo.lg.jp/shitsumon/work/a1/gaikeiqa",
+      "file": "database/raw/jp/jp.tokyo-size-based-tax-qa.20261119.html",
+      "sha256": "0a210cfebfbaa456ba2c4e6f96370b79f2663e1105ca3e04e2c40d5a9b981477",
+      "bytes": 711833,
+      "registration_status": "research_original_only_not_enabled"
+    },
+    {
+      "url": "https://www.tax.metro.tokyo.lg.jp/kazei/work/tokubetsu_houjin",
+      "file": "database/raw/jp/jp.tokyo-special-enterprise-tax.20261119.html",
+      "sha256": "0c10dcaf7437b6770854796d3a67db25f201c10dad52ce2a98e6b902d5915464",
+      "bytes": 541709,
+      "registration_status": "research_original_only_not_enabled"
+    },
+    {
+      "url": "https://www.tax.metro.tokyo.lg.jp/kazei/work/houjinji/kintouwari-checkpoint",
+      "file": "database/raw/jp/jp.tokyo-per-capita-capital.20261119.html",
+      "sha256": "3f0a929b9ada2683f65181bbef6793d9ad7eb5a0fa5f74ddb7e3f6a1772887bb",
+      "bytes": 515968,
+      "registration_status": "research_original_only_not_enabled"
+    },
+    {
+      "url": "https://www.tax.metro.tokyo.lg.jp/documents/d/tax/06_6-3-b",
+      "file": "database/raw/jp/jp.tokyo-corporate-return-instructions.20261119.pdf",
+      "sha256": "29eee2504021530c2d95c233e059d311941148966a9393dd35bec3c90808a99f",
+      "bytes": 1984278,
+      "registration_status": "research_original_only_not_enabled"
+    }
+  ],
+  "review": {
+    "status": "source_review_in_progress_not_implemented",
+    "runtime_observed": "4f5805d",
+    "existing_scope": "Japan company policy calculates national components only; local enterprise and inhabitant taxes remain absent.",
+    "implementation_inputs_to_resolve": [
+      "Office jurisdictions and allocation; special wards versus municipalities",
+      "Fiscal period and fraction-year handling",
+      "Industry and tax-base category",
+      "Capital, capital reserve and adjusted statutory capital amounts",
+      "Current and prior size-based-tax eligibility and controlling group",
+      "Local income base, national corporation-tax levy base and prior local payments",
+      "Employee counts and office duration for per-capita levy"
+    ],
+    "source_checks": [
+      "Original bytes archived with SHA256; corporate rate table and expanded size-based eligibility text inspected.",
+      "Do not confuse national local-corporation tax with prefectural/municipal inhabitant tax.",
+      "Special enterprise tax and per-capita capital references archived; detailed calculation and rounding review still pending."
+    ],
+    "acceptance_remaining": [
+      "Source-backed calculation order and rounding",
+      "Threshold and loss-year examples",
+      "Multi-location and period handling",
+      "Saved facts, UI, report and restart verification",
+      "Other jurisdictions within Japan remain in overall scope; Tokyo review is one implementation step."
+    ],
+    "visually_reviewed_official_example": {
+      "source": "tokyo-corporate-return-instructions.pdf",
+      "page": 15,
+      "capital_yen": 8000000,
+      "income_yen": 2856420,
+      "period_months": 4,
+      "band_tax_bases_yen": [
+        1333000,
+        1333000,
+        189000
+      ],
+      "observation": "Allocate short-year bands using amounts before thousand-yen truncation; truncate the separate band bases afterwards. Official example verified in rendered page.",
+      "implementation": "Pending; do not infer liability or broader rounding rules from this one example."
+    },
+    "rounding_review": {
+      "pages_visually_inspected": [
+        12,
+        14,
+        15,
+        17
+      ],
+      "ordinary_enterprise_rule": "Split income into applicable bands, truncate each base below JPY1000, truncate each resulting band tax below JPY100.",
+      "special_enterprise_rule": "Use standard-rate enterprise levy even when local surcharge applies; difference levy is truncated below JPY100.",
+      "derived_check_not_official_tax_example": {
+        "scenario": "Official page15 four-month income example extended assuming ordinary standard-rate eligible corporation; no credits or prepayments",
+        "band_bases": [
+          1333000,
+          1333000,
+          189000
+        ],
+        "band_rates": [
+          "0.035",
+          "0.053",
+          "0.07"
+        ],
+        "band_taxes_after_hundred_floor": [
+          46600,
+          70600,
+          13200
+        ],
+        "enterprise_tax": 130400,
+        "special_enterprise_tax_rate": "0.37",
+        "special_enterprise_tax_after_hundred_floor": 48200
+      },
+      "remaining": "Resident levy, per-capita levy, all eligibility rules and further source effective-date checks remain; no user-facing policy enabled."
+    }
+  },
+  "catalog_effect": "Frozen CSV/SQLite catalog and enabled rules unchanged",
+  "delivery": "Local only"
+}

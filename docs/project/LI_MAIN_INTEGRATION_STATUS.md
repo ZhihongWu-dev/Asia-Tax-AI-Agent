@@ -14,9 +14,25 @@ functional and business acceptance requirements. Historical references below to
 cloud rollout, remote branch delivery, or main promotion are superseded as delivery actions, not as proof
 that unresolved business rules have been accepted.
 
+## Latest local regression at runtime 4f5805d (2026-11-19)
+
+The application suite and pinned-engine followup jointly passed 2,593 unique
+cases. The initial run passed 2,558 and skipped 39; the 58-case followup recovered
+all 35 engine-dependent skips. Four environment skips remain (one legacy
+attachment converter, three PostgreSQL transaction/locking checks), with 27
+integration-marked tests deselected. This is a verified union of two runs, not
+a single uninterrupted run. The separate database-tool environment passed all
+92 tests, and the full browser suite passed all 121 tests in 10.2 minutes.
+See [exact evidence](data-reconciliation/local-regression-personal-reconciliation-20261119.json).
+
+Five Japanese local-tax originals are now archived and hash-verified for
+continued implementation. Their review is incomplete and no local-tax workflow
+is enabled by this archival step. Actual business acceptance remains unproven;
+all delivery actions remain local-only.
+
 ## Local income-tax reconciliation checkpoint (2026-11-19)
 
-The latest cross-module regression completed: 2,496 backend tests passed, four
+An earlier cross-module regression completed: 2,496 backend tests passed, four
 environment-dependent tests skipped, and 27 live-integration tests deselected.
 The complete browser suite passed all 121 tests without skips, using the pinned
 engine. Twelve Korean source originals omitted from the deliverable were

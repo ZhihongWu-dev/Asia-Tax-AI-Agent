@@ -19,7 +19,8 @@
       "evidence": [
         "local-cross-module-regression-20261119.json",
         "optimizer-final-validation-20261119.json",
-        "local-regression-after-reconciliation-20261119.json"
+        "local-regression-after-reconciliation-20261119.json",
+        "local-regression-personal-reconciliation-20261119.json"
       ],
       "limits": "121 browser tests, complete v5 golden/checker suite and offline backend regression. Real hosted authentication/provider end-to-end acceptance is not established. Original/v4 comparison jobs remain live."
     },
@@ -89,14 +90,15 @@
       "state": "not_proven",
       "evidence": [
         "local-cross-module-regression-20261119.json",
-        "income-business-scope-audit-20261119.json"
+        "income-business-scope-audit-20261119.json",
+        "japan-local-source-review-20261119.json"
       ],
       "limits": "Business cases/expected outcomes requested from user and pending. Known gaps include Japanese local taxes, mixed-income and special-regime coverage, and Vietnam combined foreign-credit/annual-relief ordering. Do not replace these gates with test counts."
     }
   ],
   "latest_checks": {
-    "backend": "2534 passed, 4 environment skips, 27 integration deselections at runtime6570d92; exit0",
-    "browser": "119 passed plus 2 stale-title failures in full run; both fixed and targeted rerun passed; see separate evidence",
+    "backend": "2593 unique application tests passed across full run and58-test pinned-engine followup;35 skipped engine cases recovered,4 environment skips remain,27 integration deselections",
+    "browser": "121 passed in10.2m at runtime4f5805d;exit0",
     "korean_archive": "1 targeted test passed after backend collection; 14 exact originals, 12 newly restored",
     "thai_source_snapshots": "20 focused tests and 1455 income-tax tests passed; four original hashes verified in persisted/report flow",
     "china_business_sources": "1466 income/report tests passed; final provenance metadata verified by40 focused tests",
@@ -115,7 +117,8 @@
     "vietnam_company": "1541 income/report tests, TypeScript and2 browser cases passed",
     "hong_kong_salary": "1552 income/report tests, TypeScript and1 browser case passed",
     "vietnam_employment": "1557 income/report tests;35 final workflow tests;TypeScript and1 final browser flow passed",
-    "indonesia_personal": "1560 income/report tests, TypeScript and2 browser scenarios passed"
+    "indonesia_personal": "1560 income/report tests, TypeScript and2 browser scenarios passed",
+    "database_tools": "92 passed in dedicated test environment;exit0"
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }
