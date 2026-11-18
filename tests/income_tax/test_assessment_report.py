@@ -59,15 +59,20 @@ def test_snapshot_mismatch_rejected():
         render(dict(inputs={},basis={},result={},snapshot_hash='0'*64))
 
 
-def test_thai_foreign_source_versions_survive_storage_restart_and_report(tmp_path):
+@pytest.mark.parametrize('policy,manifest,count', [
+    ('th', 'th_foreign_2026_sources.json', 4),
+    ('cn', 'cn_business_2026_sources.json', 3),
+])
+def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, manifest, count):
     from hashlib import file_digest
     from pathlib import Path
     from tests.income_tax.test_thailand_foreign_assessment import inputs
+    from tests.income_tax.test_china_business import saved_inputs
 
     root = Path(__file__).resolve().parents[2]
-    sources = json.loads((root/'packages/income_tax/th_foreign_2026_sources.json').read_text(
+    sources = json.loads((root/'packages/income_tax'/manifest).read_text(
         encoding='utf-8'))['sources']
-    assert len(sources) == 4
+    assert len(sources) == count
     for source in sources:
         with (root/source['file']).open('rb') as original:
             assert file_digest(original, 'sha256').hexdigest() == source['sha256']
@@ -80,7 +85,7 @@ def test_thai_foreign_source_versions_survive_storage_restart_and_report(tmp_pat
         client.get('/api/auth/session')
         case_id = client.post('/api/cases', headers=HEADERS).json()['id']
         path = f'/api/cases/{case_id}/income-tax'
-        data, basis = inputs()
+        data, basis = inputs() if policy == 'th' else saved_inputs()
         saved = client.put(path, headers=HEADERS, json=dict(
             revision=0, request_id=str(uuid4()), inputs=data))
         assert saved.status_code == 200, saved.text

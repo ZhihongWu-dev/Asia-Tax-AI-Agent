@@ -1,5 +1,8 @@
 """Annual domestic business income on an established, aggregated taxable base."""
 from decimal import Decimal, localcontext
+from copy import deepcopy
+import json
+from pathlib import Path
 
 from .arithmetic import Band, ZERO, amount, marginal_tax
 from .china import check_year
@@ -7,11 +10,8 @@ from .china import check_year
 BANDS = tuple(Band(None if cap is None else Decimal(cap), Decimal(rate))
     for cap, rate in [('30000', '.05'), ('90000', '.10'), ('300000', '.20'),
                       ('500000', '.30'), (None, '.35')])
-SOURCES = (
-    ('cn.iit.business.schedule', 'https://guangxi.chinatax.gov.cn/zcwj/zxwj/201809/t20180914_254766.html'),
-    ('cn.sta.2023-12.business-relief', 'https://fgk.chinatax.gov.cn/zcfgk/c100012/c5213596/content.html'),
-    ('cn.sta.2023-12.business-examples', 'https://fgk.chinatax.gov.cn/zcfgk/c100015/c5213612/content.html'),
-)
+SOURCES = json.loads(Path(__file__).with_name(
+    'cn_business_2026_sources.json').read_text(encoding='utf-8'))['sources']
 
 
 def annual_business_tax(taxable_income, *, tax_year, business_form,
@@ -59,4 +59,4 @@ def annual_business_tax(taxable_income, *, tax_year, business_form,
             annual_liability=liability, prepaid_tax=prepaid, balance_due=balance,
             payable=max(ZERO, balance), refundable=max(ZERO, -balance),
             stage='annual_aggregated_business_before_assessment_rounding',
-            sources=[dict(doc_id=doc_id, url=url) for doc_id, url in SOURCES])
+            sources=deepcopy(SOURCES))

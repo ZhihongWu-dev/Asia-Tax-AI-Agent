@@ -61,9 +61,10 @@
         "income-source-archive-closure-20261119.json",
         "singapore-employment-review-20261118.json",
         "china-business-review-20261118.json",
-        "thailand-source-snapshots-20261119.json"
+        "thailand-source-snapshots-20261119.json",
+        "china-business-source-snapshots-20261119.json"
       ],
-      "limits": "All 74 manifest references and 11 literal inline hashes have archived matching files; dynamically composed and URL-only citations need further work. Singapore employment relief pages can be read through web research but a direct archival batch failed with HTTP403; no original snapshots admitted. Thai final foreign-income assessments now carry four verified source snapshot records through storage and report export; the earlier 74-reference archive audit predates this new manifest."
+      "limits": "All 74 manifest references and 11 literal inline hashes have archived matching files; dynamically composed and URL-only citations need further work. Singapore employment relief pages can be read through web research but a direct archival batch failed with HTTP403; no original snapshots admitted. Thai final foreign-income assessments now carry four verified source snapshot records through storage and report export; the earlier 74-reference archive audit predates this new manifest. Chinese business-income schedule, announcement and official examples now have three exact archived originals persisted in reports; remaining dynamic/URL-only sources still require audit."
     },
     {
       "requirement": "Repeated validation until actual business requirements are met",
@@ -79,7 +80,8 @@
     "backend": "2496 passed, 4 environment skips, 27 integration deselections; exit 0",
     "browser": "121 passed, zero skips; exit 0",
     "korean_archive": "1 targeted test passed after backend collection; 14 exact originals, 12 newly restored",
-    "thai_source_snapshots": "20 focused tests and 1455 income-tax tests passed; four original hashes verified in persisted/report flow"
+    "thai_source_snapshots": "20 focused tests and 1455 income-tax tests passed; four original hashes verified in persisted/report flow",
+    "china_business_sources": "1466 income/report tests passed; final provenance metadata verified by40 focused tests"
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

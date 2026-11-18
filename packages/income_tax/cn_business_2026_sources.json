@@ -1,0 +1,32 @@
+{
+  "sources": [
+    {
+      "doc_id": "cn.iit.business.schedule",
+      "title": "Individual Income Tax Law and business income rate schedule",
+      "url": "https://guangxi.chinatax.gov.cn/zcwj/zxwj/201809/t20180914_254766.html",
+      "file": "database/raw/cn/cn.iit.business.schedule.html",
+      "sha256": "bba26187c90f3626ad07d5e7d17362dee638d7041805a5e0e9c9685a30081edd",
+      "retrieved_on": "2026-11-19"
+    },
+    {
+      "doc_id": "cn.sta.2023-12.business-relief",
+      "title": "STA Announcement 2023 No.12: annual aggregation and individual operator relief",
+      "url": "https://guangxi.chinatax.gov.cn/zcwj/zxwj/202308/t20230807_390469.html",
+      "file": "database/raw/cn/cn.sta.2023-12.business-relief.html",
+      "sha256": "0a91d77f5045c99a82f5f20b21c171080469a767797b94206310688b3048a264",
+      "retrieved_on": "2026-11-19",
+      "original_reference_url": "https://fgk.chinatax.gov.cn/zcfgk/c100012/c5213596/content.html",
+      "archive_note": "Original reference returned HTTP403; snapshot is the Guangxi tax authority publication of the same announcement or official interpretation. SHA256 describes only the archived Guangxi response."
+    },
+    {
+      "doc_id": "cn.sta.2023-12.business-examples",
+      "title": "Official interpretation of STA Announcement 2023 No.12, including examples",
+      "url": "https://guangxi.chinatax.gov.cn/zcwj/zcjd/202308/t20230807_390476.htm",
+      "file": "database/raw/cn/cn.sta.2023-12.business-examples.html",
+      "sha256": "62522e41a727b93068707028d8f054d8ba9a54b4479cc82ec4d8504358f49271",
+      "retrieved_on": "2026-11-19",
+      "original_reference_url": "https://fgk.chinatax.gov.cn/zcfgk/c100015/c5213612/content.html",
+      "archive_note": "Original reference returned HTTP403; snapshot is the Guangxi tax authority publication of the same announcement or official interpretation. SHA256 describes only the archived Guangxi response."
+    }
+  ]
+}

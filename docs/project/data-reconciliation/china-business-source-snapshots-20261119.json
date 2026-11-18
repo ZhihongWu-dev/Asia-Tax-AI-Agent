@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only; no cloud upload, push or main merge.",
+  "change": "Three complete official HTML sources archived and versioned in Chinese annual business-income results. Formula unchanged.",
+  "provenance": {
+    "schedule": "Matches the previously reviewed SHA256 bba26187c90f3626ad07d5e7d17362dee638d7041805a5e0e9c9685a30081edd",
+    "relief": "Guangxi tax authority publication of STA Announcement 2023 No.12; confirms annual aggregation, formula and end date",
+    "examples": "Guangxi official interpretation; reviewed examples 80000/2000 and 2400000/6000",
+    "retrieval": "Original fgk and central STA references returned403. Guangxi urllib connections closed; ordinary requests GET succeeded. Complete response bytes preserved without normalization.",
+    "manifest": "packages/income_tax/cn_business_2026_sources.json"
+  },
+  "verification": {
+    "suite": "1466 income-tax and reporting tests passed in32.45s",
+    "final_metadata": "40 focused tests passed in6.11s after adding original-reference provenance",
+    "persistence": "Local authenticated API creates assessment; SQLite restart and report export preserve exact source paths/hashes",
+    "arithmetic": "Existing schedule, official examples, annual aggregation, refund and exclusion tests pass"
+  },
+  "github_reference": "https://github.com/python/cpython/blob/main/Doc/library/hashlib.rst",
+  "implementation_choice": "Existing standard-library hashing and JSON manifests; no third-party code copied or new dependency adopted.",
+  "limits": [
+    "Not a new tax rule or overall business acceptance",
+    "Mixed eligible/ineligible income allocation and cross-case deductions remain unresolved",
+    "Historical stored runs are not rewritten",
+    "Frozen CSV/SQLite catalogs not modified; source files are consumed by income-tax result manifests"
+  ]
+}
