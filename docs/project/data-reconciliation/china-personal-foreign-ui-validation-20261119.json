@@ -1,0 +1,25 @@
+{
+  "status": "scoped_ui_workflow_verified",
+  "validation": {
+    "typescript_exit_code": 0,
+    "browser_passed": 1,
+    "browser_seconds": 40.0,
+    "exit_code": 0
+  },
+  "case": "CN60000 wages; SG40000 wages plus10000 interest; HK30000 business; SG2000 eligible paid tax with2021 excess1000; HK500 paid; prepaid3000",
+  "verified": [
+    "Country cap2592 for SG",
+    "Current-year expiry408",
+    "Annual liability1888 and balance-1112",
+    "Saved result reopened",
+    "Downloaded record includes original source and expiry fields"
+  ],
+  "scope": "Ordinary comprehensive, nonnegative business bases and20percent investment income only; wider acceptance incomplete.",
+  "remaining": [
+    "Readable personal credit report tables",
+    "Chinese browser path and editing boundaries",
+    "Rental/transfers/special treatments",
+    "Actual business acceptance"
+  ],
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}

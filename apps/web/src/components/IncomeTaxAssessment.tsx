@@ -1,3 +1,5 @@
+import {personalForeignBasis} from '../china-personal-foreign-assessment';
+import PersonalForeignResult from './PersonalForeignResult';
 import { chinaForeignBasis } from '../china-foreign-assessment';
 import ChinaForeignResult from './ChinaForeignResult';
 import { tokyoBasis } from '../japan-tokyo-assessment';
@@ -48,6 +50,9 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
         }
         basis[field.key] = months;
       } else basis[field.key] = field.boolean ? values[field.key] === 'true' : field.integer ? Number(values[field.key]) : values[field.key];
+    }
+    if(policy.id==='cn_personal_foreign_2026'){
+      try{basis=personalForeignBasis(basis,current.income_tax!,values);}catch{setError(say('历史抵免国家不得重复或与现有来源国家重复。','Prior-credit countries must be unique and additional to saved source countries.'));return;}
     }
     if(policy.id==='cn_company_foreign_direct_2026'){
       try{basis=chinaForeignBasis(basis,current.income_tax!,values);}catch{setError(say('历史抵免国家不得重复或与现有来源国家重复。','Prior-credit countries must be unique and additional to saved source countries.'));return;}
@@ -192,6 +197,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       {result.result.tax_scope==='national_income_and_reconstruction_tax_only'&&<p>{say('此结果仅为日本2026年度国家所得税及复兴特别所得税，不含住民税、事业税。扣除予定纳税通知金额不代表该税款已缴清，欠税另行处理。','This result covers Japan 2026 national income and reconstruction tax only, excluding local inhabitant and enterprise taxes. Deducting notified estimated tax does not mean it has been paid; arrears remain separate.')}</p>}
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{key==='balance_due'&&result.result.tax_scope==='national_income_and_reconstruction_tax_only'?say('本次国家税应补／退额（予定纳税欠税另计）','National return balance (estimated-tax arrears separate)'):label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
       {result.result.tax_scope==='china_resident_ordinary_direct_foreign_credit_positive_bases'&&<ChinaForeignResult result={result.result} index={index}/>}
+      {result.result.tax_scope==='china_resident_ordinary_comprehensive_business_investment_foreign_credit'&&<PersonalForeignResult result={result.result} index={index}/>}
       {!!result.result.tokyo_local && <TokyoLocalResult result={result.result} index={index} />}
       {!!result.result.personal_basis_reconciliation && <section aria-label={say('印尼个人所得税税基核对','Indonesia personal basis reconciliation')}>
         <h4>{say('印尼个人所得税税基核对','Indonesia personal basis reconciliation')}</h4>

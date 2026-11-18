@@ -1008,3 +1008,45 @@ for(const method of ['per_country','pooled','pooled_with_prior_country'])test(`C
   await openIncome(page);
   await expect(page.getByRole('region',{name:'Foreign credit details',exact:true})).toContainText('2021');
 });
+
+test('China personal foreign mixed income saves reopens and exports credit history',async({page})=>{
+  test.setTimeout(60000);
+  const form=await openIncome(page);
+  await form.getByRole('combobox',{name:'Taxpayer',exact:true}).selectOption('individual');
+  await form.getByRole('combobox',{name:'Tax residency',exact:true}).selectOption('resident');
+  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Claimed deductions (blank if unknown)','0'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+  for(let i=0;i<3;i++)await form.getByRole('button',{name:'Add income',exact:true}).click();
+  for(const [n,category,country,gross,tax] of [[0,'employment','cn','60000','0'],[1,'employment','sg','40000','1500'],[2,'interest','sg','10000','500'],[3,'business','hk','30000','500']] as const){
+    const row=form.getByRole('group',{name:`Income ${n+1}`,exact:true});
+    await row.getByRole('combobox',{name:'Income category',exact:true}).selectOption(category);
+    await row.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption(country);
+    for(const [name,value] of [['Gross income',gross],['Foreign tax paid (blank if unknown)',tax],['Income description','Verified ordinary gross CNY income']])await row.getByLabel(name,{exact:true}).fill(value);
+  }
+  await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+  await expect(form.getByRole('status')).toHaveText('Income-tax details saved.');
+  const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await calc.getByRole('combobox',{name:'Applicable regime',exact:true}).selectOption('cn_personal_foreign_2026');
+  for(const name of ['Verified comprehensive deductions (excluding basic 60000 and statutory expenses)','Comprehensive tax reductions','Business tax reductions','Additional countries with prior credits only'])await calc.getByLabel(name,{exact:true}).fill('0');
+  for(const [country,tax] of [['Mainland China','0'],['Singapore','2000'],['Hong Kong','500']]){
+    for(const name of ['Business deductions','Eligible prior business losses'])await calc.getByLabel(`${country}: ${name}`,{exact:true}).fill('0');
+    if(country!=='Mainland China'){
+      await calc.getByLabel(`${country}: Eligible foreign tax paid`,{exact:true}).fill(tax);
+      await calc.getByLabel(`${country}: Prior excess year count`,{exact:true}).fill(country==='Singapore'?'1':'0');
+    }
+  }
+  await calc.getByLabel('Singapore: Excess 1 origin year',{exact:true}).fill('2021');
+  await calc.getByLabel('Singapore: Excess 1 amount',{exact:true}).fill('1000');
+  for(const name of ['Ordinary categories and no special treatment verified','Sources, FX, deductions and losses verified','Paid-tax evidence and history verified'])await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+  await calc.getByLabel('Prepaid tax for this period',{exact:true}).fill('3000');
+  await calc.getByLabel('Tax-basis adjustments and eligibility explanation',{exact:true}).fill('Verified source allocations, ordinary category taxes and historical paid-tax records.');
+  await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
+  const result=calc.getByRole('article',{name:'Saved calculation result'});
+  await expect(result).toContainText('-1112');
+  const detail=result.getByRole('region',{name:'Personal foreign credit details',exact:true});
+  await expect(detail).toContainText('2592');await expect(detail).toContainText('408');
+  await expect(detail).not.toContainText('undefined');
+  const download=page.waitForEvent('download');await result.getByRole('button',{name:'Download calculation record'}).click();
+  const record=await readFile((await (await download).path())!,'utf8');
+  expect(record).toContain('cn.cs.2020-03');expect(record).toContain('expires_after_current_year');
+  await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('-1112');
+});
