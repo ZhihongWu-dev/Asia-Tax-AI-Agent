@@ -1,0 +1,11 @@
+{
+  "sources": [
+    {
+      "doc_id": "sg.iras.company-computation.20261119",
+      "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/form-c-s-form-c-s-%28lite%29-form-c-filing/preparing-a-tax-computation",
+      "file": "database/raw/sg/sg.iras.company-computation.20261119.html",
+      "sha256": "e0d9b78a27208d38a16ea3f86bbd547a935ac0dec6b0ecf523cc83054b86ffc7",
+      "retrieved_on": "2026-11-19"
+    }
+  ]
+}

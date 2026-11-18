@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only; no upload, push or main merge.",
+  "problem": "The company adapter passed a manual normal_chargeable_income directly to exemption/rebate arithmetic; saved receipts, deductions and prior losses could disagree. Existing workflow fixture had1000000 receipts and0 deductions but100000 base.",
+  "change": "Reconcile established usable income/deductions/exclusions/prior-loss deduction before automatic PTE/SUTE. Preserve a separate Singapore reconciliation without mislabelling unused capital allowances/donations as trade losses or carryforward awards. No automatic eligibility, ordering or unused-item allocation inferred.",
+  "source_manifest": "packages/income_tax/sg_company_basis_sources.json",
+  "source": "https://www.iras.gov.sg/taxes/corporate-income-tax/form-c-s-form-c-s-%28lite%29-form-c-filing/preparing-a-tax-computation",
+  "source_archive": "Complete original IRAS HTML archived and hash checked in persisted/report workflow; kept separate from frozen catalog-linked rate manifest.",
+  "github_reference": "https://github.com/openfisca/country-template",
+  "reference_use": "Separate computation stages using current Decimal framework; no copied AGPL code or added dependency. Existing repository/license/issues review applies.",
+  "validation": {
+    "final_suite": "1501 income-tax/reporting tests passed in37.62s",
+    "browser": "1 passed in29.9s with1000000 saved income and900000 deductions; reconciliation displayed, result reopened",
+    "typescript": "tsc -b exit0",
+    "atomicity": "Invalid base422 leaves revision/result unchanged; valid result survives SQLite reopen and report export",
+    "initial_failures": "New source in catalog-bound manifest failed source-registration test; moved into separate manifest. New test confused52500 exemption with47500 remaining taxable amount; expected value corrected. Final suite clean."
+  },
+  "limits": [
+    "Tax adjustment qualification, statutory ordering and current-period usability remain established workpaper facts",
+    "No computation of unused capital-allowance/donation/trade-loss balances or group-relief eligibility",
+    "No cloud catalog mutation or historical record rewrite",
+    "Overall business acceptance remains incomplete"
+  ]
+}

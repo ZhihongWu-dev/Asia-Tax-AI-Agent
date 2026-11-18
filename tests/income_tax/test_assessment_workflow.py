@@ -51,7 +51,9 @@ COMPANY = dict(policy='cn_company_2026', taxable_income='1000000', normal_rate_c
         no_relief_elected_confirmed=True,allowed_foreign_tax_credit='0',prepaid_tax='0'),'final_tax','56250'),
 ])
 def test_supported_policies_through_saved_case_contract(jur, subject, basis, key, expected):
-    result = calculate(IncomeTaxCase(**facts(jur,subject)), ADAPTER.validate_python({**COMMON, **basis}))
+    data=facts(jur,subject)
+    if basis['policy']=='sg_company_ya2026':data['claimed_deductions']='900000'
+    result = calculate(IncomeTaxCase(**data), ADAPTER.validate_python({**COMMON, **basis}))
     assert isinstance(result[key], str)  # never serialize money as a binary float
     assert Decimal(result[key]) == Decimal(expected)
     assert result['policy_version'] and result['stage']

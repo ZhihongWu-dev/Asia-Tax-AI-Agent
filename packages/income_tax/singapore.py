@@ -15,11 +15,34 @@ CORPORATE_SOURCE = "https://www.iras.gov.sg/quick-links/tax-rates/corporate-inco
 PERSONAL_SOURCE = "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates"
 SOURCE_MANIFEST = json.loads(Path(__file__).with_name("sg_ya2026_sources.json").read_text(encoding="utf-8"))
 SOURCE_BY_URL = {item["url"]: item for item in SOURCE_MANIFEST["sources"]}
+COMPANY_BASIS_SOURCES = json.loads(Path(__file__).with_name(
+    'sg_company_basis_sources.json').read_text(encoding='utf-8'))['sources']
 PERSONAL_BANDS = tuple(Band(None if upper is None else Decimal(upper), Decimal(rate)) for upper, rate in (
     ("20000", "0"), ("30000", ".02"), ("40000", ".035"), ("80000", ".07"),
     ("120000", ".115"), ("160000", ".15"), ("200000", ".18"), ("240000", ".19"),
     ("280000", ".195"), ("320000", ".20"), ("500000", ".22"), ("1000000", ".23"),
     (None, ".24")))
+
+
+def reconcile_company_basis(case, *, normal_chargeable_income):
+    """Check established usable amounts before PTE/SUTE, without classifying losses.
+
+    Saved deductions include verified exclusions and usable tax deductions,
+    including capital allowances/donations, but not the separately saved prior
+    trade-loss deduction. Their statutory ordering/eligibility is established
+    in the supporting computation; an excess here is not a carryforward award.
+    """
+    with localcontext() as context:
+        context.prec = 40
+        total = sum((item.gross_amount for item in case.incomes), ZERO)
+        net = total - case.claimed_deductions - case.carried_losses
+        base = max(ZERO, net)
+        if normal_chargeable_income != base:
+            raise ValueError('Singapore company chargeable income must reconcile to saved income, established deductions/exclusions and prior-loss deduction before exemption')
+        return dict(total_income=total, established_deductions_and_exclusions=case.claimed_deductions,
+            established_prior_loss_deduction=case.carried_losses,
+            net_before_zero_floor=net, chargeable_income_before_exemption=base,
+            scope='Established usable amounts only; does not determine ordering, eligibility or unutilised capital allowances, losses or donations')
 
 
 def check_year(year):

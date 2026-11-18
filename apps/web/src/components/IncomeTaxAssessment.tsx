@@ -165,6 +165,16 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       </>}
       {result.result.tax_scope==='national_income_and_reconstruction_tax_only'&&<p>{say('此结果仅为日本2026年度国家所得税及复兴特别所得税，不含住民税、事业税。扣除予定纳税通知金额不代表该税款已缴清，欠税另行处理。','This result covers Japan 2026 national income and reconstruction tax only, excluding local inhabitant and enterprise taxes. Deducting notified estimated tax does not mean it has been paid; arrears remain separate.')}</p>}
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{key==='balance_due'&&result.result.tax_scope==='national_income_and_reconstruction_tax_only'?say('本次国家税应补／退额（予定纳税欠税另计）','National return balance (estimated-tax arrears separate)'):label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
+      {!!result.result.singapore_basis_reconciliation && <section aria-label={say('新加坡减免前税基核对','Singapore pre-exemption basis reconciliation')}>
+        <h5>{say('新加坡减免前税基核对','Singapore pre-exemption basis reconciliation')}</h5>
+        <dl>{([
+          ['total_income',say('保存收入总额','Saved total income')],
+          ['established_deductions_and_exclusions',say('核定扣除及非应税调整','Established deductions and exclusions')],
+          ['established_prior_loss_deduction',say('核定本期以前年度亏损扣除','Established prior-loss deduction')],
+          ['net_before_zero_floor',say('核对净额（负数不代表可结转亏损）','Reconciled net amount (negative is not a carryforward award)')],
+          ['chargeable_income_before_exemption',say('自动减免前应课税收入','Chargeable income before automatic exemption')],
+        ] as const).map(([key,label])=><div key={key}><dt>{label}</dt><dd>{String((result.result.singapore_basis_reconciliation as Record<string,unknown>)[key])}</dd></div>)}</dl>
+      </section>}
       {!!result.result.basis_reconciliation && <section aria-label={say('企业税基核对','Company basis reconciliation')}>
         <h5>{say('企业税基核对','Company basis reconciliation')}</h5>
         <dl>{([

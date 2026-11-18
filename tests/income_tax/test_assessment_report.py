@@ -68,6 +68,7 @@ def test_snapshot_mismatch_rejected():
     ('th_company', 'th_2026_sources.json', 2),
     ('jp_company', 'jp_company_2026_sources.json', 8),
     ('id_company', 'id_2026_sources.json', 6),
+    ('sg_company', 'sg_company_basis_sources.json', 1),
 ])
 def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, manifest, count):
     from hashlib import file_digest
@@ -79,6 +80,7 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
     from tests.income_tax.test_thailand_dividend_adapter import inputs as dividend_inputs
     from tests.income_tax.test_japan_company import facts as japan_facts, basis as japan_basis
     from tests.income_tax.test_indonesia_company_reconciliation import inputs as indonesia_inputs
+    from tests.income_tax.test_singapore_company_reconciliation import inputs as singapore_company_inputs
 
     root = Path(__file__).resolve().parents[2]
     sources = json.loads((root/'packages/income_tax'/manifest).read_text(
@@ -89,6 +91,8 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
         sources = [s for s in sources if s['doc_id'] == 'th.rd.p119-2545']
     elif policy == 'th_company':
         sources = [sources[0], sources[4]]
+    elif policy == 'sg_company':
+        sources = [s for s in sources if s['doc_id']=='sg.iras.company-computation.20261119']
     assert len(sources) == count
     for source in sources:
         with (root/source['file']).open('rb') as original:
@@ -113,6 +117,8 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
             data, basis = japan_facts(), japan_basis()
         elif policy == 'id_company':
             data, basis = indonesia_inputs()
+        elif policy == 'sg_company':
+            data, basis = singapore_company_inputs()
         elif policy == 'th_company':
             data = facts()
             data.update(jurisdiction='th', currency='THB')
@@ -126,8 +132,9 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
         saved = client.put(path, headers=HEADERS, json=dict(
             revision=0, request_id=str(uuid4()), inputs=data))
         assert saved.status_code == 200, saved.text
-        if policy in ('th_company', 'jp_company', 'id_company'):
+        if policy in ('th_company', 'jp_company', 'id_company', 'sg_company'):
             key = 'net_taxable_profit' if policy == 'th_company' else 'taxable_income_before_rounding'
+            if policy == 'sg_company':key = 'normal_chargeable_income'
             rejected = client.post(path+'/runs', headers=HEADERS, json=dict(
                 revision=1, request_id=str(uuid4()),
                 basis={**basis, key: '1000001'}))

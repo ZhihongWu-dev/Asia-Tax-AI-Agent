@@ -39,7 +39,7 @@ const scenarios:Scenario[]=[
   {name:'China comprehensive reconciled deductions',country:'cn',subject:'individual',category:'employment',start:'2026-01-01',end:'2026-12-31',gross:'1000000',policy:'cn_comprehensive_2026',deductions:'43000',
     money:[['Allowed special deductions','20000'],['Allowed additional deductions','12000'],['Allowed other deductions','6000'],['Allowed donations','5000'],['Allowed tax reductions','1000'],['Prepaid tax for this period','200000']],
     choices:[['Domestic resident comprehensive treatment checked','true']],resultLabel:'Annual liability',expected:'227030'},
-  {name:'Singapore corporate partial exemption',country:'sg',subject:'company',category:'business',start:'2025-01-01',end:'2025-12-31',gross:'100000',policy:'sg_company_ya2026',
+  {name:'Singapore corporate partial exemption',country:'sg',subject:'company',category:'business',start:'2025-01-01',end:'2025-12-31',gross:'1000000',deductions:'900000',policy:'sg_company_ya2026',
     money:[['Normal-rate chargeable income','100000'],['Allowed tax set-off','0']],choices:[['Ordinary regime and exclusions checked','true'],['Exemption scheme','partial'],['Eligible for start-up exemption','false'],['Eligible for this YA cash grant','false']],
     resultLabel:'Tax after relief',expected:'4037.5'},
   ...(['company','individual'] as const).map(subject=>({name:`Hong Kong ${subject} profits`,country:'hk',subject,category:'business',start:'2025-04-01',end:'2026-03-31',gross:'1000000',policy:'hk_profits_2025_26',
@@ -87,6 +87,7 @@ for(const s of scenarios)test(`${s.name} saves and reopens a sourced result`,asy
   const trailingZeros=s.expected.includes('.')?'0*':'(?:\\.0+)?';
   const expectedAmount=new RegExp(`^${s.expected.replace('.','\\.')}${trailingZeros}$`);
   await expect(amount).toHaveText(expectedAmount);
+  if(s.policy==='sg_company_ya2026') await expect(report.getByRole('region',{name:'Singapore pre-exemption basis reconciliation'})).toContainText('900000');
   if(s.policy==='hk_property_2025_26') {
     await expect(report.getByRole('region',{name:'Per-property results'})).toContainText('216000');
     await expect(calc.getByRole('option',{name:'Hong Kong profits tax (2025/26)',exact:true})).toHaveCount(0);

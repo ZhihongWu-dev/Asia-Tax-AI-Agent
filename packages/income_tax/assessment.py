@@ -177,7 +177,12 @@ def calculate(case: IncomeTaxCase, basis):
     elif policy == 'sg_company_ya2026':
         if args.pop('ordinary_regime_confirmed') is not True:
             raise ValueError('Ordinary Singapore regime must be confirmed')
+        reconciliation = singapore.reconcile_company_basis(case,
+            normal_chargeable_income=basis.normal_chargeable_income)
         result = singapore.company_tax(assessment_year=2026, **args)
+        result['singapore_basis_reconciliation'] = reconciliation
+        result['policy_version'] += '-reconciled-20261119'
+        result['sources'] = [result['source'], *[dict(s) for s in singapore.COMPANY_BASIS_SOURCES]]
     elif policy == 'sg_resident_ya2026':
         result = singapore.resident_individual_tax(assessment_year=2026, **args)
     elif policy == 'hk_profits_2025_26':

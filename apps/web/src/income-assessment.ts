@@ -253,8 +253,8 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
         money('available_parenthood_rebate','本人核定可用PTR余额','Verified available PTR balance'),prepaid,
         confirm('eligibility_and_allocations_verified','已核对YA 2026资格、单项限额、分配及PTR余额','YA 2026 eligibility, individual limits, allocation and PTR balance verified')]},rateOnly];
     return company ? [{id:'sg_company_ya2026',label:['新加坡企业（课税年2026）','Singapore company (YA 2026)'],
-      notice:['仅限普通税率收入；须先核对税基、减免资格及可用抵免。现金补助单独列示，不重复扣税。',
-        'Normal-rate income only. Establish the tax base, exemption eligibility and allowed credits first. The cash grant is separate from tax payable.'],
+      notice:['仅限普通税率收入。保存扣除须包含核实可用的非应税项目、费用、资本津贴及捐款等调整；以前年度贸易亏损的本期可扣金额单列，不得重复。扣除顺序、资格和限额须已核实，系统只核对减免前税基，不推定各类未用余额。PTE/SUTE由系统随后计算，不计入保存扣除。须先核对减免资格及可用抵免。现金补助单独列示，不重复扣税。',
+        'Normal-rate income only. Saved deductions include verified exclusions, expenses, usable capital allowances and donations; enter the verified prior trade-loss deduction separately without duplication. Establish statutory ordering, limits and eligibility first. The system reconciles the pre-exemption base without classifying unutilised items. Do not include automatic PTE/SUTE in saved deductions. Verify exemption eligibility and allowed credits. The cash grant is separate from tax payable.'],
       fields:[money('normal_chargeable_income','普通税率应课税收入','Normal-rate chargeable income'),ordinary,
         {key:'exemption_scheme',label:['减免制度','Exemption scheme'],options:[['partial',['部分减免','Partial exemption']],['startup',['初创企业减免','Start-up exemption']],['none',['不适用减免','None']]]},
         confirm('startup_eligibility_confirmed','符合初创企业减免条件','Eligible for start-up exemption'),confirm('cash_grant_eligible','符合本课税年现金补助条件','Eligible for this YA cash grant'),money('allowed_tax_setoff','核定可抵免税额','Allowed tax set-off')]}]
