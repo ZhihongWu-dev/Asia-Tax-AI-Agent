@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from scripts.catalog_migration import digest, simulate, validate_plan, read_affected_catalogs
+from scripts.catalog_migration import digest, simulate, validate_plan, read_affected_catalogs, verify_target
 
 
 def plan_for(operations):
@@ -35,6 +35,28 @@ def test_atomic_replacement_simulation_preserves_inputs(example):
     assert set(result['clause']) == {'law#1'}
     result['clause']['law#1']['text'] = 'changed'
     assert plan['operations'][2]['after']['text'] == 'operative text'
+
+
+def test_exact_target_verification_includes_deletion_and_preserves_rows(example):
+    plan, rows = example
+    target = simulate(plan, rows, uploaded_at='upload')
+    original = deepcopy(target)
+    assert verify_target(plan, target)['verified_operations'] == 3
+    assert target == original
+    target['clause']['law#notice'] = None
+    with pytest.raises(ValueError, match='migration_target_changed:clause:law#notice'):
+        verify_target(plan, target)
+
+
+@pytest.mark.parametrize('change', ['missing', 'edited', 'missing_table'])
+def test_target_verification_rejects_drift_or_incomplete_read(example, change):
+    plan, rows = example
+    target = simulate(plan, rows, uploaded_at='upload')
+    if change == 'missing': del target['doc']['law']
+    elif change == 'edited': target['doc']['law']['sha256'] = 'stale'
+    else: del target['clause']
+    with pytest.raises(ValueError, match='migration_target_'):
+        verify_target(plan, target)
 
 
 @pytest.mark.parametrize('change', ['edited', 'missing', 'collision', 'null_collision'])

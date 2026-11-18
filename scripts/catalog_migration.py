@@ -103,3 +103,27 @@ def read_affected_catalogs(connection, plan, *, extra_keys=None, batch_size=50):
                         raise ValueError('migration_unexpected_or_duplicate_row')
                     catalogs[table][key] = dict(row)
     return catalogs
+
+
+def verify_target(plan, catalogs):
+    """Verify exact target rows for every operation, including removed rows.
+
+    Used against the reviewed staging catalog and after a transaction's writes.
+    This verifies only the operation targets, not whole-library source closure.
+    A missing table is an incomplete read, never evidence of a successful delete.
+    """
+    operations = validate_plan(plan)
+    if any(op['table'] not in catalogs for op in operations):
+        raise ValueError('migration_target_read_incomplete')
+    for op in operations:
+        rows = catalogs[op['table']]
+        key = op['key']
+        if op['operation'] == 'delete':
+            matches = key not in rows
+        else:
+            matches = key in rows and rows[key] == op['after']
+        if not matches:
+            raise ValueError('migration_target_changed:' + op['table'] + ':' + key)
+    return {'verified_operations': len(operations),
+            'catalog_revision': plan['proposed_catalog_revision'],
+            'scope': 'operation_targets_only'}
