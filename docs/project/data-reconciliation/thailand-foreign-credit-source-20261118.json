@@ -1,0 +1,32 @@
+{
+  "url": "https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_EN.pdf",
+  "sha256": "9a802a525c5a735d8221961e4e23eed432a2a4739173e52cb4d06c8cceaa43e5",
+  "pages": 23,
+  "source_date": "November 2025",
+  "review_scope": "Foreign tax allocation by income type and proportion attributable to remitted income; not final FTC eligibility or country aggregation",
+  "relevant_pdf_pages": [
+    18,
+    19,
+    21
+  ],
+  "open_issue": "General instructions require country and income-type separation; Part 3 describes country grouping. Resolve before final limitation algorithm.",
+  "next_steps": [
+    "Reconcile original earnings and remittance amounts in saved-case adapter",
+    "Verify DTA entitlement and source-country tax caps",
+    "Resolve credit-limit grouping with Thai original guide or official calculator",
+    "Integrate calculation basis, public assessment and UI with regression cases"
+  ],
+  "visual_reviewed_pdf_pages": [
+    18,
+    19,
+    21
+  ],
+  "implementation": "packages/income_tax/thailand_foreign_credit.py",
+  "tests": "71 passed in 1.94s: attribution, remittance classification and ordinary Thai tax regressions",
+  "publication_status": "Arithmetic component only; not exposed as final assessment",
+  "github_reference": {
+    "url": "https://github.com/openfisca/country-template",
+    "use": "Country-specific explicit policy inputs and isolated calculation tests; no code copied or dependency introduced",
+    "license_review": "Repository license and issue listing inspected; no external code adopted"
+  }
+}
