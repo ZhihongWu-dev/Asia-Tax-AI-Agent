@@ -96,8 +96,8 @@ def render(run, locale='zh'):
                     lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
     if result.get('tax_scope') == 'china_resident_ordinary_comprehensive_business_investment_foreign_credit':
         lines += ['', '## ' + say('个人境外抵免明细', 'Personal foreign credit details'), '',
-            say('普通综合所得、非负经营税基及普通20%利息股息；限额先扣除各类核定减免税额。全年合计包括境内普通利息股息税额，不等同于B表申报金额。不含租赁、转让、特殊奖金股权或饶让抵免。历史余额仅在同国剩余限额内使用，本期到期未用金额不可结转。',
-                'Ordinary comprehensive income, nonnegative business bases and ordinary20% interest/dividends; limits reflect verified category reductions. The full-year total includes domestic ordinary investment tax and is not a B-form filing amount. Excludes rental, transfers, special bonuses/equity and deemed credits. Prior credits use remaining capacity in the same country; unused amounts expiring this year cannot carry forward.')]
+            say('普通综合所得、非负经营税基及普通20%利息股息；限额先扣除各类核定减免税额。全年合计包括境内普通利息股息税额，不等同于B表申报金额。已核定普通财产转让按逐笔工作表另计；不含租赁、特殊奖金股权或饶让抵免。历史余额仅在同国剩余限额内使用，本期到期未用金额不可结转。',
+                'Ordinary comprehensive income, nonnegative business bases and ordinary20% interest/dividends; limits reflect verified category reductions. The full-year total includes domestic ordinary investment tax and is not a B-form filing amount. Established ordinary property transfers use separate transaction workpapers. Excludes rental, special bonuses/equity and deemed credits. Prior credits use remaining capacity in the same country; unused amounts expiring this year cannot carry forward.')]
         for pool in result['country_limits']:
             label = pool['country'].upper()
             lines += ['', '### ' + _text(label), '', '| ' + say('项目 | 金额', 'Item | Amount') + ' |', '| --- | --- |']

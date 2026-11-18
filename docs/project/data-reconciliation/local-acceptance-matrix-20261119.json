@@ -116,7 +116,7 @@
   ],
   "latest_checks": {
     "backend": "2593 unique application tests passed across full run and58-test pinned-engine followup;35 skipped engine cases recovered,4 environment skips remain,27 integration deselections",
-    "browser": "122passed in9.6m at runtime17cea1c;exit0. Later domain-citation fix has independent real HTTP and23-test coverage.",
+    "browser": "126passed in10.3m at56cc674,exit0; includes China company/personal foreign income. Later transfer backend integration separately verified.",
     "korean_archive": "1 targeted test passed after backend collection; 14 exact originals, 12 newly restored",
     "thai_source_snapshots": "20 focused tests and 1455 income-tax tests passed; four original hashes verified in persisted/report flow",
     "china_business_sources": "1466 income/report tests passed; final provenance metadata verified by40 focused tests",
@@ -163,7 +163,8 @@
     "china_domestic_derived_precision": "84 domestic/foreign focused cases passed; same fractional-expense defect reproduced and fixed in original domestic comprehensive workflow. UI accepts decimal input, public precision remains six places.",
     "nested_sources_personal_foreign": "1757 income/report tests passed in71.27s;153 successful calculations across35 policies,114 distinct source records,0 unresolved files/hashes. Includes personal foreign workpaper.",
     "production_build": "npm run build passed after personal foreign integration (tsc plus Vite2279modules). Local artifact hashes recorded; bundle-size warning remains; no deployment.",
-    "china_personal_transfers": "10 internal component cases passed: per-transaction proceeds/costs/expenses, no ordinary loss netting, donations and reductions, source hashes. Annual workpaper and UI integration pending."
+    "china_personal_transfers": "10 internal component cases passed: per-transaction proceeds/costs/expenses, no ordinary loss netting, donations and reductions, source hashes. Annual workpaper and UI integration pending.",
+    "china_personal_transfer_api": "60 focused component/API/report tests passed in21.03s; deductions reconcile, per-country cap includes separate transfer tax, save/restart/export verified. UI pending."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

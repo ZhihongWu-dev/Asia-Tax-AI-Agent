@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "runtime_commit": "56cc674",
+  "validation": {
+    "passed": 126,
+    "duration": "10.3m",
+    "exit_code": 0
+  },
+  "scope": "Full local browser suite including corporate/personal foreign income before transfer integration. Later transfer changes have separate targeted backend tests, not claimed covered here.",
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}

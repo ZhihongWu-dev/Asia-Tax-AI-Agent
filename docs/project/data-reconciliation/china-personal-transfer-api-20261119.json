@@ -1,0 +1,20 @@
+{
+  "status": "backend_transfer_integration_verified_ui_pending",
+  "validation": {
+    "passed": 60,
+    "seconds": 21.03,
+    "exit_code": 0
+  },
+  "verified": [
+    "Transfer original costs, expenses and donations reconcile to saved total deductions",
+    "Separate transaction taxes join corresponding country credit cap",
+    "Loss transaction not netted with profitable sale",
+    "Authenticated save, storage restart, source-preserving report and rejection without mutating saved case"
+  ],
+  "remaining": [
+    "Transfer frontend and browser workflow",
+    "Readable transaction report rows",
+    "Other unsupported income categories and business acceptance"
+  ],
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}
