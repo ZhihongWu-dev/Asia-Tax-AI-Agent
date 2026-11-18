@@ -14,3 +14,17 @@ Required next evidence: map the current03/TNDN annual return and its annexes, th
 Development reference revisited: https://github.com/openfisca/openfisca-core (period-scoped tax modelling). Existing project arithmetic and immutable case snapshots remain the integration approach; no external code or dependency adopted. Source research also found a November2026 consultation for amendments to Decree320; a consultation draft is not an enacted amendment and has not been applied.
 
 Verification artifacts: local `vn398-review-3.png`, `vn398-review-4.png`, `vn398-review-5.png` under the integration audit directory; original SHA256 checked. Original optimizer PID16760 remained live during the review. No frozen calculation inputs, catalog data, deployment or remote branch changed.
+
+
+## Additional official publication check
+
+The Ministry of Industry and Trade market-surveillance publication of Decree398
+was checked on 2026-11-18, including its appendix. The appendix lists three
+personal-income-tax forms (business declaration, withholding/on-behalf declaration,
+and adjustment after exceeding the revenue threshold). It does not supply a
+corporate foreign-credit/annual-reduction composition worksheet. Article3(4)
+addresses corporate provisional payments and later adjustments, without resolving
+the outstanding same-income cap ordering. This check does not justify a combined
+calculation change; the existing incomplete status remains.
+
+Source: https://www.dms.gov.vn/documents/20182/22561/_VB_1793672891399_VB_2026%2BNgh%E1%BB%8B-%C4%91%E1%BB%8Bnh-398-2026-N%C4%90-CP%2BGIAM%2BTHUE%2BTHU%2BNHAP%2BCA%2BNHAN%2BDN.pdf/b820efca-c2b5-c231-d9f2-b58cafb351fa?t=1793672891420&version=1.0
