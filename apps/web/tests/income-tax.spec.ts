@@ -1048,5 +1048,7 @@ test('China personal foreign mixed income saves reopens and exports credit histo
   const download=page.waitForEvent('download');await result.getByRole('button',{name:'Download calculation record'}).click();
   const record=await readFile((await (await download).path())!,'utf8');
   expect(record).toContain('cn.cs.2020-03');expect(record).toContain('expires_after_current_year');
+  expect(record).toContain('Personal foreign credit details');
+  expect(record).toContain('not a B-form filing amount');
   await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('-1112');
 });

@@ -229,3 +229,23 @@ def test_china_report_explains_expiring_credit_without_resetting_years(locale, m
     assert ('cannot carry forward' if locale=='en' else '不可结转') in summary
     assert ('New excess last usable year' if locale=='en' else '新增余额最后可用年度') in summary
     assert '2031' in summary
+
+
+@pytest.mark.parametrize('locale', ['zh', 'en'])
+def test_personal_foreign_report_exposes_country_caps_and_expiry(locale):
+    from hashlib import sha256
+    from tests.income_tax.test_china_personal_foreign_assessment import facts, basis, run
+    snapshot=dict(inputs=facts(),basis=basis(),result=run())
+    digest=sha256(json.dumps(snapshot,sort_keys=True,separators=(',', ':')).encode()).hexdigest()
+    saved=dict(**snapshot,id='example',case_id='example',input_revision=1,
+        created_at='2026-11-19T00:00:00Z',status='calculated_basis',snapshot_hash=digest)
+    report=render(saved,locale)
+    summary=report.split('## Complete inputs' if locale=='en' else '## 完整资料')[0]
+    assert ('Personal foreign credit details' if locale=='en' else '个人境外抵免明细') in summary
+    assert ('not a B-form filing amount' if locale=='en' else '不等同于B表申报金额') in summary
+    # Check rendered values independently of the full JSON snapshot.
+    clean=summary.replace(chr(92), '')
+    assert '| SG | 2021 | 2026 | 1000 | 592.00 | 0 | 408.00 | 0 |' in clean
+    assert ('| Country credit limit | 2592.00 |' if locale=='en' else '| 国别限额合计 | 2592.00 |') in clean
+    assert ('| Comprehensive credit limit | 592.00 |' if locale=='en' else '| 综合所得限额 | 592.00 |') in clean
+    assert '2031' in summary

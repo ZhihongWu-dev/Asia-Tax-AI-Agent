@@ -1,0 +1,18 @@
+{
+  "status": "scoped_report_verified",
+  "validation": {
+    "backend_report_and_api_passed": 39,
+    "backend_seconds": 13.79,
+    "browser_passed": 1,
+    "browser_seconds": 30.3,
+    "exit_code": 0
+  },
+  "verified": [
+    "Chinese and English human-readable country/category credit limits",
+    "Historical original/last-usable years, credit used, expired amounts and next-year balances",
+    "Saved-case values checked independently of JSON snapshot",
+    "Actual browser download contains personal credit tables and full-year/B-form distinction"
+  ],
+  "scope": "Ordinary personal foreign-income workflow only; broader business acceptance incomplete.",
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}
