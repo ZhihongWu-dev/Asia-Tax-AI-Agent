@@ -1,0 +1,37 @@
+{
+  "status": "all_seven_tables_exact",
+  "files": 635,
+  "tables": {
+    "jurisdiction": {
+      "rows": 11,
+      "all_fields_and_order_equal": true
+    },
+    "treaty": {
+      "rows": 55,
+      "all_fields_and_order_equal": true
+    },
+    "doc": {
+      "rows": 358,
+      "all_fields_and_order_equal": true
+    },
+    "clause": {
+      "rows": 45888,
+      "all_fields_and_order_equal": true
+    },
+    "param": {
+      "rows": 811,
+      "all_fields_and_order_equal": true
+    },
+    "files": {
+      "rows": 635,
+      "all_fields_and_order_equal": true
+    },
+    "decision": {
+      "rows": 43,
+      "all_fields_and_order_equal": true
+    }
+  },
+  "scope": "Repack reviewed CSV snapshot with current source inventory; no source extraction or legal approval inferred.",
+  "sqlite_sha256": "e7f6f6f79d5acb33b76ac7873969217c16d8ea60d6f6d9e35afc57665634e466",
+  "sqlite_bytes": 90738688
+}

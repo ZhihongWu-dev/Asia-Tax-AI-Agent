@@ -2,6 +2,30 @@
 
 ## Latest delivery checkpoint
 
+The current combined candidate is on `codex/catalog-closure-delivery`, based on
+`c56128c` before the SQLite parity repair. Its clean-checkout regression initially
+exposed 308 missing catalog citations; the reviewed candidate CSV snapshot fixes
+that failure. The complete offline regression then passed 2,448 tests, with four
+environment skips and 27 integration-marked tests deselected. Database tooling
+passed all 92 tests. Six catalog CSVs retain exact hashes under Git checkout with
+`core.autocrlf=true`, `false` and `input`.
+
+The tracked SQLite artifact was still the older 6,037-clause database. It has now
+been rebuilt from the reviewed CSVs: all seven tables, including 45,888 clauses,
+358 documents and 811 parameters, match every field and row order. The original
+UAE/Hong Kong RTF is included with its verified source hash. See
+[candidate validation](data-reconciliation/catalog-delivery-validation-20261118.json)
+and [SQLite parity](data-reconciliation/catalog-delivery-sqlite-parity-20261118.json).
+These local artifacts do not apply the pending cloud catalog migration.
+
+The combined optimizer v5 completed `case001.best` with no golden or exhaustive
+checker failures in 1,375.47 seconds, and is running `case001.open`. All twelve
+cases remain required. The original and v4 processes retain their frozen inputs.
+Hosted identity/provider/worker-recovery acceptance, final remote delivery and
+`main` promotion remain incomplete.
+
+### Earlier checkpoint retained for traceability
+
 Implementation HEAD at this checkpoint: `c1f109a`, on
 `codex/li-corporate-integration`. Final `Zhihong-Wu` delivery and `main`
 promotion remain incomplete.

@@ -9,3 +9,7 @@
 /database/treaty.csv -text
 /database/decision.csv -text
 /database/clause.csv -text
+/database/files.csv -text
+/database/database.sqlite -text
+# The file inventory records exact hashes of extracted text as well as originals.
+/database/text/** -text
