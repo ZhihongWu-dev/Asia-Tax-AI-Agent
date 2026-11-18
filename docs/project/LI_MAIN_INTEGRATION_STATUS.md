@@ -186,6 +186,20 @@ All catalog writers must update the revision atomically with their rows. The
 and no cloud parameter rows or catalog revision have been changed by this work.
 Deploy the revision-aware reader before applying a catalog migration.
 
+## Optimizer validation detail
+
+All twelve golden expectations passed against the original run's existing
+products using the original assertion logic. Every saved input exactly matched
+its fixture, and product JSON hashes were unchanged before/after this read-only
+check. This does not prove exhaustive checker completion or validate staged rules.
+See [expectation evidence](data-reconciliation/original-golden-expectations-20261118.json).
+
+The original checker remains active in pairwise exhaustive-baseline comparison.
+An independent exact-duplicate compression helper passed 45 tests against the
+actual original dominance predicate, including epsilon boundaries and distinct
+obligations. A real-case isolated probe is still enumerating paths; no real-case
+speedup or full-check success is claimed yet. The frozen checker is unchanged.
+
 ## Remaining delivery gates
 
 1. Finish the live optimizer baseline, rebuild the frozen data with the reviewed

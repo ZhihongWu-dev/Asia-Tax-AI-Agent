@@ -70,3 +70,20 @@ def test_exact_duplicates_compress_without_comparing_each_path(monkeypatch):
 
 def test_empty_states():
     assert frontier.nondominated_state_keys([]) == set()
+
+
+def test_missing_optional_fields_and_distinct_paths_are_equivalent_states():
+    a = state(path=['first'])
+    b = state(path=['second'])
+    del b['new']
+    del b['transfers']
+    assert frontier.state_key(a) == frontier.state_key(b)
+    assert frontier.nondominated_state_keys([a,b]) == original_oracle([a,b]) == {frontier.state_key(a)}
+
+
+def test_equal_cost_states_with_incomparable_obligations_both_survive():
+    a, b = state(), state()
+    a['needs'] = frozenset({('bo','true')})
+    b['needs'] = frozenset({('ppt','true')})
+    expected = {frontier.state_key(a), frontier.state_key(b)}
+    assert frontier.nondominated_state_keys([a,b,copy.deepcopy(a)]) == original_oracle([a,b]) == expected

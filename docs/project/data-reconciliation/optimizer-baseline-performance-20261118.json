@@ -10,18 +10,27 @@
   "limits": "One stack observation identifies current work, not a complete profile or completion time. Original process and frozen checker unchanged; all twelve optimizer product directories exist but only four checker completion lines observed.",
   "helper": "optimization/tools/baseline_frontier.py",
   "validation": {
-    "tests": 43,
-    "passed": 43,
-    "seconds": 2.64,
+    "tests": 45,
+    "passed": 45,
+    "seconds": 2.72,
     "oracle": "Actual dom predicate and state-key AST extracted from unchanged optimization/tools/check.py.",
     "coverage": [
       "40 seeded datasets with duplicate paths, set conditions, two destinations, costs, hop/restructure/new counts and epsilon-adjacent values",
       "Permutation invariance",
       "Nontransitive epsilon dominance retains all unique possible witnesses",
       "5000 identical paths require only two comparisons with one distinct dominated state",
-      "Empty destination set"
+      "Empty destination set",
+      "Missing optional fields use original defaults; different path identities compress",
+      "Equal-cost states with incomparable obligations both survive"
     ]
   },
   "equivalence_argument": "All fields read by dom occur in state_key. Exact equal keys cannot strictly dominate one another and have identical relations to every third state. Therefore replacing each key-equivalence class with one representative preserves the nondominated key set. Node partitioning omits only pairs rejected by the original node-equality condition. No transitivity or frontier-only pruning is used.",
-  "integration_status": "Helper not imported by original frozen checker. External probe patches only in-memory source and leaves running process/files unchanged. Full real-case result pending."
+  "integration_status": "Helper not imported by original frozen checker. External probe patches only in-memory source and leaves running process/files unchanged. Full real-case result pending.",
+  "golden_expectations_evidence": "original-golden-expectations-20261118.json",
+  "isolated_probe_observation": {
+    "pid": 4260,
+    "phase": "DFS path_weight and eval_flow observed by nonblocking stack sampling",
+    "latest_cpu_seconds": 185.67,
+    "status": "running_no_final_result"
+  }
 }
