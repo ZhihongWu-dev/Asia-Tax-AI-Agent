@@ -1,0 +1,29 @@
+{
+  "status": "read_only_affected_rows_simulation_passed_not_applied",
+  "snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "edde47909d21fe68755b0eb06c712c8e951fe448ba24feb03aadb751189ef987",
+    "review_sha256": "13f50d553fd845dc59bd5ce72805f21db1452a77f25f9e10ab023728ad0d9e5e"
+  },
+  "operation_count": 399,
+  "revision": "efe9f584cde70875072e8a23aa6075eaa82cdc2f18805b39a7fd51c370e7a0e2",
+  "exact_before_guards_passed": 399,
+  "accepted_overlay_records_validated": 32,
+  "inserted_clauses_checked": 151,
+  "new_clause_ids_blocked_by_existing_reviews": [],
+  "affected_base_rows_read": {
+    "doc": 4,
+    "param": 119,
+    "decision": 4,
+    "clause": 3
+  },
+  "limitations": [
+    "No cloud writes",
+    "Affected rows and overlay dependencies only; not whole-library orphan validation",
+    "Deployed reader revision not verified",
+    "Recheck all guards under write transaction locks"
+  ],
+  "previous_attempt": "Full clause-table read failed with SSL connection closed; no writes. This attempt uses batches of at most 50 requested keys."
+}
