@@ -1,0 +1,32 @@
+{
+  "status": "all_six_catalogs_exact_after_checkout",
+  "commit": "75f982bf02716dd11f6d3869cfe10a78bc614c4a",
+  "checkout_root": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\catalog-checkout-7aa4bc3e",
+  "core_autocrlf_modes": {
+    "true": {
+      "database/jurisdiction.csv": "ea00efb65070e9b0daa1563dcb949d58aab46581a0f0f31e5636d2dac1c293d5",
+      "database/doc.csv": "ad5fda914cdebb725a4c734189cc4d917649fff52304f92de0d399fb2635001c",
+      "database/param.csv": "64f301d996583d74e93956b74b2c55c51e2676ac38fadaeae9b49c1eb642f650",
+      "database/treaty.csv": "da0e0f916773a994009313e78cda4e2b42da23f1599a5f391f99a2863f31149c",
+      "database/decision.csv": "0090c7c6d3582206b6fb46d3fd2330a783da2d4f6907cdc8ea46051bb00ba637",
+      "database/clause.csv": "e4af0fdbaa21685d15acc04cba49491c349eaa6c34b6fa957a907c5dc6bd7894"
+    },
+    "false": {
+      "database/jurisdiction.csv": "ea00efb65070e9b0daa1563dcb949d58aab46581a0f0f31e5636d2dac1c293d5",
+      "database/doc.csv": "ad5fda914cdebb725a4c734189cc4d917649fff52304f92de0d399fb2635001c",
+      "database/param.csv": "64f301d996583d74e93956b74b2c55c51e2676ac38fadaeae9b49c1eb642f650",
+      "database/treaty.csv": "da0e0f916773a994009313e78cda4e2b42da23f1599a5f391f99a2863f31149c",
+      "database/decision.csv": "0090c7c6d3582206b6fb46d3fd2330a783da2d4f6907cdc8ea46051bb00ba637",
+      "database/clause.csv": "e4af0fdbaa21685d15acc04cba49491c349eaa6c34b6fa957a907c5dc6bd7894"
+    },
+    "input": {
+      "database/jurisdiction.csv": "ea00efb65070e9b0daa1563dcb949d58aab46581a0f0f31e5636d2dac1c293d5",
+      "database/doc.csv": "ad5fda914cdebb725a4c734189cc4d917649fff52304f92de0d399fb2635001c",
+      "database/param.csv": "64f301d996583d74e93956b74b2c55c51e2676ac38fadaeae9b49c1eb642f650",
+      "database/treaty.csv": "da0e0f916773a994009313e78cda4e2b42da23f1599a5f391f99a2863f31149c",
+      "database/decision.csv": "0090c7c6d3582206b6fb46d3fd2330a783da2d4f6907cdc8ea46051bb00ba637",
+      "database/clause.csv": "e4af0fdbaa21685d15acc04cba49491c349eaa6c34b6fa957a907c5dc6bd7894"
+    }
+  },
+  "scope": "Git checkout bytes, not a new business acceptance run"
+}

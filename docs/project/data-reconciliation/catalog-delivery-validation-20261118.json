@@ -78,6 +78,21 @@
     "git_clean_filters_match_all_six_files": true,
     "git_staged_blobs_match_all_six_files": true,
     "core_autocrlf": "true",
-    "reference": "catalog-byte-preservation-20261118.json"
+    "reference": "catalog-byte-preservation-20261118.json",
+    "checkout_verified_modes": [
+      "true",
+      "false",
+      "input"
+    ],
+    "checkout_evidence": "catalog-checkout-verification-20261118.json"
+  },
+  "database_tooling_regression": {
+    "command": "python -X utf8 -m pytest tests/database -q",
+    "passed": 92,
+    "failed": 0,
+    "seconds": 23.95,
+    "exit_code": 0,
+    "environment": "Dedicated database-tool test environment with parser dependencies",
+    "log": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/catalog-delivery-database-tools-20261118.log"
   }
 }
