@@ -1,5 +1,36 @@
 import { test, expect } from '@playwright/test';
 
+for(const earned of ['2024-06-01','2023-06-01'])test(`Thailand foreign remittance saves and reopens ${earned}`,async({page})=>{
+  const form=await openIncome(page);
+  for(const [name,value] of [['Taxpayer','individual'],['Filing jurisdiction','th'],['Tax residency','resident'],['Income category','employment'],['Income source jurisdiction','vn']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Gross income','500000'],['Foreign tax paid (blank if unknown)','150000'],['Income description','Remitted salary, original income pool tax'],['Claimed deductions (blank if unknown)','160000'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+  await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+  const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await calc.getByLabel('Applicable regime').selectOption('th_foreign_income_2026');
+  for(const [name,value] of [
+    ['Verified net taxable income after excluded receipts and saved deductions',earned.startsWith('2024')?'340000':'0'],
+    ['Thai period prepayments (exclude foreign tax)','0'],['Income 1: original earnings pool count','1'],
+    ['Income 1, pool 1: unique evidence / earnings pool ID','VN-salary-1'],
+    ['Income 1, pool 1: total original foreign earnings','500000'],
+    ['Income 1, pool 1: foreign income tax paid on original earnings','150000'],
+    ['Income 1, pool 1: tax eligible under verified treaty taxing rights and source caps','150000'],
+    ['Income 1, pool 1: income remitted in prior years','0'],
+    ['Income 1, pool 1: treaty eligibility, tax evidence and consistent THB valuation basis (20+ characters)','Verified salary tax certificate and treaty entitlement with consistent THB conversion'],
+    ['Income 1, pool 1: current-year remittance count','1'],
+    ['Income 1, pool 1: remittance 1: income amount (exclude capital)','500000'],
+    ['Income 1, pool 1: remittance 1: original earnings date',earned],
+    ['Income 1, pool 1: remittance 1: remittance date','2026-06-01'],
+    ['Income 1, pool 1: remittance 1: days in Thailand in the earnings year','180']])await calc.getByLabel(name,{exact:true}).fill(value);
+  for(const name of ['Ordinary annual treatment and special-regime exclusions verified','Section40 income types, expenses and deductions verified','Disjoint pools, remittance tracing, FX and treaty credit eligibility verified','Saved foreign tax is the original pool tax before remittance apportionment'])await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+  await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Confirmed remittance year, earnings-year residence, treaty evidence and verified deductions.');
+  await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
+  const report=page.getByRole('article',{name:'Saved calculation result'});
+  await expect(report.locator('dl > div').filter({hasText:/^Tax before reductions and credits/}).locator('dd')).toHaveText(earned.startsWith('2024')?/^11500(?:\.0+)?$/:/^0(?:\.0+)?$/);
+  await expect(report.locator('dl > div').filter({hasText:/^Allowed tax credits/}).locator('dd')).toHaveText(earned.startsWith('2024')?/^11500(?:\.0+)?$/:/^0(?:\.0+)?$/);
+  await expect(report.getByRole('link',{name:'Revenue Department foreign tax credit manual (Thai)',exact:true})).toHaveAttribute('href','https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_TH.pdf');
+  await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toBeVisible();
+});
+
 for(const residency of ['resident','nonresident'])test(`Malaysia dividends save and reopen ${residency}`,async({page})=>{
   const form=await openIncome(page);
   for(const [name,value] of [['Taxpayer','individual'],['Filing jurisdiction','my'],['Tax residency',residency],['Income category','dividend'],['Income source jurisdiction','my']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);

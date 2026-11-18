@@ -239,4 +239,7 @@ def assess_saved_case(case, *, pools, net_taxable_income, prepaid_tax,
                 'balance_due':final-amount(prepaid_tax), 'foreign_credit':credits,
                 'foreign_income_reconciliation':prepared,
                 'stage':'resident_foreign_income_assessment_before_rounding',
-                'sources':ordinary['sources']+credits['sources']}
+                'sources':ordinary['sources']+[
+                    {'url':url, 'title':'Revenue Department foreign tax credit manual ('+
+                     ('Thai' if url.endswith('_TH.pdf') else 'English')+')'}
+                    for url in credits['sources']]}
