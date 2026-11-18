@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only; no cloud upload, remote push or main merge.",
+  "feature": "Bilingual downloadable Markdown review record for an owner-scoped immutable income-tax assessment. It includes the saved inputs, basis, full nested result, source links and hashes, and snapshot identifiers. The API verifies the snapshot digest and does not recalculate or mutate the case.",
+  "research": [
+    "https://github.com/Python-Markdown/markdown/blob/master/docs/extensions/fenced_code_blocks.md",
+    "https://github.com/fastapi/fastapi/blob/master/docs_src/custom_response/tutorial002.py"
+  ],
+  "research_limits": "FastAPI GitHub example page did not load its code; followed the existing project route pattern. No dependencies or external implementation copied.",
+  "validation": {
+    "income_and_reporting_suite": "1462 passed in 23.43 seconds, exit 0 before the final Korean-summary addition",
+    "final_report_tests": "5 passed in 5.65 seconds, including actual Korean calculation preserving separate payments and refunds",
+    "browser": "1 passed in 25.3 seconds; server download failure and retry, file name/content, saved result after reopening and invalidation after facts edit",
+    "typescript": "tsc -b exit 0",
+    "diff_check": "passed"
+  },
+  "boundaries": [
+    "Authenticated owner and anonymous/other-account rejection verified with fixture authentication.",
+    "Original report remains byte-identical after fact edit and SQLite reconnect.",
+    "Snapshot mismatch rejected; arbitrary notes remain inside a sufficiently long JSON fence.",
+    "Response uses private, no-store cache policy.",
+    "Report is a saved calculation record, not a completed tax return or professional approval. Japan national-only scope is explicit; full source/result details are retained.",
+    "This feature does not close unresolved tax-regime or customer business acceptance requirements."
+  ],
+  "file_sha256": {
+    "packages/reporting/income_tax.py": "7622a8df427b484496474415840b1e75f5fa5422214b64cae69d22860404584f",
+    "apps/api/chat.py": "9be56c37a2eaf5b87cdd00aad44cbd1adc85085facb3fddb98d53a3702901022",
+    "apps/web/src/api.ts": "4beb5aec1a94a1b30db438ae95adc4154de3501ca57b4e08c7cc3b9033208c12",
+    "apps/web/src/components/IncomeTaxAssessment.tsx": "1cd5b4d7b8ad0173fc404f41a853615aa4afbdc4aaef82eaae8482f11b23b768",
+    "tests/income_tax/test_assessment_report.py": "b66ed4523ba69fff3981ecc66b8ff88f61f2c151999f093646ebbf65c7f03228",
+    "apps/web/tests/income-tax.spec.ts": "6b9c2ba3e8fd9557204cc42d003ab728cbbadc207d6d80d96c6d17e804b0c9d1"
+  }
+}

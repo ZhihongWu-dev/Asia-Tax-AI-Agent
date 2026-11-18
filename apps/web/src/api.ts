@@ -50,6 +50,8 @@ export async function request<T>(
   }
 }
 export const api = {
+  incomeTaxReport: (caseId: string, runId: string, locale: 'zh'|'en') =>
+    request<{markdown:string;snapshot_hash:string}>(`/cases/${caseId}/income-tax/runs/${runId}/report?locale=${locale}`),
   atlasMap: () => request<AtlasMap>("/atlas/map"),
   atlasCountry: (code: string, snapshot: string, date: string) => request<AtlasCountry>(`/atlas/country/${code}?snapshot=${encodeURIComponent(snapshot)}&date=${date}`),
   atlasGlossary: (snapshot: string) => request<AtlasGlossary>(`/atlas/glossary?snapshot=${encodeURIComponent(snapshot)}`),

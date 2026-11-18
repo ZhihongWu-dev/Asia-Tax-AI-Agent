@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { readFile } from 'node:fs/promises';
 
 for(const route of [
   {country:'id',category:'dividend',gross:'1000',tax:'50',credit:'150',underlying:false},
@@ -568,6 +569,20 @@ test('corporate calculation saves a sourced result and amendments invalidate it'
   const report=page.getByRole('article',{name:'Saved calculation result'});
   await expect(report).toContainText('249000');
   await expect(report.getByRole('link')).toHaveCount(1);
+  await page.route('**/income-tax/runs/*/report?locale=en',route=>route.fulfill({status:503,json:{detail:'storage_unavailable'}}));
+  await report.getByRole('button',{name:'Download calculation record'}).click();
+  await expect(report.getByRole('alert')).toContainText('saved result is unchanged');
+  await page.unroute('**/income-tax/runs/*/report?locale=en');
+  const downloaded=page.waitForEvent('download');
+  await report.getByRole('button',{name:'Download calculation record'}).click();
+  const download=await downloaded;
+  expect(download.suggestedFilename()).toMatch(/^income-tax-.*-en\.md$/);
+  const record=await readFile((await download.path())!,'utf8');
+  expect(record).toContain('# Income-tax calculation record');
+  expect(record).toContain('249000');
+  expect(record).toContain('snapshot_hash');
+  expect(record).toContain('basis_reconciliation');
+  await expect(report.getByRole('alert')).toHaveCount(0);
   await page.screenshot({path:'test-results/income-tax-calculation.png',fullPage:true});
   form=await openIncome(page);
   await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('249000');

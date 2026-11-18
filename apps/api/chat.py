@@ -441,6 +441,16 @@ def income_tax_run_get(case_id: UUID, run_id: UUID, workspace: str = Depends(own
     return call(get_assessment_run, service.store, workspace, str(case_id), str(run_id))
 
 
+@router.get('/cases/{case_id}/income-tax/runs/{run_id}/report')
+def income_tax_report(case_id: UUID, run_id: UUID, response: Response, locale: Literal['zh', 'en'] = 'zh',
+                      workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
+    from packages.chat.income_tax import get_assessment_run
+    from packages.reporting.income_tax import render
+    run = call(get_assessment_run, service.store, workspace, str(case_id), str(run_id))
+    response.headers['Cache-Control'] = 'private, no-store'
+    return {'markdown': call(render, run, locale), 'snapshot_hash': run['snapshot_hash']}
+
+
 from packages.chat.income_credit import VietnamCreditBasis
 
 

@@ -24,6 +24,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
   const options = current.income_tax ? policies(current.income_tax,values) : [];
   const [explanation,setExplanation] = useState(''), [confirmed,setConfirmed] = useState(false);
   const [saving,setSaving] = useState(false), [error,setError] = useState('');
+  const [downloading,setDownloading] = useState(false), [downloadError,setDownloadError] = useState('');
   const [conflict,setConflict] = useState(false);
   const retry = useRef({payload:'',id:''}), mounted = useRef(true);
   useEffect(() => { mounted.current=true; return () => {mounted.current=false;}; },[]);
@@ -135,6 +136,18 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
     </form>}
     {result && <article aria-label={say('已保存计算结果','Saved calculation result')}>
       <h4>{say('已保存计算结果','Saved calculation result')}</h4>
+      <button type="button" disabled={downloading} onClick={async()=>{
+        setDownloading(true);setDownloadError('');
+        try {
+          const report=await api.incomeTaxReport(current.id,result.id,locale);
+          if(report.snapshot_hash!==result.snapshot_hash)throw new Error('snapshot mismatch');
+          const url=URL.createObjectURL(new Blob([report.markdown],{type:'text/markdown;charset=utf-8'}));
+          const link=document.createElement('a');link.href=url;link.download=`income-tax-${result.id}-${locale}.md`;
+          link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+        } catch {if(mounted.current)setDownloadError(say('下载未完成，请重试。已保存结果未改变。','Download failed. Please retry; the saved result is unchanged.'));}
+        finally {if(mounted.current)setDownloading(false);}
+      }}>{downloading?say('正在准备下载…','Preparing download…'):say('下载计算记录','Download calculation record')}</button>
+      {downloadError && <p role="alert">{downloadError}</p>}
       {disabled && <p>{say('此结果对应上次保存的资料，不包含当前未保存的修改。','This result uses the last saved facts and excludes unsaved changes.')}</p>}
       <p>{new Date(result.created_at).toLocaleString()} · {String(result.result.currency)}</p>
       {result.result.policy_version==='vn-resident-business-2026-2026-11-18'&&<VietnamBusinessResult result={result.result} index={index} />}
