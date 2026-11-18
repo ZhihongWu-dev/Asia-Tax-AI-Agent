@@ -5,6 +5,49 @@ from pathlib import Path
 import pytest
 
 from packages.income_tax.china_personal_rental import monthly_expense_base
+from packages.income_tax.china_personal_rental import repair_ledger
+
+
+def repair_paper():
+    return dict(opening_eligible_repairs='300',
+        same_property_history_and_monthly_eligibility_verified=True,
+        months=[dict(month=m, eligible_new_repairs='2000' if m==1 else '0',
+                     established_repair_deduction='800' if m in (1,2) else '0') for m in range(1,13)])
+
+
+def test_repair_chronology_conservation_and_year_end_balance():
+    paper = repair_paper()
+    result = repair_ledger(paper)
+    assert result['closing_eligible_repairs'] == 700
+    assert result['total_repair_deductions'] == 1600
+    assert result['opening_eligible_repairs'] + result['total_new_repairs'] == result['total_repair_deductions'] + result['closing_eligible_repairs']
+    assert result['months'][1]['opening_eligible_repairs'] == 1500
+    paper['months'].reverse()
+    assert repair_ledger(paper) == result
+    with localcontext() as ctx:
+        ctx.prec = 3
+        assert repair_ledger(paper) == result
+    for source in result['sources']:
+        assert sha256(Path(source['file']).read_bytes()).hexdigest() == source['sha256']
+
+
+@pytest.mark.parametrize('issue', ['missing', 'duplicate', 'cap', 'future', 'unverified'])
+def test_invalid_repair_history_rejected(issue):
+    paper = repair_paper()
+    if issue == 'missing': paper['months'].pop()
+    elif issue == 'duplicate': paper['months'][1]['month'] = 1
+    elif issue == 'cap': paper['months'][0]['established_repair_deduction'] = '800.000001'
+    elif issue == 'future':
+        paper['months'][0]['eligible_new_repairs'] = '0'
+        paper['months'][2]['eligible_new_repairs'] = '2000'
+    else: paper['same_property_history_and_monthly_eligibility_verified'] = False
+    with pytest.raises(ValueError): repair_ledger(paper)
+
+
+def test_unused_repairs_preserved_in_inactive_months():
+    paper = repair_paper()
+    for row in paper['months']: row['established_repair_deduction'] = '0'
+    assert repair_ledger(paper)['closing_eligible_repairs'] == 2300
 
 
 @pytest.mark.parametrize('gross,deductions,base', [

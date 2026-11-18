@@ -6,6 +6,13 @@
       "url": "https://shanghai.chinatax.gov.cn/tax/zcfw/zcjd/200912/t291158.html",
       "file": "database/raw/cn/cn.rental.2009-639-explanation.html",
       "sha256": "6a45c1f40599ae78cd0a2c539db773a8779729603eacd18a5cb249ef2d19ab2a"
+    },
+    {
+      "doc_id": "cn.rental.1994-89",
+      "title": "国家税务总局关于印发《征收个人所得税若干问题的规定》的通知（第六条修缮费用）",
+      "url": "https://guangdong.chinatax.gov.cn/gdsw/grsdsgg_hmqsc_bzms_tdbt/2021-08/31/content_0c499e93522442bf92350c84ec78e8d5.shtml",
+      "file": "database/raw/cn/cn.rental.1994-89.html",
+      "sha256": "1337d69882c328106131c65e99c55054de491f9a3d02a0be18e8f831b805f4e5"
     }
   ]
 }

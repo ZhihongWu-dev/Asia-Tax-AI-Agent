@@ -81,3 +81,21 @@ AGPL-3.0 and Python 3.11 support. No external code or dependency is adopted.
 This reference does not supply Chinese tax rules. Recent maintenance, open
 issues and compatibility would need a fresh dependency review before any
 adoption; no adoption is proposed here.
+
+
+## Repair ledger followup
+
+The Guangdong tax authority reproduction of1994-89 is now archived as
+`database/raw/cn/cn.rental.1994-89.html` and hashed in the rental source manifest.
+Its partial-repeal notice identifies the old rate tables and Articles13/15;
+this component uses only Article6(2), not those repealed provisions.
+
+`repair_ledger` checks twelve explicit months for one established property,
+chronological availability, the800 monthly ceiling, and conservation of opening
+balance plus new eligible repairs less established deductions. It preserves
+unused balances through inactive months and reports year-end carry. Deduction
+eligibility (especially insufficient rent), property aggregation and annual
+income reconciliation are not established by this ledger. Those remain required
+before opening the annual rental workflow.22 component tests passed in0.85s,
+including duplicate/missing months, borrowing future repairs, cap excess,
+reordered input, context independence and source hashes. No UI/API route enabled.

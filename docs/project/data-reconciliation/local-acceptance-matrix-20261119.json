@@ -176,7 +176,8 @@
     "personal_foreign_upgrade": "9 upgrade replay tests passed; simulated old personal snapshot remains identical without recalculation across new transfer defaults and exact-ratio version.2 current browser cases passed in36.5s.",
     "transfer_exact_full_regression": "At75df11c:1780 income/report tests passed in46.83s;160 successful assessment calls across35 policies;114 distinct source records verified,0 unresolved. Scope excludes unexecuted variants and substantive business/legal acceptance.",
     "transfer_exact_production_build": "At75df11c:npm run build passed (TypeScript and Vite2279 modules,3.99s);10 local artifact hashes recorded. Main chunk828.65kB warning; no deployment.",
-    "china_personal_rental": "Monthly expense-base component implemented and15 tests passed in0.49s. Official national explanation archived/hashed establishes4000 threshold after preceding deductions. Annual rental workflow, repair carry eligibility, housing rates and UI/report integration remain incomplete."
+    "china_personal_rental": "Monthly expense-base component implemented and15 tests passed in0.49s. Official national explanation archived/hashed establishes4000 threshold after preceding deductions. Annual rental workflow, repair carry eligibility, housing rates and UI/report integration remain incomplete.",
+    "china_personal_rental_repairs": "22 component tests passed in0.85s. Official1994-89 Article6 original archived and hashed; explicit12-month same-property repair ledger checks800 cap, availability and conservation. Monthly eligibility/annual income reconciliation and UI/API/report integration remain incomplete."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }
