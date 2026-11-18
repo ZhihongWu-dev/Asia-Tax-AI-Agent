@@ -59,6 +59,47 @@ def test_snapshot_mismatch_rejected():
         render(dict(inputs={},basis={},result={},snapshot_hash='0'*64))
 
 
+def test_thai_foreign_source_versions_survive_storage_restart_and_report(tmp_path):
+    from hashlib import file_digest
+    from pathlib import Path
+    from tests.income_tax.test_thailand_foreign_assessment import inputs
+
+    root = Path(__file__).resolve().parents[2]
+    sources = json.loads((root/'packages/income_tax/th_foreign_2026_sources.json').read_text(
+        encoding='utf-8'))['sources']
+    assert len(sources) == 4
+    for source in sources:
+        with (root/source['file']).open('rb') as original:
+            assert file_digest(original, 'sha256').hexdigest() == source['sha256']
+    url = 'sqlite:///' + str(tmp_path/'thai.sqlite')
+    service = SimpleNamespace(store=ChatStore(url))
+    app = FastAPI(); app.include_router(auth.router); app.include_router(chat.router)
+    app.dependency_overrides[auth.optional_user] = fixture_user
+    app.dependency_overrides[chat.get_service] = lambda: service
+    with TestClient(app) as client:
+        client.get('/api/auth/session')
+        case_id = client.post('/api/cases', headers=HEADERS).json()['id']
+        path = f'/api/cases/{case_id}/income-tax'
+        data, basis = inputs()
+        saved = client.put(path, headers=HEADERS, json=dict(
+            revision=0, request_id=str(uuid4()), inputs=data))
+        assert saved.status_code == 200, saved.text
+        response = client.post(path+'/runs', headers=HEADERS, json=dict(
+            revision=1, request_id=str(uuid4()), basis=basis))
+        assert response.status_code == 200, response.text
+        run = response.json()
+        for source in sources:
+            assert source in run['result']['sources']
+        service.store.engine.dispose(); service.store = ChatStore(url)
+        report = client.get(path+'/runs/'+run['id']+'/report?locale=en')
+        assert report.status_code == 200, report.text
+        assert report.json()['snapshot_hash'] == run['snapshot_hash']
+        for source in sources:
+            assert source['sha256'] in report.json()['markdown']
+            assert source['file'] in report.json()['markdown']
+    service.store.engine.dispose()
+
+
 def test_json_fence_preserves_arbitrary_notes_and_exact_decimal_strings():
     data = {'note':'``````\n# replace report\n<script>alert(1)</script>', 'amount':'1000000000000000.123456'}
     lines = _json(data).splitlines()

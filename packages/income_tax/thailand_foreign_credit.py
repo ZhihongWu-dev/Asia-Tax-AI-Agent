@@ -7,12 +7,17 @@ This arithmetic does not establish that the resulting tax is creditable.
 """
 from decimal import Decimal, localcontext
 from dataclasses import dataclass
+from copy import deepcopy
+import json
+from pathlib import Path
 import re
 
 from .arithmetic import amount
 
 
 SOURCE = 'https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_EN.pdf'
+SOURCE_SNAPSHOTS = json.loads(Path(__file__).with_name(
+    'th_foreign_2026_sources.json').read_text(encoding='utf-8'))['sources']
 
 
 @dataclass(frozen=True)
@@ -239,7 +244,4 @@ def assess_saved_case(case, *, pools, net_taxable_income, prepaid_tax,
                 'balance_due':final-amount(prepaid_tax), 'foreign_credit':credits,
                 'foreign_income_reconciliation':prepared,
                 'stage':'resident_foreign_income_assessment_before_rounding',
-                'sources':ordinary['sources']+[
-                    {'url':url, 'title':'Revenue Department foreign tax credit manual ('+
-                     ('Thai' if url.endswith('_TH.pdf') else 'English')+')'}
-                    for url in credits['sources']]}
+                'sources':ordinary['sources']+deepcopy(SOURCE_SNAPSHOTS)}

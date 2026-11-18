@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only; no cloud upload, remote push or main merge.",
+  "change": "Final Thai foreign-income assessments include immutable source records for both November 2025 credit manuals and P161/P162 remittance orders. Existing nested URL lists remain compatible.",
+  "provenance": [
+    "thailand-foreign-credit-source-20261118.json",
+    "database/doc.csv"
+  ],
+  "verification": {
+    "focused": "20 passed in 6.48s",
+    "income_tax_suite": "1455 passed in 27.39s",
+    "archive": "All four original byte hashes verified; no original file modified",
+    "persistence": "Authenticated local API assessment, SQLite restart and report export preserve all four paths and SHA256 digests"
+  },
+  "limits": [
+    "No tax arithmetic changed or newly admitted tax rule",
+    "Existing saved assessments are not rewritten",
+    "This does not resolve treaty entitlement, FX evidence, mixed-income regimes or overall business acceptance"
+  ],
+  "reference": "https://github.com/python/cpython/blob/main/Doc/library/hashlib.rst"
+}

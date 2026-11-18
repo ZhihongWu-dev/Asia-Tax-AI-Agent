@@ -1,0 +1,32 @@
+{
+  "sources": [
+    {
+      "title": "Revenue Department foreign tax credit manual (EN), November 2025",
+      "url": "https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_EN.pdf",
+      "file": "database/raw/th/th.rd.foreign-tax-credit-manual-2025.en.pdf",
+      "sha256": "9a802a525c5a735d8221961e4e23eed432a2a4739173e52cb4d06c8cceaa43e5"
+    },
+    {
+      "title": "Revenue Department foreign tax credit manual (TH), November 2025",
+      "url": "https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_TH.pdf",
+      "file": "database/raw/th/th.rd.foreign-tax-credit-manual-2025.th.pdf",
+      "sha256": "28a510f86b507e4f1877fe1f5a3d00b457f6f2212692abf3956283ae033107fe"
+    },
+    {
+      "doc_id": "th.rd.p161-2566",
+      "title": "Revenue Department Order P161/2566: Section41 foreign-income remittances",
+      "url": "https://www.rd.go.th/fileadmin/user_upload/kormor/newlaw/dn161A.pdf",
+      "file": "database/raw/th/th.rd.p161-2566.pdf",
+      "sha256": "51bd23778016359216b0695519f12f9c731eb92d0e47d5a226f06923a81cf075",
+      "note": "Administrative interpretation of Section41. Applies to remittances from1January2024; P162 excludes income arising before1January2024 from P161 clause1. Income-year residence and income tracing required. Official PDF incorporates P162 amendment; not unamended original."
+    },
+    {
+      "doc_id": "th.rd.p162-2566",
+      "title": "Revenue Department Order P162/2566: Section41 foreign-income remittances",
+      "url": "https://www.rd.go.th/fileadmin/user_upload/kormor/newlaw/dn162A.pdf",
+      "file": "database/raw/th/th.rd.p162-2566.pdf",
+      "sha256": "a235ebf4e384bf08ab8a491cda9b67625f95d559049b689cbaeff28c07493af4",
+      "note": "Administrative interpretation of Section41. Applies to remittances from1January2024; P162 excludes income arising before1January2024 from P161 clause1. Income-year residence and income tracing required. Amends P161 clause1 by adding pre2024-income exclusion."
+    }
+  ]
+}
