@@ -1,0 +1,48 @@
+{
+  "at": "2026-11-18T18:23:19.825319+00:00",
+  "application_commit": "5e90699",
+  "evidence_commit": "db72a1ff9da3dd175c99d2978fdf125fed01d572",
+  "runs": [
+    {
+      "command": "playwright test --workers=2",
+      "passed": 116,
+      "skipped": 3,
+      "reported_duration": "8.0m",
+      "exit_code": 0,
+      "skip_reason": "FSIE_TAX_ENGINE_RELEASE_DIR not set"
+    },
+    {
+      "command": "playwright test structure.spec.ts --grep \"structure panel saves|current structure supports|engine results follow\" --workers=1",
+      "passed": 3,
+      "skipped": 0,
+      "seconds": 54.0,
+      "exit_code": 0,
+      "engine_release": "771e4524961bcc36718db1c9331e7a5f4cda0ce7"
+    }
+  ],
+  "distinct_tests_executed_passed": 119,
+  "limits": [
+    "Two complementary runs, not a single no-skip invocation",
+    "Authentication and model boundary fixtures; not live provider/login acceptance",
+    "Tax/business coverage is limited to the scenarios and asserted behaviors in these tests"
+  ],
+  "test_hashes": {
+    "apps/web/tests/atlas.spec.ts": "b0961d7f9e912cc70d0453236fe5277c1b3d58826ab045d72ec7f0b771f2a910",
+    "apps/web/tests/auth.spec.ts": "abceb0035f18583c608355c0d853b9e1faa30f0ad4d822fcbe6fcfd710d41b68",
+    "apps/web/tests/calculation-facts.spec.ts": "856e5e94127a214cafb5773626ccba2d87c4c9e3a5df1c5be7ef901ab6fb0e6a",
+    "apps/web/tests/deletion.spec.ts": "88dae6627ac7186eb3c028d2acba82c6eedc58603b16311df74b102faa81020a",
+    "apps/web/tests/drafts.spec.ts": "02f572c98a099f9e0c03c298f772904b6db62e1ecf3c723cbdfda53e88cbdc20",
+    "apps/web/tests/engine-language.spec.ts": "8d696a18e490c1df0e99fe1a472b5519eba8bf5a0ddde6be8d16657b1dc77317",
+    "apps/web/tests/facts-wizard.spec.ts": "272cd9642b88ce6ea55c85b1c7e224dc7c273d1faf403edeb1e9d57b5e65d2ad",
+    "apps/web/tests/hybrid.spec.ts": "35e113c43ea3b6cfd498314845ea6fa0930a1649d2b2171b8378829b96013091",
+    "apps/web/tests/income-tax-coverage.spec.ts": "337835164021c2af26c851a3af060105e174edd9a59d8486df18a7f5cc31ab39",
+    "apps/web/tests/income-tax.spec.ts": "8d1cd47c128492ceeddcd19d7141caca1a493a7ccd7cb089221d380fa0978b72",
+    "apps/web/tests/pdf.spec.ts": "5b52761f6eb17fd16b34dae462f94852d6deb5784c5d9f43854205d517935586",
+    "apps/web/tests/planning.spec.ts": "8644004067e2b9e3ee2fc4cc4882f784fd162016a18207d093c1d83bc2f6c0e9",
+    "apps/web/tests/polish.spec.ts": "7ee8777a7f2651e81daff7ca5be401d8d550bda50197d84450d7566efbb727c9",
+    "apps/web/tests/structure.spec.ts": "4eedb98c294296e125c330ee608b03134e4505942c9f1bfb81f115e938ec37a1",
+    "apps/web/tests/vietnam-business.spec.ts": "1e2a2638f2ce46737ea129bb9b7fd9ef07c19428c91551e6318070f7a10ed55e",
+    "apps/web/tests/vietnam-rental.spec.ts": "333f0906ca6216a5e12f8ecb91256a7e7a6b37c21f10f02e17b823416e3e77f5",
+    "apps/web/tests/workspace.spec.ts": "b56051e86e5121d2e1a43301c7dc59023f038a9c4a60db7c0f05d2dbe2404593"
+  }
+}

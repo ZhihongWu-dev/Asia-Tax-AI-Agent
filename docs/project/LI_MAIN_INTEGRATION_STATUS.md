@@ -24,7 +24,10 @@ result; accepted workpapers survive reopening and idempotent retries.
 
 The complete income-tax regression passed 1,417 tests. TypeScript checking and
 two focused browser scenarios passed, including reconciliation display after
-reload. The broader 119-test browser suite is running and is not yet accepted.
+reload. The broader browser run passed 116 tests with three engine-dependent skips.
+Those three tests subsequently passed with the pinned engine configured, giving
+119 distinct tests executed successfully across the two runs. See
+[browser evidence](data-reconciliation/browser-regression-20261119.json).
 Deduction eligibility and statutory ordering remain verified inputs, and
 nonresident/foreign/special regimes need further workflow acceptance. See
 [validation](data-reconciliation/malaysia-reconciliation-validation-20261119.json).
