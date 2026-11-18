@@ -10357,10 +10357,17 @@
     "atomic_group": "document metadata update + 1 old notice clause deletion + 151 new clause insertions",
     "review_history": "Preserve rejected #all review; it concerns the old PDF and must not be relabeled accepted for new RTF.",
     "remaining_checks": [
-      "Verify database foreign-key dependencies and all old cite_id consumers before deleting notice row",
+      "Recheck audited absence of inbound foreign keys and active catalog references under migration transaction locks",
       "Verify current database state and source review compatibility in migration transaction",
       "Verify deployed catalog_revision-aware reader before execution",
       "Verify all 151 texts and document hash after migration; reject previous snapshot"
-    ]
+    ],
+    "dependency_audit": {
+      "artifact": "ae-hk-notice-dependencies-20261118.json",
+      "inbound_foreign_keys": 0,
+      "active_cloud_catalog_references": 0,
+      "isolated_generated_catalog_references": 0,
+      "historical_run_payloads": "not inspected or modified; preserve historical evidence"
+    }
   }
 }
