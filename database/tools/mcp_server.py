@@ -5,7 +5,7 @@
 
 Reads doc, clause, param, treaty, jurisdiction, superseded, decision and blocked plus STATUS.md once at start-up; restart
 after a rebuild. With tax_db=supabase (dbsource.py) it reads the shared remote instead: the small tables at start-up, the
-clause texts in the background (find, clause and doc wait for them); blocked is empty and the status comes from meta. Every answer carries `version`; errors come back as {"error": kind, "detail": text}. Nothing is written.
+clause texts in the background (find, clause and doc wait for them); collection-failure logs are read on demand and status comes from meta. Every answer carries `version`; errors come back as {"error": kind, "detail": text}. Nothing is written.
 Python 3.11; depends on the `mcp` package (2.x: mcp.server.mcpserver.MCPServer) and the standard library.
 """
 import argparse
@@ -56,7 +56,7 @@ class Library:
         self.juris = table("jurisdiction")
         self.superseded = table("superseded")
         self.decisions = table("decision")
-        self.blocked = table("blocked")
+        self._blocked = None if self.remote else table("blocked")
         self.status = self.remote.status() if self.remote else self._status()
         if self.remote:
             digest = {"doc_csv_sha256": self.remote.digest("doc"), "param_csv_sha256": self.remote.digest("param"),
@@ -223,8 +223,16 @@ class Library:
             return err("not_found", "no decision %s" % id, id=id)
         return self.stamp({"id": id, "decisions": rows})
 
+    @property
+    def blocked(self):
+        return self.remote.rows("blocked") if self.remote else self._blocked
+
     def blocked_docs(self):
-        return self.stamp({"blocked": [dict(b) for b in self.blocked]})
+        try:
+            rows = [dict(b) for b in self.blocked]
+        except Exception:
+            return err("collection_log_unavailable", "The collection-failure log could not be read.")
+        return self.stamp({"blocked": rows})
 
     def version_info(self):
         return self.stamp({"status_counts": self.status["counts"]})

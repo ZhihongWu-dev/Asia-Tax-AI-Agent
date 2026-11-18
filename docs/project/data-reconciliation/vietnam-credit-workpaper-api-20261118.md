@@ -47,4 +47,3 @@ Validation: production build passed; 21 backend dossier/workpaper tests passed.
 Browser coverage extends all four supported foreign-credit routes to retain
 the explanation on reopening and on the historical workpaper after an income
 edit. This remains a credit workpaper, not a complete annual assessment.
-

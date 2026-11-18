@@ -48,3 +48,17 @@ References: https://supabase.com/changelog.md and
 https://supabase.com/docs/guides/storage/debugging/error-codes .
 Upstream upload/notes lifecycle and final hosted acceptance remain outstanding.
 
+## MCP consumer verification
+
+The MCP Library previously fetched and retained blocked rows at startup. It now
+loads remote collection logs on demand; the local-folder snapshot remains local.
+An unavailable log is returned as collection_log_unavailable only by the log
+query and does not prevent catalog initialization. Error detail is fixed text,
+not a storage exception or credential-bearing message. The existing database
+version describes the catalog, not the mutable operational log.
+
+Validation: all 84 database-tool tests passed in 18.30 seconds. The strengthened
+consumer test additionally exercises actual Library initialization, confirms
+that startup never requests blocked rows, verifies subsequent log refreshes and
+checks the scoped failure response; its eight-test module passed in 0.46 seconds.
+No cloud mutation or hosted verification was performed.
