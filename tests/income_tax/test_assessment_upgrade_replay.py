@@ -81,7 +81,8 @@ def test_compatibility_does_not_ignore_inconsistent_saved_request_hash(historica
         assessment_run(store, 'alice', case_id, 1, 'calculate', ADAPTER.validate_python(COMPANY))
 
 @pytest.mark.parametrize('explicit_transfers',[False,True])
-def test_personal_foreign_old_snapshot_replays_without_new_transfer_defaults_or_recalculation(tmp_path,monkeypatch,explicit_transfers):
+@pytest.mark.parametrize('explicit_rentals',[False,True])
+def test_personal_foreign_old_snapshot_replays_without_new_transfer_defaults_or_recalculation(tmp_path,monkeypatch,explicit_transfers,explicit_rentals):
     from tests.income_tax.test_china_personal_foreign_assessment import facts as personal_facts, basis as personal_basis
     from packages.reporting.income_tax import render
     url='sqlite:///'+str(tmp_path/'personal.sqlite')
@@ -89,8 +90,11 @@ def test_personal_foreign_old_snapshot_replays_without_new_transfer_defaults_or_
     save_case(store,'alice',case_id,0,'facts',IncomeTaxCase(**personal_facts()))
     paper=personal_basis()
     saved=assessment_run(store,'alice',case_id,1,'calculate',ADAPTER.validate_python(paper))
-    # Simulate the historical shape: no transfer field or rational-arithmetic metadata.
+    # Simulate the historical shape: neither optional category workpaper exists.
     saved['basis']['workpaper'].pop('transfers')
+    saved['basis']['workpaper'].pop('rentals')
+    for row in saved['result']['country_basis_reconciliation']:
+        row.pop('rental_tax')
     saved['result'].pop('arithmetic')
     saved['result']['policy_version']='cn-personal-foreign-credit-limits-2026-11-19'
     saved['result']['allowed_credit']='3092.00'
@@ -105,6 +109,7 @@ def test_personal_foreign_old_snapshot_replays_without_new_transfer_defaults_or_
     try:
         before=store.get('alice',case_id)
         if explicit_transfers:paper['workpaper']['transfers']=[]
+        if explicit_rentals:paper['workpaper']['rentals']=[]
         def unexpected(*args,**kwargs):pytest.fail('Historical personal result must not recalculate')
         monkeypatch.setattr('packages.income_tax.assessment.calculate',unexpected)
         replay=assessment_run(store,'alice',case_id,1,'calculate',ADAPTER.validate_python(paper))

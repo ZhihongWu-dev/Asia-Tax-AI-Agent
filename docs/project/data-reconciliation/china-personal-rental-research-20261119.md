@@ -157,3 +157,21 @@ verifies country cap11152, rental tax8560, year-end repairs700 and total balance
 This proves the scoped ordinary20percent workflow, not housing concessions,
 negative-income months, automatic advance-rent allocation or full business
 coverage across all jurisdictions. The overall goal remains incomplete.
+
+
+## Full regression and actual historical shape
+
+Runtime0c541cd passed1813 income/report cases in50.74s. The recursive audit
+observed162 successful assessment calls across35 policies and116 distinct
+source records; no unresolved local source hashes. Audit stored in
+`income-source-audit-rental-20261119.json`.
+
+The old-snapshot test was strengthened after this full run: remove both rental
+and transfer fields from simulated historical basis, and remove rental_tax from
+historical country rows, then rehash the saved record. Four omitted/explicit-empty
+combinations replay without recalculation after saved facts change and the store
+reopens. Exact result/report preservation, owner isolation, current-result
+invalidation and changed-payload rejection remain asserted.11 upgrade tests
+passed in7.25s. This is simulated historical evidence, not migrated customer data.
+Pytest's official GitHub parameterization/monkeypatch examples informed this
+additional coverage; no dependency or external implementation was adopted.
