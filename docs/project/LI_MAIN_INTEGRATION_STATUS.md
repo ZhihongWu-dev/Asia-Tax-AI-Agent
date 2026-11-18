@@ -1,5 +1,17 @@
 # Li/Main integration status (2026-11-18)
 
+## Current delivery scope (2026-11-19)
+
+The user retains the original Li data/function integration and corporate plus
+personal income-tax business acceptance requirements across all dividend
+jurisdictions. The final delivery destination is GitHub branch `Zhihong-Wu`.
+Do not deploy to cloud services, modify cloud databases, or merge/push to `main`.
+Validate the required business behavior locally and report the limits of local
+validation explicitly. A branch upload alone does not satisfy the retained
+functional and business acceptance requirements. Historical references below to
+cloud rollout or main promotion are superseded as delivery actions, not as proof
+that unresolved business rules have been accepted.
+
 ## Latest delivery checkpoint
 
 The current combined candidate is on `codex/catalog-closure-delivery`, based on
