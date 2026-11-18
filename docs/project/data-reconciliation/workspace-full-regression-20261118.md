@@ -1,5 +1,18 @@
 # Workspace regression checkpoint
 
+## Full pinned-engine follow-up
+
+After 6a402ee, the complete browser suite ran with
+FSIE_TAX_ENGINE_RELEASE_DIR set to the hash-verified installed release
+771e4524961bcc36718db1c9331e7a5f4cda0ce7: **116 passed, zero skipped, 6.9 minutes**.
+Command: `npm test -- --workers=2` from apps/web. This confirms the combined
+local configuration, including the previously skipped structure workflows.
+Windows Edge, local API/storage, fixture authentication and deterministic model
+responses remain the test boundaries; hosted CI, real accounts and live providers
+remain separate acceptance requirements.
+
+## Earlier runs
+
 Base application commit: ba8404c. Local Windows/Edge run, two browser workers.
 
 - Full Playwright suite: 113 passed, 3 skipped, 6.4 minutes. The three skips
