@@ -6,9 +6,43 @@ or the relevant declaration/payment period. It preserves the established ordinar
 credit and limits the additional top-up claim to remaining capacity. Callers must
 not use it to pool unrelated projects or transfer credits between tax periods.
 """
-from decimal import localcontext
+from decimal import Decimal, localcontext
 
 from .arithmetic import amount
+
+
+def indonesia_deemed_credit(gross_income, *, income_type, vietnam_tax_limit,
+                            paragraph2_and_treaty_entitlement_verified):
+    """Vietnam resident credit on Indonesian income under treaty Article23(4).
+
+    Requires Article10(2),11(2) or12(2) treatment, including beneficial ownership
+    and any applicable MLI entitlement tests. Effectively connected PE income
+    belongs to a different route. Deemed tax replaces the actual-paid measure;
+    it is not an additional15% credit on top of withholding or underlying tax.
+    The Vietnamese tax on the same income is established independently.
+    """
+    if income_type not in ('dividend', 'interest', 'royalty'):
+        raise ValueError('Article23(4) covers dividend, interest or royalty income only')
+    if paragraph2_and_treaty_entitlement_verified is not True:
+        raise ValueError('Relevant paragraph2 treatment and treaty entitlement must be verified')
+    gross, limit = map(amount, (gross_income, vietnam_tax_limit))
+    if gross == 0 and limit != 0:
+        raise ValueError('Zero income cannot have a positive same-income tax limit')
+    with localcontext() as context:
+        context.prec = 40
+        deemed = gross * Decimal('0.15')
+        credit = min(deemed, limit)
+        return dict(policy_version='vn-id-deemed-credit-2026-11-18',
+            residence_country='vn', source_country='id', income_type=income_type,
+            gross_income=gross, deemed_paid_tax=deemed, vietnam_tax_limit=limit,
+            allowed_tax_credit=credit, deemed_tax_exceeding_limit=deemed-credit,
+            vietnam_tax_after_credit=limit-credit,
+            stage='treaty_credit_before_assessment_rounding',
+            sources=[dict(title='Indonesia–Vietnam treaty Article23(1)/(4)',
+                url='https://pajak.go.id/en/p3b/vietnam'),
+                dict(title='Official MLI synthesised text, Article23',
+                url='https://www.pajak.go.id/sites/default/files/2025-06/Tax%20Treaty%20Vietnam%20%28Modified%20by%20MLI%29%20-%20EN.pdf',
+                pages=[13])])
 
 
 def additional_top_up_credit(*, vietnam_tax_limit, established_ordinary_credit,

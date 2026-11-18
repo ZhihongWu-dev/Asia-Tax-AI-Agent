@@ -1,0 +1,31 @@
+{
+  "status": "cross_checked_credit_clause_and_implemented_arithmetic_pending_case_integration",
+  "archived_original_webpage": {
+    "file": "database/raw/id-vn/treaty.id-vn.1997.dgt-original.html",
+    "sha256": "663c95f11532151928e603ee80c3fba42014c7a04d76bc30dbb8538d95bcb27d",
+    "url": "https://pajak.go.id/en/p3b/vietnam"
+  },
+  "cross_check": {
+    "url": "https://peraturan.go.id/files/kp177-1998.pdf",
+    "instrument": "PresidentialDecision177/1998",
+    "status": "Web extraction reviewed; requests SSL EOF and curl connection failure prevented local PDF archive",
+    "findings": [
+      "Article23(4) supports15-percent deemed tax on dividend/interest/royalty gross income subject to respective paragraph2 provisions.",
+      "Ratification text and original DGT webpage record signature22December1997; catalog index previously said27December. Preserve discrepancy for metadata correction."
+    ]
+  },
+  "synthesised_pdf_caution": "Cover says Cambodia, but operative definitions and Article23 agree with original Vietnam treaty webpage and ratification text. Preserve original bytes; do not silently edit official PDF.",
+  "implementation": {
+    "function": "packages.income_tax.vietnam_foreign_credit.indonesia_deemed_credit",
+    "resident": "vn",
+    "source": "id",
+    "requirements": [
+      "Relevant Article10/11/12 paragraph2 applies",
+      "Treaty/MLI entitlement established",
+      "Vietnam same-income tax cap established separately"
+    ],
+    "arithmetic": "min(gross_income *0.15, vietnam_tax_limit); no addition of actual withholding.",
+    "test_result": "53 focused Vietnam foreign-credit and dossier tests passed",
+    "remaining": "Saved-case inputs, treaty benefit evidence, planner effect and original-rule procedure rebinding."
+  }
+}

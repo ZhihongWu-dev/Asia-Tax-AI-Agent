@@ -2,7 +2,7 @@ from decimal import Decimal, localcontext
 
 import pytest
 
-from packages.income_tax.vietnam_foreign_credit import additional_top_up_credit
+from packages.income_tax.vietnam_foreign_credit import additional_top_up_credit, indonesia_deemed_credit
 
 
 def calculate(**changes):
@@ -67,3 +67,34 @@ def test_outputs_preserve_the_established_ordinary_credit():
                                          + result['additional_top_up_credit'])
     assert 'carry_forward_credit' not in result
     assert 'treaty_eligible' not in result
+
+
+@pytest.mark.parametrize('kind', ['dividend', 'interest', 'royalty'])
+def test_indonesia_deemed_credit_is_not_limited_to_actual_withholding(kind):
+    result = indonesia_deemed_credit('1000', income_type=kind, vietnam_tax_limit='200',
+        paragraph2_and_treaty_entitlement_verified=True)
+    assert result['deemed_paid_tax'] == 150
+    assert result['allowed_tax_credit'] == 150
+    assert result['vietnam_tax_after_credit'] == 50
+
+
+def test_indonesia_deemed_credit_cannot_exceed_same_income_tax():
+    result = indonesia_deemed_credit('1000', income_type='dividend', vietnam_tax_limit='100',
+        paragraph2_and_treaty_entitlement_verified=True)
+    assert result['allowed_tax_credit'] == 100
+    assert result['deemed_tax_exceeding_limit'] == 50
+
+
+@pytest.mark.parametrize('changes', [
+    {'income_type': 'business'}, {'income_type': 'capital_gain'},
+    {'paragraph2_and_treaty_entitlement_verified': False},
+    {'paragraph2_and_treaty_entitlement_verified': 1},
+    {'gross_income': '0'}, {'gross_income': '-1'}, {'gross_income': 1.5},
+    {'vietnam_tax_limit': 'NaN'},
+])
+def test_indonesia_deemed_credit_rejects_other_routes_or_invalid_basis(changes):
+    args = dict(gross_income='1000', income_type='dividend', vietnam_tax_limit='200',
+                paragraph2_and_treaty_entitlement_verified=True)
+    args.update(changes)
+    with pytest.raises(ValueError):
+        indonesia_deemed_credit(**args)
