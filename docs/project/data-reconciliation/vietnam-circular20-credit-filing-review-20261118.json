@@ -1,0 +1,50 @@
+{
+  "status": "archived_targeted_visual_review_not_catalog_registered",
+  "file": "database/raw/vn/vn.circular20.2026.vi.pdf",
+  "sha256": "babcb501e6850d8068b8d608f94d8bccbb47ef4da99f5177616e659bf7912ec1",
+  "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/3/20-btc.pdf",
+  "landing_url": "https://chinhphu.vn/?docid=217191&orggroupid=4&pageid=27160",
+  "pages": 22,
+  "reviewed_provisions": [
+    {
+      "article": "6",
+      "pages": [
+        9,
+        10
+      ],
+      "finding": "Foreign-project income filing and payment documentation under Decree320 Article12(2) follows Circular80/2021/TT-BTC dated29 September2021 and its amendments. Article6 does not supply a standalone replacement document checklist."
+    },
+    {
+      "article": "10(1)",
+      "pages": [
+        17
+      ],
+      "finding": "Effective12 March2026 and applicable from tax period2025."
+    },
+    {
+      "article": "10(5)",
+      "pages": [
+        17
+      ],
+      "finding": "Amended or replaced referenced legal instruments are followed in their amended or replacement form."
+    },
+    {
+      "article": "10(6)",
+      "pages": [
+        18
+      ],
+      "finding": "Replaces Circular78/2014/TT-BTC and Circular96/2015/TT-BTC; do not use old circulars as unconditional current authority."
+    }
+  ],
+  "implementation_consequences": [
+    "Obtain current Circular80 documentation requirements and amendments before declaring filing readiness.",
+    "Keep legal effective date distinct from tax-period application.",
+    "Compute credit eligibility and evidence completeness separately; numeric credit alone does not establish a valid filing."
+  ],
+  "remaining": [
+    "Circular80 current foreign-income annex and proof requirements",
+    "Applicable treaty relief for each of ten covered partner countries",
+    "Decree320 foreign-payment timing and allocated top-up credit calculations"
+  ],
+  "extraction_limit": "Scanned PDF; native extraction lacks substantive body. Findings above are targeted visual review, not full22-page transcription."
+}
