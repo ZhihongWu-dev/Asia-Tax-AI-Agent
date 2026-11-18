@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />  
+  <script type="text/javascript">
+        /* 화면 디스플레이 설정 코드 전역변수 선언
+        * - 브라우저 JS는 서버 세션을 직접 읽을 수 없으므로 JSP에서 세션값을 렌더링해서 winodw 전역변수로 내려준다.
+        * - 이 코드는 common.js 보다 먼저 선언되어야 한다.
+        * */
+        window.APP_THEME_INFO = {
+            // 로그인 여부
+            isLogin : false,
+            // 사용자 화면 디스플레이 설정 코드 (300001:라이트모드, 300002:다크모드, 300003:시스템모드)
+            scrnStngCd : ''
+        };
+        var kakaoKey = '7d9effab87b9126df39695ca304bba41';
+
+
+
+    </script>  
+  <script type="text/javascript" src="/LSW/assets/js/jquery-3.7.1.min.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/jquery-ui.min.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/swiper.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/common.js?Time=1794932667200"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/CookieUtil.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/jquery-custom.js?Time=1794932667200"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/jquery/jquery-ui_2017.js"></script>  
+  <script type="text/javascript">
+    //링크 체크
+    var webRoot = '/LSW';
+    var isAsGubun = "IS";
+    var layerDiv = ".layerPop > .inner .cont .bodySideContent";
+
+    function isOutUrl(url){
+        if(!url) return false;
+        url = url.trim();
+        if(url.indexOf('/LSW') === 0) return false;
+        if(url.indexOf('blob')>-1) return false;
+        if(url.charAt(0) === '/') return false;
+        if(/^https?:\/\//i.test(url)) return false;
+        if(url.indexOf('www.') === 0) return false;
+        if(/^(javascript|#)/i.test(url)) return false;
+        return true;
+    }
+
+    function resolveUrl(url){
+        return isOutUrl(url) ? webRoot + '/' + url : url;
+    }
+
+    function checkP(url){
+        if(!url) return false;
+        return /Info|Proc/i.test(url);
+    }
+    
+    (function (){
+        let originalOpen = window.open;
+
+        //window.open
+        window.open = function(url,name,specs){
+            let resolved = resolveUrl(url);
+
+            if(checkP(resolved) && !specs){
+                specs ='width=1000px,height=800px';
+            }else if(checkP(resolved)){
+            }
+            if(url.includes('listShowYn=Y')){
+                resolved = resolved.replace('listShowYn=Y','listShowYn=N')
+            }
+            return originalOpen.call(window,resolved , name, specs);
+        };
+
+        let originalSubmit = HTMLFormElement.prototype.submit;
+
+        HTMLFormElement.prototype.submit = function(){
+
+            let action = this.getAttribute('action');
+            if(action && isOutUrl(action)){
+                this.setAttribute('action',resolveUrl(action))
+            }
+            return originalSubmit.call(this);
+        }
+
+        let originalXhrOpen = XMLHttpRequest.prototype.open;
+        XMLHttpRequest.prototype.open = function(method,url){
+            arguments[1] = resolveUrl(url);
+            return originalXhrOpen.apply(this,arguments);
+        }
+
+    })();
+
+    //ajax
+    $.ajaxPrefilter(function (options){
+        options.url = resolveUrl(options.url);
+    });
+
+    //a태그 herf
+    $(document).on('click','a[href]',function(e){
+        let href = $(this).attr('href');
+
+/*
+        //view가 infoP호출이면 가로챔
+        if(checkP(href)){
+            e.preventDefault();
+            window.open(setListShowYn(resolveUrl(href)),'_blank','width=1000px,height=800px');
+        }
+*/
+
+        if(isOutUrl(href)){
+            e.preventDefault();
+            let newHref = resolveUrl(href);
+            let target = $(this).attr('target');
+
+            if(target === '_blank'){
+                window.open(newHref,'_blank','width=1000px,height=800px');
+            }else{
+                window.location.href = newHref;
+            }
+        }
+    })
+
+    $(document).on('submit','form',function(e){
+       let $form = $(this);
+       let action  = $form.attr('action');
+
+       if(checkP(action) && $form.attr('target') ==='_blank'){
+           e.preventDefault();
+           let popupName = 'popup_'+Date.now();
+           window.open('',popupName,'width=1000px,height=800px');
+           $form.attr('action',resolveUrl(action));
+           $form.attr('target',popupName);
+
+           let $listShowYn = $('<input>', {type : 'hidden', name:'listShowYn',value:'N'});
+           $form.append($listShowYn);
+           $form[0].submit();
+           $listShowYn.remove();
+           return;
+       }
+
+       if(isOutUrl(action)){
+           $form.attr('action',resolveUrl(action));
+       }
+    })
+
+</script>
+  <link rel="shortcut icon" type="text/css" href="/LSW/assets/images/ico_favorites.ico" />
+  <link rel="stylesheet" type="text/css" href="/LSW/assets/css/style.css?Time=1794932667200" />
+  <link rel="stylesheet" type="text/css" href="/LSW/assets/css/style.css" />
+  <style type="text/css">
+        form { display:contents }
+    </style>
+  <title>국가법령정보센터 | 조문정보</title>
+ </head>  
+ <body id="bodyId"> 
+  <!-- loading --> 
+  <div class="loading" role="status" aria-label="로딩 중" style="display:none;"> 
+   <span aria-hidden="true"></span> 
+   <span aria-hidden="true"></span> 
+   <span aria-hidden="true"></span> 
+  </div> 
+  <!-- // loading --> 
+  <!-- 2026-09-23 --> 
+  <!-- skipNav --> 
+  <dl id="skipNav"> 
+   <dt>
+    바로가기 메뉴
+   </dt> 
+   <dd>
+    <a href="javascript:void(0)" onclick="fn_skipToViewCont()">본문 바로가기</a>
+   </dd> 
+   <dd>
+    <a href="javascript:void(0)" onclick="fn_skipToViewAside()">목록 바로가기</a>
+   </dd> 
+  </dl> 
+  <!-- //skipNav -->     
+  <style>
+		@media screen and (max-width: 768px){
+			.bodySideContent .sideArea{
+				display: none;
+			}
+		}
+	</style> 
+  <script type="text/javascript" src="/LSW/assets/js/jquery-3.7.1.min.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/jquery-ui.min.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/swiper.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/jquery-custom.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/common.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/common-ex.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/xmlHttpUtil.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/ls/ls.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/ls/lsLink.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/ls/lsJo.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/ls/lsPopLayer.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/ls/lsOutPutJoNew.js?Time=1794932667200"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/jquery/jquery.print.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/ls/lumLsLinkPop.js"></script>   
+  <script>
+	var webRoot = "/LSW";
+</script>  
+  <!-- viewer --> 
+  <div class="bodySideContent" style="display: block;" data-brl-use="PH"> 
+   <!-- viewerHeader --> 
+   <div class="viewerHeader"> 
+    <h2>조문정보</h2> 
+   </div> 
+   <!--// viewerHeader --> 
+   <!-- viewerCont --> 
+   <div class="viewerCont sideType case off"> 
+    <!-- sideArea --> 
+    <div class="sideArea"> 
+     <!-- sideBot --> 
+     <div class="sideBot"> 
+      <!-- searchResult --> 
+      <div class="searchResult"> 
+       <!-- listBox --> 
+       <div class="listBox caseSel"> 
+        <a href="javascript:void(0);" onclick="$('#linkedJoContent').scrollTop(0);"> <p style="color: #1E2124;font-weight: 700; font-size: 17px;" class="deactive sideTitle" id="ls009409" title="국고금 관리법"> 국고금 관리법<br /> <span class="subtit1_1" style="color: #175CD3; font-size: 13px;"> [시행 2026. 1. 2.] [법률 제21065호, 2025. 10. 1., 타법개정] </span> </p> </a> 
+        <ul class="sub-menu"> 
+         <li class="rlatJoLi"> <a href="javascript:;" id="jo94706841:0047:00" onclick="f_autoScroll(this);" title="제47조 국고금의 끝수 계산"><strong>제47조 국고금의 끝수 계산</strong></a> </li> 
+        </ul> 
+       </div> 
+       <!--/ listBox --> 
+      </div> 
+      <!--/ searchResult --> 
+     </div> 
+     <!-- // sideBot --> 
+    </div> 
+    <!-- // sideArea --> 
+    <button type="button" class="btnTogSide">사이드 영역 닫기</button> 
+    <div class="contArea"> 
+     <!-- betweenTop --> 
+     <div class="betweenTop"> 
+      <!-- searchArea --> 
+      <div class="searchArea"> 
+       <input type="text" id="bdySearch" title="법령내 검색어" maxlength="10" onkeydown="onKeyDown();" value="" placeholder="법령내 검색어를 입력하세요." /> 
+       <button type="button" id="keywordSch" onclick="joBdySearch()" class="btn btnSm">검색</button> 
+      </div> 
+      <!-- // searchArea --> 
+      <!-- viewerTopBtn --> 
+      <div class="btnArea viewerTopBtn"> 
+       <button type="button" class="btnBotPop" data-id="viewPopBtn6">선택</button> 
+       <!-- mPop --> 
+       <div class="mPop" pop-title="선택하세요" data-id="viewPopBtn6"> 
+        <!-- inner --> 
+        <div class="inner"> 
+         <!-- btnArea --> 
+         <div class="btnArea"> 
+          <button type="button" id="bdySaveBtn" data-save-type="infoSaveLayer" onclick="fn_layer('infoSaveLayer', this, '200');" class="btn btnSm btnWhite"><img alt="" src="/LSW/assets/images/viewer/ico0104.svg" />저장</button> 
+          <button type="button" id="bdyPrintBtn" title="인쇄" onclick="lsLinkCommonPrint('');" class="btn btnSm btnWhite"><img alt="" src="/LSW/assets/images/viewer/ico0105.svg" />프린트</button> 
+         </div> 
+         <!--/ btnArea --> 
+        </div> 
+        <!--/ inner --> 
+       </div> 
+       <!-- // mPop --> 
+      </div> 
+      <!-- // viewerTopBtn --> 
+     </div> 
+     <!-- // betweenTop --> 
+     <div class="viewwrap rvsViewwrap" id="linkedJoContent" style="overflow: hidden; height: 562px;"> 
+      <!-- 법령명 --> 
+      <div id="conTop" class="cont_top"> 
+       <a id="top"></a> 
+       <h2 id="009409"> 국고금 관리법 </h2> 
+       <div class="ct_sub"> 
+        <span>[시행 2026. 1. 2.] [법률 제21065호, 2025. 10. 1., 타법개정]</span> 
+        <img src="/LSW/assets/images/viewer/btn_allArticle.svg" alt="전체조문보기" onclick="window.open('/LSW/lsInfoP.do?lsiSeq=276079')" /> 
+       </div> 
+      </div> 
+      <!-- 조문정보 --> 
+      <a name="J47:0" id="J47:0"></a> 
+      <div class="pgroup"> 
+       <ul class="lawico01"> 
+       </ul> 
+       <div class="lawcon"> 
+        <p class="pty1_p4"> <span class="bl"> <label for="Y004700" id="J94706841:0047:00"> 제47조(국고금의 끝수 계산) </label> </span> ① 국고금의 수입 또는 지출에서 10원 미만의 끝수가 있을 때에는 그 끝수는 계산하지 아니하고, 전액이 10원 미만일 때에도 그 전액을 계산하지 아니한다. 다만, <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('69259');" href="javascript:;">대통령령</a>으로 정하는 경우에는 그러하지 아니하다. </p>
+        <p class="pty1_de2_1">② 국세의 과세표준액을 산정할 때 1원 미만의 끝수가 있으면 이를 계산하지 아니한다. </p> 
+        <p class="pty1_de2_1">③ 지방자치단체, 그 밖에 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('69260');" href="javascript:;">대통령령</a>으로 정하는 공공단체와 공공기관의 경우에는 제1항 및 제2항을 준용할 수 있다. 다만, <a title="팝업으로 이동" class="link sfon1" onclick="javascript:fncLsLawPop('1031454331','ALLJO','');" href="javascript:;">「한국산업은행법」</a>에 따른 한국산업은행 등 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('69261');" href="javascript:;">대통령령</a>으로 정하는 공공기관의 경우에는 그러하지 아니하다. </p> 
+        <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 4.]</span> </p> 
+        <p></p> 
+       </div> 
+      </div> 
+      <!-- 조문정보 --> 
+     </div> 
+    </div> 
+   </div> 
+   <!--// viewerCont --> 
+  </div> 
+  <div class="layerType layerPop" id="infoSaveLayer"> 
+   <div class="inner"> 
+    <!-- cont --> 
+    <div class="cont"> 
+     <form id="infoSaveForm" name="infoSaveForm" target="_self" action=""> 
+      <fieldset> 
+       <legend>파일형식 선택</legend> 
+       <input type="hidden" name="saveExt" value="" /> 
+       <input type="hidden" name="lsJoLnkSeq" value="1031453583" /> 
+       <!-- checkboxWrap --> 
+       <div class="checkboxWrap caseCol"> 
+        <div class="checkbox"> 
+         <input type="radio" class="radio" name="fileType" id="FileSaveHwp" checked="checked" value="hwp" style="margin-left:50px" /> 
+         <label for="FileSaveHwp">HWP</label> 
+        </div> 
+        <div class="checkbox"> 
+         <input type="radio" class="radio" name="fileType" id="FileSavePdf" value="pdf" /> 
+         <label for="FileSavePdf">PDF</label> 
+        </div> 
+       </div> 
+       <!-- // checkboxWrap --> 
+      </fieldset> 
+     </form> 
+    </div> 
+    <!-- // cont --> 
+    <div class="btnBottom right"> 
+     <button class="btn btnWhite btnSm" type="button" onclick="fn_layer_close(this)">취소</button> 
+     <button id="lsSaveBtn" class="btn btnInBlue btnSm" type="button" onclick="saveContent();">저장</button> 
+    </div> 
+   </div> 
+  </div> 
+  <!--/ viewer --> 
+  <script type="text/javascript" src="/LSW/assets/js/common/hrefRemove.js"></script>  
+  <script type="text/javascript">
+//<![CDATA[
+	 /* jstl 변수를 스크립트에서 사용하기위해 html태그 뒤에 스크립트를 선언 */	 
+	var lsSearchObj = new LsSearchObj();
+
+	if ((typeof Range !=="undefined") && !Range.prototype.createContextualFragment){
+		Range.prototype.createContextualFragment = function(html){
+			var frag = document.createDocumentFragment(),
+			div = document.createElement("div");
+			frag.appendChild(div);
+			div.outerHTML = html;
+			return frag;
+		};
+	}
+	
+	function onKeyDown(){
+		if(event.keyCode == 13){
+			joBdySearch();
+		}
+	}
+
+	function joBdySearch() {
+		var schKey = el("bdySearch");
+		var chkMode = "down";
+
+		if (schKey == null || schKey.value == "") {
+			alert("검색키워드를 입력하세요");
+			el("bdySearch").focus();
+
+		} else {
+			bodyInfoRSearch('linkedJoContent');
+		}
+	}
+	//]]>
+</script>  
+  <script type="text/javascript" src="/LSW/assets/js/common/hrefRemove.js"></script>  
+ </body>
+</html>

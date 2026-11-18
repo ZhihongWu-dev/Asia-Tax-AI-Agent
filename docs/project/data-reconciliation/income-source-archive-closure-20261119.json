@@ -1,0 +1,806 @@
+{
+  "date": "2026-11-19",
+  "restored_originals": 12,
+  "archive_index": "packages/income_tax/kr_source_archive.json",
+  "manifest_source_audit": {
+    "manifests": 12,
+    "references": 74,
+    "unresolved": [],
+    "checks": [
+      {
+        "manifest": "packages\\income_tax\\ae_2026_sources.json",
+        "doc_id": "ae.cabinet116.2022.taxable-threshold.en",
+        "sha256": "6c830b72ad61feb3cf55d1bdc11272306f3f27d809e201cf9d2d3a483817d415",
+        "paths": [
+          "database/raw/ae/ae.cabinet116.2022.taxable-threshold.en.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\ae_2026_sources.json",
+        "doc_id": "ae.cabinet49.2023.natural-persons.en",
+        "sha256": "8ceb036169a612fe5542c7e60cba20464b90fbd5f0ceee35047cf9c5257c921f",
+        "paths": [
+          "database/raw/ae/ae.cabinet49.2023.natural-persons.en.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\ae_2026_sources.json",
+        "doc_id": "ae.fta.natural-persons-2023",
+        "sha256": "a365c742ebcc2277067cb3b7416b7960f42390dea3c3b21c982daaf67a48b9ef",
+        "paths": [
+          "database/raw/ae/ae.fta.natural-persons-2023.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\ae_2026_sources.json",
+        "doc_id": "ae.fta.general-corporate-tax",
+        "sha256": "b837af15aaab96e65a149538cbbcda5482e4c96a1ddf2b4d383fd86774063e7f",
+        "paths": [
+          "database/raw/ae/ae.fta.general-corporate-tax.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\cn_2026_sources.json",
+        "doc_id": "cn.law.eit",
+        "sha256": "ce155d4c61c537da01dd89b0e4b3660d8d253674df67392fc95d7f599f39e900",
+        "paths": [
+          "database/raw/cn/cn.law.eit.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\cn_2026_sources.json",
+        "doc_id": "cn.law.iit",
+        "sha256": "442006d0f1157e381eb044c60a4cafad7bae30f5dcf3592d1bdf72d99a798cb7",
+        "paths": [
+          "database/raw/cn/cn.law.iit.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\cn_2026_sources.json",
+        "doc_id": "cn.iit.comprehensive-rate-table",
+        "sha256": "84204e1b17778943909e217eadd5cf4bc8d54901bc1e822c21b5408760d2059f",
+        "paths": [
+          "database/raw/cn/cn.iit.comprehensive-rate-table.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\hk_2025_26_sources.json",
+        "doc_id": "hk.gov.salaries-rates-20261116",
+        "sha256": "baabce21ed541a686f1060ec60e992a02f5819417fdf8854d82415a882c8eeeb",
+        "paths": [
+          "database/raw/hk/hk.gov.salaries-rates-20261116.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\hk_2025_26_sources.json",
+        "doc_id": "hk.ird.two-tier-rates-20261116",
+        "sha256": "3d8d10abc9f80b31cb17ba56178c075c93d4c6c279f43fb5ec4d0d55e046df58",
+        "paths": [
+          "database/raw/hk/hk.ird.two-tier-rates-20261116.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\hk_2025_26_sources.json",
+        "doc_id": "hk.ird.tax-concessions-enacted-2026",
+        "sha256": "1e32d17b3a5e74b793fa12ead7c74a4937ed64d84a26d7b1fc498d060b87fc56",
+        "paths": [
+          "database/raw/hk/hk.ird.tax-concessions-enacted-2026.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\hk_2025_26_sources.json",
+        "doc_id": "hk.ird.property-notes-20261119",
+        "sha256": "92f300993661847ab8a6d9ea12f8d14df8bd6240196294764638f0726c61bbb2",
+        "paths": [
+          "database/raw/hk/hk.ird.property-notes-20261119.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\id_2026_sources.json",
+        "doc_id": "id.uu7.2021.id",
+        "sha256": "4e4be3e276bf327e6e9e8a4a031838f572feb4014c2476f6cea0d9a54dd38d5b",
+        "paths": [
+          "database/raw/id/id.uu7.2021.id.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\id_2026_sources.json",
+        "doc_id": "id.pp20.2026.id",
+        "sha256": "3aadd85768e7dc3dd5f8431178ee0dd1d03d631835a493288563692de7cf8520",
+        "paths": [
+          "database/raw/id/id.pp20.2026.id.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\id_2026_sources.json",
+        "doc_id": "id.per12.2026.annex.id",
+        "sha256": "472c3fb0b42c74d25b702f165d9ccd9234ae257b2b28e1509e36593ee0c1be43",
+        "paths": [
+          "database/raw/id/id.per12.2026.annex.id.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\id_2026_sources.json",
+        "doc_id": "id.dgt.company-calculation.id",
+        "sha256": "797e292a6ed8698a2366de691032967e7764b3cf1b0b8a48df4b7c367a26f679",
+        "paths": [
+          "database/raw/id/id.dgt.company-calculation.id.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\id_2026_sources.json",
+        "doc_id": "id.dgt.personal-calculation.id",
+        "sha256": "1b34aae90f12476d335507763bda82859b8d5144ff97f35dd377b77bc6514842",
+        "paths": [
+          "database/raw/id/id.dgt.personal-calculation.id.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\id_2026_sources.json",
+        "doc_id": "id.per12.2026.id",
+        "sha256": "92d8a41d868e80306e7e472fe899edee10e0d02407a68cb8ab381235b7670ec4",
+        "paths": [
+          "database/raw/id/id.per12.2026.id.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\in_2026_sources.json",
+        "doc_id": "in.law.ita2025.fa2026.en",
+        "sha256": "d54a0ed6a91673d1a4fbcef9b5e472c3efe441139fae38f85a5a0c5b2cfc998b",
+        "paths": [
+          "database/raw/in/in.law.ita2025.fa2026.en.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\in_2026_sources.json",
+        "doc_id": "in.law.finance2026.gazette.en",
+        "sha256": "f01136356e61b2534328153941a68f13afd06fe8587d347757c89101d9cc564f",
+        "paths": [
+          "database/raw/in/in.law.finance2026.gazette.en.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_2026_sources.json",
+        "doc_id": "jp.nta.salary-table.20261117",
+        "sha256": "3d06c41b675161d51cc59c89d6d129ce8ea204b5ccc986f5b30b1072a12a032c",
+        "paths": [
+          "database/raw/jp/jp.nta.salary-table.20261117.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_2026_sources.json",
+        "doc_id": "jp.nta.basic-table.20261117",
+        "sha256": "d37a6a15b38929bc8e331c611ccc2ac0295ab12bfc39266e6634393882c36c2b",
+        "paths": [
+          "database/raw/jp/jp.nta.basic-table.20261117.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_2026_sources.json",
+        "doc_id": "jp.nta.1410.20261117",
+        "sha256": "df763b0259059e8810ffe27385cf2a326b0bee008b7a62f2a67b66b9500d9a41",
+        "paths": [
+          "database/raw/jp/jp.nta.1410.20261117.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_2026_sources.json",
+        "doc_id": "jp.nta.1411.20261117",
+        "sha256": "67ede54d9ec7de574945e2047364e17448963c024d59c8a593aef7d8793df9b5",
+        "paths": [
+          "database/raw/jp/jp.nta.1411.20261117.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_2026_sources.json",
+        "doc_id": "jp.nta.1199.20261117",
+        "sha256": "21507083e62c8014201736c5122cdf184515695aaaeb9c3fbb414b105a8ab5ac",
+        "paths": [
+          "database/raw/jp/jp.nta.1199.20261117.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_2026_sources.json",
+        "doc_id": "jp.nta.2260.20261117",
+        "sha256": "eefcf231ae9e5393dc6c975dcd79a0c482d9ddb0938df09f8eebba017c84a225",
+        "paths": [
+          "database/raw/jp/jp.nta.2260.20261117.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_2026_sources.json",
+        "doc_id": "jp.nta.1000.20261117",
+        "sha256": "9e21d8bb0a2d209620d147c16db9349759a60ee67044bc34aed846dcd3843bd7",
+        "paths": [
+          "database/raw/jp/jp.nta.1000.20261117.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_2026_sources.json",
+        "doc_id": "jp.nta.return-guide.2025",
+        "sha256": "9691e822b247dd06925fc05f50b9734f1d2e70bd306ea62804835f7b7c6d2328",
+        "paths": [
+          "database/raw/jp/jp.nta.return-guide.2025.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_2026_sources.json",
+        "doc_id": "jp.ita",
+        "sha256": "4e5d010f6717eb59427d3cc786c544292a07d80a2aadef012e06014265743bad",
+        "paths": [
+          "database/raw/jp/jp.ita.xml"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_company_2026_sources.json",
+        "doc_id": "jp.corporate-rates.20261117",
+        "sha256": "240bbf0e09c1414db40562127a08928fd0997779f97289d697ef29f18a362704",
+        "paths": [
+          "database/raw/jp/jp.corporate-rates.20261117.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_company_2026_sources.json",
+        "doc_id": "jp.defence-corporate.20261117",
+        "sha256": "19b0cbd242bcc12b2dd40cc2f866d866c8aa0254958fd1f4f313480047dba980",
+        "paths": [
+          "database/raw/jp/jp.defence-corporate.20261117.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_company_2026_sources.json",
+        "doc_id": "jp.local-corporate-act.20261117",
+        "sha256": "6d371bf30cd5d730340d97a7c4d60a81374a5fe62838c2c2dd6b29a6a51011e7",
+        "paths": [
+          "database/raw/jp/jp.local-corporate-act.20261117.xml"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_company_2026_sources.json",
+        "doc_id": "jp.sme-classification.20261117",
+        "sha256": "79e6230110ae68d83cfdb6aaef2f832efada5a936a5223bd3c478ceccdcebb99",
+        "paths": [
+          "database/raw/jp/jp.sme-classification.20261117.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_company_2026_sources.json",
+        "doc_id": "jp.corporate-return-guide.20261117",
+        "sha256": "13d2c3598b1651f302e6ab48c87d10e9a4bfa08d66846df295fcae82ecf66f72",
+        "paths": [
+          "database/raw/jp/jp.corporate-return-guide.20261117.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_company_2026_sources.json",
+        "doc_id": "jp.general-tax-act.20261117",
+        "sha256": "84701c9cecc1f5d05aa1c01c91e279eaef1630f4bbceacb78f393f040f134e5e",
+        "paths": [
+          "database/raw/jp/jp.general-tax-act.20261117.xml"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_company_2026_sources.json",
+        "doc_id": "jp.cta",
+        "sha256": "b3adc0eabf98a8210ec465d6ded837fb0fadf65d4cfcb3e3bc2b7e43ca27212a",
+        "paths": [
+          "database/raw/jp/jp.cta.xml"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\jp_company_2026_sources.json",
+        "doc_id": "jp.sma",
+        "sha256": "c28aeae57b80ae45942c7ec08086a5a4a4804467ee44e43046be9460a42aec71",
+        "paths": [
+          "database/raw/jp/jp.sma.xml"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\kr_2026_sources.json",
+        "doc_id": "kr.corporate-tax-act.20260701.ko",
+        "sha256": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+        "paths": [
+          "database/raw/kr/kr.corporate-tax-act.20260701.ko.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\kr_2026_sources.json",
+        "doc_id": "kr.local-tax.article103-20.2026",
+        "sha256": "69a26326504eb7dd9c952c39f1d567fa1ef886fa77a75104995bfb5319623fda",
+        "paths": [
+          "database/raw/kr/kr.local-tax.article103-20.2026.html"
+        ],
+        "resolution": "Korean source archive index",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\kr_2026_sources.json",
+        "doc_id": "kr.local-tax.amendment21308.2025",
+        "sha256": "ae2d538485753342358dc8c5cef661dd7385aabc2b42df8143bf5ff9dc071136",
+        "paths": [
+          "database/raw/kr/kr.local-tax.amendment21308.2025.html"
+        ],
+        "resolution": "Korean source archive index",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\kr_2026_sources.json",
+        "doc_id": "kr.local-tax.table.company-ordinary",
+        "sha256": "4856297a4fc5feaba4cd39a2c84e40edfb8016a98d60f7cf2d1e8393549b8363",
+        "paths": [
+          "database/raw/kr/kr.local-tax.table.company-ordinary.gif"
+        ],
+        "resolution": "Korean source archive index",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\kr_2026_sources.json",
+        "doc_id": "kr.local-tax.table.company-special",
+        "sha256": "c37647980d0ab7165a607de6d4db5dd328da15aead226ab6358dc88aba0d06c6",
+        "paths": [
+          "database/raw/kr/kr.local-tax.table.company-special.gif"
+        ],
+        "resolution": "Korean source archive index",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\kr_2026_sources.json",
+        "doc_id": "kr.income-tax-act.20260701.ko",
+        "sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+        "paths": [
+          "database/raw/kr/kr.income-tax-act.20260701.ko.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\kr_2026_sources.json",
+        "doc_id": "kr.local-tax.article92.2026",
+        "sha256": "5f5ebe93c293d98d55a08fa561b6f1336a5dbfda98696f9119ee10ade27a9978",
+        "paths": [
+          "database/raw/kr/kr.local-tax.article92.2026.html"
+        ],
+        "resolution": "Korean source archive index",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\kr_2026_sources.json",
+        "doc_id": "kr.local-tax.table.personal",
+        "sha256": "0bc147fb6a8670707ffb97584c7f308766de31cb2dfca5aa4bf66665ba4874b7",
+        "paths": [
+          "database/raw/kr/kr.local-tax.table.personal.gif"
+        ],
+        "resolution": "Korean source archive index",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\kr_2026_sources.json",
+        "doc_id": "kr.national-treasury.article47.2026",
+        "sha256": "e219a858f303c94d114495ffc0105b5fef7e7622b85a7f064c5e5f9c35a6b665",
+        "paths": [
+          "database/raw/kr/kr.national-treasury.article47.2026.html"
+        ],
+        "resolution": "Korean source archive index",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\kr_2026_sources.json",
+        "doc_id": "kr.local-tax-basic.article59.2026",
+        "sha256": "1ed709aa892ade3bbc0950038efe2755046549aed809dc2332e89575051c0266",
+        "paths": [
+          "database/raw/kr/kr.local-tax-basic.article59.2026.html"
+        ],
+        "resolution": "Korean source archive index",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\kr_2026_sources.json",
+        "doc_id": "kr.special-tax-treatment.article132.2026",
+        "sha256": "1bae488f4cb846831b4b7891f17cbaada52c38b9ddec68001ea39a010d7e8f0b",
+        "paths": [
+          "database/raw/kr/kr.special-tax-treatment.article132.2026.html"
+        ],
+        "resolution": "Korean source archive index",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\my_2026_sources.json",
+        "doc_id": "my.ita1967.updated2026.en",
+        "sha256": "a5686ae61b81ce55ef36054149b98ccd1b04f73b937f5e44db8926484795416a",
+        "paths": [
+          "database/raw/my/my.ita1967.updated2026.en.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\sg_ya2026_sources.json",
+        "doc_id": "sg.iras.cit-rates-20261116",
+        "sha256": "eac7ed5619e2d30caf41f45443772d036a50e3c31db676c26a285b766c4293b3",
+        "paths": [
+          "database/raw/sg/sg.iras.cit-rates-20261116.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\sg_ya2026_sources.json",
+        "doc_id": "sg.iras.pit-rates-20261116",
+        "sha256": "fd1ca66256803ef457d05b34a2baf1cb1f4e006b3c94a7febedfdd5085cb9dbe",
+        "paths": [
+          "database/raw/sg/sg.iras.pit-rates-20261116.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\th_2026_sources.json",
+        "doc_id": "th.rc3.rates.th",
+        "sha256": "5ec38d0dbbb7ee5d226ad1a7422aa14ff603dcf29dfc566e47e48bd04bc0a3b4",
+        "paths": [
+          "database/raw/th/th.rc3.rates.th.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\th_2026_sources.json",
+        "doc_id": "th.rc3a.th",
+        "sha256": "3050f0a13b298f027d5451fb8b3dfb8ec77658db1fbbd72eaa507abf0c3ed428",
+        "paths": [
+          "database/raw/th/th.rc3a.th.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\th_2026_sources.json",
+        "doc_id": "th.rd470.th",
+        "sha256": "bbda893d31dd320f36c0b61bb0c06434a8be52cc4815085d0080fa9f2761e287",
+        "paths": [
+          "database/raw/th/th.rd470.th.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\th_2026_sources.json",
+        "doc_id": "th.rd480.th",
+        "sha256": "db91e60b958825d35e574e2bc71126ac44a6c2964becc391bc69bafc3289ce9b",
+        "paths": [
+          "database/raw/th/th.rd480.th.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\th_2026_sources.json",
+        "doc_id": "th.rd530.consolidated.th",
+        "sha256": "bd350a9c9a3bd6946b5542e1004304bd606063bc85faac71b29f01945735fef0",
+        "paths": [
+          "database/raw/th/th.rd530.consolidated.th.html"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.law.cit67.2025.vi",
+        "sha256": "ae706468190afe8d111dd0fccf240e7a980eb002c5d0b5cb1cfe127d92f9c1cd",
+        "paths": [
+          "database/raw/vn/vn.law.cit67.2025.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.law09.2026.vi",
+        "sha256": "d9207c14c9af462454dd7ce9ef5b23c8a22dfea8d3462438be9ffd3897a1f94e",
+        "paths": [
+          "database/raw/vn/vn.law09.2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.decree398.2026.vi",
+        "sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
+        "paths": [
+          "database/raw/vn/vn.decree398.2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.decree141.2026.vi",
+        "sha256": "fa9a7c47b637f47528225d9cdd03dbde1032607ec8c39648071178ce4091413f",
+        "paths": [
+          "database/raw/vn/vn.decree141.2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.decree320.2025.vi",
+        "sha256": "4a426bbe928511d278aa23318156d27747c45669e8ee9002fb7a635794f51e06",
+        "paths": [
+          "database/raw/vn/vn.decree320.2025.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.law.pit2026.vi",
+        "sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+        "paths": [
+          "database/raw/vn/vn.law.pit2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.law.pit2026.vi",
+        "sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+        "paths": [
+          "database/raw/vn/vn.law.pit2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.decree253.2026.vi",
+        "sha256": "91242e366d3c3a4e874314534b100a0d1c077e21b0a9244243f5a187d4b56412",
+        "paths": [
+          "database/raw/vn/vn.decree253.2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.law.pit2026.vi",
+        "sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+        "paths": [
+          "database/raw/vn/vn.law.pit2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.decree141.2026.vi",
+        "sha256": "fa9a7c47b637f47528225d9cdd03dbde1032607ec8c39648071178ce4091413f",
+        "paths": [
+          "database/raw/vn/vn.decree141.2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.decree253.2026.vi",
+        "sha256": "91242e366d3c3a4e874314534b100a0d1c077e21b0a9244243f5a187d4b56412",
+        "paths": [
+          "database/raw/vn/vn.decree253.2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.decree398.2026.vi",
+        "sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
+        "paths": [
+          "database/raw/vn/vn.decree398.2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.decree68.2026.vi",
+        "sha256": "8d5b8099009a0981baa14ed65d5906fc2adb3e774042397e7b33c233a9c3811a",
+        "paths": [
+          "database/raw/vn/vn.decree68.2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.law.pit2026.vi",
+        "sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+        "paths": [
+          "database/raw/vn/vn.law.pit2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.decree141.2026.vi",
+        "sha256": "fa9a7c47b637f47528225d9cdd03dbde1032607ec8c39648071178ce4091413f",
+        "paths": [
+          "database/raw/vn/vn.decree141.2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.decree253.2026.vi",
+        "sha256": "91242e366d3c3a4e874314534b100a0d1c077e21b0a9244243f5a187d4b56412",
+        "paths": [
+          "database/raw/vn/vn.decree253.2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.decree398.2026.vi",
+        "sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
+        "paths": [
+          "database/raw/vn/vn.decree398.2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.decree68.2026.vi",
+        "sha256": "8d5b8099009a0981baa14ed65d5906fc2adb3e774042397e7b33c233a9c3811a",
+        "paths": [
+          "database/raw/vn/vn.decree68.2026.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      },
+      {
+        "manifest": "packages\\income_tax\\vn_2026_sources.json",
+        "doc_id": "vn.vbhn25.2026.business.vi",
+        "sha256": "f26a121b3f3c8d5e3c77563f83ba6bd658e6d243eea2de3a195b8b916878ba57",
+        "paths": [
+          "database/raw/vn/vn.vbhn25.2026.business.vi.pdf"
+        ],
+        "resolution": "declared path or doc.csv registration",
+        "matched": true
+      }
+    ],
+    "scope": "Hash existence only. SG uses database-relative paths; entries without paths use registered doc IDs or exact jurisdiction archive hashes. Does not prove legal completeness or authenticity beyond recorded provenance."
+  },
+  "inline_literal_source_audit": {
+    "references": 12,
+    "unique_hashes": 11,
+    "unresolved": [],
+    "matched_hashes": {
+      "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a": [
+        "database/raw/kr/kr.income-tax-act.20260701.ko.pdf"
+      ],
+      "1ed709aa892ade3bbc0950038efe2755046549aed809dc2332e89575051c0266": [
+        "database/raw/kr/kr.local-tax-basic.article59.2026.html"
+      ],
+      "e219a858f303c94d114495ffc0105b5fef7e7622b85a7f064c5e5f9c35a6b665": [
+        "database/raw/kr/kr.national-treasury.article47.2026.html"
+      ],
+      "587421c806cb9b62ba9789627dadf7c85cc9b314ea99971935cb4e105c347222": [
+        "database/raw/my/my.hasil.be2025.explanatory.pdf"
+      ],
+      "fd85095d1bb8b841997447558c8af7ca09a1a6695b6a2e3c44f7fca4e334059a": [
+        "database/raw/my/my.pua148.2025.dividend-income.pdf"
+      ],
+      "948b2597f2996af06d048be2eb1a74ca1772e7d110b31a969985fa3dbdeca503": [
+        "database/raw/sg-vn/treaty.sg-vn.1994.en.pdf"
+      ],
+      "952c45ffc0f10bfc176bd9ae6b3d204fd3a034294ee270278957b9c11e1471dc": [
+        "database/raw/vn/vn.circular89.2026.vi.pdf"
+      ],
+      "0f5db5c51b79643276e5d5eb03fd636fbdac8ea043018f79cf50ba9d8d6d8de6": [
+        "database/raw/vn/vn.gazette1737-1738.2025.vi.pdf"
+      ],
+      "363ae8f389af98b9d48a5ae0d753cb2eda6beee83b8ff1db9f03d9278a4b3051": [
+        "database/raw/kr/kr.local-tax.form43.20260701.pdf"
+      ],
+      "844a53ae235b7039807ad8380306f08225eb757015a27c7c69c23928434ae685": [
+        "database/raw/kr/kr.income-tax.form24.20260701.pdf"
+      ],
+      "527e8177958baa2eae6a272f60d3c02116e719fb08043b94e2e25b2a8651c053": [
+        "database/raw/kr/kr.local-tax.salary-settlement.20260701.html"
+      ]
+    },
+    "scope": "Static literal URL+SHA256 source references in income adapters; dynamically constructed or URL-only references are not covered."
+  },
+  "runtime_check": {
+    "checked_files": 16,
+    "differences": [],
+    "reference": "optimizer-final-validation-20261119.json",
+    "scope": "Current local optimizer runtime versus fully passed v5 runtime; no new legal acceptance inferred"
+  },
+  "validation": "Korean source archive regression: 1 passed in 1.65 seconds",
+  "limitations": [
+    "Byte identity to existing reviewed hashes is verified; no new legal interpretation or catalog admission is implied.",
+    "Dynamically assembled and URL-only source references are outside the literal-hash audit.",
+    "Frozen planner CSV/SQLite files, runtime and live cloud data were not modified."
+  ]
+}

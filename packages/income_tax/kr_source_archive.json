@@ -1,0 +1,123 @@
+{
+  "reviewed_on": "2026-11-19",
+  "scope": "Byte-preserving archive closure for Korean income-tax citations, not new legal review or catalog promotion. Existing calculator manifests and frozen optimizer catalog are unchanged.",
+  "sources": [
+    {
+      "doc_id": "kr.corporate-tax-act.20260701.ko",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsId=001563",
+      "sha256": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+      "provisions": [
+        "Article55; Act21217 supplementary Articles1,5"
+      ],
+      "file": "database/raw/kr/kr.corporate-tax-act.20260701.ko.pdf"
+    },
+    {
+      "doc_id": "kr.income-tax-act.20260701.ko",
+      "url": "https://www.law.go.kr/lsInfoP.do?ancYnChk=0&lsId=001565",
+      "sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+      "provisions": [
+        "Article55(1)"
+      ],
+      "file": "database/raw/kr/kr.income-tax-act.20260701.ko.pdf"
+    },
+    {
+      "doc_id": "kr.income-tax.form24.20260701",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=164443847",
+      "sha256": "844a53ae235b7039807ad8380306f08225eb757015a27c7c69c23928434ae685",
+      "file": "database/raw/kr/kr.income-tax.form24.20260701.pdf"
+    },
+    {
+      "doc_id": "kr.local-tax-basic.article59.2026",
+      "url": "https://www.law.go.kr/LSW/lsLinkProc.do?joLnkStr=%EC%A0%9C97%EC%A1%B0&lsNm=%EC%A7%80%EB%B0%A9%EC%84%B8%EA%B8%B0%EB%B3%B8%EB%B2%95&mode=11",
+      "sha256": "1ed709aa892ade3bbc0950038efe2755046549aed809dc2332e89575051c0266",
+      "provisions": [
+        "Article59"
+      ],
+      "file": "database/raw/kr/kr.local-tax-basic.article59.2026.html"
+    },
+    {
+      "doc_id": "kr.local-tax.amendment21308.2025",
+      "url": "https://law.go.kr/LSW/lsRvsDocListP.do?chrClsCd=010202&lsId=001649&lsRvsGubun=all",
+      "sha256": "ae2d538485753342358dc8c5cef661dd7385aabc2b42df8143bf5ff9dc071136",
+      "provisions": [
+        "Act21308 supplementary Articles1,10,11,12"
+      ],
+      "file": "database/raw/kr/kr.local-tax.amendment21308.2025.html"
+    },
+    {
+      "doc_id": "kr.local-tax.article103-20.2026",
+      "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1031177407",
+      "sha256": "69a26326504eb7dd9c952c39f1d567fa1ef886fa77a75104995bfb5319623fda",
+      "provisions": [
+        "Article103-20"
+      ],
+      "file": "database/raw/kr/kr.local-tax.article103-20.2026.html"
+    },
+    {
+      "doc_id": "kr.local-tax.article92.2026",
+      "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1026500915",
+      "sha256": "5f5ebe93c293d98d55a08fa561b6f1336a5dbfda98696f9119ee10ade27a9978",
+      "provisions": [
+        "Article92(1)"
+      ],
+      "file": "database/raw/kr/kr.local-tax.article92.2026.html"
+    },
+    {
+      "doc_id": "kr.local-tax.form43.20260701",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=164921007",
+      "sha256": "363ae8f389af98b9d48a5ae0d753cb2eda6beee83b8ff1db9f03d9278a4b3051",
+      "file": "database/raw/kr/kr.local-tax.form43.20260701.pdf"
+    },
+    {
+      "doc_id": "kr.local-tax.salary-settlement.20260701",
+      "url": "https://law.go.kr/lsLinkCommonInfo.do?lspttninfSeq=173607",
+      "sha256": "527e8177958baa2eae6a272f60d3c02116e719fb08043b94e2e25b2a8651c053",
+      "file": "database/raw/kr/kr.local-tax.salary-settlement.20260701.html"
+    },
+    {
+      "doc_id": "kr.local-tax.table.company-ordinary",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=160224293",
+      "sha256": "4856297a4fc5feaba4cd39a2c84e40edfb8016a98d60f7cf2d1e8393549b8363",
+      "provisions": [
+        "Official embedded rate-table image"
+      ],
+      "file": "database/raw/kr/kr.local-tax.table.company-ordinary.gif"
+    },
+    {
+      "doc_id": "kr.local-tax.table.company-special",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=160224329",
+      "sha256": "c37647980d0ab7165a607de6d4db5dd328da15aead226ab6358dc88aba0d06c6",
+      "provisions": [
+        "Official embedded rate-table image"
+      ],
+      "file": "database/raw/kr/kr.local-tax.table.company-special.gif"
+    },
+    {
+      "doc_id": "kr.local-tax.table.personal",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=125883797",
+      "sha256": "0bc147fb6a8670707ffb97584c7f308766de31cb2dfca5aa4bf66665ba4874b7",
+      "provisions": [
+        "Official embedded rate-table image"
+      ],
+      "file": "database/raw/kr/kr.local-tax.table.personal.gif"
+    },
+    {
+      "doc_id": "kr.national-treasury.article47.2026",
+      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1031453583",
+      "sha256": "e219a858f303c94d114495ffc0105b5fef7e7622b85a7f064c5e5f9c35a6b665",
+      "provisions": [
+        "Article47(1)-(2)"
+      ],
+      "file": "database/raw/kr/kr.national-treasury.article47.2026.html"
+    },
+    {
+      "doc_id": "kr.special-tax-treatment.article132.2026",
+      "url": "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1000890962",
+      "sha256": "1bae488f4cb846831b4b7891f17cbaada52c38b9ddec68001ea39a010d7e8f0b",
+      "provisions": [
+        "Article132(1)"
+      ],
+      "file": "database/raw/kr/kr.special-tax-treatment.article132.2026.html"
+    }
+  ]
+}

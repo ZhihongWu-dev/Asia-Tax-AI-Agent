@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-19",
+  "application_commit": "f6da86b",
+  "delivery": "Local only; no cloud upload or remote push.",
+  "browser": {
+    "command": "node node_modules/@playwright/test/cli.js test --workers=2",
+    "passed": 121,
+    "failed": 0,
+    "skipped": 0,
+    "duration": "8.5 minutes",
+    "exit_code": 0,
+    "pinned_engine": "771e4524961bcc36718db1c9331e7a5f4cda0ce7"
+  },
+  "backend": {
+    "status": "running",
+    "session_id": 70342,
+    "command": "python -X utf8 -m pytest tests -m 'not integration' --ignore=tests/database -q --junitxml=local-final-regression-20261119.xml",
+    "junit_path": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/local-final-regression-20261119.xml",
+    "completion_not_claimed": true
+  },
+  "archive_followup": {
+    "restored_originals": 12,
+    "verified_korean_archive_originals": 14,
+    "staged_git_blob_sha256_matches": true,
+    "targeted_test": "1 passed in 1.65 seconds",
+    "evidence": "income-source-archive-closure-20261119.json"
+  },
+  "limitations": [
+    "Browser authentication/model boundaries use fixtures; not real-account or provider acceptance.",
+    "Full backend regression remains in progress; no final backend success inferred.",
+    "Source archive byte identity does not establish new legal applicability or close special-regime business gaps."
+  ]
+}

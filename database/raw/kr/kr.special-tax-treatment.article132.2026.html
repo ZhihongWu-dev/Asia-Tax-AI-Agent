@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />  
+  <script type="text/javascript">
+        /* 화면 디스플레이 설정 코드 전역변수 선언
+        * - 브라우저 JS는 서버 세션을 직접 읽을 수 없으므로 JSP에서 세션값을 렌더링해서 winodw 전역변수로 내려준다.
+        * - 이 코드는 common.js 보다 먼저 선언되어야 한다.
+        * */
+        window.APP_THEME_INFO = {
+            // 로그인 여부
+            isLogin : false,
+            // 사용자 화면 디스플레이 설정 코드 (300001:라이트모드, 300002:다크모드, 300003:시스템모드)
+            scrnStngCd : ''
+        };
+        var kakaoKey = '7d9effab87b9126df39695ca304bba41';
+
+
+
+    </script>  
+  <script type="text/javascript" src="/LSW/assets/js/jquery-3.7.1.min.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/jquery-ui.min.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/swiper.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/common.js?Time=1794877016372"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/CookieUtil.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/jquery-custom.js?Time=1794877016372"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/jquery/jquery-ui_2017.js"></script>  
+  <script type="text/javascript">
+    //링크 체크
+    var webRoot = '/LSW';
+    var isAsGubun = "IS";
+    var layerDiv = ".layerPop > .inner .cont .bodySideContent";
+
+    function isOutUrl(url){
+        if(!url) return false;
+        url = url.trim();
+        if(url.indexOf('/LSW') === 0) return false;
+        if(url.indexOf('blob')>-1) return false;
+        if(url.charAt(0) === '/') return false;
+        if(/^https?:\/\//i.test(url)) return false;
+        if(url.indexOf('www.') === 0) return false;
+        if(/^(javascript|#)/i.test(url)) return false;
+        return true;
+    }
+
+    function resolveUrl(url){
+        return isOutUrl(url) ? webRoot + '/' + url : url;
+    }
+
+    function checkP(url){
+        if(!url) return false;
+        return /Info|Proc/i.test(url);
+    }
+    
+    (function (){
+        let originalOpen = window.open;
+
+        //window.open
+        window.open = function(url,name,specs){
+            let resolved = resolveUrl(url);
+
+            if(checkP(resolved) && !specs){
+                specs ='width=1000px,height=800px';
+            }else if(checkP(resolved)){
+            }
+            if(url.includes('listShowYn=Y')){
+                resolved = resolved.replace('listShowYn=Y','listShowYn=N')
+            }
+            return originalOpen.call(window,resolved , name, specs);
+        };
+
+        let originalSubmit = HTMLFormElement.prototype.submit;
+
+        HTMLFormElement.prototype.submit = function(){
+
+            let action = this.getAttribute('action');
+            if(action && isOutUrl(action)){
+                this.setAttribute('action',resolveUrl(action))
+            }
+            return originalSubmit.call(this);
+        }
+
+        let originalXhrOpen = XMLHttpRequest.prototype.open;
+        XMLHttpRequest.prototype.open = function(method,url){
+            arguments[1] = resolveUrl(url);
+            return originalXhrOpen.apply(this,arguments);
+        }
+
+    })();
+
+    //ajax
+    $.ajaxPrefilter(function (options){
+        options.url = resolveUrl(options.url);
+    });
+
+    //a태그 herf
+    $(document).on('click','a[href]',function(e){
+        let href = $(this).attr('href');
+
+/*
+        //view가 infoP호출이면 가로챔
+        if(checkP(href)){
+            e.preventDefault();
+            window.open(setListShowYn(resolveUrl(href)),'_blank','width=1000px,height=800px');
+        }
+*/
+
+        if(isOutUrl(href)){
+            e.preventDefault();
+            let newHref = resolveUrl(href);
+            let target = $(this).attr('target');
+
+            if(target === '_blank'){
+                window.open(newHref,'_blank','width=1000px,height=800px');
+            }else{
+                window.location.href = newHref;
+            }
+        }
+    })
+
+    $(document).on('submit','form',function(e){
+       let $form = $(this);
+       let action  = $form.attr('action');
+
+       if(checkP(action) && $form.attr('target') ==='_blank'){
+           e.preventDefault();
+           let popupName = 'popup_'+Date.now();
+           window.open('',popupName,'width=1000px,height=800px');
+           $form.attr('action',resolveUrl(action));
+           $form.attr('target',popupName);
+
+           let $listShowYn = $('<input>', {type : 'hidden', name:'listShowYn',value:'N'});
+           $form.append($listShowYn);
+           $form[0].submit();
+           $listShowYn.remove();
+           return;
+       }
+
+       if(isOutUrl(action)){
+           $form.attr('action',resolveUrl(action));
+       }
+    })
+
+</script>
+  <link rel="shortcut icon" type="text/css" href="/LSW/assets/images/ico_favorites.ico" />
+  <link rel="stylesheet" type="text/css" href="/LSW/assets/css/style.css?Time=1794877016372" />
+  <link rel="stylesheet" type="text/css" href="/LSW/assets/css/style.css" />
+  <style type="text/css">
+        form { display:contents }
+    </style>
+  <title>국가법령정보센터 | 조문정보</title>
+ </head>  
+ <body id="bodyId"> 
+  <!-- loading --> 
+  <div class="loading" role="status" aria-label="로딩 중" style="display:none;"> 
+   <span aria-hidden="true"></span> 
+   <span aria-hidden="true"></span> 
+   <span aria-hidden="true"></span> 
+  </div> 
+  <!-- // loading --> 
+  <!-- 2026-09-23 --> 
+  <!-- skipNav --> 
+  <dl id="skipNav"> 
+   <dt>
+    바로가기 메뉴
+   </dt> 
+   <dd>
+    <a href="javascript:void(0)" onclick="fn_skipToViewCont()">본문 바로가기</a>
+   </dd> 
+   <dd>
+    <a href="javascript:void(0)" onclick="fn_skipToViewAside()">목록 바로가기</a>
+   </dd> 
+  </dl> 
+  <!-- //skipNav -->     
+  <style>
+		@media screen and (max-width: 768px){
+			.bodySideContent .sideArea{
+				display: none;
+			}
+		}
+	</style> 
+  <script type="text/javascript" src="/LSW/assets/js/jquery-3.7.1.min.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/jquery-ui.min.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/swiper.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/jquery-custom.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/common.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/common-ex.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/common/xmlHttpUtil.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/ls/ls.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/ls/lsLink.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/ls/lsJo.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/ls/lsPopLayer.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/ls/lsOutPutJoNew.js?Time=1794877016372"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/jquery/jquery.print.js"></script> 
+  <script type="text/javascript" src="/LSW/assets/js/ls/lumLsLinkPop.js"></script>   
+  <script>
+	var webRoot = "/LSW";
+</script>  
+  <!-- viewer --> 
+  <div class="bodySideContent" style="display: block;" data-brl-use="PH"> 
+   <!-- viewerHeader --> 
+   <div class="viewerHeader"> 
+    <h2>조문정보</h2> 
+   </div> 
+   <!--// viewerHeader --> 
+   <!-- viewerCont --> 
+   <div class="viewerCont sideType case off"> 
+    <!-- sideArea --> 
+    <div class="sideArea"> 
+     <!-- sideBot --> 
+     <div class="sideBot"> 
+      <!-- searchResult --> 
+      <div class="searchResult"> 
+       <!-- listBox --> 
+       <div class="listBox caseSel"> 
+        <a href="javascript:void(0);" onclick="$('#linkedJoContent').scrollTop(0);"> <p style="color: #1E2124;font-weight: 700; font-size: 17px;" class="deactive sideTitle" id="ls001584" title="조세특례제한법"> 조세특례제한법<br /> <span class="subtit1_1" style="color: #175CD3; font-size: 13px;"> [시행 2026. 9. 18.] [법률 제21467호, 2026. 3. 17., 타법개정] </span> </p> </a> 
+        <ul class="sub-menu"> 
+         <li class="rlatJoLi"> <a href="javascript:;" id="jo98188927:0132:00" onclick="f_autoScroll(this);" title="제132조 최저한세액에 미달하는 세액에 대한 감면 등의 배제"><strong>제132조 최저한세액에 미달하는 세액에 대한 감면 등의 배제</strong></a> </li> 
+        </ul> 
+       </div> 
+       <!--/ listBox --> 
+      </div> 
+      <!--/ searchResult --> 
+     </div> 
+     <!-- // sideBot --> 
+    </div> 
+    <!-- // sideArea --> 
+    <button type="button" class="btnTogSide">사이드 영역 닫기</button> 
+    <div class="contArea"> 
+     <!-- betweenTop --> 
+     <div class="betweenTop"> 
+      <!-- searchArea --> 
+      <div class="searchArea"> 
+       <input type="text" id="bdySearch" title="법령내 검색어" maxlength="10" onkeydown="onKeyDown();" value="" placeholder="법령내 검색어를 입력하세요." /> 
+       <button type="button" id="keywordSch" onclick="joBdySearch()" class="btn btnSm">검색</button> 
+      </div> 
+      <!-- // searchArea --> 
+      <!-- viewerTopBtn --> 
+      <div class="btnArea viewerTopBtn"> 
+       <button type="button" class="btnBotPop" data-id="viewPopBtn6">선택</button> 
+       <!-- mPop --> 
+       <div class="mPop" pop-title="선택하세요" data-id="viewPopBtn6"> 
+        <!-- inner --> 
+        <div class="inner"> 
+         <!-- btnArea --> 
+         <div class="btnArea"> 
+          <button type="button" id="bdySaveBtn" data-save-type="infoSaveLayer" onclick="fn_layer('infoSaveLayer', this, '200');" class="btn btnSm btnWhite"><img alt="" src="/LSW/assets/images/viewer/ico0104.svg" />저장</button> 
+          <button type="button" id="bdyPrintBtn" title="인쇄" onclick="lsLinkCommonPrint('');" class="btn btnSm btnWhite"><img alt="" src="/LSW/assets/images/viewer/ico0105.svg" />프린트</button> 
+         </div> 
+         <!--/ btnArea --> 
+        </div> 
+        <!--/ inner --> 
+       </div> 
+       <!-- // mPop --> 
+      </div> 
+      <!-- // viewerTopBtn --> 
+     </div> 
+     <!-- // betweenTop --> 
+     <div class="viewwrap rvsViewwrap" id="linkedJoContent" style="overflow: hidden; height: 562px;"> 
+      <!-- 법령명 --> 
+      <div id="conTop" class="cont_top"> 
+       <a id="top"></a> 
+       <h2 id="001584"> 조세특례제한법 </h2> 
+       <div class="ct_sub"> 
+        <span>[시행 2026. 9. 18.] [법률 제21467호, 2026. 3. 17., 타법개정]</span> 
+        <img src="/LSW/assets/images/viewer/btn_allArticle.svg" alt="전체조문보기" onclick="window.open('/LSW/lsInfoP.do?lsiSeq=284389')" /> 
+       </div> 
+      </div> 
+      <!-- 조문정보 --> 
+      <a name="J132:0" id="J132:0"></a> 
+      <div class="pgroup"> 
+       <ul class="lawico01"> 
+       </ul> 
+       <div class="lawcon"> 
+        <p class="pty1_p4"> <span class="bl"> <label for="Y013200" id="J98188927:0132:00"> 제132조(최저한세액에 미달하는 세액에 대한 감면 등의 배제) </label> </span> ① 내국법인(<a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883285','JO','');" href="javascript:;">제72조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883517','JO','');" href="javascript:;">제1항</a>을 적용받는 조합법인 등은 제외한다)의 각 사업연도의 소득과 <a title="팝업으로 이동" class="link sfon1" onclick="javascript:fncLsLawPop('1034883397','ALLJO','');" href="javascript:;">「법인세법」</a> <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883459','JO','');" href="javascript:;">제91조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883399','JO','');" href="javascript:;">제1항</a>을 적용받는 외국법인의 각 사업연도의 국내원천소득에 대한 법인세(<a title="팝업으로 이동" class="link sfon1" onclick="javascript:fncLsLawPop('1034883233','ALLJO','');" href="javascript:;">「법인세법」</a> <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883337','JO','');" href="javascript:;">제55조의2</a>에 따른 토지등 양도소득에 대한 법인세와 <a title="팝업으로 이동" class="link sfon1" onclick="javascript:fncLsLawPop('1034883461','ALLJO','');" href="javascript:;">같은 법</a> <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883247','JO','');" href="javascript:;">제96조</a>에 따른 법인세에 추가하여 납부하는 세액, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883429','JO','');" href="javascript:;">제100조의32</a>에 따른 투자ㆍ배당 및 상생협력 촉진을 위한 과세특례를 적용하여 계산한 법인세, 가산세 및 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('129606');" href="javascript:;">대통령령</a>으로 정하는 추징세액은 제외하며, <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('129607');" href="javascript:;">대통령령</a>으로 정하는 세액공제 등을 하지 아니한 법인세를 말한다)를 계산할 때 다음 각 호의 어느 하나에 규정된 감면 등을 적용받은 후의 세액이 제2호에 따른 손금산입 및 소득공제 등을 하지 아니한 경우의 과세표준(이하 이 조에서 “과세표준”이라 한다)에 100분의 17[과세표준이 100억원 초과 1천억원 이하 부분은 100분의 12, 과세표준이 100억원 이하 부분은 100분의 10, 중소기업의 경우에는 100분의 7(중소기업이 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('129608');" href="javascript:;">대통령령</a>으로 정하는 바에 따라 최초로 중소기업에 해당하지 아니하게 된 경우에는 그 최초로 중소기업에 해당하지 아니하게 된 과세연도의 개시일부터 3년 이내에 끝나는 과세연도에는 100분의 8, 그 다음 2년 이내에 끝나는 과세연도에는 100분의 9로 한다)]을 곱하여 계산한 세액(이하 “법인세 최저한세액”이라 한다)에 미달하는 경우 그 미달하는 세액에 상당하는 부분에 대해서는 감면 등을 하지 아니한다. <span class="sfon">&lt;개정 2010. 3. 12., 2010. 12. 27., 2011. 12. 31., 2013. 1. 1., 2014. 1. 1., 2014. 12. 23., 2015. 12. 15., 2016. 12. 20., 2017. 12. 19., 2018. 5. 29., 2018. 10. 16., 2018. 12. 24., 2019. 12. 31., 2020. 5. 19., 2020. 12. 29., 2022. 12. 31., 2023. 12. 31., 2025. 3. 14., 2025. 12. 23.&gt;</span> </p>
+        <p class="pty1_de2h">1. 삭제 <span class="sfon">&lt;2019. 12. 31.&gt;</span> </p> 
+        <p class="pty1_de2h">2. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883339','JO','');" href="javascript:;">제8조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883243','JO','');" href="javascript:;">제8조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883235','JO','');" href="javascript:;">제10조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883453','JO','');" href="javascript:;">제13조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883475','JO','');" href="javascript:;">제14조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883359','JO','');" href="javascript:;">제28조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883301','JO','');" href="javascript:;">제28조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883559','JO','');" href="javascript:;">제28조의3</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883237','JO','');" href="javascript:;">제28조의5</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883509','JO','');" href="javascript:;">제55조의2</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883273','JO','');" href="javascript:;">제4항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883303','JO','');" href="javascript:;">제60조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883305','JO','');" href="javascript:;">제2항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883259','JO','');" href="javascript:;">제61조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883329','JO','');" href="javascript:;">제3항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883381','JO','');" href="javascript:;">제62조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883383','JO','');" href="javascript:;">제1항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883393','JO','');" href="javascript:;">제63조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883583','JO','');" href="javascript:;">제4항</a> 및 <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883457','JO','');" href="javascript:;">제63조의2</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883245','JO','');" href="javascript:;">제4항</a>에 따른 소득공제금액, 손금산입금액, 익금불산입금액 및 비과세금액 </p> 
+        <p class="pty1_de2h">3. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883307','JO','');" href="javascript:;">제7조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883225','JO','');" href="javascript:;">제7조의4</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883287','JO','');" href="javascript:;">제8조의3</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883573','JO','');" href="javascript:;">제10조</a>(중소기업이 아닌 자만 해당한다. 이하 이 조에서 같다), <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883421','JO','');" href="javascript:;">제12조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883525','JO','');" href="javascript:;">제2항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883295','JO','');" href="javascript:;">제12조의3</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883463','JO','');" href="javascript:;">제12조의4</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883269','JO','');" href="javascript:;">제13조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883539','JO','');" href="javascript:;">제13조의3</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883327','JO','');" href="javascript:;">제19조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883483','JO','');" href="javascript:;">제1항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883465','JO','');" href="javascript:;">제24조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883377','JO','');" href="javascript:;">제25조의6부터 제25조의8</a>까지, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883455','JO','');" href="javascript:;">제26조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883527','JO','');" href="javascript:;">제29조의2부터 제29조의5</a>까지, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883443','JO','');" href="javascript:;">제29조의7</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883365','JO','');" href="javascript:;">제29조의8</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883545','JO','');" href="javascript:;">제30조의3</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883271','JO','');" href="javascript:;">제30조의4</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883315','JO','');" href="javascript:;">제31조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883535','JO','');" href="javascript:;">제6항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883319','JO','');" href="javascript:;">제32조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883321','JO','');" href="javascript:;">제4항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883441','JO','');" href="javascript:;">제99조의12</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883491','JO','');" href="javascript:;">제104조의8</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883311','JO','');" href="javascript:;">제104조의14</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883349','JO','');" href="javascript:;">제104조의15</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883369','JO','');" href="javascript:;">제104조의22</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883505','JO','');" href="javascript:;">제104조의25</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883493','JO','');" href="javascript:;">제104조의30</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883529','JO','');" href="javascript:;">제104조의35</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883401','JO','');" href="javascript:;">제122조의4</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883403','JO','');" href="javascript:;">제1항</a> 및 <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883405','JO','');" href="javascript:;">제126조의7</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883589','JO','');" href="javascript:;">제8항</a>에 따른 세액공제금액 </p> 
+        <p class="pty1_de2h">4. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883477','JO','');" href="javascript:;">제6조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883341','JO','');" href="javascript:;">제7조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883333','JO','');" href="javascript:;">제12조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883335','JO','');" href="javascript:;">제1항</a>ㆍ제3항, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883249','JO','');" href="javascript:;">제12조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883379','JO','');" href="javascript:;">제21조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883423','JO','');" href="javascript:;">제31조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883227','JO','');" href="javascript:;">제4항</a>ㆍ제5항, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883427','JO','');" href="javascript:;">제32조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883229','JO','');" href="javascript:;">제4항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883317','JO','');" href="javascript:;">제62조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883479','JO','');" href="javascript:;">제4항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883577','JO','');" href="javascript:;">제63조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883585','JO','');" href="javascript:;">제64조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883537','JO','');" href="javascript:;">제68조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883325','JO','');" href="javascript:;">제96조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883297','JO','');" href="javascript:;">제96조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883489','JO','');" href="javascript:;">제99조의9</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883471','JO','');" href="javascript:;">제102조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883395','JO','');" href="javascript:;">제121조의8</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883451','JO','');" href="javascript:;">제121조의9</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883223','JO','');" href="javascript:;">제121조의17</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883373','JO','');" href="javascript:;">제121조의20부터 제121조의22</a>까지, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883331','JO','');" href="javascript:;">제121조의33</a>에 따른 법인세의 면제 및 감면. 다만, 다음 각 목의 경우는 제외한다. </p> 
+        <p class="pty1_de3">가. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883387','JO','');" href="javascript:;">제6조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883389','JO','');" href="javascript:;">제1항</a> 또는 <a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883579','JO','');" href="javascript:;">제6항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883581','JO','');" href="javascript:;">제12조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883437','JO','');" href="javascript:;">제99조의9</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883549','JO','');" href="javascript:;">제121조의8</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883255','JO','');" href="javascript:;">제121조의9</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883281','JO','');" href="javascript:;">제121조의17</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883473','JO','');" href="javascript:;">제121조의20부터 제121조의22</a>까지, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883567','JO','');" href="javascript:;">제121조의33</a>에 따라 법인세의 100분의 100에 상당하는 세액을 감면받는 과세연도의 경우 <span class="sfon"></span></p> 
+        <p class="pty1_de3">나. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883569','JO','');" href="javascript:;">제6조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883371','JO','');" href="javascript:;">제7항</a>에 따라 추가로 감면받는 부분의 경우 <span class="sfon"></span></p> 
+        <p class="pty1_de3">다. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883363','JO','');" href="javascript:;">제63조</a>에 따라 수도권 밖으로 이전하는 경우 <span class="sfon"></span></p> 
+        <p class="pty1_de3">라. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883407','JO','');" href="javascript:;">제68조</a>에 따라 작물재배업에서 발생하는 소득의 경우 <span class="sfon"></span></p> 
+        <p class="pty1_de2_1">② 거주자의 사업소득(<a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883385','JO','');" href="javascript:;">제16조</a>를 적용받는 경우에만 해당 부동산임대업에서 발생하는 소득을 포함한다. 이하 이 항에서 같다)과 비거주자의 국내사업장에서 발생한 사업소득에 대한 소득세(가산세와 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('129609');" href="javascript:;">대통령령</a>으로 정하는 추징세액은 제외하며 사업소득에 대한 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('129635');" href="javascript:;">대통령령</a>으로 정하는 세액공제 등을 하지 아니한 소득세를 말한다)를 계산할 때 다음 각 호의 어느 하나에 해당하는 감면 등을 적용받은 후의 세액이 제2호에 따른 손금산입 및 소득공제 등을 하지 아니한 경우의 사업소득에 대한 산출세액에 100분의 45(산출세액이 3천만원 이하인 부분은 100분의 35)를 곱하여 계산한 세액(이하 “소득세 최저한세액”이라 한다)에 미달하는 경우 그 미달하는 세액에 상당하는 부분에 대해서는 감면 등을 하지 아니한다. <span class="sfon">&lt;개정 2010. 3. 12., 2010. 12. 27., 2011. 12. 31., 2013. 1. 1., 2014. 1. 1., 2014. 12. 23., 2015. 12. 15., 2016. 12. 20., 2017. 12. 19., 2018. 5. 29., 2018. 10. 16., 2018. 12. 24., 2019. 12. 31., 2020. 5. 19., 2020. 12. 29., 2022. 12. 31., 2023. 12. 31., 2025. 12. 23.&gt;</span> </p> 
+        <p class="pty1_de2h">1. 삭제 <span class="sfon">&lt;2019. 12. 31.&gt;</span> </p> 
+        <p class="pty1_de2h">2. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883543','JO','');" href="javascript:;">제8조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883433','JO','');" href="javascript:;">제10조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883313','JO','');" href="javascript:;">제16조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883553','JO','');" href="javascript:;">제28조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883495','JO','');" href="javascript:;">제28조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883521','JO','');" href="javascript:;">제28조의3</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883253','JO','');" href="javascript:;">제28조의5</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883411','JO','');" href="javascript:;">제86조의3</a> 및 <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883251','JO','');" href="javascript:;">제132조의2</a>에 따른 손금산입금액 및 소득공제금액 </p> 
+        <p class="pty1_de2h">3. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883499','JO','');" href="javascript:;">제7조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883587','JO','');" href="javascript:;">제7조의4</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883481','JO','');" href="javascript:;">제8조의3</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883431','JO','');" href="javascript:;">제3항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883541','JO','');" href="javascript:;">제10조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883551','JO','');" href="javascript:;">제12조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883343','JO','');" href="javascript:;">제2항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883263','JO','');" href="javascript:;">제19조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883347','JO','');" href="javascript:;">제1항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883391','JO','');" href="javascript:;">제24조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883345','JO','');" href="javascript:;">제25조의6</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883277','JO','');" href="javascript:;">제25조의8</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883425','JO','');" href="javascript:;">제26조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883533','JO','');" href="javascript:;">제29조의2부터 제29조의5</a>까지, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883467','JO','');" href="javascript:;">제29조의7</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883231','JO','');" href="javascript:;">제29조의8</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883309','JO','');" href="javascript:;">제30조의3</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883261','JO','');" href="javascript:;">제30조의4</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883447','JO','');" href="javascript:;">제31조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883239','JO','');" href="javascript:;">제6항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883547','JO','');" href="javascript:;">제32조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883485','JO','');" href="javascript:;">제4항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883511','JO','');" href="javascript:;">제99조의12</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883355','JO','');" href="javascript:;">제104조의8</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883415','JO','');" href="javascript:;">제104조의14</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883469','JO','');" href="javascript:;">제104조의15</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883449','JO','');" href="javascript:;">제104조의25</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883571','JO','');" href="javascript:;">제104조의30</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883351','JO','');" href="javascript:;">제122조의3</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883555','JO','');" href="javascript:;">제122조의4</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883557','JO','');" href="javascript:;">제1항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883289','JO','');" href="javascript:;">제126조의3</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883291','JO','');" href="javascript:;">제2항</a> 및 <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883417','JO','');" href="javascript:;">제126조의7</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883519','JO','');" href="javascript:;">제8항</a>에 따른 세액공제금액 </p> 
+        <p class="pty1_de2h">4. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883575','JO','');" href="javascript:;">제6조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883299','JO','');" href="javascript:;">제7조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883265','JO','');" href="javascript:;">제12조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883357','JO','');" href="javascript:;">제1항</a>ㆍ제3항, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883523','JO','');" href="javascript:;">제12조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883413','JO','');" href="javascript:;">제21조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883275','JO','');" href="javascript:;">제31조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883409','JO','');" href="javascript:;">제4항</a>ㆍ제5항, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883563','JO','');" href="javascript:;">제32조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883361','JO','');" href="javascript:;">제4항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883419','JO','');" href="javascript:;">제63조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883367','JO','');" href="javascript:;">제64조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883279','JO','');" href="javascript:;">제96조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883561','JO','');" href="javascript:;">제96조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883257','JO','');" href="javascript:;">제99조의9</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883435','JO','');" href="javascript:;">제102조</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883501','JO','');" href="javascript:;">제121조의8</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883293','JO','');" href="javascript:;">제121조의9</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883497','JO','');" href="javascript:;">제121조의17</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883353','JO','');" href="javascript:;">제121조의20부터 제121조의22</a>까지, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883241','JO','');" href="javascript:;">제121조의33</a>에 따른 소득세의 면제 및 감면. 다만, 다음 각 목의 경우는 제외한다. </p> 
+        <p class="pty1_de3">가. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883513','JO','');" href="javascript:;">제6조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883515','JO','');" href="javascript:;">제1항</a> 또는 <a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883283','JO','');" href="javascript:;">제6항</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883445','JO','');" href="javascript:;">제12조의2</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883531','JO','');" href="javascript:;">제99조의9</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883323','JO','');" href="javascript:;">제121조의8</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883487','JO','');" href="javascript:;">제121조의9</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883267','JO','');" href="javascript:;">제121조의17</a>, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883439','JO','');" href="javascript:;">제121조의20부터 제121조의22</a>까지, <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883507','JO','');" href="javascript:;">제121조의33</a>에 따라 소득세의 100분의 100에 상당하는 세액을 감면받는 과세연도의 경우 <span class="sfon"></span></p> 
+        <p class="pty1_de3">나. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883375','JO','');" href="javascript:;">제6조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034883503','JO','');" href="javascript:;">제7항</a>에 따라 추가로 감면받는 부분의 경우 <span class="sfon"></span></p> 
+        <p class="pty1_de3">다. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034883565','JO','');" href="javascript:;">제63조</a>에 따라 수도권 밖으로 이전하는 경우 <span class="sfon"></span></p> 
+        <p class="pty1_de2_1">③ 이 법을 적용할 때 제1항 각 호 및 제2항 각 호에 열거된 감면 등과 그 밖의 감면 등이 동시에 적용되는 경우 그 적용순위는 제1항 각 호 및 제2항 각 호에 열거된 감면 등을 먼저 적용한다. </p> 
+        <p class="pty1_de2_1">④ 제1항 및 제2항에 따른 최저한세의 적용에 필요한 사항은 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('129636');" href="javascript:;">대통령령</a>으로 정한다. </p> 
+        <p class="pty1_de2"> <span class="sfon">[전문개정 2010. 1. 1.]</span> </p> 
+        <p></p> 
+       </div> 
+      </div> 
+      <!-- 조문정보 --> 
+     </div> 
+    </div> 
+   </div> 
+   <!--// viewerCont --> 
+  </div> 
+  <div class="layerType layerPop" id="infoSaveLayer"> 
+   <div class="inner"> 
+    <!-- cont --> 
+    <div class="cont"> 
+     <form id="infoSaveForm" name="infoSaveForm" target="_self" action=""> 
+      <fieldset> 
+       <legend>파일형식 선택</legend> 
+       <input type="hidden" name="saveExt" value="" /> 
+       <input type="hidden" name="lsJoLnkSeq" value="1000890962" /> 
+       <!-- checkboxWrap --> 
+       <div class="checkboxWrap caseCol"> 
+        <div class="checkbox"> 
+         <input type="radio" class="radio" name="fileType" id="FileSaveHwp" checked="checked" value="hwp" style="margin-left:50px" /> 
+         <label for="FileSaveHwp">HWP</label> 
+        </div> 
+        <div class="checkbox"> 
+         <input type="radio" class="radio" name="fileType" id="FileSavePdf" value="pdf" /> 
+         <label for="FileSavePdf">PDF</label> 
+        </div> 
+       </div> 
+       <!-- // checkboxWrap --> 
+      </fieldset> 
+     </form> 
+    </div> 
+    <!-- // cont --> 
+    <div class="btnBottom right"> 
+     <button class="btn btnWhite btnSm" type="button" onclick="fn_layer_close(this)">취소</button> 
+     <button id="lsSaveBtn" class="btn btnInBlue btnSm" type="button" onclick="saveContent();">저장</button> 
+    </div> 
+   </div> 
+  </div> 
+  <!--/ viewer --> 
+  <script type="text/javascript" src="/LSW/assets/js/common/hrefRemove.js"></script>  
+  <script type="text/javascript">
+//<![CDATA[
+	 /* jstl 변수를 스크립트에서 사용하기위해 html태그 뒤에 스크립트를 선언 */	 
+	var lsSearchObj = new LsSearchObj();
+
+	if ((typeof Range !=="undefined") && !Range.prototype.createContextualFragment){
+		Range.prototype.createContextualFragment = function(html){
+			var frag = document.createDocumentFragment(),
+			div = document.createElement("div");
+			frag.appendChild(div);
+			div.outerHTML = html;
+			return frag;
+		};
+	}
+	
+	function onKeyDown(){
+		if(event.keyCode == 13){
+			joBdySearch();
+		}
+	}
+
+	function joBdySearch() {
+		var schKey = el("bdySearch");
+		var chkMode = "down";
+
+		if (schKey == null || schKey.value == "") {
+			alert("검색키워드를 입력하세요");
+			el("bdySearch").focus();
+
+		} else {
+			bodyInfoRSearch('linkedJoContent');
+		}
+	}
+	//]]>
+</script>  
+  <script type="text/javascript" src="/LSW/assets/js/common/hrefRemove.js"></script>  
+ </body>
+</html>
