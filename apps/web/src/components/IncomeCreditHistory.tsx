@@ -1,10 +1,11 @@
 import {useEffect, useState} from 'react';
 import {request} from '../api';
 import {useLocale} from '../locale';
+import {creditDocuments} from './VietnamCreditForm';
 
 type Summary = {id:string; created_at:string; matches_current_income_facts:boolean;
   document_inventory_complete:boolean; all_foreign_items_assessed:boolean};
-type Workpaper = {result:{assessed_credit_subtotal:string; currency:string;
+type Workpaper = {dossier_review:{missing_documents:string[]; unchecked_documents:string[]; missing_document_explanations:Record<string,string>}; result:{assessed_credit_subtotal:string; currency:string;
   unassessed_foreign_income_indexes:number[]; items:{income_index:number; credit:string;
   saved_income:{description:string; source_jurisdiction:string; gross_amount:string};
   basis:{basis_explanation:string; vietnam_tax_limit:string}}[]}};
@@ -45,6 +46,9 @@ export default function IncomeCreditHistory({caseId, revision}:{caseId:string; r
       {!row.all_foreign_items_assessed&&<p>{say('仍有境外收入未纳入本底稿','Some foreign income is not assessed in this workpaper')}</p>}
     </div>)}
     {detail&&<section aria-label={say('抵免底稿明细','Credit workpaper details')}>
+      <h5>{say('材料核验记录','Document review record')}</h5>
+      {detail.dossier_review.missing_documents.map(kind=><p key={kind}>{creditDocuments.find(row=>row[0]===kind)?.[locale==='en'?2:1]||kind}: {say('缺失','Missing')} — {detail.dossier_review.missing_document_explanations[kind]||say('未填写说明','No explanation recorded')}</p>)}
+      {detail.dossier_review.unchecked_documents.map(kind=><p key={kind}>{creditDocuments.find(row=>row[0]===kind)?.[locale==='en'?2:1]||kind}: {say('尚未核对形式及内容','Form and content not checked')}</p>)}
       <p>{say('已核对项目抵免小计','Reviewed credit subtotal')}: {detail.result.assessed_credit_subtotal} {detail.result.currency}</p>
       {detail.result.items.map(item=><div key={item.income_index}>
         <h5>{say('收入','Income')} {item.income_index+1}: {item.saved_income.description}</h5>

@@ -38,6 +38,9 @@ for(const route of [
   }
   await verified.check();
   await creditForm.getByLabel(route.underlying?'Indirect-credit documents':'Tax-sparing documents',{exact:true}).check();
+  const missingKind=route.underlying?'Ownership legal evidence':'Foreign income tax return';
+  const missingReason='Foreign authority confirmation requested; evidence is still pending.';
+  await creditForm.getByLabel(`${missingKind}: missing-document explanation`,{exact:true}).fill(missingReason);
   await creditForm.getByLabel('Treaty credit application',{exact:true}).fill('case-evidence/02-HTQT');
   await creditForm.getByLabel('Treaty credit application: required form and content checked',{exact:true}).check();
   await creditForm.getByLabel('Treaty credit application',{exact:true}).fill('case-evidence/02-HTQT-revised');
@@ -53,12 +56,14 @@ for(const route of [
   await history.getByRole('button',{name:/View workpaper/}).click();
   await expect(history.getByText(new RegExp(`^Reviewed credit subtotal: ${route.credit}(?:\\.0+)? VND$`))).toBeVisible();
   await expect(history.getByText('Documents missing or unchecked',{exact:true})).toBeVisible();
+  await expect(history.getByRole('region',{name:'Credit workpaper details'})).toContainText(missingReason);
   const current=await (await page.request.get(path)).json();
   current.income_tax.incomes[0].gross_amount='2000';
   expect((await page.request.put(path,{headers,data:{revision:current.revision,request_id:crypto.randomUUID(),inputs:current.income_tax}})).status()).toBe(200);
   await openIncome(page);
   await expect(history.getByText('Income facts changed: historical workpaper only',{exact:true})).toBeVisible();
   await history.getByRole('button',{name:/View workpaper/}).click();
+  await expect(history.getByRole('region',{name:'Credit workpaper details'})).toContainText(missingReason);
   await expect(history.getByText(new RegExp(`^Reviewed credit subtotal: ${route.credit}(?:\\.0+)? VND$`))).toBeVisible();
 });
 

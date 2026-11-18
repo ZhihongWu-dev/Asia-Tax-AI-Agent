@@ -33,3 +33,18 @@ Subsequent browser acceptance now covers four real form paths: Indonesian divide
 Fixed stale confirmations: editing any line amount or basis explanation clears that line's treaty/basis and profit-pool confirmations; changing a document reference clears its form/content confirmation. Browser cases verify these transitions before re-confirming and saving. Frontend build and scoped diff checks passed; existing large-bundle warning remains. Original optimizer PID16760 remains live, with five completed zero-failure exhaustive checks; no frozen inputs changed.
 
 These four UI paths do not establish complete Vietnam corporate assessment, legal entitlement for arbitrary businesses, or all-country income-tax acceptance. Those gates remain open.
+# Missing-document explanation follow-up
+
+The workpaper form now exposes the existing dossier contract's missing-document
+explanations for required, absent materials. Only currently required and absent
+items are submitted; supplying a reference or deselecting a credit type removes
+inapplicable explanations from the payload without discarding the user's draft.
+Explanations remain limited to 4,000 characters and do not satisfy a document
+requirement. History now displays missing and unchecked document names and the
+saved explanation, including after income facts change.
+
+Validation: production build passed; 21 backend dossier/workpaper tests passed.
+Browser coverage extends all four supported foreign-credit routes to retain
+the explanation on reopening and on the historical workpaper after an income
+edit. This remains a credit workpaper, not a complete annual assessment.
+

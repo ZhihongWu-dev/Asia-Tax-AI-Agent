@@ -3,7 +3,7 @@ import {api, ApiError, request} from '../api';
 import {useLocale} from '../locale';
 import type {Case} from '../workspace';
 
-const documents=[
+export const creditDocuments=[
   ['treaty_credit_application','协定抵免申请','Treaty credit application'],
   ['foreign_income_tax_return','境外所得税申报表','Foreign income tax return'],
   ['foreign_payment_receipt','境外缴税凭证','Foreign payment receipt'],
@@ -16,6 +16,12 @@ const documents=[
   ['foreign_authority_underlying_tax_confirmation','境外税务机关底层税确认','Foreign authority underlying-tax confirmation'],
   ['representative_authorisation','代理授权文件','Representative authorisation'],
 ] as const;
+const documents=creditDocuments;
+const requiredByType:Record<string,string[]>={
+  direct:['foreign_income_tax_return','foreign_payment_receipt','foreign_authority_paid_tax_confirmation'],
+  tax_sparing:['foreign_income_tax_return','foreign_business_legal_evidence','foreign_authority_sparing_confirmation'],
+  indirect:['ownership_legal_evidence','distributor_foreign_tax_return','dividend_withholding_return','foreign_authority_underlying_tax_confirmation'],
+};
 
 export default function VietnamCreditForm({current,disabled,onUpdate}:{current:Case;disabled:boolean;onUpdate:(doc:Case)=>void}) {
   const {locale}=useLocale(), index=locale==='en'?2:1;
@@ -30,6 +36,9 @@ export default function VietnamCreditForm({current,disabled,onUpdate}:{current:C
     item.source_jurisdiction==='sg'&&['interest','royalty'].includes(item.category)?'singapore_interest_royalty':
     ['hk','sg'].includes(item.source_jurisdiction)&&item.category==='dividend'&&item.foreign_tax_paid!==null&&/^0(?:\.0+)?$/.test(item.foreign_tax_paid)?'underlying_dividend':''}));
   if(!candidates.some(row=>row.method))return null;
+  const requiredDocuments=new Set(['treaty_credit_application',
+    ...Object.entries(requiredByType).filter(([kind])=>values[kind]==='true').flatMap(([,kinds])=>kinds),
+    ...(values.represented==='true'?['representative_authorisation']:[])]);
   const edit=(key:string,value:string)=>{setValues(v=>{
     const next={...v,[key]:value};
     const line=/^(\d+)_(.+)$/.exec(key);
@@ -54,7 +63,8 @@ export default function VietnamCreditForm({current,disabled,onUpdate}:{current:C
     });
     const credit_types=['direct','tax_sparing','indirect'].filter(kind=>values[kind]==='true');
     if(!lines.length||!credit_types.length){setError(say('请选择收入项目和待核验的抵免材料类别。','Select income items and credit document categories.'));return;}
-    const basis={lines,dossier:{credit_types,represented:values.represented==='true',documents:documents.filter(([key])=>values[key]?.trim()).map(([kind])=>({kind,evidence_reference:values[kind].trim(),required_form_and_content_checked:values[`${kind}_checked`]==='true'}))}};
+    const missing_document_explanations=Object.fromEntries(documents.filter(([key])=>requiredDocuments.has(key)&&!values[key]?.trim()&&values[`${key}_missing`]?.trim()).map(([key])=>[key,values[`${key}_missing`].trim()]));
+    const basis={lines,dossier:{credit_types,represented:values.represented==='true',missing_document_explanations,documents:documents.filter(([key])=>values[key]?.trim()).map(([kind])=>({kind,evidence_reference:values[kind].trim(),required_form_and_content_checked:values[`${kind}_checked`]==='true'}))}};
     const payload=JSON.stringify([current.revision,basis]);
     if(retry.current.payload!==payload)retry.current={payload,id:crypto.randomUUID()};
     setSaving(true);setError('');
@@ -91,7 +101,8 @@ export default function VietnamCreditForm({current,disabled,onUpdate}:{current:C
         {check('indirect',say('间接抵免材料','Indirect-credit documents'))}
         {check('represented',say('由代理人办理','Filed through a representative'))}
         <p>{say('填写案件材料编号；未提供或未核对的必要材料会保留为待补项。','Enter case evidence references. Missing or unchecked required documents remain outstanding.')}</p>
-        {documents.map(row=><div key={row[0]}>{input(row[0],row[index],false)}{values[row[0]]?.trim()&&check(`${row[0]}_checked`,row[index]+say('：已核对法定形式及内容',': required form and content checked'))}</div>)}
+        {documents.map(row=><div key={row[0]}>{input(row[0],row[index],false)}{values[row[0]]?.trim()?check(`${row[0]}_checked`,row[index]+say('：已核对法定形式及内容',': required form and content checked')):requiredDocuments.has(row[0])&&<label>{row[index]+say('：缺失说明',': missing-document explanation')}<textarea maxLength={4000} value={values[`${row[0]}_missing`]||''} onChange={e=>edit(`${row[0]}_missing`,e.target.value)}/></label>}</div>)}
+        <p>{say('缺失说明会保存到本次底稿，但不会将缺失材料标记为齐全。','Explanations are saved with this workpaper; missing documents remain outstanding.')}</p>
       </fieldset>
       <button type="submit">{saving?say('保存中…','Saving…'):say('计算并保存抵免底稿','Calculate and save credit workpaper')}</button>
     </fieldset>{error&&<p role="alert">{error}</p>}</form>
