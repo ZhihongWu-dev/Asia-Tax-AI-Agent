@@ -1,0 +1,19 @@
+{
+  "checked_on": "2026-11-18",
+  "implementation_commit": "1d1ed4a",
+  "browser": "Microsoft Edge via Playwright chromium project",
+  "full_run": {"command": "npx --no-install playwright test --workers=2", "passed": 118, "failed": 1, "duration": "7.1m", "exit_code": 1},
+  "failure": {
+    "test": "Thailand dividends save and reopen final_withholding",
+    "stage": "Initial page load before income entry or tax assertions",
+    "trace_console": "Failed to load resource: net::ERR_NO_BUFFER_SPACE",
+    "resource": "http://127.0.0.1:5174/@react-refresh",
+    "subsequent_page_error": "@vitejs/plugin-react can't detect preamble. Something is wrong.",
+    "interpretation": "Trace establishes failure to load development refresh runtime; it does not establish a tax-calculation defect or a permanent fix for browser resource exhaustion.",
+    "trace_preserved_in_audit": "browser-thai-final-withholding-failure-20261118/trace.zip"
+  },
+  "targeted_reproduction": {"command": "npx --no-install playwright test tests/income-tax.spec.ts -g 'Thailand dividends save and reopen' --repeat-each=3 --workers=2", "passed": 6, "failed": 0, "seconds": 58.0, "exit_code": 0},
+  "product_changes": "None; no ignored exception, automatic retry, modified expectation or tax formula change.",
+  "limits": "Local fixture authentication, deterministic provider and SQLite. Targeted passes do not rewrite the failed full-run result or prove hosted acceptance.",
+  "completion_claim": false
+}

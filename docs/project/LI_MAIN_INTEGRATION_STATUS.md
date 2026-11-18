@@ -13,6 +13,11 @@ promotion remain incomplete.
   The separately executed database-tool suite passed all 92 tests in 32.02
   seconds in its dedicated environment. The application environment lacks its
   extraction dependencies and could not collect that suite.
+- The full two-worker browser run passed 118 of 119 cases. One initial-page
+  load failed because Edge could not fetch the development React refresh module
+  (`ERR_NO_BUFFER_SPACE`); the preserved trace shows the subsequent preamble
+  error. Both Thai dividend elections then passed three times each (six checks)
+  without code changes or retries. This is not recorded as a green full run.
 - The income-tax suite now passes 1,406 tests (23.46 seconds). Vietnam ordinary
   business and property rental have saved-case APIs and bilingual intake/results.
   The 59-test income browser regression passed before rental UI integration;
@@ -61,6 +66,7 @@ promotion remain incomplete.
 Evidence: [rental implementation](data-reconciliation/vietnam-business-consolidation-20261118.md),
 [full offline regression](data-reconciliation/full-offline-regression-20261118.json),
 [database-tool regression](data-reconciliation/database-tools-regression-20261118.json),
+[full browser run and failure reproduction](data-reconciliation/full-browser-regression-20261118.json),
 [business implementation](data-reconciliation/vietnam-business-individual-review-20261118.md),
 [deployment preparation](RENDER_DEPLOYMENT.md),
 [current catalog plan](data-reconciliation/catalog-migration-plan-overlay-safe-20261118.json),
