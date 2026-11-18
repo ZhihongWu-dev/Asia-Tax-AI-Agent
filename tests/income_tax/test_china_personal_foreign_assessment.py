@@ -85,3 +85,26 @@ def test_saved_api_restart_and_report_preserve_credit_pool(tmp_path):
         rejected=client.post(path+'/runs',headers=headers,json=dict(revision=before['revision'],request_id=str(uuid4()),basis=invalid))
         assert rejected.status_code==422 and client.get(path).json()==before
     service.store.engine.dispose()
+
+@pytest.mark.parametrize('category,factor',[('service_remuneration','0.8'),('author_remuneration','0.56'),('royalty','0.8')])
+def test_six_decimal_saved_income_preserves_derived_expense_precision(category,factor):
+    d=facts();d['incomes'][1].update(category=category,gross_amount='40000.000001')
+    r=run(d,basis())
+    expected=Decimal('40000.000001')*Decimal(factor)
+    assert Decimal(r['country_basis_reconciliation'][1]['comprehensive_income_amount'])==expected
+    assert Decimal(r['comprehensive_taxable_income'])==expected
+    assert Decimal(r['final_tax']).is_finite()
+
+
+def test_public_money_still_rejects_more_than_six_places():
+    d=facts();d['incomes'][1]['gross_amount']='40000.0000001'
+    with pytest.raises(ValueError,match='six decimal'):run(d,basis())
+
+
+def test_derived_precision_is_independent_of_ambient_context():
+    from decimal import localcontext
+    d=facts();d['incomes'][1].update(category='author_remuneration',gross_amount='40000.000001')
+    expected=run(d,basis())
+    with localcontext() as ctx:
+        ctx.prec=4
+        assert run(d,basis())==expected

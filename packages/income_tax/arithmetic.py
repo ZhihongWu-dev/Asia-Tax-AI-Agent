@@ -5,18 +5,27 @@ from decimal import Decimal, InvalidOperation, localcontext
 ZERO = Decimal("0")
 
 
-def amount(value):
+def amount(value, *, max_decimal_places=6, max_value=Decimal("1e18")):
     if isinstance(value, (float, bool)):
         raise ValueError("Use a decimal string, integer or Decimal, never a binary float")
     try:
         result = Decimal(value)
     except (InvalidOperation, TypeError, ValueError):
         raise ValueError("Invalid decimal amount") from None
-    if not result.is_finite() or result < 0 or result > Decimal("1e18"):
-        raise ValueError("Amount must be finite and between zero and 1e18")
-    if result.as_tuple().exponent < -6:
-        raise ValueError("Amount precision exceeds six decimal places")
+    if not result.is_finite() or result < 0 or result > max_value:
+        raise ValueError(f"Amount must be finite and between zero and {max_value}")
+    if result.as_tuple().exponent < -max_decimal_places:
+        raise ValueError("Amount precision exceeds six decimal places" if max_decimal_places == 6 else "Derived amount exceeds internal precision limit")
     return result
+
+
+def computed_amount(value):
+    """Validated internal aggregates/products; never use for public money inputs.
+
+    Up to200 saved income rows and statutory factors fit within22 integer and18
+    fractional places in the fixed40-digit calculation context.
+    """
+    return amount(value, max_decimal_places=18, max_value=Decimal('1e22'))
 
 
 @dataclass(frozen=True)
@@ -34,8 +43,8 @@ class BandResult:
     tax: Decimal
 
 
-def marginal_tax(base, bands):
-    base = amount(base)
+def marginal_tax(base, bands, *, computed_base=False):
+    base = computed_amount(base) if computed_base else amount(base)
     bands = tuple(bands)
     if not bands or bands[-1].upper is not None:
         raise ValueError("Schedule must end in an unbounded band")

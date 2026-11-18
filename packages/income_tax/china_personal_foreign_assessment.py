@@ -71,9 +71,9 @@ def assess(case,workpaper,prepaid_tax):
         comp_total=sum((r['comprehensive_income_amount'] for r in rows),ZERO)
         if not comp_total and p.comprehensive_deductions:raise ValueError('Comprehensive deductions require comprehensive income')
         comp_base=max(ZERO,comp_total-Decimal('60000')-p.comprehensive_deductions)
-        comp_tax=marginal_tax(comp_base,COMPREHENSIVE_BANDS)[0]
+        comp_tax=marginal_tax(comp_base,COMPREHENSIVE_BANDS,computed_base=True)[0]
         business_base=sum((r['business_taxable_income'] for r in rows),ZERO)
-        business_tax=marginal_tax(business_base,BANDS)[0]
+        business_tax=marginal_tax(business_base,BANDS,computed_base=True)[0]
         result=calculate(dict(tax_year=2026,countries=rows,worldwide_comprehensive_tax=comp_tax,
             worldwide_business_tax=business_tax,comprehensive_tax_reductions=p.comprehensive_tax_reductions,
             business_tax_reductions=p.business_tax_reductions,resident_source_fx_and_category_bases_verified=True,

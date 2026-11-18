@@ -7,9 +7,11 @@ from copy import deepcopy
 from decimal import Decimal, localcontext
 import json
 from pathlib import Path
-from typing import Literal
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
+from typing import Annotated, Literal
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, BeforeValidator
 from packages.contracts.income_tax import Jurisdiction, Money
+from .arithmetic import computed_amount
+ComputedMoney = Annotated[Decimal, BeforeValidator(computed_amount)]
 
 SOURCES = json.loads(Path(__file__).with_name('cn_personal_foreign_sources.json').read_text(encoding='utf-8'))['sources']
 ZERO = Decimal(0)
@@ -23,9 +25,9 @@ class Excess(Strict):
 
 class Country(Strict):
     country: Jurisdiction
-    comprehensive_income_amount: Money
-    business_taxable_income: Money
-    other_category_chinese_tax: Money
+    comprehensive_income_amount: ComputedMoney
+    business_taxable_income: ComputedMoney
+    other_category_chinese_tax: ComputedMoney
     other_category_tax_reductions: Money = Decimal(0)
     eligible_foreign_tax_paid: Money
     prior_excess: list[Excess] = Field(default_factory=list, max_length=100)
@@ -33,8 +35,8 @@ class Country(Strict):
 class Workpaper(Strict):
     tax_year: Literal[2026]
     countries: list[Country] = Field(min_length=1, max_length=11)
-    worldwide_comprehensive_tax: Money
-    worldwide_business_tax: Money
+    worldwide_comprehensive_tax: ComputedMoney
+    worldwide_business_tax: ComputedMoney
     comprehensive_tax_reductions: Money = Decimal(0)
     business_tax_reductions: Money = Decimal(0)
     resident_source_fx_and_category_bases_verified: StrictBool

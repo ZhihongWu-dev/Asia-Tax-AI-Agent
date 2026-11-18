@@ -1,0 +1,18 @@
+{
+  "status": "derived_precision_defect_fixed",
+  "reproduced": "Valid saved service remuneration40000.000001 failed after statutory expense factor with Amount precision exceeds six decimal places.",
+  "change": "Keep public money validation at six decimal places. Explicit internal computed amounts and marginal-tax opt-in preserve derived decimal precision, including aggregated category inputs to the personal foreign-credit component. No premature rounding introduced.",
+  "validation": {
+    "income_and_reporting_passed": 1752,
+    "seconds": 42.08,
+    "exit_code": 0,
+    "new_cases": [
+      "Service remuneration fractional input",
+      "Author remuneration fractional input",
+      "Royalty fractional input",
+      "Public input precision remains enforced",
+      "Low ambient decimal context gives identical result"
+    ]
+  },
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}
