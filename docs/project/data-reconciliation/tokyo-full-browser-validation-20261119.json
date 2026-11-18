@@ -1,0 +1,12 @@
+{
+  "runtime_commit": "17cea1c",
+  "session_id": 78813,
+  "status": "completed",
+  "started_at": "2026-11-18T21:42:58.032760+00:00",
+  "command": "playwright test --workers=2",
+  "output_directory": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/tokyo-full-browser-20261119",
+  "scope": "Complete browser suite at runtime17cea1c after Tokyo workpaper/report changes; all122 passed with pinned local engine and fixture authentication. Domain citation filter fix6eb8a0b followed server startup and has separate real HTTP and23-test evidence.",
+  "passed": 122,
+  "exit_code": 0,
+  "duration": "9.6m"
+}

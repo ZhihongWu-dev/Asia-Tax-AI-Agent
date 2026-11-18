@@ -21,7 +21,8 @@
         "optimizer-final-validation-20261119.json",
         "local-regression-after-reconciliation-20261119.json",
         "local-regression-personal-reconciliation-20261119.json",
-        "local-domain-citation-filter-fix-20261119.json"
+        "local-domain-citation-filter-fix-20261119.json",
+        "tokyo-full-browser-validation-20261119.json"
       ],
       "limits": "121 browser tests, complete v5 golden/checker suite and offline backend regression. Real hosted authentication/provider end-to-end acceptance is not established. Original/v4 comparison jobs remain live."
     },
@@ -107,7 +108,7 @@
   ],
   "latest_checks": {
     "backend": "2593 unique application tests passed across full run and58-test pinned-engine followup;35 skipped engine cases recovered,4 environment skips remain,27 integration deselections",
-    "browser": "121 passed in10.2m at runtime4f5805d;exit0",
+    "browser": "122passed in9.6m at runtime17cea1c;exit0. Later domain-citation fix has independent real HTTP and23-test coverage.",
     "korean_archive": "1 targeted test passed after backend collection; 14 exact originals, 12 newly restored",
     "thai_source_snapshots": "20 focused tests and 1455 income-tax tests passed; four original hashes verified in persisted/report flow",
     "china_business_sources": "1466 income/report tests passed; final provenance metadata verified by40 focused tests",
