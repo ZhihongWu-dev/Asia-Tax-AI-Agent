@@ -1,0 +1,31 @@
+{
+  "status": "existing_model_review_and_regression_passed_integration_incomplete",
+  "git_head_tested": "79d791e",
+  "test_command": "python -X utf8 -m pytest tests/income_tax -q",
+  "test_result": {
+    "passed": 1280,
+    "seconds": 21.22
+  },
+  "saved_case_findings": [
+    "IncomeItem.gross_amount is explicitly gross income; do not apply annex net-income-plus-tax formula directly to it.",
+    "IncomeItem.foreign_tax_paid belongs to each indexed income item; any portfolio adapter must reconcile claimed actual tax to the same item.",
+    "Existing vn_company_2026 deliberately rejects foreign incomes and is not a completed foreign-income workflow.",
+    "A new foreign-case policy must preserve domestic/foreign project loss separation, derive tax limits on corresponding bases, and retain current treaty/procedure evidence in the immutable assessment snapshot."
+  ],
+  "singapore_followup": {
+    "source_file": "database/raw/sg-vn/treaty.sg-vn.1994.en.pdf",
+    "source_sha256": "948b2597f2996af06d048be2eb1a74ca1772e7d110b31a969985fa3dbdeca503",
+    "url": "https://www.iras.gov.sg/media/docs/default-source/dtas/singapore-vietnam-dta-(ratified)(mli)(01092023).pdf",
+    "findings": [
+      "AnnexB ArticleIX deletes treatyArticle23 limitation-of-relief without renumbering subsequent articles; do not confuse with Article24 credit.",
+      "AnnexA adds Article28A treaty-abuse test.",
+      "Article24(4)(a) deemed10-percent tax concerns Singapore interest and royalties, not Singapore dividends. Dividend underlying credit remains a separate10-percent ownership question."
+    ],
+    "remaining": "Complete paragraph conditions and source-version binding before enabling case calculations."
+  },
+  "limits": [
+    "Full existing test suite passing does not prove missing business scenarios complete.",
+    "Original optimizer checker remains a separate live verification.",
+    "No remote branch delivery or production deployment completed."
+  ]
+}
