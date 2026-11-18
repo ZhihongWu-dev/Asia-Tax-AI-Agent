@@ -104,7 +104,7 @@ class PlanningStore:
             source = select(*(literal(value, type_=runs.c[key].type) for key, value in values.items()),
                             conversations.c.document).where(
                                 conversations.c.id == case_id, conversations.c.owner == owner,
-                                conversations.c.revision == revision)
+                                conversations.c.revision == revision).with_for_update()
             if c.dialect.name == 'postgresql':
                 from sqlalchemy.dialects.postgresql import insert
             elif c.dialect.name == 'sqlite':

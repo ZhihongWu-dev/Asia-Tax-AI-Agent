@@ -179,6 +179,13 @@ def get(case_id: UUID, workspace: str = Depends(owner), service: ChatService = D
     return public(call(service.store.get, workspace, str(case_id)))
 
 
+@router.delete("/cases/{case_id}")
+def delete_case(case_id: UUID, body: Mutation, workspace: str = Depends(owner),
+                service: ChatService = Depends(get_service)):
+    call(service.store.delete, workspace, str(case_id), body.revision)
+    return {"deleted": str(case_id)}
+
+
 @router.post("/cases/{case_id}/messages")
 async def message(case_id: UUID, body: Message, request: Request, response: Response, workspace: str = Depends(owner), service: ChatService = Depends(get_service)):
     text = body.text.strip()

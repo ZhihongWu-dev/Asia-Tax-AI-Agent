@@ -103,6 +103,7 @@ export const api = {
     request<{ fields: FieldSpec[]; model_configured: boolean; can_review?: boolean }>("/session"),
   list: () => request<Case[]>("/cases"),
   create: () => request<Case>("/cases", "POST"),
+  deleteCase: (doc: Case, requestId: string) => request<{deleted: string}>(`/cases/${doc.id}`, "DELETE", {revision: doc.revision, request_id: requestId}),
   get: (id: string) => request<Case>(`/cases/${id}`),
   domainCapabilities: () => request<{ready: boolean; release: string; supported_templates: string[]}>("/domain/capabilities"),
   domainSetup: (doc: Case, caseInput: Record<string, unknown>, dataApproved: boolean, requestId: string,

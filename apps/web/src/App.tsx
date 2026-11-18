@@ -43,7 +43,7 @@ export default function App() {
     analyze,
     newCase: createCase,
     retry,
-    organize, partial, canStop, stop,
+    organize, deleteCase, partial, canStop, stop,
   } = useWorkspace();
   const [showConsent, setShowConsent] = useState(false);
   const [consent, setConsent] = useState(false);
@@ -111,6 +111,7 @@ export default function App() {
           cases={cases}
           busy={busy}
           onOrganize={organize}
+          onDelete={deleteCase}
           activeId={current.id}
           onNew={newCase}
           onAtlas={() => { setAtlasOpen(true); setPanel(null); setMobileNav(false); }}

@@ -24,6 +24,7 @@ export default function Sidebar({
   onPanel,
   onClose,
   onOrganize,
+  onDelete,
   busy,
 }: {
   cases: Case[];
@@ -34,6 +35,7 @@ export default function Sidebar({
   onPanel: (panel: Panel) => void;
   onClose: () => void;
   onOrganize: (id: string, changes: { title?: string; archived?: boolean }) => Promise<boolean>;
+  onDelete: (id: string) => Promise<boolean>;
   busy: boolean;
 }) {
   const { t, locale } = useLocale();
@@ -109,6 +111,11 @@ export default function Sidebar({
             <span>{caseTitle(c, t)}</span>
           </HintButton>
           <ChatMenu title={caseTitle(c, t)} archived={archived} disabled={busy}
+            onDelete={async () => {
+              if (!window.confirm(say('永久删除此对话及其计算记录？此操作无法撤销。', 'Permanently delete this chat and its calculation records? This cannot be undone.'))) return;
+              setActionError(false);
+              if (!await onDelete(c.id)) setActionError(true);
+            }}
             onRename={() => { setEditing(c.id); setTitle(caseTitle(c, t)); }}
             onArchive={async () => {
               setActionError(false);

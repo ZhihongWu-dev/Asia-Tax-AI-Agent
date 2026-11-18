@@ -79,3 +79,22 @@ class ChatStore:
             if result.rowcount != 1:
                 raise RevisionConflict()
         return doc
+
+    def delete(self, owner: str, case_id: str, expected: int) -> None:
+        """Remove a case and its durable job snapshots in one transaction."""
+        from packages.domain_bridge.planning_store import runs
+        with self.engine.begin() as c:
+            revision = c.execute(select(conversations.c.revision).where(
+                conversations.c.id == case_id, conversations.c.owner == owner,
+            ).with_for_update()).scalar_one_or_none()
+            if revision is None:
+                raise CaseNotFound()
+            if revision != expected:
+                raise RevisionConflict()
+            c.execute(runs.delete().where(runs.c.case_id == case_id, runs.c.owner == owner))
+            result = c.execute(conversations.delete().where(
+                conversations.c.id == case_id, conversations.c.owner == owner,
+                conversations.c.revision == expected,
+            ))
+            if result.rowcount != 1:
+                raise RevisionConflict()

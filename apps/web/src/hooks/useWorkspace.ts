@@ -220,6 +220,30 @@ export function useWorkspace() {
     setDrafts((all) => ({ ...all, [current.id]: text }));
     setEntrySelections(all => { const copy = { ...all }; delete copy[current.id]; return copy; });
   }
+  function deleteCase(id: string) {
+    const doc = cases.find(c => c.id === id);
+    if (!doc) return Promise.resolve(false);
+    const requestId = crypto.randomUUID();
+    let deleted = false;
+    return perform(async () => {
+      if (!deleted) {
+        try { await api.deleteCase(doc, requestId); }
+        catch (e) {
+          if (e instanceof ApiError && e.code === 'revision_conflict') update(await api.get(id));
+          // A lost deletion response can be retried without resurrecting the case.
+          if (!(e instanceof ApiError && e.code === 'case_not_found')) throw e;
+        }
+        deleted = true;
+      }
+      const remaining = cases.filter(c => c.id !== id);
+      if (!remaining.length) remaining.push(await api.create());
+      setCases(remaining);
+      if (current?.id === id) setActiveId(remaining[0].id);
+      setDrafts(all => { const next = {...all}; delete next[id]; return next; });
+      setEntrySelections(all => { const next = {...all}; delete next[id]; return next; });
+      setOutbox(all => all.filter(item => item.caseId !== id));
+    }, id);
+  }
   function organize(id: string, changes: { title?: string; archived?: boolean }) {
     const doc = cases.find(c => c.id === id);
     if (!doc) return Promise.resolve(false);
@@ -241,6 +265,7 @@ export function useWorkspace() {
     canStop: Boolean(partial) && partial?.caseId === current?.id,
     stop: () => controller.current?.abort(),
     organize,
+    deleteCase,
     current,
     applyServerCase: update,
     fields,
