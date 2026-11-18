@@ -1,6 +1,8 @@
 import asyncio
 from pathlib import Path
 import sys
+import subprocess
+import time
 
 import pytest
 
@@ -10,6 +12,73 @@ from packages.domain_bridge.planning_store import PlanningStore, LeaseLost, meta
 from packages.domain_bridge.planning_worker import run_once
 
 ROOT = Path(__file__).resolve().parents[2]
+
+
+def test_abrupt_worker_death_recovers_in_fresh_process(setup, tmp_path):
+    """Real process death and natural lease expiry; synthetic executor only."""
+    from sqlalchemy import select
+    from packages.domain_bridge.planning_store import runs
+
+    jobs, job = setup
+    ready = tmp_path / 'worker-ready'
+    script = '''
+import asyncio, sys
+from pathlib import Path
+from sqlalchemy import create_engine
+from packages.domain_bridge.planning_store import PlanningStore
+from packages.domain_bridge.planning_worker import run_once
+engine = create_engine(sys.argv[1])
+store = PlanningStore(engine)
+async def verify(row):
+    return {'version': 'one'}
+async def execute(row):
+    if sys.argv[3] == 'wait':
+        Path(sys.argv[2]).write_text(row['id'], encoding='utf-8')
+        await asyncio.sleep(60)
+    return {'amount': row['input']['amount'], 'recovered': True}
+try:
+    asyncio.run(run_once(store, execute, verify, lease_seconds=5))
+finally:
+    engine.dispose()
+'''
+    args = [sys.executable, '-c', script, str(jobs.engine.url), str(ready)]
+    child = subprocess.Popen(args + ['wait'], cwd=ROOT,
+                             stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
+    try:
+        deadline = time.monotonic() + 20
+        while not ready.exists() and child.poll() is None and time.monotonic() < deadline:
+            time.sleep(0.05)
+        assert ready.exists(), 'worker did not reach the executor'
+        with jobs.engine.connect() as connection:
+            old_token = connection.execute(
+                select(runs.c.lease_token).where(runs.c.id == job['id'])
+            ).scalar_one()
+        child.kill()
+        child.wait(timeout=10)
+        assert child.returncode != 0
+        assert jobs.get('alice', job['id'])['status'] == 'running'
+        # Do not rewrite the lease timestamp: exercise actual expiry.
+        with jobs.engine.connect() as connection:
+            expires = connection.execute(
+                select(runs.c.lease_until).where(runs.c.id == job['id'])
+            ).scalar_one()
+        time.sleep(max(0, expires - time.time()) + 0.1)
+        replacement = subprocess.run(args + ['finish'], cwd=ROOT, capture_output=True,
+                                     text=True, timeout=20)
+        assert replacement.returncode == 0, replacement.stderr
+        saved = jobs.get('alice', job['id'])
+        assert saved['status'] == 'succeeded'
+        assert saved['attempts'] == 2
+        assert saved['result'] == {'amount': 100, 'recovered': True}
+        with pytest.raises(LeaseLost):
+            jobs.finish(job['id'], old_token, result={'stale': True})
+        assert jobs.get('alice', job['id'])['result'] == saved['result']
+    finally:
+        if child.poll() is None:
+            child.kill()
+            child.wait(timeout=10)
+        if child.stderr:
+            child.stderr.close()
 
 
 @pytest.fixture
