@@ -1,6 +1,40 @@
 # Li/Main integration status (2026-11-18)
 
-## Current delivery state
+## Latest delivery checkpoint
+
+Implementation HEAD at this checkpoint: `c1f109a`, on
+`codex/li-corporate-integration`. Final `Zhihong-Wu` delivery and `main`
+promotion remain incomplete.
+
+- The income-tax suite now passes 1,406 tests (23.46 seconds). Vietnam ordinary
+  business and property rental have saved-case APIs and bilingual intake/results.
+  The 59-test income browser regression passed before rental UI integration;
+  the subsequent three-test business/rental regression also passed. These are
+  local fixture-account checks, not hosted identity/provider acceptance.
+- The repaired optimizer v4 has completed `case001.best`, `case001.open` and
+  `case001.valued.best`, each with zero golden and checker failures. The same
+  live process has entered `cfc_jp.best`; the twelve-case run is not complete.
+  Five independent validation-branch commits still await final integration.
+- `render.acceptance.yaml` provides independent web/worker services targeting
+  `Zhihong-Wu`, with automatic deployment disabled. Its structure passed the
+  official schema validator. No cloud services were created by preparing it.
+- Catalog execution remains pending. The recorded 404-operation preflight
+  verifies before-state guards only; source admission is separate. The latest
+  recorded live atlas preflight still blocks `id.dgt.article26#all` and
+  `vn.law.cit2025.en#all`. Candidate closure alone does not admit either source.
+- Next delivery work is source admission/rebinding, completed optimizer
+  acceptance and repair integration, then deployed migration, two-account,
+  provider and worker-restart acceptance. Remaining income-tax eligibility,
+  credits, mixed-income and filing gaps remain open; adding an unrelated tax
+  such as VAT is not required merely because an income-tax component excludes it.
+
+Evidence: [rental implementation](data-reconciliation/vietnam-business-consolidation-20261118.md),
+[business implementation](data-reconciliation/vietnam-business-individual-review-20261118.md),
+[deployment preparation](RENDER_DEPLOYMENT.md),
+[catalog guards](data-reconciliation/catalog-procedure-migration-preflight-20261118.json),
+[live source blockers](data-reconciliation/atlas-live-catalog-preflight-20261118.json).
+
+## Earlier delivery checkpoints (superseded where noted above)
 
 Work is on `codex/li-corporate-integration`, tracking `origin/Zhihong-Wu`.
 The final integration has not been pushed or merged to `main`. The historical
