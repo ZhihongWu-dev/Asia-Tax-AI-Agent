@@ -1,0 +1,20 @@
+{
+  "status": "date_boundary_corrected_and_verified",
+  "document_exclusive_end": "2025-01-01",
+  "parameter_inclusive_end": "2024-12-31",
+  "tests": 32,
+  "test_seconds": 7.67,
+  "test_scope": "Actual document law_keep and parameter in_window on five boundary dates, plus overlay suite.",
+  "sqlite_integrity": "ok",
+  "all_seven_tables_match": true,
+  "sqlite_sha256": "16587e73002316d94cf2e7c896d6ab26d07b658996b6b902ec51242e0d3e148f",
+  "scope": "Candidate metadata and isolated catalog only; original runtime and cloud base documents unchanged.",
+  "cloud_reader_document_end_verified": true,
+  "snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "edde47909d21fe68755b0eb06c712c8e951fe448ba24feb03aadb751189ef987",
+    "review_sha256": "13f50d553fd845dc59bd5ce72805f21db1452a77f25f9e10ab023728ad0d9e5e"
+  }
+}

@@ -3428,8 +3428,8 @@
         "sha256": "5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404",
         "lang": "id",
         "effective_from": "2014-12-24",
-        "effective_to": "2024-12-31",
-        "note": "Historical original, not consolidated amended text. PMK18/2021 Article103 changes Articles1,7,14,21,22,23,25,30 and AnnexIII, not Articles2(7) or9. PMK81/2024 repeal from2025-01-01; Article476 preserves specified prior-period procedures. End date here is last active day. Do not apply original amended provisions without separate review."
+        "effective_to": "2025-01-01",
+        "note": "Historical original, not consolidated amended text. PMK18/2021 Article103 changes Articles1,7,14,21,22,23,25,30 and AnnexIII, not Articles2(7) or9. PMK81/2024 repeal from2025-01-01; Article476 preserves specified prior-period procedures. Document end date is the first invalid day, matching agent/tools/read_core.py law_keep exclusive-end filtering; parameter end dates remain inclusive. Do not apply original amended provisions without separate review."
       },
       "clause": {
         "cite_id": "id.pmk242-2014#2(7)",
@@ -3459,8 +3459,8 @@
         "sha256": "5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404",
         "lang": "id",
         "effective_from": "2014-12-24",
-        "effective_to": "2024-12-31",
-        "note": "Historical original, not consolidated amended text. PMK18/2021 Article103 changes Articles1,7,14,21,22,23,25,30 and AnnexIII, not Articles2(7) or9. PMK81/2024 repeal from2025-01-01; Article476 preserves specified prior-period procedures. End date here is last active day. Do not apply original amended provisions without separate review."
+        "effective_to": "2025-01-01",
+        "note": "Historical original, not consolidated amended text. PMK18/2021 Article103 changes Articles1,7,14,21,22,23,25,30 and AnnexIII, not Articles2(7) or9. PMK81/2024 repeal from2025-01-01; Article476 preserves specified prior-period procedures. Document end date is the first invalid day, matching agent/tools/read_core.py law_keep exclusive-end filtering; parameter end dates remain inclusive. Do not apply original amended provisions without separate review."
       },
       "clause": {
         "cite_id": "id.pmk242-2014#9(1)",
@@ -3490,8 +3490,8 @@
         "sha256": "5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404",
         "lang": "id",
         "effective_from": "2014-12-24",
-        "effective_to": "2024-12-31",
-        "note": "Historical original, not consolidated amended text. PMK18/2021 Article103 changes Articles1,7,14,21,22,23,25,30 and AnnexIII, not Articles2(7) or9. PMK81/2024 repeal from2025-01-01; Article476 preserves specified prior-period procedures. End date here is last active day. Do not apply original amended provisions without separate review."
+        "effective_to": "2025-01-01",
+        "note": "Historical original, not consolidated amended text. PMK18/2021 Article103 changes Articles1,7,14,21,22,23,25,30 and AnnexIII, not Articles2(7) or9. PMK81/2024 repeal from2025-01-01; Article476 preserves specified prior-period procedures. Document end date is the first invalid day, matching agent/tools/read_core.py law_keep exclusive-end filtering; parameter end dates remain inclusive. Do not apply original amended provisions without separate review."
       },
       "clause": {
         "cite_id": "id.pmk242-2014#9(2)",
@@ -3521,8 +3521,8 @@
         "sha256": "5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404",
         "lang": "id",
         "effective_from": "2014-12-24",
-        "effective_to": "2024-12-31",
-        "note": "Historical original, not consolidated amended text. PMK18/2021 Article103 changes Articles1,7,14,21,22,23,25,30 and AnnexIII, not Articles2(7) or9. PMK81/2024 repeal from2025-01-01; Article476 preserves specified prior-period procedures. End date here is last active day. Do not apply original amended provisions without separate review."
+        "effective_to": "2025-01-01",
+        "note": "Historical original, not consolidated amended text. PMK18/2021 Article103 changes Articles1,7,14,21,22,23,25,30 and AnnexIII, not Articles2(7) or9. PMK81/2024 repeal from2025-01-01; Article476 preserves specified prior-period procedures. Document end date is the first invalid day, matching agent/tools/read_core.py law_keep exclusive-end filtering; parameter end dates remain inclusive. Do not apply original amended provisions without separate review."
       },
       "clause": {
         "cite_id": "id.pmk242-2014#35",
