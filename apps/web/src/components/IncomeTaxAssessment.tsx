@@ -44,6 +44,19 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
         basis[field.key] = months;
       } else basis[field.key] = field.boolean ? values[field.key] === 'true' : field.integer ? Number(values[field.key]) : values[field.key];
     }
+    if (policy.id==='my_individual_2026' && current.income_tax!.residency==='resident') {
+      basis.workpaper={sources:current.income_tax!.incomes.map((_item,n)=>({
+        income_index:n, additions:basis[`my_source_${n}_additions`],
+        deductions:basis[`my_source_${n}_deductions`],
+        statutory_charges:basis[`my_source_${n}_statutory_charges`],
+        statutory_allowances:basis[`my_source_${n}_statutory_allowances`], explanation,
+      })), eligible_prior_business_losses:current.income_tax!.carried_losses,
+        schedule4_additions:basis.my_schedule4_additions,
+        allowed_total_income_deductions:[basis.my_total_deductions],
+        allowed_personal_reliefs:basis.my_personal_reliefs,
+        eligibility_verified:basis.my_eligibility, separate_assessment_verified:basis.my_separate};
+      for (const key of Object.keys(basis)) if (key.startsWith('my_')) delete basis[key];
+    }
     if (policy.id==='vn_business_2026') basis=vietnamBusinessBasis(basis,current.income_tax!);
     if (policy.id==='vn_property_rental_2026') basis=vietnamRentalBasis(basis,current.income_tax!);
     if (policy.id==='vn_personal_transfer_2026') {
@@ -93,6 +106,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
           {options.map(p=><option key={p.id} value={p.id}>{p.label[index]}</option>)}
         </select></label>
         {policy && <><p>{policy.notice[index]}</p><p>{say('金额币种：','Currency: ')}{current.income_tax.currency}</p>
+          {policy.id==='my_individual_2026' && current.income_tax.residency==='resident' && <p>{say('居民核对表：已保存的扣除总额须等于各来源费用扣除、资本免税额、总所得扣除及个人减免之和（不含以前年度亏损）。总所得扣除须先按法定顺序及限额核定；未使用余额不代表已获准结转。','Resident workpaper: saved claimed deductions must equal source deductions, statutory allowances, total-income deductions and personal reliefs, excluding prior losses. Establish total-income deductions in statutory order and within their limits first. Unused balances do not establish carryforward entitlement.')}</p>}
           <div className="facts-field-grid">{policy.fields.filter(field=>!field.showWhen || values[field.showWhen[0]]===field.showWhen[1]).map(field=><label key={field.key}>{field.label[index]}
             {field.boolean || field.options ? <select required value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)}>
               <option value="">{say('待确认','Not confirmed')}</option>
@@ -143,6 +157,17 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
             ['prepaid_tax',say('此笔预缴','Transaction prepayment')],['balance_due',say('此笔应补／退差额','Transaction balance')]
           ] as [string,string][]).map(([key,label])=><div key={key}><dt>{label}</dt><dd>{String(item[key])}</dd></div>)}</dl>
         </section>)}
+      </section>}
+      {!!result.result.reconciliation && <section aria-label={say('计税基础核对','Tax basis reconciliation')}>
+        <h5>{say('计税基础核对','Tax basis reconciliation')}</h5>
+        <dl>{[
+          ['aggregate_income',say('合计所得','Aggregate income')],
+          ['prior_losses_used',say('已抵扣以前年度经营亏损','Prior business losses used')],
+          ['prior_losses_unused',say('尚未使用的以前年度亏损','Unused prior business losses')],
+          ['current_losses_used',say('已抵扣当期亏损','Current losses used')],
+          ['total_income',say('总所得','Total income')],
+          ['chargeable_income',say('应课税收入','Chargeable income')],
+        ].map(([key,label])=><div key={key}><dt>{label}</dt><dd>{String((result.result.reconciliation as Record<string,unknown>)[key])}</dd></div>)}</dl>
       </section>}
       <p>{say('适用规则版本：','Policy version: ')}{String(result.result.policy_version)}</p>
       <p>{say('官方依据：','Official sources:')}</p>

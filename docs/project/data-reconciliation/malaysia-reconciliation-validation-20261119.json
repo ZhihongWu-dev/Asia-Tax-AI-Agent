@@ -1,0 +1,38 @@
+{
+  "at": "2026-11-18T18:13:14.227034+00:00",
+  "scope": "Malaysia resident individual workpaper integration regression; not complete all-country business acceptance",
+  "checks": [
+    {
+      "command": "pytest tests/income_tax -q",
+      "passed": 1417,
+      "seconds": 29.13,
+      "exit_code": 0
+    },
+    {
+      "command": "tsc -b",
+      "exit_code": 0
+    },
+    {
+      "command": "playwright test income-tax.spec.ts --grep Malaysia(company|individual)calculation --workers=1",
+      "passed": 2,
+      "seconds": 34.4,
+      "exit_code": 0,
+      "description": "Actual command used spaced regex Malaysia (company|individual) calculation; confirms tax basis reconciliation section before and after reload"
+    }
+  ],
+  "files": {
+    "packages/income_tax/malaysia_reconciliation.py": "bc8a01c37ce134c1740ce1efc125e430316f9ec15d5e3521f8331e1f6f14643b",
+    "packages/contracts/income_assessment.py": "9512643fa5c1dbdc20e1db0a230594bf230c217e18f53f3d6152a9828abd4891",
+    "packages/income_tax/assessment.py": "48bf1cf6a36b4314a3949b087c32ee6184108ddc556e792eb4eeb916ffa92997",
+    "apps/web/src/components/IncomeTaxAssessment.tsx": "8f1dc9cb675a328c4233d32b6b01d47ab3a273ef11d4c7ac85cb1728c2a410af",
+    "apps/web/src/income-assessment.ts": "3afeaa004eb66a3f80bdc3aff5e7df5934096656a7370f2e442fb4eb470fb000",
+    "tests/income_tax/test_malaysia_reconciliation.py": "2581ac87aefd3d7077a9701a82c154179d85a8f5402584b30f749e7804816da2",
+    "apps/web/tests/income-tax.spec.ts": "8d1cd47c128492ceeddcd19d7141caca1a493a7ccd7cb089221d380fa0978b72"
+  },
+  "limits": [
+    "Fixture authentication in API/browser tests",
+    "Deduction eligibility and statutory ordering remain verified user inputs",
+    "Nonresident/foreign/special regimes not covered by new resident workpaper"
+  ],
+  "publication": "Local only"
+}

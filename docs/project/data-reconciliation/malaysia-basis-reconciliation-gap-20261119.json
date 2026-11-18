@@ -1,0 +1,97 @@
+{
+  "observed_at": "2026-11-18T17:57:54.963526+00:00",
+  "status": "reproduced_workflow_acceptance_gap",
+  "policy": "my_individual_2026",
+  "synthetic_inputs": {
+    "saved_gross_income": "100",
+    "claimed_deductions": "0",
+    "carried_losses": "0",
+    "supplied_chargeable_income": "100000",
+    "residency": "resident",
+    "period": "2026"
+  },
+  "observed_result": {
+    "final_tax": "9400.00",
+    "stage": "ordinary_individual_before_assessment_rounding"
+  },
+  "interpretation": "The existing confirmed-basis calculator works as designed but does not reconcile chargeable income to saved facts. Passing arithmetic/browser tests cannot prove a complete gross-income-to-return workflow.",
+  "required_resolution": [
+    "Define and preserve the legally applicable adjustments from saved income through statutory/aggregate/total/chargeable income",
+    "Reconcile the calculation basis to that schedule before presenting an assessed workflow as complete",
+    "Retain explicit handling for foreign, separate-rate, joint-assessment and loss cases rather than imposing an unsupported universal gross-income ceiling",
+    "Test both consistent schedules and unexplained mismatches through save/run/reopen APIs"
+  ],
+  "source_file_hashes": {
+    "packages/income_tax/assessment.py": "2405d20065a545952c2f73a90d1c9ac3804c66ec4e7a7a9a989ecb6316ce9a16",
+    "packages/income_tax/malaysia.py": "154ffcf3bc92f7225bae5bbdd919dbc7d57f5f94403010f79ec103ae462abc6c",
+    "packages/contracts/income_assessment.py": "31e4289e2b841e6867deca869caa4e6c794297df8e8f2bef5859af78868ac626"
+  },
+  "statutory_source_review": {
+    "file": "database/raw/my/my.ita1967.updated2026.en.pdf",
+    "section_start_pages": {
+      "5": 39,
+      "42": 125,
+      "43": 126,
+      "44": 128,
+      "45": 149
+    },
+    "status": "Main-Act provisions 42-45 read directly; detailed source-level deductions and all current-year relief eligibility still require implementation review",
+    "ruling_fetch": "PR 5/2022 official URL returned 404 in browser and 500 in direct fetch; not archived or admitted",
+    "locator_method": "Verified main-Act headings and numbered provisions, including starred headings; excluded schedules with reused numbers"
+  },
+  "required_calculation_stages": [
+    {
+      "stage": "statutory income per source",
+      "authority": "s42, pp125-126",
+      "requirement": "Adjusted source income plus applicable Schedule 3 charges less applicable allowances; positive additions can exist."
+    },
+    {
+      "stage": "aggregate income",
+      "authority": "s43(1)-(2), pp126-127",
+      "requirement": "Prior eligible business losses reduce business statutory income, limited to that business-income aggregate; other statutory income and Schedule 4 additions are separate."
+    },
+    {
+      "stage": "total income",
+      "authority": "s44(1)-(5), pp128-129",
+      "requirement": "Apply current-year adjusted losses and subsequent statutory deduction groups in prescribed order, preserving any excess-loss treatment."
+    },
+    {
+      "stage": "chargeable income",
+      "authority": "s45(1), p149",
+      "requirement": "Total income less Chapter 7 deductions; joint assessment is a separate election path."
+    }
+  ],
+  "implementation_decision": "Do not enforce a universal gross-income ceiling or subtract the single carried_losses field from all income. Implement a staged reconciliation schedule with source-specific business loss limits and explicit additions, preserving unsupported cases until their rules are established.",
+  "implementation_checkpoint": {
+    "at": "2026-11-18T18:09:17.432586+00:00",
+    "state": "resident workpaper integrated; broader business acceptance remains open",
+    "changes": [
+      "Resident MY individual assessment now requires a workpaper and rejects chargeable-income mismatch",
+      "Workpaper is retained in the immutable run basis and stage results in the saved result",
+      "Existing form captures adjustments and displays reconciliation stages"
+    ],
+    "validation": {
+      "backend_tests": 51,
+      "backend_seconds": 6.13,
+      "typescript": "passed",
+      "browser_tests": 2,
+      "browser_seconds": 33.0
+    },
+    "remaining": [
+      "Eligibility and statutory deduction ordering remain verified inputs",
+      "Nonresident and foreign/special regimes need complete workpapers",
+      "Expand business-case acceptance and result-stage browser assertions"
+    ]
+  },
+  "api_atomicity_checkpoint": {
+    "at": "2026-11-18T18:11:34.980530+00:00",
+    "verified": [
+      "Rejected mismatched basis preserves case revision and result",
+      "Valid workpaper and source indices survive database reopening",
+      "Idempotent retry returns original run",
+      "Duplicate source indices cannot overwrite accepted result"
+    ],
+    "deduction_summary": "Saved claimed_deductions must equal source deductions plus statutory allowances plus total-income deductions plus personal reliefs; prior losses are separate. UI explains this convention.",
+    "limits": "Deduction eligibility and ordered statutory limits remain verified inputs; no automatic full-return or carryforward eligibility claim."
+  }
+}

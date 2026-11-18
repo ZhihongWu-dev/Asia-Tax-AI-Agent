@@ -236,7 +236,23 @@ def calculate(case: IncomeTaxCase, basis):
                 raise ValueError('SME rates require Malaysian residence')
             result=malaysia.company_tax(assessment_year=2026,**args)
         else:
+            paper = args.pop('workpaper')
+            reconciliation = None
+            if case.residency == 'resident':
+                if paper is None:
+                    raise ValueError('Resident individual calculation requires a reconciled workpaper')
+                from .malaysia_reconciliation import reconcile
+                reconciliation = reconcile(case, basis.workpaper)
+                if basis.chargeable_income != reconciliation['chargeable_income']:
+                    raise ValueError('Chargeable income differs from the reconciled workpaper')
+            elif paper is not None:
+                raise ValueError('Resident workpaper cannot be applied to a nonresident')
             result=malaysia.individual_tax(assessment_year=2026,residency=case.residency,**args)
+            if reconciliation is not None:
+                result['reconciliation'] = reconciliation
+                result['policy_version'] += '-reconciled-20261119'
+                for source in result['sources']:
+                    source['locator'] += '; sections 42-45 (basis reconciliation)'
     elif policy in ('id_company_2026','id_resident_2026'):
         allowed={'business','employment','service_remuneration','author_remuneration','royalty'}
         if any(i.source_jurisdiction!='id' or i.category not in allowed for i in case.incomes):

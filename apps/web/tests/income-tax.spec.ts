@@ -699,14 +699,30 @@ for (const subject of ['company','individual'] as const) {
       await calculation.getByLabel('Company rate scheme').selectOption('sme');
       await calculation.getByLabel('All SME rate conditions verified').selectOption('true');
     }
+    if(subject==='individual') {
+      for(const label of ['Source 1: Verified additions','Source 1: Allowed source deductions','Source 1: Statutory charges','Source 1: Statutory allowances','Schedule 4 additions','Verified total-income deductions','Allowed personal reliefs'])
+        await calculation.getByLabel(label,{exact:true}).fill('0');
+      for(const label of ['Source adjustments and deduction eligibility verified','Separate assessment verified'])
+        await calculation.getByRole('combobox',{name:label,exact:true}).selectOption('true');
+    }
     await calculation.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Chargeable income and applicable ordinary or SME eligibility conditions checked against supporting records.');
     await calculation.getByRole('checkbox').check();
     await calculation.getByRole('button',{name:'Calculate and save result'}).click();
     await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(subject==='company'?'195000':'9400');
+    if(subject==='individual') {
+      const schedule=page.getByRole('region',{name:'Tax basis reconciliation',exact:true});
+      await expect(schedule).toContainText('100000');
+      await expect(schedule).toContainText('Prior business losses used');
+    }
     await expect(page.getByRole('article',{name:'Saved calculation result'}).getByRole('link')).toHaveAttribute('href',/lom.agc.gov.my/);
     if(subject==='company') await page.screenshot({path:'test-results/income-tax-malaysia-company.png',fullPage:true});
     await openIncome(page);
     await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(subject==='company'?'195000':'9400');
+    if(subject==='individual') {
+      const schedule=page.getByRole('region',{name:'Tax basis reconciliation',exact:true});
+      await expect(schedule).toContainText('100000');
+      await expect(schedule).toContainText('Prior business losses used');
+    }
   });
 }
 

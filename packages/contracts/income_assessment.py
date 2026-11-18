@@ -7,6 +7,7 @@ from datetime import date
 from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from .income_tax import Money
+from packages.income_tax.malaysia_reconciliation import IndividualWorkpaper
 
 
 class Basis(BaseModel):
@@ -126,6 +127,7 @@ class MYCompany(MYBasis):
 
 
 class MYIndividual(MYBasis):
+    workpaper: IndividualWorkpaper | None = None
     policy: Literal['my_individual_2026']
 
 
