@@ -42,6 +42,8 @@ app = FastAPI(lifespan=lifespan, title="Asia Tax AI Agent — HK FSIE L0", versi
 from apps.api.auth import router as auth_router
 app.include_router(auth_router)
 app.include_router(router)
+from apps.api.atlas import router as atlas_router
+app.include_router(atlas_router)
 # Trust only this service's platform hostname, never every Render tenant.
 allowed_hosts = ["127.0.0.1", "localhost", "testserver"]
 render_hostname = os.environ.get("RENDER_EXTERNAL_HOSTNAME", "")
