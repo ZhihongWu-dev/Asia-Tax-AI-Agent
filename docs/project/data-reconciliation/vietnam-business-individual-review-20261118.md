@@ -1,13 +1,13 @@
 # Vietnam resident business income: source review and implementation gap
 
-Status: source acquisition and targeted review; calculator/API/UI not implemented.
+Status: calculation component and saved-case API implemented; UI integration pending.
 
 Archived government original `database/raw/vn/vn.decree68.2026.vi.pdf`:
 https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/3/68-ndcp.signed.pdf
 Government landing page: https://vanban.chinhphu.vn/?docid=217111&pageid=27160
 SHA256: `8d5b8099009a0981baa14ed65d5906fc2adb3e774042397e7b33c233a9c3811a`.
-19 pages, 969565 bytes. Scanned PDF without extracted text; physical pages 1–6
-visually reviewed. This is not a review of all nineteen pages.
+19 pages, 969565 bytes. Scanned PDF without extracted text; all nineteen
+physical pages visually reviewed across the initial and follow-up reviews.
 
 Article 4 distinguishes resident business income, the revenue-percentage method,
 the income-minus-costs method, and property rental. Article 4(3) permits allocation
@@ -35,18 +35,49 @@ The original threshold must be reconciled with the later amendment above.
 Extracted Decree 253/2026 Article 45 (physical page 29) expressly refers resident
 business taxation to PIT Law Article 7 and Decree 68 with amendments; its annex
 provides detailed industry classification. Article 68(3) similarly refers business
-settlement/refunds to Decree 68. These passages still require visual review with
-the annex and Article 69 transition before final implementation.
+settlement/refunds to Decree 68. Physical pages 56–57 and 59–61 were subsequently
+visually reviewed: Article 69(1)(a) applies resident business-income provisions
+from tax year 2026; the three-page annex confirms the category percentages.
+
+Decree 398 physical pages 1–3 were visually reviewed for Article 2. The 30%
+reduction applies to resident business income for 2026/2027 when actual annual
+business revenue does not exceed 10 billion VND, irrespective of calculation
+method. Above that revenue threshold, provisional relief must be reconciled
+and repaid. The component calculates final annual entitlement, not quarterly
+filing penalties or an automatic refund claim.
+
+`packages/income_tax/vietnam_business.py` now implements the 2026 resident
+ordinary domestic business component: explicit method/evidence attestations,
+reconciled category revenues, one shared allocated revenue deduction, profit
+expenses, boundary-sensitive rates, annual reduction and payment balance.
+It preserves the following-year method switch when a valid revenue-method
+business crosses 3 billion VND. It does not choose a method or allocation for
+the user. Thirty focused tests passed, covering threshold and rate boundaries,
+category rates, allocation caps, losses, prepayments, rejected inputs and
+source isolation. Source provenance is included in the result.
+
+The `vn_business_2026` basis now routes through the existing saved-case API.
+Every saved business income must have exactly one indexed classification;
+amounts come from the saved case rather than a second editable revenue copy.
+Revenue deductions or profit expenses must reconcile to saved deductions.
+Foreign income/credits, unsupported periods, residency, subject and carried
+losses are rejected. Thirteen additional contract/API tests passed, including
+result persistence after storage restart, request replay and invalidation after
+facts change (43 focused tests in total). Frontend intake remains pending.
+
+Development reference: https://github.com/openfisca/openfisca-core (period-specific
+rules/tests; AGPL-3.0). No source code or new dependency was adopted; existing
+project Decimal arithmetic and source snapshots were used.
 
 Required next work:
 
-- Review Decree 68 remaining filing/transition provisions, Decree 253 industry
-  annex and effective application, and Decree 398 personal-business reduction.
-- Model explicit method election/history, all-business revenue reconciliation,
-  category/location deduction allocation, documented expenses, and payments.
-- Integrate with saved personal-income cases and sourced immutable assessments;
-  cover threshold boundaries, mixed categories, method continuity, relief and
-  save/reload behavior. Existing employment and capital-transfer adapters do not
-  satisfy this business-income requirement.
+- Add the personal-business frontend with classification and deduction fields,
+  method/evidence review and saved-result recovery, then run browser acceptance.
+- Add property-rental handling and reconcile mixed property/ordinary-business
+  cases, special exemptions and foreign business separately; the component's
+  explicit scope excludes these rather than assigning them ordinary rates.
+- Surface method-history and documented-expense verification in case intake;
+  the calculation component requires verification but does not establish it.
 
-No active catalog, frozen planner input or calculation policy changed in this review.
+No active catalog or frozen planner input changed. The new API policy and
+calculation component do not complete business acceptance or frontend delivery.

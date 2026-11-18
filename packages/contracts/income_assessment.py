@@ -233,6 +233,27 @@ class VNCompany(Basis):
     other_incentives_verified: StrictBool
 
 
+class VNBusinessActivity(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    income_index: Annotated[int, Field(strict=True, ge=0, le=199)]
+    category: Literal['goods', 'services_without_materials',
+        'asset_rental_or_specified_agency', 'production_transport_with_materials',
+        'digital_content', 'other_business']
+    allocated_revenue_deduction: Money
+
+
+class VNBusiness(Basis):
+    policy: Literal['vn_business_2026']
+    method: Literal['revenue', 'profit']
+    activities: list[VNBusinessActivity] = Field(min_length=1, max_length=100)
+    deductible_expenses: Money | None
+    prepaid_tax: Money
+    ordinary_domestic_business_verified: StrictBool
+    revenue_and_expense_evidence_verified: StrictBool
+    method_election_and_continuity_verified: StrictBool
+    revenue_method_started_within_limit: StrictBool
+
+
 class VNEmployment(Basis):
     policy: Literal['vn_employment_2026']
     chargeable_employment_income: Money
@@ -433,5 +454,5 @@ class KRSalary(Basis):
 
 
 Assessment = Annotated[CNCompany | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
-                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer,
+                       HKProfits | HKSalaries | AEOrdinary | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness,
                        Field(discriminator='policy')]

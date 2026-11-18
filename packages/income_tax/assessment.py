@@ -5,6 +5,7 @@ from packages.contracts.income_tax import IncomeTaxCase
 from . import china, singapore, hong_kong, united_arab_emirates, malaysia, thailand, indonesia
 from . import vietnam, vietnam_employment, vietnam_transfer, japan, japan_company, india, india_company
 from . import korea_company
+from . import vietnam_business
 from . import korea_salary
 from . import china_business
 from . import singapore_employment
@@ -37,7 +38,7 @@ def calculate(case: IncomeTaxCase, basis):
                 'sg_company_ya2026': 'company', 'sg_resident_ya2026': 'individual',
                 'hk_salaries_2025_26': 'individual', 'my_company_2026': 'company',
                 'my_individual_2026': 'individual', 'my_dividend_2026': 'individual', 'th_company_2026':'company', 'th_resident_2026':'individual', 'th_dividend_2026':'individual', 'th_foreign_income_2026':'individual',
-                'vn_personal_transfer_2026': 'individual', 'vn_employment_2026': 'individual', 'vn_company_2026': 'company',
+                'vn_personal_transfer_2026': 'individual', 'vn_employment_2026': 'individual', 'vn_company_2026': 'company', 'vn_business_2026': 'individual',
                 'jp_resident_ordinary_2026': 'individual', 'jp_company_starting_2026':'company',
                 'in_personal_new_ty2026_27':'individual', 'in_personal_old_ty2026_27':'individual', 'in_company_section200_ty2026_27':'company',
                 'in_company_normal_ty2026_27':'company', 'kr_company_ordinary_2026':'company',
@@ -260,6 +261,31 @@ def calculate(case: IncomeTaxCase, basis):
             if basis.business_expenses + basis.other_income_deductions != case.claimed_deductions:
                 raise ValueError('Saved deductions must reconcile to business expenses plus other income deductions; automatic salary/basic deductions are separate')
         result = japan.resident_ordinary_tax(salary,business,tax_year=2026,**args)
+    elif policy=='vn_business_2026':
+        if case.residency != 'resident' or any(
+                i.category != 'business' or i.source_jurisdiction != 'vn' or
+                i.foreign_tax_paid not in (None, 0) for i in case.incomes):
+            raise ValueError('Resident domestic business income is required; other income needs separate treatment')
+        if case.carried_losses != 0:
+            raise ValueError('Business policy does not establish carried-loss eligibility')
+        activity_basis = args.pop('activities')
+        if sorted(a['income_index'] for a in activity_basis) != list(range(len(case.incomes))):
+            raise ValueError('Each saved income must have exactly one business classification')
+        with localcontext() as ctx:
+            ctx.prec = 40
+            deductions = (sum((a['allocated_revenue_deduction'] for a in activity_basis), Decimal('0'))
+                if basis.method == 'revenue' else basis.deductible_expenses)
+            if deductions != case.claimed_deductions:
+                raise ValueError('Business deductions must reconcile to the saved case')
+            activities = [dict(category=a['category'],
+                revenue=case.incomes[a['income_index']].gross_amount,
+                allocated_revenue_deduction=a['allocated_revenue_deduction'])
+                for a in sorted(activity_basis, key=lambda row: row['income_index'])]
+            annual = sum((i.gross_amount for i in case.incomes), Decimal('0'))
+        result = vietnam_business.resident_business_tax(tax_year=2026, resident=True,
+            activities=activities, all_annual_business_revenue=annual, **args)
+        for index, activity in enumerate(result['activities']):
+            activity['income_index'] = index
     elif policy=='vn_personal_transfer_2026':
         if any(i.category != 'capital_gain' or i.source_jurisdiction != 'vn' or
                i.foreign_tax_paid not in (None, 0) for i in case.incomes):
