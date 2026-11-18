@@ -1,0 +1,50 @@
+{
+  "status": "all_jobs_success_with_recorded_engine_coverage_gap",
+  "run_id": 44263579393,
+  "url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/actions/runs/44263579393",
+  "head": "5ed8f822716f616551094c0d561d3498424892ac",
+  "pull_request": 7,
+  "results": {
+    "frontend": {
+      "passed": 119,
+      "minutes": 3.2
+    },
+    "python": {
+      "passed": 2411,
+      "skipped": 41,
+      "deselected": 27,
+      "seconds": 61.65,
+      "skip_groups": {
+        "Windows Job Object behavior": 3,
+        "PostgreSQL lock semantics require PostgreSQL": 1,
+        "Uncommitted source validation requires PostgreSQL": 2,
+        "Pinned tax engine release is required": 26,
+        "Install pinned release with scripts/install_tax_engine_release.py": 2,
+        "Pinned tax engine LFS release not installed": 7
+      }
+    },
+    "database_tools": {
+      "passed": 92,
+      "seconds": 2.55
+    },
+    "migrations": {
+      "passed": 2,
+      "seconds": 2.84
+    },
+    "catalog_transactions": {
+      "passed": 9,
+      "deselected": 9,
+      "seconds": 1.23
+    },
+    "concurrent_case_deletion": {
+      "passed": 7,
+      "seconds": 1.16
+    }
+  },
+  "next_action": "Install pinned release in Python job (ac9d6c0) and rerun to execute 35 skipped engine-dependent cases.",
+  "limits": [
+    "GitHub Actions fixture accounts/providers are not hosted business acceptance.",
+    "Full repaired optimizer remains running.",
+    "No cloud catalog migration, final Zhihong-Wu merge or main promotion established."
+  ]
+}
