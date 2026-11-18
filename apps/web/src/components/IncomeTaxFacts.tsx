@@ -3,6 +3,7 @@ import { api, ApiError } from "../api";
 import { useLocale } from "../locale";
 import type { Case } from "../workspace";
 import IncomeTaxAssessment from './IncomeTaxAssessment';
+import IncomeCreditHistory from './IncomeCreditHistory';
 import { blankIncome, blankIncomeTax, incomeCategories, taxJurisdictions,
   type IncomeTaxInput, type TaxJurisdiction } from "../income-tax";
 
@@ -122,5 +123,7 @@ export default function IncomeTaxFacts({ current, busy, onUpdate }: {
     <IncomeTaxAssessment key={current.id + ':' + JSON.stringify(current.income_tax)} current={current}
       disabled={busy || saving || current.revision !== revision || JSON.stringify(form) !== JSON.stringify(current.income_tax)}
       onUpdate={next => { onUpdate(next); setRevision(next.revision); setForm(structuredClone(next.income_tax || blankIncomeTax())); }} />
+    {current.income_tax?.jurisdiction==='vn' && current.income_tax.subject==='company' &&
+      <IncomeCreditHistory key={current.id} caseId={current.id} revision={current.revision} />}
   </details>;
 }

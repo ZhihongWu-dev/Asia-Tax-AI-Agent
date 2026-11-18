@@ -32,6 +32,9 @@ def test_credit_snapshot_restart_replay_edit_and_authorization(tmp_path):
         request = dict(revision=1, request_id=str(uuid4()), basis=dict(lines=lines,
             dossier=dict(credit_types=['tax_sparing', 'indirect'], represented=False, documents=[])))
         endpoint = path + '/credit-workpapers'
+        assert alice.get(endpoint).json()['workpapers'] == []
+        assert anon.get(endpoint).status_code == 401
+        assert bob.get(endpoint).status_code == 404
         assert anon.post(endpoint, headers=HEADERS, json=request).status_code == 401
         assert bob.post(endpoint, headers=HEADERS, json=request).status_code == 404
         assert alice.post(endpoint, json=request).status_code == 403
@@ -46,6 +49,13 @@ def test_credit_snapshot_restart_replay_edit_and_authorization(tmp_path):
         service.store = ChatStore(url)
         saved = endpoint + '/' + run['id']
         assert alice.get(saved).json() == run
+        listing = alice.get(endpoint).json()
+        assert listing['revision'] == 2
+        assert len(listing['workpapers']) == 1
+        assert listing['workpapers'][0]['id'] == run['id']
+        assert listing['workpapers'][0]['matches_current_income_facts'] is True
+        assert listing['workpapers'][0]['document_inventory_complete'] is False
+        assert listing['workpapers'][0]['all_foreign_items_assessed'] is True
         assert bob.get(saved).status_code == 404
         assert anon.get(saved).status_code == 401
         assert alice.post(endpoint, headers=HEADERS, json=request).json() == run
@@ -68,4 +78,5 @@ def test_credit_snapshot_restart_replay_edit_and_authorization(tmp_path):
         invalid['basis']['lines'][0]['income_index'] = 199
         assert alice.post(endpoint, headers=HEADERS, json=invalid).status_code == 422
         assert alice.get(path).json()['revision'] == 3
+        assert alice.get(endpoint).json()['workpapers'][0]['matches_current_income_facts'] is False
     service.store.engine.dispose()

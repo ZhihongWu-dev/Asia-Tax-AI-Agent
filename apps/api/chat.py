@@ -452,6 +452,13 @@ def income_credit_get(case_id: UUID, run_id: UUID,
     return call(get_workpaper, service.store, workspace, str(case_id), str(run_id))
 
 
+@router.get('/cases/{case_id}/income-tax/credit-workpapers')
+def income_credit_list(case_id: UUID, workspace: str = Depends(owner),
+                       service: ChatService = Depends(get_service)):
+    from packages.chat.income_credit import list_workpapers
+    return call(list_workpapers, service.store, workspace, str(case_id))
+
+
 from packages.contracts.planning import PlanningInput
 
 

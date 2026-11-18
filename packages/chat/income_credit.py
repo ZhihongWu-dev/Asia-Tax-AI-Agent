@@ -56,3 +56,17 @@ def get_workpaper(store, owner, case_id, run_id):
         if run['id'] == run_id:
             return deepcopy(run)
     raise CaseNotFound()
+
+
+def list_workpapers(store, owner, case_id):
+    """Discover immutable snapshots without treating document revisions as input changes."""
+    doc = store.get(owner, case_id)
+    current_inputs = doc.get('income_tax')
+    return {'case_id': case_id, 'revision': doc['revision'], 'workpapers': [
+        {'id': run['id'], 'created_at': run['created_at'],
+         'input_revision': run['input_revision'], 'snapshot_hash': run['snapshot_hash'],
+         'status': run['status'],
+         'matches_current_income_facts': run['inputs'] == current_inputs,
+         'document_inventory_complete': run['dossier_review']['document_inventory_complete'],
+         'all_foreign_items_assessed': run['result']['all_foreign_items_assessed']}
+        for run in reversed(doc.get('income_credit_workpapers', []))]}

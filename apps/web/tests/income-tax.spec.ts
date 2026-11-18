@@ -1,5 +1,36 @@
 import { test, expect } from '@playwright/test';
 
+test('Vietnam saved credit history survives reload and marks changed income',async({page})=>{
+  test.setTimeout(60000);
+  const form=await openIncome(page);
+  for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','vn'],['Tax residency','resident']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Claimed deductions (blank if unknown)','0'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+  const income=form.getByRole('group',{name:'Income 1',exact:true});
+  await income.getByRole('combobox',{name:'Income category',exact:true}).selectOption('dividend');
+  await income.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption('id');
+  for(const [name,value] of [['Gross income','1000'],['Foreign tax paid (blank if unknown)','50'],['Income description','Reviewed Indonesian dividend']])await income.getByLabel(name,{exact:true}).fill(value);
+  await form.getByRole('checkbox').check();
+  const saved=page.waitForResponse(r=>r.url().endsWith('/income-tax')&&r.request().method()==='PUT');
+  await form.getByRole('button',{name:'Save income-tax details'}).click();
+  const response=await saved, view=await response.json(), path=new URL(response.url()).pathname;
+  const headers={'X-AsiaTax-Request':'1'};
+  const created=await page.request.post(path+'/credit-workpapers',{headers,data:{revision:view.revision,request_id:crypto.randomUUID(),basis:{lines:[{method:'indonesia_deemed',income_index:0,vietnam_tax_limit:'200',treaty_and_same_income_basis_verified:true,basis_explanation:'Verified treaty entitlement and same-income Vietnam tax basis.'}],dossier:{credit_types:['tax_sparing'],represented:false,documents:[]}}}});
+  expect(created.status()).toBe(200);
+  await openIncome(page);
+  const history=page.getByRole('region',{name:'Credit workpaper history',exact:true});
+  await expect(history.getByText('Matches current saved income',{exact:true})).toBeVisible();
+  await history.getByRole('button',{name:/View workpaper/}).click();
+  await expect(history.getByText(/^Reviewed credit subtotal: 150(?:\.0+)? VND$/)).toBeVisible();
+  await expect(history.getByText('Documents missing or unchecked',{exact:true})).toBeVisible();
+  const current=await (await page.request.get(path)).json();
+  current.income_tax.incomes[0].gross_amount='2000';
+  expect((await page.request.put(path,{headers,data:{revision:current.revision,request_id:crypto.randomUUID(),inputs:current.income_tax}})).status()).toBe(200);
+  await openIncome(page);
+  await expect(history.getByText('Income facts changed: historical workpaper only',{exact:true})).toBeVisible();
+  await history.getByRole('button',{name:/View workpaper/}).click();
+  await expect(history.getByText(/^Reviewed credit subtotal: 150(?:\.0+)? VND$/)).toBeVisible();
+});
+
 test('Thailand multiple countries and pools reconcile split remittances',async({page})=>{
   test.setTimeout(60000);
   const form=await openIncome(page);

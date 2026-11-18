@@ -9,3 +9,13 @@ Validation: `python -m pytest tests/income_tax -q` completed with **1331 passed 
 GitHub reference: https://github.com/pydantic/pydantic/blob/main/docs/concepts/unions.md — retained string discriminators and ordinary JSON model serialization already used by this repository. No dependency change or external code copied. Full product acceptance remains open: frontend workpaper entry/discovery, complete Vietnam foreign-income assessment, remaining country coverage, deployed acceptance and final branch delivery.
 
 Original optimizer PID16760 was observed live during this change; its log now records five successful exhaustive checks including `cfc_jp.open`. Frozen optimizer inputs were not edited.
+
+## History discovery and browser acceptance
+
+Added owner-scoped GET on the workpaper collection. Summaries compare saved income contents, rather than case revision numbers: saving a workpaper itself increments the revision without invalidating its facts. Changed incomes mark previous snapshots as historical. Collection responses exclude full basis and document references; individual records remain accessible through the existing owner-scoped detail endpoint.
+
+The Vietnam company case panel now lists saved workpapers and shows original per-income gross amounts, credit limits, credit amounts, basis explanations, partial coverage and document inventory status. It distinguishes historical facts and incomplete assessment. This is a history viewer; creating workpapers through a user-facing form remains unfinished.
+
+Validation: HTTP workflow test passed (5.25 seconds), frontend TypeScript/production build passed (existing large-bundle warning), and real-browser `Vietnam saved credit history survives reload and marks changed income` passed (21.7 seconds including servers). The browser test creates a real API snapshot, reopens the case, checks its150 VND subtotal, changes income through the API, reopens again and verifies the original150 VND snapshot and historical label. Initial browser assertion required a literal150 rather than decimal150.00; corrected the assertion to preserve decimal precision.
+
+React reference: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/useEffect.md — cleanup prevents prior case/detail requests overwriting newer state. No external code copied or new dependency introduced.
