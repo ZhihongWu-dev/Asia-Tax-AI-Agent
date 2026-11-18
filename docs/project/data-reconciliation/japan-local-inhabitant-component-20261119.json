@@ -1,0 +1,25 @@
+{
+  "status": "internal_component_not_enabled_assessment",
+  "scope": "Tokyo ordinary domestic corporate-tax-based inhabitant levy,2026 fiscal starts",
+  "sources": "jp_local_enterprise_sources.json; return instructions pages4,10-11 visually reviewed",
+  "changes": [
+    "Determine surcharge from registered capital and nationwide adjusted levy base, before geographic allocation; prorate annual threshold for short fiscal periods",
+    "Truncate allocated ward/prefectural bases below1000yen; aggregate their levies before applying verified additions/credits and final100yen truncation",
+    "Keep prepayments and negative refund balance separate; exclude municipal own taxes outside23wards and per-capita levy from this component"
+  ],
+  "validation": {
+    "japan_local_cases": 74,
+    "focused_seconds": 0.86,
+    "income_and_report_regression": 1634,
+    "regression_seconds": 30.44,
+    "exit_code": 0
+  },
+  "remaining": [
+    "National-to-local base workpaper and source-backed allocation",
+    "Ordinary entity and enterprise surcharge/size-based eligibility resolver",
+    "Per-capita office aggregation and period calculations",
+    "Full assessment contract, persistence, reports, UI and browser acceptance",
+    "Japan-wide local tax coverage and actual business cases"
+  ],
+  "delivery": "Local only; no main merge or remote upload"
+}

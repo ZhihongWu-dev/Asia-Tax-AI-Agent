@@ -138,3 +138,62 @@ def test_no_profit_exemption_in_per_capita_component():
     # No income parameter: ordinary zero-profit companies can still owe this levy.
     assert per_capita('0',employees_in_ward=0)['per_capita_tax_before_prepayments']==70000
     with pytest.raises(ValueError):per_capita('0.1')
+
+
+from packages.income_tax.japan_local import ordinary_inhabitant_levy
+
+
+def inhabitant(national='10000000',**changes):
+    args=dict(fiscal_start_year=2026,months=12,registered_capital='100000000',
+        ward_allocated_base=national,municipality_allocated_base='0',ordinary_domestic_scope_verified=True)
+    args.update(changes)
+    return ordinary_inhabitant_levy(national,**args)
+
+
+@pytest.mark.parametrize('national,capital,months,surcharge,tax',[
+    ('10000000','100000000',12,False,700000),
+    ('10000999','100000000',12,False,700000),
+    ('10001000','100000000',12,True,1040100),
+    ('10000000','100000001',12,True,1040000),
+    ('3333999','100000000',4,False,233300),
+    ('3334000','100000000',4,True,346700),
+])
+def test_rate_threshold_uses_rounded_nationwide_base_and_short_year(national,capital,months,surcharge,tax):
+    result=inhabitant(national,registered_capital=capital,months=months)
+    assert result['surcharge_applies'] is surcharge
+    assert result['final_levy']==tax
+
+
+def test_small_local_allocation_does_not_qualify_large_nationwide_base():
+    result=inhabitant('15000000',ward_allocated_base='1000000',municipality_allocated_base='2000000')
+    assert result['surcharge_applies'] is True
+    assert result['ward_levy_before_credits']==104000
+    assert result['municipality_prefectural_levy_before_credits']==40000
+    assert result['final_levy']==144000
+
+
+def test_combine_ward_and_prefectural_parts_before_hundred_floor():
+    result=inhabitant('4000',ward_allocated_base='1000',municipality_allocated_base='3000')
+    assert result['ward_levy_before_credits']==70
+    assert result['municipality_prefectural_levy_before_credits']==30
+    assert result['final_levy']==100
+
+
+def test_credit_precedes_final_rounding_and_prepayment_can_produce_refund():
+    result=inhabitant('2000',allowed_credits=30,prepaid_levy=200)
+    assert result['levy_before_credits']==140
+    assert result['net_levy_before_rounding']==110
+    assert result['final_levy']==100
+    assert result['balance_due']==-100
+    assert inhabitant('0',tax_credit_additions=200,allowed_credits=101)['final_levy']==0
+
+
+@pytest.mark.parametrize('changes',[
+    dict(ward_allocated_base='10000001'),dict(allowed_credits='700001'),
+    dict(months=0),dict(months=13),dict(months=True),dict(months=12.0),
+    dict(fiscal_start_year=2025),dict(fiscal_start_year=True),
+    dict(ordinary_domestic_scope_verified=False),dict(ordinary_domestic_scope_verified=1),
+    dict(registered_capital='0.1'),dict(prepaid_levy=True),
+])
+def test_inhabitant_rejects_unverified_or_unreconciled_inputs(changes):
+    with pytest.raises(ValueError):inhabitant(**changes)

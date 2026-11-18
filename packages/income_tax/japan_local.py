@@ -126,3 +126,60 @@ def ordinary_per_capita_component(capital_for_rate_band, *, fiscal_start_year,
         office_months=office_months, annual_component_amount=annual,
         per_capita_tax_before_prepayments=tax,
         stage='internal_component_not_complete_assessment', sources=deepcopy(SOURCES))
+
+
+
+def ordinary_inhabitant_levy(national_levy_base, *, fiscal_start_year, months,
+        registered_capital, ward_allocated_base, municipality_allocated_base,
+        ordinary_domestic_scope_verified, allowed_credits=0, tax_credit_additions=0,
+        prepaid_levy=0):
+    """Tokyo corporate-tax-based inhabitant levy from verified filing bases.
+
+    The nationwide base is the legally adjusted corporation-tax levy base,
+    not national final tax after credits. Determine the rate before geographic
+    allocation. Municipality allocated base here receives only Tokyo's
+    prefectural levy; each municipality's own levy remains separate.
+    Verified additions/credits correspond to the net-levy line, not raw foreign
+    tax paid. Treaty-amendment relief and group/foreign-PE forms are separate.
+    """
+    if type(fiscal_start_year) is not int or fiscal_start_year != 2026:
+        raise ValueError('Only fiscal years starting in 2026 have been reviewed')
+    if type(months) is not int or not 1 <= months <= 12:
+        raise ValueError('Verified rate-threshold months must be from 1 to 12')
+    if ordinary_domestic_scope_verified is not True:
+        raise ValueError('Ordinary domestic levy bases, allocation and credit entitlement must be verified')
+    national, capital, ward, municipal, credits, additions, prepaid = map(yen,
+        (national_levy_base,registered_capital,ward_allocated_base,
+         municipality_allocated_base,allowed_credits,tax_credit_additions,prepaid_levy))
+    with localcontext() as ctx:
+        ctx.prec = 40
+        if ward + municipal > national:
+            raise ValueError('Tokyo allocations exceed the nationwide corporation-tax levy base')
+        national_rounded = _floor(national, Decimal(1000))
+        surcharge = capital > 100000000 or national_rounded * 12 > Decimal(10000000) * months
+        ward_rate, municipal_rate = ((Decimal('0.104'),Decimal('0.02')) if surcharge
+                                    else (Decimal('0.07'),Decimal('0.01')))
+        ward_base = _floor(ward,Decimal(1000))
+        municipal_base = _floor(municipal,Decimal(1000))
+        ward_tax = ward_base * ward_rate
+        municipal_tax = municipal_base * municipal_rate
+        gross = ward_tax + municipal_tax
+        before_rounding = gross + additions - credits
+        if before_rounding < ZERO:
+            raise ValueError('Verified usable levy credits exceed tax plus additions')
+        final = _floor(before_rounding,Decimal(100))
+        return dict(policy_version='jp-tokyo-inhabitant-levy-component-20261119',
+            fiscal_start_year=fiscal_start_year, months=months,currency='JPY',
+            national_levy_base=national,national_rate_test_base=national_rounded,
+            registered_capital=capital,surcharge_applies=surcharge,
+            ward_allocated_base_before_rounding=ward,ward_taxable_base=ward_base,
+            ward_rate=ward_rate,ward_levy_before_credits=ward_tax,
+            municipality_allocated_base_before_rounding=municipal,
+            municipality_prefectural_taxable_base=municipal_base,
+            municipality_prefectural_rate=municipal_rate,
+            municipality_prefectural_levy_before_credits=municipal_tax,
+            levy_before_credits=gross,allowed_credits=credits,tax_credit_additions=additions,
+            net_levy_before_rounding=before_rounding,final_levy=final,
+            prepaid_levy=prepaid,balance_due=final-prepaid,
+            stage='internal_tokyo_levy_component_excluding_per_capita_and_other_municipal_tax',
+            sources=deepcopy(SOURCES))
