@@ -26,6 +26,12 @@ promotion remain incomplete.
   full plan also passed isolated PostgreSQL commit and forced-postflight rollback
   rehearsal; seven PostgreSQL executor/lock tests passed. This fixture is not a
   clone of hosted constraints or roles, and no hosted catalog migration occurred.
+  A subsequent repeatable-read snapshot comparison simulated the full revised
+  plan and compared every resulting row in jurisdiction (11), doc (358), param
+  (811), treaty (55), and decision (43) with the frozen validation CSVs: no
+  missing, extra, or changed rows. This comparison normalizes SQL nulls to CSV
+  empty strings; it does not establish full clause-table equality or hosted
+  transaction acceptance.
   Subsequent
   repaired-reference verification found neither old blocked citation among its
   662 dependencies. Twelve missing Indonesian procedure passages were reviewed
@@ -50,6 +56,7 @@ Evidence: [rental implementation](data-reconciliation/vietnam-business-consolida
 [deployment preparation](RENDER_DEPLOYMENT.md),
 [current catalog plan](data-reconciliation/catalog-migration-plan-overlay-safe-20261118.json),
 [current catalog guards](data-reconciliation/catalog-overlay-safe-preflight-20261118.json),
+[complete simulated catalog comparison](data-reconciliation/catalog-simulated-full-comparison-20261118.json),
 [PostgreSQL transaction rehearsal](data-reconciliation/catalog-overlay-safe-postgres-rehearsal-20261118.json),
 [earlier live source blockers](data-reconciliation/atlas-live-catalog-preflight-20261118.json),
 [repaired-source admission](data-reconciliation/indonesia-procedure-source-admission-20261118.json),

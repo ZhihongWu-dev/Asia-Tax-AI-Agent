@@ -1,0 +1,48 @@
+{
+  "status": "comparison_complete_not_applied",
+  "snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "14f051ed6c17a0ffe0902eb954f07f3869c9ad042a2436fa85e152345ea658b9",
+    "review_sha256": "82c4cf4e2aa4fe34ee1279ca82bb4acd84b8e5df603aa870ac346c41be6127ac"
+  },
+  "catalog_revision": "ae12ac1c79e22e80ec60f940a5e20a6b03a9df6408672447e6df0a0ca52b0195",
+  "comparisons": {
+    "jurisdiction": {
+      "simulated_rows": 11,
+      "staged_rows": 11,
+      "only_simulated": [],
+      "only_staged": [],
+      "different_rows": []
+    },
+    "doc": {
+      "simulated_rows": 358,
+      "staged_rows": 358,
+      "only_simulated": [],
+      "only_staged": [],
+      "different_rows": []
+    },
+    "param": {
+      "simulated_rows": 811,
+      "staged_rows": 811,
+      "only_simulated": [],
+      "only_staged": [],
+      "different_rows": []
+    },
+    "treaty": {
+      "simulated_rows": 55,
+      "staged_rows": 55,
+      "only_simulated": [],
+      "only_staged": [],
+      "different_rows": []
+    },
+    "decision": {
+      "simulated_rows": 43,
+      "staged_rows": 43,
+      "only_simulated": [],
+      "only_staged": [],
+      "different_rows": []
+    }
+  }
+}
