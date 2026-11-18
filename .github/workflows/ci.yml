@@ -55,6 +55,8 @@ jobs:
     name: Python 3.11 checks
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    env:
+      FSIE_TAX_ENGINE_RELEASE_DIR: ${{ github.workspace }}/data/tax_engine/ci-release
 
     steps:
       - name: Check out repository
@@ -71,6 +73,9 @@ jobs:
 
       - name: Check installed dependencies
         run: python -m pip check
+
+      - name: Install and verify pinned tax engine for calculation tests
+        run: python scripts/install_tax_engine_release.py --target "$FSIE_TAX_ENGINE_RELEASE_DIR"
 
       - name: Install and verify cloud legacy Word reader
         run: bash scripts/install_legacy_word_reader.sh
