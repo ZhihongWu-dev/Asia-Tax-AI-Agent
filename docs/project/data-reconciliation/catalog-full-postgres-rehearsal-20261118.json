@@ -1,0 +1,14 @@
+{
+  "scope": "local PostgreSQL rehearsal seeded from audited before-rows; not production or source-admission validation",
+  "operations": 404,
+  "rollback_after_all_writes": true,
+  "commit": {
+    "verified_operations": 404,
+    "catalog_revision": "fc57aad752dc5bcd9b53c2af4ed51037e2291e3bd4edaf47e596afb57362f383",
+    "scope": "operation_targets_only",
+    "status": "committed"
+  },
+  "before_sha256": "1a2fb1fb6ad3f853bafa164e83b6c4987e2bd2f0f4c0681be235dffb5d7dd3bf",
+  "after_sha256": "9e2bca0312ee13a117b68f0fd3b5d6de429a515f828ad289dab19942a548fb79",
+  "unrelated_metadata_preserved": true
+}
