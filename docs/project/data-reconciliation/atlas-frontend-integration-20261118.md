@@ -60,3 +60,23 @@ Verification: production build passed; 22 atlas backend tests passed; two Edge
 browser tests passed, including assertions that subsequent requests preserve
 the snapshot and country date. Browser data is fixture data; real reviewed
 catalog execution and business acceptance remain outstanding.
+
+## Actual engine / isolated catalog probe
+
+Ran atlas_runner.run against the current authored rule engine and the isolated
+2026-11-18 rebuilt CSV catalog. Built a probe-only PlanningLibrary bundle from
+all catalog tables and the complete engine/parameter/decision citation closure;
+zero requested citations were missing. This deliberately does not admit that
+local bundle to production or replace the cloud reader.
+
+Map, glossary and all 11 country projections completed successfully (13 calls,
+0.30–0.64 seconds each). Summary and bundle digest are preserved in
+atlas-offline-probe-20261118.json; full outputs remain in the external audit
+directory. This proves execution compatibility, not statutory correctness.
+For example, Hong Kong's absent rule values remain null and Vietnam/Malaysia
+individual ranges remain unresolved ranges rather than being forced to zero.
+
+Reviewing these actual outputs exposed that the frontend did not display the
+country projection's assumed legal judgments. Country pages now show the date,
+illustrative-scenario scope and an expandable list of those judgments. Browser
+coverage asserts this disclosure. No frozen optimizer inputs were changed.

@@ -171,6 +171,8 @@ export type AtlasTerm = {
 };
 export type AtlasDoc = { id: string; title: string; type: string; url: string; lang: string; effective_from: string; effective_to: string };
 export type AtlasCountry = {
+  assumed_judgments: Record<string, string>;
+  scope: string;
   date: string; version: AtlasVersion; code: string; iso: string; name: string; name_zh: string; currency: string;
   headline: { wht_company: AtlasCell; wht_individual: AtlasCell };
   cit: { value: string; unit: string; cite_id: string } | null;

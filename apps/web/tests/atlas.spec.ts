@@ -11,7 +11,7 @@ test('atlas renders rates, unknowns, country sources and complete clause', async
     if (!url.pathname.endsWith('/map')) expect(url.searchParams.get('snapshot')).toBe('a'.repeat(64));
     if (url.pathname.includes('/country/')) expect(url.searchParams.get('date')).toBe('2026-11-18');
     const body = url.pathname.endsWith('/map') ? {snapshot_id:'a'.repeat(64),date:'2026-11-18',version,facts:{},metrics:[],jurisdictions:[jur]} :
-      url.pathname.includes('/country/') ? {...jur,date:'2026-11-18',version,headline:{wht_company:cell,wht_individual:unknown},cit:null,partners:[],slots:[],params:[],absent:[],docs:[],terms:[]} :
+      url.pathname.includes('/country/') ? {...jur,date:'2026-11-18',version,scope:'illustrative_dividend_scenarios_not_case_assessment',assumed_judgments:{bo:'yes',ppt:'no'},headline:{wht_company:cell,wht_individual:unknown},cit:null,partners:[],slots:[],params:[],absent:[],docs:[],terms:[]} :
       url.pathname.endsWith('/clause') ? {cite_id:'cn.law#1',doc_id:'cn.law',label:'Article 1',text:passage,total:passage.length,title:'Fixture law',url:'',lang:'en',jur:'cn'} :
       {version,slots:[],terms:[],jurisdictions:[jur]};
     return route.fulfill({contentType:'application/json',body:JSON.stringify(body)});
@@ -21,6 +21,9 @@ test('atlas renders rates, unknowns, country sources and complete clause', async
   await expect(page.locator('.atlas-ranking')).toContainText('10%');
   await page.locator('.atlas-ranking button').click();
   await expect(page.locator('.atlas-country-head')).toContainText('中国');
+  await expect(page.getByRole('region',{name:'示例计算假设'})).toContainText('不是个案税务评估');
+  await page.getByText('协定比较采用的预设法律判断',{exact:true}).click();
+  await expect(page.getByRole('region',{name:'示例计算假设'})).toContainText('ppt');
   await expect(page.locator('.atlas-stats')).toContainText('—');
   await page.locator('.atlas-country .atlas-cite').first().click();
   await expect(page.getByRole('dialog')).toBeVisible();

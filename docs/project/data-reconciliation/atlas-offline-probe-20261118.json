@@ -1,0 +1,120 @@
+{
+  "scope": "offline, not cloud admission or legal acceptance",
+  "bundle": "dcc63719d01982b055c9d597609be4fbd4f3cf2c198d7f2f12638db35f4ca679",
+  "results": [
+    {
+      "request": {
+        "operation": "map",
+        "date": "2026-11-18"
+      },
+      "status": "passed",
+      "seconds": 0.33
+    },
+    {
+      "request": {
+        "operation": "glossary"
+      },
+      "status": "passed",
+      "seconds": 0.3
+    },
+    {
+      "request": {
+        "operation": "country",
+        "code": "cn",
+        "date": "2026-11-18"
+      },
+      "status": "passed",
+      "seconds": 0.55
+    },
+    {
+      "request": {
+        "operation": "country",
+        "code": "hk",
+        "date": "2026-11-18"
+      },
+      "status": "passed",
+      "seconds": 0.59
+    },
+    {
+      "request": {
+        "operation": "country",
+        "code": "sg",
+        "date": "2026-11-18"
+      },
+      "status": "passed",
+      "seconds": 0.55
+    },
+    {
+      "request": {
+        "operation": "country",
+        "code": "id",
+        "date": "2026-11-18"
+      },
+      "status": "passed",
+      "seconds": 0.56
+    },
+    {
+      "request": {
+        "operation": "country",
+        "code": "vn",
+        "date": "2026-11-18"
+      },
+      "status": "passed",
+      "seconds": 0.56
+    },
+    {
+      "request": {
+        "operation": "country",
+        "code": "my",
+        "date": "2026-11-18"
+      },
+      "status": "passed",
+      "seconds": 0.58
+    },
+    {
+      "request": {
+        "operation": "country",
+        "code": "th",
+        "date": "2026-11-18"
+      },
+      "status": "passed",
+      "seconds": 0.64
+    },
+    {
+      "request": {
+        "operation": "country",
+        "code": "ae",
+        "date": "2026-11-18"
+      },
+      "status": "passed",
+      "seconds": 0.59
+    },
+    {
+      "request": {
+        "operation": "country",
+        "code": "jp",
+        "date": "2026-11-18"
+      },
+      "status": "passed",
+      "seconds": 0.56
+    },
+    {
+      "request": {
+        "operation": "country",
+        "code": "kr",
+        "date": "2026-11-18"
+      },
+      "status": "passed",
+      "seconds": 0.58
+    },
+    {
+      "request": {
+        "operation": "country",
+        "code": "in",
+        "date": "2026-11-18"
+      },
+      "status": "passed",
+      "seconds": 0.55
+    }
+  ]
+}

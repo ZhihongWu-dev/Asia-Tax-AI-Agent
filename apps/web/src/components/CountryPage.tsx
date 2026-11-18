@@ -37,6 +37,13 @@ export default function CountryPage({ snapshot, date, code, onBack, onOpen, onCl
         <span className="atlas-chip">{data.code.toUpperCase()}</span>
         <span className="atlas-chip">{data.currency}</span>
       </div>
+      <section className="atlas-card" aria-label={locale === "en" ? "Illustrative assumptions" : "示例计算假设"}>
+        <p>{locale === "en" ? `Illustrative dividend scenarios as of ${data.date}; not a case assessment.` : `计算日期：${data.date}。以下为股息示例情形，不是个案税务评估。`}</p>
+        <details>
+          <summary>{locale === "en" ? "Legal judgments assumed for the treaty comparisons" : "协定比较采用的预设法律判断"}</summary>
+          <dl>{Object.entries(data.assumed_judgments).map(([key, value]) => <div key={key}><dt>{humanize(key)} <code>{key}</code></dt><dd>{value}</dd></div>)}</dl>
+        </details>
+      </section>
       <section className="atlas-stats">
         <Stat label={t("付给非居民公司的股息预提税")} cell={data.headline.wht_company} onClause={onClause} />
         <Stat label={t("付给非居民个人的股息预提税")} cell={data.headline.wht_individual} onClause={onClause} />
