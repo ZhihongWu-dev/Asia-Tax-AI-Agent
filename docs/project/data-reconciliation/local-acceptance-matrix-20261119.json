@@ -54,7 +54,8 @@
         "hong-kong-salary-workpaper-20261119.json",
         "vietnam-employment-reconciliation-20261119.json",
         "indonesia-personal-reconciliation-20261119.json",
-        "japan-local-enterprise-component-20261119.json"
+        "japan-local-enterprise-component-20261119.json",
+        "japan-local-per-capita-component-20261119.json"
       ],
       "limits": "The static policy inventory is historical and narrower than current runtime; browser tests cover representative workflows, not every income type, residency, special regime or filing obligation."
     },
@@ -120,7 +121,8 @@
     "vietnam_employment": "1557 income/report tests;35 final workflow tests;TypeScript and1 final browser flow passed",
     "indonesia_personal": "1560 income/report tests, TypeScript and2 browser scenarios passed",
     "database_tools": "92 passed in dedicated test environment;exit0",
-    "japan_local_component": "28 source-based component cases and1588 income/report regression tests passed; internal only, no enabled assessment or local-tax acceptance claimed"
+    "japan_local_component": "28 source-based component cases and1588 income/report regression tests passed; internal only, no enabled assessment or local-tax acceptance claimed",
+    "japan_local_per_capita": "53 Japanese local component cases and1613 income/report regression tests passed; internal components only"
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

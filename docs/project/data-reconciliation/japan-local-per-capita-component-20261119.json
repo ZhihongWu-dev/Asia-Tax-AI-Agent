@@ -1,0 +1,25 @@
+{
+  "status": "internal_component_not_enabled_assessment",
+  "scope": "Tokyo ordinary corporation per-capita filing components for fiscal years starting2026",
+  "source_review": "Archived return instructions pages4-5 visually inspected; source hash retained in jp_local_enterprise_sources.json",
+  "implemented": [
+    "Capital-band and ward-employee annual amounts",
+    "Principal ward combined prefectural/ward amount, ward-only amount and prefectural-only amount",
+    "Prorate each actual filing component with verified per-capita office months, then floor below100yen",
+    "Separate month semantics from enterprise band proration; no income-based exemption inferred"
+  ],
+  "validation": {
+    "japan_local_cases": 53,
+    "specialized_seconds": 2.0,
+    "income_reporting_regression": 1613,
+    "regression_seconds": 38.55,
+    "exit_code": 0
+  },
+  "limits": [
+    "Statutory capital after adjustments/floor, employee counts, office months and entity eligibility must be established by caller",
+    "Municipalities outside23wards require separate municipal levies; prefectural-only output does not claim full local liability",
+    "Office aggregation, corporate-income-based inhabitant levy and full case/API/UI/report workflow remain pending",
+    "Japan-wide corporate/personal local tax and business acceptance remain incomplete"
+  ],
+  "delivery": "Local only"
+}

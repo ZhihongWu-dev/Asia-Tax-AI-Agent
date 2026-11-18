@@ -78,3 +78,63 @@ def test_precision_and_source_snapshot_isolation():
     assert len(SOURCES)==3
     for source in SOURCES:
         assert hashlib.sha256((root/source['file']).read_bytes()).hexdigest()==source['sha256']
+
+
+from packages.income_tax.japan_local import ordinary_per_capita_component
+
+
+def per_capita(capital='10000000', **changes):
+    args=dict(fiscal_start_year=2026,employees_in_ward=50,office_months=12,
+        component='wards_only_principal',ordinary_capital_scope_verified=True)
+    args.update(changes)
+    return ordinary_per_capita_component(capital,**args)
+
+
+@pytest.mark.parametrize('capital,employees,expected',[
+    ('10000000',50,70000),('10000000',51,140000),
+    ('10000001',50,180000),('100000000',51,200000),
+    ('100000001',50,290000),('1000000000',51,530000),
+    ('1000000001',50,950000),('5000000000',51,2290000),
+    ('5000000001',50,1210000),('5000000001',51,3800000),
+])
+def test_official_ordinary_capital_and_employee_table(capital,employees,expected):
+    result=per_capita(capital,employees_in_ward=employees)
+    assert result['annual_component_amount']==expected
+    assert result['per_capita_tax_before_prepayments']==expected
+
+
+def test_one_month_principal_ward_must_not_round_separate_components():
+    assert per_capita(office_months=1)['per_capita_tax_before_prepayments']==5800
+    ward=per_capita(office_months=1,component='ward_only')
+    prefecture=per_capita(office_months=1,component='prefectural_only')
+    assert ward['per_capita_tax_before_prepayments']==4100
+    assert prefecture['per_capita_tax_before_prepayments']==1600
+    assert ward['annual_component_amount']==50000
+    assert prefecture['annual_component_amount']==20000
+
+
+def test_annual_extra_ward_adds_no_second_prefecture():
+    main=per_capita()
+    extra=per_capita(component='ward_only',employees_in_ward=51)
+    assert main['per_capita_tax_before_prepayments']+extra['per_capita_tax_before_prepayments']==190000
+
+
+def test_prefectural_amount_ignores_ward_employee_threshold():
+    assert per_capita(component='prefectural_only',employees_in_ward=0)['annual_component_amount']==20000
+    assert per_capita(component='prefectural_only',employees_in_ward=1000)['annual_component_amount']==20000
+
+
+@pytest.mark.parametrize('changes',[
+    dict(employees_in_ward=True),dict(employees_in_ward=-1),dict(employees_in_ward=50.0),
+    dict(office_months=0),dict(office_months=13),dict(office_months=True),
+    dict(component='municipal'),dict(ordinary_capital_scope_verified=False),
+    dict(ordinary_capital_scope_verified=1),dict(fiscal_start_year=True),dict(fiscal_start_year=2025),
+])
+def test_per_capita_scope_and_counts_are_strict(changes):
+    with pytest.raises(ValueError):per_capita(**changes)
+
+
+def test_no_profit_exemption_in_per_capita_component():
+    # No income parameter: ordinary zero-profit companies can still owe this levy.
+    assert per_capita('0',employees_in_ward=0)['per_capita_tax_before_prepayments']==70000
+    with pytest.raises(ValueError):per_capita('0.1')
