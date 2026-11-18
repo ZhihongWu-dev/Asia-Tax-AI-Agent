@@ -63,7 +63,9 @@
         "japan-tokyo-ui-validation-20261119.json",
         "current-income-workflow-availability-20261119.json",
         "china-foreign-credit-component-20261119.json",
-        "china-foreign-direct-api-20261119.json"
+        "china-foreign-direct-api-20261119.json",
+        "china-foreign-ui-validation-20261119.json",
+        "china-foreign-report-validation-20261119.json"
       ],
       "limits": "Current frontend policy selection at7ad30f6 offers an assessment for all22 representative corporate/personal inputs across11jurisdictions. The complete122-case browser run covers representative workflows. Neither evidence establishes every income type, residency, special regime or filing obligation."
     },
@@ -94,9 +96,10 @@
         "vietnam-treaty-source-snapshots-20261119.json",
         "assessment-result-source-audit-20261119.json",
         "nested-income-source-audit-20261119.json",
-        "exact-citation-lookup-validation-20261119.json"
+        "exact-citation-lookup-validation-20261119.json",
+        "income-result-source-audit-current-20261119.json"
       ],
-      "limits": "Current recursive audit captured137 successful calculations across33 policies and verified109 distinct source dictionaries, including nested helper references, against local originals. Historical raw/ paths use database-relative resolution. Unexecuted variants, standalone helper outputs, substantive legal completeness and actual business acceptance remain unproven."
+      "limits": "Current recursive audit captured144 successful calculations across34 policies and verified111 distinct source dictionaries, including nested helper references, against local originals. Historical raw/ paths use database-relative resolution. Unexecuted variants, standalone helper outputs, substantive legal completeness and actual business acceptance remain unproven."
     },
     {
       "requirement": "Repeated validation until actual business requirements are met",
@@ -146,7 +149,8 @@
     "china_foreign_credit_component": "24 internal component cases passed; source originals verified. Saved-case/API/UI integration pending; no full foreign-income acceptance claimed.",
     "china_foreign_direct_api": "1692 income/report tests passed; direct-credit case reconciliation, persistence/restart/export verified. UI pending; no indirect/deemed or negative-base acceptance claimed.",
     "china_foreign_direct_ui": "TypeScript and3 browser scenarios passed (47.2s): per-country, pooled, additional prior-credit-only country; saved/reopened/exported expiry and carryforward balances verified. Scoped ordinary direct credit only.",
-    "china_foreign_report": "38 focused report/API tests passed in11.59s; Chinese/English per-country and pooled summaries show original years, expiry, current use and next-year carryforward."
+    "china_foreign_report": "38 focused report/API tests passed in11.59s; Chinese/English per-country and pooled summaries show original years, expiry, current use and next-year carryforward.",
+    "nested_sources_current": "1696 income/report tests passed in38.69s;144 successful calculations across34 policies;111 distinct source records,0 missing files or hash mismatches. Includes China foreign direct-credit workflow."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

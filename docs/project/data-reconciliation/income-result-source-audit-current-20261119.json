@@ -1,0 +1,2095 @@
+{
+  "pytest_exit": 0,
+  "successful_calls": 144,
+  "policies": [
+    "ae_ordinary_2026",
+    "cn_business_2026",
+    "cn_company_2026",
+    "cn_company_foreign_direct_2026",
+    "cn_comprehensive_2026",
+    "cn_small_company_2026",
+    "hk_profits_2025_26",
+    "hk_property_2025_26",
+    "hk_salaries_2025_26",
+    "id_company_2026",
+    "id_resident_2026",
+    "in_company_normal_ty2026_27",
+    "in_company_section200_ty2026_27",
+    "in_personal_new_ty2026_27",
+    "in_personal_old_ty2026_27",
+    "jp_company_starting_2026",
+    "jp_resident_ordinary_2026",
+    "kr_company_ordinary_2026",
+    "kr_salary_standard_payroll_2026",
+    "my_company_2026",
+    "my_dividend_2026",
+    "my_individual_2026",
+    "sg_company_ya2026",
+    "sg_employment_ya2026",
+    "sg_resident_ya2026",
+    "th_company_2026",
+    "th_dividend_2026",
+    "th_foreign_income_2026",
+    "th_resident_2026",
+    "vn_business_2026",
+    "vn_company_2026",
+    "vn_employment_2026",
+    "vn_personal_transfer_2026",
+    "vn_property_rental_2026"
+  ],
+  "unique_source_records": 111,
+  "unresolved": [],
+  "records": [
+    {
+      "source": {
+        "doc_id": "cn.law.eit",
+        "url": "http://www.npc.gov.cn/zgrdw/npc/xinwen/2019-01/07/content_2070260.htm",
+        "file": "database/raw/cn/cn.law.eit.html",
+        "sha256": "ce155d4c61c537da01dd89b0e4b3660d8d253674df67392fc95d7f599f39e900"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "cn_company_2026",
+        "cn_company_foreign_direct_2026",
+        "cn_small_company_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "th.rc3.rates.th",
+        "title": "ประมวลรัษฎากร บัญชีอัตราภาษีเงินได้ (ท้ายหมวด 3)",
+        "url": "https://www.rd.go.th/5938.html",
+        "file": "database/raw/th/th.rc3.rates.th.html",
+        "sha256": "5ec38d0dbbb7ee5d226ad1a7422aa14ff603dcf29dfc566e47e48bd04bc0a3b4"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "th_company_2026",
+        "th_dividend_2026",
+        "th_foreign_income_2026",
+        "th_resident_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "th.rc3a.th",
+        "title": "ประมวลรัษฎากร หมวด 3 ภาษีเงินได้ มาตรา 38-64",
+        "url": "https://www.rd.go.th/5937.html",
+        "file": "database/raw/th/th.rc3a.th.html",
+        "sha256": "3050f0a13b298f027d5451fb8b3dfb8ec77658db1fbbd72eaa507abf0c3ed428"
+      },
+      "paths": [
+        "result.dividend_components.sources[]",
+        "result.sources[]"
+      ],
+      "policies": [
+        "th_dividend_2026",
+        "th_foreign_income_2026",
+        "th_resident_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "th.rd470.th",
+        "title": "Royal Decree 470: first THB150,000 net-income exemption",
+        "url": "https://www.rd.go.th/33893.html",
+        "file": "database/raw/th/th.rd470.th.html",
+        "sha256": "bbda893d31dd320f36c0b61bb0c06434a8be52cc4815085d0080fa9f2761e287"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "th_dividend_2026",
+        "th_foreign_income_2026",
+        "th_resident_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "th.rd480.th",
+        "title": "Royal Decree 480: section48(2) tax not exceeding THB5,000 exemption",
+        "url": "https://rd.go.th/40819.html",
+        "file": "database/raw/th/th.rd480.th.html",
+        "sha256": "db91e60b958825d35e574e2bc71126ac44a6c2964becc391bc69bafc3289ce9b"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "th_dividend_2026",
+        "th_foreign_income_2026",
+        "th_resident_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "title": "Revenue Department foreign tax credit manual (EN), November 2025",
+        "url": "https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_EN.pdf",
+        "file": "database/raw/th/th.rd.foreign-tax-credit-manual-2025.en.pdf",
+        "sha256": "9a802a525c5a735d8221961e4e23eed432a2a4739173e52cb4d06c8cceaa43e5"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "th_foreign_income_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "title": "Revenue Department foreign tax credit manual (TH), November 2025",
+        "url": "https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_TH.pdf",
+        "file": "database/raw/th/th.rd.foreign-tax-credit-manual-2025.th.pdf",
+        "sha256": "28a510f86b507e4f1877fe1f5a3d00b457f6f2212692abf3956283ae033107fe"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "th_foreign_income_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "th.rd.p161-2566",
+        "title": "Revenue Department Order P161/2566: Section41 foreign-income remittances",
+        "url": "https://www.rd.go.th/fileadmin/user_upload/kormor/newlaw/dn161A.pdf",
+        "file": "database/raw/th/th.rd.p161-2566.pdf",
+        "sha256": "51bd23778016359216b0695519f12f9c731eb92d0e47d5a226f06923a81cf075",
+        "note": "Administrative interpretation of Section41. Applies to remittances from1January2024; P162 excludes income arising before1January2024 from P161 clause1. Income-year residence and income tracing required. Official PDF incorporates P162 amendment; not unamended original."
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "th_foreign_income_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "th.rd.p162-2566",
+        "title": "Revenue Department Order P162/2566: Section41 foreign-income remittances",
+        "url": "https://www.rd.go.th/fileadmin/user_upload/kormor/newlaw/dn162A.pdf",
+        "file": "database/raw/th/th.rd.p162-2566.pdf",
+        "sha256": "a235ebf4e384bf08ab8a491cda9b67625f95d559049b689cbaeff28c07493af4",
+        "note": "Administrative interpretation of Section41. Applies to remittances from1January2024; P162 excludes income arising before1January2024 from P161 clause1. Income-year residence and income tracing required. Amends P161 clause1 by adding pre2024-income exclusion."
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "th_foreign_income_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "cn.iit.business.schedule",
+        "title": "Individual Income Tax Law and business income rate schedule",
+        "url": "https://guangxi.chinatax.gov.cn/zcwj/zxwj/201809/t20180914_254766.html",
+        "file": "database/raw/cn/cn.iit.business.schedule.html",
+        "sha256": "bba26187c90f3626ad07d5e7d17362dee638d7041805a5e0e9c9685a30081edd",
+        "retrieved_on": "2026-11-19"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "cn_business_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "cn.sta.2023-12.business-relief",
+        "title": "STA Announcement 2023 No.12: annual aggregation and individual operator relief",
+        "url": "https://guangxi.chinatax.gov.cn/zcwj/zxwj/202308/t20230807_390469.html",
+        "file": "database/raw/cn/cn.sta.2023-12.business-relief.html",
+        "sha256": "0a91d77f5045c99a82f5f20b21c171080469a767797b94206310688b3048a264",
+        "retrieved_on": "2026-11-19",
+        "original_reference_url": "https://fgk.chinatax.gov.cn/zcfgk/c100012/c5213596/content.html",
+        "archive_note": "Original reference returned HTTP403; snapshot is the Guangxi tax authority publication of the same announcement or official interpretation. SHA256 describes only the archived Guangxi response."
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "cn_business_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "cn.sta.2023-12.business-examples",
+        "title": "Official interpretation of STA Announcement 2023 No.12, including examples",
+        "url": "https://guangxi.chinatax.gov.cn/zcwj/zcjd/202308/t20230807_390476.htm",
+        "file": "database/raw/cn/cn.sta.2023-12.business-examples.html",
+        "sha256": "62522e41a727b93068707028d8f054d8ba9a54b4479cc82ec4d8504358f49271",
+        "retrieved_on": "2026-11-19",
+        "original_reference_url": "https://fgk.chinatax.gov.cn/zcfgk/c100015/c5213612/content.html",
+        "archive_note": "Original reference returned HTTP403; snapshot is the Guangxi tax authority publication of the same announcement or official interpretation. SHA256 describes only the archived Guangxi response."
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "cn_business_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "sg.iras.pit-rates-20261116",
+        "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates",
+        "sha256": "fd1ca66256803ef457d05b34a2baf1cb1f4e006b3c94a7febedfdd5085cb9dbe",
+        "retrieved_at": "2026-11-15T17:30:12.296280+00:00",
+        "file": "raw/sg/sg.iras.pit-rates-20261116.html"
+      },
+      "paths": [
+        "result.source",
+        "result.sources[]"
+      ],
+      "policies": [
+        "sg_employment_ya2026",
+        "sg_resident_ya2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "sg.iras.personal-reliefs",
+        "title": "IRAS personal income tax relief cap",
+        "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs",
+        "file": "database/raw/sg/sg.iras.personal-reliefs.20261119.html",
+        "sha256": "a63b84141eeda1c0e2ca84b89f1161198fb856bf4dfcabe2d698e44b32b9b892",
+        "retrieved_on": "2026-11-19"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "sg_employment_ya2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "sg.iras.earned-income-relief",
+        "title": "IRAS Earned Income Relief",
+        "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs/earned-income-relief",
+        "file": "database/raw/sg/sg.iras.earned-income-relief.20261119.html",
+        "sha256": "c064b7a3152407dcdf589967cc2908db82c4d6e9ae7d2ad1c7796e722f05e0d9",
+        "retrieved_on": "2026-11-19"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "sg_employment_ya2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "sg.iras.parenthood-tax-rebate",
+        "title": "IRAS Parenthood Tax Rebate",
+        "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs/parenthood-tax-rebate-(ptr)",
+        "file": "database/raw/sg/sg.iras.parenthood-tax-rebate.20261119.html",
+        "sha256": "d9c6c9d9fd5e80c5d51195c87440eb0452adba44aed6b58b8b269b29c5eab68f",
+        "retrieved_on": "2026-11-19"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "sg_employment_ya2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "cn.mof.sta.2023-12",
+        "title": "MOF/STA Announcement 2023 No.12, Articles3 and5",
+        "url": "https://tianjin.chinatax.gov.cn/11253000000/0100/010003/p20230816143619913.shtml",
+        "file": "database/raw/cn/cn.mof.sta.2023-12.html",
+        "sha256": "554ad85277cd70fb619359eca0070a14984f0e1efa7b3308a4d33f5a5f80bc9a",
+        "retrieved_on": "2026-11-19"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "cn_small_company_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "th.rd.p119-2545",
+        "title": "Revenue Department Order P119/2545, clause19",
+        "url": "https://www.rd.go.th/11162.html",
+        "file": "database/raw/th/th.rd.p119-2545.html",
+        "sha256": "e83c3c360ad1a849ac02bc30840bc8ff42b5aa090afdfe5c338efb0ef0f38b2c",
+        "retrieved_on": "2026-11-19"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "th_dividend_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "th.rd530.consolidated.th",
+        "title": "Royal Decree 530 with amendments: SME corporate rates",
+        "url": "https://www.rd.go.th/28271.html",
+        "file": "database/raw/th/th.rd530.consolidated.th.html",
+        "sha256": "bd350a9c9a3bd6946b5542e1004304bd606063bc85faac71b29f01945735fef0"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "th_company_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "th.rc3b.th",
+        "title": "ประมวลรัษฎากร หมวด 3 ภาษีเงินได้ มาตรา 65-76",
+        "url": "https://www.rd.go.th/5939.html",
+        "file": "database/raw/th/th.rc3b.th.html",
+        "sha256": "fc901d8b1a0a8a6bb25b1509effdc5d5e6257f1963c87dbcbc6ab08a4a216d4a"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "th_company_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.corporate-rates.20261117",
+        "title": "NTA5759 ordinary corporation rates",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/hojin/5759.htm",
+        "file": "database/raw/jp/jp.corporate-rates.20261117.html",
+        "sha256": "240bbf0e09c1414db40562127a08928fd0997779f97289d697ef29f18a362704",
+        "review_status": "scoped_national_ordinary_company_review"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_company_starting_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.defence-corporate.20261117",
+        "title": "NTA defence special corporation tax, June2026 revision",
+        "url": "https://www.nta.go.jp/publication/pamph/pdf/0025004-109_1.pdf",
+        "file": "database/raw/jp/jp.defence-corporate.20261117.pdf",
+        "sha256": "19b0cbd242bcc12b2dd40cc2f866d866c8aa0254958fd1f4f313480047dba980",
+        "review_status": "scoped_national_ordinary_company_review"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_company_starting_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.local-corporate-act.20261117",
+        "title": "Local Corporation Tax Act, Articles6/9/10",
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/426AC0000000011",
+        "file": "database/raw/jp/jp.local-corporate-act.20261117.xml",
+        "sha256": "6d371bf30cd5d730340d97a7c4d60a81374a5fe62838c2c2dd6b29a6a51011e7",
+        "review_status": "scoped_national_ordinary_company_review"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_company_starting_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.sme-classification.20261117",
+        "title": "NTA5432 SME and excluded-business classification",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/hojin/5432.htm",
+        "file": "database/raw/jp/jp.sme-classification.20261117.html",
+        "sha256": "79e6230110ae68d83cfdb6aaef2f832efada5a936a5223bd3c478ceccdcebb99",
+        "review_status": "scoped_national_ordinary_company_review"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_company_starting_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.corporate-return-guide.20261117",
+        "title": "NTA2026 corporate return guide, forms and rounding",
+        "url": "https://www.nta.go.jp/publication/pamph/hojin/aramashi2026/pdf/02.pdf",
+        "file": "database/raw/jp/jp.corporate-return-guide.20261117.pdf",
+        "sha256": "13d2c3598b1651f302e6ab48c87d10e9a4bfa08d66846df295fcae82ecf66f72",
+        "review_status": "scoped_national_ordinary_company_review"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_company_starting_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.general-tax-act.20261117",
+        "title": "General Act on National Taxes, Articles118/119",
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/337AC0000000066",
+        "file": "database/raw/jp/jp.general-tax-act.20261117.xml",
+        "sha256": "84701c9cecc1f5d05aa1c01c91e279eaef1630f4bbceacb78f393f040f134e5e",
+        "review_status": "scoped_national_ordinary_company_review"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_company_starting_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.cta",
+        "title": "法人税法（昭和40年法律第34号）",
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/340AC0000000034",
+        "file": "database/raw/jp/jp.cta.xml",
+        "sha256": "b3adc0eabf98a8210ec465d6ded837fb0fadf65d4cfcb3e3bc2b7e43ca27212a",
+        "review_status": "corporate_rate_and_sme_provisions_plus_Article22_tax_basis_identity; loss eligibility and limits remain established inputs"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_company_starting_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.sma",
+        "title": "租税特別措置法（昭和32年法律第26号）",
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/332AC0000000026",
+        "file": "database/raw/jp/jp.sma.xml",
+        "sha256": "c28aeae57b80ae45942c7ec08086a5a4a4804467ee44e43046be9460a42aec71",
+        "review_status": "corporate_rate_and_sme_provisions_only"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_company_starting_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "id.uu7.2021.id",
+        "title": "Law 7 of 2021: Harmonisation of Tax Regulations",
+        "url": "https://jdih.kemenkeu.go.id/api/download/a9faab97-aca7-4f87-9fdc-faa8123d1454/7TAHUN2021UU.pdf",
+        "file": "database/raw/id/id.uu7.2021.id.pdf",
+        "sha256": "4e4be3e276bf327e6e9e8a4a031838f572feb4014c2476f6cea0d9a54dd38d5b"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "id_company_2026",
+        "id_resident_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "id.pp20.2026.id",
+        "title": "Government Regulation 20 of 2026 amending PP55/2022",
+        "url": "https://jdih.kemenkeu.go.id/api/download/d057ff82-50e7-4127-b66b-f704a36f071d/2026pp020.pdf",
+        "file": "database/raw/id/id.pp20.2026.id.pdf",
+        "sha256": "3aadd85768e7dc3dd5f8431178ee0dd1d03d631835a493288563692de7cf8520"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "id_company_2026",
+        "id_resident_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "id.per12.2026.annex.id",
+        "title": "PER-12/PJ/2026 annex: amended annual return forms and instructions",
+        "url": "https://www.pajak.go.id/sites/default/files/lampiran/Lampiran_PER12PJ2026.pdf",
+        "file": "database/raw/id/id.per12.2026.annex.id.pdf",
+        "sha256": "472c3fb0b42c74d25b702f165d9ccd9234ae257b2b28e1509e36593ee0c1be43"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "id_company_2026",
+        "id_resident_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "id.dgt.company-calculation.id",
+        "title": "DGT ordinary company computation and article31E example",
+        "url": "https://pajak.go.id/id/mekanisme-penghitungan-pajak-penghasilan-badan",
+        "file": "database/raw/id/id.dgt.company-calculation.id.html",
+        "sha256": "797e292a6ed8698a2366de691032967e7764b3cf1b0b8a48df4b7c367a26f679"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "id_company_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "id.dgt.personal-calculation.id",
+        "title": "DGT individual computation and PTKP example",
+        "url": "https://www.pajak.go.id/id/mekanisme-penghitungan-pajak-penghasilan-orang-pribadi",
+        "file": "database/raw/id/id.dgt.personal-calculation.id.html",
+        "sha256": "1b34aae90f12476d335507763bda82859b8d5144ff97f35dd377b77bc6514842"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "id_company_2026",
+        "id_resident_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "id.per12.2026.id",
+        "title": "PER-12/PJ/2026: reporting amendments effective 1 October 2026",
+        "url": "https://www.pajak.go.id/id/peraturan/perubahan-atas-peraturan-direktur-jenderal-pajak-nomor-11pj2025-tentang-ketentuan",
+        "file": "database/raw/id/id.per12.2026.id.html",
+        "sha256": "92d8a41d868e80306e7e472fe899edee10e0d02407a68cb8ab381235b7670ec4"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "id_company_2026",
+        "id_resident_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "sg.iras.cit-rates-20261116",
+        "url": "https://www.iras.gov.sg/quick-links/tax-rates/corporate-income-tax-rates",
+        "sha256": "eac7ed5619e2d30caf41f45443772d036a50e3c31db676c26a285b766c4293b3",
+        "retrieved_at": "2026-11-15T17:30:11.236525+00:00",
+        "file": "raw/sg/sg.iras.cit-rates-20261116.html"
+      },
+      "paths": [
+        "result.source",
+        "result.sources[]"
+      ],
+      "policies": [
+        "sg_company_ya2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "sg.iras.company-computation.20261119",
+        "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/form-c-s-form-c-s-%28lite%29-form-c-filing/preparing-a-tax-computation",
+        "file": "database/raw/sg/sg.iras.company-computation.20261119.html",
+        "sha256": "e0d9b78a27208d38a16ea3f86bbd547a935ac0dec6b0ecf523cc83054b86ffc7",
+        "retrieved_on": "2026-11-19"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "sg_company_ya2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "hk.ird.two-tier-rates-20261116",
+        "url": "https://www.ird.gov.hk/eng/faq/2tr.htm",
+        "file": "database/raw/hk/hk.ird.two-tier-rates-20261116.html",
+        "sha256": "3d8d10abc9f80b31cb17ba56178c075c93d4c6c279f43fb5ec4d0d55e046df58",
+        "title": "Two-tiered profits tax rates FAQ"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "hk_profits_2025_26"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "hk.ird.tax-concessions-enacted-2026",
+        "url": "https://www.ird.gov.hk/eng/ppr/archives/26051303.htm",
+        "file": "database/raw/hk/hk.ird.tax-concessions-enacted-2026.html",
+        "sha256": "1e32d17b3a5e74b793fa12ead7c74a4937ed64d84a26d7b1fc498d060b87fc56",
+        "title": "Passage of 2026 tax concessions legislation"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "hk_profits_2025_26",
+        "hk_salaries_2025_26"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "hk.ird.corporation-notes.20261119",
+        "title": "Hong Kong corporation return notes: assessable profits before brought-forward losses",
+        "url": "https://www.ird.gov.hk/eng/tax/bir51e_notes.htm",
+        "file": "database/raw/hk/hk.ird.corporation-notes.20261119.html",
+        "sha256": "3ffc9155c08fa019a82c1a982eebbe23608d09caab41ad8198d6212add487a95"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "hk_profits_2025_26"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "hk.ird.profits-overview.20261119",
+        "title": "Hong Kong profits tax: statutory deductions and treatment of losses",
+        "url": "https://www.ird.gov.hk/eng/tax/bus_pft.htm",
+        "file": "database/raw/hk/hk.ird.profits-overview.20261119.html",
+        "sha256": "813d308fed75d0cd75b5a151ddc459f5aa4abe62a479201adeb0563673444a91"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "hk_profits_2025_26"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "ae.cabinet116.2022.taxable-threshold.en",
+        "url": "https://tax.gov.ae/Datafolder/Files/Legislation/Corporate%20Tax/Cabinet%20Decision%20No.%20116%20of%202022%20-%20for%20publishing.pdf",
+        "file": "database/raw/ae/ae.cabinet116.2022.taxable-threshold.en.pdf",
+        "sha256": "6c830b72ad61feb3cf55d1bdc11272306f3f27d809e201cf9d2d3a483817d415",
+        "title": "Cabinet Decision 116 of 2022 on the Taxable Income Threshold"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "ae_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "ae.cabinet49.2023.natural-persons.en",
+        "url": "https://mof.gov.ae/wp-content/uploads/2023/05/Cabinet-Decision-No.-49-of-2023.pdf",
+        "file": "database/raw/ae/ae.cabinet49.2023.natural-persons.en.pdf",
+        "sha256": "8ceb036169a612fe5542c7e60cba20464b90fbd5f0ceee35047cf9c5257c921f",
+        "title": "Cabinet Decision 49 of 2023 on Businesses or Business Activities Conducted by Natural Persons"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "ae_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "ae.fta.natural-persons-2023",
+        "url": "https://tax.gov.ae/Datafolder/Files/Guides/CT/Taxation%20of%20natural%20persons%20-%2025%2011%202023.pdf",
+        "file": "database/raw/ae/ae.fta.natural-persons-2023.pdf",
+        "sha256": "a365c742ebcc2277067cb3b7416b7960f42390dea3c3b21c982daaf67a48b9ef",
+        "title": "Corporate Tax Guide: Taxation of Natural Persons"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "ae_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "ae.fta.general-corporate-tax",
+        "url": "https://tax.gov.ae/DataFolder/Files/Guides/CT/CT%20General%20Guide%20-%20EN%20-%2010%2009%202023.pdf",
+        "file": "database/raw/ae/ae.fta.general-corporate-tax.pdf",
+        "sha256": "b837af15aaab96e65a149538cbbcda5482e4c96a1ddf2b4d383fd86774063e7f",
+        "title": "Corporate Tax – General"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "ae_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "url": "https://mof.gov.ae/wp-content/uploads/2026/01/Federal-Decree-Law-No.-47-of-2022-and-its-amendments-en-v13.1.26.pdf",
+        "file": "database/raw/ae/ae.law.corporate-tax.mof20260113.en.pdf",
+        "sha256": "d11bdd029c1b0ab6a73cadad734d6ba85b6f61fe5014fc7fdc73fb754a557c03",
+        "doc_id": "ae.law.corporate-tax.mof20260113.en",
+        "title": "UAE Corporate Tax Law consolidated January 2026: own-loss relief",
+        "locator": "Articles 37 and 39; PDF pages42-44",
+        "note": "MOF English translation; Arabic prevails. Own-loss ordinary 75% ceiling; eligibility must be established separately."
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "ae_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "my.ita1967.updated2026.en",
+        "title": "Income Tax Act 1967 (Act 53), online updated text as at 1 January 2026",
+        "url": "https://lom.agc.gov.my/ilims/upload/portal/akta/outputaktap/3345910_BI/Act%2053%20%28Online%202026%29.pdf",
+        "file": "database/raw/my/my.ita1967.updated2026.en.pdf",
+        "sha256": "a5686ae61b81ce55ef36054149b98ccd1b04f73b937f5e44db8926484795416a",
+        "locator": "Schedule 1 Part I paragraphs 1, 1A, 2, 2A-2C; sections 6A and 6D",
+        "note": "Official updated text, not an authentic reprint. Source date is not blanket commencement."
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "my_company_2026",
+        "my_dividend_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "my.hasil.form-c2026.sample.en",
+        "title": "Malaysia YA2026 company return sample: Part A computation",
+        "url": "https://www.hasil.gov.my/wp-content/uploads/Sample-Return-Form_C2026_2.pdf",
+        "file": "database/raw/my/my.hasil.form-c2026.sample.en.pdf",
+        "sha256": "57dd86427ec719fad2d8f2b25157ae7974ac66acdf584bb30e72ace351274f30",
+        "locator": "PDF page2, Part A A1-A18",
+        "note": "Official sample for reference and learning, not a return for submission. Applies alongside Act53."
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "my_company_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.law.cit67.2025.vi",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/67qh.signed.pdf",
+        "sha256": "ae706468190afe8d111dd0fccf240e7a980eb002c5d0b5cb1cfe127d92f9c1cd",
+        "provisions": [
+          "Articles 4, 10",
+          "Article7(1)-(2), PDF page6"
+        ],
+        "registration_status": "registered_original_only",
+        "review_status": "Selected original page6 visually reviewed for taxable-income formula; other registered provisions retain their prior review limits. Not full verified transcription.",
+        "file": "database/raw/vn/vn.law.cit67.2025.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_company_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.law09.2026.vi",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/5/09-qh.signed.pdf",
+        "sha256": "d9207c14c9af462454dd7ce9ef5b23c8a22dfea8d3462438be9ffd3897a1f94e",
+        "provisions": [
+          "Articles 3, 5(2)"
+        ],
+        "registration_status": "registered_original_only",
+        "review_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text.",
+        "file": "database/raw/vn/vn.law09.2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_company_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.decree398.2026.vi",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/11/398_2026_nd-cp_29102026-signed.signed.pdf",
+        "sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
+        "provisions": [
+          "Articles 3, 4"
+        ],
+        "registration_status": "registered_original_only",
+        "review_status": "Signature metadata only; scanned legal body requires image review/OCR. Not indexed as complete text.",
+        "file": "database/raw/vn/vn.decree398.2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_company_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.decree141.2026.vi",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/141-ndcp.signed.pdf",
+        "sha256": "fa9a7c47b637f47528225d9cdd03dbde1032607ec8c39648071178ce4091413f",
+        "provisions": [
+          "Articles 2, 3"
+        ],
+        "registration_status": "registered_original_only",
+        "review_status": "Scanned original; pages 2-3 visually reviewed, not indexed as a full transcription.",
+        "file": "database/raw/vn/vn.decree141.2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_company_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.decree320.2025.vi",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/12/320-ndcp.signed.pdf",
+        "sha256": "4a426bbe928511d278aa23318156d27747c45669e8ee9002fb7a635794f51e06",
+        "provisions": [
+          "Articles 4(15) as amended, 11, 23(9)",
+          "Articles6-8, PDF pages16-18"
+        ],
+        "registration_status": "registered_original_only",
+        "review_status": "Original pages16-18 visually reviewed for activity segregation, current/prior losses, five-year window and statutory revenue; prior pages41 and72 review retained. Not full verified transcription.",
+        "file": "database/raw/vn/vn.decree320.2025.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_company_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "hk.gov.salaries-rates-20261116",
+        "url": "https://www.gov.hk/en/residents/taxes/taxfiling/taxrates/salariesrates.htm",
+        "file": "database/raw/hk/hk.gov.salaries-rates-20261116.html",
+        "sha256": "baabce21ed541a686f1060ec60e992a02f5819417fdf8854d82415a882c8eeeb",
+        "title": "Salaries tax and personal assessment rates"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "hk_salaries_2025_26"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "hk.cap112",
+        "title": "Inland Revenue Ordinance: separate salaries basis and loss stages",
+        "url": "https://www.elegislation.gov.hk/hk/cap112!en.rtf",
+        "file": "database/raw/hk/hk.cap112.rtf",
+        "sha256": "e28849ff385862416718714208c9fa05d27b022ca475b687c6f1c4591a100134",
+        "locator": "Sections12(1),12(5),12A and12B",
+        "note": "Employment expenses and machinery allowances determine section12A excess; self-education and Part4A deductions do not automatically create that excess."
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "hk_salaries_2025_26"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.corporate-tax-act.20260701.ko",
+        "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsId=001563",
+        "sha256": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+        "provisions": [
+          "Article55; Act21217 supplementary Articles1,5",
+          "Article59",
+          "Article64"
+        ],
+        "file": "database/raw/kr/kr.corporate-tax-act.20260701.ko.pdf"
+      },
+      "paths": [
+        "result.national.sources[]",
+        "result.sources[]"
+      ],
+      "policies": [
+        "kr_company_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.national-treasury.article47.2026",
+        "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1031453583",
+        "sha256": "e219a858f303c94d114495ffc0105b5fef7e7622b85a7f064c5e5f9c35a6b665",
+        "provisions": [
+          "Article47(1)-(2)"
+        ],
+        "file": "database/raw/kr/kr.national-treasury.article47.2026.html"
+      },
+      "paths": [
+        "result.national.sources[]",
+        "result.sources[]"
+      ],
+      "policies": [
+        "kr_company_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.special-tax-treatment.article132.2026",
+        "url": "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1000890962",
+        "sha256": "1bae488f4cb846831b4b7891f17cbaada52c38b9ddec68001ea39a010d7e8f0b",
+        "provisions": [
+          "Article132(1)"
+        ],
+        "file": "database/raw/kr/kr.special-tax-treatment.article132.2026.html"
+      },
+      "paths": [
+        "result.national.sources[]",
+        "result.sources[]"
+      ],
+      "policies": [
+        "kr_company_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.local-tax.article103-20.2026",
+        "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1031177407",
+        "sha256": "69a26326504eb7dd9c952c39f1d567fa1ef886fa77a75104995bfb5319623fda",
+        "provisions": [
+          "Article103-20"
+        ],
+        "file": "database/raw/kr/kr.local-tax.article103-20.2026.html"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "kr_company_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.local-tax.amendment21308.2025",
+        "url": "https://law.go.kr/LSW/lsRvsDocListP.do?chrClsCd=010202&lsId=001649&lsRvsGubun=all",
+        "sha256": "ae2d538485753342358dc8c5cef661dd7385aabc2b42df8143bf5ff9dc071136",
+        "provisions": [
+          "Act21308 supplementary Articles1,10,11,12"
+        ],
+        "file": "database/raw/kr/kr.local-tax.amendment21308.2025.html"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "kr_company_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.local-tax.table.company-ordinary",
+        "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=160224293",
+        "sha256": "4856297a4fc5feaba4cd39a2c84e40edfb8016a98d60f7cf2d1e8393549b8363",
+        "provisions": [
+          "Official embedded rate-table image"
+        ],
+        "file": "database/raw/kr/kr.local-tax.table.company-ordinary.gif"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "kr_company_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.local-tax.table.company-special",
+        "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=160224329",
+        "sha256": "c37647980d0ab7165a607de6d4db5dd328da15aead226ab6358dc88aba0d06c6",
+        "provisions": [
+          "Official embedded rate-table image"
+        ],
+        "file": "database/raw/kr/kr.local-tax.table.company-special.gif"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "kr_company_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.local-tax-basic.article59.2026",
+        "url": "https://www.law.go.kr/LSW/lsLinkProc.do?joLnkStr=%EC%A0%9C97%EC%A1%B0&lsNm=%EC%A7%80%EB%B0%A9%EC%84%B8%EA%B8%B0%EB%B3%B8%EB%B2%95&mode=11",
+        "sha256": "1ed709aa892ade3bbc0950038efe2755046549aed809dc2332e89575051c0266",
+        "provisions": [
+          "Article59"
+        ],
+        "file": "database/raw/kr/kr.local-tax-basic.article59.2026.html"
+      },
+      "paths": [
+        "result.local_settlement.sources[]",
+        "result.sources[]"
+      ],
+      "policies": [
+        "kr_company_ordinary_2026",
+        "kr_salary_standard_payroll_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.local-tax.form43.20260701",
+        "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=164921007",
+        "file": "database/raw/kr/kr.local-tax.form43.20260701.pdf",
+        "sha256": "363ae8f389af98b9d48a5ae0d753cb2eda6beee83b8ff1db9f03d9278a4b3051",
+        "provisions": [
+          "Instructions19-27"
+        ]
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "kr_company_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203574/content.html",
+        "sha256": "ba5b09a72ae33414c331267b540af0bf77db3cb061cad6b57b2172039916700c",
+        "title": "财政部 国家税务总局关于企业境外所得税收抵免有关问题的通知",
+        "doc_id": "cn.cs.2009-125",
+        "file": "database/raw/cn/cn.cs.2009-125.html"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "cn_company_foreign_direct_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5202488/content.html",
+        "sha256": "cc499bb5edd4d57e6b9b0b2345c6fc0b725f5aecfbeb32fe49ac1d4609c3c17b",
+        "title": "财政部 税务总局关于完善企业境外所得税收抵免政策问题的通知",
+        "doc_id": "cn.cs.2017-84",
+        "file": "database/raw/cn/cn.cs.2017-84.html"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "cn_company_foreign_direct_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "cn.law.iit",
+        "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5193028/content.html",
+        "file": "database/raw/cn/cn.law.iit.html",
+        "sha256": "442006d0f1157e381eb044c60a4cafad7bae30f5dcf3592d1bdf72d99a798cb7"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "cn_comprehensive_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "cn.iit.comprehensive-rate-table",
+        "url": "https://www.gov.cn/zhengce/zhengceku/202402/P020240204617705894863.pdf",
+        "file": "database/raw/cn/cn.iit.comprehensive-rate-table.pdf",
+        "sha256": "84204e1b17778943909e217eadd5cf4bc8d54901bc1e822c21b5408760d2059f"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "cn_comprehensive_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "hk.ird.property-notes-20261119",
+        "url": "https://www.ird.gov.hk/eng/tax/bir57se_notes.htm",
+        "file": "database/raw/hk/hk.ird.property-notes-20261119.html",
+        "sha256": "92f300993661847ab8a6d9ea12f8d14df8bd6240196294764638f0726c61bbb2",
+        "title": "Property tax return notes: rental consideration, deductions and 2025/26 rate"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "hk_property_2025_26"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "in.law.ita2025.fa2026.en",
+        "title": "Income-tax Act 2025 as amended by Finance Act 2026: sections 156, 200, 202, 206, 266, 431, 516",
+        "url": "https://www.incometaxindia.gov.in/documents/d/guest/income_tax_act_2025_as_amended_by_fa_act_2026-pdf",
+        "file": "database/raw/in/in.law.ita2025.fa2026.en.pdf",
+        "sha256": "d54a0ed6a91673d1a4fbcef9b5e472c3efe441139fae38f85a5a0c5b2cfc998b"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "in_company_normal_ty2026_27",
+        "in_company_section200_ty2026_27",
+        "in_personal_new_ty2026_27",
+        "in_personal_old_ty2026_27"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "in.law.finance2026.gazette.en",
+        "title": "Finance Act 2026: section 3(4)(b) rows 6, 9-10, 3(5) rows 5-6, 3(15); First Schedule Part I-B Paragraphs A, E and F",
+        "url": "https://egazette.gov.in/WriteReadData/2026/271439.pdf",
+        "file": "database/raw/in/in.law.finance2026.gazette.en.pdf",
+        "sha256": "f01136356e61b2534328153941a68f13afd06fe8587d347757c89101d9cc564f"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "in_company_normal_ty2026_27",
+        "in_company_section200_ty2026_27",
+        "in_personal_new_ty2026_27",
+        "in_personal_old_ty2026_27"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "url": "https://www.tax.metro.tokyo.lg.jp/kazei/work/houjinji",
+        "file": "database/raw/jp/jp.tokyo-corporate-tax.20261119.html",
+        "sha256": "54f8f822a4cc17a82f564972d17710630f557282e1acfa81ec305c3b0cb7f17e",
+        "bytes": 598987,
+        "registration_status": "archived_original",
+        "doc_id": "jp.tokyo-corporate-tax.20261119",
+        "review_scope": "Ordinary enterprise component only; rates and standard-rate special levy basis; return instructions pages12,15,17 for rounding. Not full legal transcription or business acceptance."
+      },
+      "paths": [
+        "result.sources[]",
+        "result.tokyo_local.enterprise.sources[]",
+        "result.tokyo_local.inhabitant.sources[]",
+        "result.tokyo_local.wards[].sources[]"
+      ],
+      "policies": [
+        "jp_company_starting_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "url": "https://www.tax.metro.tokyo.lg.jp/kazei/work/tokubetsu_houjin",
+        "file": "database/raw/jp/jp.tokyo-special-enterprise-tax.20261119.html",
+        "sha256": "0c10dcaf7437b6770854796d3a67db25f201c10dad52ce2a98e6b902d5915464",
+        "bytes": 541709,
+        "registration_status": "archived_original",
+        "doc_id": "jp.tokyo-special-enterprise-tax.20261119",
+        "review_scope": "Ordinary enterprise component only; rates and standard-rate special levy basis; return instructions pages12,15,17 for rounding. Not full legal transcription or business acceptance."
+      },
+      "paths": [
+        "result.sources[]",
+        "result.tokyo_local.enterprise.sources[]",
+        "result.tokyo_local.inhabitant.sources[]",
+        "result.tokyo_local.wards[].sources[]"
+      ],
+      "policies": [
+        "jp_company_starting_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "url": "https://www.tax.metro.tokyo.lg.jp/documents/d/tax/06_6-3-b",
+        "file": "database/raw/jp/jp.tokyo-corporate-return-instructions.20261119.pdf",
+        "sha256": "29eee2504021530c2d95c233e059d311941148966a9393dd35bec3c90808a99f",
+        "bytes": 1984278,
+        "registration_status": "archived_original",
+        "doc_id": "jp.tokyo-corporate-return-instructions.20261119",
+        "review_scope": "Ordinary enterprise component only; rates and standard-rate special levy basis; return instructions pages12,15,17 for rounding. Not full legal transcription or business acceptance. Pages4-5 visually reviewed for ordinary per-capita capital/employee bands, filing components and month/amount rounding. Pages4,10-11 visually reviewed for corporate-tax-based inhabitant levy, threshold, geographic components and post-credit hundred-yen truncation."
+      },
+      "paths": [
+        "result.sources[]",
+        "result.tokyo_local.enterprise.sources[]",
+        "result.tokyo_local.inhabitant.sources[]",
+        "result.tokyo_local.wards[].sources[]"
+      ],
+      "policies": [
+        "jp_company_starting_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "url": "https://www.tax.metro.tokyo.lg.jp/shitsumon/work/a1/gaikeiqa",
+        "file": "database/raw/jp/jp.tokyo-size-based-tax-qa.20261119.html",
+        "sha256": "0a210cfebfbaa456ba2c4e6f96370b79f2663e1105ca3e04e2c40d5a9b981477",
+        "bytes": 711833,
+        "registration_status": "archived_original",
+        "doc_id": "jp.tokyo-size-based-tax-qa.20261119",
+        "review_scope": "Supports required size-based exclusion confirmation and capital floor workpaper; eligibility still requires supporting facts."
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_company_starting_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "url": "https://www.tax.metro.tokyo.lg.jp/kazei/work/houjinji/kintouwari-checkpoint",
+        "file": "database/raw/jp/jp.tokyo-per-capita-capital.20261119.html",
+        "sha256": "3f0a929b9ada2683f65181bbef6793d9ad7eb5a0fa5f74ddb7e3f6a1772887bb",
+        "bytes": 515968,
+        "registration_status": "archived_original",
+        "doc_id": "jp.tokyo-per-capita-capital.20261119",
+        "review_scope": "Supports required size-based exclusion confirmation and capital floor workpaper; eligibility still requires supporting facts."
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_company_starting_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.nta.salary-table.20261117",
+        "title": "NTA 2026 salary income table, printed pages 47-54",
+        "url": "https://www.nta.go.jp/publication/pamph/gensen/nencho2026/pdf/114.pdf",
+        "file": "database/raw/jp/jp.nta.salary-table.20261117.pdf",
+        "sha256": "3d06c41b675161d51cc59c89d6d129ce8ea204b5ccc986f5b30b1072a12a032c",
+        "review_status": "scoped_national_annual_2026_review"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_resident_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.nta.basic-table.20261117",
+        "title": "NTA 2026 basic deduction and tax tables, printed pages 55-56",
+        "url": "https://www.nta.go.jp/publication/pamph/gensen/nencho2026/pdf/115.pdf",
+        "file": "database/raw/jp/jp.nta.basic-table.20261117.pdf",
+        "sha256": "d37a6a15b38929bc8e331c611ccc2ac0295ab12bfc39266e6634393882c36c2b",
+        "review_status": "scoped_national_annual_2026_review"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_resident_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.nta.1410.20261117",
+        "title": "NTA No.1410 Salary income deduction (2026/2027)",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1410.htm",
+        "file": "database/raw/jp/jp.nta.1410.20261117.html",
+        "sha256": "df763b0259059e8810ffe27385cf2a326b0bee008b7a62f2a67b66b9500d9a41",
+        "review_status": "scoped_national_annual_2026_review"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_resident_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.nta.1411.20261117",
+        "title": "NTA No.1411 Income amount adjustment deduction",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1411.htm",
+        "file": "database/raw/jp/jp.nta.1411.20261117.html",
+        "sha256": "67ede54d9ec7de574945e2047364e17448963c024d59c8a593aef7d8793df9b5",
+        "review_status": "scoped_national_annual_2026_review"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_resident_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.nta.1199.20261117",
+        "title": "NTA No.1199 Basic deduction (2026 annual resident rules)",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1199.htm",
+        "file": "database/raw/jp/jp.nta.1199.20261117.html",
+        "sha256": "21507083e62c8014201736c5122cdf184515695aaaeb9c3fbb414b105a8ab5ac",
+        "review_status": "scoped_national_annual_2026_review"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_resident_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.nta.2260.20261117",
+        "title": "NTA No.2260 National income-tax rates",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+        "file": "database/raw/jp/jp.nta.2260.20261117.html",
+        "sha256": "eefcf231ae9e5393dc6c975dcd79a0c482d9ddb0938df09f8eebba017c84a225",
+        "review_status": "scoped_national_annual_2026_review"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_resident_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.nta.1000.20261117",
+        "title": "NTA No.1000 National income-tax calculation and 2026 examples",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1000.htm",
+        "file": "database/raw/jp/jp.nta.1000.20261117.html",
+        "sha256": "9e21d8bb0a2d209620d147c16db9349759a60ee67044bc34aed846dcd3843bd7",
+        "review_status": "scoped_national_annual_2026_review"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_resident_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.nta.return-guide.2025",
+        "title": "NTA 2025 annual return guide, printed page 28: settlement rounding and estimated-tax notice",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/shinkoku/tebiki/2025/pdf/001.pdf",
+        "file": "database/raw/jp/jp.nta.return-guide.2025.pdf",
+        "sha256": "9691e822b247dd06925fc05f50b9734f1d2e70bd306ea62804835f7b7c6d2328",
+        "review_status": "procedural_rounding_only_confirmed_by_2026_examples_and_ITA104_120"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_resident_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "jp.ita",
+        "title": "Japan Income Tax Act, Articles104 and120: estimated tax and return settlement",
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/340AC0000000033",
+        "file": "database/raw/jp/jp.ita.xml",
+        "sha256": "4e5d010f6717eb59427d3cc786c544292a07d80a2aadef012e06014265743bad",
+        "review_status": "articles104_120_only"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "jp_resident_ordinary_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.income-tax-act.20260701.ko",
+        "file": "database/raw/kr/kr.income-tax-act.20260701.ko.pdf",
+        "url": "https://www.law.go.kr/LSW/lsPdfPrint.do?ancYnChk=0&bylChaChk=N&efGubun=Y&efYd=20260701&joAllCheck=Y&joEfOutPutYn=on&lsiSeq=280405&mokChaChk=N",
+        "sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+        "provisions": [
+          "Article47(1),(3),(5)"
+        ]
+      },
+      "paths": [
+        "result.annual.employment.sources[]"
+      ],
+      "policies": [
+        "kr_salary_standard_payroll_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.income-tax-act.20260701.ko",
+        "file": "database/raw/kr/kr.income-tax-act.20260701.ko.pdf",
+        "url": "https://www.law.go.kr/LSW/lsPdfPrint.do?ancYnChk=0&bylChaChk=N&efGubun=Y&efYd=20260701&joAllCheck=Y&joEfOutPutYn=on&lsiSeq=280405&mokChaChk=N",
+        "sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+        "provisions": [
+          "Article50",
+          "Article51",
+          "Article53",
+          "Article54(2)"
+        ]
+      },
+      "paths": [
+        "result.annual.personal_deductions.sources[]"
+      ],
+      "policies": [
+        "kr_salary_standard_payroll_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.income-tax-act.20260701.ko",
+        "file": "database/raw/kr/kr.income-tax-act.20260701.ko.pdf",
+        "url": "https://www.law.go.kr/LSW/lsPdfPrint.do?ancYnChk=0&bylChaChk=N&efGubun=Y&efYd=20260701&joAllCheck=Y&joEfOutPutYn=on&lsiSeq=280405&mokChaChk=N",
+        "sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+        "provisions": [
+          "Article59-2(1),(3)",
+          "Act21548 supplementary Article2(1)-(3)"
+        ]
+      },
+      "paths": [
+        "result.annual.child_credit.sources[]"
+      ],
+      "policies": [
+        "kr_salary_standard_payroll_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.income-tax-act.20260701.ko",
+        "file": "database/raw/kr/kr.income-tax-act.20260701.ko.pdf",
+        "url": "https://www.law.go.kr/LSW/lsPdfPrint.do?ancYnChk=0&bylChaChk=N&efGubun=Y&efYd=20260701&joAllCheck=Y&joEfOutPutYn=on&lsiSeq=280405&mokChaChk=N",
+        "sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+        "provisions": [
+          "Article59(1),(2)"
+        ]
+      },
+      "paths": [
+        "result.annual.employment_credit.sources[]"
+      ],
+      "policies": [
+        "kr_salary_standard_payroll_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.income-tax-act.20260701.ko",
+        "file": "database/raw/kr/kr.income-tax-act.20260701.ko.pdf",
+        "url": "https://www.law.go.kr/LSW/lsPdfPrint.do?ancYnChk=0&bylChaChk=N&efGubun=Y&efYd=20260701&joAllCheck=Y&joEfOutPutYn=on&lsiSeq=280405&mokChaChk=N",
+        "sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+        "provisions": [
+          "Article47",
+          "Articles50-51",
+          "Article51-3",
+          "Article55",
+          "Article59",
+          "Article59-2",
+          "Article59-4(9)(1)",
+          "Article60",
+          "Article61",
+          "Act21548 supplementary Article2"
+        ]
+      },
+      "paths": [
+        "result.annual.sources[]"
+      ],
+      "policies": [
+        "kr_salary_standard_payroll_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.income-tax.form24.20260701",
+        "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=164443847",
+        "file": "database/raw/kr/kr.income-tax.form24.20260701.pdf",
+        "sha256": "844a53ae235b7039807ad8380306f08225eb757015a27c7c69c23928434ae685",
+        "provisions": [
+          "Form24(1), instructions16"
+        ]
+      },
+      "paths": [
+        "result.annual.sources[]",
+        "result.sources[]"
+      ],
+      "policies": [
+        "kr_salary_standard_payroll_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.income-tax-act.20260701.ko",
+        "file": "database/raw/kr/kr.income-tax-act.20260701.ko.pdf",
+        "url": "https://www.law.go.kr/LSW/lsPdfPrint.do?ancYnChk=0&bylChaChk=N&efGubun=Y&efYd=20260701&joAllCheck=Y&joEfOutPutYn=on&lsiSeq=280405&mokChaChk=N",
+        "sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+        "provisions": [
+          "Article86(1)",
+          "Article137",
+          "Article137-2",
+          "Article138"
+        ]
+      },
+      "paths": [
+        "result.national_settlement.sources[]"
+      ],
+      "policies": [
+        "kr_salary_standard_payroll_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.national-treasury.article47.2026",
+        "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1031453583",
+        "file": "database/raw/kr/kr.national-treasury.article47.2026.html",
+        "sha256": "e219a858f303c94d114495ffc0105b5fef7e7622b85a7f064c5e5f9c35a6b665",
+        "provisions": [
+          "Article47"
+        ]
+      },
+      "paths": [
+        "result.national_settlement.sources[]",
+        "result.sources[]"
+      ],
+      "policies": [
+        "kr_salary_standard_payroll_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.local-tax.salary-settlement.20260701",
+        "url": "https://law.go.kr/lsLinkCommonInfo.do?lspttninfSeq=173607",
+        "file": "database/raw/kr/kr.local-tax.salary-settlement.20260701.html",
+        "sha256": "527e8177958baa2eae6a272f60d3c02116e719fb08043b94e2e25b2a8651c053",
+        "provisions": [
+          "Article103-13",
+          "Article103-15",
+          "Article103-60"
+        ]
+      },
+      "paths": [
+        "result.local_settlement.sources[]",
+        "result.sources[]"
+      ],
+      "policies": [
+        "kr_salary_standard_payroll_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "kr.income-tax-act.20260701.ko",
+        "file": "database/raw/kr/kr.income-tax-act.20260701.ko.pdf",
+        "url": "https://www.law.go.kr/LSW/lsPdfPrint.do?ancYnChk=0&bylChaChk=N&efGubun=Y&efYd=20260701&joAllCheck=Y&joEfOutPutYn=on&lsiSeq=280405&mokChaChk=N",
+        "sha256": "53a12749c4791386d4071f84b3adb4776566c50df561f35a0b8e88b4841b088a",
+        "provisions": [
+          "Article47",
+          "Articles50-51",
+          "Article51-3",
+          "Article55",
+          "Article59",
+          "Article59-2",
+          "Article59-4(9)(1)",
+          "Article60",
+          "Article61",
+          "Act21548 supplementary Article2",
+          "Article86(1)",
+          "Article137",
+          "Article137-2",
+          "Article138"
+        ]
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "kr_salary_standard_payroll_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "my.pua148.2025.dividend-income",
+        "url": "https://www.parlimen.gov.my/ipms/eps/2025-08-28/ST.140.2025%20-%20ST140.2025.pdf",
+        "file": "database/raw/my/my.pua148.2025.dividend-income.pdf",
+        "sha256": "fd85095d1bb8b841997447558c8af7ca09a1a6695b6a2e3c44f7fca4e334059a",
+        "locator": "Rule 2(1)-(5)"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "my_dividend_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "my.hasil.be2025.explanatory",
+        "url": "https://ef.hasil.gov.my/eBE2026/Pdf/Nota_BE_e.pdf",
+        "file": "database/raw/my/my.hasil.be2025.explanatory.pdf",
+        "sha256": "587421c806cb9b62ba9789627dadf7c85cc9b314ea99971935cb4e105c347222",
+        "locator": "B2 threshold example; B15-B19 allocation and tax",
+        "note": "YA2025 example supports threshold interpretation; statute and rules continue into YA2026."
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "my_dividend_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "my.ita1967.updated2026.en",
+        "title": "Income Tax Act 1967 (Act 53), online updated text as at 1 January 2026",
+        "url": "https://lom.agc.gov.my/ilims/upload/portal/akta/outputaktap/3345910_BI/Act%2053%20%28Online%202026%29.pdf",
+        "file": "database/raw/my/my.ita1967.updated2026.en.pdf",
+        "sha256": "a5686ae61b81ce55ef36054149b98ccd1b04f73b937f5e44db8926484795416a",
+        "locator": "Schedule 1 Part I paragraphs 1, 1A, 2, 2A-2C; sections 6A and 6D; sections 42-45 (basis reconciliation)",
+        "note": "Official updated text, not an authentic reprint. Source date is not blanket commencement."
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "my_individual_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.law.pit2026.vi",
+        "title": "Luật Thuế thu nhập cá nhân số 109/2025/QH15",
+        "url": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/1/24/cong-bao-so-37-ngay-22-01-46935signed-1769240208670776195144.pdf",
+        "sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+        "provisions": [
+          "7"
+        ],
+        "review_status": "Selected business-income provisions reviewed against archived official pages; not full business acceptance",
+        "file": "database/raw/vn/vn.law.pit2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_business_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.decree141.2026.vi",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/141-ndcp.signed.pdf",
+        "sha256": "fa9a7c47b637f47528225d9cdd03dbde1032607ec8c39648071178ce4091413f",
+        "provisions": [
+          "1(1)",
+          "3"
+        ],
+        "registration_status": "registered_original_only",
+        "review_status": "Selected business-income provisions reviewed against archived official pages; not full business acceptance",
+        "file": "database/raw/vn/vn.decree141.2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_business_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.decree253.2026.vi",
+        "title": "Decree 253/2026/ND-CP implementing Personal Income Tax Law",
+        "url": "https://congbao.chinhphu.vn/van-ban/nghi-dinh-so-253-2026-nd-cp-469959.htm",
+        "sha256": "91242e366d3c3a4e874314534b100a0d1c077e21b0a9244243f5a187d4b56412",
+        "provisions": [
+          "45",
+          "68(3)",
+          "69(1)(a)",
+          "annex"
+        ],
+        "review_status": "Selected business-income provisions reviewed against archived official pages; not full business acceptance",
+        "file": "database/raw/vn/vn.decree253.2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_business_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.decree398.2026.vi",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/11/398_2026_nd-cp_29102026-signed.signed.pdf",
+        "sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
+        "provisions": [
+          "2",
+          "4"
+        ],
+        "registration_status": "registered_original_only",
+        "review_status": "Selected business-income provisions reviewed against archived official pages; not full business acceptance",
+        "file": "database/raw/vn/vn.decree398.2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_business_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.decree68.2026.vi",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/3/68-ndcp.signed.pdf",
+        "sha256": "8d5b8099009a0981baa14ed65d5906fc2adb3e774042397e7b33c233a9c3811a",
+        "file": "database/raw/vn/vn.decree68.2026.vi.pdf",
+        "provisions": [
+          "4",
+          "5",
+          "6",
+          "8",
+          "10",
+          "11",
+          "12",
+          "18"
+        ],
+        "review_status": "All 19 pages visually reviewed; thresholds applied with Decree141 amendment"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_business_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.law.pit2026.vi",
+        "title": "Luật Thuế thu nhập cá nhân số 109/2025/QH15",
+        "url": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/1/24/cong-bao-so-37-ngay-22-01-46935signed-1769240208670776195144.pdf",
+        "sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+        "provisions": [
+          "7"
+        ],
+        "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded",
+        "file": "database/raw/vn/vn.law.pit2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_property_rental_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.decree141.2026.vi",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/141-ndcp.signed.pdf",
+        "sha256": "fa9a7c47b637f47528225d9cdd03dbde1032607ec8c39648071178ce4091413f",
+        "provisions": [
+          "1(1)",
+          "3"
+        ],
+        "registration_status": "registered_original_only",
+        "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded",
+        "file": "database/raw/vn/vn.decree141.2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_property_rental_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.decree253.2026.vi",
+        "title": "Decree 253/2026/ND-CP implementing Personal Income Tax Law",
+        "url": "https://congbao.chinhphu.vn/van-ban/nghi-dinh-so-253-2026-nd-cp-469959.htm",
+        "sha256": "91242e366d3c3a4e874314534b100a0d1c077e21b0a9244243f5a187d4b56412",
+        "provisions": [
+          "45",
+          "68(3)",
+          "69(1)(a)",
+          "annex"
+        ],
+        "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded",
+        "file": "database/raw/vn/vn.decree253.2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_property_rental_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.decree398.2026.vi",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/11/398_2026_nd-cp_29102026-signed.signed.pdf",
+        "sha256": "97a1811294e23e12b564d1b103d1ea8ee64e9bbedb6208ebab498d28d9f66180",
+        "provisions": [
+          "2",
+          "4"
+        ],
+        "registration_status": "registered_original_only",
+        "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded",
+        "file": "database/raw/vn/vn.decree398.2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_property_rental_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.decree68.2026.vi",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/3/68-ndcp.signed.pdf",
+        "sha256": "8d5b8099009a0981baa14ed65d5906fc2adb3e774042397e7b33c233a9c3811a",
+        "file": "database/raw/vn/vn.decree68.2026.vi.pdf",
+        "provisions": [
+          "4",
+          "5",
+          "6",
+          "8",
+          "10",
+          "11",
+          "12",
+          "18"
+        ],
+        "review_status": "Selected rental provisions reviewed; mixed business, accommodation and VAT excluded"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_property_rental_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.vbhn25.2026.business.vi",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/8/25-vbhn-btc.signed.pdf",
+        "file": "database/raw/vn/vn.vbhn25.2026.business.vi.pdf",
+        "sha256": "f26a121b3f3c8d5e3c77563f83ba6bd658e6d243eea2de3a195b8b916878ba57",
+        "provisions": [
+          "4(4)"
+        ],
+        "review_status": "Physical pages 1, 3 and 4 visually reviewed"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_property_rental_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.law.pit2026.vi",
+        "title": "Luật Thuế thu nhập cá nhân số 109/2025/QH15",
+        "url": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/1/24/cong-bao-so-37-ngay-22-01-46935signed-1769240208670776195144.pdf",
+        "sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+        "provisions": [
+          "13",
+          "23",
+          "29"
+        ],
+        "file": "database/raw/vn/vn.law.pit2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]",
+        "result.transfers[].sources[]"
+      ],
+      "policies": [
+        "vn_personal_transfer_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.decree253.2026.vi",
+        "title": "Decree 253/2026/ND-CP implementing Personal Income Tax Law",
+        "url": "https://congbao.chinhphu.vn/van-ban/nghi-dinh-so-253-2026-nd-cp-469959.htm",
+        "sha256": "91242e366d3c3a4e874314534b100a0d1c077e21b0a9244243f5a187d4b56412",
+        "provisions": [
+          "10",
+          "53",
+          "54"
+        ],
+        "file": "database/raw/vn/vn.decree253.2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]",
+        "result.transfers[].sources[]"
+      ],
+      "policies": [
+        "vn_personal_transfer_2026"
+      ],
+      "problems": []
+    },
+    {
+      "source": {
+        "doc_id": "vn.law.pit2026.vi",
+        "url": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/1/24/cong-bao-so-37-ngay-22-01-46935signed-1769240208670776195144.pdf",
+        "sha256": "6b4803e79a068a7ed5727cfe174e337bbb8b1dbb1b1e48f72119b5f5825e9685",
+        "provisions": [
+          "Articles 8, 9, 10, 11, 29(2)"
+        ],
+        "registration_status": "registered",
+        "review_status": "Selected provisions verified; full implementing conditions remain pending",
+        "file": "database/raw/vn/vn.law.pit2026.vi.pdf"
+      },
+      "paths": [
+        "result.sources[]"
+      ],
+      "policies": [
+        "vn_employment_2026"
+      ],
+      "problems": []
+    }
+  ],
+  "scope": "Only sources observed in successful assessment.calculate calls during these tests; not legal or complete business acceptance.",
+  "validation": {
+    "passed": 1696,
+    "seconds": 38.69,
+    "exit_code": 0,
+    "runtime_commit": "2061fbd",
+    "command": "python scripts/audit_income_result_sources.py --output PATH"
+  },
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}
