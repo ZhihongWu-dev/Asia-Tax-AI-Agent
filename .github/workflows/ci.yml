@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - Zhihong-Wu
   workflow_dispatch:
 
 permissions:

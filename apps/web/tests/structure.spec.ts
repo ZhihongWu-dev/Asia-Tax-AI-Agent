@@ -88,7 +88,8 @@ test("current structure supports unknown answer, partial frozen report and expor
   await page.getByRole("button", { name: "保存结构案情" }).click();
   await expect(page.getByRole("button", { name: "运行结构规划" })).toBeEnabled();
   await page.getByRole("button", { name: "运行结构规划" }).click();
-  await expect(page.getByRole("button", { name: "事实未知", exact: true })).toBeVisible({ timeout: 30000 });
+  await page.getByText("单独回答或暂缓当前问题", { exact: true }).click();
+  await expect(page.getByRole("button", { name: "事实未知", exact: true })).toBeVisible();
   await page.getByRole("button", { name: "事实未知", exact: true }).click();
   await expect(page.getByRole("button", { name: "确认当前结构事实" })).toBeEnabled({ timeout: 30000 });
   await page.getByRole("button", { name: "确认当前结构事实" }).click();
@@ -131,6 +132,7 @@ test("engine results follow the selected language and buttons use the green pale
   await expect(result).toContainText("Dividend");
   await expect(result).not.toContainText(/[\u3400-\u9fff]/);
   await expect(page.locator(".structure-question")).not.toContainText(/flow:|reinvested_in_cn/);
+  await page.getByText("Answer or defer one question", { exact: true }).click();
   const primary = page.getByRole("button", { name: "Submit and recalculate" });
   await expect(primary).toHaveCSS("background-color", "rgb(36, 84, 66)");
   await expect(primary).toHaveCSS("color", "rgb(255, 255, 255)");

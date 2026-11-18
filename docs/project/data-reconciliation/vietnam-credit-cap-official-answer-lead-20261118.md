@@ -20,6 +20,13 @@ SSL EOF errors. No image content has been verified. The extracted question's
 alternative numerical outcomes are taxpayer hypotheses, not ministry findings;
 neither has been adopted as an expected tax result or calculation rule.
 
+A later independent retrieval through a fresh headless Microsoft Edge context
+also timed out after 30 seconds navigating to the first answer-image URL.
+TLS verification was not disabled. No response body was saved and no answer
+content was inferred from this attempt. This rules out treating the previous
+Python SSL error as the only observed access problem; another accessible
+official rendition is still needed.
+
 Next evidence step: retrieve the answer images through an accessible official
 host or browser, inspect their full contents and identify the issuing document,
 date, taxpayer scope and legal reasoning. Then reconcile with the already
