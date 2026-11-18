@@ -18,15 +18,13 @@ UAE/Hong Kong RTF is included with its verified source hash. See
 and [SQLite parity](data-reconciliation/catalog-delivery-sqlite-parity-20261118.json).
 These local artifacts do not apply the pending cloud catalog migration.
 
-The combined optimizer v5 has completed seven of twelve cases with no golden or
-exhaustive checker failures: `case001.best`, `case001.open`,
-`case001.valued.best`, `cfc_jp.best`, `cfc_jp.open`, `exit_jp.best`, and
-`remit_sg.not_kept`. The eighth case, `remit_sg_open.conduct`, has passed its
-golden assertions but its exhaustive checker is still running; it is not counted
-as complete. The v4 comparison has completed five cases and is checking
-`exit_jp.best`. These are observations from the live run logs on 2026-11-18,
-not a final suite verdict. All twelve cases remain required. The original and
-v4 processes retain their frozen inputs.
+The combined optimizer v5 has completed ten of twelve cases with no golden or
+exhaustive checker failures. The remaining cases are `jp_sg_individual.best`
+(currently running) and `jp_sg_individual.sequence`. The v4 comparison has
+completed six cases and is checking `remit_sg.not_kept`. See the
+[partial run evidence](data-reconciliation/optimizer-progress-20261118.json)
+for case timings and log hashes. This is not a final suite verdict: all twelve
+cases remain required. The original and v4 processes retain their frozen inputs.
 Hosted identity/provider/worker-recovery acceptance, final remote delivery and
 `main` promotion remain incomplete.
 

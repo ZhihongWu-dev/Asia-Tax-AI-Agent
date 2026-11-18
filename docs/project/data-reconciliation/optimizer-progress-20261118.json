@@ -1,0 +1,102 @@
+{
+  "observed_at_utc": "2026-11-18T15:54:46.454832+00:00",
+  "scope": "Partial optimizer evidence; not final business acceptance",
+  "runs": {
+    "v4": {
+      "log_sha256": "5607a1111ae297af3a07386766dece2e94d5194c5ea373fbe807314d83cec5b5",
+      "completed": [
+        {
+          "test": "case001.best",
+          "checker_failures": [],
+          "seconds": 2293.58
+        },
+        {
+          "test": "case001.open",
+          "checker_failures": [],
+          "seconds": 2618.86
+        },
+        {
+          "test": "case001.valued.best",
+          "checker_failures": [],
+          "seconds": 2312.55
+        },
+        {
+          "test": "cfc_jp.best",
+          "checker_failures": [],
+          "seconds": 8634.91
+        },
+        {
+          "test": "cfc_jp.open",
+          "checker_failures": [],
+          "seconds": 8425.94
+        },
+        {
+          "test": "exit_jp.best",
+          "checker_failures": [],
+          "seconds": 11760.33
+        }
+      ],
+      "last_started": "remit_sg.not_kept",
+      "required_cases": 12,
+      "suite_complete": false
+    },
+    "v5": {
+      "log_sha256": "6dc79ab9f7dd26a5ff26bebf50e0a5d49291ed1d7af13cc16fa720fffa6fc728",
+      "completed": [
+        {
+          "test": "case001.best",
+          "checker_failures": [],
+          "seconds": 1375.47
+        },
+        {
+          "test": "case001.open",
+          "checker_failures": [],
+          "seconds": 1386.05
+        },
+        {
+          "test": "case001.valued.best",
+          "checker_failures": [],
+          "seconds": 1365.28
+        },
+        {
+          "test": "cfc_jp.best",
+          "checker_failures": [],
+          "seconds": 3568.45
+        },
+        {
+          "test": "cfc_jp.open",
+          "checker_failures": [],
+          "seconds": 3497.03
+        },
+        {
+          "test": "exit_jp.best",
+          "checker_failures": [],
+          "seconds": 5299.5
+        },
+        {
+          "test": "remit_sg.not_kept",
+          "checker_failures": [],
+          "seconds": 4214.22
+        },
+        {
+          "test": "remit_sg_open.conduct",
+          "checker_failures": [],
+          "seconds": 4351.33
+        },
+        {
+          "test": "remit_sg_received.best",
+          "checker_failures": [],
+          "seconds": 3300.75
+        },
+        {
+          "test": "remit_sg_received.sequence",
+          "checker_failures": [],
+          "seconds": 3275.95
+        }
+      ],
+      "last_started": "jp_sg_individual.best",
+      "required_cases": 12,
+      "suite_complete": false
+    }
+  }
+}
