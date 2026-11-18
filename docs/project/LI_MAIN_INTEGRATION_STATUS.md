@@ -163,10 +163,10 @@ cloud parameter parity, runtime promotion or final business acceptance.
 The conditional Vietnam distribution exemption has 1,375 passing isolated rule
 tests and 30 remaining coverage gaps. Explicit probes verify that unknown
 qualification does not produce a definite zero-tax result. The fresh isolated SQLite build and all seven CSV tables now match exactly,
-with 356 documents, 45,720 clauses, 811 parameters and 43 absence records.
-The build has zero errors, 87 warnings, 5 category gaps, 36 slot gaps and 2
+with 357 documents, 45,884 clauses, 811 parameters and 43 absence records.
+The build has zero errors, 88 warnings, 5 category gaps, 36 slot gaps and 2
 blocked downloads. The 1,375 rule tests also passed against this fresh build.
-See [current parity evidence](data-reconciliation/isolated-indonesia-primary-build-parity-20261118.json). The original optimizer remains running with
+See [current parity evidence](data-reconciliation/isolated-historical-payment-build-parity-20261118.json). The original optimizer remains running with
 four completed cases and no checker failures in those four; its full result is
 still pending.
 

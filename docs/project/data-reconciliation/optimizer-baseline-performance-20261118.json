@@ -1,0 +1,11 @@
+{
+  "status": "live_nonblocking_stack_observed_not_fixed",
+  "pid": 16760,
+  "python": "3.11.5",
+  "profiler": "py-spy0.4.3 installed only in external audit test-env",
+  "observation": "Nonblocking dump shows active GIL thread in Checker.baseline dom at check.py148, nested generator/list comprehension at154.",
+  "stack_file": "integration-audit-20261116/optimizer-golden-20261118/stack-20261118.txt",
+  "code_finding": "baseline enumerates found paths then compares each against found until a dominating state is found. Worst-case pairwise work is quadratic in enumerated paths. Final assertion compares a set of state keys and does not retain path identities.",
+  "proposed_investigation": "Measure exact state-key duplicates in isolated artifacts; prove deduplication preserves original dominance relation and frontier before adopting any checker acceleration. Do not prune legal paths or weaken checks.",
+  "limits": "One stack observation identifies current work, not a complete profile or completion time. Original process and frozen checker unchanged; all twelve optimizer product directories exist but only four checker completion lines observed."
+}

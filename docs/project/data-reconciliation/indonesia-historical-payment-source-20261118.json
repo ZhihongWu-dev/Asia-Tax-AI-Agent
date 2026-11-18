@@ -1,5 +1,5 @@
 {
-  "status": "historical_parameter_scoped_validated_and_sources_admitted_pending_full_rebuild_and_runtime_promotion",
+  "status": "isolated_full_build_rule_regression_and_source_admission_verified_pending_runtime_promotion",
   "url": "https://jdih.kemenkeu.go.id/api/download/fulltext/2014/242~PMK.03~2014Per.htm",
   "file": "database/raw/id/id.pmk242-2014.html",
   "sha256": "5f481a4155e05b8ba08bc0d84d6433da3a81a7a9e470579e33dd4c91a3706404",
@@ -149,5 +149,21 @@
     "gaps": 7,
     "passed": false
   },
-  "admission_evidence": "indonesia-historical-payment-admission-20261118.json"
+  "admission_evidence": "indonesia-historical-payment-admission-20261118.json",
+  "full_validation": {
+    "documents": 357,
+    "clauses": 45884,
+    "parameters": 811,
+    "absence_records": 43,
+    "errors": 0,
+    "warnings": 88,
+    "category_gaps": 5,
+    "slot_gaps": 36,
+    "blocked_downloads": 2,
+    "rule_tests": 1375,
+    "rule_failed": 0,
+    "rule_errors": 0,
+    "rule_coverage_gaps": 30,
+    "parity_evidence": "isolated-historical-payment-build-parity-20261118.json"
+  }
 }

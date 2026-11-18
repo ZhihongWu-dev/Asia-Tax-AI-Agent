@@ -1,0 +1,50 @@
+{
+  "status": "seven_tables_exact_parity_verified",
+  "integrity_check": "ok",
+  "tables": [
+    {
+      "table": "jurisdiction",
+      "csv_rows": 11,
+      "sqlite_rows": 11,
+      "all_fields_equal": true
+    },
+    {
+      "table": "treaty",
+      "csv_rows": 55,
+      "sqlite_rows": 55,
+      "all_fields_equal": true
+    },
+    {
+      "table": "doc",
+      "csv_rows": 357,
+      "sqlite_rows": 357,
+      "all_fields_equal": true
+    },
+    {
+      "table": "clause",
+      "csv_rows": 45884,
+      "sqlite_rows": 45884,
+      "all_fields_equal": true
+    },
+    {
+      "table": "param",
+      "csv_rows": 811,
+      "sqlite_rows": 811,
+      "all_fields_equal": true
+    },
+    {
+      "table": "files",
+      "csv_rows": 758,
+      "sqlite_rows": 758,
+      "all_fields_equal": true
+    },
+    {
+      "table": "decision",
+      "csv_rows": 43,
+      "sqlite_rows": 43,
+      "all_fields_equal": true
+    }
+  ],
+  "sqlite_sha256": "4fc02307552dd2c6ff60ecf534fa75b85499abd864b0f1c31082feaa04c67164",
+  "scope": "Isolated build after Indonesian historical payment migration; not runtime promotion or full business acceptance."
+}
