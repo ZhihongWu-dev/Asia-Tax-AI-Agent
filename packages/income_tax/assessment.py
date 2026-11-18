@@ -116,9 +116,23 @@ def calculate(case: IncomeTaxCase, basis):
             raise ValueError('Ordinary Japanese resident domestic company income without withholding/foreign-credit adjustments required')
         reconciliation = japan_company.reconcile_company_basis(case,
             taxable_income_before_rounding=basis.taxable_income_before_rounding)
+        tokyo_paper = args.pop('tokyo_local')
         result=japan_company.company_tax(period_start=case.period_start,period_end=case.period_end,**args)
         result['basis_reconciliation'] = reconciliation
         result['policy_version'] += '-reconciled-20261119'
+        if tokyo_paper is not None:
+            from .japan_tokyo import assess as assess_tokyo, WORKPAPER_SOURCES
+            from .japan_local import SOURCES as tokyo_sources
+            local = assess_tokyo(result,reconciliation,basis.tokyo_local)
+            result['tokyo_local'] = local
+            result['national_final_tax'] = result['final_tax']
+            with localcontext() as ctx:
+                ctx.prec = 40
+                result['final_tax'] += local['local_final_tax']
+            result['tax_scope'] = 'japan_national_and_ordinary_tokyo_23_wards_full_year'
+            result['local_taxes_calculated'] = True
+            result['policy_version'] += '-tokyo-local-20261119'
+            result['sources'].extend(deepcopy([*tokyo_sources, *WORKPAPER_SOURCES]))
     elif policy == 'cn_small_company_2026':
         if case.residency != 'resident' or any(item.source_jurisdiction != 'cn' or
                 item.foreign_tax_paid not in (None, 0) for item in case.incomes):

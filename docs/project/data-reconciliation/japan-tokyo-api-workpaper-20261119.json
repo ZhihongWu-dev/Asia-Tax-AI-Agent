@@ -1,0 +1,32 @@
+{
+  "status": "backend_workpaper_and_api_implemented_ui_pending",
+  "scope": "Ordinary domestic companies with full twelve-month2026-start period, all offices in Tokyo23wards throughout; no size-based regime, local credits or treaty amendments",
+  "implemented": [
+    "Optional TokyoWorkpaper on existing national-company assessment preserves national-only default and immutable old requests",
+    "Reconcile local income from saved fiscal income before national losses, explicit local additions/deductions and separately verified local losses",
+    "Determine ordinary enterprise surcharge at roundedJPY25m threshold; preserve standard-rate basis for special enterprise tax",
+    "Compute per-capita capital floor and unique ward list with exactly one principal ward",
+    "Persist separate national/local component totals, liabilities, positive payments and refunds without cross-tax offsets",
+    "Top-level national and Tokyo source originals retained in saved results and exported reports"
+  ],
+  "validation": {
+    "income_and_reporting": {
+      "passed": 1651,
+      "seconds": 32.03,
+      "exit_code": 0
+    },
+    "final_tokyo_focused": {
+      "passed": 19,
+      "seconds": 5.34,
+      "exit_code": 0,
+      "includes": "Two additional surcharge threshold cases; API restart/export and invalid-scope state preservation"
+    }
+  },
+  "remaining": [
+    "Bilingual form and result presentation",
+    "Browser entry, save/reopen and export acceptance",
+    "More Japanese locations, partial periods, size-based/special regimes and personal local taxes",
+    "Actual business acceptance remains unproven"
+  ],
+  "delivery": "Local only"
+}

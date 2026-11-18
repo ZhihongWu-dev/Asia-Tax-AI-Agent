@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "url": "https://www.tax.metro.tokyo.lg.jp/shitsumon/work/a1/gaikeiqa",
+      "file": "database/raw/jp/jp.tokyo-size-based-tax-qa.20261119.html",
+      "sha256": "0a210cfebfbaa456ba2c4e6f96370b79f2663e1105ca3e04e2c40d5a9b981477",
+      "bytes": 711833,
+      "registration_status": "archived_original",
+      "doc_id": "jp.tokyo-size-based-tax-qa.20261119",
+      "review_scope": "Supports required size-based exclusion confirmation and capital floor workpaper; eligibility still requires supporting facts."
+    },
+    {
+      "url": "https://www.tax.metro.tokyo.lg.jp/kazei/work/houjinji/kintouwari-checkpoint",
+      "file": "database/raw/jp/jp.tokyo-per-capita-capital.20261119.html",
+      "sha256": "3f0a929b9ada2683f65181bbef6793d9ad7eb5a0fa5f74ddb7e3f6a1772887bb",
+      "bytes": 515968,
+      "registration_status": "archived_original",
+      "doc_id": "jp.tokyo-per-capita-capital.20261119",
+      "review_scope": "Supports required size-based exclusion confirmation and capital floor workpaper; eligibility still requires supporting facts."
+    }
+  ]
+}
