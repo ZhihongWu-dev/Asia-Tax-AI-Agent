@@ -554,6 +554,8 @@ test('corporate calculation saves a sourced result and amendments invalidate it'
   await form.getByRole('button',{name:'Save income-tax details'}).click();
   const calculation=page.getByRole('region',{name:'Income-tax calculation',exact:true});
   await calculation.getByLabel('Applicable regime').selectOption('cn_company_2026');
+  await calculation.getByLabel('Established non-taxable income included in total income',{exact:true}).fill('0');
+  await calculation.getByLabel('Established exempt income included in total income',{exact:true}).fill('0');
   await calculation.getByLabel('Established taxable income',{exact:true}).fill('1000000');
   await calculation.getByLabel('Normal rate eligibility checked').selectOption('true');
   await calculation.getByLabel('Allowed tax credits',{exact:true}).fill('0');

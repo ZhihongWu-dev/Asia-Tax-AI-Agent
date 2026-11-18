@@ -23,6 +23,32 @@ def check_year(tax_year):
         raise ValueError('This policy is verified only for tax year 2026')
 
 
+def reconcile_company_basis(case, *, taxable_income, non_taxable_income, exempt_income):
+    """Article 5 reconciliation using established statutory income/deduction amounts.
+
+    Eligibility, tax adjustments and loss vintages remain explicit workpaper inputs;
+    unused amounts here do not establish a right to carry losses to another year.
+    """
+    excluded, exempt, base = map(amount, (non_taxable_income, exempt_income, taxable_income))
+    with localcontext() as ctx:
+        ctx.prec = 40
+        total = sum((item.gross_amount for item in case.incomes), ZERO)
+        if excluded + exempt > total:
+            raise ValueError('Non-taxable and exempt income together cannot exceed saved total income')
+        before_losses = total - excluded - exempt - case.claimed_deductions
+        current_loss = max(ZERO, -before_losses)
+        available = max(ZERO, before_losses)
+        used = min(available, case.carried_losses)
+        reconciled = available - used
+        if base != reconciled:
+            raise ValueError('Company taxable income must reconcile to saved total income, exclusions, deductions and eligible losses')
+        return dict(total_income=total, non_taxable_income=excluded, exempt_income=exempt,
+            allowed_deductions=case.claimed_deductions, income_before_loss_relief=before_losses,
+            current_period_loss=current_loss, prior_losses_used=used,
+            prior_losses_unused=case.carried_losses-used, taxable_income=reconciled,
+            scope='Established Article 5 amounts; eligibility and carryforward approval are not inferred')
+
+
 def resident_comprehensive_tax(*, tax_year, wages, service_remuneration, author_remuneration,
                                royalties, allowed_special_deductions, allowed_additional_deductions,
                                allowed_other_deductions, allowed_donations, allowed_tax_reductions,

@@ -112,6 +112,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
           {options.map(p=><option key={p.id} value={p.id}>{p.label[index]}</option>)}
         </select></label>
         {policy && <><p>{policy.notice[index]}</p><p>{say('金额币种：','Currency: ')}{current.income_tax.currency}</p>
+          {['cn_company_2026','cn_small_company_2026'].includes(policy.id) && <p>{say('企业税基核对：保存的收入须为完成税务口径调整的收入总额，不是会计利润。不征税收入和免税收入须已包含在收入总额中、互不重叠，且不能再次计入扣除。保存的扣除及以前年度亏损须已核定资格、限额和年度。未用亏损不代表已获准结转；税基必须与这些资料计算的余额一致。','Company basis reconciliation: saved income is established statutory total income, not accounting profit. Non-taxable and exempt amounts must already be included, must not overlap, and must not also be claimed as deductions. Verify deduction eligibility, limits and loss vintages. Unused losses do not establish carryforward approval. The tax base must match the balance calculated from these facts.')}</p>}
           {policy.id==='my_individual_2026' && current.income_tax.residency==='resident' && <p>{say('居民核对表：已保存的扣除总额须等于各来源费用扣除、资本免税额、总所得扣除及个人减免之和（不含以前年度亏损）。总所得扣除须先按法定顺序及限额核定；未使用余额不代表已获准结转。','Resident workpaper: saved claimed deductions must equal source deductions, statutory allowances, total-income deductions and personal reliefs, excluding prior losses. Establish total-income deductions in statutory order and within their limits first. Unused balances do not establish carryforward entitlement.')}</p>}
           <div className="facts-field-grid">{policy.fields.filter(field=>!field.showWhen || values[field.showWhen[0]]===field.showWhen[1]).map(field=><label key={field.key}>{field.label[index]}
             {field.boolean || field.options ? <select required value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)}>
@@ -151,6 +152,20 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       </>}
       {result.result.tax_scope==='national_income_and_reconstruction_tax_only'&&<p>{say('此结果仅为日本2026年度国家所得税及复兴特别所得税，不含住民税、事业税。扣除予定纳税通知金额不代表该税款已缴清，欠税另行处理。','This result covers Japan 2026 national income and reconstruction tax only, excluding local inhabitant and enterprise taxes. Deducting notified estimated tax does not mean it has been paid; arrears remain separate.')}</p>}
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{key==='balance_due'&&result.result.tax_scope==='national_income_and_reconstruction_tax_only'?say('本次国家税应补／退额（予定纳税欠税另计）','National return balance (estimated-tax arrears separate)'):label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
+      {!!result.result.basis_reconciliation && <section aria-label={say('企业税基核对','Company basis reconciliation')}>
+        <h5>{say('企业税基核对','Company basis reconciliation')}</h5>
+        <dl>{([
+          ['total_income',say('税务口径收入总额','Statutory total income')],
+          ['non_taxable_income',say('不征税收入','Non-taxable income')],
+          ['exempt_income',say('免税收入','Exempt income')],
+          ['allowed_deductions',say('核定扣除','Established deductions')],
+          ['income_before_loss_relief',say('弥补以前年度亏损前所得','Income before prior-loss relief')],
+          ['current_period_loss',say('本期亏损','Current-period loss')],
+          ['prior_losses_used',say('本期使用以前年度亏损','Prior losses used')],
+          ['prior_losses_unused',say('以前年度亏损未使用余额（非结转批准）','Unused prior losses (not carryforward approval)')],
+          ['taxable_income',say('核对后应纳税所得额','Reconciled taxable income')],
+        ] as const).map(([key,label])=><div key={key}><dt>{label}</dt><dd>{String((result.result.basis_reconciliation as Record<string,unknown>)[key])}</dd></div>)}</dl>
+      </section>}
       {result.result.stage==='separate_property_before_assessment_rounding' && Array.isArray(result.result.properties) && <section aria-label={say('逐项物业结果','Per-property results')}>
         <h5>{say('逐项物业结果','Per-property results')}</h5>
         {(result.result.properties as Record<string,unknown>[]).map(item=><section key={String(item.income_index)}>

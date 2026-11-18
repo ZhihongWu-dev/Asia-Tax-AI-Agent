@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only; no cloud upload, remote push or main merge.",
+  "pre_change_reproducer": {
+    "saved_total_income": "100",
+    "unrelated_manual_taxable_income": "1000000",
+    "incorrectly_accepted_annual_liability": "250000.00"
+  },
+  "change": "Ordinary and small-low-profit company assessments reconcile established total income, non-taxable income, exempt income, deductions and eligible prior losses. Current losses and unused prior losses remain distinct. Reconciliation is saved with the result and shown in the UI.",
+  "legal_basis": {
+    "statutory_article": "Enterprise Income Tax Law Article 5",
+    "review_url": "https://12366.chinatax.gov.cn/bzds/058/058-5-1.html",
+    "existing_archived_source": "database/raw/cn/cn.law.eit.html",
+    "sha256": "ce155d4c61c537da01dd89b0e4b3660d8d253674df67392fc95d7f599f39e900"
+  },
+  "research": [
+    "https://github.com/pydantic/pydantic/blob/main/docs/concepts/validators.md",
+    "https://github.com/openfisca/country-template"
+  ],
+  "checks": {
+    "income_suite": {
+      "passed": 1441,
+      "seconds": 26.52,
+      "exit_code": 0
+    },
+    "typescript": "tsc -b exit 0",
+    "browser": {
+      "initial_run": "2 passed, 1 failed solely on HTTPS-only source assertion; correct tax output already observed",
+      "correction": "Assert exact existing official NPC source URL for ordinary company policy",
+      "rerun": "1 passed in 22.2 seconds, exit 0",
+      "distinct_cases_passed": 3
+    },
+    "diff_check": "exit 0"
+  },
+  "limits": [
+    "Tax eligibility, income adjustments, non-overlapping exemptions, allowable expenses and loss vintages remain established inputs; this is not an automatic statutory eligibility audit.",
+    "Unused loss output does not approve carryforward or determine expiry.",
+    "Foreign-income, special regimes and actual business acceptance remain outstanding.",
+    "Authentication in browser tests uses fixtures."
+  ],
+  "file_sha256": {
+    "packages/contracts/income_assessment.py": "fc214dbd5a2f6432cc6277c1a592f20342d1c21f69b2b438f53f572ed8fbf904",
+    "packages/income_tax/assessment.py": "d3200199b4de1a5df5e1928eefd8775ba342faa35179b7822fa94019679e2dc9",
+    "packages/income_tax/china.py": "bbd937bad4bf6c8f20a5328c57b8e4aee17c631ca13f64530e4460e544da8915",
+    "apps/web/src/income-assessment.ts": "2ab03b6f0697bc05005b256d9c21910f02c4e4020638b2fc94d10f70878e2447",
+    "apps/web/src/components/IncomeTaxAssessment.tsx": "ec113f8130f5b60cbd47315a7643b8ae136c42d784d4b616b95ed1b63fd2ad7e",
+    "tests/income_tax/test_china_company_reconciliation.py": "8c7e4e0d53e7dc5d151c3cdbeb18d33578a7385d7967787c670b54c4cd269d9f",
+    "apps/web/tests/income-tax-coverage.spec.ts": "873902e39c0e6c5ce38cd45810bf186895d416c9d60d24aea08c4249af859c30",
+    "apps/web/tests/income-tax.spec.ts": "5ac9debdb39cf6bfc99584401d1314f7c49f6d63cdd6d010e0db2b21951da598"
+  }
+}

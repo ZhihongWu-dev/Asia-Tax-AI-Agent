@@ -53,6 +53,11 @@ def calculate(case: IncomeTaxCase, basis):
     if policy in ('cn_comprehensive_2026', 'sg_resident_ya2026', 'th_resident_2026','th_dividend_2026','th_foreign_income_2026','id_company_2026','id_resident_2026','vn_employment_2026','vn_company_2026','jp_resident_ordinary_2026') and case.residency != 'resident':
         raise ValueError('This policy requires resident status')
     args = basis.model_dump(exclude={'policy', 'basis_explanation', 'basis_confirmed'})
+    cn_reconciliation = None
+    if policy in ('cn_company_2026', 'cn_small_company_2026'):
+        cn_reconciliation = china.reconcile_company_basis(case,
+            taxable_income=basis.taxable_income,
+            non_taxable_income=args.pop('non_taxable_income'), exempt_income=args.pop('exempt_income'))
     if policy in ('in_personal_new_ty2026_27','in_personal_old_ty2026_27','in_company_section200_ty2026_27','in_company_normal_ty2026_27'):
         settlement_requested=args.pop('settlement_requested')
         settlement={key:args.pop(key) for key in ('tds_tcs_credit','advance_tax_paid',
@@ -113,12 +118,6 @@ def calculate(case: IncomeTaxCase, basis):
         if case.residency != 'resident' or any(item.source_jurisdiction != 'cn' or
                 item.foreign_tax_paid not in (None, 0) for item in case.incomes):
             raise ValueError('Small-company workflow requires domestic resident income without foreign tax credits')
-        with localcontext() as ctx:
-            ctx.prec = 40
-            base = max(Decimal('0'), sum((item.gross_amount for item in case.incomes), Decimal('0'))
-                - case.claimed_deductions - case.carried_losses)
-        if basis.taxable_income != base:
-            raise ValueError('Small-company tax base must reconcile to saved income, established deductions and eligible losses')
         result = china.small_low_profit_company_tax(tax_year=2026, **args)
     elif policy == 'cn_company_2026':
         if any(i.source_jurisdiction != 'cn' for i in case.incomes):
@@ -436,5 +435,8 @@ def calculate(case: IncomeTaxCase, basis):
         result=thailand.resident_individual_tax(tax_year=2026,nonemployment_assessable_gross=nonemployment,**args)
     else:
         raise ValueError('Unsupported policy')
+    if cn_reconciliation is not None:
+        result['basis_reconciliation'] = cn_reconciliation
+        result['policy_version'] += '-reconciled-20261119'
     # Pydantic preserves Decimal strings and nested band dataclasses in JSON.
     return TypeAdapter(dict).dump_python(result, mode='json')

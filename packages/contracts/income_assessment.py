@@ -4,6 +4,7 @@ These are user attestations, not an assertion of professional review by Taxrora.
 The saved income facts remain separate from the established calculation basis.
 """
 from datetime import date
+from decimal import Decimal
 from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from .income_tax import Money
@@ -22,6 +23,8 @@ class CNCompany(Basis):
     normal_rate_confirmed: StrictBool
     allowed_tax_credits: Money
     prepaid_tax: Money
+    non_taxable_income: Money = Decimal('0')
+    exempt_income: Money = Decimal('0')
 
 
 class CNSmallCompany(Basis):
@@ -33,6 +36,8 @@ class CNSmallCompany(Basis):
     statutory_averages_and_eligibility_verified: StrictBool
     allowed_tax_credits: Money
     prepaid_tax: Money
+    non_taxable_income: Money = Decimal('0')
+    exempt_income: Money = Decimal('0')
 
 
 class CNIndividual(Basis):

@@ -14,6 +14,9 @@ async function open(page:Page) {
 type Scenario={name:string;country:string;subject:string;category:string;start:string;end:string;
   gross:string;policy:string;deductions?:string;money:[string,string][];choices:[string,string][];resultLabel:string;expected:string};
 const scenarios:Scenario[]=[
+  {name:'China company reconciled excluded income',country:'cn',subject:'company',category:'business',start:'2026-01-01',end:'2026-12-31',gross:'1000000',policy:'cn_company_2026',deductions:'200000',
+    money:[['Established taxable income','650000'],['Established non-taxable income included in total income','50000'],['Established exempt income included in total income','100000'],['Allowed tax credits','0'],['Prepaid tax for this period','10000']],
+    choices:[['Normal rate eligibility checked','true']],resultLabel:'Annual liability',expected:'162500'},
   {name:'Singapore employment IRAS PTR carryforward',country:'sg',subject:'individual',category:'employment',start:'2025-01-01',end:'2025-12-31',gross:'80000',policy:'sg_employment_ya2026',deductions:'28000',
     money:[['Date of birth','1990-01-01'],['Allowed employment expenses','0'],['Usable donation deduction after verified multiplier','0'],['Allowed employee CPF relief','16000'],['Other allowed personal reliefs excluding items above','12000'],['Verified available PTR balance','2500'],['Prepaid tax for this period','100']],
     choices:[['Eligible for disability earned income relief','false'],['YA 2026 eligibility, individual limits, allocation and PTR balance verified','true']],
@@ -71,6 +74,10 @@ for(const s of scenarios)test(`${s.name} saves and reopens a sourced result`,asy
     await expect(calc.getByRole('option',{name:wrong,exact:true})).toHaveCount(0);
   }
   await calc.getByRole('combobox',{name:'Applicable regime',exact:true}).selectOption(s.policy);
+  if(['cn_company_2026','cn_small_company_2026'].includes(s.policy)) {
+    await calc.getByLabel('Established non-taxable income included in total income',{exact:true}).fill('0');
+    await calc.getByLabel('Established exempt income included in total income',{exact:true}).fill('0');
+  }
   for(const [name,value] of s.money)await calc.getByLabel(name,{exact:true}).fill(value);
   for(const [name,value] of s.choices)await calc.getByRole('combobox',{name,exact:true}).selectOption(value);
   await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified applicable year, ordinary regime, tax basis, deductions and period payment evidence.');
@@ -84,7 +91,10 @@ for(const s of scenarios)test(`${s.name} saves and reopens a sourced result`,asy
     await expect(report.getByRole('region',{name:'Per-property results'})).toContainText('216000');
     await expect(calc.getByRole('option',{name:'Hong Kong profits tax (2025/26)',exact:true})).toHaveCount(0);
   }
-  await expect(report.getByRole('link').first()).toHaveAttribute('href',/^https:\/\//);
+  await expect(report.getByRole('link').first()).toHaveAttribute('href',s.policy==='cn_company_2026'
+    ?'http://www.npc.gov.cn/zgrdw/npc/xinwen/2019-01/07/content_2070260.htm':/^https:\/\//);
+  if(['cn_company_2026','cn_small_company_2026'].includes(s.policy))
+    await expect(report.getByRole('region',{name:'Company basis reconciliation',exact:true})).toBeVisible();
   await open(page);
   await expect(amount).toHaveText(expectedAmount);
 });
