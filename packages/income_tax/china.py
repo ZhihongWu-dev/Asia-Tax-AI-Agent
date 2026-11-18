@@ -73,7 +73,7 @@ schedule. Foreign-source relief and nonresident monthly withholding are separate
         if donations > before_donations:
             raise ValueError('Allowed donations exceed the remaining income basis')
         taxable = before_donations - donations
-        tax, bands = marginal_tax(taxable, COMPREHENSIVE_BANDS)
+        tax, bands = marginal_tax(taxable, COMPREHENSIVE_BANDS, computed_base=True)
         if reduction > tax:
             raise ValueError('Allowed reductions exceed gross tax')
         liability = tax - reduction

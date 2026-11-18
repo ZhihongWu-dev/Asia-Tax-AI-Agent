@@ -1,0 +1,18 @@
+{
+  "status": "domestic_same_defect_fixed",
+  "reproduced": "Domestic comprehensive calculation also rejected wages60000 plus service remuneration40000.000001 after statutory expense deduction.",
+  "change": "Domestic comprehensive marginal calculation now explicitly accepts validated derived precision, using the shared internal path added for foreign income. Public six-decimal validation remains unchanged. Frontend facts and workpaper inputs already use step=any.",
+  "validation": {
+    "focused_domestic_and_foreign_tests": 84,
+    "seconds": 6.24,
+    "exit_code": 0,
+    "new_cases": [
+      "Services",
+      "Authors",
+      "Royalties",
+      "Low ambient context",
+      "Public precision rejection"
+    ]
+  },
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}

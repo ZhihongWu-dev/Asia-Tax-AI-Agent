@@ -69,3 +69,23 @@ def test_sources_match_immutable_manifest():
     manifest=json.loads((root/'packages/income_tax/cn_2026_sources.json').read_text(encoding='utf-8'))
     for source in manifest['sources']:
         assert hashlib.sha256((root/source['file']).read_bytes()).hexdigest()==source['sha256']
+
+@pytest.mark.parametrize('category,factor',[('service_remuneration','.8'),('author_remuneration','.56'),('royalties','.8')])
+def test_valid_fractional_income_retains_expense_factor_precision(category,factor):
+    r=personal(wages='60000',**{category:'40000.000001'})
+    base=D('40000.000001')*D(factor)
+    assert r['taxable_income']==base
+    assert r['gross_tax']==base*D('.03')
+
+
+def test_fractional_domestic_comprehensive_tax_ignores_ambient_precision():
+    from decimal import localcontext
+    expected=personal(wages='60000',author_remuneration='40000.000001')
+    with localcontext() as ctx:
+        ctx.prec=4
+        assert personal(wages='60000',author_remuneration='40000.000001')==expected
+
+
+def test_domestic_public_input_precision_is_not_relaxed():
+    with pytest.raises(ValueError,match='six decimal'):
+        personal(wages='60000',service_remuneration='40000.0000001')
