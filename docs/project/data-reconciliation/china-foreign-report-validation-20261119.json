@@ -1,0 +1,19 @@
+{
+  "status": "scoped_report_verified",
+  "validation": {
+    "command": "pytest tests/income_tax/test_assessment_report.py tests/income_tax/test_china_foreign_assessment.py -q",
+    "passed": 38,
+    "seconds": 11.59,
+    "exit_code": 0
+  },
+  "scope": [
+    "Chinese and English saved-snapshot report",
+    "Per-country and pooled credit tables",
+    "Original and expiry years preserved",
+    "Current-year expiry distinguished from next-year carryforward",
+    "Current excess and last usable year shown"
+  ],
+  "initial_test_failure": "Two assertions omitted existing Markdown decimal-point escaping; corrected assertions, final suite passed.",
+  "limits": "No new tax calculation scope; wider business acceptance remains incomplete.",
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}

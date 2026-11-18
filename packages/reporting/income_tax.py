@@ -74,6 +74,26 @@ def render(run, locale='zh'):
                 ('local_amounts_payable','地方税应补合计','Local amounts payable'),
                 ('local_refunds','地方税应退合计','Local refund amounts')]:
             lines.append(f'| {_text(say(zh,en))} | {_text(local[key])} |')
+    if result.get('tax_scope') == 'china_resident_ordinary_direct_foreign_credit_positive_bases':
+        lines += ['', '## ' + say('境外直接抵免明细', 'Direct foreign credit details'), '',
+            say('仅普通25%税率居民企业直接抵免及非负逐国税基；不含间接、饶让抵免或其他优惠。历史余额保留原始年度；本期到期未用金额不可结转。',
+                'Ordinary 25% resident company direct credits and nonnegative country bases only; excludes indirect/deemed credits and other reliefs. Original excess years are preserved; unused amounts expiring this year cannot carry forward.'), '',
+            say('抵免方式：', 'Credit method: ') + (say('不分国不分项', 'Pooled foreign income') if result['method']=='pooled' else say('分国不分项', 'Per country'))]
+        for pool in result['pools']:
+            label = say('综合抵免池', 'Pooled credit') if pool['pool']=='all_foreign' else pool['pool'].upper()
+            lines += ['', '### ' + _text(label), '', '| ' + say('项目 | 金额', 'Item | Amount') + ' |', '| --- | --- |']
+            for key, zh, en in [('taxable_income','应税所得','Taxable income'),('credit_limit','抵免限额','Credit limit'),
+                    ('current_credit_used','当年税额抵免','Current credit used'),('prior_credit_used','历史余额抵免','Prior credit used'),
+                    ('allowed_credit','抵免合计','Total credit allowed'),('current_excess','当年新增超限额','New current-year excess'),
+                    ('current_excess_last_usable_year','新增余额最后可用年度','New excess last usable year')]:
+                lines.append(f'| {_text(say(zh,en))} | {_text(pool[key])} |')
+            if pool['carryforward_history']:
+                lines += ['', '| ' + say('国家 | 原始年度 | 最后可用年度 | 期初余额 | 本期使用 | 本期前已失效 | 本期结束失效 | 下一年结转',
+                    'Country | Origin year | Last usable year | Opening excess | Used this year | Previously expired | Expires after current year | Next-year carryforward') + ' |',
+                    '| --- | --- | --- | --- | --- | --- | --- | --- |']
+                for row in pool['carryforward_history']:
+                    values = [row['country'].upper()] + [row[k] for k in ('origin_year','last_usable_year','opening_excess','credit_used','expired_amount','expires_after_current_year','next_year_carryforward')]
+                    lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
     lines += ['', '## ' + say('保存的官方来源', 'Saved official sources'), '']
     sources = result.get('sources') or ([result['source']] if result.get('source') else [])
     for source in sources:

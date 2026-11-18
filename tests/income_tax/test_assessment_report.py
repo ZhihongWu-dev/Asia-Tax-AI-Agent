@@ -206,3 +206,26 @@ def test_korean_report_keeps_payments_and_refunds_separate():
     assert 'Total refundable' in report and '1000000' in report
     assert 'not netted against' in report
     assert 'national' in report and 'local' in report
+
+@pytest.mark.parametrize('locale', ['zh', 'en'])
+@pytest.mark.parametrize('method', ['per_country', 'pooled'])
+def test_china_report_explains_expiring_credit_without_resetting_years(locale, method):
+    from hashlib import sha256
+    from tests.income_tax.test_china_foreign_assessment import facts, basis, run
+    data, paper = facts(), basis()
+    data['incomes'][1]['foreign_tax_paid'] = '200'
+    paper['workpaper']['method'] = method
+    paper['workpaper']['allocations'][1].update(eligible_direct_tax='200',
+        prior_excess=[dict(origin_year=2021, amount='80')])
+    snapshot = dict(inputs=data, basis=paper, result=run(data, paper))
+    digest = sha256(json.dumps(snapshot,sort_keys=True,separators=(',', ':')).encode()).hexdigest()
+    saved = dict(**snapshot,id='example',case_id='example',input_revision=1,
+        created_at='2026-11-19T00:00:00Z',status='calculated_basis',snapshot_hash=digest)
+    report = render(saved, locale)
+    summary = report.split('## Complete inputs' if locale=='en' else '## 完整资料')[0]
+    assert ('Direct foreign credit details' if locale=='en' else '境外直接抵免明细') in summary
+    expected = '| SG | 2021 | 2026 | 80 | 50.00 | 0 | 30.00 | 0 |' if method=='per_country' else '| SG | 2021 | 2026 | 80 | 80 | 0 | 0 | 0 |'
+    assert expected.replace('.', r'\.') in summary
+    assert ('cannot carry forward' if locale=='en' else '不可结转') in summary
+    assert ('New excess last usable year' if locale=='en' else '新增余额最后可用年度') in summary
+    assert '2031' in summary
