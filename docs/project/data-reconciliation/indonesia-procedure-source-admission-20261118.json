@@ -1,0 +1,76 @@
+{
+  "status": "reviewed_candidates_pending_cloud_admission",
+  "before_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "edde47909d21fe68755b0eb06c712c8e951fe448ba24feb03aadb751189ef987",
+    "review_sha256": "13f50d553fd845dc59bd5ce72805f21db1452a77f25f9e10ab023728ad0d9e5e"
+  },
+  "source_commit": "74a3672e77dd5aad2cf621a6224ab489367dcd13",
+  "citations": [
+    {
+      "cite_id": "id.dgt.pmk112-transition-2026#2",
+      "text_sha256": "e8964831e21cc2c07d3a9b288faf342f547fb67ede8d7225366097fd97f9babc",
+      "official_html_whitespace_normalized_match": true
+    },
+    {
+      "cite_id": "id.dgt.pmk112-transition-2026#3",
+      "text_sha256": "f2ab12e42dcca83bfa4d0da6a43fe2d5c838551f352863ab032f1fe54dbfd8a7",
+      "official_html_whitespace_normalized_match": true
+    },
+    {
+      "cite_id": "id.pmk112-2025#10",
+      "text_sha256": "090e455e7360e6174bfe97462237dd84da87f5a9c0ebf51ed5601d795c29b195",
+      "official_html_whitespace_normalized_match": true
+    },
+    {
+      "cite_id": "id.pmk112-2025#11",
+      "text_sha256": "5ec2d30e0a332ac514f681a3799adceb4e9019eee17be488bfa3c0188d7c5eb7",
+      "official_html_whitespace_normalized_match": true
+    },
+    {
+      "cite_id": "id.pmk112-2025#12",
+      "text_sha256": "7ddd6e2a94e59af948e8e826e498ee079e681e13d7076d56827bc2caa98aef94",
+      "official_html_whitespace_normalized_match": true
+    },
+    {
+      "cite_id": "id.pmk112-2025#13",
+      "text_sha256": "abd8809d69c5c54ce2bdf6793227fc821022f49dac658876fabd254098a19da3",
+      "official_html_whitespace_normalized_match": true
+    },
+    {
+      "cite_id": "id.pmk112-2025#14",
+      "text_sha256": "e4203ef2abeab906c70d1a10ae088b5e304189f2785ac7c8b0eeb63490e94077",
+      "official_html_whitespace_normalized_match": true
+    },
+    {
+      "cite_id": "id.pmk112-2025#16",
+      "text_sha256": "8b1cfb44e7d303c9bacebcf6e6f78306f5e8907b64330a84dff3e76eb39f6ba9",
+      "official_html_whitespace_normalized_match": true
+    },
+    {
+      "cite_id": "id.pmk112-2025#18",
+      "text_sha256": "9a6960cf552b20cffbefa741f7605a77f482575aa26022736783e866f51b6c69",
+      "official_html_whitespace_normalized_match": true
+    },
+    {
+      "cite_id": "id.pmk112-2025#2",
+      "text_sha256": "bffe08efb1961429dca126fcd9c0295c63ec0eb5d183ba664340372aea6574d7",
+      "official_html_whitespace_normalized_match": true
+    },
+    {
+      "cite_id": "id.pmk112-2025#8",
+      "text_sha256": "f023d3b4b77630c32bc50de33ce3b3056f00c00fe8872b21b7f5bf9778703211",
+      "official_html_whitespace_normalized_match": true
+    },
+    {
+      "cite_id": "id.pmk112-2025#9",
+      "text_sha256": "4da12dd33b160e90d045a292ce8761f35b62d11e21a208fb77a451c1a67beb30",
+      "official_html_whitespace_normalized_match": true
+    }
+  ],
+  "review": "Read all twelve complete texts. PMK112 Articles2,8-14,16,18 cover conditional eligibility, DGT forms, alternative residence certificates, payer verification, public-body exceptions, filing, retention and anti-abuse review. DGT announcement items2-3 preserve qualifying older forms and identify Coretax submission. This admits source text, not taxpayer eligibility or every historical procedure.",
+  "text_fidelity": "Preserved official HTML spelling, including Article10(3)(c) trailing da, and the following chapter heading at the end of Article2. No silent correction or annex-completeness claim.",
+  "runtime_inputs_changed": false
+}

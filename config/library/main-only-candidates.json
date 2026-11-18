@@ -3538,6 +3538,354 @@
         "kind": "reviewed_local_source_candidate",
         "evidence": "docs/project/data-reconciliation/indonesia-historical-payment-source-20261118.json"
       }
+    },
+    {
+      "cite_id": "id.dgt.pmk112-transition-2026#2",
+      "clause": {
+        "cite_id": "id.dgt.pmk112-transition-2026#2",
+        "doc_id": "id.dgt.pmk112-transition-2026",
+        "label": "Announcement item 2",
+        "text": "SKD WPLN/Formulir DGT dengan format berdasarkan Peraturan Direktur Jenderal Pajak Nomor PER-25/PJ/2018 tentang Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda yang diterbitkan sebelum diundangkannya PMK-112/2025, masih tetap berlaku sesuai dengan periode yang tercantum dalam SKD WPLN/Formulir DGT tersebut."
+      },
+      "document": {
+        "id": "id.dgt.pmk112-transition-2026",
+        "jur": "id",
+        "type": "guidance",
+        "category": "5;6",
+        "title": "DGT implementation announcement for PMK 112/2025",
+        "url": "https://www.pajak.go.id/index.php/id/pengumuman/pelaksanaan-peraturan-menteri-keuangan-nomor-112-tahun-2025-tentang-tata-cara-penerapan",
+        "file": "raw/id/id.dgt.pmk112-transition-2026.html",
+        "sha256": "981cdba4f34f3e8b4d4da3cf2919c0552254d80393d7f2474e3ce413e8d4782f",
+        "lang": "id",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Clarifies PMK 112/2025 implementation and preserves pre-promulgation PER-25-format certificates for their stated period. Publication date not established from captured HTML; no date inferred from attachment directory."
+      },
+      "text_sha256": "e8964831e21cc2c07d3a9b288faf342f547fb67ede8d7225366097fd97f9babc",
+      "source_commit": "74a3672e77dd5aad2cf621a6224ab489367dcd13",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-procedure-source-admission-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.dgt.pmk112-transition-2026#3",
+      "clause": {
+        "cite_id": "id.dgt.pmk112-transition-2026#3",
+        "doc_id": "id.dgt.pmk112-transition-2026",
+        "label": "Announcement item 3",
+        "text": "Penyampaian informasi dalam Formulir DGT dan pengunggahannya tetap dilakukan melalui Menu LA.03-03 Surat Keterangan Domisili Wajib Pajak Luar Negeri (SKD WPLN) yang telah tersedia di Coretax DJP."
+      },
+      "document": {
+        "id": "id.dgt.pmk112-transition-2026",
+        "jur": "id",
+        "type": "guidance",
+        "category": "5;6",
+        "title": "DGT implementation announcement for PMK 112/2025",
+        "url": "https://www.pajak.go.id/index.php/id/pengumuman/pelaksanaan-peraturan-menteri-keuangan-nomor-112-tahun-2025-tentang-tata-cara-penerapan",
+        "file": "raw/id/id.dgt.pmk112-transition-2026.html",
+        "sha256": "981cdba4f34f3e8b4d4da3cf2919c0552254d80393d7f2474e3ce413e8d4782f",
+        "lang": "id",
+        "effective_from": "",
+        "effective_to": "",
+        "note": "Clarifies PMK 112/2025 implementation and preserves pre-promulgation PER-25-format certificates for their stated period. Publication date not established from captured HTML; no date inferred from attachment directory."
+      },
+      "text_sha256": "f2ab12e42dcca83bfa4d0da6a43fe2d5c838551f352863ab032f1fe54dbfd8a7",
+      "source_commit": "74a3672e77dd5aad2cf621a6224ab489367dcd13",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-procedure-source-admission-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk112-2025#10",
+      "clause": {
+        "cite_id": "id.pmk112-2025#10",
+        "doc_id": "id.pmk112-2025",
+        "label": "Pasal 10",
+        "text": "Pasal 10\n(1)\nPemotong atau Pemungut Pajak yang menerima Formulir DGT sebagaimana dimaksud dalam Pasal 8 ayat (1) melakukan pengecekan pemenuhan ketentuan Pasal 2 ayat (4) dan Pasal 8 ayat (3).\n(2)\nPengecekan sebagaimana dimaksud pada ayat (1) dilakukan terhadap Formulir DGT berdasarkan buku, catatan, dan/atau dokumen yang menjadi dasar pemotongan atau pemungutan Pajak Penghasilan.\n(3)\nBerdasarkan hasil pengecekan sebagaimana dimaksud pada ayat (1) Pemotong atau Pemungut Pajak:\na.\nmenyampaikan informasi dalam Formulir DGT dan mengunggah Formulir DGT tersebut secara elektronik melalui portal wajib pajak;\nb.\nmenerima tanda terima Formulir DGT melalui portal wajib pajak sebagaimana dimaksud pada huruf a;\nc.\nmenyampaikan tanda terima Formulir DGT sebagaimana dimaksud pada huruf b kepada Wajib Pajak Luar Negeri sebagaimana dimaksud dalam Pasal 8 ayat (1); da\nd.\nmemotong atau memungut Pajak Penghasilan sesuai dengan ketentuan Persetujuan Penghindaran Pajak Berganda,\ndalam hal ketentuan dalam Pasal 2 ayat (4) dan Pasal 8 ayat (3) telah terpenuhi.\n(4)\nBerdasarkan hasil pengecekan sebagaimana dimaksud pada ayat (1) Pemotong atau Pemungut Pajak memotong atau memungut Pajak Penghasilan sesuai dengan ketentuan Undang-Undang Pajak Penghasilan, dalam hal ketentuan dalam Pasal 2 ayat (4) atau Pasal 8 ayat (3) tidak terpenuhi."
+      },
+      "document": {
+        "id": "id.pmk112-2025",
+        "jur": "id",
+        "type": "regulation",
+        "category": "5;6",
+        "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+        "url": "https://pajak.go.id/en/node/119084",
+        "file": "raw/id/id.pmk112-2025.html",
+        "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+        "lang": "id",
+        "effective_from": "2025-12-31",
+        "effective_to": "",
+        "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+      },
+      "text_sha256": "090e455e7360e6174bfe97462237dd84da87f5a9c0ebf51ed5601d795c29b195",
+      "source_commit": "74a3672e77dd5aad2cf621a6224ab489367dcd13",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-procedure-source-admission-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk112-2025#11",
+      "clause": {
+        "cite_id": "id.pmk112-2025#11",
+        "doc_id": "id.pmk112-2025",
+        "label": "Pasal 11",
+        "text": "Pasal 11\n(1)\nWajib Pajak Luar Negeri yang telah memiliki tanda terima Formulir DGT sebagaimana dimaksud dalam Pasal 10 ayat (3) huruf c tidak perlu menyampaikan Formulir DGT sebagaimana dimaksud dalam Pasal 8 ayat (1) untuk pemotongan atau pemungutan pajak berikutnya sesuai dengan periode yang tercantum dalam Formulir DGT.\n(2)\nWajib Pajak Luar Negeri sebagaimana dimaksud pada ayat (1) menyampaikan tanda terima Formulir DGT tersebut kepada Pemotong dan Pemungut Pajak dalam rangka pemotongan atau pemungutan Pajak Penghasilan sesuai dengan ketentuan Persetujuan Penghindaran Pajak Berganda sebagaimana dimaksud dalam Pasal 2 ayat (5).\n(3)\nPemotong atau Pemungut Pajak yang menerima tanda terima Formulir DGT sebagaimana dimaksud pada ayat (2) melakukan pengecekan pemenuhan ketentuan dalam Pasal 2 ayat (4) dan Pasal 8 ayat (3).\n(4)\nPengecekan sebagaimana dimaksud pada ayat (3) dilakukan terhadap informasi dalam Formulir DGT yang telah disampaikan dan Formulir DGT yang telah diunggah pada portal wajib pajak sebagaimana dimaksud dalam Pasal 10 ayat (3) huruf a berdasarkan buku, catatan, dan/atau dokumen yang menjadi dasar pemotongan atau pemungutan Pajak Penghasilan.\n(5)\nBerdasarkan hasil pengecekan sebagaimana dimaksud pada ayat (3) Pemotong atau Pemungut Pajak memotong atau memungut Pajak Penghasilan sesuai dengan ketentuan Persetujuan Penghindaran Pajak Berganda, dalam hal ketentuan dalam Pasal 2 ayat (4) dan Pasal 8 ayat (3) telah terpenuhi.\n(6)\nBerdasarkan hasil pengecekan sebagaimana dimaksud pada ayat (3) Pemotong atau Pemungut Pajak memotong atau memungut Pajak Penghasilan sesuai dengan ketentuan Undang-Undang Pajak Penghasilan, dalam hal ketentuan dalam Pasal 2 ayat (4) atau Pasal 8 ayat (3) tidak terpenuhi."
+      },
+      "document": {
+        "id": "id.pmk112-2025",
+        "jur": "id",
+        "type": "regulation",
+        "category": "5;6",
+        "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+        "url": "https://pajak.go.id/en/node/119084",
+        "file": "raw/id/id.pmk112-2025.html",
+        "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+        "lang": "id",
+        "effective_from": "2025-12-31",
+        "effective_to": "",
+        "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+      },
+      "text_sha256": "5ec2d30e0a332ac514f681a3799adceb4e9019eee17be488bfa3c0188d7c5eb7",
+      "source_commit": "74a3672e77dd5aad2cf621a6224ab489367dcd13",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-procedure-source-admission-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk112-2025#12",
+      "clause": {
+        "cite_id": "id.pmk112-2025#12",
+        "doc_id": "id.pmk112-2025",
+        "label": "Pasal 12",
+        "text": "Pasal 12\n(1)\nPenerima penghasilan yang merupakan:\na.\npemerintah Mitra Persetujuan Penghindaran Pajak Berganda;\nb.\npemerintah daerah Mitra Persetujuan Penghindaran Pajak Berganda;\nc.\nbagian ketatanegaraan Mitra Persetujuan Penghindaran Pajak Berganda;\nd.\nbank sentral Mitra Persetujuan Penghindaran Pajak Berganda; atau\ne.\nlembaga lain yang namanya disebut secara tegas dalam Persetujuan Penghindaran Pajak Berganda atau yang telah disepakati antara Pemerintah Indonesia dan pemerintah Mitra Persetujuan Penghindaran Pajak Berganda menurut ketentuan dalam Persetujuan Penghindaran Pajak Berganda,\ndikecualikan dari ketentuan penyampaian Formulir DGT sebagaimana dimaksud dalam Pasal 8 ayat (1).\n(2)\nPenerima penghasilan sebagaimana dimaksud pada ayat (1) harus menyampaikan Surat Keterangan Domisili Wajib Pajak Luar Negeri yang memenuhi ketentuan Pasal 9 ayat (1) atau surat keterangan dari Pejabat yang Berwenang kepada Pemotong atau Pemungut Pajak.\n(3)\nSurat keterangan dari Pejabat yang Berwenang sebagaimana dimaksud pada ayat (2) merupakan surat yang menerangkan bahwa penerima penghasilan merupakan pihak sebagaimana dimaksud pada ayat (1) sesuai dengan ketentuan Persetujuan Penghindaran Pajak Berganda.\n(4)\nSurat Keterangan Domisili Wajib Pajak Luar Negeri atau surat keterangan sebagaimana dimaksud pada ayat (2) dapat digunakan untuk Tahun Pajak yang tercantum pada Surat Keterangan Domisili Wajib Pajak Luar Negeri atau surat keterangan tersebut."
+      },
+      "document": {
+        "id": "id.pmk112-2025",
+        "jur": "id",
+        "type": "regulation",
+        "category": "5;6",
+        "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+        "url": "https://pajak.go.id/en/node/119084",
+        "file": "raw/id/id.pmk112-2025.html",
+        "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+        "lang": "id",
+        "effective_from": "2025-12-31",
+        "effective_to": "",
+        "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+      },
+      "text_sha256": "7ddd6e2a94e59af948e8e826e498ee079e681e13d7076d56827bc2caa98aef94",
+      "source_commit": "74a3672e77dd5aad2cf621a6224ab489367dcd13",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-procedure-source-admission-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk112-2025#13",
+      "clause": {
+        "cite_id": "id.pmk112-2025#13",
+        "doc_id": "id.pmk112-2025",
+        "label": "Pasal 13",
+        "text": "Pasal 13\n(1)\nPemotong atau Pemungut Pajak yang menerima Surat Keterangan Domisili Wajib Pajak Luar Negeri atau surat keterangan dari Pejabat yang Berwenang sebagaimana dimaksud dalam Pasal 12 ayat (2) melakukan pengecekan pemenuhan ketentuan Pasal 9 ayat (1) atau Pasal 12 ayat (3).\n(2)\nPengecekan sebagaimana dimaksud pada ayat (1) dilakukan terhadap Surat Keterangan Domisili Wajib Pajak Luar Negeri atau surat keterangan dari Pejabat yang Berwenang berdasarkan buku, catatan, dan/atau dokumen yang menjadi dasar pemotongan atau pemungutan Pajak Penghasilan.\n(3)\nDalam hal Surat Keterangan Domisili Wajib Pajak Luar Negeri telah memenuhi ketentuan sebagaimana dimaksud dalam Pasal 9 ayat (1) atau surat keterangan dari Pejabat yang Berwenang telah memenuhi ketentuan sebagaimana dimaksud dalam Pasal 12 ayat (3), Pemotong atau Pemungut Pajak sebagaimana dimaksud pada ayat (1) menyampaikan informasi dalam Surat Keterangan Domisili Wajib Pajak Luar Negeri atau surat keterangan dari Pejabat yang Berwenang tersebut secara elektronik melalui portal wajib pajak.\n(4)\nBerdasarkan hasil pengecekan sebagaimana dimaksud pada ayat (1), Pemotong atau Pemungut Pajak memotong atau memungut Pajak Penghasilan sesuai dengan ketentuan Persetujuan Penghindaran Pajak Berganda, dalam hal ketentuan sebagaimana dimaksud dalam Pasal 9 ayat (1) terkait dengan Surat Keterangan Domisili Wajib Pajak Luar Negeri atau ketentuan sebagaimana dimaksud dalam Pasal 12 ayat (3) terkait dengan surat keterangan dari Pejabat yang Berwenang telah terpenuhi.\n(5)\nBerdasarkan hasil pengecekan sebagaimana dimaksud pada ayat (1), Pemotong atau Pemungut Pajak memotong atau memungut Pajak Penghasilan sesuai dengan ketentuan Undang-Undang Pajak Penghasilan, dalam hal ketentuan sebagaimana dimaksud dalam Pasal 9 ayat (1) terkait dengan Surat Keterangan Domisili Wajib Pajak Luar Negeri atau ketentuan sebagaimana dimaksud dalam Pasal 12 ayat (3) terkait dengan surat keterangan dari Pejabat yang Berwenang tidak terpenuhi."
+      },
+      "document": {
+        "id": "id.pmk112-2025",
+        "jur": "id",
+        "type": "regulation",
+        "category": "5;6",
+        "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+        "url": "https://pajak.go.id/en/node/119084",
+        "file": "raw/id/id.pmk112-2025.html",
+        "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+        "lang": "id",
+        "effective_from": "2025-12-31",
+        "effective_to": "",
+        "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+      },
+      "text_sha256": "abd8809d69c5c54ce2bdf6793227fc821022f49dac658876fabd254098a19da3",
+      "source_commit": "74a3672e77dd5aad2cf621a6224ab489367dcd13",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-procedure-source-admission-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk112-2025#14",
+      "clause": {
+        "cite_id": "id.pmk112-2025#14",
+        "doc_id": "id.pmk112-2025",
+        "label": "Pasal 14",
+        "text": "Pasal 14\n(1)\nPemotong atau Pemungut Pajak Penghasilan wajib:\na.\nmenyetorkan Pajak Penghasilan sebagaimana dimaksud dalam Pasal 10 ayat (3) huruf d, Pasal 10 ayat (4), Pasal 11 ayat (5), Pasal 11 ayat (6), Pasal 13 ayat (4), atau Pasal 13 ayat (5);\nb.\nmelaporkan Pajak Penghasilan sebagaimana dimaksud dalam Pasal 10 ayat (3) huruf d, Pasal 10 ayat (4), Pasal 11 ayat (5), Pasal 11 ayat (6), Pasal 13 ayat (4), atau Pasal 13 ayat (5); dan\nc.\nmembuat bukti pemotongan atau pemungutan Pajak Penghasilan,\nsesuai dengan ketentuan peraturan perundang-undangan di bidang perpajakan.\n(2)\nDalam hal terdapat penghasilan yang diterima atau diperoleh Wajib Pajak Luar Negeri sebagaimana dimaksud dalam Pasal 2 ayat (1) huruf b tetapi tidak terdapat Pajak Penghasilan yang dipotong atau dipungut di Indonesia berdasarkan ketentuan dalam Persetujuan Penghindaran Pajak Berganda, Pemotong atau Pemungut Pajak Penghasilan wajib:\na.\nmelaporkan Pajak Penghasilan sebagaimana dimaksud dalam Pasal 10 ayat (3) huruf d, Pasal 10 ayat (4), Pasal 11 ayat (5), Pasal 11 ayat (6), Pasal 13 ayat (4), atau Pasal 13 ayat (5); dan\nb.\nmembuat bukti pemotongan atau pemungutan Pajak Penghasilan,\nsesuai dengan ketentuan peraturan perundang-undangan di bidang perpajakan.\n(3)\nPemotong atau Pemungut Pajak yang tidak memenuhi kewajiban sebagaimana dimaksud pada ayat (1) dan/atau ayat (2) dikenai sanksi sesuai ketentuan peraturan perundang-undangan di bidang perpajakan."
+      },
+      "document": {
+        "id": "id.pmk112-2025",
+        "jur": "id",
+        "type": "regulation",
+        "category": "5;6",
+        "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+        "url": "https://pajak.go.id/en/node/119084",
+        "file": "raw/id/id.pmk112-2025.html",
+        "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+        "lang": "id",
+        "effective_from": "2025-12-31",
+        "effective_to": "",
+        "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+      },
+      "text_sha256": "e4203ef2abeab906c70d1a10ae088b5e304189f2785ac7c8b0eeb63490e94077",
+      "source_commit": "74a3672e77dd5aad2cf621a6224ab489367dcd13",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-procedure-source-admission-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk112-2025#16",
+      "clause": {
+        "cite_id": "id.pmk112-2025#16",
+        "doc_id": "id.pmk112-2025",
+        "label": "Pasal 16",
+        "text": "Pasal 16\n(1)\nPemotong atau Pemungut Pajak sebagaimana dimaksud dalam Pasal 10 ayat (1) wajib menyimpan:\na.\nFormulir DGT sebagaimana dimaksud dalam Pasal 8 ayat (1);\nb.\nSurat Keterangan Domisili Wajib Pajak Luar Negeri sebagaimana dimaksud dalam Pasal 9, dalam hal Formulir DGT tidak disahkan sebagaimana dimaksud dalam Pasal 8 ayat (3) huruf c; dan\nc.\nbuku, catatan, dan/atau dokumen yang menjadi dasar pemotongan atau pemungutan Pajak Penghasilan sebagaimana dimaksud dalam Pasal 10 ayat (2),\nsesuai dengan ketentuan dalam Undang-Undang Ketentuan Umum dan Tata Cara Perpajakan.\n(2)\nPemotong atau Pemungut Pajak sebagaimana dimaksud dalam Pasal 11 ayat (2) wajib menyimpan:\na.\ntanda terima Formulir DGT sebagaimana dimaksud dalam Pasal 10 ayat (3) huruf b; dan\nb.\nbuku, catatan, dan/atau dokumen yang menjadi dasar pemotongan atau pemungutan Pajak Penghasilan sebagaimana dimaksud dalam Pasal 11 ayat (4),\nsesuai dengan ketentuan dalam Undang-Undang Ketentuan Umum dan Tata Cara Perpajakan.\n(3)\nPemotong atau Pemungut Pajak sebagaimana dimaksud dalam Pasal 13 ayat (1) wajib menyimpan:\na.\nSurat Keterangan Domisili Wajib Pajak Luar Negeri atau surat keterangan dari Pejabat yang Berwenang sebagaimana dimaksud dalam Pasal 12 ayat (2); dan\nb.\nbuku, catatan, dan/atau dokumen yang menjadi dasar pemotongan atau pemungutan Pajak Penghasilan sebagaimana dimaksud dalam Pasal 13 ayat (2),\nsesuai dengan ketentuan dalam Undang-Undang Ketentuan Umum dan Tata Cara Perpajakan."
+      },
+      "document": {
+        "id": "id.pmk112-2025",
+        "jur": "id",
+        "type": "regulation",
+        "category": "5;6",
+        "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+        "url": "https://pajak.go.id/en/node/119084",
+        "file": "raw/id/id.pmk112-2025.html",
+        "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+        "lang": "id",
+        "effective_from": "2025-12-31",
+        "effective_to": "",
+        "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+      },
+      "text_sha256": "8b1cfb44e7d303c9bacebcf6e6f78306f5e8907b64330a84dff3e76eb39f6ba9",
+      "source_commit": "74a3672e77dd5aad2cf621a6224ab489367dcd13",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-procedure-source-admission-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk112-2025#18",
+      "clause": {
+        "cite_id": "id.pmk112-2025#18",
+        "doc_id": "id.pmk112-2025",
+        "label": "Pasal 18",
+        "text": "Pasal 18\n(1)\nDalam rangka pencegahan praktik penyalahgunaan Persetujuan Penghindaran Pajak Berganda sebagaimana dimaksud dalam Pasal 2 ayat (4) huruf c, Direktur Jenderal Pajak berwenang untuk menguji kepatuhan pemenuhan pemotongan atau pemungutan Pajak Penghasilan sebagaimana dimaksud dalam Pasal 10 ayat (3) huruf d, Pasal 10 ayat (4), Pasal 11 ayat (5), Pasal 11 ayat (6), Pasal 13 ayat (4), atau Pasal 13 ayat (5).\n(2)\nPelaksanaan kewenangan sebagaimana dimaksud pada ayat (1) dilakukan berdasarkan ketentuan sebagaimana diatur dalam:\na.\nPersetujuan Penghindaran Pajak Berganda; dan/atau\nb.\nUndang-Undang Pajak Penghasilan.\n(3)\nKetentuan pencegahan praktik penyalahgunaan Persetujuan Penghindaran Pajak Berganda yang dilakukan berdasarkan Persetujuan Penghindaran Pajak Berganda sebagaimana dimaksud pada ayat (2) huruf a merupakan ketentuan mengenai:\na.\npihak yang sebenarnya menerima manfaat dari penghasilan (beneficial owner);\nb.\npersentase dan periode minimum kepemilikan saham untuk penerapan manfaat tarif pemotongan atau pemungutan Pajak Penghasilan yang lebih rendah atas dividen;\nc.\nperiode dan pemenuhan ambang batas persentase harta tidak bergerak terhadap keseluruhan harta untuk menentukan hak pemajakan atas keuntungan dari pengalihan saham atau hak atas entitas;\nd.\npencegahan penghindaran penentuan bentuk usaha tetap;\ne.\npembatasan penerima manfaat Persetujuan Penghindaran Pajak Berganda (limitation on benefits); dan/atau\nf.\nuji tujuan utama (principal purpose test atau main purpose test).\n(4)\nDalam hal tidak terdapat ketentuan pencegahan praktik penyalahgunaan Persetujuan Penghindaran Pajak Berganda yang dilakukan berdasarkan Persetujuan Penghindaran Pajak Berganda sebagaimana dimaksud pada ayat (2) huruf a, pelaksanaan kewenangan sebagaimana dimaksud pada ayat (1) dilakukan berdasarkan ketentuan pencegahan praktik penghindaran pajak berganda sesuai dengan ketentuan Undang-Undang Pajak Penghasilan sebagaimana dimaksud pada ayat (2) huruf b.\n(5)\nDalam hal berdasarkan hasil pengujian kepatuhan sebagaimana dimaksud pada ayat (1) pemotong atau pemungut tidak memenuhi ketentuan sebagaimana dimaksud dalam Pasal 10 ayat (4), Pasal 11 ayat (6) atau Pasal 13 ayat (5), Direktur Jenderal Pajak menetapkan besarnya pajak yang terutang sesuai dengan ketentuan dalam Undang-Undang Pajak Penghasilan."
+      },
+      "document": {
+        "id": "id.pmk112-2025",
+        "jur": "id",
+        "type": "regulation",
+        "category": "5;6",
+        "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+        "url": "https://pajak.go.id/en/node/119084",
+        "file": "raw/id/id.pmk112-2025.html",
+        "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+        "lang": "id",
+        "effective_from": "2025-12-31",
+        "effective_to": "",
+        "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+      },
+      "text_sha256": "9a6960cf552b20cffbefa741f7605a77f482575aa26022736783e866f51b6c69",
+      "source_commit": "74a3672e77dd5aad2cf621a6224ab489367dcd13",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-procedure-source-admission-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk112-2025#2",
+      "clause": {
+        "cite_id": "id.pmk112-2025#2",
+        "doc_id": "id.pmk112-2025",
+        "label": "Pasal 2",
+        "text": "Pasal 2\n(1)\nPengenaan Pajak Penghasilan terhadap:\na.\nWajib Pajak Dalam Negeri yang menerima atau memperoleh penghasilan yang bersumber dari luar Indonesia; dan\nb.\nWajib Pajak Luar Negeri yang menerima atau memperoleh penghasilan yang bersumber dari Indonesia,\ndilaksanakan sesuai dengan ketentuan dalam Undang-Undang Pajak Penghasilan.\n(2)\nDalam hal terdapat Persetujuan Penghindaran Pajak Berganda antara Indonesia dengan Mitra Persetujuan Penghindaran Pajak Berganda, pengenaan Pajak Penghasilan sebagaimana dimaksud pada ayat (1) dapat dilaksanakan sesuai dengan ketentuan dalam Persetujuan Penghindaran Pajak Berganda.\n(3)\nPengenaan Pajak Penghasilan sesuai dengan ketentuan dalam Persetujuan Penghindaran Pajak Berganda sebagaimana dimaksud pada ayat (2) berlaku bagi orang pribadi atau badan yang merupakan:\na.\nWajib Pajak Dalam Negeri sebagaimana dimaksud pada ayat (1) huruf a; dan\nb.\nWajib Pajak Luar Negeri sebagaimana dimaksud pada ayat (1) huruf b yang merupakan penduduk Mitra Persetujuan Penghindaran Pajak Berganda untuk tujuan perpajakan, yang dibuktikan dengan Formulir DGT yang disahkan oleh Pejabat yang Berwenang.\n(4)\nWajib Pajak Luar Negeri sebagaimana dimaksud pada ayat (3) huruf b berhak memperoleh manfaat Persetujuan Penghindaran Pajak Berganda dengan syarat Wajib Pajak Luar Negeri tersebut:\na.\nbukan subjek pajak dalam negeri Indonesia;\nb.\nmerupakan penduduk Mitra Persetujuan Penghindaran Pajak Berganda untuk tujuan perpajakan; dan\nc.\ntidak melakukan penyalahgunaan Persetujuan Penghindaran Pajak Berganda.\n(5)\nDalam hal Wajib Pajak Luar Negeri memenuhi ketentuan sebagaimana dimaksud pada ayat (4), Pemotong atau Pemungut Pajak memotong atau memungut pajak atas penghasilan yang diterima atau diperoleh oleh Wajib Pajak Luar Negeri sebagaimana dimaksud pada ayat (3) huruf b sesuai dengan ketentuan dalam Persetujuan Penghindaran Pajak Berganda.\n(6)\nManfaat Persetujuan Penghindaran Pajak Berganda sebagaimana dimaksud pada ayat (4) dapat berupa:\na.\ntarif pemotongan atau pemungutan pajak yang lebih rendah dari tarif yang diatur dalam Undang-Undang Pajak Penghasilan;\nb.\npemajakan eksklusif di negara domisili;\nc.\npembebasan dari pengenaan Pajak Penghasilan di Indonesia; atau\nd.\njangka waktu penentuan bentuk usaha tetap yang berbeda dengan yang diatur dalam Undang-Undang Pajak Penghasilan,\n(7)\nPenyalahgunaan Persetujuan Penghindaran Pajak Berganda sebagaimana dimaksud pada ayat (4) huruf c merupakan upaya yang dilakukan oleh Wajib Pajak Luar Negeri untuk mengurangi, menghindari, atau menunda pembayaran Pajak Penghasilan yang seharusnya terutang yang bertentangan dengan maksud dan tujuan Persetujuan Penghindaran Pajak Berganda.\n(8)\nMaksud dan tujuan Persetujuan Penghindaran Pajak Berganda sebagaimana dimaksud pada ayat (7) merupakan eliminasi pengenaan pajak berganda tanpa menciptakan peluang untuk tidak dikenai pajak sama sekali atau pengurangan pajak melalui penghindaran atau pengelakan pajak, termasuk pemanfaatan Persetujuan Penghindaran Pajak Berganda oleh wajib pajak yang berdomisili di negara atau yurisdiksi ketiga.\nBAB III\nTATA CARA PENERAPAN\nPERSETUJUAN PENGHINDARAN PAJAK BERGANDA\nOLEH WAJIB PAJAK DALAM NEGERI\nBagian Kesatu\nUmum"
+      },
+      "document": {
+        "id": "id.pmk112-2025",
+        "jur": "id",
+        "type": "regulation",
+        "category": "5;6",
+        "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+        "url": "https://pajak.go.id/en/node/119084",
+        "file": "raw/id/id.pmk112-2025.html",
+        "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+        "lang": "id",
+        "effective_from": "2025-12-31",
+        "effective_to": "",
+        "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+      },
+      "text_sha256": "bffe08efb1961429dca126fcd9c0295c63ec0eb5d183ba664340372aea6574d7",
+      "source_commit": "74a3672e77dd5aad2cf621a6224ab489367dcd13",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-procedure-source-admission-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk112-2025#8",
+      "clause": {
+        "cite_id": "id.pmk112-2025#8",
+        "doc_id": "id.pmk112-2025",
+        "label": "Pasal 8",
+        "text": "Pasal 8\n(1)\nWajib Pajak Luar Negeri menyampaikan Formulir DGT yang menyatakan telah terpenuhinya ketentuan sebagaimana dimaksud dalam Pasal 2 ayat (4) kepada Pemotong atau Pemungut Pajak, dalam rangka pemotongan atau pemungutan Pajak Penghasilan sesuai dengan ketentuan Persetujuan Penghindaran Pajak Berganda sebagaimana dimaksud dalam Pasal 2 ayat (5).\n(2)\nPernyataan dalam Formulir DGT sebagaimana dimaksud pada ayat (1) menyatakan bahwa Wajib Pajak Luar Negeri:\na.\nbukan merupakan subjek pajak dalam negeri Indonesia;\nb.\nmerupakan penduduk Mitra Persetujuan Penghindaran Pajak Berganda untuk tujuan perpajakan; dan\nc.\ntidak melakukan penyalahgunaan Persetujuan Penghindaran Pajak Berganda, yaitu Wajib Pajak Luar Negeri meliputi:\n1.\nmemiliki substansi ekonomi (economic substance) dalam pendirian entitas atau pelaksanaan transaksi;\n2.\nmemiliki bentuk hukum (legal form) yang sama dengan substansi ekonomi (economic substance) dalam pendirian entitas atau pelaksanaan transaksi;\n3.\nmemiliki kegiatan usaha yang dikelola oleh manajemen sendiri dan manajemen tersebut mempunyai kewenangan yang cukup untuk menjalankan transaksi;\n4.\nmemiliki aset tetap dan aset tidak tetap, yang cukup dan memadai untuk melaksanakan kegiatan usaha di Mitra Persetujuan Penghindaran Pajak Berganda selain aset yang mendatangkan penghasilan dari Indonesia;\n5.\nmemiliki pegawai dalam jumlah yang cukup dan memadai dengan keahlian dan keterampilan tertentu yang sesuai dengan bidang usaha yang dijalankan perusahaan;\n6.\nmemiliki kegiatan atau usaha aktif selain hanya menerima penghasilan berupa dividen, bunga dan/atau royalti yang bersumber dari Indonesia;\n7.\nmelakukan transaksi yang tidak memiliki tujuan utama baik secara langsung maupun tidak langsung untuk mendapatkan manfaat Persetujuan Penghindaran Pajak Berganda sebagaimana dimaksud dalam Pasal 2 ayat (6); dan\n8.\nmerupakan pihak yang sebenarnya menerima manfaat dari penghasilan (beneficial owner).\n(3)\nFormulir DGT sebagaimana dimaksud pada ayat (1) harus memenuhi ketentuan sebagai berikut:\na.\ndiisi dengan benar, lengkap, dan jelas;\nb.\nditandatangani atau diberi tanda yang setara dengan tanda tangan oleh Wajib Pajak Luar Negeri sesuai dengan yang berlaku di Mitra Persetujuan Penghindaran Pajak Berganda;\nc.\ndisahkan dengan ditandatangani atau diberi tanda yang setara dengan tanda tangan oleh Pejabat yang Berwenang sesuai dengan yang berlaku di Mitra Persetujuan Penghindaran Pajak Berganda;\nd.\ndigunakan untuk periode yang tercantum pada Formulir DGT; dan\ne.\nmenggunakan format sebagaimana tercantum dalam Lampiran yang merupakan bagian tidak terpisahkan dari Peraturan Menteri ini.\n(4)\nPeriode yang tercantum pada Formulir DGT sebagaimana dimaksud pada ayat (3) huruf d yaitu paling lama 12 (dua belas) bulan."
+      },
+      "document": {
+        "id": "id.pmk112-2025",
+        "jur": "id",
+        "type": "regulation",
+        "category": "5;6",
+        "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+        "url": "https://pajak.go.id/en/node/119084",
+        "file": "raw/id/id.pmk112-2025.html",
+        "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+        "lang": "id",
+        "effective_from": "2025-12-31",
+        "effective_to": "",
+        "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+      },
+      "text_sha256": "f023d3b4b77630c32bc50de33ce3b3056f00c00fe8872b21b7f5bf9778703211",
+      "source_commit": "74a3672e77dd5aad2cf621a6224ab489367dcd13",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-procedure-source-admission-20261118.json"
+      }
+    },
+    {
+      "cite_id": "id.pmk112-2025#9",
+      "clause": {
+        "cite_id": "id.pmk112-2025#9",
+        "doc_id": "id.pmk112-2025",
+        "label": "Pasal 9",
+        "text": "Pasal 9\n(1)\nPengesahan Formulir DGT oleh Pejabat yang Berwenang sebagaimana dimaksud dalam Pasal 8 ayat (3) huruf c dapat diganti dengan Surat Keterangan Domisili Wajib Pajak Luar Negeri sepanjang Surat Keterangan Domisili Wajib Pajak Luar Negeri tersebut:\na.\nmenggunakan bahasa Inggris; dan\nb.\nminimal mencantumkan:\n1.\nnama Wajib Pajak Luar Negeri;\n2.\ntanggal penerbitan Surat Keterangan Domisili Wajib Pajak Luar Negeri; dan\n3.\nnama dan tanda tangan atau tanda yang setara dengan tanda tangan Pejabat yang Berwenang sesuai dengan yang berlaku di Mitra Persetujuan Penghindaran Pajak Berganda.\n(2)\nSurat Keterangan Domisili Wajib Pajak Luar Negeri sebagaimana dimaksud pada ayat (1) berlaku untuk:\na.\nperiode berlaku yang tercantum dalam Surat Keterangan Domisili Wajib Pajak Luar Negeri tersebut; atau\nb.\nMasa Pajak bulan penerbitan Surat Keterangan Domisili Wajib Pajak Luar Negeri tersebut dalam hal tidak terdapat periode berlaku yang tercantum dalam Surat Keterangan Domisili Wajib Pajak Luar Negeri."
+      },
+      "document": {
+        "id": "id.pmk112-2025",
+        "jur": "id",
+        "type": "regulation",
+        "category": "5;6",
+        "title": "PMK 112 Tahun 2025 - Tata Cara Penerapan Persetujuan Penghindaran Pajak Berganda",
+        "url": "https://pajak.go.id/en/node/119084",
+        "file": "raw/id/id.pmk112-2025.html",
+        "sha256": "a60c6e304079d365a15d870e7a0a2a166f5c0a185c0a44b9615b5a5687969eae",
+        "lang": "id",
+        "effective_from": "2025-12-31",
+        "effective_to": "",
+        "note": "Commencement verified against signed original page 25 and Article 29; DGT webpage header date is inconsistent. Treaty relief remains conditional; pre-promulgation certificate transition is documented separately. HTML omits signed-PDF annex examples; not a complete annex rendition."
+      },
+      "text_sha256": "4da12dd33b160e90d045a292ce8761f35b62d11e21a208fb77a451c1a67beb30",
+      "source_commit": "74a3672e77dd5aad2cf621a6224ab489367dcd13",
+      "provenance": {
+        "kind": "reviewed_local_source_candidate",
+        "evidence": "docs/project/data-reconciliation/indonesia-procedure-source-admission-20261118.json"
+      }
     }
   ]
 }
