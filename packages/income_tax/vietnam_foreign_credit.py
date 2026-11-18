@@ -7,8 +7,14 @@ credit and limits the additional top-up claim to remaining capacity. Callers mus
 not use it to pool unrelated projects or transfer credits between tax periods.
 """
 from decimal import Decimal, localcontext
+from copy import deepcopy
+import json
+from pathlib import Path
 
 from .arithmetic import amount
+
+TREATY_SOURCES = json.loads(Path(__file__).with_name(
+    'vn_treaty_credit_sources.json').read_text(encoding='utf-8'))
 
 
 def dividend_underlying_credit(*, source_country, qualifying_holding_percent,
@@ -79,10 +85,8 @@ def dividend_underlying_tax(*, source_country, qualifying_holding_percent,
             distributing_profit_after_tax=profit, corporate_tax_paid_on_profit=tax,
             attributable_underlying_tax=attributed,
             stage='underlying_component_before_vietnam_credit_cap',
-            sources=[dict(title=('Hong Kong–Vietnam treaty Article22(3)' if source_country=='hk'
-                                else 'Singapore–Vietnam treaty Article24(2)(a)'),
-                url=('https://www.elegislation.gov.hk/hk/cap112BE!en.rtf' if source_country=='hk'
-                     else 'https://www.iras.gov.sg/media/docs/default-source/dtas/singapore-vietnam-dta-(ratified)(mli)(01092023).pdf'))])
+            sources=[dict(deepcopy(TREATY_SOURCES[source_country]),
+                provisions=['Article22(3)' if source_country=='hk' else 'Article24(2)(a)'])])
 
 
 def singapore_interest_royalty_credit(gross_income, *, income_type,
@@ -115,10 +119,8 @@ def singapore_interest_royalty_credit(gross_income, *, income_type,
             allowed_tax_credit=allowed, credit_basis_exceeding_limit=credit_basis-allowed,
             vietnam_tax_after_credit=limit-allowed,
             stage='treaty_credit_before_assessment_rounding',
-            sources=[dict(title='Singapore–Vietnam treaty Article24(2)(a)/(4)(a)',
-                url='https://www.iras.gov.sg/media/docs/default-source/dtas/singapore-vietnam-dta-(ratified)(mli)(01092023).pdf',
-                pages=[13, 14],
-                sha256='948b2597f2996af06d048be2eb1a74ca1772e7d110b31a969985fa3dbdeca503')])
+            sources=[dict(deepcopy(TREATY_SOURCES['sg']),
+                provisions=['Article24(2)(a)', 'Article24(4)(a)'], pages=[13, 14])])
 
 
 def indonesia_deemed_credit(gross_income, *, income_type, vietnam_tax_limit,
@@ -148,11 +150,9 @@ def indonesia_deemed_credit(gross_income, *, income_type, vietnam_tax_limit,
             allowed_tax_credit=credit, deemed_tax_exceeding_limit=deemed-credit,
             vietnam_tax_after_credit=limit-credit,
             stage='treaty_credit_before_assessment_rounding',
-            sources=[dict(title='Indonesia–Vietnam treaty Article23(1)/(4)',
-                url='https://pajak.go.id/en/p3b/vietnam'),
-                dict(title='Official MLI synthesised text, Article23',
-                url='https://www.pajak.go.id/sites/default/files/2025-06/Tax%20Treaty%20Vietnam%20%28Modified%20by%20MLI%29%20-%20EN.pdf',
-                pages=[13])])
+            sources=[dict(deepcopy(TREATY_SOURCES['id_base_page']),
+                provisions=['Article23(1)', 'Article23(4)']),
+                dict(deepcopy(TREATY_SOURCES['id']), provisions=['Article23'], pages=[13])])
 
 
 def additional_top_up_credit(*, vietnam_tax_limit, established_ordinary_credit,

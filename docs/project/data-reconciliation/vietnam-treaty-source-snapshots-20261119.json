@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only; no cloud upload, push or main merge.",
+  "change": "Vietnam treaty-credit helpers now emit exact archived treaty paths and SHA256 for HK/SG underlying dividends, SG interest/royalty and Indonesian deemed credits. Existing provisions/pages retained.",
+  "manifest": "packages/income_tax/vn_treaty_credit_sources.json",
+  "provenance": "Three treaty originals matched existing catalog SHA256 byte-for-byte. DGT base treaty HTML retrieved as complete response; labelled separately from the existing MLI synthesised PDF. No new treaty entitlement or arithmetic rule introduced.",
+  "verification": {
+    "suite": "1469 income-tax/reporting tests passed in37.16s",
+    "workflow": "Existing authenticated mixed-country workpaper test now verifies all four source hashes against original files; full equality after storage restart, idempotent replay and later case edits",
+    "whitespace": "Passed excluding original raw bytes"
+  },
+  "research": "https://github.com/python/cpython/blob/main/Doc/library/hashlib.rst",
+  "implementation_choice": "Existing JSON manifest and deepcopy pattern; standard-library file_digest verifies exact bytes without new dependency or copied external code.",
+  "limits": [
+    "A credit workpaper is not a completed Vietnamese income-tax assessment",
+    "Annual relief/foreign-credit ordering and documented entitlement remain separate unresolved acceptance items",
+    "No historical records rewritten or frozen optimizer catalogs modified",
+    "No claim that all result-level references across every policy have been audited"
+  ]
+}

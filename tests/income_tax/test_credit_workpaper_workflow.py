@@ -1,6 +1,8 @@
 from copy import deepcopy
 from types import SimpleNamespace
 from uuid import uuid4
+from hashlib import file_digest
+from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
@@ -45,6 +47,14 @@ def test_credit_snapshot_restart_replay_edit_and_authorization(tmp_path):
         assert run['dossier_review']['document_inventory_complete'] is False
         assert run['inputs'] == IncomeTaxCase.model_validate(facts).model_dump(mode='json')
         assert 'final_tax' not in run['result']
+        root = Path(__file__).resolve().parents[2]
+        snapshots = [source for item in run['result']['items']
+                     for source in item['calculation']['sources']]
+        assert len(snapshots) == 4
+        assert len({source['doc_id'] for source in snapshots}) == 4
+        for source in snapshots:
+            with (root / source['file']).open('rb') as original:
+                assert file_digest(original, 'sha256').hexdigest() == source['sha256']
         service.store.engine.dispose()
         service.store = ChatStore(url)
         saved = endpoint + '/' + run['id']
