@@ -49,3 +49,24 @@ session28744 in the independent validation worktree. Script and log:
 integration-audit-20261116/run_repaired_golden_v2.py and
 repaired-compressed-golden-v2-20261118.log. Preserve inputs until terminal.
 The original optimizer run remains separate and has not been restarted.
+
+## Procedure citation correction and rejection
+
+Session 28744 (v2) terminated before the first golden result because procedure
+clause dependencies were omitted from capture_runtime. Validation-branch commit
+f5415b2 adds procedure clause references and a regression test. All 19 runtime
+tests pass; all 453 rules expand with the 649-reference staged bundle.
+
+The v3 diagnostic run is live as session 66099, using
+run_repaired_golden_v3.py and repaired-compressed-golden-v3-20261118.log in the
+external audit directory. Its bundle digest is
+694feb1a4b028ee12cdb9725c5dd177e4c416af5df7aa5bcf4a50c1c9f29dabe.
+
+A fresh read of live source reviews REJECTS this expanded dependency set:
+id.dgt.article26#all remains in Indonesian treaty rules' procedure fields.
+See repaired-procedure-source-closure-20261118.json. The previous 635-reference
+closure did not cover procedure references and is insufficient for promotion.
+The running v3 suite is diagnostic only, even if its optimizer checks pass.
+Replace the obsolete procedure dependency with reviewed current legal support,
+rebuild and validate rule artifacts, and rerun the complete source-admission
+and optimizer checks before promotion. Do not alter the current running inputs.
