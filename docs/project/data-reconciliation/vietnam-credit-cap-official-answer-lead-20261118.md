@@ -27,6 +27,12 @@ content was inferred from this attempt. This rules out treating the previous
 Python SSL error as the only observed access problem; another accessible
 official rendition is still needed.
 
+The search-indexed Ministry mirror at qlg.mof.gov.vn was subsequently tested:
+its question page timed out through web retrieval, and HTTPS requests for each
+of the three corresponding image paths returned URLError. No image was accepted
+or archived from that host. This alternate-host attempt supplies no new legal
+answer and does not resolve the personal pooling or corporate ordering questions.
+
 Next evidence step: retrieve the answer images through an accessible official
 host or browser, inspect their full contents and identify the issuing document,
 date, taxpayer scope and legal reasoning. Then reconcile with the already
