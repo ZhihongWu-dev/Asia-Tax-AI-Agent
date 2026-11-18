@@ -1,0 +1,26 @@
+{
+  "status": "internal_component_verified_integration_pending",
+  "validation": {
+    "passed": 10,
+    "seconds": 14.31,
+    "exit_code": 0
+  },
+  "rules": [
+    "Each saved capital_gain item represents one transaction with gross proceeds",
+    "Original cost and reasonable transfer expenses deducted per transaction",
+    "No ordinary inter-transaction loss offset",
+    "Verified donations before20percent tax and verified reductions after tax",
+    "Source classification and ordinary treatment explicitly confirmed"
+  ],
+  "sources": [
+    "cn.law.iit",
+    "cn.reg.iit Articles16/17",
+    "cn.cs.2020-03 source-country rules"
+  ],
+  "remaining": [
+    "Integrate transaction taxes into annual country credit calculation",
+    "Saved deduction reconciliation",
+    "Frontend fields and browser verification"
+  ],
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}

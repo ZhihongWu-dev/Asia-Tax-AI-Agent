@@ -162,7 +162,8 @@
     "china_personal_derived_precision": "1752 income/report tests passed in42.08s. Reproduced and fixed valid six-decimal income rejected after statutory expense factors; exact internal values retained while public six-place validation remains.",
     "china_domestic_derived_precision": "84 domestic/foreign focused cases passed; same fractional-expense defect reproduced and fixed in original domestic comprehensive workflow. UI accepts decimal input, public precision remains six places.",
     "nested_sources_personal_foreign": "1757 income/report tests passed in71.27s;153 successful calculations across35 policies,114 distinct source records,0 unresolved files/hashes. Includes personal foreign workpaper.",
-    "production_build": "npm run build passed after personal foreign integration (tsc plus Vite2279modules). Local artifact hashes recorded; bundle-size warning remains; no deployment."
+    "production_build": "npm run build passed after personal foreign integration (tsc plus Vite2279modules). Local artifact hashes recorded; bundle-size warning remains; no deployment.",
+    "china_personal_transfers": "10 internal component cases passed: per-transaction proceeds/costs/expenses, no ordinary loss netting, donations and reductions, source hashes. Annual workpaper and UI integration pending."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }
