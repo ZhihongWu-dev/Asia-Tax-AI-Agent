@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from scripts.catalog_migration import digest, simulate, validate_plan
+from scripts.catalog_migration import digest, simulate, validate_plan, read_affected_catalogs
 
 
 def plan_for(operations):
@@ -84,3 +84,49 @@ def test_reviewed_real_plan_is_valid():
     ops = validate_plan(plan)
     assert len(ops) == 399
     assert len([op for op in ops if op['table'] == 'clause']) == 152
+
+
+class Result:
+    def __init__(self, rows): self.rows = rows
+    def __enter__(self): return self
+    def __exit__(self, *args): pass
+    def mappings(self): return iter(self.rows)
+
+
+def test_reads_only_bound_batches_and_preserves_absence(example):
+    plan, rows = example
+    calls = []
+    class Connection:
+        def execute(self, statement, params):
+            sql = str(statement)
+            calls.append((sql, params))
+            table = sql.split('database.')[1].split()[0]
+            return Result([rows[table][key] for key in params['ids'] if key in rows[table]])
+    malicious_value = "law'); DROP TABLE database.doc; --"
+    result = read_affected_catalogs(Connection(), plan, batch_size=1,
+                                    extra_keys={'doc': [malicious_value, 'law']})
+    assert result['doc'] == rows['doc']
+    assert result['clause'] == rows['clause']
+    assert 'law#1' not in result['clause']
+    assert len(calls) == 4
+    assert all('WHERE' in sql and '= ANY(:ids)' in sql and malicious_value not in sql
+               and len(params['ids']) == 1 for sql, params in calls)
+
+
+@pytest.mark.parametrize('options', [
+    {'batch_size': 0}, {'batch_size': 101}, {'batch_size': True},
+    {'extra_keys': {'meta': ['uploaded_at']}}, {'extra_keys': {'doc': 'law'}},
+    {'extra_keys': {'doc': [None]}},
+])
+def test_invalid_read_options_rejected_before_sql(example, options):
+    class NoSQL:
+        def execute(self, *args): pytest.fail('invalid request must not issue SQL')
+    with pytest.raises(ValueError): read_affected_catalogs(NoSQL(), example[0], **options)
+
+
+@pytest.mark.parametrize('rows', [[{'id': 'other'}], [{'id': 'law'}, {'id': 'law'}]])
+def test_unexpected_database_rows_fail_closed(example, rows):
+    class Connection:
+        def execute(self, *args): return Result(rows)
+    with pytest.raises(ValueError, match='unexpected_or_duplicate_row'):
+        read_affected_catalogs(Connection(), example[0])

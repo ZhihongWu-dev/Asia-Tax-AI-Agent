@@ -67,3 +67,39 @@ def simulate(plan, catalogs, *, uploaded_at):
         else:
             rows[op['key']] = deepcopy(op['after'])
     return result
+
+
+def read_affected_catalogs(connection, plan, *, extra_keys=None, batch_size=50):
+    """Read bounded key batches in the caller's existing read-only transaction.
+
+    Missing rows remain absent so insert guards can distinguish them from
+    existing records. Additional keys support source-overlay validation.
+    """
+    from sqlalchemy import text
+
+    operations = validate_plan(plan)
+    if type(batch_size) is not int or not 1 <= batch_size <= 100:
+        raise ValueError('migration_batch_size_invalid')
+    wanted = {table: set() for table in KEYS}
+    for op in operations:
+        wanted[op['table']].add(op['key'])
+    for table, ids in (extra_keys or {}).items():
+        if table not in KEYS or not isinstance(ids, (list, tuple, set)):
+            raise ValueError('migration_extra_keys_invalid')
+        if any(not isinstance(key, str) or not key for key in ids):
+            raise ValueError('migration_extra_keys_invalid')
+        wanted[table].update(ids)
+    catalogs = {table: {} for table in KEYS}
+    for table, key_column in KEYS.items():
+        ids = sorted(wanted[table])
+        for offset in range(0, len(ids), batch_size):
+            batch = ids[offset:offset + batch_size]
+            # Identifiers come exclusively from KEYS, values are bound.
+            statement = text(f'SELECT * FROM database.{table} WHERE {key_column} = ANY(:ids)')
+            with connection.execute(statement, {'ids': batch}) as result:
+                for row in result.mappings():
+                    key = row[key_column]
+                    if key not in batch or key in catalogs[table]:
+                        raise ValueError('migration_unexpected_or_duplicate_row')
+                    catalogs[table][key] = dict(row)
+    return catalogs

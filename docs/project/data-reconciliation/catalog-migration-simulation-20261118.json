@@ -25,5 +25,8 @@
     "Deployed reader revision not verified",
     "Recheck all guards under write transaction locks"
   ],
-  "previous_attempt": "Full clause-table read failed with SSL connection closed; no writes. This attempt uses batches of at most 50 requested keys."
+  "previous_attempt": "Full clause-table read failed with SSL connection closed; no writes. This attempt uses batches of at most 50 requested keys.",
+  "reader_implementation": "scripts.catalog_migration.read_affected_catalogs",
+  "batch_size": 50,
+  "read_only_repeat_verified": true
 }
