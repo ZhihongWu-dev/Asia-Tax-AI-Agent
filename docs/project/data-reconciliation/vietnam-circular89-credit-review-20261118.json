@@ -43,12 +43,57 @@
   "implementation": {
     "module": "packages/income_tax/vietnam_credit_dossier.py",
     "change": "Current Article34 provenance, missing-document explanations retained without treating inventory as complete, submission context corrected.",
-    "remaining": "Annual03-4/TNDN new form, treaty eligibility/calculation and user-flow integration."
+    "remaining": "Treaty eligibility/calculation, period reconciliation and saved-case/user-flow integration."
   },
   "historical_form_review": {
     "source": "vn.btc.tax-administration.14-vbhn-2026.pdf",
     "page": 522,
     "form": "03-4/TNDN",
     "finding": "Historical form has income-plus-paid-tax gross-up columns and alternative payment proof. Do not use this historical form as current2026 template pending Circular89 annex review."
+  },
+  "annual_foreign_income_annex": {
+    "form": "03-4/TNDN",
+    "reviewed_physical_pages": [
+      284,
+      285
+    ],
+    "currency": "VND",
+    "section_a": {
+      "subject": "Corporate income tax paid abroad",
+      "columns": {
+        "2": "Name and address of foreign taxpayer",
+        "3": "Income received abroad",
+        "4": "Foreign income tax paid on that income",
+        "5": "Vietnam CIT taxable income = column3 + column4",
+        "6": "Vietnam CIT rate percent",
+        "7": "Vietnam CIT = column5 x column6",
+        "8": "Creditable foreign tax"
+      },
+      "total_indicator": "04"
+    },
+    "section_b": {
+      "subject": "Paid supplemental corporate tax under global minimum tax",
+      "columns": {
+        "2": "Global minimum tax identification number of filing constituent entity",
+        "3": "Name of filing constituent entity",
+        "4": "Tax period in which global minimum tax liability arises",
+        "5": "Foreign income received",
+        "6": "Vietnam CIT liability",
+        "7": "Allocated paid top-up tax of low-tax constituent entity",
+        "8": "Creditable paid tax"
+      },
+      "total_indicator": "05"
+    },
+    "notes": [
+      "Indicators04 +05 feed C16 of03/TNDN.",
+      "Global minimum tax liability period is the global minimum tax reporting fiscal year."
+    ],
+    "calculation_constraints": [
+      "Form arithmetic is not standalone eligibility authority. Apply relevant treaty and Decree320 Article12(2).",
+      "Decree320 Article12(2)(c) contains a combined cap for paragraphb credit and allocated top-up credit; do not give each a separate full cap.",
+      "Top-up offset belongs to the declaration/payment period prescribed by Resolution107; do not automatically assign it to ordinary foreign income recognition period.",
+      "Do not gross up an already gross saved income amount a second time."
+    ],
+    "implementation_status": "Verified input/output mapping; calculator and saved-case integration pending."
   }
 }
