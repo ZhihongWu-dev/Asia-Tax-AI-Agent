@@ -1,5 +1,35 @@
 # Li upstream refresh
 
+## Current integration checkpoint (after e2c0f4e)
+
+The sections below retain the original inspection chronology. Their statements
+that individual ports are pending describe those earlier checkpoints, not the
+current implementation state.
+
+Implemented locally and committed:
+
+- Atlas projection, isolated execution, authenticated routes, views and snapshot
+  pinning: afa24d3 through 23a16f1. Hosted catalog admission is still required.
+- Remote collection-log reader and MCP behavior, followed by notes-only/full
+  upload lifecycle and malformed-log rejection: 860f134 and e28132c complete
+  the uploader portion. No hosted upload was executed.
+- Multiple attachment selection/drop, evidence extraction, display and reload:
+  073b353. The API message-size boundary is retained.
+- Owner/revision-scoped case deletion with atomic job cleanup: ef28e87;
+  PostgreSQL lock-race checks and CI wiring: 932849a and 3580073.
+- Temporary drafts adapted to the existing income and structure editors:
+  e2c0f4e. See the dedicated draft checkpoint for validation and remaining limits.
+
+The incoming useRun.ts change only resets its polling callback on case changes.
+The integrated product does not contain that hook; it uses the durable planner
+API and PlanningPanel. Copying the standalone hook is not an applicable patch.
+This is not evidence that all planner lifecycle behavior has been accepted.
+Documentation/config reconciliation, hosted acceptance, full data/rule
+reconciliation and final branch delivery remain open. These feature commits do
+not establish completion of the corporate/personal income-tax business goal.
+
+## Original upstream inspection
+
 `git fetch origin --prune` advanced `origin/LiZiheng` fromce87d83 to140a9efa53a4bce3f2899a20edfa77be8ec55e8b. It is not an ancestor of the current integration branch. Two incoming commits remain to integrate:
 
 - d31a7b9: tax atlas map, country detail pages, glossary, clause dialog and frontend navigation; backend `apps/api/atlas.py` and standalone-server routes.

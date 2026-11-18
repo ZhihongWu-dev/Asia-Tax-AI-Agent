@@ -1,0 +1,32 @@
+{
+  "checked_on": "2026-11-18",
+  "code_commit": "e2c0f4e",
+  "purpose": "Verify income workflow after multiple attachments, deletion and temporary-draft integration",
+  "runs": [
+    {"command": "python -m pytest tests/income_tax -q", "passed": 1331, "failed": 0, "seconds": 37.72, "exit_code": 0},
+    {"command": "playwright test tests/income-tax-coverage.spec.ts --workers=2", "passed": 13, "failed": 0, "duration": "1.2m", "exit_code": 0},
+    {"command": "playwright test tests/income-tax.spec.ts --workers=2", "passed": 44, "failed": 0, "duration": "3.4m", "exit_code": 0}
+  ],
+  "browser": "Microsoft Edge via Playwright chromium, two workers, zero retries",
+  "scope": "Existing corporate and individual income routes, saved calculations and reload, amendments, conflicts, phone layout and selected cross-border credit/remittance workpapers across cn,hk,sg,id,vn,my,th,ae,jp,kr,in",
+  "environment": "Local real API, calculators and SQLite storage; fixture identity and deterministic model boundary",
+  "remote_check": {
+    "fetch_exit_code": 0,
+    "li_head": "140a9efa53a4bce3f2899a20edfa77be8ec55e8b",
+    "target_branch": "origin/Zhihong-Wu",
+    "remote_only_commits": 0,
+    "local_only_commits_before_this_checkpoint": 308,
+    "pushed": false
+  },
+  "long_running_validation": {
+    "original": "PID 16760 observed live; five exhaustive checks logged without failures; remainder not proven",
+    "repaired_v4": "Session 47374 live; case001.best golden and exhaustive checker passed in 2293.58 seconds; case001.open started"
+  },
+  "remaining": [
+    "Completion of both long-running suites and integration of the separately repaired rules",
+    "Vietnam combined annual foreign-income liability and remaining legal scope gaps",
+    "Reviewed catalog migration, source admission and deployed reader verification",
+    "Real-account/live-provider/worker acceptance and final branch delivery"
+  ],
+  "completion_claim": false
+}
