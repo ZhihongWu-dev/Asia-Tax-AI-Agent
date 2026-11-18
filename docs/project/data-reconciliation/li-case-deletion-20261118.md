@@ -21,7 +21,19 @@ revision guards, associated-job removal, rollback after injected failure,
 worker fencing, and the API. Two browser tests passed for cancellation,
 confirmed deletion/reload and revision conflict. Production frontend build
 passed with the existing large-bundle warning. PostgreSQL concurrency testing
-of this new case-lock interaction and hosted acceptance remain outstanding.
+was subsequently completed locally as described below. Hosted acceptance
+remains outstanding.
+
+## PostgreSQL verification
+
+Five tests passed against the isolated local PostgreSQL 16 server in 8.62 seconds.
+Both race orders (enqueue first and deletion first) were forced while the
+winning transaction held the case lock. The tests observed actual blocking via
+`pg_blocking_pids`, then released the lock and verified that neither a case nor
+an orphan planning snapshot remained. PostgreSQL also passed the worker-fence,
+injected-failure rollback and owner/revision guard checks. Each test created and
+dropped its own random schema. The existing PostgreSQL CI job now runs these
+five tests; this records local verification, not a completed remote CI run.
 
 Research before implementation: inspected Li's hook and the FastAPI official
 template's ownership and associated-record deletion examples. Reviewed its
