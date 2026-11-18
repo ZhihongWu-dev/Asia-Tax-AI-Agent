@@ -1,0 +1,206 @@
+{
+  "observed_at": "2026-11-18T17:55:03.330278+00:00",
+  "scope": "Static contract/UI/test-reference inventory; references alone do not prove supported business behavior",
+  "contract_sha256": "31e4289e2b841e6867deca869caa4e6c794297df8e8f2bef5859af78868ac626",
+  "policies": [
+    {
+      "id": "ae_ordinary_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "cn_business_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "cn_company_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "cn_comprehensive_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "cn_small_company_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "hk_profits_2025_26",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "hk_salaries_2025_26",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "id_company_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "id_resident_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "in_company_normal_ty2026_27",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "in_company_section200_ty2026_27",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "in_personal_new_ty2026_27",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "in_personal_old_ty2026_27",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "jp_company_starting_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "jp_resident_ordinary_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "kr_company_ordinary_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "kr_salary_standard_payroll_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "my_company_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "my_dividend_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "my_individual_2026",
+      "ui_literal_present": true,
+      "test_literal_present": false
+    },
+    {
+      "id": "sg_company_ya2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "sg_employment_ya2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "sg_resident_ya2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "th_company_2026",
+      "ui_literal_present": true,
+      "test_literal_present": false
+    },
+    {
+      "id": "th_dividend_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "th_foreign_income_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "th_resident_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "vn_business_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "vn_company_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "vn_employment_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "vn_personal_transfer_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    },
+    {
+      "id": "vn_property_rental_2026",
+      "ui_literal_present": true,
+      "test_literal_present": true
+    }
+  ],
+  "known_acceptance_boundaries": [
+    {
+      "requirement": "All dividend jurisdictions and both taxpayer subjects",
+      "state": "Policies exist; coverage must be proven by actual applicable workflows and cases, not identifier presence"
+    },
+    {
+      "requirement": "Japan corporate and personal income-tax calculation",
+      "state": "National-tax scoped adapters; local inhabitant and enterprise taxes are expressly excluded. Full liability is not proven.",
+      "files": [
+        "packages/income_tax/japan_company.py",
+        "apps/web/src/components/IncomeTaxAssessment.tsx"
+      ]
+    },
+    {
+      "requirement": "UAE restructuring",
+      "state": "Current share-transfer planner cannot automatically qualify as a business transfer under Article 27; explicit transaction classification needed."
+    },
+    {
+      "requirement": "Vietnam combined foreign credit and annual relief",
+      "state": "Composition unresolved; no full-settlement acceptance"
+    },
+    {
+      "requirement": "Actual ownership/login workflow",
+      "state": "Fixture-auth tests passed; actual two-account sign-in acceptance absent"
+    },
+    {
+      "requirement": "Income facts through tax-basis calculation",
+      "state": "Malaysia ordinary individual accepts an unexplained basis exceeding saved income; confirmed-basis arithmetic is not a reconciled return workflow.",
+      "evidence": "malaysia-basis-reconciliation-gap-20261119.json"
+    }
+  ],
+  "publication_scope": "Local only; no cloud uploads, remote branch pushes or main merge",
+  "customer_case_request": "Requested 2-3 representative anonymized business scenarios; pending, not inferred from silence.",
+  "literal_scan_followup": {
+    "finding": "Malaysia individual is already covered by a parameterized browser test using my_${subject}_2026. Literal absence in Python tests was not evidence of missing workflow coverage.",
+    "file": "apps/web/tests/income-tax.spec.ts",
+    "line": 678,
+    "verification": "Both company and individual scenarios passed against the real local API/storage/calculator with fixture auth."
+  }
+}

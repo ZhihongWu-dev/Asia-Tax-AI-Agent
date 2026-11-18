@@ -4,13 +4,34 @@
 
 The user retains the original Li data/function integration and corporate plus
 personal income-tax business acceptance requirements across all dividend
-jurisdictions. The final delivery destination is GitHub branch `Zhihong-Wu`.
-Do not deploy to cloud services, modify cloud databases, or merge/push to `main`.
+jurisdictions. The latest user clarification is local-only delivery: do not
+upload to cloud services or push any remote Git branch, including `Zhihong-Wu`.
+Do not modify cloud databases or merge/push to `main`. The earlier request for
+remote `Zhihong-Wu` delivery is superseded; retain completed work locally.
 Validate the required business behavior locally and report the limits of local
 validation explicitly. A branch upload alone does not satisfy the retained
 functional and business acceptance requirements. Historical references below to
-cloud rollout or main promotion are superseded as delivery actions, not as proof
+cloud rollout, remote branch delivery, or main promotion are superseded as delivery actions, not as proof
 that unresolved business rules have been accepted.
+
+## Local income-tax reconciliation checkpoint (2026-11-19)
+
+Local commit `5e90699` requires a staged workpaper for Malaysian resident
+individual ordinary assessment. The API checks the supplied chargeable income
+and saved deduction summary against the workpaper. Prior business losses cannot
+reduce salary income. Rejected requests preserve the previous case revision and
+result; accepted workpapers survive reopening and idempotent retries.
+
+The complete income-tax regression passed 1,417 tests. TypeScript checking and
+two focused browser scenarios passed, including reconciliation display after
+reload. The broader 119-test browser suite is running and is not yet accepted.
+Deduction eligibility and statutory ordering remain verified inputs, and
+nonresident/foreign/special regimes need further workflow acceptance. See
+[validation](data-reconciliation/malaysia-reconciliation-validation-20261119.json).
+
+The original optimizer baseline has now completed six cases with zero checker
+failures; v4 has completed seven and remains on its eighth case. These are partial
+comparison results, separate from the completed twelve-case v5 suite.
 
 ## Latest delivery checkpoint
 
@@ -30,15 +51,22 @@ UAE/Hong Kong RTF is included with its verified source hash. See
 and [SQLite parity](data-reconciliation/catalog-delivery-sqlite-parity-20261118.json).
 These local artifacts do not apply the pending cloud catalog migration.
 
-The combined optimizer v5 has completed ten of twelve cases with no golden or
-exhaustive checker failures. The remaining cases are `jp_sg_individual.best`
-(currently running) and `jp_sg_individual.sequence`. The v4 comparison has
-completed six cases and is checking `remit_sg.not_kept`. See the
-[partial run evidence](data-reconciliation/optimizer-progress-20261118.json)
-for case timings and log hashes. This is not a final suite verdict: all twelve
-cases remain required. The original and v4 processes retain their frozen inputs.
-Hosted identity/provider/worker-recovery acceptance, final remote delivery and
-`main` promotion remain incomplete.
+The combined optimizer v5 completed all twelve cases, with zero golden or
+exhaustive checker failures and process exit code 0. All sixteen captured runtime
+files match the current delivery candidate byte-for-byte. See the
+[final optimizer evidence](data-reconciliation/optimizer-final-validation-20261119.json)
+for case timings, source bundle, runtime hashes and runner/log hashes. The original
+and v4 comparison processes retain their frozen inputs; their completion is not
+implied by the v5 result.
+
+The selected local income-tax persistence regression passed 18 tests, including
+saved-run reopening, input-edit invalidation, retry and ownership boundaries;
+see [persistence evidence](data-reconciliation/income-tax-persistence-validation-20261119.json).
+Identity in those tests is simulated. Real sign-in and unresolved jurisdiction
+business rules remain unverified. The 30 candidate rule coverage gaps and Vietnam
+foreign-credit/annual-relief composition question remain open. No full business
+acceptance is claimed. Remote delivery, cloud rollout and main promotion are
+excluded by the current local-only delivery instruction.
 
 ### Earlier checkpoint retained for traceability
 

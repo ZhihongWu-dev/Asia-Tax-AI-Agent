@@ -1,0 +1,182 @@
+{
+  "observed_at": "2026-11-18T17:50:17.760065+00:00",
+  "status": "official_source_lead_not_admitted_rule",
+  "slots": [
+    "ae|company|restructure",
+    "ae|individual|restructure"
+  ],
+  "source": {
+    "url": "https://tax.gov.ae/Datafolder/Files/Guides/CT/Business%20Restructuring%20Relief%20-%2017%2004%202024.pdf",
+    "title": "FTA Corporate Tax Guide CTGBRR1, April 2024",
+    "pages": 65,
+    "locators": [
+      "section 2.5 legislative references",
+      "section 2.6 guide status",
+      "section 4 eligibility",
+      "section 5 tax consequences",
+      "section 6 clawback",
+      "section 7 election and records"
+    ]
+  },
+  "findings": [
+    "Official guidance establishes that restructuring relief is a conditional regime; an absence record would not close these slots correctly.",
+    "Guidance is not legally binding; authoritative legislation and later amendments must be verified before admitting executable rules.",
+    "Eligibility, election, carryover basis and subsequent clawback require distinct facts, not a blanket zero rate."
+  ],
+  "catalog_ae_documents": [
+    {
+      "id": "ae.fta.natural-persons-2023",
+      "title": "Corporate Tax Guide: Taxation of Natural Persons",
+      "url": "https://tax.gov.ae/Datafolder/Files/Guides/CT/Taxation%20of%20natural%20persons%20-%2025%2011%202023.pdf"
+    },
+    {
+      "id": "ae.fta.withholding-faq",
+      "title": "Federal Tax Authority FAQ: UAE Corporate Tax withholding tax",
+      "url": "https://tax.gov.ae/en/faq.aspx?keyword=Does%20the%20UAE%20CT%20regime%20have%20withholding%20tax%3F"
+    },
+    {
+      "id": "ae.fta.corporate-tax-faq",
+      "title": "Federal Tax Authority Corporate Tax FAQ",
+      "url": "https://www.tax.gov.ae/en/taxes/corporate.tax/faqs.aspx"
+    },
+    {
+      "id": "ae.fta.general-corporate-tax",
+      "title": "Corporate Tax – General",
+      "url": "https://tax.gov.ae/DataFolder/Files/Guides/CT/CT%20General%20Guide%20-%20EN%20-%2010%2009%202023.pdf"
+    },
+    {
+      "id": "ae.fta.foreign-source-income",
+      "title": "Corporate Tax Guide: Taxation of Foreign Source Income",
+      "url": "https://tax.gov.ae/Datafolder/Files/Guides/CT/Taxation%20of%20Foreign%20Source%20Income%20-%20EN%20-%2016%2011%202023.pdf"
+    },
+    {
+      "id": "ae.mof.dta-index",
+      "title": "Avoidance of Double Taxation Agreements",
+      "url": "https://mof.gov.ae/wp-content/uploads/2022/09/Avoidance-of-Double-Taxation-Agreements.pdf"
+    },
+    {
+      "id": "ae.fta.corporate-tax-registration",
+      "title": "Corporate Tax Registration",
+      "url": "https://www.tax.gov.ae/en/services/corporate.tax.registration.aspx"
+    },
+    {
+      "id": "ae.fta.tax-resident-certificate-2024",
+      "title": "Tax Resident and Tax Residency Certificate",
+      "url": "https://tax.gov.ae/Datafolder/Files/Guides/VAT/VAT%20Guides/Tax-Resident-and-TRC--18-10-2024.pdf"
+    },
+    {
+      "id": "ae.mof.top-up-tax",
+      "title": "Top-up Tax",
+      "url": "https://mof.gov.ae/en/public-finance/tax/top-up-tax/"
+    },
+    {
+      "id": "ae.law.corporate-tax.legislation1582.en",
+      "title": "Federal Decree-Law No. (47) of 2022 On Corporate and Business Tax",
+      "url": "https://uaelegislation.gov.ae/en/legislations/1582/download"
+    },
+    {
+      "id": "ae.law.corporate-tax.mof2022.en",
+      "title": "Federal Decree-Law No. 47 of 2022 on the Taxation of Corporations and Businesses",
+      "url": "https://www.mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf?fm=pdf"
+    },
+    {
+      "id": "ae.law.corporate-tax.fta2022.en",
+      "title": "Taxation of Corporations and Businesses",
+      "url": "https://tax.gov.ae//Datafolder/Files/Legislation/Corporate%20Tax/CT%20law%20final/Federal%20Decree-Law%20No.%2047%20of%202022%20-%20For%20publishing.pdf"
+    },
+    {
+      "id": "ae.cabinet116.2022.taxable-threshold.en",
+      "title": "Cabinet Decision 116 of 2022 on the Taxable Income Threshold",
+      "url": "https://tax.gov.ae/Datafolder/Files/Legislation/Corporate%20Tax/Cabinet%20Decision%20No.%20116%20of%202022%20-%20for%20publishing.pdf"
+    },
+    {
+      "id": "ae.cabinet49.2023.natural-persons.en",
+      "title": "Cabinet Decision 49 of 2023 on Businesses or Business Activities Conducted by Natural Persons",
+      "url": "https://mof.gov.ae/wp-content/uploads/2023/05/Cabinet-Decision-No.-49-of-2023.pdf"
+    },
+    {
+      "id": "ae.cabinet142.2024.dmtt.en",
+      "title": "Cabinet Decision 142 of 2024: Top-up Tax on Multinational Enterprises",
+      "url": "https://mof.gov.ae/wp-content/uploads/2025/02/English-Cabinet-Decision-142-of-2024-on-Top-up-Tax-on-MNEs-1.pdf"
+    }
+  ],
+  "guide_url_already_registered": false,
+  "next_evidence": [
+    "Current Federal Decree-Law 47/2022 Article 27 and amendment chain",
+    "Current Ministerial Decision governing restructuring relief and amendments",
+    "Jurisdiction and natural-person applicability boundaries",
+    "Transfer and subsequent event examples covering eligibility, rejection and missing facts"
+  ],
+  "coverage_interpretation": "The 30 gaps are planner jurisdiction/subject/slot cells. They are not a count of failed income-assessment tests or proof of statutory absence.",
+  "ministerial_decision": {
+    "url": "https://mof.gov.ae/wp-content/uploads/2023/05/Ministerial-Decision-No.-133-of-2023-on-Business-Restructuring-Relief-for-Corporate-Tax-Purposes.pdf",
+    "file": "database/raw/ae/ae.md133.2023.restructuring.en.pdf",
+    "sha256": "71f62b0a4b556811d4db44f6222f50896d919df752cb58aec58cba9a0d39ff20",
+    "retrieved_at": "2026-11-18T17:51:14.630416+00:00",
+    "status": "official_original_downloaded_not_admitted",
+    "provisions_reviewed": [
+      "Article 2 non-share consideration ceiling",
+      "Article 4 election",
+      "Article 5 tax loss conditions",
+      "Article 6 third-party issuer/recipient ownership",
+      "Article 8 clawback allocation and adjustments",
+      "Article 9 records",
+      "Article 10 publication-dependent commencement"
+    ],
+    "important_branch": "Article 8(2) allocates clawback gain/loss to the transferee if the transferor is a natural person or has ceased to be taxable."
+  },
+  "current_law_verification": {
+    "legislation_platform": "https://uaelegislation.gov.ae/en/legislations/1582",
+    "web_result": "403 on this attempt",
+    "fta_listing": "https://tax.gov.ae/en/legislation/corporate.tax.aspx",
+    "limitation": "Listing exposes 10 of 52 entries; this is not proof that MD 133 has no later amendment. Publication date must be established independently of issue date."
+  },
+  "consolidated_law_lead": {
+    "url": "https://mof.gov.ae/wp-content/uploads/2026/01/Federal-Decree-Law-No.-47-of-2022-and-its-amendments-en-v13.1.26.pdf",
+    "file": "database/raw/ae/ae.law.corporate-tax.mof20260113.en.pdf",
+    "sha256": "d11bdd029c1b0ab6a73cadad734d6ba85b6f61fe5014fc7fdc73fb754a557c03",
+    "retrieved_at": "2026-11-18T17:51:52.614473+00:00",
+    "status": "downloaded_pending_article_comparison",
+    "note": "MOF January 2026 consolidated English publication; Arabic prevails. Search excerpt explicitly references FDL 28/2025. Later amendments still require verification."
+  },
+  "article27_comparison": {
+    "files": [
+      "database/raw/ae/ae.law.corporate-tax.mof2022.en.pdf",
+      "database/raw/ae/ae.law.corporate-tax.mof20260113.en.pdf"
+    ],
+    "normalization": "Whitespace and standalone page numbers removed; wording retained",
+    "identical": false,
+    "normalized_sha256": [
+      "89b61a48bbe84e54e03a0c7c1a27a37ac50f2f860026bc3c77905645f50b16d8",
+      "a0d86a5757f4576ec0fdceebb4517408d9d90e828d9fcaedf38a4ecb4ae1e7da"
+    ],
+    "limitation": "A match verifies this article between these two publications, not absence of all later amendments.",
+    "difference_review": "Token diff contains list-label punctuation changes (a) to a. etc.) and removal of repeating historical translation footer only; no substantive Article 27 wording difference observed."
+  },
+  "implementation_boundary": {
+    "observed_files": [
+      "optimization/move.csv",
+      "optimization/tools/optimize.py:_transfer"
+    ],
+    "current_transaction": "Planner via/direct operations transfer shares in a target, not necessarily a whole business or independent business unit.",
+    "required_distinction": "Article 27 relief cannot automatically apply to an ordinary share disposal. A business-transfer qualification must be explicit.",
+    "needed_facts": [
+      "transaction type and business-unit qualification",
+      "taxable status and residency/PE of both parties",
+      "exempt and qualifying-free-zone status",
+      "financial-year alignment and accounting standards",
+      "commercial-purpose evidence",
+      "election and consideration details",
+      "original transfer date and subsequent disposals",
+      "transferor natural-person/ceased-taxable status for clawback allocation"
+    ],
+    "acceptance_cases": [
+      "ordinary share sale must not automatically obtain business-transfer relief",
+      "eligible business transfer with election retains tax basis",
+      "unknown eligibility stays unresolved",
+      "failed eligibility does not obtain relief",
+      "subsequent disposal checks clawback and correct taxpayer",
+      "third-party consideration requires relevant ownership condition"
+    ]
+  }
+}

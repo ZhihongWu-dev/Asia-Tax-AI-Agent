@@ -1,0 +1,34 @@
+{
+  "observed_at": "2026-11-18T17:56:52.487840+00:00",
+  "command": "playwright test income-tax.spec.ts --grep \"Malaysia (company|individual) calculation\" --workers=1",
+  "exit_code": 0,
+  "passed": 2,
+  "seconds": 36.8,
+  "test_file": "apps/web/tests/income-tax.spec.ts",
+  "test_sha256": "6e8ef5b4d9a71250ee0979ba7367789056d9d7754808670dcf9e3e3db6dc80db",
+  "cases": [
+    {
+      "subject": "company",
+      "scheme": "sme",
+      "chargeable_income": "1000000",
+      "expected_tax": "195000"
+    },
+    {
+      "subject": "individual",
+      "residency": "resident",
+      "chargeable_income": "100000",
+      "expected_tax": "9400"
+    }
+  ],
+  "verified": [
+    "Intake and calculation forms call the real local API and calculator",
+    "Saved results survive page reload",
+    "Official source link rendered"
+  ],
+  "limits": [
+    "Authentication and model boundaries are fixtures",
+    "Established bases and eligibility are confirmed inputs",
+    "Does not establish complete gross-to-return calculation or untested regimes"
+  ],
+  "publication": "Local only"
+}

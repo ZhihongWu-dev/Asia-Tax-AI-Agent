@@ -1,0 +1,27 @@
+{
+  "observed_at": "2026-11-18T17:47:45.300684+00:00",
+  "scope": "Local income-tax saved calculation and case persistence regression",
+  "commit": "459fcd40dc13337ba24c43ebbed865f51febe284",
+  "command": "python -m pytest tests/income_tax/test_assessment_workflow.py tests/income_tax/test_case_persistence.py tests/income_tax/test_income_api.py -q",
+  "result": {
+    "passed": 18,
+    "seconds": 13.33
+  },
+  "verified": [
+    "Saved calculation survives disposal and reopening of the SQLite store",
+    "Editing inputs invalidates the current result while preserving historical runs",
+    "Idempotent retry returns the previous run; conflicting payload and stale revision are rejected",
+    "Owner boundary and anonymous access checks under fixture authentication"
+  ],
+  "limits": [
+    "Fixture authentication does not verify hosted identity or actual sign-in",
+    "This selected regression is not acceptance of all jurisdiction-specific business scenarios",
+    "No cloud deployment, remote push, or main merge performed"
+  ],
+  "file_sha256": {
+    "packages/chat/income_tax.py": "d7a8d4a199bc66bb24cf5c5acbc407667944c9111ca62f367216d1bfd796f9a7",
+    "tests/income_tax/test_assessment_workflow.py": "67f1d93888dcdc923c962116d210aa23ce733f48eb06921beface793212f51ba",
+    "tests/income_tax/test_case_persistence.py": "2e716a5168aa87f0089c0e421e8f05e883cfbb610b9d0b49856ee2b62847c74d",
+    "tests/income_tax/test_income_api.py": "e573399d52b8c3150be3e4b52f9a475e9cde4205ae2a647ca147679a1618a7ae"
+  }
+}
