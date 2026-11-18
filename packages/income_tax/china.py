@@ -141,8 +141,6 @@ def small_low_profit_company_tax(taxable_income, *, tax_year, annual_average_emp
             small_company_tax_reduction=base * Decimal('.25') - gross,
             allowed_tax_credits=credits, annual_liability=liability, prepaid_tax=prepaid,
             balance_due=balance, payable=max(ZERO, balance), refundable=max(ZERO, -balance),
-            sources=[dict(
-                doc_id='cn.mof.sta.2023-12',
-                url='https://tianjin.chinatax.gov.cn/11253000000/0100/010003/p20230816143619913.shtml'),
+            sources=[deepcopy(SOURCE_BY_ID['cn.mof.sta.2023-12']),
                 deepcopy(SOURCE_BY_ID['cn.law.eit'])],
             stage='annual_small_low_profit_company_before_assessment_rounding')

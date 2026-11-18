@@ -63,6 +63,7 @@ def test_snapshot_mismatch_rejected():
     ('th', 'th_foreign_2026_sources.json', 4),
     ('cn', 'cn_business_2026_sources.json', 3),
     ('sg', 'sg_employment_2026_sources.json', 3),
+    ('cn_small', 'cn_2026_sources.json', 2),
 ])
 def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, manifest, count):
     from hashlib import file_digest
@@ -70,10 +71,13 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
     from tests.income_tax.test_thailand_foreign_assessment import inputs
     from tests.income_tax.test_china_business import saved_inputs
     from tests.income_tax.test_singapore_employment import saved_case_and_basis
+    from tests.income_tax.test_china_small_company import saved_inputs as small_company_inputs
 
     root = Path(__file__).resolve().parents[2]
     sources = json.loads((root/'packages/income_tax'/manifest).read_text(
         encoding='utf-8'))['sources']
+    if policy == 'cn_small':
+        sources = [s for s in sources if s['doc_id'] in ('cn.law.eit', 'cn.mof.sta.2023-12')]
     assert len(sources) == count
     for source in sources:
         with (root/source['file']).open('rb') as original:
@@ -90,6 +94,8 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
         if policy == 'sg':
             case_model, basis_model = saved_case_and_basis()
             data, basis = case_model.model_dump(mode='json'), basis_model.model_dump(mode='json')
+        elif policy == 'cn_small':
+            data, basis = small_company_inputs()
         else:
             data, basis = inputs() if policy == 'th' else saved_inputs()
         saved = client.put(path, headers=HEADERS, json=dict(

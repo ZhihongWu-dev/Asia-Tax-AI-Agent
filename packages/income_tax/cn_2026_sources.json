@@ -18,6 +18,14 @@
       "url": "https://www.gov.cn/zhengce/zhengceku/202402/P020240204617705894863.pdf",
       "file": "database/raw/cn/cn.iit.comprehensive-rate-table.pdf",
       "sha256": "84204e1b17778943909e217eadd5cf4bc8d54901bc1e822c21b5408760d2059f"
+    },
+    {
+      "doc_id": "cn.mof.sta.2023-12",
+      "title": "MOF/STA Announcement 2023 No.12, Articles3 and5",
+      "url": "https://tianjin.chinatax.gov.cn/11253000000/0100/010003/p20230816143619913.shtml",
+      "file": "database/raw/cn/cn.mof.sta.2023-12.html",
+      "sha256": "554ad85277cd70fb619359eca0070a14984f0e1efa7b3308a4d33f5a5f80bc9a",
+      "retrieved_on": "2026-11-19"
     }
   ]
 }

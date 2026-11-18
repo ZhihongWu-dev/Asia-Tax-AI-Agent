@@ -1,0 +1,352 @@
+{
+  "scope": "Literal HTTP URL constants in income_tax Python modules matched against catalog and JSON manifests; does not prove result inclusion or all dynamically assembled URLs",
+  "references": [
+    {
+      "module": "packages/income_tax/china.py",
+      "line": 146,
+      "url": "https://tianjin.chinatax.gov.cn/11253000000/0100/010003/p20230816143619913.shtml",
+      "candidates": [],
+      "archive_verified": false
+    },
+    {
+      "module": "packages/income_tax/korea_company.py",
+      "line": 93,
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=164921007",
+      "candidates": [
+        {
+          "file": "database/raw/kr/kr.local-tax.form43.20260701.pdf",
+          "sha256": "363ae8f389af98b9d48a5ae0d753cb2eda6beee83b8ff1db9f03d9278a4b3051",
+          "origin": "packages/income_tax/kr_source_archive.json",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/korea_employment.py",
+      "line": 15,
+      "url": "https://www.law.go.kr/LSW/lsPdfPrint.do?ancYnChk=0&bylChaChk=N&efGubun=Y&efYd=20260701&joAllCheck=Y&joEfOutPutYn=on&lsiSeq=280405&mokChaChk=N",
+      "candidates": [],
+      "archive_verified": false
+    },
+    {
+      "module": "packages/income_tax/korea_salary.py",
+      "line": 16,
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=164443847",
+      "candidates": [
+        {
+          "file": "database/raw/kr/kr.income-tax.form24.20260701.pdf",
+          "sha256": "844a53ae235b7039807ad8380306f08225eb757015a27c7c69c23928434ae685",
+          "origin": "packages/income_tax/kr_source_archive.json",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/korea_salary_settlement.py",
+      "line": 13,
+      "url": "https://law.go.kr/lsLinkCommonInfo.do?lspttninfSeq=173607",
+      "candidates": [
+        {
+          "file": "database/raw/kr/kr.local-tax.salary-settlement.20260701.html",
+          "sha256": "527e8177958baa2eae6a272f60d3c02116e719fb08043b94e2e25b2a8651c053",
+          "origin": "packages/income_tax/kr_source_archive.json",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/korea_salary_settlement.py",
+      "line": 43,
+      "url": "https://www.law.go.kr/LSW/lsLinkProc.do?joLnkStr=%EC%A0%9C97%EC%A1%B0&lsNm=%EC%A7%80%EB%B0%A9%EC%84%B8%EA%B8%B0%EB%B3%B8%EB%B2%95&mode=11",
+      "candidates": [
+        {
+          "file": null,
+          "sha256": "1ed709aa892ade3bbc0950038efe2755046549aed809dc2332e89575051c0266",
+          "origin": "packages/income_tax/kr_2026_sources.json",
+          "verified_bytes": false
+        },
+        {
+          "file": "database/raw/kr/kr.local-tax-basic.article59.2026.html",
+          "sha256": "1ed709aa892ade3bbc0950038efe2755046549aed809dc2332e89575051c0266",
+          "origin": "packages/income_tax/kr_source_archive.json",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/korea_salary_settlement.py",
+      "line": 81,
+      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1031453583",
+      "candidates": [
+        {
+          "file": null,
+          "sha256": "e219a858f303c94d114495ffc0105b5fef7e7622b85a7f064c5e5f9c35a6b665",
+          "origin": "packages/income_tax/kr_2026_sources.json",
+          "verified_bytes": false
+        },
+        {
+          "file": "database/raw/kr/kr.national-treasury.article47.2026.html",
+          "sha256": "e219a858f303c94d114495ffc0105b5fef7e7622b85a7f064c5e5f9c35a6b665",
+          "origin": "packages/income_tax/kr_source_archive.json",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/malaysia_dividends.py",
+      "line": 18,
+      "url": "https://www.parlimen.gov.my/ipms/eps/2025-08-28/ST.140.2025%20-%20ST140.2025.pdf",
+      "candidates": [
+        {
+          "file": "database/raw/my/my.pua148.2025.dividend-income.pdf",
+          "sha256": "fd85095d1bb8b841997447558c8af7ca09a1a6695b6a2e3c44f7fca4e334059a",
+          "origin": "database/doc.csv",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/malaysia_dividends.py",
+      "line": 23,
+      "url": "https://ef.hasil.gov.my/eBE2026/Pdf/Nota_BE_e.pdf",
+      "candidates": [
+        {
+          "file": "database/raw/my/my.hasil.be2025.explanatory.pdf",
+          "sha256": "587421c806cb9b62ba9789627dadf7c85cc9b314ea99971935cb4e105c347222",
+          "origin": "database/doc.csv",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/singapore.py",
+      "line": 14,
+      "url": "https://www.iras.gov.sg/quick-links/tax-rates/corporate-income-tax-rates",
+      "candidates": [
+        {
+          "file": "database/raw/sg/sg.iras.cit-rates-20261116.html",
+          "sha256": "eac7ed5619e2d30caf41f45443772d036a50e3c31db676c26a285b766c4293b3",
+          "origin": "database/doc.csv",
+          "verified_bytes": true
+        },
+        {
+          "file": "raw/sg/sg.iras.cit-rates-20261116.html",
+          "sha256": "eac7ed5619e2d30caf41f45443772d036a50e3c31db676c26a285b766c4293b3",
+          "origin": "packages/income_tax/sg_ya2026_sources.json",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/singapore.py",
+      "line": 15,
+      "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates",
+      "candidates": [
+        {
+          "file": "database/raw/sg/sg.iras.pit-rates-20261116.html",
+          "sha256": "fd1ca66256803ef457d05b34a2baf1cb1f4e006b3c94a7febedfdd5085cb9dbe",
+          "origin": "database/doc.csv",
+          "verified_bytes": true
+        },
+        {
+          "file": "raw/sg/sg.iras.pit-rates-20261116.html",
+          "sha256": "fd1ca66256803ef457d05b34a2baf1cb1f4e006b3c94a7febedfdd5085cb9dbe",
+          "origin": "packages/income_tax/sg_ya2026_sources.json",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/thailand_dividends.py",
+      "line": 128,
+      "url": "https://www.rd.go.th/11162.html",
+      "candidates": [],
+      "archive_verified": false
+    },
+    {
+      "module": "packages/income_tax/thailand_foreign_credit.py",
+      "line": 18,
+      "url": "https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_EN.pdf",
+      "candidates": [
+        {
+          "file": "database/raw/th/th.rd.foreign-tax-credit-manual-2025.en.pdf",
+          "sha256": "9a802a525c5a735d8221961e4e23eed432a2a4739173e52cb4d06c8cceaa43e5",
+          "origin": "packages/income_tax/th_foreign_2026_sources.json",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/thailand_foreign_credit.py",
+      "line": 187,
+      "url": "https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_TH.pdf",
+      "candidates": [
+        {
+          "file": "database/raw/th/th.rd.foreign-tax-credit-manual-2025.th.pdf",
+          "sha256": "28a510f86b507e4f1877fe1f5a3d00b457f6f2212692abf3956283ae033107fe",
+          "origin": "packages/income_tax/th_foreign_2026_sources.json",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/thailand_remittances.py",
+      "line": 50,
+      "url": "https://www.rd.go.th/5937.html",
+      "candidates": [
+        {
+          "file": "database/raw/th/th.rc3a.th.html",
+          "sha256": "3050f0a13b298f027d5451fb8b3dfb8ec77658db1fbbd72eaa507abf0c3ed428",
+          "origin": "database/doc.csv",
+          "verified_bytes": true
+        },
+        {
+          "file": "database/raw/th/th.rc3a.th.html",
+          "sha256": "3050f0a13b298f027d5451fb8b3dfb8ec77658db1fbbd72eaa507abf0c3ed428",
+          "origin": "packages/income_tax/th_2026_sources.json",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/thailand_remittances.py",
+      "line": 51,
+      "url": "https://www.rd.go.th/fileadmin/user_upload/kormor/newlaw/dn161A.pdf",
+      "candidates": [
+        {
+          "file": "database/raw/th/th.rd.p161-2566.pdf",
+          "sha256": "51bd23778016359216b0695519f12f9c731eb92d0e47d5a226f06923a81cf075",
+          "origin": "database/doc.csv",
+          "verified_bytes": true
+        },
+        {
+          "file": "database/raw/th/th.rd.p161-2566.pdf",
+          "sha256": "51bd23778016359216b0695519f12f9c731eb92d0e47d5a226f06923a81cf075",
+          "origin": "packages/income_tax/th_foreign_2026_sources.json",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/thailand_remittances.py",
+      "line": 52,
+      "url": "https://www.rd.go.th/fileadmin/user_upload/kormor/newlaw/dn162A.pdf",
+      "candidates": [
+        {
+          "file": "database/raw/th/th.rd.p162-2566.pdf",
+          "sha256": "a235ebf4e384bf08ab8a491cda9b67625f95d559049b689cbaeff28c07493af4",
+          "origin": "database/doc.csv",
+          "verified_bytes": true
+        },
+        {
+          "file": "database/raw/th/th.rd.p162-2566.pdf",
+          "sha256": "a235ebf4e384bf08ab8a491cda9b67625f95d559049b689cbaeff28c07493af4",
+          "origin": "packages/income_tax/th_foreign_2026_sources.json",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/vietnam_credit_dossier.py",
+      "line": 115,
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/89-btc.signed.pdf",
+      "candidates": [],
+      "archive_verified": false
+    },
+    {
+      "module": "packages/income_tax/vietnam_foreign_credit.py",
+      "line": 193,
+      "url": "https://congbao.cdnchinhphu.vn/CongBaoCP/CongBao/2025/12/46840/60373-1-1737-1738.pdf",
+      "candidates": [],
+      "archive_verified": false
+    },
+    {
+      "module": "packages/income_tax/vietnam_foreign_credit.py",
+      "line": 198,
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/89-btc.signed.pdf",
+      "candidates": [],
+      "archive_verified": false
+    },
+    {
+      "module": "packages/income_tax/vietnam_foreign_credit.py",
+      "line": 119,
+      "url": "https://www.iras.gov.sg/media/docs/default-source/dtas/singapore-vietnam-dta-(ratified)(mli)(01092023).pdf",
+      "candidates": [
+        {
+          "file": "database/raw/sg-vn/treaty.sg-vn.1994.en.pdf",
+          "sha256": "948b2597f2996af06d048be2eb1a74ca1772e7d110b31a969985fa3dbdeca503",
+          "origin": "database/doc.csv",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/vietnam_foreign_credit.py",
+      "line": 152,
+      "url": "https://pajak.go.id/en/p3b/vietnam",
+      "candidates": [],
+      "archive_verified": false
+    },
+    {
+      "module": "packages/income_tax/vietnam_foreign_credit.py",
+      "line": 154,
+      "url": "https://www.pajak.go.id/sites/default/files/2025-06/Tax%20Treaty%20Vietnam%20%28Modified%20by%20MLI%29%20-%20EN.pdf",
+      "candidates": [
+        {
+          "file": "database/raw/id-vn/treaty.id-vn.1997.mli.en.pdf",
+          "sha256": "3cf902e31e8dd36ee977e44f2b1ff306cd99bcf6e6a7f115f28e90d669448226",
+          "origin": "database/doc.csv",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/vietnam_foreign_credit.py",
+      "line": 84,
+      "url": "https://www.elegislation.gov.hk/hk/cap112BE!en.rtf",
+      "candidates": [
+        {
+          "file": "database/raw/hk-vn/treaty.hk-vn.2008.en.rtf",
+          "sha256": "7801d330c0454a2c836604b30cd9d30d0f71e1c9ed08bd1a480680342d05dcd7",
+          "origin": "database/doc.csv",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    },
+    {
+      "module": "packages/income_tax/vietnam_foreign_credit.py",
+      "line": 85,
+      "url": "https://www.iras.gov.sg/media/docs/default-source/dtas/singapore-vietnam-dta-(ratified)(mli)(01092023).pdf",
+      "candidates": [
+        {
+          "file": "database/raw/sg-vn/treaty.sg-vn.1994.en.pdf",
+          "sha256": "948b2597f2996af06d048be2eb1a74ca1772e7d110b31a969985fa3dbdeca503",
+          "origin": "database/doc.csv",
+          "verified_bytes": true
+        }
+      ],
+      "archive_verified": true
+    }
+  ],
+  "total": 25,
+  "unmatched": 7,
+  "baseline_commit": "9f886ef",
+  "interpretation": "Seven unmatched literal URL occurrences are lookup gaps, not proof that original bytes are absent. Inline hash-only records and URL aliases require separate reconciliation. Chinese SME source is being repaired after this scan. Manifest-driven sources and dynamically assembled references are not counted by this literal scan."
+}

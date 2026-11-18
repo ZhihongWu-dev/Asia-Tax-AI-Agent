@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only; no upload, push or main merge.",
+  "change": "China small-low-profit company assessment now retains exact official MOF/STA2023No12 source version alongside EIT Law.",
+  "source_manifest": "packages/income_tax/cn_2026_sources.json",
+  "review": "Complete Tianjin tax authority HTML reviewed: Article3 reduced25percent base at20percent rate through2027; Article5 income3000000,employees300,assets50000000 and statutory quarter averages. No arithmetic or eligibility rule changed.",
+  "validation": "1468 income-tax/reporting tests passed in24.75s, including source hash verification and authenticated assessment persisted/reopened/exported with exact source records.",
+  "research": "https://github.com/python/cpython/blob/main/Doc/library/hashlib.rst",
+  "limits": [
+    "Not full business acceptance",
+    "Stored historical calculations unchanged",
+    "Frozen optimizer CSV/SQLite inputs unchanged"
+  ],
+  "audit": "income-literal-url-audit-20261119.json"
+}
