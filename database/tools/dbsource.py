@@ -13,8 +13,9 @@ the servers of one machine download each table once per upload; one process down
 A new upload has a new uploaded_at, so a stale table is never read; older folders are deleted. tax_db_cache=off turns it
 off. Single clauses asked by cite_id are not cached; they come from the cached clause table once it exists.
 
-Read-only: the session is opened with default_transaction_read_only. Not on the remote: blocked.csv, STATUS.md and
-session_log.md (rows("blocked") is empty; status() is made from meta). Credentials (never printed): database_url,
+Read-only: the session is opened with default_transaction_read_only. rows("blocked") reads the bucket's mutable
+collection-failure log on every call; errors are never represented as an empty log. This is not the application's
+source_review admission policy. STATUS.md/session_log.md are notes; status() is made from meta. Credentials (never printed): database_url,
 supabase_url and supabase_key, as for upload.py.
 """
 import csv
@@ -89,14 +90,24 @@ class Remote:
     def rows(self, name):
         """A table in the order it was uploaded (the order of the csv), or superseded / blocked."""
         with self.lock:
+            if name == "blocked":
+                # Li's notes-only uploads do not advance uploaded_at. Never cache
+                # this operational log or treat missing/inaccessible data as [].
+                raw = self.object("blocked.csv")
+                reader = csv.DictReader(io.StringIO(raw.decode("utf-8-sig")), strict=True)
+                expected = {"id", "jur", "title", "url", "reason", "alt_tried", "logged_at"}
+                if reader.fieldnames is None or set(reader.fieldnames) != expected or len(reader.fieldnames) != len(expected):
+                    raise ValueError("invalid remote collection-failure log header")
+                rows = list(reader)
+                if any(None in row or any(value is None for value in row.values()) or not row["id"].strip() for row in rows):
+                    raise ValueError("invalid remote collection-failure log row")
+                return rows
             if name not in self.tables:
                 if name in TABLES:
                     self.tables[name] = self.cached(name, lambda: self.query('SELECT * FROM "%s"."%s" ORDER BY ctid' % (SCHEMA, name)))
                 elif name == "superseded":
                     self.tables[name] = self.cached(name, lambda: list(csv.DictReader(io.StringIO(
                         self.object("superseded.csv").decode("utf-8-sig")))))
-                elif name == "blocked":
-                    self.tables[name] = []
                 else:
                     raise ValueError("no table %s" % name)
             return self.tables[name]

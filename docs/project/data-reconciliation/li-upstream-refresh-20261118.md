@@ -24,3 +24,27 @@ Adapted the upstream atlas projection code into `packages/domain_bridge/tax_atla
 Validation:20 projection/library tests passed in1.54 seconds, including invalid calendar dates, missing-source rejection, exact passage/version retention, unknown rates and detached state. This module is not yet wired to an isolated executor, authenticated API or frontend; those remain required.
 
 Research: inspected upstream map dependencies against https://github.com/topojson/topojson-client and its ISC license, and https://github.com/topojson/world-atlas/blob/master/README.md for the Natural Earth50m geometry format. No new map dependency or third-party asset installed in this step. Dependency maintenance/security review and frontend license attribution remain pending before adoption.
+# Remote collection-log integration follow-up
+
+Adapted Li's new remote blocked.csv reader. Inspection of the actual CSV schema
+(`id,jur,title,url,reason,alt_tried,logged_at`) confirms that it records failed
+collection attempts; it is not the application's citation admission list.
+The application continues to use source_review and reviewed overlay policy.
+
+Remote.rows('blocked') now fetches the operational log on every call because
+notes-only uploads can change it without advancing uploaded_at. Unlike the Li
+implementation, transport errors are propagated rather than converted to an
+empty log; malformed headers/rows are rejected. Older uploads without this
+object will explicitly fail when the log is requested. Other table reads and
+local-folder calculations are unchanged. No uploader or cloud data was changed.
+
+Seven focused tests passed: notes-only updates, detached reads, genuinely empty
+logs, unavailable storage and malformed CSV. These are local mocked-storage
+tests, not a claim that the current hosted bucket has the object. Reviewed
+Supabase changelog and Storage error-code documentation: an HTTP failure cannot
+be interpreted as proof that no failures were logged.
+
+References: https://supabase.com/changelog.md and
+https://supabase.com/docs/guides/storage/debugging/error-codes .
+Upstream upload/notes lifecycle and final hosted acceptance remain outstanding.
+
