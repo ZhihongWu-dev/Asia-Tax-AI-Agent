@@ -11,6 +11,44 @@ from decimal import Decimal, localcontext
 from .arithmetic import amount
 
 
+def dividend_underlying_tax(*, source_country, qualifying_holding_percent,
+        dividend_before_withholding, distributing_profit_after_tax,
+        corporate_tax_paid_on_profit, corporate_recipient_and_pool_verified):
+    """Attribute a documented homogeneous profit pool's tax to one dividend.
+
+    Hong Kong Article22(3) tests control of shares; Singapore Article24(2)(a)
+    tests share-capital ownership, directly or indirectly. The supplied holding
+    must use the applicable treaty measure, not automatically voting power.
+    Dividend is before shareholder withholding but after distributing-company
+    tax. The pool must exclude capital distributions and unrelated years/taxes.
+    Different-rate pools must be attributed separately. This is the underlying
+    tax component, still subject to treaty eligibility and the Vietnamese cap.
+    """
+    if source_country not in ('hk', 'sg'):
+        raise ValueError('Reviewed underlying-dividend routes are Hong Kong and Singapore')
+    if corporate_recipient_and_pool_verified is not True:
+        raise ValueError('Corporate recipient, treaty holding measure and matched profit pool must be verified')
+    holding, dividend, profit, tax = map(amount, (qualifying_holding_percent,
+        dividend_before_withholding, distributing_profit_after_tax, corporate_tax_paid_on_profit))
+    if holding < 10 or holding > 100:
+        raise ValueError('Treaty qualifying holding must be between10 and100 percent')
+    if profit == 0 or dividend > profit:
+        raise ValueError('Dividend must belong to a positive after-tax profit pool and not exceed it')
+    with localcontext() as context:
+        context.prec = 40
+        attributed = dividend * tax / profit
+        return dict(policy_version='vn-dividend-underlying-attribution-2026-11-18',
+            source_country=source_country, residence_country='vn',
+            qualifying_holding_percent=holding, dividend_before_withholding=dividend,
+            distributing_profit_after_tax=profit, corporate_tax_paid_on_profit=tax,
+            attributable_underlying_tax=attributed,
+            stage='underlying_component_before_vietnam_credit_cap',
+            sources=[dict(title=('Hong Kong–Vietnam treaty Article22(3)' if source_country=='hk'
+                                else 'Singapore–Vietnam treaty Article24(2)(a)'),
+                url=('https://www.elegislation.gov.hk/hk/cap112BE!en.rtf' if source_country=='hk'
+                     else 'https://www.iras.gov.sg/media/docs/default-source/dtas/singapore-vietnam-dta-(ratified)(mli)(01092023).pdf'))])
+
+
 def singapore_interest_royalty_credit(gross_income, *, income_type,
         eligible_singapore_tax_paid, vietnam_tax_limit,
         article11_or12_and_treaty_entitlement_verified):

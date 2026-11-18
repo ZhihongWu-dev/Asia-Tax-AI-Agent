@@ -4,6 +4,7 @@ import pytest
 
 from packages.income_tax.vietnam_foreign_credit import additional_top_up_credit, indonesia_deemed_credit
 from packages.income_tax.vietnam_foreign_credit import singapore_interest_royalty_credit
+from packages.income_tax.vietnam_foreign_credit import dividend_underlying_tax
 
 
 def calculate(**changes):
@@ -135,3 +136,42 @@ def test_singapore_rejects_dividends_unverified_entitlement_and_bad_inputs(chang
     args.update(changes)
     with pytest.raises(ValueError):
         singapore_interest_royalty_credit(**args)
+
+
+def underlying(**changes):
+    args = dict(source_country='hk', qualifying_holding_percent='10',
+        dividend_before_withholding='80', distributing_profit_after_tax='800',
+        corporate_tax_paid_on_profit='200', corporate_recipient_and_pool_verified=True)
+    args.update(changes)
+    return dividend_underlying_tax(**args)
+
+
+@pytest.mark.parametrize('country', ['hk', 'sg'])
+def test_underlying_credit_attributes_only_the_distributed_profit(country):
+    result = underlying(source_country=country)
+    assert result['attributable_underlying_tax'] == 20
+    assert 'allowed_tax_credit' not in result
+    assert 'final_tax' not in result
+
+
+def test_ownership_is_a_gate_not_a_second_allocation_factor():
+    # Dividend amount already reflects the shareholder's distribution.
+    assert underlying(qualifying_holding_percent='25')['attributable_underlying_tax'] == 20
+    assert underlying(dividend_before_withholding='800')['attributable_underlying_tax'] == 200
+
+
+def test_zero_distribution_and_zero_pool_tax():
+    assert underlying(dividend_before_withholding='0')['attributable_underlying_tax'] == 0
+    assert underlying(corporate_tax_paid_on_profit='0')['attributable_underlying_tax'] == 0
+
+
+@pytest.mark.parametrize('changes', [
+    {'source_country': 'id'}, {'qualifying_holding_percent': '9.999999'},
+    {'qualifying_holding_percent': '100.000001'},
+    {'corporate_recipient_and_pool_verified': 1}, {'corporate_recipient_and_pool_verified': False},
+    {'distributing_profit_after_tax': '0'}, {'dividend_before_withholding': '801'},
+    {'corporate_tax_paid_on_profit': '-1'}, {'dividend_before_withholding': float('nan')},
+])
+def test_underlying_rejects_wrong_treaty_threshold_or_unmatched_pool(changes):
+    with pytest.raises(ValueError):
+        underlying(**changes)
