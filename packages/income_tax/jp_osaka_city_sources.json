@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "doc_id": "jp.osaka-city-corporate",
+      "title": "大阪市 法人の市民税について",
+      "url": "https://www.city.osaka.lg.jp/zaisei/page/0000008074.html",
+      "file": "database/raw/jp/jp.osaka-city-corporate.20261119.html",
+      "sha256": "3226bf5d2594c4661cd5cacda7d6e1afb0ff02b70a25a116063cb441cc9a7e58"
+    },
+    {
+      "doc_id": "jp.osaka-city-corporate-definitions",
+      "title": "大阪市 法人市民税に関する用語集",
+      "url": "https://www.city.osaka.lg.jp/zaisei/page/0000634090.html",
+      "file": "database/raw/jp/jp.osaka-city-corporate-definitions.20261119.html",
+      "sha256": "c44ef7031967399d6083eec6b95d69485c217331704018f4b3525260d71de7b5"
+    }
+  ]
+}

@@ -185,7 +185,8 @@
     "china_personal_rental_persistence_reports": "69 focused tests passed in6.70s. Rental API save/restart/exact retrieval, bilingual readable12-month reports, source hashes and invalid recalculation state preservation verified. Frontend entry/browser and broader business coverage remain incomplete.",
     "china_personal_rental_ui": "TypeScript passed;3 browser cases passed in1.1m (plain, transfers, rental). Rental12-month entry, save, cap11152, tax8560, closing repairs700, total balance7040, report download and reopen verified. Wider rental regimes and overall business acceptance remain incomplete.",
     "china_personal_rental_full_regression": "Runtime0c541cd:1813 income/report cases passed in50.74s;162 successful calls across35 policies,116 distinct source records,0 unresolved. Followup strengthened historical no-rentals replay:11 passed in7.25s. Tests/source integrity do not establish complete legal/business coverage.",
-    "rental_production_build": "At11cb071 npm run build passed:TypeScript and Vite2279 modules,3.62s;10 local artifacts hashed. Main JS832.65kB warning remains. No deployment."
+    "rental_production_build": "At11cb071 npm run build passed:TypeScript and Vite2279 modules,3.62s;10 local artifacts hashed. Main JS832.65kB warning remains. No deployment.",
+    "japan_osaka_research": "3 official city/definitions/prefecture originals archived and hashes verified. City/prefecture separation, per-ward capitation and preallocation rate determination established. Prefectural2026 applicability, rounding and full saved workflow pending; no Osaka calculator enabled."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }
