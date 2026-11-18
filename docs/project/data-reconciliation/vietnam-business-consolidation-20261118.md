@@ -36,7 +36,19 @@ store restart. Editing facts invalidates the current result while retaining its
 historical snapshot. The full income-tax suite passed: 1,406 tests in 23.46 seconds.
 All six referenced original-file hashes were verified locally.
 
-Frontend intake remains pending. Mixed business/rental, accommodation, foreign
+The bilingual frontend now collects per-contract identifiers, deductions,
+payments and filing attestations, with no favorable default selections. Saved
+results retain separate contract balances and explain that their aggregate does
+not authorize cross-contract offsets or refunds. The production build passed
+(the existing bundle-size warning remains). Three browser tests passed in 34.1
+seconds: both ordinary-business methods and the new two-contract rental case,
+including tenant/landlord filing, negative balance, six sources, refresh recovery
+and Chinese display. These tests use local fixture authentication and SQLite;
+they are not hosted acceptance. Existing controlled-form integration follows
+the previously reviewed React official state-management examples; no dependency
+or external code was added.
+
+Mixed business/rental, accommodation, foreign
 income, VAT and filing/rounding procedures remain outside this component and
 remain outstanding toward the broader business objective.
 

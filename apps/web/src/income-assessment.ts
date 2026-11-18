@@ -4,6 +4,7 @@ import { koreaSalaryPolicy } from './korea-salary-assessment';
 import { thaiDividendPolicy } from './thailand-dividend-assessment';
 import { thaiForeignPolicy } from './thailand-foreign-assessment';
 import { vietnamBusinessPolicy } from './vietnam-business-assessment';
+import { vietnamRentalPolicy } from './vietnam-rental-assessment';
 
 export type IncomeRun = {
   id: string; input_revision: number; created_at: string; status: string; snapshot_hash: string;
@@ -21,6 +22,7 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput, values:Record<string,string>={}): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if(input.jurisdiction==='vn' && !company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.length && input.incomes.every(i=>i.category==='rental'&&i.source_jurisdiction==='vn'))return [vietnamRentalPolicy(input)];
   if(input.jurisdiction==='vn' && !company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.length && input.incomes.every(i=>i.category==='business'&&i.source_jurisdiction==='vn'))return [vietnamBusinessPolicy(input)];
   if(input.jurisdiction==='th' && !company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.some(i=>i.source_jurisdiction!=='th') && input.incomes.every(i=>(i.source_jurisdiction==='th'?['employment','business','service_remuneration','author_remuneration','royalty','rental']:['employment','business','service_remuneration','author_remuneration','royalty','rental','dividend','interest']).includes(i.category)))return [thaiForeignPolicy(input,values)];
   if(input.jurisdiction==='th' && !company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.some(i=>i.category==='dividend') && input.incomes.every(i=>i.source_jurisdiction==='th'&&['dividend','employment','business','service_remuneration','author_remuneration','royalty','rental'].includes(i.category)))return [thaiDividendPolicy(input,values)];
