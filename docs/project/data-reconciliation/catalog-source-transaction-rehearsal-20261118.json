@@ -1,0 +1,30 @@
+{
+  "status": "local_source_closure_commit_and_rollback_verified",
+  "scope": "local transactional source and complete catalog rehearsal; not hosted acceptance",
+  "catalog_revision": "ae12ac1c79e22e80ec60f940a5e20a6b03a9df6408672447e6df0a0ca52b0195",
+  "cloud_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "14f051ed6c17a0ffe0902eb954f07f3869c9ad042a2436fa85e152345ea658b9",
+    "review_sha256": "82c4cf4e2aa4fe34ee1279ca82bb4acd84b8e5df603aa870ac346c41be6127ac"
+  },
+  "local_snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "14f051ed6c17a0ffe0902eb954f07f3869c9ad042a2436fa85e152345ea658b9",
+    "review_sha256": "a119dd3f36b6836bc335da9965ca8e7561c4eeca41c7154c0585ace14baccec3"
+  },
+  "review_rows_identical_ignoring_database_sort_order": true,
+  "source_count": 662,
+  "reviewed_extraction_differences": 34,
+  "complete_catalog_rows": 1278,
+  "source_bundle_sha256": "58027df043a3f20633aaf364f5c4f2da1cec437a98248270d4656519904c3943",
+  "old_snapshot_rejected": true,
+  "all_tables_and_reviews_unchanged_after_rollback": true,
+  "committed_operations": 402,
+  "temporary_database_removed": true,
+  "initial_attempts": "Two local fixture attempts rejected the cloud snapshot before migration: document_in_base was initially stored as text, and database sort order differed. Corrected the fixture Boolean type, verified exact review rows independently of order, and pinned the separate local snapshot. Production version checking was not relaxed.",
+  "limits": "Text-column fixture with primary keys, Boolean review flag and selected clause rows; hosted constraints, roles, triggers, deployed reader, optimizer and business acceptance remain unproven."
+}

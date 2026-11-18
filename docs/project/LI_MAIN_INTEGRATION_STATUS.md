@@ -59,6 +59,14 @@ promotion remain incomplete.
   transaction. The shared reader passed 43 focused tests; nine real local
   PostgreSQL executor/source tests verified visibility, rejection and rollback.
   This mechanism does not replace the outstanding deployment and legal gates.
+  A subsequent 402-operation local rehearsal used a fresh consistent cloud
+  snapshot, all 173 review records and all required clause rows. The real
+  postflight reader returned 662 sources and all 1,278 catalog rows matched the
+  frozen inputs. The 34 reviewed extraction differences matched their exact
+  recorded hashes. Forced postflight rejection restored every fixture table;
+  the successful transaction rejected the old local snapshot. Local/hosted
+  review digests differ because of database sort order, with exact review rows
+  verified independently. Hosted constraints and deployment remain untested.
   The older runtime still references the two blocked sources until repaired-rule
   integration. No base catalog tables were changed by this source admission.
 - Next delivery work is source admission/rebinding, completed optimizer
@@ -72,6 +80,7 @@ Evidence: [rental implementation](data-reconciliation/vietnam-business-consolida
 [database-tool regression](data-reconciliation/database-tools-regression-20261118.json),
 [full browser run and failure reproduction](data-reconciliation/full-browser-regression-20261118.json),
 [transactional source validation](data-reconciliation/catalog-transaction-source-reader-20261118.md),
+[complete transaction/source rehearsal](data-reconciliation/catalog-source-transaction-rehearsal-20261118.json),
 [business implementation](data-reconciliation/vietnam-business-individual-review-20261118.md),
 [deployment preparation](RENDER_DEPLOYMENT.md),
 [current catalog plan](data-reconciliation/catalog-migration-plan-overlay-safe-20261118.json),
