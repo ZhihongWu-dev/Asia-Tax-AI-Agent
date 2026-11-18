@@ -20,6 +20,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import optimize as op  # noqa: E402
 from common import read_csv  # noqa: E402
+from baseline_frontier import nondominated_state_keys  # noqa: E402
 
 EPS = 1e-9
 
@@ -151,9 +152,11 @@ class Checker:
                     and (a["w"] != b["w"] or a["needs"] != b["needs"] or a["hops"] != b["hops"] or a["restructure"] != b["restructure"]
                          or frozenset(a.get("transfers", ())) != frozenset(b.get("transfers", ())) or a.get("new", 0) != b.get("new", 0)))
 
-        nd = [f for f in found if not any(dom(g, f) for g in found if g is not f)]
+        # Preserve every DFS path. Only exact duplicate destination states are
+        # compressed for the final comparison; no approximate pruning is used.
+        # Keep dom as the independent original predicate for equivalence tests.
         key = lambda x: (x["node"], x["w"]["floor"], x["w"]["ceiling"], tuple(sorted(x["needs"])), x["hops"], x["restructure"], tuple(sorted(x.get("transfers", ()))), x.get("new", 0))
-        base_keys = {key(f) for f in nd}
+        base_keys = nondominated_state_keys(found, epsilon=EPS)
         allab = {L["label_id"]: L for bucket in self.labels["labels"].values() for L in bucket}
         fr = []
         for lid in self.labels["frontier"]:

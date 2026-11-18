@@ -12,6 +12,7 @@ FILES = (
     'rule/tools/common.py', 'rule/tools/eval.py', 'rule/tools/query.py',
     'rule/tools/rule_tool.py', 'optimization/tools/optimize.py',
     'optimization/tools/check.py', 'packages/domain_bridge/planning_library.py',
+    'optimization/tools/baseline_frontier.py',
     'packages/domain_bridge/planning_runner.py', 'packages/domain_bridge/planning_runtime.py',
 )
 
