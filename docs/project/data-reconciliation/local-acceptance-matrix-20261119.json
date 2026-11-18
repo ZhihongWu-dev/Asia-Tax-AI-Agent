@@ -42,7 +42,8 @@
         "income-workflow-availability-20261119.json",
         "local-cross-module-regression-20261119.json",
         "thailand-company-reconciliation-20261119.json",
-        "japan-company-reconciliation-20261119.json"
+        "japan-company-reconciliation-20261119.json",
+        "indonesia-company-reconciliation-20261119.json"
       ],
       "limits": "The static policy inventory is historical and narrower than current runtime; browser tests cover representative workflows, not every income type, residency, special regime or filing obligation."
     },
@@ -96,7 +97,8 @@
     "vietnam_treaty_sources": "1469 income-tax/reporting tests passed in37.16s; persisted mixed-country workpaper source hashes verified",
     "runtime_source_audit": "1470 income/report tests passed;33 policies,116 verified top-level references,0 unresolved in observed results",
     "thai_company_reconciliation": "1479 income/report tests;20 final focused;2 browser flows;TypeScript passed",
-    "japan_company_reconciliation": "1486 regression tests;49 final focused;2 browser;TypeScript passed"
+    "japan_company_reconciliation": "1486 regression tests;49 final focused;2 browser;TypeScript passed",
+    "indonesia_company_reconciliation": "1494 income/report tests;2 browser flows;TypeScript passed"
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only; no cloud upload, push or main merge.",
+  "problem": "Existing company workflow fixture saved receipts6000000000 and deductions0 but calculated on manual base610000000. The route consumed saved receipts forArticle31E but did not reconcile the taxable base.",
+  "change": "Reconcile ordinary fiscal income less established allowable deductions and eligible prior losses before thousand-IDR truncation. Separately show current losses and prior-loss use. Article31E denominator remains complete saved statutory receipts.",
+  "test_fixture_correction": "Original610000000 base now has explicit5390000000 verified deductions; tax result andArticle31E allocation expectations preserved.",
+  "reference": "https://www.pajak.go.id/index.php/id/mekanisme-penghitungan-pajak-penghasilan-badan",
+  "github_reference": "https://github.com/openfisca/country-template",
+  "reference_use": "Independent fiscal-base and rate stages using existing Decimal framework. AGPL code not copied; no new dependency; prior repository/license/issues review retained.",
+  "validation": {
+    "income_and_reporting": "1494 passed in27.49s",
+    "browser": "2 passed in28.1s:Indonesia company and individual persisted workflows",
+    "typescript": "tsc -b exit0",
+    "http": "Mismatched base rejected422 without revision/result mutation; valid result survives store restart and report export",
+    "cases": "Mismatch rejection, current loss vs prior loss, unused prior losses, rounding stages, loss deduction preservesArticle31E gross denominator"
+  },
+  "limits": [
+    "Expense deductibility, fiscal adjustments and prior-loss eligibility/vintages are established inputs",
+    "Only existing ordinary domestic route; separate final/exempt/foreign/special regimes remain outside this adapter",
+    "Individual net-income reconciliation requires separate review",
+    "Overall business acceptance not established"
+  ]
+}

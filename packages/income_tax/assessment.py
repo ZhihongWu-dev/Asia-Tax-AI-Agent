@@ -271,7 +271,11 @@ def calculate(case: IncomeTaxCase, basis):
             ctx.prec=40
             gross=sum((i.gross_amount for i in case.incomes),Decimal('0'))
         if policy=='id_company_2026':
+            reconciliation = indonesia.reconcile_company_basis(case,
+                taxable_income_before_rounding=basis.taxable_income_before_rounding)
             result=indonesia.company_tax(tax_year=2026,article31e_gross_receipts=gross,**args)
+            result['basis_reconciliation'] = reconciliation
+            result['policy_version'] += '-reconciled-20261119'
         else:
             if basis.net_income_before_ptkp>gross:
                 raise ValueError('Net income exceeds saved gross income')

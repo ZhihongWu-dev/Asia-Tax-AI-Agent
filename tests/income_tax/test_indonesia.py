@@ -88,13 +88,15 @@ def test_original_hashes():
 
 def test_adapter_uses_saved_gross_and_rejects_ineligible_cases():
     data=dict(subject='company',jurisdiction='id',period_start='2026-01-01',period_end='2026-12-31',
-        currency='IDR',residency='resident',claimed_deductions='0',carried_losses='0',facts_confirmed=True,
+        currency='IDR',residency='resident',claimed_deductions='5390000000',carried_losses='0',facts_confirmed=True,
         incomes=[dict(category='business',source_jurisdiction='id',gross_amount='6000000000',description='Total ordinary receipts')])
     raw=dict(policy='id_company_2026',taxable_income_before_rounding='610000000',gross_receipts_scope_confirmed=True,
         ordinary_annual_treatment_confirmed=True,prepaid_tax='130000000',basis_confirmed=True,
         basis_explanation='Verified ordinary receipts and all tax-basis adjustments')
     adapter=TypeAdapter(Assessment)
     assert Decimal(calculate(IncomeTaxCase(**data),adapter.validate_python(raw))['balance_due'])==-49480000
+    with pytest.raises(ValueError,match='must reconcile'):
+        calculate(IncomeTaxCase(**{**data,'claimed_deductions':'0'}),adapter.validate_python(raw))
     with pytest.raises(ValueError): calculate(IncomeTaxCase(**data),adapter.validate_python({**raw,'gross_receipts_scope_confirmed':False}))
     for changes in [dict(residency='nonresident'),dict(subject='individual'),dict(period_start='2026-02-01')]:
         with pytest.raises(ValueError): calculate(IncomeTaxCase(**{**data,**changes}),adapter.validate_python(raw))
@@ -102,6 +104,7 @@ def test_adapter_uses_saved_gross_and_rejects_ineligible_cases():
         data['incomes'][0].update(category=category,source_jurisdiction=source,foreign_tax_paid='0')
         with pytest.raises(ValueError): calculate(IncomeTaxCase(**data),adapter.validate_python(raw))
     data['subject']='individual'
+    data['claimed_deductions']='0'
     data['incomes'][0].update(category='employment',source_jurisdiction='id',gross_amount='300000000')
     raw=dict(policy='id_resident_2026',net_income_before_ptkp='300000000',ptkp_status='K/1',
         ptkp_entitlement_confirmed=True,ordinary_annual_treatment_confirmed=True,prepaid_tax='15550000',

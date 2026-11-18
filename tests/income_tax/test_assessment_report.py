@@ -67,6 +67,7 @@ def test_snapshot_mismatch_rejected():
     ('th_dividend', 'th_2026_sources.json', 1),
     ('th_company', 'th_2026_sources.json', 2),
     ('jp_company', 'jp_company_2026_sources.json', 8),
+    ('id_company', 'id_2026_sources.json', 6),
 ])
 def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, manifest, count):
     from hashlib import file_digest
@@ -77,6 +78,7 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
     from tests.income_tax.test_china_small_company import saved_inputs as small_company_inputs
     from tests.income_tax.test_thailand_dividend_adapter import inputs as dividend_inputs
     from tests.income_tax.test_japan_company import facts as japan_facts, basis as japan_basis
+    from tests.income_tax.test_indonesia_company_reconciliation import inputs as indonesia_inputs
 
     root = Path(__file__).resolve().parents[2]
     sources = json.loads((root/'packages/income_tax'/manifest).read_text(
@@ -109,6 +111,8 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
             data, basis = dividend_inputs()
         elif policy == 'jp_company':
             data, basis = japan_facts(), japan_basis()
+        elif policy == 'id_company':
+            data, basis = indonesia_inputs()
         elif policy == 'th_company':
             data = facts()
             data.update(jurisdiction='th', currency='THB')
@@ -122,7 +126,7 @@ def test_source_versions_survive_storage_restart_and_report(tmp_path, policy, ma
         saved = client.put(path, headers=HEADERS, json=dict(
             revision=0, request_id=str(uuid4()), inputs=data))
         assert saved.status_code == 200, saved.text
-        if policy in ('th_company', 'jp_company'):
+        if policy in ('th_company', 'jp_company', 'id_company'):
             key = 'net_taxable_profit' if policy == 'th_company' else 'taxable_income_before_rounding'
             rejected = client.post(path+'/runs', headers=HEADERS, json=dict(
                 revision=1, request_id=str(uuid4()),

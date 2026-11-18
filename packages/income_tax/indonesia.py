@@ -33,6 +33,28 @@ def thousands(value):
     return (value // THOUSAND) * THOUSAND
 
 
+def reconcile_company_basis(case, *, taxable_income_before_rounding):
+    """Reconcile established fiscal revenue/expenses and eligible prior losses.
+
+    Deduction eligibility and fiscal adjustments must already be established;
+    this does not grant loss carryforward or change the Article31E denominator.
+    """
+    with localcontext() as context:
+        context.prec = 40
+        total = sum((item.gross_amount for item in case.incomes), ZERO)
+        before_losses = total - case.claimed_deductions
+        available = max(ZERO, before_losses)
+        used = min(available, case.carried_losses)
+        base = available - used
+        if taxable_income_before_rounding != base:
+            raise ValueError('Indonesian company taxable income must reconcile to saved fiscal income, deductions and eligible losses before rounding')
+        return dict(total_income=total, non_taxable_income=ZERO, exempt_income=ZERO,
+            allowed_deductions=case.claimed_deductions, income_before_loss_relief=before_losses,
+            current_period_loss=max(ZERO, -before_losses), prior_losses_used=used,
+            prior_losses_unused=case.carried_losses-used, taxable_income=base,
+            scope='Established ordinary fiscal amounts before thousand-IDR truncation; eligibility and future carryforward not inferred')
+
+
 def company_tax(taxable_income_before_rounding, *, tax_year, article31e_gross_receipts,
                 ordinary_annual_treatment_confirmed, gross_receipts_scope_confirmed, prepaid_tax):
     """Article31E applies automatically to the confirmed ordinary resident base.
