@@ -189,7 +189,8 @@
     "japan_osaka_research": "3 official city/definitions/prefecture originals archived and hashes verified. City/prefecture separation, per-ward capitation and preallocation rate determination established. Prefectural2026 applicability, rounding and full saved workflow pending; no Osaka calculator enabled.",
     "japan_osaka_current_instructions": "8 official originals hashed, including image rates,2026 surcharge periods, currentR8.7 return instructions andR8.4 errata. Ordinary enterprise/special rates visually checked. Superseded404 link avoided; rounding/column review and implementation pending.",
     "japan_osaka_enterprise": "11 component tests passed in0.57s after visual review of current instructions p7. Osaka-specific surcharge gate and source records implemented; no complete local assessment/UI yet.",
-    "japan_osaka_capitation": "25 Osaka component tests passed in0.61s. Prefecture-once/city-per-ward annual capitation, capital reserve floor and employee boundaries verified. Complete assessment/API/UI and broader scope remain incomplete."
+    "japan_osaka_capitation": "25 Osaka component tests passed in0.61s. Prefecture-once/city-per-ward annual capitation, capital reserve floor and employee boundaries verified. Complete assessment/API/UI and broader scope remain incomplete.",
+    "japan_osaka_inhabitant": "32 Osaka component tests passed in1.00s; prefectural/city corporation-tax levies with independent rounding and thresholds implemented. Current city instructions and prefectural rate original archived. Full saved workflow remains pending."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

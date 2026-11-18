@@ -18,6 +18,35 @@ class OsakaWard(BaseModel):
     employees: StrictInt = Field(ge=0)
 
 
+def annual_inhabitant(national_levy_base, *, registered_capital, fiscal_start_year,
+                      ordinary_osaka_city_only_no_credits_verified):
+    """Separate full-year prefectural/city corporation-tax-based levies.
+
+    Base is the established national levy base before relevant credits, not
+    national final tax. Scope excludes tax trusts, liquidation, group/foreign
+    entities, other municipalities, local credits/additions and treaty relief.
+    """
+    if type(fiscal_start_year) is not int or fiscal_start_year != 2026:
+        raise ValueError('Only fiscal years starting in2026 reviewed')
+    if ordinary_osaka_city_only_no_credits_verified is not True:
+        raise ValueError('Full-year ordinary Osaka-city-only levy base and no-credit scope must be verified')
+    national, capital = yen(national_levy_base), yen(registered_capital)
+    with localcontext() as ctx:
+        ctx.prec = 40
+        base = (national // 1000) * 1000
+        surcharge = capital > 100000000 or base > 20000000
+        pref_rate, city_rate = (Decimal('.02'),Decimal('.082')) if surcharge else (Decimal('.01'),Decimal('.06'))
+        pref_tax = ((base * pref_rate) // 100) * 100
+        city_tax = ((base * city_rate) // 100) * 100
+        sources = CITY_SOURCES + [s for s in SOURCES if s['doc_id'] in ('jp.osaka-prefecture-surcharges','jp.osaka-prefecture-return-instructions.202607')]
+        return dict(policy_version='jp-osaka-annual-inhabitant-20261119',
+            stage='internal_full_year_inhabitant_excluding_capitation_and_interim_payments',
+            national_levy_base=national, taxable_levy_base=base, registered_capital=capital,
+            surcharge_applies=surcharge, prefectural_rate=pref_rate, city_rate=city_rate,
+            prefectural_levy=pref_tax, city_levy=city_tax, total_levy=pref_tax+city_tax,
+            sources=deepcopy(sources))
+
+
 def annual_capitation(*, fiscal_start_year, registered_capital, capital_reserve,
                       adjusted_statutory_capital, wards, full_year_osaka_city_scope_verified):
     """Full-year ordinary capital corporation with offices in Osaka city only.

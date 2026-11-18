@@ -56,6 +56,20 @@
       "url": "https://www.pref.osaka.lg.jp/documents/525/seigo0806.pdf",
       "file": "database/raw/jp/jp.osaka-prefecture-return-errata.202606.pdf",
       "sha256": "c63faa38cd2e8a53370e36c4e64fbc2c3430f7b6c5efcaab02dcdb78960bc5fd"
+    },
+    {
+      "doc_id": "jp.osaka-city-return-instructions",
+      "title": "大阪市 第20号様式記載の手引",
+      "url": "https://www.city.osaka.lg.jp/zaisei/cmsfiles/contents/0000006/6482/01_R7.10.14igo_20gou_tebiki_R6.4.pdf",
+      "file": "database/raw/jp/jp.osaka-city-return-instructions.20251014.pdf",
+      "sha256": "889a79844465c63412fbed161d19eecbcdd2127c71f481f15b0325a137598df6"
+    },
+    {
+      "doc_id": "jp.osaka-prefecture-inhabitant-rates",
+      "title": "大阪府 法人府民税法人税割の税率",
+      "url": "https://www.pref.osaka.lg.jp/images/18421/zeirituhyou20houzinzei.png",
+      "file": "database/raw/jp/jp.osaka-prefecture-inhabitant-rates.20261119.png",
+      "sha256": "29a5dd12701f0ff982647cbbe8337feb6f5771fdc0c238d2368ee3d709d77879"
     }
   ],
   "findings": [
@@ -102,5 +116,12 @@
     "rules": "Capital band=max(adjusted statutory capital,registered capital+reserve). Prefecture charged once; city annual capitation per established Osaka ward. Employee boundary50, distinct prefectural surcharge bands.",
     "validation": "25 Osaka tests passed in0.61s, including14 new capitation cases covering capital tiers, reserve floor, per-ward employees, duplicate/empty scope, exact context and source hashes.",
     "limits": "Only verified full-year ordinary capital corporations in Osaka city; no short-year capitation, dormitory exemptions or other municipalities inferred. Inhabitant corporation-tax levies and complete saved workflow still pending."
+  },
+  "inhabitant_component": {
+    "status": "internal_full_year_component_implemented",
+    "visual_review": "Osaka city current20th-form instructions pages1-2 rendered and visually inspected; prefectural rate image inspected.",
+    "rules": "Ordinary full-year city-only scope: thousand-yen levy base; capital<=JPY100m and rounded preallocation levy base<=JPY20m use prefectural1%/city6%,otherwise2%/8.2%. Hundred-yen truncation occurs separately for each taxing authority.",
+    "validation": "32 Osaka component tests passed in1.00s. Base18000 yields prefectural100 +city1000 =1100; combined-rate rounding would incorrectly yield1200. Capital/base thresholds, context and sources verified.",
+    "limits": "No local credits/additions, group/foreign entities, trusts, liquidation or other municipalities inferred. API/UI/workpaper reconciliation and final interim balances remain pending."
   }
 }

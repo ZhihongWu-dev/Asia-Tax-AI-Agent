@@ -13,6 +13,20 @@
       "url": "https://www.city.osaka.lg.jp/zaisei/page/0000634090.html",
       "file": "database/raw/jp/jp.osaka-city-corporate-definitions.20261119.html",
       "sha256": "c44ef7031967399d6083eec6b95d69485c217331704018f4b3525260d71de7b5"
+    },
+    {
+      "doc_id": "jp.osaka-city-return-instructions",
+      "title": "大阪市 第20号様式記載の手引",
+      "url": "https://www.city.osaka.lg.jp/zaisei/cmsfiles/contents/0000006/6482/01_R7.10.14igo_20gou_tebiki_R6.4.pdf",
+      "file": "database/raw/jp/jp.osaka-city-return-instructions.20251014.pdf",
+      "sha256": "889a79844465c63412fbed161d19eecbcdd2127c71f481f15b0325a137598df6"
+    },
+    {
+      "doc_id": "jp.osaka-prefecture-inhabitant-rates",
+      "title": "大阪府 法人府民税法人税割の税率",
+      "url": "https://www.pref.osaka.lg.jp/images/18421/zeirituhyou20houzinzei.png",
+      "file": "database/raw/jp/jp.osaka-prefecture-inhabitant-rates.20261119.png",
+      "sha256": "29a5dd12701f0ff982647cbbe8337feb6f5771fdc0c238d2368ee3d709d77879"
     }
   ]
 }

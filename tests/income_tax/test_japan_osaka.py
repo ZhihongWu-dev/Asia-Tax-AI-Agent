@@ -4,6 +4,36 @@ from hashlib import sha256
 import pytest
 from packages.income_tax.japan_osaka import ordinary_enterprise
 from packages.income_tax.japan_osaka import annual_capitation
+from packages.income_tax.japan_osaka import annual_inhabitant
+
+
+def inhabitant(base='18000', **changes):
+    args=dict(registered_capital='10000000',fiscal_start_year=2026,ordinary_osaka_city_only_no_credits_verified=True)
+    args.update(changes)
+    return annual_inhabitant(base,**args)
+
+
+def test_inhabitant_components_round_separately():
+    r=inhabitant()
+    assert r['prefectural_levy']==100 and r['city_levy']==1000
+    assert r['total_levy']==1100  # A combined7% levy incorrectly produces1200.
+    for s in r['sources']:assert sha256(Path(s['file']).read_bytes()).hexdigest()==s['sha256']
+    with localcontext() as ctx:
+        ctx.prec=3
+        assert inhabitant()==r
+
+
+@pytest.mark.parametrize('base,capital,surcharge',[('20000000','100000000',False),('20000999','100000000',False),('20001000','100000000',True),('0','100000001',True)])
+def test_inhabitant_thresholds(base,capital,surcharge):
+    r=inhabitant(base,registered_capital=capital)
+    assert r['surcharge_applies'] is surcharge
+    assert r['prefectural_rate']==Decimal('.02' if surcharge else '.01')
+    assert r['city_rate']==Decimal('.082' if surcharge else '.06')
+
+
+@pytest.mark.parametrize('changes',[{'fiscal_start_year':2027},{'ordinary_osaka_city_only_no_credits_verified':False}])
+def test_inhabitant_unverified_scope_rejected(changes):
+    with pytest.raises(ValueError):inhabitant(**changes)
 
 
 def capitation(**changes):
