@@ -33,3 +33,19 @@ unmigrated cloud tables can supply these rows: a separate live bundle read still
 failed on the two legacy catalog dependencies. Both validation commits remain
 required for final integration; catalog migration and end-to-end acceptance
 remain open.
+
+## Full-suite harness correction
+
+Session70240 terminated with an error before completing golden expectations:
+the harness injected common.Library, which lacks the mandatory version_metadata
+interface. This is not a passing or completed tax/optimizer validation.
+
+Replaced the harness with a verified PlanningLibrary bundle containing the full
+635-reference staged source closure. Bundle SHA256:
+0d2b620d1c307586fffbc03fc8ee662f4876cfaa869834a9e5783a75a5504127.
+The v2 harness logs START, golden result and exhaustive checker result per row,
+and checks the runtime fingerprint after each case. It is now running under
+session28744 in the independent validation worktree. Script and log:
+integration-audit-20261116/run_repaired_golden_v2.py and
+repaired-compressed-golden-v2-20261118.log. Preserve inputs until terminal.
+The original optimizer run remains separate and has not been restarted.
