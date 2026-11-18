@@ -57,7 +57,8 @@
         "japan-local-enterprise-component-20261119.json",
         "japan-local-per-capita-component-20261119.json",
         "japan-local-inhabitant-component-20261119.json",
-        "japan-tokyo-api-workpaper-20261119.json"
+        "japan-tokyo-api-workpaper-20261119.json",
+        "japan-tokyo-ui-validation-20261119.json"
       ],
       "limits": "The static policy inventory is historical and narrower than current runtime; browser tests cover representative workflows, not every income type, residency, special regime or filing obligation."
     },

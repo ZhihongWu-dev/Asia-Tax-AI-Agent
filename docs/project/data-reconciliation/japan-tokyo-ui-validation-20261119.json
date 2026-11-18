@@ -1,0 +1,31 @@
+{
+  "status": "scoped_local_workflow_verified",
+  "delivery": "Local only; no cloud upload, remote push or main merge.",
+  "scope": "Optional Tokyo 23-ward full-year ordinary domestic company assessment; other locations and excluded regimes remain outside scope.",
+  "implemented": [
+    "Optional bilingual workpaper with ward counts, principal office, capital, local adjustments, losses and liabilities",
+    "Separate component payments/refunds, named ward details and local basis reconciliation",
+    "Saved result survives reopening; national-only flow remains available"
+  ],
+  "validation": {
+    "typescript_build": {
+      "exit_code": 0
+    },
+    "income_and_reporting": {
+      "passed": 1653,
+      "seconds": 48.09,
+      "exit_code": 0
+    },
+    "national_browser_regression": {
+      "passed": 2
+    },
+    "tokyo_browser": {
+      "passed": 1,
+      "seconds": 29.6,
+      "exit_code": 0,
+      "scenario": "Two wards, 50/51 employees, enterprise interim liability 600000; national total1835300, combined2815700, local payable488400, refund108000; 13 source links and reopening."
+    },
+    "initial_browser_attempt": "National cases passed; Tokyo test locator timed out. Corrected select locator to accessible combobox role; rerun passed."
+  },
+  "overall_business_acceptance": "Not complete; scoped automated evidence does not establish full country-wide or real-client acceptance."
+}

@@ -1,3 +1,4 @@
+import {tokyoAmounts,tokyoChecks} from '../src/japan-tokyo-assessment';
 import { test, expect } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 
@@ -847,4 +848,53 @@ test('Vietnam personal securities saves result',async({page})=>{
   await expect(report.getByRole('region',{name:'Transfer 1',exact:true})).toContainText('Securities proceeds');
   await expect(report.getByRole('region',{name:'Transfer 1',exact:true})).toContainText('2026-07-01');
   await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('1000000');
+});
+
+ test('Tokyo local workpaper saves separate refunds and ward levies',async({page})=>{
+  const form=await openIncome(page);
+  await form.getByRole('combobox',{name:'Filing jurisdiction',exact:true}).selectOption('jp');
+  await form.getByLabel('Period start',{exact:true}).fill('2026-04-01');
+  await form.getByLabel('Period end',{exact:true}).fill('2027-03-31');
+  await form.getByRole('combobox',{name:'Tax residency',exact:true}).selectOption('resident');
+  await form.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption('jp');
+  await form.getByLabel('Gross income',{exact:true}).fill('10000000');
+  await form.getByLabel('Income description',{exact:true}).fill('Ordinary domestic business revenue for the full accounting year');
+  await form.getByLabel('Claimed deductions (blank if unknown)',{exact:true}).fill('0');
+  await form.getByLabel('Carried losses (blank if unknown)',{exact:true}).fill('0');
+  await form.getByRole('checkbox').check();
+  await form.getByRole('button',{name:'Save income-tax details'}).click();
+  await expect(form.getByRole('status')).toHaveText('Income-tax details saved.');
+  const assessment=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+  await assessment.getByRole('combobox',{name:'Applicable regime',exact:true}).selectOption('jp_company_starting_2026');
+  await assessment.getByLabel('Established taxable income before JPY 1,000 truncation',{exact:true}).fill('10000000');
+  await assessment.getByRole('combobox',{name:'Verified corporation-rate classification',exact:true}).selectOption('sme_reduced');
+  await assessment.getByLabel('Corporation interim-return liability',{exact:true}).fill('0');
+  await assessment.getByLabel('Local corporation interim-return liability',{exact:true}).fill('0');
+  for(const label of ['Capital, control exclusions and excluded-business classification verified','Ordinary domestic tax base verified; no credits, additions, retained-profit surtax or group regime'])
+    await assessment.getByRole('combobox',{name:label,exact:true}).selectOption('true');
+  await assessment.getByRole('button',{name:'Include Tokyo 23-ward local assessment',exact:true}).click();
+  for(const [key,,label] of tokyoAmounts)await assessment.getByLabel(label,{exact:true}).fill(key==='registered_capital'||key==='adjusted_statutory_capital'?'10000000':key==='enterprise_interim_liability'?'600000':'0');
+  await assessment.getByLabel('Number of wards with offices (aggregate within each ward)',{exact:true}).fill('2');
+  await assessment.getByRole('combobox',{name:'Principal office row',exact:true}).selectOption('1');
+  await assessment.getByRole('combobox',{name:'Ward 1',exact:true}).selectOption('13101');
+  await assessment.getByRole('combobox',{name:'Ward 2',exact:true}).selectOption('13104');
+  await assessment.getByLabel('Ward employee count 1',{exact:true}).fill('50');
+  await assessment.getByLabel('Ward employee count 2',{exact:true}).fill('51');
+  for(const [,,label] of tokyoChecks)await assessment.getByRole('combobox',{name:label,exact:true}).selectOption('true');
+  await assessment.getByLabel('Tax-basis adjustments and eligibility explanation',{exact:true}).fill('Full-year ordinary domestic taxable income reconciled with books; exclusions and interim liabilities checked.');
+  await assessment.getByRole('checkbox').check();
+  await assessment.getByRole('button',{name:'Calculate and save result'}).click();
+  const result=assessment.getByRole('article',{name:'Saved calculation result'});
+  const local=result.getByRole('region',{name:'Tokyo local tax details',exact:true});
+  await expect(local).toContainText('2815700');
+  await expect(local).toContainText('1835300');
+  await expect(local).toContainText('488400');
+  await expect(local).toContainText('108000');
+  await expect(local.getByRole('region',{name:'Enterprise tax',exact:true})).toContainText('-108000');
+  await expect(local).toContainText('千代田区');
+  await expect(local).toContainText('新宿区');
+  await expect(local).not.toContainText('undefined');
+  await expect(result.getByRole('link')).toHaveCount(13);
+  await openIncome(page);
+  await expect(page.getByRole('region',{name:'Tokyo local tax details',exact:true})).toContainText('2815700');
 });

@@ -1,3 +1,5 @@
+import { tokyoBasis } from '../japan-tokyo-assessment';
+import TokyoLocalResult from './TokyoLocalResult';
 import { useEffect, useRef, useState } from 'react';
 import { api, ApiError } from '../api';
 import { useLocale } from '../locale';
@@ -44,6 +46,9 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
         }
         basis[field.key] = months;
       } else basis[field.key] = field.boolean ? values[field.key] === 'true' : field.integer ? Number(values[field.key]) : values[field.key];
+    }
+    if (policy.id==='jp_company_starting_2026') {
+      try {basis=tokyoBasis(basis,values,explanation);} catch {setError(say('请核对区数量、主办公地点和不重复区名。','Check ward count, one principal office and unique ward names.'));return;}
     }
     if (policy.id==='hk_salaries_2025_26') {
       basis.workpaper={balancing_charge:basis.hks_balancing_charge,employment_expenses:basis.hks_employment_expenses,
@@ -119,6 +124,11 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
           {options.map(p=><option key={p.id} value={p.id}>{p.label[index]}</option>)}
         </select></label>
         {policy && <><p>{policy.notice[index]}</p><p>{say('金额币种：','Currency: ')}{current.income_tax.currency}</p>
+          {policy.id==='jp_company_starting_2026' && <>
+            <button type="button" aria-pressed={values.jpt_enabled==='true'} onClick={()=>{setValues(v=>({...v,jpt_enabled:v.jpt_enabled==='true'?'false':'true',jpt_ward_count:v.jpt_ward_count||'1',jpt_principal:v.jpt_principal||'1'}));setConfirmed(false);setError('');}}>{say('附加东京23区地方税评税','Include Tokyo 23-ward local assessment')}</button>
+            {values.jpt_enabled==='true'&&<p>{say('已附加东京地方税，本次结果将包含此限定场景的地方税。仅限全部办公地点全年位于东京23区的普通内国法人，无外形标准课税、地方税抵免或协定更正减免。逐区合并员工数并指定唯一主办公地点。独立核实事业税调整和旧亏损，资本须核对准备金和法定调整。','Tokyo local tax is included for this scoped assessment. Ordinary domestic companies with all offices in Tokyo 23 wards throughout the year only; no size-based taxation, local credits or treaty-amendment relief. Aggregate employees by ward and identify one principal office. Verify enterprise adjustments and prior losses separately; verify capital reserves and statutory capital adjustments.')}</p>}
+          </>}
+
           {['cn_company_2026','cn_small_company_2026'].includes(policy.id) && <p>{say('企业税基核对：保存的收入须为完成税务口径调整的收入总额，不是会计利润。不征税收入和免税收入须已包含在收入总额中、互不重叠，且不能再次计入扣除。保存的扣除及以前年度亏损须已核定资格、限额和年度。未用亏损不代表已获准结转；税基必须与这些资料计算的余额一致。','Company basis reconciliation: saved income is established statutory total income, not accounting profit. Non-taxable and exempt amounts must already be included, must not overlap, and must not also be claimed as deductions. Verify deduction eligibility, limits and loss vintages. Unused losses do not establish carryforward approval. The tax base must match the balance calculated from these facts.')}</p>}
           {policy.id==='vn_company_2026' && <p>{say('越南企业核对：已保存收入须包含完整法定收入及普通其他所得；减核定费用、免税所得，再抵扣可用以前年度亏损。免税所得不得重复计入扣除。须逐年核实从亏损次年起连续不超过5年的抵扣资格；本期亏损与旧亏损分别记录，不自动批准未来结转。优惠收入门槛仍按完整法定收入判断。特殊活动、境外所得及优惠所得分池另行处理。','Vietnam company reconciliation: saved income includes complete statutory revenue and ordinary other income. Deduct verified expenses and exempt income, then usable prior losses. Do not duplicate exempt income as deductions. Verify each loss vintage within the continuous five-year window starting after the loss year; current and prior losses remain separate without automatic future carryforward approval. Revenue eligibility thresholds still use complete statutory revenue. Special activities, foreign income and incentive-income pools require separate calculations.')}</p>}
           {policy.id==='ae_ordinary_2026' && <p>{say('核对经营税基：收入加税务调增，减免税收入和已核定经营扣除，再抵扣以前年度自有亏损，抵扣上限为抵亏前应税所得的75%。扣除不得包含个人排除收入对应费用或重复包含免税收入、亏损。须先核实亏损年度、资格及所有权延续条件。个人所有应税经营收入应分类为经营；其余收入须已核实符合工资或个人投资法定排除。此核对不计算转入亏损或税务集团。','Reconcile business income plus tax additions, less exempt income and established business deductions. Eligible own prior losses are capped at 75% of income before loss relief. Deductions exclude costs of excluded personal income and must not duplicate exemptions or losses. Verify loss years, eligibility and ownership continuity first. Classify all in-scope personal business receipts as business; other receipts must qualify as statutory wages or personal-investment exclusions. Transferred losses and tax groups require separate calculations.')}</p>}
@@ -176,6 +186,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       </>}
       {result.result.tax_scope==='national_income_and_reconstruction_tax_only'&&<p>{say('此结果仅为日本2026年度国家所得税及复兴特别所得税，不含住民税、事业税。扣除予定纳税通知金额不代表该税款已缴清，欠税另行处理。','This result covers Japan 2026 national income and reconstruction tax only, excluding local inhabitant and enterprise taxes. Deducting notified estimated tax does not mean it has been paid; arrears remain separate.')}</p>}
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{key==='balance_due'&&result.result.tax_scope==='national_income_and_reconstruction_tax_only'?say('本次国家税应补／退额（予定纳税欠税另计）','National return balance (estimated-tax arrears separate)'):label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
+      {!!result.result.tokyo_local && <TokyoLocalResult result={result.result} index={index} />}
       {!!result.result.personal_basis_reconciliation && <section aria-label={say('印尼个人所得税税基核对','Indonesia personal basis reconciliation')}>
         <h4>{say('印尼个人所得税税基核对','Indonesia personal basis reconciliation')}</h4>
         <dl>{([
