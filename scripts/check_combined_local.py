@@ -9,6 +9,14 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 
+def checks_pass(checks):
+    """A report with unresolved domain citations cannot satisfy integration acceptance."""
+    return (checks.get('report_frozen') is True
+            and checks.get('fsie_locators') == 21
+            and checks.get('missing_domain_citations') == 0
+            and checks.get('reload') is True)
+
+
 def main():
     from scripts.combined_runtime import knowledge_server
     from packages.chat.service import ChatService
@@ -42,8 +50,9 @@ def main():
                 results['checks']['evidence_reads'] = report['budget'].get('evidence', 0)
                 results['checks']['current_entities'] = [e[0] for e in report['outcome']['structure']['entities']]
                 results['checks']['missing_domain_citations'] = len(report['missing_locators'])
+                results['checks']['missing_domain_locators'] = report['missing_locators']
                 results['checks']['reload'] = store.get(owner, doc['id'])['revision'] == doc['revision']
-                results['status'] = 'passed' if results['checks']['report_frozen'] and results['checks']['fsie_locators'] == 21 and results['checks']['reload'] else 'failed'
+                results['status'] = 'passed' if checks_pass(results['checks']) else 'failed'
             finally: store.engine.dispose()
     print(json.dumps(results, ensure_ascii=False))
     return 0 if results['status'] == 'passed' else 1

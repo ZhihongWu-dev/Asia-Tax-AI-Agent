@@ -20,7 +20,8 @@
         "local-cross-module-regression-20261119.json",
         "optimizer-final-validation-20261119.json",
         "local-regression-after-reconciliation-20261119.json",
-        "local-regression-personal-reconciliation-20261119.json"
+        "local-regression-personal-reconciliation-20261119.json",
+        "local-domain-citation-filter-fix-20261119.json"
       ],
       "limits": "121 browser tests, complete v5 golden/checker suite and offline backend regression. Real hosted authentication/provider end-to-end acceptance is not established. Original/v4 comparison jobs remain live."
     },
@@ -133,7 +134,8 @@
     "japan_tokyo_api": "1651 income/report tests plus19 final focused cases passed; Tokyo scoped backend workpaper saved/restarted/exported, UI pending",
     "japan_tokyo_ui": "1653 income/report cases passed at f979c2b; TypeScript and 3 targeted browser cases passed. Scoped Tokyo UI enabled; wider Japan local tax coverage remains incomplete.",
     "japan_tokyo_report": "29 focused backend/report tests, TypeScript and browser download/duplicate-ward/toggle scenario passed.",
-    "nested_sources": "1653 income/report tests passed;109 distinct source records verified recursively across33 observed policies;0 unresolved."
+    "nested_sources": "1653 income/report tests passed;109 distinct source records verified recursively across33 observed policies;0 unresolved.",
+    "domain_report_citations": "Real loopback/pinned engine report resolved8previously filtered guidance/treaty citations;0missing,24evidence reads.23 combined/gate tests passed."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

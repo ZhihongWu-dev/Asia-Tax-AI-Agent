@@ -1,0 +1,47 @@
+{
+  "status": "real_loopback_smoke_and_targeted_regression_passed",
+  "problem": "Domain report used kind=law for explicit citations, filtering7administrative guidance clauses and1treaty clause from the pinned library. Local acceptance script ignored its missing-domain-citation count.",
+  "changes": [
+    "Explicit domain-citation lookup now permits all document types within the same pinned library",
+    "Missing or nonzero unresolved-citation count fails the local acceptance command",
+    "Acceptance output includes unresolved locator identifiers for diagnosis"
+  ],
+  "before": {
+    "exit_code": 1,
+    "missing_domain_citations": 8,
+    "evidence_reads": 16,
+    "report_frozen": true,
+    "reload": true
+  },
+  "after": {
+    "exit_code": 0,
+    "missing_domain_citations": 0,
+    "evidence_reads": 24,
+    "fsie_locators": 21,
+    "report_frozen": true,
+    "reload": true
+  },
+  "missing_before": [
+    "cn.gsh.2009-81#i3",
+    "cn.sta.2018-09#i2",
+    "cn.sta.2018-09#i3",
+    "cn.sta.2018-09#i4",
+    "cn.sta.2018-53#i11",
+    "cn.sta.2018-53#i3",
+    "cn.sta.2019-35#3",
+    "treaty.cn-hk.2006.zh#10.2"
+  ],
+  "validation": {
+    "acceptance_failure_cases": {
+      "passed": 6,
+      "seconds": 0.56
+    },
+    "combined_orchestration_and_gate": {
+      "passed": 23,
+      "seconds": 134.27,
+      "exit_code": 0
+    }
+  },
+  "scope": "Synthetic holding scenario; real loopback knowledge HTTP, pinned engine and isolated SQLite. No model called. Fixture ruling reader does not prove hosted corpus availability. Source display/model permissions, date and hash checks unchanged.",
+  "delivery": "Local only"
+}

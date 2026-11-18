@@ -27,6 +27,8 @@ def build_report(doc, owner, provider, partial):
         # An explicitly requested report has one 45 s budget for at most
         # seven FSIE parents, seven ruling blocks, and 21 domain references.
         # Larger bibliographies retain explicit gaps instead of unbounded reads.
+        # Exact domain citations can name treaties or administrative guidance as
+        # well as legislation. Keep them in the pinned library, without a type filter.
         bundle = None
         for start in range(0, min(len(references), 21), 7):
             part = retrieve(scoped_provider, SearchRequest(
@@ -35,7 +37,7 @@ def build_report(doc, owner, provider, partial):
                 deadline_ms=10000,
                 applicable_date=date.fromisoformat(doc['domain_case']['event']['on']),
                 date_status='planned' if outcome['mode'] == 'plan_structure' else 'actual',
-                locators=references[start:start + 7], kind='law'), TrustedContext(owner=owner, case_id=doc['id']))
+                locators=references[start:start + 7], kind='all'), TrustedContext(owner=owner, case_id=doc['id']))
             if bundle is None:
                 bundle = part
             else:
