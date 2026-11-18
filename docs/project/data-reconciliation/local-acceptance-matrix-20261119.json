@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only. No cloud upload, remote push or main merge.",
+  "overall_status": "not_complete",
+  "requirements": [
+    {
+      "requirement": "Integrate Li data with the existing main-based application",
+      "state": "local_integration_verified_with_limits",
+      "evidence": [
+        "catalog-delivery-sqlite-parity-20261118.json",
+        "catalog-delivery-validation-20261118.json",
+        "income-source-archive-closure-20261119.json"
+      ],
+      "limits": "Current local artifacts and exact parity evidence; no cloud catalog migration is authorized or claimed."
+    },
+    {
+      "requirement": "Retain current application and integrate Li planning functions",
+      "state": "local_regression_passed",
+      "evidence": [
+        "local-cross-module-regression-20261119.json",
+        "optimizer-final-validation-20261119.json"
+      ],
+      "limits": "121 browser tests, complete v5 golden/checker suite and offline backend regression. Real hosted authentication/provider end-to-end acceptance is not established. Original/v4 comparison jobs remain live."
+    },
+    {
+      "requirement": "Corporate and personal income tax across all 11 dividend jurisdictions",
+      "state": "representative_workflows_verified_not_country_wide_acceptance",
+      "jurisdictions": [
+        "cn",
+        "hk",
+        "sg",
+        "id",
+        "vn",
+        "my",
+        "th",
+        "ae",
+        "jp",
+        "kr",
+        "in"
+      ],
+      "evidence": [
+        "income-workflow-availability-20261119.json",
+        "local-cross-module-regression-20261119.json"
+      ],
+      "limits": "The static policy inventory is historical and narrower than current runtime; browser tests cover representative workflows, not every income type, residency, special regime or filing obligation."
+    },
+    {
+      "requirement": "Preserve cases, ownership, calculations and reports across retries and restarts",
+      "state": "local_tests_passed",
+      "evidence": [
+        "assessment-upgrade-replay-20261119.json",
+        "income-report-export-20261119.json",
+        "local-cross-module-regression-20261119.json"
+      ],
+      "limits": "SQLite/fixture-auth and prior isolated PostgreSQL storage evidence do not establish real user sign-in acceptance."
+    },
+    {
+      "requirement": "Source-version traceability for every substantive calculation",
+      "state": "incomplete",
+      "evidence": [
+        "income-source-archive-closure-20261119.json",
+        "singapore-employment-review-20261118.json",
+        "china-business-review-20261118.json"
+      ],
+      "limits": "All 74 manifest references and 11 literal inline hashes have archived matching files; dynamically composed and URL-only citations need further work. Singapore employment relief pages can be read through web research but a direct archival batch failed with HTTP403; no original snapshots admitted."
+    },
+    {
+      "requirement": "Repeated validation until actual business requirements are met",
+      "state": "not_proven",
+      "evidence": [
+        "local-cross-module-regression-20261119.json",
+        "income-business-scope-audit-20261119.json"
+      ],
+      "limits": "Business cases/expected outcomes requested from user and pending. Known gaps include Japanese local taxes, mixed-income and special-regime coverage, and Vietnam combined foreign-credit/annual-relief ordering. Do not replace these gates with test counts."
+    }
+  ],
+  "latest_checks": {
+    "backend": "2496 passed, 4 environment skips, 27 integration deselections; exit 0",
+    "browser": "121 passed, zero skips; exit 0",
+    "korean_archive": "1 targeted test passed after backend collection; 14 exact originals, 12 newly restored"
+  },
+  "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
+}

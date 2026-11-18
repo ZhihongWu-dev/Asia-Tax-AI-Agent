@@ -16,6 +16,16 @@ that unresolved business rules have been accepted.
 
 ## Local income-tax reconciliation checkpoint (2026-11-19)
 
+The latest cross-module regression completed: 2,496 backend tests passed, four
+environment-dependent tests skipped, and 27 live-integration tests deselected.
+The complete browser suite passed all 121 tests without skips, using the pinned
+engine. Twelve Korean source originals omitted from the deliverable were
+restored byte-for-byte from the reviewed local cache; the archive check passed.
+See [cross-module evidence](data-reconciliation/local-cross-module-regression-20261119.json)
+and the [current acceptance matrix](data-reconciliation/local-acceptance-matrix-20261119.json).
+The matrix retains unresolved business, source-version and real-account gates;
+these regression results do not establish full business acceptance.
+
 Subsequent local commits added separate Hong Kong property assessment and
 salary/rental schedule boundaries (`81277cb`), followed by Chinese ordinary and
 small-company income/exclusion/deduction/loss reconciliation (`6f4f844`). The
