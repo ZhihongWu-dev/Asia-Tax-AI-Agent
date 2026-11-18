@@ -1,0 +1,18 @@
+{
+  "status": "read_only_preflight_passed_not_applied",
+  "snapshot": {
+    "spec_version": "2026-11-10",
+    "tools_commit": "86a72567dcb12b6fefefa83372201b8d05076ea3 (tools changed since)",
+    "uploaded_at": "2026-11-13T03:39:52Z",
+    "overlay_bundle_sha256": "edde47909d21fe68755b0eb06c712c8e951fe448ba24feb03aadb751189ef987",
+    "review_sha256": "13f50d553fd845dc59bd5ce72805f21db1452a77f25f9e10ab023728ad0d9e5e"
+  },
+  "verified_operations": 404,
+  "catalog_revision": "fc57aad752dc5bcd9b53c2af4ed51037e2291e3bd4edaf47e596afb57362f383",
+  "scope": "operation_targets_only",
+  "source_admission": "pending; row guards do not approve sources",
+  "checks": [
+    "all 404 before-state guards matched one read-only snapshot",
+    "simulated targets matched all 404 planned operations"
+  ]
+}
