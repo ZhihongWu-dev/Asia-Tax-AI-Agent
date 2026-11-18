@@ -1,0 +1,37 @@
+{
+  "url": "https://hoacuong.danang.gov.vn/documents/1167655/3572051/1264.%2B517_20032026_143419.pdf/e233de88-f66a-01a7-1afb-80f9dc3cba52?t=1775032148560",
+  "landing_url": "https://hoacuong.danang.gov.vn/vi/w/ttrien-khai-quyet-dinh-so-517-qd-btc-ngay-20-03-2026-cua-bo-tai-chinh",
+  "file": "database/raw/vn/vn.decision517-2026-correction.vi.pdf",
+  "sha256": "5222ac20dba21b1537bdfc8d04e92daa2cbd0097888e2e7126be34cb054bbe52",
+  "pages": 2,
+  "status": "visual_review_complete_archived_not_registered",
+  "original_mof_download": "SSL EOF; no downloaded original ministry file available for byte comparison",
+  "decision_date": "2026-03-20",
+  "effective_from": "2026-03-20",
+  "visual_reviewed_pages": [
+    1,
+    2
+  ],
+  "corrections": [
+    {
+      "target": "Article20(1)(a)",
+      "change": "Replace reference to this Law with this Decree."
+    },
+    {
+      "target": "Article23(10)",
+      "change": "Correct cross-reference from Article18(1) to Article18(2)."
+    },
+    {
+      "target": "Article24(2) introductory heading",
+      "change": "Clarify replacement concerns corporate income tax policies in the following decrees."
+    }
+  ],
+  "article12_2_changed_by_this_decision": false,
+  "scope_limit": "This review only establishes scope of Decision517; it does not prove absence of all later amendments or complete foreign-credit eligibility.",
+  "remaining": [
+    "Review Decree141/2026 and other amendments affecting Article12 application",
+    "Verify implementing Circular20/2026 evidence and filing requirements",
+    "Review each of the10 covered Vietnam treaty routes",
+    "Implement project-specific period, payment/supplemental-filing and top-up-credit rules"
+  ]
+}

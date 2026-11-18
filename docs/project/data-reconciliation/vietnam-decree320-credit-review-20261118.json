@@ -58,5 +58,11 @@
       "Per-foreign-project recognition and domestic-loss separation"
     ],
     "decision": "Do not flip credit_underlying globally or treat source rebinding as full credit repair. Update treaty and non-treaty eligibility separately and extend calculation inputs where existing booleans cannot represent the law."
+  },
+  "corrigendum_review": {
+    "artifact": "vietnam-decision517-review-20261118.json",
+    "decision": "517/QD-BTC dated2026-03-20",
+    "article12_2_modified": false,
+    "limits": "Other amendments and implementing rules still require review."
   }
 }
