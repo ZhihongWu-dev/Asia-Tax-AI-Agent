@@ -9,7 +9,7 @@
     19,
     21
   ],
-  "open_issue": "General instructions require country and income-type separation; Part 3 describes country grouping. Resolve before final limitation algorithm.",
+  "open_issue": "Grouping clarified by Thai Part3 and multi-income example: retain income-type detail for source-tax attribution, then country totals for limitation. Treaty-specific entitlement and source-rate caps remain separate validation.",
   "next_steps": [
     "Reconcile original earnings and remittance amounts in saved-case adapter",
     "Verify DTA entitlement and source-country tax caps",
@@ -22,11 +22,32 @@
     21
   ],
   "implementation": "packages/income_tax/thailand_foreign_credit.py",
-  "tests": "71 passed in 1.94s: attribution, remittance classification and ordinary Thai tax regressions",
-  "publication_status": "Arithmetic component only; not exposed as final assessment",
+  "tests": "86 passed in 1.56s: attribution, country caps, remittance classification and ordinary Thai tax regressions",
+  "publication_status": "Attribution and country-limit components implemented; saved-case eligibility, FX verification and public assessment/UI integration remain incomplete",
   "github_reference": {
     "url": "https://github.com/openfisca/country-template",
     "use": "Country-specific explicit policy inputs and isolated calculation tests; no code copied or dependency introduced",
     "license_review": "Repository license and issue listing inspected; no external code adopted"
+  },
+  "thai_original": {
+    "url": "https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_TH.pdf",
+    "sha256": "28a510f86b507e4f1877fe1f5a3d00b457f6f2212692abf3956283ae033107fe",
+    "pages": 28,
+    "visual_reviewed_pdf_pages": [
+      24,
+      26
+    ]
+  },
+  "arithmetic_discrepancies": {
+    "location": "Thai PDF page26-27 example2",
+    "vn_stated_formula": "750000 * 318750 / 1975000",
+    "vn_printed_limit": "121004.30",
+    "vn_formula_result_rounded_for_comparison": "121044.30",
+    "cn_formula_result_rounded_for_comparison": "36313.29",
+    "cn_allowed_credit": "22500.00",
+    "printed_total_credit": "143554.30",
+    "sum_of_printed_country_credits": "143504.30",
+    "formula_based_total_credit_rounded_for_comparison": "143544.30",
+    "decision": "Use stated formula with Decimal precision40; no rounding inside calculation. Preserve original as evidence, do not use inconsistent printed totals as golden expected values."
   }
 }

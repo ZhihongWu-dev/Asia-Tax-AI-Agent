@@ -6,6 +6,7 @@ converted THB amounts for the same country, income type and earnings pool.
 This arithmetic does not establish that the resulting tax is creditable.
 """
 from decimal import localcontext
+import re
 
 from .arithmetic import amount
 
@@ -40,3 +41,53 @@ def attribute_remitted_tax(*, total_foreign_income, foreign_income_tax_paid,
                     foreign_tax_attributable_to_remittance=attributable,
                     stage='foreign_tax_attribution_before_entitlement_and_credit_limit',
                     sources=[SOURCE])
+
+
+def country_credit_limits(countries, *, domestic_assessable_income,
+                          thai_tax_before_foreign_credit, tax_year,
+                          entitlement_and_basis_verified):
+    """Apply Part3 limits to already reviewed country totals, before rounding.
+
+    Every foreign assessable receipt belongs in a country's remitted income,
+    including receipts without credit entitlement. eligible_attributable_tax
+    must already exclude tax beyond treaty taxing rights, non-income taxes,
+    penalties and tax on excluded income. This function does not infer that
+    eligibility or calculate taxable income/expenses from gross receipts.
+    """
+    if type(tax_year) is not int or tax_year != 2026:
+        raise ValueError('This policy covers tax year2026 only')
+    if entitlement_and_basis_verified is not True:
+        raise ValueError('Verify treaty entitlement, source tax caps and complete assessable income')
+    if not isinstance(countries, (list, tuple)) or not 1 <= len(countries) <= 250:
+        raise ValueError('Provide complete foreign-country totals')
+    domestic, thai_tax = map(amount, (domestic_assessable_income, thai_tax_before_foreign_credit))
+    seen, inputs = set(), []
+    for row in countries:
+        if not isinstance(row, dict) or set(row) != {'country', 'remitted_assessable_income', 'eligible_attributable_tax'}:
+            raise ValueError('Each country requires remitted assessable income and eligible attributable tax')
+        country = row['country']
+        if not isinstance(country, str) or not re.fullmatch('[a-z]{2}', country) or country == 'th' or country in seen:
+            raise ValueError('Use distinct foreign-country codes')
+        seen.add(country)
+        income, paid = map(amount, (row['remitted_assessable_income'], row['eligible_attributable_tax']))
+        if income == 0 and paid != 0:
+            raise ValueError('Credit requires attributable assessable income')
+        inputs.append((country, income, paid))
+    with localcontext() as context:
+        context.prec = 40
+        total = domestic + sum((income for _, income, _ in inputs), amount(0))
+        if total == 0 and thai_tax != 0:
+            raise ValueError('Tax cannot be allocated without assessable income')
+        output = []
+        for country, income, paid in sorted(inputs):
+            limit = income * thai_tax / total if total else amount(0)
+            allowed = min(paid, limit)
+            output.append(dict(country=country, remitted_assessable_income=income,
+                               eligible_attributable_tax=paid, credit_limit=limit,
+                               allowable_foreign_credit=allowed, unused_foreign_tax=paid-allowed))
+        return dict(tax_year=tax_year, currency='THB', countries=output,
+                    total_assessable_income=total, domestic_assessable_income=domestic,
+                    thai_tax_before_foreign_credit=thai_tax,
+                    allowable_foreign_credit=sum((r['allowable_foreign_credit'] for r in output), amount(0)),
+                    stage='reviewed_country_credit_limits_before_rounding_and_settlement',
+                    sources=[SOURCE, 'https://www.rd.go.th/fileadmin/user_upload/porphor/GuideTaxFromAbroad_TH.pdf'])
