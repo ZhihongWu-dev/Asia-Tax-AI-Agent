@@ -16,6 +16,15 @@ that unresolved business rules have been accepted.
 
 ## Local income-tax reconciliation checkpoint (2026-11-19)
 
+Subsequent local commits added separate Hong Kong property assessment and
+salary/rental schedule boundaries (`81277cb`), followed by Chinese ordinary and
+small-company income/exclusion/deduction/loss reconciliation (`6f4f844`). The
+latter checkpoint passed 1,441 income-tax tests and three distinct focused
+browser cases. See [China evidence](data-reconciliation/china-company-reconciliation-20261119.json)
+and [Hong Kong evidence](data-reconciliation/hong-kong-property-validation-20261119.json).
+These are additional verified workflows, not proof that all mixed income,
+special regimes, local taxes or customer acceptance requirements are complete.
+
 Local commit `5e90699` requires a staged workpaper for Malaysian resident
 individual ordinary assessment. The API checks the supplied chargeable income
 and saved deduction summary against the workpaper. Prior business losses cannot

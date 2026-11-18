@@ -1,5 +1,14 @@
 # Li integration and income-tax execution record
 
+## Current delivery override (2026-11-19)
+
+The user's latest instruction retains Li integration and corporate/personal
+income-tax business acceptance, but requires local-only delivery. Do not upload
+to cloud services, push any remote branch (including Zhihong-Wu), modify cloud
+databases, or merge/push to main. The historical delivery and deployment actions
+below are superseded. Preserve the full functional acceptance scope locally;
+local fixtures do not establish real-account or customer business acceptance.
+
 ## Authorized outcome
 
 Deliver to `Zhihong-Wu`, not directly to `main`. Preserve the current application framework and integrate Li data, rules, optimization and report functionality. Corporate and personal income tax must both cover cn, hk, sg, id, vn, my, th, ae, jp, kr and in. Corporate work comes first; personal income tax is not optional. User approved implementation and disabled brainstorming.

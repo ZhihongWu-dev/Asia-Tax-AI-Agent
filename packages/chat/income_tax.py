@@ -6,6 +6,27 @@ from packages.contracts.income_tax import IncomeTaxCase
 from packages.chat.store import RevisionConflict
 
 
+def _same_request_after_defaults_added(run, request, basis):
+    """Compare old basis data using current defaults without rewriting the run.
+
+    First verify the stored request's own digest. A schema upgrade may add an
+    optional field, but must not excuse a different revision, changed amount,
+    unknown field or inconsistent historical request.
+    """
+    from pydantic import ValidationError
+    if run.get('input_revision') != request['revision']:
+        return False
+    historical = {'revision': run['input_revision'], 'basis': run.get('basis')}
+    historical_digest = sha256(json.dumps(historical, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+    if historical_digest != run['request_hash']:
+        return False
+    try:
+        normalized = type(basis).model_validate(deepcopy(historical['basis'])).model_dump(mode='json')
+    except ValidationError:
+        return False
+    return normalized == request['basis']
+
+
 def view(doc):
     return {"id": doc["id"], "revision": doc["revision"], "income_tax": doc.get("income_tax"),
             "income_tax_status": doc.get("income_tax_status", "not_started"),
@@ -57,7 +78,7 @@ after an intervening edit. Claims are explicitly scoped to the supplied basis.
     runs = doc.setdefault('income_tax_runs', [])
     for run in runs:
         if run['request_id'] == request_id:
-            if run['request_hash'] != digest:
+            if run['request_hash'] != digest and not _same_request_after_defaults_added(run, request, basis):
                 raise WorkflowError('request_payload_conflict')
             return deepcopy(run)
     if doc['revision'] != revision:

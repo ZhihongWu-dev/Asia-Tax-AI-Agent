@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-19",
+  "delivery": "Local only; no cloud upload, remote push or main merge.",
+  "problem": "Adding default fields to assessment contracts changed normalized request hashes, so replay of an otherwise identical pre-upgrade run incorrectly raised request_payload_conflict.",
+  "reproduction": "New historical-run regression failed before implementation: pre-upgrade CNCompany omitted non_taxable_income and exempt_income, while current request normalization inserted zero defaults.",
+  "change": "If hashes differ, first verify the stored original request digest and input revision, then compare the historical basis normalized under the current request model. Return the unchanged historical run only if equivalent. No recalculation, rewriting, or restoration of invalidated current results.",
+  "research": "https://github.com/pydantic/pydantic/blob/main/docs/concepts/serialization.md",
+  "validation": {
+    "focused": "26 passed in 6.52 seconds",
+    "complete_income_suite": "1448 passed in 24.38 seconds; exit 0",
+    "diff_check": "passed"
+  },
+  "covered": [
+    "Real SQLite close/reopen",
+    "Intervening case edit keeps current result invalidated",
+    "Missing or explicitly zero new default fields",
+    "Changed amount or input revision still conflicts",
+    "Owner boundary preserved",
+    "Inconsistent stored request digest rejected",
+    "Original run and case document remain unchanged"
+  ],
+  "limits": [
+    "This is local fixture-based persistence validation, not real hosted login acceptance.",
+    "A schema change that makes historical basis data invalid still rejects the replay; no speculative migration of unknown fields.",
+    "No tax calculation or customer business acceptance is established by replay tests."
+  ],
+  "file_sha256": {
+    "packages/chat/income_tax.py": "44ed0cf9ed72a4ffb09c213f144ac76fa22a92f5fbc5141dbd76802b01a23f28",
+    "tests/income_tax/test_assessment_upgrade_replay.py": "8c1e5ba274fcfa9bf55198a601b20a1b1806388e95c7fcf0a17edb4bdfb3c11a"
+  }
+}
