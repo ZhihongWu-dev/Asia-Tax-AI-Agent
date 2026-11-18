@@ -1,3 +1,4 @@
+import {transferAmounts,transferChecks} from '../src/china-personal-foreign-assessment';
 import {cnForeignChecks,cnForeignAmounts} from '../src/china-foreign-assessment';
 import {tokyoAmounts,tokyoChecks} from '../src/japan-tokyo-assessment';
 import { test, expect } from '@playwright/test';
@@ -1009,18 +1010,25 @@ for(const method of ['per_country','pooled','pooled_with_prior_country'])test(`C
   await expect(page.getByRole('region',{name:'Foreign credit details',exact:true})).toContainText('2021');
 });
 
-test('China personal foreign mixed income saves reopens and exports credit history',async({page})=>{
+for(const withTransfers of [false,true])test(`China personal foreign mixed income transfers=${withTransfers} saves reopens and exports credit history`,async({page})=>{
   test.setTimeout(60000);
   const form=await openIncome(page);
   await form.getByRole('combobox',{name:'Taxpayer',exact:true}).selectOption('individual');
   await form.getByRole('combobox',{name:'Tax residency',exact:true}).selectOption('resident');
-  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Claimed deductions (blank if unknown)','0'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+  for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Claimed deductions (blank if unknown)',withTransfers?'2600':'0'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
   for(let i=0;i<3;i++)await form.getByRole('button',{name:'Add income',exact:true}).click();
   for(const [n,category,country,gross,tax] of [[0,'employment','cn','60000','0'],[1,'employment','sg','40000','1500'],[2,'interest','sg','10000','500'],[3,'business','hk','30000','500']] as const){
     const row=form.getByRole('group',{name:`Income ${n+1}`,exact:true});
     await row.getByRole('combobox',{name:'Income category',exact:true}).selectOption(category);
     await row.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption(country);
     for(const [name,value] of [['Gross income',gross],['Foreign tax paid (blank if unknown)',tax],['Income description','Verified ordinary gross CNY income']])await row.getByLabel(name,{exact:true}).fill(value);
+  }
+  if(withTransfers)for(let n=4;n<6;n++){
+    await form.getByRole('button',{name:'Add income',exact:true}).click();
+    const row=form.getByRole('group',{name:`Income ${n+1}`,exact:true});
+    await row.getByRole('combobox',{name:'Income category',exact:true}).selectOption('capital_gain');
+    await row.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption('sg');
+    for(const [name,value] of [['Gross income','1000'],['Foreign tax paid (blank if unknown)','0'],['Income description','One ordinary sale with verified source and gross proceeds']])await row.getByLabel(name,{exact:true}).fill(value);
   }
   await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
   await expect(form.getByRole('status')).toHaveText('Income-tax details saved.');
@@ -1037,13 +1045,22 @@ test('China personal foreign mixed income saves reopens and exports credit histo
   await calc.getByLabel('Singapore: Excess 1 origin year',{exact:true}).fill('2021');
   await calc.getByLabel('Singapore: Excess 1 amount',{exact:true}).fill('1000');
   for(const name of ['Ordinary categories and no special treatment verified','Sources, FX, deductions and losses verified','Paid-tax evidence and history verified'])await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+  if(withTransfers)for(const n of [4,5]){
+    for(const [key,,label] of transferAmounts)await calc.getByLabel(`Transfer income ${n+1}: ${label}`,{exact:true}).fill(key==='original_cost'?(n===4?'400':'2000'):key==='reasonable_transfer_expenses'?'100':'0');
+    for(const [,,label] of transferChecks)await calc.getByRole('combobox',{name:`Transfer income ${n+1}: ${label}`,exact:true}).selectOption('true');
+  }
   await calc.getByLabel('Prepaid tax for this period',{exact:true}).fill('3000');
   await calc.getByLabel('Tax-basis adjustments and eligibility explanation',{exact:true}).fill('Verified source allocations, ordinary category taxes and historical paid-tax records.');
   await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
   const result=calc.getByRole('article',{name:'Saved calculation result'});
   await expect(result).toContainText('-1112');
   const detail=result.getByRole('region',{name:'Personal foreign credit details',exact:true});
-  await expect(detail).toContainText('2592');await expect(detail).toContainText('408');
+  await expect(detail).toContainText(withTransfers?'2692':'2592');await expect(detail).toContainText(withTransfers?'308':'408');
+  if(withTransfers){
+    const transfers=result.getByRole('region',{name:'Property transfer details',exact:true});
+    await expect(transfers).toContainText('1100');
+    await expect(transfers).toContainText('100.0');
+  }
   await expect(detail).not.toContainText('undefined');
   const download=page.waitForEvent('download');await result.getByRole('button',{name:'Download calculation record'}).click();
   const record=await readFile((await (await download).path())!,'utf8');

@@ -1,0 +1,23 @@
+{
+  "status": "scoped_transfer_ui_verified",
+  "validation": {
+    "typescript_exit_code": 0,
+    "browser_passed": 2,
+    "seconds": 38.3,
+    "exit_code": 0
+  },
+  "verified": [
+    "Transfer rows derive from saved income indices",
+    "Original cost, expenses, donation, reductions and verification fields submitted",
+    "Profitable and loss-making transactions displayed separately",
+    "SG country cap2692 and historical expiry308 in mixed transfer case",
+    "No-transfer path retains cap2592 and expiry408",
+    "Saved result reopened and downloaded record retains sources"
+  ],
+  "scope": "Ordinary20percent verified transactions; not special securities/real-estate exemption eligibility or complete business acceptance.",
+  "remaining": [
+    "Readable per-transaction export tables",
+    "More income classes and actual business cases"
+  ],
+  "delivery": "Local only; no cloud upload, remote push or main merge."
+}
