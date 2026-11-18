@@ -18,6 +18,10 @@ promotion remain incomplete.
   (`ERR_NO_BUFFER_SPACE`); the preserved trace shows the subsequent preamble
   error. Both Thai dividend elections then passed three times each (six checks)
   without code changes or retries. This is not recorded as a green full run.
+  The subsequent complete single-worker browser run passed all 119 cases in
+  11.9 minutes with zero retries. It used the same scenarios and assertions;
+  the earlier failed run remains recorded. The source-reader transaction change
+  made during that run is supported separately by focused/PostgreSQL tests.
 - The income-tax suite now passes 1,406 tests (23.46 seconds). Vietnam ordinary
   business and property rental have saved-case APIs and bilingual intake/results.
   The 59-test income browser regression passed before rental UI integration;

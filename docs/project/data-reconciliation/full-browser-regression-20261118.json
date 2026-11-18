@@ -14,6 +14,7 @@
   },
   "targeted_reproduction": {"command": "npx --no-install playwright test tests/income-tax.spec.ts -g 'Thailand dividends save and reopen' --repeat-each=3 --workers=2", "passed": 6, "failed": 0, "seconds": 58.0, "exit_code": 0},
   "product_changes": "None; no ignored exception, automatic retry, modified expectation or tax formula change.",
+  "full_single_worker_followup": {"implementation_commit_at_start": "348d067", "command": "npx --no-install playwright test --workers=1", "passed": 119, "failed": 0, "duration": "11.9m", "exit_code": 0, "retries": 0, "note": "Same browser scenarios and assertions, reduced concurrent browser load. The later source-reader transaction change has separate focused and PostgreSQL validation; this running browser process was not restarted to include that change."},
   "limits": "Local fixture authentication, deterministic provider and SQLite. Targeted passes do not rewrite the failed full-run result or prove hosted acceptance.",
   "completion_claim": false
 }
