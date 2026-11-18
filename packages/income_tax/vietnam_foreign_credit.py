@@ -11,6 +11,42 @@ from decimal import Decimal, localcontext
 from .arithmetic import amount
 
 
+def dividend_underlying_credit(*, source_country, qualifying_holding_percent,
+        dividend_before_withholding, distributing_profit_after_tax,
+        corporate_tax_paid_on_profit, vietnam_tax_limit,
+        corporate_recipient_and_pool_verified, treaty_and_vietnam_basis_verified):
+    """Cap the attributed underlying component without rounding it first.
+
+    The limit must refer to the Vietnamese tax attributable to this dividend
+    and its legally established inclusion basis. No gross-up is inferred here.
+    This returns only underlying credit; it does not independently grant a second
+    cap to any other credit claimed on the same income.
+    """
+    if treaty_and_vietnam_basis_verified is not True:
+        raise ValueError('Treaty entitlement and Vietnam same-income tax basis must be verified')
+    limit = amount(vietnam_tax_limit)
+    attribution = dividend_underlying_tax(source_country=source_country,
+        qualifying_holding_percent=qualifying_holding_percent,
+        dividend_before_withholding=dividend_before_withholding,
+        distributing_profit_after_tax=distributing_profit_after_tax,
+        corporate_tax_paid_on_profit=corporate_tax_paid_on_profit,
+        corporate_recipient_and_pool_verified=corporate_recipient_and_pool_verified)
+    if attribution['dividend_before_withholding'] == 0 and limit != 0:
+        raise ValueError('Zero dividend cannot have a positive same-income tax limit')
+    # Attribution is already validated Decimal arithmetic. Do not pass this
+    # internal repeating fraction through the six-place external-input parser.
+    with localcontext() as context:
+        context.prec = 40
+        underlying = attribution['attributable_underlying_tax']
+        allowed = min(underlying, limit)
+        return dict(attribution,
+            policy_version='vn-dividend-underlying-credit-2026-11-18',
+            vietnam_tax_limit=limit, allowed_underlying_credit=allowed,
+            underlying_tax_exceeding_limit=underlying-allowed,
+            remaining_same_income_credit_limit=limit-allowed,
+            stage='underlying_credit_before_assessment_rounding')
+
+
 def dividend_underlying_tax(*, source_country, qualifying_holding_percent,
         dividend_before_withholding, distributing_profit_after_tax,
         corporate_tax_paid_on_profit, corporate_recipient_and_pool_verified):

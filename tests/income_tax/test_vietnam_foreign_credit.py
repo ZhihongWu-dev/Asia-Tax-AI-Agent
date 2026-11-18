@@ -5,6 +5,7 @@ import pytest
 from packages.income_tax.vietnam_foreign_credit import additional_top_up_credit, indonesia_deemed_credit
 from packages.income_tax.vietnam_foreign_credit import singapore_interest_royalty_credit
 from packages.income_tax.vietnam_foreign_credit import dividend_underlying_tax
+from packages.income_tax.vietnam_foreign_credit import dividend_underlying_credit
 
 
 def calculate(**changes):
@@ -175,3 +176,39 @@ def test_zero_distribution_and_zero_pool_tax():
 def test_underlying_rejects_wrong_treaty_threshold_or_unmatched_pool(changes):
     with pytest.raises(ValueError):
         underlying(**changes)
+
+
+def capped_underlying(**changes):
+    args = dict(source_country='hk', qualifying_holding_percent='10',
+        dividend_before_withholding='1', distributing_profit_after_tax='3',
+        corporate_tax_paid_on_profit='1', vietnam_tax_limit='1',
+        corporate_recipient_and_pool_verified=True, treaty_and_vietnam_basis_verified=True)
+    args.update(changes)
+    return dividend_underlying_credit(**args)
+
+
+def test_repeating_underlying_allocation_flows_into_credit_without_six_place_rounding():
+    with localcontext() as context:
+        context.prec = 3
+        result = capped_underlying()
+    assert result['allowed_underlying_credit'] == Decimal('0.' + '3'*40)
+    assert result['remaining_same_income_credit_limit'] == Decimal('0.' + '6'*39 + '7')
+    assert result['underlying_tax_exceeding_limit'] == 0
+
+
+def test_partial_underlying_credit_does_not_create_a_second_tax_cap():
+    result = capped_underlying(vietnam_tax_limit='0.2')
+    assert result['allowed_underlying_credit'] == Decimal('0.2')
+    assert result['remaining_same_income_credit_limit'] == 0
+    assert result['underlying_tax_exceeding_limit'] == Decimal('0.1' + '3'*39)
+    assert 'final_tax' not in result
+
+
+@pytest.mark.parametrize('changes', [
+    {'treaty_and_vietnam_basis_verified': False}, {'treaty_and_vietnam_basis_verified': 1},
+    {'vietnam_tax_limit': '0.0000001'}, {'vietnam_tax_limit': '-1'},
+    {'dividend_before_withholding': '0'},
+])
+def test_capped_underlying_requires_valid_established_tax_limit(changes):
+    with pytest.raises(ValueError):
+        capped_underlying(**changes)
