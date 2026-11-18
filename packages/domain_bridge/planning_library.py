@@ -103,6 +103,14 @@ class PlanningLibrary:
     def absences(self):
         return deepcopy(self._tables['decision'])
 
+    def find_absence(self, jur, subject, slot):
+        """Preserve first-match order while copying only the selected record."""
+        for row in self._tables['decision']:
+            if (row.get('jur') == jur and row.get('slot') == slot
+                    and row.get('subject') in (subject, 'all')):
+                return deepcopy(row)
+        return None
+
     def version_metadata(self):
         return deepcopy(self._version)
 

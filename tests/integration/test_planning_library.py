@@ -99,3 +99,27 @@ def test_reversed_duplicate_treaty_is_rejected():
     seal(changed)
     with pytest.raises(ValueError, match='treaty_pair_duplicate'):
         PlanningLibrary(changed, expected_version=PIN)
+
+
+@pytest.mark.parametrize('subjects', [('all', 'company'), ('company', 'all')])
+def test_absence_lookup_preserves_order_scope_and_detachment(subjects):
+    original = bundle()
+    rows = [dict(id=str(i), jur='cn', subject=subject, slot='cfc',
+                 cite_id='cn.law#1', statement='No charge', extra={'notes': ['original']})
+            for i, subject in enumerate(subjects)]
+    original['tables']['decision'] = rows
+    original['table_sha256']['decision'] = digest(rows)
+    seal(original)
+    lib = PlanningLibrary(original, expected_version=PIN)
+    for jur in ['cn', 'sg']:
+        for subject in ['company', 'individual', 'all']:
+            for slot in ['cfc', 'exit']:
+                expected = next((r for r in rows if r['jur'] == jur and r['slot'] == slot
+                                 and r['subject'] in (subject, 'all')), None)
+                assert lib.find_absence(jur, subject, slot) == expected
+    result = lib.find_absence('cn', 'company', 'cfc')
+    result['extra']['notes'].clear()
+    rows[0]['statement'] = 'changed input'
+    lib.absences.clear()
+    assert lib.find_absence('cn', 'company', 'cfc')['extra']['notes'] == ['original']
+    assert lib.find_absence('cn', 'company', 'cfc')['statement'] == 'No charge'

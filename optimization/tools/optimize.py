@@ -483,6 +483,11 @@ class Optimizer:
         return copy.deepcopy(items)
 
     def absence(self, jur, subject, slot):
+        lookup = getattr(self.lib, "find_absence", None)
+        if callable(lookup):
+            a = lookup(jur, subject, slot)
+            return ({"absence_record": a["id"], "cite_id": a.get("cite_id"),
+                     "statement": a.get("statement")} if a is not None else None)
         for a in self.lib.absences:
             if a.get("jur") == jur and a.get("slot") == slot and a.get("subject") in (subject, "all"):
                 return {"absence_record": a["id"], "cite_id": a.get("cite_id"), "statement": a.get("statement")}
