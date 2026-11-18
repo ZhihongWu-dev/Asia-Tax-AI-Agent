@@ -55,6 +55,28 @@ DOCS = {"数据库规范.md": "docs/spec.zh.md", "database_spec.en.md": "docs/sp
 NOTES = ("STATUS.md", "session_log.md")    # the folder's status and session record, under the same names in the bucket
 
 
+BLOCKED_FIELDS = ("id", "jur", "title", "url", "reason", "alt_tried", "logged_at")
+
+
+def collection_log_payload(path, jurisdictions):
+    """Validate before any remote write; a missing log is not an empty log."""
+    with Path(path).open(encoding="utf-8-sig", newline="") as source:
+        reader = csv.DictReader(source, strict=True)
+        if (reader.fieldnames is None or len(reader.fieldnames) != len(BLOCKED_FIELDS)
+                or set(reader.fieldnames) != set(BLOCKED_FIELDS)):
+            raise ValueError("invalid collection-failure log header")
+        rows = list(reader)
+    if any(None in row or any(v is None for v in row.values())
+           or not row['id'].strip() or not row['jur'].strip() for row in rows):
+        raise ValueError("invalid collection-failure log row")
+    selected = [row for row in rows if set(row['jur'].split('-')) & set(jurisdictions)]
+    output = io.StringIO()
+    writer = csv.DictWriter(output, fieldnames=BLOCKED_FIELDS, lineterminator="\n")
+    writer.writeheader()
+    writer.writerows(selected)
+    return output.getvalue().encode('utf-8-sig'), len(selected)
+
+
 def clean(msg, secrets):
     for s in secrets:
         if s:
@@ -238,20 +260,18 @@ def main():
     w = csv.DictWriter(buf, fieldnames=build.SUPERSEDED, extrasaction="ignore", lineterminator="\n")
     w.writeheader()
     w.writerows(superseded)
-    blocked_rows = build.read_csv(ROOT / "blocked.csv") if (ROOT / "blocked.csv").exists() else []
-    blocked = [r for r in blocked_rows if set(r["jur"].split("-")) & set(ok_jurs)]     # a pair row goes with either side
-    bbuf = io.StringIO()
-    w = csv.DictWriter(bbuf, fieldnames=["id", "jur", "title", "url", "reason", "alt_tried", "logged_at"], extrasaction="ignore",
-                       lineterminator="\n")
-    w.writeheader()
-    w.writerows(blocked)
+    try:
+        blocked_payload, blocked_count = collection_log_payload(ROOT / "blocked.csv", ok_jurs)
+    except (OSError, UnicodeError, csv.Error, ValueError):
+        print("! blocked.csv is missing or malformed; nothing uploaded")
+        return 1
     meta = tools_meta(lines)
     if args.notes_only:
         print("  plan    blocked.csv %d rows, %s and the docs; the remote tables and other files stay as they are" % (
-            len(blocked), ", ".join(NOTES)))
+            blocked_count, ", ".join(NOTES)))
     else:
         print("  plan    %d rows in %d tables + meta, %d files, superseded.csv %d rows, blocked.csv %d rows; they replace the remote schema %s and bucket %s" % (
-            sum(len(v) for v in rows.values()), len(ORDER), len(paths), len(superseded), len(blocked), args.schema, args.bucket))
+            sum(len(v) for v in rows.values()), len(ORDER), len(paths), len(superseded), blocked_count, args.schema, args.bucket))
 
     # 2. the remote meta, then files, then tables
     dsn = fetch.secret("database_url").replace("postgresql+psycopg://", "postgresql://")
@@ -290,7 +310,7 @@ def main():
         if not args.notes_only:
             bucket.put("superseded.csv", buf.getvalue().encode("utf-8-sig"), "text/csv; charset=utf-8")
             docs["superseded.csv"] = None
-        bucket.put("blocked.csv", bbuf.getvalue().encode("utf-8-sig"), "text/csv; charset=utf-8")
+        bucket.put("blocked.csv", blocked_payload, "text/csv; charset=utf-8")
         docs["blocked.csv"] = None
         print("  docs    %d written (%s)" % (len(docs), ", ".join(sorted(docs))))
         if args.notes_only:

@@ -8,12 +8,22 @@ from types import SimpleNamespace
 import pytest
 
 
-@pytest.mark.parametrize('mode', ['notes', 'full', 'dry'])
+@pytest.mark.parametrize('mode', ['notes', 'full', 'dry', 'missing', 'header', 'truncated', 'extra', 'empty_id'])
 def test_notes_survive_upload_without_notes_mode_replacing_catalog(tmp_path, monkeypatch, mode):
     path = Path(__file__).resolve().parents[2] / 'database/tools/upload.py'
     spec = importlib.util.spec_from_file_location('tested_notes_upload', path)
     upload = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(upload)
+    (tmp_path / 'blocked.csv').write_text(','.join(upload.BLOCKED_FIELDS) + '\n', encoding='utf-8')
+    invalid = mode in {'missing', 'header', 'truncated', 'extra', 'empty_id'}
+    if mode == 'missing':
+        (tmp_path / 'blocked.csv').unlink()
+    elif invalid:
+        content = {'header': 'id,jur\n',
+                   'truncated': 'id,jur,title,url,reason,alt_tried,logged_at\nx,cn\n',
+                   'extra': 'id,jur,title,url,reason,alt_tried,logged_at\nx,cn,t,u,r,a,d,extra\n',
+                   'empty_id': 'id,jur,title,url,reason,alt_tried,logged_at\n,cn,t,u,r,a,d\n'}[mode]
+        (tmp_path / 'blocked.csv').write_text(content, encoding='utf-8')
     for name in upload.NOTES:
         (tmp_path / name).write_text('notes', encoding='utf-8')
     monkeypatch.setattr(upload, 'ROOT', tmp_path)
@@ -51,8 +61,8 @@ def test_notes_survive_upload_without_notes_mode_replacing_catalog(tmp_path, mon
     args = ['upload.py'] + (['--notes-only'] if mode != 'full' else [])
     if mode == 'dry': args.append('--dry-run')
     monkeypatch.setattr(sys, 'argv', args)
-    assert upload.main() == 0
-    if mode == 'dry':
+    assert upload.main() == (1 if invalid else 0)
+    if mode == 'dry' or invalid:
         assert not writes and not deletes and not replacements
     else:
         reader = csv.DictReader(io.StringIO(writes['blocked.csv'].decode('utf-8-sig')))
