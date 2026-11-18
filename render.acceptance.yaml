@@ -1,0 +1,69 @@
+# Independent acceptance services; select this Blueprint path explicitly.
+# Deploy web and worker at the same reviewed Zhihong-Wu commit.
+# Provisioning the 1c-2g worker incurs hosting charges.
+services:
+  - type: web
+    name: taxrora-acceptance
+    runtime: python
+    plan: free
+    region: singapore
+    branch: Zhihong-Wu
+    buildCommand: bash scripts/render_build.sh
+    startCommand: uvicorn apps.api.main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /health
+    autoDeployTrigger: "off"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.16
+      - key: FSIE_AUTH_SECURE_COOKIE
+        value: "true"
+      - key: FSIE_WEB_SECURE_COOKIE
+        value: "true"
+      - key: FSIE_AUTH_SITE_URL
+        sync: false
+      - key: FSIE_AUTH_SUPABASE_URL
+        sync: false
+      - key: FSIE_AUTH_PUBLISHABLE_KEY
+        sync: false
+      - key: FSIE_DATABASE_URL
+        sync: false
+      - key: FSIE_LIBRARY_DATABASE_URL
+        sync: false
+      - key: FSIE_MODEL_BASE_URL
+        sync: false
+      - key: FSIE_MODEL_API_KEY
+        sync: false
+      - key: FSIE_MODEL_NAME
+        sync: false
+  - type: worker
+    name: taxrora-acceptance-worker
+    runtime: python
+    plan: 1c-2g
+    region: singapore
+    branch: Zhihong-Wu
+    buildCommand: bash scripts/render_build.sh
+    startCommand: python scripts/run_planning_worker.py
+    # Coordinate deployment with the identical reviewed web-service commit.
+    autoDeployTrigger: "off"
+    maxShutdownDelaySeconds: 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.16
+      - key: FSIE_DATABASE_URL
+        fromService:
+          type: web
+          name: taxrora-acceptance
+          envVarKey: FSIE_DATABASE_URL
+      - key: FSIE_LIBRARY_DATABASE_URL
+        fromService:
+          type: web
+          name: taxrora-acceptance
+          envVarKey: FSIE_LIBRARY_DATABASE_URL
+      - key: FSIE_PLANNING_POLL_SECONDS
+        value: "2"
+      - key: FSIE_PLANNING_LEASE_SECONDS
+        value: "60"
+      - key: FSIE_PLANNING_WALL_SECONDS
+        value: "1800"
+      - key: FSIE_PLANNING_MAX_ATTEMPTS
+        value: "3"
