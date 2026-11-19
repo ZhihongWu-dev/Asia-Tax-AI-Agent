@@ -33,5 +33,19 @@
     "official_publication": "https://chinhphu.vn/?docid=220138&pageid=27160&typegroupid=4",
     "official_text": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-dinh-398-2026-nd-cp-ve-giam-thue-thu-nhap-ca-nhan-thue-thu-nhap-doanh-nghiep-doi-voi-ca-nhan-va-doanh-nghiep-119261031044659307.htm",
     "result": "Official decree publication reconfirmed. Search results did not establish annual-relief/foreign-credit order. This is not evidence that no guidance exists; combined assessment remains unresolved."
+  },
+  "followup_composition_audit": {
+    "queries": [
+      "site.gdt.gov.vn \"398/2026\" \"nước ngoài\"",
+      "site.mof.gov.vn \"398/2026\" \"khấu trừ\"",
+      "site.chinhphu.vn \"398/2026\" thuế giảm"
+    ],
+    "result": "No explicit composition rule found in bounded search. Existing statutory publication reconfirmed; does not establish absence of guidance.",
+    "runtime_review": [
+      "vietnam.py ordinary domestic assessment",
+      "vietnam_credit_case.py stage=credit_workpaper_not_complete_income_tax_assessment",
+      "IncomeCreditHistory.tsx explicitly labels credit subtotal and outstanding full assessment"
+    ],
+    "decision": "Keep unresolved combined liability out of automatic final settlement; real business examples and authoritative ordering evidence remain required."
   }
 }

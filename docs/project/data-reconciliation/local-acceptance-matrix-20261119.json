@@ -113,9 +113,10 @@
         "income-result-source-audit-current-20261119.json",
         "income-source-audit-personal-foreign-20261119.json",
         "income-source-audit-rental-20261119.json",
-        "income-source-audit-osaka-20261119.json"
+        "income-source-audit-osaka-20261119.json",
+        "income-source-audit-wards-20261119.json"
       ],
-      "limits": "At14b0164,1857 income/report tests passed;171 successful assessments across35 policies produced125 recursively verified source records,0 unresolved. This establishes archived-file/hash integrity for observed calculations, not legal completeness or all business cases."
+      "limits": "At7fa687c,1868 income/report tests passed;175 successful assessments across35 policies produced126 recursively verified source records,0 unresolved. Archived-file/hash integrity only; legal completeness and actual business acceptance remain unproven."
     },
     {
       "requirement": "Repeated validation until actual business requirements are met",
@@ -201,7 +202,9 @@
     "osaka_integration": "59 component/assessment regressions;29 persistence/report regressions;37 report tests;TypeScript and2 final Osaka/Tokyo browser scenarios passed. Full-year ordinary Osaka-city-only scope; wider Japan and business acceptance incomplete.",
     "osaka_source_regression": "1857passed45.26s,171 successful calculations,35policies,125 archived sources verified,0unresolved at14b0164.",
     "full_browser_osaka": "129passed9.1m,exit0,retries0 at14b0164 runtime; includes Osaka, Tokyo, personal foreign transfers/rentals and existing application flows.",
-    "osaka_ward_identity": "Official24-ward shared list closes alias duplicate charging;64 backend cases,TypeScript and1 final focused browser flow passed.129-case full baseline predates this guard."
+    "osaka_ward_identity": "Official24-ward shared list closes alias duplicate charging;64 backend cases,TypeScript and1 final focused browser flow passed.129-case full baseline predates this guard.",
+    "wards_source_regression": "1868passed37.54s at7fa687c;175 successful calculations,35 policies,126 source records,0 unresolved.",
+    "wards_build": "Production build passed,2282 modules;841.51kB main JS;local artifacts only."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }
