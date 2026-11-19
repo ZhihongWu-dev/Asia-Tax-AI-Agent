@@ -9,7 +9,8 @@
       "evidence": [
         "catalog-delivery-sqlite-parity-20261118.json",
         "catalog-delivery-validation-20261118.json",
-        "income-source-archive-closure-20261119.json"
+        "income-source-archive-closure-20261119.json",
+        "current-li-catalog-integrity-20261119.json"
       ],
       "limits": "Current local artifacts and exact parity evidence; no cloud catalog migration is authorized or claimed."
     },
@@ -204,7 +205,8 @@
     "full_browser_osaka": "129passed9.1m,exit0,retries0 at14b0164 runtime; includes Osaka, Tokyo, personal foreign transfers/rentals and existing application flows.",
     "osaka_ward_identity": "Official24-ward shared list closes alias duplicate charging;64 backend cases,TypeScript and1 final focused browser flow passed.129-case full baseline predates this guard.",
     "wards_source_regression": "1868passed37.54s at7fa687c;175 successful calculations,35 policies,126 source records,0 unresolved.",
-    "wards_build": "Production build passed,2282 modules;841.51kB main JS;local artifacts only."
+    "wards_build": "Production build passed,2282 modules;841.51kB main JS;local artifacts only.",
+    "catalog_integrity": "At292c24f,6 business CSV and SQLite hashes match reviewed snapshot;all7 SQLite row counts unchanged."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

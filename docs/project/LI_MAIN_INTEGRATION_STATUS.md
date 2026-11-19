@@ -14,6 +14,41 @@ functional and business acceptance requirements. Historical references below to
 cloud rollout, remote branch delivery, or main promotion are superseded as delivery actions, not as proof
 that unresolved business rules have been accepted.
 
+## Current verified checkpoint (2026-11-19)
+
+Delivery remains local-only on `codex/catalog-closure-delivery`; neither cloud
+publication nor a merge into `main` is authorized. Overall business acceptance
+is incomplete. Earlier dated sections below are historical checkpoints.
+
+- Li catalog bytes were rechecked at `292c24f`: all six business CSV hashes and
+  the SQLite hash match the previously verified snapshot. SQLite retains all
+  seven table counts, including 11 jurisdictions, 358 documents, 45,888 clauses
+  and 811 parameters. See [current catalog integrity](data-reconciliation/current-li-catalog-integrity-20261119.json).
+- At `7fa687c`, the income/report regression passed 1,868 cases in37.54s.
+  The recursive audit observed175 successful assessments across35 policies and
+  verified126 source records against local originals, with0 unresolved records.
+  See [current source audit](data-reconciliation/income-source-audit-wards-20261119.json).
+- The full129-case browser suite passed in9.1m at the Osaka UI baseline. The
+  subsequent official-ward guard passed64 backend cases, TypeScript and its
+  focused Osaka browser flow. These are separate validations, not a full suite
+  rerun after the guard. See [browser baseline](data-reconciliation/osaka-full-browser-validation-20261119.json)
+  and [ward guard](data-reconciliation/osaka-ward-identity-validation-20261119.json).
+- Ordinary full-year Tokyo23-ward and Osaka-city company local tax workpapers
+  are integrated with saved results and bilingual reports. Osaka keeps six
+  separate local balances. The existing national-only and historical replay
+  behavior remains verified. Other Japanese local and special regimes remain
+  incomplete.
+- The latest production build passed locally and includes the official ward
+  selector; no deployment occurred. The main JavaScript chunk remains above
+  the500kB advisory. See [build artifacts](data-reconciliation/local-production-build-wards-20261119.json).
+
+Remaining acceptance work includes actual business examples and expected
+outcomes, broader mixed/special regimes, and authoritative Vietnam guidance on
+foreign-credit/annual-relief composition. The UI correctly labels Vietnam
+credit workpapers as incomplete assessments. Neither test counts nor source
+hash checks prove legal completeness. The latest user request for anonymous
+business cases is pending; independent technical work can continue.
+
 ## Latest local regression at runtime 4f5805d (2026-11-19)
 
 The application suite and pinned-engine followup jointly passed 2,593 unique
