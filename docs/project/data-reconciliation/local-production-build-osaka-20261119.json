@@ -1,0 +1,61 @@
+{
+  "runtime_commit": "14b0164",
+  "command": "npm run build",
+  "exit_code": 0,
+  "modules": 2281,
+  "vite_seconds": 4.21,
+  "warning": "Main JS841.19kB exceeds500kB chunk advisory; gzip266.58kB.",
+  "deployed": false,
+  "artifacts": [
+    {
+      "path": "apps/web/dist/assets/countries-50m-BphFPm15.json",
+      "bytes": 756420,
+      "sha256": "04342cdc1e3016bcd7db1630de95684d67b79fe3c8c460321e87aef469502394"
+    },
+    {
+      "path": "apps/web/dist/assets/index-BBO5RCI0.js",
+      "bytes": 841196,
+      "sha256": "42193673125df56cb307f954d9cf191a8de984832cef7378ba0ca98587aedf92"
+    },
+    {
+      "path": "apps/web/dist/assets/index-DxbvGyIM.css",
+      "bytes": 51660,
+      "sha256": "fc311ed5d990ca095aa56d28280334c28ef4f17443ba2811728c0252d70a77c4"
+    },
+    {
+      "path": "apps/web/dist/atlas-licenses.txt",
+      "bytes": 4943,
+      "sha256": "168e9c068a51240e2075996a2385ec10b12cf9702fa3e81b0fee82a625317dbe"
+    },
+    {
+      "path": "apps/web/dist/brand/apple-touch-icon.png",
+      "bytes": 2009,
+      "sha256": "4677fcd90034fd8db9a090c7e3f21d0f92680458d765c78e922e0ca08ccac329"
+    },
+    {
+      "path": "apps/web/dist/brand/favicon.svg",
+      "bytes": 392,
+      "sha256": "b310e5957f12f45e1b42c4dbfbc94fa0b47e4b9762a0d68055969639ee7c4b13"
+    },
+    {
+      "path": "apps/web/dist/brand/logo-mark-light.svg",
+      "bytes": 305,
+      "sha256": "a1f15918e1c6647ed80bc4e2e531f7c9dd699c1446f8be6b8a31927ce2bb0b54"
+    },
+    {
+      "path": "apps/web/dist/brand/logo-mark.svg",
+      "bytes": 305,
+      "sha256": "3475d9c5a618563526dbc751d4190d253e23ea65b2da005f759a980176096c3d"
+    },
+    {
+      "path": "apps/web/dist/index.html",
+      "bytes": 775,
+      "sha256": "06962c7a1d17145b1cd6e55bf551239879d01876c4ce83fb9dcae5d0e5b1bce4"
+    },
+    {
+      "path": "apps/web/dist/THIRD_PARTY_NOTICES.txt",
+      "bytes": 6696,
+      "sha256": "55625a930e1a88108558ebeda66b02922089bb9f4c378c5a12cbb8721e0e705f"
+    }
+  ]
+}
