@@ -27,6 +27,13 @@
       "url": "https://www.pref.osaka.lg.jp/images/18421/zeirituhyou20houzinzei.png",
       "file": "database/raw/jp/jp.osaka-prefecture-inhabitant-rates.20261119.png",
       "sha256": "29a5dd12701f0ff982647cbbe8337feb6f5771fdc0c238d2368ee3d709d77879"
+    },
+    {
+      "doc_id": "jp.osaka-city-wards",
+      "title": "大阪市 各区役所・保健福祉センターの一覧",
+      "url": "https://www.city.osaka.lg.jp/fukushi/page/0000371237.html",
+      "file": "database/raw/jp/jp.osaka-city-wards.20261119.html",
+      "sha256": "cece8b4581cd8207088aefd294f3b608c6ce35c15a60f591bbb25efd669fd3d1"
     }
   ]
 }

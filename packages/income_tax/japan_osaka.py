@@ -13,6 +13,9 @@ SOURCES = json.loads(Path(__file__).with_name('jp_osaka_enterprise_sources.json'
 CITY_SOURCES = json.loads(Path(__file__).with_name('jp_osaka_city_sources.json').read_text(encoding='utf-8'))['sources']
 
 
+OSAKA_WARDS = frozenset(json.loads(Path(__file__).with_name('jp_osaka_wards.json').read_text(encoding='utf-8')))
+
+
 class OsakaWard(BaseModel):
     model_config = ConfigDict(extra='forbid')
     ward_name: StrictStr = Field(min_length=1, max_length=80, pattern=r'^\S(?:.*\S)?$')
@@ -63,6 +66,8 @@ def annual_capitation(*, fiscal_start_year, registered_capital, capital_reserve,
     rows = [OsakaWard.model_validate(w) for w in wards]
     if not 1 <= len(rows) <= 24 or len({w.ward_name for w in rows}) != len(rows):
         raise ValueError('Aggregate each Osaka city ward exactly once,1 through24 wards')
+    if any(w.ward_name not in OSAKA_WARDS for w in rows):
+        raise ValueError('Select official Osaka city ward names; aliases and other municipalities are not accepted')
     registered, reserve, adjusted = map(yen, (registered_capital, capital_reserve, adjusted_statutory_capital))
     with localcontext() as ctx:
         ctx.prec = 40

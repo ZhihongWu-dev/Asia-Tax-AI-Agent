@@ -105,3 +105,18 @@ def test_short_period_bands_before_rounding():
 @pytest.mark.parametrize('changes',[{'months':True},{'months':13},{'fiscal_start_year':2027},{'registered_capital':'100000001'},{'ordinary_single_prefecture_scope_verified':False}])
 def test_unreviewed_scope_rejected(changes):
     with pytest.raises(ValueError):run(**changes)
+
+
+@pytest.mark.parametrize('name', ['Kita', '北', '北區', '堺区', '千代田区', '北区 '])
+def test_ward_aliases_and_other_cities_cannot_create_an_extra_charge(name):
+    with pytest.raises(ValueError):
+        capitation(wards=[dict(ward_name='北区', employees=1), dict(ward_name=name, employees=1)])
+
+
+def test_all_official_wards_once_charge_prefecture_once():
+    from packages.income_tax.japan_osaka import OSAKA_WARDS
+    assert len(OSAKA_WARDS) == 24
+    r = capitation(wards=[dict(ward_name=name, employees=1) for name in sorted(OSAKA_WARDS)])
+    assert r['prefectural_capitation'] == 20000
+    assert r['city_capitation'] == 1200000
+    assert r['total_capitation'] == 1220000

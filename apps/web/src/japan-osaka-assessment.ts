@@ -1,3 +1,4 @@
+import osakaWards from '../../../packages/income_tax/jp_osaka_wards.json' with { type: 'json' };
 import type { BasisField } from './income-assessment';
 export const osakaAmounts = [
  ['registered_capital','期末注册资本','Year-end registered capital'],['capital_reserve','期末资本准备金','Year-end capital reserve'],
@@ -19,7 +20,7 @@ export function osakaFields(values:Record<string,string>):BasisField[] {
  const count=/^\d+$/.test(values.jpo_ward_count||'')?Math.max(1,Math.min(24,Number(values.jpo_ward_count))):1;
  const fields:BasisField[]=[...osakaAmounts.map(([key,zh,en])=>({key:'jpo_'+key,label:[zh,en] as [string,string]})),
  {key:'jpo_ward_count',label:['设点大阪行政区数量（同区合并）','Number of wards with offices (aggregate within each ward)'],integer:true,min:1,max:24}];
- for(let n=0;n<count;n++)fields.push({key:`jpo_ward_${n}`,label:[`大阪行政区 ${n+1}`,`Ward ${n+1}`],text:true},
+ for(let n=0;n<count;n++)fields.push({key:`jpo_ward_${n}`,label:[`大阪行政区 ${n+1}`,`Ward ${n+1}`],options:osakaWards.map(name=>[name,[name,name]])},
  {key:`jpo_employees_${n}`,label:[`区内员工数 ${n+1}`,`Ward employee count ${n+1}`],integer:true,min:0});
  return [...fields,...osakaChecks.map(([key,zh,en])=>({key:'jpo_'+key,label:[zh,en] as [string,string],boolean:true}))];
 }

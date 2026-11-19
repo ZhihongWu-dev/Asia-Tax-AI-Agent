@@ -200,7 +200,8 @@
     "japan_osaka_inhabitant": "32 Osaka component tests passed in1.00s; prefectural/city corporation-tax levies with independent rounding and thresholds implemented. Current city instructions and prefectural rate original archived. Full saved workflow remains pending.",
     "osaka_integration": "59 component/assessment regressions;29 persistence/report regressions;37 report tests;TypeScript and2 final Osaka/Tokyo browser scenarios passed. Full-year ordinary Osaka-city-only scope; wider Japan and business acceptance incomplete.",
     "osaka_source_regression": "1857passed45.26s,171 successful calculations,35policies,125 archived sources verified,0unresolved at14b0164.",
-    "full_browser_osaka": "129passed9.1m,exit0,retries0 at14b0164 runtime; includes Osaka, Tokyo, personal foreign transfers/rentals and existing application flows."
+    "full_browser_osaka": "129passed9.1m,exit0,retries0 at14b0164 runtime; includes Osaka, Tokyo, personal foreign transfers/rentals and existing application flows.",
+    "osaka_ward_identity": "Official24-ward shared list closes alias duplicate charging;64 backend cases,TypeScript and1 final focused browser flow passed.129-case full baseline predates this guard."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

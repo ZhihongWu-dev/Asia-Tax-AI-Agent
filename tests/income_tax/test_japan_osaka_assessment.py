@@ -10,7 +10,7 @@ def basis():
     p.pop('per_capita_interim_liability')
     for key in ('prefectural_inhabitant', 'city_inhabitant', 'prefectural_capitation', 'city_capitation'):
         p[key + '_interim_liability'] = '0'
-    p['wards'] = [dict(ward_name='Kita', employees=50)]
+    p['wards'] = [dict(ward_name='北区', employees=50)]
     b['osaka_local'] = p
     return b
 

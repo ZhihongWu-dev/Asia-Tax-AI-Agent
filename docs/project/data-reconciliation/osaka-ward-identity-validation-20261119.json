@@ -1,0 +1,18 @@
+{
+  "problem": "Free-text aliases could count the same Osaka ward twice for city capitation.",
+  "change": "Shared official24-ward list drives UI options and calculation admission. Existing stored snapshot schema is unchanged; no recalculation or migration performed.",
+  "source": "https://www.city.osaka.lg.jp/fukushi/page/0000371237.html",
+  "validation": {
+    "backend_passed": 64,
+    "backend_seconds": 10.19,
+    "typescript_exit": 0,
+    "browser_passed": 1,
+    "browser_seconds": 30.6
+  },
+  "browser_output": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/osaka-official-wards-verified-20261119",
+  "test_iterations": [
+    "Added explicit JSON import attribute for Node execution",
+    "Changed textbox lookup to combobox role after UI became a select"
+  ],
+  "limits": "Earlier129-case full browser baseline predates this change; final focused Osaka flow passed. Addresses and actual office presence still require verification."
+}
