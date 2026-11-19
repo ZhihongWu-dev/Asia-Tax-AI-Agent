@@ -1,0 +1,257 @@
+[
+  {
+    "id": "company_cross_border",
+    "title": "中国居民企业：两地境外所得与超限抵免",
+    "inputs": {
+      "subject": "company",
+      "jurisdiction": "cn",
+      "currency": "CNY",
+      "residency": "resident",
+      "period_start": "2026-01-01",
+      "period_end": "2026-12-31",
+      "facts_confirmed": true,
+      "claimed_deductions": "220000",
+      "carried_losses": "0",
+      "incomes": [
+        {
+          "category": "business",
+          "source_jurisdiction": "cn",
+          "gross_amount": "1000000",
+          "foreign_tax_paid": "0",
+          "description": "Synthetic branch business income; foreign tax amounts assumed evidenced and eligible, not inferred withholding rates"
+        },
+        {
+          "category": "business",
+          "source_jurisdiction": "jp",
+          "gross_amount": "200000",
+          "foreign_tax_paid": "60000",
+          "description": "Synthetic branch business income; foreign tax amounts assumed evidenced and eligible, not inferred withholding rates"
+        },
+        {
+          "category": "business",
+          "source_jurisdiction": "hk",
+          "gross_amount": "100000",
+          "foreign_tax_paid": "10000",
+          "description": "Synthetic branch business income; foreign tax amounts assumed evidenced and eligible, not inferred withholding rates"
+        }
+      ]
+    },
+    "basis": {
+      "policy": "cn_company_foreign_direct_2026",
+      "basis_confirmed": true,
+      "basis_explanation": "Verified gross CNY amounts, eligible direct tax, election history and source allocation.",
+      "prepaid_tax": "230000",
+      "workpaper": {
+        "method": "per_country",
+        "allocations": [
+          {
+            "country": "cn",
+            "deductions": "200000",
+            "exempt_income": "0",
+            "non_taxable_income": "0",
+            "eligible_prior_losses": "0",
+            "eligible_direct_tax": "0"
+          },
+          {
+            "country": "jp",
+            "deductions": "20000",
+            "exempt_income": "0",
+            "non_taxable_income": "0",
+            "eligible_prior_losses": "0",
+            "eligible_direct_tax": "60000"
+          },
+          {
+            "country": "hk",
+            "deductions": "0",
+            "exempt_income": "0",
+            "non_taxable_income": "0",
+            "eligible_prior_losses": "0",
+            "eligible_direct_tax": "10000"
+          }
+        ],
+        "ordinary_25_percent_positive_bases_verified": true,
+        "income_tax_eligibility_and_fx_verified": true,
+        "method_lock_and_carryforward_history_verified": true,
+        "direct_tax_only_no_other_reliefs_verified": true,
+        "gross_before_withholding_and_expense_allocation_verified": true
+      }
+    },
+    "expected": {
+      "final_tax": "215000",
+      "allowed_foreign_tax_credit": "55000",
+      "balance_due": "-15000"
+    },
+    "derivation": "Taxable bases:800000+180000+100000=1080000;25% tax270000. JP credit min(60000,45000)=45000;HK min(10000,25000)=10000. Final215000;prepaid230000;refund15000. Source labels identify supplied foreign tax evidence, not an automatic claim of source-country withholding rates.",
+    "synthetic": true
+  },
+  {
+    "id": "personal_mixed_income",
+    "title": "中国居民个人：工资、利息、经营所得与到期抵免",
+    "inputs": {
+      "subject": "individual",
+      "jurisdiction": "cn",
+      "currency": "CNY",
+      "residency": "resident",
+      "period_start": "2026-01-01",
+      "period_end": "2026-12-31",
+      "facts_confirmed": true,
+      "claimed_deductions": "20000",
+      "carried_losses": "0",
+      "incomes": [
+        {
+          "category": "employment",
+          "source_jurisdiction": "cn",
+          "gross_amount": "120000",
+          "foreign_tax_paid": "0",
+          "description": "Synthetic resident ordinary income; assumed evidenced and converted to CNY"
+        },
+        {
+          "category": "employment",
+          "source_jurisdiction": "sg",
+          "gross_amount": "80000",
+          "foreign_tax_paid": "4500",
+          "description": "Synthetic resident ordinary income; assumed evidenced and converted to CNY"
+        },
+        {
+          "category": "interest",
+          "source_jurisdiction": "sg",
+          "gross_amount": "10000",
+          "foreign_tax_paid": "500",
+          "description": "Synthetic resident ordinary income; assumed evidenced and converted to CNY"
+        },
+        {
+          "category": "business",
+          "source_jurisdiction": "hk",
+          "gross_amount": "30000",
+          "foreign_tax_paid": "500",
+          "description": "Synthetic resident ordinary income; assumed evidenced and converted to CNY"
+        }
+      ]
+    },
+    "basis": {
+      "policy": "cn_personal_foreign_2026",
+      "basis_confirmed": true,
+      "basis_explanation": "Verified ordinary annual categories, country allocation and historical evidence.",
+      "prepaid_tax": "7000",
+      "workpaper": {
+        "comprehensive_deductions": "20000",
+        "comprehensive_tax_reductions": "0",
+        "business_tax_reductions": "0",
+        "ordinary_categories_and_no_special_treatment_verified": true,
+        "source_fx_deductions_and_losses_verified": true,
+        "paid_tax_evidence_and_history_verified": true,
+        "countries": [
+          {
+            "country": "cn",
+            "business_deductions": "0",
+            "business_prior_losses": "0",
+            "eligible_foreign_tax_paid": "0",
+            "prior_excess": []
+          },
+          {
+            "country": "sg",
+            "business_deductions": "0",
+            "business_prior_losses": "0",
+            "eligible_foreign_tax_paid": "5000",
+            "prior_excess": [
+              {
+                "origin_year": 2021,
+                "amount": "1000"
+              }
+            ]
+          },
+          {
+            "country": "hk",
+            "business_deductions": "0",
+            "business_prior_losses": "0",
+            "eligible_foreign_tax_paid": "500",
+            "prior_excess": []
+          }
+        ]
+      }
+    },
+    "expected": {
+      "tax_before_foreign_credit": "12980",
+      "allowed_credit": "6292",
+      "final_tax": "6688",
+      "balance_due": "-312"
+    },
+    "derivation": "Comprehensive base200000-60000-20000=120000;tax9480. SG cap9480*80000/200000+2000=5792;current5000+prior792. Prior2021 balance208 expires. HK business30000*5%=1500;credit500. Total12980-credit6292=6688;prepaid7000 gives refund312.",
+    "synthetic": true
+  },
+  {
+    "id": "osaka_separate_settlement",
+    "title": "大阪企业：国地税税基差异与独立退补税",
+    "inputs": {
+      "subject": "company",
+      "jurisdiction": "jp",
+      "currency": "JPY",
+      "residency": "resident",
+      "period_start": "2026-04-01",
+      "period_end": "2027-03-31",
+      "facts_confirmed": true,
+      "claimed_deductions": "0",
+      "carried_losses": "0",
+      "incomes": [
+        {
+          "category": "business",
+          "source_jurisdiction": "jp",
+          "gross_amount": "12000000",
+          "description": "Domestic ordinary receipts"
+        }
+      ]
+    },
+    "basis": {
+      "policy": "jp_company_starting_2026",
+      "taxable_income_before_rounding": "12000000",
+      "rate_regime": "sme_reduced",
+      "rate_classification_verified": true,
+      "ordinary_no_adjustments_confirmed": true,
+      "corporation_interim_liability": "2000000",
+      "local_corporation_interim_liability": "250000",
+      "basis_confirmed": true,
+      "basis_explanation": "Verified ordinary company classification and complete annual fiscal adjustments.",
+      "osaka_local": {
+        "registered_capital": "10000000",
+        "capital_reserve": "0",
+        "adjusted_statutory_capital": "10000000",
+        "enterprise_income_additions": "1000000",
+        "enterprise_income_deductions": "500000",
+        "eligible_enterprise_prior_losses": "2500000",
+        "enterprise_interim_liability": "600000",
+        "special_enterprise_interim_liability": "0",
+        "wards": [
+          {
+            "ward_name": "北区",
+            "employees": 50
+          },
+          {
+            "ward_name": "中央区",
+            "employees": 51
+          }
+        ],
+        "all_offices_in_wards_for_full_year_verified": true,
+        "ordinary_domestic_entity_verified": true,
+        "size_based_exclusion_including_2025_2026_verified": true,
+        "capital_employees_and_local_base_verified": true,
+        "no_local_tax_credits_or_treaty_amendments_verified": true,
+        "local_adjustments_explanation": "Verified fiscal bases, local loss vintages, capital history, control and unchanged ward offices.",
+        "prefectural_inhabitant_interim_liability": "0",
+        "city_inhabitant_interim_liability": "150000",
+        "prefectural_capitation_interim_liability": "0",
+        "city_capitation_interim_liability": "0"
+      }
+    },
+    "expected": {
+      "national_final_tax": "2347100",
+      "final_tax": "3359900",
+      "corporation_balance_due": "128000",
+      "local_corporation_balance_due": "-30900",
+      "osaka_local.local_final_tax": "1012800",
+      "osaka_local.local_amounts_payable": "393200",
+      "osaka_local.local_refunds": "130400"
+    },
+    "derivation": "National corporation8m*15%+4m*23.2%=2128000;local corporation219100;defence0. Enterprise base12m+1m-.5m-2.5m=10m:492000+special182000. Prefecture/city inhabitant21200/127600. Capitation20000+50000+120000=190000. Local1012800;separate payable393200/refunds130400. National payable128000/refund30900 remain separate.",
+    "synthetic": true
+  }
+]

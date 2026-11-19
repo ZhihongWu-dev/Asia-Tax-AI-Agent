@@ -1,0 +1,95 @@
+{
+  "synthetic": true,
+  "user_authorized": true,
+  "base_commit": "559d1de",
+  "validation": {
+    "command": "pytest tests/income_tax/test_synthetic_business_acceptance.py -q",
+    "passed": 3,
+    "seconds": 6.55
+  },
+  "cases": [
+    {
+      "id": "company_cross_border",
+      "title": "中国居民企业：两地境外所得与超限抵免",
+      "expected": {
+        "final_tax": "215000",
+        "allowed_foreign_tax_credit": "55000",
+        "balance_due": "-15000"
+      },
+      "derivation": "Taxable bases:800000+180000+100000=1080000;25% tax270000. JP credit min(60000,45000)=45000;HK min(10000,25000)=10000. Final215000;prepaid230000;refund15000. Source labels identify supplied foreign tax evidence, not an automatic claim of source-country withholding rates.",
+      "artifacts": [
+        {
+          "path": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\synthetic-business-20261119\\company_cross_border\\report-en.md",
+          "sha256": "240ffbcfd72abdae9f68eb2dd76aa8d1c9c79c17373ac056b7787b62e697c574"
+        },
+        {
+          "path": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\synthetic-business-20261119\\company_cross_border\\report-zh.md",
+          "sha256": "f65249053c927870b987bf2b48b58926845c7a61d0abb401f7f64a225364bfa1"
+        },
+        {
+          "path": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\synthetic-business-20261119\\company_cross_border\\result.json",
+          "sha256": "4d69839c8a1aa9bafbfa0694bedc5371b950a7cd9872303bbedac4f459b1fe4f"
+        }
+      ]
+    },
+    {
+      "id": "personal_mixed_income",
+      "title": "中国居民个人：工资、利息、经营所得与到期抵免",
+      "expected": {
+        "tax_before_foreign_credit": "12980",
+        "allowed_credit": "6292",
+        "final_tax": "6688",
+        "balance_due": "-312"
+      },
+      "derivation": "Comprehensive base200000-60000-20000=120000;tax9480. SG cap9480*80000/200000+2000=5792;current5000+prior792. Prior2021 balance208 expires. HK business30000*5%=1500;credit500. Total12980-credit6292=6688;prepaid7000 gives refund312.",
+      "artifacts": [
+        {
+          "path": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\synthetic-business-20261119\\personal_mixed_income\\report-en.md",
+          "sha256": "b048221c1b2dfe277c15b1cc63b681b5c8ea6c0f75eb41ad283c5070e7863369"
+        },
+        {
+          "path": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\synthetic-business-20261119\\personal_mixed_income\\report-zh.md",
+          "sha256": "311797fde35a5010b2efbfef7e541fdc28615da49c313baab3637f153d10f379"
+        },
+        {
+          "path": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\synthetic-business-20261119\\personal_mixed_income\\result.json",
+          "sha256": "ddbf3c17c7baf08961a115bef3d83a0d6a0c80be144e769b42291f086a037c08"
+        }
+      ]
+    },
+    {
+      "id": "osaka_separate_settlement",
+      "title": "大阪企业：国地税税基差异与独立退补税",
+      "expected": {
+        "national_final_tax": "2347100",
+        "final_tax": "3359900",
+        "corporation_balance_due": "128000",
+        "local_corporation_balance_due": "-30900",
+        "osaka_local.local_final_tax": "1012800",
+        "osaka_local.local_amounts_payable": "393200",
+        "osaka_local.local_refunds": "130400"
+      },
+      "derivation": "National corporation8m*15%+4m*23.2%=2128000;local corporation219100;defence0. Enterprise base12m+1m-.5m-2.5m=10m:492000+special182000. Prefecture/city inhabitant21200/127600. Capitation20000+50000+120000=190000. Local1012800;separate payable393200/refunds130400. National payable128000/refund30900 remain separate.",
+      "artifacts": [
+        {
+          "path": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\synthetic-business-20261119\\osaka_separate_settlement\\report-en.md",
+          "sha256": "0950636ecb8ce0411ee1c5a80acc8f6fa84cd168c5f987efa49dc61e3161f9bb"
+        },
+        {
+          "path": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\synthetic-business-20261119\\osaka_separate_settlement\\report-zh.md",
+          "sha256": "dc8117a3ddf4477cc5ab11cc14664a77a57b33301476d9af31b68405f6f01f39"
+        },
+        {
+          "path": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\synthetic-business-20261119\\osaka_separate_settlement\\result.json",
+          "sha256": "9a07b0b1a2a9fa37108408e03c19907c57b17790196d1c5c4f5fa939c9f36138"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Local HTTP application with fixture identity, not live hosted sign-in",
+    "Foreign taxes, eligibility, FX and deductions are explicit synthetic assumptions; source-country tax amounts are not calculated by these cases",
+    "Three scenarios establish these scenarios only, not all11 jurisdictions or unimplemented special regimes"
+  ],
+  "test_iteration": "First attempt expected200 for case creation; corrected to actual201 Created. No tax-calculation production code changed; final cases pass both amount checks and substantive invalid-input rejection."
+}

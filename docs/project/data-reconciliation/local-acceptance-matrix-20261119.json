@@ -129,9 +129,10 @@
         "local-cross-module-regression-20261119.json",
         "income-business-scope-audit-20261119.json",
         "japan-local-source-review-20261119.json",
-        "vietnam-relief-credit-order-review-20261119.json"
+        "vietnam-relief-credit-order-review-20261119.json",
+        "three-synthetic-business-cases-20261119.json"
       ],
-      "limits": "Business cases/expected outcomes requested from user and pending. Known gaps include Japanese local taxes outside the implemented full-year ordinary Tokyo 23-ward and Osaka-city company scopes, mixed-income and special-regime coverage, and Vietnam combined foreign-credit/annual-relief ordering. Do not replace these gates with test counts."
+      "limits": "User authorized synthetic cases;three new concrete scenarios passed. This removes the requirement to wait for customer examples for this validation. Broader regime gaps and Vietnam combined foreign-credit/relief ordering remain unresolved; full goal not complete."
     }
   ],
   "latest_checks": {
@@ -210,12 +211,13 @@
     "wards_source_regression": "1868passed37.54s at7fa687c;175 successful calculations,35 policies,126 source records,0 unresolved.",
     "wards_build": "Production build passed,2282 modules;841.51kB main JS;local artifacts only.",
     "catalog_integrity": "At292c24f,6 business CSV and SQLite hashes match reviewed snapshot;all7 SQLite row counts unchanged.",
-    "current_22_selections": "Atb19b742,executed frontend policies through Vite SSR for original22 inputs:all11 countries x2subjects have at least1policy. This is availability only."
+    "current_22_selections": "Atb19b742,executed frontend policies through Vite SSR for original22 inputs:all11 countries x2subjects have at least1policy. This is availability only.",
+    "three_synthetic_cases": "3 HTTP round-trip scenarios passed6.55s; independent amount expectations, country cap/expiry, separate authority balances, SQLite reopen,replay,bilingual reports and invalid-input rejection."
   },
-  "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred.",
+  "user_input": "User authorized creating three synthetic business cases and trying their effects; no longer waiting for customer cases to perform this validation.",
   "business_acceptance_gate": {
-    "state": "awaiting_concrete_cases_and_expected_outcomes",
-    "request": "Anonymous priority cases with country, taxpayer type, income type, period and expected calculation or treatment.",
+    "state": "three_user_authorized_synthetic_cases_verified_broader_goal_incomplete",
+    "request": "Proceed with explicitly labeled synthetic cases per latest user direction.",
     "known_unresolved": [
       "Vietnam foreign-credit/annual-relief composition",
       "Japanese local and special regimes outside verified Tokyo/Osaka scopes",
