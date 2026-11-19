@@ -1,5 +1,21 @@
 # Li/Main integration status (2026-11-18)
 
+## Latest delivery instruction (2026-11-19)
+
+The user now explicitly authorizes uploading all accumulated work to the existing
+remote `Zhihong-Wu` branch for their subsequent consolidated testing. This
+supersedes earlier local-only / no-push instructions for this branch delivery.
+Do not push or merge into `main`, deploy the application, or modify cloud databases.
+The branch snapshot is a testing handoff, not a claim of complete business acceptance.
+
+Latest checks:1,868 income/report tests and126 archived-source records verified;
+129-case full browser baseline passed before the official Osaka ward guard,
+followed by its focused browser validation. Three newly authorized synthetic
+business cases also passed HTTP calculation/save/reopen/replay/report and
+invalid-input checks. See `data-reconciliation/three-synthetic-business-cases-20261119.json`.
+Known rule and special-regime limits remain recorded in the acceptance matrix.
+
+
 ## Current delivery scope (2026-11-19)
 
 The user retains the original Li data/function integration and corporate plus
