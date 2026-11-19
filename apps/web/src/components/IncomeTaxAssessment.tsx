@@ -2,6 +2,8 @@ import {personalForeignBasis} from '../china-personal-foreign-assessment';
 import PersonalForeignResult from './PersonalForeignResult';
 import { chinaForeignBasis } from '../china-foreign-assessment';
 import ChinaForeignResult from './ChinaForeignResult';
+import { osakaBasis } from '../japan-osaka-assessment';
+import OsakaLocalResult from './OsakaLocalResult';
 import { tokyoBasis } from '../japan-tokyo-assessment';
 import TokyoLocalResult from './TokyoLocalResult';
 import { useEffect, useRef, useState } from 'react';
@@ -58,7 +60,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       try{basis=chinaForeignBasis(basis,current.income_tax!,values);}catch{setError(say('历史抵免国家不得重复或与现有来源国家重复。','Prior-credit countries must be unique and additional to saved source countries.'));return;}
     }
     if (policy.id==='jp_company_starting_2026') {
-      try {basis=tokyoBasis(basis,values,explanation);} catch {setError(say('请核对区数量、主办公地点和不重复区名。','Check ward count, one principal office and unique ward names.'));return;}
+      try {basis=osakaBasis(tokyoBasis(basis,values,explanation),values,explanation);} catch {setError(values.jpo_enabled==='true'?say('请核对大阪行政区数量和不重复区名。','Check Osaka ward count and unique ward names.'):say('请核对区数量、主办公地点和不重复区名。','Check ward count, one principal office and unique ward names.'));return;}
     }
     if (policy.id==='hk_salaries_2025_26') {
       basis.workpaper={balancing_charge:basis.hks_balancing_charge,employment_expenses:basis.hks_employment_expenses,
@@ -135,7 +137,9 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
         </select></label>
         {policy && <><p>{policy.notice[index]}</p><p>{say('金额币种：','Currency: ')}{current.income_tax.currency}</p>
           {policy.id==='jp_company_starting_2026' && <>
-            <button type="button" aria-pressed={values.jpt_enabled==='true'} onClick={()=>{setValues(v=>({...v,jpt_enabled:v.jpt_enabled==='true'?'false':'true',jpt_ward_count:v.jpt_ward_count||'1',jpt_principal:v.jpt_principal||'1'}));setConfirmed(false);setError('');}}>{say('附加东京23区地方税评税','Include Tokyo 23-ward local assessment')}</button>
+            <button type="button" aria-pressed={values.jpt_enabled==='true'} onClick={()=>{setValues(v=>({...v,jpt_enabled:v.jpt_enabled==='true'?'false':'true',jpo_enabled:'false',jpt_ward_count:v.jpt_ward_count||'1',jpt_principal:v.jpt_principal||'1'}));setConfirmed(false);setError('');}}>{say('附加东京23区地方税评税','Include Tokyo 23-ward local assessment')}</button>
+            <button type="button" aria-pressed={values.jpo_enabled==='true'} onClick={()=>{setValues(v=>({...v,jpo_enabled:v.jpo_enabled==='true'?'false':'true',jpt_enabled:'false',jpo_ward_count:v.jpo_ward_count||'1'}));setConfirmed(false);setError('');}}>{say('附加大阪市地方税评税','Include Osaka city local assessment')}</button>
+            {values.jpo_enabled==='true'&&<p>{say('仅限全部办公地点全年位于大阪市的普通内国法人。须核实各行政区名称并合并同区员工数；排除外形标准课税、地方税抵免及协定更正减免。事业税调整与旧亏损须独立核实，府、市税款及预缴分别核算。','Ordinary domestic companies with all offices in Osaka city throughout the year only. Verify actual ward names and aggregate employees per ward. Excludes size-based taxation, local credits and treaty-amendment relief. Verify enterprise adjustments and prior losses independently; prefectural and city liabilities and interim amounts remain separate.')}</p>}
             {values.jpt_enabled==='true'&&<p>{say('已附加东京地方税，本次结果将包含此限定场景的地方税。仅限全部办公地点全年位于东京23区的普通内国法人，无外形标准课税、地方税抵免或协定更正减免。逐区合并员工数并指定唯一主办公地点。独立核实事业税调整和旧亏损，资本须核对准备金和法定调整。','Tokyo local tax is included for this scoped assessment. Ordinary domestic companies with all offices in Tokyo 23 wards throughout the year only; no size-based taxation, local credits or treaty-amendment relief. Aggregate employees by ward and identify one principal office. Verify enterprise adjustments and prior losses separately; verify capital reserves and statutory capital adjustments.')}</p>}
           </>}
 
@@ -198,6 +202,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{key==='balance_due'&&result.result.tax_scope==='national_income_and_reconstruction_tax_only'?say('本次国家税应补／退额（予定纳税欠税另计）','National return balance (estimated-tax arrears separate)'):label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
       {result.result.tax_scope==='china_resident_ordinary_direct_foreign_credit_positive_bases'&&<ChinaForeignResult result={result.result} index={index}/>}
       {result.result.tax_scope==='china_resident_ordinary_comprehensive_business_investment_foreign_credit'&&<PersonalForeignResult result={result.result} index={index}/>}
+      {!!result.result.osaka_local && <OsakaLocalResult result={result.result} index={index} />}
       {!!result.result.tokyo_local && <TokyoLocalResult result={result.result} index={index} />}
       {!!result.result.personal_basis_reconciliation && <section aria-label={say('印尼个人所得税税基核对','Indonesia personal basis reconciliation')}>
         <h4>{say('印尼个人所得税税基核对','Indonesia personal basis reconciliation')}</h4>

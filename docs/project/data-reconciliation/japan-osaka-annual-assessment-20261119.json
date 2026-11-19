@@ -1,5 +1,5 @@
 {
-  "status": "backend_persistence_and_bilingual_reports_verified_ui_pending",
+  "status": "scoped_backend_ui_persistence_reports_verified_business_acceptance_incomplete",
   "scope": "Ordinary domestic full-year Osaka-city-only company,2026 fiscal start",
   "local_only": true,
   "validation": {
@@ -17,11 +17,14 @@
     "SQLite engine disposal/reconnection returns identical saved run",
     "English and Chinese reports show separate Osaka components and refunds",
     "Invalid scope leaves saved case and prior run unchanged",
-    "Report retains all saved source hashes"
+    "Report retains all saved source hashes",
+    "Browser Tokyo/Osaka mutual exclusion",
+    "Browser duplicate ward rejection",
+    "Two Osaka wards calculate2815700 total,488400 local payable and108000 separate refund",
+    "Browser report download and saved result reopening"
   ],
   "remaining": [
-    "User interface integration",
-    "Browser workflow verification",
+    "Broader regression and source audit after new integration",
     "Wider Japanese locations and special regimes",
     "Actual business acceptance"
   ],
@@ -35,6 +38,17 @@
       "command": "pytest tests/income_tax/test_assessment_report.py tests/reporting -q",
       "passed": 37,
       "seconds": 14.63
+    },
+    {
+      "command": "tsc -b",
+      "exit_code": 0
+    },
+    {
+      "command": "playwright test income-tax.spec.ts --grep '(Osaka|Tokyo) local workpaper' --workers=2",
+      "passed": 2,
+      "seconds": 35.0,
+      "output": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/osaka-ui-final-20261119"
     }
-  ]
+  ],
+  "test_iteration_note": "Initial browser test incorrectly tried to continue editing immediately after reopening without selecting a regime; corrected to verify saved Osaka reopening. Final Tokyo regression separately covers returning to national-only calculation."
 }
