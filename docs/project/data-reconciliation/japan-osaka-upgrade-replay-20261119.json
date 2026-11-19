@@ -1,0 +1,16 @@
+{
+  "runtime_commit": "14b0164",
+  "test_command": "pytest tests/income_tax/test_assessment_upgrade_replay.py -q",
+  "passed": 15,
+  "seconds": 15.25,
+  "new_cases": 4,
+  "scope": [
+    "Pre-Osaka national-only and Tokyo saved records",
+    "Omitted and explicit-null Osaka default",
+    "Original snapshot and bilingual reports preserved after intervening facts edit and SQLite reopen",
+    "Calculator patched to fail proves replay does not recalculate",
+    "Owner isolation retained",
+    "Adding Osaka workpaper conflicts rather than silently replaying"
+  ],
+  "limits": "Synthetic historical records; no customer-data migration or broad business acceptance claimed."
+}

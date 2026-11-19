@@ -120,3 +120,45 @@ def test_personal_foreign_old_snapshot_replays_without_new_transfer_defaults_or_
         with pytest.raises(WorkflowError,match='request_payload_conflict'):
             assessment_run(store,'alice',case_id,1,'calculate',ADAPTER.validate_python(paper))
     finally:store.engine.dispose()
+
+
+@pytest.mark.parametrize('with_tokyo', [False, True])
+@pytest.mark.parametrize('explicit_osaka_default', [False, True])
+def test_japan_pre_osaka_snapshot_replay_preserves_original(tmp_path, monkeypatch, with_tokyo, explicit_osaka_default):
+    from tests.income_tax.test_japan_tokyo import facts as jp_facts, basis as jp_basis
+    from tests.income_tax.test_japan_osaka_assessment import basis as osaka_basis
+    from packages.reporting.income_tax import render
+    url = 'sqlite:///' + str(tmp_path/'japan.sqlite')
+    store = ChatStore(url); case_id = store.create('alice')['id']
+    paper = jp_basis()
+    if not with_tokyo: paper.pop('tokyo_local')
+    save_case(store, 'alice', case_id, 0, 'facts', IncomeTaxCase(**jp_facts()))
+    saved = assessment_run(store, 'alice', case_id, 1, 'calculate', ADAPTER.validate_python(paper))
+    saved['basis'].pop('osaka_local')
+    saved['request_hash'] = digest(dict(revision=1, basis=saved['basis']))
+    saved['snapshot_hash'] = digest({k: saved[k] for k in ('inputs', 'basis', 'result')})
+    doc = store.get('alice', case_id)
+    doc['income_tax_runs'] = [deepcopy(saved)]; doc['income_tax_result'] = deepcopy(saved)
+    store.save('alice', doc, 2)
+    reports = {locale: render(saved, locale) for locale in ('zh', 'en')}
+    changed = jp_facts(); changed['incomes'][0]['gross_amount'] = '20000000'
+    save_case(store, 'alice', case_id, 3, 'edit', IncomeTaxCase(**changed))
+    store.engine.dispose(); store = ChatStore(url)
+    try:
+        before = store.get('alice', case_id)
+        if explicit_osaka_default: paper['osaka_local'] = None
+        def unexpected(*args, **kwargs): pytest.fail('Historical Japanese assessment must not recalculate')
+        monkeypatch.setattr('packages.income_tax.assessment.calculate', unexpected)
+        replay = assessment_run(store, 'alice', case_id, 1, 'calculate', ADAPTER.validate_python(paper))
+        assert replay == saved
+        for locale in reports: assert render(replay, locale) == reports[locale]
+        assert store.get('alice', case_id) == before and before.get('income_tax_result') is None
+        with pytest.raises(CaseNotFound):
+            assessment_run(store, 'bob', case_id, 1, 'calculate', ADAPTER.validate_python(paper))
+        # A new local workpaper is a substantive request change, never a default.
+        changed_paper = osaka_basis()
+        with pytest.raises(WorkflowError, match='request_payload_conflict'):
+            assessment_run(store, 'alice', case_id, 1, 'calculate', ADAPTER.validate_python(changed_paper))
+        assert store.get('alice', case_id) == before
+    finally:
+        store.engine.dispose()
