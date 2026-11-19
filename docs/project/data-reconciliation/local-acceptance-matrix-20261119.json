@@ -22,9 +22,10 @@
         "local-regression-after-reconciliation-20261119.json",
         "local-regression-personal-reconciliation-20261119.json",
         "local-domain-citation-filter-fix-20261119.json",
-        "tokyo-full-browser-validation-20261119.json"
+        "tokyo-full-browser-validation-20261119.json",
+        "osaka-full-browser-validation-20261119.json"
       ],
-      "limits": "Offline backend regression and complete v5 golden/checker suite passed. Full126-case browser baseline plus later targeted transfer/rental cases are separate runs, not one current full suite. Hosted authentication/provider end-to-end acceptance is not established. Original/v4 comparison processes were verified live with increasing CPU; no cloud deployment is authorized."
+      "limits": "Local regression and v5 golden/checker passed. Current129-case full browser suite passed in9.1m, including transfers, rentals and Osaka. Hosted identity/provider acceptance is unproven; original/v4 comparison jobs were still active at last observation. Delivery is local-only."
     },
     {
       "requirement": "Corporate and personal income tax across all 11 dividend jurisdictions",
@@ -72,9 +73,10 @@
         "china-personal-transfer-ui-validation-20261119.json",
         "china-personal-transfer-report-validation-20261119.json",
         "china-personal-rental-research-20261119.md",
-        "japan-osaka-annual-assessment-20261119.json"
+        "japan-osaka-annual-assessment-20261119.json",
+        "osaka-full-browser-validation-20261119.json"
       ],
-      "limits": "All22 representative corporate/personal selections across11jurisdictions were previously verified. Full126-case browser baseline predates transfers/rentals; latest3-case browser regression at0c541cd covers plain personal foreign income, transfers and ordinary20percent rental including save/reopen/export. Neither evidence establishes every income type, residency, special regime or filing obligation."
+      "limits": "Current129-case browser suite includes representative corporate/personal workflows, Tokyo/Osaka ordinary local company scopes and China foreign-income transfers/rentals. It does not establish every income type, residency, special regime or filing obligation."
     },
     {
       "requirement": "Preserve cases, ownership, calculations and reports across retries and restarts",
@@ -85,7 +87,9 @@
         "local-cross-module-regression-20261119.json",
         "japan-tokyo-report-validation-20261119.json",
         "china-personal-rental-research-20261119.md",
-        "japan-osaka-annual-assessment-20261119.json"
+        "japan-osaka-annual-assessment-20261119.json",
+        "osaka-full-browser-validation-20261119.json",
+        "japan-osaka-upgrade-replay-20261119.json"
       ],
       "limits": "Latest rental SQLite restart/exact retrieval/bilingual export and11 upgrade replay cases passed, including omitted/empty rentals and transfers in historical personal requests. Fixture-auth and prior PostgreSQL evidence do not establish real sign-in acceptance."
     },
@@ -127,7 +131,7 @@
   ],
   "latest_checks": {
     "backend": "2593 unique application tests passed across full run and58-test pinned-engine followup;35 skipped engine cases recovered,4 environment skips remain,27 integration deselections",
-    "browser": "126passed in10.3m at56cc674,exit0; includes China company/personal foreign income. Later transfer backend integration separately verified.",
+    "browser": "129passed9.1m,exit0,retries0 at14b0164 runtime; includes Osaka, Tokyo, personal foreign transfers/rentals and existing application flows.",
     "korean_archive": "1 targeted test passed after backend collection; 14 exact originals, 12 newly restored",
     "thai_source_snapshots": "20 focused tests and 1455 income-tax tests passed; four original hashes verified in persisted/report flow",
     "china_business_sources": "1466 income/report tests passed; final provenance metadata verified by40 focused tests",
@@ -196,7 +200,7 @@
     "japan_osaka_inhabitant": "32 Osaka component tests passed in1.00s; prefectural/city corporation-tax levies with independent rounding and thresholds implemented. Current city instructions and prefectural rate original archived. Full saved workflow remains pending.",
     "osaka_integration": "59 component/assessment regressions;29 persistence/report regressions;37 report tests;TypeScript and2 final Osaka/Tokyo browser scenarios passed. Full-year ordinary Osaka-city-only scope; wider Japan and business acceptance incomplete.",
     "osaka_source_regression": "1857passed45.26s,171 successful calculations,35policies,125 archived sources verified,0unresolved at14b0164.",
-    "full_browser_osaka": "129-case full browser suite started; session35654 active, result pending. Output: full-browser-osaka-20261119 in external audit directory."
+    "full_browser_osaka": "129passed9.1m,exit0,retries0 at14b0164 runtime; includes Osaka, Tokyo, personal foreign transfers/rentals and existing application flows."
   },
   "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
 }

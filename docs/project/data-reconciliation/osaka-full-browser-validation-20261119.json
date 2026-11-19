@@ -1,0 +1,35 @@
+{
+  "runtime_commit": "14b0164",
+  "command": "playwright test --workers=2",
+  "passed": 129,
+  "elapsed_display": "9.1m",
+  "exit_code": 0,
+  "retries": 0,
+  "output": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\full-browser-osaka-20261119",
+  "last_run": {
+    "status": "passed",
+    "failedTests": []
+  },
+  "last_run_sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+  "files": {
+    "apps/web/src/income-assessment.ts": "4263fa815f562cf984e80e734947b031ff05f1170c5521ed775611e8f2eede20",
+    "apps/web/src/japan-osaka-assessment.ts": "d5f96db2eb088b1283fd8663aa3358840ef6c03e615bc40e00a92d88f1bd0d4f",
+    "apps/web/src/components/IncomeTaxAssessment.tsx": "88217e061869a57b7ba05c52f093bbbe945d886a812c80a2688e458793383d46",
+    "apps/web/src/components/OsakaLocalResult.tsx": "b400b33ebc898b7c8bb1577f170e40b490b61cb952f2056ad03af79115287c84",
+    "apps/web/tests/income-tax.spec.ts": "47026059d81956d1e909cda27bdcdcd289d4acfae30e3f84ca79b04bf0e16f07",
+    "apps/web/playwright.config.ts": "5ad73d9fce33d60c45e5c387e508aa4dd179b2913c765f82af6ad045a708b729"
+  },
+  "coverage": [
+    "Existing application workflows and local test authentication",
+    "Corporate and personal representative income workflows",
+    "Tokyo and Osaka local tax workpapers",
+    "China personal foreign income including transfers and monthly rental",
+    "Saved results, downloads, reloads and invalidation",
+    "Planning, source research, attachments, phone layout and case isolation"
+  ],
+  "limits": [
+    "Local fixture identity, not hosted real-user authentication",
+    "Representative cases only, not every tax regime or business case",
+    "No cloud upload or remote branch changes"
+  ]
+}
