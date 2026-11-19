@@ -65,3 +65,54 @@ def test_ambient_decimal_context_does_not_change_result():
     with localcontext() as ctx:
         ctx.prec = 6
         assert run(assertion=basis()) == expected
+
+
+@pytest.mark.parametrize('overpaid', [False, True])
+def test_saved_api_restart_reports_and_rejected_scope(tmp_path, overpaid):
+    from types import SimpleNamespace
+    from uuid import uuid4
+    from fastapi import FastAPI
+    from fastapi.testclient import TestClient
+    from apps.api import auth, chat
+    from packages.chat.store import ChatStore
+    from tests.chat.auth_support import fixture_user
+
+    url = 'sqlite:///' + str(tmp_path / 'osaka.sqlite')
+    service = SimpleNamespace(store=ChatStore(url))
+    app = FastAPI(); app.include_router(auth.router); app.include_router(chat.router)
+    app.dependency_overrides[auth.optional_user] = fixture_user
+    app.dependency_overrides[chat.get_service] = lambda: service
+    headers = {'x-asiatax-request': '1'}
+    b = basis()
+    if overpaid: b['osaka_local']['enterprise_interim_liability'] = '600000'
+    with TestClient(app) as client:
+        client.get('/api/auth/session')
+        case_id = client.post('/api/cases', headers=headers).json()['id']
+        path = f'/api/cases/{case_id}/income-tax'
+        saved = client.put(path, headers=headers, json=dict(revision=0, request_id=str(uuid4()), inputs=facts()))
+        assert saved.status_code == 200, saved.text
+        response = client.post(path+'/runs', headers=headers, json=dict(revision=1, request_id=str(uuid4()), basis=b))
+        assert response.status_code == 200, response.text
+        record = response.json()
+        assert record['result']['final_tax'] == '2695700'
+        service.store.engine.dispose(); service.store = ChatStore(url)
+        assert client.get(path+'/runs/'+record['id']).json() == record
+        for locale, title, city, refund in [('en','Osaka city local tax details','City inhabitant levy','Local refund amounts'),
+                ('zh','大阪市地方税明细','大阪市法人税割','地方税应退合计')]:
+            report = client.get(path+'/runs/'+record['id']+'/report?locale='+locale)
+            assert report.status_code == 200, report.text
+            markdown = report.json()['markdown']
+            readable = markdown.split('```json')[0].replace(chr(92), '')
+            assert title in readable
+            assert '| '+city+' | 99800 | 0 | 99800 |' in readable
+            assert '| '+refund+' | '+('108000' if overpaid else '0')+' |' in readable
+            assert 'Tokyo 23-ward local tax details' not in readable
+            for source in record['result']['sources']: assert source['sha256'] in markdown
+        before = client.get(path).json()
+        invalid = basis(); invalid['osaka_local']['size_based_exclusion_including_2025_2026_verified'] = False
+        rejected = client.post(path+'/runs', headers=headers,
+            json=dict(revision=before['revision'], request_id=str(uuid4()), basis=invalid))
+        assert rejected.status_code == 422, rejected.text
+        assert client.get(path).json() == before
+        assert client.get(path+'/runs/'+record['id']).json() == record
+    service.store.engine.dispose()

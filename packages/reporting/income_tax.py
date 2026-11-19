@@ -74,6 +74,27 @@ def render(run, locale='zh'):
                 ('local_amounts_payable','地方税应补合计','Local amounts payable'),
                 ('local_refunds','地方税应退合计','Local refund amounts')]:
             lines.append(f'| {_text(say(zh,en))} | {_text(local[key])} |')
+    if result.get('osaka_local'):
+        local = result['osaka_local']
+        lines += ['', '## ' + say('大阪市地方税明细', 'Osaka city local tax details'), '',
+            say('仅限全年全部办公地点位于大阪市的普通内国法人。上表应缴及应退合计为国家税；地方税另列如下，各税种不自动互抵。',
+                'Ordinary domestic companies with all offices in Osaka city throughout the full year only. Payable and refundable totals above are national taxes; local amounts are listed separately below, without automatic cross-tax offsets.'), '',
+            '| ' + say('税种 | 年度税额 | 中间申告义务 | 补退余额', 'Tax | Annual tax | Interim liability | Payment or refund balance') + ' |',
+            '| --- | --- | --- | --- |']
+        for key, zh, en in [('enterprise','事业税','Enterprise tax'),
+                ('special_enterprise','特别法人事业税','Special enterprise tax'),
+                ('prefectural_inhabitant','大阪府法人税割','Prefectural inhabitant levy'),
+                ('city_inhabitant','大阪市法人税割','City inhabitant levy'),
+                ('prefectural_capitation','大阪府均等割','Prefectural per-capita levy'),
+                ('city_capitation','大阪市均等割','City per-capita levy')]:
+            values = [say(zh,en), local['local_tax_components'][key],
+                local['local_interim_liabilities'][key], local['local_balances'][key]]
+            lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
+        lines += ['', '| ' + say('项目 | 金额', 'Item | Amount') + ' |', '| --- | --- |']
+        for key, zh, en in [('local_final_tax','地方税年度合计','Local annual tax total'),
+                ('local_amounts_payable','地方税应补合计','Local amounts payable'),
+                ('local_refunds','地方税应退合计','Local refund amounts')]:
+            lines.append(f'| {_text(say(zh,en))} | {_text(local[key])} |')
     if result.get('tax_scope') == 'china_resident_ordinary_direct_foreign_credit_positive_bases':
         lines += ['', '## ' + say('境外直接抵免明细', 'Direct foreign credit details'), '',
             say('仅普通25%税率居民企业直接抵免及非负逐国税基；不含间接、饶让抵免或其他优惠。历史余额保留原始年度；本期到期未用金额不可结转。',
