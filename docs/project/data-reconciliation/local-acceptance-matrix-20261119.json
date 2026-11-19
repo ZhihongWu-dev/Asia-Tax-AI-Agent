@@ -24,7 +24,9 @@
         "local-regression-personal-reconciliation-20261119.json",
         "local-domain-citation-filter-fix-20261119.json",
         "tokyo-full-browser-validation-20261119.json",
-        "osaka-full-browser-validation-20261119.json"
+        "osaka-full-browser-validation-20261119.json",
+        "li-rule-preservation-audit-20261119.json",
+        "changed-li-rule-evidence-20261119.json"
       ],
       "limits": "Local regression and v5 golden/checker passed. Current129-case full browser suite passed in9.1m, including transfers, rentals and Osaka. Hosted identity/provider acceptance is unproven; original/v4 comparison jobs were still active at last observation. Delivery is local-only."
     },
@@ -75,7 +77,8 @@
         "china-personal-transfer-report-validation-20261119.json",
         "china-personal-rental-research-20261119.md",
         "japan-osaka-annual-assessment-20261119.json",
-        "osaka-full-browser-validation-20261119.json"
+        "osaka-full-browser-validation-20261119.json",
+        "income-workflow-availability-current-audit-20261119.json"
       ],
       "limits": "Current129-case browser suite includes representative corporate/personal workflows, Tokyo/Osaka ordinary local company scopes and China foreign-income transfers/rentals. It does not establish every income type, residency, special regime or filing obligation."
     },
@@ -92,7 +95,7 @@
         "osaka-full-browser-validation-20261119.json",
         "japan-osaka-upgrade-replay-20261119.json"
       ],
-      "limits": "Latest rental SQLite restart/exact retrieval/bilingual export and11 upgrade replay cases passed, including omitted/empty rentals and transfers in historical personal requests. Fixture-auth and prior PostgreSQL evidence do not establish real sign-in acceptance."
+      "limits": "15 historical replay cases passed, including Japan before Osaka and omitted/empty rental/transfer defaults; saved results and reports preserved after intervening edits and database reopen. Local fixture identity does not prove real sign-in acceptance."
     },
     {
       "requirement": "Source-version traceability for every substantive calculation",
@@ -206,7 +209,18 @@
     "osaka_ward_identity": "Official24-ward shared list closes alias duplicate charging;64 backend cases,TypeScript and1 final focused browser flow passed.129-case full baseline predates this guard.",
     "wards_source_regression": "1868passed37.54s at7fa687c;175 successful calculations,35 policies,126 source records,0 unresolved.",
     "wards_build": "Production build passed,2282 modules;841.51kB main JS;local artifacts only.",
-    "catalog_integrity": "At292c24f,6 business CSV and SQLite hashes match reviewed snapshot;all7 SQLite row counts unchanged."
+    "catalog_integrity": "At292c24f,6 business CSV and SQLite hashes match reviewed snapshot;all7 SQLite row counts unchanged.",
+    "current_22_selections": "Atb19b742,executed frontend policies through Vite SSR for original22 inputs:all11 countries x2subjects have at least1policy. This is availability only."
   },
-  "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred."
+  "user_input": "Asked for 2-3 anonymized representative business cases or specific priority workflow; answer pending, not inferred.",
+  "business_acceptance_gate": {
+    "state": "awaiting_concrete_cases_and_expected_outcomes",
+    "request": "Anonymous priority cases with country, taxpayer type, income type, period and expected calculation or treatment.",
+    "known_unresolved": [
+      "Vietnam foreign-credit/annual-relief composition",
+      "Japanese local and special regimes outside verified Tokyo/Osaka scopes",
+      "Mixed and special regimes not covered by representative cases"
+    ],
+    "interpretation": "Country coverage does not establish every tax situation. Existing planning gaps are not automatically merge deletions. No full-business completion claim; original objective remains active."
+  }
 }

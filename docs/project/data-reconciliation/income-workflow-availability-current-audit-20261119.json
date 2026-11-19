@@ -1,0 +1,561 @@
+{
+  "runtime_commit": "b19b742",
+  "scope": "Current frontend policy selection for original22 representative country/subject inputs; not all business variants or legal acceptance.",
+  "rows": [
+    {
+      "country": "cn",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "cn",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "cn",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "cn_company_2026",
+        "cn_small_company_2026"
+      ]
+    },
+    {
+      "country": "cn",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "cn",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "cn",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "cn_comprehensive_2026"
+      ]
+    },
+    {
+      "country": "hk",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "hk",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2025-04-01",
+        "period_end": "2026-03-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "hk",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "hk_profits_2025_26"
+      ]
+    },
+    {
+      "country": "hk",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "hk",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2025-04-01",
+        "period_end": "2026-03-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "hk",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "hk_salaries_2025_26"
+      ]
+    },
+    {
+      "country": "sg",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "sg",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2025-01-01",
+        "period_end": "2025-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "sg",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "sg_company_ya2026"
+      ]
+    },
+    {
+      "country": "sg",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "sg",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2025-01-01",
+        "period_end": "2025-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "sg",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "sg_employment_ya2026",
+        "sg_resident_ya2026"
+      ]
+    },
+    {
+      "country": "id",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "id",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "id",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "id_company_2026"
+      ]
+    },
+    {
+      "country": "id",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "id",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "id",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "id_resident_2026"
+      ]
+    },
+    {
+      "country": "vn",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "vn",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "vn",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "vn_company_2026"
+      ]
+    },
+    {
+      "country": "vn",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "vn",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "vn",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "vn_employment_2026"
+      ]
+    },
+    {
+      "country": "my",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "my",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "my",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "my_company_2026"
+      ]
+    },
+    {
+      "country": "my",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "my",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "my",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "my_individual_2026"
+      ]
+    },
+    {
+      "country": "th",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "th",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "th",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "th_company_2026"
+      ]
+    },
+    {
+      "country": "th",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "th",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "th",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "th_resident_2026"
+      ]
+    },
+    {
+      "country": "ae",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "ae",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "ae",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "ae_ordinary_2026"
+      ]
+    },
+    {
+      "country": "ae",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "ae",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "ae",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "ae_ordinary_2026"
+      ]
+    },
+    {
+      "country": "jp",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "jp",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "jp",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "jp_company_starting_2026"
+      ]
+    },
+    {
+      "country": "jp",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "jp",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "jp",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "jp_resident_ordinary_2026"
+      ]
+    },
+    {
+      "country": "kr",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "kr",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "kr",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "kr_company_ordinary_2026"
+      ]
+    },
+    {
+      "country": "kr",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "kr",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-01-01",
+        "period_end": "2026-12-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "kr",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "kr_salary_standard_payroll_2026"
+      ]
+    },
+    {
+      "country": "in",
+      "subject": "company",
+      "input": {
+        "jurisdiction": "in",
+        "subject": "company",
+        "residency": "resident",
+        "period_start": "2026-04-01",
+        "period_end": "2027-03-31",
+        "incomes": [
+          {
+            "category": "business",
+            "source_jurisdiction": "in",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "in_company_section200_ty2026_27",
+        "in_company_normal_ty2026_27"
+      ]
+    },
+    {
+      "country": "in",
+      "subject": "individual",
+      "input": {
+        "jurisdiction": "in",
+        "subject": "individual",
+        "residency": "resident",
+        "period_start": "2026-04-01",
+        "period_end": "2027-03-31",
+        "incomes": [
+          {
+            "category": "employment",
+            "source_jurisdiction": "in",
+            "gross_amount": "100000",
+            "description": "Synthetic policy availability audit"
+          }
+        ],
+        "claimed_deductions": "0",
+        "carried_losses": "0",
+        "facts_confirmed": true
+      },
+      "policy_ids": [
+        "in_personal_new_ty2026_27",
+        "in_personal_old_ty2026_27"
+      ]
+    }
+  ],
+  "without_policy": []
+}
