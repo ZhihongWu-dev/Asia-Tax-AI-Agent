@@ -1,0 +1,468 @@
+{
+  "reference": "origin/LiZiheng",
+  "reference_commit": "140a9efa53a4bce3f2899a20edfa77be8ec55e8b",
+  "current_commit": "0735a57150d2ff2b28ec256435d0e317971f1f5d",
+  "old_rules": 451,
+  "current_rules": 477,
+  "missing_original_rule_ids": [],
+  "added_rule_ids": [
+    "id-ae.anti_abuse.ppt.pre_pmk112",
+    "id-ae.outbound_wht.cap_10.pre_pmk112",
+    "id-cn.anti_abuse.ppt.pre_pmk112",
+    "id-cn.outbound_wht.cap_10.pre_pmk112",
+    "id-hk.anti_abuse.ppt.pre_pmk112",
+    "id-hk.outbound_wht.cap_10.pre_pmk112",
+    "id-hk.outbound_wht.cap_5.pre_pmk112",
+    "id-in.anti_abuse.ppt.pre_pmk112",
+    "id-in.outbound_wht.cap_10.pre_pmk112",
+    "id-jp.anti_abuse.ppt.pre_pmk112",
+    "id-jp.outbound_wht.cap_10.pre_pmk112",
+    "id-jp.outbound_wht.cap_15.pre_pmk112",
+    "id-kr.anti_abuse.ppt.pre_pmk112",
+    "id-kr.outbound_wht.cap_10.pre_pmk112",
+    "id-kr.outbound_wht.cap_15.pre_pmk112",
+    "id-my.anti_abuse.ppt.pre_pmk112",
+    "id-my.outbound_wht.cap_10.pre_pmk112",
+    "id-sg.anti_abuse.ppt.pre_pmk112",
+    "id-sg.outbound_wht.cap_10.pre_pmk112",
+    "id-sg.outbound_wht.cap_15.pre_pmk112",
+    "id-th.anti_abuse.ppt.pre_pmk112",
+    "id-th.outbound_wht.cap_15.pre_pmk112",
+    "id-th.outbound_wht.cap_20.pre_pmk112",
+    "id-vn.outbound_wht.cap_15.pre_pmk112",
+    "vn.outbound_wht.corporate_distribution_exempt",
+    "vn.penalty.late_interest.20260701"
+  ],
+  "lost_rule_slots": [],
+  "gaps": [
+    {
+      "slot": "id|company|penalty",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "id|company|restructure",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "id|individual|penalty",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "id|individual|restructure",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "id|individual|exit",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "vn|company|cfc",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "vn|company|restructure",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "vn|individual|cfc",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "vn|individual|restructure",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "vn|individual|exit",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "my|company|penalty",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "my|company|restructure",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "my|individual|penalty",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "my|individual|restructure",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "my|individual|exit",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "ae|company|penalty",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "ae|company|restructure",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "ae|individual|penalty",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "ae|individual|restructure",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "ae|individual|exit",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "kr|company|penalty",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "kr|company|restructure",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "kr|individual|penalty",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "kr|individual|restructure",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "kr|individual|exit",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "in|company|penalty",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "in|company|restructure",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "in|individual|penalty",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "in|individual|restructure",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    },
+    {
+      "slot": "in|individual|exit",
+      "has_original_li_rule": false,
+      "has_current_rule": false
+    }
+  ],
+  "limits": "Read-only comparison against locally stored remote-tracking Git object; no fetch or push. Rule ID and slot preservation does not prove equivalent semantics or statutory absence. Absence records are not counted as rules.",
+  "changed_original_rules": [
+    {
+      "rule_id": "id.outbound_wht.statutory",
+      "fields": [
+        "cite_ids",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-cn.outbound_wht.cap_10",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-cn.anti_abuse.ppt",
+      "fields": [
+        "procedure",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-hk.outbound_wht.cap_5",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-hk.outbound_wht.cap_10",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-hk.anti_abuse.ppt",
+      "fields": [
+        "procedure",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-in.outbound_wht.cap_10",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-in.anti_abuse.ppt",
+      "fields": [
+        "procedure",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-jp.outbound_wht.cap_10",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-jp.outbound_wht.cap_15",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-jp.anti_abuse.ppt",
+      "fields": [
+        "procedure",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-kr.outbound_wht.cap_10",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-kr.outbound_wht.cap_15",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-kr.anti_abuse.ppt",
+      "fields": [
+        "procedure",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-my.outbound_wht.cap_10",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-my.anti_abuse.ppt",
+      "fields": [
+        "procedure",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-vn.outbound_wht.cap_15",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-ae.outbound_wht.cap_10",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-ae.anti_abuse.ppt",
+      "fields": [
+        "procedure",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-sg.outbound_wht.cap_10",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-sg.outbound_wht.cap_15",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-sg.anti_abuse.ppt",
+      "fields": [
+        "procedure",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-th.outbound_wht.cap_15",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-th.outbound_wht.cap_20",
+      "fields": [
+        "procedure",
+        "cite_ids",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "id-th.anti_abuse.ppt",
+      "fields": [
+        "procedure",
+        "effective_from",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "vn.residence.company",
+      "fields": [
+        "cite_ids",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "vn.inbound.taxable",
+      "fields": [
+        "cite_ids",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "vn.inbound.credit",
+      "fields": [
+        "condition",
+        "cite_ids",
+        "decision_ids",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "vn.final.cit",
+      "fields": [
+        "cite_ids",
+        "note"
+      ]
+    },
+    {
+      "rule_id": "vn.final.domestic_exempt",
+      "fields": [
+        "condition",
+        "cite_ids",
+        "note"
+      ]
+    }
+  ],
+  "unchanged_original_rules": 421,
+  "changed_field_counts": {
+    "cite_ids": 21,
+    "note": 30,
+    "procedure": 24,
+    "effective_from": 24,
+    "condition": 2,
+    "decision_ids": 1
+  },
+  "condition_review": [
+    {
+      "rule_id": "vn.inbound.credit",
+      "before": "true",
+      "after": "vn_direct_credit_eligible = true",
+      "meaning": "Previously unconditional credit selection now requires explicit reviewed eligibility."
+    },
+    {
+      "rule_id": "vn.final.domestic_exempt",
+      "before": "payer_resident = true",
+      "after": "payer_resident = true and vn_qualifying_profit_distribution = true",
+      "meaning": "Payer residence alone no longer establishes exempt profit distribution."
+    }
+  ],
+  "conclusion": "No original rule ID or rule-covered slot was lost. All30 inventoried gaps lack a corresponding rule in both snapshots. They remain business coverage gaps, but are not evidence of merge deletion.30 changed originals require substantive evidence; this structural audit does not reapprove their legal meaning."
+}

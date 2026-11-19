@@ -42,6 +42,14 @@ is incomplete. Earlier dated sections below are historical checkpoints.
   selector; no deployment occurred. The main JavaScript chunk remains above
   the500kB advisory. See [build artifacts](data-reconciliation/local-production-build-wards-20261119.json).
 
+A local Git-object comparison against Li commit `140a9ef` also confirms all451
+original rule IDs are retained:421 original rows are unchanged,30 were revised,
+and26 rules were added. No originally rule-covered slot disappeared. All30
+inventoried planning gaps lacked a rule in the original Li snapshot too; they
+remain unresolved coverage, not evidence of merge deletion. Changed rule
+meaning is not approved by ID preservation alone. See the
+[rule preservation audit](data-reconciliation/li-rule-preservation-audit-20261119.json).
+
 Remaining acceptance work includes actual business examples and expected
 outcomes, broader mixed/special regimes, and authoritative Vietnam guidance on
 foreign-credit/annual-relief composition. The UI correctly labels Vietnam
