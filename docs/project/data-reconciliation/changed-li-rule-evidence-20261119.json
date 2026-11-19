@@ -1,0 +1,1238 @@
+{
+  "scope": "Current read-only execution of golden cases for30 modified original rules; exact reviewed-row matches where available.",
+  "tests": 92,
+  "seconds": 4.84,
+  "failures": [],
+  "rules": [
+    {
+      "rule_id": "id-ae.anti_abuse.ppt",
+      "tests": [
+        {
+          "test_id": "id-ae.anti_abuse.ppt.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-ae.anti_abuse.ppt.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-ae.anti_abuse.ppt.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-ae.outbound_wht.cap_10",
+      "tests": [
+        {
+          "test_id": "id-ae.outbound_wht.cap_10.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-ae.outbound_wht.cap_10.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-ae.outbound_wht.cap_10.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-cn.anti_abuse.ppt",
+      "tests": [
+        {
+          "test_id": "id-cn.anti_abuse.ppt.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-cn.anti_abuse.ppt.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-cn.anti_abuse.ppt.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-cn.outbound_wht.cap_10",
+      "tests": [
+        {
+          "test_id": "id-cn.outbound_wht.cap_10.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-cn.outbound_wht.cap_10.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-cn.outbound_wht.cap_10.3",
+          "failure": null
+        },
+        {
+          "test_id": "id-cn.outbound_wht.cap_10.4",
+          "failure": null
+        },
+        {
+          "test_id": "id-cn.outbound_wht.cap_10.5",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-hk.anti_abuse.ppt",
+      "tests": [
+        {
+          "test_id": "id-hk.anti_abuse.ppt.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-hk.anti_abuse.ppt.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-hk.anti_abuse.ppt.3",
+          "failure": null
+        },
+        {
+          "test_id": "id-hk.anti_abuse.ppt.4",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-hk.outbound_wht.cap_10",
+      "tests": [
+        {
+          "test_id": "id-hk.outbound_wht.cap_10.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-hk.outbound_wht.cap_10.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-hk.outbound_wht.cap_10.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-hk.outbound_wht.cap_5",
+      "tests": [
+        {
+          "test_id": "id-hk.outbound_wht.cap_5.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-hk.outbound_wht.cap_5.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-hk.outbound_wht.cap_5.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-in.anti_abuse.ppt",
+      "tests": [
+        {
+          "test_id": "id-in.anti_abuse.ppt.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-in.anti_abuse.ppt.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-in.anti_abuse.ppt.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-in.outbound_wht.cap_10",
+      "tests": [
+        {
+          "test_id": "id-in.outbound_wht.cap_10.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-in.outbound_wht.cap_10.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-in.outbound_wht.cap_10.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-jp.anti_abuse.ppt",
+      "tests": [
+        {
+          "test_id": "id-jp.anti_abuse.ppt.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-jp.anti_abuse.ppt.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-jp.anti_abuse.ppt.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-jp.outbound_wht.cap_10",
+      "tests": [
+        {
+          "test_id": "id-jp.outbound_wht.cap_10.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-jp.outbound_wht.cap_10.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-jp.outbound_wht.cap_10.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-jp.outbound_wht.cap_15",
+      "tests": [
+        {
+          "test_id": "id-jp.outbound_wht.cap_15.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-jp.outbound_wht.cap_15.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-jp.outbound_wht.cap_15.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-kr.anti_abuse.ppt",
+      "tests": [
+        {
+          "test_id": "id-kr.anti_abuse.ppt.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-kr.anti_abuse.ppt.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-kr.anti_abuse.ppt.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-kr.outbound_wht.cap_10",
+      "tests": [
+        {
+          "test_id": "id-kr.outbound_wht.cap_10.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-kr.outbound_wht.cap_10.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-kr.outbound_wht.cap_10.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-kr.outbound_wht.cap_15",
+      "tests": [
+        {
+          "test_id": "id-kr.outbound_wht.cap_15.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-kr.outbound_wht.cap_15.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-kr.outbound_wht.cap_15.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-my.anti_abuse.ppt",
+      "tests": [
+        {
+          "test_id": "id-my.anti_abuse.ppt.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-my.anti_abuse.ppt.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-my.anti_abuse.ppt.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-my.outbound_wht.cap_10",
+      "tests": [
+        {
+          "test_id": "id-my.outbound_wht.cap_10.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-my.outbound_wht.cap_10.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-my.outbound_wht.cap_10.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-sg.anti_abuse.ppt",
+      "tests": [
+        {
+          "test_id": "id-sg.anti_abuse.ppt.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-sg.anti_abuse.ppt.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-sg.anti_abuse.ppt.3",
+          "failure": null
+        },
+        {
+          "test_id": "id-sg.anti_abuse.ppt.4",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-sg.outbound_wht.cap_10",
+      "tests": [
+        {
+          "test_id": "id-sg.outbound_wht.cap_10.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-sg.outbound_wht.cap_10.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-sg.outbound_wht.cap_10.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-sg.outbound_wht.cap_15",
+      "tests": [
+        {
+          "test_id": "id-sg.outbound_wht.cap_15.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-sg.outbound_wht.cap_15.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-sg.outbound_wht.cap_15.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-th.anti_abuse.ppt",
+      "tests": [
+        {
+          "test_id": "id-th.anti_abuse.ppt.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-th.anti_abuse.ppt.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-th.anti_abuse.ppt.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-th.outbound_wht.cap_15",
+      "tests": [
+        {
+          "test_id": "id-th.outbound_wht.cap_15.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-th.outbound_wht.cap_15.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-th.outbound_wht.cap_15.3",
+          "failure": null
+        },
+        {
+          "test_id": "id-th.outbound_wht.cap_15.4",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-th.outbound_wht.cap_20",
+      "tests": [
+        {
+          "test_id": "id-th.outbound_wht.cap_20.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-th.outbound_wht.cap_20.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-th.outbound_wht.cap_20.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id-vn.outbound_wht.cap_15",
+      "tests": [
+        {
+          "test_id": "id-vn.outbound_wht.cap_15.1",
+          "failure": null
+        },
+        {
+          "test_id": "id-vn.outbound_wht.cap_15.2",
+          "failure": null
+        },
+        {
+          "test_id": "id-vn.outbound_wht.cap_15.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [],
+      "frozen_candidate_exact_match": true,
+      "review_references": [
+        "indonesia-dated-procedure-candidate-20261118.md",
+        "indonesia-procedure-date-boundaries-20261118.json",
+        "optimizer-final-validation-20261119.json"
+      ]
+    },
+    {
+      "rule_id": "id.outbound_wht.statutory",
+      "tests": [
+        {
+          "test_id": "id.outbound_wht.statutory.1",
+          "failure": null
+        },
+        {
+          "test_id": "id.outbound_wht.statutory.2",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [
+        {
+          "file": "indonesia-article26-primary-migration-20261118.json",
+          "path": "$.after_rule"
+        }
+      ]
+    },
+    {
+      "rule_id": "vn.final.cit",
+      "tests": [
+        {
+          "test_id": "vn.final.cit.1",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [
+        {
+          "file": "vietnam-inbound-rule-primary-rebindings-20261118.json",
+          "path": "$.changes[4].after"
+        }
+      ]
+    },
+    {
+      "rule_id": "vn.final.domestic_exempt",
+      "tests": [
+        {
+          "test_id": "vn.final.domestic_exempt.1",
+          "failure": null
+        },
+        {
+          "test_id": "vn.final.domestic_exempt.2",
+          "failure": null
+        },
+        {
+          "test_id": "vn.final.domestic_exempt.3",
+          "failure": null
+        },
+        {
+          "test_id": "vn.final.domestic_exempt.unqualified",
+          "failure": null
+        },
+        {
+          "test_id": "vn.final.domestic_exempt.unverified",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [
+        {
+          "file": "vietnam-distribution-eligibility-20261118.json",
+          "path": "$.changes[1].after"
+        }
+      ]
+    },
+    {
+      "rule_id": "vn.inbound.credit",
+      "tests": [
+        {
+          "test_id": "vn.inbound.credit.1",
+          "failure": null
+        },
+        {
+          "test_id": "vn.inbound.credit.false",
+          "failure": null
+        },
+        {
+          "test_id": "vn.inbound.credit.unknown",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [
+        {
+          "file": "vietnam-direct-credit-eligibility-20261118.json",
+          "path": "$.after_rule"
+        }
+      ]
+    },
+    {
+      "rule_id": "vn.inbound.taxable",
+      "tests": [
+        {
+          "test_id": "vn.inbound.taxable.1",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [
+        {
+          "file": "vietnam-inbound-rule-primary-rebindings-20261118.json",
+          "path": "$.changes[3].after"
+        }
+      ]
+    },
+    {
+      "rule_id": "vn.residence.company",
+      "tests": [
+        {
+          "test_id": "vn.residence.company.1",
+          "failure": null
+        },
+        {
+          "test_id": "vn.residence.company.2",
+          "failure": null
+        },
+        {
+          "test_id": "vn.residence.company.3",
+          "failure": null
+        }
+      ],
+      "exact_reviewed_row_matches": [
+        {
+          "file": "vietnam-residence-rule-primary-rebinding-20261118.json",
+          "path": "$.changes[2].after"
+        }
+      ]
+    }
+  ],
+  "limits": "Golden expectations are authored tests, not independent legal approval. Missing exact reviewed-row matches require separate provenance review, not automatic rejection.",
+  "current_date_selection_checks": [
+    {
+      "rule": "id-ae.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": [
+        "id-ae.anti_abuse.ppt.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-ae.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": [
+        "id-ae.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-ae.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": [
+        "id-ae.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-ae.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": [
+        "id-ae.outbound_wht.cap_10.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-ae.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": [
+        "id-ae.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-ae.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": [
+        "id-ae.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-cn.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": [
+        "id-cn.anti_abuse.ppt.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-cn.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": [
+        "id-cn.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-cn.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": [
+        "id-cn.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-cn.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": [
+        "id-cn.outbound_wht.cap_10.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-cn.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": [
+        "id-cn.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-cn.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": [
+        "id-cn.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-hk.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": [
+        "id-hk.anti_abuse.ppt.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-hk.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": [
+        "id-hk.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-hk.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": [
+        "id-hk.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-hk.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": [
+        "id-hk.outbound_wht.cap_10.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-hk.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": [
+        "id-hk.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-hk.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": [
+        "id-hk.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-hk.outbound_wht.cap_5",
+      "date": "2025-12-30",
+      "selected": [
+        "id-hk.outbound_wht.cap_5.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-hk.outbound_wht.cap_5",
+      "date": "2025-12-31",
+      "selected": [
+        "id-hk.outbound_wht.cap_5"
+      ]
+    },
+    {
+      "rule": "id-hk.outbound_wht.cap_5",
+      "date": "2026-01-01",
+      "selected": [
+        "id-hk.outbound_wht.cap_5"
+      ]
+    },
+    {
+      "rule": "id-in.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": [
+        "id-in.anti_abuse.ppt.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-in.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": [
+        "id-in.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-in.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": [
+        "id-in.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-in.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": [
+        "id-in.outbound_wht.cap_10.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-in.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": [
+        "id-in.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-in.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": [
+        "id-in.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-jp.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": [
+        "id-jp.anti_abuse.ppt.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-jp.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": [
+        "id-jp.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-jp.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": [
+        "id-jp.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-jp.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": [
+        "id-jp.outbound_wht.cap_10.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-jp.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": [
+        "id-jp.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-jp.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": [
+        "id-jp.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-jp.outbound_wht.cap_15",
+      "date": "2025-12-30",
+      "selected": [
+        "id-jp.outbound_wht.cap_15.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-jp.outbound_wht.cap_15",
+      "date": "2025-12-31",
+      "selected": [
+        "id-jp.outbound_wht.cap_15"
+      ]
+    },
+    {
+      "rule": "id-jp.outbound_wht.cap_15",
+      "date": "2026-01-01",
+      "selected": [
+        "id-jp.outbound_wht.cap_15"
+      ]
+    },
+    {
+      "rule": "id-kr.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": [
+        "id-kr.anti_abuse.ppt.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-kr.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": [
+        "id-kr.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-kr.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": [
+        "id-kr.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-kr.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": [
+        "id-kr.outbound_wht.cap_10.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-kr.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": [
+        "id-kr.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-kr.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": [
+        "id-kr.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-kr.outbound_wht.cap_15",
+      "date": "2025-12-30",
+      "selected": [
+        "id-kr.outbound_wht.cap_15.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-kr.outbound_wht.cap_15",
+      "date": "2025-12-31",
+      "selected": [
+        "id-kr.outbound_wht.cap_15"
+      ]
+    },
+    {
+      "rule": "id-kr.outbound_wht.cap_15",
+      "date": "2026-01-01",
+      "selected": [
+        "id-kr.outbound_wht.cap_15"
+      ]
+    },
+    {
+      "rule": "id-my.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": [
+        "id-my.anti_abuse.ppt.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-my.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": [
+        "id-my.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-my.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": [
+        "id-my.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-my.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": [
+        "id-my.outbound_wht.cap_10.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-my.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": [
+        "id-my.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-my.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": [
+        "id-my.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-sg.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": [
+        "id-sg.anti_abuse.ppt.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-sg.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": [
+        "id-sg.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-sg.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": [
+        "id-sg.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-sg.outbound_wht.cap_10",
+      "date": "2025-12-30",
+      "selected": [
+        "id-sg.outbound_wht.cap_10.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-sg.outbound_wht.cap_10",
+      "date": "2025-12-31",
+      "selected": [
+        "id-sg.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-sg.outbound_wht.cap_10",
+      "date": "2026-01-01",
+      "selected": [
+        "id-sg.outbound_wht.cap_10"
+      ]
+    },
+    {
+      "rule": "id-sg.outbound_wht.cap_15",
+      "date": "2025-12-30",
+      "selected": [
+        "id-sg.outbound_wht.cap_15.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-sg.outbound_wht.cap_15",
+      "date": "2025-12-31",
+      "selected": [
+        "id-sg.outbound_wht.cap_15"
+      ]
+    },
+    {
+      "rule": "id-sg.outbound_wht.cap_15",
+      "date": "2026-01-01",
+      "selected": [
+        "id-sg.outbound_wht.cap_15"
+      ]
+    },
+    {
+      "rule": "id-th.anti_abuse.ppt",
+      "date": "2025-12-30",
+      "selected": [
+        "id-th.anti_abuse.ppt.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-th.anti_abuse.ppt",
+      "date": "2025-12-31",
+      "selected": [
+        "id-th.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-th.anti_abuse.ppt",
+      "date": "2026-01-01",
+      "selected": [
+        "id-th.anti_abuse.ppt"
+      ]
+    },
+    {
+      "rule": "id-th.outbound_wht.cap_15",
+      "date": "2025-12-30",
+      "selected": [
+        "id-th.outbound_wht.cap_15.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-th.outbound_wht.cap_15",
+      "date": "2025-12-31",
+      "selected": [
+        "id-th.outbound_wht.cap_15"
+      ]
+    },
+    {
+      "rule": "id-th.outbound_wht.cap_15",
+      "date": "2026-01-01",
+      "selected": [
+        "id-th.outbound_wht.cap_15"
+      ]
+    },
+    {
+      "rule": "id-th.outbound_wht.cap_20",
+      "date": "2025-12-30",
+      "selected": [
+        "id-th.outbound_wht.cap_20.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-th.outbound_wht.cap_20",
+      "date": "2025-12-31",
+      "selected": [
+        "id-th.outbound_wht.cap_20"
+      ]
+    },
+    {
+      "rule": "id-th.outbound_wht.cap_20",
+      "date": "2026-01-01",
+      "selected": [
+        "id-th.outbound_wht.cap_20"
+      ]
+    },
+    {
+      "rule": "id-vn.outbound_wht.cap_15",
+      "date": "2025-12-30",
+      "selected": [
+        "id-vn.outbound_wht.cap_15.pre_pmk112"
+      ]
+    },
+    {
+      "rule": "id-vn.outbound_wht.cap_15",
+      "date": "2025-12-31",
+      "selected": [
+        "id-vn.outbound_wht.cap_15"
+      ]
+    },
+    {
+      "rule": "id-vn.outbound_wht.cap_15",
+      "date": "2026-01-01",
+      "selected": [
+        "id-vn.outbound_wht.cap_15"
+      ]
+    }
+  ],
+  "review_mapping_summary": "6 Vietnamese rows exactly match archived reviewed rows;24 Indonesian current/historical row pairs exactly match the frozen validated candidate.72 current CSV date-selection probes passed;92 current authored golden cases passed."
+}
