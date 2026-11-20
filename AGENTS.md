@@ -24,7 +24,7 @@ and the agents write and review a report, which the program typesets. The projec
 
 | Path | What it is |
 |---|---|
-| `database/` | The law library: official texts, clauses, parameters with verbatim quotes, absence records. Built by `database/tools/build.py`. Spec: `database/database_spec.en.md` |
+| `database/` | The law library: official texts, clauses, parameters with verbatim quotes, absence records, and its reader (`tools/dbsource.py`, `tools/find.py`, the MCP server `tools/mcp_server.py`, spec `database_mcp_spec.en.md`). The collector side (build and collection tools, the spec `database_spec.en.md`, the task sheet, samples, viewer, `scope.csv`, `leads.csv`) is not in git: collectors pull it from the collector kit on Supabase (`kit/` in the bucket) |
 | `rule/` | The rule layer: the law as structured, evaluable rules over the library (`rule.csv`, `variable.csv`, `decision.csv`, golden tests in `rule_test.csv`). Spec: `rule/rule_layer_spec.en.md` |
 | `optimization/` | The optimizer: enumerates structures, evaluates each hop through the rule layer, ranks by tax per payment. Spec: `optimization/optimization_layer_spec.en.md` |
 | `agent/` | The three agents (front, analysis, review; the polish stage was removed on 2026-11-06), their specs and prompts, the case MCP server, the orchestrator (LangGraph flow; `agent/tools/orchestrate_codex.py` runs the agents on the Codex CLI with qwen by default, `agent/tools/orchestrate.py` on Claude Code), retrieval, PDF rendering |

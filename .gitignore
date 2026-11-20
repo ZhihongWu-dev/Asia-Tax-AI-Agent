@@ -76,3 +76,22 @@ database/ocr/.parts/
 
 # Local cache of the remote library (database/tools/dbsource.py)
 .cache/
+
+# The collector side is not kept in git (2026-11-20): collectors pull it from the collector kit on Supabase
+# (kit/ in the bucket, written by database/tools/upload.py). Git keeps the library and its reader: dbsource, find,
+# the MCP server, its check, and the MCP spec.
+database/tools/*
+!database/tools/dbsource.py
+!database/tools/find.py
+!database/tools/mcp_server.py
+!database/tools/test_mcp_server.py
+database/samples/
+database/viewer/
+database/requirements.txt
+database/database_spec.en.md
+database/数据库规范.md
+database/collection_task_sheet.en.md
+database/采集任务单.md
+database/scope.csv
+database/leads.csv
+database/.clause_before.csv
