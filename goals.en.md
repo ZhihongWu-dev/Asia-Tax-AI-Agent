@@ -1,6 +1,6 @@
 # Project goals
 
-English copy of `目标.md`; where the two differ, the Chinese version prevails. Change one, change the other.
+This English text is the master (since 2026-11-20); `目标.md` is its Chinese translation. Where the two differ, this version prevails. Change one, change the other.
 
 Written 2026-11-02 to prevent goal drift. Before changing a design, writing a spec or proposing an improvement, check it against this file; a change that conflicts with it goes to the user first.
 
@@ -68,7 +68,7 @@ The client states the background of the holdings and of one cross-border dividen
 
 ### 4.5 Language
 
-15. Specs are in Chinese for people, each with an English copy; the Chinese prevails. Everything the AI writes itself is in English. The interface is English by default with a Chinese switch. The report follows the client's language.
+15. Specs are written in English, which prevails (since 2026-11-20, for the handover); specifications and task sheets keep a Chinese translation for the collectors. Everything the AI writes itself is in English. The interface is English by default with a Chinese switch. The report follows the client's language.
 
 ## 5. Not done
 

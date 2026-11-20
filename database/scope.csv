@@ -1,0 +1,58 @@
+﻿code,name,alpha3,numeric,region,status,priority,reason
+ae,United Arab Emirates,ARE,784,Western Asia,active,1,
+cn,Mainland China,CHN,156,Eastern Asia,active,1,
+hk,Hong Kong,HKG,344,Eastern Asia,active,1,
+id,Indonesia,IDN,360,South-eastern Asia,active,1,
+in,India,IND,356,Southern Asia,active,1,
+jp,Japan,JPN,392,Eastern Asia,active,1,
+kr,Korea,KOR,410,Eastern Asia,active,1,
+my,Malaysia,MYS,458,South-eastern Asia,active,1,
+sg,Singapore,SGP,702,South-eastern Asia,active,1,
+th,Thailand,THA,764,South-eastern Asia,active,1,
+vn,Vietnam,VNM,704,South-eastern Asia,active,1,
+bd,Bangladesh,BGD,050,Southern Asia,planned,1,
+bh,Bahrain,BHR,048,Western Asia,planned,1,
+bn,Brunei,BRN,096,South-eastern Asia,planned,1,
+kw,Kuwait,KWT,414,Western Asia,planned,1,
+kz,Kazakhstan,KAZ,398,Central Asia,planned,1,
+lk,Sri Lanka,LKA,144,Southern Asia,planned,1,
+mo,Macau,MAC,446,Eastern Asia,planned,1,
+om,Oman,OMN,512,Western Asia,planned,1,
+ph,Philippines,PHL,608,South-eastern Asia,planned,1,
+pk,Pakistan,PAK,586,Southern Asia,planned,1,
+qa,Qatar,QAT,634,Western Asia,planned,1,
+sa,Saudi Arabia,SAU,682,Western Asia,planned,1,
+tj,Tajikistan,TJK,762,Central Asia,planned,1,
+tm,Turkmenistan,TKM,795,Central Asia,planned,1,
+tr,Turkey,TUR,792,Western Asia,planned,1,
+tw,Taiwan,TWN,158,Eastern Asia (not listed in M49),planned,1,
+uz,Uzbekistan,UZB,860,Central Asia,planned,1,
+am,Armenia,ARM,051,Western Asia,planned,2,
+az,Azerbaijan,AZE,031,Western Asia,planned,2,
+bt,Bhutan,BTN,064,Southern Asia,planned,2,
+ge,Georgia,GEO,268,Western Asia,planned,2,
+il,Israel,ISR,376,Western Asia,planned,2,
+iq,Iraq,IRQ,368,Western Asia,planned,2,
+jo,Jordan,JOR,400,Western Asia,planned,2,
+lb,Lebanon,LBN,422,Western Asia,planned,2,
+mn,Mongolia,MNG,496,Eastern Asia,planned,2,
+mv,Maldives,MDV,462,Southern Asia,planned,2,
+np,Nepal,NPL,524,Southern Asia,planned,2,
+tl,Timor-Leste,TLS,626,South-eastern Asia,planned,2,
+kg,Kyrgyzstan,KGZ,417,Central Asia,deferred,1,"Every Kyrgyz government site read from this network returned an empty shell, a closed connection or a block"
+kh,Cambodia,KHM,116,South-eastern Asia,deferred,1,"Laws are image scans needing OCR, and no one on the team can check Khmer quotes"
+mm,Myanmar,MMR,104,South-eastern Asia,deferred,1,"Income Tax Law text layer is in a broken Burmese encoding; OCR needed, and no one can check Burmese quotes"
+la,Laos,LAO,418,South-eastern Asia,deferred,2,Laws are image scans needing OCR; no treaty list or text found on any Lao government site
+af,Afghanistan,AFG,004,Southern Asia,deferred,3,Only the 2009 gazette text of the Income Tax Law found; no treaty list or text on an official site
+ir,Iran,IRN,364,Southern Asia,deferred,3,Tax authority and parliament sites time out or fail TLS from this network; one legal portal blocks by IP or location
+ps,Palestine,PSE,275,Western Asia,deferred,3,Official gazette refuses or times out; the 2011 income tax law only on the state news agency's site
+ye,Yemen,YEM,887,Western Asia,deferred,3,"Law and treaty book only on the Aden tax authority's site, which is not a .gov.ye domain; no list of agreements in force"
+kp,North Korea,PRK,408,Eastern Asia,excluded,3,No official online publication of the tax laws or of a treaty list
+sy,Syria,SYR,760,Western Asia,excluded,3,"No official online publication: the finance ministry site is under construction, the tax authority's says coming soon"
+ch,Switzerland,CHE,756,Western Europe,later,1,"Europe and the US come after Asia (owner's decision, 2026-11-20)"
+cy,Cyprus,CYP,196,Western Asia (a European holding location for this project),later,1,"Europe and the US come after Asia (owner's decision, 2026-11-20)"
+de,Germany,DEU,276,Western Europe,later,1,"Europe and the US come after Asia (owner's decision, 2026-11-20)"
+lu,Luxembourg,LUX,442,Western Europe,later,1,"Europe and the US come after Asia (owner's decision, 2026-11-20)"
+us,United States,USA,840,Northern America,later,1,"Europe and the US come after Asia (owner's decision, 2026-11-20)"
+ie,Ireland,IRL,372,Northern Europe,later,2,"Europe and the US come after Asia (owner's decision, 2026-11-20)"
+nl,Netherlands,NLD,528,Western Europe,later,2,"Europe and the US come after Asia (owner's decision, 2026-11-20)"

@@ -27,6 +27,8 @@ dist/
 build/
 .next/
 coverage/
+# the library's coverage matrix, source and watch lists (database/tools/coverage.py) belong in git
+!database/coverage/
 
 # Logs and temporary files
 reports/

@@ -35,16 +35,34 @@ if __name__ == "__main__":
 
 ROOT = Path(__file__).resolve().parents[1]                     # database/; --root points elsewhere (tests)
 ENC = "utf-8-sig"
-DOC_FIELDS = ["id", "jur", "type", "category", "title", "url", "file", "sha256", "lang", "effective_from", "effective_to", "note"]
+DOC_FIELDS = ["id", "jur", "type", "part", "category", "title", "url", "alt_url", "file", "sha256", "lang", "authentic",
+              "effective_from", "effective_to", "note"]                      # build.TABLES["doc"] (2026-11-20)
+TREATY_PARTS = ("original", "protocol", "notes", "minutes", "mli_synth", "consolidated", "ca_agreement", "record", "summary")
 BLOCKED_FIELDS = ["id", "jur", "title", "url", "reason", "alt_tried", "logged_at"]
 DOC_TYPES = ("law", "regulation", "guidance", "treaty", "form", "page", "attachment")
-CATEGORIES = ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "page_treaties", "page_rates", "page_deadlines")   # 数据库规范.md §2
+CATEGORIES = ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "page_treaties", "page_rates", "page_deadlines")   # database_spec.en.md §2
 OFFICIAL = ("gov.cn", "gov.hk", "gov.sg", "go.id", "gov.vn", "gov.my", "go.th", "gov.ae", "go.jp", "go.kr",
             "chinhphu.vn", "vbpl.vn", "quochoi.vn",   # Vietnam: Government portal and gazette, legal database, National Assembly
             "baochinhphu.vn",        # Vietnam: the Government's online newspaper (Government Office); its English law pages are translations
             "klri.re.kr",            # Korea Legislation Research Institute: the official English translations of Korean acts
             "gov.in", "nic.in",      # incometaxindia.gov.in, egazette.gov.in, indiacode.nic.in
-            "oecd.org")              # MLI texts and positions
+            "oecd.org",              # MLI texts and positions
+            # 2026-11-20: the 29 jurisdictions planned for Asia, from the reachability check of their official sites
+            "gov.tw", "gov.mo", "gov.ph", "gov.bn", "gov.tl", "gov.mn",
+            "legalinfo.mn",          # Mongolia: the Ministry of Justice's unified legal information system
+            "gov.pk", "gov.bd", "gov.lk", "gov.np", "gov.bt", "gov.mv",
+            "gov.sa", "gov.qa", "gov.kw", "gov.bh", "gov.om", "gov.iq", "gov.jo", "gov.lb", "gov.il", "gov.tr",
+            "almeezan.qa",           # Qatar: the Ministry of Justice's legal portal Al Meezan
+            "hjc.iq",                # Iraq: the Supreme Judicial Council's legal database
+            "gov.kz", "zan.kz",      # Kazakhstan: government portal and the Ministry of Justice's legal database Adilet
+            "gov.uz", "lex.uz", "soliq.uz",   # Uzbekistan: government portal, the national legislation database, the Tax Committee
+            "gov.tj", "andoz.tj",    # Tajikistan: government and the Tax Committee
+            "gov.tm",
+            "gov.az", "e-qanun.az",  # Azerbaijan: government and the Ministry of Justice's legal database
+            "gov.am", "arlis.am", "src.am",   # Armenia: government, the legal information system, the State Revenue Committee
+            "gov.ge", "mof.ge", "rs.ge",      # Georgia: government (matsne is the Legislative Herald), ministry of finance, revenue service
+            # treaty texts published by the other contracting state count too (§4.1)
+            "bundesfinanzministerium.de", "gov.pt", "gov.rs", "gov.hu", "gov.eg")
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
@@ -197,6 +215,10 @@ def write_rows(path, fields, rows):
 
 def append_row(path, fields, row):
     new = not path.exists()
+    if not new:                                          # the file's own column order, so a row never lands in the wrong column
+        with path.open(encoding=ENC, newline="") as f:
+            fields = next(csv.reader(f), fields) or fields
+        fields = [c.replace("\ufeff", "") for c in fields]
     with path.open("a", encoding=ENC, newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
         if new:
@@ -254,8 +276,9 @@ def save(args, doc_id, content, ext, url, title, doc_type, how, parent=""):
     if not is_official(url):
         facts.append("host %s is not on the official list" % host)
     url = mask(url)
-    row = {"id": doc_id, "jur": args.jur, "type": doc_type, "category": args.category, "title": title, "url": url, "file": rel,
-           "sha256": hashlib.sha256(content).hexdigest(), "lang": args.lang,
+    row = {"id": doc_id, "jur": args.jur, "type": doc_type, "part": "" if parent else args.part, "category": args.category,
+           "title": title, "url": url, "alt_url": "" if parent else args.alt_url, "file": rel,
+           "sha256": hashlib.sha256(content).hexdigest(), "lang": args.lang, "authentic": "" if parent else args.authentic,
            "effective_from": args.effective, "effective_to": args.effective_to, "note": "; ".join(facts)}
     if old:
         write_rows(ROOT / "doc.csv", DOC_FIELDS, [row if r["id"] == doc_id else r for r in rows])
@@ -279,6 +302,10 @@ def main():
     p.add_argument("--effective-to", default="")
     p.add_argument("--lang", default="")
     p.add_argument("--note", default="")
+    p.add_argument("--part", default="", help="treaty documents of a pair: " + "|".join(TREATY_PARTS))
+    p.add_argument("--alt-url", default="", help="the same document on another official site (for a treaty: the other state's)")
+    p.add_argument("--authentic", default="", choices=["", "authentic", "translation"],
+                   help="whether this text is an authentic text or a translation, when known")
     p.add_argument("--with-attachments", action="store_true")
     p.add_argument("--insecure", action="store_true")
     p.add_argument("--engine", default="requests", choices=["requests", "curl"],

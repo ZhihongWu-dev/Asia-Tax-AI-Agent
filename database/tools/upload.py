@@ -8,7 +8,7 @@ The jurisdictions that pass the acceptance (§5; every jurisdiction of jurisdict
   1. files: every raw/, ocr/ and text/ file of those jurisdictions, superseded.csv and blocked.csv (the rows of their
      documents / jurisdictions), STATUS.md and session_log.md, and the spec and task sheet in Chinese and English (DOCS,
      under docs/), are written to the bucket (a path already there is overwritten); then every other object is deleted;
-  2. tables: in one transaction the schema is dropped and created again with the seven tables and their rows and the
+  2. tables: in one transaction the schema is dropped and created again with the eight tables and their rows and the
      table meta (key, value: spec_version, the sha256 of build.py and upload.py, the git commit of the tools, who
      uploaded and when, the acceptance line of each jurisdiction), so a failure leaves the previous tables as they were.
 Before writing, the remote meta is read: a remote written under a newer specification (spec_version later than
@@ -20,7 +20,7 @@ holds everyone's data: what is not in it is gone from the remote afterwards.
 Credentials (never printed) come from the environment or the .env next to or above database/: database_url for
 Postgres, supabase_url and supabase_key for the bucket. The tools and samples/ are not uploaded (their commit is in meta).
 The bucket has a standing rule that lets the publishable key (role anon) read and write it, so a publishable key is
-enough. Uploaded: the seven tables and meta, raw/, ocr/, text/, superseded.csv, blocked.csv, STATUS.md, session_log.md
+enough. Uploaded: the eight tables and meta, raw/, ocr/, text/, superseded.csv, blocked.csv, STATUS.md, session_log.md
 and the four docs.
 Exit code 0 when the upload went through, 1 otherwise.
 """
@@ -45,9 +45,9 @@ import fetch                               # noqa: E402  secrets from the enviro
 csv.field_size_limit(10 ** 9)
 TOOLS = Path(__file__).resolve().parent
 ROOT = TOOLS.parent
-KEY = {"jurisdiction": "code", "treaty": "pair", "doc": "id", "clause": "cite_id", "param": "param_id",
+KEY = {"jurisdiction": "code", "treaty": "pair", "treaty_list": "id", "doc": "id", "clause": "cite_id", "param": "param_id",
        "files": "path", "decision": "id"}
-ORDER = ["jurisdiction", "doc", "clause", "param", "treaty", "decision", "files"]
+ORDER = ["jurisdiction", "doc", "clause", "param", "treaty", "treaty_list", "decision", "files"]
 SAFE_PATH = re.compile(r"^[A-Za-z0-9._/-]+$")
 SAFE_NAME = re.compile(r"^[a-z0-9_-]{1,63}$")
 DOCS = {"数据库规范.md": "docs/spec.zh.md", "database_spec.en.md": "docs/spec.en.md",      # local file -> bucket path;
@@ -136,7 +136,7 @@ def remote_meta(con, schema):
 
 
 def replace_tables(con, schema, rows, meta):
-    """Drop the schema and create it again with the seven tables, their rows and meta, in one transaction."""
+    """Drop the schema and create it again with the eight tables, their rows and meta, in one transaction."""
     with con.cursor() as cur:
         # the COPY of clause (about 40 MB) runs past Supabase's default statement timeout on a slow uplink
         cur.execute("SET LOCAL statement_timeout = 0")
@@ -177,7 +177,7 @@ def plan_rows(jurs):
         rows["jurisdiction"][j["code"]] = j
     for jur in jurs:
         sub = build.subset(t, jur, codes)
-        for name in ("doc", "param", "decision", "treaty"):
+        for name in ("doc", "param", "decision", "treaty", "treaty_list"):
             for r in sub[name]:
                 rows[name][r[KEY[name]]] = r
     doc_ids = set(rows["doc"])

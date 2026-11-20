@@ -1,10 +1,11 @@
 #!/usr/bin/env python
-"""Merge another collector's library folder into this one by ownership (数据库规范.md §4.5).
+"""Merge another collector's library folder into this one by ownership (database_spec.en.md §4.5).
 
   python database/tools/merge.py <other database folder> [--take ae,id,...] [--report <csv>] [--dry-run]
 
-A row belongs to a jurisdiction: doc by jur, param by scope, decision by jur, treaty by pair, superseded by its doc; a
-pair belongs to its alphabetically first side. The jurisdictions taken (--take, by default those that own rows in the
+A row belongs to a jurisdiction: jurisdiction by code, doc by jur, param by scope, decision by jur, treaty by pair,
+treaty_list by jur, superseded by its doc; a pair belongs to the side added later (build.pair_owner: jurisdiction.added_on,
+then the alphabetically first side on the same date). The jurisdictions taken (--take, by default those that own rows in the
 other folder and none here) come in: their docs with the originals in raw/ (and ocr/ texts), parameters, absence
 records, treaty rows and superseded rows, plus the intl documents they cite. Rows of every other jurisdiction stay as they
 are here; where the other folder has them differently, or has a row of a taken jurisdiction that exists here already
@@ -22,15 +23,20 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build                               # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
-KEYS = {"doc": ("id",), "param": ("param_id",), "decision": ("id",), "treaty": ("pair",), "superseded": ("doc_id", "clause", "by")}
+KEYS = {"jurisdiction": ("code",), "doc": ("id",), "param": ("param_id",), "decision": ("id",), "treaty": ("pair",),
+        "treaty_list": ("id",), "superseded": ("doc_id", "clause", "by")}
+JURIS = {}                                 # code -> jurisdiction row of both folders, for pair_owner
 
 
 def owner(row, table):
-    code = {"doc": row.get("jur"), "param": row.get("scope"), "decision": row.get("jur"), "treaty": row.get("pair")}.get(table)
+    code = {"jurisdiction": row.get("code"), "doc": row.get("jur"), "param": row.get("scope"), "decision": row.get("jur"),
+            "treaty": row.get("pair"), "treaty_list": row.get("jur")}.get(table)
     if table == "superseded":
         d = row["doc_id"]
         code = d.split(".")[1] if d.startswith("treaty.") else d.split(".")[0]
-    return "intl" if code == "intl" else (code or "").split("-")[0]
+    if code == "intl":
+        return "intl"
+    return build.pair_owner(code, JURIS) if "-" in (code or "") else (code or "")
 
 
 def cited_docs(rows):
@@ -61,6 +67,8 @@ def main():
     tables = list(KEYS)
     here = {t: build.read_csv(ROOT / (t + ".csv")) for t in tables}
     there = {t: build.read_csv(other / (t + ".csv")) for t in tables}
+    JURIS.update({j["code"]: j for j in there["jurisdiction"]})
+    JURIS.update({j["code"]: j for j in here["jurisdiction"]})
     own_here = {owner(r, t) for t in tables for r in here[t]}
     own_there = {owner(r, t) for t in tables for r in there[t]} - {"intl"}
     take = set(args.take.split(",")) - {""} if args.take else own_there - own_here

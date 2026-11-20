@@ -31,7 +31,7 @@ from urllib.parse import quote
 
 PROJECT = Path(__file__).resolve().parents[2]
 SCHEMA = BUCKET = "database"
-TABLES = ("jurisdiction", "doc", "clause", "param", "treaty", "decision", "files")      # upload.ORDER
+TABLES = ("jurisdiction", "doc", "clause", "param", "treaty", "treaty_list", "decision", "files")      # upload.ORDER
 CACHE = PROJECT / ".cache" / "remote"
 WAIT = 1800                                               # seconds a process waits for another one's download
 csv.field_size_limit(10 ** 9)

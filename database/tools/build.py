@@ -42,20 +42,22 @@ ROOT = Path(__file__).resolve().parents[1]          # database/; --root points e
 ENC = "utf-8-sig"
 SOFFICE = r"C:\Program Files\LibreOffice\program\soffice.exe"
 
-SPEC_VERSION = "2026-11-10"          # the last entry of the change record at the head of 数据库规范.md; upload.py writes it to meta
+SPEC_VERSION = "2026-11-20"          # the last entry of the change record at the head of database_spec.en.md; upload.py writes it to meta
 
-# ---------------------------------------------------------------- tables (数据库规范.md §3)
+# ---------------------------------------------------------------- tables (database_spec.en.md §3)
 TABLES = {                                           # name -> columns; the order is the csv and sqlite column order
-    "jurisdiction": ["code", "name", "currency", "company_in_scope", "individual_in_scope"],
-    "treaty": ["pair", "doc_id", "in_force_from", "mli_doc_id", "note"],
-    "doc": ["id", "jur", "type", "category", "title", "url", "file", "sha256", "lang", "effective_from", "effective_to", "note"],
+    "jurisdiction": ["code", "name", "currency", "company_in_scope", "individual_in_scope", "added_on"],
+    "treaty": ["pair", "doc_id", "status", "signed_on", "in_force_from", "mli_doc_id", "pending_doc_id", "pending_signed_on", "note"],
+    "treaty_list": ["id", "jur", "partner", "status", "signed_on", "in_force_on", "doc_id", "quote", "note"],   # 2026-11-20
+    "doc": ["id", "jur", "type", "part", "category", "title", "url", "alt_url", "file", "sha256", "lang", "authentic",
+            "effective_from", "effective_to", "note"],
     "clause": ["cite_id", "doc_id", "label", "text"],
     "param": ["param_id", "scope", "subject", "slot", "name", "value", "unit", "cite_id", "quote",
               "effective_from", "effective_to", "note", "changed_on", "superseded_by"],
     "files": ["path", "sha256", "bytes"],
     "decision": ["id", "jur", "category", "subject", "slot", "statement", "cite_id", "quote"],
 }
-FILLED = ["jurisdiction", "treaty", "doc", "param", "decision"]
+FILLED = ["jurisdiction", "treaty", "treaty_list", "doc", "param", "decision"]
 SUPERSEDED = ["doc_id", "clause", "by", "since", "note", "phrase"]     # clauses replaced by a protocol or the MLI (§4.3)
 SUBJECTS = ("company", "individual", "all")
 SLOTS = ("outbound_wht", "inbound", "final", "residence", "cfc", "anti_abuse", "penalty", "restructure", "exit")
@@ -66,6 +68,13 @@ COVERED_CATEGORIES = tuple(c for c in CATEGORIES if c != "11")   # 11 = interpre
 LEGAL_CATEGORIES = ("1", "2", "3", "4", "9")       # an absence record of these must cite the clause that sets the scope of the tax
 UNITS = ("%", "days", "months", "years", "count", "bool", "text")   # plus the currency codes of jurisdiction.csv (数据库规范.md §4.4)
 NUMERIC_UNITS = ("%", "days", "months", "years", "count")
+# 2026-11-20 (§3): what a treaty document of a pair is, the state of a pair, a treaty list's entries, the planning list
+TREATY_PARTS = ("original", "protocol", "notes", "minutes", "mli_synth", "consolidated", "ca_agreement", "record", "summary")
+TREATY_STATUS = ("in_force", "signed", "none")
+LIST_STATUS = ("in_force", "signed", "terminated")
+AUTHENTIC = ("authentic", "translation")
+SCOPE_STATUS = ("active", "planned", "deferred", "excluded", "later")
+SCOPE = ["code", "name", "alpha3", "numeric", "region", "status", "priority", "reason"]     # scope.csv, not a library table
 
 # ---------------------------------------------------------------- helpers
 CN_NUM = {"零": 0, "〇": 0, "一": 1, "二": 2, "两": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9}
@@ -1702,6 +1711,14 @@ def pairs_of(codes):
     return ["%s-%s" % (a, b) for k, a in enumerate(codes) for b in codes[k + 1:]]
 
 
+def pair_owner(pair, juris):
+    """The jurisdiction that answers for a pair: the one added to jurisdiction.csv later (added_on), since it is the one
+    that brought the pair in; on the same date, the alphabetically first (the rule before 2026-11-20). juris: code -> row."""
+    a, _, b = pair.partition("-")
+    da, db = ((juris.get(x) or {}).get("added_on") or "" for x in (a, b))
+    return a if da > db else b if db > da else min(a, b)
+
+
 def valid_pair(pair, codes):
     a, _, b = (pair or "").partition("-")
     return a in codes and b in codes and a != b
@@ -1764,6 +1781,17 @@ def check_docs(docs, codes, errors, warnings):
             errors.append("doc %s: category %s not in %s" % (rid, ";".join(bad), "/".join(CATEGORIES)))
         if not cats and r["jur"] in codes and r["type"] != "treaty":
             errors.append("doc %s: category empty (one or more of %s, separated by ;)" % (rid, "/".join(CATEGORIES)))
+        part = (r.get("part") or "").strip()
+        if r["type"] == "treaty" and valid_pair(r["jur"], codes):
+            if part not in TREATY_PARTS:
+                errors.append("doc %s: part %r; a treaty document of a pair names its part, one of %s" % (rid, part, "/".join(TREATY_PARTS)))
+        elif part:
+            errors.append("doc %s: part is only for the treaty documents of a pair" % rid)
+        if (r.get("authentic") or "").strip() not in ("",) + AUTHENTIC:
+            errors.append("doc %s: authentic %r not in %s (or empty when not known)" % (rid, r.get("authentic"), "/".join(AUTHENTIC)))
+        alt = (r.get("alt_url") or "").strip()
+        if alt and not is_official(alt):
+            errors.append("doc %s: alt_url %s is not on an official host (fetch.py OFFICIAL)" % (rid, alt))
         f = ROOT / (r["file"] or "-")
         if not r["file"] or not f.is_file():
             errors.append("doc %s: file missing: %s" % (rid, r["file"]))
@@ -1850,7 +1878,7 @@ def check_params(params, codes, currencies, clause_text, errors, docs=()):
     check_quotes("param", params, "param_id", clause_text, errors)
 
 
-def check_treaties(treaties, codes, doc_ids, errors):
+def check_treaties(treaties, codes, doc_ids, errors, warnings):
     seen = set()
     for t in treaties:
         pair = t["pair"]
@@ -1860,11 +1888,98 @@ def check_treaties(treaties, codes, doc_ids, errors):
             errors.append("treaty %s: write the pair in alphabetical order (%s)" % (pair, "-".join(sorted(pair.split("-")))))
         if pair in seen:
             errors.append("treaty %s: duplicate pair" % pair)
-        check_dates("treaty", pair, t, ("in_force_from",), errors)
+        check_dates("treaty", pair, t, ("signed_on", "in_force_from", "pending_signed_on"), errors)
         seen.add(pair)
-        for col in ("doc_id", "mli_doc_id"):
-            if t[col] and t[col] not in doc_ids:
+        for col in ("doc_id", "mli_doc_id", "pending_doc_id"):
+            if t.get(col) and t[col] not in doc_ids:
                 errors.append("treaty %s: %s %s not in doc" % (pair, col, t[col]))
+        st = (t.get("status") or "").strip()
+        if st not in TREATY_STATUS:
+            errors.append("treaty %s: status %r not in %s" % (pair, st, "/".join(TREATY_STATUS)))
+        elif st == "in_force" and not t["doc_id"]:
+            errors.append("treaty %s: an in_force row names the treaty in doc_id" % pair)
+        elif st == "in_force" and not t["in_force_from"]:
+            warnings.append("treaty %s: in_force_from empty; take the date of entry into force from the treaty list, the "
+                            "announcement or the treaty itself" % pair)
+        elif st == "signed" and (not t["doc_id"] or t["in_force_from"] or t.get("mli_doc_id")):
+            errors.append("treaty %s: a signed row names the signed text in doc_id and leaves in_force_from and mli_doc_id empty" % pair)
+        elif st == "none" and (t["doc_id"] or t.get("mli_doc_id") or t.get("pending_doc_id")):
+            errors.append("treaty %s: a none row (no treaty) names no document" % pair)
+        if t.get("pending_doc_id") and st != "in_force":
+            errors.append("treaty %s: pending_doc_id is for a newer instrument signed beside a treaty in force; a pair with "
+                          "nothing in force takes status signed instead" % pair)
+
+
+def check_in_force(params, treaties, errors, warnings):
+    """Parameters come only from treaties in force (§4.4); a treaty parameter still running past the entry into force of
+    the treaty now in force, but dated before it, is listed (its date is the date of application, §4.4)."""
+    pending = {t["doc_id"] for t in treaties if t.get("status") == "signed" and t["doc_id"]}
+    pending |= {t["pending_doc_id"] for t in treaties if t.get("pending_doc_id")}
+    force = {t["pair"]: t["in_force_from"] for t in treaties if t.get("status") == "in_force" and t.get("in_force_from")}
+    for p in params:
+        doc = (p.get("cite_id") or "").split("#")[0]
+        if doc in pending:
+            errors.append("param %s: cites %s, a treaty not yet in force; it gets parameters once it is in force" % (p["param_id"], doc))
+        start, end = p.get("effective_from") or "", p.get("effective_to") or ""
+        if p["scope"] in force and start and start < force[p["scope"]] and (not end or end > force[p["scope"]]):
+            warnings.append("param %s: effective_from %s is before the treaty entered into force (%s); check the article on "
+                            "entry into force (a treaty may apply from an earlier date) and say which in the note"
+                            % (p["param_id"], start, force[p["scope"]]))
+
+
+def check_treaty_list(rows, codes, docs, clause_text, errors):
+    """treaty_list.csv: one row per partner named on a jurisdiction's official treaty list, quoting the list's line (§3)."""
+    by_id = {r["id"]: r for r in docs}
+    text = {}
+    for cid, body in clause_text.items():
+        text.setdefault(cid.split("#")[0], []).append(body)
+    seen = set()
+    for r in rows:
+        rid, jur, partner = r.get("id", ""), r.get("jur", ""), r.get("partner", "")
+        if rid != "%s.%s" % (jur, partner):
+            errors.append("treaty_list %s: id must be <jur>.<partner> (%s.%s)" % (rid, jur, partner))
+        if rid in seen:
+            errors.append("treaty_list %s: duplicate id" % rid)
+        seen.add(rid)
+        if jur not in codes:
+            errors.append("treaty_list %s: jur %r is not a code of jurisdiction.csv" % (rid, jur))
+        if not re.fullmatch(r"[a-z]{2}", partner) or partner == jur:
+            errors.append("treaty_list %s: partner must be the other state's ISO two-letter code in lower case" % rid)
+        if (r.get("status") or "") not in LIST_STATUS:
+            errors.append("treaty_list %s: status %r not in %s" % (rid, r.get("status"), "/".join(LIST_STATUS)))
+        check_dates("treaty_list", rid, r, ("signed_on", "in_force_on"), errors)
+        d = by_id.get(r.get("doc_id", ""))
+        if not d:
+            errors.append("treaty_list %s: doc_id %r not in doc" % (rid, r.get("doc_id")))
+        elif d["jur"] != jur or "page_treaties" not in split_list(d.get("category")):
+            errors.append("treaty_list %s: doc_id %s must be a page_treaties document of %s" % (rid, d["id"], jur))
+        elif not (r.get("quote") or "").strip():
+            errors.append("treaty_list %s: quote empty (the line of the list that names the partner)" % rid)
+        elif norm(r["quote"]) not in norm("\n".join(text.get(d["id"], []))):
+            errors.append("treaty_list %s: quote not found verbatim in %s" % (rid, d["id"]))
+
+
+def check_scope(juris, errors):
+    """scope.csv (the planning list of §2): status active exactly for the jurisdictions of jurisdiction.csv."""
+    rows = read_csv(ROOT / "scope.csv")
+    if not rows:
+        return
+    codes = {j["code"] for j in juris}
+    seen = set()
+    for r in rows:
+        c = r.get("code", "")
+        if c in seen:
+            errors.append("scope.csv %s: duplicate code" % c)
+        seen.add(c)
+        if r.get("status") not in SCOPE_STATUS:
+            errors.append("scope.csv %s: status %r not in %s" % (c, r.get("status"), "/".join(SCOPE_STATUS)))
+        elif (r["status"] == "active") != (c in codes):
+            errors.append("scope.csv %s: status %s, but the code is %sin jurisdiction.csv; a jurisdiction is active exactly "
+                          "when it has its row there" % (c, r["status"], "" if c in codes else "not "))
+        if r.get("status") in ("deferred", "excluded") and not (r.get("reason") or "").strip():
+            errors.append("scope.csv %s: a %s jurisdiction gives its reason" % (c, r["status"]))
+    for c in sorted(codes - seen):
+        errors.append("scope.csv: jurisdiction %s of jurisdiction.csv has no row (status active)" % c)
 
 
 def check_decisions(decisions, codes, clause_text, errors):
@@ -1936,10 +2051,54 @@ def coverage_categories(docs, decisions, juris):
     return ["%s|%s" % (j["code"], c) for j in juris for c in COVERED_CATEGORIES if (j["code"], c) not in have]
 
 
-def missing_pairs_of(treaties, juris):
-    """Pairs of jurisdictions without a treaty row (a row with empty doc_id records "no treaty")."""
-    have = {t["pair"] for t in treaties}
-    return [p for p in pairs_of([j["code"] for j in juris]) if p not in have]
+def treaty_lists(lists, decisions):
+    """jur -> {partner: row} of its official treaty list; {} for a jurisdiction with no treaty at all (an absence record
+    of category page_treaties)."""
+    out = {}
+    for d in decisions:
+        if (d.get("category") or "").strip() == "page_treaties" and d.get("jur"):
+            out.setdefault(d["jur"].strip(), {})
+    for r in lists:
+        out.setdefault(r["jur"], {})[r["partner"]] = r
+    return out
+
+
+def list_gaps(juris, named, jur=""):
+    return ["%s: its treaty list is not in treaty_list.csv" % j["code"] for j in juris
+            if j["code"] not in named and (not jur or j["code"] == jur)]
+
+
+def pair_gaps(treaties, named, juris, errors, warnings, jur=""):
+    """Each pair of active jurisdictions is accounted for by a treaty row; the lists say which rows are due (§5). A gap
+    counts for the jurisdiction that answers for the pair (pair_owner)."""
+    by_code = {j["code"]: j for j in juris}
+    rows = {t["pair"]: t for t in treaties}
+    gaps = []
+    for pair in pairs_of(by_code):
+        a, b = pair.split("-")
+        if jur and jur not in (a, b):
+            continue
+        says = [(x, named[x][y]["status"]) for x, y in ((a, b), (b, a))
+                if x in named and y in named[x] and named[x][y]["status"] in ("in_force", "signed")]
+        row = rows.get(pair)
+        if row:
+            if row.get("status") == "none" and any(st == "in_force" for _, st in says):
+                errors.append("treaty %s: the row says no treaty, but the treaty list of %s names one in force"
+                              % (pair, "/".join(x for x, st in says if st == "in_force")))
+            elif row.get("status") in ("in_force", "signed") and a in named and b in named and not says:
+                warnings.append("treaty %s: neither treaty list names this treaty; say in the note where it is confirmed" % pair)
+            continue
+        if jur and pair_owner(pair, by_code) != jur:
+            continue
+        if a not in named or b not in named:
+            gaps.append("%s: no treaty row; the treaty list of %s is not yet in treaty_list.csv"
+                        % (pair, "/".join(x for x in (a, b) if x not in named)))
+        elif says:
+            gaps.append("%s: named by the treaty list of %s; register the treaty (§4.2)"
+                        % (pair, ", ".join("%s (%s)" % s for s in says)))
+        else:
+            gaps.append("%s: neither treaty list names the other; run python database/tools/pairs.py to write the no-treaty row" % pair)
+    return gaps
 
 
 # ---------------------------------------------------------------- one jurisdiction (§5)
@@ -1962,6 +2121,7 @@ def subset(t, jur, codes):
     out["param"] = [r for r in t["param"] if mine(r["scope"])]
     out["decision"] = [r for r in t["decision"] if (r.get("jur") or "").strip() == jur]
     out["treaty"] = [r for r in t["treaty"] if mine(r["pair"])]
+    out["treaty_list"] = [r for r in t.get("treaty_list", []) if r.get("jur") == jur]
     return out
 
 
@@ -2054,6 +2214,10 @@ def main():
     all_juris = t["jurisdiction"]
     codes = {j["code"] for j in all_juris}
     all_doc_ids = {r["id"] for r in t["doc"]}
+    named = treaty_lists(t["treaty_list"], t["decision"])        # every list, for the pairs of one jurisdiction too
+    check_scope(all_juris, errors)
+    for j in all_juris:
+        check_dates("jurisdiction", j["code"], j, ("added_on",), errors)
     if args.jur:
         if args.jur not in codes:
             print("! --jur %s: not a code of jurisdiction.csv" % args.jur)
@@ -2069,17 +2233,19 @@ def main():
     clause_text = {c["cite_id"]: c["text"] for c in clauses}
     check_params(t["param"], codes, {j["currency"] for j in all_juris if j.get("currency")}, clause_text, errors, t["doc"])
     check_decisions(t["decision"], codes, clause_text, errors)
-    check_treaties(t["treaty"], codes, all_doc_ids, errors)
+    check_treaties(t["treaty"], codes, all_doc_ids, errors, warnings)
+    check_in_force(t["param"], t["treaty"], errors, warnings)
+    check_treaty_list(t["treaty_list"], codes, docs, clause_text, errors)
     check_whole_citations(t["param"] + t["decision"], docs, warnings)
     cat_gaps = coverage_categories(docs, t["decision"], t["jurisdiction"])
     slot_gaps = coverage_slots(t["param"], t["decision"], t["jurisdiction"])
-    missing_pairs = [p for p in missing_pairs_of(t["treaty"], all_juris)
-                     if not args.jur or p.split("-")[0] == args.jur]   # a pair is registered by its alphabetically first side
+    missing_lists = list_gaps(all_juris, named, args.jur)
+    missing_pairs = pair_gaps(t["treaty"], named, all_juris, errors, warnings, args.jur)
     blocked = unresolved_blocked(all_doc_ids, args.jur, codes)
 
     if args.jur:
         gaps = (["category %s" % g for g in cat_gaps] + ["slot %s without a parameter" % g for g in slot_gaps]
-                + ["pair %s without a treaty row" % p for p in missing_pairs]
+                + ["treaty list %s" % g for g in missing_lists] + ["pair %s" % p for p in missing_pairs]
                 + ["download not resolved: %s" % b for b in blocked])
         print("acceptance %s: %s (errors=%d gaps=%d)" % (args.jur, "NOT PASSED" if errors or gaps else "PASSED",
                                                          len(errors), len(gaps)))
@@ -2112,18 +2278,18 @@ def main():
     con.commit()
     con.close()
 
-    write_status(docs, clauses, n_superseded, t, errors, warnings, missing_pairs, cat_gaps, blocked, slot_gaps)
-    print("docs=%d clauses=%d params=%d absence_records=%d errors=%d warnings=%d category_gaps=%d slot_gaps=%d missing_pairs=%d unresolved_blocked=%d" % (
+    write_status(docs, clauses, n_superseded, t, errors, warnings, missing_pairs, cat_gaps, blocked, slot_gaps, missing_lists)
+    print("docs=%d clauses=%d params=%d absence_records=%d errors=%d warnings=%d category_gaps=%d slot_gaps=%d treaty_lists_missing=%d pair_gaps=%d unresolved_blocked=%d" % (
         len(docs), len(clauses), len(t["param"]), len(t["decision"]), len(errors), len(warnings), len(cat_gaps),
-        len(slot_gaps), len(missing_pairs), len(blocked)))
+        len(slot_gaps), len(missing_lists), len(missing_pairs), len(blocked)))
     for x in errors:
         print("  ! " + x)
     return 1 if errors else 0
 
 
-def write_status(docs, clauses, n_superseded, t, errors, warnings, missing_pairs, cat_gaps, blocked, slot_gaps):
+def write_status(docs, clauses, n_superseded, t, errors, warnings, missing_pairs, cat_gaps, blocked, slot_gaps, missing_lists=()):
     L = ["# STATUS", "", "Written by `tools/build.py` at every build; do not edit. The acceptance of one jurisdiction is "
-         "`python database/tools/build.py --jur <code>` (数据库规范.md §5).", "",
+         "`python database/tools/build.py --jur <code>` (database_spec.en.md §5).", "",
          "| What | Count |", "|---|---|",
          "| Documents | %d |" % len(docs),
          "| Clauses | %d |" % len(clauses),
@@ -2131,10 +2297,11 @@ def write_status(docs, clauses, n_superseded, t, errors, warnings, missing_pairs
          "| Repealed-provision stubs left out | %d |" % len(SSO_DROPPED),
          "| Parameters | %d |" % len(t["param"]),
          "| Treaty rows | %d |" % len(t["treaty"]),
+         "| Treaty list entries | %d |" % len(t.get("treaty_list", [])),
          "| Absence records | %d |" % len(t["decision"]),
          "| Errors / warnings | %d / %d |" % (len(errors), len(warnings)),
-         "| Gaps: (jurisdiction, category) / (jurisdiction, subject, slot) / pairs without a treaty row / unresolved downloads | %d / %d / %d / %d |" % (
-             len(cat_gaps), len(slot_gaps), len(missing_pairs), len(blocked)),
+         "| Gaps: (jurisdiction, category) / (jurisdiction, subject, slot) / treaty lists / pairs / unresolved downloads | %d / %d / %d / %d / %d |" % (
+             len(cat_gaps), len(slot_gaps), len(missing_lists), len(missing_pairs), len(blocked)),
          "", "## Documents", "",
          "| id | jur | type | category | format | text | slicing | clauses | title |", "|---|---|---|---|---|---|---|---|---|"]
     for r in sorted(docs, key=lambda x: x["id"]):
@@ -2147,7 +2314,9 @@ def write_status(docs, clauses, n_superseded, t, errors, warnings, missing_pairs
     L += ["- " + g for g in cat_gaps] or ["None."]
     L += ["", "Cells of jurisdiction | subject | slot with neither a parameter nor an absence record:", ""]
     L += ["- " + g for g in slot_gaps] or ["None."]
-    L += ["", "Pairs without a treaty row (a row with empty doc_id records \"no treaty\"):", ""]
+    L += ["", "Jurisdictions whose official treaty list is not yet in treaty_list.csv:", ""]
+    L += ["- " + g for g in missing_lists] or ["None."]
+    L += ["", "Pairs of active jurisdictions without a treaty row (status none records \"no treaty\"):", ""]
     L += ["- " + p for p in missing_pairs] or ["None."]
     L += ["", "Downloads in blocked.csv not yet in doc.csv:", ""]
     L += ["- " + b for b in blocked] or ["None."]

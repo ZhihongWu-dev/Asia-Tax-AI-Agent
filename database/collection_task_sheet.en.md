@@ -1,8 +1,8 @@
 # Collection task sheet
 
-English copy of `采集任务单.md`. If the two differ, the Chinese version applies.
+This English text is the master (since 2026-11-20); `采集任务单.md` is its Chinese translation, for the collectors. If the two differ, this version applies.
 
-This task sheet lists, in order, what to do for each jurisdiction. Each step names the matching section of the spec (`数据库规范.md`, English copy `database_spec.en.md`), which holds the full explanation. Text that the AI writes into the csv files (statement, note) and the session log is in English; quotes and titles stay in the original language.
+This task sheet lists, in order, what to do for each jurisdiction. Each step names the matching section of the spec (`database_spec.en.md`, Chinese translation `数据库规范.md`), which holds the full explanation. Text that the AI writes into the csv files (statement, note) and the session log is in English; quotes and titles stay in the original language.
 
 ## 0. Once only: set up the environment
 
@@ -18,18 +18,18 @@ If the originals include .doc, .rtf, .xls or .ppt files, also install LibreOffic
 
 ## 1. For each jurisdiction, in this order
 
-Below, `<jur>` stands for the jurisdiction code (`cn hk sg id vn my th ae jp kr in`).
+Below, `<jur>` stands for the jurisdiction code. Which jurisdictions, in which order: `database/scope.csv` (status planned, priority 1 first; spec §2). Before step 1 of a new jurisdiction, add its row to `jurisdiction.csv` (added_on: today) and set its status in `scope.csv` to active, in the same change. For the 11 already in the library, what is left are their treaty lists (step 1) and the cells of the change record at the head of the spec.
 
-1. **List** (spec §2, §4.1): go through the 10 content categories and 3 kinds of pages one by one, find the documents on official websites, and note their addresses. Then list the pairs this jurisdiction owns (the alphabetically first side owns a pair: cn owns cn-hk and cn-sg; ae-cn belongs to ae), and check whether each pair has a treaty. Collect the English text of a treaty first; without one, the Chinese text. Then check whether the MLI applies and whether there is a synthesised text (spec §4.2). Where one side made a reservation under MLI Article 35(7) (such as Hong Kong), the date the MLI starts to apply follows the notification dates published by the OECD.
-2. **Fetch** (spec §4.2): run fetch.py once per document; `--category` gives the categories it belongs to. If a download fails, try the 8 steps of spec §4.1. If all of them fail, record it with `--blocked` and collect it by hand following spec §4.7. If it still cannot be had, hand it to a person (spec §4.8, H1). Where the English text is itself authentic (such as the laws of Hong Kong and Singapore), register only the English text. Where there is a local-language original and an English translation, register both (beginning of the spec). A list page that comes down as an empty shell is registered anyway, with a note saying so; the page of a law or regulation cannot be: register the official PDF or the XML interface instead (spec §4.1). A gazette issue printing several laws, or a file printing two languages, is registered under spec §4.2.
+1. **List** (spec §2, §4.1): go through the 10 content categories and 3 kinds of pages one by one, find the documents on official websites, and note their addresses. Then register the jurisdiction's official treaty list (category page_treaties), transcribe it into `treaty_list.csv` (one row per partner, spec §4.2) and run `python database/tools/pairs.py --write`: it writes the no-treaty rows and lists the treaties still to be registered for the pairs this jurisdiction answers for (the jurisdiction added later answers for a pair: tw for cn-tw; among the first 11, the alphabetically first side). Collect the English text of a treaty first; without one, the Chinese text. Then check whether the MLI applies and whether there is a synthesised text (spec §4.2). Where one side made a reservation under MLI Article 35(7) (such as Hong Kong), the date the MLI starts to apply follows the notification dates published by the OECD.
+2. **Fetch** (spec §4.2): run fetch.py once per document; `--category` gives the categories it belongs to. For a treaty document of a pair also give `--part`, and `--authentic` and `--alt-url` (the other state's address) when known; a treaty signed but not yet in force is registered too, without parameters (spec §4.2). If a download fails, try the 8 steps of spec §4.1. If all of them fail, record it with `--blocked` and collect it by hand following spec §4.7. If it still cannot be had, hand it to a person (spec §4.8, H1). Where the English text is itself authentic (such as the laws of Hong Kong and Singapore), register only the English text. Where there is a local-language original and an English translation, register both (beginning of the spec). A list page that comes down as an empty shell is registered anyway, with a note saying so; the page of a law or regulation cannot be: register the official PDF or the XML interface instead (spec §4.1). A gazette issue printing several laws, or a file printing two languages, is registered under spec §4.2.
 3. **Build**: run `python database/tools/build.py`. Open the Documents table in `database/STATUS.md` and check that the text column of every document is `ok` (a scan first gets OCR with `python database/tools/ocr.py <doc_id>`, and then says `ocr`, spec §4.1). Then check that the slicing column of laws, regulations and treaties shows the jurisdiction's own slicer, not `whole` or `page`. If a document is sliced badly, first fix the slicer following spec §4.9. If it cannot be fixed, carry on as usual and record it in the session log (spec §4.3).
 4. **Replaced clauses** (spec §4.3, §4.2): read every protocol and every MLI modification for "cancelled, replaced, deleted", and register each one as a row in `superseded.csv`; then build again. Where the synthesised text does not merge the protocols, register one row for the original treaty and one for the synthesised text. Where a later protocol cancels an article of an earlier protocol, register a row for that too. The bracketed "[REPLACED by …] [original text]" passages in synthesised texts are registered as well.
-5. **Copy parameters** (spec §4.4): find the clause with `python database/tools/find.py <words> --jur <jur>`; it gives the cite_id and the whole sentence, which can be used directly as the quote; always copy quotes from its output, never from a PDF reader; for one row per subject the id suffixes are `.company` and `.individual`. Write `param.csv` following the examples, one number per row. Lists get one row per country (spec §4.4). For pairs with an MLI synthesised text, treaty parameters cite the synthesised text. Singapore's treaty PDFs list the MLI amendments in Annex A: the PPT cites `#annexA.<item>`, and that PDF goes into both doc_id and mli_doc_id. Where the MLI applies but there is no synthesised text, cite the article of the MLI convention (such as `intl.oecd.mli.en#7.1`). A threshold in a third country's currency (such as US$10 million) has unit `text`.
-6. **Absence records** (spec §2, §4.4): when a category has no document, or the law says nothing for a slot of a subject, write a row in `decision.csv`. One fact may need two rows, one for the category and one for the slot: "no CFC" means both that category 3 has no document and that the cfc slot has no rule.
-7. **Treaty rows** (spec §3, §4.5): write one row in `treaty.csv` for each pair this jurisdiction owns. Where there is no treaty, leave doc_id empty and write "No treaty" in the note. Do not register pairs you do not own.
+5. **Copy parameters** (spec §4.4): find the clause with `python database/tools/find.py <words> --jur <jur>`; it gives the cite_id and the whole sentence, which can be used directly as the quote; always copy quotes from its output, never from a PDF reader; for one row per subject the id suffixes are `.company` and `.individual`. Write `param.csv` following the examples, one number per row. For a treaty parameter, effective_from is the date the provision applies from, as the treaty's final articles say, not the date of entry into force (spec §4.4). Lists get one row per country (spec §4.4). For pairs with an MLI synthesised text, treaty parameters cite the synthesised text. Singapore's treaty PDFs list the MLI amendments in Annex A: the PPT cites `#annexA.<item>`, and that PDF goes into both doc_id and mli_doc_id. Where the MLI applies but there is no synthesised text, cite the article of the MLI convention (such as `intl.oecd.mli.en#7.1`). A threshold in a third country's currency (such as US$10 million) has unit `text`.
+6. **Absence records** (spec §2, §4.4): when a category has no document, or the law says nothing for a slot of a subject, write a row in `decision.csv`. One fact may need two rows, one for the category and one for the slot: "no CFC" means both that category 3 has no document and that the cfc slot has no rule. Absence records are by cell, never for a whole jurisdiction such as "no personal income tax"; spec §4.4 also says how to write rules that depend on the owners' nationality (Qatar, Saudi Arabia).
+7. **Treaty rows** (spec §3, §4.2, §4.5): for each pair this jurisdiction answers for that a list names, write its row in `treaty.csv` with its status (in_force, signed or none) and dates; the no-treaty rows come from pairs.py (step 1). Do not register pairs you do not answer for.
 8. **Acceptance** (spec §5): run `python database/tools/build.py --jur <jur>` and fix every error and gap line of the output until it prints `PASSED`.
-9. **Session log**: add a section at the end of `database/session_log.md`; the format is in part 4. Any of the seven cases of spec §4.8 goes under Handoff to a person; solve every other problem yourself following the spec, without handing it over.
-10. **Upload** (spec §4.5): first look at the plan with `python database/tools/upload.py --dry-run`, then upload without `--dry-run`. The upload replaces the whole remote with the data of the locally accepted jurisdictions: when several people share the work, merge the tools first, then merge the folders with `merge.py` and repoint citations with `recite.py` (spec §4.5), and let one person upload; upload.py refuses a remote written under a newer specification: update the tools first. Without remote credentials, pack the whole `database/` folder and send it back.
+9. **Coverage and session log**: run `python database/tools/coverage.py`; where our exit tax or CFC finding differs from the supervisor's note beside it in `coverage/matrix.csv`, set that lead's status in `leads.csv` to `differs` and say why in its note. Then add a section at the end of `database/session_log.md`; the format is in part 4. Any of the seven cases of spec §4.8 goes under Handoff to a person; solve every other problem yourself following the spec, without handing it over.
+10. **Upload** (spec §4.5; only when the project lead asks, with the keys the lead gives you, since no key is kept in git): first look at the plan with `python database/tools/upload.py --dry-run`, then upload without `--dry-run`. The upload replaces the whole remote with the data of the locally accepted jurisdictions: when several people share the work, merge the tools first, then merge the folders with `merge.py` and repoint citations with `recite.py` (spec §4.5), and let one person upload; upload.py refuses a remote written under a newer specification: update the tools first. Without remote credentials, pack the whole `database/` folder and send it back.
 
 ## 2. Command examples
 
@@ -104,13 +104,22 @@ hk.absent.page_deadlines,hk,page_deadlines,,,"No withholding tax on dividends, s
 **treaty.csv**
 
 ```csv
-pair,doc_id,in_force_from,mli_doc_id,note
-cn-id,treaty.cn-id.2001.en,2003-08-25,treaty.cn-id.2001.mli.en,"MLI applies from 2023-01-01 (in China: taxes withheld at source from 2023-01-01; other taxes for taxable periods beginning on or after 2023-06-10), per the dates in the synthesised text published on the STA treaty page."
-hk-sg,,,,"No treaty: no comprehensive double taxation agreement (checked hk.ird.dta-list and the IRD Singapore page https://www.ird.gov.hk/eng/tax/dta_singapore.htm); only the 2003 Airline and Shipping Income Agreement (Cap. 112AO) exists, which does not cover dividends."
-sg-th,treaty.sg-th.2015.en,2016-02-15,treaty.sg-th.2015.en,"MLI applies from 2023-01-01 (in Singapore: taxes withheld at source on amounts paid on or after 2023-01-01; other taxes for basis periods beginning on or after 2023-01-01), per Annex A item 3 of the IRAS treaty PDF. Singapore gives effect to the MLI by an Order that amends the treaty; IRAS prints the amendments in Annex A of the same PDF, so the PDF is both doc_id and mli_doc_id. The 1975 Convention (Annex B) ceased to have effect (Article 27(3)). Dates from the top of the PDF."
+pair,doc_id,status,signed_on,in_force_from,mli_doc_id,pending_doc_id,pending_signed_on,note
+cn-id,treaty.cn-id.2001.en,in_force,,2003-08-25,treaty.cn-id.2001.mli.en,,,"MLI applies from 2023-01-01 (in China: taxes withheld at source from 2023-01-01; other taxes for taxable periods beginning on or after 2023-06-10), per the dates in the synthesised text published on the STA treaty page."
+hk-sg,,none,,,,,,"No treaty: no comprehensive double taxation agreement (checked hk.ird.dta-list and the IRD Singapore page https://www.ird.gov.hk/eng/tax/dta_singapore.htm); only the 2003 Airline and Shipping Income Agreement (Cap. 112AO) exists, which does not cover dividends."
+sg-th,treaty.sg-th.2015.en,in_force,,2016-02-15,treaty.sg-th.2015.en,,,"MLI applies from 2023-01-01 (in Singapore: taxes withheld at source on amounts paid on or after 2023-01-01; other taxes for basis periods beginning on or after 2023-01-01), per Annex A item 3 of the IRAS treaty PDF. Singapore gives effect to the MLI by an Order that amends the treaty; IRAS prints the amendments in Annex A of the same PDF, so the PDF is both doc_id and mli_doc_id. The 1975 Convention (Annex B) ceased to have effect (Article 27(3)). Dates from the top of the PDF."
 ```
 
-A pair with no treaty is written like the hk-sg row: doc_id empty, a note that starts with `No treaty` and says which list pages were checked; the codes in alphabetical order.
+**treaty_list.csv** (format only: the lists are still to be transcribed, so there is no real row yet)
+
+```csv
+id,jur,partner,status,signed_on,in_force_on,doc_id,quote,note
+<jur>.<partner>,<jur>,<partner>,in_force,<YYYY-MM-DD>,<YYYY-MM-DD>,<doc_id of the list>,<the line of the list naming the partner, verbatim>,
+```
+
+Status as the list gives it (in_force, signed, terminated); the dates when the list gives them; the quote is the list's line for that partner.
+
+A pair with no treaty is written like the hk-sg row: status none, doc_id empty, a note that starts with `No treaty` and says which lists were checked; the codes in alphabetical order. From now on pairs.py writes these rows from the two treaty lists (step 1).
 
 **superseded.csv**
 
@@ -179,7 +188,9 @@ Write `none` for an empty item; do not delete the line. When Tool changes has co
 | fetch, build or upload reports a `Traceback`, or an error not in this table | Fix the tool following spec §4.9 and finish the six checks; if the table columns or the check rules need changing, hand it to a person (H7) |
 | `gap: category …` | Add a document for this category, or write an absence record |
 | `gap: slot … without a parameter` | Add a parameter for this slot, or write an absence record |
-| `gap: pair … without a treaty row` | Add a row to treaty.csv |
+| `gap: treaty list …` | Register the official treaty list and transcribe it into treaty_list.csv (step 1) |
+| `gap: pair …` | Do what the message says: transcribe the missing list, register the treaty a list names, or run `python database/tools/pairs.py --write` |
+| `treaty_list …: quote not found verbatim` | Copy the list's line from the output of `python database/tools/find.py <partner name> --jur <jur>` |
 | `gap: download not resolved` | Collect it by hand following spec §4.7 and register it under the same id; if you cannot use a browser, hand it to a person (H1); if it is not needed after all, delete the row from blocked.csv and give the reason in the session log |
 
 ## 6. Do not
@@ -189,5 +200,32 @@ Write `none` for an empty item; do not delete the line. When Tool changes has co
 - Do not make up numbers: every parameter needs a quote copied verbatim from the clause.
 - Do not use third-party websites as sources; an archived copy can only be registered with `--register-file`, with `--url` set to the original official address.
 - Do not bypass captchas, bot checks or login walls.
+- Do not cite `leads.csv` or the supervisor's files; register the official document instead.
+- Do not write an absence record for a whole jurisdiction such as "no personal income tax"; absence records are by cell (spec §4.4).
+- Do not send automated requests to mof.gov.bt (the site blocked this machine's address); Bhutan's pages go to a person.
 - Do not delete or change rows registered by others; hand errors you find in them to a person (H7).
 - Do not stop the rest of the work because one item was handed over; problems outside the seven cases of spec §4.8 are not handed over.
+
+## 7. Known obstacles (reachability check of 2026-11-20)
+
+Every official address tested from this machine on 2026-11-20 is a row of `leads.csv` (source "reachability check 2026-11-20"), with what it returned; start from those addresses. Plain requests only: a site that refuses goes to a person (spec §4.8 H1).
+
+| Jurisdiction | What happens | What to do |
+|---|---|---|
+| Philippines | every official site (BIR, Official Gazette, Senate, Department of Finance) answers 403 to plain requests; the tax code page fills its text by script | a person downloads in a browser (H1); treaty texts also from the partner side (Japan's MOF, Germany's BMF) |
+| Maldives | the tax authority's site (mira.gov.mv) is behind a script check; the Income Tax Act 25/2019 in Dhivehi is on mvlaw.gov.mv | treaty list and English texts: a person |
+| Bangladesh | nbr.gov.bd answers 403 to plain requests; its treaty list (43 entries, each with a PDF) is at nbr.gov.bd/information-library/double-taxation-avoidance-agreement/eng; the Income Tax Act 2023 as enacted (Bengali) is on dpp.gov.bd | a person or another network; the act is not consolidated |
+| Georgia | matsne.gov.ge answers "Access Denied" | the Tax Code: a person; the treaty list is at mof.ge/en/doubleTaxation |
+| Azerbaijan | e-qanun.az serves a script shell; taxes.gov.az answers on and off | the Tax Code: a person |
+| Israel | every gov.il address answers 403; the consolidated Income Tax Ordinance is on btl.gov.il | treaty list and texts: a person, or the partner side |
+| Turkey | mevzuat.gov.tr times out; only the 2006 text of Law 5520 and a 2019 consolidation of Law 193 were reached | current texts: a person or another network; the treaty list and texts are on cdn.gib.gov.tr |
+| Kazakhstan | the new adilet.zan.kz is a script app; the old front end old.adilet.zan.kz serves the 2025 Tax Code and may go away | register from the old front end, note it |
+| Sri Lanka, Mongolia | treaty texts not reachable on their own sites | take them from the partner state's site |
+| Bhutan | mof.gov.bt blocked this machine's address after automated requests | no automated requests to it; Bhutan has three treaties (India, Bangladesh, Singapore signed 2026-05-12): take the texts from the partner side or hand them to a person |
+| Saudi Arabia | laws.boe.gov.sa does not connect; ZATCA's Arabic Income Tax Law PDF has a scrambled text layer; the agreements index is a shell, but single pages (`<country>-convention.aspx`) work | OCR or another ZATCA edition for quotes |
+| Kuwait | the treaty map is fed by taxagrapi.mof.gov.kw, which did not connect; Decree-Law 157/2024 has no text layer | OCR; treaty texts from the partner side |
+| Oman | Royal Decree 56/2025 (personal income tax, from 2028) has a broken font | OCR |
+| Hosts that moved | Macau's gazette: bo.dsaj.gov.mo (PDFs on images.bo.dsaj.gov.mo); Oman's tax authority: tms.taxoman.gov.om/portal; Bahrain's laws: lloc.gov.bh; Qatar's laws index: gta.gov.qa/en/laws; Turkmenistan's treaty PDFs: tax.gov.tm/pdf/; Brunei's treaty orders: agc.gov.bn/wp-content/uploads/2026/08/ | use these |
+| Partner sites that refuse | chinatax.gov.cn answers with a script check after a few requests; incometaxindia.gov.in answers 403 | take the treaty from the other side |
+
+Scope provisions for the absence records of individuals in the Gulf (spec §4.4): Kuwait, Decree 3/1955 as amended, art. 1 (bodies corporate only); Bahrain, Decree-Law 22/1979, art. 2 (oil and gas companies only); Qatar, Law 24/2018, promulgating art. 2 (wages excluded) and art. 4 (exemptions of Qatari persons); Saudi Arabia, Income Tax Law, art. 2.

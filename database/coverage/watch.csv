@@ -1,0 +1,12 @@
+﻿id,why,url,sha256,fetched
+ae.mof.dta-index,treaty list,https://mof.gov.ae/wp-content/uploads/2022/09/Avoidance-of-Double-Taxation-Agreements.pdf,8f7bdd16ccc5ded839b9cb893be9628f4ffff7fd9096028cb1101f738ae0696a,2026-10-26
+cn.sta.ssty,treaty list,https://www.chinatax.gov.cn/chinatax/n810341/n810770/common_list_ssty.html,07dfed9dcd45d80a77ae1f318ceec2cda972b918af5301263747879119e9d24e,2026-10-23
+hk.ird.dta-list,treaty list,https://www.ird.gov.hk/eng/tax/dta_inc.htm,367c3813447a15653fbb931740a02c610bf213cc067e915b814a6a6de86c3a4e,2026-10-23
+id.dgt.treaty-index,treaty list,https://www.pajak.go.id/en/tax-treaty,6ded8e132e8e470697e44d2a4657ed8623bee39263f3a539fa8339e7a05d7fed,2026-10-27
+in.itd.dtaa-directory.20261031,treaty list,https://www.incometaxindia.gov.in/en/dtaa,accf997733691d6fdaaf7f2b8a859df1cdc850f591c02d9beeeb9da2b96c02f3,2026-11-01
+jp.mof.treaty-list,treaty list,https://www.mof.go.jp/tax_policy/summary/international/tax_convention/tax_convetion_list_jp.html,be93bf2b681c1950127ab76410c64ce947cf5c2ffdbfd3a7a0f667d26bda7d60,2026-10-26
+kr.nts.tax-treaty-index,treaty list,https://www.nts.go.kr/english/cm/cntnts/cntntsView.do?cntntsId=8810&mi=20251,f0e827350fb67fa7ea593d199ba3c0f030806e41e9bf847e083d4b618f844d59,2026-10-28
+my.hasil.dta-index,treaty list,https://www.hasil.gov.my/antarabangsa/perjanjian-pengelakan-pencukaian-dua-kali-pppdk/pppdk-menyeluruh/,0db1a2928ded1889e6fd3f12159e1e0bba3390d3205e6b4a49bd085377452491,2026-10-25
+sg.iras.dta-list,treaty list,https://www.iras.gov.sg/taxes/international-tax/international-tax-agreements-concluded-by-singapore/list-of-dtas-limited-dtas-and-eoi-arrangements,fa19a8ee4f22cac4c584d3f1687bedd270333f57cc20a8eb5234d12bb7036a73,2026-10-23
+th.rd.dta-list,treaty list,https://www.rd.go.th/english/766.html,d15bbb4c546eb225942471343995a1e63b1f6feafe3d3460ca003d8192cf2928,2026-10-26
+vn.mofa.treaty-index,treaty list,https://treaty.mofa.gov.vn/vi-vn/dieu-uoc/,9ddfedc6e862deba0a4394b5c7a6758cfc3827e71a24cdc79a2bc685ae33ff8c,2026-10-29

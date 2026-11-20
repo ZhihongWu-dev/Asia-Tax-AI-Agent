@@ -1,14 +1,14 @@
 # Database specification (minimal set)
 
-English copy of `数据库规范.md`. If the two differ, the Chinese version applies.
+This English text is the master (since 2026-11-20). `数据库规范.md` is its Chinese translation, kept for the collectors; if the two differ, this version applies.
 
-This specification is written in Chinese, for people to read. Text that an AI writes into files (statement, note, session_log.md) is in English. Originals, legal provisions, quotes and document titles stay in their original language and are not translated. When a law exists both as an authentic text in the local language and as an English translation, register both and cite the authentic text in parameters. When the English text is itself authentic (for example the laws of Hong Kong and Singapore), register only the English text. When only an English translation is available, write "unofficial translation" in the note.
+Text that an AI writes into files (statement, note, session_log.md) is in English. Originals, legal provisions, quotes and document titles stay in their original language and are not translated. When a law exists both as an authentic text in the local language and as an English translation, register both and cite the authentic text in parameters. When the English text is itself authentic (for example the laws of Hong Kong and Singapore), register only the English text. When only an English translation is available, write "unofficial translation" in the note.
 
-2026-10-23. Goal: a minimal database supporting the "Asian cross-border dividend optimisation" workflow (recipients split into companies and individuals; 11 jurisdictions: Mainland China, Hong Kong, Singapore, Indonesia, Vietnam, Malaysia, Thailand, UAE, Japan, Korea, India).
+2026-10-23. Goal: a minimal database supporting the "Asian cross-border dividend optimisation" workflow (recipients split into companies and individuals; 11 jurisdictions: Mainland China, Hong Kong, Singapore, Indonesia, Vietnam, Malaysia, Thailand, UAE, Japan, Korea, India). The jurisdictions covered are those of `scope.csv` (§2): 11 in the library, 29 more planned for Asia; the rest are deferred, excluded or come after Asia.
 
-English copies: `database/database_spec.en.md` (this specification), `database/collection_task_sheet.en.md` (the task sheet) and `database/database_mcp_spec.en.md` (the MCP spec). If they differ, the Chinese versions apply. When you change a Chinese version, change its English copy too.
+Chinese translations: `database/数据库规范.md` (this specification), `database/采集任务单.md` (the task sheet) and `database/数据库MCP规范.md` (the MCP spec). The English versions apply; change the English text first and its translation in the same change.
 
-Before you start, read the task sheet (`采集任务单.md`, English copy `collection_task_sheet.en.md`): it lists, in order, the commands to run for each jurisdiction and example rows for each csv. This specification is the full reference it points to.
+Before you start, read the task sheet (`collection_task_sheet.en.md`, Chinese translation `采集任务单.md`): it lists, in order, the commands to run for each jurisdiction and example rows for each csv. This specification is the full reference it points to.
 
 **Change record**: one row for each change to the specification. Jurisdictions that have passed acceptance fill in the cells in the column "Cells to fill". `SPEC_VERSION` in `build.py` is the date of the last row; the upload writes it into the remote meta table (§3, §4.5).
 
@@ -23,6 +23,7 @@ Before you start, read the task sheet (`采集任务单.md`, English copy `colle
 | 2026-11-08 | the layers above read the remote directly (`tax_db=supabase`, §4.5); upload.py lifts the statement timeout while writing the tables | no new cells |
 | 2026-11-09 | when reading the remote directly, whole tables are cached on this machine by upload time (§4.5) | no new cells |
 | 2026-11-10 | Korean acts as law.go.kr pages (`LSW/lsInfoR.do`) are sliced by article; formula images keep the alt text the site gives (§4.3) | no new cells |
+| 2026-11-20 | English is the master text, the Chinese versions are translations (head); scope.csv, the planning list (§2); treaty documents name their part, the other state's address and whether the text is authentic (`doc.part`, `alt_url`, `authentic`); a treaty row has a status (in_force / signed / none), the date of signature and a pending instrument; each jurisdiction's official treaty list is transcribed into `treaty_list`, and the no-treaty rows follow from the lists (`tools/pairs.py`, §4.2, §5); the jurisdiction added later answers for a pair (`jurisdiction.added_on`, §4.5); either contracting state's publication counts for a treaty, unreliable text layers are not quoted (§4.1); absence records by cell, rules by the owners' nationality, treaty dates of application (§4.4); the coverage matrix, source list and watch list (`tools/coverage.py`, `tools/watch.py`), leads.csv (§3, §4.6); the official hosts of the 29 planned jurisdictions; §6 suspended | each jurisdiction: its treaty list in treaty_list.csv (or an absence record of category page_treaties); treaty rows: signed_on where the list or the treaty gives it |
 
 ## 1. Minimal workflow
 
@@ -38,7 +39,8 @@ A  Originals
 B  Registration
    doc (one row per document: jurisdiction, type, category, title, source URL, file path, hash, language, validity period)
    decision absence records (one row when a jurisdiction has no document for a category, or the law has no rule for a subject's slot: jurisdiction, category or subject + slot, statement, quote)
-   treaty (one row per jurisdiction pair: treaty doc_id; with no treaty, leave doc_id empty and say so)
+   treaty (one row per pair of active jurisdictions: status in_force / signed / none, treaty doc_id, dates)
+   treaty_list (one row per partner named on a jurisdiction's official treaty list: status, dates, the line quoted)
    ▼
 C  Slicing
    clause (one row per provision: cite_id = <doc_id>#<number>, text verbatim, unchanged)
@@ -47,12 +49,17 @@ D  Extracting values
    param (one row per number or criterion: slot × subject × jurisdiction or pair → value, unit, verbatim quote, cite_id, validity period)
    ▼
 E  Coverage check
-   11 jurisdictions × 13 categories (10 content + 3 page categories; category 11, interpretive sources, is not counted): each cell has a document or an absence record
-   11 jurisdictions × {company 9 slots, individual 9 slots}: each cell has a parameter or an absence record
-   55 jurisdiction pairs: each pair has a treaty row or a "no treaty" row
+   active jurisdictions × 13 categories (10 content + 3 page categories; category 11, interpretive sources, is not counted): each cell has a document or an absence record
+   active jurisdictions × {company 9 slots, individual 9 slots}: each cell has a parameter or an absence record
+   each active jurisdiction: its official treaty list in treaty_list.csv
+   each pair of active jurisdictions: a treaty row (status in_force, signed or none); the two lists say which
 ```
 
 ## 2. What to collect for each jurisdiction (minimal scope)
+
+**Scope (2026-11-20)**: `scope.csv` lists the jurisdictions planned for the library, one row each: the 50 jurisdictions of Asia in the UN M49 regions plus Taiwan (which M49 does not list separately), and the European and US ones taken up after Asia. Columns: code, name, alpha3, numeric (ISO 3166), region, status, priority (1 first), reason. Status `active` means the jurisdiction is in jurisdiction.csv and is collected under this specification; `planned` comes next, in order of priority; `deferred` is put aside for the reason given (sources out of reach from here, scans no one can check); `excluded` has no official online publication; `later` waits until Asia is done. When you take up a planned jurisdiction, add its row to jurisdiction.csv (added_on: the date) and set its status in scope.csv to active, in the same change; the build checks that the two agree. The project lead changes the other statuses.
+
+Only the dividend content of this section is collected (the supervisor's request; §6 is suspended). Levies other than income tax, such as zakat, are not collected; where a jurisdiction taxes part of a company by its owners' nationality (Qatar, Saudi Arabia), §4.4 says how to register it.
 
 Check each jurisdiction against the 10 content categories and 3 page categories below, and collect one complete treaty for each jurisdiction pair; category 11 (interpretive sources) is optional.
 
@@ -74,9 +81,9 @@ When a jurisdiction has no document for a category, register an absence record i
 10. Penalty provisions: surcharge or interest on tax paid or remitted late (rate, start, cap), fine multiples for tax underpaid or not withheld (minimum, maximum), additional taxes. Collect only the provisions that carry the figures; they feed the "exposure if a benefit is denied" computation. Usually in the tax administration act, the general rules act or the penalty chapter of the income tax act.
 11. Interpretive sources (optional): court decisions, the OECD Model commentary, rulings on individual cases. They may be cited only by rule-layer decisions to explain a reading; **never as the source of a parameter**: the build reports an error when `param.cite_id` points into a document that belongs to category 11 only. The coverage check ignores this category.
 
-**3 page categories per jurisdiction**: the treaty list page (`page_treaties`, dates of entry into force), the withholding tax rate table (`page_rates`, for cross-checking, not a source to cite), and the page on withholding tax filing deadlines (`page_deadlines`).
+**3 page categories per jurisdiction**: the treaty list page (`page_treaties`, dates of entry into force; also transcribed into treaty_list.csv), the withholding tax rate table (`page_rates`, for cross-checking, not a source to cite), and the page on withholding tax filing deadlines (`page_deadlines`).
 
-**Each jurisdiction pair**: the complete treaty + protocols + MLI synthesised text, using Articles 1–4 (scope, residence, tie-breaker rules), Article 10 and the definition of "beneficial owner", the article on eliminating double taxation, and limitation on benefits / PPT. Register the whole text, and extract parameters only from the provisions needed. Pairs with no treaty also get a "no treaty" row. For the MLI, see §4.2.
+**Each jurisdiction pair**: the complete treaty + protocols + MLI synthesised text, using Articles 1–4 (scope, residence, tie-breaker rules), Article 10 and the definition of "beneficial owner", the article on eliminating double taxation, and limitation on benefits / PPT. Register the whole text, and extract parameters only from the provisions needed. Pairs with no treaty also get a row, with status none. For the MLI, see §4.2. The parts of a treaty that are collected: the original, protocols, exchanges of notes, agreed minutes or memoranda of understanding, the MLI synthesised text, an official consolidated text, and agreements between the competent authorities that concern dividends (category 11 too). Not collected: agreements on the exchange of information only (TIEA), the Convention on Mutual Administrative Assistance, treaties on estates, inheritances and gifts. **First the treaty list**: before the treaties of a jurisdiction, register its official treaty list and transcribe it into treaty_list.csv (§4.2); the list says which pairs have a treaty, and tools/pairs.py writes the rows of those that do not.
 
 If any item is missed, the corresponding rate, condition, certificate or timeline has no source.
 
@@ -84,11 +91,11 @@ If any item is missed, the corresponding rate, condition, certificate or timelin
 
 ```text
                  ┌──────────────┐
-                 │ jurisdiction │ 11 rows, prefilled
+                 │ jurisdiction │ one row per active jurisdiction
                  └──────┬───────┘
                         │ 1:n
    ┌──────────┐   ┌─────▼─────┐        ┌────────┐
-   │  files   │◀──│    doc    │───────▶│ treaty │ 55 rows, one per jurisdiction pair
+   │  files   │◀──│    doc    │───────▶│ treaty │ one row per pair of active jurisdictions
    │ in bucket│   │ a document│ 1:0..1 │        │
    └──────────┘   └─────┬─────┘        └────────┘
                         │ 1:n
@@ -101,25 +108,28 @@ If any item is missed, the corresponding rate, condition, certificate or timelin
                   └───────────┘
 
    decision: absence records; one row = a jurisdiction has no document for a category, or the law has no rule for a subject's slot (cites a clause)
+   treaty_list: one row per partner on a jurisdiction's official treaty list (cites the list document, quotes its line)
 ```
 
 | Table | Columns | Index |
 |---|---|---|
-| `jurisdiction` | code (two lower-case letters; a pair is written in alphabetical order as `cn-hk`), name, currency, company_in_scope, individual_in_scope (prefilled) | — |
+| `jurisdiction` | code (two lower-case letters; a pair is written in alphabetical order as `cn-hk`), name, currency, company_in_scope, individual_in_scope, added_on (one row per active jurisdiction) | — |
 | `files` | path, sha256, bytes | path |
-| `doc` | id, jur (jurisdiction code; treaties and protocols take the pair, such as `cn-hk`; multilateral documents such as the MLI take `intl`), type, category (the categories of §2, several allowed, separated by semicolons), title, url, file, sha256, lang (required; the document's language code, such as zh, en, th, ar), effective_from, effective_to, note | id |
-| `treaty` | pair, doc_id (empty = no treaty), in_force_from, mli_doc_id, note | pair |
+| `doc` | id, jur (jurisdiction code; treaties and protocols take the pair, such as `cn-hk`; multilateral documents such as the MLI take `intl`), type, part (treaty documents of a pair), category (the categories of §2, several allowed, separated by semicolons), title, url, alt_url, file, sha256, lang (required; the document's language code, such as zh, en, th, ar), authentic, effective_from, effective_to, note | id |
+| `treaty` | pair, doc_id, status (in_force / signed / none), signed_on, in_force_from, mli_doc_id, pending_doc_id, pending_signed_on, note | pair |
+| `treaty_list` | id (`<jur>.<partner>`), jur, partner, status (in_force / signed / terminated), signed_on, in_force_on, doc_id, quote, note | id |
 | `clause` | cite_id, doc_id, label, text | cite_id, doc_id |
 | `param` | param_id, scope (jurisdiction or pair), subject (company / individual / all), slot (outbound_wht / inbound / final / residence / cfc / anti_abuse / penalty / restructure / exit), name, value, unit, cite_id, quote, effective_from, effective_to, note, changed_on, superseded_by | param_id |
 | `decision` | id, jur, category, subject, slot, statement, cite_id, quote (each row is an absence record: fill in either category, or subject and slot; see §2 and §4.4) | id |
 
 **What each table and column means** (all examples are real rows of the library)
 
-`jurisdiction`: the jurisdictions covered, one row each, prefilled; do not change.
+`jurisdiction`: the active jurisdictions, one row each. A row is added when a jurisdiction of scope.csv is taken up (§2) and never removed; its other columns are not changed afterwards.
 - code: jurisdiction code, two lower-case letters, such as `cn` (Mainland China) and `hk` (Hong Kong). Two jurisdictions forming a "pair" are joined in alphabetical order, such as `cn-hk`; pairs are used for treaties and treaty parameters.
 - name: name of the jurisdiction.
 - currency: code of the local currency, such as `HKD`; parameter units may use it.
 - company_in_scope, individual_in_scope: whether rules for companies and for individuals are collected for this jurisdiction (yes / no). The coverage check uses them to decide whether to check the 9 slots of that subject.
+- added_on: the date the row was added (YYYY-MM-DD). Of two jurisdictions, the one added later answers for their pair (§4.5); the 11 of the first version carry 2026-10-23.
 
 `doc`: one original document in the library: a law, an announcement, a web page, or a treaty or protocol.
 - id: document id, such as `cn.law.eit` (Enterprise Income Tax Law) and `treaty.cn-hk.2006.zh` (Chinese text of the Mainland–Hong Kong Arrangement). It starts with the jurisdiction code, `treaty.<pair>.` or `intl.`.
@@ -131,6 +141,9 @@ If any item is missed, the corresponding rate, condition, certificate or timelin
 - file: local path of the original, such as `raw/cn/cn.law.eit.html`.
 - sha256: fingerprint of the original. If the original is changed, the build reports an error.
 - lang: language of the original, such as zh, en.
+- part: for the treaty documents of a pair, which part of the treaty it is: original (the treaty as signed, or one text of it), protocol, notes (an exchange of notes or letters), minutes (agreed minutes, a memorandum of understanding), mli_synth (the MLI synthesised text), consolidated (an official text merging the treaty with its protocols or MLI changes, such as the IRAS treaty PDFs with Annex A), ca_agreement (an agreement between the competent authorities), record (an official treaty register entry giving dates and status), summary (an official summary or explanation; supporting only). Empty for every other document.
+- alt_url: the same document on another official site; for a treaty, the other contracting state's publication. Optional.
+- authentic: whether the text held is an authentic text (authentic) or a translation (translation), as the treaty's final clause or the publisher says; empty when not known.
 - effective_from, effective_to: dates the document takes and ceases to have effect; fill in only when known.
 - note: additional information, such as how it was fetched, validity labels, the source of a copy.
 
@@ -144,12 +157,23 @@ If any item is missed, the corresponding rate, condition, certificate or timelin
 - label: the number for people to read, such as "第26条" or "Article 10(2)".
 - text: original text of the provision, unchanged.
 
-`treaty`: whether two jurisdictions have a tax treaty; one row per jurisdiction pair (55 pairs in all).
+`treaty`: whether two active jurisdictions have a tax treaty in force; one row per pair.
 - pair: the pair, such as `cn-sg`.
-- doc_id: the treaty document; empty means the two have no treaty.
-- in_force_from: date the treaty entered into force.
+- doc_id: the treaty in force (status in_force) or the signed text (status signed); empty with status none.
+- status: in_force (a treaty is in force), signed (no treaty in force, one signed), none (no treaty; the two lists prove it, §4.2).
+- signed_on: date of signature of doc_id's treaty, when known.
+- in_force_from: date the treaty entered into force (status in_force only).
+- pending_doc_id, pending_signed_on: a newer treaty or protocol signed while doc_id is in force, and its date of signature; it gets no parameters until it is in force.
 - mli_doc_id: the MLI synthesised text, that is the treaty as modified by the MLI; empty if there is none.
 - note: whether the MLI applies, from which date, and the source of the dates.
+
+`treaty_list`: one jurisdiction's official treaty list, one row per partner it names (§4.2).
+- id: `<jur>.<partner>`, such as `hk.pk`.
+- jur: the jurisdiction whose list it is. partner: the other state's ISO two-letter code in lower case, whether or not it is in the library.
+- status: as the list gives it: in_force, signed (not yet in force), terminated.
+- signed_on, in_force_on: the dates the list gives; empty when it gives none.
+- doc_id, quote: the list document (a page_treaties document of jur) and the line of it naming the partner, verbatim; the build checks the quote.
+- note: anything the list adds (a protocol pending, the taxes covered).
 
 `param`: one number or criterion extracted from a provision; the core content of the library.
 - param_id: parameter id, that is scope.slot.name, with a suffix when needed, such as `cn.outbound_wht.dividend_wht_rate` (Mainland China's withholding tax rate on dividends paid abroad).
@@ -177,9 +201,11 @@ If any item is missed, the corresponding rate, condition, certificate or timelin
 - statement: what is missing, why, and where you looked.
 - cite_id, quote: the provision defining the scope of the tax and a verbatim quote, showing that the rule really does not exist.
 
-**Remote**: after upload, the seven tables are in the schema `database` of the remote Postgres, next to the archived library's schema `official`; the files listed in the `files` table are in the storage bucket `database`. They are real tables that can be queried directly, not a snapshot, but they change only on upload: each upload replaces them entirely with the local data that passed acceptance, and no earlier versions are kept. The same schema holds a table `meta` (key, value) with the upload's specification version (`spec_version`, that is `SPEC_VERSION`), the sha256 of build.py and upload.py, the git commit of the tools, the uploader, the time and the acceptance result of each jurisdiction; it shows which version of the specification and tools wrote the remote, and upload.py uses it to refuse overwriting newer data with older tools (§4.5).
+**Remote**: after upload, the eight tables are in the schema `database` of the remote Postgres, next to the archived library's schema `official`; the files listed in the `files` table are in the storage bucket `database`. They are real tables that can be queried directly, not a snapshot, but they change only on upload: each upload replaces them entirely with the local data that passed acceptance, and no earlier versions are kept. The same schema holds a table `meta` (key, value) with the upload's specification version (`spec_version`, that is `SPEC_VERSION`), the sha256 of build.py and upload.py, the git commit of the tools, the uploader, the time and the acceptance result of each jurisdiction; it shows which version of the specification and tools wrote the remote, and upload.py uses it to refuse overwriting newer data with older tools (§4.5).
 
-**Local file convention**: locally, each table is a csv of the same name, kept with `raw/`, `ocr/` and `text/` under `database/` (`ocr/` holds the OCR texts of scans, made by tools/ocr.py; it is an input of the build and is delivered with the data, §4.1). The five csv files `jurisdiction / treaty / doc / param / decision` are filled by an AI or by hand (`jurisdiction.csv` is prefilled; `doc.csv` is written through fetch.py); `files.csv` and `clause.csv` are generated by the build and not filled by an AI or by hand. fetch.py also writes `blocked.csv`, and the session record is kept in `session_log.md`. Text that an AI writes into the csv files (statement, note, etc.) and the session record are in English; quotes and titles stay in the original. There is also an auxiliary csv, `superseded.csv` (doc_id, clause, by, since, note, phrase), filled by an AI or by hand, which records provisions replaced by protocols or the MLI. It is not a library table; the build uses it only to leave those provisions out of `clause`; it is uploaded to the bucket with the data, so that the same clause layer can be rebuilt from the remote (§4.5).
+**Local file convention**: locally, each table is a csv of the same name, kept with `raw/`, `ocr/` and `text/` under `database/` (`ocr/` holds the OCR texts of scans, made by tools/ocr.py; it is an input of the build and is delivered with the data, §4.1). The six csv files `jurisdiction / treaty / treaty_list / doc / param / decision` are filled by an AI or by hand (`doc.csv` is written through fetch.py, the no-treaty rows of `treaty.csv` through pairs.py); `files.csv` and `clause.csv` are generated by the build and not filled by an AI or by hand. fetch.py also writes `blocked.csv`, and the session record is kept in `session_log.md`. Text that an AI writes into the csv files (statement, note, etc.) and the session record are in English; quotes and titles stay in the original. There is also an auxiliary csv, `superseded.csv` (doc_id, clause, by, since, note, phrase), filled by an AI or by hand, which records provisions replaced by protocols or the MLI. It is not a library table; the build uses it only to leave those provisions out of `clause`; it is uploaded to the bucket with the data, so that the same clause layer can be rebuilt from the remote (§4.5).
+
+**Planning and leads** (2026-11-20; not library tables, not uploaded): `scope.csv` is the planning list of §2. `leads.csv` (source, jur, item, value, url, status, note) holds what others found, as leads only: the supervisor's overview of laws, exit tax and CFC rules and his treaty list sources, and the reachability check of 2026-11-20 (one row per official address tested from here, with what it returned). Nothing is cited from it: a lead becomes a source only once the official document is registered. When our finding differs from a lead, set its status to `differs` and say why in the note; those rows are the difference list for the supervisor. `coverage/` holds what coverage.py and watch.py write (§4.6).
 
 **Build**: run `python database/tools/build.py`. It converts the originals into `text/`, slices them, generates `clause.csv` and `files.csv`, runs all checks, and writes `database.sqlite` and `STATUS.md`. With `--jur <jurisdiction code>` it checks only that jurisdiction and writes nothing (§5). On errors the exit code is 1; coverage gaps are only listed in `STATUS.md` and do not count as errors.
 
@@ -191,9 +217,10 @@ Collectors first finish everything locally following the local file convention o
 
 ### 4.1 Choosing sources
 
-- Official domains only: tax authority, ministry of finance, legal databases, gazettes. Third-party reproductions, law firm summaries and wikis are not accepted; rate table pages are only for cross-checking. The build reports an error for a document whose url is not in the official domain list (`OFFICIAL` in fetch.py). When a government domain is missing from the list, add it to `OFFICIAL` under §4.9 and note it in the session record; do not switch to a third-party address.
+- Official domains only: tax authority, ministry of finance, legal databases, gazettes. Third-party reproductions, law firm summaries and wikis are not accepted; rate table pages are only for cross-checking. The build reports an error for a document whose url is not in the official domain list (`OFFICIAL` in fetch.py). When a government domain is missing from the list, add it to `OFFICIAL` under §4.9 and note it in the session record; do not switch to a third-party address. For a treaty, the publication of either contracting state counts; record the other state's address of the same text in `alt_url`.
 - Prefer the current consolidated version. Where there is none, collect the original law plus each amendment, and say in the note which provisions have been amended.
-- For treaties, prefer the English text (in most treaties the English text is one of the equally authentic texts); without one, take the Chinese text; with neither, take the text in an official language of one party and say so in the session record (such a text can only be sliced by page or as a whole).
+- A text layer that does not read as the law (words out of order, letters in a broken font, as in some Arabic, Burmese and Nepali PDFs) is not a source to quote from: take another edition of the same authority, or read the scan with OCR (Scans, below). The build reports garbled Arabic; for other scripts, check a page before quoting.
+- For treaties, prefer the English text (in most treaties the English text is one of the equally authentic texts); without one, take the Chinese text; with neither, take the text in an official language of one party and say so in the session record (such a text can only be sliced by page or as a whole). Record in `authentic` whether the text you hold is an authentic text of the treaty or a translation, as its final clause states.
 - Record one alternative address for each document. fetch.py retries twice automatically. If it still fails, try the methods below in order; only when all fail, write the document into blocked.csv with `fetch.py --blocked` (id, url, reason; `--alt-tried` lists what was tried) and turn to manual collection under §4.7. Do not leave a placeholder pretending the document exists.
 
 **When a download fails, try in turn**:
@@ -213,7 +240,7 @@ Collectors first finish everything locally following the local file convention o
 
 When registering with `--register-file`, `--url` is always the original official address; how the copy was obtained goes into `--note`.
 
-Not done: bypassing bot checks, captchas or login walls. For such pages, change site or record the document in blocked.csv.
+Not done: bypassing bot checks, captchas or login walls. For such pages, change site or record the document in blocked.csv. A site that refuses plain requests goes to a person (§4.7, §4.8 H1); the task sheet lists the sites known to need a browser.
 
 When the content of a list page is loaded by a script and only an empty shell is downloaded (such as the treaty list of the Singapore tax authority), register the page anyway and say so in the note; take treaty dates of entry into force from the head of the treaty document or from the announcement of entry into force, and give the source in the note of the treaty row. Laws and regulations cannot be registered this way: the build reports an error when a web page of type law or regulation yields fewer than 300 characters of text (the law pages of Korea's law.go.kr, for example, are only a page shell); register the official PDF or the XML of a data interface instead (step 2 above). Pages saved under a server-side extension such as `.do` or `.aspx` are recognised as HTML by their content.
 
@@ -246,6 +273,9 @@ python database/tools/fetch.py --blocked --id ... --jur ... --title "..." --url 
 - When the file cannot be obtained from the original site and only a copy is available another way (such as an Internet Archive copy), register it with `--register-file`, with the original site's address in `--url` and the source of the copy in `--note`.
 - Give every document its `--category` per §2; treaty documents and documents of pairs or intl may leave it out. Attachments take the category of the main document by default; where that is wrong, change doc.csv directly.
 - Registered rows go into doc.csv, with the columns of the `doc` table in §3. For treaties and protocols, `--jur` is the pair (such as `cn-hk`); MLI texts take `intl`. A treaty also gets a row in treaty; protocols and MLI texts are each registered as separate docs and referenced in the treaty row.
+- **Treaty parts**: give every treaty document of a pair its `--part` (original, protocol, notes, minutes, mli_synth, consolidated, ca_agreement, record, summary; §3) and, when known, `--authentic`; put the same text on the other state's site in `--alt-url`.
+- **Treaty lists** (first, for each jurisdiction): register the official treaty list (category page_treaties) and transcribe it into treaty_list.csv, one row per partner named: id `<jur>.<partner>` (the partner's ISO two-letter code), status as the list gives it (in_force, signed, terminated), signed_on and in_force_on when the list gives them, doc_id of the list, and as quote the list's line naming the partner. Transcribe the whole list, partners outside the scope included. A jurisdiction with no treaty at all gets an absence record of category page_treaties instead. Then run `python database/tools/pairs.py --write`: it writes the no-treaty rows that both lists prove and lists the treaties still to be registered.
+- **Status of a pair**: in_force (doc_id: the treaty in force; in_force_from), signed (no treaty in force; doc_id: the signed text; in_force_from empty), none (no treaty; doc_id empty). A newer treaty or protocol signed while the old one is in force goes into pending_doc_id and pending_signed_on. A text not yet in force is registered as usual but gets no parameters (the build reports one that does); when it enters into force, move it into doc_id, set in_force_from and extract its parameters.
 - **MLI**:
   1. First check whether the MLI applies to the pair: in the OECD MLI Matching Database, it applies only if both sides list the treaty as a covered agreement and the MLI is in force for both. Write the conclusion into the note of the treaty row: `MLI applies from YYYY-MM-DD` or `MLI not applicable`. When the matching database cannot be opened, look at the final MLI position document published by one side's tax authority (Reservations and Notifications; the notification under Article 2 lists that side's covered agreements): if one side has not listed the treaty, the MLI does not apply. Register the position document as `intl.mli.positions.<jurisdiction>.<language>`, with jur intl, and cite it in the note; when both sides have listed it, also check the other side's position document and the dates of entry into force on both sides. When one side has made a reservation under Article 35(7) of the MLI (such as Hong Kong), the MLI applies only after that side notifies completion of its internal procedures: the Article 35(7)(b) notification document published by the OECD lists the notification date for each agreement; register it as `intl.mli.notification-35-7b.<jurisdiction>.en`. When the list says a treaty is modified by the MLI but no synthesised text has been published yet, work out the start date from Article 35 of the MLI and both sides' dates of entry into force and notification, write it into the note, and mark it as computed.
   2. When the MLI applies, collect the synthesised text published by either side's tax authority, register it as `treaty.<pair>.<treaty year>.mli.<language>` with type treaty and the pair as jur, and fill it into mli_doc_id of the treaty row. The original treaty and protocols are registered as usual. Singapore implements the MLI through domestic orders, and its tax authority's treaty PDF lists the modifications in Annex A, with no boxed synthesised text: fill that PDF into both doc_id and mli_doc_id, and cite the items of Annex A for the PPT and other provisions (such as `treaty.sg-th.2015.en#annexA.2`).
@@ -304,7 +334,7 @@ Read the sliced provisions and write one row per number or criterion into `param
 | unit | `%`, `days`, `months`, `years`, `count` (number of items, tiers), `bool`, `text`, or a currency code in jurisdiction.csv (such as `CNY`) |
 | cite_id | cite_id of the provision containing the number; forms in §4.3 |
 | quote | copied verbatim from the provision, the whole sentence containing the number or criterion; copy it from the output of `find.py` (the provisions as the build cleaned them of page numbers and headers, see "Finding provisions and sentences" below), never straight from a PDF reader or a web page, which brings page numbers along; the build checks that it appears verbatim in the provision the cite_id points to, and when it does not, the error gives the find.py command to use |
-| effective_from, effective_to | the law's date of effect, the treaty's start date of application, YYYY-MM-DD; the source goes in the note |
+| effective_from, effective_to | the law's date of effect; for a treaty, the date its provision applies from, which its final articles set (often 1 January after the entry into force, for taxes withheld at source), not the date of entry into force; YYYY-MM-DD; the source goes in the note |
 | changed_on, superseded_by | normally empty. When a value is amended, do not edit the old row: give it effective_to and superseded_by (the new row's param_id), and give the new row effective_from and changed_on (date of registration), so that every change stays in the table |
 | note | the result of cross-checking against the rate table page, the source of the validity period; when the page and the provision disagree, do not change the value: write it here and in the session record |
 
@@ -330,6 +360,10 @@ Read the sliced provisions and write one row per number or criterion into `param
 
 Every slot of every subject of every jurisdiction must be accounted for (9 for companies and 9 for individuals, exit included; the company exit counts from 2026-11-04): at least one parameter with the jurisdiction's code as scope, or an absence record (decision with jur, subject and slot filled in, category empty, citing the provision that defines the scope of the tax with a verbatim quote). When the law has no rule for a slot (for example, no withholding tax on dividends), register an absence record; do not write a parameter with an empty or "none" value.
 
+**Absence records by cell** (2026-11-20): an absence record says that the law has no rule for one cell, a subject's slot, and cites the provision that sets the scope of the tax; there is no absence record for a whole jurisdiction such as "no personal income tax". Where a jurisdiction taxes some income of individuals and not other income (Qatar and Saudi Arabia tax a foreign individual's business income but not wages), the cells are registered one by one, by what the provisions say for dividends.
+
+**Rules that depend on the owners' nationality**: where the tax on a company or its dividends depends on its shareholders' nationality (Qatar exempts the share of profits of Qatari owners; Saudi Arabia levies income tax on the share of non-Saudi owners), write one row per case, with the case as a suffix of the param_id (such as `.non_saudi_share`) and the condition in the note, quoting the provision. Zakat is not collected (§2); say in the note which share bears it instead.
+
 ### 4.5 Delivery
 
 After a jurisdiction passes the acceptance of §5, upload it with upload.py. The upload replaces the whole remote with the data of the jurisdictions in the local folder that passed acceptance:
@@ -343,12 +377,12 @@ It first runs a full build, then the acceptance of each jurisdiction. Jurisdicti
 
 **Reading the remote directly**: the layers above (the rule layer, the optimization layer, and the agents' tax-db, retrieval and case servers) can read the remote directly, without a local folder. Set `tax_db=supabase` in the `.env` at the project root (or in the environment): each server reads the five small tables (jurisdiction, doc, param, treaty, decision) from the remote Postgres at start-up and `superseded.csv` from the storage bucket; clauses are queried one by one by cite_id, and the tools that need every clause (tax-db's find, the rule layer's build, the retrieval index) read the whole clause table once (about 40 MB, some 20 s). The whole tables downloaded (the five small tables, the clause table, `superseded.csv` and the table digests) are cached on this machine under `.cache/remote/<upload time>/` (not in git), keyed by meta's upload time, so the servers of one machine download each table once per upload: while one process downloads, the others wait for it instead of competing for the bandwidth; after a new upload the upload time differs, the old cache is no longer read and is deleted, so a stale table is never read; `tax_db_cache=off` turns the cache off. Clauses queried one by one by cite_id are not cached; once the clause table is cached they are taken from it. The connection is a read-only session. `blocked.csv`, `STATUS.md` and `session_log.md` are in the storage bucket (since 2026-11-17): when reading the remote directly, blocked is read from the bucket (empty for an older upload; not cached) and the version information comes from the meta table; every answer's version carries `source: supabase` and the upload time; the orchestrator reads meta at the start and at the end of a run and says so in the run's result when the remote was uploaded again during the run. The retrieval index (`database/index/`) is computed from the library and stays on this machine; after the remote changes, compute it again with `python agent/tools/law_index.py --dense`. The implementation is `database/tools/dbsource.py`. The collector's tools (build, fetch, find, recite, merge, upload) always read and write the local folder. Without `tax_db`, or with another value, the layers read the folder `database/`.
 
-When several people share the work, it is split by jurisdiction, and each jurisdiction has a single person in charge. A jurisdiction pair belongs to the jurisdiction that comes first in alphabetical order: that side registers its treaty documents, treaty row and treaty parameters (for example `cn-hk` is registered by cn, `ae-cn` by ae). intl documents (MLI texts, positions and the like) are registered by the first jurisdiction that cites them, which names itself in the note; check doc.csv before registering (the same convention is not registered twice). Because an upload replaces the whole remote, merge the folders first when several people share the work, and let one person upload from the merged folder; uploading from your own folder only would delete from the remote the data others have uploaded.
+When several people share the work, it is split by jurisdiction, and each jurisdiction has a single person in charge. A jurisdiction pair belongs to the jurisdiction added later (`added_on` in jurisdiction.csv), since it is the one that brings the pair in; of two added on the same date, to the alphabetically first. That side registers its treaty documents, treaty row and treaty parameters (for example `ae-cn` is registered by ae, and `cn-tw` by tw once Taiwan is added). intl documents (MLI texts, positions and the like) are registered by the first jurisdiction that cites them, which names itself in the note; check doc.csv before registering (the same convention is not registered twice). Because an upload replaces the whole remote, merge the folders first when several people share the work, and let one person upload from the merged folder; uploading from your own folder only would delete from the remote the data others have uploaded.
 
 Merge in this order:
 
 1. Merge the tools first. A git branch is the source of the tools, and everyone uses the same version; with different tools, the two sides cut different provisions and the citations do not match (in the merge of 2026-11-07, 154 citations pointed at `#all` anchors only the other side's slicer made).
-2. Merge the data: `python database/tools/merge.py <the other database folder> [--take ae,id] --report <csv>`. Rows belong to their owning jurisdiction (a pair to its alphabetically first side); the jurisdictions of `--take` (by default those only the other folder has) come in with their originals, OCR texts and the intl documents they cite; for the other jurisdictions the local rows stay, rows the other folder has differently are listed as conflicts and not taken; columns the other folder lacks (`TABLES`) are filled empty.
+2. Merge the data: `python database/tools/merge.py <the other database folder> [--take ae,id] --report <csv>`. Rows belong to their owning jurisdiction (a pair to the side that answers for it, as above); the jurisdictions of `--take` (by default those only the other folder has) come in with their originals, OCR texts and the intl documents they cite; for the other jurisdictions the local rows stay, rows the other folder has differently are listed as conflicts and not taken; columns the other folder lacks (`TABLES`) are filled empty.
 3. Full build: `python database/tools/build.py`.
 4. Repoint citations: `python database/tools/recite.py --jur <the jurisdictions taken> --ids --report <csv>`. When the cited provision does not exist or does not hold the quote, the citation points to the smallest provision of the same document that holds it; a quote that differs only by page-number lines is matched without them; `--ids` brings parameter ids to the form of §4.4. Values, units, dates and the words of the law are never touched; rows that still do not match are listed as unresolved and go to a person under §4.8.
 5. Build again, run the acceptance of each jurisdiction, and write the merge and its conflicts into the session record.
@@ -356,6 +390,8 @@ Merge in this order:
 ### 4.6 Records
 
 - `blocked.csv`: documents that failed to download, written by `fetch.py --blocked`.
+- `coverage/`: `python database/tools/coverage.py` writes the coverage matrix (matrix.csv: for each jurisdiction of scope.csv its cells, treaty list, pairs, and exit tax and CFC rules in our words beside the supervisor's notes), pairs.csv, the source list (sources.csv: every document with its official address, other address, hash and dates, the list to check updates by), the watch list (watch.csv) and overview.xlsx in the layout of the supervisor's Overview.xlsx. It reads only the csv files; run it at the end of a session.
+- `python database/tools/watch.py`: re-fetches the watch list (each treaty list and every treaty signed and not yet in force; `--all` for every document) with plain requests and writes coverage/watch.md: same, same text, CHANGED or unreachable. For a changed document, register the new version (`fetch.py --force`, or a new id for a new instrument), update treaty_list.csv or treaty.csv and record it in the session record. It changes nothing in the library.
 - `session_log.md`: the session record. At the end of each session, append a section (in English) in the format given in the task sheet. Things a person needs to do go under its `Handoff to a person` item (§4.8), and tool changes under its `Tool changes` item (§4.9).
 
 ### 4.7 Manual collection
@@ -422,7 +458,7 @@ The following are not handed over; the AI does them itself (in the Mainland Chin
 - New helper scripts (such as ocr.py, merge.py, recite.py).
 
 **May not be changed** (to change these, hand over to a person, §4.8 H7)
-- The columns of the seven tables (`TABLES` in build.py), the checks on ids, dates, units, verbatim quotes and the like, and the coverage and acceptance decisions: loosening a check means letting wrong data pass acceptance.
+- The columns of the eight tables (`TABLES` in build.py), the checks on ids, dates, units, verbatim quotes and the like, and the coverage and acceptance decisions: loosening a check means letting wrong data pass acceptance.
 - The acceptance gate of upload.py (jurisdictions that do not pass acceptance are not uploaded) and its check of the specification version (a remote written under a newer specification is not overwritten), and what the meta table records.
 - Data rows registered by others.
 
@@ -457,17 +493,24 @@ Data checked: the jurisdiction's documents and absence records; the parameters, 
 - A parameter's cite_id does not exist, its quote is not verbatim, its scope, subject, slot, name or unit is invalid, its param_id is not `<scope>.<slot>.<name>`, or its value does not fit its unit;
 - An absence record has no jur, or does not fill exactly one of category and subject + slot, or an absence record for categories 1–4, 9 or a slot does not cite the provision on the scope of the tax;
 - A treaty row's pair is written wrongly, or the document it references does not exist;
+- A treaty row's status is not in_force, signed or none, or does not fit its documents (in_force without doc_id; signed with in_force_from or mli_doc_id; none with a document; pending_doc_id beside a status other than in_force); a parameter cites a treaty not yet in force (a signed text or a pending one);
+- A treaty document of a pair has no valid part, or another document has one; authentic is not authentic, translation or empty; alt_url is not on an official host;
+- A treaty_list row: its id is not `<jur>.<partner>`, its jur is not active, partner is not a two-letter code, status is not in_force, signed or terminated, its document is not a page_treaties document of jur, or its quote is not verbatim in that document; a treaty row says none while a list names the treaty in force;
+- scope.csv: a code twice, an unknown status, status active for a code not in jurisdiction.csv or a code of jurisdiction.csv not active, a deferred or excluded row without its reason; jurisdiction.added_on not a date;
 - A date is not YYYY-MM-DD (dates of effect of documents and parameters, the date of entry into force of a treaty row, since in superseded.csv).
 
-**Warnings** (they do not affect passing; listed in STATUS.md): a law, regulation or treaty cited as a whole (`#all`) or by page (`#p<n>`) without a "sliced as whole/page" line in the session record (§4.3). Documents using OCR text say `ocr` in the text column of the Documents table of STATUS.md.
+**Warnings** (they do not affect passing; listed in STATUS.md): a law, regulation or treaty cited as a whole (`#all`) or by page (`#p<n>`) without a "sliced as whole/page" line in the session record (§4.3). Documents using OCR text say `ocr` in the text column of the Documents table of STATUS.md. Also listed: a treaty in force without in_force_from; a treaty parameter dated before its treaty entered into force (check the article on entry into force: a treaty may apply from an earlier date); a treaty row that neither list names.
 
 **Gaps**:
 - Any of the 13 categories (10 content + 3 page categories; category 11 not counted) with neither a document nor an absence record;
 - Any of the 9 slots for companies or the 9 for individuals with neither a parameter of the jurisdiction nor an absence record;
-- Any pair the jurisdiction is in charge of (it comes first in alphabetical order) without a treaty row; for a pair with no treaty, doc_id is empty and the note says "no treaty";
+- The jurisdiction's official treaty list not in treaty_list.csv (and no absence record of category page_treaties);
+- Any pair with another active jurisdiction that it answers for (§4.5) without a treaty row; the message says which: a treaty list is missing, a list names a treaty still to be registered, or neither list names the other and `tools/pairs.py --write` writes the no-treaty row;
 - Downloads in blocked.csv for the jurisdiction that are not yet in doc.csv; if confirmed not needed, delete the row and give the reason in the session record.
 
 ## 6. Widening the income tax scope (drafted 2026-11-07)
+
+**Suspended (2026-11-20, the owner's decision)**: the supervisor asked to continue with dividends first. Nothing of this section is collected, and none of its tool changes is made, until it is taken up again; it is kept as the plan for later.
 
 This section sets what is collected after the widening, how it is registered and how it is accepted. Until the tools of 6.7 are changed, the build and acceptance follow §1–§5; the tool changes touch the part of §4.9 that may not be changed, and the project lead carries them out under this section.
 

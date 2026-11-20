@@ -1,12 +1,12 @@
-﻿code,name,currency,company_in_scope,individual_in_scope
-cn,Mainland China,CNY,yes,yes
-hk,Hong Kong,HKD,yes,yes
-sg,Singapore,SGD,yes,yes
-id,Indonesia,IDR,yes,yes
-vn,Vietnam,VND,yes,yes
-my,Malaysia,MYR,yes,yes
-th,Thailand,THB,yes,yes
-ae,United Arab Emirates,AED,yes,yes
-jp,Japan,JPY,yes,yes
-kr,Korea,KRW,yes,yes
-in,India,INR,yes,yes
+﻿code,name,currency,company_in_scope,individual_in_scope,added_on
+cn,Mainland China,CNY,yes,yes,2026-10-23
+hk,Hong Kong,HKD,yes,yes,2026-10-23
+sg,Singapore,SGD,yes,yes,2026-10-23
+id,Indonesia,IDR,yes,yes,2026-10-23
+vn,Vietnam,VND,yes,yes,2026-10-23
+my,Malaysia,MYR,yes,yes,2026-10-23
+th,Thailand,THB,yes,yes,2026-10-23
+ae,United Arab Emirates,AED,yes,yes,2026-10-23
+jp,Japan,JPY,yes,yes,2026-10-23
+kr,Korea,KRW,yes,yes,2026-10-23
+in,India,INR,yes,yes,2026-10-23

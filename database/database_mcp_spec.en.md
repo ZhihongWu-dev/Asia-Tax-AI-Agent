@@ -1,10 +1,10 @@
 # Library MCP specification (tax-db, minimal set)
 
-English copy of `database/数据库MCP规范.md`; when the two differ the Chinese version prevails.
+This English text is the master (since 2026-11-20); `database/数据库MCP规范.md` is its Chinese translation. When the two differ, this version prevails.
 
 2026-11-01. One of four MCP services (the other three: `rule/规则层MCP规范.md`, `optimization/优化层MCP规范.md`, `agent/案卷MCP规范.md`). This document defines only `tax-db`: read-only queries for the agent layer. The library's tables, collection and acceptance are in `数据库规范.md`; this file and `tools/mcp_server.py` are maintained by the collectors under the rules of `数据库规范.md` §4.9.
 
-**Language**: this specification is written in Chinese for human readers; the English copy is `database/database_mcp_spec.en.md`; when the two differ the Chinese version prevails, and when the Chinese version is changed the English copy is updated in step. Everything the AI writes into files in its own words is in English — code, comments, tool descriptions, prompts (what the system actually submits is the passage in the English copy), working papers, checklists, handoff, bug reports, logs, product fields; originals, clauses, quotations and the client's own words stay in their original language and are not translated. The only exception is text shown to the client (replies to the client, the briefing), which follows the client's language. The overall verdict of a checklist uses English tokens: intake package `RUNNABLE` / `REVISE`, report `DELIVERABLE` / `REVISE` (the service also accepts the original Chinese tokens).
+**Language**: this English text is the master (since 2026-11-20) and `database/数据库MCP规范.md` its Chinese translation; when the two differ this version prevails, and the translation is updated in the same change. Everything the AI writes into files in its own words is in English — code, comments, tool descriptions, prompts (what the system actually submits is the passage in the English copy), working papers, checklists, handoff, bug reports, logs, product fields; originals, clauses, quotations and the client's own words stay in their original language and are not translated. The only exception is text shown to the client (replies to the client, the briefing), which follows the client's language. The overall verdict of a checklist uses English tokens: intake package `RUNNABLE` / `REVISE`, report `DELIVERABLE` / `REVISE` (the service also accepts the original Chinese tokens).
 
 ## 1. Positioning
 

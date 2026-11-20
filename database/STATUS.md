@@ -1,6 +1,6 @@
 # STATUS
 
-Written by `tools/build.py` at every build; do not edit. The acceptance of one jurisdiction is `python database/tools/build.py --jur <code>` (数据库规范.md §5).
+Written by `tools/build.py` at every build; do not edit. The acceptance of one jurisdiction is `python database/tools/build.py --jur <code>` (database_spec.en.md §5).
 
 | What | Count |
 |---|---|
@@ -10,9 +10,10 @@ Written by `tools/build.py` at every build; do not edit. The acceptance of one j
 | Repealed-provision stubs left out | 50 |
 | Parameters | 760 |
 | Treaty rows | 55 |
+| Treaty list entries | 0 |
 | Absence records | 46 |
-| Errors / warnings | 0 / 133 |
-| Gaps: (jurisdiction, category) / (jurisdiction, subject, slot) / pairs without a treaty row / unresolved downloads | 6 / 36 / 0 / 2 |
+| Errors / warnings | 0 / 152 |
+| Gaps: (jurisdiction, category) / (jurisdiction, subject, slot) / treaty lists / pairs / unresolved downloads | 6 / 36 / 11 / 0 / 2 |
 
 ## Documents
 
@@ -387,6 +388,25 @@ None.
 - clause kr.income-tax-act.20260701.ko#156.13: duplicate cite_id, later one dropped
 - clause kr.income-tax-act.20260701.ko#156.14: duplicate cite_id, later one dropped
 - clause kr.income-tax-act.20260701.ko#156.15: duplicate cite_id, later one dropped
+- treaty id-th: in_force_from empty; take the date of entry into force from the treaty list, the announcement or the treaty itself
+- param sg-vn.outbound_wht.dividend_rate_reduced: effective_from 1993-01-01 is before the treaty entered into force (1994-09-09); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param sg-vn.outbound_wht.holding_pct_min: effective_from 1993-01-01 is before the treaty entered into force (1994-09-09); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param sg-vn.outbound_wht.holding_amount_min: effective_from 1993-01-01 is before the treaty entered into force (1994-09-09); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param sg-vn.outbound_wht.dividend_rate_mid: effective_from 1993-01-01 is before the treaty entered into force (1994-09-09); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param sg-vn.outbound_wht.holding_pct_min.mid: effective_from 1993-01-01 is before the treaty entered into force (1994-09-09); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param sg-vn.outbound_wht.dividend_rate_other: effective_from 1993-01-01 is before the treaty entered into force (1994-09-09); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param in-sg.outbound_wht.holding_pct_min: effective_from 1994-04-01 is before the treaty entered into force (1994-05-27); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param in-sg.outbound_wht.dividend_rate_reduced: effective_from 1994-04-01 is before the treaty entered into force (1994-05-27); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param in-sg.outbound_wht.dividend_rate_other: effective_from 1994-04-01 is before the treaty entered into force (1994-05-27); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param my-th.outbound_wht.my_source_dividend_additional_tax_exempt: effective_from 1983-01-01 is before the treaty entered into force (1983-02-02); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param my-th.outbound_wht.th_source_dividend_cap_industrial: effective_from 1983-01-01 is before the treaty entered into force (1983-02-02); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param my-th.outbound_wht.th_source_dividend_cap_other_qualifying_company: effective_from 1983-01-01 is before the treaty entered into force (1983-02-02); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param my-th.outbound_wht.th_source_voting_share_threshold: effective_from 1983-01-01 is before the treaty entered into force (1983-02-02); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param kr-my.outbound_wht.dividend_rate_reduced: effective_from 1982-01-01 is before the treaty entered into force (1983-01-02); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param kr-my.outbound_wht.holding_pct_min: effective_from 1982-01-01 is before the treaty entered into force (1983-01-02); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param kr-my.outbound_wht.dividend_rate_other: effective_from 1982-01-01 is before the treaty entered into force (1983-01-02); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param my-th.inbound.indirect_credit_holding_pct_min: effective_from 1983-01-01 is before the treaty entered into force (1983-02-02); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
+- param sg-vn.inbound.indirect_credit_holding_pct_min: effective_from 1993-01-01 is before the treaty entered into force (1994-09-09); check the article on entry into force (a treaty may apply from an earlier date) and say which in the note
 - th.outbound_wht.dividend_wht_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
 - th.final.cit_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
 - th.final.progressive_bracket_1_rate cites th.rc3.rates.th#all: a law is cited by provision; fix the slicer or record 'th.rc3.rates.th sliced as whole/page' in session_log.md (§4.3)
@@ -496,7 +516,21 @@ Cells of jurisdiction | subject | slot with neither a parameter nor an absence r
 - in|individual|restructure
 - in|individual|exit
 
-Pairs without a treaty row (a row with empty doc_id records "no treaty"):
+Jurisdictions whose official treaty list is not yet in treaty_list.csv:
+
+- cn: its treaty list is not in treaty_list.csv
+- hk: its treaty list is not in treaty_list.csv
+- sg: its treaty list is not in treaty_list.csv
+- id: its treaty list is not in treaty_list.csv
+- vn: its treaty list is not in treaty_list.csv
+- my: its treaty list is not in treaty_list.csv
+- th: its treaty list is not in treaty_list.csv
+- ae: its treaty list is not in treaty_list.csv
+- jp: its treaty list is not in treaty_list.csv
+- kr: its treaty list is not in treaty_list.csv
+- in: its treaty list is not in treaty_list.csv
+
+Pairs of active jurisdictions without a treaty row (status none records "no treaty"):
 
 None.
 
