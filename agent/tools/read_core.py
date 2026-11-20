@@ -185,16 +185,23 @@ class Reader:
         return self._prod[key], None
 
     def casefile(self, case_id):
-        if case_id not in self._case:
-            cd = self.cases / case_id
-            if not (cd / "intake").is_dir():
-                return None, err("not_found", "no case %s" % case_id)
-            import read_index
+        """The case index, rebuilt when the case files changed since this server opened it: the agent's own sources table
+        or notes are then found (B-3, 2026-11-13), and the old file is let go so another process can replace it."""
+        cd = self.cases / case_id
+        if not (cd / "intake").is_dir():
+            return None, err("not_found", "no case %s" % case_id)
+        import read_index
+        fp = read_index.fingerprint(read_index.case_files(cd))
+        held = self._case.get(case_id)
+        if held is None or held[1] != fp:
+            if held is not None:
+                held[0].close()
+                del self._case[case_id]
             path = read_index.build_case(cd)
             con = sqlite3.connect(str(path), check_same_thread=False)
             con.row_factory = sqlite3.Row
-            self._case[case_id] = con
-        return self._case[case_id], None
+            self._case[case_id] = (con, fp)
+        return self._case[case_id][0], None
 
     def current(self, case_id):
         return access.current_round(self.cases, case_id)

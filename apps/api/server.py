@@ -152,23 +152,29 @@ def Turn(case_id, prompt, label):
 
 
 class CodexTurn:
-    """The same turn on the native Codex CLI (agent/tools/codex_adapter.py): a fresh session each time, the dialogue file carries the context."""
+    """The same turn on the native Codex CLI (agent/tools/codex_adapter.py). Since 2026-11-17 the front's turns of one round go
+    on in one session (`exec resume`); a new round starts a fresh one, and so does a session that can no longer go on."""
 
     def __init__(self, case_id, prompt, label):
         import codex_adapter
         import harness
-        self.case_id, self.began = case_id, time.time()
-        folder = CASES / case_id / "log" / "runs"
+        self.case_id, self.began, self.prompt, self.label = case_id, time.time(), prompt, label
+        self.chosen = harness.selection(harness.settings(HARNESS_CONFIG or None, []), "front", "front")
+        self.chosen.setdefault("backend", "codex")
+        self.plan = codex_adapter.plan("front", case_id, "front", self.chosen, orch, WEB_NOTE + CODEX_WEB_NOTE)
+        self.restarted = False
+        self.start()
+
+    def start(self):
+        folder = CASES / self.case_id / "log" / "runs"
         folder.mkdir(parents=True, exist_ok=True)
-        stem = folder / ("%03d-%s" % (orch.next_output_number(folder), label))
+        stem = folder / ("%03d-%s" % (orch.next_output_number(folder), self.label))
         self.out, self.err = stem.with_suffix(".jsonl"), stem.with_suffix(".err")
-        chosen = harness.selection(harness.settings(HARNESS_CONFIG or None, []), "front", "front")
-        chosen.setdefault("backend", "codex")
-        self.home, work, env = codex_adapter.prepare("front", case_id, chosen, WEB_NOTE + CODEX_WEB_NOTE)
         with open(self.out, "wb") as out, open(self.err, "wb") as err:
-            self.proc = subprocess.Popen(codex_adapter.command(work), cwd=str(work), env=env, stdin=subprocess.PIPE, stdout=out, stderr=err)
+            self.proc = subprocess.Popen(self.plan["cmd"], cwd=str(self.plan["work"]), env=self.plan["env"], stdin=subprocess.PIPE,
+                                         stdout=out, stderr=err)
         try:
-            self.proc.stdin.write(prompt.encode("utf-8"))
+            self.proc.stdin.write(self.prompt.encode("utf-8"))
             self.proc.stdin.close()
         except OSError:
             pass
@@ -181,13 +187,26 @@ class CodexTurn:
 
     @property
     def done(self):
-        return self.proc.poll() is not None
+        if self.proc.poll() is None:
+            return False
+        if not self.restarted and self.plan["how"] != "fresh" and time.time() - self.began <= orch.NODE_TIMEOUT:
+            import codex_adapter
+            payload, stderr, code = self.payload()
+            if codex_adapter.retry_fresh(self.plan, payload, code, stderr):   # the old session could not go on: once more, fresh
+                self.restarted = True
+                codex_adapter.forget(self.plan["record"])
+                self.plan = codex_adapter.plan("front", self.case_id, "front", self.chosen, orch, WEB_NOTE + CODEX_WEB_NOTE, fresh=True)
+                if "Case id:" not in self.prompt:
+                    self.prompt = "Case id: %s.\n%s" % (self.case_id, self.prompt)
+                self.start()
+                return False
+        return True
 
     def stop(self):
-        if not self.done:
+        if self.proc.poll() is None:
             orch.stop_tree(self.proc)
 
-    def outcome(self):
+    def payload(self):
         import codex_adapter
         import harness
         self.tail.read()
@@ -195,11 +214,16 @@ class CodexTurn:
             path.write_text(harness.redact(path.read_text(encoding="utf-8", errors="replace")), encoding="utf-8")
         payload = codex_adapter.parse_output(self.out.read_text(encoding="utf-8"))
         stderr = self.err.read_text(encoding="utf-8", errors="replace")
-        code = orch.classify(self.proc.returncode, False, payload, stderr)
+        return payload, stderr, orch.classify(self.proc.returncode, False, payload, stderr)
+
+    def outcome(self):
+        import codex_adapter
+        payload, stderr, code = self.payload()
+        codex_adapter.settle(self.plan, payload, code, stderr)
         reply = (payload.get("result") or "").strip()
         orch.log_row(self.case_id, event="harness", node=self.out.stem.split("-", 1)[1], agent="front", backend="codex",
-                     model=payload.get("model", ""), turns=payload.get("num_turns"), session_id=payload.get("session_id"),
-                     failure=code, usage=payload.get("usage", {}))
+                     model=payload.get("model", ""), turns=payload.get("num_turns"), session_id=payload.get("session_id") or self.plan["sid"],
+                     session=self.plan["how"], failure=code, usage=payload.get("usage", {}))
         return reply, code or (None if reply else "agent_failed")
 
 

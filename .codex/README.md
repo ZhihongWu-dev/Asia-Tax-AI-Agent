@@ -121,3 +121,22 @@ The implementation follows the official OpenAI documentation for
 [non-interactive execution](https://learn.chatgpt.com/docs/non-interactive-mode),
 [configuration](https://learn.chatgpt.com/docs/config-file/config-reference), and
 [native MCP configuration](https://learn.chatgpt.com/docs/extend/mcp).
+
+## Sessions, structured replies and hooks (2026-11-17)
+
+- **Resume within a round.** `codex_adapter.plan` keeps one record per node in `cases/<case_id>/log/sessions/<scope>/<key>.json`
+  (scope: the round for the front, round and run_id for the others). A record found means `codex exec resume <id> -` in the
+  same runtime folder, whose `CODEX_HOME` holds the session; `resume` and `fork` take neither `--cd` nor `--color`, so the
+  process runs in the folder's `work/`. A new round or run starts fresh.
+- **Fork for the analysis.** Nodes in `codex.sessions.fork` fork the first session of the round instead
+  (`codex exec fork <first> -`).
+- **Fallback.** A resumed or forked call that hits the context limit or completes no turn drops the record and runs fresh.
+- **`--output-schema`.** `codex.output_schemas` names `agent/schemas/*.json` per node; the parsed reply is returned as
+  `reply` and logged. A provider that refuses the schema gets the call again without it. Not yet tested on Token Plan.
+- **Hooks.** `[features] hooks = true` plus `[[hooks.PreToolUse]]` / `[[hooks.PostToolUse]]` calling
+  `agent/tools/codex_hook.py --role <role> --case <case> --event pre|post`; `--dangerously-bypass-hook-trust` because the
+  hooks are generated per call and their hash is never trusted ahead. The command is unquoted (the hook shell differs by
+  platform), so `prepare` refuses a Python or project path with a space.
+- **Browser.** `browser_use = true` is written explicitly.
+- To measure later: MCP start-up per session (SDK or `app-server`), `reasoning_effort_override` low for wording fixes,
+  `--ephemeral` for one-shot turns.

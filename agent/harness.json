@@ -4,7 +4,11 @@
            "provider": {"base_url": "https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1", "wire_api": "responses",
                         "env_key": "QWEN_API_KEY", "key_from": "qwen_key"},
            "model_catalog": "agent/codex_model_catalog.json",
-           "auto_compact_token_limit": {"qwen3.8-max": 840000, "qwen3.8-flash": 840000}},
+           "auto_compact_token_limit": {"qwen3.8-max": 840000, "qwen3.8-flash": 840000},
+           "sessions": {"resume": true, "fork": ["analysis"]},
+           "hooks": true,
+           "output_schemas": {"analysis": "agent/schemas/analysis_reply.json", "review_intake": "agent/schemas/review_reply.json",
+                              "review_draft": "agent/schemas/review_reply.json", "review_legal": "agent/schemas/review_reply.json"}},
  "nodes": {
   "front": {"reasoning": "medium"},
   "analysis": {"model": "qwen3.8-max", "reasoning": "high"},

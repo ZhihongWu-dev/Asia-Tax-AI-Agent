@@ -754,6 +754,12 @@ def bump(state, node):
     return {"last_node": node, "counts": counts, "nodes": list(state.get("nodes") or []) + [node]}
 
 
+def said(result):
+    """The agent's own account from its structured final reply (Codex --output-schema, 2026-11-17), for a stop's detail."""
+    note = (result.get("reply") or {}).get("note")
+    return " (it said: %s)" % str(note)[:300] if note else ""
+
+
 def agent_node(node):
     agent = NODE_AGENT[node]
 
@@ -822,12 +828,13 @@ def agent_node(node):
                 result = call_agent(agent, task, case_id, node)
             if lane_task:
                 worker.join()
-                row.update(lane_turns=lane_out.get("turns"), lane_seconds=lane_out.get("seconds"), lane_session_id=lane_out.get("session_id"))
+                row.update(lane_turns=lane_out.get("turns"), lane_seconds=lane_out.get("seconds"), lane_session_id=lane_out.get("session_id"),
+                           lane_reply=lane_out.get("reply"))
                 if result["failure"] is None and lane_out.get("failure"):
                     result = {**result, "failure": lane_out["failure"], "detail": "%s: %s" % (LANES[node][0], lane_out.get("detail"))}
                 elif result["failure"] is None and stamps([lane_file]) == lane_before:
-                    result = {**result, "failure": "agent_failed", "detail": "%s finished without updating %s" % (LANES[node][0], lane_file.name)}
-        row.update(session_id=result.get("session_id"), turns=result.get("turns"), seconds=round(time.time() - began))
+                    result = {**result, "failure": "agent_failed", "detail": "%s finished without updating %s%s" % (LANES[node][0], lane_file.name, said(lane_out))}
+        row.update(session_id=result.get("session_id"), turns=result.get("turns"), seconds=round(time.time() - began), reply=result.get("reply"))
         flag_repo(case_id)
         state = {**state, **step, "reason": "", "redo": ""}
         if result["failure"] in ("rate_limited", "network", "agent_failed"):
@@ -836,7 +843,7 @@ def agent_node(node):
         elif stamps(files) == before and case().open_defects(case_id):          # it found a defect below it and stopped, as it should
             state.update(stop="system_defect", detail="open bugs that affect the result: " + ", ".join(case().open_defects(case_id)))
         elif stamps(files) == before:
-            state.update(stop="agent_failed", detail="%s finished without updating %s" % (node, ", ".join(p.name for p in files)))
+            state.update(stop="agent_failed", detail="%s finished without updating %s%s" % (node, ", ".join(p.name for p in files), said(result)))
         else:
             if node in ("review_intake", "review_draft"):
                 keep_reviewed(node, case_id, cur)

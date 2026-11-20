@@ -1,0 +1,14 @@
+{
+ "type": "object",
+ "description": "The review's final reply (2026-11-17): the verdict of the checklist it wrote, so the orchestrator can check it against the file.",
+ "properties": {
+  "verdict": {"type": "string", "enum": ["RUNNABLE", "DELIVERABLE", "REVISE", "NOT_WRITTEN"],
+              "description": "The last line of the checklist you wrote; NOT_WRITTEN when you wrote none (say why in note)."},
+  "return_to": {"type": "string", "enum": ["analysis", "front", "none"], "description": "The RETURN line of a REVISE; none otherwise."},
+  "problems": {"type": "integer", "description": "Problem entries that state a problem."},
+  "replacements": {"type": "integer", "description": "Wording replacements in the replacements block."},
+  "note": {"type": "string", "description": "One sentence: what the checklist says, or why none was written (a bug you filed, a tool that failed)."}
+ },
+ "required": ["verdict", "return_to", "problems", "replacements", "note"],
+ "additionalProperties": false
+}

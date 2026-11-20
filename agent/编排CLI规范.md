@@ -430,7 +430,7 @@ review_draft 和 review_final 各自同时跑两个复核 agent：主复核（�
 
 ## 14. 执行框架：默认 Codex + qwen（2026-11-07）
 
-图、路由、程序步和核对规则不变，换的是执行 agent 的命令行。默认用 Codex CLI 驱动 qwen3.8-flash（分析节点自 2026-11-08 起、法律论证复核线 `review_legal` 自 2026-11-12 起用 qwen3.8-max；Token Plan 的 OpenAI 兼容接口，Responses API），入口 `agent/tools/orchestrate_codex.py`，配置 `agent/harness.json`（各节点的模型和思考档位；`agent/harness.gpt-luna.json` 是 GPT 备选）。网页宿主默认走这条路，设 `TAX_HARNESS=claude` 回到 Claude Code（`orchestrate.py`）。每次调用一个新会话、独立的 `CODEX_HOME`，只拿到本 provider 的密钥；MCP 服务器与 Claude 路径相同，另加受控读文件的 `tax-files`。每份生成的配置都指向官方的千问模型元数据（`agent/codex_model_catalog.json`，窗口 983,616），对话历史到 840,000 token 时自动压缩（2026-11-13，见 `.codex/README.md`）。原因：同一输入下，Codex + qwen 的分析节点 23.6 分钟，Claude Code + qwen 30 到 49 分钟，且 Claude Code 与 Token Plan 的流出现过一小时只出几千 token 的卡顿。说明见 `.codex/README.md`。
+图、路由、程序步和核对规则不变，换的是执行 agent 的命令行。默认用 Codex CLI 驱动 qwen3.8-flash（分析节点自 2026-11-08 起、法律论证复核线 `review_legal` 自 2026-11-12 起用 qwen3.8-max；Token Plan 的 OpenAI 兼容接口，Responses API），入口 `agent/tools/orchestrate_codex.py`，配置 `agent/harness.json`（各节点的模型和思考档位；`agent/harness.gpt-luna.json` 是 GPT 备选）。网页宿主默认走这条路，设 `TAX_HARNESS=claude` 回到 Claude Code（`orchestrate.py`）。每次调用独立的 `CODEX_HOME`（2026-11-17 前每次都是新会话；此后同一轮内节点续用自己的会话，见 §16），只拿到本 provider 的密钥；MCP 服务器与 Claude 路径相同，另加受控读文件的 `tax-files`。每份生成的配置都指向官方的千问模型元数据（`agent/codex_model_catalog.json`，窗口 983,616），对话历史到 840,000 token 时自动压缩（2026-11-13，见 `.codex/README.md`）。原因：同一输入下，Codex + qwen 的分析节点 23.6 分钟，Claude Code + qwen 30 到 49 分钟，且 Claude Code 与 Token Plan 的流出现过一小时只出几千 token 的卡顿。说明见 `.codex/README.md`。
 
 ## 15. 报告版式归程序、词数上限、读权限白名单（2026-11-12）
 
@@ -447,3 +447,21 @@ review_draft 和 review_final 各自同时跑两个复核 agent：主复核（�
 | 自家仓库 | Codex 的联网搜索只支持域名白名单（`tools.web_search.allowed_domains`），`experimental_network.denied_domains` 管的是沙箱命令的托管代理，而本框架不跑命令；所以 `ZhihongWu-dev/Asia-Tax-AI-Agent` 在 `github.com` 和 `raw.githubusercontent.com` 上的路径（规范和标准答案都在里面）没法事先屏蔽。每个 Agent 节点结束后由 `flag_repo` 扫新的节点日志，碰到就在 `runs.jsonl` 写一行 `repo_hit`。仓库是否设为私有由团队商量 |
 | 宿主 | 交付说明和预览卡说明的提示里写明最多 200 词（2026-11-12 用户定）；宿主只数交付说明和预览卡说明的词数（其他转述不数），超过 200 就让它重写，最多两次（2026-11-13：一份 213 词的说明重写后变成 227 词而被换掉；现在只有数字不对时才附第 1 部分，长度超限时附了它，模型会多写）（"Your note has N words, limit 200. Shorten it."；2026-11-12 由 120 改为 200，148 词的重写稿内容完整却被兜底替换），还超就换成平实的兜底说明。每次重写（长度、数字、系统名称）都把要改的那段原文带上，交付时再带上第 1 部分：Codex 每次都是新会话，曾经重写了一段它根本没见过的说明（CASE-20261112-af3581） |
 | 策略深度（2026-11-12） | run_input 把客户的行为条件（`receive_at_destination`、`this_payment_can_wait`、`declared_to_payee`）连同其他硬约束传给优化层；优化层对客户没说而第一名依赖的行为条件再跑一遍（products/<run_id>/conduct/<键>/），并写 sequence.json、premises.json 和 brief 的 conduct / sequence / diagnosis / must_state（优化层规范 §4.7a）；框架据此写"The group's own choices"等几节和选择表、"数字靠什么"表，客户副本把前者放在第 1 部分流程图之后、后者放在第 5 部分税负表之后；第 1 部分的词数上限按选择表的行数加额；report_check 核 must_state 的数字。优化层一次运行因此约多一倍时间（本案约 5 分钟） |
+
+## 16. 同一轮内续用会话、结构化回复、钩子（2026-11-17）
+
+退回的节点不再开新会话重读整个案卷（CASE-20261112-8823a7 诊断出的慢因：每次返工、每次复查都重读案卷，分析一次运行里调了 22 次 report_check）。
+
+| 部分 | 现在 |
+|---|---|
+| 会话 | `codex_adapter.plan` 查 `cases/<case_id>/log/sessions/<范围>/<键>.json`（运行目录、首个和最近的会话 id）。前台的范围是轮次，其他节点是轮次加 run_id；键是节点或审查线（`front`、`analysis`、`review_intake`、`review_draft`、`review_legal`）。查到就在同一运行目录里 `codex exec resume <最近>`（会话存在该目录的 `CODEX_HOME` 里）；查不到就开新会话，干净跑完后记下。新一轮或新运行查不到记录，所以上下文不跨轮（§9 防锚定的规则不变）。每个键一个文件，并行的审查线和宿主不会写同一个文件。`harness.json` 的 `codex.sessions.resume` 可关掉 |
+| 分叉 | 列在 `codex.sessions.fork` 里的节点（分析）从本轮本运行的首个会话分叉（`codex exec fork <首个>`），不续用最近的：每次返工都从初稿时的上下文出发，不背着前几次返工的累积，并被告知盘上草稿可能已有后来的改动 |
+| 回退 | 续用或分叉的调用撞到上下文上限、或一个回合都没跑完，就删掉记录、新开会话再跑一次。在那之前，自动压缩（§14）让长会话留在窗口内 |
+| 前台 | 一轮里前台的每一回合都续用前台会话，宿主（`CodexTurn`）和 `orchestrate_codex.py front` 都一样；旧会话接不下去时宿主新开一次 |
+| 结构化回复 | `codex.output_schemas` 按节点给 `--output-schema`：`agent/schemas/analysis_reply.json`（存了什么、最后的 report_check 和 cite_check、提交的 bug）和交接包、草稿、法律三条审查线共用的 `agent/schemas/review_reply.json`（结论、退回给谁、问题数、替换句数）。文件仍是依据（状态、结论）；回复随节点记进 runs.jsonl（`reply`、`lane_reply`），它的说明附在"没更新文件"的停止原因后。Token Plan 是否支持 schema 待测；提供方拒收时不带 schema 重跑 |
+| 钩子 | 每份生成的配置带 PreToolUse 和 PostToolUse 钩子（`agent/tools/codex_hook.py --role --case`），因为配置每次调用现生成，用 `--dangerously-bypass-hook-trust` 运行：pre 拒绝内置的 shell 和补丁工具以及该身份不许读的 `tax-files` 路径；post 经 `log_hook.py` 往 `cases/<case_id>/log/calls.jsonl` 每次调用记一行，与 Claude 路径相同 |
+| 浏览器 | 生成的 `[features]` 里 `browser_use` 保持开启（所有者决定） |
+| 案卷索引（B-3） | 案卷索引不再在别的进程开着它时被替换：`read_index.Writer.close` 用 `os.replace`，Windows 因别的进程占用而拒绝（WinError 32）时写成 `case.<指纹>.sqlite`；读者按指纹找文件，每个 tax-read 服务每次调用都重核指纹，所以 Agent 自己新写的出处行能查到，旧文件也会被放开 |
+| 检查节奏 | 分析写作中每节用 `report_check` part=N 查，正文定稿后一次写好出处表，然后 report_check（target=draft）和 cite_check 各跑一次；cite_check 工具报错只记一次、不重试。返工在全部改完后统一检查一次（分析规范"节奏"） |
+
+先测再定（尚未做）：每个会话启动 MCP 服务的耗时，以及 SDK 或 `codex app-server` 能否让服务跨调用常驻；措辞类返工用 `reasoning_effort_override` 降到 low；一次性回合（如交付说明改写）用 `--ephemeral`。

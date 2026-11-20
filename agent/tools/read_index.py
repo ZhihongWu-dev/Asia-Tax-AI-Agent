@@ -12,6 +12,7 @@ documents (pages, table cells) in <case>/intake/index/case.sqlite. Deterministic
 import csv
 import hashlib
 import json
+import os
 import re
 import sqlite3
 import sys
@@ -90,11 +91,26 @@ def short(text, n=VERBAL_MAX):
     return text if len(text) <= n else text[:n - 1] + "…"
 
 
+def versioned(path, fp):
+    """The name an index takes when its plain name is held open by another process: case.<fingerprint>.sqlite."""
+    path = Path(path)
+    return path.with_name("%s.%s%s" % (path.stem, fp, path.suffix))
+
+
+def current(path, fp):
+    """The index file built for this fingerprint, under the plain or the versioned name, or None."""
+    for p in (Path(path), versioned(path, fp)):
+        if p.exists() and not stale(p, fp):
+            return p
+    return None
+
+
 class Writer:
     def __init__(self, path, meta):
         self.path = Path(path)
+        self.fp = meta.get("fingerprint", "")
         self.path.parent.mkdir(parents=True, exist_ok=True)
-        tmp = self.path.with_suffix(".tmp")
+        tmp = self.path.with_suffix(".%d.tmp" % os.getpid())     # two processes may rebuild at once (B-3, 2026-11-13)
         if tmp.exists():
             tmp.unlink()
         self.tmp = tmp
@@ -122,11 +138,23 @@ class Writer:
             self.con.execute("INSERT INTO edge VALUES (?,?,?)", (src, dst, kind))
 
     def close(self):
+        """Puts the new index in place. On Windows a file another process has open cannot be replaced (B-3, 2026-11-13:
+        WinError 32 while a parallel session's server held case.sqlite), so the new one then takes the versioned name;
+        readers find it by fingerprint. Older versioned files go when nothing holds them."""
         self.con.commit()
         self.con.close()
-        if self.path.exists():
-            self.path.unlink()
-        self.tmp.rename(self.path)
+        try:
+            os.replace(self.tmp, self.path)
+        except PermissionError:
+            self.path = versioned(self.path, self.fp)
+            os.replace(self.tmp, self.path)
+        for old in self.path.parent.glob("%s.*%s" % (self.path.name.split(".")[0], self.path.suffix)):
+            if old != self.path:
+                try:
+                    old.unlink()
+                except OSError:
+                    pass
+        return self.path
 
 
 def fingerprint(paths):
@@ -170,8 +198,8 @@ def build_products(pd, force=False):
     pd = Path(pd)
     out = pd / "index" / "records.sqlite"
     fp = fingerprint(product_files(pd))
-    if out.exists() and not force and not stale(out, fp):
-        return out
+    if not force and current(out, fp):
+        return current(out, fp)
     run = pd.name
     w = Writer(out, {"fingerprint": fp, "kind": "products", "run_id": run, "index_version": INDEX_VERSION})
     R = lambda t, k: "%s:%s:%s" % (run, t, k)
@@ -437,8 +465,7 @@ def build_products(pd, force=False):
             gk = "%s:%s" % (g.get("kind"), g.get("key"))
             w.add(R("gap", gk), "gap", gk, "decision gap %s %s about %s: %s; need %s" % (g.get("kind"), g.get("key"), g.get("about"), g.get("question", ""), g.get("need", "")),
                   {k: g.get(k) for k in ("kind", "key", "about", "need", "first_in_scenarios")} | {"question": short(g.get("question"), 200)}, g, "brief.json")
-    w.close()
-    return out
+    return w.close()
 
 
 # ------------------------------------------------------------ case file
@@ -485,8 +512,8 @@ def build_case(cd, force=False, ocr=False):
                 doc_parse.parse(f, intake / "index" / "parsed", ocr=ocr)
     out = intake / "index" / "case.sqlite"
     fp = fingerprint(case_files(cd))
-    if out.exists() and not force and not stale(out, fp):
-        return out
+    if not force and current(out, fp):
+        return current(out, fp)
     w = Writer(out, {"fingerprint": fp, "kind": "case", "case_id": case_id, "index_version": INDEX_VERSION})
     R = lambda t, k: "%s:%s:%s" % (case_id, t, k)
     get = lambda n: jload(intake / n) if (intake / n).exists() else {}
@@ -572,8 +599,7 @@ def build_case(cd, force=False, ocr=False):
                               {"doc": doc, "page": pg["page"], "table": t, "row": r_i, "col": c_i, "row_header": rowh, "column": col, "value": val},
                               "intake/documents/" + f.name, doc=doc, page=pg["page"])
                         w.edge(R("page", pk), R("cell", ck), "cell")
-    w.close()
-    return out
+    return w.close()
 
 
 def main(argv):

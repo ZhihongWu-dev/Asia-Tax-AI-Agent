@@ -1,0 +1,14 @@
+{
+ "type": "object",
+ "description": "The analysis agent's final reply (2026-11-17): what it saved and what the final checks said.",
+ "properties": {
+  "saved": {"type": "string", "enum": ["draft", "revision", "nothing"], "description": "What you saved in this call."},
+  "report_check": {"type": "string", "enum": ["passed", "failed", "not_run"], "description": "The final report_check of the draft."},
+  "cite_check": {"type": "string", "enum": ["passed", "failed", "not_run", "unavailable"],
+                 "description": "The final cite_check; unavailable when the tool could not be called."},
+  "bugs_filed": {"type": "array", "items": {"type": "string"}, "description": "Ids of the bugs you filed in this call."},
+  "note": {"type": "string", "description": "One sentence: what is open, or why nothing was saved."}
+ },
+ "required": ["saved", "report_check", "cite_check", "bugs_filed", "note"],
+ "additionalProperties": false
+}

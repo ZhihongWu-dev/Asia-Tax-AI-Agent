@@ -42,6 +42,37 @@ class AdapterTests(unittest.TestCase):
         windows = {m["slug"]: m["context_window"] for m in catalog["models"]}
         self.assertEqual(windows, {"qwen3.8-max": 983616, "qwen3.8-flash": 983616})   # the official catalog's values
 
+    def test_resume_fork_and_schema_commands(self):              # 2026-11-17; no model call
+        with patch.object(codex_adapter, "executable", lambda: "codex"):
+            fresh = codex_adapter.command(Path("w"), schema=Path("s.json"))
+            self.assertEqual(fresh[:3], ["codex", "--no-daemon", "exec"])
+            self.assertIn("--cd", fresh)
+            self.assertEqual(fresh[fresh.index("--output-schema") + 1], "s.json")
+            for how in ("resume", "fork"):
+                cmd = codex_adapter.command(Path("w"), how, "sid-1")
+                self.assertEqual(cmd[3], how)
+                self.assertEqual(cmd[-2:], ["sid-1", "-"])
+                self.assertNotIn("--cd", cmd)
+                self.assertNotIn("--color", cmd)
+                self.assertIn("--dangerously-bypass-hook-trust", cmd)
+
+    def test_session_scope_and_fallbacks(self):
+        class Orch:
+            CASES = Path("cases")
+            info = staticmethod(lambda case_id: {"round": 2, "run_id": "R1"})
+        self.assertEqual(codex_adapter.session_record("front", "CASE-T", "front-relay", Orch).as_posix(),
+                         "cases/CASE-T/log/sessions/round-2/front.json")
+        self.assertEqual(codex_adapter.session_record("review", "CASE-T", "review_legal", Orch).as_posix(),
+                         "cases/CASE-T/log/sessions/round-2-R1/review_legal.json")
+        resumed = {"how": "resume", "schema": Path("s.json")}
+        self.assertTrue(codex_adapter.retry_fresh(resumed, {"num_turns": 3, "result": "input is too long for the context window"}, "agent_failed", ""))
+        self.assertTrue(codex_adapter.retry_fresh(resumed, {"num_turns": 0}, "agent_failed", ""))
+        self.assertFalse(codex_adapter.retry_fresh(resumed, {"num_turns": 0}, "rate_limited", ""))
+        self.assertFalse(codex_adapter.retry_fresh({"how": "fresh"}, {"num_turns": 0}, "agent_failed", ""))
+        self.assertTrue(codex_adapter.retry_plain(resumed, {"result": "invalid response_format"}, "agent_failed", ""))
+        self.assertEqual(codex_adapter.structured(resumed, {"result": '{"verdict": "REVISE"}'}), {"verdict": "REVISE"})
+        self.assertIsNone(codex_adapter.structured(resumed, {"result": "not json"}))
+
     def test_node_over_role_over_default(self):
         data = {"default": {"backend": "claude"}, "codex": {"model": "gpt-6-luna"},
                 "nodes": {"review": {"backend": "codex"}, "review_final": {"backend": "claude"}}}
