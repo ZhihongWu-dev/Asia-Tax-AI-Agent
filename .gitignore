@@ -95,3 +95,5 @@ database/采集任务单.md
 database/scope.csv
 database/leads.csv
 database/.clause_before.csv
+# the snapshot of the remote a collector folder was last pulled or uploaded from (database/tools/pull.py, upload.py)
+database/.pulled/

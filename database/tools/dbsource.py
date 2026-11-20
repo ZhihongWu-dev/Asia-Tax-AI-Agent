@@ -97,7 +97,7 @@ class Remote:
                     self.tables[name] = self.cached(name, lambda: list(csv.DictReader(io.StringIO(
                         self.object("superseded.csv").decode("utf-8-sig")))))
                 elif name == "blocked":                # in the bucket since 2026-11-17; empty for an older upload. Not cached:
-                    try:                               # it is small, and upload.py --notes-only rewrites it without a new uploaded_at
+                    try:                               # it is small, and read fresh at every start
                         self.tables[name] = list(csv.DictReader(io.StringIO(self.object("blocked.csv").decode("utf-8-sig"))))
                     except RuntimeError:
                         self.tables[name] = []
