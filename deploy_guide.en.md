@@ -26,14 +26,10 @@ deployment, Supabase sign-in, per-user data), which you keep only as far as the 
   branch's root `requirements.txt` into it (`git show origin/LiZiheng:requirements.txt`). It pins PyTorch for CUDA 12.8; on a machine without an NVIDIA GPU,
   install the CPU (or Mac) build of the same version instead. From here on, run every Python command with this
   environment's interpreter, and point every config that names an interpreter at it.
-- The keys are in `key.md` at the root of `LiZiheng`. This is a group assignment, not a product: the owner wants the
-  keys in git so every member and the cloud get them from the repository. Bring `key.md` into your working tree and
-  merge it into the `.env` you already have at the root; do not replace that file. Your `.env` holds keys of your own
-  (very likely the Render API key and the team's Supabase settings): keep every line of it as it is. Add each
-  `name=value` line of `key.md` whose name your `.env` lacks. Where a name is in both with different values, keep yours
-  and list the name in the report. Lines of `key.md` that are not `name=value` (such as an account and its password)
-  stay in `key.md` only. Commit both files. Remove `.env` from `.gitignore` (keep its other rules) so git tracks it
-  normally. Never print a value; check keys by name.
+- No key is in git (since 2026-11-20). The project lead gives you the values out of band. Keep your own `.env` at the
+  root and add each name of `.env.example` that it lacks, with the value you were given; where a name is in both with
+  different values, keep yours and list the name in the report. `.env` and `key.md` stay git-ignored: never commit
+  them. On the cloud the values go into the service's environment settings. Never print a value; check keys by name.
 
 ### 1. Classify
 
@@ -53,7 +49,7 @@ List every path on `main` and on the branch and put each into one of four groups
 ### 2. Overwrite
 
 Apply the classification. The branch's root `requirements.txt` is the Python dependency list; retire `pyproject.toml`
-and `requirements-b-agent.lock`. Merge the two `.gitignore` files (secret rules except `.env`, plus the branch's
+and `requirements-b-agent.lock`. Merge the two `.gitignore` files (all secret rules, `.env` and `key.md` included, plus the branch's
 `/cases/`, index and product rules).
 
 ### 3. Fix bugs
@@ -100,7 +96,7 @@ become our checks). What our host does today, so you can see the gaps:
   or put `codex` on PATH. Each agent call is a fresh process with its own `CODEX_HOME` under `.codex/runtime/`, which
   must be writable and grows with every call. Claude Code is needed only if the cloud runs with `TAX_HARNESS=claude`.
 - The model key is read from `.env` only (`qwen_key`: `harness.process_env` in `agent/tools/harness.py` for the Codex
-  path, `claude_env` in `agent/tools/orchestrate.py` for the Claude path); also read the process environment. The keys come from the committed `.env`; values that differ on the cloud (`site_url` = the
+  path, `claude_env` in `agent/tools/orchestrate.py` for the Claude path); also read the process environment. Locally the keys come from your `.env`; on the cloud from the service's environment settings. Values that differ on the cloud (`site_url` = the
   deployment address, secure cookies) go into `render.yaml` and override `.env`.
 - Two Supabase settings, not one. Sign-in and the cloud case store use the team's settings that `render.yaml` and
   `apps/api/auth.py` name (`FSIE_AUTH_*`, `FSIE_DATABASE_URL`). Our lowercase `supabase_url`, `supabase_key` and

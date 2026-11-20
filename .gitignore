@@ -1,5 +1,7 @@
-# Environment and secrets
+# Environment and secrets (no key is kept in git since 2026-11-20)
+.env
 .env.*
+key.md
 .codex/runtime/
 .codex/claude-runtime/
 !.env.example

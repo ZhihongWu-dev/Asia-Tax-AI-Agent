@@ -40,7 +40,7 @@ The design is in `agent/orchestration_cli_spec.en.md`, section 8 for the web hos
 
 ## Keys and .env
 
-Keys live in `.env` at the project root. `qwen_key` is read only from there; the library settings are read from the process environment first, then `.env`. You can set up your own: copy `.env.example` to `.env` and fill in your values.
+Keys live in `.env` at the project root. `qwen_key` is read only from there; the library settings are read from the process environment first, then `.env`. `.env` is not in git: copy `.env.example` to `.env` and fill in the values the project lead gives you (or your own). Never commit it.
 
 | Name | Needed for | Service |
 |---|---|---|
