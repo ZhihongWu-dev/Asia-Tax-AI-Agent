@@ -213,6 +213,9 @@ def calculate(case: IncomeTaxCase, basis):
     elif policy == 'sg_company_foreign_direct_ya2026':
         from .singapore_foreign_assessment import assess
         result = assess(case, **args)
+    elif policy == 'my_company_foreign_direct_ya2026':
+        from .malaysia_foreign_assessment import assess
+        result = assess(case, **args)
     elif policy == 'ae_company_foreign_direct_2026':
         from .uae_foreign_assessment import assess
         result = assess(case, **args)

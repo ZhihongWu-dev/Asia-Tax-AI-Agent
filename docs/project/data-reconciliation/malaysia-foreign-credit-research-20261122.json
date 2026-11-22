@@ -1,5 +1,5 @@
 {
-  "status": "source_credit_component_verified_saved_workflow_pending",
+  "status": "saved_api_and_bilingual_report_verified_ui_pending",
   "date": "2026-11-22",
   "current_gap": "malaysia.company_tax accepts established allowed_tax_credits; no derived source-country credit limits in saved corporate workflow.",
   "official_index": "https://www.hasil.gov.my/en/perundangan/ketetapan-umum/",
@@ -11,9 +11,8 @@
     "5(g):written claim within two years after assessment year."
   ],
   "next_steps": [
-    "Reconcile saved source groups, taxable status, expenses, total-income deductions and foreign-tax evidence.",
-    "Integrate company assessment, UI, bilingual report and persistence/browser tests.",
-    "Review filing deadlines, treaty eligibility and exemption evidence alongside the calculator."
+    "Add frontend source/receipt grouping and tax-country entry, bilingual results and browser save/reopen/export checks.",
+    "Retain wider corporate/personal and special-regime acceptance gaps; no full-goal completion claim."
   ],
   "github_reference": "https://github.com/fastapi/fastapi/blob/master/docs/en/docs/tutorial/body-nested-models.md",
   "implementation_reference_status": "Official nested-model example located; dependency/license/compatibility review required before adopting new implementation. No external code copied.",
@@ -40,5 +39,30 @@
     "archived": false,
     "last_push": "2026-11-18T19:14:19Z",
     "adoption": "Existing Pydantic2 nested-model pattern; no code copied, no dependency changes."
+  },
+  "saved_workflow": {
+    "policy": "my_company_foreign_direct_ya2026",
+    "scope": "Calendar2026 ordinary standalone resident company, ordinary or confirmed SME rate; no carried/current losses or special regimes.",
+    "reconciliation": [
+      "Every saved receipt exactly once; source categories and common business allocation verified",
+      "Saved expenses and capital allowances plus total-income deductions reconcile exactly",
+      "Eligible foreign tax bounded by recorded paid tax; exempt receipts separated",
+      "Malaysia-source income taxed abroad can claim verified bilateral credit; unilateral claim rejected"
+    ],
+    "validation": {
+      "focused_component_and_adapter": 28,
+      "focused_seconds": 5.14,
+      "income_and_report_regression": 1952,
+      "regression_seconds": 43.42,
+      "api": "Create201,save/run200,SQLite reopen,idempotent replay,overclaim422 without mutation,bilingual reports stable",
+      "synthetic_result": {
+        "gross_tax": "124800",
+        "foreign_credit": "7500",
+        "final_tax": "117300",
+        "prepaid": "120000",
+        "balance_due": "-2700"
+      }
+    },
+    "remaining": "Frontend entry/result display and browser acceptance pending. Entitlement, exemptions, treaty terms, FX and claim timing need verified evidence; not filing approval."
   }
 }

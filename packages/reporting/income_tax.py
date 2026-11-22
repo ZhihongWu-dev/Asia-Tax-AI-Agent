@@ -94,6 +94,25 @@ def render(run, locale='zh'):
                 ('forfeited_excess','不可结转余额合计','Total forfeited excess'),
                 ('prepaid_tax','预缴税款','Prepaid tax')]:
             lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
+    if result.get('policy_version') == 'my-schedule7-direct-credit-20261122':
+        lines += ['', '## ' + say('马来西亚双边及单边抵免', 'Malaysia bilateral and unilateral credits'), '',
+            say('按来源分摊法定所得；单边抵免另受合资格境外税额一半的限制。逐项金额尚未应用总税额上限，总额调整另列；未抵免税额不结转。金额为申报取整前值。',
+                'Statutory income is allocated by source. Unilateral credit is also limited to half the eligible foreign tax. Source amounts precede the overall tax cap, whose adjustment is shown separately. Unrelieved tax is not carried forward. Values precede filing rounding.'), '',
+            '| ' + say('来源 | 征税国家 | 方法 | 分摊法定所得 | 合资格境外税 | 境外税上限 | 本国税上限 | 总额限制前抵免',
+                'Source | Taxing country | Method | Allocated statutory income | Eligible foreign tax | Foreign-tax limit | Malaysian-tax limit | Credit before overall cap') + ' |',
+            '| --- | --- | --- | --- | --- | --- | --- | --- |']
+        for row in result['source_credits']:
+            method = say('双边', 'Bilateral') if row['method'] == 'bilateral' else say('单边', 'Unilateral')
+            values = [row['source_id'], row['taxing_country'].upper(), method,
+                row['allocated_statutory_income'], row['eligible_foreign_tax'], row['foreign_tax_limit'],
+                row['malaysian_tax_limit'], row['credit_before_overall_cap']]
+            lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
+        lines += ['', '| ' + say('项目 | 金额', 'Item | Amount') + ' |', '| --- | --- |']
+        for key,zh,en in [('allowed_foreign_tax_credit','境外抵免合计','Total foreign credit'),
+                ('overall_cap_reduction','总税额上限调减','Overall cap reduction'),
+                ('unrelieved_foreign_tax','未获抵免境外税额','Unrelieved foreign tax'),
+                ('prepaid_tax','预缴税款','Prepaid tax')]:
+            lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
     if result.get('tokyo_local'):
         local = result['tokyo_local']
         lines += ['', '## ' + say('东京23区地方税明细', 'Tokyo 23-ward local tax details'), '',
