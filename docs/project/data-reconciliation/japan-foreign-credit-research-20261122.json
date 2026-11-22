@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-22",
+  "status": "current_national_allocation_component_only_annual_goal_incomplete",
+  "validation": "19 new component/source-integrity tests passed1.15s;267 Japan-selected income tests passed26.41s,1991deselected. This does not validate an annual foreign-credit UI/API, which is not enabled yet.",
+  "sources": [
+    {
+      "file": "database/raw/jp/jp.nta.form6-2.2026.pdf",
+      "url": "https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hojin/shinkoku/itiran2026/pdf/06%2802%29.pdf",
+      "sha256": "c04a265cba05cce104a20c9929805c292f70ed463f6c562d8f23d7851c5d473c",
+      "review": "One image-only PDF page rendered and visually reviewed. Domestic-company Schedule6(2), formNTA0H0B021010190, periods ending on/after2026-04-01. Distinguish from06-02.pdf, which is Schedule6-no2 for foreign corporations."
+    },
+    {
+      "file": "database/raw/jp/jp.nta.form6-2.instructions.2026.pdf",
+      "url": "https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hojin/shinkoku/itiran2026/pdf/06%2802%29-ki.pdf",
+      "sha256": "2435e34d3b65d66c26c9e5b5ba9d3ac4194f023c5c674116ef65d7b3c1837996",
+      "review": "Parts1-3 read: separate national taxes, group-tax exclusions and JPY1000 truncation of local-corporation and defence reference tax bases."
+    },
+    {
+      "file": "database/raw/jp/jp.nta.form6-3.2026.pdf",
+      "url": "https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hojin/shinkoku/itiran2026/pdf/06%2803%29.pdf",
+      "sha256": "85d9c1a4336717ea2eaa2fe8bc7c5ed78492f4135fe5dd96dd0a718428a04afd",
+      "review": "Text reviewed: separate national, prefectural and municipal capacity, three-prior-year records, current use and next-period balances. New form includes defence limit. Not yet implemented."
+    }
+  ],
+  "findings": [
+    "Statutory denominator is line9, with specified loss/special adjustments; do not substitute post-loss JPY1000-truncated taxable income.",
+    "Adjusted foreign income is max-zero foreign income less foreign-tax-exempt income, capped at90percent of statutory worldwide income; lines12-16.",
+    "Current corporation credit uses line18=min(eligible current foreign tax,line17). Local-corporation credit uses remaining tax after corporation limit, capped at line52. Defence credit uses remaining tax after both preceding limits, capped at line62.",
+    "Credits use separate reference taxes in lines2/51/61; do not subtract one combined credit from previously rounded aggregate national liability.",
+    "Existing archived CTA Article69 paragraph2 lists corporation, local-corporation and local-tax limits without the new defence item. Preserve its snapshot; resolve commencement/consolidation before using it for post2026-04-01 historical-credit calculations.",
+    "Remaining current foreign tax after national allocation is not automatically a carryforward or forfeiture: local taxes and Schedule6(3) history must be resolved."
+  ],
+  "implementation": {
+    "file": "packages/income_tax/japan_foreign_credit.py",
+    "scope": "Exact rational current national allocation using verified statutory reference inputs; no tax-reference derivation, return rounding, history, source eligibility or annual settlement. Defence applicability explicit and inapplicable nonzero reference rejected.",
+    "next": "Derive reference taxes and eligible source taxes from saved case facts, resolve rounding and commencement, integrate local allocation/history and annual persisted API/UI/report flow."
+  },
+  "development_reference": "Official pydantic/pydantic GitHub validators documentation searched before implementation. Existing project amount validation retained; standard-library Fraction preserves exact intermediate arithmetic. No copied code or new dependency adopted.",
+  "overall_goal": "Incomplete. Original corporate/personal coverage and real business acceptance remain required."
+}
