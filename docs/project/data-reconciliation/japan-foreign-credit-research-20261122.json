@@ -138,5 +138,20 @@
     "development_reference": "Official CPython GitHub datetime documentation and leap-date issue reviewed before implementation. Uses existing full-year2026 validation, explicit calendar anniversaries and standard-library date arithmetic, with no copied code/dependency.",
     "remaining": "This is a matching ledger, not enabled historical annual settlement. Matched amounts must be reconciled to tax actually available, local levy-shortfall ledgers, source reductions and final tax/return treatment before saved history API/UI can be enabled. Original broader goal remains incomplete."
   },
-  "overall_goal": "Incomplete. Original corporate/personal coverage and real business acceptance remain required. Priority: cross-border corporate income and foreign tax credits."
+  "overall_goal": "Incomplete. Original corporate/personal coverage and real business acceptance remain required. Priority: cross-border corporate income and foreign tax credits.",
+  "historical_settlement_refund_authority_review": {
+    "status": "Authority checked; annual history settlement not yet implemented.",
+    "priority": "User confirmed cross-border corporate income and foreign tax credits; corporate and personal overall goals remain unchanged.",
+    "current_authority": {
+      "url": "https://laws.e-gov.go.jp/law/340AC0000000034/20261001_508AC0000000012",
+      "api": "https://laws.e-gov.go.jp/api/2/law_data/340AC0000000034",
+      "revision": "340AC0000000034_20261001_508AC0000000012",
+      "status": "CurrentEnforced",
+      "audit_file": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/jp-cta-current-api-20261122.json",
+      "sha256": "3b743c0fb772a2482ed143cbe2611e3b82e929868767514a3e1db16f5c2ef342"
+    },
+    "finding": "Corporate Tax Act74(1)(3) expressly includes eligible credits under Articles68 and69 that could not be deducted from corporation tax; Article78(1) provides the associated refund. Therefore a blanket rule that matched foreign credits above current corporation tax cannot be refunded is incorrect. Statutory unused credit capacity, eligible credit refund and interim-payment refund must remain distinct.",
+    "implementation_gate": "Reconcile current Form1 credit/refund fields and yen rounding before wiring history into annual settlements. Do not clamp all matched credit to current liability and silently restore statutory history balances. Do not infer that every unmatched foreign-tax payment qualifies for a refund. Local inhabitant levy shortfalls require their separate rules.",
+    "scope_guard": "Existing no-history API attestations must not be silently rewritten to true when adding a historical workflow. No calculation/API/UI behavior was changed in this authority-review checkpoint."
+  }
 }
