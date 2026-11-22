@@ -10,7 +10,7 @@ import { osakaFields } from './japan-osaka-assessment';
 import { tokyoFields } from './japan-tokyo-assessment';
 import type { IncomeTaxInput } from './income-tax';
 import { koreaPolicy } from './korea-assessment';
-import { koreaForeignPolicy, koreaForeignHistoryPolicy } from './korea-foreign-assessment';
+import { koreaForeignPolicy, koreaForeignHistoryPolicy, koreaForeignBalancesPolicy } from './korea-foreign-assessment';
 import { koreaSalaryPolicy } from './korea-salary-assessment';
 import { thaiDividendPolicy } from './thailand-dividend-assessment';
 import { thaiForeignPolicy } from './thailand-foreign-assessment';
@@ -47,7 +47,7 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
   if(input.jurisdiction==='th' && !company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.some(i=>i.source_jurisdiction!=='th') && input.incomes.every(i=>(i.source_jurisdiction==='th'?['employment','business','service_remuneration','author_remuneration','royalty','rental']:['employment','business','service_remuneration','author_remuneration','royalty','rental','dividend','interest']).includes(i.category)))return [thaiForeignPolicy(input,values)];
   if(input.jurisdiction==='th' && !company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.some(i=>i.category==='dividend') && input.incomes.every(i=>i.source_jurisdiction==='th'&&['dividend','employment','business','service_remuneration','author_remuneration','royalty','rental'].includes(i.category)))return [thaiDividendPolicy(input,values)];
   if(input.jurisdiction==='kr' && !company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.every(i=>i.source_jurisdiction==='kr'&&i.category==='employment'))return [koreaSalaryPolicy(values)];
-  if(input.jurisdiction==='kr' && company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.every(i=>['business','interest','rental','royalty'].includes(i.category))) return input.incomes.some(i=>i.source_jurisdiction!=='kr')?[koreaForeignPolicy(input,values),koreaForeignHistoryPolicy(input,values)]:[koreaPolicy(values)];
+  if(input.jurisdiction==='kr' && company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.every(i=>['business','interest','rental','royalty'].includes(i.category))) return input.incomes.some(i=>i.source_jurisdiction!=='kr')?[koreaForeignPolicy(input,values),koreaForeignHistoryPolicy(input,values),koreaForeignBalancesPolicy(input,values)]:[koreaPolicy(values)];
   if(input.jurisdiction==='in' && input.residency==='resident' && period==='2026-04-01/2027-03-31' && input.incomes.every(i=>i.source_jurisdiction==='in'&&['business','employment','service_remuneration','author_remuneration','interest','rental','royalty'].includes(i.category))) {
     const primary: IncomePolicy = {id:company?'in_company_section200_ty2026_27':'in_personal_new_ty2026_27',
       label:company?['印度境内企业第200条税制（TY 2026–27）','India domestic company section 200 (TY 2026–27)']:['印度居民个人新税制（TY 2026–27）','India resident individual new regime (TY 2026–27)'],

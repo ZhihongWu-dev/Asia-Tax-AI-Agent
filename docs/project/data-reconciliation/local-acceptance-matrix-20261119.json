@@ -278,5 +278,15 @@
     ],
     "evidence": "korea-foreign-credit-research-20261122.json",
     "status": "scoped_workflow_verified_overall_goal_incomplete"
+  },
+  "korean_local_history_checkpoint_20261122": {
+    "base_commit": "88fd1d4",
+    "policy": "kr_company_foreign_balances_2026",
+    "scope": "Current corporate direct credits, optional national history and separate direct-tax local deduction history; explicit source and legacy exclusions retained.",
+    "full_regression": "2218 tests passed98.39s;207 assessment calls,43 policies,143 source records,0 unresolved.",
+    "artifact": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/korea-local-history-full-source-audit-20261122.json",
+    "browser": "3 passed59.9s;production build passed.",
+    "legal_review": "Archived and visually inspected current form43-13, including separate direct/fund limits, cumulative prior deductions, oldest-year use and expiry exclusions.",
+    "overall_goal": "incomplete; prioritize missing HK/JP/VN corporate foreign-credit annual flows and retain required personal coverage."
   }
 }

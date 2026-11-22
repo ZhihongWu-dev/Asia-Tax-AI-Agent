@@ -38,6 +38,19 @@ def test_distinct_fund_credit_deduction():
     assert result['local_taxable_base']==875
 
 
+def test_fund_deduction_cannot_use_expired_national_tax_addback_capacity():
+    r=calc(base='100',addback='50',direct='0',fund='130')
+    assert r['current_local_foreign_tax_deduction']==100
+    assert r['local_taxable_base']==50
+    assert r['excess_current_local_deduction']==30
+
+
+def test_combined_deductions_use_separate_caps_and_shared_maximum():
+    r=calc(base='100',addback='50',direct='70',fund='130')
+    assert r['current_local_foreign_tax_deduction']==150
+    assert r['excess_current_local_deduction']==50
+
+
 def test_sources_and_evidence_gate():
     root=Path(__file__).resolve().parents[2]
     for source in calc()['sources']:

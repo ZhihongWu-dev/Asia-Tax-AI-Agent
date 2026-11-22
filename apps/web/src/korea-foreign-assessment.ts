@@ -76,3 +76,40 @@ export function koreaForeignHistoryBasis(flat:Record<string,unknown>, input:Inco
   result.history=history;
   return result;
 }
+
+const balanceChecks = [
+  ['national_entitlement_expiry_and_order_or_absence_verified','已核实国税历史抵免资格、到期顺序或无余额','National history entitlement, expiry, order or absence verified'],
+  ['no_expired_national_credit_deductions_or_other_base_adjustments_verified','无到期国税抵免扣除及其他税基调整','No expired national-credit deductions or other base adjustments'],
+  ['no_competing_national_reliefs_or_separate_taxes_verified','无其他国税减免及单独税负','No competing national reliefs or separate taxes'],
+  ['original_local_entitlement_expiry_and_prior_usage_verified','已核实地方税原扣除资格、到期日和以前累计已扣金额','Original local entitlement, expiry and cumulative prior deductions verified'],
+  ['local_eligibility_addback_and_no_duplicate_amounts_verified','已核实地方税扣除资格、加回及无重复扣除','Local deduction eligibility, addback and no duplicate amounts verified'],
+] as const;
+
+export function koreaForeignBalancesPolicy(input:IncomeTaxInput, values:Record<string,string>):IncomePolicy {
+  const base=koreaForeignHistoryPolicy(input,{...values,krh_count:values.krh_count||'0'});
+  const fields=base.fields.filter(f=>!historyChecks.some(([key])=>key===f.key));
+  const countField=fields.find(f=>f.key==='krh_count')!;countField.min=0;
+  countField.label=['国税历史批次数（无则填0）','Number of national history lots (0 if none)'];
+  fields.push({key:'krl_count',label:['地方税历史扣除批次数','Number of local deduction history lots'],integer:true,min:1,max:200});
+  const count=/^\d+$/.test(values.krl_count||'')?Math.min(200,Number(values.krl_count)):1;
+  for(let n=0;n<count;n++)for(const [key,zh,en,text] of [
+    ['identifier','凭证编号','reference',true],['origin_period_end','原业务年度结束日（YYYY-MM-DD）','origin period end (YYYY-MM-DD)',true],
+    ['verified_expiry_date','核实到期日（YYYY-MM-DD）','verified expiry (YYYY-MM-DD)',true],['original_amount','原发生额','original amount',false],
+    ['previously_deducted','以前累计已扣金额','cumulative prior deductions',false]] as const)
+    fields.push({key:`krl_${n}_${key}`,label:[`地方历史${n+1}：${zh}`,`Local history ${n+1}: ${en}`],text});
+  for(const [key,zh,en] of balanceChecks)fields.push({key,label:[zh,en],boolean:true});
+  return {...base,id:'kr_company_foreign_balances_2026',label:['韩国企业境外抵免及国地税历史余额（2026）','Korean foreign credits with national/local balances (2026)'],fields,
+    notice:['适用于2026完整历年居民企业普通经营、利息、租金和特许权使用费所得。国税抵免与地方税扣除使用独立台账；地方税按发生年度从早到晚扣除，并单列到期结转排除额。地方税批次录入原发生额及以前累计已扣金额，不能直接复制国税抵免余额。仅接入直接境外税的历史地方扣除；基金类历史资格尚未核定。国税可无历史余额；有历史时仅接受年末仍有效批次。不含到期国税抵免扣除、股息、其他国税减免、亏损、特殊税负、更正申报或分期缴款。',
+      'For resident companies with ordinary business, interest, rental and royalty income in calendar2026. National credits and local deductions use separate ledgers. Local deductions use oldest years first and separately exclude expired carry. Enter original local amounts and cumulative prior deductions; do not copy national credit balances. Local history supports direct foreign tax only; legacy fund entitlement remains unverified. National history may be empty; supplied national lots must remain valid at year-end. Excludes expired national-credit deductions, dividends, competing national reliefs, losses, special taxes, amendments and installments.']};
+}
+
+export function koreaForeignBalancesBasis(flat:Record<string,unknown>, input:IncomeTaxInput):Record<string,unknown> {
+  const result=koreaForeignHistoryBasis(flat,input);
+  const history=result.history as {lots:unknown[]};delete result.history;
+  const local:Record<string,unknown>={lots:Array.from({length:Number(flat.krl_count)},(_,n)=>({kind:'direct',...Object.fromEntries(
+    ['identifier','origin_period_end','verified_expiry_date','original_amount','previously_deducted'].map(key=>[key,flat[`krl_${n}_${key}`]]))}))};
+  const balances:Record<string,unknown>={national_lots:history.lots,local_history:local};
+  for(const [key] of balanceChecks.slice(0,3))balances[key]=flat[key];
+  for(const [key] of balanceChecks.slice(3))local[key]=flat[key];
+  result.balances=balances;return result;
+}

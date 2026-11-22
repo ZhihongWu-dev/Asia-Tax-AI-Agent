@@ -145,6 +145,15 @@
       "provisions": [
         "Article100-10(1)-(7)"
       ]
+    },
+    {
+      "doc_id": "kr.local-tax.form43-13.20260701",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=164945123&bylClsCd=110202",
+      "file": "database/raw/kr/kr.local-tax.form43-13.20260701.pdf",
+      "sha256": "6b9d1c6759f5912b218bb26427463ae84308f00bbfa9c59e74c8d7fb77909422",
+      "provisions": [
+        "Instructions3,7,11-14"
+      ]
     }
   ]
 }

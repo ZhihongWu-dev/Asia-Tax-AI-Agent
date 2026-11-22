@@ -31,6 +31,14 @@ export default function KoreaCompanyResult({result,index}:{result:Record<string,
         {([['country','国家','Country'],['expiry_date','核实到期日','Verified expiry'],['used','本期使用','Used this period'],['remaining','本期使用后未用余额','Unused after current allocation']] as const).map(([key,zh,en])=><div key={key}><dt>{say(zh,en)}</dt><dd>{String(row[key])}</dd></div>)}
       </dl></section>)}
     </section>}
+    {Array.isArray(localBasis?.historical_local_deductions)&&<section aria-label={say('韩国历史地方税扣除','Korean historical local deductions')}>
+      <h5>{say('历史地方税扣除','Historical local deductions')}</h5>
+      <p>{say('与国税抵免余额分开核对；按发生年度从早到晚使用。','Reconciled separately from national credits; used from oldest originating year.')}</p>
+      {(localBasis.historical_local_deductions as Array<Record<string,unknown>>).map(row=><section key={String(row.identifier)}><h6>{String(row.identifier)}</h6><dl>
+        {([['original_amount','原发生额','Original amount'],['previously_deducted','以前累计已扣','Cumulative prior deductions'],
+          ['current_deduction','本期扣除','Current deduction'],['excluded_from_next_carry','到期结转排除','Expired carry excluded'],['next_carryforward','下期结转','Next carryforward']] as const).map(([key,zh,en])=><div key={key}><dt>{say(zh,en)}</dt><dd>{String(row[key])}</dd></div>)}
+      </dl></section>)}
+    </section>}
     <section aria-label={say('韩国国税','Korean national tax')}><h5>{say('国税','National tax')}</h5><dl>
       <div><dt>{say('减免前税额','Gross tax')}</dt><dd>{national.gross_tax}</dd></div>
       <div><dt>{say('减免后税额','Tax after reliefs')}</dt><dd>{national.tax_after_reliefs}</dd></div>

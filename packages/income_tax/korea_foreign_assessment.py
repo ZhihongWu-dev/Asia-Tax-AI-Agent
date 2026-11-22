@@ -8,6 +8,7 @@ from .korea import gross_taxes
 from .korea_local import LocalFilingAdjustments, settle_local_return
 from .korea_rounding import _cash_result
 from .korea_foreign_history import SavedHistory, allocate_history
+from .korea_foreign_local_history import SavedBalances, reconcile_history as reconcile_local_history
 
 
 def assess(case, workpaper, national_inputs, local_inputs, *,
@@ -29,10 +30,26 @@ def assess_with_history(case, workpaper, national_inputs, local_inputs, history,
         raise ValueError('Verify history entitlement, expiry, ordering, local balances and base-adjustment exclusions')
     if any(lot.verified_expiry_date < case.period_end for lot in paper.lots):
         raise ValueError('Expired historical credits require deduction and national/local base reconciliation')
-    return _assess(case, workpaper, national_inputs, local_inputs, history=paper)
+    return _assess(case, workpaper, national_inputs, local_inputs, history=paper.lots)
 
 
-def _assess(case, workpaper, national_inputs, local_inputs, *, history):
+def assess_with_balances(case, workpaper, national_inputs, local_inputs, balances, *,
+                         current_direct_credit_and_local_deduction_eligibility_verified):
+    paper=SavedBalances.model_validate(balances)
+    if (current_direct_credit_and_local_deduction_eligibility_verified is not True
+            or not paper.national_entitlement_expiry_and_order_or_absence_verified
+            or not paper.no_expired_national_credit_deductions_or_other_base_adjustments_verified
+            or not paper.no_competing_national_reliefs_or_separate_taxes_verified):
+        raise ValueError('Verify separate national/local balances, expiry, ordering and excluded base adjustments')
+    if any(lot.verified_expiry_date<case.period_end for lot in paper.national_lots):
+        raise ValueError('Expired national credits require deduction and local addback reconciliation')
+    if any(lot.kind!='direct' for lot in paper.local_history.lots):
+        raise ValueError('Legacy fund local deductions require separate entitlement and transitional review')
+    return _assess(case,workpaper,national_inputs,local_inputs,history=paper.national_lots or None,
+        local_history=paper.local_history)
+
+
+def _assess(case, workpaper, national_inputs, local_inputs, *, history, local_history=None):
     # Reuse the established public-input contracts without introducing an
     # import cycle when the assessment policy registry imports this module.
     from packages.contracts.income_assessment import KRNationalInputs, KRLocalInputs
@@ -51,7 +68,7 @@ def _assess(case, workpaper, national_inputs, local_inputs, *, history):
         national_tax_before_credit=national['gross_tax'], national_taxable_base=national['taxable_base'])
     historical = None
     if history is not None:
-        historical = allocate_history(credit, [lot.model_dump() for lot in history.lots],
+        historical = allocate_history(credit, [lot.model_dump() for lot in history],
             period_start=case.period_start, period_end=case.period_end,
             history_entitlement_expiry_and_order_verified=True)
         usage = {row['country']: row for row in historical['current_country_usage']}
@@ -81,6 +98,10 @@ def _assess(case, workpaper, national_inputs, local_inputs, *, history):
             article57_2_eligible_fund_credit=0,
             local_eligibility_addback_and_no_duplicate_amounts_verified=True,
             no_prior_local_foreign_tax_deductions_verified=True)
+        if local_history is not None:
+            local_basis=reconcile_local_history(local_history,period_start=case.period_start,period_end=case.period_end,
+                national_taxable_base=national['taxable_base'],expired_foreign_tax_deducted_nationally=0,
+                article57_foreign_tax=eligible,article57_2_eligible_fund_credit=0)
         gross = gross_taxes(base, local_basis['local_taxable_base'], tax_year=2026, subject='company',
             article60_2_1_1_company=national_args['article60_2_1_1_company'],
             annual_standard_schedule_confirmed=national_args['annual_standard_schedule_confirmed'])
@@ -111,4 +132,6 @@ def _assess(case, workpaper, national_inputs, local_inputs, *, history):
         result['policy_version'] = 'kr-company-direct-foreign-history-2026-20261122'
         result['historical_foreign_credit'] = historical
         national['policy_version'] = 'kr-national-company-direct-foreign-history-20261122'
+    if local_history is not None:
+        result['policy_version']='kr-company-direct-foreign-balances-2026-20261122'
     return result

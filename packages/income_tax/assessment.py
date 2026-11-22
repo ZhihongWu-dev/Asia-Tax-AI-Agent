@@ -107,6 +107,9 @@ def calculate(case: IncomeTaxCase, basis):
         args['people']=[PersonalDeductionPerson(**row) for row in args['people']]
         args['children']=[ChildCreditFacts(**row) for row in args['children']]
         result=korea_salary.standard_salary_return(salary,tax_year=2026,**args)
+    elif policy=='kr_company_foreign_balances_2026':
+        from .korea_foreign_assessment import assess_with_balances
+        result = assess_with_balances(case, **args)
     elif policy=='kr_company_foreign_history_2026':
         from .korea_foreign_assessment import assess_with_history
         result = assess_with_history(case, **args)

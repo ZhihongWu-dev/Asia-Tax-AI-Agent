@@ -19,9 +19,9 @@ def reconcile_local_base(*, national_taxable_base, expired_foreign_tax_deducted_
         context.prec=40
         adjusted=base+addback
         available=direct+fund
-        used=min(adjusted,available)
+        used=min(adjusted,direct+min(fund,base))
         excess=available-used
-        return dict(policy_version='kr-local-foreign-base-component-20261122',currency='KRW',
+        return dict(policy_version='kr-local-foreign-base-component-20261122-form43-13',currency='KRW',
             national_taxable_base=base,expired_national_foreign_tax_addback=addback,
             local_base_before_foreign_tax_deduction=adjusted,
             article57_foreign_tax=direct,article57_2_eligible_fund_credit=fund,
@@ -37,4 +37,9 @@ def reconcile_local_base(*, national_taxable_base, expired_foreign_tax_deducted_
                     url='https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=164397',
                     file='database/raw/kr/kr.local-decree.article100-10.20261001.html',
                     sha256='a58f8e42f8b93c5bb45c60d3f901bc9784589e29f4b0d7669d5383fc21d32b22',
-                    provisions=['Article100-10(1)-(7)'])])
+                    provisions=['Article100-10(1)-(7)']),
+                dict(doc_id='kr.local-tax.form43-13.20260701',
+                    url='https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=164945123&bylClsCd=110202',
+                    file='database/raw/kr/kr.local-tax.form43-13.20260701.pdf',
+                    sha256='6b9d1c6759f5912b218bb26427463ae84308f00bbfa9c59e74c8d7fb77909422',
+                    provisions=['Instructions3,7,11-14'])])

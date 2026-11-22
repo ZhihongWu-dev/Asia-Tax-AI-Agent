@@ -25,7 +25,7 @@ import type { Case } from '../workspace';
 import { policies, resultLabels } from '../income-assessment';
 import { koreaBasis } from '../korea-assessment';
 import KoreaCompanyResult from './KoreaCompanyResult';
-import {koreaForeignBasis,koreaForeignHistoryBasis} from '../korea-foreign-assessment';
+import {koreaForeignBasis,koreaForeignHistoryBasis,koreaForeignBalancesBasis} from '../korea-foreign-assessment';
 import { koreaSalaryBasis } from '../korea-salary-assessment';
 import KoreaSalaryResult from './KoreaSalaryResult';
 import { thaiDividendBasis } from '../thailand-dividend-assessment';
@@ -117,8 +117,8 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       });
       for(const key of Object.keys(basis)) if(key.startsWith('transfer_')) delete basis[key];
     }
-    if(['kr_company_ordinary_2026','kr_company_foreign_direct_2026','kr_company_foreign_history_2026'].includes(policy.id)) {
-      try {basis=policy.id==='kr_company_foreign_history_2026'?koreaForeignHistoryBasis(basis,current.income_tax!):policy.id==='kr_company_foreign_direct_2026'?koreaForeignBasis(basis,current.income_tax!):koreaBasis(basis);} catch {setError(say('地方申报单位名称须非空且不能重复。','Local filing names must be nonempty and unique.'));return;}
+    if(['kr_company_ordinary_2026','kr_company_foreign_direct_2026','kr_company_foreign_history_2026','kr_company_foreign_balances_2026'].includes(policy.id)) {
+      try {basis=policy.id==='kr_company_foreign_balances_2026'?koreaForeignBalancesBasis(basis,current.income_tax!):policy.id==='kr_company_foreign_history_2026'?koreaForeignHistoryBasis(basis,current.income_tax!):policy.id==='kr_company_foreign_direct_2026'?koreaForeignBasis(basis,current.income_tax!):koreaBasis(basis);} catch {setError(say('地方申报单位名称须非空且不能重复。','Local filing names must be nonempty and unique.'));return;}
     }
     if(policy.id==='kr_salary_standard_payroll_2026')basis=koreaSalaryBasis(basis);
     if(policy.id==='th_dividend_2026') {

@@ -55,10 +55,10 @@ def render(run, locale='zh'):
             ('local_corporation_balance_due','地方法人税补退余额','Local corporation-tax balance')]:
         if key in result:
             lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
-    if result.get('policy_version') in ('kr-company-direct-foreign-2026-20261122', 'kr-company-direct-foreign-history-2026-20261122'):
+    if result.get('policy_version') in ('kr-company-direct-foreign-2026-20261122', 'kr-company-direct-foreign-history-2026-20261122', 'kr-company-direct-foreign-balances-2026-20261122'):
         lines += ['', '## ' + say('韩国分国抵免与地方税', 'Korean country credits and local tax'), '',
-            say('国税、地方税分别结算。费用对应超限额与普通抵免结转分开列示。历史国税抵免仅按下表已核实余额分配，不再次扣减地方税税基；不含历史地方税扣除、到期抵免扣除、其他国税减免、间接抵免或特殊税负。',
-                'National and local authorities settle separately. Expense-related excess is separate from ordinary credit carryforward. Historical national credits use only verified balances listed below and do not reduce the local base again. Excludes prior local deductions, expired-credit deductions, competing national reliefs, underlying credits and special taxes.'), '',
+            say('国税、地方税分别结算。费用对应超限额与普通抵免结转分开列示。历史国税抵免与历史地方税扣除仅按下表各自核实的余额处理，不能互相复制；不含到期国税抵免扣除、其他国税减免、间接抵免或特殊税负。',
+                'National and local authorities settle separately. Expense-related excess is separate from ordinary credit carryforward. Historical national credits and local deductions use their separately verified balances below and cannot be copied between ledgers. Excludes expired national-credit deductions, competing national reliefs, underlying credits and special taxes.'), '',
             '| ' + say('国家 | 限额所得 | 抵免限额 | 本期抵免 | 费用对应超限额（不作普通结转） | 普通抵免结转',
                 'Country | Limit income | Credit limit | Current credit | Expense-related excess (not ordinary carry) | Ordinary credit carryforward') + ' |',
             '| --- | --- | --- | --- | --- | --- |']
@@ -83,6 +83,13 @@ def render(run, locale='zh'):
                 '| --- | --- | --- | --- | --- |']
             for row in result['historical_foreign_credit']['historical_lots']:
                 lines.append('| ' + ' | '.join(_text(row[k]) for k in ('identifier','country','expiry_date','used','remaining')) + ' |')
+        if result['local_basis'].get('historical_local_deductions'):
+            lines += ['', '### ' + say('历史地方税扣除余额', 'Historical local deduction balances'), '',
+                '| ' + say('编号 | 类别 | 原发生额 | 以前已扣 | 本期扣除 | 结转排除 | 下期结转',
+                    'Reference | Kind | Original amount | Previously deducted | Current deduction | Excluded carry | Next carryforward') + ' |',
+                '| --- | --- | --- | --- | --- | --- | --- |']
+            for row in result['local_basis']['historical_local_deductions']:
+                lines.append('| ' + ' | '.join(_text(row[k]) for k in ('identifier','kind','original_amount','previously_deducted','current_deduction','excluded_from_next_carry','next_carryforward')) + ' |')
     if result.get('policy_version') == 'sg-company-foreign-direct-ya2026-20261122':
         credit = result['foreign_credit']
         lines += ['', '## ' + say('新加坡境外直接抵免明细', 'Singapore direct foreign credit details'), '',

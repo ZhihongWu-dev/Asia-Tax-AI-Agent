@@ -58,7 +58,7 @@
     ]
   },
   "version_risk": "Official2022 English Korean Taxation guide still describes a five-year carry period, contrary to reviewed2026 Korean Article57. Do not use the older guide as the current carryforward rule.",
-  "next": "Extend the saved Korean annual workflow to historical balances and verified adjustment/relief interactions, then continue unresolved jurisdiction and personal foreign-income acceptance gaps.",
+  "next": "Prioritize missing end-to-end corporate foreign-credit flows in Hong Kong, Japan and Vietnam, while retaining explicit Korean special-scope gaps and required personal coverage across11 jurisdictions.",
   "development_reference": "Pydantic official GitHub model/validator documentation searched; existing framework conventions retained, no copied code or new dependency.",
   "local_base_component": {
     "file": "packages/income_tax/korea_foreign_local_basis.py",
@@ -139,5 +139,36 @@
       "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031177413"
     ],
     "findings": "Current decree100-10(6) requires earliest-origin carried local deductions first. Act103-19(4) provides15-year carry; paragraph2 adds back expired national foreign-tax deductions. Existing archives match these provisions; saved local history not yet implemented."
+  },
+  "local_form43_13_review": {
+    "file": "database/raw/kr/kr.local-tax.form43-13.20260701.pdf",
+    "url": "https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=164945123&bylClsCd=110202",
+    "sha256": "6b9d1c6759f5912b218bb26427463ae84308f00bbfa9c59e74c8d7fb77909422",
+    "version": "Current2026-07-01 rules list; form amended2025-12-31. Both pages visually inspected.",
+    "findings": [
+      "Instructions3/7: direct deduction cap includes expired national-tax addback; fund-credit deduction cap excludes it; combined use cannot exceed the larger cap.",
+      "Instructions4-9: distinguish carried/current amounts, actual deductions and carry exclusions.",
+      "Instructions11-14: original amounts less cumulative prior deductions, oldest originating years first then current; retain year-by-year usage."
+    ],
+    "correction": "Current-only local component previously allowed fund amounts to use direct-only addback capacity. Corrected separate cap with regression cases. Current saved annual direct-only scenarios are unaffected; fund legacy eligibility not enabled."
+  },
+  "saved_local_history": {
+    "policy": "kr_company_foreign_balances_2026",
+    "version": "kr-company-direct-foreign-balances-2026-20261122",
+    "scope": "Ordinary2026 saved company workflow with optional unexpired national history and separately verified direct-tax local history. Current local amounts follow oldest eligible historical deductions; expired unused amounts excluded from next carry.",
+    "delivery": "Input contract/router, national/local annual settlement, persisted replay, bilingual reports, dynamic browser fields and separate result ledgers.",
+    "validation": {
+      "focused": "41 tests passed17.57s before final legacy-fund eligibility guard; final full audit pending.",
+      "browser": "3 current-only/national-history/national-local-history Playwright scenarios passed59.9s.",
+      "build": "TypeScript and Vite passed2295modules6.74s",
+      "full_source_audit": "2218 tests passed98.39s;207 observed successful assessment calls across43 policies;143 source records;0 unresolved archive/hash problems."
+    },
+    "remaining": [
+      "Expired national deduction and local addback saved reconciliation",
+      "Competing national reliefs and base adjustments",
+      "Dividend underlying/deemed credits",
+      "Legacy fund local entitlement",
+      "Losses, amended returns and installments"
+    ]
   }
 }
