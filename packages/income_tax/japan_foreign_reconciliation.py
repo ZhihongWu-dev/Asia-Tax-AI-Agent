@@ -10,7 +10,7 @@ from packages.contracts.income_tax import Money
 from .japan import yen
 from .japan_company import annual_period
 from .japan_company import company_tax
-from .japan_foreign_credit import current_national_credits
+from .japan_foreign_credit import current_national_credits,current_national_return_credits
 
 
 class Group(BaseModel):
@@ -123,3 +123,38 @@ def current_credit_workpaper(case,workpaper,*,rate_regime,rate_classification_ve
         defence_tax_base=ordinary['defence_tax_base'],rate_regime=rate_regime,
         current_national_credit=credit,sources=ordinary['sources']+credit['sources'],
         stage='saved_current_credit_workpaper_before_filing_rounding_and_local_history_settlement')
+
+
+def current_national_settlement(case,workpaper,*,corporation_interim_liability,
+        local_corporation_interim_liability,**reference_options):
+    """Settle the three national taxes only; local/history support is separate."""
+    current=current_credit_workpaper(case,workpaper,**reference_options)
+    reconciled=current['reconciliation'];references=current['reference_taxes']
+    credits=current_national_return_credits(**{key:reconciled[key] for key in (
+        'statutory_worldwide_income','foreign_income_before_exempt',
+        'foreign_income_exempt_from_foreign_tax','eligible_foreign_corporate_tax')},
+        **references,statutory_reference_amounts_and_current_tax_eligibility_verified=True,
+        no_history_group_or_special_credit_adjustments_verified=True)
+    interim=[yen(corporation_interim_liability),yen(local_corporation_interim_liability),Decimal(0)]
+    if any(value%100 for value in interim):
+        raise ValueError('Interim return liabilities must be in whole hundreds of yen')
+    settlements={}
+    with localcontext() as context:
+        context.prec=40
+        for name,prepaid in zip(('corporation','local_corporation','defence'),interim):
+            reference=references[name+'_tax_reference'];credit=credits[name+'_credit']
+            after=reference-credit
+            liability=(after//100)*100
+            balance=liability-prepaid
+            settlements[name]=dict(reference_tax=reference,current_foreign_credit=credit,
+                after_credit_before_final_rounding=after,annual_liability=liability,
+                interim_return_liability=prepaid,balance_due=balance,
+                payable=max(Decimal(0),balance),refundable=max(Decimal(0),-balance))
+        return dict(policy_version='jp-current-national-foreign-settlement-20261122',currency='JPY',
+            tax_scope='japan_three_national_company_taxes_only',
+            source_reconciliation=reconciled,reference_taxes=references,
+            current_foreign_credit=credits,settlements=settlements,
+            total_payable=sum((v['payable'] for v in settlements.values()),Decimal(0)),
+            total_refundable=sum((v['refundable'] for v in settlements.values()),Decimal(0)),
+            sources=current['sources']+[credits['sources'][-1]],
+            stage='current_national_settlement_local_and_history_not_calculated')

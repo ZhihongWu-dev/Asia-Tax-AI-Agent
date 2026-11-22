@@ -1,7 +1,7 @@
 from copy import deepcopy
 import pytest
 from packages.contracts.income_tax import IncomeTaxCase,CURRENCIES
-from packages.income_tax.japan_foreign_reconciliation import reconcile,current_credit_workpaper
+from packages.income_tax.japan_foreign_reconciliation import reconcile,current_credit_workpaper,current_national_settlement
 from packages.income_tax.japan_foreign_credit import current_national_credits
 
 
@@ -131,3 +131,44 @@ def test_derived_reference_sources_have_archived_originals():
     case,p=fixture();root=Path(__file__).resolve().parents[2]
     for source in workpaper(case,p)['sources']:
         assert hashlib.sha256((root/source['file']).read_bytes()).hexdigest()==source['sha256']
+
+
+def settle(case,p,**changes):
+    options=dict(rate_regime='ordinary',rate_classification_verified=True,
+        no_other_tax_credits_additions_or_history_verified=True,
+        corporation_interim_liability='14000000',local_corporation_interim_liability='0')
+    options.update(changes)
+    return current_national_settlement(IncomeTaxCase(**case),p,**options)
+
+
+def test_national_settlement_keeps_refunds_and_payments_separate():
+    case,p=fixture();r=settle(case,p)
+    assert r['settlements']['corporation']['annual_liability']==13920000
+    assert r['settlements']['corporation']['refundable']==80000
+    assert r['settlements']['local_corporation']['annual_liability']==1433700
+    assert r['settlements']['defence']['annual_liability']==436800
+    assert r['total_payable']==1870500
+    assert r['total_refundable']==80000
+    assert r['current_foreign_credit']['remaining_for_local_and_history_review']==1472960
+
+
+def test_credit_precedes_final_hundred_yen_truncation():
+    case,p=fixture();case['incomes'][0]['gross_amount']='70001000'
+    case['incomes'][1]['foreign_tax_paid']='1';p['groups'][1]['eligible_foreign_corporate_tax']='1'
+    r=settle(case,p,corporation_interim_liability=0)
+    assert r['settlements']['corporation']['reference_tax']==23200232
+    assert r['settlements']['corporation']['after_credit_before_final_rounding']==23200231
+    assert r['settlements']['corporation']['annual_liability']==23200200
+
+
+@pytest.mark.parametrize('key',['corporation_interim_liability','local_corporation_interim_liability'])
+def test_interim_liability_must_follow_return_units(key):
+    case,p=fixture()
+    with pytest.raises(ValueError):settle(case,p,**{key:101})
+
+
+def test_pre_defence_period_settlement_does_not_create_a_defence_bill():
+    case,p=fixture();case.update(period_start='2026-01-01',period_end='2026-12-31')
+    r=settle(case,p)
+    assert r['settlements']['defence']['annual_liability']==0
+    assert r['settlements']['defence']['current_foreign_credit']==0

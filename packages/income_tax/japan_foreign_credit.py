@@ -22,6 +22,12 @@ SOURCES = [
         provisions=['Parts1-3; separate corporation/local-corporation/defence computations']),
 ]
 
+ROUNDING_SOURCE=dict(doc_id='jp.nta.tsusoku119.20261122',
+    file='database/raw/jp/jp.nta.tsusoku119.20261122.html',
+    url='https://www.nta.go.jp/law/tsutatsu/kihon/tsusoku/09/01/119.htm',
+    sha256='bc7f4b5a760ac218b7beddb6e4e58505b643bac47b36bb0f2d070d3d7574d0b3',
+    provisions=['Paragraph1(1): tax after credits; paragraph6: intermediate amounts belowJPY1 discarded'])
+
 
 def current_national_credits(*, statutory_worldwide_income, foreign_income_before_exempt,
         foreign_income_exempt_from_foreign_tax, eligible_foreign_corporate_tax,
@@ -68,3 +74,33 @@ def current_national_credits(*, statutory_worldwide_income, foreign_income_befor
         **values,exact_fractions={key:dict(numerator=str(v.numerator),denominator=str(v.denominator))
             for key,v in exact.items()},sources=deepcopy(SOURCES),
         stage='current_national_credit_allocation_before_return_rounding_not_annual_settlement')
+
+
+def current_national_return_credits(**inputs):
+    """Schedule6(2) monetary lines with paragraph119-6 whole-yen truncation.
+
+    The ratio remains exact within each multiplication; it is not itself a
+    monetary amount to truncate. Historical adjustments remain excluded.
+    """
+    exact=current_national_credits(**inputs)  # Full validation and comparison.
+    world=Fraction(yen(inputs['statutory_worldwide_income']))
+    foreign=Fraction(yen(inputs['foreign_income_before_exempt']))
+    exempt=Fraction(yen(inputs['foreign_income_exempt_from_foreign_tax']))
+    paid=int(yen(inputs['eligible_foreign_corporate_tax']))
+    def whole(value):return value.numerator//value.denominator
+    cap90=whole(world*Fraction(9,10))
+    adjusted=min(int(foreign-exempt),cap90)
+    limits=[whole(Fraction(yen(inputs[key]))*adjusted/world) for key in (
+        'corporation_tax_reference','local_corporation_tax_reference','defence_tax_reference')]
+    credits=[];remaining=paid
+    for limit in limits:
+        used=min(remaining,limit);credits.append(used);remaining-=used
+    return dict(policy_version='jp-current-national-return-credits-20261122',currency='JPY',
+        foreign_income_90_percent_cap=Decimal(cap90),adjusted_foreign_income=Decimal(adjusted),
+        **{key:Decimal(value) for key,value in zip((
+            'corporation_credit_limit','local_corporation_credit_limit','defence_credit_limit',
+            'corporation_credit','local_corporation_credit','defence_credit'),limits+credits)},
+        total_current_national_credit=Decimal(sum(credits)),
+        remaining_for_local_and_history_review=Decimal(remaining),
+        unrounded_comparison=exact, sources=deepcopy(SOURCES)+[deepcopy(ROUNDING_SOURCE)],
+        stage='current_national_credit_fields_rounded_not_complete_annual_settlement')

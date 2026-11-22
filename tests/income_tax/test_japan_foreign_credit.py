@@ -3,7 +3,7 @@ from fractions import Fraction
 from pathlib import Path
 import hashlib
 import pytest
-from packages.income_tax.japan_foreign_credit import current_national_credits,SOURCES
+from packages.income_tax.japan_foreign_credit import current_national_credits,current_national_return_credits,SOURCES,ROUNDING_SOURCE
 
 
 def args():
@@ -67,5 +67,31 @@ def test_invalid_or_unverified_basis_rejected(key,value):
 
 def test_archived_original_hashes():
     root=Path(__file__).resolve().parents[2]
-    for source in SOURCES:
+    for source in SOURCES+[ROUNDING_SOURCE]:
         assert hashlib.sha256((root/source['file']).read_bytes()).hexdigest()==source['sha256']
+
+
+def test_return_rounding_occurs_at_monetary_lines_not_at_the_income_ratio():
+    p=args();p.update(statutory_worldwide_income=3,foreign_income_before_exempt=3,
+        corporation_tax_reference=100,local_corporation_tax_reference=10,defence_tax_reference=4,
+        eligible_foreign_corporate_tax=100)
+    r=current_national_return_credits(**p)
+    assert r['foreign_income_90_percent_cap']==2
+    assert r['adjusted_foreign_income']==2
+    assert (r['corporation_credit_limit'],r['local_corporation_credit_limit'],r['defence_credit_limit'])==(66,6,2)
+    assert r['total_current_national_credit']==74
+    assert r['remaining_for_local_and_history_review']==26
+    assert r['unrounded_comparison']['corporation_credit_limit']==90
+
+
+@pytest.mark.parametrize('paid',range(12))
+def test_rounded_limits_preserve_payment_and_advance_to_next_tax(paid):
+    p=args();p.update(statutory_worldwide_income=7,foreign_income_before_exempt=3,
+        corporation_tax_reference=11,local_corporation_tax_reference=8,defence_tax_reference=6,
+        eligible_foreign_corporate_tax=paid)
+    r=current_national_return_credits(**p)
+    # Whole-yen limits are4,3,2; the ratio3/7 itself must not be truncated.
+    assert r['corporation_credit']==min(paid,4)
+    assert r['local_corporation_credit']==min(max(0,paid-4),3)
+    assert r['defence_credit']==min(max(0,paid-7),2)
+    assert r['total_current_national_credit']+r['remaining_for_local_and_history_review']==paid

@@ -52,6 +52,19 @@
     "validation": "60 focused tests passed2.44s, including reference derivation, untruncated denominator versus rounded tax base, pre-final-rounding corporation reference, commencement boundaries, SME classifications and all archived output hashes. Japan-selected regression308passed26.28s,1991deselected.",
     "remaining": "Return rounding, source-tax eligibility automation, historical credits/capacity/reductions, local taxes and persisted annual API/UI/reports."
   },
+  "return_rounding_and_current_national_settlement": {
+    "validation": "78 focused tests passed2.60s;326Japan-selected regression tests passed22.27s,1991deselected. Monetary-line versus ratio rounding, sequential limits/payment conservation, credit-before-final-truncation, independent payable/refundable balances and source hash verified.",
+    "source": {
+      "file": "database/raw/jp/jp.nta.tsusoku119.20261122.html",
+      "url": "https://www.nta.go.jp/law/tsutatsu/kihon/tsusoku/09/01/119.htm",
+      "sha256": "bc7f4b5a760ac218b7beddb6e4e58505b643bac47b36bb0f2d070d3d7574d0b3"
+    },
+    "authority": "NTA General Tax Act Basic Circular119 paragraph6 discards fractional yen in intermediate calculated amounts. Paragraph1(1) identifies corporate tax after tax credits as a determined amount. Existing archived General Tax Act119 establishes final hundred-yen truncation.",
+    "implementation": "Schedule6(2) monetary line15 truncates the90percent cap to whole yen, line16 uses the smaller eligible foreign income, and limits17/52/62 truncate only after multiplication by the exact ratio. Credits then use sequential rounded limits. Preserve the prior unrounded comparison separately.",
+    "settlement": "current_national_settlement derives references from saved facts, subtracts rounded current credits, truncates each resulting national tax toJPY100 and offsets each authority's interim-return liability separately. Refunds and payments are not netted between taxes. First2026 defence periods have no prior-year defence interim liability.",
+    "remaining": "Current national settlement is a component, not a complete annual workflow. Municipal/prefectural credits, historical capacity/excess and foreign-tax reductions, saved API/UI/reports and wider business acceptance remain pending.",
+    "development_reference": "CPython official GitHub Fraction documentation reviewed; exact numerator/denominator integer division retained, no floating point, copied code or new dependency."
+  },
   "development_reference": "Official pydantic/pydantic GitHub validators documentation searched before implementation. Existing project amount validation retained; standard-library Fraction preserves exact intermediate arithmetic. No copied code or new dependency adopted.",
   "overall_goal": "Incomplete. Original corporate/personal coverage and real business acceptance remain required."
 }
