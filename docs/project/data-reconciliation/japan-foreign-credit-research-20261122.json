@@ -1,6 +1,6 @@
 {
   "date": "2026-11-22",
-  "status": "current_national_allocation_component_only_annual_goal_incomplete",
+  "status": "current_national_settlement_and_local_allocation_components_annual_goal_incomplete",
   "validation": "19 new component/source-integrity tests passed1.15s;267 Japan-selected income tests passed26.41s,1991deselected. This does not validate an annual foreign-credit UI/API, which is not enabled yet.",
   "sources": [
     {
@@ -66,5 +66,14 @@
     "development_reference": "CPython official GitHub Fraction documentation reviewed; exact numerator/denominator integer division retained, no floating point, copied code or new dependency."
   },
   "development_reference": "Official pydantic/pydantic GitHub validators documentation searched before implementation. Existing project amount validation retained; standard-library Fraction preserves exact intermediate arithmetic. No copied code or new dependency adopted.",
-  "overall_goal": "Incomplete. Original corporate/personal coverage and real business acceptance remain required."
+  "current_local_allocation": {
+    "file": "packages/income_tax/japan_local_foreign_credit.py",
+    "scope": "Current prefectural and municipal allocation with verified statutory caps, employee weights and pre-final-rounding available levies. National limits are recomputed from verified national inputs. No history, group adjustments, reorganizations or Tokyo special-ward composition.",
+    "authority": "Archived Osaka current Form20-4 and instructions6-11, and prefectural Form7-2 instructions5-9. Source URLs and SHA256 are retained in the module and checked by tests.",
+    "ordering": "Municipal pool deducts the prefectural limit, not actual prefectural credit used. A prefectural levy shortfall cannot increase municipal credit. Each employee-weight allocation truncates fractional yen independently.",
+    "balances": "Separate tax above all current limits, unrelieved allocated tax due to levy shortfall, and unallocated rounding residual. None is automatically approved as a historical carryforward.",
+    "validation": "19 focused tests passed in0.92s;345 Japan-selected regression tests passed in32.51s,1991 deselected. Annual API/UI acceptance remains pending.",
+    "remaining": "Automatic standard/actual-rate limit derivation, historical balances and reductions, saved annual API/UI/report integration and full business acceptance. Available levies and caps still require verified workpaper inputs."
+  },
+  "overall_goal": "Incomplete. Original corporate/personal coverage and real business acceptance remain required. Priority: cross-border corporate income and foreign tax credits."
 }
