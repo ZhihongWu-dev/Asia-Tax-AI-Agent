@@ -405,6 +405,10 @@ class ChatService(DomainCoordinator):
                             for m in doc.get('messages', [])],
                '_ui_locale': locale, '_guard_extraction': self.turner is plan_turn and self.extractor is None}
         if entry_hint in ('auto', 'reference_lookup') and not reply_to_question_id:
+            from packages.chat import catalog_research
+            catalog_request = catalog_research.request(text)
+            if catalog_request:
+                return catalog_research.prepare(doc, text, locale, catalog_request)
             from packages.chat import library_research
             if library_research.should_handle(doc, text):
                 from packages.agent.tracing import emit
