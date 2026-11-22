@@ -158,3 +158,27 @@ def current_national_settlement(case,workpaper,*,corporation_interim_liability,
             total_refundable=sum((v['refundable'] for v in settlements.values()),Decimal(0)),
             sources=current['sources']+[credits['sources'][-1]],
             stage='current_national_settlement_local_and_history_not_calculated')
+
+
+def current_standard_local_workpaper(case,workpaper,local_workpaper,**reference_options):
+    """Saved facts drive national references and standard local credit limits.
+
+    Local available levies and employee weights remain verified inputs. This
+    does not settle enterprise taxes, capitation, history or interim payments.
+    """
+    from .japan_local_foreign_credit import allocate_standard_current
+    current=current_credit_workpaper(case,workpaper,**reference_options)
+    reconciled=current['reconciliation']
+    inputs={key:reconciled[key] for key in (
+        'statutory_worldwide_income','foreign_income_before_exempt',
+        'foreign_income_exempt_from_foreign_tax','eligible_foreign_corporate_tax')}
+    inputs.update(current['reference_taxes'],
+        statutory_reference_amounts_and_current_tax_eligibility_verified=True,
+        no_history_group_or_special_credit_adjustments_verified=True)
+    allocation=allocate_standard_current(inputs,local_workpaper)
+    sources={s['doc_id']:s for s in current['sources']+
+        allocation['national_credit']['sources']+allocation['sources']}
+    return dict(policy_version='jp-saved-standard-local-credit-workpaper-20261122',currency='JPY',
+        source_reconciliation=reconciled,reference_taxes=current['reference_taxes'],
+        current_foreign_credit=allocation,sources=list(sources.values()),
+        stage='saved_current_credit_allocation_local_settlement_and_history_pending')

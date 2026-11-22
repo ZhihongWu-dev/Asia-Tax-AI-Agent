@@ -40,6 +40,34 @@ class Workpaper(BaseModel):
     no_history_groups_reorganizations_or_tokyo_special_ward_composition_verified: StrictBool
 
 
+class StandardWorkpaper(BaseModel):
+    """Standard statutory limits; callers cannot override derived caps."""
+    model_config=ConfigDict(extra='forbid')
+    prefectures: list[Filing]=Field(min_length=1,max_length=1000)
+    municipalities: list[Filing]=Field(min_length=1,max_length=1000)
+    standard_limits_without_actual_rate_election_verified: StrictBool
+    employee_weights_and_available_levies_verified: StrictBool
+    no_history_groups_reorganizations_or_tokyo_special_ward_composition_verified: StrictBool
+
+
+def allocate_standard_current(national_inputs,workpaper):
+    p=StandardWorkpaper.model_validate(workpaper)
+    if (p.standard_limits_without_actual_rate_election_verified is not True or
+            p.employee_weights_and_available_levies_verified is not True):
+        raise ValueError('Verify standard-limit election, employee weights and available levies')
+    national=current_national_return_credits(**national_inputs)
+    corporation_limit=int(national['corporation_credit_limit'])
+    result=allocate_current(national_inputs,dict(
+        prefectural_credit_limit=corporation_limit//100,
+        municipal_credit_limit=corporation_limit*6//100,
+        prefectures=p.prefectures,municipalities=p.municipalities,
+        statutory_limits_elections_weights_and_levies_verified=True,
+        no_history_groups_reorganizations_or_tokyo_special_ward_composition_verified=
+            p.no_history_groups_reorganizations_or_tokyo_special_ward_composition_verified))
+    result['limit_method']='standard_one_and_six_percent_of_corporation_credit_limit'
+    return result
+
+
 def allocate_current(national_inputs,workpaper):
     p=Workpaper.model_validate(workpaper)
     if (p.statutory_limits_elections_weights_and_levies_verified is not True or

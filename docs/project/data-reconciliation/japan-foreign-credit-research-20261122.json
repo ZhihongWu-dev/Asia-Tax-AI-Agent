@@ -75,5 +75,13 @@
     "validation": "19 focused tests passed in0.92s;345 Japan-selected regression tests passed in32.51s,1991 deselected. Annual API/UI acceptance remains pending.",
     "remaining": "Automatic standard/actual-rate limit derivation, historical balances and reductions, saved annual API/UI/report integration and full business acceptance. Available levies and caps still require verified workpaper inputs."
   },
+  "saved_standard_local_limits": {
+    "function": "japan_foreign_reconciliation.current_standard_local_workpaper",
+    "scope": "Saved ordinary receipts, expenses and verified eligible foreign payments derive national references and rounded corporation credit limit. Standard prefectural and municipal limits derive from that corporation limit at1percent and6percent, rather than combined national limits or manually supplied caps.",
+    "authority": "Osaka Form20-4 instructions7-8; current archived prefectural Form7-2 instructions6. Actual-rate elections remain a separate verified-input workflow.",
+    "validation": "19 new tests passed2.02s: all ten foreign catalog source jurisdictions, contract JSON roundtrip, foreign-exempt income changes, whole-yen limits, rejection of manual cap overrides and unverified elections, payment reconciliation and all combined source hashes.364 Japan-selected regression tests passed24.99s,1991deselected.",
+    "development_reference": "Official CPython GitHub fractions documentation reviewed before editing. Existing exact integer/Decimal arithmetic reused; no external implementation copied or dependency introduced.",
+    "remaining": "Available local levies and statutory employee weights still require verified evidence. This is not annual local settlement, historical carryforward approval or persisted API/UI/report acceptance."
+  },
   "overall_goal": "Incomplete. Original corporate/personal coverage and real business acceptance remain required. Priority: cross-border corporate income and foreign tax credits."
 }
