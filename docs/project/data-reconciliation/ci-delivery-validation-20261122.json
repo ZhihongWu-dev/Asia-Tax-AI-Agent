@@ -1,0 +1,48 @@
+{
+  "observed_at": "2026-11-22T10:45:53.8148431+08:00",
+  "commit": "0a67737c45f7222fb6ed7b9ee06d5bab182566fe",
+  "branch": "Zhihong-Wu",
+  "run_url": "https://github.com/ZhihongWu-dev/Asia-Tax-AI-Agent/actions/runs/44977068807",
+  "conclusion": "success",
+  "successful_jobs": 5,
+  "backend": {
+    "deselected": 27,
+    "seconds": 78.43,
+    "skipped": 6,
+    "passed": 2910
+  },
+  "browser": {
+    "duration": "4.3m",
+    "passed": 129
+  },
+  "postgres": {
+    "catalog_passed": 9,
+    "case_deletion_passed": 7
+  },
+  "windows_followup": {
+    "exit_code": 0,
+    "command": "python -X utf8 -m pytest tests/chat/test_worker_limits.py -q",
+    "seconds": 5.37,
+    "passed": 3
+  },
+  "limits": [
+    "CI does not prove full statutory or business acceptance.",
+    "Backend skips are three Windows tests covered by local followup and three PostgreSQL tests covered by dedicated job.",
+    "Production bundle size warning remains.",
+    "No application deployment or main push."
+  ],
+  "logs": [
+    {
+      "sha256": "57ccee00edb9ab4e2fd14a7c3fab486df7bf24f9bb3ac665af3539a413869d67",
+      "file_name": "ci-44977068807-python.log"
+    },
+    {
+      "sha256": "51bfc048c0f8fdbc42ab89583afa48e7663c028e1101e3d81ba3c6dddac6b249",
+      "file_name": "ci-44977068807-postgres.log"
+    },
+    {
+      "sha256": "25da3535cf61f8c3f7bdf8f192737045e638c60c0994b93df423005bc207e303",
+      "file_name": "ci-44977068807-browser.log"
+    }
+  ]
+}

@@ -27,9 +27,10 @@
         "osaka-full-browser-validation-20261119.json",
         "li-rule-preservation-audit-20261119.json",
         "changed-li-rule-evidence-20261119.json",
-        "optimizer-comparison-completion-20261122.json"
+        "optimizer-comparison-completion-20261122.json",
+        "ci-delivery-validation-20261122.json"
       ],
-      "limits": "Local regression and v5 golden/checker passed. Current129-case full browser suite passed in9.1m, including transfers, rentals and Osaka. Hosted identity/provider acceptance is unproven; original/v4 comparison logs each show12 completed cases and0 failures (observed2026-11-22). Delivery is local-only."
+      "limits": "Latest remote Zhihong-Wu commit0a67737 passed all5 CI jobs:2910 backend tests,129 browser tests and16 dedicated PostgreSQL tests. Three Windows-specific tests passed locally. Hosted identity/provider and full business acceptance remain unproven. No main push, application deployment or cloud database mutation."
     },
     {
       "requirement": "Corporate and personal income tax across all 11 dividend jurisdictions",
@@ -138,7 +139,7 @@
   ],
   "latest_checks": {
     "backend": "2593 unique application tests passed across full run and58-test pinned-engine followup;35 skipped engine cases recovered,4 environment skips remain,27 integration deselections",
-    "browser": "129passed9.1m,exit0,retries0 at14b0164 runtime; includes Osaka, Tokyo, personal foreign transfers/rentals and existing application flows.",
+    "browser": "129passed4.3m on Linux Chromium at0a67737 in successful remote CI run44977068807; includes latest official Osaka ward guard and all prior application browser flows.",
     "korean_archive": "1 targeted test passed after backend collection; 14 exact originals, 12 newly restored",
     "thai_source_snapshots": "20 focused tests and 1455 income-tax tests passed; four original hashes verified in persisted/report flow",
     "china_business_sources": "1466 income/report tests passed; final provenance metadata verified by40 focused tests",
@@ -214,7 +215,8 @@
     "catalog_integrity": "At292c24f,6 business CSV and SQLite hashes match reviewed snapshot;all7 SQLite row counts unchanged.",
     "current_22_selections": "Atb19b742,executed frontend policies through Vite SSR for original22 inputs:all11 countries x2subjects have at least1policy. This is availability only.",
     "three_synthetic_cases": "3 HTTP round-trip scenarios passed6.55s; independent amount expectations, country cap/expiry, separate authority balances, SQLite reopen,replay,bilingual reports and invalid-input rejection.",
-    "optimizer_comparison_completion": "Observed2026-11-22:original andv4 each completed12 cases;terminal summaries report0 failures;original process IDs absent. Historical exit codes not recovered."
+    "optimizer_comparison_completion": "Observed2026-11-22:original andv4 each completed12 cases;terminal summaries report0 failures;original process IDs absent. Historical exit codes not recovered.",
+    "remote_delivery_ci": "At0a67737,run44977068807 succeeded all5 jobs:2910 backend passed,6 skipped,27 deselected;129 browser passed4.3m;16 PostgreSQL passed. All3 Windows-specific skipped tests recovered locally in5.37s;the other3 skips covered by PostgreSQL job. Production bundle-size warning remains."
   },
   "user_input": "User authorized three synthetic cases (completed), then requested uploading accumulated work to Zhihong-Wu and will perform consolidated testing.",
   "business_acceptance_gate": {
