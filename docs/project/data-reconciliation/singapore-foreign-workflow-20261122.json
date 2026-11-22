@@ -1,0 +1,32 @@
+{
+  "status": "ordinary_direct_foreign_credit_workflow_verified",
+  "policy": "sg_company_foreign_direct_ya2026",
+  "scope": "Singapore resident company, calendar2025 basis period YA2026, ordinary positive trade/passive sources, direct tax and no carried losses.",
+  "implementation": [
+    "Source-country caps with trade gross allocation and passive net bases",
+    "Optional qualifying pooling including partial elections",
+    "Saved income coverage, deduction reconciliation and paid-tax bounds",
+    "Derived corporate gross tax, credit before rebate, separate cash grant and prepaid balance",
+    "Saved API snapshots, restart/replay and invalid-input atomicity",
+    "Bilingual readable reports and browser entry/results"
+  ],
+  "validation": {
+    "income_and_reporting_passed": 1898,
+    "seconds": 33.18,
+    "browser_passed": 2,
+    "browser_seconds": 21.0,
+    "typescript": "passed before final browser test additions"
+  },
+  "official_examples": {
+    "individual_credit_2dp": "6763.08",
+    "pooled_credit_2dp": "8159.49",
+    "example_year": 2021,
+    "note": "Historical examples used for allocation arithmetic;YA2026 rebate follows current corporate source."
+  },
+  "current_year_reference": "https://www.iras.gov.sg/quick-links/tax-rates/corporate-income-tax-rates",
+  "limits": [
+    "Treaty entitlement, taxable receipt status and expense eligibility remain verified inputs.",
+    "Underlying/deemed credits, losses and special-rate regimes are not covered.",
+    "Results precede filing rounding;full goal remains incomplete."
+  ]
+}

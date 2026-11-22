@@ -37,7 +37,7 @@ def calculate(case: IncomeTaxCase, basis):
     elif (case.period_start.isoformat(), case.period_end.isoformat()) != periods[jur]:
         raise ValueError('Saved basis period is not supported by this policy')
     expected = {'cn_company_2026': 'company', 'cn_small_company_2026': 'company', 'cn_comprehensive_2026': 'individual', 'cn_business_2026': 'individual',
-                'sg_company_ya2026': 'company', 'sg_resident_ya2026': 'individual',
+                'sg_company_ya2026': 'company', 'sg_company_foreign_direct_ya2026': 'company', 'sg_resident_ya2026': 'individual',
                 'hk_salaries_2025_26': 'individual', 'my_company_2026': 'company',
                 'my_individual_2026': 'individual', 'my_dividend_2026': 'individual', 'th_company_2026':'company', 'th_resident_2026':'individual', 'th_dividend_2026':'individual', 'th_foreign_income_2026':'individual',
                 'vn_personal_transfer_2026': 'individual', 'vn_employment_2026': 'individual', 'vn_company_2026': 'company', 'vn_business_2026': 'individual', 'vn_property_rental_2026': 'individual',
@@ -210,6 +210,9 @@ def calculate(case: IncomeTaxCase, basis):
         if case.claimed_deductions != manual:
             raise ValueError('Saved deductions must equal expenses, donation deduction, CPF and other relief claims before the overall cap; exclude automatic earned income relief')
         result = singapore_employment.resident_employment_tax(gross, assessment_year=2026, **args)
+    elif policy == 'sg_company_foreign_direct_ya2026':
+        from .singapore_foreign_assessment import assess
+        result = assess(case, **args)
     elif policy == 'sg_company_ya2026':
         if args.pop('ordinary_regime_confirmed') is not True:
             raise ValueError('Ordinary Singapore regime must be confirmed')

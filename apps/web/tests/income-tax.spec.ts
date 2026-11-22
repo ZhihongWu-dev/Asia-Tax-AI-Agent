@@ -1158,3 +1158,41 @@ for(const variant of ['plain','transfers','rental'])test(`China personal foreign
   await openIncome(page);
   await expect(page.getByRole('region',{name:'Osaka local tax details',exact:true})).toContainText('2815700');
 });
+
+for(const pooled of [false,true])test(`Singapore foreign credit saves and exports pooled=${pooled}`,async({page})=>{
+ const form=await openIncome(page);
+ for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','sg'],['Tax residency','resident']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+ for(const [name,value] of [['Period start','2025-01-01'],['Period end','2025-12-31'],['Claimed deductions (blank if unknown)','16100'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+ await form.getByRole('button',{name:'Add income',exact:true}).click();
+ await form.getByRole('button',{name:'Add income',exact:true}).click();
+ for(const [n,category,country,gross,tax] of [[1,'business','sg','300000','0'],[2,'business','my','50000','10000'],[3,'interest','jp','20000','1000']] as const){
+  const row=form.getByRole('group',{name:`Income ${n}`,exact:true});
+  await row.getByRole('combobox',{name:'Income category',exact:true}).selectOption(category);
+  await row.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption(country);
+  for(const [name,value] of [['Gross income',gross],['Foreign tax paid (blank if unknown)',tax],['Income description','Synthetic independently verified foreign credit source']])await row.getByLabel(name,{exact:true}).fill(value);
+ }
+ await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+ const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+ await calc.getByLabel('Applicable regime').selectOption('sg_company_foreign_direct_ya2026');
+ for(const n of [1,2])await calc.getByRole('combobox',{name:`Income ${n}: trade source group`,exact:true}).selectOption('1');
+ for(const [n,tax] of [[2,'10000'],[3,'1000']] as const){
+  await calc.getByLabel(`Income ${n}: eligible direct foreign tax`,{exact:true}).fill(tax);
+  await calc.getByLabel(`Income ${n}: foreign headline rate (%)`,{exact:true}).fill('20');
+  await calc.getByRole('combobox',{name:`Income ${n}: elect pooling`,exact:true}).selectOption(String(pooled));
+  await calc.getByRole('combobox',{name:`Income ${n}: same-income credit entitlement verified`,exact:true}).selectOption('true');
+ }
+ for(const [name,value] of [['trade_1: verified expenses and capital allowances','15000'],['passive_3: verified expenses and capital allowances','100'],['Approved donation deduction','1000'],['Prepaid tax for this period','20000']])await calc.getByLabel(name,{exact:true}).fill(value);
+ await calc.getByRole('combobox',{name:'Income exemption scheme',exact:true}).selectOption('partial');
+ for(const name of ['Start-up eligibility confirmed','Cash grant eligible'])await calc.getByRole('combobox',{name:name,exact:true}).selectOption('false');
+ for(const name of ['Residence, same income and source allocation verified','Ordinary nonnegative income, direct taxes and no carried losses verified'])await calc.getByRole('combobox',{name:name,exact:true}).selectOption('true');
+ await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified trade group allocation, taxable foreign receipts and direct foreign tax entitlement.');
+ await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
+ const result=page.getByRole('article',{name:'Saved calculation result'});
+ await expect(result).toContainText(pooled?'17289.252':'17987.457');
+ await expect(result.getByRole('region',{name:'Singapore foreign credit details'})).toContainText('trade_1');
+ const downloading=page.waitForEvent('download');await result.getByRole('button',{name:'Download calculation record'}).click();
+ const report=await readFile((await (await downloading).path())!,'utf8');
+ expect(report).toContain('Singapore direct foreign credit details');
+ expect(report).toContain(pooled?'8159.494':'6763.084');
+ await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(pooled?'17289.252':'17987.457');
+});

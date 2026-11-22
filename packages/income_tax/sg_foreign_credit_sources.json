@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "file": "database/raw/sg/sg.iras.ftc-source-by-source.20261122.pdf",
+      "url": "https://www.iras.gov.sg/docs/default-source/uploadedfiles/pdf/ftc-example---source-by-source-and-country-by-country94ca45bb62a24b6ba55318ece6ec979a.pdf?sfvrsn=ee680e4a_7",
+      "sha256": "4669c2b70d472224a1e273def71bfdcf3a20f24a427f868cc5407ec53a77a53e",
+      "doc_id": "sg.iras.ftc-source-by-source.20261122",
+      "retrieved_on": "2026-11-22",
+      "locator": "Official worked example, pages1-2; historical YA2021 allocation example"
+    },
+    {
+      "file": "database/raw/sg/sg.iras.ftc-pooling.20261122.pdf",
+      "url": "https://www.iras.gov.sg/docs/default-source/uploadedfiles/pdf/ftc-example---foreign-tax-credit-pooling4f16fed8066744ac91e5f2fd8e9bd2a7.pdf?sfvrsn=bb71bad3_9",
+      "sha256": "23cc6bc50cf850d905680656c8605dd7922f6d23df9833bb06bc5ee7048d8fe8",
+      "doc_id": "sg.iras.ftc-pooling.20261122",
+      "retrieved_on": "2026-11-22",
+      "locator": "Official worked example, pages1-2; historical YA2021 allocation example"
+    }
+  ]
+}

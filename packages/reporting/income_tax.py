@@ -55,6 +55,29 @@ def render(run, locale='zh'):
             ('local_corporation_balance_due','地方法人税补退余额','Local corporation-tax balance')]:
         if key in result:
             lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
+    if result.get('policy_version') == 'sg-company-foreign-direct-ya2026-20261122':
+        credit = result['foreign_credit']
+        lines += ['', '## ' + say('???????????', 'Singapore direct foreign credit details'), '',
+            say('????????????????????????????????????????????????????????????????',
+                'Caps apply by source and country; elected qualifying income is pooled separately. Credit precedes the CIT rebate. The separate cash grant is not deducted again from the balance. Amounts precede filing rounding.'), '',
+            '| ' + say('?? | ?? | ??????? | ?????? | ?? | ????',
+                'Source | Country | Singapore tax limit | Eligible foreign tax | Pooled | Individual credit') + ' |',
+            '| --- | --- | --- | --- | --- | --- |']
+        for row in credit['sources']:
+            values = [row['source_id'], row['country'].upper(), row['singapore_tax_limit'],
+                row['eligible_foreign_tax'], say('?','Yes') if row['pool_elected'] else say('?','No'),
+                say('????','Included in pool') if row['individual_credit'] is None else row['individual_credit']]
+            lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
+        lines += ['', '| ' + say('?? | ??', 'Item | Amount') + ' |', '| --- | --- |']
+        for data,key,zh,en in [(credit,'pooled_singapore_tax_limit','??????','Pooled credit limit'),
+                (credit,'pooled_foreign_tax','??????','Pooled foreign tax'),
+                (credit,'pooled_credit','?????','Pooled credit'),
+                (result,'allowed_tax_setoff','??????','Total foreign credit'),
+                (result,'tax_before_rebate','????????','Tax after credit before rebate'),
+                (result,'cit_rebate','?????','CIT rebate'),
+                (result,'cash_grant_separate','??????','Separate cash grant'),
+                (result,'prepaid_tax','????','Prepaid tax')]:
+            lines.append(f'| {_text(say(zh,en))} | {_text(data[key])} |')
     if result.get('tokyo_local'):
         local = result['tokyo_local']
         lines += ['', '## ' + say('东京23区地方税明细', 'Tokyo 23-ward local tax details'), '',
