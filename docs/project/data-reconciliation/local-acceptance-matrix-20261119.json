@@ -80,7 +80,10 @@
         "china-personal-rental-research-20261119.md",
         "japan-osaka-annual-assessment-20261119.json",
         "osaka-full-browser-validation-20261119.json",
-        "income-workflow-availability-current-audit-20261119.json"
+        "income-workflow-availability-current-audit-20261119.json",
+        "malaysia-nonresident-reconciliation-20261122.json",
+        "singapore-foreign-workflow-20261122.json",
+        "uae-foreign-workflow-20261122.json"
       ],
       "limits": "Current129-case browser suite includes representative corporate/personal workflows, Tokyo/Osaka ordinary local company scopes and China foreign-income transfers/rentals. It does not establish every income type, residency, special regime or filing obligation."
     },
@@ -120,9 +123,10 @@
         "income-source-audit-personal-foreign-20261119.json",
         "income-source-audit-rental-20261119.json",
         "income-source-audit-osaka-20261119.json",
-        "income-source-audit-wards-20261119.json"
+        "income-source-audit-wards-20261119.json",
+        "uae-foreign-workflow-20261122.json"
       ],
-      "limits": "At7fa687c,1868 income/report tests passed;175 successful assessments across35 policies produced126 recursively verified source records,0 unresolved. Archived-file/hash integrity only; legal completeness and actual business acceptance remain unproven."
+      "limits": "At 99fcbf1, 1924 income/report tests passed; 186 successful assessments across 37 policies produced 129 recursively verified source records, 0 unresolved. This proves archived-file/hash integrity for observed results, not legal completeness or full business acceptance."
     },
     {
       "requirement": "Repeated validation until actual business requirements are met",
@@ -132,7 +136,10 @@
         "income-business-scope-audit-20261119.json",
         "japan-local-source-review-20261119.json",
         "vietnam-relief-credit-order-review-20261119.json",
-        "three-synthetic-business-cases-20261119.json"
+        "three-synthetic-business-cases-20261119.json",
+        "malaysia-nonresident-reconciliation-20261122.json",
+        "singapore-foreign-workflow-20261122.json",
+        "uae-foreign-workflow-20261122.json"
       ],
       "limits": "User authorized synthetic cases;three new concrete scenarios passed. This removes the requirement to wait for customer examples for this validation. Broader regime gaps and Vietnam combined foreign-credit/relief ordering remain unresolved; full goal not complete."
     }
@@ -216,7 +223,9 @@
     "current_22_selections": "Atb19b742,executed frontend policies through Vite SSR for original22 inputs:all11 countries x2subjects have at least1policy. This is availability only.",
     "three_synthetic_cases": "3 HTTP round-trip scenarios passed6.55s; independent amount expectations, country cap/expiry, separate authority balances, SQLite reopen,replay,bilingual reports and invalid-input rejection.",
     "optimizer_comparison_completion": "Observed2026-11-22:original andv4 each completed12 cases;terminal summaries report0 failures;original process IDs absent. Historical exit codes not recovered.",
-    "remote_delivery_ci": "At0a67737,run44977068807 succeeded all5 jobs:2910 backend passed,6 skipped,27 deselected;129 browser passed4.3m;16 PostgreSQL passed. All3 Windows-specific skipped tests recovered locally in5.37s;the other3 skips covered by PostgreSQL job. Production bundle-size warning remains."
+    "remote_delivery_ci": "At0a67737,run44977068807 succeeded all5 jobs:2910 backend passed,6 skipped,27 deselected;129 browser passed4.3m;16 PostgreSQL passed. All3 Windows-specific skipped tests recovered locally in5.37s;the other3 skips covered by PostgreSQL job. Production bundle-size warning remains.",
+    "cross_border_corporate": "China direct-credit workflow retained; Singapore ordinary YA2026 direct-credit and optional pooling workflow, and UAE ordinary 2026 income-by-income direct-credit workflow now integrated with saved cases, UI and bilingual reports. See scope exclusions in the respective evidence files.",
+    "income_report_current": "1924 passed in 46.59s at UAE workflow checkpoint 99fcbf1; source audit:186 assessments,37 policies,129 records,0 unresolved; production build passed."
   },
   "user_input": "User authorized three synthetic cases (completed), then requested uploading accumulated work to Zhihong-Wu and will perform consolidated testing.",
   "business_acceptance_gate": {
@@ -228,5 +237,7 @@
       "Mixed and special regimes not covered by representative cases"
     ],
     "interpretation": "Country coverage does not establish every tax situation. Existing planning gaps are not automatically merge deletions. No full-business completion claim; original objective remains active."
-  }
+  },
+  "last_reconciled": "2026-11-22",
+  "business_priority": "Cross-border corporate income and foreign tax credits; corporate and personal coverage across all 11 jurisdictions remains required."
 }

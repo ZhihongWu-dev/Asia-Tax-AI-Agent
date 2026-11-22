@@ -8,15 +8,28 @@ supersedes earlier local-only / no-push instructions for this branch delivery.
 Do not push or merge into `main`, deploy the application, or modify cloud databases.
 The branch snapshot is a testing handoff, not a claim of complete business acceptance.
 
-Latest checks:1,868 income/report tests and126 archived-source records verified;
-129-case full browser baseline passed before the official Osaka ward guard,
-followed by its focused browser validation. Three newly authorized synthetic
-business cases also passed HTTP calculation/save/reopen/replay/report and
-invalid-input checks. See `data-reconciliation/three-synthetic-business-cases-20261119.json`.
-Known rule and special-regime limits remain recorded in the acceptance matrix.
+Latest verified implementation checkpoint: `99fcbf1` on `Zhihong-Wu`.
+The user prioritizes cross-border corporate income and foreign tax credits;
+the original corporate and personal coverage across all 11 jurisdictions remains required.
 
+- 1,924 income/report tests passed; the recursive source audit verified 129
+  records across 186 successful assessments and 37 policies, with no unresolved
+  archived files or hashes. This is not proof of legal completeness.
+- Singapore ordinary YA2026 direct credits and optional qualifying pooling,
+  and UAE ordinary 2026 income-by-income credits, now have saved-case, UI and
+  bilingual-report workflows. Their excluded regimes remain explicit.
+- Malaysia ordinary nonresident personal assessments now require reconciled
+  source workpapers and reject personal reliefs.
+- Three authorized synthetic business cases remain part of the acceptance
+  evidence. Broader regime gaps and Vietnam combined relief/credit ordering
+  remain unresolved; overall business acceptance is incomplete.
 
-## Current delivery scope (2026-11-19)
+See the [acceptance matrix](data-reconciliation/local-acceptance-matrix-20261119.json),
+[Singapore evidence](data-reconciliation/singapore-foreign-workflow-20261122.json),
+[UAE evidence](data-reconciliation/uae-foreign-workflow-20261122.json), and
+[Malaysia evidence](data-reconciliation/malaysia-nonresident-reconciliation-20261122.json).
+
+## Historical local-only instruction (2026-11-19; superseded by latest delivery instruction)
 
 The user retains the original Li data/function integration and corporate plus
 personal income-tax business acceptance requirements across all dividend
@@ -30,7 +43,7 @@ functional and business acceptance requirements. Historical references below to
 cloud rollout, remote branch delivery, or main promotion are superseded as delivery actions, not as proof
 that unresolved business rules have been accepted.
 
-## Current verified checkpoint (2026-11-19)
+## Historical verified checkpoint (2026-11-19)
 
 Delivery remains local-only on `codex/catalog-closure-delivery`; neither cloud
 publication nor a merge into `main` is authorized. Overall business acceptance
