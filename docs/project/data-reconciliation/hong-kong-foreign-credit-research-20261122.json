@@ -1,5 +1,12 @@
 {
   "status": "fsie_credit_component_implemented_annual_workflow_pending",
+  "excess_tax_basis_component": {
+    "validation": "71 Hong Kong component/calculation/reconciliation tests passed10.40s; exact historical example, below/at/above credit limit, decimal conservation and invalid input boundaries covered.",
+    "file": "packages/income_tax/hong_kong_credit_basis.py",
+    "authority": "Archived Cap112 Section50(3),(5),(6) and IRD DIPN44 paragraph131 Example5 notes1/2. Official DIPN44 URL reopened2026-11-22; document dated2008, historical16percent rate used only as a regression fixture.",
+    "formula": "For established statutory credit rate r, source income I before foreign-tax deduction, and eligible foreign tax F: C=min(F,r*(I-F)/(1-r)); deduction=F-C; reconciled income=I-deduction. Exact fractions retained before assessment rounding.",
+    "limits": "Requires verified rate and deduction eligibility,0<=r<1 and F<=I. Does not derive current-year/two-tier average rates, gross-ups, losses, annual reduction ordering or final assessment. Annual workflow remains pending."
+  },
   "statutory_followup": {
     "source": "database/raw/hk/hk.cap112.rtf",
     "sha256": "e28849ff385862416718714208c9fa05d27b022ca475b687c6f1c4591a100134",
