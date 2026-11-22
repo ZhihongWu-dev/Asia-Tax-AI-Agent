@@ -8,6 +8,7 @@ from decimal import Decimal
 from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from .income_tax import Money
+from packages.income_tax.uae_foreign_assessment import SavedWorkpaper as UAEForeignWorkpaper
 from packages.income_tax.singapore_foreign_assessment import SavedWorkpaper
 from packages.income_tax.china_foreign_assessment import DirectWorkpaper
 from packages.income_tax.china_personal_foreign_assessment import PersonalWorkpaper
@@ -95,6 +96,12 @@ class SGForeignCompany(Basis):
     exemption_scheme: Literal['partial', 'startup', 'none']
     startup_eligibility_confirmed: StrictBool
     cash_grant_eligible: StrictBool
+    prepaid_tax: Money
+
+
+class UAEForeignCompany(Basis):
+    policy: Literal['ae_company_foreign_direct_2026']
+    workpaper: UAEForeignWorkpaper
     prepaid_tax: Money
 
 
@@ -532,5 +539,5 @@ class KRSalary(Basis):
 
 
 Assessment = Annotated[CNCompany | CNForeignCompany | CNForeignIndividual | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGForeignCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
-                       HKProfits | HKSalaries | HKProperty | AEOrdinary | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness | VNRental,
+                       HKProfits | HKSalaries | HKProperty | AEOrdinary | UAEForeignCompany | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness | VNRental,
                        Field(discriminator='policy')]

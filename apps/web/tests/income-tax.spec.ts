@@ -1201,3 +1201,25 @@ for(const {pooled,split} of [{pooled:false,split:false},{pooled:true,split:false
  expect(report).toContain(pooled?'8159.494':'6763.084');
  await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(pooled?'17289.252':'17987.457');
 });
+
+test('UAE foreign credit saves forfeited excess and exports report',async({page})=>{
+ const form=await openIncome(page);
+ for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','ae'],['Tax residency','resident'],['Income category','royalty'],['Income source jurisdiction','sg']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+ for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Gross income','1000000'],['Foreign tax paid (blank if unknown)','100000'],['Income description','Synthetic taxable foreign royalty with linked expenses'],['Claimed deductions (blank if unknown)','200000'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+ await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+ const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+ await calc.getByLabel('Applicable regime').selectOption('ae_company_foreign_direct_2026');
+ await calc.getByRole('combobox',{name:'Income 1: source group',exact:true}).selectOption('1');
+ for(const [name,value] of [['Source 1: Taxable additions','0'],['Source 1: Economically linked deductions','200000'],['Source 1: Exempt income included in saved gross','0'],['Source 1: Eligible foreign tax','100000'],['Prepaid tax for this period','1000']])await calc.getByLabel(name,{exact:true}).fill(value);
+ for(const name of ['Source 1: treatment and credit eligibility verified','Ordinary resident company without relief elections or carried losses verified','Distinct sources and linked expenses verified','Foreign tax eligibility, treaty limits and FX verified'])await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+ await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified taxable royalty, economically linked expenses and same-income direct foreign taxes.');
+ await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
+ const result=page.getByRole('article',{name:'Saved calculation result'});
+ await expect(result).toContainText('-1000');
+ const detail=result.getByRole('region',{name:'UAE foreign credit details'});
+ await expect(detail).toContainText('61750');await expect(detail).toContainText('38250');
+ const downloading=page.waitForEvent('download');await result.getByRole('button',{name:'Download calculation record'}).click();
+ const report=await readFile((await (await downloading).path())!,'utf8');
+ expect(report).toContain('UAE income-by-income foreign credit');expect(report).toContain('61750');
+ await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('61750');
+});

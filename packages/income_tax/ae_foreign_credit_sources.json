@@ -1,0 +1,19 @@
+{
+  "sources": [
+    {
+      "url": "https://tax.gov.ae/Datafolder/Files/Guides/CT/Taxation%20of%20Foreign%20Source%20Income%20-%20EN%20-%2016%2011%202023.pdf",
+      "file": "database/raw/ae/ae.fta.foreign-income.20261122.en.pdf",
+      "sha256": "9ae54fc778564a275b0c4a1e7bd4fe7d94481e9aa17c305a4b9a3a0209070cd0",
+      "physical_pages": [
+        40,
+        41,
+        42,
+        43
+      ],
+      "doc_id": "ae.fta.foreign-income.20261122",
+      "title": "FTA CTGFSI1 Foreign Source Income",
+      "locator": "Section8.3, examples10-12",
+      "retrieved_on": "2026-11-22"
+    }
+  ]
+}

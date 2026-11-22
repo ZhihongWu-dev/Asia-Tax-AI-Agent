@@ -78,6 +78,22 @@ def render(run, locale='zh'):
                 (result,'cash_grant_separate','单列现金补助','Separate cash grant'),
                 (result,'prepaid_tax','预缴税款','Prepaid tax')]:
             lines.append(f'| {_text(say(zh,en))} | {_text(data[key])} |')
+    if result.get('policy_version') == 'ae-ordinary-foreign-credit-20261122':
+        lines += ['', '## ' + say('阿联酋逐项境外抵免', 'UAE income-by-income foreign credit'), '',
+            say('按每项境外净所得分摊本国税额限额。未用境外税款不得跨来源抵扣、结转或作为费用扣除。以下金额为申报取整前值。',
+                'Each net foreign source has its own allocated UAE tax limit. Unused foreign tax cannot offset another source, carry forward or back, or be deducted as an expense. Values precede filing rounding.'), '',
+            '| ' + say('来源 | 国家 | 净所得 | 合资格境外税 | 抵免限额 | 已用抵免 | 不可结转余额',
+                'Source | Country | Net income | Eligible foreign tax | Credit limit | Credit used | Forfeited excess') + ' |',
+            '| --- | --- | --- | --- | --- | --- | --- |']
+        for row in result['source_credits']:
+            values = [row['source_id'], row['country'].upper(), row['net_taxable_income'],
+                row['eligible_foreign_tax'], row['credit_limit'], row['credit_used'], row['forfeited_excess']]
+            lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
+        lines += ['', '| ' + say('项目 | 金额', 'Item | Amount') + ' |', '| --- | --- |']
+        for key,zh,en in [('allowed_foreign_tax_credit','境外抵免合计','Total foreign credit'),
+                ('forfeited_excess','不可结转余额合计','Total forfeited excess'),
+                ('prepaid_tax','预缴税款','Prepaid tax')]:
+            lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
     if result.get('tokyo_local'):
         local = result['tokyo_local']
         lines += ['', '## ' + say('东京23区地方税明细', 'Tokyo 23-ward local tax details'), '',

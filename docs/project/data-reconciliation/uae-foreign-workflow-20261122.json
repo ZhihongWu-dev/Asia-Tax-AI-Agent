@@ -1,0 +1,38 @@
+{
+  "status": "ordinary_resident_company_direct_credit_workflow_verified",
+  "policy": "ae_company_foreign_direct_2026",
+  "scope": "Calendar2026 ordinary standalone resident company;nonnegative income sources;no relief elections or carried losses.",
+  "changes": [
+    "Weighted-average UAE tax cap per foreign income source;no pooling",
+    "Distinct saved-source groups with linked expense reconciliation,additions and exempt-income separation",
+    "Paid foreign tax bound;zero domestic foreign credit;forfeited excess",
+    "Saved API,SQLite reopen,replay,invalid-input atomicity",
+    "Bilingual readable report and browser save/reopen/download"
+  ],
+  "official_examples": {
+    "10_final_tax": "816250",
+    "11_final_tax": "0",
+    "11_forfeited": "61750",
+    "12_final_tax": "2375",
+    "source": "FTA CTGFSI1 section8.3"
+  },
+  "validation": {
+    "income_report_passed": 1924,
+    "seconds": 46.59,
+    "source_audit": {
+      "successful_assessments": 186,
+      "policies": 37,
+      "distinct_records": 129,
+      "unresolved": 0
+    },
+    "browser_passed": 1,
+    "browser_seconds": 25.4,
+    "build": "TypeScript and Vite passed;2286modules;mainJS853.18kB;bundle warning remains."
+  },
+  "limits": [
+    "Entitlement,treaty limits,FX,linked deductions and taxable-source classification remain verified inputs.",
+    "Excludes losses,free-zone,tax-group,minimum-top-up and relief-election regimes.",
+    "Filing rounding and full business acceptance remain unproven."
+  ],
+  "delivery": "Zhihong-Wu only;no main push,application deployment or cloud database mutation."
+}
