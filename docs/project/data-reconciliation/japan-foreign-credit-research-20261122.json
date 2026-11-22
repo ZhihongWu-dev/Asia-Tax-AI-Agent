@@ -35,6 +35,14 @@
     "scope": "Exact rational current national allocation using verified statutory reference inputs; no tax-reference derivation, return rounding, history, source eligibility or annual settlement. Defence applicability explicit and inapplicable nonzero reference rejected.",
     "next": "Derive reference taxes and eligible source taxes from saved case facts, resolve rounding and commencement, integrate local allocation/history and annual persisted API/UI/report flow."
   },
+  "saved_reconciliation": {
+    "file": "packages/income_tax/japan_foreign_reconciliation.py",
+    "scope": "Confirmed resident-company ordinary business/interest/rental/royalty source groups, exactly-once receipt coverage, whole-yen expenses/payment reconciliation and separately verified foreign-tax-exempt income. No loss, dividend, PE adjustment or group-regime inference.",
+    "validation": "49 focused reconciliation/allocation tests passed1.79s across ten foreign catalog jurisdictions; split receipts invariant, invalid duplicates/omissions/payment/expense/exemption cases rejected. Japan-selected regression297passed28.65s,1991deselected.",
+    "eligibility": "Eligible tax is a verified amount bounded by saved actual payments, not an automatic determination from country or withholding. High-tax exclusions, treaty entitlement, FX and period attribution require evidence.",
+    "next": "Derive statutory reference taxes, return rounding and separate authority settlements; incorporate historical excess/capacity and foreign-tax reductions before exposing a complete annual workflow.",
+    "additional_source_review": "NTA2026 Schedule6(2-2) instructions at https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hojin/shinkoku/itiran2026/pdf/06%2802-02%29-ki.pdf include reductions and qualifying reorganizations. Current paid-tax reconciliation is not a substitute for these adjustments."
+  },
   "development_reference": "Official pydantic/pydantic GitHub validators documentation searched before implementation. Existing project amount validation retained; standard-library Fraction preserves exact intermediate arithmetic. No copied code or new dependency adopted.",
   "overall_goal": "Incomplete. Original corporate/personal coverage and real business acceptance remain required."
 }
