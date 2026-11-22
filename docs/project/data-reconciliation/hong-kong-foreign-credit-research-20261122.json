@@ -1,5 +1,13 @@
 {
   "status": "fsie_credit_component_implemented_annual_workflow_pending",
+  "ordinary_2025_26_rate_workpaper": {
+    "file": "packages/income_tax/hong_kong_ordinary_credit_workpaper.py",
+    "behavior": "For the stated2025/26receipt period and verified ordinary corporate basis, derives rate income from saved reconciled receipts before the excess-tax deduction and excluding underlying-tax gross-up. Computes flat or eligible two-tier tax on that rate income, applies the3000reduction ceiling, retains the exact numerator/denominator, and passes the resulting rate into saved source/aggregate reconciliation. The final deduction-adjusted tax base remains a separate value.",
+    "interpretation_status": "Section50(6) expressly excludes the remainder of50(5) from rate-income computation. Applying Section100 reduction when computing tax on that rate income is a statutory interpretation corroborated by the historical HKICPA example, not a current IRD ruling on these cases. The workpaper therefore requires explicit ordinary annual basis and reduction-ordering verification; no final annual API policy is enabled.",
+    "authority_recheck": "IRD two-tier FAQ and2026-27Budget page reopened2026-11-22confirm corporate8.25percent first2million/16.5percent remainder and enacted2025/26reduction up to3000. e-Legislation again returned the client-configuration loader; archived consolidated Cap112remains the reviewed statutory text, not claimed as a fresh live download.",
+    "validation": "11focused tests passed2.79s; complete Hong Kong selection208passed28.35s. Covers direct-source rate derivation, exclusion of underlying gross-up only from rate base, distinction from excess-deduction base, two-tier threshold transition, zero-income/zero-tax handling, archived source hash verification, low Decimal context and rejected unverified/unsupported bases.",
+    "remaining": "Final annual policy acceptance, statutory allocation treatment where nonunique, assessment rounding and saved API/report/UI integration remain open. This workpaper does not close overall business acceptance."
+  },
   "saved_constraint_integration": {
     "file": "packages/income_tax/hong_kong_saved_credit_constraints.py",
     "behavior": "Reconciles confirmed IncomeTaxCase receipts and expenses, validates FSIE/treaty/underlying-tax eligibility, then connects exact source constraints to aggregate cap and deduction reconciliation. Facts-only models no longer require callers to invent a same-income Hong Kong tax limit before it has been calculated. The legacy source-limit interface remains available and tested.",
