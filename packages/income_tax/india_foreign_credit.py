@@ -49,6 +49,12 @@ def calculate(workpaper, *, normal_indian_tax, section206_tax=None):
         for s in p.sources:
             if s.country == 'in':
                 raise ValueError('Foreign credits require an overseas country')
+            # All overseas jurisdictions in the current catalog have an Indian
+            # agreement in force before TY2026-27 (database/treaty.csv).
+            # Failure to qualify for treaty benefits does not establish the
+            # absence of an agreement required by Section160(1).
+            if not s.treaty_applies:
+                raise ValueError('Section160 requires no agreement with India; all currently supported foreign jurisdictions have an agreement. Treaty ineligibility is not a non-treaty relief election')
             if s.disputed_tax_excluded_inr > s.foreign_tax_paid_inr:
                 raise ValueError('Excluded disputed tax exceeds foreign paid tax')
             if s.treaty_applies != (s.treaty_permitted_tax_inr is not None):
@@ -78,7 +84,7 @@ def calculate(workpaper, *, normal_indian_tax, section206_tax=None):
         credit = sum((r['normal_credit'] for r in rows), Decimal(0))
         minimum_credit = None if minimum is None else sum((r['section206_credit'] for r in rows), Decimal(0))
         excess = None if minimum_credit is None else max(Decimal(0), minimum_credit-credit)
-    return dict(policy_version='in-rule76-credit-component-20261122', currency='INR',
+    return dict(policy_version='in-rule76-credit-component-20261122-treaty-scope', currency='INR',
         source_credits=rows, normal_foreign_tax_credit=credit, section206_foreign_tax_credit=minimum_credit,
         section206_extra_credit_ignored_for_tax_credit_computation=excess,
         normal_tax_after_foreign_credit=normal-credit,

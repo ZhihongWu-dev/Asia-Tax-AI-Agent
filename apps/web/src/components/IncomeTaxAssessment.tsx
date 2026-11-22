@@ -223,7 +223,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       {result.result.policy_version==='ae-ordinary-foreign-credit-20261122'&&<UAEForeignResult result={result.result} index={index}/>}
       {result.result.policy_version==='my-schedule7-direct-credit-20261122'&&<MalaysiaForeignResult result={result.result} index={index}/>}
       {result.result.policy_version==='id-article24-credit-20261122'&&<IndonesiaForeignResult result={result.result} index={index}/>}
-      {result.result.policy_version==='in-company-foreign-ty2026-27-20261122'&&<IndiaForeignResult result={result.result} index={index}/>}
+      {['in-company-foreign-ty2026-27-20261122','in-company-foreign-ty2026-27-20261122-treaty-scope'].includes(String(result.result.policy_version))&&<IndiaForeignResult result={result.result} index={index}/>}
       {result.result.foreign_credit_reconciliation&&String(result.result.policy_version).includes('rd300')?<ThaiCompanyForeignResult result={result.result} index={index}/>:null}
       {result.result.policy_version==='sg-company-foreign-direct-ya2026-20261122'&&<SingaporeForeignResult result={result.result} index={index}/>}
       {result.result.tax_scope==='china_resident_ordinary_direct_foreign_credit_positive_bases'&&<ChinaForeignResult result={result.result} index={index}/>}

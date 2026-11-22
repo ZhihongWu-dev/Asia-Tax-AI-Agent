@@ -156,7 +156,7 @@ def render(run, locale='zh'):
                 values = [country.upper(), entry['evidence_reference'], entry['thai_period_end'], entry['payment_date'],
                     entry['allocated_tax_before_credit_limits'], status]
                 lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
-    if result.get('policy_version') == 'in-company-foreign-ty2026-27-20261122':
+    if result.get('policy_version') in ('in-company-foreign-ty2026-27-20261122', 'in-company-foreign-ty2026-27-20261122-treaty-scope'):
         lines += ['', '## ' + say('印度企业境外抵免', 'Indian company foreign tax credits'), '',
             say('来源税额和资格依据已保存的核定工作表；普通税额与最低税额的抵免分别计算。本表不自动认定费用、协定或申报资格，余额尚未加入利息及费用。',
                 'Source tax and eligibility follow the saved verified workpaper. Normal and minimum-tax credits are calculated separately. Expense, treaty and filing eligibility are not inferred; the balance excludes interest and fees.'), '',

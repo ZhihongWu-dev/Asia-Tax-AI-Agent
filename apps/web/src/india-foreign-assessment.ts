@@ -24,14 +24,14 @@ export function indiaForeignPolicy(input:IncomeTaxInput,values:Record<string,str
    if(normal)fields.push(field(`infc_${id}_mat_tax`,`来源${id}：归属本来源的最低税额`,`Source ${id}: Section206 tax attributable to this source`));
    fields.push({...field(`infc_${id}_treaty`,`来源${id}：适用税收协定`,`Source ${id}: treaty applies`),boolean:true});
    if(values[`infc_${id}_treaty`]==='true')fields.push(field(`infc_${id}_treaty_limit`,`来源${id}：协定允许税额（可为零）`,`Source ${id}: treaty-permitted tax (may be zero)`));
-   if(values[`infc_${id}_treaty`]==='false')fields.push(field(`infc_${id}_section160`,`来源${id}：核定第160条平均税率抵免限额`,`Source ${id}: established Section160 average-rate relief limit`));
+
   }
  }
  fields.push(field('prepaid_tax','本期核定预缴税款','Verified prepayments for this period'));
  for(const [key,zh,en] of indiaForeignChecks)fields.push({...field('infc_'+key,zh,en),boolean:true});
  return {id:'in_company_foreign_ty2026_27',label:['印度企业境外抵免（税年2026—27）','Indian company foreign credits (TY2026-27)'],
-  notice:['按独立来源核对保存收入、费用及境外已缴税。来源印度税额须先按普通税制及最低税额规则核定，含附加税及健康教育税，不含利息、费用或罚款；本表不自动推定统一分摊比例。第200条须满足适用选择与扣除限制。无协定时先核定第160条平均税率限额。结果含核定预缴税款，尚未加入利息及费用；不含特殊税制、亏损、历史MAT抵免或以前抵免退税调整。',
-   'Reconcile saved income, expenses and foreign tax by separate source. Establish attributable Indian tax under normal and MAT rules, including surcharge and cess but excluding interest, fees and penalties; no universal allocation ratio is inferred. Section200 requires a valid election and compliant deductions. Establish Section160 average-rate limits for non-treaty cases. Results include verified prepayments but precede interest and fees; special regimes, losses, legacy MAT credits and prior-credit refunds are excluded.'],fields};
+  notice:['按独立来源核对保存收入、费用及境外已缴税。来源印度税额须先按普通税制及最低税额规则核定，含附加税及健康教育税，不含利息、费用或罚款；本表不自动推定统一分摊比例。第200条须满足适用选择与扣除限制。当前支持的境外来源地均与印度存在协定；选择不适用协定不会启用第160条单边抵免，计算将被拒绝。结果含核定预缴税款，尚未加入利息及费用；不含特殊税制、亏损、历史MAT抵免或以前抵免退税调整。',
+   'Reconcile saved income, expenses and foreign tax by separate source. Establish attributable Indian tax under normal and MAT rules, including surcharge and cess but excluding interest, fees and penalties; no universal allocation ratio is inferred. Section200 requires a valid election and compliant deductions. All supported foreign jurisdictions have an agreement with India. Selecting no treaty does not enable Section160 unilateral relief and will be rejected. Results include verified prepayments but precede interest and fees; special regimes, losses, legacy MAT credits and prior-credit refunds are excluded.'],fields};
 }
 export function indiaForeignBasis(basis:Record<string,unknown>,input:IncomeTaxInput,values:Record<string,string>){
  const groups=new Map<string,number[]>();

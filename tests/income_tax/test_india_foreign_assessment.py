@@ -144,6 +144,14 @@ def test_api_reopen_replay_reports_and_rejected_foreign_payment(tmp_path,scheme)
             rejected=client.post(path+'/runs',headers=headers,json=invalid)
             assert rejected.status_code==422,rejected.text
             assert client.get(path).json()==current
+            invalid=deepcopy(request)
+            invalid.update(revision=current['revision'],request_id=str(uuid4()))
+            invalid['basis']['workpaper']['groups'][1]['foreign_credit'].update(
+                treaty_applies=False,treaty_permitted_tax_inr=None,section160_relief_limit_inr='100000')
+            rejected=client.post(path+'/runs',headers=headers,json=invalid)
+            assert rejected.status_code==422,rejected.text
+            assert rejected.json()=={'detail':'invalid_facts'}
+            assert client.get(path).json()==current
             for locale, original in reports.items():
                 assert client.get(path+'/runs/'+result['id']+'/report?locale='+locale).json()['markdown']==original
     finally:

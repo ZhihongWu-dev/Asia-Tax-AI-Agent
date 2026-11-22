@@ -111,7 +111,7 @@ def assess(case, workpaper, prepaid_tax):
         after = before-used
         prepaid = india.amount(prepaid_tax)
         balance = after-prepaid
-        annual.update(policy_version='in-company-foreign-ty2026-27-20261122',
+        annual.update(policy_version='in-company-foreign-ty2026-27-20261122-treaty-scope',
             tax_scope='india_company_foreign_ty2026_27',
             annual_tax_before_foreign_credit=before, allowed_foreign_tax_credit=used,
             annual_tax_before_rounding=after, final_tax=india.round_rupees(after), prepaid_tax=prepaid,

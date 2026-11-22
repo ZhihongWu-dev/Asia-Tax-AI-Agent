@@ -41,13 +41,12 @@ def test_normal_and_section206_limits_are_separate():
     assert 'new_mat_credit' not in result
 
 
-def test_non_treaty_average_rate_relief_is_not_assumed_equal_to_paid_tax():
+@pytest.mark.parametrize('country', ['cn','hk','sg','id','vn','my','th','ae','jp','kr'])
+def test_treaty_ineligibility_does_not_enable_section160(country):
     p = fixture()
-    p['sources'][0].update(treaty_applies=False, treaty_permitted_tax_inr=None,
+    p['sources'][0].update(country=country, treaty_applies=False, treaty_permitted_tax_inr=None,
         section160_relief_limit_inr='50')
-    assert calculate(p, normal_indian_tax='1000')['normal_foreign_tax_credit'] == 50
-    p['sources'][0]['section160_relief_limit_inr'] = None
-    with pytest.raises(ValueError, match='Section160'):
+    with pytest.raises(ValueError, match='Section160 requires no agreement'):
         calculate(p, normal_indian_tax='1000')
 
 

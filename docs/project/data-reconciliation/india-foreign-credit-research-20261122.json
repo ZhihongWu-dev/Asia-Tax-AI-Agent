@@ -1,5 +1,12 @@
 {
   "status": "company_saved_workflow_verified_personal_and_wider_cases_pending",
+  "section160_scope_correction": {
+    "validation": "49 component/API/report tests passed in11.72s; TypeScript/Vite build passed2294modules in5.66s;3 browser save/reopen/report scenarios passed48.0s. Prior frontend commit1911ab3 CI44987761725 succeeded. Current correction remote CI pending.",
+    "finding": "Section160(1) requires a country with no agreement under Section159. Treaty-benefit ineligibility alone does not satisfy this condition. All ten overseas jurisdictions currently supported have agreements in database/treaty.csv effective before TY2026-27.",
+    "evidence": "Archived FinanceAct2026-amended Act Section160, physical page220; official current Section160 page rechecked2026-11-22; catalog pairs cn-in,hk-in,in-th,in-jp,in-sg,ae-in,id-in,in-my,in-kr,in-vn.",
+    "change": "Reject non-treaty elections in current jurisdiction scope, remove Section160 amount entry from UI, explain rejection, and preserve both old/new result-version rendering. This supersedes the earlier positive Section160 synthetic case; no claim that an Indian treaty disqualification permits unilateral relief.",
+    "validation_scope": "Ten country rejection cases, both company-regime API rejection/state-preservation cases, and existing reporting regressions. Broader legal acceptance remains incomplete."
+  },
   "frontend_validation": {
     "result": "3 browser cases passed in57.1s: Section200, normal without MAT, normal with MAT. Save/reopen/report download and HTTP422 on paid-tax mismatch preserve previous result.",
     "build": "TypeScript/Vite passed2294modules in7.08s; existing large-bundle warning remains.",
