@@ -1,5 +1,21 @@
 {
-  "status": "official_current_form_guidance_verified_calculation_rule_review_pending",
+  "status": "rule76_source_credit_component_implemented_annual_integration_pending",
+  "formal_rule_review": {
+    "file": "database/raw/in/in.rules2026.pdf",
+    "sha256": "30bc85bf9d3ff23f378d5ddd2ca1d2e3d223134471fc8163aa5e2feecacb7e51",
+    "url": "https://www.incometax.gov.in/iec/foportal/sites/default/files/2026-03/En-Notified-IT-Rules-2026-20-03-2026.pdf",
+    "locator": "Rule76, printed English Gazette pages1586-1587; preserved extracted text lines4465-4578",
+    "findings": "Separate country/source lower-of-tax limits; treaty excess ignored; disputed tax exclusion and settlement conditions; credit against tax/surcharge/cess rather than interest/fees/penalty; TT buying FX at preceding month end; Section206 credit separately computed and excess over normal credit ignored for specified tax-credit computation.",
+    "section160": "Archived FinanceAct2026-amended Act, physical page220: non-treaty relief uses lower of Indian and foreign average rates on doubly taxed income. Do not assume this equals foreign paid tax.",
+    "corrigendum_review": "Official Notification64/2026 Hindi PDF reviewed; enumerated rule edits address165,229,243 and form corrections. This is not an exhaustive later-amendment audit.",
+    "corrigendum_url": "https://www.incometaxindia.gov.in/documents/81799/15800173/HN-Notification-no-64-2026.pdf/7ba89c32-2b37-bad1-a0ba-5eeac7e23e84?t=1776407579878"
+  },
+  "component": {
+    "validation": "32 tests passed in3.16s across new FTC component and existing ordinary company calculation; covers source separation, disputed tax, treaty zero ceilings, Section160 ceiling, distinct normal/Section206 credits and invalid evidence/attribution rejection.",
+    "file": "packages/income_tax/india_foreign_credit.py",
+    "scope": "Resident FTC workpaper using established source tax attribution and eligible INR tax amounts. Separate normal/Section206 calculations, no pooling between distinct sources, explicit treaty or Section160 ceiling, exclusions for disputed tax, and verified evidence requirements.",
+    "limits": "Does not calculate annual source attribution, FX conversion, filing deadlines, refund adjustments, source tax-year allocation or new MAT credit entitlement. No annual policy registration/UI yet."
+  },
   "date": "2026-11-22",
   "current_gap": "india_company.py explicitly excludes foreign income and credits. Ordinary domestic-company calculations do not establish corporate FTC support.",
   "primary_source": "https://www.incometaxindia.gov.in/documents/d/guest/fn-44",
@@ -10,8 +26,8 @@
     "Guidance states company Form44 accountant verification under Rule76(16); Form45 concerns settlement of disputed foreign tax with separate timing and verification conditions."
   ],
   "next_steps": [
-    "Retrieve final notified Rule76 and current Act159/160; do not implement from the draft rules surfaced by search.",
-    "Resolve source/country limits, surcharge/cess, MAT interaction, FX, dispute exclusions and refund effects before integrating with saved company and personal flows."
+    "Complete amendment and treaty-rule review; derive statutory source attribution and Section160 average-rate ceilings from saved annual facts.",
+    "Add source payment dates/FX and filing/dispute evidence, then integrate saved company and personal annual flows and reports."
   ],
-  "scope": "Research only; no new Indian foreign-credit calculator or completed business acceptance claimed."
+  "scope": "Source-credit component plus research; annual Indian foreign-credit workflow and complete business acceptance remain unfinished."
 }
