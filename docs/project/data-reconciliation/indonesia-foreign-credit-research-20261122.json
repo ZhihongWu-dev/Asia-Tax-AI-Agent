@@ -1,5 +1,5 @@
 {
-  "status": "direct_credit_component_verified_annual_workflow_pending",
+  "status": "annual_adapter_and_saved_api_verified_ui_pending",
   "date": "2026-11-22",
   "current_gap": "id_company_2026 saved adapter only supports domestic ordinary income; prepaid_tax is domestic refundable withholding/instalments, not foreign credit.",
   "official_sources": [
@@ -45,5 +45,30 @@
     "archived_source": "database/raw/id/id.pmk192.2018.foreign-credit.20261122.html",
     "sha256": "b9f8268bb972c1b46170ed934fdf95229493de6eec32a4c1fbf62aa2712be338",
     "scope": "Internal component on established taxable net buckets and computed annual tax; not a saved annual assessment or UI."
+  },
+  "annual_adapter": {
+    "policy": "id_company_foreign_direct_2026",
+    "scope": "Ordinary calendar2026 resident company; no final/special regimes or carried losses. Current domestic losses and excluded foreign losses are reconciled.",
+    "rules": [
+      "All saved income covered exactly once; source groups one country/category",
+      "Gross31E receipts include saved domestic/foreign gross; exemption stays in turnover",
+      "Foreign negative source income excluded before country/type aggregation",
+      "Ordinary tax derived by existing2026Article31E calculator before foreign credit and recapture",
+      "Domestic prepaid tax settled separately"
+    ],
+    "reference": "Archived PER12/PJ/2026 annex physicalpage472 Annex8 confirms31E formula and thresholds.",
+    "tests_passed": 24,
+    "seconds": 6.57,
+    "api": "Save/run,reopen,replay,bilingual generic exports and invalid overclaim atomicity passed.",
+    "synthetic_case": {
+      "gross_receipts": "9000000000",
+      "taxable_income": "8000000000",
+      "tax_before_credit": "1290666740",
+      "credit": "461333342.5",
+      "annual_liability": "829333397.5",
+      "prepaid": "1000000000",
+      "balance": "-170666602.5"
+    },
+    "remaining": "Frontend entry,result table,dedicated bilingual credit summary and browser validation pending."
   }
 }
