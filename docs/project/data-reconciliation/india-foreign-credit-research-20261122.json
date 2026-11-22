@@ -1,5 +1,16 @@
 {
-  "status": "rule76_source_credit_component_implemented_annual_integration_pending",
+  "status": "company_annual_api_and_report_verified_ui_and_wider_cases_pending",
+  "annual_company_workflow": {
+    "full_regression": "2056 tests passed in82.59s; source audit202 successful calls,40 policies,135 unique source records,0 unresolved. Subsequent legacy-MAT exclusion guard and distinct normal/MAT selection cases passed58 focused tests in9.43s.",
+    "source_audit_file": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/in-company-foreign-source-audit-20261122.json",
+    "policy": "in_company_foreign_ty2026_27",
+    "scope": "Tax year2026-27 resident domestic company, Section200 or normal regime with separate MAT comparison. Saved sources reconcile gross income, expenses and paid tax. Statutory normal/MAT source attribution is verified input; not automatically inferred from a universal ratio.",
+    "settlement": "Selected annual tax less applicable foreign credit and verified period prepayments, with Section516 rounding. Balance precedes interest/fees; no prior refund adjustments, special regimes or source/prior losses inferred. Explicit absence of legacy MAT credits and other reliefs required.",
+    "validation": "56 focused tests passed in11.09s, including both annual regimes, saved API reopening/request replay, bilingual report preservation and invalid paid-tax rejection without state mutation.",
+    "synthetic_section200": "4000000 domestic gross +1000000 foreign royalty,1000000 expenses,200000 foreign tax with100000 treaty ceiling; annual tax1006720, credit100000, final906720, prepaid1000000, balance-93280INR.",
+    "synthetic_normal": "Same saved sources with verified normal attribution260000 and MAT attribution145600, historical turnover10000000 and MAT book profit10000000. MAT applies: gross1456000, credit100000, final1356000, balance356000INR.",
+    "remaining": "Frontend input/result presentation and browser tests; personal foreign-income integration; automated attribution, payment FX and filing/dispute/refund workflows; special cases and full business acceptance."
+  },
   "formal_rule_review": {
     "file": "database/raw/in/in.rules2026.pdf",
     "sha256": "30bc85bf9d3ff23f378d5ddd2ca1d2e3d223134471fc8163aa5e2feecacb7e51",
@@ -14,7 +25,7 @@
     "validation": "32 tests passed in3.16s across new FTC component and existing ordinary company calculation; covers source separation, disputed tax, treaty zero ceilings, Section160 ceiling, distinct normal/Section206 credits and invalid evidence/attribution rejection.",
     "file": "packages/income_tax/india_foreign_credit.py",
     "scope": "Resident FTC workpaper using established source tax attribution and eligible INR tax amounts. Separate normal/Section206 calculations, no pooling between distinct sources, explicit treaty or Section160 ceiling, exclusions for disputed tax, and verified evidence requirements.",
-    "limits": "Does not calculate annual source attribution, FX conversion, filing deadlines, refund adjustments, source tax-year allocation or new MAT credit entitlement. No annual policy registration/UI yet."
+    "limits": "Does not calculate annual source attribution, FX conversion, filing deadlines, refund adjustments, source tax-year allocation or new MAT credit entitlement. Annual company adapter consumes verified source workpapers; UI remains pending."
   },
   "date": "2026-11-22",
   "current_gap": "india_company.py explicitly excludes foreign income and credits. Ordinary domestic-company calculations do not establish corporate FTC support.",
@@ -29,5 +40,5 @@
     "Complete amendment and treaty-rule review; derive statutory source attribution and Section160 average-rate ceilings from saved annual facts.",
     "Add source payment dates/FX and filing/dispute evidence, then integrate saved company and personal annual flows and reports."
   ],
-  "scope": "Source-credit component plus research; annual Indian foreign-credit workflow and complete business acceptance remain unfinished."
+  "scope": "Company annual API/report plus source-credit component; frontend, personal and wider business scenarios remain unfinished."
 }

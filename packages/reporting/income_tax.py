@@ -156,6 +156,23 @@ def render(run, locale='zh'):
                 values = [country.upper(), entry['evidence_reference'], entry['thai_period_end'], entry['payment_date'],
                     entry['allocated_tax_before_credit_limits'], status]
                 lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
+    if result.get('policy_version') == 'in-company-foreign-ty2026-27-20261122':
+        lines += ['', '## ' + say('印度企业境外抵免', 'Indian company foreign tax credits'), '',
+            say('来源税额和资格依据已保存的核定工作表；普通税额与最低税额的抵免分别计算。本表不自动认定费用、协定或申报资格，余额尚未加入利息及费用。',
+                'Source tax and eligibility follow the saved verified workpaper. Normal and minimum-tax credits are calculated separately. Expense, treaty and filing eligibility are not inferred; the balance excludes interest and fees.'), '',
+            '| ' + say('来源 | 国家 | 境外已缴税 | 排除的争议税 | 普通税制抵免 | 最低税额抵免',
+                'Source | Country | Foreign tax paid | Disputed tax excluded | Normal credit | Section206 credit') + ' |',
+            '| --- | --- | --- | --- | --- | --- |']
+        for row in result['foreign_credit']['source_credits']:
+            values = [row['source_id'], row['country'].upper(), row['foreign_tax_paid_inr'],
+                row['disputed_tax_excluded_inr'], row['normal_credit'],
+                row['section206_credit'] if row['section206_credit'] is not None else say('不适用', 'Not applicable')]
+            lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
+        lines += ['', '| ' + say('项目 | 金额', 'Item | Amount') + ' |', '| --- | --- |']
+        for key,zh,en in [('annual_tax_before_foreign_credit','抵免前年度税额','Annual tax before foreign credit'),
+                         ('allowed_foreign_tax_credit','本次适用境外抵免','Foreign credit applied'),
+                         ('prepaid_tax','本期已核实预缴','Verified period prepayments')]:
+            lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
     if result.get('tokyo_local'):
         local = result['tokyo_local']
         lines += ['', '## ' + say('东京23区地方税明细', 'Tokyo 23-ward local tax details'), '',

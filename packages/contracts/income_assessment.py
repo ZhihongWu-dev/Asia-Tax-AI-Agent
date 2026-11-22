@@ -11,6 +11,7 @@ from .income_tax import Money
 from packages.income_tax.uae_foreign_assessment import SavedWorkpaper as UAEForeignWorkpaper
 from packages.income_tax.malaysia_foreign_assessment import SavedWorkpaper as MYForeignWorkpaper
 from packages.income_tax.indonesia_foreign_assessment import SavedWorkpaper as IDForeignWorkpaper
+from packages.income_tax.india_foreign_assessment import SavedWorkpaper as INForeignWorkpaper
 from packages.income_tax.thailand_company_foreign_reconciliation import SavedWorkpaper as THCompanyForeignWorkpaper
 from packages.income_tax.singapore_foreign_assessment import SavedWorkpaper
 from packages.income_tax.china_foreign_assessment import DirectWorkpaper
@@ -451,6 +452,12 @@ class INCompany(INBasis):
     policy: Literal['in_company_section200_ty2026_27']
 
 
+class INForeignCompany(Basis):
+    policy: Literal['in_company_foreign_ty2026_27']
+    workpaper: INForeignWorkpaper
+    prepaid_tax: Money
+
+
 class INNormalCompany(INBasis):
     policy: Literal['in_company_normal_ty2026_27']
     turnover_2024_25: Money
@@ -554,6 +561,6 @@ class KRSalary(Basis):
     installment: StrictBool
 
 
-Assessment = Annotated[CNCompany | CNForeignCompany | CNForeignIndividual | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGForeignCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | KRCompany | KRSalary |
+Assessment = Annotated[CNCompany | CNForeignCompany | CNForeignIndividual | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGForeignCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | INForeignCompany | KRCompany | KRSalary |
                        HKProfits | HKSalaries | HKProperty | AEOrdinary | UAEForeignCompany | MYForeignCompany | IDForeignCompany | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness | VNRental,
                        Field(discriminator='policy')]
