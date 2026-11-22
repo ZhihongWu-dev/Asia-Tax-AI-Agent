@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-22",
+  "command": "pytest tests/income_tax/test_synthetic_business_acceptance.py -q",
+  "passed": 3,
+  "seconds": 5.95,
+  "scenarios": [
+    "company_cross_border",
+    "personal_mixed_income",
+    "osaka_separate_settlement"
+  ],
+  "verified": [
+    "Amend saved gross income by1000",
+    "Current calculation invalidated",
+    "SQLite reopen preserves historical run",
+    "Old request replays exact historical run without restoring current result",
+    "Chinese and English historical reports remain byte-identical"
+  ],
+  "scope": "Local HTTP synthetic business cases;no tax algorithm changes,no real customer acceptance claimed"
+}

@@ -68,6 +68,19 @@ def test_synthetic_business_round_trip(tmp_path, scenario):
         rejected = client.post(path+'/runs', headers=headers, json=dict(revision=before['revision'], request_id=str(uuid4()), basis=invalid))
         assert rejected.status_code == 422, rejected.text
         assert client.get(path).json() == before
+        amended_inputs = deepcopy(scenario['inputs'])
+        amended_inputs['incomes'][0]['gross_amount'] = str(Decimal(amended_inputs['incomes'][0]['gross_amount']) + 1000)
+        amended = client.put(path, headers=headers, json=dict(revision=before['revision'], request_id=str(uuid4()), inputs=amended_inputs))
+        assert amended.status_code == 200, amended.text
+        after = client.get(path).json()
+        assert after['income_tax_result'] is None
+        service.store.engine.dispose(); service.store = ChatStore(url)
+        assert client.get(path+'/runs/'+run['id']).json() == run
+        replay = client.post(path+'/runs', headers=headers, json=payload)
+        assert replay.status_code == 200 and replay.json() == run
+        assert client.get(path).json() == after
+        for locale, original in reports.items():
+            assert client.get(path+'/runs/'+run['id']+'/report?locale='+locale).json()['markdown'] == original
         if output := os.environ.get('SYNTHETIC_CASE_OUTPUT'):
             target = Path(output)/scenario['id']; target.mkdir(parents=True, exist_ok=True)
             for locale, content in reports.items(): (target/f'report-{locale}.md').write_text(content, encoding='utf-8')
