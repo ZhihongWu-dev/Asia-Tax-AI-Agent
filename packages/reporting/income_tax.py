@@ -90,6 +90,19 @@ def render(run, locale='zh'):
                 '| --- | --- | --- | --- | --- | --- | --- |']
             for row in result['local_basis']['historical_local_deductions']:
                 lines.append('| ' + ' | '.join(_text(row[k]) for k in ('identifier','kind','original_amount','previously_deducted','current_deduction','excluded_from_next_carry','next_carryforward')) + ' |')
+    if result.get('policy_version') == 'vn-company-foreign-ordinary20-2026-20261122':
+        lines += ['', '## ' + say('越南境外抵免明细', 'Vietnam foreign credit details'), '',
+            say('普通20%税率且不适用低营业额年度减税。视同税与实缴税分开，按同项越南税额限额；超限额不自动批准结转。金额为申报取整前值。',
+                'Ordinary 20% rate outside low-revenue annual relief. Deemed and paid tax are separate, capped at Vietnamese tax on the same income. Excess does not automatically establish a carryforward. Before filing rounding.'), '',
+            '| ' + say('来源 | 国家 | 方法 | 净所得 | 实缴税 | 抵免依据 | 限额 | 已用抵免',
+                'Source | Country | Method | Net income | Paid tax | Credit basis | Limit | Credit used') + ' |',
+            '| --- | --- | --- | --- | --- | --- | --- | --- |']
+        for row in result['source_credits']:
+            lines.append('| ' + ' | '.join(_text(row[k]) for k in ('source_id','country','method',
+                'net_taxable_income','foreign_tax_paid','credit_basis','vietnam_same_income_limit','allowed_credit')) + ' |')
+        lines += ['', '| ' + say('项目 | 金额', 'Item | Amount') + ' |', '| --- | --- |']
+        for key,zh,en in [('allowed_foreign_tax_credit','境外抵免合计','Total foreign credit'),('prepaid_tax','境内预缴税款','Domestic prepaid tax')]:
+            lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
     if result.get('policy_version') == 'sg-company-foreign-direct-ya2026-20261122':
         credit = result['foreign_credit']
         lines += ['', '## ' + say('新加坡境外直接抵免明细', 'Singapore direct foreign credit details'), '',

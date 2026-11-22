@@ -1,0 +1,102 @@
+{
+  "cn": {
+    "doc_id": "treaty.cn-vn.1995.mli.en",
+    "title": "Synthesised text of the MLI and the China-Vietnam DTA",
+    "url": "https://www.chinatax.gov.cn/chinatax/n810341/n810770/c1153436/5027029/files/Synthesised text of the MLI and the China-VIETNAM DTA.pdf",
+    "file": "database/raw/cn-vn/treaty.cn-vn.1995.mli.en.pdf",
+    "sha256": "52b6acc8fe22096ddd1da98102a8154dca532f5bd347a48e306b061257eb8532",
+    "provisions": [
+      "Article23.1"
+    ]
+  },
+  "hk": {
+    "doc_id": "treaty.hk-vn.2008.en",
+    "title": "Hong Kong-Viet Nam comprehensive DTA and its 2014 Protocol, s.49 Order (Cap. 112BE)",
+    "url": "https://www.elegislation.gov.hk/hk/cap112BE!en.rtf",
+    "file": "database/raw/hk-vn/treaty.hk-vn.2008.en.rtf",
+    "sha256": "7801d330c0454a2c836604b30cd9d30d0f71e1c9ed08bd1a480680342d05dcd7",
+    "provisions": [
+      "Article22.2"
+    ]
+  },
+  "sg": {
+    "doc_id": "treaty.sg-vn.1994.en",
+    "title": "Agreement between Singapore and Vietnam for the Avoidance of Double Taxation (1994), with the MLI amendments (Annex A) and the Second Protocol of 2012 (Annex B)",
+    "url": "https://www.iras.gov.sg/media/docs/default-source/dtas/singapore-vietnam-dta-(ratified)(mli)(01092023).pdf",
+    "file": "database/raw/sg-vn/treaty.sg-vn.1994.en.pdf",
+    "sha256": "948b2597f2996af06d048be2eb1a74ca1772e7d110b31a969985fa3dbdeca503",
+    "provisions": [
+      "Article24.2"
+    ]
+  },
+  "jp": {
+    "doc_id": "treaty.jp-vn.1995.mli.en",
+    "title": "Synthesised text of the MLI and the Japan-Viet Nam agreement",
+    "url": "https://www.mof.go.jp/tax_policy/summary/international/tax_convention/SynthesizedTextforJapan_VietNam_EN.pdf",
+    "file": "database/raw/jp-vn/treaty.jp-vn.1995.mli.en.pdf",
+    "sha256": "227b947116e618f77a635cd4858abec16cc4a218bc3857605202a4c122ea647c",
+    "provisions": [
+      "Article22.1"
+    ]
+  },
+  "th": {
+    "doc_id": "treaty.th-vn.1992.art21-25.en",
+    "title": "Agreement between Thailand and Viet Nam for the Avoidance of Double Taxation (1992), Articles 21-25 (RD web text)",
+    "url": "https://www.rd.go.th/english/1617.html",
+    "file": "database/raw/th-vn/treaty.th-vn.1992.art21-25.en.html",
+    "sha256": "ad8d05fc4f055b1aea76da4edf4b0986f0576eceaba3014d9eeca406e6b405d9",
+    "provisions": [
+      "Article23.2"
+    ]
+  },
+  "ae": {
+    "doc_id": "treaty.ae-vn.2009.en",
+    "title": "Agreement between the United Arab Emirates and the Socialist Republic of Vietnam for the Avoidance of Double Taxation",
+    "url": "https://mof.gov.ae/wp-content/uploads/2025/07/UAE-VEITNAM-DTA-COPY.pdf",
+    "file": "database/raw/ae-vn/treaty.ae-vn.2009.en.pdf",
+    "sha256": "438a32f85f95dce51ee5b6af6be7023888f84c9e594f1a9574b3bc1aafef111f",
+    "provisions": [
+      "Article23.1"
+    ]
+  },
+  "id": {
+    "doc_id": "treaty.id-vn.1997.mli.en",
+    "title": "Synthesised text of the Indonesia–Vietnam Double Taxation Agreement as modified by the MLI",
+    "url": "https://www.pajak.go.id/sites/default/files/2025-06/Tax%20Treaty%20Vietnam%20%28Modified%20by%20MLI%29%20-%20EN.pdf",
+    "file": "database/raw/id-vn/treaty.id-vn.1997.mli.en.pdf",
+    "sha256": "3cf902e31e8dd36ee977e44f2b1ff306cd99bcf6e6a7f115f28e90d669448226",
+    "provisions": [
+      "Article23.1"
+    ]
+  },
+  "in": {
+    "doc_id": "treaty.in-vn.1994.mofa.text",
+    "title": "Agreement between Viet Nam and India for the Avoidance of Double Taxation — treaty text",
+    "url": "https://treaty.mofa.gov.vn:8443/api/files/attachment/5a256adb-d60d-457c-84bd-50612fdf64a7",
+    "file": "database/raw/in-vn/treaty.in-vn.1994.mofa.text.html",
+    "sha256": "1901252da513bf4d2f4d7003268d79744a8f27d0960dbe37f15908e2d78a6f70",
+    "provisions": [
+      "Article24.2"
+    ]
+  },
+  "kr": {
+    "doc_id": "treaty.kr-vn.1994.mofa.text",
+    "title": "Agreement between Viet Nam and the Republic of Korea for the Avoidance of Double Taxation — treaty text",
+    "url": "https://treaty.mofa.gov.vn:8443/api/files/attachment/f93b1951-9e76-4c9f-a70d-7c9c7cea2ced",
+    "file": "database/raw/kr-vn/treaty.kr-vn.1994.mofa.text.html",
+    "sha256": "0c77906238b64b1819cd5dfe6c5e9fcabada5fa6b0b8425569879e09738b3f9b",
+    "provisions": [
+      "Article23.1"
+    ]
+  },
+  "my": {
+    "doc_id": "treaty.my-vn.1995.en",
+    "title": "Agreement between the Government of Malaysia and the Government of the Socialist Republic of Vietnam for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with Respect to Taxes on Income",
+    "url": "https://www.hasil.gov.my/wp-content/uploads/Vietnam.pdf",
+    "file": "database/raw/my-vn/treaty.my-vn.1995.en.pdf",
+    "sha256": "1068cbfd7c9000f9ba32485ff484636ea809d449db9f3d8455ae31e553729447",
+    "provisions": [
+      "Article24.2"
+    ]
+  }
+}

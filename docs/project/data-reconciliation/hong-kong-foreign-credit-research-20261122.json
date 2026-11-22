@@ -45,5 +45,11 @@
     "Reconcile saved income, gross-up, deductions, losses and receipt years; distinguish exemption eligibility and non-FSIE treaty claims.",
     "Integrate annual saved assessment, API, bilingual reports and frontend with business cases."
   ],
+  "dipn44_example6_followup": {
+    "source": "https://www.ird.gov.hk/eng/pdf/dipn44.pdf",
+    "finding": "Historical Example6 computes the average-rate denominator before the excess-foreign-tax deduction, then recomputes annual tax after that deduction. Section50(6) includes50(5)(a),(b), but not underlying gross-up(c) or the excess-deduction tail.",
+    "historical_example_only": "200000 gross minus12000 expenses gives188000 rate denominator; after100000 allowance, historical tax6340 gives3.37percent. Foreign net-of-tax110000 grosses up to113836, credit3836, excess deduction6164. Recomputed tax5538 less3836 gives1702. Historical rates are not current policy inputs.",
+    "remaining": "Current annual reduction and two-tier credit-rate composition still need authoritative reconciliation; no annual Hong Kong foreign-credit policy enabled by this finding."
+  },
   "development_reference": "Pydantic official GitHub validator documentation reviewed; existing project model conventions retained, no new dependency or external code copied."
 }

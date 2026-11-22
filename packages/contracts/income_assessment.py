@@ -8,6 +8,7 @@ from decimal import Decimal
 from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from .income_tax import Money
+from packages.income_tax.vietnam_foreign_assessment import SavedWorkpaper as VNForeignWorkpaper
 from packages.income_tax.uae_foreign_assessment import SavedWorkpaper as UAEForeignWorkpaper
 from packages.income_tax.malaysia_foreign_assessment import SavedWorkpaper as MYForeignWorkpaper
 from packages.income_tax.indonesia_foreign_assessment import SavedWorkpaper as IDForeignWorkpaper
@@ -29,6 +30,12 @@ class Basis(BaseModel):
     model_config = ConfigDict(extra="forbid")
     basis_explanation: str = Field(min_length=20, max_length=4000)
     basis_confirmed: StrictBool
+
+
+class VNForeignCompany(Basis):
+    policy: Literal['vn_company_foreign_ordinary20_2026']
+    workpaper: VNForeignWorkpaper
+    prepaid_tax: Money
 
 
 class CNCompany(Basis):
@@ -591,6 +598,6 @@ class KRSalary(Basis):
     installment: StrictBool
 
 
-Assessment = Annotated[CNCompany | CNForeignCompany | CNForeignIndividual | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGForeignCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | INForeignCompany | KRCompany | KRForeignCompany | KRForeignHistoryCompany | KRForeignBalancesCompany | KRSalary |
+Assessment = Annotated[VNForeignCompany | CNCompany | CNForeignCompany | CNForeignIndividual | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGForeignCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | INForeignCompany | KRCompany | KRForeignCompany | KRForeignHistoryCompany | KRForeignBalancesCompany | KRSalary |
                        HKProfits | HKSalaries | HKProperty | AEOrdinary | UAEForeignCompany | MYForeignCompany | IDForeignCompany | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness | VNRental,
                        Field(discriminator='policy')]

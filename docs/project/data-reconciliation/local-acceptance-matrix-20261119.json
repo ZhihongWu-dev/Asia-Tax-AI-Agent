@@ -263,6 +263,14 @@
   },
   "last_reconciled": "2026-11-22",
   "business_priority": "Cross-border corporate income and foreign tax credits; corporate and personal coverage across all 11 jurisdictions remains required.",
+  "vietnam_foreign_checkpoint_20261122": {
+    "base_commit": "7698f6c",
+    "policy": "vn_company_foreign_ordinary20_2026",
+    "scope": "Ordinary20percent full-calendar-year company outside low-revenue relief, ten treaty source jurisdictions; saved API/UI/bilingual reports and distinct SG/ID deemed measures.",
+    "validation": "2249 income/report tests passed122.49s;210 assessment calls,44policies,147source records,0unresolved.3browser flows passed1.4m;production build passed.",
+    "evidence": "vietnam-foreign-annual-20261122.json",
+    "remaining": "Low-revenue relief/credit composition, dividend underlying credits, other special rules and broader user business acceptance remain incomplete."
+  },
   "korean_foreign_checkpoint_20261122": {
     "base_commit": "0a9d852",
     "scope": "Current direct country-credit annual workflow plus verified unexpired national history; saved API/browser/bilingual reports. This is an additional scoped workflow, not full Korean foreign-tax support.",

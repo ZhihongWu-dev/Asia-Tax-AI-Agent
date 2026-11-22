@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-22",
+  "policy": "vn_company_foreign_ordinary20_2026",
+  "status": "scoped_workflow_verified_overall_goal_incomplete",
+  "validation": {
+    "focused": "31 component/API/persistence/report tests passed13.05s",
+    "browser": "3 China/Singapore/Indonesia source flows passed1.4m; save, invalid-input rejection, download and reopen verified",
+    "build": "TypeScript and Vite build passed;2297modules,6.68s; existing large-bundle warning remains",
+    "regression": "2249 income/report tests passed122.49s;210 successful assessment calls across44policies;147 source records,0 unresolved",
+    "artifact": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/vietnam-foreign-source-audit-20261122.json"
+  },
+  "scope": "Resident Vietnam-established company, full calendar2026 and prior full calendar year; prior statutory revenue strictly over VND50bn, current revenue strictly over VND10bn. Ordinary20percent, no losses, exemptions, incentives or special tax claims. Ordinary business, interest, rental and royalty only.",
+  "basis": [
+    "Saved receipts reconcile to complete current statutory revenue; group expenses equal saved deductions; every income appears exactly once. Eligible actual foreign tax cannot exceed saved payments.",
+    "All ten foreign catalog counterparts have treaty credit provisions. Decree320 Article12(2)(a) follows those treaties; non-treaty rules in12(2)(b) are not generalized to them.",
+    "Treaty direct credit is limited to Vietnamese20percent tax on the same net income. Singapore qualifying interest/royalty has the reviewed10percent-gross deemed floor; Indonesia qualifying interest/royalty uses15percent-gross deemed tax in place of, not added to, actual payments.",
+    "Current statutory revenue above VND10bn excludes Decree398 annual30percent relief; this scope avoids, and does not resolve, relief/credit ordering for lower revenue.",
+    "Foreign excess is displayed without automatically granting carryforward. Domestic prepaid tax offsets final liability separately. Results precede filing rounding, interest and penalties."
+  ],
+  "evidence": [
+    "vietnam-decree320-credit-review-20261118.json",
+    "vietnam-treaty-credit-gap-inventory-20261118.json",
+    "vietnam-relief-credit-order-review-20261119.json",
+    "indonesia-vietnam-deemed-credit-review-20261118.json",
+    "packages/income_tax/vn_direct_treaty_sources.json"
+  ],
+  "development_reference": "Official Pydantic GitHub model/validator documentation reviewed before implementation; existing models and project workflows retained, no dependency or copied code adopted.",
+  "remaining": [
+    "Low-revenue exemption/reduced rates and annual-relief composition",
+    "Dividend direct/underlying/deemed credits in annual assessment",
+    "Other treaty tax sparing, top-up taxes, losses and incentive regimes",
+    "Automated treaty source entitlement, MLI, payment timing and filing evidence validation",
+    "Real business user acceptance beyond synthetic fixtures"
+  ]
+}

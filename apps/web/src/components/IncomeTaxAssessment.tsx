@@ -1,4 +1,6 @@
 import {uaeForeignBasis} from '../uae-foreign-assessment';
+import {vietnamForeignBasis} from '../vietnam-foreign-assessment';
+import VietnamForeignResult from './VietnamForeignResult';
 import {malaysiaForeignBasis} from '../malaysia-foreign-assessment';
 import {indonesiaForeignBasis} from '../indonesia-foreign-assessment';
 import {indiaForeignBasis} from '../india-foreign-assessment';
@@ -67,6 +69,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       } else basis[field.key] = field.boolean ? values[field.key] === 'true' : field.integer ? Number(values[field.key]) : values[field.key];
     }
     if(policy.id==='ae_company_foreign_direct_2026')basis=uaeForeignBasis(basis,current.income_tax!,values);
+    if(policy.id==='vn_company_foreign_ordinary20_2026')basis=vietnamForeignBasis(basis,current.income_tax!);
     if(policy.id==='my_company_foreign_direct_ya2026')basis=malaysiaForeignBasis(basis,current.income_tax!,values);
     if(policy.id==='id_company_foreign_direct_2026')basis=indonesiaForeignBasis(basis,current.income_tax!,values);
     if(policy.id==='in_company_foreign_ty2026_27')basis=indiaForeignBasis(basis,current.income_tax!,values);
@@ -222,6 +225,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       {result.result.tax_scope==='national_income_and_reconstruction_tax_only'&&<p>{say('此结果仅为日本2026年度国家所得税及复兴特别所得税，不含住民税、事业税。扣除予定纳税通知金额不代表该税款已缴清，欠税另行处理。','This result covers Japan 2026 national income and reconstruction tax only, excluding local inhabitant and enterprise taxes. Deducting notified estimated tax does not mean it has been paid; arrears remain separate.')}</p>}
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{key==='balance_due'&&result.result.tax_scope==='national_income_and_reconstruction_tax_only'?say('本次国家税应补／退额（予定纳税欠税另计）','National return balance (estimated-tax arrears separate)'):label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
       {result.result.policy_version==='ae-ordinary-foreign-credit-20261122'&&<UAEForeignResult result={result.result} index={index}/>}
+      {result.result.policy_version==='vn-company-foreign-ordinary20-2026-20261122'&&<VietnamForeignResult result={result.result} index={index}/>}
       {result.result.policy_version==='my-schedule7-direct-credit-20261122'&&<MalaysiaForeignResult result={result.result} index={index}/>}
       {result.result.policy_version==='id-article24-credit-20261122'&&<IndonesiaForeignResult result={result.result} index={index}/>}
       {['in-company-foreign-ty2026-27-20261122','in-company-foreign-ty2026-27-20261122-treaty-scope'].includes(String(result.result.policy_version))&&<IndiaForeignResult result={result.result} index={index}/>}

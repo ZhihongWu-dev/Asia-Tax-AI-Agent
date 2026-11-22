@@ -6,6 +6,35 @@ import { test, expect } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 import {indiaForeignChecks} from '../src/india-foreign-assessment';
 
+for(const country of ['cn','sg','id'])test(`Vietnam foreign company ${country} saves treaty credits and reopens`,async({page})=>{
+ test.setTimeout(60000);
+ const form=await openIncome(page);
+ for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','vn'],['Tax residency','resident'],['Income category','royalty'],['Income source jurisdiction',country]])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+ for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Gross income','20000000000'],['Foreign tax paid (blank if unknown)','700000000'],['Income description','Synthetic Vietnamese company foreign royalty'],['Claimed deductions (blank if unknown)','18000000000'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+ await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+ const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+ await calc.getByLabel('Applicable regime').selectOption('vn_company_foreign_ordinary20_2026');
+ for(const [name,value] of [['Prior full-year statutory revenue (over VND 50bn)','100000000000'],['Current full-year statutory revenue (over VND 10bn)','20000000000'],['Domestic prepaid tax for this period','100000000'],['Income 1: verified allowable expenses','18000000000'],['Income 1: eligible foreign tax actually paid','700000000']])await calc.getByLabel(name,{exact:true}).fill(value);
+ for(const name of ['Vietnam establishment, ordinary 20% rate and full calendar periods verified','Statutory revenue verified; no exemptions, incentives or losses','Source income and expenses verified; no foreign tax expense deduction','Treaty entitlement, MLI, payment evidence, FX and filings verified','No other sparing, underlying credits, top-up or special tax claims'])await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+ await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified ordinary 20 percent company, full-year statutory revenue, source expenses and treaty evidence.');
+ await calc.getByRole('checkbox').check();
+ const saved=page.waitForResponse(r=>r.url().endsWith('/income-tax/runs')&&r.request().method()==='POST');
+ await calc.getByRole('button',{name:'Calculate and save result'}).click();
+ const response=await saved;expect(response.status()).toBe(200);const run=await response.json();
+ expect(Number(run.result.allowed_foreign_tax_credit)).toBe(400000000);
+ expect(Number(run.result.final_tax)).toBe(0);expect(Number(run.result.balance_due)).toBe(-100000000);
+ expect(run.result.source_credits[0].method).toBe(country==='sg'?'singapore_deemed_floor':country==='id'?'indonesia_deemed_replacement':'treaty_direct_paid');
+ const result=page.getByRole('article',{name:'Saved calculation result'});
+ await expect(result.getByRole('region',{name:'Vietnam foreign credit details'})).toContainText('400000000');
+ const downloading=page.waitForEvent('download');await result.getByRole('button',{name:'Download calculation record'}).click();
+ expect(await readFile((await (await downloading).path())!,'utf8')).toContain('Vietnam foreign credit details');
+ await calc.getByLabel('Income 1: eligible foreign tax actually paid',{exact:true}).fill('700000001');
+ await expect(calc.getByRole('checkbox')).not.toBeChecked();await calc.getByRole('checkbox').check();
+ const rejected=page.waitForResponse(r=>r.url().endsWith('/income-tax/runs')&&r.request().method()==='POST');
+ await calc.getByRole('button',{name:'Calculate and save result'}).click();expect((await rejected).status()).toBe(422);
+ await openIncome(page);await expect(page.getByRole('region',{name:'Vietnam foreign credit details'})).toContainText('400000000');
+});
+
 for(const withHistory of [false,true,'local'])test(`Korean foreign company saves country credits and separate local settlement history=${withHistory}`,async({page})=>{
  test.setTimeout(60000);
  const form=await openIncome(page);

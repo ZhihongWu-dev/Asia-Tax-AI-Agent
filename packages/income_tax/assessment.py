@@ -59,7 +59,10 @@ def calculate(case: IncomeTaxCase, basis):
         cn_reconciliation = china.reconcile_company_basis(case,
             taxable_income=basis.taxable_income,
             non_taxable_income=args.pop('non_taxable_income'), exempt_income=args.pop('exempt_income'))
-    if policy=='cn_personal_foreign_2026':
+    if policy=='vn_company_foreign_ordinary20_2026':
+        from .vietnam_foreign_assessment import assess
+        result=assess(case,basis.workpaper,basis.prepaid_tax)
+    elif policy=='cn_personal_foreign_2026':
         from .china_personal_foreign_assessment import assess
         result=assess(case,basis.workpaper,basis.prepaid_tax)
     elif policy=='cn_company_foreign_direct_2026':
