@@ -2,6 +2,25 @@
   "date": "2026-11-19",
   "delivery": "Latest user authorization: upload accumulated work to remote Zhihong-Wu for user testing. No main merge/push, application deployment or cloud database mutation. Earlier local-only evidence describes historical runs.",
   "overall_status": "not_complete",
+  "cross_border_checkpoint_20261122": {
+    "runtime_commit": "2101494",
+    "full_regression": "2122 income/report tests passed82.33s;204 successful assessment calls across40 policies;135 source records,0 unresolved file/hash problems. Component-only outputs are outside the assessment-source interceptor; Hong Kong source component tests separately check archived hashes.",
+    "source_audit_artifact": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/hk-components-full-source-audit-20261122.json",
+    "delivery_branch": "Zhihong-Wu",
+    "saved_workflows": {
+      "in": "Corporate TY2026-27 Section200 and normal/MAT saved API, UI and bilingual reports verified. Section160 election rejected for current treaty-country scope. Personal foreign-income integration and wider scenarios pending.",
+      "id": "Ordinary company Article24 direct-credit workflow with verified source/treaty limits and refund recapture; special regimes and full business acceptance pending.",
+      "th": "Ordinary company RD300 saved workflow and foreign-period allocation; treaty route, SME rates and automated excess-tax expense treatment pending.",
+      "hk": "FSIE source-credit, excess foreign-tax deduction and saved-input reconciliation components tested. No foreign annual assessment policy, API, UI or report enabled. Annual effective-rate and tax-reduction composition still require verification."
+    },
+    "evidence": [
+      "india-foreign-credit-research-20261122.json",
+      "indonesia-foreign-credit-research-20261122.json",
+      "thailand-company-foreign-credit-research-20261122.json",
+      "hong-kong-foreign-credit-research-20261122.json"
+    ],
+    "interpretation": "These later checkpoints supplement historical entries below. Country presence, component tests and green CI do not establish full corporate/personal cross-border coverage or business acceptance. Original scope remains unchanged."
+  },
   "requirements": [
     {
       "requirement": "Integrate Li data with the existing main-based application",
