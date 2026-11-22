@@ -8,6 +8,24 @@
     "not_supported": "Annual settlement, excess-tax expense feedback, SME allocation, saved-case UI/report. Component is not registered as an annual assessment policy."
   },
   "date": "2026-11-22",
+  "annual_path_review": {
+    "archived_ruling_sha256": "f436fd401dc7d55703dcd743ba6caa06b46324353e8197e4b8ad91d38be3a3ae",
+    "archived_return_instructions_sha256": "7a6cfe04a7c7a5c26d97c0c8f94863d6586c85ce468bc8d19b32ca391b36a6d3",
+    "archive_directory": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/th-company-credit-20261122",
+    "ruling": "https://www.rd.go.th/30684.html",
+    "finding": "Ruling0706/10858 paragraphs1-3 addresses service-company facts: uncredited difference may be deductible under treaty and RD300 paths; method may be elected per country per accounting period. Treaty and RD300 are distinct elections, not automatically interchangeable.",
+    "return_instructions": "https://www.rd.go.th/fileadmin/tax_pdf/cit/2568/300169Ins50.pdf",
+    "return_locator": "Physical page6, item1 section3(1)-(2)",
+    "return_finding": "Separate treaty credit and RD300 exemption lines. Treaty credit description uses attributable Thai-tax proportion; RD300 refers to Notification65 country calculation.",
+    "unresolved": "No numeric primary-source example resolving business-net excess-expense feedback or SME allocation established. Annual integration still pending; do not infer a uniform treaty/RD300 formula."
+  },
+  "period_allocation_component": {
+    "test_result": "64 passed in 2.83s across period allocation, country limits, existing Thai company reconciliation and Thai rate tests",
+    "function": "thailand_company_foreign_limits.allocate_foreign_period_tax",
+    "rules": "Notification65 clauses7-9: use actual profit or gross-receipt share in overlapping periods and market FX at foreign tax payment; later payment can require amendment of the income-period return.",
+    "validation": "Reject disjoint/reversed periods, zero denominator, overlap above total, incomplete full-period allocation, invalid FX and unverified evidence. Preserve exact fraction, unknown filing state and input timing in result.",
+    "scope": "Positive foreign assessment basis with nonnegative overlap; loss-containing apportionment needs separate review. This supplies paid tax before country limits, not annual tax."
+  },
   "current_gap": "Ordinary Thai company calculation accepts allowed_tax_credits as established input; no derived corporate foreign-credit workpaper. Existing Thai foreign workflow is personal.",
   "sources": {
     "decree300": "https://www.rd.go.th/2787.html",

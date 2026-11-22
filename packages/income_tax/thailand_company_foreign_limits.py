@@ -4,10 +4,78 @@ Inputs are reconciled Thai-law bases. Annual expense interaction, overall
 liability, treaty entitlement and SME rates are deliberately not inferred.
 """
 from decimal import Decimal, localcontext
+from datetime import date
+from fractions import Fraction
 from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from packages.contracts.income_tax import Money, Jurisdiction
+
+
+class ForeignPeriodTax(BaseModel):
+    """One paid foreign assessment, split on actual profits or gross receipts.
+
+    Amounts use the foreign assessment currency. Market FX is THB per unit on
+    payment date. A loss-containing allocation requires separate review.
+    """
+    model_config = ConfigDict(extra='forbid')
+    foreign_period_start: date
+    foreign_period_end: date
+    thai_period_start: date
+    thai_period_end: date
+    foreign_tax_base: Literal['net_profit', 'gross_receipts']
+    total_foreign_period_basis: Money
+    basis_in_overlapping_period: Money
+    foreign_tax_paid: Money
+    payment_date: date
+    payment_date_market_thb_per_unit: Money
+    thai_return_filed_on: date | None = None
+    actual_period_basis_and_payment_evidence_verified: StrictBool
+
+
+def allocate_foreign_period_tax(workpaper):
+    """Notification65 clauses7-9; not day-proration or income-year FX.
+
+    The exact fraction is retained alongside a decimal for downstream audit.
+    The caller still needs Thai-law income/expense reconciliation and credit
+    eligibility. Payment timing determines amendment, not income attribution.
+    """
+    p = ForeignPeriodTax.model_validate(workpaper)
+    if not p.actual_period_basis_and_payment_evidence_verified:
+        raise ValueError('Actual period basis and foreign payment evidence require verification')
+    if p.foreign_period_start > p.foreign_period_end or p.thai_period_start > p.thai_period_end:
+        raise ValueError('Accounting periods must be ordered')
+    start = max(p.foreign_period_start, p.thai_period_start)
+    end = min(p.foreign_period_end, p.thai_period_end)
+    if start > end:
+        raise ValueError('Foreign assessment must overlap the Thai accounting period')
+    total, overlap = p.total_foreign_period_basis, p.basis_in_overlapping_period
+    if total <= 0 or overlap > total:
+        raise ValueError('Positive total basis and an overlap between zero and total are required')
+    if (start, end) == (p.foreign_period_start, p.foreign_period_end) and overlap != total:
+        raise ValueError('A fully covered foreign period requires the full foreign basis')
+    if p.payment_date_market_thb_per_unit <= 0:
+        raise ValueError('Payment-date market exchange rate must be positive')
+    if p.thai_return_filed_on is not None and p.thai_return_filed_on < p.thai_period_end:
+        raise ValueError('Annual return filing cannot precede its accounting period end')
+    tax = Fraction(p.foreign_tax_paid) * Fraction(p.payment_date_market_thb_per_unit)
+    allocated = tax * Fraction(overlap) / Fraction(total)
+    def decimal(value):
+        with localcontext() as context:
+            context.prec = 40
+            return Decimal(value.numerator) / Decimal(value.denominator)
+    return dict(foreign_tax_base=p.foreign_tax_base, overlap_start=start, overlap_end=end,
+        foreign_period_start=p.foreign_period_start, foreign_period_end=p.foreign_period_end,
+        thai_period_start=p.thai_period_start, thai_period_end=p.thai_period_end,
+        payment_date=p.payment_date, payment_date_market_thb_per_unit=p.payment_date_market_thb_per_unit,
+        total_foreign_period_basis=total, basis_in_overlapping_period=overlap,
+        foreign_tax_paid_thb=decimal(tax), allocated_tax_before_credit_limits=decimal(allocated),
+        tax_outside_thai_period=decimal(tax-allocated),
+        exact_allocated_tax=dict(numerator=str(allocated.numerator), denominator=str(allocated.denominator)),
+        amendment_required=None if p.thai_return_filed_on is None else p.payment_date > p.thai_return_filed_on,
+        amendment_timing_known=p.thai_return_filed_on is not None,
+        stage='foreign_paid_tax_period_allocation_before_credit_limits',
+        legal_reference='https://www.rd.go.th/3161.html', locator='Clauses7-9')
 
 
 class CountryBasis(BaseModel):
