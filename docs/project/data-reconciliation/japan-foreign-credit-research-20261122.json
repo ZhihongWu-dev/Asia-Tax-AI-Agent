@@ -123,5 +123,20 @@
     "current_order_check": "e-Gov API Corporate Tax Order revision340CO0000000097_20261001_507CO0000000121 still has unsubstituted144/145 text. Its144(1) orders oldest-year first and national before local within a year;145(1) consumes older excess against current national capacity. Raw API evidence retained in local audit jp-cta-order-current-api-20261122.json. Do not mistake this for a complete defence-period consolidated computation.",
     "next": "Implement original-return historical balances with the three-year start-date window, oldest-year ordering, statutory substitutions, separately tracked local levy shortfalls, filing entitlement, reductions and expiry. No historical credit is yet enabled by this current-capacity output."
   },
+  "historical_limit_matching": {
+    "file": "packages/income_tax/japan_foreign_history.py",
+    "scope": "Matches verified prior-period unused national/prefectural/municipal capacity against current excess, or older excess against current unused capacity. Reorders by origin start and then national/prefectural/municipal layers. Separate historical local levy-shortfall balances, reductions, expense elections, groups and reorganizations are explicitly excluded.",
+    "dates": "Current full-year starts in2026. Eligibility uses origin starts on/after current start minus3calendar years, not origin end or a last-three-record count. Expired-before-current and remaining amounts expiring before next period are separated from next-period balances. Supports several short prior periods without overlapping or duplicate dates.",
+    "authority": "CTA69(2)-(3), Corporate Tax Order144-145, Local Tax Order9-7(2),(5),48-13(2),(6), with defence-order19 substitutions. Current NTA Form6(2) visually reviewed again: national historical credits appear separately in lines19/20 before combined credit21; local-corporation/defence calculations have no ordinary historical-capacity buckets.",
+    "local_order_archive": {
+      "file": "database/raw/jp/jp.local-order.20261122.json",
+      "sha256": "9bc03b230fb0ed1039e33a1544cd53772939ee25d6d4648a386400ea269dfb17",
+      "api": "https://laws.e-gov.go.jp/api/2/law_data/325CO0000000245",
+      "revision": "325CO0000000245_20261101_508CO0000000083"
+    },
+    "validation": "24 focused tests passed1.95s;428 Japan-selected regression tests passed29.75s,1991deselected. Tests cover oldest-period/layer ordering, three-year inclusive start boundary, short periods, expiry, no use of uncarried local-corporation/defence capacity, balance conservation, rejected invalid/unsupported facts, input immutability and ambient precision independence.",
+    "development_reference": "Official CPython GitHub datetime documentation and leap-date issue reviewed before implementation. Uses existing full-year2026 validation, explicit calendar anniversaries and standard-library date arithmetic, with no copied code/dependency.",
+    "remaining": "This is a matching ledger, not enabled historical annual settlement. Matched amounts must be reconciled to tax actually available, local levy-shortfall ledgers, source reductions and final tax/return treatment before saved history API/UI can be enabled. Original broader goal remains incomplete."
+  },
   "overall_goal": "Incomplete. Original corporate/personal coverage and real business acceptance remain required. Priority: cross-border corporate income and foreign tax credits."
 }
