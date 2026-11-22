@@ -43,6 +43,15 @@
     "next": "Derive statutory reference taxes, return rounding and separate authority settlements; incorporate historical excess/capacity and foreign-tax reductions before exposing a complete annual workflow.",
     "additional_source_review": "NTA2026 Schedule6(2-2) instructions at https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hojin/shinkoku/itiran2026/pdf/06%2802-02%29-ki.pdf include reductions and qualifying reorganizations. Current paid-tax reconciliation is not a substitute for these adjustments."
   },
+  "derived_current_reference_workpaper": {
+    "function": "japan_foreign_reconciliation.current_credit_workpaper",
+    "scope": "Derives ordinary corporation/local-corporation/defence reference taxes from saved receipts and existing verified rate classification, then allocates current credits. No manually entered tax reference amounts. Still not annual settlement.",
+    "rounding": "Statutory worldwide denominator remains untruncated; corporation taxable base truncates toJPY1000. Corporation reference precedes finalJPY100 truncation; local/defence reference bases truncate toJPY1000 before10.3percent/4percent. Exact credit fractions retained; credit-field/final-return rounding still pending.",
+    "period": "Defence applicability derives from saved full-year start on/after2026-04-01; prior starts have zero defence reference. Ordinary and verified SME reduced/excluded rate regimes reuse existing rate engine and its unresolved boundary guard.",
+    "authority": "Existing archived rate and national-return sources plus visually reviewed Schedule6(2) lines2/50/51/60/61. NTA current defence guide reopened2026-11-22 confirms annualJPY5m base deduction before4percent and subsequent foreign credit.",
+    "validation": "60 focused tests passed2.44s, including reference derivation, untruncated denominator versus rounded tax base, pre-final-rounding corporation reference, commencement boundaries, SME classifications and all archived output hashes. Japan-selected regression308passed26.28s,1991deselected.",
+    "remaining": "Return rounding, source-tax eligibility automation, historical credits/capacity/reductions, local taxes and persisted annual API/UI/reports."
+  },
   "development_reference": "Official pydantic/pydantic GitHub validators documentation searched before implementation. Existing project amount validation retained; standard-library Fraction preserves exact intermediate arithmetic. No copied code or new dependency adopted.",
   "overall_goal": "Incomplete. Original corporate/personal coverage and real business acceptance remain required."
 }

@@ -9,6 +9,8 @@ from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from packages.contracts.income_tax import Money
 from .japan import yen
 from .japan_company import annual_period
+from .japan_company import company_tax
+from .japan_foreign_credit import current_national_credits
 
 
 class Group(BaseModel):
@@ -85,3 +87,39 @@ def reconcile(case,workpaper):
             foreign_income_before_exempt=foreign,foreign_income_exempt_from_foreign_tax=exempt,
             eligible_foreign_corporate_tax=eligible,sources_reconciled=rows,
             stage='saved_ordinary_source_reconciliation_not_annual_assessment')
+
+
+def current_credit_workpaper(case,workpaper,*,rate_regime,rate_classification_verified,
+        no_other_tax_credits_additions_or_history_verified):
+    """Derive ordinary references from saved facts; not a final tax return.
+
+    Reuse the existing ordinary rate/base engine only for pre-credit references.
+    Its rounded final tax and interim settlement outputs are deliberately not
+    exposed here. Schedule6(2) references precede final JPY100 tax truncation.
+    """
+    if no_other_tax_credits_additions_or_history_verified is not True:
+        raise ValueError('Other credits, additions and historical balances need separate treatment')
+    reconciled=reconcile(case,workpaper)
+    ordinary=company_tax(reconciled['taxable_income_before_rounding'],
+        period_start=case.period_start,period_end=case.period_end,rate_regime=rate_regime,
+        rate_classification_verified=rate_classification_verified,
+        ordinary_no_adjustments_confirmed=True,corporation_interim_liability=0,
+        local_corporation_interim_liability=0)
+    with localcontext() as context:
+        context.prec=40
+        references=dict(corporation_tax_reference=ordinary['corporation_tax_reference'],
+            local_corporation_tax_reference=ordinary['local_corporation_tax_base']*Decimal('.103'),
+            defence_tax_reference=ordinary['defence_tax_base']*Decimal('.04'),
+            defence_applicable=ordinary['defence_return_required'])
+    credit=current_national_credits(**{key:reconciled[key] for key in (
+        'statutory_worldwide_income','foreign_income_before_exempt',
+        'foreign_income_exempt_from_foreign_tax','eligible_foreign_corporate_tax')},
+        **references,statutory_reference_amounts_and_current_tax_eligibility_verified=True,
+        no_history_group_or_special_credit_adjustments_verified=True)
+    return dict(policy_version='jp-saved-current-credit-workpaper-20261122',currency='JPY',
+        reconciliation=reconciled,reference_taxes=references,
+        corporation_taxable_base=ordinary['taxable_income'],
+        local_corporation_tax_base=ordinary['local_corporation_tax_base'],
+        defence_tax_base=ordinary['defence_tax_base'],rate_regime=rate_regime,
+        current_national_credit=credit,sources=ordinary['sources']+credit['sources'],
+        stage='saved_current_credit_workpaper_before_filing_rounding_and_local_history_settlement')
