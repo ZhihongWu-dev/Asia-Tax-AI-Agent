@@ -1,5 +1,19 @@
 {
-  "status": "statutory_formula_reviewed_decree_and_workflow_pending",
+  "status": "statute_and_current_decree_archived_component_and_workflow_pending",
+  "current_decree_archive": {
+    "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=290843&efYd=20261001&chrClsCd=010202&lsId=003608",
+    "file": "database/raw/kr/kr.corporate-decree.20261001.html",
+    "sha256": "765c698aedb7b4a5dc78b76f768bf3200801137900153bf2b639e634e4fb8f2a",
+    "retrieval": "Official shell identifies lsiSeq290843 and effective20261001; its public ls.js identifies lsInfoR.do as the body endpoint. Full body retrieved and Article94 reviewed, not the empty wrapper or2025 English translation.",
+    "findings": [
+      "Article94(1): eligible income-based foreign taxes exclude penalties and treaty-excess tax, subject to specified exceptions; Russia exception is outside current jurisdiction set.",
+      "Article94(2): Korean-law foreign income is reduced by corresponding direct and allocated expenses deducted in Korea but not already deducted in the source jurisdiction; special allocation election must continue five business years.",
+      "Article94(3)-(5): credit matches the income inclusion year; delayed foreign assessment or differing tax periods permit supplementary evidence within three months after foreign determination notice; later foreign tax adjustments follow the same provision.",
+      "Article94(6)-(7): loss/exempt-income/deduction allocations affect foreign income; separate limits by country.",
+      "Article94(15): excess associated with corresponding foreign-income expenses is excluded from ordinary carryforward and may be deducted in the following business year. Do not classify every unused foreign tax amount as ten-year carryforward."
+    ],
+    "remaining": "Implement exact pre/post-expense country limits, eligible carry versus following-year deduction, expiry/ordering, then connect national/local saved workflows."
+  },
   "scope": "Corporate foreign tax credits; existing korea_company.py covers ordinary domestic national/local settlement and does not establish foreign credit support.",
   "reviewed_primary_source": {
     "file": "database/raw/kr/kr.corporate-tax-act.20260701.ko.pdf",
