@@ -409,6 +409,9 @@ class ChatService(DomainCoordinator):
             catalog_request = catalog_research.request(text)
             if catalog_request:
                 return catalog_research.prepare(doc, text, locale, catalog_request)
+            catalog_question = catalog_research.answer_request(text)
+            if catalog_question:
+                return catalog_research.answer_question(doc, text, locale, catalog_question)
             from packages.chat import library_research
             if library_research.should_handle(doc, text):
                 from packages.agent.tracing import emit
