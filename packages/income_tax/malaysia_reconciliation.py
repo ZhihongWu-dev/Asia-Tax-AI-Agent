@@ -43,10 +43,12 @@ class CompanyWorkpaper(BaseModel):
 def reconcile(case: IncomeTaxCase, paper: IndividualWorkpaper):
     """Reconcile every saved source; never offset old business losses against wages."""
     if (case.jurisdiction != "my" or case.subject != "individual"
-            or case.residency != "resident" or case.missing_for_calculation()):
-        raise ValueError("Confirmed Malaysian resident individual facts required")
+            or case.residency not in ("resident", "nonresident") or case.missing_for_calculation()):
+        raise ValueError("Confirmed Malaysian individual facts required")
     if not paper.eligibility_verified or not paper.separate_assessment_verified:
         raise ValueError("Workpaper eligibility and separate assessment require verification")
+    if case.residency == "nonresident" and paper.allowed_personal_reliefs != 0:
+        raise ValueError("Ordinary nonresident assessment cannot claim resident personal reliefs")
     return _reconcile_sources(case, paper, paper.allowed_personal_reliefs)
 
 

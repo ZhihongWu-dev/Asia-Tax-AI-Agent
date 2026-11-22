@@ -192,7 +192,7 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
       confirm('ordinary_treatment_confirmed','已核对普通税制及排除条件','Ordinary treatment and exclusions checked'),
       money('allowed_rebates','核定可用税额回扣','Allowed tax rebates'),
       money('allowed_tax_credits','核定可抵免税额','Allowed tax credits'),prepaid];
-    if (company || input.residency==='resident') {
+    {
       input.incomes.forEach((_item,n)=>{
         const prefix=`my_source_${n}_`;
         for (const [key,zh,label] of [['additions','核定加回','Verified additions'],['deductions','核定费用扣除','Allowed source deductions'],['statutory_charges','法定加计','Statutory charges'],['statutory_allowances','资本免税额','Statutory allowances']])
@@ -200,7 +200,7 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
       });
       fields.push(money('my_schedule4_additions','附表4加计','Schedule 4 additions'),
         money('my_total_deductions','按法定顺序核定的总所得扣除','Verified total-income deductions'),
-        ...(company?[]:[money('my_personal_reliefs','核定个人减免','Allowed personal reliefs')]),
+        ...(company || input.residency==='nonresident'?[]:[money('my_personal_reliefs','核定个人减免','Allowed personal reliefs')]),
         confirm('my_eligibility','已核验来源调整、亏损年度和扣除限额','Source adjustments and deduction eligibility verified'),
         confirm('my_separate',company?'已核实普通独立公司及无集团减免':'已核验单独评税',company?'Standalone ordinary company without group relief verified':'Separate assessment verified'));
     }

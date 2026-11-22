@@ -1,0 +1,29 @@
+{
+  "status": "ordinary_nonresident_workflow_reconciled",
+  "problem": "Saved gross100 accepted unexplained chargeable100000;now every source requires a reconciled workpaper.",
+  "changes": [
+    "All ordinary individuals require staged source reconciliation.",
+    "Nonresident personal reliefs must be zero.",
+    "Positive statutory additions remain supported.",
+    "UI collects nonresident adjustments and submits zero personal reliefs."
+  ],
+  "validation": {
+    "income_tax_tests": 1865,
+    "seconds": 31.26,
+    "focused_api_and_component_tests": 15,
+    "browser_tests": 3,
+    "browser_seconds": 24.8,
+    "typescript": "passed",
+    "diff_check": "passed"
+  },
+  "sources": [
+    "https://www.hasil.gov.my/en/individu/pengenalan-cukai-pendapatan-individu/",
+    "database/raw/my/my.ita1967.updated2026.en.pdf"
+  ],
+  "limits": [
+    "Ordinary treatment, source adjustment eligibility and statutory deduction limits remain verified inputs.",
+    "Special-rate, treaty, foreign-source and exempt cases require their own treatment.",
+    "No claim of full business completion."
+  ],
+  "next_business_priority": "User selected cross-border corporate income and foreign tax credits."
+}

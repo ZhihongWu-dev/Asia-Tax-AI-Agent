@@ -320,20 +320,16 @@ def calculate(case: IncomeTaxCase, basis):
             result['sources'].extend(deepcopy(malaysia.COMPANY_BASIS_SOURCES))
         else:
             paper = args.pop('workpaper')
-            reconciliation = None
-            if case.residency == 'resident':
-                if paper is None:
-                    raise ValueError('Resident individual calculation requires a reconciled workpaper')
-                from .malaysia_reconciliation import reconcile
-                reconciliation = reconcile(case, basis.workpaper)
-                if basis.chargeable_income != reconciliation['chargeable_income']:
-                    raise ValueError('Chargeable income differs from the reconciled workpaper')
-            elif paper is not None:
-                raise ValueError('Resident workpaper cannot be applied to a nonresident')
+            if paper is None:
+                raise ValueError('Individual calculation requires a reconciled workpaper')
+            from .malaysia_reconciliation import reconcile
+            reconciliation = reconcile(case, basis.workpaper)
+            if basis.chargeable_income != reconciliation['chargeable_income']:
+                raise ValueError('Chargeable income differs from the reconciled workpaper')
             result=malaysia.individual_tax(assessment_year=2026,residency=case.residency,**args)
             if reconciliation is not None:
                 result['reconciliation'] = reconciliation
-                result['policy_version'] += '-reconciled-20261119'
+                result['policy_version'] += '-reconciled-20261122'
                 for source in result['sources']:
                     source['locator'] += '; sections 42-45 (basis reconciliation)'
     elif policy in ('id_company_2026','id_resident_2026'):

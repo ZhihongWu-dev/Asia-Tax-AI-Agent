@@ -702,13 +702,13 @@ for (const subject of ['company','individual'] as const) {
     await openIncome(page);
     await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(subject==='company'?'505000':'20000');
   });
-  test(`Malaysia ${subject} calculation is saved with official evidence`, async ({page})=>{
+  for (const residency of (subject==='company'?['resident']:['resident','nonresident'])) test(`Malaysia ${subject} ${residency} calculation is saved with official evidence`, async ({page})=>{
     const form=await openIncome(page);
     await form.getByRole('combobox',{name:'Taxpayer',exact:true}).selectOption(subject);
     await form.getByRole('combobox',{name:'Filing jurisdiction',exact:true}).selectOption('my');
     await form.getByLabel('Period start',{exact:true}).fill('2026-01-01');
     await form.getByLabel('Period end',{exact:true}).fill('2026-12-31');
-    await form.getByRole('combobox',{name:'Tax residency',exact:true}).selectOption('resident');
+    await form.getByRole('combobox',{name:'Tax residency',exact:true}).selectOption(residency);
     await form.getByRole('combobox',{name:'Income category',exact:true}).selectOption(subject==='company'?'business':'employment');
     await form.getByLabel('Gross income',{exact:true}).fill(subject==='company'?'1000000':'100000');
     await form.getByLabel('Income description',{exact:true}).fill('Domestic ordinary income in the 2026 basis period');
@@ -726,14 +726,14 @@ for (const subject of ['company','individual'] as const) {
       await calculation.getByLabel('Company rate scheme').selectOption('sme');
       await calculation.getByLabel('All SME rate conditions verified').selectOption('true');
     }
-    for(const label of ['Source 1: Verified additions','Source 1: Allowed source deductions','Source 1: Statutory charges','Source 1: Statutory allowances','Schedule 4 additions','Verified total-income deductions',...(subject==='individual'?['Allowed personal reliefs']:[])])
+    for(const label of ['Source 1: Verified additions','Source 1: Allowed source deductions','Source 1: Statutory charges','Source 1: Statutory allowances','Schedule 4 additions','Verified total-income deductions',...(subject==='individual' && residency==='resident'?['Allowed personal reliefs']:[])])
       await calculation.getByLabel(label,{exact:true}).fill('0');
     for(const label of ['Source adjustments and deduction eligibility verified',subject==='company'?'Standalone ordinary company without group relief verified':'Separate assessment verified'])
       await calculation.getByRole('combobox',{name:label,exact:true}).selectOption('true');
     await calculation.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Chargeable income and applicable ordinary or SME eligibility conditions checked against supporting records.');
     await calculation.getByRole('checkbox').check();
     await calculation.getByRole('button',{name:'Calculate and save result'}).click();
-    await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(subject==='company'?'195000':'9400');
+    await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(subject==='company'?'195000':residency==='resident'?'9400':'30000');
     if(subject==='individual') {
       const schedule=page.getByRole('region',{name:'Tax basis reconciliation',exact:true});
       await expect(schedule).toContainText('100000');
@@ -742,7 +742,7 @@ for (const subject of ['company','individual'] as const) {
     await expect(page.getByRole('article',{name:'Saved calculation result'}).getByRole('link').first()).toHaveAttribute('href',/lom.agc.gov.my/);
     if(subject==='company') await page.screenshot({path:'test-results/income-tax-malaysia-company.png',fullPage:true});
     await openIncome(page);
-    await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(subject==='company'?'195000':'9400');
+    await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(subject==='company'?'195000':residency==='resident'?'9400':'30000');
     if(subject==='individual') {
       const schedule=page.getByRole('region',{name:'Tax basis reconciliation',exact:true});
       await expect(schedule).toContainText('100000');

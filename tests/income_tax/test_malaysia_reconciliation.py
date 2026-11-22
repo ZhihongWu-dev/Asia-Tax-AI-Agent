@@ -92,7 +92,8 @@ def test_assessment_requires_workpaper_and_rejects_mismatched_basis():
         calculate(case, adapter.validate_python(payload))
 
 
-def test_api_rejection_is_atomic_and_workpaper_survives_reopen(tmp_path):
+@pytest.mark.parametrize("residency", ["resident", "nonresident"])
+def test_api_rejection_is_atomic_and_workpaper_survives_reopen(tmp_path, residency):
     from copy import deepcopy
     from types import SimpleNamespace
     from uuid import uuid4
@@ -102,6 +103,11 @@ def test_api_rejection_is_atomic_and_workpaper_survives_reopen(tmp_path):
     from packages.chat.store import ChatStore
     from tests.chat.auth_support import fixture_user
     case, paper = fixture()
+    case.residency = residency
+    if residency == 'nonresident':
+        case.claimed_deductions = Decimal(0)
+        paper['allowed_personal_reliefs'] = '0'
+    expected_base = '91000' if residency == 'resident' else '100000'
     url = 'sqlite:///' + str(tmp_path / 'malaysia.sqlite')
     service = SimpleNamespace(store=ChatStore(url))
     app = FastAPI()
@@ -110,7 +116,7 @@ def test_api_rejection_is_atomic_and_workpaper_survives_reopen(tmp_path):
     app.dependency_overrides[auth.optional_user] = fixture_user
     app.dependency_overrides[chat.get_service] = lambda: service
     headers = {'x-asiatax-request': '1'}
-    basis = dict(policy='my_individual_2026', chargeable_income='100000',
+    basis = dict(policy='my_individual_2026', chargeable_income='1000000',
         ordinary_treatment_confirmed=True, allowed_rebates='0', allowed_tax_credits='0',
         prepaid_tax='0', basis_confirmed=True, workpaper=paper,
         basis_explanation='Verified source adjustments and personal relief schedule')
@@ -127,7 +133,7 @@ def test_api_rejection_is_atomic_and_workpaper_survives_reopen(tmp_path):
             failed = client.post(path+'/runs', headers=headers, json=request)
             assert failed.status_code == 422, failed.text
             assert client.get(path).json() == before
-            basis['chargeable_income'] = '91000'
+            basis['chargeable_income'] = expected_base
             response = client.post(path+'/runs', headers=headers, json=request)
             assert response.status_code == 200, response.text
             run = response.json()
@@ -146,3 +152,44 @@ def test_api_rejection_is_atomic_and_workpaper_survives_reopen(tmp_path):
             assert client.get(path).json() == current
     finally:
         service.store.engine.dispose()
+
+
+@pytest.mark.parametrize("residency, relief, expected_base, expected_tax", [
+    ("resident", "9000", "91000", "7690.00"),
+    ("nonresident", "0", "100000", "30000.00"),
+])
+def test_individual_residence_reconciles_sources(residency, relief, expected_base, expected_tax):
+    from pydantic import TypeAdapter
+    from packages.contracts.income_assessment import Assessment
+    from packages.income_tax.assessment import calculate
+    case, paper = fixture()
+    case.residency = residency
+    case.claimed_deductions = Decimal(relief)
+    paper['allowed_personal_reliefs'] = relief
+    basis = dict(policy='my_individual_2026', chargeable_income=expected_base,
+        ordinary_treatment_confirmed=True, allowed_rebates='0', allowed_tax_credits='0',
+        prepaid_tax='0', basis_confirmed=True, workpaper=paper,
+        basis_explanation='Verified source expenses and ordinary separate assessment')
+    adapter = TypeAdapter(Assessment)
+    result = calculate(case, adapter.validate_python(basis))
+    assert result['final_tax'] == expected_tax
+    assert result['reconciliation']['chargeable_income'] == expected_base
+    basis['chargeable_income'] = '1000000'
+    with pytest.raises(ValueError, match='differs'):
+        calculate(case, adapter.validate_python(basis))
+    basis['workpaper'] = None
+    with pytest.raises(ValueError, match='workpaper'):
+        calculate(case, adapter.validate_python(basis))
+
+
+def test_nonresident_personal_reliefs_rejected_and_additions_preserved():
+    case, paper = fixture()
+    case.residency = 'nonresident'
+    with pytest.raises(ValueError, match='personal reliefs'):
+        reconcile(case, IndividualWorkpaper(**paper))
+    paper['allowed_personal_reliefs'] = '0'
+    case.claimed_deductions = Decimal(0)
+    paper['sources'][0]['statutory_charges'] = '60000'
+    result = reconcile(case, IndividualWorkpaper(**paper))
+    assert result['chargeable_income'] == 130000
+    assert result['chargeable_income'] > sum(i.gross_amount for i in case.incomes)

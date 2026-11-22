@@ -74,7 +74,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
         owner_rates_paid:basis[`hk_property_${n}_owner_rates_paid`]}));
       for (const key of Object.keys(basis)) if (key.startsWith('hk_property_')) delete basis[key];
     }
-    if (policy.id==='my_company_2026' || (policy.id==='my_individual_2026' && current.income_tax!.residency==='resident')) {
+    if (policy.id==='my_company_2026' || policy.id==='my_individual_2026') {
       basis.workpaper={sources:current.income_tax!.incomes.map((_item,n)=>({
         income_index:n, additions:basis[`my_source_${n}_additions`],
         deductions:basis[`my_source_${n}_deductions`],
@@ -84,7 +84,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
         schedule4_additions:basis.my_schedule4_additions,
         allowed_total_income_deductions:[basis.my_total_deductions],
         eligibility_verified:basis.my_eligibility,
-        ...(policy.id==='my_company_2026'?{standalone_ordinary_verified:basis.my_separate}:{allowed_personal_reliefs:basis.my_personal_reliefs,separate_assessment_verified:basis.my_separate})};
+        ...(policy.id==='my_company_2026'?{standalone_ordinary_verified:basis.my_separate}:{allowed_personal_reliefs:current.income_tax!.residency==='nonresident'?'0':basis.my_personal_reliefs,separate_assessment_verified:basis.my_separate})};
       for (const key of Object.keys(basis)) if (key.startsWith('my_')) delete basis[key];
     }
     if (policy.id==='vn_business_2026') basis=vietnamBusinessBasis(basis,current.income_tax!);
@@ -149,6 +149,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
           {policy.id==='hk_salaries_2025_26' && <p>{say('薪俸核对：已保存工资应为核定应评税入息，另列折旧结余课税。保存的扣除总额须等于受雇费用、机器免税额、个人进修及第4A部扣除之和，不含个人免税额或以前年度亏损。亏损栏只填按第12A条核定可用的薪俸亏损，不能填营业亏损。只有第12(1)(a)、(b)项超额单独记录为本期第12A条超额；进修及其他扣除不能自动结转。','Salaries workpaper: saved wages are established assessable income; enter machinery balancing charges separately. Saved deductions equal employment expenses, machinery allowances, self-education and Part 4A deductions, excluding personal allowances and prior losses. Prior losses must be eligible section12A salary losses, not business losses. Only excess section12(1)(a)/(b) amounts are recorded as current section12A excess; education and other deductions do not automatically carry forward.')}</p>}
           {policy.id==='hk_profits_2025_26' && <p>{say('利得税核对：已保存收入加应税调增，减核定剔除和扣除，得到抵亏前应评税利润或经调整亏损；再抵扣核定可用的以前年度亏损。扣除须已完成捐款限额、折旧免税额及来源规则审核，不含会计折旧、不允许费用或已单列的亏损。剔除金额不能重复列入扣除。未用亏损不代表获准结转。','Profits reconciliation: saved income plus taxable additions, less established exclusions and deductions, gives assessable profits or adjusted loss before prior-loss set-off. Then apply verified eligible prior losses. Establish donation limits, statutory allowances and source rules first; saved deductions exclude accounting depreciation, disallowed costs and separately entered losses. Do not duplicate exclusions as deductions. Unused losses do not establish carryforward entitlement.')}</p>}
           {policy.id==='my_company_2026' && <p>{say('公司核对表：逐来源核算调整收入、资本免税额和法定收入。以前年度营业亏损只能抵扣营业法定收入，本年营业亏损在汇总所得后扣除。保存的扣除总额须等于来源扣除、资本免税额和按法定顺序核定的总所得扣除，不含以前年度亏损。须先核实亏损期限、股权条件、捐款及其他限额；本表不计算境外收入、集团减免或优惠所得。','Company workpaper: reconcile adjusted income, capital allowances and statutory income by source. Prior business losses reduce business statutory income only; current business losses follow aggregation. Saved deductions must equal source deductions, statutory allowances and established total-income deductions, excluding prior losses. Verify loss vintages, ownership conditions, donation and other limits first. Foreign income, group relief and incentive income need separate calculations.')}</p>}
+          {policy.id==='my_individual_2026' && current.income_tax.residency==='nonresident' && <p>{say('???????????????????????????????????????????????????????????????','Reconcile ordinary nonresident source expenses, additions and statutory income. Personal reliefs are zero. Verify that short-term employment exemptions, special rates and treaty treatment do not apply to this ordinary assessment.')}</p>}
           {policy.id==='my_individual_2026' && current.income_tax.residency==='resident' && <p>{say('居民核对表：已保存的扣除总额须等于各来源费用扣除、资本免税额、总所得扣除及个人减免之和（不含以前年度亏损）。总所得扣除须先按法定顺序及限额核定；未使用余额不代表已获准结转。','Resident workpaper: saved claimed deductions must equal source deductions, statutory allowances, total-income deductions and personal reliefs, excluding prior losses. Establish total-income deductions in statutory order and within their limits first. Unused balances do not establish carryforward entitlement.')}</p>}
           <div className="facts-field-grid">{policy.fields.filter(field=>!field.showWhen || values[field.showWhen[0]]===field.showWhen[1]).map(field=><label key={field.key}>{field.label[index]}
             {field.boolean || field.options ? <select required value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)}>
