@@ -5,6 +5,37 @@ import {tokyoAmounts,tokyoChecks} from '../src/japan-tokyo-assessment';
 import { test, expect } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 
+for(const method of ['business_net','company_receipts'])test(`Thai corporate RD300 ${method} saves country expense reconciliation`,async({page})=>{
+ test.setTimeout(60000);
+ const form=await openIncome(page);
+ for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','th'],['Tax residency','resident'],['Income category',method==='business_net'?'business':'royalty'],['Income source jurisdiction','sg']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+ for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Gross income','1000000'],['Foreign tax paid (blank if unknown)','100000'],['Income description','Synthetic Thai corporate foreign income with verified final expenses'],['Claimed deductions (blank if unknown)','100000'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+ await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+ const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+ await calc.getByLabel('Applicable regime').selectOption('th_company_2026');
+ await calc.getByRole('combobox',{name:'Company rate scheme',exact:true}).selectOption('ordinary');
+ await calc.getByRole('combobox',{name:'All SME and continuous-period conditions verified',exact:true}).selectOption('false');
+ await calc.getByRole('combobox',{name:'Reconcile foreign credits and expenses by country under RD300',exact:true}).selectOption('true');
+ await calc.getByRole('combobox',{name:'SG: foreign income treatment',exact:true}).selectOption(method);
+ for(const [name,value] of [['Established net taxable profit','900000'],['Verified exempt income included in saved income','0'],['Allowed tax credits','100000'],['Prepaid tax for this period','90000'],['Domestic allowable expenses','0'],['SG: total annual allowable expenses','100000'],['SG: foreign tax included in annual expenses','0']])await calc.getByLabel(name,{exact:true}).fill(value);
+ const amounts=method==='business_net'?[
+  ['SG: Foreign business revenue','1000000'],['SG: Business allowable expenses including verified deductible foreign tax','100000'],['SG: Foreign tax paid on business income','100000']]:[
+  ['SG: Gross receipts from foreign companies','1000000'],['SG: Foreign tax paid on company receipts','100000']];
+ for(const [name,value] of amounts)await calc.getByLabel(name,{exact:true}).fill(value);
+ for(const name of ['Ordinary annual treatment and exclusions checked','Thai incorporation and RD300 election verified','Final expense bases and foreign tax deduction eligibility verified','Source, period, FX and tax-authority-certified payment evidence verified'])await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+ await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Confirmed Thai company RD300 election, final expenses and certified foreign tax payment.');
+ await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
+ const result=page.getByRole('article',{name:'Saved calculation result'});
+ await expect(result).toContainText('80000');await expect(result).toContainText('-10000');
+ const detail=result.getByRole('region',{name:'Thai company foreign credit reconciliation'});
+ await expect(detail).toContainText('100000');
+ const downloading=page.waitForEvent('download');await result.getByRole('button',{name:'Download calculation record'}).click();
+ const report=await readFile((await (await downloading).path())!,'utf8');
+ expect(report).toContain('Thai company foreign tax and expense reconciliation');
+ expect(report).toContain('th.rd300.foreign-credit');
+ await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('80000');
+});
+
 for(const route of [
   {country:'id',category:'dividend',gross:'1000',tax:'50',credit:'150',underlying:false},
   {country:'sg',category:'royalty',gross:'1000',tax:'50',credit:'100',underlying:false},

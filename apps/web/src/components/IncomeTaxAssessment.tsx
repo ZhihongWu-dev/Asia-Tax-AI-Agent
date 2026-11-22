@@ -1,7 +1,9 @@
 import {uaeForeignBasis} from '../uae-foreign-assessment';
 import {malaysiaForeignBasis} from '../malaysia-foreign-assessment';
 import {indonesiaForeignBasis} from '../indonesia-foreign-assessment';
+import {thaiCompanyForeignBasis} from '../thailand-company-foreign';
 import IndonesiaForeignResult from './IndonesiaForeignResult';
+import ThaiCompanyForeignResult from './ThaiCompanyForeignResult';
 import MalaysiaForeignResult from './MalaysiaForeignResult';
 import UAEForeignResult from './UAEForeignResult';
 import SingaporeForeignResult from './SingaporeForeignResult';
@@ -64,6 +66,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
     if(policy.id==='ae_company_foreign_direct_2026')basis=uaeForeignBasis(basis,current.income_tax!,values);
     if(policy.id==='my_company_foreign_direct_ya2026')basis=malaysiaForeignBasis(basis,current.income_tax!,values);
     if(policy.id==='id_company_foreign_direct_2026')basis=indonesiaForeignBasis(basis,current.income_tax!,values);
+    if(policy.id==='th_company_2026')basis=thaiCompanyForeignBasis(basis,current.income_tax!);
     if(policy.id==='sg_company_foreign_direct_ya2026')basis=singaporeForeignBasis(basis,current.income_tax!,values);
     if(policy.id==='cn_personal_foreign_2026'){
       try{basis=personalForeignBasis(basis,current.income_tax!,values);}catch{setError(say('历史抵免国家不得重复或与现有来源国家重复。','Prior-credit countries must be unique and additional to saved source countries.'));return;}
@@ -148,6 +151,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
           {options.map(p=><option key={p.id} value={p.id}>{p.label[index]}</option>)}
         </select></label>
         {policy && <><p>{policy.notice[index]}</p><p>{say('金额币种：','Currency: ')}{current.income_tax.currency}</p>
+        {policy.id==='th_company_2026'&&values.thfc_enabled==='true'&&<p>{say('逐国核对目前适用普通20%税率、无免税收入及结转亏损的第300号法令路径。请填已核实的最终费用；境内外费用合计须等于保存的扣除额，核定抵免额须与系统分国计算一致。协定路径和小企业另行处理。','Country reconciliation currently covers the RD300 ordinary 20% path without exemptions or carried losses. Enter verified final expenses; domestic and foreign expenses must equal saved deductions, and allowed credits must match the country calculation. Treaty and SME cases require separate treatment.')}</p>}
           {policy.id==='jp_company_starting_2026' && <>
             <button type="button" aria-pressed={values.jpt_enabled==='true'} onClick={()=>{setValues(v=>({...v,jpt_enabled:v.jpt_enabled==='true'?'false':'true',jpo_enabled:'false',jpt_ward_count:v.jpt_ward_count||'1',jpt_principal:v.jpt_principal||'1'}));setConfirmed(false);setError('');}}>{say('附加东京23区地方税评税','Include Tokyo 23-ward local assessment')}</button>
             <button type="button" aria-pressed={values.jpo_enabled==='true'} onClick={()=>{setValues(v=>({...v,jpo_enabled:v.jpo_enabled==='true'?'false':'true',jpt_enabled:'false',jpo_ward_count:v.jpo_ward_count||'1'}));setConfirmed(false);setError('');}}>{say('附加大阪市地方税评税','Include Osaka city local assessment')}</button>
@@ -216,6 +220,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       {result.result.policy_version==='ae-ordinary-foreign-credit-20261122'&&<UAEForeignResult result={result.result} index={index}/>}
       {result.result.policy_version==='my-schedule7-direct-credit-20261122'&&<MalaysiaForeignResult result={result.result} index={index}/>}
       {result.result.policy_version==='id-article24-credit-20261122'&&<IndonesiaForeignResult result={result.result} index={index}/>}
+      {result.result.foreign_credit_reconciliation&&String(result.result.policy_version).includes('rd300')?<ThaiCompanyForeignResult result={result.result} index={index}/>:null}
       {result.result.policy_version==='sg-company-foreign-direct-ya2026-20261122'&&<SingaporeForeignResult result={result.result} index={index}/>}
       {result.result.tax_scope==='china_resident_ordinary_direct_foreign_credit_positive_bases'&&<ChinaForeignResult result={result.result} index={index}/>}
       {result.result.tax_scope==='china_resident_ordinary_comprehensive_business_investment_foreign_credit'&&<PersonalForeignResult result={result.result} index={index}/>}

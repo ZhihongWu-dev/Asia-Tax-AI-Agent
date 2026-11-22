@@ -1,6 +1,7 @@
 import {uaeForeignPolicy} from './uae-foreign-assessment';
 import {malaysiaForeignPolicy} from './malaysia-foreign-assessment';
 import {indonesiaForeignPolicy} from './indonesia-foreign-assessment';
+import {thaiCompanyForeignFields} from './thailand-company-foreign';
 import {singaporeForeignPolicy} from './singapore-foreign-assessment';
 import {personalForeignPolicy} from './china-personal-foreign-assessment';
 import { chinaForeignPolicy } from './china-foreign-assessment';
@@ -173,7 +174,7 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
         'Saved income must include statutory valuation adjustments. Enter only allowed expenses as deductions and exempt income separately without duplication. Verify prior-loss vintages and usable amounts first. The system reconciles net profit; unused losses do not establish carryforward entitlement. Ordinary rate: 20%. SME rates require period-end paid-up capital up to THB 5m, sales/service revenue up to THB 30m and the decree’s continuous-period conditions. Excludes investment incentives, petroleum, gross-receipt and top-up tax regimes.'],
       fields:[money('net_taxable_profit','核定应税净利润','Established net taxable profit'),money('exempt_income','核定免税收入（已含于保存收入）','Verified exempt income included in saved income'),...shared,
         {key:'scheme',label:['企业税率制度','Company rate scheme'],options:[['ordinary',['普通20%税率','Ordinary 20% rate']],['sme',['符合条件的小企业分级税率','Eligible SME tiered rates']]]},
-        confirm('sme_eligibility_confirmed','已核实全部小企业条件及连续期间资格','All SME and continuous-period conditions verified')]}]
+        confirm('sme_eligibility_confirmed','已核实全部小企业条件及连续期间资格','All SME and continuous-period conditions verified'),...thaiCompanyForeignFields(input,values)]}]
       : [{id:'th_resident_2026',label:['泰国居民个人（2026）','Thailand resident individual (2026)'],
         notice:['仅限境内普通年度合并计税收入。净应税所得须先核定费用及扣除；非工资应税总收入从已保存明细汇总。比较累进税额与0.5%最低税额，最低税额不超过5000泰铢时豁免该方法。不含境外所得、股息利息单独税制、终止雇佣一次性收入、不动产处置及联合评税。',
           'Domestic ordinary annual income only. Establish expenses and allowances before entering net taxable income. Saved non-employment gross income determines the 0.5% minimum-tax comparison; that method is exempt when its tax does not exceed THB 5,000. Excludes foreign income, separate dividend/interest regimes, termination lump sums, property disposals and joint assessment.'],
