@@ -1,0 +1,23 @@
+{
+  "status": "fsie_credit_component_implemented_annual_workflow_pending",
+  "validation": "53 tests passed in9.40s across new FSIE source-credit component, existing ordinary Hong Kong calculations and profits reconciliation; includes original-source hash verification. No saved annual/API/UI acceptance claimed.",
+  "source": {
+    "url": "https://www.ird.gov.hk/eng/tax/bus_fsie.htm",
+    "file": "database/raw/hk/hk.fsie.credit.20261122.html",
+    "sha256": "17759e053e59472f50bb2bcf94b97d03be6a50032acce725df6eda73547e7edb",
+    "locator": "Double Taxation Relief"
+  },
+  "findings": [
+    "Taxable FSIE receipts of a Hong Kong resident MNE may receive same-income credit capped by paid similar foreign tax and Hong Kong tax on that income.",
+    "CDTA tax claims and non-CDTA unilateral claims follow distinct routes. Ineligible bilateral direct tax is not automatically unilateral tax.",
+    "Dividend underlying profits tax not allowed bilaterally can qualify unilaterally when the MNE holds at least10percent equity at distribution. Never count the same underlying tax in both claims.",
+    "Exempt income receives no FSIE credit. A nonresident MNE may have an expense deduction route, which this credit component does not implement."
+  ],
+  "implementation": "Verified source workpapers, explicit bilateral eligible amounts, separate underlying-tax claims,10percent unilateral threshold, same-income and total-tax limits; no annual result or API/UI policy enabled yet.",
+  "remaining": [
+    "Verify annual tax-reduction ordering and source tax attribution under two-tier rates.",
+    "Reconcile saved income, gross-up, deductions, losses and receipt years; distinguish exemption eligibility and non-FSIE treaty claims.",
+    "Integrate annual saved assessment, API, bilingual reports and frontend with business cases."
+  ],
+  "development_reference": "Pydantic official GitHub validator documentation reviewed; existing project model conventions retained, no new dependency or external code copied."
+}
