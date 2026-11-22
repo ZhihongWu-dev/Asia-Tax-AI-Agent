@@ -1,0 +1,33 @@
+{
+  "status": "implementation_gap_verified_rules_reviewed",
+  "date": "2026-11-22",
+  "current_gap": "id_company_2026 saved adapter only supports domestic ordinary income; prepaid_tax is domestic refundable withholding/instalments, not foreign credit.",
+  "official_sources": [
+    "https://www.pajak.go.id/id/pelaksanaan-pengkreditan-pajak-atas-penghasilan-dari-luar-negeri",
+    "https://jdih.kemenkeu.go.id/dok/192-pmk-03-2018",
+    "https://www.pajak.go.id/sites/default/files/Lamp_PMK_192_PMK_03_2018.pdf"
+  ],
+  "review": [
+    "PMK192/2018 Article6 calculates separately by income type and country. Limit is lowest of treaty-permitted tax, foreign tax, and allocated Indonesian tax; overall liability cap also applies.",
+    "Article4 excludes foreign losses from domestic aggregation; Article7 prohibits excess credit as income deduction or refund. Article9 requires recapture after foreign-tax reduction/refund.",
+    "Article10 prescribes currency conversion and timing. Current exemptions and Article31E turnover/base interactions still require integration review."
+  ],
+  "historical_example": {
+    "appendix": "B.1,2018",
+    "taxable_income": "8000000000",
+    "historical_tax": "2000000000",
+    "business_foreign_income": "1000000000",
+    "business_foreign_tax": "300000000",
+    "business_credit": "250000000",
+    "interest_foreign_income": "3000000000",
+    "interest_foreign_tax": "450000000",
+    "interest_credit": "450000000",
+    "total_credit": "700000000",
+    "warning": "Historical tax supplied only to validate credit arithmetic; do not apply2018tax rate to2026."
+  },
+  "next_steps": [
+    "Review remaining official appendix examples and current exemption/Article31E interaction.",
+    "Implement typed credit groups, treaty ceiling and recapture, then saved-case reconciliation, UI/report and browser acceptance."
+  ],
+  "limits": "Research only; no Indonesian foreign-credit workflow implemented."
+}

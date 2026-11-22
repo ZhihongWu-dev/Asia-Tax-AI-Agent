@@ -74,5 +74,15 @@
     "build": "TypeScript and Vite passed;2288modules;mainJS860.09kB;existing bundle-size advisory remains.",
     "followup_fix": "Merged duplicate Act53 provenance while retaining credit,basis and rate locators; no duplicate UI source keys.",
     "limits": "Browser example exercises bilateral credit; unilateral arithmetic and invalid domestic unilateral claims covered by backend tests. No special-regime, loss or full filing acceptance claimed."
+  },
+  "source_audit": {
+    "commit": "8904717",
+    "income_report_passed": 1952,
+    "seconds": 47.76,
+    "successful_assessments": 187,
+    "policies": 38,
+    "distinct_source_records": 130,
+    "unresolved": 0,
+    "scope": "Observed successful outputs only; archived file/hash verification is not legal completeness."
   }
 }
