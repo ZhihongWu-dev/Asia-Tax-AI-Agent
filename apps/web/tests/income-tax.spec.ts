@@ -28,6 +28,15 @@ for(const method of ['business_net','company_receipts','mixed_combined','mixed_s
  for(const [name,value] of amounts)await calc.getByLabel(name,{exact:true}).fill(value);
  if(method==='mixed_combined')await calc.getByLabel('SG: allowable expenses for company receipts',{exact:true}).fill('0');
  if(separate)await calc.getByRole('combobox',{name:'SG: separately taxed receipts excluded from foreign annual tax verified',exact:true}).selectOption('true');
+ if(method!=='company_receipts')await calc.getByRole('combobox',{name:'SG: include business tax period allocation evidence',exact:true}).selectOption(method==='business_net'?'true':'false');
+ if(method==='business_net'){
+  await calc.getByLabel('SG: allocation evidence count',{exact:true}).fill('1');
+  for(const [name,value] of [['evidence reference','SG-payment-1'],['Foreign period start','2025-07-01'],['Foreign period end','2026-06-30'],['Tax payment date','2027-07-01'],['Profit or receipts for the full foreign period','1000000'],['Profit or receipts in the overlapping period','500000'],['Foreign tax paid in original currency','200000'],['Payment-date market THB per foreign currency unit','1']])await calc.getByLabel('SG evidence 1: '+name,{exact:true}).fill(value);
+  await calc.getByRole('combobox',{name:'SG evidence 1: foreign tax basis',exact:true}).selectOption('net_profit');
+  await calc.getByRole('combobox',{name:'SG evidence 1: original filing date known',exact:true}).selectOption('true');
+  await calc.getByLabel('SG evidence 1: original filing date',{exact:true}).fill('2027-05-25');
+  await calc.getByRole('combobox',{name:'SG evidence 1: actual period basis and payment evidence verified',exact:true}).selectOption('true');
+ }
  for(const name of ['Ordinary annual treatment and exclusions checked','Thai incorporation and RD300 election verified','Final expense bases and foreign tax deduction eligibility verified','Source, period, FX and tax-authority-certified payment evidence verified'])await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
  await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Confirmed Thai company RD300 election, final expenses and certified foreign tax payment.');
  await calc.getByRole('checkbox').check();
@@ -42,6 +51,13 @@ for(const method of ['business_net','company_receipts','mixed_combined','mixed_s
  await expect(result).toContainText(balance);
  const detail=result.getByRole('region',{name:'Thai company foreign credit reconciliation'});
  await expect(detail).toContainText(credit);
+ if(method==='business_net'){
+  const allocation=detail.getByRole('region',{name:'Business tax period allocations'});
+  await expect(allocation).toContainText('SG-payment-1: 100000');
+  await expect(allocation).toContainText('Income period end: 2026-12-31');
+  await expect(allocation).toContainText('Tax payment date: 2027-07-01');
+  await expect(allocation).toContainText('Original return amendment required: Yes');
+ }
  await calc.getByLabel('SG: foreign tax included in annual expenses',{exact:true}).fill(mixed?(separate?'80001':'10001'):'1');
  await expect(calc.getByRole('checkbox')).not.toBeChecked();
  await calc.getByRole('checkbox').check();
@@ -53,6 +69,7 @@ for(const method of ['business_net','company_receipts','mixed_combined','mixed_s
  const report=await readFile((await (await downloading).path())!,'utf8');
  expect(report).toContain('Thai company foreign tax and expense reconciliation');
  expect(report).toContain('th.rd300.foreign-credit');
+ if(method==='business_net')expect(report).toContain('Foreign business tax period allocation');
  await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(balance);
 });
 

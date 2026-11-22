@@ -171,7 +171,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
             {field.boolean || field.options ? <select required value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)}>
               <option value="">{say('待确认','Not confirmed')}</option>
               {field.boolean ? <><option value="true">{say('是','Yes')}</option><option value="false">{say('否','No')}</option></> : field.options!.map(([value,label])=><option key={value} value={value}>{label[index]}</option>)}
-            </select> : <input required type={field.date ? 'date' : field.monthsList || field.text ? 'text' : 'number'} min={field.date ? field.dateMin ?? '2026-07-01' : field.min ?? 0} max={field.date ? '2026-12-31' : field.max} step={field.integer ? '1' : 'any'} value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)} />}
+            </select> : <input required type={field.date ? 'date' : field.monthsList || field.text ? 'text' : 'number'} min={field.date ? field.dateMin ?? '2026-07-01' : field.min ?? 0} max={field.date ? field.dateMax ?? '2026-12-31' : field.max} step={field.integer ? '1' : 'any'} value={values[field.key] || ''} onChange={e=>edit(field.key,e.target.value)} />}
           </label>)}</div>
           <label>{say('税基调整和资格依据说明','Tax-basis adjustments and eligibility explanation')}<textarea required minLength={20} maxLength={4000} value={explanation} onChange={e=>{setExplanation(e.target.value);setConfirmed(false);}} /></label>
           <label className="income-tax-confirm"><input type="checkbox" required checked={confirmed} onChange={e=>setConfirmed(e.target.checked)} />{say('我已核对所选税制、计税基础及其与已保存资料的关系。','I have checked the regime, tax basis and reconciliation to the saved facts.')}</label>

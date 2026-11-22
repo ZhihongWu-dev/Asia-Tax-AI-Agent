@@ -1,6 +1,8 @@
 {
   "status": "rd300_final_expense_workflow_verified_wider_elections_pending",
   "frontend_validation": {
+    "period_ui_result": "4 browser cases passed in58.9s, including business-period evidence entry, a2027 payment and original filing date for2026 income, amendment indicator, saved result reopening and report download. Build/typecheck passed2292modules in6.02s.",
+    "period_ui_artifacts": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/th-company-period-ui-20261122",
     "mixed_and_rejection_result": "4 browser cases passed in54.3s, covering all four treatments and HTTP422 on double deduction without overwriting the prior result. Evidence: th-company-mixed-browser-20261122.",
     "mixed_case": "Business revenue600000, business expenses500000, business foreign tax100000; company receipts400000 and paid tax10000. Combined credit100000 versus separate credit30000; ordinary Thai gross tax100000, final0 versus70000. Receipt separation is explicitly verified, not inferred.",
     "result": "2 browser cases passed in44.3s: business_net and company_receipts, save/reopen/download with country expense reconciliation.",
@@ -41,7 +43,7 @@
   "period_allocation_component": {
     "saved_case_integration": "Optional business_tax_periods in each country workpaper now validates evidence-reference uniqueness, matching saved Thai period and exact fractional total against saved annual business foreign tax. Output preserves source payment dates and amendment flags; bilingual reports include the allocation table.",
     "integration_validation": "48 focused calculation, period, API persistence and reporting tests passed in11.01s, including exact summation of three1/3 allocations. A foreign tax payment equivalent to1000000THB with30percent income-period share reconciles to300000THB for2026, even when paid after original filing in2027.",
-    "integration_limits": "Period evidence entry UI remains pending. No implicit rounding; recurring fractions are summed exactly before reconciliation. Foreign periods containing losses still require separate treatment.",
+    "integration_limits": "Period evidence entry UI supports multiple referenced assessments and known/unknown original filing dates. No implicit rounding; recurring fractions are summed exactly before reconciliation. Foreign periods containing losses still require separate treatment.",
     "test_result": "64 passed in 2.83s across period allocation, country limits, existing Thai company reconciliation and Thai rate tests",
     "function": "thailand_company_foreign_limits.allocate_foreign_period_tax",
     "rules": "Notification65 clauses7-9: use actual profit or gross-receipt share in overlapping periods and market FX at foreign tax payment; later payment can require amendment of the income-period return.",
@@ -62,7 +64,7 @@
     "Ruling0702/8746 permits the unrelieved difference as an expense in the income-accrual period for its stated royalty facts; later foreign payment requires amending that income year. Do not label all excess nondeductible."
   ],
   "next_steps": [
-    "Add period-evidence entry UI and cross-period browser cases; API/report linkage and mixed-method browser validation are implemented.",
+    "Extend foreign-period loss treatment and evaluate additional business requirements; current period-evidence UI/API/report linkage and mixed-method browser validation are implemented.",
     "Resolve automatic excess-tax expense derivation and SME allocation; current annual adapter requires verified final expense inputs.",
     "Add treaty-path elections without conflating them with RD300 limits."
   ],

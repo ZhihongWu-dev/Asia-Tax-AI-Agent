@@ -20,7 +20,7 @@ export type IncomeRun = {
   result: Record<string, unknown>;
 };
 type Label = [string, string];
-export type BasisField = { key: string; label: Label; options?: [string, Label][]; boolean?: boolean; monthsList?: boolean; text?: boolean; min?: number; max?: number; date?: boolean; dateMin?: string; integer?: boolean; showWhen?: [string,string] };
+export type BasisField = { key: string; label: Label; options?: [string, Label][]; boolean?: boolean; monthsList?: boolean; text?: boolean; min?: number; max?: number; date?: boolean; dateMin?: string; dateMax?: string; integer?: boolean; showWhen?: [string,string] };
 const money = (key: string, zh: string, en: string): BasisField => ({key, label:[zh,en]});
 const confirm = (key: string, zh: string, en: string): BasisField => ({key,label:[zh,en],boolean:true});
 const prepaid = money('prepaid_tax','归属本期的预缴税额','Prepaid tax for this period');
