@@ -99,6 +99,29 @@ def current_credit_workpaper(case,workpaper,*,rate_regime,rate_classification_ve
     """
     if no_other_tax_credits_additions_or_history_verified is not True:
         raise ValueError('Other credits, additions and historical balances need separate treatment')
+    reference=saved_reference_amounts(case,workpaper,rate_regime=rate_regime,
+        rate_classification_verified=rate_classification_verified,
+        no_other_tax_credits_or_additions_verified=True)
+    reconciled=reference['reconciliation'];references=reference['reference_taxes']
+    credit=current_national_credits(**{key:reconciled[key] for key in (
+        'statutory_worldwide_income','foreign_income_before_exempt',
+        'foreign_income_exempt_from_foreign_tax','eligible_foreign_corporate_tax')},
+        **references,statutory_reference_amounts_and_current_tax_eligibility_verified=True,
+        no_history_group_or_special_credit_adjustments_verified=True)
+    return dict(policy_version='jp-saved-current-credit-workpaper-20261122',currency='JPY',
+        reconciliation=reconciled,reference_taxes=references,
+        corporation_taxable_base=reference['corporation_taxable_base'],
+        local_corporation_tax_base=reference['local_corporation_tax_base'],
+        defence_tax_base=reference['defence_tax_base'],rate_regime=rate_regime,
+        current_national_credit=credit,sources=reference['sources']+credit['sources'],
+        stage='saved_current_credit_workpaper_before_filing_rounding_and_local_history_settlement')
+
+
+def saved_reference_amounts(case,workpaper,*,rate_regime,rate_classification_verified,
+        no_other_tax_credits_or_additions_verified):
+    """Derive pre-credit references without asserting absence of FTC history."""
+    if no_other_tax_credits_or_additions_verified is not True:
+        raise ValueError('Other credits and additions need separate reference treatment')
     reconciled=reconcile(case,workpaper)
     ordinary=company_tax(reconciled['taxable_income_before_rounding'],
         period_start=case.period_start,period_end=case.period_end,rate_regime=rate_regime,
@@ -111,18 +134,12 @@ def current_credit_workpaper(case,workpaper,*,rate_regime,rate_classification_ve
             local_corporation_tax_reference=ordinary['local_corporation_tax_base']*Decimal('.103'),
             defence_tax_reference=ordinary['defence_tax_base']*Decimal('.04'),
             defence_applicable=ordinary['defence_return_required'])
-    credit=current_national_credits(**{key:reconciled[key] for key in (
-        'statutory_worldwide_income','foreign_income_before_exempt',
-        'foreign_income_exempt_from_foreign_tax','eligible_foreign_corporate_tax')},
-        **references,statutory_reference_amounts_and_current_tax_eligibility_verified=True,
-        no_history_group_or_special_credit_adjustments_verified=True)
-    return dict(policy_version='jp-saved-current-credit-workpaper-20261122',currency='JPY',
+    return dict(policy_version='jp-saved-pre-credit-references-20261122',currency='JPY',
         reconciliation=reconciled,reference_taxes=references,
         corporation_taxable_base=ordinary['taxable_income'],
         local_corporation_tax_base=ordinary['local_corporation_tax_base'],
         defence_tax_base=ordinary['defence_tax_base'],rate_regime=rate_regime,
-        current_national_credit=credit,sources=ordinary['sources']+credit['sources'],
-        stage='saved_current_credit_workpaper_before_filing_rounding_and_local_history_settlement')
+        sources=ordinary['sources'],stage='saved_pre_credit_references_not_annual_settlement')
 
 
 def current_national_settlement(case,workpaper,*,corporation_interim_liability,

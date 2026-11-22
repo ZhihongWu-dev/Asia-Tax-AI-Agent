@@ -269,7 +269,7 @@
     "scope": "Ordinary full-year Osaka-city-office company with current standard-limit foreign credits, nine separately settled national/local/capitation components. Saved API/UI and bilingual reports verified.",
     "validation": "2394 income/report tests passed104.22s;213 assessment calls,45policies,153source records,0unresolved.1browser flow passed1.1m;production build passed. Final targeted API/report rerun3passed12.07s.",
     "evidence": "japan-foreign-credit-research-20261122.json",
-    "remaining": "Historical balances/reductions, actual-rate elections, other local scopes, foreign offices and special regimes remain unimplemented. Broader corporate/personal business acceptance and original goal remain incomplete."
+    "remaining": "Ordinary historical balances are now covered by the separate Osaka-history checkpoint. Reductions, actual-rate elections, other local scopes, foreign offices and special regimes remain pending. Broader corporate/personal business acceptance and original goal remain incomplete."
   },
   "vietnam_foreign_checkpoint_20261122": {
     "base_commit": "7698f6c",
@@ -304,5 +304,13 @@
     "browser": "3 passed59.9s;production build passed.",
     "legal_review": "Archived and visually inspected current form43-13, including separate direct/fund limits, cumulative prior deductions, oldest-year use and expiry exclusions.",
     "overall_goal": "incomplete; prioritize missing HK/JP/VN corporate foreign-credit annual flows and retain required personal coverage."
+  },
+  "japan_osaka_history_checkpoint_20261122": {
+    "base_commit": "6540342",
+    "policy": "jp_osaka_company_foreign_history_starting_2026",
+    "scope": "Saved source-derived nine-tax Osaka annual settlement with separate statutory and local levy history, API, UI and bilingual reports.",
+    "validation": "2503 income/report tests;229assessment calls;46policies;170source records;0unresolved.Production build2301modules and2Edge legacy/history workflows passed.",
+    "evidence": "japan-foreign-credit-research-20261122.json: persisted_osaka_history_workflow",
+    "remaining": "Form1 additional visual review remains open after computer-use service timeout. This is scoped computational/persistence evidence, not complete business or legal acceptance. Wider original requirements remain incomplete."
   }
 }

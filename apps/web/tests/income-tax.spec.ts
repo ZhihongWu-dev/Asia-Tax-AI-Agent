@@ -42,6 +42,49 @@ test('Japan Osaka foreign company saves nine tax settlements and reopens',async(
  await openIncome(page);await expect(page.getByRole('region',{name:'Japan Osaka cross-border company settlement'})).toContainText('649600');
 });
 
+test('Japan Osaka foreign history saves separate refunds and ledgers and reopens',async({page})=>{
+ test.setTimeout(120000);
+ const form=await openIncome(page);
+ for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','jp'],['Tax residency','resident'],['Income category','business'],['Income source jurisdiction','sg']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+ for(const [name,value] of [['Period start','2026-04-01'],['Period end','2027-03-31'],['Gross income','120000000'],['Foreign tax paid (blank if unknown)','30000000'],['Income description','Synthetic foreign-income timing case with verified tax and two historical ledgers'],['Claimed deductions (blank if unknown)','20000000'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+ await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+ const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+ await calc.getByLabel('Applicable regime').selectOption('jp_osaka_company_foreign_history_starting_2026');
+ await expect(calc.getByRole('combobox',{name:'No other national credits, additions or historical balances',exact:true})).toHaveCount(0);
+ await calc.getByRole('combobox',{name:'Corporation-rate classification',exact:true}).selectOption('ordinary');
+ for(const [key,,label] of osakaAmounts)if(key!=='eligible_enterprise_prior_losses')await calc.getByLabel(label,{exact:true}).fill(key==='registered_capital'||key==='adjusted_statutory_capital'?'10000000':'0');
+ for(const [name,value] of [['Corporation interim liability','0'],['Local corporation interim liability','0'],['Number of wards with offices (aggregate within each ward)','1'],['Ward employee count 1','10'],['Income 1: verified expenses','20000000'],['Income 1: foreign-tax-exempt net income','0'],['Income 1: eligible foreign tax','30000000'],['Statutory history period count (0 if none)','1'],['Local shortfall period count (0 if none)','1']])await calc.getByLabel(name,{exact:true}).fill(value);
+ await calc.getByRole('combobox',{name:'Ward 1',exact:true}).selectOption('北区');
+ for(const kind of ['Statutory history','Local shortfall']){
+  for(const [suffix,value] of [['reference',kind+'-2025'],['period start','2025-04-01'],['period end','2026-03-31']])await calc.getByLabel(`${kind} 1: ${suffix}`,{exact:true}).fill(value);
+ }
+ for(const [name,value] of [['national capacity','3000000'],['prefectural capacity','200000'],['municipal capacity','1000000'],['excess foreign tax','0']])await calc.getByLabel(`Statutory history 1: ${name}`,{exact:true}).fill(value);
+ for(const [name,value] of [['prefectural shortfall','500000'],['municipal shortfall','2000000']])await calc.getByLabel(`Local shortfall 1: ${name}`,{exact:true}).fill(value);
+ const confirmations=calc.locator('select').filter({has:page.locator('option[value="true"]')});
+ for(let n=0;n<await confirmations.count();n++)await confirmations.nth(n).selectOption('true');
+ await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified foreign-income timing, source expenses, original returns, prior usage, statutory balances and local levy shortfalls.');
+ await calc.getByRole('checkbox').check();
+ const saved=page.waitForResponse(r=>r.url().endsWith('/income-tax/runs')&&r.request().method()==='POST');
+ await calc.getByRole('button',{name:'Calculate and save result'}).click();
+ const response=await saved;expect(response.status()).toBe(200);
+ expect(response.request().postDataJSON().basis).not.toHaveProperty('no_other_tax_credits_additions_or_history_verified');
+ const snapshot=await response.json();
+ expect(Object.keys(snapshot.result.settlements)).toHaveLength(9);
+ expect(snapshot.result.total_payable).toBe('10152900');expect(snapshot.result.total_refundable).toBe('680000');
+ expect(snapshot.result.next_period_levy_shortfall).toEqual({prefectural:'444800',municipal:'2350400'});
+ const result=page.getByRole('article',{name:'Saved calculation result'});
+ const detail=result.getByRole('region',{name:'Japan Osaka annual settlement with historical credits'});
+ for(const text of ['Eligible credit refund: 680000','Interim refund: 0','444800 / 2350400','652560','Statutory history-2025','Local shortfall-2025'])await expect(detail).toContainText(text);
+ const downloading=page.waitForEvent('download');await result.getByRole('button',{name:'Download calculation record'}).click();
+ const report=await readFile((await (await downloading).path())!,'utf8');
+ for(const text of ['Japan Osaka annual settlement with historical credits','Historical statutory capacity ledger','Local levy-shortfall ledger','680000','2350400'])expect(report).toContain(text);
+ await calc.getByRole('combobox',{name:'Same single prefecture and municipality throughout history',exact:true}).selectOption('false');
+ await expect(calc.getByRole('checkbox')).not.toBeChecked();await calc.getByRole('checkbox').check();
+ const rejected=page.waitForResponse(r=>r.url().endsWith('/income-tax/runs')&&r.request().method()==='POST');
+ await calc.getByRole('button',{name:'Calculate and save result'}).click();expect((await rejected).status()).toBe(422);
+ await openIncome(page);await expect(page.getByRole('region',{name:'Japan Osaka annual settlement with historical credits'})).toContainText('444800 / 2350400');
+});
+
 for(const country of ['cn','sg','id'])test(`Vietnam foreign company ${country} saves treaty credits and reopens`,async({page})=>{
  test.setTimeout(60000);
  const form=await openIncome(page);

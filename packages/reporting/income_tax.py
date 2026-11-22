@@ -124,6 +124,57 @@ def render(run, locale='zh'):
                 lines.append('| '+_text(say(zh,en))+' | '+_text(credits['current_unused_capacity_before_history'][key])+' |')
             lines += ['', say('未纳入国税结转限额的地方法人税及防卫税未用限额：',
                 'Unused local-corporation and defence limits excluded from national carry capacity: ')+_text(credits['unused_national_limits_not_in_carry_capacity'])]
+    if result.get('policy_version') == 'jp-osaka-history-foreign-settlement-20261122':
+        labels={'corporation':('法人税','Corporation tax'),'local_corporation':('地方法人税','Local corporation tax'),
+            'defence':('防卫特别法人税','Defence corporation tax'),'enterprise':('事业税','Enterprise tax'),
+            'special_enterprise':('特别法人事业税','Special enterprise tax'),
+            'prefectural_inhabitant':('府民税法人税割','Prefectural corporation levy'),
+            'city_inhabitant':('市民税法人税割','City corporation levy'),
+            'prefectural_capitation':('府民税均等割','Prefectural capitation'),
+            'city_capitation':('市民税均等割','City capitation')}
+        layers={'national':('国税','National'),'prefectural':('府民税','Prefectural'),'municipal':('市民税','Municipal')}
+        lines += ['', '## '+say('日本大阪历史抵免年度结算','Japan Osaka annual settlement with historical credits'), '',
+            say('按已确认的来源、历史申报和余额计算。标准限额；历史限额与地方税未抵免额分别记账，退税不冲抵其他税费的应补额。仅适用于全年全部办公室在大阪市且申报辖区未变化的普通企业。',
+                'Calculated from confirmed sources, historical returns and balances. Standard limits; statutory balances and local levy shortfalls have separate ledgers. Refunds do not offset other taxes payable. Ordinary full-year Osaka-city offices with unchanged local filing jurisdictions only.'), '',
+            '| '+say('税费 | 年度税额 | 实际抵减税额 | 预缴 | 应补 | 应退','Tax | Annual liability | Credit applied to tax | Interim | Payable | Refundable')+' |',
+            '| --- | --- | --- | --- | --- | --- |']
+        for key,row in result['settlements'].items():
+            applied=row.get('foreign_credit_applied_to_tax',row.get('total_foreign_credit_applied','0'))
+            lines.append('| '+' | '.join(_text(v) for v in [say(*labels[key]),row['annual_liability'],applied,
+                row['interim_return_liability'],row['payable'],row['refundable']])+' |')
+        lines += ['',say('合资格抵免不足额退款：','Eligible credit refund: ')+_text(result['total_foreign_credit_refund']),
+            '',say('预缴退款：','Interim refund: ')+_text(result['total_interim_refund']),
+            '', '### '+say('历史抵免限额台账','Historical statutory capacity ledger'), '',
+            '| '+say('编号 | 原期间开始 | 层级 | 期初 | 已用 | 到期 | 下期','Reference | Origin start | Layer | Opening | Used | Expired | Next period')+' |',
+            '| --- | --- | --- | --- | --- | --- | --- |']
+        matched=result['history_matching']
+        for row in matched['periods']:
+            for layer,label in layers.items():
+                lines.append('| '+' | '.join(_text(v) for v in [row['identifier'],row['period_start'],say(*label),
+                    row['opening_capacity'][layer],row['capacity_matched_to_current_excess'][layer],
+                    row['expired_capacity'][layer],row['next_period_capacity'][layer]])+' |')
+        lines += ['', '### '+say('历史超限税额台账','Historical excess foreign-tax ledger'), '',
+            '| '+say('编号 | 原期间开始 | 期初 | 已用 | 到期 | 下期','Reference | Origin start | Opening | Used | Expired | Next period')+' |',
+            '| --- | --- | --- | --- | --- | --- |']
+        for row in matched['periods']:
+            used=sum(int(v) for v in row['excess_matched_to_current_capacity'].values())
+            lines.append('| '+' | '.join(_text(v) for v in [row['identifier'],row['period_start'],row['opening_excess'],
+                used,row['expired_excess'],row['next_period_excess']])+' |')
+        lines += ['',say('本期剩余超限税额：','Remaining current excess foreign tax: ')+_text(matched['current_excess_remaining']),
+            '', '### '+say('地方税未抵免台账','Local levy-shortfall ledger'), '',
+            '| '+say('编号 | 原期间开始 | 层级 | 期初 | 已用 | 到期 | 下期','Reference | Origin start | Layer | Opening | Used | Expired | Next period')+' |',
+            '| --- | --- | --- | --- | --- | --- | --- |']
+        for row in result['local_levy_history']:
+            for layer in ('prefectural','municipal'):
+                lines.append('| '+' | '.join(_text(v) for v in [row['identifier'],row['period_start'],say(*layers[layer]),
+                    row['opening'][layer],row['used'][layer],row['expired'][layer],row['next_period'][layer]])+' |')
+        lines += ['', '| '+say('层级 | 本期剩余限额 | 本期新增税额不足余额 | 下期税额不足余额合计',
+            'Layer | Remaining current capacity | New current levy shortfall | Total next-period levy shortfall')+' |',
+            '| --- | --- | --- | --- |']
+        for layer,label in layers.items():
+            lines.append('| '+' | '.join(_text(v) for v in [say(*label),matched['current_capacity_remaining'][layer],
+                result['current_period_levy_shortfall']['balances'].get(layer,'—'),
+                result['next_period_levy_shortfall'].get(layer,'—')])+' |')
     if result.get('policy_version') == 'vn-company-foreign-ordinary20-2026-20261122':
         lines += ['', '## ' + say('越南境外抵免明细', 'Vietnam foreign credit details'), '',
             say('普通20%税率且不适用低营业额年度减税。视同税与实缴税分开，按同项越南税额限额；超限额不自动批准结转。金额为申报取整前值。',

@@ -40,12 +40,15 @@ class Filing(BaseModel):
     available_corporation_levy_before_final_rounding: Money
 
 
-class Workpaper(BaseModel):
+class AllocationInputs(BaseModel):
     model_config=ConfigDict(extra='forbid')
     prefectural_credit_limit: Money
     municipal_credit_limit: Money
     prefectures: list[Filing]=Field(min_length=1,max_length=1000)
     municipalities: list[Filing]=Field(min_length=1,max_length=1000)
+
+
+class Workpaper(AllocationInputs):
     statutory_limits_elections_weights_and_levies_verified: StrictBool
     no_history_groups_reorganizations_or_tokyo_special_ward_composition_verified: StrictBool
 
@@ -85,6 +88,13 @@ def allocate_current(national_inputs,workpaper):
         raise ValueError('Verify local limits, weights, levy amounts and excluded adjustments')
     national=current_national_return_credits(**national_inputs)
     paid=int(yen(national_inputs['eligible_foreign_corporate_tax']))
+    return _allocate_current_component(national,paid,p)
+
+
+def _allocate_current_component(national,paid,workpaper):
+    """Internal current component; no claim that the whole case lacks history."""
+    p=AllocationInputs.model_validate({key:getattr(workpaper,key) for key in AllocationInputs.model_fields})
+    paid=int(yen(paid))
     corp=int(national['corporation_credit_limit'])
     total_national=sum(int(national[k]) for k in (
         'corporation_credit_limit','local_corporation_credit_limit','defence_credit_limit'))

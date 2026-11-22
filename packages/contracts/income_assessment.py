@@ -23,6 +23,9 @@ from packages.income_tax.china_personal_foreign_assessment import PersonalWorkpa
 from packages.income_tax.japan_tokyo import TokyoWorkpaper
 from packages.income_tax.japan_osaka import OsakaWorkpaper
 from packages.income_tax.japan_osaka_foreign import Workpaper as JPOsakaForeignWorkpaper
+from packages.income_tax.japan_osaka_foreign import HistoricalWorkpaper as JPOsakaHistoryWorkpaper
+from packages.income_tax.japan_foreign_history import LimitHistory as JPLimitHistory
+from packages.income_tax.japan_local_foreign_history import LevyHistory as JPLevyHistory
 from packages.income_tax.japan_foreign_reconciliation import SavedWorkpaper as JPForeignSources
 from packages.income_tax.hong_kong_salary_reconciliation import SalaryWorkpaper
 from packages.income_tax.malaysia_reconciliation import IndividualWorkpaper, CompanyWorkpaper
@@ -47,6 +50,17 @@ class JPOsakaForeignCompany(Basis):
     rate_regime: Literal['ordinary','sme_reduced','sme_excluded']
     rate_classification_verified: StrictBool
     no_other_tax_credits_additions_or_history_verified: StrictBool
+
+
+class JPOsakaForeignHistoryCompany(Basis):
+    policy: Literal['jp_osaka_company_foreign_history_starting_2026']
+    source_workpaper: JPForeignSources
+    local_workpaper: JPOsakaHistoryWorkpaper
+    limit_history: JPLimitHistory
+    levy_history: JPLevyHistory
+    rate_regime: Literal['ordinary','sme_reduced','sme_excluded']
+    rate_classification_verified: StrictBool
+    no_other_tax_credits_or_additions_verified: StrictBool
 
 
 class CNCompany(Basis):
@@ -609,6 +623,6 @@ class KRSalary(Basis):
     installment: StrictBool
 
 
-Assessment = Annotated[JPOsakaForeignCompany | VNForeignCompany | CNCompany | CNForeignCompany | CNForeignIndividual | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGForeignCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | INForeignCompany | KRCompany | KRForeignCompany | KRForeignHistoryCompany | KRForeignBalancesCompany | KRSalary |
+Assessment = Annotated[JPOsakaForeignHistoryCompany | JPOsakaForeignCompany | VNForeignCompany | CNCompany | CNForeignCompany | CNForeignIndividual | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGForeignCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | INForeignCompany | KRCompany | KRForeignCompany | KRForeignHistoryCompany | KRForeignBalancesCompany | KRSalary |
                        HKProfits | HKSalaries | HKProperty | AEOrdinary | UAEForeignCompany | MYForeignCompany | IDForeignCompany | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness | VNRental,
                        Field(discriminator='policy')]

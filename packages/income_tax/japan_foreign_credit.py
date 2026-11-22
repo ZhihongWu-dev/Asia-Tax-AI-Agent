@@ -43,6 +43,23 @@ def current_national_credits(*, statutory_worldwide_income, foreign_income_befor
     if (statutory_reference_amounts_and_current_tax_eligibility_verified is not True
             or no_history_group_or_special_credit_adjustments_verified is not True):
         raise ValueError('Verify statutory reference amounts, eligibility and excluded adjustments')
+    return _current_national_component(statutory_worldwide_income=statutory_worldwide_income,
+        foreign_income_before_exempt=foreign_income_before_exempt,
+        foreign_income_exempt_from_foreign_tax=foreign_income_exempt_from_foreign_tax,
+        eligible_foreign_corporate_tax=eligible_foreign_corporate_tax,
+        corporation_tax_reference=corporation_tax_reference,
+        local_corporation_tax_reference=local_corporation_tax_reference,
+        defence_tax_reference=defence_tax_reference,defence_applicable=defence_applicable)
+
+
+def _current_national_component(*,statutory_worldwide_income,foreign_income_before_exempt,
+        foreign_income_exempt_from_foreign_tax,eligible_foreign_corporate_tax,
+        corporation_tax_reference,local_corporation_tax_reference,defence_tax_reference,defence_applicable):
+    """Internal current-year arithmetic; scope/eligibility belong to the caller.
+
+    Historical workflows calculate this component before adding their separately
+    validated history. They do not assert that the complete case has no history.
+    """
     if type(defence_applicable) is not bool:
         raise ValueError('Explicit defence applicability required')
     world,foreign,exempt,paid,corp,local,defence=map(lambda v:Fraction(yen(v)),[
@@ -83,6 +100,14 @@ def current_national_return_credits(**inputs):
     monetary amount to truncate. Historical adjustments remain excluded.
     """
     exact=current_national_credits(**inputs)  # Full validation and comparison.
+    return _round_current_component(inputs,exact)
+
+
+def _current_national_return_component(**inputs):
+    return _round_current_component(inputs,_current_national_component(**inputs))
+
+
+def _round_current_component(inputs,exact):
     world=Fraction(yen(inputs['statutory_worldwide_income']))
     foreign=Fraction(yen(inputs['foreign_income_before_exempt']))
     exempt=Fraction(yen(inputs['foreign_income_exempt_from_foreign_tax']))

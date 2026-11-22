@@ -3,6 +3,8 @@ import {vietnamForeignBasis} from '../vietnam-foreign-assessment';
 import VietnamForeignResult from './VietnamForeignResult';
 import {japanOsakaForeignBasis} from '../japan-osaka-foreign';
 import JapanOsakaForeignResult from './JapanOsakaForeignResult';
+import {japanOsakaForeignHistoryBasis} from '../japan-osaka-foreign-history';
+import JapanOsakaHistoryResult from './JapanOsakaHistoryResult';
 import {malaysiaForeignBasis} from '../malaysia-foreign-assessment';
 import {indonesiaForeignBasis} from '../indonesia-foreign-assessment';
 import {indiaForeignBasis} from '../india-foreign-assessment';
@@ -74,6 +76,9 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
     if(policy.id==='vn_company_foreign_ordinary20_2026')basis=vietnamForeignBasis(basis,current.income_tax!);
     if(policy.id==='jp_osaka_company_foreign_starting_2026'){
       try{basis=japanOsakaForeignBasis(basis,current.income_tax!);}catch{setError(say('请核对大阪区数量和不重复区名。','Check Osaka ward count and unique ward names.'));return;}
+    }
+    if(policy.id==='jp_osaka_company_foreign_history_starting_2026'){
+      try{basis=japanOsakaForeignHistoryBasis(basis,current.income_tax!);}catch{setError(say('请核对大阪区和历史台账期间数（0至200）。','Check Osaka wards and history period counts (0 to 200).'));return;}
     }
     if(policy.id==='my_company_foreign_direct_ya2026')basis=malaysiaForeignBasis(basis,current.income_tax!,values);
     if(policy.id==='id_company_foreign_direct_2026')basis=indonesiaForeignBasis(basis,current.income_tax!,values);
@@ -232,6 +237,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       {result.result.policy_version==='ae-ordinary-foreign-credit-20261122'&&<UAEForeignResult result={result.result} index={index}/>}
       {result.result.policy_version==='vn-company-foreign-ordinary20-2026-20261122'&&<VietnamForeignResult result={result.result} index={index}/>}
       {result.result.policy_version==='jp-osaka-current-foreign-settlement-20261122'&&<JapanOsakaForeignResult result={result.result} index={index}/>}
+      {result.result.policy_version==='jp-osaka-history-foreign-settlement-20261122'&&<JapanOsakaHistoryResult result={result.result} index={index}/>}
       {result.result.policy_version==='my-schedule7-direct-credit-20261122'&&<MalaysiaForeignResult result={result.result} index={index}/>}
       {result.result.policy_version==='id-article24-credit-20261122'&&<IndonesiaForeignResult result={result.result} index={index}/>}
       {['in-company-foreign-ty2026-27-20261122','in-company-foreign-ty2026-27-20261122-treaty-scope'].includes(String(result.result.policy_version))&&<IndiaForeignResult result={result.result} index={index}/>}

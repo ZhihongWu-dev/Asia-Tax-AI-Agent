@@ -11,7 +11,7 @@ from .japan_osaka import OsakaWard,ordinary_enterprise,annual_inhabitant,annual_
 from .japan_foreign_reconciliation import current_national_settlement,current_standard_local_workpaper
 
 
-class Workpaper(BaseModel):
+class LocalFacts(BaseModel):
     model_config=ConfigDict(extra='forbid')
     registered_capital: Money
     capital_reserve: Money
@@ -31,8 +31,15 @@ class Workpaper(BaseModel):
     ordinary_domestic_entity_and_size_based_exclusion_verified: StrictBool
     capital_employees_and_enterprise_adjustments_verified: StrictBool
     standard_local_limits_no_actual_rate_election_verified: StrictBool
-    no_other_local_credits_additions_history_losses_or_treaty_amendments_verified: StrictBool
     local_adjustments_explanation: str=Field(min_length=20,max_length=4000,pattern=r'\S')
+
+
+class Workpaper(LocalFacts):
+    no_other_local_credits_additions_history_losses_or_treaty_amendments_verified: StrictBool
+
+
+class HistoricalWorkpaper(LocalFacts):
+    no_other_local_credits_additions_losses_or_treaty_amendments_verified: StrictBool
 
 
 def settle(case,source_workpaper,local_workpaper,*,rate_regime,rate_classification_verified,
