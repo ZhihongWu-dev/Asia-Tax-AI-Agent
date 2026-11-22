@@ -31,6 +31,7 @@ test('Japan Osaka foreign company saves nine tax settlements and reopens',async(
  const result=page.getByRole('article',{name:'Saved calculation result'});
  const detail=result.getByRole('region',{name:'Japan Osaka cross-border company settlement'});
  await expect(detail).toContainText('649600');await expect(detail).toContainText('4852560');
+ await expect(detail).toContainText('Current unused capacity (carryforward eligibility unverified)');
  const downloading=page.waitForEvent('download');await result.getByRole('button',{name:'Download calculation record'}).click();
  const report=await readFile((await (await downloading).path())!,'utf8');
  expect(report).toContain('Japan Osaka cross-border company settlement');expect(report).toContain('4852560');

@@ -117,6 +117,13 @@ def render(run, locale='zh'):
             lines.append('| '+' | '.join(_text(v) for v in [say(zh,en)]+[credits[key][k] for k in
                 ('current_credit','unrelieved_due_to_levy_shortfall','unallocated_rounding_residual')])+' |')
         lines += ['', say('超过本期全部限额：','Above all current limits: ')+_text(credits['foreign_tax_above_all_current_limits'])]
+        if 'current_unused_capacity_before_history' in credits:
+            lines += ['', '### '+say('本期未用限额（结转资格待核验）','Current unused capacity (carryforward eligibility unverified)'), '',
+                '| '+say('层级 | 未用限额','Layer | Unused capacity')+' |','| --- | --- |']
+            for key,zh,en in [('national','国税','National'),('prefectural','府民税','Prefectural'),('municipal','市民税','Municipal')]:
+                lines.append('| '+_text(say(zh,en))+' | '+_text(credits['current_unused_capacity_before_history'][key])+' |')
+            lines += ['', say('未纳入国税结转限额的地方法人税及防卫税未用限额：',
+                'Unused local-corporation and defence limits excluded from national carry capacity: ')+_text(credits['unused_national_limits_not_in_carry_capacity'])]
     if result.get('policy_version') == 'vn-company-foreign-ordinary20-2026-20261122':
         lines += ['', '## ' + say('越南境外抵免明细', 'Vietnam foreign credit details'), '',
             say('普通20%税率且不适用低营业额年度减税。视同税与实缴税分开，按同项越南税额限额；超限额不自动批准结转。金额为申报取整前值。',

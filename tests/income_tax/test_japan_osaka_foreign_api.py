@@ -47,6 +47,7 @@ def test_saved_osaka_foreign_api_reopen_replay_and_bilingual_reports(tmp_path,co
                 assert report.status_code==200,report.text
                 text=report.json()['markdown'];reports[locale]=text
                 assert heading in text
+                assert ('结转资格待核验' if locale=='zh' else 'carryforward eligibility unverified') in text
                 assert '823360' in text and '80000' in text and '371200' in text
                 for s in r['sources']:assert s['sha256'] in text
             service.store.engine.dispose();service.store=ChatStore(url)

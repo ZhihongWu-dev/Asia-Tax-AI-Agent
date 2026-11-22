@@ -11,6 +11,16 @@ from .japan import yen
 from .japan_foreign_credit import current_national_return_credits
 
 SOURCES=[
+ dict(doc_id='jp.defence-order.20261122',file='database/raw/jp/jp.defence-order.20261122.json',
+  url='https://laws.e-gov.go.jp/law/507CO0000000134/20260401_508CO0000000105',
+  sha256='baa3225cef5504c9020518b5e98a8e76a669ca58c23cc54b8bec4cc8e91edf73',
+  provisions=['Article19: substitutions for Corporate Tax Order144(6)-(7),145(4), adding defence limits']),
+ dict(doc_id='jp.nta.form6-3.2026',file='database/raw/jp/jp.nta.form6-3.2026.pdf',
+  url='https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hojin/shinkoku/itiran2026/pdf/06%2803%29.pdf',
+  sha256='85d9c1a4336717ea2eaa2fe8bc7c5ed78492f4135fe5dd96dd0a718428a04afd',provisions=['Lines8-12: current unused capacity and excess']),
+ dict(doc_id='jp.nta.form6-3.instructions.2026',file='database/raw/jp/jp.nta.form6-3.instructions.2026.pdf',
+  url='https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hojin/shinkoku/itiran2026/pdf/06%2803%29-ki.pdf',
+  sha256='6a0cc634b8edb122862c9580eeba71b921383e502c85928bd77bb362f6863de5',provisions=['Instructions2-6: separate local elections, reorganizations and reduced foreign tax']),
  dict(doc_id='jp.osaka.foreign-form20-4.2026',file='database/raw/jp/jp.osaka.foreign-form20-4.2026.pdf',
   url='https://www.city.osaka.lg.jp/zaisei/cmsfiles/contents/0000006/6410/14_20gou4_R8.3.pdf',
   sha256='031029eb2fdbe0d4e3637ef029027f938b7c06e43bd7bdf41434ca64249509b1',provisions=['Lines4-15,19-23']),
@@ -106,6 +116,15 @@ def allocate_current(national_inputs,workpaper):
         national_credit=national,national_form_limit=Decimal(national_form_limit),
         prefectural_credit_limit=Decimal(pref_limit),municipal_credit_limit=Decimal(city_limit),
         prefectural=pref,municipal=city,
+        # Schedule6(3) lines8-10. National carry capacity is corporation-only;
+        # unused local-corporation/defence limits are not included in line8.
+        current_unused_capacity_before_history=dict(
+            national=Decimal(max(0,corp-paid)),
+            prefectural=Decimal(max(0,min(pref_limit,total_national+pref_limit-paid))),
+            municipal=Decimal(max(0,min(city_limit,total_national+pref_limit+city_limit-paid)))),
+        unused_national_limits_not_in_carry_capacity=sum((
+            national[k+'_credit_limit']-national[k+'_credit']
+            for k in ('local_corporation','defence')),Decimal(0)),
         foreign_tax_above_all_current_limits=Decimal(max(0,paid-total_national-pref_limit-city_limit)),
         sources=deepcopy(SOURCES),
         stage='current_local_allocation_not_final_tax_or_approved_carryforward')

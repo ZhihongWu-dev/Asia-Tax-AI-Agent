@@ -104,5 +104,24 @@
     "development_reference": "Official pydantic/pydantic GitHub serialization documentation reviewed before development. Existing TypeAdapter JSON serialization reused; no copied external code or dependency introduced.",
     "remaining": "Historical capacity/excess and reductions, actual-rate elections, foreign offices, Tokyo/other local scopes, source-tax eligibility automation, dividends/special regimes and wider personal/business acceptance remain required. Earlier component pending notes are chronological checkpoints superseded only for this stated Osaka workflow."
   },
+  "current_capacity_and_defence_history_authority": {
+    "implementation": "Current Form6(3) lines8-10 now produce separate national, prefectural and municipal unused capacity before history. National capacity uses only the corporation limit less eligible foreign tax. Unused local-corporation/defence limits are separately identified and excluded from that capacity. Local levy shortfalls do not recreate unused statutory limits.",
+    "presentation": "Saved Osaka API result, backward-compatible bilingual reports and UI show the three capacity buckets with carryforward eligibility explicitly unverified. Earlier saved results lacking these new fields still render.",
+    "validation": "404 Japan-selected tests passed31.10s,1991deselected;production build2299modules5.77s;Edge saved/reopen/report/rejection flow passed1.0m. Includes ten boundary-capacity examples, levy-shortfall distinction and bilingual reports.",
+    "new_form_instructions": {
+      "file": "database/raw/jp/jp.nta.form6-3.instructions.2026.pdf",
+      "sha256": "6a0cc634b8edb122862c9580eeba71b921383e502c85928bd77bb362f6863de5",
+      "url": "https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hojin/shinkoku/itiran2026/pdf/06%2803%29-ki.pdf"
+    },
+    "defence_order": {
+      "file": "database/raw/jp/jp.defence-order.20261122.json",
+      "sha256": "baa3225cef5504c9020518b5e98a8e76a669ca58c23cc54b8bec4cc8e91edf73",
+      "api": "https://laws.e-gov.go.jp/api/2/law_data/507CO0000000134",
+      "revision": "507CO0000000134_20260401_508CO0000000105",
+      "finding": "Article19 substitutes defence limits into Corporate Tax Order144(6)-(7) and145(4). Thus the unmodified Corporate Tax Order text alone is insufficient for applicable defence periods. Article144(5) corporation-only national capacity remains consistent with current Form6(3)."
+    },
+    "current_order_check": "e-Gov API Corporate Tax Order revision340CO0000000097_20261001_507CO0000000121 still has unsubstituted144/145 text. Its144(1) orders oldest-year first and national before local within a year;145(1) consumes older excess against current national capacity. Raw API evidence retained in local audit jp-cta-order-current-api-20261122.json. Do not mistake this for a complete defence-period consolidated computation.",
+    "next": "Implement original-return historical balances with the three-year start-date window, oldest-year ordering, statutory substitutions, separately tracked local levy shortfalls, filing entitlement, reductions and expiry. No historical credit is yet enabled by this current-capacity output."
+  },
   "overall_goal": "Incomplete. Original corporate/personal coverage and real business acceptance remain required. Priority: cross-border corporate income and foreign tax credits."
 }

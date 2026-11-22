@@ -68,3 +68,30 @@ def test_sources_match_archived_originals():
     root=Path(__file__).resolve().parents[2]
     for source in SOURCES:
         assert hashlib.sha256((root/source['file']).read_bytes()).hexdigest()==source['sha256']
+
+
+@pytest.mark.parametrize('paid,national,prefectural,municipal,excluded',[
+    (0,9280000,92800,556800,1247040),
+    (9000000,280000,92800,556800,1247040),
+    (9280000,0,92800,556800,1247040),
+    (9500000,0,92800,556800,1027040),
+    (10527040,0,92800,556800,0),
+    (10600000,0,19840,556800,0),
+    (10619840,0,0,556800,0),
+    (11000000,0,0,176640,0),
+    (11176640,0,0,0,0),
+    (12000000,0,0,0,0),
+])
+def test_schedule6_3_capacity_is_not_combined_unused_national_limits(paid,national,prefectural,municipal,excluded):
+    n=args();n['eligible_foreign_corporate_tax']=paid
+    r=allocate_current(n,paper())
+    assert r['current_unused_capacity_before_history']==dict(
+        national=national,prefectural=prefectural,municipal=municipal)
+    assert r['unused_national_limits_not_in_carry_capacity']==excluded
+
+
+def test_local_levy_shortfall_does_not_restore_statutory_unused_capacity():
+    p=paper();p['prefectures'][0]['available_corporation_levy_before_final_rounding']=0
+    r=allocate_current(args(),p)
+    assert r['prefectural']['unrelieved_due_to_levy_shortfall']==92800
+    assert r['current_unused_capacity_before_history']['prefectural']==0
