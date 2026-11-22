@@ -19,5 +19,31 @@
     "Resolve excess-tax expense interaction and ordinary/SME rate application before implementing annual settlement.",
     "Add saved source reconciliation,UI/report and concrete business examples after component verification."
   ],
-  "limits": "No new Thai corporate foreign-credit calculator claimed; case-specific ruling must not be generalized beyond supported facts."
+  "limits": "No new Thai corporate foreign-credit calculator claimed; case-specific ruling must not be generalized beyond supported facts.",
+  "timing_and_evidence_review": {
+    "notification65": [
+      "Clause7 uses market exchange rate on foreign-tax payment date.",
+      "Clause8 apportions mismatched foreign periods by profit or gross receipts depending on the foreign tax base.",
+      "Clause9 requires correcting the original return after later foreign payment; clause10 retains the elected treatment within that period.",
+      "Clause11 requires certified payment evidence with Thai/English translation and taxpayer,income,tax details."
+    ],
+    "archives": [
+      {
+        "url": "https://www.rd.go.th/3161.html",
+        "file": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\th-company-credit-20261122\\notification65.html",
+        "sha256": "07351b2c536dbc4ea21059f4a70375b184be5f9e286eecc6eaedee7bf206ba76"
+      },
+      {
+        "url": "https://www.rd.go.th/49005.html",
+        "file": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\th-company-credit-20261122\\ruling0702-8746.html",
+        "sha256": "e53d43ed460d8c992c262c8128c1435b3629d3405d10f0420a14665e06f6416a"
+      },
+      {
+        "url": "https://www.rd.go.th/2787.html",
+        "file": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\th-company-credit-20261122\\decree300.html",
+        "sha256": "b2b69039afba7aeb1b477858472681be5669e4f090833ba1ecdaec3fa6656fbc"
+      }
+    ],
+    "remaining": "Resolve numeric excess-expense feedback and graduated SME limits; do not substitute average-rate allocation without evidence."
+  }
 }

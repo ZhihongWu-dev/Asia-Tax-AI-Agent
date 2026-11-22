@@ -102,5 +102,16 @@
     "remote_run": 44982632445,
     "remote_status": "in_progress:3jobs succeeded,Python and browser still live when checked.",
     "scope": "These are synthetic business-boundary checks, not full-country or filing acceptance."
+  },
+  "remote_backend_validation": {
+    "run": 44982632445,
+    "commit": "b818048",
+    "job": 137086262560,
+    "status": "success",
+    "passed": 3015,
+    "skipped": 6,
+    "deselected": 27,
+    "seconds": 82.96,
+    "scope": "Completed Python3.11 CI job; browser job still running when observed. The three later boundary tests were validated locally separately."
   }
 }
