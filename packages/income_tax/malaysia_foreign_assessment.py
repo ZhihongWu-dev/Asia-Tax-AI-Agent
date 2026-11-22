@@ -117,5 +117,7 @@ def assess(case, workpaper, prepaid_tax):
             annual_liability=result['tax_after_credit'], prepaid_tax=prepaid,
             balance_due=result['tax_after_credit']-prepaid, source_reconciliation=reconciliation,
             stage='ordinary_resident_company_direct_credit_before_filing_rounding')
-        result['sources'].extend(domestic['sources'])
+        # The same Act supports rates, basis and credits. Preserve all locators
+        # in one reference rather than duplicating the identical file/hash.
+        result['sources'][0]['locator'] += '; sections 42-44; ' + domestic['sources'][0]['locator']
         return result

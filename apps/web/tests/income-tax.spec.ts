@@ -1223,3 +1223,48 @@ test('UAE foreign credit saves forfeited excess and exports report',async({page}
  expect(report).toContain('UAE income-by-income foreign credit');expect(report).toContain('61750');
  await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('61750');
 });
+
+test('Malaysia foreign credit saves shared source and exports report',async({page})=>{
+ const form=await openIncome(page);
+ for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','my'],['Tax residency','resident']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+ for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Claimed deductions (blank if unknown)','85000'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+ await form.getByRole('button',{name:'Add income',exact:true}).click();
+ await form.getByRole('button',{name:'Add income',exact:true}).click();
+ for(const [n,category,gross,tax] of [[1,'business','500000','0'],[2,'business','75000','7500'],[3,'rental','30000','0']] as const){
+  const row=form.getByRole('group',{name:`Income ${n}`,exact:true});
+  await row.getByRole('combobox',{name:'Income category',exact:true}).selectOption(category);
+  await row.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption('my');
+  for(const [name,value] of [['Gross income',gross],['Foreign tax paid (blank if unknown)',tax],['Income description','Synthetic consultancy or rental source with verified tax treatment']])await row.getByLabel(name,{exact:true}).fill(value);
+ }
+ await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+ const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+ await calc.getByLabel('Applicable regime').selectOption('my_company_foreign_direct_ya2026');
+ for(const n of [1,2,3]){
+  await calc.getByRole('combobox',{name:`Income ${n}: source group`,exact:true}).selectOption(n===3?'3':'1');
+  await calc.getByLabel(`Income ${n}: exempt income`,{exact:true}).fill('0');
+  await calc.getByRole('combobox',{name:`Income ${n}: credit method`,exact:true}).selectOption(n===2?'bilateral':'none');
+  await calc.getByRole('combobox',{name:`Income ${n}: taxable status and credit eligibility verified`,exact:true}).selectOption('true');
+ }
+ await calc.getByLabel('Income 2: taxing country two-letter code (e.g. in)',{exact:true}).fill('IN');
+ await calc.getByLabel('Income 2: eligible foreign tax',{exact:true}).fill('7500');
+ for(const id of [1,3]){
+  for(const name of ['Additions','Statutory charges','Capital allowances'])await calc.getByLabel(`Source ${id}: ${name}`,{exact:true}).fill('0');
+  await calc.getByLabel(`Source ${id}: Allowable expenses`,{exact:true}).fill(id===1?'80000':'5000');
+  await calc.getByRole('combobox',{name:`Source ${id}: same-source allocation verified`,exact:true}).selectOption('true');
+ }
+ await calc.getByLabel('Total-income deductions',{exact:true}).fill('0');
+ await calc.getByLabel('Prepaid tax for this period',{exact:true}).fill('120000');
+ await calc.getByRole('combobox',{name:'Company rate scheme',exact:true}).selectOption('ordinary');
+ await calc.getByRole('combobox',{name:'SME eligibility verified',exact:true}).selectOption('false');
+ for(const name of ['Ordinary resident company without losses verified','Deductions and source allocation verified','Treaty, tax period, FX and no duplicate credit verified'])await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+ await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified shared business source, India tax entitlement and separate rental expenses.');
+ await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
+ const result=page.getByRole('article',{name:'Saved calculation result'});
+ await expect(result).toContainText('117300');await expect(result).toContainText('-2700');
+ const detail=result.getByRole('region',{name:'Malaysia foreign credit details'});
+ await expect(detail).toContainText('7500');await expect(detail).toContainText('Bilateral');
+ const downloading=page.waitForEvent('download');await result.getByRole('button',{name:'Download calculation record'}).click();
+ const report=await readFile((await (await downloading).path())!,'utf8');
+ expect(report).toContain('Malaysia bilateral and unilateral credits');expect(report).toContain(String.raw`| source\_1 | IN | Bilateral |`);
+ await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('117300');
+});
