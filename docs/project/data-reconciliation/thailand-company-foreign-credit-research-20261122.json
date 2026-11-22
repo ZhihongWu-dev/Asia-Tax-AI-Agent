@@ -1,5 +1,12 @@
 {
-  "status": "rules_distinctions_verified_implementation_pending",
+  "status": "country_limit_component_verified_annual_integration_pending",
+  "component_validation": {
+    "module": "packages/income_tax/thailand_company_foreign_limits.py",
+    "command": "pytest tests/income_tax/test_thailand_company_foreign_limits.py tests/income_tax/test_thailand.py tests/income_tax/test_thailand_company_reconciliation.py -q",
+    "result": "48 passed in 2.98s",
+    "scope": "Ordinary 20% country limit workpaper; combined versus separate clause4 treatment, no cross-country pooling, loss floor, evidence and classification rejection.",
+    "not_supported": "Annual settlement, excess-tax expense feedback, SME allocation, saved-case UI/report. Component is not registered as an annual assessment policy."
+  },
   "date": "2026-11-22",
   "current_gap": "Ordinary Thai company calculation accepts allowed_tax_credits as established input; no derived corporate foreign-credit workpaper. Existing Thai foreign workflow is personal.",
   "sources": {
@@ -19,7 +26,7 @@
     "Resolve excess-tax expense interaction and ordinary/SME rate application before implementing annual settlement.",
     "Add saved source reconciliation,UI/report and concrete business examples after component verification."
   ],
-  "limits": "No new Thai corporate foreign-credit calculator claimed; case-specific ruling must not be generalized beyond supported facts.",
+  "limits": "Country-limit component only; no annual Thai corporate foreign-credit settlement claimed. Case-specific ruling must not be generalized beyond supported facts.",
   "timing_and_evidence_review": {
     "notification65": [
       "Clause7 uses market exchange rate on foreign-tax payment date.",
