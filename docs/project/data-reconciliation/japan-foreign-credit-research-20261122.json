@@ -83,5 +83,14 @@
     "development_reference": "Official CPython GitHub fractions documentation reviewed before editing. Existing exact integer/Decimal arithmetic reused; no external implementation copied or dependency introduced.",
     "remaining": "Available local levies and statutory employee weights still require verified evidence. This is not annual local settlement, historical carryforward approval or persisted API/UI/report acceptance."
   },
+  "saved_osaka_current_foreign_settlement": {
+    "file": "packages/income_tax/japan_osaka_foreign.py",
+    "scope": "Saved resident-company ordinary cross-border receipts, full-year2026-start offices entirely in Osaka city, ordinary income-based enterprise taxation and standard foreign-credit limits. Nine national/local/capitation components settle separately. Foreign offices, history, actual-rate elections, competing reliefs and size-based regimes are excluded explicitly, not inferred away.",
+    "derivation": "Corporation reference from saved receipts drives the local levy base and rates. Available prefectural/city levies are computed before final100yen rounding rather than entered manually. Foreign credits reduce those levies before final truncation. Verified enterprise adjustments remain separate from the national denominator. Wards affect capitation and do not create duplicate municipal credit allocations.",
+    "authority": "Existing archived Osaka prefectural July2026 return instructions paragraphs26-28 and Osaka city October2025 return instructions lines10-15 reopened and reviewed. Both order foreign credit before final100yen truncation and interim liability offsets. City payable total treats negative component balances as zero rather than netting refunds against other payments.",
+    "validation": "26 tests passed2.91s: ten foreign catalog countries, nine independently expected tax components, separate refunds/payments, one-yen credit rounding, multiple wards, independent enterprise adjustments, invalid scope/input rejection, ambient precision independence and archived source hashes.390 Japan-selected regression tests passed22.92s,1991deselected.",
+    "development_reference": "Official CPython GitHub decimal documentation searched before implementation. Existing Decimal/localcontext and integer-unit truncation conventions reused without copied code or new dependencies.",
+    "remaining": "Persisted assessment API/UI/report integration and historical balances remain pending. This calculation does not prove broad Japan or overall business acceptance."
+  },
   "overall_goal": "Incomplete. Original corporate/personal coverage and real business acceptance remain required. Priority: cross-border corporate income and foreign tax credits."
 }
