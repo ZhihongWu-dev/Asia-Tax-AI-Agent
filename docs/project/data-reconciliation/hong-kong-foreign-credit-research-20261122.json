@@ -1,5 +1,11 @@
 {
   "status": "fsie_credit_component_implemented_annual_workflow_pending",
+  "saved_receipt_reconciliation": {
+    "file": "packages/income_tax/hong_kong_foreign_reconciliation.py",
+    "scope": "Confirmed resident company receipts grouped exactly once; saved deductions and direct foreign payments reconcile; underlying tax and gross-up remain separate; exempt foreign sources preserved without credits. No annual final tax or API policy enabled.",
+    "validation": "87 Hong Kong tests passed10.37s, covering split receipt invariance, exempt receipts, duplicate/omitted/negative indexes, payment/country/category mismatches, excess gross-up and zero-income credit rejection.",
+    "next": "Derive statutory annual credit rate and tax-reduction composition, then connect reconciled source workpapers to saved assessment API/report/UI."
+  },
   "excess_tax_basis_component": {
     "validation": "71 Hong Kong component/calculation/reconciliation tests passed10.40s; exact historical example, below/at/above credit limit, decimal conservation and invalid input boundaries covered.",
     "file": "packages/income_tax/hong_kong_credit_basis.py",
