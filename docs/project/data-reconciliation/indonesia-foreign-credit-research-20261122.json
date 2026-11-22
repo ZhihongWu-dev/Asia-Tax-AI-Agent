@@ -90,5 +90,17 @@
       "unresolved": 0
     },
     "build": "TypeScript and Vite passed;2290modules;mainJS866.39kB;existing bundle-size advisory remains."
+  },
+  "business_boundary_followup": {
+    "tests_passed": 15,
+    "seconds": 6.61,
+    "new_scenarios": [
+      "Exempt foreign receipt remains in31Eturnover but generates no credit; finaltax645333392.",
+      "Zero current taxable income retains5million prior-credit recapture;7million prepaid yields2million overpayment.",
+      "Split foreign receipt and source-group reordering preserve taxable base,credit,annual liability and prepaid balance."
+    ],
+    "remote_run": 44982632445,
+    "remote_status": "in_progress:3jobs succeeded,Python and browser still live when checked.",
+    "scope": "These are synthetic business-boundary checks, not full-country or filing acceptance."
   }
 }

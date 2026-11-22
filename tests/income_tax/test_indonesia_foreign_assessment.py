@@ -54,6 +54,43 @@ def test_domestic_loss_and_recapture_remain_distinct():
         assert r['final_tax']==r['tax_after_credit']+5000000
 
 
+def test_exempt_foreign_receipt_stays_in_turnover_without_creating_credit():
+    case,p=fixture()
+    p['groups'][2].update(exempt_income='3000000000',creditable_foreign_tax='0',treaty_permitted_tax='0')
+    r=assess(case,p,'0')
+    assert r['article31e']['article31e_gross_receipts']==9000000000
+    assert r['taxable_income']==5000000000
+    assert r['gross_tax']==806666740
+    assert r['allowed_foreign_tax_credit']==161333348
+    assert r['final_tax']==645333392
+    assert next(row for row in r['source_credits'] if row['country']=='sg')['credit_before_overall_cap']==0
+
+
+def test_zero_current_tax_does_not_erase_prior_credit_recapture():
+    case,p=fixture()
+    p['groups'][0]['allowed_expenses']='10000000000'
+    case.claimed_deductions=Decimal('10000000000')
+    p['prior_credit_reduction_or_refund']='5000000'
+    r=assess(case,p,'7000000')
+    assert r['taxable_income']==0
+    assert r['allowed_foreign_tax_credit']==0
+    assert r['annual_liability']==5000000
+    assert r['balance_due']==-2000000
+
+
+def test_splitting_one_receipt_and_reordering_groups_preserves_liability():
+    case,p=fixture()
+    baseline=assess(case,p,'1000000000')
+    original=case.incomes[1]
+    case.incomes[1]=original.model_copy(update={'gross_amount':Decimal('400000000'),'foreign_tax_paid':Decimal('120000000')})
+    case.incomes.append(original.model_copy(update={'gross_amount':Decimal('600000000'),'foreign_tax_paid':Decimal('180000000')}))
+    p['groups'][1]['income_indexes']=[1,3]
+    p['groups'].reverse()
+    actual=assess(case,p,'1000000000')
+    for key in ('taxable_income','gross_tax','allowed_foreign_tax_credit','final_tax','balance_due','article31e'):
+        assert actual[key]==baseline[key]
+
+
 @pytest.mark.parametrize('change',['duplicate','missing','overclaim','deductions','exempt_credit','unverified','carried_loss','missing_treaty'])
 def test_saved_inputs_cannot_bypass_reconciliation(change):
     case,p=fixture();g=p['groups'][1]
