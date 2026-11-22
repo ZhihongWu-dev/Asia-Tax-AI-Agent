@@ -1,5 +1,5 @@
 {
-  "status": "research_in_progress_not_implemented",
+  "status": "source_credit_component_verified_saved_workflow_pending",
   "date": "2026-11-22",
   "current_gap": "malaysia.company_tax accepts established allowed_tax_credits; no derived source-country credit limits in saved corporate workflow.",
   "official_index": "https://www.hasil.gov.my/en/perundangan/ketetapan-umum/",
@@ -11,11 +11,34 @@
     "5(g):written claim within two years after assessment year."
   ],
   "next_steps": [
-    "Review current sections5-9 and original table layouts; reconcile Schedule7 in archived2026Act.",
-    "Derive corporate examples and source allocation, claim timing and foreign-income exemption interactions.",
-    "Integrate calculator, saved-case workpaper, UI, bilingual report and persistence/browser tests."
+    "Reconcile saved source groups, taxable status, expenses, total-income deductions and foreign-tax evidence.",
+    "Integrate company assessment, UI, bilingual report and persistence/browser tests.",
+    "Review filing deadlines, treaty eligibility and exemption evidence alongside the calculator."
   ],
   "github_reference": "https://github.com/fastapi/fastapi/blob/master/docs/en/docs/tutorial/body-nested-models.md",
   "implementation_reference_status": "Official nested-model example located; dependency/license/compatibility review required before adopting new implementation. No external code copied.",
-  "limits": "Research checkpoint only. No completed Malaysian corporate foreign-credit assessment claimed."
+  "limits": "Research checkpoint only. No completed Malaysian corporate foreign-credit assessment claimed.",
+  "current_ruling_review": "Sections5-9 read; Schedule7 paragraphs1-16 cross-checked against archivedAct53 updated1January2026, physicalpages653-656.",
+  "component": {
+    "file": "packages/income_tax/malaysia_foreign_credit.py",
+    "behavior": [
+      "Shared statutory source allocated by gross receipts; separate passive source groups",
+      "Source-country credit limits; bilateral foreign-tax cap; unilateral half-tax cap",
+      "Malaysia-derived income may support bilateral but not unilateral credit",
+      "Aggregate cap explicitly reported without inventing source allocation when binding",
+      "Exact Fraction arithmetic with40-digit Decimal serialization; archivedAct53 provenance"
+    ],
+    "validation": {
+      "tests": 42,
+      "seconds": 5.3,
+      "official_example": "PR3/2026 example5: statutory share approximately64565; limit approximately15496; credit7500; remainingtax117300",
+      "scope": "Component plus existing Malaysian tax tests; no saved/API/UI acceptance claimed."
+    }
+  },
+  "github_reference_review": {
+    "license": "MIT",
+    "archived": false,
+    "last_push": "2026-11-18T19:14:19Z",
+    "adoption": "Existing Pydantic2 nested-model pattern; no code copied, no dependency changes."
+  }
 }
