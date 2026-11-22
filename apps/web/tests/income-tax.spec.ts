@@ -1159,13 +1159,16 @@ for(const variant of ['plain','transfers','rental'])test(`China personal foreign
   await expect(page.getByRole('region',{name:'Osaka local tax details',exact:true})).toContainText('2815700');
 });
 
-for(const pooled of [false,true])test(`Singapore foreign credit saves and exports pooled=${pooled}`,async({page})=>{
+for(const {pooled,split} of [{pooled:false,split:false},{pooled:true,split:false},{pooled:false,split:true}])test(`Singapore foreign credit saves and exports pooled=${pooled} split=${split}`,async({page})=>{
  const form=await openIncome(page);
  for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','sg'],['Tax residency','resident']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
  for(const [name,value] of [['Period start','2025-01-01'],['Period end','2025-12-31'],['Claimed deductions (blank if unknown)','16100'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
  await form.getByRole('button',{name:'Add income',exact:true}).click();
  await form.getByRole('button',{name:'Add income',exact:true}).click();
- for(const [n,category,country,gross,tax] of [[1,'business','sg','300000','0'],[2,'business','my','50000','10000'],[3,'interest','jp','20000','1000']] as const){
+ if(split)await form.getByRole('button',{name:'Add income',exact:true}).click();
+ const sourceRows:[number,string,string,string,string][]=[[1,'business','sg','300000','0'],[2,'business','my','50000','10000'],[3,'interest','jp',split?'10000':'20000',split?'500':'1000']];
+ if(split)sourceRows.push([4,'interest','jp','10000','500']);
+ for(const [n,category,country,gross,tax] of sourceRows){
   const row=form.getByRole('group',{name:`Income ${n}`,exact:true});
   await row.getByRole('combobox',{name:'Income category',exact:true}).selectOption(category);
   await row.getByRole('combobox',{name:'Income source jurisdiction',exact:true}).selectOption(country);
@@ -1175,7 +1178,9 @@ for(const pooled of [false,true])test(`Singapore foreign credit saves and export
  const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
  await calc.getByLabel('Applicable regime').selectOption('sg_company_foreign_direct_ya2026');
  for(const n of [1,2])await calc.getByRole('combobox',{name:`Income ${n}: trade source group`,exact:true}).selectOption('1');
- for(const [n,tax] of [[2,'10000'],[3,'1000']] as const){
+ await calc.getByRole('combobox',{name:'Income 3: passive source group',exact:true}).selectOption('3');
+ if(split)await calc.getByRole('combobox',{name:'Income 4: passive source group',exact:true}).selectOption('3');
+ for(const [n,,, ,tax] of sourceRows.filter(row=>row[0]>1)){
   await calc.getByLabel(`Income ${n}: eligible direct foreign tax`,{exact:true}).fill(tax);
   await calc.getByLabel(`Income ${n}: foreign headline rate (%)`,{exact:true}).fill('20');
   await calc.getByRole('combobox',{name:`Income ${n}: elect pooling`,exact:true}).selectOption(String(pooled));

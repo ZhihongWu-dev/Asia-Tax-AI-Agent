@@ -108,8 +108,8 @@ def test_saved_api_reopen_replay_and_rejection(tmp_path,pooled,expected):
                 report=client.get(path+'/runs/'+run['id']+'/report?locale='+locale)
                 assert report.status_code==200,report.text
                 reports[locale]=report.json()['markdown']
-                assert ('Singapore direct foreign credit details' if locale=='en' else '???????????') in reports[locale]
-                assert ('Separate cash grant' if locale=='en' else '??????') in reports[locale]
+                assert ('Singapore direct foreign credit details' if locale=='en' else '新加坡境外直接抵免明细') in reports[locale]
+                assert ('Separate cash grant' if locale=='en' else '单列现金补助') in reports[locale]
                 assert '| trade | MY |' in reports[locale]
                 assert '| interest | JP |' in reports[locale]
                 assert run['snapshot_hash'] in reports[locale]
@@ -148,3 +148,24 @@ def test_public_saved_income_still_rejects_seven_decimal_places():
     data['incomes'][0]['gross_amount']='300000.0000001'
     with pytest.raises(ValueError,match='precision'):
         IncomeTaxCase.model_validate(data)
+
+
+@pytest.mark.parametrize('index',[1,2])
+def test_splitting_one_saved_source_preserves_credit(index):
+    from copy import deepcopy
+    case,p=fixture()
+    expected=run(case,p)
+    original=case.incomes[index]
+    second=original.model_copy(deep=True)
+    original.gross_amount/=2
+    original.foreign_tax_paid/=2
+    second.gross_amount=original.gross_amount
+    second.foreign_tax_paid=original.foreign_tax_paid
+    case.incomes.append(second)
+    group=p['groups'][0 if index==1 else 1]
+    line=next(s for s in group['sources'] if s['income_index']==index)
+    line['eligible_direct_tax']=str(Decimal(line['eligible_direct_tax'])/2)
+    extra=deepcopy(line);extra['income_index']=3
+    group['sources'].append(extra)
+    result=run(case,p)
+    assert result==expected

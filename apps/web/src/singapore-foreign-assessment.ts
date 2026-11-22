@@ -1,15 +1,16 @@
-﻿import type {BasisField,IncomePolicy} from './income-assessment';
+import type {BasisField,IncomePolicy} from './income-assessment';
 import type {IncomeTaxInput} from './income-tax';
 const money=(key:string,zh:string,en:string):BasisField=>({key,label:[zh,en]});
 const check=(key:string,zh:string,en:string):BasisField=>({...money(key,zh,en),boolean:true});
 function groupId(input:IncomeTaxInput,values:Record<string,string>,n:number){
- return input.incomes[n].category==='business'?`trade_${values[`sfc_group_${n}`]||'1'}`:`passive_${n+1}`;
+ return input.incomes[n].category==='business'?`trade_${values[`sfc_group_${n}`]||'1'}`:`passive_${values[`sfc_passive_${n}`]||String(n+1)}`;
 }
 export function singaporeForeignPolicy(input:IncomeTaxInput,values:Record<string,string>):IncomePolicy{
  const fields:BasisField[]=[];
  const businessCount=input.incomes.filter(i=>i.category==='business').length;
  input.incomes.forEach((item,n)=>{
   if(item.category==='business')fields.push({key:`sfc_group_${n}`,label:[`收入${n+1}：营业来源组`,`Income ${n+1}: trade source group`],options:Array.from({length:businessCount},(_,i)=>[String(i+1),[`营业组${i+1}`,`Trade group ${i+1}`]])});
+  if(item.category!=='business')fields.push({key:`sfc_passive_${n}`,label:[`收入${n+1}：被动所得来源组`,`Income ${n+1}: passive source group`],options:input.incomes.map((other,j)=>({other,j})).filter(({other})=>other.category===item.category&&other.source_jurisdiction===item.source_jurisdiction).map(({j}):[string,[string,string]]=>[String(j+1),[`被动来源${j+1}`,`Passive source ${j+1}`]])});
   if(item.source_jurisdiction!=='sg')fields.push(
    money(`sfc_tax_${n}`,`收入${n+1}：合资格直接境外税`,`Income ${n+1}: eligible direct foreign tax`),
    money(`sfc_rate_${n}`,`收入${n+1}：来源地最高企业税率（%）`,`Income ${n+1}: foreign headline rate (%)`),
@@ -25,7 +26,7 @@ export function singaporeForeignPolicy(input:IncomeTaxInput,values:Record<string
   check('sfc_ordinary','仅普通非负所得、直接税额及无结转亏损','Ordinary nonnegative income, direct taxes and no carried losses verified'));
  return {id:'sg_company_foreign_direct_ya2026',label:['新加坡企业境外直接抵免（YA2026）','Singapore company direct foreign credit (YA2026)'],
  notice:['同一营业来源的境内外收入须使用同一组；不同业务分组核算。被动所得逐项核算。保存的扣除总额应等于各组费用、资本扣除及核准捐赠。境外收入须已核实应税且不适用免税；不含间接抵免、特殊税率或亏损分摊。汇总须满足来源地最高企业税率至少15%等条件，不能仅依据实际扣缴税率判断。',
- 'Group domestic and foreign income from the same trade together; separate different trades. Passive sources are assessed individually. Saved deductions must equal group expenses, capital allowances and approved donations. Verify foreign income is taxable and not exempt. Excludes underlying credits, special rates and loss allocation. Pooling requires a headline corporate rate of at least15% and other eligibility conditions; the actual withholding rate alone does not establish eligibility.'],fields};
+ 'Group domestic and foreign income from the same trade together; separate different trades. Group entries from the same passive source and country together; keep different sources separate. Saved deductions must equal group expenses, capital allowances and approved donations. Verify foreign income is taxable and not exempt. Excludes underlying credits, special rates and loss allocation. Pooling requires a headline corporate rate of at least15% and other eligibility conditions; the actual withholding rate alone does not establish eligibility.'],fields};
 }
 export function singaporeForeignBasis(basis:Record<string,unknown>,input:IncomeTaxInput,values:Record<string,string>){
  const grouped=new Map<string,{source_id:string;kind:string;deductions:unknown;sources:unknown[]}>();

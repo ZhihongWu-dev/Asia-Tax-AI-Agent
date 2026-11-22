@@ -57,26 +57,26 @@ def render(run, locale='zh'):
             lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
     if result.get('policy_version') == 'sg-company-foreign-direct-ya2026-20261122':
         credit = result['foreign_credit']
-        lines += ['', '## ' + say('???????????', 'Singapore direct foreign credit details'), '',
-            say('????????????????????????????????????????????????????????????????',
+        lines += ['', '## ' + say('新加坡境外直接抵免明细', 'Singapore direct foreign credit details'), '',
+            say('逐来源与国家核算限额；合资格收入可选择汇总。先抵免再计算回扣，现金补助不重复冲减余额。金额尚未申报取整。',
                 'Caps apply by source and country; elected qualifying income is pooled separately. Credit precedes the CIT rebate. The separate cash grant is not deducted again from the balance. Amounts precede filing rounding.'), '',
-            '| ' + say('?? | ?? | ??????? | ?????? | ?? | ????',
+            '| ' + say('来源 | 国家 | 新加坡税额上限 | 合资格境外税 | 汇总 | 单项抵免',
                 'Source | Country | Singapore tax limit | Eligible foreign tax | Pooled | Individual credit') + ' |',
             '| --- | --- | --- | --- | --- | --- |']
         for row in credit['sources']:
             values = [row['source_id'], row['country'].upper(), row['singapore_tax_limit'],
-                row['eligible_foreign_tax'], say('?','Yes') if row['pool_elected'] else say('?','No'),
-                say('????','Included in pool') if row['individual_credit'] is None else row['individual_credit']]
+                row['eligible_foreign_tax'], say('是','Yes') if row['pool_elected'] else say('否','No'),
+                say('计入汇总','Included in pool') if row['individual_credit'] is None else row['individual_credit']]
             lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
-        lines += ['', '| ' + say('?? | ??', 'Item | Amount') + ' |', '| --- | --- |']
-        for data,key,zh,en in [(credit,'pooled_singapore_tax_limit','??????','Pooled credit limit'),
-                (credit,'pooled_foreign_tax','??????','Pooled foreign tax'),
-                (credit,'pooled_credit','?????','Pooled credit'),
-                (result,'allowed_tax_setoff','??????','Total foreign credit'),
-                (result,'tax_before_rebate','????????','Tax after credit before rebate'),
-                (result,'cit_rebate','?????','CIT rebate'),
-                (result,'cash_grant_separate','??????','Separate cash grant'),
-                (result,'prepaid_tax','????','Prepaid tax')]:
+        lines += ['', '| ' + say('项目 | 金额', 'Item | Amount') + ' |', '| --- | --- |']
+        for data,key,zh,en in [(credit,'pooled_singapore_tax_limit','汇总抵免上限','Pooled credit limit'),
+                (credit,'pooled_foreign_tax','汇总境外税款','Pooled foreign tax'),
+                (credit,'pooled_credit','汇总抵免额','Pooled credit'),
+                (result,'allowed_tax_setoff','境外抵免合计','Total foreign credit'),
+                (result,'tax_before_rebate','抵免后回扣前税额','Tax after credit before rebate'),
+                (result,'cit_rebate','企业税回扣','CIT rebate'),
+                (result,'cash_grant_separate','单列现金补助','Separate cash grant'),
+                (result,'prepaid_tax','预缴税款','Prepaid tax')]:
             lines.append(f'| {_text(say(zh,en))} | {_text(data[key])} |')
     if result.get('tokyo_local'):
         local = result['tokyo_local']

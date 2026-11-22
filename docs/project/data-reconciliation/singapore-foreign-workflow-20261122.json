@@ -46,5 +46,20 @@
       "run": 44979102469,
       "state": "in_progress when observed;not claimed complete"
     }
+  },
+  "source_group_followup": {
+    "changes": [
+      "Passive entries can explicitly share a compatible source-country group in the UI.",
+      "Split trade/passive receipts retain the same calculated credit.",
+      "Restored Chinese labels and report text damaged by shell encoding; tests assert real Chinese text."
+    ],
+    "validation": {
+      "backend_and_reports": 27,
+      "browser_scenarios": 3,
+      "browser_seconds": 35.2,
+      "typescript": "passed",
+      "diff_check": "passed"
+    },
+    "browser_scope": "Individual,pooled,and split passive-income entry;save,reopen,download."
   }
 }
