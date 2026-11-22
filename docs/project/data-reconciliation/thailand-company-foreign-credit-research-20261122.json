@@ -1,0 +1,23 @@
+{
+  "status": "rules_distinctions_verified_implementation_pending",
+  "date": "2026-11-22",
+  "current_gap": "Ordinary Thai company calculation accepts allowed_tax_credits as established input; no derived corporate foreign-credit workpaper. Existing Thai foreign workflow is personal.",
+  "sources": {
+    "decree300": "https://www.rd.go.th/2787.html",
+    "english_translation": "https://www.rd.go.th/fileadmin/user_upload/kormor/eng/RD_300.pdf",
+    "notification65": "https://www.rd.go.th/3161.html",
+    "ruling0702_8746": "https://www.rd.go.th/49005.html",
+    "return_instructions": "https://www.rd.go.th/fileadmin/tax_pdf/cit/2568/300169Ins50.pdf"
+  },
+  "verified_rules": [
+    "Decree300 applies to Thai-established companies,with paid-tax evidence and no deduction of the credited amount.",
+    "Notification65 clauses3-4 distinguish foreign-business net income and foreign-company receipts; same-country mixed cases have combination/separation conditions. Do not automatically reuse personal gross-allocation or Indonesian country/type logic.",
+    "Ruling0702/8746 permits the unrelieved difference as an expense in the income-accrual period for its stated royalty facts; later foreign payment requires amending that income year. Do not label all excess nondeductible."
+  ],
+  "next_steps": [
+    "Read remaining notification clauses and current return ordering; archive official originals.",
+    "Resolve excess-tax expense interaction and ordinary/SME rate application before implementing annual settlement.",
+    "Add saved source reconciliation,UI/report and concrete business examples after component verification."
+  ],
+  "limits": "No new Thai corporate foreign-credit calculator claimed; case-specific ruling must not be generalized beyond supported facts."
+}
