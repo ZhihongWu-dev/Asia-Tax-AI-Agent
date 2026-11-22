@@ -1,0 +1,91 @@
+{
+  "observed_date": "2026-11-22",
+  "status": "both_comparison_runs_completed_without_reported_failures",
+  "original_cases": [
+    "case001.best",
+    "case001.open",
+    "case001.valued.best",
+    "cfc_jp.best",
+    "cfc_jp.open",
+    "exit_jp.best",
+    "remit_sg.not_kept",
+    "remit_sg_open.conduct",
+    "remit_sg_received.best",
+    "remit_sg_received.sequence",
+    "jp_sg_individual.best",
+    "jp_sg_individual.sequence"
+  ],
+  "v4_cases": [
+    {
+      "test": "case001.best",
+      "checker_failures": [],
+      "seconds": 2293.58
+    },
+    {
+      "test": "case001.open",
+      "checker_failures": [],
+      "seconds": 2618.86
+    },
+    {
+      "test": "case001.valued.best",
+      "checker_failures": [],
+      "seconds": 2312.55
+    },
+    {
+      "test": "cfc_jp.best",
+      "checker_failures": [],
+      "seconds": 8634.91
+    },
+    {
+      "test": "cfc_jp.open",
+      "checker_failures": [],
+      "seconds": 8425.94
+    },
+    {
+      "test": "exit_jp.best",
+      "checker_failures": [],
+      "seconds": 11760.33
+    },
+    {
+      "test": "remit_sg.not_kept",
+      "checker_failures": [],
+      "seconds": 9644.75
+    },
+    {
+      "test": "remit_sg_open.conduct",
+      "checker_failures": [],
+      "seconds": 10077.34
+    },
+    {
+      "test": "remit_sg_received.best",
+      "checker_failures": [],
+      "seconds": 7817.17
+    },
+    {
+      "test": "remit_sg_received.sequence",
+      "checker_failures": [],
+      "seconds": 7880.06
+    },
+    {
+      "test": "jp_sg_individual.best",
+      "checker_failures": [],
+      "seconds": 7391.3
+    },
+    {
+      "test": "jp_sg_individual.sequence",
+      "checker_failures": [],
+      "seconds": 6914.62
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\optimizer-golden-20261118.log",
+      "sha256": "b538086c78ca0d798bd8a567eeef2ef1bef021809d72ee2c04cac07b662850f2"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\AI tax\\integration-audit-20261116\\repaired-compressed-golden-v4-20261118.log",
+      "sha256": "ff61815ef69eb4e3c4d6d16581cf363fa5c0a95cd898f27d9860b8d690da4f6d"
+    }
+  ],
+  "limits": "Terminal summaries report no failures and original process IDs are absent. Historical process exit codes not recovered. Frozen comparison inputs, not full current business acceptance."
+}

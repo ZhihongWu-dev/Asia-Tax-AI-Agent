@@ -26,9 +26,10 @@
         "tokyo-full-browser-validation-20261119.json",
         "osaka-full-browser-validation-20261119.json",
         "li-rule-preservation-audit-20261119.json",
-        "changed-li-rule-evidence-20261119.json"
+        "changed-li-rule-evidence-20261119.json",
+        "optimizer-comparison-completion-20261122.json"
       ],
-      "limits": "Local regression and v5 golden/checker passed. Current129-case full browser suite passed in9.1m, including transfers, rentals and Osaka. Hosted identity/provider acceptance is unproven; original/v4 comparison jobs were still active at last observation. Delivery is local-only."
+      "limits": "Local regression and v5 golden/checker passed. Current129-case full browser suite passed in9.1m, including transfers, rentals and Osaka. Hosted identity/provider acceptance is unproven; original/v4 comparison logs each show12 completed cases and0 failures (observed2026-11-22). Delivery is local-only."
     },
     {
       "requirement": "Corporate and personal income tax across all 11 dividend jurisdictions",
@@ -212,7 +213,8 @@
     "wards_build": "Production build passed,2282 modules;841.51kB main JS;local artifacts only.",
     "catalog_integrity": "At292c24f,6 business CSV and SQLite hashes match reviewed snapshot;all7 SQLite row counts unchanged.",
     "current_22_selections": "Atb19b742,executed frontend policies through Vite SSR for original22 inputs:all11 countries x2subjects have at least1policy. This is availability only.",
-    "three_synthetic_cases": "3 HTTP round-trip scenarios passed6.55s; independent amount expectations, country cap/expiry, separate authority balances, SQLite reopen,replay,bilingual reports and invalid-input rejection."
+    "three_synthetic_cases": "3 HTTP round-trip scenarios passed6.55s; independent amount expectations, country cap/expiry, separate authority balances, SQLite reopen,replay,bilingual reports and invalid-input rejection.",
+    "optimizer_comparison_completion": "Observed2026-11-22:original andv4 each completed12 cases;terminal summaries report0 failures;original process IDs absent. Historical exit codes not recovered."
   },
   "user_input": "User authorized three synthetic cases (completed), then requested uploading accumulated work to Zhihong-Wu and will perform consolidated testing.",
   "business_acceptance_gate": {
