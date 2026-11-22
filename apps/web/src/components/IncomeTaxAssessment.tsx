@@ -1,8 +1,10 @@
 import {uaeForeignBasis} from '../uae-foreign-assessment';
 import {malaysiaForeignBasis} from '../malaysia-foreign-assessment';
 import {indonesiaForeignBasis} from '../indonesia-foreign-assessment';
+import {indiaForeignBasis} from '../india-foreign-assessment';
 import {thaiCompanyForeignBasis} from '../thailand-company-foreign';
 import IndonesiaForeignResult from './IndonesiaForeignResult';
+import IndiaForeignResult from './IndiaForeignResult';
 import ThaiCompanyForeignResult from './ThaiCompanyForeignResult';
 import MalaysiaForeignResult from './MalaysiaForeignResult';
 import UAEForeignResult from './UAEForeignResult';
@@ -66,6 +68,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
     if(policy.id==='ae_company_foreign_direct_2026')basis=uaeForeignBasis(basis,current.income_tax!,values);
     if(policy.id==='my_company_foreign_direct_ya2026')basis=malaysiaForeignBasis(basis,current.income_tax!,values);
     if(policy.id==='id_company_foreign_direct_2026')basis=indonesiaForeignBasis(basis,current.income_tax!,values);
+    if(policy.id==='in_company_foreign_ty2026_27')basis=indiaForeignBasis(basis,current.income_tax!,values);
     if(policy.id==='th_company_2026')basis=thaiCompanyForeignBasis(basis,current.income_tax!);
     if(policy.id==='sg_company_foreign_direct_ya2026')basis=singaporeForeignBasis(basis,current.income_tax!,values);
     if(policy.id==='cn_personal_foreign_2026'){
@@ -220,6 +223,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       {result.result.policy_version==='ae-ordinary-foreign-credit-20261122'&&<UAEForeignResult result={result.result} index={index}/>}
       {result.result.policy_version==='my-schedule7-direct-credit-20261122'&&<MalaysiaForeignResult result={result.result} index={index}/>}
       {result.result.policy_version==='id-article24-credit-20261122'&&<IndonesiaForeignResult result={result.result} index={index}/>}
+      {result.result.policy_version==='in-company-foreign-ty2026-27-20261122'&&<IndiaForeignResult result={result.result} index={index}/>}
       {result.result.foreign_credit_reconciliation&&String(result.result.policy_version).includes('rd300')?<ThaiCompanyForeignResult result={result.result} index={index}/>:null}
       {result.result.policy_version==='sg-company-foreign-direct-ya2026-20261122'&&<SingaporeForeignResult result={result.result} index={index}/>}
       {result.result.tax_scope==='china_resident_ordinary_direct_foreign_credit_positive_bases'&&<ChinaForeignResult result={result.result} index={index}/>}

@@ -4,6 +4,47 @@ import {cnForeignChecks,cnForeignAmounts} from '../src/china-foreign-assessment'
 import {tokyoAmounts,tokyoChecks} from '../src/japan-tokyo-assessment';
 import { test, expect } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
+import {indiaForeignChecks} from '../src/india-foreign-assessment';
+
+for(const route of [
+ {scheme:'section200',book:'',normal:'251680',mat:'',final:201680,balance:-48320},
+ {scheme:'normal',book:'0',normal:'260000',mat:'0',final:210000,balance:-40000},
+ {scheme:'normal',book:'2000000',normal:'260000',mat:'291200',final:241200,balance:-8800},
+])test(`Indian foreign company ${route.scheme} book ${route.book} saves and reopens`,async({page})=>{
+ test.setTimeout(60000);
+ const form=await openIncome(page);
+ for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','in'],['Tax residency','resident'],['Income category','royalty'],['Income source jurisdiction','sg']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+ for(const [name,value] of [['Period start','2026-04-01'],['Period end','2027-03-31'],['Gross income','1000000'],['Foreign tax paid (blank if unknown)','100000'],['Income description','Synthetic Indian company ordinary foreign royalty'],['Claimed deductions (blank if unknown)','0'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+ await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+ const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+ await calc.getByLabel('Applicable regime').selectOption('in_company_foreign_ty2026_27');
+ await calc.getByRole('combobox',{name:'Indian company regime',exact:true}).selectOption(route.scheme);
+ await calc.getByRole('combobox',{name:'Income 1: separate source group',exact:true}).selectOption('1');
+ await calc.getByRole('combobox',{name:'Source 1: treaty applies',exact:true}).selectOption('true');
+ for(const [name,value] of [['Source 1: allowable expenses','0'],['Source 1: foreign tax paid in INR','100000'],['Source 1: disputed tax excluded in INR','0'],['Source 1: normal Indian tax attributable to this source',route.normal],['Source 1: treaty-permitted tax (may be zero)','50000'],['Verified prepayments for this period','250000']])await calc.getByLabel(name,{exact:true}).fill(value);
+ if(route.scheme==='normal')for(const [name,value] of [['Verified turnover for2024-25','10000000'],['Verified MAT book profit',route.book],['Source 1: Section206 tax attributable to this source',route.mat]])await calc.getByLabel(name,{exact:true}).fill(value);
+ for(const [,,name] of indiaForeignChecks)await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+ await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified domestic company regime, source attribution, treaty ceiling and required payment evidence.');
+ await calc.getByRole('checkbox').check();
+ const saved=page.waitForResponse(r=>r.url().endsWith('/income-tax/runs')&&r.request().method()==='POST');
+ await calc.getByRole('button',{name:'Calculate and save result'}).click();
+ const response=await saved;expect(response.status()).toBe(200);
+ const snapshot=await response.json();
+ expect(Number(snapshot.result.final_tax)).toBe(route.final);expect(Number(snapshot.result.balance_due)).toBe(route.balance);
+ const result=page.getByRole('article',{name:'Saved calculation result'});
+ const detail=result.getByRole('region',{name:'Indian company foreign credit details'});
+ await expect(detail).toContainText('Foreign credit applied: 50000');
+ await expect(detail).toContainText('MAT applies: '+(route.book==='2000000'?'Yes':'No'));
+ await calc.getByLabel('Source 1: foreign tax paid in INR',{exact:true}).fill('100001');
+ await expect(calc.getByRole('checkbox')).not.toBeChecked();await calc.getByRole('checkbox').check();
+ const rejected=page.waitForResponse(r=>r.url().endsWith('/income-tax/runs')&&r.request().method()==='POST');
+ await calc.getByRole('button',{name:'Calculate and save result'}).click();expect((await rejected).status()).toBe(422);
+ await expect(result).toContainText(String(route.balance));
+ const downloading=page.waitForEvent('download');await result.getByRole('button',{name:'Download calculation record'}).click();
+ const report=await readFile((await (await downloading).path())!,'utf8');
+ expect(report).toContain('Indian company foreign tax credits');expect(report).toContain('in.rules2026');
+ await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(String(route.balance));
+});
 
 for(const method of ['business_net','company_receipts','mixed_combined','mixed_separate'])test(`Thai corporate RD300 ${method} saves country expense reconciliation`,async({page})=>{
  test.setTimeout(60000);
