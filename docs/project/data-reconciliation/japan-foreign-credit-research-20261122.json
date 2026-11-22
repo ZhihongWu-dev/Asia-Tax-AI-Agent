@@ -153,5 +153,21 @@
     "finding": "Corporate Tax Act74(1)(3) expressly includes eligible credits under Articles68 and69 that could not be deducted from corporation tax; Article78(1) provides the associated refund. Therefore a blanket rule that matched foreign credits above current corporation tax cannot be refunded is incorrect. Statutory unused credit capacity, eligible credit refund and interim-payment refund must remain distinct.",
     "implementation_gate": "Reconcile current Form1 credit/refund fields and yen rounding before wiring history into annual settlements. Do not clamp all matched credit to current liability and silently restore statutory history balances. Do not infer that every unmatched foreign-tax payment qualifies for a refund. Local inhabitant levy shortfalls require their separate rules.",
     "scope_guard": "Existing no-history API attestations must not be silently rewritten to true when adding a historical workflow. No calculation/API/UI behavior was changed in this authority-review checkpoint."
+  },
+  "national_historical_settlement": {
+    "file": "packages/income_tax/japan_foreign_history_settlement.py",
+    "scope": "Internal national annual settlement of current allocation plus independently verified historical balances. Corporation eligible credit includes current credit, historical capacity and historical excess. Local-corporation/defence retain current credits; matched prefectural/municipal history remains explicitly unsettled.",
+    "refund_treatment": "Nonnegative annual liability is truncated to whole hundreds after applied credit. Eligible corporation credit exceeding available tax produces a separately identified whole-yen credit refund under CTA74(1)(3),78; interim refund under79 remains distinct. Unmatched foreign tax above statutory limits never becomes a refund. Refunded eligible credit does not restore consumed historical capacity.",
+    "business_case": "Worldwide incomeJPY100m; foreign incomeJPY90m; verified eligible foreign taxJPY31.5m; corporation referenceJPY23.2m; current corporation creditJPY20.88m. Prior national capacityJPY3m yields applied creditJPY23.2m and credit refundJPY680000. With interim liabilityJPY1m, corporation refunds totalJPY1.68m; other national taxes remain payableJPY311700.",
+    "validation": "457 Japan-selected tests passed31.88s,1991deselected before final defence-start guard. Focused tests include one-yen refund boundaries, oldest matching/expiry reuse, separate refunds/payments, ten saved-case national reconciliations, invalid inputs, source hashes, immutability and low ambient precision. Final focused rerun recorded separately.",
+    "form_source": {
+      "file": "database/raw/jp/jp.nta.form1.2026.pdf",
+      "sha256": "f72212f6ea52b81566a81cc5af510897e38d5a45002d26ff539aaef7ad3b8b63",
+      "url": "https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hojin/shinkoku/itiran2026/pdf/01-01-a.pdf",
+      "review": "Official index and instructions checked. Form rendered; image tool output was suppressed by session limit, so no visual-review claim. Local OCR fields12-24 cross-checked against CTA74/78/79. Visual verification remains necessary before enabling saved historical-return workflow."
+    },
+    "development_reference": "Official CPython GitHub decimal documentation reviewed. Exact integer yen arithmetic avoids ambient Decimal context changes; no external implementation or dependency adopted.",
+    "remaining": "Saved historical assessment contract/API/UI/report, local current/history credit combination and separate levy-shortfall ledgers remain pending. Existing no-history attestations are unchanged and cannot authorize a historical assessment. Broader corporate/personal and business-acceptance goal remains incomplete.",
+    "final_focused_validation": "30 passed2.55s after final defence-start guard; no calculation policy enabled in API/UI."
   }
 }
