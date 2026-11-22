@@ -1,5 +1,10 @@
 {
   "status": "fsie_credit_component_implemented_annual_workflow_pending",
+  "indirect_interest_validation": {
+    "authority": "Cap112 Section50AAAC(1)-(4): beneficial interest or voting rights; multiply fractions through up to four interposed persons; paths through five or more interposed persons not taken into account.",
+    "implementation": "Optional single equity/voting path now derives effective interest in the source-credit calculation. Reject invalid edge fractions and disagreement with declared interest. Excluded paths contribute zero to the adequate-interest test. Multiple overlapping paths and attributed voting agreements remain verified aggregate inputs, not automatically summed.",
+    "validation": "65 source-credit, saved-reconciliation and excess-tax tests passed2.29s; covers both equity/voting paths, direct and four/five-intermediary boundaries, and declared-chain mismatch. Annual workflow remains incomplete."
+  },
   "saved_receipt_reconciliation": {
     "file": "packages/income_tax/hong_kong_foreign_reconciliation.py",
     "scope": "Confirmed resident company receipts grouped exactly once; saved deductions and direct foreign payments reconcile; underlying tax and gross-up remain separate; exempt foreign sources preserved without credits. No annual final tax or API policy enabled.",

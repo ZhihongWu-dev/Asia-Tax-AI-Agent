@@ -24,6 +24,8 @@ class Source(BaseModel):
     underlying_attribution_and_no_treaty_provision_verified: StrictBool = False
     equity_fraction_at_distribution: Money | None = None
     voting_fraction_at_distribution: Money | None = None
+    equity_chain_at_distribution: list[Money] | None = Field(default=None,min_length=1,max_length=200)
+    voting_chain_at_distribution: list[Money] | None = Field(default=None,min_length=1,max_length=200)
     hong_kong_tax_on_same_income: Money
     taxable_fsie_receipt_and_similar_tax_verified: StrictBool
     treaty_ownership_and_no_duplicate_tax_verified: StrictBool
@@ -35,6 +37,27 @@ class Workpaper(BaseModel):
     hong_kong_resident_mne_verified: StrictBool
     source_tax_attribution_and_gross_up_verified: StrictBool
     payment_fx_and_claim_evidence_verified: StrictBool
+
+
+def _interest(declared, chain):
+    """One verified path: direct holding or at most four interposed persons.
+
+    Multiple paths and voting rights attributed by agreement still require a
+    separately verified aggregate; overlapping paths must not be added here.
+    """
+    if chain is None:
+        return declared or Decimal(0)
+    if any(part > 1 for part in chain):
+        raise ValueError('Every ownership-chain fraction must be between zero and one')
+    effective=Decimal(1)
+    if len(chain)>5:
+        effective=Decimal(0)  # Section50AAAC(4): five or more interposed persons excluded.
+    else:
+        for part in chain:
+            effective*=part
+    if declared is not None and declared!=effective:
+        raise ValueError('Declared interest differs from the verified statutory ownership chain')
+    return effective
 
 
 def calculate(workpaper, *, total_hong_kong_tax):
@@ -60,12 +83,15 @@ def calculate(workpaper, *, total_hong_kong_tax):
                 raise ValueError('CDTA claims require an explicit bilateral eligible amount, including zero')
             if s.income_type != 'dividend' and (s.underlying_tax_paid or
                     s.underlying_tax_in_bilateral_claim or s.underlying_unilateral_eligible_tax or
-                    s.equity_fraction_at_distribution is not None or s.voting_fraction_at_distribution is not None):
+                    s.equity_fraction_at_distribution is not None or s.voting_fraction_at_distribution is not None or
+                    s.equity_chain_at_distribution is not None or s.voting_chain_at_distribution is not None):
                 raise ValueError('Underlying profit tax and equity inputs apply only to dividends')
             if s.equity_fraction_at_distribution is not None and s.equity_fraction_at_distribution > 1:
                 raise ValueError('Equity ownership must be a fraction between zero and one')
             if s.voting_fraction_at_distribution is not None and s.voting_fraction_at_distribution > 1:
                 raise ValueError('Voting rights must be a fraction between zero and one')
+            equity=_interest(s.equity_fraction_at_distribution,s.equity_chain_at_distribution)
+            voting=_interest(s.voting_fraction_at_distribution,s.voting_chain_at_distribution)
             if s.underlying_tax_in_bilateral_claim > s.underlying_tax_paid:
                 raise ValueError('Underlying bilateral tax exceeds underlying paid tax')
             if not s.cdta_applies and s.underlying_tax_in_bilateral_claim:
@@ -81,13 +107,13 @@ def calculate(workpaper, *, total_hong_kong_tax):
             if underlying_unilateral > underlying_remainder:
                 raise ValueError('Unilateral underlying claim duplicates bilateral tax or exceeds paid tax')
             if underlying_unilateral and (not s.underlying_attribution_and_no_treaty_provision_verified or
-                    max(s.equity_fraction_at_distribution or Decimal(0),
-                        s.voting_fraction_at_distribution or Decimal(0)) < Decimal('.10')):
+                    max(equity,voting) < Decimal('.10')):
                 raise ValueError('Underlying unilateral credit requires adequate interest and verified attributed tax with no applicable treaty credit provision')
             direct_unilateral = Decimal(0) if s.cdta_applies else s.direct_foreign_tax_paid
             eligible = bilateral + direct_unilateral + underlying_unilateral
             credit = min(eligible, s.hong_kong_tax_on_same_income)
             rows.append(dict(source_id=s.source_id.strip(), country=s.country,
+                effective_equity_fraction=equity,effective_voting_fraction=voting,
                 income_type=s.income_type, bilateral_eligible_tax=bilateral,
                 unilateral_direct_tax=direct_unilateral,
                 unilateral_underlying_tax=underlying_unilateral,

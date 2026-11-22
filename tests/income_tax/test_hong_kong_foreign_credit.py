@@ -98,3 +98,32 @@ def test_unilateral_underlying_entitlement_is_not_inferred(change):
     elif change=='no_provision_unverified':s['underlying_attribution_and_no_treaty_provision_verified']=False
     else:s.update(cdta_applies=True,bilateral_credit_eligible_tax='200',underlying_tax_in_bilateral_claim='100')
     with pytest.raises(ValueError):calculate(p,total_hong_kong_tax='1000')
+
+
+@pytest.mark.parametrize('kind',['equity','voting'])
+def test_verified_indirect_interest_reaches_threshold(kind):
+    p=fixture();s=p['sources'][0]
+    s['equity_fraction_at_distribution']=None
+    s[kind+'_chain_at_distribution']=['.5','.2']
+    result=calculate(p,total_hong_kong_tax='1000')
+    assert result['foreign_tax_credit']==250
+    assert result['source_credits'][0]['effective_'+kind+'_fraction']==Decimal('.1')
+
+
+@pytest.mark.parametrize('edges',[1,2,5,6,7])
+def test_interposed_entity_depth_limit(edges):
+    p=fixture();s=p['sources'][0]
+    s.update(equity_fraction_at_distribution=None,equity_chain_at_distribution=['1']*edges)
+    if edges<=5:
+        assert calculate(p,total_hong_kong_tax='1000')['foreign_tax_credit']==250
+    else:
+        with pytest.raises(ValueError,match='adequate interest'):calculate(p,total_hong_kong_tax='1000')
+        s['underlying_unilateral_eligible_tax']='0'
+        row=calculate(p,total_hong_kong_tax='1000')['source_credits'][0]
+        assert row['effective_equity_fraction']==0
+
+
+@pytest.mark.parametrize('chain',[['1.01'],['.2','.2'],[]])
+def test_invalid_chain_or_declared_interest_mismatch(chain):
+    p=fixture();p['sources'][0]['equity_chain_at_distribution']=chain
+    with pytest.raises(ValueError):calculate(p,total_hong_kong_tax='1000')
