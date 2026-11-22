@@ -1,5 +1,14 @@
 {
-  "status": "current_country_credit_component_implemented_history_and_workflow_pending",
+  "status": "country_credit_and_verified_history_components_implemented_annual_workflow_pending",
+  "verified_history_component": {
+    "validation": "59 historical/current-credit and existing Korean relief/company tests passed1.90s. Covers history-first usage, country isolation, exact year-end expiry, deduction-review window, current-credit displacement and invalid historical identifiers/dates.",
+    "file": "packages/income_tax/korea_foreign_history.py",
+    "authority": "Current archived CTA59(1)(3) reviewed: carried credits precede current-year credits. Article57(2) governs business-year-end eligibility and expired-tax deduction period.",
+    "scope": "Original country/origin/expiry and available balances require verification, including transitional rules and order among old lots. No automatic ten-year reset. Country limits used by history first; displaced current tax becomes ordinary carry without reclassifying the separately established expense-related exclusion.",
+    "boundaries": "Expiry on current year end remains usable; earlier expiry cannot be used. Deduction-review flag depends on whether the day after expiry falls within the current business year. Expiring-at-year-end flag distinguishes closing balance from future eligibility. No expired amount automatically enters the annual base.",
+    "synthetic": "Country limit80, current eligible150, expense-related exclusion20, prior credit30: prior used30, current used50, current ordinary carry80. A prior lot from another country cannot consume this limit.",
+    "remaining": "Automatic transitional expiry derivation, other-relief ordering integration, expired-tax base deduction, saved workflow/API/UI/report and local tax."
+  },
   "country_credit_component": {
     "validation": "48 tests passed2.11s across new country-credit component and existing Korean relief/company calculations. Country isolation, capped expense-related excess, exact conservation, invalid inputs and archived source hashes covered.",
     "file": "packages/income_tax/korea_foreign_credit.py",
