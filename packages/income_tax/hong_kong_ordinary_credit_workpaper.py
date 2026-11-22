@@ -7,22 +7,32 @@ a current IRD ruling on these cases. Require explicit verification of the
 annual basis and ordering. No API policy or final assessment is enabled here.
 """
 from copy import deepcopy
+from datetime import date, timedelta
 from decimal import localcontext
 from fractions import Fraction as F
 from packages.contracts.income_tax import IncomeTaxCase
-from .hong_kong import SOURCES
+from .hong_kong import SOURCES, PROFITS_BASIS_SOURCES
 from .hong_kong_foreign_reconciliation import FactsWorkpaper, reconcile_facts
 from .hong_kong_saved_credit_constraints import Workpaper, reconcile_constraints, _render
 
 
 def prepare(case, workpaper, *, two_tier_eligible,
-            ordinary_annual_basis_and_reduction_ordering_verified, allocations=None):
+            ordinary_annual_basis_and_reduction_ordering_verified,
+            ongoing_business_unchanged_accounting_year_verified, allocations=None):
     if (type(two_tier_eligible) is not bool
             or ordinary_annual_basis_and_reduction_ordering_verified is not True):
         raise ValueError('Ordinary annual basis, reduction ordering and two-tier eligibility require verification')
     case = IncomeTaxCase.model_validate(case)
-    if (case.period_start.isoformat(),case.period_end.isoformat()) != ('2025-04-01','2026-03-31'):
-        raise ValueError('This workpaper covers the stated2025/26receipt period only')
+    if ongoing_business_unchanged_accounting_year_verified is not True:
+        raise ValueError('Ongoing business and unchanged annual accounting period require verification')
+    if not date(2025,4,1) <= case.period_end <= date(2026,3,31):
+        raise ValueError('Annual accounts must end within assessment year2025/26')
+    # Neither possible end year is leap, so replacing its year cannot produce
+    # an invalid29February. Commencement/cessation/changed-year periods remain
+    # subject to separate statutory basis-period treatment.
+    expected_start=case.period_end.replace(year=case.period_end.year-1)+timedelta(days=1)
+    if case.period_start != expected_start:
+        raise ValueError('Ordinary annual accounts require a full year ending in the assessment year')
     p = Workpaper.model_validate(workpaper)
     saved = reconcile_facts(case,{key:getattr(p,key) for key in FactsWorkpaper.model_fields})
     rate_income = F(0)
@@ -54,11 +64,15 @@ def prepare(case, workpaper, *, two_tier_eligible,
         result['annual_rate_basis']=_render(basis,exact=False)
         result['exact_annual_rate_basis']=_render(basis,exact=True)
     result['assessment_year']='2025/26'
+    result['basis_period']=dict(start=case.period_start.isoformat(),end=case.period_end.isoformat(),
+        ongoing_business_unchanged_accounting_year_verified=True)
     result['two_tier_eligible']=two_tier_eligible
     result['policy_version']='hk-ordinary-fsie-workpaper-2025-26-20261122'
     result['stage']='ordinary_2025_26_fsie_workpaper_before_allocation_review_and_assessment_rounding'
-    result['sources'].extend(deepcopy([SOURCES[1],SOURCES[2]]))
+    result['sources'].extend(deepcopy([SOURCES[1],SOURCES[2],PROFITS_BASIS_SOURCES[0]]))
     for source in result['sources']:
         if source['doc_id']=='hk.cap112':
             source['locator'] += '; Sections50(3)-(6),100: rate basis, source/total caps, excess deduction and reduction'
+        elif source['doc_id']=='hk.ird.corporation-notes.20261119':
+            source['locator']='B(5): return amounts exclude cents; C2(1)-(4): ordinary annual accounts and special basis periods'
     return result

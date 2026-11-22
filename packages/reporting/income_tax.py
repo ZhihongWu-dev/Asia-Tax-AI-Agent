@@ -1,5 +1,6 @@
 """Deterministic review record from a verified, saved assessment snapshot."""
 from hashlib import sha256
+from decimal import Decimal, localcontext
 from html import escape
 import json
 import re
@@ -14,6 +15,13 @@ def _json(value):
     content = json.dumps(value, ensure_ascii=False, sort_keys=True, indent=2)
     fence = '`' * max(3, 1 + max((len(s) for s in re.findall(r'`+', content)), default=0))
     return f'{fence}json\n{content}\n{fence}'
+
+
+def _workpaper_amount(value):
+    """Readable display only; exact workpaper ratios remain in the snapshot."""
+    with localcontext() as context:
+        context.prec=50
+        return _text(format(Decimal(str(value)), '.2f'))
 
 
 def render(run, locale='zh'):
@@ -56,6 +64,56 @@ def render(run, locale='zh'):
             ('local_corporation_balance_due','地方法人税补退余额','Local corporation-tax balance')]:
         if key in result:
             lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
+    if result.get('policy_version') == 'hk-ordinary-fsie-workpaper-2025-26-20261122':
+        constraints=result['constraints']
+        for key,zh,en in [('income_after_foreign_tax_deduction','扣除未抵免税款后的税基（取整前）','Base after unrelieved-tax deduction (before rounding)'),
+                ('foreign_tax_credit','抵免合计（取整前）','Aggregate credit (before rounding)'),
+                ('excess_foreign_tax_deduction','未抵免税款扣除（取整前）','Unrelieved-tax deduction (before rounding)'),
+                ('tax_after_credit','抵免后计算税额（非最终评税）','Calculated tax after credit (not final assessment)')]:
+            lines.append('| '+_text(say(zh,en))+' | '+_workpaper_amount(constraints['aggregate'][key])+' |')
+        lines += ['', '## '+say('香港境外所得抵免计算底稿（取整前）','Hong Kong foreign-credit workpaper (before rounding)'), '',
+            say('普通税制、收入性质及减税顺序依赖保存的核实前提。本底稿不代表最终评税。表内金额显示为两位小数，仅便于阅读；完整结果保留精确分数，不能用显示值回填计算。报税表不列分的要求不等于中间计算逐步取整。',
+                'Ordinary treatment, income classification and reduction ordering depend on the saved verification premises. This is not a final assessment. Tables display two decimals for readability; exact fractions remain in the complete result and display values must not be fed back into calculations. Excluding cents on a return does not establish rounding at each intermediate step.'), '',
+            '### '+say('平均抵免税率基数','Average credit-rate basis'), '',
+            '| '+say('项目 | 金额','Item | Amount')+' |','| --- | --- |']
+        for key,zh,en in [('income_before_excess_tax_deduction','未抵免税款扣除前收入','Income before unrelieved-tax deduction'),
+                ('underlying_tax_gross_up_excluded','税率基数排除的底层税还原额','Underlying gross-up excluded from rate base'),
+                ('rate_denominator','平均税率分母','Average-rate denominator'),
+                ('gross_tax_on_rate_basis','税率基数对应减税前税额','Tax on rate base before reduction'),
+                ('tax_reduction_on_rate_basis','税率基数对应减税','Reduction on rate base'),
+                ('tax_before_credit_on_rate_basis','平均税率分子','Average-rate numerator')]:
+            lines.append('| '+_text(say(zh,en))+' | '+_workpaper_amount(result['annual_rate_basis'][key])+' |')
+        ratio=result['exact_annual_rate_basis']['average_credit_rate']
+        lines += ['', say('平均抵免税率（精确分数）：','Average credit rate (exact fraction): ')
+            +_text(ratio['numerator'])+'/'+_text(ratio['denominator']), '',
+            '### '+say('来源收入与税款资格','Source income and tax eligibility'), '',
+            '| '+say('来源 | 国家/地区 | 还原及调整后收入 | 符合抵免条件的境外税',
+                'Source | Jurisdiction | Income after gross-up and adjustments | Eligible foreign tax')+' |',
+            '| --- | --- | --- | --- |']
+        eligibility={row['source_id']:row for row in result['source_eligibility']}
+        for row in result['saved_receipt_reconciliation']:
+            eligible=eligibility.get(row['source_id'])
+            lines.append('| '+_text(row['source_id'])+' | '+_text(row['country'].upper())+' | '
+                +_workpaper_amount(row['source_basis_before_excess_foreign_tax_deduction'])+' | '
+                +(_workpaper_amount(eligible['total_eligible_tax']) if eligible else '—')+' |')
+        lines += ['', '### '+say('来源分配核对','Source allocation reconciliation'), '']
+        if constraints['allocation_required']:
+            lines += [say('待确认：总额上限已生效，来源分配不唯一。下表是可行区间，不是已批准的抵免额；尚未形成逐来源扣除明细。',
+                'Pending: the aggregate cap is binding and source allocation is not unique. The ranges below are feasible intervals, not approved credits; source deductions have not been finalized.'), '',
+                '| '+say('来源 | 最小可分配额 | 最大可分配额','Source | Minimum allocation | Maximum allocation')+' |',
+                '| --- | --- | --- |']
+            for row in constraints['source_credit_ranges']:
+                lines.append('| '+_text(row['source_id'])+' | '+_workpaper_amount(row['minimum_credit'])+' | '
+                    +_workpaper_amount(row['maximum_credit'])+' |')
+        else:
+            lines += [say('分配金额唯一。' if constraints['allocation_is_unique'] else '以下采用所提供并通过限额核对的分配；算术核对不替代分配适用性审核。',
+                'The allocation is unique.' if constraints['allocation_is_unique'] else 'The supplied allocation passes the limit checks below; arithmetic validation does not replace review of its applicability.'), '',
+                '| '+say('来源 | 抵免额 | 未抵免税款扣除 | 扣除后来源收入',
+                    'Source | Credit | Unrelieved-tax deduction | Source income after deduction')+' |',
+                '| --- | --- | --- | --- |']
+            for row in constraints['source_reconciliation']:
+                lines.append('| '+_text(row['source_id'])+' | '+' | '.join(_workpaper_amount(row[key]) for key in
+                    ('foreign_tax_credit','excess_foreign_tax_deduction','source_income_after_foreign_tax_deduction'))+' |')
     if result.get('policy_version') in ('kr-company-direct-foreign-2026-20261122', 'kr-company-direct-foreign-history-2026-20261122', 'kr-company-direct-foreign-balances-2026-20261122'):
         lines += ['', '## ' + say('韩国分国抵免与地方税', 'Korean country credits and local tax'), '',
             say('国税、地方税分别结算。费用对应超限额与普通抵免结转分开列示。历史国税抵免与历史地方税扣除仅按下表各自核实的余额处理，不能互相复制；不含到期国税抵免扣除、其他国税减免、间接抵免或特殊税负。',

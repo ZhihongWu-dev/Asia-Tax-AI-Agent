@@ -9,7 +9,8 @@ from tests.income_tax.test_hong_kong_saved_credit_constraints import fixture, ex
 
 
 def run(case,p,**args):
-    defaults=dict(two_tier_eligible=False,ordinary_annual_basis_and_reduction_ordering_verified=True)
+    defaults=dict(two_tier_eligible=False,ordinary_annual_basis_and_reduction_ordering_verified=True,
+        ongoing_business_unchanged_accounting_year_verified=True)
     defaults.update(args)
     return prepare(case,p,**defaults)
 
@@ -37,6 +38,27 @@ def test_underlying_gross_up_is_excluded_only_from_rate_basis():
     assert exact(basis['average_credit_rate'])==F(27,200)
     aggregate=result['exact_constraints']['aggregate']
     assert exact(aggregate['income_after_foreign_tax_deduction'])+exact(aggregate['excess_foreign_tax_deduction'])==105000
+
+
+@pytest.mark.parametrize('start,end',[('2025-01-01','2025-12-31'),
+    ('2024-07-01','2025-06-30'),('2025-04-01','2026-03-31'),
+    ('2024-04-02','2025-04-01'),('2025-03-01','2026-02-28')])
+def test_ordinary_annual_accounts_ending_within_assessment_year(start,end):
+    case,p=fixture();case.update(period_start=start,period_end=end)
+    result=run(case,p)
+    assert result['basis_period']['start']==start
+    assert result['basis_period']['end']==end
+    assert result['assessment_year']=='2025/26'
+    assert exact(result['exact_constraints']['aggregate']['foreign_tax_credit'])==F(2040000,167)
+
+
+@pytest.mark.parametrize('start,end,verified',[
+    ('2024-04-01','2025-03-31',True),('2025-04-02','2026-04-01',True),
+    ('2025-01-02','2025-12-31',True),('2024-12-31','2025-12-31',True),
+    ('2025-01-01','2025-12-31',False),('2025-01-01','2025-12-31',1)])
+def test_special_or_unverified_accounting_period_not_treated_as_ordinary(start,end,verified):
+    case,p=fixture();case.update(period_start=start,period_end=end)
+    with pytest.raises(ValueError):run(case,p,ongoing_business_unchanged_accounting_year_verified=verified)
 
 
 def test_two_tier_rate_and_recomputed_tax_use_their_respective_bases():
