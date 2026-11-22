@@ -44,11 +44,15 @@ class Lot(BaseModel):
     excess_foreign_tax: Money
 
 
-class History(BaseModel):
+class LimitHistory(BaseModel):
     model_config=ConfigDict(extra='forbid')
-    periods: list[Lot]=Field(min_length=1,max_length=200)
+    periods: list[Lot]=Field(max_length=200)
     original_returns_entitlement_prior_usage_and_continuous_filings_verified: StrictBool
     no_foreign_tax_expense_elections_reductions_groups_or_reorganizations_verified: StrictBool
+
+
+class History(LimitHistory):
+    periods: list[Lot]=Field(min_length=1,max_length=200)
     no_local_levy_shortfall_balances_or_special_adjustments_verified: StrictBool
 
 
@@ -57,6 +61,19 @@ def match_history(current,history,*,period_start,period_end):
     h=History.model_validate(history)
     if any(getattr(h,key) is not True for key in History.model_fields if key.endswith('_verified')):
         raise ValueError('Verify historical returns, exclusions and separate local shortfall ledgers')
+    return match_limit_history(current,{key:getattr(h,key) for key in LimitHistory.model_fields},
+        period_start=period_start,period_end=period_end)
+
+
+def match_limit_history(current,history,*,period_start,period_end):
+    """Match only statutory capacity/excess; local levy balances are independent.
+
+    Callers combining both ledgers use this entry point without falsely asserting
+    that no historical local shortfall exists. It never settles local levies.
+    """
+    h=LimitHistory.model_validate(history)
+    if any(getattr(h,key) is not True for key in LimitHistory.model_fields if key.endswith('_verified')):
+        raise ValueError('Verify historical limits, returns, prior usage and exclusions')
     start,end=annual_period(period_start,period_end)
     # annual_period restricts current starts to2026, so these anniversary dates
     # have no February29 ambiguity. Historical origins may themselves be leap days.

@@ -38,11 +38,22 @@ def settle_national_history(current_allocation, history, *, reference_taxes,
     above statutory limits (CTA74(1)(3),78) and interim refunds (CTA79).
     Local-corporation and defence amounts remain their current-year credits.
     """
+    matched = match_history(current_allocation, history,
+        period_start=period_start, period_end=period_end)
+    return _settle_national_matched(current_allocation,matched,reference_taxes=reference_taxes,
+        corporation_interim_liability=corporation_interim_liability,
+        local_corporation_interim_liability=local_corporation_interim_liability,
+        ordinary_final_return_without_other_credits_or_additions_verified=
+            ordinary_final_return_without_other_credits_or_additions_verified)
+
+
+def _settle_national_matched(current_allocation,matched,*,reference_taxes,
+        corporation_interim_liability,local_corporation_interim_liability,
+        ordinary_final_return_without_other_credits_or_additions_verified):
+    """Internal: matched is freshly computed by the national or combined route."""
     if ordinary_final_return_without_other_credits_or_additions_verified is not True:
         raise ValueError('Verify ordinary final-return references and absence of other credits/additions')
     references = References.model_validate(reference_taxes)
-    matched = match_history(current_allocation, history,
-        period_start=period_start, period_end=period_end)
     if matched['current_period_start'] < '2026-04-01' and references.defence_tax_reference:
         raise ValueError('Defence tax requires a business period beginning on or after2026-04-01')
     national = current_allocation['national_credit']
@@ -94,3 +105,50 @@ def settle_national_history(current_allocation, history, *, reference_taxes,
         history_matching=matched, settlements=settlements, **totals,
         sources=list(sources.values()),
         stage='national_annual_history_settlement_local_history_not_settled')
+
+
+def settle_national_and_local_history(current_allocation,limit_history,levy_history,*,
+        reference_taxes,period_start,period_end,corporation_interim_liability,
+        local_corporation_interim_liability,prefectural_interim_liability,
+        municipal_interim_liability,ordinary_final_return_without_other_credits_or_additions_verified):
+    """Settle five taxes from one matching operation and two distinct ledgers.
+
+    This route explicitly accepts local shortfall history. It does not fabricate
+    the legacy national-only route's no-local-history attestation.
+    """
+    from .japan_local_foreign_history import settle_local_history
+    local=settle_local_history(current_allocation,limit_history,levy_history,
+        period_start=period_start,period_end=period_end,
+        prefectural_interim_liability=prefectural_interim_liability,
+        municipal_interim_liability=municipal_interim_liability)
+    national=_settle_national_matched(current_allocation,local['history_matching'],
+        reference_taxes=reference_taxes,corporation_interim_liability=corporation_interim_liability,
+        local_corporation_interim_liability=local_corporation_interim_liability,
+        ordinary_final_return_without_other_credits_or_additions_verified=
+            ordinary_final_return_without_other_credits_or_additions_verified)
+    settlements={**national['settlements'],
+        'prefectural_inhabitant':local['settlements']['prefectural'],
+        'municipal_inhabitant':local['settlements']['municipal']}
+    sources={}
+    for source in national['sources']+local['sources']:
+        key=source['doc_id']
+        if key not in sources:
+            sources[key]=deepcopy(source)
+        else:
+            if source['sha256']!=sources[key]['sha256']:
+                raise ValueError('National and local source versions must reconcile')
+            sources[key]['provisions']=list(dict.fromkeys(
+                sources[key].get('provisions',[])+source.get('provisions',[])))
+    return dict(policy_version='jp-five-tax-history-settlement-20261122',currency='JPY',
+        settlements=settlements,history_matching=local['history_matching'],
+        local_levy_history=local['local_levy_history'],
+        current_period_levy_shortfall=local['current_period_levy_shortfall'],
+        expired_levy_shortfall=local['expired_levy_shortfall'],
+        next_period_levy_shortfall=local['next_period_levy_shortfall'],
+        total_annual_liability=Decimal(sum(int(s['annual_liability']) for s in settlements.values())),
+        total_payable=Decimal(sum(int(s['payable']) for s in settlements.values())),
+        total_refundable=Decimal(sum(int(s['refundable']) for s in settlements.values())),
+        total_foreign_credit_refund=national['total_foreign_credit_refund'],
+        total_interim_refund=Decimal(sum(int(s['interim_refund']) for s in settlements.values())),
+        sources=list(sources.values()),
+        stage='five_tax_history_settlement_enterprise_capitation_and_saved_workflow_separate')

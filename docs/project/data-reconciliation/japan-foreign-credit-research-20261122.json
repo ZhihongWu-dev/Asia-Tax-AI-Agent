@@ -169,5 +169,24 @@
     "development_reference": "Official CPython GitHub decimal documentation reviewed. Exact integer yen arithmetic avoids ambient Decimal context changes; no external implementation or dependency adopted.",
     "remaining": "Saved historical assessment contract/API/UI/report, local current/history credit combination and separate levy-shortfall ledgers remain pending. Existing no-history attestations are unchanged and cannot authorize a historical assessment. Broader corporate/personal and business-acceptance goal remains incomplete.",
     "final_focused_validation": "30 passed2.55s after final defence-start guard; no calculation policy enabled in API/UI."
+  },
+  "local_levy_history_and_five_tax_settlement": {
+    "files": [
+      "packages/income_tax/japan_local_foreign_history.py",
+      "packages/income_tax/japan_foreign_history_settlement.py",
+      "packages/income_tax/japan_foreign_history.py"
+    ],
+    "scope": "Ordinary full-year2026-start national plus single unchanged prefecture/municipality final settlement. Statutory capacity/excess and unrelieved local levy amounts are separate input models and ledgers. Existing no-local-history entry point retains its validation; combined route does not fabricate that attestation.",
+    "authority": "Current Local Tax Order9-7(17),(27),48-13(18) reviewed directly from archived JSON. Kyoto April2026 official guide pages1-2 corroborates oldest local shortfall first, before current credits, and separate three-year carry treatment. Osaka national/municipal return instructions support post-credit hundred-yen truncation and separate interim refunds. The Kyoto guide explanatory national sequence omits defence in some passages; current allocation continues to use previously archived defence substitution authority.",
+    "guide": {
+      "file": "database/raw/jp/jp.kyoto.foreign-credit-guide.202604.pdf",
+      "sha256": "371fa7babfd16ce196c0dfa52c2a112e90e5258b434a7e1d0b248b1b25d4e9ec",
+      "url": "https://www.city.kyoto.lg.jp/gyozai/cmsfiles/contents/0000034/34624/gaikokuzeikoujoTebiki_R0804.pdf"
+    },
+    "mechanics": "Validate identical fiscal calendars across overlapping periods in both ledgers. Use eligible oldest local levy balances before the current pool plus newly matched historical statutory credits. Unrelieved current amounts obtain the current-period origin; old residuals preserve their original origin and expiry. Local unrelieved amounts never create refunds or restore consumed statutory capacity. Each layer settles interim refunds separately.",
+    "combined_case": "World100m/foreign90m/eligibleforeign31.5m JPY; old national capacity3m,prefectural200000,municipal1m; prior levy shortfalls500000/2m; national interim1m and local interims100/200. Five-tax payable311700,refund1680300 comprising eligible national credit refund680000 and interim refunds1000300. Next local shortfalls444800/2350400; unmatched current statutory excess2152560. No old statutory capacity restored.",
+    "validation": "481 Japan-selected tests passed39.62s,1991deselected. Earlier76 focused tests passed4.29s before combined-route addition. Covers two-ledger priority and conservation, inclusive date window/expiry, one-yen rounding, overlapping-calendar rejection, filing-identity/scope rejection, exact low-precision results, source hashes and combined national refund/local carry.",
+    "development_reference": "Official CPython GitHub fractions/arithmetic documentation reviewed; existing integer yen arithmetic retained, no external code or dependency adopted.",
+    "remaining": "Wire saved source/reference derivation and nine-component Osaka annual settlement to explicit history contracts, then API/UI/report and browser acceptance. Multi-jurisdiction redistribution, special amended-return adjustments, reorganizations and foreign-office scopes remain separate required extensions. Original broader corporate/personal business goal remains incomplete."
   }
 }
