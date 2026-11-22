@@ -90,5 +90,12 @@
     "run": 44990581860,
     "failure": "New decree source missing from central Korean archive manifest; source bytes and component hash already present.",
     "resolution": "Register decree and current local-tax sources; retain source integrity test unchanged."
+  },
+  "saved_income_reconciliation": {
+    "file": "packages/income_tax/korea_foreign_reconciliation.py",
+    "scope": "Confirmed resident company calendar2026 ordinary business/interest/royalty/rental sources. Reconciles every saved income exactly once; separates expenses already included in foreign income from corresponding expenses; validates total deductions and paid tax; aggregates country inputs.",
+    "validation": "52 reconciliation/current-credit/history/local-base tests passed in2.28s. Synthetic saved base1000, foreign pre-corresponding-expense income500, corresponding expenses100 and eligible tax150 at gross national tax200 yield credit80, expense-related excess20 and ordinary carry50.",
+    "remaining": "Annual national/local settlement, history and adjustment integration, API/UI/reports; excluded dividends and other special cases remain explicit gaps.",
+    "development_reference": "https://github.com/pydantic/pydantic/blob/main/docs/concepts/validators.md; retained existing Pydantic dependency and model conventions; no external code copied."
   }
 }
