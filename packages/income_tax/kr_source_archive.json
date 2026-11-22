@@ -1,5 +1,5 @@
 {
-  "reviewed_on": "2026-11-19",
+  "reviewed_on": "2026-11-22",
   "scope": "Byte-preserving archive closure for Korean income-tax citations, not new legal review or catalog promotion. Existing calculator manifests and frozen optimizer catalog are unchanged.",
   "sources": [
     {
@@ -118,6 +118,33 @@
         "Article132(1)"
       ],
       "file": "database/raw/kr/kr.special-tax-treatment.article132.2026.html"
+    },
+    {
+      "doc_id": "kr.corporate-decree.20261001",
+      "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=290843&efYd=20261001&chrClsCd=010202&lsId=003608",
+      "file": "database/raw/kr/kr.corporate-decree.20261001.html",
+      "sha256": "765c698aedb7b4a5dc78b76f768bf3200801137900153bf2b639e634e4fb8f2a",
+      "provisions": [
+        "Article94"
+      ]
+    },
+    {
+      "doc_id": "kr.local-tax.article103-19.20260701",
+      "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031177413",
+      "file": "database/raw/kr/kr.local-tax.article103-19.20260701.html",
+      "sha256": "3e84354b8c3e82a9b8d79982a2787092022bf3c8ab6361eed94c115204b25272",
+      "provisions": [
+        "Article103-19(2)-(4)"
+      ]
+    },
+    {
+      "doc_id": "kr.local-decree.article100-10.20261001",
+      "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=164397",
+      "file": "database/raw/kr/kr.local-decree.article100-10.20261001.html",
+      "sha256": "a58f8e42f8b93c5bb45c60d3f901bc9784589e29f4b0d7669d5383fc21d32b22",
+      "provisions": [
+        "Article100-10(1)-(7)"
+      ]
     }
   ]
 }

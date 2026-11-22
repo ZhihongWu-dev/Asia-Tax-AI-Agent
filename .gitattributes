@@ -1,5 +1,7 @@
 # Preserve original source bytes: registered SHA-256 values cover downloaded artifacts.
 /database/raw/** -text
+/database/raw/kr/kr.local-tax.article103-19.20260701.html -whitespace
+/database/raw/kr/kr.local-decree.article100-10.20261001.html -whitespace
 /database/raw/kr/kr.corporate-decree.20261001.html -whitespace
 /database/raw/hk/hk.fsie.credit.20261122.html -whitespace
 # This official HTML snapshot retains original whitespace covered by its hash.

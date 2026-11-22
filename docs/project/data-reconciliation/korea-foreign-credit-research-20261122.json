@@ -49,9 +49,46 @@
     "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsId=003608",
     "observed_version": "Effective2026-10-01, Presidential Decree36738 dated2026-09-30",
     "access": "Search exposes Article94 excerpts; opened HTML contains the version header but not full dynamic provision text. Full text must be retrieved and archived before implementing detailed country/net-income rules.",
-    "items": ["Eligible tax exclusions and treaty caps", "Country-by-country limits", "Expense allocation", "Carryforward priority and transitional expiry", "Local corporate-income-tax treatment"]
+    "items": [
+      "Eligible tax exclusions and treaty caps",
+      "Country-by-country limits",
+      "Expense allocation",
+      "Carryforward priority and transitional expiry",
+      "Local corporate-income-tax treatment"
+    ]
   },
   "version_risk": "Official2022 English Korean Taxation guide still describes a five-year carry period, contrary to reviewed2026 Korean Article57. Do not use the older guide as the current carryforward rule.",
-  "next": "Obtain current Article94 and local-tax provisions, then integrate derived credits with existing CTA59 relief ordering and saved national/local assessment. No new Korea foreign policy enabled.",
-  "development_reference": "Pydantic official GitHub model/validator documentation searched; existing framework conventions retained, no copied code or new dependency."
+  "next": "Integrate verified country credit, historical usage and local-base components with annual reconciliation and saved API/UI/reports. No Korea foreign annual policy enabled yet.",
+  "development_reference": "Pydantic official GitHub model/validator documentation searched; existing framework conventions retained, no copied code or new dependency.",
+  "local_base_component": {
+    "file": "packages/income_tax/korea_foreign_local_basis.py",
+    "scope": "Current eligible foreign-tax deductions and expired national deduction addback; no prior local balances. Separate local base, not reuse of national credit amount.",
+    "sources": [
+      {
+        "doc_id": "kr.local-tax.article103-19.20260701",
+        "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031177413",
+        "file": "database/raw/kr/kr.local-tax.article103-19.20260701.html",
+        "sha256": "3e84354b8c3e82a9b8d79982a2787092022bf3c8ab6361eed94c115204b25272",
+        "provisions": [
+          "Article103-19(2)-(4)"
+        ]
+      },
+      {
+        "doc_id": "kr.local-decree.article100-10.20261001",
+        "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=164397",
+        "file": "database/raw/kr/kr.local-decree.article100-10.20261001.html",
+        "sha256": "a58f8e42f8b93c5bb45c60d3f901bc9784589e29f4b0d7669d5383fc21d32b22",
+        "provisions": [
+          "Article100-10(1)-(7)"
+        ]
+      }
+    ],
+    "validation": "49 focused tests passed; full income-tax and reporting regression: 2166 passed in85.16s, including central Korean source archive integrity.",
+    "remaining": "Prior local deduction ledger, annual reconciliation, saved API/UI/report integration."
+  },
+  "ci_archive_fix": {
+    "run": 44990581860,
+    "failure": "New decree source missing from central Korean archive manifest; source bytes and component hash already present.",
+    "resolution": "Register decree and current local-tax sources; retain source integrity test unchanged."
+  }
 }
