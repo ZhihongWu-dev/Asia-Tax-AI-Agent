@@ -1,5 +1,13 @@
 {
-  "status": "fsie_credit_component_implemented_annual_workflow_pending",
+  "status": "saved_ordinary_fsie_workpaper_api_implemented_final_assessment_and_ui_pending",
+  "saved_api_workpaper_checkpoint": {
+    "policy": "hk_company_fsie_workpaper_2025_26",
+    "behavior": "Discriminated API basis saves the ordinary workpaper, rate-ordering and annual-accounting attestations, and optional source-credit allocations as exact numerator/denominator strings. The period router delegates to the ordinary annual-accounts adapter rather than the generic Hong Kong1April-31Marchguard.",
+    "status_semantics": "Run status remains the existing calculated_basis, meaning completed arithmetic only. Result explicitly records result_kind=workpaper, assessment_rounding_applied=false and review_status=source_allocation_required or assessment_review_required. No final_tax or payable/refund amount is invented.",
+    "validation": "27typed/API tests passed18.80s. Covers all10foreign catalog jurisdictions, strict exact-ratio validation, wrong taxpayer/period/attestations/allocations, three fixture-identity API save/reopen/replay/report flows, owner boundaries, rejected calculation preserving current result, explicit allocation producing a new immutable run, and later input edits preserving prior reports. Initial HTTP tests failed before sending because fixture Decimals were not JSON-serialized; corrected fixtures to use the contract's JSON mode.",
+    "full_regression": "2634 income-tax and reporting tests passed in136.23s. Provenance audit observed243successful calculation calls across47policies and173unique source records, with0unresolved file/hash records. Evidence: integration-audit-20261116/hk-workpaper-api-source-audit-20261122.json. Covers executed successful outputs only, not complete legal or business acceptance.",
+    "limits": "API evidence uses local SQLite and isolated fixture identities, not hosted authentication. Browser form, rendered browser acceptance, final assessment rounding and statutory allocation applicability remain incomplete."
+  },
   "ordinary_period_and_report_followup": {
     "authority": "BIR51notesB(5),C2(1)-(4),https://www.ird.gov.hk/eng/tax/bir51e_notes.htm; FSIE FAQ30,36,38,https://www.ird.gov.hk/eng/faq/fsie.htm. Both reopened2026-11-22. Archived corporation notes hash3ffc9155c08fa019a82c1a982eebbe23608d09caab41ad8198d6212add487a95contains the same ordinary accounting-period and excluding-cents provisions.",
     "period_correction": "Ordinary corporate basis periods need not equal1April-31March. Workpaper now accepts a full annual accounting period ending within2025/26, with explicit ongoing-business/unchanged-accounting-year verification. Rejects short/long periods, ends outside the assessment year and unverified special-period facts. Future API routing must preserve this adapter rather than applying its existing generic Hong Kong1April-31Marchguard.",

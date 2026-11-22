@@ -4,7 +4,8 @@ Section50(6) rate income excludes underlying gross-up and the excess-tax
 deduction. Applying Section100's reduction to tax on that rate income is a
 statutory interpretation corroborated by historical teaching examples, not
 a current IRD ruling on these cases. Require explicit verification of the
-annual basis and ordering. No API policy or final assessment is enabled here.
+annual basis and ordering. The saved API result is a workpaper, not a final
+assessment, including when source allocation is unique or supplied.
 """
 from copy import deepcopy
 from datetime import date, timedelta
@@ -68,6 +69,10 @@ def prepare(case, workpaper, *, two_tier_eligible,
         ongoing_business_unchanged_accounting_year_verified=True)
     result['two_tier_eligible']=two_tier_eligible
     result['policy_version']='hk-ordinary-fsie-workpaper-2025-26-20261122'
+    result['result_kind']='workpaper'
+    result['review_status']=('source_allocation_required' if result['constraints']['allocation_required']
+                             else 'assessment_review_required')
+    result['assessment_rounding_applied']=False
     result['stage']='ordinary_2025_26_fsie_workpaper_before_allocation_review_and_assessment_rounding'
     result['sources'].extend(deepcopy([SOURCES[1],SOURCES[2],PROFITS_BASIS_SOURCES[0]]))
     for source in result['sources']:

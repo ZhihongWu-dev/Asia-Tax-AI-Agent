@@ -28,6 +28,7 @@ from packages.income_tax.japan_foreign_history import LimitHistory as JPLimitHis
 from packages.income_tax.japan_local_foreign_history import LevyHistory as JPLevyHistory
 from packages.income_tax.japan_foreign_reconciliation import SavedWorkpaper as JPForeignSources
 from packages.income_tax.hong_kong_salary_reconciliation import SalaryWorkpaper
+from packages.income_tax.hong_kong_saved_credit_constraints import Workpaper as HKForeignCreditWorkpaper
 from packages.income_tax.malaysia_reconciliation import IndividualWorkpaper, CompanyWorkpaper
 
 
@@ -35,6 +36,21 @@ class Basis(BaseModel):
     model_config = ConfigDict(extra="forbid")
     basis_explanation: str = Field(min_length=20, max_length=4000)
     basis_confirmed: StrictBool
+
+
+class HKExactCredit(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    numerator: str = Field(strict=True,pattern=r'^(0|[1-9][0-9]{0,119})$')
+    denominator: str = Field(strict=True,pattern=r'^[1-9][0-9]{0,119}$')
+
+
+class HKForeignWorkpaper(Basis):
+    policy: Literal['hk_company_fsie_workpaper_2025_26']
+    workpaper: HKForeignCreditWorkpaper
+    two_tier_eligible: StrictBool
+    ordinary_annual_basis_and_reduction_ordering_verified: StrictBool
+    ongoing_business_unchanged_accounting_year_verified: StrictBool
+    allocations: dict[Annotated[str,Field(min_length=1,max_length=120)],HKExactCredit] | None = Field(default=None,min_length=1,max_length=200)
 
 
 class VNForeignCompany(Basis):
@@ -624,5 +640,5 @@ class KRSalary(Basis):
 
 
 Assessment = Annotated[JPOsakaForeignHistoryCompany | JPOsakaForeignCompany | VNForeignCompany | CNCompany | CNForeignCompany | CNForeignIndividual | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGForeignCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | INForeignCompany | KRCompany | KRForeignCompany | KRForeignHistoryCompany | KRForeignBalancesCompany | KRSalary |
-                       HKProfits | HKSalaries | HKProperty | AEOrdinary | UAEForeignCompany | MYForeignCompany | IDForeignCompany | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness | VNRental,
+                       HKForeignWorkpaper | HKProfits | HKSalaries | HKProperty | AEOrdinary | UAEForeignCompany | MYForeignCompany | IDForeignCompany | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness | VNRental,
                        Field(discriminator='policy')]

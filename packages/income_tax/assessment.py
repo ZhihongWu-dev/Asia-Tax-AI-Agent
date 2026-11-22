@@ -34,11 +34,12 @@ def calculate(case: IncomeTaxCase, basis):
                'jp': ('2026-01-01', '2026-12-31'), 'kr': ('2026-01-01', '2026-12-31'), 'in': ('2026-04-01', '2027-03-31')}
     if policy in ('jp_company_starting_2026','jp_osaka_company_foreign_starting_2026','jp_osaka_company_foreign_history_starting_2026'):
         japan_company.annual_period(case.period_start,case.period_end)
-    elif (case.period_start.isoformat(), case.period_end.isoformat()) != periods[jur]:
+    elif (policy != 'hk_company_fsie_workpaper_2025_26'
+            and (case.period_start.isoformat(), case.period_end.isoformat()) != periods[jur]):
         raise ValueError('Saved basis period is not supported by this policy')
     expected = {'cn_company_2026': 'company', 'cn_small_company_2026': 'company', 'cn_comprehensive_2026': 'individual', 'cn_business_2026': 'individual',
                 'ae_company_foreign_direct_2026': 'company', 'sg_company_ya2026': 'company', 'sg_company_foreign_direct_ya2026': 'company', 'sg_resident_ya2026': 'individual',
-                'hk_salaries_2025_26': 'individual', 'my_company_2026': 'company',
+                'hk_salaries_2025_26': 'individual', 'hk_company_fsie_workpaper_2025_26': 'company', 'my_company_2026': 'company',
                 'my_individual_2026': 'individual', 'my_dividend_2026': 'individual', 'th_company_2026':'company', 'th_resident_2026':'individual', 'th_dividend_2026':'individual', 'th_foreign_income_2026':'individual',
                 'vn_personal_transfer_2026': 'individual', 'vn_employment_2026': 'individual', 'vn_company_2026': 'company', 'vn_business_2026': 'individual', 'vn_property_rental_2026': 'individual',
                 'jp_resident_ordinary_2026': 'individual', 'jp_company_starting_2026':'company',
@@ -59,7 +60,16 @@ def calculate(case: IncomeTaxCase, basis):
         cn_reconciliation = china.reconcile_company_basis(case,
             taxable_income=basis.taxable_income,
             non_taxable_income=args.pop('non_taxable_income'), exempt_income=args.pop('exempt_income'))
-    if policy=='jp_osaka_company_foreign_history_starting_2026':
+    if policy=='hk_company_fsie_workpaper_2025_26':
+        from fractions import Fraction
+        from .hong_kong_ordinary_credit_workpaper import prepare
+        # This adapter validates ordinary annual accounts ending within2025/26;
+        # the generic1April-31Marchperiod guard is intentionally not used.
+        if args['allocations'] is not None:
+            args['allocations']={key:Fraction(int(value['numerator']),int(value['denominator']))
+                for key,value in args['allocations'].items()}
+        result=prepare(case,**args)
+    elif policy=='jp_osaka_company_foreign_history_starting_2026':
         from .japan_osaka_foreign_history import settle
         result=settle(case,**args)
     elif policy=='jp_osaka_company_foreign_starting_2026':
