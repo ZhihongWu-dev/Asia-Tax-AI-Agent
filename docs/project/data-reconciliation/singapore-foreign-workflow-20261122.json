@@ -28,5 +28,23 @@
     "Treaty entitlement, taxable receipt status and expense eligibility remain verified inputs.",
     "Underlying/deemed credits, losses and special-rate regimes are not covered.",
     "Results precede filing rounding;full goal remains incomplete."
-  ]
+  ],
+  "precision_followup": {
+    "reproduced": "Valid six-decimal gross produced eight-decimal derived corporate tax rejected by external Money validator.",
+    "fix": "Internal tax uses computed_amount;public income precision unchanged.",
+    "focused_tests": 25,
+    "full_income_report_tests": 1900,
+    "full_seconds": 36.79,
+    "source_audit": {
+      "successful_assessments": 185,
+      "policies": 36,
+      "distinct_records": 128,
+      "unresolved": 0
+    },
+    "production_build": "TypeScript and Vite passed;2284modules,mainJS847.74kB,bundle-size warning retained.",
+    "remote_ci_prior_commit": {
+      "run": 44979102469,
+      "state": "in_progress when observed;not claimed complete"
+    }
+  }
 }

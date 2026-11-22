@@ -1,4 +1,4 @@
-﻿"""Source-country FTC allocation on verified ordinary positive statutory groups.
+"""Source-country FTC allocation on verified ordinary positive statutory groups.
 
 IRAS worked examples: trade foreign gross / trade gross * trade statutory /
 total statutory * Singapore tax; passive net / total statutory * tax.
@@ -6,9 +6,10 @@ This component does not determine residence, treaty entitlement or final tax.
 """
 from decimal import Decimal, localcontext
 from fractions import Fraction
-from typing import Literal
-from pydantic import BaseModel, ConfigDict, Field, StrictBool
+from typing import Annotated, Literal
+from pydantic import BaseModel, BeforeValidator, ConfigDict, Field, StrictBool
 from packages.contracts.income_tax import Money, Jurisdiction
+from .arithmetic import computed_amount
 
 
 class Strict(BaseModel):
@@ -33,7 +34,7 @@ class Group(Strict):
 
 class Workpaper(Strict):
     groups: list[Group] = Field(min_length=1, max_length=200)
-    singapore_tax_before_credit: Money
+    singapore_tax_before_credit: Annotated[Decimal, BeforeValidator(computed_amount)]
     resident_same_income_and_allocation_verified: StrictBool
 
 

@@ -129,3 +129,22 @@ def test_saved_api_reopen_replay_and_rejection(tmp_path,pooled,expected):
                 assert client.get(path+'/runs/'+run['id']+'/report?locale='+locale).json()['markdown']==original
     finally:
         service.store.engine.dispose()
+
+
+def test_six_place_saved_income_preserves_derived_tax_precision():
+    from fractions import Fraction
+    case,p=fixture()
+    case.incomes[0].gross_amount += Decimal('0.000001')
+    result=run(case,p)
+    assert result['gross_tax_before_credit']==Decimal('42738.00000017')
+    trade=Fraction(50000)/Fraction('350000.000001')*Fraction('335000.000001')/Fraction('354900.000001')*Fraction('42738.00000017')
+    expected=trade+1000
+    assert abs(Fraction(result['allowed_foreign_tax_credit'])-expected)<Fraction(1,10**34)
+
+
+def test_public_saved_income_still_rejects_seven_decimal_places():
+    case,_=fixture()
+    data=case.model_dump(mode='json')
+    data['incomes'][0]['gross_amount']='300000.0000001'
+    with pytest.raises(ValueError,match='precision'):
+        IncomeTaxCase.model_validate(data)
