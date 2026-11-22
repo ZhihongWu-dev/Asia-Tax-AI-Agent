@@ -11,6 +11,7 @@ from .income_tax import Money
 from packages.income_tax.uae_foreign_assessment import SavedWorkpaper as UAEForeignWorkpaper
 from packages.income_tax.malaysia_foreign_assessment import SavedWorkpaper as MYForeignWorkpaper
 from packages.income_tax.indonesia_foreign_assessment import SavedWorkpaper as IDForeignWorkpaper
+from packages.income_tax.thailand_company_foreign_reconciliation import SavedWorkpaper as THCompanyForeignWorkpaper
 from packages.income_tax.singapore_foreign_assessment import SavedWorkpaper
 from packages.income_tax.china_foreign_assessment import DirectWorkpaper
 from packages.income_tax.china_personal_foreign_assessment import PersonalWorkpaper
@@ -232,6 +233,7 @@ class THCompany(THBasis):
     exempt_income: Money = Decimal('0')
     scheme: Literal['ordinary','sme']
     sme_eligibility_confirmed: StrictBool
+    rd300_workpaper: THCompanyForeignWorkpaper | None = None
 
 
 class THIndividual(THBasis):

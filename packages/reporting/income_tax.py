@@ -131,6 +131,18 @@ def render(run, locale='zh'):
                 ('prior_credit_recapture','以前抵免补回','Prior-credit recapture'),
                 ('prepaid_tax','境内预缴税款','Domestic prepaid tax')]:
             lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
+    if result.get('foreign_credit_reconciliation') and 'rd300' in result.get('policy_version', ''):
+        lines += ['', '## ' + say('泰国企业境外税款与费用核对', 'Thai company foreign tax and expense reconciliation'), '',
+            say('按第300号法令及已确认的最终费用口径核对；已抵免税款不得重复扣除。费用资格由使用者确认，未自动推定。协定路径及中小企业规则需另行计算。',
+                'RD300 reconciliation uses confirmed final expense bases. Credited tax cannot also be deducted. Expense eligibility is user verified, not inferred. Treaty elections and SME rules require separate calculations.'), '',
+            '| ' + say('国家 | 收入总额 | 境外已缴税 | 年度费用 | 费用中的境外税 | 抵免额 | 未抵免未扣除税额',
+                'Country | Gross income | Foreign tax paid | Annual expenses | Foreign tax in expenses | Exemption | Uncredited and undeducted tax') + ' |',
+            '| --- | --- | --- | --- | --- | --- | --- |']
+        for row in result['foreign_credit_reconciliation']['country_reconciliation']:
+            values = [row['country'].upper(), row['gross_income'], row['foreign_tax_paid'],
+                row['annual_allowable_expenses'], row['foreign_tax_in_annual_expenses'],
+                row['rd300_exemption'], row['uncredited_and_undeducted_foreign_tax']]
+            lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
     if result.get('tokyo_local'):
         local = result['tokyo_local']
         lines += ['', '## ' + say('东京23区地方税明细', 'Tokyo 23-ward local tax details'), '',

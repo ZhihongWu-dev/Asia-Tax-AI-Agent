@@ -1,5 +1,15 @@
 {
-  "status": "country_limit_component_verified_annual_integration_pending",
+  "status": "annual_api_reconciliation_implemented_ui_and_wider_elections_pending",
+  "annual_api_reconciliation": {
+    "full_regression": "2021 passed in61.28s; source audit193 successful calls across39 policies,133 unique source records,0 unresolved. Coverage is observed calculations, not full legal/business acceptance.",
+    "source_audit_file": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/th-company-rd300-source-audit-20261122.json",
+    "policy": "th_company_2026",
+    "optional_field": "rd300_workpaper",
+    "scope": "Thai-incorporated resident ordinary-rate company, calendar2026, final verified expense bases, no exemptions or carried losses, RD300 election only. Computes country credit and reconciles every foreign country to saved gross receipts, paid tax and annual expenses. Rejects credited amounts also included in expense deductions.",
+    "validation": "34 focused calculation/API/report tests passed in 5.70s, including persisted reopening, request replay, bilingual report snapshots and rejected double deduction without state mutation.",
+    "synthetic_royalty_case": "Domestic income2000000 + foreign royalty1000000, final annual expenses600000 including50000 uncredited foreign tax, foreign tax250000, RD300 credit200000, gross Thai tax480000, final280000, prepaid300000, balance-20000THB.",
+    "limits": "Does not infer expense eligibility, maximize deductions, choose treaty versus RD300 or derive SME limits. Frontend workpaper entry is not yet implemented. Broad business acceptance remains incomplete."
+  },
   "component_validation": {
     "module": "packages/income_tax/thailand_company_foreign_limits.py",
     "command": "pytest tests/income_tax/test_thailand_company_foreign_limits.py tests/income_tax/test_thailand.py tests/income_tax/test_thailand_company_reconciliation.py -q",
@@ -26,7 +36,7 @@
     "validation": "Reject disjoint/reversed periods, zero denominator, overlap above total, incomplete full-period allocation, invalid FX and unverified evidence. Preserve exact fraction, unknown filing state and input timing in result.",
     "scope": "Positive foreign assessment basis with nonnegative overlap; loss-containing apportionment needs separate review. This supplies paid tax before country limits, not annual tax."
   },
-  "current_gap": "Ordinary Thai company calculation accepts allowed_tax_credits as established input; no derived corporate foreign-credit workpaper. Existing Thai foreign workflow is personal.",
+  "current_gap": "Annual API can reconcile optional RD300 final expense workpapers. UI entry, automatic expense/election workflow, treaty and SME cases remain incomplete; original manually established-credit path remains available.",
   "sources": {
     "decree300": "https://www.rd.go.th/2787.html",
     "english_translation": "https://www.rd.go.th/fileadmin/user_upload/kormor/eng/RD_300.pdf",
@@ -40,11 +50,11 @@
     "Ruling0702/8746 permits the unrelieved difference as an expense in the income-accrual period for its stated royalty facts; later foreign payment requires amending that income year. Do not label all excess nondeductible."
   ],
   "next_steps": [
-    "Read remaining notification clauses and current return ordering; archive official originals.",
-    "Resolve excess-tax expense interaction and ordinary/SME rate application before implementing annual settlement.",
-    "Add saved source reconciliation,UI/report and concrete business examples after component verification."
+    "Add frontend RD300 country workpaper entry and browser business cases to the existing annual API/report.",
+    "Resolve automatic excess-tax expense derivation and SME allocation; current annual adapter requires verified final expense inputs.",
+    "Add treaty-path elections without conflating them with RD300 limits."
   ],
-  "limits": "Country-limit component only; no annual Thai corporate foreign-credit settlement claimed. Case-specific ruling must not be generalized beyond supported facts.",
+  "limits": "Annual API/report support verified final-expense RD300 workpapers only. Treaty/SME and automatic expense eligibility remain incomplete; case-specific rulings must not be generalized beyond supported facts.",
   "timing_and_evidence_review": {
     "notification65": [
       "Clause7 uses market exchange rate on foreign-tax payment date.",
