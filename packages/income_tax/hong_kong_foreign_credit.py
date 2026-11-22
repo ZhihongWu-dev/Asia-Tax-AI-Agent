@@ -20,7 +20,10 @@ class Source(BaseModel):
     bilateral_credit_eligible_tax: Money | None = None
     underlying_tax_paid: Money
     underlying_tax_in_bilateral_claim: Money
+    underlying_unilateral_eligible_tax: Money = Decimal(0)
+    underlying_attribution_and_no_treaty_provision_verified: StrictBool = False
     equity_fraction_at_distribution: Money | None = None
+    voting_fraction_at_distribution: Money | None = None
     hong_kong_tax_on_same_income: Money
     taxable_fsie_receipt_and_similar_tax_verified: StrictBool
     treaty_ownership_and_no_duplicate_tax_verified: StrictBool
@@ -56,10 +59,13 @@ def calculate(workpaper, *, total_hong_kong_tax):
             if s.cdta_applies != (s.bilateral_credit_eligible_tax is not None):
                 raise ValueError('CDTA claims require an explicit bilateral eligible amount, including zero')
             if s.income_type != 'dividend' and (s.underlying_tax_paid or
-                    s.underlying_tax_in_bilateral_claim or s.equity_fraction_at_distribution is not None):
+                    s.underlying_tax_in_bilateral_claim or s.underlying_unilateral_eligible_tax or
+                    s.equity_fraction_at_distribution is not None or s.voting_fraction_at_distribution is not None):
                 raise ValueError('Underlying profit tax and equity inputs apply only to dividends')
             if s.equity_fraction_at_distribution is not None and s.equity_fraction_at_distribution > 1:
                 raise ValueError('Equity ownership must be a fraction between zero and one')
+            if s.voting_fraction_at_distribution is not None and s.voting_fraction_at_distribution > 1:
+                raise ValueError('Voting rights must be a fraction between zero and one')
             if s.underlying_tax_in_bilateral_claim > s.underlying_tax_paid:
                 raise ValueError('Underlying bilateral tax exceeds underlying paid tax')
             if not s.cdta_applies and s.underlying_tax_in_bilateral_claim:
@@ -71,9 +77,13 @@ def calculate(workpaper, *, total_hong_kong_tax):
             underlying_remainder = s.underlying_tax_paid - s.underlying_tax_in_bilateral_claim
             # Underlying tax not covered by a CDTA can qualify unilaterally;
             # it must never be counted in both parts of the claim.
-            underlying_unilateral = (underlying_remainder if s.income_type == 'dividend'
-                and s.equity_fraction_at_distribution is not None
-                and s.equity_fraction_at_distribution >= Decimal('.10') else Decimal(0))
+            underlying_unilateral = s.underlying_unilateral_eligible_tax
+            if underlying_unilateral > underlying_remainder:
+                raise ValueError('Unilateral underlying claim duplicates bilateral tax or exceeds paid tax')
+            if underlying_unilateral and (not s.underlying_attribution_and_no_treaty_provision_verified or
+                    max(s.equity_fraction_at_distribution or Decimal(0),
+                        s.voting_fraction_at_distribution or Decimal(0)) < Decimal('.10')):
+                raise ValueError('Underlying unilateral credit requires adequate interest and verified attributed tax with no applicable treaty credit provision')
             direct_unilateral = Decimal(0) if s.cdta_applies else s.direct_foreign_tax_paid
             eligible = bilateral + direct_unilateral + underlying_unilateral
             credit = min(eligible, s.hong_kong_tax_on_same_income)
@@ -96,4 +106,9 @@ def calculate(workpaper, *, total_hong_kong_tax):
             url='https://www.ird.gov.hk/eng/tax/bus_fsie.htm',
             file='database/raw/hk/hk.fsie.credit.20261122.html',
             sha256='17759e053e59472f50bb2bcf94b97d03be6a50032acce725df6eda73547e7edb',
-            locator='Double Taxation Relief: CDTA and unilateral credits')])
+            locator='Double Taxation Relief: CDTA and unilateral credits'),
+            dict(doc_id='hk.cap112', title='Inland Revenue Ordinance',
+                url='https://www.elegislation.gov.hk/hk/cap112',
+                file='database/raw/hk/hk.cap112.rtf',
+                sha256='e28849ff385862416718714208c9fa05d27b022ca475b687c6f1c4591a100134',
+                locator='Sections50AAAB(2)-(9),50AAAC: underlying tax and adequate interest')])

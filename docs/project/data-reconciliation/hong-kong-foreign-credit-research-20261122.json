@@ -1,5 +1,13 @@
 {
   "status": "fsie_credit_component_implemented_annual_workflow_pending",
+  "statutory_followup": {
+    "source": "database/raw/hk/hk.cap112.rtf",
+    "sha256": "e28849ff385862416718714208c9fa05d27b022ca475b687c6f1c4591a100134",
+    "review": "Sections50(3)-(6),50AAA,50AAAB,50AAAC,100 reviewed in archived consolidated text. Live e-Legislation request redirects to client-configuration loader; not claimed as a fresh consolidated-text download.",
+    "correction": "Underlying unilateral amount is now explicit, bounded by paid tax less the bilateral portion. Requires verified tax attribution and absence of applicable treaty credit provision, not merely unused bilateral tax. Adequate interest may arise from beneficial interest or voting rights; verified indirect interests must follow statutory chain limits.",
+    "validation": "57 component and existing Hong Kong regression tests passed10.27s, including voting-rights eligibility, missing statutory entitlement and duplicate underlying tax rejection; both source hashes verified.",
+    "annual_requirements": "Section50(5) excess-tax deduction and gross-up interact with Section50(3)/(6) average-rate numerator/denominator; Section100(2) reduction references statutory gross profits-tax computation. Must reconcile these before deriving annual liability. Underlying amounts supplied to this component must already be attributed to the taxpayer's qualifying interest; no automatic chain tracing or foreign top-up tax eligibility."
+  },
   "validation": "53 tests passed in9.40s across new FSIE source-credit component, existing ordinary Hong Kong calculations and profits reconciliation; includes original-source hash verification. No saved annual/API/UI acceptance claimed.",
   "source": {
     "url": "https://www.ird.gov.hk/eng/tax/bus_fsie.htm",

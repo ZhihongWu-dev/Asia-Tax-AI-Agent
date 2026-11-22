@@ -8,6 +8,7 @@ def fixture():
     return dict(sources=[dict(source_id='receipt_a',country='sg',income_type='dividend',
         direct_foreign_tax_paid='100',cdta_applies=False,bilateral_credit_eligible_tax=None,
         underlying_tax_paid='200',underlying_tax_in_bilateral_claim='0',
+        underlying_unilateral_eligible_tax='200',underlying_attribution_and_no_treaty_provision_verified=True,
         equity_fraction_at_distribution='.10',hong_kong_tax_on_same_income='250',
         taxable_fsie_receipt_and_similar_tax_verified=True,
         treaty_ownership_and_no_duplicate_tax_verified=True)],
@@ -17,7 +18,7 @@ def fixture():
 
 @pytest.mark.parametrize('ownership,credit,underlying', [('.099999','100','0'),('.10','250','200'),('1','250','200')])
 def test_underlying_unilateral_threshold(ownership,credit,underlying):
-    p=fixture();p['sources'][0]['equity_fraction_at_distribution']=ownership
+    p=fixture();p['sources'][0].update(equity_fraction_at_distribution=ownership,underlying_unilateral_eligible_tax=underlying)
     result=calculate(p,total_hong_kong_tax='1000')
     assert result['foreign_tax_credit']==Decimal(credit)
     assert result['source_credits'][0]['unilateral_underlying_tax']==Decimal(underlying)
@@ -26,7 +27,7 @@ def test_underlying_unilateral_threshold(ownership,credit,underlying):
 def test_cdta_and_supplementary_underlying_credit_do_not_duplicate():
     p=fixture()
     p['sources'][0].update(country='cn',cdta_applies=True,bilateral_credit_eligible_tax='180',
-        underlying_tax_in_bilateral_claim='100',hong_kong_tax_on_same_income='500')
+        underlying_tax_in_bilateral_claim='100',underlying_unilateral_eligible_tax='100',hong_kong_tax_on_same_income='500')
     result=calculate(p,total_hong_kong_tax='1000')
     row=result['source_credits'][0]
     assert row['bilateral_eligible_tax']==180
@@ -38,14 +39,14 @@ def test_cdta_and_supplementary_underlying_credit_do_not_duplicate():
 def test_zero_bilateral_direct_entitlement_does_not_become_unilateral():
     p=fixture()
     p['sources'][0].update(cdta_applies=True,bilateral_credit_eligible_tax='0',
-        underlying_tax_paid='0')
+        underlying_tax_paid='0',underlying_unilateral_eligible_tax='0')
     assert calculate(p,total_hong_kong_tax='1000')['foreign_tax_credit']==0
 
 
 def test_source_limits_do_not_pool_with_same_country():
     p=fixture();second=deepcopy(p['sources'][0])
     second.update(source_id='receipt_b',direct_foreign_tax_paid='10',underlying_tax_paid='0',
-        hong_kong_tax_on_same_income='500')
+        hong_kong_tax_on_same_income='500',underlying_unilateral_eligible_tax='0')
     p['sources'].append(second)
     result=calculate(p,total_hong_kong_tax='1000')
     assert result['foreign_tax_credit']==260
@@ -55,7 +56,7 @@ def test_source_limits_do_not_pool_with_same_country():
 @pytest.mark.parametrize('kind',['interest','disposal_gain','ip_income'])
 def test_other_taxable_fsie_income(kind):
     p=fixture();p['sources'][0].update(income_type=kind,underlying_tax_paid='0',
-        equity_fraction_at_distribution=None)
+        equity_fraction_at_distribution=None,underlying_unilateral_eligible_tax='0')
     assert calculate(p,total_hong_kong_tax='1000')['foreign_tax_credit']==100
 
 
@@ -80,6 +81,20 @@ def test_invalid_claims_rejected(change):
 def test_source_archive_hash():
     import hashlib
     from pathlib import Path
-    source=calculate(fixture(),total_hong_kong_tax='1000')['sources'][0]
     root=Path(__file__).resolve().parents[2]
-    assert hashlib.sha256((root/source['file']).read_bytes()).hexdigest()==source['sha256']
+    for source in calculate(fixture(),total_hong_kong_tax='1000')['sources']:
+        assert hashlib.sha256((root/source['file']).read_bytes()).hexdigest()==source['sha256']
+
+
+def test_voting_rights_can_establish_adequate_interest():
+    p=fixture();p['sources'][0].update(equity_fraction_at_distribution='.05',voting_fraction_at_distribution='.10')
+    assert calculate(p,total_hong_kong_tax='1000')['foreign_tax_credit']==250
+
+
+@pytest.mark.parametrize('change',['below_threshold','no_provision_unverified','duplicate_tax'])
+def test_unilateral_underlying_entitlement_is_not_inferred(change):
+    p=fixture();s=p['sources'][0]
+    if change=='below_threshold':s['equity_fraction_at_distribution']='.099999'
+    elif change=='no_provision_unverified':s['underlying_attribution_and_no_treaty_provision_verified']=False
+    else:s.update(cdta_applies=True,bilateral_credit_eligible_tax='200',underlying_tax_in_bilateral_claim='100')
+    with pytest.raises(ValueError):calculate(p,total_hong_kong_tax='1000')
