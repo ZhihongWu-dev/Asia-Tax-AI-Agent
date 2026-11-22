@@ -109,6 +109,9 @@ def test_saved_api_reopen_replay_and_invalid_claim_atomicity(tmp_path):
                 assert report.status_code == 200, report.text
                 reports[locale] = report.json()['markdown']
                 assert run['snapshot_hash'] in reports[locale]
+                assert ('Indonesia foreign credits by country and income type' if locale == 'en' else '印尼分国分类境外抵免') in reports[locale]
+                assert (r'Prior\-credit recapture' if locale == 'en' else '以前抵免补回') in reports[locale]
+                assert '| JP | business |' in reports[locale]
                 for source in run['result']['sources']:
                     assert source['sha256'] in reports[locale]
             service.store.engine.dispose()

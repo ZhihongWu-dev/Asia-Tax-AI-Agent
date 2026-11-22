@@ -1,5 +1,5 @@
 {
-  "status": "annual_adapter_and_saved_api_verified_ui_pending",
+  "status": "ordinary_annual_foreign_credit_workflow_verified_with_limits",
   "date": "2026-11-22",
   "current_gap": "id_company_2026 saved adapter only supports domestic ordinary income; prepaid_tax is domestic refundable withholding/instalments, not foreign credit.",
   "official_sources": [
@@ -26,8 +26,8 @@
     "warning": "Historical tax supplied only to validate credit arithmetic; do not apply2018tax rate to2026."
   },
   "next_steps": [
-    "Review remaining official appendix examples and current exemption/Article31E interaction.",
-    "Implement typed credit groups, treaty ceiling and recapture, then saved-case reconciliation, UI/report and browser acceptance."
+    "Observe complete remote CI for integrated implementation.",
+    "Continue remaining cross-border corporate business gaps without reducing11-jurisdiction corporate/personal scope."
   ],
   "limits": "Current-year rates, Article31E denominator, exemptions and source reconciliation must be derived in annual adapter; component alone does not complete Indonesian business acceptance. Recapture amount and treaty ceiling remain evidenced inputs.",
   "component": {
@@ -69,6 +69,26 @@
       "prepaid": "1000000000",
       "balance": "-170666602.5"
     },
-    "remaining": "Frontend entry,result table,dedicated bilingual credit summary and browser validation pending."
+    "remaining": "Special/final regimes,carried losses,automatic exemption/treaty adjudication and final filing rounding remain outside verified workflow."
+  },
+  "ui_and_reports": {
+    "browser_passed": 2,
+    "browser_seconds": 39.6,
+    "scenarios": "Treaty cap50000 and zero; separate2000recapture; calculation,save,reopen,download.",
+    "final_backend_and_reports_passed": 22,
+    "final_seconds": 7.08,
+    "initial_full_run": {
+      "passed": 1975,
+      "failed": 1,
+      "seconds": 68.71,
+      "failure": "Report assertion did not expect Markdown escaped hyphen; corrected assertion and reran affected tests successfully. Not reported as a single full green run."
+    },
+    "sources": {
+      "successful_assessments": 188,
+      "policies": 39,
+      "distinct_records": 131,
+      "unresolved": 0
+    },
+    "build": "TypeScript and Vite passed;2290modules;mainJS866.39kB;existing bundle-size advisory remains."
   }
 }

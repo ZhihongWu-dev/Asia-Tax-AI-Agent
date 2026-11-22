@@ -1,5 +1,6 @@
 import {uaeForeignPolicy} from './uae-foreign-assessment';
 import {malaysiaForeignPolicy} from './malaysia-foreign-assessment';
+import {indonesiaForeignPolicy} from './indonesia-foreign-assessment';
 import {singaporeForeignPolicy} from './singapore-foreign-assessment';
 import {personalForeignPolicy} from './china-personal-foreign-assessment';
 import { chinaForeignPolicy } from './china-foreign-assessment';
@@ -31,6 +32,7 @@ export type IncomePolicy = { id: string; label: Label; notice: Label; fields: Ba
 export function policies(input: IncomeTaxInput, values:Record<string,string>={}): IncomePolicy[] {
   const company = input.subject === 'company';
   const period = input.period_start + '/' + input.period_end;
+  if(input.jurisdiction==='id' && company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.some(i=>i.source_jurisdiction!=='id') && input.incomes.every(i=>['business','interest','dividend','rental','royalty','capital_gain'].includes(i.category)))return [indonesiaForeignPolicy(input,values)];
   if(input.jurisdiction==='my' && company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.some(i=>i.source_jurisdiction!=='my'||Number(i.foreign_tax_paid)>0) && input.incomes.every(i=>['business','interest','dividend','rental','royalty'].includes(i.category)))return [malaysiaForeignPolicy(input,values)];
   if(input.jurisdiction==='ae' && company && input.residency==='resident' && period==='2026-01-01/2026-12-31' && input.incomes.some(i=>i.source_jurisdiction!=='ae') && input.incomes.every(i=>['business','interest','dividend','rental','royalty','capital_gain'].includes(i.category)))return [uaeForeignPolicy(input,values)];
   if(input.jurisdiction==='sg' && company && input.residency==='resident' && period==='2025-01-01/2025-12-31' && input.incomes.some(i=>i.source_jurisdiction!=='sg') && input.incomes.every(i=>['business','interest','dividend','rental','royalty'].includes(i.category))) return [singaporeForeignPolicy(input,values)];

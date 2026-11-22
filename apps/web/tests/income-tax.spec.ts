@@ -1268,3 +1268,30 @@ test('Malaysia foreign credit saves shared source and exports report',async({pag
  expect(report).toContain('Malaysia bilateral and unilateral credits');expect(report).toContain(String.raw`| source\_1 | IN | Bilateral |`);
  await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText('117300');
 });
+
+for(const ceiling of ['50000','0'])test(`Indonesia foreign credit saves treaty ceiling ${ceiling} and recapture`,async({page})=>{
+ const form=await openIncome(page);
+ for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','id'],['Tax residency','resident'],['Income category','royalty'],['Income source jurisdiction','sg']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+ for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Gross income','1000000'],['Foreign tax paid (blank if unknown)','100000'],['Income description','Synthetic taxable royalty with confirmed treaty ceiling'],['Claimed deductions (blank if unknown)','200000'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+ await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+ const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+ await calc.getByLabel('Applicable regime').selectOption('id_company_foreign_direct_2026');
+ await calc.getByRole('combobox',{name:'Income 1: source group',exact:true}).selectOption('1');
+ await calc.getByRole('combobox',{name:'Source 1: treaty applies',exact:true}).selectOption('true');
+ for(const [name,value] of [['Source 1: Taxable additions','0'],['Source 1: Allowable expenses','200000'],['Source 1: Exempt income','0'],['Source 1: creditable foreign tax','100000'],['Source 1: treaty-permitted tax (may be zero)',ceiling],['Recapture of previously credited tax reduced or refunded','2000'],['Domestic prepaid tax for this period','45000']])await calc.getByLabel(name,{exact:true}).fill(value);
+ for(const name of ['Source 1: separate source and taxable treatment verified','Ordinary resident company without final/special regimes or carried losses verified','Complete Article31E gross-receipts scope verified','Source, tax period, expenses and FX verified','Treaty entitlement and foreign-tax evidence verified','Recapture of previously credited tax verified'])await calc.getByRole('combobox',{name,exact:true}).selectOption('true');
+ await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified ordinary company, taxable royalty, treaty limit and prior credited tax refund.');
+ await calc.getByRole('checkbox').check();await calc.getByRole('button',{name:'Calculate and save result'}).click();
+ const result=page.getByRole('article',{name:'Saved calculation result'});
+ await expect(result).toContainText(ceiling==='0'?'90000':'40000');
+ await expect(result).toContainText(ceiling==='0'?'45000':'-5000');
+ const detail=result.getByRole('region',{name:'Indonesia foreign credit details'});
+ await expect(detail).toContainText('Prior-credit recapture: 2000');
+ await expect(detail).toContainText(`Total foreign credit: ${ceiling}`);
+ const downloading=page.waitForEvent('download');await result.getByRole('button',{name:'Download calculation record'}).click();
+ const report=await readFile((await (await downloading).path())!,'utf8');
+ expect(report).toContain('Indonesia foreign credits by country and income type');
+ expect(report).toContain(`| Total foreign credit | ${ceiling} |`);
+ expect(report).toContain(String.raw`| Prior\-credit recapture | 2000 |`);
+ await openIncome(page);await expect(page.getByRole('article',{name:'Saved calculation result'})).toContainText(ceiling==='0'?'90000':'40000');
+});

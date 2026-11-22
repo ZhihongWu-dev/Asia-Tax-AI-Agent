@@ -113,6 +113,24 @@ def render(run, locale='zh'):
                 ('unrelieved_foreign_tax','未获抵免境外税额','Unrelieved foreign tax'),
                 ('prepaid_tax','预缴税款','Prepaid tax')]:
             lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
+    if result.get('policy_version') == 'id-article24-credit-20261122':
+        lines += ['', '## ' + say('印尼分国分类境外抵免', 'Indonesia foreign credits by country and income type'), '',
+            say('逐项抵免尚未应用总税额上限；总额调减及以前已抵免税款补回另列。未抵免税款不得作为费用或申请退税。金额为申报取整前值。',
+                'Source credits precede the overall tax cap. Its reduction and recapture of previously credited tax are separate. Unrelieved foreign tax cannot become an expense deduction or refund. Values precede return rounding.'), '',
+            '| ' + say('国家 | 所得类别 | 净所得 | 境外税额 | 条约上限 | 本国税上限 | 总额限制前抵免',
+                'Country | Income type | Net income | Foreign tax | Treaty ceiling | Indonesian-tax limit | Credit before overall cap') + ' |',
+            '| --- | --- | --- | --- | --- | --- | --- |']
+        for row in result['source_credits']:
+            values = [row['country'].upper(), row['category'], row['net_taxable_income'], row['foreign_tax'],
+                row['treaty_permitted_tax'] if row['treaty_permitted_tax'] is not None else say('不适用','Not applicable'),
+                row['indonesian_tax_limit'], row['credit_before_overall_cap']]
+            lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
+        lines += ['', '| ' + say('项目 | 金额', 'Item | Amount') + ' |', '| --- | --- |']
+        for key,zh,en in [('allowed_foreign_tax_credit','境外抵免合计','Total foreign credit'),
+                ('overall_cap_reduction','总额限制调减','Overall cap reduction'),
+                ('prior_credit_recapture','以前抵免补回','Prior-credit recapture'),
+                ('prepaid_tax','境内预缴税款','Domestic prepaid tax')]:
+            lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
     if result.get('tokyo_local'):
         local = result['tokyo_local']
         lines += ['', '## ' + say('东京23区地方税明细', 'Tokyo 23-ward local tax details'), '',

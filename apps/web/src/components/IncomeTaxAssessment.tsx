@@ -1,5 +1,7 @@
 import {uaeForeignBasis} from '../uae-foreign-assessment';
 import {malaysiaForeignBasis} from '../malaysia-foreign-assessment';
+import {indonesiaForeignBasis} from '../indonesia-foreign-assessment';
+import IndonesiaForeignResult from './IndonesiaForeignResult';
 import MalaysiaForeignResult from './MalaysiaForeignResult';
 import UAEForeignResult from './UAEForeignResult';
 import SingaporeForeignResult from './SingaporeForeignResult';
@@ -61,6 +63,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
     }
     if(policy.id==='ae_company_foreign_direct_2026')basis=uaeForeignBasis(basis,current.income_tax!,values);
     if(policy.id==='my_company_foreign_direct_ya2026')basis=malaysiaForeignBasis(basis,current.income_tax!,values);
+    if(policy.id==='id_company_foreign_direct_2026')basis=indonesiaForeignBasis(basis,current.income_tax!,values);
     if(policy.id==='sg_company_foreign_direct_ya2026')basis=singaporeForeignBasis(basis,current.income_tax!,values);
     if(policy.id==='cn_personal_foreign_2026'){
       try{basis=personalForeignBasis(basis,current.income_tax!,values);}catch{setError(say('历史抵免国家不得重复或与现有来源国家重复。','Prior-credit countries must be unique and additional to saved source countries.'));return;}
@@ -212,6 +215,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       <dl>{Object.entries(resultLabels).filter(([key])=>result.result[key]!==undefined).map(([key,label])=><div key={key}><dt>{key==='balance_due'&&result.result.tax_scope==='national_income_and_reconstruction_tax_only'?say('本次国家税应补／退额（予定纳税欠税另计）','National return balance (estimated-tax arrears separate)'):label[index]}</dt><dd>{String(result.result[key])}</dd></div>)}</dl>
       {result.result.policy_version==='ae-ordinary-foreign-credit-20261122'&&<UAEForeignResult result={result.result} index={index}/>}
       {result.result.policy_version==='my-schedule7-direct-credit-20261122'&&<MalaysiaForeignResult result={result.result} index={index}/>}
+      {result.result.policy_version==='id-article24-credit-20261122'&&<IndonesiaForeignResult result={result.result} index={index}/>}
       {result.result.policy_version==='sg-company-foreign-direct-ya2026-20261122'&&<SingaporeForeignResult result={result.result} index={index}/>}
       {result.result.tax_scope==='china_resident_ordinary_direct_foreign_credit_positive_bases'&&<ChinaForeignResult result={result.result} index={index}/>}
       {result.result.tax_scope==='china_resident_ordinary_comprehensive_business_investment_foreign_credit'&&<PersonalForeignResult result={result.result} index={index}/>}
