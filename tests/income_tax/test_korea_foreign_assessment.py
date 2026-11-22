@@ -1,7 +1,7 @@
 from decimal import Decimal
 import pytest
 from packages.contracts.income_tax import IncomeTaxCase
-from packages.income_tax.korea_foreign_assessment import assess
+from packages.income_tax.korea_foreign_assessment import assess, assess_with_history
 from tests.income_tax.test_korea_foreign_reconciliation import fixture
 from tests.income_tax.test_korea_assessment_workflow import basis
 
@@ -77,7 +77,8 @@ def test_unreconciled_reliefs_and_unsupported_settlement_rejected(change):
     with pytest.raises(ValueError): assess(**args)
 
 
-def test_saved_http_case_replays_after_database_reopen(tmp_path):
+@pytest.mark.parametrize('with_history', [False, True])
+def test_saved_http_case_replays_after_database_reopen(tmp_path, with_history):
     from types import SimpleNamespace
     from uuid import uuid4
     from fastapi import FastAPI
@@ -85,9 +86,9 @@ def test_saved_http_case_replays_after_database_reopen(tmp_path):
     from apps.api import auth, chat
     from packages.chat.store import ChatStore
     from tests.chat.auth_support import fixture_user
-    args = arguments()
+    args = history_arguments() if with_history else arguments()
     case = args.pop('case')
-    payload = dict(policy='kr_company_foreign_direct_2026', basis_confirmed=True,
+    payload = dict(policy='kr_company_foreign_history_2026' if with_history else 'kr_company_foreign_direct_2026', basis_confirmed=True,
         basis_explanation='Verified saved country incomes, expenses, tax payments and local filing groups.', **args)
     url = 'sqlite:///' + str(tmp_path / 'foreign.db')
     service = SimpleNamespace(store=ChatStore(url))
@@ -115,9 +116,64 @@ def test_saved_http_case_replays_after_database_reopen(tmp_path):
             report = client.get(path+'/runs/'+run['id']+'/report?locale='+locale)
             assert report.status_code == 200, report.text
             assert heading in report.json()['markdown']
-            assert '| SG | 40000000 | 4000000 | 4000000 | 1000000 | 10000000 |' in report.json()['markdown']
+            expected = '| SG | 40000000 | 4000000 | 1000000 | 1000000 | 13000000 |' if with_history else '| SG | 40000000 | 4000000 | 4000000 | 1000000 | 10000000 |'
+            assert expected in report.json()['markdown']
         request['request_id'] = str(uuid4())
         request['revision'] = client.get('/api/cases/'+case_id).json()['revision']
         request['basis']['workpaper']['groups'][1]['eligible_direct_foreign_tax'] = '15000001'
         assert client.post(path+'/runs', headers=headers, json=request).status_code == 422
     service.store.engine.dispose()
+
+
+def history_arguments():
+    args = arguments()
+    del args['no_prior_foreign_balances_other_reliefs_or_separate_taxes_verified']
+    args['history'] = dict(lots=[dict(identifier='sg-2020', country='sg', origin_period_end='2020-12-31',
+        verified_expiry_date='2030-12-31', available_amount='3000000')],
+        history_entitlement_expiry_and_order_verified=True,
+        no_prior_local_balances_competing_reliefs_or_separate_taxes_verified=True,
+        no_expired_credit_deductions_or_other_base_adjustments_verified=True)
+    return args
+
+
+def test_prior_national_credit_replaces_current_credit_without_second_local_deduction():
+    r = assess_with_history(**history_arguments())
+    assert r['historical_foreign_credit']['historical_credit_used'] == 3000000
+    assert r['foreign_credit']['current_foreign_tax_credit'] == 1000000
+    assert r['foreign_credit']['country_credits'][0]['eligible_current_year_carryforward'] == 13000000
+    assert r['national']['allowed_foreign_tax_credit'] == 4000000
+    assert r['local_basis']['current_local_foreign_tax_deduction'] == 15000000
+    assert r['total_refundable'] == 5000000
+
+
+def test_history_from_another_country_cannot_use_current_country_limit():
+    args = history_arguments();args['history']['lots'][0]['country'] = 'cn'
+    r = assess_with_history(**args)
+    assert r['historical_foreign_credit']['historical_credit_used'] == 0
+    assert r['historical_foreign_credit']['historical_lots'][0]['remaining'] == 3000000
+    assert r['foreign_credit']['current_foreign_tax_credit'] == 4000000
+
+
+def test_history_reduces_national_bill_when_current_foreign_tax_is_below_limit():
+    args = history_arguments()
+    args['workpaper']['groups'][1]['eligible_direct_foreign_tax'] = '1000000'
+    r = assess_with_history(**args)
+    current_args = dict(args)
+    del current_args['history']
+    current_args['no_prior_foreign_balances_other_reliefs_or_separate_taxes_verified'] = True
+    current = assess(**current_args)
+    assert r['national']['allowed_foreign_tax_credit'] == 4000000
+    assert current['national']['allowed_foreign_tax_credit'] == 1000000
+    assert r['total_refundable'] - current['total_refundable'] == 3000000
+    assert r['local_taxable_base'] == current['local_taxable_base'] == 99000000
+    assert r['total_payable'] == current['total_payable'] == 990000
+
+
+@pytest.mark.parametrize('change', ['expired', 'deduction', 'local', 'ordering'])
+def test_history_cannot_bypass_base_adjustment_or_local_balance_review(change):
+    args = history_arguments();h=args['history']
+    if change == 'expired':h['lots'][0]['verified_expiry_date'] = '2025-12-31'
+    elif change == 'deduction':h['no_expired_credit_deductions_or_other_base_adjustments_verified'] = False
+    elif change == 'local':h['no_prior_local_balances_competing_reliefs_or_separate_taxes_verified'] = False
+    else:h['history_entitlement_expiry_and_order_verified'] = False
+    with pytest.raises(ValueError):assess_with_history(**args)

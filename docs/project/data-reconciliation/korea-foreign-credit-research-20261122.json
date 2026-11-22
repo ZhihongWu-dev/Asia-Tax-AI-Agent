@@ -116,5 +116,28 @@
       "Loss allocations, amended returns and installments"
     ],
     "source_note": "Existing archived CTA57/59/64, Decree94, local Article103-19 and filing authorities remain the legal evidence; no new inferred rules or external dependencies."
+  },
+  "saved_national_history": {
+    "policy": "kr_company_foreign_history_2026",
+    "version": "kr-company-direct-foreign-history-2026-20261122",
+    "scope": "Verified unexpired national direct-credit lots, same-country capacity, verified original-return order before current credit. Current local deduction is not increased by historical national credits.",
+    "evidence_requirements": "Explicit original entitlement, transitional expiry and ordering; no prior local balances, expired-credit deductions, competing reliefs or special taxes. Expired lots rejected pending base reconciliation.",
+    "delivery": "Separate policy preserves existing current-only contract and saved snapshots; browser dynamic lot fields, HTTP persistence/replay, bilingual history report and displayed balances.",
+    "validation": {
+      "focused": "29 assessment/history/source tests passed15.06s",
+      "browser": "2 current-only/history Playwright scenarios passed1.3m",
+      "build": "TypeScript and production build passed2295 modules6.25s",
+      "full_source_audit": "2201 tests passed104.17s;206 successful assessment calls,42 policies,142 source records,0 unresolved archive/hash problems. One additional annual comparison test added subsequently; focused result recorded separately.",
+      "final_annual_comparison": "17 annual assessment tests passed12.12s after adding low-current-tax comparison: historical credit increases national refund by3000000 while local base99000000 and payable990000 remain identical."
+    },
+    "remaining": "Local carry balances, expiry deduction/addback reconciliation, competing reliefs, dividend/underlying/deemed credits, losses and amended returns."
+  },
+  "local_history_primary_recheck": {
+    "reviewed_on": "2026-11-22",
+    "sources": [
+      "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=164397",
+      "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031177413"
+    ],
+    "findings": "Current decree100-10(6) requires earliest-origin carried local deductions first. Act103-19(4) provides15-year carry; paragraph2 adds back expired national foreign-tax deductions. Existing archives match these provisions; saved local history not yet implemented."
   }
 }

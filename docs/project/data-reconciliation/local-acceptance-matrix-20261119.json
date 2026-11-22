@@ -262,5 +262,21 @@
     "interpretation": "Country coverage does not establish every tax situation. Existing planning gaps are not automatically merge deletions. No full-business completion claim; original objective remains active."
   },
   "last_reconciled": "2026-11-22",
-  "business_priority": "Cross-border corporate income and foreign tax credits; corporate and personal coverage across all 11 jurisdictions remains required."
+  "business_priority": "Cross-border corporate income and foreign tax credits; corporate and personal coverage across all 11 jurisdictions remains required.",
+  "korean_foreign_checkpoint_20261122": {
+    "base_commit": "0a9d852",
+    "scope": "Current direct country-credit annual workflow plus verified unexpired national history; saved API/browser/bilingual reports. This is an additional scoped workflow, not full Korean foreign-tax support.",
+    "full_regression": "2201 tests passed104.17s;206 observed assessment calls across42 policies;142 source records,0 unresolved.",
+    "source_audit_artifact": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/korea-history-full-source-audit-20261122.json",
+    "browser": "2 current-only and history workflows passed1.3m; production build passed.",
+    "remaining": [
+      "Prior local foreign-tax deductions",
+      "Expired national-credit deductions and local addback",
+      "Competing national reliefs",
+      "Dividend underlying/deemed credits",
+      "Losses, amended returns and installments"
+    ],
+    "evidence": "korea-foreign-credit-research-20261122.json",
+    "status": "scoped_workflow_verified_overall_goal_incomplete"
+  }
 }

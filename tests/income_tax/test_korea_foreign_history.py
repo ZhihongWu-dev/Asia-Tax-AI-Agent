@@ -46,6 +46,12 @@ def test_verified_lot_order_and_remaining_history():
     assert result['current_country_usage'][0]['current_ordinary_carryforward']==130
 
 
+def test_latest_representable_expiry_does_not_overflow_deduction_date():
+    result=run([lot(expiry='9999-12-31')])
+    assert result['historical_credit_used']==30
+    assert result['historical_lots'][0]['expired_deduction_review_in_current_period'] is False
+
+
 @pytest.mark.parametrize('change',['duplicate','domestic','current_origin','bad_expiry'])
 def test_invalid_history_rejected(change):
     item=lot();items=[item]
