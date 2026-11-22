@@ -1,5 +1,5 @@
 {
-  "status": "implementation_gap_verified_rules_reviewed",
+  "status": "direct_credit_component_verified_annual_workflow_pending",
   "date": "2026-11-22",
   "current_gap": "id_company_2026 saved adapter only supports domestic ordinary income; prepaid_tax is domestic refundable withholding/instalments, not foreign credit.",
   "official_sources": [
@@ -29,5 +29,21 @@
     "Review remaining official appendix examples and current exemption/Article31E interaction.",
     "Implement typed credit groups, treaty ceiling and recapture, then saved-case reconciliation, UI/report and browser acceptance."
   ],
-  "limits": "Research only; no Indonesian foreign-credit workflow implemented."
+  "limits": "Current-year rates, Article31E denominator, exemptions and source reconciliation must be derived in annual adapter; component alone does not complete Indonesian business acceptance. Recapture amount and treaty ceiling remain evidenced inputs.",
+  "component": {
+    "file": "packages/income_tax/indonesia_foreign_credit.py",
+    "tests_passed": 12,
+    "seconds": 0.56,
+    "coverage": [
+      "Historical appendixB.1credit700million",
+      "AppendixB.2treaty-capped credit550million",
+      "AppendixB.3domestic-loss liability cap200million",
+      "Exclusive residence taxation zero credit",
+      "Separate overall cap and prior-credit recapture",
+      "Reject duplicate country/type buckets,domestic sources,negative foreign net and missing treaty limits"
+    ],
+    "archived_source": "database/raw/id/id.pmk192.2018.foreign-credit.20261122.html",
+    "sha256": "b9f8268bb972c1b46170ed934fdf95229493de6eec32a4c1fbf62aa2712be338",
+    "scope": "Internal component on established taxable net buckets and computed annual tax; not a saved annual assessment or UI."
+  }
 }
