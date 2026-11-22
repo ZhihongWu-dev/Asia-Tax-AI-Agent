@@ -1,5 +1,19 @@
 {
   "status": "fsie_credit_component_implemented_annual_workflow_pending",
+  "aggregate_cap_arithmetic": {
+    "implementation": "packages/income_tax/hong_kong_credit_basis.py:_reconcile_aggregate_cap",
+    "contract": "Internal exact-Fraction primitive for an independently established marginal schedule, fixed reduction and source-credit ceiling. Maximizes C subject to 0<=C<=source ceiling and C<=max(0,T(I-F+C)-reduction), with deduction F-C. Does not derive legal rates, eligibility, source allocation, rounding or refunds.",
+    "algorithm": "Piecewise affine root calculation, including movement across marginal-band boundaries after deduction. Marginal rates strictly below1 make tax minus credit decreasing. No iterative decimal rounding or final-tax clamping substitutes for recalculating deductions.",
+    "counterexample_resolution": "Under the explicitly conditional assumptions in the diagnostic, flat-rate total credit becomes2040000/167 and excess deduction1300000/167. Two-tier credit becomes48300000/367; the reconciled base falls below2million. All three conditional cases reconcile to zero tax after credit, and equal source splitting preserves aggregate results.",
+    "validation": "35 focused aggregate-cap and existing source-basis tests passed1.89s; full Hong Kong selection144passed20.15s. Independent tax-schedule evaluation verifies conservation, feasibility and maximality, including exact threshold, zero-tax, below-cap, invalid-input and low Decimal-context cases. Diagnostic reproduced all3counterexamples and their conditional joint reconciliations.",
+    "integration_status": "Used by reproducible research audit only. Current-year annual policy/API/UI not enabled; statutory schedule ordering and per-source allocation still require completion."
+  },
+  "historical_reduction_ordering_corroboration": {
+    "url": "https://www.hkicpa.org.hk/-/media/HKICPA-Website/HKICPA/section2_become_a_hk_cpa/QP/pdf-file/qplsc/2015-1/Module-D-Taxation-Part-2.pdf",
+    "locator": "Printed395-396, PDF171-172 zero-based, Example Mr.Y, assessment year2011/12",
+    "finding": "The institute's historical teaching example includes annual reduction when deriving the average credit rate, then recomputes the tax after excess-tax deduction, deducts the annual reduction and finally the credit. This corroborates the candidate ordering, but is neither a current IRD determination nor evidence resolving modern corporate two-tier/FSIE allocation.",
+    "remaining": "Current corporate annual integration must be justified from current statutory provisions and verified against relevant business cases; this historical salaries illustration alone does not close that requirement."
+  },
   "annual_composition_counterexamples": {
     "script": "scripts/audit_hk_annual_credit_composition.py",
     "evidence": "docs/project/data-reconciliation/hk-annual-composition-counterexamples-20261122.json",

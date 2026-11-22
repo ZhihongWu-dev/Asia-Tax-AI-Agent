@@ -42,6 +42,32 @@
         "numerator": "-39000",
         "denominator": "173"
       },
+      "conditional_joint_reconciliation": {
+        "foreign_tax_credit": {
+          "numerator": "2040000",
+          "denominator": "167"
+        },
+        "excess_foreign_tax_deduction": {
+          "numerator": "1300000",
+          "denominator": "167"
+        },
+        "income_after_foreign_tax_deduction": {
+          "numerator": "15400000",
+          "denominator": "167"
+        },
+        "tax_before_credit": {
+          "numerator": "2040000",
+          "denominator": "167"
+        },
+        "tax_after_credit": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "source_credit_reduction": {
+          "numerator": "7800000",
+          "denominator": "28891"
+        }
+      },
       "violates_nonnegative_annual_tax": true
     },
     {
@@ -101,6 +127,32 @@
         "numerator": "-39000",
         "denominator": "173"
       },
+      "conditional_joint_reconciliation": {
+        "foreign_tax_credit": {
+          "numerator": "2040000",
+          "denominator": "167"
+        },
+        "excess_foreign_tax_deduction": {
+          "numerator": "1300000",
+          "denominator": "167"
+        },
+        "income_after_foreign_tax_deduction": {
+          "numerator": "15400000",
+          "denominator": "167"
+        },
+        "tax_before_credit": {
+          "numerator": "2040000",
+          "denominator": "167"
+        },
+        "tax_after_credit": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "source_credit_reduction": {
+          "numerator": "7800000",
+          "denominator": "28891"
+        }
+      },
       "violates_nonnegative_annual_tax": true
     },
     {
@@ -141,6 +193,32 @@
       "candidate_final_tax": {
         "numerator": "-433000",
         "denominator": "61"
+      },
+      "conditional_joint_reconciliation": {
+        "foreign_tax_credit": {
+          "numerator": "48300000",
+          "denominator": "367"
+        },
+        "excess_foreign_tax_deduction": {
+          "numerator": "171900000",
+          "denominator": "367"
+        },
+        "income_after_foreign_tax_deduction": {
+          "numerator": "598800000",
+          "denominator": "367"
+        },
+        "tax_before_credit": {
+          "numerator": "48300000",
+          "denominator": "367"
+        },
+        "tax_after_credit": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "source_credit_reduction": {
+          "numerator": "173200000",
+          "denominator": "22387"
+        }
       },
       "violates_nonnegative_annual_tax": true
     }

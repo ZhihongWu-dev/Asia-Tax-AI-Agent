@@ -7,8 +7,12 @@ No production policy imports this diagnostic.
 """
 import argparse
 import json
+import sys
 from fractions import Fraction as F
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from packages.income_tax.hong_kong_credit_basis import _reconcile_aggregate_cap
 
 
 def tax(income, two_tier):
@@ -33,12 +37,17 @@ def probe(name, domestic, sources, two_tier=False):
     credits = sum((row["credit"] for row in rows), F(0))
     deductions = sum((row["deduction"] for row in rows), F(0))
     recomputed = tax(total - deductions, two_tier)
+    bands = ((F(2_000_000), F(165,2000)), (None,F(165,1000))) if two_tier else ((None,F(165,1000)),)
+    reconciled = _reconcile_aggregate_cap(income=total,
+        foreign_tax=sum((row["foreign_tax"] for row in rows),F(0)),
+        source_ceiling=credits,bands=bands,reduction=F(3000))
     return {"case": name, "two_tier": two_tier,
             "candidate_rate": ratio(rate),
             "sources": [{key: ratio(value) for key, value in row.items()} for row in rows],
             "tax_after_deduction_before_credit": ratio(recomputed),
             "aggregate_source_credit": ratio(credits),
             "candidate_final_tax": ratio(recomputed - credits),
+            "conditional_joint_reconciliation": {key:ratio(value) for key,value in reconciled.items()},
             "violates_nonnegative_annual_tax": credits > recomputed}
 
 
@@ -53,6 +62,8 @@ def main():
     assert all(case["violates_nonnegative_annual_tax"] for case in cases)
     assert cases[0]["candidate_final_tax"] == ratio(F(-39000, 173))
     assert cases[0]["aggregate_source_credit"] == cases[1]["aggregate_source_credit"]
+    assert all(case["conditional_joint_reconciliation"]["tax_after_credit"] == ratio(F(0)) for case in cases)
+    assert cases[0]["conditional_joint_reconciliation"] == cases[1]["conditional_joint_reconciliation"]
     result = {"status": "conditional_counterexamples_not_approved_tax_answers",
               "unverified_assumption": "Average rate uses annual tax after reduction divided by income before excess-tax deduction.",
               "finding": "Independent source reconciliation can exceed recomputed annual tax. Resolve Section50(4) aggregate cap jointly with Section50(5) deduction and Section100 reduction before enabling annual assessment.",

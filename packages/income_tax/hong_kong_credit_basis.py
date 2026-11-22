@@ -9,6 +9,72 @@ from fractions import Fraction
 from .arithmetic import amount
 
 
+def _reconcile_aggregate_cap(*, income, foreign_tax, source_ceiling, bands, reduction):
+    """Exact arithmetic for an independently established annual tax schedule.
+
+    Internal integration primitive, NOT an HK policy or a rate determination.
+    All scalars and band endpoints/rates must be exact Fractions. For credit C,
+    deduction is F-C and tax base is I-F+C. Find the largest C in [0, ceiling]
+    for which C <= max(0, schedule(I-F+C)-reduction). Each marginal rate must
+    be less than one, so tax minus credit is strictly decreasing while taxable.
+    No per-source allocation, assessment rounding or refund is inferred here.
+    """
+    scalars = (income, foreign_tax, source_ceiling, reduction)
+    if any(type(value) is not Fraction or value < 0 for value in scalars):
+        raise ValueError('Aggregate reconciliation requires nonnegative exact fractions')
+    if foreign_tax > income or source_ceiling > foreign_tax:
+        raise ValueError('Foreign tax must not exceed income and source ceiling must not exceed foreign tax')
+    bands = tuple(bands)
+    lower = Fraction(0)
+    if not bands or bands[-1][0] is not None:
+        raise ValueError('Tax schedule must end in an unbounded band')
+    for index, (upper, rate) in enumerate(bands):
+        if type(rate) is not Fraction or not 0 <= rate < 1:
+            raise ValueError('Marginal rates must be exact fractions below one')
+        if upper is None:
+            if index != len(bands)-1:
+                raise ValueError('Only the final band may be unbounded')
+        elif type(upper) is not Fraction or upper <= lower:
+            raise ValueError('Band limits must be strictly increasing exact fractions')
+        if upper is not None:
+            lower = upper
+
+    def annual_tax(base):
+        lower = total = Fraction(0)
+        for upper, rate in bands:
+            total += max(Fraction(0), (base if upper is None else min(base, upper))-lower)*rate
+            if upper is not None:
+                lower = upper
+        return max(Fraction(0), total-reduction)
+
+    base_without_credit = income-foreign_tax
+    credit = source_ceiling
+    if annual_tax(base_without_credit+credit) < credit:
+        credit = Fraction(0)
+        if annual_tax(base_without_credit) > 0:
+            lower = tax_at_lower = Fraction(0)
+            for upper, rate in bands:
+                # In this band: T(I-F+C) = rate*(I-F+C-lower)
+                # + tax_at_lower - reduction. Solve T = C exactly.
+                root = (rate*(base_without_credit-lower)+tax_at_lower-reduction)/(1-rate)
+                candidate_base = base_without_credit+root
+                if (0 <= root <= source_ceiling and lower <= candidate_base
+                        and (upper is None or candidate_base <= upper)):
+                    credit = root
+                    break
+                if upper is not None:
+                    tax_at_lower += (upper-lower)*rate
+                    lower = upper
+            else:
+                raise ArithmeticError('No aggregate cap root in validated tax schedule')
+    deduction = foreign_tax-credit
+    base = income-deduction
+    tax = annual_tax(base)
+    return dict(foreign_tax_credit=credit, excess_foreign_tax_deduction=deduction,
+                income_after_foreign_tax_deduction=base, tax_before_credit=tax,
+                tax_after_credit=tax-credit, source_credit_reduction=source_ceiling-credit)
+
+
 def reconcile_excess_tax(*, source_income_before_foreign_tax_deduction,
                          eligible_foreign_tax, established_credit_rate,
                          statutory_rate_and_deduction_eligibility_verified):
