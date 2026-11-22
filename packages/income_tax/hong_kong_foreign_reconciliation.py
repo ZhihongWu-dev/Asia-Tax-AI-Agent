@@ -6,10 +6,10 @@ final annual tax. Foreign-tax deductions remain separate from expenses.
 from decimal import Decimal, localcontext
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from packages.contracts.income_tax import Money
-from .hong_kong_foreign_credit import Source
+from .hong_kong_foreign_credit import Source, SourceFacts
 
 
-class Group(BaseModel):
+class FactsGroup(BaseModel):
     model_config = ConfigDict(extra='forbid')
     source_id: str = Field(min_length=1,max_length=120,pattern=r'\S')
     income_indexes: list[StrictInt] = Field(min_length=1,max_length=200)
@@ -17,19 +17,35 @@ class Group(BaseModel):
     taxable_additions: Money
     excluded_income: Money
     underlying_tax_gross_up: Money
-    foreign_credit: Source | None = None
+    foreign_credit: SourceFacts | None = None
 
 
-class Workpaper(BaseModel):
+class FactsWorkpaper(BaseModel):
     model_config = ConfigDict(extra='forbid')
-    groups: list[Group] = Field(min_length=1,max_length=200)
+    groups: list[FactsGroup] = Field(min_length=1,max_length=200)
     receipt_year_source_exemptions_and_expenses_verified: StrictBool
     gross_up_and_no_foreign_tax_in_expenses_verified: StrictBool
     no_source_losses_or_special_regimes_verified: StrictBool
 
 
+class Group(FactsGroup):
+    foreign_credit: Source | None = None
+
+
+class Workpaper(FactsWorkpaper):
+    groups: list[Group] = Field(min_length=1,max_length=200)
+
+
 def reconcile(case, workpaper):
-    p=Workpaper.model_validate(workpaper)
+    return _reconcile(case, Workpaper.model_validate(workpaper))
+
+
+def reconcile_facts(case, workpaper):
+    """Reconcile saved receipts before same-income tax limits are computed."""
+    return _reconcile(case, FactsWorkpaper.model_validate(workpaper))
+
+
+def _reconcile(case, p):
     if not all((p.receipt_year_source_exemptions_and_expenses_verified,
             p.gross_up_and_no_foreign_tax_in_expenses_verified,
             p.no_source_losses_or_special_regimes_verified)):
@@ -72,7 +88,8 @@ def reconcile(case, workpaper):
                 paid=sum((i.foreign_tax_paid for i in items),Decimal(0))
                 if paid!=c.direct_foreign_tax_paid:
                     raise ValueError('Direct foreign tax must reconcile saved payments; underlying tax is separate')
-                if not net and (c.hong_kong_tax_on_same_income or c.direct_foreign_tax_paid or c.underlying_tax_paid):
+                if not net and ((isinstance(c,Source) and c.hong_kong_tax_on_same_income)
+                                or c.direct_foreign_tax_paid or c.underlying_tax_paid):
                     raise ValueError('Excluded or zero-income source cannot claim foreign credits')
                 if kind!='dividend' and g.underlying_tax_gross_up:
                     raise ValueError('Underlying tax gross-up is only available for dividends')

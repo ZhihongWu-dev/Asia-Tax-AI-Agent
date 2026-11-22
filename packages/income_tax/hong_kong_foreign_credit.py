@@ -10,7 +10,7 @@ from packages.contracts.income_tax import Jurisdiction, Money
 from .arithmetic import computed_amount
 
 
-class Source(BaseModel):
+class SourceFacts(BaseModel):
     model_config = ConfigDict(extra='forbid')
     source_id: str = Field(min_length=1, max_length=120, pattern=r'\S')
     country: Jurisdiction
@@ -26,17 +26,24 @@ class Source(BaseModel):
     voting_fraction_at_distribution: Money | None = None
     equity_chain_at_distribution: list[Money] | None = Field(default=None,min_length=1,max_length=200)
     voting_chain_at_distribution: list[Money] | None = Field(default=None,min_length=1,max_length=200)
-    hong_kong_tax_on_same_income: Money
     taxable_fsie_receipt_and_similar_tax_verified: StrictBool
     treaty_ownership_and_no_duplicate_tax_verified: StrictBool
 
 
-class Workpaper(BaseModel):
+class Source(SourceFacts):
+    hong_kong_tax_on_same_income: Money
+
+
+class EligibilityWorkpaper(BaseModel):
     model_config = ConfigDict(extra='forbid')
-    sources: list[Source] = Field(min_length=1, max_length=200)
+    sources: list[SourceFacts] = Field(min_length=1, max_length=200)
     hong_kong_resident_mne_verified: StrictBool
     source_tax_attribution_and_gross_up_verified: StrictBool
     payment_fx_and_claim_evidence_verified: StrictBool
+
+
+class Workpaper(EligibilityWorkpaper):
+    sources: list[Source] = Field(min_length=1, max_length=200)
 
 
 def _interest(declared, chain):
@@ -60,8 +67,9 @@ def _interest(declared, chain):
     return effective
 
 
-def calculate(workpaper, *, total_hong_kong_tax):
-    p = Workpaper.model_validate(workpaper)
+def calculate_eligibility(workpaper):
+    """Establish eligible tax without requiring a not-yet-derived HK limit."""
+    p = EligibilityWorkpaper.model_validate(workpaper)
     if not all((p.hong_kong_resident_mne_verified,
                 p.source_tax_attribution_and_gross_up_verified,
                 p.payment_fx_and_claim_evidence_verified)):
@@ -69,7 +77,6 @@ def calculate(workpaper, *, total_hong_kong_tax):
     ids = [s.source_id.strip() for s in p.sources]
     if len(ids) != len(set(ids)):
         raise ValueError('Separate sources require unique identifiers')
-    total = computed_amount(total_hong_kong_tax)
     rows = []
     with localcontext() as context:
         context.prec = 40
@@ -111,22 +118,16 @@ def calculate(workpaper, *, total_hong_kong_tax):
                 raise ValueError('Underlying unilateral credit requires adequate interest and verified attributed tax with no applicable treaty credit provision')
             direct_unilateral = Decimal(0) if s.cdta_applies else s.direct_foreign_tax_paid
             eligible = bilateral + direct_unilateral + underlying_unilateral
-            credit = min(eligible, s.hong_kong_tax_on_same_income)
             rows.append(dict(source_id=s.source_id.strip(), country=s.country,
                 effective_equity_fraction=equity,effective_voting_fraction=voting,
                 income_type=s.income_type, bilateral_eligible_tax=bilateral,
                 unilateral_direct_tax=direct_unilateral,
                 unilateral_underlying_tax=underlying_unilateral,
                 underlying_tax_not_eligible=underlying_remainder-underlying_unilateral,
-                total_eligible_tax=eligible, same_income_hong_kong_limit=s.hong_kong_tax_on_same_income,
-                foreign_tax_credit=credit, eligible_tax_above_limit=eligible-credit))
-        if sum((s.hong_kong_tax_on_same_income for s in p.sources), Decimal(0)) > total:
-            raise ValueError('Distinct-source Hong Kong tax attribution exceeds total tax')
-        credit = sum((r['foreign_tax_credit'] for r in rows), Decimal(0))
-    return dict(policy_version='hk-fsie-credit-component-20261122', currency='HKD',
-        source_credits=rows, foreign_tax_credit=credit,
-        tax_after_credit_before_other_adjustments=total-credit,
-        stage='verified_fsie_source_limits_before_annual_settlement',
+                total_eligible_tax=eligible))
+    return dict(policy_version='hk-fsie-eligibility-component-20261122', currency='HKD',
+        source_eligibility=rows,
+        stage='verified_fsie_eligibility_before_source_limits_and_annual_settlement',
         sources=[dict(doc_id='hk.fsie.credit.20261122',
             title='IRD Foreign-sourced Income Exemption: Double Taxation Relief',
             url='https://www.ird.gov.hk/eng/tax/bus_fsie.htm',
@@ -138,3 +139,29 @@ def calculate(workpaper, *, total_hong_kong_tax):
                 file='database/raw/hk/hk.cap112.rtf',
                 sha256='e28849ff385862416718714208c9fa05d27b022ca475b687c6f1c4591a100134',
                 locator='Sections50AAAB(2)-(9),50AAAC: underlying tax and adequate interest')])
+
+
+def calculate(workpaper, *, total_hong_kong_tax):
+    p = Workpaper.model_validate(workpaper)
+    facts = p.model_dump()
+    for source in facts['sources']:
+        del source['hong_kong_tax_on_same_income']
+    eligibility = calculate_eligibility(facts)
+    total = computed_amount(total_hong_kong_tax)
+    rows = []
+    with localcontext() as context:
+        context.prec = 40
+        if sum((s.hong_kong_tax_on_same_income for s in p.sources), Decimal(0)) > total:
+            raise ValueError('Distinct-source Hong Kong tax attribution exceeds total tax')
+        for source, row in zip(p.sources, eligibility['source_eligibility']):
+            eligible = row['total_eligible_tax']
+            credit = min(eligible, source.hong_kong_tax_on_same_income)
+            rows.append(dict(row, same_income_hong_kong_limit=source.hong_kong_tax_on_same_income,
+                foreign_tax_credit=credit, eligible_tax_above_limit=eligible-credit))
+        credit = sum((row['foreign_tax_credit'] for row in rows), Decimal(0))
+        after_credit = total-credit
+    return dict(policy_version='hk-fsie-credit-component-20261122', currency='HKD',
+        source_credits=rows, foreign_tax_credit=credit,
+        tax_after_credit_before_other_adjustments=after_credit,
+        stage='verified_fsie_source_limits_before_annual_settlement',
+        sources=eligibility['sources'])

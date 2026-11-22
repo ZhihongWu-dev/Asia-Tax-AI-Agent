@@ -1,5 +1,14 @@
 {
   "status": "fsie_credit_component_implemented_annual_workflow_pending",
+  "saved_constraint_integration": {
+    "file": "packages/income_tax/hong_kong_saved_credit_constraints.py",
+    "behavior": "Reconciles confirmed IncomeTaxCase receipts and expenses, validates FSIE/treaty/underlying-tax eligibility, then connects exact source constraints to aggregate cap and deduction reconciliation. Facts-only models no longer require callers to invent a same-income Hong Kong tax limit before it has been calculated. The legacy source-limit interface remains available and tested.",
+    "underlying_tax": "Saved direct payments remain separate from attributed underlying tax. Gross-up must equal underlying tax included in the bilateral and unilateral claim; eligible tax is derived through the existing no-duplication and adequate-interest checks. Exempt sources remain in the receipt ledger without entering credit/deduction totals.",
+    "unresolved_allocation": "Multiple-source ambiguity is preserved as allocation_required and an absent source-credit ledger. Explicit exact allocations are checked before source deductions are materialized. Exact ratios accompany display decimals and inputs are not mutated.",
+    "validation": "197HongKong tests passed19.43s, including28new saved-constraint cases covering10foreign catalog jurisdictions, model JSON round trips, independently established two-tier threshold case, exempt receipts, separate underlying/direct tax, ambiguous and supplied allocations, low Decimal precision, and rejected mismatched/incomplete facts. Legacy51source-credit/reconciliation tests also passed3.33s before integration. Fixed legacy total-minus-credit subtraction to remain inside its40digit calculation context.",
+    "remaining": "Rate, schedule, reduction and deduction eligibility remain independently established inputs with explicit verification; this integration does not establish a current annual assessment policy. API, report, frontend, allocation treatment and assessment-rounding acceptance remain pending.",
+    "development_reference": "Pydantic official GitHub model/validation documentation reviewed. Existing dependency and project validation conventions reused; no external code copied or new dependency introduced."
+  },
   "source_allocation_constraints": {
     "implementation": "packages/income_tax/hong_kong_credit_basis.py:_reconcile_source_caps",
     "scope": "Internal exact arithmetic joins independently established source rates, eligible taxes and deduction bases to aggregate reconciliation. It is not a determination of statutory allocation priority, current-year policy or eligibility.",
