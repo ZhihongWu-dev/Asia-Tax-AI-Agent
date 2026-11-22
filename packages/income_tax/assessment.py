@@ -107,6 +107,9 @@ def calculate(case: IncomeTaxCase, basis):
         args['people']=[PersonalDeductionPerson(**row) for row in args['people']]
         args['children']=[ChildCreditFacts(**row) for row in args['children']]
         result=korea_salary.standard_salary_return(salary,tax_year=2026,**args)
+    elif policy=='kr_company_foreign_direct_2026':
+        from .korea_foreign_assessment import assess
+        result = assess(case, **args)
     elif policy=='kr_company_ordinary_2026':
         if case.residency != 'resident' or any(i.source_jurisdiction != 'kr' or
                 i.foreign_tax_paid not in (None, 0) or i.category not in ('business', 'interest', 'rental', 'royalty')

@@ -6,6 +6,36 @@ import { test, expect } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 import {indiaForeignChecks} from '../src/india-foreign-assessment';
 
+test('Korean foreign company saves country credits and separate local settlement',async({page})=>{
+ test.setTimeout(60000);
+ const form=await openIncome(page);
+ for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','kr'],['Tax residency','resident'],['Income category','business'],['Income source jurisdiction','sg']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+ for(const [name,value] of [['Period start','2026-01-01'],['Period end','2026-12-31'],['Gross income','1000000'],['Foreign tax paid (blank if unknown)','100000'],['Income description','Synthetic Korean company overseas business income'],['Claimed deductions (blank if unknown)','0'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+ await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+ const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+ await calc.getByLabel('Applicable regime').selectOption('kr_company_foreign_direct_2026');
+ for(const [name,value] of [['National penalty','0'],['National relief recapture','0'],['National interim payment','1000'],['National occasional assessment payment','0'],['National withholding','0'],['Number of local filing authorities','1'],['Head-office filing authority name','HQ'],['Total local withholding','0'],['Local 1: filing authority name','HQ'],['Local 1: verified final ratio (0–1, up to 8 decimals)','1'],['Income 1: expenses already included in foreign income','0'],['Income 1: corresponding expenses not already included in foreign income','0'],['Income 1: verified eligible direct foreign tax','100000']])await calc.getByLabel(name,{exact:true}).fill(value);
+ for(const label of ['Relief','Penalty','Additional tax','Other payments','Municipal rate increase','Municipal rate decrease'])await calc.getByLabel(`Local 1: ${label}`,{exact:true}).fill('0');
+ await calc.getByRole('combobox',{name:'Minimum-tax classification',exact:true}).selectOption('general');
+ await calc.getByRole('combobox',{name:'Company falls under article 60-2(1)(1)',exact:true}).selectOption('false');
+ for(const label of ['Full-year schedule applicability verified','Minimum-tax classification verified','Relief eligibility, caps and expiry verified','No base-changing incentives','National additions and payment evidence verified','Initial return, city grouping and final ratios verified','Local relief caps, rate adjustments and payments verified','Korean income basis and expense classification verified','Direct paid tax, treaty limits, FX and filing evidence verified','No losses, exempt/special income or other base adjustments','Current direct credit and local deduction eligibility verified','No prior foreign balances, competing national reliefs or separate taxes'])await calc.getByRole('combobox',{name:label,exact:true}).selectOption('true');
+ await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified Korean income, direct tax eligibility, source expenses and separate local filings.');
+ await calc.getByRole('checkbox').check();
+ const saved=page.waitForResponse(r=>r.url().endsWith('/income-tax/runs')&&r.request().method()==='POST');
+ await calc.getByRole('button',{name:'Calculate and save result'}).click();
+ const response=await saved;expect(response.status()).toBe(200);const snapshot=await response.json();
+ expect(Number(snapshot.result.total_payable)).toBe(9000);expect(Number(snapshot.result.total_refundable)).toBe(1000);
+ const result=page.getByRole('article',{name:'Saved calculation result'});
+ await expect(result.getByRole('region',{name:'Korean foreign credits by country'})).toContainText('100000');
+ await expect(result.getByRole('region',{name:'Local authority: HQ',exact:true})).toContainText('9000');
+ await calc.getByLabel('Income 1: verified eligible direct foreign tax',{exact:true}).fill('100001');
+ await expect(calc.getByRole('checkbox')).not.toBeChecked();await calc.getByRole('checkbox').check();
+ const rejected=page.waitForResponse(r=>r.url().endsWith('/income-tax/runs')&&r.request().method()==='POST');
+ await calc.getByRole('button',{name:'Calculate and save result'}).click();expect((await rejected).status()).toBe(422);
+ await openIncome(page);
+ await expect(page.getByRole('region',{name:'Korean foreign credits by country'})).toContainText('100000');
+});
+
 for(const route of [
  {scheme:'section200',book:'',normal:'251680',mat:'',final:201680,balance:-48320},
  {scheme:'normal',book:'0',normal:'260000',mat:'0',final:210000,balance:-40000},

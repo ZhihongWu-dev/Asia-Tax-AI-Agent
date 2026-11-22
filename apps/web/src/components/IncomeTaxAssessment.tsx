@@ -25,6 +25,7 @@ import type { Case } from '../workspace';
 import { policies, resultLabels } from '../income-assessment';
 import { koreaBasis } from '../korea-assessment';
 import KoreaCompanyResult from './KoreaCompanyResult';
+import {koreaForeignBasis} from '../korea-foreign-assessment';
 import { koreaSalaryBasis } from '../korea-salary-assessment';
 import KoreaSalaryResult from './KoreaSalaryResult';
 import { thaiDividendBasis } from '../thailand-dividend-assessment';
@@ -116,8 +117,8 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       });
       for(const key of Object.keys(basis)) if(key.startsWith('transfer_')) delete basis[key];
     }
-    if(policy.id==='kr_company_ordinary_2026') {
-      try {basis=koreaBasis(basis);} catch {setError(say('地方申报单位名称须非空且不能重复。','Local filing names must be nonempty and unique.'));return;}
+    if(policy.id==='kr_company_ordinary_2026'||policy.id==='kr_company_foreign_direct_2026') {
+      try {basis=policy.id==='kr_company_foreign_direct_2026'?koreaForeignBasis(basis,current.income_tax!):koreaBasis(basis);} catch {setError(say('地方申报单位名称须非空且不能重复。','Local filing names must be nonempty and unique.'));return;}
     }
     if(policy.id==='kr_salary_standard_payroll_2026')basis=koreaSalaryBasis(basis);
     if(policy.id==='th_dividend_2026') {
@@ -208,7 +209,7 @@ export default function IncomeTaxAssessment({current, disabled, onUpdate}: {
       {result.result.policy_version==='vn-resident-business-2026-2026-11-18'&&<VietnamBusinessResult result={result.result} index={index} />}
       {result.result.policy_version==='vn-resident-property-rental-2026-2026-11-18'&&<VietnamRentalResult result={result.result} index={index} />}
       {result.result.stage==='resident_foreign_income_assessment_before_rounding'&&<ThailandForeignResult result={result.result} index={index} />}
-      {result.result.tax_scope==='ordinary_national_and_local_corporate_income_tax'&&<KoreaCompanyResult result={result.result} index={index} />}
+      {['ordinary_national_and_local_corporate_income_tax','current_direct_foreign_credit_national_and_local_corporate_income_tax'].includes(String(result.result.tax_scope))&&<KoreaCompanyResult result={result.result} index={index} />}
       {result.result.tax_scope==='ordinary_salary_employer_national_and_local_settlement'&&<KoreaSalaryResult result={result.result} index={index} />}
       {result.result.regime==='company_normal'&&<p>{say('印度普通企业税制：已比较普通税与14% MAT，采用','India ordinary company regime: compared normal tax with 14% MAT; applied ')}{result.result.mat_applies?say('MAT。','MAT.'):say('普通税。','normal tax.')}{say(' 本期不使用历史MAT抵免，也不新增MAT抵免；账面利润调整须已核定。',' No legacy MAT credit used or new MAT credit generated; book-profit adjustments must be established.')}</p>}
       {result.result.regime==='personal_old_resident'&&<p>{say('印度居民个人旧税制；本税年最高年龄档：','India resident old regime; highest tax-year age band: ')}{result.result.resident_age_band==='under60'?say('未满60岁','Under 60'):result.result.resident_age_band==='60_to79'?say('60至79岁','60 to 79'):say('80岁及以上','80 or above')}{say('。本结果以有效税制选择、不适用AMT且无AMT结转抵免为前提。','; requires a valid election, AMT non-applicability and no carried AMT credit.')}</p>}

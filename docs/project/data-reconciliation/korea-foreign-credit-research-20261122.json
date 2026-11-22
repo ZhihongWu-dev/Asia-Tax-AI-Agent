@@ -58,7 +58,7 @@
     ]
   },
   "version_risk": "Official2022 English Korean Taxation guide still describes a five-year carry period, contrary to reviewed2026 Korean Article57. Do not use the older guide as the current carryforward rule.",
-  "next": "Integrate verified country credit, historical usage and local-base components with annual reconciliation and saved API/UI/reports. No Korea foreign annual policy enabled yet.",
+  "next": "Extend the saved Korean annual workflow to historical balances and verified adjustment/relief interactions, then continue unresolved jurisdiction and personal foreign-income acceptance gaps.",
   "development_reference": "Pydantic official GitHub model/validator documentation searched; existing framework conventions retained, no copied code or new dependency.",
   "local_base_component": {
     "file": "packages/income_tax/korea_foreign_local_basis.py",
@@ -97,5 +97,24 @@
     "validation": "52 reconciliation/current-credit/history/local-base tests passed in2.28s. Synthetic saved base1000, foreign pre-corresponding-expense income500, corresponding expenses100 and eligible tax150 at gross national tax200 yield credit80, expense-related excess20 and ordinary carry50.",
     "remaining": "Annual national/local settlement, history and adjustment integration, API/UI/reports; excluded dividends and other special cases remain explicit gaps.",
     "development_reference": "https://github.com/pydantic/pydantic/blob/main/docs/concepts/validators.md; retained existing Pydantic dependency and model conventions; no external code copied."
+  },
+  "annual_saved_workflow": {
+    "policy": "kr_company_foreign_direct_2026",
+    "version": "kr-company-direct-foreign-2026-20261122",
+    "scope": "Resident company calendar2026 ordinary business, interest, rental and royalty income; current direct paid taxes. Reconciled country limits, national additions/payments/cash rounding, independent local foreign-tax deduction, local rates and authority settlements.",
+    "national_local_separation": "Synthetic national base100000000 and gross tax10000000; foreign net40000000 and eligible tax15000000 give current credit4000000, expense-related excess1000000 and ordinary carry10000000. National payments11000000 give refund5000000. Local base85000000 gives payable850000, split HQ510000/Branch340000. No cross-authority netting.",
+    "delivery": "Assessment contract/router, saved HTTP snapshots with database reopen/idempotency, bilingual country/local report, dynamic browser input and result display.",
+    "validation": {
+      "backend": "2193 income-tax/reporting tests passed in97.10s",
+      "frontend": "Type-check and Vite build passed;2295 modules,8.36s",
+      "browser": "3 Playwright tests passed in58.5s: foreign save/reopen/invalid entitlement, domestic no-relief and domestic relief paths."
+    },
+    "remaining": [
+      "Historical national and local balances in saved workflow",
+      "Competing national reliefs and base adjustments",
+      "Excluded or taxable dividends, underlying/deemed taxes and special regimes",
+      "Loss allocations, amended returns and installments"
+    ],
+    "source_note": "Existing archived CTA57/59/64, Decree94, local Article103-19 and filing authorities remain the legal evidence; no new inferred rules or external dependencies."
   }
 }

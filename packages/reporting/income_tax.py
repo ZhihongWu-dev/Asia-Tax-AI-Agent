@@ -55,6 +55,27 @@ def render(run, locale='zh'):
             ('local_corporation_balance_due','地方法人税补退余额','Local corporation-tax balance')]:
         if key in result:
             lines.append(f'| {_text(say(zh,en))} | {_text(result[key])} |')
+    if result.get('policy_version') == 'kr-company-direct-foreign-2026-20261122':
+        lines += ['', '## ' + say('韩国分国抵免与地方税', 'Korean country credits and local tax'), '',
+            say('本期直接抵免；国税、地方税分别结算。费用对应超限额与普通抵免结转分开列示。不含历史余额、其他国税减免、间接抵免或特殊税负。',
+                'Current direct credits; national and local authorities settle separately. Expense-related excess is separate from ordinary credit carryforward. Excludes prior balances, competing national reliefs, underlying credits and special taxes.'), '',
+            '| ' + say('国家 | 限额所得 | 抵免限额 | 本期抵免 | 费用对应超限额（不作普通结转） | 普通抵免结转',
+                'Country | Limit income | Credit limit | Current credit | Expense-related excess (not ordinary carry) | Ordinary credit carryforward') + ' |',
+            '| --- | --- | --- | --- | --- | --- |']
+        for row in result['foreign_credit']['country_credits']:
+            values = [row['country'].upper()] + [row[k] for k in ('income_for_credit_limit', 'credit_limit',
+                'current_foreign_tax_credit', 'expense_related_excess_not_carried', 'eligible_current_year_carryforward')]
+            lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
+        lines += ['', '| ' + say('项目 | 金额', 'Item | Amount') + ' |', '| --- | --- |']
+        for key, zh, en in [('current_local_foreign_tax_deduction', '地方税税基境外税扣除', 'Foreign-tax deduction from local base'),
+                ('local_taxable_base', '地方税税基（取整前）', 'Local taxable base before rounding'),
+                ('excess_current_local_deduction', '地方税扣除结转余额', 'Local deduction carryforward')]:
+            lines.append(f'| {_text(say(zh,en))} | {_text(result["local_basis"][key])} |')
+        lines += ['', '| ' + say('机关 | 应缴 | 应退', 'Authority | Payable | Refundable') + ' |', '| --- | --- | --- |']
+        settlements = [(say('国税', 'National'), result['national']['settlement'])]
+        settlements += [(name, row['settlement']) for name, row in result['local']['filings'].items()]
+        for name, cash in settlements:
+            lines.append('| ' + ' | '.join(_text(v) for v in (name, cash['payable'], cash['refundable'])) + ' |')
     if result.get('policy_version') == 'sg-company-foreign-direct-ya2026-20261122':
         credit = result['foreign_credit']
         lines += ['', '## ' + say('新加坡境外直接抵免明细', 'Singapore direct foreign credit details'), '',

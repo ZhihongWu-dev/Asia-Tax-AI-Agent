@@ -12,6 +12,7 @@ from packages.income_tax.uae_foreign_assessment import SavedWorkpaper as UAEFore
 from packages.income_tax.malaysia_foreign_assessment import SavedWorkpaper as MYForeignWorkpaper
 from packages.income_tax.indonesia_foreign_assessment import SavedWorkpaper as IDForeignWorkpaper
 from packages.income_tax.india_foreign_assessment import SavedWorkpaper as INForeignWorkpaper
+from packages.income_tax.korea_foreign_reconciliation import SavedWorkpaper as KRForeignWorkpaper
 from packages.income_tax.thailand_company_foreign_reconciliation import SavedWorkpaper as THCompanyForeignWorkpaper
 from packages.income_tax.singapore_foreign_assessment import SavedWorkpaper
 from packages.income_tax.china_foreign_assessment import DirectWorkpaper
@@ -513,6 +514,15 @@ class KRLocalInputs(BaseModel):
     installment: StrictBool
 
 
+class KRForeignCompany(Basis):
+    policy: Literal['kr_company_foreign_direct_2026']
+    workpaper: KRForeignWorkpaper
+    national_inputs: KRNationalInputs
+    local_inputs: KRLocalInputs
+    current_direct_credit_and_local_deduction_eligibility_verified: StrictBool
+    no_prior_foreign_balances_other_reliefs_or_separate_taxes_verified: StrictBool
+
+
 class KRCompany(Basis):
     policy: Literal['kr_company_ordinary_2026']
     national_taxable_base: Money
@@ -561,6 +571,6 @@ class KRSalary(Basis):
     installment: StrictBool
 
 
-Assessment = Annotated[CNCompany | CNForeignCompany | CNForeignIndividual | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGForeignCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | INForeignCompany | KRCompany | KRSalary |
+Assessment = Annotated[CNCompany | CNForeignCompany | CNForeignIndividual | CNSmallCompany | CNIndividual | CNBusiness | SGCompany | SGForeignCompany | SGIndividual | SGEmployment | JPIndividual | JPCompany | INIndividual | INOldIndividual | INCompany | INNormalCompany | INForeignCompany | KRCompany | KRForeignCompany | KRSalary |
                        HKProfits | HKSalaries | HKProperty | AEOrdinary | UAEForeignCompany | MYForeignCompany | IDForeignCompany | MYCompany | MYIndividual | MYDividends | THCompany | THIndividual | THForeignIncome | THDividends | IDCompany | IDIndividual | VNEmployment | VNCompany | VNPersonalTransfer | VNBusiness | VNRental,
                        Field(discriminator='policy')]
