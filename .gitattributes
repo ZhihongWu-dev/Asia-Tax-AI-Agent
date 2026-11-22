@@ -1,5 +1,7 @@
 # Preserve original source bytes: registered SHA-256 values cover downloaded artifacts.
 /database/raw/** -text
+# This official HTML snapshot retains original whitespace covered by its hash.
+/database/raw/id/id.pmk192.2018.foreign-credit.20261122.html -whitespace
 /database/ocr/** -text
 /config/library/** -text
 # Catalog snapshots contain multiline legal text and have byte-level fingerprints.
