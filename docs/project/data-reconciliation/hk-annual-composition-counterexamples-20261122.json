@@ -1,0 +1,148 @@
+{
+  "status": "conditional_counterexamples_not_approved_tax_answers",
+  "unverified_assumption": "Average rate uses annual tax after reduction divided by income before excess-tax deduction.",
+  "finding": "Independent source reconciliation can exceed recomputed annual tax. Resolve Section50(4) aggregate cap jointly with Section50(5) deduction and Section100 reduction before enabling annual assessment.",
+  "cases": [
+    {
+      "case": "single_source_flat_rate",
+      "two_tier": false,
+      "candidate_rate": {
+        "numerator": "27",
+        "denominator": "200"
+      },
+      "sources": [
+        {
+          "income": {
+            "numerator": "100000",
+            "denominator": "1"
+          },
+          "foreign_tax": {
+            "numerator": "20000",
+            "denominator": "1"
+          },
+          "credit": {
+            "numerator": "2160000",
+            "denominator": "173"
+          },
+          "deduction": {
+            "numerator": "1300000",
+            "denominator": "173"
+          }
+        }
+      ],
+      "tax_after_deduction_before_credit": {
+        "numerator": "2121000",
+        "denominator": "173"
+      },
+      "aggregate_source_credit": {
+        "numerator": "2160000",
+        "denominator": "173"
+      },
+      "candidate_final_tax": {
+        "numerator": "-39000",
+        "denominator": "173"
+      },
+      "violates_nonnegative_annual_tax": true
+    },
+    {
+      "case": "two_sources_flat_rate",
+      "two_tier": false,
+      "candidate_rate": {
+        "numerator": "27",
+        "denominator": "200"
+      },
+      "sources": [
+        {
+          "income": {
+            "numerator": "50000",
+            "denominator": "1"
+          },
+          "foreign_tax": {
+            "numerator": "10000",
+            "denominator": "1"
+          },
+          "credit": {
+            "numerator": "1080000",
+            "denominator": "173"
+          },
+          "deduction": {
+            "numerator": "650000",
+            "denominator": "173"
+          }
+        },
+        {
+          "income": {
+            "numerator": "50000",
+            "denominator": "1"
+          },
+          "foreign_tax": {
+            "numerator": "10000",
+            "denominator": "1"
+          },
+          "credit": {
+            "numerator": "1080000",
+            "denominator": "173"
+          },
+          "deduction": {
+            "numerator": "650000",
+            "denominator": "173"
+          }
+        }
+      ],
+      "tax_after_deduction_before_credit": {
+        "numerator": "2121000",
+        "denominator": "173"
+      },
+      "aggregate_source_credit": {
+        "numerator": "2160000",
+        "denominator": "173"
+      },
+      "candidate_final_tax": {
+        "numerator": "-39000",
+        "denominator": "173"
+      },
+      "violates_nonnegative_annual_tax": true
+    },
+    {
+      "case": "two_tier_crossing_after_deduction",
+      "two_tier": true,
+      "candidate_rate": {
+        "numerator": "17",
+        "denominator": "200"
+      },
+      "sources": [
+        {
+          "income": {
+            "numerator": "2100000",
+            "denominator": "1"
+          },
+          "foreign_tax": {
+            "numerator": "600000",
+            "denominator": "1"
+          },
+          "credit": {
+            "numerator": "8500000",
+            "denominator": "61"
+          },
+          "deduction": {
+            "numerator": "28100000",
+            "denominator": "61"
+          }
+        }
+      ],
+      "tax_after_deduction_before_credit": {
+        "numerator": "8067000",
+        "denominator": "61"
+      },
+      "aggregate_source_credit": {
+        "numerator": "8500000",
+        "denominator": "61"
+      },
+      "candidate_final_tax": {
+        "numerator": "-433000",
+        "denominator": "61"
+      },
+      "violates_nonnegative_annual_tax": true
+    }
+  ]
+}
