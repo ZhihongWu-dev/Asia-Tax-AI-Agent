@@ -9,6 +9,77 @@ from fractions import Fraction
 from .arithmetic import amount
 
 
+def _reconcile_source_caps(*, domestic_income, sources, bands, reduction, allocations=None):
+    """Join established source limits to the aggregate-cap arithmetic.
+
+    Internal exact arithmetic only: the caller establishes each source's rate,
+    eligible tax and deduction entitlement, plus the annual schedule. A binding
+    total cap can leave multiple feasible source allocations. Return their
+    intervals instead of inventing a statutory priority or pro-rata election.
+    Explicit allocations must cover every source and reconcile exactly.
+    """
+    if type(domestic_income) is not Fraction or domestic_income < 0:
+        raise ValueError('Domestic income must be a nonnegative exact fraction')
+    sources = tuple(sources)
+    if not 1 <= len(sources) <= 200:
+        raise ValueError('Between one and 200 established sources required')
+    rows = []
+    ids = set()
+    for source in sources:
+        if set(source) != {'source_id', 'income', 'foreign_tax', 'rate'}:
+            raise ValueError('Source requires identity, income, eligible tax and established rate')
+        identifier = source['source_id']
+        if not isinstance(identifier, str) or not identifier.strip() or len(identifier) > 120:
+            raise ValueError('Source identity must be nonempty and at most120characters')
+        identifier = identifier.strip()
+        if identifier in ids:
+            raise ValueError('Sources require unique identities')
+        ids.add(identifier)
+        income, foreign, rate = (source[key] for key in ('income', 'foreign_tax', 'rate'))
+        if any(type(value) is not Fraction or value < 0 for value in (income, foreign, rate)):
+            raise ValueError('Source amounts and rate must be nonnegative exact fractions')
+        if foreign > income or rate >= 1:
+            raise ValueError('Source tax cannot exceed income and rate must be below one')
+        ceiling = min(foreign, rate*(income-foreign)/(1-rate))
+        rows.append(dict(source_id=identifier, income=income, foreign_tax=foreign,
+                         rate=rate, source_credit_ceiling=ceiling))
+    total_ceiling = sum((row['source_credit_ceiling'] for row in rows), Fraction(0))
+    aggregate = _reconcile_aggregate_cap(
+        income=domestic_income+sum((row['income'] for row in rows), Fraction(0)),
+        foreign_tax=sum((row['foreign_tax'] for row in rows), Fraction(0)),
+        source_ceiling=total_ceiling, bands=bands, reduction=reduction)
+    credit = aggregate['foreign_tax_credit']
+    ranges = [dict(source_id=row['source_id'], source_credit_ceiling=row['source_credit_ceiling'],
+        minimum_credit=max(Fraction(0), credit-(total_ceiling-row['source_credit_ceiling'])),
+        maximum_credit=min(credit, row['source_credit_ceiling'])) for row in rows]
+    unique = all(row['minimum_credit'] == row['maximum_credit'] for row in ranges)
+    if allocations is None and unique:
+        allocations = {row['source_id']: row['minimum_credit'] for row in ranges}
+    reconciled = None
+    if allocations is not None:
+        if not isinstance(allocations, dict) or set(allocations) != ids:
+            raise ValueError('Allocations must cover exactly the reconciled source identities')
+        if any(type(value) is not Fraction or value < 0 for value in allocations.values()):
+            raise ValueError('Allocated credits must be nonnegative exact fractions')
+        if sum(allocations.values(), Fraction(0)) != credit:
+            raise ValueError('Allocated credits must equal the reconciled aggregate credit')
+        reconciled = []
+        for row, limits in zip(rows, ranges):
+            allocated = allocations[row['source_id']]
+            if not limits['minimum_credit'] <= allocated <= limits['maximum_credit']:
+                raise ValueError('Allocated credit exceeds the feasible source interval')
+            deduction = row['foreign_tax']-allocated
+            base = row['income']-deduction
+            reconciled.append(dict(source_id=row['source_id'], foreign_tax_credit=allocated,
+                excess_foreign_tax_deduction=deduction,
+                source_income_after_foreign_tax_deduction=base,
+                tax_on_reconciled_source=base*row['rate']))
+    return dict(aggregate=aggregate, source_credit_ranges=ranges,
+                source_reconciliation=reconciled, allocation_required=reconciled is None,
+                allocation_is_unique=unique,
+                stage='established_source_and_aggregate_constraints_before_policy_and_rounding')
+
+
 def _reconcile_aggregate_cap(*, income, foreign_tax, source_ceiling, bands, reduction):
     """Exact arithmetic for an independently established annual tax schedule.
 

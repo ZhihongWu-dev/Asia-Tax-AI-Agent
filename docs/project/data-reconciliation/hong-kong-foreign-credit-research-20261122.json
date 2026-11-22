@@ -1,5 +1,13 @@
 {
   "status": "fsie_credit_component_implemented_annual_workflow_pending",
+  "source_allocation_constraints": {
+    "implementation": "packages/income_tax/hong_kong_credit_basis.py:_reconcile_source_caps",
+    "scope": "Internal exact arithmetic joins independently established source rates, eligible taxes and deduction bases to aggregate reconciliation. It is not a determination of statutory allocation priority, current-year policy or eligibility.",
+    "finding": "When aggregate credit C is below the sum of independent source ceilings, feasible source allocations can be nonunique. Source i must lie between max(0,C-sum(other ceilings)) and min(C,ceiling_i). A correct annual total alone does not prove correct source deductions.",
+    "behavior": "Derive unique allocations automatically, including one eligible source, nonbinding aggregate cap and zero total credit. Otherwise return allocation_required with exact source intervals and no invented source ledger. Explicit allocations must cover every source, sum exactly to reconciled credit and satisfy all source intervals; deductions and bases are recomputed per source.",
+    "validation": "46 focused source-allocation and aggregate-cap tests passed1.90s; complete Hong Kong selection169passed23.34s. Covers distinct feasible allocations, per-source and aggregate conservation, unchanged inputs, source-order and equal-split invariance, unique and ambiguous outcomes, missing/extra IDs, excess source credit despite correct total, invalid rates and duplicates. All3diagnostic cases reproduced with allocation ambiguity recorded explicitly.",
+    "remaining": "Connect verified saved source eligibility and statutory annual rate/schedule, establish allocation treatment for actual returns, and then integrate annual API/report/UI. No annual workflow completion claimed."
+  },
   "aggregate_cap_arithmetic": {
     "implementation": "packages/income_tax/hong_kong_credit_basis.py:_reconcile_aggregate_cap",
     "contract": "Internal exact-Fraction primitive for an independently established marginal schedule, fixed reduction and source-credit ceiling. Maximizes C subject to 0<=C<=source ceiling and C<=max(0,T(I-F+C)-reduction), with deduction F-C. Does not derive legal rates, eligibility, source allocation, rounding or refunds.",

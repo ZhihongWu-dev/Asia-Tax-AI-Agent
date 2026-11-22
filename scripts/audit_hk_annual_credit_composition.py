@@ -12,7 +12,7 @@ from fractions import Fraction as F
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from packages.income_tax.hong_kong_credit_basis import _reconcile_aggregate_cap
+from packages.income_tax.hong_kong_credit_basis import _reconcile_source_caps
 
 
 def tax(income, two_tier):
@@ -38,9 +38,11 @@ def probe(name, domestic, sources, two_tier=False):
     deductions = sum((row["deduction"] for row in rows), F(0))
     recomputed = tax(total - deductions, two_tier)
     bands = ((F(2_000_000), F(165,2000)), (None,F(165,1000))) if two_tier else ((None,F(165,1000)),)
-    reconciled = _reconcile_aggregate_cap(income=total,
-        foreign_tax=sum((row["foreign_tax"] for row in rows),F(0)),
-        source_ceiling=credits,bands=bands,reduction=F(3000))
+    source_result = _reconcile_source_caps(domestic_income=F(domestic),
+        sources=[dict(source_id=f"source_{index+1}",income=row["income"],
+            foreign_tax=row["foreign_tax"],rate=rate) for index,row in enumerate(rows)],
+        bands=bands,reduction=F(3000))
+    reconciled = source_result["aggregate"]
     return {"case": name, "two_tier": two_tier,
             "candidate_rate": ratio(rate),
             "sources": [{key: ratio(value) for key, value in row.items()} for row in rows],
@@ -48,6 +50,10 @@ def probe(name, domestic, sources, two_tier=False):
             "aggregate_source_credit": ratio(credits),
             "candidate_final_tax": ratio(recomputed - credits),
             "conditional_joint_reconciliation": {key:ratio(value) for key,value in reconciled.items()},
+            "conditional_source_allocation_required": source_result["allocation_required"],
+            "conditional_source_credit_ranges": [
+                {key:ratio(value) if isinstance(value,F) else value for key,value in row.items()}
+                for row in source_result["source_credit_ranges"]],
             "violates_nonnegative_annual_tax": credits > recomputed}
 
 
@@ -64,6 +70,9 @@ def main():
     assert cases[0]["aggregate_source_credit"] == cases[1]["aggregate_source_credit"]
     assert all(case["conditional_joint_reconciliation"]["tax_after_credit"] == ratio(F(0)) for case in cases)
     assert cases[0]["conditional_joint_reconciliation"] == cases[1]["conditional_joint_reconciliation"]
+    assert not cases[0]["conditional_source_allocation_required"]
+    assert cases[1]["conditional_source_allocation_required"]
+    assert not cases[2]["conditional_source_allocation_required"]
     result = {"status": "conditional_counterexamples_not_approved_tax_answers",
               "unverified_assumption": "Average rate uses annual tax after reduction divided by income before excess-tax deduction.",
               "finding": "Independent source reconciliation can exceed recomputed annual tax. Resolve Section50(4) aggregate cap jointly with Section50(5) deduction and Section100 reduction before enabling annual assessment.",

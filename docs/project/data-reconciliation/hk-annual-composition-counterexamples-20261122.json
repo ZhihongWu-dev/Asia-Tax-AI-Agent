@@ -68,6 +68,24 @@
           "denominator": "28891"
         }
       },
+      "conditional_source_allocation_required": false,
+      "conditional_source_credit_ranges": [
+        {
+          "source_id": "source_1",
+          "source_credit_ceiling": {
+            "numerator": "2160000",
+            "denominator": "173"
+          },
+          "minimum_credit": {
+            "numerator": "2040000",
+            "denominator": "167"
+          },
+          "maximum_credit": {
+            "numerator": "2040000",
+            "denominator": "167"
+          }
+        }
+      ],
       "violates_nonnegative_annual_tax": true
     },
     {
@@ -153,6 +171,39 @@
           "denominator": "28891"
         }
       },
+      "conditional_source_allocation_required": true,
+      "conditional_source_credit_ranges": [
+        {
+          "source_id": "source_1",
+          "source_credit_ceiling": {
+            "numerator": "1080000",
+            "denominator": "173"
+          },
+          "minimum_credit": {
+            "numerator": "172560000",
+            "denominator": "28891"
+          },
+          "maximum_credit": {
+            "numerator": "1080000",
+            "denominator": "173"
+          }
+        },
+        {
+          "source_id": "source_2",
+          "source_credit_ceiling": {
+            "numerator": "1080000",
+            "denominator": "173"
+          },
+          "minimum_credit": {
+            "numerator": "172560000",
+            "denominator": "28891"
+          },
+          "maximum_credit": {
+            "numerator": "1080000",
+            "denominator": "173"
+          }
+        }
+      ],
       "violates_nonnegative_annual_tax": true
     },
     {
@@ -220,6 +271,24 @@
           "denominator": "22387"
         }
       },
+      "conditional_source_allocation_required": false,
+      "conditional_source_credit_ranges": [
+        {
+          "source_id": "source_1",
+          "source_credit_ceiling": {
+            "numerator": "8500000",
+            "denominator": "61"
+          },
+          "minimum_credit": {
+            "numerator": "48300000",
+            "denominator": "367"
+          },
+          "maximum_credit": {
+            "numerator": "48300000",
+            "denominator": "367"
+          }
+        }
+      ],
       "violates_nonnegative_annual_tax": true
     }
   ]
