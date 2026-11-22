@@ -1,5 +1,13 @@
 {
-  "status": "statute_and_current_decree_archived_component_and_workflow_pending",
+  "status": "current_country_credit_component_implemented_history_and_workflow_pending",
+  "country_credit_component": {
+    "validation": "48 tests passed2.11s across new country-credit component and existing Korean relief/company calculations. Country isolation, capped expense-related excess, exact conservation, invalid inputs and archived source hashes covered.",
+    "file": "packages/income_tax/korea_foreign_credit.py",
+    "scope": "Verified current-year direct taxes, separate country bases, corresponding expenses, allocated deductions and relief-income reductions. No prior credits, competing reliefs, underlying/deemed taxes, source losses or excluded dividends inferred.",
+    "calculation": "Exact pre/post-expense country limits. Eligible tax splits into current credit, expense-related unused amount excluded from carryforward, and ordinary current-year carryforward. Expense-related amount cannot exceed actual unused eligible tax.",
+    "synthetic_case": "National base1000/tax200; foreign income500, corresponding expenses100, eligible foreign tax150: pre-expense limit100, final limit80, current credit80, expense-related excess20, ordinary carry50.",
+    "remaining": "Historical expiry and usage ordering; allocation when foreign bases exceed national base; verified income/payment reconciliation; national relief integration; local tax; saved API/UI/reports. Component result is not an annual return."
+  },
   "current_decree_archive": {
     "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=290843&efYd=20261001&chrClsCd=010202&lsId=003608",
     "file": "database/raw/kr/kr.corporate-decree.20261001.html",
