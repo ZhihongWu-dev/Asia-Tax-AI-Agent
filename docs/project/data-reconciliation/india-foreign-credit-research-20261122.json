@@ -1,0 +1,17 @@
+{
+  "status": "official_current_form_guidance_verified_calculation_rule_review_pending",
+  "date": "2026-11-22",
+  "current_gap": "india_company.py explicitly excludes foreign income and credits. Ordinary domestic-company calculations do not establish corporate FTC support.",
+  "primary_source": "https://www.incometaxindia.gov.in/documents/d/guest/fn-44",
+  "title": "Guidance Note with respect to Form No.44 and Form No.45: Foreign Tax Credit",
+  "verified_findings": [
+    "Guidance refers to Income-tax Rules2026 Rule76 and Income-tax Act2025, not just legacy Rule128/Form67.",
+    "Form44 records foreign income/credit and refunds of foreign tax previously credited; source-wise income, tax and applicable treaties must be documented.",
+    "Guidance states company Form44 accountant verification under Rule76(16); Form45 concerns settlement of disputed foreign tax with separate timing and verification conditions."
+  ],
+  "next_steps": [
+    "Retrieve final notified Rule76 and current Act159/160; do not implement from the draft rules surfaced by search.",
+    "Resolve source/country limits, surcharge/cess, MAT interaction, FX, dispute exclusions and refund effects before integrating with saved company and personal flows."
+  ],
+  "scope": "Research only; no new Indian foreign-credit calculator or completed business acceptance claimed."
+}
