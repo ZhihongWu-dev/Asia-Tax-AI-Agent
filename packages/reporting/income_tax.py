@@ -143,6 +143,19 @@ def render(run, locale='zh'):
                 row['annual_allowable_expenses'], row['foreign_tax_in_annual_expenses'],
                 row['rd300_exemption'], row['uncredited_and_undeducted_foreign_tax']]
             lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
+        allocations = [(row['country'], entry) for row in result['foreign_credit_reconciliation']['country_reconciliation']
+            for entry in row.get('business_tax_period_allocations', [])]
+        if allocations:
+            lines += ['', '### ' + say('境外经营税款期间分摊', 'Foreign business tax period allocation'), '',
+                '| ' + say('国家 | 凭证 | 所得年度结束日 | 税款支付日 | 归属本期税款 | 需更正原申报',
+                    'Country | Evidence | Income period end | Tax payment date | Tax allocated to this period | Original return amendment required') + ' |',
+                '| --- | --- | --- | --- | --- | --- |']
+            for country, entry in allocations:
+                amendment = entry['amendment_required']
+                status = say('待确认原申报日期', 'Original filing date unknown') if amendment is None else (say('是', 'Yes') if amendment else say('否', 'No'))
+                values = [country.upper(), entry['evidence_reference'], entry['thai_period_end'], entry['payment_date'],
+                    entry['allocated_tax_before_credit_limits'], status]
+                lines.append('| ' + ' | '.join(_text(v) for v in values) + ' |')
     if result.get('tokyo_local'):
         local = result['tokyo_local']
         lines += ['', '## ' + say('东京23区地方税明细', 'Tokyo 23-ward local tax details'), '',

@@ -4,10 +4,11 @@ This validates a final expense workpaper, rather than inferring expense
 eligibility or solving an assumed excess-tax deduction formula.
 """
 from decimal import Decimal, localcontext
+from fractions import Fraction
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from packages.contracts.income_tax import Money
-from .thailand_company_foreign_limits import CountryBasis, calculate
+from .thailand_company_foreign_limits import CountryBasis, ForeignPeriodTax, allocate_foreign_period_tax, calculate
 
 SOURCES = [
     dict(doc_id='th.rd300.foreign-credit', title='Royal Decree300 foreign tax exemption',
@@ -19,11 +20,18 @@ SOURCES = [
 ]
 
 
+class BusinessTaxPeriod(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    evidence_reference: str = Field(min_length=1, max_length=200, pattern=r'\S')
+    allocation: ForeignPeriodTax
+
+
 class CountryExpenses(BaseModel):
     model_config = ConfigDict(extra='forbid')
     basis: CountryBasis
     annual_allowable_expenses: Money
     foreign_tax_in_annual_expenses: Money
+    business_tax_periods: list[BusinessTaxPeriod] = Field(default_factory=list, max_length=200)
 
 
 class SavedWorkpaper(BaseModel):
@@ -79,6 +87,24 @@ def reconcile(case, workpaper, *, scheme, exempt_income, allowed_tax_credits):
                 raise ValueError('Country revenue must reconcile to saved gross income before foreign tax')
             if b.business_foreign_tax_paid + b.company_receipt_foreign_tax_paid != paid:
                 raise ValueError('Country paid tax must reconcile to saved foreign tax')
+            allocations = []
+            if row.business_tax_periods:
+                if b.treatment == 'company_receipts':
+                    raise ValueError('Business tax period allocation requires a business-income treatment')
+                refs = [entry.evidence_reference.strip() for entry in row.business_tax_periods]
+                if len(set(refs)) != len(refs):
+                    raise ValueError('Foreign business tax payment evidence references must be unique within country')
+                allocated_total = Fraction(0)
+                for entry in row.business_tax_periods:
+                    allocation = entry.allocation
+                    if (allocation.thai_period_start, allocation.thai_period_end) != (case.period_start, case.period_end):
+                        raise ValueError('Allocation must use the saved Thai accounting period')
+                    output = allocate_foreign_period_tax(allocation)
+                    exact = output['exact_allocated_tax']
+                    allocated_total += Fraction(int(exact['numerator']), int(exact['denominator']))
+                    allocations.append(dict(evidence_reference=entry.evidence_reference.strip(), **output))
+                if allocated_total != Fraction(b.business_foreign_tax_paid):
+                    raise ValueError('Allocated business tax must exactly reconcile to the saved annual business tax; no implicit rounding')
             net_method_expenses = b.business_allowable_expenses + b.company_receipt_allowable_expenses
             if (row.annual_allowable_expenses < net_method_expenses or
                     b.treatment in ('business_net', 'mixed_combined') and row.annual_allowable_expenses != net_method_expenses):
@@ -90,7 +116,8 @@ def reconcile(case, workpaper, *, scheme, exempt_income, allowed_tax_credits):
             rows.append(dict(country=b.country, gross_income=gross, foreign_tax_paid=paid,
                 annual_allowable_expenses=row.annual_allowable_expenses,
                 foreign_tax_in_annual_expenses=deducted, rd300_exemption=credit,
-                uncredited_and_undeducted_foreign_tax=paid-credit-deducted))
+                uncredited_and_undeducted_foreign_tax=paid-credit-deducted,
+                business_tax_period_allocations=allocations))
         derived_credit = limits['credit_before_annual_reconciliation']
         if allowed_tax_credits != derived_credit:
             raise ValueError('Allowed credits must equal the derived RD300 exemption; separate other credit paths')
