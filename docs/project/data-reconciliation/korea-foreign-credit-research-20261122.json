@@ -1,0 +1,26 @@
+{
+  "status": "statutory_formula_reviewed_decree_and_workflow_pending",
+  "scope": "Corporate foreign tax credits; existing korea_company.py covers ordinary domestic national/local settlement and does not establish foreign credit support.",
+  "reviewed_primary_source": {
+    "file": "database/raw/kr/kr.corporate-tax-act.20260701.ko.pdf",
+    "sha256": "257a709a6264d79df36f9f0d4ec42934304a0d07e99dcb875606e5c4ed21c599",
+    "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsId=001563",
+    "locator": "Article57, physical pages35-36; formula on page36 visually inspected",
+    "formula": "Credit limit=A*B/C. A is calculated national corporate tax excluding specified land-transfer and investment/distribution-related separate taxes; B is foreign income reduced for relevant income-tax reduction/exemption proportion; C is the year's corporate income tax base.",
+    "findings": [
+      "Paid or payable eligible foreign corporate tax is creditable within the limit.",
+      "Excess can carry into business years ending within10years from the following business-year start; expired unused tax may be deductible in the business year containing the day after expiry.",
+      "Article57(7) excludes dividends subject to Article18-4 income exclusion from paragraphs1-6 credit rules.",
+      "Tax-sparing and underlying dividend tax are distinct statutory routes with treaty/decree conditions; do not infer eligibility from direct tax payments."
+    ]
+  },
+  "decree_review_pending": {
+    "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsId=003608",
+    "observed_version": "Effective2026-10-01, Presidential Decree36738 dated2026-09-30",
+    "access": "Search exposes Article94 excerpts; opened HTML contains the version header but not full dynamic provision text. Full text must be retrieved and archived before implementing detailed country/net-income rules.",
+    "items": ["Eligible tax exclusions and treaty caps", "Country-by-country limits", "Expense allocation", "Carryforward priority and transitional expiry", "Local corporate-income-tax treatment"]
+  },
+  "version_risk": "Official2022 English Korean Taxation guide still describes a five-year carry period, contrary to reviewed2026 Korean Article57. Do not use the older guide as the current carryforward rule.",
+  "next": "Obtain current Article94 and local-tax provisions, then integrate derived credits with existing CTA59 relief ordering and saved national/local assessment. No new Korea foreign policy enabled.",
+  "development_reference": "Pydantic official GitHub model/validator documentation searched; existing framework conventions retained, no copied code or new dependency."
+}
