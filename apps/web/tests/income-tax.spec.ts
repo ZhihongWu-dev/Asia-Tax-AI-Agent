@@ -6,6 +6,41 @@ import { test, expect } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 import {indiaForeignChecks} from '../src/india-foreign-assessment';
 
+test('Japan Osaka foreign company saves nine tax settlements and reopens',async({page})=>{
+ test.setTimeout(90000);
+ const form=await openIncome(page);
+ for(const [name,value] of [['Taxpayer','company'],['Filing jurisdiction','jp'],['Tax residency','resident'],['Income category','royalty'],['Income source jurisdiction','sg']])await form.getByRole('combobox',{name,exact:true}).selectOption(value);
+ for(const [name,value] of [['Period start','2026-04-01'],['Period end','2027-03-31'],['Gross income','120000000'],['Foreign tax paid (blank if unknown)','30000000'],['Income description','Synthetic Japanese company foreign royalties with Osaka offices'],['Claimed deductions (blank if unknown)','20000000'],['Carried losses (blank if unknown)','0']])await form.getByLabel(name,{exact:true}).fill(value);
+ await form.getByRole('checkbox').check();await form.getByRole('button',{name:'Save income-tax details'}).click();
+ const calc=page.getByRole('region',{name:'Income-tax calculation',exact:true});
+ await calc.getByLabel('Applicable regime').selectOption('jp_osaka_company_foreign_starting_2026');
+ await calc.getByRole('combobox',{name:'Corporation-rate classification',exact:true}).selectOption('ordinary');
+ for(const [key,,label] of osakaAmounts)if(key!=='eligible_enterprise_prior_losses')await calc.getByLabel(label,{exact:true}).fill(key==='registered_capital'||key==='adjusted_statutory_capital'?'10000000':'0');
+ for(const [name,value] of [['Corporation interim liability','0'],['Local corporation interim liability','0'],['Number of wards with offices (aggregate within each ward)','1'],['Ward employee count 1','10'],['Income 1: verified expenses','20000000'],['Income 1: foreign-tax-exempt net income','0'],['Income 1: eligible foreign tax','30000000']])await calc.getByLabel(name,{exact:true}).fill(value);
+ await calc.getByRole('combobox',{name:'Ward 1',exact:true}).selectOption('北区');
+ const confirmations=calc.locator('select').filter({has:page.locator('option[value="true"]')});
+ for(let n=0;n<await confirmations.count();n++)await confirmations.nth(n).selectOption('true');
+ await calc.getByLabel('Tax-basis adjustments and eligibility explanation').fill('Verified ordinary company, foreign tax entitlement, source expenses and Osaka local scope.');
+ await calc.getByRole('checkbox').check();
+ const saved=page.waitForResponse(r=>r.url().endsWith('/income-tax/runs')&&r.request().method()==='POST');
+ await calc.getByRole('button',{name:'Calculate and save result'}).click();
+ const response=await saved;expect(response.status()).toBe(200);const snapshot=await response.json();
+ expect(Object.keys(snapshot.result.settlements)).toHaveLength(9);
+ expect(Number(snapshot.result.total_annual_liability)).toBe(13377700);
+ expect(Number(snapshot.result.current_foreign_credit.foreign_tax_above_all_current_limits)).toBe(4852560);
+ const result=page.getByRole('article',{name:'Saved calculation result'});
+ const detail=result.getByRole('region',{name:'Japan Osaka cross-border company settlement'});
+ await expect(detail).toContainText('649600');await expect(detail).toContainText('4852560');
+ const downloading=page.waitForEvent('download');await result.getByRole('button',{name:'Download calculation record'}).click();
+ const report=await readFile((await (await downloading).path())!,'utf8');
+ expect(report).toContain('Japan Osaka cross-border company settlement');expect(report).toContain('4852560');
+ await calc.getByLabel('Income 1: eligible foreign tax',{exact:true}).fill('30000001');
+ await expect(calc.getByRole('checkbox')).not.toBeChecked();await calc.getByRole('checkbox').check();
+ const rejected=page.waitForResponse(r=>r.url().endsWith('/income-tax/runs')&&r.request().method()==='POST');
+ await calc.getByRole('button',{name:'Calculate and save result'}).click();expect((await rejected).status()).toBe(422);
+ await openIncome(page);await expect(page.getByRole('region',{name:'Japan Osaka cross-border company settlement'})).toContainText('649600');
+});
+
 for(const country of ['cn','sg','id'])test(`Vietnam foreign company ${country} saves treaty credits and reopens`,async({page})=>{
  test.setTimeout(60000);
  const form=await openIncome(page);

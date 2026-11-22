@@ -263,6 +263,14 @@
   },
   "last_reconciled": "2026-11-22",
   "business_priority": "Cross-border corporate income and foreign tax credits; corporate and personal coverage across all 11 jurisdictions remains required.",
+  "japan_osaka_foreign_checkpoint_20261122": {
+    "base_commit": "0ae3c3f",
+    "policy": "jp_osaka_company_foreign_starting_2026",
+    "scope": "Ordinary full-year Osaka-city-office company with current standard-limit foreign credits, nine separately settled national/local/capitation components. Saved API/UI and bilingual reports verified.",
+    "validation": "2394 income/report tests passed104.22s;213 assessment calls,45policies,153source records,0unresolved.1browser flow passed1.1m;production build passed. Final targeted API/report rerun3passed12.07s.",
+    "evidence": "japan-foreign-credit-research-20261122.json",
+    "remaining": "Historical balances/reductions, actual-rate elections, other local scopes, foreign offices and special regimes remain unimplemented. Broader corporate/personal business acceptance and original goal remain incomplete."
+  },
   "vietnam_foreign_checkpoint_20261122": {
     "base_commit": "7698f6c",
     "policy": "vn_company_foreign_ordinary20_2026",

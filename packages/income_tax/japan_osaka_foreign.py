@@ -106,4 +106,4 @@ def settle(case,source_workpaper,local_workpaper,*,rate_regime,rate_classificati
             total_annual_liability=sum((v['annual_liability'] for v in settlements.values()),Decimal(0)),
             total_payable=sum((v['payable'] for v in settlements.values()),Decimal(0)),
             total_refundable=sum((v['refundable'] for v in settlements.values()),Decimal(0)),
-            sources=list(sources.values()),stage='saved_current_year_settlement_history_and_api_ui_pending')
+            sources=list(sources.values()),stage='current_standard_limit_annual_settlement_history_excluded')

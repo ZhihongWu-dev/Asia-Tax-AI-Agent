@@ -32,7 +32,7 @@ def calculate(case: IncomeTaxCase, basis):
                'my': ('2026-01-01', '2026-12-31'), 'th': ('2026-01-01', '2026-12-31'),
                'id': ('2026-01-01', '2026-12-31'), 'vn': ('2026-01-01', '2026-12-31'),
                'jp': ('2026-01-01', '2026-12-31'), 'kr': ('2026-01-01', '2026-12-31'), 'in': ('2026-04-01', '2027-03-31')}
-    if policy=='jp_company_starting_2026':
+    if policy in ('jp_company_starting_2026','jp_osaka_company_foreign_starting_2026'):
         japan_company.annual_period(case.period_start,case.period_end)
     elif (case.period_start.isoformat(), case.period_end.isoformat()) != periods[jur]:
         raise ValueError('Saved basis period is not supported by this policy')
@@ -59,7 +59,10 @@ def calculate(case: IncomeTaxCase, basis):
         cn_reconciliation = china.reconcile_company_basis(case,
             taxable_income=basis.taxable_income,
             non_taxable_income=args.pop('non_taxable_income'), exempt_income=args.pop('exempt_income'))
-    if policy=='vn_company_foreign_ordinary20_2026':
+    if policy=='jp_osaka_company_foreign_starting_2026':
+        from .japan_osaka_foreign import settle
+        result=settle(case,**args)
+    elif policy=='vn_company_foreign_ordinary20_2026':
         from .vietnam_foreign_assessment import assess
         result=assess(case,basis.workpaper,basis.prepaid_tax)
     elif policy=='cn_personal_foreign_2026':

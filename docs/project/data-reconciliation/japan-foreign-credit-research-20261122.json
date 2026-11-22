@@ -1,6 +1,6 @@
 {
   "date": "2026-11-22",
-  "status": "current_national_settlement_and_local_allocation_components_annual_goal_incomplete",
+  "status": "osaka_current_standard_credit_saved_annual_workflow_verified_overall_goal_incomplete",
   "validation": "19 new component/source-integrity tests passed1.15s;267 Japan-selected income tests passed26.41s,1991deselected. This does not validate an annual foreign-credit UI/API, which is not enabled yet.",
   "sources": [
     {
@@ -91,6 +91,18 @@
     "validation": "26 tests passed2.91s: ten foreign catalog countries, nine independently expected tax components, separate refunds/payments, one-yen credit rounding, multiple wards, independent enterprise adjustments, invalid scope/input rejection, ambient precision independence and archived source hashes.390 Japan-selected regression tests passed22.92s,1991deselected.",
     "development_reference": "Official CPython GitHub decimal documentation searched before implementation. Existing Decimal/localcontext and integer-unit truncation conventions reused without copied code or new dependencies.",
     "remaining": "Persisted assessment API/UI/report integration and historical balances remain pending. This calculation does not prove broad Japan or overall business acceptance."
+  },
+  "persisted_osaka_workflow": {
+    "policy": "jp_osaka_company_foreign_starting_2026",
+    "base_commit": "0ae3c3f",
+    "integration": "Discriminated assessment contract and full-year router, dynamic bilingual source/local workpaper form, nine-component results and bilingual deterministic report. Original saved source facts drive the calculation; manual credit-limit overrides are not exposed.",
+    "api": "Three SG/CN/ID cases passed: SQLite reopen, exact idempotent replay, nine component amounts, independent refunds/payments, bilingual report sources and sanitized422 rejection without changing earlier saved reports. Final targeted rerun3passed12.07s.",
+    "browser": "One Edge workflow passed1.1m: form submission, nine settlements, expected annualJPY13377700, excessJPY4852560, report download, excessive eligible-tax422 and reopen. Initial run failed on a test-only select label locator; role-based locator corrected and flow passed.",
+    "full_regression": "2394 income/report tests passed104.22s;213 successful assessment calls,45policies,153source records,0unresolved. Final stage wording/report-total changes followed by targeted API/report rerun.",
+    "source_audit": "D:/Documents/ChatGPT/AI tax/integration-audit-20261116/japan-osaka-foreign-source-audit-20261122.json",
+    "build": "Production build passed:2299modules,8.45s. Existing large-bundle warning remains.",
+    "development_reference": "Official pydantic/pydantic GitHub serialization documentation reviewed before development. Existing TypeAdapter JSON serialization reused; no copied external code or dependency introduced.",
+    "remaining": "Historical capacity/excess and reductions, actual-rate elections, foreign offices, Tokyo/other local scopes, source-tax eligibility automation, dividends/special regimes and wider personal/business acceptance remain required. Earlier component pending notes are chronological checkpoints superseded only for this stated Osaka workflow."
   },
   "overall_goal": "Incomplete. Original corporate/personal coverage and real business acceptance remain required. Priority: cross-border corporate income and foreign tax credits."
 }

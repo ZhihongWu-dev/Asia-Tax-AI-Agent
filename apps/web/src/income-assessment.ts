@@ -1,5 +1,6 @@
 import {uaeForeignPolicy} from './uae-foreign-assessment';
 import {vietnamForeignPolicy} from './vietnam-foreign-assessment';
+import {japanOsakaForeignPolicy} from './japan-osaka-foreign';
 import {malaysiaForeignPolicy} from './malaysia-foreign-assessment';
 import {indonesiaForeignPolicy} from './indonesia-foreign-assessment';
 import {indiaForeignPolicy} from './india-foreign-assessment';
@@ -83,6 +84,7 @@ export function policies(input: IncomeTaxInput, values:Record<string,string>={})
   if (input.jurisdiction==='jp' && company && input.residency==='resident' && /^2026-\d{2}-\d{2}$/.test(input.period_start)) {
     const [,month,day]=input.period_start.split('-').map(Number);
     const annualEnd=new Date(Date.UTC(2027,month-1,day)-86400000).toISOString().slice(0,10);
+    if(input.period_end===annualEnd&&input.incomes.some(i=>i.source_jurisdiction!=='jp'))return [japanOsakaForeignPolicy(input,values)];
     if(input.period_end===annualEnd)return [{id:'jp_company_starting_2026',label:['日本普通企业国家税（2026年开始的完整年度）','Japan ordinary company national taxes (full year starting 2026)'],
       notice:['分别计算法人税、地方法人税（国税）及适用时的防卫特别法人税，未启用东京或大阪附加评税时不含地方住民税及事业税；最低补足税始终不在范围内。保存收入与核定扣除须为完成纳税调整后的益金、损金；以前年度亏损栏仅填核实法定限额和年度后本期可扣金额，不得与核定扣除重复。系统在千日元取整前核对税基，未用亏损不代表准予结转。仅限无税额抵免、扣缴抵免、税额加算或留保金附加税的境内普通企业，不含通算集团及特殊主体。小企业须核对期末资本和大法人控制等排除条件；适用除外事业者须核对前三年法定年均所得超过15亿日元等调整。符合特例时，年所得超过10亿日元时首800万部分适用17%；超过门槛但千日元取整后未超过的情形须人工复核。防卫税按开始日判断，4月1日起即使税额为0也须申报。中间申告金额填应纳义务，不论实缴；各税种补退分别处理，不自动互抵。',
         'Separately calculates corporation tax, local corporation tax (a national tax) and applicable defence tax; excludes prefectural/municipal inhabitant and enterprise taxes unless the optional Tokyo or Osaka assessment is enabled. Minimum top-up taxes remain excluded. Saved income and deductions must be statutory taxable revenue and allowable expenses after tax adjustments. Enter only the verified current-period loss deduction after statutory limits and vintage checks, without duplicating it in deductions. The system reconciles before JPY 1,000 truncation; unused losses do not establish carryforward entitlement. Ordinary domestic companies without tax credits, withholding credits, tax additions or retained-profit surtax only; no tax groups or special entities. Verify SME year-end capital and large-company control exclusions. Excluded-business classification uses the statutory prior-three-year average above JPY 1.5bn and its adjustments. Eligible reduced-rate companies with current income above JPY 1bn use 17% on the first JPY 8m; cases above the threshold only before JPY 1,000 truncation require manual review. Defence tax applies by start date from 1 April, including zero-tax returns. Interim amounts are liabilities regardless of payment; settle each tax separately without automatic offsets.'],

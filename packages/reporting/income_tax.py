@@ -47,6 +47,7 @@ def render(run, locale='zh'):
             ('chargeable_income','应课税收入','Chargeable income'),
             ('gross_tax','减免及抵免前税额','Tax before relief'),
             ('annual_liability','本期税额','Annual liability'),
+            ('total_annual_liability','本期各项税费合计','Total annual liability'),
             ('final_tax','本期最终税额','Final tax'), ('net_tax','减免后税额','Tax after relief'),
             ('total_payable','分别应缴合计（不与应退互抵）','Total payable (not netted against refunds)'),
             ('total_refundable','分别应退合计（不与应缴互抵）','Total refundable (not netted against payments)'),
@@ -90,6 +91,32 @@ def render(run, locale='zh'):
                 '| --- | --- | --- | --- | --- | --- | --- |']
             for row in result['local_basis']['historical_local_deductions']:
                 lines.append('| ' + ' | '.join(_text(row[k]) for k in ('identifier','kind','original_amount','previously_deducted','current_deduction','excluded_from_next_carry','next_carryforward')) + ' |')
+    if result.get('policy_version') == 'jp-osaka-current-foreign-settlement-20261122':
+        labels={'corporation':('法人税','Corporation tax'),'local_corporation':('地方法人税','Local corporation tax'),
+            'defence':('防卫特别法人税','Defence corporation tax'),'enterprise':('事业税','Enterprise tax'),
+            'special_enterprise':('特别法人事业税','Special enterprise tax'),
+            'prefectural_inhabitant':('府民税法人税割','Prefectural corporation levy'),
+            'city_inhabitant':('市民税法人税割','City corporation levy'),
+            'prefectural_capitation':('府民税均等割','Prefectural capitation'),
+            'city_capitation':('市民税均等割','City capitation')}
+        lines += ['', '## '+say('日本大阪跨境企业结算','Japan Osaka cross-border company settlement'), '',
+            say('仅本期标准比例抵免，全部办公室在大阪市。各项补退税分别列示；不含历史结转、境外办公室、实际税率选择或其他优惠。超限额不自动批准结转。',
+                'Current standard-limit credits with all offices in Osaka city. Payments and refunds remain separate. Excludes history, foreign offices, actual-rate elections and competing reliefs. Excess is not automatically approved for carryforward.'), '',
+            '| '+say('税费 | 本期税额 | 预缴 | 应补 | 应退','Tax | Annual liability | Interim liability | Payable | Refundable')+' |',
+            '| --- | --- | --- | --- | --- |']
+        for key,row in result['settlements'].items():
+            lines.append('| '+' | '.join(_text(v) for v in [say(*labels[key])]+[row[k] for k in
+                ('annual_liability','interim_return_liability','payable','refundable')])+' |')
+        credits=result['current_foreign_credit']
+        lines += ['', '### '+say('抵免分配与未抵免余额','Credit allocation and unrelieved balances'), '',
+            '| '+say('层级 | 已用抵免 | 税额不足未抵免 | 分摊舍入余额',
+                'Layer | Credit used | Levy shortfall | Allocation rounding residual')+' |',
+            '| --- | --- | --- | --- |']
+        lines.append('| '+say('国税','National')+' | '+_text(credits['national_credit']['total_current_national_credit'])+' | — | — |')
+        for key,zh,en in [('prefectural','府民税','Prefectural'),('municipal','市民税','Municipal')]:
+            lines.append('| '+' | '.join(_text(v) for v in [say(zh,en)]+[credits[key][k] for k in
+                ('current_credit','unrelieved_due_to_levy_shortfall','unallocated_rounding_residual')])+' |')
+        lines += ['', say('超过本期全部限额：','Above all current limits: ')+_text(credits['foreign_tax_above_all_current_limits'])]
     if result.get('policy_version') == 'vn-company-foreign-ordinary20-2026-20261122':
         lines += ['', '## ' + say('越南境外抵免明细', 'Vietnam foreign credit details'), '',
             say('普通20%税率且不适用低营业额年度减税。视同税与实缴税分开，按同项越南税额限额；超限额不自动批准结转。金额为申报取整前值。',
