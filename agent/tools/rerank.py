@@ -1,4 +1,4 @@
-"""Qwen3-Reranker-0.6B as a local cross-encoder (agent/retrieval_spec.en.md §4.2 item 6), following the model card's
+"""Qwen3-Reranker-0.6B as a local cross-encoder (agent/retrieval_spec.md §4.2 item 6), following the model card's
 transformers recipe. Only the order is used: the probability never leaves this module (no scores in returns)."""
 import os
 

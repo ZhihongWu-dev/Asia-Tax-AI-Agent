@@ -1,6 +1,6 @@
 # Retrieval evaluation
 
-Written by agent/tools/read_eval.py on 2026-11-03T16:43:50Z (case CASE-20261102-a032c0, sample 120). Golden sets and the adoption rule: the module docstring and agent/retrieval_spec.en.md §12. Even items are the development set, odd items the test set.
+Written by agent/tools/read_eval.py on 2026-11-03T16:43:50Z (case CASE-20261102-a032c0, sample 120). Golden sets and the adoption rule: the module docstring and agent/retrieval_spec.md §12. Even items are the development set, odd items the test set.
 
 | Set | Config | Split | n | R@1 | R@5 | R@10 | MRR@10 | nDCG@10 | s/query |
 |---|---|---|---|---|---|---|---|---|---|

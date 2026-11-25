@@ -20,8 +20,7 @@ export default function Composer({
   busy?: boolean;
   onStop?: () => void;
 }) {
-  const { t, locale } = useLocale();
-  const say = (zh: string, en: string) => locale === 'zh' ? zh : en;
+  const { t } = useLocale();
   const [files, setFiles] = useState<Attachment[]>([]);
   useEffect(() => {
     const sent = splitAttachments(lastSentText || '').files;
@@ -103,7 +102,7 @@ export default function Composer({
   const composing = useRef(false);
   async function send() {
     if (busy || reading || (!text.trim() && !files.length) || text.length > 4000) return;
-    const words = text.trim() || say('附件是这个案子的材料。', 'The attached documents belong to this case.');
+    const words = text.trim() || t('The attached documents belong to this case.');
     if (await onSend(words, files)) setFiles([]);
   }
   return (
@@ -116,19 +115,19 @@ export default function Composer({
       }}
     >
       <input ref={input} type="file" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.webp" hidden onChange={e => { void select(Array.from(e.target.files || [])); e.target.value = ''; }} />
-      {dragging && <p role="status">{say('松开以上传附件', 'Drop files to attach')}</p>}
-      {reading && <p role="status">{say('正在上传附件', 'Uploading attachments')} {reading}</p>}
-      {error && <p role="alert">{failed && `${failed}: `}{error === 'too_many' ? say(`一条消息最多 ${MAX_ATTACHMENTS} 个附件。`, `A message can carry up to ${MAX_ATTACHMENTS} attachments.`) : pdfErrors[error]?.[locale === 'zh' ? 0 : 1] || say('上传失败，请重试。', 'Upload failed. Please try again.')}</p>}
+      {dragging && <p role="status">{t('Drop files to attach')}</p>}
+      {reading && <p role="status">{t('Uploading attachments')} {reading}</p>}
+      {error && <p role="alert">{failed && `${failed}: `}{error === 'too_many' ? t('A message can carry up to {n} attachments.').replace('{n}', String(MAX_ATTACHMENTS)) : pdfErrors[error] ? t(pdfErrors[error]) : t('Upload failed. Please try again.')}</p>}
       {files.length > 0 && <FileWindow count={files.length} listClass="attachment-strip">
         {files.map((file, index) => <div className="attachment-chip" key={`${file.name}-${index}`}>
           <>{imageThumbnail(file) ? <img className="attachment-thumbnail" src={imageThumbnail(file)} alt={file.name} /> : <Paperclip size={15} aria-hidden="true" />}</>
           <span className="attachment-name" title={file.name}>{file.name}</span>
-          <button type="button" className="attachment-remove" disabled={busy} aria-label={say('移除附件', 'Remove attachment')} onClick={() => setFiles(current => current.filter((_, at) => at !== index))}><X size={14} /></button>
+          <button type="button" className="attachment-remove" disabled={busy} aria-label={t('Remove attachment')} onClick={() => setFiles(current => current.filter((_, at) => at !== index))}><X size={14} /></button>
         </div>)}
       </FileWindow>}
       <textarea
-        aria-label={t("描述交易背景")}
-        placeholder={t("描述交易背景，并附上相关文件")}
+        aria-label={t("Describe the transaction background")}
+        placeholder={t("Describe the transaction background and attach the documents")}
         value={text}
         rows={2}
         maxLength={4000}
@@ -157,14 +156,14 @@ export default function Composer({
         }}
       />
       <div className="composer-bottom">
-        <button type="button" className="attachment-icon" disabled={busy || Boolean(reading)} onClick={() => input.current?.click()} aria-label={say('添加附件', 'Attach file')} title={say('添加 PDF、Word、Excel 或图片（最多 10 MB）', 'Attach PDF, Word, Excel or an image (up to 10 MB)')}><Paperclip size={21} /></button>
+        <button type="button" className="attachment-icon" disabled={busy || Boolean(reading)} onClick={() => input.current?.click()} aria-label={t('Attach file')} title={t('Attach PDF, Word, Excel or an image (up to 10 MB)')}><Paperclip size={21} /></button>
         <span className="key-hint">
-          {t("Enter 发送")} · Shift + Enter {t("换行")}
+          {t("Enter to send")} · Shift + Enter {t("New line")}
         </span>
-        {onStop ? <HintButton type="button" className="send-button" aria-label={t("停止生成")} onClick={onStop}><Square size={16} fill="currentColor" /></HintButton> : <HintButton
+        {onStop ? <HintButton type="button" className="send-button" aria-label={t("Stop generating")} onClick={onStop}><Square size={16} fill="currentColor" /></HintButton> : <HintButton
           type="submit"
           className="send-button"
-          aria-label={t("发送消息")}
+          aria-label={t("Send message")}
           disabled={busy || Boolean(reading) || (!text.trim() && !files.length)}
         >
           <ArrowUp size={19} />

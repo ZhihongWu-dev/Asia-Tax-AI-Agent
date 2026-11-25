@@ -56,7 +56,7 @@ export default function AuthGate({ children }: { children: ReactNode }) {
     history.replaceState(null, "", "/");
     announce();
   }
-  if (loading) return <main className="startup"><BrandLoader fullPage label={t("正在载入工作空间…")} /></main>;
+  if (loading) return <main className="startup"><BrandLoader fullPage label={t("Loading your workspace…")} /></main>;
   if (!user || reset) return <AuthPage configured={configured} initialError={error} recovery={reset && !!user}
     onLogin={next => { setUser(next); setError(""); history.replaceState(null, "", "/"); announce(); }}
     onRecovered={() => { setReset(false); history.replaceState(null, "", "/"); }} />;

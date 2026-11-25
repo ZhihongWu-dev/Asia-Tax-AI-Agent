@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Parse a case document once, cached by sha256 (agent/retrieval_spec.en.md §6.2).
+"""Parse a case document once, cached by sha256 (agent/retrieval_spec.md §6.2).
 
   python agent/tools/doc_parse.py <file> <cache_dir> [--ocr]
 

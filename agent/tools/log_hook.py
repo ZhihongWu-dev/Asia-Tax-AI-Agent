@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""PostToolUse hook: one line per tool call into cases/<case_id>/log/calls.jsonl (agent/case_mcp_spec.en.md §5).
+"""PostToolUse hook: one line per tool call into cases/<case_id>/log/calls.jsonl (agent/case_mcp_spec.md §5).
 
 Reads the hook's JSON from stdin, infers the case from any `cases/<case_id>/` path or a `case_id` argument in tool_input,
 infers the agent from the tool name prefix `mcp__tax-case-<agent>__` or the hook's agent field, and appends

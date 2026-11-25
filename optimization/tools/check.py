@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Checks of a products directory (优化层规范.md §7) and the golden tests (optimization_test.csv).
+"""Checks of a products directory (optimization_layer_spec.md §7) and the golden tests (optimization_test.csv).
 
   python optimization/tools/check.py --products products/<case>/ [--tests]
 

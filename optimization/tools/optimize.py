@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Optimization layer (优化层规范.md): a read-only shovel that turns one dividend background into products on disk.
+"""Optimization layer (optimization_layer_spec.md): a read-only shovel that turns one dividend background into products on disk.
 
   python optimization/tools/optimize.py run --input <case.json> --out products/<case>/
   python optimization/tools/optimize.py evaluate --products products/<case>/ --path 'cn:company;jp:company;sg:individual' [--moves holding_pct=100]

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Activity, Check, CircleAlert, Download, List, Pause, Play, Route, Workflow, X } from "lucide-react";
+import { Activity, Check, CircleAlert, Download, FileText, List, Pause, Play, Route, Workflow, X } from "lucide-react";
 import HintButton from "./HintButton";
 import RunGraph from "./RunGraph";
 import SearchView from "./SearchView";
@@ -8,35 +8,35 @@ import type { RunView } from "../hooks/useRun";
 import type { RunStep } from "../workspace";
 
 export const STEP_LABEL: Record<string, string> = {
-  intake: "资料接收",
-  review_intake: "资料复核",
-  run: "优化计算",
-  analysis: "撰写简报",
-  review_draft: "简报复核",
-  render: "排版出具 PDF",
-  polish: "润色与出具 PDF",
-  review_final: "终稿比对",
-  review_legal: "法律理由复核",
-  review_final_legal: "终稿法律理由复核",
-  "front-relay": "向你汇报",
+  intake: "Intake",
+  review_intake: "Intake review",
+  run: "Optimizer run",
+  analysis: "Briefing draft",
+  review_draft: "Draft review",
+  render: "Typeset PDF",
+  polish: "Polish and PDF",
+  review_final: "Final check",
+  review_legal: "Legal-reasoning review",
+  review_final_legal: "Final legal-reasoning check",
+  "front-relay": "Reporting back",
 };
 export const AGENT_LABEL: Record<string, string> = {
-  front: "前台 Agent",
-  review: "复核 Agent",
-  analysis: "分析 Agent",
-  polish: "润色 Agent",
-  program: "优化程序",
+  front: "Front agent",
+  review: "Review agent",
+  analysis: "Analysis agent",
+  polish: "Polish agent",
+  program: "Optimizer",
 };
-export const PROGRAM_LABEL: Record<string, string> = { run: "优化程序", render: "排版程序" };
+export const PROGRAM_LABEL: Record<string, string> = { run: "Optimizer", render: "Typesetter" };
 export const whoRuns = (step: RunStep) => step.agent === "program" ? PROGRAM_LABEL[step.id] ?? AGENT_LABEL.program : AGENT_LABEL[step.agent];
 const STOP_NOTE: Record<string, string> = {
-  delivered: "报告已交付。",
-  need_front: "需要你补充信息，请在对话中回复。",
-  rate_limited: "模型额度已用尽。额度恢复后可继续，已完成的步骤不会重做。",
-  agent_failed: "运行因系统错误停止，已完成的步骤不会重做。",
-  revision_limit: "修订次数已达上限。",
-  system_defect: "发现影响数字的系统缺陷，运行已停止。修复后可继续，已完成的步骤不会重做。",
-  stopped: "运行已手动停止，已完成的步骤不会重做。",
+  delivered: "The report has been delivered.",
+  need_front: "More information is needed. Please reply in the chat.",
+  rate_limited: "The model usage limit was reached. Resume once it resets; finished steps are kept.",
+  agent_failed: "The run stopped on a system error. Finished steps are kept.",
+  revision_limit: "The revision limit was reached.",
+  system_defect: "The run stopped on a system defect that affects the figures. It can continue after the fix; finished steps are not redone.",
+  stopped: "The run was stopped. Finished steps are kept.",
 };
 
 export function duration(seconds: number) {
@@ -69,9 +69,10 @@ function Marker({ state }: { state: RunStep["state"] }) {
   return <span className={`run-marker ${state}`} />;
 }
 
-export default function RunPanel({ caseId, run, onResume, onHalt, onClose }: {
+export default function RunPanel({ caseId, run, onResume, onHalt, onClose, onReport }: {
   caseId?: string;
   run: RunView;
+  onReport?: () => void;
   onResume: () => void;
   onHalt: () => void;
   onClose: () => void;
@@ -101,17 +102,17 @@ export default function RunPanel({ caseId, run, onResume, onHalt, onClose }: {
   const lastTool = live?.items.filter((item) => item.kind === "tool").at(-1);
   const note = run.stop ? STOP_NOTE[run.stop.stop] : run.can_resume ? STOP_NOTE.stopped : "";
   const waiting = run.stop?.stop === "need_front";
-  const headline = current ? t(STEP_LABEL[current.id]) : finished ? t("已交付") : run.active ? t("正在启动…")
-    : waiting ? t("等待你的回复") : run.can_resume ? t("已暂停") : t("未在运行");
+  const headline = current ? t(STEP_LABEL[current.id]) : finished ? t("Delivered") : run.active ? t("Starting…")
+    : waiting ? t("Waiting for you") : run.can_resume ? t("Paused") : t("Not running");
   const problem = run.stop && run.stop.stop !== "delivered" && run.stop.stop !== "need_front";
   return (
-    <aside className="run-panel" aria-label={t("运行进度")}>
+    <aside className="run-panel" aria-label={t("Progress", "run panel")}>
       <header className="run-head">
         <div>
           <Activity size={17} aria-hidden="true" />
-          <h2>{t("运行进度")}</h2>
+          <h2>{t("Progress", "run panel")}</h2>
         </div>
-        <HintButton className="icon-button" aria-label={t("关闭进度面板")} onClick={onClose}>
+        <HintButton className="icon-button" aria-label={t("Close the progress panel")} onClick={onClose}>
           <X size={18} />
         </HintButton>
       </header>
@@ -119,12 +120,12 @@ export default function RunPanel({ caseId, run, onResume, onHalt, onClose }: {
         <strong aria-live="polite">{headline}</strong>
         <span>{duration(total)}</span>
       </div>
-      <div className="run-views" role="tablist" aria-label={t("视图")}>
+      <div className="run-views" role="tablist" aria-label={t("View")}>
         <button type="button" role="tab" aria-selected={view === "graph"} className={view === "graph" ? "active" : ""} onClick={() => pick("graph")}>
-          <Workflow size={14} />{t("流程图")}
+          <Workflow size={14} />{t("Graph")}
         </button>
         <button type="button" role="tab" aria-selected={view === "list"} className={view === "list" ? "active" : ""} onClick={() => pick("list")}>
-          <List size={14} />{t("步骤")}
+          <List size={14} />{t("Steps")}
         </button>
       </div>
       {view === "graph" ? (
@@ -141,7 +142,7 @@ export default function RunPanel({ caseId, run, onResume, onHalt, onClose }: {
             <div className="run-step-body">
               <div className="run-step-title">
                 <span>{t(STEP_LABEL[step.id])}</span>
-                {step.runs > 1 && <em title={step.reason}>{t("第")} {step.runs} {t("次")}</em>}
+                {step.runs > 1 && <em title={step.reason}>{t("Run {n}").replace("{n}", String(step.runs))}</em>}
                 {(step.runs > 0 || step.state === "running") && <time>{duration(spent(step, clock))}</time>}
               </div>
               <small>{t(whoRuns(step))}{step.model ? ` · ${step.model}` : ""}</small>
@@ -149,7 +150,7 @@ export default function RunPanel({ caseId, run, onResume, onHalt, onClose }: {
                 <p className="run-now" title={lastTool.detail}>{lastTool.name}</p>
               )}
               {step.id === "run" && caseId && (step.runs > 0 || step.state === "running") && (
-                <button type="button" className="g-search" onClick={() => setSearching(true)}><Route size={14} />{t("查看搜索过程")}</button>
+                <button type="button" className="g-search" onClick={() => setSearching(true)}><Route size={14} />{t("View the search")}</button>
               )}
             </div>
           </li>
@@ -157,7 +158,7 @@ export default function RunPanel({ caseId, run, onResume, onHalt, onClose }: {
         <li className={finished ? "done" : "pending"}>
           <Marker state={finished ? "done" : "pending"} />
           <div className="run-step-body">
-            <div className="run-step-title"><span>{t("交付")}</span></div>
+            <div className="run-step-title"><span>{t("Delivered", "step")}</span></div>
           </div>
         </li>
       </ol>
@@ -169,9 +170,11 @@ export default function RunPanel({ caseId, run, onResume, onHalt, onClose }: {
             <p>{t(note)}{run.stop?.detail && run.stop.stop === "agent_failed" ? ` ${run.stop.detail}` : ""}</p>
           </div>
         )}
-        {run.report && <a className="run-action primary" href={run.report} target="_blank" rel="noopener noreferrer"><Download size={15} />{t("下载报告")}</a>}
-        {run.can_resume && <button type="button" className="run-action primary" onClick={onResume}><Play size={14} />{t("继续运行")}</button>}
-        {run.active && <button type="button" className="run-action" onClick={onHalt}><Pause size={14} />{t("停止运行")}</button>}
+        {run.panel && onReport ? (
+          <button type="button" className="run-action primary" onClick={onReport} aria-label={t("Open report")}><FileText size={15} />{t("Open report")}</button>
+        ) : run.report && <a className="run-action primary" href={run.report} target="_blank" rel="noopener noreferrer"><Download size={15} />{t("Download report")}</a>}
+        {run.can_resume && <button type="button" className="run-action primary" onClick={onResume}><Play size={14} />{t("Resume")}</button>}
+        {run.active && <button type="button" className="run-action" onClick={onHalt}><Pause size={14} />{t("Stop run")}</button>}
       </footer>
       {searching && caseId && (
         <SearchView caseId={caseId} running={run.steps.some((s) => s.id === "run" && s.state === "running")} onClose={() => setSearching(false)} />

@@ -1,8 +1,8 @@
 # 编排与 CLI 规范（最小集）
 
-2026-11-01。本文只定四个 Agent 怎么启动、按什么顺序走、什么时候停。各 Agent 的职责见各自规范，案卷的读写和账本见 `agent/案卷MCP规范.md`。实现文件是 `agent/tools/orchestrate.py`，检查是 `agent/tools/test_orchestrate.py`。
+2026-11-01。本文只定四个 Agent 怎么启动、按什么顺序走、什么时候停。各 Agent 的职责见各自规范，案卷的读写和账本见 `agent/case_mcp_spec.zh.md`。实现文件是 `agent/tools/orchestrate.py`，检查是 `agent/tools/test_orchestrate.py`。
 
-**语言**：本规范用中文，供人阅读；英文副本 `agent/orchestration_cli_spec.en.md`，两者不一致时以中文版为准，改中文版时同步改英文副本。只有规范正文用中文。其余一律用英文：代码、注释、日志，递交给 Agent 的任务说明，CLI 的提示、状态和停止说明。
+**语言**：本文是英文版 `agent/orchestration_cli_spec.md` 的中文译本；自 2026-11-25 起以英文版为准，改英文版时同步更新本译本。只有规范正文用中文。其余一律用英文：代码、注释、日志，递交给 Agent 的任务说明，CLI 的提示、状态和停止说明。
 
 ## 1. 定位
 
@@ -380,7 +380,7 @@ review_intake（轻 / 全）── run ── impact ──┬── none   ：�
 
 ## 11. 阅读与检索的接入（2026-11-03）
 
-检索层的设计见 `agent/检索规范.md`。编排器为它做四件事，全是程序步骤：
+检索层的设计见 `agent/retrieval_spec.zh.md`。编排器为它做四件事，全是程序步骤：
 
 | 时机 | 做什么 |
 |---|---|
@@ -393,7 +393,7 @@ review_intake（轻 / 全）── run ── impact ──┬── none   ：�
 
 ## 12. 法律理由一路与再核范围（2026-11-03）
 
-review_draft 和 review_final 各自同时跑两个复核 agent：主复核（复核规范第二、三段）和法律理由一路（第四段，`agent/复核Agent规范.md` §3a）。原因：CASE-20261102-a032c0 第 3 轮的复核三次放过了一句把新加坡税率门槛说错的话；逐句核对理由和条文，与核对数字和产物是两件事。
+review_draft 和 review_final 各自同时跑两个复核 agent：主复核（复核规范第二、三段）和法律理由一路（第四段，`agent/review_agent_spec.zh.md` §3a）。原因：CASE-20261102-a032c0 第 3 轮的复核三次放过了一句把新加坡税率门槛说错的话；逐句核对理由和条文，与核对数字和产物是两件事。
 
 | 步骤 | 程序做什么 |
 |---|---|
@@ -443,7 +443,7 @@ review_draft 和 review_final 各自同时跑两个复核 agent：主复核（�
 | 框架 | `build_frame` 另写 `frame/blocks/flow.json`：按产物生成的流程图（`sections.flow_spec`：现状和推荐两条持股链，前台在 facts.json `names` 里记了法定名称的就用它，每栏写股息和这笔股息的税，中间是调整动作：持有人的变化和数字所依赖的做法，没有就写"持股结构不变"） |
 | 排版节点 | 套用替换句 → `report_form.client_text`（标题和日期取自 facts.json，第 1 部分末尾放流程图，第 5 部分标题下放税负表，附录 A 放假设表和事实缺口，附录 B 按引用标记和出处表生成，标记只印显示文字，不留案卷号和 run_id；写成 `briefing.polished.md`）→ `render_pdf`（字号和版式在模板里定；排版报告给出 `flow_overlaps`，记日志）→ `report_check`。不查页数 |
 | 读权限 | 按身份和节点列的白名单（`agent/tools/access.py`）；`prepare` 启动每个 MCP 服务时传入节点名（`codex_mcp.py --node`，设为 `TAX_NODE`），所以交接包、草稿、法律论证三路复核读的文件不同，底稿和 bug 文件也分开 |
-| 替换句与词数上限 | 复核看不到词数上限，它们给的替换句会加词；所以排版时 `render_pdf` 的文字关和最后一次自检对超限放行（`report_form.OVERRUN`），其他问题照样退回。作者自己的文字在分析节点结束时已经按上限查过。替换句里引用标记的显示文字只写条文简称，解释放在标记之后（复核提示词），因为太长的显示文字会被退回（CASE-20261112-af3581：12 条替换句加了约 140 词，还有一个 19 词的显示文字，多出一轮分析和再核） |
+| 替换句与词数上限 | 复核看不到词数上限，它们给的替换句会加词；所以排版时 `render_pdf` 的文字关和最后一次自检对超限放行，以 `report_limits.json` 的 `_render_slack` 为限（5%，2026-11-25；`report_form.render_slack`），超出更多的和其他问题照样退回。作者自己的文字在分析节点结束时已经按上限查过。替换句里引用标记的显示文字只写条文简称，解释放在标记之后（复核提示词），因为太长的显示文字会被退回（CASE-20261112-af3581：12 条替换句加了约 140 词，还有一个 19 词的显示文字，多出一轮分析和再核） |
 | 自家仓库 | Codex 的联网搜索只支持域名白名单（`tools.web_search.allowed_domains`），`experimental_network.denied_domains` 管的是沙箱命令的托管代理，而本框架不跑命令；所以 `ZhihongWu-dev/Asia-Tax-AI-Agent` 在 `github.com` 和 `raw.githubusercontent.com` 上的路径（规范和标准答案都在里面）没法事先屏蔽。每个 Agent 节点结束后由 `flag_repo` 扫新的节点日志，碰到就在 `runs.jsonl` 写一行 `repo_hit`。仓库是否设为私有由团队商量 |
 | 宿主 | 交付说明和预览卡说明的提示里写明最多 200 词（2026-11-12 用户定）；宿主只数交付说明和预览卡说明的词数（其他转述不数），超过 200 就让它重写，最多两次（2026-11-13：一份 213 词的说明重写后变成 227 词而被换掉；现在只有数字不对时才附第 1 部分，长度超限时附了它，模型会多写）（"Your note has N words, limit 200. Shorten it."；2026-11-12 由 120 改为 200，148 词的重写稿内容完整却被兜底替换），还超就换成平实的兜底说明。每次重写（长度、数字、系统名称）都把要改的那段原文带上，交付时再带上第 1 部分：Codex 每次都是新会话，曾经重写了一段它根本没见过的说明（CASE-20261112-af3581） |
 | 策略深度（2026-11-12） | run_input 把客户的行为条件（`receive_at_destination`、`this_payment_can_wait`、`declared_to_payee`）连同其他硬约束传给优化层；优化层对客户没说而第一名依赖的行为条件再跑一遍（products/<run_id>/conduct/<键>/），并写 sequence.json、premises.json 和 brief 的 conduct / sequence / diagnosis / must_state（优化层规范 §4.7a）；框架据此写"The group's own choices"等几节和选择表、"数字靠什么"表，客户副本把前者放在第 1 部分流程图之后、后者放在第 5 部分税负表之后；第 1 部分的词数上限按选择表的行数加额；report_check 核 must_state 的数字。优化层一次运行因此约多一倍时间（本案约 5 分钟） |
@@ -465,3 +465,19 @@ review_draft 和 review_final 各自同时跑两个复核 agent：主复核（�
 | 检查节奏 | 分析写作中每节用 `report_check` part=N 查，正文定稿后一次写好出处表，然后 report_check（target=draft）和 cite_check 各跑一次；cite_check 工具报错只记一次、不重试。返工在全部改完后统一检查一次（分析规范"节奏"） |
 
 先测再定（尚未做）：每个会话启动 MCP 服务的耗时，以及 SDK 或 `codex app-server` 能否让服务跨调用常驻；措辞类返工用 `reasoning_effort_override` 降到 low；一次性回合（如交付说明改写）用 `--ephemeral`。
+
+## 17. 报告按块写，报告面板（2026-11-25）
+
+所有者决定：客户报告改为只读面板；报告由程序拼装，分析 Agent 只写需要顾问判断的部分。
+
+| 部分 | 现在 |
+|---|---|
+| 谁写什么 | 意见依据、第 2 到 6 部分、各表、流程图和附录 B 由程序从产物写（`agent/tools/panel.py`）；分析 Agent 写三个块：`strategy`（第 1 部分）、`plan`（第 7 部分，客户能照做的带日期计划，库里没有的程序信息用网上来源）和 `points`（附录 A，每个判断点一张卡） |
+| 框架 | `build_frame` 另写 `frame/figures.json`（报告可能写到的每个金额一个 id；第 1 部分写 `{{fig:<id>}}`）、`frame/skeleton.json`（第 7 部分必须完成的步骤，附规则层的期限和官方程序页面）和 `frame/points.json`（附录 A 要回答的 key）；frame.md 把它们列出；词数上限只给第 1、7 部分和附录 A（第 7 部分按骨架步骤数） |
+| 生成 | 每次 `write_block` / `edit_block` 后程序生成 `briefing.md` 和 `briefing.sources.json`（三个块都在时；只在内容变化时写，因为状态看它们的时间戳）以及 `panel.json`；复核、法律论证复核线、`report_check`、排版步骤和 `render_pdf` 照旧读生成的文件 |
+| 分析节点 | 任务要求写三个块；预取包在 Agent 开始前生成框架和面板，所以程序的部分马上出现在面板里；修订版从上一版的块出发，块被复制到新运行（`panel.copy_baseline`） |
+| 复核 | 意见和替换句只针对三个块；程序部分的问题是 bug（层：报告程序），不是 REVISE。法律论证复核线的材料只取第 1、7 部分和附录 A 的行（`panel.ai_lines`）。替换句改进块里（`apply_replacement`） |
+| 宿主 | `GET /api/cases/{case_id}/panel` 提供 panel.json 及每块的状态（final / review / writing / updating：分析第一次写时为 writing，复核后或所依赖的块变了之后重写时为 updating；这两种状态不给内容），报告交付后给导出链接；运行视图说明有没有面板；前台的交付说明带一个打开面板的按钮，取代 PDF 链接 |
+| 网页 | 面板从进度面板和交付说明打开，像搜索视图那样浮在页面上；只读；全部复核通过后可导出 |
+
+尚未做：按以往运行查看面板（接口只给当前运行）；第 6 部分条文的显示文字是库里原文语言的标签。

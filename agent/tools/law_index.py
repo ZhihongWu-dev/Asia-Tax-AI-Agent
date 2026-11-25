@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""The law-library index of the retrieval layer (agent/retrieval_spec.en.md §4).
+"""The law-library index of the retrieval layer (agent/retrieval_spec.md §4).
 
   python agent/tools/law_index.py [--dense] [--force]
 

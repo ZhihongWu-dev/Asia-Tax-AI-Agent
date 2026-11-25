@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Reference evaluator of the rule layer (rule/规则层规范（最小集）.md §4): three-valued conditions, composition of
+"""Reference evaluator of the rule layer (rule/rule_layer_spec.md §4): three-valued conditions, composition of
 the effects of one cell, the interval [floor, ceiling] with its pending groups, and the fixed cross-cell order of a
 dividend flow. Any other evaluator must pass the same rule_test.csv.
 

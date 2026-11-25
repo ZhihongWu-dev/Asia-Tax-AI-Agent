@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Indexes of the retrieval layer for a run's products and for a case file (agent/retrieval_spec.en.md §5, §6).
+"""Indexes of the retrieval layer for a run's products and for a case file (agent/retrieval_spec.md §5, §6).
 
   python agent/tools/read_index.py products cases/<case>/intake/products/<run_id>
   python agent/tools/read_index.py case cases/<case> [--ocr]
@@ -304,7 +304,7 @@ def build_products(pd, force=False):
                     for cite in [x for x in r["cite_ids"].split(";") if x]:
                         w.edge(R("rule", rid), cite, "cites")
 
-    # legal basis of each structure: every provision its cells and transfers rest on, verbatim (agent/retrieval_spec.en.md §5.1)
+    # legal basis of each structure: every provision its cells and transfers rest on, verbatim (agent/retrieval_spec.md §5.1)
     law_db = PROJECT / "database" / "index" / "law.sqlite"
     lcon = sqlite3.connect(str(law_db)) if law_db.exists() else None
     for cid in paths:

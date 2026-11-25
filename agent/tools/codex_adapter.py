@@ -111,6 +111,9 @@ def prepare(role, case_id, chosen, instructions="", node=""):
         'developer_instructions = ' + q(prompt.read_text(encoding="utf-8")),
         *model_metadata(chosen),
         'web_search = ' + q("disabled" if role == "polish" else "live"),
+        # 2026-11-25: Codex cuts the middle out of a tool result above its default limit ("…N tokens truncated…"); a reader
+        # page is at most 32,000 characters, which in Japanese or Chinese law text is more tokens than that default
+        'tool_output_token_limit = %d' % int(chosen.get("tool_output_token_limit") or 40000),
         '[features]', 'shell_tool = false', 'view_image = false',
         'multi_agent = false', 'apps = false', 'plugins = false', 'remote_plugin = false', 'shell_snapshot = false',
         'browser_use = true', 'hooks = ' + ('true' if chosen.get("hooks", True) else 'false'),   # 2026-11-17: browser kept on, by the owner's choice

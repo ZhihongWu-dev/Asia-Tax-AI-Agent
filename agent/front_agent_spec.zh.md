@@ -1,8 +1,8 @@
 # 前台 Agent 规范（最小集）
 
-2026-10-31。四个 Agent 之一（前台、分析、润色、复核）。本文只定它的职责、输入输出、交接格式和递交给它的 prompt；编排和模型见 `编排CLI规范.md`。
+2026-10-31。四个 Agent 之一（前台、分析、润色、复核）。本文只定它的职责、输入输出、交接格式和递交给它的 prompt；编排和模型见 `orchestration_cli_spec.zh.md`。
 
-**语言**：本规范用中文，供人阅读；英文副本 `agent/front_agent_spec.en.md`，两者不一致时以中文版为准，改中文版时同步改英文副本。AI 写进文件的一切自写文字用英文——代码、注释、工具说明、prompt（系统实际递交的是英文副本里的那段）、底稿、核对单、handoff、bug 反馈、日志、产物字段；原件、条文、引文、客户原话保持原文，不翻译。唯一例外是给客户看的文字（对客户的回话、briefing）跟客户的语言。核对单的总判断用英文记号：交接包 `RUNNABLE` / `REVISE`，草稿 `POLISHABLE` / `REVISE`，成稿 `DELIVERABLE` / `REVISE`。
+**语言**：本文是英文版 `agent/front_agent_spec.md` 的中文译本；自 2026-11-25 起以英文版为准，改英文版时同步更新本译本。AI 写进文件的一切自写文字用英文——代码、注释、工具说明、prompt（系统实际递交的是英文副本里的那段）、底稿、核对单、handoff、bug 反馈、日志、产物字段；原件、条文、引文、客户原话保持原文，不翻译。唯一例外是给客户看的文字（对客户的回话、briefing）跟客户的语言。核对单的总判断用英文记号：交接包 `RUNNABLE` / `REVISE`，草稿 `POLISHABLE` / `REVISE`，成稿 `DELIVERABLE` / `REVISE`。
 
 **轮的定义（四份规范共用）**：一轮 = 一次交接循环（前台 → 复核第一段 → 优化层 `run` → 分析 → 复核第二段 → 润色 → 复核第三段 → 客户），编号 round N，每轮一个 run_id；客户看完报告改了事实或答案就开新一轮，报告阶段复核退回前台时也开新一轮。轮内复核"需改" → 改 → 再核是修订，编号 N.k，不产生新 run_id。前台与客户的一问一答是回合，只在 `dialogue.md` 里按顺序记，不编号。四个 Agent 的上下文和底稿都不跨轮：第 N 轮只读本轮的底稿目录，必须跨轮活下来的信息只放交付物（交接包、产物、报告、核对单）。
 
@@ -47,7 +47,7 @@
 
 ## 4. 工具与权限
 
-全部开放：读 PDF / 图片、规则层 `variables()` / `predicates()` / `judgment_points` / `gap`、优化层 `open_items`（`diff` 由编排器调用；`run` 交接前可预跑一次看缺口，正式运行由编排器调用）、`fx.py`、联网（查公开注册信息、交叉核对）、CLI。工具分三路：读案卷的文件、PDF、图片用宿主自带的 Read / Glob / Grep，只能读 `agent/tools/access.py` 白名单给前台列的（2026-11-12：案卷目录以外一律不读；案卷里是交接包和客户单据、自己本轮的底稿、自己的预取包，以及报告里交付的那一份 briefing；产物经 tax-opt-front 读）；查询与计算经 MCP——`tax-db`、`tax-rule`、`tax-opt`（优化层的 run 和 diff 只在前台挂的 `tax-opt-front` 里有）；写案卷经本身份的 `tax-case`（见 `案卷MCP规范.md`）。联网用宿主自带的搜索与抓取。隔离靠子 Agent 定义的工具白名单与路径权限规则，不靠自觉。跨服务同名工具提到时带服务名（规则层的 requirements、优化层的 diff）。限制的是写：只写 `cases/<case_id>/intake/`、自己的底稿目录 `cases/<case_id>/notes/front/round-N/` 和 `cases/<case_id>/bugs/front.md`，不写库、不写规则、不写产物内部；`intake/review_intake.md` 归复核 Agent 写，前台不动它。
+全部开放：读 PDF / 图片、规则层 `variables()` / `predicates()` / `judgment_points` / `gap`、优化层 `open_items`（`diff` 由编排器调用；`run` 交接前可预跑一次看缺口，正式运行由编排器调用）、`fx.py`、联网（查公开注册信息、交叉核对）、CLI。工具分三路：读案卷的文件、PDF、图片用宿主自带的 Read / Glob / Grep，只能读 `agent/tools/access.py` 白名单给前台列的（2026-11-12：案卷目录以外一律不读；案卷里是交接包和客户单据、自己本轮的底稿、自己的预取包，以及报告里交付的那一份 briefing；产物经 tax-opt-front 读）；查询与计算经 MCP——`tax-db`、`tax-rule`、`tax-opt`（优化层的 run 和 diff 只在前台挂的 `tax-opt-front` 里有）；写案卷经本身份的 `tax-case`（见 `case_mcp_spec.zh.md`）。联网用宿主自带的搜索与抓取。隔离靠子 Agent 定义的工具白名单与路径权限规则，不靠自觉。跨服务同名工具提到时带服务名（规则层的 requirements、优化层的 diff）。限制的是写：只写 `cases/<case_id>/intake/`、自己的底稿目录 `cases/<case_id>/notes/front/round-N/` 和 `cases/<case_id>/bugs/front.md`，不写库、不写规则、不写产物内部；`intake/review_intake.md` 归复核 Agent 写，前台不动它。
 
 ## 4a. 底稿（四本）
 
@@ -66,7 +66,7 @@
 1. 客户每句话先追加进 `dialogue.md`，再读背景和单据，按 `variables()` 的字段字典抽事实，每条带出处；毛读记 `reading.md`，多种读法或单据打架记 `construal.md`；不编、不补、不默认。
 2. 把事实表给客户确认；客户改了的记 `confirmed_by_client = true` 并保留原抽取值。
 3. 跑规则层 `eval_flow` 看现状缺什么（needs）；缺的事实先记 `ask.md` 再列进补问单；判断点不当问题问客户，只问 `judgment_points` 里值为空的 factor_vars 这类客户手上的事实，结论留给报告附录 A；客户主动说出结论才记 yes / no，说了答不了的记 `unknown_asked` 并附原话，其余保持 `unknown_not_asked`。
-4. 事实够跑了先写 `handoff.md`，跑 `intake_check` 到没有问题，再启动编排器（`编排CLI规范.md`）。写 handoff 之前可以用 `tax-opt-front` 的 `run` 预跑一次（约 10 秒），只看 `open_items(changes_rank=true)` 里会改变结论、客户手上就有的事实缺口（被转让公司的净资产、持股成本、打算持有几年、中间公司的实际税负、迁居个人的资产价值与成本），当场问客户；判断点不逼问，留给报告的报告附录 A。正式运行仍由编排器做：复核、优化层、分析和润色都由编排器跑，前台不起子 Agent。编排器停下后按停止原因处理：`need_front` 时读 detail 指向的核对单或问题，改交接包，需要时问客户，再启动一次；报告阶段退回（run_id 已登记）时，改之前先调 `round_new`。
+4. 事实够跑了先写 `handoff.md`，跑 `intake_check` 到没有问题，再启动编排器（`orchestration_cli_spec.zh.md`）。写 handoff 之前可以用 `tax-opt-front` 的 `run` 预跑一次（约 10 秒），只看 `open_items(changes_rank=true)` 里会改变结论、客户手上就有的事实缺口（被转让公司的净资产、持股成本、打算持有几年、中间公司的实际税负、迁居个人的资产价值与成本），当场问客户；判断点不逼问，留给报告的报告附录 A。正式运行仍由编排器做：复核、优化层、分析和润色都由编排器跑，前台不起子 Agent。编排器停下后按停止原因处理：`need_front` 时读 detail 指向的核对单或问题，改交接包，需要时问客户，再启动一次；报告阶段退回（run_id 已登记）时，改之前先调 `round_new`。
 5. 状态到 delivered 后交客户；客户确认或改了任一点 → `round_new` → 更新 facts / answers / handoff → 再启动编排器。新旧 run 都留；这是新一轮，开新的 round 目录。
 6. 对话里发现库里缺的或过时的条文，写一条到 `cases/<case_id>/intake/to_collect.md`（文件名、法域、URL、为什么需要），不改库。
 

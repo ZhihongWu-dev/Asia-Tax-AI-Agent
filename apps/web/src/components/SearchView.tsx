@@ -13,9 +13,9 @@ import { ICON, ISO, MAP_H, MAP_W, loadCountries, places, type Country } from "./
 // prior-dependent edge is still within reach only equal labels prune, a node over the cap cuts its costliest labels,
 // and the destinations' labels are filtered once more by plain dominance into the frontier (§4.2).
 const JUR: Record<string, string> = {
-  cn: "中国内地", hk: "香港", sg: "新加坡", jp: "日本", th: "泰国", ae: "阿联酋", id: "印度尼西亚", in: "印度", kr: "韩国", my: "马来西亚", vn: "越南",
+  cn: "Mainland China", hk: "Hong Kong", sg: "Singapore", jp: "Japan", th: "Thailand", ae: "UAE", id: "Indonesia", in: "India", kr: "Korea", my: "Malaysia", vn: "Vietnam",
 };
-const SUBJECT: Record<string, string> = { company: "公司", individual: "个人" };
+const SUBJECT: Record<string, string> = { company: "company", individual: "individual" };
 const ROUTE_COLORS = ["#2f7d64", "#c27c2c", "#5161a8", "#9a4f8b", "#3d8fa6"];
 const K_MIN = 0.3, K_MAX = 6;                // zoom range around the first view (the capitals of the library)
 type View = { k: number; x: number; y: number };
@@ -33,9 +33,9 @@ type Frame = {
 function moveText(move: string, t: (s: string) => string) {
   const m = move.match(/^(\w+)\((.*)\)$/);
   if (!m) return t(move);
-  if (m[1] === "remit" && m[2] === "false") return t("不汇入收款地");
-  if (m[1] === "wait_months") return `${t("持满")} ${m[2]} ${t("个月再分红")}`;
-  if (m[1] === "holding_pct") return `${t("持股")} ${m[2]}%`;
+  if (m[1] === "remit" && m[2] === "false") return t("not remitted");
+  if (m[1] === "wait_months") return t("hold {n} months before paying").replace("{n}", m[2]);
+  if (m[1] === "holding_pct") return t("hold {n}%").replace("{n}", m[2]);
   return move;
 }
 
@@ -85,7 +85,7 @@ function frames(data: SearchState) {
 }
 
 export default function SearchView({ caseId, running, onClose }: { caseId: string; running: boolean; onClose: () => void }) {
-  const { t, locale } = useLocale();
+  const { t } = useLocale();
   const ref = useRef<HTMLDivElement>(null);
   useOverlayFocus(ref, true, true, onClose);
   const [data, setData] = useState<SearchState | null>(null);
@@ -127,7 +127,7 @@ export default function SearchView({ caseId, running, onClose }: { caseId: strin
     const p = place[j];
     return !p ? [0, 0] : s === "company" ? p.company : p.person;
   };
-  const name = (n: string) => { const [j, s] = n.split(":"); return `${t(JUR[j] ?? j.toUpperCase())}${locale === "en" ? " " : ""}${t(SUBJECT[s] ?? s)}`; };
+  const name = (n: string) => { const [j, s] = n.split(":"); return t("{jurisdiction} {subject}").replace("{jurisdiction}", t(JUR[j] ?? j.toUpperCase())).replace("{subject}", t(SUBJECT[s] ?? s)); };
 
   // the world map: loaded once, drawn once; zoom and pan move one group, so everything on it stays where it belongs
   const [countries, setCountries] = useState<Country[]>([]);
@@ -252,13 +252,13 @@ export default function SearchView({ caseId, running, onClose }: { caseId: strin
   const expanded = Math.min(shown, search.length);
 
   const body = !data ? (
-    <p className="sv-wait">{failed === "Not Found" ? t("这个服务还是旧版本，没有搜索记录的接口：重启服务后再打开。") : failed ? t("读取搜索记录失败。") : t("正在读取搜索记录…")}</p>
+    <p className="sv-wait">{failed === "Not Found" ? t("This server is an older version without the search endpoint: restart it, then open this again.") : failed ? t("Could not load the search record.") : t("Loading the search record…")}</p>
   ) : !data.ready ? (
-    <p className="sv-wait">{running ? t("优化程序正在搜索，完成后在这里回放。") : t("这一轮还没有搜索结果。")}</p>
+    <p className="sv-wait">{running ? t("The optimizer is searching; the replay appears here when it finishes.") : t("This round has no search yet.")}</p>
   ) : (
     <div className="sv-body">
       <div className="sv-mapbox">
-        <svg ref={svgRef} className={`sv-map ${panning ? "panning" : ""}`} viewBox={`0 0 ${MAP_W} ${MAP_H}`} role="img" aria-label={t("搜索路线图")}
+        <svg ref={svgRef} className={`sv-map ${panning ? "panning" : ""}`} viewBox={`0 0 ${MAP_W} ${MAP_H}`} role="img" aria-label={t("Search map")}
           onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up}
           onDoubleClick={(e) => { const [px, py] = local(e.clientX, e.clientY); setView((v) => zoomAt(v, px, py, 2)); }}>
           <defs>
@@ -305,13 +305,13 @@ export default function SearchView({ caseId, running, onClose }: { caseId: strin
               const p = place[j];
               if (!p) return null;
               const mine = nodes.filter((n) => jurOf(n) === j);
-              const role = [mine.includes(data.source ?? "") && "付款方", mine.some((n) => data.destinations?.includes(n)) && "目的地"].filter(Boolean) as string[];
+              const role = [mine.includes(data.source ?? "") && "payer", mine.some((n) => data.destinations?.includes(n)) && "destination"].filter(Boolean) as string[];
               const cx = (p.company[0] + p.person[0]) / 2;
               return (
                 <g key={`l-${j}`}>
                   <text className="sv-name" x={cx} y={p.company[1] + ICON * 0.95} textAnchor="middle">{t(JUR[j] ?? j.toUpperCase())}</text>
                   {role.length > 0 && (                     /* under the name: a tag above would sit on the label of a group above */
-                    <text className={`sv-tag ${role[0] === "付款方" ? "source" : ""}`} x={cx} y={p.company[1] + ICON * 1.4} textAnchor="middle">
+                    <text className={`sv-tag ${role[0] === "payer" ? "source" : ""}`} x={cx} y={p.company[1] + ICON * 1.4} textAnchor="middle">
                       {role.map((r) => t(r)).join(" · ")}
                     </text>
                   )}
@@ -344,16 +344,16 @@ export default function SearchView({ caseId, running, onClose }: { caseId: strin
           </g>
         </svg>
         <div className="sv-zoom">
-          <button type="button" onClick={() => zoomBy(1.6)} aria-label={t("放大")} title={t("放大")}><Plus size={15} /></button>
-          <button type="button" onClick={() => zoomBy(1 / 1.6)} aria-label={t("缩小")} title={t("缩小")}><Minus size={15} /></button>
-          <button type="button" onClick={() => setView(HOME)} aria-label={t("复位视图")} title={t("复位视图")}><Maximize2 size={14} /></button>
+          <button type="button" onClick={() => zoomBy(1.6)} aria-label={t("Zoom in")} title={t("Zoom in")}><Plus size={15} /></button>
+          <button type="button" onClick={() => zoomBy(1 / 1.6)} aria-label={t("Zoom out")} title={t("Zoom out")}><Minus size={15} /></button>
+          <button type="button" onClick={() => setView(HOME)} aria-label={t("Reset view")} title={t("Reset view")}><Maximize2 size={14} /></button>
         </div>
         <div className="sv-legend">
-          <span><Building2 size={13} />{t("公司")}</span>
-          <span><User size={13} />{t("个人")}</span>
-          <span><i className="src" />{t("付款方")}</span>
-          <span><i className="dst" />{t("目的地")}</span>
-          <small>{t("滚轮或双指缩放，拖动平移")}</small>
+          <span><Building2 size={13} />{t("company")}</span>
+          <span><User size={13} />{t("individual")}</span>
+          <span><i className="src" />{t("payer")}</span>
+          <span><i className="dst" />{t("destination")}</span>
+          <small>{t("Scroll or pinch to zoom, drag to pan")}</small>
         </div>
       </div>
 
@@ -361,33 +361,33 @@ export default function SearchView({ caseId, running, onClose }: { caseId: strin
         <ol className="sv-phases">
           {(["search", "candidates", "ranking"] as const).map((p, i) => (
             <li key={p} className={p === phase ? "on" : ["search", "candidates", "ranking"].indexOf(phase) > i ? "done" : ""}>
-              <span>{i + 1}</span>{t(p === "search" ? "标签搜索" : p === "candidates" ? "候选结构" : "计税排序")}
+              <span>{i + 1}</span>{t(p === "search" ? "Label search" : p === "candidates" ? "Candidates" : "Tax & rank")}
             </li>
           ))}
         </ol>
         <div className="sv-stats">
-          <div><strong>{(data.edge_count ?? 0).toLocaleString("en-US")}</strong><span>{t("搜索空间（边）")}</span></div>
-          <div><strong>{expanded}/{search.length}</strong><span>{t("已展开")}</span></div>
-          <div><strong>{alive.size}</strong><span>{t("保留的路径")}</span></div>
-          <div><strong>{pruned.toLocaleString("en-US")}</strong><span>{t("被占优剪除")}</span></div>
+          <div><strong>{(data.edge_count ?? 0).toLocaleString("en-US")}</strong><span>{t("search space (edges)")}</span></div>
+          <div><strong>{expanded}/{search.length}</strong><span>{t("expanded")}</span></div>
+          <div><strong>{alive.size}</strong><span>{t("routes kept")}</span></div>
+          <div><strong>{pruned.toLocaleString("en-US")}</strong><span>{t("pruned as dominated")}</span></div>
         </div>
         {phase === "search" && frame && (
           <div className="sv-now">
-            <p><b>{t("展开")}</b> {name(frame.node)}<em>{t("累计税负")} {frame.tax.toFixed(2)}%</em></p>
+            <p><b>{t("Expanding")}</b> {name(frame.node)}<em>{t("tax so far")} {frame.tax.toFixed(2)}%</em></p>
             <p>
-              {t("新增")} {frame.kept.length} · {t("剪除")} {[...frame.pruned.values()].reduce((a, b) => a + b, 0)} · {t("替换")} {frame.replaced.length}
-              {frame.cut.length > 0 && <> · {t("截断")} {frame.cut.length}</>}
+              {t("kept")} {frame.kept.length} · {t("pruned")} {[...frame.pruned.values()].reduce((a, b) => a + b, 0)} · {t("replaced")} {frame.replaced.length}
+              {frame.cut.length > 0 && <> · {t("cut")} {frame.cut.length}</>}
             </p>
-            <small>{t("每一步取累计税负最低的未展开路径，沿所有出边各走一跳；到达同一节点时，税负、未决判断、跳数和重组都不更差的路径把另一条剪掉。后面还可能经过间接抵免边的节点例外：前面缴税多的路径在那里抵免也多，总税负可能反而更低，所以只剪完全相同的路径。")}</small>
+            <small>{t("Each step takes the open route with the lowest tax so far and follows every edge out of it; where two routes reach the same node, one that is no worse on tax, open judgments, hops and restructuring prunes the other. Nodes that can still reach an underlying-credit edge are the exception: a route that paid more earlier gets more credit there and may end lower, so only identical routes are pruned.")}</small>
           </div>
         )}
         {phase !== "search" && (
           <div className={`sv-cands-box ${listOpen ? "open" : ""}`}>
             <div className="sv-cands-head">
-              <span>{phase === "candidates" ? `${t("候选结构")} ${tracedCands.length}/${cands.length}` : `${t("计税排序")} · ${cands.length}`}</span>
+              <span>{phase === "candidates" ? `${t("Candidates")} ${tracedCands.length}/${cands.length}` : `${t("Tax & rank")} · ${cands.length}`}</span>
               {picked
-                ? <button type="button" onClick={() => setPicked(null)}>{t("取消高亮")}</button>
-                : <small>{t("点选一条，在地图上高亮它的路线")}</small>}
+                ? <button type="button" onClick={() => setPicked(null)}>{t("Clear highlight")}</button>
+                : <small>{t("Click one to highlight its route on the map")}</small>}
             </div>
             <ul ref={listRef} className="sv-cands">
               {(phase === "ranking" ? [...tracedCands].sort((a, b) => (best.get(a.cand_id)?.rank ?? 99) - (best.get(b.cand_id)?.rank ?? 99)) : tracedCands).map((c) => {
@@ -399,14 +399,14 @@ export default function SearchView({ caseId, running, onClose }: { caseId: strin
                     onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(c.cand_id); } }}>
                     <div className="sv-route-line">{win && <Crown size={14} />}{c.path.map(name).join(" → ")}</div>
                     <div className="sv-chips">
-                      {c.as_is && <code>{t("现状")}</code>}
-                      {c.restructure.map((m) => <code key={m}>{t(m === "transfer" ? "股权转让" : m)}</code>)}
+                      {c.as_is && <code>{t("as is")}</code>}
+                      {c.restructure.map((m) => <code key={m}>{t(m === "transfer" ? "share transfer" : m)}</code>)}
                       {c.moves.map((m) => <code key={m}>{moveText(m, t)}</code>)}
-                      <code>{t("分支")} ×{data.branches?.[c.cand_id] ?? 0}</code>
+                      <code>{t("branches")} ×{data.branches?.[c.cand_id] ?? 0}</code>
                     </div>
                     {phase === "ranking" && (
                       <div className="sv-tax">
-                        {r?.rank != null ? <><b>{t("排名")} {r.rank}</b> {r.per_100?.toFixed(2)}% · {money(r.amount)}</> : <span>{t("未排名（路径未到目的地或事实不全）")}</span>}
+                        {r?.rank != null ? <><b>{t("Rank")} {r.rank}</b> {r.per_100?.toFixed(2)}% · {money(r.amount)}</> : <span>{t("not ranked (route stops short or facts incomplete)")}</span>}
                       </div>
                     )}
                   </li>
@@ -414,7 +414,7 @@ export default function SearchView({ caseId, running, onClose }: { caseId: strin
               })}
             </ul>
             <button type="button" className="sv-cands-toggle" onClick={() => setListOpen(!listOpen)} aria-expanded={listOpen}
-              aria-label={t(listOpen ? "收起" : "展开全部")} title={t(listOpen ? "收起" : "展开全部")}>
+              aria-label={t(listOpen ? "Collapse" : "Show all")} title={t(listOpen ? "Collapse" : "Show all")}>
               {listOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
             </button>
           </div>
@@ -422,44 +422,44 @@ export default function SearchView({ caseId, running, onClose }: { caseId: strin
         {phase === "candidates" && (
           <small className="sv-note">
             {data.frontier
-              ? t("目的地上有 {x} 条路径，按普通占优再筛一次，留下 {y} 条；每条还原成一个候选结构，每个未决判断点按有利、不利分叉，逐跳计税。")
+              ? t("{x} routes reach the destination; filtered once more by plain dominance, {y} remain. Each becomes a candidate structure; every open judgment forks into favourable and unfavourable branches, taxed hop by hop.")
                   .replace("{x}", String(atDest)).replace("{y}", String(data.frontier.length))
-              : t("目的地上留下的每条路径还原成一个候选结构；每个未决判断点按有利、不利分叉，逐跳计税。")}
+              : t("Each route left at the destination becomes a candidate structure; every open judgment forks into favourable and unfavourable branches, taxed hop by hop.")}
           </small>
         )}
-        {phase === "ranking" && <small className="sv-note">{t("按每笔股息的税额排序，税额相同时比回本次数；下面是各结构在有利假设下的最好分支。")}</small>}
+        {phase === "ranking" && <small className="sv-note">{t("Ranked by the tax on each dividend, then by payback; shown is each structure's best branch under the favourable answers.")}</small>}
         {cut > 0 && (
           <small className="sv-note sv-cut">
-            {t("{nodes} 超过每个节点 {cap} 条的上限，砍掉了累计税负最高的 {n} 条路径，前沿可能不全。")
-              .replace("{nodes}", [...cutAt].map(name).join(locale === "en" ? ", " : "、"))
+            {t("{nodes}: over the limit of {cap} routes per node, so the {n} with the highest tax so far were cut; the frontier may be incomplete.")
+              .replace("{nodes}", [...cutAt].map(name).join(t(", ")))
               .replace("{cap}", String(replay.cap)).replace("{n}", String(cut))}
           </small>
         )}
-        {data.approximate && <small className="sv-note">{t("这一轮早于搜索记录：只回放保留下来的路径，不含被剪除的。")}</small>}
+        {data.approximate && <small className="sv-note">{t("This round predates the search record: only the routes kept are replayed, not the pruned ones.")}</small>}
       </aside>
     </div>
   );
 
   return createPortal(
     <div className="sv-backdrop" onClick={onClose}>
-      <div className="sv-dialog" ref={ref} role="dialog" aria-modal="true" aria-label={t("优化搜索过程")} onClick={(e) => e.stopPropagation()}>
+      <div className="sv-dialog" ref={ref} role="dialog" aria-modal="true" aria-label={t("Optimizer search")} onClick={(e) => e.stopPropagation()}>
         <header className="sv-head">
           <div>
-            <h2>{t("优化搜索过程")}</h2>
-            <p>{t("多目标标签搜索（Pareto）：从付款公司出发逐跳展开所有持股路径，被占优的路径剪掉")}</p>
+            <h2>{t("Optimizer search")}</h2>
+            <p>{t("Multi-criteria label-setting search (Pareto): from the paying company, every holding route is expanded hop by hop and dominated routes are pruned")}</p>
           </div>
-          <button type="button" className="icon-button" aria-label={t("关闭")} onClick={onClose}><X size={18} /></button>
+          <button type="button" className="icon-button" aria-label={t("Close")} onClick={onClose}><X size={18} /></button>
         </header>
         {body}
         {data?.ready && (
           <footer className="sv-controls">
-            <button type="button" onClick={() => { if (step >= total - 1) setStep(0); setPlaying(!playing); }} aria-label={t(playing ? "暂停" : "播放")}>
+            <button type="button" onClick={() => { if (step >= total - 1) setStep(0); setPlaying(!playing); }} aria-label={t(playing ? "Pause" : "Play")}>
               {playing ? <Pause size={15} /> : <Play size={15} />}
             </button>
-            <button type="button" onClick={() => { setStep(0); setPlaying(true); }} aria-label={t("重新播放")}><RotateCcw size={15} /></button>
-            <input type="range" min={0} max={total - 1} value={step} aria-label={t("进度")}
+            <button type="button" onClick={() => { setStep(0); setPlaying(true); }} aria-label={t("Replay")}><RotateCcw size={15} /></button>
+            <input type="range" min={0} max={total - 1} value={step} aria-label={t("Progress")}
               onChange={(e) => { setStep(Number(e.target.value)); setPlaying(false); }} />
-            <div className="sv-speed" role="group" aria-label={t("速度")}>
+            <div className="sv-speed" role="group" aria-label={t("Speed")}>
               {[1, 2, 4].map((s) => (
                 <button key={s} type="button" className={speed === s ? "on" : ""} onClick={() => setSpeed(s)}>{s}×</button>
               ))}

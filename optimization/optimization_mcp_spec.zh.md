@@ -1,8 +1,8 @@
 # 优化层 MCP 规范（tax-opt，最小集）
 
-2026-11-01。四个 MCP 服务之一（另三个：`database/数据库MCP规范.md`、`rule/规则层MCP规范.md`、`agent/案卷MCP规范.md`）。本文只定 `tax-opt`：包装 optimize.py、fx.py、check.py 和产物的分块读取。优化层本身的算法、产物格式见 `优化层规范.md`。
+2026-11-01。四个 MCP 服务之一（另三个：`database/数据库MCP规范.md`、`rule/rule_mcp_spec.zh.md`、`agent/case_mcp_spec.zh.md`）。本文只定 `tax-opt`：包装 optimize.py、fx.py、check.py 和产物的分块读取。优化层本身的算法、产物格式见 `optimization_layer_spec.zh.md`。
 
-**语言**：本规范用中文，供人阅读；英文副本 `optimization/optimization_mcp_spec.en.md`，两者不一致时以中文版为准，改中文版时同步改英文副本。AI 写进文件的一切自写文字用英文——代码、注释、工具说明、prompt（系统实际递交的是英文副本里的那段）、底稿、核对单、handoff、bug 反馈、日志、产物字段；原件、条文、引文、客户原话保持原文，不翻译。唯一例外是给客户看的文字（对客户的回话、briefing）跟客户的语言。核对单的总判断用英文记号：交接包 `RUNNABLE` / `REVISE`，报告 `DELIVERABLE` / `REVISE`（服务也接受原来的中文记号）。
+**语言**：本文是英文版 `optimization/optimization_mcp_spec.md` 的中文译本；自 2026-11-25 起以英文版为准，改英文版时同步更新本译本。AI 写进文件的一切自写文字用英文——代码、注释、工具说明、prompt（系统实际递交的是英文副本里的那段）、底稿、核对单、handoff、bug 反馈、日志、产物字段；原件、条文、引文、客户原话保持原文，不翻译。唯一例外是给客户看的文字（对客户的回话、briefing）跟客户的语言。核对单的总判断用英文记号：交接包 `RUNNABLE` / `REVISE`，报告 `DELIVERABLE` / `REVISE`（服务也接受原来的中文记号）。
 
 ## 1. 定位
 
@@ -41,7 +41,7 @@
 - `date` 不给默认值（`fx`），缺就报 `invalid`。
 - 每个返回带 `version`（优化层构建号，含它依赖的规则层与数据库版本），供报告的 sources.json 引用。
 - 错误结构化返回 `{error: invalid | not_found | conflict | forbidden | internal, detail}`。
-- 调用日志不由服务记：宿主的 PostToolUse 钩子统一记到 `cases/<case_id>/log/calls.jsonl`（见 `agent/案卷MCP规范.md` §5），服务不碰日志。
+- 调用日志不由服务记：宿主的 PostToolUse 钩子统一记到 `cases/<case_id>/log/calls.jsonl`（见 `agent/case_mcp_spec.zh.md` §5），服务不碰日志。
 - 跨服务同名工具（`requirements`、`version`、`diff`）由宿主按服务名加前缀，不冲突；Agent 规范提到时带服务名。
 
 ## 4. 身份与权限

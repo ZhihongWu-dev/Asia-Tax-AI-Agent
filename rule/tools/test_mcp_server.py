@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Construction checks of tax-rule (rule/规则层MCP规范.md §6): each tool once, in-process through MCPServer.call_tool,
+"""Construction checks of tax-rule (rule/rule_mcp_spec.md §6): each tool once, in-process through MCPServer.call_tool,
 compared with a direct call of the layer function on the same inputs.
 
   python rule/tools/test_mcp_server.py [--root rule --db database --cases cases]

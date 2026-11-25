@@ -6,7 +6,7 @@ import { caseTitle, type Panel } from "./workspace";
 import { useWorkspace } from "./hooks/useWorkspace";
 import { useRun } from "./hooks/useRun";
 import { isRetryable } from "./api";
-import { useLocale } from "./locale";
+import { languages, nextLocale, useLocale } from "./locale";
 import { useOverlayFocus } from "./hooks/useOverlayFocus";
 import Composer from "./components/Composer";
 import Conversation from "./components/Conversation";
@@ -17,9 +17,11 @@ import Welcome from "./components/Welcome";
 import Brand from "./components/Brand";
 import BrandLoader from "./components/BrandLoader";
 import TaxAtlas from "./components/TaxAtlas";
+import ReportPanel from "./components/ReportPanel";
 
 export default function App() {
   const { t, locale, setLocale } = useLocale();
+  const nextLanguage = nextLocale(locale);
   const {
     cases,
     current,
@@ -43,7 +45,8 @@ export default function App() {
     if (run.active && !wasActive.current) setRunOpen(true);
     wasActive.current = run.active;
   }, [run.active]);
-  useEffect(() => setRunOpen(false), [current?.id]);
+  const [reportOpen, setReportOpen] = useState(false);
+  useEffect(() => { setRunOpen(false); setReportOpen(false); }, [current?.id]);
   const [panel, setPanel] = useState<Panel>(null);
   const composerIdentity = useRef({ id: "", key: "" });
   if (current && composerIdentity.current.id !== current.id) {
@@ -88,10 +91,10 @@ export default function App() {
     return (
       <main className="startup">
         {error ? <><Brand /><p role="alert">{t(`error:${error}`)}</p></> :
-          <BrandLoader fullPage label={t("正在载入工作空间…")} />}
+          <BrandLoader fullPage label={t("Loading your workspace…")} />}
         {error && (
           <HintButton className="primary-button" onClick={retry}>
-            {t("重试")}
+            {t("Retry")}
           </HintButton>
         )}
       </main>
@@ -103,7 +106,7 @@ export default function App() {
         className={`sidebar-slot ${mobileNav ? "is-open" : ""}`}
         role={mobileNav ? "dialog" : undefined}
         aria-modal={mobileNav || undefined}
-        aria-label={mobileNav ? t("案例导航") : undefined}
+        aria-label={mobileNav ? t("Chat navigation") : undefined}
         inert={narrow && !mobileNav ? true : undefined}
       >
         <Sidebar
@@ -129,17 +132,17 @@ export default function App() {
         <main className="main-workspace atlas-workspace" inert={mobileNav || Boolean(panel) ? true : undefined}>
           <header className="topbar">
             <div className="page-title">
-              <HintButton className="icon-button mobile-menu" aria-label={t("打开案例导航")}
+              <HintButton className="icon-button mobile-menu" aria-label={t("Open chat navigation")}
                 onClick={() => { setPanel(null); setMobileNav(true); }}>
                 <Menu size={20} />
               </HintButton>
-              <span>{t("税务地图")}</span>
+              <span>{t("Tax graph")}</span>
             </div>
             <div className="topbar-actions">
-              <HintButton className="language-toggle" aria-label={locale === "zh" ? "Switch to English" : "切换为中文"}
-                onClick={() => setLocale(locale === "zh" ? "en" : "zh")}>
+              <HintButton className="language-toggle" aria-label={languages[nextLanguage].switchTo}
+                onClick={() => setLocale(nextLanguage)}>
                 <Globe2 size={14} />
-                <span>{locale === "zh" ? "EN" : "中文"}</span>
+                <span>{languages[nextLanguage].name}</span>
               </HintButton>
             </div>
           </header>
@@ -153,7 +156,7 @@ export default function App() {
           <div className="page-title">
             <HintButton
               className="icon-button mobile-menu"
-              aria-label={t("打开案例导航")}
+              aria-label={t("Open chat navigation")}
               onClick={() => {
                 setPanel(null);
                 setMobileNav(true);
@@ -161,27 +164,27 @@ export default function App() {
             >
               <Menu size={20} />
             </HintButton>
-            <span>{empty ? t("税务助手") : caseTitle(current, t)}</span>
+            <span>{empty ? t("Tax assistant") : caseTitle(current, t)}</span>
           </div>
           <div className="topbar-actions">
             {started && (
               <HintButton
                 className={`language-toggle run-toggle ${run.active ? "is-active" : ""}`}
-                aria-label={t("打开进度面板")}
+                aria-label={t("Open the progress panel")}
                 aria-expanded={runOpen}
                 onClick={() => setRunOpen(!runOpen)}
               >
                 <Activity size={14} />
-                <span>{t("进度")}</span>
+                <span>{t("Progress")}</span>
               </HintButton>
             )}
             <HintButton
               className="language-toggle"
-              aria-label={locale === "zh" ? "Switch to English" : "切换为中文"}
-              onClick={() => setLocale(locale === "zh" ? "en" : "zh")}
+              aria-label={languages[nextLanguage].switchTo}
+              onClick={() => setLocale(nextLanguage)}
             >
               <Globe2 size={14} />
-              <span>{locale === "zh" ? "EN" : "中文"}</span>
+              <span>{languages[nextLanguage].name}</span>
             </HintButton>
           </div>
         </header>
@@ -190,14 +193,15 @@ export default function App() {
             {empty ? (
               <Welcome />
             ) : (
-              <Conversation current={current} busy={currentBusy} partial={partial} process={process} blocks={run.blocks} working={working} onRemove={removeDocument} />
+              <Conversation current={current} busy={currentBusy} partial={partial} process={process} blocks={run.blocks} working={working} onRemove={removeDocument}
+                onReport={current.id.startsWith("draft-") ? undefined : () => setReportOpen(true)} />
             )}
           </div>
           <div className="composer-area">
             {error && !panel && (
               <div className="request-error" role="alert">
                 {t(`error:${error}`)}{" "}
-                {isRetryable(error) && <HintButton onClick={retry}>{t("重试")}</HintButton>}
+                {isRetryable(error) && <HintButton onClick={retry}>{t("Retry")}</HintButton>}
               </div>
             )}
             <Composer
@@ -212,7 +216,7 @@ export default function App() {
           </div>
         </div>
         <footer className="workspace-footer">
-          {t("专业判断，请由税务顾问复核。")}
+          {t("Professional judgments require adviser review.")}
         </footer>
       </main>}
       {mobileNav && (
@@ -227,11 +231,13 @@ export default function App() {
       )}
       {runOpen && started && !panel && !atlas && (
         <div className="run-slot">
-          <RunPanel caseId={current?.id} run={run} onResume={() => void resume()} onHalt={() => void halt()} onClose={() => setRunOpen(false)} />
+          <RunPanel caseId={current?.id} run={run} onResume={() => void resume()} onHalt={() => void halt()} onClose={() => setRunOpen(false)}
+            onReport={() => setReportOpen(true)} />
         </div>
       )}
+      {reportOpen && !current.id.startsWith("draft-") && <ReportPanel caseId={current.id} onClose={() => setReportOpen(false)} />}
       {panel && (
-        <div className="panel-slot" ref={panelRef} role="main" aria-label={t("关于 Taxrora")}>
+        <div className="panel-slot" ref={panelRef} role="main" aria-label={t("About Taxrora")}>
           <DetailsPanel key={panel} onClose={() => setPanel(null)} />
         </div>
       )}

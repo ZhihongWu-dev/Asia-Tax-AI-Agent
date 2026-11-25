@@ -1,8 +1,8 @@
 # 规则层 MCP 规范（tax-rule，最小集）
 
-2026-11-01。四个 MCP 服务之一（另三个：`database/数据库MCP规范.md`、`optimization/优化层MCP规范.md`、`agent/案卷MCP规范.md`）。本文只定 `tax-rule`：给 Agent 层用的服务化接口，包装规则层现有函数，不加新语义。规则层本身的表、求值语义、函数集见 `规则层规范.md`。
+2026-11-01。四个 MCP 服务之一（另三个：`database/数据库MCP规范.md`、`optimization/optimization_mcp_spec.zh.md`、`agent/case_mcp_spec.zh.md`）。本文只定 `tax-rule`：给 Agent 层用的服务化接口，包装规则层现有函数，不加新语义。规则层本身的表、求值语义、函数集见 `rule_layer_spec.zh.md`。
 
-**语言**：本规范用中文，供人阅读；英文副本 `rule/rule_mcp_spec.en.md`，两者不一致时以中文版为准，改中文版时同步改英文副本。AI 写进文件的一切自写文字用英文——代码、注释、工具说明、prompt（系统实际递交的是英文副本里的那段）、底稿、核对单、handoff、bug 反馈、日志、产物字段；原件、条文、引文、客户原话保持原文，不翻译。唯一例外是给客户看的文字（对客户的回话、briefing）跟客户的语言。核对单的总判断用英文记号：交接包 `RUNNABLE` / `REVISE`，报告 `DELIVERABLE` / `REVISE`（服务也接受原来的中文记号）。
+**语言**：本文是英文版 `rule/rule_mcp_spec.md` 的中文译本；自 2026-11-25 起以英文版为准，改英文版时同步更新本译本。AI 写进文件的一切自写文字用英文——代码、注释、工具说明、prompt（系统实际递交的是英文副本里的那段）、底稿、核对单、handoff、bug 反馈、日志、产物字段；原件、条文、引文、客户原话保持原文，不翻译。唯一例外是给客户看的文字（对客户的回话、briefing）跟客户的语言。核对单的总判断用英文记号：交接包 `RUNNABLE` / `REVISE`，报告 `DELIVERABLE` / `REVISE`（服务也接受原来的中文记号）。
 
 ## 1. 定位
 
@@ -38,7 +38,7 @@
 - `date` 不给默认值，缺就报 `invalid`。
 - 每个返回带 `version`（规则层构建号），供报告的 sources.json 引用。
 - 错误结构化返回 `{error: invalid | not_found | internal, detail}`，供 Agent 原样贴进 bug 反馈。
-- 调用日志不由服务记：宿主的 PostToolUse 钩子统一记到 `cases/<case_id>/log/calls.jsonl`（见 `agent/案卷MCP规范.md` §5），服务不碰日志。
+- 调用日志不由服务记：宿主的 PostToolUse 钩子统一记到 `cases/<case_id>/log/calls.jsonl`（见 `agent/case_mcp_spec.zh.md` §5），服务不碰日志。
 - 跨服务同名工具（`requirements`、`version`、`diff`）由宿主按服务名加前缀，不冲突；Agent 规范提到时带服务名。
 
 ## 4. 身份与权限

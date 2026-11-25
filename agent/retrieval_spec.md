@@ -1,6 +1,6 @@
 # Reading and Retrieval Specification (RAG)
 
-English copy of `agent/检索规范.md`; when the two differ the Chinese version prevails, and whoever changes one updates the other.
+This English version is the master (since 2026-11-25); `agent/retrieval_spec.zh.md` is its Chinese translation, updated with it.
 
 2026-11-03. The fifth specification of the agent layer, beside the four agent specifications (front, analysis, polish, review). Everything the AI writes itself (code, comments, tool descriptions, index fields, evaluation records) is in English; provisions, product values and the client's words stay verbatim, untranslated and unparaphrased.
 
@@ -258,7 +258,7 @@ Every component has its own switch: header context, dense channel, language bala
 | §4.3 item 9 | Every figure traces to a rule-layer output and a provision; the LLM does no tax arithmetic; same input, same product; nothing from the web in products | Product records copy values; provisions verbatim; the index holds nothing from the web; the index is deterministic and records engine hash and model name |
 | §4.3 item 11 | Abilities fully open, only deliverables constrained | Tools are added, none removed; Read / Glob stay; the guard is unchanged; the budget can be exhausted with cursor |
 | §4.4 item 14 | No system identifiers in client text | Ids are internal refs; polish removes them; report_check's leak patterns gain the id formats |
-| §4.5 | Specs in Chinese with an English copy; the AI's own text in English | This file + `检索规范.md`; index fields, verbalisations and evaluation records in English; originals untranslated |
+| §4.5 | Specs in Chinese with an English copy; the AI's own text in English | This file + `retrieval_spec.md`; index fields, verbalisations and evaluation records in English; originals untranslated |
 | §5 Not done | Verifying the authenticity of the client's documents | Documents are only parsed and indexed; conflicts are listed, not judged, as before |
 | Database spec | The library holds only official texts | The index is a derived layer over the library; `header` comes from the original's structure; model-written explanations are off by default (§15) |
 

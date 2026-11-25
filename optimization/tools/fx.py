@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Exchange rates for the optimization layer (优化层规范.md §3, input 汇率).
+"""Exchange rates for the optimization layer (optimization_layer_spec.md §3, input exchange rates).
 
 The library has no exchange rates (the rule layer says the conversion into the recipient's currency is the caller's).
 This tool fetches them and writes a JSON file in which every number carries its source, URL and date, so that

@@ -6,22 +6,22 @@ import { AGENT_LABEL, STEP_LABEL, duration, whoRuns } from "./RunPanel";
 
 // The orchestration graph of agent/tools/orchestrate.py (LEGAL), drawn by hand so the layout stays readable at panel width.
 const ROLE: Record<string, string> = {
-  intake: "与客户对话，收集事实和文件，整理成资料包",
-  review_intake: "检查资料包是否完整、足以计算；不够就退回前台向客户补充",
-  run: "穷举所有持股结构，按规则层逐跳计税，按每笔股息的税额排序",
-  analysis: "依据计算产物和法条撰写客户报告",
-  review_draft: "逐条核对报告的数字、条件和引用；有问题就退回重写",
-  render: "应用复核的替换，排版生成 PDF",
+  intake: "Talks with the client, collects the facts and documents, and assembles the intake package.",
+  review_intake: "Checks that the intake package is complete enough to compute; if not, sends it back to the front agent to ask the client.",
+  run: "Enumerates every holding structure, taxes each hop through the rule layer, and ranks them by tax per dividend.",
+  analysis: "Writes the client report from the computed products and the law.",
+  review_draft: "Checks every figure, condition and citation in the report; sends it back for rewriting if anything is wrong.",
+  render: "Applies the review's replacements and typesets the PDF.",
 };
 const TOOLS: Record<string, string[]> = {
   front: ["tax-case", "tax-opt", "tax-rule", "tax-read"],
   analysis: ["tax-read", "tax-opt", "tax-rule", "tax-case"],
   review: ["tax-read", "tax-opt", "tax-rule", "tax-case"],
-  run: ["规则层", "法律库"],
+  run: ["rule layer", "law library"],
   render: ["XeLaTeX"],
 };
 const STATE_LABEL: Record<RunStep["state"], string> = {
-  pending: "未开始", running: "进行中", done: "已完成", failed: "失败", stopped: "已暂停",
+  pending: "Not started", running: "Running", done: "Done", failed: "Failed", stopped: "Paused",
 };
 
 const NX = 44, NW = 180, NH = 42, TOP = 48, PITCH = 62, IN = 240, OUT = 300;
@@ -60,7 +60,7 @@ export default function RunGraph({ steps, spent, finished, tool, onSearch }: {
 
   return (
     <div className="run-graph">
-      <svg viewBox={`0 0 324 ${HEIGHT}`} role="img" aria-label={t("编排流程图")}>
+      <svg viewBox={`0 0 324 ${HEIGHT}`} role="img" aria-label={t("Orchestration graph")}>
         <defs>
           {["", "-lit"].map((kind) => (
             <marker key={kind} id={`g-arrow${kind}`} viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
@@ -71,7 +71,7 @@ export default function RunGraph({ steps, spent, finished, tool, onSearch }: {
 
         <g className={`g-terminal ${nodes.length ? "lit" : ""}`}>
           <rect x={NX + 40} y={4} width={NW - 80} height={24} rx={12} />
-          <text x={NX + NW / 2} y={20} textAnchor="middle">{t("客户")}</text>
+          <text x={NX + NW / 2} y={20} textAnchor="middle">{t("Client")}</text>
         </g>
         <line className={`g-edge ${lit(nodes[0]) ? "lit" : ""}`} x1={NX + NW / 2} y1={28} x2={NX + NW / 2} y2={TOP - 2} markerEnd={arrow(lit(nodes[0]))} />
 
@@ -82,11 +82,11 @@ export default function RunGraph({ steps, spent, finished, tool, onSearch }: {
         <line className={`g-edge ${finished ? "lit" : ""}`} x1={NX + NW / 2} y1={y(ORDER.length - 1) + NH} x2={NX + NW / 2} y2={END_Y - 2} markerEnd={arrow(finished)} />
 
         <path className={`g-loop ${asked ? "lit" : ""}`} d={loop(1, 0, IN)} markerEnd={arrow(asked > 0)} />
-        <text className="g-loop-label" x={IN + 7} y={(mid(0) + mid(1)) / 2 + 4}>{t("补充")}{asked ? ` ×${asked}` : ""}</text>
+        <text className="g-loop-label" x={IN + 7} y={(mid(0) + mid(1)) / 2 + 4}>{t("Ask")}{asked ? ` ×${asked}` : ""}</text>
         <path className={`g-loop ${returns ? "lit" : ""}`} d={loop(4, 3, IN)} markerEnd={arrow(returns > 0)} />
-        <text className="g-loop-label" x={IN + 7} y={(mid(3) + mid(4)) / 2 + 4}>{t("退回")}{returns ? ` ×${returns}` : ""}</text>
+        <text className="g-loop-label" x={IN + 7} y={(mid(3) + mid(4)) / 2 + 4}>{t("Return")}{returns ? ` ×${returns}` : ""}</text>
         <path className="g-loop faint" d={loop(5, 3, OUT)} markerEnd={arrow(false)} />
-        <text className="g-loop-label faint" x={IN + 7} y={(mid(4) + mid(5)) / 2 + 4}>{t("未通过")}</text>
+        <text className="g-loop-label faint" x={IN + 7} y={(mid(4) + mid(5)) / 2 + 4}>{t("Fail")}</text>
 
         {nodes.map((step, i) => {
           const Icon = program(step) ? Cog : Bot;
@@ -98,22 +98,22 @@ export default function RunGraph({ steps, spent, finished, tool, onSearch }: {
               <rect x={NX} y={y(i)} width={NW} height={NH} rx={program(step) ? 5 : 12} />
               <Icon className="g-icon" x={NX + 11} y={y(i) + 13} size={16} />
               <text className="g-title" x={NX + 36} y={y(i) + 18}>{t(STEP_LABEL[step.id])}</text>
-              <text className="g-sub" x={NX + 36} y={y(i) + 33}>{program(step) ? t("确定性程序") : step.model || t(AGENT_LABEL[step.agent])}</text>
+              <text className="g-sub" x={NX + 36} y={y(i) + 33}>{program(step) ? t("deterministic program") : step.model || t(AGENT_LABEL[step.agent])}</text>
               {time && <text className="g-time" x={NX + NW - 10} y={y(i) + 18} textAnchor="end">{time}</text>}
-              {step.runs > 1 && <text className="g-runs" x={NX + NW - 10} y={y(i) + 33} textAnchor="end">{t("第")} {step.runs} {t("次")}</text>}
+              {step.runs > 1 && <text className="g-runs" x={NX + NW - 10} y={y(i) + 33} textAnchor="end">{t("Run {n}").replace("{n}", String(step.runs))}</text>}
             </g>
           );
         })}
 
         <g className={`g-terminal ${finished ? "lit" : ""}`}>
           <rect x={NX + 40} y={END_Y} width={NW - 80} height={26} rx={13} />
-          <text x={NX + NW / 2} y={END_Y + 17} textAnchor="middle">{t("交付报告")}</text>
+          <text x={NX + NW / 2} y={END_Y + 17} textAnchor="middle">{t("Report delivered")}</text>
         </g>
       </svg>
 
       <div className="g-legend">
-        <span><i className="agent" />{t("Agent（大模型）")}</span>
-        <span><i className="program" />{t("程序（确定性）")}</span>
+        <span><i className="agent" />{t("Agent (LLM)")}</span>
+        <span><i className="program" />{t("Program (deterministic)")}</span>
         <span className="g-engine">LangGraph StateGraph</span>
       </div>
 
@@ -125,7 +125,7 @@ export default function RunGraph({ steps, spent, finished, tool, onSearch }: {
           </header>
           <p className="g-who">
             {t(whoRuns(shown))}
-            {shown.model ? ` · ${shown.model}` : program(shown) ? ` · ${t("确定性程序")}` : ""}
+            {shown.model ? ` · ${shown.model}` : program(shown) ? ` · ${t("deterministic program")}` : ""}
           </p>
           <p>{t(ROLE[shown.id])}</p>
           <div className="g-tools">
@@ -133,14 +133,14 @@ export default function RunGraph({ steps, spent, finished, tool, onSearch }: {
           </div>
           {(shown.runs > 0 || shown.state === "running") && (
             <p className="g-stats">
-              {t("用时")} {duration(spent(shown))}
-              {shown.runs > 1 ? ` · ${t("第")} ${shown.runs} ${t("次")}` : ""}
+              {t("Took")} {duration(spent(shown))}
+              {shown.runs > 1 ? ` · ${t("Run {n}").replace("{n}", String(shown.runs))}` : ""}
             </p>
           )}
           {shown.runs > 1 && shown.reason && <p className="g-reason" title={shown.reason}>{shown.reason}</p>}
           {shown.state === "running" && tool && <p className="run-now" title={tool.detail}>{tool.name}</p>}
           {shown.id === "run" && onSearch && (shown.runs > 0 || shown.state === "running") && (
-            <button type="button" className="g-search" onClick={onSearch}><Route size={14} />{t("查看搜索过程")}</button>
+            <button type="button" className="g-search" onClick={onSearch}><Route size={14} />{t("View the search")}</button>
           )}
         </section>
       )}

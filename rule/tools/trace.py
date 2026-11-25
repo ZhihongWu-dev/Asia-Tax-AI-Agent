@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Trace-back check of evaluation output (rule/规则层规范（最小集）.md §7 回溯). For every item it walks
+"""Trace-back check of evaluation output (rule/rule_layer_spec.md §7, trace-back). For every item it walks
 item -> rule_id -> effect and condition parameters -> param.quote verbatim in clause.text and parameter effective at
 the item's date -> every cite_id a clause whose document is in force at the date -> decision quotes verbatim in their
 clauses -> the value recomposed from the applied rules equals the item's value. Any broken link = FAIL.
@@ -82,7 +82,7 @@ class Tracer:
             chain.append("decision %s <- %s" % (did, d["cite_id"]))
 
     def recompose(self, item, fails):
-        """The value from the applied rules and the parameters must equal the item's value (spec §7 不变量)."""
+        """The value from the applied rules and the parameters must equal the item's value (spec §7, invariant)."""
         certain = {rid for rid, (s, _) in item.get("conditions", {}).items() if s == "T"}
         sched_facts = item.get("schedule_inputs") or {}
         for side in ev.SIDES:

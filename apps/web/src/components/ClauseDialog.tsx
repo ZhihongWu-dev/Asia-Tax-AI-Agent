@@ -30,25 +30,25 @@ export default function ClauseDialog({ citeId, onClose }: { citeId: string; onCl
           <div>
             <ScrollText size={17} />
             <div>
-              <h2 id="clause-title">{clause?.title || t("条文原文")}</h2>
+              <h2 id="clause-title">{clause?.title || t("Provision")}</h2>
               <span className="atlas-cite-id">{citeId}{clause?.label ? ` · ${clause.label}` : ""}</span>
             </div>
           </div>
-          <HintButton className="icon-button" aria-label={t("关闭")} onClick={onClose}>
+          <HintButton className="icon-button" aria-label={t("Close")} onClick={onClose}>
             <X size={18} />
           </HintButton>
         </header>
         <div className="atlas-dialog-body">
-          {error ? <p role="alert">{t(`error:${error}`)}</p> : !clause ? <p className="atlas-muted">{t("正在载入…")}</p> :
+          {error ? <p role="alert">{t(`error:${error}`)}</p> : !clause ? <p className="atlas-muted">{t("Loading…")}</p> :
             <>
               <pre className="atlas-clause-text" lang={clause.lang || undefined}>{clause.text}</pre>
-              {clause.total > clause.text.length && <p className="atlas-muted">{t("条文较长，仅显示开头部分。")}</p>}
+              {clause.total > clause.text.length && <p className="atlas-muted">{t("A long provision: only its beginning is shown.")}</p>}
             </>}
         </div>
         {clause?.url && (
           <footer>
-            <a href={clause.url} target="_blank" rel="noreferrer"><ExternalLink size={14} />{t("打开官方来源")}</a>
-            <span className="atlas-muted">{t("原文取自 Supabase 法律库")}</span>
+            <a href={clause.url} target="_blank" rel="noreferrer"><ExternalLink size={14} />{t("Open the official source")}</a>
+            <span className="atlas-muted">{t("Verbatim from the Supabase library")}</span>
           </footer>
         )}
       </section>

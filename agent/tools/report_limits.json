@@ -1,12 +1,40 @@
 {
- "_note": "Word limits per part of the briefing (report_form.py). The frame states each part's limit to the analysis agent (2026-11-12, the user's decision); the file itself stays program-only. limit = base + each x count(per). Citations, quotations, tables, fenced blocks and program blocks are not counted.",
- "head": {"base": 120},
- "1": {"base": 250, "per": "choices", "each": 80},
- "2": {"base": 500},
- "3": {"base": 240, "per": "structures", "each": 60},
- "4": {"base": 250},
- "5": {"base": 150},
- "6": {"base": 400},
- "7": {"base": 600},
- "A": {"base": 80, "per": "assumptions", "each": 150}
+ "_note": "Word limits per part of the briefing (report_form.py). The frame states each part's limit to the analysis agent (2026-11-12, the user's decision); the file itself stays program-only. limit = base + each x count(per). Citations, quotations, tables, fenced blocks and program blocks are not counted. Since 2026-11-25 only Parts 1 and 7 and Appendix A are the agent's; the other entries are kept for runs from before.",
+ "_render_slack": 0.05,
+ "_render_slack_note": "At render the reviewers' replacements may take a part up to this share over its limit (2026-11-25); beyond it the part goes back to the author.",
+ "head": {
+  "base": 120
+ },
+ "1": {
+  "base": 250,
+  "per": "choices",
+  "each": 80
+ },
+ "2": {
+  "base": 500
+ },
+ "3": {
+  "base": 240,
+  "per": "structures",
+  "each": 60
+ },
+ "4": {
+  "base": 250
+ },
+ "5": {
+  "base": 150
+ },
+ "6": {
+  "base": 400
+ },
+ "7": {
+  "base": 300,
+  "per": "skeleton",
+  "each": 130
+ },
+ "A": {
+  "base": 80,
+  "per": "assumptions",
+  "each": 150
+ }
 }

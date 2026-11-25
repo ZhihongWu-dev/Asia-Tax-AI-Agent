@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""PreToolUse hook: the read-side isolation of the four case agents (agent/case_mcp_spec.en.md §3, §6).
+"""PreToolUse hook: the read-side isolation of the four case agents (agent/case_mcp_spec.md §3, §6).
 
 Only acts when the hook input carries agent_type front / analysis / polish / review (i.e. the call happens inside one of
 the four agents' `claude --agent` sessions). Denies, with a reason:

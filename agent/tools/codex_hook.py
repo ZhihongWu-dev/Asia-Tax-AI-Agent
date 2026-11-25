@@ -20,7 +20,7 @@ PROJECT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 
 BUILTIN = re.compile(r"(?i)^(bash|shell|local_shell|exec_command|unified_exec|write_stdin|apply_patch)$")
-FILES = re.compile(r"^mcp__tax-files__(read_file|list_files|search|read_image)$")
+FILES = re.compile(r"^mcp__tax[-_]files__(read_file|list_files|search|read_image)$")    # Codex writes the server name with underscores
 
 
 def deny(reason):

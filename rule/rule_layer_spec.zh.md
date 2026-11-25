@@ -2,7 +2,7 @@
 
 2026-10-31（第三版，取代 2026-10-29 版：功能定位改为为 AI agent 提供逻辑、计算上的辅助，表、语法、求值语义、构建不变）。规则层在 `rule/`。它读数据库（`database/`，见 `database/数据库规范.md`）产出的 jurisdiction、doc、clause、param、treaty、decision，自己维护 rule、variable、predicate、decision、rule_test 五张表，并以此提供一组只读的查询与计算函数（第 5 节）。数据库不依赖规则层；规则层不依赖任何调用者。参考实现在 `rule/tools/`；旧引擎（`tax_graph/`、`official/`）不使用，也不迁移。
 
-**语言**：本规范用中文，供人阅读；英文副本 `rule/rule_layer_spec.en.md`，两者不一致时以中文版为准，改中文版时同步改英文副本。AI 写进文件的一切自写文字用英文——代码、注释、工具说明、prompt（系统实际递交的是英文副本里的那段）、底稿、核对单、handoff、bug 反馈、日志、产物字段；原件、条文、引文、客户原话保持原文，不翻译。唯一例外是给客户看的文字（对客户的回话、briefing）跟客户的语言。核对单的总判断用英文记号：交接包 `RUNNABLE` / `REVISE`，报告 `DELIVERABLE` / `REVISE`（服务也接受原来的中文记号）。
+**语言**：本文是英文版 `rule/rule_layer_spec.md` 的中文译本；自 2026-11-25 起以英文版为准，改英文版时同步更新本译本。AI 写进文件的一切自写文字用英文——代码、注释、工具说明、prompt（系统实际递交的是英文副本里的那段）、底稿、核对单、handoff、bug 反馈、日志、产物字段；原件、条文、引文、客户原话保持原文，不翻译。唯一例外是给客户看的文字（对客户的回话、briefing）跟客户的语言。核对单的总判断用英文记号：交接包 `RUNNABLE` / `REVISE`，报告 `DELIVERABLE` / `REVISE`（服务也接受原来的中文记号）。
 
 ## 0. 功能定位与范围
 
@@ -252,7 +252,7 @@ rate → surtax（×(1 + p/100)）→ cap（取最小）→ share（× p/100）�
 | 形式 | 内容 |
 |---|---|
 | CLI | `rule/tools/eval.py`、`trace.py`、`rule_tool.py`、`query.py`、`build.py`（第 10 节） |
-| MCP | `rule/tools/mcp_server.py`（`规则层MCP规范.md`） |
+| MCP | `rule/tools/mcp_server.py`（`rule_mcp_spec.zh.md`） |
 | 产物 | `rule.sqlite`（五张表 + 生成列）、`STATUS.md` |
 
 事实怎么来、谓词怎么答、结果怎么用，都不在本规范里。规则层对输入的唯一要求是合法：未知变量名、不合法的 slot_key、不是三值之一的答案，直接报错，不猜。
@@ -261,7 +261,7 @@ rate → surtax（×(1 + p/100)）→ cap（取最小）→ share（× p/100）�
 
 ## 8a. MCP 服务 `tax-rule`
 
-见 `rule/规则层MCP规范.md`（2026-11-01，最小集，只读服务，包装本层函数不加语义）。
+见 `rule/rule_mcp_spec.zh.md`（2026-11-01，最小集，只读服务，包装本层函数不加语义）。
 
 ## 9. 写法示例
 

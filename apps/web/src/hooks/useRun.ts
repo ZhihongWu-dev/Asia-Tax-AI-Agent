@@ -6,7 +6,7 @@ export type RunView = Omit<RunState, "blocks" | "items" | "cursor"> & { blocks: 
 
 const idle: RunView = {
   active: false, turning: false, status: null, round: null, revision: 0, steps: [], stop: null,
-  can_resume: false, report: null, chat_revision: 0, blocks: [],
+  can_resume: false, report: null, panel: false, chat_revision: 0, blocks: [],
 };
 
 /** Follows one case's run: quick while something is working, slow otherwise. The cursor keeps each poll to what is new. */

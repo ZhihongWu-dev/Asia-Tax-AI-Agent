@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Evaluation of the retrieval layer (agent/retrieval_spec.en.md §12).
+"""Evaluation of the retrieval layer (agent/retrieval_spec.md §12).
 
   python agent/tools/read_eval.py --case CASE-20261102-a032c0 [--sample 120] [--write]
 
@@ -243,7 +243,7 @@ def main():
     print(json.dumps(settings))
     if a.write:
         lines = ["# Retrieval evaluation", "", "Written by agent/tools/read_eval.py on %s (case %s, sample %d). Golden sets and the adoption rule: the module docstring and "
-                 "agent/retrieval_spec.en.md §12. Even items are the development set, odd items the test set." % (RC.now(), a.case, a.sample), "",
+                 "agent/retrieval_spec.md §12. Even items are the development set, odd items the test set." % (RC.now(), a.case, a.sample), "",
                  "| Set | Config | Split | n | R@1 | R@5 | R@10 | MRR@10 | nDCG@10 | s/query |", "|---|---|---|---|---|---|---|---|---|---|"]
         for (s, c, sp), m in report.items():
             lines.append("| %s | %s | %s | %d | %.3f | %.3f | %.3f | %.3f | %.3f | %.2f |" % (s, c, sp, m["n"], m["R@1"], m["R@5"], m["R@10"], m["MRR@10"], m["nDCG@10"], m["s/query"]))

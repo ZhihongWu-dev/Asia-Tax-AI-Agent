@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""The orchestrator of the four agents (agent/orchestration_cli_spec.en.md): LangGraph picks the next step, Claude Code runs it.
+"""The orchestrator of the four agents (agent/orchestration_cli_spec.md): LangGraph picks the next step, Claude Code runs it.
 
   python agent/tools/orchestrate.py front [case_id]     interactive front session
   python agent/tools/orchestrate.py run <case_id>       walk from the current status to a stop, print one JSON line
@@ -55,14 +55,16 @@ STREAM_FLAGS = ["--output-format", "stream-json", "--verbose", "--include-partia
 NODE_AGENT = {"review_intake": "review", "analysis": "analysis", "review_draft": "review"}   # 2026-11-06: the reviewed draft is the client report; the program renders it
 TASKS = {
     "review_intake": "Check the intake package of case {case_id}.",
-    "analysis": "Write the client report (the briefing) for case {case_id}, run {run_id}.",
+    "analysis": ("Write your three blocks of the client report for case {case_id}, run {run_id} with write_block: strategy (Part 1), "
+                 "plan (Part 7) and points (Appendix A). The program writes the other parts and renders the report from your blocks."),
     "review_draft": "Check the briefing draft of case {case_id}, run {run_id}.",
 }
 REVISE_TASKS = {
-    "analysis": " Mode: revise against run {base}; see {case_id}/report/{run_id}/impact.json. Start from report/{base}/briefing.md and briefing.sources.json, "
-                "rewrite what impact.json lists under sections and stale, carry the rest after checking it against this run's products, keep the structure names "
-                "of the last edition, and open Part 1 with a short note of what changed since the last edition, taken from impact.json only. "
-                "If the carried text cannot be reconciled with the new facts, record the line REWRITE: full with notes_append and stop.",
+    "analysis": " Mode: revise against run {base}; see {case_id}/report/{run_id}/impact.json. Your blocks of the last edition are copied into "
+                "report/{run_id}/blocks/; the program's parts are already rendered from this run. Change in your blocks what impact.json lists under "
+                "sections and stale, check the rest against this run's frame and products, keep the structure names of the last edition, and open "
+                "Part 1 with a short note of what changed since the last edition, taken from impact.json only. If your blocks cannot be reconciled "
+                "with the new facts, record the line REWRITE: full with notes_append and stop.",
     "review_draft": " Mode: revised edition against run {base}; see {case_id}/report/{run_id}/impact.json. Check the sections and stale sentences it lists, the "
                     "changes note and every figure; read the carried parts only for contradictions with the changes. If the edition cannot stand as a revision, "
                     "write REWRITE: full on the line before RETURN: analysis.",
@@ -74,7 +76,8 @@ LANE_TASK = ("Check the legal reasoning of the {what} of case {case_id}, run {ru
              "write_review(which={which}).")
 LANE_RECHECK = (" This is a re-check: the extract holds only the sentences on lines changed since your last checklist ({last}); check those and "
                 "whether the items you sent back are fixed.")
-FINDING_LABEL = re.compile(r"(?i)^\s*(?:[-*]\s*)?(?:\d+\.\s*)?\**\s*(location|category|problem|evidence|suggestion|位置|类别|问题|证据|建议)\s*\**\s*[:：]")
+import words  # noqa: E402  (report_words.json)
+FINDING_LABEL = re.compile(r"(?i)^\s*(?:[-*]\s*)?(?:\d+\.\s*)?\**\s*(" + words.LABELS + r")\s*\**\s*" + words.COLON)
 FINDINGS_CAP = 6000                                     # characters of checklist findings carried into a return task
 REWRITE = re.compile(r"(?m)^\s*REWRITE:\s*full\s*$")
 SECTIONED = False                                      # the analysis node drafts in parts (spec §10); False = one agent writes the whole draft
@@ -594,7 +597,7 @@ def optimizer_run(case_id):
 
 
 def index_products(case_id, run_id):
-    """The records index of a run's products (agent/retrieval_spec.en.md §5); the agents read the products through it."""
+    """The records index of a run's products (agent/retrieval_spec.md §5); the agents read the products through it."""
     try:
         read_index.build_products(CASES / case_id / "intake" / "products" / run_id)
     except Exception as e:                                      # noqa: BLE001  (the agents can still read the files)
@@ -649,6 +652,10 @@ def lane_prepare(node, case_id, cur):
     if last.exists() and same_run and mark.exists() and mark.read_text(encoding="utf-8") == str(cur.get("round")) and (snap / "briefing.md").exists():
         lines = reasons_mod.changed_lines((snap / "briefing.md").read_text(encoding="utf-8"), md.read_text(encoding="utf-8"))
         recheck = True
+    if (rd / "frame" / "figures.json").exists():              # 2026-11-25: the program's parts are not the lane's to check
+        import panel
+        mine = panel.ai_lines(md.read_text(encoding="utf-8"))
+        lines = sorted(set(lines) & mine) if lines is not None else sorted(mine)
     path, n = reasons_mod.build(case_id, run_id, target, lines, cases_root=CASES)
     if n == 0 and (not recheck or case_mod_passed(last, which)):
         why = "no sentence stating a legal reason changed" if recheck else "no sentence of the draft states a legal reason"
@@ -906,7 +913,7 @@ def render_node(state):
         elif made.get("error"):
             state.update(stop="agent_failed", detail="render: %s" % made.get("detail"))
         else:
-            problems = [x for x in self_check(case_id, run_id, "draft") if not report_form.OVERRUN.search(x)]   # see render_pdf
+            problems = [x for x in self_check(case_id, run_id, "draft") if not report_form.render_slack(x)]   # see render_pdf
             if problems:
                 state.update(redo="analysis", reason="self-check problems: " + "; ".join(problems))
     state = advance(state, "render")

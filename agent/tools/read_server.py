@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""tax-read: the retrieval service over the law library, a run's products and a case file (agent/retrieval_spec.en.md §10).
+"""tax-read: the retrieval service over the law library, a run's products and a case file (agent/retrieval_spec.md §10).
 
   python agent/tools/read_server.py --root cases --db database --rule rule --agent front|analysis|review|polish
 

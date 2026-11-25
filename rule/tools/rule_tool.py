@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""The assistant's `rule` tool (rule/规则层规范（最小集）.md §5): returns rule rows with the clauses they cite, the
+"""The assistant's `rule` tool (rule/rule_layer_spec.md §5): returns rule rows with the clauses they cite, the
 parameters in their effect and condition, their decisions and procedure documents. It does not evaluate anything;
 what it does not find, the assistant must not assert.
 

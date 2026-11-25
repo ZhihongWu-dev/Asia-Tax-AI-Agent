@@ -5,27 +5,54 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { en } from "./locales/en";
 import { errors } from "./locales/errors";
+import { zh } from "./locales/zh";
 
-export type Locale = "zh" | "en";
+// English is the source language: components pass English text to t(), and each translation maps that text to its own
+// language. Adding a language means one file in locales/ and one entry in `languages`.
+export type Translation = {
+  name: string; // the toggle's label for switching to this language
+  switchTo: string; // the toggle's accessible name, written in this language
+  lang: string; // <html lang>
+  strings: Record<string, string>; // English text, or "context|English text", to the translation
+};
+const english: Translation = { name: "EN", switchTo: "Switch to English", lang: "en", strings: {} };
+export const languages = { en: english, zh } satisfies Record<string, Translation>;
+export type Locale = keyof typeof languages;
+export const defaultLocale: Locale = "en";
 export const languagePreferenceKey = "taxrora.language";
-export function translate(text: string, locale: Locale): string {
-  if (errors[text]) return errors[text][locale === "en" ? 1 : 0];
-  return locale === "en" ? en[text] ?? text : text;
+
+const own = (map: Record<string, string>, key: string) =>
+  Object.prototype.hasOwnProperty.call(map, key) ? map[key] : undefined;
+const isLocale = (value: string | null): value is Locale =>
+  value !== null && Object.prototype.hasOwnProperty.call(languages, value);
+
+// `context` separates one English text that takes two wordings in a translation (e.g. "Progress" on the toggle and as
+// the run panel's title); without an entry for the context the plain text is used.
+export function translate(text: string, locale: Locale, context?: string): string {
+  const source = own(errors, text) ?? text;
+  const strings = languages[locale].strings;
+  return (context && own(strings, `${context}|${source}`)) || own(strings, source) || source;
 }
+// The language the toggle switches to: the next one in `languages`.
+export function nextLocale(locale: Locale): Locale {
+  const all = Object.keys(languages) as Locale[];
+  return all[(all.indexOf(locale) + 1) % all.length];
+}
+
 const LocaleContext = createContext({
-  locale: "en" as Locale,
+  locale: defaultLocale as Locale,
   setLocale: (_locale: Locale) => {},
-  t: (text: string): string => text,
+  t: (text: string, _context?: string): string => text,
 });
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(() => {
     try {
-      return localStorage.getItem(languagePreferenceKey) === "zh" ? "zh" : "en";
+      const stored = localStorage.getItem(languagePreferenceKey);
+      return isLocale(stored) ? stored : defaultLocale;
     } catch {
-      return "en";
+      return defaultLocale;
     }
   });
   function setLocale(next: Locale) {
@@ -37,15 +64,12 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
     }
   }
   useEffect(() => {
-    document.documentElement.lang = locale === "zh" ? "zh-CN" : "en";
-    document.title =
-      locale === "zh"
-        ? "Taxrora · 税务筹划"
-        : "Taxrora · Tax Planning";
+    document.documentElement.lang = languages[locale].lang;
+    document.title = translate("Taxrora · Tax Planning", locale);
   }, [locale]);
   return (
     <LocaleContext.Provider
-      value={{ locale, setLocale, t: (text) => translate(text, locale) }}
+      value={{ locale, setLocale, t: (text, context) => translate(text, locale, context) }}
     >
       {children}
     </LocaleContext.Provider>

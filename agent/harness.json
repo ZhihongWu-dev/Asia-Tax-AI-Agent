@@ -5,6 +5,7 @@
                         "env_key": "QWEN_API_KEY", "key_from": "qwen_key"},
            "model_catalog": "agent/codex_model_catalog.json",
            "auto_compact_token_limit": {"qwen3.8-max": 840000, "qwen3.8-flash": 840000},
+           "tool_output_token_limit": 40000,
            "sessions": {"resume": true, "fork": ["analysis"]},
            "hooks": true,
            "output_schemas": {"analysis": "agent/schemas/analysis_reply.json", "review_intake": "agent/schemas/review_reply.json",

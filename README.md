@@ -36,7 +36,7 @@ Open <http://127.0.0.1:8000>. To work on the page itself, keep the server runnin
 
 Runs can take hours. They are separate processes: closing the page or restarting the server does not stop them. A run stopped by a usage limit resumes from the panel without redoing finished steps.
 
-The design is in `agent/orchestration_cli_spec.en.md`, section 8 for the web host.
+The design is in `agent/orchestration_cli_spec.md`, section 8 for the web host.
 
 ## Keys and .env
 
@@ -63,7 +63,7 @@ Settings read from the process environment only (not from `.env`):
 
 ## Agents and their prompts
 
-Each agent's prompt is the `text` block in section "The prompt handed over" of its spec. Edit the Chinese spec (it prevails) and the English copy together, then regenerate the definitions the CLIs load:
+Each agent's prompt is the `text` block in section "The prompt handed over" of its spec. Edit the English spec (the master) and its Chinese translation `*.zh.md` together, then regenerate the definitions the CLIs load:
 
 ```sh
 python agent/tools/make_agents.py    # .claude/agents/*.md and .claude/agents.json, from the English specs
@@ -72,13 +72,13 @@ python agent/tools/make_codex.py     # .codex/agents/*.md, from the same English
 
 Do not edit `.claude/agents/` or `.codex/agents/` by hand.
 
-| Agent | Where it runs, model and reasoning (`agent/harness.json`) | Prompt | Spec (Chinese prevails) |
+| Agent | Where it runs, model and reasoning (`agent/harness.json`) | Prompt | Spec (English master) |
 |---|---|---|---|
-| Front | each chat turn (`front`): qwen3.8-flash, medium | one block, §8 | `agent/前台Agent规范.md`, `agent/front_agent_spec.en.md` |
-| Analysis | graph node `analysis`: qwen3.8-max, high | one block, §8 | `agent/分析Agent规范.md`, `agent/analysis_agent_spec.en.md` |
-| Review | graph node `review_intake` (stage 1, intake package) and `review_draft` (stage 2, briefing draft): qwen3.8-flash, high; the lane `review_legal` beside `review_draft` (stage 3, legal reasoning): qwen3.8-max, xhigh | three blocks, §7 | `agent/复核Agent规范.md`, `agent/review_agent_spec.en.md` |
+| Front | each chat turn (`front`): qwen3.8-flash, medium | one block, §8 | `agent/front_agent_spec.md`, `agent/front_agent_spec.zh.md` |
+| Analysis | graph node `analysis`: qwen3.8-max, high | one block, §8 | `agent/analysis_agent_spec.md`, `agent/analysis_agent_spec.zh.md` |
+| Review | graph node `review_intake` (stage 1, intake package) and `review_draft` (stage 2, briefing draft): qwen3.8-flash, high; the lane `review_legal` beside `review_draft` (stage 3, legal reasoning): qwen3.8-max, xhigh | three blocks, §7 | `agent/review_agent_spec.md`, `agent/review_agent_spec.zh.md` |
 
-The web host adds short notes of its own to the front agent's turns (the web procedure, the cover note on delivery and its 200-word limit, the rewrite request); they are the `*_NOTE` and `RELAY_*` strings near the top of `apps/api/server.py`. The polish agent (`agent/润色Agent规范.md`) was removed on 2026-11-06; its spec is kept for the record.
+The web host adds short notes of its own to the front agent's turns (the web procedure, the cover note on delivery and its 200-word limit, the rewrite request); they are the `*_NOTE` and `RELAY_*` strings near the top of `apps/api/server.py`. The polish agent (`agent/polish_agent_spec.md`) was removed on 2026-11-06; its spec is kept for the record.
 
 ## Local and cloud editions
 

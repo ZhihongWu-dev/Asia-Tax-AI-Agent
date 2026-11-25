@@ -1,0 +1,23 @@
+{
+ "_note": "The words the programs read in reports and checklists, per language (2026-11-25: English is the source, other languages are entries here). agent/tools/words.py builds the patterns from them. Each list holds the English word first; a new language adds its words to each list.",
+ "appendix": ["Appendix", "附录"],
+ "date": ["Date", "日期"],
+ "list_marks": [".", "、"],
+ "colons": [":", "："],
+ "parts": [
+  {"en": "strategy", "words": ["strategy", "策略思路"], "not": ["plan", "策略方案", "策略筹划"]},
+  {"en": "current state", "words": ["current state", "现状"]},
+  {"en": "alternatives", "words": ["alternatives", "备选方案"]},
+  {"en": "optimal", "words": ["optimal", "最优方案"]},
+  {"en": "tax comparison", "words": ["tax comparison", "税负比较"]},
+  {"en": "requirements", "words": ["requirements", "条件与要求"]},
+  {"en": "implementation", "words": ["implementation", "执行"], "not": ["落地"]}
+ ],
+ "checklist": {"location": ["location", "位置"], "category": ["category", "类别"], "problem": ["problem", "问题"],
+               "evidence": ["evidence", "证据"], "suggestion": ["suggestion", "建议"]},
+ "none": ["none", "no\\b", "nothing", "not found", "n/a", "无", "没有", "未发现"],
+ "line_ref": ["\\blines?\\s+(\\d+)", "第\\s*(\\d+)\\s*行"],
+ "leaks": ["规则工具", "规则层", "优化层", "法规库", "模型", "产物", "未收录", "补录"],
+ "spoken": ["in a sentence", "in one sentence", "why", "how much it saves", "how much it costs", "what it depends on", "how to do it",
+            "一句话", "为什么", "省多少", "花多少", "靠什么", "怎么做"]
+}

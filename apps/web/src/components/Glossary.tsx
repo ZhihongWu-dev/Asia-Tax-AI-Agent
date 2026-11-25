@@ -6,7 +6,7 @@ import BrandLoader from "./BrandLoader";
 import { CiteChip } from "./ClauseDialog";
 import { humanize, jurName } from "./atlasFormat";
 
-const KINDS: [string, string][] = [["", "全部"], ["client_fact", "客户事实"], ["structure", "结构事实"], ["derived", "推导事实"], ["judgment", "法律判断"]];
+const KINDS: [string, string][] = [["", "All"], ["client_fact", "Client facts"], ["structure", "Structure"], ["derived", "Derived"], ["judgment", "Judgments"]];
 
 /** The tax glossary: the tax areas, and every field and judgment point the rule layer reads, with where and why. */
 export default function Glossary({ onOpen, onClause }: { onOpen: (code: string) => void; onClause: (id: string) => void }) {
@@ -27,12 +27,12 @@ export default function Glossary({ onOpen, onClause }: { onOpen: (code: string) 
       .sort((a, b) => humanize(a.key).localeCompare(humanize(b.key)));
   }, [data, query, kind, jur]);
   if (error) return <div className="atlas-error" role="alert">{t(`error:${error}`)}</div>;
-  if (!data) return <BrandLoader label={t("正在载入…")} />;
+  if (!data) return <BrandLoader label={t("Loading…")} />;
   return (
     <div className="atlas-glossary">
       <section className="atlas-card">
-        <h2>{t("税务领域")}</h2>
-        <p className="atlas-muted">{t("法律库按这些领域收录各辖区的规则；每个辖区页按同样的顺序列出全部参数。")}</p>
+        <h2>{t("Tax areas")}</h2>
+        <p className="atlas-muted">{t("The library records each jurisdiction's rules in these areas; every jurisdiction page lists its parameters in the same order.")}</p>
         <div className="atlas-areas">
           {data.slots.map((s) => (
             <article key={s.slot}>
@@ -45,27 +45,27 @@ export default function Glossary({ onOpen, onClause }: { onOpen: (code: string) 
       <section className="atlas-card">
         <div className="atlas-card-head">
           <div>
-            <h2>{t("术语")}</h2>
-            <p className="atlas-muted">{t("规则层读取的每个事实和法律判断：含义、需要确认什么、在哪些辖区起作用，以及对应的法律条文。")}</p>
+            <h2>{t("Terms")}</h2>
+            <p className="atlas-muted">{t("Every fact and legal judgment the rule layer reads: what it means, what has to be established, where it matters and the provisions behind it.")}</p>
           </div>
           <label className="atlas-search">
             <Search size={15} />
-            <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t("搜索术语")} aria-label={t("搜索术语")} />
+            <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t("Search terms")} aria-label={t("Search terms")} />
           </label>
         </div>
         <div className="atlas-filters">
-          <div className="atlas-segment" role="radiogroup" aria-label={t("类型")}>
+          <div className="atlas-segment" role="radiogroup" aria-label={t("Type")}>
             {KINDS.map(([k, label]) => <button key={k} role="radio" aria-checked={kind === k} onClick={() => setKind(k)}>{t(label)}</button>)}
           </div>
-          <select value={jur} onChange={(e) => setJur(e.target.value)} aria-label={t("辖区")}>
-            <option value="">{t("全部辖区")}</option>
+          <select value={jur} onChange={(e) => setJur(e.target.value)} aria-label={t("Jurisdiction")}>
+            <option value="">{t("All jurisdictions")}</option>
             {data.jurisdictions.map((j) => <option key={j.code} value={j.code}>{jurName(j, locale)}</option>)}
           </select>
           <span className="atlas-muted">{terms.length} / {data.terms.length}</span>
         </div>
         <div className="atlas-terms">
           {terms.length ? terms.map((x) => <TermCard key={x.key} term={x} jurs={jurs} onOpen={onOpen} onClause={onClause} />)
-            : <p className="atlas-muted">{t("没有匹配的术语")}</p>}
+            : <p className="atlas-muted">{t("No matching terms")}</p>}
         </div>
       </section>
     </div>
@@ -86,11 +86,11 @@ export function TermCard({ term, jurs, self, onOpen, onClause }: {
         {label && <span className={`atlas-kind is-${term.kind}`}>{t(label)}</span>}
       </header>
       <p>{term.meaning}</p>
-      {term.question && <p className="atlas-question"><strong>{t("需要确认")}</strong> {term.question}</p>}
-      {term.allowed && <p className="atlas-muted">{t("取值")}: {term.allowed.replace(/;/g, ", ")}</p>}
+      {term.question && <p className="atlas-question"><strong>{t("To establish")}</strong> {term.question}</p>}
+      {term.allowed && <p className="atlas-muted">{t("Values")}: {term.allowed.replace(/;/g, ", ")}</p>}
       {term.jurisdictions.length > 0 && (
         <div className="atlas-term-row">
-          <span>{t("涉及辖区")}</span>
+          <span>{t("Where it matters")}</span>
           {term.jurisdictions.map((c) => {
             const j = jurs[c] ?? (self?.code === c ? self : undefined);
             return <button key={c} className="atlas-chip is-button" onClick={() => onOpen(c)}>{j ? jurName(j, locale) : c.toUpperCase()}</button>;
@@ -99,7 +99,7 @@ export function TermCard({ term, jurs, self, onOpen, onClause }: {
       )}
       {term.cite_ids.length > 0 && (
         <div className="atlas-term-row">
-          <span>{t("法律依据")}</span>
+          <span>{t("Legal basis")}</span>
           {term.cite_ids.map((id) => <CiteChip key={id} id={id} onOpen={onClause} />)}
         </div>
       )}

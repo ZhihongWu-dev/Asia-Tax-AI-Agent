@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""tax-case: the case-file MCP server (agent/case_mcp_spec.en.md). The only write path of the four agents into cases/<case_id>/.
+"""tax-case: the case-file MCP server (agent/case_mcp_spec.md). The only write path of the four agents into cases/<case_id>/.
 
   python agent/tools/case_server.py --root cases --agent front|analysis|polish|review
 
@@ -37,19 +37,18 @@ LEGACY_PASS = {"draft": "POLISHABLE", "legal_draft": "POLISHABLE"}        # the 
 RETURNS = {"draft": ("analysis", "front"), "legal_draft": ("analysis",),
            "final": ("polish", "analysis", "front"), "legal_final": ("polish", "analysis")}   # who a REVISE checklist may send the case back to
 REPLACEMENTS = re.compile(r"```replacements\s*\n(.*?)\n```", re.S)        # a reviewer's fix-to-order list: [{"old": ..., "new": ...}]
-PROBLEM_LINE = re.compile(r"(?im)^\s*(?:[-*]\s*)?\**\s*(?:problem|问题)\s*\**\s*[:：]\s*\**\s*(.*)$")
-NO_PROBLEM = re.compile(r"(?i)^(none|no\b|nothing|not found|n/a|无|没有|未发现|-\s*$)")
-LINE_REF = re.compile(r"(?i)\blines?\s+(\d+)|第\s*(\d+)\s*行")
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import words as W  # noqa: E402  (the words of reports and checklists per language, report_words.json)
+
+PROBLEM_LINE = re.compile(r"(?im)^\s*(?:[-*]\s*)?\**\s*" + W.PROBLEM + r"\s*\**\s*" + W.COLON + r"\s*\**\s*(.*)$")
+NO_PROBLEM = re.compile(r"(?i)^(" + W.NONE + r"|-\s*$)")
 CHECKLISTS = {"draft": "review.md", "final": "review_final.md", "legal_draft": "review_legal.md", "legal_final": "review_final_legal.md"}
-PARTS = (("策略思路", "strategy"), ("现状", "current state"), ("备选方案", "alternatives"),
-         ("最优方案", "optimal"), ("税负比较", "tax comparison"), ("条件与要求", "requirements"), ("执行", "implementation"))
 LEAKS = (r"\d{8}-[0-9a-f]{8}:[a-z_]+:", r"CASE-\d{8}-[0-9a-f]{6}:[a-z_]+:", r"#[\w.()\-]+@\d+", r"\[S\d+\]", r"\b[cx]\d+\.b\d+\b", r"\bcand_id\b", r"\bbranch_id\b", r"\brun_id\b", r"\bper_100\b", r"\bchanges_rank\b",
          r"\bopen_items\b", r"\b(floor|ceiling)\b", r"\w+\.json\b", r"\bif_(yes|no)\b", r"\btotal_N\b", r"\bslot_key\b",
-         r"规则工具", r"规则层", r"优化层", r"法规库", r"模型", r"产物", r"未收录", r"补录", r"(?i)\brule (tool|layer)\b", r"(?i)\boptimi[sz](er|ation layer)\b",
+         *W.LEAKS, r"(?i)\brule (tool|layer)\b", r"(?i)\boptimi[sz](er|ation layer)\b",
          r"(?i)\bnot (yet )?(on file|in the library)\b")
 JARGON = r"(?i)\bper 100\b|\bmodell?ed\b|\bvariants?\b|\bjudgment worlds?\b|\branked \d+(?:st|nd|rd|th)\b|\b(?:law|the) library\b"       # the optimizer's vocabulary, not a client's
-SPOKEN = (r"(?im)^\*\*(一句话|为什么|省多少|花多少|靠什么|怎么做|in a sentence|in one sentence|why|how much it saves|"
-          r"how much it costs|what it depends on|how to do it)[^*]{0,12}\*\*")     # spoken lead-ins are not the register of an opinion
+SPOKEN = W.SPOKEN                                                       # spoken lead-ins are not the register of an opinion
 
 
 def numbers_in(text):
@@ -122,8 +121,7 @@ def findings_of(text):
     for m in PROBLEM_LINE.finditer(text or ""):
         if not NO_PROBLEM.match(m.group(1).strip()):
             problems.append(m.group(1).strip())
-    for m in LINE_REF.finditer(text or ""):
-        lines.add(int(m.group(1) or m.group(2)))
+    lines |= W.line_numbers(text)
     return lines, problems
 
 
@@ -184,7 +182,7 @@ VALUATION_KEYS = ("net_assets", "cost_base", "cost_currency", "appraised_value",
 
 
 def shape_problems(facts):
-    """facts.json against the optimizer's input, in words an author can act on (agent/front_agent_spec.en.md section 3)."""
+    """facts.json against the optimizer's input, in words an author can act on (agent/front_agent_spec.md section 3)."""
     out = []
     for key in ("date", "amount", "currency"):
         if not facts.get(key):
@@ -287,10 +285,10 @@ def outline(text):
         if not m:
             continue
         h = m.group(1).strip()
-        ap = re.match(r"^(?:附录|Appendix)\s*([AB])\b", h)
-        num = re.match(r"^(?:Part\s+)?([1-7])[.、:：\s]", h)
+        ap = re.match(r"^" + W.APPENDIX + r"\s*([AB])\b", h)
+        num = re.match(r"^(?:Part\s+)?([1-7])(?:" + W.LIST_MARK + "|" + W.COLON + r"|\s)", h)
         key = ap.group(1) if ap else num.group(1) if num else next(
-            (str(k + 1) for k, (cn, en) in enumerate(PARTS) if cn in h or h.lower().startswith(en)), None)
+            (str(k + 1) for k, p in enumerate(W.PARTS) if any((w in h) if not w.isascii() else h.lower().startswith(w) for w in p["words"])), None)
         if key and key not in [k for k, _, _ in marks]:
             marks.append((key, i + 1, h))
     out = []
@@ -730,6 +728,8 @@ class Case:
             return e
         if self.sectioned(cd, run_id):
             return self.edit_section(case_id, run_id, edits)
+        if self.panel_run(cd, run_id):
+            return err("invalid", "this report is written as blocks: change a block with edit_block (block = strategy, plan or points)")
         return self.apply_edits(cd / "report" / run_id / "briefing.md", edits, case_id, run_id)
 
     def edit_polished(self, case_id, run_id, edits):
@@ -749,6 +749,69 @@ class Case:
         import sections as secm
         secm.CASES = self.root
         return secm
+
+    def panel_mod(self):
+        """agent/tools/panel.py on this server's cases root (2026-11-25: the report as blocks)."""
+        self.sections_mod()
+        import panel as pm
+        return pm
+
+    def panel_run(self, cd, run_id):
+        """A run whose report is written as blocks (its frame has the figures table)."""
+        return bool(run_id) and (cd / "report" / str(run_id) / "frame" / "figures.json").exists()
+
+    def facts_of(self, cd):
+        fp = cd / "intake" / "facts.json"
+        try:
+            return json.loads(fp.read_text(encoding="utf-8")) if fp.exists() else {}
+        except ValueError:
+            return {}
+
+    def write_block(self, case_id, run_id, block, content):
+        """One of the analysis agent's three blocks (strategy = Part 1, plan = Part 7, points = Appendix A); the program renders the
+        report again and returns the block's content problems."""
+        if (e := self.need("analysis")):
+            return e
+        cd, ledger, e = self.opened(case_id)
+        if e:
+            return e
+        cur = self.current(ledger)
+        if not cur.get("run_id") or run_id != cur["run_id"]:
+            return err("conflict", "run_id %s is not the current round's run (%s)" % (run_id, cur.get("run_id")))
+        if not self.panel_run(cd, run_id):
+            return err("conflict", "run %s has no frame yet: read the prefetch pack first, the program builds the frame with it" % run_id)
+        pm = self.panel_mod()
+        done = pm.write_block(case_id, run_id, block, content)
+        if done.get("error"):
+            return err(done["error"], done["detail"])
+        return self.after_block(cd, case_id, run_id, block, done["written"])
+
+    def edit_block(self, case_id, run_id, block, edits):
+        if (e := self.need("analysis")):
+            return e
+        cd, ledger, e = self.opened(case_id)
+        if e:
+            return e
+        cur = self.current(ledger)
+        if not cur.get("run_id") or run_id != cur["run_id"]:
+            return err("conflict", "run_id %s is not the current round's run (%s)" % (run_id, cur.get("run_id")))
+        pm = self.panel_mod()
+        done = pm.edit_block(case_id, run_id, block, edits)
+        if done.get("error"):
+            return err(done["error"], done["detail"])
+        return self.after_block(cd, case_id, run_id, block, done["written"])
+
+    def after_block(self, cd, case_id, run_id, block, written):
+        pm = self.panel_mod()
+        built = pm.build(case_id, run_id, self.facts_of(cd))
+        value = pm.read_block(case_id, run_id, block)
+        problems = pm.check_block(case_id, run_id, block, value, self._lib().by_cite)
+        out = {"case_id": case_id, "run_id": run_id, "block": block, "written": written, "problems": problems,
+               "draft_ready": built.get("draft") is not None, "blocks_missing": built.get("missing", []), "version": SERVER_VERSION}
+        if block == "plan":
+            words, over = pm.plan_words(case_id, run_id, value)       # the count per step, so a long step is cut at once
+            out["words"], out["problems"] = words, problems + over
+        return out
 
     def reassemble(self, cd, case_id, run_id):
         """After a part changed: the draft is put together again, once the section writers have all finished."""
@@ -839,6 +902,9 @@ class Case:
             return err("conflict", "run_id %s is not the current round's run (%s)" % (run_id, cur.get("run_id")))
         if name not in ("briefing", "sources"):
             return err("invalid", "name must be briefing or sources")
+        if self.panel_run(cd, run_id):
+            return err("invalid", "this report is written as blocks: write_block(block = strategy, plan or points); the program renders "
+                                  "briefing.md and its sources table from them")
         if self.sectioned(cd, run_id):
             if name == "briefing":
                 return err("invalid", "this draft is built from parts: write one part with write_section, change sentences with edit_section")
@@ -962,8 +1028,9 @@ class Case:
             if not (rd / "briefing.md").exists():
                 return err("not_found", "no briefing.md to render; write the draft first")
             text_problems = self.report_check(case_id, run_id, "draft", text_only=True).get("problems", [])
-            # 2026-11-12: words the reviewers' approved replacements add are typeset; the author's own text met the limits before review
-            text_problems = [x for x in text_problems if not form().OVERRUN.search(x)]
+            # 2026-11-12: words the reviewers' approved replacements add are typeset; the author's own text met the limits before review.
+            # 2026-11-25: up to the slack of report_limits.json; a part grown beyond it is cut by the author
+            text_problems = [x for x in text_problems if not form().render_slack(x)]
             src = None
         if text_problems:                                      # a render takes a minute: settle the text first
             return err("conflict", "fix the text first, nothing was rendered: " + "; ".join(text_problems[:8]))
@@ -1057,6 +1124,8 @@ class Case:
         if e:
             return e
         rd = cd / "report" / run_id
+        if self.panel_run(cd, run_id):
+            return self.block_replacements(cd, case_id, run_id)
         path = rd / "briefing.md"
         text = path.read_text(encoding="utf-8")
         original = text
@@ -1093,6 +1162,38 @@ class Case:
         if applied:
             self.write_with_prev(path, text)
             t = max(path.stat().st_mtime, time.time())          # the checklists postdate the draft again, and nothing written later is older
+            for p in stamps:
+                os.utime(p, (t, t))
+        return {"case_id": case_id, "run_id": run_id, "applied": applied, "already": already, "superseded": superseded, "failed": failed}
+
+    def block_replacements(self, cd, case_id, run_id):
+        """The replacements of a panel run go into the agent's blocks; a sentence of the program's parts cannot be replaced there and
+        is reported as superseded (a program defect to log, not the author's to fix). The checklists are re-stamped as above."""
+        pm = self.panel_mod()
+        rd = cd / "report" / run_id
+        draft = (rd / "briefing.md").read_text(encoding="utf-8") if (rd / "briefing.md").exists() else ""
+        applied, already, failed, superseded, stamps, seen = 0, 0, [], [], [], set()
+        for which in ("legal_draft", "draft"):
+            p = rd / CHECKLISTS[which]
+            if not p.exists():
+                continue
+            stamps.append(p)
+            for r in replacements_of(p.read_text(encoding="utf-8")) or []:
+                if r["old"] in seen:
+                    superseded.append("%s: %s (the other lane's replacement of the same text was applied)" % (which, r["old"][:80]))
+                    continue
+                seen.add(r["old"])
+                if pm.apply_replacement(case_id, run_id, r["old"], r["new"]):
+                    applied += 1
+                elif r["new"] and r["new"] in draft and r["old"] not in draft:
+                    already += 1
+                elif form().locate(draft, r["old"]):
+                    superseded.append("%s: %s (a sentence of the program's parts; logged, not applied)" % (which, r["old"][:80]))
+                else:
+                    failed.append("%s: %s" % (which, r["old"][:80]))
+        if applied:
+            pm.build(case_id, run_id, self.facts_of(cd))
+            t = max((rd / "briefing.md").stat().st_mtime, time.time())
             for p in stamps:
                 os.utime(p, (t, t))
         return {"case_id": case_id, "run_id": run_id, "applied": applied, "already": already, "superseded": superseded, "failed": failed}
@@ -1383,21 +1484,16 @@ class Case:
             problems.append("the client report carries the case id or run id: remove the internal reference line")
         heads = [(m.start(), m.group(1)) for m in re.finditer(r"^#{1,3}\s+(.+)$", text, re.M)]
         pos = {}
-        for cn, en in PARTS:
-            hit = [i for i, (_, h) in enumerate(heads) if (cn in h or en in h.lower()) and not re.match(r"^(附录|Appendix)", h)]
-            # "strategy" also matches the strategy-plan heading; "执行" also matches "执行落地" inside part 2 only if it were a heading
-            if cn == "策略思路":
-                hit = [i for i in hit if "策略方案" not in heads[i][1] and "策略筹划" not in heads[i][1] and "plan" not in heads[i][1].lower()]
-            if cn == "执行":
-                hit = [i for i in hit if "落地" not in heads[i][1]]
+        for part in W.PARTS:
+            hit = W.part_hits([h for _, h in heads], part)
             if not hit:
-                problems.append("part missing: %s" % cn)
+                problems.append("part missing: %s" % part["en"])
             else:
-                pos[cn] = hit[0]
+                pos[part["en"]] = hit[0]
         for ap in (("A",) if which == "draft" else ("A", "B")):      # Appendix B of a draft is the program's
-            if not re.search(r"^#{1,3}\s+(附录|Appendix)\s*%s\b" % ap, text, re.M):
+            if not re.search(r"^#{1,3}\s+" + W.APPENDIX + r"\s*%s\b" % ap, text, re.M):
                 problems.append("appendix %s missing" % ap)
-        body_end = min([p for p, h in heads if re.match(r"^(附录|Appendix)", h)] or [len(text)])
+        body_end = min([p for p, h in heads if re.match("^" + W.APPENDIX, h)] or [len(text)])
         body = text if which == "polished" else text[:body_end]
         leaks = sorted({m.group(0) for pat in LEAKS for m in re.finditer(pat, form().plain(body))})
         if leaks:
@@ -1470,7 +1566,7 @@ class Case:
                     problems.append("revised edition check failed: %s" % ex)
                 if not re.search(r"(?i)chang\w* since (the|our) (last|previous|earlier)", text[:6000]):
                     problems.append("a revised edition opens Part 1 with a note of what changed since the last edition")
-        if which == "draft":                                    # provenance (agent/retrieval_spec.en.md §10 cite_check)
+        if which == "draft":                                    # provenance (agent/retrieval_spec.md §10 cite_check)
             try:
                 if str(HERE) not in sys.path:
                     sys.path.insert(0, str(HERE))
@@ -1490,6 +1586,12 @@ class Case:
         if which == "draft":                                   # 2026-11-06: the draft is the client report, so it meets the client's standard too
             problems += form().bad_cites(text, self._lib().by_cite)
             parts = {o["part"]: part_text(text, o["part"]) for o in outline(text) if o["part"] != "B"}
+            if self.panel_run(cd, run_id):                     # 2026-11-25: the program writes the other parts
+                parts = {k: v for k, v in parts.items() if k in ("1", "7", "A")}
+                pm = self.panel_mod()
+                for b in pm.AI:
+                    value = pm.read_block(case_id, run_id, b)
+                    problems += ["%s block: %s" % (b, x) for x in pm.check_block(case_id, run_id, b, value, self._lib().by_cite)] if value is not None else ["%s block missing" % b]
             problems += form().overruns(parts, rd / "frame", cd / "log" / "word_counts.jsonl")
             spoken = sorted(set(re.findall(SPOKEN, text)))
             if spoken:
@@ -1595,6 +1697,19 @@ def build_server(root, agent):
             """Write report/<run_id>/briefing.md (name=briefing) or briefing.sources.json (name=sources); run_id must be the current round's.
             mode=append adds a part to the draft, or adds and replaces rows of the sources table by id."""
             return case.write_report(case_id, run_id, name, content, mode)
+
+        @s.tool()
+        def write_block(case_id: str, run_id: str, block: str, content: str) -> dict:
+            """Write one of your three blocks of the report (the program writes the rest and renders the whole): block=strategy (Part 1,
+            text without a heading; amounts as {{fig:<id>}}, provisions as {{cite:<id>|<label>}}), plan (Part 7, JSON {"steps": [...]})
+            or points (Appendix A, JSON {"cards": [...], "notes": [...]}). Writing a block again replaces it. Returns the block's
+            problems and whether all three blocks are in."""
+            return case.write_block(case_id, run_id, block, content)
+
+        @s.tool()
+        def edit_block(case_id: str, run_id: str, block: str, edits: list[dict]) -> dict:
+            """Change passages of one block: edits = [{old, new}], each old text must occur exactly once in that block, all or none."""
+            return case.edit_block(case_id, run_id, block, edits)
 
         @s.tool()
         def write_section(case_id: str, run_id: str, section: str, content: str, sources: str = "") -> dict:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Reverse and differential queries of the rule layer (rule/规则层规范（最小集）.md §5): judgment points, requirements,
+"""Reverse and differential queries of the rule layer (rule/rule_layer_spec.md §5): judgment points, requirements,
 options, what-if, gaps, the field dictionary and the version stamp. Read-only; same input, same output.
 
 Python 3.11, standard library only.

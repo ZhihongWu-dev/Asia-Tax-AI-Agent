@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Construction checks of tax-opt (optimization/优化层MCP规范.md §6). Calls the tools in-process through MCPServer.call_tool.
+"""Construction checks of tax-opt (optimization/optimization_mcp_spec.md §6). Calls the tools in-process through MCPServer.call_tool.
 
   python optimization/tools/test_mcp_server.py [--work <temp products root>]
 

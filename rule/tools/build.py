@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Build of the rule layer (rule/规则层规范（最小集）.md §7, §10): parses every condition, checks the five authored
+"""Build of the rule layer (rule/rule_layer_spec.md §7, §10): parses every condition, checks the five authored
 tables against each other and against the library in database/, runs rule_test.csv with the reference evaluator,
 reports the slot coverage, writes rule.sqlite and STATUS.md.
 

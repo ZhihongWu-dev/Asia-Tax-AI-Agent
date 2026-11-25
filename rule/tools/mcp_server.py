@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""tax-rule: read-only MCP server over the rule layer (rule/规则层MCP规范.md).
+"""tax-rule: read-only MCP server over the rule layer (rule/rule_mcp_spec.md).
 
   python rule/tools/mcp_server.py --root rule --db database --cases cases
 

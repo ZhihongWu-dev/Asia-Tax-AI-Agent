@@ -13,14 +13,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import sections
+import words as W
 
 HERE = Path(__file__).resolve().parent
 LIMITS = HERE / "report_limits.json"
 CITE = re.compile(r"\{\{cite:([^|{}]+)\|([^{}]+)\}\}")
 BLOCK = re.compile(r"\{\{block:([a-z_]+)\}\}")
 QUOTE = re.compile(r"“[^”]*”|\"[^\"\n]*\"|「[^」]*」")
-LABEL_WORDS = 15
-OVERRUN = re.compile(r": \d+ words, limit \d+\. Cut it\.$")     # an overrun message of overruns()                                       # a citation's label longer than this is prose, not a reference
+LABEL_WORDS = 15                                                 # a citation's label longer than this is prose, not a reference
+OVERRUN = re.compile(r": (\d+) words, limit (\d+)\. Cut it\.$")  # an overrun message of overruns()
 
 
 def plain(text):
@@ -62,7 +63,7 @@ def counted_words(text):
     """Words of the prose: citation markers, quoted passages, tables, fenced blocks, program markers and headings aside.
     A CJK character counts as half a word."""
     t = re.sub(r"```.*?```", " ", text or "", flags=re.S)
-    t = BLOCK.sub(" ", CITE.sub(" ", t))
+    t = BLOCK.sub(" ", CITE.sub(" ", re.sub(r"\{\{fig:[^{}]+\}\}", " ", t)))
     t = QUOTE.sub(" ", t)
     prose = " ".join(l for l in t.splitlines() if not l.lstrip().startswith(("|", "#")))
     latin = len(re.findall(r"[A-Za-z0-9][\w'’.,%/\-]*", prose))
@@ -75,6 +76,14 @@ def limits():
     return {k: v for k, v in data.items() if not k.startswith("_")}
 
 
+def render_slack(problem):
+    """True for an overrun message within the share the reviewers' replacements may add at render (2026-11-25, the owner's
+    decision: their corrections are typeset, a part grown beyond the slack goes back to the author)."""
+    m = OVERRUN.search(problem)
+    slack = json.loads(LIMITS.read_text(encoding="utf-8")).get("_render_slack", 0)
+    return bool(m) and int(m.group(1)) <= int(m.group(2)) * (1 + slack)
+
+
 def counts_for(frame_dir):
     """The counts the per-item allowances use: structures named in the frame, rows of the assumptions table."""
     fd = Path(frame_dir)
@@ -83,8 +92,9 @@ def counts_for(frame_dir):
         p = fd / "blocks" / ("%s.md" % name)
         table = p.read_text(encoding="utf-8") if p.exists() else ""
         return [l for l in table.splitlines() if l.startswith("|") and not re.match(r"^\|[\s\-:|]+\|$", l)]
+    skeleton = json.loads((fd / "skeleton.json").read_text(encoding="utf-8")) if (fd / "skeleton.json").exists() else {}
     return {"structures": len(names), "assumptions": max(0, len(rows_in("assumptions_table")) - 1),
-            "choices": max(0, len(rows_in("choices_table")) - 2)}
+            "choices": max(0, len(rows_in("choices_table")) - 2), "skeleton": len(skeleton.get("steps") or [])}
 
 
 def limit_of(part, frame_dir):
@@ -149,8 +159,8 @@ def split_parts(text):
         m = re.match(r"^##\s+(.+)$", line)
         if m:
             h = m.group(1).strip()
-            ap = re.match(r"^(?:附录|Appendix)\s*([AB])\b", h)
-            num = re.match(r"^(?:Part\s+)?([1-7])[.、:：\s]", h)
+            ap = re.match(r"^" + W.APPENDIX + r"\s*([AB])\b", h)
+            num = re.match(r"^(?:Part\s+)?([1-7])(?:" + W.LIST_MARK + "|" + W.COLON + r"|\s)", h)
             cur = [ap.group(1) if ap else num.group(1) if num else None, line, []]
             parts.append(cur)
         elif cur is None:
@@ -169,7 +179,7 @@ def client_text(draft, rd, case_id, run_id, facts, rows):
     text = BLOCK.sub(lambda m: blocks.get(m.group(1), ""), draft)          # a draft that still places a marker keeps its place
     text = re.sub(r"```flow\s*\n.*?```\s*\n?", "", text, flags=re.S)      # the flowchart is the program's
     head, parts = split_parts(text)
-    head = [l for l in head if not l.startswith("# ") and not re.match(r"^\s*\**\s*(?:Date|日期)\s*[:：]", l)]
+    head = [l for l in head if not l.startswith("# ") and not re.match(r"^\s*\**\s*" + W.DATE + r"\s*" + W.COLON, l)]
     out = ["# %s" % title_of(facts), "", "**Date:** %s" % date_of(facts), ""] + head
     flow = fb / "flow.json"
     for key, line, body in parts:

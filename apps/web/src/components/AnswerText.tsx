@@ -6,10 +6,10 @@ import { useLocale } from "../locale";
 import HintButton from "./HintButton";
 
 export default function AnswerText({ text, streaming = false }: { text: string; streaming?: boolean }) {
-  const { locale } = useLocale();
+  const { t } = useLocale();
   const [copied, setCopied] = useState(false);
   const [failed, setFailed] = useState(false);
-  const label = copied ? (locale === "en" ? "Copied" : "已复制") : (locale === "en" ? "Copy answer" : "复制回答");
+  const label = copied ? t("Copied") : t("Copy answer");
   return <div className="answer-text">
     <div className="chat-reply markdown-answer"><Markdown remarkPlugins={[remarkGfm]} skipHtml
       disallowedElements={["img"]} components={{
@@ -20,6 +20,6 @@ export default function AnswerText({ text, streaming = false }: { text: string; 
       try { await navigator.clipboard.writeText(text); setCopied(true); setFailed(false); }
       catch { setFailed(true); }
     }}>{copied ? <Check size={16} /> : <Copy size={16} />}</HintButton>}
-    {failed && <small role="alert">{locale === "en" ? "Could not copy. Select the text to copy manually." : "复制失败，请选中文字手动复制。"}</small>}
+    {failed && <small role="alert">{t("Could not copy. Select the text to copy manually.")}</small>}
   </div>;
 }

@@ -1,4 +1,4 @@
-"""The retrieval service's logic (agent/retrieval_spec.en.md §3-§10): map, search, list, get, expand, ground, pack and
+"""The retrieval service's logic (agent/retrieval_spec.md §3-§10): map, search, list, get, expand, ground, pack and
 cite_check over the law library, a run's products and a case file. Program only: no model writes anything here; the dense
 encoder and the reranker only order candidates, and no score is returned. Text and values come back verbatim."""
 import csv
@@ -992,10 +992,11 @@ class Reader:
                 unresolved.append({"id": r.get("id"), "ref": str(r.get("ref"))[:120]})
             covered |= nums
             covered |= T.numbers(str(r.get("claim", "")))
-        body = re.split(r"(?m)^#{1,3}\s+(?:附录\s*B|Appendix\s*B)\b", text)[0]
+        import words as W
+        body = re.split(r"(?m)^#{1,3}\s+" + W.APPENDIX + r"\s*B\b", text)[0]
         figures = []
         for line in body.splitlines():
-            if re.match(r"^\s*(?:\*\*)?(?:Date|日期)", line) or "Internal reference" in line:
+            if re.match(r"^\s*(?:\*\*)?" + W.DATE, line) or "Internal reference" in line:
                 continue
             for m in re.finditer(r"(?<![\w.\-/])(\d{1,3}(?:,\d{3})+|\d{4,})(?:\.\d+)?(?![\w\-/])|(\d+(?:\.\d+)?)\s?%", line):
                 raw = m.group(0)

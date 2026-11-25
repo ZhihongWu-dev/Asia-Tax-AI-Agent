@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-"""Generate the agent definitions from the agent specs (agent/case_mcp_spec.en.md §7, agent/orchestration_cli_spec.en.md §3).
+"""Generate the agent definitions from the agent specs (agent/case_mcp_spec.md §7, agent/orchestration_cli_spec.md §3).
 
   python agent/tools/make_agents.py
 
 Writes .claude/agents/<name>.md, .claude/agents.json (headless `--agent` does not find project definitions, so the
 orchestrator passes this file with `--agents`) and .claude/mcp/<name>.json (only that agent's servers, taken from .mcp.json:
 the first turn does not wait for every server, so connecting all eight left some agents without their tools). The body of each definition is the prompt block (```text ... ```) of the
-English spec copy (*.en.md), copied verbatim, so the spec stays the single source; rerun after editing a spec. TOOLS is
+English spec (the master since 2026-11-25), copied verbatim, so the spec stays the single source; rerun after editing a spec. TOOLS is
 also what the orchestrator passes as --allowedTools; each allowlist binds an identity to its own tax-case server.
 """
 import io
@@ -16,9 +16,9 @@ import sys
 from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parents[2]
-SPECS = {"front": "front_agent_spec.en.md", "analysis": "analysis_agent_spec.en.md", "review": "review_agent_spec.en.md"}   # 2026-11-06: no polish agent
+SPECS = {"front": "front_agent_spec.md", "analysis": "analysis_agent_spec.md", "review": "review_agent_spec.md"}   # 2026-11-06: no polish agent
 COMMON_TOOLS = ["Read", "Glob", "Grep", "WebSearch", "WebFetch", "mcp__tax-rule__*"]
-TOOLS = {                        # agent/retrieval_spec.en.md §5.3: the library and product readers moved into tax-read
+TOOLS = {                        # agent/retrieval_spec.md §5.3: the library and product readers moved into tax-read
     "front": COMMON_TOOLS + ["Bash", "mcp__tax-read-front__*", "mcp__tax-opt-front__*", "mcp__tax-case-front__*"],
     "analysis": COMMON_TOOLS + ["mcp__tax-read-analysis__*", "mcp__tax-opt-calc__*", "mcp__tax-case-analysis__*"],
     "review": COMMON_TOOLS + ["mcp__tax-read-review__*", "mcp__tax-opt-calc__*", "mcp__tax-case-review__*"],
@@ -36,7 +36,7 @@ DESC = {
 STAGES = ("intake package", "briefing draft", "legal-reasoning lane")
 SAVE_TOOLS = {
     "front": "write_intake for the intake package, put_document for documents (remove_document for one the client says is wrong), dialogue_append for the client's words, to_collect_append for collection requests",
-    "analysis": "write_section for one part of a draft built from parts and edit_section to change its sentences; for a draft without parts, write_report (mode=append adds a part or rows) and edit_report",
+    "analysis": "write_block for your three blocks of the report (strategy, plan, points) and edit_block to change passages of one",
     "review": "write_review for the checklist (which = intake, draft or legal_draft, matching your stage)",
 }
 SAVING = ("How files are saved: you have no Write or Edit tool. Every file named above is saved by calling a tool of your tax-case server: %s, "

@@ -1,46 +1,46 @@
-# case_end2end — 端到端案例 CASE-001：内地子公司向香港控股公司分红
+# case_end2end: end-to-end case CASE-001, a Mainland subsidiary paying a dividend to its Hong Kong holding company
 
-一个案例，混合真实文件与模拟单据，供端到端流程（录入 → 抽取 → 复核 → 求值与提问 → 策略 → 报告，以及助手和核对）从头到尾跑。公司、人员、编号、金额全部虚构；`documents/real/` 下的官方表格、指引和协定文本是真实文件（来源 URL 见 `documents/manifest.csv`）。
+One case, mixing real files and simulated documents, for running the end-to-end flow from start to finish (intake, extraction, review, evaluation and questions, strategy, report, and the assistant and checks). The companies, people, numbers and amounts are all fictitious; the official forms, guidance and treaty texts under `documents/real/` are real files (source URLs in `documents/manifest.csv`).
 
-## 文件
+## Files
 
-| 文件 | 内容 |
+| File | Content |
 |---|---|
-| `prompt.md` | 客户在录入页按引导填写的交易背景原文（中文）及英文转写：各方、持股、要做的分红、历史、附件。只有背景，没有问题——系统自动分析，不引导客户提问 |
-| `documents/S01–S15` | 15 份模拟单据（9 份 PDF、7 张 PNG 图片）：付款方的营业执照、登记信息、章程节选、股东会决议、企业所得税申报表节选、2024 年付汇回单与完税证明；收款方的注册证书、周年申报表、董事会会议记录、审计报表节选、居民身份证明书、银行账单；集团架构图；新加坡母公司 ACRA 资料；秘书公司账单 |
-| `documents/real/R01–R05` | 真实文件：信息报告表（国税总局 2019 年 35 号公告附件）、IR1313A 申请表、DIPN 44、2018 年 9 号公告（受益所有人）、内地–香港安排全文 |
-| `documents/manifest.csv` | 每份文件：真实 / 模拟、格式、属于哪一方、证明什么、支撑哪些变量 |
-| `facts.json` | 抽取阶段的标准答案：规则层变量 → 值 → 出处文件和原句；谓词的预期答案与依据；预期问题单和预提税区间 |
-| `expected/` | 规则层在本案事实下的输出：`eval_cn-hk_as_is.*`（现状，bo、parent_bo、ppt 未答）、`eval_cn-hk_bo_yes_ppt_no.txt`、`eval_cn-hk_bo_no.txt`（两条路都否）、`eval_cn-hk_safe_harbour_parent.txt`（母公司安全港路径）、`judgment_points_cn-hk.json`（判断点：问法、因素条文、当前事实、各答案下的区间）、`eval_cn-sg_alternative_plan.txt`（新加坡公司直接持股的备选）、`eval_hk-sg_onward.txt`（钱到香港后再分往新加坡）、`trace_cn-hk_as_is.txt`（回溯核对，8 项全 PASS） |
+| `prompt.md` | The transaction background the client filled in on the intake page, in the original Chinese with an English transcription: the parties, the holdings, the dividend to be paid, the history, the attachments. Background only, no questions: the system analyses by itself and does not lead the client to ask |
+| `documents/S01–S15` | 15 simulated documents (9 PDF, 7 PNG): the payer's business licence, registration record, articles extract, shareholders' resolution, corporate income tax return extract, the 2024 remittance slip and tax payment certificate; the recipient's certificate of incorporation, annual return, board minutes, audited accounts extract, certificate of resident status, bank statement; the group chart; the Singapore parent's ACRA record; the company secretary's invoice |
+| `documents/real/R01–R05` | Real files: the information report form (annex to SAT Announcement 2019 No. 35), form IR1313A, DIPN 44, SAT Announcement 2018 No. 9 (beneficial ownership), the full text of the Mainland–Hong Kong arrangement |
+| `documents/manifest.csv` | For each file: real or simulated, format, which party it belongs to, what it proves, which variables it supports |
+| `facts.json` | The expected extraction: rule-layer variable → value → source file and sentence; the expected answers of the predicates and their basis; the expected question list and withholding range |
+| `expected/` | The rule layer's output on the facts of this case: `eval_cn-hk_as_is.*` (as is, bo, parent_bo and ppt unanswered), `eval_cn-hk_bo_yes_ppt_no.txt`, `eval_cn-hk_bo_no.txt` (both routes denied), `eval_cn-hk_safe_harbour_parent.txt` (the parent's safe-harbour route), `judgment_points_cn-hk.json` (judgment points: question, factor provisions, current facts, the range under each answer), `eval_cn-sg_alternative_plan.txt` (the alternative of a direct holding by the Singapore company), `eval_hk-sg_onward.txt` (the money paid on from Hong Kong to Singapore), `trace_cn-hk_as_is.txt` (trace-back check, 8 items all PASS) |
 
-## 案情
+## The case
 
-- **付款方** 深圳市晨光精密制造有限公司：中外合资（外商投资企业），注册资本 5,000 万元，2025 年应纳税所得额 4,600 万元、按 25% 缴税 1,150 万元。股东：香港 Brightpeak Holdings (HK) Limited 70%（2019-06-30 受让，一直持有）、深圳晨辉投资合伙企业 30%。
-- **分红** 2026-03-20 股东会决议分配 2025 年度利润 2,000 万元，香港股东得 1,400 万元，2026-04-30 前支付。
-- **收款方** Brightpeak Holdings (HK) Limited：2019 年在港注册，纯控股，无员工，注册地址是秘书公司的，两名董事一在新加坡一在香港，董事会在香港开（主席视频参加）；持有 2025 年香港居民身份证明书，2026 年的在申请。唯一股东是新加坡 Brightpeak Asia Pte. Ltd.（有 3 名员工，新加坡税务居民），再往上是新加坡居民陈伟良先生。新加坡母公司希望钱到香港后再往上分。
-- **历史** 2024 年分 2023 年度红利 840 万元，香港股东部分按 10% 代扣 84 万元，未申请协定待遇，款项汇入香港汇丰账户。
+- **Payer**: Shenzhen Chenguang Precision Manufacturing Co., Ltd., a Sino-foreign joint venture (a foreign-invested enterprise), registered capital RMB 50 million, taxable income for 2025 RMB 46 million, tax paid at 25% RMB 11.5 million. Shareholders: Brightpeak Holdings (HK) Limited, Hong Kong, 70% (acquired 2019-06-30, held since) and Shenzhen Chenhui Investment Partnership, 30%.
+- **Dividend**: on 2026-03-20 the shareholders resolved to distribute RMB 20 million of the 2025 profit; the Hong Kong shareholder receives RMB 14 million, payable before 2026-04-30.
+- **Recipient**: Brightpeak Holdings (HK) Limited, incorporated in Hong Kong in 2019, a pure holding company with no employees and the company secretary's address as its registered address; two directors, one in Singapore and one in Hong Kong; board meetings held in Hong Kong (the chairman by video); it holds a Hong Kong certificate of resident status for 2025 and has applied for 2026. Its sole shareholder is Brightpeak Asia Pte. Ltd., Singapore (3 employees, Singapore tax resident), held in turn by Mr TAN Wei Liang, a Singapore resident. The Singapore parent wants the money paid on once it reaches Hong Kong.
+- **History**: in 2024 the 2023 dividend of RMB 8.4 million was paid; on the Hong Kong shareholder's part RMB 840,000 was withheld at 10%, no treaty benefit was claimed, and the money went to an HSBC account in Hong Kong.
 
-## 规则层应当得到什么
+## What the rule layer should give
 
-事实齐全时（`facts.json`），bo 和 ppt 两个谓词仍是 unknown：
+With the facts complete (`facts.json`) the two predicates bo and ppt are still unknown:
 
-| 格 | 结果 |
+| Cell | Result |
 |---|---|
-| cn\|company\|outbound_wht\|hk | 区间 [5, 10]，待定组 `(cn-hk.outbound_wht.cap_5, {bo})`；cap_10 等于法定 10%，不问 |
-| cn\|company\|anti_abuse\|hk | ppt 待定，翻它会把 floor 从 5 变 10，所以记入 |
-| hk\|company\|inbound\|cn | 0：FSIE 下收到于香港但满足参与免税（持股 70% ≥ 5%、82 个月 ≥ 12、内地税率 25% ≥ 15、利润已纳税）；经济实质路径答 no，主要目的规则答 no |
-| hk\|company\|final\|* | 对本笔股息无实际意义（计入 0）；两级税率因当年应评税利润未知而待定 |
+| cn\|company\|outbound_wht\|hk | range [5, 10], pending group `(cn-hk.outbound_wht.cap_5, {bo})`; cap_10 equals the statutory 10%, so it is not asked |
+| cn\|company\|anti_abuse\|hk | ppt pending; flipping it moves the floor from 5 to 10, so it is recorded |
+| hk\|company\|inbound\|cn | 0: under FSIE received in Hong Kong but the participation exemption is met (70% ≥ 5%, 82 months ≥ 12, Mainland rate 25% ≥ 15, profits taxed); the economic substance route answers no, the main purpose rule answers no |
+| hk\|company\|final\|* | of no practical effect on this dividend (included at 0); the two-tier rate is pending because the year's assessable profits are unknown |
 
-问题单应只问两件事：受益所有人（附 2018 年 9 号公告第二条的因素和 S08、S09、S10、S15 的相关段落）和主要目的测试（附第五议定书第六条）。答 bo=yes、ppt=no → 5%（70 万元）；答 bo=no → 10%（140 万元）。
+The question list should ask two things only: beneficial ownership (with the factors of Article 2 of Announcement 2018 No. 9 and the relevant passages of S08, S09, S10 and S15) and the principal purpose test (with Article 6 of the fifth protocol). Answering bo=yes and ppt=no gives 5% (RMB 700,000); bo=no gives 10% (RMB 1.4 million).
 
-备选路径（`expected/eval_cn-sg_alternative_plan.txt`、`eval_hk-sg_onward.txt`）：新加坡公司直接持股同样是 [5, 10]，收款侧 s13(8) 免税条件满足（来源税率 25%）；而现状下钱从香港再分往新加坡时，香港不征预提税，但香港股息本身没在香港纳税，新加坡 s13(9)(a) 的"已纳税"条件不满足，1,400 万按 100% 计入、17%——这是本案的规划点之一。架构调整本身的一次性成本（间接转让、印花税）不在股息范围内。
+The alternatives (`expected/eval_cn-sg_alternative_plan.txt`, `eval_hk-sg_onward.txt`): a direct holding by the Singapore company is also [5, 10], and on the receiving side the exemption conditions of s13(8) are met (source rate 25%); but when, as things stand, the money is paid on from Hong Kong to Singapore, Hong Kong withholds nothing, yet the Hong Kong dividend itself was not taxed in Hong Kong, so the "subject to tax" condition of Singapore s13(9)(a) fails and the RMB 14 million is included at 100% and taxed at 17%. This is one of the planning points of the case. The one-off cost of the restructuring itself (indirect transfer, stamp duty) is outside the dividend's scope.
 
-背景里提到的 2024 年按 10% 扣缴的 84 万元：国税总局 2019 年 35 号公告第十条（库内 `cn.sta.2019-35#10`）允许在征管法期限内申请退还**多缴部分**——香港股东那 588 万元按 5% 与 10% 的差额 29.4 万元，且以 2024 年当时也符合 5% 条件为前提；不是 84 万元整。规则层不建模退税程序，由报告阶段引该条——系统应从背景里自己发现这一点，客户没有问。
+The RMB 840,000 withheld at 10% in 2024: Article 10 of SAT Announcement 2019 No. 35 (`cn.sta.2019-35#10` in the library) allows a refund of the **overpaid part** within the period of the Tax Collection and Administration Law: the difference between 5% and 10% on the Hong Kong shareholder's RMB 5.88 million, RMB 294,000, on condition that the 5% conditions were also met in 2024; not the whole RMB 840,000. The rule layer does not model the refund procedure; the report cites the article. The system should find this in the background on its own; the client did not ask.
 
-2026-10-31 补充：规则层把 2018 年 9 号公告的受益所有人安全港写成了条件性规则（D-cn-5）。本案新加坡母公司 100% 持股、满 12 个月、中新协定同为 5%，所以 5% 有两条路：香港公司自己按因素认定（bo），或母公司作为受益所有人（parent_bo）；`expected/judgment_points_cn-hk.json` 和 `eval_cn-hk_safe_harbour_parent.txt` 对应这两条路。转付意向（passes_on_within_12m）作为判断因素带出，不作条件。
+2026-10-31 addition: the rule layer writes the beneficial-ownership safe harbour of Announcement 2018 No. 9 as a conditional rule (D-cn-5). Here the Singapore parent holds 100% for more than 12 months and the China–Singapore treaty also gives 5%, so 5% has two routes: the Hong Kong company qualifies on the factors itself (bo), or the parent is the beneficial owner (parent_bo). `expected/judgment_points_cn-hk.json` and `eval_cn-hk_safe_harbour_parent.txt` cover the two routes. The intention to pass the dividend on (passes_on_within_12m) is carried as a factor, not as a condition.
 
-2026-10-31 再补：规则层第二次修订后重新生成了 `expected/` 的 cn→hk 各文件（输入不变：`--facts` 为 facts.json 的款项与 payee 事实平铺，`--answers gaar=no;substance=no;fsie_mpr=no` 加各变体的 bo / parent_bo / ppt）。数值、状态、待定项与之前完全一致；唯一变化是 `rules_applied` 现在只列决定该侧值的规则（香港 final 格 floor 侧只列 8.25% 的两级制规则，不再同时列 16.5% 的基本税率），回溯核对 8 项仍全 PASS。规则层新增的 penalty 格（`cn|all|penalty|*`、`hk|all|penalty|*`）本案未纳入 expected，由优化层按需取。
+2026-10-31 second addition: after the rule layer's second revision the cn→hk files of `expected/` were regenerated (same input: `--facts` is the payment and payee facts of facts.json flattened, `--answers gaar=no;substance=no;fsie_mpr=no` plus each variant's bo / parent_bo / ppt). Values, states and pending items are exactly as before; the only change is that `rules_applied` now lists only the rules that decide that side's value (the floor side of the Hong Kong final cell lists only the 8.25% two-tier rule, no longer also the 16.5% standard rate); the trace-back check still passes all 8 items. The penalty cells the rule layer added (`cn|all|penalty|*`, `hk|all|penalty|*`) are not in expected for this case; the optimization layer takes them as needed.
 
-## 重新生成
+## Regenerating
 
-模拟单据由会话 scratchpad 的 `gen_case.py` 用 PyMuPDF 生成（系统字体华文宋体、黑体、楷体；字体子集嵌入）。`expected/` 由 `rule/tools/eval.py --flow cn hk company --date 2026-04-30 --facts … --answers substance=no;fsie_mpr=no;gaar=no` 和 `rule/tools/trace.py --items` 生成；规则层改动后重跑即可比对。
+The simulated documents were generated with PyMuPDF by `gen_case.py` in a session scratchpad (system fonts STSong, STHeiti, STKaiti; font subsets embedded). `expected/` is generated by `rule/tools/eval.py --flow cn hk company --date 2026-04-30 --facts … --answers substance=no;fsie_mpr=no;gaar=no` and `rule/tools/trace.py --items`; after a change to the rule layer, run them again and compare.

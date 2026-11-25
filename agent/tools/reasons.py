@@ -1,4 +1,4 @@
-"""The legal-reasoning extract for the second review lane (agent/orchestration_cli_spec.en.md §12): every sentence of a briefing
+"""The legal-reasoning extract for the second review lane (agent/orchestration_cli_spec.md §12): every sentence of a briefing
 that states a legal reason, with what it rests on laid out verbatim, so the lane judges instead of searching.
 
 For each sentence the program attaches the sources rows whose `where` fragment lies in it, the citations the sentence names in
@@ -17,6 +17,12 @@ import difflib
 import json
 import re
 from pathlib import Path
+
+sys_path = str(Path(__file__).resolve().parent)
+import sys as _sys
+if sys_path not in _sys.path:
+    _sys.path.insert(0, sys_path)
+import words as W  # noqa: E402  (report_words.json)
 
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parents[1]
@@ -56,7 +62,7 @@ def body_lines(text):
             continue
         if fence:
             continue
-        if re.match(r"^#{1,4}\s+(?:Appendix\s*B|附录\s*B)\b", line.strip()):
+        if re.match(r"^#{1,4}\s+" + W.APPENDIX + r"\s*B\b", line.strip()):
             skip = True
             continue
         if skip and re.match(r"^#{1,3}\s+", line.strip()):

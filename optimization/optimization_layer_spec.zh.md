@@ -1,8 +1,8 @@
 # 优化层规范（最小集）
 
-2026-10-31（第一版，未实现；取代已撤销的策略层）。优化层在 `optimization/`。它读规则层（`rule/`，见 `rule/规则层规范.md`）的函数和事实输入，产出一组落盘的中间产物：图、标签前沿、路径、分支、税额表、排序、差额、未决项。规则层不依赖优化层；优化层不依赖任何调用者。
+2026-10-31（第一版，未实现；取代已撤销的策略层）。优化层在 `optimization/`。它读规则层（`rule/`，见 `rule/rule_layer_spec.zh.md`）的函数和事实输入，产出一组落盘的中间产物：图、标签前沿、路径、分支、税额表、排序、差额、未决项。规则层不依赖优化层；优化层不依赖任何调用者。
 
-**语言**：本规范用中文，供人阅读；英文副本 `optimization/optimization_layer_spec.en.md`，两者不一致时以中文版为准，改中文版时同步改英文副本。AI 写进文件的一切自写文字用英文——代码、注释、工具说明、prompt（系统实际递交的是英文副本里的那段）、底稿、核对单、handoff、bug 反馈、日志、产物字段；原件、条文、引文、客户原话保持原文，不翻译。唯一例外是给客户看的文字（对客户的回话、briefing）跟客户的语言。核对单的总判断用英文记号：交接包 `RUNNABLE` / `REVISE`，报告 `DELIVERABLE` / `REVISE`（服务也接受原来的中文记号）。
+**语言**：本文是英文版 `optimization/optimization_layer_spec.md` 的中文译本；自 2026-11-25 起以英文版为准，改英文版时同步更新本译本。AI 写进文件的一切自写文字用英文——代码、注释、工具说明、prompt（系统实际递交的是英文副本里的那段）、底稿、核对单、handoff、bug 反馈、日志、产物字段；原件、条文、引文、客户原话保持原文，不翻译。唯一例外是给客户看的文字（对客户的回话、briefing）跟客户的语言。核对单的总判断用英文记号：交接包 `RUNNABLE` / `REVISE`，报告 `DELIVERABLE` / `REVISE`（服务也接受原来的中文记号）。
 
 ## 0. 功能定位与范围
 
@@ -67,7 +67,7 @@
 
 ```text
 optimization/
-├── 优化层规范.md
+├── optimization_layer_spec.zh.md
 ├── move.csv                     动作词表（数据）
 ├── optimization_test.csv        金标
 └── tools/
@@ -115,7 +115,7 @@ optimization/
 | 限制 | 跳数上限（默认 3，即中间地区 ≤ 2）、动作叠加上限（默认 3）、每节点标签数上限 |
 | 硬约束 | 可选：客户自己的行为条件（`receive_at_destination`、`this_payment_can_wait`、`declared_to_payee`，各取 true / false / 不写，§4.7a）；排除的法域集合（不建这些节点），或要考虑的法域集合 `consider`（只建这些和现状、终点、已知实体所在的法域）、是否允许重组动作、终点集合之外不许停留的主体类型。只有过滤，没有偏好权重——目标仍是单一的总税 |
 | 核算日 | 算暴露额用的日期（§4.7）：从各跳的申报期限（规则层 `reference_params` 里的期限参数）到核算日计利息；缺则 = 求值日，利息为 0 |
-| 汇率 | 可选：款项币种对各法域币种的汇率表（`tools/fx.py` 的 fx.json，或调用者手填，每个数带来源和日期）。用于两处：把到达个人终点的金额换成收款方币种（`amount_payee_ccy`），供累进税率表；把一次性成本的输入（净资产、成本、评估值，被转让公司币种）和各地转让税换成款项币种，才能和年股息税相除、相加（§4.7）。缺某币种则前者不传该变量（规则层给档位区间并记 MISSING），后者的一次性成本整项 MISSING 并标 `fx_missing`。税法规定了汇率的地区按规定取：数据库 `<jur>.<slot>.fx_rate_*` 参数记录用哪种价、哪一天、谁的价（内地：扣缴义务发生之日的人民币汇率中间价，收款方按月末 / 上月末；日本：取引日的主要往来银行 TTM；泰国：支付日商业银行卖出价或泰国央行参考平均卖出价，择一后不得变更；新加坡、香港无规定），`fx.py --jur` 读这些参数选日期和源：内地取外汇交易中心中间价（官方数），泰国取央行 API（需 key，否则用市场价并标注），日本没有官方 TTM、以三菱UFJ银行的 TTS / TTB 中值作代表并标注；fx.json 的每个数带 rule_cites。币种按 ISO 4217 代码比对和查表，客户写的 `RMB` 读作 `CNY`（fx.py 与优化器同一张别名表，2026-11-11）。案卷流程里由编排在 run 前取表内嵌（`agent/编排CLI规范.md` 的 run 步骤） |
+| 汇率 | 可选：款项币种对各法域币种的汇率表（`tools/fx.py` 的 fx.json，或调用者手填，每个数带来源和日期）。用于两处：把到达个人终点的金额换成收款方币种（`amount_payee_ccy`），供累进税率表；把一次性成本的输入（净资产、成本、评估值，被转让公司币种）和各地转让税换成款项币种，才能和年股息税相除、相加（§4.7）。缺某币种则前者不传该变量（规则层给档位区间并记 MISSING），后者的一次性成本整项 MISSING 并标 `fx_missing`。税法规定了汇率的地区按规定取：数据库 `<jur>.<slot>.fx_rate_*` 参数记录用哪种价、哪一天、谁的价（内地：扣缴义务发生之日的人民币汇率中间价，收款方按月末 / 上月末；日本：取引日的主要往来银行 TTM；泰国：支付日商业银行卖出价或泰国央行参考平均卖出价，择一后不得变更；新加坡、香港无规定），`fx.py --jur` 读这些参数选日期和源：内地取外汇交易中心中间价（官方数），泰国取央行 API（需 key，否则用市场价并标注），日本没有官方 TTM、以三菱UFJ银行的 TTS / TTB 中值作代表并标注；fx.json 的每个数带 rule_cites。币种按 ISO 4217 代码比对和查表，客户写的 `RMB` 读作 `CNY`（fx.py 与优化器同一张别名表，2026-11-11）。案卷流程里由编排在 run 前取表内嵌（`agent/orchestration_cli_spec.zh.md` 的 run 步骤） |
 | 终点个人的事实 | 终点集合里的个人节点要有 `other_taxable_income`（该年其他应税净所得，收款方币种）；缺则同上进未决项 |
 | 重组的作价 | 可选：被转让公司最近审计报表的所有者权益（`net_assets`，客户事实，带出处）、持股成本（`cost_base`）和币种（`currency`，缺则按该公司所在地币种）；成本另用一种币种时写 `cost_currency`，按 fx.json 换算并标 `cost_converted`（法定的折算日期另由规则决定）；有评估报告时 `appraised_value` 替代净资产作对价。缺净资产则该候选的一次性成本整项 MISSING，候选仍在，只是一次性成本未知。成本缺失只在某一侧真对转让所得征税时才列为未决项 |
 | 过往股息 | `past_payments`：此前每笔股息一行（date、gross、payee_share、withheld、net_received、treaty_claimed、tax_settled、source；payee_share 是这笔股息分给收款人的金额，不是持股比例，比例式的值报错；tax_settled 是税款结算日，有它时退税期限从它起算；单据和客户说法不一致时，`readings` 列出各方的口径 {payee_share, withheld, net_received, gross, source}，各算一遍；其他键名报错，此前拼错的键会被悄悄忽略），见产物 `past_payments.json` |
@@ -354,13 +354,13 @@ total    = tax + Σ_格 (interest + fine) = Σ_格 (tax_cell + interest + fine) 
 | `diff` | 本产物目录 + 另一产物目录 → diff.json |
 | `version` | → version.json |
 
-汇率表由 `tools/fx.py` 另行生成（§3），`run` 只读入；它不是 optimize.py 的子命令。MCP 形式见 `优化层MCP规范.md`。
+汇率表由 `tools/fx.py` 另行生成（§3），`run` 只读入；它不是 optimize.py 的子命令。MCP 形式见 `optimization_mcp_spec.zh.md`。
 
 事实怎么来、判断点怎么答、产物怎么写成报告，都不在本规范里；对输入的唯一要求是合法（变量名、地区代码、答案三值），不合法报错不猜。
 
 ## 6a. MCP 服务 `tax-opt`
 
-见 `optimization/优化层MCP规范.md`（2026-11-01，最小集：run / evaluate / diff / fx 与产物切片读取）。
+见 `optimization/optimization_mcp_spec.zh.md`（2026-11-01，最小集：run / evaluate / diff / fx 与产物切片读取）。
 
 ## 7. 校验
 

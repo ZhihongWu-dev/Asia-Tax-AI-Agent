@@ -41,8 +41,7 @@ export default function Sidebar({
   onDelete: (id: string) => Promise<boolean>;
   busy: boolean;
 }) {
-  const { t, locale } = useLocale();
-  const say = (zh: string, en: string) => locale === "en" ? en : zh;
+  const { t } = useLocale();
   const { user, logout } = useAuth();
   const [logoutError, setLogoutError] = useState(false);
   const [signingOut, setSigningOut] = useState(false);
@@ -56,19 +55,19 @@ export default function Sidebar({
   ).sort((a, b) => (b.updated_at || "").localeCompare(a.updated_at || ""));
   const today = new Date(); today.setHours(0, 0, 0, 0);
   const yesterday = new Date(today); yesterday.setDate(yesterday.getDate() - 1);
-  const groups = [say("今天", "Today"), say("昨天", "Yesterday"), say("更早", "Earlier")];
+  const groups = [t("Today"), t("Yesterday"), t("Earlier")];
   const group = (c: Case) => {
     const time = new Date(c.updated_at || c.created_at || "").getTime();
     return time >= today.getTime() ? 0 : time >= yesterday.getTime() ? 1 : 2;
   };
   return (
-    <aside className="sidebar" aria-label={t("案例导航")}>
+    <aside className="sidebar" aria-label={t("Chat navigation")}>
       <div className="brand">
         <Brand />
         <HintButton
           className="icon-button mobile-close"
           onClick={onClose}
-          aria-label={t("关闭案例导航")}
+          aria-label={t("Close chat navigation")}
         >
           <X size={18} />
         </HintButton>
@@ -76,8 +75,8 @@ export default function Sidebar({
       <button className={`atlas-entry ${atlasActive ? "active" : ""}`} aria-pressed={atlasActive} onClick={onAtlas}>
         <span className="atlas-entry-icon"><MapIcon size={16} /></span>
         <span className="atlas-entry-text">
-          <strong>{t("税务地图")}</strong>
-          <small>{t("各辖区股息税与税务词典")}</small>
+          <strong>{t("Tax graph")}</strong>
+          <small>{t("Dividend tax by jurisdiction, glossary")}</small>
         </span>
         <ChevronRight size={16} style={{ marginLeft: "auto", flexShrink: 0 }} />
       </button>
@@ -90,28 +89,28 @@ export default function Sidebar({
         }}
       >
         <Plus size={17} />
-        {t("新对话")}
+        {t("New chat")}
       </HintButton>
       <label className="case-search">
         <Search size={15} />
         <input
-          aria-label={t("搜索对话")}
-          placeholder={t("搜索对话")}
+          aria-label={t("Search chats")}
+          placeholder={t("Search chats")}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
       </label>
-      <div className="history-tabs"><HintButton aria-pressed={!archived} onClick={() => setArchived(false)}>{t("最近对话")}</HintButton><HintButton aria-pressed={archived} onClick={() => setArchived(true)}>{say("已归档", "Archived")}</HintButton></div>
-      {actionError && <p role="alert">{say("操作失败，请刷新后重试。", "Could not update. Refresh and retry.")}</p>}
-      <nav className="case-list" aria-label={t("研究案例")}>
+      <div className="history-tabs"><HintButton aria-pressed={!archived} onClick={() => setArchived(false)}>{t("Recent chats")}</HintButton><HintButton aria-pressed={archived} onClick={() => setArchived(true)}>{t("Archived")}</HintButton></div>
+      {actionError && <p role="alert">{t("Could not update. Refresh and retry.")}</p>}
+      <nav className="case-list" aria-label={t("Research cases")}>
         {visible.map((c, index) => (
           <div className="history-entry" key={c.id}>
           {(index === 0 || group(c) !== group(visible[index - 1])) && <div className="nav-heading">{groups[group(c)]}</div>}
           {editing === c.id ? <form className="rename-form" onSubmit={async event => {
             event.preventDefault(); setActionError(false);
             if (await onOrganize(c.id, { title: title.trim() })) setEditing(""); else setActionError(true);
-          }}><input autoFocus maxLength={100} aria-label={say("对话名称", "Chat title")} value={title} onChange={e => setTitle(e.target.value)} onKeyDown={e => { if (e.key === "Escape") setEditing(""); }} />
-            <HintButton disabled={busy || !title.trim()}>{say("保存", "Save")}</HintButton><HintButton type="button" disabled={busy} onClick={() => setEditing("")}>{say("取消", "Cancel")}</HintButton></form> : <div className={`history-row ${activeId === c.id ? "is-active" : ""}`}>
+          }}><input autoFocus maxLength={100} aria-label={t("Chat title")} value={title} onChange={e => setTitle(e.target.value)} onKeyDown={e => { if (e.key === "Escape") setEditing(""); }} />
+            <HintButton disabled={busy || !title.trim()}>{t("Save")}</HintButton><HintButton type="button" disabled={busy} onClick={() => setEditing("")}>{t("Cancel")}</HintButton></form> : <div className={`history-row ${activeId === c.id ? "is-active" : ""}`}>
           <HintButton
             key={c.id}
             className={`case-item ${activeId === c.id && !atlasActive ? "active" : ""}`}
@@ -124,7 +123,7 @@ export default function Sidebar({
           <ChatMenu title={caseTitle(c, t)} archived={archived} disabled={busy}
             onRename={() => { setEditing(c.id); setTitle(caseTitle(c, t)); }}
             onDelete={async () => {
-              if (!window.confirm(say("删除此对话及其案卷、附件和报告？此操作不可撤销。", "Delete this conversation and its case files, attachments and reports? This cannot be undone."))) return;
+              if (!window.confirm(t("Delete this conversation and its case files, attachments and reports? This cannot be undone."))) return;
               setActionError(false);
               if (!await onDelete(c.id)) setActionError(true);
             }}
@@ -136,15 +135,15 @@ export default function Sidebar({
           </div>
         ))}
         {!visible.length && (
-          <p className="no-results">{t("没有找到匹配的案例")}</p>
+          <p className="no-results">{t("No matching chats")}</p>
         )}
       </nav>
       <div className="sidebar-bottom">
-        {user && <div className="account-row"><UserRound size={17} /><span title={user.email}>{user.email}</span><HintButton className="icon-button" disabled={signingOut} aria-label={t("退出登录")} title={t("退出登录")} onClick={async () => { setSigningOut(true); setLogoutError(false); try { await logout(); } catch { setLogoutError(true); } finally { setSigningOut(false); } }}><LogOut size={17} /></HintButton></div>}
-        {logoutError && <p role="alert">{t("退出失败，请重试。")}</p>}
+        {user && <div className="account-row"><UserRound size={17} /><span title={user.email}>{user.email}</span><HintButton className="icon-button" disabled={signingOut} aria-label={t("Sign out")} title={t("Sign out")} onClick={async () => { setSigningOut(true); setLogoutError(false); try { await logout(); } catch { setLogoutError(true); } finally { setSigningOut(false); } }}><LogOut size={17} /></HintButton></div>}
+        {logoutError && <p role="alert">{t("Could not sign out. Please retry.")}</p>}
         <HintButton className="side-link" onClick={() => onPanel("about")}>
           <CircleHelp size={17} />
-          {t("关于 Taxrora")}
+          {t("About Taxrora")}
         </HintButton>
       </div>
     </aside>

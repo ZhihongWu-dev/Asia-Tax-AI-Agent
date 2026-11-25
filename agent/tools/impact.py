@@ -1,4 +1,4 @@
-"""Feedback between editions (agent/orchestration_cli_spec.en.md §9): structure signatures, the preview card and the impact of a
+"""Feedback between editions (agent/orchestration_cli_spec.md §9): structure signatures, the preview card and the impact of a
 new run on the last delivered report. Program only: it reads products, intake files and the baseline draft, and decides by rules."""
 import hashlib
 import json
@@ -8,7 +8,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parents[1]
 CASES = PROJECT / "cases"
-SPECS = ("agent/analysis_agent_spec.en.md", "agent/polish_agent_spec.en.md")
+SPECS = ("agent/analysis_agent_spec.md", "agent/polish_agent_spec.md")
 REVISE_CHAIN_MAX = 3
 LIGHT_LINES_MAX = 40
 SECTIONS = {"first": ["1", "3", "4", "5", "6", "7"], "scenario": ["1", "5"], "requirements": ["6", "7"], "open": ["7", "A"],

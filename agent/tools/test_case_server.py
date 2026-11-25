@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Construction checks of tax-case (agent/case_mcp_spec.en.md §7): four identities against one temporary case.
+"""Construction checks of tax-case (agent/case_mcp_spec.md §7): four identities against one temporary case.
 
   python agent/tools/test_case_server.py [--root <temp cases root>]
 """

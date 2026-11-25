@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""The web host (agent/orchestration_cli_spec.en.md section 8): the API behind apps/web, one local user, bound to this machine.
+"""The web host (agent/orchestration_cli_spec.md section 8): the API behind apps/web, one local user, bound to this machine.
 
   python apps/api/server.py     then open http://127.0.0.1:8000
 
@@ -371,16 +371,21 @@ def relay(case_id, stop):
             reply, found = again, faults(again)
         if found:
             reply = RELAY_FALLBACK[stop["stop"]]
-        if stop["stop"] == "delivered":
-            url = report_url(case_id, orch.info(case_id).get("run_id"))
-            reply += "\n\n[Download the report (PDF)](%s)" % url if url else ""
+        opens = None
+        if stop["stop"] == "delivered":                  # 2026-11-25: the note carries a button that opens the report panel
+            run_id = orch.info(case_id).get("run_id")
+            if run_id and (CASES / case_id / "report" / run_id / "panel.json").exists():
+                opens = run_id
+            else:
+                url = report_url(case_id, run_id)
+                reply += "\n\n[Download the report (PDF)](%s)" % url if url else ""
         with guard:
             doc = load(case_id)
             held = restart and doc.get("restarts", 0) >= AUTO_RESTARTS         # review and front must not loop unattended
             if held:
                 restart = False
                 reply += "\n\nThe system has sent this case back %d times without a client message, so it stopped here. Resume it from the progress panel, or send more information." % AUTO_RESTARTS
-            doc["messages"].append(message("assistant", reply))
+            doc["messages"].append(message("assistant", reply, **({"panel": opens} if opens else {})))
             if not code:
                 doc.pop("notices", None)
             doc["restarts"] = doc.get("restarts", 0) + 1 if restart else doc.get("restarts", 0)
@@ -618,6 +623,7 @@ def snapshot(case_id, after):
     return {"active": active, "turning": case_id in turning, "status": cur.get("status"), "round": cur.get("round"), "revision": cur.get("revision", 0),
             "steps": steps, "stop": stop, "can_resume": case_id not in turning and (interrupted or bool(not active and stop and stop["stop"] in RESUMABLE)),
             "report": report_url(case_id, cur.get("run_id")) if cur.get("status") == "delivered" else None,
+            "panel": bool(cur.get("run_id")) and (CASES / case_id / "report" / str(cur.get("run_id")) / "panel.json").exists(),
             "chat_revision": doc["revision"], "blocks": blocks, "items": items, "cursor": cursor}
 
 
@@ -952,6 +958,29 @@ def remove_document(case_id, name):
             if cited else "No source cites it."))
         save(doc)
     return public(doc)
+
+
+@app.get("/api/cases/{case_id}/panel")
+def panel_state(case_id):
+    """The report panel of the current run (agent/tools/panel.py): the blocks in report order with the state of each, and the
+    export link once the report is delivered."""
+    import panel as panel_mod
+    valid_case(case_id)
+    settle(case_id)
+    cur = orch.info(case_id)
+    run_id = cur.get("run_id")
+    if not run_id:
+        raise failure("panel_not_ready", 404)
+    rows = log_rows(case_id)
+    steps = steps_of(cur, rows, run_active(case_id), intake_of(case_id, cur, rows))
+    running = next((step["id"] for step in steps if step["state"] == "running"), None)
+    doc = panel_mod.view(case_id, run_id, cur.get("status"), running)
+    if doc is None:
+        raise failure("panel_not_ready", 404)
+    doc.pop("case_id", None)
+    doc.pop("run_id", None)
+    doc["export"] = report_url(case_id, run_id) if doc.get("export_ready") else None
+    return doc
 
 
 @app.get("/api/cases/{case_id}/report/{run_id}/briefing.pdf")

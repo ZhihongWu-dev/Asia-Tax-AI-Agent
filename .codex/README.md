@@ -19,6 +19,14 @@ may reach 868,928 before a full-length answer no longer fits; 840,000 leaves roo
 the catalog's usable window (983,616 x 95% = 934,435). Checked with Codex 0.167.0-alpha under `--strict-config`: both keys
 are read (a missing catalog is an error), and the reasoning level `high` the harness uses for some nodes still runs.
 
+## Tool output limit (2026-11-25)
+
+Every generated `config.toml` also carries `tool_output_token_limit = 40000` (harness.json `tool_output_token_limit`).
+Above its default limit Codex cuts the middle out of a tool result and leaves "…N tokens truncated…" in its place; a
+reader page is at most 32,000 characters, which in Japanese or Chinese law text is more tokens than the default, so the
+legal lane lost the middle of its extract (case CASE-20261125-a1b2c3). Checked with Codex 0.167.0-alpha under
+`--strict-config`: the key is read, a misspelt key is refused.
+
 ## Run
 
 Use the Python interpreter in the `tax` conda environment. The original

@@ -2,7 +2,7 @@
 
 > **Superseded (2026-11-06)**: the polish stage is gone. The analysis agent writes the client report itself, readability is checked by the draft review, and once review passes the program expands the table markers and typesets the PDF. This file is kept as history; `write_polished` / `edit_polished` remain in the case server for old cases.
 
-English copy of `agent/润色Agent规范.md`; when the two differ the Chinese version prevails.
+This English version is the master (since 2026-11-25); `agent/polish_agent_spec.zh.md` is its Chinese translation, updated with it.
 
 2026-11-01. One of the four agents (front, analysis, polish, review). This document defines only its duties, inputs and outputs, working papers and the prompt handed to it.
 

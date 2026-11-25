@@ -1,4 +1,4 @@
-"""Prefetch packs (agent/retrieval_spec.en.md §9): what a node always needs, written by the program before the node starts
+"""Prefetch packs (agent/retrieval_spec.md §9): what a node always needs, written by the program before the node starts
 to cases/<case>/report/<run_id>/pack/<node>.md (intake/index/pack/ while there is no run). Every item carries its id, which
 the agent cites as the ref of the sources table without fetching it again. Values are copied from the indexes, never
 recomputed. Sections come in priority order; when the pack would pass LIMIT, whole sections from the end are left out and
@@ -99,10 +99,14 @@ def build(reader, case_id, node):
                 secm.CASES = impact.CASES = CASES
                 last = impact.baseline(case_id)
                 secm.build_frame(case_id, run, (last or {}).get("run_id"))
+                import panel                                 # 2026-11-25: the program's parts show in the panel before the agent writes
+                if last and last.get("run_id") and last["run_id"] != run:
+                    panel.copy_baseline(case_id, run, last["run_id"])
+                panel.build(case_id, run)
                 frame = (cd / "report" / run / "frame" / "frame.md").read_text(encoding="utf-8")
                 frame = re.sub(r"(?m)^## ", "#### ", frame.split("\n", 2)[2].replace("## Tables (markers)", "## Tables"))   # every frame section under the pack's heading
                 frame = re.sub(r"(?s)### \{\{block:(assumptions_table|gaps_list)\}\}.*?(?=### \{\{block:|\Z)", "", frame)   # the sections below carry them
-                frame = frame.replace("### {{block:", "##### ").replace("}}", "")
+                frame = re.sub(r"### \{\{block:([a-z_]+)\}\}", r"##### \1", frame)     # only the table headings: {{fig:..}} stays as written
                 text("Structure names and the program's tables (report/%s/frame/frame.md)" % run, frame)
                 names = json.loads((cd / "report" / run / "frame" / "names.json").read_text(encoding="utf-8"))
                 items("Structure ids by name", [("%s:structure:%s" % (run, cid), "%s: %s" % (n["name"], n["signature"])) for cid, n in names.items()])

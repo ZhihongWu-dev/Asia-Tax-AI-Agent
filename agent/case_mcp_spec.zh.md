@@ -1,8 +1,8 @@
 # 案卷 MCP 规范（tax-case，最小集）
 
-2026-11-01。四个 MCP 服务之一（另三个：`database/数据库MCP规范.md`、`rule/规则层MCP规范.md`、`optimization/优化层MCP规范.md`；本文只定案卷服务）。案卷服务是四个 Agent 对 `cases/<case_id>/` 的**唯一写入口**；读不经它——宿主自带的 Read（文件、PDF 按页、图片）、Glob、Grep 比服务做得好，直接用。写权限按 Agent 身份在服务里硬编码，读权限靠宿主的子 Agent 工具白名单加一个 PreToolUse 守卫钩子（`agent/tools/guard_hook.py`，按钩子输入里的 `agent_type` 判）。联网不建服务，用宿主自带的搜索与抓取，策略写在三份 Agent 规范的 prompt 里。调用日志也不由服务记，由宿主的 PostToolUse 钩子记（§5）。
+2026-11-01。四个 MCP 服务之一（另三个：`database/数据库MCP规范.md`、`rule/rule_mcp_spec.zh.md`、`optimization/optimization_mcp_spec.zh.md`；本文只定案卷服务）。案卷服务是四个 Agent 对 `cases/<case_id>/` 的**唯一写入口**；读不经它——宿主自带的 Read（文件、PDF 按页、图片）、Glob、Grep 比服务做得好，直接用。写权限按 Agent 身份在服务里硬编码，读权限靠宿主的子 Agent 工具白名单加一个 PreToolUse 守卫钩子（`agent/tools/guard_hook.py`，按钩子输入里的 `agent_type` 判）。联网不建服务，用宿主自带的搜索与抓取，策略写在三份 Agent 规范的 prompt 里。调用日志也不由服务记，由宿主的 PostToolUse 钩子记（§5）。
 
-**语言**：本规范用中文，供人阅读；英文副本 `agent/case_mcp_spec.en.md`，两者不一致时以中文版为准，改中文版时同步改英文副本。AI 写进文件的一切自写文字用英文——代码、注释、工具说明、prompt（系统实际递交的是英文副本里的那段）、底稿、核对单、handoff、bug 反馈、日志、产物字段；原件、条文、引文、客户原话保持原文，不翻译。唯一例外是给客户看的文字（对客户的回话、briefing）跟客户的语言。核对单的总判断用英文记号：交接包 `RUNNABLE` / `REVISE`，草稿 `POLISHABLE` / `REVISE`，成稿 `DELIVERABLE` / `REVISE`。
+**语言**：本文是英文版 `agent/case_mcp_spec.md` 的中文译本；自 2026-11-25 起以英文版为准，改英文版时同步更新本译本。AI 写进文件的一切自写文字用英文——代码、注释、工具说明、prompt（系统实际递交的是英文副本里的那段）、底稿、核对单、handoff、bug 反馈、日志、产物字段；原件、条文、引文、客户原话保持原文，不翻译。唯一例外是给客户看的文字（对客户的回话、briefing）跟客户的语言。核对单的总判断用英文记号：交接包 `RUNNABLE` / `REVISE`，草稿 `POLISHABLE` / `REVISE`，成稿 `DELIVERABLE` / `REVISE`。
 
 ## 1. 定位
 
@@ -46,7 +46,7 @@ cases/<case_id>/
 | polished | 成稿新于 `review.md`，`review_final.md` 不存在、旧于成稿或末句不是 `DELIVERABLE`（成稿以 `briefing.polished.md`、出处表和 PDF 中最新者为准） |
 | delivered | `review_final.md` 末句 `DELIVERABLE` 且不旧于成稿 |
 
-这张表同时是编排器的决策依据（见 `编排CLI规范.md`）。`round_current` 另返回 `return_to`：当前状态正在等的 `REVISE` 核对单，形如 `{which, to, path}`，没有时为空。
+这张表同时是编排器的决策依据（见 `orchestration_cli_spec.zh.md`）。`round_current` 另返回 `return_to`：当前状态正在等的 `REVISE` 核对单，形如 `{which, to, path}`，没有时为空。
 
 ## 3. 权限
 
@@ -169,7 +169,7 @@ cases/<case_id>/
 
 **构建记录（2026-11-01 晚，加润色 Agent）**：第四个身份 polish 加入——流程改为分析写草稿（状态 drafted）→ 润色重写出 polished.md / polished.sources.json + PDF（状态 polished）→ 复核核润色稿（对比草稿确认结论和数字没变）→ delivered；状态按文件 mtime 推（草稿重写 → 回 drafted，润色重写 → 回 polished）。`write_polished`、`render_pdf`（子进程调 render_pdf.py，ctexart 模板；不用 `-halt-on-error`，否则一个未定义控制序列就把整份截成 1 页；flow 代码块的 JSON 由模板用 TikZ 按固定版式绘制流程图，润色不画图；其他代码块原样保留空格；支持编号列表、跨页长表）、report_check 加 target 和三项对账（`number_drift` 比两版正文全部数字，`claims_changed` 比两张出处表，`where_unlocated` 查片段逐字定位），系统自用语进 LEAKS。第一次实跑（qwen3.7-max，CASE-E2E-001）：10 页，数字一致，但 40 / 81 条 where 定位不到、正文留有规则工具和模型等词、散文 6,130 字超目标，尚未重跑。guard / log / make_agents / .mcp.json 加 polish；test_case_server 更新后通过。润色用 qwen3.7-max。
 
-**构建记录（2026-11-01 深夜，改为先复核再润色）**：状态加 reviewed，复核分三段（`review.md` 核草稿，`review_final.md` 比对成稿），`RETURN` 行校验，`round_current` 返回 `return_to`，`round_new` 放宽，`write_polished` 要求草稿已通过，sources 和 notes 的写入也会让交接包回到待复核；中文总判断记号不再接受；`report_check` 能读英文报告的口语标签和过程性说明。编排器 `agent/tools/orchestrate.py` 见 `编排CLI规范.md`。
+**构建记录（2026-11-01 深夜，改为先复核再润色）**：状态加 reviewed，复核分三段（`review.md` 核草稿，`review_final.md` 比对成稿），`RETURN` 行校验，`round_current` 返回 `return_to`，`round_new` 放宽，`write_polished` 要求草稿已通过，sources 和 notes 的写入也会让交接包回到待复核；中文总判断记号不再接受；`report_check` 能读英文报告的口语标签和过程性说明。编排器 `agent/tools/orchestrate.py` 见 `orchestration_cli_spec.zh.md`。
 
 ## 8. 不做
 
@@ -191,3 +191,12 @@ cases/<case_id>/
 - **`render_pdf` 是程序的步骤**：分析身份调用一律拒绝；编排的排版节点在 `apply_replacements` 之后调用。它用 `report_form.client_text` 组出客户副本（标题和日期取自 facts.json，第 1 部分末尾放按 `frame/blocks/flow.json` 画的流程图，第 5 部分标题下放税负表，附录 A 放假设表和事实缺口，附录 B 按引用标记和出处表生成，引用标记只印显示文字，带案卷号或 run_id 的行不出现）再排版；返回 `written`、`latex_errors`、`overfull`、`flow_overlaps` 和版本号，不返回页数。
 - **`report_check(target=draft)` 和 `part_check`**：不再查抬头日期、内部编号行、流程图块、长句和页数；新增 `bad_cites`（`{{cite:<cite_id>|<显示文字>}}` 的 cite_id 不是库里的条文，或显示文字是一句话）和按部分的词数上限（`agent/tools/report_limits.json`，Agent 读不到）：某部分超限时报一句 "Part N: X words, limit Y. Cut it."，计数的其余内容都不返回，各部分词数写进 `log/word_counts.jsonl`。草稿要有一到七部分和附录 A；附录 B 归程序。
 - `apply_replacements` 在草稿原文里找复核给的原句，找不到再按客户读到的文字（标记换成显示文字）找，碰到的标记整个覆盖。
+
+## 变更（2026-11-25）：报告按块写
+
+| 工具 | 身份 | 做什么 |
+|---|---|---|
+| `write_block` | analysis | case_id、run_id、block ∈ {strategy, plan, points}、content → 写 `report/<run_id>/blocks/strategy.md`（不带标题的正文）、`plan.json`（`{"steps": [...]}`）或 `points.json`（`{"cards": [...], "notes": [...]}`）；先查结构（未知字段、缺标题或缺 key 的拒收）；然后程序生成报告（`agent/tools/panel.py`：三个块都在时生成 `briefing.md` 和 `briefing.sources.json`，`panel.json` 每次都生成），并返回该块的内容问题（未知的数字 id、策略里用阿拉伯数字写的金额、没有步骤完成的骨架步骤、没写条文的法定期限、没写访问日期的网页来源、没有卡片的判断点、缺条文、缺不利事实或缺确认人的卡片）、`draft_ready` 和 `blocks_missing`；写计划时还返回 `words`（每一步按第 7 部分印出样子计的词数及其预算份额，2026-11-25），第 7 部分超限时有一条问题点名超出份额的步骤。run_id 的要求同 `write_report` |
+| `edit_block` | analysis | case_id、run_id、block、edits = [{old, new}] → 每个 old 在该块中恰好出现一次，全改或全不改；之后同 `write_block` |
+
+框架带数字表的运行（2026-11-25 起生成框架的每个运行）里，`write_report` 和 `edit_report` 会拒绝：它的 `briefing.md` 和出处表归程序。这类运行的 `report_check`（target=draft）只计第 1、7 部分和附录 A 的词数上限，并加上各块的内容问题。`apply_replacements` 把复核的替换句改进含有原句的那个块（数字写回为标记）；程序部分的句子记为 superseded，不应用，也不退回。

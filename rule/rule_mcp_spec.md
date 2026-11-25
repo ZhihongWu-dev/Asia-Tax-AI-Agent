@@ -1,10 +1,10 @@
 # Rule layer MCP specification (tax-rule, minimal set)
 
-English copy of `rule/规则层MCP规范.md`; when the two differ the Chinese version prevails.
+This English version is the master (since 2026-11-25); `rule/rule_mcp_spec.zh.md` is its Chinese translation, updated with it.
 
-2026-11-01. One of four MCP services (the other three: `database/数据库MCP规范.md`, `optimization/优化层MCP规范.md`, `agent/案卷MCP规范.md`). This document defines only `tax-rule`: a service interface for the agent layer that wraps the rule layer's existing functions and adds no new semantics. The rule layer's own tables, evaluation semantics and function set are in `规则层规范.md`.
+2026-11-01. One of four MCP services (the other three: `database/database_mcp_spec.en.md`, `optimization/optimization_mcp_spec.md`, `agent/case_mcp_spec.md`). This document defines only `tax-rule`: a service interface for the agent layer that wraps the rule layer's existing functions and adds no new semantics. The rule layer's own tables, evaluation semantics and function set are in `rule_layer_spec.md`.
 
-**Language**: this specification is written in Chinese for human readers; the English copy is `rule/rule_mcp_spec.en.md`; when the two differ the Chinese version prevails, and when the Chinese version is changed the English copy is updated in step. Everything the AI writes into files in its own words is in English — code, comments, tool descriptions, prompts (what the system actually submits is the passage in the English copy), working papers, checklists, handoff, bug reports, logs, product fields; originals, clauses, quotations and the client's own words stay in their original language and are not translated. The only exception is text shown to the client (replies to the client, the briefing), which follows the client's language. The overall verdict of a checklist uses English tokens: intake package `RUNNABLE` / `REVISE`, report `DELIVERABLE` / `REVISE` (the service also accepts the original Chinese tokens).
+**Language**: this specification is written in English and is the master (since 2026-11-25); its Chinese translation `rule/rule_mcp_spec.zh.md` is updated with it. Everything the AI writes into files in its own words is in English — code, comments, tool descriptions, prompts (what the system actually submits is the passage in the English copy), working papers, checklists, handoff, bug reports, logs, product fields; originals, clauses, quotations and the client's own words stay in their original language and are not translated. The only exception is text shown to the client (replies to the client, the briefing), which follows the client's language. The overall verdict of a checklist uses English tokens: intake package `RUNNABLE` / `REVISE`, report `DELIVERABLE` / `REVISE` (the service also accepts the original Chinese tokens).
 
 ## 1. Positioning
 
@@ -40,7 +40,7 @@ All three agents mount it: the front agent mainly uses variables / predicates / 
 - `date` has no default value; if it is missing, `invalid` is reported.
 - Every return carries `version` (the rule layer build number), for citation in the report's sources.json.
 - Errors are returned structured as `{error: invalid | not_found | internal, detail}`, so the agent can paste them verbatim into a bug report.
-- Call logs are not recorded by the service: the host's PostToolUse hook records them uniformly to `cases/<case_id>/log/calls.jsonl` (see `agent/案卷MCP规范.md` §5); the service does not touch logs.
+- Call logs are not recorded by the service: the host's PostToolUse hook records them uniformly to `cases/<case_id>/log/calls.jsonl` (see `agent/case_mcp_spec.md` §5); the service does not touch logs.
 - Tools with the same name across services (`requirements`, `version`, `diff`) are prefixed by the host with the service name, so they do not clash; agent specifications include the service name when mentioning them.
 
 ## 4. Identity and permissions

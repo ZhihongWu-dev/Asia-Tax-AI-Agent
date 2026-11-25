@@ -6,14 +6,13 @@ import { useLocale } from "../locale";
 export default function ChatMenu({ title, archived, disabled, onRename, onArchive, onDelete }: {
   title: string; archived: boolean; disabled: boolean; onRename: () => void; onArchive: () => void; onDelete: () => void;
 }) {
-  const { locale } = useLocale();
-  const en = locale === "en";
+  const { t } = useLocale();
   const id = useId(), menu = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
   const [position, setPosition] = useState({ left:0, top:0 });
-  const more = en ? "More options" : "更多操作";
-  const rename = en ? "Rename" : "重命名";
-  const archive = archived ? (en ? "Restore" : "恢复") : (en ? "Archive" : "归档");
+  const more = t("More options");
+  const rename = t("Rename");
+  const archive = t(archived ? "Restore" : "Archive");
   function close(action: () => void) { menu.current?.hidePopover(); action(); }
   return <>
     <HintButton className="history-more icon-button" aria-label={`${more} ${title}`} title={more}
@@ -42,7 +41,7 @@ export default function ChatMenu({ title, archived, disabled, onRename, onArchiv
       }}>
       <button role="menuitem" disabled={disabled} onClick={() => close(onRename)}><Pencil size={16} />{rename}</button>
       <button role="menuitem" disabled={disabled} onClick={() => close(onArchive)}>{archived ? <ArchiveRestore size={16} /> : <Archive size={16} />}{archive}</button>
-      <button role="menuitem" disabled={disabled} onClick={() => close(onDelete)}><Trash2 size={16} />{en ? "Delete" : "删除"}</button>
+      <button role="menuitem" disabled={disabled} onClick={() => close(onDelete)}><Trash2 size={16} />{t("Delete")}</button>
     </div>
   </>;
 }

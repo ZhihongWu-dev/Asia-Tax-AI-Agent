@@ -1,4 +1,4 @@
-"""Sectioned drafting (agent/orchestration_cli_spec.en.md §10): the program frame (structure names, tables and their sources),
+"""Sectioned drafting (agent/orchestration_cli_spec.md §10): the program frame (structure names, tables and their sources),
 one file per part of the briefing, assembly of the draft, Appendix B from the cited sources, and parts carried from the last edition.
 Program only: it reads products, the library and the baseline draft; the prose is written by the analysis agent."""
 import csv
@@ -516,6 +516,8 @@ def build_frame(case_id, run_id, base_run=None):
             nmx["signature"], dest))
     lines += ["", "The plan is built on **%s**." % best.get("name", "?"), ""]
     lines += frame_strategy(brief, names, cnames, ccy, dest)
+    import panel                                        # 2026-11-25: the report as blocks; it imports this module
+    lines += panel.frame_extra(case_id, run_id, names, cnames, fd)
     lines += word_limits(fd)
     lines += ["## Tables (markers)", ""]
     for k, v in blocks.items():
@@ -529,7 +531,7 @@ def word_limits(fd):
     the writer is told (2026-11-12, the user's decision): first drafts ran two to four times over and were cut part by part."""
     import report_form                                  # it imports this module: a late import
     words = {"head": "The opening before Part 1", "A": "Appendix A"}
-    rows = [(k, report_form.limit_of(k, fd)) for k in ["head", "1", "2", "3", "4", "5", "6", "7", "A"]]
+    rows = [(k, report_form.limit_of(k, fd)) for k in ["1", "7", "A"]]          # 2026-11-25: the other parts are the program's
     out = ["## Word limits", "",
            "Write each part within its limit from the first draft. Counted: the prose only; citation markers, quoted passages, tables, "
            "headings and program markers are not counted, and a CJK character counts as half a word. report_check names a part that "

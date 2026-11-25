@@ -1,4 +1,4 @@
-"""Shared pieces of the rule-layer tools (rule/规则层规范（最小集）.md): table layouts, the vocabulary of effects,
+"""Shared pieces of the rule-layer tools (rule/rule_layer_spec.md): table layouts, the vocabulary of effects,
 csv access, the condition parser and the loader of the library tables that the rule layer reads.
 
 Python 3.11, standard library only (psycopg and requests when the library is read from the remote, tax_db=supabase).

@@ -1,4 +1,4 @@
-"""Text helpers shared by the retrieval indexes (agent/retrieval_spec.en.md §4.1): language, retrieval units, FTS tokens,
+"""Text helpers shared by the retrieval indexes (agent/retrieval_spec.md §4.1): language, retrieval units, FTS tokens,
 verbatim anchoring. Ported from the archived knowledge layer (archive/old-model-2026-10-31/official/tools/graph.py), where
 they were evaluated (round-I synthesis §4, §6)."""
 import re

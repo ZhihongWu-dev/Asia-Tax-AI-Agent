@@ -5,6 +5,7 @@ document comes from the library. With tax_db=supabase both read the shared Supab
 never a copy, so the map follows each upload. Read-only; results are cached per library version and date.
 """
 import importlib.util
+import json
 import re
 import sys
 import threading
@@ -17,29 +18,22 @@ RULE_TOOLS, DB_TOOLS = ROOT / "rule" / "tools", ROOT / "database" / "tools"
 # ISO 3166-1 numeric ids as Natural Earth writes them (the map's country ids)
 ISO = {"cn": "156", "hk": "344", "sg": "702", "jp": "392", "th": "764", "id": "360", "vn": "704", "my": "458", "ae": "784",
        "kr": "410", "in": "356"}
-NAME_ZH = {"cn": "中国内地", "hk": "中国香港", "sg": "新加坡", "jp": "日本", "th": "泰国", "id": "印度尼西亚", "vn": "越南",
-           "my": "马来西亚", "ae": "阿联酋", "kr": "韩国", "in": "印度"}
+LOCALES = {p.stem: json.loads(p.read_text(encoding="utf-8")) for p in (Path(__file__).resolve().parent / "locales").glob("*.json")}
+NAME_ZH = LOCALES.get("zh", {}).get("jurisdictions", {})
 SLOTS = ["residence", "outbound_wht", "inbound", "final", "cfc", "anti_abuse", "restructure", "exit", "penalty"]
-SLOT_TEXT = {
-    "residence": ("Residence", "税收居民", "Who the jurisdiction treats as its resident: the tests for companies and individuals that decide where income is taxed in full.",
-                  "辖区认定谁是本地税收居民：公司和个人的判定标准，决定在哪里就全部所得纳税。"),
-    "outbound_wht": ("Withholding tax", "预提所得税", "Tax the paying jurisdiction withholds from a dividend paid to a non-resident, before any treaty relief or with it.",
-                     "付款地对支付给非居民的股息代扣的税款，分无协定和适用协定两种情形。"),
-    "inbound": ("Foreign dividends received", "境外股息的处理", "How a resident recipient treats a dividend from abroad: included, exempt, credited or taxed only when received.",
-                "居民收款方如何处理来自境外的股息：计入、免税、抵免，或汇入时才征税。"),
-    "final": ("Tax on the recipient", "收款方所得税", "The income tax rate or schedule the recipient finally bears on the dividend in its own jurisdiction.",
-              "收款方在本地对股息最终承担的所得税率或累进表。"),
-    "cfc": ("Controlled foreign companies", "受控外国公司", "Rules that tax a resident on the undistributed profit of a low-taxed foreign company it controls.",
-            "对居民控制的低税外国公司的未分配利润，在居民层面征税的规则。"),
-    "anti_abuse": ("Anti-abuse", "反滥用", "Beneficial ownership, principal purpose tests and general anti-avoidance rules that can deny a lower rate.",
-                   "受益所有人、主要目的测试和一般反避税规则，可能否定较低税率。"),
-    "restructure": ("Restructuring taxes", "重组税负", "Taxes a share transfer or reorganisation triggers once: capital gains, stamp duty, transfer taxes.",
-                    "股权转让或重组一次性触发的税负：资本利得、印花税、转让税。"),
-    "exit": ("Exit taxes", "退出税", "Tax on leaving the jurisdiction: deemed disposal when a company or individual ceases to be resident.",
-             "离开辖区时的税负：公司或个人不再是居民时的视同处置。"),
-    "penalty": ("Penalties and deadlines", "罚则与期限", "Withholding deadlines, late-payment interest and penalties for under-withholding.",
-                "代扣代缴期限、滞纳金和少扣税款的罚则。"),
+SLOT_EN = {
+    "residence": ("Residence", "Who the jurisdiction treats as its resident: the tests for companies and individuals that decide where income is taxed in full."),
+    "outbound_wht": ("Withholding tax", "Tax the paying jurisdiction withholds from a dividend paid to a non-resident, before any treaty relief or with it."),
+    "inbound": ("Foreign dividends received", "How a resident recipient treats a dividend from abroad: included, exempt, credited or taxed only when received."),
+    "final": ("Tax on the recipient", "The income tax rate or schedule the recipient finally bears on the dividend in its own jurisdiction."),
+    "cfc": ("Controlled foreign companies", "Rules that tax a resident on the undistributed profit of a low-taxed foreign company it controls."),
+    "anti_abuse": ("Anti-abuse", "Beneficial ownership, principal purpose tests and general anti-avoidance rules that can deny a lower rate."),
+    "restructure": ("Restructuring taxes", "Taxes a share transfer or reorganisation triggers once: capital gains, stamp duty, transfer taxes."),
+    "exit": ("Exit taxes", "Tax on leaving the jurisdiction: deemed disposal when a company or individual ceases to be resident."),
+    "penalty": ("Penalties and deadlines", "Withholding deadlines, late-payment interest and penalties for under-withholding."),
 }
+SLOT_TEXT = {k: (en[0], LOCALES.get("zh", {}).get("slots", {}).get(k, {}).get("title", en[0]), en[1],
+                 LOCALES.get("zh", {}).get("slots", {}).get(k, {}).get("text", en[1])) for k, en in SLOT_EN.items()}
 METRICS = {"wht_company": "company", "wht_individual": "individual"}
 HEADLINE = {"payer_listed": False, "holding_pct": 100, "holding_months": 24}      # unlisted payer, 100% held for two years
 QUALIFYING = {"payer_listed": False, "holding_pct": 100, "holding_months": 24, "days_present": 365}

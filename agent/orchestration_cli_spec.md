@@ -1,8 +1,8 @@
 # Orchestration and CLI specification (minimal set)
 
-English copy of `agent/编排CLI规范.md`; when the two differ the Chinese version prevails.
+This English version is the master (since 2026-11-25); `agent/orchestration_cli_spec.zh.md` is its Chinese translation, updated with it.
 
-2026-11-01. This document defines only how the four agents are started, the order they run in and when the flow stops. Each agent's duties are in its own spec; case reads, writes and the ledger are in `agent/case_mcp_spec.en.md`. The implementation file is `agent/tools/orchestrate.py`, its checks are in `agent/tools/test_orchestrate.py`.
+2026-11-01. This document defines only how the four agents are started, the order they run in and when the flow stops. Each agent's duties are in its own spec; case reads, writes and the ledger are in `agent/case_mcp_spec.md`. The implementation file is `agent/tools/orchestrate.py`, its checks are in `agent/tools/test_orchestrate.py`.
 
 **Language**: only the body of the Chinese spec is in Chinese. Everything else is in English: code, comments, logs, the task text handed to agents, and the CLI's prompts, status and stop messages.
 
@@ -382,7 +382,7 @@ Rules: a sectioned draft refuses `write_report` of the whole briefing and any wr
 
 ## 11. Reading and retrieval hooks (2026-11-03)
 
-The retrieval layer is designed in `agent/retrieval_spec.en.md`. The orchestrator does four things for it, all program steps:
+The retrieval layer is designed in `agent/retrieval_spec.md`. The orchestrator does four things for it, all program steps:
 
 | When | What |
 |---|---|
@@ -395,7 +395,7 @@ A failure of any of these is logged in one line and does not fail the node: the 
 
 ## 12. The legal-reasoning lane and re-check scope (2026-11-03)
 
-review_draft and review_final each run two review agents at the same time: the main review (stages 2 and 3 of the review spec) and the legal-reasoning lane (stage 4, `agent/review_agent_spec.en.md` §3a). Why: the round-3 reviews of CASE-20261102-a032c0 passed a wrong statement of the Singapore headline-rate test three times; checking each sentence's reason against the provision is a separate job from checking figures against products.
+review_draft and review_final each run two review agents at the same time: the main review (stages 2 and 3 of the review spec) and the legal-reasoning lane (stage 4, `agent/review_agent_spec.md` §3a). Why: the round-3 reviews of CASE-20261102-a032c0 passed a wrong statement of the Singapore headline-rate test three times; checking each sentence's reason against the provision is a separate job from checking figures against products.
 
 | Step | What the program does |
 |---|---|
@@ -445,7 +445,7 @@ The end-to-end reports ran long, the flowchart was crowded, and the analysis was
 | Frame | `build_frame` also writes `frame/blocks/flow.json`: the flowchart from the products (`sections.flow_spec`: the current and the recommended holding chain with the legal names from facts.json `names` where the front recorded them, the dividend and the tax on it in each panel, and between them the adjustment moves: holder changes and the conduct the figure needs, or "holdings unchanged") |
 | render node | apply replacements → `report_form.client_text` (title and date from facts.json, the flowchart at the end of Part 1, the tax table after the Part 5 heading, the assumptions table and the fact gaps in Appendix A, Appendix B from the citation markers and the sources table, markers printed as labels, no case id or run_id; written as `briefing.polished.md`) → `render_pdf` (fonts and layout fixed in the template; the layout report gives `flow_overlaps`, logged) → `report_check`. No page check |
 | Reads | an allowlist per identity and node (`agent/tools/access.py`); `prepare` passes the node to every MCP server it starts (`codex_mcp.py --node`, set as `TAX_NODE`), so the intake, draft and legal review lanes read different files and keep separate notebooks and bug files |
-| Replacements and limits | the reviewers do not see the word limits, and their approved replacements add words; so at render `render_pdf`'s text gate and the last self-check let overruns pass (`report_form.OVERRUN`) and send back every other problem. The author's own text is held to the limits when the analysis node ends. A marker's label in a replacement stays the provision's short name, the explanation after the marker (review prompt), since a long label is sent back (CASE-20261112-af3581: 12 replacements added about 140 words and one 19-word label, costing an extra analysis and re-check round) |
+| Replacements and limits | the reviewers do not see the word limits, and their approved replacements add words; so at render `render_pdf`'s text gate and the last self-check let an overrun pass up to `_render_slack` of `report_limits.json` (5 per cent, 2026-11-25; `report_form.render_slack`) and send back a larger one and every other problem. The author's own text is held to the limits when the analysis node ends. A marker's label in a replacement stays the provision's short name, the explanation after the marker (review prompt), since a long label is sent back (CASE-20261112-af3581: 12 replacements added about 140 words and one 19-word label, costing an extra analysis and re-check round) |
 | Own repository | Codex's web search takes only an allowlist of domains (`tools.web_search.allowed_domains`), and `experimental_network.denied_domains` is the managed proxy of sandboxed commands, which the harness does not run; so `github.com` and `raw.githubusercontent.com` paths of `ZhihongWu-dev/Asia-Tax-AI-Agent` (the specifications and the expected answers) cannot be blocked up front. After every agent node `flag_repo` scans the new node logs and writes a `repo_hit` row to `runs.jsonl`. Making the repository private is for the team to decide |
 | Host | the front's delivered note and preview-card note are asked for at most 200 words (stated in the host's prompt since 2026-11-12, the user's decision); the host counts the words of the delivered cover note and of the preview-card note (no other relay) and, above 200, asks for up to two rewrites (2026-11-13: a 213-word note came back at 227 and was lost; Part 1 now goes with a rewrite only when a figure is wrong, since for a length fault the model wrote more of it) ("Your note has N words, limit 200. Shorten it."; raised from 120 on 2026-11-12, after a complete 148-word rewrite was replaced by the fallback); a note still over is replaced by the plain fallback. Every rewrite turn (length, figures, system names) quotes the note it rewrites, and on delivery Part 1 too: a Codex turn is a fresh session and had rewritten a note it never saw (CASE-20261112-af3581) |
 | Strategy depth (2026-11-12) | run_input passes the client's own conduct (`receive_at_destination`, `this_payment_can_wait`, `declared_to_payee`) to the optimizer with the other hard constraints; the optimizer runs again for a conduct the client has not stated and the first structure relies on (products/<run_id>/conduct/<key>/), and writes sequence.json, premises.json and the brief's conduct / sequence / diagnosis / must_state (optimization spec §4.7a); the frame writes "The group's own choices" and the other sections from them, the choices table and the table of what each figure rests on; the client copy places the first after the Part 1 flowchart and the second after the Part 5 tax table; Part 1's word allowance grows with the rows of the choices table; report_check checks the must_state figures. An optimizer run takes about twice as long as a result (about 5 minutes for this case) |
@@ -467,3 +467,19 @@ A node that came back no longer starts a fresh session that reads the case again
 | Check rhythm | the analysis checks each part with `report_check` part=N while writing, writes the sources table once when the text is final, then runs report_check (target=draft) and cite_check once each; a cite_check tool error is recorded once and not retried. A revision runs the checks once after all edits (analysis spec, Pace) |
 
 To measure before deciding (not done yet): the start-up time of the MCP servers per session, and whether the SDK or `codex app-server` would keep them alive across calls; `reasoning_effort_override` with low effort for wording-only revisions; `--ephemeral` for one-shot turns such as the cover-note rewrite.
+
+## 17. The report as blocks, the report panel (2026-11-25)
+
+The owner's decision: the client report becomes a browse-only panel; the program assembles it, and the analysis agent writes only the parts that need an adviser's judgment.
+
+| Part | Now |
+|---|---|
+| Who writes what | the program writes the basis of the opinion, Parts 2 to 6, the tables, the flowchart and Appendix B from the products (`agent/tools/panel.py`); the analysis agent writes three blocks: `strategy` (Part 1), `plan` (Part 7, a dated plan the client can act on, with web sources for procedure the library lacks) and `points` (Appendix A, one card per point) |
+| Frame | `build_frame` also writes `frame/figures.json` (an id for every amount the report may state; Part 1 writes `{{fig:<id>}}`), `frame/skeleton.json` (the steps Part 7 must cover, with the deadlines and official procedure pages of the rule layer) and `frame/points.json` (the keys Appendix A answers); frame.md lists them; word limits only for Parts 1 and 7 and Appendix A (Part 7 per skeleton step) |
+| Rendering | on every `write_block` / `edit_block` the program renders `briefing.md` and `briefing.sources.json` (once all three blocks exist; written only when their content changes, since their time stamps carry the status) and `panel.json`; review, the legal lane, `report_check`, the render step and `render_pdf` read the rendered files as before |
+| Analysis node | the task asks for the three blocks; the pack builds the frame and the panel before the agent starts, so the program's parts show in the panel at once; a revised edition starts from the last edition's blocks, copied into the new run (`panel.copy_baseline`) |
+| Review | findings and replacements concern the three blocks only; a fault in a program part is a bug (layer: report program), not a REVISE. The legal lane's extract covers the lines of Parts 1 and 7 and Appendix A only (`panel.ai_lines`). Replacements go into the blocks (`apply_replacement`) |
+| Host | `GET /api/cases/{case_id}/panel` serves panel.json with the state of each block (final / review / writing / updating: writing while the analysis writes it the first time, updating while it is rewritten after a review or after a block it depends on changed; content is withheld in those two states) and the export link once the report is delivered; the run view says whether a panel exists; the front's delivery note carries a button that opens the panel instead of the PDF link |
+| Web | the panel opens from the progress panel and from the delivery note, as an overlay like the search view; browse only; export once every part is reviewed |
+
+Not done yet: a panel per earlier run (the endpoint serves the current run); labels of provisions in Part 6 are the library's labels in the original language.

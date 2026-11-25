@@ -27,6 +27,12 @@ import sys
 import tempfile
 from pathlib import Path
 
+sys_path = str(Path(__file__).resolve().parent)
+import sys as _sys
+if sys_path not in _sys.path:
+    _sys.path.insert(0, sys_path)
+import words as W  # noqa: E402  (report_words.json)
+
 CJK = re.compile(r"[\u3000-\u9fff\uff00-\uffef]")
 
 
@@ -215,7 +221,7 @@ def to_tex(md):
             body.extend(table(rows, None))                         # 10 pt, 9 pt from six columns, body and appendices alike
             continue
         bullet = re.match(r"^\s*[-*]\s+(.*)$", l)
-        numbered = re.match(r"^\s*(\d+)[.、]\s+(.*)$", l)
+        numbered = re.match(r"^\s*(\d+)" + W.LIST_MARK + r"\s+(.*)$", l)
         if in_list and not (bullet or numbered):
             close_list()
         reference = re.match(r"^\*([^*].*[^*])\*$", l.strip())
@@ -225,13 +231,13 @@ def to_tex(md):
             close_front()
             close_columns()
             title = l[3:]
-            appendix = re.match(r"^(附录|Appendix)", title)
+            appendix = re.match("^" + W.APPENDIX, title)
             if appendix and not in_appendix:
                 body.append(r"\begingroup\small")
                 in_appendix = True
             body.append(r"\needspace{6\baselineskip}\section*{%s}\nopagebreak\vspace{-3pt}{\color{rule}\hrule height 0.4pt}\nopagebreak\vspace{3pt}" % esc(title))
             rest = lines[i + 1:]
-            if re.match(r"^(附录\s*B|Appendix\s*B)", title) and not any(x.startswith("|") or x.startswith("## ") for x in rest):
+            if re.match("^" + W.APPENDIX + r"\s*B", title) and not any(x.startswith("|") or x.startswith("## ") for x in rest):
                 body.append(r"\begin{multicols}{2}\raggedright")
                 in_columns = True
         elif l.startswith("### "):
@@ -301,7 +307,7 @@ def layout(pdf, md):
     flow = re.search(r'^```flow\s*\n.*?"steps_title"\s*:\s*"([^"]+)"', md, re.M | re.S)
     key = re.sub(r"\s+", "", flow.group(1)) if flow else ""
     flow_page = next((i + 1 for i, t in enumerate(texts) if key and key in t), None)
-    first_appendix = next((s["page"] for s in sections if s["page"] and re.match(r"(附录|Appendix)", s["section"])), None)
+    first_appendix = next((s["page"] for s in sections if s["page"] and re.match(W.APPENDIX, s["section"])), None)
     return {"pages": len(doc), "body_pages": first_appendix or len(doc), "sections": sections, "flow_page": flow_page,
             "flow_overlaps": overlaps(doc[flow_page - 1]) if flow_page else 0, "page_fill": fill, "last_page_fill": fill[-1]}
 

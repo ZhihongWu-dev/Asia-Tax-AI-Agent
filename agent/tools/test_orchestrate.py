@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Construction checks of the orchestrator (agent/orchestration_cli_spec.en.md §6): no model is called.
+"""Construction checks of the orchestrator (agent/orchestration_cli_spec.md §6): no model is called.
 
   python agent/tools/test_orchestrate.py
 

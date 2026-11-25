@@ -1,5 +1,5 @@
 """Who may read what in a case folder: one rule set for the guard hook (host Read / Grep / Glob), the Codex file server and the
-retrieval service (tax-read), so they never disagree (agent/case_mcp_spec.en.md §3, §6; agent/retrieval_spec.en.md §10).
+retrieval service (tax-read), so they never disagree (agent/case_mcp_spec.md §3, §6; agent/retrieval_spec.md §10).
 
 Since 2026-11-12 it is an allowlist: an agent reads what is listed for it (and, where the node is known, for its node: the two
 review lanes differ), and nothing else. A file a new feature adds is unreadable until it is listed here. The node comes from

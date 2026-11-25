@@ -21,11 +21,11 @@ export default function FileWindow({ count, listClass, children }: { count: numb
   const toggle = open || over;
   return (
     <div className={`file-window ${open ? "open" : ""}`}>
-      {toggle && <div className="file-window-head">{t("附件")} {count}</div>}
+      {toggle && <div className="file-window-head">{t("Attachments")} {count}</div>}
       <div ref={list} className={`file-window-list ${listClass}`}>{children}</div>
       {toggle && (
         <button type="button" className="file-window-toggle" onClick={() => setOpen(!open)} aria-expanded={open}
-          aria-label={t(open ? "收起" : "展开全部")} title={t(open ? "收起" : "展开全部")}>
+          aria-label={t(open ? "Collapse" : "Show all")} title={t(open ? "Collapse" : "Show all")}>
           {open ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
         </button>
       )}

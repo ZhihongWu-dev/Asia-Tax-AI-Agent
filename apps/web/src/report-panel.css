@@ -1,0 +1,128 @@
+/* ---- client report panel (ReportPanel.tsx): floats over the page like the search view, close to full screen ---- */
+.rp-dialog {
+  width: min(1440px, 100%); height: calc(100dvh - 32px); max-height: none; overflow: hidden;
+}
+.rp-head {
+  flex-shrink: 0; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
+  padding: 16px 22px 14px; border-bottom: 1px solid var(--border);
+}
+.rp-head-text { min-width: 0; }
+.rp-head h2 { display: flex; align-items: center; gap: 8px; color: var(--navy); font-size: 18px; font-weight: 650; line-height: 1.4; }
+.rp-head h2 svg { color: var(--teal); }
+.rp-head p { margin-top: 4px; color: var(--muted); font-size: 13px; }
+.rp-head-actions { display: flex; align-items: flex-start; gap: 10px; flex-shrink: 0; }
+.rp-head-actions .run-action { padding: 0 14px; }
+.rp-export-wait { display: grid; justify-items: end; gap: 4px; }
+.rp-export-wait small { color: var(--muted); font-size: 11.5px; }
+
+.rp-body { flex: 1; min-height: 0; display: grid; grid-template-columns: 250px minmax(0, 1fr); }
+.rp-outline { min-height: 0; overflow: auto; padding: 14px 10px; border-right: 1px solid var(--border); background: #f4f7f3; }
+.rp-outline ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.rp-outline button {
+  width: 100%; display: flex; align-items: flex-start; gap: 9px; padding: 7px 10px; border: 0; border-radius: 7px;
+  background: transparent; color: #33443e; font-size: 13px; line-height: 1.45; text-align: left;
+}
+.rp-outline button:hover { background: #e8efe8; }
+.rp-dot { flex: none; width: 8px; height: 8px; margin-top: 6px; border-radius: 50%; background: var(--teal); }
+.rp-dot.review { background: #c27c2c; }
+.rp-dot.writing, .rp-dot.updating { background: transparent; box-shadow: inset 0 0 0 1.5px #9aa8a1; }
+
+.rp-main { min-height: 0; overflow: auto; padding: 8px 40px 48px; scroll-padding-top: 12px; }
+.rp-block { max-width: 920px; margin: 0 auto; padding: 22px 0 18px; border-bottom: 1px solid var(--border); }
+.rp-block:last-child { border-bottom: 0; }
+.rp-block > header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.rp-block h3 { color: var(--brand-ink); font-size: 17px; font-weight: 700; line-height: 1.45; }
+.rp-block h4 { margin: 0; color: var(--brand-ink); font-size: 14px; font-weight: 650; line-height: 1.5; }
+.rp-chip {
+  flex: none; padding: 2px 9px; border-radius: 999px; background: #e6f0ea; color: var(--teal); font-size: 11.5px; font-weight: 600; white-space: nowrap;
+}
+.rp-chip.review { background: #f8eedd; color: #8a5a1e; }
+.rp-chip.writing, .rp-chip.updating { background: #eef1ef; color: var(--muted); }
+.rp-md { color: #283e43; }
+
+.rp-placeholder { display: grid; gap: 10px; padding: 10px 0 6px; }
+.rp-placeholder i { display: block; height: 11px; border-radius: 6px; background: #edf1ed; animation: rp-pulse 1.6s ease-in-out infinite; }
+.rp-placeholder i:nth-child(2) { width: 86%; }
+.rp-placeholder i:nth-child(3) { width: 62%; }
+.rp-placeholder span { color: var(--muted); font-size: 13px; }
+@keyframes rp-pulse { 50% { opacity: 0.45; } }
+
+/* summary figures */
+.rp-figures { margin: 6px 0 4px; }
+.rp-route { margin-bottom: 12px; color: var(--navy); font-size: 15px; font-weight: 600; }
+.rp-figures dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 0; }
+.rp-figures dl > div { padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+.rp-figures dt { color: var(--muted); font-size: 12px; }
+.rp-figures dd { margin: 4px 0 0; color: var(--navy); font-size: 16px; font-weight: 650; font-variant-numeric: tabular-nums; }
+
+/* labelled rows (steps and cards) */
+.rp-rows { margin: 8px 0 0; display: grid; gap: 5px; }
+.rp-row { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 12px; font-size: 13.5px; line-height: 1.6; }
+.rp-row dt { color: var(--muted); }
+.rp-row dd { margin: 0; color: #283e43; }
+.rp-row ul { margin: 0; padding-left: 18px; }
+
+/* flowchart */
+.rp-flow { margin: 16px 0 8px; }
+.rp-structures { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.rp-structure { margin: 0; padding: 14px 16px; border: 1px solid var(--border); border-radius: 12px; background: #fff; }
+.rp-structure + .rp-structure { border-color: #b9d3c6; background: #f6faf7; }
+.rp-structure figcaption { margin-bottom: 12px; color: var(--navy); font-size: 13px; font-weight: 650; }
+.rp-chain { list-style: none; margin: 0; padding: 0; display: grid; justify-items: center; }
+.rp-chain li { display: grid; justify-items: center; width: 100%; }
+.rp-node {
+  width: min(240px, 100%); padding: 9px 12px; border: 1.5px solid #aab7b0; border-radius: 9px; background: #fff;
+  color: var(--navy); font-size: 13px; font-weight: 600; text-align: center;
+}
+.rp-node.receives { border-color: var(--teal); }
+.rp-link { display: flex; align-items: center; gap: 6px; min-height: 34px; padding: 3px 0; color: var(--muted); font-size: 12px; }
+.rp-link svg { color: #7d8c85; }
+.rp-dividend { margin-top: 12px; color: #4d5f58; font-size: 12.5px; text-align: center; }
+.rp-result { margin-top: 4px; color: var(--teal); font-size: 13.5px; font-weight: 650; text-align: center; }
+.rp-flow-steps { margin-top: 14px; }
+.rp-flow-steps ol { margin: 6px 0 0; padding-left: 22px; font-size: 13.5px; line-height: 1.7; }
+
+/* implementation steps */
+.rp-steps { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 12px; }
+.rp-steps > li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; padding: 14px 16px; border: 1px solid var(--border); border-radius: 12px; background: #fff; }
+.rp-step-n {
+  display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #e6f0ea; color: var(--teal); font-size: 12.5px; font-weight: 700;
+}
+.rp-when { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 3px; color: var(--navy); font-size: 13.5px; }
+.rp-tag { padding: 1px 8px; border-radius: 999px; background: #eef1ef; color: #4d5f58; font-size: 11px; font-weight: 600; }
+.rp-tag.legal { background: #f8e6e2; color: #8f3a2e; }
+.rp-reason { margin-top: 8px; color: #4d5f58; font-size: 13.5px; line-height: 1.6; }
+.rp-sources { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-top: 8px; font-size: 12.5px; }
+.rp-sources b { color: var(--muted); font-weight: 600; }
+.rp-sources a { display: inline-flex; align-items: center; gap: 3px; color: #1657b8; text-underline-offset: 2px; overflow-wrap: anywhere; }
+.rp-sources small { color: var(--muted); }
+.rp-cite { padding: 1px 8px; border: 1px solid var(--border); border-radius: 6px; background: #fff; color: var(--teal); font-size: 12px; }
+.rp-cite:hover { background: #eef5f1; }
+
+/* appendix A cards */
+.rp-cards { display: grid; gap: 12px; margin-top: 10px; }
+.rp-card { padding: 14px 16px; border: 1px solid var(--border); border-radius: 12px; background: #fff; }
+.rp-card > header { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; align-items: start; margin-bottom: 4px; }
+.rp-card > header p { margin-top: 2px; color: var(--teal); font-size: 13px; font-weight: 600; }
+.rp-card .rp-rows { padding-left: 40px; }
+.rp-notes, .rp-gaps { margin-top: 18px; }
+.rp-notes p { margin-top: 6px; font-size: 13.5px; line-height: 1.65; }
+
+@media (max-width: 900px) {
+  .rp-backdrop { padding: 0; }
+  .rp-dialog { height: 100dvh; border-radius: 0; }
+  .rp-head { flex-wrap: wrap; padding: 14px 16px 12px; }
+  .rp-head-actions { width: 100%; justify-content: space-between; }
+  .rp-export-wait { justify-items: start; }
+  .rp-body { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); }
+  .rp-outline { overflow-x: auto; overflow-y: hidden; padding: 8px 12px; border-right: 0; border-bottom: 1px solid var(--border); }
+  .rp-outline ol { display: flex; gap: 6px; }
+  .rp-outline button { width: auto; white-space: nowrap; align-items: center; }
+  .rp-dot { margin-top: 0; }
+  .rp-main { padding: 4px 16px 32px; }
+  .rp-row { grid-template-columns: 1fr; gap: 0; }
+  .rp-card .rp-rows { padding-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rp-placeholder i { animation: none; }
+}

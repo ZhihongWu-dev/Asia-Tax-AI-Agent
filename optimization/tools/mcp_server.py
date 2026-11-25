@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""tax-opt: MCP server over the optimization layer (optimization/优化层MCP规范.md).
+"""tax-opt: MCP server over the optimization layer (optimization/optimization_mcp_spec.md).
 
   python optimization/tools/mcp_server.py --root optimization --rule rule --db database --products-root cases --role front|reader
 
@@ -329,7 +329,7 @@ def build_server(root, rule, db, products_root, role, only=None):
     st = State(root, rule, db, products_root, role)
     s = MCPServer("tax-opt-front" if role == "front" else "tax-opt", version=SERVER_VERSION,
                   instructions="Optimization layer: run / evaluate and sliced reads of a products directory. Paths are relative to the cases root.")
-    if only:                                                    # register only these tools (agent/retrieval_spec.en.md §5.3: the readers moved to tax-read)
+    if only:                                                    # register only these tools (agent/retrieval_spec.md §5.3: the readers moved to tax-read)
         register = s.tool
 
         def tool(*a, **kw):

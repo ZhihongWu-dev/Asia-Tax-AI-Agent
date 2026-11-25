@@ -1,10 +1,10 @@
 # Rule Layer Specification (Minimal Set)
 
-English copy of `rule/规则层规范.md`; when the two differ the Chinese version prevails.
+This English version is the master (since 2026-11-25); `rule/rule_layer_spec.zh.md` is its Chinese translation, updated with it.
 
-2026-10-31 (third edition, replacing the 2026-10-29 edition: the functional positioning changes to providing AI agents with logical and computational assistance; tables, syntax, evaluation semantics and build are unchanged). The rule layer lives in `rule/`. It reads the jurisdiction, doc, clause, param, treaty and decision produced by the library (`database/`, see `database/数据库规范.md`), maintains five tables of its own — rule, variable, predicate, decision, rule_test — and on that basis provides a set of read-only query and computation functions (section 5). The library does not depend on the rule layer; the rule layer does not depend on any caller. The reference implementation is in `rule/tools/`; the old engine (`tax_graph/`, `official/`) is not used and not migrated.
+2026-10-31 (third edition, replacing the 2026-10-29 edition: the functional positioning changes to providing AI agents with logical and computational assistance; tables, syntax, evaluation semantics and build are unchanged). The rule layer lives in `rule/`. It reads the jurisdiction, doc, clause, param, treaty and decision produced by the library (`database/`, see `database/database_spec.en.md`), maintains five tables of its own — rule, variable, predicate, decision, rule_test — and on that basis provides a set of read-only query and computation functions (section 5). The library does not depend on the rule layer; the rule layer does not depend on any caller. The reference implementation is in `rule/tools/`; the old engine (`tax_graph/`, `official/`) is not used and not migrated.
 
-**Language**: this specification is written in Chinese for human readers; the English copy is `rule/rule_layer_spec.en.md`; when the two differ the Chinese version prevails, and when the Chinese version is changed the English copy is updated in step. Everything the AI writes into files in its own words is in English — code, comments, tool descriptions, prompts (what the system actually submits is the passage in the English copy), drafts, checklists, handoffs, bug reports, logs, product fields; originals, clauses, quotations and the client's own words stay in the original language and are not translated. The only exception is text shown to the client (replies to the client, briefings), which follows the client's language. The overall verdict of a checklist uses English markers: handoff package `RUNNABLE` / `REVISE`, report `DELIVERABLE` / `REVISE` (the service also accepts the original Chinese markers).
+**Language**: this specification is written in English and is the master (since 2026-11-25); its Chinese translation `rule/rule_layer_spec.zh.md` is updated with it. Everything the AI writes into files in its own words is in English — code, comments, tool descriptions, prompts (what the system actually submits is the passage in the English copy), drafts, checklists, handoffs, bug reports, logs, product fields; originals, clauses, quotations and the client's own words stay in the original language and are not translated. The only exception is text shown to the client (replies to the client, briefings), which follows the client's language. The overall verdict of a checklist uses English markers: handoff package `RUNNABLE` / `REVISE`, report `DELIVERABLE` / `REVISE` (the service also accepts the original Chinese markers).
 
 ## 0. Functional positioning and scope
 
@@ -254,7 +254,7 @@ Any of the following at build time is an error:
 | Form | Content |
 |---|---|
 | CLI | `rule/tools/eval.py`, `trace.py`, `rule_tool.py`, `query.py`, `build.py` (section 10) |
-| MCP | `rule/tools/mcp_server.py` (`规则层MCP规范.md`) |
+| MCP | `rule/tools/mcp_server.py` (`rule_mcp_spec.md`) |
 | Products | `rule.sqlite` (five tables + generated columns), `STATUS.md` |
 
 How facts are obtained, how predicates are answered and how results are used are all outside this specification. The rule layer's only requirement on inputs is validity: an unknown variable name, an invalid slot_key, an answer that is not one of the three values — these are errors, not guesses.
@@ -263,7 +263,7 @@ Scope = the library's scope (dividends, 11 jurisdictions, companies and individu
 
 ## 8a. MCP service `tax-rule`
 
-See `rule/规则层MCP规范.md` (2026-11-01, minimal set, read-only service wrapping this layer's functions without adding semantics).
+See `rule/rule_mcp_spec.md` (2026-11-01, minimal set, read-only service wrapping this layer's functions without adding semantics).
 
 ## 9. Worked examples
 

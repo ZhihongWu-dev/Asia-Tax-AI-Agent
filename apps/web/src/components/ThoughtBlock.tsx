@@ -26,7 +26,7 @@ export default function ThoughtBlock({ title, items, live, seconds }: {
       <button type="button" className="thought-head" aria-expanded={open} onClick={() => setOpen(!open)}>
         <Sparkles size={15} aria-hidden="true" />
         <span>{title}</span>
-        <small>{live ? t("进行中…") : seconds !== undefined ? `${t("用时")} ${duration(seconds)}` : ""}</small>
+        <small>{live ? t("Working…") : seconds !== undefined ? `${t("Took")} ${duration(seconds)}` : ""}</small>
         <ChevronDown size={15} aria-hidden="true" className="thought-chevron" />
       </button>
       {open && (
@@ -47,8 +47,8 @@ export default function ThoughtBlock({ title, items, live, seconds }: {
           ) : (
             <p key={index} className={item.kind === "thinking" ? "thought-text" : "thought-said"}>{item.text?.trim()}</p>
           ))}
-          {!shown.length && <p className="thought-text">{live ? t("正在开始…") : t("这一步没有思考内容。")}</p>}
-          {!live && shown.length > 0 && !thought && <p className="thought-empty">{t("模型没有输出思考内容。")}</p>}
+          {!shown.length && <p className="thought-text">{live ? t("Starting…", "thought") : t("No thinking was recorded for this step.")}</p>}
+          {!live && shown.length > 0 && !thought && <p className="thought-empty">{t("The model did not output its thinking here.")}</p>}
         </div>
       )}
     </div>

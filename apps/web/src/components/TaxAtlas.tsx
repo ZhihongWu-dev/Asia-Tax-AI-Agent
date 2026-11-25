@@ -12,7 +12,7 @@ import { jurName, num, rate } from "./atlasFormat";
 import "../atlas.css";
 
 export type Metric = "wht_company" | "wht_individual";
-const METRIC_LABEL: Record<Metric, string> = { wht_company: "付给非居民公司", wht_individual: "付给非居民个人" };
+const METRIC_LABEL: Record<Metric, string> = { wht_company: "To non-resident companies", wht_individual: "To non-resident individuals" };
 
 /** Tax graph: dividend tax across the library's jurisdictions (apps/api/atlas.py: rule layer + library on Supabase). */
 export default function TaxAtlas() {
@@ -39,22 +39,22 @@ export default function TaxAtlas() {
       <div className="atlas-inner">
         <header className="atlas-head">
           <div>
-            <h1>{t("税务地图")}</h1>
-            <p>{t("各辖区的股息税：法定税率、协定税率及其法律依据。")}</p>
+            <h1>{t("Tax graph")}</h1>
+            <p>{t("Dividend tax across jurisdictions: statutory rates, treaty rates and the law behind them.")}</p>
           </div>
-          <div className="atlas-tabs" role="tablist" aria-label={t("税务地图")}>
+          <div className="atlas-tabs" role="tablist" aria-label={t("Tax graph")}>
             <button role="tab" aria-selected={tab === "map"} onClick={() => { setTab("map"); setCountry(null); }}>
-              <MapIcon size={15} />{t("地图")}
+              <MapIcon size={15} />{t("Map")}
             </button>
             <button role="tab" aria-selected={tab === "glossary"} onClick={() => setTab("glossary")}>
-              <BookOpen size={15} />{t("税务词典")}
+              <BookOpen size={15} />{t("Tax glossary")}
             </button>
           </div>
         </header>
         {tab === "glossary" ? <Glossary onOpen={open} onClause={setClause} /> :
           country ? <CountryPage code={country} onBack={() => setCountry(null)} onOpen={open} onClause={setClause} /> :
-            error ? <div className="atlas-error" role="alert">{t(`error:${error}`)} <button onClick={load}>{t("重试")}</button></div> :
-              !data ? <BrandLoader label={t("正在载入…")} /> :
+            error ? <div className="atlas-error" role="alert">{t(`error:${error}`)} <button onClick={load}>{t("Retry")}</button></div> :
+              !data ? <BrandLoader label={t("Loading…")} /> :
                 <MapHome data={data} metric={metric} setMetric={setMetric} onOpen={open} />}
       </div>
       {clause && <ClauseDialog citeId={clause} onClose={() => setClause(null)} />}
@@ -75,19 +75,19 @@ function MapHome({ data, metric, setMetric, onOpen }: {
   const v = data.version;
   return (
     <>
-      <section className="atlas-stats" aria-label={t("概览")}>
-        <div><strong>{rows.length}</strong><span>{t("已收录辖区")}</span></div>
-        <div><strong>{avg === null ? "—" : `${num(Number(avg.toFixed(2)))}%`}</strong><span>{t("平均股息预提税")} · {t(METRIC_LABEL[metric])} ({values.length}/{rows.length})</span></div>
-        <div><strong>{zero}</strong><span>{t("该情形计算为零的辖区")}</span></div>
-        <div><strong>{(v.clauses ?? 0).toLocaleString()}</strong><span>{t("法律条文")} · {v.docs} {t("份文件")} · {v.params} {t("个参数")}</span></div>
+      <section className="atlas-stats" aria-label={t("Overview")}>
+        <div><strong>{rows.length}</strong><span>{t("Jurisdictions in the library")}</span></div>
+        <div><strong>{avg === null ? "—" : `${num(Number(avg.toFixed(2)))}%`}</strong><span>{t("Average dividend withholding")} · {t(METRIC_LABEL[metric])} ({values.length}/{rows.length})</span></div>
+        <div><strong>{zero}</strong><span>{t("Jurisdictions calculated at zero in this scenario")}</span></div>
+        <div><strong>{(v.clauses ?? 0).toLocaleString()}</strong><span>{t("provisions")} · {v.docs} {t("documents")} · {v.params} {t("parameters")}</span></div>
       </section>
       <section className="atlas-card atlas-map-card">
         <div className="atlas-card-head">
           <div>
-            <h2>{t("股息预提税")}</h2>
-            <p className="atlas-muted">{t("情形：非上市公司付款，收款方持股 100% 满 24 个月，不适用协定。区间为有利一端至不利一端。")}</p>
+            <h2>{t("Dividend withholding tax")}</h2>
+            <p className="atlas-muted">{t("Scenario: an unlisted company pays a recipient that has held 100% for 24 months, no treaty. A range runs from the favourable to the unfavourable side.")}</p>
           </div>
-          <div className="atlas-segment" role="radiogroup" aria-label={t("税种")}>
+          <div className="atlas-segment" role="radiogroup" aria-label={t("Tax")}>
             {(Object.keys(METRIC_LABEL) as Metric[]).map((m) => (
               <button key={m} role="radio" aria-checked={metric === m} onClick={() => setMetric(m)}>{t(METRIC_LABEL[m])}</button>
             ))}
@@ -95,7 +95,7 @@ function MapHome({ data, metric, setMetric, onOpen }: {
         </div>
         <div className="atlas-map-layout">
           <WorldMap rows={rows} metric={metric} focus={focus} setFocus={setFocus} onOpen={onOpen} />
-          <ol className="atlas-ranking" aria-label={t("排名")}>
+          <ol className="atlas-ranking" aria-label={t("Rank")}>
             {ranked.map((r, i) => {
               const c = r[metric];
               return (
@@ -114,7 +114,7 @@ function MapHome({ data, metric, setMetric, onOpen }: {
           </ol>
         </div>
         <p className="atlas-source">
-          {t("税率由规则层按今日计算；法律资料使用已加载的数据库版本")} ({v.source}, {v.library})
+          {t("Rates are calculated for today by the rule layer; legal data uses the loaded database version")} ({v.source}, {v.library})
         </p>
       </section>
     </>
@@ -181,7 +181,7 @@ function WorldMap({ rows, metric, focus, setFocus, onOpen }: {
   const zoom = (f: number) => setView((v) => zoomAt(v, W / 2, H / 2, f));
   return (
     <div className="atlas-map" ref={wrap}>
-      <svg ref={svg} viewBox={`0 0 ${W} ${H}`} role="img" aria-label={t("世界地图：各辖区股息预提税")} onPointerDown={down}
+      <svg ref={svg} viewBox={`0 0 ${W} ${H}`} role="img" aria-label={t("World map: dividend withholding tax by jurisdiction")} onPointerDown={down}
         className={drag.current ? "is-dragging" : ""}>
         <g transform={`translate(${view.x} ${view.y}) scale(${view.k})`}>
           <path d={SPHERE} className="atlas-sphere" />
@@ -217,21 +217,21 @@ function WorldMap({ rows, metric, focus, setFocus, onOpen }: {
             <span className="atlas-tip-rate">{rate(tip.row[metric])}</span>
             <span>{t(METRIC_LABEL[metric])}</span>
             {tip.row[metric].absent?.map((a) => <span className="atlas-muted" key={a.id}>{a.statement}</span>)}
-            {tip.row[metric].needs.length > 0 && <span className="atlas-muted">{t("取决于")}: {tip.row[metric].needs.join(", ")}</span>}
-            <em>{t("点击查看详情")}</em>
-          </> : <span className="atlas-muted">{t("尚未收录")}</span>}
+            {tip.row[metric].needs.length > 0 && <span className="atlas-muted">{t("Depends on")}: {tip.row[metric].needs.join(", ")}</span>}
+            <em>{t("Click for details")}</em>
+          </> : <span className="atlas-muted">{t("Not in the library yet")}</span>}
         </div>
       )}
       <div className="atlas-map-controls">
-        <HintButton aria-label={t("放大")} onClick={() => zoom(1.5)}><Plus size={16} /></HintButton>
-        <HintButton aria-label={t("缩小")} onClick={() => zoom(1 / 1.5)}><Minus size={16} /></HintButton>
-        <HintButton aria-label={t("亚洲视图")} onClick={() => setView(regionView())}><LocateFixed size={16} /></HintButton>
-        <HintButton aria-label={t("世界视图")} onClick={() => setView(WORLD)}><Earth size={16} /></HintButton>
+        <HintButton aria-label={t("Zoom in")} onClick={() => zoom(1.5)}><Plus size={16} /></HintButton>
+        <HintButton aria-label={t("Zoom out")} onClick={() => zoom(1 / 1.5)}><Minus size={16} /></HintButton>
+        <HintButton aria-label={t("Library region")} onClick={() => setView(regionView())}><LocateFixed size={16} /></HintButton>
+        <HintButton aria-label={t("Whole world")} onClick={() => setView(WORLD)}><Earth size={16} /></HintButton>
       </div>
       <div className="atlas-legend" aria-hidden="true">
         <span className="atlas-legend-ramp" style={{ background: `linear-gradient(90deg, ${RAMP.map(([v, c]) => `${c} ${(v / 25) * 100}%`).join(", ")})` }} />
         <span className="atlas-legend-ticks">{RAMP.map(([v]) => <i key={v}>{v}%{v === 25 ? "+" : ""}</i>)}</span>
-        <span className="atlas-legend-na"><i />{t("未收录或税率未知")}</span>
+        <span className="atlas-legend-na"><i />{t("Not in library or rate unknown")}</span>
       </div>
     </div>
   );

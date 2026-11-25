@@ -8,8 +8,8 @@ export default function Welcome() {
       <div className="welcome-mark" aria-hidden="true">
         <BrandMark size={38} />
       </div>
-      <h1 id="welcome-title">{t("让税务问题，更清晰。")}</h1>
-      <p>{t("梳理事实，查阅依据，从一次对话开始。")}</p>
+      <h1 id="welcome-title">{t("Clarity for your tax questions.")}</h1>
+      <p>{t("Explore the facts and sources. Start a conversation.")}</p>
     </section>
   );
 }

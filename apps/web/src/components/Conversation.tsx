@@ -2,7 +2,7 @@ import { splitAttachments, imageThumbnail } from "../attachments";
 import HintButton from "./HintButton";
 import FileWindow from "./FileWindow";
 import { useEffect, useRef, useState } from "react";
-import { ArrowDown, Paperclip, X } from "lucide-react";
+import { ArrowDown, FileText, Paperclip, X } from "lucide-react";
 import AnswerText from "./AnswerText";
 import type { ActivityItem, Case, Message, RunBlock } from "../workspace";
 import { useLocale } from "../locale";
@@ -20,6 +20,7 @@ export default function Conversation({
   blocks = [],
   working = false,
   onRemove,
+  onReport,
 }: {
   current: Case;
   busy: boolean;
@@ -28,6 +29,7 @@ export default function Conversation({
   blocks?: RunBlock[];
   working?: boolean;
   onRemove?: (name: string) => Promise<boolean>;
+  onReport?: () => void;
 }) {
   const { t } = useLocale();
   const [confirming, setConfirming] = useState("");
@@ -57,7 +59,7 @@ export default function Conversation({
     ...blocks.filter((block) => block.items.length || !block.ended).map((block) => ({ at: block.started, block })),
   ].sort((a, b) => a.at.localeCompare(b.at));
   return (
-    <section className="conversation" aria-label={t("案例对话")}>
+    <section className="conversation" aria-label={t("Case conversation")}>
       {timeline.map(({ message, block }) => {
         if (block) return (
           <ThoughtBlock
@@ -83,40 +85,45 @@ export default function Conversation({
                       ? <img className="sent-image-thumbnail" src={imageThumbnail(file)} alt={file.name} />
                       : <Paperclip size={16} aria-hidden="true" />}
                     <span title={file.name}>{file.name}</span>
-                    {removed && <small className="attachment-state">{t("已移出案卷")}</small>}
+                    {removed && <small className="attachment-state">{t("removed from the case")}</small>}
                     {sent && !removed && onRemove && (confirming === key
                       ? <span className="attachment-confirm">
-                          <HintButton type="button" disabled={busy || working} onClick={() => { setConfirming(""); void onRemove(file.name); }}>{t("移出案卷")}</HintButton>
-                          <HintButton type="button" onClick={() => setConfirming("")}>{t("取消")}</HintButton>
+                          <HintButton type="button" disabled={busy || working} onClick={() => { setConfirming(""); void onRemove(file.name); }}>{t("Remove")}</HintButton>
+                          <HintButton type="button" onClick={() => setConfirming("")}>{t("Cancel")}</HintButton>
                         </span>
-                      : <HintButton type="button" className="attachment-remove" disabled={busy || working} aria-label={t("把这份文件移出案卷")}
-                          title={t("传错了？把这份文件移出案卷")} onClick={() => setConfirming(key)}><X size={14} /></HintButton>)}
+                      : <HintButton type="button" className="attachment-remove" disabled={busy || working} aria-label={t("Remove this document from the case")}
+                          title={t("Wrong file? Remove it from the case")} onClick={() => setConfirming(key)}><X size={14} /></HintButton>)}
                   </div>;
                 })}</FileWindow>}
                 <p>{text}</p>
                 {message.delivery === "failed" && (
-                  <small className="delivery-failed">{t("发送未完成，可重试")}</small>
+                  <small className="delivery-failed">{t("Not completed. You can retry.")}</small>
                 )}
               </div>
             ) : (
               <>
                 {Boolean(message.activity?.length) && (
-                  <ThoughtBlock title={t("前台 Agent · 思考过程")} items={message.activity!} live={false} seconds={message.seconds} />
+                  <ThoughtBlock title={t("Front agent · Thought process")} items={message.activity!} live={false} seconds={message.seconds} />
                 )}
                 <AnswerText text={message.text || ""} />
+                {message.panel && onReport && (
+                  <button type="button" className="g-search message-report" onClick={onReport} aria-label={t("Open report")}>
+                    <FileText size={14} />{t("Open report")}
+                  </button>
+                )}
               </>
             )}
           </div>
         );
       })}
-      {busy && process.length > 0 && <ThoughtBlock title={t("前台 Agent · 思考过程")} items={process} live />}
+      {busy && process.length > 0 && <ThoughtBlock title={t("Front agent · Thought process")} items={process} live />}
       {busy && !partial && !process.length && (
         <div className="assistant-pending">
-          <BrandLoader label={t("正在思考…")} />
+          <BrandLoader label={t("Thinking…")} />
         </div>
       )}
       {partial && <div className="message assistant streaming-answer"><AnswerText text={partial} streaming /></div>}
-      {away && <HintButton className="jump-bottom" aria-label={t("回到底部")} onClick={() => {
+      {away && <HintButton className="jump-bottom" aria-label={t("Back to bottom")} onClick={() => {
         const area = bottom.current?.closest(".workspace-scroll");
         following.current = true;
         if (area) area.scrollTop = area.scrollHeight;
